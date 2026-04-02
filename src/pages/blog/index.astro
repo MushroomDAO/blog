@@ -59,33 +59,34 @@ const filteredPosts = selectedCategory
 				margin: 0 auto;
 				padding: 2em 1em;
 			}
-			/* 分类筛选栏 - 科技感 */
+			/* 分类筛选栏 - 绿色科技感 */
 			.filter-bar {
 				display: flex;
 				flex-wrap: wrap;
 				gap: 0.8em;
 				margin-bottom: 1.5em;
 				padding-bottom: 1em;
-				border-bottom: 1px solid rgba(var(--accent-cyan), 0.3);
+				border-bottom: 1px solid rgba(var(--accent-mint), 0.3);
 			}
 			.filter-item {
 				display: inline-flex;
 				align-items: center;
 				gap: 0.3em;
 				padding: 0.4em 0.8em;
-				background: rgba(var(--accent-cyan), 0.1);
-				border: 1px solid rgba(var(--accent-cyan), 0.3);
+				background: rgba(var(--accent-mint), 0.1);
+				border: 1px solid rgba(var(--accent-mint), 0.4);
 				border-radius: 20px;
 				text-decoration: none;
-				color: rgb(var(--accent-cyan));
+				color: rgb(var(--accent-mint));
 				font-size: 0.9em;
+				font-weight: 500;
 				transition: all 0.2s;
 			}
 			.filter-item:hover,
 			.filter-item.active {
-				background: rgba(var(--accent-cyan), 0.2);
-				border-color: rgb(var(--accent-cyan));
-				box-shadow: 0 0 10px rgba(var(--accent-cyan), 0.4);
+				background: rgba(var(--accent-mint), 0.2);
+				border-color: rgb(var(--accent-mint));
+				box-shadow: 0 0 10px rgba(var(--accent-mint), 0.4);
 				transform: translateY(-1px);
 			}
 			/* 标签行 - 放在标题下方了 */
