@@ -1,7 +1,10 @@
 ---
 title: '科研笔记示例：深度学习模型优化方法'
+titleEn: 'Research Notes: Deep Learning Model Optimization'
 description: '记录最近在模型训练过程中的一些优化技巧'
+descriptionEn: 'Optimization techniques from recent model training experiments'
 pubDate: '2025-04-02'
+category: 'Tech-Experiment'
 heroImage: '../../assets/blog-placeholder-1.jpg'
 tags: ['deep-learning', 'optimization', 'research']
 ---
