@@ -47,60 +47,69 @@ const filteredPosts = selectedCategory
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
+			:root {
+				--accent-cyan: 0, 212, 255;
+				--accent-purple: 157, 78, 221;
+				--accent-mint: 72, 191, 145;
+				--dark-bg: 15, 23, 42;
+			}
 			main {
 				width: 960px;
 				max-width: calc(100% - 2em);
 				margin: 0 auto;
 				padding: 2em 1em;
 			}
-			/* 分类筛选栏 */
+			/* 分类筛选栏 - 科技感 */
 			.filter-bar {
 				display: flex;
 				flex-wrap: wrap;
 				gap: 0.8em;
 				margin-bottom: 1.5em;
 				padding-bottom: 1em;
-				border-bottom: 1px solid rgba(var(--gray), 0.2);
+				border-bottom: 1px solid rgba(var(--accent-cyan), 0.3);
 			}
 			.filter-item {
 				display: inline-flex;
 				align-items: center;
 				gap: 0.3em;
 				padding: 0.4em 0.8em;
-				background: linear-gradient(var(--gray-gradient)) no-repeat;
+				background: rgba(var(--accent-cyan), 0.1);
+				border: 1px solid rgba(var(--accent-cyan), 0.3);
 				border-radius: 20px;
 				text-decoration: none;
-				color: rgb(var(--gray-dark));
+				color: rgb(var(--accent-cyan));
 				font-size: 0.9em;
 				transition: all 0.2s;
 			}
 			.filter-item:hover,
 			.filter-item.active {
-				background: rgb(var(--accent));
-				color: white;
+				background: rgba(var(--accent-cyan), 0.2);
+				border-color: rgb(var(--accent-cyan));
+				box-shadow: 0 0 10px rgba(var(--accent-cyan), 0.4);
+				transform: translateY(-1px);
 			}
-			/* 标签行 */
+			/* 标签行 - 放在标题下方了 */
 			.tags-bar {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 0.6em;
-				margin-bottom: 1.5em;
-				padding-bottom: 1em;
-				border-bottom: 1px solid rgba(var(--gray), 0.2);
+				gap: 0.5em;
+				margin-top: 0.5em;
 			}
 			.tag-link {
 				display: inline-block;
-				padding: 0.25em 0.7em;
-				background: rgba(var(--accent), 0.1);
-				color: rgb(var(--accent));
-				border-radius: 15px;
+				padding: 0.15em 0.6em;
+				background: rgba(var(--accent-purple), 0.1);
+				border: 1px solid rgba(var(--accent-purple), 0.3);
+				color: rgb(var(--accent-purple));
+				border-radius: 12px;
 				text-decoration: none;
-				font-size: 0.85em;
+				font-size: 0.8em;
 				transition: all 0.2s;
 			}
 			.tag-link:hover {
-				background: rgb(var(--accent));
-				color: white;
+				background: rgba(var(--accent-purple), 0.2);
+				border-color: rgb(var(--accent-purple));
+				box-shadow: 0 0 8px rgba(var(--accent-purple), 0.4);
 			}
 			/* 文章列表 */
 			ul {
@@ -139,31 +148,34 @@ const filteredPosts = selectedCategory
 			.title {
 				margin: 0;
 				color: rgb(var(--black));
-				line-height: 1;
+				line-height: 1.2;
 			}
 			.date {
 				margin: 0;
 				color: rgb(var(--gray));
+				font-size: 0.9em;
 			}
 			.meta-row {
 				display: flex;
 				align-items: center;
 				gap: 0.5em;
-				margin-top: 0.3em;
+				margin-bottom: 0.4em;
 				font-size: 0.85em;
 			}
 			.category-small {
-				background: rgba(var(--accent), 0.1);
-				color: rgb(var(--accent));
-				padding: 0.1em 0.4em;
+				background: rgba(var(--accent-mint), 0.15);
+				border: 1px solid rgba(var(--accent-mint), 0.4);
+				color: rgb(var(--accent-mint));
+				padding: 0.1em 0.5em;
 				border-radius: 4px;
+				font-weight: 500;
 			}
 			ul li a:hover h4,
 			ul li a:hover .date {
-				color: rgb(var(--accent));
+				color: rgb(var(--accent-cyan));
 			}
 			ul a:hover img {
-				box-shadow: var(--box-shadow);
+				box-shadow: 0 4px 20px rgba(var(--accent-cyan), 0.2);
 			}
 			.empty-state {
 				text-align: center;
@@ -171,8 +183,7 @@ const filteredPosts = selectedCategory
 				color: rgb(var(--gray));
 			}
 			@media (max-width: 720px) {
-				.filter-bar,
-				.tags-bar {
+				.filter-bar {
 					gap: 0.5em;
 				}
 				ul {
@@ -205,13 +216,6 @@ const filteredPosts = selectedCategory
 				))}
 			</div>
 
-			<!-- 标签行 -->
-			<div class="tags-bar">
-				{sortedTags.map(([tag, count]) => (
-					<span class="tag-link">#{tag} ({count})</span>
-				))}
-			</div>
-
 			<section>
 				{filteredPosts.length === 0 ? (
 					<div class="empty-state">
@@ -225,12 +229,18 @@ const filteredPosts = selectedCategory
 									{post.data.heroImage && (
 										<Image width={720} height={360} src={post.data.heroImage} alt="" />
 									)}
-									<h4 class="title">{post.data.title}</h4>
 									<div class="meta-row">
 										<span class="category-small">{post.data.category}</span>
 										<span class="date">
 											<FormattedDate date={post.data.pubDate} />
 										</span>
+									</div>
+									<h4 class="title">{post.data.title}</h4>
+									<!-- 标签放在标题下方 -->
+									<div class="tags-bar">
+										{post.data.tags?.map(tag => (
+											<span class="tag-link">#{tag}</span>
+										))}
 									</div>
 								</a>
 							</li>
