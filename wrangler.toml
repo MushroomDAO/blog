@@ -1,0 +1,6 @@
+# Cloudflare Pages 配置
+name = "blog-mushroom"
+compatibility_date = "2024-01-01"
+
+# 构建输出目录（Pages 必需）
+pages_build_output_dir = "./dist"
