@@ -10,6 +10,36 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+// 统计所有标签
+const tagCounts = new Map<string, number>();
+posts.forEach(post => {
+	post.data.tags?.forEach(tag => {
+		tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+	});
+});
+
+// 按文章数排序
+const sortedTags = Array.from(tagCounts.entries()).sort((a, b) => b[1] - a[1]);
+
+// 分类列表
+const categories = ['Tech-Experiment', 'Progress-Report', 'Research', 'Tech-News', 'Other'];
+const categoryIcons: Record<string, string> = {
+	'Tech-Experiment': '🔬',
+	'Progress-Report': '📊',
+	'Research': '🔍',
+	'Tech-News': '🚀',
+	'Other': '📝',
+};
+
+// 获取 URL 参数
+const url = new URL(Astro.request.url);
+const selectedCategory = url.searchParams.get('category');
+
+// 过滤文章
+const filteredPosts = selectedCategory 
+	? posts.filter(post => (post.data.category || 'Other') === selectedCategory)
+	: posts;
 ---
 
 <!doctype html>
@@ -19,7 +49,60 @@ const posts = (await getCollection('blog')).sort(
 		<style>
 			main {
 				width: 960px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+				padding: 2em 1em;
 			}
+			/* 分类筛选栏 */
+			.filter-bar {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.8em;
+				margin-bottom: 1.5em;
+				padding-bottom: 1em;
+				border-bottom: 1px solid rgba(var(--gray), 0.2);
+			}
+			.filter-item {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.3em;
+				padding: 0.4em 0.8em;
+				background: linear-gradient(var(--gray-gradient)) no-repeat;
+				border-radius: 20px;
+				text-decoration: none;
+				color: rgb(var(--gray-dark));
+				font-size: 0.9em;
+				transition: all 0.2s;
+			}
+			.filter-item:hover,
+			.filter-item.active {
+				background: rgb(var(--accent));
+				color: white;
+			}
+			/* 标签行 */
+			.tags-bar {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6em;
+				margin-bottom: 1.5em;
+				padding-bottom: 1em;
+				border-bottom: 1px solid rgba(var(--gray), 0.2);
+			}
+			.tag-link {
+				display: inline-block;
+				padding: 0.25em 0.7em;
+				background: rgba(var(--accent), 0.1);
+				color: rgb(var(--accent));
+				border-radius: 15px;
+				text-decoration: none;
+				font-size: 0.85em;
+				transition: all 0.2s;
+			}
+			.tag-link:hover {
+				background: rgb(var(--accent));
+				color: white;
+			}
+			/* 文章列表 */
 			ul {
 				display: flex;
 				flex-wrap: wrap;
@@ -62,6 +145,19 @@ const posts = (await getCollection('blog')).sort(
 				margin: 0;
 				color: rgb(var(--gray));
 			}
+			.meta-row {
+				display: flex;
+				align-items: center;
+				gap: 0.5em;
+				margin-top: 0.3em;
+				font-size: 0.85em;
+			}
+			.category-small {
+				background: rgba(var(--accent), 0.1);
+				color: rgb(var(--accent));
+				padding: 0.1em 0.4em;
+				border-radius: 4px;
+			}
 			ul li a:hover h4,
 			ul li a:hover .date {
 				color: rgb(var(--accent));
@@ -69,7 +165,16 @@ const posts = (await getCollection('blog')).sort(
 			ul a:hover img {
 				box-shadow: var(--box-shadow);
 			}
+			.empty-state {
+				text-align: center;
+				padding: 3em;
+				color: rgb(var(--gray));
+			}
 			@media (max-width: 720px) {
+				.filter-bar,
+				.tags-bar {
+					gap: 0.5em;
+				}
 				ul {
 					gap: 0.5em;
 				}
@@ -89,24 +194,49 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
+			<!-- 分类筛选 -->
+			<div class="filter-bar">
+				<a href="/blog/" class={`filter-item ${!selectedCategory ? 'active' : ''}`}>All</a>
+				{categories.map(cat => (
+					<a href={`/blog/?category=${cat}`} class={`filter-item ${selectedCategory === cat ? 'active' : ''}`}>
+						<span>{categoryIcons[cat]}</span>
+						<span>{cat}</span>
+					</a>
+				))}
+			</div>
+
+			<!-- 标签行 -->
+			<div class="tags-bar">
+				{sortedTags.map(([tag, count]) => (
+					<span class="tag-link">#{tag} ({count})</span>
+				))}
+			</div>
+
 			<section>
-				<ul>
-					{
-						posts.map((post) => (
+				{filteredPosts.length === 0 ? (
+					<div class="empty-state">
+						<p>No posts in this category.</p>
+					</div>
+				) : (
+					<ul>
+						{filteredPosts.map((post) => (
 							<li>
 								<a href={`/blog/${post.id}/`}>
 									{post.data.heroImage && (
 										<Image width={720} height={360} src={post.data.heroImage} alt="" />
 									)}
 									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
+									<div class="meta-row">
+										<span class="category-small">{post.data.category}</span>
+										<span class="date">
+											<FormattedDate date={post.data.pubDate} />
+										</span>
+									</div>
 								</a>
 							</li>
-						))
-					}
-				</ul>
+						))}
+					</ul>
+				)}
 			</section>
 		</main>
 		<Footer />

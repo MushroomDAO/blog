@@ -8,16 +8,22 @@ import Header from '../components/Header.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, titleEn, description, descriptionEn, pubDate, updatedDate, heroImage, tags, category } = Astro.props;
+
+// 获取 slot 内容并分割中英文
+const content = await Astro.slots.render('default');
+const parts = content.split('<!--EN-->');
+const cnContent = parts[0] || content;
+const enContent = parts[1] || '';
+const hasEnglish = enContent.trim().length > 0;
 ---
 
-<html lang="en">
+<html lang="zh">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={`${title} | ${titleEn || ''}`} description={`${description} | ${descriptionEn || ''}`} />
 		<style>
 			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
+				width: 100%;
 				margin: 0;
 			}
 			.hero-image {
@@ -29,28 +35,107 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
 			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
+			/* 双语标题区域 */
+			.title-section {
 				text-align: center;
-				line-height: 1;
+				padding: 2em 1em;
+				max-width: 1200px;
+				margin: 0 auto;
 			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
+			.title-cn {
+				font-size: 2em;
+				margin: 0 0 0.3em 0;
+				color: rgb(var(--black));
 			}
-			.date {
-				margin-bottom: 0.5em;
+			.title-en {
+				font-size: 1.3em;
+				margin: 0;
 				color: rgb(var(--gray));
+				font-weight: normal;
+			}
+			.meta-info {
+				margin-top: 1em;
+				color: rgb(var(--gray));
+			}
+			.category-badge {
+				display: inline-block;
+				background: rgb(var(--accent));
+				color: white;
+				padding: 0.3em 0.8em;
+				border-radius: 4px;
+				font-size: 0.85em;
+				margin-right: 0.5em;
+				text-decoration: none;
+			}
+			.category-badge:hover {
+				opacity: 0.9;
+			}
+			.tag-list {
+				display: inline-flex;
+				gap: 0.5em;
+				flex-wrap: wrap;
+			}
+			.tag-item {
+				background: rgba(var(--accent), 0.1);
+				color: rgb(var(--accent));
+				padding: 0.2em 0.6em;
+				border-radius: 12px;
+				font-size: 0.8em;
 			}
 			.last-updated-on {
 				font-style: italic;
+				margin-top: 0.5em;
+			}
+			/* 双语内容区域 */
+			.bilingual-content {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 3em;
+				max-width: 1400px;
+				margin: 0 auto;
+				padding: 2em;
+			}
+			.bilingual-content.single-language {
+				display: block;
+				max-width: 800px;
+			}
+			.bilingual-content.single-language .content-column {
+				max-width: 100%;
+			}
+			@media (max-width: 1024px) {
+				.bilingual-content {
+					grid-template-columns: 1fr;
+					gap: 2em;
+				}
+			}
+			.content-column {
+				padding: 1.5em;
+				background: linear-gradient(var(--gray-gradient)) no-repeat;
+				border-radius: 12px;
+			}
+			.column-header {
+				display: flex;
+				align-items: center;
+				gap: 0.5em;
+				font-size: 0.9em;
+				color: rgb(var(--gray));
+				margin-bottom: 1em;
+				padding-bottom: 0.5em;
+				border-bottom: 2px solid rgb(var(--accent));
+			}
+			.column-header .lang-flag {
+				font-size: 1.2em;
+			}
+			.prose {
+				color: rgb(var(--gray-dark));
+				line-height: 1.8;
+			}
+			.prose :global(h2) {
+				margin-top: 1.5em;
+				margin-bottom: 0.5em;
+			}
+			.prose :global(p) {
+				margin-bottom: 1em;
 			}
 		</style>
 	</head>
@@ -62,22 +147,49 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				<div class="hero-image">
 					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
 				</div>
-				<div class="prose">
-					<div class="title">
+				
+				<div class="title-section">
+					<h1 class="title-cn">{title}</h1>
+					{titleEn && <h2 class="title-en">{titleEn}</h2>}
+					
+					<div class="meta-info">
+						<a href={`/blog/?category=${category}`} class="category-badge">{category}</a>
+						<span class="tag-list">
+							{tags?.map(tag => (
+								<span class="tag-item">#{tag}</span>
+							))}
+						</span>
 						<div class="date">
 							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
+							{updatedDate && (
+								<div class="last-updated-on">
+									更新于 <FormattedDate date={updatedDate} />
+								</div>
+							)}
 						</div>
-						<h1>{title}</h1>
-						<hr />
 					</div>
-					<slot />
+				</div>
+
+				<div class={`bilingual-content ${!hasEnglish ? 'single-language' : ''}`}>
+					<!-- 中文内容 -->
+					<div class="content-column">
+						<div class="column-header">
+							<span class="lang-flag">🇨🇳</span>
+							<span>中文</span>
+						</div>
+						<div class="prose" set:html={cnContent} />
+					</div>
+					
+					<!-- 英文内容 -->
+					{hasEnglish && (
+						<div class="content-column">
+							<div class="column-header">
+								<span class="lang-flag">🇬🇧</span>
+								<span>English</span>
+							</div>
+							<div class="prose" set:html={enContent} />
+						</div>
+					)}
 				</div>
 			</article>
 		</main>
