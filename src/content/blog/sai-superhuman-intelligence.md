@@ -57,18 +57,61 @@ LeCun等人的结论很直接：语义很重要。如果整个领域都在追求
 
 AI的未来不是第二个"人类"，而是无数超越人类的"超级专家"。
 
+<!--EN-->
+
+## The AGI Myth
+
+From Sam Altman to Geoffrey Hinton, everyone is talking about AGI. But Yann LeCun and co-authors Judah Goldfeder, Philippe Wyder, and Ravid Shwartz-Ziv pose a sharp question: **Are humans truly "general"?**
+
+The answer is no.
+
+The paper cuts to the core contradiction: AGI is defined as "AI that can do everything a human can do." But this definition itself is problematic—
+
+> Human intelligence is not general at all; it is merely a highly specialized tool finely tuned for our survival.
+
+## Moravec's Paradox
+
+What's "easy" for humans? Walking, recognizing faces, common-sense reasoning.
+What's "hard" for humans? Playing chess, solving calculus, memorizing vast amounts of data.
+
+Yet AI performs exactly the opposite. Moravec pointed out in the 1990s: **The things we find easy took evolution hundreds of millions of years to optimize; the things we find hard are computationally trivial.**
+
+This is not a coincidence—it's evidence that humans are highly specialized to their ecological niche, not a paradigm of "general intelligence."
+
+## SAI: Abandon Generality
+
+The paper introduces **Superhuman Adaptable Intelligence (SAI)**:
+
+| AGI Mindset | SAI Mindset |
+|-------------|-------------|
+| Mimic humans | Surpass humans |
+| Jack of all trades | Master of key domains |
+| Compete with humans | Fill human capability gaps |
+
+SAI's core is **adaptability + superhuman performance**: the ability to quickly learn any important task and achieve levels beyond human capability.
+
+## Why This Matters
+
+Current AI evaluation criteria are distorted: "Can it do math like a human?"
+
+But SAI asks: **"Can it solve problems that the world's best mathematicians cannot?"**
+
+When AI is clearly a "super-specialist" rather than a "general replacement":
+- Research directions become clearer
+- Societal discussions become more pragmatic
+- Progress becomes measurable
+
+**Abandon the illusion of AGI. Embrace the reality of SAI.**
+
 ---
 
-## English Abstract
+## Paper Information
 
-Everyone from AI executives and researchers to doomsayers, politicians, and activists is talking about Artificial General Intelligence (AGI). Yet, they often don't seem to agree on its exact definition. One common definition of AGI is an AI that can do everything a human can do, but are humans truly general?
+**Title**: AI Must Embrace Specialization via Superhuman Adaptable Intelligence  
+**Authors**: Judah Goldfeder, Philippe Wyder, Yann LeCun, Ravid Shwartz-Ziv  
+**arXiv**: https://arxiv.org/abs/2602.23643
 
-In this paper, the authors address what's wrong with our conception of AGI, and why, even in its most coherent formulation, it is a flawed concept to describe the future of AI. They explore whether the most widely accepted definitions are plausible, useful, and truly general.
+**Abstract:**
+Everyone from AI executives and researchers to doomsayers, politicians, and activists is talking about Artificial General Intelligence (AGI). Yet, they often don't seem to agree on its exact definition. One common definition of AGI is an AI that can do everything a human can do, but are humans truly general? In this paper, we address what's wrong with our conception of AGI, and why, even in its most coherent formulation, it is a flawed concept to describe the future of AI.
 
-They argue that AI must embrace specialization, rather than strive for generality, and in its specialization strive for superhuman performance, and introduce **Superhuman Adaptable Intelligence (SAI)**. SAI is defined as intelligence that can learn to exceed humans at anything important that we can do, and that can fill in the skill gaps where humans are incapable.
-
----
-
-📄 **论文链接**: [arXiv:2602.23643](https://arxiv.org/abs/2602.23643)
-
-*Goldfeder, J., Wyder, P., LeCun, Y., & Shwartz-Ziv, R. (2026). AI Must Embrace Specialization via Superhuman Adaptable Intelligence. arXiv preprint arXiv:2602.23643.*
+*Goldfeder, J., Wyder, P., LeCun, Y., & Shwartz-Ziv, R. (2026). arXiv preprint arXiv:2602.23643.*

@@ -20,8 +20,8 @@
 # 安装依赖
 pnpm install
 
-# 本地开发预览
-pnpm dev
+# 本地开发预览（自动 kill 4321 端口）
+./build-preview.sh
 # 访问 http://localhost:4321
 
 # 构建
@@ -41,6 +41,8 @@ src/content/blog/
 ├── your-new-post.md     # 新建文件
 └── ...
 ```
+
+> 📄 **写作模板**: 参考 `docs/TEMPLATE.md` 快速开始
 
 ### 2. 文章 Frontmatter 格式
 
