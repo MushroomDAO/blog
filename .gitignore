@@ -22,3 +22,12 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# VSCode settings
+.vscode/
+
+# npm lockfile (using pnpm)
+package-lock.json
+
+# temp scripts
+build-preview.sh
