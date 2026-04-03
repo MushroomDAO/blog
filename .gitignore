@@ -30,3 +30,4 @@ pnpm-debug.log*
 package-lock.json
 
 # temp scripts
+__pycache__/
