@@ -3,7 +3,7 @@ title: '多模态大语言模型研究进展'
 titleEn: 'Advances in Multimodal Large Language Models'
 description: '近期多模态大语言模型在视觉理解方面的突破性进展'
 descriptionEn: 'Recent breakthroughs in visual understanding with multimodal large language models'
-pubDate: '2025-04-02'
+pubDate: '2026-04-02'
 category: 'Research'
 tags: ['multimodal', 'llm', 'vision', 'research']
 heroImage: '../../assets/blog-placeholder-1.jpg'

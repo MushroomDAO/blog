@@ -63,10 +63,10 @@ description: '记录模型训练过程中的优化技巧'
 descriptionEn: 'Optimization techniques from model training'
 
 # 发布日期（必填）
-pubDate: '2025-04-02'
+pubDate: '2026-04-02'
 
 # 更新日期（可选）
-updatedDate: '2025-04-05'
+updatedDate: '2026-04-05'
 
 # 文章分类（必填，5选1）
 # - Tech-Experiment : 技术实验
@@ -227,7 +227,7 @@ title: 'PyTorch 分布式训练实践'
 titleEn: 'PyTorch Distributed Training Practice'
 description: '记录 DDP 训练的配置过程和踩坑经历'
 descriptionEn: 'Notes on DDP training setup and pitfalls'
-pubDate: '2025-04-02'
+pubDate: '2026-04-02'
 category: 'Tech-Experiment'
 tags: ['pytorch', 'distributed-training', 'ddp']
 heroImage: '../../assets/blog-placeholder-1.jpg'
@@ -250,7 +250,7 @@ Recently needed to scale model training to multiple GPUs...
 ---
 title: 'Mushroom 项目周报 #12'
 description: '本周进展：完成模型 v2 版本训练'
-pubDate: '2025-04-02'
+pubDate: '2026-04-02'
 category: 'Progress-Report'
 tags: ['weekly-report', 'mushroom-project']
 ---

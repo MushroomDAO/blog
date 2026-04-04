@@ -14,10 +14,10 @@ description: ''
 descriptionEn: ''
 
 # 发布日期（必填，格式：YYYY-MM-DD）
-pubDate: '2025-04-02'
+pubDate: '2026-04-02'
 
 # 更新日期（可选，格式：YYYY-MM-DD）
-# updatedDate: '2025-04-05'
+# updatedDate: '2026-04-05'
 
 # 文章分类（必填，5选1）：
 # - Tech-Experiment  : 技术实验

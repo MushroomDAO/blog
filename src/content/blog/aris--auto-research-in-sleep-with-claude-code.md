@@ -3,7 +3,7 @@ title: 'ARIS: 让 AI 在你睡觉时做科研'
 titleEn: 'ARIS: Auto Research in Sleep with Claude Code'
 description: '一个基于双模型协作的自主 ML 科研系统，让 Claude Code 执行，GPT 审稿，实现全自动研究流水线'
 descriptionEn: 'A dual-model collaborative autonomous ML research system using Claude Code for execution and GPT for review'
-pubDate: '2025-04-03'
+pubDate: '2026-04-03'
 category: 'Research'
 tags: ['claude-code', 'ai-research', 'multi-agent', 'ml-pipeline', 'automation']
 heroImage: '../../assets/blog-cover-20260403.jpg'

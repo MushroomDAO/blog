@@ -3,7 +3,7 @@ title: 'Gemma 4 发布：本地开源模型的新标杆'
 titleEn: 'Gemma 4 Released: A New Benchmark for Local Open Source Models'
 description: 'Google DeepMind 发布 Gemma 4，支持原生多模态、256K 长文本、Agent 友好，开源模型也能媲美闭源旗舰'
 descriptionEn: 'Google DeepMind releases Gemma 4 with native multimodal support, 256K context, and Agent-friendly features'
-pubDate: '2025-04-03'
+pubDate: '2026-04-03'
 category: 'Tech-News'
 tags: ['gemma', 'gemini', 'llm', 'open-source', 'ai-agent']
 heroImage: '../../assets/blog-cover-20260403.jpg'
