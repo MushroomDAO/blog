@@ -170,7 +170,7 @@ pnpm build
 # 2. 部署到 Cloudflare Pages
 npx wrangler pages deploy dist
 ```
-
+**注意**：这里你要预先注册cloudflare帐号并且本地login后才可以执行此命令。
 或使用一键脚本：
 
 ```bash
@@ -270,7 +270,7 @@ tags: ['weekly-report', 'mushroom-project']
 
 ## 域名配置
 
-博客已配置域名 `https://blog.mushroom.cv`，如需修改：
+博客已配置域名 `https://blog.mushroom.cv`（这个是我自用域名），如需修改：
 
 1. 修改 `astro.config.mjs` 中的 `site` 字段
 2. 在 Cloudflare Pages 控制台绑定自定义域名
@@ -309,4 +309,4 @@ pnpm build
 
 ---
 
-**Mycelium - Protocols and Networks** 🍄
+**Mycelium - Infra, Protocols and Networks** 🍄
