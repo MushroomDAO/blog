@@ -1,7 +1,7 @@
 const { marked } = require('marked');
 const yaml = require('js-yaml');
 
-// 主题配置
+// 主题配置 - 扩展更多主题
 const THEMES = {
   claude: {
     name: 'Claude',
@@ -10,7 +10,8 @@ const THEMES = {
     bgGray: '#FAF9F7',
     text: '#2D2D2D',
     codeBg: '#2D2D2D',
-    codeText: '#E8E8E8'
+    codeText: '#E8E8E8',
+    gradient: 'linear-gradient(135deg, #D97757 0%, #E8A87C 100%)'
   },
   chengyun: {
     name: '橙韵',
@@ -19,7 +20,8 @@ const THEMES = {
     bgGray: '#fafaf9',
     text: '#292524',
     codeBg: '#1c1917',
-    codeText: '#fafaf9'
+    codeText: '#fafaf9',
+    gradient: 'linear-gradient(135deg, #fb923c 0%, #fdba74 100%)'
   },
   blue: {
     name: '蓝色专业',
@@ -28,7 +30,8 @@ const THEMES = {
     bgGray: '#f8fafc',
     text: '#0f172a',
     codeBg: '#0f172a',
-    codeText: '#f8fafc'
+    codeText: '#f8fafc',
+    gradient: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)'
   },
   sticker: {
     name: '贴纸',
@@ -37,16 +40,98 @@ const THEMES = {
     bgGray: '#FAF9F7',
     text: '#2D2D2D',
     codeBg: '#2D2D2D',
-    codeText: '#E8E8E8'
+    codeText: '#E8E8E8',
+    gradient: 'linear-gradient(135deg, #D97757 0%, #E8A87C 100%)'
+  },
+  // 新增主题
+  mint: {
+    name: '薄荷绿',
+    primary: '#10b981',
+    bgLight: '#ecfdf5',
+    bgGray: '#f9fafb',
+    text: '#111827',
+    codeBg: '#064e3b',
+    codeText: '#d1fae5',
+    gradient: 'linear-gradient(135deg, #10b981 0%, #34d399 100%)'
+  },
+  purple: {
+    name: '神秘紫',
+    primary: '#7c3aed',
+    bgLight: '#f5f3ff',
+    bgGray: '#fafaf9',
+    text: '#1f2937',
+    codeBg: '#4c1d95',
+    codeText: '#ede9fe',
+    gradient: 'linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)'
+  },
+  cyber: {
+    name: '赛博朋克',
+    primary: '#06b6d4',
+    bgLight: '#ecfeff',
+    bgGray: '#f8fafc',
+    text: '#0e7490',
+    codeBg: '#164e63',
+    codeText: '#cffafe',
+    gradient: 'linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%)'
+  },
+  rose: {
+    name: '玫瑰粉',
+    primary: '#e11d48',
+    bgLight: '#fff1f2',
+    bgGray: '#fafaf9',
+    text: '#881337',
+    codeBg: '#9f1239',
+    codeText: '#ffe4e6',
+    gradient: 'linear-gradient(135deg, #e11d48 0%, #fb7185 100%)'
   }
 };
+
+// 获取随机主题
+function getRandomTheme() {
+  const themeNames = Object.keys(THEMES);
+  const randomIndex = Math.floor(Math.random() * themeNames.length);
+  return themeNames[randomIndex];
+}
+
+// 生成底部 banner HTML
+function generateFooterBanner(theme) {
+  return `
+<div style="margin-top:40px;padding:24px;background:${theme.gradient};border-radius:12px;text-align:center;color:#fff;">
+  <div style="font-size:24px;margin-bottom:8px;">🍄</div>
+  <div style="font-size:16px;font-weight:bold;margin-bottom:8px;">Mycelium</div>
+  <div style="font-size:13px;opacity:0.95;line-height:1.6;">
+    <span style="margin:0 4px;">🪵 Infras</span>
+    <span style="opacity:0.6;">|</span>
+    <span style="margin:0 4px;">🦠 Protocols</span>
+    <span style="opacity:0.6;">|</span>
+    <span style="margin:0 4px;">🕸️ Networks</span>
+  </div>
+  <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.3);font-size:12px;opacity:0.9;">
+    📍 blog.mushroom.cv
+  </div>
+</div>
+`;
+}
+
+// 生成顶部 watermark
+function generateHeaderWatermark() {
+  return `
+<div style="text-align:center;margin-bottom:20px;padding:12px;background:#fafaf9;border-radius:8px;border:1px dashed #ddd;">
+  <span style="font-size:14px;color:#666;">🍄 原文发布于 blog.mushroom.cv</span>
+</div>
+`;
+}
 
 /**
  * 渲染 Markdown 为微信 HTML
  * 使用 marked 的 walkTokens 方式
  */
-function render(markdown, themeName = 'claude') {
-  const theme = THEMES[themeName] || THEMES.claude;
+function render(markdown, themeName = null) {
+  // 如果没有指定主题，随机选择一个
+  const selectedTheme = themeName && THEMES[themeName] ? themeName : getRandomTheme();
+  const theme = THEMES[selectedTheme];
+  
+  console.log(`Using theme: ${theme.name} (${selectedTheme})`);
   
   // 解析 frontmatter
   const frontmatterMatch = markdown.match(/^---\s*\n([\s\S]*?)\n---\s*\n/);
@@ -169,15 +254,21 @@ function render(markdown, themeName = 'claude') {
   // 渲染
   let html = marked.parse(content);
   
-  // 包裹外层容器
-  html = `<section style="background:rgba(0,0,0,0.02);border-radius:12px;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;">${html}</section>`;
+  // 添加顶部 watermark
+  const headerWatermark = generateHeaderWatermark();
+  
+  // 添加底部 banner
+  const footerBanner = generateFooterBanner(theme);
+  
+  // 包裹外层容器，包含顶部和底部
+  html = `<section style="background:rgba(0,0,0,0.02);border-radius:12px;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;">${headerWatermark}${html}${footerBanner}</section>`;
   
   return {
     frontmatter,
     html,
     title: frontmatter.title || 'Untitled',
-    theme: themeName
+    theme: selectedTheme
   };
 }
 
-module.exports = { render, THEMES };
+module.exports = { render, THEMES, getRandomTheme };

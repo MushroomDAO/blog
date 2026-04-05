@@ -6,7 +6,7 @@ descriptionEn: "Vitalik Buterin's practical guide to privacy-preserving AI: why 
 pubDate: "2026-04-04"
 category: "Research"
 tags: ["vitalik", "ai", "privacy", "zk", "security", "ethereum"]
-heroImage: "../../assets/blog-cover-20260404.jpg"
+heroImage: "../../assets/blog-placeholder-2.jpg"
 ---
 
 ## The Local AI Dream Is Over

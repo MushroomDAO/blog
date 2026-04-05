@@ -6,7 +6,7 @@ descriptionEn: 'Google DeepMind releases Gemma 4 with native multimodal support,
 pubDate: '2026-04-03'
 category: 'Tech-News'
 tags: ['gemma', 'gemini', 'llm', 'open-source', 'ai-agent']
-heroImage: '../../assets/blog-cover-20260403.jpg'
+heroImage: '../../assets/blog-placeholder-4.jpg'
 ---
 
 2026 年 4 月 2 日，Google DeepMind 正式发布了 **Gemma 4**。这不是一次简单的版本迭代，而是开源本地模型的一次质变——基于 Gemini 3 同款架构，专门针对本地部署和开发者效率进行了深度优化。

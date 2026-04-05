@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { render } = require('./renderer/wechat-renderer');
+const { render, getRandomTheme, THEMES } = require('./renderer/wechat-renderer');
 const { WeChatClient } = require('./wechat-api/client');
 const fs = require('fs');
 const path = require('path');
@@ -28,7 +28,7 @@ function loadEnv() {
  * M2 主流程
  */
 async function publish(markdownFile, options = {}) {
-  const { theme = 'claude', author = 'Mycelium' } = options;
+  const { theme = null, author = 'Mycelium' } = options;
   
   console.log('🚀 M2 WeChat Publisher');
   console.log('======================\n');
@@ -50,10 +50,13 @@ async function publish(markdownFile, options = {}) {
   // 读取并渲染 Markdown
   console.log('[2/5] Rendering markdown...');
   const markdown = fs.readFileSync(markdownFile, 'utf-8');
-  const result = render(markdown, theme);
+  
+  // 如果没有指定主题，使用随机主题
+  const selectedTheme = theme || getRandomTheme();
+  const result = render(markdown, selectedTheme);
   
   console.log(`   Title: ${result.title}`);
-  console.log(`   Theme: ${theme}`);
+  console.log(`   Theme: ${THEMES[result.theme].name} (${result.theme})`);
   
   // 初始化微信客户端
   const wechat = new WeChatClient(env.WECHAT_APP_ID, env.WECHAT_APP_SECRET);
@@ -118,7 +121,7 @@ async function publish(markdownFile, options = {}) {
         author,
         digest,
         mediaId: draft.mediaId,
-        theme,
+        theme: result.theme,
         publishedAt: new Date().toISOString()
       }, null, 2),
       'utf-8'
@@ -128,6 +131,7 @@ async function publish(markdownFile, options = {}) {
     console.log('');
     console.log('📋 Draft Info:');
     console.log(`   Title: ${result.title}`);
+    console.log(`   Theme: ${THEMES[result.theme].name} (${result.theme})`);
     console.log(`   Media ID: ${draft.mediaId}`);
     console.log(`   Preview: https://mp.weixin.qq.com`);
     console.log('');
@@ -151,16 +155,18 @@ if (require.main === module) {
     console.log('Usage: node index.js <markdown-file> [options]');
     console.log('');
     console.log('Options:');
-    console.log('  --theme <name>   Theme: claude|chengyun|blue|sticker (default: claude)');
+    console.log('  --theme <name>   Theme (random if not specified):');
+    console.log('                   claude | chengyun | blue | sticker');
+    console.log('                   mint | purple | cyber | rose');
     console.log('  --author <name>  Author name (default: Mycelium)');
     console.log('');
-    console.log('Example:');
-    console.log('  node index.js article.md');
+    console.log('Examples:');
+    console.log('  node index.js article.md           # Random theme');
     console.log('  node index.js article.md --theme blue --author "Alice"');
     process.exit(1);
   }
   
-  const options = { theme: 'claude', author: 'Mycelium' };
+  const options = { theme: null, author: 'Mycelium' };
   
   for (let i = 1; i < args.length; i++) {
     if (args[i] === '--theme' && i + 1 < args.length) {

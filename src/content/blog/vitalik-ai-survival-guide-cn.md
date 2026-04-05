@@ -6,7 +6,7 @@ descriptionEn: "Vitalik Buterin's hands-on test: local LLMs can't write decent c
 pubDate: "2026-04-04"
 category: "Research"
 tags: ["vitalik", "ai", "privacy", "zk", "security", "ethereum"]
-heroImage: "../../assets/blog-cover-20260404.jpg"
+heroImage: "../../assets/blog-placeholder-1.jpg"
 ---
 
 ## 本地 AI 的美梦该醒了
