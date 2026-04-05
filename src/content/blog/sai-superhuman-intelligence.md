@@ -6,7 +6,7 @@ descriptionEn: "LeCun's latest paper challenges AGI myth: human intelligence was
 pubDate: "2026-04-03"
 category: "Tech-News"
 tags: ["ai", "agi", "lecun", "sai", "research"]
-heroImage: "../../assets/blog-cover-20260403.jpg"
+heroImage: "../../assets/blog-placeholder-2.jpg"
 ---
 
 ## AGI是个伪命题

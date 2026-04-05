@@ -6,7 +6,7 @@ descriptionEn: "LeCun et al. argue that AI should abandon the pursuit of Artific
 pubDate: "2026-04-03"
 category: "Research"
 tags: ["ai", "agi", "sai", "lecun", "research", "arxiv"]
-heroImage: "../../assets/blog-cover-20260403.jpg"
+heroImage: "../../assets/blog-placeholder-2.jpg"
 ---
 
 ## The AGI Myth
