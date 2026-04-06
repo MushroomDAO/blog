@@ -124,7 +124,7 @@ echo "标题: $TITLE"
 echo "标签: $TAGS"
 
 # 检查 MCP 服务
-MCP_URL=${XHS_MCP_URL:-"http://localhost:3000"}
+MCP_URL=${XHS_MCP_URL:-"http://localhost:3456"}
 echo "MCP服务: $MCP_URL"
 
 # Step 5: 发布到小红书
@@ -139,7 +139,7 @@ sys.path.insert(0, 'pipeline/m3')
 from publisher import XHSPublisher
 
 # 读取配置
-mcp_url = os.getenv('XHS_MCP_URL', 'http://localhost:3000')
+mcp_url = os.getenv('XHS_MCP_URL', 'http://localhost:3456')
 publisher = XHSPublisher(mcp_url)
 
 # 读取内容
