@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  xiaohongshu-mcp:
+    image: xpzouying/xiaohongshu-mcp:latest
+    container_name: xhs-mcp
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./cookies:/app/cookies
+      - ./logs:/app/logs
+      - ./data:/app/data
+    environment:
+      - LOG_LEVEL=info
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # 可选：Redis缓存
+  redis:
+    image: redis:7-alpine
+    container_name: xhs-redis
+    volumes:
+      - ./redis:/data
+    restart: unless-stopped
+    profiles:
+      - with-redis
+
+networks:
+  default:
+    name: xhs-network
