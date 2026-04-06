@@ -23,7 +23,7 @@ docker-compose up -d
 ### 3. 获取登录二维码
 ```bash
 # 方法1: 直接访问
-curl http://localhost:3000/api/login-qrcode
+curl http://localhost:3456/api/login-qrcode
 
 # 方法2: 查看日志
 docker logs xhs-mcp
@@ -35,7 +35,7 @@ docker logs xhs-mcp
 
 ### 5. 验证登录
 ```bash
-curl http://localhost:3000/api/check-login
+curl http://localhost:3456/api/check-login
 ```
 
 ## 网络配置
@@ -51,12 +51,12 @@ tailscale ip -4
 # 输出类似: 100.x.x.x
 
 # 其他设备通过 Tailscale IP 访问
-# http://100.x.x.x:3000
+# http://100.x.x.x:3456
 ```
 
 ### 方案B: 公网IP
 如果有公网IP，配置路由器端口映射：
-- 外部 3000 → Mac Mini 3000
+- 外部 3456 → Mac Mini 3456
 
 ### 方案C: frp内网穿透
 参考 frp 官方文档配置 frpc + frps
@@ -82,7 +82,7 @@ docker ps
 
 ## API 文档
 
-服务启动后访问: http://localhost:3000/docs
+服务启动后访问: http://localhost:3456/docs
 
 ### 主要接口
 - `POST /api/login-qrcode` - 获取登录二维码
@@ -98,7 +98,7 @@ docker ps
 docker logs xhs-mcp
 
 # 检查端口占用
-lsof -i :3000
+lsof -i :3456
 ```
 
 ### 登录失败
@@ -111,8 +111,8 @@ docker-compose restart
 ### 网络不通
 ```bash
 # 测试本地访问
-curl http://localhost:3000/health
+curl http://localhost:3456/health
 
 # 测试外部访问 (替换为实际IP)
-curl http://100.x.x.x:3000/health
+curl http://100.x.x.x:3456/health
 ```
