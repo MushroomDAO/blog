@@ -10,3 +10,6 @@
 [submodule "submodules/wechat-article-publisher-skill"]
 	path = submodules/wechat-article-publisher-skill
 	url = git@github.com:jhfnetboy/wechat-article-publisher-skill.git
+[submodule "submodules/xiaohongshu-mcp"]
+	path = submodules/xiaohongshu-mcp
+	url = https://github.com/xpzouying/xiaohongshu-mcp.git
