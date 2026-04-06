@@ -53,13 +53,15 @@ async function publish(markdownFile, options = {}) {
   
   // 如果没有指定主题，使用随机主题
   const selectedTheme = theme || getRandomTheme();
-  const result = render(markdown, selectedTheme);
-  
-  console.log(`   Title: ${result.title}`);
-  console.log(`   Theme: ${THEMES[result.theme].name} (${result.theme})`);
   
   // 初始化微信客户端
   const wechat = new WeChatClient(env.WECHAT_APP_ID, env.WECHAT_APP_SECRET);
+  
+  // 渲染（异步，可能包含图片上传）
+  const result = await render(markdown, selectedTheme, wechat);
+  
+  console.log(`   Title: ${result.title}`);
+  console.log(`   Theme: ${THEMES[result.theme].name} (${result.theme})`);
   
   // 处理封面图
   console.log('[3/5] Processing cover image...');
