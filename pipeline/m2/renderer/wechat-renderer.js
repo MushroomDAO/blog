@@ -1,5 +1,10 @@
 const { marked } = require('marked');
 const yaml = require('js-yaml');
+const https = require('https');
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
+const os = require('os');
 
 // 主题配置 - 扩展更多主题
 const THEMES = {
@@ -93,6 +98,54 @@ function getRandomTheme() {
   return themeNames[randomIndex];
 }
 
+// 清理标题（去掉 title: 前缀）
+function cleanTitle(title) {
+  if (!title) return 'Untitled';
+  // 去掉开头的 title: 或 title：
+  return title.replace(/^title\s*[:：]\s*/i, '').trim();
+}
+
+// 下载外部图片
+async function downloadImage(url, outputDir) {
+  return new Promise((resolve, reject) => {
+    const client = url.startsWith('https:') ? https : http;
+    const urlObj = new URL(url);
+    const ext = path.extname(urlObj.pathname) || '.jpg';
+    const filename = `downloaded_${Date.now()}${ext}`;
+    const filepath = path.join(outputDir, filename);
+    
+    const file = fs.createWriteStream(filepath);
+    
+    client.get(url, (response) => {
+      if (response.statusCode !== 200) {
+        file.close();
+        fs.unlinkSync(filepath);
+        reject(new Error(`Download failed: ${response.statusCode}`));
+        return;
+      }
+      
+      response.pipe(file);
+      
+      file.on('finish', () => {
+        file.close();
+        resolve(filepath);
+      });
+      
+      file.on('error', (err) => {
+        file.close();
+        fs.unlinkSync(filepath);
+        reject(err);
+      });
+    }).on('error', (err) => {
+      file.close();
+      if (fs.existsSync(filepath)) {
+        fs.unlinkSync(filepath);
+      }
+      reject(err);
+    });
+  });
+}
+
 // 生成底部 banner HTML
 function generateFooterBanner(theme) {
   return `
@@ -124,9 +177,8 @@ function generateHeaderWatermark() {
 
 /**
  * 渲染 Markdown 为微信 HTML
- * 使用 marked 的 walkTokens 方式
  */
-function render(markdown, themeName = null) {
+async function render(markdown, themeName = null, wechatClient = null) {
   // 如果没有指定主题，随机选择一个
   const selectedTheme = themeName && THEMES[themeName] ? themeName : getRandomTheme();
   const theme = THEMES[selectedTheme];
@@ -147,7 +199,53 @@ function render(markdown, themeName = null) {
     }
   }
   
-  // 扩展 marked，添加微信兼容的渲染
+  // 清理标题
+  const cleanedTitle = cleanTitle(frontmatter.title);
+  
+  // 处理外部图片
+  if (wechatClient) {
+    const imageRegex = /!\[([^\]]*)\]\((https?:\/\/[^\)]+)\)/g;
+    const matches = [...content.matchAll(imageRegex)];
+    
+    // 过滤掉已经是微信 CDN 的图片
+    const externalImages = matches.filter(m => !m[2].includes('mmbiz.qpic.cn') && !m[2].includes('mmbiz.qlogo.cn'));
+    
+    if (externalImages.length > 0) {
+      console.log(`   Found ${externalImages.length} external image(s) to process...`);
+      
+      // 创建临时目录
+      const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'wechat-img-'));
+      
+      for (const match of externalImages) {
+        const [fullMatch, altText, imageUrl] = match;
+        
+        try {
+          // 下载图片
+          console.log(`   Downloading: ${imageUrl.substring(0, 60)}...`);
+          const localPath = await downloadImage(imageUrl, tempDir);
+          
+          // 上传到微信 CDN
+          console.log(`   Uploading to WeChat...`);
+          const wxUrl = await wechatClient.uploadImage(localPath);
+          
+          // 替换内容中的 URL
+          content = content.replace(fullMatch, `![${altText}](${wxUrl})`);
+          console.log(`   ✅ Image processed`);
+        } catch (e) {
+          console.warn(`   ⚠️ Failed to process image: ${e.message}`);
+        }
+      }
+      
+      // 清理临时目录
+      try {
+        fs.rmSync(tempDir, { recursive: true, force: true });
+      } catch (e) {
+        // 忽略清理错误
+      }
+    }
+  }
+  
+  // 配置 marked
   const renderer = {
     heading(token) {
       const text = this.parser.parseInline(token.tokens);
@@ -213,12 +311,8 @@ function render(markdown, themeName = null) {
     },
     
     image(token) {
-      const href = token.href;
-      // 微信图片占位符
-      if (href.includes('WECHATIMGPH')) {
-        return `<table style="width:100%;margin:20px 0;border-collapse:collapse;"><tbody><tr><td style="padding:40px;text-align:center;background:${theme.bgLight};border-radius:8px;color:#999;font-size:14px;">${href}</td></tr></tbody></table>`;
-      }
-      return `<table style="width:100%;margin:20px 0;border-collapse:collapse;"><tbody><tr><td style="text-align:center;"><img src="${href}" alt="${token.text}" style="max-width:100%;border-radius:8px;"></td></tr></tbody></table>`;
+      // 图片已经在前面处理过了，直接渲染
+      return `<table style="width:100%;margin:20px 0;border-collapse:collapse;"><tbody><tr><td style="text-align:center;"><img src="${token.href}" alt="${token.text}" style="max-width:100%;border-radius:8px;"></td></tr></tbody></table>`;
     },
     
     table(token) {
@@ -248,7 +342,6 @@ function render(markdown, themeName = null) {
     }
   };
   
-  // 配置 marked
   marked.use({ renderer });
   
   // 渲染
@@ -260,15 +353,15 @@ function render(markdown, themeName = null) {
   // 添加底部 banner
   const footerBanner = generateFooterBanner(theme);
   
-  // 包裹外层容器，包含顶部和底部
+  // 包裹外层容器
   html = `<section style="background:rgba(0,0,0,0.02);border-radius:12px;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;">${headerWatermark}${html}${footerBanner}</section>`;
   
   return {
     frontmatter,
     html,
-    title: frontmatter.title || 'Untitled',
+    title: cleanedTitle,
     theme: selectedTheme
   };
 }
 
-module.exports = { render, THEMES, getRandomTheme };
+module.exports = { render, THEMES, getRandomTheme, cleanTitle };
