@@ -16,6 +16,7 @@ description: |
   2. 创建 markdown → src/content/blog/
   3. M1: 运行 pipeline/m1/publisher.py (build + deploy)
   4. M2: 运行 pipeline/m2/index.js (WeChat草稿)
+  5. 验证: 检查文章URL和排序
   
   关键规则:
   - 所有文章文件禁止使用中文命名（使用英文slug）
@@ -62,8 +63,6 @@ description: |
 convert input.png -resize 1200x630^ -gravity North -extent 1200x630 -quality 85 src/assets/images/FILENAME.jpg
 ```
 
-图片命名也禁止使用中文！
-
 ### Step 2: 创建 Markdown
 
 文件路径: `src/content/blog/SLUG.md` (**英文文件名！**)
@@ -102,6 +101,20 @@ cd pipeline/m2 && node index.js "../../src/content/blog/FILE.md"
 
 主题选项: claude | chengyun | blue | sticker | mint | purple | cyber | rose
 
+### Step 5: 验证发布（必须执行）
+
+```bash
+# 获取部署URL
+URL="https://XXXX.blog-mushroom.pages.dev"  # 从部署输出获取
+
+# 验证文章URL可访问
+curl -s "$URL/blog/SLUG/" | grep -o "文章标题" | head -1
+
+# 验证文章在列表第一位
+curl -s "$URL/blog/" | grep -oE "blog/[a-z0-9-]+" | head -1
+# 应该显示: blog/SLUG
+```
+
 ## 可用脚本
 
 | 脚本 | 用途 |
@@ -131,3 +144,17 @@ pipeline/m2/          # WeChat 发布 (P2)
 - [ ] 图片文件名是英文（无中文字符）
 - [ ] titleEn 字段已填写（用于生成文件名）
 - [ ] pubDate 设置为今天（用于置顶）
+- [ ] 部署后验证文章URL可访问
+- [ ] 验证文章在 /blog 列表第一位
+
+## 故障排除
+
+### 文章没有在列表第一位
+1. 检查是否有其他相同日期的文章
+2. 删除旧的同日期文章
+3. 重新构建部署
+
+### 文章URL返回404
+1. 检查文件名是否正确
+2. 检查构建输出是否包含该文件
+3. 检查部署是否成功
