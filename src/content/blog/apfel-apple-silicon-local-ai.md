@@ -6,10 +6,12 @@ descriptionEn: "apfel is an open-source CLI tool for running Apple Intelligence 
 pubDate: "2026-04-07"
 category: "Tech-News"
 tags: ["apple-intelligence", "macOS", "CLI", "local-LLM", "MCP"]
-heroImage: "../../assets/blog-cover-apfel-apple-silicon-0407.jpg"
+heroImage: "../../assets/blog-cover-apfel-screenshot.jpg"
 ---
 
 ## 什么是 apfel？
+
+![apfel界面](../../assets/blog-cover-apfel-screenshot.jpg)
 
 **apfel** 是一款专为搭载 Apple Silicon（M 系列芯片）的 Mac 用户设计的开源工具，旨在通过命令行（CLI）或本地服务器直接调用 macOS 内置的 **Apple Intelligence (Apple Foundation Model)**。
 
