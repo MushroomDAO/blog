@@ -202,37 +202,84 @@ async function render(markdown, themeName = null, wechatClient = null) {
   // 清理标题
   const cleanedTitle = cleanTitle(frontmatter.title);
   
-  // 处理外部图片
+  // 处理图片（外部URL和本地路径）
   if (wechatClient) {
-    const imageRegex = /!\[([^\]]*)\]\((https?:\/\/[^\)]+)\)/g;
+    // 匹配所有图片：外部URL和本地路径
+    const imageRegex = /!\[([^\]]*)\]\(([^\)]+)\)/g;
     const matches = [...content.matchAll(imageRegex)];
     
-    // 过滤掉已经是微信 CDN 的图片
-    const externalImages = matches.filter(m => !m[2].includes('mmbiz.qpic.cn') && !m[2].includes('mmbiz.qlogo.cn'));
+    // 分类处理：外部URL需要下载，本地路径直接使用
+    const externalImages = [];
+    const localImages = [];
     
-    if (externalImages.length > 0) {
-      console.log(`   Found ${externalImages.length} external image(s) to process...`);
+    for (const match of matches) {
+      const [fullMatch, altText, imagePath] = match;
+      // 跳过已经是微信 CDN 的图片
+      if (imagePath.includes('mmbiz.qpic.cn') || imagePath.includes('mmbiz.qlogo.cn')) {
+        continue;
+      }
+      // 外部URL
+      if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+        externalImages.push(match);
+      } else {
+        // 本地路径
+        localImages.push(match);
+      }
+    }
+    
+    const totalImages = externalImages.length + localImages.length;
+    if (totalImages > 0) {
+      console.log(`   Found ${totalImages} image(s) to process...`);
       
       // 创建临时目录
       const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'wechat-img-'));
       
+      // 处理外部图片
       for (const match of externalImages) {
         const [fullMatch, altText, imageUrl] = match;
         
         try {
-          // 下载图片
           console.log(`   Downloading: ${imageUrl.substring(0, 60)}...`);
           const localPath = await downloadImage(imageUrl, tempDir);
           
-          // 上传到微信 CDN
           console.log(`   Uploading to WeChat...`);
           const wxUrl = await wechatClient.uploadImage(localPath);
           
-          // 替换内容中的 URL
           content = content.replace(fullMatch, `![${altText}](${wxUrl})`);
-          console.log(`   ✅ Image processed`);
+          console.log(`   ✅ External image processed`);
         } catch (e) {
-          console.warn(`   ⚠️ Failed to process image: ${e.message}`);
+          console.warn(`   ⚠️ Failed to process external image: ${e.message}`);
+        }
+      }
+      
+      // 处理本地图片
+      for (const match of localImages) {
+        const [fullMatch, altText, imagePath] = match;
+        
+        try {
+          // 解析相对路径为绝对路径
+          let absolutePath;
+          if (imagePath.startsWith('../../assets/')) {
+            // 从文章路径解析
+            absolutePath = path.join(__dirname, '../..', 'src/assets', imagePath.replace('../../assets/', ''));
+          } else if (imagePath.startsWith('/')) {
+            absolutePath = imagePath;
+          } else {
+            absolutePath = path.resolve(imagePath);
+          }
+          
+          if (!fs.existsSync(absolutePath)) {
+            console.warn(`   ⚠️ Image not found: ${absolutePath}`);
+            continue;
+          }
+          
+          console.log(`   Uploading local image: ${path.basename(absolutePath)}...`);
+          const wxUrl = await wechatClient.uploadImage(absolutePath);
+          
+          content = content.replace(fullMatch, `![${altText}](${wxUrl})`);
+          console.log(`   ✅ Local image processed`);
+        } catch (e) {
+          console.warn(`   ⚠️ Failed to process local image: ${e.message}`);
         }
       }
       
