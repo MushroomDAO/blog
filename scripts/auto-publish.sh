@@ -1,21 +1,33 @@
 #!/bin/bash
 # 自动发布脚本 - 最小化交互
 # Usage: ./scripts/auto-publish.sh /path/to/content.txt [optional-image-path]
+#
+# 环境变量:
+#   BLOG_USER - 用户配置名 (默认: mushroom)
+#   或从 .env 文件读取
 
 set -e
 cd "$(dirname "$0")/.."
 
+# 加载 .env 文件
+if [ -f .env ]; then
+  export $(grep -v '^#' .env | xargs)
+fi
+
 CONTENT_FILE="$1"
 IMAGE_PATH="$2"  # 可选
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+BLOG_USER=${BLOG_USER:-mushroom}
 
 # 颜色
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
 NC='\033[0m'
 
 echo -e "${GREEN}🚀 自动发布流程${NC}"
+echo -e "${BLUE}👤 当前用户: $BLOG_USER${NC}"
 echo "===================="
 
 # ========== Step 1: 提取内容 ==========

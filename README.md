@@ -177,7 +177,75 @@ npx wrangler pages deploy dist
 ./deploy.sh
 ```
 
-### 完整发布流程
+### 完整发布流程 (M1 + M2 + M3)
+
+本系统支持一键发布到多个平台：
+- **M1**: Blog (Astro + Cloudflare Pages)
+- **M2**: 微信公众号
+- **M3**: 小红书 (通过 MCP)
+
+#### 方式 1: 使用 auto-publish.sh（推荐）
+
+```bash
+# 1. 准备文章内容
+echo "文章标题
+
+文章内容..." > /tmp/article.txt
+
+# 2. 一键发布（带图片）
+./scripts/auto-publish.sh /tmp/article.txt /path/to/image.png
+
+# 3. 一键发布（无图片）
+./scripts/auto-publish.sh /tmp/article.txt
+```
+
+#### 方式 2: 交互式发布
+
+直接告诉我：
+
+```
+发布这篇文章：
+
+apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence
+
+**apfel** 是一款专为搭载 Apple Silicon...
+
+[粘贴截图]
+```
+
+**我自动完成**：
+- 提取标题 → 生成英文 slug
+- 压缩图片到 ~100KB
+- 生成封面 (1200x630) + 文章内图 (1200宽)
+- 创建 markdown
+- 构建部署到 Blog
+- 发布 WeChat 草稿
+- 发布小红书 (如配置)
+
+**图片压缩规则**：
+| 步骤 | 质量 | 目标大小 |
+|------|------|---------|
+| 第1次 | 85% | ~100KB |
+| 第2次 | 75% | 如果 >120KB |
+| 第3次 | 65% | 如果还 >120KB |
+
+#### 方式 3: 多平台分别发布
+
+```bash
+# 仅发布 Blog
+pnpm build
+npx wrangler pages deploy dist --project-name=$BLOG_PROJECT_NAME --branch=main
+
+# 仅发布微信公众号
+cd pipeline/m2 && node index.js "../../src/content/blog/article.md"
+
+# 仅发布小红书
+./publish-xhs.sh content.txt
+```
+
+---
+
+### 手动发布流程
 
 ```bash
 # 1. 写作完成后，本地预览
@@ -192,7 +260,106 @@ git commit -m "feat: add new post about xxx"
 git push origin main
 
 # 4. 部署到线上
-npx wrangler pages deploy dist
+npx wrangler pages deploy dist --project-name=$BLOG_PROJECT_NAME --branch=main
+```
+
+---
+
+## 多用户配置
+
+本系统支持多用户配置，你可以轻松切换不同的博客域名、微信公众号和小红书账号。
+
+### 快速配置
+
+1. **复制配置文件模板**
+   ```bash
+   cp config/users/default.js config/users/yourname.js
+   ```
+
+2. **编辑你的配置**
+   ```javascript
+   // config/users/yourname.js
+   module.exports = {
+     id: 'yourname',
+     name: 'Your Name',
+     
+     blog: {
+       projectName: 'your-blog-project',  // Cloudflare Pages 项目名
+       domain: 'blog.yourdomain.com',      // 你的自定义域名
+       
+       brand: {
+         name: 'Your Blog Name',
+         description: 'Your blog description',
+         twitter: '@yourtwitter',
+         github: 'yourgithub',
+       },
+       
+       watermark: {
+         topLeft: 'Your Brand',
+         bottomRight: 'Your Logo',
+       },
+     },
+     
+     wechat: {
+       appId: process.env.WECHAT_APP_ID || '',
+       appSecret: process.env.WECHAT_APP_SECRET || '',
+       mpId: 'gh_xxxxxxxxxxxx',  // 公众号原始ID
+       defaultAuthor: 'Your Name',
+     },
+     
+     xiaohongshu: {
+       mcpUrl: process.env.XHS_MCP_URL || 'http://localhost:3456',
+       defaultTheme: 'blue',
+     },
+   };
+   ```
+
+3. **设置环境变量**
+   ```bash
+   # .env 文件
+   BLOG_USER=yourname
+   WECHAT_APP_ID=wx_xxxxxxxxxxxxxxxx
+   WECHAT_APP_SECRET=your_secret_here
+   WECHAT_MP_ID=gh_xxxxxxxxxxxx
+   XHS_MCP_URL=http://localhost:3456
+   ```
+
+4. **切换用户**
+   ```bash
+   # 临时切换（当前终端）
+   export BLOG_USER=yourname
+   
+   # 永久切换（写入 .env）
+   echo "BLOG_USER=yourname" >> .env
+   ```
+
+### 查看所有用户
+
+```bash
+node -e "console.log(require('./config').listUsers())"
+```
+
+### 配置项说明
+
+| 配置项 | 说明 | 获取方式 |
+|--------|------|---------|
+| `blog.projectName` | Cloudflare Pages 项目名 | [Cloudflare Dashboard](https://dash.cloudflare.com) |
+| `blog.domain` | 自定义域名 | 你的域名服务商 |
+| `wechat.appId` | 微信公众号 AppID | 微信公众平台 -> 设置与开发 -> 基本配置 |
+| `wechat.appSecret` | 微信公众号 AppSecret | 同上（只显示一次，需保存） |
+| `wechat.mpId` | 公众号原始 ID | 公众号设置页面 (gh_xxx) |
+| `xiaohongshu.mcpUrl` | 小红书 MCP 服务地址 | 部署 [xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp) |
+
+### 多用户切换示例
+
+```bash
+# 用户 A 发布
+export BLOG_USER=alice
+./scripts/auto-publish.sh article.txt image.png
+
+# 用户 B 发布  
+export BLOG_USER=bob
+./scripts/auto-publish.sh article.txt image.png
 ```
 
 ---
@@ -210,8 +377,16 @@ blog/
 │   └── styles/global.css      # 全局样式
 ├── public/
 │   └── favicon.svg           # 蘑菇图标 🍄
+├── config/
+│   ├── index.js              # 配置加载器
+│   └── users/                # 用户配置目录
+│       ├── default.js        # 默认配置模板
+│       ├── mushroom.js       # Mushroom 用户配置
+│       └── yourname.js       # 你的配置
 ├── dist/                     # 构建输出（不上传 GitHub）
 ├── deploy.sh                 # 部署脚本
+├── scripts/
+│   └── auto-publish.sh       # 自动发布脚本
 └── README.md                 # 本文件
 ```
 
