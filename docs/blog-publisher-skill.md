@@ -16,91 +16,122 @@
 
 ---
 
-## 🚀 自动化方案（推荐）
+## 🚀 简化流程（推荐）
 
-### 方案 1: 使用 auto-publish.sh（最小交互）
+### 最佳实践：你直接粘贴
 
-适用于：你提供文字内容和图片路径
+**步骤 1**: 你把文章内容粘贴给我  
+**步骤 2**: （可选）把图片粘贴给我  
+**步骤 3**: 说"发布"  
+**步骤 4**: 我自动完成全部工作
+
+---
+
+### 图片处理约定
+
+**你做的**:
+- 直接粘贴/上传图片（任何格式）
+
+**我做的**:
+- 自动压缩到 ~100KB
+- 封面：1200x630（可裁剪）
+- 文章内：1200宽（不裁剪）
+
+**压缩目标**: 100KB ± 20KB
+
+---
+
+### 完整示例
+
+**你输入**:
+```
+发布这篇文章：
+
+apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence
+
+**apfel** 是一款专为搭载 Apple Silicon...
+
+[粘贴图片]
+```
+
+**我自动执行**:
+1. ✅ 提取标题
+2. ✅ 生成英文 slug
+3. ✅ 处理图片（压缩到 100KB）
+4. ✅ 创建 markdown
+5. ✅ 构建部署到 Production
+6. ✅ 发布 WeChat 草稿
+7. ✅ 验证并返回链接
+
+**你得到**:
+- Blog: https://blog.mushroom.cv/blog/SLUG/
+- WeChat: 草稿已创建
+
+---
+
+### 备选方案：auto-publish.sh
+
+适用于：批量发布、CI/CD、脚本集成
 
 ```bash
-# 1. 准备内容文件
-echo "文章标题
-
-文章内容..." > /tmp/article.txt
-
-# 2. 一键发布（带图片）
-./scripts/auto-publish.sh /tmp/article.txt /path/to/image.png
-
-# 3. 一键发布（无图片）
-./scripts/auto-publish.sh /tmp/article.txt
-```
-
-**自动化程度**: 90%
-- ✅ 自动提取标题
-- ✅ 自动生成英文 slug
-- ✅ 自动处理图片（封面+文章内）
-- ✅ 自动创建 markdown
-- ✅ 自动构建部署
-- ✅ 自动发布 WeChat
-- ⚠️ 需要你提供内容文件路径
-
----
-
-### 方案 2: Skill 引导模式（当前实现）
-
-适用于：你直接说"发布文章"，我引导完成
-
-**自动化程度**: 70%
-- 需要确认是否提供了图片
-- 需要确认图片路径
-- 其余步骤自动执行
-
----
-
-### 方案 3: 完全自动化（理想状态）
-
-**限制**: 目前无法实现完全自动化，因为：
-
-1. **无法自动检测图片** - 不知道你把图片放在哪里
-2. **无法自动确定 slug** - 需要确认英文文件名
-3. **无法自动验证内容** - 需要确认内容是否完整
-
-**改进建议**: 标准化输入
-
-```
-约定目录结构：
-/tmp/blog-publish/
-  ├── content.txt      # 文章内容
-  └── image.png        # 配图（可选）
-
-这样我可以自动检测：
-- 如果存在 image.png → 使用它
-- 如果不存在 → 使用默认封面
+./scripts/auto-publish.sh /path/to/content.txt [/path/to/image.png]
 ```
 
 ---
 
 ## 🎯 图片处理规则（核心）
 
-### 用户提供了图片
+### 用户直接粘贴图片
 
-**封面图片处理**：
-- 尺寸：1200x630（强制比例）
-- 操作：缩放 + 裁剪（从顶部裁剪）
-- 质量：85%
-- 命令：
+**目标大小**: ~100KB (80-120KB)
+
+**封面图片**（用于 Blog 列表和 WeChat 封面）：
 ```bash
-convert input.png -resize 1200x630^ -gravity North -extent 1200x630 -quality 85 src/assets/images/cover-FILENAME.jpg
+# 步骤 1: 先尝试高质量压缩
+convert input.png \
+  -resize 1200x630^ \
+  -gravity North \
+  -extent 1200x630 \
+  -quality 85 \
+  -strip \
+  cover.jpg
+
+# 步骤 2: 如果 > 120KB，降低质量
+convert input.png \
+  -resize 1200x630^ \
+  -gravity North \
+  -extent 1200x630 \
+  -quality 75 \
+  -strip \
+  cover.jpg
+
+# 步骤 3: 如果还 > 120KB，进一步降低质量到 65
 ```
 
-**文章内图片处理**：
-- 尺寸：最大宽度 1200px（保持原比例）
-- 操作：**只缩放，不裁剪**
-- 质量：85%
-- 命令：
+**文章内图片**（不裁剪，保持原比例）：
 ```bash
-convert input.png -resize 1200x -quality 85 src/assets/images/content-FILENAME.jpg
+# 步骤 1: 先尝试高质量压缩  
+convert input.png \
+  -resize 1200x \
+  -quality 85 \
+  -strip \
+  content.jpg
+
+# 步骤 2: 如果 > 120KB，降低质量到 75 或 65
 ```
+
+**压缩参数说明**:
+- `-strip`: 移除元数据，减小文件大小
+- `-quality 85`: 默认质量
+- `-quality 75`: 如果文件太大
+- `-quality 65`: 如果还是太大
+
+### 目标文件大小
+
+| 类型 | 目标大小 | 最大大小 |
+|------|---------|---------|
+| 封面 | ~100KB | 120KB |
+| 文章内 | ~100KB | 120KB |
 
 ### 用户没有提供图片
 
