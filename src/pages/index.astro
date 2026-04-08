@@ -89,18 +89,6 @@ const filteredPosts = selectedCategory
 				box-shadow: 0 0 10px rgba(var(--accent-mint), 0.4);
 				transform: translateY(-1px);
 			}
-			/* RSS 链接样式 */
-			.rss-link {
-				background: rgba(255, 165, 0, 0.1);
-				border-color: rgba(255, 165, 0, 0.4);
-				color: #ff9500;
-				margin-left: auto;
-			}
-			.rss-link:hover {
-				background: rgba(255, 165, 0, 0.2);
-				border-color: #ff9500;
-				box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
-			}
 			/* 标签行 - 放在标题下方了 */
 			.tags-bar {
 				display: flex;
@@ -221,7 +209,6 @@ const filteredPosts = selectedCategory
 			<!-- 分类筛选 -->
 			<div class="filter-bar">
 				<a href="/blog/" class={`filter-item ${!selectedCategory ? 'active' : ''}`}>All</a>
-				<a href="/rss.xml" class="filter-item rss-link" target="_blank">📡 RSS</a>
 				{categories.map(cat => (
 					<a href={`/blog/?category=${cat}`} class={`filter-item ${selectedCategory === cat ? 'active' : ''}`}>
 						<span>{categoryIcons[cat]}</span>
