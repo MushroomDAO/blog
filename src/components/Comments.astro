@@ -9,20 +9,20 @@ interface Props {
 
 const { discussionCategory = 'General' } = Astro.props;
 
-// 从环境变量或配置中读取 Giscus 配置
-// 用户需要在 giscus.app 生成配置后填入 .env 文件
+// Giscus 配置 (从 giscus.app 生成)
+// 配置步骤: https://giscus.app/zh-CN
 const giscusConfig = {
-  repo: import.meta.env.GISCUS_REPO || '',           // 格式: owner/repo
-  repoId: import.meta.env.GISCUS_REPO_ID || '',      // 从 giscus.app 获取
-  category: import.meta.env.GISCUS_CATEGORY || 'General',
-  categoryId: import.meta.env.GISCUS_CATEGORY_ID || '', // 从 giscus.app 获取
-  mapping: 'title',           // 使用文章标题映射讨论
-  reactionsEnabled: '1',      // 启用表情反应
+  repo: 'MushroomDAO/blog',                    // 仓库名
+  repoId: 'R_kgDOR37EkA',                      // 仓库 ID
+  category: 'General',                         // 讨论分类
+  categoryId: 'DIC_kwDOR37EkM4C6Vim',          // 分类 ID
+  mapping: 'title',                            // 使用文章标题映射讨论
+  reactionsEnabled: '1',                       // 启用表情反应
   emitMetadata: '0',
-  inputPosition: 'bottom',    // 评论框位置
-  theme: 'preferred_color_scheme', // 跟随系统主题
-  lang: 'zh-CN',              // 语言
-  loading: 'lazy',            // 懒加载
+  inputPosition: 'bottom',                     // 评论框位置
+  theme: 'preferred_color_scheme',             // 跟随系统主题
+  lang: 'zh-CN',                               // 语言
+  loading: 'lazy',                             // 懒加载
 };
 ---
 
