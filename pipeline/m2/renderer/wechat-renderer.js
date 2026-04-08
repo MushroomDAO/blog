@@ -261,7 +261,9 @@ async function render(markdown, themeName = null, wechatClient = null) {
           let absolutePath;
           if (imagePath.startsWith('../../assets/')) {
             // 从文章路径解析
-            absolutePath = path.join(__dirname, '../..', 'src/assets', imagePath.replace('../../assets/', ''));
+            // __dirname = pipeline/m2/renderer/
+            // ../../.. = 项目根目录
+            absolutePath = path.join(__dirname, '../../..', 'src/assets', imagePath.replace('../../assets/', ''));
           } else if (imagePath.startsWith('/')) {
             absolutePath = imagePath;
           } else {
