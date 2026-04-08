@@ -1,0 +1,147 @@
+---
+// 博客评论组件 - 使用 Giscus (基于 GitHub Discussions)
+// 配置说明: https://giscus.app/zh-CN
+
+interface Props {
+  // 可选：自定义讨论分类，默认使用文章标题
+  discussionCategory?: string;
+}
+
+const { discussionCategory = 'General' } = Astro.props;
+
+// 从环境变量或配置中读取 Giscus 配置
+// 用户需要在 giscus.app 生成配置后填入 .env 文件
+const giscusConfig = {
+  repo: import.meta.env.GISCUS_REPO || '',           // 格式: owner/repo
+  repoId: import.meta.env.GISCUS_REPO_ID || '',      // 从 giscus.app 获取
+  category: import.meta.env.GISCUS_CATEGORY || 'General',
+  categoryId: import.meta.env.GISCUS_CATEGORY_ID || '', // 从 giscus.app 获取
+  mapping: 'title',           // 使用文章标题映射讨论
+  reactionsEnabled: '1',      // 启用表情反应
+  emitMetadata: '0',
+  inputPosition: 'bottom',    // 评论框位置
+  theme: 'preferred_color_scheme', // 跟随系统主题
+  lang: 'zh-CN',              // 语言
+  loading: 'lazy',            // 懒加载
+};
+---
+
+{giscusConfig.repo && giscusConfig.repoId ? (
+  <div class="comments-section">
+    <div class="comments-header">
+      <h3>💬 评论与讨论</h3>
+      <p class="comments-hint">使用 GitHub 账号登录后发表评论</p>
+    </div>
+    
+    <div class="giscus-wrapper">
+      <script
+        src="https://giscus.app/client.js"
+        data-repo={giscusConfig.repo}
+        data-repo-id={giscusConfig.repoId}
+        data-category={giscusConfig.category}
+        data-category-id={giscusConfig.categoryId}
+        data-mapping={giscusConfig.mapping}
+        data-strict="0"
+        data-reactions-enabled={giscusConfig.reactionsEnabled}
+        data-emit-metadata={giscusConfig.emitMetadata}
+        data-input-position={giscusConfig.inputPosition}
+        data-theme={giscusConfig.theme}
+        data-lang={giscusConfig.lang}
+        data-loading={giscusConfig.loading}
+        crossorigin="anonymous"
+        async
+      />
+    </div>
+  </div>
+) : (
+  <div class="comments-placeholder">
+    <div class="comments-header">
+      <h3>💬 评论功能配置中</h3>
+    </div>
+    <div class="setup-hint">
+      <p>评论系统基于 GitHub Discussions 构建</p>
+      <p>配置步骤：</p>
+      <ol>
+        <li>访问 <a href="https://giscus.app/zh-CN" target="_blank">giscus.app</a></li>
+        <li>按照指引生成配置</li>
+        <li>将配置填入 <code>.env</code> 文件</li>
+      </ol>
+    </div>
+  </div>
+)}
+
+<style>
+  .comments-section {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 0 1em;
+  }
+  
+  .comments-header {
+    text-align: center;
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid rgb(var(--accent));
+  }
+  
+  .comments-header h3 {
+    margin: 0;
+    color: rgb(var(--black));
+    font-size: 1.5em;
+  }
+  
+  .comments-hint {
+    margin: 0.5em 0 0;
+    color: rgb(var(--gray));
+    font-size: 0.9em;
+  }
+  
+  .giscus-wrapper {
+    min-height: 200px;
+  }
+  
+  /* 未配置时的占位样式 */
+  .comments-placeholder {
+    max-width: 600px;
+    margin: 3em auto;
+    padding: 2em;
+    background: linear-gradient(var(--gray-gradient)) no-repeat;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .setup-hint {
+    text-align: left;
+    color: rgb(var(--gray-dark));
+    line-height: 1.8;
+  }
+  
+  .setup-hint p {
+    margin: 0.5em 0;
+  }
+  
+  .setup-hint ol {
+    margin: 0.5em 0;
+    padding-left: 1.5em;
+  }
+  
+  .setup-hint li {
+    margin: 0.3em 0;
+  }
+  
+  .setup-hint code {
+    background: rgba(var(--accent), 0.1);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  
+  .setup-hint a {
+    color: rgb(var(--accent));
+    text-decoration: none;
+  }
+  
+  .setup-hint a:hover {
+    text-decoration: underline;
+  }
+</style>
