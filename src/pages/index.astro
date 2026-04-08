@@ -223,8 +223,8 @@ const postsData = posts.map(post => ({
 					<p>No posts in this category.</p>
 				</div>
 				<ul id="posts-list">
-					{posts.map((post) => (
-						<li data-category={post.data.category || 'Other'}>
+					{posts.map((post, index) => (
+						<li data-category={post.data.category || 'Other'} data-index={index} class={index >= 12 ? 'hidden-post' : ''}>
 							<a href={`/blog/${post.id}/`}>
 								{post.data.heroImage && (
 									<Image width={720} height={360} src={post.data.heroImage} alt="" />
@@ -245,10 +245,82 @@ const postsData = posts.map(post => ({
 						</li>
 					))}
 				</ul>
+				<div id="load-more" class="load-more" style="display: none;">
+					<button onclick="loadMore()">加载更多 ↓</button>
+				</div>
 			</section>
 
+			<style>
+				.hidden-post {
+					display: none !important;
+				}
+				.load-more {
+					text-align: center;
+					padding: 2em 0;
+				}
+				.load-more button {
+					padding: 0.8em 2em;
+					background: rgba(var(--accent-mint), 0.1);
+					border: 1px solid rgba(var(--accent-mint), 0.4);
+					border-radius: 24px;
+					color: rgb(var(--accent-mint));
+					font-size: 1em;
+					cursor: pointer;
+					transition: all 0.2s;
+				}
+				.load-more button:hover {
+					background: rgba(var(--accent-mint), 0.2);
+					box-shadow: 0 0 15px rgba(var(--accent-mint), 0.4);
+				}
+			</style>
+
 			<script>
-				// 客户端分类筛选
+				// 无限滚动配置
+				const CONFIG = {
+					initialLoad: 12,      // 首屏加载数量
+					loadPerBatch: 6,      // 每次加载数量
+				};
+				
+				let currentVisibleCount = CONFIG.initialLoad;
+				
+				// 加载更多文章
+				function loadMore() {
+					const postsList = document.getElementById('posts-list');
+					const hiddenPosts = postsList.querySelectorAll('li.hidden-post');
+					const postsToShow = Math.min(CONFIG.loadPerBatch, hiddenPosts.length);
+					
+					for (let i = 0; i < postsToShow; i++) {
+						hiddenPosts[i].classList.remove('hidden-post');
+					}
+					
+					currentVisibleCount += postsToShow;
+					updateLoadMoreButton();
+				}
+				
+				// 更新"加载更多"按钮状态
+				function updateLoadMoreButton() {
+					const postsList = document.getElementById('posts-list');
+					const loadMoreBtn = document.getElementById('load-more');
+					const selectedCategory = new URL(window.location.href).searchParams.get('category');
+					
+					// 计算当前分类下还有多少隐藏文章
+					let hiddenCount = 0;
+					postsList.querySelectorAll('li.hidden-post').forEach(post => {
+						const category = post.getAttribute('data-category') || 'Other';
+						if (!selectedCategory || category === selectedCategory) {
+							hiddenCount++;
+						}
+					});
+					
+					if (hiddenCount > 0) {
+						loadMoreBtn.style.display = '';
+						loadMoreBtn.querySelector('button').textContent = `加载更多 (${hiddenCount}) ↓`;
+					} else {
+						loadMoreBtn.style.display = 'none';
+					}
+				}
+				
+				// 分类筛选
 				function filterPosts() {
 					const url = new URL(window.location.href);
 					const selectedCategory = url.searchParams.get('category');
@@ -265,16 +337,25 @@ const postsData = posts.map(post => ({
 					// 筛选文章
 					const postsList = document.getElementById('posts-list');
 					const emptyState = document.getElementById('empty-state');
-					const posts = postsList.querySelectorAll('li');
+					const allPosts = postsList.querySelectorAll('li');
 					let visibleCount = 0;
+					let shownCount = 0;
 					
-					posts.forEach(post => {
+					allPosts.forEach(post => {
 						const category = post.getAttribute('data-category') || 'Other';
-						if (!selectedCategory || category === selectedCategory) {
-							post.style.display = '';
+						const matchesCategory = !selectedCategory || category === selectedCategory;
+						
+						if (matchesCategory) {
 							visibleCount++;
+							// 只显示前 N 篇
+							if (shownCount < CONFIG.initialLoad) {
+								post.classList.remove('hidden-post');
+								shownCount++;
+							} else {
+								post.classList.add('hidden-post');
+							}
 						} else {
-							post.style.display = 'none';
+							post.classList.add('hidden-post');
 						}
 					});
 					
@@ -282,10 +363,14 @@ const postsData = posts.map(post => ({
 					if (visibleCount === 0) {
 						postsList.style.display = 'none';
 						emptyState.style.display = '';
+						document.getElementById('load-more').style.display = 'none';
 					} else {
 						postsList.style.display = '';
 						emptyState.style.display = 'none';
+						updateLoadMoreButton();
 					}
+					
+					currentVisibleCount = shownCount;
 				}
 				
 				// 页面加载时执行
