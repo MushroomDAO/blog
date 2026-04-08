@@ -1,16 +1,16 @@
 ---
 title: 'OpenScreen：免费开源的 Screen Studio 替代品'
-pubDate: 2026-04-08
+pubDate: '2026-04-08'
 author: 'Mushroom'
-cover: '../../assets/blog/openscreen/cover.jpg'
-category: '工具推荐'
-tags: ['录屏工具', '开源软件', 'Screen Studio', '视频制作']
-excerpt: '无需39美元每月，立刻获得智能缩放、鼠标跟随等专业录屏功能！OpenScreen是一个完全免费、跨平台的屏幕演示视频制作工具，被视为商业软件 Screen Studio 的开源替代方案。'
+heroImage: '../../assets/blog-cover-openscreen.jpg'
+description: '无需39美元每月，立刻获得智能缩放、鼠标跟随等专业录屏功能！OpenScreen是一个完全免费、跨平台的屏幕演示视频制作工具，被视为商业软件 Screen Studio 的开源替代方案。'
+category: 'Tech-News'
+tags: ['screen-recorder', 'open-source', 'Screen-Studio', 'video-production']
 ---
 
 OpenScreen 是一个由开发者 Siddharth Vaddem 发起的开源项目（GitHub 仓库：`siddharthvaddem/openscreen`），旨在为用户提供一个免费、跨平台且功能强大的屏幕演示视频制作工具。它被广泛视为商业软件 Screen Studio 的开源替代方案，特别适合开发者、产品经理和内容创作者用于制作产品演示、教程视频或功能更新介绍。
 
-![OpenScreen界面预览](../../assets/blog/openscreen/cover.jpg)
+![OpenScreen界面预览](../../assets/blog-cover-openscreen.jpg)
 
 ## 1. 项目定位与核心价值
 
