@@ -1,43 +1,254 @@
 ---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+// 统计所有标签
+const tagCounts = new Map<string, number>();
+posts.forEach(post => {
+	post.data.tags?.forEach(tag => {
+		tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+	});
+});
+
+// 按文章数排序
+const sortedTags = Array.from(tagCounts.entries()).sort((a, b) => b[1] - a[1]);
+
+// 分类列表
+const categories = ['Tech-Experiment', 'Progress-Report', 'Research', 'Tech-News', 'Other'];
+const categoryIcons: Record<string, string> = {
+	'Tech-Experiment': '🔬',
+	'Progress-Report': '📊',
+	'Research': '🔍',
+	'Tech-News': '🚀',
+	'Other': '📝',
+};
+
+// 获取 URL 参数
+const url = new URL(Astro.request.url);
+const selectedCategory = url.searchParams.get('category');
+
+// 过滤文章
+const filteredPosts = selectedCategory 
+	? posts.filter(post => (post.data.category || 'Other') === selectedCategory)
+	: posts;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			:root {
+				--accent-cyan: 0, 212, 255;
+				--accent-purple: 157, 78, 221;
+				--accent-mint: 72, 191, 145;
+				--dark-bg: 15, 23, 42;
+			}
+			main {
+				width: 960px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+				padding: 2em 1em;
+			}
+			/* 分类筛选栏 - 绿色科技感 */
+			.filter-bar {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.8em;
+				margin-bottom: 1.5em;
+				padding-bottom: 1em;
+				border-bottom: 1px solid rgba(var(--accent-mint), 0.3);
+			}
+			.filter-item {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.3em;
+				padding: 0.4em 0.8em;
+				background: rgba(var(--accent-mint), 0.1);
+				border: 1px solid rgba(var(--accent-mint), 0.4);
+				border-radius: 20px;
+				text-decoration: none;
+				color: rgb(var(--accent-mint));
+				font-size: 0.9em;
+				font-weight: 500;
+				transition: all 0.2s;
+			}
+			.filter-item:hover,
+			.filter-item.active {
+				background: rgba(var(--accent-mint), 0.2);
+				border-color: rgb(var(--accent-mint));
+				box-shadow: 0 0 10px rgba(var(--accent-mint), 0.4);
+				transform: translateY(-1px);
+			}
+			/* 标签行 - 放在标题下方了 */
+			.tags-bar {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5em;
+				margin-top: 0.5em;
+			}
+			.tag-link {
+				display: inline-block;
+				padding: 0.15em 0.6em;
+				background: rgba(var(--accent-purple), 0.1);
+				border: 1px solid rgba(var(--accent-purple), 0.3);
+				color: rgb(var(--accent-purple));
+				border-radius: 12px;
+				text-decoration: none;
+				font-size: 0.8em;
+				transition: all 0.2s;
+			}
+			.tag-link:hover {
+				background: rgba(var(--accent-purple), 0.2);
+				border-color: rgb(var(--accent-purple));
+				box-shadow: 0 0 8px rgba(var(--accent-purple), 0.4);
+			}
+			/* 文章列表 */
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			ul li {
+				width: calc(50% - 1rem);
+			}
+			ul li * {
+				text-decoration: none;
+				transition: 0.2s ease;
+			}
+			ul li:first-child {
+				width: 100%;
+				margin-bottom: 1rem;
+				text-align: center;
+			}
+			ul li:first-child img {
+				width: 100%;
+			}
+			ul li:first-child .title {
+				font-size: 2.369rem;
+			}
+			ul li img {
+				margin-bottom: 0.5rem;
+				border-radius: 12px;
+			}
+			ul li a {
+				display: block;
+			}
+			.title {
+				margin: 0;
+				color: rgb(var(--black));
+				line-height: 1.2;
+			}
+			.date {
+				margin: 0;
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+			}
+			.meta-row {
+				display: flex;
+				align-items: center;
+				gap: 0.5em;
+				margin-bottom: 0.4em;
+				font-size: 0.85em;
+			}
+			.category-small {
+				background: rgba(var(--accent-mint), 0.15);
+				border: 1px solid rgba(var(--accent-mint), 0.4);
+				color: rgb(var(--accent-mint));
+				padding: 0.1em 0.5em;
+				border-radius: 4px;
+				font-weight: 500;
+			}
+			ul li a:hover h4,
+			ul li a:hover .date {
+				color: rgb(var(--accent-cyan));
+			}
+			ul a:hover img {
+				box-shadow: 0 4px 20px rgba(var(--accent-cyan), 0.2);
+			}
+			.empty-state {
+				text-align: center;
+				padding: 3em;
+				color: rgb(var(--gray));
+			}
+			@media (max-width: 720px) {
+				.filter-bar {
+					gap: 0.5em;
+				}
+				ul {
+					gap: 0.5em;
+				}
+				ul li {
+					width: 100%;
+					text-align: center;
+				}
+				ul li:first-child {
+					margin-bottom: 0;
+				}
+				ul li:first-child .title {
+					font-size: 1.563em;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🍄 Hello, Human!</h1>
-			<p>
-				Welcome to the official <a href="https://mushroom.box/">Mycelium</a> blog.
-				This is where we share 🔬 Research, 🧪 Tech Experiments, 📰 News and 📊 Progress Reports
-				from our 🛠️ Infra Team: <a href="https://aastar.io">AAStar</a> and <a href="https://github.com/AuraAIHQ">AuraAI</a>.
-			</p>
-			<p>
-				This blog shares information with you. <strong>⚡ Do Your Own Research</strong>.
-			</p>
-			<p>For more details:</p>
-			<ul>
-				<li><a href="https://kanban.mushroom.cv">📋 Progress</a></li>
-				<li><a href="https://github.com/MushroomDAO">🐙 GitHub Mushroom</a></li>
-				<li><a href="https://github.com/AAStarCommunity">🐙 GitHub AAStar</a></li>
-				<li><a href="https://github.com/AuraAIHQ">🐙 GitHub AuraAI</a></li>
-				<li><a href="https://github.com/MushroomDAO/blog">📝 GitHub this blog</a></li>
-			</ul>
-			<p>
-				This blog has two main features: 📝 post what you get (like some words),
-				🤖 auto generate blog and 💬 WeChat content and publish.
-				Our WeChat Article <a href="https://mp.weixin.qq.com/s/ZTAgJIoNUtBtK8Vmph1wAQ">XStack18</a>.
-			</p>
-			<p>
-				🎤 Looking for a talk? See U in 26th, June at Chiang Mai.
-			</p>
+			<!-- 分类筛选 -->
+			<div class="filter-bar">
+				<a href="/blog/" class={`filter-item ${!selectedCategory ? 'active' : ''}`}>All</a>
+				{categories.map(cat => (
+					<a href={`/blog/?category=${cat}`} class={`filter-item ${selectedCategory === cat ? 'active' : ''}`}>
+						<span>{categoryIcons[cat]}</span>
+						<span>{cat}</span>
+					</a>
+				))}
+			</div>
+
+			<section>
+				{filteredPosts.length === 0 ? (
+					<div class="empty-state">
+						<p>No posts in this category.</p>
+					</div>
+				) : (
+					<ul>
+						{filteredPosts.map((post) => (
+							<li>
+								<a href={`/blog/${post.id}/`}>
+									{post.data.heroImage && (
+										<Image width={720} height={360} src={post.data.heroImage} alt="" />
+									)}
+									<div class="meta-row">
+										<span class="category-small">{post.data.category}</span>
+										<span class="date">
+											<FormattedDate date={post.data.pubDate} />
+										</span>
+									</div>
+									<h4 class="title">{post.data.title}</h4>
+									<!-- 标签放在标题下方 -->
+									<div class="tags-bar">
+										{post.data.tags?.map(tag => (
+											<span class="tag-link">#{tag}</span>
+										))}
+									</div>
+								</a>
+							</li>
+						))}
+					</ul>
+				)}
+			</section>
 		</main>
 		<Footer />
 	</body>
