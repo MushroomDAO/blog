@@ -286,7 +286,15 @@ const postsData = posts.map(post => ({
 				// 加载更多文章
 				function loadMore() {
 					const postsList = document.getElementById('posts-list');
-					const hiddenPosts = postsList.querySelectorAll('li.hidden-post');
+					const selectedCategory = new URL(window.location.href).searchParams.get('category');
+					
+					// 获取当前分类下隐藏的文章
+					const allHiddenPosts = Array.from(postsList.querySelectorAll('li.hidden-post'));
+					const hiddenPosts = allHiddenPosts.filter(post => {
+						const category = post.getAttribute('data-category') || 'Other';
+						return !selectedCategory || category === selectedCategory;
+					});
+					
 					const postsToShow = Math.min(CONFIG.loadPerBatch, hiddenPosts.length);
 					
 					for (let i = 0; i < postsToShow; i++) {
@@ -296,6 +304,9 @@ const postsData = posts.map(post => ({
 					currentVisibleCount += postsToShow;
 					updateLoadMoreButton();
 				}
+				
+				// 挂载到 window 以便 onclick 调用
+				window.loadMore = loadMore;
 				
 				// 更新"加载更多"按钮状态
 				function updateLoadMoreButton() {
