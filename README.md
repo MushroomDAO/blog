@@ -265,6 +265,46 @@ npx wrangler pages deploy dist --project-name=$BLOG_PROJECT_NAME --branch=main
 
 ---
 
+## 评论系统配置
+
+博客内置基于 **GitHub Discussions** 的评论系统（使用 Giscus）。
+
+### 配置步骤
+
+1. **开启 Discussions 功能**
+   ```
+   GitHub 仓库 -> Settings -> Features -> Discussions (启用)
+   ```
+
+2. **访问 Giscus 配置页面**
+   - 打开 https://giscus.app/zh-CN
+   - 填写仓库信息，生成配置
+
+3. **填入环境变量**
+   ```bash
+   # .env 文件
+   GISCUS_REPO=yourname/blog
+   GISCUS_REPO_ID=从_giscus.app_获取
+   GISCUS_CATEGORY=General
+   GISCUS_CATEGORY_ID=从_giscus.app_获取
+   ```
+
+4. **重新构建部署**
+   ```bash
+   pnpm build
+   npx wrangler pages deploy dist --project-name=$BLOG_PROJECT_NAME --branch=main
+   ```
+
+### 评论功能特点
+
+- ✅ 使用 GitHub 账号登录
+- ✅ 支持 Markdown 格式
+- ✅ 支持表情反应
+- ✅ 自动适配深色/浅色主题
+- ✅ 懒加载，不影响页面性能
+
+---
+
 ## 多用户配置
 
 本系统支持多用户配置，你可以轻松切换不同的博客域名、微信公众号和小红书账号。
