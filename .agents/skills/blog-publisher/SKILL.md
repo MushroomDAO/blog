@@ -550,33 +550,42 @@ curl -s "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&ap
 |------|----------|----------|----------|
 | 1 | YAML 解析失败 | `YAMLException: unexpected end of the stream within a quoted scalar` | 标题中包含双引号，与 YAML 引号冲突 |
 | 2 | 微信 IP 白名单 | `errcode:40164, invalid ip not in whitelist` | 当前机器 IP 不在公众号白名单中 |
+| 3 | 微信图片路径错误 | `Image not found: pipeline/src/assets/images/xxx.jpg` | 路径解析错误，只回到 pipeline/ 目录而非根目录 |
 
 ### 解决方案
 
 1. **YAML 引号问题**: 将双引号改为单引号包裹标题，或移除内部引号
 2. **IP 白名单**: 登录微信公众号后台添加当前 IP，等待 5-10 分钟后重试
+3. **图片路径问题**: 修复 `wechat-renderer.js`，将 `../..` 改为 `../../..`
 
 ### 改进措施
 
 - [x] 更新 Skill：添加 "错误 5: YAML Frontmatter 引号转义错误"
 - [x] 更新 Skill：添加 "错误 6: 微信公众号 IP 白名单限制"
+- [x] 更新 Skill：添加 "错误 7: 微信图片路径解析错误"
 - [ ] 下次发布前检查标题是否含特殊字符
 - [ ] 在固定网络环境发布，或提前确认 IP 白名单
+- [ ] 修改路径代码时验证文件是否存在
 
 ### 本次新增/更新的 Skill 条目
 
 - [错误 5]: YAML Frontmatter 引号转义错误
 - [错误 6]: 微信公众号 IP 白名单限制
+- [错误 7]: 微信图片路径解析错误
 
 ### 耗时统计
 
 - 图片处理: 3 分钟
 - 文章创建: 2 分钟
 - 构建部署: 2 分钟
-- WeChat 发布: 5 分钟（含 IP 白名单问题排查）
-- **总计**: 12 分钟
+- WeChat 发布: 5 分钟（首次，含 IP 白名单问题）
+- WeChat 重发布: 2 分钟（修复图片路径）
+- **总计**: 14 分钟
 
 ### 备注
+
+- 两张图片处理：封面 113KB，内容图 151KB + 61KB
+- 图片路径修复：`path.join(__dirname, '../../..', ...)` 才是正确的
 
 - 两张图片处理：封面 113KB，内容图 151KB + 61KB
 - 微信发布因 IP 问题需要重试
