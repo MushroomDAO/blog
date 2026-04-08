@@ -457,7 +457,9 @@ Token error: {"errcode":40164,"errmsg":"invalid ip 42.243.69.232, not in whiteli
 
 **检查命令**:
 ```bash
-# 获取当前公网 IP
+# 获取当前公网 IP（多种方式）
+curl -s ip.sb
+curl -s ifconfig.me
 curl -s https://api.ipify.org
 
 # 测试 WeChat API 连通性（仅验证 IP）
@@ -468,6 +470,86 @@ curl -s "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&ap
 - IP 白名单修改后需等待 5-10 分钟生效
 - 微信公众号最多支持 50 个 IP 地址
 - 如果遇到 IPv6 问题，尝试禁用 IPv6
+
+### ❌ 错误 7: Schema 字段名错误 (cover/heroImage, excerpt/description)
+
+**发生时间**: 2026-04-08 (OpenScreen 文章)
+
+**症状**: 
+```
+[ERROR] [InvalidContentEntryDataError] blog/openscreen-free-screen-recorder.md 
+→ Invalid frontmatter
+```
+
+**根本原因**:
+- 使用了错误的字段名 `cover` 而不是 `heroImage`
+- 使用了 `excerpt` 而不是 `description`
+- 没有查看项目实际的 content schema 定义
+
+**错误示例**:
+```yaml
+---
+title: 'OpenScreen：免费开源的 Screen Studio 替代品'
+cover: '../../assets/blog/openscreen/cover.jpg'        # ❌ 错误字段名
+excerpt: '无需39美元每月...'                          # ❌ 错误字段名
+category: '工具推荐'                                   # ❌ 中文枚举值不被接受
+---
+```
+
+**解决方案**:
+```yaml
+---
+title: 'OpenScreen：免费开源的 Screen Studio 替代品'
+heroImage: '../../assets/blog-cover-openscreen.jpg'    # ✅ 正确字段名
+description: '无需39美元每月...'                      # ✅ 正确字段名
+category: 'Tech-News'                                 # ✅ 英文枚举值
+---
+```
+
+**预防措施**:
+- [ ] **第一步**：检查 `src/content.config.ts` 中的 schema 定义
+- [ ] 确认所有必需字段：`title`, `description`, `pubDate`, `category`
+- [ ] 确认可选字段：`heroImage` (不是 cover), `tags`
+- [ ] category 必须是枚举值之一：`Tech-Experiment`, `Progress-Report`, `Research`, `Tech-News`, `Other`
+- [ ] tags 必须是英文数组
+
+**检查命令**:
+```bash
+# 查看 Schema 定义
+cat src/content.config.ts
+
+# 查看已有文章的正确格式
+head -15 src/content/blog/EXISTING-ARTICLE.md
+```
+
+---
+
+### ❌ 错误 8: 图片路径不支持子目录
+
+**发生时间**: 2026-04-08 (OpenScreen 文章)
+
+**症状**: 
+```
+[ImageNotFound] Could not find requested image `../../assets/blog/openscreen/cover.jpg`
+```
+
+**根本原因**:
+- Astro image schema 不支持子目录路径解析
+- 图片放在 `src/assets/blog/openscreen/cover.jpg` 无法被正确识别
+
+**解决方案**:
+```bash
+# 将图片移到 assets 根目录
+mv src/assets/blog/openscreen/cover.jpg src/assets/blog-cover-openscreen.jpg
+
+# 更新 frontmatter
+heroImage: '../../assets/blog-cover-openscreen.jpg'
+```
+
+**预防措施**:
+- [ ] 封面图片直接放在 `src/assets/` 根目录
+- [ ] 使用命名前缀区分不同文章：`blog-cover-[slug].jpg`
+- [ ] 不要用子目录存放封面图片
 
 ---
 
@@ -589,6 +671,64 @@ curl -s "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&ap
 
 - 两张图片处理：封面 113KB，内容图 151KB + 61KB
 - 微信发布因 IP 问题需要重试
+```
+
+### 复盘示例：OpenScreen 文章 (2026-04-08)
+
+```markdown
+## 发布复盘: OpenScreen：免费开源的 Screen Studio 替代品
+
+**发布时间**: 2026-04-08
+**文章**: OpenScreen / openscreen-free-screen-recorder
+
+### 本次发布遇到的问题
+
+| 序号 | 问题描述 | 错误信息 | 根本原因 |
+|------|----------|----------|----------|
+| 1 | Schema 字段错误 | `InvalidContentEntryDataError: Invalid frontmatter` | 使用了 `cover` 而非 `heroImage`，`excerpt` 而非 `description` |
+| 2 | 图片路径不支持子目录 | `ImageNotFound: Could not find requested image` | Astro 不支持子目录图片路径，必须放根目录 |
+| 3 | 图片压缩不当 | 封面 515KB → 压缩后仍 143KB → 109KB | 未一次性设置正确的压缩质量 |
+| 4 | 分支合并冲突 | `CONFLICT in pipeline/m2/renderer/wechat-renderer.js` | update-images 分支与 main 分支代码冲突 |
+| 5 | 未更新公网 IP 获取命令 | 技能文档缺少简化的 IP 获取方式 | 没有记录 `curl ip.sb` 等更简单的命令 |
+
+### 解决方案
+
+1. **Schema 字段错误**: 检查 `src/content.config.ts`，使用正确的字段名 `heroImage` 和 `description`
+2. **图片路径问题**: 将封面移到 `src/assets/` 根目录，命名为 `blog-cover-[slug].jpg`
+3. **图片压缩**: 直接使用 `sips -s formatOptions 55` 一次性压缩到 ~100KB
+4. **分支合并冲突**: 使用 `git checkout --ours` 保留 main 分支的完整版本（含本地图片支持）
+5. **IP 获取命令**: 添加 `curl ip.sb` 和 `curl ifconfig.me` 到技能文档
+
+### 改进措施
+
+- [x] 更新 Skill：添加 "错误 7: Schema 字段名错误"
+- [x] 更新 Skill：添加 "错误 8: 图片路径不支持子目录"
+- [x] 更新 Skill：更新 IP 获取命令，添加 `curl ip.sb` 和 `curl ifconfig.me`
+- [ ] 发布前检查 schema 字段名
+- [ ] 封面图片统一命名格式：`blog-cover-[slug].jpg`
+- [ ] 合并分支前先检查差异
+
+### 本次新增/更新的 Skill 条目
+
+- [错误 7]: Schema 字段名错误 (cover/heroImage, excerpt/description)
+- [错误 8]: 图片路径不支持子目录
+- [更新]: IP 获取命令添加简化版本
+
+### 耗时统计
+
+- 图片处理: 5 分钟（多次压缩尝试）
+- 文章创建: 3 分钟
+- 构建部署: 4 分钟（含 schema 错误排查）
+- 分支合并: 3 分钟（解决冲突）
+- WeChat 发布: 2 分钟
+- **总计**: 17 分钟
+
+### 备注
+
+- 封面图：109KB，压缩质量 55%
+- 合并了 feature/blog-comments 和 update-images 分支
+- Blog 现在支持 Giscus 评论功能
+- 分支策略：main 可直接 push，无需 PR
 ```
 
 ### 复盘执行检查清单
