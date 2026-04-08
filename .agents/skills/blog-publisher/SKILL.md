@@ -372,6 +372,105 @@ npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main
 
 ---
 
+### ❌ 错误 5: YAML Frontmatter 引号转义错误
+
+**发生时间**: 2026-04-08（MemPalace 文章）
+
+**症状**: 
+```
+YAMLException: unexpected end of the stream within a quoted scalar
+at readBlockMapping
+```
+
+**根本原因**:
+- 标题或描述中包含中文引号 `"记忆宫殿"`
+- YAML 解析器将引号视为字符串边界
+- 导致 frontmatter 解析失败
+
+**错误示例**:
+```yaml
+---
+title: "MemPalace：重塑 AI 记忆的"记忆宫殿""  # ❌ 错误：内部双引号未转义
+description: "从古希腊"记忆宫殿"技术中汲取灵感"  # ❌ 错误
+---
+```
+
+**解决方案**:
+```yaml
+---
+title: 'MemPalace：重塑 AI 记忆的记忆宫殿'  # ✅ 使用单引号
+description: '从古希腊记忆宫殿技术中汲取灵感'  # ✅ 移除内部引号
+---
+```
+
+**预防措施**:
+- [ ] **避免在 YAML 值中混用双引号包裹包含双引号的文本**
+- [ ] 优先使用单引号 `'` 或不使用引号
+- [ ] 如果必须使用双引号，内部双引号需要转义：`\"`
+- [ ] 构建前检查：`pnpm build` 会提示 YAML 解析错误
+
+**检查命令**:
+```bash
+# 验证 YAML 格式
+head -15 src/content/blog/article.md | python3 -c "import sys, yaml; yaml.safe_load(sys.stdin.read())" && echo "✅ YAML 格式正确"
+```
+
+---
+
+### ❌ 错误 6: 微信公众号 IP 白名单限制
+
+**发生时间**: 2026-04-08（MemPalace 文章）
+
+**症状**: 
+```
+Token error: {"errcode":40164,"errmsg":"invalid ip 42.243.69.232, not in whitelist"}
+```
+
+**根本原因**:
+- 当前机器的公网 IP 不在微信公众号白名单中
+- 微信公众号 API 要求预先配置允许的 IP 地址
+- 每次更换网络环境都可能遇到此问题
+
+**解决方案**:
+
+**方案 1: 添加 IP 到白名单（推荐）**
+```
+1. 登录 https://mp.weixin.qq.com
+2. 设置与开发 → 基本配置 → IP 白名单
+3. 添加当前 IP: 42.243.69.232
+4. 保存后等待 5-10 分钟生效
+5. 重新发布
+```
+
+**方案 2: 使用已配置好的机器**
+- 在之前成功发布过的机器上执行发布
+- 或者使用固定的服务器/VPS
+
+**方案 3: 手动发布**
+- 复制文章内容到微信公众号后台手动发布
+- 作为临时解决方案
+
+**预防措施**:
+- [ ] 记录常用的 IP 地址列表
+- [ ] 在固定网络环境下发布
+- [ ] 备选方案：准备手动发布的模板
+
+**检查命令**:
+```bash
+# 获取当前公网 IP
+curl -s https://api.ipify.org
+
+# 测试 WeChat API 连通性（仅验证 IP）
+curl -s "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=YOUR_APP_ID&secret=YOUR_SECRET" | grep -o "40164" && echo "❌ IP 不在白名单"
+```
+
+**备注**: 
+- IP 白名单修改后需等待 5-10 分钟生效
+- 微信公众号最多支持 50 个 IP 地址
+- 如果遇到 IPv6 问题，尝试禁用 IPv6
+
+---
+
 ## 发布检查清单
 
 - [ ] 询问用户是否提供了图片
@@ -438,3 +537,4 @@ src/assets/                    # 默认封面
 |------|----------|
 | 2026-04-07 | 初始版本 |
 | 2026-04-07 | 改进图片处理流程，区分封面和文章内图片处理规则 |
+| 2026-04-08 | MemPalace 文章发布实战：添加 YAML 引号错误和微信 IP 白名单错误案例 |
