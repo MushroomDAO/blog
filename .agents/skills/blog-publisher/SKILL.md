@@ -8,11 +8,50 @@
 
 ---
 
+## 🎯 触发词（调用方式）
+
+### 方式 1：直接说触发词（推荐）
+当用户输入包含以下关键词时，自动激活本 skill：
+
+| 触发词 | 示例 |
+|--------|------|
+| `发布文章` | "发布这篇文章" |
+| `发布blog` | "发布到blog" |
+| `发布公众号` | "发布到公众号" |
+| `发布` + 文件路径 | "发布：research/article.md" |
+
+### 方式 2：指定文件路径
+用户可以提供 markdown 文件路径：
+```
+发布：research/my-article.md，分类为 Research
+```
+
+### 方式 3：直接粘贴内容
+用户直接粘贴文章内容：
+```
+发布这篇文章：
+
+# 标题
+正文内容...
+```
+
+---
+
+## 🔍 Skill 位置（供 AI 参考）
+
+**本 Skill 文件位置：**
+```
+/Users/jason/Dev/crypto-projects/blog/.agents/skills/blog-publisher/SKILL.md
+```
+
+**当用户要求"发布"但找不到 skill 时：**
+1. 检查上述路径是否存在
+2. 读取 SKILL.md 获取完整流程
+3. 按本 skill 定义的步骤执行
+
+---
+
 ## 触发词
-- 发布文章
-- 发布blog
-- 发布公众号  
-- 发布
 
 ---
 
@@ -524,6 +563,43 @@ head -15 src/content/blog/EXISTING-ARTICLE.md
 
 ---
 
+### ❌ 错误 9: 没有使用 Skill 而手动操作（严重）
+
+**发生时间**: 2026-04-09
+
+**症状**: 
+- AI 没有读取 skill 文档，直接手动执行发布流程
+- 图片放到了错误的目录 `public/images/`
+- 使用了错误的 heroImage 路径格式 `/images/xxx.png`
+- 构建失败：`[ImageNotFound] Could not find requested image`
+
+**根本原因**:
+- AI 没有找到 skill 的位置
+- 用户提示 "用 skill 完成工作" 但 AI 仍手动操作
+- 忽略了 `.agents/skills/` 目录下的 skill 文件
+
+**正确流程**:
+```bash
+# 1. 首先读取 skill 文档
+cat /Users/jason/Dev/crypto-projects/blog/.agents/skills/blog-publisher/SKILL.md
+
+# 2. 按照 skill 定义的标准流程执行：
+#    - 询问用户是否提供图片
+#    - 处理图片（封面 1200x630，文章内 1200宽）
+#    - 生成英文 slug 文件名
+#    - 创建 markdown 到 src/content/blog/
+#    - 构建并部署到 production
+#    - 发布微信草稿
+```
+
+**预防措施**:
+- [ ] **第一步**：检查 `.agents/skills/` 目录是否存在 skill
+- [ ] **必须读取** skill 文档后再开始操作
+- [ ] 封面图片路径使用 `../../assets/images/cover-[slug].jpg`
+- [ ] 图片必须放在 `src/assets/images/` 而非 `public/images/`
+
+---
+
 ### ❌ 错误 8: 图片路径不支持子目录
 
 **发生时间**: 2026-04-08 (OpenScreen 文章)
@@ -791,3 +867,4 @@ src/assets/                    # 默认封面
 | 2026-04-07 | 初始版本 |
 | 2026-04-07 | 改进图片处理流程，区分封面和文章内图片处理规则 |
 | 2026-04-08 | MemPalace 文章发布实战：添加 YAML 引号错误和微信 IP 白名单错误案例 |
+| 2026-04-09 | 添加错误 9：没有使用 Skill 而手动操作；完善触发词和 skill 发现机制 |
