@@ -4,7 +4,7 @@
 > 
 > 维护记录：
 > - 创建时间: 2026-04-07
-> - 最后更新: 2026-04-07 - 改进图片处理流程
+> - 最后更新: 2026-04-10 - 添加错误 10: pubDate 日期错误导致文章无法成为 Banner；更新检查清单
 
 ---
 
@@ -248,7 +248,7 @@ title: "中文标题"
 titleEn: "english-slug"
 description: "描述"
 descriptionEn: "English description"
-pubDate: "YYYY-MM-DD"
+pubDate: "YYYY-MM-DD"  # 必须是今天的日期，确保文章成为 banner
 category: "Tech-News"
 tags: ["tag1", "tag2"]
 heroImage: "../../assets/images/cover-article-slug.jpg"
@@ -269,7 +269,7 @@ title: "中文标题"
 titleEn: "english-slug"
 description: "描述"
 descriptionEn: "English description"
-pubDate: "YYYY-MM-DD"
+pubDate: "YYYY-MM-DD"  # 必须是今天的日期，确保文章成为 banner
 category: "Tech-News"
 tags: ["tag1", "tag2"]
 heroImage: "../../assets/blog-placeholder-1.jpg"
@@ -563,6 +563,55 @@ head -15 src/content/blog/EXISTING-ARTICLE.md
 
 ---
 
+### ❌ 错误 10: pubDate 日期错误导致文章无法成为 Banner
+
+**发生时间**: 2026-04-10
+
+**症状**: 
+- 新发布的文章没有成为首页 banner（大图展示）
+- 文章按日期排序后不在第一位
+- 昨天的文章仍然占据 banner 位置
+
+**根本原因**:
+- `pubDate` 错误地设置为昨天的日期 `2026-04-09`
+- 博客首页按 `pubDate` 降序排列，日期相同或较早的文章不会排在第一位
+- CSS `ul li:first-child` 选择器决定 banner，必须是排序后的第一篇文章
+
+**错误示例**:
+```yaml
+---
+# 错误：使用了昨天的日期
+title: '今天的文章'
+pubDate: '2026-04-09'  # ❌ 错误：应该是 2026-04-10
+category: 'Research'
+---
+```
+
+**解决方案**:
+```yaml
+---
+# 正确：使用今天的日期
+title: '今天的文章'
+pubDate: '2026-04-10'  # ✅ 正确：使用发布当天的日期
+category: 'Research'
+---
+```
+
+**预防措施**:
+- [ ] **创建 markdown 前**：确认今天的日期
+- [ ] 使用 `date +%Y-%m-%d` 获取当前日期
+- [ ] 检查清单中包含日期验证项
+- [ ] 发布后验证文章在列表第一位
+
+**日期获取命令**:
+```bash
+# 获取今天日期
+date +%Y-%m-%d
+# 输出: 2026-04-10
+```
+
+---
+
 ### ❌ 错误 9: 没有使用 Skill 而手动操作（严重）
 
 **发生时间**: 2026-04-09
@@ -641,9 +690,10 @@ heroImage: '../../assets/blog-cover-openscreen.jpg'
   - [ ] 文章内不插入图片
 - [ ] Markdown 文件名是英文
 - [ ] 图片文件名是英文
+- [ ] **pubDate 使用今天的日期**（确保文章成为默认 banner）
 - [ ] 使用 `--branch=main` 部署
 - [ ] 验证生产环境可访问
-- [ ] 验证文章在列表第一位
+- [ ] 验证文章在列表第一位（banner）
 - [ ] WeChat 草稿正常
 
 ---
