@@ -3,7 +3,7 @@ version: '3.8'
 services:
   xiaohongshu-mcp:
     image: jhfnetboy/xiaohongshu-mcp:latest
-    platform: linux/amd64
+    pull_policy: never
     container_name: xhs-mcp
     ports:
       - "3456:18060"
