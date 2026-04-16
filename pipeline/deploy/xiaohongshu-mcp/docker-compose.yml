@@ -2,7 +2,10 @@ version: '3.8'
 
 services:
   xiaohongshu-mcp:
-    image: aastar/xiaohongshu-mcp:latest
+    build:
+      context: ./src
+      dockerfile: Dockerfile.arm64
+    image: xhs-mcp:local
     container_name: xhs-mcp
     ports:
       - "127.0.0.1:3456:18060"
