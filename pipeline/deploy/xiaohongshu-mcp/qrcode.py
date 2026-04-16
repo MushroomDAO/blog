@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""从小红书 MCP 服务获取登录二维码，保存为图片并在终端渲染"""
+"""从小红书 MCP 服务获取登录二维码，在终端渲染 + 打开 Preview"""
 import sys
 import json
 import base64
@@ -32,39 +32,69 @@ def fetch_qrcode():
         sys.exit(0)
     return data["data"]["img"]
 
-def save_and_open_png(img_data_url: str) -> str:
-    """保存 PNG 到临时文件并用系统默认程序打开"""
+def decode_image(img_data_url: str):
     _, b64 = img_data_url.split(",", 1)
-    png_data = base64.b64decode(b64)
-    tmp = tempfile.NamedTemporaryFile(suffix=".png", delete=False, prefix="xhs_qrcode_")
-    tmp.write(png_data)
-    tmp.close()
-    subprocess.Popen(["open", tmp.name])  # macOS: 用 Preview 打开
-    print(f"二维码图片已用 Preview 打开，也可手动查看: {tmp.name}")
-    return tmp.name
+    return Image.open(BytesIO(base64.b64decode(b64))).convert("L")
 
-def render_terminal(img_data_url: str, size: int = 41):
-    """用 ANSI 颜色在终端渲染（黑白对比，适合扫码）"""
-    BLACK = "\033[40m"   # 黑底
-    WHITE = "\033[107m"  # 亮白底
+def detect_module_size(img: Image.Image) -> int:
+    """通过扫描中间行找第一个黑色 run 的宽度，推断单个模块像素数"""
+    w, h = img.size
+    pixels = img.load()
+    mid_y = h // 2
+
+    # 找第一个黑色像素
+    start = None
+    for x in range(w):
+        if pixels[x, mid_y] < 128:
+            start = x
+            break
+    if start is None:
+        return 4  # 默认值
+
+    # 找第一个黑色 run 的结束
+    end = start
+    for x in range(start, w):
+        if pixels[x, mid_y] >= 128:
+            end = x
+            break
+
+    return max(1, end - start)
+
+def render_terminal(img: Image.Image):
+    """按模块边界采样，用 ANSI 颜色正确渲染 QR（可扫）"""
+    BLACK = "\033[40m"    # 黑底
+    WHITE = "\033[107m"   # 亮白底
     RESET = "\033[0m"
 
-    _, b64 = img_data_url.split(",", 1)
-    img = Image.open(BytesIO(base64.b64decode(b64))).convert("1")
-    img = img.resize((size, size), Image.NEAREST)
+    w, h = img.size
+    mod = detect_module_size(img)
+    cols = w // mod
+    rows = h // mod
+
     pixels = img.load()
 
-    # 上安静区（白色）
-    quiet = WHITE + "  " * (size + 4) + RESET
+    quiet = WHITE + "    " + "  " * cols + "    " + RESET
     print(quiet)
-    for y in range(size):
-        row = WHITE + "    " + RESET  # 左安静区
-        for x in range(size):
-            # pixels==0 是黑色模块，pixels!=0 是白色模块
-            row += (BLACK if pixels[x, y] == 0 else WHITE) + "  " + RESET
-        row += WHITE + "    " + RESET  # 右安静区
-        print(row)
-    print(quiet)  # 下安静区
+    for row in range(rows):
+        y = int((row + 0.5) * mod)
+        line = WHITE + "    " + RESET
+        for col in range(cols):
+            x = int((col + 0.5) * mod)
+            dark = pixels[x, y] < 128
+            line += (BLACK if dark else WHITE) + "  " + RESET
+        line += WHITE + "    " + RESET
+        print(line)
+    print(quiet)
+
+def save_and_open_png(img_data_url: str) -> str:
+    """保存 PNG 到临时文件并用 Preview 打开"""
+    _, b64 = img_data_url.split(",", 1)
+    tmp = tempfile.NamedTemporaryFile(suffix=".png", delete=False, prefix="xhs_qrcode_")
+    tmp.write(base64.b64decode(b64))
+    tmp.close()
+    subprocess.Popen(["open", tmp.name])
+    print(f"[Preview 已打开，也可手动查看: {tmp.name}]")
+    return tmp.name
 
 def wait_for_login(timeout=240):
     print("\n请用小红书 App 扫描二维码，扫码后在手机上点确认登录...")
@@ -82,16 +112,13 @@ def wait_for_login(timeout=240):
 
 if __name__ == "__main__":
     img_url = fetch_qrcode()
+    img = decode_image(img_url)
 
-    # 1. 终端渲染（带正确颜色）
-    render_terminal(img_url)
-
-    # 2. 同时用 Preview 打开（更易扫码）
+    render_terminal(img)
     tmp_path = save_and_open_png(img_url)
 
     wait_for_login()
 
-    # 清理临时文件
     try:
         os.unlink(tmp_path)
     except Exception:
