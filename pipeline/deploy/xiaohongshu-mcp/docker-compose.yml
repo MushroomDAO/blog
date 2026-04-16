@@ -5,7 +5,7 @@ services:
     image: aastar/xiaohongshu-mcp:latest
     container_name: xhs-mcp
     ports:
-      - "3456:18060"
+      - "127.0.0.1:3456:18060"
     volumes:
       - ./cookies:/app/cookies
       - ./logs:/app/logs
