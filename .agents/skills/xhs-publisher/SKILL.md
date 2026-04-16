@@ -1,10 +1,10 @@
 # XHS Publisher Skill
 
-> 小红书自动发布 Skill - 基于 M3 系统封装
+> 小红书自动发布 Skill - 基于 MCP 服务
 > 
 > 维护记录：
 > - 创建时间: 2026-04-16
-> - 合并 M3 完整功能到主分支
+> - 更新: 2026-04-16 - 添加失败教训、简化发布流程
 
 ---
 
@@ -12,144 +12,104 @@
 
 | 触发词 | 功能 |
 |--------|------|
-| `发布到小红书` | 发布当前文章到小红书 |
+| `发布到小红书` | 发布内容到小红书 |
 | `小红书：主题` | 指定主题自动生成并发布 |
-| `小红书预览` | 生成预览不发布 |
-| `发布到 blog 和小红书` | 多平台同时发布 |
 
 ---
 
-## 🏗️ 架构
+## 🚀 快速发布（推荐方式）
 
-```
-用户输入
-    ↓
-Content Optimizer (小红书风格优化)
-    ↓
-Cover Generator (3:4 配图生成)
-    ↓
-Template Renderer (6种主题)
-    ↓
-MCP Publisher (连接 Mac Mini)
-    ↓
-小红书官方 API
-```
+### 方式 1: 直接 curl（最稳定）
 
----
-
-## 📋 前置要求
-
-### 1. Mac Mini MCP 服务部署
 ```bash
-# 在 Mac Mini 上执行
-cd pipeline/deploy/xiaohongshu-mcp
-docker-compose up -d
+export XHS_MCP_URL=http://100.66.210.41:3456
 
-# 扫码登录
-curl http://localhost:3456/api/login-qrcode
+# 准备内容
+cat > /tmp/post.txt << 'EOF'
+忘记拍红烧肉了，村里的小饭店，真不错~
+EOF
 
-# 验证登录
-curl http://localhost:3456/api/check-login
-```
-
-### 2. 网络配置 (Tailscale)
-```bash
-# Mac Mini 上
-brew install tailscale
-sudo tailscale up
-
-# 查看 IP
-tailscale ip -4
-# 输出: 100.x.x.x
-```
-
-### 3. 本地环境变量
-```bash
-# .env
-XHS_MCP_URL=http://100.x.x.x:3456  # Mac Mini Tailscale IP
-```
-
----
-
-## 🚀 使用方式
-
-### 方式 1: 一键脚本
-```bash
-./publish-xhs.sh content.txt [--theme blue]
-```
-
-### 方式 2: Python API
-```python
-from pipeline.m3.optimizer import XHSOptimizer
-from pipeline.m3.cover_generator import XHSCoverGenerator
-from pipeline.m3.publisher import XiaohongshuPublisher
-
-# 优化内容
-optimizer = XHSOptimizer()
-result = optimizer.optimize("原始内容")
-
-# 生成配图
-generator = XHSCoverGenerator()
-images = generator.generate(result['title'], count=3)
+# 准备图片（压缩到 < 500KB）
+convert input.png -resize 900x1200 -quality 85 /tmp/cover.jpg
 
 # 发布
-publisher = XiaohongshuPublisher()
-publisher.publish(
-    title=result['title'],
-    content=result['content'],
-    images=images,
-    tags=result['tags']
-)
+curl -s $XHS_MCP_URL/api/v1/publish \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"title\": \"$(head -1 /tmp/post.txt)\",\n    \"content\": \"正文内容\",\n    \"images\": [\"/tmp/cover.jpg\"],\n    \"tags\": [\"生活方式\", \"美食\"]\n  }"
+```
+
+### 方式 2: 使用 Skill 脚本
+
+```bash
+./.agents/skills/xhs-publisher/scripts/publish.sh content.txt --images photo.jpg
 ```
 
 ---
 
-## 🎨 6种视觉主题
+## ⚠️ 重要限制（失败教训）
 
-| 主题 | 名称 | 适合内容 |
+### 1. 图片要求
+| 项目 | 要求 | 失败案例 |
 |------|------|----------|
-| fresh | 清新绿 | 生活、自然 |
-| orange | 活力橙 | 科技、创新 |
-| pink | 甜美粉 | 美妆、时尚 |
-| blue | 专业蓝 | 技术、商务 |
-| purple | 神秘紫 | 艺术、创意 |
-| brown | 暖棕 | 文化、历史 |
+| **数量** | 至少 1 张 | 不传图片会报错 `min: 1` |
+| **大小** | < 500KB | 1.7MB 图片导致超时 |
+| **格式** | JPG/PNG | - |
+| **路径** | 本地绝对路径 | 相对路径可能失败 |
 
----
+### 2. 压缩图片命令
+```bash
+# 压缩到 900x1200，质量 85%
+convert input.png -resize 900x1200 -quality 85 output.jpg
 
-## ⚠️ 限制与注意事项
+# 或用 magick (ImageMagick 7+)
+magick input.png -resize 900x1200 -quality 85 output.jpg
+```
 
-| 项目 | 限制 | 说明 |
-|------|------|------|
-| 标题 | 20字 | 超过自动截断 |
-| 正文 | 1000字 | 超过需精简 |
-| 图片 | 1-9张 | 默认3张 |
-| 发布频率 | 有风控 | 建议间隔1小时以上 |
-| MCP 服务 | 必需 | 需保持 Mac Mini 运行 |
+### 3. MCP 服务要求
+- 必须先扫码登录
+- Mac Mini 必须运行 Docker
+- Tailscale 网络必须连通
 
 ---
 
 ## 🔧 故障排查
 
-### MCP 服务无法连接
+### 检查服务状态
 ```bash
-# 检查 Mac Mini 服务状态
-curl http://100.x.x.x:3456/health
+# 1. 检查 MCP 健康
+curl http://100.66.210.41:3456/health
 
-# 检查 Tailscale 连接
-ping 100.x.x.x
+# 2. 检查登录状态
+curl http://100.66.210.41:3456/api/v1/login/status
+
+# 3. 查看 MCP 日志（Mac Mini 上）
+docker logs xhs-mcp --tail 50
 ```
 
-### 登录状态过期
-```bash
-# 重新扫码登录
-curl http://100.x.x.x:3456/api/login-qrcode
-```
+### 常见问题
+
+**Q: 发布超时怎么办？**  
+A: 图片太大，压缩到 < 500KB
+
+**Q: 提示需要图片怎么办？**  
+A: MCP 强制要求至少 1 张图片，必须提供
+
+**Q: 图片路径怎么写？**  
+A: 使用本地绝对路径，如 `/Users/xxx/Pictures/photo.jpg`
 
 ---
 
-## 📚 相关文档
+## 📁 文件位置
 
-- M3 详细设计: `docs/M3_Xiaohongshu_Architecture.md`
-- MCP 部署指南: `pipeline/deploy/xiaohongshu-mcp/README.md`
-- 测试脚本: `pipeline/m3/test-suite.sh`
+- MCP 服务: `pipeline/deploy/xiaohongshu-mcp/`
+- Skill 封装: `.agents/skills/xhs-publisher/`
+- 发布脚本: `publish-xhs.sh`
+
+---
+
+## 📚 参考
+
+- MCP 详细文档: `submodules/xiaohongshu-mcp/README.md`
+- 部署指南: `pipeline/deploy/xiaohongshu-mcp/README.md`

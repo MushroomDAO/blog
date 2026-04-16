@@ -2,30 +2,40 @@
 """
 XHS Publisher Skill - 小红书自动发布 Skill
 
-基于 M3 系统的封装，提供统一的 Skill 接口
+基于 MCP 服务的封装，直接调用 MCP HTTP API
 """
 
 import os
 import sys
+import json
+import base64
+import requests
 from pathlib import Path
 from typing import List, Dict, Optional
 
-# 添加 M3 路径
-M3_PATH = Path(__file__).parent.parent.parent.parent.parent / 'pipeline' / 'm3'
+# 添加 M3 路径用于内容优化
+M3_PATH = Path(__file__).parent.parent.parent.parent.parent.parent / 'pipeline' / 'm3'
 sys.path.insert(0, str(M3_PATH))
 
-from optimizer import XHSOptimizer
-from cover_generator import XHSCoverGenerator
-from publisher import XiaohongshuPublisher, PublishResult
+try:
+    from optimizer import XHSOptimizer
+except ImportError:
+    # Fallback: 简单优化器
+    class XHSOptimizer:
+        def optimize(self, content: str, category: str = 'tech') -> dict:
+            lines = content.strip().split('\n')
+            title = lines[0][:20] if lines[0] else "分享"
+            return {
+                'title': title,
+                'content': content,
+                'tags': ['#生活方式', '#分享'],
+                'keywords': []
+            }
 
 
 class XHSPublisherSkill:
     """
-    小红书发布 Skill
-    
-    使用示例:
-        skill = XHSPublisherSkill()
-        result = skill.publish("content.md", theme="blue")
+    小红书发布 Skill - 直接调用 MCP API
     """
     
     def __init__(self, mcp_url: str = None):
@@ -37,142 +47,180 @@ class XHSPublisherSkill:
         """
         self.mcp_url = mcp_url or os.getenv('XHS_MCP_URL', 'http://localhost:3456')
         self.optimizer = XHSOptimizer()
-        self.cover_gen = XHSCoverGenerator()
-        self.publisher = XiaohongshuPublisher(mcp_url=self.mcp_url)
     
-    def publish(self, content: str, theme: str = "blue", image_count: int = 3) -> PublishResult:
+    def health_check(self) -> Dict:
+        """检查 MCP 服务健康状态"""
+        try:
+            resp = requests.get(f"{self.mcp_url}/health", timeout=10)
+            return resp.json()
+        except Exception as e:
+            return {"success": False, "error": str(e)}
+    
+    def check_login(self) -> Dict:
+        """检查登录状态"""
+        try:
+            resp = requests.get(f"{self.mcp_url}/api/v1/login/status", timeout=10)
+            return resp.json()
+        except Exception as e:
+            return {"success": False, "error": str(e)}
+    
+    def _upload_image(self, image_path: str) -> Optional[str]:
+        """
+        上传图片到 MCP 服务
+        
+        Returns:
+            图片 URL 或 None
+        """
+        try:
+            with open(image_path, 'rb') as f:
+                img_data = base64.b64encode(f.read()).decode('utf-8')
+            
+            resp = requests.post(
+                f"{self.mcp_url}/api/v1/upload",
+                json={"image": img_data},
+                timeout=30
+            )
+            result = resp.json()
+            
+            if result.get('success'):
+                return result.get('data', {}).get('url')
+            else:
+                print(f"图片上传失败: {result.get('message')}")
+                return None
+                
+        except Exception as e:
+            print(f"图片上传异常: {e}")
+            return None
+    
+    def publish(
+        self, 
+        content: str, 
+        images: List[str] = None,
+        theme: str = "blue"
+    ) -> Dict:
         """
         发布内容到小红书
         
         Args:
             content: 原始内容（Markdown 或纯文本）
-            theme: 视觉主题 (fresh/orange/pink/blue/purple/brown)
-            image_count: 配图数量 (1-9)
+            images: 图片路径列表（1-9张）
+            theme: 视觉主题（仅用于优化器）
         
         Returns:
-            PublishResult 发布结果
+            发布结果
         """
         # Step 1: 优化内容
-        print("[Step 1/4] 优化内容...")
+        print("[Step 1/3] 优化内容...")
         optimized = self.optimizer.optimize(content)
         print(f"  标题: {optimized['title']}")
         print(f"  标签: {', '.join(optimized['tags'])}")
         
-        # Step 2: 生成配图
-        print(f"[Step 2/4] 生成配图 ({image_count}张)...")
-        images = self.cover_gen.generate(
-            title=optimized['title'],
-            count=image_count,
-            theme=theme
-        )
-        print(f"  生成 {len(images)} 张图片")
+        # Step 2: 检查 MCP 服务
+        print("[Step 2/3] 检查 MCP 服务...")
+        health = self.health_check()
+        if not health.get('success'):
+            return {"success": False, "message": f"MCP 服务不可用: {health.get('error')}"}
         
-        # Step 3: 检查 MCP 服务
-        print("[Step 3/4] 检查 MCP 服务...")
-        health = self.publisher.health_check()
-        if not health.get('success', False):
-            return PublishResult(
-                success=False,
-                message=f"MCP 服务不可用: {health.get('error', 'Unknown')}"
+        login = self.check_login()
+        if not login.get('data', {}).get('is_logged_in'):
+            return {"success": False, "message": "未登录，请先扫码登录"}
+        
+        print(f"  服务正常，已登录: {login['data'].get('username')}")
+        
+        # Step 3: 上传图片（如果有）
+        print("[Step 3/3] 发布到小红书...")
+        image_urls = []
+        if images:
+            for img_path in images:
+                if os.path.exists(img_path):
+                    url = self._upload_image(img_path)
+                    if url:
+                        image_urls.append(url)
+                        print(f"  图片上传成功")
+                else:
+                    print(f"  图片不存在: {img_path}")
+        
+        # 构建发布请求
+        publish_data = {
+            "title": optimized['title'],
+            "content": optimized['content'],
+            "images": image_urls,
+            "tags": optimized['tags'][:10]  # 最多10个标签
+        }
+        
+        # 发布
+        try:
+            resp = requests.post(
+                f"{self.mcp_url}/api/v1/publish",
+                json=publish_data,
+                timeout=60
             )
-        print("  MCP 服务正常")
-        
-        # Step 4: 发布
-        print("[Step 4/4] 发布到小红书...")
-        result = self.publisher.publish(
-            title=optimized['title'],
-            content=optimized['content'],
-            images=images,
-            tags=optimized['tags']
-        )
-        
-        if result.success:
-            print(f"  ✅ 发布成功!")
-            print(f"  链接: {result.url}")
-        else:
-            print(f"  ❌ 发布失败: {result.message}")
-        
-        return result
+            result = resp.json()
+            
+            if result.get('success'):
+                print(f"✅ 发布成功!")
+                print(f"   笔记ID: {result.get('data', {}).get('note_id')}")
+                return result
+            else:
+                print(f"❌ 发布失败: {result.get('message')}")
+                return result
+                
+        except Exception as e:
+            return {"success": False, "message": f"发布请求异常: {e}"}
     
-    def preview(self, content: str, theme: str = "blue") -> Dict:
+    def preview(self, content: str) -> Dict:
         """
         预览内容（不发布）
         
         Args:
             content: 原始内容
-            theme: 视觉主题
         
         Returns:
-            预览数据字典
+            预览数据
         """
         optimized = self.optimizer.optimize(content)
-        images = self.cover_gen.generate(
-            title=optimized['title'],
-            count=1,
-            theme=theme
-        )
         
         return {
             'title': optimized['title'],
             'content': optimized['content'],
-            'tags': optimized['tags'],
-            'preview_image': images[0] if images else None
+            'tags': optimized['tags']
         }
 
 
 # 便捷的函数接口
-def publish_to_xiaohongshu(content: str, theme: str = "blue", image_count: int = 3) -> PublishResult:
+def publish_to_xiaohongshu(
+    content: str, 
+    images: List[str] = None,
+    mcp_url: str = None
+) -> Dict:
     """
     便捷函数：发布内容到小红书
-    
-    Args:
-        content: 原始内容
-        theme: 视觉主题
-        image_count: 配图数量
-    
-    Returns:
-        PublishResult 发布结果
     """
-    skill = XHSPublisherSkill()
-    return skill.publish(content, theme, image_count)
-
-
-def preview_xiaohongshu(content: str, theme: str = "blue") -> Dict:
-    """
-    便捷函数：预览内容
-    
-    Args:
-        content: 原始内容
-        theme: 视觉主题
-    
-    Returns:
-        预览数据字典
-    """
-    skill = XHSPublisherSkill()
-    return skill.preview(content, theme)
+    skill = XHSPublisherSkill(mcp_url=mcp_url)
+    return skill.publish(content, images)
 
 
 if __name__ == "__main__":
-    # 测试
-    if len(sys.argv) < 2:
-        print("Usage: python skill.py <content_file> [--theme theme_name]")
-        sys.exit(1)
+    import argparse
     
-    content_file = sys.argv[1]
-    theme = "blue"
+    parser = argparse.ArgumentParser(description='XHS Publisher Skill')
+    parser.add_argument('content_file', help='内容文件路径')
+    parser.add_argument('--images', nargs='+', help='图片路径列表')
+    parser.add_argument('--mcp-url', help='MCP 服务地址')
+    parser.add_argument('--preview', action='store_true', help='仅预览')
     
-    # 解析参数
-    if "--theme" in sys.argv:
-        idx = sys.argv.index("--theme")
-        if idx + 1 < len(sys.argv):
-            theme = sys.argv[idx + 1]
+    args = parser.parse_args()
     
     # 读取内容
-    with open(content_file, 'r', encoding='utf-8') as f:
+    with open(args.content_file, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # 发布
-    skill = XHSPublisherSkill()
-    result = skill.publish(content, theme=theme)
+    # 创建 skill
+    skill = XHSPublisherSkill(mcp_url=args.mcp_url)
     
-    sys.exit(0 if result.success else 1)
+    if args.preview:
+        result = skill.preview(content)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    else:
+        result = skill.publish(content, images=args.images)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
