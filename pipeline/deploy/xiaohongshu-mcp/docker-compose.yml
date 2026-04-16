@@ -13,6 +13,8 @@ services:
     environment:
       - LOG_LEVEL=info
       - TZ=Asia/Shanghai
+      - COOKIES_PATH=/app/cookies/cookies.json
+    shm_size: 256m
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:18060/health"]
