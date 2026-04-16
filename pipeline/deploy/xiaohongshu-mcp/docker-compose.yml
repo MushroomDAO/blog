@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   xiaohongshu-mcp:
-    image: jhfnetboy/xiaohongshu-mcp:latest
+    image: aastar/xiaohongshu-mcp:latest
     pull_policy: never
     container_name: xhs-mcp
     ports:
