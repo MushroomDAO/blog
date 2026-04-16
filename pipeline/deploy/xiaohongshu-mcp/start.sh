@@ -15,11 +15,13 @@ if docker ps -a --format '{{.Names}}' | grep -q '^xhs-mcp$'; then
     docker rm -f xhs-mcp
 fi
 
-# 删除旧镜像
-if docker images --format '{{.Repository}}:{{.Tag}}' | grep -q "^${IMAGE}$"; then
-    echo "[*] 删除旧镜像 $IMAGE ..."
-    docker rmi "$IMAGE"
-fi
+# 删除本地旧镜像（包括之前本地构建的 jhfnetboy 版本）
+for OLD_IMAGE in "$IMAGE" "jhfnetboy/xiaohongshu-mcp:latest"; do
+    if docker images --format '{{.Repository}}:{{.Tag}}' | grep -q "^${OLD_IMAGE}$"; then
+        echo "[*] 删除本地旧镜像 $OLD_IMAGE ..."
+        docker rmi "$OLD_IMAGE"
+    fi
+done
 
 # 拉取最新镜像
 echo "[*] 拉取镜像 $IMAGE ..."
