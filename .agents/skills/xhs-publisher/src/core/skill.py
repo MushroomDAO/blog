@@ -3,12 +3,12 @@
 XHS Publisher Skill - 小红书自动发布 Skill
 
 基于 MCP 服务的封装，直接调用 MCP HTTP API
+图片自动压缩到 ~200KB
 """
 
 import os
 import sys
 import json
-import base64
 import requests
 from pathlib import Path
 from typing import List, Dict, Optional
@@ -32,10 +32,14 @@ except ImportError:
                 'keywords': []
             }
 
+# 导入图片压缩器
+from image_compressor import compress_for_xiaohongshu
+
 
 class XHSPublisherSkill:
     """
     小红书发布 Skill - 直接调用 MCP API
+    自动压缩图片到 ~200KB
     """
     
     def __init__(self, mcp_url: str = None):
@@ -64,34 +68,6 @@ class XHSPublisherSkill:
         except Exception as e:
             return {"success": False, "error": str(e)}
     
-    def _upload_image(self, image_path: str) -> Optional[str]:
-        """
-        上传图片到 MCP 服务
-        
-        Returns:
-            图片 URL 或 None
-        """
-        try:
-            with open(image_path, 'rb') as f:
-                img_data = base64.b64encode(f.read()).decode('utf-8')
-            
-            resp = requests.post(
-                f"{self.mcp_url}/api/v1/upload",
-                json={"image": img_data},
-                timeout=30
-            )
-            result = resp.json()
-            
-            if result.get('success'):
-                return result.get('data', {}).get('url')
-            else:
-                print(f"图片上传失败: {result.get('message')}")
-                return None
-                
-        except Exception as e:
-            print(f"图片上传异常: {e}")
-            return None
-    
     def publish(
         self, 
         content: str, 
@@ -103,20 +79,20 @@ class XHSPublisherSkill:
         
         Args:
             content: 原始内容（Markdown 或纯文本）
-            images: 图片路径列表（1-9张）
+            images: 图片路径列表（1-9张），会自动压缩到 ~200KB
             theme: 视觉主题（仅用于优化器）
         
         Returns:
             发布结果
         """
         # Step 1: 优化内容
-        print("[Step 1/3] 优化内容...")
+        print("[Step 1/4] 优化内容...")
         optimized = self.optimizer.optimize(content)
         print(f"  标题: {optimized['title']}")
         print(f"  标签: {', '.join(optimized['tags'])}")
         
         # Step 2: 检查 MCP 服务
-        print("[Step 2/3] 检查 MCP 服务...")
+        print("[Step 2/4] 检查 MCP 服务...")
         health = self.health_check()
         if not health.get('success'):
             return {"success": False, "message": f"MCP 服务不可用: {health.get('error')}"}
@@ -127,33 +103,42 @@ class XHSPublisherSkill:
         
         print(f"  服务正常，已登录: {login['data'].get('username')}")
         
-        # Step 3: 上传图片（如果有）
-        print("[Step 3/3] 发布到小红书...")
-        image_urls = []
+        # Step 3: 压缩图片（关键步骤！）
+        print("[Step 3/4] 压缩图片...")
+        compressed_images = []
         if images:
             for img_path in images:
                 if os.path.exists(img_path):
-                    url = self._upload_image(img_path)
-                    if url:
-                        image_urls.append(url)
-                        print(f"  图片上传成功")
+                    print(f"  处理: {img_path}")
+                    try:
+                        compressed = compress_for_xiaohongshu(img_path)
+                        compressed_images.append(compressed)
+                        size_kb = os.path.getsize(compressed) / 1024
+                        print(f"    ✅ 压缩后: {size_kb:.1f}KB")
+                    except Exception as e:
+                        print(f"    ⚠️  压缩失败: {e}，使用原图")
+                        compressed_images.append(img_path)
                 else:
-                    print(f"  图片不存在: {img_path}")
+                    print(f"  ⚠️  图片不存在: {img_path}")
         
-        # 构建发布请求
+        if not compressed_images:
+            return {"success": False, "message": "小红书要求至少 1 张图片，且压缩失败"}
+        
+        # Step 4: 发布到小红书
+        print("[Step 4/4] 发布到小红书...")
+        
         publish_data = {
             "title": optimized['title'],
             "content": optimized['content'],
-            "images": image_urls,
+            "images": compressed_images,
             "tags": optimized['tags'][:10]  # 最多10个标签
         }
         
-        # 发布
         try:
             resp = requests.post(
                 f"{self.mcp_url}/api/v1/publish",
                 json=publish_data,
-                timeout=60
+                timeout=120  # 2分钟超时
             )
             result = resp.json()
             
@@ -165,6 +150,8 @@ class XHSPublisherSkill:
                 print(f"❌ 发布失败: {result.get('message')}")
                 return result
                 
+        except requests.exceptions.Timeout:
+            return {"success": False, "message": "发布超时，图片可能仍太大，请尝试手动压缩到 <100KB"}
         except Exception as e:
             return {"success": False, "message": f"发布请求异常: {e}"}
     
