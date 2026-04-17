@@ -1,11 +1,12 @@
 # Skill: xhs-mcp-cdp
 
-> 小红书 MCP 服务 — CDP 模式（Mac Mini 本地 Chrome + 真实用户 Profile）
+> 小红书 MCP 服务 — CDP 模式（Mac Mini 24h 服务 或 MacBook 本地临时模式）
 >
 > 维护记录：
 > - 创建：2026-04-16
 > - 基于完整 CDP 调试会话提炼
 > - 2026-04-17：加入 launchd 自启动配置（Mac Mini 重启自动恢复）
+> - 2026-04-17：加入 MacBook 本地模式（不依赖 Mac Mini）
 
 ---
 
@@ -299,7 +300,146 @@ launchctl load   ~/Library/LaunchAgents/com.xhs-mcp-cdp.plist
 
 ---
 
-## 七、已知限制
+## 七、MacBook 本地模式（不依赖 Mac Mini）
+
+出差、Mac Mini 关机、或只想在 MacBook 上调试时，直接在 MacBook 本地跑同一套流程。
+
+### 方案 A — CDP 原生模式（推荐，5 分钟内可用）
+
+原理与 Mac Mini 完全相同，只是在 MacBook 本机启动 Chrome + binary。
+
+**第一步：编译 binary（只需一次）**
+
+```bash
+cd /path/to/blog/pipeline/deploy/xiaohongshu-mcp/src
+GOOS=darwin GOARCH=arm64 go build -o ~/Library/Scripts/xhs-mcp-mac .
+```
+
+**第二步：启动 Chrome（用你的小红书 profile）**
+
+```bash
+# 找到你登录了小红书的 Chrome Profile 编号
+for p in ~/Library/Application\ Support/Google/Chrome/Profile\ *; do
+  email=$(python3 -c "import json; d=json.load(open('$p/Preferences')); print(d.get('account_info',[{}])[0].get('email','?'))" 2>/dev/null)
+  echo "$p → $email"
+done
+
+# 替换下面的 Profile 4 为你的实际编号
+open -na "Google Chrome" --args \
+  --user-data-dir="$HOME/Library/Application Support/Google/Chrome/Profile 4" \
+  --remote-debugging-port=9222 \
+  --no-first-run \
+  https://creator.xiaohongshu.com/publish/publish?source=official
+```
+
+**第三步：启动 MCP Server**
+
+```bash
+CHROME_CONNECT_URL=http://localhost:9222 ~/Library/Scripts/xhs-mcp-mac
+# 看到 "启动 HTTP 服务器: :18060" 即就绪
+```
+
+**第四步：发布（MacBook 本地直接用 localhost）**
+
+```bash
+XHS=http://localhost:18060
+
+# 上传图片
+P1=$(curl -sX POST $XHS/api/v1/upload -F "file=@img1.jpg" \
+  | python3 -c "import sys,json;print(json.load(sys.stdin)['data']['path'])")
+
+# 发布
+curl -X POST $XHS/api/v1/publish \
+  -H "Content-Type: application/json" \
+  -d "{\"title\":\"标题\",\"content\":\"正文\",\"images\":[\"$P1\"],\"tags\":[\"标签\"]}"
+```
+
+**日志：**
+
+```bash
+# MCP server 日志直接输出在终端
+# Chrome CDP 调试
+curl http://localhost:9222/json/version
+```
+
+---
+
+### 方案 B — Docker 本地模式（需要 Docker Desktop）
+
+适合需要干净隔离环境或不想污染本机 Chrome profile 的场景。
+
+```bash
+cd /path/to/blog/pipeline/deploy/xiaohongshu-mcp
+
+# 1. 构建镜像（ARM64 MacBook）
+docker build -f src/Dockerfile.arm64 -t xhs-mcp:local src/
+
+# 2. 启动容器（映射到本机 3456）
+docker run -d \
+  --name xhs-mcp-local \
+  -p 127.0.0.1:3456:18060 \
+  -v $(pwd)/cookies:/app/cookies \
+  -v $(pwd)/data:/app/data \
+  xhs-mcp:local
+
+# 3. 扫码登录
+curl http://localhost:3456/api/v1/login/qrcode
+
+# 4. 使用（端口 3456）
+XHS=http://localhost:3456
+```
+
+---
+
+### 两种方案对比
+
+| | 方案 A（CDP 原生） | 方案 B（Docker） |
+|--|--|--|
+| 启动速度 | ~5s | ~30s |
+| 依赖 | Chrome 已登录小红书 | Docker Desktop |
+| WAF 绕过 | 最好（真实 Profile） | 一般 |
+| 首次登录 | 已在 Chrome 里 | 需要扫码 |
+| 适合场景 | 日常使用、快速调试 | 隔离测试、CI |
+
+---
+
+### 一键启动脚本（方案 A）
+
+保存为 `~/bin/xhs-local` 后 `chmod +x`，以后直接 `xhs-local` 启动：
+
+```bash
+#!/bin/bash
+# XHS MCP 本地快速启动（MacBook 用）
+
+PROFILE="${XHS_CHROME_PROFILE:-$HOME/Library/Application Support/Google/Chrome/Profile 4}"
+BINARY="$HOME/Library/Scripts/xhs-mcp-mac"
+
+# 检查 binary
+if [ ! -f "$BINARY" ]; then
+  echo "Binary not found. Build first:"
+  echo "  cd pipeline/deploy/xiaohongshu-mcp/src"
+  echo "  go build -o ~/Library/Scripts/xhs-mcp-mac ."
+  exit 1
+fi
+
+# 检查 Chrome CDP
+if ! curl -s http://localhost:9222/json/version > /dev/null 2>&1; then
+  echo "Starting Chrome..."
+  open -na "Google Chrome" --args \
+    --user-data-dir="$PROFILE" \
+    --remote-debugging-port=9222 \
+    --no-first-run \
+    https://creator.xiaohongshu.com/publish/publish?source=official
+  sleep 5
+fi
+
+echo "Starting XHS MCP on :18060..."
+exec env CHROME_CONNECT_URL=http://localhost:9222 "$BINARY"
+```
+
+---
+
+## 八、已知限制
 
 - Chrome 必须保持运行且停留在 `creator.xiaohongshu.com`（关闭 Tab 后下次发布会新开 Tab，可能触发 WAF）
 - 本模式不适合无头/CI 环境，需要真实 macOS 桌面
