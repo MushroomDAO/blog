@@ -5,6 +5,7 @@
 > 维护记录：
 > - 创建：2026-04-16
 > - 基于完整 CDP 调试会话提炼
+> - 2026-04-17：加入 launchd 自启动配置（Mac Mini 重启自动恢复）
 
 ---
 
@@ -241,7 +242,64 @@ HTTP 200，~17s
 
 ---
 
-## 六、已知限制
+## 六、Mac Mini 重启自动恢复
+
+### 自动启动流程
+
+```
+macOS 登录
+    → launchd 加载 com.xhs-mcp-cdp.plist
+    → 运行 ~/Library/Scripts/xhs-cdp-start.sh
+    → 检测 Chrome CDP（9222）→ 已有 Chrome 跳过启动，没有则用 jhfnetboy Profile 4 打开
+    → 启动 ~/Library/Scripts/xhs-mcp-mac
+    → 服务在 :18060 就绪
+```
+
+### 前提：开启自动登录（必须手动确认一次）
+
+LaunchAgent 仅在用户登录后触发。Mac Mini 必须配置自动登录，否则重启后停在登录界面：
+
+> **系统设置 → 用户与群组 → 自动登录 → 选择 nicolasshuaishuai**
+
+### MacBook 访问
+
+```bash
+# Tailscale 直连（18060 绑定 0.0.0.0，直接可达）
+curl http://<Mac Mini Tailscale IP>:18060/health
+
+# 日志查看（SSH 进 Mac Mini）
+tail -f ~/Library/Logs/xhs-mcp-cdp.log
+```
+
+### 关键文件
+
+| 文件 | 作用 |
+|------|------|
+| `~/Library/LaunchAgents/com.xhs-mcp-cdp.plist` | launchd 服务定义 |
+| `~/Library/Scripts/xhs-cdp-start.sh` | 启动脚本（Chrome + MCP） |
+| `~/Library/Scripts/xhs-mcp-mac` | MCP 二进制（需手动更新，不入 git） |
+| `~/Library/Logs/xhs-mcp-cdp.log` | 运行日志 |
+
+### 手动操作
+
+```bash
+# 查看服务状态
+launchctl list com.xhs-mcp-cdp
+
+# 重启服务
+launchctl unload ~/Library/LaunchAgents/com.xhs-mcp-cdp.plist
+launchctl load   ~/Library/LaunchAgents/com.xhs-mcp-cdp.plist
+
+# 更新二进制（重新编译后）
+cp /Volumes/UltraDisk/Dev2/tools/blog/pipeline/deploy/xiaohongshu-mcp/xhs-mcp-mac \
+   ~/Library/Scripts/xhs-mcp-mac
+launchctl unload ~/Library/LaunchAgents/com.xhs-mcp-cdp.plist
+launchctl load   ~/Library/LaunchAgents/com.xhs-mcp-cdp.plist
+```
+
+---
+
+## 七、已知限制
 
 - Chrome 必须保持运行且停留在 `creator.xiaohongshu.com`（关闭 Tab 后下次发布会新开 Tab，可能触发 WAF）
 - 本模式不适合无头/CI 环境，需要真实 macOS 桌面
