@@ -60,11 +60,13 @@ REPORTS = [
 # Cost calculator data (from R01, 3-year amortized monthly)
 COST_DATA = [
     {"name": "手机（已有设备）", "price": 0, "monthly": 0, "models": "1.5B–3B 模型", "note": "利用现有设备，零增量成本"},
-    {"name": "Mac Mini M4 24GB", "price": 4999, "monthly": 169, "models": "7B 全量 / 13B Q4", "note": "个人首选，静音低功耗"},
-    {"name": "RTX 3060 二手 12GB + PC", "price": 9600, "monthly": 333, "models": "13B Q4", "note": "Windows 生态，性价比入门"},
-    {"name": "Mac Mini M4 Pro 48GB", "price": 7499, "monthly": 249, "models": "70B 模型", "note": "5-15 人团队首选"},
-    {"name": "RTX 3090 二手 24GB + PC", "price": 13000, "monthly": 472, "models": "70B Q2 / 34B Q4", "note": "显存最大性价比选手"},
-    {"name": "Mac Studio M4 Max 128GB", "price": 25000, "monthly": 752, "models": "70B 实时推理", "note": "极客/开发者主力机"},
+    {"name": "Mac Mini M4 16GB", "price": 4499, "monthly": 155, "models": "7B 全量 / 13B Q4", "note": "个人入门首选，静音低功耗"},
+    {"name": "Mac Mini M4 24GB", "price": 7499, "monthly": 238, "models": "13B FP16 / 22B Q4", "note": "标准芯片进阶版，性价比高"},
+    {"name": "RTX 3060 二手 12GB + PC", "price": 9600, "monthly": 333, "models": "13B Q4", "note": "Windows 生态，显卡可独立升级"},
+    {"name": "Mac Mini M4 Pro 24GB", "price": 10999, "monthly": 346, "models": "70B Q4（24GB 勉强）", "note": "团队入门，Pro 芯片带宽更强"},
+    {"name": "Mac Mini M4 Pro 48GB", "price": 13499, "monthly": 415, "models": "70B 全量流畅", "note": "5-15 人团队首选，70B 流畅运行"},
+    {"name": "RTX 3090 二手 24GB + PC", "price": 13000, "monthly": 461, "models": "70B Q2 / 34B Q4", "note": "Windows 生态，含电费，可微调"},
+    {"name": "Mac Studio M4 Max 128GB", "price": 25000, "monthly": 734, "models": "70B 实时推理", "note": "极客/开发者主力机"},
     {"name": "Mac Studio M3 Ultra 256GB", "price": 50000, "monthly": 1469, "models": "超大模型 / 多模型并行", "note": "不受出口管制的终极方案"},
 ]
 
