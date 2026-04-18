@@ -1,14 +1,14 @@
-# Local AI 栏目建设计划
+# Aura AI Local AI 栏目建设计划
 
 > Aura AI · 每周更新 · 帮助每个人找到最优本地 AI 方案
 > 
-> 分支：`local-AI` | 状态：规划中 | 更新：2026-04-17
+> 分支：`local-AI` | 域名：auraai.mushroom.cv | 更新：2026-04-18
 
 ---
 
 ## 栏目定位
 
-**核心问题：** 我手头的设备，能跑什么 AI，怎么搭，用哪些模型，解决什么场景的问题？
+**核心问题：** 我手头的设备，能跑什么 AI，怎么搭，用哪些软件，解决什么场景的问题？
 
 **目标用户：** 普通用户（傻瓜方案）+ 极客用户（DIY 方案）
 
@@ -18,214 +18,330 @@
 
 ---
 
-## 一级目录：四个维度
+## 网站架构（auraai.mushroom.cv）
+
+### 页面结构
 
 ```
-Local AI 栏目
-├── D1. 硬件方案（Hardware）
-├── D2. 模型匹配（Models）  
-├── D3. 场景解决方案（Scenarios）
-└── D4. 工具与软件（Tools & Software）
+auraai.mushroom.cv/
+├── index.html              ← 首页：Aura AI 介绍 + 4个研究栏目入口
+├── r01-hardware/
+│   └── index.html          ← R01 硬件报告（含历史版本索引）
+├── r02-models/
+│   └── index.html          ← R02 模型报告（含历史版本索引）
+├── r03-software/
+│   └── index.html          ← R03 软件报告（含历史版本索引）
+├── r04-best-practices/
+│   └── index.html          ← R04 最佳实践（按主题分页）
+└── assets/
+    ├── style.css
+    └── logo.png
 ```
 
----
+### 首页布局（index.html）
 
-## D1. 硬件方案（Hardware）
+```
+┌─────────────────────────────────────────────────────┐
+│  AURA AI · Local AI 周报                            │
+│  副标题：让每个人平等拥有 AI                          │
+│  [关于 Aura AI] [Mycelium Protocol] [宣言文章链接]   │
+├────────────┬────────────┬────────────┬──────────────┤
+│ R01 硬件   │ R02 模型   │ R03 软件   │ R04 最佳实践 │
+│            │            │            │              │
+│ 手机/PC/   │ STT/TTS/   │ 按岗位/    │ 中小组织     │
+│ 社区/极客  │ OCR/图像/  │ 场景/极客  │ 人+AI 构建   │
+│            │ 代码...    │ 级分类     │              │
+│ [查看报告] │ [查看报告] │ [查看报告] │ [查看报告]   │
+│            │            │            │              │
+│ 更新: 4/17 │ 更新: 4/17 │ 即将发布   │ 即将发布     │
+├────────────┴────────────┴────────────┴──────────────┤
+│ 成本计算器（内嵌）：我的预算 ___ 能买什么？           │
+└─────────────────────────────────────────────────────┘
+```
 
-### 1.1 硬件端分层
+### 技术选型
 
-| 端 | 定义 | 典型用户 | 预算范围 |
-|----|------|---------|---------|
-| **Mobile** | 手机/平板 | 个人随身 | 设备已有 |
-| **PC** | 笔记本/台式 | 个人/家庭 | 3k–30k RMB |
-| **Community** | 小型服务器/NAS | 社区/小团队 | 5k–50k RMB |
-| **Geek** | 高性能工作站 | 极客/开发者 | 20k–200k RMB |
+**选型：Python 自建 Markdown→HTML 构建脚本**
 
-### 1.2 研究任务（L1）
+理由：
+- 内容全部是 markdown，无需框架
+- 构建脚本 100-150 行 Python，完全可控
+- 无 Node/npm 依赖，维护成本最低
+- Cloudflare Pages 只需 `git push` 触发静态构建
+- 后续更新只需添加新 markdown 文件 → 重新 build
 
-- [ ] **T1.1** 中国市场手机芯片 AI 能力调研（Snapdragon 8 Gen 3、Dimensity 9300、Apple A 系列）
-- [ ] **T1.2** PC/笔记本 NPU + GPU 方案对比（Apple Silicon vs Intel Core Ultra vs AMD Ryzen AI）
-- [ ] **T1.3** 中国可购买 GPU 清单及价格（RTX 系列、出口管制影响）
-- [ ] **T1.4** Community 端：Mini PC / NAS / 小工作站方案（Mac Mini M4、NUC、极空间等）
-- [ ] **T1.5** Geek 端：多 GPU 工作站方案（Mac Studio/Pro、自组 Linux 工作站）
-- [ ] **T1.6** 东南亚/海外市场硬件差异分析（可购买品牌、价格差异、进口情况）
+技术依赖：
+```
+python3 + markdown + jinja2 + pygments（代码高亮）
+build.py → 读取 research/local-AI/reports/*.md → 生成 dist/
+```
 
-### 1.2.1 T1.1 手机端 AI 能力（L2 拆分）
+备选方案（若 Python 脚本不够用）：**Eleventy (11ty)** — markdown 原生，Cloudflare Pages 支持好
 
-- [ ] T1.1.1 Snapdragon 8 Gen 3 NPU 规格与可运行模型大小上限
-- [ ] T1.1.2 Apple A17/A18 Pro Neural Engine 实测（iOS 侧边栏本地模型）
-- [ ] T1.1.3 Dimensity 9300/9400 APU 能力测试数据
-- [ ] T1.1.4 手机端推荐 App：PocketPal、Ollama iOS、LLM Farm 对比
-- [ ] T1.1.5 手机端实际可用模型大小：1B/3B 的实测表现
+### 部署流程
 
-### 1.2.2 T1.2 PC 端（L2 拆分）
+```bash
+# 本地预览
+python3 build.py && python3 -m http.server 8080 --directory dist/
 
-- [ ] T1.2.1 Apple Silicon 各型号本地 AI 能力（M2/M3/M4，8G/16G/32G/64G）
-- [ ] T1.2.2 Intel Core Ultra 2 NPU 实测（能跑什么，不能跑什么）
-- [ ] T1.2.3 AMD Ryzen AI 300 系 NPU 方案
-- [ ] T1.2.4 独立显卡方案：RTX 4060（8G）/ 4070（12G）/ 4090（24G）VRAM 对应模型规模
-- [ ] T1.2.5 三年分摊月成本计算：各方案 ROI 对比表
+# 部署到 Cloudflare Pages
+npx wrangler pages deploy dist/ --project-name=auraai --branch=main
 
----
+# 域名配置
+# Cloudflare Pages 控制台 → 自定义域名 → auraai.mushroom.cv
+```
 
-## D2. 模型匹配（Models）
+### 更新机制
 
-### 2.1 技术域分类
-
-| 域 | 代表场景 | 关键指标 |
-|----|---------|---------|
-| **STT/语音输入** | 语音转文字、免费输入法 | 中文准确率、实时性 |
-| **TTS/语音合成** | 朗读、语音助手 | 自然度、中文音色 |
-| **OCR/文档** | PDF 识别、图片文字提取 | 准确率、多语言 |
-| **文生图** | 创作、设计辅助 | 质量、速度、中文提示词 |
-| **图像理解** | 看图说话、文档理解 | VLM 综合能力 |
-| **视频生成** | 短视频创作 | 质量、显存要求 |
-| **通用对话** | 日常助手、问答 | 推理能力、中文 |
-| **代码** | 编程辅助 | 代码质量、补全速度 |
-| **Embedding/RAG** | 个人知识库 | 检索精度、多语言 |
-
-### 2.2 研究任务（L1）
-
-- [ ] **T2.1** HuggingFace Top 模型调研（按域分类，取 Top 3）
-- [ ] **T2.2** 中文特化模型专项调研（中文 STT/TTS/Chat/OCR）
-- [ ] **T2.3** 硬件-模型匹配矩阵（手机/PC/社区端 × 各域）
-- [ ] **T2.4** 量化版本对比（Q4/Q8/FP16 的质量损失 vs 速度提升）
-- [ ] **T2.5** 每周模型更新追踪机制设计
-
-### 2.2.1 T2.1 HuggingFace Top 模型（L2 拆分）
-
-- [ ] T2.1.1 STT 域：Whisper large-v3 vs FunASR vs SenseVoice 对比
-- [ ] T2.1.2 TTS 域：CosyVoice 2 vs ChatTTS vs Fish Speech 对比
-- [ ] T2.1.3 OCR 域：GOT-OCR2 vs PaddleOCR v4 vs Surya 对比
-- [ ] T2.1.4 文生图：FLUX.1 vs SD3.5 vs Kolors 对比（中文提示词友好度）
-- [ ] T2.1.5 VLM 域：Qwen2.5-VL vs InternVL3 vs MiniCPM-V 对比
-- [ ] T2.1.6 通用对话：Qwen3 vs Llama3.2 vs Gemma3（≤7B 可本地运行）
-- [ ] T2.1.7 Embedding：BGE-M3 vs nomic-embed-text 对比
+每次更新研究报告时：
+1. 在对应目录新建以日期命名的文件，如 `R01-hardware-china-market-20260424.md`
+2. 原始报告文件保持最新版本
+3. 各栏目 index 页自动生成历史版本链接列表
 
 ---
 
-## D3. 场景解决方案（Scenarios）
+## 四大研究报告（Research Reports）
 
-### 3.1 用户场景分类
+### R01 · 硬件方案 ✅ 已完成
 
-| 场景 | 痛点 | 目标用户 |
-|------|------|---------|
-| **免费语音输入法** | 输入费时，隐私泄露 | 所有手机用户 |
-| **本地笔记+记忆** | 笔记分散，无法搜索 | 知识工作者 |
-| **私密文件助手** | 公司文件不敢传云端 | 职场人士 |
-| **本地图片管理** | 照片无法语义搜索 | 摄影爱好者 |
-| **离线翻译** | 无网络或涉密内容 | 商务出行 |
-| **代码辅助** | IDE 插件费用高 | 开发者 |
-| **视频字幕/剪辑** | 剪辑软件订阅费贵 | 内容创作者 |
-| **团队知识库** | 信息分散，搜索差 | 中小团队 |
+**文件：** `reports/R01-hardware-china-market.md`
 
-### 3.2 研究任务（L1）
+覆盖：手机/PC/社区端/极客端 × 中国市场价格 × GPU 出口管制 × 三年月成本
 
-- [ ] **T3.1** 场景痛点深度调研（问卷/社区收集）
-- [ ] **T3.2** 免费语音输入法完整方案（手机端 Whisper 集成）
-- [ ] **T3.3** 本地知识库搭建方案（Obsidian + 本地 Embedding + RAG）
-- [ ] **T3.4** 私密文件处理方案（Ollama + LlamaIndex 本地部署）
-- [ ] **T3.5** 团队协作 AI 方案（Onyx / Anything LLM 本地部署）
-- [ ] **T3.6** 场景优先级评分模型（痛点强度 × 受众规模）
-
-### 3.2.1 T3.2 免费语音输入法（L2 拆分）
-
-- [ ] T3.2.1 iOS 端：Whisper + 快捷指令方案
-- [ ] T3.2.2 Android 端：WhisperInput / SpeechNote 方案
-- [ ] T3.2.3 PC 端：Whisper Desktop / faster-whisper 方案
-- [ ] T3.2.4 中文识别准确率对比测试（普通话/方言）
-- [ ] T3.2.5 实测延迟：从说话到文字出现的时间
+**待补充：**
+- [ ] T1.6 东南亚市场硬件差异
+- [ ] T1.1.x 手机端 App 深度对比
 
 ---
 
-## D4. 工具与软件（Tools & Software）
+### R02 · 模型匹配 ✅ 已完成
 
-### 4.1 工具分类
+**文件：** `reports/R02-models-by-domain.md`
 
-| 类别 | 极客方案 | 傻瓜方案 |
+覆盖：10 个 AI 域（STT/TTS/OCR/图像/VLM/视频/对话/代码/Embedding/记忆）× 硬件匹配矩阵
+
+**待补充：**
+- [ ] T2.4 量化版本质量损失对比（Q4/Q8/FP16）
+- [ ] T2.5 每周更新追踪机制
+
+---
+
+### R03 · 软件与工具 🔄 待启动
+
+**文件：** `reports/R03-software-by-role.md`
+
+**核心问题：** 我是 XX 岗位/场景，应该用什么 AI 软件？
+
+#### 分类维度
+
+**维度A：按岗位角色**
+
+| 角色 | 核心诉求 | 代表软件 |
 |------|---------|---------|
-| 模型运行 | llama.cpp / vllm | Ollama |
-| 模型管理 | HuggingFace CLI | LM Studio |
-| 聊天界面 | Open WebUI | Anything LLM |
-| 知识库 | LlamaIndex + ChromaDB | Onyx / PrivateGPT |
-| 图像生成 | ComfyUI | Automatic1111 / Forge |
-| 语音 | faster-whisper | Whisper Desktop |
+| **程序员/开发者** | 代码补全、调试、文档 | Continue.dev、Cursor、Copilot替代 |
+| **设计师** | 图像生成、风格迁移、素材创作 | ComfyUI、InvokeAI、Krita AI |
+| **内容创作者** | 视频字幕、剪辑辅助、文案生成 | Whisper Desktop、剪映AI插件 |
+| **知识工作者** | 笔记整理、文档总结、知识库 | Obsidian+RAG、Onyx、PrivateGPT |
+| **运营/市场** | 文案生成、图片处理、翻译 | Open WebUI、LM Studio、翻译工具 |
+| **学生/研究者** | 论文阅读、知识问答、笔记 | AnythingLLM、Zotero AI、Perplexica |
+| **普通用户（傻瓜）** | 语音输入、聊天助手、照片 | LM Studio、Jan、Enchanted（iOS） |
 
-### 4.2 研究任务（L1）
+**维度B：按使用场景**
 
-- [ ] **T4.1** Ollama 生态全景调研（支持模型、API 兼容性、性能）
-- [ ] **T4.2** LM Studio vs Jan vs GPT4All 傻瓜工具横评
-- [ ] **T4.3** Open WebUI 部署与功能调研
-- [ ] **T4.4** ComfyUI 工作流评估（图像生成）
-- [ ] **T4.5** 一键部署脚本设计（数字公共品 P-02/P-03）
+| 场景 | 痛点 | 推荐工具 |
+|------|------|---------|
+| **免费语音输入法** | 输入慢，隐私泄露 | WhisperInput、SpeechNote、PocketPal |
+| **本地知识库** | 笔记分散无法搜索 | Obsidian+智谱、AnythingLLM |
+| **私密文件处理** | 不敢上传公司文件 | Onyx、PrivateGPT、LlamaIndex |
+| **本地图像生成** | 订阅费贵，隐私 | ComfyUI、AUTOMATIC1111/Forge |
+| **离线翻译** | 无网络或涉密 | LibreTranslate、Argos Translate |
+| **代码辅助** | IDE 插件费用高 | Continue.dev+Ollama、Twinny |
+| **视频字幕/转录** | 剪辑软件订阅费贵 | Whisper Desktop、faster-whisper |
+
+**维度C：按技术门槛**
+
+| 层级 | 定义 | 代表工具 |
+|------|------|---------|
+| **傻瓜级** | 下载即用，无需配置 | LM Studio、Jan、Enchanted |
+| **进阶级** | 需要简单配置 | Ollama+Open WebUI、AnythingLLM |
+| **极客级** | 命令行+配置文件 | llama.cpp、vllm、ComfyUI |
+| **开发者级** | API集成+自定义 | Ollama API、LlamaIndex、LangChain |
+
+#### 研究任务
+
+- [ ] **T3.1** 傻瓜级工具横评：LM Studio vs Jan vs GPT4All（安装、中文支持、速度）
+- [ ] **T3.2** 程序员工具链：Continue.dev + Ollama + DeepSeek-Coder 全配置教程
+- [ ] **T3.3** 设计师工具链：ComfyUI 本地安装 + FLUX.1 工作流 + Kolors 中文提示词
+- [ ] **T3.4** 语音输入完整方案：iOS/Android/PC 三端对比测评
+- [ ] **T3.5** 知识库工具横评：Onyx vs AnythingLLM vs Obsidian+RAG
+- [ ] **T3.6** 开源免费优先原则：每个推荐工具注明授权和费用
+
+#### T3.2 程序员工具链（L2 拆分）
+
+- [ ] T3.2.1 Continue.dev + Ollama 配置（VS Code + Cursor）
+- [ ] T3.2.2 Twinny vs Copilot替代品对比
+- [ ] T3.2.3 Aider（命令行AI编程）配置教程
+- [ ] T3.2.4 本地 Code Review Agent 搭建方案
+
+#### T3.4 语音输入（L2 拆分）
+
+- [ ] T3.4.1 iOS：PocketPal + Whisper 快捷指令方案
+- [ ] T3.4.2 Android：WhisperInput / SpeechNote / MNN LLM
+- [ ] T3.4.3 PC：Whisper Desktop / faster-whisper / whisper.cpp
+- [ ] T3.4.4 中文准确率对比：普通话 / 粤语 / 闽南话
 
 ---
 
-## D5. 地域差异分析
+### R04 · 最佳实践 🔄 待启动
 
-### 5.1 中国大陆
+**文件：** `reports/R04-best-practices-smb-human-ai.md`（首篇）
 
-- 硬件：Apple Silicon 强势，RTX 系列受出口管制（4090 已限制）
-- 模型：Qwen / DeepSeek / Baichuan 等国产模型生态
-- 网络：HuggingFace 访问受限 → ModelScope / 魔搭社区镜像
-- 软件：微信/钉钉生态集成需求
+**更新方式：** 按主题独立文件 + 日期版本，如：
+```
+R04-smb-human-ai-roles-20260418.md    ← 本期
+R04-personal-ai-workflow-20260425.md  ← 下期
+```
 
-### 5.2 东南亚（泰国/越南/新加坡/马来西亚）
+#### 首篇主题：中小组织 人+AI 角色构建
 
-- 硬件：进口渠道畅通，价格比中国高 10-20%
-- 模型：英语优先，本地语言支持需求（泰文/越南文）
-- 网络：HuggingFace 直接访问
-- 特殊场景：多语言 OCR、翻译、客服 Agent
+**核心问题：** 一个 5-50 人的组织，如何引入 AI，建立人+AI 协作机制？
 
-### 5.3 研究任务（L1）
+**研究框架：**
 
-- [ ] **T5.1** 中国 HuggingFace 镜像替代方案（ModelScope、魔搭、hf-mirror）
-- [ ] **T5.2** 国产模型生态调研（Qwen3、DeepSeek、Yi、Baichuan）
-- [ ] **T5.3** 东南亚本地语言 AI 模型调研
-- [ ] **T5.4** 各地区硬件价格对比表
+```
+1. 角色分析
+   └── 中小组织通用角色清单（运营/设计/销售/客服/研发）
+   └── 每个角色当前痛点 × AI 可替代程度评估
+
+2. 技能路径（Skill）
+   └── 每个角色需要学习哪些 AI 工具
+   └── 学习路径：从傻瓜→进阶→极客的成长曲线
+   └── 评估指标：能独立完成什么 AI 任务
+
+3. Agent 构建
+   └── 如何为每个角色定制专属 Agent
+   └── 训练方式：提示词工程 / RAG / Fine-tune
+   └── Agent 评估标准：输出质量 / 稳定性 / 成本
+
+4. AI Native 评估标准
+   └── 个人 AI Native 指标（5个维度）
+   └── 组织 AI Native 指标（流程/决策/协作三层）
+   └── 评估工具：自测问卷 + 评分模型
+```
+
+#### 研究任务
+
+- [ ] **T4.1** 中小组织通用角色 AI 使用调研（运营/设计/销售/客服/研发）
+- [ ] **T4.2** 运营角色人+AI 完整配置方案（首选深度研究对象）
+- [ ] **T4.3** Agent 构建教程：从提示词→RAG→Fine-tune 三步走
+- [ ] **T4.4** AI Native 评估标准设计（个人5维度 + 组织3层）
+- [ ] **T4.5** 组织变革路径：Skill→Agent→Native 三阶段实施手册
+
+#### T4.2 运营角色深度研究（L2 拆分）
+
+- [ ] T4.2.1 运营日常工作流梳理（内容/数据/用户/活动4类）
+- [ ] T4.2.2 各工作流 AI 工具配置（选型+安装+配置）
+- [ ] T4.2.3 运营 Agent 定制：品牌声音、行业知识库、数据模板
+- [ ] T4.2.4 实测：1人运营+AI vs 3人运营的工作量对比
 
 ---
 
-## 执行优先级矩阵
+## 网站建设任务清单
+
+### W1. 构建脚本（Python）
+
+- [ ] **W1.1** 设计 HTML 模板（index、报告页、历史版本页）
+- [ ] **W1.2** 编写 `build.py`：读取 markdown → 渲染 HTML → 输出 dist/
+- [ ] **W1.3** 设计 CSS 样式（极简、中英双语、移动端适配）
+- [ ] **W1.4** 首页成本计算器（纯 JS，无后端）
+- [ ] **W1.5** 历史版本索引自动生成（按日期文件名排序）
+
+### W2. Cloudflare Pages 配置
+
+- [ ] **W2.1** 创建 Cloudflare Pages 项目（`auraai`）
+- [ ] **W2.2** 连接 GitHub 仓库，配置构建命令：`python3 build.py`
+- [ ] **W2.3** 配置自定义域名：`auraai.mushroom.cv`
+- [ ] **W2.4** 配置 DNS：CNAME → Cloudflare Pages 域名
+
+### W3. 内容填充
+
+- [ ] **W3.1** 首页 Aura AI 介绍文案（引用宣言文章摘要）
+- [ ] **W3.2** R01 发布（已有数据，直接上线）
+- [ ] **W3.3** R02 发布（已有数据，直接上线）
+- [ ] **W3.4** R03 研究完成后发布
+- [ ] **W3.5** R04 首篇研究完成后发布
+
+---
+
+## 执行优先级矩阵（更新版）
 
 | 任务 | 优先级 | 预计工时 | 状态 |
 |------|--------|---------|------|
-| T2.1 HuggingFace Top 模型调研 | P0 | 4h | 🔄 进行中 |
-| T1.1 手机端 AI 能力调研 | P0 | 3h | 🔄 进行中 |
-| T1.2 PC 端方案对比 | P0 | 3h | 待开始 |
-| T3.2 免费语音输入法方案 | P1 | 5h | 待开始 |
-| T4.1 Ollama 生态调研 | P1 | 3h | 待开始 |
-| T5.1 中国镜像方案 | P1 | 2h | 待开始 |
-| T1.3 GPU 清单 | P2 | 2h | 待开始 |
-| T3.3 本地知识库方案 | P2 | 4h | 待开始 |
-| T1.6 东南亚硬件 | P2 | 2h | 待开始 |
+| **W1 构建脚本 + 模板** | P0 | 4h | 待开始 |
+| **W2 Cloudflare Pages 配置** | P0 | 1h | 待开始 |
+| **W3.1-3.3 上线 R01+R02** | P0 | 2h | 待开始 |
+| **T3 R03 软件报告** | P1 | 6h | 待开始 |
+| **T4.1-4.2 R04 最佳实践首篇** | P1 | 8h | 待开始 |
+| T3.2 程序员工具链教程 | P1 | 4h | 待开始 |
+| T3.4 语音输入三端方案 | P1 | 3h | 待开始 |
+| T2.4 量化版本对比 | P2 | 2h | 待开始 |
+| T1.6 东南亚硬件差异 | P2 | 2h | 待开始 |
+| T4.4 AI Native 评估标准 | P2 | 4h | 待开始 |
+| T5.1 中国镜像替代方案 | P2 | 2h | 待开始 |
 
 ---
 
-## 网站栏目初稿（待完善）
+## 文件目录结构
 
 ```
-Local AI 周报
-├── 本周最优方案（首页摘要）
-├── 硬件推荐
-│   ├── 手机端
-│   ├── PC端
-│   ├── 社区端
-│   └── 极客端
-├── 模型推荐
-│   ├── 按域浏览（语音/图像/文本/代码...）
-│   └── 按硬件浏览（我的设备能跑什么）
-├── 场景解决方案
-│   ├── 免费语音输入法
-│   ├── 本地知识库
-│   └── 更多场景...
-├── 工具箱
-│   ├── 傻瓜方案
-│   └── 极客方案
-└── 成本计算器
-    └── 三年分摊月成本工具
+research/local-AI/
+├── plan.md                              ← 本文件（持续更新）
+├── reports/
+│   ├── R01-hardware-china-market.md     ✅ 完成
+│   ├── R02-models-by-domain.md          ✅ 完成
+│   ├── R03-software-by-role.md          🔄 待启动
+│   └── R04-smb-human-ai-roles.md        🔄 待启动
+└── website/                             ← 静态网站源文件
+    ├── build.py                         ← 构建脚本
+    ├── templates/
+    │   ├── base.html
+    │   ├── index.html
+    │   └── report.html
+    ├── assets/
+    │   ├── style.css
+    │   └── logo.svg
+    └── dist/                            ← 构建输出（部署到 CF Pages）
 ```
 
 ---
 
-*计划持续更新 · 调研结果将存入对应子目录*
+## D1-D5 研究任务（原有，继续推进）
+
+### D1. 硬件（R01 基础，继续深化）
+
+- [x] T1.1-T1.5 中国市场四端硬件调研 → R01 已完成
+- [ ] T1.6 东南亚市场硬件差异
+
+### D2. 模型（R02 基础，继续深化）
+
+- [x] T2.1 HuggingFace Top 模型调研 → R02 已完成
+- [ ] T2.2 中文特化模型专项（Qwen3/DeepSeek/Yi）
+- [ ] T2.4 量化版本质量损失对比
+
+### D3. 场景（合并入 R03/R04）
+
+- 场景研究成果将体现在 R03 软件报告的"按场景"维度
+- 最佳实践案例将体现在 R04
+
+### D4. 工具（合并入 R03）
+
+- 工具调研成果将体现在 R03 软件报告
+
+### D5. 地域差异
+
+- [ ] T5.1 中国 HuggingFace 镜像替代（ModelScope/hf-mirror/魔搭）
+- [ ] T5.2 国产模型生态调研
+
+---
+
+*计划持续更新 · 执行顺序以优先级矩阵为准 · 调研结果存入 reports/ 目录*
