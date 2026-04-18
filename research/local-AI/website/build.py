@@ -198,9 +198,245 @@ input[type=range] { flex: 1; min-width: 160px; accent-color: #0ea5e9; height: 4p
 .report-body blockquote { border-left: 4px solid #0ea5e9; padding-left: 16px; color: var(--muted); font-style: italic; margin: 16px 0; }
 .report-body strong { font-weight: 700; }
 
+/* ── Evolution diagrams ── */
+.evo-section { margin-bottom: 48px; }
+.evo-sub { font-size: .85rem; color: var(--muted); margin-bottom: 20px; margin-top: -12px; }
+
+/* Individual path */
+.evo-flow { display: flex; align-items: stretch; gap: 0; overflow-x: auto; padding-bottom: 4px; }
+.evo-step { flex: 1; min-width: 140px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 14px; position: relative; }
+.evo-step .step-num { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 6px; }
+.evo-step .step-title { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+.evo-step .step-time { font-size: .75rem; color: var(--muted); margin-bottom: 10px; }
+.evo-step ul { list-style: none; padding: 0; }
+.evo-step ul li { font-size: .8rem; color: #475569; padding: 1px 0 1px 14px; position: relative; }
+.evo-step ul li::before { content: "·"; position: absolute; left: 4px; color: #94a3b8; }
+.evo-arrow { display: flex; align-items: center; padding: 0 6px; color: #94a3b8; font-size: 1.4rem; flex-shrink: 0; align-self: center; }
+.evo-step.native { background: #0f172a; border-color: #38bdf8; color: #e2e8f0; }
+.evo-step.native .step-num { color: #38bdf8; }
+.evo-step.native .step-time { color: #94a3b8; }
+.evo-step.native ul li { color: #cbd5e1; }
+@media (max-width: 700px) { .evo-flow { flex-direction: column; } .evo-arrow { transform: rotate(90deg); align-self: flex-start; margin-left: 20px; } }
+
+/* Human vs AI two-column */
+.human-ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+@media (max-width: 600px) { .human-ai-grid { grid-template-columns: 1fr; } }
+.ha-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+.ha-box.human { border-top: 3px solid #10b981; }
+.ha-box.ai { border-top: 3px solid #8b5cf6; }
+.ha-box h4 { font-size: .95rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.ha-trait { margin-bottom: 10px; }
+.ha-trait .trait-name { font-size: .88rem; font-weight: 700; color: var(--text); }
+.ha-trait .trait-desc { font-size: .8rem; color: var(--muted); padding-left: 12px; margin-top: 1px; }
+
+/* Collaboration unit formula */
+.collab-formula { background: #0f172a; color: #e2e8f0; border-radius: 12px; padding: 24px 28px; font-family: "SF Mono", Menlo, monospace; margin-bottom: 16px; }
+.collab-formula .formula-title { font-size: .78rem; color: #38bdf8; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 16px; font-family: inherit; }
+.collab-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.collab-box { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 8px 14px; font-size: .85rem; }
+.collab-box.human-box { border-color: #10b981; color: #6ee7b7; }
+.collab-box.ai-box { border-color: #8b5cf6; color: #c4b5fd; }
+.collab-box.result-box { border-color: #38bdf8; color: #7dd3fc; font-weight: 700; }
+.collab-op { color: #f59e0b; font-size: 1.1rem; font-weight: 700; }
+.collab-eq { color: #94a3b8; font-size: .85rem; margin: 4px 0 0 0; }
+.collab-note { font-size: .78rem; color: #64748b; margin-top: 10px; font-family: -apple-system, "PingFang SC", sans-serif; }
+
+/* Org transformation */
+.org-flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: center; margin-bottom: 16px; }
+@media (max-width: 650px) { .org-flow { grid-template-columns: 1fr; gap: 8px; } .org-arrow-v { display: none; } }
+.org-stage { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 16px; }
+.org-stage .stage-label { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+.org-stage h4 { font-size: .95rem; font-weight: 700; margin-bottom: 4px; }
+.org-stage .stage-time { font-size: .75rem; color: var(--muted); margin-bottom: 8px; }
+.org-stage ul { list-style: none; padding: 0; }
+.org-stage ul li { font-size: .8rem; color: #475569; padding: 1px 0 1px 12px; position: relative; }
+.org-stage ul li::before { content: "·"; position: absolute; left: 2px; }
+.org-stage.s1 .stage-label { color: #0ea5e9; }
+.org-stage.s2 .stage-label { color: #8b5cf6; }
+.org-stage.s3 { background: #0f172a; border-color: #f59e0b; color: #e2e8f0; }
+.org-stage.s3 .stage-label { color: #fbbf24; }
+.org-stage.s3 ul li { color: #cbd5e1; }
+.org-arrow-v { text-align: center; color: #94a3b8; font-size: 1.4rem; padding: 0 8px; }
+.org-insight { background: #fef9c3; border: 1px solid #fde68a; border-radius: 8px; padding: 12px 16px; font-size: .88rem; color: #78350f; }
+.org-insight strong { color: #92400e; }
+
 /* ── Footer ── */
 footer { background: #0f172a; color: #475569; text-align: center; padding: 24px 20px; font-size: .85rem; }
 footer a { color: #7dd3fc; }
+"""
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Evolution diagrams HTML
+# ─────────────────────────────────────────────────────────────────────────────
+
+EVOLUTION_HTML = """
+<div class="evo-section">
+
+  <!-- Diagram 1: Individual 4-step path -->
+  <div class="section-title">个体演进路径</div>
+  <p class="evo-sub">从下载第一个 AI 工具，到工作流完全以 AI 为核心——四个阶段，清晰可操作</p>
+  <div class="evo-flow">
+
+    <div class="evo-step">
+      <div class="step-num">Step 1</div>
+      <div class="step-title">📱 使用应用</div>
+      <div class="step-time">0–1 个月</div>
+      <ul>
+        <li>下载 LM Studio / Jan</li>
+        <li>拉取第一个模型</li>
+        <li>完成第一个 AI 辅助任务</li>
+        <li>感受本地 AI 的边界</li>
+      </ul>
+    </div>
+    <div class="evo-arrow">→</div>
+
+    <div class="evo-step">
+      <div class="step-num">Step 2</div>
+      <div class="step-title">🔧 技能化</div>
+      <div class="step-time">1–3 个月</div>
+      <ul>
+        <li>精准描述任务（提示词）</li>
+        <li>批判性评估 AI 输出</li>
+        <li>2–3 工具融入日常流程</li>
+        <li>识别哪些任务 AI 不适合</li>
+      </ul>
+    </div>
+    <div class="evo-arrow">→</div>
+
+    <div class="evo-step">
+      <div class="step-num">Step 3</div>
+      <div class="step-title">🤖 构建 Agent</div>
+      <div class="step-time">3–6 个月</div>
+      <ul>
+        <li>为核心工作流定制 Agent</li>
+        <li>搭建私有 RAG 知识库</li>
+        <li>提示词工程 / Fine-tune</li>
+        <li>Agent 稳定输出可评估</li>
+      </ul>
+    </div>
+    <div class="evo-arrow">→</div>
+
+    <div class="evo-step native">
+      <div class="step-num">Step 4</div>
+      <div class="step-title">⭐ AI Native</div>
+      <div class="step-time">6–18 个月</div>
+      <ul>
+        <li>工作流以 AI 为中心重设计</li>
+        <li>人负责判断、AI 负责执行</li>
+        <li>持续更新自己的 Agent</li>
+        <li>社会力 × AI 执行力 = 10×</li>
+      </ul>
+    </div>
+
+  </div><!-- /evo-flow -->
+
+  <!-- Diagram 2: Human irreplaceable vs AI capabilities -->
+  <div class="section-title" style="margin-top:40px">人类护城河 vs AI 能力边界</div>
+  <p class="evo-sub">理解边界，才能找到正确的协作姿势</p>
+  <div class="human-ai-grid">
+
+    <div class="ha-box human">
+      <h4>🧠 人类不可替代的三件事</h4>
+      <div class="ha-trait">
+        <div class="trait-name">① 社会上下文</div>
+        <div class="trait-desc">你是谁的朋友、哪所学校的校友、哪个行业的老兵——数千年积累的信用、声誉与社会资本。AI 没有社会网络，无法嵌入真实关系。</div>
+      </div>
+      <div class="ha-trait">
+        <div class="trait-name">② 情感判断</div>
+        <div class="trait-desc">好不好、对不对——这些判断没有标准答案。凡需要价值取舍、人际感受、道德边界的地方，人类判断无可替代。</div>
+      </div>
+      <div class="ha-trait">
+        <div class="trait-name">③ 需求提出</div>
+        <div class="trait-desc">人类创造了 AI，目的是服务人类。需求的源头永远在人这一侧。能把诉求结构化为 AI 能理解语言的人，价值最高。</div>
+      </div>
+    </div>
+
+    <div class="ha-box ai">
+      <h4>⚡ AI 擅长的四件事</h4>
+      <div class="ha-trait">
+        <div class="trait-name">① 无限执行力</div>
+        <div class="trait-desc">7×24 不疲倦，同时处理多任务，执行标准化工作零差错。</div>
+      </div>
+      <div class="ha-trait">
+        <div class="trait-name">② 知识检索</div>
+        <div class="trait-desc">海量信息瞬时调取，跨领域综合，实时跟踪最新数据。</div>
+      </div>
+      <div class="ha-trait">
+        <div class="trait-name">③ 模式识别</div>
+        <div class="trait-desc">在数据中发现隐藏规律，超出人类感知速度和范围。</div>
+      </div>
+      <div class="ha-trait">
+        <div class="trait-name">④ 持续迭代</div>
+        <div class="trait-desc">每次交互都更新对你的理解，越用越懂你，不断进化。</div>
+      </div>
+    </div>
+
+  </div><!-- /human-ai-grid -->
+
+  <!-- Diagram 3: Human + AI collaboration formula -->
+  <div class="collab-formula">
+    <div class="formula-title">// 人 + AI 协作单元公式</div>
+    <div class="collab-row">
+      <div class="collab-box human-box">社会上下文 + 情感判断 + 需求提出</div>
+      <span class="collab-op">×</span>
+      <div class="collab-box ai-box">执行力 + 检索 + 模式识别 + 迭代</div>
+      <span class="collab-op">=</span>
+      <div class="collab-box result-box">人 + AI 协作单元</div>
+    </div>
+    <div class="collab-eq">// 相乘，不是相加——1人 × AI 倍增器，效能 3–10×</div>
+    <div class="collab-note">注：AI 替代的是"生产力"（执行、信息处理、组合创新）；人类转向"社会力"（关系、判断、需求）。这是本质性的分工，不是程度之差。</div>
+  </div>
+
+  <!-- Diagram 4: Organization transformation -->
+  <div class="section-title" style="margin-top:40px">组织转型三阶段</div>
+  <p class="evo-sub">只有能与 AI 协作的个体，才能进入 AI Native 状态的组织</p>
+  <div class="org-flow">
+
+    <div class="org-stage s1">
+      <div class="stage-label">Phase 1 · Skill</div>
+      <h4>全员技能化</h4>
+      <div class="stage-time">1–3 个月</div>
+      <ul>
+        <li>每人掌握 2–3 个 AI 工具</li>
+        <li>AI 辅助完成本岗位任务</li>
+        <li>建立工具使用规范</li>
+        <li>识别高价值 AI 应用场景</li>
+      </ul>
+    </div>
+    <div class="org-arrow-v">→</div>
+
+    <div class="org-stage s2">
+      <div class="stage-label">Phase 2 · Agent</div>
+      <h4>核心流程 Agent 化</h4>
+      <div class="stage-time">3–6 个月</div>
+      <ul>
+        <li>关键工作流有专属 Agent</li>
+        <li>RAG 知识库对接内部文档</li>
+        <li>Agent 产出质量可量化</li>
+        <li>建立 AI 使用的评估标准</li>
+      </ul>
+    </div>
+    <div class="org-arrow-v">→</div>
+
+    <div class="org-stage s3">
+      <div class="stage-label">Phase 3 · Native</div>
+      <h4>⭐ 组织 AI Native</h4>
+      <div class="stage-time">6–18 个月</div>
+      <ul>
+        <li>工作流以 AI 为中心重设计</li>
+        <li>AI 介入决策与协作层</li>
+        <li>人专注判断、关系、创新</li>
+        <li>持续自我进化的组织体</li>
+      </ul>
+    </div>
+
+  </div><!-- /org-flow -->
+
+  <div class="org-insight">
+    <strong>核心洞察：</strong>AI 不是来替代你的，但会替代那些不使用 AI 的人。对组织而言，问题不是"要不要引入 AI"——而是"哪些角色怎么引入、边界在哪里"，以及"如何用 AI 乘以人的社会力，而不是用 AI 替换人"。
+  </div>
+
+</div><!-- /evo-section -->
 """
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -325,6 +561,7 @@ def index_html(reports_data: list[dict]) -> str:
   </div>
 </header>
 <main class="container">
+  {EVOLUTION_HTML}
   <div class="section-title">四大研究栏目</div>
   <div class="cards-grid">{cards_html}</div>
   <div class="section-title">成本计算器</div>
