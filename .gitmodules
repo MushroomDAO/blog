@@ -13,3 +13,6 @@
 [submodule "submodules/xiaohongshu-mcp"]
 	path = submodules/xiaohongshu-mcp
 	url = https://github.com/xpzouying/xiaohongshu-mcp.git
+[submodule "pipeline/deploy/xiaohongshu-mcp/src"]
+	path = pipeline/deploy/xiaohongshu-mcp/src
+	url = git@github.com:jhfnetboy/xiaohongshu-mcp.git
