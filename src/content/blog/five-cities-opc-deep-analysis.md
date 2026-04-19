@@ -4,7 +4,7 @@ titleEn: "five-cities-opc-deep-analysis"
 description: "2025-2026年，杭州、上海、深圳、苏州、北京五城集中发布OPC政策，形成最激烈的第一梯队竞争。本文逐城逐区拆解政策细节，提炼共性规律，并以此为镜系统评估资阳DNβ的差异化定位。"
 descriptionEn: "Five major cities launched OPC policies in 2025-2026. This deep analysis breaks down each city's district-level policies, extracts common patterns, and uses them as a mirror to assess Ziyang DNβ's differentiated positioning."
 pubDate: "2026-04-19"
-category: "Research"
+category: "DN"
 tags: ["OPC", "一人公司", "政策分析", "杭州", "上海", "深圳", "苏州", "北京", "资阳"]
 heroImage: "../../assets/blog-cover-20260418.jpg"
 ---

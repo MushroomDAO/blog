@@ -4,7 +4,7 @@ titleEn: "ziyang-first-stop-global-nomads"
 description: "240小时过境免签、天府机场枢纽、成都同城化优势——资阳如何成为全球数字游民进入中国的第一站？从签证政策到竞争格局，从实施路径到成功里程碑，本文给出系统性分析与路线图。"
 descriptionEn: "240-hour transit visa, Tianfu Airport hub, Chengdu metro advantage — how Ziyang can become the first stop for global digital nomads entering China. Systematic analysis from visa policy to competitive landscape to implementation roadmap."
 pubDate: "2026-04-19"
-category: "Research"
+category: "DN"
 tags: ["数字游民", "资阳", "OPC", "天府机场", "过境免签", "DNBeta", "Mycelium"]
 heroImage: "../../assets/blog-cover-20260418.jpg"
 ---

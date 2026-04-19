@@ -4,7 +4,7 @@ titleEn: "national-opc-policy-analysis-ziyang"
 description: "2025年底至2026年Q1，全国20+城市竞相发布OPC政策，呈现高度同质化。本文系统梳理四个梯队城市的政策内容，诊断全行业共同盲点，并为资阳给出五条不被复制的差异化路径。"
 descriptionEn: "20+ cities launched OPC policies in 2025-2026, all highly homogeneous. This analysis maps four city tiers, diagnoses the industry-wide blind spot (international nomads), and gives Ziyang 5 uncopyable differentiation paths."
 pubDate: "2026-04-19"
-category: "Research"
+category: "DN"
 tags: ["OPC", "一人公司", "资阳", "数字游民", "国际化", "政策分析", "DNBeta"]
 heroImage: "../../assets/blog-cover-20260418.jpg"
 ---

@@ -23,7 +23,7 @@ const blog = defineCollection({
 			// 分类标签：技术实验 | 进度汇报 | 专题研究 | 最新科技
 			tags: z.array(z.string()).default([]),
 			// 文章分类（英文）
-			category: z.enum(['Tech-Experiment', 'Progress-Report', 'Research', 'Tech-News', 'Other']).default('Other'),
+			category: z.enum(['Tech-Experiment', 'Progress-Report', 'Research', 'Tech-News', 'DN']).default('Research'),
 		}),
 });
 

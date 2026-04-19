@@ -36,13 +36,13 @@ posts.forEach(post => {
 const sortedTags = Array.from(tagCounts.entries()).sort((a, b) => b[1] - a[1]);
 
 // 分类列表
-const categories = ['Tech-Experiment', 'Progress-Report', 'Research', 'Tech-News', 'Other'];
+const categories = ['Tech-Experiment', 'Progress-Report', 'Research', 'Tech-News', 'DN'];
 const categoryIcons: Record<string, string> = {
 	'Tech-Experiment': '🔬',
 	'Progress-Report': '📊',
 	'Research': '🔍',
 	'Tech-News': '🚀',
-	'Other': '📝',
+	'DN': '🌍',
 };
 
 // 客户端筛选需要的数据
@@ -420,7 +420,7 @@ const postsData = posts.map(post => ({
 				</div>
 				<ul id="posts-list">
 					{listPosts.map((post, index) => (
-						<li data-category={post.data.category || 'Other'} data-index={index} class={index >= 12 ? 'hidden-post' : ''}>
+						<li data-category={post.data.category || 'Research'} data-index={index} class={index >= 12 ? 'hidden-post' : ''}>
 							<a href={`/blog/${post.id}/`}>
 								{post.data.heroImage && (
 									<Image width={720} height={360} src={post.data.heroImage} alt="" />
@@ -551,7 +551,7 @@ const postsData = posts.map(post => ({
 					
 					const allHiddenPosts = Array.from(postsList.querySelectorAll('li.hidden-post'));
 					const hiddenPosts = allHiddenPosts.filter(post => {
-						const category = post.getAttribute('data-category') || 'Other';
+						const category = post.getAttribute('data-category') || 'Research';
 						return !selectedCategory || category === selectedCategory;
 					});
 					
@@ -573,7 +573,7 @@ const postsData = posts.map(post => ({
 					
 					let hiddenCount = 0;
 					postsList.querySelectorAll('li.hidden-post').forEach(post => {
-						const category = post.getAttribute('data-category') || 'Other';
+						const category = post.getAttribute('data-category') || 'Research';
 						if (!selectedCategory || category === selectedCategory) {
 							hiddenCount++;
 						}
@@ -606,7 +606,7 @@ const postsData = posts.map(post => ({
 					let shownCount = 0;
 					
 					allPosts.forEach(post => {
-						const category = post.getAttribute('data-category') || 'Other';
+						const category = post.getAttribute('data-category') || 'Research';
 						const matchesCategory = !selectedCategory || category === selectedCategory;
 						
 						if (matchesCategory) {
