@@ -6,7 +6,7 @@ descriptionEn: "AI equity, Token Free, Local First — Aura AI is an open-source
 pubDate: "2026-04-17"
 category: "Research"
 tags: ["AI平权", "Token Free", "本地优先", "Aura AI", "Mycelium", "数字公共物品", "开源"]
-heroImage: "../../assets/images/aura-ai-manifesto-cover.jpg"
+heroImage: "../../assets/blog-cover-20260417.jpg"
 ---
 
 *by Aura AI · Mycelium Protocol*
