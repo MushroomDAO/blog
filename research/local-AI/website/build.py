@@ -339,7 +339,7 @@ EVOLUTION_HTML = """
       <h4>🧠 人类不可替代的三件事</h4>
       <div class="ha-trait">
         <div class="trait-name">① 社会上下文</div>
-        <div class="trait-desc">你是谁的朋友、哪所学校的校友、哪个行业的老兵——数千年积累的信用、声誉与社会资本。AI 没有社会网络，无法嵌入真实关系。</div>
+        <div class="trait-desc">你是谁的朋友、哪所学校的校友、哪个行业的老兵——人类社会数千年积累的社会上下文，个体镶嵌在社会网络中的信用、声誉与社会资本。AI 没有社会网络，无法嵌入真实关系。</div>
       </div>
       <div class="ha-trait">
         <div class="trait-name">② 情感判断</div>
