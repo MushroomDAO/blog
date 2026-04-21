@@ -6,7 +6,7 @@ descriptionEn: "Too many agents, too many scattered skills? HarnessKit is a cent
 pubDate: "2026-04-20"
 category: "Tech-News"
 tags: ["HarnessKit", "AI Agent", "MCP", "Skill", "Plugin", "Hook", "Claude Code", "Cursor", "Copilot", "工具管理"]
-heroImage: "../../assets/blog-cover-20260420.jpg"
+heroImage: "../../assets/banner-cypherpunk-revolution.jpg"
 ---
 
 随着AI辅助编程的迅速普及，开发者们在日常工作中往往会同时使用多个AI Coding Agent，例如Claude Code、Codex、Cursor、Copilot、Gemini以及Antigravity等。为了让这些Agent发挥出最强大的效能，开发者们还需要安装各种各样的Skill、MCP、Plugin、Hook和CLI扩展工具。然而，这种工作流带来了一个非常令人头疼的痛点：所有的扩展和系统配置文件都散落在不同的目录中。管理这些零散的插件极其耗费时间。比如，如果想把Copilot中的某个优质Skill迁移给Claude Code使用，开发者不得不手动翻找文件夹、来回复制拖动代码并修改配置，整个过程不仅繁琐，而且体验非常割裂。

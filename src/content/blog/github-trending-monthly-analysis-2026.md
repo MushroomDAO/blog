@@ -6,7 +6,7 @@ descriptionEn: "After one month of tracking GitHub Trending: three maturity line
 pubDate: "2026-04-21"
 category: "Tech-News"
 tags: ["GitHub Trending", "AI Agent", "Agent工程化", "MCP", "开源", "开发者工具", "月度总结"]
-heroImage: "../../assets/blog-cover-20260421.jpg"
+heroImage: "../../assets/banner-future-is-now.jpg"
 ---
 
 ## 一、每日趋势概览与总结

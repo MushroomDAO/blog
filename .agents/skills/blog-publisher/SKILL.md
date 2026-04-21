@@ -41,11 +41,38 @@ description: |
 
 ### 2. 默认分类
 - 所有文章默认分类: **Tech-News**
-- 可选分类: Tech-Experiment, Progress-Report, Research, Other
+- 可选分类: Tech-Experiment, Progress-Report, Research, DN
 
 ### 3. 文章排序
 - 新文章默认按 `pubDate` 日期排序置顶
 - 日期格式: `YYYY-MM-DD`
+
+### 4. 默认 Banner 图片池（10张，随机选取）
+
+**规则**：如果用户没有提供封面图片，必须从以下 10 张默认 banner 中随机选一张。
+
+```
+src/assets/ 下的默认 banner 列表：
+
+原始 5 张（通用占位图）:
+1. blog-placeholder-1.jpg
+2. blog-placeholder-2.jpg
+3. blog-placeholder-3.jpg
+4. blog-placeholder-4.jpg
+5. blog-placeholder-5.jpg
+
+新增 5 张（AI/未来主题）:
+6.  banner-human-ai-coexistence.jpg   — Human & AI 和谐共存
+7.  banner-cypherpunk-revolution.jpg  — Cypherpunk 赛博朋克
+8.  banner-mycelial-network.jpg       — Mycelial 菌网/自然互联网
+9.  banner-future-is-now.jpg          — 未来城市/绿色科技
+10. banner-ai-new-intelligence.jpg    — AI 新智能/大脑网络
+```
+
+在 frontmatter 中写法（例如随机选第 7 张）：
+```yaml
+heroImage: "../../assets/banner-cypherpunk-revolution.jpg"
+```
 
 ## 触发词
 - 发布文章
