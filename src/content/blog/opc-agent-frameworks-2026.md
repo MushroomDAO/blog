@@ -6,7 +6,7 @@ descriptionEn: "AI agents have moved from labs to production. One person can now
 pubDate: "2026-04-19"
 category: "DN"
 tags: ["OPC", "一人公司", "AI Agent", "自动化", "创业", "数字游民", "DNBeta"]
-heroImage: "../../assets/blog-cover-20260418.jpg"
+heroImage: "../../assets/banner-ai-new-intelligence.jpg"
 ---
 
 *by Jason / Mycelium Protocol*

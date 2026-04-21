@@ -6,7 +6,7 @@ descriptionEn: "How Ziyang OPC can build a global digital nomad network via Chia
 pubDate: "2026-04-19"
 category: "DN"
 tags: ["数字游民", "资阳", "OPC", "清迈", "国际化", "黑客松", "DNBeta", "Mycelium"]
-heroImage: "../../assets/blog-cover-20260418.jpg"
+heroImage: "../../assets/banner-human-ai-coexistence.jpg"
 ---
 
 *by Jason / Mycelium Protocol*
