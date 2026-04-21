@@ -182,6 +182,6 @@ heroImage: "../../assets/blog-cover-20260418.jpg"
 
 ---
 
-*Jason · Mycelium Protocol · 清迈/资阳 · 2026年4月*
+*Jason · Mycelium Protocol · 清迈 · 2026年4月*
 
 > **关于作者**：Jason，Mycelium Protocol 发起人，清迈大学在读博士研究生（ICDI），CMUBA区块链协会创始人。长期往来于清迈、大理、资阳之间，研究数字游民经济与城市共建模式。
