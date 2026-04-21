@@ -6,7 +6,7 @@ descriptionEn: "20+ cities launched OPC policies in 2025-2026, all highly homoge
 pubDate: "2026-04-19"
 category: "DN"
 tags: ["OPC", "一人公司", "资阳", "数字游民", "国际化", "政策分析", "DNBeta"]
-heroImage: "../../assets/blog-cover-20260418.jpg"
+heroImage: "../../assets/banner-mycelial-network.jpg"
 ---
 
 *by Jason / Mycelium Protocol*
