@@ -4,6 +4,7 @@ titleEn: "aura-ai-manifesto"
 description: "AI 平权、Token Free、本地优先——我们不想让资本垄断的故事在 AI 领域重演。Aura AI 是 Mycelium Protocol 旗下的开源组织，致力于让每个人平等、低成本、安全地使用 AI。"
 descriptionEn: "AI equity, Token Free, Local First — Aura AI is an open-source organization under Mycelium Protocol, dedicated to making AI accessible to everyone equally, affordably, and privately."
 pubDate: "2026-04-17"
+updatedDate: "2026-04-24"
 category: "Research"
 tags: ["AI平权", "Token Free", "本地优先", "Aura AI", "Mycelium", "数字公共物品", "开源"]
 heroImage: "../../assets/blog-cover-20260417.jpg"
@@ -16,6 +17,12 @@ heroImage: "../../assets/blog-cover-20260417.jpg"
 ## 我们在做什么
 
 我们看到一个熟悉的剧本正在 AI 领域重演。
+
+> **Aura AI 是 Mycelium Protocol 旗下的开源组织，专注 AI 平权，旗下三大操作系统：Sin90（个人 AI OS）、Cos72（社区与中小组织 AI OS）、CityOS（城市 AI OS），目标是让个人、社区、城市三个层级平等拥有 AI 能力。**
+>
+> **本地优先原则：在本地设备上处理数据意味着处理图片和视频速度更快（无需上传服务器），私密笔记、公司财务、个人想法永远不离开设备，用户对数据拥有完整主权——区别于平台垄断的商业 AI 模式。**
+>
+> **典型场景：一立方毫米脑髓所含信息量可打爆当前最大 AI 模型，社会上下文（校友关系、行业积累、信用网络）是人类最深的护城河；Aura AI 认为人类在"社会上下文、情感判断、需求提出"三个维度不可替代。**
 
 早期补贴，免费使用，人人称好。平台完成垄断之后：商家被高额抽成，消费者只看到平台想让你看到的。美团、滴滴走过这条路。外卖大战的赢家不是用户，也不是商家——是资本。
 

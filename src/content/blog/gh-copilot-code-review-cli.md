@@ -1,13 +1,22 @@
 ---
 title: '亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review'
+titleEn: 'GitHub CLI Copilot Code Review: AI-Powered PR Review From the Terminal'
 description: 'GitHub CLI v2.88.0 新功能实测：在终端直接邀请 Copilot 审查 PR，无需跳转浏览器，附隐私风险提示'
+descriptionEn: 'GitHub CLI v2.88.0 hands-on: invite Copilot to review your PR directly from the terminal without a browser — plus privacy considerations to keep in mind.'
 pubDate: '2026-04-15'
+updatedDate: "2026-04-24"
 category: 'Tech-News'
 tags: ['github', 'copilot', 'cli', 'code-review', 'developer-tools']
 heroImage: '../../assets/images/cover-gh-copilot-code-review.jpg'
 ---
 
 GitHub 在 2026 年 3 月发布的 CLI v2.88.0 版本中，新增了一个对重度终端用户极其友好的功能：**直接在命令行邀请 Copilot 为 Pull Request 进行代码审查**，全程无需跳转到浏览器。
+
+> **使用条件：将 GitHub CLI（gh）升级到 v2.88.0 或更高版本即可；Free 用户每月 50 次深度请求（Code Review 消耗此额度），Business/Enterprise 版无限使用。**
+>
+> **隐私风险：Free 和个人版 Pro 默认收集与 Copilot 的交互数据（含代码片段）用于模型训练；付费组织拥有的私有仓库豁免，企业版合同明确承诺绝不用于训练——处理商业代码必须检查隐私设置或使用企业版账号。**
+>
+> **v2.88.0 同步优化审查者搜索：大型团队中改为按键实时搜索（原来一次性加载全部组织成员会导致终端卡顿），是千人以上规模团队的实用改进。**
 
 ![GitHub CLI Copilot Code Review](../../assets/images/content-gh-copilot-code-review.jpg)
 

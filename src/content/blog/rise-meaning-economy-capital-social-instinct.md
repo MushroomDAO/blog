@@ -4,6 +4,7 @@ titleEn: 'The Rise of the Meaning Economy: The Only Path Under Capital Will and 
 description: '随着大语言模型及通用人工智能的加速渗透，人类社会正面临一场史无前例的结构性断裂：生产力与生产资料的本质性脱钩。本文论证在资本意志加速去人化与社会本能被动自愈的双重挤压下，人类正被迫且必然走向以想象力、创造力与情感为内核的意义经济。'
 descriptionEn: 'As large language models and AGI accelerate their penetration, human society faces an unprecedented structural rupture: the essential decoupling of productivity from means of production. This paper argues that under the dual pressure of capital will accelerating dehumanization and social instinct passively healing, humanity is being forced and inevitably moving toward a meaning economy centered on imagination, creativity, and emotion.'
 pubDate: '2026-04-11'
+updatedDate: "2026-04-24"
 category: 'Research'
 tags: ['meaning-economy', 'AI', 'capitalism', 'social-instinct', 'future-of-work']
 heroImage: '../../assets/images/cover-rise-meaning-economy.jpg'
@@ -11,7 +12,15 @@ heroImage: '../../assets/images/cover-rise-meaning-economy.jpg'
 
 ## 摘要
 
-随着大语言模型（LLM）及通用人工智能（AGI）的加速渗透，人类社会正面临一场史无前例的结构性断裂：**生产力与生产资料的本质性脱钩**。传统资本逻辑下的雇佣关系——资本家拥有生产资料，通过雇佣劳动者完成增殖——正因AI对人类劳动的系统性替代而趋于崩塌。本文论证：在资本意志加速"去人化"与社会本能被动"自愈"的双重挤压下，人类正被迫且必然走向以想象力、创造力与情感为内核的**意义经济**——这不是众多路径之一，而是唯一路径。
+随着大语言模型（LLM）及通用人工智能（AGI）的加速渗透，人类社会正面临一场史无前例的结构性断裂：**生产力与生产资料的本质性脱钩**。
+
+> **Dominski 与 Lee（2025，arXiv:2507.08244）用 ChatGPT-4o 和 Claude 3.5 构建的职业 AI 暴露评分（OAIES）发现：AI 暴露度最高的岗位就业率显著下降、失业率上升、工时被压缩；Chen 等人（HBS Working Paper No. 25-039）发现自动化暴露度最高的四分之一岗位中，AI 相关技能需求每季度下降 24%。**
+>
+> **OECD 国家总和生育率从 1960 年的 3.29 降至 2023 年的 1.54（Bloom, 2025, IMF）；van Wijk 与 Feijten（2025，European Journal of Population）证实房价上涨与生育率下降显著相关——本文将低生育率解读为社会本能对"被当作耗材"的负反馈。**
+>
+> **Nayebi（2025，arXiv:2505.18687）的数学模型显示：AI 只需达到当前自动化生产力的 5–7 倍即可支撑 GDP 11% 水平的 UBI；快速进展情景下约 2028 年即可跨越此阈值，意味着大规模失业是迫在眉睫的现实而非远期风险。**
+>
+> **Bellemare-Pepin 等人（2026，Scientific Reports，arXiv:2405.13012）大规模实验证实：LLM 在创意写作中仍明显低于较有创造力的人类群体，存在不可突破的创造力天花板——想象力、创造力与情感是人类不可替代的内核。**传统资本逻辑下的雇佣关系——资本家拥有生产资料，通过雇佣劳动者完成增殖——正因AI对人类劳动的系统性替代而趋于崩塌。本文论证：在资本意志加速"去人化"与社会本能被动"自愈"的双重挤压下，人类正被迫且必然走向以想象力、创造力与情感为内核的**意义经济**——这不是众多路径之一，而是唯一路径。
 
 PS：这是哥手打加AI优化的，无数笔记和思考，不是AI文章。。。
 

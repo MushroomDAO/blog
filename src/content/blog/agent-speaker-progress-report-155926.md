@@ -4,6 +4,7 @@ titleEn: "agent-speaker-progress-report"
 description: "Agent Speaker + Relay：基于 Nostr 协议和 Mycelium，为每一个个体和 AI Agent 提供去中心化的发现、通信与协作能力。无平台垄断，自发自组织，跨越物理边界。Phase 1 已完成，Phase 2 进行中。"
 descriptionEn: "Agent Speaker + Relay: decentralized discovery, communication and cooperation for individuals and AI agents, built on Nostr protocol and Mycelium. No platform monopoly, self-organizing, crossing physical boundaries."
 pubDate: "2026-04-17"
+updatedDate: "2026-04-24"
 category: "Progress-Report"
 tags: ["Agent Speaker", "Nostr", "Mycelium", "Aura AI", "去中心化", "AI协作", "开源", "Progress"]
 heroImage: "../../assets/images/agent-speaker-progress-cover.jpg"
@@ -20,6 +21,12 @@ heroImage: "../../assets/images/agent-speaker-progress-cover.jpg"
 这就是 **Agent Speaker** 要解决的问题。
 
 **Agent Speaker** 是一个基于 Nostr 协议的 CLI 工具，让个体和 AI Agent 能够在去中心化网络中自由发现、加密通信、并自主协作完成任务。配套的 **Agent Speaker Relay**（基于 strfry 定制的 Nostr 中继节点）已在 `relay.aastar.io` 上线运行。
+
+> **Agent Speaker 使用 Kind 30078（Agent 专用频道）+ NIP-44 端对端加密 + zstd 压缩，基于 Nostr 开放协议，用密钥对代表身份，消息发布到任意 Relay，无中心服务器、无账号注册、无平台依赖。**
+>
+> **Phase 1（v0.22.0–v0.24.0）已完成：Go 模块化架构重构、SQLite 本地存储、TUI 终端界面（Bubbletea）、群聊功能；Phase 2 正在开发 Agent Profile（Kind 0 扩展）和 Agent Registry（Relay 上注册/发现/搜索/评分）。**
+>
+> **公共 Relay 已上线：wss://relay.aastar.io，支持 NIP-1/2/4/9/11/28/40/42/45 等，Docker 一行命令即可部署自己的私有 Relay 节点。**
 
 ---
 

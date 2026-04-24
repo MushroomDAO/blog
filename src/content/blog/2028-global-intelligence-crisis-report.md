@@ -4,6 +4,7 @@ titleEn: '2028-global-intelligence-crisis-report'
 description: 'Citrini Research 发布的情景推演报告，构建了2026-2028年AI驱动的繁荣-崩塌闭环：从标普8000点到失业率10.2%，揭示无消费增长的悖论。'
 descriptionEn: 'Citrini Research scenario report on AI-driven boom-bust cycle 2026-2028: from S&P 8000 to 10.2% unemployment, revealing the consumption-less growth paradox.'
 pubDate: '2026-04-10'
+updatedDate: "2026-04-24"
 category: 'Research'
 tags: ['AI', 'Citrini Research', 'macroeconomics', 'scenario planning', 'labor market']
 heroImage: '../../assets/images/cover-2028-global-intelligence-crisis.jpg'
@@ -12,6 +13,12 @@ heroImage: '../../assets/images/cover-2028-global-intelligence-crisis.jpg'
 # 《2028年全球智能危机》：Citrini Research 的 AI 情景推演报告
 
 > **声明**：本文是一份**情景推演（scenario）**，而非对未来的预测。报告原文明确标注为思想实验性质。
+
+> **Citrini Research 于 2026 年 2 月 22 日发布的情景推演：标普 500 在 2026 年繁荣期逼近 8,000 点、纳指突破 30,000 点，随后在 2028 年 6 月美国失业率意外升至 10.2%、标普较高点重挫 38%。**
+>
+> **报告发布次日（2026 年 2 月 23 日）市场反应：标普 500 收跌超 1%，软件 ETF 大跌超 4%，Uber、运通、万事达跌 4%–6%；白宫经济顾问委员会代理主席 Pierre Yared 称其为"有趣的科幻小说"。**
+>
+> **核心悖论："幽灵 GDP（Ghost GDP）"——AI 产出被计入经济统计，却未进入居民消费循环；美国消费占 GDP 约 70%，若 AI 完全替代高收入白领，将形成"无消费的增长"，最终反噬企业盈利与市场估值。**
 
 ---
 

@@ -1,5 +1,7 @@
 ---
 title: 'OpenScreen：免费开源的 Screen Studio 替代品'
+titleEn: 'OpenScreen: Free Open-Source Alternative to Screen Studio'
+descriptionEn: 'No $39/month subscription needed — get smart zoom, cursor tracking, and professional screen recording features for free. OpenScreen is a fully open-source, cross-platform Screen Studio alternative.'
 pubDate: '2026-04-08'
 author: 'Mushroom'
 heroImage: '../../assets/blog-cover-openscreen.jpg'

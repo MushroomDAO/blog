@@ -1,7 +1,10 @@
 ---
 title: 'Cloudflare Agents Week：为 AI 智能体时代重构互联网基础设施'
+titleEn: 'Cloudflare Agents Week: Rebuilding Internet Infrastructure for the AI Agent Era'
 description: 'Cloudflare 智能体周开篇致辞核心解读：从容器到 Isolates，从一对多到一对一，探索 AI 智能体时代的基础设施变革'
+descriptionEn: 'Key insights from Cloudflare Agents Week: from containers to Isolates, from one-to-many to one-to-one connections — a deep dive into infrastructure evolution for the AI agent era.'
 pubDate: '2026-04-15'
+updatedDate: "2026-04-24"
 category: 'Tech-News'
 tags: ['cloudflare', 'agents', 'ai-infrastructure', 'isolates', 'mcp']
 heroImage: '../../assets/images/cover-cloudflare-agents-week.jpg'
@@ -18,6 +21,12 @@ heroImage: '../../assets/images/cover-cloudflare-agents-week.jpg'
 ---
 
 这篇文章是 Cloudflare 发布的 **"智能体周（Agents Week）"** 开篇致辞，主要探讨了互联网和云计算底层架构在迎接 AI 智能体（Agents）时代时所面临的挑战，以及 Cloudflare 为此构建的下一代基础设施。
+
+> **Cloudflare 认为传统容器架构无法支撑智能体的海量扩展：为每个智能体分配一个完整容器成本过高，而基于 V8 Isolates 的 Cloudflare Workers 可毫秒级启动、极少内存占用，在相同硬件上运行海量短生命周期智能体在经济上可行。**
+>
+> **AI 智能体遵循"一对一"逻辑（一用户/一智能体/一任务），与传统"一对多"应用架构根本不同；Gartner 预测到 2026 年，五分之一的组织将使用 AI 消除至少一半的管理层级。**
+>
+> **Cloudflare 正联合发起 x402 基金会，复兴 HTTP 402 支付状态码，让智能体能够原生、合规地为其消费的资源付费——解决 AI 不看广告时内容创作者如何在智能体时代获得公平报酬的问题。**
 
 ![Cloudflare Agents Week](../../assets/images/content-cloudflare-agents-week.jpg)
 

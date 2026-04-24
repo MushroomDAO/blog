@@ -1,13 +1,22 @@
 ---
 title: 'VoxCPM 2 vs Sherpa-ONNX：语音AI开源双雄深度对比'
+titleEn: 'VoxCPM 2 vs Sherpa-ONNX: Head-to-Head Comparison of Two Open-Source Voice AI Giants'
 description: '深度解析两款重磅语音AI开源项目：高保真语音生成模型 VoxCPM 2 与极致推理速度框架 Sherpa-ONNX'
+descriptionEn: 'In-depth comparison of VoxCPM 2 (high-fidelity voice synthesis) and Sherpa-ONNX (ultra-fast inference framework) — two defining open-source voice AI projects of 2026, covering architecture, use cases, and deployment.'
 pubDate: '2026-04-14'
+updatedDate: "2026-04-24"
 category: 'Tech-News'
 tags: ['voice-ai', 'tts', 'asr', 'voxcpm', 'sherpa-onnx', 'open-source']
 heroImage: '../../assets/images/cover-voxcpm-sherpa-onnx.jpg'
 ---
 
-近期，语音AI开源社区接连迎来了两款极具影响力的重磅项目：一款是刚刚登顶海外Trending、主打高保真语音生成的模型 VoxCPM 2；另一款则是以极致推理速度和全平台部署著称的语音识别与推理框架 Sherpa-ONNX。两者虽然都在语音生态中大放异彩，但在核心定位、技术路线和应用场景上却有着截然不同的侧重点。
+近期，语音AI开源社区接连迎来了两款极具影响力的重磅项目：一款是刚刚登顶海外Trending、主打高保真语音生成的模型 VoxCPM 2；另一款则是以极致推理速度和全平台部署著称的语音识别与推理框架 Sherpa-ONNX。
+
+> **VoxCPM 2（OpenBMB）：2B 参数端到端 TTS 大模型，无分词器、扩散自回归架构，原生支持 30 种语言及多种方言，从 16kHz 参考音频输出 48kHz 高保真音频；需强劲 GPU（如 RTX 4090）才能实现流畅流式生成，无法在移动端本地运行。**
+>
+> **Sherpa-ONNX（k2-fsa 团队）：基于 ONNX Runtime 的跨平台语音推理框架，支持 iOS、Android、树莓派、RISC-V 及各类国产 NPU（瑞芯微、昇腾），提供 12 种编程语言 API，端到端响应低至百毫秒级，内存极低可离线运行。**
+>
+> **两者定位互补：VoxCPM 2 用算力换极致音质（适合云端 TTS API 服务、数字人），Sherpa-ONNX 用工程换效率（适合 IoT、手机离线 ASR/TTS）；字节跳动 Seeduplex 已全量落地豆包 App 语音通话功能，但闭源不开放权重。**两者虽然都在语音生态中大放异彩，但在核心定位、技术路线和应用场景上却有着截然不同的侧重点。
 
 ![VoxCPM 2 vs Sherpa-ONNX 语音AI对比](../../assets/images/content-voxcpm-sherpa-onnx.jpg)
 

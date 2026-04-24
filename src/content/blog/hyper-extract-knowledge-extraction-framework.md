@@ -1,13 +1,20 @@
 ---
 title: 'Hyper-Extract 概要介绍'
+titleEn: 'Hyper-Extract: LLM-Powered Knowledge Extraction and Evolution Framework'
 description: '由大语言模型驱动的智能知识提取与演化框架，支持从简单列表到复杂知识图谱的一站式知识抽取'
+descriptionEn: 'An LLM-driven framework that transforms unstructured text into structured knowledge abstracts — from simple lists to complex knowledge graphs and hypergraphs, in a single pipeline.'
 pubDate: '2026-04-14'
+updatedDate: "2026-04-24"
 category: 'Tech-News'
 tags: ['knowledge-extraction', 'llm', 'rag', 'graphrag', 'framework']
 heroImage: '../../assets/images/cover-hyper-extract.jpg'
 ---
 
-Hyper-Extract 是一个由大语言模型（LLM）驱动的智能知识提取与演化框架。它的核心使命是将高度非结构化的文本，通过一套简洁的指令，转化为结构化、持久化且类型可预测的"知识摘要"（Knowledge Abstracts）。无论你需要的是简单的列表模型，还是极其复杂的知识图谱、超图乃至时空图谱，该框架都能一站式搞定，真正做到"告别文档焦虑，让信息一目了然"。
+Hyper-Extract 是一个由大语言模型（LLM）驱动的智能知识提取与演化框架。
+
+> **Hyper-Extract 原生支持 8 种高维数据结构（AutoModel、AutoList 到 AutoGraph、AutoHypergraph、AutoSpatioTemporalGraph），集成 10+ 提取引擎（GraphRAG、LightRAG、Hyper-RAG、KG-Gen 等），内置横跨金融、法律、医疗、中医、工业等 6 大场景的 80+ 预设 YAML 模板。**
+>
+> **底层默认调用 gpt-4o-mini 和 text-embedding-3-small，用户须承担 API Token 成本；处理高度机密数据建议配置本地化开源大模型，以避免敏感文本通过外部 API 外泄。**它的核心使命是将高度非结构化的文本，通过一套简洁的指令，转化为结构化、持久化且类型可预测的"知识摘要"（Knowledge Abstracts）。无论你需要的是简单的列表模型，还是极其复杂的知识图谱、超图乃至时空图谱，该框架都能一站式搞定，真正做到"告别文档焦虑，让信息一目了然"。
 
 ![Hyper-Extract 知识图谱框架](../../assets/images/content-hyper-extract.jpg)
 

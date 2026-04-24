@@ -4,6 +4,7 @@ titleEn: 'Agent: From Efficiency Replacement to Organizational Transformation'
 description: 'Jack Dorsey 提出 AI 将替代传统层级管理，组织本质是 2000 年前的信息路由协议。本文结合中国古代伍长、保甲制度，分析 Agent 如何从根本上改变组织的信息聚合与决策链路。'
 descriptionEn: 'Jack Dorsey argues AI will replace traditional hierarchical management. This article analyzes how Agent fundamentally changes organizational information aggregation and decision-making, drawing parallels to ancient Chinese governance systems.'
 pubDate: '2026-04-09'
+updatedDate: "2026-04-24"
 category: 'Research'
 heroImage: '../../assets/images/cover-agent-from-efficiency-to-org-transformation.jpg'
 tags: ['AI', 'Organization', 'Jack Dorsey', 'Agent', 'Management', 'Block']
@@ -14,6 +15,12 @@ tags: ['AI', 'Organization', 'Jack Dorsey', 'Agent', 'Management', 'Block']
 > Jack Dorsey 是思考者和实践者，对组织痛下杀手，直接砍 40%，大约 4000 人，并撰文表达了自己的思考。个人体会是深有同感：大家都在卷小龙虾，skill 蒸馏同事，不知道的是，岗位替代只是第一步，组织变革才是最狠的——而且逻辑清晰准确：传统依赖人的管理上限建立的层级结构，在 Agent 面前完败！
 >
 > 当然 Jack 没有说后面的其他延伸，因为他们站在资本意志视角看待问题。后续我会延伸这个话题，给出系列思考，欢迎探讨。
+
+> **Jack Dorsey（Block CEO）与红杉资本 Roelof Botha 于 2026 年 3 月 31 日联合发表《从层级到智能》，核心命题：组织层级是 2000 年前的"信息路由协议"，AI 打破了"一个人只能有效管理 3–8 人"的认知极限，中层管理层不再必要。**
+>
+> **Block 已将员工从逾 10,000 人削减至约 6,000 人（裁员约 40%），重构为三种角色：个人贡献者（深度专家）、直接责任人（DRI，90 天周期跨职能成果 owner）、Player-Coach（写代码同时培养人才）。**
+>
+> **中国古代伍长制（《周礼·司马》："五人为伍，伍长一人"）和王安石 1070 年保甲法（10 户保长→50 户大保长→250 户都保正）与罗马军队"8→80→480→5000"层级结构高度相似——人类在信息受限时代不约而同选择了相同的层级约束。**
 
 ## 一、Jack Dorsey《从层级到智能》核心概述
 

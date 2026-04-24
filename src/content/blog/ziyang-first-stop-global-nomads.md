@@ -4,6 +4,7 @@ titleEn: "ziyang-first-stop-global-nomads"
 description: "240小时过境免签、天府机场枢纽、成都同城化优势——资阳如何成为全球数字游民进入中国的第一站？从签证政策到竞争格局，从实施路径到成功里程碑，本文给出系统性分析与路线图。"
 descriptionEn: "240-hour transit visa, Tianfu Airport hub, Chengdu metro advantage — how Ziyang can become the first stop for global digital nomads entering China. Systematic analysis from visa policy to competitive landscape to implementation roadmap."
 pubDate: "2026-04-19"
+updatedDate: "2026-04-24"
 category: "DN"
 tags: ["数字游民", "资阳", "OPC", "天府机场", "过境免签", "DNBeta", "Mycelium"]
 heroImage: "../../assets/blog-cover-20260418.jpg"
@@ -16,6 +17,14 @@ heroImage: "../../assets/blog-cover-20260418.jpg"
 ## 一、为什么"第一站"是一个战略命题
 
 全球数字游民选择目的地，遵循一套清晰的逻辑：
+
+> **2024年12月17日起，四川省过境免签停留范围扩展至 11 个城市（含资阳），美、英、德、法游民从天府国际机场入境后可在资阳合法停留 10 天，无需任何签证——这是资阳建立"全球游民第一站"的直接政策支撑。**
+>
+> **中国已对 47 个国家实施单方面免签（含美、英、德、法、日、韩、澳大利亚等），泰中互免签证（2024年3月生效）进一步使清迈约 5,400 名常驻国际游民往返资阳零门槛。**
+>
+> **资阳 OPC 保守估算：100 名长期驻留游民年直接消费 ¥840–960 万，500 名年度流量游民带来约 ¥250 万，合计约 ¥1,100 万/年起，间接带动消费为直接消费的 1.5–2 倍。**
+>
+> **天府国际机场规划年旅客吞吐量 9,000 万人次（远期 1.2 亿人次），覆盖欧洲、东南亚、中东、北美主要城市，是资阳接入全球游民网络的核心战略资产。**
 
 1. **签证可行性**：能不能合法长期停留？
 2. **基础设施**：网速够不够快？落地能正常工作吗？

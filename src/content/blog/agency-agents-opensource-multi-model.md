@@ -4,12 +4,17 @@ titleEn: "agency-agents-opensource-multi-model"
 description: "深度解析 msitarzewski/agency-agents：9个部门、50+专业AI角色，从前端巫师到安全审计员，直接集成 Claude Code、Cursor、Copilot，将AI从「通用助理」升级为「专业协作网」。"
 descriptionEn: "Deep dive into msitarzewski/agency-agents: 9 departments, 50+ specialized AI roles, directly integrated with Claude Code, Cursor, and Copilot — evolving AI from a generalist assistant to a professional collaboration network."
 pubDate: "2026-04-22"
+updatedDate: "2026-04-24"
 category: "Tech-News"
 tags: ["Agency Agents", "AI Agent", "开源", "Claude Code", "Cursor", "Copilot", "提示词工程", "多角色协作", "GitHub"]
 heroImage: "../../assets/images/cover-agency-agents-opensource.jpg"
 ---
 
 [GitHub 仓库：msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) 是一个在 AI 开发者圈内极具影响力的开源项目，被誉为**"触手可及的完整 AI 代理机构"**。该项目旨在解决通用大模型（LLM）在执行特定专业任务时由于缺乏上下文和规则而导致的"幻觉"或平庸产出的问题。
+
+> **agency-agents 包含 9 个核心部门、超过 50 个专业角色，覆盖从工程部（前端巫师、后端架构师）到质量与安全部（现实检查员、安全审计员）的全链路，支持直接导入 Claude Code、Cursor、Aider 和 GitHub Copilot。**
+>
+> **每个 AI 角色不仅有身份与性格定义，还包含遵循行业最佳实践的专业规则（如 OWASP 安全标准、Core Web Vitals 优化）和直接可用的交付物代码模板，将通用 LLM 从"提示词响应"升级为"有完整 SOP 的专业协作网"。**
 
 ---
 

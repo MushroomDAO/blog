@@ -4,6 +4,7 @@ titleEn: "nomad-dali-chiangmai-dnbeta"
 description: "离职之后，我走过大理、清迈，最后来到资阳DNBeta。这不是一篇旅行笔记，而是关于一个数字游民在寻找什么，以及为什么一座四川内陆小城的实验让我眼前一亮。"
 descriptionEn: "From Dali to Chiang Mai, and finally to Ziyang DNBeta — what a digital nomad is really searching for, and why an inland Chinese city's experiment caught my attention."
 pubDate: "2026-04-19"
+updatedDate: "2026-04-24"
 category: "DN"
 tags: ["数字游民", "清迈", "DNBeta", "资阳", "意义经济", "Mycelium"]
 heroImage: "../../assets/images/dnbeta-bbq-party.jpg"
@@ -20,6 +21,10 @@ heroImage: "../../assets/images/dnbeta-bbq-party.jpg"
 ---
 
 离职多少年了，我自己都数不清了。
+
+> **爱沙尼亚 e-Residency 2025 年带来 €1.25 亿直接税收，马德拉岛游民村累计接待 10,000+ 游民后旅游淡季消失——这些案例的共同逻辑是：吸引全球人才流入，不只带来消费，更带来视野、网络和国际触达能力。**
+>
+> **泰国 DTV 数字游民签证（2024年7月推出）5 年有效、每次入境 180 天可延 180 天；泰中互免签证（2024年3月）使中国公民赴泰免签 30 天——清迈游民往返资阳实现零门槛。**
 
 从各种大大小小的厂出来之后，我做的第一件事不是"找下一份工作"，而是开始思考——我要生活在哪里？
 

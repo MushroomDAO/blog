@@ -4,6 +4,7 @@ titleEn: "onyx-ai-platform"
 description: "Onyx 是一个开源 AI 平台，连接 40+ 数据源，集成 RAG 检索、多模型兼容、AI Agent 自动化与企业级自托管，让 AI 真正融入个人和团队的日常工作流。"
 descriptionEn: "Onyx is an open-source AI platform connecting 40+ data sources with RAG, multi-model support, AI agents, and self-hosted enterprise security — making AI a real part of your daily workflow."
 pubDate: "2026-04-17"
+updatedDate: "2026-04-24"
 category: "Tech-News"
 tags: ["Onyx", "开源", "AI工作台", "RAG", "知识库", "自托管", "AI Agent", "个人AI"]
 heroImage: "../../assets/images/onyx-ai-platform-cover.jpg"
@@ -24,6 +25,12 @@ heroImage: "../../assets/images/onyx-ai-platform-cover.jpg"
 **Onyx** 就是为了解决这些问题而生的开源 AI 平台。
 
 它不是一个简单的聊天机器人，而是一个**"AI 超级助手工厂"**——把知识库、搜索、AI 聊天、自动化这些分散的能力整合到一个统一平台里，真正融入个人和团队的日常工作流。
+
+> **Onyx 支持连接超过 40 种数据源（Slack、Notion、Confluence、Google Drive、Jira、GitHub、Salesforce 等），通过混合 RAG 检索增强生成技术将答案与私有数据来源关联，可追溯、可验证。**
+>
+> **Onyx 支持 GPT-4o、Claude 3.5、Gemini 等商业模型，以及 Llama 3、Mixtral、本地 Ollama 等开源模型，可完全自托管（Docker/Kubernetes 一键部署），支持 Air-gapped 内网隔离，数据不经过任何第三方服务器。**
+>
+> **GitHub 地址：github.com/onyx-dot-app/onyx，Docker 部署只需一条命令，访问 localhost:3000 即可使用。**
 
 ---
 

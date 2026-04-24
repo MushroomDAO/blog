@@ -4,12 +4,17 @@ titleEn: "hermes-skill-factory-auto-skill-generator"
 description: "hermes-skill-factory 是为 Hermes Agent 打造的元技能插件：被动观察你的工作流，自动生成可复用的 SKILL.md 和 plugin.py，让 AI 从「一次性工具」进化为「越用越懂你」的专属助手。"
 descriptionEn: "hermes-skill-factory is a meta-skill plugin for Hermes Agent: it passively observes your workflows, auto-generates reusable SKILL.md and plugin.py files, evolving AI from a one-shot tool into a personalized assistant that grows smarter over time."
 pubDate: "2026-04-23"
+updatedDate: "2026-04-24"
 category: "Tech-News"
 tags: ["Hermes Agent", "Skill Factory", "AI Agent", "元技能", "自动化", "Nous Research", "开源", "工作流"]
 heroImage: "../../assets/images/cover-hermes-skill-factory.jpg"
 ---
 
 [hermes-skill-factory](https://github.com/Romanescu11/hermes-skill-factory) 是为 Nous Research 的 Hermes Agent 量身打造的一款**"元技能（Meta-skill）"**插件。它的核心定位是 **AI 的自进化引擎**，旨在解决 AI 代理在多轮会话中"记忆流失"和"重复劳动"的痛点。
+
+> **hermes-skill-factory 自动生成两种可复用文件：`SKILL.md`（方法论文档）和 `plugin.py`（执行脚本），生成的技能存储在 `~/.hermes/skills/` 目录，下次无需重新说明即可一键调用。**
+>
+> **该插件通过追踪工具调用（Tool Calls）和命令行操作，将"环境配置 → 依赖安装 → 逻辑调试 → 提交代码"等连贯动作流自动固化为技能，解决 AI 代理跨会话"记忆消散"的根本痛点。**
 
 ---
 

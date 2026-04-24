@@ -1,6 +1,8 @@
 ---
 title: 'Second post'
+titleEn: 'Second Post'
 description: 'Lorem ipsum dolor sit amet'
+descriptionEn: 'A sample blog post demonstrating the Astro content collection structure.'
 pubDate: 'Jul 15 2022'
 category: 'Research'
 heroImage: '../../assets/blog-placeholder-4.jpg'

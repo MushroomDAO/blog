@@ -4,6 +4,7 @@ titleEn: "national-opc-policy-analysis-ziyang"
 description: "2025年底至2026年Q1，全国20+城市竞相发布OPC政策，呈现高度同质化。本文系统梳理四个梯队城市的政策内容，诊断全行业共同盲点，并为资阳给出五条不被复制的差异化路径。"
 descriptionEn: "20+ cities launched OPC policies in 2025-2026, all highly homogeneous. This analysis maps four city tiers, diagnoses the industry-wide blind spot (international nomads), and gives Ziyang 5 uncopyable differentiation paths."
 pubDate: "2026-04-19"
+updatedDate: "2026-04-24"
 category: "DN"
 tags: ["OPC", "一人公司", "资阳", "数字游民", "国际化", "政策分析", "DNBeta"]
 heroImage: "../../assets/banner-mycelial-network.jpg"
@@ -16,6 +17,14 @@ heroImage: "../../assets/banner-mycelial-network.jpg"
 ## 一、政策背景：OPC的爆发节点
 
 **法律基础**：2024年7月1日新版《公司法》取消"一个自然人只能投资设立一个一人有限公司"的限制，OPC（One Person Company / 一人有限公司）全面松绑。
+
+> **2025年底至2026年Q1，全国已有超过 17 个城市/区县政府发布专项支持方案；经分析全国 23+ 份 OPC 政策文本，"三件套"模式（场地支持+算力补贴+启动资金）覆盖率 100%，各城市政策差异仅在补贴数字大小，无机制创新。**
+>
+> **全行业最大共同盲点：全部 20+ 城市政策几乎均以中国公民为服务对象，无一城市系统性打通外国数字游民来华驻留路径；外国游民面临签证（无长期居留路径）、支付、语言、信息不透明四重系统性门槛。**
+>
+> **资阳 DNβ 拥有五项不可复制优势：天府机场国际入口、240 小时过境免签（明确列入四川省 11 城）、清迈零门槛通道（5,400 名国际游民直达）、欧洲战略节点（马德里发布会）、营收挂钩激励雏形（全国首创）。**
+>
+> **五城补贴力度最高：深圳训力券最高 1,000 万元，苏州金鸡湖单项最高 5,000 万元，北京亦庄算力券年投放最高 3 亿元——资阳资金体量无法竞争，应占领"国际数字游民进入中国的专属通道"这一全国空白赛道。**
 
 **财税基础**：延续至2027年底的普惠性税费减免，月销售额10万元以内免增值税；小微企业应纳税所得额300万元以内实际税负仅约5%。
 

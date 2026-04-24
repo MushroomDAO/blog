@@ -1,7 +1,10 @@
 ---
 title: '从简单的语音输入开始的本地模型：Sherpa-ONNX与BreezeApp深度解析'
+titleEn: 'Local AI Voice From Scratch: Deep Dive into Sherpa-ONNX and BreezeApp'
 description: '探索如何在本地设备上实现语音AI交互，详解 Sherpa-ONNX 语音处理框架与 BreezeApp 端侧大模型应用'
+descriptionEn: 'How to implement local voice AI on-device: a technical deep dive into the Sherpa-ONNX voice processing framework and BreezeApp edge-side LLM application for real-time speech interaction.'
 pubDate: '2026-04-13'
+updatedDate: "2026-04-24"
 category: 'Tech-News'
 tags: ['local-ai', 'voice-recognition', 'edge-ai', 'onnx', 'mobile']
 heroImage: '../../assets/images/cover-sherpa-onnx-breezeapp.jpg'
@@ -9,7 +12,13 @@ heroImage: '../../assets/images/cover-sherpa-onnx-breezeapp.jpg'
 
 ## 引言
 
-随着大语言模型（LLM）的快速演进，将AI算力下放到本地设备（Edge AI）已成为保护隐私、降低延迟和实现零网络依赖的必然趋势。在手机等移动端设备上，语音无疑是最自然、最高效的交互入口。如何让你的设备听懂你的声音，并利用本地大模型进行思考与回应？
+随着大语言模型（LLM）的快速演进，将AI算力下放到本地设备（Edge AI）已成为保护隐私、降低延迟和实现零网络依赖的必然趋势。在手机等移动端设备上，语音无疑是最自然、最高效的交互入口。
+
+> **Sherpa-ONNX 将 ASR/TTS/声纹识别等核心算法转换为 ONNX 格式，可在 Android、iOS、树莓派乃至浏览器（WebAssembly）中以极低资源占用离线运行，提供 C++、Python、Java、Go、Swift、Kotlin 等多语言 API。**
+>
+> **BreezeApp（联发创新基地）采用高度模块化设计，分为 BreezeApp-engine（后台服务）和 BreezeApp-client（应用层），通过 AIDL 机制处理请求，开发者可直接调用 EdgeAI.asr() 或 EdgeAI.chat() 接口，无需关注底层 NPU/CPU 调度。**
+>
+> **完整本地语音链路（语音识别 → 大模型推理 → 语音合成）全程在设备内存与芯片间运转，数据零外泄、零网络延迟；轻量化 ASR 模型（如 SenseVoice-ONNX）体积约 100MB，适合内置到移动端 App。**如何让你的设备听懂你的声音，并利用本地大模型进行思考与回应？
 
 本文将深度解析两个在端侧AI领域极其优秀的开源项目——Sherpa-ONNX 与 BreezeApp，并为初学者和开发者提供详尽的建议，带你一步步探索如何从简单的语音输入开始，将本地大模型跑起来。
 

@@ -4,6 +4,7 @@ titleEn: 'block-hierarchy-to-intelligence-report'
 description: 'Jack Dorsey 领导的 Block Inc. 以AI驱动重组为由裁员约4000人，随后悄然召回部分员工。其联合红杉资本发布的《从层级到智能》论文引发广泛争议：究竟是真正的AI转型，还是借AI之名的洗白？'
 descriptionEn: 'Block Inc. laid off 4000 employees citing AI-driven restructuring, then quietly recalled some. The paper From Hierarchy to Intelligence sparked debate: real AI transformation or AI-washing?'
 pubDate: '2026-04-10'
+updatedDate: "2026-04-24"
 category: 'Research'
 tags: ['Block Inc', 'Jack Dorsey', 'AI', 'layoffs', 'organization']
 heroImage: '../../assets/images/cover-block-hierarchy-report.jpg'
@@ -18,6 +19,14 @@ heroImage: '../../assets/images/cover-block-hierarchy-report.jpg'
 ## 执行摘要
 
 2026年2月，Jack Dorsey 领导的 Block Inc. 以"AI驱动重组"为由裁员约 4000 人（约占总员工数的 40%），震动科技界。随后3月，公司悄然召回极少数员工，原因包括"文书错误"和关键基础设施人员严重不足。4月1日，Dorsey 与红杉资本合伙人 Roelof Botha 联合发表《从层级到智能》，系统阐述"AI取代组织层级"的理论框架。这两件事引发广泛争议：究竟是真正的 AI 驱动转型，还是一场借 AI 之名的"AI洗白"？
+
+> **Block Inc. 于 2026 年 2 月 26 日宣布将员工从逾 10,000 人削减至约 6,000 人，裁员超过 4,000 人（约 40%）；公开确认的召回人数极少（约 4 人），其中一人在裁员通知后仅 4 天重新入职，原因是"文书错误"。**
+>
+> **"AI洗白"指控核心证据：Dorsey 2025 年 3 月明确写道"这不是用 AI 替代员工"，仅 11 个月后完全改口；据《卫报》采访的现任和前任员工，约 95% 的 AI 生成代码修改仍需人工干预。**
+>
+> **据员工 Naoko Takeda 公开的 LinkedIn 帖子，Block 向其开出约 75% 薪资涨幅（综合约 90%）的留任方案，她选择公开拒绝并立即辞职，引发关于"职场忠诚与 AI 时代价值观"的全国讨论。**
+>
+> **行业趋势：Fortune/CFO 调查（2026年3月）显示 CFO 私下承认今年 AI 驱动的裁员将是公开数字的 9 倍；2026 年 Q1 科技行业裁员约 80,000 人，约 50% 与 AI 相关。**
 
 ---
 

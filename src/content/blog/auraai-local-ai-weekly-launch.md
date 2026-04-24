@@ -4,6 +4,7 @@ titleEn: "auraai-local-ai-weekly-launch"
 description: "Aura AI Local AI 周报正式上线，硬件方案、模型匹配、软件工具、最佳实践四大研究栏目，附三年成本计算器，帮助每个人找到最优本地 AI 部署方案。"
 descriptionEn: "Aura AI Local AI Weekly is now live with four research columns: hardware, models, software, and best practices, plus a 3-year cost calculator."
 pubDate: "2026-04-18"
+updatedDate: "2026-04-24"
 category: "Research"
 tags: ["Aura AI", "本地AI", "Local AI", "硬件推荐", "模型推荐", "AI平权", "Mycelium"]
 heroImage: "../../assets/images/dnbeta-bbq-party.jpg"
@@ -22,6 +23,12 @@ heroImage: "../../assets/images/dnbeta-bbq-party.jpg"
 **[auraai.mushroom.cv](https://auraai.mushroom.cv)** 今天正式上线。
 
 这是 Aura AI 的第一个持续更新的研究栏目，核心问题只有一个：**我手头的设备，能跑什么 AI，怎么搭，用哪些模型，解决什么问题？**
+
+> **R01 硬件方案覆盖四层：手机端（Snapdragon 8 Elite 可跑 Llama 3.2 3B，约 10 tok/s）、PC 端（RTX 3060 12GB 二手约 ¥1,500）、社区端（Mac Mini M4 Pro 48GB 约 ¥13,499，70B 模型流畅运行）、极客端（Mac Studio M3 Ultra 256GB，唯一可本地运行超大模型的合规方案）。**
+>
+> **R01 含三年分摊月成本完整对比表：从 ¥0（利用现有手机）到 ¥1,469/月（Mac Studio 极客级），帮助用户理性决策是否购置本地 AI 硬件。**
+>
+> **R03 软件工具按岗位推荐：程序员用 Continue.dev + Ollama 可替代 GitHub Copilot 省 $10/月；知识工作者用 AnythingLLM（53k stars）或 Obsidian + BGE-M3 一键搭建私有知识库；四栏目均每周更新。**
 
 ---
 

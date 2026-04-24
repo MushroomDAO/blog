@@ -4,12 +4,19 @@ titleEn: "kimi-k2-6-agent-swarm-release"
 description: "月之暗面正式发布并开源 Kimi K2.6：13小时不间断编码、300个子Agent并行、4000协作步骤，标志着 Kimi 从「长文本大模型」向「长程任务执行与Agent集群」的战略转型。"
 descriptionEn: "Moonshot AI releases Kimi K2.6 open-source: 13-hour continuous coding, 300 parallel sub-agents, 4000 collaborative steps — a strategic shift from long-context LLM to long-horizon agent execution."
 pubDate: "2026-04-21"
+updatedDate: "2026-04-24"
 category: "Tech-News"
 tags: ["Kimi", "K2.6", "月之暗面", "Moonshot AI", "AI Agent", "开源", "大模型", "MoE", "Agent集群"]
 heroImage: "../../assets/images/cover-kimi-k2-6-release.jpg"
 ---
 
 2026年4月21日，月之暗面（Moonshot AI）正式发布并开源了其最新旗舰模型 **Kimi K2.6**。该版本标志着Kimi从"长文本大模型"向"长程任务执行与Agent（智能体）集群"的战略跃迁。
+
+> **Kimi K2.6 实现"13 小时不间断编码"，单次可编写或修改超过 4,000 行代码，Kimi Code Bench 评测成绩较上一代提升约 20%。**
+>
+> **K2.6 支持多达 300 个子 Agent 并行协作，可执行约 4,000 个协作步骤，实现从文档拆解到网页制作、PPT 和表格生成的全链路端到端交付。**
+>
+> **资本动态：月之暗面同步推进约 10 亿美元新一轮融资，投后估值已达 180 亿美元，K2.6 已适配 OpenClaw、Hermes 等主流 Agent 框架并开源模型权重。**
 
 ---
 

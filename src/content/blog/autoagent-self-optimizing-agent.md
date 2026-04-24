@@ -1,6 +1,8 @@
 ---
 title: 'AutoAgent：首个自优化智能体开源库'
+titleEn: "AutoAgent: The World's First Self-Optimizing AI Agent Framework"
 description: 'AutoAgent 是全球首个专注于"自优化"的开源智能体框架，推动 AI 从"手动调教"向"自主进化"跨越。在 SpreadsheetBench 和 TerminalBench 双双登顶。'
+descriptionEn: "AutoAgent is the world's first open-source framework focused on AI self-optimization, enabling agents to evolve without manual tuning. It tops both SpreadsheetBench and TerminalBench benchmarks."
 pubDate: '2026-04-05'
 category: 'Tech-News'
 heroImage: '../../assets/blog-placeholder-2.jpg'

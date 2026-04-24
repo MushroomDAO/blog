@@ -4,12 +4,19 @@ titleEn: "brain-emulation-worm-to-human-scaling"
 description: "前MIT研究员 Isaak Freeman 中止博士学业，发布百页路线图《From Worm to Human: Scaling Brain Emulation》，论证意识上传的技术可行性，以及在AGI时代人类通过数字化延续自身的可能路径。"
 descriptionEn: "Former MIT researcher Isaak Freeman dropped his PhD to publish a 100-page roadmap on whole brain emulation — arguing consciousness upload is more feasible than we think, and may be humanity's answer to AGI."
 pubDate: "2026-04-21"
+updatedDate: "2026-04-24"
 category: "Research"
 tags: ["全脑模拟", "意识上传", "神经科学", "连接组学", "AGI", "脑机结合", "Isaak Freeman", "MIT"]
 heroImage: "../../assets/images/cover-brain-emulation-worm-to-human.jpg"
 ---
 
-前MIT计算神经科学研究员 Isaak Freeman 的惊人决定及其长达百页的学术探索，正引发科技界与神经科学界的广泛关注。在 AI 技术以指数级速度狂飙突进的今天，许多人担忧人类即将被超级人工智能淘汰。然而，Freeman 给出了一种截然不同的突围策略：既然人类的肉身进化注定无法跟上 AI 的步伐，我们完全可以利用 AI 技术，将人类自身的意识"上传"至云端。
+前MIT计算神经科学研究员 Isaak Freeman 的惊人决定及其长达百页的学术探索，正引发科技界与神经科学界的广泛关注。
+
+> **Freeman 的费米估算显示：实现人类大脑实时模拟需约 6×10²⁰ FLOP/s 算力、每块 GPU 700 GB 内存和 24 GB/s 互连带宽；随着全球 AI 投资每年近 1,000 亿美元，到 2030 年可用算力将比 GPT-4 高出一万倍以上。**
+>
+> **路线图以阶梯式演进：从已成功重建的约 14 万神经元成年果蝇大脑出发，经百万级神经元小鼠皮层，最终迈向人类级别的全脑模拟——该论文基于与近 50 位顶尖研究人员的深度访谈及海量文献综合分析。**
+>
+> **Freeman 中止 MIT 博士学业发布这份百页路线图，核心论点是：连接组学、功能成像、神经模拟计算与 AI 硬件设施的共同演进，已使全脑模拟的技术可行性远超传统认知。**在 AI 技术以指数级速度狂飙突进的今天，许多人担忧人类即将被超级人工智能淘汰。然而，Freeman 给出了一种截然不同的突围策略：既然人类的肉身进化注定无法跟上 AI 的步伐，我们完全可以利用 AI 技术，将人类自身的意识"上传"至云端。
 
 带着这一极具科幻色彩却又无比硬核的愿景，他选择中止自己在 MIT 的博士学业，转而发布了一份详尽的路线图——《从线虫到人类：全脑模拟的规模化之路》（From Worm to Human: Scaling Brain Emulation）。
 

@@ -4,6 +4,7 @@ titleEn: "opc-agent-frameworks-2026"
 description: "当AI Agent从实验室走向生产，一个人指挥十个AI员工已成现实。本文分析OPC与AI Agent的关系，梳理GitHub最受欢迎的15个Agent框架，给出OPC创业者的选型决策树和能力清单。"
 descriptionEn: "AI agents have moved from labs to production. One person can now command ten AI employees. This post analyzes OPC + AI Agent dynamics, reviews 15 top GitHub agent frameworks, and provides a decision guide for solo entrepreneurs."
 pubDate: "2026-04-19"
+updatedDate: "2026-04-24"
 category: "DN"
 tags: ["OPC", "一人公司", "AI Agent", "自动化", "创业", "数字游民", "DNBeta"]
 heroImage: "../../assets/banner-ai-new-intelligence.jpg"
@@ -16,6 +17,12 @@ heroImage: "../../assets/banner-ai-new-intelligence.jpg"
 ## 背景：两条并行的革命
 
 2026年，中国正在同时经历两件大事。
+
+> **2026年Q1，全国超过 17 个城市发布 OPC 专项支持政策；大模型 API 价格从 2023 年"贵到离谱"跌至 2026 年"几乎白送"，典型 OPC AI 工具栈年成本 $3,000–$12,000（vs 聘用虚拟助手 $24,000–$60,000）。**
+>
+> **GitHub Top 15 Agent 框架中，无代码/低代码首选：n8n（182,000+ stars）、Langflow（146,000+ stars）、Dify（136,000+ stars）；代码驱动首选：LangChain（126,000+ stars）、OpenHands（70,000+ stars）、Microsoft AutoGen（56,800+ stars）。**
+>
+> **适合 OPC 的 Agent 应满足五条标准：低门槛启动、任务导向、工具整合（Slack/Gmail/飞书/微信/Notion/GitHub）、记忆与状态、以及成本可控——1 人 + 10 个 Agent 可能超越传统 10 人团队。**
 
 **第一件**：OPC（One Person Company）全面松绑。2024年新《公司法》修订后，至2026年Q1，全国超过17个城市发布专项支持政策，「一人公司」从法律上变得前所未有地便利。
 

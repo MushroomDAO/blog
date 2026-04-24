@@ -1,7 +1,10 @@
 ---
 title: '社区：AI赋能的新型组织形式'
+titleEn: 'Community: The AI-Empowered New Organizational Form'
 description: '当AI系统性地替代传统雇佣劳动，松散社区与极致个体将取代公司成为未来最重要的组织形态'
+descriptionEn: 'As AI systematically replaces traditional employment, loose communities and extreme individuals will replace corporations as the most important organizational forms of the future.'
 pubDate: '2026-04-13'
+updatedDate: "2026-04-24"
 category: 'Research'
 tags: ['community', 'ai', 'organization', 'dao', 'meaning-economy']
 heroImage: '../../assets/images/cover-community-ai-organization.jpg'
@@ -15,7 +18,13 @@ heroImage: '../../assets/images/cover-community-ai-organization.jpg'
 
 ## 摘要
 
-当AI系统性地替代传统雇佣劳动，以资本增殖为目标的公司组织正在失去其作为人类社会基础单元的合理性。本文论证：**松散社区（Loose Communities）与极致个体（Extreme Individuals）** 将取代公司成为未来最重要的组织形态。社区以共同的意义而非共同的利润为凝聚力，以探索代替攫取，以AI作为赋能基础设施，为个体的想象力、创造力与情感表达构建新的土壤。本文结合DAO治理、平台合作主义、去中心化组织理论及社会韧性研究，分析社区作为意义经济天然栖居地的理论基础与实践路径。
+当AI系统性地替代传统雇佣劳动，以资本增殖为目标的公司组织正在失去其作为人类社会基础单元的合理性。本文论证：**松散社区（Loose Communities）与极致个体（Extreme Individuals）** 将取代公司成为未来最重要的组织形态。
+
+> **实证支撑：Chen 等人（2024，Harvard Business School Working Paper No. 25-039）对美国职位空缺的大规模分析显示，自动化暴露度最高的四分之一岗位中，AI 相关技能需求每季度下降 24%；Dominski 与 Lee（2025，arXiv:2507.08244）证实 AI 暴露度越高的岗位就业率下降越显著。**
+>
+> **Sharma 等人（2024，arXiv:2410.13095）对 100 个 DAO 的大规模实证分析发现：草根参与与更高去中心化程度正相关；Ma 等人（2024）分析 9 条区块链 16,427 个 DAO 的 122,307 项提案，发现超过 60% 的提案在描述与实现代码之间缺乏一致性。**
+>
+> **Bellemare-Pepin 等人（2026，Scientific Reports，arXiv:2405.13012）大规模实验证实：在创意写作等发散性任务中，较有创造力的人类群体仍显著超越最先进的 LLM，存在 AI 无法突破的创造力天花板。**社区以共同的意义而非共同的利润为凝聚力，以探索代替攫取，以AI作为赋能基础设施，为个体的想象力、创造力与情感表达构建新的土壤。本文结合DAO治理、平台合作主义、去中心化组织理论及社会韧性研究，分析社区作为意义经济天然栖居地的理论基础与实践路径。
 
 **关键词：** 松散社区、极致个体、AI赋能、去中心化组织、意义经济、DAO、平台合作主义
 

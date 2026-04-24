@@ -4,6 +4,7 @@ titleEn: "deepseek-v4-flash-local-inference-guide"
 description: "DeepSeek V4-Flash 284B MoE 模型本地推理完全指南：为什么「13B 激活参数」不等于 13B 内存需求，四档硬件方案对比，以及 Mac M4 Ultra、多卡 GPU、vLLM 的实操步骤。"
 descriptionEn: "Complete guide to running DeepSeek V4-Flash locally: why '13B active params' doesn't mean 13B memory, four hardware tiers compared, and step-by-step for Mac M4 Ultra, multi-GPU, and vLLM."
 pubDate: "2026-04-24"
+updatedDate: "2026-04-24"
 category: "Tech-Experiment"
 tags: ["DeepSeek V4", "本地推理", "MoE", "vLLM", "Mac M4 Ultra", "GPU推理", "量化", "llama.cpp", "AI部署"]
 heroImage: "../../assets/blog-placeholder-2.jpg"
@@ -12,6 +13,12 @@ heroImage: "../../assets/blog-placeholder-2.jpg"
 DeepSeek V4-Flash 刚刚开源，官方宣传「284B 参数，仅 13B 激活」。很多人看到这句话，第一反应是：**13B？那我的 RTX 4090 应该能跑！**
 
 这是一个非常常见的误解。本文从模型架构出发，把内存数学讲清楚，然后给出四档硬件方案和实操命令。
+
+> **V4-Flash 是 MoE 架构，虽然每次推理只激活 13B 参数，但全部 284B 权重必须预加载到内存——INT4 量化下仍需约 142 GB，RTX 4090（24GB）和 RTX 5090（32GB）均无法运行。**
+>
+> **四档硬件方案推理速度对比：Mac M4 Ultra 192GB（约¥68,000）可达 5–15 tok/s；4× RTX 4090（约¥90,000）为 2–8 tok/s；2× H100 NVLink FP8（约$35,000）最高可达 40–80 tok/s；纯 CPU 512GB DDR5 方案仅 0.3–1 tok/s。**
+>
+> **本地部署盈亏平衡点：官方 V4-Flash API 输出仅 ¥2/M tokens，个人用户月均调用量须超过约 100B tokens 才能让本地部署比云 API 更划算。**
 
 ---
 
