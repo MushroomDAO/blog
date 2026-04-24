@@ -1,15 +1,15 @@
 ---
 import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Comments from '../components/Comments.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'blog'>['data'] & { id?: string };
 
-const { title, titleEn, description, descriptionEn, pubDate, updatedDate, heroImage, tags, category } = Astro.props;
+const { title, titleEn, description, descriptionEn, pubDate, updatedDate, heroImage, tags, category, id } = Astro.props;
 
 // 获取 slot 内容并分割中英文
 const content = await Astro.slots.render('default');
@@ -17,11 +17,67 @@ const parts = content.split('<!--EN-->');
 const cnContent = parts[0] || content;
 const enContent = parts[1] || '';
 const hasEnglish = enContent.trim().length > 0;
+
+// 相关文章：同 category 或共享 tag，最多显示 3 篇
+const allPosts = await getCollection('blog');
+const currentTags = tags ?? [];
+const related = allPosts
+	.filter((p) => p.id !== id && (
+		p.data.category === category ||
+		(currentTags.length > 0 && p.data.tags?.some((t) => currentTags.includes(t)))
+	))
+	.sort((a, b) => {
+		// 共享 tag 数量越多排越前
+		const aScore = (a.data.tags?.filter((t) => currentTags.includes(t)).length ?? 0) +
+			(a.data.category === category ? 2 : 0);
+		const bScore = (b.data.tags?.filter((t) => currentTags.includes(t)).length ?? 0) +
+			(b.data.category === category ? 2 : 0);
+		return bScore - aScore || b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+	})
+	.slice(0, 3);
 ---
 
 <html lang="zh">
 	<head>
-		<BaseHead title={`${title} | ${titleEn || ''}`} description={`${description} | ${descriptionEn || ''}`} />
+		<BaseHead title={titleEn ? `${title} | ${titleEn}` : title} description={descriptionEn ? `${description} | ${descriptionEn}` : description} image={heroImage} />
+
+		<!-- hreflang: bilingual content lives on the same URL -->
+		<link rel="alternate" hreflang="zh" href={new URL(Astro.url.pathname, Astro.site)} />
+		{hasEnglish && <link rel="alternate" hreflang="en" href={new URL(Astro.url.pathname, Astro.site)} />}
+		<link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname, Astro.site)} />
+
+		<!-- JSON-LD: BlogPosting structured data -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "BlogPosting",
+			"headline": title,
+			"alternativeHeadline": titleEn || undefined,
+			"description": description,
+			"image": heroImage ? new URL(heroImage.src, Astro.site).toString() : undefined,
+			"datePublished": pubDate.toISOString(),
+			"dateModified": (updatedDate || pubDate).toISOString(),
+			"author": {
+				"@type": "Person",
+				"name": "Jason",
+				"url": "https://blog.mshroom.cv/about"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Mushroom Research Blog",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://blog.mshroom.cv/favicon.svg"
+				}
+			},
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": new URL(Astro.url.pathname, Astro.site).toString()
+			},
+			"keywords": tags?.join(', '),
+			"articleSection": category,
+			"inLanguage": hasEnglish ? ["zh-CN", "en"] : "zh-CN"
+		})} />
+
 		<style>
 			main {
 				width: 100%;
@@ -138,6 +194,70 @@ const hasEnglish = enContent.trim().length > 0;
 			.prose :global(p) {
 				margin-bottom: 1em;
 			}
+			/* 相关文章 */
+			.related-posts {
+				max-width: 1400px;
+				margin: 3em auto 2em;
+				padding: 0 2em;
+			}
+			.related-title {
+				font-size: 1.1em;
+				color: rgb(var(--gray));
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				margin-bottom: 1.2em;
+				border-bottom: 2px solid rgb(var(--accent));
+				padding-bottom: 0.4em;
+			}
+			.related-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.5em;
+			}
+			@media (max-width: 768px) {
+				.related-grid { grid-template-columns: 1fr; }
+			}
+			.related-card {
+				text-decoration: none;
+				color: inherit;
+				background: linear-gradient(var(--gray-gradient)) no-repeat;
+				border-radius: 10px;
+				overflow: hidden;
+				transition: transform 0.15s ease, box-shadow 0.15s ease;
+			}
+			.related-card:hover {
+				transform: translateY(-3px);
+				box-shadow: var(--box-shadow);
+			}
+			.related-thumb {
+				width: 100%;
+				height: 160px;
+				object-fit: cover;
+				display: block;
+			}
+			.related-info {
+				padding: 0.9em 1em;
+			}
+			.related-category {
+				font-size: 0.72em;
+				background: rgb(var(--accent));
+				color: white;
+				padding: 0.15em 0.5em;
+				border-radius: 3px;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+			}
+			.related-post-title {
+				margin: 0.5em 0 0.3em;
+				font-size: 0.92em;
+				font-weight: 600;
+				line-height: 1.4;
+				color: rgb(var(--black));
+			}
+			.related-date {
+				font-size: 0.78em;
+				color: rgb(var(--gray));
+			}
 		</style>
 	</head>
 
@@ -193,6 +313,34 @@ const hasEnglish = enContent.trim().length > 0;
 					)}
 				</div>
 				
+				<!-- 相关文章 -->
+				{related.length > 0 && (
+					<div class="related-posts">
+						<h3 class="related-title">相关文章</h3>
+						<div class="related-grid">
+							{related.map((post) => (
+								<a href={`/blog/${post.id}/`} class="related-card">
+									{post.data.heroImage && (
+										<Image
+											src={post.data.heroImage}
+											alt=""
+											width={320}
+											height={160}
+											loading="lazy"
+											class="related-thumb"
+										/>
+									)}
+									<div class="related-info">
+										<span class="related-category">{post.data.category}</span>
+										<p class="related-post-title">{post.data.title}</p>
+										<time class="related-date"><FormattedDate date={post.data.pubDate} /></time>
+									</div>
+								</a>
+							))}
+						</div>
+					</div>
+				)}
+
 				<!-- 评论区域 -->
 				<Comments discussionCategory={category || 'General'} />
 			</article>
