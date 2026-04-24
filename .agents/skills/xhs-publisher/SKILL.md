@@ -5,6 +5,7 @@
 > 维护记录：
 > - 创建时间: 2026-04-16
 > - 更新: 2026-04-16 - 添加图片自动压缩（~200KB）
+> - 更新: 2026-04-24 - 发布记录中添加 updatedDate 字段要求
 
 ---
 
@@ -146,6 +147,19 @@ curl http://100.66.210.41:3456/api/v1/login/status
 # 3. 查看日志（Mac Mini 上）
 docker logs xhs-mcp --tail 50
 ```
+
+---
+
+## 📝 发布记录规范
+
+每次通过 XHS Publisher 发布内容后，同步更新对应博客文章的 `updatedDate` 字段（如果该内容同时有博客版本）：
+
+```yaml
+# 在对应的 src/content/blog/SLUG.md frontmatter 中：
+updatedDate: "YYYY-MM-DD"  # 填写今天日期
+```
+
+这确保博客 sitemap 的 `<lastmod>` 反映最新发布时间，提升 Perplexity 等 AI 引擎的内容新鲜度信号。
 
 ---
 

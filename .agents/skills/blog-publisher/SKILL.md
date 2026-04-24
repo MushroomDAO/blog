@@ -98,10 +98,11 @@ Frontmatter 模板:
 ```yaml
 ---
 title: "中文标题"
-titleEn: "english-slug"  # 用于生成文件名
+titleEn: "English Title"
 description: "中文描述"
 descriptionEn: "English description"
 pubDate: "YYYY-MM-DD"
+updatedDate: "YYYY-MM-DD"  # 每次修改文章时更新此字段；首次发布可留空或与 pubDate 相同
 category: "Tech-News"  # 默认 Tech-News
 tags: ["tag1", "tag2"]
 heroImage: "../../assets/images/IMAGE.jpg"
@@ -170,7 +171,9 @@ pipeline/m2/          # WeChat 发布 (P2)
 - [ ] Markdown 文件名是英文（无中文字符）
 - [ ] 图片文件名是英文（无中文字符）
 - [ ] titleEn 字段已填写（用于生成文件名）
+- [ ] descriptionEn 字段已填写
 - [ ] pubDate 设置为今天（用于置顶）
+- [ ] updatedDate 填写（首次发布与 pubDate 相同；修改已有文章时更新为当天日期）
 - [ ] 部署后验证文章URL可访问
 - [ ] 验证文章在 /blog 列表第一位
 
