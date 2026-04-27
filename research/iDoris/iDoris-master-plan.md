@@ -74,7 +74,7 @@ iDoris-Personal (Sin90)
 iDoris-Community (Cos72)
 ├── 服务对象：5-100 人的中小组织 / 兴趣社区 / 独立工作室
 ├── 准入：无需许可，自愿加入 Mycelium Protocol
-└── License：非商业免费 / 中小商业（详见 launch.mushroom.cv）
+└── License：≤50 人小社区/个人 永久免费且无需授权；>50 人非商业/中小商业 免费但需轻量授权（详见 launch.mushroom.cv）
         ↓ 多个 Community 节点参与
 iDoris-City (CityOS)
 ├── 服务对象：城市 / 区域 / 政府公共服务
