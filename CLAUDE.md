@@ -2,6 +2,12 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Mycelium Protocol 生态上下文
+
+@/Users/jason/Dev/Brood/protocol/MISSION.md
+@/Users/jason/Dev/Brood/orgs/mycelium/PROFILE.md
+@/Users/jason/Dev/Brood/orgs/mycelium/INTERFACES.md
+
 ## Project Overview
 
 **Mycelium Blog** — 多平台内容发布系统，三条发布流水线并行运作：
