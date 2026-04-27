@@ -374,12 +374,13 @@ const postsData = posts.map(post => ({
 							<div class="carousel-slide" data-index={index}>
 								<a href={`/blog/${post.id}/`}>
 									{post.data.heroImage ? (
-										<Image 
-											src={post.data.heroImage} 
+										<Image
+											src={post.data.heroImage}
 											alt={post.data.title}
 											width={960}
 											height={400}
 											class="carousel-image"
+											loading="eager"
 										/>
 									) : (
 										<div class="carousel-image" style="background: linear-gradient(135deg, rgba(var(--accent-mint), 0.2), rgba(var(--accent-purple), 0.2)); display: flex; align-items: center; justify-content: center;">
