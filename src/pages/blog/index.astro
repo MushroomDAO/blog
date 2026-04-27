@@ -19,10 +19,9 @@ const carouselPosts = posts.filter(post => {
 	return postDate >= threeDaysAgo;
 }).slice(0, 5); // 最多5篇
 
-// 轮播之后剩余的文章（用于列表展示）
-const listPosts = posts.filter(post => 
-	!carouselPosts.find(cp => cp.id === post.id)
-);
+// 列表展示包含所有文章（包括轮播中的），以便分类筛选生效
+// 轮播只是高亮最近 3 天的文章，不应将它们从主列表移除
+const listPosts = posts;
 
 // 统计所有标签
 const tagCounts = new Map<string, number>();
@@ -630,6 +629,12 @@ const postsData = posts.map(post => ({
 						postsList.style.display = '';
 						emptyState.style.display = 'none';
 						updateLoadMoreButton();
+					}
+
+					// 选中分类时隐藏轮播（轮播不参与筛选，避免误导）
+					const carousel = document.getElementById('carousel');
+					if (carousel) {
+						carousel.style.display = selectedCategory ? 'none' : '';
 					}
 				}
 				

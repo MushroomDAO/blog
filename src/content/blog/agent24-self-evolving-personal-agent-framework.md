@@ -1,12 +1,13 @@
 ---
 title: "Agent24：让你的个人 AI Agent 24 小时在线、自我进化"
-titleEn: "agent24-self-evolving-personal-agent-framework"
-description: "Agent24 是一套为"个人 AI Agent"设计的模块化跨平台框架：Electron 壳 + 可插拔能力模块 + 多 AI 适配 + 分层记忆 + SkillClaw 风格自进化引擎。本文介绍它的设计理念、架构与技术决策，作为项目启动声明。"
+titleEn: "Agent24: A 24/7 Online, Self-Evolving Personal AI Agent Framework"
+description: "Agent24 是一套为「个人 AI Agent」设计的模块化跨平台框架：Electron 壳 + 可插拔能力模块 + 多 AI 适配 + 分层记忆 + SkillClaw 风格自进化引擎。本文介绍它的设计理念、架构与技术决策，作为项目启动声明。"
 descriptionEn: "Agent24 is a modular, cross-platform framework for personal AI agents: Electron shell + pluggable capability modules + multi-AI adapter + layered memory + SkillClaw-inspired self-evolution. This post lays out the design philosophy, architecture, and technical decisions as the project launch."
 pubDate: "2026-04-28"
-category: "Tech-News"
-tags: ["Agent24", "AI Agent", "Self-Evolving", "Electron", "Modular Framework", "Personal AI", "Open Source", "AuraAI"]
-heroImage: "../../assets/images/skillclaw-collective-evolution.jpg"
+updatedDate: "2026-04-28"
+category: "Progress-Report"
+tags: ["Agent24", "AI Agent", "Self-Evolving", "Electron", "Modular Framework", "Personal AI", "Open Source", "AuraAI", "Progress-Report"]
+heroImage: "../../assets/banner-cypherpunk-revolution.jpg"
 ---
 
 > 📦 **项目地址**：[Agent24-Desktop](https://github.com/AuraAIHQ/Agent24-Desktop) · [auraai-packages](https://github.com/AuraAIHQ/auraai-packages) · [Agent24 (Skills)](https://github.com/AuraAIHQ/Agent24)
@@ -226,3 +227,227 @@ Agent24 的赌注是：**真正属于个人的 AI Agent，必须能自我进化�
 > "让 AI 24 小时为你工作、为你思考、为你进化——而你只需要做你最擅长的事。"
 
 — AuraAI Team, 2026-04-28
+
+> 📖 **相关阅读**：[iDoris 立项思考](https://blog.mushroom.cv/blog/idoris-project-launch--how-an-independent-researcher-builds-/)（Agent24 的底层 AI 模型层）·  [TurboQuant 在 iDoris 上的可行性分析](https://blog.mushroom.cv/blog/turboquant-for-idoris--can-random-rotation-quantization-cut-/)（KV cache 内存压缩）
+
+<!--EN-->
+
+> 📦 **Project**: [Agent24-Desktop](https://github.com/AuraAIHQ/Agent24-Desktop) · [auraai-packages](https://github.com/AuraAIHQ/auraai-packages) · [Agent24 (Skills)](https://github.com/AuraAIHQ/Agent24)
+>
+> 📐 **Full Design Docs**: [PLAN.md](https://github.com/AuraAIHQ/Agent24-Desktop/blob/main/docs/PLAN.md) · [decision.md (18 ADRs)](https://github.com/AuraAIHQ/Agent24-Desktop/blob/main/docs/decision.md) · [ROADMAP.md](https://github.com/AuraAIHQ/Agent24-Desktop/blob/main/docs/ROADMAP.md)
+
+---
+
+## A Repeatedly Confirmed Pain Point: AI Doesn't Get Smarter
+
+You use Claude / ChatGPT / various Agent tools every day to write code, publish articles, research, summarize. But no matter how skilled you become — **the AI itself doesn't get to know you better**.
+
+Every new conversation: all context lost.
+Every new tool: all preferences re-taught.
+Every published article: same formatting tweaks repeated N times.
+Every troubleshooting session: same diagnostic path walked N times.
+
+This isn't the fault of any single AI product — it's the industry's default assumption: **AI is a disposable tool, not a partner that grows wiser with use**.
+
+Alibaba's AMAP-ML team's April 2026 [SkillClaw](https://github.com/AMAP-ML/SkillClaw) paper exposed the same phenomenon — *"Skills are static once deployed; every user trips on the same rocks."* Their solution: a collectively-evolving skill repository, where an Evolver continuously observes trajectories, distills patterns, and writes back to the shared skill base. On WildClawBench, Qwen3-Max gained 88.41% relative improvement on Creative Synthesis after 6 rounds.
+
+This inspires us, but also reveals: **collective evolution works for enterprise pipelines — for "personal AI agents that accompany you 24/7" we need a few more layers of abstraction**. So we launched Agent24.
+
+---
+
+## What Agent24 Is
+
+**Agent24 is an open-source toolset that makes personal AI agents truly 24/7 online and self-evolving**. Three components, ordered by usage barrier (low to high):
+
+| Component | For Whom | Form |
+|-----------|----------|------|
+| **Agent24 (Skills)** | Claude Code subscribers | 4 SKILL.md files + config templates, drop into `~/.claude/skills/` |
+| **Agent24-Desktop** | Everyone (incl. non-developers) | Cross-platform Electron desktop app, hosting full capability ecosystem |
+| **`@auraaihq/*` packages** | Module developers | npm monorepo: kernel, AI adapters, memory, evolver, capability modules |
+
+The three-tier design lets CLI users start today with the minimal version, lets regular users get a turnkey desktop app, lets developers participate via npm packages.
+
+---
+
+## Design Philosophy: Four Principles
+
+### 1. **Decouple Framework from Capabilities**
+
+We initially considered "fork an existing Electron Agent app and trim domain-specific code". That's wrong. **The right approach is to make Desktop a shell, with all capabilities pluggable modules**:
+
+- The Core only evolves: Electron shell, IPC, module loader, AI adapter layer, memory layer
+- Capability Modules are install/uninstall npm packages: `@auraaihq/publish-twitter`, `@auraaihq/scrape-rss`, `@auraaihq/module-identity`, etc.
+- Users install/uninstall modules from Desktop UI ≈ background `pnpm add` / `pnpm remove`
+
+This means Xiaohongshu publishing, WeChat publishing, file archiving, image processing... each is an independent npm package. The framework itself stays minimal forever.
+
+### 2. **Decouple Framework from AI Models**
+
+All business modules call only an abstract `AI Layer`, not any specific AI:
+
+```
+Module → AI Layer → [iDoris (local, privacy-first) | Claude | OpenAI | LLaVA local vision]
+```
+
+iDoris is AuraAI's in-house "personal panoramic insight" AI model (Prism-inspired, see [iDoris repo](https://github.com/AuraAIHQ/iDoris)), positioned as privacy-first local inference. But users can also route to Claude API or OpenAI — that's a config option, not architectural lock-in.
+
+### 3. **Privacy-First Defaults**
+
+Borrows SkillClaw's collective-evolution idea, but **defaults to no trajectory leakage**:
+
+- All ATIF trajectories, memory, archives stored locally (encrypted SQLite) by default
+- Cross-device sync is opt-in, NIP-44 end-to-end encrypted via Nostr relay
+- "Contribute to community SkillBank" requires explicit user opt-in, sending only distilled SKILL.md (never raw trajectories)
+
+This is codified in [ADR-017](https://github.com/AuraAIHQ/Agent24-Desktop/blob/main/docs/decision.md).
+
+### 4. **Self-Evolution Is a Loop, Not a Point**
+
+Agent24's core value is the complete "execute → evaluate → evolve" loop:
+
+1. **Execute**: Conversation Layer accepts user input → task decomposer → schedule execution (local / remote modules / inter-agent collaboration)
+2. **Evaluate**: Phase 3 three-stage eval (Stage 1 correctness gate → Stage 2 multi-dim → Stage 3 historical comparison) + optional external eval (Codex / agent-speaker / dual)
+3. **Evolve**:
+   - **SkillBank** (inspired by [SkillRL](https://github.com/aiming-lab/SkillRL)): layered skill library, retrieves relevant skills before each task to inject context (hot path)
+   - **Evolver** (inspired by [SkillClaw](https://github.com/AMAP-ML/SkillClaw)): periodic daemon scans ATIF trajectories, identifies 3+ repeating patterns, decides Refine vs Create (cold path)
+   - **Validation gate**: Codex MCP as gatekeeper — new skills merge only after review
+
+In this loop, SkillBank is the library (storage + retrieval), Evolver is the editorial team (write new books, edit old ones) — they must be separate, but neither can be missing.
+
+---
+
+## Architecture Overview
+
+```
+┌──────────────────────────────────────────────────────────┐
+│ Core (always present, never uninstallable)               │
+│  Electron Shell · Module Loader · IPC · AI Layer Adapter │
+│  Memory Layer (L0-L3) · Conversation Layer · Cred/Sec    │
+└──────────────────┬───────────────────────────────────────┘
+                   │ Module API
+   ┌───────────────┼───────────────┬───────────────┐
+   ▼               ▼               ▼               ▼
+Base Modules    Community        iDoris Wrappers   Personal Modules
+identity        cos72            input             content publishing
+wallet          ├ myshop         process           (publish-*)
+comm            ├ mytask         query             info collection
+storage         └ myvote         create            (scrape-*)
+shared-memory   communication                      personal assistant
+ai-bridge       shared-memory                      (files/vision/voice...)
+```
+
+**Three-layer modules categorized by "service object"** (not by "function"), aligning with Mycelium Protocol's "individual / community / city" three-tier service model:
+
+- **Base layer**: identity (AirAccount), wallet (SuperPaymaster gasless), comm (agent-speaker / Nostr), encrypted storage — infrastructure everyone needs
+- **Community layer**: cos72 includes myshop (point exchange), mytask (task-points), myvote (governance) — a complete economy + governance loop
+- **Personal layer**: content publishing, info collection, personal assistant, learning/creation — most diverse and extensible sub-modules
+
+See [ADR-003](https://github.com/AuraAIHQ/Agent24-Desktop/blob/main/docs/decision.md#adr-003模块按服务对象分三层basecommunitypersonal).
+
+---
+
+## Tech Stack
+
+| Layer | Choice | Rationale |
+|-------|--------|-----------|
+| **Desktop shell** | Electron 30 + Vite + React 18 + TypeScript | Mature cross-platform distribution, UI consistency, rich ecosystem |
+| **Local data** | better-sqlite3 (encrypted) | Sync API, zero deps, sufficient performance |
+| **Local LLM** | node-llama-cpp + GGUF models | Auto hardware detection + HF mirror fallback + on-demand download |
+| **Cross-platform model storage** | metadata-only npm packages + runtime download | Don't pollute npm (see ADR-008) |
+| **Package management** | pnpm + workspace + hybrid monorepo | Single repo first, easy to split later (ADR-007) |
+| **Inter-agent comms** | [agent-speaker](https://github.com/AuraAIHQ/agent-speaker) (Nostr-based) | Decentralized, NIP-44 encrypted, no central server |
+| **Identity** | AirAccount + WebAuthn ([AAStar](https://github.com/AAStarCommunity)) | TEE private keys, biometric login, no mnemonic |
+| **Payments** | SuperPaymaster (ERC-4337) | Gasless micropayments, community points sponsorship |
+| **Future mobile** | Tauri 2.0 (M5+) | Smaller bundle, better perf, Rust backend + reusable web frontend (ADR-018) |
+
+To enable smooth migration to Tauri 2.0 (incl. mobile) at M5, the M0-M4 design avoids hard-binding to Electron-only APIs and Node native deps.
+
+---
+
+## Roadmap (5 Milestones)
+
+```
+M0 (now)        Repo + monorepo skeleton ✅
+                18 ADR decisions logged ✅
+                npm scope @auraaihq registered ✅
+
+M1 (4-6 wks)    Core extraction (borrow from xiaoheishu/desktop's mature Electron arch)
+                First real module: @auraaihq/publish-blog
+                Module interface spec v0.1
+
+M2 (6-8 wks)    Background daemon + tray icon (always online)
+                Task decomposer + scheduler
+                iDoris-SDK merged into monorepo (@auraaihq/wechat-bridge)
+                Second wave of publishers (xiaohongshu / wechat-mp / twitter)
+
+M3 (8-10 wks)   Memory L0-L3 fully layered
+                @auraaihq/skill-bank + @auraaihq/evolver landed
+                Agent24 (Skills) migrated to @auraaihq/skills-* npm packages
+                Agent24-Desktop renamed → Agent24 (drop "Desktop" suffix)
+
+M4 (10-12 wks)  Cross-user skill sharing (opt-in)
+                Nostr distribution of skill updates
+                iDoris main AI integration
+
+M5+             Module marketplace / cross-device sync / 3-tier agent network (personal ↔ org ↔ public)
+                Tauri 2.0 mobile
+```
+
+---
+
+## Relation to Similar Projects
+
+| Project | Relation | What Agent24 Borrows |
+|---------|----------|----------------------|
+| [Voyager](https://github.com/MineDojo/Voyager) | Inspiration | "Ever-growing skill library" concept |
+| [DGM](https://github.com/jennyzzt/dgm) | Inspiration + adopted | results.log archive + lineage tracking |
+| [SkillRL](https://github.com/aiming-lab/SkillRL) | Inspiration + planned | Layered SkillBank + adaptive retrieval |
+| [SkillClaw](https://github.com/AMAP-ML/SkillClaw) | Inspiration + planned | Evolver's Refine vs Create decision + validated publish gate |
+| [MemPalace](https://github.com/MezoPotam/MemPalace) | Inspiration + adopted | L0-L3 layered memory + temporal validity |
+
+**What Agent24 doesn't reinvent**: underlying models (Claude / iDoris / Local), underlying protocols (Nostr / iLink), original Electron template (borrows from xiaoheishu).
+
+**What Agent24 actually builds**: combining all the above into a **product targeting individual users, daily 24/7 operable, modular and extensible, privacy-first**.
+
+---
+
+## Project Status & How to Participate
+
+**Current stage**: M0 wrap-up, M1 launch. All architecture decisions finalized ([18 ADRs full record](https://github.com/AuraAIHQ/Agent24-Desktop/blob/main/docs/decision.md)), code skeleton ready.
+
+**Usable today**: [Agent24 Skills](https://github.com/AuraAIHQ/Agent24) — Claude Code subscribers install and use, providing 4 self-evolving skills: `/evolve`, `/evaluate`, `/setup`, `/org-sync`.
+
+```bash
+# Install Agent24 Skills into Claude Code
+git clone https://github.com/AuraAIHQ/Agent24
+cd Agent24 && ./install.sh
+# Then in any project:
+claude
+> /evolve write a python script to dedupe a CSV
+```
+
+**Follow progress**:
+- Agent24-Desktop repo: https://github.com/AuraAIHQ/Agent24-Desktop
+- AuraAI org: https://github.com/AuraAIHQ
+- npm scope: [`@auraaihq`](https://www.npmjs.com/settings/auraaihq/packages)
+
+**Welcome contributions**:
+- Open issues to discuss capability modules you want
+- Submit PRs to Agent24 Skills to improve the evolve workflow
+- After M1 launch, module dev templates open — first wave of third-party publishers / scrapers welcome
+
+---
+
+## Closing
+
+Our generation has witnessed AI evolve from "Q&A tool" into "work partner". But most existing products are still **stateless interfaces** — they don't remember what you taught them yesterday, don't actively observe your work patterns, don't turn today's failure into tomorrow's skill.
+
+Agent24's bet: **a personal AI Agent must be self-evolving, local-first, and modularly extensible**. This isn't solvable by a single paper or demo — it needs framework, ecosystem, time.
+
+We've publicly logged all design decisions, alternatives, and pitfalls in [decision.md](https://github.com/AuraAIHQ/Agent24-Desktop/blob/main/docs/decision.md). Whether you're a developer with ideas about personal AI, or a user wanting your daily work truly augmented by AI — welcome to build this together.
+
+> "Let AI work for you, think for you, evolve for you — 24 hours a day, while you focus on what you do best."
+
+— AuraAI Team, 2026-04-28
+
+> 📖 **Related**: [iDoris Project Launch](https://blog.mushroom.cv/blog/idoris-project-launch--how-an-independent-researcher-builds-/) (Agent24's underlying AI model layer) · [TurboQuant Feasibility for iDoris](https://blog.mushroom.cv/blog/turboquant-for-idoris--can-random-rotation-quantization-cut-/) (KV cache memory compression)
