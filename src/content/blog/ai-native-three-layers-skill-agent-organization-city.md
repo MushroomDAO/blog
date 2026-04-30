@@ -10,7 +10,9 @@ tags: ["AI Native", "Agent", "组织变革", "Mycelium", "Research", "Product Th
 heroImage: "../../assets/banner-human-ai-coexistence.jpg"
 ---
 
-> **背景说明**：本文由两部分思考整合而成——来自 Anthropic 产品负责人 Cat Wu 的播客访谈节选（图片来源），以及 Mycelium Protocol 创始人 Jason 的语音思考整理。核心框架是 Jason 的原创提炼，Anthropic 案例作为最具说服力的现实注脚。
+> **创作说明**：本文为 Jason（Mycelium Protocol 创始人）与 AI（Claude）对话讨论后，由 AI 按 Jason 的意图整理输出的原创文章。Anthropic / Cat Wu 的播客内容作为参考案例引用，核心框架和观点为 Jason 原创。
+>
+> **转载注明**：Anthropic 案例来源 — Lenny's Podcast [How Anthropic's product team moves faster than anyone else](https://www.lennysnewsletter.com/p/how-anthropics-product-team-moves) · [YouTube](https://www.youtube.com/watch?v=PplmzlgE0kg) · [Twitter](https://x.com/lennysan/status/2047377335406694431) · Cat Wu [@_catwu](https://x.com/_catwu)
 
 ---
 
@@ -172,7 +174,9 @@ Anthropic 的例子是：固定发布协作群、研究型 PM 专门负责把用
 
 <!--EN-->
 
-> **Context**: This post integrates two sources — excerpts from Anthropic CPO Cat Wu's podcast interview (from the screenshots), and voice-transcribed thinking from Jason (Mycelium Protocol founder). The three-layer framework is Jason's original synthesis; the Anthropic case study serves as the most concrete real-world evidence available.
+> **About this article**: Original work by Jason (Mycelium Protocol founder), developed through discussion with AI (Claude) and organized by AI per Jason's intent. The three-layer framework and all analysis are Jason's original thinking. The Anthropic / Cat Wu content is cited as a reference case.
+>
+> **Citation**: Anthropic case source — Lenny's Podcast [How Anthropic's product team moves faster than anyone else](https://www.lennysnewsletter.com/p/how-anthropics-product-team-moves) · [YouTube](https://www.youtube.com/watch?v=PplmzlgE0kg) · [Twitter](https://x.com/lennysan/status/2047377335406694431) · Cat Wu [@_catwu](https://x.com/_catwu)
 
 ---
 
