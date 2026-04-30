@@ -47,6 +47,29 @@ description: |
 - 新文章默认按 `pubDate` 日期排序置顶
 - 日期格式: `YYYY-MM-DD`
 
+### 5. 版权声明（每篇文章必须附加）
+
+**每篇文章中文内容末尾（`<!--EN-->` 之前）必须追加：**
+
+```markdown
+---
+
+> © 2026 Jason · Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+```
+
+**英文内容末尾必须追加：**
+
+```markdown
+---
+
+> © 2026 Jason · Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
+```
+
+**说明**：
+- CC BY 4.0 = 署名协议，允许自由传播和改编，**但必须保留作者署名**
+- 目的：鼓励传播，防止去名剽窃
+- 适用于所有原创文章；引用/转载他人内容的文章须额外注明各自来源
+
 ### 4. 默认 Banner 图片池（10张，随机选取）
 
 **规则**：如果用户没有提供封面图片，必须从以下 10 张默认 banner 中随机选一张。

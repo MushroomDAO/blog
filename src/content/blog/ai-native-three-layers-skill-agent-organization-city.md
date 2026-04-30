@@ -172,6 +172,8 @@ Anthropic 的例子是：固定发布协作群、研究型 PM 专门负责把用
 
 ---
 
+> © 2026 Jason · Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+
 <!--EN-->
 
 > **About this article**: Original work by Jason (Mycelium Protocol founder), developed through discussion with AI (Claude) and organized by AI per Jason's intent. The three-layer framework and all analysis are Jason's original thinking. The Anthropic / Cat Wu content is cited as a reference case.
@@ -321,3 +323,7 @@ Skill to Agent requires Harness. Individual Agents to organizational AI-native r
 **4. AI-native is a process, not a label**
 
 No organization, city, or individual is "already AI-native." The more accurate framing: **where are you in this transition**, and are you actively steering it or passively adapting to it?
+
+---
+
+> © 2026 Jason · Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
