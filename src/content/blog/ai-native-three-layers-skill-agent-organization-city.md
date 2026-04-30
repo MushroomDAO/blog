@@ -187,6 +187,19 @@ Anthropic 的例子是：固定发布协作群、研究型 PM 专门负责把用
 
 ---
 
+## 常见问题
+
+**Q: AI-native 的三个层级是什么？它们之间是什么关系？**  
+A: 三层是：个人（Skill→Agent，AI 工具集成到个人工作流）、组织（角色和分工围绕价值链重构）、区域/城市（跨组织协作操作系统）。下层是上层的基础——个人 AI 能力达到一定密度，组织转型才有意义；组织完成 AI-native 重构，城市级协作才具备条件。
+
+**Q: 个人层面，「碎片 Skill」和「任务级 Agent」有什么区别？**  
+A: 碎片 Skill 是单点工具使用，如"用 AI 改写这段话"；任务级 Agent 是把一个完整目标交给 AI 自主完成，如"调研竞品、整理报告、提出三条建议"。区别在于 AI 是否能跨步骤自主执行，而不是在每个小步骤里被动配合人类。
+
+**Q: 组织的 AI-native 转型，最难突破的障碍是什么？**  
+A: 最难的不是技术，而是角色重构。把"职能模块"切换为"价值链节点"，意味着原来的前端 PM、后端 PM 要变成"信号收集者"、"核心交付者"——这触碰晋升路径和权力结构，组织惯性极强。工具导入容易，结构调整难。
+
+---
+
 > © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
 
 <!--EN-->
@@ -353,6 +366,19 @@ The organizational AI-native case study (Layer 2) draws from Cat Wu's interview 
 ---
 
 **Companion read**: [AI-Native Transformation Roadmap for Regular Organizations: A 6-Step Framework](https://blog.mushroom.cv/blog/ai-native-org-transformation-roadmap/) — The operations manual for this article, covering role division, capability matrix, tooling architecture, and release SOP.
+
+---
+
+## FAQ
+
+**Q: What are the three layers of AI-native, and how do they relate to each other?**  
+A: The three layers are: Individual (integrating AI tools into personal workflows, progressing from fragmented skills to task-level agents), Organization (restructuring roles and division of labor around a value chain), and Region/City (a cross-organization coordination operating system). Each layer builds on the one below — individual AI capability must reach critical density before organizational transformation becomes meaningful.
+
+**Q: At the individual level, what distinguishes "fragmented skills" from "task-level agents"?**  
+A: Fragmented skills means single-point tool use — "rewrite this paragraph with AI." Task-level agents means delegating a full objective to AI for autonomous completion — "research competitors, synthesize a report, and propose three recommendations." The difference is whether AI can execute across multiple steps autonomously, rather than assisting passively at each small step.
+
+**Q: What's the hardest barrier to organizational AI-native transformation?**  
+A: Not technology — role restructuring. Shifting from "functional silos" to "value chain nodes" means the frontend PM and backend PM become Signal Collector and Core Deliverer. This touches career paths and power structures where organizational inertia is strongest. Tool adoption is easy; structural adjustment is hard.
 
 ---
 
