@@ -172,6 +172,17 @@ Anthropic 的例子是：固定发布协作群、研究型 PM 专门负责把用
 
 ---
 
+**参考来源**
+
+本文第二层（组织 AI-native）的案例来自 Cat Wu 在 Lenny's Podcast 的访谈：
+
+- 播客文章：[How Anthropic's product team moves faster than anyone else](https://www.lennysnewsletter.com/p/how-anthropics-product-team-moves)
+- YouTube：[视频版本](https://www.youtube.com/watch?v=PplmzlgE0kg)
+- Twitter 宣发：[Lenny's tweet](https://x.com/lennysan/status/2047377335406694431)
+- Cat Wu：[@_catwu](https://x.com/_catwu)
+
+---
+
 **配套阅读**：[普通组织的 AI-native 转型路线：6 步框架](https://blog.mushroom.cv/blog/ai-native-org-transformation-roadmap/) — 本文的操作手册，覆盖角色分工、能力矩阵、工具体系和发布 SOP。
 
 ---
@@ -327,6 +338,17 @@ Skill to Agent requires Harness. Individual Agents to organizational AI-native r
 **4. AI-native is a process, not a label**
 
 No organization, city, or individual is "already AI-native." The more accurate framing: **where are you in this transition**, and are you actively steering it or passively adapting to it?
+
+---
+
+**Sources**
+
+The organizational AI-native case study (Layer 2) draws from Cat Wu's interview on Lenny's Podcast:
+
+- Article: [How Anthropic's product team moves faster than anyone else](https://www.lennysnewsletter.com/p/how-anthropics-product-team-moves)
+- YouTube: [Video version](https://www.youtube.com/watch?v=PplmzlgE0kg)
+- Twitter announcement: [Lenny's tweet](https://x.com/lennysan/status/2047377335406694431)
+- Cat Wu: [@_catwu](https://x.com/_catwu)
 
 ---
 
