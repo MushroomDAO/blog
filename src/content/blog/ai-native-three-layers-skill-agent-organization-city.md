@@ -172,6 +172,10 @@ Anthropic 的例子是：固定发布协作群、研究型 PM 专门负责把用
 
 ---
 
+**配套阅读**：[普通组织的 AI-native 转型路线：6 步框架](https://blog.mushroom.cv/blog/ai-native-org-transformation-roadmap/) — 本文的操作手册，覆盖角色分工、能力矩阵、工具体系和发布 SOP。
+
+---
+
 > © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
 
 <!--EN-->
@@ -323,6 +327,10 @@ Skill to Agent requires Harness. Individual Agents to organizational AI-native r
 **4. AI-native is a process, not a label**
 
 No organization, city, or individual is "already AI-native." The more accurate framing: **where are you in this transition**, and are you actively steering it or passively adapting to it?
+
+---
+
+**Companion read**: [AI-Native Transformation Roadmap for Regular Organizations: A 6-Step Framework](https://blog.mushroom.cv/blog/ai-native-org-transformation-roadmap/) — The operations manual for this article, covering role division, capability matrix, tooling architecture, and release SOP.
 
 ---
 
