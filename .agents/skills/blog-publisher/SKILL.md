@@ -70,31 +70,39 @@ description: |
 - 目的：鼓励传播，防止去名剽窃
 - 适用于所有原创文章；引用/转载他人内容的文章须额外注明各自来源
 
-### 4. 默认 Banner 图片池（10张，随机选取）
+### 4. 默认 Banner 图片池（16张，随机选取）
 
-**规则**：如果用户没有提供封面图片，必须从以下 10 张默认 banner 中随机选一张。
+**规则**：如果用户没有提供封面图片，必须从以下 16 张默认 banner 中随机选一张。
 
 ```
 src/assets/ 下的默认 banner 列表：
 
 原始 5 张（通用占位图）:
-1. blog-placeholder-1.jpg
-2. blog-placeholder-2.jpg
-3. blog-placeholder-3.jpg
-4. blog-placeholder-4.jpg
-5. blog-placeholder-5.jpg
+1.  blog-placeholder-1.jpg
+2.  blog-placeholder-2.jpg
+3.  blog-placeholder-3.jpg
+4.  blog-placeholder-4.jpg
+5.  blog-placeholder-5.jpg
 
-新增 5 张（AI/未来主题）:
-6.  banner-human-ai-coexistence.jpg   — Human & AI 和谐共存
-7.  banner-cypherpunk-revolution.jpg  — Cypherpunk 赛博朋克
-8.  banner-mycelial-network.jpg       — Mycelial 菌网/自然互联网
-9.  banner-future-is-now.jpg          — 未来城市/绿色科技
-10. banner-ai-new-intelligence.jpg    — AI 新智能/大脑网络
+第一批 5 张（AI/未来主题）:
+6.  banner-human-ai-coexistence.jpg        — Human & AI 和谐共存
+7.  banner-cypherpunk-revolution.jpg       — Cypherpunk 赛博朋克
+8.  banner-mycelial-network.jpg            — Mycelial 菌网/自然互联网
+9.  banner-future-is-now.jpg               — 未来城市/绿色科技
+10. banner-ai-new-intelligence.jpg         — AI 新智能/大脑网络
+
+第二批 6 张（数字公共物品/组织/个人成长主题）:
+11. banner-digital-public-goods.jpg        — 数字公共物品/智慧城市公园
+12. banner-ai-smart-city-collab.jpg        — AI 与城市深度协作/智慧未来
+13. banner-org-ai-transformation.jpg       — 组织变革与 AI/敏捷企业
+14. banner-ai-city-ecosystem.jpg           — AI 与城市共建智能生态
+15. banner-ai-personal-assistant.jpg       — AI Agent 个人数字助手
+16. banner-personal-growth-ai-skills.jpg   — 个人成长与 AI 技能提升
 ```
 
-在 frontmatter 中写法（例如随机选第 7 张）：
+在 frontmatter 中写法（例如随机选第 11 张）：
 ```yaml
-heroImage: "../../assets/banner-cypherpunk-revolution.jpg"
+heroImage: "../../assets/banner-digital-public-goods.jpg"
 ```
 
 ## 触发词
