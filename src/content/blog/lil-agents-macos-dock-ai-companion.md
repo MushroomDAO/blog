@@ -1,5 +1,5 @@
 ---
-title: "lil agents：住在 Mac Dock 上的 AI 伴侣，支持 Claude / Codex / Copilot / Gemini"
+title: "lil agents：住在 Mac Dock 上的 AI 桌面伴侣"
 titleEn: "lil agents: Tiny AI Companions That Live on Your Mac Dock"
 description: "lil agents 是一个开源 macOS 应用，两个会走路的卡通角色 Bruce 和 Jazz 住在你的 Dock 上方，点击打开 AI 终端，支持 Claude Code、OpenAI Codex、GitHub Copilot、Google Gemini，完全本地运行，无数据收集。"
 descriptionEn: "lil agents is an open-source macOS app where two animated characters, Bruce and Jazz, walk above your Dock. Click one to open an AI terminal supporting Claude Code, OpenAI Codex, GitHub Copilot, or Google Gemini — fully local, no data collection."
