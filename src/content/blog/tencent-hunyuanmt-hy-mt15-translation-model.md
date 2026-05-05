@@ -1,107 +1,125 @@
 ---
-title: "腾讯开源 HunyuanMT：33 种语言、双模型、支持术语干预和格式化翻译"
-titleEn: "Tencent Open-Sources HunyuanMT: 33 Languages, Dual Models, Terminology Intervention and Formatted Translation"
-description: "腾讯混元开源 HY-MT 1.5 翻译模型，提供 1.8B（边缘部署）和 7B（高精度）两个版本，支持 33 种语言互译，具备术语干预、上下文感知、格式化翻译等专业能力，并通过 AngelSlim 压缩到 2-bit/1.25-bit 实现手机端离线翻译。"
-descriptionEn: "Tencent Hunyuan open-sources HY-MT 1.5, a dual-model translation system (1.8B for edge, 7B for accuracy) supporting 33 languages with terminology intervention, contextual translation, and formatted translation. Compressed 2-bit/1.25-bit versions via AngelSlim enable offline mobile translation."
+title: "王炸：440MB 翻译模型打赢 Qwen3-32B，腾讯 HunyuanMT 开源了"
+titleEn: "Bombshell: Tencent's 440MB HunyuanMT Beats Qwen3-32B in Translation Quality"
+description: "腾讯开源 HunyuanMT（Hy-MT 1.5），通过 AngelSlim 压缩后仅 440MB，在 FLORES-200 XCOMET 翻译质量评测中超过 Qwen3-32B（65GB）。支持 33 种语言，可完全离线运行在手机上，专业翻译能力碾压通用大模型。"
+descriptionEn: "Tencent open-sources HunyuanMT (Hy-MT 1.5). Compressed via AngelSlim to just 440MB, it outperforms Qwen3-32B (65GB) on FLORES-200 XCOMET translation benchmarks across 33 languages. Runs fully offline on mobile — a purpose-built translation model crushing general-purpose LLMs."
 pubDate: "2026-05-05"
 updatedDate: "2026-05-05"
 category: "Tech-News"
-tags: ["腾讯", "HunyuanMT", "翻译模型", "开源", "多语言", "本地部署", "LLM"]
+tags: ["腾讯", "HunyuanMT", "翻译模型", "开源", "AngelSlim", "多语言", "本地部署", "模型压缩"]
 heroImage: "../../assets/banner-digital-public-goods.jpg"
 ---
 
-**结论先行（BLUF）**：腾讯混元开源了 HY-MT 1.5 翻译模型，两个版本：1.8B 适合边缘设备和实时翻译，7B 适合高精度和混合语言场景。支持 33 种语言互译，特色是**术语干预**（专业领域词汇准确率）、**上下文感知**和**格式化翻译**。通过 AngelSlim 工具进一步压缩到 2-bit 和 1.25-bit，实现手机端离线翻译 demo。
+**结论先行（BLUF）**：440MB 的翻译模型，在 FLORES-200 翻译质量评测上打赢了 Qwen3-32B（65GB）。腾讯这次放出的是两件东西：**HunyuanMT**（最强开源翻译模型）+ **AngelSlim**（把它压缩到 440MB 的工具）。支持 33 种语言，可以完全离线跑在手机上，开源免费。
 
 ---
 
-## 基本情况
+## 这件事有多炸
 
-腾讯混元（Tencent Hunyuan）团队发布了 **HunyuanMT / HY-MT 1.5** 翻译模型并开源权重。
+用数字说话：
 
-这不是通用大语言模型，而是专门针对翻译任务训练和优化的模型。两个尺寸满足不同场景需求：
+| 模型 | 大小 | FLORES-200 翻译质量 |
+|------|------|-------------------|
+| **Hy-MT1.5-1.8B-1.25bit** | **440MB** | **超过 Qwen3-32B** |
+| **Hy-MT1.5-1.8B-2bit** | **574MB** | **接近 Qwen3-32B** |
+| Qwen3-32B | ~65,000MB（65GB）| 对照组 |
+| DeepSeek V32 | ~690,000MB（690GB）| 对照组 |
 
-| 版本 | 定位 | 适用场景 |
-|------|------|---------|
-| **HY-MT 1.5-1.8B** | 轻量快速 | 边缘设备、实时翻译、手机端 |
-| **HY-MT 1.5-7B** | 高精度 | 解释性翻译、混合语言、专业场景 |
+一个 440MB 的文件，翻译质量比 65GB 的 Qwen3-32B 更强。
 
----
-
-## 支持语言
-
-覆盖 **33 种语言**互译，包括：
-
-**亚洲**：中文（简体/繁体）、粤语、日语、韩语、越南语、泰语、印尼语、菲律宾语、高棉语、缅甸语、蒙古语、维吾尔语、哈萨克语
-
-**欧洲**：英语、法语、西班牙语、德语、俄语、葡萄牙语、意大利语、荷兰语、波兰语、捷克语、乌克兰语、土耳其语
-
-**南亚/中东**：阿拉伯语、波斯语、希伯来语、印地语、孟加拉语、泰米尔语、泰卢固语、古吉拉特语、乌尔都语、马拉地语
+这不是魔法，是**专用模型对通用模型的降维打击**。翻译这件事，一个专门为它训练的小模型，比一个什么都会的超大模型做得更好。
 
 ---
 
-## 四种翻译模式
+## 两件事，一起放出来
 
-这是 HY-MT 1.5 区别于一般翻译模型的关键。它不只是"输入文本→输出译文"，而是提供了四种针对不同需求的翻译模式：
+腾讯这次同时开源了两个项目，配合使用：
 
-**1. 基础翻译**
-标准模式，适合日常文本。
+### 1. HunyuanMT（Hy-MT 1.5）— 翻译模型本体
 
-**2. 术语干预（Terminology Intervention）**
-支持传入自定义术语表，模型会优先使用指定译法。这对法律、医疗、技术文档翻译至关重要——通用翻译模型的最大痛点之一就是专业术语翻译不稳定。
+GitHub / HuggingFace：`tencent/Hunyuan-MT`
 
-**3. 上下文感知翻译（Contextual Translation）**
-支持传入上下文，帮助模型理解歧义词和长文档中的一致性问题。
+两个尺寸：
 
-**4. 格式化翻译（Formatted Translation）**
-保留原文格式（Markdown、HTML、表格等），不破坏文档结构。
+| 版本 | 定位 |
+|------|------|
+| **HY-MT 1.5-1.8B** | 轻量快速，适合本地和边缘部署 |
+| **HY-MT 1.5-7B** | 高精度，复杂语言场景 |
 
----
+支持 **33 种语言**互译，涵盖中文（简/繁/粤）、英、日、韩、法、德、西、俄、阿拉伯、印地等主要语言，以及越南、泰语、印尼等东南亚语系。
 
-## 极致压缩：手机离线翻译
+四种翻译模式：基础翻译、**术语干预**（自定义词典，专业文档必备）、**上下文感知**、**格式化翻译**（保留 Markdown/HTML 格式）。
 
-通过腾讯自家的 **AngelSlim** 模型压缩工具，HY-MT 1.5-1.8B 进一步压缩到：
+### 2. AngelSlim — 模型压缩工具
 
-- **2-bit** 量化版本
-- **1.25-bit** 量化版本（极限压缩）
+GitHub：[github.com/Tencent/AngelSlim](https://github.com/Tencent/AngelSlim)
 
-并配套发布了一个**手机端离线翻译 demo**。这意味着即便在没有网络的情况下，手机也能跑翻译——这对隐私敏感场景（医疗、法律、企业内部文件）有明显价值。
+这是让 1.8B 模型变成 440MB 的工具。核心算法是腾讯自研的 **Sherry**——一种硬件高效的 1.25-bit 量化算法（有论文，有代码）。
 
----
+压缩结果：
+- **Hy-MT1.5-1.8B-2bit**：574MB，含权重文件和 GGUF 格式
+- **Hy-MT1.5-1.8B-1.25bit**：440MB，同上，极限压缩
 
-## 生态和部署
-
-社区已经围绕 HY-MT 1.5 快速构建了多种部署方式：
-
-- **Docker 一键部署**（[neosun100/hy-mt](https://github.com/neosun100/hy-mt)）：含 Web UI + REST API + **MCP Server 支持**，38 种语言，流式翻译
-- **ComfyUI 插件**（[freeyaers/ComfyUI-HY-MT](https://github.com/freeyaers/ComfyUI-HY-MT)）：接入工作流
-- **Pinokio 一键安装包**（[PierrunoYT/Tencent-HY-MT1.5-Pinokio](https://github.com/PierrunoYT/Tencent-HY-MT1.5-Pinokio)）：Gradio 界面，普通用户友好
-- **RAG 翻译引擎**（结合 Google Gemma 3）：面向文档智能翻译场景
-
-MCP Server 支持意味着可以直接把 HY-MT 接入 Claude Code 或其他支持 MCP 的 AI 工具——翻译变成一个本地调用的能力。
+还配了一个 **Android APK 离线翻译 demo**——下载即用，无需网络，33 种语言本地跑。
 
 ---
 
-## 为什么值得关注
+## 为什么专用小模型能赢通用大模型
 
-翻译这件事长期被 Google Translate、DeepL 垄断，开源模型质量一直是短板。HY-MT 1.5 几个点值得注意：
+这个结果反直觉，但有清晰的解释：
 
-1. **专业化设计**：术语干预、格式保留这类功能，说明它在瞄准企业和专业用户，不只是消费级翻译
-2. **双尺寸策略**：1.8B 做边缘，7B 做质量，覆盖面宽
-3. **极限压缩**：1.25-bit 离线翻译 demo 是一个技术验证，证明专用翻译模型可以极度压缩
-4. **开源 + 生态**：发布不到多久社区已有 Docker、ComfyUI、MCP 等多种集成，说明有真实需求
+通用大模型（Qwen3-32B、DeepSeek）要同时做代码、推理、写作、数学……翻译只是它们的一个次要能力。
+
+HunyuanMT 的全部参数都用来做翻译这一件事：语言对齐、术语一致性、句法结构转换。同等参数量下，专用模型的翻译能力天然更强。
+
+而 AngelSlim 的 Sherry 1.25-bit 算法证明了：**在特定任务上，模型可以被压缩到极致而不明显损失任务精度**。
+
+---
+
+## 实际意义
+
+**能不能开发个 App 替代翻译机？**
+
+技术上完全可行。440MB 的模型 + 33 种语言 + 离线运行，已经超过市面上大多数专用翻译设备（科大讯飞翻译机等）的能力范围。
+
+差的只是：
+1. 一个好用的手机 App 界面（目前只有 APK demo）
+2. 语音输入/输出（需要对接 ASR + TTS）
+
+社区已经有人在做：Docker 部署版（含 MCP Server）、ComfyUI 插件、Pinokio 一键安装包都出来了。手机 App 版本估计不远。
+
+---
+
+## 快速使用
+
+**在线试用（Docker 一键部署）**：
+```bash
+# neosun100/hy-mt：包含 Web UI + REST API + MCP Server
+docker run ...  # 见 github.com/neosun100/hy-mt
+```
+
+**离线手机端**：
+- 下载 APK：[Hy-MT-demo.apk](https://huggingface.co/AngelSlim/Hy-MT1.5-1.8B-1.25bit/blob/main/Hy-MT-demo.apk)
+- 安装即用，无需网络，无需账号
+
+**本地 Python 使用**：
+```bash
+pip install angelslim
+# 量化压缩参考 AngelSlim 文档
+```
 
 ---
 
 ## 常见问题
 
-**Q: 1.8B 和 7B 翻译质量差多少？**  
-A: 1.8B 定位快速和边缘部署，7B 适合需要更高精度的解释性翻译和混合语言场景。官方没有公开具体 BLEU/COMET 对比数据，从架构来看 7B 在复杂场景下会更稳定。
+**Q: 440MB 能真的超过 Qwen3-32B 吗？不是通用能力，是翻译专项？**  
+A: 是的，仅限翻译任务。FLORES-200 是专门的多语言翻译质量评测基准（XCOMET 分数），Hy-MT1.5 在这个专项评测上超过了 Qwen3-32B。通用能力（代码、推理、写作）肯定不如 32B 模型。
 
-**Q: 和 Google Translate、DeepL 相比如何？**  
-A: 目前没有官方公开的对照 benchmark。术语干预和格式化翻译是差异化能力，在专业文档场景可能优于通用翻译服务；日常对话翻译质量待社区验证。
+**Q: 和 Google Translate、DeepL 比怎么样？**  
+A: 官方 benchmark 主要对比的是开源模型，没有直接与 Google/DeepL 的对比数据。从语言覆盖（33 种）和术语干预能力来看，专业文档场景有优势；日常对话翻译的对比有待社区验证。
 
-**Q: MCP Server 怎么用？**  
-A: 通过 Docker 部署（neosun100/hy-mt）后，MCP Server 会暴露翻译 API，可以在 Claude Code 的 MCP 配置中直接添加，让 AI 工具调用本地翻译能力。
+**Q: MCP Server 是什么意思？**  
+A: 社区部署版（neosun100/hy-mt）提供了 MCP Server 接口，可以在 Claude Code 的 MCP 配置里直接添加，让 AI 工具把本地翻译作为一个可调用的能力使用——不用任何 API key，完全本地。
 
 ---
 
@@ -109,70 +127,88 @@ A: 通过 Docker 部署（neosun100/hy-mt）后，MCP Server 会暴露翻译 API
 
 <!--EN-->
 
-**BLUF**: Tencent Hunyuan has open-sourced HY-MT 1.5, a translation model in two sizes — 1.8B for edge/real-time use and 7B for high-accuracy scenarios. It supports 33 languages and ships four translation modes: basic, terminology intervention, contextual, and formatted. Compressed to 2-bit and 1.25-bit via AngelSlim, it can run offline on mobile devices.
+**BLUF**: A 440MB translation model that outperforms Qwen3-32B (65GB) on FLORES-200 translation benchmarks. Tencent released two things simultaneously: **HunyuanMT** (the translation model) and **AngelSlim** (the compression toolkit that shrinks it to 440MB). 33 languages, fully offline on mobile, open-source.
 
 ---
 
-## Overview
+## The Numbers That Matter
 
-Tencent Hunyuan released **HunyuanMT / HY-MT 1.5** as an open-source translation model. Not a general-purpose LLM — purpose-built and tuned for translation.
+| Model | Size | FLORES-200 Translation Quality |
+|-------|------|-------------------------------|
+| **Hy-MT1.5-1.8B-1.25bit** | **440MB** | **Beats Qwen3-32B** |
+| **Hy-MT1.5-1.8B-2bit** | **574MB** | Near Qwen3-32B |
+| Qwen3-32B | ~65,000MB (65GB) | Baseline |
+| DeepSeek V32 | ~690,000MB (690GB) | Baseline |
 
-| Version | Positioning | Best For |
-|---------|-------------|----------|
-| **HY-MT 1.5-1.8B** | Lightweight, fast | Edge devices, real-time translation, mobile |
-| **HY-MT 1.5-7B** | High accuracy | Explanatory translation, mixed-language, professional |
-
----
-
-## 33 Languages
-
-Covers mutual translation across 33 languages including Chinese (Simplified/Traditional), Cantonese, Japanese, Korean, Vietnamese, Thai, Indonesian, Filipino, Arabic, French, Spanish, German, Russian, Portuguese, Italian, Dutch, Polish, Czech, Ukrainian, Turkish, Persian, Hebrew, Hindi, Bengali, Tamil, Telugu, Gujarati, Urdu, Marathi, Mongolian, Uyghur, Kazakh, Khmer, Burmese.
+A 440MB file with higher translation quality than a 65GB model. This is purpose-built vs. general-purpose — and purpose wins.
 
 ---
 
-## Four Translation Modes
+## Two Projects, Released Together
 
-This is what distinguishes HY-MT 1.5 from generic translation models:
+### 1. HunyuanMT (Hy-MT 1.5) — The Translation Model
 
-**Basic translation** — Standard mode for everyday text.
+Two sizes: 1.8B (lightweight, local deployment) and 7B (high accuracy, complex scenarios). Supports **33 languages** including Chinese (Simplified/Traditional/Cantonese), English, Japanese, Korean, French, German, Spanish, Russian, Arabic, Hindi, Vietnamese, Thai, and more.
 
-**Terminology Intervention** — Pass a custom term dictionary; the model prioritizes specified translations. Critical for legal, medical, and technical documents where generic models fail on specialized vocabulary.
+Four translation modes: basic, **terminology intervention** (custom glossary, essential for professional docs), **contextual** (disambiguates with surrounding context), **formatted** (preserves Markdown/HTML structure).
 
-**Contextual Translation** — Provide surrounding context to resolve ambiguity and maintain consistency across long documents.
+### 2. AngelSlim — The Compression Toolkit
 
-**Formatted Translation** — Preserves original formatting (Markdown, HTML, tables) without breaking document structure.
+GitHub: [github.com/Tencent/AngelSlim](https://github.com/Tencent/AngelSlim)
+
+The tool that compresses 1.8B → 440MB. Core algorithm: **Sherry**, Tencent's proprietary 1.25-bit hardware-efficient quantization (published paper + open code).
+
+Results:
+- **Hy-MT1.5-1.8B-2bit**: 574MB (weights + GGUF format)
+- **Hy-MT1.5-1.8B-1.25bit**: 440MB (extreme compression)
+- **Android APK offline demo**: download and run — no network, no account, 33 languages locally
 
 ---
 
-## Extreme Compression: Offline Mobile Translation
+## Why a 440MB Specialist Beats a 65GB Generalist
 
-Via Tencent's own **AngelSlim** compression toolkit, HY-MT 1.5-1.8B is further compressed to 2-bit and 1.25-bit quantized versions — with an offline mobile translation demo. On-device, offline translation for privacy-sensitive contexts (medical, legal, internal enterprise documents) becomes viable.
+General-purpose models (Qwen3-32B, DeepSeek) allocate parameters across code, reasoning, writing, math, translation... Translation is one of many tasks.
+
+HunyuanMT dedicates all parameters to one thing: language alignment, terminology consistency, syntactic transfer. Same parameter count → better translation.
+
+And Sherry's 1.25-bit algorithm proves that **on specific tasks, models can be compressed to extremes without significant accuracy loss on that task**.
 
 ---
 
-## Ecosystem
+## Could This Replace a Dedicated Translation Device?
 
-Community deployments appeared quickly:
+Technically, yes. 440MB + 33 languages + offline = capabilities exceeding most dedicated translation hardware on the market.
 
-- **Docker all-in-one** (neosun100/hy-mt): Web UI + REST API + **MCP Server support**, 38 languages, streaming translation
-- **ComfyUI plugin** (freeyaers/ComfyUI-HY-MT): Integrates translation into ComfyUI workflows
-- **Pinokio one-click installer** (Gradio interface, user-friendly)
-- **RAG translation engine** combining HY-MT + Google Gemma 3 for document intelligence
+What's missing:
+1. A polished mobile app UI (currently just an APK demo)
+2. Voice input/output (needs ASR + TTS integration)
 
-The MCP Server support means HY-MT can be added directly to Claude Code or any MCP-compatible AI tool — local translation as a callable capability.
+The community is already building: Docker deployment with MCP Server, ComfyUI plugin, Pinokio one-click installer. A full mobile app isn't far off.
+
+---
+
+## Quick Start
+
+**Offline mobile**: Download [Hy-MT-demo.apk](https://huggingface.co/AngelSlim/Hy-MT1.5-1.8B-1.25bit/blob/main/Hy-MT-demo.apk) — install and use immediately, no network required.
+
+**Docker (Web UI + REST API + MCP Server)**:
+```bash
+# github.com/neosun100/hy-mt
+# Includes streaming translation, dark/light theme, batch API
+```
 
 ---
 
 ## FAQ
 
-**Q: How much quality difference is there between 1.8B and 7B?**  
-A: 1.8B is optimized for speed and edge deployment; 7B targets complex, explanatory, and mixed-language scenarios. No official BLEU/COMET benchmarks have been published, but the architecture gap suggests 7B will be noticeably more stable in complex cases.
+**Q: Does 440MB actually beat Qwen3-32B in translation — not just on some narrow metric?**  
+A: Yes, specifically on FLORES-200 XCOMET, a standard multilingual translation quality benchmark. General capabilities (code, reasoning, writing) are not claimed — this is translation-specific. But translation is exactly the task.
 
 **Q: How does it compare to Google Translate or DeepL?**  
-A: No public head-to-head benchmarks yet. Terminology intervention and formatted translation are differentiating capabilities that may outperform general translation services in professional document workflows. Everyday conversational quality remains to be validated by the community.
+A: Official benchmarks compare against open-source models only. No direct Google/DeepL comparison data. Terminology intervention and formatted translation are differentiating capabilities for professional documents; everyday conversational quality awaits community validation.
 
-**Q: How does the MCP Server integration work?**  
-A: Deploy via Docker (neosun100/hy-mt), then add the exposed MCP endpoint to Claude Code's MCP config. Local translation becomes a directly callable tool for AI workflows — no API key, no cloud, no quota.
+**Q: What does MCP Server mean in practice?**  
+A: The community Docker deployment (neosun100/hy-mt) exposes an MCP endpoint. Add it to Claude Code's MCP config and you get local translation as a directly callable tool — no API key, no quota, no cloud.
 
 ---
 
