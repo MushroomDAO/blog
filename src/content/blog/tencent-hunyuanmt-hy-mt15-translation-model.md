@@ -46,7 +46,9 @@ GitHub / HuggingFace：`tencent/Hunyuan-MT`
 | **HY-MT 1.5-1.8B** | 轻量快速，适合本地和边缘部署 |
 | **HY-MT 1.5-7B** | 高精度，复杂语言场景 |
 
-支持 **33 种语言**互译，涵盖中文（简/繁/粤）、英、日、韩、法、德、西、俄、阿拉伯、印地等主要语言，以及越南、泰语、印尼等东南亚语系。
+支持 **33 种语言**互译（实际条目 38 个，官方将简/繁/粤等方言单独计列）：
+
+> 中文（简体）、中文（繁体）、粤语、英语、日语、韩语、法语、德语、西班牙语、葡萄牙语、意大利语、俄语、波兰语、捷克语、乌克兰语、荷兰语、土耳其语、阿拉伯语、波斯语、希伯来语、印地语、乌尔都语、孟加拉语、古吉拉特语、马拉地语、泰卢固语、泰米尔语、越南语、泰语、印尼语、马来语、菲律宾语、高棉语、缅甸语、蒙古语、藏语、哈萨克语、维吾尔语
 
 四种翻译模式：基础翻译、**术语干预**（自定义词典，专业文档必备）、**上下文感知**、**格式化翻译**（保留 Markdown/HTML 格式）。
 
@@ -148,7 +150,9 @@ A 440MB file with higher translation quality than a 65GB model. This is purpose-
 
 ### 1. HunyuanMT (Hy-MT 1.5) — The Translation Model
 
-Two sizes: 1.8B (lightweight, local deployment) and 7B (high accuracy, complex scenarios). Supports **33 languages** including Chinese (Simplified/Traditional/Cantonese), English, Japanese, Korean, French, German, Spanish, Russian, Arabic, Hindi, Vietnamese, Thai, and more.
+Two sizes: 1.8B (lightweight, local deployment) and 7B (high accuracy, complex scenarios). Supports **33 languages** (38 entries — dialects counted separately):
+
+> Chinese (Simplified), Chinese (Traditional), Cantonese, English, Japanese, Korean, French, German, Spanish, Portuguese, Italian, Russian, Polish, Czech, Ukrainian, Dutch, Turkish, Arabic, Persian, Hebrew, Hindi, Urdu, Bengali, Gujarati, Marathi, Telugu, Tamil, Vietnamese, Thai, Indonesian, Malay, Filipino, Khmer, Burmese, Mongolian, Tibetan, Kazakh, Uyghur
 
 Four translation modes: basic, **terminology intervention** (custom glossary, essential for professional docs), **contextual** (disambiguates with surrounding context), **formatted** (preserves Markdown/HTML structure).
 
