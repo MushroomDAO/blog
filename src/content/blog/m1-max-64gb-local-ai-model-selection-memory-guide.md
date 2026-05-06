@@ -10,7 +10,7 @@ tags: ["M1Max", "本地模型", "Qwen3", "oMLX", "内存管理", "Apple Intellig
 heroImage: "../../assets/banner-ai-personal-assistant.jpg"
 ---
 
-> **持续更新文档** — 随硬件、模型、工具演进同步迭代。配套数据表格：[M1 Max 本地模型选型对照表](https://docs.google.com/spreadsheets/d/1W6PKAqBc27Z46zzz5Ln8UmMK2_9OOP2MKvaEX81_S9U/edit?usp=sharing)
+> **持续更新文档** — 随硬件、模型、工具演进同步迭代。配套数据表格：[M1 Max 本地模型选型对照表](https://docs.google.com/spreadsheets/d/1W6PKAqBc27Z46zzz5Ln8UmMK2_9OOP2MKvaEX81_S9U/edit?gid=1961067117#gid=1961067117)
 
 **结论先行（BLUF）**：M1 Max 64GB 扣除系统+软件常驻 16GB，还剩 **48GB 可用于 AI 模型**。结论是：Qwen3-30B-A3B / Qwen3.6-27B / Qwen3-32B 三路主力全部跑 **8bit 满血**，内存完全够用，不需要委屈自己降量化。用 oMLX 做统一调度，同时只加载一个大模型，切换时自动释放前一个。Apple Intelligence 本地 3B 通过 apfel 独立托管，做轻量预处理。
 
@@ -185,7 +185,7 @@ A：大模型（>14B）用 oMLX，MLX 二次优化更快；轻量模型和嵌入
 
 <!--EN-->
 
-> **Living Document** — updated as hardware, models, and tools evolve. Reference spreadsheet: [M1 Max Local Model Selection Table](https://docs.google.com/spreadsheets/d/1W6PKAqBc27Z46zzz5Ln8UmMK2_9OOP2MKvaEX81_S9U/edit?usp=sharing)
+> **Living Document** — updated as hardware, models, and tools evolve. Reference spreadsheet: [M1 Max Local Model Selection Table](https://docs.google.com/spreadsheets/d/1W6PKAqBc27Z46zzz5Ln8UmMK2_9OOP2MKvaEX81_S9U/edit?gid=1961067117#gid=1961067117)
 
 **BLUF**: M1 Max 64GB, minus the 16GB consumed by system + software, leaves **48GB for AI models**. Bottom line: all three main models — Qwen3-30B-A3B, Qwen3.6-27B, Qwen3-32B — run at **full 8-bit quantization** with memory to spare. Use oMLX as the unified scheduler: only one large model loaded at a time, auto-unloaded on switch. Apple Intelligence 3B runs isolated via apfel for lightweight preprocessing.
 
