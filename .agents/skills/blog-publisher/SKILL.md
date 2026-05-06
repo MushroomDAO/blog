@@ -1,131 +1,85 @@
 ---
 name: blog-publisher
 description: |
-  Astro blog publishing workflow for blog.mushroom.cv (P1 Blog + P2 WeChat).
-  
-  触发词: 发布文章, 发布blog, 发布公众号, 发布
-  
-  使用场景:
-  - 用户想发布新博客文章
-  - 用户想发布微信公众号草稿
-  - 用户想同时发布博客和公众号
-  - 用户提供了图片和文章内容
-  
-  完整流程:
-  1. 处理图片 → src/assets/images/
-  2. 创建 markdown → src/content/blog/
-  3. M1: 运行 pipeline/m1/publisher.py (build + deploy)
-  4. M2: 运行 pipeline/m2/index.js (WeChat草稿)
-  5. 验证: 检查文章URL和排序
-  
-  关键规则:
-  - 所有文章文件禁止使用中文命名（使用英文slug）
-  - 默认分类: Tech-News
-  - 新文章默认按日期排序置顶
+  Publish bilingual Astro blog posts for blog.mushroom.cv and create WeChat Official Account drafts.
+
+  Trigger when the user says: 发布, 发布文章, 发布blog, 发布公众号, publish blog, create WeChat draft.
+
+  Use for:
+  - turning user-provided notes, links, README summaries, or markdown into a blog post
+  - generating or processing a 1200x630 banner
+  - publishing to Cloudflare Pages
+  - creating a WeChat draft from the final markdown
+
+  Critical rules:
+  - read this skill before publishing
+  - filenames must be English slugs, never Chinese
+  - default category is Tech-News
+  - run SEO/GEO checks before deploy
+  - finalize the slug before Blog deploy and before WeChat draft creation
 ---
 
 # Blog Publisher Skill
 
-## ⚠️ 关键规则（必须遵守）
+## Mission
 
-### 1. 禁止使用中文文件名
-**所有文章文件必须使用英文命名，严禁使用中文！**
+Publish one complete bilingual article to the Astro blog and, when requested, create a WeChat Official Account draft from the same final markdown.
 
-❌ 错误: `apfel-在-apple-silicon-mac-上零成本调用本地-appl.md`
-✅ 正确: `apfel-apple-intelligence-cli-tool.md`
+Primary site:
+- Blog: `https://blog.mushroom.cv/blog/SLUG/`
+- WeChat backend: `https://mp.weixin.qq.com`
 
-命名规范:
-- 使用英文小写字母
-- 单词之间用连字符 `-` 分隔
-- 文件名基于 titleEn 或英文 slug
+Project paths:
+- Blog articles: `src/content/blog/`
+- Images: `src/assets/images/`
+- M1 Blog publisher: `pipeline/m1/publisher.py`
+- M2 WeChat publisher: `pipeline/m2/index.js`
+- M3 references, if needed: `pipeline/m3/`
+- Blog deploy: `pnpm build` + `wrangler pages deploy`
+- WeChat draft output: `pipeline/m2/output/`
 
-### 2. 默认分类
-- 所有文章默认分类: **Tech-News**
-- 可选分类: Tech-Experiment, Progress-Report, Research, DN
+## Trigger Words
 
-### 3. 文章排序
-- 新文章默认按 `pubDate` 日期排序置顶
-- 日期格式: `YYYY-MM-DD`
+Use this skill immediately when the user says any of:
+- `发布`
+- `发布文章`
+- `发布blog`
+- `发布公众号`
+- `发布：文件路径.md`
+- `publish blog`
+- `create WeChat draft`
 
-### 5. 版权声明（每篇文章必须附加）
+## Required Output
 
-**每篇文章中文内容末尾（`<!--EN-->` 之前）必须追加：**
+Return:
+- final Blog URL
+- WeChat draft status and media ID, if M2 was requested
+- final markdown path
+- final banner path and size
+- any validation issue that remains
 
-```markdown
----
+## Non-Negotiable Rules
 
-> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
-```
+1. Article filenames must be English slugs only.
+2. Do not use Chinese characters in markdown or image filenames.
+3. Every article frontmatter must include `category`.
+4. Dates use ISO format: `YYYY-MM-DD`.
+5. Default category: `Tech-News`.
+6. New articles should appear at the top of `/blog/`.
+7. Add the required copyright block to both Chinese and English sections.
+8. Run SEO/GEO checks before deploy.
+9. Create the WeChat draft only after the final slug and Blog URL are confirmed.
+10. Do not create duplicate routes for the same article.
 
-**英文内容末尾必须追加：**
+Allowed categories:
+- `Tech-News` default
+- `Tech-Experiment`
+- `Progress-Report`
+- `Research`
+- `DN`
 
-```markdown
----
+## Standard Frontmatter
 
-> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
-```
-
-**说明**：
-- CC BY 4.0 = 署名协议，允许自由传播和改编，**但必须保留作者署名**
-- 目的：鼓励传播，防止去名剽窃
-- 适用于所有原创文章；引用/转载他人内容的文章须额外注明各自来源
-
-### 4. 默认 Banner 图片池（16张，随机选取）
-
-**规则**：如果用户没有提供封面图片，必须从以下 16 张默认 banner 中随机选一张。
-
-```
-src/assets/ 下的默认 banner 列表：
-
-原始 5 张（通用占位图）:
-1.  blog-placeholder-1.jpg
-2.  blog-placeholder-2.jpg
-3.  blog-placeholder-3.jpg
-4.  blog-placeholder-4.jpg
-5.  blog-placeholder-5.jpg
-
-第一批 5 张（AI/未来主题）:
-6.  banner-human-ai-coexistence.jpg        — Human & AI 和谐共存
-7.  banner-cypherpunk-revolution.jpg       — Cypherpunk 赛博朋克
-8.  banner-mycelial-network.jpg            — Mycelial 菌网/自然互联网
-9.  banner-future-is-now.jpg               — 未来城市/绿色科技
-10. banner-ai-new-intelligence.jpg         — AI 新智能/大脑网络
-
-第二批 6 张（数字公共物品/组织/个人成长主题）:
-11. banner-digital-public-goods.jpg        — 数字公共物品/智慧城市公园
-12. banner-ai-smart-city-collab.jpg        — AI 与城市深度协作/智慧未来
-13. banner-org-ai-transformation.jpg       — 组织变革与 AI/敏捷企业
-14. banner-ai-city-ecosystem.jpg           — AI 与城市共建智能生态
-15. banner-ai-personal-assistant.jpg       — AI Agent 个人数字助手
-16. banner-personal-growth-ai-skills.jpg   — 个人成长与 AI 技能提升
-```
-
-在 frontmatter 中写法（例如随机选第 11 张）：
-```yaml
-heroImage: "../../assets/banner-digital-public-goods.jpg"
-```
-
-## 触发词
-- 发布文章
-- 发布blog
-- 发布公众号  
-- 发布
-
-## 完整工作流程
-
-### Step 1: 处理图片
-
-保存图片到 `src/assets/images/`，尺寸 1200x630，质量 85：
-
-```bash
-convert input.png -resize 1200x630^ -gravity North -extent 1200x630 -quality 85 src/assets/images/FILENAME.jpg
-```
-
-### Step 2: 创建 Markdown
-
-文件路径: `src/content/blog/SLUG.md` (**英文文件名！**)
-
-Frontmatter 模板:
 ```yaml
 ---
 title: "中文标题"
@@ -133,189 +87,334 @@ titleEn: "English Title"
 description: "中文描述"
 descriptionEn: "English description"
 pubDate: "YYYY-MM-DD"
-updatedDate: "YYYY-MM-DD"  # 每次修改文章时更新此字段；首次发布可留空或与 pubDate 相同
-category: "Tech-News"  # 默认 Tech-News
-tags: ["tag1", "tag2"]
-heroImage: "../../assets/images/IMAGE.jpg"
+updatedDate: "YYYY-MM-DD"
+category: "Tech-News"
+tags: ["tag1", "tag2", "tag3"]
+heroImage: "../../assets/images/SLUG-banner.jpg"
 ---
 ```
 
-### Step 2.5: SEO/GEO 优化（调用 seo-geo skill）
+## Required Copyright Blocks
 
-**在发布前，必须对文章进行 SEO/GEO 检查**。读取并执行 `.agents/skills/seo-geo/SKILL.md`。
-
-核心检查项（快速版，完整版见 seo-geo skill）：
-
-**SEO 检查**:
-- [ ] `description` 和 `descriptionEn` 存在且 150-160字符
-- [ ] `tags` ≥ 3 个
-- [ ] `updatedDate` 已更新
-- [ ] 文章 slug 纯英文含关键词
-
-**GEO 检查（必须）**:
-- [ ] **BLUF**：前 60 字包含核心结论（+44% AI 引用率）
-- [ ] **问句标题**：至少 1 个 H2/H3 是问句
-- [ ] **原创数据**：包含具体数字/统计
-- [ ] **权威来源**：至少引用 1 个外部来源（有超链接）
-- [ ] **品牌提及**：文末版权声明含 "Mycelium Protocol"
-
-**自动追加 FAQ**（文章 >1000 字时）:
-
-如果文章未包含 FAQ 结构，在中文内容末尾（版权声明之前）追加：
+Chinese section, before `<!--EN-->`:
 
 ```markdown
-## 常见问题
-
-**Q: [从文章核心论点提炼的问题]?**  
-A: [完整独立的回答，40-80字]
-
-**Q: [从文章主要建议提炼的问题]?**  
-A: [完整独立的回答，40-80字]
-```
-
-（英文 FAQ 同步追加到 `<!--EN-->` 后的英文版中）
-
-### Step 3: M1 Blog 发布
-
-```bash
-python3 pipeline/m1/publisher.py src/content/blog/FILE.md --images src/assets/images/IMAGE.jpg
-```
-
-这会自动:
-- 保存文章
-- 处理图片
-- pnpm build
-- deploy 到 Cloudflare
-
-### Step 4: M2 WeChat 发布
-
-```bash
-cd pipeline/m2 && node index.js "../../src/content/blog/FILE.md"
-```
-
-主题选项: claude | chengyun | blue | sticker | mint | purple | cyber | rose
-
-### Step 5: 验证发布（必须执行）
-
-```bash
-# 获取部署URL
-URL="https://XXXX.blog-mushroom.pages.dev"  # 从部署输出获取
-
-# 验证文章URL可访问
-curl -s "$URL/blog/SLUG/" | grep -o "文章标题" | head -1
-
-# 验证文章在列表第一位
-curl -s "$URL/blog/" | grep -oE "blog/[a-z0-9-]+" | head -1
-# 应该显示: blog/SLUG
-```
-
-## 可用脚本
-
-| 脚本 | 用途 |
-|------|------|
-| `./publish.sh content.txt` | 完整流程（需AI润色） |
-| `./publish-fast.sh content.txt` | 极速模式（直接发布） |
-| `./deploy.sh` | 仅部署 |
-
-## 目录结构
-
-```
-src/content/blog/     # Markdown 文章（英文文件名！）
-src/assets/images/    # 封面图片（英文文件名！）
-pipeline/m1/          # Blog 发布 (P1)
-pipeline/m2/          # WeChat 发布 (P2)
-```
-
-## 输出检查
-
-- Blog: https://blog.mushroom.cv/blog/SLUG/
-- WeChat: https://mp.weixin.qq.com
-
-## 文件名检查清单
-
-发布前必须确认：
-- [ ] Markdown 文件名是英文（无中文字符）
-- [ ] 图片文件名是英文（无中文字符）
-- [ ] titleEn 字段已填写（用于生成文件名）
-- [ ] descriptionEn 字段已填写
-- [ ] pubDate 设置为今天（用于置顶）
-- [ ] updatedDate 填写（首次发布与 pubDate 相同；修改已有文章时更新为当天日期）
-- [ ] 部署后验证文章URL可访问
-- [ ] 验证文章在 /blog 列表第一位
-
-## 故障排除
-
-### 文章没有在列表第一位
-1. 检查是否有其他相同日期的文章
-2. 删除旧的同日期文章
-3. 重新构建部署
-
-### 文章URL返回404
-1. 检查文件名是否正确
-2. 检查构建输出是否包含该文件
-3. 检查部署是否成功
-
 ---
 
-## ⚠️ 已知错误案例（必读，避免重犯）
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+```
 
-### 错误1：重复文章路由（2026-04-17）
+English section, at the end:
 
-**问题描述：**
-M1 publisher (`pipeline/m1/publisher.py`) 的行为是：**不使用你传入的文件，而是新建一个带时间戳的副本**（如 `aura-ai-manifesto-152839.md`）。
+```markdown
+---
 
-如果你在 M1 运行前已手动创建了同 slug 的文件（如 `aura-ai-manifesto.md`），M1 会同时构建两个文件，导致博客出现**两条重复路由**：
-- `/blog/aura-ai-manifesto/`
-- `/blog/aura-ai-manifesto-152839/`
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
+```
 
-**根本原因：**
-M1 publish → build（含两个文件）→ deploy。之后删除原始文件再重新 build，因 Cloudflare 资产增量缓存，旧路由仍然存在，必须再做一次完整 `--branch=main` deploy 才能清除。
+## Fast Path: Existing Topic Or Short Article
 
-**正确流程：**
-1. **不要**提前手动创建 `src/content/blog/SLUG.md`
-2. 直接把内容写好，交给 M1 publisher 处理，它会自建带时间戳的文件
-3. M1 完成后，删除旧文件（如有），`pnpm build` 一次，再 `npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true`
-4. 验证生产域名列表无重复
+Use this path when the user provides the topic, source link, README/project info, or a short post draft.
 
-**验证命令：**
+Target time: 3-5 minutes, excluding external API/network delays.
+
+### 1. Decide The Final Slug First
+
+Choose a short English slug before writing files.
+
+Good:
+- `ai-ppt-master-native-powerpoint.md`
+- `moss-tts-nano-local-tts.md`
+
+Bad:
+- Chinese filenames
+- long title-derived filenames
+- truncated filenames generated by tools
+
+If another article already has today’s `pubDate`, choose a slug that will sort early enough to place the new post near the top. Current blog list sorting is primarily by `pubDate`; same-day ordering can depend on collection/file order.
+
+### 2. Prepare Banner
+
+If the user provides no image, either:
+- generate a custom banner when requested, or
+- choose one default banner from `src/assets/`.
+
+For custom banners:
+
 ```bash
-# 检查 dist 中是否只有一个 slug
-ls dist/blog/ | grep SLUG
-
-# 检查生产无重复
-curl -s "https://blog.mushroom.cv/blog/" | grep -oE "href=\"/blog/[a-z0-9-]+/\"" | head -5
+convert INPUT.png -resize 1200x630^ -gravity center -extent 1200x630 -quality 85 src/assets/images/SLUG-banner.jpg
+ls -lh src/assets/images/SLUG-banner.jpg
 ```
 
----
+Preferred constraints:
+- size: `1200x630`
+- file size: under `120KB` when practical
+- filename: English only
 
-### 错误2：微信公众号 IP 白名单（errcode 40164）
+Default banner pool:
+- `blog-placeholder-1.jpg`
+- `blog-placeholder-2.jpg`
+- `blog-placeholder-3.jpg`
+- `blog-placeholder-4.jpg`
+- `blog-placeholder-5.jpg`
+- `banner-human-ai-coexistence.jpg`
+- `banner-cypherpunk-revolution.jpg`
+- `banner-mycelial-network.jpg`
+- `banner-future-is-now.jpg`
+- `banner-ai-new-intelligence.jpg`
+- `banner-digital-public-goods.jpg`
+- `banner-ai-smart-city-collab.jpg`
+- `banner-org-ai-transformation.jpg`
+- `banner-ai-city-ecosystem.jpg`
+- `banner-ai-personal-assistant.jpg`
+- `banner-personal-growth-ai-skills.jpg`
 
-**问题描述：**
-M2 publisher 调用微信 API 时报错：
+Default banner frontmatter format:
+
+```yaml
+heroImage: "../../assets/banner-digital-public-goods.jpg"
 ```
-invalid ip 116.204.181.208, not in whitelist
+
+Custom banner frontmatter format:
+
+```yaml
+heroImage: "../../assets/images/SLUG-banner.jpg"
 ```
 
-**原因：** 当前服务器 IP 不在微信公众平台的 IP 白名单中。
+### 3. Create Final Markdown Directly
 
-**解决方法：**
-1. 登录微信公众平台 → 开发 → 基本配置 → IP 白名单
-2. 添加报错中显示的 IP 地址（如 `116.204.181.208`）
-3. 保存后等约 1 分钟再重试 M2
+For fast publishing, write the final file directly:
 
-**注意：** IP 可能随时间变化，如再次遇到此错误，重复以上步骤添加新 IP。
-
----
-
-### 错误3：main 分支受保护，直接 push 失败
-
-**问题描述：**
-```
-remote: error: GH006: Protected branch update failed for refs/heads/main.
+```bash
+src/content/blog/SLUG.md
 ```
 
-**解决方法：**
-1. 创建新分支：`git checkout -b feat/your-branch-name`
-2. Push 分支：`git push -u origin feat/your-branch-name`
-3. 创建 PR：`gh pr create --title "..." --body "..."`
-4. Blog 内容的部署通过 `wrangler pages deploy` 直接走，不依赖 PR 合并
+Do not use `pipeline/m1/publisher.py` to save the article when the final slug matters. It derives a filename from `titleEn`, truncates long names, and can create duplicate or undesirable routes.
+
+### 4. Run SEO/GEO Check
+
+Read and apply `.agents/skills/seo-geo/SKILL.md`.
+
+Minimum checks:
+- `description` and `descriptionEn` exist
+- `tags` has at least 3 items
+- `updatedDate` is set
+- slug is English and keyword-bearing
+- opening has BLUF
+- at least one H2/H3 is a question
+- article includes concrete numbers or source facts
+- at least one authoritative external link is present when source-based
+- copyright blocks include `Mycelium Protocol`
+
+### 5. Build Once
+
+```bash
+pnpm build
+```
+
+Check:
+
+```bash
+ls dist/blog | grep SLUG
+```
+
+### 6. Deploy Once
+
+```bash
+npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true
+```
+
+### 7. Validate Blog
+
+```bash
+curl -I https://blog.mushroom.cv/blog/SLUG/
+curl -Ls --compressed https://blog.mushroom.cv/blog/ | rg -o '/blog/[a-z0-9-]+/' | head -5
+```
+
+Expected:
+- article URL returns `200`
+- new article appears at or near the top
+- no duplicate route exists for the old slug
+
+### 8. Create WeChat Draft Last
+
+Only run this after the final Blog slug and URL are confirmed.
+
+```bash
+cd pipeline/m2
+node index.js "../../src/content/blog/SLUG.md" --theme blue
+```
+
+Themes:
+- `claude`
+- `chengyun`
+- `blue`
+- `sticker`
+- `mint`
+- `purple`
+- `cyber`
+- `rose`
+
+Return the media ID from `pipeline/m2/output/SLUG.json`.
+
+## Standard Path: Preexisting Markdown Or M1 Required
+
+Use M1 only when the user explicitly gives a markdown file and accepts M1’s save/copy behavior, or when the workflow requires its automatic handling.
+
+```bash
+python3 pipeline/m1/publisher.py PATH/TO/ARTICLE.md --images PATH/TO/IMAGE.jpg
+```
+
+Important:
+- M1 saves a new article file under `src/content/blog/`.
+- If a same-slug file already exists, M1 appends a timestamp.
+- M1 also runs Blog build and Cloudflare deploy unless skip flags are used.
+- Avoid creating a same-slug article manually before M1.
+- After M1, inspect the generated path before running M2.
+
+Use M1 when:
+- the user provides a markdown file and accepts automatic naming
+- the existing pipeline should handle image copying and full Blog deployment
+- preserving the historical P1/M1 publication flow matters more than exact slug control
+
+## WeChat-Only Path
+
+Use when the Blog article already exists and the user only asks for a WeChat draft:
+
+```bash
+cd pipeline/m2
+node index.js "../../src/content/blog/SLUG.md" --theme blue
+```
+
+If the command fails with proxy or network errors, rerun with appropriate network permission. If it fails with WeChat IP whitelist error `40164`, the user must add the reported IP in the WeChat platform allowlist.
+
+## Available Repo Scripts
+
+Use these only when they fit the current task:
+
+| Script | Purpose |
+|---|---|
+| `./publish.sh content.txt` | full publish flow, may require AI polishing |
+| `./publish-fast.sh content.txt` | fast direct publish flow |
+| `./deploy.sh` | deploy only |
+
+## SEO/GEO Integration
+
+When publishing, run a practical SEO/GEO pass rather than a long report unless the user asks for one.
+
+Required article traits:
+- bilingual content separated by `<!--EN-->`
+- BLUF at the start of Chinese and English sections
+- one question-style heading
+- FAQ for articles over 1000 words, optional for shorter posts
+- original/source data when available
+- source link at the end for GitHub/project/news posts
+- Mycelium Protocol copyright block
+
+## Validation Checklist
+
+Before deploy:
+- [ ] markdown filename is English only
+- [ ] image filename is English only
+- [ ] `titleEn` exists
+- [ ] `descriptionEn` exists
+- [ ] `pubDate` is today for a new article
+- [ ] `updatedDate` is set
+- [ ] `category` is set
+- [ ] `tags` has at least 3 items
+- [ ] `heroImage` points to an existing file
+- [ ] copyright blocks exist in both languages
+- [ ] `pnpm build` succeeds
+
+After deploy:
+- [ ] final Blog URL returns `200`
+- [ ] `/blog/` list shows the new article at or near the top
+- [ ] no old slug remains as an independent article
+- [ ] WeChat draft is created from the final slug
+
+## Cleanup Rules
+
+If a slug changes before final release:
+- delete old local markdown, if any
+- delete old M2 outputs: `pipeline/m2/output/OLD-SLUG.html` and `.json`
+- rebuild and redeploy
+- if the old production URL still returns `200`, add a redirect:
+
+```text
+/blog/OLD-SLUG/ /blog/NEW-SLUG/ 301
+```
+
+Place redirects in:
+
+```bash
+public/_redirects
+```
+
+Then rerun:
+
+```bash
+pnpm build
+npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true
+```
+
+## Known Failure Cases
+
+### Duplicate routes from M1
+
+Cause:
+- manually creating `src/content/blog/SLUG.md`
+- then running M1, which creates another timestamped file
+
+Prevention:
+- use the fast path and do not call M1, or
+- let M1 create the file and inspect the generated filename before continuing
+
+### M1-generated slug is truncated
+
+Cause:
+- M1 derives filename from `titleEn` and truncates long titles
+
+Prevention:
+- fast path: create `src/content/blog/FINAL-SLUG.md` directly
+- run `pnpm build` and deploy manually
+
+### WeChat draft created before final slug
+
+Cause:
+- M2 was run before the Blog slug was finalized
+
+Prevention:
+- run M2 only after final Blog URL is validated
+
+Cleanup:
+- ignore or delete old local M2 output
+- create a new draft from the final markdown
+
+### Article not first on list
+
+Cause:
+- same-day posts share the same `pubDate`
+- list sorting uses `pubDate`, so same-day ordering may depend on collection/file order
+
+Prevention:
+- choose a final slug before deploy
+- verify list order before M2
+- avoid post-deploy slug changes
+
+### WeChat IP whitelist error
+
+Error:
+
+```text
+invalid ip x.x.x.x, not in whitelist
+```
+
+Fix:
+- user logs into WeChat Official Account platform
+- add the reported IP to the API whitelist
+- retry M2 after about 1 minute
+
+### Protected Git branch
+
+Blog deployment uses Cloudflare Pages deploy and does not require direct push to `main`.
+If committing code is needed, use a feature branch and PR.
