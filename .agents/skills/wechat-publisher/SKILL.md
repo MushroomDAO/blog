@@ -1,29 +1,30 @@
 ---
 name: wechat-publisher
 description: |
-  Publish content directly to WeChat Official Account only — no blog deploy.
+  Publish content to 小宝宝's WeChat Official Account ONLY — no blog deploy, no Cloudflare, no git push.
 
   Trigger when user says: 发布公众号, 公众号发布, 发微信, 推送公众号, publish wechat, wechat draft.
 
   Use for:
   - turning raw notes / topic description / article content into a WeChat-ready draft
   - optimizing structure and title for WeChat readership
-  - selecting a random banner
+  - selecting a random banner from src/assets/banners/xiaobaobao/
   - creating a WeChat Official Account draft via M2 pipeline
 
-  Critical rules:
-  - WeChat title must be ≤ 64 characters (Chinese counts as 2 bytes, strict limit)
-  - no blog deploy needed — this is WeChat only
-  - create a temp markdown file, run M2, then report media ID
+  HARD RULES — never violate:
+  1. NEVER run pnpm build, NEVER deploy to Cloudflare Pages — WeChat only
+  2. ALWAYS run M2 with BLOG_USER=xiaobaobao to use 小宝宝's account credentials (_XBB vars)
+  3. WeChat title must be ≤ 64 characters
+  4. Banner must come from src/assets/banners/xiaobaobao/ (not blog.mushroom.cv banners)
 ---
 
-# WeChat Publisher Skill
+# WeChat Publisher Skill（小宝宝专用）
 
 ## Mission
 
-Take user-provided content (raw notes, topic, article body) → optimize for WeChat → pick banner → push draft to WeChat Official Account.
+Take user-provided content → optimize for WeChat → pick banner from xiaobaobao pool → push draft to **小宝宝's WeChat account**.
 
-No Astro build. No Cloudflare deploy. WeChat only.
+**NEVER** run: `pnpm build` / `wrangler deploy` / `git push` / blog deploy of any kind.
 
 M2 pipeline: `pipeline/m2/index.js`
 Draft output: `pipeline/m2/output/`
@@ -145,18 +146,22 @@ No English section required for WeChat-only publish. Optionally add `<!--EN-->` 
 
 ---
 
-## Step 5 — Run M2
+## Step 5 — Run M2（必须带 BLOG_USER=xiaobaobao）
 
 ```bash
-node pipeline/m2/index.js "src/content/blog/SLUG.md"
+BLOG_USER=xiaobaobao node pipeline/m2/index.js "src/content/blog/SLUG.md"
 ```
+
+`BLOG_USER=xiaobaobao` 让 M2 自动路由到 `.env` 里的 `WECHAT_APP_ID_XBB` / `WECHAT_APP_SECRET_XBB` / `WECHAT_MP_ID_XBB`，发到小宝宝的公众号。
+
+**绝对不能省略 `BLOG_USER=xiaobaobao`**，否则会发到 mushroom 的公众号。
 
 Themes available (M2 picks randomly if not specified):
 `claude` / `chengyun` / `blue` / `sticker` / `mint` / `purple` / `cyber` / `rose`
 
 To specify a theme:
 ```bash
-node pipeline/m2/index.js "src/content/blog/SLUG.md" --theme chengyun
+BLOG_USER=xiaobaobao node pipeline/m2/index.js "src/content/blog/SLUG.md" --theme chengyun
 ```
 
 ---

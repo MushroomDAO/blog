@@ -34,11 +34,11 @@ module.exports = {
   // ==================== 微信公众号配置 (M2) ====================
   wechat: {
     // 从 https://mp.weixin.qq.com -> 设置与开发 -> 基本配置 获取
-    appId:     process.env.WECHAT_APP_ID_XBB     || process.env.WECHAT_APP_ID     || '',
-    appSecret: process.env.WECHAT_APP_SECRET_XBB || process.env.WECHAT_APP_SECRET || '',
+    appId:     process.env.WECHAT_APP_ID_XBB     || '',
+    appSecret: process.env.WECHAT_APP_SECRET_XBB || '',
 
     // 公众号原始 ID（gh_xxx），从公众号账号信息页获取
-    mpId: process.env.WECHAT_MP_ID_XBB || process.env.WECHAT_MP_ID || '',
+    mpId: process.env.WECHAT_MP_ID_XBB || '',
 
     defaultAuthor: '小宝宝',
     defaultTheme: 'chengyun',   // 可选：chengyun / blue / mint / cyber / dark

@@ -12,7 +12,7 @@ function loadEnv() {
     console.error('❌ .env file not found');
     process.exit(1);
   }
-  
+
   const env = {};
   fs.readFileSync(envPath, 'utf-8').split('\n').forEach(line => {
     const match = line.match(/^(\w+)=(.+)$/);
@@ -20,7 +20,21 @@ function loadEnv() {
       env[match[1]] = match[2].trim();
     }
   });
-  
+
+  // 多用户凭据路由：BLOG_USER=xiaobaobao → 使用 WECHAT_APP_ID_XBB 等
+  // 映射表：user id → env 变量后缀
+  const USER_SUFFIX_MAP = { xiaobaobao: 'XBB' };
+  const blogUser = process.env.BLOG_USER || env.BLOG_USER || '';
+  const suffix = USER_SUFFIX_MAP[blogUser] || (blogUser ? blogUser.toUpperCase() : '');
+  if (suffix) {
+    const appId     = env[`WECHAT_APP_ID_${suffix}`];
+    const appSecret = env[`WECHAT_APP_SECRET_${suffix}`];
+    const mpId      = env[`WECHAT_MP_ID_${suffix}`];
+    if (appId)     { env.WECHAT_APP_ID     = appId;     }
+    if (appSecret) { env.WECHAT_APP_SECRET = appSecret; }
+    if (mpId)      { env.WECHAT_MP_ID      = mpId;      }
+  }
+
   return env;
 }
 
