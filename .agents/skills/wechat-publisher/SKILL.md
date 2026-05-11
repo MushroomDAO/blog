@@ -82,12 +82,12 @@ WeChat-specific rules:
 ### Priority order
 
 1. **User provides an image** → compress and use it directly.
-2. **xiaobaobao banner pool** (`src/assets/banners/xiaobaobao/`) → if any `.jpg` / `.png` files exist here, pick one at random.
-3. **Default pool** (fallback, see below) → if the xiaobaobao directory is empty.
+2. **xiaobaobao banner pool** (`src/assets/banners/xiaobaobao/`) → pick one at random. **Always use this directory. Never use blog.mushroom.cv banners.**
+3. If directory is empty → tell the user to add images first; do NOT fall back to other banner pools.
 
-Check xiaobaobao pool:
+列出 xiaobaobao banner 池：
 ```bash
-ls src/assets/banners/xiaobaobao/*.jpg src/assets/banners/xiaobaobao/*.png 2>/dev/null
+ls src/assets/banners/xiaobaobao/
 ```
 
 Pick random from xiaobaobao pool (bash):
@@ -110,15 +110,8 @@ src/assets/banners/xiaobaobao/
 ```
 They will be picked up automatically on the next publish.
 
-### Default fallback pool (used only when xiaobaobao pool is empty)
-```
-../../assets/banner-future-is-now.jpg
-../../assets/banner-ai-new-intelligence.jpg
-../../assets/banner-human-ai-coexistence.jpg
-../../assets/banner-digital-public-goods.jpg
-../../assets/banner-ai-personal-assistant.jpg
-../../assets/banner-personal-growth-ai-skills.jpg
-```
+### ⚠️ 无 fallback
+如果 `src/assets/banners/xiaobaobao/` 为空，**不要使用任何其他 banner**，直接告知用户先向该目录添加图片。
 
 ---
 
@@ -202,12 +195,5 @@ Check `.env` has the correct `WECHAT_APP_ID` / `WECHAT_APP_SECRET` / `WECHAT_MP_
 推荐主题：财富、金融、股票、理财、赚钱相关
 推荐尺寸：1200×630，文件大小 ≤ 150KB
 
-### 默认 fallback banner
-| Filename | Theme Feel |
-|----------|-----------|
-| `banner-future-is-now.jpg` | 科技感/未来 |
-| `banner-ai-new-intelligence.jpg` | AI/智能 |
-| `banner-human-ai-coexistence.jpg` | 人机协作 |
-| `banner-digital-public-goods.jpg` | 开源/公共 |
-| `banner-ai-personal-assistant.jpg` | 个人助理 |
-| `banner-personal-growth-ai-skills.jpg` | 成长/技能 |
+### ⚠️ 无 fallback — 只用 xiaobaobao 目录
+不得使用 blog.mushroom.cv 的科技 banner，不得使用 `src/assets/banner-*.jpg`。
