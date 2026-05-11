@@ -6,6 +6,20 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
+// 动态加载用户专属主题目录
+function loadUserThemes(userDir) {
+  const result = {};
+  if (!fs.existsSync(userDir)) return result;
+  fs.readdirSync(userDir).filter(f => f.endsWith('.js')).forEach(f => {
+    const key = path.basename(f, '.js');
+    result[key] = require(path.join(userDir, f));
+  });
+  return result;
+}
+
+// 加载 xiaobaobao 专属财经主题
+const XBB_THEMES = loadUserThemes(path.join(__dirname, 'themes/xiaobaobao'));
+
 // 主题配置 - 扩展更多主题
 const THEMES = {
   claude: {
@@ -91,11 +105,22 @@ const THEMES = {
   }
 };
 
-// 获取随机主题
+// 获取随机主题（从所有主题池，仅用于 mushroom）
 function getRandomTheme() {
   const themeNames = Object.keys(THEMES);
-  const randomIndex = Math.floor(Math.random() * themeNames.length);
-  return themeNames[randomIndex];
+  return themeNames[Math.floor(Math.random() * themeNames.length)];
+}
+
+// 获取 xiaobaobao 专属随机主题（只从财经主题池选）
+function getRandomXbbTheme() {
+  const names = Object.keys(XBB_THEMES);
+  if (names.length === 0) return getRandomTheme();
+  return names[Math.floor(Math.random() * names.length)];
+}
+
+// 按用户获取主题配置（支持跨池查找）
+function getThemeConfig(themeName) {
+  return THEMES[themeName] || XBB_THEMES[themeName] || THEMES['blue'];
 }
 
 // 清理标题（去掉 title: 前缀）
@@ -179,9 +204,9 @@ function generateHeaderWatermark() {
  * 渲染 Markdown 为微信 HTML
  */
 async function render(markdown, themeName = null, wechatClient = null) {
-  // 如果没有指定主题，随机选择一个
-  const selectedTheme = themeName && THEMES[themeName] ? themeName : getRandomTheme();
-  const theme = THEMES[selectedTheme];
+  // 如果没有指定主题，随机选择一个；XBB 主题也支持按名查找
+  const selectedTheme = (themeName && (THEMES[themeName] || XBB_THEMES[themeName])) ? themeName : getRandomTheme();
+  const theme = getThemeConfig(selectedTheme);
   
   console.log(`Using theme: ${theme.name} (${selectedTheme})`);
   
@@ -413,4 +438,4 @@ async function render(markdown, themeName = null, wechatClient = null) {
   };
 }
 
-module.exports = { render, THEMES, getRandomTheme, cleanTitle };
+module.exports = { render, THEMES, XBB_THEMES, getRandomTheme, getRandomXbbTheme, getThemeConfig, cleanTitle };

@@ -149,12 +149,27 @@ BLOG_USER=xiaobaobao node pipeline/m2/index.js "src/content/blog/SLUG.md"
 
 **绝对不能省略 `BLOG_USER=xiaobaobao`**，否则会发到 mushroom 的公众号。
 
-Themes available (M2 picks randomly if not specified):
-`claude` / `chengyun` / `blue` / `sticker` / `mint` / `purple` / `cyber` / `rose`
+### ⚠️ 主题池 — 只用 xiaobaobao 财经主题
 
-To specify a theme:
+当 `BLOG_USER=xiaobaobao` 时，M2 自动从 xiaobaobao 财经主题池随机选择，**禁止使用科技主题**。
+
+| 主题 key | 主题名 | 风格 |
+|---------|--------|------|
+| `xbb_gold` | 黄金财富 | 琥珀金，适合理财/财富管理 |
+| `xbb_emerald` | 绿色增长 | 翠绿，适合投资分析/收益增长 |
+| `xbb_navy` | 深海金融 | 深蓝+金，适合宏观经济/股票分析 |
+
+主题文件位置：`pipeline/m2/renderer/themes/xiaobaobao/`
+**严禁**使用：`claude` / `chengyun` / `blue` / `sticker` / `mint` / `purple` / `cyber` / `rose`（科技主题）
+
+不指定主题 → 自动随机财经主题：
 ```bash
-BLOG_USER=xiaobaobao node pipeline/m2/index.js "src/content/blog/SLUG.md" --theme chengyun
+BLOG_USER=xiaobaobao node pipeline/m2/index.js "src/content/blog/SLUG.md"
+```
+
+指定特定财经主题：
+```bash
+BLOG_USER=xiaobaobao node pipeline/m2/index.js "src/content/blog/SLUG.md" --theme xbb_navy
 ```
 
 ---

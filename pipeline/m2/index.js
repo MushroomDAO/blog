@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { render, getRandomTheme, THEMES } = require('./renderer/wechat-renderer');
+const { render, getRandomTheme, getRandomXbbTheme, getThemeConfig, THEMES, XBB_THEMES } = require('./renderer/wechat-renderer');
 const { WeChatClient } = require('./wechat-api/client');
 const fs = require('fs');
 const path = require('path');
@@ -65,8 +65,9 @@ async function publish(markdownFile, options = {}) {
   console.log('[2/5] Rendering markdown...');
   const markdown = fs.readFileSync(markdownFile, 'utf-8');
   
-  // 如果没有指定主题，使用随机主题
-  const selectedTheme = theme || getRandomTheme();
+  // 如果没有指定主题：xiaobaobao 用财经主题，其他用科技主题
+  const blogUser = process.env.BLOG_USER || '';
+  const selectedTheme = theme || (blogUser === 'xiaobaobao' ? getRandomXbbTheme() : getRandomTheme());
   
   // 初始化微信客户端
   const wechat = new WeChatClient(env.WECHAT_APP_ID, env.WECHAT_APP_SECRET);
@@ -75,7 +76,7 @@ async function publish(markdownFile, options = {}) {
   const result = await render(markdown, selectedTheme, wechat);
   
   console.log(`   Title: ${result.title}`);
-  console.log(`   Theme: ${THEMES[result.theme].name} (${result.theme})`);
+  console.log(`   Theme: ${getThemeConfig(result.theme).name} (${result.theme})`);
   
   // 处理封面图
   console.log('[3/5] Processing cover image...');
@@ -147,7 +148,7 @@ async function publish(markdownFile, options = {}) {
     console.log('');
     console.log('📋 Draft Info:');
     console.log(`   Title: ${result.title}`);
-    console.log(`   Theme: ${THEMES[result.theme].name} (${result.theme})`);
+    console.log(`   Theme: ${getThemeConfig(result.theme).name} (${result.theme})`);
     console.log(`   Media ID: ${draft.mediaId}`);
     console.log(`   Preview: https://mp.weixin.qq.com`);
     console.log('');
