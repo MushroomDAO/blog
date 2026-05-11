@@ -175,15 +175,10 @@ async function downloadImage(url, outputDir) {
 function generateFooterBanner(theme) {
   return `
 <div style="margin-top:40px;padding:24px;background:${theme.gradient};border-radius:12px;text-align:center;color:#fff;">
-  <div style="font-size:24px;margin-bottom:8px;">🍄</div>
-  <div style="font-size:16px;font-weight:bold;margin-bottom:8px;">Mycelium</div>
-  <div style="font-size:13px;opacity:0.95;line-height:1.6;">
-    <span style="margin:0 4px;">🪵 Infras</span>
-    <span style="opacity:0.6;">|</span>
-    <span style="margin:0 4px;">🦠 Protocols</span>
-    <span style="opacity:0.6;">|</span>
-    <span style="margin:0 4px;">🕸️ Networks</span>
-  </div>
+  <div style="font-size:28px;margin-bottom:10px;">💰 💎 ⚔️</div>
+  <div style="font-size:17px;font-weight:bold;margin-bottom:6px;">财富秘马</div>
+  <div style="font-size:14px;opacity:0.95;line-height:1.8;">探索财富密码，助你财富自由</div>
+  <div style="margin-top:10px;font-size:22px;letter-spacing:6px;">📈 💹 🏆</div>
 </div>
 `;
 }
