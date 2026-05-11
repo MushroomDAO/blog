@@ -78,26 +78,45 @@ WeChat-specific rules:
 
 ## Step 3 — Pick Banner
 
-No user image provided → pick one from the default pool at random:
+### Priority order
 
-```
-../../assets/banner-human-ai-coexistence.jpg
-../../assets/banner-cypherpunk-revolution.jpg
-../../assets/banner-mycelial-network.jpg
-../../assets/banner-future-is-now.jpg
-../../assets/banner-ai-new-intelligence.jpg
-../../assets/banner-digital-public-goods.jpg
-../../assets/banner-ai-smart-city-collab.jpg
-../../assets/banner-org-ai-transformation.jpg
-../../assets/banner-ai-city-ecosystem.jpg
-../../assets/banner-ai-personal-assistant.jpg
-../../assets/banner-personal-growth-ai-skills.jpg
+1. **User provides an image** → compress and use it directly.
+2. **xiaobaobao banner pool** (`src/assets/banners/xiaobaobao/`) → if any `.jpg` / `.png` files exist here, pick one at random.
+3. **Default pool** (fallback, see below) → if the xiaobaobao directory is empty.
+
+Check xiaobaobao pool:
+```bash
+ls src/assets/banners/xiaobaobao/*.jpg src/assets/banners/xiaobaobao/*.png 2>/dev/null
 ```
 
-User provides an image → compress and use:
+Pick random from xiaobaobao pool (bash):
+```bash
+files=(src/assets/banners/xiaobaobao/*.jpg src/assets/banners/xiaobaobao/*.png)
+banner="${files[RANDOM % ${#files[@]}]}"
+echo "Selected: $banner"
+```
+
+User provides an image → compress and save:
 ```bash
 sips -s format jpeg INPUT.png --out src/assets/images/SLUG-hero.jpg
 sips -Z 1200 src/assets/images/SLUG-hero.jpg --out src/assets/images/SLUG-hero.jpg
+```
+
+### Adding banners
+Place new banner images (JPG/PNG, ideally 1200×630) into:
+```
+src/assets/banners/xiaobaobao/
+```
+They will be picked up automatically on the next publish.
+
+### Default fallback pool (used only when xiaobaobao pool is empty)
+```
+../../assets/banner-future-is-now.jpg
+../../assets/banner-ai-new-intelligence.jpg
+../../assets/banner-human-ai-coexistence.jpg
+../../assets/banner-digital-public-goods.jpg
+../../assets/banner-ai-personal-assistant.jpg
+../../assets/banner-personal-growth-ai-skills.jpg
 ```
 
 ---
@@ -173,16 +192,17 @@ Check `.env` has the correct `WECHAT_APP_ID` / `WECHAT_APP_SECRET` / `WECHAT_MP_
 
 ## Banner Pool Quick Reference
 
+### xiaobaobao 专属 banner（优先使用）
+存放路径：`src/assets/banners/xiaobaobao/`
+推荐主题：财富、金融、股票、理财、赚钱相关
+推荐尺寸：1200×630，文件大小 ≤ 150KB
+
+### 默认 fallback banner
 | Filename | Theme Feel |
 |----------|-----------|
 | `banner-future-is-now.jpg` | 科技感/未来 |
 | `banner-ai-new-intelligence.jpg` | AI/智能 |
 | `banner-human-ai-coexistence.jpg` | 人机协作 |
-| `banner-cypherpunk-revolution.jpg` | 极客/加密 |
-| `banner-mycelial-network.jpg` | 网络/去中心化 |
 | `banner-digital-public-goods.jpg` | 开源/公共 |
-| `banner-ai-smart-city-collab.jpg` | 城市/协作 |
-| `banner-org-ai-transformation.jpg` | 组织/转型 |
-| `banner-ai-city-ecosystem.jpg` | 生态/城市 |
 | `banner-ai-personal-assistant.jpg` | 个人助理 |
 | `banner-personal-growth-ai-skills.jpg` | 成长/技能 |
