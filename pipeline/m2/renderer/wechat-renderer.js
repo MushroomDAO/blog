@@ -184,21 +184,11 @@ function generateFooterBanner(theme) {
     <span style="opacity:0.6;">|</span>
     <span style="margin:0 4px;">🕸️ Networks</span>
   </div>
-  <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.3);font-size:12px;opacity:0.9;">
-    📍 blog.mushroom.cv
-  </div>
 </div>
 `;
 }
 
-// 生成顶部 watermark
-function generateHeaderWatermark() {
-  return `
-<div style="text-align:center;margin-bottom:20px;padding:12px;background:#fafaf9;border-radius:8px;border:1px dashed #ddd;">
-  <span style="font-size:14px;color:#666;">🍄 原文发布于 blog.mushroom.cv</span>
-</div>
-`;
-}
+
 
 /**
  * 渲染 Markdown 为微信 HTML
@@ -421,14 +411,11 @@ async function render(markdown, themeName = null, wechatClient = null) {
   // 渲染
   let html = marked.parse(content);
   
-  // 添加顶部 watermark
-  const headerWatermark = generateHeaderWatermark();
-  
   // 添加底部 banner
   const footerBanner = generateFooterBanner(theme);
-  
+
   // 包裹外层容器
-  html = `<section style="background:rgba(0,0,0,0.02);border-radius:12px;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;">${headerWatermark}${html}${footerBanner}</section>`;
+  html = `<section style="background:rgba(0,0,0,0.02);border-radius:12px;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;">${html}${footerBanner}</section>`;
   
   return {
     frontmatter,
