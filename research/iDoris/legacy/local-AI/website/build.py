@@ -553,6 +553,7 @@ def index_html(reports_data: list[dict]) -> str:
     <h1>Aura AI · <span>Local AI 周报</span></h1>
     <p class="tagline">让每个人平等、低成本、安全地使用 AI · 每周更新最优本地部署方案</p>
     <div class="header-links">
+      <a href="https://launch.mushroom.cv/auraai" target="_blank">ℹ️ About AuraAI</a>
       <a href="https://blog.mushroom.cv/blog/aura-ai-manifesto-153316/" target="_blank">📖 Aura AI 宣言</a>
       <a href="https://blog.mushroom.cv" target="_blank">🌐 Mycelium Protocol</a>
       <a href="hardware/">💻 硬件方案</a>
