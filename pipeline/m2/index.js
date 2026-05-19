@@ -78,36 +78,48 @@ async function publish(markdownFile, options = {}) {
   console.log(`   Title: ${result.title}`);
   console.log(`   Theme: ${getThemeConfig(result.theme).name} (${result.theme})`);
   
-  // 处理封面图
+  // 处理封面图：上传为永久素材（缩略图）+ 上传为文章图片（正文顶部展示）
   console.log('[3/5] Processing cover image...');
   let thumbMediaId = null;
-  
+  let articleHtml = result.html;
+
   if (result.frontmatter.heroImage) {
     const heroPath = result.frontmatter.heroImage.replace('../../assets/', '');
     const coverPath = path.join(__dirname, '../..', 'src/assets', heroPath);
-    
+
     if (fs.existsSync(coverPath)) {
+      // 上传为永久素材，用于缩略图
       try {
         const cover = await wechat.uploadCover(coverPath);
         thumbMediaId = cover.mediaId;
       } catch (e) {
         console.warn(`   ⚠️ Cover upload failed: ${e.message}`);
       }
+      // 上传为文章图片，注入到正文顶部
+      try {
+        const imgUrl = await wechat.uploadImage(coverPath);
+        const headerImg = `<img src="${imgUrl}" style="width:100%;border-radius:8px;margin-bottom:24px;display:block;" />`;
+        // 注入到 <section...> 开标签之后
+        articleHtml = articleHtml.replace(/(<section[^>]*>)/, `$1${headerImg}`);
+        console.log(`   ✅ Header image injected`);
+      } catch (e) {
+        console.warn(`   ⚠️ Header image inject failed: ${e.message}`);
+      }
     }
   }
-  
+
   // 发布草稿
   console.log('[4/5] Creating draft...');
-  const digest = result.frontmatter.description 
-    ? result.frontmatter.description.substring(0, 60) 
+  const digest = result.frontmatter.description
+    ? result.frontmatter.description.substring(0, 60)
     : '';
-  
+
   try {
     const draft = await wechat.createDraft({
       title: result.title,
       author: author,
       digest: digest,
-      content: result.html,
+      content: articleHtml,
       thumbMediaId: thumbMediaId,
       needOpenComment: true,
       onlyFansCanComment: false,
