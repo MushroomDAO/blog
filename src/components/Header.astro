@@ -8,6 +8,8 @@ import HeaderLink from './HeaderLink.astro';
 		<h2><a href="/">🍄 {SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/about">About</HeaderLink>
+			<a href="https://auraai.mushroom.cv/" target="_blank" rel="noopener" class="ext-link">AuraAI</a>
+			<a href="https://aastar.mushroom.cv/" target="_blank" rel="noopener" class="ext-link">AAStar</a>
 			<a href="/rss.xml" target="_blank" title="RSS Feed" class="rss-icon">📡</a>
 		</div>
 		<div class="social-links">
@@ -80,6 +82,13 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	.rss-icon:hover {
 		border-bottom-color: #ff9500;
+	}
+	.ext-link {
+		font-weight: 600;
+		color: rgb(var(--accent));
+	}
+	.ext-link:hover {
+		border-bottom-color: rgb(var(--accent));
 	}
 	@media (max-width: 720px) {
 		.social-links {

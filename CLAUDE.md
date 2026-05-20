@@ -5,6 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Mycelium Protocol 生态上下文
 
 @/Users/jason/Dev/Brood/protocol/MISSION.md
+@/Users/jason/Dev/Brood/protocol/PGL/CONTEXT.md
 @/Users/jason/Dev/Brood/orgs/mycelium/PROFILE.md
 @/Users/jason/Dev/Brood/orgs/mycelium/INTERFACES.md
 
