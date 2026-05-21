@@ -31,3 +31,8 @@ package-lock.json
 
 # temp scripts
 __pycache__/
+
+# wechat-inbox content staging (private, never commit)
+source/*/
+!source/README.md
+!source/.gitkeep
