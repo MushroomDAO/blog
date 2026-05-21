@@ -13,7 +13,7 @@ description: |
 
   HARD RULES — never violate:
   1. NEVER run pnpm build, NEVER deploy to Cloudflare Pages — WeChat only
-  2. ALWAYS run M2 with BLOG_USER=xiaobaobao to use 小宝宝's account credentials (_XBB vars)
+  2. M2 defaults to XBB (小宝宝) account — just run: node pipeline/m2/index.js "file.md"
   3. WeChat title must be ≤ 64 characters
   4. Banner must come from src/assets/banners/xiaobaobao/ (not blog.mushroom.cv banners)
 ---
@@ -139,15 +139,15 @@ No English section required for WeChat-only publish. Optionally add `<!--EN-->` 
 
 ---
 
-## Step 5 — Run M2（必须带 BLOG_USER=xiaobaobao）
+## Step 5 — Run M2
+
+M2 默认发到小宝宝的公众号（XBB），直接运行即可：
 
 ```bash
-BLOG_USER=xiaobaobao node pipeline/m2/index.js "src/content/blog/SLUG.md"
+node pipeline/m2/index.js "src/content/blog/SLUG.md"
 ```
 
-`BLOG_USER=xiaobaobao` 让 M2 自动路由到 `.env` 里的 `WECHAT_APP_ID_XBB` / `WECHAT_APP_SECRET_XBB` / `WECHAT_MP_ID_XBB`，发到小宝宝的公众号。
-
-**绝对不能省略 `BLOG_USER=xiaobaobao`**，否则会发到 mushroom 的公众号。
+`.env` 中已配置 `BLOG_USER=xiaobaobao`，M2 代码默认也是 `xiaobaobao`，无需额外指定。路由到 `WECHAT_APP_ID_XBB` / `WECHAT_APP_SECRET_XBB` / `WECHAT_MP_ID_XBB`。
 
 ### ⚠️ 主题池 — 只用 xiaobaobao 财经主题
 
@@ -164,12 +164,12 @@ BLOG_USER=xiaobaobao node pipeline/m2/index.js "src/content/blog/SLUG.md"
 
 不指定主题 → 自动随机财经主题：
 ```bash
-BLOG_USER=xiaobaobao node pipeline/m2/index.js "src/content/blog/SLUG.md"
+node pipeline/m2/index.js "src/content/blog/SLUG.md"
 ```
 
 指定特定财经主题：
 ```bash
-BLOG_USER=xiaobaobao node pipeline/m2/index.js "src/content/blog/SLUG.md" --theme xbb_navy
+node pipeline/m2/index.js "src/content/blog/SLUG.md" --theme xbb_navy
 ```
 
 ---

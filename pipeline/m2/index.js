@@ -21,10 +21,9 @@ function loadEnv() {
     }
   });
 
-  // 多用户凭据路由：BLOG_USER=xiaobaobao → 使用 WECHAT_APP_ID_XBB 等
-  // 映射表：user id → env 变量后缀
+  // 凭据路由：默认 xiaobaobao（XBB），可通过 BLOG_USER 环境变量覆盖
   const USER_SUFFIX_MAP = { xiaobaobao: 'XBB' };
-  const blogUser = process.env.BLOG_USER || env.BLOG_USER || '';
+  const blogUser = process.env.BLOG_USER || env.BLOG_USER || 'xiaobaobao';
   const suffix = USER_SUFFIX_MAP[blogUser] || (blogUser ? blogUser.toUpperCase() : '');
   if (suffix) {
     const appId     = env[`WECHAT_APP_ID_${suffix}`];
@@ -66,7 +65,7 @@ async function publish(markdownFile, options = {}) {
   const markdown = fs.readFileSync(markdownFile, 'utf-8');
   
   // 如果没有指定主题：xiaobaobao 用财经主题，其他用科技主题
-  const blogUser = process.env.BLOG_USER || '';
+  const blogUser = process.env.BLOG_USER || env.BLOG_USER || 'xiaobaobao';
   const selectedTheme = theme || (blogUser === 'xiaobaobao' ? getRandomXbbTheme() : getRandomTheme());
   
   // 初始化微信客户端
@@ -95,15 +94,18 @@ async function publish(markdownFile, options = {}) {
       } catch (e) {
         console.warn(`   ⚠️ Cover upload failed: ${e.message}`);
       }
-      // 上传为文章图片，注入到正文顶部
-      try {
-        const imgUrl = await wechat.uploadImage(coverPath);
-        const headerImg = `<img src="${imgUrl}" style="width:100%;border-radius:8px;margin-bottom:24px;display:block;" />`;
-        // 注入到 <section...> 开标签之后
-        articleHtml = articleHtml.replace(/(<section[^>]*>)/, `$1${headerImg}`);
-        console.log(`   ✅ Header image injected`);
-      } catch (e) {
-        console.warn(`   ⚠️ Header image inject failed: ${e.message}`);
+      // 上传为文章图片，注入到正文顶部（frontmatter.noHeaderImage=true 时跳过）
+      if (!result.frontmatter.noHeaderImage) {
+        try {
+          const imgUrl = await wechat.uploadImage(coverPath);
+          const headerImg = `<img src="${imgUrl}" style="width:100%;border-radius:8px;margin-bottom:24px;display:block;" />`;
+          articleHtml = articleHtml.replace(/(<section[^>]*>)/, `$1${headerImg}`);
+          console.log(`   ✅ Header image injected`);
+        } catch (e) {
+          console.warn(`   ⚠️ Header image inject failed: ${e.message}`);
+        }
+      } else {
+        console.log(`   ⏭️ Header image skipped (noHeaderImage: true)`);
       }
     }
   }
