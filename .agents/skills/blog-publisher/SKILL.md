@@ -236,6 +236,28 @@ Expected:
 - new article appears at or near the top
 - no duplicate route exists for the old slug
 
+### 7.5. Commit Published Article
+
+After the deploy validates successfully:
+
+```bash
+git add src/content/blog/SLUG.md
+git add src/assets/images/SLUG-banner.jpg 2>/dev/null || true
+git commit -m "$(cat <<'EOF'
+feat(blog): publish SLUG
+EOF
+)"
+```
+
+If the source came from a `source/DIRNAME/` directory, also commit the `.published` marker:
+
+```bash
+git add source/DIRNAME/.published
+git commit --amend --no-edit 2>/dev/null || git commit -m "feat(blog): publish SLUG [source: DIRNAME]"
+```
+
+Skip the commit if nothing is staged (no error).
+
 ### 8. Create WeChat Draft Last
 
 Only run this after the final Blog slug and URL are confirmed.
