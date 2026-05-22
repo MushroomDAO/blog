@@ -76,14 +76,12 @@ ocr_image() {
 # ── GitHub README 拉取 ──────────────────────────────────────────
 fetch_github_readme() {
   local url="$1"
-  # 从 URL 提取 owner/repo
   local repo_path
   repo_path=$(echo "$url" | grep -oE 'github\.com/[^/]+/[^/?#]+' | sed 's|github.com/||' | head -1)
   [ -z "$repo_path" ] && return
 
   log "Fetching GitHub README: $repo_path"
   local readme
-  # 先用 gh cli，失败再用 curl GitHub API
   if command -v gh &>/dev/null; then
     readme=$(gh api "repos/${repo_path}/readme" --jq '.content' 2>/dev/null | base64 -d 2>/dev/null) || readme=""
   fi
@@ -94,19 +92,56 @@ fetch_github_readme() {
   echo "$readme"
 }
 
+# ── GitHub 关键词搜索（当用户文字包含搜索意图但无显式 URL 时）────
+# 用 AI 提取关键词 → gh search repos → 返回找到的 owner/repo 列表
+search_github_by_intent() {
+  local text="$1"
+  command -v gh &>/dev/null || { echo ""; return; }
+
+  # 检测搜索意图关键词
+  if ! echo "$text" | grep -qiE '搜索|找到|找一下|github|仓库|repo|repository|原文|原始'; then
+    echo ""; return
+  fi
+
+  log "Detected GitHub search intent, extracting keywords..."
+  # 让 8B 模型提取搜索词（短调用，只输出关键词）
+  local keywords
+  keywords=$(call_ai "从以下文字中提取适合搜索 GitHub 仓库的英文或中文关键词（3-5个词，空格分隔，不要解释）：
+$text" | head -1 | tr -d '"' | cut -c1-100)
+
+  [ -z "$keywords" ] && { log "⚠️  Could not extract keywords"; echo ""; return; }
+  log "GitHub search keywords: $keywords"
+
+  # 搜索 GitHub，取前3个结果
+  local results
+  results=$(gh search repos "$keywords" --limit 3 --json fullName,description,stargazersCount 2>/dev/null \
+    | jq -r '.[] | "\(.fullName) (\(.stargazersCount)★): \(.description // "")"' 2>/dev/null)
+
+  if [ -z "$results" ]; then
+    log "⚠️  GitHub search returned no results for: $keywords"; echo ""; return
+  fi
+
+  log "GitHub search results:"
+  while IFS= read -r line; do log "  $line"; done <<< "$results"
+
+  # 返回 fullName 列表（每行一个 owner/repo）
+  gh search repos "$keywords" --limit 3 --json fullName 2>/dev/null \
+    | jq -r '.[].fullName' 2>/dev/null
+}
+
 # ── Banner 选择（SKILL.md Step 5 优先级）──────────────────────────
 # 返回两个值到全局变量: BANNER_ABSPATH / BANNER_HEROIMAGE
 select_banner() {
   local dir="$1" slug="$2"
   mkdir -p "$IMAGES_DIR"
 
-  # 优先级 1：source 目录里有图片 → sips 缩放到 1200x630
+  # 优先级 1：source 目录里有显式命名的封面图（cover.* 或 banner.*）
+  # 注意：普通 OCR 图片（image-001.bin 等）不作为 banner 使用
   local src_img
-  src_img=$(find "$dir" -maxdepth 1 \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) | head -1)
+  src_img=$(find "$dir" -maxdepth 1 \( -iname "cover.jpg" -o -iname "cover.jpeg" -o -iname "cover.png" -o -iname "banner.jpg" -o -iname "banner.png" \) | head -1)
   if [ -n "$src_img" ]; then
     local banner_path="$IMAGES_DIR/${slug}-banner.jpg"
-    log "Banner: resizing source image → ${slug}-banner.jpg"
-    # sips: 先缩放保持比例，再裁切到 1200x630
+    log "Banner: resizing cover image → ${slug}-banner.jpg"
     sips -z 630 1200 "$src_img" --out "$banner_path" >> "$LOG_FILE" 2>&1 || \
       cp "$src_img" "$banner_path"
     BANNER_ABSPATH="$banner_path"
@@ -185,7 +220,7 @@ ${url_content}"
   local github_urls
   github_urls=$(echo "$all_text" | grep -oE 'https?://github\.com/[^/]+/[^[:space:]/]+' | sort -u || true)
 
-  # ── 拉取 GitHub README ──
+  # ── 拉取 GitHub README（显式 URL）──
   if [ -n "$github_urls" ]; then
     log "Found GitHub URLs:"
     while IFS= read -r gh_url; do
@@ -201,6 +236,26 @@ $(echo "$readme" | head -200)
         log "  ✅ README fetched ($(echo "$readme" | wc -l) lines)"
       fi
     done <<< "$github_urls"
+  else
+    # ── 无显式 URL：检测搜索意图，自动搜索 GitHub ──
+    local search_repos
+    search_repos=$(search_github_by_intent "$all_text")
+    if [ -n "$search_repos" ]; then
+      while IFS= read -r repo_name; do
+        [ -z "$repo_name" ] && continue
+        local gh_url="https://github.com/$repo_name"
+        local readme
+        readme=$(fetch_github_readme "$gh_url")
+        if [ -n "$readme" ]; then
+          readme_content="${readme_content}
+[GitHub 搜索结果: $gh_url]
+$(echo "$readme" | head -200)
+"
+          github_urls="${github_urls} $gh_url"
+          log "  ✅ Search result README fetched: $repo_name"
+        fi
+      done <<< "$search_repos"
+    fi
   fi
 
   # 先选 banner，把 heroImage 路径传给 AI
@@ -256,11 +311,12 @@ heroImage: \"${hero_hint}\"
 1. 第一行必须是 BLUF：> **BLUF**: 用一句话说核心价值或结论
 2. 至少一个疑问句式的标题，如 ## 为什么值得关注？或 ## 它解决了什么问题？
 3. 使用具体数字和事实（来自上面的内容）
-4. 如果正文超过 1000 字，文末加 FAQ 部分：
+4. 如果上面有 GitHub 仓库链接，必须在正文中附上原始链接，格式：> 📌 原始资源：[仓库名](https://github.com/...)
+5. 如果正文超过 1000 字，文末加 FAQ 部分：
    **FAQ**
    **Q: 问题？**
    A: 答案。
-5. 文末版权（在 <!--EN--> 之前）：
+6. 文末版权（在 <!--EN--> 之前）：
 
 ---
 
@@ -271,7 +327,8 @@ heroImage: \"${hero_hint}\"
 英文正文（400-600字）：
 1. 第一行必须是 BLUF：> **BLUF**: one sentence core value
 2. 至少一个问句标题
-3. 文末版权：
+3. 如果有 GitHub 仓库，附上原始链接：> 📌 Source: [repo-name](https://github.com/...)
+4. 文末版权：
 
 ---
 

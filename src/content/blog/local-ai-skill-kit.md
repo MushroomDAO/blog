@@ -8,7 +8,7 @@ pubDate: 2026-05-22
 updatedDate: 2026-05-22
 category: Tech-News
 tags: [GitHub, AI, Skill Kit, TypeScrip, Code]
-heroImage: "../../assets/images/local-ai-skill-kit-banner.jpg"
+heroImage: "../../assets/banner-org-ai-transformation.jpg"
 ---
 
 > **BLUF**: GitHub 上一个名为 `mattpocock/skills` 的开源项目凭借其独特的 AI 编程技能包迅速走红，成为开发者关注的焦点。
