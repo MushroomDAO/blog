@@ -12,7 +12,8 @@ heroImage: "../../assets/banner-digital-public-goods.jpg"
 
 > **BLUF**: 李飞飞团队 2024 年发表的 117 页综述论文《Agent AI》，将 AI Agent 定位为通向 AGI 的核心范式，并系统梳理了多模态人机交互（HCI）的五大研究方向与主要落地场景。
 
-> 📌 原文论文：[Agent AI: Surveying the Horizons of Multimodal Interaction (arXiv:2401.03568)](https://arxiv.org/pdf/2401.03568)
+> 📌 原文论文：Agent AI: Surveying the Horizons of Multimodal Interaction
+> arXiv:2401.03568 全文地址：https://arxiv.org/pdf/2401.03568
 
 ---
 
@@ -109,7 +110,8 @@ A: 多模态感知融合、开放环境下的鲁棒性、LLM 与具身 AI 的整
 
 > **BLUF**: Li Fei-Fei's 117-page 2024 survey *Agent AI* positions AI Agent systems as the central paradigm toward AGI and provides a structured review of five multimodal HCI research frontiers.
 
-> 📌 Source paper: [Agent AI: Surveying the Horizons of Multimodal Interaction (arXiv:2401.03568)](https://arxiv.org/pdf/2401.03568)
+> 📌 Source paper: Agent AI: Surveying the Horizons of Multimodal Interaction
+> arXiv:2401.03568 — Full text: https://arxiv.org/pdf/2401.03568
 
 ---
 
