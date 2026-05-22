@@ -94,6 +94,31 @@ heroImage: "../../assets/images/SLUG-banner.jpg"
 ---
 ```
 
+## WeChat Link Rule (Critical)
+
+WeChat Official Account drafts strip all hyperlinks — `[text](url)` becomes just `text`, with the URL lost entirely.
+
+**Rule**: Never use Markdown link syntax `[text](url)` for external URLs in article body text. Always write URLs as plain text so they survive WeChat rendering.
+
+Do this:
+```markdown
+> 📌 原文论文：Agent AI: Surveying the Horizons of Multimodal Interaction
+> arXiv:2401.03568 全文地址：https://arxiv.org/pdf/2401.03568
+```
+
+Not this:
+```markdown
+> 📌 原文论文：[Agent AI](https://arxiv.org/pdf/2401.03568)
+```
+
+This applies to:
+- Source/reference links at the top of articles
+- GitHub repo links
+- arXiv / paper links
+- Any external URL readers need to actually visit
+
+Exception: The CC BY 4.0 copyright block links are acceptable as Markdown links since they are supplementary footnotes, not primary references readers must follow.
+
 ## Required Copyright Blocks
 
 Chinese section, before `<!--EN-->`:

@@ -292,6 +292,12 @@ ${url_content:-（无链接）}
 第二行：空行
 第三行起：完整 Markdown 文件，必须以 --- 开头（frontmatter）
 
+【重要】链接规则：正文中所有外部 URL（论文/GitHub/资源链接）必须明文写出，禁止使用 Markdown 链接格式 [text](url)。
+微信公众号会删除所有超链接，读者看不到 URL。正确格式：
+> 📌 原始资源：项目名称
+> https://github.com/xxx/yyy
+错误格式：[项目名称](https://github.com/xxx/yyy)
+
 frontmatter（所有字段必须填写）：
 ---
 title: \"中文标题\"
