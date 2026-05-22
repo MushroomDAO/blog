@@ -70,12 +70,6 @@ heroImage: "../../assets/banner-digital-public-goods.jpg"
 
 **应用**：客服机器人（多语言语音交互）；智能助理（个性化语音指令响应）。
 
-## 当前市场在哪一层？
-
-我们看到很多 AI Agent 项目，尤其是 Web3 领域的，大多还停留在**第五层：人机对话交互**的智能助理层面——24 小时发推文、千人千面 AI 语音聊天、情侣聊天伴侣等。
-
-但我们也观察到一些做**智能可穿戴（DePIN）+ AI** 的项目，在身体健康数据领域进行创新（戒指、手表、吊坠等）。这里面的机会比传统只做单一 AI 公链或应用更有价值和趣味，硬件 + 软件 + AI 的组合，将是一个值得深挖的潜力方向。
-
 ## 科技巨头正在加码的五个维度
 
 1. **拓展交互方式**：探索嗅觉、温度感知等新型交互手段，提升多模态融合维度
@@ -137,10 +131,6 @@ The paper systematically surveys AI Agent applications across five Human-Compute
 **4. Wearable Interaction** — Smart rings, watches, pendants using gesture, touch, and skin-based electronics; multi-channel fusion algorithms for health monitoring and gaming.
 
 **5. Human-Machine Dialogue** — LLMs, emotion recognition, voice synthesis; near-human naturalness in conversational agents.
-
-## Where Is the Market Right Now?
-
-Most Web3 AI Agent projects are still stuck at Layer 5 — dialogue agents posting 24/7 tweets, personalized AI chat companions. **But the real opportunity sits at Layers 3 and 4**: wearable DePIN + AI combinations providing health data innovation (rings, watches, pendants). Hardware + Software + AI is the combination investors are quietly moving toward.
 
 ## What Big Tech Is Funding
 
