@@ -39,7 +39,7 @@ const related = allPosts
 
 <html lang="zh">
 	<head>
-		<BaseHead title={titleEn ? `${title} | ${titleEn}` : title} description={descriptionEn ? `${description} | ${descriptionEn}` : description} image={heroImage} />
+		<BaseHead title={titleEn ? `${title} | ${titleEn}` : title} description={descriptionEn ? `${description} | ${descriptionEn}` : description} image={heroImage} ogType="article" author="Mycelium Protocol" />
 
 		<!-- hreflang: bilingual content lives on the same URL -->
 		<link rel="alternate" hreflang="zh" href={new URL(Astro.url.pathname, Astro.site)} />
@@ -59,14 +59,14 @@ const related = allPosts
 			"author": {
 				"@type": "Person",
 				"name": "Jason",
-				"url": "https://blog.mshroom.cv/about"
+				"url": "https://blog.mushroom.cv/about"
 			},
 			"publisher": {
 				"@type": "Organization",
 				"name": "Mushroom Research Blog",
 				"logo": {
 					"@type": "ImageObject",
-					"url": "https://blog.mshroom.cv/favicon.svg"
+					"url": "https://blog.mushroom.cv/favicon.svg"
 				}
 			},
 			"mainEntityOfPage": {
