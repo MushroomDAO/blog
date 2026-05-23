@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /_astro/
+Disallow: /dist/
 
-# AI Search Crawlers (allow for citation indexing)
+# Allow AI search crawlers for citation indexing
 User-agent: OAI-SearchBot
 Allow: /
 
@@ -14,8 +16,4 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
-# Block build artifacts
-Disallow: /_astro/
-Disallow: /dist/
-
-Sitemap: https://blog.mshroom.cv/sitemap.xml
+Sitemap: https://blog.mushroom.cv/sitemap.xml
