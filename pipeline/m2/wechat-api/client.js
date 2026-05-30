@@ -112,19 +112,20 @@ class WeChatClient {
     const token = await this.getAccessToken();
     const url = `https://api.weixin.qq.com/cgi-bin/draft/add?access_token=${token}`;
     
-    const payload = {
-      articles: [{
-        title: article.title,
-        author: article.author || 'Mycelium',
-        digest: article.digest || '',
-        content: article.content,
-        content_source_url: article.sourceUrl || '',
-        thumb_media_id: article.thumbMediaId,
-        need_open_comment: article.needOpenComment !== false ? 1 : 0,
-        only_fans_can_comment: article.onlyFansCanComment ? 1 : 0,
-        original_article_type: article.declareOriginal !== false ? 1 : 0
-      }]
+    const articlePayload = {
+      title: article.title,
+      author: article.author || 'Mycelium',
+      digest: article.digest || '',
+      content: article.content,
+      content_source_url: article.sourceUrl || '',
+      need_open_comment: article.needOpenComment !== false ? 1 : 0,
+      only_fans_can_comment: article.onlyFansCanComment ? 1 : 0,
+      original_article_type: article.declareOriginal !== false ? 1 : 0
     };
+    if (article.thumbMediaId) {
+      articlePayload.thumb_media_id = article.thumbMediaId;
+    }
+    const payload = { articles: [articlePayload] };
     
     try {
       const { data } = await axios.post(url, payload, {
