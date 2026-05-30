@@ -4,13 +4,14 @@ export async function GET(context) {
 	const posts = await getCollection('blog');
 	const site = context.site.toString().replace(/\/$/, '');
 
+	const staticLastmod = '2026-04-01T00:00:00.000Z';
 	const staticPages = [
 		{ path: '', priority: '1.0', changefreq: 'daily' },
 		{ path: '/about', priority: '0.6', changefreq: 'monthly' },
 		{ path: '/blog', priority: '0.9', changefreq: 'daily' },
 	].map(({ path, priority, changefreq }) => `  <url>
     <loc>${site}${path}/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
+    <lastmod>${staticLastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`);
