@@ -55,3 +55,9 @@
 **上下文**: slug=research-paper-writing-tool-upgrade- retries=3
 **建议**: 查看 /Users/jason/Dev/mycelium/blog/source/.scan.log 获取完整错误
 ---
+
+## [2026-05-22 15:33] 步骤: wechat_draft
+**错误**: ``
+**上下文**: slug=local-ai-skill-kit retries=3
+**建议**: 查看 /Users/jason/Dev/mycelium/blog/source/.scan.log 获取完整错误
+---
