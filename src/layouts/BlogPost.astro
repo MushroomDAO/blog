@@ -37,9 +37,9 @@ const related = allPosts
 	.slice(0, 3);
 ---
 
-<html lang="zh-CN">
+<html lang="en">
 	<head>
-		<BaseHead title={title} description={description} image={heroImage} ogType="article" author="Mycelium Protocol" />
+		<BaseHead title={titleEn || title} description={descriptionEn || description} image={heroImage} ogType="article" author="Mycelium Protocol" />
 
 		<!-- hreflang: bilingual content lives on the same URL -->
 		<link rel="alternate" hreflang="zh" href={new URL(Astro.url.pathname, Astro.site)} />
