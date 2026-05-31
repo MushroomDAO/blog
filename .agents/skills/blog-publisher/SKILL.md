@@ -245,8 +245,10 @@ ls dist/blog | grep SLUG
 
 ### 6. Deploy Once
 
+**Always use this exact form** (token + TLS workaround required in this environment):
+
 ```bash
-npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true
+source .env && NODE_TLS_REJECT_UNAUTHORIZED=0 npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true
 ```
 
 ### 7. Validate Blog
@@ -357,6 +359,19 @@ Required article traits:
 - original/source data when available
 - source link at the end for GitHub/project/news posts
 - Mycelium Protocol copyright block
+
+### Bilingual Meta Tag Split (SEO Rule)
+
+The blog uses a **Chinese/English split** across meta tags:
+
+| Tag | Value | Purpose |
+|-----|-------|---------|
+| `<html lang>` | `zh-CN` | Page is Chinese-primary |
+| `<title>` + `<meta description>` | Chinese (`title` / `description`) | Google Chinese search ranking |
+| `og:title` + `og:description` | English (`titleEn` / `descriptionEn`) | International social sharing (Twitter, LinkedIn, Slack) |
+| `og:locale` | `en_US` (alternate: `zh_CN`) | Social platforms treat sharing preview as English |
+
+**Required**: every article must have `titleEn` **and** `descriptionEn` in frontmatter — they flow automatically to og:/twitter: tags via BaseHead.astro. No extra steps needed at publish time.
 
 ## Validation Checklist
 
