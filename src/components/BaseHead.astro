@@ -7,6 +7,8 @@ import { SITE_TITLE } from '../consts';
 interface Props {
 	title: string;
 	description: string;
+	titleEn?: string;
+	descriptionEn?: string;
 	image?: ImageMetadata;
 	ogType?: 'website' | 'article';
 	ogLocale?: string;
@@ -15,7 +17,9 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = FallbackImage, ogType = 'website', ogLocale = 'zh_CN', author } = Astro.props;
+const { title, description, titleEn, descriptionEn, image = FallbackImage, ogType = 'website', ogLocale = 'zh_CN', author } = Astro.props;
+const ogTitle = titleEn || title;
+const ogDescription = descriptionEn || description;
 ---
 
 <!-- Global Metadata -->
@@ -45,19 +49,19 @@ const { title, description, image = FallbackImage, ogType = 'website', ogLocale 
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
-<!-- Open Graph -->
+<!-- Open Graph — English titles for international social sharing -->
 <meta property="og:type" content={ogType} />
-<meta property="og:locale" content={ogLocale} />
-<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="zh_CN" />
 <meta property="og:url" content={canonicalURL} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={ogDescription} />
 <meta property="og:image" content={new URL(image.src, Astro.site)} />
 <meta property="og:site_name" content={SITE_TITLE} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={canonicalURL} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
+<meta property="twitter:title" content={ogTitle} />
+<meta property="twitter:description" content={ogDescription} />
 <meta property="twitter:image" content={new URL(image.src, Astro.site)} />
