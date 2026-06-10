@@ -11,13 +11,8 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-// 获取最近3天的文章作为轮播项
-const now = new Date();
-const threeDaysAgo = new Date(now.getTime() - 3 * 24 * 60 * 60 * 1000);
-const carouselPosts = posts.filter(post => {
-	const postDate = new Date(post.data.pubDate);
-	return postDate >= threeDaysAgo;
-}).slice(0, 5); // 最多5篇
+// 取最新5篇文章作为轮播
+const carouselPosts = posts.slice(0, 5);
 
 // 轮播之后剩余的文章（用于列表展示）
 const listPosts = posts.filter(post => 
