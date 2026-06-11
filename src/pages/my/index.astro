@@ -6,9 +6,20 @@ import Footer from '../../components/Footer.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 
-const posts = (await getCollection('my')).sort(
+const allPosts = (await getCollection('my')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+const hubs = allPosts.filter(p => p.data.isHub);
+const posts = allPosts.filter(p => !p.data.isHub);
+
+const hubOrder = ['papers', 'open-source', 'research-blog', 'thoughts'];
+const hubMeta: Record<string, { color: string; border: string; bg: string; desc: string }> = {
+	'papers':        { color: '#6366f1', border: 'rgba(99,102,241,0.3)',  bg: 'rgba(99,102,241,0.06)',  desc: '进行中的研究 · 论文 · 技术报告' },
+	'open-source':   { color: '#10b981', border: 'rgba(16,185,129,0.3)', bg: 'rgba(16,185,129,0.06)', desc: '主导与参与的开源项目 · GitHub 链接' },
+	'research-blog': { color: '#f59e0b', border: 'rgba(245,158,11,0.3)', bg: 'rgba(245,158,11,0.06)', desc: 'AI · 区块链 · 社会资本 — 文章归档' },
+	'thoughts':      { color: '#ef4444', border: 'rgba(239,68,68,0.3)',  bg: 'rgba(239,68,68,0.06)',  desc: '关于工作方式 · 创业 · 意义的随想' },
+};
 
 const categoryIcons: Record<string, string> = {
 	'Hardware': '🔧',
@@ -22,10 +33,9 @@ const categoryIcons: Record<string, string> = {
 <!doctype html>
 <html lang="zh-CN">
 	<head>
-		<BaseHead title="My — Jason's Notes" description="Jason 的亲历记录：硬件折腾、AI 研究、产品发布、经验与教训" />
+		<BaseHead title="My — Jason's Space" description="论文与研究、开源作品、研究博客、有话说 — Jason 的私人空间" />
 		<style>
 			:root {
-				--accent-cyan: 0, 212, 255;
 				--accent-amber: 251, 191, 36;
 				--accent-orange: 249, 115, 22;
 				--dark-bg: 15, 23, 42;
@@ -37,97 +47,177 @@ const categoryIcons: Record<string, string> = {
 				padding: 2em 1em;
 			}
 			.page-header {
-				margin-bottom: 2rem;
-				border-bottom: 1px solid rgba(var(--accent-amber), 0.3);
+				margin-bottom: 2.5rem;
 				padding-bottom: 1.5rem;
+				border-bottom: 1px solid rgba(var(--accent-amber), 0.25);
 			}
 			.page-header h1 {
 				font-size: 2rem;
-				margin: 0 0 0.3rem;
+				margin: 0 0 0.4rem;
 				background: linear-gradient(135deg, rgb(var(--accent-amber)), rgb(var(--accent-orange)));
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				background-clip: text;
 			}
 			.page-header p {
-				color: rgba(var(--dark-bg), 0.6);
+				color: rgba(var(--dark-bg), 0.55);
 				margin: 0;
 				font-size: 0.95rem;
 			}
+
+			/* Hub grid */
+			.hub-section {
+				margin-bottom: 3rem;
+			}
+			.hub-section h2 {
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: rgba(var(--dark-bg), 0.4);
+				margin: 0 0 1rem;
+				font-weight: 600;
+			}
+			.hub-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1rem;
+			}
+			.hub-card {
+				display: flex;
+				flex-direction: column;
+				gap: 0.6rem;
+				padding: 1.4rem;
+				border-radius: 12px;
+				text-decoration: none;
+				color: inherit;
+				transition: all 0.2s;
+				border: 1px solid;
+			}
+			.hub-card:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+			}
+			.hub-icon {
+				font-size: 2rem;
+				line-height: 1;
+			}
+			.hub-title {
+				font-size: 1.15rem;
+				font-weight: 700;
+				margin: 0;
+			}
+			.hub-desc {
+				font-size: 0.82rem;
+				color: rgba(var(--dark-bg), 0.55);
+				margin: 0;
+				line-height: 1.5;
+			}
+			.hub-updated {
+				font-size: 0.75rem;
+				color: rgba(var(--dark-bg), 0.35);
+				margin-top: auto;
+				padding-top: 0.5rem;
+			}
+			.hub-arrow {
+				font-size: 0.9rem;
+				opacity: 0.4;
+				align-self: flex-end;
+			}
+
+			/* Divider */
+			.section-divider {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				margin-bottom: 1.5rem;
+			}
+			.section-divider h2 {
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: rgba(var(--dark-bg), 0.4);
+				margin: 0;
+				font-weight: 600;
+				white-space: nowrap;
+			}
+			.section-divider hr {
+				flex: 1;
+				border: none;
+				border-top: 1px solid rgba(var(--accent-amber), 0.2);
+			}
+
+			/* Post cards */
 			.posts-list {
 				display: flex;
 				flex-direction: column;
-				gap: 2rem;
+				gap: 1.5rem;
 				list-style: none;
 				margin: 0;
 				padding: 0;
 			}
 			.post-card {
 				display: grid;
-				grid-template-columns: 280px 1fr;
-				gap: 1.5rem;
+				grid-template-columns: 240px 1fr;
+				gap: 1.2rem;
 				background: rgba(var(--dark-bg), 0.02);
 				border: 1px solid rgba(var(--accent-amber), 0.15);
-				border-radius: 12px;
+				border-radius: 10px;
 				overflow: hidden;
 				transition: all 0.2s;
 				text-decoration: none;
 				color: inherit;
 			}
 			.post-card:hover {
-				border-color: rgba(var(--accent-amber), 0.5);
-				box-shadow: 0 4px 20px rgba(var(--accent-amber), 0.1);
+				border-color: rgba(var(--accent-amber), 0.45);
+				box-shadow: 0 4px 16px rgba(var(--accent-amber), 0.08);
 				transform: translateY(-2px);
 			}
 			.post-card img {
 				width: 100%;
-				height: 180px;
+				height: 160px;
 				object-fit: cover;
 				display: block;
 			}
 			.post-card-placeholder {
 				width: 100%;
-				height: 180px;
-				background: linear-gradient(135deg, rgba(var(--accent-amber), 0.1), rgba(var(--accent-orange), 0.1));
+				height: 160px;
+				background: linear-gradient(135deg, rgba(var(--accent-amber), 0.08), rgba(var(--accent-orange), 0.08));
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				font-size: 3rem;
+				font-size: 2.5rem;
 			}
 			.post-card-body {
-				padding: 1.2rem 1.2rem 1.2rem 0;
+				padding: 1rem 1rem 1rem 0;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				gap: 0.5rem;
+				gap: 0.4rem;
 			}
 			.post-meta {
 				display: flex;
 				align-items: center;
-				gap: 0.6rem;
-				font-size: 0.85rem;
+				gap: 0.5rem;
+				font-size: 0.82rem;
 			}
 			.post-category {
-				background: rgba(var(--accent-amber), 0.15);
-				border: 1px solid rgba(var(--accent-amber), 0.4);
+				background: rgba(var(--accent-amber), 0.12);
+				border: 1px solid rgba(var(--accent-amber), 0.35);
 				color: rgb(var(--accent-orange));
-				padding: 0.15em 0.6em;
+				padding: 0.1em 0.55em;
 				border-radius: 4px;
 				font-weight: 600;
 			}
-			.post-date {
-				color: rgba(var(--dark-bg), 0.5);
-			}
+			.post-date { color: rgba(var(--dark-bg), 0.45); }
 			.post-title {
-				font-size: 1.2rem;
+				font-size: 1.1rem;
 				font-weight: 700;
 				margin: 0;
 				line-height: 1.4;
-				color: rgb(var(--dark-bg));
 			}
 			.post-desc {
-				font-size: 0.9rem;
-				color: rgba(var(--dark-bg), 0.65);
+				font-size: 0.88rem;
+				color: rgba(var(--dark-bg), 0.6);
 				margin: 0;
 				line-height: 1.5;
 				display: -webkit-box;
@@ -138,33 +228,31 @@ const categoryIcons: Record<string, string> = {
 			.post-tags {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 0.4rem;
+				gap: 0.35rem;
 				margin-top: 0.2rem;
 			}
 			.post-tag {
-				font-size: 0.75rem;
-				padding: 0.1em 0.5em;
-				background: rgba(var(--accent-cyan), 0.08);
-				border: 1px solid rgba(var(--accent-cyan), 0.25);
-				border-radius: 10px;
-				color: rgb(var(--accent-cyan));
+				font-size: 0.72rem;
+				padding: 0.1em 0.45em;
+				background: rgba(0,212,255,0.06);
+				border: 1px solid rgba(0,212,255,0.22);
+				border-radius: 8px;
+				color: rgb(0,150,200);
 			}
-			.empty {
+			.empty-notes {
 				text-align: center;
-				padding: 4rem;
-				color: rgba(var(--dark-bg), 0.4);
+				padding: 3rem;
+				color: rgba(var(--dark-bg), 0.35);
+				font-size: 0.9rem;
+				border: 1px dashed rgba(var(--accent-amber), 0.2);
+				border-radius: 10px;
 			}
+
 			@media (max-width: 720px) {
-				.post-card {
-					grid-template-columns: 1fr;
-				}
-				.post-card img,
-				.post-card-placeholder {
-					height: 200px;
-				}
-				.post-card-body {
-					padding: 1rem;
-				}
+				.hub-grid { grid-template-columns: 1fr; }
+				.post-card { grid-template-columns: 1fr; }
+				.post-card img, .post-card-placeholder { height: 180px; }
+				.post-card-body { padding: 1rem; }
 			}
 		</style>
 	</head>
@@ -172,24 +260,54 @@ const categoryIcons: Record<string, string> = {
 		<Header />
 		<main>
 			<div class="page-header">
-				<h1>My Notes</h1>
-				<p>Jason 的亲历记录 — 硬件折腾、AI 研究、产品发布、经验与教训</p>
+				<h1>My Space</h1>
+				<p>论文与研究 · 开源作品 · 研究博客 · 有话说</p>
+			</div>
+
+			<!-- Hub cards -->
+			<div class="hub-section">
+				<h2>专题空间</h2>
+				<div class="hub-grid">
+					{hubOrder.map(id => {
+						const hub = hubs.find(h => h.id === id);
+						const meta = hubMeta[id];
+						if (!hub || !meta) return null;
+						return (
+							<a
+								class="hub-card"
+								href={`/my/${id}/`}
+								style={`border-color: ${meta.border}; background: ${meta.bg};`}
+							>
+								<div class="hub-icon">{hub.data.hubIcon || '📁'}</div>
+								<h3 class="hub-title" style={`color: ${meta.color};`}>{hub.data.title}</h3>
+								<p class="hub-desc">{meta.desc}</p>
+								{hub.data.updatedDate && (
+									<div class="hub-updated">
+										更新于 <FormattedDate date={hub.data.updatedDate} />
+									</div>
+								)}
+								<span class="hub-arrow">→</span>
+							</a>
+						);
+					})}
+				</div>
+			</div>
+
+			<!-- Individual notes -->
+			<div class="section-divider">
+				<h2>亲历记录</h2>
+				<hr />
 			</div>
 
 			{posts.length === 0 ? (
-				<div class="empty">暂无文章</div>
+				<div class="empty-notes">暂无独立记录 — 硬件折腾、踩坑经验等会陆续出现在这里</div>
 			) : (
 				<ul class="posts-list">
 					{posts.map(post => (
 						<li>
 							<a class="post-card" href={`/my/${post.id}/`}>
 								{post.data.heroImage ? (
-									<Image
-										src={post.data.heroImage}
-										alt={post.data.title}
-										width={280}
-										height={180}
-									/>
+									<Image src={post.data.heroImage} alt={post.data.title} width={240} height={160} />
 								) : (
 									<div class="post-card-placeholder">
 										{categoryIcons[post.data.category] || '📝'}
@@ -200,9 +318,7 @@ const categoryIcons: Record<string, string> = {
 										<span class="post-category">
 											{categoryIcons[post.data.category]} {post.data.category}
 										</span>
-										<span class="post-date">
-											<FormattedDate date={post.data.pubDate} />
-										</span>
+										<span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
 									</div>
 									<h2 class="post-title">{post.data.title}</h2>
 									<p class="post-desc">{post.data.description}</p>

@@ -38,6 +38,8 @@ const my = defineCollection({
 			heroImage: z.optional(image()),
 			tags: z.array(z.string()).default([]),
 			category: z.enum(['Hardware', 'Research', 'Launch', 'Lessons', 'Thought']).default('Lessons'),
+			isHub: z.boolean().default(false),
+			hubIcon: z.string().optional(),
 		}),
 });
 
