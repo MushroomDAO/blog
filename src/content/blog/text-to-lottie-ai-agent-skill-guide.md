@@ -7,7 +7,7 @@ pubDate: "2026-06-12"
 updatedDate: "2026-06-12"
 category: "Tech-Experiment"
 tags: ["Lottie动画", "AI编程", "开源Skill", "Claude Code", "动效设计", "前端开发", "text-to-lottie"]
-heroImage: "../../assets/banner-future-is-now.jpg"
+heroImage: "../../assets/images/text-to-lottie-banner.jpg"
 ---
 
 > **BLUF**：`diffusionstudio/lottie` 是 GitHub 上一个开源 Skill 框架，让 Claude Code、Codex 等编码 Agent 能从文字描述直接生成可上线的 Lottie 矢量动效 JSON。2.4k ★，MIT 协议，一行命令装好，热重载预览。更值得读的，是它背后的问题：为什么偏偏是 Lottie，AI 才能真的「解」它？
