@@ -17,7 +17,7 @@ tags: ["开源", "GitHub", "Web3", "ERC-4337", "AI", "Mycelium"]
 
 | 项目 | GitHub | 语言 | 简介 |
 |------|--------|------|------|
-| **AirAccount** | [AAStarCommunity/AirAccount](https://github.com/AAStarCommunity/AirAccount) | TypeScript / Solidity | 邮箱即账户的 ERC-4337 账户抽象实现，无助记词，Google OAuth + TEE 托管，Sepolia testnet 可用 |
+| **AirAccount** | [AAStarCommunity/AirAccount](https://github.com/AAStarCommunity/AirAccount) | TypeScript / Solidity / Rust | 邮箱即账户的 ERC-4337 账户抽象实现，无助记词，Google OAuth + TEE 托管，Sepolia testnet 可用。[→ Beta2 发布说明](https://blog.mushroom.cv/blog/airaccount-kms-beta2-v0-20-0-release/) |
 | **SuperPaymaster** | [AAStarCommunity/SuperPaymaster](https://github.com/AAStarCommunity/SuperPaymaster) | Solidity | ERC-4337 Paymaster，支持 AOA Gas 卡模式，让用户免 Gas 交互 |
 | **CometENS** | [MushroomDAO/CometENS](https://github.com/MushroomDAO/CometENS) | Solidity / TypeScript | 免费 .comet.eth 子域名服务，L2 OPResolver，ERC-721 子域所有权，进度 65% |
 | **Cos72** | [AAStarCommunity/Cos72](https://github.com/AAStarCommunity/Cos72) | TypeScript | 社区操作系统，含 MyTask / MyShop / MyVote 模块 |
@@ -45,4 +45,4 @@ AI 工具链      ██████        Agent 系统 / 技能管理 / 内容
 
 ---
 
-*最后更新：2026-06-11 | 所有项目均为 Apache 2.0 或 MIT 开源协议*
+*最后更新：2026-06-12 | 所有项目均为 Apache 2.0 或 MIT 开源协议*
