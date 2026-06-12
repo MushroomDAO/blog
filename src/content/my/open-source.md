@@ -23,6 +23,7 @@ tags: ["开源", "GitHub", "Web3", "ERC-4337", "AI", "Mycelium"]
 | **Cos72** | [AAStarCommunity/Cos72](https://github.com/AAStarCommunity/Cos72) | TypeScript | 社区操作系统，含 MyTask / MyShop / MyVote 模块 |
 | **BroodBrain** | [AAStarCommunity/Brood](https://github.com/AAStarCommunity/Brood) | Markdown | 组织神经系统，上下文管理、任务透明化、协议文档 |
 | **Mycelium Blog** | [MushroomDAO/blog](https://github.com/MushroomDAO/blog) | Astro / TypeScript | 本博客，多平台发布系统（Astro + WeChat + 小红书） |
+| **Heinu1（黑奴一号）** | [jhfnetboy/Heinu1](https://github.com/jhfnetboy/Heinu1) | TypeScript | 用微信远程控制家里的 Claude Code；iLink 官方 API，零封号风险，SQLite 会话持久化。[→ 介绍文章](https://blog.mushroom.cv/blog/heinu1-wechat-claude-code-remote-control-bot/) |
 
 ---
 
@@ -45,4 +46,4 @@ AI 工具链      ██████        Agent 系统 / 技能管理 / 内容
 
 ---
 
-*最后更新：2026-06-12 | 所有项目均为 Apache 2.0 或 MIT 开源协议*
+*最后更新：2026-06-12（新增 Heinu1）| 所有项目均为 Apache 2.0 或 MIT 开源协议*
