@@ -50,6 +50,7 @@ tags: ["研究", "AI", "区块链", "Web3", "社会资本", "意义经济"]
 
 | 文章 | 摘要 |
 |------|------|
+| [AirAccount KMS Beta2（v0.20.0）发布](https://blog.mushroom.cv/blog/airaccount-kms-beta2-v0-20-0-release/) | 私钥永不出 TEE，WebAuthn ceremony 覆盖全部签名路径，NXP 真机 34/34 E2E |
 | [SuperPaymaster：ERC-4337 AOA Gas 卡机制](https://blog.mushroom.cv/blog/superpaymaster-aoa-gas-card-erc4337/) | 让用户完全免 Gas 的 Paymaster 设计 |
 | [稳定币跨境支付系统分析](https://blog.mushroom.cv/blog/crypto-stablecoin-cross-border-payment-systematic-analysis/) | 稳定币替代 SWIFT 的技术与监管路径 |
 
@@ -73,4 +74,4 @@ tags: ["研究", "AI", "区块链", "Web3", "社会资本", "意义经济"]
 
 ---
 
-*最后更新：2026-06-11 | 发新文章后可在对应分区追加链接*
+*最后更新：2026-06-12 | 发新文章后可在对应分区追加链接*
