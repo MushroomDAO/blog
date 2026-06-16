@@ -50,6 +50,8 @@ tags: ["研究", "AI", "区块链", "Web3", "社会资本", "意义经济"]
 
 | 文章 | 摘要 |
 |------|------|
+| [SuperPaymaster v5.3.3-beta.3：首次公开发布](https://blog.mushroom.cv/blog/superpaymaster-v5-3-3-beta3-gasless-infrastructure/) | 去中心化 Gas 赞助基础设施，xPNTs 代币代付，人类 + AI Agent 双通道，968/0/0 Forge |
+| [SuperPaymaster 部署运营指南](https://blog.mushroom.cv/blog/superpaymaster-v5-3-3-beta-launch-operations-guide/) | UUPS 升级脚本、audit-core 三维度验证、Sepolia 地址表、主网 Checklist |
 | [AirAccount 合约 v0.17.2-beta.3 发布](https://blog.mushroom.cv/blog/airaccount-contract-v0-17-2-beta3-release/) | 纯质量版本：VERSION 常量、AlgTierLib、custom errors、ForceExit 加固，679/0/0 Forge |
 | [AirAccount KMS Beta2（v0.20.0）发布](https://blog.mushroom.cv/blog/airaccount-kms-beta2-v0-20-0-release/) | 私钥永不出 TEE，WebAuthn ceremony 覆盖全部签名路径，NXP 真机 34/34 E2E |
 | [SuperPaymaster：ERC-4337 AOA Gas 卡机制](https://blog.mushroom.cv/blog/superpaymaster-aoa-gas-card-erc4337/) | 让用户完全免 Gas 的 Paymaster 设计 |
