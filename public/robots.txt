@@ -2,6 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /_astro/
 Disallow: /dist/
+Disallow: /cdn-cgi/
+Disallow: /*?category=
 
 # Allow AI search crawlers for citation indexing
 User-agent: OAI-SearchBot

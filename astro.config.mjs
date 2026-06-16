@@ -7,5 +7,6 @@ import { defineConfig } from 'astro/config';
 // for accurate per-post lastmod dates from frontmatter pubDate/updatedDate
 export default defineConfig({
 	site: 'https://blog.mushroom.cv',
+	trailingSlash: 'always',
 	integrations: [mdx()],
 });

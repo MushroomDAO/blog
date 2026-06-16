@@ -19,7 +19,7 @@ tags: ["开源", "GitHub", "Web3", "ERC-4337", "AI", "Mycelium"]
 |------|--------|------|------|
 | **AirAccount** | [AAStarCommunity/AirAccount](https://github.com/AAStarCommunity/AirAccount) | TypeScript / Solidity / Rust | 邮箱即账户的 ERC-4337 账户抽象实现，无助记词，Google OAuth + TEE 托管，Sepolia testnet 可用。[→ KMS Beta2](https://blog.mushroom.cv/blog/airaccount-kms-beta2-v0-20-0-release/) |
 | **AirAccount Contract** | [AAStarCommunity/airaccount-contract](https://github.com/AAStarCommunity/airaccount-contract) | Solidity | 核心智能合约层：WebAuthn Passkey 登录、Tiered 多签、Session Key、Social Recovery、ForceExit、EIP-7702 EOA 升级。[→ beta.3 发布说明](https://blog.mushroom.cv/blog/airaccount-contract-v0-17-2-beta3-release/) |
-| **SuperPaymaster** | [AAStarCommunity/SuperPaymaster](https://github.com/AAStarCommunity/SuperPaymaster) | Solidity | ERC-4337 Paymaster，支持 AOA Gas 卡模式，让用户免 Gas 交互 |
+| **SuperPaymaster** | [AAStarCommunity/SuperPaymaster](https://github.com/AAStarCommunity/SuperPaymaster) | Solidity | 去中心化 Gas 赞助基础设施，xPNTs 代币代付，人类 + AI Agent 双通道，首次公开发布 v5.3.3-beta.3。[→ 发布说明](https://blog.mushroom.cv/blog/superpaymaster-v5-3-3-beta3-gasless-infrastructure/) |
 | **CometENS** | [MushroomDAO/CometENS](https://github.com/MushroomDAO/CometENS) | Solidity / TypeScript | 免费 .comet.eth 子域名服务，L2 OPResolver，ERC-721 子域所有权，进度 65% |
 | **Cos72** | [AAStarCommunity/Cos72](https://github.com/AAStarCommunity/Cos72) | TypeScript | 社区操作系统，含 MyTask / MyShop / MyVote 模块 |
 | **BroodBrain** | [AAStarCommunity/Brood](https://github.com/AAStarCommunity/Brood) | Markdown | 组织神经系统，上下文管理、任务透明化、协议文档 |
@@ -47,4 +47,4 @@ AI 工具链      ██████        Agent 系统 / 技能管理 / 内容
 
 ---
 
-*最后更新：2026-06-12（新增 Heinu1）| 所有项目均为 Apache 2.0 或 MIT 开源协议*
+*最后更新：2026-06-12（SuperPaymaster beta.3 首次公开发布）| 所有项目均为 Apache 2.0 或 MIT 开源协议*

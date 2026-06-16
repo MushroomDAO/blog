@@ -1,1 +1,9 @@
+# Legacy URL redirects (renamed articles)
 /blog/ppt-master-editable-native-powerpoint/ /blog/ai-ppt-master-native-powerpoint/ 301
+
+# Deleted articles — redirect to blog index to prevent 404
+/blog/apfel-apple-intelligence-cli-tool/ /blog/ 301
+/blog/apfel-cli-tool-apple-intelligence-local-llm/ /blog/ 301
+/blog/apfel--apple-silicon-mac-local-ai-tool-113520/ /blog/ 301
+/blog/research-paper-writing-tool-upgrade-/ /blog/ 301
+/blog/tianjin-food-guide-fuchu-rongfahao/ /blog/ 301

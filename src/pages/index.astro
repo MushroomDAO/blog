@@ -355,7 +355,7 @@ const postsData = posts.map(post => ({
 			<div class="filter-bar">
 				<a href="/" class="filter-item" data-filter="all">All</a>
 				{categories.map(cat => (
-					<a href={`/?category=${cat}`} class="filter-item" data-filter={cat}>
+					<a href={`/?category=${cat}`} class="filter-item" data-filter={cat} rel="nofollow">
 						<span>{categoryIcons[cat]}</span>
 						<span>{cat}</span>
 					</a>
