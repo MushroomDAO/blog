@@ -176,23 +176,28 @@ Preferred constraints:
 - file size: under `120KB` when practical
 - filename: English only
 
-Default banner pool:
-- `blog-placeholder-1.jpg`
-- `blog-placeholder-2.jpg`
-- `blog-placeholder-3.jpg`
-- `blog-placeholder-4.jpg`
-- `blog-placeholder-5.jpg`
+Default banner pool (photorealistic only — prefer these):
+- `banner-deep-research-agent.jpg` — research/data/AI agents
+- `banner-agent-self-evolution.jpg` — neural networks, learning, abstract AI
+- `banner-ai-infrastructure.jpg` — infra, servers, harness, systems
+- `banner-startup-brand.jpg` — teams, startups, collaboration, brand
+- `banner-mycelium-realistic.jpg` — Mycelium / digital public goods / nature
 - `banner-human-ai-coexistence.jpg`
+- `banner-digital-public-goods.jpg`
+- `banner-ai-smart-city-collab.jpg`
+- `banner-personal-growth-ai-skills.jpg`
+
+Fallback placeholders (generic, use only if nothing above fits):
+- `blog-placeholder-1.jpg` … `blog-placeholder-5.jpg`
+
+Deprecated — DO NOT use for new articles (non-photorealistic illustrations; still referenced by legacy posts, so files are kept):
 - `banner-cypherpunk-revolution.jpg`
 - `banner-mycelial-network.jpg`
 - `banner-future-is-now.jpg`
 - `banner-ai-new-intelligence.jpg`
-- `banner-digital-public-goods.jpg`
-- `banner-ai-smart-city-collab.jpg`
 - `banner-org-ai-transformation.jpg`
 - `banner-ai-city-ecosystem.jpg`
 - `banner-ai-personal-assistant.jpg`
-- `banner-personal-growth-ai-skills.jpg`
 
 Default banner frontmatter format:
 
