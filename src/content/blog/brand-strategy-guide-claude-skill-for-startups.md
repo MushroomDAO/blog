@@ -7,7 +7,7 @@ pubDate: "2026-06-19"
 updatedDate: "2026-06-19"
 category: "Tech-News"
 tags: ["品牌策略", "Claude Code", "AI Skill", "创业", "Brand Strategy", "开源工具", "小团队"]
-heroImage: "../../assets/banner-org-ai-transformation.jpg"
+heroImage: "../../assets/banner-startup-brand.jpg"
 ---
 
 > **BLUF**：**brand-strategy-guide**（GitHub: DevinKuang/brand-strategy-guide，MIT 开源，34★）是一个把"品牌全案策略指南"方法论封装进 **Claude Code 技能**的工具。它的价值很直接：早期创业者做一套系统的品牌策略，传统上要花 **1.5 万到 5 万美元**请咨询公司；而用这个技能，你只需要回答一组结构化问题，AI 就能产出 **40-100 页**的品牌全案——从市场定位、竞争差异、品牌识别系统，到上市路线图、团队结构、预算分配。本文讲清它是什么、为谁而做、以及小团队怎么 5 分钟上手。
