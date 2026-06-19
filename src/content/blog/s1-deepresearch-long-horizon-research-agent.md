@@ -7,7 +7,7 @@ pubDate: "2026-06-19"
 updatedDate: "2026-06-19"
 category: "Research"
 tags: ["AI Agent", "Deep Research", "深度研究", "长程任务", "轨迹数据", "Qwen3", "开源模型", "S1-DeepResearch"]
-heroImage: "../../assets/banner-ai-new-intelligence.jpg"
+heroImage: "../../assets/banner-deep-research-agent.jpg"
 ---
 
 > **BLUF**：ScienceOne 团队开源了 **S1-DeepResearch**（论文 arXiv:2606.15367，模型 32B + 8B-Preview，Apache 2.0）。它最反直觉的一点是：一个 **32B 的小模型，只靠监督微调（SFT）、完全不用强化学习**，就在覆盖 5 大能力、20 个基准的评测里逼近 GPT-5.2、Claude-4.6、GLM-5 这些闭源旗舰，甚至在文本推理上追平了体量大 71 倍的 Qwen3.5-397B。它的核心不是模型架构，而是一套**「知识图谱出题 → Agent 跑轨迹 → 五维验证」的数据构造范式**，以及随之开源的 **15K 高质量 Agent 轨迹数据集**。这篇文章拆解它怎么做到的，并梳理业界对「深度研究 Agent」这条路线的最新反思。

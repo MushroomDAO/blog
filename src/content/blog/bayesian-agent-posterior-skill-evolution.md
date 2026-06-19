@@ -7,7 +7,7 @@ pubDate: "2026-06-19"
 updatedDate: "2026-06-19"
 category: "Research"
 tags: ["AI Agent", "自进化", "贝叶斯", "技能进化", "Bayesian-Agent", "LLM Agent", "DataArcTech"]
-heroImage: "../../assets/banner-future-is-now.jpg"
+heroImage: "../../assets/banner-agent-self-evolution.jpg"
 ---
 
 > **BLUF**：你可能会问——让 Agent「进化」，不就是把成功的经验存下来、失败的改掉吗？为什么要扯上贝叶斯？**Bayesian-Agent**（论文 arXiv:2606.08348，DataArcTech 开源）给的答案是：因为 Agent 跑一次很贵、样本很少，**靠「数成功失败次数」这种朴素频率统计极易过拟合到单次运行**。它把每个技能（Skill/SOP）当成一个假设——"冻结的模型在某种条件下会不会成功"——维护一个**后验概率分布**，再把信念映射成 5 个可审计的动作：patch（打补丁）、split（拆分）、compress（压缩）、retire（淘汰）、explore（探索）。结果：SOP-Bench 80%→100%，RealFin-Bench 增量修复模式下只花基线 **10-25%** 的 token 就修好了失败任务。本文拆解它的机制，并把它放进「Agent 自进化」这条技术线里看。

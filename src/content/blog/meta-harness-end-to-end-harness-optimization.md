@@ -7,7 +7,7 @@ pubDate: "2026-06-19"
 updatedDate: "2026-06-19"
 category: "Research"
 tags: ["AI Agent", "Harness优化", "Meta-Harness", "Stanford", "Chelsea Finn", "DSPy", "TerminalBench"]
-heroImage: "../../assets/banner-ai-new-intelligence.jpg"
+heroImage: "../../assets/banner-ai-infrastructure.jpg"
 ---
 
 > **BLUF**：一个 LLM 应用能力的高低，越来越不取决于模型本身，而取决于**包在模型外面的那层代码——harness**：决定给模型存什么、取什么、在每一步喂什么上下文。问题是，这层 harness 今天几乎全靠人手工调。Stanford IRIS Lab 的 **Meta-Harness**（论文 arXiv:2603.28052，作者含 Chelsea Finn、Omar Khattab）提出：**把 harness 本身变成可自动优化的对象**——用一个能访问历史候选的源码、分数和执行轨迹的 **agentic proposer**，在外层循环里系统地搜索更好的 harness 实现。结果很硬：文本分类比 SOTA 上下文管理系统高 **7.7 分**且省 **75%** 的 token；IMO 级数学在 5 个 held-out 模型上平均 **+4.7 分**；在 **TerminalBench-2** 上自动发现的 harness 超过手工调优的基线。这篇文章拆解它，并把它和我们刚写过的 Bayesian-Agent 接到同一条主线上。
