@@ -110,13 +110,30 @@ publish-blog.sh <article.md> [--wechat] [--theme NAME] [--no-deploy]
 
 ---
 
+---
+
+## 四、2026-06-20 执行进度（Update）
+
+| 未来方向项 | 状态 |
+|---|---|
+| 一条命令端到端 `--gen-banner` | ✅ 已实现并测试（publish-blog.sh 生成写实 banner→写回 heroImage→发布） |
+| 40164 预检 | ✅ 已实现（发草稿前打印出口 IP 提示） |
+| TLS workaround 根治 | ✅ 部分（优先 `CF_CA_CERT`/`NODE_EXTRA_CA_CERTS`，否则回退）；彻底根治待提供代理 CA .pem |
+| 统一 slug 生成 | ✅ 设计上已统一（canonical 流程 slug = 文件名，旧逻辑废弃） |
+| M2 草稿幂等 | ✅ 已实现"仅映射、不自动删"：发草稿前若已有同 slug 草稿则告警，发后写入 `pipeline/m2/output/drafts-map.json`（按用户决定，不自动删除微信草稿） |
+| M3 小红书并入 | ⏸ 暂缓（MCP 当前未运行 + 脚本有 bug；待小红书定位文档一起做） |
+
+**小红书图文生成 skill（已就绪）**：`op7418/guizang-social-card-skill` 已装到 `~/.claude/skills/`，依赖 Node + Playwright(Chromium) 已装，本地渲染测试通过（输出 1080×1440 小红书图文卡 PNG）。它与 FLUX banner 互补，可承担 M3 的图文卡生成。
+
 ## 附：推荐的标准发布动作（给模型/人）
 
 ```bash
-# 1. 写好 src/content/blog/<slug>.md（含完整双语 frontmatter + 版权块）
-# 2. 生成写实封面
+# 方式 A（推荐，一条命令含生成封面）：
+scripts/publish-blog.sh src/content/blog/<slug>.md \
+  --gen-banner "<english scene prompt>" --wechat --theme blue
+
+# 方式 B（手动两步）：
 bash .agents/skills/banner-creator/generate-banner.sh "<slug>" "<english scene prompt>"
-#    把打印出的 heroImage 行填进 frontmatter
-# 3. 一条命令发布 blog + 公众号
+#    把打印出的 heroImage 行填进 frontmatter，然后：
 scripts/publish-blog.sh src/content/blog/<slug>.md --wechat --theme blue
 ```

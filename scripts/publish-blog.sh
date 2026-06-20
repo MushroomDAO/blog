@@ -126,10 +126,34 @@ echo "  https://$DOMAIN/blog/$SLUG/ → $code"
 
 # ---- 5. optional WeChat draft ----
 if [ "$DO_WECHAT" = true ]; then
+  PRIOR_JSON="pipeline/m2/output/${SLUG}.json"
+  # Idempotency (mapping-only, NO auto-delete): warn if a prior draft exists.
+  if [ -f "$PRIOR_JSON" ]; then
+    PRIOR_ID=$(grep -m1 '"mediaId"' "$PRIOR_JSON" | sed -E 's/.*"mediaId": ?"([^"]+)".*/\1/')
+    echo "  ⚠️ a prior WeChat draft exists for this slug (media_id=${PRIOR_ID:-?})."
+    echo "     A NEW draft will be created — delete the old one manually in the WeChat console if unwanted."
+  fi
   # 40164 pre-check: WeChat rejects API calls from non-whitelisted egress IPs.
   EGRESS=$(curl -s -m 5 https://api.ipify.org || echo "?")
-  echo "[5/5] creating WeChat draft… (egress IP: $EGRESS — must be in the WeChat IP allowlist; error 40164 = not whitelisted)"
+  echo "[5/5] creating WeChat draft… (egress IP: $EGRESS — must be in the WeChat IP allowlist; 40164 = not whitelisted)"
   ( cd pipeline/m2 && node index.js "../../$MD_FILE" ${THEME:+--theme "$THEME"} 2>&1 | grep -E 'Draft created|Title:|❌|Error|40164' )
+  # Record/update the consolidated slug→media_id map (non-destructive index).
+  if [ -f "$PRIOR_JSON" ]; then
+    python3 - "$SLUG" "$PRIOR_JSON" <<'PY'
+import json, sys, os
+slug, src = sys.argv[1], sys.argv[2]
+try:
+    d = json.load(open(src))
+except Exception:
+    sys.exit(0)
+p = "pipeline/m2/output/drafts-map.json"
+m = json.load(open(p)) if os.path.exists(p) else {}
+m[slug] = {"mediaId": d.get("mediaId"), "title": d.get("title"), "publishedAt": d.get("publishedAt")}
+json.dump(m, open(p, "w"), ensure_ascii=False, indent=2)
+mid = (d.get("mediaId") or "")[:16]
+print(f"  ✓ recorded mapping: {slug} → {mid}…")
+PY
+  fi
 else
   echo "[5/5] skipped WeChat (pass --wechat to enable)"
 fi
