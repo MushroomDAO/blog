@@ -1,5 +1,7 @@
 #!/bin/bash
 # Usage: ./publish.sh content.txt
+# ⚠️ DEPRECATED: superseded by scripts/publish-blog.sh (canonical flow).
+echo "⚠️  publish.sh is deprecated → use scripts/publish-blog.sh." >&2
 set -e
 cd "$(dirname "$0")"
 

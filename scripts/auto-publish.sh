@@ -1,6 +1,10 @@
 #!/bin/bash
 # 自动发布脚本 - 最小化交互
 # Usage: ./scripts/auto-publish.sh /path/to/content.txt [optional-image-path]
+# ⚠️ DEPRECATED: superseded by scripts/publish-blog.sh.
+#    Known issues this had: tags=["tech","ai"], titleEn=slug, description=first
+#    lines (low quality), deploy without TLS workaround / --commit-dirty.
+echo "⚠️  auto-publish.sh is deprecated → use scripts/publish-blog.sh." >&2
 #
 # 环境变量:
 #   BLOG_USER - 用户配置名 (默认: mushroom)

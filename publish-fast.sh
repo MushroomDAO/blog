@@ -1,6 +1,8 @@
 #!/bin/bash
 # 极速模式：已润色文字 → 直接发布 P1 + P2
 # Usage: ./publish-fast.sh content.txt
+# ⚠️ DEPRECATED: superseded by scripts/publish-blog.sh (canonical flow).
+echo "⚠️  publish-fast.sh is deprecated → use scripts/publish-blog.sh." >&2
 
 set -e
 cd "$(dirname "$0")"
