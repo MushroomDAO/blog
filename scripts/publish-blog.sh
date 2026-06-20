@@ -26,12 +26,14 @@ MD_FILE="${1:-}"
 DO_WECHAT=false
 DO_DEPLOY=true
 THEME=""
+BANNER_PROMPT=""
 shift || true
 while [ $# -gt 0 ]; do
   case "$1" in
     --wechat) DO_WECHAT=true ;;
     --no-deploy) DO_DEPLOY=false ;;
     --theme) shift; THEME="$1" ;;
+    --gen-banner) shift; BANNER_PROMPT="$1" ;;
     *) echo "unknown arg: $1" >&2; exit 2 ;;
   esac
   shift
@@ -52,6 +54,21 @@ DOMAIN=$(grep -m1 'domain:' "$USER_CFG" | sed -E "s/.*domain:[[:space:]]*'([^']+
 PROJECT="${PROJECT:-blog-mushroom}"; DOMAIN="${DOMAIN:-blog.mushroom.cv}"
 SLUG="$(basename "$MD_FILE" .md)"
 echo "🍄 publish-blog | user=$BLOG_USER project=$PROJECT slug=$SLUG"
+
+# ---- 0. optional: generate photorealistic banner end-to-end (--gen-banner) ----
+if [ -n "$BANNER_PROMPT" ]; then
+  echo "[0] generating photorealistic banner via banner-creator…"
+  bash .agents/skills/banner-creator/generate-banner.sh "$SLUG" "$BANNER_PROMPT"
+  NEW_HERO="../../assets/images/${SLUG}-banner.jpg"
+  if grep -q '^heroImage:' "$MD_FILE"; then
+    sed -i '' -E "s|^heroImage:.*|heroImage: \"$NEW_HERO\"|" "$MD_FILE"
+  else
+    sed -i '' -E "0,/^---$/!{ /^---$/i\\
+heroImage: \"$NEW_HERO\"
+}" "$MD_FILE" 2>/dev/null || true
+  fi
+  echo "  ✓ heroImage set → $NEW_HERO"
+fi
 
 # ---- 1. frontmatter + SEO sanity ----
 echo "[1/5] validating frontmatter & SEO…"
@@ -85,10 +102,21 @@ echo "  ✓ route built: /blog/$SLUG/"
 
 if [ "$DO_DEPLOY" = false ]; then echo "✅ build+validate done (--no-deploy)"; exit 0; fi
 
-# ---- 3. deploy (the one proven-good command) ----
+# ---- 3. deploy ----
+# Prefer a real CA bundle over the insecure TLS bypass. Set CF_CA_CERT (or
+# NODE_EXTRA_CA_CERTS) to your proxy's CA .pem to drop the workaround entirely.
 echo "[3/5] deploying to Cloudflare Pages ($PROJECT)…"
-NODE_TLS_REJECT_UNAUTHORIZED=0 npx wrangler pages deploy dist \
-  --project-name="$PROJECT" --branch=main --commit-dirty=true 2>&1 | tail -4
+CA="${NODE_EXTRA_CA_CERTS:-${CF_CA_CERT:-}}"
+if [ -n "$CA" ] && [ -f "$CA" ]; then
+  echo "  🔒 using CA bundle: $CA (secure TLS)"
+  NODE_EXTRA_CA_CERTS="$CA" npx wrangler pages deploy dist \
+    --project-name="$PROJECT" --branch=main --commit-dirty=true 2>&1 | tail -4
+else
+  echo "  ⚠️ no CA bundle set (CF_CA_CERT/NODE_EXTRA_CA_CERTS) — falling back to TLS bypass."
+  echo "     To fix the root cause, point CF_CA_CERT at your proxy CA .pem."
+  NODE_TLS_REJECT_UNAUTHORIZED=0 npx wrangler pages deploy dist \
+    --project-name="$PROJECT" --branch=main --commit-dirty=true 2>&1 | tail -4
+fi
 
 # ---- 4. validate live ----
 echo "[4/5] validating live URL…"
@@ -98,8 +126,10 @@ echo "  https://$DOMAIN/blog/$SLUG/ → $code"
 
 # ---- 5. optional WeChat draft ----
 if [ "$DO_WECHAT" = true ]; then
-  echo "[5/5] creating WeChat draft…"
-  ( cd pipeline/m2 && node index.js "../../$MD_FILE" ${THEME:+--theme "$THEME"} 2>&1 | grep -E 'Draft created|Title:|❌|Error' )
+  # 40164 pre-check: WeChat rejects API calls from non-whitelisted egress IPs.
+  EGRESS=$(curl -s -m 5 https://api.ipify.org || echo "?")
+  echo "[5/5] creating WeChat draft… (egress IP: $EGRESS — must be in the WeChat IP allowlist; error 40164 = not whitelisted)"
+  ( cd pipeline/m2 && node index.js "../../$MD_FILE" ${THEME:+--theme "$THEME"} 2>&1 | grep -E 'Draft created|Title:|❌|Error|40164' )
 else
   echo "[5/5] skipped WeChat (pass --wechat to enable)"
 fi
