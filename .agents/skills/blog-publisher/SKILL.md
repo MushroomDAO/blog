@@ -160,16 +160,24 @@ If another article already has today’s `pubDate`, choose a slug that will sort
 
 ### 2. Prepare Banner
 
-If the user provides no image, either:
-- generate a custom banner when requested, or
-- choose one default banner from `src/assets/`.
-
-For custom banners:
+**Default: generate a photorealistic per-article banner with the `banner-creator` skill.**
+Read `.agents/skills/banner-creator/SKILL.md`, distill an English scene prompt from the
+article's title/tags/description, then:
 
 ```bash
-convert INPUT.png -resize 1200x630^ -gravity center -extent 1200x630 -quality 85 src/assets/images/SLUG-banner.jpg
-ls -lh src/assets/images/SLUG-banner.jpg
+bash .agents/skills/banner-creator/generate-banner.sh "SLUG" "<english scene prompt>"
+# → writes src/assets/images/SLUG-banner.jpg (1200x630, <99KB, photorealistic)
+# → prints the exact heroImage: frontmatter line to use
 ```
+
+Only fall back to the **default pool** (`src/assets/banner-*.jpg`, photorealistic-only list
+below) if FLUX is unavailable or the user opts out. If the user supplies their own image:
+
+```bash
+magick INPUT.png -resize 1200x630^ -gravity center -extent 1200x630 -strip -define jpeg:extent=98KB src/assets/images/SLUG-banner.jpg
+```
+
+Never use the deprecated illustration banners for new articles.
 
 Preferred constraints:
 - size: `1200x630`
@@ -348,9 +356,10 @@ Use these only when they fit the current task:
 
 | Script | Purpose |
 |---|---|
-| `./publish.sh content.txt` | full publish flow, may require AI polishing |
-| `./publish-fast.sh content.txt` | fast direct publish flow |
-| `./deploy.sh` | deploy only |
+| `scripts/publish-blog.sh <article.md> [--wechat] [--theme NAME]` | **CANONICAL** — validate frontmatter+SEO → build → deploy → validate live → optional WeChat draft. Use this. |
+| `scripts/publish-blog.sh <article.md> --no-deploy` | build + validate only (dry run) |
+| `./deploy.sh` | deploy only (legacy; canonical script deploys with the correct TLS + `--commit-dirty` flags) |
+| `./publish.sh` / `./publish-fast.sh` / `scripts/auto-publish.sh` | ⚠️ DEPRECATED — divergent slug/frontmatter logic; do not use |
 
 ## SEO/GEO Integration
 
