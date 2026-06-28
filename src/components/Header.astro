@@ -95,5 +95,11 @@ import HeaderLink from './HeaderLink.astro';
 		.social-links {
 			display: none;
 		}
+		/* let nav links wrap instead of overflowing the viewport
+		   (was a single non-wrapping flex row → horizontal page scroll on phones) */
+		nav { flex-wrap: wrap; }
+		.internal-links { flex-wrap: wrap; gap: 0.1em 0.4em; }
+		nav a { padding: 0.5em 0.4em; }
+		.rss-icon { padding: 0.5em 0.4em; }
 	}
 </style>

@@ -113,6 +113,8 @@ code {
 pre {
 	padding: 1.5em;
 	border-radius: 8px;
+	max-width: 100%;
+	overflow-x: auto;
 }
 pre > code {
 	all: unset;

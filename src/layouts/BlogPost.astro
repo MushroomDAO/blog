@@ -146,7 +146,11 @@ const related = allPosts
 			/* 双语内容区域 */
 			.bilingual-content {
 				display: grid;
-				grid-template-columns: 1fr 1fr;
+				/* minmax(0, 1fr) lets each column shrink below its content's
+				   min-content width — without it a long code line or URL in one
+				   column blows the track out and overflows the page (notably on
+				   ~1512px / 14" screens where each column is only ~660px). */
+				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 				gap: 3em;
 				max-width: 1400px;
 				margin: 0 auto;
@@ -162,13 +166,42 @@ const related = allPosts
 			@media (max-width: 768px) {
 				.bilingual-content {
 					grid-template-columns: 1fr;
-					gap: 2em;
+					gap: 1em;
+					/* halve the outer padding on phones so the content area is
+					   wider and text wraps less (was 2em → 1em, horizontal even
+					   tighter so reading needs far less scrolling) */
+					padding: 1em 0.5em;
+				}
+				.content-column {
+					/* halve the inner padding too (was 1.5em → 0.75em) */
+					padding: 0.75em;
+				}
+				.related-posts {
+					padding: 0 0.75em;
 				}
 			}
 			.content-column {
 				padding: 1.5em;
 				background: linear-gradient(var(--gray-gradient)) no-repeat;
 				border-radius: 12px;
+				/* allow this grid item to shrink so its children can wrap/scroll
+				   instead of forcing the column (and the page) wider */
+				min-width: 0;
+			}
+			/* Keep wide content (code blocks, tables, long URLs) inside the
+			   column: scroll horizontally within the block, never the page. */
+			.prose :global(pre) {
+				overflow-x: auto;
+				max-width: 100%;
+			}
+			.prose :global(table) {
+				display: block;
+				width: 100%;
+				overflow-x: auto;
+			}
+			.prose :global(img) {
+				max-width: 100%;
+				height: auto;
 			}
 			.column-header {
 				display: flex;
@@ -257,6 +290,24 @@ const related = allPosts
 			.related-date {
 				font-size: 0.78em;
 				color: rgb(var(--gray));
+			}
+
+			/* ===== Mobile reading width — placed LAST so it wins over the
+			   base .content-column / .title-section rules (same specificity,
+			   later source order). Halves the padding so the text column is
+			   much wider and wraps far less on phones. ===== */
+			@media (max-width: 768px) {
+				main { padding-left: 0.5em; padding-right: 0.5em; }
+				.bilingual-content { padding: 1em 0.4em; gap: 1em; }
+				.content-column { padding: 0.6em; }
+				.title-section { padding: 1.2em 0.5em; }
+				.title-cn { font-size: 1.5em; }
+				.title-en { font-size: 1.05em; }
+				.related-posts { padding: 0 0.5em; }
+				.prose { font-size: 0.9em; }
+				/* never let a long code line / URL push the whole page wider */
+				.prose :global(pre) { overflow-x: auto; max-width: 100%; }
+				.prose :global(code) { overflow-wrap: anywhere; word-break: break-word; }
 			}
 		</style>
 	</head>
