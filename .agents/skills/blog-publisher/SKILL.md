@@ -229,6 +229,42 @@ src/content/blog/SLUG.md
 
 Do not use `pipeline/m1/publisher.py` to save the article when the final slug matters. It derives a filename from `titleEn`, truncates long names, and can create duplicate or undesirable routes.
 
+### 3.5 Body Illustrations — auto IP-matched (正文配图，新)
+
+目的：在文章的关键认知节点插入手绘 IP 配图，把关键段落 / 观点概括成「核心流程 · 逻辑骨架」的形象化图，让整篇文章更友好、易读、易理解。
+
+**Banner 不变**：hero banner 仍用第 2 步的 `banner-creator` 照片级 banner。本步骤**只做正文内插图**，不碰 banner。
+
+正文 IP 按文章类别 / 主题**自动匹配**（这是给三个 IP 界定的工作范围）：
+
+| 文章主题 / 类别 | 用哪个 skill | IP 形象 |
+|---|---|---|
+| 科技（工具 / AI / 代码 / 工程 / 协议；`Tech-News`、`Tech-Experiment`）| `mycelium-mushroom-illustrations` | 小M（黑色蘑菇 + 橙色菌丝）|
+| 社会 / 创作思考（意义经济 / 反思 / 创作者视角 / 战略；偏思想的 `Research`、`Progress-Report`、`Thought`、`Lessons`）| `mycelium-avatar-illustrations` | 小J（作者卡通小人：刘海+山羊胡+红背带）|
+| 科普（向大众讲清原理 / 现象）| `mycelium-baobao-cat-illustrations` | Baobao（白色德文卷毛猫）|
+| 不明确 / 不好匹配 | **随机选一个** | 三选一 |
+
+步骤：
+1. **判定 IP**：按上表，用 `category` + 正文主题判断；拿不准就随机选一个，不要卡住。
+2. **选锚点**：挑 3-6 个关键认知节点（核心判断、流程骨架、关键观点、前后对比、承接路径），不要平均配图、不要把正文做成画册。
+3. **生成（Codex image_gen，无人值守）**：
+   ```bash
+   codex exec -C "$(pwd)" -s workspace-write \
+     "Use \$<matched-skill> 读取 src/content/blog/SLUG.md，挑 3-6 个关键认知锚点，逐张生成 16:9 纯白底手绘正文配图（主角承担核心动作，把该段的核心流程/逻辑骨架画出来），保存到 src/assets/images/，命名 SLUG-fig-01.png、SLUG-fig-02.png …。不要生成 banner，不要把多张拼成一张。"
+   ```
+4. **压到 < 90KB（硬性要求）**：生成后逐张压缩，确保每张正文插图小于 90KB。手绘线稿调色板色彩少，降色即可大幅瘦身：
+   ```bash
+   for f in src/assets/images/SLUG-fig-*.png; do
+     magick "$f" -strip -colors 64 "$f"
+     # 仍 >90KB 就再降一档分辨率
+     [ "$(stat -f%z "$f")" -gt 92160 ] && magick "$f" -resize 1280x -strip -colors 48 "$f"
+   done
+   ```
+5. **插入**：在对应关键节点用 `![alt](../../assets/images/SLUG-fig-NN.png)` 插入；**中文与英文两侧都插**（双语对齐，和现有 minicpmo 等文章一致）。
+6. **兜底**：若 Codex image_gen 不可用 / 失败，记录并**跳过本步、不要阻塞发布**，提示用户稍后在 Codex 手动补图。
+
+注意：图是位图 PNG；图上中文要少；生成后扫一眼错别字；每张 < 90KB（Astro 构建时还会再转 webp，体积更小）。
+
 ### 4. Run SEO/GEO Check
 
 Read and apply `.agents/skills/seo-geo/SKILL.md`.
