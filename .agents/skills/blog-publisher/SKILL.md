@@ -526,6 +526,32 @@ Fix:
 - add the reported IP to the API whitelist
 - retry M2 after about 1 minute
 
+### Homepage missing after CI/CD rebuild
+
+Symptom:
+- individual article URLs return 200
+- article does NOT appear in homepage carousel or list
+- other recently committed articles do appear
+
+Cause:
+- article was deployed via `wrangler pages deploy --commit-dirty=true` but **never committed to git**
+- a subsequent `git push` by anyone triggered Cloudflare Pages CI/CD to rebuild from git
+- the git-based build doesn't include untracked files → article is absent from the rebuilt homepage
+
+Fix:
+```bash
+git add src/content/blog/SLUG.md src/assets/images/SLUG-banner.jpg
+git commit -m "feat(blog): publish SLUG (missed commit)"
+git push
+pnpm build
+source .env && NODE_TLS_REJECT_UNAUTHORIZED=0 npx wrangler pages deploy dist \
+  --project-name=blog-mushroom --branch=main --commit-dirty=true
+```
+
+Prevention:
+- `scripts/publish-blog.sh` now auto-runs `git add + git commit` at step [4.5] after each successful deploy
+- step 7.5 (manual commit reminder) is a fallback; prefer the canonical script
+
 ### Protected Git branch
 
 Blog deployment uses Cloudflare Pages deploy and does not require direct push to `main`.

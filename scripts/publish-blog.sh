@@ -124,6 +124,23 @@ code=$(curl -s -o /dev/null -w '%{http_code}' "https://$DOMAIN/blog/$SLUG/" || e
 echo "  https://$DOMAIN/blog/$SLUG/ → $code"
 [ "$code" = "200" ] || echo "  ⚠️ not 200 yet (CDN may lag a few seconds)"
 
+# ---- 4.5. git commit (critical: prevents CF CI/CD rebuild from stripping article from homepage) ----
+echo "[4.5] committing article to git…"
+git add "$MD_FILE" 2>/dev/null || true
+# also add banner if it lives under assets/images/
+BANNER_PATH="src/assets/images/${SLUG}-banner.jpg"
+[ -f "$BANNER_PATH" ] && git add "$BANNER_PATH" 2>/dev/null || true
+# figure-illustrations if any
+for fig in src/assets/images/${SLUG}-fig-*.png; do
+  [ -f "$fig" ] && git add "$fig" 2>/dev/null || true
+done
+if git diff --cached --quiet; then
+  echo "  ✓ nothing new to commit (already tracked)"
+else
+  git commit -m "feat(blog): publish ${SLUG}" 2>&1
+  echo "  ✓ committed — run 'git push' to sync remote and prevent CI/CD overwrite"
+fi
+
 # ---- 5. optional WeChat draft ----
 if [ "$DO_WECHAT" = true ]; then
   PRIOR_JSON="pipeline/m2/output/${SLUG}.json"
