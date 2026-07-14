@@ -1,5 +1,5 @@
 ---
-title: "按头安利：Building Towards Self-Driving Codebases with Long-Running, Asynchronous Agents"
+title: "按头安利：Cursor CTO 讲异步 Agent 与「自动驾驶」代码库"
 titleEn: "Must Watch: Building Towards Self-Driving Codebases with Long-Running, Asynchronous Agents"
 description: "Cursor 联合创始人兼 CTO Aman Sanger 在 NVIDIA GTC 2026 上发表演讲，拆解 AI 编程三个时代的演进：从自动补全 → 同步 Agent → 异步云端 Agent，最终走向「自动驾驶代码库」。30% 的 Cursor 内部 PR 已由云端 Agent 提交，包括一次 8 小时完成的 25× 性能优化重构。"
 descriptionEn: "Cursor co-founder and CTO Aman Sanger at NVIDIA GTC 2026 breaks down the three eras of AI-assisted programming: autocomplete → sync agents → async cloud agents → self-driving codebases. 30% of Cursor's internal PRs are now submitted by cloud agents, including an 8-hour 25× performance optimization refactor."
