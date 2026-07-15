@@ -408,6 +408,182 @@ python agent.py dev
 
 ---
 
+## 全开源自部署方案：零 API 费用的流程和成本
+
+如果不想依赖任何付费云服务，四个组件都有对应的开源替代：
+
+### 组件替换表
+
+| 组件 | 云端方案 | 开源自部署替代 |
+|------|----------|----------------|
+| WebRTC 服务器 | LiveKit Cloud | LiveKit Server（开源，Docker 部署） |
+| STT | 阿里云实时识别 | FunASR（达摩院，中文最强） / faster-whisper |
+| LLM | OpenAI GPT | Ollama + Qwen2.5-7B / vLLM + 任意开源模型 |
+| TTS | Cartesia Sonic-3 | Kokoro-TTS（82M 参数，CPU 可跑） / Fish Speech（支持音色克隆） |
+| 轮次检测 | LiveKit TurnDetector | Silero VAD（已集成在 LiveKit 插件里） |
+
+LiveKit Server 本身就是开源项目（这就是 LiveKit Cloud 的底层），完整自部署只需要部署 LiveKit Server 和三个推理服务，Agent Worker 代码逻辑完全不变。
+
+---
+
+### 硬件要求
+
+自部署的瓶颈在 LLM 推理，其余服务对算力要求不高：
+
+| 服务 | 最低配置 | 推荐配置 |
+|------|----------|----------|
+| LiveKit Server | 2 核 / 4 GB RAM | 4 核 / 8 GB RAM（支持百路以上并发） |
+| STT（faster-whisper base/small） | 4 核 CPU | GPU 可加速 3-5× |
+| STT（FunASR Paraformer-zh） | 8 GB RAM | A10 / 3090 GPU |
+| TTS（Kokoro-TTS） | 2 核 CPU，无 GPU | CPU 延迟约 200ms，可接受 |
+| TTS（Fish Speech） | 4 GB VRAM | 8 GB VRAM（推理更快） |
+| LLM（Qwen2.5-7B int4） | 8 GB VRAM | 12 GB VRAM（batch 更大） |
+| LLM（Qwen2.5-14B int4） | 12 GB VRAM | 24 GB VRAM（RTX 3090/4090） |
+
+**最实用的本地一体机选择**：Mac mini M4 Pro（24 GB 统一内存）可以跑 Qwen2.5-14B + faster-whisper + Kokoro-TTS，一台机器搞定，购入成本约 1 万元人民币，跑通后无任何后续费用。
+
+---
+
+### 成本估算（月度）
+
+**场景 A：开发测试，偶尔使用**
+
+| 项目 | 方式 | 月费 |
+|------|------|------|
+| LiveKit Server | 最小 VPS（1C2G） | ¥30 |
+| STT + TTS + LLM | 本地 Mac / 现有设备 | 0 |
+| **合计** | | **≈ ¥30/月** |
+
+**场景 B：轻量生产，小规模并发（10 路以内）**
+
+| 项目 | 方式 | 月费 |
+|------|------|------|
+| LiveKit Server | 4C8G VPS | ¥80-150 |
+| GPU 推理（STT + LLM + TTS） | 云 GPU 按需 A10（~4h/天） | ¥500-800 |
+| 带宽 | 含在 VPS 里 | 0 |
+| **合计** | | **≈ ¥600-950/月** |
+
+**场景 C：一次性购买 GPU 服务器，长期运营**
+
+| 项目 | 方式 | 成本 |
+|------|------|------|
+| 服务器（RTX 4090 × 1） | 二手主机 | ¥15,000 一次性 |
+| 带宽（100Mbps 独享） | IDC 托管 | ¥500-800/月 |
+| 电费（约 350W 满负载） | | ¥300-500/月 |
+| **合计** | | 约 16 个月回本，之后 ≈ ¥800-1300/月 |
+
+和云端方案对比：阿里云 STT 超免费额度后约 ¥3.5/小时；Cartesia 超免费额度后 $0.065/千字符；加上 LLM API，高频使用场景下云端月费很快超过自部署的电费+带宽。
+
+---
+
+### 自部署的代码改动
+
+LiveKit Agent 代码只需把插件换成指向本地端口，逻辑层完全不变：
+
+**第一步：启动本地服务**
+
+```bash
+# LiveKit Server
+docker run -d \
+  -p 7880:7880 -p 7881:7881 -p 7882:7882/udp \
+  -e LIVEKIT_KEYS="devkey: secret" \
+  livekit/livekit-server --dev
+
+# LLM：Ollama
+brew install ollama
+ollama pull qwen2.5:7b
+ollama serve  # 监听 localhost:11434
+
+# TTS：Kokoro-FastAPI（OpenAI 兼容端口）
+pip install kokoro-fastapi
+python -m kokoro_fastapi  # 监听 localhost:8880
+
+# STT：faster-whisper 的 OpenAI 兼容服务
+pip install faster-whisper-server
+uvicorn faster_whisper_server.main:app --port 8000
+# 或用 whisper.cpp 的 server 模式
+```
+
+**第二步：Agent 代码只改 base_url**
+
+```python
+from livekit.plugins import openai as lk_openai
+from livekit.plugins import silero
+
+session = AgentSession(
+    # STT → 本地 faster-whisper，OpenAI 兼容接口
+    stt=lk_openai.STT(
+        base_url="http://localhost:8000/v1",
+        api_key="not-needed",
+        model="Systran/faster-whisper-large-v3",
+        language="zh",
+    ),
+
+    # LLM → 本地 Ollama（qwen2.5:7b 或更大）
+    llm=lk_openai.LLM(
+        base_url="http://localhost:11434/v1",
+        api_key="ollama",
+        model="qwen2.5:7b",
+    ),
+
+    # TTS → 本地 Kokoro，OpenAI 兼容接口
+    tts=lk_openai.TTS(
+        base_url="http://localhost:8880/v1",
+        api_key="not-needed",
+        model="kokoro",
+        voice="af_heart",   # Kokoro 内置音色
+    ),
+
+    # 轮次检测 → 换成 Silero VAD（纯本地）
+    vad=silero.VAD.load(),
+
+    preemptive_generation=True,
+)
+```
+
+LiveKit Server 本地启动后，`.env` 里的 `LIVEKIT_URL` 改成 `ws://localhost:7880`，其余不变。
+
+---
+
+### 延迟对比
+
+引入本地推理后，延迟构成变了：
+
+| 环节 | 云端方案 | 本地方案（RTX 4090） |
+|------|----------|---------------------|
+| STT 首字延迟 | 100-200ms（网络 RTT） | 50-100ms |
+| LLM 首 token | 300-600ms（云端 API） | 100-300ms（本地 int4） |
+| TTS 首帧音频 | 80-150ms（Cartesia） | 50-200ms（Kokoro CPU） |
+| WebRTC 传输 | 20-50ms（LiveKit Cloud） | 10-30ms（本地局域网） |
+
+本地推理的 STT 和 LLM 延迟通常**低于云端**（省了网络 RTT），TTS 延迟取决于是否有 GPU。整体感知延迟：局域网内全本地方案可以做到 500ms 以内首次响应。
+
+---
+
+### 什么情况选哪种方案
+
+| 场景 | 建议 |
+|------|------|
+| 快速验证 / demo | 云端免费额度，0 成本启动 |
+| 个人工具，偶尔自用 | 本地 Mac + 免费 LiveKit 套餐（只有 LiveKit Server 一个成本） |
+| 产品化，高频使用 | 自部署 GPU 服务器，16 个月内成本低于云端累计费用 |
+| 数据不能出境 / 合规要求 | 必须全链路自部署，云端 API 不可用 |
+| 需要自定义音色克隆 | Fish Speech（开源克隆）替代 Cartesia |
+
+---
+
+## 延伸阅读
+
+- [livekit/agents 官方文档](https://docs.livekit.io/agents/)
+- [python-agents-examples：50+ 场景](https://github.com/livekit-examples/python-agents-examples)（电话外呼、语音 RAG、多语言、情感识别等）
+- [Cartesia 音色克隆指南](https://docs.cartesia.ai/getting-started/voice-cloning)
+- [阿里云实时语音识别 SDK](https://help.aliyun.com/zh/isi/developer-reference/real-time-speech-recognition)
+- [FunASR 流式识别部署文档](https://github.com/modelscope/FunASR)
+- [Kokoro-TTS 本地部署](https://github.com/remsky/Kokoro-FastAPI)
+- [Fish Speech 音色克隆](https://github.com/fishaudio/fish-speech)
+
+---
+
 © 2026 Author: Mycelium Protocol
 
 <!--EN-->
@@ -541,7 +717,114 @@ Enough for demos and early testing without paying upfront.
 
 ---
 
+---
+
+### Going Fully Open-Source: Self-Hosted Stack, Cost, and Workflow
+
+Every component has an open-source self-hosted replacement — no API keys required after initial setup.
+
+**Component swap table**
+
+| Component | Cloud option | Open-source self-hosted |
+|---|---|---|
+| WebRTC server | LiveKit Cloud | LiveKit Server (open-source, Docker) |
+| STT | Aliyun | FunASR (best Chinese) / faster-whisper |
+| LLM | OpenAI GPT | Ollama + Qwen2.5-7B / vLLM |
+| TTS | Cartesia Sonic-3 | Kokoro-TTS (82M params, runs on CPU) / Fish Speech (voice cloning) |
+| Turn detection | LiveKit TurnDetector | Silero VAD (already in LiveKit plugins) |
+
+LiveKit Server is the open-source project that LiveKit Cloud is built on — the Agent code stays exactly the same; only the `base_url` and credentials change.
+
+**Hardware minimums**
+
+The LLM is the bottleneck; STT and TTS can run on CPU:
+
+| Service | Minimum | Recommended |
+|---|---|---|
+| LiveKit Server | 2 core / 4 GB | 4 core / 8 GB |
+| faster-whisper (small) | 4-core CPU | GPU (3-5× faster) |
+| FunASR Paraformer-zh | 8 GB RAM | A10 / RTX 3090 |
+| Kokoro-TTS | 2-core CPU | CPU ~200ms latency, acceptable |
+| LLM Qwen2.5-7B int4 | 8 GB VRAM | 12 GB VRAM |
+| LLM Qwen2.5-14B int4 | 12 GB VRAM | 24 GB VRAM (RTX 3090/4090) |
+
+A Mac mini M4 Pro (24 GB unified memory) runs Qwen2.5-14B + faster-whisper + Kokoro-TTS on a single machine — no ongoing API costs.
+
+**Monthly cost breakdown**
+
+| Scenario | Setup | Monthly cost |
+|---|---|---|
+| Dev / testing | Cheapest VPS for LiveKit Server + local Mac for inference | ~$5/month |
+| Light production (≤10 concurrent) | 4C8G VPS + cloud GPU on-demand (A10, ~4hr/day) | $80–130/month |
+| Dedicated GPU server (RTX 4090) | ~$2,000 one-time + ~$150/month (hosting + power) | Breaks even vs cloud API in ~16 months |
+
+**Code changes — only the base_url moves**
+
+```bash
+# LiveKit Server (local)
+docker run -d -p 7880:7880 -p 7881:7881 -p 7882:7882/udp \
+  -e LIVEKIT_KEYS="devkey: secret" \
+  livekit/livekit-server --dev
+
+# LLM
+ollama pull qwen2.5:7b && ollama serve     # localhost:11434
+
+# TTS (OpenAI-compatible)
+python -m kokoro_fastapi                    # localhost:8880
+
+# STT (OpenAI-compatible)
+uvicorn faster_whisper_server.main:app --port 8000
+```
+
+```python
+session = AgentSession(
+    stt=lk_openai.STT(
+        base_url="http://localhost:8000/v1",
+        api_key="not-needed",
+        model="Systran/faster-whisper-large-v3",
+        language="zh",
+    ),
+    llm=lk_openai.LLM(
+        base_url="http://localhost:11434/v1",
+        api_key="ollama",
+        model="qwen2.5:7b",
+    ),
+    tts=lk_openai.TTS(
+        base_url="http://localhost:8880/v1",
+        api_key="not-needed",
+        model="kokoro",
+        voice="af_heart",
+    ),
+    vad=silero.VAD.load(),          # local VAD replaces cloud TurnDetector
+    preemptive_generation=True,
+)
+```
+
+**Latency comparison**
+
+| Stage | Cloud | Local (RTX 4090) |
+|---|---|---|
+| STT first token | 100–200ms (network RTT) | 50–100ms |
+| LLM first token | 300–600ms (API round trip) | 100–300ms (int4 local) |
+| TTS first audio frame | 80–150ms (Cartesia) | 50–200ms (Kokoro CPU) |
+| WebRTC transport | 20–50ms (LiveKit Cloud) | 10–30ms (LAN) |
+
+Local inference typically **beats cloud latency** on STT and LLM by eliminating network round trips. In a LAN setup, sub-500ms first response is achievable.
+
+**When to pick which**
+
+| Use case | Recommendation |
+|---|---|
+| Demo / proof of concept | Free cloud tiers, zero upfront cost |
+| Personal tool, occasional use | Local Mac + free LiveKit plan |
+| Product, high-frequency usage | Dedicated GPU server; cheaper than cloud API within ~16 months |
+| Compliance / data cannot leave premises | Full self-hosted, no cloud API |
+| Custom voice cloning | Fish Speech (open-source clone) instead of Cartesia |
+
+---
+
 GitHub: [livekit/agents](https://github.com/livekit/agents)  
-Playground: [agents-playground.livekit.io](https://agents-playground.livekit.io)
+Playground: [agents-playground.livekit.io](https://agents-playground.livekit.io)  
+Self-hosted STT: [remsky/Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) · [fishaudio/fish-speech](https://github.com/fishaudio/fish-speech) · [modelscope/FunASR](https://github.com/modelscope/FunASR)
 
 © 2026 Author: Mycelium Protocol
