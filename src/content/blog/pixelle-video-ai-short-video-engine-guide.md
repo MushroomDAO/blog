@@ -1,252 +1,436 @@
 ---
-title: "一个话题自动产出一条短视频：Pixelle-Video 普通人上手指南（含硬件与 API 性价比实测对比）"
-titleEn: "One Topic, One Short Video: A Plain-Person's Guide to Pixelle-Video (with Hardware & API Cost-Performance Comparison)"
-description: "阿里 AIDC-AI 开源的 Pixelle-Video（23.1k★，Apache 2.0）不是一个视频模型，而是一条把 LLM+文生图+文生视频+TTS 串起来、输入一个话题就自动产出整条短视频的流水线。本文给普通人讲清怎么用，并着重做两件事：本地硬件到底要多强、走云端 API 到底多少钱一条，给出中肯的选择建议。"
-descriptionEn: "Alibaba AIDC-AI's open-source Pixelle-Video (23.1k★, Apache 2.0) isn't a video model — it's a pipeline that chains an LLM + text-to-image + text-to-video + TTS to auto-produce a whole short video from one topic. A plain-person's guide, focused on two things: how powerful your local hardware really needs to be, and what a video actually costs via cloud APIs — with balanced advice."
-pubDate: "2026-06-20"
-updatedDate: "2026-06-20"
-category: "Tech-News"
-tags: ["AI视频", "Pixelle-Video", "文生视频", "短视频", "ComfyUI", "API性价比", "开源工具"]
+title: "输入一句话生成完整短视频：Pixelle-Video 完整使用指南"
+titleEn: "Turn One Sentence Into a Complete Short Video: Pixelle-Video Complete Guide"
+description: "Pixelle-Video（24456★，AIDC-AI 开源）是一款 AI 全自动短视频引擎，输入主题关键词即可自动生成文案、AI 配图/视频、语音解说、背景音乐和成品视频。Windows 一键包开箱即用，支持 ComfyUI 本地部署或直连 Kling/Seedance/通义万象 API，也支持声音克隆和数字人口播。本文面向零剪辑基础的创作者：三条路径（新手包 / 纯 API / 本地全栈）逐步详解，覆盖硬件要求、依赖安装和完整操作流程。"
+descriptionEn: "Pixelle-Video (24,456★, AIDC-AI) is a fully automated short video engine — input a topic, get a complete video with AI script, illustrations, voiceover, and BGM. Windows one-click package needs zero setup. Supports local ComfyUI, direct API calls to Kling/Seedance/Wan, and voice cloning. This guide covers all three deployment paths (beginner package / API-only / full local stack), hardware requirements, software dependencies, and complete workflow."
+pubDate: "2026-07-08"
+updatedDate: "2026-07-08"
+category: "Tech-Experiment"
+tags: ["AI视频", "Pixelle-Video", "短视频生成", "ComfyUI", "文字转视频", "TTS", "AIGC", "自动化创作"]
 heroImage: "../../assets/images/pixelle-video-ai-short-video-engine-guide-banner.jpg"
 ---
 
-> **BLUF**：阿里国际 AIDC-AI 开源的 **Pixelle-Video**（GitHub 23.1k★、Apache 2.0）最容易被误解的一点是——**它不是又一个"文生视频大模型"，而是一条自动化流水线**：你给一个话题，它自动写脚本 → 规划配图 → 逐场景生成图/视频 → 合成配音和背景音乐 → 拼成一条成片。所以真正的问题不是"模型好不好"，而是**你让流水线里那些重活（尤其是视频生成）跑在本地还是云端**。本文给普通人讲清怎么用，并着重回答两件事:**(1) 本地跑到底要多强的硬件;(2) 走云端 API 到底多少钱一条。** 结论先放这:偶尔做、用普通电脑的人,**走云端 API 最划算**(一条 30 秒短视频约 ¥7–10);只有高频产出且有 RTX 4090 级显卡的人,本地才回得了本。
+> **仓库**: [AIDC-AI/Pixelle-Video](https://github.com/AIDC-AI/Pixelle-Video) · 24456★ · Apache-2.0 · Python  
+> **官方文档**: [aidc-ai.github.io/Pixelle-Video](https://aidc-ai.github.io/Pixelle-Video/zh)  
+> **视频教程**: [Bilibili 教程](https://www.bilibili.com/video/BV1WzyGBnEVp/)
 
 ---
 
-## 一、先搞清楚:Pixelle-Video 到底是什么?
+## 它能做什么
 
-很多人看到"视频生成"就以为是 Sora、可灵那种"输入一句话出一段视频"的大模型。**Pixelle-Video 不是**。它是一个**编排引擎(orchestration engine)**,把一条短视频的完整生产链拆成几步,每步调用一个可替换的 AI 能力:
+输入「为什么要养成阅读习惯」，几分钟后你拿到一个：
 
-> 输入话题 → **LLM 写文案/脚本** → **规划每个场景的配图** → **逐场景文生图 / 文生视频** → **TTS 配音** → 加背景音乐 → **合成成片**
+- 有 AI 自动写好的解说词
+- 每段话都配了风格统一的 AI 生成插图
+- 用 TTS 或克隆你自己声音配音
+- 有背景音乐
+- 已经剪辑合成好的完整视频
 
-它的每一环都是"可插拔"的,你可以混搭本地和云端:
+全程你不需要打开 Premiere、剪映，不需要写一个字的脚本，不需要录音。
 
-| 环节 | 可选后端 |
-|------|----------|
-| 写脚本(LLM) | GPT-4o、通义千问 Qwen、DeepSeek、**Ollama(本地免费)** |
-| 配图(文生图) | Flux(本地)、阿里 DashScope/通义万相、OpenAI、Seedream |
-| 视频(文生视频) | 可灵 Kling、**Wan 万相(可本地)**、Seedance |
-| 配音(TTS) | Edge-TTS(免费)、Index-TTS、声音克隆 |
+这就是 Pixelle-Video 做的事：**把"一句话 → 完整视频"这个流程完全自动化**。
 
-部署也很友好:Windows 有**一键整合包**(免装 Python/FFmpeg),macOS/Linux 走源码(Python 3.10+ + uv + FFmpeg),界面是 Streamlit 网页(localhost:8501)。
-
-**一句话定位:它是短视频界的"自动化总装车间",自己不造发动机,而是把市面上的 AI 零件组装成一条成品产线。** 这也是它能拿 23k 星的原因——它解决的是"把零散能力跑成一条完整成片"的工程麻烦事。
+它来自 AIDC-AI（阿里达摩院 AI 研究团队），24456 颗星，持续更新。
 
 ---
 
-## 二、重点一:本地到底要多强的硬件?
+## 整个生成流程
 
-官方文档只写了一句"本地 ComfyUI 推荐 NVIDIA 6GB+ 显存"。这句话很有误导性——**6GB 只够跑本地"文生图",跑本地"文生视频"完全不是一个量级。** 必须分开看。
+```
+① 你输入主题（或自己的文案）
+        ↓
+② LLM 生成视频脚本（分镜文案）
+        ↓
+③ 逐镜生成配图或视频片段（ComfyUI / API）
+        ↓
+④ TTS 合成语音（或克隆你的声音）
+        ↓
+⑤ ffmpeg 合成：配图 + 语音 + BGM + 字幕 → 成品视频
+        ↓
+⑥ 输出到 output/ 文件夹，浏览器直接预览
+```
 
-### 引擎本身:几乎不吃硬件
-Pixelle-Video 这个程序本体是 Python,文案、调度、合成(FFmpeg)在任何笔记本上都能跑。真正吃硬件的是它调用的**媒体生成**那两步。
-
-### 本地文生图(Flux / ComfyUI)
-- **入门:6GB 显存**可跑(量化版,慢);
-- **舒适:8–12GB**(如 RTX 3060/4060)。
-- 这一步门槛不高,普通游戏本就能上。
-
-### 本地文生视频(Wan 2.1/2.2):这才是真门槛
-这是全网调研后最该提醒普通人的一点——**本地生成视频极其吃显卡和时间**:
-
-| 模型规模 | 显存需求 | 生成速度(参考) |
-|----------|----------|----------------|
-| Wan 5B(TI2V-5B) | ~12–16GB | 5 秒 480p ≈ **4 分钟** |
-| Wan 14B(FP8) | **24GB 起**(RTX 3090/4090 是最低门槛) | 5 秒 ≈ **9 分钟**(4090) |
-| Wan 14B 720p 高清 | **40–80GB** | 更慢 |
-
-换算一下:一条 30 秒的短视频,如果是 6 个 5 秒场景,用 4090 跑 14B,**光视频生成就要约 1 小时**;而且 24GB 显存的 4090 还只是"勉强够用"的最低线。
-
-**结论:** 普通笔记本、集显、或 8GB 以下显卡——**别想本地生成视频**,这步必须走云端。本地最多做到"本地文生图 + 云端文生视频"的混合。只有手握 RTX 4090/3090(24GB)以上、且能忍受慢的人,才值得全本地。
+每个环节都是独立模块，可以按需替换：LLM 换成 DeepSeek 或 Ollama，配图换成 Kling 或本地 ComfyUI，TTS 换成 Index-TTS 做声音克隆——不换也完全能用。
 
 ---
 
-## 三、重点二:走云端 API,到底多少钱一条?
+## 三条部署路径：按你的情况选
 
-既然视频这步多数人得走云端,那"性价比"就取决于你选哪家文生视频 API。这是 2026 年全网调研到的主流报价(按秒计,差异很大):
+### 路径一：Windows 一键整合包（★ 零基础推荐）
 
-| 视频 API | 单价(参考) | 定位 |
-|----------|-------------|------|
-| **Seedance 2.0 Fast**(字节) | **~$0.022/秒** | 目前最便宜的"生产级"API |
-| **可灵 Kling 3.0** | ~$0.029/秒(套餐约 ¥1.2/条 10 秒 720p) | 质量与价格平衡,主流首选 |
-| **Wan 万相** | Wan 2.1 约 $0.20–0.40/条(不限时长);Wan 2.6 快版 ~$0.07/秒 | 与 Pixelle 同生态,集成顺 |
-| Sora 2 | ~$0.10/秒 | 质量高,偏贵 |
-| Veo | ~$0.40/秒 | 旗舰画质,最贵 |
+**适合谁**：Windows 用户，没有编程经验，只想快速出视频。
 
-文案(LLM)和配图这两步几乎可以忽略不计:
+**优点**：不需要安装 Python、uv、ffmpeg，所有依赖已打包，双击开始。  
+**前提**：Windows 10/11，至少一个 LLM API key。
 
-- **写脚本**:DeepSeek / Qwen 一条脚本不到 1 分钱;Ollama 本地免费;
-- **配图**:DashScope/Seedream 约 ¥0.1/张;本地 Flux 几乎免费(有显卡的话)。
+```
+1. 下载最新整合包：
+   https://github.com/AIDC-AI/Pixelle-Video/releases/latest
 
-### 算一笔真账:一条 30 秒短视频成本
+2. 解压到任意目录（建议英文路径，避免中文路径问题）
 
-假设 6 个场景、共 30 秒视频 + 6 张配图 + 1 段脚本:
+3. 双击 start.bat
 
-| 方案 | 视频 | 配图 | 脚本 | **合计/条** |
-|------|------|------|------|-------------|
-| **极致省钱**(Seedance Fast + DashScope + DeepSeek) | ~$0.66 | ~¥0.6 | ~¥0.05 | **≈ ¥5–6** |
-| **均衡主流**(Kling + DashScope + Qwen) | ~$0.87 | ~¥0.6 | ~¥0.05 | **≈ ¥7–9** |
-| **旗舰画质**(Veo + Seedream + GPT-4o) | ~$12 | ~¥2 | ~¥0.5 | **≈ ¥90+** |
+4. 浏览器自动打开 http://localhost:8501
 
-也就是说,**用便宜组合,一条 30 秒短视频成本就一杯奶茶钱(¥5–9)**;追旗舰画质则贵 10 倍以上。
+5. 在「⚙️ 系统配置」填入 LLM API Key，点保存
 
----
+6. 输入主题，生成视频
+```
 
-## 四、本地 vs 云端:中肯的选择建议
-
-把硬件和钱放一起算,给三类人三种建议:
-
-**1. 偶尔做、用普通电脑的人(绝大多数) → 全云端 API**
-不要折腾本地显卡。Pixelle-Video 选"云端方案"(如 OpenAI/Qwen + RunningHub 或直连可灵/Seedance API)。一条短视频 ¥5–9,零硬件投入,出片快。**这是性价比最高的选择。**
-
-**2. 想省 API 费、爱折腾、有 4090 级显卡 → 全本地**
-Ollama(免费 LLM)+ 本地 ComfyUI(Flux 图)+ 本地 Wan(视频)。单条边际成本≈电费,但前提是:你已经有 24GB 显存的卡(¥1.2 万 +),且能接受一条片子跑近 1 小时。**只有产量很大时才回得了本**——粗算,要做到几千条才能摊平一张 4090。
-
-**3. 中间路线(项目方推荐,也最推荐普通进阶者)→ 混合**
-**便宜 LLM(DeepSeek/Qwen API)写脚本 + 本地 ComfyUI 出图(省图片钱)+ 云端 API 只做最贵的视频那步(Kling/Seedance)。** 既不用买顶级卡,又把成本压到很低,出片质量还稳。对有张普通游戏显卡(8–12GB)的进阶用户,这是最佳平衡点。
-
-> ⚠️ 两个要客观说的点:
-> 1. API 单价 2026 年还在快速下降(同质量比一年前便宜 10–50 倍),今天的报价仅供参考,实际以各家最新价为准;
-> 2. Pixelle-Video 是"组装厂",**成片质量上限取决于你接的后端模型**——它本身不决定画质,只决定流程顺不顺。别期待它把便宜模型变出旗舰效果。
+**费用说明**：整合包本身免费。LLM 费用取决于你用什么模型：
+- **通义千问**（推荐）：成本极低，生成一个视频通常不到 1 分钱
+- **DeepSeek**：国内性价比最高的选项之一
+- **GPT-4o**：功能强但贵，非必须
 
 ---
 
-## 五、普通人最快上手路径
+### 路径二：源码 + 纯 API（无显卡方案）
 
-1. **Windows 用户**:去 GitHub Releases 下一键整合包,双击 `start.bat`,打开 localhost:8501;
-2. **Mac/Linux**:`git clone` 仓库 → 用 uv 装依赖 → 装 FFmpeg → 启动 Streamlit;
-3. 在网页设置里填 **API key**:先用最省的组合(DeepSeek 写脚本 + 可灵/Seedance 出视频),跑通一条;
-4. 想省图片钱再装本地 ComfyUI(可选);
-5. 输入一个话题,点生成,等成片落到 `output/` 目录。
+**适合谁**：macOS / Linux 用户，或没有独立显卡但想用云端图像 API 的用户。
 
-先用云端跑通一条,再决定要不要为本地折腾显卡——**别一上来就买卡**。
+**优点**：不需要 GPU，图像和视频生成全靠云端 API，按量付费。  
+**前提**：需要安装 Git、uv、ffmpeg。
+
+#### 安装依赖
+
+**第一步：安装 uv**（Python 包管理器，比 pip 快几十倍）
+
+```bash
+# macOS / Linux（推荐）
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Windows（PowerShell）
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+安装后验证：`uv --version`  
+完整文档：https://docs.astral.sh/uv/getting-started/installation/
+
+**第二步：安装 ffmpeg**（视频合成必需）
+
+```bash
+# macOS
+brew install ffmpeg
+
+# Ubuntu / Debian
+sudo apt update && sudo apt install ffmpeg
+
+# Windows（手动下载）
+# 下载地址：https://ffmpeg.org/download.html
+# 解压后将 bin/ 目录加入系统 PATH
+```
+
+验证：`ffmpeg -version`
+
+#### 克隆并启动
+
+```bash
+git clone https://github.com/AIDC-AI/Pixelle-Video.git
+cd Pixelle-Video
+
+# uv 会自动创建虚拟环境并安装所有 Python 依赖
+uv run streamlit run web/app.py
+```
+
+浏览器打开 http://localhost:8501
+
+#### 配置纯 API 方案
+
+在「⚙️ 系统配置」→「API 媒体模型配置」里选择图像/视频供应商：
+
+| 供应商 | 支持能力 | 申请地址 |
+|--------|---------|---------|
+| DashScope（通义万象） | 图像生成、视频生成 | dashscope.aliyuncs.com |
+| Kling AI（可灵） | 视频生成（国产高质量） | klingai.com |
+| Volcengine ARK（Seedance） | 字节视频/图像生成 | volcengine.com/ark |
+| OpenAI / GPT Image | GPT 图像生成 | platform.openai.com |
+
+TTS 方面，无显卡时用 **Edge-TTS**（默认工作流），完全免费，无需任何配置。
 
 ---
 
-## FAQ
+### 路径三：本地全栈（有 NVIDIA 显卡）
 
-**Q:完全免费能做出视频吗?**
-A:理论上可以(Ollama + 本地 ComfyUI + 本地 Wan),但"免费"的前提是你已经有一张 24GB 显存的显卡,且愿意忍受很慢的本地视频生成。对没有高端显卡的人,"免费"其实是用时间和硬件折旧换的。
+**适合谁**：有 NVIDIA 独立显卡，想完全免费、不依赖外部 API 的用户。
 
-**Q:它和直接用可灵/即梦 App 有什么区别?**
-A:可灵 App 是"一句话出一段视频";Pixelle-Video 是"一个话题出一条**完整成片**"(含脚本、多场景、配音、配乐、拼接)。它帮你省的是把零散片段组装成成品的整套工程活。
+**显卡要求**：
 
-**Q:普通游戏本(8GB 显存)能用吗?**
-A:能用——但只建议"本地出图 + 云端出视频"的混合模式。8GB 跑本地文生视频基本不现实。
+| 用途 | 最低显存 | 推荐显存 |
+|------|---------|---------|
+| 仅图像生成（FLUX / SD） | 6GB VRAM | 8GB+ |
+| 图像 + 视频生成（WAN 2.1） | 16GB VRAM | 24GB+ |
+| Index-TTS 声音克隆 | 4GB VRAM | 8GB+ |
+
+**不满足显存要求怎么办**：选路径二，图像/视频走 API，TTS 用 Edge-TTS，只有 LLM 需要 key（通义千问极便宜）。
+
+#### 安装 ComfyUI（本地图像/视频/TTS 生成引擎）
+
+```bash
+# Windows 用户——下载官方整合包（最省事）
+# 下载地址：https://github.com/comfyanonymous/ComfyUI/releases
+# 解压后双击 run_nvidia_gpu.bat 启动
+
+# macOS / Linux 用户——从源码安装
+git clone https://github.com/comfyanonymous/ComfyUI.git
+cd ComfyUI
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip install -r requirements.txt
+python main.py
+```
+
+ComfyUI 启动后默认运行在 http://127.0.0.1:8188。
+
+Pixelle-Video 配置：系统配置 → ComfyUI URL → `http://127.0.0.1:8188` → 点「测试连接」。
+
+#### 下载 ComfyUI 所需模型
+
+Pixelle-Video 默认工作流使用 **FLUX** 系列图像模型，下载后放到 ComfyUI 的 `models/checkpoints/` 目录：
+
+| 模型 | 推荐版本 | 下载地址 | 大小 |
+|------|---------|---------|------|
+| FLUX 图像（快速） | FLUX.1-schnell | huggingface.co/black-forest-labs | ~12GB |
+| FLUX 图像（高质量） | FLUX.1-dev | huggingface.co/black-forest-labs | ~24GB |
+| Index-TTS（声音克隆） | IndexTeam/IndexTTS | huggingface.co/IndexTeam/IndexTTS | ~4GB |
+| WAN 2.1（视频生成） | Wan2.1-T2V-14B | huggingface.co/Wan-AI | ~28GB |
+
+> 模型文件较大，下载前确认磁盘空间充足（建议至少预留 50GB 给模型）。
 
 ---
 
-> 📌 项目地址(请直接复制访问):
-> GitHub —— https://github.com/AIDC-AI/Pixelle-Video
-> 文档 —— https://aidc-ai.github.io/Pixelle-Video/
-> 许可证:Apache 2.0
+## 完整操作流程（以「为什么要养成阅读习惯」为例）
+
+### 第一步：填写系统配置
+
+打开 http://localhost:8501，展开「⚙️ 系统配置」：
+
+1. **LLM 配置**：选择预设（如「通义千问」）→ 填入 API Key → 保存
+2. **图像方案（二选一）**：
+   - 有 ComfyUI：填 `http://127.0.0.1:8188`，点「测试连接」
+   - 无显卡：在「API 媒体模型配置」填入 DashScope 或 Kling 的 key
+3. 点击「**保存配置**」
+
+### 第二步：内容输入（左栏）
+
+- **生成模式**：选「AI 生成内容」
+- **主题**：输入「为什么要养成阅读习惯」
+- **BGM**：选「内置音乐」（可点「试听 BGM」预览）
+
+### 第三步：语音设置（中栏）
+
+- **TTS 工作流**：
+  - 普通语音：选「edge-tts」（免费，无需显卡）
+  - 声音克隆：选「index-tts」，上传一段你自己的录音（3-10秒，安静环境）
+
+### 第四步：视觉设置（中栏）
+
+- **图像工作流**：
+  - 本地 ComfyUI：选 `image_flux.json`（FLUX 模型）
+  - API 方案：选 `api/dashscope_image` 或 `api/kling_image`
+- **图像尺寸**：
+  - 抖音/快手竖屏：720 × 1280
+  - YouTube/B站横屏：1280 × 720
+- **提示词前缀**（可选，控制配图风格，需英文）：
+  - 水墨插画：`minimalist ink wash illustration style, clean brushwork`
+  - 科技感：`futuristic tech illustration, glowing neon accent lines, dark background`
+  - 默认留空即可
+- **视频模板**：
+  - 纯配图（稳定）：选 `image_default.html`
+  - 动态视频背景：选 `video_default.html`（需要视频生成 API 或本地 WAN 模型）
+
+### 第五步：生成视频（右栏）
+
+点击「**🎬 生成视频**」，实时看到进度：
+
+```
+✅ 生成视频文案...（约 10-30 秒）
+✅ 分镜 1/5 - 生成插图...（约 30-90 秒/张）
+✅ 分镜 2/5 - 生成插图...
+✅ 分镜 3/5 - 生成插图...
+✅ 分镜 4/5 - 生成插图...
+✅ 分镜 5/5 - 生成插图...
+✅ 合成语音解说...（约 10 秒）
+✅ 合成视频...（约 10-30 秒）
+🎉 完成！视频保存到 output/ 目录
+```
+
+生成完成后浏览器直接预览，`output/` 文件夹里可以找到 MP4 文件。
 
 ---
 
-> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用,须注明作者姓名及原文链接,不得去除署名后以原创发布。
+## 扩展功能
+
+### 数字人口播
+
+让 AI 生成真人口播视频，嘴型与语音同步：
+
+**操作**：左栏选「数字人口播」模式 → 上传人物参考图（或用预置数字人）→ 正常填写主题和 TTS 设置 → 生成
+
+**依赖**：ComfyUI + 数字人相关插件（ComfyUI-MuseTalk），显存建议 8GB+
+
+### 图生视频
+
+先用 AI 生成一张图，再把图变成有动态的视频片段：
+
+**操作**：视觉设置里选支持图生视频的工作流（如 `api/wan_i2v` 或 `api/kling_i2v`）
+
+**依赖**：Kling 或通义万象 API key，按次计费
+
+### 自定义素材
+
+上传你自己拍的照片或视频，让 AI 分析内容并生成配套文案：
+
+**操作**：选「自定义素材」模式 → 上传图片/视频 → AI 自动识别内容 → 生成解说词 → 合成成片
+
+---
+
+## 费用对比
+
+| 方案 | LLM | 图像生成 | TTS | 月估算（100个视频） |
+|------|-----|---------|-----|------------------|
+| **完全免费** | Ollama 本地 | ComfyUI + FLUX 本地 | Edge-TTS | ¥0（需要 8GB+ 显卡） |
+| **轻量付费** | 通义千问 API | DashScope API | Edge-TTS | ≈ ¥5-20 |
+| **全 API 云端** | GPT-4o | Kling 视频 | Index-TTS API | ≈ ¥100-500 |
+
+> **推荐「轻量付费」方案**：通义千问文案成本约 ¥0.01-0.05 / 视频，DashScope 图像按张计费，Edge-TTS 免费，100个视频合计不超过 ¥20。
+
+---
+
+## 常见问题
+
+**Q：生成一个视频需要多久？**
+
+- 纯文字模板（static_*）：约 1-2 分钟
+- 图片模板（API）：约 3-8 分钟（含网络延迟）
+- 图片模板（本地 ComfyUI）：约 5-15 分钟（每张图 30-90 秒）
+- 视频模板（API 视频生成）：约 10-30 分钟（视频生成较慢）
+
+**Q：有水印吗？**
+
+本地方案（ComfyUI + Edge-TTS）完全无水印。部分云端 API 免费额度有水印，付费后去除。
+
+**Q：支持中文吗？**
+
+完全支持。文案、TTS、字幕全中文。Edge-TTS 有普通话、粤语等多种中文音色。
+
+**Q：Mac 用户可以用吗？**
+
+可以，走路径二（纯 API 方案）。ComfyUI 也支持 Apple Silicon MPS 加速，但图像生成比 NVIDIA 慢。
+
+**Q：可以批量出视频吗？**
+
+支持，通过 HTTP API 接口批量提交任务，适合矩阵账号批量生产场景。
+
+---
+
+## 推荐工具链
+
+### 「快速出片」配置（最高性价比）
+
+```yaml
+LLM: 通义千问 qwen-turbo（API，每个视频 < ¥0.05）
+图像: DashScope 通义万象（API）
+TTS: Edge-TTS（免费，无需显卡）
+模板: image_default.html（稳定快速）
+预计时间: 3-5 分钟/个
+预计成本: < ¥0.5/个
+```
+
+### 「高质量本地」配置（有 NVIDIA 8GB+ 显卡）
+
+```yaml
+LLM: 通义千问 qwen-plus 或 Ollama 本地
+图像: ComfyUI + FLUX.1-dev（12GB 磁盘）
+TTS: Index-TTS 声音克隆（4GB VRAM）
+模板: image_premium.html
+预计时间: 10-20 分钟/个
+预计成本: ≈ ¥0.05/个（仅 LLM）
+```
+
+---
+
+> **相关链接**
+> - [AIDC-AI/Pixelle-Video](https://github.com/AIDC-AI/Pixelle-Video) — 主仓库
+> - [官方使用文档](https://aidc-ai.github.io/Pixelle-Video/zh) — 详细操作文档
+> - [Bilibili 视频教程](https://www.bilibili.com/video/BV1WzyGBnEVp/) — 可视化操作演示
+> - [Windows 整合包下载](https://github.com/AIDC-AI/Pixelle-Video/releases/latest)
+> - [uv 安装文档](https://docs.astral.sh/uv/getting-started/installation/) — Python 包管理器
+> - [ComfyUI 仓库](https://github.com/comfyanonymous/ComfyUI) — 本地图像/视频生成引擎
+> - [MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) — 类似项目参考
+
+---
+
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权。
 
 <!--EN-->
 
-> **BLUF**: The most-misunderstood thing about Alibaba AIDC-AI's open-source **Pixelle-Video** (23.1k★, Apache 2.0) is that **it's not another text-to-video model — it's an automation pipeline**: give it a topic and it writes the script → plans shots → generates images/video per scene → adds TTS narration and music → assembles a finished short video. So the real question isn't "is the model good," it's **whether you run the heavy steps (especially video generation) locally or in the cloud.** This is a plain-person's guide focused on two things: **(1) how strong your local hardware really needs to be, and (2) what a video actually costs via cloud APIs.** Bottom line up front: for occasional creators on a normal computer, **cloud APIs win** (~$1–1.5 per 30-second video); only high-volume users with an RTX 4090-class GPU recoup a local setup.
+> **TL;DR**: Pixelle-Video (24,456★, Apache-2.0, Python, AIDC-AI) is a fully automated short video engine — input a topic keyword, get a complete video with AI-written script, AI-generated illustrations/clips, TTS voiceover (with optional voice cloning), BGM, and final MP4 output. Three deployment paths: (1) Windows one-click package — zero setup, just add an LLM API key; (2) source code + cloud APIs — needs `uv` + `ffmpeg`, no GPU required, uses DashScope/Kling/Seedance for images and video; (3) full local stack with ComfyUI + NVIDIA GPU (6GB+ VRAM for images, 16GB+ for WAN 2.1 video). Modular: swap any component independently. Cost estimate for path 2: < ¥0.50/video using Qwen API + DashScope + Edge-TTS (free).
 
 ---
 
-## 1. What Pixelle-Video Actually Is
+## Pipeline
 
-It's not Sora. It's an **orchestration engine** that splits short-video production into steps, each calling a swappable AI backend:
+```
+Topic → LLM script → per-shot image/video generation → TTS voice → ffmpeg merge → MP4
+```
 
-> topic → **LLM writes the script** → **plan shots** → **per-scene text-to-image / text-to-video** → **TTS voiceover** → background music → **assemble**
+Each module is independently replaceable. The web UI (Streamlit, localhost:8501) configures everything with dropdowns and API key fields — no config files to edit.
 
-Every stage is pluggable, mixing local and cloud:
+## Three Deployment Paths
 
-| Stage | Backends |
-|-------|----------|
-| Script (LLM) | GPT-4o, Qwen, DeepSeek, **Ollama (free, local)** |
-| Image | Flux (local), Alibaba DashScope/Wan, OpenAI, Seedream |
-| Video | Kling, **Wan (can be local)**, Seedance |
-| Voice (TTS) | Edge-TTS (free), Index-TTS, voice cloning |
+### Path 1 — Windows One-Click Package (Beginners)
 
-Deployment is friendly: a Windows all-in-one (no Python/FFmpeg needed), or source on macOS/Linux (Python 3.10+, uv, FFmpeg), with a Streamlit web UI. **In one line: it's the "final-assembly plant" of short video — it doesn't build the engine, it assembles market AI parts into a finished product.** That engineering convenience is why it has 23k stars.
+[Download from GitHub Releases](https://github.com/AIDC-AI/Pixelle-Video/releases/latest), extract, run `start.bat`. No Python, no ffmpeg, no setup. Add LLM API key (Qwen/DeepSeek recommended) in Settings and start generating.
 
-## 2. Focus #1: How Strong Does Local Hardware Need to Be?
+### Path 2 — Source + Cloud APIs (No GPU Required)
 
-The docs say "6GB+ VRAM for local ComfyUI" — misleading, because **6GB only covers local image generation; local video generation is a different league entirely.**
+**Install dependencies**:
+```bash
+# uv (Python package manager): https://docs.astral.sh/uv/
+curl -LsSf https://astral.sh/uv/install.sh | sh   # macOS/Linux
+# Windows: powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
-- **The engine itself**: barely uses hardware (Python + FFmpeg run on any laptop).
-- **Local image (Flux/ComfyUI)**: 6GB minimum, comfortable at 8–12GB (RTX 3060/4060). Low barrier.
-- **Local video (Wan 2.1/2.2)** — the real wall:
+# ffmpeg
+brew install ffmpeg              # macOS
+sudo apt install ffmpeg          # Ubuntu
+# Windows: https://ffmpeg.org/download.html → add bin/ to PATH
+```
 
-| Model | VRAM | Speed (reference) |
-|-------|------|-------------------|
-| Wan 5B (TI2V-5B) | ~12–16GB | 5s 480p ≈ **4 min** |
-| Wan 14B (FP8) | **24GB+** (RTX 3090/4090 = minimum) | 5s ≈ **9 min** (4090) |
-| Wan 14B 720p | **40–80GB** | slower |
+**Launch**:
+```bash
+git clone https://github.com/AIDC-AI/Pixelle-Video.git && cd Pixelle-Video
+uv run streamlit run web/app.py
+```
 
-A 30-second video as 6×5s scenes on a 4090 (14B) takes **~1 hour just for video**, and 24GB is merely the "barely enough" floor. **Verdict:** normal laptops, integrated graphics, or sub-8GB GPUs — **don't attempt local video**; that step must go to the cloud. Local maxes out at "local images + cloud video" hybrid.
+**Configure**: LLM key (Qwen turbo recommended) + image API key (DashScope/Kling) + Edge-TTS (free, built-in, no GPU).
 
-## 3. Focus #2: What Does It Cost via Cloud APIs?
+### Path 3 — Full Local Stack (NVIDIA GPU)
 
-Since most people send video to the cloud, cost-performance hinges on which text-to-video API you pick (2026 reference, per second, wide spread):
+Install [ComfyUI](https://github.com/comfyanonymous/ComfyUI) → download models → set ComfyUI URL to `http://127.0.0.1:8188` in Pixelle-Video settings.
 
-| Video API | Price (ref.) | Position |
-|-----------|--------------|----------|
-| **Seedance 2.0 Fast** (ByteDance) | **~$0.022/s** | Cheapest production-grade |
-| **Kling 3.0** | ~$0.029/s (≈$0.17 per 10s 720p on plan) | Balanced, mainstream pick |
-| **Wan** | Wan 2.1 ~$0.20–0.40/video; Wan 2.6 fast ~$0.07/s | Same ecosystem, smooth integration |
-| Sora 2 | ~$0.10/s | High quality, pricier |
-| Veo | ~$0.40/s | Flagship quality, priciest |
+**VRAM requirements**:
+- Image only (FLUX.1-schnell): 6GB minimum, 8GB+ recommended
+- Video generation (WAN 2.1-14B): 16GB minimum, 24GB+ recommended
+- Voice cloning (Index-TTS): 4GB minimum
 
-Script (LLM) and images are negligible: DeepSeek/Qwen < $0.01 per script (Ollama free); DashScope/Seedream ~$0.01–0.04/image (local Flux ~free with a GPU).
+**Model downloads** (HuggingFace):
+- `black-forest-labs/FLUX.1-schnell` — ~12GB, fast image gen
+- `black-forest-labs/FLUX.1-dev` — ~24GB, higher quality
+- `IndexTeam/IndexTTS` — ~4GB, voice cloning
+- `Wan-AI/Wan2.1-T2V-14B` — ~28GB, video generation
 
-**Real cost of one 30-second video** (6 scenes, 30s video + 6 images + 1 script):
+## Cost Comparison
 
-| Plan | Video | Images | Script | **Total/video** |
-|------|-------|--------|--------|-----------------|
-| **Cheapest** (Seedance Fast + DashScope + DeepSeek) | ~$0.66 | ~$0.08 | ~$0.01 | **≈ $0.75** |
-| **Mainstream** (Kling + DashScope + Qwen) | ~$0.87 | ~$0.08 | ~$0.01 | **≈ $1–1.3** |
-| **Flagship** (Veo + Seedream + GPT-4o) | ~$12 | ~$0.3 | ~$0.07 | **≈ $13+** |
+| Setup | LLM | Image | TTS | Per 100 Videos |
+|-------|-----|-------|-----|---------------|
+| Fully free | Ollama local | ComfyUI FLUX local | Edge-TTS | ¥0 (needs 8GB+ GPU) |
+| Light paid | Qwen turbo API | DashScope API | Edge-TTS | ≈ ¥5-20 |
+| Full cloud | GPT-4o | Kling video | Index-TTS API | ≈ ¥100-500 |
 
-So a cheap combo makes a 30-second short for about **a cup of coffee ($1)**; flagship quality costs 10×+.
+**Recommended**: Qwen turbo + DashScope + Edge-TTS → < ¥0.50/video, 3-5 minutes per video, no GPU needed.
 
-## 4. Local vs Cloud: Balanced Advice
-
-**1. Occasional creators on a normal computer (most people) → all-cloud APIs.** Don't fight with local GPUs. ~$1/video, zero hardware, fast. **Best cost-performance.**
-
-**2. Tinkerers who want to cut API fees and own a 4090-class GPU → all-local.** Ollama + local ComfyUI + local Wan. Marginal cost ≈ electricity — but only if you already have a 24GB GPU (~$1.6–2k) and tolerate ~1 hour per video. You'd need *thousands* of videos to amortize a 4090.
-
-**3. The middle path (project-recommended, best for advanced beginners) → hybrid.** Cheap LLM API (DeepSeek/Qwen) for scripts + local ComfyUI for images (save image costs) + cloud API only for the expensive video step (Kling/Seedance). No flagship GPU needed, low cost, stable quality. Ideal if you have an ordinary 8–12GB gaming GPU.
-
-> ⚠️ Two honest caveats: (1) API prices are falling fast in 2026 (10–50× cheaper than a year ago for similar quality) — treat these as reference and check current rates; (2) Pixelle-Video is an *assembler* — **final quality is capped by the backends you plug in**, not by Pixelle itself. Don't expect it to turn cheap models into flagship output.
-
-## 5. Fastest Path to Get Started
-
-1. **Windows**: grab the all-in-one from GitHub Releases, run `start.bat`, open localhost:8501.
-2. **Mac/Linux**: clone → install deps with uv → install FFmpeg → launch Streamlit.
-3. Enter **API keys** in the web settings: start with the cheapest combo (DeepSeek for script + Kling/Seedance for video), make one video.
-4. Add local ComfyUI later to save image costs (optional).
-5. Type a topic, generate, find the result in `output/`.
-
-Get one video working via the cloud first — **don't buy a GPU upfront.**
-
-## FAQ
-
-**Q: Can I make videos completely free?**
-A: In theory (Ollama + local ComfyUI + local Wan), but only if you already own a 24GB GPU and tolerate very slow local video. For everyone else, "free" is really paid in time and hardware depreciation.
-
-**Q: How is it different from just using the Kling app?**
-A: Kling gives "one prompt → one clip"; Pixelle-Video gives "one topic → a finished video" (script, multi-scene, voiceover, music, assembly). It saves you the assembly engineering.
-
-**Q: Will an 8GB gaming laptop work?**
-A: Yes — but only the "local images + cloud video" hybrid. Local video on 8GB isn't realistic.
+**Links**: [GitHub](https://github.com/AIDC-AI/Pixelle-Video) · [Docs](https://aidc-ai.github.io/Pixelle-Video/zh) · [Bilibili tutorial](https://www.bilibili.com/video/BV1WzyGBnEVp/) · [Windows package](https://github.com/AIDC-AI/Pixelle-Video/releases/latest) · [uv docs](https://docs.astral.sh/uv/)
 
 ---
 
-> 📌 Project (copy to visit):
-> GitHub — https://github.com/AIDC-AI/Pixelle-Video
-> Docs — https://aidc-ai.github.io/Pixelle-Video/
-> License: Apache 2.0
-
----
-
-> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

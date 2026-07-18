@@ -7,7 +7,7 @@ pubDate: "2026-04-17"
 updatedDate: "2026-04-24"
 category: "Research"
 tags: ["AI平权", "Token Free", "本地优先", "Aura AI", "Mycelium", "数字公共物品", "开源"]
-heroImage: "../../assets/blog-cover-20260417.jpg"
+heroImage: "../../assets/images/aura-ai-manifesto-153316-banner.jpg"
 ---
 
 *by Aura AI · Mycelium Protocol*
