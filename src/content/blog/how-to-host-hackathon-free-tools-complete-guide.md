@@ -4,8 +4,9 @@ description: "学生、社区、独立开发者如何从零举办一场黑客松
 titleEn: "How to Host a Hackathon: A Complete Guide for Beginners (With Free Tools)"
 descriptionEn: "A complete guide for students, communities, and indie developers to host their first hackathon from scratch — topic selection, registration, on-site operations, judging, and awards. Includes curated free and open-source platform recommendations (Dribdat, JunctionApp, Devpost, HackHQ) to achieve professional results on minimal budget."
 pubDate: 2026-06-15
+updatedDate: 2026-07-25
 category: "Tech-Experiment"
-tags: ["黑客松", "Hackathon", "开源工具", "社区活动", "学生", "活动运营", "Dribdat", "Devpost"]
+tags: ["黑客松", "Hackathon", "开源工具", "社区活动", "学生", "活动运营", "Dribdat", "Devpost", "hack5"]
 lang: "zh-CN"
 heroImage: "../../assets/images/how-to-host-hackathon-guide-banner.png"
 ---
@@ -226,6 +227,38 @@ Web3 / 区块链黑客松的首选平台，支持代币化奖励分发、链上�
 
 ---
 
+**[hack5](https://hack5.net)** ⭐ 开源自托管（Apache 2.0）· [github.com/MushroomDAO/hack5-net](https://github.com/MushroomDAO/hack5-net)
+
+👋 作者按：这是我们自己维护的开源项目，Mycelium 数字公共物品之一，纯 Cloudflare 架构（一个 Worker + D1 + KV），10 分钟就能建出一个独立子域名站点（`<你的活动名>.hack5.net`）。
+
+主要功能：
+- 报名 + 组队墙（找队友卡片）
+- 作品墙（GitHub 仓库自动读 star/语言/最后提交）
+- 评委打分（创新/技术/完成度/展示四维度）+ 排行榜 + 锁定评审版本（防赛后偷改）
+- 免费 A4 海报（付费版可用 AI 按描述生成背景图）
+- 一键转发（海报 + 二维码 + 多平台）
+
+**怎么白嫖，免费多办几场：**
+
+1. **托管版第一场直接免费**：登录邮箱创建即用，核心功能全开，记录永久保留，不用自己动手部署。
+2. **第二场起也便宜**：定价锚点是 **100 元 / 10 场活动**，平均一场 10 元，比上面任何一个 SaaS 都便宜一个数量级——因为团队的原则是"公共物品免费，真实产生成本（AI 生图、邮件量、自定义域名）才收费"，不是常规意义上的订阅制。
+3. **真正的白嫖是自己部署**：项目本身开源（Apache 2.0），文档里写得很明白——**100 名选手规模完全在 Cloudflare 免费额度内，成本是 $0**。把仓库 clone 下来：
+
+```bash
+git clone https://github.com/MushroomDAO/hack5-net
+cd hack5-net && npm install
+npx wrangler d1 create hackvideo-db
+npx wrangler kv namespace create SHOTS
+npx wrangler d1 migrations apply hackvideo-db --remote
+npx wrangler deploy
+```
+
+部署到自己的 Cloudflare 账号，就是一个完全独立、无限次免费使用的黑客松平台，不受托管版"第二场收费"的限制。
+
+**适合谁**：想完全零成本又不想像 Dribdat/JunctionApp 那样自己搭 Docker + 数据库运维——Cloudflare 免费额度覆盖率，比自建服务器省心。
+
+---
+
 ### 3.2 报名和活动页面（如果不用专用平台）
 
 | 工具 | 免费套餐 | 适用场景 |
@@ -359,6 +392,7 @@ Web3 / 区块链黑客松的首选平台，支持代币化奖励分发、链上�
 - [devpost.com](https://devpost.com) — 全球最大黑客松发现平台
 - [devfolio.co](https://devfolio.co) — 功能完整的免费平台
 - [hackhq.io](https://hackhq.io) — 评审专用工具
+- [hack5.net](https://hack5.net) / [github.com/MushroomDAO/hack5-net](https://github.com/MushroomDAO/hack5-net) — 开源自托管，第一场免费，Cloudflare 免费额度内可无限自部署
 - [Major League Hacking](https://mlh.io) — 全球大学生黑客松联盟，提供官方认证
 
 <!--EN-->
@@ -388,6 +422,7 @@ Hackathon = Hack + Marathon. A group of people, within a limited time (usually 2
 - **Devfolio** (free SaaS for students): Complete feature set, popular in India's developer community.
 - **HackHQ** (free tier): 10 submissions, 50 votes, 3 judges — perfect if you just need a judging system.
 - **TAIKAI** (free for Web3 communities): Best for blockchain/DeFi hackathons.
+- **[hack5](https://hack5.net)** (open source, Apache 2.0, author-maintained): Cloudflare-only stack (one Worker + D1 + KV), spins up a subdomain site in 10 minutes. First event free on the hosted version; subsequent events priced at ~¥10/event. Since it's open source and 100 teams fit inside Cloudflare's free tier, self-hosting your own deploy gives you unlimited free events.
 
 **Registration:** Luma (unlimited free), Eventbrite (free events), Google Form
 
