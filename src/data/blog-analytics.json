@@ -1,0 +1,431 @@
+{
+  "generatedAt": "2026-07-26T14:33:12Z",
+  "period": {
+    "start": "2026-06-26",
+    "end": "2026-07-26"
+  },
+  "totals": {
+    "pageviews": 4440,
+    "visits": 3960,
+    "bots": 10
+  },
+  "last7": {
+    "pv": 1470,
+    "visits": 1240
+  },
+  "prior7": {
+    "pv": 1420,
+    "visits": 1360
+  },
+  "daily": [
+    {
+      "date": "06-27",
+      "pv": 30,
+      "visits": 20
+    },
+    {
+      "date": "06-28",
+      "pv": 20,
+      "visits": 20
+    },
+    {
+      "date": "06-30",
+      "pv": 110,
+      "visits": 110
+    },
+    {
+      "date": "07-01",
+      "pv": 50,
+      "visits": 50
+    },
+    {
+      "date": "07-02",
+      "pv": 50,
+      "visits": 20
+    },
+    {
+      "date": "07-03",
+      "pv": 50,
+      "visits": 50
+    },
+    {
+      "date": "07-04",
+      "pv": 130,
+      "visits": 80
+    },
+    {
+      "date": "07-05",
+      "pv": 100,
+      "visits": 90
+    },
+    {
+      "date": "07-06",
+      "pv": 80,
+      "visits": 80
+    },
+    {
+      "date": "07-07",
+      "pv": 190,
+      "visits": 180
+    },
+    {
+      "date": "07-08",
+      "pv": 160,
+      "visits": 160
+    },
+    {
+      "date": "07-09",
+      "pv": 130,
+      "visits": 130
+    },
+    {
+      "date": "07-10",
+      "pv": 120,
+      "visits": 110
+    },
+    {
+      "date": "07-11",
+      "pv": 140,
+      "visits": 120
+    },
+    {
+      "date": "07-12",
+      "pv": 190,
+      "visits": 140
+    },
+    {
+      "date": "07-13",
+      "pv": 140,
+      "visits": 130
+    },
+    {
+      "date": "07-14",
+      "pv": 250,
+      "visits": 220
+    },
+    {
+      "date": "07-15",
+      "pv": 220,
+      "visits": 220
+    },
+    {
+      "date": "07-16",
+      "pv": 180,
+      "visits": 180
+    },
+    {
+      "date": "07-17",
+      "pv": 160,
+      "visits": 150
+    },
+    {
+      "date": "07-18",
+      "pv": 280,
+      "visits": 280
+    },
+    {
+      "date": "07-19",
+      "pv": 190,
+      "visits": 180
+    },
+    {
+      "date": "07-20",
+      "pv": 260,
+      "visits": 230
+    },
+    {
+      "date": "07-21",
+      "pv": 250,
+      "visits": 220
+    },
+    {
+      "date": "07-22",
+      "pv": 250,
+      "visits": 220
+    },
+    {
+      "date": "07-23",
+      "pv": 170,
+      "visits": 160
+    },
+    {
+      "date": "07-24",
+      "pv": 200,
+      "visits": 120
+    },
+    {
+      "date": "07-25",
+      "pv": 210,
+      "visits": 170
+    },
+    {
+      "date": "07-26",
+      "pv": 130,
+      "visits": 120
+    }
+  ],
+  "countries": [
+    {
+      "code": "SG",
+      "flag": "🇸🇬",
+      "name": "新加坡",
+      "pv": 1570,
+      "visits": 1490
+    },
+    {
+      "code": "CN",
+      "flag": "🇨🇳",
+      "name": "中国",
+      "pv": 1080,
+      "visits": 1000
+    },
+    {
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "pv": 450,
+      "visits": 320
+    },
+    {
+      "code": "US",
+      "flag": "🇺🇸",
+      "name": "美国",
+      "pv": 430,
+      "visits": 360
+    },
+    {
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "pv": 200,
+      "visits": 160
+    },
+    {
+      "code": "DE",
+      "flag": "🇩🇪",
+      "name": "德国",
+      "pv": 170,
+      "visits": 120
+    },
+    {
+      "code": "JP",
+      "flag": "🇯🇵",
+      "name": "日本",
+      "pv": 160,
+      "visits": 160
+    },
+    {
+      "code": "TW",
+      "flag": "🇹🇼",
+      "name": "台湾",
+      "pv": 90,
+      "visits": 70
+    },
+    {
+      "code": "MY",
+      "flag": "🇲🇾",
+      "name": "马来西亚",
+      "pv": 40,
+      "visits": 40
+    },
+    {
+      "code": "KR",
+      "flag": "🇰🇷",
+      "name": "韩国",
+      "pv": 30,
+      "visits": 30
+    },
+    {
+      "code": "AR",
+      "flag": "🇦🇷",
+      "name": "阿根廷",
+      "pv": 20,
+      "visits": 20
+    },
+    {
+      "code": "CA",
+      "flag": "🇨🇦",
+      "name": "加拿大",
+      "pv": 20,
+      "visits": 20
+    }
+  ],
+  "countryTotal": 4420,
+  "referers": {
+    "direct": 2900,
+    "search": 900,
+    "ecosystem": 540,
+    "ai": 60,
+    "other": 40
+  },
+  "pages": [
+    {
+      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
+      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
+      "pv": 400,
+      "visits": 400
+    },
+    {
+      "title": "'MemPalace：重塑 AI 记忆的记忆宫殿'",
+      "path": "/blog/mempalace-ai-memory-palace/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "首页",
+      "path": "/",
+      "pv": 200,
+      "visits": 100
+    },
+    {
+      "title": "my/papers",
+      "path": "/my/papers/",
+      "pv": 200,
+      "visits": 0
+    },
+    {
+      "title": "如何开发一个 WebGL 游戏：逆向拆解 messenger.abeto.co 的完整技术栈",
+      "path": "/blog/how-to-develop-webgl-3d-game-threejs-complete-guide/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "CyberClip / 眼镜蛇：外挂式智能眼镜模块的 Idea 阶段",
+      "path": "/blog/cyberclip-ai-glasses-module-idea/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+      "path": "/blog/deepseek-v4-flash-local-inference-guide/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "Paperclip：3 个月 69,462 star，匿名创始人，Zero Human Companies 到底是什么",
+      "path": "/blog/paperclip-zero-human-companies-ai-agent-orchestration/",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "title": "arle 实战指南：普通笔记本一键跑本地大模型，再用蒸馏让 4B 模型追上 35B 的推理能力",
+      "path": "/blog/arle-local-llm-distillation-guide/",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "title": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布",
+      "path": "/blog/cheese-paper-creative-writing-editor/",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "title": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南",
+      "path": "/blog/ian-xiaohei-illustrations-beginner-guide/",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "title": "SkillOpt：微软联合上交复旦同济，让 AI Agent 的 Skill 像神经网络一样被训练",
+      "path": "/blog/skillopt-microsoft-self-evolving-agent-skills-optimization/",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "title": "一人公司的AI员工：OPC创业者的Agent工具全景",
+      "path": "/blog/opc-agent-frameworks-2026/",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "title": "about",
+      "path": "/about/",
+      "pv": 100,
+      "visits": 0
+    }
+  ],
+  "devices": [
+    {
+      "label": "desktop",
+      "count": 4050
+    },
+    {
+      "label": "mobile",
+      "count": 380
+    },
+    {
+      "label": "tablet",
+      "count": 10
+    }
+  ],
+  "os": [
+    {
+      "label": "Windows",
+      "count": 3020
+    },
+    {
+      "label": "MacOSX",
+      "count": 750
+    },
+    {
+      "label": "Unknown",
+      "count": 280
+    },
+    {
+      "label": "Linux",
+      "count": 140
+    },
+    {
+      "label": "Android",
+      "count": 140
+    },
+    {
+      "label": "iOS",
+      "count": 110
+    }
+  ],
+  "browsers": [
+    {
+      "label": "Chrome",
+      "count": 3240
+    },
+    {
+      "label": "Edge",
+      "count": 440
+    },
+    {
+      "label": "Unknown",
+      "count": 280
+    },
+    {
+      "label": "Safari",
+      "count": 190
+    },
+    {
+      "label": "ChromeMobile",
+      "count": 130
+    },
+    {
+      "label": "MobileSafari",
+      "count": 80
+    },
+    {
+      "label": "ChromeMobileWebview",
+      "count": 40
+    },
+    {
+      "label": "Firefox",
+      "count": 30
+    },
+    {
+      "label": "ChromeHeadless",
+      "count": 10
+    }
+  ]
+}
