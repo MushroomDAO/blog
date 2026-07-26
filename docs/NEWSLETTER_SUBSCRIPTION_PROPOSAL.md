@@ -1,8 +1,14 @@
 # 订阅 / Newsletter 功能设计方案（待 review）
 
 > 分支：`feature/newsletter-subscribe`
-> 状态：**方案草案，未开始实现** —— 等待 jason review + 拍板技术选型
+> 状态：**技术选型已定大方向，正在做可行性验证（spike）** —— 见第 3.5 节
 > 目标：在博客底部加一个「Subscribe」按钮，读者填邮箱、确认订阅后，收到我们定期整理的新文章摘要邮件（报纸风格：一个 banner 配一段文字，反复排布）。
+>
+> **已拍板的决策**（jason 已确认，不用再讨论）：
+> - 发送频率：**每 2 天一次**，没有新文章就跳过不发
+> - 发信服务商：**Amazon SES**（不用 Resend——免费层每天 100 封的硬顶，订阅人数一多就撑不住；SES 按量计费无此限制）
+> - 发信域名：**mushroom.cv**（大概率用一个专属子域名隔离信誉，具体子域名待定）
+> - 授权：可以在 Cloudflare 上部署常驻 Docker 进程（Cloudflare Containers），只要技术上可行
 
 ---
 
@@ -48,13 +54,41 @@
 
 理由：
 - 双重确认订阅、退订、弹跳/投诉处理、订阅表单、REST API 全部现成，这些正是最容易踩坑的部分（比如退订令牌防伪造、弹跳率控制账号信誉）
-- 支持通过任意 SMTP 中继发信——可以接 **Resend**（我们在 hack5.net 项目里已经在用 Resend 做付费资源）、Postmark 或 Amazon SES，不用自己当 MTA
+- 支持通过任意 SMTP 中继发信——最终选定 **Amazon SES**（原因见下）
 - REST API 可以从外部脚本触发"创建 campaign + 发送"，正好用来接我们自己写的"新文章摘要生成"脚本
-- 单 Docker 容器 + Postgres，可以跟 `xiaohongshu-mcp` 一样部署在 Mac Mini 上，成本 $0（只是多占一点内存/磁盘）
+
+**listmonk 定了，但"跑在哪"这件事经过两轮调研（含一次 Codex 联网深度挑战）才定下来，详见 3.5 节。**
 
 ---
 
-## 4. 整体架构
+## 3.5 托管位置：A/B/C 三方案对比，目前在验证 C
+
+listmonk 本身需要一个能跑 Postgres 数据库的地方，这块是主要的分歧点。三个方案，按"验证顺序"排列（不是按推荐顺序——C 是首选，A 是兜底）：
+
+| | **方案 C（首选，正在验证）** | **方案 A（兜底）** | 方案 B（不推荐，仅记录） |
+|---|---|---|---|
+| listmonk 程序跑在哪 | **Cloudflare Container**（无状态） | Fly.io 小型 VM | Cloudflare Workers（全部重写，不再是 listmonk）|
+| 数据库 | **外部免费 Postgres**（Neon 或 Supabase 免费层） | Fly.io 持久卷本地 Postgres | Cloudflare D1 |
+| 月成本 | lite 档 ~$1.7/月，若需 basic 档 ~$7/月 | ~$6.5/月 | ~$0，但工程量巨大 |
+| Cloudflare 原生程度 | 高（程序体本身在 Cloudflare 上）| 低（完全在 Cloudflare 之外）| 完全原生，但已经不是 listmonk |
+| 风险 | 容器休眠后磁盘清空，但 listmonk 本身无状态、数据都在外部 Postgres，理论上没事；需要实测冷启动对"确认/退订链接"的影响 | 已验证可行，业界常见部署方式，风险最低 | 要自己重新实现双重确认、退订令牌、弹跳处理、模板——相当于从零做一个 listmonk 的阉割版 |
+
+**为什么不是简单选 A**：Codex 联网核实后指出，Cloudflare Containers 是真产品（2026-04 GA），虽然磁盘是临时的（不能放 Postgres），但**如果把 Postgres 挪到外部**（Neon/Supabase 免费层），listmonk 这个程序本身完全可以跑在 Cloudflare Container 里——这样"数据在外部，但计算在 Cloudflare 上"，比方案 A（整个应用都在 Fly.io，跟 Cloudflare 没关系）更贴近"尽量都用 Cloudflare"的诉求，而且不用像方案 B 那样自己重写 listmonk 的核心逻辑。
+
+**关键悬念**：listmonk 能不能塞进 Cloudflare Container 最便宜的 `lite` 档位（~256MB 内存，~$1.7/月）。如果可以，方案 C 完胜（更便宜 + 更 Cloudflare 原生）；如果 listmonk 内存占用逼得我们上 `basic` 档位（1GB，~$7/月），跟方案 A 的 Fly.io 成本基本打平，那就没有硬性理由放弃 Fly.io 的省心。
+
+Codex 建议的验证步骤（**正在按这个走**）：
+1. 部署 listmonk 到 Cloudflare Container，指向 Neon 或 Supabase 免费 Postgres
+2. 把 listmonk 的数据库连接池配置得尽量小（降低内存占用）
+3. 实测：订阅 → 双重确认 → 退订 → 发一次 campaign → 容器休眠后再点确认/退订链接，看还灵不灵
+4. 看 `lite` 档位扛不扛得住，扛不住就上 `basic`
+5. 如果 `lite` + 外部免费 Postgres 跑得通 → 定方案 C；跑不通/需要 `basic` → 回退方案 A（Fly.io）
+
+Neon vs Supabase 免费层的取舍：Neon 支持 scale-to-zero（不活跃时自动休眠，唤醒较快），Supabase 免费层是"一周不活跃就整个暂停"（需要手动去 dashboard 唤醒，对我们这种"两天发一次"的低频场景有一定风险）——**倾向选 Neon**。
+
+---
+
+## 4. 整体架构（方案 C，验证中；括号内为方案 A 的差异）
 
 ```
 ┌─────────────────────┐
@@ -63,18 +97,22 @@
 └──────────────────────┘               │
                                         ▼
                          ┌───────────────────────────┐
-                         │ listmonk（Mac Mini Docker）│  订阅确认 / 退订 / 名单管理
-                         │  Postgres + 公开订阅表单API │
+                         │ listmonk on Cloudflare      │  订阅确认 / 退订 / 名单管理
+                         │ Container（无状态，lite档）  │  （方案A：Fly.io 小型VM代替）
                          └─────────────┬─────────────┘
-                                       │ SMTP relay
+                                       │ Postgres 连接
                                        ▼
                          ┌───────────────────────────┐
-                         │   Resend / Postmark        │  实际发信（避免自建 MTA）
+                         │  Neon 免费 Postgres（外部）  │  （方案A：Fly.io 本地持久卷 Postgres）
+                         └───────────────────────────┘
+                                       │
+                         ┌───────────────────────────┐
+                         │  listmonk ──SMTP──▶ Amazon SES │  实际发信
                          └───────────────────────────┘
 
 ┌───────────────────────────────────────────────────────┐
 │  定时任务（cron，复用 update-analytics.sh 同款套路）       │
-│  1. 读 Astro content collection：拿最近周期内的新文章      │
+│  1. 读 Astro content collection：拿最近 2 天周期内的新文章  │
 │     （title / description / heroImage / pubDate / slug）│
 │  2. 渲染"报纸风格"HTML 模板（intro + N×banner卡片 + 固定footer）│
 │  3. 调 listmonk Campaign API：创建 campaign + 发送给已确认订阅名单│
@@ -141,17 +179,18 @@
 
 ---
 
-## 7. 需要你拍板的问题
+## 7. 决策记录
 
-1. **发送频率**：你说"每天"，但博客不是每天都发新文章（这几周大概 1-3 篇/天不等，但也有空窗期）。建议二选一：
-   - **(a) 固定节奏**（如每周一次，"周报"），没有新文章就跳过不发——**推荐**，读者预期稳定，不会收到空邮件
-   - (b) 真正按天判断，当天有新文章才发（更贴近你说的"每天"，但要处理"很多天没发"的空窗）
-2. **发信服务商**：Resend（我们已在用）、Postmark 还是 Amazon SES？—— **待验证一个具体点**：listmonk 内建的"弹跳/投诉自动处理"是官方文档明确支持 SES/Postmark/SendGrid 的 webhook 回调，Resend 是否有等价的 bounce webhook 集成，我还没有实测确认，**部署前需要先验证这一点**，如果 Resend 不支持，弹跳处理就要退化成"listmonk 走 SMTP 发信，但弹跳靠 Resend 自己的 dashboard 人工看"，体验会差一些
-3. **发信域名**：用 `blog.mushroom.cv` 还是单独开一个 `news.mushroom.cv` 子域名发信？—— 单独子域名可以隔离发信信誉（万一某次误判进垃圾箱，不连累主站其他邮件），**建议用独立子域名**
-4. **listmonk 部署位置**：Mac Mini（跟 xiaohongshu-mcp 同机）还是找个小 VPS？—— 这里有个之前漏掉的点：Mac Mini 关机/断网影响的不只是"收不到新订阅请求"，**已经发出去的邮件里的"确认订阅"和"退订"链接也会一并失效**（因为这两个动作都要回调 listmonk）。如果 Mac Mini 不是 7x24 挂机，建议要么认这个风险、要么放到一个几美元/月的小 VPS 上换稳定性
-5. **订阅入口交互**：简单跳转到 listmonk 自带的订阅页，还是我们在 Astro 里做一个更好看的自定义弹窗（工作量更大，但视觉统一）？
-6. **AGPL 许可证边界**（Codex review 指出原方案说法过于绝对）：只要我们**不修改 listmonk 源码**、只是部署官方镜像自用，AGPL 对我们没有额外义务；但如果以后为了适配需求去改了 listmonk 的代码，AGPL §13 的网络传播条款就会要求向能访问这个服务的人提供修改后的源码——**目前计划是不改源码，只用它的 API**，这条先记录在案，以后万一要改源码再重新评估
-7. **合规细节**（Codex review 指出原方案完全没提）：订阅表单需要一句同意文案（比如"提交邮箱即代表同意接收更新邮件，可随时退订"）、邮件需要带标准的 `List-Unsubscribe` header（大部分邮件客户端会识别并显示"一键退订"按钮，比邮件里的文字链接更可靠）、以及一份简单的"我们怎么处理你的邮箱数据"的说明——这些不需要复杂的隐私政策，但至少要有一两句话
+**已拍板**：
+1. ~~发送频率~~ → **每 2 天一次，没新文章就跳过不发**
+2. ~~发信服务商~~ → **Amazon SES**（Resend 免费层 100 封/天硬顶，订阅量一大就撑不住；分组也绕不开这个总量限制）
+3. ~~发信域名~~ → **mushroom.cv**（子域名待部署时定，如 `updates.mushroom.cv`）
+4. ~~托管方式~~ → 见第 3.5 节，**正在验证方案 C**（Cloudflare Container + Neon），跑不通回退方案 A（Fly.io）
+
+**还需要你拍板**：
+1. **订阅入口交互**：简单跳转到 listmonk 自带的订阅页，还是我们在 Astro 里做一个更好看的自定义弹窗（工作量更大，但视觉统一）？
+2. **AGPL 许可证边界**（Codex review 指出原方案说法过于绝对）：只要我们**不修改 listmonk 源码**、只是部署官方镜像自用，AGPL 对我们没有额外义务；但如果以后为了适配需求去改了 listmonk 的代码，AGPL §13 的网络传播条款就会要求向能访问这个服务的人提供修改后的源码——**目前计划是不改源码，只用它的 API**，这条先记录在案，以后万一要改源码再重新评估
+3. **合规细节**（Codex review 指出原方案完全没提）：订阅表单需要一句同意文案（比如"提交邮箱即代表同意接收更新邮件，可随时退订"）、邮件需要带标准的 `List-Unsubscribe` header（大部分邮件客户端会识别并显示"一键退订"按钮，比邮件里的文字链接更可靠）、以及一份简单的"我们怎么处理你的邮箱数据"的说明——这些不需要复杂的隐私政策，但至少要有一两句话
 
 ---
 
@@ -159,18 +198,28 @@
 
 - [ ] 反向代理/白名单：只暴露 listmonk 的公开订阅路由，其余端口/接口不对公网开放
 - [ ] Cloudflare Turnstile + 提交频率限制，挂在订阅表单上
-- [ ] 确认 Resend（或最终选定的 ESP）是否支持 listmonk 的 bounce webhook 集成
-- [ ] 独立发信子域名的 SPF / DKIM / DMARC 配置完成，且用 Gmail / Outlook / iCloud 测试账号做过真实送达测试（不是只看"发送成功"）
+- [ ] 确认 SES 的 bounce/complaint 是走 SNS webhook 回调 listmonk（listmonk 官方文档明确支持 SES 集成）
+- [ ] mushroom.cv 发信子域名的 SPF / DKIM / DMARC 配置完成，且用 Gmail / Outlook / iCloud 测试账号做过真实送达测试（不是只看"发送成功"）
 - [ ] cron 脚本有状态持久化（记录上次发送到哪），失败重跑不会重复/漏发
 - [ ] 邮件模板：无 heroImage 兜底、绝对图片 URL、图片数量/体积上限、纯文本兜底版本、暗色模式检查、手机端渲染检查
 - [ ] 邮件带标准 `List-Unsubscribe` header，订阅表单有同意文案
 - [ ] 全链路真人测试：自己订阅 → 收确认邮件 → 点确认 → 收一期摘要 → 点退订 → 确认真的退订成功
 
-## 9. 下一步（方案确认后再动手）
+## 9. 下一步
 
-1. 部署 listmonk（Docker + Postgres）+ 反向代理白名单，配置 SMTP 中继
+**当前阶段：可行性验证（spike），不是正式实现**——先花小成本确认方案 C 能不能跑通，再决定要不要投入完整实现。
+
+1. [进行中] clone listmonk，研究能否塞进 Cloudflare Container `lite` 档
+2. [进行中] 起草 Container 部署配置
+3. [需要 jason] 创建 Neon 免费 Postgres 项目
+4. [需要 jason] 确认/创建 Amazon SES 账号，验证 mushroom.cv 发信子域名
+5. 部署 + 跑通端到端测试（订阅/确认/退订/发送/容器休眠唤醒后链接仍有效）
+6. 根据结果定案方案 C 或回退方案 A，更新本文档
+
+**验证通过后的正式实现步骤**（不变）：
+1. 部署 listmonk 到定案的托管位置 + 反向代理白名单，配置 SES SMTP 中继
 2. 配置发信域名 SPF/DKIM/DMARC，做真实送达测试
 3. Astro 端加 Subscribe 组件（按钮 + 表单 + Turnstile）
 4. 写 `pipeline/newsletter/build-digest.py`（读 content collection → 生成报纸风格 HTML，处理图片兜底）
-5. 写 `scripts/send-newsletter.sh`（调用 listmonk Campaign API，带状态持久化）+ crontab
+5. 写 `scripts/send-newsletter.sh`（调用 listmonk Campaign API，带状态持久化）+ crontab（每 2 天一次）
 6. 走一遍第 8 节的检查清单，全部打勾后再面向真实订阅者发送
