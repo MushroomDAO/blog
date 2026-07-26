@@ -3,8 +3,9 @@
 # update-analytics.sh — refresh /analytics with the latest Cloudflare Web
 # Analytics snapshot, rebuild, deploy, and commit the data file.
 #
-# Runs via cron every 2 days (see crontab entry added by this task):
-#   0 9 */2 * * cd /Users/jason/Dev/mycelium/blog && ./scripts/update-analytics.sh >> /tmp/blog-analytics-update.log 2>&1
+# Runs via cron every 2 days at 21:00 (machine's more likely to be on then
+# than 9am) — see crontab entry added by this task:
+#   0 21 */2 * * cd /Users/jason/Dev/mycelium/blog && ./scripts/update-analytics.sh >> /tmp/blog-analytics-update.log 2>&1
 #
 # Manual run: bash scripts/update-analytics.sh
 # ============================================================================
