@@ -311,3 +311,30 @@ jason 反馈体验：点开是个弹窗、弹窗里又整个跳转加载一次 l
 **2026-08-01 二次修正**：最初的四入口设计（Header/首页横幅/首页底部 CTA/文章页 CTA 各放一份表单）上线后 jason 反馈"文章页底部看起来像两个订阅框"——一张提示卡片 + 紧接着 Footer 的真表单，视觉上像重复。改成**全站只有 Footer 一处真表单**（`id="subscribe"`）：Header、首页横幅都是纯锚点链接跳过去；`SubscribeCta.astro`（文章页 + 首页底部曾经内嵌的卡片式表单）已删除，不再有独立的 CTA 表单实例。
 
 第 10.2 节里"方案 B 工程量和不确定性都明显更高"这个判断被推翻——真正的不确定性只有 CORS 是否已开，验证一次就知道，不需要新增 Pages Function/后端代理。10.6 节里 P1 的"自建表单代理方案可延后"也一并作废，直接跳过 iframe 上线。
+
+---
+
+## 12. 内容源模块化（2026-08-01）
+
+`build-digest.py` 原来是单体脚本：扫 `src/content/blog/`、拼 HTML、写文件全挤在一起。jason 计划以后往摘要邮件里加博客之外的内容——Google Trends AI 相关趋势分析、个人对最近文章/实验的看法（这类内容不打算发到公开博客，只给订阅者看）——所以重构成了内容源插件模式：
+
+```
+pipeline/newsletter/
+├── sources/
+│   ├── __init__.py     # 注册表：SOURCES = {"blog": blog, ...}
+│   ├── base.py          # DigestItem schema（title/summary/pub_date/banner_url/link/body_html）
+│   └── blog.py           # 现有博客扫描逻辑，原样迁移，行为不变
+├── templates.py          # 卡片/正文两种渲染模板 + render(items)
+├── notes/README.md       # "notes" 内容源的文档（脚本还没写，先定好目录和 frontmatter 约定）
+└── build-digest.py       # 编排层：调用每个已注册源的 collect()，合并排序渲染
+```
+
+**加一个新内容源的步骤**：写 `sources/<name>.py`，实现 `collect(window_start, sent_ids) -> list[DigestItem]`，在 `sources/__init__.py` 的 `SOURCES` 里注册一行。`build-digest.py`、`send-newsletter.sh`、`templates.py` 都不用改。
+
+**两个已知的具体场景，接口已经预留好**：
+- **Google Trends 分析**：`link=None` 不行的话（如果打算配一篇独立分析页）就设 `link`；如果只想邮件里直接讲清楚不额外做页面，就设 `body_html`，两种都支持。
+- **个人笔记/实验记录**（不上公开博客）：约定见 `notes/README.md`——frontmatter 三个字段（title/pubDate/summary）+ 正文转 HTML 塞进 `body_html`，`link` 留空。
+
+**去重 key 的兼容处理**：`sent_slugs`（字段名没改，兼容老状态）里，博客条目继续用不带前缀的裸 slug（不破坏已有的 `last-sent.json`/`last-sent.seed.json`）；新内容源的 id 建议自己带前缀（比如 `trends:2026-08-01-xxx`），避免和博客 slug 撞车。
+
+**验证**：重构后跑了一遍真实内容（10 篇文章，含之前修的 slug bug 那篇），渲染结果、去重、退订标签逐项比对跟重构前一致；`send-newsletter.sh` 走完整流程测过，行为没变。
