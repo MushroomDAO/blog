@@ -7,7 +7,7 @@ pubDate: "2026-08-01"
 updatedDate: "2026-08-01"
 category: "Tech-News"
 tags: ["Mage-VL", "微软", "Apple Silicon", "本地推理", "视频理解", "多模态", "MPS", "Mycelium"]
-heroImage: "../../assets/banner-ai-new-intelligence.jpg"
+heroImage: "../../assets/images/mage-vl-local-mac-apple-silicon-image-video-banner.jpg"
 ---
 
 *by Mycelium Protocol*

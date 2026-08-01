@@ -7,7 +7,7 @@ pubDate: "2026-07-30"
 updatedDate: "2026-07-30"
 category: "Tech-News"
 tags: ["Physical AI", "VLM", "视频理解", "具身智能", "om-ai-lab", "VLX", "机器人", "Mycelium"]
-heroImage: "../../assets/banner-ai-new-intelligence.jpg"
+heroImage: "../../assets/images/om-ai-lab-vlx-flow-seek-go-physical-ai-banner.jpg"
 ---
 
 *by Mycelium Protocol*

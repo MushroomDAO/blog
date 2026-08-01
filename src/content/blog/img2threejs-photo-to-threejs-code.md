@@ -7,7 +7,7 @@ pubDate: "2026-07-31"
 updatedDate: "2026-07-31"
 category: "Tech-News"
 tags: ["Three.js", "3D生成", "WebGL", "Claude Code", "AI工具", "程序化生成", "generative", "Mycelium"]
-heroImage: "../../assets/banner-ai-new-intelligence.jpg"
+heroImage: "../../assets/images/img2threejs-photo-to-threejs-code-banner.jpg"
 ---
 
 *by Mycelium Protocol*

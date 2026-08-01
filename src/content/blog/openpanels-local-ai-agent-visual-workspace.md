@@ -7,7 +7,7 @@ pubDate: "2026-08-01"
 updatedDate: "2026-08-01"
 category: "Tech-News"
 tags: ["AI Agent", "Rust", "本地优先", "MCP", "知识库", "微信公众号", "开源工具", "Mycelium"]
-heroImage: "../../assets/banner-ai-new-intelligence.jpg"
+heroImage: "../../assets/images/openpanels-local-ai-agent-visual-workspace-banner.jpg"
 ---
 
 *by Mycelium Protocol*

@@ -7,7 +7,7 @@ pubDate: "2026-08-01"
 updatedDate: "2026-08-01"
 category: "Tech-Experiment"
 tags: ["GRPO", "强化学习", "小模型", "Qwen", "微调", "LLM训练", "AI工程", "Mycelium"]
-heroImage: "../../assets/banner-ai-new-intelligence.jpg"
+heroImage: "../../assets/images/grpo-small-model-engineering-guide-banner.jpg"
 ---
 
 *by Mycelium Protocol*

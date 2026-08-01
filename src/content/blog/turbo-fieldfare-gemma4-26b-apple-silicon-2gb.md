@@ -7,7 +7,7 @@ pubDate: "2026-07-30"
 updatedDate: "2026-07-30"
 category: "Tech-News"
 tags: ["on-device AI", "Apple Silicon", "Gemma", "Swift", "Metal", "LLM推理", "本地模型", "Mycelium"]
-heroImage: "../../assets/banner-ai-new-intelligence.jpg"
+heroImage: "../../assets/images/turbo-fieldfare-gemma4-26b-apple-silicon-2gb-banner.jpg"
 ---
 
 *by Mycelium Protocol*

@@ -7,7 +7,7 @@ pubDate: "2026-07-31"
 updatedDate: "2026-07-31"
 category: "Tech-News"
 tags: ["AI Agent", "OAuth", "SaaS集成", "MCP", "Cloudflare", "开源工具", "auth-gateway", "Mycelium"]
-heroImage: "../../assets/banner-ai-new-intelligence.jpg"
+heroImage: "../../assets/images/open-connector-saas-auth-gateway-ai-agents-banner.jpg"
 ---
 
 *by Mycelium Protocol*
