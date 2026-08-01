@@ -45,6 +45,17 @@ MAX_ARTICLES = 7
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n", re.S)
 
 
+def slugify(filename_stem: str) -> str:
+    """Matches Astro's glob-loader id generation for this content collection:
+    lowercase, strip anything that isn't [a-z0-9-]. Confirmed empirically
+    against the live sitemap for the 3 filenames in this repo that contain
+    a period or uppercase letters (e.g. "...-0.6b-...-dualAR" ->
+    "...-06b-...-dualar") — using the raw filename stem as the URL slug
+    silently produced a broken article link + wrong og:image for those.
+    """
+    return re.sub(r"[^a-z0-9-]", "", filename_stem.lower())
+
+
 def parse_frontmatter(path: Path):
     text = path.read_text(encoding="utf-8")
     m = FRONTMATTER_RE.match(text)
@@ -89,7 +100,7 @@ def og_image_for(slug: str) -> str:
 def collect_new_posts(window_start: datetime.datetime, sent_slugs: set):
     posts = []
     for path in BLOG_DIR.glob("*.md"):
-        slug = path.stem
+        slug = slugify(path.stem)
         if slug in sent_slugs:
             continue
         fm = parse_frontmatter(path)
