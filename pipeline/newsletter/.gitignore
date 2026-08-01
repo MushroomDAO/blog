@@ -1,5 +1,5 @@
 # Runtime state/output — regenerated on every send, not source
-.send-newsletter.lock
+.send-newsletter.lock.d/
 last-sent.json
 digest-output.html
 digest-output.html.manifest.json

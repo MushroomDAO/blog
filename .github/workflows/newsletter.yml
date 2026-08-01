@@ -1,0 +1,73 @@
+name: Send newsletter digest
+
+# Every 2 days at 21:00 Asia/Bangkok (14:00 UTC) — matches the pacing promised
+# to subscribers ("每 2 天收一次"). send-newsletter.sh itself is idempotent
+# (tracks sent post slugs + a pending-campaign state in last-sent.json), so a
+# run with nothing new to send is a harmless no-op — the schedule just sets
+# how often we *check*, not a retry/backoff policy.
+#
+# To change the cadence (e.g. weekly) or the content-collection window, edit
+# the cron expression below and/or pass `since_days` via workflow_dispatch —
+# build-digest.py --since-days controls how far back it looks for un-sent
+# posts when there's no prior last-sent.json state to resume from.
+on:
+  schedule:
+    - cron: '0 14 */2 * *'
+  workflow_dispatch:
+    inputs:
+      since_days:
+        description: 'Fallback lookback window in days (only used if last-sent.json has no state yet)'
+        required: false
+        default: '2'
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install digest dependencies
+        run: pip install -r pipeline/newsletter/requirements.txt
+
+      - name: Restore last-sent.json state
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: pipeline/newsletter/last-sent.json
+          # key is unique per run (so "save" below always creates a fresh
+          # entry instead of erroring on an immutable existing key);
+          # restore-keys falls back to the most recent prior entry by
+          # prefix match, which is what actually carries state forward
+          # across scheduled runs.
+          key: newsletter-last-sent-${{ github.run_id }}
+          restore-keys: |
+            newsletter-last-sent-
+
+      - name: Seed state on first-ever run
+        # Only when no cache entry has ever existed (not even via
+        # restore-keys) — last-sent.seed.json is a one-time, committed
+        # snapshot of state as of when this workflow was set up, so the
+        # very first scheduled run doesn't re-derive "new posts" from
+        # build-digest.py's --since-days fallback and duplicate a send
+        # that already went out manually before automation existed.
+        if: steps.cache.outputs.cache-hit != 'true' && !hashFiles('pipeline/newsletter/last-sent.json')
+        run: cp pipeline/newsletter/last-sent.seed.json pipeline/newsletter/last-sent.json
+
+      - name: Run send-newsletter.sh
+        env:
+          LISTMONK_API_URL: ${{ secrets.LISTMONK_API_URL }}
+          LISTMONK_API_TOKEN: ${{ secrets.LISTMONK_API_TOKEN }}
+          LISTMONK_NEWSLETTER_LIST_UUID: ${{ secrets.LISTMONK_NEWSLETTER_LIST_UUID }}
+          SINCE_DAYS: ${{ inputs.since_days || '2' }}
+        run: bash pipeline/newsletter/send-newsletter.sh
+
+      - name: Save last-sent.json state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: pipeline/newsletter/last-sent.json
+          key: newsletter-last-sent-${{ github.run_id }}

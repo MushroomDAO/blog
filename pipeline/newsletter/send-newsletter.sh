@@ -1,30 +1,64 @@
 #!/usr/bin/env bash
 # ============================================================================
 # send-newsletter.sh — build the digest from newly published posts and send
-# it as a listmonk campaign, every 2 days. Skips cleanly (exit 0) if there's
-# nothing new. Only updates last-sent.json after listmonk confirms the send
-# actually finished, so a failed run is safe to retry without duplicating or
-# dropping an issue. flock'd so an overlapping cron run can't double-send.
+# it as a listmonk campaign, every 2 days.
 #
-# Cron (every 2 days at 21:00, same slot as update-analytics.sh):
-#   0 21 */2 * * cd /Users/jason/Dev/mycelium/blog && ./pipeline/newsletter/send-newsletter.sh >> /tmp/blog-newsletter.log 2>&1
+# Idempotency model:
+#   - flock (mkdir-based) against overlapping runs of this script.
+#   - A campaign we created but haven't yet confirmed "finished" is recorded
+#     as pending_campaign_id/pending_slugs in last-sent.json BEFORE we flip
+#     it to "running". If this run (or the poll below) can't confirm it
+#     finished within the short poll window, we do NOT error out or retry —
+#     we just exit 0 and leave it pending. The NEXT run checks for a pending
+#     campaign FIRST, before ever building a new digest, so a slow send
+#     (large list, listmonk backpressure, whatever) gets confirmed and its
+#     slugs recorded on a later run instead of ever triggering a second,
+#     duplicate campaign for the same posts.
 #
-# Manual run: bash pipeline/newsletter/send-newsletter.sh
+# Scheduled via .github/workflows/newsletter.yml (GitHub Actions, every 2
+# days at 14:00 UTC / 21:00 Asia-Bangkok) — not local crontab, so it doesn't
+# depend on this machine being on. State (last-sent.json) is carried across
+# scheduled runs via actions/cache; see that workflow file for the bootstrap
+# mechanics and how to change the cadence or lookback window.
+#
+# Manual run (local, e.g. to check what would be sent): bash pipeline/newsletter/send-newsletter.sh
 # ============================================================================
 set -euo pipefail
 cd "$(dirname "$0")/../.."
 
-LOCK_FILE="pipeline/newsletter/.send-newsletter.lock"
-exec 200>"$LOCK_FILE"
-if ! flock -n 200; then
+# mkdir is atomic on every POSIX filesystem and needs no extra binary —
+# flock isn't installed by default on macOS, which is where this actually runs.
+LOCK_DIR="pipeline/newsletter/.send-newsletter.lock.d"
+if ! mkdir "$LOCK_DIR" 2>/dev/null; then
   echo "another send-newsletter.sh run is already in progress — exiting" >&2
   exit 0
 fi
+trap 'rmdir "$LOCK_DIR" 2>/dev/null' EXIT
 
 if [ -f ~/Dev/.env ]; then
-  set -a
-  source ~/Dev/.env
-  set +a
+  # ~/Dev/.env has ~60 unrelated secrets across many other projects, isn't
+  # valid bash throughout (some keys have hyphens, meant for a lenient
+  # dotenv parser not `source`), and some values contain characters bash
+  # would try to expand. Parse out just the 3 keys this script needs instead
+  # of sourcing the whole file.
+  eval "$(python3 <<'PYEOF'
+import shlex
+from pathlib import Path
+
+keys = {"LISTMONK_API_URL", "LISTMONK_API_TOKEN", "LISTMONK_NEWSLETTER_LIST_UUID"}
+env_path = Path.home() / "Dev" / ".env"
+for line in env_path.read_text(encoding="utf-8", errors="replace").splitlines():
+    line = line.strip()
+    if "=" not in line or line.startswith("#"):
+        continue
+    k, _, v = line.partition("=")
+    k = k.strip()
+    if k not in keys:
+        continue
+    v = v.strip().strip('"').strip("'")
+    print(f"export {k}={shlex.quote(v)}")
+PYEOF
+)"
 fi
 
 : "${LISTMONK_API_URL:?LISTMONK_API_URL not set (see ~/Dev/.env)}"
@@ -42,10 +76,68 @@ lm_curl() {
   curl -sS --fail-with-body --connect-timeout 10 --max-time 60 "$@"
 }
 
-echo "=== $(date) — building newsletter digest ==="
+campaign_status() {
+  lm_curl -H "$AUTH_HEADER" "${LISTMONK_API_URL}/api/campaigns/$1" \
+    | python3 -c "import json,sys; print(json.load(sys.stdin)['data']['status'])"
+}
+
+# Merge pending_slugs into sent_slugs, clear the pending fields, record the
+# campaign id + timestamp. Used both when a freshly-created campaign confirms
+# finished quickly, and when a run picks up a pending campaign from a
+# previous run that has since finished.
+finalize_sent() {
+  local campaign_id="$1"
+  CAMPAIGN_ID="$campaign_id" STATE_FILE="$STATE_FILE" python3 -c "
+import datetime, json, os
+
+state_path = os.environ['STATE_FILE']
+data = json.load(open(state_path)) if os.path.exists(state_path) else {}
+prev_slugs = set(data.get('sent_slugs', []))
+pending_slugs = set(data.get('pending_slugs', []))
+
+json.dump(
+    {
+        'last_sent_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        'campaign_id': int(os.environ['CAMPAIGN_ID']),
+        'sent_slugs': sorted(prev_slugs | pending_slugs),
+    },
+    open(state_path, 'w'),
+)
+"
+}
+
+echo "=== $(date) — checking for a pending campaign from a previous run ==="
+PENDING_ID=$(python3 -c "
+import json, os
+p = '$STATE_FILE'
+print(json.load(open(p)).get('pending_campaign_id', '') if os.path.exists(p) else '')
+")
+
+if [ -n "$PENDING_ID" ]; then
+  echo "  found pending campaign ${PENDING_ID}, checking status…"
+  STATUS=$(campaign_status "$PENDING_ID")
+  case "$STATUS" in
+    finished)
+      echo "  ✓ pending campaign ${PENDING_ID} has finished — recording and clearing pending state"
+      finalize_sent "$PENDING_ID"
+      echo "  ✓ last-sent.json updated"
+      exit 0
+      ;;
+    cancelled|paused)
+      echo "  ! pending campaign ${PENDING_ID} is '${STATUS}' — needs manual attention (${LISTMONK_API_URL}/admin/campaigns/${PENDING_ID}); not clearing pending state or creating a new campaign automatically" >&2
+      exit 1
+      ;;
+    *)
+      echo "  pending campaign ${PENDING_ID} is still '${STATUS}' — will check again next run, NOT creating a new campaign for the same posts"
+      exit 0
+      ;;
+  esac
+fi
+
+echo "=== building newsletter digest ==="
 
 set +e
-python3 pipeline/newsletter/build-digest.py --out "$DIGEST_HTML"
+python3 pipeline/newsletter/build-digest.py --since-days "${SINCE_DAYS:-2}" --out "$DIGEST_HTML"
 BUILD_STATUS=$?
 set -e
 
@@ -57,8 +149,11 @@ elif [ "$BUILD_STATUS" -ne 0 ]; then
   exit 1
 fi
 
-echo "[1/3] resolving list numeric ID for uuid ${LISTMONK_NEWSLETTER_LIST_UUID}…"
-LIST_ID=$(LISTMONK_LIST_UUID="$LISTMONK_NEWSLETTER_LIST_UUID" lm_curl -H "$AUTH_HEADER" "${LISTMONK_API_URL}/api/lists?per_page=all" \
+echo "[1/4] resolving list numeric ID for uuid ${LISTMONK_NEWSLETTER_LIST_UUID}…"
+# export, not a per-command prefix — a `VAR=val cmd | other` prefix only scopes
+# to `cmd`, the python3 process on the other side of the pipe wouldn't see it.
+export LISTMONK_LIST_UUID="$LISTMONK_NEWSLETTER_LIST_UUID"
+LIST_ID=$(lm_curl -H "$AUTH_HEADER" "${LISTMONK_API_URL}/api/lists?per_page=all" \
   | python3 -c "
 import json, os, sys
 data = json.load(sys.stdin)['data']['results']
@@ -71,7 +166,7 @@ if [ -z "$LIST_ID" ]; then
   exit 1
 fi
 
-echo "[2/3] creating + sending campaign (list id ${LIST_ID})…"
+echo "[2/4] creating campaign (list id ${LIST_ID})…"
 CAMPAIGN_JSON=$(LM_ISSUE_NAME="Digest $(date +%Y-%m-%d)" \
   LM_SUBJECT="🍄 Mushroom Research Blog — 更新摘要 $(date +%Y-%m-%d)" \
   LM_LIST_ID="$LIST_ID" \
@@ -97,44 +192,40 @@ if [ -z "$CAMPAIGN_ID" ]; then
   exit 1
 fi
 
+echo "[3/4] recording pending state (campaign ${CAMPAIGN_ID}) before triggering the send…"
+# Written BEFORE flipping status to "running": if this process dies right
+# after that PUT, or the send just takes longer than we poll below, the next
+# run finds this pending_campaign_id and confirms/waits on it instead of
+# building a fresh digest and creating a second campaign for the same posts.
+CAMPAIGN_ID="$CAMPAIGN_ID" STATE_FILE="$STATE_FILE" MANIFEST_FILE="$MANIFEST_FILE" python3 -c "
+import json, os
+
+state_path = os.environ['STATE_FILE']
+data = json.load(open(state_path)) if os.path.exists(state_path) else {}
+manifest = json.load(open(os.environ['MANIFEST_FILE']))
+
+data['pending_campaign_id'] = int(os.environ['CAMPAIGN_ID'])
+data['pending_slugs'] = manifest['slugs']
+json.dump(data, open(state_path, 'w'))
+"
+
 lm_curl -H "$AUTH_HEADER" -H "Content-Type: application/json" \
   -X PUT "${LISTMONK_API_URL}/api/campaigns/${CAMPAIGN_ID}/status" \
   --data '{"status":"running"}' > /dev/null
 
-echo "[3/3] verifying send finished…"
+echo "[4/4] polling briefly for a fast finish…"
 STATUS=""
 for i in $(seq 1 10); do
   sleep 3
-  STATUS=$(lm_curl -H "$AUTH_HEADER" "${LISTMONK_API_URL}/api/campaigns/${CAMPAIGN_ID}" \
-    | python3 -c "import json,sys; print(json.load(sys.stdin)['data']['status'])")
+  STATUS=$(campaign_status "$CAMPAIGN_ID")
   if [ "$STATUS" = "finished" ]; then
     break
   fi
 done
 
-if [ "$STATUS" != "finished" ]; then
-  echo "  campaign ${CAMPAIGN_ID} did not reach 'finished' (last status: ${STATUS}) — NOT updating last-sent.json, will retry next cycle" >&2
-  echo "  (if the campaign is just slow — large list — check ${LISTMONK_API_URL}/admin/campaigns/${CAMPAIGN_ID} manually before rerunning, to avoid a duplicate send)" >&2
-  exit 1
+if [ "$STATUS" = "finished" ]; then
+  finalize_sent "$CAMPAIGN_ID"
+  echo "  ✓ campaign ${CAMPAIGN_ID} sent, last-sent.json updated"
+else
+  echo "  campaign ${CAMPAIGN_ID} still '${STATUS}' after the short poll — not an error, this is normal for a larger list. Left as pending_campaign_id in last-sent.json; the next run will confirm it and record its slugs instead of creating a new campaign for the same posts."
 fi
-
-CAMPAIGN_ID="$CAMPAIGN_ID" STATE_FILE="$STATE_FILE" MANIFEST_FILE="$MANIFEST_FILE" python3 -c "
-import datetime, json, os
-
-manifest_path = os.environ['MANIFEST_FILE']
-new_slugs = set(json.load(open(manifest_path))['slugs']) if os.path.exists(manifest_path) else set()
-
-state_path = os.environ['STATE_FILE']
-prev_slugs = set(json.load(open(state_path)).get('sent_slugs', [])) if os.path.exists(state_path) else set()
-
-json.dump(
-    {
-        'last_sent_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-        'campaign_id': int(os.environ['CAMPAIGN_ID']),
-        'sent_slugs': sorted(prev_slugs | new_slugs),
-    },
-    open(state_path, 'w'),
-)
-"
-
-echo "  ✓ campaign ${CAMPAIGN_ID} sent, last-sent.json updated"
