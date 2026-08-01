@@ -1,0 +1,44 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mushroom-listmonk",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-01",
+
+  // Cloudflare Container running listmonk's official image (amd64 only —
+  // Cloudflare Containers doesn't support arm64, and listmonk's Docker Hub
+  // image publishes both, so this pulls the amd64 variant). Spike: start
+  // at "lite" (1/16 vCPU, 256MiB, 2GB disk) — bump to "basic" if listmonk
+  // OOMs under the connection pool / campaign-send workload.
+  "containers": [
+    {
+      "class_name": "ListmonkContainer",
+      "image": "./Dockerfile",
+      "instance_type": "basic",
+      "max_instances": 1
+    }
+  ],
+
+  "durable_objects": {
+    "bindings": [
+      { "name": "LISTMONK_CONTAINER", "class_name": "ListmonkContainer" }
+    ]
+  },
+
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["ListmonkContainer"] }
+  ],
+
+  // Non-secret config. Secrets (DB password, listmonk admin password) are
+  // set via `wrangler secret put <NAME>` — see README.md — never committed.
+  "vars": {
+    // Neon project "blog" (purple-leaf-89343439), direct (non-pooler)
+    // endpoint — listmonk manages its own small connection pool, so we
+    // skip Neon's pgbouncer pooler to avoid transaction-mode edge cases.
+    "PGHOST": "ep-wild-water-ax0wchad.c-4.us-east-2.aws.neon.tech",
+    "PGPORT": "5432",
+    "PGUSER": "neondb_owner",
+    "PGDATABASE": "listmonk",
+    "PGSSLMODE": "require",
+    "LISTMONK_ADMIN_USER": "admin"
+  }
+}

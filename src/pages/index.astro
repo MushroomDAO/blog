@@ -68,6 +68,31 @@ const postsData = posts.map(post => ({
 				margin: 0 auto;
 				padding: 2em 1em;
 			}
+			/* 订阅横幅 */
+			.subscribe-banner {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1em;
+				flex-wrap: wrap;
+				padding: 0.7em 1.2em;
+				margin-bottom: 1.2em;
+				background: rgba(var(--accent-mint), 0.08);
+				border: 1px solid rgba(var(--accent-mint), 0.3);
+				border-radius: 10px;
+				font-size: 0.95em;
+				color: rgb(var(--accent-mint));
+			}
+			.subscribe-banner-link {
+				flex-shrink: 0;
+				padding: 0.4em 1em;
+				background: rgb(var(--accent-mint));
+				color: #fff;
+				border-radius: 999px;
+				font-weight: 600;
+				text-decoration: none;
+				white-space: nowrap;
+			}
 			/* 分类筛选栏 - 绿色科技感 */
 			.filter-bar {
 				display: flex;
@@ -351,6 +376,12 @@ const postsData = posts.map(post => ({
 	<body>
 		<Header />
 		<main>
+			<!-- 订阅横幅：不打扰的一条，放在轮播上方；点击滚到下面 Footer 里的真实订阅表单 -->
+			<div class="subscribe-banner">
+				<span>🍄 每 2 天收一次新文章摘要邮件</span>
+				<a href="#subscribe" class="subscribe-banner-link">📮 去订阅</a>
+			</div>
+
 			<!-- 分类筛选 -->
 			<div class="filter-bar">
 				<a href="/" class="filter-item" data-filter="all">All</a>

@@ -1,0 +1,165 @@
+---
+import { ALTCHA_CHALLENGE_URL, SUBSCRIBE_FORM_URL, SUBSCRIBE_LIST_UUID } from './config';
+
+interface Props {
+	variant?: 'footer' | 'hero' | 'cta';
+	id?: string;
+}
+
+const { variant = 'footer', id } = Astro.props;
+---
+
+<!--
+  真表单，直接 fetch() POST 到 listmonk 的 /subscription/form（同一个 URL 既是订阅页也是提交
+  目标）——不是 iframe，也不是弹窗，不会跳转离开这个页面。listmonk 已经把 blog.mushroom.cv 加进了
+  它的 CORS 允许来源（实测确认），所以可以直接跨域拿到真实的成功/失败响应。
+  Altcha（listmonk 自带的无感验证码）的加载脚本只在 Footer 里放一次，这里只放 widget 标签。
+-->
+<form class={`subscribe-form subscribe-form--${variant}`} id={id} data-subscribe-form>
+	<div class="subscribe-form-row">
+		<input type="email" name="email" required placeholder="you@example.com" aria-label="邮箱地址" />
+		<button type="submit">📮 订阅</button>
+	</div>
+	<input type="hidden" name="l" value={SUBSCRIBE_LIST_UUID} />
+	<input type="hidden" name="nonce" value="" />
+	<div class="subscribe-altcha">
+		<altcha-widget challengeurl={ALTCHA_CHALLENGE_URL} hidefooter></altcha-widget>
+	</div>
+	<p class="subscribe-status" data-subscribe-status aria-live="polite"></p>
+</form>
+
+<script define:vars={{ endpoint: SUBSCRIBE_FORM_URL }}>
+	// 用 delegation 绑一次即可覆盖页面上所有 .subscribe-form（首页可能同时有 hero/cta/footer 三个实例）
+	if (!window.__subscribeFormBound) {
+		window.__subscribeFormBound = true;
+		document.addEventListener('submit', async (event) => {
+			const form = event.target.closest('[data-subscribe-form]');
+			if (!form) return;
+			event.preventDefault();
+
+			const statusEl = form.querySelector('[data-subscribe-status]');
+			const button = form.querySelector('button[type="submit"]');
+			const email = form.email.value.trim();
+			if (!email) return;
+
+			button.disabled = true;
+			statusEl.textContent = '提交中…';
+			statusEl.className = 'subscribe-status';
+
+			const controller = new AbortController();
+			const timeoutId = setTimeout(() => controller.abort(), 15000);
+
+			try {
+				const body = new URLSearchParams(new FormData(form));
+				const res = await fetch(endpoint, {
+					method: 'POST',
+					body,
+					headers: { Accept: 'text/html' },
+					signal: controller.signal,
+				});
+				const text = await res.text();
+				// listmonk 出错时返回带 <h2>Error</h2> 的页面（比如验证码没过）；成功提交后返回
+				// 带 <h2>Subscribe</h2> 的确认页且不再带表单。两者都不匹配时（比如服务端 500 但响应体
+				// 既不是标准错误页也不是确认页——真遇到过：SMTP 挂了导致 500，但订阅记录其实已经建好了）
+				// 不能瞎猜成功或失败，只能如实告诉用户"不确定"，别用一个可能是假的失败提示误导人重试。
+				const errorMatch = text.match(/<h2>Error<\/h2>\s*<div>\s*([\s\S]*?)\s*<\/div>/);
+				const looksSuccessful = res.ok && /<h2>Subscribe<\/h2>/.test(text) && !/<form/.test(text);
+				if (errorMatch) {
+					statusEl.textContent = '❌ ' + errorMatch[1];
+					statusEl.classList.add('is-error');
+				} else if (looksSuccessful) {
+					statusEl.textContent = '✅ 已提交！请查收邮件完成确认订阅。';
+					statusEl.classList.add('is-success');
+					form.reset();
+				} else {
+					statusEl.textContent = '⚠️ 提交状态不确定，请稍后查收邮件；没收到的话过几分钟再试一次。';
+					statusEl.classList.add('is-error');
+				}
+			} catch (err) {
+				statusEl.textContent = err?.name === 'AbortError'
+					? '❌ 请求超时，请检查网络后重试。'
+					: '❌ 网络错误，请稍后重试。';
+				statusEl.classList.add('is-error');
+			} finally {
+				clearTimeout(timeoutId);
+				button.disabled = false;
+			}
+		});
+	}
+</script>
+
+<style>
+	.subscribe-form {
+		max-width: 420px;
+	}
+	.subscribe-form-row {
+		display: flex;
+		gap: 0.5em;
+	}
+	.subscribe-form input[type='email'] {
+		flex: 1;
+		min-width: 0;
+		padding: 0.55em 0.8em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 8px;
+		font-size: 0.95em;
+	}
+	.subscribe-form button[type='submit'] {
+		flex-shrink: 0;
+		padding: 0.55em 1.2em;
+		background: rgb(var(--accent));
+		color: #fff;
+		border: none;
+		border-radius: 8px;
+		font-weight: 600;
+		cursor: pointer;
+		white-space: nowrap;
+	}
+	.subscribe-form button[type='submit']:hover:not(:disabled) {
+		background: var(--accent-dark);
+	}
+	.subscribe-form button[type='submit']:disabled {
+		opacity: 0.6;
+		cursor: default;
+	}
+	.subscribe-altcha {
+		margin-top: 0.6em;
+	}
+	.subscribe-status {
+		margin: 0.5em 0 0;
+		font-size: 0.85em;
+		min-height: 1.2em;
+	}
+	.subscribe-status.is-success {
+		color: #1a7f37;
+	}
+	.subscribe-status.is-error {
+		color: #cf222e;
+	}
+
+	/* footer 变体：居中，配全站 Footer 的深色调 */
+	.subscribe-form--footer {
+		margin: 0 auto;
+	}
+	.subscribe-form--footer .subscribe-status {
+		text-align: center;
+	}
+
+	/* hero 横幅变体：紧凑，跟首页横幅的一行文字对齐 */
+	.subscribe-form--hero {
+		max-width: 320px;
+	}
+	.subscribe-form--hero .subscribe-altcha {
+		transform: scale(0.85);
+		transform-origin: left top;
+	}
+
+	@media (max-width: 480px) {
+		.subscribe-form-row {
+			flex-direction: column;
+		}
+		.subscribe-form button[type='submit'] {
+			width: 100%;
+		}
+	}
+</style>

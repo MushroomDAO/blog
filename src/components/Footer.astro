@@ -1,9 +1,15 @@
 ---
+import { ALTCHA_SCRIPT_URL } from './subscribe/config';
+import SubscribeForm from './subscribe/SubscribeForm.astro';
 const today = new Date();
 ---
 
 <footer>
 	&copy; {today.getFullYear()} 🍄 Mycelium = 🪵 Infras | 🦠 Protocols | 🕸️ Networks. All rights reserved.
+	<div class="subscribe-footer-block">
+		<p class="subscribe-footer-hint">📮 每 2 天收一次新文章摘要，随时可退订</p>
+		<SubscribeForm variant="footer" id="subscribe" />
+	</div>
 	<div class="social-links">
 		<a href="https://x.com/MushroomdDAO1984" target="_blank">
 			<span class="sr-only">Follow on X</span>
@@ -29,7 +35,19 @@ const today = new Date();
 		· <a href="/analytics/">📊 Website Analytics</a>
 	</div>
 </footer>
+<script type="module" src={ALTCHA_SCRIPT_URL} async defer></script>
 <style>
+	.subscribe-footer-block {
+		margin-top: 1.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.subscribe-footer-hint {
+		margin: 0 0 0.6em;
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+	}
 	footer {
 		padding: 2em 1em 6em 1em;
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
