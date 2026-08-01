@@ -1,72 +1,77 @@
-# 给你的博客搭一套邮件订阅系统——可复用集成方案
+# 给你的博客搭一套邮件订阅系统——从零开始、手把手的完整教程
 
-> 这不是"复制粘贴就能跑"的代码库说明书（那个是 [`NEWSLETTER_SYSTEM.md`](./NEWSLETTER_SYSTEM.md)，Mushroom Blog 专属，带真实资源 ID）。这是**方案**——技术选型的理由、每一步在解决什么问题、真实踩过的坑，让你能把同一套模式搬到自己的项目上，用不同的域名/账号重新走一遍。
+> 这份文档假设你只有一样东西：**一个你能控制 DNS 的域名**。别的什么都没有——没有 Fly.io 账号，没有 AWS 账号，没有 Neon 账号。跟着下面的步骤一步步做，每一步都是"去哪个网址、点哪个按钮、跑哪条命令"，不是原理性的描述。
 >
-> 背景：这套系统是 2026-07-29 到 2026-08-01 之间，在 Mushroom Research Blog（Astro 静态博客）上真实搭建、真实调试、真实发送成功的。下面每一条坑都是实际踩过的，不是"理论上可能"。
+> 全程用示例域名 `yourdomain.com`，发信子域名用 `updates.yourdomain.com`，listmonk 域名用 `list.yourdomain.com`——替换成你自己的域名就行。
+>
+> 想看"这套系统内部是怎么设计的"（内容模块化架构、去重逻辑这些），看 [`NEWSLETTER_SYSTEM.md`](./NEWSLETTER_SYSTEM.md) 或者本文第 8 节之后的部分。这里第 1-7 节是纯粹的"从 0 部署到能收发邮件"操作步骤。
+>
+> 预计总耗时：2-4 小时（大部分时间花在等 DNS 生效、等 AWS SES 审核），不算写博客集成代码的时间。
 
 ---
 
-## 1. 你在解决什么问题
+## 0. 开始前，先申请这三个账号
 
-个人/小型博客想要邮件订阅，通常两条路：
+现在就去注册，不用等看到对应章节再去申请，因为其中一个（AWS SES 生产权限）审核可能要等几小时到一天：
 
-- **上第三方平台**（Substack、ConvertKit、Beehiiv）：最快，但数据不在自己手里，读者名单是平台的，平台随时能抽成/限流/关停。
-- **自己搭**：数据主权在自己手里，但要解决一堆容易踩坑的细节——双重确认（防止别人拿你邮箱恶意订阅）、退订令牌、防灌邮件骚扰、bounce/complaint 处理（不处理会拖累发信域名信誉，最后邮件全进垃圾箱）、邮件模板兼容各家客户端。
-
-这套方案选的是第二条路，但**尽量不重新发明轮子**——核心思路是找一个已经把"最容易出错的部分"做完的开源工具，自己只负责拼起来和写内容。
-
----
-
-## 2. 技术选型（和为什么）
-
-| 环节 | 选了什么 | 为什么 |
-|---|---|---|
-| 邮件列表引擎 | **listmonk**（开源，自托管） | 双重确认、Altcha 防骚扰验证码、退订令牌、bounce 处理全部内置，自己不用再实现这些最容易出错的部分 |
-| 托管 listmonk | **Fly.io** | 无状态部署，配 `auto_stop_machines`（空闲自动休眠、有请求自动唤醒）成本趋近于 0；曾经先尝试过 Cloudflare Container，跑起来发现内存档位不够便宜就放弃了——**这条路线切换本身就说明：先花小成本 spike 验证，比一开始就押注更划算** |
-| 数据库 | **Neon**（外部托管 Postgres） | listmonk 本身无状态，数据全在这，不用管 Fly 卷备份这些运维细节 |
-| 发信 | **AWS SES** | 按量计费，没有 Resend 免费层"每天 100 封"那种硬顶，订阅人数一多就会撞上 |
-| 定时任务 | **GitHub Actions**（不是本地 crontab） | 不依赖某台机器是不是开着联网；免费额度对个人博客量级完全够用 |
-| 前端集成 | **直接 `fetch()` POST**，不用 iframe，不用自建后端代理 | 见第 5 节，这是最容易想复杂的一步 |
+1. **Fly.io**：https://fly.io/app/sign-up ——需要绑信用卡（有免费额度，个人博客量级基本不花钱）
+2. **AWS**：https://aws.amazon.com/ ——如果已经有 AWS 账号可以直接用
+3. **Neon**（免费 Postgres）：https://neon.tech/ ——用 GitHub 账号登录最快
 
 ---
 
-## 3. 前置准备
+## 1. 建数据库（Neon）
 
-- 一个你控制 DNS 的域名（Cloudflare、Route53 都行，示例用 Cloudflare）
-- AWS 账号（开 SES）
-- Fly.io 账号
-- Neon（或任何托管 Postgres）账号
-- 代码托管在 GitHub（用 Actions 做定时）
+1. 登录 https://console.neon.tech
+2. 点 **Create a project**，起个名字（比如 `newsletter`），region 选离你部署 listmonk 的地方近的（比如 AWS `us-east-2`）
+3. 建好之后，进项目 → **Connection Details**，拿到这几个值，先记下来：
+   ```
+   host:     ep-xxxxx-xxxxx.区域.aws.neon.tech
+   database: neondb（默认库名，也可以自己新建一个叫 listmonk 的库）
+   user:     neondb_owner（默认用户名）
+   password: 点 "Show password" 才会显示
+   ```
+4. **在 Neon 控制台里手动新建一个名叫 `listmonk` 的数据库**（Tables 页或者 SQL Editor 里跑 `CREATE DATABASE listmonk;`）——listmonk 自己不会建库，得有一个已存在的空库给它初始化表结构。
 
 ---
 
-## 4. 分步搭建
+## 2. 部署 listmonk 到 Fly.io
 
-### 4.1 部署 listmonk 到 Fly.io
+### 2.1 安装命令行工具
+
+```bash
+curl -L https://fly.io/install.sh | sh
+flyctl auth login   # 会弹浏览器登录
+```
+
+### 2.2 建 fly.toml
+
+新建一个空目录（比如 `~/listmonk-deploy/`），里面放这个文件：
 
 ```toml
 # fly.toml
-app = "your-listmonk-app"
-primary_region = "sin"   # 选离你的读者近的区域
+app = "your-listmonk-app"     # 全局唯一，起个不会撞名的
+primary_region = "sin"         # 离你的读者近的区域，可选值见 flyctl platform regions
 
 [build]
-  image = "docker.io/listmonk/listmonk:v6.2.0"   # 官方镜像，不需要自己写 Dockerfile
+  image = "docker.io/listmonk/listmonk:v6.2.0"
 
 [env]
   LISTMONK_app__address = "0.0.0.0:9000"
-  LISTMONK_db__host = "your-neon-host.neon.tech"
+  LISTMONK_db__host = "你在第1步拿到的 Neon host"
   LISTMONK_db__port = "5432"
   LISTMONK_db__user = "neondb_owner"
   LISTMONK_db__database = "listmonk"
   LISTMONK_db__ssl_mode = "require"
-  LISTMONK_db__max_open = "4"     # Neon 免费层并发连接数有限，小博客量级够用
+  LISTMONK_db__max_open = "4"
   LISTMONK_db__max_idle = "2"
+  LISTMONK_db__max_lifetime = "300s"
   LISTMONK_ADMIN_USER = "admin"
 
 [http_service]
   internal_port = 9000
   force_https = true
-  auto_stop_machines = "stop"    # 省钱的关键
+  auto_stop_machines = "stop"     # 空闲自动休眠，省钱
   auto_start_machines = true
   min_machines_running = 0
 
@@ -75,16 +80,112 @@ primary_region = "sin"   # 选离你的读者近的区域
   memory = "512mb"
 ```
 
-`flyctl secrets set LISTMONK_ADMIN_PASSWORD=... LISTMONK_db__password=...`（密码类不要写进 fly.toml，走 secrets）。首次部署后访问 `/admin` 走一遍初始化。
+### 2.3 建 app + 设密码 + 部署
 
-### 4.2 配置发信域名——SES + DNS
+```bash
+cd ~/listmonk-deploy
+flyctl apps create your-listmonk-app
 
-1. AWS SES 控制台验证一个**专属发信子域名**（不要用根域名，隔离信誉——比如 `updates.yourdomain.com`，不是 `yourdomain.com`），拿到它给你的 DKIM CNAME 值（3 条）。
-2. DNS 里加：
-   - `TXT updates.yourdomain.com` → `v=spf1 include:amazonses.com ~all`
-   - 3 条 DKIM CNAME（SES 控制台给你的原样抄）
-   - `TXT _dmarc.updates.yourdomain.com` → `v=DMARC1; p=none; rua=mailto:你的邮箱`
-3. **SMTP 密码不是 SES 控制台的密码，是从 Secret Access Key 用 AWS 官方算法推导出来的**：
+# 数据库密码、管理员密码不要写进 fly.toml，走 secrets：
+flyctl secrets set LISTMONK_db__password="你的Neon数据库密码" -a your-listmonk-app
+flyctl secrets set LISTMONK_ADMIN_PASSWORD="给自己起一个强密码" -a your-listmonk-app
+
+flyctl deploy -a your-listmonk-app
+```
+
+### 2.4 跑数据库初始化
+
+listmonk 第一次部署，数据库表结构是空的，需要跑一次安装命令：
+
+```bash
+flyctl ssh console -a your-listmonk-app
+# 进到容器里之后：
+./listmonk --install --yes
+exit
+```
+
+### 2.5 绑自定义域名
+
+```bash
+flyctl certs create list.yourdomain.com -a your-listmonk-app
+flyctl certs show list.yourdomain.com -a your-listmonk-app
+```
+
+第二条命令会告诉你需要在 DNS 里加什么记录（通常是一条 `CNAME list.yourdomain.com` 指向 `your-listmonk-app.fly.dev`，或者一条 `A`/`AAAA` 记录）。去你的 DNS 服务商（Cloudflare/其他）控制台把这条记录加上，等几分钟到证书签发完成。
+
+### 2.6 验证
+
+浏览器打开 `https://list.yourdomain.com`，应该能看到 listmonk 的欢迎页/订阅表单相关内容。打开 `https://list.yourdomain.com/admin`，用 `admin` + 你在 2.3 步设置的密码登录，能进后台就说明部署成功了。
+
+---
+
+## 3. 配置发信域名（AWS SES）
+
+### 3.1 验证发信子域名
+
+**用一个专属子域名发信，不要用根域名**——这样万一发信信誉出问题，不会连累主站/其他邮箱。
+
+1. 登录 AWS 控制台，搜索并进入 **SES**（Simple Email Service），右上角选一个区域（比如 `us-east-1`，后面所有配置都要在同一个区域）
+2. 左侧菜单 **Verified identities** → **Create identity**
+3. Identity type 选 **Domain**，输入 `updates.yourdomain.com`
+4. 勾选 **Use a default DKIM signing key length** 保持默认（RSA 2048），点 **Create identity**
+5. 创建后进入这个 identity 的详情页，**DKIM** 标签下会给你 **3 条 CNAME 记录**——记下来，格式类似：
+   ```
+   名称: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx._domainkey.updates.yourdomain.com
+   类型: CNAME
+   值:   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.dkim.amazonses.com
+   ```
+   （3 条记录的 xxxx 部分各不相同，都要加）
+
+### 3.2 把记录写进 DNS
+
+去你的 DNS 服务商控制台，加下面这几条记录（都是加在 `updates.yourdomain.com` 这个子域名上）：
+
+| 类型 | 名称 | 值 |
+|---|---|---|
+| CNAME | `token1._domainkey.updates.yourdomain.com` | AWS 给你的第 1 条 DKIM 值 |
+| CNAME | `token2._domainkey.updates.yourdomain.com` | AWS 给你的第 2 条 DKIM 值 |
+| CNAME | `token3._domainkey.updates.yourdomain.com` | AWS 给你的第 3 条 DKIM 值 |
+| TXT | `updates.yourdomain.com` | `v=spf1 include:amazonses.com ~all` |
+| TXT | `_dmarc.updates.yourdomain.com` | `v=DMARC1; p=none; rua=mailto:你的真实邮箱` |
+
+加完等一会儿（几分钟到几小时不等），回 SES 控制台的 Verified identities 列表刷新，状态从 Pending 变成 **Verified** 就说明 DNS 生效了。
+
+### 3.3 申请退出 Sandbox（这一步经常被漏掉，非做不可）
+
+**新开的 SES 账号默认在 Sandbox 模式**——这个模式下你**只能给已经验证过的邮箱地址发信**，普通读者根本收不到。必须申请转正：
+
+1. SES 控制台左侧 **Account dashboard**，能看到当前 Sending limits 显示"Sandbox"
+2. 点 **Request production access**
+3. 填表单：Mail type 选 Transactional 或 Marketing（订阅摘要邮件选 Marketing 更准确），Website URL 填你的博客地址，Use case description 老老实实写清楚"这是个人博客的邮件订阅系统，双重确认订阅，读者可以随时退订"，预估发送量填个保守数字（比如每天 100 封以内）
+4. 提交后一般几小时到一天内会有结果邮件
+
+**在批准之前**，第 5 节的"往自己邮箱发一封测试邮件"这一步用你自己已验证的邮箱地址是能跑通的（Sandbox 模式下，给自己发的已验证地址不受限），可以先测起来，不用干等审核结果。
+
+### 3.4 建一个只有发信权限的 IAM 用户
+
+不要用 root 账号的密钥发信，建一个权限最小化的专用用户：
+
+1. AWS 控制台搜索进入 **IAM** → **Users** → **Create user**
+2. 用户名起个能看出用途的，比如 `listmonk-ses`
+3. **Attach policies directly**，创建一个自定义策略（Create policy → JSON），内容：
+   ```json
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Action": ["ses:SendEmail", "ses:SendRawEmail"],
+         "Resource": "*"
+       }
+     ]
+   }
+   ```
+4. 建好用户后，进用户详情 → **Security credentials** → **Create access key** → 用途选 "Application running outside AWS"，拿到 **Access Key ID** 和 **Secret Access Key**（这个 Secret 只显示一次，立刻复制保存好）
+
+### 3.5 从 Secret Key 推导 SMTP 密码
+
+AWS SES 的 SMTP 密码不是你上一步拿到的 Secret Access Key 本身，是用官方算法推导出来的：
 
 ```python
 import hmac, hashlib, base64
@@ -99,39 +200,65 @@ def derive_smtp_password(secret_key, region="us-east-1"):
     k = sign(k, "aws4_request")
     k = sign(k, "SendRawEmail")
     return base64.b64encode(bytes([0x04]) + k).decode()
+
+print(derive_smtp_password("你的Secret Access Key", region="us-east-1"))
 ```
 
-4. listmonk 后台 Settings → SMTP，填 `email-smtp.<region>.amazonaws.com`，端口 587，用户名是 Access Key ID，密码是上面推导出来的值。
+存下这个输出值，下一步要用。
 
-### 4.3 配置 bounce/complaint webhook（SNS）——不是可选项
+### 3.6 在 listmonk 后台配置 SMTP
 
-**这是发送生产邮件前的硬性合规前置条件，不是"以后再补"**：持续往失效/投诉邮箱发信会直接拖累 SES 账号信誉，轻则限流重则封号。
+1. 登录 `https://list.yourdomain.com/admin`
+2. **Settings → SMTP**，新建一条：
+   ```
+   Host:     email-smtp.us-east-1.amazonaws.com   （区域要跟 3.1 步一致）
+   Port:     587
+   Auth protocol: LOGIN
+   Username: 你的 Access Key ID（第3.4步拿到的）
+   Password: 第3.5步推导出来的 SMTP 密码
+   TLS:      STARTTLS
+   From address: hello@updates.yourdomain.com（随便起一个前缀）
+   ```
+3. Settings → General，把 **From email** 也设成同一个发信域名下的地址，比如 `Your Blog <updates@updates.yourdomain.com>`
+4. 保存，点旁边的 **Send test email** 给自己已验证的邮箱发一封，收到就说明配置对了
 
-listmonk 自己已经实现了处理这类通知的 webhook（`/webhooks/service/ses`），走 AWS SNS 消息签名验证，不需要额外密钥。要做的只是把 AWS 那边接上：
+---
+
+## 4. 配置退信/投诉处理（AWS SNS）——不是可选项
+
+**这是发送生产邮件前的硬性合规前置条件**：持续给失效/投诉过的邮箱发信，会拖累 SES 账号信誉，轻则限流重则封号。listmonk 自己已经实现了处理这类通知的 webhook（走 SNS 消息签名验证，不需要额外密钥），只需要把 AWS 那边接上：
+
+先确认本地装好了 AWS CLI 并配置好了刚才那个 IAM 用户（如果 3.4 步的策略只给了发信权限，这里需要给这个用户临时加上 SNS 权限，或者用一个有更高权限的账号跑下面这几条命令）：
 
 ```bash
+aws configure   # 填入 Access Key ID / Secret / region
+
 # 1. 建两个 SNS topic
 aws sns create-topic --name your-app-ses-bounce --region us-east-1
 aws sns create-topic --name your-app-ses-complaint --region us-east-1
+# 每条命令会返回一个 TopicArn，记下来
 
-# 2. topic policy 允许 SES 发布（替换成你自己的账号 ID / identity）
-aws sns set-topic-attributes --topic-arn <topic-arn> --attribute-name Policy --attribute-value '{
+# 2. 允许 SES 往这两个 topic 发布消息（把下面的账号ID/ARN换成你自己的）
+aws sns set-topic-attributes --topic-arn <bounce-topic-arn> --attribute-name Policy --attribute-value '{
   "Version": "2012-10-17",
   "Statement": [{
     "Sid": "AllowSESPublish", "Effect": "Allow",
     "Principal": {"Service": "ses.amazonaws.com"}, "Action": "SNS:Publish",
-    "Resource": "<topic-arn>",
+    "Resource": "<bounce-topic-arn>",
     "Condition": {
-      "StringEquals": {"AWS:SourceAccount": "<你的账号ID>"},
+      "StringEquals": {"AWS:SourceAccount": "<你的AWS账号ID>"},
       "StringLike": {"AWS:SourceArn": "arn:aws:ses:us-east-1:<账号ID>:identity/updates.yourdomain.com"}
     }
   }]
 }'
+# complaint topic 同样操作一遍
 
 # 3. 订阅 listmonk 的 webhook 地址
 aws sns subscribe --topic-arn <bounce-topic-arn> --protocol https \
-  --notification-endpoint https://your-listmonk.fly.dev/webhooks/service/ses
-# listmonk 会自动确认这个订阅（收到 SNS 的 SubscriptionConfirmation 消息后自动回访确认链接）
+  --notification-endpoint https://list.yourdomain.com/webhooks/service/ses
+aws sns subscribe --topic-arn <complaint-topic-arn> --protocol https \
+  --notification-endpoint https://list.yourdomain.com/webhooks/service/ses
+# listmonk 会在几秒到几十秒内自动确认这个订阅（不需要你手动点确认链接）
 
 # 4. 挂到 SES identity 上
 aws ses set-identity-notification-topic --identity updates.yourdomain.com \
@@ -140,57 +267,124 @@ aws ses set-identity-notification-topic --identity updates.yourdomain.com \
   --notification-type Complaint --sns-topic <complaint-topic-arn>
 ```
 
-**验证**：往 AWS 官方提供的模拟退信地址 `bounce@simulator.amazonses.com` 发一封测试邮件，走一遍真实触发流程，确认没有报错。
-
-### 4.4 前端订阅表单——直连而不是套壳
-
-**这是最容易一开始就想复杂的一步。** 第一反应通常是"listmonk 的确认页有 CSRF token/验证码，我没法自己模拟提交，只能 iframe 嵌进来或者自己写后端代理转发"——**先别急着下这个结论，去测一下 CORS**：
+**验证**：
 
 ```bash
-curl -s -D - "https://your-listmonk.fly.dev/subscription/form" -H "Origin: https://yourblog.com" | grep -i access-control
+# 检查订阅是不是已经自动确认了（等 30 秒后跑，应该看到 SubscriptionsConfirmed: "1"）
+aws sns get-topic-attributes --topic-arn <bounce-topic-arn> --region us-east-1
+
+# 往 AWS 官方提供的模拟退信地址发一封测试邮件，走一遍真实触发流程（需要 SES 已经退出 sandbox，或者这个测试地址本身在 sandbox 下也能收）
+aws ses send-email --region us-east-1 \
+  --from "Your Blog <updates@updates.yourdomain.com>" \
+  --destination "ToAddresses=bounce@simulator.amazonses.com" \
+  --message "Subject={Data=test},Body={Text={Data=testing bounce webhook}}"
 ```
 
-如果 listmonk 的 Settings → General 里把你的博客域名加进了允许来源，这个请求会带 `Access-Control-Allow-Origin` 头——意味着你可以**直接从浏览器 `fetch()` POST**，不需要 iframe，也不需要自建后端代理。这个方案原本以为"工程量和不确定性明显更高"，实测后发现只是一个 CORS 配置的事。
+---
 
-核心代码模式：
+## 5. DNS 记录完整清单（汇总核对用）
+
+走完第 2-4 节，你的 DNS 上应该有这些记录（域名替换成你自己的）：
+
+| 类型 | 名称 | 值 | 用途 |
+|---|---|---|---|
+| CNAME 或 A/AAAA | `list.yourdomain.com` | Fly.io 给的地址 | listmonk 主域名 |
+| CNAME ×3 | `token{1,2,3}._domainkey.updates.yourdomain.com` | SES 给的 DKIM 值 | 邮件签名验证 |
+| TXT | `updates.yourdomain.com` | `v=spf1 include:amazonses.com ~all` | SPF |
+| TXT | `_dmarc.updates.yourdomain.com` | `v=DMARC1; p=none; rua=mailto:...` | DMARC |
+
+---
+
+## 6. 前端订阅表单——直连，不套壳
+
+**先测一下 listmonk 有没有把你的博客域名加进 CORS 允许来源**，再决定要不要用 iframe：
+
+1. listmonk 后台 → Settings → General → 找 CORS/允许来源相关设置，把 `https://yourblog.com` 加进去
+2. 验证：
+   ```bash
+   curl -s -D - "https://list.yourdomain.com/subscription/form" -H "Origin: https://yourblog.com" | grep -i access-control
+   ```
+   如果看到 `Access-Control-Allow-Origin: https://yourblog.com`，说明可以直接 `fetch()`，不需要 iframe、不需要自建后端代理。
+
+3. listmonk 后台 → **Lists** → 建一个订阅列表（比如叫 "Newsletter"），Opt-in type 选 **Double**（双重确认），保存后从列表里拿到它的 UUID。
+
+前端代码：
 
 ```html
 <form id="subscribe-form">
   <input type="email" name="email" required />
   <input type="hidden" name="l" value="你的订阅列表UUID" />
-  <input type="hidden" name="nonce" value="" />  <!-- 留空，listmonk 不校验这个值本身 -->
-  <div><altcha-widget challengeurl="https://your-listmonk.fly.dev/api/public/captcha/altcha"></altcha-widget></div>
+  <input type="hidden" name="nonce" value="" />
+  <div><altcha-widget challengeurl="https://list.yourdomain.com/api/public/captcha/altcha"></altcha-widget></div>
   <button type="submit">订阅</button>
 </form>
-<script src="https://your-listmonk.fly.dev/public/static/altcha.umd.js" async defer></script>
+<script src="https://list.yourdomain.com/public/static/altcha.umd.js" async defer></script>
 ```
 
 ```js
-form.addEventListener('submit', async (e) => {
+document.getElementById('subscribe-form').addEventListener('submit', async (e) => {
   e.preventDefault();
-  const res = await fetch('https://your-listmonk.fly.dev/subscription/form', {
+  const form = e.target;
+  const res = await fetch('https://list.yourdomain.com/subscription/form', {
     method: 'POST',
     body: new URLSearchParams(new FormData(form)),
   });
   const text = await res.text();
-  // listmonk 返回的是 HTML 不是 JSON——按内容判断状态：
   if (/<h2>Error<\/h2>/.test(text)) {
-    // 明确失败，提取错误信息
+    // 明确失败：从 text 里提取错误信息展示
   } else if (res.ok && /<h2>Subscribe<\/h2>/.test(text) && !/<form/.test(text)) {
-    // 明确成功
+    // 明确成功：提示"请查收确认邮件"
   } else {
-    // 都不满足——不要瞎猜，展示"状态不确定，请稍后查收邮件"
-    // 真实踩过：listmonk SMTP 密码过期时返回 500，但订阅记录其实已经建好了，
-    // 如果这里简单地把"非 2xx"当失败，会给用户看一个误导性的假失败提示
+    // 都不满足——展示"状态不确定，请稍后查收邮件"，不要瞎猜成功或失败
   }
 });
 ```
 
-**另一个容易犯的错**：如果打算在网站多处放订阅入口（页头、页脚、文章页），**只在一处放真实表单**，其余地方用锚点链接 `<a href="#subscribe">` 跳过去。最早的设计是每处都嵌一份完整表单，上线后被读者吐槽"看起来像好几个订阅框，很乱"。
+**Logo 用 PNG，不要用 SVG**：listmonk 后台 Settings → General 里的 Logo URL，如果填 SVG，网页显示没问题，但大多数邮件客户端不渲染内联 SVG，邮件里会是空的。
 
-### 4.5 内容生成——做成可插拔的内容源
+---
 
-如果邮件内容只来自"新发布的博客文章"，一个脚本扫目录、拼 HTML 就够了。但如果以后想加其他内容（比如一份定期的行业趋势分析、只给订阅者看不上公开博客的笔记），从一开始就做成插件模式，后面加新内容源不用碰核心逻辑：
+## 7. 内容生成 + 定时发送
+
+### 7.1 最简单能跑起来的版本
+
+一个 Python 脚本：扫你的文章列表 → 生成一段 HTML → 调 listmonk 的 Campaign API 创建并发送：
+
+```bash
+# 建 campaign
+curl -X POST "https://list.yourdomain.com/api/campaigns" \
+  -H "Authorization: token 你的用户名:你的API Token" \
+  -H "Content-Type: application/json" \
+  --data '{"name":"Digest 2026-08-01","subject":"本期更新","lists":[你的列表数字ID],"content_type":"html","body":"<p>...</p>","template_id":1,"type":"regular","messenger":"email"}'
+# 返回里有 campaign id，记下来
+
+# 触发发送
+curl -X PUT "https://list.yourdomain.com/api/campaigns/<campaign id>/status" \
+  -H "Authorization: token 你的用户名:你的API Token" \
+  -H "Content-Type: application/json" \
+  --data '{"status":"running"}'
+```
+
+（`API Token` 在 listmonk 后台 Settings → Users，给你的账号新建一个 API Token）
+
+### 7.2 幂等发送——別让"重试"变成"重复发送"
+
+发送脚本不能只有"成功/失败"两态，必须有"**建好了 campaign、还没确认发送完成**"这个中间态，否则超时重试会导致真实订阅者收到重复邮件（这个坑三个不同厂商的 AI 审查模型独立跑一遍代码 review，都标记成了 blocking 问题）：
+
+```
+1. 检查上次是否有"pending_campaign_id"没确认完 —— 有就先处理这个，不建新的
+2. 没有才生成新内容、调 API 建 campaign
+3. 把 campaign_id 写进本地状态文件的 pending 字段（在真正触发发送之前）
+4. 触发发送、轮询确认状态
+5. 确认 finished → 把 pending 转正，记录"已发送"
+   没确认到 → 不当错误处理，直接退出，状态留着，下次运行接着确认
+```
+
+配合一个进程锁（用 `mkdir` 做原子锁，不要用 `flock`——macOS 默认不带这个命令，如果开发机是 Mac 但只在 Linux CI 测过，部署到本机跑定时任务会直接失效）。
+
+### 7.3 内容源做成可插拔的（可选，但强烈建议）
+
+如果只发博客新文章，一个脚本够了。但只要有一点点可能以后加别的内容（行业分析、订阅者专属笔记），从一开始就抽象出一个统一格式：
 
 ```python
 @dataclass
@@ -202,59 +396,69 @@ class DigestItem:
     pub_date: datetime
     banner_url: str | None = None
     link: str | None = None       # 有公开页面就填这个
-    body_html: str | None = None  # 没有公开页面（订阅者专属内容）就把正文直接塞这个字段内嵌进邮件
+    body_html: str | None = None  # 没有公开页面（订阅者专属内容）就把正文直接塞这个字段
 ```
 
-每个内容源是一个模块，实现 `collect(window_start, sent_ids) -> list[DigestItem]`，注册进一个字典，编排层依次调用、合并、按时间排序、渲染。加新内容源 = 写一个新模块 + 注册一行，其他文件都不用改。
+每个内容源实现 `collect(window_start, sent_ids) -> list[DigestItem]`，注册进一个字典，编排层依次调用、合并、排序、渲染。加新内容源 = 写一个新模块 + 注册一行。
 
-### 4.6 幂等发送——別让"重试"变成"重复发送"
-
-发送脚本的状态机不能只有"成功/失败"两态，还要有"**建好了 campaign、还没确认发送完成**"这个中间态：
-
-```
-1. 检查上次是否有"pending_campaign_id"没确认完 —— 有就先处理这个，不建新的
-2. 没有才生成新内容、调 API 建 campaign
-3. 把 campaign_id + 这次要发的条目 id 写进状态文件的 pending 字段（在真正触发发送之前）
-4. 触发发送、短暂轮询确认状态
-5. 确认 finished → 把 pending 转正，更新"已发送"集合
-   没确认到 → 不当错误处理，直接退出，状态留着，下一次运行接着确认
-```
-
-**为什么这一步不能省**：如果超时就简单报错、不记录任何状态，下一次运行会把这批内容当成"从没发过"，重新建一个新 campaign 再发一次——真订阅者会收到重复邮件。这是三个独立 AI 审查模型（不同厂商）在 code review 里唯一一致标记为 blocking 的问题，说明这个坑足够隐蔽，容易被忽略。
-
-配合一个进程锁（`mkdir` 做原子锁，别用 `flock`——macOS 默认不带这个命令，如果开发机是 Mac 但只测过 Linux CI，上线到本机跑定时任务会直接失效）。
-
-### 4.7 定时任务——GitHub Actions，不是本地 crontab
+### 7.4 用 GitHub Actions 定时，不用本地 crontab
 
 ```yaml
+# .github/workflows/newsletter.yml
 on:
   schedule:
-    - cron: '0 14 */2 * *'   # 每 2 天 14:00 UTC
+    - cron: '0 14 */2 * *'   # 每 2 天 14:00 UTC，改成你想要的时间/频率
   workflow_dispatch:          # 支持手动触发测试
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - env:
+          LISTMONK_API_URL: ${{ secrets.LISTMONK_API_URL }}
+          LISTMONK_API_TOKEN: ${{ secrets.LISTMONK_API_TOKEN }}
+          LISTMONK_LIST_UUID: ${{ secrets.LISTMONK_LIST_UUID }}
+        run: bash send-newsletter.sh
 ```
 
-**两个坑**：
-1. `schedule` 触发器**只认仓库默认分支**（通常是 `main`）上的 workflow 文件——如果这个 workflow 文件还在某个 feature 分支没合并，GitHub 根本不会注册这个定时任务，等到时间点也不会触发。
-2. `*/2` 在 day-of-month 字段是"日历日期是不是奇数"，不是"从某个起点开始每隔 48 小时"——大部分时候等于"每 2 天"，但跨月边界如果上个月有 31 天，最后一天到下个月 1 号只隔 1 天不是 2 天。这是 cron 语法本身的特性。
+在 GitHub 仓库 **Settings → Secrets and variables → Actions** 加上这 3 个 secret（值来自 listmonk 后台 Settings → Users 生成的 API Token，和第 6 节拿到的列表 UUID）。也可以用命令行：
 
-状态文件（记录"发过什么"）如果不进 git（运行时状态，符合直觉），第一次在 GitHub Actions 上跑的时候会没有历史——**准备一个一次性的种子文件进版本库**，避免"本地已经手动发过的内容，Actions 第一次跑时不知道，又重新发一遍"。之后状态靠 CI 平台自己的缓存机制（比如 GitHub Actions 的 `actions/cache`）跨 run 保存，种子文件不需要持续更新。
+```bash
+gh secret set LISTMONK_API_URL --repo yourname/yourrepo --body "https://list.yourdomain.com"
+gh secret set LISTMONK_API_TOKEN --repo yourname/yourrepo --body "你的用户名:你的Token"
+gh secret set LISTMONK_LIST_UUID --repo yourname/yourrepo --body "你的列表UUID"
+```
 
----
+**两个容易踩的坑**：
+1. `schedule` 触发器**只认仓库默认分支**（通常是 `main`）上的 workflow 文件——文件还在 feature 分支没合并的话，GitHub 根本不会注册这个定时任务。
+2. `*/2` 在 day-of-month 字段是"日历日期是不是奇数"，不是"从某个起点开始每隔 48 小时"——大部分时候等于"每 2 天"，跨月边界（上个月是 31 天）会偶尔挤成隔 1 天。
 
-## 5. 验收清单
-
-- [ ] 真实订阅一次（自己的邮箱）→ 收到确认邮件 → logo/图片正常显示（**用 PNG，不要用 SVG**——浏览器渲染 SVG 没问题，但大多数邮件客户端不渲染内联 SVG，这条坑会导致"网页正常、邮件里空白"这种诡异的不一致表现）→ 点确认 → 状态变成 confirmed
-- [ ] 往 `bounce@simulator.amazonses.com` 发测试邮件，确认 webhook 链路通
-- [ ] 手动触发一次真实内容发送，检查邮件里的图片/链接是不是当前最新的（**不要复用之前生成的旧 HTML 文件做测试**——如果内容后来改过，内容生成脚本必须重新跑一遍才会抓到最新状态，复用旧文件会让你看到过时的内容却误以为是新 bug）
-- [ ] 检查邮件在暗色模式 / 手机端渲染是否正常
-- [ ] 确认 `List-Unsubscribe` header 存在（大多数邮件列表引擎会自动加，抓一封真实邮件的原始 header 确认一下）
+**首次在 CI 上跑之前**，如果你已经手动发过一轮内容，记得把"已发送"的状态文件也提交进仓库当种子（不然 CI 第一次跑不知道这些内容已经发过，会重新发一遍）。
 
 ---
 
-## 6. 這次真实踩过的坑（完整清单，供参考）
+## 8. 验收清单
 
-- 从 GET 接口读回来的打码密钥字段（`••••`），改别的字段做 PUT 请求时如果原样传回去，会把真实密钥覆盖成打码字符串——改任何字段前，被打码的字段要么显式重新赋值真实值，要么用支持"只改一个字段"的 PATCH 接口
-- 静态站点框架（Astro 等）生成的路由 slug 不一定等于源文件名——文件名里的大写字母/特殊符号可能被规范化，直接用文件名当 URL 会产生一个"看起来正常、实际指向别处"的死链接（HTTP 200 但内容是首页，不是 404，很难第一时间发现）
-- Python `str.format()` 会把 `{{ }}` 当成转义后的单花括号，如果模板里需要保留给下游模板引擎（比如 Go template）的双花括号占位符，要用 `{{{{ }}}}` 四花括号
-- 全局共享的密钥文件（比如一个跨项目的 `.env`）不一定是合法的 shell 语法——变量名带连字符、值里带 `$` 符号，直接 `source` 整个文件会崩，要精确解析需要的变量
-- `VAR=value command | other_command` 这种写法，`VAR` 只在管道左边的 `command` 里生效，右边的 `other_command` 拿不到
+- [ ] 真实订阅一次（自己的邮箱）→ 收到确认邮件，logo 正常显示 → 点确认 → listmonk 后台看到状态变成 confirmed
+- [ ] 往 `bounce@simulator.amazonses.com` 发测试邮件，确认 SNS webhook 链路通（listmonk 日志里没有报错）
+- [ ] 手动触发一次真实内容发送，检查邮件里的图片/链接是不是当前最新（**不要复用之前生成的旧 HTML 文件做测试**，内容变过就要重新跑一遍生成脚本）
+- [ ] 邮件在暗色模式 / 手机端渲染正常
+- [ ] 邮件带 `List-Unsubscribe` header（抓一封真实邮件的原始 header 确认）
+- [ ] SES 已经退出 Sandbox（不然只有已验证邮箱能收到）
+
+---
+
+## 9. 常见故障排查
+
+| 症状 | 大概率原因 | 怎么查 |
+|---|---|---|
+| 订阅表单提交报 CORS 错误 | listmonk 没把博客域名加进允许来源 | listmonk 后台 Settings → General 检查 |
+| 确认邮件一直收不到 | SES 还在 Sandbox，或者 SMTP 密码错 | 查 listmonk 容器日志 `flyctl logs -a your-listmonk-app`，看有没有 `535 Authentication Credentials Invalid`（密码错）或者其他 SES 拒绝的报错 |
+| SMTP 密码改了但还是报错 | listmonk 只在启动时初始化 SMTP 连接，改完设置要重启 | `flyctl machine restart <machine-id> -a your-listmonk-app` |
+| 邮件进了对方垃圾箱 | SPF/DKIM/DMARC 没配全，或者 bounce/complaint webhook 没接 | 用 mail-tester.com 之类的工具发一封测试邮件，看具体哪项没过 |
+| 定时任务到点没跑 | workflow 文件还在非默认分支 | 确认已经合并到 `main`，`gh api repos/OWNER/REPO/actions/workflows` 能看到这个 workflow 且 `state: active` |
