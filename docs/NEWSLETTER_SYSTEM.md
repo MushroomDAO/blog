@@ -35,7 +35,7 @@
 | 资源 | 值 | 说明 |
 |---|---|---|
 | 博客域名 | `blog.mushroom.cv` | Cloudflare Pages 项目名 `blog-mushroom` |
-| listmonk 域名 | `list.mushroom.cv` | 反代到 Fly.io app |
+| listmonk 域名 | `list.mushroom.cv` | **不是**直接反代到 Fly.io app——中间有一层 Cloudflare Worker 路由白名单，见 2.1 节 |
 | listmonk Fly app | `mushroom-listmonk`，region `sin` | `flyctl -a mushroom-listmonk` |
 | listmonk 镜像 | `listmonk/listmonk:v6.2.0`（官方镜像，无自定义 Dockerfile） | 见 `pipeline/newsletter/listmonk-fly/fly.toml` |
 | Postgres | Neon 项目 "blog"（`ep-wild-water-ax0wchad.c-4.us-east-2.aws.neon.tech`） | listmonk 本身无状态，数据全在这；Fly machine 可以空闲自动休眠不丢数据 |
@@ -44,6 +44,20 @@
 | 订阅列表 | listmonk 内部 list id `2`，UUID `575531a8-2817-4787-aa78-df7338e1747d`，名字 "Opt-in list" | 双重确认（double opt-in），自带 Altcha 防灌邮件 |
 | SNS bounce/complaint topic | `mushroom-ses-bounce` / `mushroom-ses-complaint`（AWS 账号 `463387446964`，us-east-1） | 已订阅到 `https://list.mushroom.cv/webhooks/service/ses`，已验证自动确认 |
 | 订阅确认邮件 logo | `https://blog.mushroom.cv/logo.png` | listmonk `app.logo_url` 设置；**必须是 PNG，不能是 SVG**（大多数邮件客户端不渲染内联 SVG，但浏览器渲染没问题，这条坑踩过一次） |
+
+### 2.1 `list.mushroom.cv` 前面有一层 Cloudflare Worker 路由白名单
+
+`list.mushroom.cv` 这个自定义域名（Cloudflare Custom Domain for Workers）绑定的不是 listmonk 本身，而是一个 Cloudflare Worker，脚本名 **`mushroom-listmonk-proxy`**（账号里能看到，`wrangler deployments` 或 Cloudflare Dashboard → Workers）。这个 Worker 只转发一份**公开路由白名单**给真正的 Fly.io 后端（`https://mushroom-listmonk.fly.dev`），其余一律返回 404：
+
+```
+放行：/health、/robots.txt、/subscription/form（精确匹配）
+      /api/public/*、/subscription/*、/link/*、/campaign/*、/public/*、/webhooks/service/*（前缀匹配）
+其余：一律 404（包括 /admin、大部分管理 /api/*）
+```
+
+**这是故意的，不是 bug**——目的是把 `/admin` 后台和管理类 API 从公网自定义域名上完全隐藏掉，只留读者真正需要用到的订阅/确认/退订/追踪/webhook 这些公开端点可达。**管理员访问走 `https://mushroom-listmonk.fly.dev/admin`（Fly 原生域名），不是 `list.mushroom.cv/admin`**——第一次核对这份文档时曾经把这两个域名搞混，在错的域名上得到一个 404 还以为是系统坏了，其实是设计如此。
+
+如果要调整白名单（比如以后要放行更多公开端点），改这个 Worker 的脚本（`ALLOWED_EXACT` / `ALLOWED_PREFIXES` 两个列表），部署方式是标准的 `wrangler deploy`（Worker 脚本本体目前没有进这个 git 仓库，只存在于 Cloudflare 账号里——如果要长期维护，值得后续把脚本拉下来存进版本库，比如 `pipeline/newsletter/listmonk-proxy-worker/`）。
 
 ---
 
@@ -56,7 +70,7 @@
 | `LISTMONK_API_URL` | listmonk 的 admin API 地址（`https://mushroom-listmonk.fly.dev`，注意不是 `list.mushroom.cv`，是 Fly 原生域名） |
 | `LISTMONK_API_TOKEN` | 格式 `username:token`，调 listmonk admin API 用 `Authorization: token <值>` |
 | `LISTMONK_NEWSLETTER_LIST_UUID` | 同上面表格的订阅列表 UUID |
-| `LISTMONK_ADMIN_PASSWORD` | 登录 `https://list.mushroom.cv/admin` 用 |
+| `LISTMONK_ADMIN_PASSWORD` | 登录 `https://mushroom-listmonk.fly.dev/admin` 用（**不是** `list.mushroom.cv/admin`——见 2.1 节，自定义域名上 `/admin` 是故意 404 的） |
 | `LISTMONK_NEON_PGPASSWORD` | Neon Postgres 密码 |
 | `CLOUDFLARE_DNS_TOKEN` | 只有 DNS 编辑权限的 Cloudflare token（改 SPF/DKIM/DMARC 记录用）——注意区分：项目自己 `.env` 里的 `CLOUDFLARE_API_TOKEN` 权限范围不一样（只有 zone:read + worker），**不能**用来改 DNS |
 | `AWS_SES_Access_Key_ID` / `AWS_SES_Secret_Access_Key` | IAM 用户 `listmonk-ses`，SES 发信用；如果要重新推导 SMTP 密码，用 AWS 官方 SigV4 算法（见第 8 节"常见操作"） |
@@ -335,6 +349,6 @@ curl -s -o /dev/null -w "%{http_code}\n" -X POST https://list.mushroom.cv/webhoo
 ## 9. 已知未完成事项
 
 - **Campaign 没配 `reply_to`**：读者回复摘要邮件，会发到没人盯的 `from_email`（`updates@updates.mushroom.cv`）。改动很小：`send-newsletter.sh` 创建 campaign 那个 JSON payload 加一个 `reply_to` 字段。
-- **`/admin` 后台没有路由级隔离**：只靠一个强密码保护，暴露在 Fly.io 公网 URL 上。这是刻意的权衡（受限于当时能拿到的 Cloudflare token 权限不够配 Cloudflare Access），个人博客场景风险可接受，但值得记录。
+- ~~`/admin` 后台没有路由级隔离~~ **已解决**（2026-08-01 核对时发现，之前的记录是错的）：`list.mushroom.cv` 前面有一层 Cloudflare Worker 路由白名单（见 2.1 节），`/admin` 在这个域名上是故意 404 的，管理员只能通过 Fly 原生域名访问。这个 Worker 脚本目前不在 git 仓库里，只存在于 Cloudflare 账号里，是唯一的风险点——建议后续把脚本拉下来存进版本库。
 - **`Deploy to Cloudflare Pages` 这个（跟 newsletter 无关的）GitHub Action 一直失败**：根因是仓库 secrets 里没有 `CLOUDFLARE_API_TOKEN`。跟这份文档描述的系统无关，只是顺手发现，需要人工去 Cloudflare 控制台生成一个有 Pages 部署权限的 token 补上。
 - **`notes` 内容源还没实现**：目录和约定文档（`notes/README.md`）已经在，脚本还没写，等真的有内容再补 `sources/notes.py`。
