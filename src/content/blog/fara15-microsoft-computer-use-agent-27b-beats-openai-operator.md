@@ -7,7 +7,7 @@ pubDate: "2026-08-01"
 updatedDate: "2026-08-01"
 category: "Tech-News"
 tags: ["Fara", "微软", "电脑操作Agent", "Computer Use", "开源模型", "Qwen3.5", "AI Agent", "Mycelium"]
-heroImage: "../../assets/banner-ai-new-intelligence.jpg"
+heroImage: "../../assets/images/fara15-microsoft-computer-use-agent-27b-beats-openai-operator-banner.jpg"
 ---
 
 *by Mycelium Protocol*
