@@ -7,7 +7,7 @@ pubDate: "2026-07-31"
 updatedDate: "2026-07-31"
 category: "Tech-News"
 tags: ["VRM", "AI语音", "MCP", "桌面应用", "Electron", "Three.js", "Codex", "Mycelium"]
-heroImage: "../../assets/banner-ai-new-intelligence.jpg"
+heroImage: "../../assets/images/persona-vrm-avatar-ai-voice-mcp-banner.jpg"
 ---
 
 *by Mycelium Protocol*
