@@ -18,7 +18,7 @@ echo "📂 dist/ 目录已生成，包含所有静态文件"
 
 # 3. 部署到 Cloudflare Pages
 echo "☁️  部署到 Cloudflare Pages..."
-npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main
+npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true
 
 echo "✅ 部署完成！"
 echo "🌐 访问: https://blog.mshroom.cv"

@@ -1,0 +1,37 @@
+app = "mushroom-listmonk"
+primary_region = "sin"
+
+# Official listmonk image, no custom build — Fly pulls it directly, no
+# local Dockerfile/registry step needed.
+[build]
+  image = "docker.io/listmonk/listmonk:v6.2.0"
+
+# Postgres lives on Neon (project "blog", purple-leaf-89343439), not on a
+# Fly volume — listmonk itself is stateless, so machines can auto-stop
+# between requests with zero data loss (same trade-off already accepted
+# in the earlier Cloudflare Container spike: confirm/unsubscribe links
+# clicked while asleep cost ~1-3s cold start, not a failure).
+[env]
+  LISTMONK_app__address = "0.0.0.0:9000"
+  LISTMONK_db__host = "ep-wild-water-ax0wchad.c-4.us-east-2.aws.neon.tech"
+  LISTMONK_db__port = "5432"
+  LISTMONK_db__user = "neondb_owner"
+  LISTMONK_db__database = "listmonk"
+  LISTMONK_db__ssl_mode = "require"
+  # Neon free tier has limited concurrent connections; this is a personal
+  # blog, not high-traffic, so keep the pool small.
+  LISTMONK_db__max_open = "4"
+  LISTMONK_db__max_idle = "2"
+  LISTMONK_db__max_lifetime = "300s"
+  LISTMONK_ADMIN_USER = "admin"
+
+[http_service]
+  internal_port = 9000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"

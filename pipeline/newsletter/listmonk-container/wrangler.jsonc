@@ -12,8 +12,8 @@
   "containers": [
     {
       "class_name": "ListmonkContainer",
-      "image": "docker.io/listmonk/listmonk:v6.2.0",
-      "instance_type": "lite",
+      "image": "./Dockerfile",
+      "instance_type": "basic",
       "max_instances": 1
     }
   ],
@@ -31,9 +31,12 @@
   // Non-secret config. Secrets (DB password, listmonk admin password) are
   // set via `wrangler secret put <NAME>` — see README.md — never committed.
   "vars": {
-    "PGHOST": "REPLACE_WITH_NEON_HOST",
+    // Neon project "blog" (purple-leaf-89343439), direct (non-pooler)
+    // endpoint — listmonk manages its own small connection pool, so we
+    // skip Neon's pgbouncer pooler to avoid transaction-mode edge cases.
+    "PGHOST": "ep-wild-water-ax0wchad.c-4.us-east-2.aws.neon.tech",
     "PGPORT": "5432",
-    "PGUSER": "listmonk",
+    "PGUSER": "neondb_owner",
     "PGDATABASE": "listmonk",
     "PGSSLMODE": "require",
     "LISTMONK_ADMIN_USER": "admin"

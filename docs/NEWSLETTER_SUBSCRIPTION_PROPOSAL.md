@@ -1,7 +1,7 @@
 # 订阅 / Newsletter 功能设计方案（待 review）
 
 > 分支：`feature/newsletter-subscribe`
-> 状态：**技术选型已定大方向，正在做可行性验证（spike）** —— 见第 3.5 节
+> 状态：**后端（listmonk + Neon + SES + 摘要生成/发送脚本）已跑通，当前阶段是前端订阅入口模块** —— 见第 10 节（2026-07-30 更新）
 > 目标：在博客底部加一个「Subscribe」按钮，读者填邮箱、确认订阅后，收到我们定期整理的新文章摘要邮件（报纸风格：一个 banner 配一段文字，反复排布）。
 >
 > **已拍板的决策**（jason 已确认，不用再讨论）：
@@ -76,6 +76,8 @@ listmonk 本身需要一个能跑 Postgres 数据库的地方，这块是主要�
 **为什么不是简单选 A**：Codex 联网核实后指出，Cloudflare Containers 是真产品（2026-04 GA），虽然磁盘是临时的（不能放 Postgres），但**如果把 Postgres 挪到外部**（Neon/Supabase 免费层），listmonk 这个程序本身完全可以跑在 Cloudflare Container 里——这样"数据在外部，但计算在 Cloudflare 上"，比方案 A（整个应用都在 Fly.io，跟 Cloudflare 没关系）更贴近"尽量都用 Cloudflare"的诉求，而且不用像方案 B 那样自己重写 listmonk 的核心逻辑。
 
 **关键悬念**：listmonk 能不能塞进 Cloudflare Container 最便宜的 `lite` 档位（~256MB 内存，~$1.7/月）。如果可以，方案 C 完胜（更便宜 + 更 Cloudflare 原生）；如果 listmonk 内存占用逼得我们上 `basic` 档位（1GB，~$7/月），跟方案 A 的 Fly.io 成本基本打平，那就没有硬性理由放弃 Fly.io 的省心。
+
+**2026-07-29 定案：回退方案 A（Fly.io），但复用方案 C 已经建好的 Neon Postgres，不用 Fly 自带的持久卷 Postgres。** 触发原因：spike 过程中 `instance_type` 被迫从 `lite` 升到 `basic`，成本优势消失，遂按上面的退出条件回退。实际部署比预想更省：listmonk 本身无状态，Fly machine 配了 `auto_stop_machines`（`min_machines_running = 0`），只在有请求时才计费，闲时成本趋近于 $0，比最初估算的 ~$6.5/月更低。部署位置：`pipeline/newsletter/listmonk-fly/`（`pipeline/newsletter/listmonk-container/` 的 Cloudflare Container spike 保留作记录，不再维护）。
 
 Codex 建议的验证步骤（**正在按这个走**）：
 1. 部署 listmonk 到 Cloudflare Container，指向 Neon 或 Supabase 免费 Postgres
@@ -194,16 +196,16 @@ Neon vs Supabase 免费层的取舍：Neon 支持 scale-to-zero（不活跃时�
 
 ---
 
-## 8. 上线前必须完成的检查清单（Codex review 补充，非"锦上添花"）
+## 8. 上线前必须完成的检查清单（2026-07-30 核对实际状态）
 
-- [ ] 反向代理/白名单：只暴露 listmonk 的公开订阅路由，其余端口/接口不对公网开放
-- [ ] Cloudflare Turnstile + 提交频率限制，挂在订阅表单上
-- [ ] 确认 SES 的 bounce/complaint 是走 SNS webhook 回调 listmonk（listmonk 官方文档明确支持 SES 集成）
-- [ ] mushroom.cv 发信子域名的 SPF / DKIM / DMARC 配置完成，且用 Gmail / Outlook / iCloud 测试账号做过真实送达测试（不是只看"发送成功"）
-- [ ] cron 脚本有状态持久化（记录上次发送到哪），失败重跑不会重复/漏发
-- [ ] 邮件模板：无 heroImage 兜底、绝对图片 URL、图片数量/体积上限、纯文本兜底版本、暗色模式检查、手机端渲染检查
-- [ ] 邮件带标准 `List-Unsubscribe` header，订阅表单有同意文案
-- [ ] 全链路真人测试：自己订阅 → 收确认邮件 → 点确认 → 收一期摘要 → 点退订 → 确认真的退订成功
+- [x] ~~反向代理/白名单~~ → **降级为非阻塞项**：实测 listmonk 公开订阅页已内置 **Altcha**（工作量证明验证码，浏览器自动求解），防灌邮件骚扰已经被 listmonk 自己解决，不需要额外接 Turnstile；但 `/admin` 后台仍是密码保护、无路由级隔离地暴露在 Fly.io 公网 URL 上，建议后续补 Cloudflare Access，见第 10.6 节
+- [x] ~~Cloudflare Turnstile~~ → 不需要，listmonk 自带 Altcha 已覆盖
+- [ ] 确认 SES 的 bounce/complaint 是走 SNS webhook 回调 listmonk（**阻塞中：IAM 权限不够**，任务 #14）
+- [ ] mushroom.cv 发信子域名的 SPF / DKIM / DMARC 配置完成，且用 Gmail / Outlook / iCloud 测试账号做过真实送达测试（状态待验证，AWS 已批准生产配额但未做真实送达测试）
+- [x] cron 脚本有状态持久化（记录上次发送到哪）→ `send-newsletter.sh` + `last-sent.json` 已实现，失败不更新状态、可安全重试；`flock` 防止并发/重复调度重复发送；`last-sent.json` 记录已发送 slug 集合（而不仅是时间戳），避免同一天发布的多篇文章因为 `pubDate` 只写日期没写时间而被误判"已经发过"从而永久漏发（Codex review 发现，2026-08-01 修复）
+- [~] 邮件模板：`build-digest.py` 已处理无 heroImage 兜底（`favicon.svg`）、绝对图片 URL、最多 7 篇上限；暗色模式/手机端渲染/纯文本兜底版本未验证
+- [ ] 邮件带标准 `List-Unsubscribe` header，订阅表单有同意文案 → 待验证（listmonk 通常自动加，需实测一封真实邮件的 header）
+- [ ] 全链路真人测试：自己订阅 → 收确认邮件 → 点确认 → 收一期摘要 → 点退订 → 确认真的退订成功 → **等前端入口做完后一起测**
 
 ## 9. 下一步
 
@@ -223,3 +225,89 @@ Neon vs Supabase 免费层的取舍：Neon 支持 scale-to-zero（不活跃时�
 4. 写 `pipeline/newsletter/build-digest.py`（读 content collection → 生成报纸风格 HTML，处理图片兜底）
 5. 写 `scripts/send-newsletter.sh`（调用 listmonk Campaign API，带状态持久化）+ crontab（每 2 天一次）
 6. 走一遍第 8 节的检查清单，全部打勾后再面向真实订阅者发送
+
+---
+
+## 10. 前端订阅模块设计（当前阶段，2026-07-30）
+
+### 10.1 现状核查
+
+后端比原计划更成熟：listmonk 已跑在 Fly.io（`pipeline/newsletter/listmonk-fly/fly.toml`，接 Neon Postgres）；`build-digest.py`（生成报纸风格摘要 HTML）+ `send-newsletter.sh`（调 campaign API 发送，带 `last-sent.json` 状态持久化防重发/漏发）都已写好；AWS SES 已经批下生产配额（50,000 封/天，14 封/秒，刚出 sandbox）。
+
+**实测确认**（`curl` 探测 `list.mushroom.cv`）：
+- 公开订阅页 `https://list.mushroom.cv/subscription/form` 返回 200，页面 HTML 里能搜到 `altcha`/`captcha` 字样 —— listmonk 原生内置了 **Altcha**（工作量证明式验证码，浏览器端自动求解、用户完全无感），防灌邮件骚扰这条已经被 listmonk 自己解决，**不需要我们另接 Cloudflare Turnstile**，原方案这条可以简化掉
+- `/admin` 返回 307（跳转登录页），只受密码保护，没有反向代理白名单隔离——整个应用暴露在公网。个人博客场景下风险可接受，但建议后续加固，见 10.6
+- 前端订阅入口：**0%**，`src/`、`Header.astro`、`Footer.astro`、`BlogPost.astro`、`index.astro` 全部搜不到一处 Subscribe 相关代码，是本阶段唯一要交付的东西
+
+### 10.2 集成方式：复用 listmonk 自带订阅页，不重新造轮子
+
+listmonk 的公开订阅表单里有一个 `nonce` 隐藏字段——页面加载时服务端生成的一次性令牌，配合 Altcha 防重放。这意味着**不能**把这段 HTML 静态复制粘贴到 Astro 页面里自己 POST（nonce 会失效）。真正可行的两条路：
+
+| 方案 | 做法 | 取舍 |
+|---|---|---|
+| **A. iframe 内嵌（推荐，本阶段采用）** | Astro 里放按钮，点击弹出轻量 modal，modal 内 `<iframe>` 实时加载 `https://list.mushroom.cv/subscription/form?...`。每次都是真实加载 listmonk 页面，nonce/Altcha/双重确认全部有效，零新增后端代码 | 工程量最小、安全性最有保障（全部复用 listmonk 已踩过坑的现成能力）；样式局限于 iframe 内部（可在 listmonk 后台 Appearance 设置调主题色做基本融入，做不到像素级统一） |
+| B. 自建表单 + Pages Function 代理转发 listmonk public API | Astro 自己做输入框 UI，提交给一个新增的 Cloudflare Pages Function，Function 转发到 listmonk 的 `/api/public/subscription` | 样式可完全定制；但这个静态站目前没有任何 SSR/Pages Function（需要引入 adapter 或 `functions/` 目录），还要研究清楚该 API 对 Altcha token 的校验方式，工程量和不确定性都明显更高 |
+
+**结论：先做方案 A**。避免不必要的抽象和新基础设施——listmonk 已经把双重确认、防骚扰、退订令牌这些最容易出错的部分做完了，我们只需要把入口"焊"在博客的几个位置上。如果之后觉得 iframe 视觉太突兀，再升级到方案 B（10.6 节请你确认是否接受）。
+
+### 10.3 独立目录/模块结构
+
+新建 `src/components/subscribe/`：
+
+```
+src/components/subscribe/
+├── SubscribeButton.astro   # 按钮/链接，variant prop 控制样式："header" | "footer" | "inline" | "hero"
+├── SubscribeModal.astro    # <dialog> 弹窗 + iframe + 关闭按钮，原生 JS，不引入前端框架
+└── config.ts               # 导出 LISTMONK_SUBSCRIBE_URL 常量（拼好 list UUID），全站改一处
+```
+
+`Header.astro`/`Footer.astro`/`BlogPost.astro`/`index.astro` 各自 import `SubscribeButton`；`SubscribeModal` 全局只需一份（放进共享 Layout 或直接放 `Footer.astro`，因为 Footer 在所有页面都渲染），多个按钮通过 `dialog.showModal()` 共享同一个弹窗。
+
+### 10.4 四个入口位置
+
+1. **Header**：RSS 图标旁加一个「📮 Subscribe」文字链接，视觉复用现有 `.rss-icon` 语言
+2. **Footer**（全站所有页面共享）：社交链接下方加一个居中按钮 + 一句话（"每 2 天收一次新文章摘要，随时可退订"）
+3. **文章页**（`BlogPost.astro`）：**（Codex 纠正：原文写反了）** 实际代码顺序是「相关文章 → Comments → Disclaimer」，插入点应放在**相关文章区块之后、`<Comments />` 之前**（`src/layouts/BlogPost.astro:395` 附近），做成稍醒目的卡片式 CTA——读者刚看完正文、还没进入评论区，这是转化率最高的位置
+4. **首页**（`index.astro`）：轮播区上方放一条不打扰的横幅，Footer 之前再放一个稍大的订阅区块——对应"头部和底部都放"
+5. **每封邮件**：`build-digest.py` 模板里已有固定 footer + 退订链接，现成的，不需要新做，只需要走一遍真人测试确认体验
+
+### 10.5 反馈沟通
+
+不新建反馈系统——个人博客量级用不上工单/表单。做法：campaign 的 `Reply-To` 设成一个真实监控的邮箱，邮件 footer 加一句"回复这封邮件告诉我们你的想法"；`send-newsletter.sh` 创建 campaign 时加一个 `from_email`/reply-to 字段即可。如果以后反馈量大到需要结构化收集，再考虑加个简单表单，现在不做。
+
+### 10.6 Codex 评审结论（已按此修正方案，2026-07-30）
+
+请 Codex 对本节做了严格评审，结论是**原方案把两项风险错误地降级为"非阻塞"**，已按其意见修正：
+
+1. **iframe 方案本身成立**，但需要补 5 项验收条件才能上线：懒加载（点击后才设置 `src`，不参与首屏/SEO/性能）、`<dialog>` 弹窗、移动端与暗色模式适配 CSS、iframe 加载失败时"在新标签页打开"兜底链接、Safari ITP 下 session/nonce 实测。**本阶段实现里一并做**，不再是"以后再说"。
+2. **模块目录需要多拆一个文件**：`SubscribeButton.astro` / `SubscribeModal.astro` / `SubscribeCta.astro`（文章页专用的卡片式样式，和 Header/Footer 的按钮视觉不同）/ `config.ts`（常量）/ `subscribeModal.ts`（iframe 懒加载 + 弹窗开关的原生 JS，从 `.astro` 文件里拆出来单独维护）。
+3. **`/admin` 公网可达 —— Codex 明确否决"非阻塞"这个判断**：后台掌握订阅者邮箱和发信能力，被撞库影响的是 SES 账号信誉和发信合规，不是小事。**改为本阶段必须处理的 P0 项**：实测确认 `list.mushroom.cv` 走 Cloudflare 代理（DNS 解析到 Cloudflare anycast IP），具备用 **Cloudflare Access** 保护 `/admin*` + 管理 `/api/*`（只放行 `/subscription/*` 和 `/api/public/*`）的前提条件；`send-newsletter.sh` 调用管理 API 时需要加 Access Service Token header。**但受限于当前 `CLOUDFLARE_API_TOKEN` 权限范围不够读取 zone/Access 配置**，这一步需要你要么提供有 Zone/Access 权限的 token，要么直接在 Cloudflare Dashboard 里手动配置 Access 应用——我可以写好具体配置项（受保护路径、放行路径、Service Token 用法），但落地这一步需要你的账号权限。
+4. **补充遗漏的安全项**：仓库里没有 `public/_headers`，博客站没有配置 CSP/`Referrer-Policy`/`X-Frame-Options`，也没有约束谁能 iframe 我们、我们能 iframe 谁。新增 `public/_headers`：博客侧限定只能 `frame-src https://list.mushroom.cv`；listmonk 侧订阅页要设 `frame-ancestors https://blog.mushroom.cv`（只允许博客嵌入），`/admin` 路径设 `frame-ancestors 'none'`（listmonk 侧这个配置需要在 Fly 部署的 nginx/listmonk 设置里加，属于后端改动，本阶段一并列入待办）。
+5. **SES bounce/complaint SNS webhook —— Codex 明确否决"可以先上线、后补"**：这是发送生产邮件前的硬性合规前置条件，不是锦上添花（持续发给失效/投诉邮箱会直接拖累 SES 账号信誉，可能被限流甚至封号）。**改为 P0 阻塞项**，但当前卡在 IAM 权限不够（任务 #14），需要你在 AWS 账号里授权后才能继续 —— 本地也没有配置 AWS CLI 凭据，我无法直接查/改 SES 设置。
+6. **发送频率**：这次提到"每日模板"，但之前拍板的是**每 2 天一次**——本轮方案文档默认维持不变，如果要改成每天告诉我一声即可（`build-digest.py --since-days` 默认值 + crontab 表达式，改动很小）。
+
+**Codex 给出的最终优先级排序（P0 必须本阶段解决，P1 可延后）**：
+- P0：`/admin` + 管理 API 隔离（需要你的 Cloudflare 权限）
+- P0：SES bounce/complaint SNS webhook（需要你的 AWS IAM 权限）
+- P0：SPF/DKIM/DMARC + `List-Unsubscribe` header 全链路实测（**实测发现连 SPF/DMARC 记录都还没配置**，需要先定发信子域名再去 AWS SES 拿 DKIM CNAME 值写入 DNS）
+- P0：`public/_headers`（CSP/frame-src/Referrer-Policy）—— 这一项我可以直接做，不需要额外权限
+- P0：iframe 懒加载 + 移动端/暗色/Safari/失败兜底验收 —— 这一项我可以直接做
+- P1：自建表单代理方案（方案 B）可以延后，先用 iframe 方案上线
+
+**结论：前端订阅模块（本阶段主线）+ `_headers` 我现在就做；`/admin` 隔离、SES webhook、DNS 记录这三项需要你的账号权限，做完前端后会给你一份具体的操作清单。**
+
+---
+
+## 11. 推翻 iframe 方案，改为直接 fetch()（2026-07-31）
+
+jason 反馈体验：点开是个弹窗、弹窗里又整个跳转加载一次 listmonk 的独立页面，感觉像"套娃"，要求就是"输入邮箱、点确认，直接完事"。重新探测 listmonk 实例后发现方案 A（iframe）从一开始就不是唯一可行路径——**方案 B（自建表单直连 listmonk API）其实已经具备条件，只是第 10.2 节评审时没有实测就把它判得太难**。
+
+**实测发现（`curl` 探测 `list.mushroom.cv`）**：
+- `POST /subscription/form`（同一个 URL 既是订阅页也是提交目标）已经对 `https://blog.mushroom.cv` 开了 CORS：`Access-Control-Allow-Origin` 精确回显这个域名（不是 `*`，换一个 Origin 测试确认不会回显——是白名单，不是开放策略）。GET 页面、POST 提交、OPTIONS 预检、Altcha 的 challenge 接口（`/api/public/captcha/altcha`）和脚本（`/public/static/altcha.umd.js`）全部允许跨域。这大概率是之前"端到端测试"（任务 #11）阶段顺手配置过 listmonk 的 CORS 允许来源，一直没被前端用上。
+- 表单字段：`email`、`nonce`（留空即可，不校验值）、`l`（list UUID，`575531a8-2817-4787-aa78-df7338e1747d`）、`altcha`（由 Altcha widget 自动写入隐藏字段）。错误响应是 HTML，用 `<h2>Error</h2>` 后面的 `<div>` 文本判断失败原因（实测触发过 "Invalid CAPTCHA."）。
+
+**新方案**：`SubscribeForm.astro` 直接渲染真表单（email 输入框 + Altcha widget + 提交按钮），JS 用 `fetch()` 直接 POST 到 `list.mushroom.cv/subscription/form`，就地展示"已提交/失败"文案——**不跳转、不新开标签页、不套 iframe**。Altcha 的加载脚本只在 `Footer.astro`（全站必渲染一次）里放一份，避免自定义元素重复注册。已删除 `SubscribeButton.astro`、`SubscribeModal.astro`。
+
+**2026-08-01 二次修正**：最初的四入口设计（Header/首页横幅/首页底部 CTA/文章页 CTA 各放一份表单）上线后 jason 反馈"文章页底部看起来像两个订阅框"——一张提示卡片 + 紧接着 Footer 的真表单，视觉上像重复。改成**全站只有 Footer 一处真表单**（`id="subscribe"`）：Header、首页横幅都是纯锚点链接跳过去；`SubscribeCta.astro`（文章页 + 首页底部曾经内嵌的卡片式表单）已删除，不再有独立的 CTA 表单实例。
+
+第 10.2 节里"方案 B 工程量和不确定性都明显更高"这个判断被推翻——真正的不确定性只有 CORS 是否已开，验证一次就知道，不需要新增 Pages Function/后端代理。10.6 节里 P1 的"自建表单代理方案可延后"也一并作废，直接跳过 iframe 上线。
