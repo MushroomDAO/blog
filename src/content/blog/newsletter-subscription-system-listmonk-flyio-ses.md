@@ -1,8 +1,8 @@
 ---
-title: "两天，一个人，给博客搭完一套邮件订阅系统——不花一分钱平台费，读者数据全在自己手里"
-titleEn: "Two Days, One Person: Self-Hosting an Email Newsletter — No Platform Tax, Your Readers Stay Yours"
-description: "用 listmonk + Fly.io + AWS SES + GitHub Actions，给个人博客搭了一套完全自建的邮件订阅系统。中间有一次「以为要套 iframe」的纠结，和好几个只有真跑一遍才会暴露的真实 bug——包括三个不同厂商的 AI 审查模型独立抓出的同一个隐藏 bug。"
-descriptionEn: "Self-hosted a full email newsletter for a personal blog with listmonk + Fly.io + AWS SES + GitHub Actions. Includes a near-miss over-engineering moment, and several real bugs that only surfaced by actually running the thing end-to-end — including one that three independently-run AI review models, from different vendors, all flagged as the same blocking issue."
+title: "两天，一个人，给博客搭完一套邮件订阅系统——月成本不到 2 美元，不用给平台交订阅税，读者数据全在自己手里"
+titleEn: "Two Days, One Person: Self-Hosting an Email Newsletter — Under $2/Month, No Platform Tax, Your Readers Stay Yours"
+description: "用 listmonk + Fly.io + AWS SES + GitHub Actions，给这个博客（blog.mushroom.cv 本身就跑在这套系统上）搭了一套完全自建、完全开源的邮件订阅系统，真实账单每月一块多美元。中间有一次「以为要套 iframe」的纠结，和好几个只有真跑一遍才会暴露的真实 bug——包括三个不同厂商的 AI 审查模型独立抓出的同一个隐藏 bug。代码全部开源在 GitHub。"
+descriptionEn: "Self-hosted a full, open-source email newsletter for this blog (blog.mushroom.cv itself runs on it) with listmonk + Fly.io + AWS SES + GitHub Actions — real monthly bill is about a dollar and change. Includes a near-miss over-engineering moment, and several real bugs that only surfaced by actually running the thing end-to-end — including one that three independently-run AI review models, from different vendors, all flagged as the same blocking issue. Fully open source on GitHub."
 pubDate: "2026-08-01"
 updatedDate: "2026-08-01"
 category: "Tech-Experiment"
@@ -10,7 +10,7 @@ tags: ["newsletter", "listmonk", "self-hosted", "AWS SES", "Fly.io", "GitHub Act
 heroImage: "../../assets/images/newsletter-subscription-system-listmonk-flyio-ses-banner.jpg"
 ---
 
-**BLUF**：不用 Substack，不用 ConvertKit，不给任何第三方平台交"订阅税"——两天时间，用几个开源/按量计费组件，给这个博客搭了一套完全自建的邮件订阅系统。读者填邮箱、双重确认、每 2 天收一封摘要邮件，全程数据在自己手里。过程中有一次典型的"想把方案做复杂了"的时刻，也有好几个只有真的跑起来才会暴露的坑——其中一个，是三个不同厂商的 AI 审查模型各自独立跑一遍，都盯上了同一处问题。
+**BLUF**：不用 Substack，不用 ConvertKit，不给任何第三方平台交"订阅税"——两天时间，用几个开源/按量计费组件，给这个博客搭了一套完全自建的邮件订阅系统，**这篇文章你正在看的 blog.mushroom.cv，底部订阅框走的就是这套系统**，代码全部开源在 GitHub（`MushroomDAO/blog` 仓库的 `pipeline/newsletter/` 目录）。读者填邮箱、双重确认、每 2 天收一封摘要邮件，全程数据在自己手里。不花钱是不准确的说法——真实账单主要来自 AWS SES 按量发信，目前这个订阅量下每月大概 1.67 美元；Fly.io 和 Neon 数据库都在各自免费额度内。真正省下的不是"基础设施费用"，而是 Substack/ConvertKit 那种按订阅人数抽成、每月几十上百美元起步的平台税。过程中有一次典型的"想把方案做复杂了"的时刻，也有好几个只有真的跑起来才会暴露的坑——其中一个，是三个不同厂商的 AI 审查模型各自独立跑一遍，都盯上了同一处问题。
 
 ## 为什么不直接用 Substack 这类平台？
 
@@ -21,9 +21,23 @@ Substack、ConvertKit、Beehiiv 这些工具确实好用，但有个绕不开的
 ## 选型：每一样都有明确的"为什么"
 
 - **listmonk**（开源邮件列表引擎）：双重确认、Altcha 无感防骚扰验证码、退订令牌全部内置，不用自己再踩一遍这些坑
-- **Fly.io** 托管：无状态部署，空闲自动休眠、有请求自动唤醒，成本趋近于零（中间试过 Cloudflare Container，跑起来发现内存档位不够便宜，果断换方向——先花小成本验证再押注，比一开始就赌一个方案划算）
-- **AWS SES** 发信：按量计费，不会像某些"免费层"邮件服务商那样每天硬顶 100 封，订阅人数一多就撑不住
-- **GitHub Actions** 定时发送：不用自己的电脑 24 小时开机联网
+- **Fly.io** 托管 listmonk：无状态部署（数据全在外部 Postgres 里），空闲自动休眠、有请求自动唤醒，跑在共享 CPU + 512MB 内存档位，目前用量在免费额度内（中间试过 Cloudflare Container，跑起来发现内存档位不够便宜，果断换方向——先花小成本验证再押注，比一开始就赌一个方案划算）
+- **Neon** 托管 Postgres：listmonk 唯一的状态存储，免费层够用，不用自己运维数据库
+- **AWS SES** 发信：按量计费（每 1000 封几美分），不会像某些"免费层"邮件服务商那样每天硬顶 100 封，订阅人数一多就撑不住——这是目前唯一真花钱的部分，见下面"实际花了多少钱"
+- **GitHub Actions** 定时发送：不用自己的电脑 24 小时开机联网，免费额度内
+
+## 实际花了多少钱
+
+不含糊，直接列真实账单：
+
+| 组件 | 月成本 | 说明 |
+|---|---|---|
+| AWS SES 发信 | 约 **$1.67** | 目前唯一真花钱的部分，按发信量计费（每 1000 封几美分），订阅人数涨了这个数字会跟着涨，但涨得很慢 |
+| Fly.io（listmonk 容器） | $0 | 共享 CPU + 512MB，空闲自动休眠，用量在免费额度内 |
+| Neon（Postgres） | $0 | 免费层容量够用 |
+| GitHub Actions（定时发送） | $0 | 免费分钟数内 |
+
+**加起来大概每月 1.67 美元**，不是"零成本"，说"不花一分钱"是夸张了。真正的对比对象不是"0 元 vs 1.67 元"，而是"1.67 元 vs Substack/ConvertKit 这类平台每月起步几十美元、订阅人数越多抽成越多的订阅税"——这才是自建划算的地方：省的是平台抽成，不是基础设施本身。
 
 ## 那个"差点想复杂了"的瞬间
 
@@ -51,6 +65,11 @@ Substack、ConvertKit、Beehiiv 这些工具确实好用，但有个绕不开的
 
 内容生成那部分特意做成了可插拔的架构——现在只有"博客新文章"一个来源，以后想加别的（比如定期的行业趋势分析、只给订阅者看不上公开博客的笔记），写一个新模块接进去就行，不用动其他代码。
 
+这套系统现在就是这个博客（blog.mushroom.cv）在生产环境里实际跑的那一套，不是 demo。全部代码完全开源，Apache 2.0 许可，符合 Mycelium 一直讲的"数字公共物品"原则——想直接抄作业、照着自己部署一套的，看这两处：
+
+- 代码：github.com/MushroomDAO/blog 仓库的 `pipeline/newsletter/` 目录（内容生成、发送脚本）和 `src/components/subscribe/`（前端订阅表单）
+- 手把手教程：仓库里的 `docs/HOW_TO_BUILD_NEWSLETTER.md`，从"注册哪几个账号"到"DNS 记录怎么填"到"验收清单"，照着抄就能跑起来，不需要看这篇文章之外的任何背景知识
+
 想收到这些更新，滑到这篇文章最下面，Footer 里就有订阅入口。
 
 ---
@@ -59,7 +78,7 @@ Substack、ConvertKit、Beehiiv 这些工具确实好用，但有个绕不开的
 
 <!--EN-->
 
-**BLUF**: No Substack, no ConvertKit, no platform tax to any third party — over two days, using a handful of open-source / pay-as-you-go components, this blog got a fully self-hosted email newsletter. Readers subscribe, double-confirm, and get a digest every 2 days — all data stays in our own hands. Along the way: one classic near-miss of over-engineering, and several real bugs that only surfaced by actually running the thing end-to-end — one of which, three independently-run AI review models from different vendors all flagged as the same blocking issue.
+**BLUF**: No Substack, no ConvertKit, no platform tax to any third party — over two days, using a handful of open-source / pay-as-you-go components, this blog got a fully self-hosted email newsletter, **and the subscribe box at the bottom of this very page (blog.mushroom.cv) runs on exactly this system**, fully open source on GitHub (`pipeline/newsletter/` in the `MushroomDAO/blog` repo). Readers subscribe, double-confirm, and get a digest every 2 days — all data stays in our own hands. Calling this "free" would be inaccurate: the real bill comes from AWS SES pay-per-send pricing, currently about $1.67/month at this subscriber volume; Fly.io and the Neon database both sit within their free tiers. What's actually saved isn't infrastructure cost — it's the platform tax that Substack/ConvertKit-style tools charge, which starts at tens of dollars a month and scales with subscriber count. Along the way: one classic near-miss of over-engineering, and several real bugs that only surfaced by actually running the thing end-to-end — one of which, three independently-run AI review models from different vendors all flagged as the same blocking issue.
 
 ## Why not just use an existing platform?
 
@@ -70,9 +89,23 @@ So self-hosting was the clear direction. But "self-hosted" doesn't mean "reinven
 ## The stack, and why each piece
 
 - **listmonk** (open-source mailing list engine): double opt-in, an unintrusive proof-of-work captcha, unsubscribe tokens — all built in, so none of those easy-to-get-wrong parts had to be reimplemented
-- **Fly.io** hosting: stateless deployment, auto-sleep when idle and auto-wake on request, cost approaching zero (an earlier attempt on Cloudflare Container got dropped once the memory tier turned out not cheap enough — better to spike small and pivot than commit to one path from the start)
-- **AWS SES** for sending: pay-as-you-go, no hard daily cap like some "free tier" email services that break down once subscriber count grows
-- **GitHub Actions** for scheduling: doesn't depend on any one machine staying powered on and connected
+- **Fly.io** for listmonk hosting: stateless deployment (all data lives in the external Postgres), auto-sleep when idle and auto-wake on request, shared-CPU + 512MB tier, currently within the free allowance (an earlier attempt on Cloudflare Container got dropped once the memory tier turned out not cheap enough — better to spike small and pivot than commit to one path from the start)
+- **Neon** for Postgres: listmonk's only state store, free tier is enough, no database ops of our own
+- **AWS SES** for sending: pay-as-you-go (a few cents per 1,000 emails), no hard daily cap like some "free tier" email services that break down once subscriber count grows — this is the one part that actually costs money, see "What it actually costs" below
+- **GitHub Actions** for scheduling: doesn't depend on any one machine staying powered on and connected, within the free tier
+
+## What it actually costs
+
+No hand-waving — the real bill, line by line:
+
+| Component | Monthly cost | Notes |
+|---|---|---|
+| AWS SES sending | about **$1.67** | The only real cost today, billed per email sent (a few cents per 1,000); will grow with subscriber count, but slowly |
+| Fly.io (listmonk container) | $0 | Shared CPU + 512MB, auto-sleeps when idle, within free allowance |
+| Neon (Postgres) | $0 | Free tier is enough |
+| GitHub Actions (scheduling) | $0 | Within free minutes |
+
+**Total: roughly $1.67/month.** That's not "zero cost," and calling it "free" would be an overstatement. The real comparison isn't "$0 vs $1.67" — it's "$1.67 vs the platform tax that Substack/ConvertKit-style tools charge, starting at tens of dollars a month and scaling with subscriber count." That's where self-hosting actually pays off: it's the platform cut being saved, not the infrastructure itself.
 
 ## The almost-over-engineered moment
 
@@ -99,6 +132,11 @@ Writing the design is easy; running it is where the bugs live. A few that actual
 Subscribe → confirmation email → confirm → a digest every 2 days (new posts, banner + title + summary + link) → unsubscribe anytime. The full loop has been tested against real inboxes more than once; bounce/complaint handling is wired to AWS's own notification mechanism; scheduling runs on GitHub Actions, not dependent on any one always-on machine.
 
 Content generation was built as a pluggable architecture on purpose — today there's only one source ("new blog posts"), but adding another (a periodic research digest, subscriber-only notes that never touch the public blog) just means writing one new module, nothing else changes.
+
+This is the exact system running in production for this blog (blog.mushroom.cv) right now — not a demo. All of it is fully open source under Apache 2.0, in line with the "digital public goods" principle Mycelium keeps coming back to. If you want to copy the homework and deploy your own:
+
+- Code: `pipeline/newsletter/` (content generation, send script) and `src/components/subscribe/` (the frontend form) in the github.com/MushroomDAO/blog repo
+- Step-by-step tutorial: `docs/HOW_TO_BUILD_NEWSLETTER.md` in the same repo — from "which accounts to sign up for" to "exact DNS records to add" to a final acceptance checklist, no outside context needed beyond this article
 
 Want these updates? Scroll to the bottom of this page — the subscribe box is right there in the footer.
 
