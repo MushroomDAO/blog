@@ -7,7 +7,7 @@ pubDate: "2026-08-01"
 updatedDate: "2026-08-01"
 category: "Tech-News"
 tags: ["认证", "OpenID", "自托管", "Traefik", "OAuth", "Go", "homelab", "Mycelium"]
-heroImage: "../../assets/banner-ai-infrastructure.jpg"
+heroImage: "../../assets/images/tinyauth-smallest-openid-certified-auth-server-self-hosted-banner.jpg"
 ---
 
 *by Mycelium Protocol*

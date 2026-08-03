@@ -7,7 +7,7 @@ pubDate: "2026-08-03"
 updatedDate: "2026-08-03"
 category: "Tech-News"
 tags: ["Agent", "DeepSeek", "自进化", "开源工具", "TypeScript", "RAG", "AI基础设施", "Mycelium"]
-heroImage: "../../assets/banner-agent-self-evolution.jpg"
+heroImage: "../../assets/images/penguinharness-deepseek-self-evolving-agent-builder-002-usd-banner.jpg"
 ---
 
 *by Mycelium Protocol*
