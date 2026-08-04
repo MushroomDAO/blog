@@ -305,7 +305,7 @@ const categoryIcons: Record<string, string> = {
 				<ul class="posts-list">
 					{posts.map(post => (
 						<li>
-							<a class="post-card" href={`/my/${post.id}/`}>
+							<a class="post-card" href={post.data.externalUrl ?? `/my/${post.id}/`}>
 								{post.data.heroImage ? (
 									<Image src={post.data.heroImage} alt={post.data.title} width={240} height={160} />
 								) : (
