@@ -53,7 +53,16 @@ pnpm preview          # 预览构建结果
 | `pipeline/deploy/xiaohongshu-mcp/` | Dockerized Go MCP 服务，含 cookie 持久化和 Tailscale 代理 |
 | `config/users/` | 多用户配置（每用户一个 JS 文件，含博客域名、微信凭据、小红书 URL） |
 | `submodules/` | Git 子模块（xiaohongshu-mcp Go 源码、微信格式化工具等） |
-| `.agents/skills/` | Claude agent skill 定义（`blog-publisher` 等） |
+| `.agents/skills/` | Claude agent skill 定义（`blog-publisher`、`banner-creator`、`mage-vl` 等），提交进仓库的源 |
+| `.claude/skills/` | 上面那些 skill 的本地镜像，Claude Code 实际从这里加载；**未跟踪**，改完 `.agents/` 要 `cp -r` 同步过去 |
+
+### 配图的视觉理解（mage-vl skill）
+
+本机跑着 Mage-VL 视觉语言模型，可以读图片和视频，媒体不出本机。典型用途：给
+`src/assets/images/` 的 banner 批量补 alt 文本、按规则筛图（如「有没有出现人物」）、
+检查配图和文章主题是否匹配、给视频抽帧。用法见 `.agents/skills/mage-vl/SKILL.md`。
+
+注意它**没有音频塔，做不了语音转文字**；筛图只出判定结果，不会自动删改文件。
 
 ### 多用户配置系统
 
