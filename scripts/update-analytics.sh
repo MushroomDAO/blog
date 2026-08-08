@@ -1,11 +1,19 @@
 #!/usr/bin/env bash
 # ============================================================================
-# update-analytics.sh — refresh /analytics with the latest Cloudflare Web
-# Analytics snapshot, rebuild, deploy, and commit the data file.
+# update-analytics.sh — refresh the /analytics fallback snapshot.
 #
-# Runs via cron every 2 days at 21:00 (machine's more likely to be on then
-# than 9am) — see crontab entry added by this task:
-#   0 21 */2 * * cd /Users/jason/Dev/mycelium/blog && ./scripts/update-analytics.sh >> /tmp/blog-analytics-update.log 2>&1
+# /analytics 现在是实时的：页面加载时打 /api/analytics.json（Cloudflare Pages
+# Function，见 functions/api/analytics.json.js），边缘缓存 3 分钟。
+# 这个脚本已经不再是看板的数据来源，但仍然有两个不可替代的作用：
+#
+#   1. 兜底渲染 —— 实时接口挂掉/未配 token/访客禁用 JS 时，页面显示的就是
+#      这份构建期快照。它越新，降级时越不难看。
+#   2. 文章标题表 —— 边缘运行时读不到 src/content/blog/*.md，实时接口只能
+#      回出 slug。页面靠构建期烤入的标题表把 slug 换回中英文标题。
+#      **发了新文章后这份快照不更新，新文章在看板里就只会显示 slug。**
+#
+# 因此改为每天跑一次（原来是每 2 天）。crontab：
+#   0 21 * * * cd /Users/jason/Dev/mycelium/blog && ./scripts/update-analytics.sh >> /tmp/blog-analytics-update.log 2>&1
 #
 # Manual run: bash scripts/update-analytics.sh
 # ============================================================================

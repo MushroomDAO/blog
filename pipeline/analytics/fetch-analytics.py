@@ -36,6 +36,18 @@ COUNTRY_NAMES = {
     "RU": "俄罗斯", "ES": "西班牙", "IT": "意大利", "CH": "瑞士",
 }
 
+# ISO 3166-1 alpha-2 -> English name（/analytics 默认英文，需要成对提供）
+COUNTRY_NAMES_EN = {
+    "SG": "Singapore", "CN": "China", "TH": "Thailand", "US": "United States",
+    "HK": "Hong Kong", "DE": "Germany", "JP": "Japan", "TW": "Taiwan",
+    "MY": "Malaysia", "KR": "South Korea", "AR": "Argentina", "CA": "Canada",
+    "AU": "Australia", "AE": "United Arab Emirates", "NL": "Netherlands",
+    "VE": "Venezuela", "IE": "Ireland", "GB": "United Kingdom",
+    "NZ": "New Zealand", "SA": "Saudi Arabia", "IN": "India", "FR": "France",
+    "ID": "Indonesia", "VN": "Vietnam", "PH": "Philippines", "BR": "Brazil",
+    "RU": "Russia", "ES": "Spain", "IT": "Italy", "CH": "Switzerland",
+}
+
 # referrer host -> 分类桶
 DIRECT = {""}
 SEARCH_HOSTS = {"www.google.com", "www.google.com.hk", "www.google.com.tw", "cn.bing.com", "www.bing.com", "www.baidu.com", "duckduckgo.com"}
@@ -141,6 +153,7 @@ def main():
             "code": code,
             "flag": flag_emoji(code),
             "name": COUNTRY_NAMES.get(code, code),
+            "nameEn": COUNTRY_NAMES_EN.get(code, code),
             "pv": x["count"],
             "visits": x["sum"]["visits"],
         })
@@ -170,16 +183,29 @@ def main():
         slug = path.strip("/")
         if slug.startswith("blog/"):
             slug = slug[len("blog/"):]
-        title = "首页"
+        title, title_en = "首页", "Home"
         if slug:
             md_path = os.path.join(REPO_ROOT, "src", "content", "blog", f"{slug}.md")
-            title = slug
+            title = title_en = slug
             if os.path.exists(md_path):
+                found_zh = found_en = None
                 for line in open(md_path, encoding="utf-8"):
-                    if line.startswith("title:"):
-                        title = line.split(":", 1)[1].strip().strip('"')
+                    if found_zh is None and line.startswith("title:"):
+                        found_zh = line.split(":", 1)[1].strip().strip('"')
+                    elif found_en is None and line.startswith("titleEn:"):
+                        found_en = line.split(":", 1)[1].strip().strip('"')
+                    if found_zh and found_en:
                         break
-        pages.append({"title": title, "path": path, "pv": x["count"], "visits": x["sum"]["visits"]})
+                # titleEn 是可选 frontmatter：缺失时英文位回落到中文标题，不留空
+                title = found_zh or slug
+                title_en = found_en or title
+        pages.append({
+            "title": title,
+            "titleEn": title_en,
+            "path": path,
+            "pv": x["count"],
+            "visits": x["sum"]["visits"],
+        })
 
     out = {
         "generatedAt": end.strftime("%Y-%m-%dT%H:%M:%SZ"),

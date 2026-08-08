@@ -1,82 +1,27 @@
 {
-  "generatedAt": "2026-07-26T14:33:12Z",
+  "generatedAt": "2026-08-08T04:09:57Z",
   "period": {
-    "start": "2026-06-26",
-    "end": "2026-07-26"
+    "start": "2026-07-09",
+    "end": "2026-08-08"
   },
   "totals": {
-    "pageviews": 4440,
-    "visits": 3960,
-    "bots": 10
+    "pageviews": 6200,
+    "visits": 5580,
+    "bots": 30
   },
   "last7": {
-    "pv": 1470,
-    "visits": 1240
+    "pv": 1400,
+    "visits": 1300
   },
   "prior7": {
-    "pv": 1420,
-    "visits": 1360
+    "pv": 1510,
+    "visits": 1350
   },
   "daily": [
     {
-      "date": "06-27",
-      "pv": 30,
-      "visits": 20
-    },
-    {
-      "date": "06-28",
-      "pv": 20,
-      "visits": 20
-    },
-    {
-      "date": "06-30",
-      "pv": 110,
-      "visits": 110
-    },
-    {
-      "date": "07-01",
-      "pv": 50,
-      "visits": 50
-    },
-    {
-      "date": "07-02",
-      "pv": 50,
-      "visits": 20
-    },
-    {
-      "date": "07-03",
-      "pv": 50,
-      "visits": 50
-    },
-    {
-      "date": "07-04",
-      "pv": 130,
-      "visits": 80
-    },
-    {
-      "date": "07-05",
-      "pv": 100,
-      "visits": 90
-    },
-    {
-      "date": "07-06",
+      "date": "07-09",
       "pv": 80,
       "visits": 80
-    },
-    {
-      "date": "07-07",
-      "pv": 190,
-      "visits": 180
-    },
-    {
-      "date": "07-08",
-      "pv": 160,
-      "visits": 160
-    },
-    {
-      "date": "07-09",
-      "pv": 130,
-      "visits": 130
     },
     {
       "date": "07-10",
@@ -160,8 +105,73 @@
     },
     {
       "date": "07-26",
-      "pv": 130,
-      "visits": 120
+      "pv": 210,
+      "visits": 190
+    },
+    {
+      "date": "07-27",
+      "pv": 150,
+      "visits": 150
+    },
+    {
+      "date": "07-28",
+      "pv": 150,
+      "visits": 130
+    },
+    {
+      "date": "07-29",
+      "pv": 190,
+      "visits": 170
+    },
+    {
+      "date": "07-30",
+      "pv": 300,
+      "visits": 260
+    },
+    {
+      "date": "07-31",
+      "pv": 300,
+      "visits": 240
+    },
+    {
+      "date": "08-01",
+      "pv": 210,
+      "visits": 210
+    },
+    {
+      "date": "08-02",
+      "pv": 110,
+      "visits": 100
+    },
+    {
+      "date": "08-03",
+      "pv": 280,
+      "visits": 260
+    },
+    {
+      "date": "08-04",
+      "pv": 160,
+      "visits": 150
+    },
+    {
+      "date": "08-05",
+      "pv": 160,
+      "visits": 160
+    },
+    {
+      "date": "08-06",
+      "pv": 260,
+      "visits": 240
+    },
+    {
+      "date": "08-07",
+      "pv": 410,
+      "visits": 370
+    },
+    {
+      "date": "08-08",
+      "pv": 20,
+      "visits": 20
     }
   ],
   "countries": [
@@ -169,247 +179,274 @@
       "code": "SG",
       "flag": "🇸🇬",
       "name": "新加坡",
-      "pv": 1570,
-      "visits": 1490
+      "nameEn": "Singapore",
+      "pv": 2090,
+      "visits": 2010
     },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
-      "pv": 1080,
-      "visits": 1000
-    },
-    {
-      "code": "TH",
-      "flag": "🇹🇭",
-      "name": "泰国",
-      "pv": 450,
-      "visits": 320
+      "nameEn": "China",
+      "pv": 1630,
+      "visits": 1470
     },
     {
       "code": "US",
       "flag": "🇺🇸",
       "name": "美国",
-      "pv": 430,
+      "nameEn": "United States",
+      "pv": 600,
+      "visits": 510
+    },
+    {
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "pv": 500,
       "visits": 360
     },
     {
       "code": "HK",
       "flag": "🇭🇰",
       "name": "香港",
-      "pv": 200,
-      "visits": 160
-    },
-    {
-      "code": "DE",
-      "flag": "🇩🇪",
-      "name": "德国",
-      "pv": 170,
-      "visits": 120
+      "nameEn": "Hong Kong",
+      "pv": 470,
+      "visits": 410
     },
     {
       "code": "JP",
       "flag": "🇯🇵",
       "name": "日本",
-      "pv": 160,
-      "visits": 160
+      "nameEn": "Japan",
+      "pv": 290,
+      "visits": 240
     },
     {
       "code": "TW",
       "flag": "🇹🇼",
       "name": "台湾",
-      "pv": 90,
-      "visits": 70
+      "nameEn": "Taiwan",
+      "pv": 110,
+      "visits": 90
+    },
+    {
+      "code": "DE",
+      "flag": "🇩🇪",
+      "name": "德国",
+      "nameEn": "Germany",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "code": "NL",
+      "flag": "🇳🇱",
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "pv": 50,
+      "visits": 40
     },
     {
       "code": "MY",
       "flag": "🇲🇾",
       "name": "马来西亚",
+      "nameEn": "Malaysia",
       "pv": 40,
       "visits": 40
     },
     {
-      "code": "KR",
-      "flag": "🇰🇷",
-      "name": "韩国",
+      "code": "AE",
+      "flag": "🇦🇪",
+      "name": "阿联酋",
+      "nameEn": "United Arab Emirates",
+      "pv": 40,
+      "visits": 40
+    },
+    {
+      "code": "AU",
+      "flag": "🇦🇺",
+      "name": "澳大利亚",
+      "nameEn": "Australia",
       "pv": 30,
-      "visits": 30
-    },
-    {
-      "code": "AR",
-      "flag": "🇦🇷",
-      "name": "阿根廷",
-      "pv": 20,
-      "visits": 20
-    },
-    {
-      "code": "CA",
-      "flag": "🇨🇦",
-      "name": "加拿大",
-      "pv": 20,
       "visits": 20
     }
   ],
-  "countryTotal": 4420,
+  "countryTotal": 6180,
   "referers": {
-    "direct": 2900,
-    "search": 900,
-    "ecosystem": 540,
-    "ai": 60,
-    "other": 40
+    "direct": 3500,
+    "search": 1870,
+    "ecosystem": 700,
+    "ai": 40,
+    "other": 90
   },
   "pages": [
     {
-      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
-      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
-      "pv": 400,
-      "visits": 400
+      "title": "首页",
+      "titleEn": "Home",
+      "path": "/",
+      "pv": 530,
+      "visits": 410
     },
     {
-      "title": "'MemPalace：重塑 AI 记忆的记忆宫殿'",
-      "path": "/blog/mempalace-ai-memory-palace/",
-      "pv": 200,
-      "visits": 200
+      "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
+      "titleEn": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
+      "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
+      "pv": 320,
+      "visits": 320
+    },
+    {
+      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
+      "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
+      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
+      "pv": 220,
+      "visits": 220
     },
     {
       "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
       "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 200,
-      "visits": 200
+      "pv": 120,
+      "visits": 110
     },
     {
-      "title": "首页",
-      "path": "/",
-      "pv": 200,
-      "visits": 100
+      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
+      "titleEn": "minimax-h3-comfyui-open-source-video-generation-engineering-guide",
+      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
+      "pv": 120,
+      "visits": 120
     },
     {
-      "title": "my/papers",
-      "path": "/my/papers/",
-      "pv": 200,
+      "title": "my",
+      "titleEn": "my",
+      "path": "/my/",
+      "pv": 110,
       "visits": 0
-    },
-    {
-      "title": "如何开发一个 WebGL 游戏：逆向拆解 messenger.abeto.co 的完整技术栈",
-      "path": "/blog/how-to-develop-webgl-3d-game-threejs-complete-guide/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "CyberClip / 眼镜蛇：外挂式智能眼镜模块的 Idea 阶段",
-      "path": "/blog/cyberclip-ai-glasses-module-idea/",
-      "pv": 200,
-      "visits": 200
     },
     {
       "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+      "titleEn": "deepseek-v4-flash-local-inference-guide",
       "path": "/blog/deepseek-v4-flash-local-inference-guide/",
-      "pv": 200,
-      "visits": 200
+      "pv": 110,
+      "visits": 110
     },
     {
-      "title": "Paperclip：3 个月 69,462 star，匿名创始人，Zero Human Companies 到底是什么",
-      "path": "/blog/paperclip-zero-human-companies-ai-agent-orchestration/",
-      "pv": 100,
-      "visits": 100
+      "title": "如何真正做好研究：Anthropic 研究员 Vivek 的 7 条核心原则",
+      "titleEn": "How to Be Good at Research: 7 Core Principles from an Anthropic AI Safety Researcher",
+      "path": "/blog/how-to-be-good-at-research-vivek-guide/",
+      "pv": 110,
+      "visits": 110
     },
     {
-      "title": "arle 实战指南：普通笔记本一键跑本地大模型，再用蒸馏让 4B 模型追上 35B 的推理能力",
-      "path": "/blog/arle-local-llm-distillation-guide/",
-      "pv": 100,
-      "visits": 100
+      "title": "Kimi K3 技术深析：KDA、Stable LatentMoE 与首个开源 3T 级模型",
+      "titleEn": "Kimi K3 技术深析：KDA、Stable LatentMoE 与首个开源 3T 级模型",
+      "path": "/blog/kimi-k3-technical-analysis-architecture-training-open-frontier/",
+      "pv": 80,
+      "visits": 80
     },
     {
-      "title": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布",
-      "path": "/blog/cheese-paper-creative-writing-editor/",
-      "pv": 100,
-      "visits": 100
+      "title": "把内容一次发到全平台：social-auto-upload 个人自动发布入门实测指南",
+      "titleEn": "Publish Once, Post Everywhere: A Hands-On Beginner's Guide to social-auto-upload",
+      "path": "/blog/social-auto-upload-multi-platform-publishing-guide/",
+      "pv": 80,
+      "visits": 80
     },
     {
-      "title": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南",
-      "path": "/blog/ian-xiaohei-illustrations-beginner-guide/",
-      "pv": 100,
-      "visits": 100
+      "title": "Viktor：10 周 $20M ARR，Slack 里的 AI 员工如何做到的",
+      "titleEn": "Viktor Deep Dive: $20M ARR in 10 Weeks — How the Slack-Native AI Employee Is Redefining the Hiring Paradigm",
+      "path": "/blog/viktor-ai-employee-deep-dive-research/",
+      "pv": 70,
+      "visits": 70
     },
     {
-      "title": "SkillOpt：微软联合上交复旦同济，让 AI Agent 的 Skill 像神经网络一样被训练",
-      "path": "/blog/skillopt-microsoft-self-evolving-agent-skills-optimization/",
-      "pv": 100,
-      "visits": 100
+      "title": "MultiPost：一个浏览器插件，一键同步发内容到 10+ 平台",
+      "titleEn": "MultiPost: One Browser Extension, One Click to Publish Across 10+ Platforms",
+      "path": "/blog/multipost-extension-one-click-multi-platform-guide/",
+      "pv": 70,
+      "visits": 70
     },
     {
-      "title": "一人公司的AI员工：OPC创业者的Agent工具全景",
-      "path": "/blog/opc-agent-frameworks-2026/",
-      "pv": 100,
-      "visits": 100
+      "title": "Godogen：一句话生成可玩游戏，Claude Code + Codex 的自动游戏开发流水线",
+      "titleEn": "Godogen: Describe a Game, Get a Playable Game — Autonomous Dev Pipeline with Claude Code and Codex",
+      "path": "/blog/godogen-autonomous-game-dev-godot-bevy-claude/",
+      "pv": 60,
+      "visits": 60
     },
     {
-      "title": "about",
-      "path": "/about/",
-      "pv": 100,
-      "visits": 0
+      "title": "ChatCut × Codex / Claude Code：用提示词剪视频的完整教程，五套原创模板",
+      "titleEn": "ChatCut × Codex / Claude Code: Complete Video Editing Tutorial with 5 Original Prompt Templates",
+      "path": "/blog/chatcut-ai-video-editor-codex-claude-code-plugin-tutorial/",
+      "pv": 60,
+      "visits": 60
+    },
+    {
+      "title": "PaperSpine V2：新一代论文写作 AI 工具",
+      "titleEn": "PaperSpine V2: The New Generation of AI Writing Tool for Research Papers",
+      "path": "/blog/research-paper-writing-tool-paper-spine-v2/",
+      "pv": 60,
+      "visits": 60
     }
   ],
   "devices": [
     {
       "label": "desktop",
-      "count": 4050
+      "count": 5680
     },
     {
       "label": "mobile",
-      "count": 380
+      "count": 500
     },
     {
       "label": "tablet",
-      "count": 10
+      "count": 20
     }
   ],
   "os": [
     {
       "label": "Windows",
-      "count": 3020
+      "count": 4050
     },
     {
       "label": "MacOSX",
-      "count": 750
+      "count": 1140
     },
     {
       "label": "Unknown",
-      "count": 280
+      "count": 410
     },
     {
       "label": "Linux",
-      "count": 140
+      "count": 250
     },
     {
       "label": "Android",
-      "count": 140
+      "count": 210
     },
     {
       "label": "iOS",
-      "count": 110
+      "count": 140
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 3240
+      "count": 4220
     },
     {
       "label": "Edge",
-      "count": 440
+      "count": 870
     },
     {
       "label": "Unknown",
-      "count": 280
+      "count": 410
     },
     {
       "label": "Safari",
-      "count": 190
+      "count": 300
     },
     {
       "label": "ChromeMobile",
-      "count": 130
+      "count": 200
     },
     {
       "label": "MobileSafari",
@@ -417,7 +454,7 @@
     },
     {
       "label": "ChromeMobileWebview",
-      "count": 40
+      "count": 60
     },
     {
       "label": "Firefox",
@@ -425,7 +462,7 @@
     },
     {
       "label": "ChromeHeadless",
-      "count": 10
+      "count": 30
     }
   ]
 }

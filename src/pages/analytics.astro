@@ -2,57 +2,43 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import data from '../data/blog-analytics.json';
+import snapshot from '../data/blog-analytics.json';
+import {
+	STRINGS,
+	renderKpis,
+	renderTrend,
+	renderCountries,
+	renderReferers,
+	renderPages,
+	renderStacks,
+} from '../lib/analytics-render.js';
 
-const title = '流量看板 · Website Analytics';
-const description = `blog.mushroom.cv 近 30 天访问数据公开看板：浏览量、地域分布、流量来源与热门文章（${data.period.start} ~ ${data.period.end}）。`;
+// 默认英文：首屏 HTML 直接就是英文，不靠 JS 兜——JS 被禁时页面依然完整可读，
+// 也避免中文闪一下再跳成英文。中文由右上角开关在客户端切换。
+const LANG = 'en';
+const t = STRINGS[LANG];
 
-const fmt = (n: number) => n.toLocaleString('en-US');
-const pct = (n: number, total: number) => (total ? ((n / total) * 100).toFixed(1) : '0.0');
+// 构建期快照没有 live 标记，实时接口返回的数据才有
+const data = { ...snapshot, live: false };
 
-const refLabels: Record<string, string> = {
-	direct: '直接访问 / 书签',
-	search: '搜索引擎',
-	ecosystem: '站内跳转（mushroom.cv 生态）',
-	ai: 'AI 助手引荐',
-	other: '社交 / 其他',
-};
-const refColors: Record<string, string> = {
-	direct: 'rgb(var(--gray))',
-	search: 'rgb(var(--accent))',
-	ecosystem: '#1f8f86',
-	ai: '#8a5fd1',
-	other: 'rgb(var(--gray-light))',
-};
-const refTotal = Object.values(data.referers).reduce((a: number, b) => a + (b as number), 0);
-const refererRows = (Object.keys(data.referers) as (keyof typeof data.referers)[])
-	.map((k) => ({ key: k, label: refLabels[k], color: refColors[k], count: data.referers[k] }))
-	.sort((a, b) => b.count - a.count);
+const title = `${t.pageTitle} · 流量看板`;
+const description = t.pageDesc(data.period.start, data.period.end);
 
-const deltaPv = data.last7.pv - data.prior7.pv;
-const deltaPct = data.prior7.pv ? ((deltaPv / data.prior7.pv) * 100).toFixed(1) : '0.0';
-
-const maxCountry = Math.max(...data.countries.map((c) => c.pv));
-const deviceColors = ['rgb(var(--accent))', '#1f8f86', 'rgb(var(--gray))', '#8a5fd1', '#c9982e', '#5b9bd5'];
-
-// SVG trend chart geometry
-const W = 1000, H = 200, padT = 14, padB = 20;
-const maxV = Math.max(...data.daily.map((d) => d.pv)) * 1.12;
-const n = data.daily.length;
-const xAt = (i: number) => (i / (n - 1)) * W;
-const yAt = (v: number) => padT + (1 - v / maxV) * (H - padT - padB);
-const linePv = data.daily.map((d, i) => `${i === 0 ? 'M' : 'L'} ${xAt(i).toFixed(1)} ${yAt(d.pv).toFixed(1)}`).join(' ');
-const lineVi = data.daily.map((d, i) => `${i === 0 ? 'M' : 'L'} ${xAt(i).toFixed(1)} ${yAt(d.visits).toFixed(1)}`).join(' ');
-const areaPv = `${linePv} L ${xAt(n - 1).toFixed(1)} ${yAt(0).toFixed(1)} L 0 ${yAt(0).toFixed(1)} Z`;
-const labelIdx = [0, Math.round((n - 1) * 0.25), Math.round((n - 1) * 0.5), Math.round((n - 1) * 0.75), n - 1];
+// 边缘运行时读不到 src/content/blog/*.md，实时接口回不出文章标题。
+// 把标题表烤进页面，前端拿到实时数据后按 path 合并回去。
+const titleMap: Record<string, { title: string; titleEn: string }> = {};
+for (const p of data.pages) {
+	titleMap[p.path] = { title: p.title, titleEn: (p as any).titleEn ?? p.title };
+}
 ---
 
-<html lang="zh-CN">
+<html lang={t.htmlLang}>
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
 			main.analytics { width: 100%; max-width: 1080px; }
 			.page-head { margin-bottom: 1.5em; }
+			.page-head .title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 1em; }
 			.page-head h1 { margin-bottom: 0.2em; }
 			.page-head .sub {
 				color: rgb(var(--gray));
@@ -72,6 +58,26 @@ const labelIdx = [0, Math.round((n - 1) * 0.25), Math.round((n - 1) * 0.5), Math
 				font-size: 0.85em;
 			}
 			.src-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: #2f8f5b; display: inline-block; }
+			.src-pill .dot.live { animation: pulse 2s ease-in-out infinite; }
+			@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+			.lang-toggle {
+				flex: none;
+				margin-top: 0.35em;
+				font: inherit;
+				font-size: 0.8em;
+				font-weight: 600;
+				letter-spacing: 0.02em;
+				color: rgb(var(--gray-dark));
+				background: linear-gradient(var(--gray-gradient)) no-repeat;
+				border: 1px solid rgba(var(--gray), 0.3);
+				border-radius: 999px;
+				padding: 0.4em 1em;
+				cursor: pointer;
+				transition: color 0.15s, border-color 0.15s;
+			}
+			.lang-toggle:hover { color: rgb(var(--accent)); border-color: rgb(var(--accent)); }
+			.lang-toggle:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; }
 
 			.kpis {
 				display: grid;
@@ -111,7 +117,7 @@ const labelIdx = [0, Math.round((n - 1) * 0.25), Math.round((n - 1) * 0.5), Math
 			.cols-2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 1em; }
 
 			.barlist { display: flex; flex-direction: column; gap: 0.55em; }
-			.barlist .row { display: grid; grid-template-columns: 1.6em 6em 1fr 3.6em; align-items: center; gap: 0.6em; font-size: 0.86em; }
+			.barlist .row { display: grid; grid-template-columns: 1.6em 8em 1fr 3.6em; align-items: center; gap: 0.6em; font-size: 0.86em; }
 			.barlist .flag { font-size: 1.05em; text-align: center; }
 			.barlist .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 			.barlist .track { background: rgba(var(--gray), 0.15); border-radius: 4px; height: 8px; overflow: hidden; }
@@ -160,83 +166,39 @@ const labelIdx = [0, Math.round((n - 1) * 0.25), Math.round((n - 1) * 0.5), Math
 				.kpis { grid-template-columns: repeat(2, 1fr); }
 				.cols-2 { grid-template-columns: 1fr; }
 				.stack-cols { grid-template-columns: 1fr; }
-				.barlist .row { grid-template-columns: 1.3em 4.5em 1fr 2.8em; }
+				.barlist .row { grid-template-columns: 1.3em 5.5em 1fr 2.8em; }
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
-		<main class="analytics">
+		<main class="analytics" id="analytics-root">
 			<div class="page-head">
-				<h1>📊 流量看板 · Website Analytics</h1>
+				<div class="title-row">
+					<h1 data-a="title">📊 {t.pageTitle}</h1>
+					<button type="button" class="lang-toggle" data-a="lang" aria-label={t.langButtonLabel}>
+						{t.langButton}
+					</button>
+				</div>
 				<div class="sub">
-					<span class="src-pill"><span class="dot"></span>Cloudflare Web Analytics（RUM，非 Cookie）</span>
-					<span>{data.period.start} ~ {data.period.end} · 近 30 天，每 2 天自动更新</span>
+					<span class="src-pill"><span class="dot" data-a="dot"></span><span data-a="source">{t.source}</span></span>
+					<span data-a="period">{data.period.start} ~ {data.period.end} · {t.periodSuffix} · {t.liveStale}</span>
 				</div>
 			</div>
 
-			<section class="kpis">
-				<div class="kpi">
-					<div class="label">总浏览量 Pageviews</div>
-					<div class="value">{fmt(data.totals.pageviews)}</div>
-					<div class="delta flat">已剔除 {data.totals.bots} 次机器人抓取</div>
-				</div>
-				<div class="kpi">
-					<div class="label">独立访问 Visits</div>
-					<div class="value">{fmt(data.totals.visits)}</div>
-					<div class="delta flat">约 {(data.totals.pageviews / data.totals.visits).toFixed(2)} 页 / 次访问</div>
-				</div>
-				<div class="kpi">
-					<div class="label">近 7 天浏览量</div>
-					<div class="value">{fmt(data.last7.pv)}</div>
-					<div class={`delta ${deltaPv > 0 ? 'up' : deltaPv < 0 ? 'down' : 'flat'}`}>
-						{deltaPv > 0 ? '▲' : deltaPv < 0 ? '▼' : '–'} {deltaPct}%（{fmt(data.prior7.pv)} → {fmt(data.last7.pv)}）
-					</div>
-				</div>
-				<div class="kpi">
-					<div class="label">覆盖地区</div>
-					<div class="value">{data.countries.length}+</div>
-					<div class="delta flat">个国家/地区，30 天内</div>
-				</div>
-			</section>
+			<section class="kpis" data-a="kpis" set:html={renderKpis(data, LANG)} />
 
 			<section class="block">
 				<div class="section-head">
-					<h2>每日浏览量趋势</h2>
-					<span class="note">最近一日为当天未完结数据</span>
+					<h2 data-a="trend-head">{t.trendHead}</h2>
+					<span class="note" data-a="trend-note">{t.trendNote}</span>
 				</div>
 				<div class="card">
 					<div class="trend-legend">
-						<span class="sw"><i style="background:rgb(var(--accent))"></i>浏览量 Pageviews</span>
-						<span class="sw"><i style="background:#1f8f86"></i>独立访问 Visits</span>
+						<span class="sw"><i style="background:rgb(var(--accent))"></i><span data-a="legend-pv">{t.legendPv}</span></span>
+						<span class="sw"><i style="background:#1f8f86"></i><span data-a="legend-visits">{t.legendVisits}</span></span>
 					</div>
-					<svg class="trend" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none">
-						<g class="trend-grid">
-							{[0, 1, 2, 3, 4].map((t) => (
-								<line x1="0" y1={padT + (t / 4) * (H - padT - padB)} x2={W} y2={padT + (t / 4) * (H - padT - padB)} />
-							))}
-						</g>
-						<defs>
-							<linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
-								<stop offset="0%" stop-color="rgb(var(--accent))" stop-opacity="0.3" />
-								<stop offset="100%" stop-color="rgb(var(--accent))" stop-opacity="0" />
-							</linearGradient>
-						</defs>
-						<path d={areaPv} fill="url(#areaFill)" stroke="none" />
-						<path d={lineVi} fill="none" stroke="#1f8f86" stroke-width="1.6" stroke-opacity="0.85" />
-						<path d={linePv} fill="none" stroke="rgb(var(--accent))" stroke-width="2.25" />
-						<circle cx={xAt(n - 1)} cy={yAt(data.daily[n - 1].pv)} r="4.5" fill="rgb(var(--accent))" stroke="#fff" stroke-width="2" />
-						{labelIdx.map((i) => (
-							<text
-								x={xAt(i)}
-								y={H - 2}
-								class="trend-label"
-								text-anchor={i === 0 ? 'start' : i === n - 1 ? 'end' : 'middle'}
-							>
-								{data.daily[i].date}
-							</text>
-						))}
-					</svg>
+					<svg class="trend" viewBox="0 0 1000 200" preserveAspectRatio="none" data-a="trend" set:html={renderTrend(data)} />
 				</div>
 			</section>
 
@@ -244,107 +206,100 @@ const labelIdx = [0, Math.round((n - 1) * 0.25), Math.round((n - 1) * 0.5), Math
 				<div class="cols-2">
 					<div class="card">
 						<div class="section-head">
-							<h2>地域分布 Top 12</h2>
-							<span class="note">按浏览量占比</span>
+							<h2 data-a="geo-head">{t.geoHead}</h2>
+							<span class="note" data-a="geo-note">{t.geoNote}</span>
 						</div>
-						<div class="barlist">
-							{data.countries.map((c) => (
-								<div class="row">
-									<span class="flag">{c.flag}</span>
-									<span class="name">{c.name}</span>
-									<span class="track"><span class="fill" style={`width:${(c.pv / maxCountry) * 100}%`} /></span>
-									<span class="pct">{pct(c.pv, data.countryTotal)}%</span>
-								</div>
-							))}
-						</div>
-						<div class="callout">
-							<b>解读提醒</b>：博主本人常驻东南亚，占比靠前的地区可能混入了作者写作/调试时的自访问，实际读者地域分布会比图上更分散。
-						</div>
+						<div class="barlist" data-a="countries" set:html={renderCountries(data, LANG)} />
+						<div class="callout" data-a="geo-callout" set:html={t.geoCallout} />
 					</div>
 
 					<div class="card">
 						<div class="section-head">
-							<h2>流量来源</h2>
-							<span class="note">按 referrer 归类</span>
+							<h2 data-a="ref-head">{t.refHead}</h2>
+							<span class="note" data-a="ref-note">{t.refNote}</span>
 						</div>
-						<div class="chip-row">
-							{refererRows.map((r) => (
-								<div class="chip">
-									<span class="tag"><i style={`background:${r.color}`} />{r.label}</span>
-									<span class="num">{pct(r.count, refTotal)}%</span>
-								</div>
-							))}
-						</div>
-						<div class="callout">
-							<b>怎么读</b>：「直接访问」占大头通常意味着读者是收藏/书签，或从公众号、私聊分享链接点进来的——这类来源 Cloudflare 拿不到具体出处，都会归到这一类。
-						</div>
+						<div class="chip-row" data-a="referers" set:html={renderReferers(data, LANG)} />
+						<div class="callout" data-a="ref-callout" set:html={t.refCallout} />
 					</div>
 				</div>
 			</section>
 
 			<section class="block">
 				<div class="section-head">
-					<h2>最受欢迎的页面 Top 15</h2>
-					<span class="note">首页除外为文章浏览量</span>
+					<h2 data-a="pages-head">{t.pagesHead}</h2>
+					<span class="note" data-a="pages-note">{t.pagesNote}</span>
 				</div>
 				<div class="card table-scroll">
 					<table class="pages">
 						<thead>
-							<tr><th class="rank">#</th><th>文章</th><th class="num">浏览量</th><th class="num">独立访问</th></tr>
+							<tr>
+								<th class="rank" data-a="col-rank">{t.colRank}</th>
+								<th data-a="col-page">{t.colPage}</th>
+								<th class="num" data-a="col-pv">{t.colPv}</th>
+								<th class="num" data-a="col-visits">{t.colVisits}</th>
+							</tr>
 						</thead>
-						<tbody>
-							{data.pages.map((p, i) => (
-								<tr>
-									<td class="rank">{i + 1}</td>
-									<td class="title">
-										<a href={p.path} target="_blank" rel="noopener">{p.title}</a>
-										<span class="path">{p.path}</span>
-									</td>
-									<td class="num">{fmt(p.pv)}</td>
-									<td class="num">{fmt(p.visits)}</td>
-								</tr>
-							))}
-						</tbody>
+						<tbody data-a="pages" set:html={renderPages(data, LANG)} />
 					</table>
 				</div>
 			</section>
 
 			<section class="block">
 				<div class="section-head">
-					<h2>设备 / 系统 / 浏览器</h2>
-					<span class="note">30 天汇总</span>
+					<h2 data-a="stack-head">{t.stackHead}</h2>
+					<span class="note" data-a="stack-note">{t.stackNote}</span>
 				</div>
-				<div class="card stack-cols">
-					{[
-						{ label: '设备类型', rows: data.devices },
-						{ label: '操作系统', rows: data.os },
-						{ label: '浏览器', rows: data.browsers },
-					].map((group) => {
-						const max = Math.max(...group.rows.map((r) => r.count));
-						return (
-							<div>
-								<div class="note" style="margin-bottom:0.5em;">{group.label}</div>
-								<div class="mini-bars">
-									{group.rows.map((r, i) => (
-										<div class="row">
-											<span class="name">{r.label}</span>
-											<span class="track"><span class="fill" style={`width:${(r.count / max) * 100}%;background:${deviceColors[i % deviceColors.length]}`} /></span>
-											<span class="num">{fmt(r.count)}</span>
-										</div>
-									))}
-								</div>
-							</div>
-						);
-					})}
-				</div>
+				<div class="card stack-cols" data-a="stacks" set:html={renderStacks(data, LANG)} />
 			</section>
 
-			<p class="foot-note">
-				数据来自 Cloudflare GraphQL Analytics API（Web Analytics / RUM 数据集），不使用 Cookie、不采集个人身份信息。
-				页面每次构建时读取最新数据快照，自动更新任务每 2 天运行一次。
-				生成时间：{new Date(data.generatedAt).toISOString().slice(0, 16).replace('T', ' ')} UTC
-			</p>
+			<p class="foot-note" data-a="footer">{t.footer(new Date(data.generatedAt).toISOString().slice(0, 16).replace('T', ' '), false)}</p>
 		</main>
 		<Footer />
+
+		<script
+			is:inline
+			set:html={`window.__ANALYTICS_TITLES__ = ${JSON.stringify(titleMap).replace(/</g, '\\u003c')};`}
+		/>
+
+		<script>
+			import snapshot from '../data/blog-analytics.json';
+			import { paint, mergeTitles } from '../lib/analytics-render.js';
+
+			const root = document.getElementById('analytics-root');
+			const STORAGE_KEY = 'mycelium:analytics:lang';
+
+			// 默认英文；只有用户显式切换过才记住中文
+			let lang = localStorage.getItem(STORAGE_KEY) === 'zh' ? 'zh' : 'en';
+			let data = { ...snapshot, live: false };
+
+			const titleMap = window.__ANALYTICS_TITLES__ || {};
+
+			function render() {
+				paint(root, data, lang);
+				const dot = root.querySelector('[data-a="dot"]');
+				if (dot) dot.classList.toggle('live', !!data.live);
+			}
+
+			root.querySelector('[data-a="lang"]')?.addEventListener('click', () => {
+				lang = lang === 'en' ? 'zh' : 'en';
+				localStorage.setItem(STORAGE_KEY, lang);
+				render();
+			});
+
+			// 服务端已经渲染好英文，语言是英文时不必重画一遍
+			if (lang !== 'en') render();
+
+			// 实时数据：接口失败就静默保留构建快照，页面不退化
+			fetch('/api/analytics.json', { headers: { accept: 'application/json' } })
+				.then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
+				.then((live) => {
+					if (!live || !Array.isArray(live.daily) || !live.daily.length) return;
+					data = mergeTitles(live, titleMap);
+					render();
+				})
+				.catch(() => {
+					/* 保持构建期快照 */
+				});
+		</script>
 	</body>
 </html>
