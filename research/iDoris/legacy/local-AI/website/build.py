@@ -487,7 +487,7 @@ def base_html(title: str, body: str, extra_js: str = "") -> str:
 {body}
 <footer>
   <div class="container">
-    <p>Aura AI · <a href="https://blog.mushroom.cv" target="_blank">Mycelium Protocol</a> · 开源 · 本地优先 · AI平权</p>
+    <p>Aura AI · <a href="https://www.mushroom.cv" target="_blank">Mycelium Protocol</a> · 开源 · 本地优先 · AI平权</p>
     <p style="margin-top:6px">构建于 {BUILD_DATE} · <a href="https://blog.mushroom.cv/blog/aura-ai-manifesto-153316/" target="_blank">阅读宣言 →</a></p>
   </div>
 </footer>
@@ -555,7 +555,7 @@ def index_html(reports_data: list[dict]) -> str:
     <div class="header-links">
       <a href="https://launch.mushroom.cv/auraai" target="_blank">ℹ️ About AuraAI</a>
       <a href="https://blog.mushroom.cv/blog/aura-ai-manifesto-153316/" target="_blank">📖 Aura AI 宣言</a>
-      <a href="https://blog.mushroom.cv" target="_blank">🌐 Mycelium Protocol</a>
+      <a href="https://www.mushroom.cv" target="_blank">🌐 Mycelium Protocol</a>
       <a href="hardware/">💻 硬件方案</a>
       <a href="models/">🤖 模型推荐</a>
     </div>
