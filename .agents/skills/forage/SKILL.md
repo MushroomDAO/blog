@@ -1,5 +1,5 @@
 ---
-name: xhs-radar
+name: forage
 description: |
   每日信息雷达：巡检小红书关注列表/关键词、GitHub Trending、HuggingFace 新模型、
   X 时间线，按 preferences.yml 的偏好画像打分，命中的去 GitHub/HuggingFace 拉一手
