@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archify 工作流 — 技术图演示</title>
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --bg-card: #111827;
+    --bg-card2: #1a2236;
+    --border: rgba(255,255,255,0.08);
+    --text: #f0f6fc;
+    --text-muted: #8b9ab3;
+    --grid: rgba(255,255,255,0.03);
+    --shadow: 0 4px 24px rgba(0,0,0,0.4);
+    /* semantic colors */
+    --c-frontend: #06b6d4;
+    --c-frontend-bg: rgba(6,182,212,0.12);
+    --c-frontend-border: rgba(6,182,212,0.4);
+    --c-backend: #10b981;
+    --c-backend-bg: rgba(16,185,129,0.12);
+    --c-backend-border: rgba(16,185,129,0.4);
+    --c-db: #8b5cf6;
+    --c-db-bg: rgba(139,92,246,0.12);
+    --c-db-border: rgba(139,92,246,0.4);
+    --c-cloud: #f59e0b;
+    --c-cloud-bg: rgba(245,158,11,0.12);
+    --c-cloud-border: rgba(245,158,11,0.4);
+    --c-security: #f43f5e;
+    --c-security-bg: rgba(244,63,94,0.12);
+    --c-security-border: rgba(244,63,94,0.4);
+    --c-external: #64748b;
+    --c-external-bg: rgba(100,116,139,0.12);
+    --c-external-border: rgba(100,116,139,0.4);
+    --arrow: rgba(255,255,255,0.35);
+    --arrow-label: rgba(255,255,255,0.55);
+  }
+  [data-theme="light"] {
+    --bg: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card2: #f1f5f9;
+    --border: rgba(0,0,0,0.08);
+    --text: #0f172a;
+    --text-muted: #64748b;
+    --grid: rgba(0,0,0,0.03);
+    --shadow: 0 4px 24px rgba(0,0,0,0.1);
+    --c-frontend: #0891b2;
+    --c-frontend-bg: rgba(8,145,178,0.08);
+    --c-frontend-border: rgba(8,145,178,0.35);
+    --c-backend: #059669;
+    --c-backend-bg: rgba(5,150,105,0.08);
+    --c-backend-border: rgba(5,150,105,0.35);
+    --c-db: #7c3aed;
+    --c-db-bg: rgba(124,58,237,0.08);
+    --c-db-border: rgba(124,58,237,0.35);
+    --c-cloud: #d97706;
+    --c-cloud-bg: rgba(217,119,6,0.08);
+    --c-cloud-border: rgba(217,119,6,0.35);
+    --c-security: #e11d48;
+    --c-security-bg: rgba(225,29,72,0.08);
+    --c-security-border: rgba(225,29,72,0.35);
+    --c-external: #475569;
+    --c-external-bg: rgba(71,85,105,0.08);
+    --c-external-border: rgba(71,85,105,0.35);
+    --arrow: rgba(0,0,0,0.3);
+    --arrow-label: rgba(0,0,0,0.5);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: ui-monospace, 'JetBrains Mono', Menlo, Monaco, Consolas, monospace;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    transition: background 0.25s, color 0.25s;
+  }
+  /* grid background */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* top bar */
+  .topbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 24px;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+  }
+  .topbar-title { font-size: 14px; font-weight: 600; color: var(--text); opacity: 0.9; }
+  .topbar-meta { font-size: 11px; color: var(--text-muted); }
+  .topbar-right { display: flex; gap: 8px; }
+
+  .btn {
+    padding: 6px 14px; border-radius: 6px; border: 1px solid var(--border);
+    background: var(--bg-card2); color: var(--text); font-size: 12px;
+    cursor: pointer; transition: all 0.15s; font-family: inherit;
+  }
+  .btn:hover { border-color: var(--c-backend-border); color: var(--c-backend); }
+  .btn.active { border-color: var(--c-backend-border); background: var(--c-backend-bg); color: var(--c-backend); }
+
+  /* export dropdown */
+  .export-wrap { position: relative; }
+  .export-menu {
+    display: none; position: absolute; top: calc(100% + 8px); right: 0;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 8px; box-shadow: var(--shadow); min-width: 200px; overflow: hidden; z-index: 200;
+  }
+  .export-menu.open { display: block; }
+  .export-item {
+    display: flex; align-items: center; gap: 10px; padding: 10px 16px;
+    font-size: 12px; cursor: pointer; color: var(--text); transition: background 0.1s;
+    border: none; background: none; width: 100%; text-align: left; font-family: inherit;
+  }
+  .export-item:hover { background: var(--bg-card2); }
+  .export-item svg { flex-shrink: 0; opacity: 0.6; }
+
+  /* main canvas */
+  main {
+    position: relative; z-index: 1;
+    padding: 80px 40px 60px;
+    min-height: 100vh;
+  }
+
+  .diagram-title {
+    text-align: center; margin-bottom: 48px;
+  }
+  .diagram-title h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .diagram-title p { font-size: 12px; color: var(--text-muted); }
+
+  /* lanes */
+  .lanes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+  }
+
+  .lane {
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .lane-header {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 16px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--border);
+  }
+
+  /* nodes */
+  .node {
+    border-radius: 10px; padding: 14px 16px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+  }
+  .node:hover { transform: translateY(-1px); }
+  .node-icon { font-size: 18px; margin-bottom: 6px; }
+  .node-name { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+  .node-sub { font-size: 10px; color: var(--text-muted); line-height: 1.5; }
+  .node-tag {
+    display: inline-block; font-size: 9px; font-weight: 600; padding: 2px 7px;
+    border-radius: 100px; margin-top: 6px;
+  }
+
+  /* color variants */
+  .node.frontend { border-color: var(--c-frontend-border); background: var(--c-frontend-bg); }
+  .node.frontend .node-name { color: var(--c-frontend); }
+  .node.frontend .node-tag { background: var(--c-frontend-bg); color: var(--c-frontend); border: 1px solid var(--c-frontend-border); }
+
+  .node.backend { border-color: var(--c-backend-border); background: var(--c-backend-bg); }
+  .node.backend .node-name { color: var(--c-backend); }
+  .node.backend .node-tag { background: var(--c-backend-bg); color: var(--c-backend); border: 1px solid var(--c-backend-border); }
+
+  .node.db { border-color: var(--c-db-border); background: var(--c-db-bg); }
+  .node.db .node-name { color: var(--c-db); }
+  .node.db .node-tag { background: var(--c-db-bg); color: var(--c-db); border: 1px solid var(--c-db-border); }
+
+  .node.cloud { border-color: var(--c-cloud-border); background: var(--c-cloud-bg); }
+  .node.cloud .node-name { color: var(--c-cloud); }
+  .node.cloud .node-tag { background: var(--c-cloud-bg); color: var(--c-cloud); border: 1px solid var(--c-cloud-border); }
+
+  .node.security { border-color: var(--c-security-border); background: var(--c-security-bg); }
+  .node.security .node-name { color: var(--c-security); }
+  .node.security .node-tag { background: var(--c-security-bg); color: var(--c-security); border: 1px solid var(--c-security-border); }
+
+  .node.external { border-color: var(--c-external-border); background: var(--c-external-bg); }
+  .node.external .node-name { color: var(--c-external); }
+  .node.external .node-tag { background: var(--c-external-bg); color: var(--c-external); border: 1px solid var(--c-external-border); }
+
+  /* flow arrows between lanes */
+  .flow-row {
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; margin: 0 auto 32px;
+    max-width: 1100px;
+    font-size: 11px; color: var(--arrow-label);
+  }
+  .flow-arrow {
+    display: flex; align-items: center; gap: 8px; flex: 1;
+    justify-content: center;
+  }
+  .arrow-line {
+    flex: 1; height: 1px; background: var(--arrow);
+    position: relative;
+    max-width: 120px;
+  }
+  .arrow-line::after {
+    content: '';
+    position: absolute; right: -1px; top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-left: 8px solid var(--arrow);
+  }
+  .arrow-label { white-space: nowrap; font-size: 10px; color: var(--arrow-label); }
+
+  /* output section */
+  .output-section {
+    max-width: 1100px; margin: 0 auto;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .output-section h2 {
+    font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .output-types {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;
+  }
+  .output-type {
+    border-radius: 8px; padding: 12px 14px;
+    border: 1px solid var(--border);
+    background: var(--bg-card2);
+  }
+  .output-type .ot-icon { font-size: 20px; margin-bottom: 6px; }
+  .output-type .ot-name { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+  .output-type .ot-desc { font-size: 10px; color: var(--text-muted); line-height: 1.5; }
+
+  /* legend */
+  .legend {
+    max-width: 1100px; margin: 24px auto 0;
+    display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+  }
+  .legend-title { font-size: 10px; color: var(--text-muted); margin-right: 4px; }
+  .legend-item {
+    display: flex; align-items: center; gap: 6px; font-size: 10px;
+    padding: 4px 10px; border-radius: 100px;
+  }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  /* footer */
+  .footer {
+    text-align: center; padding: 32px; font-size: 10px; color: var(--text-muted);
+    position: relative; z-index: 1;
+  }
+  .footer a { color: var(--c-backend); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>
+    <div class="topbar-title">Archify — 工作流技术图</div>
+    <div class="topbar-meta">自然语言描述 → 自包含 HTML → 导出 PNG / SVG</div>
+  </div>
+  <div class="topbar-right">
+    <button class="btn" id="themeBtn" onclick="toggleTheme()">☀️ Light</button>
+    <div class="export-wrap">
+      <button class="btn" onclick="toggleExport()" id="exportBtn">↓ Export</button>
+      <div class="export-menu" id="exportMenu">
+        <button class="export-item" onclick="copyPNG()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copy PNG
+        </button>
+        <button class="export-item" onclick="downloadImg('png')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PNG
+        </button>
+        <button class="export-item" onclick="downloadImg('jpeg')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download JPEG
+        </button>
+        <button class="export-item" onclick="downloadSVG()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download SVG
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+  <div class="diagram-title">
+    <h1>Archify 工作流程</h1>
+    <p>从自然语言描述到可交互 HTML 技术图的完整路径 · v2.8.0 · MIT</p>
+  </div>
+
+  <!-- Lane 1: Input -->
+  <div class="lanes-container">
+    <div class="lane">
+      <div class="lane-header">① 输入来源</div>
+
+      <div class="node frontend">
+        <div class="node-icon">💬</div>
+        <div class="node-name">自然语言描述</div>
+        <div class="node-sub">用英文或中文描述你的系统、流程或状态机</div>
+        <span class="node-tag">Text Prompt</span>
+      </div>
+
+      <div class="node frontend">
+        <div class="node-icon">📝</div>
+        <div class="node-name">架构描述列表</div>
+        <div class="node-sub">React + Node.js + PostgreSQL + Redis + JWT 鉴权</div>
+        <span class="node-tag">Component List</span>
+      </div>
+
+      <div class="node external">
+        <div class="node-icon">🔍</div>
+        <div class="node-name">代码库分析</div>
+        <div class="node-sub">让 Claude 先分析代码库，再生成架构图</div>
+        <span class="node-tag">Codebase Scan</span>
+      </div>
+    </div>
+
+    <!-- Lane 2: Processing -->
+    <div class="lane">
+      <div class="lane-header">② AI Agent 处理</div>
+
+      <div class="node backend">
+        <div class="node-icon">🤖</div>
+        <div class="node-name">SKILL.md 指令</div>
+        <div class="node-sub">archify skill 指导 Claude 的布局、颜色和样式决策</div>
+        <span class="node-tag">Skill Prompt</span>
+      </div>
+
+      <div class="node backend">
+        <div class="node-icon">📐</div>
+        <div class="node-name">渲染器 + Schema 校验</div>
+        <div class="node-sub">workflow / sequence / dataflow / lifecycle 各有类型化渲染器，ajv 校验</div>
+        <span class="node-tag">Typed Renderer</span>
+      </div>
+
+      <div class="node security">
+        <div class="node-icon">✅</div>
+        <div class="node-name">Post-render 检查</div>
+        <div class="node-sub">check-render-output.mjs：验证 SVG 完整、箭头合法、无交叉线</div>
+        <span class="node-tag">Quality Gate</span>
+      </div>
+    </div>
+
+    <!-- Lane 3: Output -->
+    <div class="lane">
+      <div class="lane-header">③ 输出产物</div>
+
+      <div class="node db">
+        <div class="node-icon">📄</div>
+        <div class="node-name">自包含 HTML 文件</div>
+        <div class="node-sub">单文件，零依赖，内嵌 SVG + ~19KB JS，浏览器直接打开</div>
+        <span class="node-tag">output.html</span>
+      </div>
+
+      <div class="node cloud">
+        <div class="node-icon">🎨</div>
+        <div class="node-name">深 / 浅主题切换</div>
+        <div class="node-sub">CSS 变量系统，T 键切换，localStorage 持久化，prefers-color-scheme 默认</div>
+        <span class="node-tag">Theme Toggle</span>
+      </div>
+
+      <div class="node cloud">
+        <div class="node-icon">📤</div>
+        <div class="node-name">4× 高清导出</div>
+        <div class="node-sub">PNG / JPEG / WebP 原生 4× 分辨率，SVG 双主题自包含，一键复制剪贴板</div>
+        <span class="node-tag">Export Menu</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Output types -->
+  <div class="output-section">
+    <h2>5 种图类型</h2>
+    <div class="output-types">
+      <div class="output-type">
+        <div class="ot-icon">🏗️</div>
+        <div class="ot-name" style="color:var(--c-backend)">Architecture</div>
+        <div class="ot-desc">系统组件、云资源、数据库、缓存、服务边界、安全组</div>
+      </div>
+      <div class="output-type">
+        <div class="ot-icon">⚙️</div>
+        <div class="ot-name" style="color:var(--c-cloud)">Workflow</div>
+        <div class="ot-desc">CI/CD、审批链、runbook、Agent 工具调用、事件响应</div>
+      </div>
+      <div class="output-type">
+        <div class="ot-icon">🔄</div>
+        <div class="ot-name" style="color:var(--c-frontend)">Sequence</div>
+        <div class="ot-desc">API 调用链、JWT 鉴权、缓存回源、异步 trace</div>
+      </div>
+      <div class="output-type">
+        <div class="ot-icon">📊</div>
+        <div class="ot-name" style="color:var(--c-db)">Data Flow</div>
+        <div class="ot-desc">ETL/ELT、数据管线、PII 边界、数仓血缘、下游消费</div>
+      </div>
+      <div class="output-type">
+        <div class="ot-icon">🔀</div>
+        <div class="ot-name" style="color:var(--c-security)">Lifecycle</div>
+        <div class="ot-desc">状态机、任务 / 订单 / 部署生命周期、重试、终态</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <span class="legend-title">颜色语义：</span>
+    <span class="legend-item" style="background:var(--c-frontend-bg);border:1px solid var(--c-frontend-border)">
+      <span class="legend-dot" style="background:var(--c-frontend)"></span>Frontend
+    </span>
+    <span class="legend-item" style="background:var(--c-backend-bg);border:1px solid var(--c-backend-border)">
+      <span class="legend-dot" style="background:var(--c-backend)"></span>Backend
+    </span>
+    <span class="legend-item" style="background:var(--c-db-bg);border:1px solid var(--c-db-border)">
+      <span class="legend-dot" style="background:var(--c-db)"></span>Database / ML
+    </span>
+    <span class="legend-item" style="background:var(--c-cloud-bg);border:1px solid var(--c-cloud-border)">
+      <span class="legend-dot" style="background:var(--c-cloud)"></span>Cloud / Output
+    </span>
+    <span class="legend-item" style="background:var(--c-security-bg);border:1px solid var(--c-security-border)">
+      <span class="legend-dot" style="background:var(--c-security)"></span>Security / QA
+    </span>
+    <span class="legend-item" style="background:var(--c-external-bg);border:1px solid var(--c-external-border)">
+      <span class="legend-dot" style="background:var(--c-external)"></span>External
+    </span>
+  </div>
+</main>
+
+<div class="footer">
+  Generated with <a href="https://github.com/tt-a1i/archify" target="_blank">Archify v2.8.0</a> ·
+  按 <kbd style="background:var(--bg-card);border:1px solid var(--border);padding:1px 5px;border-radius:3px;font-size:9px">T</kbd> 切主题 ·
+  按 <kbd style="background:var(--bg-card);border:1px solid var(--border);padding:1px 5px;border-radius:3px;font-size:9px">E</kbd> 导出
+</div>
+
+<script>
+// Theme toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('archify-theme', next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
+}
+
+// Init theme from localStorage or system
+(function() {
+  const saved = localStorage.getItem('archify-theme');
+  const sys = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  const t = saved || sys;
+  document.documentElement.setAttribute('data-theme', t);
+  document.getElementById('themeBtn').textContent = t === 'dark' ? '☀️ Light' : '🌙 Dark';
+})();
+
+// Export menu
+function toggleExport() {
+  const m = document.getElementById('exportMenu');
+  m.classList.toggle('open');
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.export-wrap')) {
+    document.getElementById('exportMenu').classList.remove('open');
+  }
+});
+
+// Keyboard
+document.addEventListener('keydown', e => {
+  if (e.key === 't' || e.key === 'T') toggleTheme();
+  if (e.key === 'e' || e.key === 'E') toggleExport();
+  if (e.key === 'Escape') document.getElementById('exportMenu').classList.remove('open');
+});
+
+// Rasterize main to canvas
+function rasterize(scale, type, bg) {
+  return new Promise((resolve, reject) => {
+    const el = document.getElementById('main');
+    const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    const bb = el.getBoundingClientRect();
+    const w = bb.width, h = el.scrollHeight;
+    svgEl.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    svgEl.setAttribute('width', w * scale);
+    svgEl.setAttribute('height', h * scale);
+    svgEl.setAttribute('viewBox', `0 0 ${w} ${h}`);
+
+    const fo = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject');
+    fo.setAttribute('width', w);
+    fo.setAttribute('height', h);
+    const clone = el.cloneNode(true);
+    clone.style.transform = 'none';
+    clone.style.position = 'static';
+    clone.style.width = w + 'px';
+    fo.appendChild(clone);
+    svgEl.appendChild(fo);
+
+    // inline styles
+    const styles = Array.from(document.styleSheets).map(s => {
+      try { return Array.from(s.cssRules).map(r => r.cssText).join('\n'); } catch(e) { return ''; }
+    }).join('\n');
+    const styleEl = document.createElementNS('http://www.w3.org/2000/svg', 'style');
+    styleEl.textContent = styles;
+    svgEl.insertBefore(styleEl, svgEl.firstChild);
+
+    const blob = new Blob([svgEl.outerHTML], {type: 'image/svg+xml'});
+    const url = URL.createObjectURL(blob);
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = w * scale;
+      canvas.height = h * scale;
+      const ctx = canvas.getContext('2d');
+      if (bg) { ctx.fillStyle = bg; ctx.fillRect(0, 0, canvas.width, canvas.height); }
+      ctx.drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+      resolve(canvas);
+    };
+    img.onerror = reject;
+    img.src = url;
+  });
+}
+
+async function copyPNG() {
+  try {
+    const canvas = await rasterize(2, 'png', null);
+    canvas.toBlob(blob => {
+      navigator.clipboard.write([new ClipboardItem({'image/png': blob})]);
+    });
+    document.getElementById('exportMenu').classList.remove('open');
+  } catch(e) { alert('复制失败: ' + e.message); }
+}
+
+async function downloadImg(type) {
+  const mime = type === 'jpeg' ? 'image/jpeg' : 'image/png';
+  const bg = type === 'jpeg' ? (document.documentElement.getAttribute('data-theme') === 'dark' ? '#0a0e1a' : '#f8fafc') : null;
+  try {
+    const canvas = await rasterize(2, type, bg);
+    canvas.toBlob(blob => {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `archify-workflow.${type}`;
+      a.click();
+    }, mime, 0.92);
+    document.getElementById('exportMenu').classList.remove('open');
+  } catch(e) { alert('导出失败: ' + e.message); }
+}
+
+function downloadSVG() {
+  const styles = Array.from(document.styleSheets).map(s => {
+    try { return Array.from(s.cssRules).map(r => r.cssText).join('\n'); } catch(e){ return ''; }
+  }).join('\n');
+  const el = document.getElementById('main');
+  const w = el.scrollWidth, h = el.scrollHeight;
+  const svgStr = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+  <style>${styles}
+  @media(prefers-color-scheme:light){:root{--bg:#f8fafc;--bg-card:#ffffff;--text:#0f172a}}
+  </style>
+  <foreignObject width="${w}" height="${h}">${el.innerHTML}</foreignObject>
+</svg>`;
+  const a = document.createElement('a');
+  a.href = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgStr);
+  a.download = 'archify-workflow.svg';
+  a.click();
+  document.getElementById('exportMenu').classList.remove('open');
+}
+</script>
+</body>
+</html>
