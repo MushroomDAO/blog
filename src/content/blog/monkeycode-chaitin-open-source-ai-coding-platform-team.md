@@ -2,6 +2,7 @@
 title: "MonkeyCode：长亭科技开源企业级 AI 编码平台，浏览器直开、云端跑、团队共用"
 titleEn: "MonkeyCode: Chaitin's Open-Source Enterprise AI Coding Platform — Browser-Based, Cloud-Native, Team-Ready"
 description: "长亭科技（chaitin）开源 MonkeyCode：企业级 AI 编码平台，浏览器直用无需安装客户端，云端开发环境托管，支持 GLM/Kimi/Qwen/DeepSeek 等国内模型，内置需求管理、自动 PR 评审、iOS/Android 移动端，AGPL-3.0 开源可私有化部署，在线直接用 monkeycode-ai.net。"
+descriptionEn: "Chaitin open-sources MonkeyCode: an enterprise AI coding platform that runs directly in the browser with no client install, cloud-hosted dev environments, native support for GLM/Kimi/Qwen/DeepSeek, built-in requirement management, auto PR review, iOS/Android mobile apps, AGPL-3.0 with self-hostable deployment. Try it at monkeycode-ai.net."
 pubDate: "2026-07-22"
 updatedDate: "2026-07-22"
 category: "Tech-Experiment"
@@ -175,5 +176,176 @@ MonkeyCode 不是个人 AI 编码工具的竞品，而是**团队 AI 开发协�
 - **企业咨询**：[baizhi.cloud/consult](https://baizhi.cloud/consult)
 - **Discord**：discord.gg/2pPmuyr4pP
 - **官方插件**：[chaitin/MonkeyCodeOfficialPlugins](https://github.com/chaitin/MonkeyCodeOfficialPlugins)
+
+© 2026 Author: Mycelium Protocol
+
+<!--EN-->
+
+> **GitHub**: [chaitin/MonkeyCode](https://github.com/chaitin/MonkeyCode) · **License**: AGPL-3.0  
+> **Online**: [monkeycode-ai.net](https://monkeycode-ai.net/)  
+> **Creator**: Chaitin — a leading Chinese cybersecurity company  
+> **Docs**: [monkeycode.docs.baizhi.cloud](https://monkeycode.docs.baizhi.cloud/)
+
+---
+
+## One-line positioning
+
+MonkeyCode is an AI coding platform for engineering teams, not a personal vibe coding tool.
+
+Its core premise is: **AI-assisted development is not just "one engineer + one AI assistant," but "one team + a shared AI development workflow."** That is why it has requirement management, centralized task dispatch, team-shared development environments, and automatic PR review — none of which personal tools provide.
+
+---
+
+## Core feature breakdown
+
+### 1. Browser-native, zero local environment
+
+Open a browser, create an account, and start AI development tasks immediately. No need to:
+- Download an IDE plugin
+- Configure a local Python/Node environment
+- Deal with API keys and dependency conflicts
+
+The development environment runs entirely on the server side — compilation, testing, and preview are all done in the cloud; your machine is just a browser.
+
+### 2. Cloud development environment
+
+Each task is backed by a real server-side environment (recommended spec: 8 cores / 16 GB / 100 GB) with a full shell and toolchain. The AI does not merely generate code — it **runs, debugs, and validates** code inside a real environment.
+
+This solves a common problem with AI coding tools: the AI produces code, but will it actually run? MonkeyCode's Agent verifies this in the cloud environment itself.
+
+### 3. Multi-model support, domestic models first
+
+Built-in support for: GLM, Kimi, MiniMax, Qwen, DeepSeek, and other mainstream models.
+
+Switchable by task type:
+- Code generation: DeepSeek Coder or Qwen Coder
+- Requirement analysis: GLM or Kimi
+- Documentation writing: any model
+
+For domestic enterprises, this is the critical differentiator — most Western AI coding tools default to OpenAI/Anthropic only, and integrating domestic models requires significant extra effort.
+
+### 4. Requirement management + SPEC management
+
+This is MonkeyCode's most distinctive feature and the core reason it is "more than just an AI editor."
+
+Traditional workflow: PM writes requirement doc → developer reads it → developer tells the AI → AI generates code.
+
+MonkeyCode workflow: requirements are managed directly on the platform → AI reads requirements directly → generates code linked to requirements → verifies coverage.
+
+The gap between requirements and code shifts from "manual translation" to "platform-direct connection."
+
+### 5. Automated PR / MR code review
+
+After a PR is submitted, MonkeyCode automatically triggers AI review:
+- Checks whether linked requirements are satisfied
+- Detects potential bugs and security issues
+- Checks code style and consistency
+- Generates review comments posted to the PR
+
+This is something Cursor / Claude Code cannot currently do — they are personal tools without a team CI/CD integration layer.
+
+### 6. iOS / Android mobile apps
+
+Native mobile app support with data sync between PC and phone.
+
+Practical use: check AI task progress on your phone, approve a code proposal, let the Agent keep running during your commute — no need to open a laptop.
+
+---
+
+## Comparison with mainstream tools
+
+| Dimension | MonkeyCode | Cursor | Claude Code | Codex |
+|---|---|---|---|---|
+| Online use | ✅ | ✅ | ✅ | ✅ |
+| Local IDE | ❌ | ✅ | ✅ | ✅ |
+| Local CLI | ❌ | ✅ | ✅ | ✅ |
+| Requirement / SPEC management | ✅ | ❌ | ❌ | ❌ |
+| Cloud development environment | ✅ | Partial | Partial | Partial |
+| Code completion | ❌ | ✅ | ❌ | ❌ |
+| Automated PR review | ✅ | Partial | Partial | Partial |
+| Team collaboration | ✅ | ❌ | ❌ | ❌ |
+| Domestic model support | ✅ | ❌ | ❌ | ❌ |
+| Self-hosted deployment | ✅ | ❌ | ❌ | ❌ |
+| Open source | ✅ | ❌ | ❌ | ❌ |
+
+MonkeyCode's core differentiators: **team collaboration + requirement management + cloud environment + domestic models + self-hosted deployment**.
+
+---
+
+## How to use
+
+### Online version (fastest)
+
+Visit directly: [monkeycode-ai.net](https://monkeycode-ai.net/)
+
+Register → create a project → start AI development tasks. No credit card required; free tier available.
+
+### Self-hosted deployment (enterprise / personal)
+
+Minimum specs:
+- Console: 2 cores / 4 GB / 40 GB
+- Development environment host: 8 cores / 16 GB / 100 GB
+
+```bash
+# One-line online installation
+bash -c "$(curl -fsSL 'https://monkeycode-ai.com/online/install')"
+```
+
+After installation, configure model API keys as prompted (supports all major domestic model APIs), then the entire team can share this internal instance.
+
+Full deployment docs: [monkeycode.docs.baizhi.cloud](https://monkeycode.docs.baizhi.cloud/)
+
+---
+
+## Typical use cases
+
+**Scenario 1: Small team (3–8 people) efficiency boost**
+
+The team has no dedicated AI tool budget, and each person uses their own ChatGPT/Claude account with inconsistent results. Deploy a MonkeyCode internal instance, unify model configuration, keep AI tasks logged and traceable, and initiate new requirements directly on the platform.
+
+**Scenario 2: Requirements → code full pipeline**
+
+PMs write requirements in MonkeyCode, developers assign requirement IDs directly to the AI for implementation, and automated PR review checks whether requirement coverage is met — the entire chain stays within the platform.
+
+**Scenario 3: Teams with data privacy requirements**
+
+Code cannot be uploaded to third-party AI services. Deploy MonkeyCode privately with a private model (local Qwen/DeepSeek) so that all AI-assisted development runs entirely within the internal network.
+
+**Scenario 4: Mobile + cloud Agent combination**
+
+Submit requirements from your phone, let the Agent run tasks in the cloud, receive a push notification when done, and approve the code proposal from your phone.
+
+---
+
+## Technology stack
+
+From the repository structure:
+- **Frontend**: Electron (desktop client) + web frontend
+- **Backend**: multi-service architecture (CI build confirms independent services)
+- **Development environment**: server-side containerized management
+- **License**: AGPL-3.0 (modifications deployed as a service must open-source the code; contact Baizhi Cloud for commercial support)
+
+---
+
+## Core assessment
+
+MonkeyCode is not a competitor to personal AI coding tools — it is an open-source entrant in the **team AI development collaboration platform** niche.
+
+Its core bet is: the value of AI coding lies not in any individual engineer's productivity, but in **workflow integration at the team level** — connecting requirement management, cloud execution, code review, and mobile access into a single chain. Only then does AI truly transform the engineering process, rather than just substituting a smarter IDE autocomplete.
+
+Chaitin's background in cybersecurity gives it a natural product instinct for enterprise-grade private deployment and data isolation — exactly the core concern for many domestic teams when purchasing AI tools.
+
+Open source (AGPL-3.0) + self-hosted deployment + domestic model support: these three elements combined place MonkeyCode in a position that other AI coding tools will find very difficult to compete with.
+
+---
+
+## Reference resources
+
+- **GitHub**: [chaitin/MonkeyCode](https://github.com/chaitin/MonkeyCode)
+- **Online demo**: [monkeycode-ai.net](https://monkeycode-ai.net/)
+- **Deployment docs**: [monkeycode.docs.baizhi.cloud](https://monkeycode.docs.baizhi.cloud/)
+- **Enterprise consultation**: [baizhi.cloud/consult](https://baizhi.cloud/consult)
+- **Discord**: discord.gg/2pPmuyr4pP
+- **Official plugins**: [chaitin/MonkeyCodeOfficialPlugins](https://github.com/chaitin/MonkeyCodeOfficialPlugins)
 
 © 2026 Author: Mycelium Protocol

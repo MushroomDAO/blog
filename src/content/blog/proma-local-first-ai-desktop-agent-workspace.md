@@ -2,6 +2,7 @@
 title: "Proma：把 Chat、Agent、Skills、MCP 和微信桥接做进一个本地优先桌面应用"
 titleEn: "Proma: Chat, Agent, Skills, MCP, and WeChat Bridge in One Local-First Desktop App"
 description: "ErlichLiu 开源的 Proma 是一个本地优先 AI 桌面工作台：Claude Agent SDK + Pi Agent SDK 双运行时，每个工作区独立配置 Skills 和 MCP，飞书/微信/钉钉桥接让手机触发本机 Agent，AGPL-3.0 开源，1615 Stars。"
+descriptionEn: "ErlichLiu's Proma is a local-first AI desktop workspace: dual Claude Agent SDK + Pi Agent SDK runtimes, per-workspace Skills and MCP configuration, and Feishu/WeChat/DingTalk bridges that let your phone trigger on-device agents. AGPL-3.0, 1615 stars."
 pubDate: "2026-07-22"
 updatedDate: "2026-07-22"
 category: "Tech-Experiment"
@@ -230,5 +231,231 @@ Proma 解决的是一个真实存在的场景空白：你想在本地用 Claude/
 - **作者博客**：[erlich.fun](https://erlich.fun)
 - **商业版**：[proma.cool](https://proma.cool)
 - **Pi Agent SDK**：earendil-works/pi-coding-agent
+
+© 2026 Author: Mycelium Protocol
+
+<!--EN-->
+
+> **GitHub**: [ErlichLiu/Proma](https://github.com/ErlichLiu/Proma) · **Stars**: 1,615  
+> **Author**: ErlichLiu ([erlich.fun](https://erlich.fun))  
+> **Commercial**: [proma.cool](https://proma.cool/download)  
+> **License**: AGPL-3.0 · **Runtime**: Bun + Electron 39
+
+---
+
+## One-Line Positioning
+
+Proma is not yet another ChatGPT wrapper. Its starting point is: **an Agent workspace for long-term accumulation of personal workflows**.
+
+Simple questions go to Chat (fast, multi-model comparison, no overhead); complex tasks go to Agent (workspace isolation, Skills support, MCP extensions, persistent results). Data lives in `~/.proma/` by default — JSON files, backed up any time, with no dependency on any cloud service.
+
+One detail stands out: it has a `wechat-bridge.ts` — you can trigger on-device Agent workflows from your phone via WeChat. This closely mirrors the thinking behind [Heinu1](https://github.com/jhfnetboy/Heinu1), but realized as a full desktop GUI.
+
+---
+
+## Two Agent Runtimes, Switch on Demand
+
+Proma offers two kernel choices beneath the same Agent input box:
+
+### Claude Agent Runtime (Default)
+
+Based on `@anthropic-ai/claude-agent-sdk@0.3.201`, routed through the Anthropic Messages API. Supports the official Anthropic endpoint as well as Anthropic-protocol-compatible endpoints: DeepSeek, Kimi API, Kimi Coding Plan, Zhipu Coding Plan, MiniMax, Xiaomi MiMo, and more.
+
+> **Kimi Coding Plan users**: Proma is on Kimi's official whitelist, so connecting via Kimi Coding Plan will not trigger a third-party client ban.
+
+### Pi Agent Runtime (Experimental)
+
+Based on `@earendil-works/pi-coding-agent@0.80.3`, dynamically registering the channels already configured in Proma as Pi providers. Its protocol coverage is broader than the Claude Runtime:
+
+| Channel Type | Chat | Claude Agent | Pi Agent |
+|---|---|---|---|
+| Anthropic / compatible (DeepSeek, Kimi, Zhipu Coding, etc.) | ✅ | ✅ | ✅ |
+| OpenAI, OpenAI Responses, Google, Doubao, Qwen | ✅ | ✗ | ✅ |
+| OpenAI-compatible custom endpoints | ✅ | ✗ | ✅ |
+| ChatGPT subscription (Codex OAuth) | — | ✅ | ✅ |
+
+**Practical implication**: if you want to run Agent tasks with Qwen, Gemini, or GPT-4o, just switch to Pi Runtime — no need to wait for an Anthropic-compatible layer.
+
+---
+
+## Chat vs Agent: Clear Mode Separation
+
+Many AI clients blur the line between chat and agent. Proma's design keeps them distinct:
+
+**Chat is for**: everyday Q&A, translation and polishing, attachment summarization, multi-model comparison output, one-off conversations.
+
+**Agent is for**: modifying/creating/organizing local files, multi-step research reports, tasks that require MCP/Shell/Git context, work that needs permission confirmations or background follow-up.
+
+The rule is straightforward: **use Chat when you only need an answer; use Agent when you need action and a deliverable result.**
+
+Chat mode supports: attachment parsing, image input, Markdown / Mermaid / KaTeX / code highlighting, side-by-side conversations (multiple models answering simultaneously), system prompts, and manual context-length management.
+
+Agent mode supports: workspace file isolation, Skills augmentation, on-demand MCP Server enabling, long-task streaming output, Plan Mode for confirmation, and subtask decomposition with trackable collaborative Agents / Tasks.
+
+---
+
+## Skills & MCP: Workspace-Level Capability Accumulation
+
+This is the design in Proma most worth singling out: **each workspace can independently configure its own Skills and MCP Servers**.
+
+**Skills**: structured instruction files in `SKILL.md` format that accumulate reusable workflows. The README example is `feedback-synthesis` — aggregating user feedback, interview notes, and issues into themes, evidence, and prioritization suggestions. You can configure dedicated Skills per project instead of pasting the same prompt every time.
+
+**MCP Server**: supports stdio / HTTP MCP Servers, enabled or disabled on demand. Different workspaces bind to different MCP toolsets — a code repository uses a code-analysis MCP, a writing workspace uses a search MCP, without cross-contamination between contexts.
+
+Workspace data structure:
+
+```
+~/.proma/agent-workspaces/{workspace-slug}/
+├── workspace-files/   ← workspace-specific files
+├── mcp.json           ← MCP config for this workspace
+└── skills/            ← Skills for this workspace
+```
+
+---
+
+## Remote Bot: Trigger On-Device Agent from Your Phone
+
+This feature is especially practical for indie developers. Proma supports three bridge types:
+
+- **Feishu / Lark bot**: send a message in a Feishu group chat or DM to trigger on-device Agent workflows; results reply back to Feishu.
+- **DingTalk bot**: same pattern, connected to DingTalk groups.
+- **WeChat bridge**: `wechat-bridge.ts` is already implemented, letting WeChat-side messages trigger on-device Agents.
+
+The core code lives in three files under `apps/electron/src/main/lib/`: `feishu-bridge.ts`, `dingtalk-bridge.ts`, `wechat-bridge.ts`.
+
+This means: you can send a WeChat message from your phone while out and about, have your Mac at home run a multi-step Agent task, and receive the results when it's done — without opening your laptop. This is exactly what Heinu1 does, but Proma delivers it inside a full desktop application.
+
+---
+
+## Local-First Data Design
+
+```
+~/.proma/
+├── channels.json           ← API Keys encrypted with Electron safeStorage
+├── conversations.json      ← Chat session index
+├── conversations/{id}.jsonl← Conversation content (JSONL append log)
+├── agent-sessions.json     ← Agent session index
+├── agent-sessions/{id}.jsonl
+├── agent-workspaces/       ← Workspace data
+│   └── {workspace-slug}/
+│       ├── workspace-files/
+│       ├── mcp.json
+│       └── skills/
+├── attachments/
+├── user-profile.json
+├── settings.json
+└── sdk-config/
+```
+
+**No local database** — all content is JSON config files and JSONL append logs. Benefits: inspect with `cat` any time, version-control with git, migrate to a new machine by copying the directory.
+
+API Keys are the only encrypted field (Electron `safeStorage`); all other data is stored in plaintext.
+
+---
+
+## Voice Input
+
+Proma includes Doubao streaming speech recognition built-in:
+
+- `Ctrl + `` triggers recognition
+- Press again to stop; input is automatically placed in Proma's current input field
+- When used outside Proma: recognition result is typed at the current cursor position, or written to the clipboard if there is no cursor
+
+This enables keyboard-free operation in some scenarios — speak the task, Agent executes, speak the feedback, continue moving forward.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Runtime | Bun (monorepo toolchain) |
+| Desktop framework | Electron 39 |
+| Frontend | React 18 + TypeScript + Jotai |
+| Styling | Tailwind CSS + Radix UI |
+| Rich-text input | TipTap |
+| Markdown / Charts / Formulas | React Markdown + Beautiful Mermaid + KaTeX |
+| Code highlighting | Shiki |
+| Build | Vite + esbuild |
+| Distribution | electron-builder |
+| Agent Runtime | Claude SDK 0.3.201 + Pi 0.80.3 |
+
+The repository is structured as a Bun workspace monorepo: `packages/shared` (shared types + IPC constants), `packages/core` (Provider Adapter + SSE + code highlighting), `packages/ui` (shared React components), `apps/electron` (Electron main application).
+
+```bash
+# Development
+bun install
+bun run dev       # Vite + Electron + hot reload
+
+# Build
+bun run electron:build
+
+# Type check
+bun run typecheck
+```
+
+---
+
+## Architecture Core: Agent Orchestrator
+
+The Agent scheduling entry point is `agent-orchestrator.ts`: receives tasks, selects the runtime (Claude or Pi), sets workspace environment variables, invokes the corresponding SDK, and manages the event stream and errors.
+
+Two adapters:
+- `adapters/claude-agent-adapter.ts`: Claude SDK wrapper, including workspace file injection, Skills loading, MCP startup
+- `adapters/pi-agent-adapter.ts`: Pi SDK wrapper, dynamically registering enabled channels as providers
+- `adapters/runtime-routing-agent-adapter.ts`: routes to the appropriate adapter based on the session's kernel
+
+The renderer-process Agent IPC listener is **mounted globally at the application's top level** — this is an important engineering decision: it prevents losing streaming events, permission requests, or background task state when navigating between pages.
+
+---
+
+## Open-Source vs Commercial
+
+| | **Open-Source (AGPL-3.0)** | **Commercial (proma.cool)** |
+|---|---|---|
+| Download | GitHub Releases | proma.cool/download |
+| Model channels | Bring your own API Key | Built-in channels + subscription plans |
+| Features | Full | Full + built-in channels |
+| Restrictions | Modifications distributed or served as SaaS must open-source the code | Commercial license exempts from AGPL |
+
+The open-source edition is feature-complete and suited for users who supply their own API Keys. The commercial edition's main difference is that channel configuration is handled for you.
+
+AGPL-3.0 means: if you modify Proma and offer it as a SaaS service, you must release the full modified source code — including the network interaction layer. Integrating into a closed-source product requires a separate commercial license.
+
+---
+
+## Comparison with Similar Tools
+
+| | **Proma** | **Cherry Studio** | **Open WebUI** | **Cursor** |
+|---|---|---|---|---|
+| Positioning | Agent workspace + multi-protocol | Multi-model Chat client | Local model UI | AI code editor |
+| Agent runtime | Claude SDK + Pi SDK | ✗ | Basic | Built-in |
+| Skills & MCP | ✅ Workspace-level | ✗ | Basic | Plugin |
+| Remote bot | ✅ WeChat/Feishu/DingTalk | ✗ | ✗ | ✗ |
+| Local data | ✅ Full JSON/JSONL | Partial | Partial | Partial |
+| Voice input | ✅ Doubao streaming | ✗ | Partial | ✗ |
+| Open-source license | AGPL-3.0 | Apache-2.0 | Apache-2.0 | Closed-source |
+
+Proma's most distinctive combination is: **full Agent runtime + workspace Skills + remote bot bridges**. Taken together, these three have no direct competitor among open-source desktop AI clients at present.
+
+---
+
+## Core Assessment
+
+Proma addresses a real gap: you want to do genuine Agent work locally with Claude/Pi (not just chat), but you don't want to open a terminal, configure the SDK, and manage workspaces by hand every time.
+
+1,615 Stars, open-sourced for 6 months. Two Agent runtimes + workspace Skills + WeChat/Feishu bridges — this feature combination is genuinely rare among desktop AI clients.
+
+If you're currently using a setup like Heinu1 for "phone-triggered Claude work," Proma's wechat-bridge + Agent Workspace is worth studying — especially the designs of workspace-level Skills and per-workspace MCP enable/disable. These are architectural ideas you can borrow directly.
+
+---
+
+## References
+
+- **GitHub**: [ErlichLiu/Proma](https://github.com/ErlichLiu/Proma)
+- **Beginner tutorial**: [tutorial/tutorial.md](https://github.com/ErlichLiu/Proma/blob/main/tutorial/tutorial.md)
+- **Author's blog**: [erlich.fun](https://erlich.fun)
+- **Commercial edition**: [proma.cool](https://proma.cool)
+- **Pi Agent SDK**: earendil-works/pi-coding-agent
 
 © 2026 Author: Mycelium Protocol

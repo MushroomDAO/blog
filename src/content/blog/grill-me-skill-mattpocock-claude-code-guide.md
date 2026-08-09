@@ -2,6 +2,7 @@
 title: "grill-me：181k Star 的 Claude Code Skill，用一个问题消灭 AI 编码最常见的失败模式"
 titleEn: "grill-me: The 181k-Star Claude Code Skill That Eliminates the Most Common AI Coding Failure Mode One Question at a Time"
 description: "Matt Pocock 的 grill-me skill 在 GitHub 拿下 18.1 万 Star，单独安装量超 62 万次。它解决的问题只有一个：你以为 AI 理解了你想要什么，但它没有。本文拆解 grill-me 的工作机制、grill-with-docs 的进阶用法、以及 chaseai 扩展的跨模型对抗评审。"
+descriptionEn: "Matt Pocock's grill-me skill hit 181k stars on GitHub with over 620k standalone installs. It solves exactly one problem: you think the AI understood what you wanted — it didn't. This post breaks down how grill-me works, the grill-with-docs advanced pattern, and the chaseai cross-model adversarial review extension."
 pubDate: "2026-07-22"
 updatedDate: "2026-07-22"
 category: "Tech-Experiment"
@@ -231,5 +232,232 @@ grill-me 的做法是翻转这个流程：不是让你提前想清楚所有细�
 - **chaseai-yt/grill-me-codex**：[GitHub](https://github.com/chaseai-yt/grill-me-codex)（788★）
 - **Matt Pocock Newsletter**：[aihero.dev/s/skills-newsletter](https://www.aihero.dev/s/skills-newsletter)（60k 订阅者）
 - **Chase AI Community**：[skool.com/chase-ai](https://www.skool.com/chase-ai/about)
+
+© 2026 Author: Mycelium Protocol
+
+<!--EN-->
+
+> **Repository**: mattpocock/skills · **⭐ 181,414** · **15,492 forks** · MIT  
+> **Installs**: 10.5M (full suite) · `grill-me` standalone **624,700 times**  
+> **Installation**: `npx skills@latest add mattpocock/skills` or Claude Code plugin  
+> **Author**: Matt Pocock — Founder of Total TypeScript, technical Newsletter with 60k+ subscribers
+
+---
+
+## 1. Why You Need grill-me
+
+Matt Pocock quotes a line from *The Pragmatic Programmer* in the repository README:
+
+> "No-one knows exactly what they want."
+
+This is the most common failure mode in AI-assisted coding — you think you've explained it clearly, the AI starts writing code, and when it's done you look at it: it's completely not what you wanted.
+
+It's not the AI's fault. There's an **alignment gap** between you: you have an entire decision tree in your head, but you only told the AI the root node, and the AI is guessing at the remaining branches. Getting it right is luck; getting it wrong means starting over.
+
+**grill-me does exactly one thing: before you start, it walks the entire decision tree.**
+
+Not by making you write a longer prompt, but by having the AI use questions to surface everything you haven't thought through — one question at a time, waiting for your answer before asking the next, until every branch has a definitive answer.
+
+---
+
+## 2. By the Numbers: How Popular Is This Skill
+
+| Metric | Data |
+|---|---|
+| GitHub Stars | **181,414** |
+| GitHub Forks | 15,492 |
+| skills.sh full suite installs | 10.5M |
+| `grill-me` standalone installs | **624,700** |
+| `grill-with-docs` installs | 529,500 |
+| Skills in the repository | 55 |
+| chaseai extension (grill-me-codex) | 788★ |
+
+`grill-me` is the highest-installed skill in the entire 55-skill suite. Not because it's the most complex — its core SKILL.md is only 5 lines — but because it solves the most fundamental problem.
+
+---
+
+## 3. How grill-me Works
+
+### Core SKILL.md (full content)
+
+```markdown
+Interview me relentlessly about every aspect of this until we 
+reach a shared understanding. Walk down each branch of the 
+decision tree, resolving dependencies between decisions one-by-one. 
+For each question, provide your recommended answer.
+
+Ask the questions one at a time, waiting for feedback on each 
+question before continuing. Asking multiple questions at once 
+is bewildering.
+
+If a *fact* can be found by exploring the environment 
+(filesystem, tools, etc.), look it up rather than asking me. 
+The *decisions*, though, are mine — put each one to me and 
+wait for my answer.
+
+Do not act on it until I confirm we have reached a shared 
+understanding.
+```
+
+Five lines of instructions, backed by several elegant design decisions:
+
+**1. One question at a time**
+
+"Asking multiple questions at once is bewildering." This constraint isn't about courtesy — it's about ensuring each decision point receives complete attention. Ask three questions at once and you'll give three hasty answers, resulting in three undercooked decisions.
+
+**2. The AI looks up facts, but decisions are yours**
+
+"If a *fact* can be found by exploring the environment, look it up rather than asking me." Existing configs in the project, functions already present, the current directory structure — the AI handles all of that itself. Only **decisions** — A or B, this library or that — require asking you. This raises the density of the grilling: every question is a genuine decision point.
+
+**3. Each question comes with a recommended answer**
+
+"For each question, provide your recommended answer." The AI doesn't just ask — it tells you what it would choose. You agree and move on, or you explain why not — which itself is a more effective way to think.
+
+**4. No action until you confirm**
+
+"Do not act on it until I confirm we have reached a shared understanding." This is the most important constraint. The grilling phase is conversation only — no files are modified. Only after the decision tree is walked, and you confirm, does implementation begin.
+
+---
+
+## 4. Installation and Usage
+
+### Method 1: skills.sh installer (editable, customizable)
+
+```bash
+npx skills@latest add mattpocock/skills
+```
+
+Follow the prompts to select which skills to install, then run once inside Claude Code:
+
+```
+/setup-matt-pocock-skills
+```
+
+It will ask you: what issue tracker to use (GitHub / Linear / local file), what label to use for triage, where to save documentation. After answering, the full skill suite is ready.
+
+### Method 2: Claude Code native plugin (no maintenance required, auto-updates)
+
+```bash
+claude plugin marketplace add mattpocock/skills
+claude plugin install mattpocock-skills@mattpocock
+```
+
+The two installation approaches have different philosophies:
+- **skills.sh**: Copies files into your project — you can modify them, fork them, turn them into your own version
+- **Plugin**: A read-only hosted bundle — when Matt Pocock updates, you automatically follow
+
+### Usage
+
+After installation, in any Claude Code session, tell it what you want to do, then:
+
+```
+/grill-me
+```
+
+The AI will start asking you questions. One at a time, waiting for your answer before asking the next, until it believes all critical branches have been covered — then it asks: "Have we reached a shared understanding?" Only after you confirm does it begin.
+
+---
+
+## 5. grill-with-docs: The Stronger Engineering Version
+
+`grill-with-docs` is the engineering-focused variant of `grill-me`, adding two additional steps on top of grilling:
+
+### 1. Establishing a shared project vocabulary (CONTEXT.md)
+
+The AI helps you build a `CONTEXT.md` that records the project's specialized terminology.
+
+Matt gives an example:
+
+- **BEFORE**: "There's a problem when a lesson inside a section of a course is made 'real' (i.e. given a spot in the file system)"
+- **AFTER**: "There's a problem with the materialization cascade"
+
+Compressed from 30 words to 3, with complete precision of meaning. Once this shared vocabulary is established:
+- Variable names, function names, and file names all use this language
+- The codebase becomes easier to navigate
+- The AI thinks using fewer tokens, because it uses more precise language
+
+### 2. Writing ADRs inline (Architecture Decision Records)
+
+For every key architectural decision, grill-with-docs simultaneously writes an ADR document during the grilling process — recording **what it is, why it was chosen, and which alternatives were rejected**. When you come back to the code three months later, you can understand why a decision was made, not just see the result.
+
+```
+/grill-with-docs
+```
+
+Best suited for projects you work on frequently — the vocabulary accumulates and grows more valuable over time.
+
+---
+
+## 6. chaseai Extension: Adding Codex Cross-Model Adversarial Review
+
+`chaseai-yt/grill-me-codex` (788★) adds two Acts on top of Matt Pocock's grill-me:
+
+| | Act 1 | Act 2 | Act 3 (optional) |
+|---|---|---|---|
+| Executor | Claude asks you questions | Codex adversarially reviews the plan | Codex writes code, Claude reviews |
+| Output | Locked plan | PLAN.md + PLAN-REVIEW-LOG.md | Implemented code + diff review |
+
+**Why do you need a second model?**
+
+> "The same model that plans the build and writes the build can't be trusted to grade its own work — it's an echo chamber."
+
+Using the same model to plan, implement, and review its own work is a structural problem — it cannot see its own blind spots. Codex (an OpenAI model) reviews Claude's plan, or Codex implements and Claude reviews the diff, creating genuine cross-validation.
+
+**Act 2 workflow**:
+
+1. Claude writes the locked plan into `PLAN.md`, creates `PLAN-REVIEW-LOG.md`
+2. **Round 1**: Codex reviews the plan in read-only sandbox mode, returning `VERDICT: APPROVED` or `VERDICT: REVISE`
+3. **Rounds 2-N**: Claude revises; the same Codex session is resumed (it remembers previous critiques) and only checks whether earlier issues have been resolved
+4. Maximum 5 rounds (configurable), ending with approval or at the limit
+5. **You participate only twice**: at launch, and at final sign-off
+
+**Act 3 (role reversal)**:
+
+Codex takes `PLAN.md` as a frozen spec, gets full write access (`--yolo`), implements the entire plan and runs tests itself. Claude then reads the complete diff and reviews it like a PR reviewer — Codex's test results are for reference only; what Claude runs independently is what counts.
+
+Installation:
+
+```bash
+cp -r skills/* ~/.claude/skills/
+```
+
+Prerequisites: `npm install -g @openai/codex@latest` and run `codex login`.
+
+---
+
+## 7. Other Skills in the grill-me Suite Worth Installing
+
+Among Matt Pocock's 55 skills, the following address other common AI coding problems:
+
+| Skill | Installs | Problem It Solves |
+|---|---|---|
+| `/improve-codebase-architecture` | 514.9K | Scans the codebase for design issues, produces an HTML report + grilling session |
+| `/tdd` | 494.6K | Red-green-refactor loop — AI writes failing tests first, then fixes them |
+| `/handoff` | 413.7K | Compresses a session into a handoff document so another agent can continue |
+| `/prototype` | 399.3K | Quickly builds a runnable prototype to answer a design question |
+| `/diagnosing-bugs` | 216.2K | Systematic debugging loop: reproduce → minimize → hypothesize → verify → fix |
+| `/code-review` | 151.8K | Two parallel dimensions: code conventions + compliance with spec |
+| `/wayfinder` | 130.3K | Breaks an oversized task (too large for one session) into investigation tickets |
+
+---
+
+## 8. Why "One Question" Rather Than "A Better Prompt"
+
+Many people's instinct is: write a longer, more detailed prompt to reduce AI guessing.
+
+But Matt Pocock's insight is: **you don't know the full details of what you want either**. When you write a prompt, there are many implicit assumptions in your head that you haven't consciously recognized — you only realize they exist when the AI makes a decision that doesn't match your expectation.
+
+grill-me's approach is to invert this flow: instead of making you think through all the details in advance, it uses questions to **surface** those implicit assumptions one by one, forcing you to take a position on each.
+
+This isn't prompt engineering. It's a more fundamental collaboration pattern: align first, then act.
+
+---
+
+## References
+
+- **mattpocock/skills**: [GitHub](https://github.com/mattpocock/skills) · [skills.sh](https://skills.sh/mattpocock/skills)
+- **chaseai-yt/grill-me-codex**: [GitHub](https://github.com/chaseai-yt/grill-me-codex) (788★)
+- **Matt Pocock Newsletter**: [aihero.dev/s/skills-newsletter](https://www.aihero.dev/s/skills-newsletter) (60k subscribers)
+- **Chase AI Community**: [skool.com/chase-ai](https://www.skool.com/chase-ai/about)
 
 © 2026 Author: Mycelium Protocol

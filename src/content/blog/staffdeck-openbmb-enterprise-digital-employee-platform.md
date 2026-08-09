@@ -2,6 +2,7 @@
 title: "StaffDeck：面壁智能 + 清华 THUNLP 开源的企业数字员工平台，状态机 SOP + 多层级知识检索"
 titleEn: "StaffDeck: ModelBest + Tsinghua THUNLP Open-Source Enterprise Digital Employee Platform with State-Machine SOPs"
 description: "面壁智能联合清华THUNLP、OpenBMB 开源 StaffDeck，把员工经验和业务流程沉淀成可运行的数字员工：状态机驱动的 SOP、文档结构感知的知识检索、完整 Trace 闭环改进，桌面安装包 + 源码双通道，633 Stars，开源 6 天。"
+descriptionEn: "ModelBest, Tsinghua THUNLP, and OpenBMB jointly open-source StaffDeck, converting employee expertise and business processes into runnable digital employees: state-machine-driven SOPs, document-structure-aware knowledge retrieval, and full trace-loop improvement. Desktop installer + source code, 633 stars, 6 days since open-source."
 pubDate: "2026-07-21"
 updatedDate: "2026-07-21"
 category: "Tech-Experiment"
@@ -208,5 +209,209 @@ StaffDeck 的赌注是：**企业 AI 最终要解决的是知识资产化和流�
 - **快速开始**：[staffdeck.openbmb.cn/#/docs/introduce](https://staffdeck.openbmb.cn/#/docs/introduce?lang=en)
 - **面壁智能**：[modelbest.cn](https://modelbest.cn/)
 - **清华THUNLP**：[nlp.csai.tsinghua.edu.cn](https://nlp.csai.tsinghua.edu.cn/)
+
+© 2026 Author: Mycelium Protocol
+
+<!--EN-->
+
+> **GitHub**: [OpenBMB/StaffDeck](https://github.com/OpenBMB/StaffDeck) · **Stars**: 633  
+> **Organizations**: ModelBest + NEU-ModelBest Joint Lab + Tsinghua THUNLP + OpenBMB + AI9Stars  
+> **Website**: [staffdeck.openbmb.cn](https://staffdeck.openbmb.cn/)  
+> **License**: GNU AGPL v3.0 · **Open-sourced**: 2026-07-15
+
+---
+
+## Problem Definition: AI Tools vs. Organizational Assets
+
+Most companies deploy AI by giving every employee a ChatGPT account and letting them figure out their own prompts. This carries a hidden risk — expertise never accumulates. Someone develops an effective workflow, leaves the company, and the knowledge disappears with them.
+
+StaffDeck addresses a different problem: **how to convert individual expertise, business processes, and judgment criteria into digital employees that the organization can reuse** — employees that run continuously, take over repetitive work, and evolve over time.
+
+This is not "yet another AI assistant." It is a **factory for creating and managing digital employees**.
+
+---
+
+## Four Core Capabilities
+
+### 1. Digital Employee Lifecycle Management
+
+Each digital employee has a complete "employee profile": job role, employee ID, capability portrait, work records, and permission scope.
+
+Key design choices: **Capability growth** — employees are not static systems configured once; they evolve continuously through conversation logs, user feedback, and memory accumulation. **Permission isolation** — users can copy resources from the Marketplace but cannot modify the originals, protecting templates from contamination. **Publishing and reuse** — validated employees can be published for use by others within the organization.
+
+### 2. State-Machine-Driven SOPs
+
+This is StaffDeck's most technically sophisticated component.
+
+Conventional agent flow control relies on the model's stochasticity — the same input may take different paths on different runs. StaffDeck uses a **state machine** to execute SOPs: process nodes are deterministic, state transition conditions are explicit, and the LLM is never left to guess which path to take.
+
+Input is natural language — you describe a business process and the system generates a structured state machine. The result can be adjusted in a **visual editor**, with version management and branching evolution (the same SOP can have forked versions for different scenarios).
+
+```
+Natural language description → Structured SOP → State machine → Deterministic execution
+                                                       ↓
+                                         Supports real-time switching between multiple flows
+                                         Retains cross-flow context
+                                         Visual editing and version management
+```
+
+What this means: compliance-critical processes (legal, finance, customer escalation paths) finally have **auditable** execution records — no more black boxes.
+
+### 3. Document-Structure-Aware Knowledge Retrieval
+
+The problem with conventional RAG: chunk documents, retrieve the most similar chunks via vector search, return results. This performs poorly when document structure is complex — in a 200-page contract, understanding a specific clause may require context from the definitions section at the beginning, which chunk retrieval cannot capture.
+
+StaffDeck's approach: **multi-level navigational indexing**.
+
+```
+Document layer
+  └── Chapter layer
+        └── Page layer
+              └── Paragraph layer + Summary layer
+```
+
+Retrieval first estimates which layer likely contains the information, then **progressively locates the source text** — rather than directly returning similar chunks, it first finds the approximate location and then pinpoints precisely. This mirrors how humans read: consult the table of contents to estimate location, then turn to the relevant chapter for the answer.
+
+Additional features: **Source attribution** (answers include which document and chapter they came from), **Knowledge buckets** (different digital employees can bind to different knowledge scopes), **Retrieval debugging** (view the retrieval process to diagnose why a correct answer was not found).
+
+### 4. Continuous Operations and Closed-Loop Improvement
+
+The value of a digital employee lies not in the moment of deployment but in **continuous operations**:
+
+**Execution capability**: connect to business systems via HTTP API and MCP; use scheduled tasks to make employees work proactively (no need to wait for someone to ping them).
+
+**Observability**: every conversation has a complete **execution trace** — streaming display of intent analysis, knowledge retrieval, skill invocation, tool execution, review, and reply. This is not a log — it is a readable decision trail.
+
+**Human takeover**: intervene at any time during execution — continue queued requests, cancel the current run, hand off to a human, or approve pending answers.
+
+**Improvement loop**: conversation logs + user feedback + long-term memory → analysis → improved employee capability configuration.
+
+---
+
+## Quick Deployment
+
+### Desktop Installer (Simplest)
+
+| Platform | Architecture | Download |
+|---|---|---|
+| macOS | Apple Silicon (arm64) | `.dmg` |
+| Windows | x64 | `.exe` installer |
+| Linux | x86_64 (Debian/Ubuntu) | `.deb` |
+
+Download from the [official website](https://staffdeck.openbmb.cn/) or GitHub Releases; works out of the box after installation.
+
+### Source Deployment (macOS/Linux/WSL)
+
+```bash
+git clone https://github.com/OpenBMB/StaffDeck.git
+cd StaffDeck
+python3 -m venv backend/.venv
+backend/.venv/bin/python -m pip install -e "backend[dev]"
+npm --prefix frontend-enterprise ci
+cp backend/.env.example backend/.env
+```
+
+Edit `backend/.env`:
+
+```dotenv
+APP_SECRET="replace with a long random string"
+DEMO_MODEL_BASE_URL="https://your-openai-compatible-endpoint/v1"
+DEMO_MODEL_NAME="your-model-name"
+DEMO_MODEL_API_KEY="your-api-key"
+```
+
+Compatible with all OpenAI-format endpoints — can be OpenAI, DeepSeek, Qwen, local Ollama, or even llama.cpp's HTTP server.
+
+```bash
+# Start (single port 5173, frontend and backend combined)
+scripts/dev_up.sh --detach
+
+# Verify
+curl http://127.0.0.1:5173/api/health
+# → {"status":"ok"}
+```
+
+Open [http://127.0.0.1:5173/workspace/gallery](http://127.0.0.1:5173/workspace/gallery); default credentials are `admin`/`admin` — **change the password immediately on first login**.
+
+**Agent-friendly quick deployment prompt** (paste directly into Claude Code/Cursor/Codex):
+
+```
+Read https://raw.githubusercontent.com/OpenBMB/StaffDeck/main/README.md.
+Clone the OpenBMB/StaffDeck repository, prepare Python 3.11+ and Node.js 20,
+create backend/.venv, install dependencies, copy backend/.env.example to
+backend/.env, ask me for the model endpoint and API key, start with
+scripts/dev_up.sh --detach, then verify /api/health.
+```
+
+---
+
+## Six-Step Standard Workflow
+
+```
+1. Create a digital employee  → Define job role / capability boundaries / service style / permission scope
+2. Configure capabilities     → Copy from Marketplace or create new knowledge bases / skills / SOPs / tools
+3. Start a conversation       → Enter from gallery or employee list; session persists after the first message
+4. Observe execution          → Stream the complete execution trace: intent analysis / retrieval / skills / tools / reply
+5. Intervene when needed      → Continue / cancel / hand off to human / handle pending approvals
+6. Continuous operations      → Memory accumulation + feedback analysis + scheduled tasks → employee capabilities evolve continuously
+```
+
+---
+
+## Project Structure
+
+```
+StaffDeck/
+├── backend/               # FastAPI API, agent runtime, storage, task worker
+├── frontend-enterprise/   # React/TypeScript workbench
+├── docs/                  # Tutorials, API, Schema, example workflows
+├── scripts/               # Service lifecycle management scripts (single port)
+├── packaging/             # macOS/Linux/Windows packaging assets
+├── README.md              # English
+└── README.zh.md           # Simplified Chinese
+```
+
+---
+
+## Roadmap
+
+- [ ] Group chat, multi-digital-employee collaboration, and task allocation
+- [ ] More enterprise connectors and Marketplace resources (reviewed)
+- [ ] Fine-grained approval policies for high-risk tool actions
+
+---
+
+## Comparison with Similar Projects
+
+| | **StaffDeck** | **HugAgentOS** | **Dify** | **Open WebUI** |
+|---|---|---|---|---|
+| Organization | ModelBest + Tsinghua THUNLP | Zhejiang Univ. REAL | Langgenius | Open-source community |
+| Core differentiator | Digital employee lifecycle + state-machine SOP | Ontology governance control plane | Workflow visualization | Model frontend UI |
+| SOP execution | ✅ State machine (deterministic) | ReAct-based | Workflow | ✗ |
+| Knowledge retrieval | ✅ Document-structure-aware multi-level | Vector + keyword | Vector | Vector |
+| Desktop installer | ✅ Win/Mac/Linux | ✗ | ✗ | ✗ |
+| Stars (comparison date) | 633 | 50 | Tens of thousands | Tens of thousands |
+
+StaffDeck and HugAgentOS address similar problems (enterprise agent governance) but take different approaches: HugAgentOS uses **semantic ontologies** as a rule-gating mechanism, while StaffDeck uses **employee lifecycle management** to make processes deterministic. The two are not mutually exclusive and can be used in combination.
+
+---
+
+## Core Assessment
+
+StaffDeck's bet is: **the ultimate challenge for enterprise AI is knowledge asset conversion and process determinism**, not making LLMs smarter.
+
+The state-machine SOP design choice is particularly pragmatic — rather than trusting the model to always get it right, it structures, audits, and makes debuggable the critical decision nodes. In real enterprise scenarios, this is far more reliable than "better prompts."
+
+633 stars in 6 days since open-sourcing — a debut at the top. The backing of Tsinghua THUNLP and ModelBest, combined with simultaneous availability of desktop installers (lowering the deployment barrier) and source code (supporting enterprise customization), makes this project worth watching closely.
+
+---
+
+## Reference Resources
+
+- **GitHub**: [OpenBMB/StaffDeck](https://github.com/OpenBMB/StaffDeck)
+- **Website**: [staffdeck.openbmb.cn](https://staffdeck.openbmb.cn/)
+- **Quick Start**: [staffdeck.openbmb.cn/#/docs/introduce](https://staffdeck.openbmb.cn/#/docs/introduce?lang=en)
+- **ModelBest**: [modelbest.cn](https://modelbest.cn/)
+- **Tsinghua THUNLP**: [nlp.csai.tsinghua.edu.cn](https://nlp.csai.tsinghua.edu.cn/)
 
 © 2026 Author: Mycelium Protocol

@@ -2,6 +2,7 @@
 title: "字节开源 Bernini：统一视频生成与编辑框架，MLLM 语义规划 + DiT 渲染，比肩顶级商业模型"
 titleEn: "ByteDance Open-Sources Bernini: Unified Video Generation & Editing with MLLM Semantic Planning + DiT Rendering"
 description: "字节跳动开源视频模型 Bernini，基于 Qwen2.5-VL 语义规划器 + Wan2.2 DiT 渲染器的统一框架，在视频编辑排行榜上进入第一梯队，超越多个闭源商业模型。本文包含完整的部署指南、显存配置建议和 6 大任务类型的实战命令。"
+descriptionEn: "ByteDance open-sources Bernini, a unified video model framework pairing a Qwen2.5-VL semantic planner with a Wan2.2 DiT renderer — now in the top tier on video editing leaderboards, surpassing multiple closed-source commercial models. Includes a complete deployment guide, VRAM configuration recommendations, and hands-on commands for 6 task types."
 pubDate: "2026-07-21"
 updatedDate: "2026-07-21"
 category: "Tech-Experiment"
@@ -441,5 +442,442 @@ Bernini 目前是开源生态里视频编辑（v2v）能力最强的，但 T2V �
 - **论文**：[arXiv 2605.22344 — Bernini: Latent Semantic Planning for Video Diffusion](https://arxiv.org/abs/2605.22344)
 - **项目主页**：[bernini-ai.github.io](https://bernini-ai.github.io/)
 - **ComfyUI 节点**：[ComfyUI-Bernini](https://github.com/AIMixer/ComfyUI-Bernini)（社区）
+
+© 2026 Author: Mycelium Protocol
+
+<!--EN-->
+
+> **GitHub**: [bytedance/Bernini](https://github.com/bytedance/Bernini)
+> **HuggingFace Collection**: [ByteDance/bernini](https://huggingface.co/collections/ByteDance/bernini)
+> **Project Homepage**: [bernini-ai.github.io](https://bernini-ai.github.io/)
+> **Paper**: [arXiv 2605.22344](https://arxiv.org/abs/2605.22344)
+> **Open-Source Date**: June 2026 (Bernini-R), July 21 (full training code released)
+> **License**: Apache 2.0
+
+---
+
+## What Is This
+
+An open-source unified video generation and editing framework from ByteDance's Bernini Team, which has already surpassed 1,100 Stars (training code fully opened today).
+
+Bernini's core approach is distinctive: **rather than asking a diffusion model to guess how to make edits directly, it first has an MLLM plan "what changes to make in semantic space," then has a diffusion renderer execute them**. This two-stage pipeline gives it a clear edge over pure-renderer approaches when it comes to following complex instructions.
+
+The system consists of two components:
+
+**MLLM Semantic Planner**
+- Base: Qwen2.5-VL-7B-Instruct
+- Input: text instructions + source image / source video + reference images
+- Output: target semantic embedding sequences (predicting "what to generate" in latent space)
+
+**DiT Renderer**
+- Base: Wan2.2-T2V-A14B (MoE architecture, 14B parameters)
+- Input: semantic embeddings + VAE latent variables
+- Execution: flow-matching denoising to produce final video frames
+
+The two are connected through **Segment-Aware 3D RoPE (SA-3D RoPE)** — an improved positional encoding that distinguishes tokens from different visual segments (source video frames, reference images, target positions), resolving the alignment problem that arises with multi-source inputs.
+
+---
+
+## Performance
+
+Official Human Arena evaluation (human blind pairwise testing, Bradley-Terry scoring):
+
+| Rank | Method | BT Score | Win Rate |
+|---|---|---|---|
+| 1 | HappyHorse-1.0 (closed-source commercial) | 1080 | 61.3% |
+| **2** | **Bernini (open-source)** | **1044** | **56.3%** |
+| 3 | Wan2.7 | 1034 | 54.9% |
+| 4 | Grok-imagine-video | 964 | 44.9% |
+
+Bernini is the only open-source model to reach the top three on this leaderboard, trailing the top-ranked closed-source commercial product by only 36 points (approximately 5%).
+
+Benchmark evaluation data:
+
+| Model | EditVerse | OpenVE | VBench |
+|---|---|---|---|
+| Bernini-R 1.3B | 7.74 | 3.65 | 84.69 |
+| Bernini-R 14B | 7.99 | 3.78 | 84.64 |
+| **Bernini 7B+14B** | **8.02** | **4.03** | **84.37** |
+
+---
+
+## Two Deployable Product Lines
+
+### Bernini (Full Pipeline)
+
+**Best for**: complex instructions, multi-step semantic planning, emphasis on instruction-following precision
+**Weights**: [`ByteDance/Bernini-Diffusers`](https://huggingface.co/ByteDance/Bernini-Diffusers) (7B Planner + 14B Renderer, packaged format)
+**VRAM requirement**: Recommended 8×H100/A100 (80GB); also supports 4×A100 with offloading
+
+Full package directory structure:
+```
+ByteDance/Bernini-Diffusers/
+  bernini/           ← Bernini planning weights
+  mllm/              ← Qwen2.5-VL-7B planner
+  t5_text_encoder/   ← text encoder
+  t5_tokenizer/
+  vae/
+  scheduler/
+  transformer_config.json
+  transformer_2_config.json
+```
+
+### Bernini-R (Renderer Only)
+
+**Best for**: simple edits (style transfer, subtitle/watermark removal, local modifications), faster inference, ComfyUI integration
+**Weights**: [`ByteDance/Bernini-R-Diffusers`](https://huggingface.co/ByteDance/Bernini-R-Diffusers) (14B) or [`ByteDance/Bernini-R-1.3B-Diffusers`](https://huggingface.co/ByteDance/Bernini-R-1.3B-Diffusers)
+**VRAM requirement**: 14B requires 8×GPU; 1.3B can run on a single 24GB card (community-verified on RTX 4090)
+
+---
+
+## System Requirements
+
+```
+Python 3.11.2
+CUDA 12.6 (minimum 12.3)
+PyTorch 2.7.1+cu126
+diffusers 0.35.2
+accelerate 0.34.2
+transformers 4.57.3
+```
+
+Notes:
+- **H100/H800/H200 (Hopper)**: can enable FlashAttention-3 for fastest inference
+- **A100/A800**: uses FlashAttention-2, good performance
+- **Other CUDA GPUs**: falls back to PyTorch SDPA
+- **CPU / Apple Silicon**: not officially supported (requires CUDA)
+
+---
+
+## Full Deployment Steps
+
+### Step 1: Install Dependencies
+
+```bash
+git clone https://github.com/bytedance/Bernini.git bernini
+cd bernini
+pip install -r requirements.txt
+
+# Multi-GPU sequence parallelism requires VeOmni (--no-deps to avoid overwriting torch version)
+pip install --no-deps git+https://github.com/ByteDance-Seed/VeOmni.git@v0.1.11
+
+# Optional: FlashAttention-2 (A100 and below)
+pip install flash-attn==2.8.3
+
+# Optional: FlashAttention-3 (H100 exclusive, must compile from source)
+git clone https://github.com/Dao-AILab/flash-attention.git
+cd flash-attention && git checkout v2.8.3
+cd hopper && MAX_JOBS=$(nproc) python3 setup.py install --user
+```
+
+### Step 2: Download Weights
+
+**Choose Bernini-R (recommended for beginners)**:
+
+```bash
+pip install -U "huggingface_hub"
+
+# 14B full version (~28GB)
+hf download ByteDance/Bernini-R-Diffusers \
+    --local-dir pretrained_models/Bernini-R-Diffusers
+
+# Or 1.3B lightweight version (~3GB, suitable for single 24GB card)
+hf download ByteDance/Bernini-R-1.3B-Diffusers \
+    --local-dir pretrained_models/Bernini-R-1.3B-Diffusers
+```
+
+**Choose Bernini full pipeline**:
+
+```bash
+hf download ByteDance/Bernini-Diffusers \
+    --local-dir pretrained_models/Bernini-Diffusers
+```
+
+For users in mainland China, ModelScope mirror is recommended (set `HF_ENDPOINT=https://hf-mirror.com`).
+
+### Step 3: Understand the Case File Format
+
+Bernini uses JSON Case Files to pass task parameters, rather than long command-line flags:
+
+```json
+{
+  "task_type": "v2v",
+  "guidance_mode": "v2v_apg",
+  "prompt": "Remove the white sheep on the left side of the video.",
+  "video": "path/to/source.mp4",
+  "output": "output/edited.mp4"
+}
+```
+
+Task types (`task_type`):
+- `t2i`: text → image
+- `i2i`: image editing
+- `t2v`: text → video
+- `v2v`: video editing
+- `rv2v`: reference image-guided video editing
+- `r2v`: reference image → video generation
+
+---
+
+## Hands-On Commands for 6 Task Types
+
+### 1. Text-to-Image (t2i) — Single GPU
+
+```bash
+python infer_single_gpu.py \
+    --config pretrained_models/Bernini-R-Diffusers \
+    --case assets/testcases/t2i/t2i.json \
+    --num_frames 1 \
+    --guidance_mode t2v_apg
+```
+
+Or pass parameters directly:
+
+```bash
+python infer_single_gpu.py \
+    --config pretrained_models/Bernini-R-Diffusers \
+    --prompt "A futuristic cityscape at dusk, cinematic lighting, 8K" \
+    --task_type t2i \
+    --num_frames 1 \
+    --output output/city.png
+```
+
+### 2. Image Editing (i2i) — Single GPU
+
+```bash
+python infer_single_gpu.py \
+    --config pretrained_models/Bernini-R-Diffusers \
+    --case assets/testcases/i2i/i2i.json \
+    --num_frames 1 \
+    --guidance_mode t2v_apg
+```
+
+### 3. Text-to-Video (t2v) — Multi-GPU
+
+```bash
+torchrun --nproc-per-node 8 infer_multi_gpu.py \
+    --config pretrained_models/Bernini-R-Diffusers \
+    --ulysses 8 \
+    --case assets/testcases/t2v/t2v.json \
+    --guidance_mode t2v_apg
+```
+
+Default output: 480p / 16fps / 81 frames (approximately 5 seconds)
+
+### 4. Video Editing (v2v) — Multi-GPU
+
+```bash
+torchrun --nproc-per-node 8 infer_multi_gpu.py \
+    --config pretrained_models/Bernini-R-Diffusers \
+    --ulysses 8 \
+    --case assets/testcases/v2v/v2v_case1.json \
+    --guidance_mode v2v_apg
+```
+
+Example case file (weather change):
+
+```json
+{
+  "task_type": "v2v",
+  "guidance_mode": "v2v_apg",
+  "prompt": "Convert the video into an immersive snowy winter wonderland.",
+  "video": "assets/source_videos/forest.mp4",
+  "output": "output/winter.mp4"
+}
+```
+
+### 5. Reference Image-Guided Editing (rv2v) — Multi-GPU
+
+```bash
+torchrun --nproc-per-node 8 infer_multi_gpu.py \
+    --config pretrained_models/Bernini-R-Diffusers \
+    --ulysses 8 \
+    --case assets/testcases/rv2v/rv2v_case1.json \
+    --guidance_mode rv2v_apg
+```
+
+Best for: replacing objects, materials, weather, or styles in a video using a reference image.
+
+### 6. Reference-to-Video Generation (r2v) — Up to 5 Reference Images
+
+```bash
+torchrun --nproc-per-node 8 infer_multi_gpu.py \
+    --config pretrained_models/Bernini-R-Diffusers \
+    --ulysses 8 \
+    --case assets/testcases/r2v/r2v_case1.json \
+    --guidance_mode r2v_apg
+```
+
+Batch run using scripts:
+
+```bash
+# Run all tasks at once (reads BERNINI_R_CONFIG environment variable)
+export BERNINI_R_CONFIG=./pretrained_models/Bernini-R-Diffusers
+export NPROC_PER_NODE=8
+export ULYSSES=8
+
+bash scripts/bernini_r/run_t2i.sh
+bash scripts/bernini_r/run_t2v.sh
+bash scripts/bernini_r/run_v2v.sh
+bash scripts/bernini_r/run_rv2v.sh
+```
+
+---
+
+## Gradio Visual Interface
+
+```bash
+# Single GPU (image tasks only)
+python gradio_demo.py \
+    --config pretrained_models/Bernini-R-Diffusers \
+    --port 7860
+
+# 8-GPU parallel (video tasks)
+torchrun --nproc-per-node 8 gradio_demo.py \
+    --ulysses 8 \
+    --config pretrained_models/Bernini-R-Diffusers \
+    --port 7860 \
+    --share   # generate a public URL
+```
+
+---
+
+## Prompt Enhancer (Strongly Recommended)
+
+Enabling `--use_pe` enhances prompts via any OpenAI-compatible endpoint, significantly improving generation quality.
+
+```bash
+export BERNINI_PE_API_KEY=your_key
+export BERNINI_PE_BASE_URL=https://api.openai.com/v1   # or Ollama/vLLM endpoint
+export BERNINI_PE_MODEL=gpt-4o-mini                     # any vision model
+
+torchrun --nproc-per-node 8 infer_multi_gpu.py \
+    --config pretrained_models/Bernini-R-Diffusers \
+    --ulysses 8 \
+    --case assets/testcases/t2v/t2v.json \
+    --use_pe
+```
+
+Paired with a local model (free, fully offline):
+
+```bash
+# Start Ollama
+ollama serve &
+ollama pull qwen2.5vl:7b
+
+export BERNINI_PE_API_KEY=ollama
+export BERNINI_PE_BASE_URL=http://localhost:11434/v1
+export BERNINI_PE_MODEL=qwen2.5vl:7b
+```
+
+---
+
+## Full Pipeline (Bernini 7B+14B) Exclusive Commands
+
+```bash
+export BERNINI_CONFIG=./pretrained_models/Bernini-Diffusers
+export NPROC_PER_NODE=8
+export ULYSSES=8
+
+# Text-to-video (stronger instruction following)
+bash scripts/bernini/run_t2v.sh
+
+# Complex video editing (where MLLM semantic planning has the clearest advantage)
+CASE_PATH=assets/testcases/v2v/v2v_case2.json \
+bash scripts/bernini/run_v2v.sh
+
+# Gradio interface
+torchrun --nproc-per-node 8 gradio_demo.py \
+    --ulysses 8 \
+    --config ByteDance/Bernini-Diffusers \
+    --port 7860 --share
+```
+
+---
+
+## VRAM Configuration Reference
+
+| Model | GPU Config | Resolution | Notes |
+|---|---|---|---|
+| Bernini-R 1.3B | Single RTX 4090 (24GB) | 480p | Community-verified |
+| Bernini-R 14B | 8×A100 (80GB) | 480p/720p | Officially recommended |
+| Bernini-R 14B | 4×A100 (80GB) | 480p | Reduce to `--ulysses 4` |
+| Bernini-R 14B | 8×H100 (80GB) | 480p/720p | Optimal, FlashAttn-3 |
+| Bernini 7B+14B | 8×H100 (80GB) | 480p/720p | Recommended for full pipeline |
+
+**A100/H100 compute rental available in China**: AutoDL, Vast.ai, Lepton.ai (choose as needed)
+
+---
+
+## Training (Fine-tune Bernini-R)
+
+Training code fully released on 2026-07-13:
+
+```bash
+# Recommended: use uv to manage the training environment
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+uv sync
+uv sync --extra all
+uv pip install --no-build-isolation "flash-attn==2.8.3"
+
+# Start training
+uv run python train_bernini_r.py \
+    --config configs/bernini_renderer_wan22/config.json \
+    --dataset_path /path/to/your/dataset \
+    --output_dir output/finetuned
+```
+
+Full training documentation: [docs/bernini_r_train.md](https://github.com/bytedance/Bernini/blob/main/docs/bernini_r_train.md)
+
+---
+
+## Key Technical Design
+
+**Why "plan semantics" rather than "retrieve images" vector-database-style?**
+
+Traditional video editing methods feed the source video and prompt directly to a diffusion model, relying on the model to "guess" the correct editing direction. For simple style transfer this works fine, but complex instructions ("turn the right half of the video into a Russian classical court dance clay-animation stop-motion style, while keeping the left half as the original war scene") are very hard to nail in a single step.
+
+Bernini's solution: **first have the MLLM plan "where the target semantic embeddings should be," then have the DiT denoise along the semantic gradient**. This decomposes a hard reasoning problem into two simpler subproblems.
+
+**What problem does SA-3D RoPE solve?**
+
+Multi-source inputs (source video frames + reference image 1 + reference image 2 + target placeholder) can cause confusion in the attention mechanism. SA-3D RoPE assigns different positional encodings to tokens from different visual segments, allowing the renderer to know which tokens come from the source, which are references, and which are the target to be generated.
+
+---
+
+## Comparison with Similar Open-Source Models
+
+| Model | Organization | Planner | Renderer | Strongest Task | Single-GPU Capable |
+|---|---|---|---|---|---|
+| **Bernini** | ByteDance | Qwen2.5-VL-7B | Wan2.2-14B | Complex video editing | 1.3B version only |
+| Wan2.2 | Alibaba | None | MoE-14B | T2V generation | 5B version at 720P |
+| HunyuanVideo | Tencent | None | 13B | T2V generation | Partial support |
+| CogVideoX | Zhipu AI | None | 5B/13B | T2V generation | 5B can run single-GPU |
+
+Bernini is currently the strongest open-source model for video editing (v2v) in the ecosystem, though pure T2V generation is not its focus (VBench 84.37 is slightly below Wan2.2's top performance).
+
+---
+
+## Getting Started Recommendations
+
+1. **Start with Bernini-R 1.3B**: runs on a single 24GB card — first verify that the i2i (image editing) task pipeline works end-to-end
+2. **Use the Gradio interface for testing**: `--share` generates a public URL without needing a local UI
+3. **v2v is the killer use case**: weather transformation, style transfer, and object removal are where Bernini shines brightest
+4. **Connect a Prompt Enhancer**: pair with local Ollama (Qwen2.5-VL) — the difference in prompt quality is very significant
+5. **For complex instructions, use the full Bernini 7B+14B**: the 1.3B model is noticeably weaker than the 14B for complex tasks such as "character motion generation"
+
+---
+
+## Reference Resources
+
+- **GitHub**: [bytedance/Bernini](https://github.com/bytedance/Bernini)
+- **HuggingFace Collection**: [ByteDance/bernini](https://huggingface.co/collections/ByteDance/bernini)
+  - Full pipeline: [ByteDance/Bernini-Diffusers](https://huggingface.co/ByteDance/Bernini-Diffusers)
+  - 14B renderer: [ByteDance/Bernini-R-Diffusers](https://huggingface.co/ByteDance/Bernini-R-Diffusers)
+  - 1.3B lightweight: [ByteDance/Bernini-R-1.3B-Diffusers](https://huggingface.co/ByteDance/Bernini-R-1.3B-Diffusers)
+- **Paper**: [arXiv 2605.22344 — Bernini: Latent Semantic Planning for Video Diffusion](https://arxiv.org/abs/2605.22344)
+- **Project Homepage**: [bernini-ai.github.io](https://bernini-ai.github.io/)
+- **ComfyUI Nodes**: [ComfyUI-Bernini](https://github.com/AIMixer/ComfyUI-Bernini) (community)
 
 © 2026 Author: Mycelium Protocol

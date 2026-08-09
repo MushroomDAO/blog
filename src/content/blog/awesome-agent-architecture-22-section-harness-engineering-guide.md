@@ -2,6 +2,7 @@
 title: "22 节课读懂 Agent 系统怎么建：awesome-agent-architecture 的 Harness 工程地图"
 titleEn: "22 Lessons to Understand How Agent Systems Are Built: The Harness Engineering Map of awesome-agent-architecture"
 description: "hardness1020 开源的 awesome-agent-architecture 用 22 节课、7 个层次，系统拆解 Agent 系统的 Harness 工程——以 Claude Code v2.1.88 和 Hermes Agent 为研究对象，每节包含原理、机制、真实实现和失败模式，附可运行代码。"
+descriptionEn: "hardness1020's awesome-agent-architecture is a 22-lesson, 7-layer systematic teardown of agent harness engineering — using Claude Code v2.1.88 and Hermes Agent as study subjects. Each lesson covers principles, mechanisms, real implementations, and failure modes, with runnable code."
 pubDate: "2026-07-22"
 updatedDate: "2026-07-22"
 category: "Tech-Experiment"
@@ -213,5 +214,214 @@ uv run python sections/01-agent-loop/src/demo.py
 - **Loop Engineering（LangChain）**：[The art of loop engineering](https://www.langchain.com/blog/the-art-of-loop-engineering)
 - **Lilian Weng**：[Harness engineering for self-improvement](https://lilianweng.github.io/posts/2026-07-04-harness/)
 - **相关文章**：[从控制论看 Harness 设计](/blog/agent-architecture-cybernetics-harness-design/)
+
+© 2026 Author: Mycelium Protocol
+
+<!--EN-->
+
+> **GitHub**: [hardness1020/awesome-agent-architecture](https://github.com/hardness1020/awesome-agent-architecture) · **Stars**: 242  
+> **License**: MIT · **Language**: Python  
+> **Study subjects**: Claude Code v2.1.88 · Hermes Agent v2026.7.1  
+> **Run**: `uv venv && uv pip install -r requirements.txt`
+
+---
+
+## Core Proposition
+
+To understand agent systems, one thing must be stated clearly:
+
+> **The model handles reasoning. The harness gives the model actions, state, and constraints.**
+
+Tool execution, cross-call state maintenance, side-effect gating, loop coordination — none of these are handled by the model call itself. **Most of the engineering lives around the model, not inside it.**
+
+This cognitive shift matters. Most people learning AI focus on "which model is better," but what truly determines an agent's capability ceiling is the harness design: how it runs tools, how it manages context, how it handles errors, how it coordinates multiple sub-agents.
+
+This is exactly where this repository's value lies: 22 self-contained sections that disassemble the harness from the inside out, verified against two real systems (Claude Code and Hermes Agent).
+
+---
+
+## The Base Loop: Where Everything Starts
+
+Most agents share the same control flow:
+
+```
+Call model → Run requested tool → Append result → Call model again
+```
+
+The loop itself is small. The vast majority of engineering is **around the loop**: dispatching tools, gating side effects, managing context, persisting state, coordinating other loops.
+
+Once you internalize this framework, you'll find that coding tools, chat assistants, and autonomous runners differ mostly in harness choices — not mysterious black boxes.
+
+---
+
+## 22 Lessons, 7 Layers
+
+### Layer 0 · Foundations
+
+**S0: The Harness Paper** — Where does agency come from?
+
+Where the boundary between model and harness lies. What actions, observations, and permissions are. This is the conceptual foundation for the entire course — recommended reading first.
+
+---
+
+### Layer 1 · Core Loop (4 lessons)
+
+This layer covers the most fundamental mechanisms: how the loop runs, how tools are called, how side effects are controlled.
+
+**S1: Agent Loop** — How the `messages[]` array grows, how `stop_reason` determines whether to continue or stop.
+
+**S2: Tool Runtime** — Tool registry, JSON Schema validation, dispatch logic, deferred tool search (deferred search: not loading all tools into context at once).
+
+**S3: Permissions & Sandbox** — Side-effect gating is the security core of the harness: which operations require approval, how to sandbox high-risk tool calls in isolation. Claude Code's `bypassPermissions` / `acceptEdits` and other modes are covered here.
+
+**S4: Hooks** — How lifecycle events like `PreToolUse` / `PostToolUse` are mounted. Hooks are the standard interface for external extensions to plug into the loop without modifying core logic.
+
+---
+
+### Layer 2 · Complex Work (4 lessons)
+
+Once the loop is running, how to handle more complex tasks.
+
+**S5: Planning & To-Dos** — How Plan Mode breaks large tasks into a todo list, and why human approval of the plan is needed before actually editing files.
+
+**S6: Sub-Agents** — Sub-agents are not sub-calls within the same loop — they are **entirely new `messages[]` arrays**. Sub-problems run in isolated contexts and report results back to the parent agent. This is how Claude Code's `Agent` tool works.
+
+**S7: Skills** — The `SKILL.md` format, skill directories, and progressive disclosure: loading capability descriptions on demand as needed for the task, rather than stuffing everything into context at once.
+
+**S8: Context Management** — How long sessions survive within a limited context window: token budgets, content stubs, compression, summarization. Claude Code's automatic compression mechanism is covered here.
+
+---
+
+### Layer 3 · Knowledge & Resilience (3 lessons)
+
+How agents remember things, and how they survive errors.
+
+**S9: Memory** — Four memory operations: selection (what's worth remembering), recall (when to use it), extraction (extracting facts from conversation), consolidation (merging memories across sessions).
+
+**S10: System Prompt Assembly** — The system prompt is not a static string — it is **dynamically assembled before each call**: base instructions + tool descriptions + real-time state (current directory, todo list, memory summary) + cache breakpoints (which parts can be hit by prompt cache).
+
+**S11: Error Recovery** — What to do when errors occur during long tasks: retry strategies, context overflow recovery (how to truncate without crashing when the window is full), model fallback (switching when the primary model fails).
+
+---
+
+### Layer 4 · Long-Running & Async (4 lessons)
+
+This layer transforms agents from "one-shot executions" into "background systems that can run for a long time."
+
+**S12: Task System** — How task records are persisted, how dependencies are expressed, how locks prevent concurrent conflicts. This is the foundation for "the task keeps running after you close the terminal."
+
+**S13: Background Execution** — Task handles, state machines, notification queues: while the main loop keeps working, background tasks advance independently and notify the main loop upon completion.
+
+**S14: Scheduling** — Cron triggers, sleep-based wake-ups, remote triggers (webhooks), queues. How agents automatically start working at a specified time or on an external event, without needing a human to initiate them.
+
+**S15: Worktree Isolation** — How multiple parallel agents avoid file conflicts: Git worktrees give each sub-task an independent filesystem view, `cwd` binding ensures file operations don't cross boundaries, and results are safely merged or discarded when done.
+
+---
+
+### Layer 5 · Multi-Agent (3 lessons)
+
+From a single agent to a team of agents.
+
+**S16: Coordination** — How multiple agents communicate: inboxes, broadcasts, permission bubbling (how a sub-agent requests higher permissions upward rather than bypassing them on its own).
+
+**S17: Protocols** — How agent teams reach consensus: plan approval workflows, close handshakes (how one agent completing a task notifies dependent agents that they can proceed).
+
+**S18: Autonomy** — How agents self-organize: idle cycles (what to do when there are no tasks), task claiming (proactively picking up tasks from the queue), self-organization (no central dispatcher needed).
+
+---
+
+### Layer 6 · Extensions & Integration (2 lessons)
+
+**S19: MCP / Plugins / Channels** — Transport layers (stdio/HTTP SSE/WebSocket), how channels let the harness reach the outside world, dynamic tool pool assembly (merging tool sets from multiple MCP servers).
+
+**S20: Observability & Evaluation** — How to know the agent is working: tracing (call chains for each step), metrics (tool success rate / token consumption / latency), evals (automated evaluation sets), failure analysis (when agents get stuck or produce incorrect results).
+
+---
+
+### Layer 7 · Composition (1 lesson)
+
+**S21: Loop Engineering** — The endpoint of the entire course: how multiple loops stack into a self-running system. Verification loops (inner loop: complete → check → fix), triggers, token budget constraints, maturity levels (which agents suit which degree of autonomy).
+
+---
+
+## Two Real Systems Compared
+
+| | **Claude Code v2.1.88** | **Hermes Agent v2026.7.1** |
+|---|---|---|
+| Role | Frontier coding agent — edits files, runs commands, delivers in real repos | Long-term assistant — remembers you, learns workflows, runs anywhere |
+| Key sections | All of 0-21 (most complete harness implementation) | S7/S9/S14/S16/S19/S21 (memory/skills/scheduling/coordination/channels/loop composition) |
+| Key mechanisms | bypassPermissions / worktree / subagent | Persistent channels / cross-session memory / skill marketplace |
+
+For each mechanism, the course compares the two systems side by side: how Claude Code implements it, how Hermes implements it, and the tradeoffs of each.
+
+---
+
+## The Four-Part Learning Framework
+
+Each section follows the same structure:
+
+```
+1. Opening      — What problem does this layer solve (why is this mechanism needed)
+2. Mechanism    — General design and control flow (system-agnostic)
+3. Per system   — How real systems implement it (Claude Code vs Hermes)
+4. Failure modes — What can break, and how to mitigate it
+```
+
+**Reading in order** is the recommended learning path — each section builds on the layer before it. If you skip sections, the code in `src/` may reference mechanisms not yet introduced.
+
+---
+
+## Runnable Code
+
+```bash
+git clone https://github.com/hardness1020/awesome-agent-architecture
+cd awesome-agent-architecture
+uv venv
+uv pip install -r requirements.txt
+cp .env.example .env
+# Edit .env, fill in ANTHROPIC_API_KEY
+```
+
+Each section (S1-S21) has two run modes:
+
+```bash
+# Offline check — no API key needed
+python sections/01-agent-loop/src/test.py
+
+# Online demo — calls the real API
+uv run python sections/01-agent-loop/src/demo.py
+```
+
+**The most valuable learning action**: diff adjacent sections' `src/`. Each section adds only one mechanism, so `git diff sections/01-agent-loop/src/ sections/02-tool-runtime/src/` precisely shows how the "tool runtime" mechanism was introduced.
+
+---
+
+## Relationship to Existing Content
+
+We previously wrote [*Harness Design Through the Lens of Cybernetics*](/blog/agent-architecture-cybernetics-harness-design/), which established a conceptual framework: Harness ≈ design patterns, all explainable through cybernetics.
+
+`awesome-agent-architecture` is the concrete implementation path for that framework: 22 lessons that ground cybernetics' abstract principles into engineering learning materials you can read section by section, run as demos, and diff as code.
+
+**The two are complementary**: conceptual framework → engineering implementation path.
+
+---
+
+## Core Assessment
+
+This is the **most systematic open-source learning resource for harness engineering** I've seen: not a vague "what is an agent" introduction, but a source-level teardown of real system mechanisms, using a unified analytical framework (4-part structure) that makes different systems' implementations directly comparable.
+
+242 Stars, open-sourced 1 month ago — relatively niche, but higher quality than most "awesome-X" lists with 100× the stars.
+
+If you're building agent systems, going through S0 to S21 should clearly answer three questions: "what's in the harness," "what each part does," and "how it can break." Once those three questions are answered, reading any agent system's code becomes significantly faster.
+
+---
+
+## References
+
+- **GitHub**: [hardness1020/awesome-agent-architecture](https://github.com/hardness1020/awesome-agent-architecture)
+- **Hermes Agent**: [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
+- **Loop Engineering (LangChain)**: [The art of loop engineering](https://www.langchain.com/blog/the-art-of-loop-engineering)
+- **Lilian Weng**: [Harness engineering for self-improvement](https://lilianweng.github.io/posts/2026-07-04-harness/)
+- **Related article**: [Harness Design Through the Lens of Cybernetics](/blog/agent-architecture-cybernetics-harness-design/)
 
 © 2026 Author: Mycelium Protocol

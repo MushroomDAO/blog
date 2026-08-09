@@ -143,3 +143,139 @@ Pi Agent 的设计哲学决定了它**特别适合**以下场景：
 > **原文作者**：潘智祥  
 > **原文链接**：https://panzhixiang.cn/2026/pi-agent-extension-design/  
 > **原文协议**：BY-NC-SA 4.0 — 转载请注明出处
+
+<!--EN-->
+
+> **Repost Notice**: This article is reposted from Pan Zhixiang's blog. Original URL: https://panzhixiang.cn/2026/pi-agent-extension-design/  
+> Original author: Pan Zhixiang. The original article is licensed under BY-NC-SA 4.0. Many thanks to the author for this excellent write-up. This site reposts it purely for knowledge-sharing purposes. If the original author considers this an infringement, please leave a comment and it will be removed immediately.
+
+---
+
+AI Agent has been a hot concept for two years, and the open-source community has grown a dense forest of related frameworks. Looking through them, one problem stands out: **most frameworks are either "too heavy" or "too rigid."**
+
+The heavy ones — grand architectures, stacked concepts — you haven't written a single line of custom code yet, and the enthusiasm is already spent just trying to understand the framework's own naming conventions and idioms. The rigid ones — they're not complex, but the moment you want to add some custom behavior, you find yourself blocked at every turn; the framework simply wasn't designed to let you in.
+
+![Framework Paradox Comparison](../../assets/images/pi-agent-01-comparison-framework-paradox.png)
+
+Pi Agent (GitHub repo `badlogic/pi-mono`) takes a distinctly different design path. To summarize its strategy in one sentence:
+
+> **Keep the core code minimal, and hand every dimension of "customizability" entirely over to the extension system.**
+
+This is not a simple "we support plugins" statement. Its extension system is not a set of hooks bolted on after the fact — it is a **capability injection layer** that has existed as a first-class citizen since the architecture's first day.
+
+---
+
+## 1. An Extremely Restrained Core
+
+First, look at how Pi Agent divides its modules internally. The core has only three abstractions:
+
+- **Agent** — the engine responsible for conversational reasoning with large language models
+- **Tools** — tools the Agent can call (read files, execute commands, search code, etc.)
+- **Extensions** — the extension system, fully open to the outside
+
+No "workflow orchestrator," no "state machine graph engine," no "memory retrieval layer." The core does one thing: get the Agent running.
+
+The source code underpinning the entire extension mechanism is just five files, totaling roughly two thousand lines. By contrast, the repository's official extension examples number over 70 — from security gates to code review, from plan mode to terminal theme switching — covering a far richer set of functional scenarios than the core itself.
+
+![Framework Architecture Diagram](../../assets/images/pi-agent-02-framework-architecture.png)
+
+This structure conveys a clear message: **the framework's authors do not make decisions on behalf of developers about how an Agent should work. They leave those decisions to extensions.**
+
+---
+
+## 2. Two "Capability Forms" of Extensions
+
+Pi Agent's extension system is not a hook system that can only "do something at predetermined steps." It provides two entirely different kinds of capability:
+
+**Type 1: Listen and intervene.** An extension can insert its own logic at any critical node in the Agent's execution — modify a message before the LLM receives it, intercept a tool before it executes, rewrite a tool's result after it returns, update state at the end of each conversation turn.
+
+These nodes are not just a handful — they cover the Agent's complete lifecycle from startup to shutdown. It is as if the framework pre-placed a series of checkpoints on the Agent's "mandatory route," and extensions can choose to participate at any one of them.
+
+**Type 2: Register new capabilities with the core.** This is the most fundamental difference between Pi Agent's extension system and most "plugin mechanisms." Extensions do not merely passively "observe" and "intercept" — they can also inject entirely new functionality into the core:
+
+- Register a custom tool that the LLM can call during inference
+- Register a terminal command that users can type and execute directly
+- Register a set of keyboard shortcuts
+- Register a new model Provider
+- Even — replace the entire input editor, terminal Footer, or Header
+
+This means the framework's core provides a set of "infrastructure," and extensions can reshape that infrastructure into whatever form is needed. The core code does not need to be modified in the process.
+
+![Extension Dual-Mode Diagram](../../assets/images/pi-agent-03-extension-dual-mode.png)
+
+---
+
+## 3. Feeling It Through Concrete Scenarios
+
+Abstract mechanisms are easy to describe in hollow terms. A few real examples make it more intuitive.
+
+**Scenario 1: Adding a "security gate" to the Agent.**
+
+Suppose the Agent needs to run a dangerous command like `rm -rf` while operating on files. An extension can intercept before the tool call, pop up a confirmation dialog asking the user: "This command may cause irreversible changes — confirm execution?" In unattended background mode, it can block outright.
+
+How much code does this extension require?
+
+Minimal — just two things: tell the system "I want to listen to tool-call events," then when the event fires, judge whether the command is dangerous and return a block or a pass. No configuration files, no conventions about project structure, no modifications to the core code whatsoever.
+
+**Scenario 2: Having the Agent plan first, confirm, then execute.**
+
+Before modifying any code, have the Agent enter a "read-only mode" — it can only view files, search code, and answer questions, but cannot make any changes. After completing analysis in read-only mode, it generates a step-by-step checklist. The user reviews the checklist, confirms it is correct, and only then does the Agent switch to modifiable mode and execute each step in sequence.
+
+The state switching and phase management in this extension are fairly complex, but the core logic is entirely encapsulated in the extension file. It doesn't touch a single line of the framework's underlying code — it simply makes well-placed use of a few checkpoints the extension system pre-reserved: inject behavioral constraints when the Agent starts, filter the executable scope when tools are called, track execution progress at the end of each conversation turn.
+
+**Scenario 3: Registering a to-do tool for the Agent.**
+
+During task execution, Agents often need to maintain their own TODO lists. An extension can register a custom tool named `todo`, letting the LLM add, check off, or clear tasks through tool calls.
+
+The key is that this tool's state lives inside the conversation history. This means — if the user "branches" a new session fork at some point in the conversation, the to-do state automatically travels with it, requiring no additional handling. The consequence of this design is that extension authors don't need to think about state migration, branch merging, or other complex problems — the framework's underlying mechanism has already solved those for them.
+
+---
+
+## 4. Compared to Other Frameworks — What's the Difference?
+
+Among Agent frameworks on the market, extension mechanisms fall into roughly two styles:
+
+One is **"configuration-file-driven."** The framework leaves parameter entry points at a handful of preset locations; developers adjust behavior by modifying configuration. This approach is easy to get started with, but the ceiling on flexibility is low — there's only so much you can change, and customization needs that go beyond the config options have nowhere to go.
+
+The other is **"inheritance-hierarchy-driven."** The framework provides a base class; developers extend by inheriting and overriding methods. This approach is type-safe and IDE-friendly, but it requires developers to deeply understand the framework's internal structure and inheritance chain. Significant customizations often come at a considerable cost.
+
+Pi Agent takes a third path: **"event bus + capability registration."** No class inheritance required, no need to understand the framework's internal inheritance relationships. An extension is simply an ordinary TypeScript function that receives an API object as a parameter, then freely subscribes to events or registers new capabilities.
+
+![Framework Comparison Diagram](../../assets/images/pi-agent-04-framework-comparison.png)
+
+The key difference is that Pi Agent's extensions are both **observers** and **providers**. Most frameworks' "plugins" can only add behavior on top of existing flows; Pi Agent's extensions can change the flow itself.
+
+---
+
+## 5. Who It Suits — and Who It Might Not
+
+Every framework has the soil it grows best in.
+
+Pi Agent's design philosophy makes it **particularly well-suited** for:
+
+- Development teams that need to run extensive prototype validation and frequently adjust Agent behavior
+- Tech enthusiasts who want to learn Agent principles starting from a clean, non-bloated codebase
+- Scenarios requiring highly customized workflows built on top of standard Agent behavior
+- Evaluating an Agent technology foundation that is "both quick to get started with and deeply adaptable"
+
+**Potentially less suitable** for:
+
+- Those with no TypeScript or JavaScript background at all (extensions must be written in TS/JS)
+- Those seeking an out-of-the-box, zero-configuration product experience
+- Scenarios requiring enterprise-grade multi-tenancy, permission management, and audit logging — these are outside the framework's scope
+
+---
+
+## 6. One-Sentence Summary
+
+The number of open-source Agent frameworks continues to grow rapidly, but projects that have found a balance between "simplicity" and "customizability" are rare. Pi Agent's approach is worth paying attention to — not because it implements the most features, but because it has thought carefully about **"what not to do."**
+
+The core does only what is essential. Everything else belongs to extensions.
+
+> *This article was written based on first-hand analysis of the `badlogic/pi-mono` repository's source code, official documentation, and 70+ extension examples.*
+
+---
+
+> **Original author**: Pan Zhixiang  
+> **Original URL**: https://panzhixiang.cn/2026/pi-agent-extension-design/  
+> **Original license**: BY-NC-SA 4.0 — please credit the source when reposting

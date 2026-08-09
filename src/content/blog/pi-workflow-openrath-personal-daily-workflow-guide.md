@@ -2,6 +2,7 @@
 title: "pi-workflow v1.1.0：普通个人如何用 Pi Agent 把日常工作流变成可复用的自动化流水线"
 titleEn: "pi-workflow v1.1.0: How Ordinary Individuals Build Reusable Automated Pipelines with Pi Agent"
 description: "pi-workflow 是 Pi Agent 的子任务编排扩展，一键安装后用自然语言调度深度调研、代码评审、规范比对、变更评估 4 套预制流程，也可以写 JSON 自定义 DAG。文章重点讲普通个人怎么把学习、研究、写作、项目管理等日常工作流接进来，以及底层框架 OpenRath 的 PyTorch 式设计思想。"
+descriptionEn: "pi-workflow is Pi Agent's sub-task orchestration extension — one install gives you four prebuilt pipelines (deep research, code review, spec comparison, change assessment) via natural language, plus JSON-defined custom DAGs. The guide focuses on wiring everyday learning, research, writing, and project-management workflows into Pi Agent, and the PyTorch-inspired design of the underlying OpenRath framework."
 pubDate: "2026-07-22"
 updatedDate: "2026-07-22"
 category: "Tech-Experiment"
@@ -287,5 +288,288 @@ pi-workflow 解决的是一个常见的低效问题：每次做类似的事（�
 - **OpenRath**：[Rath-Team/OpenRath](https://github.com/Rath-Team/OpenRath) · [docs.openrath.com](https://docs.openrath.com)
 - **OpenRath 论文**：arXiv:2606.19409
 - **pi-subagent**：[AgwaB/pi-subagent](https://github.com/AgwaB/pi-subagent)
+
+© 2026 Author: Mycelium Protocol
+
+<!--EN-->
+
+> **pi-workflow**: [AgwaB/pi-workflow](https://github.com/AgwaB/pi-workflow) · npm: `@agwab/pi-workflow` · v1.1.0 · MIT  
+> **OpenRath**: [Rath-Team/OpenRath](https://github.com/Rath-Team/OpenRath) · PyPI: `openrath` · BSD-3-Clause · arXiv: 2606.19409  
+> **Platform**: macOS / Linux (WSL supported) · Requires Node.js ≥22.19.0
+
+---
+
+## 1. Clarifying the Relationship Between the Two
+
+**OpenRath** is the underlying framework — it turns a multi-Agent, multi-Session runtime into composable Python objects in the style of PyTorch: Session (conversation-state stream), Sandbox (execution environment), Memory (persistent memory), Tool (tool calls), Agent (Session transformation layer), Workflow (Agent composition container), and Selector (runtime router).
+
+**pi-workflow** is the workflow orchestration extension built on top of this architecture, designed specifically for Pi Agent: one-command install, natural-language scheduling, 4 ready-to-use prebuilt pipelines, JSON-defined custom DAGs, full local caching, and resumable execution.
+
+Ordinary users of pi-workflow don't need to understand OpenRath's underlying design — but understanding its design philosophy helps you think clearly about "how should I decompose my workflow."
+
+---
+
+## 2. OpenRath's Core Metaphor: Applying PyTorch's Approach to Agents
+
+| PyTorch Concept | OpenRath Equivalent | Meaning |
+|---|---|---|
+| `Tensor` | `Session` | Flowing runtime value: ordered chunks, execution position, lineage |
+| `Device` | `Sandbox` | Where tools actually run: local process, cloud sandbox |
+| `Parameter` | `Memory` | Agent state persisted across runs |
+| `Function` | `Tool` | A callable with model-visible schema + runtime behavior |
+| `nn.Linear` | `Agent` | A reusable layer that maps one Session to another |
+| `nn.Module` | `Workflow` | Nestable composition container for Agents, tools, and Session transforms |
+| Control flow | `Selector` | LLM-driven router implementing dynamic `if` / `while` |
+
+**Key insight**: Most frameworks center on the "Agent loop"; OpenRath centers on "Session." When an application requires multiple Agents, multiple branches, persistent memory, sandboxed execution, and traceable lineage, "starting from Session" scales better than "starting from a loop."
+
+---
+
+## 3. Installing pi-workflow
+
+```bash
+# One-command install (auto-installs /workflow panel + workflow-guide skill + execution-router skill)
+pi install npm:@agwab/pi-workflow
+
+# Reload Pi
+# (follow the prompt to reload after installation)
+
+# Future updates
+pi update npm:@agwab/pi-workflow
+```
+
+---
+
+## 4. The 4 Ready-to-Use Prebuilt Pipelines
+
+### 1. deep-research
+
+The most commonly used pipeline. Give it a topic or repository; it automatically conducts multi-step research and summarizes architecture, tradeoffs, and core design.
+
+```
+# Natural language
+Use the bundled deep-research workflow to research this repository and summarize the architecture tradeoffs.
+
+# Precise control
+/workflow run deep-research "研究 Redis 的 Cluster 模式和 Sentinel 模式的架构差异"
+```
+
+**Personal use cases**:
+- Learning a new tech stack: `/workflow run deep-research "调研 Rust async 运行时 Tokio vs async-std 的设计差异"`
+- Evaluating an open-source project: `/workflow run deep-research "调研 Helix 编辑器和 Neovim 的插件生态差异"`
+- Preparing for a discussion: `/workflow run deep-research "总结 RAG vs Fine-tuning 的适用场景和成本差异"`
+
+### 2. deep-review
+
+Reviews the current diff from multiple perspectives — not just surface-level, but also concurrency safety, error handling, test coverage, and more.
+
+```
+Use the deep-review workflow to review the current diff from multiple perspectives.
+
+/workflow run deep-review "审查这次 PR 的 API 设计和错误处理"
+```
+
+**Personal use cases**:
+- Pre-commit self-check: `/workflow run deep-review "检查我今天的改动有没有安全问题"`
+- Learning others' code: `/workflow run deep-review "分析这个开源库的事务处理逻辑"`
+
+### 3. spec-review
+
+Compares documentation/API specs against the implementation and tests to surface inconsistencies.
+
+```
+Use the spec-review workflow to compare docs/API_SPEC.md against the implementation and tests.
+
+/workflow run spec-review "比较 openapi.yaml 和现有接口实现"
+```
+
+**Personal use cases**:
+- Interface alignment check: `/workflow run spec-review "对比 PRD 文档和现有功能实现的差距"`
+- Documentation maintenance: `/workflow run spec-review "检查 README 的快速开始步骤是否还能跑通"`
+
+### 4. impact-review
+
+Analyzes which downstream modules, tests, and callers are affected by a given change.
+
+```
+/workflow run impact-review "评估删除 legacy_auth 模块的影响范围"
+```
+
+**Personal use cases**:
+- Pre-refactor assessment: `/workflow run impact-review "重命名 UserService 会影响多少地方"`
+- Dependency upgrades: `/workflow run impact-review "升级 React 18 到 19 的变更影响"`
+
+---
+
+## 5. Adaptive Mode: When You're Unsure Which Pipeline to Use
+
+```bash
+# Let Pi plan, dispatch, and aggregate on its own
+/workflow dynamic "帮我分析这个项目的技术债，给出优先级排序和改善建议"
+```
+
+Dynamic mode automatically plans the task graph, dispatches sub-tasks in parallel, and aggregates results — suited for open-ended problems where you don't need to define stages upfront.
+
+---
+
+## 6. Custom JSON DAGs: Locking Down Your Daily Workflows
+
+This is pi-workflow's most valuable feature: codify recurring workflows as JSON, then trigger them with a single sentence.
+
+### 6 Standard Stage Types
+
+| Type | Purpose | Example |
+|---|---|---|
+| `single` | Single-step execution, handled by one Agent | Planning, summarization, analysis |
+| `parallel` | Multiple perspectives in parallel, independent of each other | Simultaneously review code for security, performance, and readability |
+| `loop` | Repeat until a condition is met | Iteratively improve until a quality gate passes |
+| `batch` | Distribute the same task across N items | Apply the same processing to N files individually |
+| `fan-in` | Aggregate results from multiple streams | Merge conclusions from parallel stages |
+| `adaptive` | Dynamic orchestration, Pi decides | When you're unsure how many steps are needed |
+
+### Example: Personal Weekly Report Workflow
+
+```json
+{
+  "schemaVersion": 1,
+  "name": "weekly-report",
+  "description": "从 Git log、任务记录、Notes 生成周报",
+  "defaults": {
+    "agent": "researcher",
+    "readOnly": true,
+    "tools": ["read", "grep", "find", "bash"]
+  },
+  "artifactGraph": {
+    "stages": [
+      {
+        "id": "collect",
+        "type": "parallel",
+        "tasks": [
+          { "prompt": "汇总本周 git log，按模块分组，提取关键变更", "tools": ["bash"] },
+          { "prompt": "读取本周任务记录，提取已完成和未完成项" },
+          { "prompt": "读取本周的学习笔记和技术调研记录" }
+        ]
+      },
+      {
+        "id": "synthesize",
+        "type": "single",
+        "dependsOn": ["collect"],
+        "prompt": "整合上面三路内容，生成结构化周报：本周完成、下周计划、风险和阻塞、技术沉淀。格式清晰，可直接发给团队。"
+      }
+    ]
+  }
+}
+```
+
+Save it as `.pi/workflows/weekly-report.json` in your project, then trigger it anytime with:
+
+```
+/workflow run weekly-report "生成本周技术周报"
+```
+
+### Example: Pre-Release Check Workflow
+
+```json
+{
+  "name": "release-check",
+  "description": "版本发布前的标准化检查清单",
+  "artifactGraph": {
+    "stages": [
+      {
+        "id": "docs-check",
+        "type": "single",
+        "prompt": "检查 CHANGELOG、README、版本号是否更新，找出不一致"
+      },
+      {
+        "id": "test-check",
+        "type": "single",
+        "prompt": "检查测试覆盖率，找出最近改动但没有对应测试的部分"
+      },
+      {
+        "id": "dependency-check",
+        "type": "single",
+        "prompt": "检查 package.json / pyproject.toml 依赖有无已知漏洞，版本是否 pinned"
+      },
+      {
+        "id": "final-verdict",
+        "type": "fan-in",
+        "dependsOn": ["docs-check", "test-check", "dependency-check"],
+        "prompt": "汇总三路检查结果，给出 Go/No-go 决策和必须修复的问题列表"
+      }
+    ]
+  }
+}
+```
+
+---
+
+## 7. Execution Routing: When You're Unsure Which Approach to Use
+
+```bash
+# Let Pi decide: handle directly / single Agent / an existing workflow / create a new workflow
+/skill:execution-router decide whether this repository review should use a single-agent pass, deep-review, or a targeted verifier.
+```
+
+The workflow-guide skill helps you **create and validate new workflow definitions**:
+
+```bash
+# Create a workflow
+/skill:workflow-guide create a workflow for weekly release readiness.
+It should inspect docs, tests, recent changes, package metadata, and produce a final checklist.
+Save it as a reusable project workflow.
+
+# Customize an existing pipeline
+/skill:workflow-guide customize deep-review for frontend accessibility and UX review.
+```
+
+---
+
+## 8. Checkpoint Resume: Long Tasks Survive Interruptions
+
+All pi-workflow execution records are **fully cached locally**, allowing interrupted tasks to be resumed:
+
+```bash
+# Check current run status
+/workflow status
+
+# Resume an interrupted run
+/workflow resume <run-id>
+
+# View run history and artifacts
+/workflow list
+```
+
+---
+
+## 9. Personal Daily Scenario Map
+
+| Scenario | Recommended Workflow | Example Command |
+|---|---|---|
+| Learning a new technology | deep-research | `/workflow run deep-research "调研 Rust 异步运行时"` |
+| Writing a technical article | deep-research + custom | Research first, then use a custom workflow for writing |
+| Before committing code | deep-review | `/workflow run deep-review "审查今天的改动"` |
+| Refactoring assessment | impact-review | `/workflow run impact-review "删除旧模块的影响"` |
+| Writing a weekly report | custom weekly-report | `/workflow run weekly-report "生成本周报告"` |
+| Version release | custom release-check | `/workflow run release-check "v2.1.0 发布前检查"` |
+| Taking over a legacy project | deep-research | `/workflow run deep-research "调研这个项目的架构和历史决策"` |
+
+---
+
+## 10. Core Assessment
+
+pi-workflow solves a common inefficiency: every time you do something similar — research, review, weekly report — you manually break it into steps, paste context, wait for results, and integrate them again. The "scaffolding" of the work gets rebuilt from scratch each time.
+
+Codify that scaffolding into a JSON workflow, trigger it with a single sentence, and results are reviewable, resumable, and improvable. This is not "automation replacing thought" — it is "outsourcing the repetitive execution layer so your attention stays at the judgment layer."
+
+For ordinary individuals, the most practical starting point is: try the `deep-research` and `deep-review` out-of-the-box pipelines to feel the effect, then use `workflow-guide` to write your single most-repeated workflow as JSON and lock it in.
+
+---
+
+## References
+
+- **pi-workflow**: [AgwaB/pi-workflow](https://github.com/AgwaB/pi-workflow)
+- **OpenRath**: [Rath-Team/OpenRath](https://github.com/Rath-Team/OpenRath) · [docs.openrath.com](https://docs.openrath.com)
+- **OpenRath paper**: arXiv:2606.19409
+- **pi-subagent**: [AgwaB/pi-subagent](https://github.com/AgwaB/pi-subagent)
 
 © 2026 Author: Mycelium Protocol

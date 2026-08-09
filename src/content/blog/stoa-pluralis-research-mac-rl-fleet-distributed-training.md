@@ -2,6 +2,7 @@
 title: "14 台 Mac 跨越四国做 RL 后训练：Pluralis Research 的 stoa 实验"
 titleEn: "14 Macs Across Four Countries Do RL Post-Training: Pluralis Research's stoa Experiment"
 description: "Pluralis Research 开源 stoa：把 RL 后训练的 rollout 生成和梯度更新彻底解耦——巴黎/苏黎世/都柏林/多伦多的 14 台 Mac 用 MLX 生成经验，一张 B200 负责学习，双方只通过 Cloudflare R2 bucket 见面。8B MoE 模型在论文搜索问答任务上 pass@1 从 0.29 涨到 0.63。"
+descriptionEn: "Pluralis Research open-sources stoa: fully decoupled RL post-training with rollout generation and gradient updates separated — 14 Macs across Paris, Zürich, Dublin, and Toronto generate rollouts via MLX while a single B200 handles learning, syncing only through a Cloudflare R2 bucket. An 8B MoE model's paper-search pass@1 went from 0.29 to 0.63."
 pubDate: "2026-07-22"
 updatedDate: "2026-07-22"
 category: "Tech-Experiment"
@@ -221,5 +222,222 @@ PULSE delta + Cloudflare R2 + staleness 过滤这三件事组合在一起，构�
 - **GRPO**：DeepSeekMath，[arxiv.org/abs/2402.03300](https://arxiv.org/abs/2402.03300)
 - **DPPO**：Qi et al., [arxiv.org/abs/2602.04879](https://arxiv.org/abs/2602.04879)
 - **LFM2.5-8B-A1B**：Liquid AI Foundation Model
+
+© 2026 Author: Mycelium Protocol
+
+<!--EN-->
+
+> **GitHub**: [PluralisResearch/stoa](https://github.com/PluralisResearch/stoa) · **Stars**: 6  
+> **Organization**: Pluralis Research · **Author**: Erfan Miahi  
+> **License**: MIT · **Status**: Proof of concept (production-grade version in development)  
+> **Companion post**: "RL Post-Training on Macs", Pluralis Research Blog, July 2026
+
+---
+
+## What This Experiment Is Doing
+
+RL post-training (the RLVR / GRPO path) is currently one of the most effective methods for improving reasoning model capabilities, but it has a problem: **generating rollouts is the most resource-intensive part of the entire pipeline** — the model must repeatedly solve problems, search, and generate answers, a process that is pure inference with no gradient involved, yet requires GPU access to run.
+
+Pluralis Research's approach: **completely separate "generating experience" from "learning from experience"**.
+
+- 14 Apple Silicon Macs across Paris, Zürich, Dublin, and Toronto (one of which is a researcher's own MacBook) — running the model continuously via MLX, generating rollouts, and uploading them to Cloudflare R2.
+- One NVIDIA B200 in a data center — pulling rollouts from R2, running GRPO gradient updates, and publishing weight deltas back to R2.
+
+**The only shared layer between the two sides is the R2 bucket.** The Macs don't know where the GPU is; the GPU doesn't know where the Macs are. If any Mac goes offline mid-run, the trainer keeps learning from the rollouts already received.
+
+---
+
+## Reference Experiment Results
+
+**Model**: LFM2.5-8B-A1B (Liquid AI's MoE model, 8.3B total parameters, only ~1B activated per token)  
+**Task**: PaperSearchQA (PSQA) — given a question, search papers, answer and cite the source  
+**Hardware**: 14 Apple Silicon Macs + 1 B200
+
+| Metric | Before Training | After Training |
+|---|---|---|
+| cover-EM pass@1 | 0.29 | **0.63** |
+| cover-EM pass@8 | — | **~0.83** |
+| Search rate | 0.22 | **0.85** |
+
+The search rate rising from 0.22 to 0.85 shows that the model didn't just learn how to answer — it learned to **proactively seek out answers**. pass@1 went from 0.29 to 0.63, more than doubling.
+
+---
+
+## System Architecture: The Core Decoupled Design
+
+```
+Mac Worker (MLX)          Cloudflare R2          GPU Trainer (slime/Megatron)
+     │                         │                          │
+     ├── generate rollout ──>  rollouts/          <──── pull rollout
+     │   (solve/search/gen)    (immutable record)         │
+     │                         │                    run GRPO step
+     ├── poll version ptr <──  current.json        ────> │
+     │                         │                          │
+     └── pull PULSE delta <──  versions/PULSE    <──── publish weight delta
+```
+
+### R2 Directory Structure
+
+```
+<run>/
+  rollouts/        ← immutable rollout records from each worker
+  current.json     ← current version pointer (trainer updates each step)
+  anchors/         ← full weight checkpoints
+  versions/        ← PULSE sparse deltas for each version
+```
+
+Workers poll `current.json` and only pull a delta when the version number advances. A newly joined Mac pulls the most recent anchor plus all subsequent deltas to reconstruct the current weights, then begins producing rollouts.
+
+---
+
+## Three Key Technical Decisions
+
+### 1. PULSE — Sparse Lossless Weight Delta
+
+Transmitting the full 8B model weights every step is impractical. PULSE only transmits **sparse lossless deltas** between anchor checkpoints:
+
+- Anchor: a full weight snapshot saved every N steps
+- Delta: sparse difference between two anchors, much smaller in size
+- Worker reconstruction path: most recent anchor + all subsequent deltas
+
+This makes the network overhead of pulling new weights on a Mac acceptable, even across continents.
+
+### 2. DPPO Gate — Off-Policy Correction
+
+When a Mac generates a rollout, it uses the weight version current at that time. By the time the rollout is uploaded to the trainer, the weights may have been updated several steps — this is the off-policy problem.
+
+`trainer/dppo_gate.py` implements a DPPO (Decoupled PPO) correction gate: before performing a PPO step, the trainer applies importance sampling correction using the logprobs recorded by the worker, filters out rollouts whose staleness exceeds a threshold, and then performs a dual-clip PPO update.
+
+This is the core mechanism that prevents asynchronous multi-worker training from diverging.
+
+### 3. Staleness Filtering + Rollout Reuse
+
+The trainer applies two layers of filtering to each batch of rollouts:
+
+- **Staleness filtering**: rollouts that differ too much from the current weight version are discarded
+- **Reuse filtering**: if a given question already has enough rollouts, additional ones are not consumed
+
+This balances utilization of the Mac fleet against learning efficiency of the trainer.
+
+---
+
+## Quick Start
+
+### What You Need
+
+- Each Mac: `uv` (Python package manager), Apple Silicon (any model)
+- Cloudflare R2 bucket + S3 token (free tier is sufficient)
+- At least one CUDA GPU (A100/H100 for the 1.5B quickstart, B200 for the 8B reference experiment)
+
+### Mac-Side Test (No GPU Required)
+
+```bash
+# Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Clone and install dependencies
+git clone https://github.com/PluralisResearch/stoa
+cd stoa
+uv sync --extra worker --extra data
+
+# Configure R2
+cp .r2env.example ~/.r2env && chmod 600 ~/.r2env
+$EDITOR ~/.r2env   # fill in bucket / access_key / secret_key
+
+# Local end-to-end test (2 groups, 4 samples, 128 tokens)
+uv run python worker/run_local_e2e.py 2 4 128
+```
+
+This step runs Qwen2.5-1.5B on GSM8K rollouts, verifies R2 reads and writes, and requires no trainer GPU.
+
+### Full Run (Trainer + Mac Fleet)
+
+```bash
+# Trainer side (slime/Megatron container)
+DRL_RUN=my-gsm8k DRL_PULSE_PLANE=bf16 bash envs/gsm8k/run_qwen25_gsm8k_decoupled.sh
+
+# Each Mac
+DRL_RUN=my-gsm8k DRL_PULSE_PLANE=bf16 bash worker/run_dRL_worker_gsm8k.sh
+```
+
+Both sides use the same `DRL_RUN` name and R2 bucket, and Macs join the fleet automatically. Machines can be added or removed at any time.
+
+### Reproducing the Reference Experiment (8B PaperSearchQA)
+
+The complete recipe is in [`runs/psqa-decoupled/REPRODUCE.md`](https://github.com/PluralisResearch/stoa/blob/main/runs/psqa-decoupled/REPRODUCE.md). The LFM2 slime plugin is included in the repo; the trainer uses the public slime base, so the curve can be reproduced (though exact checkpoints are not reproducible due to the stochasticity inherent in off-policy RL).
+
+### Renting Macs
+
+If you don't have 14 Macs, you can rent them:
+- [Scaleway](https://www.scaleway.com/)
+- [Flow Swiss](https://flow.swiss/)
+- [AWS EC2 Mac](https://aws.amazon.com/ec2/instance-types/mac/) (minimum 24-hour dedicated host)
+
+---
+
+## Why This Experiment Matters
+
+### Breaking the "RL = Lots of GPUs" Assumption
+
+The core conclusion of this experiment: **the largest volume of computation in RL post-training (rollout generation) does not require GPUs**. Apple Silicon Macs running inference via MLX are efficient enough to serve as effective rollout producers.
+
+The part that truly needs GPU — gradient updates — is concentrated on a single high-end card (B200). That card spends most of its time doing effective learning rather than running inference itself.
+
+### Asynchronous Decoupling Is Viable
+
+14 Macs are unsynchronized, don't wait for each other, and can go offline at any time — the trainer doesn't care, it keeps consuming rollouts that have already arrived. This "coordination-free" design dramatically reduces operational complexity.
+
+### Cross-Continental Latency Is Acceptable
+
+From Paris to Dublin to Toronto, crossing the Atlantic, network latency is not low. But PULSE delta compression plus R2 as the intermediary layer brings weight transfer bandwidth overhead into an acceptable range. Rollout uploads are asynchronous and block no one.
+
+---
+
+## Other Related Projects from Pluralis Research
+
+| Project | Stars | Description |
+|---|---|---|
+| **node0** | 96 | Protocol Learning decentralized pre-training initiative: users contribute compute to collaboratively train a 7.5B model |
+| **agora** | 29 | Collaborative training library |
+| **AsyncPP** | 23 | Asynchronous pipeline parallelism optimization |
+| **AsyncMesh** | 4 | AsyncMesh implementation |
+
+stoa is the component in this ecosystem focused on RL post-training; node0 is more oriented toward decentralized collaboration at the pre-training stage.
+
+---
+
+## Technical Limitations and Current Status
+
+The README explicitly notes: **Proof of concept, not production-hardened**.
+
+Several practical limitations:
+- Current adapters have only been validated on GSM8K and PaperSearchQA
+- The trainer must be in the `/root/dRL` directory (hardcoded path in the scripts)
+- The Mac side depends on MLX and only supports Apple Silicon
+- The B200 GPU was used for the reference experiment; lower-end GPUs are supported but have not been systematically tested
+
+A production-grade release is promised, but the timeline is unspecified.
+
+---
+
+## Core Assessment
+
+The value of this experiment lies not in "14 Macs being cheaper than GPUs" (they are not necessarily cheaper), but in demonstrating an architectural possibility: **the computation of RL training can be distributed across heterogeneous, dispersed, low-reliability hardware**, as long as the decoupled design is sound.
+
+The combination of PULSE delta + Cloudflare R2 + staleness filtering constitutes a prototype of a distributed training infrastructure that requires no central coordination.
+
+If this architecture matures, it means that individual researchers with a few Macs on hand could participate in RL post-training experiments on 8B-scale models, without needing to apply for GPU cluster resources. That lowering of the barrier is itself worth paying attention to.
+
+---
+
+## Reference Resources
+
+- **stoa**: [PluralisResearch/stoa](https://github.com/PluralisResearch/stoa)
+- **Reproduction guide**: [runs/psqa-decoupled/REPRODUCE.md](https://github.com/PluralisResearch/stoa/blob/main/runs/psqa-decoupled/REPRODUCE.md)
+- **MLX**: [ml-explore/mlx](https://github.com/ml-explore/mlx)
+- **slime**: [THUDM/slime](https://github.com/THUDM/slime)
+- **GRPO**: DeepSeekMath, [arxiv.org/abs/2402.03300](https://arxiv.org/abs/2402.03300)
+- **DPPO**: Qi et al., [arxiv.org/abs/2602.04879](https://arxiv.org/abs/2602.04879)
+- **LFM2.5-8B-A1B**: Liquid AI Foundation Model
 
 © 2026 Author: Mycelium Protocol

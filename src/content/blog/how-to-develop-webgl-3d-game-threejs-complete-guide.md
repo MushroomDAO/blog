@@ -1,6 +1,8 @@
 ---
 title: "如何开发一个 WebGL 游戏：逆向拆解 messenger.abeto.co 的完整技术栈"
+titleEn: "How to Build a WebGL Game: Reverse-Engineering the Full Stack Behind messenger.abeto.co"
 description: "通过逆向分析一款真实上线的卡通风格 WebGL 多人游戏，拆解 Three.js r180、postprocessing、Svelte 5、WebSocket 的完整技术架构，给出可落地的开发路线图。"
+descriptionEn: "A reverse-engineering analysis of a real shipping cartoon-style WebGL multiplayer game, breaking down the full technical architecture of Three.js r180, postprocessing, Svelte 5, and WebSocket — plus an actionable development roadmap."
 pubDate: 2026-06-16
 category: "Tech-Experiment"
 tags: ["WebGL", "Three.js", "游戏开发", "Svelte", "postprocessing", "WebSocket", "前端"]

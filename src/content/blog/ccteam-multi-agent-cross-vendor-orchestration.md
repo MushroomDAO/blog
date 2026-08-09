@@ -2,6 +2,7 @@
 title: "ccteam：用 8 个 MCP 工具把 Claude、Codex、Grok、Kimi 编成一支真正的编程团队"
 titleEn: "ccteam: 8 MCP Tools to Turn Claude, Codex, Grok, and Kimi into a Real Coding Team"
 description: "ccteam 是一个 Rust 写的守护进程，让你现有的编程 Agent 跨厂商协作——Claude 规划，Codex 苦干，Grok 快速回答，Kimi 批量便宜处理，Telegram/飞书/浏览器统一指挥，本地优先无云依赖。"
+descriptionEn: "ccteam is a Rust daemon that lets your existing coding agents collaborate across vendors — Claude plans, Codex grinds, Grok answers fast, Kimi handles batch work cheaply — all controlled from Telegram, Feishu, or a browser. Local-first, no cloud dependency."
 pubDate: "2026-07-21"
 updatedDate: "2026-07-21"
 category: "Tech-Experiment"
@@ -297,5 +298,298 @@ Rust 写的守护进程本身是对的选择：常驻后台，低资源，跨重
 - **编排指南**：[docs/orchestration.md](https://github.com/firstintent/ccteam/blob/main/docs/orchestration.md) · [中文版](https://github.com/firstintent/ccteam/blob/main/docs/orchestration-cn.md)
 - **用法手册**：[docs/usage.md](https://github.com/firstintent/ccteam/blob/main/docs/usage.md) · [中文版](https://github.com/firstintent/ccteam/blob/main/docs/usage-cn.md)
 - **Marketplace**：[firstintent/ccteam-hub](https://github.com/firstintent/ccteam-hub)
+
+© 2026 Author: Mycelium Protocol
+
+<!--EN-->
+
+> **GitHub**: [firstintent/ccteam](https://github.com/firstintent/ccteam)  
+> **Language**: Rust · **License**: MIT · **Stars**: 79  
+> **Install**: `curl -sSL https://raw.githubusercontent.com/firstintent/ccteam/main/install.sh | sh`
+
+---
+
+## 1. The Problem: You Have Five Great Coding Agents, and They Don't Know Each Other
+
+Over the past two years, five genuinely useful coding CLIs have emerged: Claude Code, Codex, Grok, OpenCode, and Kimi. Each is excellent, but each assumes it is the only terminal — one context, no colleagues.
+
+The result is you alt-tabbing: pasting context into Codex, checking whether Claude has replied, then forwarding results to Grok for a review. **You have become the message bus.**
+
+ccteam's fix is not to build another framework that wraps everything — each vendor's tool is already good and evolving weekly. It only provides the missing **connective tissue**: identity, routing, dispatch guarantees, a cost ledger, and cross-machine execution. It lets these agents know each other, know how to find each other, and know whether a task is done.
+
+---
+
+## Architecture: One Daemon, 8 MCP Tools
+
+After installation, ccteam starts a Rust daemon on your machine and registers the same set of MCP tools across all the CLIs you already have:
+
+```bash
+ccteam config   # register MCP with Claude/Codex/Grok/Kimi/OpenCode
+ccteam start    # start the daemon
+```
+
+**8 tools, available in any connected session:**
+
+| Tool | Purpose |
+|---|---|
+| `session_spawn` | Start a new session (specify vendor/model/task) |
+| `session_dispatch` | Dispatch additional tasks to an existing session |
+| `session_collect` | Collect session results |
+| `session_list` | List all sessions and their individual costs |
+| `session_stop` | Stop a specified session |
+| `status` | View vendor capabilities + routing notes for the current host |
+| `chat_send_file` | Send a file to a session |
+| `screenshot` | Take a screenshot |
+
+**You don't need to memorize these tool names** — just say what you want in natural language, and the session calls them itself:
+
+```
+"Hand the RFC-12 implementation to codex, run it in the background, report the diff and test results when done"
+→ session_spawn{vendor:"codex", task:"...", title:"impl"} then wait for notification
+
+"Ask grok what's wrong with this stack trace, wait for its answer"
+→ session_spawn{vendor:"grok", wait_seconds:120, ...} with inline waiting
+```
+
+---
+
+## The Session Model
+
+Each session has a persistent ID (`s1`, `s2`, `s47`...), survives daemon restarts, and can be resumed or extended at any time. All state lives in `.ccteam/` as plain files, visible in `git status`.
+
+```
+your-repo/
+  .ccteam/          ← session state, cost ledger, routing
+  .claude/
+    agents/         ← personas you choose to install
+    settings.local.json  ← ccteam only writes here, never touches settings.json
+```
+
+**Projects are bound to hosts.** Each project is registered to one machine (local or satellite); sessions automatically run on that machine — spawn a session in a GPU-box project and the tests run on the GPU box, while transcripts and costs remain in your main console.
+
+---
+
+## Three Control Modes
+
+**1. Telegram / Feishu IM**
+
+Settings → IM, paste a bot token, and the chat window becomes your console. Completion notifications, HITL `[approve] [deny]` buttons, and generated files all appear in the same thread. Assign tasks at midnight, close your laptop and sleep, check results in the morning.
+
+```
+/cd my-project          # switch project
+/new codex              # start a codex session
+@s2 run the test suite  # talk directly to a specific session
+/status                 # check team status and costs
+```
+
+**2. Browser UI (LAN)**
+
+`http://<LAN-IP>:7331/?token=…` is a chat shell, not a dashboard. Each session has its own Chat tab, delegation tree, cost pill, and marketplace.
+
+**3. Inside a Claude Session, Orchestrate in Natural Language**
+
+This is the most fundamental usage. Any Claude session connected to ccteam requires no additional installation — just say:
+
+```
+Spawn a codex session, have it implement RFC-12 and run the tests;
+report back when green.
+
+Plan this refactor, then delegate: codex implements, grok profiles
+the hot path in parallel, kimi sweeps the rename across the repo.
+Collect everything into one summary.
+
+Spawn a claude reviewer on s2's diff — I'm not merging until it signs off.
+```
+
+---
+
+## Three Core Orchestration Patterns
+
+### Plan → Build → Gate
+
+```
+[Claude s1 lead]
+  → session_spawn codex s2: "implement RFC-12, run tests, report diff summary"
+  ← completion notification: files changed, tests green
+  → git diff (review the code yourself, not have the AI read it aloud)
+  → session_spawn claude s3: "review this diff — MERGE or BLOCK with reasons"
+  ← verdict: MERGE, no blockers
+  → stop s3; keep s2 for follow-ups
+```
+
+The lead said two sentences total; two sessions from different vendors handled the implementation and review, with every hop recorded in the ledger.
+
+### Grind + Probe
+
+Codex runs long tasks (implementation, migration, mechanical refactoring) while Grok gives you a quick second opinion in parallel. By the time Codex finishes, you already know from Grok where the bottleneck is.
+
+```
+session_spawn{vendor:"codex", task:"migrate auth module to OAuth2", title:"grind"}
+session_spawn{vendor:"grok", task:"profile this hot path", wait_seconds:120, title:"probe"}
+```
+
+### Bulk on Budget
+
+The repetitive, mechanical 80% of work fans out to Kimi (low cost); judgment and planning tasks are reserved for Claude.
+
+```
+Kimi × N: sweep all 47 modules for deprecated API calls, fix each
+Claude: review the collected diff and decide which 3 are too risky to merge
+```
+
+---
+
+## Routing: Who Does What, Based on Facts Not Guesses
+
+The `status` tool returns the real state of each vendor on this machine (installed / authenticated / within budget) — no assumptions:
+
+```
+# one status call shows
+Vendors on host "my-mac":
+  claude-code  ready (claude-opus-4-8)
+  codex        ready (sol-max)
+  grok         not_ready — grok CLI not found
+  kimi         ready (k2)
+
+Daily budget: claude $12/$30, codex $8/$30, kimi $2.40/$20
+```
+
+Routing decisions are stored in plain text files that you write and the AI reads:
+
+```markdown
+# ~/.ccteam/routing.md
+
+| Task type | Vendor / model | Why |
+|---|---|---|
+| Long refactors, migrations | codex / sol-max / high | grinds without wobbling |
+| Quick second opinion | grok / default / low | minute-scale answers |
+| Final review before merge | claude / opus / high | catches what builder rubber-stamps |
+| Repetitive mechanical work | kimi / k2 / low | cheap, sufficient |
+```
+
+A project-level `.ccteam/routing.md` fully overrides the global config (no merging). `status` passes the selected file verbatim to any session of any vendor — every planner sees exactly the same text.
+
+---
+
+## Multi-Machine: Turn a Laptop Behind NAT into a GPU Box
+
+```bash
+# control machine
+ccteam satellite create --name gpu-box
+# → generates a join token
+
+# satellite machine (even behind NAT)
+ccteam satellite join --token <token>
+# → actively dials out to the daemon
+```
+
+The project is bound to `gpu-box`; when you spawn a session, tests run on that machine. Switching machines means switching projects — the ledger and team view remain in the main console.
+
+Current limitation: satellite machines only support Claude sessions; Codex/Grok/Kimi run on the daemon's local machine.
+
+---
+
+## Security Design
+
+**No prompt injection**: Personas are loaded through vendor-native mechanisms (`.claude/agents/`); task text is forwarded verbatim — no wrapper layer secretly inserting content.
+
+**No screen scraping**: State comes from transcripts and structured events, not terminal output parsing.
+
+**Local-first**: `~/.ccteam` plus your repo — no cloud components, your code never leaves your machine.
+
+**Budget enforcement without hard-kills**: When a per-vendor daily limit is reached, new spawns are rejected with an explanation — running sessions are not killed.
+
+**Runaway fan-out prevention**: Guardrails reject recursive dispatch that exceeds limits with explicit reasons — not silent truncation.
+
+**Idempotency keys**: `session_spawn`/`session_dispatch` support idempotency keys so retries do not create duplicate sessions — critical on unreliable connections.
+
+---
+
+## HITL (Human-in-the-Loop) Approval
+
+```
+session_spawn{vendor:"codex", approval_mode:true, task:"..."}
+```
+
+When Codex encounters a tool call requiring permission during execution, the request arrives via IM as `[approve] [deny]` buttons. Deny goes through the vendor's native gate, blocking that tool call without killing the session.
+
+---
+
+## Marketplace
+
+```bash
+# install a persona from ccteam-hub (sha256 verified, verbatim copy)
+ccteam marketplace install team-brain
+```
+
+Once the `team-brain` persona is installed, a single session becomes a "chief of staff" — with established routing habits and review gates, you say one thing and it splits and delegates the work itself.
+
+The Claude Code plugin (vendor-native) delegates installation to Claude Code itself; ccteam only touches two settings keys.
+
+---
+
+## Installation and Verification
+
+```bash
+# one-line install (Rust binary → ~/.local/bin, no sudo required)
+curl -sSL https://raw.githubusercontent.com/firstintent/ccteam/main/install.sh | sh
+
+# register MCP with each vendor CLI
+ccteam config
+
+# verify
+ccteam doctor --verify-mcp   # 8 tools, 0 stubs → exit code 0
+claude mcp list               # server "ccteam" → ✔ Connected
+
+# start
+ccteam start
+# → prints http://<lan-ip>:7331/?token=...
+```
+
+Build from source (requires Rust + Node):
+```bash
+git clone https://github.com/firstintent/ccteam && cd ccteam && make install
+```
+
+---
+
+## Comparison with Heinu1 / PR-Daemon
+
+These tools have some overlap in goals but occupy different positions:
+
+| | **ccteam** | **Heinu1** | **PR-Daemon** |
+|---|---|---|---|
+| Control channel | Telegram/Feishu/Browser | WeChat | GitHub PR |
+| Orchestration layer | Agents dispatching to each other | Human → Claude (single session) | Multi-round PK review |
+| Cross-vendor | ✅ Claude/Codex/Grok/Kimi | ✗ (Claude only) | ✅ (DeepSeek/Opus/Codex) |
+| Cross-machine | ✅ Satellite machines | ✗ | ✗ |
+| Local-first | ✅ | ✅ | ✅ |
+| Typical use case | One lead Claude directing a team of specialists | Phone-controlled remote Claude | Automated PR review pipeline |
+
+All three can coexist: ccteam manages agent-to-agent collaboration, Heinu1 manages human-computer interaction, and PR-Daemon manages the review pipeline.
+
+---
+
+## Key Assessment
+
+ccteam solves a real pain point: **you have multiple good agents but are manually playing the role of router**. Its positioning is clear — it does not replace each vendor's tool, only provides the coordination layer those tools lack.
+
+A Rust daemon is the right choice: always running in the background, low resource use, stable across restarts. The interface of 8 MCP tools is small enough that any existing Claude session can connect and immediately start using them — no learning curve.
+
+The three most valuable design decisions:
+1. **Routing is your plain text, not framework magic** — you can version-control your team strategy.
+2. **Delivery guarantees are explicit** — at-least-once notification, idempotency keys, a child's turn is written to disk before the parent is notified.
+3. **Budget visibility without hard-kills** — delegation incurs cost, fees are tracked in real time in the ledger, and when the daily limit is reached new tasks are rejected but current work is not interrupted.
+
+79 stars, but worth watching today. Once Satellite execution covers all vendors, multi-machine agent teams will be truly mature.
+
+---
+
+## References
+
+- **GitHub**: [firstintent/ccteam](https://github.com/firstintent/ccteam)
+- **Orchestration guide**: [docs/orchestration.md](https://github.com/firstintent/ccteam/blob/main/docs/orchestration.md) · [Chinese](https://github.com/firstintent/ccteam/blob/main/docs/orchestration-cn.md)
+- **Usage manual**: [docs/usage.md](https://github.com/firstintent/ccteam/blob/main/docs/usage.md) · [Chinese](https://github.com/firstintent/ccteam/blob/main/docs/usage-cn.md)
+- **Marketplace**: [firstintent/ccteam-hub](https://github.com/firstintent/ccteam-hub)
 
 © 2026 Author: Mycelium Protocol

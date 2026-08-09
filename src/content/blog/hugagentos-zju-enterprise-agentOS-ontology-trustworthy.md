@@ -2,6 +2,7 @@
 title: "HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面"
 titleEn: "HugAgentOS: ZJU's Enterprise AgentOS Using Domain Ontology as the Agent Reasoning Control Plane"
 description: "浙大 REAL 实验室开源 HugAgentOS，把领域本体（Domain Ontology）从知识存储升级为可执行控制平面——三引擎 Harness（技能+编排+记忆）+ 策略门控执行 + 可追溯审计，一行命令本地部署，无需 Docker。"
+descriptionEn: "Zhejiang University's REAL Lab open-sources HugAgentOS, upgrading domain ontology from a knowledge store to an executable control plane — a three-engine harness (skills + orchestration + memory), policy-gated execution, and traceable audit. One command to deploy locally, no Docker required."
 pubDate: "2026-07-21"
 updatedDate: "2026-07-21"
 category: "Tech-Experiment"
@@ -177,5 +178,178 @@ HugAgentOS 的独特性在于**本体 + 可信推理**这条线。如果你需�
 - **快速开始**：[document/en/getting-started/quick-start.md](https://github.com/ZJU-REAL/HugAgentOS/blob/main/document/en/getting-started/quick-start.md)
 - **架构概览**：[document/en/architecture/overview.md](https://github.com/ZJU-REAL/HugAgentOS/blob/main/document/en/architecture/overview.md)
 - **AgentScope 2.0**：[github.com/modelscope/agentscope](https://github.com/modelscope/agentscope)
+
+© 2026 Author: Mycelium Protocol
+
+<!--EN-->
+
+> **GitHub**: [ZJU-REAL/HugAgentOS](https://github.com/ZJU-REAL/HugAgentOS)  
+> **Institution**: Zhejiang University REAL Lab  
+> **Live Demo**: [app.hugagentos.com](https://app.hugagentos.com)  
+> **License**: Apache 2.0 + Additional Terms (prohibits competitive multi-tenant SaaS operation)  
+> **Install**: `curl -fsSL https://raw.githubusercontent.com/ZJU-REAL/HugAgentOS/main/install.sh | bash`
+
+---
+
+## One-Line Summary
+
+HugAgentOS is the operating system foundation for enterprise agents. Its core idea is: **upgrade domain ontology from a knowledge store to an executable control plane** — every inference step and every action plan an agent takes must pass through ontological semantic alignment and policy gating. Violations don't fail silently; they return the rule, evidence, and remediation guidance.
+
+This is not yet another LLM-wrapped chat application, nor a simplistic RAG wrapper. It answers a harder question: **how do you make enterprise AI agents trustworthy?**
+
+---
+
+## Why "Ontology" Is the Key
+
+Most agent frameworks handle "knowledge" this way: dump it into a vector store, retrieve it at query time, stuff it into a prompt. This has a fundamental flaw — the model, when making decisions, has no idea which concepts are business red lines, which actions are out of compliance, or which relationships cross permission boundaries.
+
+HugAgentOS's approach is to turn the domain ontology into a **control layer that is effective at both compile time and runtime**:
+
+| Phase | Role of Ontology |
+|---|---|
+| **Build time** | Validates that new Skills, Tools, and Sub-Agents conform to domain concepts and action contracts |
+| **Startup time** | Semantic alignment — injects relevant domain rules into the Skill and Memory engines |
+| **Runtime** | Every candidate plan passes through deterministic rule checks; high-risk actions require evidence review; violations return specific reasons and remediation suggestions |
+| **Post-execution** | Audit and execution records become versioned ontology proposals, subject to human review and rollback |
+
+This governance loop is not meant to slow agents down — it exists to make agents auditable, trustworthy, and governable in enterprise contexts.
+
+---
+
+## Architecture: Three-Engine Harness + Ontology Control Plane
+
+```
+User / Channel
+  ↓
+ChatRun + Streaming Workflow
+  ↓
+Three-Engine Harness ───────────────────────────────────────
+  Skill Engine ←→ Orchestration Engine ←→ Memory Engine
+                        ↓
+                  Candidate Plans / Actions
+                        ↓
+          ┌─── Deterministic Ontology Rule Check ←── Domain Ontology Control Plane
+          │           │
+     Low-risk compliant   Checkpoint / High-risk
+          ↓           ↓
+       Gated Execution    Evidence Review → Approved → Gated Execution
+                       ↓
+                  Violation: Reject + Rule + Evidence + Remediation Guidance
+                        ↓
+                  Traceable Audit → Governance Ontology Proposal → Human Review
+```
+
+**Skill Engine**: Loads ontology-validated structured instructions and scripts, sourced from built-in Skills, the Marketplace, or personal Skills.  
+**Orchestration Engine**: ReAct tool orchestration, Plan Mode planning, SSE streaming responses, supports deep thinking mode.  
+**Memory Engine**: Three-tier memory — L1 relational (SQLite/PG) + optional Milvus vector + optional Neo4j graph.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Agent Runtime | AgentScope 2.0, ReAct, MCP |
+| Backend | Python, FastAPI, SQLAlchemy, Alembic |
+| Frontend | React 19, TypeScript, Vite, Zustand, Ant Design |
+| Data / State | SQLite or PostgreSQL 15, in-process state or Redis 7, local file |
+| Optional Memory | Milvus 2.4, Neo4j 5 Community, mem0 |
+| Deployment | Single-command local install, Docker Compose, Nginx |
+
+---
+
+## Core Features (Community Edition Full List)
+
+**Agentic Chat + Plan Mode**: SSE streaming output, ReAct tool orchestration, deep thinking, resumable streams, traceable citations.
+
+**Private Knowledge Base RAG**: Document ingestion and chunking, hybrid vector + keyword retrieval, optional reranking, knowledge isolation.
+
+**Personal Sub-Agents**: Create focused-role sub-agents, collaborate via auto-routing or `@` mention.
+
+**MCP Tool Ecosystem**: 8 built-in tools — web search, page scraping, knowledge retrieval, charts, reports, batch processing, automation, and Skill management.
+
+**Agent Skills**: Structured instructions + scripts to extend agents, with three sources: built-in Skills, Skill Marketplace, and personal Skills.
+
+**Automation + Batch Processing**: Create scheduled tasks in natural language, or apply a workflow in batch to Excel/Word/file lists.
+
+**Sandbox + Artifacts**: Local subprocess or lightweight container sandbox, generates charts, reports, Office files, web pages, and data canvases.
+
+**Three-Tier Personal Memory**: L1 personal profile stored in relational database, optional Milvus vector memory and Neo4j graph memory.
+
+**Data Canvas**: Inspect and edit structured data directly within the conversation; analysis and results remain in the same workspace.
+
+---
+
+## One-Command Install (Personal / Single Machine, No Docker)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ZJU-REAL/HugAgentOS/main/install.sh | bash
+```
+
+What the installer does:
+1. Clones to `~/.hugagent/source`
+2. Creates an isolated Python environment and installs dependencies
+3. Builds the web application
+4. Opens the first-run wizard (create admin account + connect LLM API)
+
+Requirements: Python 3.11+, Node.js 20+, Git, any OpenAI-compatible API or local model. On Linux, a Rust toolchain is also required when no precompiled ripgrep wheel is available.
+
+```bash
+# Start again
+~/.hugagent/venv/bin/hugagent
+# Default address http://127.0.0.1:3001, default username and password are both admin
+```
+
+Docker Compose deployment (team/production): see [docker-compose.md](https://github.com/ZJU-REAL/HugAgentOS/blob/main/document/en/deployment/docker-compose.md).
+
+---
+
+## Community Edition vs Enterprise Edition
+
+| Community Edition (CE) | Enterprise Edition Additions |
+|---|---|
+| Agentic Chat, Plan Mode, personal sub-agents | Teams, organizational agents, permission matrix |
+| 8 general MCP tools, personal Skills + Marketplace | Industry data tools, organizational governance, Skill review |
+| Private knowledge base + three-tier personal memory | Public knowledge management, memory audit |
+| Automation, batch processing, personal data canvas | Organizational billing, usage reports, canvas collaboration |
+| Lightweight sandbox, local files | Persistent sandbox, cloud storage, offline delivery |
+| Local accounts + Powered-by attribution | SSO, compliance audit, full white-label |
+
+CE is already a complete personal agent workspace. The CE restriction is that it cannot be operated externally as a competitive SaaS (Apache additional terms); self-use and internal enterprise deployment are unrestricted.
+
+---
+
+## Comparison with Similar Open-Source Platforms
+
+| | **HugAgentOS** | **Open WebUI** | **AnythingLLM** | **Dify** |
+|---|---|---|---|---|
+| Institution | ZJU REAL | Open-source community | Mintplex Labs | Langgenius |
+| Core Differentiator | Ontology governance control plane | Model frontend UI | Document RAG workspace | Workflow visualization |
+| Enterprise Governance | ✅ Ontology gating + audit | ✗ | Basic | Basic |
+| Knowledge Graph Memory | ✅ Neo4j optional | ✗ | ✗ | ✗ |
+| Agent Runtime | AgentScope 2.0 | Basic | Basic | LangChain |
+| No-Docker Install | ✅ | ✅ | ✅ | Required |
+
+HugAgentOS's uniqueness lies in the **ontology + trustworthy reasoning** line. If what you need is "enterprise compliance + audit + multi-team collaboration + knowledge governance," it has more systematic consideration than other frameworks. If you just need a good local RAG chat, Open WebUI is lighter.
+
+---
+
+## Core Assessment
+
+This project's bet is: **the core barrier to enterprise AI adoption is not capability — it is trust and governance**. Most current agent frameworks treat governance as "after-the-fact monitoring." HugAgentOS makes ontology governance a "deterministic check before execution" — this is a difference at the architectural level.
+
+ZJU REAL Lab has the academic background for this direction (ontology engineering and knowledge graphs are REAL's traditional research areas), but turning academic research into a deployable product is another matter entirely. It now has a React 19 frontend, a one-click install script, and complete documentation (both Chinese and English) — markers of engineering maturity.
+
+50 Stars, just open-sourced two days ago, but the architectural thinking is worth watching — especially for enterprises under pressure to answer "how does AI meet compliance requirements?"
+
+---
+
+## References
+
+- **GitHub**: [ZJU-REAL/HugAgentOS](https://github.com/ZJU-REAL/HugAgentOS)
+- **Live Demo**: [app.hugagentos.com](https://app.hugagentos.com)
+- **Quick Start**: [document/en/getting-started/quick-start.md](https://github.com/ZJU-REAL/HugAgentOS/blob/main/document/en/getting-started/quick-start.md)
+- **Architecture Overview**: [document/en/architecture/overview.md](https://github.com/ZJU-REAL/HugAgentOS/blob/main/document/en/architecture/overview.md)
+- **AgentScope 2.0**: [github.com/modelscope/agentscope](https://github.com/modelscope/agentscope)
 
 © 2026 Author: Mycelium Protocol

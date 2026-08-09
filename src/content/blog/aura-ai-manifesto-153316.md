@@ -1,6 +1,6 @@
 ---
 title: "Aura AI 宣言：让每一个人平等拥有 AI"
-titleEn: "aura-ai-manifesto"
+titleEn: "The Aura AI Manifesto: Equal Access to AI for Everyone"
 description: "AI 平权、Token Free、本地优先——我们不想让资本垄断的故事在 AI 领域重演。Aura AI 是 Mycelium Protocol 旗下的开源组织，致力于让每个人平等、低成本、安全地使用 AI。"
 descriptionEn: "AI equity, Token Free, Local First — Aura AI is an open-source organization under Mycelium Protocol, dedicated to making AI accessible to everyone equally, affordably, and privately."
 pubDate: "2026-04-17"
@@ -146,6 +146,149 @@ AI 在这个协作单元里不是一次性工具，而是一个**持续演化的
 ---
 
 *Aura AI · Mycelium Protocol · 开源 · 本地优先 · AI平权*
+
+---
+
+![Mycelium Network](https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202602121145231.jpg)
+
+<!--EN-->
+
+*by Aura AI · Mycelium Protocol*
+
+---
+
+## What We Are Doing
+
+We see a familiar script playing out again in the AI space.
+
+> **Aura AI is an open-source organization under Mycelium Protocol, focused on AI equity. It operates three major operating systems: Sin90 (Personal AI OS), Cos72 (Community and SME AI OS), and CityOS (City AI OS), with the goal of giving individuals, communities, and cities equal access to AI capabilities.**
+>
+> **Local-first principle: processing data on local devices means faster handling of images and videos (no server uploads required), private notes, company finances, and personal thoughts never leave your device, and users retain complete data sovereignty — in contrast to the monopolistic commercial AI model dominated by platforms.**
+>
+> **A typical scenario to consider: the information contained in one cubic millimeter of brain tissue would overwhelm the largest current AI models, and social context (alumni networks, industry accumulation, credit networks) is humanity's deepest moat. Aura AI believes that humans are irreplaceable in three dimensions: social context, emotional judgment, and need articulation.**
+
+Early subsidies, free usage, everyone cheers. Once the platform achieves monopoly: merchants are hit with high commissions, and consumers only see what the platform wants them to see. Meituan and DiDi have walked this road. The winners of the food delivery wars were neither users nor merchants — they were capital.
+
+**We do not want this to happen again in the AI space.**
+
+This is why we built **Aura AI**, an open-source organization under Mycelium Protocol, focused on three things:
+
+---
+
+## Three Core Principles
+
+### AI Equity
+
+Every person, regardless of income, geography, or education, has an equal right to use AI.
+
+AI should not be a privilege tool for the few. It should be like water, like electricity — public infrastructure.
+
+### Token Free
+
+Access AI compute at a price approaching tap water — not held hostage by platform pricing.
+
+We use open-source capabilities to build digital services, driving the cost of tokens toward infrastructure cost rather than platform profit extraction.
+
+### Local First
+
+Your data, processed on your device.
+
+Local deployment means: faster processing of images and videos (no need to upload to a server); your private notes, company finances, and personal thoughts never leave your device; you have complete sovereignty over your own data.
+
+---
+
+## What We Do: Two Columns
+
+### Column One: Weekly Local AI Evaluation Plans
+
+> You want to run AI locally, but you don't know where to start — or the solution you set up last month is already outdated today.
+
+AI is advancing too fast. The best local deployment solution today may be superseded by a new model in three days. Even power users find it hard to keep up with all the changes comprehensively.
+
+We update weekly, giving you answers across four dimensions:
+
+**Hardware**: Mobile, PC, community, and geek scenarios each have their own dedicated recommendations.
+
+**Model matching**: Voice input, OCR, image processing, video generation, personal knowledge base — based on your hardware and operating system, we provide the best model combination for that week.
+
+**Software solutions**: Geeks can build it themselves; regular users get a foolproof one-click deployment package.
+
+**Cost tools**: Built-in three-year amortized monthly cost calculator to help you make rational decisions about whether to buy a particular device.
+
+---
+
+### Column Two: Human-AI Coexistence — Ongoing Research
+
+> If you are the head of an organization, what is the hardest question for you to answer right now?
+
+Not "can AI be used." But: **How many people should I lay off, and how much AI should I bring in?**
+
+There is no universal answer to this question, but it demands a serious framework.
+
+Our research direction is called "Human-AI Coexistence": from both academic and practical perspectives, we continuously analyze where the boundaries lie that AI cannot replace humans, and how humans can find their place in the age of AI.
+
+Research outputs are not purely theoretical. We will provide actionable decision-making tools — for individuals as well as organizations.
+
+---
+
+## Who We Are
+
+**Mycelium Protocol** is a protocol organization. Mycelium is the most efficient decentralized network in nature — trees in forests exchange nutrients and information through mycelium networks, with no center, every node both contributing and benefiting. This is our understanding of digital public goods.
+
+**Aura AI** is the sub-organization under Mycelium focused on AI equity. Our products are digital public goods: open-source, usable, foolproof.
+
+Mycelium is simultaneously building three operating systems:
+- **Sin90** — Personal AI Operating System
+- **Cos72** — Community and SME AI Operating System
+- **CityOS** — City AI Operating System
+
+From an individual, to a community, to a city, we hope every layer can equally possess AI capabilities.
+
+---
+
+## A Thought Experiment
+
+Imagine you have an operations person who can do three times the work, responds 24/7, has a global perspective, and tracks all data in real time — reaching national top-tier quality.
+
+Would you be willing to pay an extra 1,000 RMB per month to have this operations person?
+
+This is not science fiction. This operations unit is not one person, but a **human + AI collaboration unit**.
+
+### What Humans Bring, AI Can Never Replicate
+
+In this operations unit, humans are not responsible for execution, but for three things that AI structurally lacks:
+
+**Social context.** Who your friends are, which school you attended, which industry you have been in — behind these identities lies thousands of years of accumulated human credit, reputation, and social capital. AI has no social network, no position embedded in real relationships. The information contained in one cubic millimeter of brain tissue alone would overwhelm the largest current AI models, let alone the social context carried by an entire human brain. This is humanity's deepest moat.
+
+**Emotional judgment.** Good or bad, like or dislike, right or wrong — these judgments have no standard answers, because every person's answer is different. AI can analyze sentiment, but it cannot make emotional judgments. Wherever value trade-offs, interpersonal feelings, and moral boundaries are involved, human judgment is irreplaceable.
+
+**Need articulation.** Humans created AI for the purpose of making it serve humans. The source of needs always lies on the human side. The people who can make full use of AI are those with enough imagination to structure their desires — they know what they want, and can translate it into a language AI can understand.
+
+### What AI Brings Is Role, Iteration, and Evolution
+
+In this collaboration unit, AI is not a one-time tool, but a **continuously evolving role**:
+
+- **Role**: Not a "query engine," but a collaborative partner with context, memory, and the ability to proactively respond — like a customer service agent, an assistant, an analyst, embedded in your real workflow
+- **Iteration**: Every interaction updates its understanding of you, continuously adjusting, becoming more attuned to you the more you use it
+- **Evolution**: When your organization expands into new businesses and scenarios change, it can synchronously update its capability boundaries and grow together with you
+
+This is the true value of a human + AI unit: **human social power multiplied by AI execution power** — the two multiplied, not added.
+
+---
+
+## Join Us
+
+We are not a platform. We are builders of public goods.
+
+Subscribe to Column One for the latest local AI deployment plans every week.  
+Follow Column Two for ongoing updates on human-AI coexistence research and analysis.  
+Join the community, tell us your most painful scenario — we will prioritize solving it.
+
+> Digital wellbeing belongs to everyone.
+
+---
+
+*Aura AI · Mycelium Protocol · Open Source · Local First · AI Equity*
 
 ---
 

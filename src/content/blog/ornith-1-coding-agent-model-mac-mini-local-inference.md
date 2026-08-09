@@ -2,6 +2,7 @@
 title: "Ornith-1.0：自改进 Coding Agent 模型，9B 打 35B，Mac mini 本地跑 60 t/s"
 titleEn: "Ornith-1.0: Self-Improving Coding Agent Model — 9B Beats 35B, 60 t/s on Mac mini"
 description: "deepreinforce-ai 开源 Ornith-1.0：RL 同时优化脚手架和解答，9B 在 Terminal-Bench 和 NL2Repo 上碾压 Qwen3.5-35B，35B MoE 超过 Qwen3.5-397B。APEX-I-Compact MTP GGUF + 16GB Mac mini 实测 60 t/s，总结/排版远超原版模型，无无限重复问题。"
+descriptionEn: "deepreinforce-ai open-sources Ornith-1.0: RL jointly optimizes scaffold and answer — the 9B outperforms Qwen3.5-35B on Terminal-Bench and NL2Repo; the 35B MoE surpasses Qwen3.5-397B. APEX-I-Compact MTP GGUF runs at 60 t/s on a 16 GB Mac mini with dramatically better summaries and formatting than the base model — no infinite-repetition issues."
 pubDate: "2026-07-22"
 updatedDate: "2026-07-22"
 category: "Tech-Experiment"
@@ -290,5 +291,291 @@ Ornith-1.0 最值得关注的不是某一个基准分数，而是它的**参数�
 - **APEX-I 量化版**：APEX-I/Ornith-1.0-35B-Compact-GGUF（HuggingFace）
 - **mlx-dspark**：[ARahim3/mlx-dspark](https://github.com/ARahim3/mlx-dspark) — Apple Silicon 投机解码加速
 - **llama.cpp**：[ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)
+
+© 2026 Author: Mycelium Protocol
+
+<!--EN-->
+
+> **GitHub**: [deepreinforce-ai/Ornith-1](https://github.com/deepreinforce-ai/Ornith-1) · **License**: MIT  
+> **Blog**: [deep-reinforce.com/ornith.html](https://deep-reinforce.com/ornith.html)  
+> **Models**: 9B Dense / 35B MoE / 397B MoE · **Context**: 256K tokens  
+> **Base**: Gemma 4 (9B) + Qwen 3.5 (35B / 397B)
+
+---
+
+## The One-Sentence Summary
+
+Ornith-1.0 doesn't just train "how to answer questions" — it also trains "how to find the path to the answer," using RL to simultaneously optimize the problem-solving scaffold and the answer itself. The result: a 9B model outperforms 35B on multiple coding benchmarks, and 35B outperforms 397B.
+
+---
+
+## Core Innovation: Self-Improving Scaffold Training
+
+Most Coding LLMs' RL training objective is: given a problem, output the correct answer, reward correctness.
+
+Ornith-1.0's training objective is: **simultaneously optimize the scaffold that generates the answer**. The scaffold is the control flow the Agent uses during problem-solving — which files to search, in what order to try things, and when to backtrack.
+
+Through joint optimization, the model learns **better search trajectories** rather than simply memorizing answer formats. This explains why its gains are especially large on benchmarks requiring multi-step reasoning and codebase navigation (NL2Repo, SWE Atlas) — these tasks depend most heavily on scaffold quality.
+
+---
+
+## Benchmark Data
+
+### Ornith-1.0-9B vs Larger Models
+
+| Benchmark | Ornith-9B | Qwen3.5-9B | **Qwen3.5-35B** | Gemma4-31B |
+|---|---|---|---|---|
+| Terminal-Bench 2.1 (Terminus-2) | **43.1** | 21.3 | 41.4 | 42.1 |
+| Terminal-Bench 2.1 (Claude Code) | **40.6** | 18.9 | 38.9 | — |
+| SWE-bench Verified | **69.4** | 53.2 | 70.0 | 44.2 |
+| SWE-bench Pro | 42.9 | 31.3 | **44.6** | 27.6 |
+| NL2Repo | **27.2** | 16.2 | 20.5 | 10.3 |
+| SWE Atlas QnA | **17.9** | 9.2 | 13.2 | — |
+
+The 9B surpasses Qwen3.5-35B (3.9× larger in parameter count) on Terminal-Bench and NL2Repo.
+
+### Ornith-1.0-35B vs Flagship Models
+
+| Benchmark | Ornith-35B | Qwen3.5-35B | Qwen3.6-35B | **Qwen3.5-397B** |
+|---|---|---|---|---|
+| Terminal-Bench 2.1 (Terminus-2) | **64.2** | 41.4 | 52.5 | 53.5 |
+| Terminal-Bench 2.1 (Claude Code) | **62.8** | 38.9 | 49.2 | 48.6 |
+| SWE-bench Verified | 75.6 | 70.0 | 73.4 | **76.4** |
+| SWE-bench Pro | 50.4 | 44.6 | 49.5 | **51.6** |
+| NL2Repo | 34.6 | 20.5 | 29.4 | **36.8** |
+| SWE Atlas QnA | **37.1** | 13.2 | 15.5 | 20.4 |
+
+The 35B MoE comprehensively surpasses Qwen3.5-397B (11× larger) on Terminal-Bench.
+
+---
+
+## Hands-On Experience: Two Key Advantages
+
+### 1. No Infinite Repetition
+
+Many open-source Coding models fall into repetitive generation loops on long-context tasks — the same block of code or the same sentence output over and over until the token limit is hit. Ornith-1.0 showed no such behavior in comparable scenario testing.
+
+The likely explanation is scaffold training: the model has learned "when to stop the current search direction and move to the next one," rather than getting stuck in a loop on a dead-end path.
+
+### 2. Outstanding Summary and Formatting Quality
+
+For document organization and summarization tasks, Ornith-1.0's output quality far exceeds competing models of the same parameter count — clear structure, well-defined hierarchy, no loss of key information. This is also a byproduct of scaffold optimization: the model learned how to organize output structurally rather than dumping all content together.
+
+---
+
+## Four Model Variants
+
+| Checkpoint | Architecture | Format | Use Case |
+|---|---|---|---|
+| Ornith-1.0-9B | Dense (~9B) | BF16 | Single GPU training / fine-tuning |
+| Ornith-1.0-9B-GGUF | Dense (~9B) | GGUF quantized | llama.cpp / Ollama local inference |
+| Ornith-1.0-35B | MoE (35B) | BF16 | Full-precision multi-GPU inference |
+| Ornith-1.0-35B-FP8 | MoE (35B) | FP8 | Low-VRAM FP8 cards |
+| Ornith-1.0-35B-GGUF | MoE (35B) | GGUF quantized | llama.cpp / Ollama |
+| Ornith-1.0-397B | MoE (397B) | BF16 | Multi-GPU node full-precision |
+
+The 35B uses MoE architecture (Mixture of Experts) — activated parameters are far fewer than total parameters, making inference much faster than a Dense model of the same nominal size, and making it the preferred choice for local deployment.
+
+---
+
+## Mac mini Installation Guide
+
+Two paths — choose based on your needs.
+
+### Path A: mlx-dspark + Ornith-9B (Recommended for 16 GB Mac mini)
+
+**Characteristics**: Pure Apple Silicon native MLX, speculative decoding acceleration, runs the 9B model, low memory footprint.
+
+```bash
+# Install
+pip install mlx-dspark
+
+# Start API service (OpenAI + Anthropic dual protocol)
+mlx-dspark serve --model mlx-community/Ornith-1.0-9B-8bit
+
+# Point Claude Code at this local model
+mlx-dspark claude
+```
+
+**Performance** (M4 Pro, 8-bit quantization):
+- Code generation: ~61 tok/s (normal), ~93 tok/s (copy-heavy scenarios when editing existing code)
+- Math reasoning: 2.44× speedup
+- Fully compatible with Anthropic API — `mlx-dspark claude` seamlessly redirects Claude Code to the local model, automatically restoring cloud config on exit
+
+```bash
+# Optional parameters
+mlx-dspark serve \
+  --model mlx-community/Ornith-1.0-9B-8bit \
+  --max-batch 4 \      # 4 concurrent requests
+  --kv-bits 8 \        # compress KV cache (essential for long contexts)
+  --no-thinking        # disable <think> blocks (faster, suitable for simple tasks)
+```
+
+---
+
+### Path B: llama.cpp + APEX-I-Compact GGUF + MTP (35B, requires more memory)
+
+**Characteristics**: Runs 35B MoE via layer offloading on 16 GB unified memory, with MTP (Multi-Token Prediction) to accelerate inference.
+
+**User-tested configuration**: 16 GB Mac mini, 20 layers offloaded to GPU, 64K context, **average 60 t/s**.
+
+#### Install llama.cpp
+
+```bash
+# Homebrew (recommended, auto-compiles with Metal acceleration)
+brew install llama.cpp
+
+# Or manual build (for latest MTP support)
+git clone https://github.com/ggerganov/llama.cpp
+cd llama.cpp
+cmake -B build -DLLAMA_METAL=ON
+cmake --build build --config Release -j$(sysctl -n hw.ncpu)
+```
+
+#### Download APEX-I-Compact GGUF
+
+```bash
+# Install huggingface-cli
+pip install huggingface_hub
+
+# Download APEX-I quantized version (35B Compact Q4_K_M)
+huggingface-cli download \
+  APEX-I/Ornith-1.0-35B-Compact-GGUF \
+  --local-dir ~/models/ornith-35b \
+  --include "*.Q4_K_M.gguf"
+```
+
+#### Start Service (reproducing the user's 60 t/s configuration)
+
+```bash
+llama-server \
+  -m ~/models/ornith-35b/Ornith-1.0-35B-Q4_K_M.gguf \
+  -ngl 20 \          # offload 20 layers to GPU (Metal)
+  -c 65536 \         # 64K context
+  --mtp-draft 2 \    # Multi-Token Prediction: predict 2 extra tokens per step
+  -t $(sysctl -n hw.ncpu) \  # CPU thread count
+  --port 8080 \
+  --host 0.0.0.0
+```
+
+**Parameter reference**:
+
+| Parameter | Meaning | Tuning Advice |
+|---|---|---|
+| `-ngl 20` | GPU layer count | 16 GB Mac: 20–24 layers; 24 GB Mac: 32+ layers |
+| `-c 65536` | Context window | Larger = more memory; start testing from 32K |
+| `--mtp-draft 2` | MTP prediction steps | 2–4; higher = faster but may reduce quality |
+| `-t 8` | CPU thread count | Generally set to physical core count |
+
+#### Connect to Claude Code / OpenAI Tools
+
+```bash
+# Set environment variables (pointing to local service)
+export OPENAI_BASE_URL="http://localhost:8080/v1"
+export OPENAI_API_KEY="local"
+
+# Or configure in any tool:
+# Base URL: http://localhost:8080/v1
+# Model: ornith-35b (llama-server auto-exposes the loaded model name)
+```
+
+---
+
+### Path C: Ollama (Simplest, for quick evaluation)
+
+```bash
+# Install Ollama
+brew install ollama
+ollama serve &
+
+# Pull and run Ornith GGUF
+ollama pull hf.co/deepreinforce-ai/Ornith-1.0-9B-GGUF
+ollama run hf.co/deepreinforce-ai/Ornith-1.0-9B-GGUF
+
+# Can also pull the 35B (requires more memory)
+ollama pull hf.co/deepreinforce-ai/Ornith-1.0-35B-GGUF
+```
+
+---
+
+## Inference Parameters
+
+Ornith-1.0 is a reasoning model; output includes `<think>...</think>` blocks by default.
+
+**Recommended sampling parameters** (to reproduce benchmark settings):
+```
+temperature = 1.0    # benchmark reproduction
+top_p       = 0.95
+top_k       = 20
+```
+
+**Recommended for daily use** (more stable):
+```
+temperature = 0.6
+top_p       = 0.95
+top_k       = 20
+```
+
+**Disable chain-of-thought** (speed priority):
+- mlx-dspark: `--no-thinking`
+- llama-server: add `/no_think` to the system prompt
+
+---
+
+## Running on a GPU Server with vLLM (Reference)
+
+```bash
+pip install vllm>=0.19.1
+
+# 35B MoE, single 80 GB A100 (or 2× 40 GB)
+vllm serve deepreinforce-ai/Ornith-1.0-35B \
+  --served-model-name Ornith-1.0 \
+  --tensor-parallel-size 2 \
+  --host 0.0.0.0 --port 8000 \
+  --max-model-len 262144 \
+  --gpu-memory-utilization 0.90 \
+  --enable-prefix-caching \
+  --enable-auto-tool-choice \
+  --tool-call-parser qwen3_xml \
+  --reasoning-parser qwen3 \
+  --trust-remote-code
+```
+
+The 9B Dense fits on a single 80 GB card; the 35B MoE requires 2× 40 GB (or 1× 80 GB — note MoE activation memory peaks).
+
+---
+
+## Relationship with mlx-dspark
+
+[mlx-dspark](https://github.com/ARahim3/mlx-dspark) is a speculative decoding acceleration library specifically targeting Apple Silicon, with native support for Ornith-1.0:
+
+| Model | Acceleration Method | Best Speedup | Recommended Scenario |
+|---|---|---|---|
+| Ornith-1.0-9B (8-bit) | DSpark | 2.44× math, 3.6× code editing | Mac local primary |
+| Gemma-4 12B (8-bit) | DSpark | 2.11× code | Vision tasks |
+| Qwen3-14B (8-bit) | DSpark | 1.92× code | Chinese-language scenarios |
+
+Key feature of mlx-dspark: the same port simultaneously exposes an OpenAI API and an Anthropic Messages API; `mlx-dspark claude` can directly switch Claude Code to the local model, restoring the original config on exit.
+
+---
+
+## Core Assessment
+
+The most noteworthy aspect of Ornith-1.0 is not any single benchmark score, but its **anomalous parameter-efficiency curve** — 9B beats 35B, 35B beats 397B — which is rare among open-source Coding models.
+
+The explanation traces back to the training approach: using RL to optimize search trajectories rather than just the final answer teaches smaller models to "apply effort in the right places," rather than relying on brute-force parameter scaling.
+
+For Mac mini users, **Path B (APEX-I-Compact GGUF + MTP + 20-layer offload)** is currently the highest cost-efficiency local inference solution: the quantized 35B MoE runs at 60 t/s on 16 GB unified memory with 64K context — sufficient to drive most Agentic Coding workflows.
+
+---
+
+## Reference Resources
+
+- **GitHub**: [deepreinforce-ai/Ornith-1](https://github.com/deepreinforce-ai/Ornith-1)
+- **Blog**: [deep-reinforce.com/ornith.html](https://deep-reinforce.com/ornith.html)
+- **HuggingFace Models**: deepreinforce-ai/Ornith-1.0-{9B,35B,397B}
+- **APEX-I Quantized**: APEX-I/Ornith-1.0-35B-Compact-GGUF (HuggingFace)
+- **mlx-dspark**: [ARahim3/mlx-dspark](https://github.com/ARahim3/mlx-dspark) — Apple Silicon speculative decoding acceleration
+- **llama.cpp**: [ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)
 
 © 2026 Author: Mycelium Protocol
