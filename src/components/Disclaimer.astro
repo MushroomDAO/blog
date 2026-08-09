@@ -1,0 +1,56 @@
+---
+// 每篇文章底部（Footer 之上）展示的定位声明 + 免责声明。
+// 内容修改请同步 pipeline/m2/renderer/wechat-renderer.js 里的 generateDisclaimer()。
+---
+
+<section class="disclaimer">
+	<h3>关于本站 · 免责声明</h3>
+	<p>
+		🍄 Mushroom Research Blog 是非营利、免费公开的个人科技观察博客与同名公众号，不接受商业合作、不代表任何企业或机构立场，也不谋求商业利益。我们以个人视角客观中立地记录和分析
+		AI、Web3 等领域的最新模型发布与技术动态——不止转述新闻标题或二手信息，而是给出有独立思考的深入分析，希望帮更多人获得有价值的一手科技认知。
+	</p>
+	<ol>
+		<li>本站文章均为作者基于公开信息的个人研究与观点整理，不代表文中提及的任何公司、产品、模型的官方立场，未与其构成商业关联或合作关系。</li>
+		<li>科技行业信息更新极快，我们尽力保证内容准确、及时，但不对完整性、实时性做绝对保证，具体请以相关企业/项目官方公告为准。</li>
+		<li>文中引用的第三方商标、产品名称、图片、数据等版权归原权利人所有，我们会尽量注明来源；如你认为存在版权疑问或侵权，请通过下方邮箱联系我们，收到通知后会尽快核实处理（更正、加注来源或删除）。</li>
+		<li>文章内容仅为技术科普与个人观点，不构成投资、法律或其他专业建议，据此进行任何决策的后果需自行判断和承担。</li>
+	</ol>
+	<p class="contact">📮 侵权 / 勘误 / 合作咨询：<a href="mailto:hello@mushroom.cv">hello@mushroom.cv</a></p>
+</section>
+
+<style>
+	.disclaimer {
+		max-width: 1400px;
+		margin: 2em auto 3em;
+		padding: 1.5em 2em;
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		border-radius: 12px;
+		color: rgb(var(--gray));
+		font-size: 0.82em;
+		line-height: 1.7;
+	}
+	.disclaimer h3 {
+		margin: 0 0 0.6em;
+		font-size: 1.05em;
+		color: rgb(var(--gray-dark));
+	}
+	.disclaimer ol {
+		margin: 0.6em 0;
+		padding-left: 1.4em;
+	}
+	.disclaimer li {
+		margin: 0.4em 0;
+	}
+	.disclaimer .contact {
+		margin: 0.8em 0 0;
+	}
+	.disclaimer a {
+		color: rgb(var(--accent));
+	}
+	@media (max-width: 768px) {
+		.disclaimer {
+			padding: 1.2em;
+			margin: 1.5em 0.5em 2em;
+		}
+	}
+</style>

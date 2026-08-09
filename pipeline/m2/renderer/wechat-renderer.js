@@ -151,8 +151,16 @@ function generateFooterBanner(theme) {
   return `
 <div style="margin-top:40px;padding:24px;background:${theme.gradient};border-radius:12px;text-align:center;color:#fff;">
   <div style="font-size:24px;margin-bottom:8px;">🍄</div>
-  <div style="font-size:16px;font-weight:bold;margin-bottom:8px;">Mycelium</div>
+  <div style="font-size:16px;font-weight:bold;margin-bottom:4px;">Mycelium Protocol</div>
+  <div style="font-size:12px;opacity:0.85;margin-bottom:10px;">数字公共物品 · 开源免费无许可</div>
   <div style="font-size:13px;opacity:0.95;line-height:1.6;">
+    <span style="margin:0 4px;">🎵 表达者</span>
+    <span style="opacity:0.6;">|</span>
+    <span style="margin:0 4px;">🎨 创造者</span>
+    <span style="opacity:0.6;">|</span>
+    <span style="margin:0 4px;">🔨 建设者</span>
+  </div>
+  <div style="margin-top:8px;font-size:12px;opacity:0.85;">
     <span style="margin:0 4px;">🪵 Infras</span>
     <span style="opacity:0.6;">|</span>
     <span style="margin:0 4px;">🦠 Protocols</span>
@@ -160,9 +168,20 @@ function generateFooterBanner(theme) {
     <span style="margin:0 4px;">🕸️ Networks</span>
   </div>
   <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.3);font-size:12px;opacity:0.9;">
-    📍 blog.mushroom.cv
+    📍 blog.mushroom.cv · Apache 2.0
   </div>
 </div>
+`;
+}
+
+// 生成免责声明（正文之后、Mycelium 品牌条之前）
+function generateDisclaimer(theme) {
+  return `
+<section style="margin-top:32px;padding:16px 18px;background:${theme.bgGray};border-radius:8px;font-size:12px;line-height:1.7;color:#888;">
+  <div style="font-weight:bold;margin-bottom:6px;color:#666;">关于本号 · 免责声明</div>
+  <div>🍄 Mushroom Research Blog 是非营利、免费公开的个人科技观察博客与同名公众号，不接受商业合作、不代表任何企业或机构立场，也不谋求商业利益。我们以个人视角客观中立地记录和分析 AI、Web3 等领域的最新模型发布与技术动态，希望帮更多人获得有价值的一手科技认知，而非碎片化的信息噪音。</div>
+  <div style="margin-top:6px;">本文为作者基于公开信息的个人研究与观点整理，不代表文中提及公司/产品/模型的官方立场；文中引用的第三方商标、图片、数据等版权归原权利人所有，如有疏漏或侵权，请联系 <span style="color:${theme.primary};">hello@mushroom.cv</span>，我们会尽快核实处理。内容仅为技术科普，不构成投资、法律等专业建议。</div>
+</section>
 `;
 }
 
@@ -198,7 +217,13 @@ async function render(markdown, themeName = null, wechatClient = null) {
       console.warn('Frontmatter parse error:', e.message);
     }
   }
-  
+
+  // Strip <!--EN--> bilingual section — WeChat only needs Chinese content
+  const enDivider = content.indexOf('<!--EN-->');
+  if (enDivider >= 0) {
+    content = content.slice(0, enDivider);
+  }
+
   // 清理标题
   const cleanedTitle = cleanTitle(frontmatter.title);
   
@@ -399,11 +424,14 @@ async function render(markdown, themeName = null, wechatClient = null) {
   // 添加顶部 watermark
   const headerWatermark = generateHeaderWatermark();
   
+  // 添加免责声明（正文之后，品牌条之前）
+  const disclaimer = generateDisclaimer(theme);
+
   // 添加底部 banner
   const footerBanner = generateFooterBanner(theme);
-  
+
   // 包裹外层容器
-  html = `<section style="background:rgba(0,0,0,0.02);border-radius:12px;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;">${headerWatermark}${html}${footerBanner}</section>`;
+  html = `<section style="background:rgba(0,0,0,0.02);border-radius:12px;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;">${headerWatermark}${html}${disclaimer}${footerBanner}</section>`;
   
   return {
     frontmatter,
