@@ -1,0 +1,12 @@
+{
+  "name": "hello-container-test",
+  "private": true,
+  "devDependencies": {
+    "wrangler": "^4.114.0",
+    "@cloudflare/workers-types": "^5.20260726.1",
+    "typescript": "^5.9.0"
+  },
+  "dependencies": {
+    "@cloudflare/containers": "^0.3.7"
+  }
+}

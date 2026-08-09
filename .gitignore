@@ -40,8 +40,5 @@ source/*/
 # Claude Code local skill mirror — .agents/skills/ is the tracked source
 .claude/
 
-# source-scanner run log
-source/.scan.log
-
-# newsletter container scratch test (ships its own node_modules, 225MB)
-pipeline/newsletter/hello-container-test/
+# run logs (already-tracked logs stay tracked)
+*.log

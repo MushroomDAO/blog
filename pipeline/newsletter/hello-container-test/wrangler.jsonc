@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hello-container-test",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-01",
+  "containers": [
+    {
+      "class_name": "HelloContainer",
+      "image": "./Dockerfile",
+      "instance_type": "lite",
+      "max_instances": 1
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      { "name": "HELLO_CONTAINER", "class_name": "HelloContainer" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["HelloContainer"] }
+  ]
+}
