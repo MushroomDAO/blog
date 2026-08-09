@@ -1,5 +1,6 @@
 ---
 title: "OpenAI Codex 技能市场的入口：一个小仓库打开 295 个 WorkBuddy 技能——含 47 个微信/腾讯自动化"
+titleEn: "The Doorway to OpenAI Codex's Skill Marketplace: 295 WorkBuddy Skills from One Small Repo"
 description: "gaixianggeng/codex-skills 是一个只有 2 个 star 的小仓库，却包含两个极具价值的 Codex 技能：init-project-workspace 初始化工作区，workbuddy-skills-navigator 打开一个 295 技能的 AI Agent 市场。这个市场里有 47 个微信/腾讯相关技能、159 个 AI/Agent 工具，全部通过 Git + Python CLI 管理。本文拆解技能格式、安装方式和 WorkBuddy 发现的具体内容。"
 pubDate: "2026-07-29"
 category: "Tech-Experiment"

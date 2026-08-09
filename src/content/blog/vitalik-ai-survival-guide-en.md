@@ -1,6 +1,6 @@
 ---
 title: "Vitalik's AI Survival Guide: Local Models Are a Trap, Three-Layer Defense Is the Way Out"
-titleEn: "vitalik-ai-survival-guide"
+titleEn: "Vitalik's AI Survival Guide: Local Models Are a Trap, Three-Layer Defense Is the Way Out"
 description: "Ethereum founder's hands-on test: local LLMs can't even write decent code. Real privacy requires ZK-API, mixnets, TEEs, plus human-AI confirmation firewalls."
 descriptionEn: "Vitalik Buterin's practical guide to privacy-preserving AI: why local models fall short and how to build a secure multi-layer defense system."
 pubDate: "2026-04-04"

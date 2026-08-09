@@ -1,6 +1,6 @@
 ---
 title: "继续等Mac Studio还是投入AMD怀抱Or云GPU？"
-titleEn: "mac-studio-vs-amd-vs-cloud-gpu-local-ai"
+titleEn: "Keep Waiting for the Mac Studio, Switch to AMD, or Just Rent Cloud GPUs?"
 description: "2026年本地AI推理硬件选购完全指南：Mac Mini M4 Pro、Mac Studio M4 Max / M3 Ultra、AMD Minisforum MS-S1 MAX、云GPU（AutoDL/RunPod）四路横评，TTS/ASR/ImageGen/VideoGen/TxtGen/VibeCoding六大场景HuggingFace Top-3模型推荐与成本对比。"
 descriptionEn: "2026 local AI inference hardware guide: Mac Mini M4 Pro, Mac Studio M4 Max / M3 Ultra, AMD Minisforum MS-S1 MAX, and cloud GPU (AutoDL/RunPod) head-to-head, with HuggingFace Top-3 model picks for TTS, ASR, ImageGen, VideoGen, TxtGen, and VibeCoding."
 pubDate: "2026-04-24"

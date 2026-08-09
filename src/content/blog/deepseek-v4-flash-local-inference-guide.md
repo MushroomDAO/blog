@@ -1,6 +1,6 @@
 ---
 title: "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册"
-titleEn: "deepseek-v4-flash-local-inference-guide"
+titleEn: "Running DeepSeek V4-Flash Locally: A Hardware Selection and Deployment Handbook"
 description: "DeepSeek V4-Flash 284B MoE 模型本地推理完全指南：为什么「13B 激活参数」不等于 13B 内存需求，四档硬件方案对比，以及 Mac M4 Ultra、多卡 GPU、vLLM 的实操步骤。"
 descriptionEn: "Complete guide to running DeepSeek V4-Flash locally: why '13B active params' doesn't mean 13B memory, four hardware tiers compared, and step-by-step for Mac M4 Ultra, multi-GPU, and vLLM."
 pubDate: "2026-04-24"

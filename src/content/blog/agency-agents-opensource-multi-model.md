@@ -1,6 +1,6 @@
 ---
 title: "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构"
-titleEn: "agency-agents-opensource-multi-model"
+titleEn: "Agency Agents: 50+ Specialized AI Roles in an Open-Source, Multi-Model Agency"
 description: "深度解析 msitarzewski/agency-agents：9个部门、50+专业AI角色，从前端巫师到安全审计员，直接集成 Claude Code、Cursor、Copilot，将AI从「通用助理」升级为「专业协作网」。"
 descriptionEn: "Deep dive into msitarzewski/agency-agents: 9 departments, 50+ specialized AI roles, directly integrated with Claude Code, Cursor, and Copilot — evolving AI from a generalist assistant to a professional collaboration network."
 pubDate: "2026-04-22"

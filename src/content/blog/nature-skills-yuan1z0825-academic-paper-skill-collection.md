@@ -1,6 +1,6 @@
 ---
 title: "nature-skills：学术论文全流程 18 个 AI Skill，两个月 3.4 万星"
-titleEn: "nature-skills-yuan1z0825-academic-paper-skill-collection"
+titleEn: "nature-skills: 18 AI Skills for the Whole Academic Paper Workflow, 34k Stars in Two Months"
 description: "袁一哲（Yuan1z0825）发起、开源社区共同维护的 Nature 级学术论文 AI Skill 合集，18 个技能覆盖图表、润色、写作、投稿、审稿回复、引用核验、数据管理、PPT、专利转化、文献检索全链路，Apache 2.0，发布两个月 GitHub 3.4 万星。npx skills add Yuan1z0825/nature-skills 一键安装，支持 Claude Code / Codex / OpenClaw / OpenCode / Hermes。"
 descriptionEn: "nature-skills is a community-built collection of 18 AI skills for the full academic paper workflow, started by Yuan Yizhe. Skills cover figures, polishing, writing, review response, citation verification, data management, PPT, patents, and literature pipelines. Apache 2.0. 34,000 GitHub stars in two months. One-line install: npx skills add Yuan1z0825/nature-skills. Works with Claude Code, Codex, OpenClaw, OpenCode, Hermes."
 pubDate: "2026-08-08"

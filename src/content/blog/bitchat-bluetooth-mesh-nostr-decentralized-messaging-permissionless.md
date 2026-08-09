@@ -1,5 +1,6 @@
 ---
 title: "bitchat：蓝牙 Mesh + Nostr 双轨制去中心化通信协议深度拆解"
+titleEn: "bitchat: A Deep Dive into Dual-Track Decentralized Messaging over Bluetooth Mesh and Nostr"
 description: "31k star 的开源项目 bitchat 提出了一种双轨制消息架构——本地蓝牙 Mesh 覆盖无网络场景，Nostr 协议覆盖全球触达——从协议设计、加密实现到 Courier 投递系统，逐层剖析这套无账号、无服务器的通信方案。"
 pubDate: "2026-07-27"
 category: "Tech-Experiment"

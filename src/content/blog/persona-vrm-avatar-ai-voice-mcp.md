@@ -1,6 +1,6 @@
 ---
 title: "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex"
-titleEn: "persona-vrm-avatar-ai-voice-mcp"
+titleEn: "Persona: Give Your AI Voice Assistant a Moving Face, Wired to Codex over MCP"
 description: "xikhar 开源了 Persona，一个跨平台桌面 VRM 角色应用，监听 Codex/ChatGPT 的音频输出，实时驱动嘴型同步和肢体动画。通过 MCP 暴露动画控制接口，AI Agent 可以直接调用 play_animation 让角色表达情绪。3天 680 星，MIT，支持 Linux/Windows/macOS。"
 descriptionEn: "xikhar open-sources Persona, a cross-platform desktop VRM character that listens to Codex/ChatGPT audio output and drives real-time lip sync and body animation. MCP server at port 47831 lets AI agents trigger named animations. 680 stars in 3 days, MIT, Linux/Windows/macOS."
 pubDate: "2026-07-31"

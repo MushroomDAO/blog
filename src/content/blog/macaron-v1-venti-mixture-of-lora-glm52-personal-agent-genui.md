@@ -1,5 +1,6 @@
 ---
 title: "Macaron-V1-Venti：Mixture-of-LoRA + GLM-5.2，个人智能体 + Generative UI 的新范式"
+titleEn: "Macaron-V1-Venti: Mixture-of-LoRA Plus GLM-5.2, a New Shape for Personal Agents and Generative UI"
 description: "MindLab Research 发布的 Macaron-V1-Venti 是一个 748B 参数的开源旗舰模型：744B 的 GLM-5.2 基础模型加上四个 1B 的 LoRA 专家，通过 L0 路由实现 Chat/Agent/Coding/GenUI 的任务分发。本文深度拆解 MoL 架构、LongStraw 百万 token RL 训练基础设施、MindForge 递归自我改进循环，以及 MIT 授权的开放权重。"
 pubDate: "2026-07-27"
 category: "Research"

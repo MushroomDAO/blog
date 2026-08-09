@@ -1,5 +1,6 @@
 ---
 title: "934MB 适配器，27B 基座，95% 代码通过率——BTL-3 的 LoRA 炼成路"
+titleEn: "934MB Adapter, 27B Base, 95% Code Pass Rate: How BTL-3's LoRA Was Trained"
 description: "BTL-3 用 rank-32 LoRA 在 Qwen3.6-27B 上做强化学习后训练，用不到 1GB 的适配器权重，在编程智能体和结构化工具调用上打出 88.5% BFCL / 95% HumanEval 的成绩。本文深入 adapter_config.json 和训练设计，拆解 LoRA 怎么让一个 27B 模型变成专职 Agent。"
 pubDate: 2026-07-26
 heroImage: "../../assets/images/btl-3-lora-adapter-qwen-programming-agent-tool-calling-training-banner.jpg"

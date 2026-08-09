@@ -1,5 +1,6 @@
 ---
 title: "Cindy：跨 Harness 持久记忆的本地优先开源 AI Agent，纠正一次、处处生效"
+titleEn: "Cindy: A Local-First Open-Source AI Agent with Cross-Harness Memory — Correct It Once, It Sticks Everywhere"
 description: "Cindy 是一个 Electron + React Native 的本地优先 AI Agent，把 Claude Code、Codex 等多个 Harness 统一在一个客户端里，共享跨 Harness 的持久记忆、Skills 和 Orca 多 Agent 编排，Apache-2.0 开源，可用自己的 Claude Code/Codex 订阅直接接入。"
 pubDate: "2026-07-27"
 category: "Tech-Experiment"

@@ -1,6 +1,6 @@
 ---
 title: "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南"
-titleEn: "minimax-h3-comfyui-open-source-video-generation-engineering-guide"
+titleEn: "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide"
 description: "MiniMax H3 于 2026-07-31 开源，是目前最强的开源视频生成模型之一：33B Omni Transformer，视频+原生立体声同步生成，支持 2K 分辨率、最长 15 秒、11 种语言。本文覆盖能力分析、硬件配置清单（消费卡/数据中心/Apple Silicon）、ComfyUI 快速上手、SGLang 生产部署和工程最佳实践。"
 descriptionEn: "MiniMax H3 (open-sourced 2026-07-31) is one of the strongest open-source video generation models: 33B Omni Transformer, synchronized native stereo audio, up to 2K resolution and 15 seconds. This guide covers capabilities, hardware requirements (consumer GPU / data center / Apple Silicon), ComfyUI quickstart, SGLang production deployment, and engineering best practices."
 pubDate: "2026-08-05"

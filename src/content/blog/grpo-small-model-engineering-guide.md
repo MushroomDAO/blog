@@ -1,6 +1,6 @@
 ---
 title: "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径"
-titleEn: "grpo-small-model-engineering-guide"
+titleEn: "A GRPO Engineering Guide for Small Models: Eighty Dollars of Training to Beat o3"
 description: "GRPO（Group Relative Policy Optimization）让小模型在垂直任务上碾压frontier大模型成为可能。本文整合 ART、ms-swift、OpenClaw-RL 等开源仓库，以及 ART·E（Qwen 2.5 14B超越o3，$80训练）、MCP·RL等6个真实工程案例，给出完整的工程路径：任务选择→数据构造→奖励函数设计→训练循环→监控与避坑。"
 descriptionEn: "GRPO (Group Relative Policy Optimization) makes it practical for small specialist models to outperform frontier LLMs on narrow tasks. This guide integrates ART, ms-swift, OpenClaw-RL, and six real engineering cases — including ART·E (Qwen 2.5 14B beats o3 for $80) and MCP·RL — covering the full path from task selection to reward design to training loop monitoring."
 pubDate: "2026-08-01"

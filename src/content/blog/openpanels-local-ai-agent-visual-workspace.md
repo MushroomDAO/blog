@@ -1,6 +1,6 @@
 ---
 title: "OpenPanels：给AI Agent装上本地可视化工作台，5个面板从写作到发布"
-titleEn: "openpanels-local-ai-agent-visual-workspace"
+titleEn: "OpenPanels: A Local Visual Workspace for AI Agents, Five Panels from Writing to Publishing"
 description: "mooqii 开源了 OpenPanels，一个本地优先的 AI Agent 可视化工作台，用 Rust 写成，MIT 授权。5个面板覆盖从知识管理、文档写作到排版发布的全流程，内置微信公众号草稿集成，以 agent skill URL 的方式接入任何 AI Agent。"
 descriptionEn: "mooqii open-sources OpenPanels, a local-first visual workspace for AI agents, written in Rust, MIT license. Five panels cover the full pipeline from knowledge management and document writing to typesetting and publishing — including built-in WeChat Official Account draft integration. Install as an agent skill via a single URL."
 pubDate: "2026-08-01"

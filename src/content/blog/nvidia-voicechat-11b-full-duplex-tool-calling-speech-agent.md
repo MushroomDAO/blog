@@ -1,6 +1,6 @@
 ---
 title: "NVIDIA VoiceChat 11B：第一个支持工具调用的开源全双工语音 Agent"
-titleEn: "nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent"
+titleEn: "NVIDIA VoiceChat 11B: The First Open-Source Full-Duplex Speech Agent with Tool Calling"
 description: "NVIDIA NemotronLabs 开源的 11B 端到端全双工语音模型，2026-08-03 发布，OpenMDW 1.1 研究许可。统一架构同时完成流式语音理解和语音生成，转轮延迟约 450ms，VoiceBench #2（开源全双工），史上第一个支持工具调用的开源全双工模型——边说话边触发工具，工具执行期间模型自动播放占位语音保持对话流畅。"
 descriptionEn: "NVIDIA NemotronLabs' open-source 11B end-to-end full-duplex speech model, released 2026-08-03, OpenMDW 1.1 research license. Unified architecture for simultaneous streaming speech understanding and generation. ~450ms turn-taking latency, VoiceBench #2 (open FD). First open full-duplex model to support tool calling — tools are called mid-conversation while the model speaks a hold message to keep the flow natural."
 pubDate: "2026-08-08"

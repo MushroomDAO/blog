@@ -1,5 +1,6 @@
 ---
 title: "Ling 3.0 Flash 初测：让人意外的编程模型——124B MoE，每 token 只激活 5B 参数"
+titleEn: "Ling 3.0 Flash First Look: A Surprisingly Good Coding Model — 124B MoE, Only 5B Active per Token"
 description: "蚂蚁集团 inclusionAI 于 7 月 23 日发布 Ling 3.0 Flash：124B MoE 架构，每 token 激活 5.1B 参数，256K 上下文，在 OpenRouter 永久免费。编程性能超预期，可通过 MLX 在 Mac 统一内存上本地运行。本文整理模型规格、技术架构、Mac 本地部署和 API 接入方式。"
 pubDate: "2026-07-29"
 category: "Tech-Experiment"

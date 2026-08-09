@@ -1,6 +1,6 @@
 ---
 title: "code-review-graph：给 AI 编程助手建一张本地代码关系图，中位数减少 65 倍 token 用量"
-titleEn: "code-review-graph-tirth8205-blast-radius-token-reduction"
+titleEn: "code-review-graph: A Local Code Graph for AI Assistants That Cuts Token Use 65x at the Median"
 description: "tirth8205 开源的本地代码智能图工具，29.5k stars，Python，MIT License。用 Tree-sitter 把代码库解析成函数/类/调用/测试的关系图，存储在 SQLite；代码审查时只把受影响的文件和调用链（Blast Radius）交给 AI，而不是整个代码库。六个真实仓库测试：中位数减少 65 倍 token 用量，最大 376 倍（fastapi）。支持 15+ AI 编程平台，30+ 编程语言，增量更新 2.5 秒。"
 descriptionEn: "tirth8205's local code intelligence graph, 29.5k stars, Python, MIT License. Tree-sitter parses your codebase into a function/class/call/test graph stored in SQLite. At review time, only the blast-radius files and call chains go to the AI — not the whole repo. Benchmarked across 6 real repositories: median 65× token reduction, up to 376× (fastapi). Supports 15+ AI coding platforms, 30+ languages, incremental updates in 2.5s."
 pubDate: "2026-08-09"

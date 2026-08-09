@@ -1,6 +1,6 @@
 ---
 title: "Pi 编程 Agent 缺什么，pi-muselinn-harness 就补什么"
-titleEn: "pi-muselinn-harness-kimi-code-subagents-goal-plan-tui"
+titleEn: "Whatever the Pi Coding Agent Lacks, pi-muselinn-harness Supplies"
 description: "pi-muselinn-harness 是一个 TypeScript 扩展包，把 Kimi Code 的核心子系统——Swarm 并行子 Agent、Goal 生命周期、Plan 模式、18 级权限链、Hooks 引擎、7 范围 Skills——移植进 Pi 编程 Agent。架构上做了 core/adapter 分离，23 个测试套件 660+ 断言，CI 覆盖 macOS/Ubuntu/Windows × Node 24/26。"
 descriptionEn: "pi-muselinn-harness is a TypeScript extension package that ports Kimi Code's core subsystems — Swarm parallel subagents, Goal lifecycle, Plan mode, 18-level permission chain, Hooks engine, 7-scope Skills — into the Pi coding agent. Core/adapter architecture split, 23 test suites with 660+ assertions, CI on macOS/Ubuntu/Windows × Node 24/26."
 pubDate: "2026-08-07"

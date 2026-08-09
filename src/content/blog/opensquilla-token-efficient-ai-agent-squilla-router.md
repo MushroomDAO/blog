@@ -1,6 +1,6 @@
 ---
 title: "OpenSquilla 0.5.2：同等预算，9× token 成本降低，靠的是本地 Agent 路由器"
-titleEn: "opensquilla-token-efficient-ai-agent-squilla-router"
+titleEn: "OpenSquilla 0.5.2: Same Budget, 9x Lower Token Cost, Thanks to a Local Agent Router"
 description: "OpenSquilla 把「这一步用哪个模型」的决策内化到 Agent 本身：SquillaRouter 是一个在设备上运行的 LightGBM+ONNX 分类器，每个 turn 评估复杂度后路由到最便宜的胜任模型，prompt 从不离开本机做这个决策。PinchBench 结果：分数持平（0.9251 vs 0.9255），成本从 $6.23 降到 $0.69，减少 89%。6535 stars，Apache 2.0，v0.5.2 稳定版。"
 descriptionEn: "OpenSquilla internalizes 'which model for this step' into the agent itself. SquillaRouter — an on-device LightGBM+ONNX classifier — scores each turn's complexity and routes to the cheapest capable model, prompt never leaves the machine for routing. PinchBench: score parity (0.9251 vs 0.9255 for Claude Opus 4.7), cost down from $6.23 to $0.69 — 89% reduction. 6,535 stars, Apache 2.0, v0.5.2 stable."
 pubDate: "2026-08-05"

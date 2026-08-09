@@ -1,5 +1,6 @@
 ---
 title: "Huabu：微软研究院造的画布 AI——把你和 Agent 的思考放在同一张无限画板上"
+titleEn: "Huabu: Microsoft Research's Canvas AI Puts You and Your Agent on One Infinite Whiteboard"
 description: "Huabu 是微软研究院开源的画布式人机协作框架，核心思路是把思维外化到可见的二维节点网络上，让 AI Agent 看到结构而不是只听最后一条指令，从而更好地理解意图。v0.9.1 新增外部 Agent 可直接读写 Space 节点、逐对话模型设置、桌面自动更新。MIT 授权，macOS Apple Silicon + Windows x64，TypeScript，66 stars。"
 pubDate: "2026-07-28"
 category: "Tech-Experiment"

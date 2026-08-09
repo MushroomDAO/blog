@@ -1,6 +1,6 @@
 ---
 title: "@cloudflare/computer：给每个 Agent 一台自己的电脑"
-titleEn: "cloudflare-computer-agent-runtime-isolate-container"
+titleEn: "@cloudflare/computer: Give Every Agent a Computer of Its Own"
 description: "Cloudflare 在 Agents Week 发布 @cloudflare/computer：让 Agent 在同一个虚拟文件系统里动态切换 Isolate（快、廉价）和 Container（完整 Linux），把 Durable Object 的水平无限扩展和容器的垂直能力合二为一。早期预览已开源，给 AI 编程/任务 Agent 提供新的计算基础。"
 descriptionEn: "@cloudflare/computer gives every AI agent its own virtual filesystem backed by SQLite and dynamically routes execution between cheap Isolates (Workers) and full Linux Containers — solving the fundamental scale problem of running 100M+ concurrent agents without spinning up a container for each one. Open-source early preview, part of Cloudflare Agents Week 2026."
 pubDate: "2026-08-05"

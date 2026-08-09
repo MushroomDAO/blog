@@ -1,6 +1,6 @@
 ---
 title: "TencentDB Agent Memory：腾讯云开源的团队级 Agent 记忆系统"
-titleEn: "tencentdb-agent-memory-team-level-symbolic-layered-memory"
+titleEn: "TencentDB Agent Memory: Tencent Cloud's Open-Source Team-Level Agent Memory System"
 description: "腾讯云 AI Agent 团队开源的记忆系统，17.9k stars，TypeScript。核心思路：符号短期记忆（Mermaid 状态图替代 verbose 工具日志，-61.38% token 用量）+ 分层长期记忆（L0 对话→L1 原子事实→L2 场景→L3 用户画像）。WideSearch 任务成功率 +51.52%，PersonaMem 准确率从 48% 升至 76%。支持 OpenClaw / Hermes Gateway，一行命令接入。"
 descriptionEn: "TencentCloud AI Agent team's open-source memory system, 17.9k stars, TypeScript. Core design: symbolic short-term memory (Mermaid state canvas replaces verbose tool logs, −61.38% token usage) + layered long-term memory (L0 Conversation → L1 Atom → L2 Scenario → L3 Persona). WideSearch success +51.52%, PersonaMem accuracy 48% → 76%. OpenClaw / Hermes Gateway integration, one-command install."
 pubDate: "2026-08-08"

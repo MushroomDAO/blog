@@ -1,6 +1,6 @@
 ---
 title: "OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth"
-titleEn: "open-connector-saas-auth-gateway-ai-agents"
+titleEn: "OpenConnector: Connect AI Agents to 1,000+ SaaS Apps Without Touching OAuth"
 description: "oomol-lab 开源了 OpenConnector，一个 AI Agent 专用的认证网关，Composio 的开源替代。接 1000+ SaaS 提供者、10000+ 预制 Action，凭据永远留在网关边界内，Agent 只能拿到执行结果。支持 SDK/CLI/MCP/HTTP 多接入方式，可部署到 Docker、Cloudflare Workers 或 Fly.io。"
 descriptionEn: "oomol-lab open-sources OpenConnector, an auth gateway for AI agents — an open-source alternative to Composio. 1000+ providers, 10000+ prebuilt Actions, credentials stay behind the gateway boundary. SDK, CLI, MCP, and HTTP access modes. Deploy on Docker, Cloudflare Workers, or Fly.io."
 pubDate: "2026-07-31"

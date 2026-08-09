@@ -1,6 +1,6 @@
 ---
 title: "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片"
-titleEn: "video-shotcraft-claude-code-remotion-cinematic-product-videos"
+titleEn: "video-shotcraft: Let an AI Agent Produce Cinema-Grade Product Films"
 description: "Vincentwei1021 开源的 Claude Code / Codex Agent 视频制作技能包，3832 stars。内置 104 张镜头配方卡、161 种运动风格预览、完整 Remotion 视频模板 Ink Press（36.2秒/1920×1080/30fps）、149 个音效（16个场景类别）、5套背景音乐。Agent 拿到产品截图后自动分镜、动画、配音设计，直出可发布的产品宣传片。"
 descriptionEn: "Vincentwei1021's open-source Claude Code/Codex agent video production skill, 3832 stars. Includes 104 shot recipe cards, 161 motion style previews, complete Remotion template Ink Press (36.2s/1920×1080/30fps), 149 SFX across 16 scene categories, 5 BGM tracks. Point the agent at your product and it handles storyboarding, animation, and sound design — output is a ready-to-publish cinematic promo."
 pubDate: "2026-08-07"

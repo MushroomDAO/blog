@@ -1,6 +1,6 @@
 ---
 title: "8K星 · 最小的 OpenID Certified™ 认证服务器：Tinyauth 全解析"
-titleEn: "tinyauth-smallest-openid-certified-auth-server-self-hosted"
+titleEn: "8K Stars: Tinyauth, the Smallest OpenID Certified Authentication Server, Explained"
 description: "tinyauthapp/tinyauth 是目前最小的 OpenID Certified™ 认证与授权服务器，Go 编写，AGPL-3.0。支持 OAuth/LDAP/访问控制，与 Traefik、Nginx、Caddy 无缝集成，Docker 一行启动。v5.1.0 于 2026 年 6 月通过 OpenID Basic OP 官方认证，8000+ GitHub stars。"
 descriptionEn: "tinyauthapp/tinyauth is the smallest OpenID Certified™ authentication and authorization server available, written in Go under AGPL-3.0. Supports OAuth, LDAP, and access controls; integrates seamlessly with Traefik, Nginx, and Caddy; single Docker container to start. v5.1.0 achieved official OpenID Basic OP certification in June 2026, 8,000+ GitHub stars."
 pubDate: "2026-08-01"

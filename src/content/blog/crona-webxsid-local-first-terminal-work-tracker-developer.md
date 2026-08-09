@@ -1,6 +1,6 @@
 ---
 title: "Crona：给住在终端里的开发者的本地优先工作追踪器"
-titleEn: "crona-webxsid-local-first-terminal-work-tracker-developer"
+titleEn: "Crona: A Local-First Work Tracker for Developers Who Live in the Terminal"
 description: "webxsid/Crona 是一个 Go 编写的本地优先开发者工作追踪工具：后台 daemon 持有 SQLite 状态，TUI（Bubble Tea）和 CLI 作为客户端通过本地 IPC 交互。支持专注会话计时、习惯追踪、健康度看板、.ics 日历导出，数据全部本地存储，无云耦合。28 stars，MIT 开源。"
 descriptionEn: "webxsid/Crona is a local-first developer work tracker written in Go: a background daemon owns SQLite state, and the TUI (Bubble Tea) and CLI are clients communicating over local IPC. Focus session timing, habit tracking, wellbeing dashboard, .ics calendar export — all local, zero cloud coupling. 28 stars, MIT."
 pubDate: "2026-08-05"

@@ -1,6 +1,6 @@
 ---
 title: "LLM Wiki：Karpathy 提出的知识管理新范式"
-titleEn: "llm-wiki-karpathy-knowledge-management"
+titleEn: "LLM Wiki: Karpathy's New Paradigm for Knowledge Management"
 description: "Andrej Karpathy 发布 LLM Wiki 构思文件，提出从传统 RAG 到「会进化的 Wiki」的新范式，让 LLM 成为知识的组织者而非单纯的检索器。"
 descriptionEn: "Andrej Karpathy's LLM Wiki proposal: from traditional RAG to 'evolving Wiki' paradigm."
 pubDate: "2026-04-06"

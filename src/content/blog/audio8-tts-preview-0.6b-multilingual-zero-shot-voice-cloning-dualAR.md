@@ -1,5 +1,6 @@
 ---
 title: "Audio8 TTS Preview 0.6B：0.6B 参数打赢 4.6B 的 TTS 模型——11 语言零样本声音克隆"
+titleEn: "Audio8 TTS Preview 0.6B: A 0.6B Model That Beats 4.6B TTS — Zero-Shot Voice Cloning in 11 Languages"
 description: "Audio8 TTS Preview 是一个 0.6B 参数的多语言文本转语音模型，采用 DualAR 架构（慢 AR 预测语义 token + 快 AR 预测声学码本），支持 11 种语言（含粤语）零样本声音克隆。Seed-TTS 英语 WER 1.506，以 0.6B 参数规模超越 Fish S2 Pro（4.6B）、Higgs Audio v2（4.7B）。Apache 2.0，HuggingFace 开放权重。"
 pubDate: "2026-07-30"
 category: "Tech-Experiment"

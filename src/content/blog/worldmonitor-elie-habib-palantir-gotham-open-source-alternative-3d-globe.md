@@ -1,6 +1,6 @@
 ---
 title: "World Monitor：一个人几天做出 Palantir 战情室的开源平替，78K stars"
-titleEn: "worldmonitor-elie-habib-palantir-gotham-open-source-alternative-3d-globe"
+titleEn: "World Monitor: One Person Built an Open-Source Palantir War Room in Days, 78K Stars"
 description: "Elie Habib 独自开源了 World Monitor（koala73/worldmonitor），一个对标 Palantir Gotham 政府级战情室的实时全球情报仪表盘。3D 地球仪、500+ 新闻源、15 类 AI 摘要、本地 Ollama 无 API Key，AGPL-3.0。78K stars，Tauri 桌面应用，6 个主题变体。"
 descriptionEn: "Elie Habib solo open-sourced World Monitor (koala73/worldmonitor), a real-time global intelligence dashboard that rivals Palantir Gotham's government war room. 3D globe, 500+ news feeds, 15-category AI briefs, local Ollama with no API key required. AGPL-3.0, 78K stars, Tauri desktop app, 6 site variants."
 pubDate: "2026-08-04"

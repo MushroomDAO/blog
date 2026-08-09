@@ -1,6 +1,6 @@
 ---
 title: "The Agentic Startup：给 Claude Code 装一套创业团队工作流"
-titleEn: "the-startup-rsmdt-claude-code-spec-driven-multi-agent"
+titleEn: "The Agentic Startup: A Startup Team Workflow for Claude Code"
 description: "rsmdt 开源的 Claude Code 多智能体框架，367 stars，MIT License，Shell。核心思路：先写规格再写代码（spec-driven development）。10 个 slash command 覆盖从需求到交付的全流程，三级复杂度自动分发（Direct/Incremental/Factory），v3 新增实验性 Agent Teams 多智能体协作。两个 Marketplace 插件，一行安装。"
 descriptionEn: "rsmdt's open-source multi-agent framework for Claude Code, 367 stars, MIT License, Shell. Core idea: spec before code. 10 slash commands cover requirements through delivery; three-tier complexity dispatch (Direct / Incremental / Factory); v3 adds experimental Agent Teams. Two Marketplace plugins, one-line install."
 pubDate: "2026-08-08"

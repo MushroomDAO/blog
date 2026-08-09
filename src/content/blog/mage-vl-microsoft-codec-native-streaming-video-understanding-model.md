@@ -1,5 +1,6 @@
 ---
 title: "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B"
+titleEn: "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video"
 description: "微软 7 月 29 日发布 Mage-VL，一个用编解码器（Codec）逻辑重新设计视觉编码器的 4B 多模态模型。核心创新 Mage-ViT 不对视频帧均匀采样，而是保留 I 帧所有 patch、只保留 P 帧运动显著 patch，将视觉 token 减少超过 75%，推理速度最高提升 3.5×。同等参数下视频理解全面超越 Qwen3-VL-4B，还具备主动流式感知能力——只在发生重要事件时才开口。Apache 2.0，HuggingFace 开放权重。"
 pubDate: "2026-07-29"
 category: "Tech-Experiment"

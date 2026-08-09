@@ -1,6 +1,6 @@
 ---
 title: "reverse-skill：给 AI Agent 装上逆向工程与渗透测试的神经系统"
-titleEn: "reverse-skill-ai-agent-cybersecurity-penetration-skill-router"
+titleEn: "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents"
 description: "zhaoxuya520 开源的 AI Agent 安全技能路由包，20.9k stars，MIT License。解决 AI Agent 做安全分析时不知道用哪个工具的核心痛点——41条路由规则自动识别任务类型（APK/ELF/JS/PCAP/CTF），按需自举 jadx/Frida/Ghidra/BurpSuite 等工具链，自动沉淀经验到知识库。支持 Claude Code、Codex、Cursor、Kiro、Cline。"
 descriptionEn: "zhaoxuya520's open-source AI agent cybersecurity skill router, 20.9k stars, MIT. Solves the core problem of agents not knowing which security tool to use — 41 routing rules auto-classify task type (APK/ELF/JS/PCAP/CTF), bootstrap jadx/Frida/Ghidra/BurpSuite on demand, and auto-distill experience into a knowledge base. Supports Claude Code, Codex, Cursor, Kiro, Cline."
 pubDate: "2026-08-08"

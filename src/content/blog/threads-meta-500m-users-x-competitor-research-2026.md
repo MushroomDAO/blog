@@ -1,6 +1,6 @@
 ---
 title: "Threads 调研：5 亿用户、超越 X 移动端、全球投广——Meta 第二个十亿入口的三年行动"
-titleEn: "threads-meta-500m-users-x-competitor-research-2026"
+titleEn: "Threads Research: 500M Users, Past X on Mobile, a Global Ad Push — Meta's Three-Year Run at a Second Billion-User Entry Point"
 description: "基于 TechCrunch、The Verge 等海外媒体的系统调研：Threads 三年从 0 到 5 亿月活，2026 年 1 月日活移动端超越 X（141.5M vs 125M），全球投广、AI 入 DM、社区 + 实时直播聊天、亲子监控——覆盖增长轨迹、功能时间线、变现策略、与 X 竞争格局、以及向 10 亿用户的路径。"
 descriptionEn: "A research report based on TechCrunch, The Verge, and other overseas media: Threads hit 500M monthly active users in June 2026, surpassed X in daily mobile users in January (141.5M vs 125M), launched global ads, Meta AI in DMs, Communities, Live Chats, and parental controls — covering growth trajectory, feature timeline, monetization strategy, competitive dynamics against X, and the path to 1 billion."
 pubDate: "2026-08-06"

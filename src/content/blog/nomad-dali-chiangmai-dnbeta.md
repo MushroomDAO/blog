@@ -1,6 +1,6 @@
 ---
 title: "从大理到清迈，我在寻找什么"
-titleEn: "nomad-dali-chiangmai-dnbeta"
+titleEn: "From Dali to Chiang Mai: What I Am Actually Looking For"
 description: "离职之后，我走过大理、清迈，最后来到资阳DNBeta。这不是一篇旅行笔记，而是关于一个数字游民在寻找什么，以及为什么一座四川内陆小城的实验让我眼前一亮。"
 descriptionEn: "From Dali to Chiang Mai, and finally to Ziyang DNBeta — what a digital nomad is really searching for, and why an inland Chinese city's experiment caught my attention."
 pubDate: "2026-04-19"

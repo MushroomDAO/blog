@@ -1,6 +1,6 @@
 ---
 title: "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27%"
-titleEn: "tmax-allenai-open-rl-terminal-agent-training-recipe"
+titleEn: "TMax: AllenAI's Strongest Open RL Recipe for Terminal Agents — 9B Hits 27% on Terminal-Bench 2.0"
 description: "AllenAI 开源 TMax，目前最强的终端 Agent RL 训练配方。9B 参数模型在 Terminal-Bench 2.0 达到 27%，超越更大规模的闭源竞品。数据集 15K 任务，比此前最大终端 Agent 数据集大 2.5 倍，配套 SFT + DPPO RL 训练流程全套开源。"
 descriptionEn: "AllenAI open-sources TMax, the strongest open RL recipe for terminal agents to date. A 9B-parameter model achieves 27% on Terminal-Bench 2.0, outperforming larger closed-source competitors. Includes a 15K-task dataset (2.5× the largest prior terminal-agent dataset) and a full SFT + DPPO RL training pipeline — all open-sourced."
 pubDate: "2026-08-03"

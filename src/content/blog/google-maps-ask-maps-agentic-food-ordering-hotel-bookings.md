@@ -1,6 +1,6 @@
 ---
 title: "Google Maps 变成 Agent：点餐、订酒店、购票全打通，附工程接入指南"
-titleEn: "google-maps-ask-maps-agentic-food-ordering-hotel-bookings"
+titleEn: "Google Maps Becomes an Agent: Food Orders, Hotel Bookings and Tickets, Plus an Integration Guide"
 description: "Google Maps Ask Maps 新增 agentic 能力：通过 Square/Toast/Uber Eats 下单外卖、比价预订酒店、查询演出购票，Personal Intelligence 接入 Gmail 和 Google Calendar 提供上下文感知（默认关闭）。本文分析这次更新的战略意图，并给出餐饮/酒店/票务/SaaS 开发者的完整工程接入路径。"
 descriptionEn: "Google Maps' Ask Maps feature gains agentic capabilities: order food via Square/Toast/Uber Eats, compare hotel prices, find event tickets, and Personal Intelligence draws from Gmail and Calendar for context-aware answers (off by default). This article analyzes the strategic intent and provides a complete engineering integration guide for restaurant, hotel, ticketing, and SaaS developers."
 pubDate: "2026-08-07"

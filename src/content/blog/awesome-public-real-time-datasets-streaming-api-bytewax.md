@@ -1,5 +1,6 @@
 ---
 title: "构建实时数据流项目的最佳起点：Awesome Public Real-Time Datasets 完整导读"
+titleEn: "Awesome Public Real-Time Datasets: The Best Starting Point for a Streaming Data Project"
 description: "bytewax/awesome-public-real-time-datasets 是一个 2751 stars 的公开实时数据源合集，覆盖金融加密货币、交通、气象、网络安全、IoT、体育等类别，大量免费 WebSocket/SSE/REST 接口。本文按使用场景整理关键数据源，适合构建流处理管道、AI 训练数据集和实时 Agent 工具的开发者。"
 pubDate: "2026-07-28"
 category: "Research"

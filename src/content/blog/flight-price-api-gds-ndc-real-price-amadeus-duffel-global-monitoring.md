@@ -1,5 +1,6 @@
 ---
 title: "机票价格不是秘密——从 GDS 到 NDC，开发者如何获取全球真实航班票价"
+titleEn: "Airfare Is Not a Secret: How Developers Get Real Global Flight Prices, from GDS to NDC"
 description: "携程、Expedia 的底价来自 Amadeus/Sabre/Travelport 三大 GDS，再加服务费卖给你。开发者可以直接接 GDS API 拿到发布票价（Published Fare），Amadeus for Developers 提供每月 2000 次免费生产调用。本文整理了 GDS、NDC、地区差异、中国特殊情况，以及搭建实时价格监控系统的完整技术路径。"
 pubDate: "2026-07-28"
 category: "Tech-Experiment"

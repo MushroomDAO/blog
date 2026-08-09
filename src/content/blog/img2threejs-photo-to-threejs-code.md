@@ -1,6 +1,6 @@
 ---
 title: "img2threejs：给AI一张图，拿回一个可动的Three.js 3D代码"
-titleEn: "img2threejs-photo-to-threejs-code"
+titleEn: "img2threejs: Give the AI One Image, Get Back Animated Three.js Code"
 description: "16天 8591 星。img2threejs 给 Claude Code 加了一个 /img2threejs 技能：输入一张参考图，输出的不是 mesh 文件，而是纯 TypeScript 代码，从几何基元和程序化着色器重新建造这个物体，带运行时层级、可以直接动画。"
 descriptionEn: "8591 stars in 16 days. img2threejs adds /img2threejs to Claude Code: input one reference image, get back not a mesh file but pure TypeScript code — rebuilding the object from primitives and procedural shaders, with a runtime hierarchy ready to animate."
 pubDate: "2026-07-31"

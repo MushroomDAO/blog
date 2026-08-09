@@ -1,6 +1,6 @@
 ---
 title: "OpenMinis 实测 + 隐私架构完全指南：本地大模型 + Tailscale，个人数据永不出家门"
-titleEn: "openminis-private-personal-ai-tailscale-local-model-complete-guide"
+titleEn: "OpenMinis Hands-On and a Complete Privacy Architecture Guide: Local Models Plus Tailscale, Data Never Leaves Home"
 description: "OpenMinis 是一个开源 iOS/Android AI Agent，能直接访问你的日历、健康、照片、提醒事项、HomeKit，内置 Alpine Linux 环境。但它默认接外部大模型——你的私人数据就这样发走了。本文分析 OpenMinis 架构，给出完整的隐私优先方案：本地大模型（Ollama/llama.cpp）+ Tailscale 组网，手机 Agent 调用家里电脑的模型，数据全程不出内网。"
 descriptionEn: "OpenMinis is an open-source iOS/Android AI agent with native access to Calendar, HealthKit, Photos, Reminders, HomeKit, and a built-in Alpine Linux shell. But it defaults to cloud LLMs — sending your personal data out. This guide analyzes OpenMinis' architecture and delivers a complete privacy-first alternative: local LLM (Ollama/llama.cpp) + Tailscale mesh, with your phone agent calling your home machine's model. Your data never leaves your network."
 pubDate: "2026-08-05"

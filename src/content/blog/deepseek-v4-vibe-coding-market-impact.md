@@ -1,6 +1,6 @@
 ---
 title: "DeepSeek V4 到来之后的 Vibe Coding 变化评估"
-titleEn: "deepseek-v4-vibe-coding-market-impact"
+titleEn: "Assessing How Vibe Coding Changes in the Wake of DeepSeek V4"
 description: "2026年4月24日 DeepSeek-V4 正式发布：1M上下文、1.6T参数、V4-Flash输出仅¥2/M token。本文分析其对 Cursor、Copilot、Claude Code 等 Vibe Coding 工具市场的价格冲击与结构性重塑。"
 descriptionEn: "DeepSeek V4 launches April 24, 2026: 1M context, 1.6T params, V4-Flash output at just ¥2/M tokens. Analysis of its price shock and structural impact on the Vibe Coding market — Cursor, Copilot, Claude Code, and beyond."
 pubDate: "2026-04-24"

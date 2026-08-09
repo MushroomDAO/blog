@@ -1,6 +1,6 @@
 ---
 title: "资阳OPC国际化战略：以清迈为支点，建立全球数字游民网络"
-titleEn: "ziyang-opc-internationalization-chiangmai"
+titleEn: "Ziyang's OPC Internationalization Strategy: Chiang Mai as the Fulcrum for a Global Digital Nomad Network"
 description: "资阳OPC如何从清迈切入，系统建立国际数字游民合作网络？本文整理清迈高校、社区、空间、黑客松赛事29+资源清单，设计idea松/黑客松/驻留松三级参与机制，并以全国五城OPC政策对比分析资阳的差异化战略定位。"
 descriptionEn: "How Ziyang OPC can build a global digital nomad network via Chiang Mai — 29+ community resources, 3-tier contest mechanism, and competitive analysis against 5 major city OPC policies."
 pubDate: "2026-04-19"

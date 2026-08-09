@@ -1,6 +1,6 @@
 ---
 title: "LongHorizon-Harness：让 AI Agent 真正干完长任务的执行框架"
-titleEn: "longhorizon-harness-amap-ml-ai-agent-long-task"
+titleEn: "LongHorizon-Harness: An Execution Framework That Gets AI Agents to Actually Finish Long Tasks"
 description: "AMAP-ML 开源的 LongHorizon-Harness 用三角色分工（Manager/Executor/Auditor）解决 AI Agent 的长任务失效问题：每轮 Executor 用全新上下文执行，Auditor 独立验证环境，只有通过验证的进展才写入持久状态。WeaveBench 提升 +28.9pp，OSWorld 2.0 提升 3×，支持 Claude Code/Codex/OpenClaw，MIT 许可。"
 descriptionEn: "AMAP-ML's LongHorizon-Harness uses three specialized roles — Manager, Executor, Auditor — to solve AI agent drift on long tasks. Each Executor round starts with a fresh context; the Auditor independently verifies environment state; only auditor-approved results enter durable task state. WeaveBench +28.9pp, OSWorld 2.0 3×, Terminal-Bench +7.5pp with 24% fewer tokens. Claude Code / Codex / OpenClaw backends, MIT license."
 pubDate: "2026-08-05"

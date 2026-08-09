@@ -1,6 +1,6 @@
 ---
 title: "Agent Plugins 规范深度解析：一次构建，Codex / ChatGPT / Cursor / Copilot / VS Code / Kiro 全通"
-titleEn: "agent-plugins-openai-codex-multi-client-open-spec-analysis"
+titleEn: "The Agent Plugins Spec: Build Once, Run on Codex, ChatGPT, Cursor, Copilot, VS Code and Kiro"
 description: "OpenAI 联合 AWS、Cursor、GitHub、Microsoft、Vercel 发布 Agent Plugins 规范：Skills + Connectors + MCP 三层架构，180 个官方插件已在 marketplace，一份 plugin.json 对接六大客户端。本文深度拆解规范结构，并分析这个开放标准在未来 Agent 分发战争中打开的真实机会窗口。"
 descriptionEn: "OpenAI + AWS + Cursor + GitHub + Microsoft + Vercel jointly released the Agent Plugins spec: a three-layer architecture of Skills, Connectors, and MCP servers. One plugin.json deploys across Codex, ChatGPT, Cursor, Copilot, VS Code, and Kiro. This analysis covers the spec structure, the 180-plugin ecosystem, and the strategic opportunity window this open standard creates."
 pubDate: "2026-08-07"

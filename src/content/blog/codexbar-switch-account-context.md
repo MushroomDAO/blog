@@ -1,6 +1,6 @@
 ---
 title: "Codexbar 发布：不再为切账号丢失上下文而烦恼"
-titleEn: "codexbar-switch-account-context"
+titleEn: "Codexbar: Stop Losing Context Every Time You Switch Accounts"
 description: "macOS 菜单栏工具解决多账号切换痛点：保留统一 ~/.codex 历史池，切换 provider 不丢 session，本地统计 token 用量。"
 descriptionEn: "macOS menu bar tool solves multi-account switching: keep unified ~/.codex history, switch providers without losing context."
 pubDate: "2026-04-04"

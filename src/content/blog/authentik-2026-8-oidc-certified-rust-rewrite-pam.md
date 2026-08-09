@@ -1,6 +1,6 @@
 ---
 title: "authentik 2026.8：OpenID 官方认证、Rust 重写、PAM，自托管 IdP 的新里程碑"
-titleEn: "authentik-2026-8-oidc-certified-rust-rewrite-pam"
+titleEn: "authentik 2026.8: OpenID Certification, a Rust Rewrite and PAM — a Milestone for Self-Hosted IdPs"
 description: "goauthentik/authentik 开源 Identity Provider，24k stars，Python，自托管替代 Okta/Auth0/Entra ID。v2026.8 三大亮点：通过 OpenID Foundation 官方认证（8个profile）、服务器与 Proxy Outpost 完成 Rust 重写、企业版新增特权访问管理（PAM）。另有用户多账号切换、自定义字段、LDAP 嵌套组同步、策略绑定到期、PostgreSQL 连接池支持。"
 descriptionEn: "goauthentik/authentik — open-source Identity Provider, 24k stars, Python, self-hosted alternative to Okta/Auth0/Entra ID. v2026.8 highlights: OpenID Foundation official certification (8 profiles), server and Proxy Outpost rewritten in Rust, enterprise Privileged Access Management (PAM). Also: multi-account user switching, object attributes, nested LDAP group sync, expiring policy bindings, PostgreSQL connection pooler support."
 pubDate: "2026-08-09"

@@ -1,6 +1,6 @@
 ---
 title: "HuggingFace Speech-to-Speech：一行安装本地语音助手，延迟低到像真人，驱动数千台机器人"
-titleEn: "huggingface-speech-to-speech-local-voice-agent-robot-pipeline"
+titleEn: "HuggingFace Speech-to-Speech: A One-Line Local Voice Assistant with Human-Like Latency, Driving Thousands of Robots"
 description: "huggingface/speech-to-speech 是一个低延迟、全模块化的本地语音 Agent 流水线（VAD → STT → LLM → TTS），兼容 OpenAI Realtime API。10.6K stars，Apache 2.0，`pip install speech-to-speech` 一行启动。已在数千台 Reachy Mini 机器人的对话后端中跑生产。每个组件均可替换，Apple Silicon 原生支持。"
 descriptionEn: "huggingface/speech-to-speech is a low-latency, fully modular local voice agent pipeline (VAD → STT → LLM → TTS) with OpenAI Realtime API compatibility. 10.6K stars, Apache 2.0, one-line install. Runs in production as the conversation backend for thousands of Reachy Mini robots. Every component is swappable; Apple Silicon natively supported."
 pubDate: "2026-08-03"

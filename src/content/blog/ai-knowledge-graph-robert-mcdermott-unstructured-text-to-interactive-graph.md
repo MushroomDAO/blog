@@ -1,6 +1,6 @@
 ---
 title: "AI Knowledge Graph：把任意文本扔进去，LLM 自动生成可交互知识图谱"
-titleEn: "ai-knowledge-graph-robert-mcdermott-unstructured-text-to-interactive-graph"
+titleEn: "AI Knowledge Graph: Drop In Any Text, Get an Interactive Knowledge Graph Back"
 description: "robert-mcdermott/ai-knowledge-graph 用 LLM 把非结构化文本转换成主谓宾三元组，经过实体标准化和关系推断，生成带社区检测的可交互 HTML 知识图谱。支持 Ollama 本地跑，兼容任意 OpenAI 兼容端点，2.7K stars，Apache-2.0。"
 descriptionEn: "robert-mcdermott/ai-knowledge-graph uses an LLM to extract Subject-Predicate-Object triplets from unstructured text, runs entity standardization and relationship inference, and generates an interactive HTML knowledge graph with community detection. Works with Ollama locally or any OpenAI-compatible endpoint. 2.7K stars, Apache-2.0."
 pubDate: "2026-08-04"

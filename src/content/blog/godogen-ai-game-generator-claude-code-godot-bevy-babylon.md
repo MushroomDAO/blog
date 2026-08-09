@@ -1,6 +1,6 @@
 ---
 title: "Godogen：用 Claude Code 一句话生成完整游戏，支持 Godot/Bevy/Babylon.js"
-titleEn: "godogen-ai-game-generator-claude-code-godot-bevy-babylon"
+titleEn: "Godogen: Generate a Complete Game from One Sentence, Targeting Godot, Bevy and Babylon.js"
 description: "htdt/godogen 是基于 Claude Code / Codex 打造的全链路 AI 游戏生成流水线。描述一个游戏，Agent 自动构建项目、生成资产、运行引擎、并用运行中的游戏证明结果。支持 Godot 4（C#）、Bevy（Rust）、Babylon.js（TypeScript），5.2K stars，MIT 协议。"
 descriptionEn: "htdt/godogen is a full-chain AI game generation pipeline built on Claude Code and Codex. Describe a game; the agent builds the project, generates assets, runs the engine, and proves the result from the live running game. Supports Godot 4 (C#), Bevy (Rust), Babylon.js (TypeScript). 5.2K stars, MIT license."
 pubDate: "2026-08-03"

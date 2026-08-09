@@ -1,6 +1,6 @@
 ---
 title: "TurboFieldfare：在8GB MacBook上跑Gemma4 26B大模型，只用2GB内存"
-titleEn: "turbo-fieldfare-gemma4-26b-apple-silicon-2gb"
+titleEn: "TurboFieldfare: Running Gemma 4 26B on an 8GB MacBook Using Only 2GB of Memory"
 description: "一个开源 Swift + Metal 运行时，让 Gemma 4 26B-A4B 在任意 M 系列 Mac 上运行，包括 8GB 版本。核心思路：只把 1.35GB 共有权重驻留内存，从 SSD 流式读取每个 token 所需的 8 个专家——12GB 的专家文件按需拉取，实际内存占用 ~2GB。"
 descriptionEn: "An open-source Swift + Metal runtime that runs Gemma 4 26B-A4B on any Apple Silicon Mac, including 8 GB models. Core idea: keep only the 1.35 GB common weights resident, stream the 8 experts needed per token from SSD — all 12 GB of routed experts on demand, ~2 GB footprint in practice."
 pubDate: "2026-07-30"

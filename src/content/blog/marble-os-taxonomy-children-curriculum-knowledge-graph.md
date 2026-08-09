@@ -1,6 +1,6 @@
 ---
 title: "Marble 开源儿童课程知识图谱：1590 个微话题 + 3221 条前置关系，对齐主流课标"
-titleEn: "marble-os-taxonomy-children-curriculum-knowledge-graph"
+titleEn: "Marble's Open-Source Children's Curriculum Knowledge Graph: 1,590 Micro-Topics and 3,221 Prerequisite Links"
 description: "withmarbleapp/os-taxonomy 是 Marble 开源的儿童小学阶段学习知识图谱：1590 个可教授微话题（科学/数学/英语等8科）+ 3221 条有向前置依赖边 + 对齐 NGSS/Common Core/英国课程标准。纯 JSON 数据，ODbL 1.0 + CC BY-SA 4.0 双许可，可用于构建 AI 家教、自适应学习路径和课程分析工具。3849 stars。"
 descriptionEn: "withmarbleapp/os-taxonomy is Marble's open-source children's learning knowledge graph: 1,590 micro-topics (Science/Math/English and 5 more subjects) + 3,221 directed prerequisite edges + alignment to NGSS/Common Core/UK National Curriculum. Pure JSON, ODbL 1.0 + CC BY-SA 4.0, ready for AI tutors, adaptive learning paths, and curriculum tools. 3,849 stars."
 pubDate: "2026-08-05"

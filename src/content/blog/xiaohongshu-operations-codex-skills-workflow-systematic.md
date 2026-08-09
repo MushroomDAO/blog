@@ -1,5 +1,6 @@
 ---
 title: "小红书运营能工作流化吗？6 个 Codex Skills 给出一个答案"
+titleEn: "Can Xiaohongshu Operations Become a Workflow? Six Codex Skills Offer an Answer"
 description: "《小红书运营手册 · AI工作台》是一组配合《小红书运营手册》使用的开源 Codex Skills，把标题、主页、选题、评论区、成交路径这五件高频运营动作，拆成可检查、可复用、可交给 AI 执行的工作流。本文介绍它的设计逻辑和 6 个 skill 的具体用途。"
 pubDate: 2026-07-27
 heroImage: "../../assets/images/xiaohongshu-operations-codex-skills-workflow-systematic-banner.jpg"

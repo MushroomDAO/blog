@@ -1,6 +1,6 @@
 ---
 title: "全国OPC政策全景分析：资阳的差异化机会在哪里"
-titleEn: "national-opc-policy-analysis-ziyang"
+titleEn: "A National Survey of OPC Policy: Where Ziyang's Differentiated Opportunity Lies"
 description: "2025年底至2026年Q1，全国20+城市竞相发布OPC政策，呈现高度同质化。本文系统梳理四个梯队城市的政策内容，诊断全行业共同盲点，并为资阳给出五条不被复制的差异化路径。"
 descriptionEn: "20+ cities launched OPC policies in 2025-2026, all highly homogeneous. This analysis maps four city tiers, diagnoses the industry-wide blind spot (international nomads), and gives Ziyang 5 uncopyable differentiation paths."
 pubDate: "2026-04-19"

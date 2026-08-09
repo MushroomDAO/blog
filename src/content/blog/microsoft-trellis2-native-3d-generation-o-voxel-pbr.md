@@ -1,6 +1,6 @@
 ---
 title: "TRELLIS.2：微软 4B 参数图像转 3D 生成模型，引入原生 O-Voxel 表示"
-titleEn: "microsoft-trellis2-native-3d-generation-o-voxel-pbr"
+titleEn: "TRELLIS.2: Microsoft's 4B Image-to-3D Model Introduces a Native O-Voxel Representation"
 description: "微软开源的 4B 参数 3D 生成模型。引入 O-Voxel（无等值面约束的稀疏体素）解决复杂拓扑问题，支持开放曲面、非流形几何和内部封闭结构。H100 上 512³ 约 3 秒，1024³ 约 17 秒。支持完整 PBR 材质（颜色/粗糙度/金属度/透明度），MIT License，arXiv 2512.14692，当前 10.4k stars。"
 descriptionEn: "Microsoft's open-source 4B-parameter image-to-3D generation model. Introduces O-Voxel (field-free sparse voxels) to handle arbitrary topology including open surfaces, non-manifold geometry, and internal enclosed structures. 512³ in ~3s, 1024³ in ~17s on H100. Full PBR material support. MIT License, arXiv 2512.14692, 10.4k stars."
 pubDate: "2026-08-07"

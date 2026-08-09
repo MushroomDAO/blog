@@ -1,5 +1,6 @@
 ---
 title: "Bento：一个 HTML 文件装下整套办公软件——560KB 的 PowerPoint 替代品"
+titleEn: "Bento: A Whole Office Suite in One HTML File — a 560KB PowerPoint Alternative"
 description: "Bento 是一个极度本地优先的设计实验：整个 PowerPoint 替代品就是一个 560KB 的 .bento.html 文件，文件本身就是编辑器、查看器和演示器，数据以纯文本 JSON 存在文件顶部，保存时文件重写自身。带 E2EE 实时协作（AES-GCM，密钥在文件里不在服务器上）、自研 CRDT、自研图表引擎、Morph 动画，还内置了 Claude Code Skill。11 天 2756 stars，MIT，TypeScript。"
 pubDate: "2026-07-28"
 category: "Tech-Experiment"

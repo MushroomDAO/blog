@@ -1,6 +1,6 @@
 ---
 title: "Gemma Translator：用树莓派 5 做一台完全离线的双向语音翻译机"
-titleEn: "gemma-translator-google-offline-voice-raspberry-pi"
+titleEn: "Gemma Translator: A Fully Offline Two-Way Voice Translator on a Raspberry Pi 5"
 description: "Google Gemma 团队开源的全离线双向语音翻译项目，JavaScript/Python，Apache 2.0。以树莓派 5（8GB）为目标硬件，Gemma 4（gemma4-e2b）通过 LiteRT-LM 本地推理，Moonshine 负责语音识别和 TTS 合成。双通道设计：两个人面对面，各自说母语，实时互译。一键部署为永久 kiosk 服务。源码来自 Google Antigravity 实验。"
 descriptionEn: "Google Gemma team's open-source fully-offline bidirectional voice translator, JavaScript/Python, Apache 2.0. Target hardware: Raspberry Pi 5 (8GB). Gemma 4 (gemma4-e2b) runs locally via LiteRT-LM; Moonshine handles STT and TTS. Two-lane design: two people face each other, each speaks their language, real-time mutual translation. One-command kiosk deployment. From Google Antigravity experiments."
 pubDate: "2026-08-09"

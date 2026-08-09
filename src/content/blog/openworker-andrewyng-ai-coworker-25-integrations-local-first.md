@@ -1,6 +1,6 @@
 ---
 title: "OpenWorker：吴恩达开源的 AI 协作者，交付成品而不是对话"
-titleEn: "openworker-andrewyng-ai-coworker-25-integrations-local-first"
+titleEn: "OpenWorker: Andrew Ng's Open-Source AI Coworker That Delivers Finished Work, Not Conversation"
 description: "andrewyng/openworker，13.8k stars，MIT，Python + Rust + React。吴恩达开源的桌面 AI 协作者，核心命题：给你交付完成品（文档、Slack 回复、更新后的日历），而不是下一步待办清单。25+ 应用集成，支持 OpenAI/Anthropic/Gemini/DeepSeek/Kimi/Ollama 等12个供应商，本地优先，写入/发送/运行命令前必须用户审批。基于 aisuite 构建。"
 descriptionEn: "andrewyng/openworker, 13.8k stars, MIT, Python + Rust + React. Andrew Ng's open-source desktop AI coworker. Core premise: deliver finished work — a polished document, a Slack reply with the numbers, an updated calendar — not a to-do list. 25+ integrations, 12+ model providers (OpenAI/Anthropic/Gemini/DeepSeek/Kimi/Ollama), local-first, approval-gated writes. Built on aisuite."
 pubDate: "2026-08-09"

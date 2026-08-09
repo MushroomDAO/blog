@@ -1,5 +1,6 @@
 ---
 title: "中国出发特价机票监控的完整方案——从 OTA 逆向到廉价航司直连"
+titleEn: "Monitoring Cheap Flights Out of China: From OTA Reverse Engineering to Direct Low-Cost Carrier Access"
 description: "TravelSky 对普通开发者关闭，但中国出发的特价机票监控并非无解。开源项目 JiPiao 已实现携程/飞猪/去哪儿/同程/途牛五平台同时监控；国际航线可叠加 Amadeus 免费 API 和 Kiwi Tequila；东南亚廉价航司则需浏览器自动化直连。本文给出从技术原理到完整部署的可落地方案，包括关键坑点：必须用中国 IP 才能拿到真实国内票价。"
 pubDate: "2026-07-28"
 category: "Tech-Experiment"

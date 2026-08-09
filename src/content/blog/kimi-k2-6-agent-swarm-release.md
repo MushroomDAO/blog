@@ -1,6 +1,6 @@
 ---
 title: "Kimi K2.6 发布：从长文本到 300 个 Agent 并行的战略跃迁"
-titleEn: "kimi-k2-6-agent-swarm-release"
+titleEn: "Kimi K2.6: A Strategic Leap from Long Context to 300 Agents in Parallel"
 description: "月之暗面正式发布并开源 Kimi K2.6：13小时不间断编码、300个子Agent并行、4000协作步骤，标志着 Kimi 从「长文本大模型」向「长程任务执行与Agent集群」的战略转型。"
 descriptionEn: "Moonshot AI releases Kimi K2.6 open-source: 13-hour continuous coding, 300 parallel sub-agents, 4000 collaborative steps — a strategic shift from long-context LLM to long-horizon agent execution."
 pubDate: "2026-04-21"

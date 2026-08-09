@@ -1,6 +1,6 @@
 ---
 title: "AI Must Embrace Specialization: Why AGI Is the Wrong Goal"
-titleEn: "sai-superhuman-intelligence-en"
+titleEn: "AI Must Embrace Specialization: Why AGI Is the Wrong Goal"
 description: "LeCun's latest paper challenges the AGI myth: human intelligence was never truly general. From Moravec's Paradox to the SAI framework, the future of AI lies not in mimicking humans but achieving superhuman performance in specialized domains."
 descriptionEn: "LeCun et al. argue that AI should abandon the pursuit of Artificial General Intelligence and instead embrace Superhuman Adaptable Intelligence (SAI)."
 pubDate: "2026-04-03"

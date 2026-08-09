@@ -1,6 +1,6 @@
 ---
 title: "仅27B参数，微软开源Fara 1.5超越OpenAI Operator：完整电脑操作Agent技术解析"
-titleEn: "fara15-microsoft-computer-use-agent-27b-beats-openai-operator"
+titleEn: "Only 27B Params: Microsoft's Open-Source Fara 1.5 Beats OpenAI Operator — a Full Computer-Use Agent Breakdown"
 description: "微软 Research AI Frontiers 团队发布 Fara 1.5，提供 4B、9B、27B 三种规模的电脑操作 Agent 模型，全部 MIT 开源。Fara1.5-27B 在 Online-Mind2Web 基准拿下 72.3% 成功率，超越 OpenAI Operator（58.3%）和 Gemini 2.5 Computer Use（57.3%）。模型基于 Qwen3.5 构建，通过 FaraGen1.5 数据管道训练，权重已开放于 HuggingFace。"
 descriptionEn: "Microsoft Research AI Frontiers releases Fara 1.5 — a family of computer use agent models at 4B, 9B, and 27B scales, all MIT-licensed open source. Fara1.5-27B achieves 72.3% on Online-Mind2Web, outperforming OpenAI Operator (58.3%) and Gemini 2.5 Computer Use (57.3%). Built on Qwen3.5, trained via FaraGen1.5 data pipeline, weights available on HuggingFace."
 pubDate: "2026-08-01"

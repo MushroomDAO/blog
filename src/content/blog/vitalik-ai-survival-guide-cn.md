@@ -1,6 +1,6 @@
 ---
 title: "Vitalik 的 AI 生存指南：本地模型是陷阱，三层防御才是出路"
-titleEn: "vitalik-ai-survival-guide-cn"
+titleEn: "Vitalik's AI Survival Guide: Local Models Are a Trap, Three-Layer Defense Is the Way Out"
 description: "以太坊创始人亲测：本地大模型连代码都写不好。真正的隐私需要 ZK-API、混合网络、TEE 三重防护，外加人机确认防火墙。"
 descriptionEn: "Vitalik Buterin's hands-on test: local LLMs can't write decent code. Real privacy requires ZK-API, mixnets, TEEs, plus human-AI confirmation firewalls."
 pubDate: "2026-04-04"

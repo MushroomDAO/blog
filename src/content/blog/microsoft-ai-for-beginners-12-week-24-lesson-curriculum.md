@@ -1,6 +1,6 @@
 ---
 title: "微软 AI For Beginners：63k Stars 的 12 周 24 课 AI 入门课程"
-titleEn: "microsoft-ai-for-beginners-12-week-24-lesson-curriculum"
+titleEn: "Microsoft AI For Beginners: A 63k-Star, 12-Week, 24-Lesson AI Curriculum"
 description: "微软开源的系统性 AI 入门课程，63k stars，MIT License。12 周 24 课，涵盖符号 AI、神经网络、计算机视觉、NLP、强化学习和 Transformer，每课附 PyTorch/TensorFlow 实验、测验和 Lab，55+ 语言翻译，零基础可学。"
 descriptionEn: "Microsoft's open-source systematic AI beginner curriculum, 63k stars, MIT License. 12 weeks, 24 lessons covering symbolic AI, neural networks, computer vision, NLP, reinforcement learning, and Transformers. Each lesson includes PyTorch/TensorFlow labs, quizzes, and exercises. 55+ language translations, beginner-friendly."
 pubDate: "2026-08-08"

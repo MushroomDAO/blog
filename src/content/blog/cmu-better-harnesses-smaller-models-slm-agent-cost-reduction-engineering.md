@@ -1,5 +1,6 @@
 ---
 title: "模型可以小，脚手架要聪明——CMU 论文拆解：用 Harness 适配让 SLM 以 4% 成本追平 LLM"
+titleEn: "Models Can Be Small if the Scaffold Is Smart: CMU on Closing the SLM–LLM Gap at 4% of the Cost"
 description: "卡内基梅隆大学最新论文（arXiv:2607.08938）证明：对于重复性业务任务，小模型（3B~30B active params）配合针对性适配的 harness，可以用 4% 的成本恢复 89.7% 的 LLM 性能。本文深度分析论文框架，提炼 5 条工程上可直接落地的操作指南。"
 pubDate: 2026-07-27
 heroImage: "../../assets/images/cmu-better-harnesses-smaller-models-slm-agent-cost-reduction-engineering-banner.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Frontis-MA1：清华 + Horizon Research 开源 AI 改进 AI 的全套配方，35B 单卡超 GPT-5.5"
-titleEn: "frontis-ma1-openrsi-ai4ai-recursive-self-improvement-mle"
+titleEn: "Frontis-MA1: Tsinghua and Horizon Research Open-Source a Full AI-Improving-AI Recipe, 35B on One GPU Beating GPT-5.5"
 description: "FrontisAI/OpenRSI 是 Frontis.AI + 清华大学的 AI4AI 开源框架。核心是 Frontis-MA1（35B/30B），通过四个可训练原子算子（Draft/Improve/Debug/Crossover）+ OpenMLE 全栈，在 MLE-Bench Lite 单卡 12h 达到 71.21% Medal Average，超越 GPT-5.5 + Codex。CC BY-NC 4.0，模型+数据+代码全开源。"
 descriptionEn: "FrontisAI/OpenRSI is an open AI4AI framework from Frontis.AI and Tsinghua University. Core: Frontis-MA1 (35B/30B) with four trainable atomic operators (Draft/Improve/Debug/Crossover) + the OpenMLE full stack. Achieves 71.21% Medal Average on MLE-Bench Lite with a single RTX 4090 in 12h, surpassing GPT-5.5 + Codex. CC BY-NC 4.0, models + datasets + code all open."
 pubDate: "2026-08-04"

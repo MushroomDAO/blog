@@ -1,6 +1,6 @@
 ---
 title: "Kiro Crew：开发 Agent 之上的持续工作层，会话/记忆/定时/审批/多 Agent 一体"
-titleEn: "kiro-crew-persistent-agent-workspace-sessions-memory-schedule"
+titleEn: "Kiro Crew: A Persistent Work Layer Above Your Dev Agent — Sessions, Memory, Scheduling, Approvals and Multi-Agent in One"
 description: "Kiro Crew 是运行在 Kiro（AWS 的 Agentic IDE）之上的开源持续工作层：Gateway 进程常驻本地或远程机器，跨 session 保存上下文和教训，支持定时任务/心跳监控/审批/并行子 Agent，通过 Slack/Telegram/WeCom/微信等渠道随时继续同一个工作。起源于 Amazon 内部项目 MeshClaw，6 个月内积累 39000 开发者，今日正式开源。"
 descriptionEn: "Kiro Crew is an open-source persistent workspace layer above Kiro (AWS's agentic IDE): a Gateway process that runs continuously on hardware you control, keeping sessions, memory, lessons, and skills alive across conversations. Scheduled jobs, heartbeat monitoring, approvals, and parallel subagents are built-in. Continue the same work from Slack, Telegram, WeCom, or WeChat. Started as Amazon internal project MeshClaw, 39,000 developers in 6 months, now fully open-source. Apache 2.0."
 pubDate: "2026-08-06"

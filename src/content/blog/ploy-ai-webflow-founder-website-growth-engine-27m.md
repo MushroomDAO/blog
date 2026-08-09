@@ -1,6 +1,6 @@
 ---
 title: "Ploy：Webflow 联合创始人的第三次创业——用 AI Agent 把网站变成增长引擎"
-titleEn: "ploy-ai-webflow-founder-website-growth-engine-27m"
+titleEn: "Ploy: The Webflow Co-Founder's Third Startup Turns Websites into Growth Engines with AI Agents"
 description: "Bryant Chou（Webflow 联合创始人兼前 CTO，任职 12 年）创立的 AI 营销平台 Ploy，2026 年 6 月以 2700 万美元种子轮融资从 YC S26 出发。核心命题：网站不应该是静态手册，而是始终运转的增长引擎。三个 Agent 模块（Ploy Web 建站优化、Ploy Grow 访客识别外联、Ploy Ads 广告投放归因）持续运转，13% 的 YC P26 公司已在使用。"
 descriptionEn: "Bryant Chou (Webflow co-founder and former CTO, 12 years) launched Ploy, an AI marketing platform, out of YC S26 in June 2026 with a $27M seed round. Core thesis: your website shouldn't be a static brochure — it should be an always-on growth engine. Three agent modules (Ploy Web for building and optimization, Ploy Grow for visitor identification and outreach, Ploy Ads for campaign creation and attribution) run continuously. 13%+ of YC P26 companies are already on Ploy."
 pubDate: "2026-08-09"

@@ -1,6 +1,6 @@
 ---
 title: "长视野 Agent 综述：人大团队用两大支柱重新定义 AI Agent 的演化路线图"
-titleEn: "awesome-long-horizon-agents-ruc-nlpir-survey-harness-optimization"
+titleEn: "A Survey of Long-Horizon Agents: RUC's Two-Pillar Roadmap for How AI Agents Evolve"
 description: "RUC-NLPIR 发布 Awesome-Long-Horizon-Agents，配套综述「Towards Long-Horizon Agents: A Survey」。核心框架：Agent = 基础策略 + Harness，两大支柱（外化 Harness 工程 + 内化模型优化）、三层任务难度（H1/H2/H3）、三阶段演化史（Prompt→Context→Runtime）。873 stars，MIT 开源。"
 descriptionEn: "RUC-NLPIR releases Awesome-Long-Horizon-Agents with the survey 'Towards Long-Horizon Agents.' Core framework: Agent = base policy + Harness, organized around two pillars (externalized harness engineering + internalized model optimization), three horizon levels (H1/H2/H3), and three evolutionary stages (Prompt → Context → Runtime). 873 stars, MIT."
 pubDate: "2026-08-04"

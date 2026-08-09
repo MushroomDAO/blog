@@ -1,5 +1,6 @@
 ---
 title: "纠错一次，永不再犯——Claude Code Reflect 系统的持续学习机制"
+titleEn: "Correct It Once, Never Again: The Continual Learning Mechanism Behind Claude Code's Reflect System"
 description: "Reflect 是一个 Claude Code Skill 系统，通过分析每次对话里的纠错信号，自动把「不要用 pip，用 uv」这类修正写进 skill 文件。下次会话，错误不再重现。本文拆解它的工作原理、置信度分级机制和 Git 版本控制设计。"
 pubDate: 2026-07-27
 heroImage: "../../assets/images/claude-reflect-system-continual-learning-skill-correction-persistent-banner.jpg"

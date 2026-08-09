@@ -1,6 +1,6 @@
 ---
 title: "AirLLM：4GB 显存跑 70B 大模型，无需量化"
-titleEn: "airllm-70b-inference-4gb-gpu-layer-streaming"
+titleEn: "AirLLM: Run a 70B Model on 4GB of VRAM, No Quantization Required"
 description: "lyogavin 开源的大模型极限推理工具，30k stars，Apache 2.0。通过逐层流式加载，在单张 4GB 显卡上运行 70B 模型，无需量化/蒸馏/剪枝。Kimi K3（2.8T）3.72GB、DeepSeek-V3（671B）约 12GB、Qwen3-235B 约 3GB。v3.0 新增 FP8 支持。支持 CUDA、Apple Silicon（macOS），同一 AutoModel 接口覆盖所有主流模型。"
 descriptionEn: "lyogavin's open-source extreme-inference toolkit, 30k stars, Apache 2.0. Layer-by-layer streaming loads 70B models on a single 4GB GPU — no quantization, distillation, or pruning. Kimi K3 (2.8T) in 3.72GB, DeepSeek-V3 (671B) in ~12GB, Qwen3-235B in ~3GB. v3.0 adds FP8. CUDA and Apple Silicon (macOS) supported via a single AutoModel interface."
 pubDate: "2026-08-08"

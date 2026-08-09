@@ -1,6 +1,6 @@
 ---
 title: "个人AI工作台：Onyx——开源的团队AI知识中枢"
-titleEn: "onyx-ai-platform"
+titleEn: "A Personal AI Workbench: Onyx, the Open-Source Team AI Knowledge Hub"
 description: "Onyx 是一个开源 AI 平台，连接 40+ 数据源，集成 RAG 检索、多模型兼容、AI Agent 自动化与企业级自托管，让 AI 真正融入个人和团队的日常工作流。"
 descriptionEn: "Onyx is an open-source AI platform connecting 40+ data sources with RAG, multi-model support, AI agents, and self-hosted enterprise security — making AI a real part of your daily workflow."
 pubDate: "2026-04-17"

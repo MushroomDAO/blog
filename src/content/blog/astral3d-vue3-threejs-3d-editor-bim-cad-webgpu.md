@@ -1,6 +1,6 @@
 ---
 title: "Astral3D：Vue3 + Three.js 打造的免费开源 Web 3D 编辑器，支持 BIM/CAD/30+ 格式"
-titleEn: "astral3d-vue3-threejs-3d-editor-bim-cad-webgpu"
+titleEn: "Astral3D: A Free Open-Source Web 3D Editor in Vue3 and Three.js, with BIM, CAD and 30+ Formats"
 description: "mlt131220/Astral3D 是基于 Vue3 + Three.js 的现代 Web 3D 编辑器，支持 30+ 模型格式（GLTF/OBJ/FBX/RVT/IFC/DWG），内置 BIM 轻量化、CAD 解析、粒子系统、插件系统、动画编辑器。在线可用，2.4K stars，WebGPU 支持在路上。"
 descriptionEn: "mlt131220/Astral3D is a modern web 3D editor built on Vue3 + Three.js. Supports 30+ model formats (GLTF/OBJ/FBX/RVT/IFC/DWG), with built-in BIM lightweighting, CAD parsing, particle system, plugin system, and animation editor. Available online. 2.4K stars. WebGPU support coming."
 pubDate: "2026-08-04"

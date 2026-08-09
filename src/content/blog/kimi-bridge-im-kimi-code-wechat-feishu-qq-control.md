@@ -1,6 +1,6 @@
 ---
 title: "kimi-bridge：用微信/飞书/QQ 控制本地 Kimi Code Agent"
-titleEn: "kimi-bridge-im-kimi-code-wechat-feishu-qq-control"
+titleEn: "kimi-bridge: Drive a Local Kimi Code Agent from WeChat, Feishu or QQ"
 description: "Mtrya 开源的 IM 控制层，Python/MIT。让你从微信、飞书、QQ 或 Telegram 直接操控本地运行的 Kimi Code Agent——持久化会话绑定、流式输出、语音转写、审批/提问交互、权限模式、/goal 目标、/skills 技能、/mcp 工具查看，一行命令安装，支持 Agent 驱动全自动配置。"
 descriptionEn: "Mtrya's open-source IM control layer, Python/MIT. Drive a locally running Kimi Code agent from WeChat, Feishu, QQ, or Telegram — persistent session bindings, streaming replies, voice transcription, interactive approvals/questions, permission modes, /goal objectives, /skills, /mcp inspection. One-command install, AI-driven setup."
 pubDate: "2026-08-08"

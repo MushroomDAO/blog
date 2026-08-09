@@ -1,5 +1,6 @@
 ---
 title: "Kimi K3 技术深析：KDA、Stable LatentMoE 与首个开源 3T 级模型"
+titleEn: "Kimi K3 Technical Deep Dive: KDA, Stable LatentMoE, and the First Open-Source 3T-Scale Model"
 description: "Kimi K3 是全球首个开源 2.8T 参数模型，同步发布权重与技术报告。本文结合 GitHub 通讯仓库与 HuggingFace 权重仓库，深析 Kimi Delta Attention（KDA）、Stable LatentMoE（16/896 专家）、MXFP4 量化感知训练等核心架构创新，以及 AgentENV 训练基础设施的技术联系。"
 pubDate: "2026-07-28"
 category: "Research"

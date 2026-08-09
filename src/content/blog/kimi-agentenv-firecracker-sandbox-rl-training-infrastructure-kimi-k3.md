@@ -1,5 +1,6 @@
 ---
 title: "Kimi AgentENV：驱动 Kimi K3 RL 训练的 Firecracker 沙箱基础设施深度拆解"
+titleEn: "Kimi AgentENV: Inside the Firecracker Sandbox Infrastructure Powering Kimi K3's RL Training"
 description: "kvcache-ai 开源的 AgentENV（AENV）是 Kimi K3 Agentic RL 训练的底层沙箱平台，基于 Firecracker microVM + overlaybd + ublk，实现 50ms 启动/恢复、100ms 快照和运行时 Fork，并提供 E2B 兼容 API。MIT 开源，Rust 实现，可自托管替代 E2B。"
 pubDate: "2026-07-28"
 category: "Research"

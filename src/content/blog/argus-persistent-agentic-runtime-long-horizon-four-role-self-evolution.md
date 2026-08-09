@@ -1,6 +1,6 @@
 ---
 title: "Argus：让 Agent 干完整件事的持久化四角色运行时"
-titleEn: "argus-persistent-agentic-runtime-long-horizon-four-role-self-evolution"
+titleEn: "Argus: A Persistent Four-Role Runtime That Gets Agents to Finish the Whole Job"
 description: "Argus 是一个开源 Agent 运行时框架，通过 Manager→Planner→Engineer⇄Reviewer 四角色分工，把长周期任务的执行与判断强制分离，项目状态跨会话持久化存储。SWE-Bench Pro 达 78%，成熟 wave 比初始 wave 少用 21% tokens，并附 arXiv 论文。支持 Copilot、Codex CLI、Claude Code、OpenCode 等多种后端。"
 descriptionEn: "Argus is an open-source agentic runtime that separates execution from judgment via a four-role architecture — Manager, Planner, Engineer, Reviewer — persisting project state across sessions and runtime upgrades. It achieves ~78% on SWE-Bench Pro vs 59% for Direct Copilot, with mature waves using 21% fewer tokens than startup waves. Backed by an arXiv paper and supporting Copilot, Codex CLI, Claude Code, and OpenCode backends."
 pubDate: "2026-08-07"

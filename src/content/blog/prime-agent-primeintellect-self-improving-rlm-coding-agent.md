@@ -1,6 +1,6 @@
 ---
 title: "Prime Agent：PrimeIntellect 开源的自改进 RLM 编程 Agent"
-titleEn: "prime-agent-primeintellect-self-improving-rlm-coding-agent"
+titleEn: "Prime Agent: PrimeIntellect's Open-Source Self-Improving RLM Coding Agent"
 description: "PrimeIntellect 开源的自改进 Agent，7.6k stars，MIT License。引入 RLM（递归语言模型）把 context 当变量、工具调用当函数，运行在持久 IPython REPL 中。通过 Continual Harness 把提示词/记忆/技能描述持久化为可精炼的 durable state，支持子 Agent 并行、后台 daemon 会话、Agent 间直接通信、/goal 跨轮次持久目标和 /autonomous 自主模式。"
 descriptionEn: "PrimeIntellect's open-source self-improving agent, 7.6k stars, MIT License. Introduces RLM (Recursive Language Model) that treats context as variables and tool calls as functions, running inside a persistent IPython REPL. Uses a Continual Harness to persist prompts/memories/skills as refinable durable state. Supports parallel subagents, daemon-backed background sessions, agent-to-agent communication, /goal persistent objectives, and /autonomous mode."
 pubDate: "2026-08-08"

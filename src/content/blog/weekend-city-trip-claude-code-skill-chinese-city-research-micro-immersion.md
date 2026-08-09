@@ -1,5 +1,6 @@
 ---
 title: "一句话调研任意中国城市周末玩法：weekend-city-trip Claude Code Skill 拆解"
+titleEn: "Research Any Chinese City's Weekend in One Sentence: Inside the weekend-city-trip Claude Code Skill"
 description: "weekend-city-trip 是一个 Claude Code/Codex Skill，说一句话触发 anysearch API 11-15 次并行搜索，7-15 分钟产出覆盖演唱会、市集、CityWalk、美食街、5A 景区、地铁路线的标准化 10 节 Markdown/HTML 报告，附带高德交互地图生成。背后是年轻人从「长途远行」转向「城市微沉浸」的消费范式迁移。"
 pubDate: "2026-07-28"
 category: "Tech-Experiment"

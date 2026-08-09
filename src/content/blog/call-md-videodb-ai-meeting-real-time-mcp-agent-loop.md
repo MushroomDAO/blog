@@ -1,6 +1,6 @@
 ---
 title: "Call.md：把会议变成实时 Agent 循环的 AI 会议助手"
-titleEn: "call-md-videodb-ai-meeting-real-time-mcp-agent-loop"
+titleEn: "Call.md: An AI Meeting Assistant That Turns a Call into a Real-Time Agent Loop"
 description: "VideoDB 开源的 Electron 桌面 AI 会议助手。双声道实时转录（自己 vs 对方），会中 AI 实时建议+MCP 工具自动触发，会后生成结构化纪要+Action Items，一键同步到 n8n/Zapier/CRM。当前 575 stars，TypeScript + React 19 + tRPC 构建。"
 descriptionEn: "VideoDB's open-source Electron desktop AI meeting assistant. Dual-channel real-time transcription (you vs them), live AI suggestions + MCP auto-triggering during calls, structured summaries + action items after, with webhook sync to n8n/Zapier/CRM. 575 stars, built on TypeScript + React 19 + tRPC."
 pubDate: "2026-08-07"

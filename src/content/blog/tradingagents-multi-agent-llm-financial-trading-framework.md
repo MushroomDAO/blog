@@ -1,6 +1,6 @@
 ---
 title: "TradingAgents：把交易公司搬进 AI——96k Stars 的多 Agent 金融交易框架"
-titleEn: "tradingagents-multi-agent-llm-financial-trading-framework"
+titleEn: "TradingAgents: Moving a Trading Firm Into AI — a 96k-Star Multi-Agent Financial Trading Framework"
 description: "TauricResearch 开源的多 Agent LLM 量化交易框架，96k+ stars，Apache 2.0。用 LangGraph 构建 7 种专职角色：基本面/情绪/新闻/技术分析师 + 多空研究员 + 交易员 + 风控/投资组合经理。支持 OpenAI/Claude/Gemini/DeepSeek/Kimi/Qwen/GLM/Ollama 等全系列 LLM，覆盖美股/港股/A股/加密货币，附 arXiv 论文 2412.20138。"
 descriptionEn: "TauricResearch's open-source multi-agent LLM trading framework, 96k+ stars, Apache 2.0. Built on LangGraph with 7 specialized roles: Fundamentals/Sentiment/News/Technical Analysts + Bull/Bear Researchers + Trader + Risk/Portfolio Manager. Supports OpenAI/Claude/Gemini/DeepSeek/Kimi/Qwen/GLM/Ollama and covers US/HK/A-shares/crypto markets. arXiv: 2412.20138."
 pubDate: "2026-08-08"

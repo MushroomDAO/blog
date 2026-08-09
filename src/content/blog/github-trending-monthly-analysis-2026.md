@@ -1,6 +1,6 @@
 ---
 title: "GitHub 趋势月报：AI 工具从「多了」到「熟了」的三条成熟线"
-titleEn: "github-trending-monthly-analysis-2026"
+titleEn: "GitHub Trending Monthly: Three Lines Along Which AI Tools Went from Plentiful to Mature"
 description: "持续观察 GitHub Trending 一个月后的深度总结：Agent 工程化、入口外扩、垂直化三条主线，正在彻底重塑软件开发和工作流。"
 descriptionEn: "After one month of tracking GitHub Trending: three maturity lines—Agent Engineering, Input Expansion, and Vertical Specialization—are reshaping software development."
 pubDate: "2026-04-21"

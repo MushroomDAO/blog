@@ -1,6 +1,6 @@
 ---
 title: "一人公司的AI员工：OPC创业者的Agent工具全景"
-titleEn: "opc-agent-frameworks-2026"
+titleEn: "AI Employees for the One-Person Company: A Landscape of Agent Tools for OPC Founders"
 description: "当AI Agent从实验室走向生产，一个人指挥十个AI员工已成现实。本文分析OPC与AI Agent的关系，梳理GitHub最受欢迎的15个Agent框架，给出OPC创业者的选型决策树和能力清单。"
 descriptionEn: "AI agents have moved from labs to production. One person can now command ten AI employees. This post analyzes OPC + AI Agent dynamics, reviews 15 top GitHub agent frameworks, and provides a decision guide for solo entrepreneurs."
 pubDate: "2026-04-19"

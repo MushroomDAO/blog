@@ -1,6 +1,6 @@
 ---
 title: "Growth Lab：用 Claude Code 或 Codex 跑完整增长闭环，小红书单篇 4000+ 赞"
-titleEn: "growth-lab-tsingyuai-claude-code-codex-end-to-end-growth-agent"
+titleEn: "Growth Lab: Running a Full Growth Loop on Claude Code or Codex — 4,000+ Likes on One Xiaohongshu Post"
 description: "tsingyuai/growth-lab 以 Claude Code 或 Codex 为 Runtime，把从理解产品到执行分发再到结果复盘的完整增长闭环变成 Agent 工作流。已实现 SEO 页面增长（点击量 +1000%）和小红书爆款复刻（单篇 4000+ 赞）两个完整闭环。434 stars，Apache-2.0。"
 descriptionEn: "tsingyuai/growth-lab uses Claude Code or Codex as the runtime to turn the full growth loop — from understanding the product to executing and reviewing results — into an agent workflow. Two complete loops implemented: SEO page growth (+1000% clicks) and XiaoHongShu viral replication (4000+ likes per post). 434 stars, Apache-2.0."
 pubDate: "2026-08-05"

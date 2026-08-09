@@ -1,6 +1,6 @@
 ---
 title: "LoopX：长任务 Agent 的本地状态内核，目标/门控/待办/证据/配额全管"
-titleEn: "loopx-loop-engineering-state-kernel-long-running-agents"
+titleEn: "LoopX: A Local State Kernel for Long-Running Agents — Goals, Gates, Todos, Evidence and Quotas"
 description: "LoopX 是一个轻量状态内核和本地控制平面，让 Codex、Claude Code、Cursor 等 Agent 跑长任务时有持久的目标、门控、可执行待办、证据日志和可验证交接。不替换你的 Agent 运行时，只管它跑多轮任务时不跑偏。Python 3.11+，无额外运行时依赖，MIT，已有 200+ 小时跑通的真实轨迹。"
 descriptionEn: "LoopX is a lightweight loop engineering state kernel and local control plane for long-running AI agents: durable goals, human-judgment gates, executable todos, quota-aware auto-wake, evidence logs, and verifiable handoffs — while Codex, Claude Code, or Cursor runs the actual turns. No new runtime. Python 3.11+, zero stdlib-external dependencies, MIT, 2,338 stars."
 pubDate: "2026-08-06"

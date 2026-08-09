@@ -1,6 +1,6 @@
 ---
 title: "五大城市OPC政策深度解析：杭州、上海、深圳、苏州、北京"
-titleEn: "five-cities-opc-deep-analysis"
+titleEn: "OPC Policy in Five Cities: A Deep Analysis of Hangzhou, Shanghai, Shenzhen, Suzhou and Beijing"
 description: "2025-2026年，杭州、上海、深圳、苏州、北京五城集中发布OPC政策，形成最激烈的第一梯队竞争。本文逐城逐区拆解政策细节，提炼共性规律，并以此为镜系统评估资阳DNβ的差异化定位。"
 descriptionEn: "Five major cities launched OPC policies in 2025-2026. This deep analysis breaks down each city's district-level policies, extracts common patterns, and uses them as a mirror to assess Ziyang DNβ's differentiated positioning."
 pubDate: "2026-04-19"

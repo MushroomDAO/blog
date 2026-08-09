@@ -1,6 +1,6 @@
 ---
 title: "Hermes Agent 的「自动技能工厂」：让 AI 越用越聪明的元技能插件"
-titleEn: "hermes-skill-factory-auto-skill-generator"
+titleEn: "Hermes Agent's Automatic Skill Factory: A Meta-Skill Plugin That Makes AI Smarter the More You Use It"
 description: "hermes-skill-factory 是为 Hermes Agent 打造的元技能插件：被动观察你的工作流，自动生成可复用的 SKILL.md 和 plugin.py，让 AI 从「一次性工具」进化为「越用越懂你」的专属助手。"
 descriptionEn: "hermes-skill-factory is a meta-skill plugin for Hermes Agent: it passively observes your workflows, auto-generates reusable SKILL.md and plugin.py files, evolving AI from a one-shot tool into a personalized assistant that grows smarter over time."
 pubDate: "2026-04-23"

@@ -1,6 +1,6 @@
 ---
 title: "Ponytail：把「最懒的资深工程师」塞进你的 AI Agent——54% 代码减少，100% 安全"
-titleEn: "ponytail-lazy-senior-dev-ai-agent-simplicity-skill"
+titleEn: "Ponytail: Put the Laziest Senior Engineer Inside Your AI Agent — 54% Less Code, 100% Safe"
 description: "Ponytail 是一个 AI Agent 插件（Claude Code / Codex / Gemini / Cursor 等 20+ 平台），让 Agent 在写代码前先过一遍「最小可行解」的七级阶梯：从 YAGNI、复用、stdlib、原生平台特性，到单行实现，最后才是最小化实现。真实基准测试：-54% 代码量、-20% 成本、-27% 时间，安全检查 100% 通过。97K stars，MIT，JavaScript。"
 descriptionEn: "Ponytail is an AI agent plugin (Claude Code / Codex / Gemini CLI / Cursor and 20+ more) that installs a laziness ladder: before writing code, stop at the first rung that holds — YAGNI, reuse, stdlib, native platform feature, one-liner, only then minimum that works. Real agentic benchmark: -54% LOC, -20% cost, -27% time, 100% safety. 97K stars, MIT."
 pubDate: "2026-08-06"

@@ -1,6 +1,6 @@
 ---
 title: "Cloudflare 把浏览器也 Serverless 了：Kitesurf 调研"
-titleEn: "cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate"
+titleEn: "Cloudflare Made the Browser Serverless Too: A Look at Kitesurf"
 description: "Cloudflare 开源了 Kitesurf，一个专为 AI Agent 构建的浏览器，完全跑在 Cloudflare Workers 上。没有 Chrome 进程，Rust+WASM 做引擎，页面 JS 直接跑在 V8 isolate 里。CPU 消耗比 Chromium 低 3-4x，内存低 5-7x。本文深度分析架构、性能数据、工程接入方式，以及这件事对 AI Agent 基础设施的意义。"
 descriptionEn: "Cloudflare has released Kitesurf, an agent-first browser built entirely on Cloudflare Workers. No Chrome process — Rust+WebAssembly for the engine, page JavaScript running directly in V8 isolates. 3-4x less CPU and 5-7x less memory than Chromium. This article analyzes the architecture, performance data, engineering integration, and what this means for AI agent infrastructure."
 pubDate: "2026-08-07"

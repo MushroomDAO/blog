@@ -1,6 +1,6 @@
 ---
 title: "PenguinHarness：一句话让 Agent 自动构建 Agent，$0.02 生成完整 RAG 应用"
-titleEn: "penguinharness-deepseek-self-evolving-agent-builder-002-usd"
+titleEn: "PenguinHarness: One Sentence Gets an Agent to Build an Agent — a Full RAG App for Two Cents"
 description: "Prism-Shadow/penguin-harness 是一个开源 Agent 自动交付平台，TypeScript 编写，Apache-2.0。一句话描述需求，Agent 自动生成完整 Agent 应用（scaffold + 代码 + 运行说明）。接入 DeepSeek V4，数据分析精度全场最高，成本仅 Claude Code 的 1/70。内置 Agent 自进化：跑基准、找失分点、发布 N+1 版本。"
 descriptionEn: "Prism-Shadow/penguin-harness is an open-source automated agent delivery platform written in TypeScript under Apache-2.0. Describe a need in one sentence — an agent builds the complete agent application for you (scaffold, code, run instructions). Integrates DeepSeek V4 for top data-analysis accuracy at 1/70 of Claude Code's cost. Built-in agent self-evolution: run benchmarks, identify gaps, ship version N+1."
 pubDate: "2026-08-03"

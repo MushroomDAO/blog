@@ -1,6 +1,6 @@
 ---
 title: "Mage-VL 跑在 Mac 上：微软视觉大模型的本地化部署，图片视频实时流式注释"
-titleEn: "mage-vl-local-mac-apple-silicon-image-video"
+titleEn: "Mage-VL on a Mac: Running Microsoft's Vision Model Locally with Real-Time Image and Video Annotation"
 description: "karlazx 发布了 mage-vl-local-mac，一个让 Microsoft Mage-VL 视觉语言模型在 Apple Silicon 上本地运行的社区项目。双击 setup.command 完成一键安装，FastAPI + React 浏览器界面，支持图片问答、视频问答（DCVC-RT 神经编解码器）和实时分段流式注释，全程本地推理，数据不出 Mac。"
 descriptionEn: "karlazx releases mage-vl-local-mac, a community project that runs Microsoft Mage-VL vision-language model locally on Apple Silicon. One-click setup.command install, FastAPI + React browser UI, image Q&A, video Q&A with DCVC-RT neural codec canvases, and real-time segment-by-segment streaming commentary — all local inference, media never leaves the Mac."
 pubDate: "2026-08-01"

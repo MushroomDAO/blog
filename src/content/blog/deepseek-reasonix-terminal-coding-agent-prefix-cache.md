@@ -1,6 +1,6 @@
 ---
 title: "DeepSeek-Reasonix：围绕前缀缓存稳定性设计的终端编程 Agent"
-titleEn: "deepseek-reasonix-terminal-coding-agent-prefix-cache"
+titleEn: "DeepSeek-Reasonix: A Terminal Coding Agent Designed Around Prefix Cache Stability"
 description: "esengine 开源的 DeepSeek 原生终端编程 Agent，33k stars，MIT License，Go 重写版。架构核心是前缀缓存稳定性——真实用户单日 435M 输入 token，99.82% 缓存命中，实际费用 ~$12 而非 ~$61。支持长时运行、QQ 频道远程接入、Tauri 桌面客户端，npm install -g reasonix 一键安装。"
 descriptionEn: "esengine's open-source DeepSeek-native terminal coding agent, 33k stars, MIT License, Go rewrite. Architecture is built around prefix-cache stability — real user: 435M input tokens in one day, 99.82% cache hit, ~$12 actual cost vs ~$61 without cache. Supports long-running sessions, QQ channel remote access, Tauri desktop client. npm install -g reasonix."
 pubDate: "2026-08-08"

@@ -1,6 +1,6 @@
 ---
 title: "apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence"
-titleEn: "apfel-apple-silicon-local-ai"
+titleEn: "apfel: Call Local Apple Intelligence on an Apple Silicon Mac at Zero Cost"
 description: "apfel 是一款开源 CLI 工具，让开发者在 Apple Silicon Mac 上直接调用 Apple Foundation Model，无需 API Key、完全本地化运行。"
 descriptionEn: "apfel is an open-source CLI tool for running Apple Intelligence locally on Apple Silicon Macs."
 pubDate: "2026-04-07"

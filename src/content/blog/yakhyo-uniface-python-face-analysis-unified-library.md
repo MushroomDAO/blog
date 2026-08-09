@@ -1,6 +1,6 @@
 ---
 title: "UniFace：把人脸分析全套能力统一到一个 Python API"
-titleEn: "yakhyo-uniface-python-face-analysis-unified-library"
+titleEn: "UniFace: Unifying Face Analysis Behind a Single Python API"
 description: "yakhyo 开源的 Python 人脸分析统一库，944 stars。单一 API 覆盖：检测（RetinaFace/SCRFD/YOLOv8-Face）、识别（ArcFace/AdaFace）、追踪（BYTETracker）、106/468 点关键点、语义分割、人像抠图（MODNet）、注视估计、头部姿态、属性分析（年龄/性别/情绪）、活体检测、质量评估，支持 Apple Silicon / CUDA / CPU，模型自动下载。"
 descriptionEn: "yakhyo's open-source unified Python face analysis library, 944 stars. Single API covering: detection (RetinaFace/SCRFD/YOLOv8-Face), recognition (ArcFace/AdaFace), tracking (BYTETracker), 106/468-point landmarks, semantic segmentation, portrait matting (MODNet), gaze estimation, head pose, attributes (age/gender/emotion), anti-spoofing, and quality assessment. Supports Apple Silicon / CUDA / CPU with auto model downloads."
 pubDate: "2026-08-07"

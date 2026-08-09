@@ -1,6 +1,6 @@
 ---
 title: "auraai.mushroom.cv 上线：四大本地 AI 研究栏目，每周更新"
-titleEn: "auraai-local-ai-weekly-launch"
+titleEn: "auraai.mushroom.cv Is Live: Four Local AI Research Columns, Updated Weekly"
 description: "Aura AI Local AI 周报正式上线，硬件方案、模型匹配、软件工具、最佳实践四大研究栏目，附三年成本计算器，帮助每个人找到最优本地 AI 部署方案。"
 descriptionEn: "Aura AI Local AI Weekly is now live with four research columns: hardware, models, software, and best practices, plus a 3-year cost calculator."
 pubDate: "2026-04-18"

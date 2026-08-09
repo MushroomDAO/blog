@@ -1,5 +1,6 @@
 ---
 title: "Vibe Coding 的正确打开方式：KhazP 的 5 步结构化工作流——从想法到 MVP 不迷路"
+titleEn: "Vibe Coding Done Right: KhazP's Five-Step Structured Workflow from Idea to MVP"
 description: "GitHub 2700+ Star 的 vibe-coding-prompt-template 不是一套 prompt，而是一套完整的 AI 编程方法论：先在 Chat 里完成市场调研、PRD、技术设计，再进 IDE 生成 AGENTS.md 让 Agent 拥有完整上下文，最后 Plan→Execute→Verify 循环推进到 MVP。支持 Claude Code、Cursor、Codex、Gemini CLI。"
 pubDate: "2026-07-29"
 category: "Tech-Experiment"

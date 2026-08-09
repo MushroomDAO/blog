@@ -1,6 +1,6 @@
 ---
 title: "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南"
-titleEn: "magi-2-preview-sand-ai-114b-moe-video-generation-analysis"
+titleEn: "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide"
 description: "Sand.ai 开源 MAGI-2 Preview：全球首个千亿级 MoE 视频生成模型，114B 总参数，单 token 激活仅 6B，统一音视频生成，Apache 2.0。文章深度拆解 MagiMoE 架构、数据管道哲学与成本逻辑，并给出完整自部署方案：硬件选型、权重下载、环境搭建、推理命令、成本估算全覆盖。"
 descriptionEn: "Sand.ai open-sources MAGI-2 Preview: a 114B MoE video generation model that activates only 6B parameters per token, with unified audio-video synthesis. This analysis covers the MagiMoE architecture, data pipeline philosophy, and cost math — plus a complete self-hosting guide: hardware selection, weights download, environment setup, inference commands, and cost estimates."
 pubDate: "2026-08-07"

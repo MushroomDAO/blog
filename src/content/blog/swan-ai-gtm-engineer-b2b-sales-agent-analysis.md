@@ -1,6 +1,6 @@
 ---
 title: "Swan AI 拆解：3 个人、0 个 COO、20+ 个 AI 员工——B2B GTM 的「AI 工程师」模式"
-titleEn: "swan-ai-gtm-engineer-b2b-sales-agent-analysis"
+titleEn: "Inside Swan AI: Three People, No COO, 20+ AI Employees — the GTM Engineer Model for B2B"
 description: "Swan AI 是一个 AI GTM Engineer 平台，让 B2B 公司的销售/市场团队用自然语言描述需求，AI 自动跑完从线索发现到成交的全流程。三个创始人：CEO 用 LinkedIn 0 投放撬出单月 30 万美金 ARR，CTO 不写一行代码用 AI 扛下 15 人工程团队，Ido 负责「生产」20+ 个 AI 员工。这家公司最有价值的地方，是它本身就是自己产品的最佳证明。"
 descriptionEn: "Swan AI is an AI GTM Engineer platform: B2B sales and marketing teams describe needs in plain language, AI automatically runs the full pipeline from lead discovery to close. Three founders — CEO drives $300K/month ARR from LinkedIn with zero ad spend, CTO handles a 15-person engineering team's work alone using Cursor, Ido has built 20+ AI employees. The most interesting thing about Swan AI is that it is the best proof of its own product."
 pubDate: "2026-08-07"

@@ -1,6 +1,6 @@
 ---
 title: "4B 小模型 RL 微调追平 GPT-5.6，成本百分之一：Castform 的技术框架与领域迁移预测"
-titleEn: "castform-neon-small-model-rl-finetuning-domain-specialist"
+titleEn: "A 4B Model Matches GPT-5.6 at One Percent of the Cost: Castform's RL Fine-Tuning Framework"
 description: "Castform + Neon 的博客证明了一件事：4B 开源模型经过 RL 后训练，在金融检索任务上跑赢了 GPT-5.2，成本降低 100 倍。这篇文章深度拆解这套框架的三个核心组件（任务/环境/奖励函数）和合成数据管道，并分析将同样机制迁移到营销文案、邮件写作、社媒回帖、舆情分析等领域的可行性与卡点。"
 descriptionEn: "Castform + Neon demonstrated that a 4B open-source model RL fine-tuned on domain-specific data outperforms GPT-5.2 on financial retrieval at 1/100 the cost. This analysis extracts the three-component RL framework (task/environment/reward) and the corpus-to-training-data pipeline, then evaluates how the same mechanism could work for marketing copy, email drafting, social media replies, and sentiment analysis."
 pubDate: "2026-08-07"

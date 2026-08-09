@@ -1,6 +1,6 @@
 ---
 title: "om-ai-lab VLX三件套：让AI真正看懂、认准、导航物理世界"
-titleEn: "om-ai-lab-vlx-flow-seek-go-physical-ai"
+titleEn: "om-ai-lab's VLX Trio: Teaching AI to See, Pinpoint and Navigate the Physical World"
 description: "om-ai-lab 发布 VLX-Flow、VLX-Seek、VLX-Go 三个模型，分别解决物理AI最核心的三个难题：流式视频理解、精准目标定位、轻量导航决策。0.6B 模型在追踪率上超越 7B 级选手，Linear Attention 让 TTFT 随流增长趋近水平线。"
 descriptionEn: "om-ai-lab releases three VLX models tackling the hardest problems in physical AI: VLX-Flow for streaming video memory, VLX-Seek for fine-grained spatial grounding via region tokens, and VLX-Go — a 0.6B waypoint planner that beats 7B models on tracking rate."
 pubDate: "2026-07-30"

@@ -1,6 +1,6 @@
 ---
 title: "AI运营公司完全指南：ThirstySprout的零融资破局方法论"
-titleEn: "thirsty-sprout-ai-company-operations-guide"
+titleEn: "The Complete Guide to Running an AI Company: ThirstySprout's Zero-Funding Playbook"
 description: "一家没有融资的AI人才公司，2年亏损后做到年收入$2.5M、月收入$208K。本文系统整理其10步完整方法论：从机会识别、先做服务再做平台、商业模式设计、冷启动解法、增长飞轮，到AI Native小团队模型和护城河构建。"
 descriptionEn: "A bootstrapped AI talent marketplace that turned profitable after 2 years of losses, reaching $2.5M ARR and $208K/month. This guide systematically extracts ThirstySprout's 10-step methodology: opportunity framing, services-before-platform, business model design, cold-start solving, growth flywheels, AI-native team model, and building real moats."
 pubDate: "2026-08-07"

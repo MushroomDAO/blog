@@ -1,6 +1,6 @@
 ---
 title: "Agent Speaker 进度汇报：用 Nostr 构建个体+AI 的自组织协作网络"
-titleEn: "agent-speaker-progress-report"
+titleEn: "Agent Speaker Progress Report: A Self-Organizing Human and AI Network Built on Nostr"
 description: "Agent Speaker + Relay：基于 Nostr 协议和 Mycelium，为每一个个体和 AI Agent 提供去中心化的发现、通信与协作能力。无平台垄断，自发自组织，跨越物理边界。Phase 1 已完成，Phase 2 进行中。"
 descriptionEn: "Agent Speaker + Relay: decentralized discovery, communication and cooperation for individuals and AI agents, built on Nostr protocol and Mycelium. No platform monopoly, self-organizing, crossing physical boundaries."
 pubDate: "2026-04-17"

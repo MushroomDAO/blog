@@ -1,6 +1,6 @@
 ---
 title: "WrenAI：开源 GenBI 引擎，让 AI Agent 生成可信 SQL 和可部署的数据看板"
-titleEn: "wrenai-text-to-sql-genbi-open-source-context-layer"
+titleEn: "WrenAI: An Open-Source GenBI Engine for Trustworthy SQL and Deployable Dashboards"
 description: "WrenAI（Canner）是开源的 GenBI（Generative BI）引擎：通过开放上下文层（MDL 语义模型 + instructions.md + LanceDB 记忆），让 AI Agent 把自然语言问题转化为受治理的 SQL，并一键部署到 Vercel/Cloudflare Pages 的交互式看板。支持 22+ 数据源，与 Claude Code/Cursor/Codex 原生集成，Apache 2.0，16921 stars。"
 descriptionEn: "WrenAI (Canner) is an open-source GenBI engine: through an open context layer (MDL semantic models + instructions.md + LanceDB memory), AI agents turn natural-language questions into governed SQL and deploy interactive dashboards to Vercel/Cloudflare Pages in one command. 22+ data sources, native Claude Code/Cursor/Codex integration, Apache 2.0, 16,921 stars."
 pubDate: "2026-08-05"

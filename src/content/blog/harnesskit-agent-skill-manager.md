@@ -1,6 +1,6 @@
 ---
 title: "HarnessKit：管理你所有 AI Agent 的 Skill/MCP/Plugin/Hook"
-titleEn: "harnesskit-agent-skill-manager"
+titleEn: "HarnessKit: Manage Skills, MCP Servers, Plugins and Hooks Across All Your AI Agents"
 description: "Agent 多、Skill/MCP/Plugin/Hook 分散难管理？HarnessKit 帮你一键搞定！集中式桌面工具，统一管理所有 AI Agent 的扩展、配置、记忆与规则。"
 descriptionEn: "Too many agents, too many scattered skills? HarnessKit is a centralized desktop tool to manage all your AI agent extensions, configs, memory and rules in one place."
 pubDate: "2026-04-20"

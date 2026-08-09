@@ -1,6 +1,6 @@
 ---
 title: "从线虫到人类：全脑模拟的规模化之路"
-titleEn: "brain-emulation-worm-to-human-scaling"
+titleEn: "From Worm to Human: The Road to Scaling Whole Brain Emulation"
 description: "前MIT研究员 Isaak Freeman 中止博士学业，发布百页路线图《From Worm to Human: Scaling Brain Emulation》，论证意识上传的技术可行性，以及在AGI时代人类通过数字化延续自身的可能路径。"
 descriptionEn: "Former MIT researcher Isaak Freeman dropped his PhD to publish a 100-page roadmap on whole brain emulation — arguing consciousness upload is more feasible than we think, and may be humanity's answer to AGI."
 pubDate: "2026-04-21"
