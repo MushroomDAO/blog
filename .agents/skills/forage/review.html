@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>forage 评审台</title>
+<style>
+:root{--bg:#faf9f7;--fg:#1a1a1a;--mut:#6b6b6b;--line:#e3e0da;--card:#fff;--acc:#c2410c;--ok:#2f8f5b}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#eceae4;--mut:#9a978f;--line:#2f2d26;--card:#1e1c16;--acc:#fb923c;--ok:#4ade80}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"PingFang SC",system-ui,sans-serif;padding:1.5rem 1rem}
+.wrap{max-width:960px;margin:0 auto}
+h1{font-size:1.4rem;margin:0 0 .2rem}
+.sub{color:var(--mut);font-size:.84rem;margin-bottom:1.2rem}
+.bar{position:sticky;top:0;background:var(--bg);padding:.7rem 0;border-bottom:1px solid var(--line);margin-bottom:1rem;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;z-index:20}
+button{font:inherit;font-size:.82rem;padding:.34rem .8rem;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg);cursor:pointer}
+button:hover{border-color:var(--acc);color:var(--acc)}
+button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.stat{color:var(--mut);font-size:.8rem;margin-left:auto}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.15rem;margin-bottom:.85rem}
+.card.write{border-left:4px solid var(--ok)}
+.card.skip{opacity:.4}
+.card.archive{border-left:4px solid var(--mut)}
+.hd{display:flex;justify-content:space-between;gap:.8rem;align-items:baseline;flex-wrap:wrap}
+.t{font-weight:600;font-size:1rem;flex:1;min-width:14rem}
+.tot{font-variant-numeric:tabular-nums;font-size:.82rem;color:var(--mut);white-space:nowrap}
+.tot b{font-size:1.05rem}
+.tot .me{color:var(--acc)}.tot .you{color:var(--ok)}
+.meta{color:var(--mut);font-size:.79rem;margin:.3rem 0}
+.tag{display:inline-block;font-size:.7rem;padding:.08rem .42rem;border:1px solid var(--line);border-radius:4px;margin-right:.3rem}
+.why{font-size:.86rem;margin:.5rem 0;padding:.55rem .75rem;background:rgba(194,65,12,.06);border-radius:6px}
+ul{margin:.35rem 0 .35rem 1.05rem;padding:0;font-size:.85rem}
+.gap{font-size:.8rem;color:#b45309;margin-top:.4rem}
+.dims{margin:.7rem 0;border-top:1px dashed var(--line);padding-top:.6rem}
+.dim{display:grid;grid-template-columns:5.2rem 1fr 2.4rem;gap:.6rem;align-items:center;margin-bottom:.3rem;font-size:.8rem}
+.dim label{color:var(--mut)}
+.dim input[type=range]{width:100%}
+.dim .v{text-align:right;font-variant-numeric:tabular-nums}
+.dim .ai{color:var(--acc);font-size:.72rem}
+.acts{margin-top:.6rem;display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
+.acts input[type=text]{flex:1;min-width:10rem;font:inherit;font-size:.8rem;padding:.3rem .5rem;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+a{color:var(--acc)}
+.saved{color:var(--ok);font-size:.75rem;opacity:0;transition:opacity .2s}
+.saved.show{opacity:1}
+</style></head><body><div class="wrap">
+<h1>🍄 forage 评审台</h1>
+<div class="sub">每一次打分和决定实时写入 SQLite，Claude 直接读库 —— 不用复制粘贴</div>
+
+<div class="bar">
+  <button onclick="flt('all')" id="f-all" class="on">全部</button>
+  <button onclick="flt('undecided')" id="f-undecided">未决定</button>
+  <button onclick="flt('write')" id="f-write">已选写</button>
+  <button onclick="flt('gap')" id="f-gap">分歧大</button>
+  <span class="stat" id="stat"></span>
+</div>
+<div id="list"></div></div>
+
+<script>
+let DIMS=[], ITEMS=[], CUR='all';
+
+async function load(){
+  const r = await fetch('/api/items').then(r=>r.json());
+  DIMS = r.dims; ITEMS = r.items; render();
+}
+const esc = s => String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function render(){
+  const L = document.getElementById('list'); L.innerHTML='';
+  let shown = ITEMS.filter(d=>{
+    if(CUR==='undecided') return !d.decision;
+    if(CUR==='write')     return d.decision==='write';
+    if(CUR==='gap')       return d.u_total!=null && Math.abs(d.u_total-(d.ai_total||0))>=20;
+    return true;
+  });
+  shown.forEach(d=>{
+    const c=document.createElement('div');
+    c.className='card '+(d.decision||'');
+    const R = d.research||{};
+    let m=[];
+    if(R.stars!=null) m.push('⭐'+R.stars);
+    if(R.lic) m.push(R.lic);
+    if(R.lang && R.lang!=='—') m.push(R.lang);
+    if(R.pushed && R.pushed!=='—') m.push('提交 '+R.pushed);
+
+    const dimRows = DIMS.map(([k,label,desc])=>{
+      const ai = d['ai_'+k], u = d['u_'+k];
+      return `<div class="dim" title="${esc(desc)}">
+        <label>${esc(label)} <span class="ai">我${ai??'-'}</span></label>
+        <input type="range" min="0" max="20" value="${u??ai??0}"
+               oninput="this.nextElementSibling.textContent=this.value"
+               onchange="rate('${d.id}','${k}',this.value)">
+        <span class="v">${u??ai??0}</span></div>`;
+    }).join('');
+
+    c.innerHTML = `
+      <div class="hd"><span class="t">${esc(d.title)}</span>
+        <span class="tot"><span class="me">我 <b>${d.ai_total??'-'}</b></span> ·
+          <span class="you">你 <b id="ut-${d.id}">${d.u_total??'-'}</b></span> /100</span></div>
+      <div class="meta"><span class="tag">${esc(d.src)}</span>${m.join(' · ')}
+        ${d.url?` · <a href="${esc(d.url)}" target="_blank">打开</a>`:''}</div>
+      ${d.descr?`<div class="meta">${esc(d.descr)}</div>`:''}
+      ${d.ai_note?`<div class="why"><b>我的判断</b> — ${esc(d.ai_note)}</div>`
+                 :`<div class="why">⚠️ <b>未调研</b> — 只打了分，还没找一手源</div>`}
+      ${(R.angles||[]).length?'<ul>'+R.angles.map(a=>'<li>'+esc(a)+'</li>').join('')+'</ul>':''}
+      ${R.gap?`<div class="gap">缺口：${esc(R.gap)}</div>`:''}
+      <div class="dims">${dimRows}</div>
+      <div class="acts">
+        <button class="${d.decision==='write'?'on':''}"   onclick="decide('${d.id}','write')">写</button>
+        <button class="${d.decision==='dig'?'on':''}"     onclick="decide('${d.id}','dig')">深挖</button>
+        <button class="${d.decision==='archive'?'on':''}" onclick="decide('${d.id}','archive')">存档</button>
+        <button class="${d.decision==='skip'?'on':''}"    onclick="decide('${d.id}','skip')">不要</button>
+        <input type="text" placeholder="备注：为什么？这是最有价值的反馈"
+               value="${esc(d.u_note||'')}" onchange="note('${d.id}',this.value)">
+        <span class="saved" id="s-${d.id}">已存</span>
+      </div>`;
+    L.appendChild(c);
+  });
+  summary();
+}
+
+function flash(id){const e=document.getElementById('s-'+id);if(!e)return;
+  e.classList.add('show');setTimeout(()=>e.classList.remove('show'),900);}
+
+async function rate(id,dim,v){
+  const r = await fetch('/api/rate',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({id,[dim]:Number(v)})}).then(r=>r.json());
+  const it = ITEMS.find(x=>x.id===id); if(it){it['u_'+dim]=Number(v); it.u_total=r.u_total;}
+  const el=document.getElementById('ut-'+id); if(el) el.textContent=r.u_total;
+  flash(id); summary();
+}
+async function note(id,text){
+  await fetch('/api/rate',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({id,note:text})});
+  const it=ITEMS.find(x=>x.id===id); if(it) it.u_note=text; flash(id);
+}
+async function decide(id,dec){
+  const it=ITEMS.find(x=>x.id===id);
+  const val = it.decision===dec ? '' : dec;
+  await fetch('/api/decide',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({id,decision:val})});
+  it.decision=val; render();
+}
+function flt(f){CUR=f;['all','undecided','write','gap'].forEach(x=>
+  document.getElementById('f-'+x).classList.toggle('on',x===f));render();}
+async function summary(){
+  const s = await fetch('/api/summary').then(r=>r.json());
+  document.getElementById('stat').textContent =
+    `共 ${s.total} · 写 ${s.write||0} · 深挖 ${s.dig||0} · 存档 ${s.archive||0} · 不要 ${s.skip||0} · 已打分 ${s.rated||0}`;
+}
+load();
+</script></body></html>
