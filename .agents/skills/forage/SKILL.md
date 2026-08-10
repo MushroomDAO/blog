@@ -162,6 +162,16 @@ description: |
 - **HuggingFace 走裸 API**，没有 agent-reach 的统一错误处理，需要自己重试。
   可用端点（已验证）：
   `https://huggingface.co/api/models?sort=trendingScore&direction=-1&limit=50`
+- **`gh` 的字段名在子命令之间不一致，本会话被咬了三次。** 每次表现都像
+  「认证挂了」或「搜索无结果」，实际只是字段名错：
+  | 要什么 | 用什么 | 不能用 |
+  |---|---|---|
+  | star 数（搜索） | `gh search repos --json stargazersCount` | `stargazerCount` |
+  | star 数（单仓库） | `gh repo view --json stargazerCount` | `stargazersCount` |
+  | 开源协议 | `gh api repos/O/N --jq .license.spdx_id` | `--json licenseInfo`（search 里不存在；repo view 里常返回 null） |
+  **协议判定必须走 `gh api`。** 用 `gh repo view --json licenseInfo` 会把
+  一堆有 MIT/Apache 协议的仓库误判成「未声明」——第 1 轮清单里每一条的
+  协议警告都是这么来的，全是假的。
 - **`gh` 的调试输出会污染 JSON。** 本机 gh 会往 stdout 打 `* Request at ...`
   追踪行，直接 `| python3 -c "json.load(...)"` 必然报
   `Expecting value: line 1 column 1`。所有 gh 调用都要写成：
