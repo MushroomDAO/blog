@@ -5,10 +5,10 @@ description: "PaperSpine V2 支持多种 AI 环境，提升论文写作效率与
 descriptionEn: "PaperSpine V2 supports multiple AI environments, enhancing research paper writing efficiency and structured thinking."
 pubDate: 2026-05-21
 updatedDate: 2026-05-22
-category: Tech-News  
-tags: [AI-Writing, PaperSpine, Research, PaperWriting]  
-heroImage: "../../assets/banner-ai-city-ecosystem.jpg"  
----  
+category: Tech-News
+tags: [AI-Writing, PaperSpine, Research, PaperWriting]
+heroImage: "../../assets/banner-ai-city-ecosystem.jpg"
+---
 
 > **BLUF**: PaperSpine V2 是一个结合写作思路矩阵与多 AI 环境支持的新一代论文写作工具，显著提升学术写作的结构化与可读性。
 
