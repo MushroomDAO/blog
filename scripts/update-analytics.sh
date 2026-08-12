@@ -19,7 +19,19 @@
 # ============================================================================
 set -euo pipefail
 cd "$(dirname "$0")/.."
-export PATH="/Users/jason/.local/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
+export PATH="/Users/jason/Library/pnpm:/Users/jason/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
+
+# pnpm 是个 shell 脚本，跑起来需要 node，而 node 装在 nvm 里 —— cron 的
+# 最小 PATH 两个都看不到。这条 cron 因此静默失败了三天：数据拉到了，
+# 构建挂在 "pnpm: command not found"，于是不部署也不提交，看板一直是旧的。
+# 不把版本号写死在 crontab 里，因为 node 一升级就又断了；这里动态解析，
+# 取 nvm 下版本号最大的那个。
+if ! command -v node >/dev/null 2>&1; then
+  NODE_BIN=$(ls -d "$HOME"/.nvm/versions/node/*/bin 2>/dev/null | sort -V | tail -1)
+  [ -n "$NODE_BIN" ] && export PATH="$NODE_BIN:$PATH"
+fi
+command -v pnpm >/dev/null 2>&1 || { echo "❌ 找不到 pnpm，中止（构建会失败）"; exit 1; }
+command -v node >/dev/null 2>&1 || { echo "❌ 找不到 node，中止（pnpm 需要它）"; exit 1; }
 
 echo "=== $(date) — updating blog analytics ==="
 

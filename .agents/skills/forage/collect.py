@@ -7,7 +7,7 @@ Trends 全丢了，而且清单里没有任何提示——静默的覆盖率缺�
 
 所以这里每个源都记账，跑完写 coverage.json，某源为 0 会在清单顶部标红。
 """
-import json, os, re, subprocess, sys, base64, random
+import json, os, re, subprocess, sys, base64, random, time
 from datetime import datetime, timezone, timedelta
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -32,6 +32,11 @@ ROTATE_KW = ["RAG", "强化学习", "多智能体", "多模态", "TTS", "视频�
 
 GH_QUERIES = ["agent skill", "mcp server local", "local llm inference",
               "self-hosted ai agent", "claude code skill", "local first ai"]
+
+# 小红书节流。用户明确要求：一轮最多 10 条。
+XHS_MAX = 10            # 单轮总上限
+PER_CALL = 5            # 单次调用最多取几条
+BLOGGERS_PER_RUN = 2    # 每轮只看 2 个博主，按天轮换
 
 cov = {}
 
@@ -83,39 +88,67 @@ def collect_hf():
 
 
 def collect_xhs():
+    """小红书采集 —— 硬上限 10 条，低频、有间隔、撞验证码立即停。
+
+    第一版是爬虫行为，不是刷小红书：6 个博主 × 30 条 + 10 个关键词 × 20 条，
+    16 次调用背靠背打完约 380 条，零间隔，还反复跑了几轮。
+    结果当天就触发风控，user-posts 返回 Captcha required (type=216)。
+
+    「像真人一样」不只是时长短，更是**量小、次数少、有停顿**：
+    真人刷十几分钟大概翻二三十条，一条条滑，中间会停。
+    所以这里每轮只打 3 次接口、每次最多取 5 条、总量封顶 10 条，
+    调用之间随机停 8-20 秒。博主和关键词按天轮换，覆盖靠天数累积，不靠单轮堆量。
+    """
     rows = []
-    ok = "authenticated: true" in sh(["xhs", "status", "--yaml"]) or '"authenticated": true' in sh(["xhs", "status", "--json"])
-    if not ok:
+    if "authenticated: true" not in sh(["xhs", "status", "--yaml"]):
         cov["小红书"] = 0
         cov["_xhs_error"] = "cookie 失效，需重新扫码登录（xhs login）"
         return rows
-    # 关注的博主
-    for uid, name in BLOGGERS.items():
-        out = sh(["xhs", "user-posts", uid, "--json"])
+
+    def take(out, src):
+        """解析一次调用的结果。撞验证码就抛出，让整轮立刻停手。"""
+        if not out:
+            return []
+        if "verification_required" in out or "Captcha" in out:
+            raise RuntimeError("captcha")
+        got = []
         try:
-            for n in json.loads(out or "{}").get("data", {}).get("notes", []):
+            for n in json.loads(out).get("data", {}).get("notes", [])[:PER_CALL]:
                 t = n.get("display_title") or n.get("title") or ""
                 if not t:
                     continue
                 nid = n.get("note_id") or n.get("id") or ""
-                rows.append(dict(src=f"小红书@{name}", title=t, desc="",
+                got.append(dict(src=src, title=t, desc="",
                     url=f"https://www.xiaohongshu.com/explore/{nid}" if nid else "", stars=None))
-        except Exception:
+        except (json.JSONDecodeError, AttributeError):
             pass
-    # 关键词：常驻 + 随机轮换
-    kws = CORE_KW + random.sample(ROTATE_KW, 4)
-    for kw in kws:
-        out = sh(["xhs", "search", kw, "--json"])
-        try:
-            for n in json.loads(out or "{}").get("data", {}).get("notes", [])[:20]:
-                t = n.get("display_title") or n.get("title") or ""
-                if not t:
-                    continue
-                nid = n.get("note_id") or n.get("id") or ""
-                rows.append(dict(src=f"小红书·搜索<{kw}>", title=t, desc="",
-                    url=f"https://www.xiaohongshu.com/explore/{nid}" if nid else "", stars=None))
-        except Exception:
-            pass
+        return got
+
+    # 按天轮换：今天取这 2 个博主，明天下 2 个。覆盖靠天数累积。
+    day = datetime.now(timezone.utc).timetuple().tm_yday
+    ids = list(BLOGGERS.items())
+    picked = [ids[(day * 2 + i) % len(ids)] for i in range(BLOGGERS_PER_RUN)]
+    kw = (CORE_KW + ROTATE_KW)[day % len(CORE_KW + ROTATE_KW)]
+
+    calls = [(["xhs", "user-posts", uid, "--json"], f"小红书@{name}") for uid, name in picked]
+    calls.append((["xhs", "search", kw, "--json"], f"小红书·搜索<{kw}>"))
+
+    try:
+        for i, (cmd, src) in enumerate(calls):
+            if len(rows) >= XHS_MAX:
+                break
+            if i:                                  # 首次不等，之后每次都停
+                time.sleep(random.uniform(8, 20))
+            rows.extend(take(sh(cmd), src))
+        rows = rows[:XHS_MAX]
+    except RuntimeError:
+        # 撞验证码：立即停手，并且**明确报出来**。
+        # 静默返回 0 会让人以为「今天没内容」，而不是「被风控了」。
+        cov["小红书"] = len(rows)
+        cov["_xhs_error"] = ("撞到验证码，本轮已停止。需人工过验证："
+                             "用 CDP 浏览器打开小红书完成验证后 cookie 会刷新")
+        return rows
+
     cov["小红书"] = len(rows)
     return rows
 

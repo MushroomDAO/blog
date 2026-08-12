@@ -109,7 +109,7 @@ ACTION="${DECISION%%|*}"
 NEWEST="${DECISION#*|}"
 
 if [ "$ACTION" = "SKIP" ]; then
-  log "✅ ${SKIP_WINDOW_HOURS}h 内已有 campaign（Actions 已处理），本地不重复发送"
+  log "✅ ${SKIP_WINDOW_HOURS}h 内已有 campaign，跳过（不判断是 Actions 还是人工发的——结果一样）"
   exit 0
 fi
 
