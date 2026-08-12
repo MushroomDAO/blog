@@ -195,6 +195,254 @@ Higgsfield 不只是一个视频生成工具，它在构建一个**AI 原生的�
 
 ---
 
+## 手把手教程：个人 / 小团队如何用这套方案做出科幻大片
+
+> 前提：你有 Higgsfield 账号（可免费注册），能访问 Seedance 2.5。建议先打开《Zephyr》项目文件对照着看：https://higgsfield.ai/original-series/zephyr-special/full-film
+
+---
+
+### 阶段一：前期开发（Pre-production）—— 2-3 天
+
+这是整条流水线里投入时间最值得的阶段。跳过它会让你在生产阶段付出双倍的时间成本。
+
+#### 第一步：用 Claude 或 Higgsfield Supercomputer 建立世界观和角色
+
+把以下这个模板粘贴给 Claude 开始头脑风暴：
+
+```
+我想制作一部约 3-5 分钟的科幻动画短片。
+
+核心设定：[一句话描述你的世界，例如「2087 年废土城市，人类和机械生命体共同生活」]
+主角数量：[1-3 个，个人制作控制在 2 人以内]
+核心冲突：[一句话，例如「失忆的雇佣兵发现自己其实是被设计出来的武器」]
+
+请帮我为每个角色生成：
+1. 外形关键词（3-5 个，便于后续生图）
+2. 性格词条（3-5 个，用于写表演描述）
+3. 标志性动作或习惯（1-2 个，用于区分角色的镜头语言）
+4. 与其他角色的关系张力
+```
+
+**为什么要先做这步**：Zephyr 团队明确说了——「知道你的角色，才能准确写出他们的表演、反应和故事弧」。角色设定文档是后续所有提示词的参考依据，而不只是故事背景。
+
+#### 第二步：定义「样式前缀」
+
+在生成任何镜头之前，先确定你的视觉语言。把以下要素写成一段固定文字，放在后续所有提示词的开头：
+
+```
+[样式前缀示例]
+Cinematic, 4K, anamorphic lens, neon-noir lighting, cool blue and amber color grade, 
+shallow depth of field, film grain, [你的世界名]
+```
+
+Zephyr 第一集没有固定样式前缀，导致跨场景视觉不统一。这是他们明确点出的错误。**你的样式前缀就是整部片的「美术圣经」。**
+
+---
+
+### 阶段二：角色资产制作 —— 2-5 天
+
+#### 第三步：用 Higgsfield Soul 2 生成角色形象
+
+Soul 2 是专门做角色和服装设计的。打开 Higgsfield → Image → Soul 2。
+
+每个角色分两轮生成：
+
+**第一轮：找对外形**
+```
+提示词格式：
+[性别] [发色] [发型], [外形特征 3 个], [服装风格], 
+[配件或标志性元素], sci-fi [你的风格词], full body, 
+white background, character design sheet
+```
+
+**第二轮：固定「英雄形象」**  
+选最好的一张，继续在 Soul 2 里迭代，直到你认为「这就是他」。这张图是后续所有生成的锚点，不要随意改动。
+
+#### 第四步：制作多状态角色参考图
+
+这是 Zephyr 团队踩坑最多的地方。每个角色至少需要以下几张参考图：
+
+| 参考图类型 | 用途 | 备注 |
+|-----------|------|------|
+| 标准站立（正面 + 侧面） | 所有常规场景 | 主力参考图 |
+| 情绪特写（2-3 种表情） | 对话/情绪场景 | 只需上半身 |
+| 动作姿态 | 战斗/奔跑场景 | 不要包含武器细节 |
+| 武器/道具展开（单独一张） | 使用武器的场景 | 只在需要时上传 |
+
+用 **Nano Banana 2 Pro** 精修每张参考图，让细节更清晰稳定。用 **Seedream** 把多张设计稿合并成统一风格的参考图组。
+
+**关键：武器和机关永远不要出现在「标准站立」参考图上。** 模型看到就会渲染。
+
+#### 第五步：科幻载具 / 机甲设计（如果有）
+
+机甲比人形角色需要更多状态管理：
+
+**必须单独准备的参考图：**
+1. 全身标准形态（关闭所有特殊部件）
+2. 驾驶舱区域特写（舱盖关闭状态）
+3. 驾驶舱区域特写（舱盖打开状态）
+4. 武器系统特写（每种武器单独一张）
+5. 倒置/受损状态（如果剧情需要）——参考 Zephyr 的倒置参考图技巧
+
+**注意**：凡是会开合、伸缩、变形的部件，都需要「收起状态」和「展开状态」两张独立参考图。
+
+---
+
+### 阶段三：生产前测试 —— 半天
+
+在正式制作之前，用你的参考图做一轮「压力测试」，验证每个资产的稳定性。
+
+#### 第六步：资产稳定性测试
+
+在 Cinema Studio 里，用以下模板对每个角色参考图生成 3-5 个测试镜头：
+
+```
+[样式前缀]
+
+[角色名], [外形关键词 2-3 个], standing in [中性环境], 
+looking at camera, medium shot, cinematic.
+
+Camera: static shot, locked tripod.
+```
+
+检查这 3-5 个镜头：
+- 角色外形是否稳定（发色、服装、面部特征）
+- 有没有出现意外的细节（武器、机关、不该有的元素）
+- 光照和色调是否与你的样式前缀匹配
+
+如果不稳定 → 回到第四步调整参考图，再测试。通过了才进正片生产。
+
+---
+
+### 阶段四：正片生成 —— 一场戏一场戏来
+
+#### 第七步：把脚本拆成「镜头清单」
+
+不要按场次想问题，要按镜头想问题。每个镜头清单条目包含：
+
+```
+镜头 [编号]
+- 人物：[谁]
+- 动作：[做什么]
+- 情绪：[什么感觉]
+- 摄影机：[机位 + 运动]
+- 时长：[3-8 秒]
+- 参考图：[用哪张]
+- 特殊技巧：[倒置/锚点/等]
+```
+
+一个 5 分钟的短片大约需要 60-100 个镜头，每个镜头平均生成 3-5 次才能选出可用的。
+
+#### 第八步：提示词写作模板
+
+```
+[样式前缀]
+
+[角色名]: [外形关键词 1-2 个], [动作描述], [情绪描述], [环境].
+
+Camera: [从 Higgsfield 提示词库选取的摄影机运动].
+
+[可选：锚点结果描述，代替过程描述]
+```
+
+**常用摄影机词汇（直接从 Higgsfield Academy 提示词库复制）：**
+
+- 静止：`The camera stays planted in one immovable position. Zero motion — no drift, no shake.`
+- 推进：`One continuous decisive dolly in on straight ground rails — pure forward travel at constant speed.`
+- 上摇：`Pure TILT UP: the camera rotates vertically upward at one constant smooth speed.`
+- 环绕：`A smooth constant-speed circular drone flight around the subject, [8]-meter radius.`
+- 跟随：`Handheld follow shot, medium distance, smooth stabilized motion tracking the subject.`
+
+#### 第九步：难镜头策略
+
+**动作场景 → 用锚点式提示词**（Zephyr 技巧 2）：
+```
+[样式前缀]
+
+[角色名] executing a high-risk combat maneuver. 
+Goal: convey overwhelming force, split-second precision, and barely-controlled desperation.
+Camera: low angle, dynamic handheld follow.
+```
+不要描述每一个动作步骤。让模型自己填充。
+
+**物理异常场景 → 修改参考图输入**（Zephyr 技巧 1）：
+- 倒置 → 把参考图上下翻转再上传
+- 水中 → 在参考图上叠加蓝色半透明滤镜再上传  
+- 受损 → 在参考图上直接涂改再上传
+
+**特写武器操作 → 上传独立特写参考图**：
+把武器局部放大到整张图的 70% 以上，再配提示词。
+
+#### 第十步：管理失败镜头
+
+每个镜头生成 3-5 个版本是正常的。建立一个命名规则：
+
+```
+S[场次编号]_C[镜头编号]_v[版本号]_[KEEP/FAIL]
+例：S02_C04_v3_KEEP
+```
+
+**保留失败镜头，不要删**。Zephyr 团队把 bloopers 也放进了开源资产，因为失败记录是最好的工程文档——你回头看的时候，能准确知道这条路走不通的原因。
+
+---
+
+### 阶段五：剪辑与收尾
+
+#### 第十一步：时间线组装
+
+建议使用 DaVinci Resolve（免费版足够）。流程：
+
+1. 把所有 `_KEEP` 镜头导入，粗剪出完整故事骨架
+2. 用色彩校正统一跨镜头的色调（补充样式前缀没有覆盖到的差异）
+3. 加音乐和音效（AI 生成音乐：Suno / Udio，音效库：Freesound）
+4. 最终输出 4K，导出时保持原始帧率
+
+#### 第十二步：把你的项目文件开源
+
+Zephyr 团队选择开放所有资产，包括失败镜头。这不只是慷慨，这是方法论：
+- 你的开源项目文件就是你的技术简历
+- 社区会基于你的资产做 remix，带动二次传播
+- Higgsfield Film Festival 的评委也在看制作过程，不只是最终视频
+
+在 Cinema Studio 里把项目设为公开，写一份和 Zephyr 一样的「Project Brief」，把所有技术决策和弯路都记录下来。
+
+---
+
+### 资源和时间估算
+
+| 阶段 | 独立创作者 | 2-3 人小团队 |
+|------|-----------|-------------|
+| 前期开发 | 3-5 天 | 1-2 天 |
+| 角色资产制作 | 3-7 天 | 1-3 天 |
+| 正片生成 | 2-4 周 | 1-2 周 |
+| 剪辑收尾 | 3-5 天 | 1-2 天 |
+| **合计** | **4-7 周** | **2-4 周** |
+
+**生成次数估算（5 分钟短片）**：
+- 镜头数量：80-120 个
+- 每镜头平均尝试次数：3-5 次
+- 总生成次数：约 300-600 次
+
+**降低成本的技巧**：
+- 先用文字描述验证构图，确认没问题再生成
+- 在 Cinema Studio 用最低参数快速出一版草稿，确认方向后再高质量出正式版
+- 场景一致的镜头批量生成（同一参考图 + 同一样式前缀，换摄影机运动）
+
+---
+
+### 从 Zephyr 开源资产开始
+
+最快的入门路径：
+
+1. 打开 https://higgsfield.ai/original-series/zephyr-special/full-film
+2. 点击「Open project」进入 Cinema Studio
+3. 看 Higgsfield 团队每个镜头用了什么参考图、什么提示词
+4. 找一个你感兴趣的镜头，把它的参考图和提示词改成你自己角色的，重新生成
+
+**你不需要从零开始——站在开源项目的肩膀上，就是他们开源的意义。**
+
+---
+
 *Mycelium Protocol — 追踪 AI 系统的底层演化*
 
 ---
@@ -353,6 +601,253 @@ Extracted from the full Zephyr open-source project:
 5. **Style prefix for visual coherence** — establish consistent lighting/tone/camera language before production
 6. **Character first, then generation** — personality drives performance, reactions, and arc
 7. **Publish the failures** — bloopers reveal where the real engineering problems were, more clearly than successes do
+
+---
+
+---
+
+## Step-by-Step Tutorial: How an Individual or Small Team Makes a Sci-Fi Blockbuster
+
+> **Prerequisite**: A Higgsfield account (free to register) with Seedance 2.5 access. Open the Zephyr project files alongside this guide: https://higgsfield.ai/original-series/zephyr-special/full-film
+
+---
+
+### Phase 1: Pre-Production — 2–3 Days
+
+This is the highest-ROI phase. Skipping it doubles your cost in the production phase.
+
+#### Step 1: Develop your world and characters with Claude or Higgsfield Supercomputer
+
+Paste this template into Claude:
+
+```
+I want to make a 3–5 minute sci-fi animated short.
+
+Setting: [one sentence — e.g. "2087 wasteland city where humans and mechanical life coexist"]
+Number of protagonists: [1–3; solo creators should target 2 max]
+Central conflict: [one sentence — e.g. "an amnesiac mercenary discovers they were engineered as a weapon"]
+
+For each character, generate:
+1. Appearance keywords (3–5, for image generation)
+2. Personality traits (3–5, for writing performance descriptions)
+3. A signature gesture or habit (1–2, for distinctive shot language)
+4. The tension in their relationship with other characters
+```
+
+**Why this first**: the Zephyr team stated clearly — "knowing your characters makes it much easier to write their acting performance, reactions, and potential story arcs." Your character doc is the reference for every prompt you write — not just backstory.
+
+#### Step 2: Define your style prefix
+
+Before generating a single frame, lock in your visual language. Write the following as a fixed block that opens every prompt you write:
+
+```
+[Example style prefix]
+Cinematic, 4K, anamorphic lens, neon-noir lighting, cool blue and amber color grade,
+shallow depth of field, film grain, [your world name]
+```
+
+The original Zephyr episode had no unified style prefix, causing visual inconsistency across scenes — an explicit mistake the team called out. **Your style prefix is the film's visual bible.**
+
+---
+
+### Phase 2: Character Asset Production — 2–5 Days
+
+#### Step 3: Generate character appearances with Higgsfield Soul 2
+
+Soul 2 is built for character and costume design. Open Higgsfield → Image → Soul 2.
+
+Two generation rounds per character:
+
+**Round 1: Find the look**
+```
+[gender] [hair color] [hairstyle], [3 appearance features], [costume style],
+[accessories or signature element], sci-fi [your style words], full body,
+white background, character design sheet
+```
+
+**Round 2: Lock the hero image**  
+Pick the best result and iterate in Soul 2 until you feel "this is them." This image is the anchor for everything that follows — do not change it arbitrarily.
+
+#### Step 4: Build multi-state character reference sheets
+
+This is where the Zephyr team accumulated the most painful lessons. Each character needs at minimum:
+
+| Sheet type | Use | Note |
+|-----------|-----|------|
+| Standard standing (front + side) | All regular scenes | Primary reference |
+| Emotion close-up (2–3 expressions) | Dialogue / emotional scenes | Upper body only |
+| Action pose | Combat / running scenes | Do NOT include weapons |
+| Weapon / prop extended (one sheet each) | Weapon-use scenes | Upload only when needed |
+
+Use **Nano Banana 2 Pro** to refine each sheet — sharper details, more stable output. Use **Seedream** to combine multiple design drafts into a unified-style reference set.
+
+**Critical rule: weapons and mechanisms must never appear on the standard standing sheet.** If the model sees a detail, it will render it.
+
+#### Step 5: Vehicle / mech design (if applicable)
+
+Mechs require more state management than human characters:
+
+**Required separate sheets:**
+1. Full body standard form (all special parts stowed)
+2. Cockpit area close-up — hatch closed
+3. Cockpit area close-up — hatch open
+4. Weapons system close-up (one sheet per weapon)
+5. Inverted / damaged state (if the story calls for it) — use Zephyr's inverted sheet technique
+
+**Rule**: every component that opens, extends, or transforms needs two independent sheets: stowed state and deployed state.
+
+---
+
+### Phase 3: Pre-Production Asset Testing — Half a Day
+
+Test your reference sheets before committing to full production. Catch problems here, not mid-shoot.
+
+#### Step 6: Stability testing in Cinema Studio
+
+For each character, generate 3–5 test shots using this template:
+
+```
+[Style prefix]
+
+[Character name], [2–3 appearance keywords], standing in [neutral environment],
+looking at camera, medium shot, cinematic.
+
+Camera: static shot, locked tripod.
+```
+
+Check:
+- Is the character's appearance consistent across shots (hair color, costume, face)?
+- Did any unexpected details appear (weapons, mechanisms, extra elements)?
+- Does the lighting and color match your style prefix?
+
+If inconsistent → back to Step 4 to adjust the reference sheet, then re-test. Only proceed to production after passing this check.
+
+---
+
+### Phase 4: Principal Photography — Shot by Shot
+
+#### Step 7: Break the script into a shot list
+
+Don't think in scenes — think in shots. Each shot list entry:
+
+```
+Shot [number]
+- Character: [who]
+- Action: [what they do]
+- Emotion: [what it feels like]
+- Camera: [position + movement]
+- Duration: [3–8 seconds]
+- Reference sheet: [which one]
+- Special technique: [inverted / anchor-point / close-up input / etc.]
+```
+
+A 5-minute short film requires roughly 80–120 shots. Budget 3–5 generation attempts per shot to find a keeper.
+
+#### Step 8: Prompt template
+
+```
+[Style prefix]
+
+[Character name]: [1–2 appearance keywords], [action description], [emotional quality], [environment].
+
+Camera: [camera movement from Higgsfield Academy prompt bank].
+
+[Optional: anchor-point outcome description instead of process description]
+```
+
+**Camera vocabulary — copy directly from the Higgsfield Academy prompt bank:**
+
+- Static: `The camera stays planted in one immovable position. Zero motion — no drift, no shake, no breathing.`
+- Dolly in: `One continuous decisive dolly in on straight ground rails — pure forward travel at constant speed along the axis.`
+- Tilt up: `Pure TILT UP: the camera rotates vertically upward at one constant smooth speed.`
+- Orbit: `A smooth constant-speed circular drone flight around the subject, [8]-meter radius.`
+- Follow: `Handheld follow shot, medium distance, smooth stabilized motion tracking the subject.`
+
+#### Step 9: Hard shot strategies
+
+**Action sequences → anchor-point prompting** (Zephyr Technique 2):
+```
+[Style prefix]
+
+[Character name] executing a high-risk combat maneuver.
+Goal: convey overwhelming force, split-second precision, and barely-controlled desperation.
+Camera: low angle, dynamic handheld follow.
+```
+Don't describe every step. Let the model fill in the movement.
+
+**Physically abnormal scenarios → modify the reference image input** (Zephyr Technique 1):
+- Upside-down → flip the reference sheet vertically, then upload
+- Underwater → add a blue semi-transparent overlay to the reference sheet
+- Damaged / destroyed → paint over the relevant parts of the reference sheet
+
+**Weapon operation close-ups → upload a dedicated close-up input**:
+Crop the weapon to fill at least 70% of the image before uploading.
+
+#### Step 10: Managing failed takes
+
+Generating 3–5 versions per shot is normal. Use a consistent naming convention:
+
+```
+S[scene]_C[shot]_v[version]_[KEEP/FAIL]
+Example: S02_C04_v3_KEEP
+```
+
+**Never delete failed takes.** The Zephyr team included bloopers in their open-source assets for this reason: failure logs are the best engineering documentation. When you look back, you know exactly why that approach doesn't work.
+
+---
+
+### Phase 5: Edit and Delivery
+
+#### Step 11: Assemble the timeline
+
+Recommended tool: DaVinci Resolve (free version is sufficient). Steps:
+
+1. Import all `_KEEP` shots, cut a rough assembly of the complete story
+2. Color grade to unify cross-shot tone variations (fill in the gaps your style prefix didn't cover)
+3. Add music and sound design (AI music: Suno or Udio; SFX library: Freesound)
+4. Export at 4K, preserving native frame rate
+
+#### Step 12: Open-source your project files
+
+The Zephyr team published everything — including bloopers. This is methodology, not just generosity:
+- Your open-source project file is your technical portfolio
+- The community will remix your assets, driving organic reach
+- Higgsfield Film Festival judges review the production process, not just the final cut
+
+In Cinema Studio, set your project to public and write a Project Brief the way Zephyr did: record every technical decision and every dead end you encountered.
+
+---
+
+### Resource and Timeline Estimates
+
+| Phase | Solo creator | 2–3 person team |
+|-------|-------------|----------------|
+| Pre-production | 3–5 days | 1–2 days |
+| Character assets | 3–7 days | 1–3 days |
+| Principal photography | 2–4 weeks | 1–2 weeks |
+| Edit and delivery | 3–5 days | 1–2 days |
+| **Total** | **4–7 weeks** | **2–4 weeks** |
+
+**Generation volume estimate (5-minute short):**
+- Shots required: 80–120
+- Average attempts per shot: 3–5
+- Total generations: approximately 300–600
+
+**Cost reduction tactics:**
+- Verify composition in text first before generating
+- Use lowest settings for a quick draft, then generate the final version at full quality only after confirming direction
+- Batch-generate shots in the same environment (same reference sheet + same style prefix, varying only camera movement)
+
+---
+
+### The Fastest Starting Point: Use the Zephyr Assets Directly
+
+1. Open https://higgsfield.ai/original-series/zephyr-special/full-film
+2. Click **Open project** to enter Cinema Studio
+3. Browse the Higgsfield team's reference sheets and prompts, shot by shot
+4. Find a shot you want to adapt — swap the reference image for your character, modify the prompt, regenerate
+
+**You don't need to start from zero. Standing on the open-source project is exactly the point of open-sourcing it.**
 
 ---
 
