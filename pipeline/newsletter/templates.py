@@ -3,7 +3,7 @@ import datetime
 import html
 
 SITE_URL = "https://blog.mushroom.cv"
-MAX_ITEMS = 7
+MAX_ITEMS = 10   # 一封邮件最多展示 10 篇，其余只报数量并导流到站点
 
 CARD_TPL = """
 <tr>
@@ -42,7 +42,7 @@ BASE_TPL = """<!doctype html>
           </tr>
           <tr>
             <td style="padding-bottom:24px;font-size:15px;color:#444;line-height:1.6;">
-              这期一共 {count} 条更新，挑重点给你翻一下：
+              距上次以来共新增 {count} 篇，下面是最新的几篇：
             </td>
           </tr>
           {cards}
@@ -86,11 +86,14 @@ def render(items: list, fallback_banner: str) -> str:
 
     more_notice = ""
     if rest > 0:
-        # Overflow notice assumes blog is the source most likely to overflow;
-        # revisit if a non-blog source regularly produces more than MAX_ITEMS.
+        # 超出 MAX_ITEMS 的部分不进邮件正文——邮件只报数量并导流到站点，
+        # 免得积压多的时候把一封信撑成长列表。溢出条目不会被标记已发，
+        # 下一轮会重新参与（见 build-digest.py 写 manifest 的那段）。
         more_notice = (
-            f'<tr><td style="padding-bottom:20px;font-size:13px;color:#888;">'
-            f'本期还有 {rest} 条，<a href="{SITE_URL}/blog/" style="color:#0055d4;">去博客看全部</a></td></tr>'
+            f'<tr><td style="padding:4px 0 20px 0;font-size:13px;color:#888;line-height:1.6;">'
+            f'另有 {rest} 篇未在本期列出，'
+            f'<a href="{SITE_URL}/blog/" style="color:#0055d4;text-decoration:none;">到网站查看全部 →</a>'
+            f'</td></tr>'
         )
 
     return BASE_TPL.format(
