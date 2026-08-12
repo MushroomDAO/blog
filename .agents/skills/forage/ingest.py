@@ -9,7 +9,7 @@
 
 两条限量（你明确要求的）：
   - 单个博主每轮最多 5 条 —— 防止把某个号一次挖几十条，那是采集内容不是采集偏好
-  - 每轮总量最多 30 条 —— 目标是筛出符合偏好的，不是产出量
+  - 每轮总量最多 10 条 —— 目标是筛出符合偏好的，不是产出量
 
 五维打分（各 20 分，合计 100）：见 store.py 的 DIMS。
 """
@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from store import conn, entities, norm, DIMS
 
 MAX_PER_AUTHOR = 5
-MAX_TOTAL = 30
+MAX_TOTAL = 10   # 用户：一般十条以下比较合适
 RUN = datetime.now(timezone.utc).strftime("%Y%m%d")
 
 SRC_RANK = {"GitHub": 3, "HuggingFace": 2}   # 越大越优先保留
@@ -152,7 +152,7 @@ def main():
     print(f"  去重·历史雷达   {dropped['radar']}")
     print(f"  去重·同轮跨来源 {dropped['cross']}")
     print(f"  超单号 5 条上限  {dropped['author_cap']}")
-    print(f"  超总量 30 上限   {dropped['total_cap']}")
+    print(f"  超总量 10 上限   {dropped['total_cap']}")
     print("\n各来源入库数：")
     for a, n in sorted(per_author.items(), key=lambda x: -x[1]):
         print(f"  {a}: {n}")
