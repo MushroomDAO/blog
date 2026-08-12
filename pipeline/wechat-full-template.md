@@ -70,7 +70,7 @@ m2/renderer/wechat-renderer.js 自动在文章前后追加：
 **后置（disclaimer）**：
 ```
 关于本号 · 免责声明
-🍄 Mushroom Research Blog 是非营利、免费公开的个人科技观察博客...
+🍄 Mushroom Research Blog 是非营利、免费公开的个人科技观察博客与公众号 XStack18...
 ```
 
 **底部品牌卡（footerBanner）**：

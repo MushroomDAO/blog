@@ -179,7 +179,7 @@ function generateDisclaimer(theme) {
   return `
 <section style="margin-top:32px;padding:16px 18px;background:${theme.bgGray};border-radius:8px;font-size:12px;line-height:1.7;color:#888;">
   <div style="font-weight:bold;margin-bottom:6px;color:#666;">关于本号 · 免责声明</div>
-  <div>🍄 Mushroom Research Blog 是非营利、免费公开的个人科技观察博客与同名公众号，不接受商业合作、不代表任何企业或机构立场，也不谋求商业利益。我们以个人视角客观中立地记录和分析 AI、Web3 等领域的最新模型发布与技术动态，希望帮更多人获得有价值的一手科技认知，而非碎片化的信息噪音。</div>
+  <div>🍄 Mushroom Research Blog 是非营利、免费公开的个人科技观察博客与公众号 XStack18，不接受商业合作、不代表任何企业或机构立场，也不谋求商业利益。我们以个人视角客观中立地记录和分析 AI、Web3 等领域的最新模型发布与技术动态，希望帮更多人获得有价值的一手科技认知，而非碎片化的信息噪音。</div>
   <div style="margin-top:6px;">本文为作者基于公开信息的个人研究与观点整理，不代表文中提及公司/产品/模型的官方立场；文中引用的第三方商标、图片、数据等版权归原权利人所有，如有疏漏或侵权，请联系 <span style="color:${theme.primary};">hello@mushroom.cv</span>，我们会尽快核实处理。内容仅为技术科普，不构成投资、法律等专业建议。</div>
 </section>
 `;
