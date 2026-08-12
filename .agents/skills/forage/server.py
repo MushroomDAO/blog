@@ -135,7 +135,9 @@ def main():
     print(f"forage 评审台 → {url}")
     print(f"库：{DB}")
     print("打分和决定实时落库。Ctrl-C 停止。")
-    threading.Timer(0.6, lambda: webbrowser.open(url)).start()
+    # 常驻服务（LaunchAgent）不该每次重启都弹浏览器
+    if not os.environ.get("FORAGE_NO_BROWSER"):
+        threading.Timer(0.6, lambda: webbrowser.open(url)).start()
     try:
         srv.serve_forever()
     except KeyboardInterrupt:
