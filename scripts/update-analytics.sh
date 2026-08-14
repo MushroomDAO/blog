@@ -41,21 +41,32 @@ python3 pipeline/analytics/fetch-analytics.py
 echo "[2/4] building site…"
 pnpm build 2>&1 | tail -5
 
-echo "[3/4] deploying to Cloudflare Pages (blog-mushroom)…"
+# commit + push 放在本地直接部署之前:这样哪怕下一步的本地部署失败(2026-08-13
+# 那次就是——cron 的非交互环境里没有 CLOUDFLARE_API_TOKEN,wrangler 直接报错退出),
+# push 上去的这份好快照也已经能让 .github/workflows/deploy.yml 用它自己配置好的
+# secret 兜底部署一次,线上不会卡在旧数据上等人手动介入。
+echo "[3/4] committing + pushing updated data snapshot…"
+git add src/data/blog-analytics.json
+if git diff --cached --quiet; then
+  echo "  ✓ no data change to commit"
+else
+  git commit -m "chore(analytics): refresh traffic snapshot $(date +%Y-%m-%d)"
+  git push origin main
+  echo "  ✓ committed + pushed (GitHub Actions will deploy from this too)"
+fi
+
+# 本地直接部署失败不再让整个脚本报错退出——上面已经 push 过了，CI 兜得住。
+# set -e 在这条命令上先关掉，读完退出码再手动判断，避免非零码触发 errexit。
+echo "[4/4] deploying to Cloudflare Pages (blog-mushroom)…"
+set +e
 CA="${NODE_EXTRA_CA_CERTS:-${CF_CA_CERT:-}}"
 if [ -n "$CA" ] && [ -f "$CA" ]; then
   NODE_EXTRA_CA_CERTS="$CA" npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true 2>&1 | tail -4
 else
   NODE_TLS_REJECT_UNAUTHORIZED=0 npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true 2>&1 | tail -4
 fi
-
-echo "[4/4] committing updated data snapshot…"
-git add src/data/blog-analytics.json
-if git diff --cached --quiet; then
-  echo "  ✓ no data change to commit"
-else
-  git commit -m "chore(analytics): refresh traffic snapshot $(date +%Y-%m-%d)"
-  echo "  ✓ committed"
-fi
+DEPLOY_STATUS=${PIPESTATUS[0]}
+set -e
+[ "$DEPLOY_STATUS" -eq 0 ] || echo "  ⚠ 本地直接部署失败(退出码 $DEPLOY_STATUS),等 GitHub Actions 那条部署跑完就行,不是致命错误"
 
 echo "✅ done → https://blog.mushroom.cv/analytics/"

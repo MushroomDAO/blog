@@ -130,6 +130,20 @@ def main():
     """
     d = gql(token, query)
 
+    # 2026-08-13 撞到过一次:GraphQL 请求本身没报 errors,但 daily(按天分组)子查询
+    # 返回空,byPage/byCountry 等子查询却正常——脚本把 totals=0、daily=[] 但页面/
+    # 地域数据齐全的这份"半坏"快照当成功写盘,一路建出来部署上线,看板显示总量为
+    # 0。同一次响应里几个子查询完备性不一致,大概率是 Cloudflare 那边的瞬时问题,
+    # 重跑通常就好——所以这里不重试,直接判定失败、保留上一份好快照,好过覆盖成坏的。
+    if not d["daily"] and (d["byPage"] or d["byCountry"]):
+        print(
+            "ERROR: inconsistent GraphQL response — daily is empty but byPage/byCountry "
+            "are not (Cloudflare Analytics API glitch, seen 2026-08-13). Refusing to write "
+            "a broken snapshot; keeping the last good one. Just re-run.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
     daily = sorted(d["daily"], key=lambda x: x["dimensions"]["date"])
     daily_out = [
         {"date": x["dimensions"]["date"][5:], "pv": x["count"], "visits": x["sum"]["visits"]}
