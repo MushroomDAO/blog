@@ -321,48 +321,54 @@ const related = allPosts
 					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
 				</div>
 				
-				<div class="title-section">
-					<h1 class="title-cn">{title}</h1>
-					{titleEn && <h2 class="title-en">{titleEn}</h2>}
-					
-					<div class="meta-info">
-						<a href={`/blog/?category=${category}`} class="category-badge">{category}</a>
-						<span class="tag-list">
-							{tags?.map(tag => (
-								<span class="tag-item">#{tag}</span>
-							))}
-						</span>
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{updatedDate && (
-								<div class="last-updated-on">
-									更新于 <FormattedDate date={updatedDate} />
-								</div>
-							)}
-						</div>
-					</div>
-				</div>
+				<!-- Pagefind: data-pagefind-body scopes indexing to just this article's
+				     title+content, excluding header/footer/related-posts/comments/disclaimer.
+				     Once any element on a page carries data-pagefind-body, Pagefind indexes
+				     only tagged elements — everything outside this div is skipped automatically. -->
+				<div data-pagefind-body data-pagefind-filter={`category:${category}`}>
+					<div class="title-section">
+						<h1 class="title-cn">{title}</h1>
+						{titleEn && <h2 class="title-en">{titleEn}</h2>}
 
-				<div class={`bilingual-content ${!hasEnglish ? 'single-language' : ''}`}>
-					<!-- 中文内容 -->
-					<div class="content-column">
-						<div class="column-header">
-							<span class="lang-flag">🇨🇳</span>
-							<span>中文</span>
-						</div>
-						<div class="prose" set:html={cnContent} />
-					</div>
-					
-					<!-- 英文内容 -->
-					{hasEnglish && (
-						<div class="content-column">
-							<div class="column-header">
-								<span class="lang-flag">🇬🇧</span>
-								<span>English</span>
+						<div class="meta-info">
+							<a href={`/blog/?category=${category}`} class="category-badge">{category}</a>
+							<span class="tag-list">
+								{tags?.map(tag => (
+									<span class="tag-item">#{tag}</span>
+								))}
+							</span>
+							<div class="date">
+								<FormattedDate date={pubDate} />
+								{updatedDate && (
+									<div class="last-updated-on">
+										更新于 <FormattedDate date={updatedDate} />
+									</div>
+								)}
 							</div>
-							<div class="prose" set:html={enContent} />
 						</div>
-					)}
+					</div>
+
+					<div class={`bilingual-content ${!hasEnglish ? 'single-language' : ''}`}>
+						<!-- 中文内容 -->
+						<div class="content-column" data-pagefind-filter="language:zh">
+							<div class="column-header">
+								<span class="lang-flag">🇨🇳</span>
+								<span>中文</span>
+							</div>
+							<div class="prose" set:html={cnContent} />
+						</div>
+
+						<!-- 英文内容 -->
+						{hasEnglish && (
+							<div class="content-column" data-pagefind-filter="language:en">
+								<div class="column-header">
+									<span class="lang-flag">🇬🇧</span>
+									<span>English</span>
+								</div>
+								<div class="prose" set:html={enContent} />
+							</div>
+						)}
+					</div>
 				</div>
 				
 				<!-- 相关文章 -->
