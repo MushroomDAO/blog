@@ -39,7 +39,7 @@
 - **风险/回滚**：无
 - **证据**：分支 `feat/T1.1.2-pagefind-index`，PR [#30](https://github.com/MushroomDAO/blog/pull/30)
 
-### T1.1.3 搜索入口页面  `BACKLOG`
+### T1.1.3 搜索入口页面  `PR_OPEN`
 - **优先级**：high
 - **目标**：博客加一个 `/search` 页面，输入框 + 结果列表（标题、命中片段高亮、链接）
 - **开发范围**：新增 `src/pages/search.astro`，用 Pagefind 浏览器端 JS API
