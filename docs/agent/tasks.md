@@ -72,7 +72,7 @@
 
 ## F1.2 — 离线向量效果验证（Phase 0B，决策门，不上线）
 
-### T1.2.1 本地/CI 跑 bge-m3 embedding 对比实验  `BACKLOG`
+### T1.2.1 本地/CI 跑 bge-m3 embedding 对比实验  `BLOCKED`
 - **优先级**：mid
 - **目标**：用 T1.1.4 的评测查询集，离线对比"纯关键词(Pagefind) vs 纯向量(bge-m3) vs 简单融合"
   三种方式的检索效果
@@ -85,6 +85,10 @@
 - **涉及文件**：一次性实验脚本（路径待定）、`semantic-search/eval/vector-comparison-report.md`
 - **风险/回滚**：实验会消耗 Workers AI 额度，但几百篇文章一次性 embedding 成本可忽略
   （见 `semantic-search/CODEX_REVIEW.md` 成本测算）
+- **阻塞原因（2026-08-21）**：项目 `.env` 里的 `CLOUDFLARE_API_TOKEN` 调用
+  `POST /accounts/{id}/ai/run/@cf/baai/bge-m3` 返回 `Authentication error`（code 10000）——
+  这个 token 大概率是发布用的窄权限 token，没有 Workers AI 权限。需要一个有 `Workers AI:Read`
+  （或等效）权限的 token 才能跑这个实验。不会擅自扩大现有 token 权限或另建 token，等用户拍板。
 - **证据**：<推进时回填>
 
 ### T1.2.2 Phase 1 Go/No-Go 裁定  `BACKLOG`
