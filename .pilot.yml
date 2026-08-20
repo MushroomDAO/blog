@@ -1,0 +1,16 @@
+# .pilot.yml — 放仓库根目录。pilot 各阶段读它取分支/清理策略。
+# 脚本不解析 YAML；由 skill 用 Read 读取后作为 flag 传给脚本，保持确定简单。
+
+base_branch: main            # 主干；已开 GitHub 分支保护(需 1 个 approval)，但 enforce_admins=false，
+                              # 仓库主自己的账号/发布自动化仍可直接 push，不受影响
+integration_branch: main     # 单主干仓库：没有 preview 分支，PR 直接开向 main
+                              # 合并需加 --allow-trunk（会校验 main 的保护规则要求审批 + PR 已 APPROVED）
+protect_patterns:
+  - release
+  - hotfix
+remote: origin
+docs_dir: docs/agent         # 规划/运行态文档目录
+
+# 本仓库暂无接入外部评审服务（未验证）。PR 需要人工 review + approve 后才能合并，
+# pilot 只负责开 PR、盯状态、按回执行动，见 reference/review-contract.md「没有外部评审服务的仓库」。
+planning_source: docs
