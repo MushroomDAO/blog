@@ -66,7 +66,7 @@
   && [ $(wc -l < semantic-search/eval/queries.md) -ge 20 ]`
 - **涉及文件**：`semantic-search/eval/queries.md`、`semantic-search/eval/baseline-results.md`
 - **风险/回滚**：无
-- **证据**：<推进时回填>
+- **证据**：分支 `feat/T1.1.4-eval-baseline`，PR [#32](https://github.com/MushroomDAO/blog/pull/32)
 
 ---
 
