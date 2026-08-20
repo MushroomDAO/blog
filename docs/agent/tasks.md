@@ -51,7 +51,7 @@
 - **验收命令**：`pnpm build && test -f dist/search/index.html`
 - **涉及文件**：`src/pages/search.astro`
 - **风险/回滚**：无
-- **证据**：<推进时回填>
+- **证据**：分支 `feat/T1.1.3-search-page`，PR [#31](https://github.com/MushroomDAO/blog/pull/31)
 
 ### T1.1.4 评测查询集 + Recall@5 基线记录  `BACKLOG`
 - **优先级**：mid
