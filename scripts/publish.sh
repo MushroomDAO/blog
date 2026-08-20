@@ -3,7 +3,7 @@
 # Usage: ./scripts/publish.sh src/content/blog/xxx.md
 #        ./scripts/publish.sh src/content/my/xxx.md
 
-set -e
+set -eo pipefail
 cd "$(dirname "$0")/.."
 
 # 加载 .env
