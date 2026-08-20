@@ -10,7 +10,7 @@
 
 ## F1.1 — 关键词/静态检索基线（Phase 0A）
 
-### T1.1.1 给文章模板打 Pagefind 元数据标记  `PR_OPEN`
+### T1.1.1 给文章模板打 Pagefind 元数据标记  `DONE`
 - **优先级**：high
 - **目标**：让 Pagefind 索引时能拿到 language/tags/category 等可过滤字段，且只索引正文，
   不索引导航栏/页脚
@@ -24,9 +24,9 @@
   （任取一篇已发布文章的构建产物验证标记存在）
 - **涉及文件**：`src/layouts/BlogPost.astro`
 - **风险/回滚**：无涉钱/涉安全风险；改动可通过 `git revert` 直接回滚
-- **证据**：分支 `feat/T1.1.1-pagefind-metadata`，PR [#29](https://github.com/MushroomDAO/blog/pull/29)
+- **证据**：分支 `feat/T1.1.1-pagefind-metadata`，PR [#29](https://github.com/MushroomDAO/blog/pull/29)（合并 commit `09d7fce`）
 
-### T1.1.2 集成 Pagefind 构建后索引  `BACKLOG`
+### T1.1.2 集成 Pagefind 构建后索引  `PR_OPEN`
 - **优先级**：high
 - **目标**：`pnpm build` 后自动生成可供浏览器端查询的 Pagefind 索引
 - **开发范围**：加 `pagefind` 为 devDependency，`package.json` 加 postbuild script
