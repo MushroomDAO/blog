@@ -3,7 +3,7 @@
 # Usage: ./scripts/publish.sh src/content/blog/xxx.md
 #        ./scripts/publish.sh src/content/my/xxx.md
 
-set -e
+set -eo pipefail
 cd "$(dirname "$0")/.."
 
 # 加载 .env
@@ -35,7 +35,7 @@ else
   exit 1
 fi
 
-TITLE=$(grep '^title:' "$MD_FILE" | head -1 | sed 's/^title: *"//' | sed 's/"$//' | sed "s/^title: *'//; s/'$//")
+TITLE=$(grep -m1 '^title:' "$MD_FILE" | sed 's/^title: *"//' | sed 's/"$//' | sed "s/^title: *'//; s/'$//")
 FILENAME=$(basename "$MD_FILE" .md)
 
 echo -e "${GREEN}🚀 发布流程${NC}"
@@ -58,13 +58,10 @@ NODE_TLS_REJECT_UNAUTHORIZED=0 npx wrangler pages deploy dist \
   --project-name=blog-mushroom --branch=main --commit-dirty=true 2>&1 | tail -4
 echo -e "   ${GREEN}✅ 部署完成${NC}"
 
-# ========== Step 3: 微信公众号 ==========
-echo "[3/4] 发布到微信公众号..."
-unset https_proxy http_proxy all_proxy
-node pipeline/m2/index.js "$MD_FILE" 2>&1 | tail -8
-
-# ========== Step 4: Git 提交 ==========
-echo "[4/4] Git 提交并推送..."
+# ========== Step 3: Git 提交（放在微信之前）==========
+# 顺序刻意如此：Cloudflare 已经部署成功，git 同步不应该被下一步可能失败的
+# 微信发布卡住——否则会出现"博客已上线，git 历史却没同步"的不一致状态。
+echo "[3/4] Git 提交并推送..."
 git add "$MD_FILE"
 
 # 自动加入同名 banner 图（如果有未追踪的）
@@ -77,6 +74,15 @@ git commit -m "feat(${SECTION}): publish ${FILENAME}" 2>/dev/null || \
   echo -e "   ${YELLOW}⚠️ 无新变更需要提交${NC}"
 git push 2>&1 | tail -2
 echo -e "   ${GREEN}✅ 推送完成${NC}"
+
+# ========== Step 4: 微信公众号（失败不阻断，博客+git 已经落地）==========
+echo "[4/4] 发布到微信公众号..."
+unset https_proxy http_proxy all_proxy
+if node pipeline/m2/index.js "$MD_FILE" 2>&1 | tail -8; then
+  echo -e "   ${GREEN}✅ 微信草稿完成${NC}"
+else
+  echo -e "   ${YELLOW}⚠️ 微信发布失败，博客已上线且 git 已同步，请手动处理微信草稿${NC}"
+fi
 
 echo ""
 echo -e "${GREEN}✅ 发布完成！${NC}"

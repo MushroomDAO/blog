@@ -1,16 +1,26 @@
 # .pilot.yml — 放仓库根目录。pilot 各阶段读它取分支/清理策略。
 # 脚本不解析 YAML；由 skill 用 Read 读取后作为 flag 传给脚本，保持确定简单。
+#
+# 注意：base_branch/integration_branch 等键值行的行尾不要写注释——grade-change.sh 等脚本用
+# `sed 's/^integration_branch:[[:space:]]*//'` 取值，不会 strip 行尾注释，会把注释文本一起
+# 当成分支名（FU-1）。说明放在单独的注释行里。
 
-base_branch: main            # 主干；已开 GitHub 分支保护(需 1 个 approval)，但 enforce_admins=false，
-                              # 仓库主自己的账号/发布自动化仍可直接 push，不受影响
-integration_branch: main     # 单主干仓库：没有 preview 分支，PR 直接开向 main
-                              # 合并需加 --allow-trunk（会校验 main 的保护规则要求审批 + PR 已 APPROVED）
+# 主干；已开 GitHub 分支保护（需 1 个 approval），但 enforce_admins=false，
+# 仓库主自己的账号/发布自动化仍可直接 push，不受影响
+base_branch: main
+
+# 单主干仓库：没有 preview 分支，PR 直接开向 main。
+# 合并需加 --allow-trunk（会校验 main 的保护规则要求审批 + PR 已 APPROVED）
+integration_branch: main
+
 protect_patterns:
   - release
   - hotfix
 remote: origin
-docs_dir: docs/agent         # 规划/运行态文档目录
+docs_dir: docs/agent
+
+# 规划在哪里。docs（默认）= 起跑门禁检查 docs_dir 下那七个文件
+planning_source: docs
 
 # 本仓库暂无接入外部评审服务（未验证）。PR 需要人工 review + approve 后才能合并，
 # pilot 只负责开 PR、盯状态、按回执行动，见 reference/review-contract.md「没有外部评审服务的仓库」。
-planning_source: docs

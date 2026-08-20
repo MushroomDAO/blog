@@ -10,7 +10,7 @@ echo "⚠️  auto-publish.sh is deprecated → use scripts/publish-blog.sh." >&
 #   BLOG_USER - 用户配置名 (默认: mushroom)
 #   或从 .env 文件读取
 
-set -e
+set -eo pipefail
 cd "$(dirname "$0")/.."
 
 # 加载 .env 文件
