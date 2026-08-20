@@ -9,12 +9,12 @@
 - **正在开发的 Task**：尚未开工，规划刚完成
 - **分支 / worktree**：规划文档本身在 `../blog-plan`（`docs/plan-2026-08-20` 分支）；
   实际开发 F1.1 时需新建 `../blog-F1.1` worktree
-- **PR**：规划文档 PR 待开（本轮 `pilot plan` 收尾时提交）
+- **PR**：[#27](https://github.com/MushroomDAO/blog/pull/27)（PENDING，等人工 review——本仓库未确认接入外部评审服务）
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| （规划文档） | 待开 | — | `docs/agent/*` + `.pilot.yml` 首次提交 |
+| （规划文档） | [#27](https://github.com/MushroomDAO/blog/pull/27) | PENDING | `docs/agent/*` + `.pilot.yml` 首次提交，需人工 approve 后合并（`--allow-trunk`） |
 
 ## 阻塞项（BLOCKED）
 - 无（T1.2.2「Phase 1 Go/No-Go 裁定」在 F1.2 完成前不会被 run 挑中，届时会成为
