@@ -26,7 +26,7 @@
 - **风险/回滚**：无涉钱/涉安全风险；改动可通过 `git revert` 直接回滚
 - **证据**：分支 `feat/T1.1.1-pagefind-metadata`，PR [#29](https://github.com/MushroomDAO/blog/pull/29)（合并 commit `09d7fce`）
 
-### T1.1.2 集成 Pagefind 构建后索引  `PR_OPEN`
+### T1.1.2 集成 Pagefind 构建后索引  `DONE`
 - **优先级**：high
 - **目标**：`pnpm build` 后自动生成可供浏览器端查询的 Pagefind 索引
 - **开发范围**：加 `pagefind` 为 devDependency，`package.json` 加 postbuild script
@@ -37,9 +37,9 @@
 - **验收命令**：`pnpm build && test -f dist/pagefind/pagefind.js`
 - **涉及文件**：`package.json`
 - **风险/回滚**：无
-- **证据**：分支 `feat/T1.1.2-pagefind-index`，PR [#30](https://github.com/MushroomDAO/blog/pull/30)
+- **证据**：分支 `feat/T1.1.2-pagefind-index`，PR [#30](https://github.com/MushroomDAO/blog/pull/30)（合并 commit `5e3cc88`）
 
-### T1.1.3 搜索入口页面  `PR_OPEN`
+### T1.1.3 搜索入口页面  `DONE`
 - **优先级**：high
 - **目标**：博客加一个 `/search` 页面，输入框 + 结果列表（标题、命中片段高亮、链接）
 - **开发范围**：新增 `src/pages/search.astro`，用 Pagefind 浏览器端 JS API
@@ -51,9 +51,9 @@
 - **验收命令**：`pnpm build && test -f dist/search/index.html`
 - **涉及文件**：`src/pages/search.astro`
 - **风险/回滚**：无
-- **证据**：分支 `feat/T1.1.3-search-page`，PR [#31](https://github.com/MushroomDAO/blog/pull/31)
+- **证据**：分支 `feat/T1.1.3-search-page`，PR [#31](https://github.com/MushroomDAO/blog/pull/31)（合并 commit `9eff119`）
 
-### T1.1.4 评测查询集 + Recall@5 基线记录  `PR_OPEN`
+### T1.1.4 评测查询集 + Recall@5 基线记录  `DONE`
 - **优先级**：mid
 - **目标**：整理评测查询集，跑一遍 T1.1.3 的搜索，记录基线效果，供 F1.2 对比
 - **开发范围**：撰写 20–30 条查询（技术名词/自然语言/宽泛探索/中文/英文/跨语言/负样本各若干条）
@@ -66,7 +66,7 @@
   && [ $(wc -l < semantic-search/eval/queries.md) -ge 20 ]`
 - **涉及文件**：`semantic-search/eval/queries.md`、`semantic-search/eval/baseline-results.md`
 - **风险/回滚**：无
-- **证据**：分支 `feat/T1.1.4-eval-baseline`，PR [#32](https://github.com/MushroomDAO/blog/pull/32)
+- **证据**：分支 `feat/T1.1.4-eval-baseline`，PR [#32](https://github.com/MushroomDAO/blog/pull/32)（合并 commit `705b47c`）
 
 ---
 
