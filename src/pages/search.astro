@@ -1,0 +1,63 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+---
+
+<html lang="zh-CN">
+	<head>
+		<BaseHead
+			title="搜索"
+			titleEn="Search"
+			description="搜索 Mycelium Protocol Blog 的全部文章"
+			descriptionEn="Search all articles on the Mycelium Protocol Blog"
+		/>
+		<style>
+			main.search-page {
+				width: 100%;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 2em 1em;
+			}
+			.search-page h1 {
+				margin-bottom: 0.8em;
+			}
+			.search-page .fallback-note {
+				display: none;
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+				background: rgba(var(--gray), 0.08);
+				border-radius: 8px;
+				padding: 0.8em 1em;
+				margin-top: 1em;
+			}
+			.search-page .fallback-note.visible {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main class="search-page">
+			<h1>🔍 搜索文章 / Search Articles</h1>
+			<div id="search"></div>
+			<p class="fallback-note" id="search-fallback-note">
+				搜索索引加载失败，可能是本地开发环境（<code>pnpm dev</code>）还没有生成索引——先跑一次
+				<code>pnpm build</code> 再用 <code>pnpm preview</code> 预览。
+			</p>
+		</main>
+		<Footer />
+
+		<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+		<script is:inline src="/pagefind/pagefind-ui.js"></script>
+		<script is:inline>
+			window.addEventListener('DOMContentLoaded', () => {
+				if (typeof PagefindUI === 'undefined') {
+					document.getElementById('search-fallback-note')?.classList.add('visible');
+					return;
+				}
+				new PagefindUI({ element: '#search', showSubResults: true, showImages: false });
+			});
+		</script>
+	</body>
+</html>
