@@ -6,14 +6,14 @@
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
 - **Feature**：F1.1 关键词/静态检索基线（Phase 0A）
-- **正在开发的 Task**：T1.1.2 集成 Pagefind 构建后索引（状态：IN_PROGRESS，即将开 PR）
+- **正在开发的 Task**：T1.1.2 集成 Pagefind 构建后索引（状态：PR_OPEN）
 - **分支 / worktree**：`feat/T1.1.2-pagefind-index` / `../blog-F1.1`
-- **PR**：无（即将开）
+- **PR**：[#30](https://github.com/MushroomDAO/blog/pull/30)（等人工 review）
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| （无） | — | — | — |
+| T1.1.2 | [#30](https://github.com/MushroomDAO/blog/pull/30) | PENDING | 需人工 approve 后合并（`--allow-trunk`） |
 
 ## 阻塞项（BLOCKED）
 - 无（T1.2.2「Phase 1 Go/No-Go 裁定」在 F1.2 完成前不会被 run 挑中，届时会成为

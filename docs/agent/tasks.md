@@ -37,7 +37,7 @@
 - **验收命令**：`pnpm build && test -f dist/pagefind/pagefind.js`
 - **涉及文件**：`package.json`
 - **风险/回滚**：无
-- **证据**：<推进时回填>
+- **证据**：分支 `feat/T1.1.2-pagefind-index`，PR [#30](https://github.com/MushroomDAO/blog/pull/30)
 
 ### T1.1.3 搜索入口页面  `BACKLOG`
 - **优先级**：high
