@@ -10,7 +10,7 @@
 
 ## F1.1 — 关键词/静态检索基线（Phase 0A）
 
-### T1.1.1 给文章模板打 Pagefind 元数据标记  `READY`
+### T1.1.1 给文章模板打 Pagefind 元数据标记  `IN_PROGRESS`
 - **优先级**：high
 - **目标**：让 Pagefind 索引时能拿到 language/tags/category 等可过滤字段，且只索引正文，
   不索引导航栏/页脚
