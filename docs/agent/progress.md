@@ -6,14 +6,14 @@
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
 - **Feature**：F1.2 离线向量效果验证（Phase 0B）
-- **正在开发的 Task**：T1.2.1 本地/CI 跑 bge-m3 embedding 对比实验（状态：PR_OPEN，即将提交）
+- **正在开发的 Task**：T1.2.1 本地/CI 跑 bge-m3 embedding 对比实验（状态：PR_OPEN）
 - **分支 / worktree**：`feat/T1.2.1-vector-experiment` / `../blog-F1.2`
-- **PR**：待开
+- **PR**：[#36](https://github.com/MushroomDAO/blog/pull/36)（等人工 review）
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| （无） | — | — | — |
+| T1.2.1 | [#36](https://github.com/MushroomDAO/blog/pull/36) | PENDING | 需人工 approve 后合并（`--allow-trunk`）；合并后 T1.2.2 等你看报告拍板 |
 
 ## 阻塞项（BLOCKED）
 - **T1.2.2**：Phase 1 Go/No-Go 裁定是产品方向决策，T1.2.1 报告写完后必须停在这里等用户拍板，

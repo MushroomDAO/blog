@@ -88,7 +88,7 @@
 - **阻塞解除（2026-08-21）**：用户指出 `~/Dev/.env` 里的 `CLOUDFLARE_REGISTRAR_TOKEN`
   （另一个项目 cmic 长期在用）实测对 `POST /accounts/{id}/ai/run/@cf/baai/bge-m3` 鉴权成功，
   返回真实 1024 维 embedding（中英文均验证过）。改用这个 token 跑实验。
-- **证据**：<推进时回填>
+- **证据**：分支 `feat/T1.2.1-vector-experiment`，PR [#36](https://github.com/MushroomDAO/blog/pull/36)
 
 ### T1.2.2 Phase 1 Go/No-Go 裁定  `BLOCKED`
 - **优先级**：high
