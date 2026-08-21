@@ -1,19 +1,19 @@
 # 语义检索 / 智能推荐功能 实时状态 — progress
 
 > 「此刻仓库真实发生了什么」。由 `pilot run` 每一步更新。
-> 更新时间：2026-08-21 02:30
+> 更新时间：2026-08-21 14:20
 
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
-- **Feature**：F1.2 离线向量效果验证（Phase 0B）
-- **正在开发的 Task**：T1.2.1 本地/CI 跑 bge-m3 embedding 对比实验（状态：PR_OPEN）
-- **分支 / worktree**：`feat/T1.2.1-vector-experiment` / `../blog-F1.2`
-- **PR**：[#36](https://github.com/MushroomDAO/blog/pull/36)（等人工 review）
+- **Feature**：F1.2 离线向量效果验证（Phase 0B）—— **F1.1+F1.2 全部完成，卡在 T1.2.2 等人工裁定**
+- **正在开发的 Task**：无（T1.2.2 是产品决策，不能无人值守推进）
+- **分支 / worktree**：无
+- **PR**：无
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| T1.2.1 | [#36](https://github.com/MushroomDAO/blog/pull/36) | PENDING | 需人工 approve 后合并（`--allow-trunk`）；合并后 T1.2.2 等你看报告拍板 |
+| （无） | — | — | — |
 
 ## 阻塞项（BLOCKED）
 - **T1.2.2**：Phase 1 Go/No-Go 裁定是产品方向决策，T1.2.1 报告写完后必须停在这里等用户拍板，
@@ -23,7 +23,8 @@
   裁定前保持 `BACKLOG`。
 
 ## 最近完成
-- 2026-08-21：T1.2.1 完成——用 `CLOUDFLARE_REGISTRAR_TOKEN`（用户指出的可用 token）跑通
+- 2026-08-21：T1.2.1 DONE（PR #36 合并进 main，commit `b30e595`）——用
+  `CLOUDFLARE_REGISTRAR_TOKEN`（用户指出的可用 token）跑通
   464 篇文章 + 24 条查询的 bge-m3 embedding 对比实验，产出
   `semantic-search/eval/vector-comparison-report.md`。核心发现：跨语言查询（"脑仿真 大脑
   连接组"）从关键词 0 结果变成向量 #1 命中；EN/ZH 同主题查询在向量下结果高度一致，关键词下

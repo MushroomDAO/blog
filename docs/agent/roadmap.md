@@ -18,7 +18,6 @@
 
 ---
 
-> 当前聚焦：M1 / F1.2（F1.1 已全部 DONE）。F1.2 的 T1.2.1 目前 BLOCKED（缺 Workers AI 权限的
-> token）；F1.3 是否启动由 T1.2.2
-> 依据 F1.2 的离线评测数据人工拍板；F1.4 依赖 F1.3 全部完成。每个 Feature 的 Task 拆分与
-> 状态见 tasks.md。
+> 当前聚焦：F1.1 + F1.2 全部完成。T1.2.2（Phase 1 Go/No-Go）BLOCKED，等用户看完
+> `semantic-search/eval/vector-comparison-report.md` 拍板；F1.3 是否启动由这个裁定决定，
+> F1.4 依赖 F1.3 全部完成。每个 Feature 的 Task 拆分与状态见 tasks.md。
