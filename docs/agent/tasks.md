@@ -72,7 +72,7 @@
 
 ## F1.2 — 离线向量效果验证（Phase 0B，决策门，不上线）
 
-### T1.2.1 本地/CI 跑 bge-m3 embedding 对比实验  `PR_OPEN`
+### T1.2.1 本地/CI 跑 bge-m3 embedding 对比实验  `DONE`
 - **优先级**：mid
 - **目标**：用 T1.1.4 的评测查询集，离线对比"纯关键词(Pagefind) vs 纯向量(bge-m3) vs 简单融合"
   三种方式的检索效果
@@ -88,7 +88,7 @@
 - **阻塞解除（2026-08-21）**：用户指出 `~/Dev/.env` 里的 `CLOUDFLARE_REGISTRAR_TOKEN`
   （另一个项目 cmic 长期在用）实测对 `POST /accounts/{id}/ai/run/@cf/baai/bge-m3` 鉴权成功，
   返回真实 1024 维 embedding（中英文均验证过）。改用这个 token 跑实验。
-- **证据**：分支 `feat/T1.2.1-vector-experiment`，PR [#36](https://github.com/MushroomDAO/blog/pull/36)
+- **证据**：分支 `feat/T1.2.1-vector-experiment`，PR [#36](https://github.com/MushroomDAO/blog/pull/36)（合并 commit `b30e595`）
 
 ### T1.2.2 Phase 1 Go/No-Go 裁定  `BLOCKED`
 - **优先级**：high
