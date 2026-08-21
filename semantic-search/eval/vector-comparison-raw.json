@@ -1,0 +1,722 @@
+[
+  {
+    "query": "Pagefind",
+    "top5": [
+      {
+        "score": 0.5043,
+        "title": "PenguinHarness：用 4 个 Skill 把 Agent 调优变成有版本、有固定考题、有分数记录的实验闭环",
+        "url": "/blog/penguin-harness-self-evolving-agent-builder-skills-benchmark/"
+      },
+      {
+        "score": 0.4938,
+        "title": "DeepSeek-Reasonix：围绕前缀缓存稳定性设计的终端编程 Agent",
+        "url": "/blog/deepseek-reasonix-terminal-coding-agent-prefix-cache/"
+      },
+      {
+        "score": 0.4893,
+        "title": "AnySearch：专为 AI Agent 设计的搜索基础设施，打通金融、法律、学术认证数据源",
+        "url": "/blog/anysearch-ai-agent-search-infrastructure/"
+      },
+      {
+        "score": 0.4874,
+        "title": "LiteParse：LlamaIndex 团队开源本地文档解析引擎，Rust 核心+四端绑定+精确边界框，8.3k Star",
+        "url": "/blog/liteparse-llamaindex-local-document-parser/"
+      },
+      {
+        "score": 0.4858,
+        "title": "Webclaw 开发者使用指南：用 Rust 爬虫给 AI 喂干净的 Markdown",
+        "url": "/blog/webclaw-rust-web-scraper-llm-guide/"
+      }
+    ]
+  },
+  {
+    "query": "Cloudflare Vectorize",
+    "top5": [
+      {
+        "score": 0.516,
+        "title": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token",
+        "url": "/blog/cloudflare-workers-ai-glm-kimi-deepseek-minimax/"
+      },
+      {
+        "score": 0.5143,
+        "title": "Cloudflare Mesh：赛博菩萨的 Tailscale 平替，免费 50 节点 + 容器化部署",
+        "url": "/blog/cloudflare-mesh-tailscale-alternative-private-network-docker-k8s/"
+      },
+      {
+        "score": 0.4849,
+        "title": "@cloudflare/computer：给每个 Agent 一台自己的电脑",
+        "url": "/blog/cloudflare-computer-agent-runtime-isolate-container/"
+      },
+      {
+        "score": 0.4781,
+        "title": "Cloudflare 把浏览器也 Serverless 了：Kitesurf 调研",
+        "url": "/blog/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate/"
+      },
+      {
+        "score": 0.4778,
+        "title": "om-ai-lab VLX三件套：让AI真正看懂、认准、导航物理世界",
+        "url": "/blog/om-ai-lab-vlx-flow-seek-go-physical-ai/"
+      }
+    ]
+  },
+  {
+    "query": "MCP Model Context Protocol",
+    "top5": [
+      {
+        "score": 0.5295,
+        "title": "Google Search Trends MCP 实战：让 AI 帮你在趋势爆发前抓住它",
+        "url": "/blog/google-search-trends-mcp-guide/"
+      },
+      {
+        "score": 0.529,
+        "title": "FastMCP：用几十行 TypeScript 搭 MCP 服务器，5 个月 3000+ star",
+        "url": "/blog/fastmcp-typescript-mcp-server-framework/"
+      },
+      {
+        "score": 0.5156,
+        "title": "免费 Google Trends MCP：小工作室的日常趋势雷达，和收费 MCP 这样搭配最省钱",
+        "url": "/blog/free-google-trends-mcp-studio-guide/"
+      },
+      {
+        "score": 0.493,
+        "title": "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex",
+        "url": "/blog/persona-vrm-avatar-ai-voice-mcp/"
+      },
+      {
+        "score": 0.4803,
+        "title": "用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南",
+        "url": "/blog/open-connector-mcp-agent-integration-guide/"
+      }
+    ]
+  },
+  {
+    "query": "LoRA 训练",
+    "top5": [
+      {
+        "score": 0.6309,
+        "title": "934MB 适配器，27B 基座，95% 代码通过率——BTL-3 的 LoRA 炼成路",
+        "url": "/blog/btl-3-lora-adapter-qwen-programming-agent-tool-calling-training/"
+      },
+      {
+        "score": 0.6281,
+        "title": "在 Mac 上训练一个「专属角色」：用本地 FLUX + LoRA 让 AI 每次都画出同一个人",
+        "url": "/blog/train-character-lora-local-flux-mac/"
+      },
+      {
+        "score": 0.5964,
+        "title": "14 台 Mac 跨越四国做 RL 后训练：Pluralis Research 的 stoa 实验",
+        "url": "/blog/stoa-pluralis-research-mac-rl-fleet-distributed-training/"
+      },
+      {
+        "score": 0.5844,
+        "title": "5块钱让大模型学会看图做几何题：GRPO 后训练的低成本实验",
+        "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/"
+      },
+      {
+        "score": 0.5793,
+        "title": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token",
+        "url": "/blog/longstraw-million-token-rl-training-gpu/"
+      }
+    ]
+  },
+  {
+    "query": "Claude Code Skill",
+    "top5": [
+      {
+        "score": 0.6433,
+        "title": "grill-me：181k Star 的 Claude Code Skill，用一个问题消灭 AI 编码最常见的失败模式",
+        "url": "/blog/grill-me-skill-mattpocock-claude-code-guide/"
+      },
+      {
+        "score": 0.6427,
+        "title": "ai-marketing-claude：给 Claude Code 装 15 个营销技能，一条命令审计任意网站",
+        "url": "/blog/ai-marketing-claude-code-skill-suite/"
+      },
+      {
+        "score": 0.6394,
+        "title": "video-use：用 Claude Code 剪视频，browser-use 团队开源 AI 视频编辑器",
+        "url": "/blog/video-use-ai-video-editor-claude-code/"
+      },
+      {
+        "score": 0.6337,
+        "title": "act-combat-design：游戏战斗策划开源 AI Skill，46 元规则 + 70+ 游戏库，三端全兼容",
+        "url": "/blog/act-combat-design-ai-skill-guide/"
+      },
+      {
+        "score": 0.6284,
+        "title": "需求整理三连击：grilling + domain-modeling + grill-with-docs，把模糊需求变成可执行文档",
+        "url": "/blog/grill-with-docs-domain-modeling-grilling-skills-requirement-workflow/"
+      }
+    ]
+  },
+  {
+    "query": "WebGPU",
+    "top5": [
+      {
+        "score": 0.541,
+        "title": "SenseNova-Vision：一个7B模型做完所有CV任务，需要什么硬件？",
+        "url": "/blog/sensenova-vision-unified-cv-hardware-guide/"
+      },
+      {
+        "score": 0.53,
+        "title": "继续等Mac Studio还是投入AMD怀抱Or云GPU？",
+        "url": "/blog/mac-studio-vs-amd-vs-cloud-gpu-local-ai/"
+      },
+      {
+        "score": 0.5271,
+        "title": "非得显卡？小模型跑在 CPU 上也照样快：Aether 小模型运维 Agent 全解析（转载）",
+        "url": "/blog/aether-small-model-cpu-ops-agent/"
+      },
+      {
+        "score": 0.5221,
+        "title": "Meta Muse Glimmer 30B：专为本地 Agent 设计的 30B 小钢炮",
+        "url": "/blog/meta-muse-glimmer-30b-local-agent-dense-multimodal-apache/"
+      },
+      {
+        "score": 0.5196,
+        "title": "FramePack：ControlNet 作者开源，6G 显存生成 1 分钟视频，F1+P1 双版抗漂移",
+        "url": "/blog/framepack-lllyasviel-long-video-diffusion-guide/"
+      }
+    ]
+  },
+  {
+    "query": "我想本地部署一个 AI 视频编辑工具",
+    "top5": [
+      {
+        "score": 0.6385,
+        "title": "输入一句话生成完整短视频：Pixelle-Video 完整使用指南",
+        "url": "/blog/pixelle-video-ai-short-video-engine-guide/"
+      },
+      {
+        "score": 0.6307,
+        "title": "一句话生成完整短视频：Pixelle-Video 开源引擎上手指南",
+        "url": "/blog/pixelle-video-ai-short-video-generator/"
+      },
+      {
+        "score": 0.6283,
+        "title": "html-video：丢一个链接，本地生成 MP4，全程不碰剪辑软件",
+        "url": "/blog/html-video-nexu-usage-guide/"
+      },
+      {
+        "score": 0.6266,
+        "title": "video-use：用 Claude Code 剪视频，browser-use 团队开源 AI 视频编辑器",
+        "url": "/blog/video-use-ai-video-editor-claude-code/"
+      },
+      {
+        "score": 0.6247,
+        "title": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片",
+        "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/"
+      }
+    ]
+  },
+  {
+    "query": "怎么给 Claude Code 装技能包",
+    "top5": [
+      {
+        "score": 0.6088,
+        "title": "act-combat-design：游戏战斗策划开源 AI Skill，46 元规则 + 70+ 游戏库，三端全兼容",
+        "url": "/blog/act-combat-design-ai-skill-guide/"
+      },
+      {
+        "score": 0.5966,
+        "title": "The Agentic Startup：给 Claude Code 装一套创业团队工作流",
+        "url": "/blog/the-startup-rsmdt-claude-code-spec-driven-multi-agent/"
+      },
+      {
+        "score": 0.582,
+        "title": "video-use：用 Claude Code 剪视频，browser-use 团队开源 AI 视频编辑器",
+        "url": "/blog/video-use-ai-video-editor-claude-code/"
+      },
+      {
+        "score": 0.5813,
+        "title": "Claude Code Game Studios：把 AI 对话窗口变成游戏工作室",
+        "url": "/blog/claude-code-game-studios-open-source-framework/"
+      },
+      {
+        "score": 0.5768,
+        "title": "ai-marketing-claude：给 Claude Code 装 15 个营销技能，一条命令审计任意网站",
+        "url": "/blog/ai-marketing-claude-code-skill-suite/"
+      }
+    ]
+  },
+  {
+    "query": "local-first sync AI agent",
+    "top5": [
+      {
+        "score": 0.593,
+        "title": "Neo Chat：本地优先的 AI 聊天工作台，把「加密跨设备同步」这个硬骨头啃下来了",
+        "url": "/blog/neo-chat-local-first-encrypted-sync-mcp-rag-workspace/"
+      },
+      {
+        "score": 0.584,
+        "title": "Cindy：跨 Harness 持久记忆的本地优先开源 AI Agent，纠正一次、处处生效",
+        "url": "/blog/cindy-local-first-ai-agent-cross-harness-memory-electron-react-native/"
+      },
+      {
+        "score": 0.5799,
+        "title": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱",
+        "url": "/blog/lilbot-agent-local-coding-trial/"
+      },
+      {
+        "score": 0.5625,
+        "title": "Proma：把 Chat、Agent、Skills、MCP 和微信桥接做进一个本地优先桌面应用",
+        "url": "/blog/proma-local-first-ai-desktop-agent-workspace/"
+      },
+      {
+        "score": 0.5591,
+        "title": "AutoAgent：首个自优化智能体开源库",
+        "url": "/blog/autoagent-self-optimizing-agent/"
+      }
+    ]
+  },
+  {
+    "query": "有没有讲 Agent 循环设计的文章",
+    "top5": [
+      {
+        "score": 0.6532,
+        "title": "读后感：Agent 架构的底层逻辑——从控制论看 Harness 设计",
+        "url": "/blog/agent-architecture-cybernetics-harness-design/"
+      },
+      {
+        "score": 0.6519,
+        "title": "Loop Engineering：AI Agent 系统的第四层工程，设计循环，不只是设计提示词",
+        "url": "/blog/awesome-loop-engineering-agent-loops-guide/"
+      },
+      {
+        "score": 0.6457,
+        "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
+        "url": "/blog/hitchhikers-guide-agentic-ai-book/"
+      },
+      {
+        "score": 0.6366,
+        "title": "22 节课读懂 Agent 系统怎么建：awesome-agent-architecture 的 Harness 工程地图",
+        "url": "/blog/awesome-agent-architecture-22-section-harness-engineering-guide/"
+      },
+      {
+        "score": 0.6364,
+        "title": "软件公司转型：如何开发 Agent？一线团队的 8 步流程与 6 条避坑建议",
+        "url": "/blog/how-to-build-agents-software-company-guide/"
+      }
+    ]
+  },
+  {
+    "query": "脑仿真 大脑连接组",
+    "top5": [
+      {
+        "score": 0.5258,
+        "title": "脑子的数据量：从果蝇 20TB 到人脑 1.4PB，我们到底在测量什么",
+        "url": "/blog/brain-connectome-data-size-fly-human-mouse/"
+      },
+      {
+        "score": 0.5123,
+        "title": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解",
+        "url": "/blog/openthoughts-agent-sft-data-recipe-agentic-models/"
+      },
+      {
+        "score": 0.4918,
+        "title": "5块钱让大模型学会看图做几何题：GRPO 后训练的低成本实验",
+        "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/"
+      },
+      {
+        "score": 0.4894,
+        "title": "SparkLabs：首个 AI 原生游戏引擎，NPC 终于拥有了真正的大脑",
+        "url": "/blog/sparklabs-ai-native-game-engine-intro/"
+      },
+      {
+        "score": 0.4893,
+        "title": "iDoris 立项思考：一个普通研究者如何构建可持续进化的本地 AI 模型",
+        "url": "/blog/idoris-project-launch--how-an-independent-researcher-builds-/"
+      }
+    ]
+  },
+  {
+    "query": "AI Agent 记忆系统",
+    "top5": [
+      {
+        "score": 0.6809,
+        "title": "Agentic AI 系统全景：用 Python 构建智能 Agent 的核心框架",
+        "url": "/blog/agentic-ai-systems-python-comprehensive-guide/"
+      },
+      {
+        "score": 0.6516,
+        "title": "TencentDB Agent Memory：腾讯云开源的团队级 Agent 记忆系统",
+        "url": "/blog/tencentdb-agent-memory-team-level-symbolic-layered-memory/"
+      },
+      {
+        "score": 0.6413,
+        "title": "Wiki Memory：LangChain CEO 预言的 Agent 记忆新范式，开发者深度解读",
+        "url": "/blog/langchain-wiki-memory-developer-analysis/"
+      },
+      {
+        "score": 0.6083,
+        "title": "MemPalace：重塑 AI 记忆的记忆宫殿",
+        "url": "/blog/mempalace-ai-memory-palace/"
+      },
+      {
+        "score": 0.5999,
+        "title": "AnimaWorks 深度指南：开源 Python 智能体框架，五层记忆体系让 AI 真正「记住」你",
+        "url": "/blog/animaworks-open-source-agent-memory-framework-guide/"
+      }
+    ]
+  },
+  {
+    "query": "浏览器自动化 Agent",
+    "top5": [
+      {
+        "score": 0.7074,
+        "title": "BrowserAct：给 AI Agent 装上真实浏览器，4500 stars，10M+ CAPTCHA 已解决",
+        "url": "/blog/browseract-ai-agent-browser-client-guide/"
+      },
+      {
+        "score": 0.6613,
+        "title": "browser-harness：一个会自己写代码的浏览器 Agent 工具——每次运行都在让自己变聪明",
+        "url": "/blog/browser-harness-self-healing-cdp-agent-skill-chrome-automation/"
+      },
+      {
+        "score": 0.6082,
+        "title": "AutoAgent：首个自优化智能体开源库",
+        "url": "/blog/autoagent-self-optimizing-agent/"
+      },
+      {
+        "score": 0.6052,
+        "title": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构",
+        "url": "/blog/agency-agents-opensource-multi-model/"
+      },
+      {
+        "score": 0.5869,
+        "title": "我用 AI Agent 给自己搭了个每日情报看板，现在开源了",
+        "url": "/blog/ai-intel-workbench-daily-dashboard-guide/"
+      }
+    ]
+  },
+  {
+    "query": "MLX Apple Silicon guide",
+    "top5": [
+      {
+        "score": 0.6621,
+        "title": "Rapid-MLX：Apple Silicon 最快本地 AI 推理，比 Ollama 快 4.2x，100% 工具调用",
+        "url": "/blog/rapid-mlx-apple-silicon-local-ai-inference/"
+      },
+      {
+        "score": 0.5844,
+        "title": "Video Expert Analyzer 完全指南：Walter Murch 六法则 + Mac MLX 本地模型全路径",
+        "url": "/blog/video-expert-analyzer-mac-mlx-local-model-complete-guide/"
+      },
+      {
+        "score": 0.5716,
+        "title": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行",
+        "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/"
+      },
+      {
+        "score": 0.5488,
+        "title": "apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence",
+        "url": "/blog/apfel-apple-silicon-local-ai/"
+      },
+      {
+        "score": 0.5474,
+        "title": "WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建",
+        "url": "/blog/wwdc26-mlx-local-agentic-ai-mac-engineering-guide/"
+      }
+    ]
+  },
+  {
+    "query": "递归自我改进 RSI",
+    "top5": [
+      {
+        "score": 0.7093,
+        "title": "awesome-rsi：AI 递归自我改进资源精选库——从哥德尔机到 2026 年自我修改 Agent 的完整图谱",
+        "url": "/blog/awesome-rsi-recursive-self-improvement-curated-survey-godel-agents-benchmarks/"
+      },
+      {
+        "score": 0.6567,
+        "title": "OpenRSI：让「AI 改进 AI」变成可执行、可测量的工程问题",
+        "url": "/blog/openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle/"
+      },
+      {
+        "score": 0.581,
+        "title": "Agent 如何递归地学会学习：AgentOptimizer 与 ProRL 的完整技术栈",
+        "url": "/blog/agent-recursive-self-learning-agentoptimizer-prorl/"
+      },
+      {
+        "score": 0.5728,
+        "title": "Prime Agent：PrimeIntellect 开源的自改进 RLM 编程 Agent",
+        "url": "/blog/prime-agent-primeintellect-self-improving-rlm-coding-agent/"
+      },
+      {
+        "score": 0.5616,
+        "title": "2026 年实时强化学习 Agent 全景：从 OpenClaw-RL 到 Cursor Composer 2.5，模型开始在使用中自我进化",
+        "url": "/blog/realtime-rl-agent-research-2026/"
+      }
+    ]
+  },
+  {
+    "query": "recursive self improvement",
+    "top5": [
+      {
+        "score": 0.6542,
+        "title": "awesome-rsi：AI 递归自我改进资源精选库——从哥德尔机到 2026 年自我修改 Agent 的完整图谱",
+        "url": "/blog/awesome-rsi-recursive-self-improvement-curated-survey-godel-agents-benchmarks/"
+      },
+      {
+        "score": 0.6023,
+        "title": "OpenRSI：让「AI 改进 AI」变成可执行、可测量的工程问题",
+        "url": "/blog/openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle/"
+      },
+      {
+        "score": 0.5801,
+        "title": "Agent 如何递归地学会学习：AgentOptimizer 与 ProRL 的完整技术栈",
+        "url": "/blog/agent-recursive-self-learning-agentoptimizer-prorl/"
+      },
+      {
+        "score": 0.578,
+        "title": "Prime Agent：PrimeIntellect 开源的自改进 RLM 编程 Agent",
+        "url": "/blog/prime-agent-primeintellect-self-improving-rlm-coding-agent/"
+      },
+      {
+        "score": 0.5682,
+        "title": "2026 年实时强化学习 Agent 全景：从 OpenClaw-RL 到 Cursor Composer 2.5，模型开始在使用中自我进化",
+        "url": "/blog/realtime-rl-agent-research-2026/"
+      }
+    ]
+  },
+  {
+    "query": "3D 可视化工具",
+    "top5": [
+      {
+        "score": 0.5932,
+        "title": "浏览器里的全格式 3D 查看器：kovacsv/Online3DViewer，18 种格式，文件从不离开你的设备",
+        "url": "/blog/online3dviewer-browser-3d-18-formats-step-ifc-embed-library-mit/"
+      },
+      {
+        "score": 0.5892,
+        "title": "高斯泼溅上 Web：3DGS → 3D Tiles 全开源工具链指南",
+        "url": "/blog/gaussian-splatting-3dtiles-web-pipeline-guide/"
+      },
+      {
+        "score": 0.5771,
+        "title": "Astral3D：Vue3 + Three.js 打造的免费开源 Web 3D 编辑器，支持 BIM/CAD/30+ 格式",
+        "url": "/blog/astral3d-vue3-threejs-3d-editor-bim-cad-webgpu/"
+      },
+      {
+        "score": 0.5687,
+        "title": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节",
+        "url": "/blog/threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl/"
+      },
+      {
+        "score": 0.5666,
+        "title": "TRELLIS.2：微软 4B 参数图像转 3D 生成模型，引入原生 O-Voxel 表示",
+        "url": "/blog/microsoft-trellis2-native-3d-generation-o-voxel-pbr/"
+      }
+    ]
+  },
+  {
+    "query": "terminal AI coding tool",
+    "top5": [
+      {
+        "score": 0.6124,
+        "title": "Netcatty：3000 Star 的 AI 原生 SSH 终端管理器，程序员的新利器",
+        "url": "/blog/netcatty-ai-ssh-terminal-manager-guide/"
+      },
+      {
+        "score": 0.6039,
+        "title": "code-review-graph：给 AI 编程助手建一张本地代码关系图，中位数减少 65 倍 token 用量",
+        "url": "/blog/code-review-graph-tirth8205-blast-radius-token-reduction/"
+      },
+      {
+        "score": 0.6002,
+        "title": "FireRed-OpenStoryline：用对话剪视频，把剪辑工作流存成可复用的 Skill",
+        "url": "/blog/firered-openstoryline-ai-video-editing-agent-claude-code/"
+      },
+      {
+        "score": 0.5997,
+        "title": "OpenAI Codex CLI：108K stars 的开源终端编码 Agent，Rust 重写，ChatGPT 账号直接登录",
+        "url": "/blog/openai-codex-cli-rust-terminal-coding-agent-chatgpt-open-source/"
+      },
+      {
+        "score": 0.5982,
+        "title": "Bloomberg终端免费平替——FinceptTerminal",
+        "url": "/blog/finceptterminal--open-source-bloomberg-terminal-alternative/"
+      }
+    ]
+  },
+  {
+    "query": "微信机器人远程控制 Claude Code",
+    "top5": [
+      {
+        "score": 0.7087,
+        "title": "黑奴一号（Heinu1）：用微信远程控制家里的 Claude Code，随时随地 AI 编程",
+        "url": "/blog/heinu1-wechat-claude-code-remote-control-bot/"
+      },
+      {
+        "score": 0.6264,
+        "title": "kimi-bridge：用微信/飞书/QQ 控制本地 Kimi Code Agent",
+        "url": "/blog/kimi-bridge-im-kimi-code-wechat-feishu-qq-control/"
+      },
+      {
+        "score": 0.6188,
+        "title": "Pando：用自己的机器，养一个真正属于自己的 AI 小伙伴",
+        "url": "/blog/pando-bridge-self-hosted-claude-mobile-companion/"
+      },
+      {
+        "score": 0.6152,
+        "title": "Claude Code Game Studios：把 AI 对话窗口变成游戏工作室",
+        "url": "/blog/claude-code-game-studios-open-source-framework/"
+      },
+      {
+        "score": 0.6084,
+        "title": "ccteam：用 8 个 MCP 工具把 Claude、Codex、Grok、Kimi 编成一支真正的编程团队",
+        "url": "/blog/ccteam-multi-agent-cross-vendor-orchestration/"
+      }
+    ]
+  },
+  {
+    "query": "open source video editing agent",
+    "top5": [
+      {
+        "score": 0.6629,
+        "title": "video-use：用 Claude Code 剪视频，browser-use 团队开源 AI 视频编辑器",
+        "url": "/blog/video-use-ai-video-editor-claude-code/"
+      },
+      {
+        "score": 0.6425,
+        "title": "OpenMontage：33K Stars，把 AI 助手变成视频工作室，$1.33 出一条 60 秒动画",
+        "url": "/blog/openmongage-ai-video-studio-guide/"
+      },
+      {
+        "score": 0.6408,
+        "title": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片",
+        "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/"
+      },
+      {
+        "score": 0.6314,
+        "title": "FireRed-OpenStoryline：用对话剪视频，把剪辑工作流存成可复用的 Skill",
+        "url": "/blog/firered-openstoryline-ai-video-editing-agent-claude-code/"
+      },
+      {
+        "score": 0.6143,
+        "title": "html-video：丢一个链接，本地生成 MP4，全程不碰剪辑软件",
+        "url": "/blog/html-video-nexu-usage-guide/"
+      }
+    ]
+  },
+  {
+    "query": "菜谱 家常菜做法",
+    "top5": [
+      {
+        "score": 0.4697,
+        "title": "把 414 万份菜谱压进向量空间，人类烹饪知识自己长出了结构",
+        "url": "/blog/epicure-food-ingredient-embedding-geometry/"
+      },
+      {
+        "score": 0.4427,
+        "title": "科研笔记示例：深度学习模型优化方法",
+        "url": "/blog/research-note-example/"
+      },
+      {
+        "score": 0.4262,
+        "title": "普通家庭也能用：ClearCam 让旧摄像头变成能听懂你说话的 AI 监控",
+        "url": "/blog/clearcam-home-security-ai-semantic-search-guide/"
+      },
+      {
+        "score": 0.4086,
+        "title": "Marble 开源儿童课程知识图谱：1590 个微话题 + 3221 条前置关系，对齐主流课标",
+        "url": "/blog/marble-os-taxonomy-children-curriculum-knowledge-graph/"
+      },
+      {
+        "score": 0.401,
+        "title": "Markdown Style Guide",
+        "url": "/blog/markdown-style-guide/"
+      }
+    ]
+  },
+  {
+    "query": "报税指南 个人所得税",
+    "top5": [
+      {
+        "score": 0.462,
+        "title": "两天，一个人，给博客搭完一套邮件订阅系统——月成本不到 2 美元，不用给平台交订阅税，读者数据全在自己手里",
+        "url": "/blog/newsletter-subscription-system-listmonk-flyio-ses/"
+      },
+      {
+        "score": 0.4581,
+        "title": "按头安利：Agent Island —— 发完一轮去生活，该你了它会叫你",
+        "url": "/blog/agent-island-claude-code-codex-status-companion-mac-windows/"
+      },
+      {
+        "score": 0.4373,
+        "title": "Codexbar 发布：不再为切账号丢失上下文而烦恼",
+        "url": "/blog/codexbar-switch-account-context/"
+      },
+      {
+        "score": 0.4342,
+        "title": "一人公司的AI员工：OPC创业者的Agent工具全景",
+        "url": "/blog/opc-agent-frameworks-2026/"
+      },
+      {
+        "score": 0.4298,
+        "title": "PR-Agent：把代码审查交给 AI，11.4k star 的开源 PR 评审工具完全指南",
+        "url": "/blog/pr-agent-qodo-ai-code-review-complete-guide/"
+      }
+    ]
+  },
+  {
+    "query": "育儿经验分享",
+    "top5": [
+      {
+        "score": 0.4794,
+        "title": "Marble 开源儿童课程知识图谱：1590 个微话题 + 3221 条前置关系，对齐主流课标",
+        "url": "/blog/marble-os-taxonomy-children-curriculum-knowledge-graph/"
+      },
+      {
+        "score": 0.4762,
+        "title": "Growth Lab：用 Claude Code 或 Codex 跑完整增长闭环，小红书单篇 4000+ 赞",
+        "url": "/blog/growth-lab-tsingyuai-claude-code-codex-end-to-end-growth-agent/"
+      },
+      {
+        "score": 0.4599,
+        "title": "Strategy Gene：AI 经验可以成为流通资产——前提是用对表示形式（论文解析 + 工程落地指南）",
+        "url": "/blog/strategy-gene-gep-experience-reuse-llm-agent-test-time-evolution/"
+      },
+      {
+        "score": 0.4564,
+        "title": "maintain-repo-wiki：让 LLM Agent 把工程事实而非总结写进 Wiki",
+        "url": "/blog/maintain-repo-wiki-llm-engineering-wiki-skill-repo-self-evolution/"
+      },
+      {
+        "score": 0.4564,
+        "title": "Vibe Coding 的正确打开方式：KhazP 的 5 步结构化工作流——从想法到 MVP 不迷路",
+        "url": "/blog/vibe-coding-prompt-template-khazp-agents-md-prd-mvp-workflow-guide/"
+      }
+    ]
+  },
+  {
+    "query": "Kubernetes 集群运维",
+    "top5": [
+      {
+        "score": 0.4995,
+        "title": "HarnessRouter：单容器自托管多 AI 编码 Agent，UHP 统一协议让 Claude Code / Codex / Hermes 共用一套 API",
+        "url": "/blog/harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code/"
+      },
+      {
+        "score": 0.4981,
+        "title": "Herdr：用牧羊人的方式管理你的 AI Agent 群",
+        "url": "/blog/herdr-coding-agent-runtime-persistent-terminal-multiplexer-rust/"
+      },
+      {
+        "score": 0.4965,
+        "title": "SIE：把 Agent 需要的所有模型装进一个集群——Superlinked 开源的统一推理引擎",
+        "url": "/blog/superlinked-sie-inference-engine-agent/"
+      },
+      {
+        "score": 0.4931,
+        "title": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token",
+        "url": "/blog/cloudflare-workers-ai-glm-kimi-deepseek-minimax/"
+      },
+      {
+        "score": 0.4897,
+        "title": "@cloudflare/computer：给每个 Agent 一台自己的电脑",
+        "url": "/blog/cloudflare-computer-agent-runtime-isolate-container/"
+      }
+    ]
+  }
+]
