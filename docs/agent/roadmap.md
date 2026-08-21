@@ -18,6 +18,6 @@
 
 ---
 
-> 当前聚焦：F1.1 + F1.2 全部完成。T1.2.2（Phase 1 Go/No-Go）BLOCKED，等用户看完
-> `semantic-search/eval/vector-comparison-report.md` 拍板；F1.3 是否启动由这个裁定决定，
+> 当前聚焦：F1.1 + F1.2 全部完成，T1.2.2 已拍板 **go**（混合方案：关键词+向量 RRF 融合、
+> 密码+签名 Cookie 登录、全流程 Cloudflare、不做本地推理）。F1.3 已解锁开始实现，
 > F1.4 依赖 F1.3 全部完成。每个 Feature 的 Task 拆分与状态见 tasks.md。

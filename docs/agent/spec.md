@@ -48,6 +48,32 @@
 | `indexed_at` | 最近索引时间 |
 | 每篇文章的 `content_hash` | 用于增量对账，判断是否需要重新索引 |
 
+### 登录会话（Phase 1 起，T1.3.6）
+
+| 字段 | 说明 |
+|:---|:---|
+| `BLOG_SEARCH_PASSWORD` | Worker Secret，单一共享密码，常量时间比较，不落日志 |
+| `BLOG_SEARCH_SESSION_SECRET` | Worker Secret，用于 HMAC-SHA256 签名登录 Cookie |
+| Cookie payload | `{issuedAt, expiresAt}`，签名后拼成 `<base64 payload>.<hmac>` |
+| Cookie 属性 | `HttpOnly; Secure; SameSite=Lax; Max-Age=31536000`（约 1 年，"记住登录"） |
+| 登录限速 | 同 IP 15 分钟内最多 5 次 `/api/search-auth` 请求，KV 计数器 |
+
+两个 Secret 已生成并记录在 `~/Dev/.env`（`BLOG_SEARCH_PASSWORD`/`BLOG_SEARCH_SESSION_SECRET`），
+尚未 `wrangler secret put` 推送到 Cloudflare——推送需用户确认（见 `architecture.md` 边界）。
+
+### 检索融合（Phase 1 起，T1.3.3）
+
+- 关键词（Pagefind top20）与向量（Vectorize top20）**并行检索**，不做"关键词优先向量兜底"的
+  条件分支。
+- 融合算法：**RRF**（Reciprocal Rank Fusion），按每路的排名而非原始分数融合——
+  `score(doc) = Σ 1/(k + rank_i(doc))`，`k` 取常见默认值 60，两路都未命中的文档不参与求和。
+- 按 `article_id` 聚合去重，每篇最多保留 1-2 个命中片段。
+- **无把握不返回**：若关键词与向量两路对该 query 都没有产生高于各自基线的强信号（即 RRF 分数
+  最高的候选也明显偏低），返回"没有找到"而不是把边缘相关结果当作推荐——这是 T1.2.1
+  实验里"菜谱""育儿"两个负样本暴露的问题：向量比关键词更容易自信地给出主题沾边但答不了
+  用户问题的匹配。具体阈值在实现 T1.3.3 时用 `semantic-search/eval/queries.md` 这批查询校准，
+  不是凭感觉设一个数字。
+
 ## 状态机
 
 ### 文章索引状态（Phase 1 起）
