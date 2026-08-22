@@ -28,10 +28,13 @@
   只挡住了 `application/x-www-form-urlencoded` 形状，`Content-Type: text/plain` 且 body
   恰好合法 JSON 的跨站请求仍能绕过，补上 `Content-Type: application/json` 强校验后关闭；
   R3 对最新提交裁决 APPROVED。全程新增 9 条回归测试（36 条全绿），并把 `pnpm test` 接入
-  `.github/workflows/deploy.yml`，部署前自动跑。**遗留真实账号操作，需要人工执行**：
+  `.github/workflows/deploy.yml`，部署前自动跑。**真实账号操作已执行**：
   `wrangler secret put BLOG_SEARCH_PASSWORD` / `BLOG_SEARCH_SESSION_SECRET`
-  （两个值已生成在 `~/Dev/.env`）+ Cloudflare Pages 后台配置 `BLOG_SEARCH_KV` binding——
-  合并早于这三项配置完成时，登录接口会 fail-closed 返回 503（不是安全问题，只是功能未启用）。
+  已推送，`blog-search-manifest` KV namespace 已建并绑定为 `BLOG_SEARCH_KV`。踩坑：
+  只通过 Pages API 加的 KV binding 被下一次 `wrangler pages deploy`（部署时会用本地
+  `wrangler.toml` 的绑定声明同步项目配置）悄悄冲掉，导致登录接口一度 503——已用 PR #50
+  把 binding 写进 `wrangler.toml` 修复，重新部署后直接打 `blog.mushroom.cv` 验证：密码错误
+  401、密码正确 200 + 合法 `__Host-` 会话 Cookie，登录闭环已经跑通。
 - 2026-08-22：**T1.3.5 合并**（PR #47）——Cloudflare KV 索引 manifest（`build_manifest()`、
   namespace 查找/创建、KV 读写），修复 `_global` 保留键冲突、URL 注入（`?`/`#` 未转义）、
   跨账号缓存污染等问题。
@@ -98,8 +101,6 @@
 
 ## 下一个 READY
 - **T1.3.3** `/api/search` Worker 端点——依赖的 T1.3.2（分片）与 T1.3.6（登录认证中间件）
-  均已 DONE，现在是 F1.3 唯一 READY 的 task。
-
-注意：T1.3.6 遗留的真实账号操作（`wrangler secret put` 两个密钥 + Cloudflare Pages 后台
-`BLOG_SEARCH_KV` binding 配置）尚未执行，`/api/search` 上线前这三项也需要一并确认落地，
-否则登录门禁会一直 fail-closed 503。
+  均已 DONE，现在是 F1.3 唯一 READY 的 task。T1.3.6 遗留的真实账号操作（两个密钥 +
+  `BLOG_SEARCH_KV` binding）已执行并在生产验证通过（见上方"最近完成"、PR #50），
+  不再是阻塞项。

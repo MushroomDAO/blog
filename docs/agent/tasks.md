@@ -228,7 +228,7 @@
   的语义。
 - **证据**：分支 `feat/T1.3.2-chunking-bilingual`，PR [#45](https://github.com/MushroomDAO/blog/pull/45)（合并 commit `b8f547b`）
 
-### T1.3.3 `/api/search` Worker 端点  `BACKLOG`
+### T1.3.3 `/api/search` Worker 端点  `READY`
 - **优先级**：high
 - **目标**：query → Vectorize 向量检索 → 按 `article_id` 聚合去重 → 用 Vectorize 自身余弦
   相似度阈值过滤 → 返回候选列表（可能为空）。**关键词+向量的 RRF 融合与"没有找到"的最终
