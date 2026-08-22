@@ -228,25 +228,94 @@
   的语义。
 - **证据**：分支 `feat/T1.3.2-chunking-bilingual`，PR [#45](https://github.com/MushroomDAO/blog/pull/45)（合并 commit `b8f547b`）
 
-### T1.3.3 `/api/search` Worker 端点  `READY`
+### T1.3.3 `/api/search` Worker 端点 + 前端 RRF 融合  `PR_OPEN`
 - **优先级**：high
 - **目标**：query → Vectorize 向量检索 → 按 `article_id` 聚合去重 → 用 Vectorize 自身余弦
   相似度阈值过滤 → 返回候选列表（可能为空）。**关键词+向量的 RRF 融合与"没有找到"的最终
   判断不在这个端点内**——Pagefind 是纯浏览器端 JS，Worker 调不了，融合发生在 `/search`
   页面的浏览器 JS 里（见 `architecture.md` 核心判断 8、`spec.md` §检索融合）
-- **开发范围**：Cloudflare Worker HTTP 端点，含登录 Cookie 校验（复用 T1.3.6 的中间件，
-  无 Cookie 返回 401）、query embedding、Vectorize 检索、文章级聚合去重、Vectorize 余弦
-  相似度下限过滤（阈值用 `semantic-search/eval/queries.md` 校准）
-- **明确不做**：不做 RRF 融合（前端做）、不接 reranker（Phase 2 可选，T1.4.4）
+- **开发范围**：
+  1. `functions/api/search.js`：登录 Cookie 校验（复用 T1.3.6 的 `_lib/auth.js`，无/过期
+     Cookie 返回 401）、Content-Type/body 大小/query 长度校验、按 IP 限速（复用
+     `_lib/rate-limit.js`，扩展成支持自定义 prefix/window/次数，5 分钟 30 次，比登录限速
+     宽松得多）、`@cf/baai/bge-m3` query embedding、`VECTORIZE_INDEX` 检索（topK 20）、
+     按 `article_id` 聚合去重（保留分数最高的 chunk）、相似度阈值过滤（0.4，见下方阈值
+     校准说明）、AI/Vectorize 调用失败时 fail-closed 503
+  2. **前端 RRF 融合**（原本没有独立 task 号，本 task 范围内一并完成，否则后端接口做完
+     用户仍然看不到能用的语义检索）：`src/pages/search.astro` 新增一个独立的语义检索输入框
+     （登录后才显示，原有 PagefindUI 关键词搜索完全不动），用 Pagefind 原生 JS API
+     （`/pagefind/pagefind.js`，不是 PagefindUI 组件——组件自己管结果渲染，混不进外部
+     向量结果）取关键词排名，和 `/api/search` 的向量排名做 RRF 融合
+     （`score = Σ 1/(60+rank)`），"两路都没有信号才展示没有找到"
+  3. `wrangler.toml` 新增 `[ai]` binding（`AI`）+ `[[vectorize]]` binding
+     （`VECTORIZE_INDEX` → `blog-search-v1`，T1.3.1 建的索引）
+- **相似度阈值校准（0.4）**：`semantic-search/eval/vector-comparison-report.md` 的实测
+  数据显示 24 条查询里所有 top5 结果的最低分是 0.401（bge-m3 在这批语料下余弦相似度分布
+  本身比较"压缩"），且报告明确指出单靠这个分数分不清"该拒的负样本"和"该留的真命中"
+  （"菜谱"/"育儿"两个负样本的最高分 0.4697/0.4794，跟真实相关查询的分数区间有重叠，
+  参见 T1.2.1 报告"负样本上，向量检索比关键词检索更容易给出看似合理但边缘的匹配"一节）。
+  阈值 0.4 只用来过滤掉"任何查询的 top5 都不会低到这里"的明显不相关尾部，真正的精确度
+  判断交给前端结合 Pagefind 信号一起做（"无把握不返回"逻辑）——这个端点自身的绝对信号
+  过滤刻意做得宽松，不是这里没做够精确校准。
+- **明确不做**：不做 reranker（Phase 2 可选，T1.4.4）；不做真正意义上的"两路各自独立判断
+  是否有靠谱结果"的精细阈值调优（用简化版：某一路有结果即视为该路"有信号"，见 search.astro
+  注释）——这条留给后续用真实使用数据回头校准
 - **依赖**：T1.3.2、**T1.3.6**（认证中间件必须先存在，`/api/search` 不能有无认证的中间上线
   状态——见 `architecture.md` 边界）
-- **交付物**：`/api/search` Worker
-- **验收命令**：`<待实现时补充：如无 Cookie 请求断言返回 401；带合法 Cookie 对已知查询发请求，
-  断言返回结果里同一 article_id 不重复且相似度低于阈值的候选被过滤掉>`
-- **涉及文件**：待定（新增 Worker 目录）
-- **风险/回滚**：涉及公开 API，需配合 T1.3.4（防滥用）一起上线，不单独暴露无限速版本；
-  认证已由依赖 T1.3.6 保证，不会出现无认证窗口期
-- **证据**：<推进时回填>
+- **交付物**：`functions/api/search.js` + `functions/api/search.test.js`、
+  `functions/_lib/rate-limit.js`（扩展支持自定义 prefix/window/maxAttempts，向后兼容
+  T1.3.6 的登录限速调用不变）、`src/pages/search.astro`（新增语义检索输入框 + RRF 融合）、
+  `wrangler.toml`（新增 AI + Vectorize binding）
+- **验收命令**：`pnpm test`（57 项测试，含 search.js 21 项：无 Cookie/过期 Cookie 401、
+  Content-Type/body 大小/query 长度校验、限速、AI/Vectorize 失败 503、按 article_id
+  聚合去重只保留最高分、低于阈值过滤、全部低于阈值返回空数组、按分数降序排序、返回字段
+  形状）+ `pnpm run build`（确认构建通过）+ 浏览器实测（Playwright：模拟登录态后输入框
+  正确显示、debounce 后正确调用 Pagefind 原生 API 拿到真实结果并渲染高亮摘录、`/api/search`
+  调用失败时优雅降级不报错、清空输入框正确清空结果）
+- **涉及文件**：`functions/api/search.js`、`functions/api/search.test.js`、
+  `functions/_lib/rate-limit.js`、`functions/_lib/rate-limit.test.js`、
+  `src/pages/search.astro`、`wrangler.toml`
+- **风险/回滚**：涉及公开 API 与 Workers AI/Vectorize 计费。本 task 已经内置基本防滥用
+  （IP 限速 + 会话级限速 + query 长度上限 + body 大小上限，见下方对抗式自审），不是
+  T1.3.4 完全空白的裸奔状态——T1.3.4 仍有价值（更精细的限速、常见查询缓存），但不再是
+  "不做就不能上线"的前置条件。认证已由依赖 T1.3.6 保证，不会出现无认证窗口期。
+  **尚未真实验证的部分**：`AI`/`VECTORIZE_INDEX` binding 在真实 Cloudflare 环境下的调用
+  （本地 `astro preview` 不跑 Pages Functions，只能 mock 测试；已验证 KV/密钥 binding 用
+  同样的 wrangler.toml 声明方式在生产环境正确解析，但 AI/Vectorize 这两个新绑定本身还
+  没有过一次真实调用）——合并后需要用真实登录 Cookie 对生产环境 `/api/search` 发一次
+  真实请求验证，**而且不能只看 HTTP 200**：`env.AI.run()`（binding 调用）和
+  `build-vectorize-index.py` 建索引时用的原始 REST API调用，理论上应该产出同一个嵌入
+  空间的向量，但没有代码层面的证据能确保两者内部默认参数完全一致——如果不一致，失败
+  模式是**静默的**（所有查询分数都低于 0.4 阈值，返回空结果，跟"真的没有相关内容"无法
+  区分），要拿 `vector-comparison-report.md` 里已知分数的查询验证返回分数落在预期区间，
+  不是只看状态码。
+- **对抗式自审（grade B，3 轮，独立上下文子 agent）**：正确性/安全滥用/生产失败模式三个
+  视角，发现并修复：
+  1. **前端搜索请求竞态**（正确性）——debounce 只延迟发起，不取消已发出的请求；快速输入
+     两次搜索时，网络时序不保证后发出的请求先回来，旧请求的迟到响应会覆盖新请求已经渲染
+     的结果，界面上出现输入框内容对不上的陈旧结果，且这个迟到响应如果恰好是 401 还会
+     错误地把仍然在线的用户切回登录表单。改用单调递增的 generation 计数器，只有仍是最新
+     一轮的请求才允许渲染或触发副作用。
+  2. **限速只按 IP，泄露的 Cookie 换 IP 能绕过**（安全/滥用）——本项目登录会话 60 天
+     有效期且明确不做撤销/登出接口，只按 IP 限速意味着攻击者换着代理 IP 打就能让同一个
+     泄露的 Cookie 反复触发计费的 Workers AI + Vectorize 调用，总量没有上限。加了一个按
+     会话（登录 Cookie 值的 SHA-256 哈希，不存明文）算的限速，跟 IP 限速同时生效（两者
+     都要过），把单个泄露 Cookie 的最坏成本钉死在一个窗口内的固定次数，不再随攻击者能
+     换多少个 IP 线性增长。
+  3. **`Content-Length` 请求头可以撒谎**（生产失败模式，低严重度但修复成本低）——原来
+     只检查这个头就放行到 `request.json()`，chunked encoding 或者故意谎报成一个很小的值
+     都能绕过体积上限检查。改成先读成文本量实际字节数，两道检查都做。
+  4. （非阻塞，已在响应字段上加防御性 `?? ''`）Vectorize 返回的 metadata 理论上不该缺
+     字段，但脏数据不该产出 `undefined` 悄悄从 JSON 里消失；`match.score` 非有限数时
+     也不该参与聚合比较，一律当"没有可用信号"跳过。
+  5. （非阻塞，记入 followups）`functions/api/search-auth.js`（T1.3.6，已合并）有同样的
+     "只信 `Content-Length` 头"问题——同一个修法，但那是已经上线、已经过评审的代码，
+     严重度更低（登录接口本身已经有 `MAX_PASSWORD_LENGTH` 兜底实际损耗），记进
+     `followups.md` 而不是在这个 PR 里顺手重开那个 task 的范围。
+  6. （非阻塞，记入 followups）成本层面的建议：给 Workers AI + Vectorize 配置用量告警，
+     作为限速本身之外的兜底——限速的 KV 最终一致性弱点（已知局限，见 rate-limit.js 注释）
+     在这个端点上第一次有了实际的 $ 维度。
+- **证据**：分支 `feat/T1.3.3-search-endpoint`，PR [#52](https://github.com/MushroomDAO/blog/pull/52)
 
 ### T1.3.4 API 防滥用（限速/输入上限/缓存/降级）  `BACKLOG`
 - **优先级**：high
@@ -304,7 +373,7 @@
   非阻塞：进度日志的报告粒度从每 50 条改成每 20 条（跟 T1.3.1 的批量粒度对齐，缩小失败
   定位的误差范围）；畸形 plan 文件（不是 list、也没有 `plan` key 的 dict）原来会在
   `build_manifest` 里炸出不知所云的 `TypeError`，改成在 `main()` 提前报清楚的错误。
-- **证据**：分支 `feat/T1.3.5-index-manifest`，PR <推进时回填>
+- **证据**：分支 `feat/T1.3.5-index-manifest`，PR [#47](https://github.com/MushroomDAO/blog/pull/47)（合并）
 
 ### T1.3.6 登录认证（密码 + 签名 Cookie）  `DONE`
 - **优先级**：high
