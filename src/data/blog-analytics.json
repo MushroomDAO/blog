@@ -1,47 +1,27 @@
 {
-  "generatedAt": "2026-08-18T14:00:00Z",
+  "generatedAt": "2026-08-22T14:00:02Z",
   "period": {
-    "start": "2026-07-19",
-    "end": "2026-08-18"
+    "start": "2026-07-23",
+    "end": "2026-08-22"
   },
   "totals": {
-    "pageviews": 8910,
-    "visits": 8200,
+    "pageviews": 9330,
+    "visits": 8660,
     "bots": 0
   },
   "last7": {
-    "pv": 3440,
-    "visits": 3310
+    "pv": 2740,
+    "visits": 2640
   },
   "prior7": {
-    "pv": 2010,
-    "visits": 1860
+    "pv": 3060,
+    "visits": 2880
   },
   "daily": [
     {
-      "date": "07-19",
-      "pv": 60,
-      "visits": 50
-    },
-    {
-      "date": "07-20",
-      "pv": 260,
-      "visits": 230
-    },
-    {
-      "date": "07-21",
-      "pv": 250,
-      "visits": 220
-    },
-    {
-      "date": "07-22",
-      "pv": 250,
-      "visits": 220
-    },
-    {
       "date": "07-23",
-      "pv": 170,
-      "visits": 160
+      "pv": 30,
+      "visits": 30
     },
     {
       "date": "07-24",
@@ -170,8 +150,28 @@
     },
     {
       "date": "08-18",
-      "pv": 410,
-      "visits": 400
+      "pv": 510,
+      "visits": 500
+    },
+    {
+      "date": "08-19",
+      "pv": 420,
+      "visits": 420
+    },
+    {
+      "date": "08-20",
+      "pv": 330,
+      "visits": 280
+    },
+    {
+      "date": "08-21",
+      "pv": 350,
+      "visits": 340
+    },
+    {
+      "date": "08-22",
+      "pv": 180,
+      "visits": 170
     }
   ],
   "countries": [
@@ -180,221 +180,221 @@
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 3920,
-      "visits": 3840
+      "pv": 4600,
+      "visits": 4500
     },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 2070,
-      "visits": 1850
-    },
-    {
-      "code": "HK",
-      "flag": "🇭🇰",
-      "name": "香港",
-      "nameEn": "Hong Kong",
-      "pv": 720,
-      "visits": 660
-    },
-    {
-      "code": "US",
-      "flag": "🇺🇸",
-      "name": "美国",
-      "nameEn": "United States",
-      "pv": 670,
-      "visits": 580
+      "pv": 1900,
+      "visits": 1900
     },
     {
       "code": "TH",
       "flag": "🇹🇭",
       "name": "泰国",
       "nameEn": "Thailand",
-      "pv": 390,
-      "visits": 250
+      "pv": 900,
+      "visits": 500
     },
     {
-      "code": "JP",
-      "flag": "🇯🇵",
-      "name": "日本",
-      "nameEn": "Japan",
-      "pv": 380,
-      "visits": 300
+      "code": "US",
+      "flag": "🇺🇸",
+      "name": "美国",
+      "nameEn": "United States",
+      "pv": 700,
+      "visits": 600
     },
     {
       "code": "TW",
       "flag": "🇹🇼",
       "name": "台湾",
       "nameEn": "Taiwan",
-      "pv": 230,
-      "visits": 220
+      "pv": 500,
+      "visits": 500
     },
     {
-      "code": "DE",
-      "flag": "🇩🇪",
-      "name": "德国",
-      "nameEn": "Germany",
-      "pv": 120,
-      "visits": 120
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "pv": 400,
+      "visits": 400
+    },
+    {
+      "code": "JP",
+      "flag": "🇯🇵",
+      "name": "日本",
+      "nameEn": "Japan",
+      "pv": 300,
+      "visits": 200
     },
     {
       "code": "NL",
       "flag": "🇳🇱",
       "name": "荷兰",
       "nameEn": "Netherlands",
-      "pv": 70,
-      "visits": 60
+      "pv": 200,
+      "visits": 200
     },
     {
-      "code": "VN",
-      "flag": "🇻🇳",
-      "name": "越南",
-      "nameEn": "Vietnam",
-      "pv": 40,
-      "visits": 40
+      "code": "KR",
+      "flag": "🇰🇷",
+      "name": "韩国",
+      "nameEn": "South Korea",
+      "pv": 200,
+      "visits": 200
     },
     {
-      "code": "AU",
-      "flag": "🇦🇺",
-      "name": "澳大利亚",
-      "nameEn": "Australia",
-      "pv": 40,
-      "visits": 20
+      "code": "UA",
+      "flag": "🇺🇦",
+      "name": "UA",
+      "nameEn": "UA",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "code": "CO",
+      "flag": "🇨🇴",
+      "name": "CO",
+      "nameEn": "CO",
+      "pv": 100,
+      "visits": 100
     },
     {
       "code": "ID",
       "flag": "🇮🇩",
       "name": "印度尼西亚",
       "nameEn": "Indonesia",
-      "pv": 40,
-      "visits": 40
+      "pv": 100,
+      "visits": 100
     }
   ],
-  "countryTotal": 8910,
+  "countryTotal": 10100,
   "referers": {
-    "direct": 6100,
-    "search": 2700,
-    "ecosystem": 800,
+    "direct": 6200,
+    "search": 3000,
+    "ecosystem": 700,
     "ai": 0,
-    "other": 100
+    "other": 200
   },
   "pages": [
     {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 400,
-      "visits": 200
+      "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
+      "titleEn": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
+      "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
+      "pv": 450,
+      "visits": 450
     },
     {
       "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
       "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
       "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
-      "pv": 300,
-      "visits": 300
+      "pv": 390,
+      "visits": 390
     },
     {
-      "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
-      "titleEn": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
-      "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
-      "pv": 300,
-      "visits": 300
+      "title": "首页",
+      "titleEn": "Home",
+      "path": "/",
+      "pv": 330,
+      "visits": 250
     },
     {
-      "title": "Voicebox：把 ElevenLabs 和 WisprFlow 装进一个本地运行的开源 App",
-      "titleEn": "Voicebox: Local-First AI Voice Studio — ElevenLabs Output + WisprFlow Input in One Open-Source App",
-      "path": "/blog/voicebox-local-ai-voice-studio-elevenlabs-alternative/",
-      "pv": 200,
-      "visits": 200
+      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
+      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
+      "pv": 180,
+      "visits": 180
     },
     {
-      "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
-      "titleEn": "Running DeepSeek V4-Flash Locally: A Hardware Selection and Deployment Handbook",
-      "path": "/blog/deepseek-v4-flash-local-inference-guide/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "VidDub：手把手教你用 Intel MacBook 给 YouTube 视频自动配音",
-      "titleEn": "VidDub: Step-by-Step Guide to Auto-Dubbing YouTube Videos on a 16GB Intel MacBook",
-      "path": "/blog/viddub-intel-mac-youtube-auto-dubbing-guide/",
-      "pv": 200,
-      "visits": 200
+      "title": "my",
+      "titleEn": "my",
+      "path": "/my/",
+      "pv": 160,
+      "visits": 0
     },
     {
       "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
       "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
       "path": "/blog/chatcut-codex-ai-video-editor-guide/",
-      "pv": 200,
-      "visits": 200
+      "pv": 140,
+      "visits": 140
     },
     {
-      "title": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构",
-      "titleEn": "Agency Agents: 50+ Specialized AI Roles in an Open-Source, Multi-Model Agency",
-      "path": "/blog/agency-agents-opensource-multi-model/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Agent 通信协议的第一张地图：读完这篇论文，我知道未来不会是一个赢家通吃",
-      "titleEn": "The First Map of LLM Agent Communication Protocols: Why the Future Won't Be Winner-Takes-All",
-      "path": "/blog/llm-agent-protocol-taxonomy-federated-stack-2026/",
-      "pv": 200,
-      "visits": 200
+      "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+      "titleEn": "Running DeepSeek V4-Flash Locally: A Hardware Selection and Deployment Handbook",
+      "path": "/blog/deepseek-v4-flash-local-inference-guide/",
+      "pv": 140,
+      "visits": 140
     },
     {
       "title": "小红书运营能工作流化吗？6 个 Codex Skills 给出一个答案",
       "titleEn": "Can Xiaohongshu Operations Become a Workflow? Six Codex Skills Offer an Answer",
       "path": "/blog/xiaohongshu-operations-codex-skills-workflow-systematic/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Applied Compute 深度拆解：OpenAI 系团队的「具体智能」，RL 三环架构如何把企业 AI 做成工业品",
-      "titleEn": "applied-compute-specific-intelligence-enterprise-ai-workflow-training",
-      "path": "/blog/applied-compute-specific-intelligence-enterprise-ai-workflow-training/",
-      "pv": 200,
-      "visits": 100
-    },
-    {
-      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
-      "titleEn": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
-      "path": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Capafy：你的 AI 技能可以作为产品出售，在你睡觉时帮你赚钱",
-      "titleEn": "Capafy: Sell Your AI Skills as a Product, Earn While You Sleep",
-      "path": "/blog/capafy-ai-skill-marketplace-agent-economy/",
-      "pv": 100,
-      "visits": 100
+      "pv": 120,
+      "visits": 110
     },
     {
       "title": "Kimi K3 技术深析：KDA、Stable LatentMoE 与首个开源 3T 级模型",
       "titleEn": "Kimi K3 Technical Deep Dive: KDA, Stable LatentMoE, and the First Open-Source 3T-Scale Model",
       "path": "/blog/kimi-k3-technical-analysis-architecture-training-open-frontier/",
+      "pv": 110,
+      "visits": 110
+    },
+    {
+      "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
+      "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
+      "path": "/blog/hitchhikers-guide-agentic-ai-book/",
       "pv": 100,
       "visits": 100
     },
     {
-      "title": "M5 Air 16GB 本地跑 33B 视频模型：vpipe 实测，15 分钟生成 3.75 秒有声视频",
-      "titleEn": "vpipe-minimax-h3-apple-silicon-video-audio-local-metal-cpp-pipeline",
-      "path": "/blog/vpipe-minimax-h3-apple-silicon-video-audio-local-metal-cpp-pipeline/",
+      "title": "ChatCut × Codex / Claude Code：用提示词剪视频的完整教程，五套原创模板",
+      "titleEn": "ChatCut × Codex / Claude Code: Complete Video Editing Tutorial with 5 Original Prompt Templates",
+      "path": "/blog/chatcut-ai-video-editor-codex-claude-code-plugin-tutorial/",
       "pv": 100,
       "visits": 100
+    },
+    {
+      "title": "MetaPact：一键部署专属 AI 女友，她会记得你昨天几点到家",
+      "titleEn": "MetaPact: Deploy Your Own AI Girlfriend Who Remembers When You Got Home Yesterday",
+      "path": "/blog/metapact-ai-girlfriend-setup-guide/",
+      "pv": 80,
+      "visits": 80
+    },
+    {
+      "title": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南",
+      "titleEn": "Illustrate Your Articles Without Drawing: A Beginner's Guide to ian-xiaohei-illustrations",
+      "path": "/blog/ian-xiaohei-illustrations-beginner-guide/",
+      "pv": 80,
+      "visits": 80
+    },
+    {
+      "title": "MultiPost：一个浏览器插件，一键同步发内容到 10+ 平台",
+      "titleEn": "MultiPost: One Browser Extension, One Click to Publish Across 10+ Platforms",
+      "path": "/blog/multipost-extension-one-click-multi-platform-guide/",
+      "pv": 80,
+      "visits": 80
+    },
+    {
+      "title": "grill-me：181k Star 的 Claude Code Skill，用一个问题消灭 AI 编码最常见的失败模式",
+      "titleEn": "grill-me: The 181k-Star Claude Code Skill That Eliminates the Most Common AI Coding Failure Mode One Question at a Time",
+      "path": "/blog/grill-me-skill-mattpocock-claude-code-guide/",
+      "pv": 80,
+      "visits": 70
     }
   ],
   "devices": [
     {
       "label": "desktop",
-      "count": 8380
+      "count": 8760
     },
     {
       "label": "mobile",
-      "count": 510
+      "count": 550
     },
     {
       "label": "tablet",
@@ -404,49 +404,53 @@
   "os": [
     {
       "label": "Windows",
-      "count": 4000
+      "count": 7300
     },
     {
       "label": "MacOSX",
-      "count": 4000
+      "count": 1600
+    },
+    {
+      "label": "Unknown",
+      "count": 400
+    },
+    {
+      "label": "Android",
+      "count": 400
+    },
+    {
+      "label": "Linux",
+      "count": 300
+    },
+    {
+      "label": "iOS",
+      "count": 100
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 6350
+      "count": 7400
     },
     {
       "label": "Edge",
-      "count": 1300
+      "count": 1500
     },
     {
       "label": "Unknown",
-      "count": 510
-    },
-    {
-      "label": "Safari",
-      "count": 250
+      "count": 400
     },
     {
       "label": "ChromeMobile",
-      "count": 210
+      "count": 300
     },
     {
-      "label": "MobileSafari",
-      "count": 90
+      "label": "Safari",
+      "count": 300
     },
     {
       "label": "ChromeMobileWebview",
-      "count": 90
-    },
-    {
-      "label": "Firefox",
-      "count": 80
-    },
-    {
-      "label": "ChromeHeadless",
-      "count": 30
+      "count": 200
     }
   ]
 }
