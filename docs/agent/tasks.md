@@ -146,25 +146,30 @@
 
 ### T1.3.3 `/api/search` Worker 端点  `BACKLOG`
 - **优先级**：high
-- **目标**：query → 关键词+向量并行检索 → RRF 融合 → 按 `article_id` 聚合去重 → 返回
-  top5 + 命中片段；两路信号均弱时返回"没有找到"
-- **开发范围**：Cloudflare Worker HTTP 端点，含语言检测、Pagefind + Vectorize 并行检索、
-  **RRF 融合排序**（`spec.md` §检索融合的公式）、文章级聚合去重、无把握不返回的阈值判断
-- **明确不做**：不接 reranker（Phase 2 可选，T1.4.4）
-- **依赖**：T1.3.2
+- **目标**：query → Vectorize 向量检索 → 按 `article_id` 聚合去重 → 用 Vectorize 自身余弦
+  相似度阈值过滤 → 返回候选列表（可能为空）。**关键词+向量的 RRF 融合与"没有找到"的最终
+  判断不在这个端点内**——Pagefind 是纯浏览器端 JS，Worker 调不了，融合发生在 `/search`
+  页面的浏览器 JS 里（见 `architecture.md` 核心判断 8、`spec.md` §检索融合）
+- **开发范围**：Cloudflare Worker HTTP 端点，含登录 Cookie 校验（复用 T1.3.6 的中间件，
+  无 Cookie 返回 401）、query embedding、Vectorize 检索、文章级聚合去重、Vectorize 余弦
+  相似度下限过滤（阈值用 `semantic-search/eval/queries.md` 校准）
+- **明确不做**：不做 RRF 融合（前端做）、不接 reranker（Phase 2 可选，T1.4.4）
+- **依赖**：T1.3.2、**T1.3.6**（认证中间件必须先存在，`/api/search` 不能有无认证的中间上线
+  状态——见 `architecture.md` 边界）
 - **交付物**：`/api/search` Worker
-- **验收命令**：`<待实现时补充：如对已知查询发请求，断言返回结果里同一 article_id 不重复；
-  对负样本查询（如"菜谱 家常菜做法"）断言返回"没有找到"而非勉强匹配>`
+- **验收命令**：`<待实现时补充：如无 Cookie 请求断言返回 401；带合法 Cookie 对已知查询发请求，
+  断言返回结果里同一 article_id 不重复且相似度低于阈值的候选被过滤掉>`
 - **涉及文件**：待定（新增 Worker 目录）
-- **风险/回滚**：涉及公开 API，需配合 T1.3.4（防滥用）与 T1.3.6（登录认证）一起上线，
-  不单独暴露无认证/无限速版本
+- **风险/回滚**：涉及公开 API，需配合 T1.3.4（防滥用）一起上线，不单独暴露无限速版本；
+  认证已由依赖 T1.3.6 保证，不会出现无认证窗口期
 - **证据**：<推进时回填>
 
 ### T1.3.4 API 防滥用（限速/输入上限/缓存/降级）  `BACKLOG`
 - **优先级**：high
 - **目标**：`/api/search` 具备基本防滥用能力，不被刷爆 Workers AI 额度
-- **开发范围**：输入长度上限、简单限速、常见查询缓存、超时降级回退到 Pagefind 结果、
-  不记录用户原始查询原文
+- **开发范围**：输入长度上限、简单限速、常见查询缓存、不记录用户原始查询原文。"降级"体现在
+  前端：`/api/search` 超时/失败时浏览器 JS 只展示本地 Pagefind 结果，不是 Worker 侧逻辑
+  （Worker 里没有 Pagefind 结果可回退，见 T1.3.3）
 - **明确不做**：不做验证码类交互防护（超出必要）；登录认证不在本 task 范围内，见 T1.3.6
 - **依赖**：T1.3.3
 - **交付物**：防滥用中间件/逻辑
@@ -188,18 +193,25 @@
 
 ### T1.3.6 登录认证（密码 + 签名 Cookie）  `BACKLOG`
 - **优先级**：high
-- **目标**：`/search` 页面与 `/api/search` 在真正上线前必须有登录门禁，未登录不可访问语义检索
-  能力，避免被刷 Workers AI 计费。用户已明确否决 Cloudflare Access，要求单一共享密码方案。
+- **目标**：`/api/search`（语义检索能力）在真正上线前必须有登录门禁，未登录不可访问，避免被刷
+  Workers AI 计费。用户已明确否决 Cloudflare Access，要求单一共享密码方案。**T1.1.3 已上线的
+  纯 Pagefind 关键词搜索页面不在门禁范围内，继续公开**（用户顾虑的是付费 API 被刷，不适用于
+  零成本的关键词搜索，见 `architecture.md` 核心判断 7）。
 - **开发范围**：
   1. `POST /api/search-auth`：常量时间比较 `env.BLOG_SEARCH_PASSWORD`，成功签发 HMAC 签名
-     Cookie（payload `{issuedAt, expiresAt}`，密钥 `env.BLOG_SEARCH_SESSION_SECRET`），
-     Cookie 属性 `HttpOnly; Secure; SameSite=Lax; Max-Age=31536000`
-  2. `/api/search` 中间件：校验该 Cookie 签名与过期时间，未通过返回 401
-  3. 登录接口限速：同 IP 15 分钟内最多 5 次，KV 计数器
-  4. `/search` 页面：无有效 Cookie 时展示密码输入表单
+     Cookie（payload `{v, issuedAt, expiresAt}`，密钥 `env.BLOG_SEARCH_SESSION_SECRET`，
+     用 base64url 编码），Cookie 属性 `HttpOnly; Secure; SameSite=Lax; Path=/;
+     Max-Age=<30-90 天>`（不用 1 年——缩短泄露窗口，吊销靠轮换 `BLOG_SEARCH_SESSION_SECRET`）
+  2. Cookie 校验中间件（供 T1.3.3 的 `/api/search` 引用）：校验签名与过期时间，未通过返回 401
+  3. 登录接口限速：同 IP 15 分钟内最多 5 次，KV 计数器（对分布式撞库偏弱，可接受，见
+     `followups.md` FU-6）
+  4. `/search` 页面：**只在触发语义检索（调用 `/api/search`）的那部分 UI** 无有效 Cookie 时
+     展示密码输入表单；页面本身的 Pagefind 关键词搜索框保持可用、不需要登录
   认证校验逻辑封装成独立函数/中间件，便于以后替换成其他方案（见 `architecture.md` 核心判断 7）
 - **明确不做**：不做多用户账号体系、不做 MFA、不用 Cloudflare Access、不做密码找回/自动轮换
-- **依赖**：T1.3.3（需要 `/api/search` 存在才能挂中间件）
+- **依赖**：T1.3.1（需要 Worker 项目骨架存在）——**不依赖 T1.3.3**，本 task 先于/独立于
+  `/api/search` 落地，反过来是 T1.3.3 依赖本 task 的中间件（见 `architecture.md` 边界，
+  避免 `/api/search` 出现无认证的中间上线状态）
 - **交付物**：登录 Worker 路由 + Cookie 校验中间件 + `/search` 页面登录态 UI
 - **验收命令**：`<待实现时补充：如无 Cookie 请求 /api/search 断言返回 401；正确密码登录后
   拿到的 Cookie 请求断言返回 200；连续 6 次错误密码断言第 6 次被限速拒绝>`

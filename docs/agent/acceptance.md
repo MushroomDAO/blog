@@ -13,9 +13,10 @@
 |:---|:---|:---|
 | 关键词/短语查询有结果 | 输入技术名词能命中对应文章 | ⏳ T1.1.3 |
 | 中文/英文都能查 | 中文查询命中中文文章，英文查询命中英文文章 | ⏳ T1.1.3 |
-| 跨语言查询（进阶，Phase 1 起） | 中文问英文文章内容也能命中 | ⏳ 待 Phase 0B 验证是否值得做 |
-| 没有相关文章时不瞎推荐 | 查询在博客里确实没有对应内容时，页面要说明"没有找到"，不能硬凑结果 | ⏳ T1.1.3 |
+| 词汇/同义词鸿沟、宽泛概念提问、EN/ZH 一致性（进阶，Phase 1 起） | 措辞不同但语义相同也能命中；模糊概念性提问也有结果；中英文同主题查询结果一致 | ⏳ T1.2.2 已裁定 go，待 F1.3 实现（T1.3.1-T1.3.6） |
+| 没有相关文章时不瞎推荐 | 查询在博客里确实没有对应内容时，页面要说明"没有找到"，不能硬凑结果 | ✅ T1.1.3（关键词侧）；⏳ 向量侧待 T1.3.3（`spec.md` §检索融合的阈值判断） |
 | 结果不被单篇文章刷屏 | 同一篇文章不会在结果列表里重复出现多次 | ⏳ Phase 1 起需要（T1.3.3 文章级聚合） |
+| 语义检索需要登录，纯关键词搜索保持公开 | `/api/search` 未登录不可用；`/search` 页面本身的关键词搜索不受影响 | ⏳ T1.3.6 |
 
 ## 二、索引跟得上文章更新（Phase 2 起）
 
@@ -33,14 +34,15 @@
    看到符合预期的文章。
 2. 中文/英文/跨语言几类查询都测过，不只测中文。
 3. 不出事故：搜索页面报错、结果链接失效、误报"没有结果"都算失败案例，需要记录下来。
-4. 是否值得从 Phase 0A（纯关键词）升级到 Phase 1（语义检索），由 T1.2.2 依据 Phase 0B 的
-   离线对比数据人工拍板，不是凭感觉决定。
+4. **是否从 Phase 0A（纯关键词）升级到 Phase 1（语义检索）已由 T1.2.2 裁定为 go**（混合方案，
+   见 `docs/agent/architecture.md` 核心判断 6-8、`docs/agent/progress.md`），验收现在看的是
+   F1.3 各 task 是否按裁定的架构（RRF 融合、article 级聚合、密码登录、无把握不返回）正确实现。
 
 ## 待补能力清单（按这份标准倒推）
 
 | 能力 | 优先级 | 已有参考 |
 |:---|:---|:---|
-| 构建时文章搜索文档 + Pagefind 静态索引 | 高 | `semantic-search/PLAN.md` Phase 0A |
-| 评测查询集 + Recall@5 基线 | 高 | `semantic-search/PLAN.md` §5 开放问题 7 |
-| Vectorize + Workers AI 语义检索 | 中（依赖 Phase 0B 验证结果） | `semantic-search/PLAN.md` Phase 1 |
-| 发布流程增量索引 hook + Cron 对账 | 中（依赖 Phase 1 完成） | `semantic-search/PLAN.md` Phase 2 |
+| 构建时文章搜索文档 + Pagefind 静态索引 | 高 | `semantic-search/PLAN.md` Phase 0A（已 DONE） |
+| 评测查询集 + Recall@5 基线 | 高 | `semantic-search/PLAN.md` §5 开放问题 7（已 DONE） |
+| Vectorize + Workers AI 语义检索 + RRF 融合 + 密码登录 | 高（T1.2.2 已裁定 go） | `docs/agent/architecture.md` 核心判断 6-8、`docs/agent/tasks.md` F1.3 |
+| 发布流程增量索引 hook + Cron 对账 | 中（依赖 F1.3 全部完成） | `semantic-search/PLAN.md` Phase 2 |

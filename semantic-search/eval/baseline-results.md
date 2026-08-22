@@ -20,7 +20,7 @@
 | 8 | 怎么给 Claude Code 装技能包 | 3 | 弱相关——3 条结果都只是沾边（Codex 技能市场、手绘配图 Skill、LobsterAI），没有命中真正讲"如何安装 Skill"的内容 |
 | 9 | local-first sync AI agent | 36 | **强相关**——第一条 Neo Chat（本地优先加密跨设备同步）精确命中 |
 | 10 | 有没有讲 Agent 循环设计的文章 | 3 | 弱相关——awesome-agent-architecture（Harness 工程地图）算是相关，其余偏泛 |
-| 11 | 脑仿真 大脑连接组 | 0 | **未命中/真实缺口**——博客里其实有 `brain-emulation-worm-to-human-scaling`、`brain-connectome-data-size-fly-human-mouse` 两篇英文标题文章，纯词法检索完全没有跨语言桥接到这两个中文短语 |
+| 11 | 脑仿真 大脑连接组 | 0 | **未命中/真实缺口**——博客里其实有 `brain-emulation-worm-to-human-scaling`（中文标题「从线虫到人类：全脑模拟的规模化之路」）、`brain-connectome-data-size-fly-human-mouse`（中文标题「脑子的数据量：从果蝇 20TB 到人脑 1.4PB…」）两篇文章，**两篇都有中文标题也都有英文标题，且页面上两种语言都会渲染**（见 `BlogPost.astro` 的 `titleEn` 展示逻辑），Pagefind 索引的是两种语言的文本，不是只有英文——真正的缺口是"脑仿真""大脑连接组"这两个具体措辞在全库任何语言版本里都不出现（同义词是"全脑模拟""连接组"），是**同语言内的措辞/同义词鸿沟**，不是跨语言桥接缺失 |
 | 12 | MLX Apple Silicon guide | 18 | **强相关**——top5 全部精确命中 MLX/Apple Silicon 主题 |
 | 13 | AI Agent 记忆系统 | 86 | **强相关**——top5 全部是 Agent 记忆系统相关文章（Wiki Memory、Dense-Mem、TencentDB Agent Memory 等） |
 | 14 | 递归自我改进 RSI | 1 | 弱相关——只命中 1 条（awesome-rsi），而同主题的英文查询 #16 命中 9 条且全部相关，说明中文短语召回明显更弱 |
@@ -48,9 +48,12 @@
    - #7「我想本地部署一个 AI 视频编辑工具」→ 0 相关 vs #20「open source video editing agent」→ 5/5 相关
    - #14「递归自我改进 RSI」→ 1 条 vs #16「recursive self improvement」→ 9 条全相关
    - 这正是 `semantic-search/PLAN.md` 里预期向量检索能带来提升的场景，值得在 T1.2.1 重点验证。
-2. **真实的跨语言检索缺口**：#11「脑仿真 大脑连接组」命中 0，但博客里确实有对应英文标题的文章
-   （`brain-emulation-worm-to-human-scaling`、`brain-connectome-data-size-fly-human-mouse`）。
-   纯词法检索无法把中文查询词桥接到英文文章标题/内容，这是向量检索最该证明自己价值的地方。
+2. **真实的措辞/同义词鸿沟（订正：不是跨语言）**：#11「脑仿真 大脑连接组」命中 0，但博客里确实
+   有对应内容的文章（`brain-emulation-worm-to-human-scaling`、
+   `brain-connectome-data-size-fly-human-mouse`）——两篇都同时有中文和英文标题，Pagefind 两种
+   语言都索引了。真正的缺口是"脑仿真""大脑连接组"这两个具体措辞在全库任何语言版本里都不出现
+   （全库检索显示"全脑模拟"1 篇、"连接组"3 篇），纯词法检索桥接不了"措辞不同但语义相同"这类
+   同义词差距，这才是向量检索最该证明自己价值的地方（而不是此前误记的"跨语言桥接"）。
 3. **覆盖充分的技术主题（MCP、Claude Code Skill、LoRA、Agent 记忆、MLX）关键词检索本身已经很好**，
    不需要靠向量检索才能用——语义检索的增益应该集中在自然语言/跨语言场景，而不是全面替代关键词检索。
 4. **负样本表现总体健康**，没有出现"博客里没有对应内容却给出高置信度错误推荐"的情况，
