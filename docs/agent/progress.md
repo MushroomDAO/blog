@@ -6,10 +6,9 @@
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
 - **Feature**：F1.3 语义检索上线（Phase 1）
-- **正在开发的 Task**：无（T1.3.1 已合并；T1.3.2/T1.3.5/T1.3.6 已解锁为 READY，等 `pilot run`
-  下一轮挑选——三者互不依赖，可任选其一开工，T1.3.3 仍需等 T1.3.2+T1.3.6 都完成）
-- **分支 / worktree**：无（上一轮的 `feat/T1.3.1-vectorize-embedding` 已合并，
-  按 hard rule 只列出待清理，不代为删除）
+- **正在开发的 Task**：无（T1.3.1/T1.3.2 已合并；T1.3.5/T1.3.6 仍是 READY，互不依赖，
+  `pilot run` 下一轮可任选其一；T1.3.3 依赖 T1.3.2 + T1.3.6，T1.3.6 未完成前不能开工）
+- **分支 / worktree**：无
 - **PR**：无（进行中）
 
 ## 进行中 / 待回执的 PR
@@ -21,6 +20,17 @@
 - 无
 
 ## 最近完成
+- 2026-08-22：**T1.3.2 合并**（PR #45，commit `b8f547b`）——段落级分片模块
+  `semantic-search/scripts/chunking.py`。3 轮对抗式自审在真实语料库上抓到 4 个 bug（2 个
+  已经在真实触发）：尾部 chunk 无界增长、双语分隔符检测被行内提及劫持、标题孤儿 chunk、
+  4 反引号转义围栏配对错乱。全库 478 篇文章验证通过。
+  **反查发现同一个分隔符检测 bug 也存在于已合并的 T1.3.1 脚本里**（本库 2 篇文章：
+  `seo-geo-skill-ai-citation-optimization`、`geo-generative-engine-optimization-guide`，
+  正文里用反引号引用过 `<!--EN-->` 分隔符字面量），线上 Vectorize 索引因此有这两篇文章的
+  错误数据。已用 PR #44 热修复检测逻辑（合并后）、重新执行 `--upsert` 刷新全部 911 条向量、
+  精确重算旧 chunk_id 并 `delete_by_ids` 清理孤儿数据——线上索引现在是干净的。
+  非阻塞发现记入 followups：FU-9（16 片硬上限下 2 篇文章的个别 chunk 仍略超 900 token）、
+  FU-10（12-16 chunk 预算是"每篇"还是"每语言"文档没写清楚，当前按每语言实现）。
 - 2026-08-22：**T1.3.1 合并**（PR #39，commit `6b9fc8d`）——Vectorize 索引 `blog-search-v1`
   已建（1024d/cosine），901 条向量（zh 467/en 434）已 upsert 并经 query API 验证。
   真实执行时发现 Vectorize v2 vector id 有 64 字节硬上限（原拼接方案超限），改用哈希方案。
@@ -67,13 +77,16 @@
 
 ## 跟进账本（不阻塞主线，见 followups.md）
 - FU-4（ColBERT 评估）、FU-5（baseline-results 编号错位）、FU-6（KV 限速器弱点）、FU-7
-  （凭据权限范围，2026-08-22 已部分满足）、FU-8（增量更新孤儿向量清理）共 5 条 OPEN，
+  （凭据权限范围，已部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16 片硬上限下的
+  token 超量残留）、FU-10（12-16 chunk 预算是每篇还是每语言的文档歧义）共 7 条 OPEN，
   全部非阻塞，等主线 F1.3/F1.4 做完后批量清
 
 ## 下一个 READY
-- **T1.3.2** 分片与双语 chunk 策略实现
 - **T1.3.5** 索引 manifest 版本化
 - **T1.3.6** 登录认证（密码 + 签名 Cookie）——注意其中 `wrangler secret put` 是真实账号操作，
   执行前需停下问用户确认
+
+两者互不依赖，`pilot run` 下一轮可任选其一；T1.3.3（`/api/search` 端点）依赖 T1.3.2
+（已完成）+ T1.3.6（未完成），还不能开工。
 
 三者互不依赖，`pilot run` 下一轮可任选其一（建议先 T1.3.2，T1.3.3 同时依赖它和 T1.3.6）。
