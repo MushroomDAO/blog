@@ -67,6 +67,12 @@ INDEX_NAME_RE = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
 # CJK 统一表意文字 + 扩展 A，用于单语文章的语言判定（没有 <!--EN--> 分隔符时不能瞎猜）
 CJK_RE = re.compile(r"[一-鿿㐀-䶿]")
 
+# 修正（T1.3.2 对抗式 review 发现，反查出这里也有同一个 bug）：原来用子串匹配
+# "<!--EN-->" in body，导致正文里任何提到这个分隔符字面量的地方（比如用反引号引用它来
+# 说明博客的双语约定，本仓库真实有至少 2 篇文章这么写）都会被误判成分隔符本身，在错误
+# 位置切开双语、大段中文内容的标题被归到错误的语言段。真正的分隔符约定是独占一行。
+EN_MARKER_RE = re.compile(r"^<!--EN-->[ \t]*$", re.MULTILINE)
+
 
 def detect_language(text):
     non_space = re.sub(r"\s", "", text)
@@ -164,11 +170,14 @@ def parse_frontmatter(md_path):
     tags = [t.strip().strip("'\"") for t in tags_m.group(1).split(",") if t.strip()] if tags_m else []
     category = field("category")
 
-    # 只有正文真的出现 <!--EN--> 才是双语文章；titleEn/descriptionEn 是 SEO meta，
-    # 跟正文有没有双语分段无关，不能用来判断要不要拆出第二条记录（见文件头注释）
-    is_bilingual = "<!--EN-->" in body
+    # 只有正文真的出现独占一行的 <!--EN--> 才是双语文章；titleEn/descriptionEn 是 SEO
+    # meta，跟正文有没有双语分段无关，不能用来判断要不要拆出第二条记录（见文件头注释）。
+    # 用 EN_MARKER_RE 而不是子串匹配——见上面的注释，子串匹配会被行内提及误触发
+    marker_match = EN_MARKER_RE.search(body)
+    is_bilingual = bool(marker_match)
     if is_bilingual:
-        zh_body, en_body = body.split("<!--EN-->", 1)
+        zh_body = body[: marker_match.start()]
+        en_body = body[marker_match.end():]
     else:
         zh_body, en_body = body, ""
 
