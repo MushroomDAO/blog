@@ -40,6 +40,12 @@ const categoryIcons: Record<string, string> = {
 				--accent-orange: 249, 115, 22;
 				--dark-bg: 15, 23, 42;
 			}
+			/* --dark-bg 在这个页面上一直被当"次要文字色"用（alpha 混白底），
+			   假设页面背景永远是白色。暗色模式下页面背景变深，同一套 alpha 混深底会
+			   把文字混没——这里换成一个浅色基底，语义仍是"次要文字色"，只是基底反过来 */
+			:root[data-theme="dark"] {
+				--dark-bg: 222, 227, 236;
+			}
 			main {
 				width: 960px;
 				max-width: calc(100% - 2em);

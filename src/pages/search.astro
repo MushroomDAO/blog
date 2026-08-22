@@ -13,6 +13,14 @@ import Header from '../components/Header.astro';
 			descriptionEn="Search all articles on the Mycelium Protocol Blog"
 		/>
 		<style>
+			/* Pagefind 默认 UI 自带一套 CSS 变量，跟着站点的亮/暗主题变量走，
+			   不然切到暗色模式时搜索框还是它自己写死的浅色样式 */
+			#search {
+				--pagefind-ui-primary: rgb(var(--gray-dark));
+				--pagefind-ui-text: rgb(var(--gray-dark));
+				--pagefind-ui-background: rgb(var(--surface));
+				--pagefind-ui-border: rgb(var(--gray-light));
+			}
 			main.search-page {
 				width: 100%;
 				max-width: 800px;

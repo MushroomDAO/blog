@@ -22,6 +22,18 @@ const ogTitle = titleEn || title;
 const ogDescription = descriptionEn || description;
 ---
 
+<!-- 暗色模式：在首次绘制前把上次记住的主题应用到 <html>，避免"先亮后暗"的闪烁。
+     默认是亮色——localStorage 里没有 'dark' 就什么都不做，不跟随系统 prefers-color-scheme。 -->
+<script is:inline>
+	(function () {
+		try {
+			if (localStorage.getItem('theme') === 'dark') {
+				document.documentElement.dataset.theme = 'dark';
+			}
+		} catch (e) {}
+	})();
+</script>
+
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
