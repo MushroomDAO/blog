@@ -315,7 +315,7 @@
   6. （非阻塞，记入 followups）成本层面的建议：给 Workers AI + Vectorize 配置用量告警，
      作为限速本身之外的兜底——限速的 KV 最终一致性弱点（已知局限，见 rate-limit.js 注释）
      在这个端点上第一次有了实际的 $ 维度。
-- **证据**：分支 `feat/T1.3.3-search-endpoint`，PR <推进时回填>
+- **证据**：分支 `feat/T1.3.3-search-endpoint`，PR [#52](https://github.com/MushroomDAO/blog/pull/52)
 
 ### T1.3.4 API 防滥用（限速/输入上限/缓存/降级）  `BACKLOG`
 - **优先级**：high
@@ -373,7 +373,7 @@
   非阻塞：进度日志的报告粒度从每 50 条改成每 20 条（跟 T1.3.1 的批量粒度对齐，缩小失败
   定位的误差范围）；畸形 plan 文件（不是 list、也没有 `plan` key 的 dict）原来会在
   `build_manifest` 里炸出不知所云的 `TypeError`，改成在 `main()` 提前报清楚的错误。
-- **证据**：分支 `feat/T1.3.5-index-manifest`，PR <推进时回填>
+- **证据**：分支 `feat/T1.3.5-index-manifest`，PR [#47](https://github.com/MushroomDAO/blog/pull/47)（合并）
 
 ### T1.3.6 登录认证（密码 + 签名 Cookie）  `DONE`
 - **优先级**：high

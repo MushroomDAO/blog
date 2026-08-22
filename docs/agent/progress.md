@@ -8,12 +8,12 @@
 - **Feature**：F1.3 语义检索上线（Phase 1）
 - **正在开发的 Task**：T1.3.3（`/api/search` 端点 + 前端 RRF 融合），PR 已开、等外部评审
 - **分支 / worktree**：`feat/T1.3.3-search-endpoint`（`blog-F1.3-t136` worktree）
-- **PR**：<推进时回填>
+- **PR**：[#52](https://github.com/MushroomDAO/blog/pull/52)
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| T1.3.3 | <推进时回填> | PR_OPEN | 后端端点 + 前端 RRF 融合，57 测试全绿，浏览器实测过 |
+| T1.3.3 | [#52](https://github.com/MushroomDAO/blog/pull/52) | PR_OPEN | 后端端点 + 前端 RRF 融合，60 测试全绿，3 轮对抗式自审，浏览器实测过 |
 
 ## 阻塞项（BLOCKED）
 - 无
