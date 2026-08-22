@@ -167,8 +167,16 @@
 - **证据**：分支 `feat/T1.3.1-vectorize-embedding`，PR [#39](https://github.com/MushroomDAO/blog/pull/39)
   （合并 commit `6b9fc8d`）。索引 `blog-search-v1`（1024d/cosine）已建，901 条向量
   （zh 467/en 434）已 upsert 并经 query API 验证可查询。
+- **数据订正（2026-08-22，T1.3.2 review 反查发现）**：T1.3.2 的对抗式 review 发现本脚本
+  用子串匹配检测 `<!--EN-->` 分隔符会被正文里的行内提及误触发（本库 2 篇文章：
+  `seo-geo-skill-ai-citation-optimization`、`geo-generative-engine-optimization-guide`），
+  导致这两篇的 article 级 embedding 在已执行的 `--upsert` 里用了错误的 zh/en 分段。已用
+  PR [#44](https://github.com/MushroomDAO/blog/pull/44) 修复检测逻辑（要求分隔符独占一行），
+  合并后已重新执行 `--upsert`（911 条向量全部刷新为正确数据），并精确重算出这两篇文章旧
+  （有 bug 逻辑下产生的）4 个候选 chunk_id、用 `delete_by_ids` 清理，避免留下孤儿向量。
+  线上索引现在是干净的。
 
-### T1.3.2 分片与双语 chunk 策略实现  `PR_OPEN`
+### T1.3.2 分片与双语 chunk 策略实现  `DONE`
 - **优先级**：high
 - **目标**：按 `spec.md` 的数据模型，把文章切成段落级 chunk，中英文分开建索引（article 级
   chunk 是 T1.3.1 已经做的，不在这个 task 范围内）
@@ -218,7 +226,7 @@
   实现按"每语言"处理（双语文章理论上限 32 chunk）。全库只有 3 篇文章总 chunk 数超过 16
   （最多 24），如果后续判断应该是"每篇"总量，需要重新调整 `MAX_CHUNKS_PER_LANGUAGE`
   的语义。
-- **证据**：分支 `feat/T1.3.2-chunking-bilingual`，PR <推进时回填>
+- **证据**：分支 `feat/T1.3.2-chunking-bilingual`，PR [#45](https://github.com/MushroomDAO/blog/pull/45)（合并 commit `b8f547b`）
 
 ### T1.3.3 `/api/search` Worker 端点  `BACKLOG`
 - **优先级**：high
