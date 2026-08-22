@@ -276,13 +276,45 @@
   `functions/_lib/rate-limit.js`、`functions/_lib/rate-limit.test.js`、
   `src/pages/search.astro`、`wrangler.toml`
 - **风险/回滚**：涉及公开 API 与 Workers AI/Vectorize 计费。本 task 已经内置基本防滥用
-  （IP 限速 + query 长度上限 + body 大小上限），不是 T1.3.4 完全空白的裸奔状态——T1.3.4
-  仍有价值（更精细的限速、常见查询缓存），但不再是"不做就不能上线"的前置条件。
-  认证已由依赖 T1.3.6 保证，不会出现无认证窗口期。**尚未真实验证的部分**：`AI`/
-  `VECTORIZE_INDEX` binding 在真实 Cloudflare 环境下的调用（本地 `astro preview` 不跑
-  Pages Functions，只能 mock 测试；已验证 KV/密钥 binding 用同样的 wrangler.toml 声明
-  方式在生产环境正确解析，但 AI/Vectorize 这两个新绑定本身还没有过一次真实调用）——
-  合并后需要用真实登录 Cookie 对生产环境 `/api/search` 发一次真实请求验证。
+  （IP 限速 + 会话级限速 + query 长度上限 + body 大小上限，见下方对抗式自审），不是
+  T1.3.4 完全空白的裸奔状态——T1.3.4 仍有价值（更精细的限速、常见查询缓存），但不再是
+  "不做就不能上线"的前置条件。认证已由依赖 T1.3.6 保证，不会出现无认证窗口期。
+  **尚未真实验证的部分**：`AI`/`VECTORIZE_INDEX` binding 在真实 Cloudflare 环境下的调用
+  （本地 `astro preview` 不跑 Pages Functions，只能 mock 测试；已验证 KV/密钥 binding 用
+  同样的 wrangler.toml 声明方式在生产环境正确解析，但 AI/Vectorize 这两个新绑定本身还
+  没有过一次真实调用）——合并后需要用真实登录 Cookie 对生产环境 `/api/search` 发一次
+  真实请求验证，**而且不能只看 HTTP 200**：`env.AI.run()`（binding 调用）和
+  `build-vectorize-index.py` 建索引时用的原始 REST API调用，理论上应该产出同一个嵌入
+  空间的向量，但没有代码层面的证据能确保两者内部默认参数完全一致——如果不一致，失败
+  模式是**静默的**（所有查询分数都低于 0.4 阈值，返回空结果，跟"真的没有相关内容"无法
+  区分），要拿 `vector-comparison-report.md` 里已知分数的查询验证返回分数落在预期区间，
+  不是只看状态码。
+- **对抗式自审（grade B，3 轮，独立上下文子 agent）**：正确性/安全滥用/生产失败模式三个
+  视角，发现并修复：
+  1. **前端搜索请求竞态**（正确性）——debounce 只延迟发起，不取消已发出的请求；快速输入
+     两次搜索时，网络时序不保证后发出的请求先回来，旧请求的迟到响应会覆盖新请求已经渲染
+     的结果，界面上出现输入框内容对不上的陈旧结果，且这个迟到响应如果恰好是 401 还会
+     错误地把仍然在线的用户切回登录表单。改用单调递增的 generation 计数器，只有仍是最新
+     一轮的请求才允许渲染或触发副作用。
+  2. **限速只按 IP，泄露的 Cookie 换 IP 能绕过**（安全/滥用）——本项目登录会话 60 天
+     有效期且明确不做撤销/登出接口，只按 IP 限速意味着攻击者换着代理 IP 打就能让同一个
+     泄露的 Cookie 反复触发计费的 Workers AI + Vectorize 调用，总量没有上限。加了一个按
+     会话（登录 Cookie 值的 SHA-256 哈希，不存明文）算的限速，跟 IP 限速同时生效（两者
+     都要过），把单个泄露 Cookie 的最坏成本钉死在一个窗口内的固定次数，不再随攻击者能
+     换多少个 IP 线性增长。
+  3. **`Content-Length` 请求头可以撒谎**（生产失败模式，低严重度但修复成本低）——原来
+     只检查这个头就放行到 `request.json()`，chunked encoding 或者故意谎报成一个很小的值
+     都能绕过体积上限检查。改成先读成文本量实际字节数，两道检查都做。
+  4. （非阻塞，已在响应字段上加防御性 `?? ''`）Vectorize 返回的 metadata 理论上不该缺
+     字段，但脏数据不该产出 `undefined` 悄悄从 JSON 里消失；`match.score` 非有限数时
+     也不该参与聚合比较，一律当"没有可用信号"跳过。
+  5. （非阻塞，记入 followups）`functions/api/search-auth.js`（T1.3.6，已合并）有同样的
+     "只信 `Content-Length` 头"问题——同一个修法，但那是已经上线、已经过评审的代码，
+     严重度更低（登录接口本身已经有 `MAX_PASSWORD_LENGTH` 兜底实际损耗），记进
+     `followups.md` 而不是在这个 PR 里顺手重开那个 task 的范围。
+  6. （非阻塞，记入 followups）成本层面的建议：给 Workers AI + Vectorize 配置用量告警，
+     作为限速本身之外的兜底——限速的 KV 最终一致性弱点（已知局限，见 rate-limit.js 注释）
+     在这个端点上第一次有了实际的 $ 维度。
 - **证据**：分支 `feat/T1.3.3-search-endpoint`，PR <推进时回填>
 
 ### T1.3.4 API 防滥用（限速/输入上限/缓存/降级）  `BACKLOG`

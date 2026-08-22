@@ -93,10 +93,12 @@
   （已 cherry-pick 回 `main`）
 
 ## 跟进账本（不阻塞主线，见 followups.md）
-- FU-4（ColBERT 评估）、FU-5（baseline-results 编号错位）、FU-6（KV 限速器弱点）、FU-7
-  （凭据权限范围，已部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16 片硬上限下的
-  token 超量残留）、FU-10（12-16 chunk 预算是每篇还是每语言的文档歧义）共 7 条 OPEN，
-  全部非阻塞，等主线 F1.3/F1.4 做完后批量清
+- FU-4（ColBERT 评估）、FU-5（baseline-results 编号错位）、FU-6（KV 限速器跨 PoP 弱点）、
+  FU-7（凭据权限范围，已部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16 片硬上限下的
+  token 超量残留）、FU-10（12-16 chunk 预算是每篇还是每语言的文档歧义）、FU-11（KV
+  read-modify-write 非原子，单 PoP 内并发竞态）、FU-12（search-auth.js 同款 Content-Length
+  撒谎绕过体积上限，T1.3.3 已修但那个已合并文件还没）、FU-13（建议给 Workers AI/Vectorize
+  配置用量告警）共 10 条 OPEN，全部非阻塞，等主线 F1.3/F1.4 做完后批量清
 
 ## 下一个 READY
 - T1.3.3 已经在做（见"当前聚焦”），PR 合并后 **T1.3.4**（API 防滥用增强）会解锁——注意

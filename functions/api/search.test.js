@@ -64,9 +64,11 @@ async function makeEnv(overrides = {}) {
 	};
 }
 
-async function validCookie() {
+// maxAgeSeconds 可传不同值来确定性地拿到不同的 Cookie 字符串（同一秒内调用两次、issuedAt
+// 一样的话，唯一能让签名不同的就是这个）——测"不同会话"的用例需要这个，不能靠掐时间点。
+async function validCookie(maxAgeSeconds = 3600) {
 	const issuedAt = Math.floor(Date.now() / 1000);
-	return signSession(SESSION_SECRET, { issuedAt, maxAgeSeconds: 3600 });
+	return signSession(SESSION_SECRET, { issuedAt, maxAgeSeconds });
 }
 
 function makeRequest(body, { ip = '5.5.5.5', cookie, contentType = 'application/json' } = {}) {
@@ -130,6 +132,26 @@ test('请求体超过大小上限：413', async () => {
 	assert.equal(resp.status, 413);
 });
 
+// 回归测试（T1.3.3 自审对抗式 review 抓到的真实问题）：Content-Length 是请求方自己声明的，
+// 谎报成一个很小的值、但实际发送的 body 远超上限，不该只靠这个 header 就放行
+test('回归测试：Content-Length 撒谎（远小于实际 body），仍然按实际字节数拦截：413', async () => {
+	const env = await makeEnv();
+	const cookie = await validCookie();
+	const bodyText = JSON.stringify({ query: 'x'.repeat(5000) });
+	const request = new Request('https://example.com/api/search', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			'CF-Connecting-IP': '1.1.1.1',
+			Cookie: `${COOKIE_NAME}=${cookie}`,
+			'Content-Length': '10', // 谎报成很小的值
+		},
+		body: bodyText,
+	});
+	const resp = await onRequestPost({ request, env });
+	assert.equal(resp.status, 413);
+});
+
 test('请求体不是合法 JSON：400', async () => {
 	const env = await makeEnv();
 	const cookie = await validCookie();
@@ -156,7 +178,7 @@ test('query 超过长度上限：400', async () => {
 	assert.equal(resp.status, 400);
 });
 
-test('限速：同一 IP 超过搜索限速次数后 429', async () => {
+test('限速：同一 IP + 同一会话超过搜索限速次数后 429', async () => {
 	const env = await makeEnv();
 	const cookie = await validCookie();
 	const ip = '7.7.7.7';
@@ -171,15 +193,51 @@ test('限速：同一 IP 超过搜索限速次数后 429', async () => {
 	assert.equal(lastStatus, 429, '连续请求应该在某一次触发限速');
 });
 
-test('限速：不同 IP 互不影响', async () => {
+test('限速：不同 IP + 不同会话，互不影响', async () => {
 	const env = await makeEnv();
-	const cookie = await validCookie();
+	const cookieA = await validCookie();
 	for (let i = 0; i < MAX_ATTEMPTS * 10; i++) {
-		const resp = await onRequestPost({ request: makeRequest({ query: 'hello' }, { cookie, ip: '8.8.8.8' }), env });
+		const resp = await onRequestPost({ request: makeRequest({ query: 'hello' }, { cookie: cookieA, ip: '8.8.8.8' }), env });
 		if (resp.status === 429) break;
 	}
-	const otherIp = await onRequestPost({ request: makeRequest({ query: 'hello' }, { cookie, ip: '9.9.9.9' }), env });
-	assert.equal(otherIp.status, 200, '另一个 IP 不应该被前一个 IP 的搜索限速影响');
+	const cookieB = await validCookie(7200); // 不同 maxAgeSeconds -> 不同签名 -> 不同会话
+	const otherSession = await onRequestPost({
+		request: makeRequest({ query: 'hello' }, { cookie: cookieB, ip: '9.9.9.9' }),
+		env,
+	});
+	assert.equal(otherSession.status, 200, '不同 IP+不同会话的组合不应该被前一个组合的限速影响');
+});
+
+// 回归测试（T1.3.3 自审对抗式 review 抓到的真实问题）：只按 IP 限速时，泄露的 Cookie
+// 换个 IP 就能绕过限速，而 Cookie 本身（60 天有效期、无撤销机制）没有总量上限。加了按
+// 会话（Cookie 哈希）限速之后，同一个会话换 IP 也应该被限速挡住。
+test('限速：同一会话换不同 IP 打，仍然会被会话级限速挡住（新增的按会话限速）', async () => {
+	const env = await makeEnv();
+	const cookie = await validCookie();
+	let lastStatus;
+	for (let i = 0; i < 35; i++) {
+		// 每次换一个不同的 IP，模拟"泄露的 Cookie 被脚本换着代理 IP 打"
+		const ip = `10.0.0.${i}`;
+		const resp = await onRequestPost({ request: makeRequest({ query: 'hello' }, { cookie, ip }), env });
+		lastStatus = resp.status;
+		if (lastStatus === 429) break;
+	}
+	assert.equal(lastStatus, 429, '同一个会话即使每次都换新 IP，也应该在某一次被会话级限速拦住');
+});
+
+test('限速：同一 IP、不同会话，仍然会被 IP 级限速挡住（IP 限速继续有效，不是被会话限速取代）', async () => {
+	const env = await makeEnv();
+	const ip = '11.11.11.11';
+	let lastStatus;
+	for (let i = 0; i < 35; i++) {
+		// 每次换一个不同的会话（不同 maxAgeSeconds -> 不同签名），模拟多个不同登录会话
+		// 共享同一个 IP（比如同一个办公室出口）打同一个端点
+		const cookie = await validCookie(3600 + i);
+		const resp = await onRequestPost({ request: makeRequest({ query: 'hello' }, { cookie, ip }), env });
+		lastStatus = resp.status;
+		if (lastStatus === 429) break;
+	}
+	assert.equal(lastStatus, 429, '同一个 IP 即使每次都换新会话，也应该在某一次被 IP 级限速拦住');
 });
 
 test('Workers AI 调用失败：503，不是裸抛异常', async () => {

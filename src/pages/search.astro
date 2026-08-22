@@ -307,6 +307,12 @@ import Header from '../components/Header.astro';
 				}));
 			}
 
+			// 修正（T1.3.3 自审对抗式 review 抓到的真实 bug）：这个函数原来直接在这里
+			// 处理 401（清提示、切回登录表单），是个副作用，不受下面 runCombinedSearch 的
+			// generation 校验保护——如果这次调用其实已经被更新的一次搜索超越（比如用户
+			// 输入过程中网络慢的老请求最后才落地），这个副作用仍然会执行，把一个"仍然在线"
+			// 的用户错误地切回登录表单。改成只返回状态、不做副作用，副作用交给调用方在
+			// 确认自己不是过期结果之后再做。
 			async function searchVectorRanked(query) {
 				const resp = await fetch('/api/search', {
 					method: 'POST',
@@ -314,15 +320,14 @@ import Header from '../components/Header.astro';
 					body: JSON.stringify({ query }),
 				});
 				if (resp.status === 401) {
-					// 会话真的过期了（不只是本地提示不准）——清掉提示，退回登录表单，
-					// 不是静默降级，因为这意味着登录状态本身已经失效
-					clearLoggedInHint();
-					renderLoggedOutState();
-					return null;
+					return { expired: true, results: [] };
 				}
-				if (!resp.ok) return []; // 429/503/其他：静默降级成"这一路没有结果"，不报错给用户
+				if (!resp.ok) return { expired: false, results: [] }; // 429/503/其他：静默降级，不报错给用户
 				const body = await resp.json();
-				return (body.results || []).map((r) => ({ url: normalizeUrl(r.url), title: r.title, excerpt: r.excerpt }));
+				return {
+					expired: false,
+					results: (body.results || []).map((r) => ({ url: normalizeUrl(r.url), title: r.title, excerpt: r.excerpt })),
+				};
 			}
 
 			// RRF：score(doc) = Σ 1/(k + rank_i(doc))，某一路没命中时那一路贡献为 0，
@@ -382,22 +387,42 @@ import Header from '../components/Header.astro';
 				};
 			}
 
+			// 修正（T1.3.3 自审对抗式 review 抓到的真实 bug）：debounce 只延迟"发起"，
+			// 不取消"已经发出但还没回来"的请求——用户输入过程中先后触发的两次搜索，网络
+			// 时序不保证后触发的那次先回来。举例：输完"cat"（触发 A），马上继续输成
+			// "cats"（触发 B），如果 A 的网络往返碰巧比 B 晚落地，A 会用"cat"的结果
+			// 覆盖掉 B 已经渲染的"cats"结果——界面上悄悄显示了一个输入框里已经不存在的
+			// 查询词的结果，没有任何视觉提示。用一个单调递增的 generation 计数器：每次调用
+			// 记下自己的世代号，await 之后只有仍是最新世代才允许渲染或触发副作用（比如
+			// 401 导致的切回登录表单）——被更新的调用超越的旧调用，直接放弃这一轮。
+			let searchGeneration = 0;
+
 			async function runCombinedSearch(query) {
+				const myGeneration = ++searchGeneration;
 				const trimmed = query.trim();
 				if (!trimmed) {
 					renderCombinedResults([]);
 					document.getElementById('semantic-empty-note').style.display = 'none';
 					return;
 				}
-				const [pagefindResults, vectorResults] = await Promise.all([
+				const [pagefindResults, vectorOutcome] = await Promise.all([
 					searchPagefindRanked(trimmed).catch(() => []),
 					searchVectorRanked(trimmed),
 				]);
-				if (vectorResults === null) return; // 401，已经切回登录表单，不渲染结果
+				if (myGeneration !== searchGeneration) return; // 已经被更新的一次搜索超越，整轮作废
+
+				if (vectorOutcome.expired) {
+					// 会话真的过期了（不只是本地提示不准）——清掉提示，退回登录表单，
+					// 不是静默降级，因为这意味着登录状态本身已经失效。放在 generation 校验
+					// 之后才做，避免一个过期请求的迟到响应，错误地把仍然在线的用户切回登录表单。
+					clearLoggedInHint();
+					renderLoggedOutState();
+					return;
+				}
 				// "无把握不返回"：两路都没有信号才展示"没有找到"，只要有一路有信号就融合展示
 				// （见 spec.md §检索融合第 4 点；两路各自的绝对信号过滤已经在各自源头做过——
 				// Pagefind 自己的相关性排序、/api/search 服务端的相似度阈值）
-				renderCombinedResults(rrfMerge(pagefindResults, vectorResults));
+				renderCombinedResults(rrfMerge(pagefindResults, vectorOutcome.results));
 			}
 
 			function initSemanticSearchWidget() {

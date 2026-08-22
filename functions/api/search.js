@@ -37,15 +37,31 @@ const MAX_RESULTS = 10; // 聚合去重、过滤之后最多返回的文章数
 // 精确度判断交给前端结合 Pagefind 信号一起做（见 spec.md §检索融合第 4 点）。
 const SIMILARITY_THRESHOLD = 0.4;
 // 搜索限速比登录限速宽松得多——已登录用户正常使用会连续搜多次，5 分钟 30 次对真实使用
-// 绰绰有余，同时把"一个泄露的 Cookie 被脚本疯狂调用"的最坏成本限制在可预期范围内
-// （Workers AI embedding + Vectorize 查询都是计费项）。
-const SEARCH_RATE_LIMIT = { prefix: 'searchlimit:', windowSeconds: 5 * 60, maxAttempts: 30 };
+// 绰绰有余。按 IP 限速能挡住"单一来源脚本疯狂调用"，但挡不住"泄露的 Cookie 换着 IP 打"——
+// 见下面 SESSION_RATE_LIMIT 的注释。
+const IP_RATE_LIMIT = { prefix: 'searchlimit:', windowSeconds: 5 * 60, maxAttempts: 30 };
+// 修正（T1.3.3 自审对抗式 review 抓到的真实问题）：只按 IP 限速时，一个泄露的登录 Cookie
+// （60 天有效期，本项目明确不做撤销/登出接口，见 T1.3.6"明确不做"）换着 IP/代理打就能
+// 绕过限速——按 IP 算的话理论上限是每 IP 每 5 分钟 30 次，但换 N 个 IP 就是 N 倍，Cookie
+// 本身完全没有总量上限，而每次调用都是计费的 Workers AI + Vectorize 请求。加一个按会话
+// （登录 Cookie 值的哈希，不是明文，避免把会话 token 原样存进 KV key）算的限速，跟 IP
+// 限速同时生效（两个都必须通过）——这样不管换多少个 IP，同一个泄露的 Cookie 在同一个
+// 5 分钟窗口内最多也只能打这么多次，把"泄露单个 Cookie 的最坏成本"钉死在一个可预期范围，
+// 不再随攻击者能换多少个 IP 线性增长。
+const SESSION_RATE_LIMIT = { prefix: 'searchsession:', windowSeconds: 5 * 60, maxAttempts: 30 };
 
 function jsonResponse(body, status) {
 	return new Response(JSON.stringify(body), {
 		status,
 		headers: { 'Content-Type': 'application/json' },
 	});
+}
+
+async function hashSessionCookie(cookieValue) {
+	const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(cookieValue));
+	return Array.from(new Uint8Array(digest))
+		.map((b) => b.toString(16).padStart(2, '0'))
+		.join('');
 }
 
 export async function onRequestPost(context) {
@@ -70,14 +86,28 @@ export async function onRequestPost(context) {
 		return jsonResponse({ error: 'invalid request body' }, 400);
 	}
 
+	// 修正（T1.3.3 自审对抗式 review 抓到的真实问题）：Content-Length 是请求方自己声明的，
+	// 不保证如实——chunked encoding 或者干脆撒谎的 Content-Length 都能让声明值小于实际
+	// body，原来只查这个 header 就放行到 request.json() 解析，等于这道体积上限形同虚设。
+	// 现在先把 body 读成文本、量实际字节数，量完再解析，两步都做，不再只信请求头。
 	const contentLength = Number(request.headers.get('Content-Length') || 0);
 	if (contentLength > MAX_BODY_BYTES) {
 		return jsonResponse({ error: 'request body too large' }, 413);
 	}
 
+	let bodyText;
+	try {
+		bodyText = await request.text();
+	} catch {
+		return jsonResponse({ error: 'invalid request body' }, 400);
+	}
+	if (new TextEncoder().encode(bodyText).length > MAX_BODY_BYTES) {
+		return jsonResponse({ error: 'request body too large' }, 413);
+	}
+
 	let body;
 	try {
-		body = await request.json();
+		body = JSON.parse(bodyText);
 	} catch {
 		return jsonResponse({ error: 'invalid request body' }, 400);
 	}
@@ -91,8 +121,11 @@ export async function onRequestPost(context) {
 	if (!ip) {
 		return jsonResponse({ error: 'search not configured' }, 503);
 	}
-	const { allowed } = await checkAndIncrement(env.BLOG_SEARCH_KV, ip, SEARCH_RATE_LIMIT);
-	if (!allowed) {
+	const [ipLimit, sessionLimit] = await Promise.all([
+		checkAndIncrement(env.BLOG_SEARCH_KV, ip, IP_RATE_LIMIT),
+		checkAndIncrement(env.BLOG_SEARCH_KV, await hashSessionCookie(cookieValue), SESSION_RATE_LIMIT),
+	]);
+	if (!ipLimit.allowed || !sessionLimit.allowed) {
 		return jsonResponse({ error: 'too many requests, try again later' }, 429);
 	}
 
@@ -116,12 +149,15 @@ export async function onRequestPost(context) {
 	}
 
 	// 按 article_id 聚合去重：向量相似度是 chunk 级的，不等于文章相关性；一篇文章可能有
-	// 多个 chunk 命中，只保留分数最高的那个作为这篇文章的代表分数/摘录
+	// 多个 chunk 命中，只保留分数最高的那个作为这篇文章的代表分数/摘录。
+	// 修正（T1.3.3 自审对抗式 review 指出的边角情况）：`match.score` 理论上不该是非数字，
+	// 但 Vectorize 返回脏数据时不该让整个请求炸掉或者产生 NaN 比较的诡异行为——非有限数
+	// 一律当成"没有可用分数"跳过，跟 article_id 缺失同等对待。
 	const bestByArticle = new Map();
 	for (const match of matches) {
 		const metadata = match && match.metadata;
 		const articleId = metadata && metadata.article_id;
-		if (!articleId) continue; // 防御性：理论上不该发生，但脏数据不该让整个请求炸掉
+		if (!articleId || !Number.isFinite(match.score)) continue;
 		const existing = bestByArticle.get(articleId);
 		if (!existing || match.score > existing.score) {
 			bestByArticle.set(articleId, match);
@@ -134,10 +170,10 @@ export async function onRequestPost(context) {
 		.slice(0, MAX_RESULTS)
 		.map((match) => ({
 			article_id: match.metadata.article_id,
-			title: match.metadata.title,
-			url: match.metadata.url,
-			language: match.metadata.language,
-			excerpt: match.metadata.excerpt,
+			title: match.metadata.title ?? '',
+			url: match.metadata.url ?? '',
+			language: match.metadata.language ?? '',
+			excerpt: match.metadata.excerpt ?? '',
 			score: match.score,
 		}));
 
