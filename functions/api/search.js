@@ -84,8 +84,25 @@ async function hashSessionCookie(cookieValue) {
 	return sha256Hex(cookieValue);
 }
 
-async function queryCacheKey(query) {
-	return `searchcache:${await sha256Hex(query.trim().toLowerCase())}`;
+// 修正（FU-16 round 2 review 抓到的真实 bug）：原来 normalizeQuery 只用在算缓存 key，
+// 传给 env.AI.run() 的还是原始未归一化的 query——这不是"多几次缓存未命中"那么无害：
+// 两个经归一化后判定"等价"的查询串（比如全角"ＰＡＧＥＦＩＮＤ"和半角"pagefind"），
+// 只有先到的那个真正拿自己的原文去 embedding，后到的那个直接命中缓存，拿到的是
+// **先到者原文**算出来的向量结果——bge-m3 对全角/半角拉丁字符给出的向量有实打实的
+// 差异，判成"同一条缓存"就是在断言这两个输入对 embedding 也等价，而下游根本不认这个
+// 等价。修法：归一化只在解析请求体这一处做一次，之后无论是算缓存 key 还是传给
+// env.AI.run()，用的都是同一个归一化后的字符串，两边不会再割裂。
+function normalizeQuery(query) {
+	return query.trim().toLowerCase().normalize('NFKC').replace(/\s+/g, ' ');
+}
+
+// v2：round 2 review 指出的真实问题——这一轮改了 normalizeQuery 的施加时机（同一个
+// 归一化字符串现在既算 key 也喂给 embedding），旧版本按不同规则算出来的缓存条目如果
+// 还活着（最长 6 小时 TTL），会跟新规则的条目混在一起。加个版本段，旧 key 自然过期后
+// 不会再被新代码误读，不需要手动清理。以后再改归一化规则/阈值/TOP_K 这类影响缓存
+// 内容形状的常量时，也应该顺手把这个版本号往上提一格。
+async function queryCacheKey(normalizedQuery) {
+	return `searchcache:v2:${await sha256Hex(normalizedQuery)}`;
 }
 
 export async function onRequestPost(context) {
@@ -136,7 +153,9 @@ export async function onRequestPost(context) {
 		return jsonResponse({ error: 'invalid request body' }, 400);
 	}
 
-	const query = body && typeof body.query === 'string' ? body.query.trim() : '';
+	// 归一化在这里做一次——下面无论是算缓存 key 还是传给 env.AI.run() 做 embedding，
+	// 用的都是这同一个字符串，两处不会再各自处理出不同的输入（见 normalizeQuery 注释）。
+	const query = body && typeof body.query === 'string' ? normalizeQuery(body.query) : '';
 	if (!query || query.length > MAX_QUERY_LENGTH) {
 		return jsonResponse({ error: 'invalid query' }, 400);
 	}
@@ -168,7 +187,15 @@ export async function onRequestPost(context) {
 	try {
 		const cached = await env.BLOG_SEARCH_KV.get(cacheKey);
 		if (cached) {
-			return jsonResponse({ results: JSON.parse(cached) }, 200);
+			const parsed = JSON.parse(cached);
+			// 修正（round 2 review 指出的真实问题）：不校验解析出来的形状就直接透传，
+			// KV 里万一是字符串/null/嵌套对象（不该发生，但脏数据不该让整个请求炸掉）
+			// 会原样 200 返回——前端 searchVectorRanked 是 Promise.all 里唯一没有
+			// .catch 的一支，.map 一抛异常会把整个合并搜索打死，连 Pagefind 那半
+			// 本来能成功的结果都一起没了。非数组就当作没命中，走下面重新计算。
+			if (Array.isArray(parsed)) {
+				return jsonResponse({ results: parsed }, 200);
+			}
 		}
 	} catch {
 		// 忽略——缓存读取/解析失败不影响功能，继续走下面的正常查询流程

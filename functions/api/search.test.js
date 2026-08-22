@@ -12,6 +12,7 @@ const SESSION_SECRET = 'test-session-secret-do-not-use-in-prod';
 function makeFakeKv() {
 	const store = new Map();
 	return {
+		store, // 测试用：直接读写底层 Map，用于伪造/篡改缓存内容（见 Array.isArray 回归测试）
 		async get(key) {
 			return store.has(key) ? store.get(key) : null;
 		},
@@ -21,9 +22,10 @@ function makeFakeKv() {
 	};
 }
 
-function makeFakeAi({ vector = [0.1, 0.2, 0.3], shouldThrow = false } = {}) {
+function makeFakeAi({ vector = [0.1, 0.2, 0.3], shouldThrow = false, recordedCalls = null } = {}) {
 	return {
 		async run(model, { text }) {
+			if (recordedCalls) recordedCalls.push(text);
 			if (shouldThrow) throw new Error('Workers AI unavailable');
 			return { data: text.map(() => vector) };
 		},
@@ -373,6 +375,58 @@ test('缓存：查询做大小写/首尾空白归一化，"Pagefind" 和 " pagef
 	assert.equal(resp.status, 200, '大小写/空白不同但语义相同的 query 应该命中同一条缓存');
 });
 
+// 回归测试（FU-16）：NFKC 归一化折叠全角字符 + 折叠连续空白
+test('缓存：全角字符和连续空白也能归一化命中同一条缓存', async () => {
+	const kv = makeFakeKv();
+	const matches = [makeMatch('article-a', 0.7)];
+	const workingEnv = await makeEnv({ BLOG_SEARCH_KV: kv, VECTORIZE_INDEX: makeFakeVectorize({ matches }) });
+	const cookie = await validCookie();
+
+	// 全角 "Ｐａｇｅｆｉｎｄ" 经 NFKC 归一化后应该等价于半角 "pagefind"
+	await onRequestPost({ request: makeRequest({ query: 'Ｐａｇｅｆｉｎｄ' }, { cookie }), env: workingEnv });
+
+	const brokenEnv = await makeEnv({
+		BLOG_SEARCH_KV: kv,
+		AI: makeFakeAi({ shouldThrow: true }),
+		VECTORIZE_INDEX: makeFakeVectorize({ shouldThrow: true }),
+	});
+	const resp = await onRequestPost({
+		request: makeRequest({ query: 'pagefind' }, { cookie, ip: '24.24.24.24' }),
+		env: brokenEnv,
+	});
+	assert.equal(resp.status, 200, '全角字符归一化后应该命中半角同义查询的缓存');
+
+	// 中间连续多个空格也应该归一化命中同一条缓存："foo   bar" -> "foo bar"
+	await onRequestPost({ request: makeRequest({ query: 'foo   bar' }, { cookie, ip: '26.26.26.26' }), env: workingEnv });
+	const resp2 = await onRequestPost({
+		request: makeRequest({ query: 'foo bar' }, { cookie, ip: '27.27.27.27' }),
+		env: brokenEnv,
+	});
+	assert.equal(resp2.status, 200, '连续空白折叠后应该命中同一条缓存');
+});
+
+// 回归测试（FU-16 round 2 review 抓到的真实 bug）：归一化原来只用在算缓存 key，传给
+// env.AI.run() 的还是原始未归一化的 query——全角/半角查询被判成"同一条缓存"，但只有
+// 先到的那个真正用自己的原文去 embedding，后到的那个直接吃缓存，等于两个查询在
+// embedding 层面根本没有真的等价。这里直接断言 AI.run() 收到的文本本身就是归一化后的
+// 字符串，不是原始输入——修复后 embedding 输入和缓存 key 用的是同一份数据，不会再割裂。
+test('缓存归一化：传给 env.AI.run() 的是归一化后的文本，不是原始未归一化的 query', async () => {
+	const recordedCalls = [];
+	const kv = makeFakeKv();
+	const matches = [makeMatch('article-a', 0.7)];
+	const env = await makeEnv({
+		BLOG_SEARCH_KV: kv,
+		AI: makeFakeAi({ recordedCalls }),
+		VECTORIZE_INDEX: makeFakeVectorize({ matches }),
+	});
+	const cookie = await validCookie();
+
+	await onRequestPost({ request: makeRequest({ query: '  Ｐａｇｅｆｉｎｄ  ' }, { cookie }), env });
+
+	assert.equal(recordedCalls.length, 1);
+	assert.deepEqual(recordedCalls[0], ['pagefind'], 'AI 应该收到归一化后的文本（NFKC 折叠全角 + trim），不是原始的全角+首尾空白字符串');
+});
+
 // 回归测试（T1.3.4 round 2 自审对抗式 review 抓到的真实问题）：缓存命中原来完全不计入
 // 限速，等于给共享 KV namespace（同一个 namespace 也扛着 T1.3.6 的登录限速器）开了一条
 // 不限速的读流量通道——不是"省计费调用"这个威胁模型要挡的东西，是另一种拒绝服务面。
@@ -412,6 +466,33 @@ test('缓存：命中缓存确实跳过了 AI/Vectorize 调用（限速额度内
 	});
 	const resp = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip }), env: brokenEnv });
 	assert.equal(resp.status, 200, '限速额度内的缓存命中应该正常返回，不应该被跳过的 AI/Vectorize 报错影响');
+});
+
+// 回归测试（round 2 review 的非阻塞建议）：KV 里如果是脏数据（非数组，比如缓存写入被
+// 别的进程/手动操作污染，或者未来缓存 schema 变了但旧值还没过期），原来会不校验形状就
+// 原样透传给前端——search.astro 的 searchVectorRanked 是 Promise.all 里唯一没 .catch
+// 的一支，拿到非数组直接 .map 会整个搜索请求打死，连 Pagefind 那半本来能成功的结果都
+// 一起没了。修复后非数组值当作缓存未命中处理，照常走 AI/Vectorize 重新计算。
+test('缓存：命中的缓存值不是数组（脏数据）时，当作未命中处理，不会原样透传', async () => {
+	const kv = makeFakeKv();
+	const matches = [makeMatch('article-a', 0.7)];
+	const cookie = await validCookie();
+	const workingEnv = await makeEnv({ BLOG_SEARCH_KV: kv, VECTORIZE_INDEX: makeFakeVectorize({ matches }) });
+
+	// 先正常发一次请求，让代码自己算出真正的缓存 key 并写入；随后直接改写底层 Map，
+	// 用非数组值污染这条缓存——不需要在测试里重新实现一遍 queryCacheKey 的哈希算法。
+	await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip: '28.28.28.28' }), env: workingEnv });
+	// 同一个 KV namespace 也扛着限速计数器的 key，不能假设"只写了一条"——精确找出
+	// 缓存自己的那条（searchcache: 前缀）来篡改，不碰限速计数器的 key。
+	const cacheKey = [...kv.store.keys()].find((k) => k.startsWith('searchcache:'));
+	assert.ok(cacheKey, '应该已经写入了一条 searchcache: 前缀的缓存');
+	kv.store.set(cacheKey, JSON.stringify({ not: 'an array' }));
+
+	const resp = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip: '29.29.29.29' }), env: workingEnv });
+	assert.equal(resp.status, 200, '脏缓存不应该导致请求失败');
+	const body = await resp.json();
+	assert.ok(Array.isArray(body.results), '应该当作缓存未命中，重新计算出正常的数组结果，而不是把脏数据原样返回');
+	assert.equal(body.results[0].article_id, 'article-a');
 });
 
 test('GET 请求：405', async () => {
