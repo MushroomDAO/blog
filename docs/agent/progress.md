@@ -1,13 +1,13 @@
 # 语义检索 / 智能推荐功能 实时状态 — progress
 
 > 「此刻仓库真实发生了什么」。由 `pilot run` 每一步更新。
-> 更新时间：2026-08-21 14:20
+> 更新时间：2026-08-22
 
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
 - **Feature**：F1.3 语义检索上线（Phase 1）
-- **正在开发的 Task**：无（T1.3.1/T1.3.2 已合并；T1.3.5/T1.3.6 仍是 READY，互不依赖，
-  `pilot run` 下一轮可任选其一；T1.3.3 依赖 T1.3.2 + T1.3.6，T1.3.6 未完成前不能开工）
+- **正在开发的 Task**：无（T1.3.1/T1.3.2/T1.3.5/T1.3.6 均已合并；T1.3.3（`/api/search` 端点）
+  依赖已全部满足，现在是唯一 READY 的 task）
 - **分支 / worktree**：无
 - **PR**：无（进行中）
 
@@ -20,6 +20,21 @@
 - 无
 
 ## 最近完成
+- 2026-08-22：**T1.3.6 合并**（PR #48，squash commit `423d7eb`）——密码 + HMAC 签名 Cookie
+  登录（`functions/_lib/auth.js`、`functions/_lib/rate-limit.js`、
+  `functions/api/search-auth.js`、`src/pages/search.astro` 登录态 UI）。外部评审 3 轮：
+  R1 揪出 2 blocking（跨站垃圾请求烧限速额度；KV binding 缺失时静默放行到无限次密码尝试）
+  + 1 medium（Cookie 无 `__Host-` 前缀可被兄弟子域影子化）+ 3 low；R2 发现 R1 的限速修复
+  只挡住了 `application/x-www-form-urlencoded` 形状，`Content-Type: text/plain` 且 body
+  恰好合法 JSON 的跨站请求仍能绕过，补上 `Content-Type: application/json` 强校验后关闭；
+  R3 对最新提交裁决 APPROVED。全程新增 9 条回归测试（36 条全绿），并把 `pnpm test` 接入
+  `.github/workflows/deploy.yml`，部署前自动跑。**遗留真实账号操作，需要人工执行**：
+  `wrangler secret put BLOG_SEARCH_PASSWORD` / `BLOG_SEARCH_SESSION_SECRET`
+  （两个值已生成在 `~/Dev/.env`）+ Cloudflare Pages 后台配置 `BLOG_SEARCH_KV` binding——
+  合并早于这三项配置完成时，登录接口会 fail-closed 返回 503（不是安全问题，只是功能未启用）。
+- 2026-08-22：**T1.3.5 合并**（PR #47）——Cloudflare KV 索引 manifest（`build_manifest()`、
+  namespace 查找/创建、KV 读写），修复 `_global` 保留键冲突、URL 注入（`?`/`#` 未转义）、
+  跨账号缓存污染等问题。
 - 2026-08-22：**T1.3.2 合并**（PR #45，commit `b8f547b`）——段落级分片模块
   `semantic-search/scripts/chunking.py`。3 轮对抗式自审在真实语料库上抓到 4 个 bug（2 个
   已经在真实触发）：尾部 chunk 无界增长、双语分隔符检测被行内提及劫持、标题孤儿 chunk、
@@ -82,11 +97,9 @@
   全部非阻塞，等主线 F1.3/F1.4 做完后批量清
 
 ## 下一个 READY
-- **T1.3.5** 索引 manifest 版本化
-- **T1.3.6** 登录认证（密码 + 签名 Cookie）——注意其中 `wrangler secret put` 是真实账号操作，
-  执行前需停下问用户确认
+- **T1.3.3** `/api/search` Worker 端点——依赖的 T1.3.2（分片）与 T1.3.6（登录认证中间件）
+  均已 DONE，现在是 F1.3 唯一 READY 的 task。
 
-两者互不依赖，`pilot run` 下一轮可任选其一；T1.3.3（`/api/search` 端点）依赖 T1.3.2
-（已完成）+ T1.3.6（未完成），还不能开工。
-
-三者互不依赖，`pilot run` 下一轮可任选其一（建议先 T1.3.2，T1.3.3 同时依赖它和 T1.3.6）。
+注意：T1.3.6 遗留的真实账号操作（`wrangler secret put` 两个密钥 + Cloudflare Pages 后台
+`BLOG_SEARCH_KV` binding 配置）尚未执行，`/api/search` 上线前这三项也需要一并确认落地，
+否则登录门禁会一直 fail-closed 503。

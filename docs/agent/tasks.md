@@ -306,7 +306,7 @@
   `build_manifest` 里炸出不知所云的 `TypeError`，改成在 `main()` 提前报清楚的错误。
 - **证据**：分支 `feat/T1.3.5-index-manifest`，PR <推进时回填>
 
-### T1.3.6 登录认证（密码 + 签名 Cookie）  `PR_OPEN`
+### T1.3.6 登录认证（密码 + 签名 Cookie）  `DONE`
 - **优先级**：high
 - **目标**：`/api/search`（语义检索能力）在真正上线前必须有登录门禁，未登录不可访问，避免被刷
   Workers AI 计费。用户已明确否决 Cloudflare Access，要求单一共享密码方案。**T1.1.3 已上线的
@@ -333,9 +333,10 @@
   边界，避免 `/api/search` 出现无认证的中间上线状态）
 - **交付物**：`functions/_lib/auth.js`、`functions/_lib/rate-limit.js`、
   `functions/api/search-auth.js` + 对应 `*.test.js`、`src/pages/search.astro` 登录态 UI
-- **验收命令**：`node --test functions/_lib/*.test.js functions/api/*.test.js`（28 项单元/
-  集成测试，直接调用 `onRequestPost` 等 handler，不需要 wrangler/Miniflare）+
-  `pnpm run build`（确认 Astro 静态构建不受影响，Pagefind 关键词搜索保持公开）
+- **验收命令**：`pnpm test`（= `node --test functions/_lib/*.test.js functions/api/*.test.js`，
+  36 项单元/集成测试，直接调用 `onRequestPost` 等 handler，不需要 wrangler/Miniflare；已接入
+  `.github/workflows/deploy.yml`，部署前自动跑一次）+ `pnpm run build`（确认 Astro 静态构建
+  不受影响，Pagefind 关键词搜索保持公开）
 - **涉及文件**：`functions/_lib/auth.js`、`functions/_lib/rate-limit.js`、
   `functions/api/search-auth.js`、对应测试文件、`src/pages/search.astro`
 - **风险/回滚**：**`wrangler secret put BLOG_SEARCH_PASSWORD` / `BLOG_SEARCH_SESSION_SECRET`
@@ -370,7 +371,25 @@
      "不是你？重新登录"链接，不依赖提示本身准不准。
   6. （非阻塞，记入 followups）部署时机：合并早于 Cloudflare Pages 后台配置好环境变量/绑定
      时，登录接口会短暂 503——代码已经是 fail-closed，只是提醒运维顺序，见上方风险/回滚。
-- **证据**：分支 `feat/T1.3.6-login-auth`，PR <推进时回填>
+- **外部评审（PR#48，3 轮）**：
+  - **R1**：2 blocking（B1 限速计数点在请求体校验之前，跨站垃圾请求可烧光真实用户的限速
+    额度；B2 文档写 `BLOG_SEARCH_KV` "必需"、实现却在缺失时静默跳过限速直接放行到密码
+    比较）+ 1 medium（Cookie 无 `__Host-` 前缀，可被兄弟子域用同名域 Cookie 影子化）+
+    3 low（"重新登录"措辞误导、503 前端显示成"密码错误"、验签不查签发合理性）——
+    全部修复：限速计数挪到请求体校验之后；KV/IP 缺失一律 fail-closed 503；Cookie 改名
+    `__Host-blog_search_session`；措辞改"重新输入密码"；前端 503 单独分支；`verifySession`
+    加 `expiresAt>=issuedAt`/90 天上限/5 分钟时钟容差三条不变式。
+  - **R2**：B1 仅部分修复——`Content-Type: text/plain` 且 body 恰好是合法 JSON 的跨站请求
+    仍能绕过（`request.json()` 不检查 Content-Type，而 text/plain 是跨站简单请求免 CORS
+    预检能发送的三种 Content-Type 之一）。修复：请求体解析前显式要求
+    `Content-Type: application/json`。
+  - **R3（增量复审）**：因监控脚本读到的是 R2 修复前的评审快照、误判为新裁决而短暂复核了
+    同一条 B1——实际 R2 的修复（Content-Type 校验）已经关闭该口子，最终针对最新提交
+    `b3438f7` 的裁决为 **APPROVED**（`checks=SUCCESS`，`mergeable=MERGEABLE`）。
+  - 全程新增 9 条回归测试（含 B1/B2 两条阻塞项守卫 + `text/plain` 攻击形状专项测试），
+    并顺带把 `pnpm test` 接入 `.github/workflows/deploy.yml`（部署前自动跑），
+    36 测试全绿。
+- **证据**：分支 `feat/T1.3.6-login-auth`，PR #48（已合并，squash commit `423d7eb`）
 
 ---
 
