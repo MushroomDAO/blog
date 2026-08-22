@@ -54,10 +54,11 @@ export async function onRequestPost(context) {
 	// 形状合法的登录尝试，不管密码对不对都计数，避免攻击者靠故意在最后一步失败绕过），
 	// 但不合法的垃圾请求不再白白消耗真实用户的额度。
 	//
-	// 注意：这只挡"如实声明了 Content-Length 且超限"的请求，挡不住不带 Content-Length
-	// 或者谎报长度的请求（chunked encoding 等）——那类请求仍然要靠 Cloudflare 平台自己的
-	// 请求体上限兜底（Free/Pro 100MB）。这里的检查是"廉价挡掉正常客户端不会触发、
-	// 但简单脚本可能顺手带上的大 body"，不是完整的防线，好过完全没有。
+	// 之前这里只查 Content-Length 请求头就放行到解析——那个头是请求方自己声明的，
+	// chunked encoding 或者干脆撒谎的 Content-Length 都能让声明值小于实际 body，
+	// 这道体积上限形同虚设（记录在案：FU-12，跟 T1.3.3 的 search.js 同款问题，这里补上
+	// 同样的修法）。Content-Length 检查留着当快速失败路径（不用等读完就能拒），但真正的
+	// 上限判断改成读完 body 之后量实际字节数。
 	const contentLength = Number(request.headers.get('Content-Length') || 0);
 	if (contentLength > MAX_BODY_BYTES) {
 		return jsonResponse({ error: 'request body too large' }, 413);
@@ -76,9 +77,19 @@ export async function onRequestPost(context) {
 		return jsonResponse({ error: 'invalid request body' }, 400);
 	}
 
+	let bodyText;
+	try {
+		bodyText = await request.text();
+	} catch {
+		return jsonResponse({ error: 'invalid request body' }, 400);
+	}
+	if (new TextEncoder().encode(bodyText).length > MAX_BODY_BYTES) {
+		return jsonResponse({ error: 'request body too large' }, 413);
+	}
+
 	let body;
 	try {
-		body = await request.json();
+		body = JSON.parse(bodyText);
 	} catch {
 		return jsonResponse({ error: 'invalid request body' }, 400);
 	}

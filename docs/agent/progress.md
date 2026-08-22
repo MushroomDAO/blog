@@ -5,10 +5,8 @@
 
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
-- **Feature**：F1.3 语义检索上线（Phase 1）——**6 个 task 里 5 个已 DONE**
-  （T1.3.1/T1.3.2/T1.3.3/T1.3.5/T1.3.6），语义检索端到端可用（登录 + 检索 + 前端融合），
-  生产环境已验证。剩下 T1.3.4（API 防滥用增强，非"不做就不能上线"的前置条件）是 F1.3
-  唯一非 DONE 的 task。
+- **Feature**：F1.3 语义检索上线（Phase 1）——**T1.3.1~T1.3.6 全部 6 个 task 功能上完成**
+  （本 PR 合并后 T1.3.4 状态文档同步落地），F1.3 里没有再剩下功能性未完成的 task
 - **分支 / worktree**：无
 - **PR**：无（进行中）
 
@@ -25,6 +23,15 @@
   → Secrets 更新这个 token（账号级操作，需要人工确认/执行）。
 
 ## 最近完成
+- 2026-08-22：**T1.3.4 完成**（`functions/api/search.js` 加查询结果缓存：6 小时 TTL，
+  query 归一化取哈希做 key，命中跳过计费的 AI/Vectorize 调用）——T1.3.4 原定范围里的
+  "输入长度上限"/"简单限速"/"降级"其实 T1.3.3 落地时已经一并做完，本 task 实际只剩
+  "常见查询缓存"这一项。3 轮对抗式自审抓到一个真问题：缓存命中最初设计成完全不计入
+  限速，但共享 KV namespace 同时扛着 T1.3.6 的登录限速器，不限速的缓存读流量能把配额
+  打满、是另一种拒绝服务面——改成限速检查挪到缓存检查之前，命中缓存依然计入限速，
+  只是跳过真正计费的调用。顺带修复 FU-12（`search-auth.js` 的 Content-Length 只信
+  请求头，跟 `search.js` 用同一个修法关掉）+ T1.3.5 状态一直忘了从 `PR_OPEN` 改成
+  `DONE`（早就合并了，纯文档疏漏）。至此 F1.3 六个 task 全部功能完成。
 - 2026-08-22：**T1.3.3 合并**（PR #52，squash commit `edaa956`）——`/api/search` 端点
   （query → bge-m3 embedding → Vectorize top-20 → 按 article_id 聚合去重 → 相似度阈值
   过滤）+ 前端 RRF 融合（`search.astro` 新增登录后可用的语义检索输入框，用 Pagefind 原生
@@ -36,7 +43,7 @@
   部署，用真实登录 Cookie 对生产环境查询"Pagefind"，返回分数 `0.5089695` 且排名第一的
   文章与 `vector-comparison-report.md` 记录的 `0.5043`/同一篇文章一致——证实 Workers AI
   binding 调用与建索引时的原始 REST API 调用产出同一嵌入空间，不存在"绑定调用参数不一致
-  导致所有分数静默低于阈值"的担忧。F1.3 现在只剩 T1.3.4 未完成。
+  导致所有分数静默低于阈值"的担忧。
 - 2026-08-22：**T1.3.6 合并**（PR #48，squash commit `423d7eb`）——密码 + HMAC 签名 Cookie
   登录（`functions/_lib/auth.js`、`functions/_lib/rate-limit.js`、
   `functions/api/search-auth.js`、`src/pages/search.astro` 登录态 UI）。外部评审 3 轮：
@@ -111,14 +118,16 @@
   （已 cherry-pick 回 `main`）
 
 ## 跟进账本（不阻塞主线，见 followups.md）
-- FU-4（ColBERT 评估）、FU-5（baseline-results 编号错位）、FU-6（KV 限速器跨 PoP 弱点）、
-  FU-7（凭据权限范围，已部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16 片硬上限下的
-  token 超量残留）、FU-10（12-16 chunk 预算是每篇还是每语言的文档歧义）、FU-11（KV
-  read-modify-write 非原子，单 PoP 内并发竞态）、FU-12（search-auth.js 同款 Content-Length
-  撒谎绕过体积上限，T1.3.3 已修但那个已合并文件还没）、FU-13（建议给 Workers AI/Vectorize
-  配置用量告警）、**FU-14（GitHub Actions CLOUDFLARE_API_TOKEN 失效，CI 自动部署静默失败，
-  见上方"阻塞项"，需要用户更新 GitHub repo secret）**共 11 条 OPEN，除 FU-14 持续影响生产
-  部署外全部非阻塞，等主线 F1.3/F1.4 做完后批量清
+- **FU-12 本 PR 已修复**（`search-auth.js` 的 Content-Length 问题，见上方"最近完成"）。
+- 剩余 OPEN：FU-4（ColBERT 评估）、FU-5（baseline-results 编号错位）、FU-6（KV 限速器跨
+  PoP 弱点）、FU-7（凭据权限范围，已部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16
+  片硬上限下的 token 超量残留）、FU-10（12-16 chunk 预算是每篇还是每语言的文档歧义）、
+  FU-11（KV read-modify-write 非原子，单 PoP 内并发竞态）、FU-13（建议给 Workers
+  AI/Vectorize 配置用量告警）、FU-16~FU-19（T1.3.4 自审发现，缓存 key 归一化偏弱、
+  缓存无失效钩子对接未来 T1.4.1、缓存写入增加 KV 配额消耗、rate-limit.js 既有代码缺
+  try/catch），全部非阻塞，等主线 F1.3/F1.4 做完后批量清。另外 PR #54
+  （chore/manual-deploy-only）上有 FU-14（已关闭——引用的 workflow 已删除）/FU-15
+  （TLS bypass，已确认是既定模式非遗留代码），那条 PR 也还没合并。
 
 ## 下一个 READY
 - **T1.3.4**（API 防滥用增强）是 F1.3 剩下唯一的 task——注意 T1.3.3 已经内置了基本防滥用

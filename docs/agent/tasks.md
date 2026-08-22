@@ -316,21 +316,50 @@
      在这个端点上第一次有了实际的 $ 维度。
 - **证据**：分支 `feat/T1.3.3-search-endpoint`，PR [#52](https://github.com/MushroomDAO/blog/pull/52)
 
-### T1.3.4 API 防滥用（限速/输入上限/缓存/降级）  `BACKLOG`
+### T1.3.4 API 防滥用（限速/输入上限/缓存/降级）  `DONE`
 - **优先级**：high
 - **目标**：`/api/search` 具备基本防滥用能力，不被刷爆 Workers AI 额度
 - **开发范围**：输入长度上限、简单限速、常见查询缓存、不记录用户原始查询原文。"降级"体现在
   前端：`/api/search` 超时/失败时浏览器 JS 只展示本地 Pagefind 结果，不是 Worker 侧逻辑
   （Worker 里没有 Pagefind 结果可回退，见 T1.3.3）
+- **实际完成情况**：这几项里的大部分（输入长度上限、IP+会话双重限速、"降级"前端逻辑）已经
+  在 T1.3.3 落地时一并做了（见 T1.3.3 条目"风险/回滚"一节的说明），本 task 认领的是剩下的
+  一项——**常见查询缓存**（`functions/api/search.js`）：query 归一化（trim+小写）取
+  SHA-256 哈希做 KV key，6 小时 TTL，命中直接跳过 AI/Vectorize 调用；"不记录用户原始查询
+  原文"通过缓存 key 用哈希而不是明文查询词本身满足——缓存值里也只有文章标题/链接/摘录，
+  不含查询词。
 - **明确不做**：不做验证码类交互防护（超出必要）；登录认证不在本 task 范围内，见 T1.3.6
 - **依赖**：T1.3.3
-- **交付物**：防滥用中间件/逻辑
-- **验收命令**：`<待实现时补充：如对超长 query 发请求，断言被拒绝而非报错崩溃>`
-- **涉及文件**：待定
-- **风险/回滚**：涉钱（Workers AI 按量计费），必须在 `/api/search` 公开前完成
-- **证据**：<推进时回填>
+- **交付物**：`functions/api/search.js` 里新增的缓存逻辑 + `functions/api/search.test.js`
+  新增 5 项测试
+- **验收命令**：`pnpm test`（含新增 5 项缓存测试：缓存命中依然计入限速、限速额度内的
+  缓存命中跳过 AI/Vectorize 即使它们会报错、大小写/空白归一化命中同一条缓存等）
+- **涉及文件**：`functions/api/search.js`、`functions/api/search.test.js`
+- **风险/回滚**：涉钱（Workers AI 按量计费）——T1.3.3 已经内置基本防滥用，本 task 上线前
+  `/api/search` 并非裸奔状态，缓存是在那基础上的进一步降本。缓存本身失败（KV 读写异常）
+  降级成"当作没命中"，走正常查询流程，不影响功能正确性，只是没省到钱。
+- **顺带修复（同一个 PR 里，跟 T1.3.4 关系紧密，未单独开 task）**：`functions/api/
+  search-auth.js`（T1.3.6，已合并）的 Content-Length 只信请求头、chunked encoding 或
+  谎报长度可绕过体积上限的问题（FU-12）——用跟 `search.js` 一样的修法（读完 body 量
+  实际字节数，不只信头）关闭。
+- **对抗式自审（grade A——涉 search-auth.js 安全面，3 轮，独立上下文子 agent）**：正确性/
+  安全/生产失败模式三个视角，发现并修复：
+  1. **缓存命中原来完全不计入限速**（安全，真问题）——设计初衷是"缓存读取不花计费调用、
+     不该占限速额度"，但忽略了这个 KV namespace 同时扛着 T1.3.6 的登录限速器，不限速的
+     缓存读流量能把共享 namespace 的 KV 配额打满，是另一种拒绝服务面，不是"省钱"这个
+     威胁模型要挡的东西。改成限速检查挪到缓存检查之前——命中缓存依然计入限速，只是
+     跳过真正计费的 AI/Vectorize 调用，两个目标（省钱、不被刷）不冲突。
+  2. **TTL 理由写错了**（正确性，自己代码注释的事实错误）——原注释说"文章更新频率也是
+     以天为单位"，但 `git log` 显示单日发布过 14 篇文章，这个理由站不住。改成如实说明
+     6 小时是"省计费调用"和"新鲜度"的折中，新鲜度上限目前实际由还没上线的 T1.4.1 决定
+     （记入 followups FU-17，供 T1.4.1 实现时参考）。
+  3-6.（非阻塞，记入 followups）缓存 key 归一化偏弱（FU-16）、缓存无失效钩子对接
+     未来的 T1.4.1 重新索引（FU-17）、缓存写入增加 KV namespace 级配额消耗（FU-18）、
+     `rate-limit.js` 的 `checkAndIncrement` 对 KV 调用没有 try/catch、既有代码本次未改
+     但缓存新增的写入量让它更容易触发（FU-19）。
+- **证据**：分支 `feat/T1.3.4-search-caching`，PR <推进时回填>
 
-### T1.3.5 索引 manifest 版本化  `PR_OPEN`
+### T1.3.5 索引 manifest 版本化  `DONE`
 - **优先级**：mid
 - **目标**：记录 `embedding_model`/`embedding_dimensions`/`chunking_version`/`content_hash`/
   `language`/`indexed_at`，为后续模型/分片算法变更做好回填切流的准备
