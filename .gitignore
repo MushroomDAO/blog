@@ -47,3 +47,5 @@ radar/
 # regenerable index-build artifacts (large, derived from src/content/blog — not source)
 semantic-search/eval/vectorize-index-plan.json
 semantic-search/eval/.vectorize-vectors-cache.json
+semantic-search/eval/manifest-plan.json
+semantic-search/eval/.manifest-kv-namespace-id
