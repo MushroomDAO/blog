@@ -116,7 +116,7 @@
 
 ## F1.3 — 语义检索上线（Phase 1，T1.2.2 已裁定 go）
 
-### T1.3.1 建 Vectorize 索引 + Workers AI embedding 接入  `DONE`
+### T1.3.1 建 Vectorize 索引 + Workers AI embedding 接入  `PR_OPEN`
 - **优先级**：high
 - **目标**：跑通"文章内容 → bge-m3 embedding → 写入 Vectorize"的一次性全量索引脚本
 - **开发范围**：Cloudflare Vectorize 索引创建（1024 维）、Workers AI `bge-m3` 调用封装、
@@ -164,8 +164,9 @@
   仍然内容寻址/幂等，`article_id`/`language`/`content_hash` 完整保留在 metadata 里供人工排查。
   **T1.3.2 做段落级 chunk 时要延用同一个 `make_vector_id()` 哈希方案，不要再拼接可变长度的
   字符串做 id**。
-- **证据**：分支 `feat/T1.3.1-vectorize-embedding`（进行中，dry-run 已验证，等待用户确认后
-  执行 `--create-index`/`--upsert`）
+- **证据**：分支 `feat/T1.3.1-vectorize-embedding`，PR [#39](https://github.com/MushroomDAO/blog/pull/39)
+  （已执行 `--create-index`/`--upsert`，索引与向量数据已在 Cloudflare 账号里验证存在，
+  等 PR 评审通过后合并进 main，届时状态转 DONE）
 
 ### T1.3.2 分片与双语 chunk 策略实现  `BACKLOG`
 - **优先级**：high
