@@ -48,6 +48,58 @@
 | `indexed_at` | 最近索引时间 |
 | 每篇文章的 `content_hash` | 用于增量对账，判断是否需要重新索引 |
 
+### 登录会话（Phase 1 起，T1.3.6）
+
+**认证范围（回应 review #38 B7）**：密码门禁只挡"语义检索能力"——即 `/api/search`
+及其向量/融合结果。T1.1.3 已上线的纯 Pagefind 关键词搜索页面（零成本、无需登录）**保持公开**，
+不因为本次决定而回退成需要登录——用户否决 Cloudflare Access、要求认证的原始理由是"后边接的是
+付费 Workers AI，不想被刷额度"，这条理由不适用于本来就免费的纯静态关键词搜索。
+
+| 字段 | 说明 |
+|:---|:---|
+| `BLOG_SEARCH_PASSWORD` | Worker Secret，单一共享密码，常量时间比较，不落日志 |
+| `BLOG_SEARCH_SESSION_SECRET` | Worker Secret，用于 HMAC-SHA256 签名登录 Cookie |
+| Cookie payload | `{v, issuedAt, expiresAt}`（`v` 是格式版本号，日后改 payload 结构不需要连带轮换密钥），
+  签名后拼成 `<base64url payload>.<base64url hmac>`（用 base64url 而非普通 base64，避免
+  `+`/`/`/`=` 出现在 Cookie value 里） |
+| Cookie 属性 | `HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=<30-90 天>`（缩短有效期而非 1 年——
+  这个模型下没有按会话吊销的机制，只能靠轮换 `BLOG_SEARCH_SESSION_SECRET` 让全部 Cookie
+  一次性失效，缩短有效期降低泄露窗口；**必须带 `Path=/`**，否则默认按请求路径设置，
+  访问 `/search` 页面时不会带上这个 Cookie） |
+| 登录限速 | 同 IP 15 分钟内最多 5 次 `/api/search-auth` 请求，KV 计数器（对分布式撞库偏弱，
+  见 `followups.md` FU-6，当前威胁模型下可接受） |
+
+两个 Secret 已生成并记录在 `~/Dev/.env`（`BLOG_SEARCH_PASSWORD`/`BLOG_SEARCH_SESSION_SECRET`），
+尚未 `wrangler secret put` 推送到 Cloudflare——推送需用户确认（见 `architecture.md` 边界）。
+
+### 检索融合（Phase 1 起，T1.3.3）
+
+**融合发生在浏览器端，不在 Worker 里**（修正 review #38 B2）：Pagefind 是纯浏览器端 JS
+（`dist/pagefind/pagefind.js` + `PagefindUI`），Cloudflare Worker 无法调用它，`/api/search`
+不可能在服务端"并行跑 Pagefind"。正确形态：
+
+1. `/search` 页面（浏览器）本地跑 Pagefind 关键词检索（不变，T1.1.3 已有逻辑），同时——
+   已登录时——请求 `/api/search`（Worker，需登录 Cookie）。
+2. `/api/search` 只负责**向量这一路**：query → embedding → Vectorize top20 → 按
+   `article_id` 聚合去重（每篇最多 1-2 片段）→ **先用向量自己的绝对信号过滤**
+   （Vectorize 相似度低于阈值的候选直接丢弃，阈值用 `semantic-search/eval/queries.md`
+   校准，不是凭感觉设数字）→ 返回过滤后的候选列表（可能为空）。
+3. **融合发生在浏览器 JS 里**：把 Pagefind 本地结果（自带相关性分数/排名）与 `/api/search`
+   返回的向量候选，按各自的**排名**做 RRF 融合——`score(doc) = Σ 1/(k + rank_i(doc))`，
+   `k` 取常见默认值 60；某一路没命中该文档时，那一路对这篇文档的贡献项为 0（等价于
+   `rank=∞`），不是"两路都命中才求和"（那等价于取交集，会把向量独有的召回也一起丢掉，
+   正是要避免的错误）。
+4. **无把握不返回，判断在融合之前、按各路自己的绝对信号，不是看 RRF 融合后的分数**
+   （修正 review #38 B1——RRF 分数只编码排名和多路共识，不编码绝对相关度：向量把
+   一篇真正跨语言/概念相关的文章排第一，和向量把一篇主题沾边但答非所问的文章排第一，
+   RRF 算出来的分数完全相同，没法靠融合后的分数区分"该拒的负样本"和"该留的真命中"）。
+   正确做法：Pagefind 和 Vectorize **各自**先按自己的绝对信号判断"这一路是否有靠谱结果"
+   （Pagefind 自己的相关性分数/命中数、Vectorize 自己的余弦相似度下限），两路都判定为
+   "没有靠谱结果"时才整体返回"没有找到"；只要有一路认为靠谱，就进入第 3 步的 RRF 排序——
+   RRF 在这里只负责给幸存的候选排序，不负责决定要不要收录候选。
+   这套判断对应的具体阈值同样用 `semantic-search/eval/queries.md`（含"菜谱""育儿"等负样本）
+   校准，实现 T1.3.3 时定。
+
 ## 状态机
 
 ### 文章索引状态（Phase 1 起）

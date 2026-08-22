@@ -2,7 +2,12 @@
 
 > 分支：`feature/semantic-search-poc`　目录：`semantic-search/`
 > 上一版：`PLAN.md` v0.1（草案）→ Codex 评审（见 `CODEX_REVIEW.md`）→ 本文裁定合并
-> 状态：待用户确认后开始执行 Phase 0A
+> 状态：Phase 0A/0B 已执行完成（T1.1.x/T1.2.1），T1.2.2 已裁定 Phase 1 = go
+>
+> **2026-08-22 补充**：本文 §0 表格里"RRF/reranker 列为可选增强，不作为 Phase 1 硬性要求"
+> 这条已被 T1.2.2 的裁定取代——Phase 1 现在**要求** RRF 融合（不是可选），reranker 仍是
+> Phase 2 可选增强。本文其余内容（Phase 0A/0B 的执行记录、Cloudflare 账号操作提醒等）不变，
+> 仍是历史决策记录；最新架构判断以 `docs/agent/architecture.md`/`spec.md`/`tasks.md` 为准。
 
 ## 0. 裁定摘要
 

@@ -90,39 +90,45 @@
   返回真实 1024 维 embedding（中英文均验证过）。改用这个 token 跑实验。
 - **证据**：分支 `feat/T1.2.1-vector-experiment`，PR [#36](https://github.com/MushroomDAO/blog/pull/36)（合并 commit `b30e595`）
 
-### T1.2.2 Phase 1 Go/No-Go 裁定  `BLOCKED`
+### T1.2.2 Phase 1 Go/No-Go 裁定  `DONE`
 - **优先级**：high
 - **目标**：依据 T1.2.1 的对比报告，对照 `semantic-search/PLAN.md` §Phase 0B 的门槛
   （跨语言 Recall@5 是否有明显提升、整体质量是否不低于关键词基线、精确技术名词查询是否退化），
   决定是否进入 Phase 1
-- **开发范围**：无代码改动，纯决策；结果写入 `progress.md`，并据此把 F1.3 的 Task 状态
-  从 `BACKLOG` 解锁为 `READY`（go）或保持 `BACKLOG`/标记暂缓（no-go）
-- **明确不做**：—
-- **依赖**：T1.2.1
-- **说明**：这是产品方向决策，**不可由 agent 无人值守自行拍板**——`run` 遇到此 task 应保持
-  `BLOCKED`，在 `progress.md` 写清 T1.2.1 的结论摘要，等待用户确认后再解锁下游 Task。
-- **交付物**：`progress.md` 里的裁定记录
-- **验收命令**：无法机器验证（产品决策），验收方式是用户在 `progress.md` 里看到裁定并确认
-- **涉及文件**：`docs/agent/progress.md`、`docs/agent/roadmap.md`（更新 F1.3 状态）
+- **裁定（2026-08-21，用户拍板）**：**go，混合方案**——不是"选关键词或选向量"，两个都要。
+  用户原话确认："两个都要的话，如何组合出最佳效果"。裁定细节：
+  1. 融合：关键词 + 向量并行检索，**RRF（Reciprocal Rank Fusion）**融合排序，按 article_id
+     聚合去重，两路信号均弱时不返回结果（应对 T1.2.1 发现的负样本误导性匹配问题）。
+  2. 认证：`/api/search` 不对外公开，**密码 + 签名 Cookie** 登录（用户明确否决 Cloudflare
+     Access，要求"单独给一个写到 env 里的密码"、登录后长期记住）。
+  3. 部署形态：全流程留在 Cloudflare（embedding/Vectorize/Worker），不做本地推理——用户问过
+     "本地跑嵌入能否省成本"，结论是 embedding 成本本就可忽略（Codex 测算），本地/在线调用
+     Cloudflare API 账单相同，不值得为此引入本地模型实现不一致的风险。
+  4. 存储：中英文各自独立 chunk，用户已确认不介意多占存储空间。
+  详见 `architecture.md` 核心判断 6/7、`spec.md` §检索融合/§登录会话。
+- **交付物**：本次文档更新（`architecture.md`/`spec.md`/`tasks.md`/`progress.md`/`roadmap.md`）
+- **验收命令**：无法机器验证（产品决策），验收方式是用户确认本 PR 记录的裁定符合其意图
+- **涉及文件**：`docs/agent/*.md`
 - **风险/回滚**：无
-- **证据**：<推进时回填>
+- **证据**：本 PR（docs/t122-go-decision）
 
 ---
 
-## F1.3 — 语义检索上线（Phase 1，依赖 T1.2.2 裁定为 go）
+## F1.3 — 语义检索上线（Phase 1，T1.2.2 已裁定 go）
 
-### T1.3.1 建 Vectorize 索引 + Workers AI embedding 接入  `BACKLOG`
+### T1.3.1 建 Vectorize 索引 + Workers AI embedding 接入  `READY`
 - **优先级**：high
 - **目标**：跑通"文章内容 → bge-m3 embedding → 写入 Vectorize"的一次性全量索引脚本
 - **开发范围**：Cloudflare Vectorize 索引创建（1024 维）、Workers AI `bge-m3` 调用封装、
   全量索引脚本（读取文章搜索文档 → embedding → upsert）
 - **明确不做**：不做增量更新（T1.4.1）、不做前端
-- **依赖**：T1.2.2（裁定 = go）
+- **依赖**：T1.2.2（已裁定 = go）
 - **交付物**：Vectorize 索引 + 全量索引脚本
 - **验收命令**：`<待实现时补充：如 wrangler vectorize query 返回非空结果>`
 - **涉及文件**：待定（新增索引脚本目录）
 - **风险/回滚**：涉及 Cloudflare 计费额度，实现前需按 `semantic-search/PLAN.md` §6
-  重新核对当时的 Vectorize/Workers AI 定价与限额
+  重新核对当时的 Vectorize/Workers AI 定价与限额。**`wrangler vectorize create` 是真实账号级
+  操作，执行前必须停下问用户确认**（见 `architecture.md` 边界），不得无人值守直接建线上资源。
 - **证据**：<推进时回填>
 
 ### T1.3.2 分片与双语 chunk 策略实现  `BACKLOG`
@@ -140,22 +146,31 @@
 
 ### T1.3.3 `/api/search` Worker 端点  `BACKLOG`
 - **优先级**：high
-- **目标**：query → embedding → Vectorize 检索 → 按 `article_id` 聚合去重 → 返回 top5 + 命中片段
-- **开发范围**：Cloudflare Worker HTTP 端点，含语言检测、文章级聚合、与 Pagefind 结果的轻量融合
-- **明确不做**：不做 RRF 精细排序公式、不接 reranker（Phase 2 可选）
-- **依赖**：T1.3.2
+- **目标**：query → Vectorize 向量检索 → 按 `article_id` 聚合去重 → 用 Vectorize 自身余弦
+  相似度阈值过滤 → 返回候选列表（可能为空）。**关键词+向量的 RRF 融合与"没有找到"的最终
+  判断不在这个端点内**——Pagefind 是纯浏览器端 JS，Worker 调不了，融合发生在 `/search`
+  页面的浏览器 JS 里（见 `architecture.md` 核心判断 8、`spec.md` §检索融合）
+- **开发范围**：Cloudflare Worker HTTP 端点，含登录 Cookie 校验（复用 T1.3.6 的中间件，
+  无 Cookie 返回 401）、query embedding、Vectorize 检索、文章级聚合去重、Vectorize 余弦
+  相似度下限过滤（阈值用 `semantic-search/eval/queries.md` 校准）
+- **明确不做**：不做 RRF 融合（前端做）、不接 reranker（Phase 2 可选，T1.4.4）
+- **依赖**：T1.3.2、**T1.3.6**（认证中间件必须先存在，`/api/search` 不能有无认证的中间上线
+  状态——见 `architecture.md` 边界）
 - **交付物**：`/api/search` Worker
-- **验收命令**：`<待实现时补充：如对已知查询发请求，断言返回结果里同一 article_id 不重复>`
+- **验收命令**：`<待实现时补充：如无 Cookie 请求断言返回 401；带合法 Cookie 对已知查询发请求，
+  断言返回结果里同一 article_id 不重复且相似度低于阈值的候选被过滤掉>`
 - **涉及文件**：待定（新增 Worker 目录）
-- **风险/回滚**：涉及公开 API，需配合 T1.3.4 的防滥用一起上线，不单独暴露无限速版本
+- **风险/回滚**：涉及公开 API，需配合 T1.3.4（防滥用）一起上线，不单独暴露无限速版本；
+  认证已由依赖 T1.3.6 保证，不会出现无认证窗口期
 - **证据**：<推进时回填>
 
 ### T1.3.4 API 防滥用（限速/输入上限/缓存/降级）  `BACKLOG`
 - **优先级**：high
 - **目标**：`/api/search` 具备基本防滥用能力，不被刷爆 Workers AI 额度
-- **开发范围**：输入长度上限、简单限速、常见查询缓存、超时降级回退到 Pagefind 结果、
-  不记录用户原始查询原文
-- **明确不做**：不做验证码类交互防护（超出必要）
+- **开发范围**：输入长度上限、简单限速、常见查询缓存、不记录用户原始查询原文。"降级"体现在
+  前端：`/api/search` 超时/失败时浏览器 JS 只展示本地 Pagefind 结果，不是 Worker 侧逻辑
+  （Worker 里没有 Pagefind 结果可回退，见 T1.3.3）
+- **明确不做**：不做验证码类交互防护（超出必要）；登录认证不在本 task 范围内，见 T1.3.6
 - **依赖**：T1.3.3
 - **交付物**：防滥用中间件/逻辑
 - **验收命令**：`<待实现时补充：如对超长 query 发请求，断言被拒绝而非报错崩溃>`
@@ -174,6 +189,36 @@
 - **验收命令**：`<待实现时补充>`
 - **涉及文件**：待定
 - **风险/回滚**：无
+- **证据**：<推进时回填>
+
+### T1.3.6 登录认证（密码 + 签名 Cookie）  `BACKLOG`
+- **优先级**：high
+- **目标**：`/api/search`（语义检索能力）在真正上线前必须有登录门禁，未登录不可访问，避免被刷
+  Workers AI 计费。用户已明确否决 Cloudflare Access，要求单一共享密码方案。**T1.1.3 已上线的
+  纯 Pagefind 关键词搜索页面不在门禁范围内，继续公开**（用户顾虑的是付费 API 被刷，不适用于
+  零成本的关键词搜索，见 `architecture.md` 核心判断 7）。
+- **开发范围**：
+  1. `POST /api/search-auth`：常量时间比较 `env.BLOG_SEARCH_PASSWORD`，成功签发 HMAC 签名
+     Cookie（payload `{v, issuedAt, expiresAt}`，密钥 `env.BLOG_SEARCH_SESSION_SECRET`，
+     用 base64url 编码），Cookie 属性 `HttpOnly; Secure; SameSite=Lax; Path=/;
+     Max-Age=<30-90 天>`（不用 1 年——缩短泄露窗口，吊销靠轮换 `BLOG_SEARCH_SESSION_SECRET`）
+  2. Cookie 校验中间件（供 T1.3.3 的 `/api/search` 引用）：校验签名与过期时间，未通过返回 401
+  3. 登录接口限速：同 IP 15 分钟内最多 5 次，KV 计数器（对分布式撞库偏弱，可接受，见
+     `followups.md` FU-6）
+  4. `/search` 页面：**只在触发语义检索（调用 `/api/search`）的那部分 UI** 无有效 Cookie 时
+     展示密码输入表单；页面本身的 Pagefind 关键词搜索框保持可用、不需要登录
+  认证校验逻辑封装成独立函数/中间件，便于以后替换成其他方案（见 `architecture.md` 核心判断 7）
+- **明确不做**：不做多用户账号体系、不做 MFA、不用 Cloudflare Access、不做密码找回/自动轮换
+- **依赖**：T1.3.1（需要 Worker 项目骨架存在）——**不依赖 T1.3.3**，本 task 先于/独立于
+  `/api/search` 落地，反过来是 T1.3.3 依赖本 task 的中间件（见 `architecture.md` 边界，
+  避免 `/api/search` 出现无认证的中间上线状态）
+- **交付物**：登录 Worker 路由 + Cookie 校验中间件 + `/search` 页面登录态 UI
+- **验收命令**：`<待实现时补充：如无 Cookie 请求 /api/search 断言返回 401；正确密码登录后
+  拿到的 Cookie 请求断言返回 200；连续 6 次错误密码断言第 6 次被限速拒绝>`
+- **涉及文件**：待定（Worker 认证中间件、`src/pages/search.astro`）
+- **风险/回滚**：**`wrangler secret put BLOG_SEARCH_PASSWORD` / `BLOG_SEARCH_SESSION_SECRET`
+  是真实账号级操作，执行前必须停下问用户确认**（两个值已在 `~/Dev/.env` 里生成好，见
+  `spec.md` §登录会话）；密码/签名密钥不可写入代码仓库或日志
 - **证据**：<推进时回填>
 
 ---
