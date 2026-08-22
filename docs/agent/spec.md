@@ -30,7 +30,12 @@
 
 | 字段 | 说明 |
 |:---|:---|
-| `chunk_id` | `article_id:language:chunk_hash`，确定性 ID，支撑幂等 upsert/delete |
+| `chunk_id` | `sha256(article_id:language:chunk_hash)` 取前 48 位十六进制，确定性、支撑幂等
+  upsert/delete。**订正（T1.3.1 真实执行发现）**：Vectorize v2 的 vector id 有 64 字节硬
+  上限，直接拼接 `article_id:language:chunk_hash` 对长 slug 文章会超限（实测出现 71 字节
+  被拒），改成对完整逻辑 key 取哈希，长度恒定 48 字节；`article_id`/`language`/`content_hash`
+  三个原始字段完整保留在下面的 metadata 里，不影响可读性/可追溯性，只是 id 本身不再是
+  人可读的拼接字符串 |
 | `article_id` | 关联到文章搜索文档 |
 | `language` | `zh` \| `en`（bilingual 文章拆成两条，此处不再有 `bilingual` 值） |
 | `chunk_type` | `article`（标题+摘要+标签+标题层级） \| `paragraph`（正文片段） |

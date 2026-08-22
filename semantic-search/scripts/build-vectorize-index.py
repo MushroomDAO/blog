@@ -61,7 +61,7 @@ MODEL = "@cf/baai/bge-m3"
 EMBEDDING_DIMENSIONS = 1024
 BATCH_SIZE = 20
 DEFAULT_INDEX_NAME = "blog-search-v1"
-CHUNKING_VERSION = "t1.3.1-article-only-v2"  # v2: 语言判定 bug 修复，v1 产出的向量不可复用
+CHUNKING_VERSION = "t1.3.1-article-only-v3"  # v3: vector id 改成哈希(v2 的拼接 id 对长 slug 超出 Vectorize 64 字节上限)
 INDEX_NAME_RE = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
 
 # CJK 统一表意文字 + 扩展 A，用于单语文章的语言判定（没有 <!--EN--> 分隔符时不能瞎猜）
@@ -219,6 +219,16 @@ def content_hash(text):
     return hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
 
 
+def make_vector_id(article_id, language, chash):
+    """Vectorize v2 的 vector id 上限是 64 字节（实测发现，非纸面推测——见文件头注释）。
+    直接拼 `article_id:language:content_hash` 对长 slug 的文章会超限，改成对完整逻辑 key
+    做哈希：长度恒定 49 字节，同一 (article_id, language, content_hash) 组合永远产出同一个
+    id（幂等/可重跑），article_id/language/content_hash 仍然完整存在 metadata 里，人工排查
+    不受影响，只是 id 本身不再是人可读的拼接字符串。"""
+    key = f"{article_id}:{language}:{chash}"
+    return hashlib.sha256(key.encode("utf-8")).hexdigest()[:48]
+
+
 def validate_index_name(name):
     if not INDEX_NAME_RE.match(name):
         print(f"ERROR: invalid --index-name '{name}' — must match {INDEX_NAME_RE.pattern}", file=sys.stderr)
@@ -263,12 +273,24 @@ def upsert_vectors(index_name, vectors):
         try:
             with urllib.request.urlopen(req, timeout=60) as resp:
                 return json.loads(resp.read())
-        except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError) as e:
+        except urllib.error.HTTPError as e:
+            last_err = e
+            detail = e.read().decode("utf-8", errors="replace")
+            # 4xx 是请求本身有问题（比如 id 超长/格式错误），重试同一份坏数据不会变好，
+            # 直接失败并把 Cloudflare 的错误详情打出来，不要浪费 4 次重试和用户的等待时间
+            if 400 <= e.code < 500:
+                print(f"  upsert error (HTTP {e.code}, not retrying — client error): {detail}", file=sys.stderr)
+                raise
+            if attempt == 3:
+                print(f"  upsert error (HTTP {e.code}): {detail}", file=sys.stderr)
+                raise
+            print(f"  upsert error (HTTP {e.code}), retrying batch ({attempt + 1}/4): {detail}", file=sys.stderr)
+            time.sleep(2 * (attempt + 1))
+        except (urllib.error.URLError, json.JSONDecodeError) as e:
             last_err = e
             if attempt == 3:
                 raise
-            code = getattr(e, "code", "n/a")
-            print(f"  upsert error ({type(e).__name__}, code={code}), retrying batch ({attempt + 1}/4)...", file=sys.stderr)
+            print(f"  upsert error ({type(e).__name__}), retrying batch ({attempt + 1}/4)...", file=sys.stderr)
             time.sleep(2 * (attempt + 1))
     raise last_err
 
@@ -303,7 +325,7 @@ def load_or_build_plan(articles):
     plan = []
     for rec, vec in zip(all_records, vectors):
         chash = content_hash(rec["text"])
-        chunk_id = f"{rec['article_id']}:{rec['language']}:{chash}"
+        chunk_id = make_vector_id(rec["article_id"], rec["language"], chash)
         metadata = {
             "article_id": rec["article_id"],
             "url": rec["url"],
