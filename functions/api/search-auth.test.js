@@ -99,6 +99,24 @@ test('回归测试：整个 body 超过 MAX_BODY_BYTES：413，在 request.json(
 	assert.equal(resp.status, 413);
 });
 
+test('回归测试（FU-12）：Content-Length 撒谎（远小于实际 body），仍然按实际字节数拦截：413', async () => {
+	// 跟 T1.3.3 的 search.js 同一个问题：Content-Length 是请求方自己声明的，谎报成一个
+	// 很小的值、但实际发送的 body 远超上限，不该只靠这个 header 就放行到 request.json()
+	const env = makeEnv();
+	const bodyText = JSON.stringify({ password: 'x'.repeat(5000) });
+	const request = new Request('https://example.com/api/search-auth', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			'CF-Connecting-IP': '1.1.1.1',
+			'Content-Length': '10', // 谎报成很小的值
+		},
+		body: bodyText,
+	});
+	const resp = await onRequestPost({ request, env });
+	assert.equal(resp.status, 413);
+});
+
 test('限速：同一 IP 连续超过 MAX_ATTEMPTS 次后返回 429，即使密码正确', async () => {
 	const env = makeEnv();
 	const ip = '7.7.7.7';

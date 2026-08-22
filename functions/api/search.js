@@ -5,6 +5,11 @@
  * 聚合去重（每篇只保留分数最高的一个 chunk）→ 用 Vectorize 自身余弦相似度下限过滤掉
  * 明显不相关的候选 → 返回候选列表（可能为空）。
  *
+ * T1.3.4：加了查询结果缓存（同一个 query 6 小时内重复搜直接吐缓存，跳过计费调用）+
+ * 按 IP/会话的双重限速（T1.3.3 已做，T1.3.4 认领"简单限速"/"常见查询缓存"这两项
+ * 开发范围，"降级"体现在 search.astro 前端、"不记录原始查询"通过缓存 key 用哈希而非
+ * 明文满足，见 docs/agent/tasks.md T1.3.4）。
+ *
  * 明确不做（见 docs/agent/tasks.md T1.3.3、docs/agent/spec.md §检索融合）：
  * - 不做关键词+向量的 RRF 融合——Pagefind 是纯浏览器端 JS，Worker 调不了，融合发生在
  *   `/search` 页面的浏览器 JS 里（这个端点只负责吐出向量这一路的候选）
@@ -49,6 +54,13 @@ const IP_RATE_LIMIT = { prefix: 'searchlimit:', windowSeconds: 5 * 60, maxAttemp
 // 5 分钟窗口内最多也只能打这么多次，把"泄露单个 Cookie 的最坏成本"钉死在一个可预期范围，
 // 不再随攻击者能换多少个 IP 线性增长。
 const SESSION_RATE_LIMIT = { prefix: 'searchsession:', windowSeconds: 5 * 60, maxAttempts: 30 };
+// T1.3.4：常见查询缓存。同一个 query 字符串在 TTL 内重复搜，直接把上次算好的结果吐回去，
+// 完全跳过计费的 Workers AI embedding + Vectorize 查询。6 小时是"结果不会太快过期、又能
+// 覆盖住同一天内的重复搜索"之间的折中——语义检索结果对内容更新没有那么敏感（不像关键词
+// 命中那样一字不差），文章更新频率也是以天为单位，6 小时的陈旧度可以接受。缓存 key 用
+// 查询文本的哈希（trim+小写归一化后），不是明文——跟"不记录用户原始查询原文"这条要求
+// 一致（见 tasks.md T1.3.4"开发范围"），缓存值本身也只是文章标题/链接/摘录，不含查询词。
+const QUERY_CACHE_TTL_SECONDS = 6 * 60 * 60;
 
 function jsonResponse(body, status) {
 	return new Response(JSON.stringify(body), {
@@ -57,11 +69,19 @@ function jsonResponse(body, status) {
 	});
 }
 
-async function hashSessionCookie(cookieValue) {
-	const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(cookieValue));
+async function sha256Hex(text) {
+	const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
 	return Array.from(new Uint8Array(digest))
 		.map((b) => b.toString(16).padStart(2, '0'))
 		.join('');
+}
+
+async function hashSessionCookie(cookieValue) {
+	return sha256Hex(cookieValue);
+}
+
+async function queryCacheKey(query) {
+	return `searchcache:${await sha256Hex(query.trim().toLowerCase())}`;
 }
 
 export async function onRequestPost(context) {
@@ -115,6 +135,19 @@ export async function onRequestPost(context) {
 	const query = body && typeof body.query === 'string' ? body.query.trim() : '';
 	if (!query || query.length > MAX_QUERY_LENGTH) {
 		return jsonResponse({ error: 'invalid query' }, 400);
+	}
+
+	// 缓存命中直接返回——不计入限速、不调 AI/Vectorize。缓存本身只是加速+省钱，不是
+	// 安全边界，KV 读取失败时降级成"当作没命中"，走下面的正常流程，不是 fail-closed 503
+	// （跟必需 binding 缺失时的 503 是两回事：那是安全防线缺失，这只是优化没生效）。
+	const cacheKey = await queryCacheKey(query);
+	try {
+		const cached = await env.BLOG_SEARCH_KV.get(cacheKey);
+		if (cached) {
+			return jsonResponse({ results: JSON.parse(cached) }, 200);
+		}
+	} catch {
+		// 忽略——缓存读取/解析失败不影响功能，继续走下面的正常查询流程
 	}
 
 	const ip = request.headers.get('CF-Connecting-IP');
@@ -176,6 +209,16 @@ export async function onRequestPost(context) {
 			excerpt: match.metadata.excerpt ?? '',
 			score: match.score,
 		}));
+
+	// 写缓存是 best-effort：失败不影响这次请求本身返回正确结果，只是下次同样的查询
+	// 又要重新走一遍计费调用
+	try {
+		await env.BLOG_SEARCH_KV.put(cacheKey, JSON.stringify(results), {
+			expirationTtl: QUERY_CACHE_TTL_SECONDS,
+		});
+	} catch {
+		// 忽略
+	}
 
 	return jsonResponse({ results }, 200);
 }

@@ -183,10 +183,12 @@ test('限速：同一 IP + 同一会话超过搜索限速次数后 429', async (
 	const cookie = await validCookie();
 	const ip = '7.7.7.7';
 	// 搜索限速配置在 search.js 内部（30 次/5 分钟），这里只断言"存在一个上限、超过会 429"，
-	// 不依赖具体数字（数字本身在 search.js 里注释说明了理由，测试只验证行为）
+	// 不依赖具体数字（数字本身在 search.js 里注释说明了理由，测试只验证行为）。
+	// 每次换不同的 query（T1.3.4 加了查询缓存之后，重复同一个 query 会命中缓存、
+	// 完全跳过限速计数，测限速必须保证每次都是缓存未命中）。
 	let lastStatus;
 	for (let i = 0; i < 35; i++) {
-		const resp = await onRequestPost({ request: makeRequest({ query: 'hello' }, { cookie, ip }), env });
+		const resp = await onRequestPost({ request: makeRequest({ query: `hello-${i}` }, { cookie, ip }), env });
 		lastStatus = resp.status;
 		if (lastStatus === 429) break;
 	}
@@ -197,12 +199,15 @@ test('限速：不同 IP + 不同会话，互不影响', async () => {
 	const env = await makeEnv();
 	const cookieA = await validCookie();
 	for (let i = 0; i < MAX_ATTEMPTS * 10; i++) {
-		const resp = await onRequestPost({ request: makeRequest({ query: 'hello' }, { cookie: cookieA, ip: '8.8.8.8' }), env });
+		const resp = await onRequestPost({
+			request: makeRequest({ query: `hello-${i}` }, { cookie: cookieA, ip: '8.8.8.8' }),
+			env,
+		});
 		if (resp.status === 429) break;
 	}
 	const cookieB = await validCookie(7200); // 不同 maxAgeSeconds -> 不同签名 -> 不同会话
 	const otherSession = await onRequestPost({
-		request: makeRequest({ query: 'hello' }, { cookie: cookieB, ip: '9.9.9.9' }),
+		request: makeRequest({ query: 'hello-other' }, { cookie: cookieB, ip: '9.9.9.9' }),
 		env,
 	});
 	assert.equal(otherSession.status, 200, '不同 IP+不同会话的组合不应该被前一个组合的限速影响');
@@ -216,9 +221,10 @@ test('限速：同一会话换不同 IP 打，仍然会被会话级限速挡住�
 	const cookie = await validCookie();
 	let lastStatus;
 	for (let i = 0; i < 35; i++) {
-		// 每次换一个不同的 IP，模拟"泄露的 Cookie 被脚本换着代理 IP 打"
+		// 每次换一个不同的 IP，模拟"泄露的 Cookie 被脚本换着代理 IP 打"；query 也每次换，
+		// 避免 T1.3.4 的查询缓存让重复请求跳过限速计数
 		const ip = `10.0.0.${i}`;
-		const resp = await onRequestPost({ request: makeRequest({ query: 'hello' }, { cookie, ip }), env });
+		const resp = await onRequestPost({ request: makeRequest({ query: `hello-${i}` }, { cookie, ip }), env });
 		lastStatus = resp.status;
 		if (lastStatus === 429) break;
 	}
@@ -231,9 +237,9 @@ test('限速：同一 IP、不同会话，仍然会被 IP 级限速挡住（IP �
 	let lastStatus;
 	for (let i = 0; i < 35; i++) {
 		// 每次换一个不同的会话（不同 maxAgeSeconds -> 不同签名），模拟多个不同登录会话
-		// 共享同一个 IP（比如同一个办公室出口）打同一个端点
+		// 共享同一个 IP（比如同一个办公室出口）打同一个端点；query 也每次换，同上理由
 		const cookie = await validCookie(3600 + i);
-		const resp = await onRequestPost({ request: makeRequest({ query: 'hello' }, { cookie, ip }), env });
+		const resp = await onRequestPost({ request: makeRequest({ query: `hello-${i}` }, { cookie, ip }), env });
 		lastStatus = resp.status;
 		if (lastStatus === 429) break;
 	}
@@ -316,6 +322,70 @@ test('正常查询：返回字段形状正确（article_id/title/url/language/ex
 		excerpt: 'excerpt for article-a',
 		score: 0.7,
 	});
+});
+
+// T1.3.4 新增：查询结果缓存
+test('缓存：同一个查询第二次命中缓存，不再调用 AI/Vectorize（即使它们这次会报错）', async () => {
+	const kv = makeFakeKv();
+	const matches = [makeMatch('article-a', 0.7)];
+	const workingEnv = await makeEnv({
+		BLOG_SEARCH_KV: kv,
+		VECTORIZE_INDEX: makeFakeVectorize({ matches }),
+	});
+	const cookie = await validCookie();
+
+	const first = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie }), env: workingEnv });
+	assert.equal(first.status, 200);
+	const firstBody = await first.json();
+
+	// 第二次请求用会报错的 AI/Vectorize，但共用同一个 KV（缓存应该已经写进去了）
+	const brokenEnv = await makeEnv({
+		BLOG_SEARCH_KV: kv,
+		AI: makeFakeAi({ shouldThrow: true }),
+		VECTORIZE_INDEX: makeFakeVectorize({ shouldThrow: true }),
+	});
+	const second = await onRequestPost({
+		request: makeRequest({ query: 'Pagefind' }, { cookie, ip: '20.20.20.20' }),
+		env: brokenEnv,
+	});
+	assert.equal(second.status, 200, '第二次应该直接从缓存返回，不应该因为 AI/Vectorize 报错而 503');
+	const secondBody = await second.json();
+	assert.deepEqual(secondBody.results, firstBody.results);
+});
+
+test('缓存：查询做大小写/首尾空白归一化，"Pagefind" 和 " pagefind " 命中同一条缓存', async () => {
+	const kv = makeFakeKv();
+	const matches = [makeMatch('article-a', 0.7)];
+	const workingEnv = await makeEnv({ BLOG_SEARCH_KV: kv, VECTORIZE_INDEX: makeFakeVectorize({ matches }) });
+	const cookie = await validCookie();
+
+	await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie }), env: workingEnv });
+
+	const brokenEnv = await makeEnv({
+		BLOG_SEARCH_KV: kv,
+		AI: makeFakeAi({ shouldThrow: true }),
+		VECTORIZE_INDEX: makeFakeVectorize({ shouldThrow: true }),
+	});
+	const resp = await onRequestPost({
+		request: makeRequest({ query: '  pagefind  ' }, { cookie, ip: '21.21.21.21' }),
+		env: brokenEnv,
+	});
+	assert.equal(resp.status, 200, '大小写/空白不同但语义相同的 query 应该命中同一条缓存');
+});
+
+test('缓存：命中缓存不消耗限速额度，即使远超正常限速上限也不会 429', async () => {
+	const kv = makeFakeKv();
+	const matches = [makeMatch('article-a', 0.7)];
+	const cookie = await validCookie();
+	const ip = '22.22.22.22';
+	const workingEnv = await makeEnv({ BLOG_SEARCH_KV: kv, VECTORIZE_INDEX: makeFakeVectorize({ matches }) });
+	await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip }), env: workingEnv });
+
+	// 同一个 IP + 会话，远超 MAX_ATTEMPTS 次重复同一个查询——都应该走缓存，不触发限速
+	for (let i = 0; i < 50; i++) {
+		const resp = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip }), env: workingEnv });
+		assert.equal(resp.status, 200, `第 ${i + 1} 次缓存命中不应该被限速拦住`);
+	}
 });
 
 test('GET 请求：405', async () => {

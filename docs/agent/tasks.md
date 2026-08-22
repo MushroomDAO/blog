@@ -316,21 +316,36 @@
      在这个端点上第一次有了实际的 $ 维度。
 - **证据**：分支 `feat/T1.3.3-search-endpoint`，PR [#52](https://github.com/MushroomDAO/blog/pull/52)
 
-### T1.3.4 API 防滥用（限速/输入上限/缓存/降级）  `BACKLOG`
+### T1.3.4 API 防滥用（限速/输入上限/缓存/降级）  `DONE`
 - **优先级**：high
 - **目标**：`/api/search` 具备基本防滥用能力，不被刷爆 Workers AI 额度
 - **开发范围**：输入长度上限、简单限速、常见查询缓存、不记录用户原始查询原文。"降级"体现在
   前端：`/api/search` 超时/失败时浏览器 JS 只展示本地 Pagefind 结果，不是 Worker 侧逻辑
   （Worker 里没有 Pagefind 结果可回退，见 T1.3.3）
+- **实际完成情况**：这几项里的大部分（输入长度上限、IP+会话双重限速、"降级"前端逻辑）已经
+  在 T1.3.3 落地时一并做了（见 T1.3.3 条目"风险/回滚"一节的说明），本 task 认领的是剩下的
+  一项——**常见查询缓存**（`functions/api/search.js`）：query 归一化（trim+小写）取
+  SHA-256 哈希做 KV key，6 小时 TTL，命中直接返回、跳过 AI/Vectorize 调用**也跳过限速
+  计数**（缓存不是安全边界，只是省钱/加速，命中不该占用限速额度）；"不记录用户原始查询
+  原文"通过缓存 key 用哈希而不是明文查询词本身满足——缓存值里也只有文章标题/链接/摘录，
+  不含查询词。
 - **明确不做**：不做验证码类交互防护（超出必要）；登录认证不在本 task 范围内，见 T1.3.6
 - **依赖**：T1.3.3
-- **交付物**：防滥用中间件/逻辑
-- **验收命令**：`<待实现时补充：如对超长 query 发请求，断言被拒绝而非报错崩溃>`
-- **涉及文件**：待定
-- **风险/回滚**：涉钱（Workers AI 按量计费），必须在 `/api/search` 公开前完成
-- **证据**：<推进时回填>
+- **交付物**：`functions/api/search.js` 里新增的缓存逻辑 + `functions/api/search.test.js`
+  新增 3 项测试
+- **验收命令**：`pnpm test`（含新增 3 项缓存测试：命中缓存跳过 AI/Vectorize 即使它们会报错、
+  大小写/空白归一化命中同一条缓存、命中缓存不消耗限速额度即使远超正常上限）
+- **涉及文件**：`functions/api/search.js`、`functions/api/search.test.js`
+- **风险/回滚**：涉钱（Workers AI 按量计费）——T1.3.3 已经内置基本防滥用，本 task 上线前
+  `/api/search` 并非裸奔状态，缓存是在那基础上的进一步降本。缓存本身失败（KV 读写异常）
+  降级成"当作没命中"，走正常查询流程，不影响功能正确性，只是没省到钱。
+- **顺带修复（同一个 PR 里，跟 T1.3.4 关系紧密，未单独开 task）**：`functions/api/
+  search-auth.js`（T1.3.6，已合并）的 Content-Length 只信请求头、chunked encoding 或
+  谎报长度可绕过体积上限的问题（FU-12）——用跟 `search.js` 一样的修法（读完 body 量
+  实际字节数，不只信头）关闭。
+- **证据**：分支 `feat/T1.3.4-search-caching`，PR <推进时回填>
 
-### T1.3.5 索引 manifest 版本化  `PR_OPEN`
+### T1.3.5 索引 manifest 版本化  `DONE`
 - **优先级**：mid
 - **目标**：记录 `embedding_model`/`embedding_dimensions`/`chunking_version`/`content_hash`/
   `language`/`indexed_at`，为后续模型/分片算法变更做好回填切流的准备
