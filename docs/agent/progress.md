@@ -6,19 +6,25 @@
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
 - **Feature**：F1.3 语义检索上线（Phase 1）
-- **正在开发的 Task**：无（T1.3.1 已开 PR #39，等评审；T1.3.2 依赖 T1.3.1 合并才能开工）
-- **分支 / worktree**：`feat/T1.3.1-vectorize-embedding` @ `../blog-F1.3`
-- **PR**：[#39](https://github.com/MushroomDAO/blog/pull/39)（等评审）
+- **正在开发的 Task**：无（T1.3.1 已合并；T1.3.2/T1.3.5/T1.3.6 已解锁为 READY，等 `pilot run`
+  下一轮挑选——三者互不依赖，可任选其一开工，T1.3.3 仍需等 T1.3.2+T1.3.6 都完成）
+- **分支 / worktree**：无（上一轮的 `feat/T1.3.1-vectorize-embedding` 已合并，
+  按 hard rule 只列出待清理，不代为删除）
+- **PR**：无（进行中）
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| T1.3.1 | [#39](https://github.com/MushroomDAO/blog/pull/39) | 待评审 | Vectorize 索引 + embedding 脚本，已真实执行验证过（901 向量已在账号里） |
+| （无） | — | — | — |
 
 ## 阻塞项（BLOCKED）
 - 无
 
 ## 最近完成
+- 2026-08-22：**T1.3.1 合并**（PR #39，commit `6b9fc8d`）——Vectorize 索引 `blog-search-v1`
+  已建（1024d/cosine），901 条向量（zh 467/en 434）已 upsert 并经 query API 验证。
+  真实执行时发现 Vectorize v2 vector id 有 64 字节硬上限（原拼接方案超限），改用哈希方案。
+  T1.3.2/T1.3.5/T1.3.6 解锁为 READY。
 - 2026-08-22：**T1.3.1 完成，PR #39 待评审**——`build-vectorize-index.py` 索引脚本，3 轮独立
   子 agent 对抗式自审（正确性/安全/生产失败模式，grade B 3 轮下限）修复语言判定 bug（原逻辑
   把 SEO 用的 `titleEn`/`descriptionEn` 当成"有没有双语内容"的信号，单语文章被错误双记/
@@ -65,4 +71,9 @@
   全部非阻塞，等主线 F1.3/F1.4 做完后批量清
 
 ## 下一个 READY
-- 无（T1.3.1 已开 PR #39 等评审；T1.3.2 依赖 T1.3.1 合并进 main 才能开工）
+- **T1.3.2** 分片与双语 chunk 策略实现
+- **T1.3.5** 索引 manifest 版本化
+- **T1.3.6** 登录认证（密码 + 签名 Cookie）——注意其中 `wrangler secret put` 是真实账号操作，
+  执行前需停下问用户确认
+
+三者互不依赖，`pilot run` 下一轮可任选其一（建议先 T1.3.2，T1.3.3 同时依赖它和 T1.3.6）。

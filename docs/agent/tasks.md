@@ -116,7 +116,7 @@
 
 ## F1.3 — 语义检索上线（Phase 1，T1.2.2 已裁定 go）
 
-### T1.3.1 建 Vectorize 索引 + Workers AI embedding 接入  `PR_OPEN`
+### T1.3.1 建 Vectorize 索引 + Workers AI embedding 接入  `DONE`
 - **优先级**：high
 - **目标**：跑通"文章内容 → bge-m3 embedding → 写入 Vectorize"的一次性全量索引脚本
 - **开发范围**：Cloudflare Vectorize 索引创建（1024 维）、Workers AI `bge-m3` 调用封装、
@@ -165,10 +165,10 @@
   **T1.3.2 做段落级 chunk 时要延用同一个 `make_vector_id()` 哈希方案，不要再拼接可变长度的
   字符串做 id**。
 - **证据**：分支 `feat/T1.3.1-vectorize-embedding`，PR [#39](https://github.com/MushroomDAO/blog/pull/39)
-  （已执行 `--create-index`/`--upsert`，索引与向量数据已在 Cloudflare 账号里验证存在，
-  等 PR 评审通过后合并进 main，届时状态转 DONE）
+  （合并 commit `6b9fc8d`）。索引 `blog-search-v1`（1024d/cosine）已建，901 条向量
+  （zh 467/en 434）已 upsert 并经 query API 验证可查询。
 
-### T1.3.2 分片与双语 chunk 策略实现  `BACKLOG`
+### T1.3.2 分片与双语 chunk 策略实现  `READY`
 - **优先级**：high
 - **目标**：按 `spec.md` 的数据模型，把文章切成文章级+段落级 chunk，中英文分开建索引
 - **开发范围**：分片逻辑（300–600 tokens，overlap 50–100，按 Markdown 结构切，每篇上限
@@ -215,7 +215,7 @@
 - **风险/回滚**：涉钱（Workers AI 按量计费），必须在 `/api/search` 公开前完成
 - **证据**：<推进时回填>
 
-### T1.3.5 索引 manifest 版本化  `BACKLOG`
+### T1.3.5 索引 manifest 版本化  `READY`
 - **优先级**：mid
 - **目标**：记录 `embedding_model`/`embedding_dimensions`/`chunking_version`/`content_hash`/
   `language`/`indexed_at`，为后续模型/分片算法变更做好回填切流的准备
@@ -228,7 +228,7 @@
 - **风险/回滚**：无
 - **证据**：<推进时回填>
 
-### T1.3.6 登录认证（密码 + 签名 Cookie）  `BACKLOG`
+### T1.3.6 登录认证（密码 + 签名 Cookie）  `READY`
 - **优先级**：high
 - **目标**：`/api/search`（语义检索能力）在真正上线前必须有登录门禁，未登录不可访问，避免被刷
   Workers AI 计费。用户已明确否决 Cloudflare Access，要求单一共享密码方案。**T1.1.3 已上线的
