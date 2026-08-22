@@ -168,18 +168,57 @@
   （合并 commit `6b9fc8d`）。索引 `blog-search-v1`（1024d/cosine）已建，901 条向量
   （zh 467/en 434）已 upsert 并经 query API 验证可查询。
 
-### T1.3.2 分片与双语 chunk 策略实现  `READY`
+### T1.3.2 分片与双语 chunk 策略实现  `PR_OPEN`
 - **优先级**：high
-- **目标**：按 `spec.md` 的数据模型，把文章切成文章级+段落级 chunk，中英文分开建索引
-- **开发范围**：分片逻辑（300–600 tokens，overlap 50–100，按 Markdown 结构切，每篇上限
-  12–16 chunk）、双语文章按 `<!--EN-->` 拆分、`chunk_id` 生成
-- **明确不做**：不做代码块单独 embedding
+- **目标**：按 `spec.md` 的数据模型，把文章切成段落级 chunk，中英文分开建索引（article 级
+  chunk 是 T1.3.1 已经做的，不在这个 task 范围内）
+- **开发范围**：分片逻辑（300–600 tokens，overlap 50–100，按 Markdown 结构切，每篇每语言上限
+  16 chunk——文档未明确"每篇"还是"每语言"，按语言各自设上限，双语文章理论上限 32，
+  见下方"文档未决问题"）、双语文章按独占一行的 `<!--EN-->` 拆分、`chunk_id` 生成（沿用
+  T1.3.1 的哈希方案，加 chunk_type 维度避免和 article 级 chunk 撞 id）
+- **明确不做**：不做代码块单独 embedding（围栏代码块整块剔除，不参与分片/token 计数）；
+  不组装 url/title/tags/excerpt 等 metadata（T1.3.1 的索引脚本已有这套组装逻辑，接入索引
+  流程时复用，不在本 task 重复实现）；不接入 Cloudflare（纯本地函数，无网络调用）
 - **依赖**：T1.3.1
-- **交付物**：分片模块
-- **验收命令**：`<待实现时补充：如对一篇双语测试文章跑分片，断言产出的 chunk 数与 language 分布符合预期>`
-- **涉及文件**：待定
-- **风险/回滚**：无
-- **证据**：<推进时回填>
+- **交付物**：`semantic-search/scripts/chunking.py`（`chunk_article()` 纯函数）+
+  `semantic-search/scripts/test_chunking.py`（验收测试）
+- **验收命令**：`python3 semantic-search/scripts/test_chunking.py`（对真实双语文章
+  `adapta-self-hosted-local-knowledge-base-guide` 断言 zh/en 分布、chunk 数区间、id 唯一性、
+  token 范围；另有 3 条回归测试专门盯住 review 抓到的真实 bug，见下）。全库 478 篇文章跑
+  一遍分片：0 报错、0 篇超过每语言 16 片上限、0 篇产出 0 chunk、0 个标题孤儿 chunk；
+  478 篇里有 2 篇的个别 chunk 略超 900 token（最高 1348）——这是"16 片硬上限"和"目标
+  300-600 token"两个约束在极长文章上无法同时满足时的残留超量，已知且可接受，记入
+  `followups.md`（FU-9），不是本次要修的阻塞项。
+- **涉及文件**：`semantic-search/scripts/chunking.py`、`semantic-search/scripts/test_chunking.py`
+- **风险/回滚**：无涉钱/涉账号操作（纯本地文本处理），可直接 `git revert`
+- **对抗式自审（grade B，3 轮，独立上下文子 agent）**：正确性/边界场景/需求符合度三个视角，
+  发现并修复 4 个真实 bug（前 2 个当前语料库里已经在真实触发，不是假设）：
+  1. **尾部 chunk 无界增长**——原算法没把 overlap 重复的 token 算进预算，导致
+     chunk 边界比预期提前用完 16 片上限，剩余内容全堆进最后一片（实测某文章尾部
+     chunk 高达 1736 token，是目标上限近 3 倍）。修复：把 overlap_tokens 加回目标片段
+     大小的预算里。
+  2. **双语分隔符检测被行内提及劫持**——原来用子串匹配 `"<!--EN-->" in text`，本库
+     真实有 2 篇文章在正文里用反引号引用这个分隔符字面量来说明博客的双语约定，导致在
+     错误位置切开双语、大段中文内容被标成 `language=en`。修复：要求分隔符独占一行
+     （`^<!--EN-->[ \t]*$`）。**这个 bug 同样存在于已合并、已执行过 `--upsert` 的
+     T1.3.1 脚本里，另开 PR #44 热修复，线上索引里这 2 篇文章的旧向量已知是错的
+     （已记录待用户决定是否重新 upsert）**。
+  3. **标题孤儿 chunk**——标题块后紧跟一段超大正文时，断点会恰好落在标题和正文之间，
+     产出一个只有标题、没有正文的无用 chunk，且这个标题会被 overlap 逻辑带到下一个
+     chunk 重复出现一次。修复：不允许在"当前 chunk 只有标题、还没有正文"的状态下断开。
+  4. **4 反引号转义围栏 + 单个超大 block 的 overlap 处理**——`markdown-style-guide.md`
+     用 CommonMark 合法的"4 个反引号包住内部 3 个反引号示例"写法，原正则只认 3 个反引号，
+     配对错乱、删掉中间真实内容。修复：反引号数量用反向引用要求首尾一致。同时修了
+     overlap 逻辑——如果最近一个 block 自己就远大于 overlap_tokens，不整块搬去当 overlap
+     （避免下一片一开始就严重超预算、和上一片高度重复）。
+  非阻塞发现：CJK token 计数原来漏算中文标点（「」《》等），已扩大 CJK 判定范围；
+  16-per-语言 vs 16-per-文章 的文档歧义未解决（见下）。
+- **文档未决问题（非阻塞，供后续参考）**：`tasks.md`/`spec.md`/`architecture.md` 都没有
+  明确说"每篇 12-16 chunk"这个预算是按整篇文章算，还是按文章里的每种语言各自算——本次
+  实现按"每语言"处理（双语文章理论上限 32 chunk）。全库只有 3 篇文章总 chunk 数超过 16
+  （最多 24），如果后续判断应该是"每篇"总量，需要重新调整 `MAX_CHUNKS_PER_LANGUAGE`
+  的语义。
+- **证据**：分支 `feat/T1.3.2-chunking-bilingual`，PR <推进时回填>
 
 ### T1.3.3 `/api/search` Worker 端点  `BACKLOG`
 - **优先级**：high
