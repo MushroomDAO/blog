@@ -4,3 +4,13 @@ compatibility_date = "2024-01-01"
 
 # 构建输出目录（Pages 必需）
 pages_build_output_dir = "./dist"
+
+# T1.3.6 登录限速计数器，跟 T1.3.5 的索引 manifest 共用同一个 KV namespace
+# （key 加 "ratelimit:" 前缀区分）。写进这里而不是只在 dashboard/API 配置，是因为
+# `wrangler pages deploy` 每次部署都会用本文件的绑定声明覆盖项目当前配置——只在
+# dashboard/API 加绑定、不写进这个文件，下一次部署就会被悄悄冲掉。
+# BLOG_SEARCH_PASSWORD / BLOG_SEARCH_SESSION_SECRET 不放在这里：那两个是密文，
+# 用 `wrangler pages secret put` 单独管理，不受这个文件的部署时绑定同步影响。
+[[kv_namespaces]]
+binding = "BLOG_SEARCH_KV"
+id = "5af54057ca9646e8ac9c4ee600afa523"
