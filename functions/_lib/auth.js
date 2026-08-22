@@ -12,8 +12,20 @@
  *   "挡哪个功能"由调用方（search-auth.js / 将来的 T1.3.3 search.js）决定
  */
 
-const COOKIE_NAME = 'blog_search_session';
+// 修正（PR#48 review + Codex 对抗发现，medium）：不带 __Host- 前缀时，浏览器分不清
+// "谁有资格设置这个名字的 Cookie"——一个被攻陷的兄弟子域（比如 evil.mushroom.cv）
+// 可以用 Domain=mushroom.cv 设一个同名的域 Cookie，浏览器会把域 Cookie 和真正的
+// host-only Cookie 一起发过来，getCookie() 取第一个匹配、顺序不代表可信度，取到垃圾值
+// 就一直验签失败——不是伪造出有效会话，是把人锁在门外的可用性问题。__Host- 前缀由浏览器
+// 强制要求 Secure + Path=/ + 不带 Domain，从机制上不允许被域 Cookie 影子化，这三条本来
+// 就是 buildSetCookieHeader 一直在设的属性，加前缀不影响任何现有行为。
+const COOKIE_NAME = '__Host-blog_search_session';
 const SESSION_VERSION = 1;
+// 上限按 spec.md §登录会话的 30-90 天区间取宽松上界——不是当前实际用的 Max-Age
+// （那个由调用方 signSession 时传入），是"哪怕签发端将来出 bug，也不该签出比这更长"
+// 的防御性天花板
+const MAX_SESSION_LIFETIME_SECONDS = 90 * 24 * 60 * 60;
+const CLOCK_SKEW_TOLERANCE_SECONDS = 5 * 60; // 允许 5 分钟的时钟误差，不是安全边界，只是容错
 
 async function timingSafeEqual(a, b) {
 	// 修正（对抗式 review 指出注释和实现不一致的真实 bug）：这里原来直接比较变长的
@@ -133,11 +145,24 @@ async function verifySession(secret, cookieValue) {
 		payload.v !== SESSION_VERSION
 	) {
 		// v 字段校验是留给以后改 payload 结构用的——现在只有一个版本，加上这个检查纯粹是
-		// 防御性的（review 指出的：这个字段原来签了但从没验证过），不影响当前行为
+		// 防御性的（review 指出的：这个字段原来签了从没验证过），不影响当前行为
+		return { valid: false, reason: 'bad-payload-shape' };
+	}
+
+	// 修正（PR#48 review 指出的防御性缺口）：这几条只签发合理性的不变式，今天客户端伪造不了
+	// （要有效 HMAC 才能改 payload），加上它们不改变当前任何正常场景的行为——纯粹是限制
+	// "万一将来签发端自己出 bug"时的爆炸半径，不依赖它们来防真正的攻击者
+	if (payload.expiresAt < payload.issuedAt) {
+		return { valid: false, reason: 'bad-payload-shape' };
+	}
+	if (payload.expiresAt - payload.issuedAt > MAX_SESSION_LIFETIME_SECONDS) {
 		return { valid: false, reason: 'bad-payload-shape' };
 	}
 
 	const nowSeconds = Date.now() / 1000;
+	if (payload.issuedAt > nowSeconds + CLOCK_SKEW_TOLERANCE_SECONDS) {
+		return { valid: false, reason: 'bad-payload-shape' };
+	}
 	if (nowSeconds >= payload.expiresAt) {
 		return { valid: false, reason: 'expired' };
 	}

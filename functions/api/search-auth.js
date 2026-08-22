@@ -8,7 +8,9 @@
  * 需要的环境变量/绑定（Cloudflare Pages → Settings）：
  *   BLOG_SEARCH_PASSWORD        必需。共享登录密码。
  *   BLOG_SEARCH_SESSION_SECRET  必需。签 Cookie 用的 HMAC 密钥，跟密码本身分开存。
- *   BLOG_SEARCH_KV              必需。KV binding，跟 T1.3.5 的索引 manifest 共用同一个
+ *   BLOG_SEARCH_KV              必需——真的必需，不是"缺了就降级"：限速是这个端点唯一的
+ *                                在线爆破防线，缺失时 fail-closed 返回 503，不会静默放行到
+ *                                无限次密码尝试。跟 T1.3.5 的索引 manifest 共用同一个
  *                                namespace，key 加 "ratelimit:" 前缀区分。
  */
 
@@ -40,22 +42,18 @@ export async function onRequestPost(context) {
 		return jsonResponse({ error: 'search auth not configured' }, 503);
 	}
 
-	// 修正（review 抓到的真实 bug）：CF-Connecting-IP 在真实 Cloudflare 边缘流量里由平台
-	// 权威写入、客户端伪造不了，但这个 header 缺失时（本地 wrangler dev、非边缘路径调用等
-	// 不该在生产发生、但确实可能在别的场景出现的情况）原来会退化成字面量 "unknown"，
-	// 让所有缺 header 的调用方共享同一个限速桶——不相关的调用方能互相把对方锁出去。
-	// 缺 header 时直接跳过限速（等同于没配 KV binding 的降级路径），不参与共享桶。
-	const ip = request.headers.get('CF-Connecting-IP');
-	if (ip && env.BLOG_SEARCH_KV) {
-		const { allowed } = await checkAndIncrement(env.BLOG_SEARCH_KV, ip);
-		if (!allowed) {
-			return jsonResponse({ error: 'too many attempts, try again later' }, 429);
-		}
-	}
-	// 没配 KV binding、或者拿不到真实 IP 时不因为限速功能缺失就拒绝登录本身——密码校验
-	// 仍然生效，只是少了限速这层防护，比整个登录功能不可用更合理（配置/环境问题不应该
-	// 锁死正常用户）
-
+	// 修正（PR#48 review + Codex 对抗发现的真实阻塞 bug B1）：限速原来在解析/校验请求体
+	// 之前就计数，任何 POST——哪怕连密码字段都没有——都会先扣掉一次额度。这意味着一个
+	// 跨站页面不需要知道密码、甚至不需要拿到任何回显，只要连续 POST 5 次垃圾请求，
+	// 就能让真实用户（或整个 NAT 后的办公室 IP）被限速锁在门外 15 分钟——这不是密码爆破，
+	// 是纯粹的拒绝服务，而且攻击者不需要任何凭证。
+	//
+	// 修法：先做"这看起来像不像一次真正的登录尝试"的廉价校验（body 大小、JSON 格式、
+	// password 字段存在且类型/长度合法），全部通过之后才计入限速次数，紧接着才做真正的
+	// 密码比较。这样"限的是打了多少次、不是打错了多少次"这个原有设计意图不变（只要是一次
+	// 形状合法的登录尝试，不管密码对不对都计数，避免攻击者靠故意在最后一步失败绕过），
+	// 但不合法的垃圾请求不再白白消耗真实用户的额度。
+	//
 	// 注意：这只挡"如实声明了 Content-Length 且超限"的请求，挡不住不带 Content-Length
 	// 或者谎报长度的请求（chunked encoding 等）——那类请求仍然要靠 Cloudflare 平台自己的
 	// 请求体上限兜底（Free/Pro 100MB）。这里的检查是"廉价挡掉正常客户端不会触发、
@@ -75,6 +73,24 @@ export async function onRequestPost(context) {
 	const password = body && typeof body.password === 'string' ? body.password : '';
 	if (!password || password.length > MAX_PASSWORD_LENGTH) {
 		return jsonResponse({ error: 'invalid password' }, 400);
+	}
+
+	// 修正（同一份 review 发现的真实阻塞 bug B2）：这个接口的文件头文档写着
+	// "BLOG_SEARCH_KV 必需"，但原实现在 binding 缺失（或拿不到 CF-Connecting-IP）时
+	// 直接跳过限速、放行到密码比较——限速是这个端点**唯一**的在线爆破防线，一旦悄无
+	// 声息地失效，等于密码可以无限次尝试，而且登录功能本身"看起来"完全正常、没有任何
+	// 报错提示配置出了问题。更严重的是：这个 PR 自己在"后续"一节写明 BLOG_SEARCH_KV
+	// 需要等 T1.3.5 的 KV namespace 建好才能配置——也就是说刚上线那段时间，这个 binding
+	// 大概率就是没配的状态。改成 fail-closed：KV binding 缺失、或者拿不到真实 IP，
+	// 都当成服务未就绪处理（跟 env.BLOG_SEARCH_PASSWORD 缺失同一个 503 语义），
+	// 不再静默放行到密码比较。
+	const ip = request.headers.get('CF-Connecting-IP');
+	if (!ip || !env.BLOG_SEARCH_KV) {
+		return jsonResponse({ error: 'search auth not configured' }, 503);
+	}
+	const { allowed } = await checkAndIncrement(env.BLOG_SEARCH_KV, ip);
+	if (!allowed) {
+		return jsonResponse({ error: 'too many attempts, try again later' }, 429);
 	}
 
 	const ok = await verifyPassword(password, env.BLOG_SEARCH_PASSWORD);

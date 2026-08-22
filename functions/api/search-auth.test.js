@@ -119,29 +119,53 @@ test('限速：不同 IP 不互相影响', async () => {
 	assert.equal(otherIp.status, 200);
 });
 
-test('没配 BLOG_SEARCH_KV 绑定：限速功能缺失，但密码校验仍然生效（不因配置问题锁死正常登录）', async () => {
+test('回归测试（PR#48 review 阻塞项 B2）：没配 BLOG_SEARCH_KV 绑定时 fail-closed 返回 503，不放行到密码比较', async () => {
+	// 原来的行为是"限速功能缺失但密码校验仍然生效"——但限速是这个端点唯一的在线爆破
+	// 防线，缺失时不该静默放行到无限次密码尝试。尤其是这个 PR 自己在"后续"一节写明
+	// BLOG_SEARCH_KV 需要等 T1.3.5 的 KV namespace 建好才配置，上线初期大概率就是没配的
+	// 状态——如果这时候密码校验仍然生效，等于密码可以无限次尝试。
 	const env = makeEnv({ BLOG_SEARCH_KV: undefined });
 	const resp = await onRequestPost({ request: makeRequest({ password: 'correct-password' }), env });
-	assert.equal(resp.status, 200);
+	assert.equal(resp.status, 503);
 });
 
-test('回归测试：缺 CF-Connecting-IP 的请求不会共享同一个限速桶、锁住别的调用方', async () => {
-	// 对抗式 review 抓到的真实 bug：原来缺 header 时退化成字面量 "unknown"，
-	// 5 个互不相关、缺 header 的失败请求会耗尽同一个桶，第 6 个即使密码正确的调用方
-	// （同样缺 header）也会被 429——现在缺 header 时直接不参与限速，各自独立
+test('回归测试（PR#48 review）：缺 CF-Connecting-IP 时同样 fail-closed 返回 503', async () => {
 	const env = makeEnv();
 	const noIpRequest = (body) =>
 		new Request('https://example.com/api/search-auth', {
 			method: 'POST',
-			headers: { 'Content-Type': 'application/json' }, // 故意不带 CF-Connecting-IP
+			headers: {
+				'Content-Type': 'application/json',
+				'Content-Length': String(new TextEncoder().encode(JSON.stringify(body)).length),
+			}, // 故意不带 CF-Connecting-IP
 			body: JSON.stringify(body),
 		});
-	for (let i = 0; i < MAX_ATTEMPTS; i++) {
-		const resp = await onRequestPost({ request: noIpRequest({ password: 'wrong' }), env });
-		assert.equal(resp.status, 401);
+	const resp = await onRequestPost({ request: noIpRequest({ password: 'correct-password' }), env });
+	assert.equal(resp.status, 503);
+});
+
+test('回归测试（PR#48 review + Codex 对抗发现的阻塞项 B1）：请求体格式错误的请求不消耗限速额度', async () => {
+	// 原来限速在解析/校验请求体之前就计数——任何 POST，哪怕连密码字段都没有，都会先扣
+	// 一次额度。跨站页面不需要知道密码、不需要拿到任何回显，只要连续 POST 5 次垃圾请求，
+	// 就能把真实用户锁在门外 15 分钟。现在把计数点挪到"请求体至少是合法 JSON 且带
+	// password 字段"之后，垃圾请求应该在到达限速计数之前就被拒绝（400），不影响后面
+	// 真实用户用正确密码登录。
+	const env = makeEnv();
+	const ip = '6.6.6.6';
+	const garbageRequest = () =>
+		new Request('https://example.com/api/search-auth', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json', 'CF-Connecting-IP': ip },
+			body: 'not-even-json{{{',
+		});
+	// 连续 10 次垃圾请求——远超 MAX_ATTEMPTS，如果这些请求消耗了限速额度，
+	// 后面这个 IP 的任何请求都会被 429 拦住
+	for (let i = 0; i < MAX_ATTEMPTS * 2; i++) {
+		const resp = await onRequestPost({ request: garbageRequest(), env });
+		assert.equal(resp.status, 400, `第 ${i + 1} 次垃圾请求应该是 400（格式错误），不是别的`);
 	}
-	const stillOk = await onRequestPost({ request: noIpRequest({ password: 'correct-password' }), env });
-	assert.equal(stillOk.status, 200, '缺 IP 的正确密码请求不应该被之前缺 IP 的失败请求连累限速');
+	const realAttempt = await onRequestPost({ request: makeRequest({ password: 'correct-password' }, { ip }), env });
+	assert.equal(realAttempt.status, 200, '真正的登录尝试不应该被之前的垃圾请求连累限速');
 });
 
 test('GET 请求：405', async () => {

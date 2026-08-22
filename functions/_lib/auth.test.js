@@ -107,3 +107,43 @@ test('buildSetCookieHeader: 包含全部要求的属性（HttpOnly/Secure/SameSi
 	assert.match(header, /Path=\//);
 	assert.match(header, /Max-Age=5184000/);
 });
+
+// 回归测试：PR#48 review + Codex 对抗发现的真实问题
+test('COOKIE_NAME 带 __Host- 前缀（防兄弟子域用同名域 Cookie 影子化，导致真实用户被锁在门外）', () => {
+	assert.match(COOKIE_NAME, /^__Host-/);
+});
+
+test('buildSetCookieHeader 的输出满足 __Host- 前缀的浏览器强制要求（Secure + Path=/ + 不带 Domain）', () => {
+	const header = buildSetCookieHeader(COOKIE_NAME, 'sample-value', { maxAgeSeconds: 5184000 });
+	assert.match(header, /Secure/);
+	assert.match(header, /Path=\//);
+	assert.doesNotMatch(header, /Domain=/i);
+});
+
+test('verifySession: 签发时间在未来太久（超出容忍的时钟误差）判无效', async () => {
+	const issuedAt = Math.floor(Date.now() / 1000) + 3600; // 签发时间在 1 小时后，明显不合理
+	const cookieValue = await signSession(SECRET, { issuedAt, maxAgeSeconds: 3600 });
+	const result = await verifySession(SECRET, cookieValue);
+	assert.equal(result.valid, false);
+});
+
+test('verifySession: expiresAt 早于 issuedAt（签发逻辑万一出 bug）判无效', async () => {
+	const issuedAt = Math.floor(Date.now() / 1000);
+	const cookieValue = await signSession(SECRET, { issuedAt, maxAgeSeconds: -100 }); // 故意传负数模拟 bug
+	const result = await verifySession(SECRET, cookieValue);
+	assert.equal(result.valid, false);
+});
+
+test('verifySession: 会话时长超过防御性天花板（远超 spec.md 的 30-90 天区间）判无效', async () => {
+	const issuedAt = Math.floor(Date.now() / 1000);
+	const cookieValue = await signSession(SECRET, { issuedAt, maxAgeSeconds: 365 * 24 * 60 * 60 }); // 1 年，远超上限
+	const result = await verifySession(SECRET, cookieValue);
+	assert.equal(result.valid, false);
+});
+
+test('verifySession: 正常场景（60 天有效期，spec.md 实际用的值）不受新增不变式影响', async () => {
+	const issuedAt = Math.floor(Date.now() / 1000);
+	const cookieValue = await signSession(SECRET, { issuedAt, maxAgeSeconds: 60 * 24 * 60 * 60 });
+	const result = await verifySession(SECRET, cookieValue);
+	assert.equal(result.valid, true);
+});

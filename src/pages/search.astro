@@ -190,7 +190,12 @@ import Header from '../components/Header.astro';
 					hint.textContent = '已登录。语义检索功能即将上线。 ';
 					const relogin = document.createElement('a');
 					relogin.href = '#';
-					relogin.textContent = '不是你？重新登录';
+					// 修正（PR#48 review 指出的措辞问题）：点这个链接只是清掉本地的 UI 提示，
+					// 真正的 HttpOnly 会话 Cookie 原封不动、继续有效直到过期——不是登出，
+					// 叫"重新登录"会让人误以为原来的会话已经失效了。本项目明确不做服务端
+					// 登出接口（见 tasks.md T1.3.6"明确不做"），撤销只能靠轮换
+					// BLOG_SEARCH_SESSION_SECRET，所以措辞上如实反映"只是重新输入一遍密码"。
+					relogin.textContent = '不是你？重新输入密码';
 					relogin.addEventListener('click', (event) => {
 						event.preventDefault();
 						clearLoggedInHint();
@@ -241,6 +246,13 @@ import Header from '../components/Header.astro';
 							renderLoggedInState();
 						} else if (resp.status === 429) {
 							status.textContent = '尝试次数过多，请稍后再试';
+							status.className = 'semantic-login-status is-error';
+						} else if (resp.status === 503) {
+							// 修正（PR#48 review 指出的真实问题）：503 是服务端配置没弄好
+							// （密码/密钥/KV binding 缺一个），不是用户密码打错了——原来一律
+							// 显示"密码错误"，会让人对着一个根本没配置好的功能反复猜密码，
+							// 而真正的问题在运维那边，用户怎么试都不可能成功
+							status.textContent = '服务暂时不可用，请稍后再试';
 							status.className = 'semantic-login-status is-error';
 						} else {
 							status.textContent = '密码错误';
