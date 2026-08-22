@@ -96,6 +96,42 @@ import Header from '../components/Header.astro';
 			.semantic-login-status.is-success {
 				color: #1a7f37;
 			}
+			.semantic-search-widget {
+				margin-top: 1em;
+			}
+			.semantic-search-widget input[type='text'] {
+				width: 100%;
+				max-width: 480px;
+				padding: 0.55em 0.8em;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 8px;
+				font-size: 0.95em;
+				background: rgb(var(--surface));
+				color: rgb(var(--gray-dark));
+			}
+			.semantic-results {
+				list-style: none;
+				margin: 1em 0 0;
+				padding: 0;
+			}
+			.semantic-result-item {
+				padding: 0.8em 0;
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			.semantic-result-item a {
+				font-weight: 600;
+				color: rgb(var(--accent));
+			}
+			.semantic-result-item .semantic-result-excerpt {
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+				margin-top: 0.3em;
+			}
+			.semantic-empty-note {
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+				margin-top: 1em;
+			}
 		</style>
 	</head>
 	<body>
@@ -124,6 +160,19 @@ import Header from '../components/Header.astro';
 					<button type="submit" id="semantic-login-submit">登录</button>
 				</form>
 				<p class="semantic-login-status" id="semantic-login-status"></p>
+
+				<div class="semantic-search-widget" id="semantic-search-widget" style="display: none;">
+					<input
+						type="text"
+						id="semantic-search-input"
+						placeholder="用一句话描述你想找的内容…"
+						autocomplete="off"
+					/>
+					<ul class="semantic-results" id="semantic-results"></ul>
+					<p class="semantic-empty-note" id="semantic-empty-note" style="display: none;">
+						没有找到相关文章，换个说法试试？
+					</p>
+				</div>
 			</section>
 		</main>
 		<Footer />
@@ -140,7 +189,12 @@ import Header from '../components/Header.astro';
 			});
 		</script>
 
-		<script>
+		<script is:inline>
+			// is:inline：这段脚本用动态 import('/pagefind/pagefind.js') 加载构建后才产出的
+			// pagefind 索引模块，那个路径在构建期不存在，Vite 处理的 module script 会在
+			// build 时尝试静态解析并失败；is:inline 让 Astro 原样透传这段脚本、不经 Vite
+			// 处理，动态 import 交给浏览器在运行时按实际路径解析。
+			//
 			// 语义检索登录表单。localStorage 的 "searchLoggedIn" 只是给这段 UI 自己看的提示，
 			// 不是真正的授权凭证——真正决定 /api/search 放不放行的是 search-auth.js 签发的
 			// HttpOnly Cookie（这段 JS 读不到那个 Cookie，也不需要读到）。
@@ -185,9 +239,11 @@ import Header from '../components/Header.astro';
 			function renderLoggedInState() {
 				const hint = document.getElementById('semantic-search-hint');
 				const form = document.getElementById('semantic-login-form');
+				const widget = document.getElementById('semantic-search-widget');
 				if (form) form.style.display = 'none';
+				if (widget) widget.style.display = '';
 				if (hint) {
-					hint.textContent = '已登录。语义检索功能即将上线。 ';
+					hint.textContent = '';
 					const relogin = document.createElement('a');
 					relogin.href = '#';
 					// 修正（PR#48 review 指出的措辞问题）：点这个链接只是清掉本地的 UI 提示，
@@ -208,8 +264,149 @@ import Header from '../components/Header.astro';
 			function renderLoggedOutState() {
 				const hint = document.getElementById('semantic-search-hint');
 				const form = document.getElementById('semantic-login-form');
+				const widget = document.getElementById('semantic-search-widget');
 				if (hint) hint.textContent = '在关键词之外，理解自然语言诉求的检索能力。需要登录使用。';
 				if (form) form.style.display = '';
+				if (widget) widget.style.display = 'none';
+			}
+
+			// --- T1.3.3：语义检索的混合结果（登录后才会用到）---
+			//
+			// 融合发生在浏览器端，不在 Worker 里（Pagefind 是纯浏览器端 JS，Worker 调不了）：
+			// 见 docs/agent/spec.md §检索融合。这里用 Pagefind 原生 JS API（不是上面挂载的
+			// PagefindUI 组件——组件自己管结果渲染，没法把外部的向量结果混进去），跟
+			// /api/search 各自的排名做 RRF（Reciprocal Rank Fusion）融合。
+
+			const RRF_K = 60;
+			let pagefindModulePromise = null;
+
+			function loadPagefindModule() {
+				// 懒加载：只有登录用户真正用语义检索时才拉这个模块，未登录用户的开销不变
+				if (!pagefindModulePromise) {
+					pagefindModulePromise = import('/pagefind/pagefind.js').catch(() => null);
+				}
+				return pagefindModulePromise;
+			}
+
+			function normalizeUrl(url) {
+				if (!url) return '';
+				return url.replace(/\/$/, '');
+			}
+
+			async function searchPagefindRanked(query) {
+				const pagefind = await loadPagefindModule();
+				if (!pagefind || typeof pagefind.search !== 'function') return [];
+				const search = await pagefind.search(query);
+				const withData = await Promise.all(
+					(search.results || []).slice(0, 20).map((r) => r.data()),
+				);
+				return withData.map((data) => ({
+					url: normalizeUrl(data.url),
+					title: data.meta && data.meta.title,
+					excerpt: data.excerpt,
+				}));
+			}
+
+			async function searchVectorRanked(query) {
+				const resp = await fetch('/api/search', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ query }),
+				});
+				if (resp.status === 401) {
+					// 会话真的过期了（不只是本地提示不准）——清掉提示，退回登录表单，
+					// 不是静默降级，因为这意味着登录状态本身已经失效
+					clearLoggedInHint();
+					renderLoggedOutState();
+					return null;
+				}
+				if (!resp.ok) return []; // 429/503/其他：静默降级成"这一路没有结果"，不报错给用户
+				const body = await resp.json();
+				return (body.results || []).map((r) => ({ url: normalizeUrl(r.url), title: r.title, excerpt: r.excerpt }));
+			}
+
+			// RRF：score(doc) = Σ 1/(k + rank_i(doc))，某一路没命中时那一路贡献为 0，
+			// 不是"两路都命中才求和"（那等价于取交集，会把某一路独有的召回也丢掉）
+			function rrfMerge(pagefindResults, vectorResults) {
+				const merged = new Map();
+				const addRanked = (list) => {
+					list.forEach((item, index) => {
+						if (!item.url) return;
+						const rank = index + 1;
+						const existing = merged.get(item.url) || { url: item.url, title: item.title, excerpt: item.excerpt, score: 0 };
+						existing.score += 1 / (RRF_K + rank);
+						if (!existing.title) existing.title = item.title;
+						if (!existing.excerpt) existing.excerpt = item.excerpt;
+						merged.set(item.url, existing);
+					});
+				};
+				addRanked(pagefindResults);
+				addRanked(vectorResults);
+				return Array.from(merged.values()).sort((a, b) => b.score - a.score);
+			}
+
+			function renderCombinedResults(items) {
+				const list = document.getElementById('semantic-results');
+				const emptyNote = document.getElementById('semantic-empty-note');
+				if (!list || !emptyNote) return;
+				list.innerHTML = '';
+				if (items.length === 0) {
+					emptyNote.style.display = '';
+					return;
+				}
+				emptyNote.style.display = 'none';
+				for (const item of items) {
+					const li = document.createElement('li');
+					li.className = 'semantic-result-item';
+					const a = document.createElement('a');
+					a.href = item.url;
+					a.textContent = item.title || item.url;
+					li.appendChild(a);
+					if (item.excerpt) {
+						const p = document.createElement('p');
+						p.className = 'semantic-result-excerpt';
+						// Pagefind 的 excerpt 自带 <mark> 高亮标记，需要当 HTML 渲染；两路数据都
+						// 只来自本站自己的构建产物/API，不是用户输入，不构成 XSS 注入面
+						p.innerHTML = item.excerpt;
+						li.appendChild(p);
+					}
+					list.appendChild(li);
+				}
+			}
+
+			function debounce(fn, delayMs) {
+				let timer = null;
+				return (...args) => {
+					if (timer) clearTimeout(timer);
+					timer = setTimeout(() => fn(...args), delayMs);
+				};
+			}
+
+			async function runCombinedSearch(query) {
+				const trimmed = query.trim();
+				if (!trimmed) {
+					renderCombinedResults([]);
+					document.getElementById('semantic-empty-note').style.display = 'none';
+					return;
+				}
+				const [pagefindResults, vectorResults] = await Promise.all([
+					searchPagefindRanked(trimmed).catch(() => []),
+					searchVectorRanked(trimmed),
+				]);
+				if (vectorResults === null) return; // 401，已经切回登录表单，不渲染结果
+				// "无把握不返回"：两路都没有信号才展示"没有找到"，只要有一路有信号就融合展示
+				// （见 spec.md §检索融合第 4 点；两路各自的绝对信号过滤已经在各自源头做过——
+				// Pagefind 自己的相关性排序、/api/search 服务端的相似度阈值）
+				renderCombinedResults(rrfMerge(pagefindResults, vectorResults));
+			}
+
+			function initSemanticSearchWidget() {
+				const input = document.getElementById('semantic-search-input');
+				if (!input) return;
+				input.addEventListener(
+					'input',
+					debounce((event) => runCombinedSearch(event.target.value), 300),
+				);
 			}
 
 			function initSemanticLoginForm() {
@@ -268,7 +465,10 @@ import Header from '../components/Header.astro';
 				});
 			}
 
-			window.addEventListener('DOMContentLoaded', initSemanticLoginForm);
+			window.addEventListener('DOMContentLoaded', () => {
+				initSemanticLoginForm();
+				initSemanticSearchWidget();
+			});
 		</script>
 	</body>
 </html>

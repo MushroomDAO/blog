@@ -14,3 +14,13 @@ pages_build_output_dir = "./dist"
 [[kv_namespaces]]
 binding = "BLOG_SEARCH_KV"
 id = "5af54057ca9646e8ac9c4ee600afa523"
+
+# T1.3.3：/api/search 用来把 query 转成 embedding 的 Workers AI binding，同一个模型
+# （bge-m3，1024 维）跟建索引时用的一致，否则查询向量和库里的向量不在同一个空间。
+[ai]
+binding = "AI"
+
+# T1.3.3：/api/search 查询用的 Vectorize 索引，就是 T1.3.1 建的那个。
+[[vectorize]]
+binding = "VECTORIZE_INDEX"
+index_name = "blog-search-v1"

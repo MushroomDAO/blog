@@ -6,15 +6,14 @@
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
 - **Feature**：F1.3 语义检索上线（Phase 1）
-- **正在开发的 Task**：无（T1.3.1/T1.3.2/T1.3.5/T1.3.6 均已合并；T1.3.3（`/api/search` 端点）
-  依赖已全部满足，现在是唯一 READY 的 task）
-- **分支 / worktree**：无
-- **PR**：无（进行中）
+- **正在开发的 Task**：T1.3.3（`/api/search` 端点 + 前端 RRF 融合），PR 已开、等外部评审
+- **分支 / worktree**：`feat/T1.3.3-search-endpoint`（`blog-F1.3-t136` worktree）
+- **PR**：<推进时回填>
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| （无） | — | — | — |
+| T1.3.3 | <推进时回填> | PR_OPEN | 后端端点 + 前端 RRF 融合，57 测试全绿，浏览器实测过 |
 
 ## 阻塞项（BLOCKED）
 - 无
@@ -100,7 +99,12 @@
   全部非阻塞，等主线 F1.3/F1.4 做完后批量清
 
 ## 下一个 READY
-- **T1.3.3** `/api/search` Worker 端点——依赖的 T1.3.2（分片）与 T1.3.6（登录认证中间件）
-  均已 DONE，现在是 F1.3 唯一 READY 的 task。T1.3.6 遗留的真实账号操作（两个密钥 +
-  `BLOG_SEARCH_KV` binding）已执行并在生产验证通过（见上方"最近完成"、PR #50），
-  不再是阻塞项。
+- T1.3.3 已经在做（见"当前聚焦”），PR 合并后 **T1.3.4**（API 防滥用增强）会解锁——注意
+  T1.3.3 已经内置了基本防滥用（IP 限速 + query 长度上限 + body 大小上限），T1.3.4 不再是
+  T1.3.3 上线的前置条件，只是后续加固（更精细限速、常见查询缓存）。
+
+## T1.3.3 合并后待办（真实账号验证）
+- 本地 `astro preview` 不跑 Pages Functions，`AI`/`VECTORIZE_INDEX` 这两个新绑定只经过了
+  mock 测试，还没有一次真实调用。合并后需要用真实登录 Cookie 对生产环境 `/api/search`
+  发一次真实请求，确认 Workers AI embedding + Vectorize 查询在生产 binding 下真的能跑通
+  （不是只测 mock），参照 T1.3.6 当时验证 search-auth.js 的方式。

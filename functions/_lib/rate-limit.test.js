@@ -54,3 +54,29 @@ test('checkAndIncrement: remaining 计数正确递减', async () => {
 	const second = await checkAndIncrement(kv, '9.9.9.9');
 	assert.equal(second.remaining, MAX_ATTEMPTS - 2);
 });
+
+// T1.3.3 新增：/api/search 复用这个计数器，但要一套不同的前缀/窗口/次数配置
+test('checkAndIncrement: 自定义 prefix/windowSeconds/maxAttempts 生效', async () => {
+	const kv = makeFakeKv();
+	const opts = { prefix: 'searchlimit:', windowSeconds: 60, maxAttempts: 2 };
+	const first = await checkAndIncrement(kv, '5.5.5.5', opts);
+	assert.equal(first.allowed, true);
+	assert.equal(first.remaining, 1);
+	const second = await checkAndIncrement(kv, '5.5.5.5', opts);
+	assert.equal(second.allowed, true);
+	assert.equal(second.remaining, 0);
+	const third = await checkAndIncrement(kv, '5.5.5.5', opts);
+	assert.equal(third.allowed, false);
+});
+
+test('checkAndIncrement: 不同 prefix 即使同一个 id 也不共享计数（登录限速跟搜索限速互不影响）', async () => {
+	const kv = makeFakeKv();
+	for (let i = 0; i < MAX_ATTEMPTS; i++) {
+		await checkAndIncrement(kv, '3.3.3.3'); // 默认 prefix "ratelimit:"，登录场景
+	}
+	const loginBlocked = await checkAndIncrement(kv, '3.3.3.3');
+	assert.equal(loginBlocked.allowed, false);
+
+	const searchStillAllowed = await checkAndIncrement(kv, '3.3.3.3', { prefix: 'searchlimit:' });
+	assert.equal(searchStillAllowed.allowed, true, '同一个 IP 登录限速用满，不应该影响它的搜索限速额度');
+});
