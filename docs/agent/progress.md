@@ -5,20 +5,38 @@
 
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
-- **Feature**：F1.3 语义检索上线（Phase 1）
-- **正在开发的 Task**：T1.3.3（`/api/search` 端点 + 前端 RRF 融合），PR 已开、等外部评审
-- **分支 / worktree**：`feat/T1.3.3-search-endpoint`（`blog-F1.3-t136` worktree）
-- **PR**：[#52](https://github.com/MushroomDAO/blog/pull/52)
+- **Feature**：F1.3 语义检索上线（Phase 1）——**6 个 task 里 5 个已 DONE**
+  （T1.3.1/T1.3.2/T1.3.3/T1.3.5/T1.3.6），语义检索端到端可用（登录 + 检索 + 前端融合），
+  生产环境已验证。剩下 T1.3.4（API 防滥用增强，非"不做就不能上线"的前置条件）是 F1.3
+  唯一非 DONE 的 task。
+- **分支 / worktree**：无
+- **PR**：无（进行中）
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| T1.3.3 | [#52](https://github.com/MushroomDAO/blog/pull/52) | PR_OPEN | 后端端点 + 前端 RRF 融合，60 测试全绿，3 轮对抗式自审，浏览器实测过 |
+| （无） | — | — | — |
 
 ## 阻塞项（BLOCKED）
-- 无
+- **CI 自动部署已失效**（FU-14，非阻塞主线开发，但持续影响生产）：GitHub Actions 的
+  `CLOUDFLARE_API_TOKEN` secret 报 "Not logged in"，至少从 2026-08-22 10:34 起自动部署
+  静默失败（含 PR #52 合并触发的那次）。T1.3.3 已用本地 wrangler token 手动部署验证过、
+  生产环境目前是最新的，但**下一次自动 push 仍会失败**，需要用户去 GitHub repo Settings
+  → Secrets 更新这个 token（账号级操作，需要人工确认/执行）。
 
 ## 最近完成
+- 2026-08-22：**T1.3.3 合并**（PR #52，squash commit `edaa956`）——`/api/search` 端点
+  （query → bge-m3 embedding → Vectorize top-20 → 按 article_id 聚合去重 → 相似度阈值
+  过滤）+ 前端 RRF 融合（`search.astro` 新增登录后可用的语义检索输入框，用 Pagefind 原生
+  JS API 而不是 PagefindUI 组件，跟 `/api/search` 的结果做 RRF 融合，原有公开关键词搜索
+  不受影响）。3 轮对抗式自审修复：前端搜索请求竞态（debounce 不取消旧请求，可能用过期
+  响应覆盖新结果甚至误触发登出）、限速只按 IP 导致泄露 Cookie 换 IP 可绕过（加了按会话
+  哈希的第二道限速）、`Content-Length` 请求头可以撒谎绕过体积上限（改成量实际字节数）。
+  **合并后真实验证**：CI 自动部署当时已经失效（见下方"阻塞项"），改用本地 wrangler 手动
+  部署，用真实登录 Cookie 对生产环境查询"Pagefind"，返回分数 `0.5089695` 且排名第一的
+  文章与 `vector-comparison-report.md` 记录的 `0.5043`/同一篇文章一致——证实 Workers AI
+  binding 调用与建索引时的原始 REST API 调用产出同一嵌入空间，不存在"绑定调用参数不一致
+  导致所有分数静默低于阈值"的担忧。F1.3 现在只剩 T1.3.4 未完成。
 - 2026-08-22：**T1.3.6 合并**（PR #48，squash commit `423d7eb`）——密码 + HMAC 签名 Cookie
   登录（`functions/_lib/auth.js`、`functions/_lib/rate-limit.js`、
   `functions/api/search-auth.js`、`src/pages/search.astro` 登录态 UI）。外部评审 3 轮：
@@ -98,15 +116,11 @@
   token 超量残留）、FU-10（12-16 chunk 预算是每篇还是每语言的文档歧义）、FU-11（KV
   read-modify-write 非原子，单 PoP 内并发竞态）、FU-12（search-auth.js 同款 Content-Length
   撒谎绕过体积上限，T1.3.3 已修但那个已合并文件还没）、FU-13（建议给 Workers AI/Vectorize
-  配置用量告警）共 10 条 OPEN，全部非阻塞，等主线 F1.3/F1.4 做完后批量清
+  配置用量告警）、**FU-14（GitHub Actions CLOUDFLARE_API_TOKEN 失效，CI 自动部署静默失败，
+  见上方"阻塞项"，需要用户更新 GitHub repo secret）**共 11 条 OPEN，除 FU-14 持续影响生产
+  部署外全部非阻塞，等主线 F1.3/F1.4 做完后批量清
 
 ## 下一个 READY
-- T1.3.3 已经在做（见"当前聚焦”），PR 合并后 **T1.3.4**（API 防滥用增强）会解锁——注意
-  T1.3.3 已经内置了基本防滥用（IP 限速 + query 长度上限 + body 大小上限），T1.3.4 不再是
-  T1.3.3 上线的前置条件，只是后续加固（更精细限速、常见查询缓存）。
-
-## T1.3.3 合并后待办（真实账号验证）
-- 本地 `astro preview` 不跑 Pages Functions，`AI`/`VECTORIZE_INDEX` 这两个新绑定只经过了
-  mock 测试，还没有一次真实调用。合并后需要用真实登录 Cookie 对生产环境 `/api/search`
-  发一次真实请求，确认 Workers AI embedding + Vectorize 查询在生产 binding 下真的能跑通
-  （不是只测 mock），参照 T1.3.6 当时验证 search-auth.js 的方式。
+- **T1.3.4**（API 防滥用增强）是 F1.3 剩下唯一的 task——注意 T1.3.3 已经内置了基本防滥用
+  （IP 限速 + 会话级限速 + query 长度上限 + body 大小上限），T1.3.4 不再是"不做就不能
+  上线"的前置条件，只是后续加固（更精细限速、常见查询缓存）。
