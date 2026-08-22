@@ -33,6 +33,42 @@ fi
 command -v pnpm >/dev/null 2>&1 || { echo "❌ 找不到 pnpm，中止（构建会失败）"; exit 1; }
 command -v node >/dev/null 2>&1 || { echo "❌ 找不到 node，中止（pnpm 需要它）"; exit 1; }
 
+# .env 里存着真实密钥，之前发现是 644（其他本机账号都能读），这里每次跑都顺手收紧一次，
+# 不指望"设置一次就永远不漂移"。修正（round 2 review 指出）：这段挪到读 token 之前——
+# 顺序上，"先把文件权限收紧"应该先于"再去读里面的内容"，虽然同一次脚本执行内先后
+# 顺序对这次读取本身没有影响，但让"权限收紧"不依赖后面的读取分支是否执行到。
+if [ -f .env ]; then
+  chmod 600 .env 2>/dev/null || true
+fi
+
+# cron 的非交互 shell 不会 source 任何 profile/dotenv，2026-08-13 那次本地部署失败
+# （"CLOUDFLARE_API_TOKEN 不存在"）根源就是这个，当时靠 GitHub Actions 的自动部署兜底。
+# 那条 CI 部署已经停用（见 docs/agent/followups.md FU-14、.github/workflows/test.yml
+# 的说明——那个 secret 本身就不可靠，停用它是因为它，不是想连带丢掉这条兜底），所以
+# 这里改成直接从项目 .env 读 token，把根因修掉，不再依赖外部兜底。
+#
+# 修正（自审对抗式 review 抓到的真实 bug）：`.env` 存在但没有 CLOUDFLARE_API_TOKEN=
+# 这一行时，grep 找不到匹配退出码是 1；这行在 `if` 的 then 块里（不是 if 条件本身，
+# 那个天然免疫 errexit），`set -euo pipefail` 会让整个脚本在这里静默退出——连
+# [1/4] 抓取数据都不会跑，cron 日志里什么线索都没有，比"只是部署失败"严重得多。
+# `|| true` 让这一步永远成功，把"取不到 token"和"取到了"两种情况都留到下面
+# display 显式判断，不再让 grep 的退出码传染给整个脚本。
+# 顺带去掉可能存在的引号（"..."/'...'）和 CRLF 的尾随 \r（round 2 review 指出：这个
+# 仓库自己的 local-fallback.sh 里 getv() 结尾就有 `tr -d '\r'`，这里最初漏了——CRLF
+# 的 .env 会让 token 带一个看不见的尾随字符，Cloudflare 那边只会报一个看不懂的 400）。
+if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] && [ -f .env ]; then
+  RAW_TOKEN="$(grep '^CLOUDFLARE_API_TOKEN=' .env | tail -1 | cut -d= -f2- || true)"
+  RAW_TOKEN="${RAW_TOKEN%\"}"; RAW_TOKEN="${RAW_TOKEN#\"}"
+  RAW_TOKEN="${RAW_TOKEN%\'}"; RAW_TOKEN="${RAW_TOKEN#\'}"
+  RAW_TOKEN="$(printf '%s' "$RAW_TOKEN" | tr -d '\r')"
+  if [ -n "$RAW_TOKEN" ]; then
+    CLOUDFLARE_API_TOKEN="$RAW_TOKEN"
+    export CLOUDFLARE_API_TOKEN
+  else
+    echo "  ⚠ .env 里没有 CLOUDFLARE_API_TOKEN，本地部署大概率会失败（见 [4/4]）"
+  fi
+fi
+
 echo "=== $(date) — updating blog analytics ==="
 
 echo "[1/4] fetching latest Cloudflare Web Analytics snapshot…"
@@ -41,10 +77,9 @@ python3 pipeline/analytics/fetch-analytics.py
 echo "[2/4] building site…"
 pnpm build 2>&1 | tail -5
 
-# commit + push 放在本地直接部署之前:这样哪怕下一步的本地部署失败(2026-08-13
-# 那次就是——cron 的非交互环境里没有 CLOUDFLARE_API_TOKEN,wrangler 直接报错退出),
-# push 上去的这份好快照也已经能让 .github/workflows/deploy.yml 用它自己配置好的
-# secret 兜底部署一次,线上不会卡在旧数据上等人手动介入。
+# commit + push 放在本地直接部署之前：即使下一步的本地部署失败，数据快照至少已经
+# 进了 git 历史，不会丢，下一次成功的部署（下次 cron、或者手动跑一次 deploy.sh）会
+# 把它带上线——但不会有人自动帮忙重试，见下面部署失败时的提示。
 echo "[3/4] committing + pushing updated data snapshot…"
 git add src/data/blog-analytics.json
 if git diff --cached --quiet; then
@@ -52,10 +87,12 @@ if git diff --cached --quiet; then
 else
   git commit -m "chore(analytics): refresh traffic snapshot $(date +%Y-%m-%d)"
   git push origin main
-  echo "  ✓ committed + pushed (GitHub Actions will deploy from this too)"
+  echo "  ✓ committed + pushed"
 fi
 
-# 本地直接部署失败不再让整个脚本报错退出——上面已经 push 过了，CI 兜得住。
+# 本地部署失败不让整个脚本报错退出——数据已经 push 过了，不算致命，但现在没有 CI
+# 兜底了，失败了就是真的失败，线上会一直卡在旧快照直到下一次成功部署，所以下面的
+# 警告要显眼，不能只是安慰性的"不是致命错误"。
 # set -e 在这条命令上先关掉，读完退出码再手动判断，避免非零码触发 errexit。
 echo "[4/4] deploying to Cloudflare Pages (blog-mushroom)…"
 set +e
@@ -67,6 +104,6 @@ else
 fi
 DEPLOY_STATUS=${PIPESTATUS[0]}
 set -e
-[ "$DEPLOY_STATUS" -eq 0 ] || echo "  ⚠ 本地直接部署失败(退出码 $DEPLOY_STATUS),等 GitHub Actions 那条部署跑完就行,不是致命错误"
+[ "$DEPLOY_STATUS" -eq 0 ] || echo "  ⚠⚠⚠ 本地部署失败(退出码 $DEPLOY_STATUS)——没有 CI 兜底了，线上快照会一直是旧的，需要人工重跑一次 ./deploy.sh 或本脚本"
 
 echo "✅ done → https://blog.mushroom.cv/analytics/"
