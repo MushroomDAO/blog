@@ -11,8 +11,8 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-// 取最新5篇文章作为轮播
-const carouselPosts = posts.slice(0, 5);
+// 取最新8篇文章作为轮播
+const carouselPosts = posts.slice(0, 8);
 
 // 轮播之后剩余的文章（用于列表展示）
 const listPosts = posts.filter(post => 
