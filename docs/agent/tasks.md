@@ -116,20 +116,44 @@
 
 ## F1.3 — 语义检索上线（Phase 1，T1.2.2 已裁定 go）
 
-### T1.3.1 建 Vectorize 索引 + Workers AI embedding 接入  `READY`
+### T1.3.1 建 Vectorize 索引 + Workers AI embedding 接入  `IN_PROGRESS`
 - **优先级**：high
 - **目标**：跑通"文章内容 → bge-m3 embedding → 写入 Vectorize"的一次性全量索引脚本
 - **开发范围**：Cloudflare Vectorize 索引创建（1024 维）、Workers AI `bge-m3` 调用封装、
   全量索引脚本（读取文章搜索文档 → embedding → upsert）
 - **明确不做**：不做增量更新（T1.4.1）、不做前端
 - **依赖**：T1.2.2（已裁定 = go）
-- **交付物**：Vectorize 索引 + 全量索引脚本
-- **验收命令**：`<待实现时补充：如 wrangler vectorize query 返回非空结果>`
-- **涉及文件**：待定（新增索引脚本目录）
+- **交付物**：`semantic-search/scripts/build-vectorize-index.py`（默认 dry-run，`--create-index`/
+  `--upsert` 才真正动 Cloudflare 账号）
+- **验收命令**：
+  - dry-run（不涉账号，已验证通过）：`CLOUDFLARE_REGISTRAR_TOKEN=... CLOUDFLARE_ACCOUNT_ID=...
+    python3 semantic-search/scripts/build-vectorize-index.py && test -f
+    semantic-search/eval/vectorize-index-plan.json`（2026-08-22 实测：473 篇文章 → 901 条
+    语言记录，zh 467/en 434，全部 1024 维；缓存复用已验证——第二次运行 0.3 秒内完成，
+    不重新调用 Workers AI）
+  - 真正建索引/写入后：`<待补充：wrangler vectorize query 返回非空结果>`（需要账号操作完成后
+    才能跑，见下）
+- **涉及文件**：`semantic-search/scripts/build-vectorize-index.py`
 - **风险/回滚**：涉及 Cloudflare 计费额度，实现前需按 `semantic-search/PLAN.md` §6
-  重新核对当时的 Vectorize/Workers AI 定价与限额。**`wrangler vectorize create` 是真实账号级
-  操作，执行前必须停下问用户确认**（见 `architecture.md` 边界），不得无人值守直接建线上资源。
-- **证据**：<推进时回填>
+  重新核对当时的 Vectorize/Workers AI 定价与限额。**`--create-index`/`--upsert`（对应
+  `wrangler vectorize create` 与写入操作）是真实账号级操作，执行前已停下问用户确认**
+  （见 `architecture.md` 边界），脚本默认 dry-run，不会无人值守直接建线上资源。
+- **对抗式自审（grade B，3 轮，独立上下文子 agent）**：正确性/安全/生产失败模式三个视角各查
+  一遍，发现并修复：①语言判定 bug——`titleEn`/`descriptionEn` 是 SEO meta，不代表正文真有
+  双语分段，原逻辑导致单语文章被错误双记/错误标语言（901 vs 原来错误的 946 记录数就是这个
+  bug 的直接证据）；②补回批量 embedding 顺序校验（`verify_batch_order`，参考
+  `vector-comparison.py` 已有的同类防护，这批向量直接进生产索引，风险比实验数据更高）；
+  ③`embed_batch`/`upsert_vectors` 原本不捕获超时类 `URLError`，只捕获 `HTTPError`，扩大重试
+  覆盖面；④`upsert_vectors` 原本无任何重试，已补上；⑤`create_index` 对"索引已存在"从崩溃
+  改成识别并继续（支持部分失败后重跑）；⑥`--index-name` 加白名单校验，避免拼进 URL 路径的
+  注入面；⑦真正执行 create/upsert 前打印 `account_id`/`index_name`/向量数供人工核对目标账号
+  没指错；⑧新增向量缓存（gitignored），失败重跑不必重新花 Workers AI 额度重新 embed 全部
+  文章。未修复、记入 `followups.md`：`CLOUDFLARE_REGISTRAR_TOKEN` 是否是给这类写操作过宽的
+  共享凭据、值不值得换成 Vectorize/Workers AI 专用的窄权限 token（FU-7）；脚本本身不做"先记
+  旧再删"的增量更新，两次运行之间若文章内容被编辑会留下孤儿向量，正式的解决方案是 T1.4.1
+  （FU-8）。
+- **证据**：分支 `feat/T1.3.1-vectorize-embedding`（进行中，dry-run 已验证，等待用户确认后
+  执行 `--create-index`/`--upsert`）
 
 ### T1.3.2 分片与双语 chunk 策略实现  `BACKLOG`
 - **优先级**：high

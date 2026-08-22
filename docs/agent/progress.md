@@ -5,10 +5,13 @@
 
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
-- **Feature**：F1.3 语义检索上线（Phase 1）—— **T1.2.2 已拍板 go，F1.3 解锁开始实现**
-- **正在开发的 Task**：无（本次仅推进文档，T1.3.1 已解锁为 READY，待 `pilot run` 下一轮挑选）
-- **分支 / worktree**：`docs/t122-go-decision` @ `../blog-plan-t122`
-- **PR**：待开（本次文档更新）
+- **Feature**：F1.3 语义检索上线（Phase 1）
+- **正在开发的 Task**：T1.3.1 建 Vectorize 索引 + Workers AI embedding 接入——脚本已写完、
+  dry-run 已验证（473 篇文章 → 901 条记录）、3 轮对抗式自审已修复全部阻塞项。**卡在
+  `--create-index`/`--upsert` 这两个真实账号操作前，等用户确认再执行**，之后才能开 PR
+  （验收命令的后半段需要账号操作完成才能跑）
+- **分支 / worktree**：`feat/T1.3.1-vectorize-embedding` @ `../blog-F1.3`
+- **PR**：无（尚未开，等账号操作确认后一并验收再开）
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
@@ -19,13 +22,19 @@
 - 无
 
 ## 最近完成
+- 2026-08-22：**PR #38 合并**（squash commit `5166990`）——T1.2.2 go 裁定文档，经外部评审
+  4 轮（R1-R4）+ 推送修复后第 5 轮 APPROVED。修复的阻塞项：RRF 分数不能承担"无把握不返回"
+  的判断（改为按各路绝对信号判断，RRF 只排序）、Worker 调不了浏览器端 Pagefind（融合改到
+  前端）、"跨语言"理由记错（订正为同语言同义词鸿沟）、Cookie 缺 `Path=/`、认证可能有无认证
+  窗口期（反转 T1.3.3/T1.3.6 依赖）、密码门禁范围会误伤已公开的关键词搜索（已收窄范围）、
+  acceptance.md/PLAN.md 未同步裁定（已更新）。ColBERT/late-interaction 评估记入 followups.md
+  FU-4（现阶段不接入，RRF 混合已覆盖同类场景）。
 - 2026-08-21：**T1.2.2 拍板 go**（用户对话确认，非 agent 自行判断）——混合方案：关键词+向量
   并行检索、RRF 融合、article 级聚合去重、无把握不返回；`/api/search` 不对外公开，密码+签名
   Cookie 登录（明确否决 Cloudflare Access）；全流程留在 Cloudflare，不做本地推理；中英文各自
   独立 chunk。已生成 `BLOG_SEARCH_PASSWORD`/`BLOG_SEARCH_SESSION_SECRET` 写入 `~/Dev/.env`，
   尚未推送到 Cloudflare（`wrangler secret put` 需用户另行确认）。详见 `architecture.md` 核心
-  判断 6/7、`spec.md` §检索融合/§登录会话、`tasks.md` T1.2.2/T1.3.6。F1.3 全部 Task 解锁，
-  T1.3.1 转为 `READY`。
+  判断 6-8、`spec.md` §检索融合/§登录会话、`tasks.md` T1.2.2/T1.3.6。F1.3 全部 Task 解锁。
 - 2026-08-21：T1.2.1 DONE（PR #36 合并进 main，commit `b30e595`）——用
   `CLOUDFLARE_REGISTRAR_TOKEN`（用户指出的可用 token）跑通
   464 篇文章 + 24 条查询的 bge-m3 embedding 对比实验，产出
@@ -46,5 +55,5 @@
 - 无 OPEN 项（FU-1/FU-2/FU-3 均已通过 PR #34 清掉）
 
 ## 下一个 READY
-- **T1.3.1** 建 Vectorize 索引 + Workers AI embedding 接入——注意其中 `wrangler vectorize
-  create` 是真实账号操作，执行前需停下问用户确认
+- 无（T1.3.1 正在进行中；其中 `wrangler vectorize create` 是真实账号操作，写完索引脚本后
+  执行这一步前会停下来问用户确认，不会无人值守直接建线上资源）
