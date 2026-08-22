@@ -373,7 +373,11 @@ test('缓存：查询做大小写/首尾空白归一化，"Pagefind" 和 " pagef
 	assert.equal(resp.status, 200, '大小写/空白不同但语义相同的 query 应该命中同一条缓存');
 });
 
-test('缓存：命中缓存不消耗限速额度，即使远超正常限速上限也不会 429', async () => {
+// 回归测试（T1.3.4 round 2 自审对抗式 review 抓到的真实问题）：缓存命中原来完全不计入
+// 限速，等于给共享 KV namespace（同一个 namespace 也扛着 T1.3.6 的登录限速器）开了一条
+// 不限速的读流量通道——不是"省计费调用"这个威胁模型要挡的东西，是另一种拒绝服务面。
+// 修复后限速在缓存检查之前做，缓存命中依然要计次，只是命中之后跳过真正计费的 AI/Vectorize。
+test('缓存：命中缓存依然要计入限速——重复同一个查询超过限速上限后一样会 429', async () => {
 	const kv = makeFakeKv();
 	const matches = [makeMatch('article-a', 0.7)];
 	const cookie = await validCookie();
@@ -381,11 +385,33 @@ test('缓存：命中缓存不消耗限速额度，即使远超正常限速上�
 	const workingEnv = await makeEnv({ BLOG_SEARCH_KV: kv, VECTORIZE_INDEX: makeFakeVectorize({ matches }) });
 	await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip }), env: workingEnv });
 
-	// 同一个 IP + 会话，远超 MAX_ATTEMPTS 次重复同一个查询——都应该走缓存，不触发限速
+	// 同一个 IP + 会话，远超 MAX_ATTEMPTS 次重复同一个查询——即使命中缓存，限速计数
+	// 依然在累加，超过上限后应该 429，不能因为命中缓存就对限速免疫
+	let lastStatus;
 	for (let i = 0; i < 50; i++) {
 		const resp = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip }), env: workingEnv });
-		assert.equal(resp.status, 200, `第 ${i + 1} 次缓存命中不应该被限速拦住`);
+		lastStatus = resp.status;
+		if (lastStatus === 429) break;
 	}
+	assert.equal(lastStatus, 429, '缓存命中不应该让请求对限速免疫');
+});
+
+test('缓存：命中缓存确实跳过了 AI/Vectorize 调用（限速额度内的正常重复查询不报错）', async () => {
+	const kv = makeFakeKv();
+	const matches = [makeMatch('article-a', 0.7)];
+	const cookie = await validCookie();
+	const ip = '23.23.23.23';
+	const workingEnv = await makeEnv({ BLOG_SEARCH_KV: kv, VECTORIZE_INDEX: makeFakeVectorize({ matches }) });
+	await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip }), env: workingEnv });
+
+	// 第二次用会报错的 AI/Vectorize，但因为命中缓存，不应该真的调用到它们
+	const brokenEnv = await makeEnv({
+		BLOG_SEARCH_KV: kv,
+		AI: makeFakeAi({ shouldThrow: true }),
+		VECTORIZE_INDEX: makeFakeVectorize({ shouldThrow: true }),
+	});
+	const resp = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip }), env: brokenEnv });
+	assert.equal(resp.status, 200, '限速额度内的缓存命中应该正常返回，不应该被跳过的 AI/Vectorize 报错影响');
 });
 
 test('GET 请求：405', async () => {

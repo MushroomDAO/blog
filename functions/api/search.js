@@ -55,11 +55,15 @@ const IP_RATE_LIMIT = { prefix: 'searchlimit:', windowSeconds: 5 * 60, maxAttemp
 // 不再随攻击者能换多少个 IP 线性增长。
 const SESSION_RATE_LIMIT = { prefix: 'searchsession:', windowSeconds: 5 * 60, maxAttempts: 30 };
 // T1.3.4：常见查询缓存。同一个 query 字符串在 TTL 内重复搜，直接把上次算好的结果吐回去，
-// 完全跳过计费的 Workers AI embedding + Vectorize 查询。6 小时是"结果不会太快过期、又能
-// 覆盖住同一天内的重复搜索"之间的折中——语义检索结果对内容更新没有那么敏感（不像关键词
-// 命中那样一字不差），文章更新频率也是以天为单位，6 小时的陈旧度可以接受。缓存 key 用
-// 查询文本的哈希（trim+小写归一化后），不是明文——跟"不记录用户原始查询原文"这条要求
-// 一致（见 tasks.md T1.3.4"开发范围"），缓存值本身也只是文章标题/链接/摘录，不含查询词。
+// 跳过计费的 Workers AI embedding + Vectorize 查询（但仍然计入限速，见下面限速检查的位置）。
+// 6 小时是"省下重复查询的计费调用"和"不要让搜索结果陈旧太久"之间的折中——不是按"文章多久
+// 更新一次"来算的：这个仓库实际发布节奏很密（单日发布过 14 篇），真正约束新鲜度的是
+// T1.4.1（发布→增量索引 hook，目前还是 BACKLOG，未上线前索引本来就只有跑
+// build-vectorize-index.py 那一刻的新鲜度，比这里的 6 小时还粗）；T1.4.1 上线后，这个
+// TTL 会成为"重复搜同一个词"这条窄路径上新内容可见的新增延迟，到时候需要重新评估
+// （记入 followups）。缓存 key 用查询文本的哈希（trim+小写归一化后），不是明文——跟
+// "不记录用户原始查询原文"这条要求一致（见 tasks.md T1.3.4"开发范围"），缓存值本身
+// 也只是文章标题/链接/摘录，不含查询词。
 const QUERY_CACHE_TTL_SECONDS = 6 * 60 * 60;
 
 function jsonResponse(body, status) {
@@ -137,9 +141,29 @@ export async function onRequestPost(context) {
 		return jsonResponse({ error: 'invalid query' }, 400);
 	}
 
-	// 缓存命中直接返回——不计入限速、不调 AI/Vectorize。缓存本身只是加速+省钱，不是
-	// 安全边界，KV 读取失败时降级成"当作没命中"，走下面的正常流程，不是 fail-closed 503
-	// （跟必需 binding 缺失时的 503 是两回事：那是安全防线缺失，这只是优化没生效）。
+	const ip = request.headers.get('CF-Connecting-IP');
+	if (!ip) {
+		return jsonResponse({ error: 'search not configured' }, 503);
+	}
+	// 修正（T1.3.4 自审对抗式 review 抓到的真实问题）：限速原来放在缓存检查之后，缓存命中
+	// 直接 return，完全不计入限速——理由是"缓存读取不花计费的 AI/Vectorize 调用"，但这个
+	// KV namespace 同时也是 T1.3.6 登录限速器在用的（见文件头注释），不计限速的缓存读流量
+	// 一样能把这个共享 namespace 的 KV 读写配额打满，变成一个新的拒绝服务面——不是"省钱"
+	// 那个威胁模型要挡的东西，是完全不同的一种滥用。改成限速先做，缓存检查在后：这样不管
+	// 命中缓存与否，同一个 IP/会话在窗口内的总请求量都被同一套限速盖住，缓存依然省掉
+	// AI/Vectorize 这两个真正计费的调用，只是不再对"请求本身要不要计次"免疫。
+	const [ipLimit, sessionLimit] = await Promise.all([
+		checkAndIncrement(env.BLOG_SEARCH_KV, ip, IP_RATE_LIMIT),
+		checkAndIncrement(env.BLOG_SEARCH_KV, await hashSessionCookie(cookieValue), SESSION_RATE_LIMIT),
+	]);
+	if (!ipLimit.allowed || !sessionLimit.allowed) {
+		return jsonResponse({ error: 'too many requests, try again later' }, 429);
+	}
+
+	// 缓存命中直接返回，跳过计费的 AI/Vectorize 调用——但上面的限速已经计过数了。缓存本身
+	// 只是加速+省钱，不是安全边界，KV 读取失败时降级成"当作没命中"，走下面的正常查询流程，
+	// 不是 fail-closed 503（跟必需 binding 缺失时的 503 是两回事：那是安全防线缺失，
+	// 这只是优化没生效）。
 	const cacheKey = await queryCacheKey(query);
 	try {
 		const cached = await env.BLOG_SEARCH_KV.get(cacheKey);
@@ -148,18 +172,6 @@ export async function onRequestPost(context) {
 		}
 	} catch {
 		// 忽略——缓存读取/解析失败不影响功能，继续走下面的正常查询流程
-	}
-
-	const ip = request.headers.get('CF-Connecting-IP');
-	if (!ip) {
-		return jsonResponse({ error: 'search not configured' }, 503);
-	}
-	const [ipLimit, sessionLimit] = await Promise.all([
-		checkAndIncrement(env.BLOG_SEARCH_KV, ip, IP_RATE_LIMIT),
-		checkAndIncrement(env.BLOG_SEARCH_KV, await hashSessionCookie(cookieValue), SESSION_RATE_LIMIT),
-	]);
-	if (!ipLimit.allowed || !sessionLimit.allowed) {
-		return jsonResponse({ error: 'too many requests, try again later' }, 429);
 	}
 
 	let queryVector;
