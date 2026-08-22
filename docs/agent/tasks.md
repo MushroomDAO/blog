@@ -228,7 +228,7 @@
   的语义。
 - **证据**：分支 `feat/T1.3.2-chunking-bilingual`，PR [#45](https://github.com/MushroomDAO/blog/pull/45)（合并 commit `b8f547b`）
 
-### T1.3.3 `/api/search` Worker 端点 + 前端 RRF 融合  `PR_OPEN`
+### T1.3.3 `/api/search` Worker 端点 + 前端 RRF 融合  `DONE`
 - **优先级**：high
 - **目标**：query → Vectorize 向量检索 → 按 `article_id` 聚合去重 → 用 Vectorize 自身余弦
   相似度阈值过滤 → 返回候选列表（可能为空）。**关键词+向量的 RRF 融合与"没有找到"的最终
@@ -279,16 +279,15 @@
   （IP 限速 + 会话级限速 + query 长度上限 + body 大小上限，见下方对抗式自审），不是
   T1.3.4 完全空白的裸奔状态——T1.3.4 仍有价值（更精细的限速、常见查询缓存），但不再是
   "不做就不能上线"的前置条件。认证已由依赖 T1.3.6 保证，不会出现无认证窗口期。
-  **尚未真实验证的部分**：`AI`/`VECTORIZE_INDEX` binding 在真实 Cloudflare 环境下的调用
-  （本地 `astro preview` 不跑 Pages Functions，只能 mock 测试；已验证 KV/密钥 binding 用
-  同样的 wrangler.toml 声明方式在生产环境正确解析，但 AI/Vectorize 这两个新绑定本身还
-  没有过一次真实调用）——合并后需要用真实登录 Cookie 对生产环境 `/api/search` 发一次
-  真实请求验证，**而且不能只看 HTTP 200**：`env.AI.run()`（binding 调用）和
-  `build-vectorize-index.py` 建索引时用的原始 REST API调用，理论上应该产出同一个嵌入
-  空间的向量，但没有代码层面的证据能确保两者内部默认参数完全一致——如果不一致，失败
-  模式是**静默的**（所有查询分数都低于 0.4 阈值，返回空结果，跟"真的没有相关内容"无法
-  区分），要拿 `vector-comparison-report.md` 里已知分数的查询验证返回分数落在预期区间，
-  不是只看状态码。
+  **真实验证（2026-08-22，合并后）**：PR #52 合并后 CI 自动部署失败（GitHub Actions 的
+  `CLOUDFLARE_API_TOKEN` secret 失效，"Not logged in"——见下方发现的独立问题），改用本地
+  `wrangler pages deploy` 手动部署。用真实登录 Cookie 对生产环境 `/api/search` 发送
+  `{"query":"Pagefind"}`：返回 `PenguinHarness...` 排第一，分数 `0.5089695`——跟
+  `vector-comparison-report.md` 里同一条查询记录的分数 `0.5043`（同一篇 `PenguinHarness`
+  文章排第一）几乎一致（细微差异符合预期：报告里是整篇文档级别的对比，这里是 chunk 级
+  聚合取最高分）。**证实 `env.AI.run()`（binding 调用）和建索引时用的原始 REST API 调用
+  产出的是同一个嵌入空间的向量**，不存在事先担心的"绑定调用与 REST 调用内部参数不一致导致
+  所有分数静默低于阈值"的问题。
 - **对抗式自审（grade B，3 轮，独立上下文子 agent）**：正确性/安全滥用/生产失败模式三个
   视角，发现并修复：
   1. **前端搜索请求竞态**（正确性）——debounce 只延迟发起，不取消已发出的请求；快速输入
