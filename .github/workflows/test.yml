@@ -10,6 +10,13 @@ on:
     branches:
       - dailyblog
       - main
+  # 修正（round 2 review 指出）：只在 push 上跑的话，这个仓库所有走 PR 流程的改动
+  # 一次 CI 都不会跑到（包括这个 workflow 自己所在的这个 PR）。分支保护没配
+  # required status checks，这个不挡任何人合并，但既然 CI 部署已经没了，这是仓库里
+  # 最后一个自动信号，PR 阶段就该看到它，不必等合并后才知道测试/构建挂了。
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
