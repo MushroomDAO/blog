@@ -42,6 +42,60 @@ import Header from '../components/Header.astro';
 			.search-page .fallback-note.visible {
 				display: block;
 			}
+			.semantic-search-section {
+				margin-top: 2.5em;
+				padding-top: 1.5em;
+				border-top: 1px solid rgb(var(--gray-light));
+			}
+			.semantic-search-section h2 {
+				font-size: 1.1em;
+				margin-bottom: 0.4em;
+			}
+			.semantic-search-hint {
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+				margin-bottom: 1em;
+			}
+			.semantic-login-form {
+				display: flex;
+				gap: 0.5em;
+				max-width: 360px;
+			}
+			.semantic-login-form input[type='password'] {
+				flex: 1;
+				min-width: 0;
+				padding: 0.55em 0.8em;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 8px;
+				font-size: 0.95em;
+				background: rgb(var(--surface));
+				color: rgb(var(--gray-dark));
+			}
+			.semantic-login-form button {
+				flex-shrink: 0;
+				padding: 0.55em 1.2em;
+				background: rgb(var(--accent));
+				color: #fff;
+				border: none;
+				border-radius: 8px;
+				font-weight: 600;
+				cursor: pointer;
+			}
+			.semantic-login-form button:disabled {
+				opacity: 0.6;
+				cursor: default;
+			}
+			.semantic-login-status {
+				margin-top: 0.6em;
+				font-size: 0.85em;
+				min-height: 1.2em;
+			}
+			.semantic-login-status.is-error {
+				color: #c0392b;
+			}
+			.semantic-login-status.is-success {
+				color: #1a7f37;
+			}
 		</style>
 	</head>
 	<body>
@@ -53,6 +107,24 @@ import Header from '../components/Header.astro';
 				搜索索引加载失败，可能是本地开发环境（<code>pnpm dev</code>）还没有生成索引——先跑一次
 				<code>pnpm build</code> 再用 <code>pnpm preview</code> 预览。
 			</p>
+
+			<section class="semantic-search-section" id="semantic-search-section">
+				<h2>🔐 语义检索</h2>
+				<p class="semantic-search-hint" id="semantic-search-hint">
+					在关键词之外，理解自然语言诉求的检索能力。需要登录使用。
+				</p>
+				<form class="semantic-login-form" id="semantic-login-form">
+					<input
+						type="password"
+						id="semantic-login-password"
+						placeholder="密码"
+						autocomplete="current-password"
+						required
+					/>
+					<button type="submit" id="semantic-login-submit">登录</button>
+				</form>
+				<p class="semantic-login-status" id="semantic-login-status"></p>
+			</section>
 		</main>
 		<Footer />
 
@@ -66,6 +138,137 @@ import Header from '../components/Header.astro';
 				}
 				new PagefindUI({ element: '#search', showSubResults: true, showImages: false });
 			});
+		</script>
+
+		<script>
+			// 语义检索登录表单。localStorage 的 "searchLoggedIn" 只是给这段 UI 自己看的提示，
+			// 不是真正的授权凭证——真正决定 /api/search 放不放行的是 search-auth.js 签发的
+			// HttpOnly Cookie（这段 JS 读不到那个 Cookie，也不需要读到）。
+			//
+			// 修正（对抗式 review 抓到的真实 UX 死角）：这个提示原来只存一个裸的 '1'，永不过期。
+			// 真实 Cookie 是 60 天有效期，用户如果手动清过 Cookie（不清 localStorage 是很常见的
+			// 不对称操作）或者刚好过了 60 天，页面会一直显示"已登录"、表单被隐藏，但真实会话
+			// 早就没了——因为这个提示是 HttpOnly Cookie 读不到时的唯一代理，没有东西能纠正它。
+			// 现在存一个带时间戳的记录，比 Cookie 有效期稍短的窗口内才信任这个提示；同时加一个
+			// "不是你？重新登录" 的链接，不依赖提示本身准不准，用户随时能手动清掉重新走登录。
+			const LOGGED_IN_HINT_KEY = 'searchLoggedIn';
+			const HINT_TRUST_WINDOW_MS = 55 * 24 * 60 * 60 * 1000; // 55 天，比 Cookie 的 60 天留一点余量
+
+			function readLoggedInHint() {
+				try {
+					const raw = localStorage.getItem(LOGGED_IN_HINT_KEY);
+					if (!raw) return false;
+					const parsed = JSON.parse(raw);
+					if (typeof parsed.loggedInAt !== 'number') return false;
+					return Date.now() - parsed.loggedInAt < HINT_TRUST_WINDOW_MS;
+				} catch {
+					return false; // 解析失败/隐私模式禁用 localStorage：当作没登录过，重新走表单
+				}
+			}
+
+			function writeLoggedInHint() {
+				try {
+					localStorage.setItem(LOGGED_IN_HINT_KEY, JSON.stringify({ loggedInAt: Date.now() }));
+				} catch {
+					// 忽略——只影响下次访问要不要重新弹表单，不影响这次登录已经成功
+				}
+			}
+
+			function clearLoggedInHint() {
+				try {
+					localStorage.removeItem(LOGGED_IN_HINT_KEY);
+				} catch {
+					// 忽略
+				}
+			}
+
+			function renderLoggedInState() {
+				const hint = document.getElementById('semantic-search-hint');
+				const form = document.getElementById('semantic-login-form');
+				if (form) form.style.display = 'none';
+				if (hint) {
+					hint.textContent = '已登录。语义检索功能即将上线。 ';
+					const relogin = document.createElement('a');
+					relogin.href = '#';
+					// 修正（PR#48 review 指出的措辞问题）：点这个链接只是清掉本地的 UI 提示，
+					// 真正的 HttpOnly 会话 Cookie 原封不动、继续有效直到过期——不是登出，
+					// 叫"重新登录"会让人误以为原来的会话已经失效了。本项目明确不做服务端
+					// 登出接口（见 tasks.md T1.3.6"明确不做"），撤销只能靠轮换
+					// BLOG_SEARCH_SESSION_SECRET，所以措辞上如实反映"只是重新输入一遍密码"。
+					relogin.textContent = '不是你？重新输入密码';
+					relogin.addEventListener('click', (event) => {
+						event.preventDefault();
+						clearLoggedInHint();
+						renderLoggedOutState();
+					});
+					hint.appendChild(relogin);
+				}
+			}
+
+			function renderLoggedOutState() {
+				const hint = document.getElementById('semantic-search-hint');
+				const form = document.getElementById('semantic-login-form');
+				if (hint) hint.textContent = '在关键词之外，理解自然语言诉求的检索能力。需要登录使用。';
+				if (form) form.style.display = '';
+			}
+
+			function initSemanticLoginForm() {
+				if (readLoggedInHint()) {
+					renderLoggedInState();
+					return;
+				}
+
+				const form = document.getElementById('semantic-login-form');
+				const passwordInput = document.getElementById('semantic-login-password');
+				const submitButton = document.getElementById('semantic-login-submit');
+				const status = document.getElementById('semantic-login-status');
+				if (!form || !passwordInput || !submitButton || !status) return;
+
+				form.addEventListener('submit', async (event) => {
+					event.preventDefault();
+					const password = passwordInput.value;
+					if (!password) return;
+
+					submitButton.disabled = true;
+					status.textContent = '登录中…';
+					status.className = 'semantic-login-status';
+
+					try {
+						const resp = await fetch('/api/search-auth', {
+							method: 'POST',
+							headers: { 'Content-Type': 'application/json' },
+							body: JSON.stringify({ password }),
+						});
+						if (resp.ok) {
+							writeLoggedInHint();
+							status.textContent = '登录成功';
+							status.className = 'semantic-login-status is-success';
+							renderLoggedInState();
+						} else if (resp.status === 429) {
+							status.textContent = '尝试次数过多，请稍后再试';
+							status.className = 'semantic-login-status is-error';
+						} else if (resp.status === 503) {
+							// 修正（PR#48 review 指出的真实问题）：503 是服务端配置没弄好
+							// （密码/密钥/KV binding 缺一个），不是用户密码打错了——原来一律
+							// 显示"密码错误"，会让人对着一个根本没配置好的功能反复猜密码，
+							// 而真正的问题在运维那边，用户怎么试都不可能成功
+							status.textContent = '服务暂时不可用，请稍后再试';
+							status.className = 'semantic-login-status is-error';
+						} else {
+							status.textContent = '密码错误';
+							status.className = 'semantic-login-status is-error';
+						}
+					} catch {
+						status.textContent = '网络错误，请重试';
+						status.className = 'semantic-login-status is-error';
+					} finally {
+						submitButton.disabled = false;
+						passwordInput.value = '';
+					}
+				});
+			}
+
+			window.addEventListener('DOMContentLoaded', initSemanticLoginForm);
 		</script>
 	</body>
 </html>

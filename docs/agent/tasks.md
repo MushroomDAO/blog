@@ -306,35 +306,71 @@
   `build_manifest` 里炸出不知所云的 `TypeError`，改成在 `main()` 提前报清楚的错误。
 - **证据**：分支 `feat/T1.3.5-index-manifest`，PR <推进时回填>
 
-### T1.3.6 登录认证（密码 + 签名 Cookie）  `READY`
+### T1.3.6 登录认证（密码 + 签名 Cookie）  `PR_OPEN`
 - **优先级**：high
 - **目标**：`/api/search`（语义检索能力）在真正上线前必须有登录门禁，未登录不可访问，避免被刷
   Workers AI 计费。用户已明确否决 Cloudflare Access，要求单一共享密码方案。**T1.1.3 已上线的
   纯 Pagefind 关键词搜索页面不在门禁范围内，继续公开**（用户顾虑的是付费 API 被刷，不适用于
   零成本的关键词搜索，见 `architecture.md` 核心判断 7）。
 - **开发范围**：
-  1. `POST /api/search-auth`：常量时间比较 `env.BLOG_SEARCH_PASSWORD`，成功签发 HMAC 签名
-     Cookie（payload `{v, issuedAt, expiresAt}`，密钥 `env.BLOG_SEARCH_SESSION_SECRET`，
-     用 base64url 编码），Cookie 属性 `HttpOnly; Secure; SameSite=Lax; Path=/;
-     Max-Age=<30-90 天>`（不用 1 年——缩短泄露窗口，吊销靠轮换 `BLOG_SEARCH_SESSION_SECRET`）
-  2. Cookie 校验中间件（供 T1.3.3 的 `/api/search` 引用）：校验签名与过期时间，未通过返回 401
-  3. 登录接口限速：同 IP 15 分钟内最多 5 次，KV 计数器（对分布式撞库偏弱，可接受，见
-     `followups.md` FU-6）
-  4. `/search` 页面：**只在触发语义检索（调用 `/api/search`）的那部分 UI** 无有效 Cookie 时
-     展示密码输入表单；页面本身的 Pagefind 关键词搜索框保持可用、不需要登录
-  认证校验逻辑封装成独立函数/中间件，便于以后替换成其他方案（见 `architecture.md` 核心判断 7）
-- **明确不做**：不做多用户账号体系、不做 MFA、不用 Cloudflare Access、不做密码找回/自动轮换
-- **依赖**：T1.3.1（需要 Worker 项目骨架存在）——**不依赖 T1.3.3**，本 task 先于/独立于
-  `/api/search` 落地，反过来是 T1.3.3 依赖本 task 的中间件（见 `architecture.md` 边界，
-  避免 `/api/search` 出现无认证的中间上线状态）
-- **交付物**：登录 Worker 路由 + Cookie 校验中间件 + `/search` 页面登录态 UI
-- **验收命令**：`<待实现时补充：如无 Cookie 请求 /api/search 断言返回 401；正确密码登录后
-  拿到的 Cookie 请求断言返回 200；连续 6 次错误密码断言第 6 次被限速拒绝>`
-- **涉及文件**：待定（Worker 认证中间件、`src/pages/search.astro`）
+  1. `POST /api/search-auth`（`functions/api/search-auth.js`）：常量时间比较
+     `env.BLOG_SEARCH_PASSWORD`，成功签发 HMAC-SHA256 签名 Cookie（payload
+     `{v, issuedAt, expiresAt}`，密钥 `env.BLOG_SEARCH_SESSION_SECRET`，base64url 编码），
+     Cookie 属性 `HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=60天`
+  2. Cookie 签发/校验共享逻辑（`functions/_lib/auth.js`，供未来 T1.3.3 的 `/api/search`
+     引用）：校验签名与过期时间，未通过返回 401
+  3. 登录接口限速（`functions/_lib/rate-limit.js`）：同 IP 15 分钟内最多 5 次，KV 计数器，
+     跟 T1.3.5 的索引 manifest 共用同一个 KV namespace（key 加 `ratelimit:` 前缀区分，
+     避免为限速单独建一个 namespace）
+  4. `/search` 页面（`src/pages/search.astro`）：新增"语义检索"区块，无有效登录态时展示
+     密码输入表单；页面本身的 Pagefind 关键词搜索框完全不受影响，继续公开
+  认证校验逻辑封装成独立模块，便于以后替换成其他方案（见 `architecture.md` 核心判断 7）
+- **明确不做**：不做多用户账号体系、不做 MFA、不用 Cloudflare Access、不做密码找回/自动轮换；
+  不做服务端登出接口（前端"重新登录"链接只清本地 UI 提示，不撤销真实 Cookie——撤销靠轮换
+  `BLOG_SEARCH_SESSION_SECRET`，见 spec.md）；不接 T1.3.3 的 `/api/search`（那个端点还不存在）
+- **依赖**：T1.3.1（需要 Cloudflare Pages Functions 项目骨架存在）——**不依赖 T1.3.3**，本 task
+  先于/独立于 `/api/search` 落地，反过来是 T1.3.3 依赖本 task 的中间件（见 `architecture.md`
+  边界，避免 `/api/search` 出现无认证的中间上线状态）
+- **交付物**：`functions/_lib/auth.js`、`functions/_lib/rate-limit.js`、
+  `functions/api/search-auth.js` + 对应 `*.test.js`、`src/pages/search.astro` 登录态 UI
+- **验收命令**：`node --test functions/_lib/*.test.js functions/api/*.test.js`（28 项单元/
+  集成测试，直接调用 `onRequestPost` 等 handler，不需要 wrangler/Miniflare）+
+  `pnpm run build`（确认 Astro 静态构建不受影响，Pagefind 关键词搜索保持公开）
+- **涉及文件**：`functions/_lib/auth.js`、`functions/_lib/rate-limit.js`、
+  `functions/api/search-auth.js`、对应测试文件、`src/pages/search.astro`
 - **风险/回滚**：**`wrangler secret put BLOG_SEARCH_PASSWORD` / `BLOG_SEARCH_SESSION_SECRET`
   是真实账号级操作，执行前必须停下问用户确认**（两个值已在 `~/Dev/.env` 里生成好，见
-  `spec.md` §登录会话）；密码/签名密钥不可写入代码仓库或日志
-- **证据**：<推进时回填>
+  `spec.md` §登录会话）；密码/签名密钥不可写入代码仓库或日志；`BLOG_SEARCH_KV` binding
+  需要 T1.3.5 建的 KV namespace 存在。**部署时机提醒（非阻塞，运维注意事项）**：本仓库的
+  `deploy.sh`/CI 推送到 main 会自动把 `functions/` 一起发布，如果合并早于 Cloudflare
+  Pages 后台配置好这三个环境变量/绑定，登录接口会短暂返回 503（`search auth not
+  configured`）——代码本身是 fail-closed 的（不会崩溃、不会放行、不泄露具体缺了哪个变量），
+  只是功能在配置补齐前不可用，不是安全问题，但建议合并后尽快去 Cloudflare Pages 后台配置。
+- **对抗式自审（grade A——涉密钥/认证，3 轮，独立上下文子 agent）**：密码学正确性/滥用与信息
+  泄露/集成与生产失败模式三个视角，发现并修复 6 个问题：
+  1. **`timingSafeEqual` 注释和实现不一致**——注释说"先摘要再比较"，代码实际直接比较变长字节
+     数组，运行时间随输入长度变化（实测候选串更短时耗时由真实密码长度决定）。这个部署形态下
+     不构成实际可利用攻击（Cloudflare 网络抖动是毫秒级，这里是纳秒级差异，且限速卡 5 次/15
+     分钟），但修起来成本很低——改成两边先各自 SHA-256 摘要成定长再比较，从根上消掉长度相关的
+     计时差异。
+  2. **`CF-Connecting-IP` 缺失时所有请求共享同一个字面量 "unknown" 限速桶**——真实 Cloudflare
+     边缘流量这个 header 由平台权威写入、客户端伪造不了，但 header 缺失时（本地
+     wrangler dev 等场景）不相关的调用方会共享同一个桶、互相锁出去。改成缺 header 时跳过
+     限速，不参与共享桶。
+  3. **请求体大小在解析前没有兜底**——`MAX_PASSWORD_LENGTH` 只挡 `password` 字段自己的长度，
+     一个塞了大量无关字段撑大 body 的请求会被完整解析完才发现密码没超长，白白吃掉解析开销。
+     加一个 `Content-Length` 检查，body 明显超出预期时不进 `request.json()`（诚实说明：这只
+     挡"如实声明了 Content-Length"的请求，挡不住谎报/不带 Content-Length 的请求，那类仍靠
+     Cloudflare 平台自己的请求体上限兜底）。
+  4. **`verifySession` 从没校验签发时写进 payload 的 `v` 版本字段**——加上校验，纯防御性，
+     不影响当前行为，是为以后升级 payload 结构留的口子。
+  5. **前端 localStorage 登录态提示永不过期**——真实 Cookie 是 60 天有效期，用户手动清过 Cookie
+     或者过了 60 天，页面会一直显示"已登录"、表单被隐藏，且没有任何入口能纠正（HttpOnly
+     Cookie 前端读不到，无法自证）。改成提示带时间戳、55 天信任窗口过期自动失效，并加一个
+     "不是你？重新登录"链接，不依赖提示本身准不准。
+  6. （非阻塞，记入 followups）部署时机：合并早于 Cloudflare Pages 后台配置好环境变量/绑定
+     时，登录接口会短暂 503——代码已经是 fail-closed，只是提醒运维顺序，见上方风险/回滚。
+- **证据**：分支 `feat/T1.3.6-login-auth`，PR <推进时回填>
 
 ---
 
