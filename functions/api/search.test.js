@@ -373,6 +373,36 @@ test('缓存：查询做大小写/首尾空白归一化，"Pagefind" 和 " pagef
 	assert.equal(resp.status, 200, '大小写/空白不同但语义相同的 query 应该命中同一条缓存');
 });
 
+// 回归测试（FU-16）：NFKC 归一化折叠全角字符 + 折叠连续空白
+test('缓存：全角字符和连续空白也能归一化命中同一条缓存', async () => {
+	const kv = makeFakeKv();
+	const matches = [makeMatch('article-a', 0.7)];
+	const workingEnv = await makeEnv({ BLOG_SEARCH_KV: kv, VECTORIZE_INDEX: makeFakeVectorize({ matches }) });
+	const cookie = await validCookie();
+
+	// 全角 "Ｐａｇｅｆｉｎｄ" 经 NFKC 归一化后应该等价于半角 "pagefind"
+	await onRequestPost({ request: makeRequest({ query: 'Ｐａｇｅｆｉｎｄ' }, { cookie }), env: workingEnv });
+
+	const brokenEnv = await makeEnv({
+		BLOG_SEARCH_KV: kv,
+		AI: makeFakeAi({ shouldThrow: true }),
+		VECTORIZE_INDEX: makeFakeVectorize({ shouldThrow: true }),
+	});
+	const resp = await onRequestPost({
+		request: makeRequest({ query: 'pagefind' }, { cookie, ip: '24.24.24.24' }),
+		env: brokenEnv,
+	});
+	assert.equal(resp.status, 200, '全角字符归一化后应该命中半角同义查询的缓存');
+
+	// 中间连续多个空格也应该归一化命中同一条缓存："foo   bar" -> "foo bar"
+	await onRequestPost({ request: makeRequest({ query: 'foo   bar' }, { cookie, ip: '26.26.26.26' }), env: workingEnv });
+	const resp2 = await onRequestPost({
+		request: makeRequest({ query: 'foo bar' }, { cookie, ip: '27.27.27.27' }),
+		env: brokenEnv,
+	});
+	assert.equal(resp2.status, 200, '连续空白折叠后应该命中同一条缓存');
+});
+
 // 回归测试（T1.3.4 round 2 自审对抗式 review 抓到的真实问题）：缓存命中原来完全不计入
 // 限速，等于给共享 KV namespace（同一个 namespace 也扛着 T1.3.6 的登录限速器）开了一条
 // 不限速的读流量通道——不是"省计费调用"这个威胁模型要挡的东西，是另一种拒绝服务面。

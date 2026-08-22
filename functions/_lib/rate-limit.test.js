@@ -80,3 +80,30 @@ test('checkAndIncrement: 不同 prefix 即使同一个 id 也不共享计数（�
 	const searchStillAllowed = await checkAndIncrement(kv, '3.3.3.3', { prefix: 'searchlimit:' });
 	assert.equal(searchStillAllowed.allowed, true, '同一个 IP 登录限速用满，不应该影响它的搜索限速额度');
 });
+
+// 回归测试（FU-19）：KV get/put 抛异常时 fail-closed，不裸抛异常传染给调用方
+test('checkAndIncrement: kv.get() 抛异常时 fail-closed 返回 { allowed: false }，不裸抛异常', async () => {
+	const brokenKv = {
+		async get() {
+			throw new Error('KV quota exceeded');
+		},
+		async put() {},
+	};
+	const result = await checkAndIncrement(brokenKv, '4.4.4.4');
+	assert.equal(result.allowed, false);
+	assert.equal(result.remaining, 0);
+});
+
+test('checkAndIncrement: kv.put() 抛异常时同样 fail-closed', async () => {
+	const brokenKv = {
+		async get() {
+			return null;
+		},
+		async put() {
+			throw new Error('KV write failed');
+		},
+	};
+	const result = await checkAndIncrement(brokenKv, '6.6.6.6');
+	assert.equal(result.allowed, false);
+	assert.equal(result.remaining, 0);
+});

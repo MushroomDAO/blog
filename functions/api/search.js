@@ -84,8 +84,17 @@ async function hashSessionCookie(cookieValue) {
 	return sha256Hex(cookieValue);
 }
 
+// 修正（FU-16，T1.3.4 self-review 发现）：原来只 trim+小写，折叠不了中间多余空格、
+// Unicode 组合形式（NFC/NFD）、全角/半角字符（中文输入法常见）——语义相同的查询会各算
+// 一份缓存，最坏情况只是多几次缓存未命中（不是正确性 bug），但既然要归一化就做得更彻底些。
+// `normalize('NFKC')` 顺带把全角字符折叠成对应半角（NFKC 是兼容分解+组合，NFC 做不到
+// 这一步）。`replace(/\s+/g, ' ')` 折叠连续空白为单个空格。
+function normalizeQuery(query) {
+	return query.trim().toLowerCase().normalize('NFKC').replace(/\s+/g, ' ');
+}
+
 async function queryCacheKey(query) {
-	return `searchcache:${await sha256Hex(query.trim().toLowerCase())}`;
+	return `searchcache:${await sha256Hex(normalizeQuery(query))}`;
 }
 
 export async function onRequestPost(context) {

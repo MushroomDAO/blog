@@ -34,18 +34,28 @@ async function checkAndIncrement(
 	{ prefix = 'ratelimit:', windowSeconds = WINDOW_SECONDS, maxAttempts = MAX_ATTEMPTS } = {},
 ) {
 	const key = rateLimitKey(id, prefix);
-	const raw = await kv.get(key);
-	const count = raw ? parseInt(raw, 10) || 0 : 0;
+	// 修正（FU-19，T1.3.4 self-review 发现的既有 bug）：KV 配额耗尽/短暂故障时
+	// get/put 都可能抛异常，原来完全没捕获——会让一次本该成功的登录/搜索请求变成裸
+	// 500，而不是这个端点该走的降级路径。跟 T1.3.6 B2 同一个道理：限速是这条路径唯一
+	// 的滥用防线，"限速本身临时坏掉"不该悄悄放行到无限次尝试，所以 fail-closed（当成
+	// "不允许"处理），不是 fail-open——调用方看到的是跟"超过限速"一样的
+	// { allowed: false }，不会哪里都裸抛异常。
+	try {
+		const raw = await kv.get(key);
+		const count = raw ? parseInt(raw, 10) || 0 : 0;
 
-	if (count >= maxAttempts) {
+		if (count >= maxAttempts) {
+			return { allowed: false, remaining: 0 };
+		}
+
+		// expirationTtl 每次都重新设置成整窗口长度——不是滑动窗口的精确实现（严格滑动窗口
+		// 需要记录每次尝试的时间戳列表），但对"挡自动化脚本连续猛冲"这个目的已经够用，
+		// 换来的是实现简单、只占一个 KV key
+		await kv.put(key, String(count + 1), { expirationTtl: windowSeconds });
+		return { allowed: true, remaining: maxAttempts - count - 1 };
+	} catch {
 		return { allowed: false, remaining: 0 };
 	}
-
-	// expirationTtl 每次都重新设置成整窗口长度——不是滑动窗口的精确实现（严格滑动窗口
-	// 需要记录每次尝试的时间戳列表），但对"挡自动化脚本连续猛冲"这个目的已经够用，
-	// 换来的是实现简单、只占一个 KV key
-	await kv.put(key, String(count + 1), { expirationTtl: windowSeconds });
-	return { allowed: true, remaining: maxAttempts - count - 1 };
 }
 
 export { WINDOW_SECONDS, MAX_ATTEMPTS, rateLimitKey, checkAndIncrement };
