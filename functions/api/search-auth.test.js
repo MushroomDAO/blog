@@ -168,6 +168,33 @@ test('回归测试（PR#48 review + Codex 对抗发现的阻塞项 B1）：请�
 	assert.equal(realAttempt.status, 200, '真正的登录尝试不应该被之前的垃圾请求连累限速');
 });
 
+test('回归测试（PR#48 round 2 review 阻塞项 B1，Codex 发现）：Content-Type: text/plain 的合法 JSON body 不消耗限速额度', async () => {
+	// 跨站简单请求（裸 <form>、no-cors fetch）能发的 Content-Type 只有三种，text/plain 是
+	// 其中之一，不触发 CORS 预检。request.json() 本身不检查 Content-Type，只要 body 是合法
+	// JSON 就能解析成功——上一轮"垃圾请求 400 在先、限速计数在后"的修复对这种形状的攻击
+	// 完全无效，因为它根本不是垃圾请求，是一个 Content-Type 撒了谎的、body 合法的请求。
+	const env = makeEnv();
+	const ip = '4.4.4.4';
+	const textPlainRequest = () => {
+		const bodyText = JSON.stringify({ password: 'wrong-but-well-formed' });
+		return new Request('https://example.com/api/search-auth', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'text/plain',
+				'CF-Connecting-IP': ip,
+				'Content-Length': String(new TextEncoder().encode(bodyText).length),
+			},
+			body: bodyText,
+		});
+	};
+	for (let i = 0; i < MAX_ATTEMPTS * 2; i++) {
+		const resp = await onRequestPost({ request: textPlainRequest(), env });
+		assert.equal(resp.status, 400, `第 ${i + 1} 次 text/plain 请求应该是 400（Content-Type 不合法），不是别的`);
+	}
+	const realAttempt = await onRequestPost({ request: makeRequest({ password: 'correct-password' }, { ip }), env });
+	assert.equal(realAttempt.status, 200, '真正的登录尝试不应该被之前的 text/plain 攻击请求连累限速');
+});
+
 test('GET 请求：405', async () => {
 	const resp = await onRequestGet();
 	assert.equal(resp.status, 405);

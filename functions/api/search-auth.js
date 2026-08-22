@@ -63,6 +63,19 @@ export async function onRequestPost(context) {
 		return jsonResponse({ error: 'request body too large' }, 413);
 	}
 
+	// 修正（PR#48 round 2 review，B1 仍未完全堵住）：request.json() 只管 body 能不能解析成
+	// JSON，不管 Content-Type 头实际写的是什么——一个 Content-Type: text/plain、body 恰好是
+	// 合法 JSON 字符串的请求照样能解析成功，从而绕过上一轮"垃圾请求 400 在先、限速计数在后"
+	// 的修复。而 text/plain 正是跨站简单请求（裸 <form>、no-cors fetch）三种允许的
+	// Content-Type 之一，不需要触发 CORS 预检——也就是说攻击页面只要把 body 拼成合法 JSON、
+	// Content-Type 声明成 text/plain，原来的修复对它完全无效。这里显式要求
+	// Content-Type: application/json（忽略 ;charset= 等参数），提前到解析之前拒绝，
+	// 跟正常前端（search.astro 已经在发 application/json）行为完全不变。
+	const contentType = (request.headers.get('Content-Type') || '').split(';')[0].trim().toLowerCase();
+	if (contentType !== 'application/json') {
+		return jsonResponse({ error: 'invalid request body' }, 400);
+	}
+
 	let body;
 	try {
 		body = await request.json();
