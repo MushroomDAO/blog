@@ -58,6 +58,27 @@ if [ "$AHEAD" -gt 0 ]; then
   else
     log "  ❌ push 失败，Actions 仍会看到旧快照"
   fi
+
+  # 修正（chore/manual-deploy-only 自审对抗式 review 抓到的真实问题）：这里 push
+  # 过去之前一直是"免费搭便车"——GitHub Actions 的 deploy.yml 会被这次 push 顺带
+  # 触发，生产也跟着更新了，这个脚本自己从来没有主动部署过。那条 CI 部署已经停用
+  # （见 FU-14），如果这里只 push 不部署，会累积出跟 update-analytics.sh 同一类
+  # 问题：commit 进了远端，生产却停在旧快照，没人主动去重新部署。
+  # 复用跟 update-analytics.sh 一样的读 token 方式（这里也是项目 .env，不是这个
+  # 脚本本身用的 ~/Dev/.env——那份是 listmonk 凭据，跟 wrangler 部署用的是两回事）。
+  # 最佳努力：部署失败不影响这个脚本继续走后面发 newsletter 的正事，只是响亮地警告。
+  log "顺带触发一次本地部署，避免生产停在推送前的旧快照…"
+  if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] && [ -f .env ]; then
+    RAW_TOKEN="$(grep '^CLOUDFLARE_API_TOKEN=' .env | tail -1 | cut -d= -f2- || true)"
+    RAW_TOKEN="${RAW_TOKEN%\"}"; RAW_TOKEN="${RAW_TOKEN#\"}"
+    RAW_TOKEN="${RAW_TOKEN%\'}"; RAW_TOKEN="${RAW_TOKEN#\'}"
+    [ -n "$RAW_TOKEN" ] && export CLOUDFLARE_API_TOKEN="$RAW_TOKEN"
+  fi
+  if pnpm build >/dev/null 2>&1 && npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true 2>&1 | tail -4; then
+    log "  ✓ 部署完成"
+  else
+    log "  ⚠⚠⚠ 部署失败——没有 CI 兜底了，生产会停在推送前的旧快照，需要人工重跑 ./deploy.sh"
+  fi
 fi
 
 # listmonk 跑在 Fly.io 上，空闲会缩到零。cron 每天只跑一次，所以**每次都是冷的**，

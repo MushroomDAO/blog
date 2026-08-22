@@ -439,11 +439,13 @@
 - **风险/回滚**：**`wrangler secret put BLOG_SEARCH_PASSWORD` / `BLOG_SEARCH_SESSION_SECRET`
   是真实账号级操作，执行前必须停下问用户确认**（两个值已在 `~/Dev/.env` 里生成好，见
   `spec.md` §登录会话）；密码/签名密钥不可写入代码仓库或日志；`BLOG_SEARCH_KV` binding
-  需要 T1.3.5 建的 KV namespace 存在。**部署时机提醒（非阻塞，运维注意事项）**：本仓库的
-  `deploy.sh`/CI 推送到 main 会自动把 `functions/` 一起发布，如果合并早于 Cloudflare
-  Pages 后台配置好这三个环境变量/绑定，登录接口会短暂返回 503（`search auth not
-  configured`）——代码本身是 fail-closed 的（不会崩溃、不会放行、不泄露具体缺了哪个变量），
-  只是功能在配置补齐前不可用，不是安全问题，但建议合并后尽快去 Cloudflare Pages 后台配置。
+  需要 T1.3.5 建的 KV namespace 存在。**部署时机提醒（非阻塞，运维注意事项；2026-08-22
+  更新：本仓库已停用 CI 自动部署，`chore/manual-deploy-only`，部署只走本地
+  `./deploy.sh`）**：本地 `./deploy.sh` 推送到 main 之后手动执行时会把 `functions/`
+  一起发布，如果合并早于 Cloudflare Pages 后台配置好这三个环境变量/绑定，登录接口会
+  短暂返回 503（`search auth not configured`）——代码本身是 fail-closed 的（不会崩溃、
+  不会放行、不泄露具体缺了哪个变量），只是功能在配置补齐前不可用，不是安全问题，但
+  建议合并后尽快去 Cloudflare Pages 后台配置、并手动跑一次部署。
 - **对抗式自审（grade A——涉密钥/认证，3 轮，独立上下文子 agent）**：密码学正确性/滥用与信息
   泄露/集成与生产失败模式三个视角，发现并修复 6 个问题：
   1. **`timingSafeEqual` 注释和实现不一致**——注释说"先摘要再比较"，代码实际直接比较变长字节

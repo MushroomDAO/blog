@@ -38,9 +38,31 @@ command -v node >/dev/null 2>&1 || { echo "❌ 找不到 node，中止（pnpm �
 # 那条 CI 部署已经停用（见 docs/agent/followups.md FU-14、.github/workflows/test.yml
 # 的说明——那个 secret 本身就不可靠，停用它是因为它，不是想连带丢掉这条兜底），所以
 # 这里改成直接从项目 .env 读 token，把根因修掉，不再依赖外部兜底。
+#
+# 修正（自审对抗式 review 抓到的真实 bug）：`.env` 存在但没有 CLOUDFLARE_API_TOKEN=
+# 这一行时，grep 找不到匹配退出码是 1；这行在 `if` 的 then 块里（不是 if 条件本身，
+# 那个天然免疫 errexit），`set -euo pipefail` 会让整个脚本在这里静默退出——连
+# [1/4] 抓取数据都不会跑，cron 日志里什么线索都没有，比"只是部署失败"严重得多。
+# `|| true` 让这一步永远成功，把"取不到 token"和"取到了"两种情况都留到下面
+# display 显式判断，不再让 grep 的退出码传染给整个脚本。
+# 顺带去掉可能存在的引号（"..."/'...'）——cut 不做 shell 语法解析，.env 里如果写成
+# CLOUDFLARE_API_TOKEN="xxx" 这种带引号的形式，原来会把引号字符也一起塞进 token。
 if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] && [ -f .env ]; then
-  CLOUDFLARE_API_TOKEN="$(grep '^CLOUDFLARE_API_TOKEN=' .env | tail -1 | cut -d= -f2-)"
-  export CLOUDFLARE_API_TOKEN
+  RAW_TOKEN="$(grep '^CLOUDFLARE_API_TOKEN=' .env | tail -1 | cut -d= -f2- || true)"
+  RAW_TOKEN="${RAW_TOKEN%\"}"; RAW_TOKEN="${RAW_TOKEN#\"}"
+  RAW_TOKEN="${RAW_TOKEN%\'}"; RAW_TOKEN="${RAW_TOKEN#\'}"
+  if [ -n "$RAW_TOKEN" ]; then
+    CLOUDFLARE_API_TOKEN="$RAW_TOKEN"
+    export CLOUDFLARE_API_TOKEN
+  else
+    echo "  ⚠ .env 里没有 CLOUDFLARE_API_TOKEN，本地部署大概率会失败（见 [4/4]）"
+  fi
+fi
+
+# .env 里存着真实密钥，之前发现是 644（其他本机账号都能读），这里每次跑都顺手收紧一次，
+# 不指望"设置一次就永远不漂移"
+if [ -f .env ]; then
+  chmod 600 .env 2>/dev/null || true
 fi
 
 echo "=== $(date) — updating blog analytics ==="
