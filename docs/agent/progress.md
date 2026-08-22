@@ -23,6 +23,14 @@
   → Secrets 更新这个 token（账号级操作，需要人工确认/执行）。
 
 ## 最近完成
+- 2026-08-22：**停用 GitHub Actions 自动部署到 Cloudflare Pages**（`.github/workflows/deploy.yml`
+  → `test.yml`，只跑 `pnpm test` + `pnpm build` 做 CI 验证，不再碰 Cloudflare）。起因：
+  这个 workflow 用的 `CLOUDFLARE_API_TOKEN` GitHub secret 失效了一段时间（见 FU-14），
+  静默让好几次自动部署失败，没人第一时间发现。以后部署统一走本地 `./deploy.sh`（wrangler
+  + 本地 `.env` 里的 token），不再依赖一个平时没人盯着的远端 secret。顺带修了
+  `scripts/update-analytics.sh`（一个每日 cron 脚本）：它原来显式依赖这条 CI 部署当本地
+  部署失败时的兜底（2026-08-13 真实发生过一次），现在改成直接从项目 `.env` 读 token
+  修掉本地部署在 cron 非交互环境下失败的根因，不再需要外部兜底。
 - 2026-08-22：**T1.3.4 完成**（`functions/api/search.js` 加查询结果缓存：6 小时 TTL，
   query 归一化取哈希做 key，命中跳过计费的 AI/Vectorize 调用）——T1.3.4 原定范围里的
   "输入长度上限"/"简单限速"/"降级"其实 T1.3.3 落地时已经一并做完，本 task 实际只剩

@@ -33,6 +33,16 @@ fi
 command -v pnpm >/dev/null 2>&1 || { echo "❌ 找不到 pnpm，中止（构建会失败）"; exit 1; }
 command -v node >/dev/null 2>&1 || { echo "❌ 找不到 node，中止（pnpm 需要它）"; exit 1; }
 
+# cron 的非交互 shell 不会 source 任何 profile/dotenv，2026-08-13 那次本地部署失败
+# （"CLOUDFLARE_API_TOKEN 不存在"）根源就是这个，当时靠 GitHub Actions 的自动部署兜底。
+# 那条 CI 部署已经停用（见 docs/agent/followups.md FU-14、.github/workflows/test.yml
+# 的说明——那个 secret 本身就不可靠，停用它是因为它，不是想连带丢掉这条兜底），所以
+# 这里改成直接从项目 .env 读 token，把根因修掉，不再依赖外部兜底。
+if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] && [ -f .env ]; then
+  CLOUDFLARE_API_TOKEN="$(grep '^CLOUDFLARE_API_TOKEN=' .env | tail -1 | cut -d= -f2-)"
+  export CLOUDFLARE_API_TOKEN
+fi
+
 echo "=== $(date) — updating blog analytics ==="
 
 echo "[1/4] fetching latest Cloudflare Web Analytics snapshot…"
@@ -41,10 +51,9 @@ python3 pipeline/analytics/fetch-analytics.py
 echo "[2/4] building site…"
 pnpm build 2>&1 | tail -5
 
-# commit + push 放在本地直接部署之前:这样哪怕下一步的本地部署失败(2026-08-13
-# 那次就是——cron 的非交互环境里没有 CLOUDFLARE_API_TOKEN,wrangler 直接报错退出),
-# push 上去的这份好快照也已经能让 .github/workflows/deploy.yml 用它自己配置好的
-# secret 兜底部署一次,线上不会卡在旧数据上等人手动介入。
+# commit + push 放在本地直接部署之前：即使下一步的本地部署失败，数据快照至少已经
+# 进了 git 历史，不会丢，下一次成功的部署（下次 cron、或者手动跑一次 deploy.sh）会
+# 把它带上线——但不会有人自动帮忙重试，见下面部署失败时的提示。
 echo "[3/4] committing + pushing updated data snapshot…"
 git add src/data/blog-analytics.json
 if git diff --cached --quiet; then
@@ -52,10 +61,12 @@ if git diff --cached --quiet; then
 else
   git commit -m "chore(analytics): refresh traffic snapshot $(date +%Y-%m-%d)"
   git push origin main
-  echo "  ✓ committed + pushed (GitHub Actions will deploy from this too)"
+  echo "  ✓ committed + pushed"
 fi
 
-# 本地直接部署失败不再让整个脚本报错退出——上面已经 push 过了，CI 兜得住。
+# 本地部署失败不让整个脚本报错退出——数据已经 push 过了，不算致命，但现在没有 CI
+# 兜底了，失败了就是真的失败，线上会一直卡在旧快照直到下一次成功部署，所以下面的
+# 警告要显眼，不能只是安慰性的"不是致命错误"。
 # set -e 在这条命令上先关掉，读完退出码再手动判断，避免非零码触发 errexit。
 echo "[4/4] deploying to Cloudflare Pages (blog-mushroom)…"
 set +e
@@ -67,6 +78,6 @@ else
 fi
 DEPLOY_STATUS=${PIPESTATUS[0]}
 set -e
-[ "$DEPLOY_STATUS" -eq 0 ] || echo "  ⚠ 本地直接部署失败(退出码 $DEPLOY_STATUS),等 GitHub Actions 那条部署跑完就行,不是致命错误"
+[ "$DEPLOY_STATUS" -eq 0 ] || echo "  ⚠⚠⚠ 本地部署失败(退出码 $DEPLOY_STATUS)——没有 CI 兜底了，线上快照会一直是旧的，需要人工重跑一次 ./deploy.sh 或本脚本"
 
 echo "✅ done → https://blog.mushroom.cv/analytics/"

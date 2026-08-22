@@ -1,0 +1,36 @@
+name: CI Tests
+
+# 不再自动部署到 Cloudflare Pages——部署改成本地 `./deploy.sh`（wrangler + 本地 token）手动
+# 触发，理由见 docs/agent/followups.md FU-14：GitHub Actions 用的 CLOUDFLARE_API_TOKEN
+# secret 曾经失效过、静默让好几次自动部署失败，没人第一时间发现。本地部署每次都是操作者
+# 亲手确认过的一次真实执行，不依赖一个平时没人盯着的 GitHub secret 是否还有效。
+# 这个 workflow 只负责在 push 时跑测试 + 确认构建通过，不碰 Cloudflare。
+on:
+  push:
+    branches:
+      - dailyblog
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Test
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build
