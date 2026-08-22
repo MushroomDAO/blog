@@ -262,18 +262,49 @@
 - **风险/回滚**：涉钱（Workers AI 按量计费），必须在 `/api/search` 公开前完成
 - **证据**：<推进时回填>
 
-### T1.3.5 索引 manifest 版本化  `READY`
+### T1.3.5 索引 manifest 版本化  `PR_OPEN`
 - **优先级**：mid
 - **目标**：记录 `embedding_model`/`embedding_dimensions`/`chunking_version`/`content_hash`/
   `language`/`indexed_at`，为后续模型/分片算法变更做好回填切流的准备
-- **开发范围**：manifest 存储（KV 或 D1）+ 读写逻辑
-- **明确不做**：不做多版本并行 A/B（超出当前需要）
+- **开发范围**：manifest 存储用 **Cloudflare KV**（不是 D1——只需要按 key 读写一条小 JSON
+  记录，不需要跨记录 JOIN，KV 比 D1 的 schema/迁移更简单）+ 读写逻辑；每篇文章一条记录
+  （按语言分开记录 content_hash，不是每个 paragraph chunk 一条）
+- **明确不做**：不做多版本并行 A/B（超出当前需要）；不做增量对账逻辑（T1.4.2 的范围，
+  本 task 只管记录数据，不管拿数据去判断"要不要重新索引"）
 - **依赖**：T1.3.1
-- **交付物**：manifest 存储结构
-- **验收命令**：`<待实现时补充>`
-- **涉及文件**：待定
-- **风险/回滚**：无
-- **证据**：<推进时回填>
+- **交付物**：`semantic-search/scripts/manifest.py`（默认 dry-run，`--create-namespace`/
+  `--write` 才真正动 Cloudflare 账号）+ `semantic-search/scripts/test_manifest.py`
+- **验收命令**：`python3 semantic-search/scripts/test_manifest.py`（构造逻辑单元测试）+
+  `python3 semantic-search/scripts/manifest.py --from-plan
+  semantic-search/eval/vectorize-index-plan.json`（对全库 478 篇文章跑一遍 dry-run，
+  断言产出 478 条文章记录 + 1 条 global 记录，不碰账号）
+- **涉及文件**：`semantic-search/scripts/manifest.py`、`semantic-search/scripts/test_manifest.py`
+- **风险/回滚**：涉及 Cloudflare 账号（建 KV namespace + 写入）。**`--create-namespace`/
+  `--write` 执行前必须停下问用户确认**，脚本默认 dry-run，不会无人值守直接建线上资源。
+- **对抗式自审（grade B，3 轮，独立上下文子 agent）**：正确性/安全/生产失败模式三个视角，
+  发现并修复 6 个问题：
+  1. **`_global` 保留 key 冲突崩溃**——如果哪篇文章 slug 恰好叫 `_global`，会和内部保留的
+     全局配置 key 撞车，产出裸 `KeyError`。改成显式拒绝并报清楚的错误。
+  2. **URL 里 `?`/`#` 导致 key 被截断、可能覆盖另一篇文章的记录**——key 直接拼进 URL
+     没做编码，`existing-slug?evil=1` 这类（理论上的）slug 会被 HTTP 层当成查询参数，
+     实际写入的 key 被截断。改成 `urllib.parse.quote` 编码 + `validate_key_name` 也拒绝
+     `?`/`#`，双重防护。
+  3. **建 namespace 的真实 mutation 排在账号确认打印之前**——`find_or_create_namespace`
+     内部直接发 POST 建资源，跟 T1.3.1 建立的"mutation 前先打印账号"纪律不一致。改成
+     创建前的日志行带上 `account={ACCOUNT_ID}`。
+  4. **跨账号复用本地缓存的 namespace id**——缓存文件原来只存一个裸 id，换账号跑会拿旧
+     账号的 id 去撞新账号（Cloudflare 会因为 id 不属于该账号报错，不会静默写错账号，但
+     报错信息很难看出真正原因）。改成缓存里带上 `account_id`，读的时候校验一致。
+  5. **最终失败不打印 Cloudflare 返回的错误详情**——4 次重试全失败时原来直接裸 raise，
+     操作者看不到错误码/message。跟 `build-vectorize-index.py` 的 `upsert_vectors` 保持
+     一致，加上失败详情打印。
+  6. **namespace 列表查询没处理分页**——账号里 namespace 数量较多时可能漏掉已存在的
+     `blog-search-manifest`，`--create-namespace` 建出重复同名 namespace、两份数据不同步。
+     改成翻完全部分页再判断。
+  非阻塞：进度日志的报告粒度从每 50 条改成每 20 条（跟 T1.3.1 的批量粒度对齐，缩小失败
+  定位的误差范围）；畸形 plan 文件（不是 list、也没有 `plan` key 的 dict）原来会在
+  `build_manifest` 里炸出不知所云的 `TypeError`，改成在 `main()` 提前报清楚的错误。
+- **证据**：分支 `feat/T1.3.5-index-manifest`，PR <推进时回填>
 
 ### T1.3.6 登录认证（密码 + 签名 Cookie）  `PR_OPEN`
 - **优先级**：high
