@@ -11,6 +11,7 @@ import {
 	renderReferers,
 	renderPages,
 	renderStacks,
+	renderSearch,
 } from '../lib/analytics-render.js';
 
 // 默认英文：首屏 HTML 直接就是英文，不靠 JS 兜——JS 被禁时页面依然完整可读，
@@ -252,6 +253,14 @@ for (const p of data.pages) {
 				<div class="card stack-cols" data-a="stacks" set:html={renderStacks(data, LANG)} />
 			</section>
 
+			<section class="block">
+				<div class="section-head">
+					<h2 data-a="search-head">{t.searchHead}</h2>
+					<span class="note" data-a="search-note">{t.searchNote}</span>
+				</div>
+				<div class="card" data-a="search" set:html={renderSearch(data, LANG)} />
+			</section>
+
 			<p class="foot-note" data-a="footer">{t.footer(new Date(data.generatedAt).toISOString().slice(0, 16).replace('T', ' '), false)}</p>
 		</main>
 		<Footer />
@@ -294,11 +303,32 @@ for (const p of data.pages) {
 				.then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
 				.then((live) => {
 					if (!live || !Array.isArray(live.daily) || !live.daily.length) return;
-					data = mergeTitles(live, titleMap);
+					// mergeTitles 整体替换 data，search 这一节独立于这次公开看板的取数
+					// （见下面单独的 fetch），这里先保留上一轮已经拿到的 data.search，
+					// 不要因为公开看板刷新一次就把它冲掉。
+					data = { ...mergeTitles(live, titleMap), search: data.search };
 					render();
 				})
 				.catch(() => {
 					/* 保持构建期快照 */
+				});
+
+			// 搜索使用统计：独立的登录门禁端点（见 functions/api/search-analytics.json.js
+			// 文件头注释——刻意不跟上面公开看板共用同一次取数/缓存，避免登录用户才能看的
+			// 数据经由公开缓存泄露给所有访客）。未登录会拿到 401，页面照实显示"登录后可见"，
+			// 不是页面级错误。
+			fetch('/api/search-analytics.json', { headers: { accept: 'application/json' } })
+				.then(async (r) => {
+					if (r.status === 401) return { error: 'unauthorized' };
+					if (!r.ok) return { error: 'upstream_http', status: r.status };
+					return r.json();
+				})
+				.then((search) => {
+					data = { ...data, search };
+					render();
+				})
+				.catch(() => {
+					/* 保持"暂无数据"兜底文案，不影响页面其余部分 */
 				});
 		</script>
 	</body>

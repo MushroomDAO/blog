@@ -34,3 +34,11 @@ binding = "AI"
 [[vectorize]]
 binding = "VECTORIZE_INDEX"
 index_name = "blog-search-v1"
+
+# 搜索使用统计（用户明确要求：想看上线后有多少人在用、都搜了什么）。用 Analytics
+# Engine 而不是复用 BLOG_SEARCH_KV：那个 namespace 已经同时扛着登录限速/搜索限速/
+# 缓存/manifest 四种用途（见 followups.md FU-18），事件日志这种"只写不太读、按时间
+# 序列查"的负载不该再往里堆。数据集首次写入时自动创建，不需要提前手动建。
+[[analytics_engine_datasets]]
+binding = "SEARCH_ANALYTICS"
+dataset = "blog_search_events"

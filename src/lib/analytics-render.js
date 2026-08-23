@@ -61,6 +61,17 @@ export const STRINGS = {
 		groupOs: 'Operating system',
 		groupBrowser: 'Browser',
 
+		searchHead: 'Search usage (logged-in semantic search)',
+		searchNote: '30-day totals, /search page only',
+		searchKpiTotal: 'Searches',
+		searchKpiIps: 'Unique IPs',
+		searchTopHead: 'Top queries',
+		searchNoData: 'No data yet — either the feature just launched, or the search-analytics dataset isn’t configured.',
+		searchSignInRequired: 'Sign in via /search to view search usage stats — this section isn’t part of the public dashboard.',
+		searchForbidden: 'The analytics token doesn’t have permission to query search stats (403) — check its scope in the Cloudflare dashboard.',
+		searchColQuery: 'Query',
+		searchColCount: 'Count',
+
 		footer: (ts, live) =>
 			`Data comes from the Cloudflare GraphQL Analytics API (Web Analytics / RUM dataset). No cookies, no personally identifying information. ` +
 			(live
@@ -125,6 +136,17 @@ export const STRINGS = {
 		groupDevice: '设备类型',
 		groupOs: '操作系统',
 		groupBrowser: '浏览器',
+
+		searchHead: '搜索使用情况（登录后的语义检索）',
+		searchNote: '近 30 天汇总，仅 /search 页面',
+		searchKpiTotal: '搜索次数',
+		searchKpiIps: '独立 IP 数',
+		searchTopHead: '热门搜索词',
+		searchNoData: '暂无数据——可能是功能刚上线，也可能是搜索统计数据集还没配置好。',
+		searchSignInRequired: '登录 /search 后才能查看搜索使用统计——这一节不属于公开看板的一部分。',
+		searchForbidden: '统计 token 没有查询搜索数据的权限（403）——去 Cloudflare 后台检查 token 权限范围。',
+		searchColQuery: '查询词',
+		searchColCount: '次数',
 
 		footer: (ts, live) =>
 			`数据来自 Cloudflare GraphQL Analytics API（Web Analytics / RUM 数据集），不使用 Cookie、不采集个人身份信息。` +
@@ -311,6 +333,57 @@ export function renderStacks(data, lang) {
 		.join('');
 }
 
+/**
+ * 搜索使用统计（用户明确要求：想看上线后有多少人在用、都搜了什么）。
+ * data.search 可能不存在（构建期快照没有这个字段、或还没等到
+ * /api/search-analytics.json 的响应回来）或带 error：
+ * - 'unauthorized' —— 这一节独立于公开看板，走单独的登录门禁（见
+ *   functions/api/search-analytics.json.js 文件头注释），未登录时明确提示去
+ *   哪里登录，跟"真的没有数据"区分开，不要让站长以为功能坏了
+ * - 'forbidden'（production-failure-mode review 指出的真实 UX 缺口）—— token
+ *   权限不够（403），单独提示"配置有问题"，不要跟"还没人用这个功能"混为一谈：
+ *   前者站长需要去 Cloudflare Dashboard 查 token 权限，后者什么都不用做
+ * - 其它 error（未配置/数据集还没建/网络失败）——统一按"暂无数据"处理
+ */
+export function renderSearch(data, lang) {
+	const t = STRINGS[lang];
+	const s = data.search;
+	if (!s || s.error === 'unauthorized') {
+		return `<p class="note">${esc(t.searchSignInRequired)}</p>`;
+	}
+	if (s.error === 'forbidden') {
+		return `<p class="note">${esc(t.searchForbidden)}</p>`;
+	}
+	if (s.error) {
+		return `<p class="note">${esc(t.searchNoData)}</p>`;
+	}
+
+	const maxCount = Math.max(...s.topQueries.map((q) => q.count), 1);
+	const topRows = s.topQueries
+		.map(
+			(q) => `<div class="row">
+      <span class="name">${esc(q.query)}</span>
+      <span class="track"><span class="fill" style="width:${(q.count / maxCount) * 100}%"></span></span>
+      <span class="num">${fmt(q.count)}</span>
+    </div>`,
+		)
+		.join('');
+
+	return `
+    <div class="kpis" style="margin-bottom:1.2em;grid-template-columns:repeat(2,1fr);max-width:26em;">
+      <div class="kpi">
+        <div class="label">${esc(t.searchKpiTotal)}</div>
+        <div class="value">${fmt(s.totalSearches)}</div>
+      </div>
+      <div class="kpi">
+        <div class="label">${esc(t.searchKpiIps)}</div>
+        <div class="value">${fmt(s.uniqueIps)}</div>
+      </div>
+    </div>
+    <div class="note" style="margin-bottom:0.5em;">${esc(t.searchTopHead)}</div>
+    <div class="barlist">${topRows || `<p class="note">${esc(t.searchNoData)}</p>`}</div>`;
+}
+
 /** 把一份数据完整刷进已有的 DOM 结构里（实时刷新和语言切换都走这里）。 */
 export function paint(root, data, lang) {
 	const t = STRINGS[lang];
@@ -341,6 +414,7 @@ export function paint(root, data, lang) {
 	set('[data-a="referers"]', renderReferers(data, lang));
 	set('[data-a="pages"]', renderPages(data, lang));
 	set('[data-a="stacks"]', renderStacks(data, lang));
+	set('[data-a="search"]', renderSearch(data, lang));
 
 	text('[data-a="trend-head"]', t.trendHead);
 	text('[data-a="trend-note"]', t.trendNote);
@@ -360,6 +434,8 @@ export function paint(root, data, lang) {
 	text('[data-a="col-visits"]', t.colVisits);
 	text('[data-a="stack-head"]', t.stackHead);
 	text('[data-a="stack-note"]', t.stackNote);
+	text('[data-a="search-head"]', t.searchHead);
+	text('[data-a="search-note"]', t.searchNote);
 
 	const ts = String(data.generatedAt).slice(0, 16).replace('T', ' ');
 	text('[data-a="footer"]', t.footer(ts, !!data.live));

@@ -84,6 +84,31 @@ async function hashSessionCookie(cookieValue) {
 	return sha256Hex(cookieValue);
 }
 
+// 搜索使用统计（用户明确要求：想看上线后有多少人在用、都搜了什么）。用 Workers
+// Analytics Engine 而不是复用 BLOG_SEARCH_KV：这个 KV namespace 已经同时扛着登录
+// 限速/搜索限速/缓存/manifest 四种用途（见 FU-18），事件日志这种「只写不太读、
+// 按时间序列查」的负载不该再往里堆，Analytics Engine 是 Cloudflare 专门为这类场景
+// 做的产品——写入不占 KV 配额，按 SQL 查，不需要手动清理 TTL。
+// 注意：这里存的是归一化后的**明文** query（不是哈希）——跟 T1.3.4 缓存 key 刻意
+// 用哈希"不记录用户原始查询原文"的设计不是同一个诉求：那是缓存层面尽量少存不必要的
+// 明文，这里是站长本人明确要求要能看到"搜了什么"这个可读的运营数据，Analytics
+// Engine 数据集本身不对外公开、只有账号持有者能查（见 functions/api/analytics.json.js
+// 的读取端）。
+// writeDataPoint 是同步调用（Cloudflare 在后台异步落盘，不阻塞这次响应），binding
+// 缺失时直接抛异常，包一层 try/catch 让统计功能本身的故障/未配置永远不影响搜索
+// 请求本身——这是运营可视化数据，不是安全控制，没有必要 fail-closed。
+function logSearchEvent(env, { ip, query, resultCount, cacheHit }) {
+	try {
+		env.SEARCH_ANALYTICS?.writeDataPoint({
+			indexes: [ip], // index1：按 IP 分组/抽样用
+			blobs: [query], // blob1：归一化后的查询词原文
+			doubles: [resultCount, cacheHit ? 1 : 0], // double1：返回结果数，double2：是否命中缓存
+		});
+	} catch {
+		// 忽略——统计失败不该影响搜索功能本身
+	}
+}
+
 // 修正（FU-16 round 2 review 抓到的真实 bug）：原来 normalizeQuery 只用在算缓存 key，
 // 传给 env.AI.run() 的还是原始未归一化的 query——这不是"多几次缓存未命中"那么无害：
 // 两个经归一化后判定"等价"的查询串（比如全角"ＰＡＧＥＦＩＮＤ"和半角"pagefind"），
@@ -194,6 +219,7 @@ export async function onRequestPost(context) {
 			// .catch 的一支，.map 一抛异常会把整个合并搜索打死，连 Pagefind 那半
 			// 本来能成功的结果都一起没了。非数组就当作没命中，走下面重新计算。
 			if (Array.isArray(parsed)) {
+				logSearchEvent(env, { ip, query, resultCount: parsed.length, cacheHit: true });
 				return jsonResponse({ results: parsed }, 200);
 			}
 		}
@@ -259,6 +285,7 @@ export async function onRequestPost(context) {
 		// 忽略
 	}
 
+	logSearchEvent(env, { ip, query, resultCount: results.length, cacheHit: false });
 	return jsonResponse({ results }, 200);
 }
 
