@@ -1,32 +1,27 @@
 {
-  "generatedAt": "2026-08-22T14:00:02Z",
+  "generatedAt": "2026-08-23T14:00:01Z",
   "period": {
-    "start": "2026-07-23",
-    "end": "2026-08-22"
+    "start": "2026-07-24",
+    "end": "2026-08-23"
   },
   "totals": {
-    "pageviews": 9330,
-    "visits": 8660,
-    "bots": 0
+    "pageviews": 9430,
+    "visits": 8770,
+    "bots": 30
   },
   "last7": {
-    "pv": 2740,
-    "visits": 2640
+    "pv": 2580,
+    "visits": 2440
   },
   "prior7": {
-    "pv": 3060,
-    "visits": 2880
+    "pv": 3190,
+    "visits": 3020
   },
   "daily": [
     {
-      "date": "07-23",
-      "pv": 30,
-      "visits": 30
-    },
-    {
       "date": "07-24",
-      "pv": 200,
-      "visits": 120
+      "pv": 50,
+      "visits": 30
     },
     {
       "date": "07-25",
@@ -170,7 +165,12 @@
     },
     {
       "date": "08-22",
-      "pv": 180,
+      "pv": 240,
+      "visits": 230
+    },
+    {
+      "date": "08-23",
+      "pv": 220,
       "visits": 170
     }
   ],
@@ -180,105 +180,105 @@
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 4600,
-      "visits": 4500
+      "pv": 4070,
+      "visits": 4050
     },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 1900,
-      "visits": 1900
-    },
-    {
-      "code": "TH",
-      "flag": "🇹🇭",
-      "name": "泰国",
-      "nameEn": "Thailand",
-      "pv": 900,
-      "visits": 500
-    },
-    {
-      "code": "US",
-      "flag": "🇺🇸",
-      "name": "美国",
-      "nameEn": "United States",
-      "pv": 700,
-      "visits": 600
-    },
-    {
-      "code": "TW",
-      "flag": "🇹🇼",
-      "name": "台湾",
-      "nameEn": "Taiwan",
-      "pv": 500,
-      "visits": 500
+      "pv": 2290,
+      "visits": 2070
     },
     {
       "code": "HK",
       "flag": "🇭🇰",
       "name": "香港",
       "nameEn": "Hong Kong",
-      "pv": 400,
-      "visits": 400
+      "pv": 780,
+      "visits": 740
+    },
+    {
+      "code": "US",
+      "flag": "🇺🇸",
+      "name": "美国",
+      "nameEn": "United States",
+      "pv": 760,
+      "visits": 650
+    },
+    {
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "pv": 450,
+      "visits": 300
     },
     {
       "code": "JP",
       "flag": "🇯🇵",
       "name": "日本",
       "nameEn": "Japan",
-      "pv": 300,
-      "visits": 200
+      "pv": 400,
+      "visits": 320
+    },
+    {
+      "code": "TW",
+      "flag": "🇹🇼",
+      "name": "台湾",
+      "nameEn": "Taiwan",
+      "pv": 230,
+      "visits": 230
     },
     {
       "code": "NL",
       "flag": "🇳🇱",
       "name": "荷兰",
       "nameEn": "Netherlands",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "code": "KR",
-      "flag": "🇰🇷",
-      "name": "韩国",
-      "nameEn": "South Korea",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "code": "UA",
-      "flag": "🇺🇦",
-      "name": "UA",
-      "nameEn": "UA",
-      "pv": 100,
-      "visits": 100
+      "pv": 70,
+      "visits": 60
     },
     {
       "code": "CO",
       "flag": "🇨🇴",
       "name": "CO",
       "nameEn": "CO",
-      "pv": 100,
-      "visits": 100
+      "pv": 40,
+      "visits": 40
+    },
+    {
+      "code": "VN",
+      "flag": "🇻🇳",
+      "name": "越南",
+      "nameEn": "Vietnam",
+      "pv": 40,
+      "visits": 40
     },
     {
       "code": "ID",
       "flag": "🇮🇩",
       "name": "印度尼西亚",
       "nameEn": "Indonesia",
-      "pv": 100,
-      "visits": 100
+      "pv": 40,
+      "visits": 40
+    },
+    {
+      "code": "DE",
+      "flag": "🇩🇪",
+      "name": "德国",
+      "nameEn": "Germany",
+      "pv": 40,
+      "visits": 40
     }
   ],
-  "countryTotal": 10100,
+  "countryTotal": 9430,
   "referers": {
-    "direct": 6200,
+    "direct": 5550,
     "search": 3000,
-    "ecosystem": 700,
-    "ai": 0,
-    "other": 200
+    "ecosystem": 720,
+    "ai": 20,
+    "other": 140
   },
   "pages": [
     {
@@ -300,42 +300,42 @@
       "titleEn": "Home",
       "path": "/",
       "pv": 330,
-      "visits": 250
+      "visits": 270
     },
     {
       "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
       "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
       "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 180,
-      "visits": 180
+      "pv": 190,
+      "visits": 190
     },
     {
       "title": "my",
       "titleEn": "my",
       "path": "/my/",
-      "pv": 160,
-      "visits": 0
-    },
-    {
-      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
-      "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
-      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
-      "pv": 140,
-      "visits": 140
-    },
-    {
-      "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
-      "titleEn": "Running DeepSeek V4-Flash Locally: A Hardware Selection and Deployment Handbook",
-      "path": "/blog/deepseek-v4-flash-local-inference-guide/",
-      "pv": 140,
-      "visits": 140
+      "pv": 170,
+      "visits": 10
     },
     {
       "title": "小红书运营能工作流化吗？6 个 Codex Skills 给出一个答案",
       "titleEn": "Can Xiaohongshu Operations Become a Workflow? Six Codex Skills Offer an Answer",
       "path": "/blog/xiaohongshu-operations-codex-skills-workflow-systematic/",
-      "pv": 120,
-      "visits": 110
+      "pv": 130,
+      "visits": 120
+    },
+    {
+      "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+      "titleEn": "Running DeepSeek V4-Flash Locally: A Hardware Selection and Deployment Handbook",
+      "path": "/blog/deepseek-v4-flash-local-inference-guide/",
+      "pv": 130,
+      "visits": 130
+    },
+    {
+      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
+      "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
+      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
+      "pv": 130,
+      "visits": 130
     },
     {
       "title": "Kimi K3 技术深析：KDA、Stable LatentMoE 与首个开源 3T 级模型",
@@ -345,13 +345,6 @@
       "visits": 110
     },
     {
-      "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
-      "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
-      "path": "/blog/hitchhikers-guide-agentic-ai-book/",
-      "pv": 100,
-      "visits": 100
-    },
-    {
       "title": "ChatCut × Codex / Claude Code：用提示词剪视频的完整教程，五套原创模板",
       "titleEn": "ChatCut × Codex / Claude Code: Complete Video Editing Tutorial with 5 Original Prompt Templates",
       "path": "/blog/chatcut-ai-video-editor-codex-claude-code-plugin-tutorial/",
@@ -359,11 +352,18 @@
       "visits": 100
     },
     {
-      "title": "MetaPact：一键部署专属 AI 女友，她会记得你昨天几点到家",
-      "titleEn": "MetaPact: Deploy Your Own AI Girlfriend Who Remembers When You Got Home Yesterday",
-      "path": "/blog/metapact-ai-girlfriend-setup-guide/",
-      "pv": 80,
-      "visits": 80
+      "title": "grill-me：181k Star 的 Claude Code Skill，用一个问题消灭 AI 编码最常见的失败模式",
+      "titleEn": "grill-me: The 181k-Star Claude Code Skill That Eliminates the Most Common AI Coding Failure Mode One Question at a Time",
+      "path": "/blog/grill-me-skill-mattpocock-claude-code-guide/",
+      "pv": 100,
+      "visits": 90
+    },
+    {
+      "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
+      "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
+      "path": "/blog/hitchhikers-guide-agentic-ai-book/",
+      "pv": 100,
+      "visits": 100
     },
     {
       "title": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南",
@@ -380,21 +380,21 @@
       "visits": 80
     },
     {
-      "title": "grill-me：181k Star 的 Claude Code Skill，用一个问题消灭 AI 编码最常见的失败模式",
-      "titleEn": "grill-me: The 181k-Star Claude Code Skill That Eliminates the Most Common AI Coding Failure Mode One Question at a Time",
-      "path": "/blog/grill-me-skill-mattpocock-claude-code-guide/",
+      "title": "MetaPact：一键部署专属 AI 女友，她会记得你昨天几点到家",
+      "titleEn": "MetaPact: Deploy Your Own AI Girlfriend Who Remembers When You Got Home Yesterday",
+      "path": "/blog/metapact-ai-girlfriend-setup-guide/",
       "pv": 80,
-      "visits": 70
+      "visits": 80
     }
   ],
   "devices": [
     {
       "label": "desktop",
-      "count": 8760
+      "count": 8870
     },
     {
       "label": "mobile",
-      "count": 550
+      "count": 540
     },
     {
       "label": "tablet",
@@ -404,53 +404,65 @@
   "os": [
     {
       "label": "Windows",
-      "count": 7300
+      "count": 6650
     },
     {
       "label": "MacOSX",
-      "count": 1600
+      "count": 1500
     },
     {
       "label": "Unknown",
-      "count": 400
-    },
-    {
-      "label": "Android",
-      "count": 400
+      "count": 510
     },
     {
       "label": "Linux",
-      "count": 300
+      "count": 360
+    },
+    {
+      "label": "Android",
+      "count": 240
     },
     {
       "label": "iOS",
-      "count": 100
+      "count": 170
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 7400
+      "count": 6720
     },
     {
       "label": "Edge",
-      "count": 1500
+      "count": 1410
     },
     {
       "label": "Unknown",
-      "count": 400
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 300
+      "count": 510
     },
     {
       "label": "Safari",
-      "count": 300
+      "count": 280
+    },
+    {
+      "label": "ChromeMobile",
+      "count": 210
+    },
+    {
+      "label": "MobileSafari",
+      "count": 100
     },
     {
       "label": "ChromeMobileWebview",
-      "count": 200
+      "count": 90
+    },
+    {
+      "label": "Firefox",
+      "count": 80
+    },
+    {
+      "label": "ChromeHeadless",
+      "count": 30
     }
   ]
 }
