@@ -32,6 +32,15 @@ function makeFakeAi({ vector = [0.1, 0.2, 0.3], shouldThrow = false, recordedCal
 	};
 }
 
+function makeFakeAnalytics({ shouldThrow = false, recordedPoints = null } = {}) {
+	return {
+		writeDataPoint(point) {
+			if (shouldThrow) throw new Error('Analytics Engine unavailable');
+			if (recordedPoints) recordedPoints.push(point);
+		},
+	};
+}
+
 function makeFakeVectorize({ matches = [], shouldThrow = false } = {}) {
 	return {
 		async query(vector, opts) {
@@ -493,6 +502,58 @@ test('缓存：命中的缓存值不是数组（脏数据）时，当作未命�
 	const body = await resp.json();
 	assert.ok(Array.isArray(body.results), '应该当作缓存未命中，重新计算出正常的数组结果，而不是把脏数据原样返回');
 	assert.equal(body.results[0].article_id, 'article-a');
+});
+
+// 搜索使用统计（用户明确要求：想看上线后有多少人在用、都搜了什么）。
+test('搜索统计：新计算的结果会写一条 Analytics Engine 数据点（ip/query/结果数/非缓存命中）', async () => {
+	const recordedPoints = [];
+	const matches = [makeMatch('article-a', 0.7)];
+	const env = await makeEnv({
+		VECTORIZE_INDEX: makeFakeVectorize({ matches }),
+		SEARCH_ANALYTICS: makeFakeAnalytics({ recordedPoints }),
+	});
+	const cookie = await validCookie();
+	const resp = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip: '30.30.30.30' }), env });
+	assert.equal(resp.status, 200);
+	assert.equal(recordedPoints.length, 1);
+	assert.deepEqual(recordedPoints[0].indexes, ['30.30.30.30']);
+	assert.deepEqual(recordedPoints[0].blobs, ['pagefind']);
+	assert.deepEqual(recordedPoints[0].doubles, [1, 0], '结果数=1，cacheHit 标记=0（未命中缓存）');
+});
+
+test('搜索统计：缓存命中也会写一条数据点，cacheHit 标记为 1', async () => {
+	const recordedPoints = [];
+	const kv = makeFakeKv();
+	const matches = [makeMatch('article-a', 0.7)];
+	const cookie = await validCookie();
+	const workingEnv = await makeEnv({ BLOG_SEARCH_KV: kv, VECTORIZE_INDEX: makeFakeVectorize({ matches }) });
+	await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip: '31.31.31.31' }), env: workingEnv });
+
+	const envWithAnalytics = await makeEnv({ BLOG_SEARCH_KV: kv, SEARCH_ANALYTICS: makeFakeAnalytics({ recordedPoints }) });
+	const resp = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip: '32.32.32.32' }), env: envWithAnalytics });
+	assert.equal(resp.status, 200);
+	assert.equal(recordedPoints.length, 1);
+	assert.deepEqual(recordedPoints[0].doubles, [1, 1], 'cacheHit 标记=1（命中缓存）');
+});
+
+test('搜索统计：SEARCH_ANALYTICS 绑定缺失时不影响搜索本身正常返回', async () => {
+	const env = await makeEnv({ VECTORIZE_INDEX: makeFakeVectorize({ matches: [makeMatch('article-a', 0.7)] }) });
+	// 故意不设置 env.SEARCH_ANALYTICS —— 模拟绑定还没配置好/部署滞后的情况
+	const cookie = await validCookie();
+	const resp = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip: '33.33.33.33' }), env });
+	assert.equal(resp.status, 200, '统计功能是运营可视化数据，不是安全控制，缺失不应该 fail-closed');
+});
+
+test('搜索统计：writeDataPoint 抛异常时不影响搜索本身正常返回', async () => {
+	const env = await makeEnv({
+		VECTORIZE_INDEX: makeFakeVectorize({ matches: [makeMatch('article-a', 0.7)] }),
+		SEARCH_ANALYTICS: makeFakeAnalytics({ shouldThrow: true }),
+	});
+	const cookie = await validCookie();
+	const resp = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { cookie, ip: '34.34.34.34' }), env });
+	assert.equal(resp.status, 200, '统计写入失败不应该让整个搜索请求跟着报错');
+	const body = await resp.json();
+	assert.ok(Array.isArray(body.results));
 });
 
 test('GET 请求：405', async () => {
