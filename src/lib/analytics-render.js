@@ -69,6 +69,7 @@ export const STRINGS = {
 		searchNoData: 'No data yet — either the feature just launched, or the search-analytics dataset isn’t configured.',
 		searchSignInRequired: 'Sign in via /search to view search usage stats — this section isn’t part of the public dashboard.',
 		searchForbidden: 'The analytics token doesn’t have permission to query search stats (403) — check its scope in the Cloudflare dashboard.',
+		searchUpstreamError: (status) => `The search-stats query itself failed (HTTP ${status}) — this looks like a real integration bug, not "no searches yet". Check the Analytics Engine SQL syntax.`,
 		searchColQuery: 'Query',
 		searchColCount: 'Count',
 
@@ -145,6 +146,7 @@ export const STRINGS = {
 		searchNoData: '暂无数据——可能是功能刚上线，也可能是搜索统计数据集还没配置好。',
 		searchSignInRequired: '登录 /search 后才能查看搜索使用统计——这一节不属于公开看板的一部分。',
 		searchForbidden: '统计 token 没有查询搜索数据的权限（403）——去 Cloudflare 后台检查 token 权限范围。',
+		searchUpstreamError: (status) => `搜索统计的查询本身失败了（HTTP ${status}）——这看起来是集成本身出了问题，不是"还没人搜索"，去检查 Analytics Engine 的 SQL 语法。`,
 		searchColQuery: '查询词',
 		searchColCount: '次数',
 
@@ -343,6 +345,11 @@ export function renderStacks(data, lang) {
  * - 'forbidden'（production-failure-mode review 指出的真实 UX 缺口）—— token
  *   权限不够（403），单独提示"配置有问题"，不要跟"还没人用这个功能"混为一谈：
  *   前者站长需要去 Cloudflare Dashboard 查 token 权限，后者什么都不用做
+ * - 'upstream_http'（round 2 review 指出的真实 UX 缺口）——SQL 查询本身被
+ *   Analytics Engine 拒绝（比如语法错误），这三条 SQL 从没对真实上游执行过，
+ *   如果哪条写法有问题，之前会跟"还没人用这个功能"显示同一句话，永远看不出
+ *   集成本身是坏的。单独提示"统计接口出错"+ 具体状态码，方便站长发现问题、
+ *   而不是误以为一直没人搜索
  * - 其它 error（未配置/数据集还没建/网络失败）——统一按"暂无数据"处理
  */
 export function renderSearch(data, lang) {
@@ -353,6 +360,9 @@ export function renderSearch(data, lang) {
 	}
 	if (s.error === 'forbidden') {
 		return `<p class="note">${esc(t.searchForbidden)}</p>`;
+	}
+	if (s.error === 'upstream_http') {
+		return `<p class="note">${esc(t.searchUpstreamError(s.status))}</p>`;
 	}
 	if (s.error) {
 		return `<p class="note">${esc(t.searchNoData)}</p>`;
