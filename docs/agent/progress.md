@@ -9,9 +9,9 @@
   功能完成 + 全部合并，包括 PR #57 对 T1.3.4 缓存归一化 bug 的 round 2 修复。F1.3 没有再剩下
   任何功能性未完成的 task；生产环境已验证语义检索可用，首页导航也有了入口（PR #56）。
   下一个 Feature 是 **F1.4（自动更新与增强，Phase 2）**，依赖已满足，见下方"下一个 READY"。
-- **分支 / worktree**：无正在开发的分支；`../blog-F1.3-t136` worktree 仍在（跟 F1.3 挂钩，
-  F1.3 已全部合并，可在下一个 Feature 开工前按 `pilot status` 的清理流程处理）
-- **PR**：无（全部已合并或关闭）
+- **分支 / worktree**：`../blog-F1.3-t136` 当前是 PR #58（本次文档同步）的工作树，
+  等它合并后再按 `pilot status` 的清理流程处理，不要在那之前当成 F1.3 的遗留物拆掉
+- **PR**：#58（本次文档同步）待回执/待人工 approve
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
@@ -41,21 +41,6 @@
 - 2026-08-22：**PR #56 合并**（`fix/nav-search-link`）——首页全局导航（`Header.astro`）
   补上"🔍 Search"入口链接。起因：语义检索功能上线后发现首页没有任何入口指向 `/search`，
   只有知道这个路径的人才能用到——先手动部署上线修复，随后补开 PR 留存永久记录。
-- 2026-08-22：**停用 GitHub Actions 自动部署到 Cloudflare Pages**（`.github/workflows/deploy.yml`
-  → `test.yml`，只跑 `pnpm test` + `pnpm build` 做 CI 验证，加了 `pull_request` 触发，
-  不再碰 Cloudflare）。起因：这个 workflow 用的 `CLOUDFLARE_API_TOKEN` GitHub secret
-  失效了一段时间（见 FU-14），静默让好几次自动部署失败，没人第一时间发现。以后部署
-  统一走本地 wrangler，不再依赖一个平时没人盯着的远端 secret——**交互式手动部署**用
-  `./deploy.sh`（假定已经 `wrangler login` 或 shell 里已经有 `CLOUDFLARE_API_TOKEN`）；
-  **非交互式 cron**（`scripts/update-analytics.sh`、`pipeline/newsletter/
-  local-fallback.sh`）各自显式从项目 `.env` 读 token，不依赖任何交互式登录状态。
-  `wrangler.toml` 补了 `account_id`（原来唯一记录它的地方是刚删掉的那个 workflow）。
-  顺带修了 `scripts/update-analytics.sh`：它原来显式依赖 CI 部署当本地部署失败时的
-  兜底（2026-08-13 真实发生过一次），现在从根因修掉；`pipeline/newsletter/
-  local-fallback.sh` 新增的本地部署路径经 round 2 review 抓出两个阻塞问题（cron
-  真实 PATH 下 pnpm/npx/node/wrangler 全部找不到、部署逻辑挂在 push 成功判断之外、
-  push 失败也会用脏工作树部署到生产）已修复，并对齐 `scripts/publish-blog.sh` 已有的
-  CA-bundle-优先-TLS-bypass-兜底写法。
 - 2026-08-22：**T1.3.4 完成**（`functions/api/search.js` 加查询结果缓存：6 小时 TTL，
   query 归一化取哈希做 key，命中跳过计费的 AI/Vectorize 调用）——T1.3.4 原定范围里的
   "输入长度上限"/"简单限速"/"降级"其实 T1.3.3 落地时已经一并做完，本 task 实际只剩
