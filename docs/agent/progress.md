@@ -1,25 +1,22 @@
 # 语义检索 / 智能推荐功能 实时状态 — progress
 
 > 「此刻仓库真实发生了什么」。由 `pilot run` 每一步更新。
-> 更新时间：2026-08-23（`pilot status` 核实 PR #58~#61 真实合并状态后同步）
+> 更新时间：2026-08-23（`pilot resume` 合并 PR #62、开出 PR #63 后同步）
 
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
-- **Feature**：**F1.3 语义检索上线（Phase 1）已全部 DONE**——T1.3.1~T1.3.6 全部 6 个 task
-  功能完成 + 全部合并。F1.3 没有再剩下任何功能性未完成的 task；生产环境已验证语义检索可用，
-  首页导航也有了入口（PR #56），且自 PR #61 起**语义检索已改为公开，不再需要登录**
-  （见下方"最近完成"、`architecture.md` 核心判断 7 更新段落）。
-  下一个 Feature 是 **F1.4（自动更新与增强，Phase 2）**，依赖已满足，见下方"下一个 READY"。
-- **分支 / worktree**：`../blog-F1.3-t136` 已随 PR #58 合并清理完毕，`git worktree list`
-  确认不再存在，不是遗留物。当前活跃的是本次文档同步 + forage 小改动用的
-  `../blog-chore-docsync`（chore 分支，非 Feature，按硬约束 #3 单独开的 worktree）。
-- **PR**：#58/#59/#60/#61 均已合并（`gh pr view` 核实，状态 MERGED）。F1.4 T1.4.1 及其它
-  并行分支的 PR 状态不在本表 track，以 `gh pr list` 实时结果为准。
+- **Feature**：F1.3（Phase 1）已全部 DONE。当前在 **F1.4（自动更新与增强，Phase 2）**——
+  T1.4.1（发布流程接入增量索引 hook）已实现，PR #63 待回执。
+- **分支 / worktree**：`../blog-F1.3-t136` 已随 PR #58 合并清理完毕。`../blog-chore-docsync`
+  对应的 PR #62 已合并（squash `38123a0`），worktree/分支待清理（`safe-cleanup.sh
+  --squash-merged` 已列出命令，由人执行）。当前活跃的是 T1.4.1 用的
+  `../blog-F1.4`（分支 `feat/T1.4.1-incremental-index-hook`）。
+- **PR**：#58/#59/#60/#61/#62 均已合并。**#63（T1.4.1）待回执**，见下表。
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| chore | #62 | REQUEST_CHANGES，修复中 | forage 采集脚本小改动 + 本次文档同步 + `.playwright-mcp` 调试产物清理 |
+| T1.4.1 | #63 | 待回执 | 增量索引 hook（只对变化的 article/language 重新 embed+upsert）；3 轮对抗自审已做，见 tasks.md T1.4.1 证据 |
 
 ## 阻塞项（BLOCKED）
 - （无）**CI 自动部署问题已解决**（原 FU-14）：GitHub Actions 的 `CLOUDFLARE_API_TOKEN`
@@ -195,6 +192,6 @@
   `^1.5.2`，以后不带包名的 `pnpm update` 可能悄悄升级、打断 postbuild，非阻塞）。
 
 ## 下一个 READY
-- **T1.4.1**（发布流程接入增量索引 hook）——F1.3 全部 6 个 task 已 DONE，F1.4 的依赖条件
-  已满足，`tasks.md` 已把 T1.4.1 状态从 `BACKLOG` 改成 `READY`。开工前建议先给 F1.4 单独开
-  一个专属 worktree（见 pilot 硬约束 #3），不要复用 `../blog-F1.3-t136`。
+- T1.4.1 已实现，`PR_OPEN`（#63），不再是 READY——见上方"进行中/待回执的 PR"。
+- 没有其它 READY task；F1.4 剩下的 T1.4.2/T1.4.3/T1.4.4 依赖 T1.4.1（`BACKLOG`），T1.4.1
+  合并后再解锁。

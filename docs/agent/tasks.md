@@ -156,7 +156,8 @@
   用户已铸造新 token 并补齐 Vectorize:Edit + Workers AI:Edit 两条权限，当前用的就是这个新
   token，FU-7 的窄权限诉求已满足，遗留问题只剩"要不要把旧的 `CLOUDFLARE_REGISTRAR_TOKEN`
   全部改名/收回"，非阻塞）；脚本本身不做"先记旧再删"的增量更新，两次运行之间若文章内容被
-  编辑会留下孤儿向量，正式的解决方案是 T1.4.1（FU-8）。
+  编辑会留下孤儿向量，正式的解决方案是 **T1.4.2**（FU-8——T1.4.1 交付时已明确"不清理孤儿向量"，
+2026-08-23 改派给 T1.4.2 的 Cron 对账逻辑，T1.4.2 目前 BACKLOG，这个兜底在它交付前不存在）。
 - **真实执行中发现的平台限制（未在文档预判，靠实际调用暴露）**：Cloudflare Vectorize v2 的
   vector id 有 **64 字节硬上限**，原计划的 `article_id:language:content_hash` 拼接方案对长
   slug 文章会超限（实测某文章拼出 71 字节，首次 `--upsert` 直接 400）。已改为对完整逻辑 key
@@ -525,18 +526,30 @@
 
 ## F1.4 — 自动更新与增强（Phase 2，依赖 F1.3 全部 DONE）
 
-### T1.4.1 发布流程接入增量索引 hook  `READY`
+### T1.4.1 发布流程接入增量索引 hook  `PR_OPEN`
 - **优先级**：high
 - **目标**：`deploy.sh` / blog-publisher skill 发布成功后，自动触发新增/变更文章的增量索引
 - **开发范围**：发布流程末尾加一步 hook 调用，生成/更新 `search-manifest.json` 并触发索引
-- **明确不做**：不做失败重试的复杂退避策略（交给 T1.4.2 的 Cron 对账兜底）
+- **明确不做**：不做失败重试的复杂退避策略（交给 T1.4.2 的 Cron 对账兜底）；不清理孤儿向量
 - **依赖**：F1.3 全部 Task DONE（**2026-08-23 已满足**——T1.3.1~T1.3.6 全部 DONE，PR #57 是
   F1.3 范围内最后一个合并的 PR）
-- **交付物**：`deploy.sh` 或 blog-publisher skill 的 hook 改动
-- **验收命令**：`<待实现时补充：如发布一篇测试文章后，短时间内 /api/search 能查到它>`
-- **涉及文件**：`deploy.sh`、`.agents/skills/blog-publisher/`
-- **风险/回滚**：改动发布流程需谨慎，不能影响现有博客发布主流程；出问题可直接回滚该 hook
-- **证据**：<推进时回填>
+- **交付物**：`semantic-search/scripts/incremental-index.py`（新，只对变化的 article/language
+  重新 embed+upsert，其余复用 `build-vectorize-index.py`/`manifest.py` 的既有函数）+
+  `scripts/publish-blog.sh` 新增 `[4.7]` 步骤调用它（真正的挂钩点是 canonical 发布脚本
+  `scripts/publish-blog.sh`，不是 `deploy.sh`——后者是整站构建部署，不是单篇文章发布流程）
+- **验收命令**：发布一篇测试文章后，短时间内 `/api/search` 能查到它（**待 PR #63 合并 + 一次真实
+  发布验证后回填是否满足**——本 PR 里只验证了只读 diff 逻辑，真实 embed+upsert 因 KV
+  namespace 列名空间权限 401 未能对生产账号跑通，见 PR body）
+- **涉及文件**：`semantic-search/scripts/incremental-index.py`、
+  `semantic-search/scripts/test_incremental_index.py`、`scripts/publish-blog.sh`
+- **风险/回滚**：改动发布流程需谨慎，不能影响现有博客发布主流程——已用 `if`/`else` 包住调用，
+  索引失败不会因为 `set -euo pipefail` 而中断已完成的 git commit/push；出问题可直接注释掉
+  `publish-blog.sh` 的 `[4.7]` 段落回滚
+- **证据**：PR [#63](https://github.com/MushroomDAO/blog/pull/63)，3 轮独立子 agent 对抗式
+  自审（正确性/安全/生产失败模式）：正确性发现 `do_upsert` manifest 合并用了循环前旧快照
+  导致新双语文章两个语言互相覆盖的真 bug（已修复+回归测试）；安全发现 `--slug` 未校验存在
+  路径穿越/绝对路径覆盖（已加白名单正则+回归测试）；生产失败模式无阻塞项。
+  `pnpm test` 83/83、`test_incremental_index.py` 17/17 通过。
 
 ### T1.4.2 Cron Trigger 每日对账  `BACKLOG`
 - **优先级**：mid
