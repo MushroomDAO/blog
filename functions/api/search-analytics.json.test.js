@@ -151,6 +151,19 @@ test('fetchSearchStats: 权限不足（403）单独归类为 forbidden，不跟 
 	);
 });
 
+// 回归测试（round 2 review 指出的真实问题）：400 是 SQL 查询本身不合法才会返回的状态码，
+// 之前跟"数据集不存在"（404）归成一类当"暂无数据"处理——这三条 SQL 从没对真实上游执行过，
+// 如果写法有问题会被永久误判成"还没人搜"，而不是"这个功能本身是坏的"。
+test('fetchSearchStats: 查询本身不合法（400）归类为 upstream_http，不跟"暂无数据"混在一起', async () => {
+	await withFetch(
+		async () => ({ ok: false, status: 400 }),
+		async () => {
+			const result = await fetchSearchStats('tok', 'acct');
+			assert.deepEqual(result, { error: 'upstream_http', status: 400 }, '400 应该是可见的集成错误，不是"暂无数据"');
+		},
+	);
+});
+
 test('fetchSearchStats: 其它未知 HTTP 错误（如 500）归类为 upstream_http', async () => {
 	await withFetch(
 		async () => ({ ok: false, status: 500 }),

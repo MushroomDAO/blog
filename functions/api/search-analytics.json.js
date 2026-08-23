@@ -70,13 +70,18 @@ async function fetchSearchStats(token, accountTag) {
 			// 改成找第一个失败的响应，报它自己的状态码。
 			const failed = [totalsResp, dailyResp, topResp].find((r) => !r.ok);
 			const status = failed.status;
-			// 数据集在第一次真实写入之前不存在，查询会 404/400——这不是错误，是"还没有人
+			// 数据集在第一次真实写入之前不存在，查询会 404——这不是错误，是"还没有人
 			// 用过这个功能"，页面应该显示"暂无数据"而不是报错。403 单独分出来（production-
 			// failure-mode review 指出的真实 UX 缺口）：CF_ANALYTICS_TOKEN 权限不够时也是
 			// upstream_http，跟"数据集不存在"归成一类会让站长把"token 权限没配对"误读成
 			// "还没人用这个功能"，两种情况需要采取的行动完全不同（前者要去 Cloudflare
 			// Dashboard 查 token 权限，后者什么都不用做，等有人用就有数据）。
-			const kind = status === 404 || status === 400 ? 'no_data_yet' : status === 403 ? 'forbidden' : 'upstream_http';
+			// 修正（round 2 review 指出的真实问题）：原来把 400 也归进 no_data_yet——400 是
+			// Analytics Engine 判定 SQL 查询本身语法/语义不合法才会返回的状态码，这三条 SQL
+			// 从没对真实上游执行过（测试全部 stub 了 fetch），如果任何一条写法有问题，会被
+			// 永久误判成"还没人搜"，而不是"这个功能本身是坏的"——两者需要采取的行动完全
+			// 不同，不能归成一类。400 现在归进 upstream_http，跟"暂无数据"明确区分开。
+			const kind = status === 404 ? 'no_data_yet' : status === 403 ? 'forbidden' : 'upstream_http';
 			return { error: kind, status };
 		}
 
