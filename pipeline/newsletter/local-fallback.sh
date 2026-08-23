@@ -66,10 +66,11 @@ if [ "$AHEAD" -gt 0 ]; then
     # 问题：commit 进了远端，生产却停在旧快照，没人主动去重新部署。
     log "顺带触发一次本地部署，避免生产停在推送前的旧快照…"
 
-    # 修正（round 2 review 抓到的阻塞 bug）：这段是本 PR 全新加的路径，之前完全没有
-    # 跟兄弟脚本 update-analytics.sh 一样的 PATH/nvm 处理——真实 cron 的 PATH
-    # （crontab 里显式写死的那行）下 pnpm/npx/node/wrangler 全部 NOTFOUND，这段
-    # 代码会 100% 跑不起来。跟 update-analytics.sh:29-32 抄同一段。
+    # 修正（round 2 review 抓到的阻塞 bug，且经真实 cron 日志复核：这条部署路径
+    # 从落地到现在一次都没真正执行过——真实 cron 的内联 PATH 下 nvm bin 目录里有
+    # node/npx，但没有 pnpm，只抄 update-analytics.sh 的 nvm 兜底救不回来，必须
+    # 像 update-analytics.sh:22 那样显式把 pnpm 的安装目录也加进 PATH）。
+    export PATH="/Users/jason/Library/pnpm:/Users/jason/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
     if ! command -v node >/dev/null 2>&1; then
       NODE_BIN=$(ls -d "$HOME"/.nvm/versions/node/*/bin 2>/dev/null | sort -V | tail -1)
       [ -n "$NODE_BIN" ] && export PATH="$NODE_BIN:$PATH"
@@ -89,11 +90,27 @@ if [ "$AHEAD" -gt 0 ]; then
         RAW_TOKEN="$(printf '%s' "$RAW_TOKEN" | tr -d '\r')"
         [ -n "$RAW_TOKEN" ] && export CLOUDFLARE_API_TOKEN="$RAW_TOKEN"
       fi
+      # 同一套读法取 CLOUDFLARE_ACCOUNT_ID（round 2 review 指出：这里之前只手动
+      # 摘取 CLOUDFLARE_API_TOKEN，不整体 source .env，注释却写"权威值是 .env"——
+      # 这句话是反的。现在真正从 .env 读，让那句话变成真的）。
+      if [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ] && [ -f .env ]; then
+        RAW_ACCOUNT_ID="$(grep '^CLOUDFLARE_ACCOUNT_ID=' .env | tail -1 | cut -d= -f2- || true)"
+        RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID%\"}"; RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID#\"}"
+        RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID%\'}"; RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID#\'}"
+        RAW_ACCOUNT_ID="$(printf '%s' "$RAW_ACCOUNT_ID" | tr -d '\r')"
+        [ -n "$RAW_ACCOUNT_ID" ] && export CLOUDFLARE_ACCOUNT_ID="$RAW_ACCOUNT_ID"
+      fi
 
       # 部署用的分支名跟着 git 的当前分支走，不写死 main——写死的话在非 main 分支
       # （比如 dailyblog）上跑这个 cron，会把那个分支的内容当成 main 的生产部署发出去
       # （round 2 review 指出的问题）。
-      DEPLOY_BRANCH="$(git branch --show-current 2>/dev/null || echo main)"
+      # 修正（round 2 review 复审指出的死代码）：`git branch --show-current` 在
+      # detached HEAD 下打印空字符串、退出码仍是 0——`||` 只在非零退出码时触发，
+      # 永远不会因为"打印了空字符串"而触发，原写法在 detached HEAD 下会把
+      # DEPLOY_BRANCH 设成空字符串，wrangler 拿到 `--branch=`。改成显式判断
+      # 结果是否为空，而不是依赖退出码。
+      DEPLOY_BRANCH="$(git branch --show-current 2>/dev/null)"
+      [ -n "$DEPLOY_BRANCH" ] || DEPLOY_BRANCH=main
 
       # 跟 scripts/publish-blog.sh / update-analytics.sh 一样的 CA 优先、TLS bypass
       # 兜底写法（见 .agents/skills/blog-publisher/SKILL.md「token + TLS workaround
@@ -109,10 +126,14 @@ if [ "$AHEAD" -gt 0 ]; then
         pnpm build 2>&1 | tail -5 || DEPLOY_OK=0
       fi
       if [ "$DEPLOY_OK" = 1 ]; then
-        # account_id 不能写进 wrangler.toml（Pages 项目 schema 不认这个顶层字段，
-        # 写了会让每次部署直接报错退出——这就是这条路径从 chore/manual-deploy-only
-        # 合并起一直在静默失败的根因）。改成部署前导出环境变量；字面量只是兜底，
-        # 权威值是项目 .env 的 CLOUDFLARE_ACCOUNT_ID，改账号 id 只需要改 .env 那一处。
+        # account_id 不能写进 wrangler.toml——Pages 项目的配置 schema 不接受这个
+        # 顶层字段（实测直接报 "Configuration file for Pages projects does not
+        # support 'account_id'"）。这行由 #54 引入、main 上的 c6ec09b 已经删掉。
+        # （round 2 review 指出：不要断言这条路径曾经因为它失败过——真实日志显示
+        # 这条部署路径从落地到现在从没真正跑到过这一行：上面的 PATH 修好之前，
+        # `command -v pnpm` 检查会先失败并跳过整段部署，跟这行代码是否存在无关。）
+        # CLOUDFLARE_ACCOUNT_ID 现在真的从 .env 读（见上面新增的读取块），这里的
+        # 字面量只是 .env 缺这一项时的兜底。
         export CLOUDFLARE_ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-7bf23342f21baa5ebfc7bc7b74f5a1f2}"
         CA="${NODE_EXTRA_CA_CERTS:-${CF_CA_CERT:-}}"
         if [ -n "$CA" ] && [ -f "$CA" ]; then
