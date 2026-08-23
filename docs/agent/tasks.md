@@ -222,11 +222,11 @@
      （避免下一片一开始就严重超预算、和上一片高度重复）。
   非阻塞发现：CJK token 计数原来漏算中文标点（「」《》等），已扩大 CJK 判定范围；
   16-per-语言 vs 16-per-文章 的文档歧义未解决（见下）。
-- **文档未决问题（非阻塞，供后续参考）**：`tasks.md`/`spec.md`/`architecture.md` 都没有
-  明确说"每篇 12-16 chunk"这个预算是按整篇文章算，还是按文章里的每种语言各自算——本次
-  实现按"每语言"处理（双语文章理论上限 32 chunk）。全库只有 3 篇文章总 chunk 数超过 16
-  （最多 24），如果后续判断应该是"每篇"总量，需要重新调整 `MAX_CHUNKS_PER_LANGUAGE`
-  的语义。
+- **文档未决问题，2026-08-24 跟进账本批量清理时明确（FU-10）**：预算是"每语言"，不是
+  "每篇"——`chunking.py` 的常量名本身就叫 `MAX_CHUNKS_PER_LANGUAGE`，代码层面从未含糊过，
+  含糊的只是 `tasks.md`/`spec.md`/`architecture.md` 的散文没跟着点破。这不是新决定，是把
+  已经上线跑了两天、全库验证过（只有 3 篇文章总 chunk 数超过 16，最多 24）的既成实现在
+  文档里写清楚，避免以后有人读散文以为该按"每篇"重新调整 `MAX_CHUNKS_PER_LANGUAGE`。
 - **证据**：分支 `feat/T1.3.2-chunking-bilingual`，PR [#45](https://github.com/MushroomDAO/blog/pull/45)（合并 commit `b8f547b`）
 
 ### T1.3.3 `/api/search` Worker 端点 + 前端 RRF 融合  `DONE`
