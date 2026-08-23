@@ -292,3 +292,299 @@ mmc bootpart enable 1 1 /dev/mmcblk0
 - **安全芯片**：ELE（Edge Lock Enclave），独立 Cortex-M33
 - **工作 bootloader**：LF\_v6.18.2-1.0.0 `flash_singleboot_gdet_auto`（NXP BSP 包内）
 - **eMMC 布局**：sector 0 = MBR，hardware boot0 = bootloader（正确），sector 16384 = FAT32（kernel/dtb），sector 540672 = ext4（rootfs）
+
+---
+
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+
+<!--EN-->
+
+> **When**: June 2026
+> **Author**: Jason (AAstar)
+> **Hardware**: NXP FRDM-IMX93 (aarch64 Cortex-A55, OP-TEE 4.8, production KMS service)
+
+---
+
+## The incident: one command missing one flag
+
+We run AirAccount KMS (a TEE private-key management service) on an NXP FRDM-IMX93 dev board, serving `kms.aastar.io`. One day, in an SSH session, we ran:
+
+```bash
+dd if=imx-boot.bin of=/dev/mmcblk0
+```
+
+**Missing `seek=66`.**
+
+This wrote the imx-boot binary straight to the start of the eMMC (sector 0), overwriting the MBR and partition table. The correct command should have been:
+
+```bash
+dd if=imx-boot.bin of=/dev/mmcblk0 seek=66 bs=512 conv=notrunc
+```
+
+eMMC booting requires the bootloader to sit at sector 66 (byte offset 0x8400), whereas SD cards use sector 64 (byte offset 0x8000). Without `seek=66`, the MBR gets overwritten and the board's next boot hangs at:
+
+```
+M33 prepare ok
+(then nothing — no output, no response, requires a power cycle)
+```
+
+---
+
+## Hardware basics (read before you start troubleshooting)
+
+```
+FRDM-IMX93 interfaces:
+  J1 (upper USB-C) = CH342 dual serial → /dev/cu.usbmodem5B6D0044901
+                      debug port, no power, NOT a flashing port
+  J2 (lower USB-C)  = i.MX93 USB OTG
+                      flashing port, SDPS/SDPV/FB protocols
+
+  Power = a separate connector, neither J1 nor J2 supplies power
+
+SW1 DIP switches:
+  0001 = SDPS USB download mode (used with J2 for flashing)
+  0010 = eMMC boot
+  0011 = SD card boot
+
+eMMC vs SD boot offset:
+  SD card: bootloader at sector 64 (= 32KB)
+  eMMC:    bootloader at sector 66 (= 33792 bytes = 0x8400)
+  A 2-sector (1KB) difference — this is exactly why the dd command needs seek=66
+```
+
+---
+
+## Attempt one: UTM + uuu (a complete dead end)
+
+**Idea**: use NXP's official `uuu` tool to push the bootloader over USB OTG via J2, boot from RAM, then repair eMMC from there.
+
+**Snag 1: macOS IOHIDFamily grabs the device**
+
+Running `uuu` directly on the Mac:
+
+```
+HID(W): LIBUSB_ERROR_TIMEOUT (-7)(20.16s)
+```
+
+Stuck at 14%, forever. Root cause: macOS's kernel-level IOHIDFamily driver exclusively claims the NXP USB HID device (VID=1FC9, PID=014E), so libusb can't write to it. `sudo` doesn't help — this is a kernel-driver-level lock, not a permissions issue.
+
+**Snag 2: UTM `LIBUSB_ERROR_ACCESS`**
+
+Using UTM (QEMU on macOS) to pass the NXP USB device through to an Ubuntu VM, so `uuu` inside the VM could operate on it:
+
+```
+LIBUSB_ERROR_ACCESS (-3): could not claim interface 0 (configuration 2)
+```
+
+Root cause: an off-by-one bug in QEMU/libusb's USB device configuration indexing — the NXP SDPS device only has 1 configuration (configuration 0), but UTM's libusb tries to access configuration 2 and refuses outright. There's no external fix for this — it's a bug in UTM's own source.
+
+**Snag 3: UTM can't auto-forward a device that re-enumerates**
+
+During the SDPS → SDPV transition, the i.MX93's USB PID changes from 0x014E to 0x0151, and UTM's GUI requires manually reconnecting the device — manual intervention simply can't keep up with the timing involved.
+
+**Conclusion: the macOS + UTM route is a complete dead end. Not worth retrying.**
+
+---
+
+## Attempt two: ELE Anti-Rollback (an unexpectedly deep pit)
+
+After fixing the UTM issues, a deeper problem surfaced:
+
+```
+SDPS transfer completes 100% → wait for SDPV (0x0151) to appear → never appears
+```
+
+Watching the serial console (J1, 115200 baud) showed the SPL was completely silent — no output at all.
+
+**Root cause: ELE (Edge Lock Enclave) Anti-Rollback**
+
+The i.MX93's ELE is a security subsystem with an internal SNVS monotonic counter. Every time a newer ELE firmware version runs, this counter advances irreversibly. Once advanced, older ELE firmware versions get permanently rejected.
+
+| Version | Result |
+|---|---|
+| LF_v6.6.36 | Rejected by ELE — SDPS succeeds but SPL never runs |
+| LF_v6.12.34 | No serial output at all (ELE may also reject it, or DDR init crashes) |
+| LF_v6.18.2 | Accepted by ELE ✓ |
+
+Our board had previously run v6.18.2, so its ELE counter had already advanced, permanently locking out v6.6.36.
+
+---
+
+## Attempt three: SD card boot (the turning point)
+
+Abandoned the USB-flashing route and switched to booting from SD card.
+
+**Snag 1: the plain v6.18.2 singleboot variant crashes DDR init**
+
+After writing to the SD card and booting, the serial console received about 1,417 bytes of garbage before stopping — a classic sign of a DDR-init crash: garbage gets written to UART before DDR is even properly initialized.
+
+**Snag 2: the v6.18.2 `gdet_auto` variant is the right one**
+
+NXP's BSP ships several bootloader variants; the `gdet_auto` suffix means "auto-detect GPIO" — it probes the board revision and automatically selects the correct DDR timing parameters.
+
+Filename: `imx-boot-imx93-11x11-lpddr4x-frdm-sd.bin-flash_singleboot_gdet_auto`
+
+Written to SD card sector 64, `SW1=0011`, power on: **the blue LED lit up.**
+
+The serial console at 115200 baud still showed garbage (it turned out to actually be running at a higher baud rate), but SSH over Ethernet got in fine — the board was running completely normally, KMS service up.
+
+---
+
+## Repairing eMMC from an SD-card boot
+
+**Step 1: confirm the eMMC partition table is intact**
+
+```bash
+ssh root@192.168.2.37 "fdisk -l /dev/mmcblk0"
+# p1: FAT32  sector 16384  256MB   ← kernel + DTB ✓
+# p2: ext4   sector 540672 8.5GB   ← rootfs ✓
+```
+
+The kernel and rootfs on eMMC were intact — only the bootloader region (sectors 0-65) was damaged.
+
+**Step 2: write v6.18.2 `gdet_auto` into eMMC sector 66**
+
+```bash
+ssh root@192.168.2.37 "
+dd if=/dev/mmcblk1 of=/dev/mmcblk0 skip=64 seek=66 bs=512 count=8192 conv=notrunc
+sync
+"
+# mmcblk1 = SD card (bootloader at sector 64)
+# mmcblk0 = eMMC (writing to sector 66)
+```
+
+Verified sector 66 starts with the AHAB container tag `00 20 02 87` (tag=0x87) ✓
+
+**Step 3: the `PARTITION_CONFIG` snag**
+
+```bash
+mmc extcsd read /dev/mmcblk0 | grep PARTITION_CONFIG
+# PARTITION_CONFIG: 0x00  ← BOOT_PARTITION_ENABLE=0, no boot source configured
+
+mmc bootpart enable 7 1 /dev/mmcblk0
+# 0x00 → 0x78 (boot from user area)
+```
+
+Power off, remove the SD card, `SW1=0010`, power on — **no blue LED, no serial output, completely unresponsive.**
+
+---
+
+## The key diagnostic: what's actually in sector 0?
+
+Back to SD-card boot, checked eMMC's sector 0:
+
+```bash
+dd if=/dev/mmcblk0 bs=512 count=4 2>/dev/null | od -A x -t x1 | head -4
+000000 fa b8 00 10 8e d0 bc 00 b0 b8 00 00 8e d8 8e c0
+```
+
+`fa b8 00 10 8e d0` — **this is x86 MBR boot code**, not an AHAB container.
+
+The truth: 
+- eMMC originally held a complete WIC image (MBR at sector 0, bootloader at sector 66)
+- some WIC-image-write operation had restored the MBR at sector 0
+- **result: sector 0 = x86 MBR, sector 66 = AHAB (in the correct location)**
+
+The problem: **when the i.MX93 ROM boots from user-area mode, it reads starting at sector 0**, not sector 66. The x86 MBR sitting at sector 0 is meaningless data to the ARM ROM, parsing fails, and boot terminates — before UART even gets initialized, which is why there was zero output.
+
+---
+
+## The final fix: hardware boot partition
+
+eMMC has a **hardware boot partition** (`mmcblk0boot0`) independent of the user area, dedicated to holding the bootloader — it isn't affected by MBR or partition-table operations.
+
+```bash
+# Unlock boot0's read-only protection (Linux enables it read-only by default)
+echo 0 > /sys/class/block/mmcblk0boot0/force_ro
+
+# Write the v6.18.2 gdet_auto bootloader into hardware boot0
+dd if=/dev/mmcblk1 bs=512 skip=64 count=8192 | \
+    dd of=/dev/mmcblk0boot0 bs=512 seek=0 conv=notrunc
+sync
+
+# Set BOOT_PARTITION_ENABLE=1 (boot from hardware boot0)
+mmc bootpart enable 1 1 /dev/mmcblk0
+# PARTITION_CONFIG: 0x48 (BOOT_ACK=1, BOOT_PARTITION_ENABLE=1)
+```
+
+Verified the write: sector 0 of boot0 = `00 20 02 87 01 00 00 00 00 00 02 01 90 00 00 00` (AHAB, tag=0x87) ✓
+
+Power off, remove the SD card, `SW1=0010`, power on — **the blue LED lit up.**
+
+```bash
+ssh root@192.168.2.39 "
+echo 'boot_dev:' $(cat /proc/cmdline | grep -oP 'root=\S+')
+echo 'sd_card:' $(ls /dev/mmcblk1 2>/dev/null && echo present || echo absent)
+"
+# boot_dev: root=/dev/mmcblk0p2  ← booted from eMMC ✓
+# sd_card: absent                ← SD card not present ✓
+```
+
+---
+
+## Verification: KMS service fully recovered
+
+```bash
+curl https://kms.aastar.io/health
+```
+
+```json
+{
+  "service": "kms-api",
+  "status": "healthy",
+  "ta_mode": "real",
+  "version": "0.19.0"
+}
+```
+
+- `ta_mode: "real"` — real OP-TEE TrustZone hardware, not simulated ✓
+- cloudflared tunnel: 4 active connections (sjc10/lax08/lax07/sjc11) ✓
+- kms.aastar.io publicly reachable ✓
+
+---
+
+## Full list of snags hit
+
+| Snag | Root cause | Lesson |
+|---|---|---|
+| `dd` missing `seek=66` | slip of the hand | SD uses `seek=64`, eMMC uses `seek=66` — never the same |
+| macOS `uuu` times out at 14% | IOHIDFamily kernel driver claims the HID device exclusively | direct `uuu` on a Mac is a dead end |
+| UTM `LIBUSB_ERROR_ACCESS` | QEMU libusb off-by-one bug in configuration numbering | UTM's USB passthrough is unreliable for NXP SDPS |
+| v6.6.36 rejected by ELE | ELE's SNVS counter advances irreversibly | once you've run a newer version, older ones are locked out permanently |
+| v6.18.2 singleboot crashes DDR | DDR timing mismatch from board-revision differences | must use the `gdet_auto` variant |
+| eMMC user-area boot fails | sector 0 holds an x86 MBR the ROM can't parse | the ROM reads from user-area sector 0, not sector 66 |
+| `PARTITION_CONFIG=0x78` has no effect | sector 0 is still the MBR | should use the hardware boot partition instead |
+
+---
+
+## The correct eMMC recovery procedure (quick reference)
+
+1. Prepare an SD card with the **v6.18.2 `gdet_auto`** bootloader (sector 64) + rootfs
+2. `SW1=0011`, boot Linux from the SD card
+3. SSH in and write the hardware boot partition:
+
+```bash
+echo 0 > /sys/class/block/mmcblk0boot0/force_ro
+dd if=/dev/mmcblk1 bs=512 skip=64 count=8192 | \
+    dd of=/dev/mmcblk0boot0 bs=512 seek=0 conv=notrunc
+sync
+mmc bootpart enable 1 1 /dev/mmcblk0
+```
+
+4. Power off, remove the SD card, `SW1=0010`, power on, confirm the blue LED ✓
+
+**Don't write to sector 66 of the user area — it will get overwritten by MBR/partitioning tools. Use the hardware boot partition instead.**
+
+---
+
+## Key hardware facts
+
+- **Board**: NXP FRDM-IMX93 (aarch64 Cortex-A55 @ 1.7GHz, LPDDR4x)
+- **TEE**: OP-TEE 4.8, TrustZone A55 EL3
+- **Security chip**: ELE (Edge Lock Enclave), independent Cortex-M33
+- **Working bootloader**: LF_v6.18.2-1.0.0 `flash_singleboot_gdet_auto` (from the NXP BSP package)
+- **eMMC layout**: sector 0 = MBR, hardware boot0 = bootloader (correct), sector 16384 = FAT32 (kernel/dtb), sector 540672 = ext4 (rootfs)
+
+---
+
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
