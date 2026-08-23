@@ -407,7 +407,14 @@ import Header from '../components/Header.astro';
 				}
 				const [pagefindResults, vectorOutcome] = await Promise.all([
 					searchPagefindRanked(trimmed).catch(() => []),
-					searchVectorRanked(trimmed),
+					// 修正（FU-20，PR#58 round 2 review 用实测证实并给出正确修法）：这一支原来
+					// 没有 .catch，网络层 fetch reject（断网/DNS/TLS）或响应体不是合法 JSON 会
+					// 让整个 Promise.all 抛出，连已经拿到手的 Pagefind 结果也不渲染——这正是
+					// T1.3.4 声称交付的"降级"要挡住的那种情况。fallback 值必须带上
+					// `expired: false`，不能只是 null/[]：下面紧跟着读 `vectorOutcome.expired`，
+					// 传 null 会把崩溃从这里挪到下一行（review 验证过：`.catch(() => null)`
+					// 是空操作，可观察行为跟不修完全一样）。
+					searchVectorRanked(trimmed).catch(() => ({ expired: false, results: [] })),
 				]);
 				if (myGeneration !== searchGeneration) return; // 已经被更新的一次搜索超越，整轮作废
 

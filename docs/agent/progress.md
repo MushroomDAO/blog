@@ -11,12 +11,14 @@
   下一个 Feature 是 **F1.4（自动更新与增强，Phase 2）**，依赖已满足，见下方"下一个 READY"。
 - **分支 / worktree**：`../blog-F1.3-t136` 当前是 PR #58（本次文档同步）的工作树，
   等它合并后再按 `pilot status` 的清理流程处理，不要在那之前当成 F1.3 的遗留物拆掉
-- **PR**：#58（本次文档同步）待回执/待人工 approve
+- **PR**：#58（本次文档同步）待回执/待人工 approve；F1.4 T1.4.1 及其它并行分支的 PR 状态
+  不在本表track，以 `gh pr list` 实时结果为准——上一轮这里两处（本行 vs 下表）互相打架过一次，
+  这次改成只记这个 PR 自己，不再尝试穷举其它同时在跑的分支
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| （无） | — | — | — |
+| docs-sync | #58 | 待回执/待人工 approve | 本次文档同步 |
 
 ## 阻塞项（BLOCKED）
 - （无）**CI 自动部署问题已解决**（原 FU-14）：GitHub Actions 的 `CLOUDFLARE_API_TOKEN`
@@ -41,15 +43,6 @@
 - 2026-08-22：**PR #56 合并**（`fix/nav-search-link`）——首页全局导航（`Header.astro`）
   补上"🔍 Search"入口链接。起因：语义检索功能上线后发现首页没有任何入口指向 `/search`，
   只有知道这个路径的人才能用到——先手动部署上线修复，随后补开 PR 留存永久记录。
-- 2026-08-22：**T1.3.4 完成**（`functions/api/search.js` 加查询结果缓存：6 小时 TTL，
-  query 归一化取哈希做 key，命中跳过计费的 AI/Vectorize 调用）——T1.3.4 原定范围里的
-  "输入长度上限"/"简单限速"/"降级"其实 T1.3.3 落地时已经一并做完，本 task 实际只剩
-  "常见查询缓存"这一项。3 轮对抗式自审抓到一个真问题：缓存命中最初设计成完全不计入
-  限速，但共享 KV namespace 同时扛着 T1.3.6 的登录限速器，不限速的缓存读流量能把配额
-  打满、是另一种拒绝服务面——改成限速检查挪到缓存检查之前，命中缓存依然计入限速，
-  只是跳过真正计费的调用。顺带修复 FU-12（`search-auth.js` 的 Content-Length 只信
-  请求头，跟 `search.js` 用同一个修法关掉）+ T1.3.5 状态一直忘了从 `PR_OPEN` 改成
-  `DONE`（早就合并了，纯文档疏漏）。至此 F1.3 六个 task 全部功能完成。
 - 2026-08-22：**停用 GitHub Actions 自动部署到 Cloudflare Pages**（`.github/workflows/deploy.yml`
   → `test.yml`，只跑 `pnpm test` + `pnpm build` 做 CI 验证，加了 `pull_request` 触发，
   不再碰 Cloudflare）。起因：这个 workflow 用的 `CLOUDFLARE_API_TOKEN` GitHub secret
@@ -160,14 +153,16 @@
   （已 cherry-pick 回 `main`）
 
 ## 跟进账本（不阻塞主线，见 followups.md）
-- **FU-12、FU-14、FU-16、FU-19 均已关闭**（分别 done=PR#55/#54/#57/#57，见上方"最近完成"）。
-- 剩余 OPEN（用户 2026-08-23 已确认：维持现状，等主线 F1.3/F1.4 做完后批量清，本轮不额外
-  处理）：FU-4（ColBERT 评估）、FU-5（baseline-results 编号错位）、FU-6（KV 限速器跨 PoP
-  弱点）、FU-7（凭据权限范围，已部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16 片
-  硬上限下的 token 超量残留）、FU-10（12-16 chunk 预算是每篇还是每语言的文档歧义）、
-  FU-11（KV read-modify-write 非原子，单 PoP 内并发竞态）、FU-13（建议给 Workers
-  AI/Vectorize 配置用量告警）、FU-15（TLS bypass，已确认是既定模式非遗留代码）、
-  FU-17（缓存无失效钩子对接未来 T1.4.1）、FU-18（缓存写入增加 KV 配额消耗）。
+- **FU-12、FU-14、FU-16、FU-19、FU-20 均已关闭**（分别 done=PR#55/#54/#57/#57/#58，见上方
+  "最近完成"）。
+- 剩余 OPEN（`followups.sh count-open` 核实为 13 条，用户 2026-08-23 已确认：维持现状，
+  等主线 F1.3/F1.4 做完后批量清，本轮不额外处理）：FU-4（ColBERT 评估）、FU-5
+  （baseline-results 编号错位）、FU-6（KV 限速器跨 PoP 弱点）、FU-7（凭据权限范围，已
+  部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16 片硬上限下的 token 超量残留）、
+  FU-10（12-16 chunk 预算是每篇还是每语言的文档歧义）、FU-11（KV read-modify-write 非
+  原子，单 PoP 内并发竞态）、FU-13（建议给 Workers AI/Vectorize 配置用量告警）、FU-15
+  （TLS bypass，已确认是既定模式非遗留代码）、FU-17（缓存无失效钩子对接未来 T1.4.1）、
+  FU-18（缓存写入增加 KV 配额消耗）、FU-24（.env.example 占位符会被当真值导出）。
 
 ## 下一个 READY
 - **T1.4.1**（发布流程接入增量索引 hook）——F1.3 全部 6 个 task 已 DONE，F1.4 的依赖条件
