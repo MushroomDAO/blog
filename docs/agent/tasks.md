@@ -157,7 +157,7 @@
   token，FU-7 的窄权限诉求已满足，遗留问题只剩"要不要把旧的 `CLOUDFLARE_REGISTRAR_TOKEN`
   全部改名/收回"，非阻塞）；脚本本身不做"先记旧再删"的增量更新，两次运行之间若文章内容被
   编辑会留下孤儿向量，正式的解决方案是 **T1.4.2**（FU-8——T1.4.1 交付时已明确"不清理孤儿向量"，
-2026-08-23 改派给 T1.4.2 的 Cron 对账逻辑，T1.4.2 目前 BACKLOG，这个兜底在它交付前不存在）。
+  2026-08-23 改派给 T1.4.2 的 Cron 对账逻辑，T1.4.2 目前 BACKLOG，这个兜底在它交付前不存在）。
 - **真实执行中发现的平台限制（未在文档预判，靠实际调用暴露）**：Cloudflare Vectorize v2 的
   vector id 有 **64 字节硬上限**，原计划的 `article_id:language:content_hash` 拼接方案对长
   slug 文章会超限（实测某文章拼出 71 字节，首次 `--upsert` 直接 400）。已改为对完整逻辑 key
@@ -526,7 +526,7 @@
 
 ## F1.4 — 自动更新与增强（Phase 2，依赖 F1.3 全部 DONE）
 
-### T1.4.1 发布流程接入增量索引 hook  `PR_OPEN`
+### T1.4.1 发布流程接入增量索引 hook  `DONE`
 - **优先级**：high
 - **目标**：`deploy.sh` / blog-publisher skill 发布成功后，自动触发新增/变更文章的增量索引
 - **开发范围**：发布流程末尾加一步 hook 调用，生成/更新 `search-manifest.json` 并触发索引
@@ -537,21 +537,27 @@
   重新 embed+upsert，其余复用 `build-vectorize-index.py`/`manifest.py` 的既有函数）+
   `scripts/publish-blog.sh` 新增 `[4.7]` 步骤调用它（真正的挂钩点是 canonical 发布脚本
   `scripts/publish-blog.sh`，不是 `deploy.sh`——后者是整站构建部署，不是单篇文章发布流程）
-- **验收命令**：发布一篇测试文章后，短时间内 `/api/search` 能查到它（**待 PR #63 合并 + 一次真实
-  发布验证后回填是否满足**——本 PR 里只验证了只读 diff 逻辑，真实 embed+upsert 因 KV
-  namespace 列名空间权限 401 未能对生产账号跑通，见 PR body）
+- **验收命令**：发布一篇测试文章后，短时间内 `/api/search` 能查到它（**代码已合并，
+  live 端到端验证仍待第一次真实发布触发——当前 `CLOUDFLARE_REGISTRAR_TOKEN` 缺 KV 列
+  命名空间权限（401），只读 diff 路径对生产账号没能跑通，见下方"证据"。首次真实发布
+  这条 hook 时需要留意日志里的 `[4.7]` 那一段，失败不影响发布但文章会暂时搜不到，见
+  PR #63 body 的自测记录）**
 - **涉及文件**：`semantic-search/scripts/incremental-index.py`、
   `semantic-search/scripts/test_incremental_index.py`、`scripts/publish-blog.sh`
 - **风险/回滚**：改动发布流程需谨慎，不能影响现有博客发布主流程——已用 `if`/`else` 包住调用，
   索引失败不会因为 `set -euo pipefail` 而中断已完成的 git commit/push；出问题可直接注释掉
   `publish-blog.sh` 的 `[4.7]` 段落回滚
-- **证据**：PR [#63](https://github.com/MushroomDAO/blog/pull/63)，3 轮独立子 agent 对抗式
-  自审（正确性/安全/生产失败模式）：正确性发现 `do_upsert` manifest 合并用了循环前旧快照
-  导致新双语文章两个语言互相覆盖的真 bug（已修复+回归测试）；安全发现 `--slug` 未校验存在
-  路径穿越/绝对路径覆盖（已加白名单正则+回归测试）；生产失败模式无阻塞项。
-  `pnpm test` 83/83、`test_incremental_index.py` 17/17 通过。
+- **证据**：PR [#63](https://github.com/MushroomDAO/blog/pull/63)（合并，squash `ad6a58e`）。
+  3 轮独立子 agent 对抗式自审（正确性/安全/生产失败模式）：正确性发现 `do_upsert` manifest
+  合并用了循环前旧快照导致新双语文章两个语言互相覆盖的真 bug（已修复+回归测试）；安全发现
+  `--slug` 未校验存在路径穿越/绝对路径覆盖（已加白名单正则+回归测试）；生产失败模式无阻塞项。
+  外部评审 2 轮：R1（CHANGES_REQUESTED）抓到真阻塞项——`upsert_vectors` 返回 HTTP 200 +
+  `success=false` 不抛异常，manifest 会被无条件写入,永久误判为"已索引"但向量其实没写进去；
+  已修复（`build-vectorize-index.py` 同款孪生 bug 一并修）+ 加了拆掉守卫会失败的回归测试
+  （reviewer 实测验证过）。R2 APPROVED。`pnpm test` 83/83、`test_incremental_index.py`
+  21/21 通过。
 
-### T1.4.2 Cron Trigger 每日对账  `IN_PROGRESS`
+### T1.4.2 Cron Trigger 每日对账  `PR_OPEN`
 - **优先级**：mid
 - **目标**：每日比对 manifest 与索引内容的 `content_hash`，修复漏索引文章、清理已删除文章的
   残留向量（T1.4.1 交付时把孤儿清理明确改派给了这个 task，见 T1.4.1 证据/FU-8）
@@ -592,7 +598,14 @@
   本 PR 的 `reconcile.py` 目前只给人工操作者用，人工执行时会先看 dry-run 输出的孤儿清单
   再决定要不要加 `--delete-orphans`，所以现阶段没有这个上限是可接受的——一旦接了自动
   触发，人工看一眼这一步就没有了，必须补上机械的比例上限。
-- **证据**：<推进时回填>
+- **证据**：PR [#65](https://github.com/MushroomDAO/blog/pull/65)（待评审）。3 轮独立子
+  agent 对抗式自审（正确性/安全/数据安全-破坏性操作，因为这是本仓库第一个真的会删数据的
+  脚本，专门为此加了一轮）：正确性发现 2 个 HIGH bug——`delete_by_ids` 返回
+  `success=false` 未检查就推进删 manifest（已修复）、孤儿判定用了 frontmatter 解析成功
+  后的子集而不是原始文件列表（已修复，加了临时目录回归测试）；数据安全发现真实存在的
+  `.mdx` 索引盲点（本仓库确有一篇发布中的 `.mdx` 文章未被三个索引脚本的 glob 覆盖，已
+  统一修复）+ 比例上限缺口（已记入本条"接自动触发前的硬性前提"，不在本 PR 实现）。
+  `pnpm test` 83/83、`test_reconcile.py` 11/11 通过。
 
 ### T1.4.3 可选：LLM 生成一句话匹配理由  `BACKLOG`
 - **优先级**：low（可选增强，非必须）
