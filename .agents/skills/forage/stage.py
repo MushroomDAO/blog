@@ -13,13 +13,16 @@ from store import conn, entities, norm
 
 OUT = "/tmp/forage"
 ENV = dict(os.environ); ENV["GH_DEBUG"] = ""
-MAX_TOTAL = 10
+MAX_TOTAL = 10  # 用户明确要求：每天总数不超过 10 条
+PER_SOURCE_CAP = 5  # 用户明确要求：任意单一渠道不超过 5 条，防止一个源刷屏
 # 按源分配名额，不是先到先得。
 # 纯按「一手源优先」排序会让 GitHub+HF 占满全部 10 个名额，
 # 小红书采了 171 条却一条进不来——那它就白采了。
 # 小红书的定位是线索源：它提供的是「有这么个东西」，
 # 值不值得写还得回 GitHub/HF 查一手，但没有它就少了一个发现渠道。
+# 下面每个数字都要 <= PER_SOURCE_CAP，改的时候留意别超。
 QUOTA = {"GitHub": 4, "HuggingFace": 3, "小红书": 3}
+assert all(v <= PER_SOURCE_CAP for v in QUOTA.values()), "某个源的配额超过了 PER_SOURCE_CAP"
 def quota_key(src):
     if src.startswith("小红书"): return "小红书"
     if src.startswith("X"): return "X"

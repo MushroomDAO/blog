@@ -1,24 +1,25 @@
 # 语义检索 / 智能推荐功能 实时状态 — progress
 
 > 「此刻仓库真实发生了什么」。由 `pilot run` 每一步更新。
-> 更新时间：2026-08-23
+> 更新时间：2026-08-23（`pilot status` 核实 PR #58~#61 真实合并状态后同步）
 
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
 - **Feature**：**F1.3 语义检索上线（Phase 1）已全部 DONE**——T1.3.1~T1.3.6 全部 6 个 task
-  功能完成 + 全部合并，包括 PR #57 对 T1.3.4 缓存归一化 bug 的 round 2 修复。F1.3 没有再剩下
-  任何功能性未完成的 task；生产环境已验证语义检索可用，首页导航也有了入口（PR #56）。
+  功能完成 + 全部合并。F1.3 没有再剩下任何功能性未完成的 task；生产环境已验证语义检索可用，
+  首页导航也有了入口（PR #56），且自 PR #61 起**语义检索已改为公开，不再需要登录**
+  （见下方"最近完成"、`architecture.md` 核心判断 7 更新段落）。
   下一个 Feature 是 **F1.4（自动更新与增强，Phase 2）**，依赖已满足，见下方"下一个 READY"。
-- **分支 / worktree**：`../blog-F1.3-t136` 当前是 PR #58（本次文档同步）的工作树，
-  等它合并后再按 `pilot status` 的清理流程处理，不要在那之前当成 F1.3 的遗留物拆掉
-- **PR**：#58（本次文档同步）待回执/待人工 approve；F1.4 T1.4.1 及其它并行分支的 PR 状态
-  不在本表track，以 `gh pr list` 实时结果为准——上一轮这里两处（本行 vs 下表）互相打架过一次，
-  这次改成只记这个 PR 自己，不再尝试穷举其它同时在跑的分支
+- **分支 / worktree**：`../blog-F1.3-t136` 已随 PR #58 合并清理完毕，`git worktree list`
+  确认不再存在，不是遗留物。当前活跃的是本次文档同步 + forage 小改动用的
+  `../blog-chore-docsync`（chore 分支，非 Feature，按硬约束 #3 单独开的 worktree）。
+- **PR**：#58/#59/#60/#61 均已合并（`gh pr view` 核实，状态 MERGED）。F1.4 T1.4.1 及其它
+  并行分支的 PR 状态不在本表 track，以 `gh pr list` 实时结果为准。
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| docs-sync | #58 | 待回执/待人工 approve | 本次文档同步 |
+| chore | #62 | REQUEST_CHANGES，修复中 | forage 采集脚本小改动 + 本次文档同步 + `.playwright-mcp` 调试产物清理 |
 
 ## 阻塞项（BLOCKED）
 - （无）**CI 自动部署问题已解决**（原 FU-14）：GitHub Actions 的 `CLOUDFLARE_API_TOKEN`
@@ -27,6 +28,26 @@
   脚本各自显式读 token）。这个 secret 从此不再被任何东西读取，不需要用户去 GitHub 更新它。
 
 ## 最近完成
+- 2026-08-23：**PR #61 合并**（`feat/public-search-no-auth`）——`/api/search` 的登录门禁
+  取消，语义检索改为公开（跟已上线的关键词搜索一样）。用户决策：登录墙真正防的是 Workers
+  AI/Vectorize 被刷额度，这件事一直由 IP 限速（30 req/5min）承担，不是密码；密码只挡"陌生
+  人知不知道有这功能"，当前流量级别不再需要。认证中间件本身没删，改挂在
+  `/api/search-analytics.json`（登录后查看搜索统计）和未来的 AI 对话功能上。3 轮对抗式
+  自审（正确性/安全/生产失败模式）：正确性、安全均无阻塞项（修了一处过期的 doc comment）；
+  生产失败模式记入非阻塞 FU-27（全量公开后多 IP 汇总流量可能推高账单，建议配 Cloudflare
+  用量告警）。83/83 测试通过。
+- 2026-08-23：**PR #60 合并**（`feat/search-usage-analytics`）——`/api/search` 新增使用统计
+  （写入独立的 Analytics Engine 数据集 `blog_search_events`），`/api/search-analytics.json`
+  单独开一个登录门禁、`cache-control: private, no-store` 的端点查询（不复用公开且被边缘
+  缓存的 `/api/analytics.json`，避免把登录用户的搜索数据泄露进共享缓存）。Grade B 3 轮
+  对抗式自审修复：`fetchSearchStats` 汇报错子请求状态、补了可窄权限升级的
+  `CF_ANALYTICS_ENGINE_TOKEN`、403 现在有独立的"检查 token 权限"提示。87/87 测试通过（新增
+  17 条）。非阻塞记入 FU-20（本条已确认 done=PR#58 关闭）、FU-25/FU-26（数据保留期/边缘缓存
+  未核实，运维层面待办）。**`analytics_engine_datasets` 是本仓库首次接入的新 binding 类型，
+  首次真实部署需要盯紧**（本仓库此前有过 `account_id` 配置字段静默失效数周无人发现的先例）。
+- 2026-08-23：**PR #59 合并**（`fix/deploy-centralize-account-id`）——`CLOUDFLARE_ACCOUNT_ID`
+  统一在所有部署脚本里的读取方式收敛成一处，避免重复定义漂移；顺带把导航搜索链接改成
+  纯图标（配合布局，非阻塞 UI 调整）。
 - 2026-08-22：**PR #57 合并**（`fix/rate-limit-and-cache-hardening`，squash commit
   `01aeccf`）——外部评审 round 2 对 T1.3.4 缓存归一化修复（FU-16 首次修复）本身抓出一个
   真实 bug：`normalizeQuery()` 原来只用在算缓存 key，传给 `env.AI.run()` 的还是原始未归一化
@@ -155,14 +176,23 @@
 ## 跟进账本（不阻塞主线，见 followups.md）
 - **FU-12、FU-14、FU-16、FU-19、FU-20 均已关闭**（分别 done=PR#55/#54/#57/#57/#58，见上方
   "最近完成"）。
-- 剩余 OPEN（`followups.sh count-open` 核实为 13 条，用户 2026-08-23 已确认：维持现状，
+- 剩余 OPEN（**19 条**，比上一版记录的 13 条多了 FU-25~FU-30 这 6 条：FU-25~28 来自
+  PR #59/#60/#61 review，FU-29/FU-30 来自本 chore PR（#62）自己 3 轮对抗自审的
+  production-failure-mode 发现——FU-24 在上一版就已经在 13 条里，不是新增；维持现状，
   等主线 F1.3/F1.4 做完后批量清，本轮不额外处理）：FU-4（ColBERT 评估）、FU-5
   （baseline-results 编号错位）、FU-6（KV 限速器跨 PoP 弱点）、FU-7（凭据权限范围，已
-  部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16 片硬上限下的 token 超量残留）、
-  FU-10（12-16 chunk 预算是每篇还是每语言的文档歧义）、FU-11（KV read-modify-write 非
-  原子，单 PoP 内并发竞态）、FU-13（建议给 Workers AI/Vectorize 配置用量告警）、FU-15
-  （TLS bypass，已确认是既定模式非遗留代码）、FU-17（缓存无失效钩子对接未来 T1.4.1）、
-  FU-18（缓存写入增加 KV 配额消耗）、FU-24（.env.example 占位符会被当真值导出）。
+  部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16 片硬上限下的 token 超量残留）、FU-10
+  （12-16 chunk 预算是每篇还是每语言的文档歧义）、FU-11（KV read-modify-write 非原子，单
+  PoP 内并发竞态）、FU-13（建议给 Workers AI/Vectorize 配置用量告警）、FU-15（TLS
+  bypass，已确认是既定模式非遗留代码）、FU-17（缓存无失效钩子对接未来 T1.4.1）、FU-18
+  （缓存写入增加 KV 配额消耗）、FU-24（.env.example 占位符会被当真值导出）、FU-25（搜索
+  统计存明文 IP+查询词，PR#61 公开后数据主体从"仅站长"变成"任何访客"，隐私前提已变，需
+  重新评估）、FU-26（搜索统计端点未核实是否被 zone 级 Cache Rule 覆盖 no-store）、FU-27
+  （PR#61 公开后 IP 限速不约束总独立访客量，建议配用量告警）、FU-28
+  （`/api/search-analytics.json` 本身没有限速，实际影响低但登录系统已被 PR#61 重新定位，
+  原限速器"没了归宿"）、FU-29（forage stage.py 的 PER_SOURCE_CAP 断言在模块顶层，手滑改
+  QUOTA 超限会让当天整条流水线直接中止，非阻塞）、FU-30（pagefind 从精确锁定放宽成
+  `^1.5.2`，以后不带包名的 `pnpm update` 可能悄悄升级、打断 postbuild，非阻塞）。
 
 ## 下一个 READY
 - **T1.4.1**（发布流程接入增量索引 hook）——F1.3 全部 6 个 task 已 DONE，F1.4 的依赖条件
