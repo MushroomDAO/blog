@@ -176,19 +176,23 @@
 ## 跟进账本（不阻塞主线，见 followups.md）
 - **FU-12、FU-14、FU-16、FU-19、FU-20 均已关闭**（分别 done=PR#55/#54/#57/#57/#58，见上方
   "最近完成"）。
-- 剩余 OPEN（`followups.sh count-open` 2026-08-23 重新核实为 **17 条**，比上一版记录的 13 条
-  多了 FU-24~FU-28 这一批新记入的，均来自 PR #59/#60/#61 review；维持现状，等主线 F1.3/F1.4
-  做完后批量清，本轮不额外处理）：FU-4（ColBERT 评估）、FU-5（baseline-results 编号错位）、
-  FU-6（KV 限速器跨 PoP 弱点）、FU-7（凭据权限范围，已部分满足）、FU-8（增量更新孤儿向量
-  清理）、FU-9（16 片硬上限下的 token 超量残留）、FU-10（12-16 chunk 预算是每篇还是每语言的
-  文档歧义）、FU-11（KV read-modify-write 非原子，单 PoP 内并发竞态）、FU-13（建议给 Workers
-  AI/Vectorize 配置用量告警）、FU-15（TLS bypass，已确认是既定模式非遗留代码）、FU-17
-  （缓存无失效钩子对接未来 T1.4.1）、FU-18（缓存写入增加 KV 配额消耗）、FU-24
-  （.env.example 占位符会被当真值导出）、FU-25（搜索统计存明文 IP+查询词，PR#61 公开后
-  数据主体从"仅站长"变成"任何访客"，隐私前提已变，需重新评估）、FU-26（搜索统计端点未核实
-  是否被 zone 级 Cache Rule 覆盖 no-store）、FU-27（PR#61 公开后 IP 限速不约束总独立访客量，
-  建议配用量告警）、FU-28（`/api/search-analytics.json` 本身没有限速，实际影响低但登录系统
-  已被 PR#61 重新定位，原限速器"没了归宿"）。
+- 剩余 OPEN（**19 条**，比上一版记录的 13 条多了 FU-25~FU-30 这 6 条：FU-25~28 来自
+  PR #59/#60/#61 review，FU-29/FU-30 来自本 chore PR（#62）自己 3 轮对抗自审的
+  production-failure-mode 发现——FU-24 在上一版就已经在 13 条里，不是新增；维持现状，
+  等主线 F1.3/F1.4 做完后批量清，本轮不额外处理）：FU-4（ColBERT 评估）、FU-5
+  （baseline-results 编号错位）、FU-6（KV 限速器跨 PoP 弱点）、FU-7（凭据权限范围，已
+  部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16 片硬上限下的 token 超量残留）、FU-10
+  （12-16 chunk 预算是每篇还是每语言的文档歧义）、FU-11（KV read-modify-write 非原子，单
+  PoP 内并发竞态）、FU-13（建议给 Workers AI/Vectorize 配置用量告警）、FU-15（TLS
+  bypass，已确认是既定模式非遗留代码）、FU-17（缓存无失效钩子对接未来 T1.4.1）、FU-18
+  （缓存写入增加 KV 配额消耗）、FU-24（.env.example 占位符会被当真值导出）、FU-25（搜索
+  统计存明文 IP+查询词，PR#61 公开后数据主体从"仅站长"变成"任何访客"，隐私前提已变，需
+  重新评估）、FU-26（搜索统计端点未核实是否被 zone 级 Cache Rule 覆盖 no-store）、FU-27
+  （PR#61 公开后 IP 限速不约束总独立访客量，建议配用量告警）、FU-28
+  （`/api/search-analytics.json` 本身没有限速，实际影响低但登录系统已被 PR#61 重新定位，
+  原限速器"没了归宿"）、FU-29（forage stage.py 的 PER_SOURCE_CAP 断言在模块顶层，手滑改
+  QUOTA 超限会让当天整条流水线直接中止，非阻塞）、FU-30（pagefind 从精确锁定放宽成
+  `^1.5.2`，以后不带包名的 `pnpm update` 可能悄悄升级、打断 postbuild，非阻塞）。
 
 ## 下一个 READY
 - **T1.4.1**（发布流程接入增量索引 hook）——F1.3 全部 6 个 task 已 DONE，F1.4 的依赖条件
