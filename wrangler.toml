@@ -1,12 +1,9 @@
 # Cloudflare Pages 配置
 name = "blog-mushroom"
 compatibility_date = "2024-01-01"
-# 修正（chore/manual-deploy-only round 2 review 指出的问题）：账号 id 原来只写在
-# 已删除的 .github/workflows/deploy.yml 里，是仓库里唯一记录它的地方。设置了
-# CLOUDFLARE_API_TOKEN 之后 wrangler 会从"用缓存的 OAuth 会话"切到"按 token 鉴权"，
-# 如果这个 token 对应的账号下有多个账号可选，非交互环境选不出目标账号会直接失败。
-# 写死在这里，跟部署方式（CI 还是本地 wrangler）无关，也是本仓库唯一权威来源。
-account_id = "7bf23342f21baa5ebfc7bc7b74f5a1f2"
+# wrangler 4.x 不再支持 Pages 项目在 toml 里写 account_id，改用环境变量：
+# export CLOUDFLARE_ACCOUNT_ID=7bf23342f21baa5ebfc7bc7b74f5a1f2
+# 或在 publish-blog.sh 调用时传 --account-id 参数。
 
 # 构建输出目录（Pages 必需）
 pages_build_output_dir = "./dist"
