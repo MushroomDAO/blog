@@ -327,7 +327,12 @@
   一项——**常见查询缓存**（`functions/api/search.js`）：query 归一化（trim+小写）取
   SHA-256 哈希做 KV key，6 小时 TTL，命中直接跳过 AI/Vectorize 调用；"不记录用户原始查询
   原文"通过缓存 key 用哈希而不是明文查询词本身满足——缓存值里也只有文章标题/链接/摘录，
-  不含查询词。
+  不含查询词。**订正（2026-08-23，FU-20）**："降级"这一项当时其实没有真正兑现：
+  `search.astro` 的 `searchVectorRanked` 缺一个 `.catch`，fetch 层网络失败/响应体非法
+  JSON 会让整轮搜索直接抛异常，连已经拿到的 Pagefind 结果也不渲染——这跟"超时/失败时只
+  展示本地 Pagefind 结果"的说法正好相反。这个缺陷在 PR#52/#55/#57 三轮评审里都提过，但
+  直到 F1.3 收工时同步文档才正式记入账本（FU-20），并在 PR#58 里用 review 验证过的
+  一行修法（`.catch(() => ({ expired: false, results: [] }))`）关闭。
 - **明确不做**：不做验证码类交互防护（超出必要）；登录认证不在本 task 范围内，见 T1.3.6
 - **依赖**：T1.3.3
 - **交付物**：`functions/api/search.js` 里新增的缓存逻辑 + `functions/api/search.test.js`
@@ -357,7 +362,14 @@
      未来的 T1.4.1 重新索引（FU-17）、缓存写入增加 KV namespace 级配额消耗（FU-18）、
      `rate-limit.js` 的 `checkAndIncrement` 对 KV 调用没有 try/catch、既有代码本次未改
      但缓存新增的写入量让它更容易触发（FU-19）。
-- **证据**：分支 `feat/T1.3.4-search-caching`，PR <推进时回填>
+- **证据**：分支 `feat/T1.3.4-search-caching`，PR [#55](https://github.com/MushroomDAO/blog/pull/55)（合并）。
+  Round 2 review 在后续 `fix/rate-limit-and-cache-hardening` 分支上发现 FU-16 的初次修复本身有
+  真实 bug——归一化只用在算缓存 key，传给 `env.AI.run()` 的还是原始未归一化的 query，两个语义
+  等价的查询在缓存层判成"同一条"但在 embedding 层并不等价——已用 PR
+  [#57](https://github.com/MushroomDAO/blog/pull/57)（合并）修复：归一化改到请求解析时做一次，
+  之后缓存 key 和 embedding 输入用同一个字符串；顺带加了缓存 key 版本前缀（避免旧规则缓存条目
+  语义混淆）、`Array.isArray` 校验（防止脏缓存数据原样透传给前端）、`rate-limit.js` 的
+  `checkAndIncrement` 补 try/catch（FU-19，fail-closed）。
 
 ### T1.3.5 索引 manifest 版本化  `DONE`
 - **优先级**：mid
@@ -494,12 +506,13 @@
 
 ## F1.4 — 自动更新与增强（Phase 2，依赖 F1.3 全部 DONE）
 
-### T1.4.1 发布流程接入增量索引 hook  `BACKLOG`
+### T1.4.1 发布流程接入增量索引 hook  `READY`
 - **优先级**：high
 - **目标**：`deploy.sh` / blog-publisher skill 发布成功后，自动触发新增/变更文章的增量索引
 - **开发范围**：发布流程末尾加一步 hook 调用，生成/更新 `search-manifest.json` 并触发索引
 - **明确不做**：不做失败重试的复杂退避策略（交给 T1.4.2 的 Cron 对账兜底）
-- **依赖**：F1.3 全部 Task DONE
+- **依赖**：F1.3 全部 Task DONE（**2026-08-23 已满足**——T1.3.1~T1.3.6 全部 DONE，PR #57 是
+  F1.3 范围内最后一个合并的 PR）
 - **交付物**：`deploy.sh` 或 blog-publisher skill 的 hook 改动
 - **验收命令**：`<待实现时补充：如发布一篇测试文章后，短时间内 /api/search 能查到它>`
 - **涉及文件**：`deploy.sh`、`.agents/skills/blog-publisher/`

@@ -1,28 +1,48 @@
 # 语义检索 / 智能推荐功能 实时状态 — progress
 
 > 「此刻仓库真实发生了什么」。由 `pilot run` 每一步更新。
-> 更新时间：2026-08-22
+> 更新时间：2026-08-23
 
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
-- **Feature**：F1.3 语义检索上线（Phase 1）——**T1.3.1~T1.3.6 全部 6 个 task 功能上完成**
-  （本 PR 合并后 T1.3.4 状态文档同步落地），F1.3 里没有再剩下功能性未完成的 task
-- **分支 / worktree**：无
-- **PR**：无（进行中）
+- **Feature**：**F1.3 语义检索上线（Phase 1）已全部 DONE**——T1.3.1~T1.3.6 全部 6 个 task
+  功能完成 + 全部合并，包括 PR #57 对 T1.3.4 缓存归一化 bug 的 round 2 修复。F1.3 没有再剩下
+  任何功能性未完成的 task；生产环境已验证语义检索可用，首页导航也有了入口（PR #56）。
+  下一个 Feature 是 **F1.4（自动更新与增强，Phase 2）**，依赖已满足，见下方"下一个 READY"。
+- **分支 / worktree**：`../blog-F1.3-t136` 当前是 PR #58（本次文档同步）的工作树，
+  等它合并后再按 `pilot status` 的清理流程处理，不要在那之前当成 F1.3 的遗留物拆掉
+- **PR**：#58（本次文档同步）待回执/待人工 approve；F1.4 T1.4.1 及其它并行分支的 PR 状态
+  不在本表track，以 `gh pr list` 实时结果为准——上一轮这里两处（本行 vs 下表）互相打架过一次，
+  这次改成只记这个 PR 自己，不再尝试穷举其它同时在跑的分支
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| （无） | — | — | — |
+| docs-sync | #58 | 待回执/待人工 approve | 本次文档同步 |
 
 ## 阻塞项（BLOCKED）
-- **CI 自动部署已失效**（FU-14，非阻塞主线开发，但持续影响生产）：GitHub Actions 的
-  `CLOUDFLARE_API_TOKEN` secret 报 "Not logged in"，至少从 2026-08-22 10:34 起自动部署
-  静默失败（含 PR #52 合并触发的那次）。T1.3.3 已用本地 wrangler token 手动部署验证过、
-  生产环境目前是最新的，但**下一次自动 push 仍会失败**，需要用户去 GitHub repo Settings
-  → Secrets 更新这个 token（账号级操作，需要人工确认/执行）。
+- （无）**CI 自动部署问题已解决**（原 FU-14）：GitHub Actions 的 `CLOUDFLARE_API_TOKEN`
+  secret 失效一事，用户已授权改走 PR #54（`chore/manual-deploy-only`）——彻底删除依赖这个
+  secret 的 workflow，部署改为完全走本地 `wrangler`（交互式 `./deploy.sh` / 非交互式 cron
+  脚本各自显式读 token）。这个 secret 从此不再被任何东西读取，不需要用户去 GitHub 更新它。
 
 ## 最近完成
+- 2026-08-22：**PR #57 合并**（`fix/rate-limit-and-cache-hardening`，squash commit
+  `01aeccf`）——外部评审 round 2 对 T1.3.4 缓存归一化修复（FU-16 首次修复）本身抓出一个
+  真实 bug：`normalizeQuery()` 原来只用在算缓存 key，传给 `env.AI.run()` 的还是原始未归一化
+  的 query。Reviewer 用录制式 fake AI 实测证明：全角查询先到时用自己的原文去 embedding 并
+  写入缓存，语义等价的半角查询后到直接吃缓存，拿到的是**全角原文**算出来的向量结果——
+  bge-m3 并不真的把全角/半角 Latin 字符当等价输入，缓存层的"等价"判断在 embedding 层不成立。
+  修法：归一化只在请求体解析阶段做一次，之后缓存 key 和 `env.AI.run()` 调用都用同一个已
+  归一化字符串。顺带处理两条非阻塞建议：缓存 key 加 `v2:` 版本前缀（避免旧归一化规则下的
+  缓存条目跟新规则条目语义混淆）、读缓存时加 `Array.isArray()` 校验（脏数据不再原样透传，
+  避免前端未加 `.catch` 的 `.map()` 链式调用被整体打死）。同时关闭 FU-19
+  （`rate-limit.js` 的 `checkAndIncrement` 对 KV get/put 调用补 try/catch，fail-closed）。
+  新增 2 条回归测试，全量 `pnpm test`（70/70）与 `pnpm run build` 均通过。**至此 followups
+  账本里 FU-16/FU-19 均已关闭（done=PR#57）**。
+- 2026-08-22：**PR #56 合并**（`fix/nav-search-link`）——首页全局导航（`Header.astro`）
+  补上"🔍 Search"入口链接。起因：语义检索功能上线后发现首页没有任何入口指向 `/search`，
+  只有知道这个路径的人才能用到——先手动部署上线修复，随后补开 PR 留存永久记录。
 - 2026-08-22：**停用 GitHub Actions 自动部署到 Cloudflare Pages**（`.github/workflows/deploy.yml`
   → `test.yml`，只跑 `pnpm test` + `pnpm build` 做 CI 验证，加了 `pull_request` 触发，
   不再碰 Cloudflare）。起因：这个 workflow 用的 `CLOUDFLARE_API_TOKEN` GitHub secret
@@ -133,18 +153,18 @@
   （已 cherry-pick 回 `main`）
 
 ## 跟进账本（不阻塞主线，见 followups.md）
-- **FU-12 本 PR 已修复**（`search-auth.js` 的 Content-Length 问题，见上方"最近完成"）。
-- 剩余 OPEN：FU-4（ColBERT 评估）、FU-5（baseline-results 编号错位）、FU-6（KV 限速器跨
-  PoP 弱点）、FU-7（凭据权限范围，已部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16
-  片硬上限下的 token 超量残留）、FU-10（12-16 chunk 预算是每篇还是每语言的文档歧义）、
-  FU-11（KV read-modify-write 非原子，单 PoP 内并发竞态）、FU-13（建议给 Workers
-  AI/Vectorize 配置用量告警）、FU-16~FU-19（T1.3.4 自审发现，缓存 key 归一化偏弱、
-  缓存无失效钩子对接未来 T1.4.1、缓存写入增加 KV 配额消耗、rate-limit.js 既有代码缺
-  try/catch），全部非阻塞，等主线 F1.3/F1.4 做完后批量清。另外 PR #54
-  （chore/manual-deploy-only）上有 FU-14（已关闭——引用的 workflow 已删除）/FU-15
-  （TLS bypass，已确认是既定模式非遗留代码），那条 PR 也还没合并。
+- **FU-12、FU-14、FU-16、FU-19、FU-20 均已关闭**（分别 done=PR#55/#54/#57/#57/#58，见上方
+  "最近完成"）。
+- 剩余 OPEN（`followups.sh count-open` 核实为 13 条，用户 2026-08-23 已确认：维持现状，
+  等主线 F1.3/F1.4 做完后批量清，本轮不额外处理）：FU-4（ColBERT 评估）、FU-5
+  （baseline-results 编号错位）、FU-6（KV 限速器跨 PoP 弱点）、FU-7（凭据权限范围，已
+  部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16 片硬上限下的 token 超量残留）、
+  FU-10（12-16 chunk 预算是每篇还是每语言的文档歧义）、FU-11（KV read-modify-write 非
+  原子，单 PoP 内并发竞态）、FU-13（建议给 Workers AI/Vectorize 配置用量告警）、FU-15
+  （TLS bypass，已确认是既定模式非遗留代码）、FU-17（缓存无失效钩子对接未来 T1.4.1）、
+  FU-18（缓存写入增加 KV 配额消耗）、FU-24（.env.example 占位符会被当真值导出）。
 
 ## 下一个 READY
-- **T1.3.4**（API 防滥用增强）是 F1.3 剩下唯一的 task——注意 T1.3.3 已经内置了基本防滥用
-  （IP 限速 + 会话级限速 + query 长度上限 + body 大小上限），T1.3.4 不再是"不做就不能
-  上线"的前置条件，只是后续加固（更精细限速、常见查询缓存）。
+- **T1.4.1**（发布流程接入增量索引 hook）——F1.3 全部 6 个 task 已 DONE，F1.4 的依赖条件
+  已满足，`tasks.md` 已把 T1.4.1 状态从 `BACKLOG` 改成 `READY`。开工前建议先给 F1.4 单独开
+  一个专属 worktree（见 pilot 硬约束 #3），不要复用 `../blog-F1.3-t136`。
