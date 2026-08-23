@@ -82,9 +82,32 @@ def list_local_slugs():
 
 
 def find_orphans(local_article_ids, namespace_id):
-    """manifest KV 里有、本地文章集合里没有的 key（排除 GLOBAL_KEY）就是孤儿。"""
+    """manifest KV 里有、本地文章集合里没有的 key（排除 GLOBAL_KEY）就是孤儿。
+
+    review 抓到的真实 bug：`BLOG_SEARCH_KV` 这个 namespace 是四个用途共享的（见
+    `wrangler.toml`），除了这里管的 manifest（裸 article_id 做 key），还有登录限速
+    （`ratelimit:` 前缀，值是纯数字字符串）、`/api/search` 限速（`searchlimit:` 前缀，同上）、
+    搜索结果缓存（`searchcache:v2:` 前缀，值是 JSON 数组）。这些 key 不满足"在本地文章集合
+    里"，原来的逻辑会把它们全部当成孤儿——不是"静默删错东西"（`read_kv_entry` 读回来的是
+    `int`/`list`，`delete_orphans` 里 `record.get("content_hash")` 会直接 `AttributeError`
+    崩溃），而是**排序上更靠前的非 manifest key 先崩，真正的孤儿一个都清不掉**，`--delete-
+    orphans` 在有真实流量的生产 namespace 上完全跑不通。
+
+    改成白名单而不是黑名单：只有"读出来是 dict 且有 content_hash 字段"的 key 才算 manifest
+    记录、才可能是孤儿；不认识的 key 形状一律跳过并打印一行说明，不是当成异常终止整个对账。
+    这样以后这个 namespace 里再加新用途/新前缀，默认是"不管"而不是"当成孤儿删掉"。
+    """
     all_keys = mf.list_manifest_keys(namespace_id)
-    return sorted(k for k in all_keys if k != mf.GLOBAL_KEY and k not in local_article_ids)
+    orphans = []
+    for k in all_keys:
+        if k == mf.GLOBAL_KEY or k in local_article_ids:
+            continue
+        record = mf.read_kv_entry(namespace_id, k)
+        if isinstance(record, dict) and isinstance(record.get("content_hash"), dict):
+            orphans.append(k)
+        else:
+            print(f"  skip non-manifest key in shared BLOG_SEARCH_KV namespace: {k!r}", file=sys.stderr)
+    return sorted(orphans)
 
 
 def delete_orphans(orphan_ids, namespace_id):
@@ -109,20 +132,31 @@ def delete_orphans(orphan_ids, namespace_id):
         chunk_ids = []
         for language, chash in (record.get("content_hash") or {}).items():
             chunk_ids.append(bvi.make_vector_id(aid, language, chash))
-        if chunk_ids:
-            result = bvi.delete_by_ids(INDEX_NAME, chunk_ids)
-            # review 抓到的真实 bug：delete_by_ids 跟 upsert_vectors 是同一套返回形状——只在
-            # 4xx/5xx 抛异常，HTTP 200 + success=false 不抛。不检查就删 manifest 记录，
-            # 会把"向量其实还在"报告成"已删除"，而且下一轮 find_orphans 再也看不到这个 key
-            # （manifest 记录没了），这个孤儿永久漏网、向量永久留在生产索引里，比 T1.4.1 那个
-            # 同类 bug 更严重——那边最多是"文章暂时搜不到"，这里是"删除操作报告成功但没删掉"。
-            if not result.get("success"):
-                print(f"  ⚠ {aid}: delete_by_ids failed (HTTP 200, success=false): {result.get('errors')}, "
-                      f"NOT deleting manifest entry so it can be retried next run", file=sys.stderr)
-                continue
-            total_vectors_deleted += len(chunk_ids)
+        # review 抓到的真实 bug：这原来是 `if chunk_ids:` 包住 delete_by_ids，但下面的
+        # `delete_kv_entry` 跟这个 if 同缩进、在 if 块外面——chunk_ids 为空（content_hash
+        # 缺失或是空 dict）时 delete_by_ids 确实没调用，但 delete_kv_entry 照样执行，
+        # docstring 说的"容错跳过该语言"根本没发生，是"零向量被删、manifest 指针照删"。
+        # 改成早退：真的没有可推导的 vector id 就整条跳过，不删 manifest 记录。
+        if not chunk_ids:
+            print(f"  ⚠ {aid}: manifest 记录没有可用的 content_hash，推不出 vector id —— "
+                  f"跳过，不删 manifest 记录", file=sys.stderr)
+            continue
+        result = bvi.delete_by_ids(INDEX_NAME, chunk_ids)
+        # review 抓到的真实 bug：delete_by_ids 跟 upsert_vectors 是同一套返回形状——只在
+        # 4xx/5xx 抛异常，HTTP 200 + success=false 不抛。不检查就删 manifest 记录，
+        # 会把"向量其实还在"报告成"已删除"，而且下一轮 find_orphans 再也看不到这个 key
+        # （manifest 记录没了），这个孤儿永久漏网、向量永久留在生产索引里，比 T1.4.1 那个
+        # 同类 bug 更严重——那边最多是"文章暂时搜不到"，这里是"删除操作报告成功但没删掉"。
+        if not result.get("success"):
+            print(f"  ⚠ {aid}: delete_by_ids failed (HTTP 200, success=false): {result.get('errors')}, "
+                  f"NOT deleting manifest entry so it can be retried next run", file=sys.stderr)
+            continue
+        total_vectors_deleted += len(chunk_ids)
         mf.delete_kv_entry(namespace_id, aid)
-        print(f"  - {aid}: deleted {len(chunk_ids)} vector(s) + manifest entry", file=sys.stderr)
+        # Vectorize 的 delete_by_ids 是异步的（真正的处理结果要靠 mutationId 另外查）；
+        # success=true 只代表"请求已被受理排队"，不是"向量这一刻已经从索引里消失"。
+        print(f"  - {aid}: accepted delete of {len(chunk_ids)} vector(s) (mutationId="
+              f"{result.get('mutationId')}) + deleted manifest entry", file=sys.stderr)
     return total_vectors_deleted
 
 

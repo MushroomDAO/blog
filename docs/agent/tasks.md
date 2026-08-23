@@ -605,7 +605,21 @@
   后的子集而不是原始文件列表（已修复，加了临时目录回归测试）；数据安全发现真实存在的
   `.mdx` 索引盲点（本仓库确有一篇发布中的 `.mdx` 文章未被三个索引脚本的 glob 覆盖，已
   统一修复）+ 比例上限缺口（已记入本条"接自动触发前的硬性前提"，不在本 PR 实现）。
-  `pnpm test` 83/83、`test_reconcile.py` 11/11 通过。
+  `pnpm test` 83/83、`test_reconcile.py` 11/11 通过。**外部评审 REQUEST_CHANGES**，抓到
+  2 个真阻塞项：① `find_orphans` 没考虑 `BLOG_SEARCH_KV` 是
+  manifest/`ratelimit:`/`searchlimit:`/`searchcache:v2:` 四种用途共享的同一个 namespace，
+  把非 manifest 形状的 key 也当孤儿，`delete_orphans` 读到 `int`/`list` 直接
+  `AttributeError` 崩溃——而且排序上非 manifest key 往往靠前，真正的孤儿因此永远清不到，
+  这也推翻了"不加比例上限是因为人会先看 dry-run 清单"的前提（清单会被无关 key 淹没）。
+  已改成白名单判定（只有读出来是 dict 且有 content_hash 字段的 key 才算孤儿候选，其余
+  跳过并打印说明），加了混入 `ratelimit:`/`searchcache:v2:` key 的回归测试。② 原
+  `if chunk_ids:` 只包住 `delete_by_ids`，`delete_kv_entry` 在 if 块外无条件执行——
+  `content_hash` 缺失/空 dict 时 0 个向量被删，manifest 记录却照删，docstring 承诺的
+  "容错跳过"没有真的发生。已改成早退守卫，加了空 `content_hash` 的回归测试。另外两条非阻塞
+  项：`delete_by_ids` 是异步的，`success=true` 只代表"已受理"不是"已完成"，日志措辞已改
+  （`accepted delete of N vector(s)`）；"编辑文章后旧向量从不清理"是 FU-8 最初就点名的
+  第三类场景，本 PR 目前没覆盖（只覆盖了漏索引和文章删除两类），记入 FU-32，非阻塞但
+  应尽快单独补。
 
 ### T1.4.3 可选：LLM 生成一句话匹配理由  `BACKLOG`
 - **优先级**：low（可选增强，非必须）

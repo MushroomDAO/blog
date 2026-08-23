@@ -25,6 +25,18 @@ def check(name, condition, detail=""):
 
 
 # ---- find_orphans ----
+# find_orphans 现在对每个候选 key 会调用一次 read_kv_entry 做形状校验，先给一个假的
+# manifest 数据源（key -> 完整记录），供下面几个场景用。
+_fake_kv_data = {
+    "alive-1": {"content_hash": {"zh": "h1"}, "chunking_version": "v1", "indexed_at": "t"},
+    "alive-2": {"content_hash": {"zh": "h2"}, "chunking_version": "v1", "indexed_at": "t"},
+    "gone-1": {"content_hash": {"zh": "h3"}, "chunking_version": "v1", "indexed_at": "t"},
+    "a": {"content_hash": {"zh": "ha"}, "chunking_version": "v1", "indexed_at": "t"},
+    "b": {"content_hash": {"zh": "hb"}, "chunking_version": "v1", "indexed_at": "t"},
+    "c": {"content_hash": {"zh": "hc"}, "chunking_version": "v1", "indexed_at": "t"},
+}
+mf.read_kv_entry = lambda ns, key: _fake_kv_data.get(key)
+
 mf.list_manifest_keys = lambda ns: ["alive-1", "alive-2", "gone-1", mf.GLOBAL_KEY]
 orphans = recon.find_orphans({"alive-1", "alive-2"}, "ns")
 check("孤儿 = manifest 有、本地没有，排除 _global", orphans == ["gone-1"])
@@ -32,6 +44,17 @@ check("孤儿 = manifest 有、本地没有，排除 _global", orphans == ["gone
 mf.list_manifest_keys = lambda ns: ["a", "b", "c"]
 orphans = recon.find_orphans({"a", "b", "c"}, "ns")
 check("全部都在本地时没有孤儿", orphans == [])
+
+# ---- 回归测试：review 抓到的真实 bug——BLOG_SEARCH_KV 是四个用途共享的 namespace
+# （manifest、登录限速 ratelimit:、搜索限速 searchlimit:、搜索结果缓存 searchcache:v2:），
+# 这些非 manifest 形状的 key 不该被当成孤儿（旧逻辑会把它们当孤儿，delete_orphans 读到
+# int/list 后 .get() 直接崩溃，真正的孤儿因为排在它们后面而永远清不到）。----
+_fake_kv_data["ratelimit:1.2.3.4:900"] = 4  # rate-limit.js 存的是纯数字字符串，json.loads 出来是 int
+_fake_kv_data["searchcache:v2:ff00"] = [{"title": "cached result"}]  # search.js 存的是 JSON 数组
+mf.list_manifest_keys = lambda ns: ["alive-1", "gone-1", "ratelimit:1.2.3.4:900", "searchcache:v2:ff00"]
+orphans = recon.find_orphans({"alive-1"}, "ns")
+check("非 manifest 形状的 key（ratelimit:/searchcache:v2:）不进 find_orphans 结果（回归测试）",
+      orphans == ["gone-1"])
 
 # ---- delete_orphans ----
 kv_store = {
@@ -94,6 +117,20 @@ n3 = recon.delete_orphans(["still-orphan"], "ns")
 check("delete_by_ids success=false 时不计入删除计数（回归测试）", n3 == 0)
 check("delete_by_ids success=false 时不删 manifest 记录，留给下一轮重试（回归测试）",
       deleted_kv_keys2 == [])
+
+# ---- 回归测试：manifest 记录的 content_hash 缺失/空 dict 时，推不出任何 vector id，
+# 必须整条跳过——不能调用 0 个 id 的 delete_by_ids 之后照样删掉 manifest 记录（旧代码的
+# `if chunk_ids:` 只包住 delete_by_ids，delete_kv_entry 在 if 块外、无条件执行）。----
+kv_store4 = {"empty-hash": {"content_hash": {}, "chunking_version": "v1", "indexed_at": "t"}}
+deleted_kv_keys3 = []
+delete_by_ids_calls = []
+mf.read_kv_entry = lambda ns, key: kv_store4.get(key)
+mf.delete_kv_entry = lambda ns, key: deleted_kv_keys3.append(key)
+recon.bvi.delete_by_ids = lambda index_name, ids: delete_by_ids_calls.append(ids) or {"success": True}
+n4 = recon.delete_orphans(["empty-hash"], "ns")
+check("content_hash 为空 dict 时不计入删除计数（回归测试）", n4 == 0)
+check("content_hash 为空 dict 时不调用 delete_by_ids（回归测试）", delete_by_ids_calls == [])
+check("content_hash 为空 dict 时不删 manifest 记录（回归测试）", deleted_kv_keys3 == [])
 
 # ---- 回归测试：list_local_slugs 必须用原始文件列表，不能用 load_articles 解析成功的子集——
 # 一篇 frontmatter 解析失败（缺 title）的文章，文件还在磁盘上，不该被判成孤儿。----
