@@ -19,7 +19,7 @@
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| chore | （待开）| 本地已提交 | forage 采集脚本小改动 + 本次文档同步 + `.playwright-mcp` 调试产物清理 |
+| chore | #62 | REQUEST_CHANGES，修复中 | forage 采集脚本小改动 + 本次文档同步 + `.playwright-mcp` 调试产物清理 |
 
 ## 阻塞项（BLOCKED）
 - （无）**CI 自动部署问题已解决**（原 FU-14）：GitHub Actions 的 `CLOUDFLARE_API_TOKEN`
@@ -35,14 +35,14 @@
   `/api/search-analytics.json`（登录后查看搜索统计）和未来的 AI 对话功能上。3 轮对抗式
   自审（正确性/安全/生产失败模式）：正确性、安全均无阻塞项（修了一处过期的 doc comment）；
   生产失败模式记入非阻塞 FU-27（全量公开后多 IP 汇总流量可能推高账单，建议配 Cloudflare
-  用量告警）。81/81 测试通过。
+  用量告警）。83/83 测试通过。
 - 2026-08-23：**PR #60 合并**（`feat/search-usage-analytics`）——`/api/search` 新增使用统计
   （写入独立的 Analytics Engine 数据集 `blog_search_events`），`/api/search-analytics.json`
   单独开一个登录门禁、`cache-control: private, no-store` 的端点查询（不复用公开且被边缘
   缓存的 `/api/analytics.json`，避免把登录用户的搜索数据泄露进共享缓存）。Grade B 3 轮
   对抗式自审修复：`fetchSearchStats` 汇报错子请求状态、补了可窄权限升级的
-  `CF_ANALYTICS_ENGINE_TOKEN`、403 现在有独立的"检查 token 权限"提示。86/86 测试通过（新增
-  12 条）。非阻塞记入 FU-20（本条已确认 done=PR#58 关闭）、FU-25/FU-26（数据保留期/边缘缓存
+  `CF_ANALYTICS_ENGINE_TOKEN`、403 现在有独立的"检查 token 权限"提示。87/87 测试通过（新增
+  17 条）。非阻塞记入 FU-20（本条已确认 done=PR#58 关闭）、FU-25/FU-26（数据保留期/边缘缓存
   未核实，运维层面待办）。**`analytics_engine_datasets` 是本仓库首次接入的新 binding 类型，
   首次真实部署需要盯紧**（本仓库此前有过 `account_id` 配置字段静默失效数周无人发现的先例）。
 - 2026-08-23：**PR #59 合并**（`fix/deploy-centralize-account-id`）——`CLOUDFLARE_ACCOUNT_ID`

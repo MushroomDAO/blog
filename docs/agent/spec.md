@@ -55,10 +55,12 @@
 
 ### 登录会话（Phase 1 起，T1.3.6）
 
-**认证范围（回应 review #38 B7）**：密码门禁只挡"语义检索能力"——即 `/api/search`
-及其向量/融合结果。T1.1.3 已上线的纯 Pagefind 关键词搜索页面（零成本、无需登录）**保持公开**，
-不因为本次决定而回退成需要登录——用户否决 Cloudflare Access、要求认证的原始理由是"后边接的是
-付费 Workers AI，不想被刷额度"，这条理由不适用于本来就免费的纯静态关键词搜索。
+**认证范围（回应 review #38 B7；2026-08-23 PR #61 起已变，见下）**：密码门禁原本只挡"语义检索
+能力"——即 `/api/search` 及其向量/融合结果；T1.1.3 已上线的纯 Pagefind 关键词搜索页面（零成本、
+无需登录）保持公开。**PR #61 起 `/api/search` 也已取消登录门禁、和关键词搜索一样公开**——刷额度
+的顾虑改由 per-IP 限速（30 req/5min）承担，不再靠密码挡；本节下面记录的登录会话机制本身
+未删（`_lib/auth.js`/`api/search-auth.js` 仍在），改为挂在 `/api/search-analytics` 用量统计和
+未来的 AI 对话功能上，见 `architecture.md` 核心判断 7 的"更新"段落。
 
 | 字段 | 说明 |
 |:---|:---|
@@ -83,8 +85,9 @@
 （`dist/pagefind/pagefind.js` + `PagefindUI`），Cloudflare Worker 无法调用它，`/api/search`
 不可能在服务端"并行跑 Pagefind"。正确形态：
 
-1. `/search` 页面（浏览器）本地跑 Pagefind 关键词检索（不变，T1.1.3 已有逻辑），同时——
-   已登录时——请求 `/api/search`（Worker，需登录 Cookie）。
+1. `/search` 页面（浏览器）本地跑 Pagefind 关键词检索（不变，T1.1.3 已有逻辑），同时
+   请求 `/api/search`（Worker，2026-08-23 PR #61 起公开，无需登录 Cookie，见
+   `architecture.md` 核心判断 7 的"更新"段落）。
 2. `/api/search` 只负责**向量这一路**：query → embedding → Vectorize top20 → 按
    `article_id` 聚合去重（每篇最多 1-2 片段）→ **先用向量自己的绝对信号过滤**
    （Vectorize 相似度低于阈值的候选直接丢弃，阈值用 `semantic-search/eval/queries.md`

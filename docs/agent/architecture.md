@@ -81,7 +81,8 @@ Phase 1 起（语义检索上线）
 
   用户查询
     └─▶ /search 页面（浏览器）：本地 Pagefind 关键词检索（公开，无需登录，T1.1.3 已有）
-          ∥（已登录时）请求 /api/search Worker：校验登录 Cookie → query → embedding
+          ∥ 请求 /api/search Worker（2026-08-23 PR #61 起公开，无需登录 Cookie，见核心判断 7
+            的"更新"段落）：query → embedding
               → Vectorize 向量 top20 → 按 article_id 聚合去重（每篇 1-2 片段）
               → 用 Vectorize 自身余弦相似度阈值过滤（候选可能为空）→ 返回候选
           → 浏览器 JS 按 rank（非原始分数）把两路结果做 RRF 融合
@@ -103,7 +104,8 @@ Phase 2（自动化与增强）
 - **文章搜索文档**（构建期产出，供 Pagefind 及后续 manifest 复用）：
   `article_id`（=slug）、`title`/`titleEn`、`description`/`descriptionEn`、`tags`、`category`、
   `language`、`url`、正文标题层级。字段来源见 `spec.md`。
-- **`/api/search`**（Phase 1 起）：需携带有效登录 Cookie，否则 401；输入自然语言 query
+- **`/api/search`**（Phase 1 起）：**公开访问，无需登录 Cookie**（2026-08-23 PR #61 起；原为
+  "需携带有效登录 Cookie，否则 401"，见核心判断 7 的"更新"段落）；输入自然语言 query
   （有长度上限）；输出**向量这一路**过阈值后的候选文章列表（可能为空，每篇：标题、URL、
   命中片段、语言）——聚合去重、融合排序、"没有找到"的最终判断由浏览器 JS 完成，
   不在这个端点内。
@@ -117,7 +119,8 @@ Phase 2（自动化与增强）
   manifest/KV/D1/sitemap 之一。
 - Vectorize 的 metadata 不存全文（10KiB/向量上限），只存检索所需的最小字段。
 - 检索结果必须按 `article_id` 去重聚合，不允许把 chunk top-K 直接当文章结果返回。
-- `/api/search` 必须有输入长度上限、登录校验、限速；调用失败/超时时浏览器 JS 只展示本地
+- `/api/search` 必须有输入长度上限、限速（"登录校验"一项自 2026-08-23 PR #61 起作废，见核心
+  判断 7 的"更新"段落）；调用失败/超时时浏览器 JS 只展示本地
   Pagefind 结果（Pagefind 独立于 `/api/search` 运行，这不是 Worker 侧的降级逻辑，是前端
   "没拿到向量候选就只用关键词结果"的自然结果），不记录用户原始查询原文。
 - Phase 1 是否上线，由 T1.2.2 依据 Phase 0B 的离线评测数据人工拍板，不由 agent 自行判断"应该做"
@@ -130,6 +133,9 @@ Phase 2（自动化与增强）
   命令本身必须包含"无 Cookie 请求返回 401"这条断言**，不能把认证当成 T1.3.3 合并之后才补的
   独立步骤（否则 `/api/search` 合并进 `main` 就会经既有的 Cloudflare Pages Functions 部署
   流程自动上线，出现无认证的窗口期）。T1.1.3 已上线的纯关键词搜索页面**不受此约束**，继续公开。
+  **（2026-08-23 PR #61 起本条整体作废：登录门禁已取消，`/api/search` 现已公开，防刷额度改由
+  IP 限速 30 次/5 分钟承担。原文保留作历史记录，但不再是有效边界，不要据此给 `/api/search`
+  恢复登录校验。见核心判断 7 的"更新"段落。）**
 - **`wrangler vectorize create`（建 Vectorize 索引）与 `wrangler secret put`（推送
   `BLOG_SEARCH_PASSWORD`/`BLOG_SEARCH_SESSION_SECRET` 等密钥）是真实 Cloudflare 账号级操作，
   有计费与不可逆影响**——无人值守执行到这两类命令前必须停下来问用户确认，问完再继续同一个
