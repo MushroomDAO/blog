@@ -21,12 +21,12 @@
 | 9 | local-first sync AI agent | 36 | **强相关**——第一条 Neo Chat（本地优先加密跨设备同步）精确命中 |
 | 10 | 有没有讲 Agent 循环设计的文章 | 3 | 弱相关——awesome-agent-architecture（Harness 工程地图）算是相关，其余偏泛 |
 | 11 | 脑仿真 大脑连接组 | 0 | **未命中/真实缺口**——博客里其实有 `brain-emulation-worm-to-human-scaling`（中文标题「从线虫到人类：全脑模拟的规模化之路」）、`brain-connectome-data-size-fly-human-mouse`（中文标题「脑子的数据量：从果蝇 20TB 到人脑 1.4PB…」）两篇文章，**两篇都有中文标题也都有英文标题，且页面上两种语言都会渲染**（见 `BlogPost.astro` 的 `titleEn` 展示逻辑），Pagefind 索引的是两种语言的文本，不是只有英文——真正的缺口是"脑仿真""大脑连接组"这两个具体措辞在全库任何语言版本里都不出现（同义词是"全脑模拟""连接组"），是**同语言内的措辞/同义词鸿沟**，不是跨语言桥接缺失 |
-| 12 | MLX Apple Silicon guide | 18 | **强相关**——top5 全部精确命中 MLX/Apple Silicon 主题 |
-| 13 | AI Agent 记忆系统 | 86 | **强相关**——top5 全部是 Agent 记忆系统相关文章（Wiki Memory、Dense-Mem、TencentDB Agent Memory 等） |
-| 14 | 递归自我改进 RSI | 1 | 弱相关——只命中 1 条（awesome-rsi），而同主题的英文查询 #16 命中 9 条且全部相关，说明中文短语召回明显更弱 |
-| 15 | 浏览器自动化 Agent | 73 | **强相关**——top5 中 3/5 高度相关（BrowserAct、browser-harness、ego-lite） |
-| 16 | 3D 可视化工具 | 11 | 弱相关——只有 img2threejs 算真正命中，其余偏离主题（游戏开发、深度估计） |
-| 17 | recursive self improvement | 9 | **强相关**——top5 全部精确命中，与 #14 同主题的中文查询形成鲜明对比 |
+| 12 | AI Agent 记忆系统 | 86 | **强相关**——top5 全部是 Agent 记忆系统相关文章（Wiki Memory、Dense-Mem、TencentDB Agent Memory 等） |
+| 13 | 浏览器自动化 Agent | 73 | **强相关**——top5 中 3/5 高度相关（BrowserAct、browser-harness、ego-lite） |
+| 14 | MLX Apple Silicon guide | 18 | **强相关**——top5 全部精确命中 MLX/Apple Silicon 主题 |
+| 15 | 递归自我改进 RSI | 1 | 弱相关——只命中 1 条（awesome-rsi），而同主题的英文查询 #16 命中 9 条且全部相关，说明中文短语召回明显更弱 |
+| 16 | recursive self improvement | 9 | **强相关**——top5 全部精确命中，与 #15 同主题的中文查询形成鲜明对比 |
+| 17 | 3D 可视化工具 | 11 | 弱相关——只有 img2threejs 算真正命中，其余偏离主题（游戏开发、深度估计） |
 | 18 | terminal AI coding tool | 27 | **强相关**——top5 全部是终端/IDE 类 AI 编程工具文章 |
 | 19 | 微信机器人远程控制 Claude Code | 6 | **强相关**——top5 中 4/5 高度相关（Heinu1、kimi-bridge、Proma、LobsterAI） |
 | 20 | open source video editing agent | 17 | **强相关**——top5 全部精确命中视频编辑 Agent 主题，与 #7 同主题的中文自然语言提问形成鲜明对比 |
@@ -46,7 +46,7 @@
 
 1. **中文自然语言提问明显弱于关键词/英文查询，且是同一主题下的直接对比**：
    - #7「我想本地部署一个 AI 视频编辑工具」→ 0 相关 vs #20「open source video editing agent」→ 5/5 相关
-   - #14「递归自我改进 RSI」→ 1 条 vs #16「recursive self improvement」→ 9 条全相关
+   - #15「递归自我改进 RSI」→ 1 条 vs #16「recursive self improvement」→ 9 条全相关
    - 这正是 `semantic-search/PLAN.md` 里预期向量检索能带来提升的场景，值得在 T1.2.1 重点验证。
 2. **真实的措辞/同义词鸿沟（订正：不是跨语言）**：#11「脑仿真 大脑连接组」命中 0，但博客里确实
    有对应内容的文章（`brain-emulation-worm-to-human-scaling`、
@@ -67,4 +67,4 @@
 只有满足以下任一条件，Phase 1（上线语义检索）才值得做：
 - 跨语言查询（如本次 #11）的 Recall@5 相对本基线有明显提升
 - 整体质量不低于本基线（60% 强相关 / 80% 含弱相关），且自然语言/宽泛问题的召回有可感知改善
-- 精确技术名词类查询（如 #3/#5/#12/#13，本基线已经很强）没有因为引入向量检索而变差
+- 精确技术名词类查询（如 #3/#5/#12/#14，本基线已经很强）没有因为引入向量检索而变差
