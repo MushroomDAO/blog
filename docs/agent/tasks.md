@@ -430,6 +430,11 @@
 - **证据**：分支 `feat/T1.3.5-index-manifest`，PR [#47](https://github.com/MushroomDAO/blog/pull/47)（合并）
 
 ### T1.3.6 登录认证（密码 + 签名 Cookie）  `DONE`
+- **更新（2026-08-23，PR #61）**：`/api/search` 的登录门禁已**取消**（语义检索现在和关键词
+  搜索一样公开，滥用防线改由 T1.3.4 已有的 IP 限速承担）。以下开发范围描述是 T1.3.6 当初
+  落地时的真实状态，历史记录不改写；本 task 产出的认证中间件（`_lib/auth.js` 等）**没有被
+  删除**，改为只挂在 `/api/search-analytics.json`（登录后查看搜索统计）和未来的 AI 对话
+  功能上。详见 `architecture.md` 核心判断 7 的"更新"段落、followups FU-27。
 - **优先级**：high
 - **目标**：`/api/search`（语义检索能力）在真正上线前必须有登录门禁，未登录不可访问，避免被刷
   Workers AI 计费。用户已明确否决 Cloudflare Access，要求单一共享密码方案。**T1.1.3 已上线的

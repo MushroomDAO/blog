@@ -44,6 +44,9 @@ source/*/
 *.log
 radar/
 
+# Playwright MCP debug output (console logs / page snapshots from browser automation runs)
+.playwright-mcp/
+
 # regenerable index-build artifacts (large, derived from src/content/blog — not source)
 semantic-search/eval/vectorize-index-plan.json
 semantic-search/eval/.vectorize-vectors-cache.json

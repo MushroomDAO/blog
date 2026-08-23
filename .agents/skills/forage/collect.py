@@ -188,9 +188,14 @@ def collect_x():
 
 def collect_trends():
     """Google Trends 通过 MCP 提供，cron 环境里没有 MCP 客户端。
-    这里只标记为「需 Claude 会话内补充」，不假装采到了。"""
+    这里只标记为「需 Claude 会话内补充」，不假装采到了。
+
+    Claude 在会话里手动补采时：只用 mcp__google-trends__related_queries
+    配 AI/科技相关关键词（如 "AI agent"、"local llm"、"open source model"），
+    不要用 trending_now/每日热搜——那是全品类热搜（明星、食品召回、汇率），
+    跟本站选题无关。用户明确要求：Google Trends 只看 AI 和科技。"""
     cov["GoogleTrends"] = 0
-    cov["_trends_note"] = "需在 Claude 会话内经 MCP 采集，cron 无法直接调用"
+    cov["_trends_note"] = "需在 Claude 会话内经 MCP 采集（用 related_queries 配 AI/科技关键词，不要用全品类 trending_now），cron 无法直接调用"
     return []
 
 
