@@ -1,9 +1,16 @@
 # Cloudflare Pages 配置
 name = "blog-mushroom"
 compatibility_date = "2024-01-01"
-# wrangler 4.x 不再支持 Pages 项目在 toml 里写 account_id，改用环境变量：
-# export CLOUDFLARE_ACCOUNT_ID=7bf23342f21baa5ebfc7bc7b74f5a1f2
-# 或在 publish-blog.sh 调用时传 --account-id 参数。
+# 账号 id 不能写在这里——Pages 项目的配置 schema 不支持这个顶层字段（跟 Workers
+# 项目不一样），写了会让每一次 `wrangler pages deploy` 都直接报错退出："Configuration
+# file for Pages projects does not support 'account_id'"。这行从 chore/
+# manual-deploy-only 合并起到现在的每一次部署都在静默失败，PR#56/#57 的改动一直
+# 没有真正上线过，直到这次手动跑部署才发现。改成部署前导出 CLOUDFLARE_ACCOUNT_ID
+# 环境变量——这是 wrangler 实际支持的方式；账号 id 唯一权威来源是项目 .env 的
+# CLOUDFLARE_ACCOUNT_ID，deploy.sh / scripts/update-analytics.sh /
+# pipeline/newsletter/local-fallback.sh 各自导出（.env 缺失时兜底用同一个字面量），
+# publish.sh / publish-blog.sh / auto-publish.sh / scan-sources.sh 已经整体
+# source .env，自动带上，不需要单独改。
 
 # 构建输出目录（Pages 必需）
 pages_build_output_dir = "./dist"

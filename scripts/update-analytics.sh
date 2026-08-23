@@ -69,6 +69,20 @@ if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] && [ -f .env ]; then
   fi
 fi
 
+# 同一套读法取 CLOUDFLARE_ACCOUNT_ID（round 2 review 指出：这个脚本之前只手动摘取
+# CLOUDFLARE_API_TOKEN 一个变量，不整体 source .env，注释却写"权威值是 .env"——
+# 这句话是反的，字面量才是当时实际生效的值。现在真正从 .env 读，让那句话变成真的）。
+if [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ] && [ -f .env ]; then
+  RAW_ACCOUNT_ID="$(grep '^CLOUDFLARE_ACCOUNT_ID=' .env | tail -1 | cut -d= -f2- || true)"
+  RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID%\"}"; RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID#\"}"
+  RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID%\'}"; RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID#\'}"
+  RAW_ACCOUNT_ID="$(printf '%s' "$RAW_ACCOUNT_ID" | tr -d '\r')"
+  if [ -n "$RAW_ACCOUNT_ID" ]; then
+    CLOUDFLARE_ACCOUNT_ID="$RAW_ACCOUNT_ID"
+    export CLOUDFLARE_ACCOUNT_ID
+  fi
+fi
+
 echo "=== $(date) — updating blog analytics ==="
 
 echo "[1/4] fetching latest Cloudflare Web Analytics snapshot…"
@@ -86,8 +100,13 @@ if git diff --cached --quiet; then
   echo "  ✓ no data change to commit"
 else
   git commit -m "chore(analytics): refresh traffic snapshot $(date +%Y-%m-%d)"
-  git push origin main
-  echo "  ✓ committed + pushed"
+  # 修正（round 2 review 用真实 cron 日志证实的问题）：这条仓库 non-fast-forward
+  # push 被拒是常态（#54 自己的 commit message 就这么写），而这行在 `else` 分支里，
+  # 不是 if 条件本身，不天然免疫 set -e——真实日志显示脚本正是在这一行因为 push
+  # 被拒而整个退出，从没走到过 [4/4] 的部署步骤。加 || 让 push 失败不再杀死脚本，
+  # 继续往下走本地部署（本地构建产物不依赖这次 push 是否成功）。
+  git push origin main || echo "  ⚠ push 被拒(non-fast-forward)——继续用本地构建部署"
+  echo "  ✓ committed（push 结果见上）"
 fi
 
 # 本地部署失败不让整个脚本报错退出——数据已经 push 过了，不算致命，但现在没有 CI
@@ -97,6 +116,17 @@ fi
 echo "[4/4] deploying to Cloudflare Pages (blog-mushroom)…"
 set +e
 CA="${NODE_EXTRA_CA_CERTS:-${CF_CA_CERT:-}}"
+# account_id 不能写进 wrangler.toml——Pages 项目的配置 schema 不接受这个顶层
+# 字段（`npx wrangler@4 pages deploy` 实测直接报 "Configuration file for Pages
+# projects does not support 'account_id'"，连网络请求都不发）。这行由 #54 引入、
+# main 上的 c6ec09b 已经删掉。（round 2 review 指出：不要断言这条 cron 曾经因为
+# 它失败过——真实日志显示这条 cron 自 #54 合并起还没跑过一次，唯一一次记录到的
+# 失败是上面 [3/4] 的 push non-fast-forward，从没走到过这一步，DEPLOY_STATUS
+# 从未被求值过。这里只是把这个真实存在、可复现的 schema 限制记下来，防止以后
+# 又有人往 wrangler.toml 里加回这一行。）改成按 wrangler 实际支持的方式，部署前
+# 导出环境变量；CLOUDFLARE_ACCOUNT_ID 现在真的从 .env 读（见上面新增的读取块），
+# 这里的字面量只是 .env 缺这一项时的兜底。
+export CLOUDFLARE_ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-7bf23342f21baa5ebfc7bc7b74f5a1f2}"
 if [ -n "$CA" ] && [ -f "$CA" ]; then
   NODE_EXTRA_CA_CERTS="$CA" npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true 2>&1 | tail -4
 else
@@ -104,6 +134,12 @@ else
 fi
 DEPLOY_STATUS=${PIPESTATUS[0]}
 set -e
-[ "$DEPLOY_STATUS" -eq 0 ] || echo "  ⚠⚠⚠ 本地部署失败(退出码 $DEPLOY_STATUS)——没有 CI 兜底了，线上快照会一直是旧的，需要人工重跑一次 ./deploy.sh 或本脚本"
+if [ "$DEPLOY_STATUS" -ne 0 ]; then
+  echo "  ⚠⚠⚠ 本地部署失败(退出码 $DEPLOY_STATUS)——没有 CI 兜底了，线上快照会一直是旧的，需要人工重跑一次 ./deploy.sh 或本脚本"
+  # 修正（round 2 review 指出的真实问题）：这条 cron 靠退出码给 crontab 的邮件/
+  # 监控当唯一的失败信号，之前不管部署成不成功最后都印"✅ done"、退出码恒为 0——
+  # 部署失败本该能被外部监控发现，这样"发现"这一步本身也悄悄失效了。
+  exit 1
+fi
 
 echo "✅ done → https://blog.mushroom.cv/analytics/"
