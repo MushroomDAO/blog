@@ -1,12 +1,12 @@
 ---
-title: "DeepSeek Harness 深度拆解：一切皆插件的 Agent 运行时，和 Claude Code / Codex 最本质的区别在哪"
+title: "三足鼎立：读 Codex Harness、DeepSeek Harness 与 AgentScope 2.0 的横评"
 titleEn: "deepseek-harness-everything-plugin-cordis-compare-claude-code-codex"
-description: "DeepSeek AI 开源 deepseek-harness（dsh），MIT 许可，4.2 万行 TypeScript，核心设计哲学「一切皆插件」。底层使用 Cordis 框架，每个功能单元都是可替换的 Cordis 插件——模型适配器、工具注册、会话日志、Agent Loop 本身全部可以插拔。对比 Claude Code（只接 Anthropic 模型，无插件系统）、Codex CLI（功能固定）：dsh 卖的是一个可组装的「AI 运行时菜市场」，而不是单一产品。Web UI、session fork/resume、定时任务、Skill 生态、沙箱隔离都已内置。"
-descriptionEn: "DeepSeek AI open-sources deepseek-harness (dsh), MIT-licensed, 42,000 lines of TypeScript. Core design: everything is a plugin. Powered by the Cordis framework, every component is a swappable plugin — model adapter, tool registry, session log, the agent loop itself. Compared to Claude Code (Anthropic model lock, no plugin system) and Codex CLI (fixed functionality): dsh sells a composable 'AI runtime marketplace', not a single product. Web UI, session fork/resume, scheduled jobs, Skill ecosystem, and sandbox isolation are all built-in."
-pubDate: "2026-08-14"
-updatedDate: "2026-08-14"
-category: "Tech-News"
-tags: ["DeepSeek", "Agent Harness", "插件系统", "Cordis", "Claude Code", "Codex", "开源", "TypeScript"]
+description: "读后感：社媒横评三款开源 Agent 运行时底座——Codex Harness（OpenAI，Apache-2.0，80+ Rust 子模块）、DeepSeek Harness（MIT，Cordis 微内核，一切皆插件）、AgentScope 2.0（阿里，企业全家桶，国内私有化首选）。原文核心论点：你 Demo 跑得好但生产炸锅，缺的不是更聪明的模型，是 Harness。加上我们的补充分析：三强定位差异、LangGraph 的残余价值、以及国内团队的选型建议。"
+descriptionEn: "Reading response: a social media three-way comparison of open-source agent runtime harnesses — Codex Harness (OpenAI, Apache-2.0, 80+ Rust submodules), DeepSeek Harness (MIT, Cordis microkernel, everything-as-plugin), and AgentScope 2.0 (Alibaba, enterprise full-stack, best for Chinese private deployment). Core argument: your demo is great but production breaks — what you're missing isn't a smarter model, it's a Harness. Plus our supplementary analysis: positioning differences, LangGraph's residual value, and selection guidance for Chinese teams."
+pubDate: "2026-08-23"
+updatedDate: "2026-08-23"
+category: "Research"
+tags: ["Agent运行时", "Harness", "DeepSeek", "AgentScope", "Codex", "开源", "企业AI", "读后感"]
 heroImage: "../../assets/images/deepseek-harness-everything-plugin-cordis-compare-claude-code-codex-banner.jpg"
 author: "Mycelium Protocol"
 ---
@@ -15,234 +15,127 @@ author: "Mycelium Protocol"
 
 ---
 
-GitHub：https://github.com/deepseek-ai/deepseek-harness  
-许可证：MIT  
-语言：TypeScript  
-状态：Developer Preview（迭代中，有 Breaking Change 风险）  
-运行：`npx @deepseek-ai/dsh web`  
-Discord：https://discord.gg/Ycq5dCaS4
+> **原帖来源**：社交媒体横评文章，对比三款开源 Agent 运行时底座。本文是读后感——对原文核心框架的二次整理，加上我们的补充判断。
 
 ---
 
-`deepseek-harness`（简称 dsh）是 DeepSeek AI 开源的 Agent 运行时。它的核心设计用四个字概括：**一切皆插件**。
+## 一个扎心场景先说清楚
 
-这四个字说起来容易，但真正按这个思路实现，意味着什么？本文深入拆解 dsh 的架构，并和 Claude Code、Codex CLI、Pipecat 做具体对比。
+原文开头戳得很准。你做了一个 Agent，Demo 惊艳全场。一上生产，原形毕露：
 
----
+- 任务跑到第 18 步，上下文爆了
+- 昨天教过它的事，今天全忘了
+- 用户一句恶意输入，它把 `rm` 命令直接怼到生产服务器上
+- 半夜任务挂了，早上来一看：没有断点、没有日志、没有重试，一切从头再来
 
-## 一、「一切皆插件」意味着什么
+**你以为该换个更聪明的模型？错。你缺的是 Harness——智能体运行时底座**。模型只负责"想"，干活的是它底下那套工程系统。
 
-dsh 底层使用 [Cordis](https://github.com/cordiverse/cordis) 框架。Cordis 的核心是一个带有「时空可组合性」的插件系统——每个插件向 Context 贡献服务、事件和可逆副作用（Revertible Effects），卸载插件时这些副作用全部自动回滚。
-
-这带来一个根本性的区别：**dsh 没有特权核心**。
-
-在大多数 Agent 框架里，模型调用、工具执行、日志系统、Agent Loop 是被硬编码的核心逻辑，用户只能在它们的边界之外扩展。dsh 不是这样——这几件事本身都是 Cordis 插件，和其他插件平等并存：
-
-| 功能 | 实现方式 | 可替换？ |
-|------|---------|---------|
-| 模型适配器（LLM 调用） | `llm/llm` 插件，注册 `ctx.llm` | ✅ 替换就能换模型厂商 |
-| 工具注册与执行 | `core/tools` 插件，注册 `ctx.tools` | ✅ 可以插入自定义工具管道 |
-| 会话日志（Session Log） | `core/session` 插件，注册 `ctx.sessions` | ✅ 日志存储后端可换 |
-| Agent Loop | `core/agent-loop` 插件 | ✅ 整个 Loop 逻辑可以被替换 |
-| Sandbox | `ctx.sandbox` backend | ✅ 替换就能换执行环境 |
-| 沙箱里的 Shell/文件系统 | `ctx.shell` / `ctx.fs` backend | ✅ 一次替换带动整个执行链 |
-
-换沙箱 backend 不只是换了「运行进程的环境」——因为 Shell 和文件系统 provider 共享一个执行世界，指向远程 sandbox 之后，Bash、PTY、LSP 全部跟着迁移，不需要各自改代码。
+上周 OpenAI 和 DeepSeek 一周内先后开源自家 Harness，加上阿里的 AgentScope，开源 Agent 底座已经三足鼎立。
 
 ---
 
-## 二、核心架构：Profile → Bundle → Patch
+## Harness 的真实工作清单（苦活，不是玄学）
 
-一个 dsh 进程启动时，从这个结构组装插件树：
+一个生产级 Harness 要兜住五件事：
 
-```
-Profile（named composition）
-  ↓ 包含多个 Bundle
-  ├── dsh-base （模型适配器、工具、持久化、沙箱、审批策略）
-  ├── dsh-web-app （Web UI 服务）或 dsh-headless （单次无服务器运行）
-  └── 用户自己安装的 Bundle
-  ↓ 覆盖层
-  ├── profile 的 cordis.patch.yml
-  ├── home 级的 cordis.patch.yml
-  └── --patch 命令行覆盖
-```
+| 能力 | 作用 |
+|------|------|
+| **任务循环** | 多步规划、失败重试、断点续跑 |
+| **上下文管理** | 自动压缩、超大工具结果落盘只留占位符、防 token 爆炸 |
+| **记忆持久化** | 跨会话记住用户偏好和任务进度，不是每次失忆重启 |
+| **沙箱与审批** | 命令在隔离环境跑，危险操作必须人工点头 |
+| **可观测** | 每个动作可追溯，出事了能回放取证 |
 
-每一层 Patch 都针对 Row ID 修改配置或插入新 Row，不需要 fork 代码。你可以在不改 dsh-base 代码的情况下，把模型替换成任意支持的 LLM adapter，或者把沙箱换成 E2B。
+OpenAI 给过一组硬数据：同一个 GPT-5.6，裸奔跑分 13.3%，套上优化过的 Harness 直接拉到 38.3%，token 还省 6 倍。钱省在哪？就省在上下文压缩和推理保留这些工程细节上。
 
 ---
 
-## 三、Turn Flow：Agent 执行的完整时序
+## 三强分析
 
-dsh 对 Agent 一次 Turn 的执行时序有精确定义，方便插件介入任意位置：
+### 选手一：Codex Harness（OpenAI）——出厂调校的整车
 
-```
-turn/start
-  ├─ 声明 next-step 输入，组装 Prompt sections + tool schemas
-  ├─ agent/pre-step （拦截点：可以 reject 或改写消息）
-  │    └─ rejected / empty → turn 关闭，不发生 LLM 请求
-  ├─ step/start
-  │    ├─ 派生 model history from session log
-  │    ├─ agent/request → llm/stream → assistant/chunk* → assistant/message
-  │    └─ tool/call* → tools/pre-execute → tools/execute → tools/post-execute → tool/result*
-  └─ step/end
-       └─ 如果 tool 欠另一次请求或有新输入 → 继续下一 step
-agent/turn-stopping
-turn/end
-```
+- **协议**：Apache-2.0
+- **规模**：80+ Rust 子模块，9600+ 次提交，从 2025 年迭代至今，百万级用户生产验证
+- **三个核心组件**：
+  - `codex exec`：面向 CI 的流水线执行器
+  - Codex SDK（TypeScript/Python）：让开发者接入 Codex Agent 能力
+  - `app-server`（JSON-RPC）：把 Agent 嵌进业务系统——持久化会话、流式事件、任务中断、自定义工具、人工审批；税务工具集成案例把处理时间砍了 1/3
+- **核心定位**：别把工作流硬塞进聊天框，把 AI 装进你的业务系统
+- **短板**：深度绑定 OpenAI 模型，数据出境到 OpenAI 云
 
-`agent/pre-step`、`agent/request`、`llm/stream`、`tools/pre-execute/execute/post-execute` 都是 waterfall 事件，监听器必须调用 `next()` 才放行。这意味着插件可以在 LLM 请求之前修改 Prompt，在工具执行前做权限检查，在工具执行后注入上下文——全部通过注册事件监听器实现，不需要 fork 核心代码。
+### 选手二：DeepSeek Harness（dsh）——洞洞板组装底盘
 
----
+- **协议**：MIT（最宽松）
+- **架构**：Cordis 微内核，一切皆插件
+- **四种运行模式**：
+  - 标准模式（全套工具）
+  - 极简模式（仅 Bash + 编辑器）
+  - PTC 模式（模型写 TypeScript 程序来完成多步操作）
+  - Creation 模式（Agent 在运行时写/加载/卸载插件，自我进化）
+- **模型无关**：可以把 Claude Code、Codex 调度为子 Agent
+- **对话日志**：append-only，支持 fork/resume/replay
+- **定位**：给想自己搭底盘的团队用的原材料
 
-## 四、Session：fork、resume、持久化
+### 选手三：AgentScope 2.0（阿里）——最完整的企业全家桶
 
-session 是 dsh 的基础 primitive，每个 session 对应一条追加式（append-only）的 `SessionEvent` 日志。
-
-**关键特性**：
-- **fork**：`ctx.sessions.fork(source, boundary?, childSessionId?)` ——从任意历史位置 fork 出新 session，两个 session 各自独立演化。可以理解为 git branch，但是 Agent 会话。
-- **resume**：`ctx.agents.resume(options)` ——加载持久化 session，mint 新的 agent scope，从中断处继续。
-- **replay**：session log 是 model-visible history 的单一来源（`deriveMessages()` 从它投影），transcript、telemetry、UI 渲染全部派生自同一条 log。这保证了一致性：「model-visible means logged」是运行时不变式，新的 model-visible 输入必须先成为 SessionEvent。
-
----
-
-## 五、核心包清单（40+ 个）
-
-packages 目录下 40+ 个包，每个都是独立 Cordis 插件：
-
-```
-acp           ACP 协议（subagent 跨进程通信）
-api           API 服务层
-attachment    附件处理
-boot          启动/app-boot
-bundle        dsh-base / dsh-web-app / dsh-headless
-client        客户端连接
-code-runtime  代码执行 runtime
-compaction    会话压缩（超长会话处理）
-context       Context 类型定义
-core          session / system-prompt / tools / agent / agent-loop / scope
-credentials   凭据管理
-e2b           E2B sandbox backend
-extensions    扩展插件
-feedback      反馈收集
-fs            文件系统 provider
-goal          目标管理
-guard         安全守卫
-hooks         生命周期钩子
-host          宿主能力
-identity      身份/用户管理
-interaction   人机交互
-jobs          后台任务调度
-llm           LLM 流式适配器
-lsp           LSP（语言服务器）集成
-mcp           MCP 工具集成
-plan          计划管理
-preset        Agent 预设
-runtime-diagnostics 运行时诊断
-sandbox       沙箱后端抽象
-schedule      定时任务
-sdk           对外 SDK
-session-query 会话查询
-session       会话存储/事件
-settings      设置管理
-shell         Shell 执行 provider
-skill         Skill 系统
-spill         溢出/overload 处理
-storage       持久化存储
-subagent      子 Agent 调度
-subprocess    子进程管理
-terminal      终端 provider
-test-support  测试工具
-todo          TODO 管理
-typert        类型报告
-util          工具函数
-web           Web UI / 服务器
-workflow      工作流
-workspace     工作区管理
-```
+- **架构**：分布式部署，OpenTelemetry 埋点，对接 Higress/Nacos 的 MCP 生态
+- **核心定位**：国内企业私有化部署的最优解候选，Qwen 生态亲儿子，但也接 DeepSeek、OpenAI 兼容模型
+- **多语言支持**：Python / Java / TypeScript / Go（原来的 Workspace 抽象使 AGENTS.md 编辑等于升级 Agent）
 
 ---
 
-## 六、对比：dsh vs Claude Code vs Codex CLI
+## 三强速览对比
 
-这三个工具虽然都在 Coding Agent 这个大赛道，但设计哲学差异极大：
+| 维度 | Codex Harness | DeepSeek Harness | AgentScope 2.0 |
+|------|:---:|:---:|:---:|
+| 开箱即用 | 🥇 | △ | ○ |
+| 灵活度/换模型自由 | △ | 🥇 | ○ |
+| 私有化 + 多租户 | △ | ○ | 🥇 |
+| 协议宽松度 | Apache | **MIT 🥇** | Apache |
 
-| 特性 | deepseek-harness (dsh) | Claude Code | OpenAI Codex CLI |
-|------|------------------------|-------------|-----------------|
-| **模型锁定** | 无。模型适配器是插件，可以接任意 LLM | Anthropic 模型（Claude 系列） | OpenAI 模型为主 |
-| **插件系统** | 核心设计，一切皆插件（Cordis） | 无 | 无 |
-| **Agent Loop** | 可替换的插件 | 内置，不可替换 | 内置，不可替换 |
-| **Web UI** | 内置（`npx @deepseek-ai/dsh web`） | 无 | 无 |
-| **Session fork/resume** | 内置，`ctx.sessions.fork()` | 有 resume 但无 fork | 无 |
-| **Sandbox** | 可插拔 backend（支持 E2B） | 内置沙箱（Docker-like） | 内置沙箱 |
-| **Skill 系统** | 内置（`packages/skill`） | 无原生 Skill | 无 |
-| **定时任务** | 内置（`packages/schedule` / `ctx.jobs`） | 无 | 无 |
-| **MCP 集成** | 内置（`packages/mcp`） | 外部 MCP server | 外部 MCP server |
-| **subagent 支持** | 内置（ACP 协议，`packages/subagent`） | 有（Agent SDK） | 有限 |
-| **生命周期** | 插件粒度，热替换 | 进程粒度 | 进程粒度 |
-| **许可证** | MIT | 闭源 CLI | 闭源 CLI |
-| **代码量** | ~42,000 行 TypeScript | 未知（闭源） | 未知（闭源） |
-
-**核心差异用一句话**：
-- Claude Code 是**专用工具**，深度绑定 Anthropic 模型，交互体验打磨成熟
-- Codex CLI 是**接口工具**，把 OpenAI 的工具调用能力暴露成 CLI
-- dsh 是**元框架**，自己的功能是通过插件实现的，用户可以改造任何部分
-
-用原文引用：「CC 卖菜，dsh 卖菜市场。」
+- **开箱即用**：Codex Harness > AgentScope > DeepSeek Harness
+- **灵活度**：DeepSeek Harness > AgentScope > Codex Harness
+- **私有化 + 多租户**：AgentScope > DeepSeek Harness > Codex Harness
+- **协议**：DeepSeek（MIT）> AgentScope、Codex（Apache 系）
 
 ---
 
-## 七、插件生态：dsh-plugin
+## LangGraph 们还有价值吗？
 
-dsh 要求社区插件仓库在 `package.json` 里打上 `dsh-plugin` topic，就能被发现。已有的插件生态包括：
+原文的判断是：**有价值，但战场换了**。用分层视角看就清楚了：
 
-- `dsh-vision-toolkit` / `modlens`：视觉能力（OCR、UI 还原）
-- `dsh-web-ui` 主题和皮肤
-- `dsh-mem`：跨会话长期记忆（JSON file memory store）
-- `agent-teams`：多 Agent 协作
-- `oh-dsh`：社区发行版（TUI + 桌面 + Web UI 三形态）
-- awesome-deepseek-harness：生态汇总
+- **传统框架**（LangGraph / AutoGen / CrewAI）解决的是"多 Agent 怎么编排协作"——图结构、角色分配、消息路由。这个问题没消失
+- **Harness** 解决的是"单个 Agent 怎么在生产里活下去"——上下文、记忆、沙箱、可观测性
 
-开发一个新 dsh 插件的核心工作：实现一个 Cordis 插件，注册 service、tool 或 event listener，然后发布 npm，打 `dsh-plugin` topic。
+两层不冲突，但优先级变了：没有稳定的 Harness 底座，LangGraph 编排得再漂亮也是沙上建塔。**先把 Harness 选对，再谈编排层**。
 
 ---
 
-## 八、快速上手
+## 我们的补充：国内团队选型建议
 
-```bash
-# 方式一：无需安装，直接运行 Web UI
-npx @deepseek-ai/dsh web
-# → 在 http://127.0.0.1:3080 打开 Web UI
+**优先考虑 AgentScope 2.0 的情况**：
+- 数据不能出境（医疗、金融、政务）
+- 已在用 Qwen 系列模型
+- 需要多租户隔离和 OpenTelemetry 接入现有监控体系
 
-# 方式二：从源码运行
-git clone https://github.com/deepseek-ai/deepseek-harness.git
-cd deepseek-harness
-pnpm install && pnpm run build && pnpm dsh web
+**优先考虑 DeepSeek Harness 的情况**：
+- 想自己掌控底层，不接受黑盒
+- 需要切换多家模型（DeepSeek / Claude / 本地 Qwen）
+- 团队有 Cordis/插件生态经验，或愿意投入工程定制
+- MIT 协议有商业授权优势
 
-# 查看实际加载的配置树
-dsh --profile web --dump-config
-```
+**优先考虑 Codex Harness 的情况**：
+- 主力用 OpenAI 模型，不打算换
+- 需要把 Agent 嵌进现有业务系统（app-server JSON-RPC 最省事）
+- 看重百万用户生产验证和 9600+ 次提交的工程成熟度
 
----
-
-## 九、使用 dsh 需要注意的现实问题
-
-**Developer Preview 警告**：README 明确标注「THERE WILL BE COMPATIBILITY-BREAKING CHANGES」，不适合今天就在生产环境大量依赖。插件 API 仍在快速变化。
-
-**学习曲线**：Cordis 是一个有独特概念（Service、Context、Revertible Effects、Coeffects）的框架，需要先读 Cordis primer 才能有效开发插件。
-
-**模型支持**：dsh 本身是模型中立的，但是否好用取决于你接的模型。官方文档主要以 DeepSeek 模型为示例。
-
-**插件生态仍在早期**：虽然已经有一批社区插件，但和 Claude Code 的工具生态比，质量和覆盖度仍在积累阶段。
+**一句话选型口诀**：出境无所谓 + 用 OpenAI → Codex；不出境 + 用阿里云 → AgentScope；什么都想自己控 → DeepSeek Harness。
 
 ---
 
-## 十、值得关注的理由
+## 一句话总结
 
-**如果你是 AI 工程师**：dsh 是目前最彻底的开源 Agent Harness 架构实现。研究它的插件系统和 Turn Flow 设计，对理解 Agent 框架的工程边界有直接价值。
-
-**如果你是企业用户**：dsh 允许你接自己的模型（包括私有部署的 DeepSeek 或其他兼容 API），不依赖单一厂商，整个 Harness 在你控制之下。
-
-**如果你是工具开发者**：插件系统意味着你的工具可以以标准方式集成，而不是为每个 Agent 框架单独适配。
+原文验证了这个时代的核心判断：Agent 能力瓶颈不在模型，在 Harness。三家开源底座各有侧重——Codex 是出厂整车、DeepSeek Harness 是原材料底盘、AgentScope 是企业全家桶。选哪个，看你的数据出境容忍度、模型绑定意愿和工程定制能力。
 
 ---
 
@@ -258,132 +151,135 @@ dsh --profile web --dump-config
 
 <!--EN-->
 
-## DeepSeek Harness Deep Dive: An Everything-Is-a-Plugin Agent Runtime, and What Makes It Fundamentally Different from Claude Code and Codex
+## The Three-Way Harness Race: Codex, DeepSeek, and AgentScope 2.0
 
 *by Mycelium Protocol*
 
 ---
 
-GitHub: https://github.com/deepseek-ai/deepseek-harness  
-License: MIT  
-Language: TypeScript  
-Status: Developer Preview (breaking changes expected)  
-Run: `npx @deepseek-ai/dsh web`
+> **Source**: A social media comparison post reviewing three open-source agent runtime harnesses. This piece is a reading response — a second-pass synthesis of the original framework, plus our own supplementary analysis.
 
 ---
 
-`deepseek-harness` (dsh) is DeepSeek AI's open-source Agent runtime. Its core design philosophy in four words: **everything is a plugin.**
+### The Painful Production Scenario
 
-Those four words are easy to say. But what does it actually mean to build that way?
+The original post opens with something every agent builder recognizes:
 
----
+Your agent demo was stunning. Then you shipped it to production:
 
-### "Everything Is a Plugin" — What It Actually Means
+- Task reached step 18 and the context window exploded
+- Knowledge taught yesterday was completely forgotten today
+- A single adversarial user input caused an `rm` command to fire on a production server
+- A task hung overnight — no checkpoint, no logs, no retry. Start over from scratch
 
-dsh is powered by [Cordis](https://github.com/cordiverse/cordis), a meta-framework built around spatiotemporal composability. Every plugin contributes services, typed events, and revertible effects to a shared context; when a plugin unloads, those effects unwind automatically.
+**Think you need a smarter model? Wrong. What you need is a Harness — an agent runtime foundation.** The model handles "thinking." The engineering system underneath handles everything else.
 
-The consequence: **dsh has no privileged core.** The model adapter, tool registry, session log, and the agent loop itself are all Cordis plugins — equal to each other and to any third-party plugin you write:
-
-| Component | Plugin | Swappable? |
-|-----------|--------|-----------|
-| LLM calls | `llm/llm` → `ctx.llm` | ✅ swap = change model vendor |
-| Tool registry | `core/tools` → `ctx.tools` | ✅ insert custom tool pipeline |
-| Session log | `core/session` → `ctx.sessions` | ✅ swap storage backend |
-| Agent Loop | `core/agent-loop` | ✅ the whole loop is replaceable |
-| Sandbox | `ctx.sandbox` backend | ✅ swap = change execution environment |
-| Shell + filesystem | `ctx.shell` / `ctx.fs` backend | ✅ one swap moves Bash, PTY, LSP together |
-
-Swapping the sandbox backend doesn't just change where processes run — because Shell and filesystem providers share one execution world, pointing them at a remote sandbox migrates Bash, PTY, and LSP simultaneously. No code changes to each provider.
+Last week, OpenAI and DeepSeek each open-sourced their Harness within the same week. Add Alibaba's AgentScope, and the open-source agent runtime landscape is now a three-way standoff.
 
 ---
 
-### Architecture: Profile → Bundle → Patch
+### The Harness Job List (Engineering Reality, Not Magic)
 
-A running dsh instance assembles its plugin tree from layers:
+A production-grade Harness must handle five things:
 
-```
-Profile (named composition)
-  ↓ composed of Bundles
-  ├── dsh-base (model adapters, tools, persistence, sandbox, approval policy)
-  ├── dsh-web-app (browser application) or dsh-headless (single-shot, no server)
-  └── user-installed bundles
-  ↓ patch layers
-  ├── profile-level cordis.patch.yml
-  ├── home-level cordis.patch.yml
-  └── --patch CLI overlay
-```
+| Capability | Function |
+|-----------|---------|
+| **Task loop** | Multi-step planning, failure retry, checkpoint resume |
+| **Context management** | Auto-compression, oversized tool results stored to disk with placeholders, anti-token explosion |
+| **Memory persistence** | Cross-session retention of user preferences and task state — not a fresh start every time |
+| **Sandbox & approval** | Commands run in isolation; dangerous operations require human sign-off |
+| **Observability** | Every action traceable; can replay events to investigate failures |
 
-Each patch targets a Row by ID and replaces its full config or inserts new rows — without touching dsh-base source. You can swap the model to any LLM adapter, or replace the sandbox with E2B, purely through configuration.
+OpenAI published hard numbers: the same GPT-5.6 scores 13.3% bare, 38.3% with an optimized Harness — and uses 6× fewer tokens. The savings come entirely from context compression and reasoning preservation engineering.
 
 ---
 
-### Turn Flow: Precise Agent Execution Timing
+### The Three Contenders
 
-dsh defines exact timing for each agent turn, with interception points for plugins:
+#### Codex Harness (OpenAI) — The Factory-Tuned Complete Car
 
-```
-turn/start
-  ├─ claim input, assemble prompt sections + tool schemas
-  ├─ agent/pre-step  ← INTERCEPT: reject or rewrite messages here
-  │    └─ rejected/empty → turn closes with no LLM request
-  ├─ step/start
-  │    ├─ derive model history from session log
-  │    ├─ agent/request → llm/stream → assistant/message
-  │    └─ tool/call* → tools/pre-execute → tools/execute → tools/post-execute → tool/result*
-  └─ step/end
-       └─ more tool requests or new input → next step
-agent/turn-stopping
-turn/end
-```
+- **License**: Apache-2.0
+- **Scale**: 80+ Rust submodules, 9,600+ commits, iterating since 2025, million-user production verified
+- **Three core components**:
+  - `codex exec`: pipeline runner for CI
+  - Codex SDK (TypeScript/Python): developer integration layer
+  - `app-server` (JSON-RPC): embed agent in business systems — persistent conversations, streaming events, mid-task interruption, custom tools, human approval; a tax tool integration cut processing time by one-third
+- **Positioning**: Don't stuff workflows into a chat box — embed AI inside your business systems
+- **Weakness**: Deep OpenAI model lock-in; all data exits to OpenAI cloud
 
-`agent/pre-step`, `agent/request`, `llm/stream`, and the three `tools/*` events are waterfalls — listeners must call `next()` to pass through. Plugins can: modify the prompt before the LLM sees it, permission-check tools before execution, inject context after tools return — all through event listeners, zero core code changes.
+#### DeepSeek Harness (dsh) — The Breadboard Chassis
 
----
+- **License**: MIT (most permissive)
+- **Architecture**: Cordis microkernel, everything-as-plugin
+- **Four run modes**:
+  - Standard (full tool suite)
+  - Minimal (Bash + editor only)
+  - PTC mode (model writes TypeScript programs for multi-step operations)
+  - Creation mode (agent writes, loads, and unloads plugins at runtime — self-evolution)
+- **Model-agnostic**: can schedule Claude Code and Codex as sub-agents
+- **Conversation logs**: append-only, supports fork/resume/replay
+- **Positioning**: raw material chassis for teams that want to build their own stack
 
-### Session: Fork, Resume, Durable Log
+#### AgentScope 2.0 (Alibaba) — The Complete Enterprise Suite
 
-Every session is an append-only `SessionEvent` log. Key capabilities:
-
-- **Fork**: `ctx.sessions.fork(source, boundary?, childSessionId?)` — branch a session at any historical point, like `git branch` for agent conversations
-- **Resume**: `ctx.agents.resume(options)` — load persisted session, continue from where it stopped
-- **Single source of truth**: `deriveMessages()` projects model history from the log; transcripts, telemetry, and UI all derive from the same log. "Model-visible means logged" is a runtime invariant.
-
----
-
-### Comparison: dsh vs Claude Code vs Codex CLI
-
-| Feature | deepseek-harness (dsh) | Claude Code | OpenAI Codex CLI |
-|---------|------------------------|-------------|-----------------|
-| **Model lock** | None — model adapter is a plugin | Anthropic models only | OpenAI models primary |
-| **Plugin system** | Core design, everything is a plugin | None | None |
-| **Agent Loop** | Swappable plugin | Built-in, not replaceable | Built-in, not replaceable |
-| **Web UI** | Built-in | None | None |
-| **Session fork** | Built-in `ctx.sessions.fork()` | No | No |
-| **Sandbox** | Pluggable backend (supports E2B) | Built-in | Built-in |
-| **Skill system** | Built-in (`packages/skill`) | None | None |
-| **Scheduled jobs** | Built-in (`packages/schedule`) | None | None |
-| **MCP** | Built-in (`packages/mcp`) | External | External |
-| **Sub-agents** | Built-in (ACP protocol) | Agent SDK | Limited |
-| **License** | MIT | Closed-source CLI | Closed-source CLI |
-
-The difference in one line:
-- **Claude Code** is a polished, opinionated tool deeply integrated with Anthropic's model stack
-- **Codex CLI** is an interface tool that exposes OpenAI's function calling as a CLI
-- **dsh** is a meta-framework — even its own features are implemented as plugins, and any part can be replaced
-
-"Claude Code sells groceries. dsh sells the grocery market."
+- **Architecture**: distributed deployment, OpenTelemetry instrumentation, MCP ecosystem via Higress/Nacos
+- **Positioning**: the leading candidate for enterprise private deployment in China — native to the Qwen ecosystem, but also supports DeepSeek and OpenAI-compatible models
+- **Multi-language**: Python / Java / TypeScript / Go (Workspace abstraction means editing AGENTS.md = upgrading the agent)
 
 ---
 
-### Why It Matters
+### Head-to-Head Comparison
 
-**For AI engineers**: dsh is the most architecturally complete open-source Agent Harness available. Its plugin system and Turn Flow design are worth studying to understand the engineering boundaries of Agent frameworks.
+| Dimension | Codex Harness | DeepSeek Harness | AgentScope 2.0 |
+|-----------|:---:|:---:|:---:|
+| Out-of-box readiness | 🥇 | △ | ○ |
+| Model flexibility | △ | 🥇 | ○ |
+| Private deployment + multi-tenant | △ | ○ | 🥇 |
+| License permissiveness | Apache | **MIT 🥇** | Apache |
 
-**For enterprises**: dsh lets you connect your own model (including private-hosted models or any OpenAI-compatible API), own the entire harness, and avoid vendor lock-in.
+- **Out-of-box**: Codex Harness > AgentScope > DeepSeek Harness
+- **Model flexibility**: DeepSeek Harness > AgentScope > Codex Harness
+- **Private + multi-tenant**: AgentScope > DeepSeek Harness > Codex Harness
+- **License**: DeepSeek (MIT) > AgentScope, Codex (Apache family)
 
-**For tool developers**: the plugin system means your tool integrates in a standard way, rather than adapting it separately for each Agent framework.
+---
 
-**Caveat**: Developer Preview. Breaking changes will happen. Not production-ready for heavy reliance today.
+### Are LangGraph and Friends Still Relevant?
+
+The original post's verdict: **yes, but the battlefield shifted.** A layered view makes it clear:
+
+- **Traditional frameworks** (LangGraph / AutoGen / CrewAI) answer "how do multiple agents collaborate" — graph structures, role assignment, message routing. That problem hasn't disappeared.
+- **Harness** answers "how does a single agent survive in production" — context, memory, sandboxing, observability.
+
+The two layers don't conflict, but priority has shifted: without a stable Harness foundation, LangGraph orchestration on top is a house of cards. **Choose the right Harness first, then worry about orchestration.**
+
+---
+
+### Our Supplement: Selection Guidance
+
+**Choose AgentScope 2.0 if**:
+- Data cannot leave the country (healthcare, finance, government)
+- You're already on the Qwen model family
+- You need multi-tenant isolation and OpenTelemetry integration with existing monitoring
+
+**Choose DeepSeek Harness if**:
+- You want full control over the stack with no black boxes
+- You need to switch between models (DeepSeek / Claude / local Qwen)
+- Your team is comfortable with Cordis/plugin ecosystem investment
+- MIT licensing matters for commercial use
+
+**Choose Codex Harness if**:
+- OpenAI is your primary model provider and you're not switching
+- You need to embed agents inside existing business systems (app-server JSON-RPC is the most turnkey path)
+- You value million-user production verification and 9,600+ commits of engineering maturity
+
+**One-line decision rule**: Data egress OK + using OpenAI → Codex. No data egress + Alibaba cloud → AgentScope. Want to control everything yourself → DeepSeek Harness.
+
+---
+
+### One-Sentence Summary
+
+The original post validates the central insight of this era: agent capability bottlenecks aren't in the model — they're in the Harness. The three open-source runtimes each have distinct positioning: Codex is the factory-tuned car, DeepSeek Harness is the raw chassis, AgentScope is the enterprise full-stack. Which to pick depends on your data egress tolerance, model lock-in appetite, and engineering customization capacity.
 
 ---
 
