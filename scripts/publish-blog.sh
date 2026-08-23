@@ -162,6 +162,26 @@ else
   echo "  ✓ 远端已同步"
 fi
 
+# ---- 4.7. incremental search index (T1.4.1) ----
+# 只索引这次发的这一篇（--slug "$SLUG"），不重新扫全库——diff 阶段免费（只读 manifest KV），
+# 真正花钱的 embed+upsert 只会发生在这篇文章内容确实变了的语言上。失败不影响发布本身
+# （文章已经上线），只是暂时搜不到，可以事后手动补跑，见下面的提示。
+echo "[4.7] updating semantic search index for ${SLUG}…"
+if [ "${BLOG_SKIP_INDEX:-}" = "1" ]; then
+  echo "  ⏭  skipped (BLOG_SKIP_INDEX=1)"
+elif [ -n "${CLOUDFLARE_REGISTRAR_TOKEN:-}" ] && [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
+  if python3 semantic-search/scripts/incremental-index.py --slug "$SLUG" --upsert; then
+    echo "  ✓ search index updated"
+  else
+    echo "  ⚠️ search index update failed — article is live but not searchable yet."
+    echo "     retry manually: python3 semantic-search/scripts/incremental-index.py --slug $SLUG --upsert"
+  fi
+else
+  echo "  ⚠️ CLOUDFLARE_REGISTRAR_TOKEN/CLOUDFLARE_ACCOUNT_ID not set — skipping."
+  echo "     article is live but won't be searchable until indexed; source .env first, or set"
+  echo "     BLOG_SKIP_INDEX=1 to silence this warning."
+fi
+
 # ---- 5. optional WeChat draft ----
 if [ "$DO_WECHAT" = true ]; then
   PRIOR_JSON="pipeline/m2/output/${SLUG}.json"
