@@ -1,22 +1,22 @@
 # 语义检索 / 智能推荐功能 实时状态 — progress
 
 > 「此刻仓库真实发生了什么」。由 `pilot run` 每一步更新。
-> 更新时间：2026-08-23（`pilot resume` 合并 PR #62、开出 PR #63 后同步）
+> 更新时间：2026-08-23（`pilot resume` 合并 PR #63 后同步）
 
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
-- **Feature**：F1.3（Phase 1）已全部 DONE。当前在 **F1.4（自动更新与增强，Phase 2）**——
-  T1.4.1（发布流程接入增量索引 hook）已实现，PR #63 待回执。
-- **分支 / worktree**：`../blog-F1.3-t136` 已随 PR #58 合并清理完毕。`../blog-chore-docsync`
-  对应的 PR #62 已合并（squash `38123a0`），worktree/分支待清理（`safe-cleanup.sh
-  --squash-merged` 已列出命令，由人执行）。当前活跃的是 T1.4.1 用的
-  `../blog-F1.4`（分支 `feat/T1.4.1-incremental-index-hook`）。
-- **PR**：#58/#59/#60/#61/#62 均已合并。**#63（T1.4.1）待回执**，见下表。
+- **Feature**：F1.3（Phase 1）已全部 DONE。**F1.4（自动更新与增强，Phase 2）**——T1.4.1
+  已 DONE（PR #63 合并），T1.4.2（Cron 每日对账）已解锁为 `READY`，是下一个待开工 task。
+- **分支 / worktree**：`../blog-F1.3-t136` 已清理。`../blog-chore-docsync`（PR #62，squash
+  `38123a0`）、`../blog-F1.4`（PR #63，squash `ad6a58e`）均已合并，worktree/分支待清理
+  （`safe-cleanup.sh --squash-merged` 已列出命令，由人执行，不代劳删除）。`../blog-chore-t141-status`
+  是本次任务状态同步用的 chore worktree（非 Feature，硬约束 #3）。
+- **PR**：#58~#63 均已合并。当前无待回执 PR。
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| T1.4.1 | #63 | 待回执 | 增量索引 hook（只对变化的 article/language 重新 embed+upsert）；3 轮对抗自审已做，见 tasks.md T1.4.1 证据 |
+| （无） | — | — | #63 已合并，当前无待回执 PR |
 
 ## 阻塞项（BLOCKED）
 - （无）**CI 自动部署问题已解决**（原 FU-14）：GitHub Actions 的 `CLOUDFLARE_API_TOKEN`
@@ -25,6 +25,22 @@
   脚本各自显式读 token）。这个 secret 从此不再被任何东西读取，不需要用户去 GitHub 更新它。
 
 ## 最近完成
+- 2026-08-23：**PR #63 合并**（`feat/T1.4.1-incremental-index-hook`，squash `ad6a58e`）——
+  T1.4.1 发布流程增量索引 hook：`semantic-search/scripts/incremental-index.py` 只对刚发布
+  文章真正变化的语言重新 embed+upsert，跳过未变的，接进 `scripts/publish-blog.sh` 的
+  `[4.7]` 步骤。3 轮独立子 agent 对抗式自审 + 2 轮外部评审。R1（CHANGES_REQUESTED）抓到
+  真阻塞项：`upsert_vectors` 返回 HTTP 200 + `success=false` 时不抛异常，manifest 会被
+  无条件写入，永久误判文章"已索引"但向量其实没写进去，全程不报错——已修复（`build-vectorize-
+  index.py` 里同款孪生 bug 一并修），reviewer 实测拆掉新加的守卫验证过回归测试真的会红。
+  顺带处理 5 条非阻塞：`incremental-index-plan.json` 补 gitignore；FU-8（孤儿向量清理）
+  归属从 T1.4.1 改派给 T1.4.2；argv 拼写错误（如 `--slugs`）现在会报错而不是静默退化成
+  全库扫描；`--slug` 显式拒绝 manifest 保留字 `_global`（全库扫描分支也过滤掉同名文件）；
+  `INDEX_NAME` 硬编码记入 FU-31（等真的需要切索引版本再处理）。**裁定 FU-17**（缓存陈旧
+  窗口）：不做主动失效——缓存 key 按查询文本哈希不按 article_id，唯一能做的主动失效是清空
+  整个 `searchcache:` 前缀，代价超过收益，维持 T1.3.4 原有的 6 小时新鲜度上限。
+  live 端到端验证（真实发布后短时间内能搜到）仍待第一次真实发布触发——当前
+  `CLOUDFLARE_REGISTRAR_TOKEN` 缺 KV 列命名空间权限（401），dry-run diff 对生产账号没能跑通，
+  首次真实发布时留意 `[4.7]` 那一步的日志。
 - 2026-08-23：**PR #61 合并**（`feat/public-search-no-auth`）——`/api/search` 的登录门禁
   取消，语义检索改为公开（跟已上线的关键词搜索一样）。用户决策：登录墙真正防的是 Workers
   AI/Vectorize 被刷额度，这件事一直由 IP 限速（30 req/5min）承担，不是密码；密码只挡"陌生
@@ -189,9 +205,15 @@
   （`/api/search-analytics.json` 本身没有限速，实际影响低但登录系统已被 PR#61 重新定位，
   原限速器"没了归宿"）、FU-29（forage stage.py 的 PER_SOURCE_CAP 断言在模块顶层，手滑改
   QUOTA 超限会让当天整条流水线直接中止，非阻塞）、FU-30（pagefind 从精确锁定放宽成
-  `^1.5.2`，以后不带包名的 `pnpm update` 可能悄悄升级、打断 postbuild，非阻塞）。
+  `^1.5.2`，以后不带包名的 `pnpm update` 可能悄悄升级、打断 postbuild，非阻塞）、FU-31
+  （T1.4.1 review 新增：`incremental-index.py` 的 INDEX_NAME 写死，等真的要切索引版本再处理）。
+  **2026-08-23 更新（followups.sh 核实为 20 条 OPEN）**：FU-17 已在 T1.4.1 review 里做了裁定
+  （不做缓存主动失效，维持 6 小时 TTL，理由见 followups.md），但仍按既有惯例（同 FU-15）留在
+  OPEN 列表里作为已归档的说明性记录，不是待办；用户"等主线做完再批量清"的决定依然有效——
+  F1.4 还剩 T1.4.2，还没做完，本轮不批量清。
 
 ## 下一个 READY
-- T1.4.1 已实现，`PR_OPEN`（#63），不再是 READY——见上方"进行中/待回执的 PR"。
-- 没有其它 READY task；F1.4 剩下的 T1.4.2/T1.4.3/T1.4.4 依赖 T1.4.1（`BACKLOG`），T1.4.1
-  合并后再解锁。
+- **T1.4.2**（Cron Trigger 每日对账）——T1.4.1 已 `DONE`（PR #63 合并），依赖满足，`tasks.md`
+  已把 T1.4.2 状态从 `BACKLOG` 改成 `READY`。开工前给它单独开一个专属 worktree（见 pilot
+  硬约束 #3），不要复用已合并失效的 `../blog-F1.4`。T1.4.3/T1.4.4 仍是 `BACKLOG`
+  （依赖 T1.4.1/T1.3.3，T1.4.3/4 都是可选增强，非必须）。
