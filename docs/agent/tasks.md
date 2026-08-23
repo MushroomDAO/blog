@@ -333,8 +333,14 @@
   展示本地 Pagefind 结果"的说法正好相反。这个缺陷在 PR#52/#55/#57 三轮评审里都提过，但
   直到 F1.3 收工时同步文档才正式记入账本（FU-20），并在 PR#58 里用 review 验证过的
   一行修法（`.catch(() => ({ expired: false, results: [] }))`）关闭（PR#61 去掉整个登录
-  门禁时进一步简化成 `.catch(() => [])`，`searchVectorRanked` 不再需要 `expired` 这个
-  概念，见下方"明确不做"）。**例外（2026-08-23，feat/public-search-no-auth round 2
+  门禁后，`expired` 这个概念不再需要，`searchVectorRanked` 改成返回
+  `{ results, rateLimited }`（`rateLimited` 用来单独提示 429，见 search.astro 的
+  429 处理说明），调用方的 fallback 相应改成
+  `.catch(() => ({ results: [], rateLimited: false }))`——**订正（2026-08-23，round 2
+  复审指出这里写错）**：曾经错误地把这个 fallback 简化描述成 `.catch(() => [])`，那样写
+  会让 `runCombinedSearch` 读 `vectorOutcome.results` 时拿到 `undefined`、整轮合并崩掉，
+  跟 FU-20 当初 `.catch(() => null)` 的坑是同一个形状；已订正为跟代码逐字一致的写法）。
+  **例外（2026-08-23，feat/public-search-no-auth round 2
   review 指出台账自相矛盾）**：这条"不记录原始查询原文"只覆盖 T1.3.4 自己的查询结果
   缓存这一处；feat/search-usage-analytics（用户明确要求的搜索使用统计功能）往
   Analytics Engine 写的 `logSearchEvent` 存的就是归一化后的查询**原文**，是刻意的、
