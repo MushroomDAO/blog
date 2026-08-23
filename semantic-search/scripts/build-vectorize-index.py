@@ -406,6 +406,10 @@ def main():
             batch = plan[i : i + BATCH_SIZE]
             result = upsert_vectors(index_name, batch)
             print(f"  upserted {i + 1}-{i + len(batch)}/{len(plan)}: {result.get('success')}", file=sys.stderr)
+            # 同一类问题在 incremental-index.py 的 review 里被抓到：upsert_vectors 只在
+            # 4xx/5xx 抛异常，HTTP 200 + success=false 不抛，不检查就会静默认为这批已写入。
+            if not result.get("success"):
+                raise RuntimeError(f"Vectorize upsert failed (HTTP 200, success=false): {result.get('errors')}")
 
 
 if __name__ == "__main__":

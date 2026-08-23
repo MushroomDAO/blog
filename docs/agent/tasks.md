@@ -156,7 +156,8 @@
   用户已铸造新 token 并补齐 Vectorize:Edit + Workers AI:Edit 两条权限，当前用的就是这个新
   token，FU-7 的窄权限诉求已满足，遗留问题只剩"要不要把旧的 `CLOUDFLARE_REGISTRAR_TOKEN`
   全部改名/收回"，非阻塞）；脚本本身不做"先记旧再删"的增量更新，两次运行之间若文章内容被
-  编辑会留下孤儿向量，正式的解决方案是 T1.4.1（FU-8）。
+  编辑会留下孤儿向量，正式的解决方案是 **T1.4.2**（FU-8——T1.4.1 交付时已明确"不清理孤儿向量"，
+2026-08-23 改派给 T1.4.2 的 Cron 对账逻辑，T1.4.2 目前 BACKLOG，这个兜底在它交付前不存在）。
 - **真实执行中发现的平台限制（未在文档预判，靠实际调用暴露）**：Cloudflare Vectorize v2 的
   vector id 有 **64 字节硬上限**，原计划的 `article_id:language:content_hash` 拼接方案对长
   slug 文章会超限（实测某文章拼出 71 字节，首次 `--upsert` 直接 400）。已改为对完整逻辑 key

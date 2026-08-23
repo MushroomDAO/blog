@@ -136,6 +136,44 @@ for ok_slug in ["normal-article-slug", "audio8-tts-preview-0.6b-dualAR", "codexb
     except SystemExit:
         check(f"validate_slug 接受正常 slug {ok_slug!r}", False)
 
+# ---- 场景 8：回归测试——review 抓到的真实 bug。upsert_vectors 返回 HTTP 200 +
+# success=false（不抛异常）时，do_upsert 必须在写 manifest 之前中止，不能假装成功。----
+written3 = {}
+
+
+def fake_write3(namespace_id, key, value):
+    written3[key] = value
+
+
+mf.write_kv_entry = fake_write3
+incr.bvi.embed_all = lambda texts, label: [[0.0] * incr.bvi.EMBEDDING_DIMENSIONS for _ in texts]
+incr.bvi.verify_batch_order = lambda texts: None
+incr.bvi.upsert_vectors = lambda index_name, vectors: {"success": False, "errors": ["boom"]}
+changed_for_failure = [
+    {"article_id": "will-fail", "language": "zh", "text": "t", "title": "t", "tags": [], "url": "/x/", "content_hash": "h"},
+]
+try:
+    incr.do_upsert(changed_for_failure, {"will-fail": None}, "ns", "v2")
+    check("upsert success=false 时 do_upsert 必须抛异常（回归测试）", False)
+except RuntimeError:
+    check("upsert success=false 时 do_upsert 必须抛异常（回归测试）", True)
+check("upsert success=false 时 manifest 完全不写入（回归测试）", "will-fail" not in written3)
+
+# ---- 场景 9：回归测试——不认识的参数（拼写错误如 --slugs/--sulg）必须报错退出，不能悄悄
+# 退化成"没传 --slug"从而跑全库对账。----
+import subprocess  # noqa: E402
+
+incr_path = str(Path(__file__).resolve().parent / "incremental-index.py")
+r = subprocess.run(["python3", incr_path, "--slugs", "foo"], capture_output=True, text=True)
+check("拼写错误的 --slugs 被拒绝而不是静默忽略（回归测试）", r.returncode == 2)
+
+# ---- 场景 10：回归测试——slug 撞 manifest 保留字 _global 必须拒绝，不能读/写坏全局配置记录。----
+try:
+    incr.load_articles(["_global"])
+    check("load_articles 拒绝保留字 _global（回归测试）", False)
+except SystemExit as e:
+    check("load_articles 拒绝保留字 _global（回归测试）", e.code == 1)
+
 print()
 if failures:
     print(f"FAILED: {len(failures)} check(s): {failures}")

@@ -75,11 +75,19 @@ INDEX_NAME = bvi.DEFAULT_INDEX_NAME
 def load_articles(slugs):
     """slugs 为 None → 全库；否则只读指定的几个 slug（对应的 .md 必须存在）。"""
     if slugs is None:
-        paths = sorted(BLOG_DIR.glob("*.md"))
+        paths = [p for p in sorted(BLOG_DIR.glob("*.md")) if p.stem != mf.GLOBAL_KEY]
     else:
         paths = []
         for slug in slugs:
             validate_slug(slug)
+            # manifest.py 的 build_manifest 已经因为同一类问题崩过一次（见该文件里
+            # "review 抓到的真实 bug" 那段）：_global 是 manifest KV 的保留 key，存的是
+            # embedding_model/chunking_version 等全局配置，不是某篇文章的记录。这里走的
+            # 是直接 read_kv_entry/write_kv_entry，不经过 build_manifest 的保护，必须自己
+            # 挡——否则一篇真的叫 _global.md 的文章会读到/写坏全局配置记录，而不是报错。
+            if slug == mf.GLOBAL_KEY:
+                print(f"ERROR: slug {slug!r} is the reserved manifest global key, refusing", file=sys.stderr)
+                sys.exit(1)
             p = BLOG_DIR / f"{slug}.md"
             if not p.exists():
                 print(f"ERROR: no such article: {p}", file=sys.stderr)
@@ -168,6 +176,12 @@ def do_upsert(changed, manifest_cache, namespace_id, chunking_version):
         batch = plan[i : i + bvi.BATCH_SIZE]
         result = bvi.upsert_vectors(INDEX_NAME, batch)
         print(f"  upserted {i + 1}-{i + len(batch)}/{len(plan)}: {result.get('success')}", file=sys.stderr)
+        # review 抓到的真实 bug：upsert_vectors 只在 4xx/5xx 抛异常，HTTP 200 + `{"success":
+        # false, "errors": [...]}` 不抛，循环若无其事走完，然后下面无条件把 content_hash
+        # 写进 manifest——下一轮 diff 就会判"没变"，这篇文章/语言永远不会再被索引，且全程
+        # 不报错，manifest 说"已索引"但向量其实没写进去。必须在写 manifest 之前挡住。
+        if not result.get("success"):
+            raise RuntimeError(f"Vectorize upsert failed (HTTP 200, success=false): {result.get('errors')}")
 
     indexed_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     # 按文章合并写 manifest：同一篇文章的两个语言可能不是同一轮都变了，必须在已有记录
@@ -196,8 +210,12 @@ def do_upsert(changed, manifest_cache, namespace_id, chunking_version):
 
 
 def main():
+    # review 抓到的真实问题：旧版本对不认识的 flag 一律忽略——`--slugs`/`--sulg` 这类拼写错误
+    # 会悄悄退化成"没传 --slug"，也就是全库对账，而不是报错。手工调用（T1.4.2 复用这条 diff
+    # 路径时也会是手工/Cron 调用，不是 publish-blog.sh 那种 $SLUG 保证非空的自动路径）打错一个
+    # 字符不该导致跑一遍全库。
     slugs = None
-    do_write = "--upsert" in sys.argv
+    do_write = False
     slug_args = []
     argv = sys.argv[1:]
     i = 0
@@ -206,7 +224,12 @@ def main():
             slug_args.append(argv[i + 1])
             i += 2
             continue
-        i += 1
+        if argv[i] == "--upsert":
+            do_write = True
+            i += 1
+            continue
+        print(f"ERROR: unrecognized argument {argv[i]!r} (expected --slug <slug> and/or --upsert)", file=sys.stderr)
+        sys.exit(2)
     if slug_args:
         slugs = slug_args
 
