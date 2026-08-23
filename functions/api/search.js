@@ -6,9 +6,28 @@
  * 明显不相关的候选 → 返回候选列表（可能为空）。
  *
  * T1.3.4：加了查询结果缓存（同一个 query 6 小时内重复搜直接吐缓存，跳过计费调用）+
- * 按 IP/会话的双重限速（T1.3.3 已做，T1.3.4 认领"简单限速"/"常见查询缓存"这两项
- * 开发范围，"降级"体现在 search.astro 前端、"不记录原始查询"通过缓存 key 用哈希而非
- * 明文满足，见 docs/agent/tasks.md T1.3.4）。
+ * 按 IP 限速（T1.3.3 已做，T1.3.4 认领"简单限速"/"常见查询缓存"这两项开发范围，
+ * "降级"体现在 search.astro 前端、"不记录原始查询"通过缓存 key 用哈希而非明文满足，
+ * 见 docs/agent/tasks.md T1.3.4——**当时还有按会话的第二道限速，2026-08-23 去掉
+ * 登录门禁时一并移除，见下方说明**）。
+ *
+ * **2026-08-23 去掉登录门禁**：T1.3.6 建这道密码墙的理由是"怕被刷 Workers AI/Vectorize
+ * 计费"（见 architecture.md 核心判断 7）。**修正（round 2 review 用 7 种威胁模型实测
+ * 推翻了这里原来的说法）**：原注释说"真正挡刷量的是下面这道按 IP 的限速，不是登录本身"——
+ * 这不成立。实测按 IP 轮换（每个源地址只用一次）3000/3000 请求全部放行、0 次 429；
+ * 并发请求也因为 checkAndIncrement 的 KV read-modify-write 非原子（FU-11）全部放行；
+ * 跨 3 个 Cloudflare PoP 因为限速计数器互相看不见（FU-6）实际生效倍数变成 3 倍。
+ * **真正把流量压到接近零的是密码墙本身**——这道按 IP 的限速只挡得住"单一来源、顺序、
+ * 不换 IP"这种最不用脑子的滥用，FU-6/FU-11 原来"单一共享密码+低访问量场景下可接受"
+ * 的风险接受结论，前提正是本次去掉的密码墙，需要重新评估（已在 followups.md 更新）。
+ * 站长知悉这一点后仍然决定公开语义检索（跟一直公开的 Pagefind 关键词搜索对齐）——
+ * 按实测成本量级核算（bge-m3 每天 1 万 neurons 免费额度、Vectorize 每月 5000 万
+ * queried dimensions 免费额度），即使是百万级请求的滥用洪水，账单量级在几十美元，
+ * 不是"会破产"级别的风险，只是这个端点从此不再裸奔在几乎为零的真实流量假设上。
+ * **同一套登录系统（`_lib/auth.js`/`search-auth.js`）仍然保留**，只是不再是这个
+ * 端点的门禁——现在专门用来给"搜索使用统计"查看页（`/api/search-analytics.json`）和未来
+ * 可能做的 AI 对话功能把关，那两个的计费/滥用画像跟公开检索完全不是一回事（对话是生成式
+ * LLM 调用，单次成本比一次 embedding+向量检索高得多，必须继续要密码）。
  *
  * 明确不做（见 docs/agent/tasks.md T1.3.3、docs/agent/spec.md §检索融合）：
  * - 不做关键词+向量的 RRF 融合——Pagefind 是纯浏览器端 JS，Worker 调不了，融合发生在
@@ -18,17 +37,14 @@
  * - 不接 reranker（Phase 2 可选，T1.4.4）
  *
  * 需要的 Cloudflare 绑定（wrangler.toml）：
- *   BLOG_SEARCH_KV       必需——限速计数器用，跟 T1.3.5/T1.3.6 共用同一个 namespace
- *   BLOG_SEARCH_SESSION_SECRET  必需——验证登录 Cookie 用（复用 T1.3.6 的 auth.js）
+ *   BLOG_SEARCH_KV       必需——限速计数器/查询缓存用，跟 T1.3.5/T1.3.6 共用同一个 namespace
  *   AI                   必需——Workers AI binding，query embedding 用 bge-m3
  *   VECTORIZE_INDEX      必需——T1.3.1 建的 blog-search-v1 索引
- * 任何一个缺失都 fail-closed 返回 503，不静默降级到"没有登录门禁"或"没有限速"的状态
- * （跟 search-auth.js 的 B2 修复同一个道理：这几个绑定共同构成这个端点唯一的成本/滥用
- * 防线，缺失时不该悄悄放行）。
+ * 任何一个缺失都 fail-closed 返回 503，不静默降级到"没有限速"的状态（这几个绑定共同构成
+ * 这个端点唯一的成本/滥用防线，缺失时不该悄悄放行）。
  */
 
 import { checkAndIncrement } from '../_lib/rate-limit.js';
-import { COOKIE_NAME, getCookie, verifySession } from '../_lib/auth.js';
 
 const MAX_QUERY_LENGTH = 400; // 见 spec.md §错误处理：query 长度上限 300-500 字符
 const MAX_BODY_BYTES = 4096; // 正常请求体是 {"query": "<=400 字符"}，几百字节顶天
@@ -41,19 +57,11 @@ const MAX_RESULTS = 10; // 聚合去重、过滤之后最多返回的文章数
 // 这个端点只负责过滤掉分数明显低于"任何查询的 top5 都不会低到这里"的那一截，真正的
 // 精确度判断交给前端结合 Pagefind 信号一起做（见 spec.md §检索融合第 4 点）。
 const SIMILARITY_THRESHOLD = 0.4;
-// 搜索限速比登录限速宽松得多——已登录用户正常使用会连续搜多次，5 分钟 30 次对真实使用
-// 绰绰有余。按 IP 限速能挡住"单一来源脚本疯狂调用"，但挡不住"泄露的 Cookie 换着 IP 打"——
-// 见下面 SESSION_RATE_LIMIT 的注释。
+// 按 IP 限速——5 分钟 30 次对真实使用绰绰有余，能挡住"单一来源脚本疯狂调用"。
+// 去掉登录门禁之后（见文件头 2026-08-23 说明），这是这个端点唯一的滥用防线，不再有
+// 按会话（登录 Cookie）的第二道限速——那道原本存在的理由是"防泄露的登录 Cookie 换 IP
+// 绕过限速"，登录门禁本身都不要了，自然也没有会话可言。
 const IP_RATE_LIMIT = { prefix: 'searchlimit:', windowSeconds: 5 * 60, maxAttempts: 30 };
-// 修正（T1.3.3 自审对抗式 review 抓到的真实问题）：只按 IP 限速时，一个泄露的登录 Cookie
-// （60 天有效期，本项目明确不做撤销/登出接口，见 T1.3.6"明确不做"）换着 IP/代理打就能
-// 绕过限速——按 IP 算的话理论上限是每 IP 每 5 分钟 30 次，但换 N 个 IP 就是 N 倍，Cookie
-// 本身完全没有总量上限，而每次调用都是计费的 Workers AI + Vectorize 请求。加一个按会话
-// （登录 Cookie 值的哈希，不是明文，避免把会话 token 原样存进 KV key）算的限速，跟 IP
-// 限速同时生效（两个都必须通过）——这样不管换多少个 IP，同一个泄露的 Cookie 在同一个
-// 5 分钟窗口内最多也只能打这么多次，把"泄露单个 Cookie 的最坏成本"钉死在一个可预期范围，
-// 不再随攻击者能换多少个 IP 线性增长。
-const SESSION_RATE_LIMIT = { prefix: 'searchsession:', windowSeconds: 5 * 60, maxAttempts: 30 };
 // T1.3.4：常见查询缓存。同一个 query 字符串在 TTL 内重复搜，直接把上次算好的结果吐回去，
 // 跳过计费的 Workers AI embedding + Vectorize 查询（但仍然计入限速，见下面限速检查的位置）。
 // 6 小时是"省下重复查询的计费调用"和"不要让搜索结果陈旧太久"之间的折中——不是按"文章多久
@@ -78,10 +86,6 @@ async function sha256Hex(text) {
 	return Array.from(new Uint8Array(digest))
 		.map((b) => b.toString(16).padStart(2, '0'))
 		.join('');
-}
-
-async function hashSessionCookie(cookieValue) {
-	return sha256Hex(cookieValue);
 }
 
 // 搜索使用统计（用户明确要求：想看上线后有多少人在用、都搜了什么）。用 Workers
@@ -133,16 +137,8 @@ async function queryCacheKey(normalizedQuery) {
 export async function onRequestPost(context) {
 	const { request, env } = context;
 
-	if (!env.BLOG_SEARCH_SESSION_SECRET || !env.BLOG_SEARCH_KV || !env.AI || !env.VECTORIZE_INDEX) {
+	if (!env.BLOG_SEARCH_KV || !env.AI || !env.VECTORIZE_INDEX) {
 		return jsonResponse({ error: 'search not configured' }, 503);
-	}
-
-	// 登录门禁先于其他任何处理——没有合法 Cookie 的请求不应该消耗限速额度、
-	// 更不应该走到 embedding/Vectorize 这些计费调用
-	const cookieValue = getCookie(request, COOKIE_NAME);
-	const session = await verifySession(env.BLOG_SEARCH_SESSION_SECRET, cookieValue);
-	if (!session.valid) {
-		return jsonResponse({ error: 'login required' }, 401);
 	}
 
 	// 跟 search-auth.js 同样的教训（PR#48 round 2）：request.json() 不检查 Content-Type，
@@ -194,13 +190,10 @@ export async function onRequestPost(context) {
 	// KV namespace 同时也是 T1.3.6 登录限速器在用的（见文件头注释），不计限速的缓存读流量
 	// 一样能把这个共享 namespace 的 KV 读写配额打满，变成一个新的拒绝服务面——不是"省钱"
 	// 那个威胁模型要挡的东西，是完全不同的一种滥用。改成限速先做，缓存检查在后：这样不管
-	// 命中缓存与否，同一个 IP/会话在窗口内的总请求量都被同一套限速盖住，缓存依然省掉
+	// 命中缓存与否，同一个 IP 在窗口内的总请求量都被同一套限速盖住，缓存依然省掉
 	// AI/Vectorize 这两个真正计费的调用，只是不再对"请求本身要不要计次"免疫。
-	const [ipLimit, sessionLimit] = await Promise.all([
-		checkAndIncrement(env.BLOG_SEARCH_KV, ip, IP_RATE_LIMIT),
-		checkAndIncrement(env.BLOG_SEARCH_KV, await hashSessionCookie(cookieValue), SESSION_RATE_LIMIT),
-	]);
-	if (!ipLimit.allowed || !sessionLimit.allowed) {
+	const ipLimit = await checkAndIncrement(env.BLOG_SEARCH_KV, ip, IP_RATE_LIMIT);
+	if (!ipLimit.allowed) {
 		return jsonResponse({ error: 'too many requests, try again later' }, 429);
 	}
 

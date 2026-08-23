@@ -142,6 +142,20 @@ for (const p of data.pages) {
 			}
 			.callout b { color: rgb(var(--black)); }
 
+			.search-analytics-login-form { display: flex; gap: 0.5em; max-width: 320px; margin-top: 0.6em; }
+			.search-analytics-login-form input[type='password'] {
+				flex: 1; min-width: 0; padding: 0.55em 0.8em; border: 1px solid rgba(var(--gray), 0.3);
+				border-radius: 8px; font-size: 0.95em; background: rgb(var(--surface)); color: rgb(var(--gray-dark));
+			}
+			.search-analytics-login-form button {
+				flex-shrink: 0; padding: 0.55em 1.2em; background: rgb(var(--accent)); color: #fff;
+				border: none; border-radius: 8px; font-weight: 600; cursor: pointer;
+			}
+			.search-analytics-login-form button:disabled { opacity: 0.6; cursor: default; }
+			.search-analytics-login-status { margin-top: 0.5em; font-size: 0.85em; min-height: 1.2em; }
+			.search-analytics-login-status.is-error { color: #c0392b; }
+			.search-analytics-login-status.is-success { color: #1a7f37; }
+
 			table.pages { width: 100%; border-collapse: collapse; font-size: 0.86em; }
 			table.pages th { text-align: left; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.05em; color: rgb(var(--gray)); font-weight: 600; padding: 0 0.5em 0.5em; border-bottom: 2px solid rgb(var(--accent)); }
 			table.pages td { padding: 0.55em 0.5em; border-bottom: 1px solid rgba(var(--gray), 0.15); vertical-align: middle; }
@@ -272,7 +286,7 @@ for (const p of data.pages) {
 
 		<script>
 			import snapshot from '../data/blog-analytics.json';
-			import { paint, mergeTitles } from '../lib/analytics-render.js';
+			import { paint, mergeTitles, STRINGS } from '../lib/analytics-render.js';
 
 			const root = document.getElementById('analytics-root');
 			const STORAGE_KEY = 'mycelium:analytics:lang';
@@ -315,21 +329,79 @@ for (const p of data.pages) {
 
 			// 搜索使用统计：独立的登录门禁端点（见 functions/api/search-analytics.json.js
 			// 文件头注释——刻意不跟上面公开看板共用同一次取数/缓存，避免登录用户才能看的
-			// 数据经由公开缓存泄露给所有访客）。未登录会拿到 401，页面照实显示"登录后可见"，
+			// 数据经由公开缓存泄露给所有访客）。未登录会拿到 401，页面照实显示登录表单，
 			// 不是页面级错误。
-			fetch('/api/search-analytics.json', { headers: { accept: 'application/json' } })
-				.then(async (r) => {
-					if (r.status === 401) return { error: 'unauthorized' };
-					if (!r.ok) return { error: 'upstream_http', status: r.status };
-					return r.json();
-				})
-				.then((search) => {
-					data = { ...data, search };
-					render();
-				})
-				.catch(() => {
-					/* 保持"暂无数据"兜底文案，不影响页面其余部分 */
-				});
+			function refreshSearchStats() {
+				return fetch('/api/search-analytics.json', { headers: { accept: 'application/json' } })
+					.then(async (r) => {
+						if (r.status === 401) return { error: 'unauthorized' };
+						if (!r.ok) return { error: 'upstream_http', status: r.status };
+						return r.json();
+					})
+					.then((search) => {
+						data = { ...data, search };
+						render();
+					})
+					.catch(() => {
+						/* 保持"暂无数据"兜底文案，不影响页面其余部分 */
+					});
+			}
+			refreshSearchStats();
+
+			// 登录表单是 renderSearch() 动态生成的（见 analytics-render.js），每次 paint()
+			// 都会整体替换这一节的 innerHTML，直接绑监听器会在下一次重画后失效。改用事件
+			// 委托：监听器绑在不会被替换的 root 上，靠事件冒泡捕获表单提交，不管表单是第
+			// 几次被重新渲染出来的。
+			root.addEventListener('submit', async (event) => {
+				if (event.target?.id !== 'search-analytics-login-form') return;
+				event.preventDefault();
+				const t = STRINGS[lang];
+				const passwordInput = document.getElementById('search-analytics-login-password');
+				const status = document.getElementById('search-analytics-login-status');
+				const button = event.target.querySelector('button');
+				const password = passwordInput?.value;
+				if (!password || !status) return;
+
+				if (button) button.disabled = true;
+				status.textContent = t.searchLoginPending;
+				status.className = 'search-analytics-login-status';
+
+				try {
+					const resp = await fetch('/api/search-auth', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify({ password }),
+					});
+					if (resp.ok) {
+						status.textContent = t.searchLoginSuccess;
+						status.className = 'search-analytics-login-status is-success';
+						await refreshSearchStats();
+					} else if (resp.status === 429) {
+						status.textContent = t.searchLoginRateLimited;
+						status.className = 'search-analytics-login-status is-error';
+					} else if (resp.status === 503) {
+						status.textContent = t.searchLoginUnavailable;
+						status.className = 'search-analytics-login-status is-error';
+					} else if (resp.status === 400 || resp.status === 413) {
+						// search-auth.js 用 400/413 表示"请求本身不合法"（比如密码超过
+						// MAX_PASSWORD_LENGTH），跟 401"密码错误"是两种不同的事——
+						// 前者提示应该是"输入有问题"，不是暗示密码打错了（production-
+						// failure-mode review 指出：一个超长密码管理器生成的密码会被
+						// 误报成"密码错误"，让人怀疑密码本身错了，实际只是太长）
+						status.textContent = t.searchLoginInvalidInput;
+						status.className = 'search-analytics-login-status is-error';
+					} else {
+						status.textContent = t.searchLoginWrongPassword;
+						status.className = 'search-analytics-login-status is-error';
+					}
+				} catch {
+					status.textContent = t.searchLoginNetworkError;
+					status.className = 'search-analytics-login-status is-error';
+				} finally {
+					if (button) button.disabled = false;
+					if (passwordInput) passwordInput.value = '';
+				}
+			});
 		</script>
 	</body>
 </html>

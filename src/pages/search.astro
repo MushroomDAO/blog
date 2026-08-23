@@ -56,46 +56,6 @@ import Header from '../components/Header.astro';
 				font-size: 0.9em;
 				margin-bottom: 1em;
 			}
-			.semantic-login-form {
-				display: flex;
-				gap: 0.5em;
-				max-width: 360px;
-			}
-			.semantic-login-form input[type='password'] {
-				flex: 1;
-				min-width: 0;
-				padding: 0.55em 0.8em;
-				border: 1px solid rgb(var(--gray-light));
-				border-radius: 8px;
-				font-size: 0.95em;
-				background: rgb(var(--surface));
-				color: rgb(var(--gray-dark));
-			}
-			.semantic-login-form button {
-				flex-shrink: 0;
-				padding: 0.55em 1.2em;
-				background: rgb(var(--accent));
-				color: #fff;
-				border: none;
-				border-radius: 8px;
-				font-weight: 600;
-				cursor: pointer;
-			}
-			.semantic-login-form button:disabled {
-				opacity: 0.6;
-				cursor: default;
-			}
-			.semantic-login-status {
-				margin-top: 0.6em;
-				font-size: 0.85em;
-				min-height: 1.2em;
-			}
-			.semantic-login-status.is-error {
-				color: #c0392b;
-			}
-			.semantic-login-status.is-success {
-				color: #1a7f37;
-			}
 			.semantic-search-widget {
 				margin-top: 1em;
 			}
@@ -145,23 +105,10 @@ import Header from '../components/Header.astro';
 			</p>
 
 			<section class="semantic-search-section" id="semantic-search-section">
-				<h2>🔐 语义检索</h2>
-				<p class="semantic-search-hint" id="semantic-search-hint">
-					在关键词之外，理解自然语言诉求的检索能力。需要登录使用。
-				</p>
-				<form class="semantic-login-form" id="semantic-login-form">
-					<input
-						type="password"
-						id="semantic-login-password"
-						placeholder="密码"
-						autocomplete="current-password"
-						required
-					/>
-					<button type="submit" id="semantic-login-submit">登录</button>
-				</form>
-				<p class="semantic-login-status" id="semantic-login-status"></p>
+				<h2>🧠 语义检索</h2>
+				<p class="semantic-search-hint">在关键词之外，理解自然语言诉求的检索能力。</p>
 
-				<div class="semantic-search-widget" id="semantic-search-widget" style="display: none;">
+				<div class="semantic-search-widget" id="semantic-search-widget">
 					<input
 						type="text"
 						id="semantic-search-input"
@@ -171,6 +118,9 @@ import Header from '../components/Header.astro';
 					<ul class="semantic-results" id="semantic-results"></ul>
 					<p class="semantic-empty-note" id="semantic-empty-note" style="display: none;">
 						没有找到相关文章，换个说法试试？
+					</p>
+					<p class="semantic-empty-note" id="semantic-rate-limited-note" style="display: none;">
+						语义检索这一路暂时限速了，过几分钟再试——下面显示的是关键词搜索结果。
 					</p>
 				</div>
 			</section>
@@ -195,82 +145,13 @@ import Header from '../components/Header.astro';
 			// build 时尝试静态解析并失败；is:inline 让 Astro 原样透传这段脚本、不经 Vite
 			// 处理，动态 import 交给浏览器在运行时按实际路径解析。
 			//
-			// 语义检索登录表单。localStorage 的 "searchLoggedIn" 只是给这段 UI 自己看的提示，
-			// 不是真正的授权凭证——真正决定 /api/search 放不放行的是 search-auth.js 签发的
-			// HttpOnly Cookie（这段 JS 读不到那个 Cookie，也不需要读到）。
-			//
-			// 修正（对抗式 review 抓到的真实 UX 死角）：这个提示原来只存一个裸的 '1'，永不过期。
-			// 真实 Cookie 是 60 天有效期，用户如果手动清过 Cookie（不清 localStorage 是很常见的
-			// 不对称操作）或者刚好过了 60 天，页面会一直显示"已登录"、表单被隐藏，但真实会话
-			// 早就没了——因为这个提示是 HttpOnly Cookie 读不到时的唯一代理，没有东西能纠正它。
-			// 现在存一个带时间戳的记录，比 Cookie 有效期稍短的窗口内才信任这个提示；同时加一个
-			// "不是你？重新登录" 的链接，不依赖提示本身准不准，用户随时能手动清掉重新走登录。
-			const LOGGED_IN_HINT_KEY = 'searchLoggedIn';
-			const HINT_TRUST_WINDOW_MS = 55 * 24 * 60 * 60 * 1000; // 55 天，比 Cookie 的 60 天留一点余量
+			// 2026-08-23：/api/search 去掉了登录门禁（见 functions/api/search.js 文件头
+			// 注释——真正防刷量的是按 IP 限速，不是登录本身，站长决定公开语义检索），这个
+			// 组件相应去掉了整套登录表单/localStorage 登录态提示/401 处理，语义检索框
+			// 现在始终可用，跟 Pagefind 关键词搜索一样是公开功能。登录系统本身没删，只是
+			// 挪去给"搜索使用统计"查看页（/analytics）和未来可能的 AI 对话功能把关。
 
-			function readLoggedInHint() {
-				try {
-					const raw = localStorage.getItem(LOGGED_IN_HINT_KEY);
-					if (!raw) return false;
-					const parsed = JSON.parse(raw);
-					if (typeof parsed.loggedInAt !== 'number') return false;
-					return Date.now() - parsed.loggedInAt < HINT_TRUST_WINDOW_MS;
-				} catch {
-					return false; // 解析失败/隐私模式禁用 localStorage：当作没登录过，重新走表单
-				}
-			}
-
-			function writeLoggedInHint() {
-				try {
-					localStorage.setItem(LOGGED_IN_HINT_KEY, JSON.stringify({ loggedInAt: Date.now() }));
-				} catch {
-					// 忽略——只影响下次访问要不要重新弹表单，不影响这次登录已经成功
-				}
-			}
-
-			function clearLoggedInHint() {
-				try {
-					localStorage.removeItem(LOGGED_IN_HINT_KEY);
-				} catch {
-					// 忽略
-				}
-			}
-
-			function renderLoggedInState() {
-				const hint = document.getElementById('semantic-search-hint');
-				const form = document.getElementById('semantic-login-form');
-				const widget = document.getElementById('semantic-search-widget');
-				if (form) form.style.display = 'none';
-				if (widget) widget.style.display = '';
-				if (hint) {
-					hint.textContent = '';
-					const relogin = document.createElement('a');
-					relogin.href = '#';
-					// 修正（PR#48 review 指出的措辞问题）：点这个链接只是清掉本地的 UI 提示，
-					// 真正的 HttpOnly 会话 Cookie 原封不动、继续有效直到过期——不是登出，
-					// 叫"重新登录"会让人误以为原来的会话已经失效了。本项目明确不做服务端
-					// 登出接口（见 tasks.md T1.3.6"明确不做"），撤销只能靠轮换
-					// BLOG_SEARCH_SESSION_SECRET，所以措辞上如实反映"只是重新输入一遍密码"。
-					relogin.textContent = '不是你？重新输入密码';
-					relogin.addEventListener('click', (event) => {
-						event.preventDefault();
-						clearLoggedInHint();
-						renderLoggedOutState();
-					});
-					hint.appendChild(relogin);
-				}
-			}
-
-			function renderLoggedOutState() {
-				const hint = document.getElementById('semantic-search-hint');
-				const form = document.getElementById('semantic-login-form');
-				const widget = document.getElementById('semantic-search-widget');
-				if (hint) hint.textContent = '在关键词之外，理解自然语言诉求的检索能力。需要登录使用。';
-				if (form) form.style.display = '';
-				if (widget) widget.style.display = 'none';
-			}
-
-			// --- T1.3.3：语义检索的混合结果（登录后才会用到）---
+			// --- T1.3.3：语义检索的混合结果 ---
 			//
 			// 融合发生在浏览器端，不在 Worker 里（Pagefind 是纯浏览器端 JS，Worker 调不了）：
 			// 见 docs/agent/spec.md §检索融合。这里用 Pagefind 原生 JS API（不是上面挂载的
@@ -281,7 +162,6 @@ import Header from '../components/Header.astro';
 			let pagefindModulePromise = null;
 
 			function loadPagefindModule() {
-				// 懒加载：只有登录用户真正用语义检索时才拉这个模块，未登录用户的开销不变
 				if (!pagefindModulePromise) {
 					pagefindModulePromise = import('/pagefind/pagefind.js').catch(() => null);
 				}
@@ -307,26 +187,22 @@ import Header from '../components/Header.astro';
 				}));
 			}
 
-			// 修正（T1.3.3 自审对抗式 review 抓到的真实 bug）：这个函数原来直接在这里
-			// 处理 401（清提示、切回登录表单），是个副作用，不受下面 runCombinedSearch 的
-			// generation 校验保护——如果这次调用其实已经被更新的一次搜索超越（比如用户
-			// 输入过程中网络慢的老请求最后才落地），这个副作用仍然会执行，把一个"仍然在线"
-			// 的用户错误地切回登录表单。改成只返回状态、不做副作用，副作用交给调用方在
-			// 确认自己不是过期结果之后再做。
 			async function searchVectorRanked(query) {
 				const resp = await fetch('/api/search', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ query }),
 				});
-				if (resp.status === 401) {
-					return { expired: true, results: [] };
-				}
-				if (!resp.ok) return { expired: false, results: [] }; // 429/503/其他：静默降级，不报错给用户
+				// 修正（round 2 review 指出的真实 UX 缺口）：429 原来跟"没有搜到相关文章"
+				// 走同一条静默降级路径——用户看到的是一模一样的"没有找到相关文章，换个
+				// 说法试试？"，会以为换个说法真的有用，实际是限速了，换什么词都没用，
+				// 要等一会儿才恢复。429 单独标出来，让调用方能区分着提示。
+				if (resp.status === 429) return { results: [], rateLimited: true };
+				if (!resp.ok) return { results: [], rateLimited: false }; // 503/其他：静默降级
 				const body = await resp.json();
 				return {
-					expired: false,
 					results: (body.results || []).map((r) => ({ url: normalizeUrl(r.url), title: r.title, excerpt: r.excerpt })),
+					rateLimited: false,
 				};
 			}
 
@@ -393,8 +269,7 @@ import Header from '../components/Header.astro';
 			// "cats"（触发 B），如果 A 的网络往返碰巧比 B 晚落地，A 会用"cat"的结果
 			// 覆盖掉 B 已经渲染的"cats"结果——界面上悄悄显示了一个输入框里已经不存在的
 			// 查询词的结果，没有任何视觉提示。用一个单调递增的 generation 计数器：每次调用
-			// 记下自己的世代号，await 之后只有仍是最新世代才允许渲染或触发副作用（比如
-			// 401 导致的切回登录表单）——被更新的调用超越的旧调用，直接放弃这一轮。
+			// 记下自己的世代号，await 之后只有仍是最新世代才允许渲染。
 			let searchGeneration = 0;
 
 			async function runCombinedSearch(query) {
@@ -403,33 +278,24 @@ import Header from '../components/Header.astro';
 				if (!trimmed) {
 					renderCombinedResults([]);
 					document.getElementById('semantic-empty-note').style.display = 'none';
+					const clearedRateLimitNote = document.getElementById('semantic-rate-limited-note');
+					if (clearedRateLimitNote) clearedRateLimitNote.style.display = 'none';
 					return;
 				}
 				const [pagefindResults, vectorOutcome] = await Promise.all([
 					searchPagefindRanked(trimmed).catch(() => []),
-					// 修正（FU-20，PR#58 round 2 review 用实测证实并给出正确修法）：这一支原来
-					// 没有 .catch，网络层 fetch reject（断网/DNS/TLS）或响应体不是合法 JSON 会
-					// 让整个 Promise.all 抛出，连已经拿到手的 Pagefind 结果也不渲染——这正是
-					// T1.3.4 声称交付的"降级"要挡住的那种情况。fallback 值必须带上
-					// `expired: false`，不能只是 null/[]：下面紧跟着读 `vectorOutcome.expired`，
-					// 传 null 会把崩溃从这里挪到下一行（review 验证过：`.catch(() => null)`
-					// 是空操作，可观察行为跟不修完全一样）。
-					searchVectorRanked(trimmed).catch(() => ({ expired: false, results: [] })),
+					searchVectorRanked(trimmed).catch(() => ({ results: [], rateLimited: false })),
 				]);
 				if (myGeneration !== searchGeneration) return; // 已经被更新的一次搜索超越，整轮作废
 
-				if (vectorOutcome.expired) {
-					// 会话真的过期了（不只是本地提示不准）——清掉提示，退回登录表单，
-					// 不是静默降级，因为这意味着登录状态本身已经失效。放在 generation 校验
-					// 之后才做，避免一个过期请求的迟到响应，错误地把仍然在线的用户切回登录表单。
-					clearLoggedInHint();
-					renderLoggedOutState();
-					return;
-				}
+				const rateLimitNote = document.getElementById('semantic-rate-limited-note');
+				if (rateLimitNote) rateLimitNote.style.display = vectorOutcome.rateLimited ? '' : 'none';
+
+				const vectorResults = vectorOutcome.results;
 				// "无把握不返回"：两路都没有信号才展示"没有找到"，只要有一路有信号就融合展示
 				// （见 spec.md §检索融合第 4 点；两路各自的绝对信号过滤已经在各自源头做过——
 				// Pagefind 自己的相关性排序、/api/search 服务端的相似度阈值）
-				renderCombinedResults(rrfMerge(pagefindResults, vectorOutcome.results));
+				renderCombinedResults(rrfMerge(pagefindResults, vectorResults));
 			}
 
 			function initSemanticSearchWidget() {
@@ -441,66 +307,7 @@ import Header from '../components/Header.astro';
 				);
 			}
 
-			function initSemanticLoginForm() {
-				if (readLoggedInHint()) {
-					renderLoggedInState();
-					return;
-				}
-
-				const form = document.getElementById('semantic-login-form');
-				const passwordInput = document.getElementById('semantic-login-password');
-				const submitButton = document.getElementById('semantic-login-submit');
-				const status = document.getElementById('semantic-login-status');
-				if (!form || !passwordInput || !submitButton || !status) return;
-
-				form.addEventListener('submit', async (event) => {
-					event.preventDefault();
-					const password = passwordInput.value;
-					if (!password) return;
-
-					submitButton.disabled = true;
-					status.textContent = '登录中…';
-					status.className = 'semantic-login-status';
-
-					try {
-						const resp = await fetch('/api/search-auth', {
-							method: 'POST',
-							headers: { 'Content-Type': 'application/json' },
-							body: JSON.stringify({ password }),
-						});
-						if (resp.ok) {
-							writeLoggedInHint();
-							status.textContent = '登录成功';
-							status.className = 'semantic-login-status is-success';
-							renderLoggedInState();
-						} else if (resp.status === 429) {
-							status.textContent = '尝试次数过多，请稍后再试';
-							status.className = 'semantic-login-status is-error';
-						} else if (resp.status === 503) {
-							// 修正（PR#48 review 指出的真实问题）：503 是服务端配置没弄好
-							// （密码/密钥/KV binding 缺一个），不是用户密码打错了——原来一律
-							// 显示"密码错误"，会让人对着一个根本没配置好的功能反复猜密码，
-							// 而真正的问题在运维那边，用户怎么试都不可能成功
-							status.textContent = '服务暂时不可用，请稍后再试';
-							status.className = 'semantic-login-status is-error';
-						} else {
-							status.textContent = '密码错误';
-							status.className = 'semantic-login-status is-error';
-						}
-					} catch {
-						status.textContent = '网络错误，请重试';
-						status.className = 'semantic-login-status is-error';
-					} finally {
-						submitButton.disabled = false;
-						passwordInput.value = '';
-					}
-				});
-			}
-
-			window.addEventListener('DOMContentLoaded', () => {
-				initSemanticLoginForm();
-				initSemanticSearchWidget();
-			});
+			window.addEventListener('DOMContentLoaded', initSemanticSearchWidget);
 		</script>
 	</body>
 </html>

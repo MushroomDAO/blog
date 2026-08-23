@@ -67,9 +67,18 @@ export const STRINGS = {
 		searchKpiIps: 'Unique IPs',
 		searchTopHead: 'Top queries',
 		searchNoData: 'No data yet — either the feature just launched, or the search-analytics dataset isn’t configured.',
-		searchSignInRequired: 'Sign in via /search to view search usage stats — this section isn’t part of the public dashboard.',
+		searchSignInRequired: 'Sign in to view search usage stats — this section isn’t part of the public dashboard.',
 		searchForbidden: 'The analytics token doesn’t have permission to query search stats (403) — check its scope in the Cloudflare dashboard.',
 		searchUpstreamError: (status) => `The search-stats query itself failed (HTTP ${status}) — this looks like a real integration bug, not "no searches yet". Check the Analytics Engine SQL syntax.`,
+		searchLoginPlaceholder: 'Password',
+		searchLoginButton: 'Sign in',
+		searchLoginPending: 'Signing in…',
+		searchLoginSuccess: 'Signed in',
+		searchLoginRateLimited: 'Too many attempts, try again later',
+		searchLoginUnavailable: 'Service temporarily unavailable, try again later',
+		searchLoginWrongPassword: 'Wrong password',
+		searchLoginInvalidInput: 'Invalid input (password too long?)',
+		searchLoginNetworkError: 'Network error, try again',
 		searchColQuery: 'Query',
 		searchColCount: 'Count',
 
@@ -144,9 +153,18 @@ export const STRINGS = {
 		searchKpiIps: '独立 IP 数',
 		searchTopHead: '热门搜索词',
 		searchNoData: '暂无数据——可能是功能刚上线，也可能是搜索统计数据集还没配置好。',
-		searchSignInRequired: '登录 /search 后才能查看搜索使用统计——这一节不属于公开看板的一部分。',
+		searchSignInRequired: '登录后才能查看搜索使用统计——这一节不属于公开看板的一部分。',
 		searchForbidden: '统计 token 没有查询搜索数据的权限（403）——去 Cloudflare 后台检查 token 权限范围。',
 		searchUpstreamError: (status) => `搜索统计的查询本身失败了（HTTP ${status}）——这看起来是集成本身出了问题，不是"还没人搜索"，去检查 Analytics Engine 的 SQL 语法。`,
+		searchLoginPlaceholder: '密码',
+		searchLoginButton: '登录',
+		searchLoginPending: '登录中…',
+		searchLoginSuccess: '登录成功',
+		searchLoginRateLimited: '尝试次数过多，请稍后再试',
+		searchLoginUnavailable: '服务暂时不可用，请稍后再试',
+		searchLoginWrongPassword: '密码错误',
+		searchLoginInvalidInput: '输入不合法（密码是不是太长了？）',
+		searchLoginNetworkError: '网络错误，请重试',
 		searchColQuery: '查询词',
 		searchColCount: '次数',
 
@@ -356,7 +374,24 @@ export function renderSearch(data, lang) {
 	const t = STRINGS[lang];
 	const s = data.search;
 	if (!s || s.error === 'unauthorized') {
-		return `<p class="note">${esc(t.searchSignInRequired)}</p>`;
+		// 2026-08-23：/api/search 本身去掉了登录门禁（见 functions/api/search.js 文件头
+		// 注释），登录系统挪来专门给这一节（以及未来可能的 AI 对话功能）把关。这里直接
+		// 渲染登录表单而不是只提示"去别处登录"——站长自己是唯一会看到这个分支的人，让
+		// 他们当场输密码，不用跳转。表单提交由 analytics.astro 的事件委托处理（这段
+		// HTML 每次 paint() 都会被整体替换，不能在这里绑监听器，见该文件的说明）。
+		return `
+    <p class="note">${esc(t.searchSignInRequired)}</p>
+    <form id="search-analytics-login-form" class="search-analytics-login-form">
+      <input
+        type="password"
+        id="search-analytics-login-password"
+        placeholder="${esc(t.searchLoginPlaceholder)}"
+        autocomplete="current-password"
+        required
+      />
+      <button type="submit">${esc(t.searchLoginButton)}</button>
+    </form>
+    <p id="search-analytics-login-status" class="search-analytics-login-status"></p>`;
 	}
 	if (s.error === 'forbidden') {
 		return `<p class="note">${esc(t.searchForbidden)}</p>`;
