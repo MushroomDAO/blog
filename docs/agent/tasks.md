@@ -557,7 +557,7 @@
   （reviewer 实测验证过）。R2 APPROVED。`pnpm test` 83/83、`test_incremental_index.py`
   21/21 通过。
 
-### T1.4.2 Cron Trigger 每日对账  `PR_OPEN`
+### T1.4.2 Cron Trigger 每日对账  `DONE`
 - **优先级**：mid
 - **目标**：每日比对 manifest 与索引内容的 `content_hash`，修复漏索引文章、清理已删除文章的
   残留向量（T1.4.1 交付时把孤儿清理明确改派给了这个 task，见 T1.4.1 证据/FU-8）
@@ -598,7 +598,8 @@
   本 PR 的 `reconcile.py` 目前只给人工操作者用，人工执行时会先看 dry-run 输出的孤儿清单
   再决定要不要加 `--delete-orphans`，所以现阶段没有这个上限是可接受的——一旦接了自动
   触发，人工看一眼这一步就没有了，必须补上机械的比例上限。
-- **证据**：PR [#65](https://github.com/MushroomDAO/blog/pull/65)（待评审）。3 轮独立子
+- **证据**：PR [#65](https://github.com/MushroomDAO/blog/pull/65)（合并，squash `f9a61a4`）。
+  3 轮独立子
   agent 对抗式自审（正确性/安全/数据安全-破坏性操作，因为这是本仓库第一个真的会删数据的
   脚本，专门为此加了一轮）：正确性发现 2 个 HIGH bug——`delete_by_ids` 返回
   `success=false` 未检查就推进删 manifest（已修复）、孤儿判定用了 frontmatter 解析成功
@@ -619,7 +620,11 @@
   项：`delete_by_ids` 是异步的，`success=true` 只代表"已受理"不是"已完成"，日志措辞已改
   （`accepted delete of N vector(s)`）；"编辑文章后旧向量从不清理"是 FU-8 最初就点名的
   第三类场景，本 PR 目前没覆盖（只覆盖了漏索引和文章删除两类），记入 FU-32，非阻塞但
-  应尽快单独补。
+  应尽快单独补。**外部评审 APPROVED**（两个 High 都用重跑原实验+变异测试验证过修复真的
+  承重）；剩一条 Low：`mutationId` 日志读了 `result.get('mutationId')`，但 Cloudflare v4
+  信封是 `{"success":…, "result":{…}}`，`mutationId` 在嵌套的 `result["result"]` 里，
+  永远打印 `None`——已在本 PR 合并后的小型 chore PR 里单独修复（不想在已拿到 APPROVE
+  后再推 commit 让评审失效重来一轮）。
 
 ### T1.4.3 可选：LLM 生成一句话匹配理由  `BACKLOG`
 - **优先级**：low（可选增强，非必须）

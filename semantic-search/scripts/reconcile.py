@@ -155,8 +155,11 @@ def delete_orphans(orphan_ids, namespace_id):
         mf.delete_kv_entry(namespace_id, aid)
         # Vectorize 的 delete_by_ids 是异步的（真正的处理结果要靠 mutationId 另外查）；
         # success=true 只代表"请求已被受理排队"，不是"向量这一刻已经从索引里消失"。
+        # review 抓到的真实 bug：Cloudflare v4 信封是 {"success":…, "result":{…}, "errors":[…]}——
+        # mutationId 在 result["result"] 里，不是顶层，跟上面 result.get("success") 读的是同一份
+        # 响应但不同层级；漏了这一层会永远打印 mutationId=None。
         print(f"  - {aid}: accepted delete of {len(chunk_ids)} vector(s) (mutationId="
-              f"{result.get('mutationId')}) + deleted manifest entry", file=sys.stderr)
+              f"{(result.get('result') or {}).get('mutationId')}) + deleted manifest entry", file=sys.stderr)
     return total_vectors_deleted
 
 
