@@ -1,22 +1,25 @@
 # 语义检索 / 智能推荐功能 实时状态 — progress
 
 > 「此刻仓库真实发生了什么」。由 `pilot run` 每一步更新。
-> 更新时间：2026-08-23（`pilot resume` 合并 PR #63 后同步）
+> 更新时间：2026-08-23（`pilot resume` 合并 PR #65 后同步）
 
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
-- **Feature**：F1.3（Phase 1）已全部 DONE。**F1.4（自动更新与增强，Phase 2）**——T1.4.1
-  已 DONE（PR #63 合并），T1.4.2（Cron 每日对账）已解锁为 `READY`，是下一个待开工 task。
+- **Feature**：F1.3（Phase 1）已全部 DONE。**F1.4（自动更新与增强，Phase 2）**——T1.4.1、
+  T1.4.2 均已 DONE。剩 T1.4.3/T1.4.4，都是"可选增强，非必须"，T1.4.3 涉及真实 LLM 调用
+  成本，不主动开工，等用户明确要不要做。
 - **分支 / worktree**：`../blog-F1.3-t136` 已清理。`../blog-chore-docsync`（PR #62，squash
-  `38123a0`）、`../blog-F1.4`（PR #63，squash `ad6a58e`）均已合并，worktree/分支待清理
-  （`safe-cleanup.sh --squash-merged` 已列出命令，由人执行，不代劳删除）。`../blog-chore-t141-status`
-  是本次任务状态同步用的 chore worktree（非 Feature，硬约束 #3）。
-- **PR**：#58~#63 均已合并。当前无待回执 PR。
+  `38123a0`）、`../blog-chore-t141-status`（PR #64，squash `8cec5d1`）、
+  `../blog-F1.4`（PR #63，squash `ad6a58e`）、`../blog-F1.4-t142`（PR #65，squash
+  `f9a61a4`）均已合并，worktree/分支待清理（`safe-cleanup.sh --squash-merged` 已列出命令，
+  由人执行，不代劳删除）。`../blog-chore-t142-fix` 是本次修一条 Low 级 mutationId bug +
+  同步任务状态用的 chore worktree（非 Feature，硬约束 #3）。
+- **PR**：#58~#65 均已合并。当前无待回执 PR。
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| （无） | — | — | #63 已合并，当前无待回执 PR |
+| （无） | — | — | #65 已合并，当前无待回执 PR |
 
 ## 阻塞项（BLOCKED）
 - （无）**CI 自动部署问题已解决**（原 FU-14）：GitHub Actions 的 `CLOUDFLARE_API_TOKEN`
@@ -25,6 +28,27 @@
   脚本各自显式读 token）。这个 secret 从此不再被任何东西读取，不需要用户去 GitHub 更新它。
 
 ## 最近完成
+- 2026-08-23：**PR #65 合并**（`feat/T1.4.2-cron-reconciliation`，squash `f9a61a4`）——
+  T1.4.2 每日对账：`semantic-search/scripts/reconcile.py`（新）复用 T1.4.1 的全库 diff
+  路径，新增两件事——① 漏索引文章重新 embed+upsert（同 `incremental-index.py --upsert`）、
+  ② 孤儿检测+清理（manifest 有记录、本地文件已删除/改名的文章，删 Vectorize 向量 + manifest
+  记录）。3 轮独立子 agent 自审（正确性/安全/数据安全-破坏性操作，本仓库第一个真的会删
+  数据的脚本）先修了 2 个 HIGH bug + 一个真实存在的 `.mdx` 索引盲点。开 PR 后外部评审
+  REQUEST_CHANGES，又抓到 2 个更严重的真阻塞项：`find_orphans` 没考虑 `BLOG_SEARCH_KV`
+  是 manifest/`ratelimit:`/`searchlimit:`/`searchcache:v2:` 四种用途共享的同一个 KV
+  namespace，非 manifest 形状的 key 被误判成孤儿，`delete_orphans` 读到后直接崩溃、真正的
+  孤儿因为排序在崩溃点之后永远清不到（这也推翻了"不加比例上限是因为人会先看 dry-run 清单"
+  的前提——清单会被无关 key 淹没）；`content_hash` 缺失/空时 0 向量被删但 manifest 记录
+  照删，跟 docstring 承诺的"容错跳过"不符。两个都修了（改成白名单判定 + 早退守卫），加了
+  回归测试，第二轮外部评审 APPROVED（Reviewer 用变异测试验证过新回归测试真的会因为改动
+  而失败/通过，不是摆设）。合并后另开小 PR 修了一条 Low 级问题（`mutationId` 日志读漏了
+  Cloudflare v4 响应信封的嵌套层，永远打印 `None`）——不在已拿到 APPROVE 的分支上加 commit
+  重置评审状态。记入 FU-32 的第三类缺口（文章内容被编辑后旧向量从不清理，FU-8 最初就点名
+  的场景）本 PR 未覆盖，非阻塞但应尽快单独补，见 tasks.md T1.4.2 证据。
+  live 端到端验证（真实执行 `--delete-orphans` 对生产账号）仍受限于 T1.4.1 就有的同一个
+  已知问题：`CLOUDFLARE_REGISTRAR_TOKEN` 缺 KV 列命名空间权限（401）。
+- 2026-08-23：**PR #64 合并**（`chore/t141-status-sync`，squash `8cec5d1`）——纯文档同步，
+  T1.4.1 状态 PR_OPEN→DONE、T1.4.2 状态 BACKLOG→READY，无代码改动。
 - 2026-08-23：**PR #63 合并**（`feat/T1.4.1-incremental-index-hook`，squash `ad6a58e`）——
   T1.4.1 发布流程增量索引 hook：`semantic-search/scripts/incremental-index.py` 只对刚发布
   文章真正变化的语言重新 embed+upsert，跳过未变的，接进 `scripts/publish-blog.sh` 的
@@ -213,7 +237,9 @@
   F1.4 还剩 T1.4.2，还没做完，本轮不批量清。
 
 ## 下一个 READY
-- **T1.4.2**（Cron Trigger 每日对账）——T1.4.1 已 `DONE`（PR #63 合并），依赖满足，`tasks.md`
-  已把 T1.4.2 状态从 `BACKLOG` 改成 `READY`。开工前给它单独开一个专属 worktree（见 pilot
-  硬约束 #3），不要复用已合并失效的 `../blog-F1.4`。T1.4.3/T1.4.4 仍是 `BACKLOG`
-  （依赖 T1.4.1/T1.3.3，T1.4.3/4 都是可选增强，非必须）。
+- **没有 READY task**。F1.4 的 T1.4.1/T1.4.2 均已 `DONE`。T1.4.3（LLM 一句话匹配理由）/
+  T1.4.4（reranker）仍是 `BACKLOG`——都是"可选增强，非必须"，T1.4.3 涉及真实 LLM 调用
+  成本（需配合成本监控），不主动开工，等用户明确要不要做。
+- 跟进账本还有 OPEN 项（含本轮新增的 FU-32），用户此前已明确"等主线做完再批量清"——
+  F1.4 主线（T1.4.1/T1.4.2）现在算做完了，下一轮 `pilot resume` 若确认没有其它 READY
+  task，应该进入 §2.5 批量清账本，不用再等。
