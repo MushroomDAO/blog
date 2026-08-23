@@ -109,6 +109,11 @@ if [ "$AHEAD" -gt 0 ]; then
         pnpm build 2>&1 | tail -5 || DEPLOY_OK=0
       fi
       if [ "$DEPLOY_OK" = 1 ]; then
+        # account_id 不能写进 wrangler.toml（Pages 项目 schema 不认这个顶层字段，
+        # 写了会让每次部署直接报错退出——这就是这条路径从 chore/manual-deploy-only
+        # 合并起一直在静默失败的根因）。改成部署前导出环境变量；字面量只是兜底，
+        # 权威值是项目 .env 的 CLOUDFLARE_ACCOUNT_ID，改账号 id 只需要改 .env 那一处。
+        export CLOUDFLARE_ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-7bf23342f21baa5ebfc7bc7b74f5a1f2}"
         CA="${NODE_EXTRA_CA_CERTS:-${CF_CA_CERT:-}}"
         if [ -n "$CA" ] && [ -f "$CA" ]; then
           NODE_EXTRA_CA_CERTS="$CA" npx wrangler pages deploy dist \

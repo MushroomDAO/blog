@@ -97,6 +97,13 @@ fi
 echo "[4/4] deploying to Cloudflare Pages (blog-mushroom)…"
 set +e
 CA="${NODE_EXTRA_CA_CERTS:-${CF_CA_CERT:-}}"
+# account_id 不能写进 wrangler.toml（Pages 项目 schema 不认这个顶层字段，写了会让
+# 每次部署直接报错退出——这正是这条 cron 从 chore/manual-deploy-only 合并起就一直
+# 在静默失败的根因，DEPLOY_STATUS 的告警本该抓到但没人常看 /tmp 日志）。改成按
+# wrangler 实际支持的方式，部署前导出环境变量；这里的字面量是兜底（这个脚本不像
+# publish.sh 那样整体 source .env，只手动摘取 CLOUDFLARE_API_TOKEN 一个变量），
+# 权威值是项目 .env 的 CLOUDFLARE_ACCOUNT_ID，改账号 id 只需要改 .env 那一处。
+export CLOUDFLARE_ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-7bf23342f21baa5ebfc7bc7b74f5a1f2}"
 if [ -n "$CA" ] && [ -f "$CA" ]; then
   NODE_EXTRA_CA_CERTS="$CA" npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true 2>&1 | tail -4
 else
