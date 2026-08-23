@@ -107,3 +107,30 @@ test('checkAndIncrement: kv.put() 抛异常时同样 fail-closed', async () => {
 	assert.equal(result.allowed, false);
 	assert.equal(result.remaining, 0);
 });
+
+// 回归测试（round 2 review 用 M6 威胁模型实测证实的真实 bug）：原来 key 不带时间桶，
+// 每次成功请求都把 TTL 重设成整窗口长度，只要请求间隔小于窗口长度，计数就永远不会真正
+// 归零——一个持续、低速的正常用户反而更容易撞上限速。改成 key 带固定时间桶后，跨桶边界
+// 应该拿到一个全新的、独立的计数额度，不管前一个桶里用掉了多少。
+test('checkAndIncrement: 跨时间桶边界后计数独立重置，不因为持续活跃就被无限期顺延', async () => {
+	const kv = makeFakeKv();
+	const opts = { prefix: 'searchlimit:', windowSeconds: 300, maxAttempts: 2 };
+	const realNow = Date.now;
+	try {
+		// 桶 0：用满这个桶的额度
+		Date.now = () => 0;
+		const a1 = await checkAndIncrement(kv, '7.7.7.7', opts);
+		assert.equal(a1.allowed, true);
+		const a2 = await checkAndIncrement(kv, '7.7.7.7', opts);
+		assert.equal(a2.allowed, true);
+		const a3 = await checkAndIncrement(kv, '7.7.7.7', opts);
+		assert.equal(a3.allowed, false, '同一个桶内第 3 次应该被挡住');
+
+		// 跨到下一个桶（300 秒之后）：不应该继续沿用桶 0 已经用满的计数
+		Date.now = () => 300_000; // 300 秒 = 300000 毫秒，跨过一个 300 秒窗口
+		const b1 = await checkAndIncrement(kv, '7.7.7.7', opts);
+		assert.equal(b1.allowed, true, '跨桶之后应该拿到全新的额度，不应该因为上一桶用满了就继续被挡');
+	} finally {
+		Date.now = realNow;
+	}
+});

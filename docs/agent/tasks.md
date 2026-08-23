@@ -332,7 +332,15 @@
   JSON 会让整轮搜索直接抛异常，连已经拿到的 Pagefind 结果也不渲染——这跟"超时/失败时只
   展示本地 Pagefind 结果"的说法正好相反。这个缺陷在 PR#52/#55/#57 三轮评审里都提过，但
   直到 F1.3 收工时同步文档才正式记入账本（FU-20），并在 PR#58 里用 review 验证过的
-  一行修法（`.catch(() => ({ expired: false, results: [] }))`）关闭。
+  一行修法（`.catch(() => ({ expired: false, results: [] }))`）关闭（PR#61 去掉整个登录
+  门禁时进一步简化成 `.catch(() => [])`，`searchVectorRanked` 不再需要 `expired` 这个
+  概念，见下方"明确不做"）。**例外（2026-08-23，feat/public-search-no-auth round 2
+  review 指出台账自相矛盾）**：这条"不记录原始查询原文"只覆盖 T1.3.4 自己的查询结果
+  缓存这一处；feat/search-usage-analytics（用户明确要求的搜索使用统计功能）往
+  Analytics Engine 写的 `logSearchEvent` 存的就是归一化后的查询**原文**，是刻意的、
+  跟这条不是同一个诉求（缓存层面尽量少存不必要的明文 vs 站长本人明确要求要看到"搜了
+  什么"的可读运营数据，见 followups.md FU-25），但字面读起来会让人以为这个仓库全局不存
+  明文查询词，容易误导，在这里明确记一笔例外。
 - **明确不做**：不做验证码类交互防护（超出必要）；登录认证不在本 task 范围内，见 T1.3.6
 - **依赖**：T1.3.3
 - **交付物**：`functions/api/search.js` 里新增的缓存逻辑 + `functions/api/search.test.js`

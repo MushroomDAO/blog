@@ -119,6 +119,9 @@ import Header from '../components/Header.astro';
 					<p class="semantic-empty-note" id="semantic-empty-note" style="display: none;">
 						没有找到相关文章，换个说法试试？
 					</p>
+					<p class="semantic-empty-note" id="semantic-rate-limited-note" style="display: none;">
+						语义检索这一路暂时限速了，过几分钟再试——下面显示的是关键词搜索结果。
+					</p>
 				</div>
 			</section>
 		</main>
@@ -190,9 +193,17 @@ import Header from '../components/Header.astro';
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ query }),
 				});
-				if (!resp.ok) return []; // 429/503/其他：静默降级，不报错给用户
+				// 修正（round 2 review 指出的真实 UX 缺口）：429 原来跟"没有搜到相关文章"
+				// 走同一条静默降级路径——用户看到的是一模一样的"没有找到相关文章，换个
+				// 说法试试？"，会以为换个说法真的有用，实际是限速了，换什么词都没用，
+				// 要等一会儿才恢复。429 单独标出来，让调用方能区分着提示。
+				if (resp.status === 429) return { results: [], rateLimited: true };
+				if (!resp.ok) return { results: [], rateLimited: false }; // 503/其他：静默降级
 				const body = await resp.json();
-				return (body.results || []).map((r) => ({ url: normalizeUrl(r.url), title: r.title, excerpt: r.excerpt }));
+				return {
+					results: (body.results || []).map((r) => ({ url: normalizeUrl(r.url), title: r.title, excerpt: r.excerpt })),
+					rateLimited: false,
+				};
 			}
 
 			// RRF：score(doc) = Σ 1/(k + rank_i(doc))，某一路没命中时那一路贡献为 0，
@@ -267,14 +278,20 @@ import Header from '../components/Header.astro';
 				if (!trimmed) {
 					renderCombinedResults([]);
 					document.getElementById('semantic-empty-note').style.display = 'none';
+					const clearedRateLimitNote = document.getElementById('semantic-rate-limited-note');
+					if (clearedRateLimitNote) clearedRateLimitNote.style.display = 'none';
 					return;
 				}
-				const [pagefindResults, vectorResults] = await Promise.all([
+				const [pagefindResults, vectorOutcome] = await Promise.all([
 					searchPagefindRanked(trimmed).catch(() => []),
-					searchVectorRanked(trimmed).catch(() => []),
+					searchVectorRanked(trimmed).catch(() => ({ results: [], rateLimited: false })),
 				]);
 				if (myGeneration !== searchGeneration) return; // 已经被更新的一次搜索超越，整轮作废
 
+				const rateLimitNote = document.getElementById('semantic-rate-limited-note');
+				if (rateLimitNote) rateLimitNote.style.display = vectorOutcome.rateLimited ? '' : 'none';
+
+				const vectorResults = vectorOutcome.results;
 				// "无把握不返回"：两路都没有信号才展示"没有找到"，只要有一路有信号就融合展示
 				// （见 spec.md §检索融合第 4 点；两路各自的绝对信号过滤已经在各自源头做过——
 				// Pagefind 自己的相关性排序、/api/search 服务端的相似度阈值）
