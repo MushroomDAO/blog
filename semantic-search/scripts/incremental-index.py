@@ -75,7 +75,14 @@ INDEX_NAME = bvi.DEFAULT_INDEX_NAME
 def load_articles(slugs):
     """slugs 为 None → 全库；否则只读指定的几个 slug（对应的 .md 必须存在）。"""
     if slugs is None:
-        paths = [p for p in sorted(BLOG_DIR.glob("*.md")) if p.stem != mf.GLOBAL_KEY]
+        # T1.4.2 review 抓到的真实 bug：只 glob "*.md" 漏掉 .mdx（`src/content.config.ts`
+        # 的 blog collection pattern 是 `**/*.{md,mdx}`，本仓库真的有一篇发布中的 .mdx 文章
+        # `using-mdx.mdx`），这个漏洞在 reconcile.py 的孤儿判定里会变成"误删一篇仍在发布的
+        # 文章"——如果只有这里修、reconcile.py 的孤儿判定没跟着用同一个文件集合，两边就会
+        # 对不上：reconcile.py 判定它"本地存在"（不删）,但这里的全库扫描又看不到它、
+        # 永远不会真的把它 embed 进索引。
+        all_md_paths = sorted(list(BLOG_DIR.glob("*.md")) + list(BLOG_DIR.glob("*.mdx")))
+        paths = [p for p in all_md_paths if p.stem != mf.GLOBAL_KEY]
     else:
         paths = []
         for slug in slugs:

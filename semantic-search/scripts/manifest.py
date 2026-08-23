@@ -230,6 +230,68 @@ def read_kv_entry(namespace_id, key):
         raise
 
 
+def delete_kv_entry(namespace_id, key):
+    """T1.4.2 对账要用：孤儿文章（本地 .md 已删除/改名，manifest 里还有记录）要连 manifest
+    记录本身一起删掉，不然下一轮对账会反复把它当"孤儿"重新处理一遍。跟 write/read 一样
+    先校验 key 名（拒绝路径穿越/URL 结构字符），且对同一类瞬时错误重试，成功和"本来就不
+    存在"（404）都当作已经达到目标状态处理，不报错——delete 的目标是"这个 key 不存在了"，
+    404 已经是这个目标状态。"""
+    validate_key_name(key)
+    url = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/storage/kv/namespaces/{namespace_id}/values/{urllib.parse.quote(key, safe='')}"
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {TOKEN}"}, method="DELETE")
+    last_err = None
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read())
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                return {"success": True, "already_absent": True}
+            detail = e.read().decode("utf-8", errors="replace")
+            if 400 <= e.code < 500:
+                print(f"  KV delete error (HTTP {e.code}, not retrying — client error): {detail}", file=sys.stderr)
+                raise
+            last_err = e
+            if attempt == 3:
+                print(f"  KV delete error (HTTP {e.code}), giving up after 4 attempts: {detail}", file=sys.stderr)
+                raise
+            print(f"  KV delete error (HTTP {e.code}), retrying ({attempt + 1}/4): {detail}", file=sys.stderr)
+            time.sleep(2 * (attempt + 1))
+        except urllib.error.URLError as e:
+            last_err = e
+            if attempt == 3:
+                print(f"  KV delete error ({type(e).__name__}), giving up after 4 attempts: {e}", file=sys.stderr)
+                raise
+            print(f"  KV delete error ({type(e).__name__}), retrying ({attempt + 1}/4)...", file=sys.stderr)
+            time.sleep(2 * (attempt + 1))
+    raise last_err
+
+
+def list_manifest_keys(namespace_id):
+    """列出这个 KV namespace 里全部 key——T1.4.2 对账要靠这个找"manifest 里有、本地文章
+    没有"的孤儿条目，之前 read/write/find_or_create_namespace 都是"已知 key/title 直接查"，
+    没有"我不知道有哪些 key，把它们都列出来"这个能力。翻完全部分页，理由跟
+    `_list_all_namespaces` 一样：只读第一页会在文章数量超过单页上限时漏掉后面的 key，
+    对账逻辑因此会把"还没扫到"误判成"孤儿"。GLOBAL_KEY（"_global"）不是文章记录，调用方
+    自己按需过滤（跟 build_manifest 的保留字处理是同一个约定，这里不重复过滤是因为
+    调用方——对账逻辑——本来就需要知道 _global 存在，只是不能把它当孤儿删掉）。"""
+    keys = []
+    cursor = None
+    while True:
+        url = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/storage/kv/namespaces/{namespace_id}/keys?limit=1000"
+        if cursor:
+            url += f"&cursor={urllib.parse.quote(cursor, safe='')}"
+        req = urllib.request.Request(url, headers={"Authorization": f"Bearer {TOKEN}"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read())
+        keys.extend(k["name"] for k in data.get("result", []))
+        info = data.get("result_info") or {}
+        cursor = info.get("cursor")
+        if info.get("list_complete") or not cursor:
+            break
+    return keys
+
+
 def main():
     import argparse
 

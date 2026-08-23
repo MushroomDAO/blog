@@ -557,20 +557,69 @@
   （reviewer 实测验证过）。R2 APPROVED。`pnpm test` 83/83、`test_incremental_index.py`
   21/21 通过。
 
-### T1.4.2 Cron Trigger 每日对账  `READY`
+### T1.4.2 Cron Trigger 每日对账  `PR_OPEN`
 - **优先级**：mid
 - **目标**：每日比对 manifest 与索引内容的 `content_hash`，修复漏索引文章、清理已删除文章的
-  残留向量（FU-8 已改派给这个 task，见 T1.4.1 证据）
-- **开发范围**：Cloudflare Cron Trigger + 对账逻辑——复用 `incremental-index.py` 已有的
-  diff 路径（`diff_against_manifest`），不是另起一套；新增的是"全库扫描 + 找出 manifest 有
-  但本地文件没有的孤儿条目 + `wrangler vectorize delete-by-ids` 清理对应向量"这部分
-- **明确不做**：不做主触发（那是 T1.4.1 的职责，已交付）
-- **依赖**：T1.4.1（**2026-08-23 已满足**，PR #63 已合并）
-- **交付物**：Cron Trigger 配置 + 对账脚本
-- **验收命令**：`<待实现时补充>`
-- **涉及文件**：待定
-- **风险/回滚**：无
-- **证据**：<推进时回填>
+  残留向量（T1.4.1 交付时把孤儿清理明确改派给了这个 task，见 T1.4.1 证据/FU-8）
+- **开发范围**：拆成两半——① 对账逻辑（Python 脚本，复用 `incremental-index.py` 已有的
+  diff 路径，新增"反向"扫描：manifest KV 里有、本地 `.md` 没有的条目 = 孤儿，删对应向量 +
+  删 manifest 记录）；② 每日自动触发的机制
+- **明确不做**：不做主触发（发布即触发是 T1.4.1 的职责，已交付）
+- **依赖**：T1.4.1（已满足，PR #63 已合并）
+- **交付物**：`semantic-search/scripts/reconcile.py`（新）+ `manifest.py` 补
+  `list_manifest_keys`/`delete_kv_entry`（对账要"列出全部 key"和"删记录"，之前只有单条
+  读写）
+- **验收命令**：`<待实现时补充：手动删一篇已发布文章后跑一次对账，确认 Vectorize 里的
+  对应向量和 manifest KV 记录都被清理，且未受影响的文章不受影响>`
+- **涉及文件**：`semantic-search/scripts/reconcile.py`（新）、
+  `semantic-search/scripts/manifest.py`、`semantic-search/scripts/test_reconcile.py`（新）
+- **风险/回滚**：`delete_by_ids`/KV 删除是真实账号级破坏性操作（数据删除），比 T1.4.1 的
+  "只增不减"风险更高——脚本默认 dry-run（只打印会删什么，不真删），真删需要显式
+  `--delete-orphans` 且需要 `CLOUDFLARE_REGISTRAR_TOKEN`/`ACCOUNT_ID`，跟既有的
+  `--create-index`/`--upsert`/`--write` 是同一套纪律
+- **待决问题（不猜，等用户拍板）**："每日自动触发"具体怎么实现，有两个真实候选，架构含义
+  不同：(a) 部署一个**独立的 Cloudflare Worker**（不是现有的 Pages 项目——Pages Functions
+  不支持 Cron Trigger，这必须是单独的 `wrangler deploy`，新建一份持久化云端资源，往后每天
+  自动跑，脱离本机存在）；(b) 复用本仓库已有的"本机 cron 跑脚本调 Cloudflare API"模式（跟
+  `scripts/update-analytics.sh` 同款——本机 launchd/cron 定时跑 `reconcile.py`，不新建任何
+  Cloudflare 资源，缺点是依赖本机在线）。**本 task 只交付对账逻辑本身（dry-run 默认，真正
+  删除需显式确认），不擅自选边、不部署任何新 Cloudflare 资源**——部署一个新 Worker 属于
+  "真实账号级、持久化、无人值守之后自动执行删除操作的基础设施"，跟 architecture.md 里
+  "wrangler vectorize create/secret put 之前必须停下来问用户"是同一类决策，不是脚本代码
+  层面能替用户拍的板
+- **接自动触发前的硬性前提（review 抓到的真实风险，不是这个 task 现在要做的，但必须写死
+  在这里，免得下一个接手的人漏掉）**：`reconcile.py` 现在只有一个"全空目录"的地板检查
+  （`articles` 为空直接退出），**没有比例上限**——如果它是被本机 cron 定时驱动、而那个
+  checkout 恰好是落后于 main 的旧 worktree（本仓库确实同时开着好几个 worktree，各自
+  停在不同 commit，是真实存在的模式，不是假设），旧 checkout 缺的那些新文章会全部被误判
+  成孤儿、`--delete-orphans` 会真的删掉。**谁来接"每天自动触发"这部分，必须先加一个
+  比例/数量上限**（比如"孤儿数超过 manifest 总数的 X% 就拒绝执行、只报告不删"或类似的
+  二次确认），而不是让 `--delete-orphans` 在无人值守场景下对任意大小的误判结果照单全删。
+  本 PR 的 `reconcile.py` 目前只给人工操作者用，人工执行时会先看 dry-run 输出的孤儿清单
+  再决定要不要加 `--delete-orphans`，所以现阶段没有这个上限是可接受的——一旦接了自动
+  触发，人工看一眼这一步就没有了，必须补上机械的比例上限。
+- **证据**：PR [#65](https://github.com/MushroomDAO/blog/pull/65)（待评审）。3 轮独立子
+  agent 对抗式自审（正确性/安全/数据安全-破坏性操作，因为这是本仓库第一个真的会删数据的
+  脚本，专门为此加了一轮）：正确性发现 2 个 HIGH bug——`delete_by_ids` 返回
+  `success=false` 未检查就推进删 manifest（已修复）、孤儿判定用了 frontmatter 解析成功
+  后的子集而不是原始文件列表（已修复，加了临时目录回归测试）；数据安全发现真实存在的
+  `.mdx` 索引盲点（本仓库确有一篇发布中的 `.mdx` 文章未被三个索引脚本的 glob 覆盖，已
+  统一修复）+ 比例上限缺口（已记入本条"接自动触发前的硬性前提"，不在本 PR 实现）。
+  `pnpm test` 83/83、`test_reconcile.py` 11/11 通过。**外部评审 REQUEST_CHANGES**，抓到
+  2 个真阻塞项：① `find_orphans` 没考虑 `BLOG_SEARCH_KV` 是
+  manifest/`ratelimit:`/`searchlimit:`/`searchcache:v2:` 四种用途共享的同一个 namespace，
+  把非 manifest 形状的 key 也当孤儿，`delete_orphans` 读到 `int`/`list` 直接
+  `AttributeError` 崩溃——而且排序上非 manifest key 往往靠前，真正的孤儿因此永远清不到，
+  这也推翻了"不加比例上限是因为人会先看 dry-run 清单"的前提（清单会被无关 key 淹没）。
+  已改成白名单判定（只有读出来是 dict 且有 content_hash 字段的 key 才算孤儿候选，其余
+  跳过并打印说明），加了混入 `ratelimit:`/`searchcache:v2:` key 的回归测试。② 原
+  `if chunk_ids:` 只包住 `delete_by_ids`，`delete_kv_entry` 在 if 块外无条件执行——
+  `content_hash` 缺失/空 dict 时 0 个向量被删，manifest 记录却照删，docstring 承诺的
+  "容错跳过"没有真的发生。已改成早退守卫，加了空 `content_hash` 的回归测试。另外两条非阻塞
+  项：`delete_by_ids` 是异步的，`success=true` 只代表"已受理"不是"已完成"，日志措辞已改
+  （`accepted delete of N vector(s)`）；"编辑文章后旧向量从不清理"是 FU-8 最初就点名的
+  第三类场景，本 PR 目前没覆盖（只覆盖了漏索引和文章删除两类），记入 FU-32，非阻塞但
+  应尽快单独补。
 
 ### T1.4.3 可选：LLM 生成一句话匹配理由  `BACKLOG`
 - **优先级**：low（可选增强，非必须）
