@@ -551,17 +551,47 @@
   路径穿越/绝对路径覆盖（已加白名单正则+回归测试）；生产失败模式无阻塞项。
   `pnpm test` 83/83、`test_incremental_index.py` 17/17 通过。
 
-### T1.4.2 Cron Trigger 每日对账  `BACKLOG`
+### T1.4.2 Cron Trigger 每日对账  `IN_PROGRESS`
 - **优先级**：mid
 - **目标**：每日比对 manifest 与索引内容的 `content_hash`，修复漏索引文章、清理已删除文章的
-  残留向量
-- **开发范围**：Cloudflare Cron Trigger + 对账逻辑
-- **明确不做**：不做主触发（那是 T1.4.1 的职责）
-- **依赖**：T1.4.1
-- **交付物**：Cron Trigger 配置 + 对账脚本
-- **验收命令**：`<待实现时补充>`
-- **涉及文件**：待定
-- **风险/回滚**：无
+  残留向量（T1.4.1 交付时把孤儿清理明确改派给了这个 task，见 T1.4.1 证据/FU-8）
+- **开发范围**：拆成两半——① 对账逻辑（Python 脚本，复用 `incremental-index.py` 已有的
+  diff 路径，新增"反向"扫描：manifest KV 里有、本地 `.md` 没有的条目 = 孤儿，删对应向量 +
+  删 manifest 记录）；② 每日自动触发的机制
+- **明确不做**：不做主触发（发布即触发是 T1.4.1 的职责，已交付）
+- **依赖**：T1.4.1（已满足，PR #63 已合并）
+- **交付物**：`semantic-search/scripts/reconcile.py`（新）+ `manifest.py` 补
+  `list_manifest_keys`/`delete_kv_entry`（对账要"列出全部 key"和"删记录"，之前只有单条
+  读写）
+- **验收命令**：`<待实现时补充：手动删一篇已发布文章后跑一次对账，确认 Vectorize 里的
+  对应向量和 manifest KV 记录都被清理，且未受影响的文章不受影响>`
+- **涉及文件**：`semantic-search/scripts/reconcile.py`（新）、
+  `semantic-search/scripts/manifest.py`、`semantic-search/scripts/test_reconcile.py`（新）
+- **风险/回滚**：`delete_by_ids`/KV 删除是真实账号级破坏性操作（数据删除），比 T1.4.1 的
+  "只增不减"风险更高——脚本默认 dry-run（只打印会删什么，不真删），真删需要显式
+  `--delete-orphans` 且需要 `CLOUDFLARE_REGISTRAR_TOKEN`/`ACCOUNT_ID`，跟既有的
+  `--create-index`/`--upsert`/`--write` 是同一套纪律
+- **待决问题（不猜，等用户拍板）**："每日自动触发"具体怎么实现，有两个真实候选，架构含义
+  不同：(a) 部署一个**独立的 Cloudflare Worker**（不是现有的 Pages 项目——Pages Functions
+  不支持 Cron Trigger，这必须是单独的 `wrangler deploy`，新建一份持久化云端资源，往后每天
+  自动跑，脱离本机存在）；(b) 复用本仓库已有的"本机 cron 跑脚本调 Cloudflare API"模式（跟
+  `scripts/update-analytics.sh` 同款——本机 launchd/cron 定时跑 `reconcile.py`，不新建任何
+  Cloudflare 资源，缺点是依赖本机在线）。**本 task 只交付对账逻辑本身（dry-run 默认，真正
+  删除需显式确认），不擅自选边、不部署任何新 Cloudflare 资源**——部署一个新 Worker 属于
+  "真实账号级、持久化、无人值守之后自动执行删除操作的基础设施"，跟 architecture.md 里
+  "wrangler vectorize create/secret put 之前必须停下来问用户"是同一类决策，不是脚本代码
+  层面能替用户拍的板
+- **接自动触发前的硬性前提（review 抓到的真实风险，不是这个 task 现在要做的，但必须写死
+  在这里，免得下一个接手的人漏掉）**：`reconcile.py` 现在只有一个"全空目录"的地板检查
+  （`articles` 为空直接退出），**没有比例上限**——如果它是被本机 cron 定时驱动、而那个
+  checkout 恰好是落后于 main 的旧 worktree（本仓库确实同时开着好几个 worktree，各自
+  停在不同 commit，是真实存在的模式，不是假设），旧 checkout 缺的那些新文章会全部被误判
+  成孤儿、`--delete-orphans` 会真的删掉。**谁来接"每天自动触发"这部分，必须先加一个
+  比例/数量上限**（比如"孤儿数超过 manifest 总数的 X% 就拒绝执行、只报告不删"或类似的
+  二次确认），而不是让 `--delete-orphans` 在无人值守场景下对任意大小的误判结果照单全删。
+  本 PR 的 `reconcile.py` 目前只给人工操作者用，人工执行时会先看 dry-run 输出的孤儿清单
+  再决定要不要加 `--delete-orphans`，所以现阶段没有这个上限是可接受的——一旦接了自动
+  触发，人工看一眼这一步就没有了，必须补上机械的比例上限。
 - **证据**：<推进时回填>
 
 ### T1.4.3 可选：LLM 生成一句话匹配理由  `BACKLOG`

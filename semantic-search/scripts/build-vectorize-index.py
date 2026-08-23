@@ -304,6 +304,47 @@ def upsert_vectors(index_name, vectors):
     raise last_err
 
 
+def delete_by_ids(index_name, ids):
+    """T1.4.2 对账要用：孤儿向量清理（本地文章已删除/改名，manifest 里的记录和 Vectorize
+    里的向量都要跟着清）。Vectorize v2 REST 端点，跟 `wrangler vectorize delete-by-ids`
+    CLI 命令是同一个操作——本仓库 T1.3.1/T1.3.2 之前都是手动敲这条 CLI 命令做过清理
+    （见 tasks.md T1.3.1/T1.3.2 的证据段落），这里是把它变成可复用、可自动跑的函数。
+    跟 upsert_vectors 同样的重试纪律：4xx 不重试（重试同一批坏 id 不会变好），5xx 重试
+    4 次。空 ids 列表直接跳过，不发一个没有意义的请求。"""
+    if not ids:
+        return {"success": True, "mutationId": None}
+    url = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/vectorize/v2/indexes/{index_name}/delete_by_ids"
+    body = json.dumps({"ids": ids}).encode("utf-8")
+    req = urllib.request.Request(
+        url, data=body,
+        headers={"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"},
+        method="POST",
+    )
+    last_err = None
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                return json.loads(resp.read())
+        except urllib.error.HTTPError as e:
+            last_err = e
+            detail = e.read().decode("utf-8", errors="replace")
+            if 400 <= e.code < 500:
+                print(f"  delete_by_ids error (HTTP {e.code}, not retrying — client error): {detail}", file=sys.stderr)
+                raise
+            if attempt == 3:
+                print(f"  delete_by_ids error (HTTP {e.code}): {detail}", file=sys.stderr)
+                raise
+            print(f"  delete_by_ids error (HTTP {e.code}), retrying ({attempt + 1}/4): {detail}", file=sys.stderr)
+            time.sleep(2 * (attempt + 1))
+        except (urllib.error.URLError, json.JSONDecodeError) as e:
+            last_err = e
+            if attempt == 3:
+                raise
+            print(f"  delete_by_ids error ({type(e).__name__}), retrying ({attempt + 1}/4)...", file=sys.stderr)
+            time.sleep(2 * (attempt + 1))
+    raise last_err
+
+
 def load_or_build_plan(articles):
     """优先复用向量缓存（同一批文章、同一个 chunking_version 时），避免失败重跑重新
     花 Workers AI 额度重算全部 embedding——embedding 成本虽然本就可忽略，但 --upsert 中途
@@ -368,7 +409,11 @@ def main():
         sys.exit(1)
 
     articles = []
-    for md_path in sorted(BLOG_DIR.glob("*.md")):
+    # T1.4.2 review 抓到的真实 bug：只 glob "*.md" 漏掉 .mdx（`src/content.config.ts` 的 blog
+    # collection pattern 是 `**/*.{md,mdx}`，本仓库真的有一篇发布中的 .mdx 文章
+    # `using-mdx.mdx`）——一直被这三个脚本（这里、incremental-index.py、reconcile.py）
+    # 静默漏索引，不是本 PR 引入的，但既然 reconcile.py 会真的删数据，这个盲点一起修掉。
+    for md_path in sorted(list(BLOG_DIR.glob("*.md")) + list(BLOG_DIR.glob("*.mdx"))):
         fm = parse_frontmatter(md_path)
         if fm and fm["title"]:
             articles.append(fm)
