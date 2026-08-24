@@ -204,6 +204,21 @@ launchctl load ~/Library/LaunchAgents/com.xhs-mcp-cdp.plist
 tail -f /tmp/xhs-mcp.log
 ```
 
+### Mac Mini 服务管理
+
+```bash
+# 在 Mac Mini 上执行：
+# 查看服务状态
+launchctl list | grep xhs-mcp
+
+# 重启服务
+launchctl unload ~/Library/LaunchAgents/com.xhs-mcp-cdp.plist
+launchctl load ~/Library/LaunchAgents/com.xhs-mcp-cdp.plist
+
+# 查看日志
+tail -f /tmp/xhs-mcp.log
+```
+
 ---
 
 ## 📝 发布记录规范
