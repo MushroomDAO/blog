@@ -20,11 +20,19 @@ if [ -f "$BLOG_DIR/.env" ]; then set -a; source "$BLOG_DIR/.env"; set +a; fi
 # （your_token_here/your_account_id_here）；忘替换时上面这行会原样导出，
 # step_blog_deploy 里的 `npx wrangler pages deploy` 会拿假 token 去请求 Cloudflare
 # API，报一个看不懂的鉴权错误而不是"没配置"。精确匹配未替换的占位符时按未设置处理。
-if [ "${CLOUDFLARE_API_TOKEN:-}" = "your_token_here" ]; then
+# round 2 review：比较前先去掉 CRLF/引号，跟 update-analytics.sh 已有的同款处理一致——
+# Windows 编辑过的 .env 残留的尾随 \r，或手滑加的引号，会让下面的精确匹配失效，占位符
+# 原样当成"已配置"导出。
+_strip_env_value() {
+  local v; v="$(printf '%s' "$1" | tr -d '\r')"
+  v="${v%\"}"; v="${v#\"}"; v="${v%\'}"; v="${v#\'}"
+  printf '%s' "$v"
+}
+if [ "$(_strip_env_value "${CLOUDFLARE_API_TOKEN:-}")" = "your_token_here" ]; then
   echo "⚠️  CLOUDFLARE_API_TOKEN in .env is still the .env.example placeholder — treating as unset" >&2
   unset CLOUDFLARE_API_TOKEN
 fi
-if [ "${CLOUDFLARE_ACCOUNT_ID:-}" = "your_account_id_here" ]; then
+if [ "$(_strip_env_value "${CLOUDFLARE_ACCOUNT_ID:-}")" = "your_account_id_here" ]; then
   echo "⚠️  CLOUDFLARE_ACCOUNT_ID in .env is still the .env.example placeholder — treating as unset" >&2
   unset CLOUDFLARE_ACCOUNT_ID
 fi

@@ -132,6 +132,11 @@ CA="${NODE_EXTRA_CA_CERTS:-${CF_CA_CERT:-}}"
 # 又有人往 wrangler.toml 里加回这一行。）改成按 wrangler 实际支持的方式，部署前
 # 导出环境变量；CLOUDFLARE_ACCOUNT_ID 现在真的从 .env 读（见上面新增的读取块），
 # 这里的字面量只是 .env 缺这一项时的兜底。
+# 注（FU-24 round 2 review 指出）：.env 里的占位符 your_account_id_here 被上面的
+# FU-24 guard 当成"未设置"处理后，也会落到这条兜底——部署会用这个写死在仓库里的
+# account id 悄悄成功，而不是用户以为自己在 .env 里配的那个值。account id 不是密钥，
+# 悄悄成功不算安全问题，但如果这个仓库以后需要部署到另一个 Cloudflare 账号，别忘了
+# 这里还有一条硬编码兜底会覆盖掉一个"看起来配置了但其实是占位符"的 .env。
 export CLOUDFLARE_ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-7bf23342f21baa5ebfc7bc7b74f5a1f2}"
 if [ -n "$CA" ] && [ -f "$CA" ]; then
   NODE_EXTRA_CA_CERTS="$CA" npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true 2>&1 | tail -4

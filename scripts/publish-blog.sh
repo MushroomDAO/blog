@@ -53,11 +53,20 @@ BLOG_USER="${BLOG_USER:-mushroom}"
 # as if it were real, and wrangler/Cloudflare API calls fail with a confusing
 # auth error instead of a clear "not configured" one. Treat an exact-match
 # placeholder as unset.
-if [ "${CLOUDFLARE_API_TOKEN:-}" = "your_token_here" ]; then
+# round 2 review: strip CRLF/quotes before comparing, same as the existing
+# pattern in update-analytics.sh — a Windows-edited .env's trailing \r, or a
+# hand-added quote around the value, would otherwise defeat the exact match
+# below and silently ship the placeholder through as if it were real.
+_strip_env_value() {
+  local v; v="$(printf '%s' "$1" | tr -d '\r')"
+  v="${v%\"}"; v="${v#\"}"; v="${v%\'}"; v="${v#\'}"
+  printf '%s' "$v"
+}
+if [ "$(_strip_env_value "${CLOUDFLARE_API_TOKEN:-}")" = "your_token_here" ]; then
   echo "⚠️  CLOUDFLARE_API_TOKEN in .env is still the .env.example placeholder — treating as unset" >&2
   unset CLOUDFLARE_API_TOKEN
 fi
-if [ "${CLOUDFLARE_ACCOUNT_ID:-}" = "your_account_id_here" ]; then
+if [ "$(_strip_env_value "${CLOUDFLARE_ACCOUNT_ID:-}")" = "your_account_id_here" ]; then
   echo "⚠️  CLOUDFLARE_ACCOUNT_ID in .env is still the .env.example placeholder — treating as unset" >&2
   unset CLOUDFLARE_ACCOUNT_ID
 fi
