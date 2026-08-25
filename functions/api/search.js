@@ -97,16 +97,25 @@ async function sha256Hex(text) {
 // 同一个哈希值，count(DISTINCT index1) 算出的 uniqueIps 才有意义——按天轮换的盐会
 // 把跨天访问的同一个人拆成"好几个不同 IP"，把这个统计指标本身做坏。复用
 // BLOG_SEARCH_SESSION_SECRET（登录 Cookie 签名用的同一把密钥）而不是新开一个专用
-// secret：消息里加了域分隔前缀（"search-analytics-ip:"），跟签会话 Cookie 是两个不同
-// 的 HMAC 输入，不会互相碰撞/推导，避免为这一个小功能单独引入一个还需要用户手动
-// wrangler secret put 的新密钥、阻塞这条 followup 的落地。
+// secret，避免为这一个小功能单独引入一个还需要用户手动 wrangler secret put 的新
+// 密钥、阻塞这条 followup 的落地。
 // 密钥缺失（BLOG_SEARCH_SESSION_SECRET 未配置——这个端点不像 search-analytics.json.js
 // 那样把它列为必需绑定）时不退化成弱哈希：直接不写 index1（传空字符串），宁可这次
 // 抽样丢一个维度，也不要用一个可预测的固定字符串当 HMAC key，那样跟没加密钥等价。
+//
+// security round 2 review：不能只靠"消息格式碰巧不会撞"来保证这个用途跟
+// signSession()/verifySession()（同一把密钥签会话 Cookie）不会互相干扰——那两处的
+// payload 是 base64url（不含冒号），这里的消息前缀"search-analytics-ip:"总带冒号，
+// 今天两个消息空间确实不重叠，但这是编码细节上的巧合，不是结构性保证，以后随便一次
+// 编码改动就可能悄悄破坏它。改成显式派生一把专用子密钥（HMAC(secret, 固定的子密钥
+// 派生用常量) 算出子密钥，再用子密钥去 HMAC 真正的 IP）——这样两个用途从密钥层面
+// 就是隔开的，不依赖消息格式，不会因为以后改了某处的编码方式而悄悄产生跨用途碰撞。
 async function hashIp(secret, ip) {
 	if (!secret || !ip) return '';
-	const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
-	const sig = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(`search-analytics-ip:${ip}`));
+	const rootKey = await crypto.subtle.importKey('raw', new TextEncoder().encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+	const subkeyBytes = await crypto.subtle.sign('HMAC', rootKey, new TextEncoder().encode('search-analytics-ip-subkey-v1'));
+	const subkey = await crypto.subtle.importKey('raw', subkeyBytes, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+	const sig = await crypto.subtle.sign('HMAC', subkey, new TextEncoder().encode(ip));
 	return Array.from(new Uint8Array(sig))
 		.map((b) => b.toString(16).padStart(2, '0'))
 		.join('')

@@ -76,11 +76,26 @@ test('缺少 BLOG_SEARCH_SESSION_SECRET 绑定：503（fail-closed，不静默�
 	assert.equal(resp.status, 503);
 });
 
-// FU-28 回归测试：BLOG_SEARCH_KV 现在也是必需绑定（限速计数器要用）。
-test('缺少 BLOG_SEARCH_KV 绑定：503（fail-closed，不该悄悄跳过限速直接放行）', async () => {
+// FU-28 回归测试（round 3 review 指出：这个仓库真实发生过 KV binding 被
+// wrangler pages deploy 悄悄冲掉的事故，见 PR #50）——BLOG_SEARCH_KV 缺失时不该
+// fail-closed 整个端点，登录门禁本身不依赖 KV，应该跳过限速直接放行，保留"KV 坏了
+// 站长还能打开这个端点帮自己诊断"这个诊断价值。
+test('缺少 BLOG_SEARCH_KV 绑定：跳过限速，登录态合法仍然 200（不该 fail-closed 整个端点）', async () => {
+	await withFetch(
+		async () => ({ ok: true, json: async () => ({ data: [{ searches: 1, unique_ips: 1 }] }) }),
+		async () => {
+			const cookie = await validCookie();
+			const env = baseEnv({ BLOG_SEARCH_KV: undefined });
+			const resp = await onRequestGet({ request: makeRequest({ cookie }), env });
+			assert.equal(resp.status, 200);
+		},
+	);
+});
+
+test('缺少 BLOG_SEARCH_KV 绑定 + 未登录：仍然 401（登录门禁不受影响）', async () => {
 	const env = baseEnv({ BLOG_SEARCH_KV: undefined });
 	const resp = await onRequestGet({ request: makeRequest(), env });
-	assert.equal(resp.status, 503);
+	assert.equal(resp.status, 401);
 });
 
 test('登录态合法时：200，返回值带 private, no-store 缓存头', async () => {

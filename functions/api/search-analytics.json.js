@@ -27,8 +27,10 @@
  * 各自重新计数。
  *
  * 需要的环境变量：
- *   BLOG_SEARCH_KV      必需（FU-28 起）——按会话限速的计数器用，跟 search-auth.js
- *                       的登录限速、search.js 的查询缓存共用同一个 namespace。
+ *   BLOG_SEARCH_KV      可选（FU-28 起）——按会话限速的计数器用，跟 search-auth.js
+ *                       的登录限速、search.js 的查询缓存共用同一个 namespace。缺失
+ *                       时跳过限速（不是 fail-closed 503 整个端点）——见下方
+ *                       onRequestGet 里的说明，登录门禁本身不依赖它。
  *   CF_ANALYTICS_ENGINE_TOKEN  可选。专门给 Analytics Engine SQL API 用的 token；
  *                       没配就退化用 CF_ANALYTICS_TOKEN（见下）。
  *   CF_ANALYTICS_TOKEN  必需（若上面那个没配）——**不确定**现有权限范围是否覆盖
@@ -141,15 +143,13 @@ const json = (body, status, extraHeaders = {}) =>
 export async function onRequestGet(context) {
 	const { request, env } = context;
 
-	// BLOG_SEARCH_KV 现在也是必需绑定（FU-28 的限速计数器要用）——跟 BLOG_SEARCH_SESSION_SECRET
-	// 一样 fail-closed：这个 KV namespace 本来就被 search-auth.js 的登录限速依赖，能走到这里
-	// 说明登录本身已经在用它，缺失是真配置问题，不该悄悄跳过限速直接放行到上游付费 API。
-	if (!env.BLOG_SEARCH_SESSION_SECRET || !env.BLOG_SEARCH_KV) {
+	if (!env.BLOG_SEARCH_SESSION_SECRET) {
 		return json({ error: 'not_configured' }, 503);
 	}
 
 	// 跟 /api/search 同一套登录门禁：只有能查语义检索的人，才能看这个功能自己的
-	// 使用统计——不是"公开流量看板"的一部分，见文件头注释。
+	// 使用统计——不是"公开流量看板"的一部分，见文件头注释。verifySession 只是纯
+	// HMAC 验签，不依赖 KV，登录门禁本身在 KV 出问题时也不受影响。
 	const cookieValue = getCookie(request, COOKIE_NAME);
 	const session = await verifySession(env.BLOG_SEARCH_SESSION_SECRET, cookieValue);
 	if (!session.valid) {
@@ -157,10 +157,19 @@ export async function onRequestGet(context) {
 	}
 
 	// FU-28：按会话限速，见文件头注释 + SESSION_RATE_LIMIT 常量处的说明。
-	const sessionHash = await sha256Hex(cookieValue);
-	const limit = await checkAndIncrement(env.BLOG_SEARCH_KV, sessionHash, SESSION_RATE_LIMIT);
-	if (!limit.allowed) {
-		return json({ error: 'too many requests, try again later' }, 429);
+	// round 3 review 指出：这个仓库真实发生过 KV binding 被 `wrangler pages deploy`
+	// 悄悄冲掉的事故（见 PR #50、docs/agent/progress.md T1.3.6 证据段落，登录接口
+	// 一度 503）。如果把 BLOG_SEARCH_KV 缺失也做成整个端点 fail-closed 503，会丢掉
+	// 一个原本有价值的特性：持有效登录 Cookie 的站长（verifySession 纯 HMAC 验签，
+	// 不依赖 KV）本来在 KV 出问题时仍能打开这个端点，正好能帮站长诊断"是不是 KV
+	// 又被冲掉了"。限速是防滥用的纵深防御，不是这个端点的核心安全控制（核心控制
+	// 是上面的登录门禁）——KV 缺失时跳过限速直接放行，比把整个端点也搭进去更划算。
+	if (env.BLOG_SEARCH_KV) {
+		const sessionHash = await sha256Hex(cookieValue);
+		const limit = await checkAndIncrement(env.BLOG_SEARCH_KV, sessionHash, SESSION_RATE_LIMIT);
+		if (!limit.allowed) {
+			return json({ error: 'too many requests, try again later' }, 429);
+		}
 	}
 
 	const token = env.CF_ANALYTICS_ENGINE_TOKEN || env.CF_ANALYTICS_TOKEN;
