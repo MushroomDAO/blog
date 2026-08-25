@@ -61,11 +61,15 @@ if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] && [ -f .env ]; then
   RAW_TOKEN="${RAW_TOKEN%\"}"; RAW_TOKEN="${RAW_TOKEN#\"}"
   RAW_TOKEN="${RAW_TOKEN%\'}"; RAW_TOKEN="${RAW_TOKEN#\'}"
   RAW_TOKEN="$(printf '%s' "$RAW_TOKEN" | tr -d '\r')"
-  if [ -n "$RAW_TOKEN" ]; then
+  # FU-24：.env.example 里这一项的占位符是字面文本 your_token_here——如果复制成
+  # .env 却忘了替换，上面几行会把占位符原样读进 RAW_TOKEN，wrangler 会拿着这串假
+  # token 去请求 Cloudflare API，报一个看不懂的鉴权错误，而不是"没配置"。精确匹配
+  # 未替换的占位符时按"没配置"处理。
+  if [ -n "$RAW_TOKEN" ] && [ "$RAW_TOKEN" != "your_token_here" ]; then
     CLOUDFLARE_API_TOKEN="$RAW_TOKEN"
     export CLOUDFLARE_API_TOKEN
   else
-    echo "  ⚠ .env 里没有 CLOUDFLARE_API_TOKEN，本地部署大概率会失败（见 [4/4]）"
+    echo "  ⚠ .env 里没有 CLOUDFLARE_API_TOKEN（或者还是 .env.example 的占位符 your_token_here 没替换），本地部署大概率会失败（见 [4/4]）"
   fi
 fi
 
@@ -77,7 +81,9 @@ if [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ] && [ -f .env ]; then
   RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID%\"}"; RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID#\"}"
   RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID%\'}"; RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID#\'}"
   RAW_ACCOUNT_ID="$(printf '%s' "$RAW_ACCOUNT_ID" | tr -d '\r')"
-  if [ -n "$RAW_ACCOUNT_ID" ]; then
+  # FU-24：同上，your_account_id_here 是 .env.example 的占位符，精确匹配时按
+  # "没配置"处理，不当成真实 account id 导出。
+  if [ -n "$RAW_ACCOUNT_ID" ] && [ "$RAW_ACCOUNT_ID" != "your_account_id_here" ]; then
     CLOUDFLARE_ACCOUNT_ID="$RAW_ACCOUNT_ID"
     export CLOUDFLARE_ACCOUNT_ID
   fi

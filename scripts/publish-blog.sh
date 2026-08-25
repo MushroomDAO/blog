@@ -47,6 +47,21 @@ fi
 BLOG_USER="${BLOG_USER:-mushroom}"
 [ -f .env ] && export $(grep -v '^#' .env | grep -E '^[A-Za-z_]+=' | xargs) || true
 
+# FU-24: .env.example ships CLOUDFLARE_API_TOKEN/CLOUDFLARE_ACCOUNT_ID as literal
+# placeholders (your_token_here / your_account_id_here). If someone copies it to
+# .env and forgets to fill these in, the export above ships the placeholder text
+# as if it were real, and wrangler/Cloudflare API calls fail with a confusing
+# auth error instead of a clear "not configured" one. Treat an exact-match
+# placeholder as unset.
+if [ "${CLOUDFLARE_API_TOKEN:-}" = "your_token_here" ]; then
+  echo "⚠️  CLOUDFLARE_API_TOKEN in .env is still the .env.example placeholder — treating as unset" >&2
+  unset CLOUDFLARE_API_TOKEN
+fi
+if [ "${CLOUDFLARE_ACCOUNT_ID:-}" = "your_account_id_here" ]; then
+  echo "⚠️  CLOUDFLARE_ACCOUNT_ID in .env is still the .env.example placeholder — treating as unset" >&2
+  unset CLOUDFLARE_ACCOUNT_ID
+fi
+
 # Pull project + domain from the user config (single source of truth).
 USER_CFG="config/users/${BLOG_USER}.js"; [ -f "$USER_CFG" ] || USER_CFG="config/users/default.js"
 PROJECT=$(grep -m1 'projectName:' "$USER_CFG" | sed -E "s/.*projectName:[[:space:]]*'([^']+)'.*/\1/")

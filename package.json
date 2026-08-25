@@ -21,7 +21,7 @@
     "sharp": "^0.34.3"
   },
   "devDependencies": {
-    "pagefind": "^1.5.2",
+    "pagefind": "1.5.2",
     "wrangler": "^4.90.0"
   },
   "pnpm": {

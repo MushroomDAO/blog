@@ -11,6 +11,19 @@ if [ -f .env ]; then
   set -a; source .env; set +a
 fi
 
+# FU-24：.env.example 的 CLOUDFLARE_API_TOKEN/CLOUDFLARE_ACCOUNT_ID 是字面占位符
+# （your_token_here/your_account_id_here）；忘替换时上面这行会原样导出，下面
+# [2/4] 的 `npx wrangler pages deploy` 会拿假 token 去请求 Cloudflare API，报一个
+# 看不懂的鉴权错误而不是"没配置"。精确匹配未替换的占位符时按未设置处理。
+if [ "${CLOUDFLARE_API_TOKEN:-}" = "your_token_here" ]; then
+  echo "⚠️  CLOUDFLARE_API_TOKEN in .env is still the .env.example placeholder — treating as unset" >&2
+  unset CLOUDFLARE_API_TOKEN
+fi
+if [ "${CLOUDFLARE_ACCOUNT_ID:-}" = "your_account_id_here" ]; then
+  echo "⚠️  CLOUDFLARE_ACCOUNT_ID in .env is still the .env.example placeholder — treating as unset" >&2
+  unset CLOUDFLARE_ACCOUNT_ID
+fi
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'

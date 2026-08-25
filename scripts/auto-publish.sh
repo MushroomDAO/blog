@@ -18,6 +18,19 @@ if [ -f .env ]; then
   export $(grep -v '^#' .env | xargs)
 fi
 
+# FU-24：.env.example 的 CLOUDFLARE_API_TOKEN/CLOUDFLARE_ACCOUNT_ID 是字面占位符
+# （your_token_here/your_account_id_here）；忘替换时上面这行会原样导出，下面的
+# `npx wrangler pages deploy` 会拿假 token 去请求 Cloudflare API，报一个看不懂的
+# 鉴权错误而不是"没配置"。精确匹配未替换的占位符时按未设置处理。
+if [ "${CLOUDFLARE_API_TOKEN:-}" = "your_token_here" ]; then
+  echo "⚠️  CLOUDFLARE_API_TOKEN in .env is still the .env.example placeholder — treating as unset" >&2
+  unset CLOUDFLARE_API_TOKEN
+fi
+if [ "${CLOUDFLARE_ACCOUNT_ID:-}" = "your_account_id_here" ]; then
+  echo "⚠️  CLOUDFLARE_ACCOUNT_ID in .env is still the .env.example placeholder — treating as unset" >&2
+  unset CLOUDFLARE_ACCOUNT_ID
+fi
+
 CONTENT_FILE="$1"
 IMAGE_PATH="$2"  # 可选
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
