@@ -56,6 +56,7 @@ fi
 # 顺带去掉可能存在的引号（"..."/'...'）和 CRLF 的尾随 \r（round 2 review 指出：这个
 # 仓库自己的 local-fallback.sh 里 getv() 结尾就有 `tr -d '\r'`，这里最初漏了——CRLF
 # 的 .env 会让 token 带一个看不见的尾随字符，Cloudflare 那边只会报一个看不懂的 400）。
+_cf_placeholder_detected=false
 if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] && [ -f .env ]; then
   RAW_TOKEN="$(grep '^CLOUDFLARE_API_TOKEN=' .env | tail -1 | cut -d= -f2- || true)"
   RAW_TOKEN="${RAW_TOKEN%\"}"; RAW_TOKEN="${RAW_TOKEN#\"}"
@@ -68,8 +69,18 @@ if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] && [ -f .env ]; then
   if [ -n "$RAW_TOKEN" ] && [ "$RAW_TOKEN" != "your_token_here" ]; then
     CLOUDFLARE_API_TOKEN="$RAW_TOKEN"
     export CLOUDFLARE_API_TOKEN
+  elif [ -n "$RAW_TOKEN" ]; then
+    # RAW_TOKEN 非空但等于占位符——明确是"填了占位符没替换"，不是"完全没填这一行"。
+    # round 3 review 指出：即使这是 cron 跑（没有 TTY），wrangler 缺 token 时也不
+    # 保证报错——如果这台机器上曾经 `wrangler login` 过、本地缓存了未过期的 OAuth
+    # 会话（实测 wrangler 4.90.0 源码：getAPIToken() 命中缓存时 loginOrRefreshIfRequired()
+    # 直接返回 true，根本不看是否有 TTY/是否 CI），部署会悄悄用那个跟这个项目无关
+    # 的旧登录身份成功，退出码是 0，没有人会发现。跟下面 [4/4] 部署前的硬停配合，
+    # 不让这种情况悄悄成功。
+    _cf_placeholder_detected=true
+    echo "  ⚠ .env 里的 CLOUDFLARE_API_TOKEN 还是 .env.example 的占位符 your_token_here 没替换"
   else
-    echo "  ⚠ .env 里没有 CLOUDFLARE_API_TOKEN（或者还是 .env.example 的占位符 your_token_here 没替换），本地部署大概率会失败（见 [4/4]）"
+    echo "  ⚠ .env 里没有 CLOUDFLARE_API_TOKEN，本地部署大概率会失败（见 [4/4]）"
   fi
 fi
 
@@ -113,6 +124,16 @@ else
   # 继续往下走本地部署（本地构建产物不依赖这次 push 是否成功）。
   git push origin main || echo "  ⚠ push 被拒(non-fast-forward)——继续用本地构建部署"
   echo "  ✓ committed（push 结果见上）"
+fi
+
+# FU-24（round 3 review）：检测到占位符时在这里硬停，不让它走到 wrangler——数据
+# 已经在上面 [3/4] committed/pushed 了，跟下面本来就有的"部署失败=退出码 1"是同一套
+# 失败信号，cron 的邮件/监控能照常发现。不硬停的话，wrangler 缺 token 时不保证报错：
+# 这台机器如果曾经 `wrangler login` 过、缓存了未过期的 OAuth 会话，会悄悄用那个身份
+# 部署成功，退出码 0，没人会发现部署用的根本不是 .env 里配的那个账号。
+if [ "$_cf_placeholder_detected" = true ]; then
+  echo "  ⚠⚠⚠ .env 里的 CLOUDFLARE_API_TOKEN 还是占位符，拒绝部署（避免悄悄用本机缓存的无关登录态部署）——需要人工去 .env 填真实 token"
+  exit 1
 fi
 
 # 本地部署失败不让整个脚本报错退出——数据已经 push 过了，不算致命，但现在没有 CI
