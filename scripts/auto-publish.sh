@@ -30,14 +30,22 @@ _strip_env_value() {
   v="${v%\"}"; v="${v#\"}"; v="${v%\'}"; v="${v#\'}"
   printf '%s' "$v"
 }
+_cf_placeholder_detected=false
 if [ "$(_strip_env_value "${CLOUDFLARE_API_TOKEN:-}")" = "your_token_here" ]; then
   echo "⚠️  CLOUDFLARE_API_TOKEN in .env is still the .env.example placeholder — treating as unset" >&2
   unset CLOUDFLARE_API_TOKEN
+  _cf_placeholder_detected=true
 fi
 if [ "$(_strip_env_value "${CLOUDFLARE_ACCOUNT_ID:-}")" = "your_account_id_here" ]; then
   echo "⚠️  CLOUDFLARE_ACCOUNT_ID in .env is still the .env.example placeholder — treating as unset" >&2
   unset CLOUDFLARE_ACCOUNT_ID
+  _cf_placeholder_detected=true
 fi
+# round 3 review：光 unset 不够——放任 wrangler 自己处理缺失 token，要么弹浏览器走
+# OAuth 登录卡最多 2 分钟（实测 wrangler 4.90.0 源码 isNonInteractiveOrCI()/
+# loginOrRefreshIfRequired() 的判断逻辑），要么本机恰好有缓存登录态时用一个跟 .env
+# 里配的完全不是同一个的账号悄悄部署成功，都不是"清楚报没配置"。真正的硬停放在
+# 下面真正调用 wrangler 之前。
 
 CONTENT_FILE="$1"
 IMAGE_PATH="$2"  # 可选
@@ -141,6 +149,13 @@ echo -e "   ${GREEN}✅ 文章创建: $MD_FILE${NC}"
 echo "[4/5] 构建并部署..."
 
 pnpm build 2>&1 | tail -3
+
+# FU-24（round 3 review）：检测到占位符时在这里硬停，不让它走到 wrangler——理由见
+# 文件前面 _cf_placeholder_detected 设置处的说明。
+if [ "$_cf_placeholder_detected" = true ]; then
+  echo -e "${RED}❌ .env 里的 CLOUDFLARE_API_TOKEN/CLOUDFLARE_ACCOUNT_ID 还是 .env.example 的占位符，拒绝部署。${NC}" >&2
+  exit 1
+fi
 
 # 部署到 Production
 npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main 2>&1 | tail -5

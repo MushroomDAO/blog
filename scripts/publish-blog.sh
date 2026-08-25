@@ -62,14 +62,30 @@ _strip_env_value() {
   v="${v%\"}"; v="${v#\"}"; v="${v%\'}"; v="${v#\'}"
   printf '%s' "$v"
 }
+_cf_placeholder_detected=false
 if [ "$(_strip_env_value "${CLOUDFLARE_API_TOKEN:-}")" = "your_token_here" ]; then
   echo "⚠️  CLOUDFLARE_API_TOKEN in .env is still the .env.example placeholder — treating as unset" >&2
   unset CLOUDFLARE_API_TOKEN
+  _cf_placeholder_detected=true
 fi
 if [ "$(_strip_env_value "${CLOUDFLARE_ACCOUNT_ID:-}")" = "your_account_id_here" ]; then
   echo "⚠️  CLOUDFLARE_ACCOUNT_ID in .env is still the .env.example placeholder — treating as unset" >&2
   unset CLOUDFLARE_ACCOUNT_ID
+  _cf_placeholder_detected=true
 fi
+# round 3 review: merely unsetting isn't enough — this repo's own convention
+# (deploy.sh, per CLAUDE.md) is that a *missing* CLOUDFLARE_API_TOKEN legitimately
+# means "use `wrangler login`'s cached OAuth session instead," so we must NOT
+# treat "unset" as an error in general. But a *detected placeholder* is a
+# different, unambiguous signal: the user clearly intended token-based auth (they
+# have a CLOUDFLARE_API_TOKEN= line in .env) and it's simply unfilled — falling
+# through to wrangler's OAuth fallback here is wrong either way: if no OAuth
+# session is cached, wrangler pops a browser and hangs up to 2 minutes; if one
+# IS cached (verified locally: `~/Library/Preferences/.wrangler/config` can hold
+# a stale login from unrelated prior use), it deploys silently under that
+# identity instead of failing — neither is the clear "not configured" message
+# FU-24 is meant to produce. So a detected placeholder hard-stops deploy
+# immediately, below at step 3, before any wrangler call — see `_cf_placeholder_detected`.
 
 # Pull project + domain from the user config (single source of truth).
 USER_CFG="config/users/${BLOG_USER}.js"; [ -f "$USER_CFG" ] || USER_CFG="config/users/default.js"
@@ -125,6 +141,14 @@ ls "dist/blog/$SLUG" >/dev/null 2>&1 || { echo "❌ route dist/blog/$SLUG not bu
 echo "  ✓ route built: /blog/$SLUG/"
 
 if [ "$DO_DEPLOY" = false ]; then echo "✅ build+validate done (--no-deploy)"; exit 0; fi
+
+# FU-24 (round 3 review): a detected .env placeholder hard-stops here, before any
+# wrangler call — see the explanation above where _cf_placeholder_detected is set.
+if [ "$_cf_placeholder_detected" = true ]; then
+  echo "❌ CLOUDFLARE_API_TOKEN/CLOUDFLARE_ACCOUNT_ID in .env is still the .env.example placeholder — refusing to deploy." >&2
+  echo "   Fill in real values in .env, or run 'wrangler login' and remove those two lines to deploy via OAuth instead." >&2
+  exit 1
+fi
 
 # ---- 3. deploy ----
 # Prefer a real CA bundle over the insecure TLS bypass. Set CF_CA_CERT (or

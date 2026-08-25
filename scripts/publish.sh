@@ -23,14 +23,25 @@ _strip_env_value() {
   v="${v%\"}"; v="${v#\"}"; v="${v%\'}"; v="${v#\'}"
   printf '%s' "$v"
 }
+_cf_placeholder_detected=false
 if [ "$(_strip_env_value "${CLOUDFLARE_API_TOKEN:-}")" = "your_token_here" ]; then
   echo "⚠️  CLOUDFLARE_API_TOKEN in .env is still the .env.example placeholder — treating as unset" >&2
   unset CLOUDFLARE_API_TOKEN
+  _cf_placeholder_detected=true
 fi
 if [ "$(_strip_env_value "${CLOUDFLARE_ACCOUNT_ID:-}")" = "your_account_id_here" ]; then
   echo "⚠️  CLOUDFLARE_ACCOUNT_ID in .env is still the .env.example placeholder — treating as unset" >&2
   unset CLOUDFLARE_ACCOUNT_ID
+  _cf_placeholder_detected=true
 fi
+# round 3 review：光 unset 不够——这个仓库自己的约定（deploy.sh，见 CLAUDE.md）是
+# CLOUDFLARE_API_TOKEN"没设置"合理地意味着"用 wrangler login 缓存的 OAuth 登录态"，
+# 不能把"没设置"一律当错误。但"检测到占位符"是另一个明确信号：用户显然想用 token 认证
+# （.env 里确实有这一行），只是没填——这时放任它掉进 wrangler 的 OAuth 兜底同样是错的：
+# 没缓存登录态会弹浏览器卡最多 2 分钟；有缓存登录态（本机实测 `~/Library/Preferences/
+# .wrangler/config` 里确实留着一份跟这个项目无关的旧登录态）会用那个身份悄悄部署成功，
+# 两种都不是 FU-24 想要的"清楚报'没配置'"。所以检测到占位符时直接在下面 Step 2 部署前
+# 硬停，不让它走到 wrangler。
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -73,6 +84,13 @@ echo -e "   ${GREEN}✅ 构建完成${NC}"
 
 # ========== Step 2: 部署 Cloudflare ==========
 echo "[2/4] 部署到 Cloudflare Pages..."
+# FU-24（round 3 review）：检测到占位符时在这里硬停，不让它走到 wrangler——理由见
+# 文件前面 _cf_placeholder_detected 设置处的说明。
+if [ "$_cf_placeholder_detected" = true ]; then
+  echo -e "${RED}❌ .env 里的 CLOUDFLARE_API_TOKEN/CLOUDFLARE_ACCOUNT_ID 还是 .env.example 的占位符，拒绝部署。${NC}"
+  echo -e "${RED}   请在 .env 里填真实值，或者跑 wrangler login 后删掉这两行改用 OAuth 登录。${NC}"
+  exit 1
+fi
 export CLOUDFLARE_API_TOKEN
 unset HTTPS_PROXY HTTP_PROXY ALL_PROXY
 NODE_TLS_REJECT_UNAUTHORIZED=0 npx wrangler pages deploy dist \
