@@ -1,32 +1,27 @@
 {
-  "generatedAt": "2026-08-25T14:00:00Z",
+  "generatedAt": "2026-08-26T14:00:01Z",
   "period": {
-    "start": "2026-07-26",
-    "end": "2026-08-25"
+    "start": "2026-07-27",
+    "end": "2026-08-26"
   },
   "totals": {
-    "pageviews": 9850,
-    "visits": 9180,
+    "pageviews": 10110,
+    "visits": 9410,
     "bots": 0
   },
   "last7": {
-    "pv": 2360,
-    "visits": 2160
+    "pv": 2410,
+    "visits": 2170
   },
   "prior7": {
-    "pv": 3540,
-    "visits": 3410
+    "pv": 3350,
+    "visits": 3250
   },
   "daily": [
     {
-      "date": "07-26",
-      "pv": 90,
-      "visits": 80
-    },
-    {
       "date": "07-27",
-      "pv": 150,
-      "visits": 150
+      "pv": 30,
+      "visits": 30
     },
     {
       "date": "07-28",
@@ -170,249 +165,26 @@
     },
     {
       "date": "08-25",
-      "pv": 290,
-      "visits": 260
+      "pv": 380,
+      "visits": 350
+    },
+    {
+      "date": "08-26",
+      "pv": 380,
+      "visits": 340
     }
   ],
-  "countries": [
-    {
-      "code": "SG",
-      "flag": "🇸🇬",
-      "name": "新加坡",
-      "nameEn": "Singapore",
-      "pv": 4900,
-      "visits": 4900
-    },
-    {
-      "code": "CN",
-      "flag": "🇨🇳",
-      "name": "中国",
-      "nameEn": "China",
-      "pv": 1900,
-      "visits": 1900
-    },
-    {
-      "code": "TH",
-      "flag": "🇹🇭",
-      "name": "泰国",
-      "nameEn": "Thailand",
-      "pv": 800,
-      "visits": 500
-    },
-    {
-      "code": "TW",
-      "flag": "🇹🇼",
-      "name": "台湾",
-      "nameEn": "Taiwan",
-      "pv": 600,
-      "visits": 500
-    },
-    {
-      "code": "HK",
-      "flag": "🇭🇰",
-      "name": "香港",
-      "nameEn": "Hong Kong",
-      "pv": 400,
-      "visits": 400
-    },
-    {
-      "code": "US",
-      "flag": "🇺🇸",
-      "name": "美国",
-      "nameEn": "United States",
-      "pv": 400,
-      "visits": 400
-    },
-    {
-      "code": "JP",
-      "flag": "🇯🇵",
-      "name": "日本",
-      "nameEn": "Japan",
-      "pv": 300,
-      "visits": 200
-    },
-    {
-      "code": "NL",
-      "flag": "🇳🇱",
-      "name": "荷兰",
-      "nameEn": "Netherlands",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "code": "UA",
-      "flag": "🇺🇦",
-      "name": "UA",
-      "nameEn": "UA",
-      "pv": 100,
-      "visits": 100
-    },
-    {
-      "code": "CO",
-      "flag": "🇨🇴",
-      "name": "CO",
-      "nameEn": "CO",
-      "pv": 100,
-      "visits": 100
-    },
-    {
-      "code": "ID",
-      "flag": "🇮🇩",
-      "name": "印度尼西亚",
-      "nameEn": "Indonesia",
-      "pv": 100,
-      "visits": 100
-    },
-    {
-      "code": "KR",
-      "flag": "🇰🇷",
-      "name": "韩国",
-      "nameEn": "South Korea",
-      "pv": 100,
-      "visits": 100
-    }
-  ],
-  "countryTotal": 10000,
+  "countries": [],
+  "countryTotal": 0,
   "referers": {
-    "direct": 6400,
-    "search": 2900,
+    "direct": 6700,
+    "search": 3000,
     "ecosystem": 500,
     "ai": 0,
     "other": 200
   },
-  "pages": [
-    {
-      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
-      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
-      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
-      "titleEn": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
-      "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画",
-      "titleEn": "juju-content-illustrations: An Agent Skill That Turns Articles into Juju-Style Hand-Drawn Illustrations",
-      "path": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 300,
-      "visits": 200
-    },
-    {
-      "title": "HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面",
-      "titleEn": "HugAgentOS: ZJU's Enterprise AgentOS Using Domain Ontology as the Agent Reasoning Control Plane",
-      "path": "/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "FDE 实战手册：大企业 vs 中小企业，前三个月该怎么干",
-      "titleEn": "applied-compute-specific-intelligence-enterprise-ai-workflow-training",
-      "path": "/blog/applied-compute-specific-intelligence-enterprise-ai-workflow-training/",
-      "pv": 200,
-      "visits": 100
-    },
-    {
-      "title": "Voicebox：把 ElevenLabs 和 WisprFlow 装进一个本地运行的开源 App",
-      "titleEn": "Voicebox: Local-First AI Voice Studio — ElevenLabs Output + WisprFlow Input in One Open-Source App",
-      "path": "/blog/voicebox-local-ai-voice-studio-elevenlabs-alternative/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Ploy：Webflow 联合创始人的第三次创业——用 AI Agent 把网站变成增长引擎",
-      "titleEn": "Ploy: The Webflow Co-Founder's Third Startup Turns Websites into Growth Engines with AI Agents",
-      "path": "/blog/ploy-ai-webflow-founder-website-growth-engine-27m/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "VidDub：手把手教你用 Intel MacBook 给 YouTube 视频自动配音",
-      "titleEn": "VidDub: Step-by-Step Guide to Auto-Dubbing YouTube Videos on a 16GB Intel MacBook",
-      "path": "/blog/viddub-intel-mac-youtube-auto-dubbing-guide/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构",
-      "titleEn": "Agency Agents: 50+ Specialized AI Roles in an Open-Source, Multi-Model Agency",
-      "path": "/blog/agency-agents-opensource-multi-model/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
-      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
-      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "小红书运营能工作流化吗？6 个 Codex Skills 给出一个答案",
-      "titleEn": "Can Xiaohongshu Operations Become a Workflow? Six Codex Skills Offer an Answer",
-      "path": "/blog/xiaohongshu-operations-codex-skills-workflow-systematic/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
-      "titleEn": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
-      "path": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
-      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
-      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Agent 通信协议的第一张地图：读完这篇论文，我知道未来不会是一个赢家通吃",
-      "titleEn": "The First Map of LLM Agent Communication Protocols: Why the Future Won't Be Winner-Takes-All",
-      "path": "/blog/llm-agent-protocol-taxonomy-federated-stack-2026/",
-      "pv": 200,
-      "visits": 200
-    }
-  ],
+  "pages": [],
   "devices": [],
   "os": [],
-  "browsers": [
-    {
-      "label": "Chrome",
-      "count": 7400
-    },
-    {
-      "label": "Edge",
-      "count": 1400
-    },
-    {
-      "label": "Unknown",
-      "count": 400
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 300
-    },
-    {
-      "label": "Safari",
-      "count": 300
-    },
-    {
-      "label": "ChromeMobileWebview",
-      "count": 200
-    }
-  ]
+  "browsers": []
 }
