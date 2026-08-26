@@ -1,0 +1,154 @@
+---
+// 同一条视频两个平台地址，按访客地域二选一展示：国内默认 B 站源，海外默认 YouTube
+// 源。判断来自 /api/geo（读 Cloudflare 边缘的 request.cf.country，见该文件注释）。
+// 用户可以用下面的按钮手动切换并记住选择（localStorage），避免挂代理/VPN的人被
+// 自动判断锁死在错误源上。
+interface Props {
+	bilibiliUrl: string;
+	youtubeUrl: string;
+	title: string;
+}
+
+const { bilibiliUrl, youtubeUrl, title } = Astro.props;
+
+// bilibili 播放器嵌入需要 bvid，从形如 https://www.bilibili.com/video/BVxxxxxx/ 的
+// 链接里取；取不到就不渲染 B 站 iframe，只留外链按钮兜底。
+const bvidMatch = bilibiliUrl.match(/\/video\/(BV[0-9A-Za-z]+)/);
+const bvid = bvidMatch?.[1] ?? null;
+
+// YouTube embed 需要 video id，兼容 watch?v=xxx 和 youtu.be/xxx 两种链接形态。
+const ytMatch = youtubeUrl.match(/(?:v=|youtu\.be\/)([\w-]{11})/);
+const youtubeId = ytMatch?.[1] ?? null;
+---
+
+<div class="video-frame" data-bilibili-url={bilibiliUrl} data-youtube-url={youtubeUrl} data-bvid={bvid} data-youtube-id={youtubeId}>
+	<div class="video-embed" id="video-embed">
+		<!-- 默认先占位，挂载后按 /api/geo 结果换成对应平台的 iframe，避免 SSG 阶段
+		     写死某一个源（构建时不知道访客地域）。 -->
+		<div class="video-loading">
+			<span>视频加载中…</span>
+		</div>
+	</div>
+	<div class="video-source-switch">
+		<span class="current-source-label" id="current-source-label"></span>
+		<button type="button" id="switch-source-btn" class="switch-source-btn"></button>
+	</div>
+</div>
+
+<script define:vars={{ bvid, youtubeId, bilibiliUrl, youtubeUrl, title }}>
+	(function () {
+		const STORAGE_KEY = 'daily-video-source-preference';
+		const embed = document.getElementById('video-embed');
+		const label = document.getElementById('current-source-label');
+		const switchBtn = document.getElementById('switch-source-btn');
+
+		function render(source) {
+			if (source === 'bilibili' && bvid) {
+				embed.innerHTML = `<iframe src="https://player.bilibili.com/player.html?bvid=${bvid}&autoplay=0" scrolling="no" frameborder="0" allowfullscreen title="${title}"></iframe>`;
+			} else if (source === 'youtube' && youtubeId) {
+				embed.innerHTML = `<iframe src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="${title}"></iframe>`;
+			} else {
+				// 两边都解析不出 id（链接格式意外），退化成外链按钮，不留死播放器
+				const url = source === 'bilibili' ? bilibiliUrl : youtubeUrl;
+				embed.innerHTML = `<div class="video-fallback"><a href="${url}" target="_blank" rel="noopener">在${source === 'bilibili' ? 'B 站' : 'YouTube'}打开视频 ↗</a></div>`;
+			}
+			label.textContent = source === 'bilibili' ? '当前源：B 站' : '当前源：YouTube';
+			switchBtn.textContent = source === 'bilibili' ? '切到 YouTube' : '切到 B 站';
+			switchBtn.dataset.current = source;
+		}
+
+		function persist(source) {
+			try {
+				localStorage.setItem(STORAGE_KEY, source);
+			} catch (e) {
+				// 隐私模式等场景下 localStorage 不可用：本次会话仍然生效，只是刷新后不记住
+			}
+		}
+
+		switchBtn.addEventListener('click', () => {
+			const next = switchBtn.dataset.current === 'bilibili' ? 'youtube' : 'bilibili';
+			render(next);
+			persist(next);
+		});
+
+		let manual = null;
+		try {
+			manual = localStorage.getItem(STORAGE_KEY);
+		} catch (e) {}
+
+		if (manual === 'bilibili' || manual === 'youtube') {
+			render(manual);
+			return;
+		}
+
+		fetch('/api/geo')
+			.then((res) => (res.ok ? res.json() : { country: null }))
+			.then(({ country }) => {
+				if (country) {
+					render(country === 'CN' ? 'bilibili' : 'youtube');
+					return;
+				}
+				// /api/geo 没给出结论（本地开发、Function 未就绪等）：退一步猜浏览器语言，
+				// 猜不出就默认 YouTube——两边都是合理默认，不值得为这一步阻塞渲染。
+				const guessCN = navigator.language?.toLowerCase().startsWith('zh');
+				render(guessCN ? 'bilibili' : 'youtube');
+			})
+			.catch(() => render('youtube'));
+	})();
+</script>
+
+<style>
+	.video-frame {
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.video-embed {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		background: rgb(var(--gray-light, 240 240 240));
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.video-embed iframe {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+	.video-loading,
+	.video-fallback {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: rgb(var(--gray));
+	}
+	.video-fallback a {
+		color: rgb(var(--accent));
+		font-weight: 600;
+	}
+	.video-source-switch {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 0.6em;
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+	}
+	.switch-source-btn {
+		padding: 0.4em 0.9em;
+		border: 1px solid rgb(var(--accent));
+		border-radius: 16px;
+		background: transparent;
+		color: rgb(var(--accent));
+		cursor: pointer;
+		font-size: 0.9em;
+	}
+	.switch-source-btn:hover {
+		background: rgba(var(--accent), 0.1);
+	}
+</style>

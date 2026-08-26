@@ -1,0 +1,123 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE } from '../../consts';
+
+const videos = (await getCollection('dailyVideo')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const PAGE_TITLE = `🎬 Video | ${SITE_TITLE}`;
+const PAGE_DESCRIPTION = '开源仓库开盒：围绕 local-first AI 需要的组件，实测部署评测开源项目，B 站 / YouTube 双平台同步更新。';
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+				padding: 2em 1em;
+			}
+			.page-intro {
+				margin-bottom: 2em;
+			}
+			.page-intro h1 {
+				margin-bottom: 0.3em;
+			}
+			.page-intro p {
+				color: rgb(var(--gray));
+			}
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			ul li {
+				width: calc(50% - 1rem);
+			}
+			ul li * {
+				text-decoration: none;
+				transition: 0.2s ease;
+			}
+			ul li img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+				margin-bottom: 0.5rem;
+				border-radius: 12px;
+			}
+			ul li a {
+				display: block;
+			}
+			.title {
+				margin: 0;
+				color: rgb(var(--black));
+				line-height: 1.2;
+				font-size: 1.1rem;
+			}
+			.date {
+				margin: 0;
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+			}
+			.verdict-line {
+				margin: 0.4em 0 0;
+				font-size: 0.85em;
+				color: rgb(var(--gray));
+			}
+			.empty-state {
+				text-align: center;
+				padding: 3em;
+				color: rgb(var(--gray));
+			}
+			@media (max-width: 720px) {
+				ul { gap: 0.5em; }
+				ul li { width: 100%; text-align: center; }
+				ul li img { height: 180px; }
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="page-intro">
+				<h1>🎬 开源仓库开盒</h1>
+				<p>围绕"能不能拼出一套 local-first AI"这个问题，反向去找、去部署、去实测开源项目——每条视频 B 站和 YouTube 同步更新，免费看。</p>
+			</div>
+			{videos.length === 0 ? (
+				<div class="empty-state">
+					<p>第一条视频还在路上。</p>
+				</div>
+			) : (
+				<ul>
+					{videos.map((video) => (
+						<li>
+							<a href={`/video/${video.id}/`}>
+								{video.data.coverImage && (
+									<Image width={720} height={360} src={video.data.coverImage} alt="" />
+								)}
+								<span class="date">
+									<FormattedDate date={video.data.pubDate} />
+								</span>
+								<h4 class="title">{video.data.title}</h4>
+								{video.data.verdict && <p class="verdict-line">💡 {video.data.verdict}</p>}
+							</a>
+						</li>
+					))}
+				</ul>
+			)}
+		</main>
+		<Footer />
+	</body>
+</html>

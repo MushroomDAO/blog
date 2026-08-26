@@ -1,0 +1,151 @@
+---
+import type { ImageMetadata } from 'astro';
+import BaseHead from '../components/BaseHead.astro';
+import Comments from '../components/Comments.astro';
+import Disclaimer from '../components/Disclaimer.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import VideoFrame from '../components/VideoFrame.astro';
+
+type Props = {
+	title: string;
+	titleEn?: string;
+	description: string;
+	descriptionEn?: string;
+	pubDate: Date;
+	updatedDate?: Date;
+	coverImage?: ImageMetadata;
+	bilibiliUrl: string;
+	youtubeUrl: string;
+	sourceRepoUrl?: string;
+	verdict?: string;
+	tags?: string[];
+};
+
+const {
+	title,
+	titleEn,
+	description,
+	descriptionEn,
+	pubDate,
+	updatedDate,
+	coverImage,
+	bilibiliUrl,
+	youtubeUrl,
+	sourceRepoUrl,
+	verdict,
+	tags,
+} = Astro.props;
+---
+
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={title} description={description} titleEn={titleEn} descriptionEn={descriptionEn} image={coverImage} ogType="article" author="Mycelium Protocol" />
+		<style>
+			main {
+				width: 100%;
+				max-width: 960px;
+				margin: 0 auto;
+				padding: 2em 1em;
+			}
+			.title-section {
+				text-align: center;
+				margin-bottom: 1.5em;
+			}
+			.title-cn {
+				font-size: 1.8em;
+				margin: 0 0 0.2em 0;
+				color: rgb(var(--black));
+			}
+			.title-en {
+				font-size: 1.1em;
+				margin: 0;
+				color: rgb(var(--gray));
+				font-weight: normal;
+			}
+			.meta-info {
+				margin-top: 0.8em;
+				color: rgb(var(--gray));
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.6em;
+				flex-wrap: wrap;
+				font-size: 0.9em;
+			}
+			.verdict {
+				margin: 1.2em auto 0;
+				max-width: 720px;
+				padding: 0.9em 1.2em;
+				background: rgba(var(--accent), 0.08);
+				border-left: 3px solid rgb(var(--accent));
+				border-radius: 6px;
+			}
+			.source-repo {
+				margin-top: 0.6em;
+				text-align: center;
+			}
+			.source-repo a {
+				color: rgb(var(--accent));
+			}
+			.prose {
+				margin-top: 2em;
+				color: rgb(var(--gray-dark));
+				line-height: 1.8;
+			}
+			.tag-list {
+				display: inline-flex;
+				gap: 0.4em;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.tag-item {
+				background: rgba(var(--accent), 0.1);
+				color: rgb(var(--accent));
+				padding: 0.15em 0.6em;
+				border-radius: 12px;
+				font-size: 0.8em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<div class="title-section">
+					<h1 class="title-cn">{title}</h1>
+					{titleEn && <h2 class="title-en">{titleEn}</h2>}
+					<div class="meta-info">
+						<FormattedDate date={pubDate} />
+						{updatedDate && <span>更新于 <FormattedDate date={updatedDate} /></span>}
+						{tags && tags.length > 0 && (
+							<span class="tag-list">
+								{tags.map((tag) => <span class="tag-item">#{tag}</span>)}
+							</span>
+						)}
+					</div>
+				</div>
+
+				<VideoFrame bilibiliUrl={bilibiliUrl} youtubeUrl={youtubeUrl} title={title} />
+
+				{verdict && (
+					<p class="verdict">💡 {verdict}</p>
+				)}
+				{sourceRepoUrl && (
+					<p class="source-repo">
+						📦 被评测仓库：<a href={sourceRepoUrl} target="_blank" rel="noopener">{sourceRepoUrl}</a>
+					</p>
+				)}
+
+				<div class="prose">
+					<slot />
+				</div>
+			</article>
+
+			<Comments discussionCategory="Video" />
+			<Disclaimer />
+		</main>
+		<Footer />
+	</body>
+</html>

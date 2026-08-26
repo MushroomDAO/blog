@@ -44,4 +44,28 @@ const my = defineCollection({
 		}),
 });
 
-export const collections = { blog, my };
+const dailyVideo = defineCollection({
+	// 每日视频（免费引流线，见 daily-video/README.md）。独立于 blog collection，
+	// 因为字段形状差很多（双平台链接、一句话结论），不是"多了个 video 区块"的文章。
+	loader: glob({ base: './src/content/daily-video', pattern: '**/*.{md,mdx}' }),
+	schema: ({ image }) =>
+		z.object({
+			title: z.string(),
+			titleEn: z.string().optional(),
+			description: z.string(),
+			descriptionEn: z.string().optional(),
+			pubDate: z.coerce.date(),
+			updatedDate: z.coerce.date().optional(),
+			coverImage: z.optional(image()),
+			// 同一条视频的两个平台地址：VideoFrame 组件按访客地域二选一展示
+			bilibiliUrl: z.string().url(),
+			youtubeUrl: z.string().url(),
+			// 被评测的开源仓库（这条系列的核心：从 local-first AI 需要的组件反向找仓库）
+			sourceRepoUrl: z.string().url().optional(),
+			// 一句话结论：推荐给谁用、值不值得看
+			verdict: z.string().optional(),
+			tags: z.array(z.string()).default([]),
+		}),
+});
+
+export const collections = { blog, my, dailyVideo };
