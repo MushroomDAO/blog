@@ -28,6 +28,7 @@ import Header from '../components/Header.astro';
 				padding: 2em 1em;
 			}
 			.search-page h1 {
+				font-size: 1.3em;
 				margin-bottom: 0.8em;
 			}
 			.search-page .fallback-note {
@@ -48,7 +49,7 @@ import Header from '../components/Header.astro';
 				border-top: 1px solid rgb(var(--gray-light));
 			}
 			.semantic-search-section h2 {
-				font-size: 1.1em;
+				font-size: 1.3em;
 				margin-bottom: 0.4em;
 			}
 			.semantic-search-hint {
@@ -97,7 +98,7 @@ import Header from '../components/Header.astro';
 	<body>
 		<Header />
 		<main class="search-page">
-			<h1>🔍 搜索文章 / Search Articles</h1>
+			<h1>🔍 Keywords Search</h1>
 			<div id="search"></div>
 			<p class="fallback-note" id="search-fallback-note">
 				搜索索引加载失败，可能是本地开发环境（<code>pnpm dev</code>）还没有生成索引——先跑一次
@@ -105,14 +106,14 @@ import Header from '../components/Header.astro';
 			</p>
 
 			<section class="semantic-search-section" id="semantic-search-section">
-				<h2>🧠 语义检索</h2>
-				<p class="semantic-search-hint">在关键词之外，理解自然语言诉求的检索能力。</p>
+				<h2>🧠 Semantic Search</h2>
+				<p class="semantic-search-hint">Beyond keywords — search that understands what you mean.</p>
 
 				<div class="semantic-search-widget" id="semantic-search-widget">
 					<input
 						type="text"
 						id="semantic-search-input"
-						placeholder="用一句话描述你想找的内容…"
+						placeholder="Describe what you are looking for…"
 						autocomplete="off"
 					/>
 					<ul class="semantic-results" id="semantic-results"></ul>
