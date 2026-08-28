@@ -37,6 +37,8 @@ summary of it.
 
 Project paths:
 - Strategy + process: `daily-video/PLAN.md`
+- Pain-point source map: `daily-video/painpoints.md` (rendered as an interactive
+  mind map at `/my/painpoints/`) — browse this first when picking a topic
 - Topic queue: `daily-video/topics.yml`
 - Drafts: `daily-video/drafts/<slug>/` — `script.md` (long cut), `short-script.md`
   (XiaoHongShu cut), `note.md` (image-text note)
