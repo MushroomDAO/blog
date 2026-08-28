@@ -17,7 +17,7 @@ const { variant = 'footer', id } = Astro.props;
 -->
 <form class={`subscribe-form subscribe-form--${variant}`} id={id} data-subscribe-form>
 	<div class="subscribe-form-row">
-		<input type="email" name="email" required placeholder="you@example.com" aria-label="邮箱地址" />
+		<input type="email" name="email" required placeholder="you@example.com" aria-label="Email address" />
 		<button type="submit">📮 订阅</button>
 	</div>
 	<input type="hidden" name="l" value={SUBSCRIBE_LIST_UUID} />
