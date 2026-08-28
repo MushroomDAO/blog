@@ -1,0 +1,16 @@
+# 统一选题队列（2026-08-28 合并自 xhs-video/topics.yml，见 PLAN.md"并入小红书"一节）
+# 状态机: idea -> researching -> scripted -> recorded -> published
+#
+# 示例（占位，非已定选题，展示登记格式）：
+# - slug: invoice-ocr-agent-quick-entry
+#   pain_point: "中小企业财务手动录入发票报销单据太慢"       # = local-first AI 产品要覆盖的场景
+#   candidate_repos: []               # 反查/物色到的开源仓库，待定
+#   channels: [xiaohongshu]           # xiaohongshu / bilibili / youtube，可多选
+#   status: idea
+#   cadence_week: null
+#   note_needed: true                 # 是否配套小红书图文帖
+#   long_cut_url: ""                  # YouTube/B站 长版链接
+#   short_cut_url: ""                 # 小红书短版链接
+#   note_url: ""                      # 小红书图文帖链接
+
+topics: []
