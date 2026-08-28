@@ -61,14 +61,19 @@ Project paths:
    point, candidate repos, and which `channels` this topic targets
    (`xiaohongshu` / `bilibili` / `youtube` — can be more than one).
 4. **Write `script.md`** (long cut, if `bilibili`/`youtube` is a target) —
-   full walkthrough: setup → deployment → technical detail → verdict. 8-15 min
-   target, no hard ceiling.
-5. **Write `short-script.md`** (if `xiaohongshu` is a target) — the pain point
-   stated plainly in the first 15-30 seconds (this is the retention-critical
-   window, not the overall length), then the compressed solution path, skip
-   deep technical detail. Target 5-6 min, hard cap 8 min. Keep the voice
-   consistent with the blog's own tone — calm and specific, not
-   "姐妹们/YYDS" internet-slang style.
+   the user's fixed structure: 定义问题 (state the pain point precisely) →
+   分解问题 (break it into the sub-problems the solution actually has to
+   cover) → 方案介绍 (the open-source solution — this can be one repo, or
+   several repos plus glue scripts; say plainly which) → 下载/部署/安装/调试
+   (a real, followable how-to, not a summary of one) → 效果展示 (show the
+   actual result, not just claim it works). Target ~10 min, no hard ceiling.
+5. **Write `short-script.md`** (if `xiaohongshu` is a target) — same five-step
+   structure, compressed: 定义问题 stated plainly in the first 15-30 seconds
+   (this is the retention-critical window, not the overall length), 分解问题
+   trimmed to one sentence, 方案介绍 + 下载部署 compressed to the essential
+   steps only (skip deep technical detail), 效果展示 kept. Target ~5 min, hard
+   cap 8 min. Keep the voice consistent with the blog's own tone — calm and
+   specific, not "姐妹们/YYDS" internet-slang style.
 6. **Write `note.md`** (optional, only if a companion note is worth it) using
    the structure in `pipeline/m3/note-template.md` — cover title ≤20 chars,
    3-6 content-card bullets, caption with hook + 3-5 bullet highlights + soft
