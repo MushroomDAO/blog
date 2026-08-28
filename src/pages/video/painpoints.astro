@@ -1,0 +1,104 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE } from '../../consts';
+import painpointsMd from '../../../daily-video/painpoints.md?raw';
+
+const PAGE_TITLE = `🧠 Pain Point Map | ${SITE_TITLE}`;
+const PAGE_DESCRIPTION =
+	'长期跟踪个体和中小组织在用 AI 解决问题路上会卡住的真实痛点，围绕这张地图反向选题，拼出对应的开源方案，产出 daily-video 系列内容。';
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+		<style>
+			main {
+				width: 1100px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+				padding: 2em 1em;
+			}
+			.page-intro {
+				margin-bottom: 1.5em;
+			}
+			.page-intro h1 {
+				margin-bottom: 0.3em;
+			}
+			.page-intro p {
+				color: rgb(var(--gray));
+			}
+			.mindmap-wrap {
+				position: relative;
+				height: 72vh;
+				min-height: 480px;
+				border: 1px solid rgba(var(--gray), 25%);
+				border-radius: 12px;
+				background: rgb(var(--surface));
+				overflow: hidden;
+			}
+			.mindmap-wrap svg {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+			.mindmap-wrap :global(text) {
+				fill: rgb(var(--black));
+			}
+			.fit-btn {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				z-index: 2;
+				font-size: 0.85em;
+				padding: 0.4em 0.8em;
+				border-radius: 8px;
+				border: 1px solid rgba(var(--gray), 30%);
+				background: rgb(var(--surface));
+				color: rgb(var(--black));
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="page-intro">
+				<h1>🧠 痛点地图</h1>
+				<p>
+					个体和中小组织在用 AI 解决问题路上会卡住的真实场景，长期滚动维护——不追求一次列全，
+					痛点可大可小，能帮到人就登记。围绕这张图反向选题，拼开源方案，产出
+					<a href="/video/">daily-video</a> 系列的长版/短版视频和小红书图文。
+					图例：⚪ 待选题　🎬 已排入选题　✅ 已发布（节点旁的标签）。
+				</p>
+			</div>
+			<div class="mindmap-wrap">
+				<button class="fit-btn" id="mm-fit" type="button">适应窗口</button>
+				<svg id="markmap-svg"></svg>
+			</div>
+			<template id="mm-source">{painpointsMd}</template>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<script>
+	import { Transformer } from 'markmap-lib';
+	import { Markmap } from 'markmap-view';
+
+	const template = document.getElementById('mm-source') as HTMLTemplateElement | null;
+	const source = template?.content.textContent ?? '';
+	const svg = document.querySelector<SVGSVGElement>('#markmap-svg');
+
+	if (svg && source) {
+		const transformer = new Transformer();
+		const { root } = transformer.transform(source);
+		const mm = Markmap.create(svg, { autoFit: true }, root);
+
+		document.getElementById('mm-fit')?.addEventListener('click', () => {
+			mm.fit();
+		});
+	}
+</script>
