@@ -1,162 +1,177 @@
 {
-  "generatedAt": "2026-08-27T14:00:01Z",
+  "generatedAt": "2026-08-28T14:00:00Z",
   "period": {
-    "start": "2026-07-28",
-    "end": "2026-08-27"
+    "start": "2026-07-29",
+    "end": "2026-08-28"
   },
   "totals": {
-    "pageviews": 11300,
-    "visits": 10800,
-    "bots": 30
+    "pageviews": 10740,
+    "visits": 9950,
+    "bots": 0
   },
   "last7": {
-    "pv": 3300,
-    "visits": 3200
+    "pv": 2660,
+    "visits": 2350
   },
   "prior7": {
-    "pv": 4100,
-    "visits": 4000
+    "pv": 3010,
+    "visits": 2890
   },
   "daily": [
     {
       "date": "07-29",
-      "pv": 100,
-      "visits": 100
+      "pv": 70,
+      "visits": 70
     },
     {
       "date": "07-30",
-      "pv": 200,
-      "visits": 100
+      "pv": 300,
+      "visits": 260
     },
     {
       "date": "07-31",
-      "pv": 100,
-      "visits": 100
+      "pv": 300,
+      "visits": 240
     },
     {
       "date": "08-01",
-      "pv": 300,
-      "visits": 300
+      "pv": 210,
+      "visits": 210
     },
     {
       "date": "08-02",
-      "pv": 100,
-      "visits": 0
+      "pv": 110,
+      "visits": 100
     },
     {
       "date": "08-03",
-      "pv": 400,
-      "visits": 400
+      "pv": 280,
+      "visits": 260
     },
     {
       "date": "08-04",
-      "pv": 200,
-      "visits": 200
+      "pv": 160,
+      "visits": 150
+    },
+    {
+      "date": "08-05",
+      "pv": 160,
+      "visits": 160
     },
     {
       "date": "08-06",
-      "pv": 300,
-      "visits": 300
+      "pv": 260,
+      "visits": 240
     },
     {
       "date": "08-07",
-      "pv": 400,
-      "visits": 300
+      "pv": 410,
+      "visits": 370
     },
     {
       "date": "08-08",
-      "pv": 300,
-      "visits": 300
+      "pv": 200,
+      "visits": 190
     },
     {
       "date": "08-09",
-      "pv": 300,
-      "visits": 300
+      "pv": 310,
+      "visits": 290
     },
     {
       "date": "08-10",
-      "pv": 400,
-      "visits": 400
+      "pv": 370,
+      "visits": 350
     },
     {
       "date": "08-11",
-      "pv": 200,
-      "visits": 200
+      "pv": 300,
+      "visits": 260
     },
     {
       "date": "08-12",
-      "pv": 600,
-      "visits": 600
+      "pv": 610,
+      "visits": 580
     },
     {
       "date": "08-13",
-      "pv": 800,
-      "visits": 800
+      "pv": 480,
+      "visits": 450
     },
     {
       "date": "08-14",
-      "pv": 500,
-      "visits": 500
+      "pv": 540,
+      "visits": 530
     },
     {
       "date": "08-15",
-      "pv": 300,
-      "visits": 300
+      "pv": 450,
+      "visits": 420
     },
     {
       "date": "08-16",
-      "pv": 700,
-      "visits": 600
+      "pv": 440,
+      "visits": 430
     },
     {
       "date": "08-17",
-      "pv": 700,
-      "visits": 700
+      "pv": 510,
+      "visits": 500
     },
     {
       "date": "08-18",
-      "pv": 500,
+      "pv": 510,
       "visits": 500
     },
     {
       "date": "08-19",
-      "pv": 600,
-      "visits": 600
+      "pv": 420,
+      "visits": 420
     },
     {
       "date": "08-20",
-      "pv": 500,
-      "visits": 500
+      "pv": 330,
+      "visits": 280
     },
     {
       "date": "08-21",
-      "pv": 300,
-      "visits": 300
+      "pv": 350,
+      "visits": 340
+    },
+    {
+      "date": "08-22",
+      "pv": 240,
+      "visits": 230
     },
     {
       "date": "08-23",
-      "pv": 200,
-      "visits": 200
+      "pv": 270,
+      "visits": 220
     },
     {
       "date": "08-24",
-      "pv": 500,
-      "visits": 500
+      "pv": 460,
+      "visits": 410
     },
     {
       "date": "08-25",
-      "pv": 400,
-      "visits": 300
+      "pv": 380,
+      "visits": 350
     },
     {
       "date": "08-26",
-      "pv": 500,
-      "visits": 500
+      "pv": 450,
+      "visits": 410
     },
     {
       "date": "08-27",
-      "pv": 900,
-      "visits": 900
+      "pv": 500,
+      "visits": 480
+    },
+    {
+      "date": "08-28",
+      "pv": 360,
+      "visits": 250
     }
   ],
   "countries": [
@@ -165,16 +180,16 @@
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 5400,
-      "visits": 5400
+      "pv": 5600,
+      "visits": 5600
     },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 2200,
-      "visits": 2200
+      "pv": 2300,
+      "visits": 2300
     },
     {
       "code": "TH",
@@ -189,8 +204,8 @@
       "flag": "🇺🇸",
       "name": "美国",
       "nameEn": "United States",
-      "pv": 700,
-      "visits": 700
+      "pv": 800,
+      "visits": 800
     },
     {
       "code": "HK",
@@ -257,129 +272,129 @@
       "visits": 100
     }
   ],
-  "countryTotal": 11300,
+  "countryTotal": 11700,
   "referers": {
-    "direct": 6900,
-    "search": 3700,
-    "ecosystem": 500,
+    "direct": 0,
+    "search": 0,
+    "ecosystem": 0,
     "ai": 0,
-    "other": 200
+    "other": 0
   },
   "pages": [
     {
       "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
       "titleEn": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
       "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
-      "pv": 400,
-      "visits": 400
-    },
-    {
-      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
-      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
-      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 300,
-      "visits": 200
+      "pv": 520,
+      "visits": 520
     },
     {
       "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
       "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
       "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
-      "pv": 300,
-      "visits": 300
+      "pv": 420,
+      "visits": 420
     },
     {
-      "title": "FDE 实战手册：大企业 vs 中小企业，前三个月该怎么干",
-      "titleEn": "applied-compute-specific-intelligence-enterprise-ai-workflow-training",
-      "path": "/blog/applied-compute-specific-intelligence-enterprise-ai-workflow-training/",
-      "pv": 200,
+      "title": "首页",
+      "titleEn": "Home",
+      "path": "/",
+      "pv": 330,
+      "visits": 280
+    },
+    {
+      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
+      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
+      "pv": 220,
+      "visits": 220
+    },
+    {
+      "title": "my",
+      "titleEn": "my",
+      "path": "/my/",
+      "pv": 190,
+      "visits": 10
+    },
+    {
+      "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
+      "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
+      "path": "/blog/hitchhikers-guide-agentic-ai-book/",
+      "pv": 160,
+      "visits": 160
+    },
+    {
+      "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+      "titleEn": "Running DeepSeek V4-Flash Locally: A Hardware Selection and Deployment Handbook",
+      "path": "/blog/deepseek-v4-flash-local-inference-guide/",
+      "pv": 160,
+      "visits": 160
+    },
+    {
+      "title": "小红书运营能工作流化吗？6 个 Codex Skills 给出一个答案",
+      "titleEn": "Can Xiaohongshu Operations Become a Workflow? Six Codex Skills Offer an Answer",
+      "path": "/blog/xiaohongshu-operations-codex-skills-workflow-systematic/",
+      "pv": 130,
+      "visits": 120
+    },
+    {
+      "title": "Kimi K3 技术深析：KDA、Stable LatentMoE 与首个开源 3T 级模型",
+      "titleEn": "Kimi K3 Technical Deep Dive: KDA, Stable LatentMoE, and the First Open-Source 3T-Scale Model",
+      "path": "/blog/kimi-k3-technical-analysis-architecture-training-open-frontier/",
+      "pv": 130,
+      "visits": 130
+    },
+    {
+      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
+      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
+      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
+      "pv": 130,
+      "visits": 110
+    },
+    {
+      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
+      "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
+      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
+      "pv": 120,
+      "visits": 120
+    },
+    {
+      "title": "grill-me：181k Star 的 Claude Code Skill，用一个问题消灭 AI 编码最常见的失败模式",
+      "titleEn": "grill-me: The 181k-Star Claude Code Skill That Eliminates the Most Common AI Coding Failure Mode One Question at a Time",
+      "path": "/blog/grill-me-skill-mattpocock-claude-code-guide/",
+      "pv": 100,
       "visits": 100
     },
     {
-      "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
-      "titleEn": "M1 Max 64GB Local AI Complete Guide: Qwen3 Model Selection, Memory Management & Multi-Model Scheduling",
-      "path": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
-      "pv": 200,
-      "visits": 200
+      "title": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节",
+      "titleEn": "threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl",
+      "path": "/blog/threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl/",
+      "pv": 100,
+      "visits": 90
     },
     {
-      "title": "像上帝一样掌控 AI 小镇：GOD 项目本地搭建完全指南",
-      "titleEn": "Be a God to an Agent Town: Complete Local Setup Guide for the GOD Project",
-      "path": "/blog/god-agent-town-setup-guide/",
-      "pv": 200,
-      "visits": 200
+      "title": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南",
+      "titleEn": "Illustrate Your Articles Without Drawing: A Beginner's Guide to ian-xiaohei-illustrations",
+      "path": "/blog/ian-xiaohei-illustrations-beginner-guide/",
+      "pv": 100,
+      "visits": 100
     },
     {
-      "title": "14天、5人，他们真的把AI编程助手整出来了",
-      "titleEn": "14 Days, 5 People: MiMo Code and the Vibe Coding Era",
-      "path": "/blog/mimo-code-vibe-coding-era/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
-      "titleEn": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
-      "path": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Ploy：Webflow 联合创始人的第三次创业——用 AI Agent 把网站变成增长引擎",
-      "titleEn": "Ploy: The Webflow Co-Founder's Third Startup Turns Websites into Growth Engines with AI Agents",
-      "path": "/blog/ploy-ai-webflow-founder-website-growth-engine-27m/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面",
-      "titleEn": "HugAgentOS: ZJU's Enterprise AgentOS Using Domain Ontology as the Agent Reasoning Control Plane",
-      "path": "/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构",
-      "titleEn": "Agency Agents: 50+ Specialized AI Roles in an Open-Source, Multi-Model Agency",
-      "path": "/blog/agency-agents-opensource-multi-model/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Google YouTube 自进化推荐系统：LLM Agent 替代 ML 工程师，双环架构工程落地指南",
-      "titleEn": "Google YouTube's Self-Evolving Recommendation System: LLM Agents Replace ML Engineers — Dual-Loop Architecture Engineering Guide",
-      "path": "/blog/google-self-evolving-recommendation-system-youtube-llm-agent/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
-      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
-      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Agent 通信协议的第一张地图：读完这篇论文，我知道未来不会是一个赢家通吃",
-      "titleEn": "The First Map of LLM Agent Communication Protocols: Why the Future Won't Be Winner-Takes-All",
-      "path": "/blog/llm-agent-protocol-taxonomy-federated-stack-2026/",
-      "pv": 200,
-      "visits": 200
+      "title": "ChatCut × Codex / Claude Code：用提示词剪视频的完整教程，五套原创模板",
+      "titleEn": "ChatCut × Codex / Claude Code: Complete Video Editing Tutorial with 5 Original Prompt Templates",
+      "path": "/blog/chatcut-ai-video-editor-codex-claude-code-plugin-tutorial/",
+      "pv": 90,
+      "visits": 90
     }
   ],
   "devices": [
     {
       "label": "desktop",
-      "count": 9880
+      "count": 10150
     },
     {
       "label": "mobile",
-      "count": 570
+      "count": 580
     },
     {
       "label": "tablet",
@@ -389,7 +404,7 @@
   "os": [
     {
       "label": "Windows",
-      "count": 8300
+      "count": 7530
     },
     {
       "label": "MacOSX",
@@ -397,57 +412,33 @@
     },
     {
       "label": "Unknown",
-      "count": 400
-    },
-    {
-      "label": "Android",
-      "count": 400
+      "count": 640
     },
     {
       "label": "Linux",
-      "count": 300
+      "count": 390
+    },
+    {
+      "label": "Android",
+      "count": 230
     },
     {
       "label": "iOS",
-      "count": 100
+      "count": 150
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 7450
+      "count": 5000
     },
     {
       "label": "Edge",
-      "count": 1620
-    },
-    {
-      "label": "Unknown",
-      "count": 590
+      "count": 3000
     },
     {
       "label": "Safari",
-      "count": 310
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 180
-    },
-    {
-      "label": "ChromeMobileWebview",
-      "count": 110
-    },
-    {
-      "label": "MobileSafari",
-      "count": 90
-    },
-    {
-      "label": "Firefox",
-      "count": 80
-    },
-    {
-      "label": "ChromeHeadless",
-      "count": 30
+      "count": 1000
     }
   ]
 }
