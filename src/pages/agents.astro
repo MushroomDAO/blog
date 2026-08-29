@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="给 AI Agent 的入口"
+	titleEn="Entry Point for AI Agents"
+	description="这个博客不只是给人看的网页——它也对外提供 MCP 服务和一个 Claude Code skill，让你的个人 AI agent 可以直接查询、搜索、订阅这里的内容更新。"
+	descriptionEn="This blog isn't only a website for humans — it also exposes an MCP server and a Claude Code skill, so your personal AI agent can query, search, and subscribe to updates here directly."
+	pubDate={new Date('2026-08-29')}
+	category="Other"
+	tags={['agents', 'mcp', 'mushroom']}
+>
+
+<!-- 中文内容 -->
+<p>
+	这个博客除了给人看，也对外提供 <strong>MCP（Model Context Protocol）服务</strong>——你的 AI agent（比如
+	Claude Code）可以直接连接过来，搜索、读取、订阅这里的文章，不用再靠爬网页解析 HTML。
+</p>
+
+<h2>方式一：直接注册成 MCP server（推荐）</h2>
+<p>如果你用的是 Claude Code，一行命令就能把这个博客接进去：</p>
+<pre><code>claude mcp add --transport http mushroom-blog https://blog.mushroom.cv/api/mcp</code></pre>
+<p>
+	接上之后，<code>search_posts</code>/<code>get_post</code>/<code>list_recent</code> 会变成 Claude
+	能直接调用的原生工具，问"mushroom 博客最近发了什么"、"搜一下 mushroom 博客里关于 xxx 的文章"，Claude
+	会自己去调用，不需要你再手动 curl。协议版本是 <code>2025-11-25</code>（不是最新的
+	<code>2026-07-28</code>，具体原因见 <a href="https://github.com/MushroomDAO/blog/blob/main/agent-feed/PLAN.md">agent-feed/PLAN.md</a>）。
+</p>
+
+<h2>方式二：安装 mushroom skill（更自然的触发方式）</h2>
+<p>
+	如果你想要更简单的触发词——打 <code>mushroom</code> 就汇报最近文章，<code>mushroom search 关键词</code>
+	就搜索——装这个 skill：
+</p>
+<pre><code>mkdir -p ~/.claude/skills/mushroom
+curl -s https://blog.mushroom.cv/agents/mushroom-skill.md -o ~/.claude/skills/mushroom/SKILL.md</code></pre>
+<p>
+	装完重开一个 Claude Code 会话就能用。这个 skill 底层直接 curl 调 <code>/api/mcp</code>，不需要额外配置，
+	也不依赖方式一的 MCP 注册——两者互不冲突，都装也没问题。
+</p>
+
+<h2>方式三：纯文本，给任何能读网页的 agent</h2>
+<p>不想接协议、只想让 agent 读一份干净的文本索引：</p>
+<ul>
+	<li><a href="/llms.txt">/llms.txt</a> — 站点简介 + 按分类分组的文章列表</li>
+	<li><a href="/llms-full.txt">/llms-full.txt</a> — 同上，但每篇带完整正文</li>
+	<li><a href="/agent-feed-index.json">/agent-feed-index.json</a> — 结构化 JSON，程序直接解析用</li>
+</ul>
+
+<h2>这些服务是怎么来的</h2>
+<p>
+	完整的设计决策（为什么选 MCP 不选 A2A/Nostr、协议版本为什么是 2025-11-25、两轮安全 review 改了什么）
+	记在仓库的 <a href="https://github.com/MushroomDAO/blog/tree/main/agent-feed">agent-feed/</a> 目录里，
+	公开可读。这套东西本身也在往"任何服务都能这样对 agent 开放"这个方向抽象，设计文档在
+	<a href="https://github.com/MushroomDAO/blog/tree/main/agent-feed/framework">agent-feed/framework/</a>。
+</p>
+
+<!--EN-->
+
+<p>
+	Beyond being a website for humans, this blog also exposes an <strong>MCP (Model Context Protocol) server</strong> —
+	your AI agent (e.g. Claude Code) can connect directly to search, read, and subscribe to articles here, instead of
+	scraping and parsing HTML.
+</p>
+
+<h2>Option 1: Register as an MCP server (recommended)</h2>
+<p>If you use Claude Code, one command connects it:</p>
+<pre><code>claude mcp add --transport http mushroom-blog https://blog.mushroom.cv/api/mcp</code></pre>
+<p>
+	Once connected, <code>search_posts</code>/<code>get_post</code>/<code>list_recent</code> become native
+	tools Claude can call directly — ask "what has the mushroom blog posted recently" or "search the mushroom
+	blog for xxx" and Claude will call them itself, no manual curl needed. Protocol version is
+	<code>2025-11-25</code> (not the newest <code>2026-07-28</code> — see
+	<a href="https://github.com/MushroomDAO/blog/blob/main/agent-feed/PLAN.md">agent-feed/PLAN.md</a> for why).
+</p>
+
+<h2>Option 2: Install the mushroom skill (a friendlier trigger word)</h2>
+<p>
+	For a simpler trigger — type <code>mushroom</code> for a recent-posts digest, or
+	<code>mushroom search &lt;query&gt;</code> to search — install this skill:
+</p>
+<pre><code>mkdir -p ~/.claude/skills/mushroom
+curl -s https://blog.mushroom.cv/agents/mushroom-skill.md -o ~/.claude/skills/mushroom/SKILL.md</code></pre>
+<p>
+	Works after restarting your Claude Code session. It calls <code>/api/mcp</code> via curl under the hood,
+	needs no extra config, and doesn't require Option 1's MCP registration — both can be installed together.
+</p>
+
+<h2>Option 3: Plain text, for any web-reading agent</h2>
+<p>Don't want to speak a protocol at all — just want a clean text index:</p>
+<ul>
+	<li><a href="/llms.txt">/llms.txt</a> — site summary + articles grouped by category</li>
+	<li><a href="/llms-full.txt">/llms-full.txt</a> — same, with full article bodies</li>
+	<li><a href="/agent-feed-index.json">/agent-feed-index.json</a> — structured JSON for programmatic use</li>
+</ul>
+
+<h2>How this came to be</h2>
+<p>
+	The full design record (why MCP over A2A/Nostr, why protocol version 2025-11-25, what two rounds of
+	adversarial security review changed) lives in the repo's
+	<a href="https://github.com/MushroomDAO/blog/tree/main/agent-feed">agent-feed/</a> directory, publicly
+	readable. This is also being generalized toward "any service can open up to agents this way" — design doc
+	in <a href="https://github.com/MushroomDAO/blog/tree/main/agent-feed/framework">agent-feed/framework/</a>.
+</p>
+
+</Layout>

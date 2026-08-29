@@ -22,6 +22,16 @@
 Agent Card。两轮 Codex review 都判定那张卡片结构性有问题（见下面"A2A Agent
 Card：为什么整个撤下"），已经删除——发现层目前只剩 `llms.txt`。
 
+人类可读的入口页在 `/agents/`（`src/pages/agents.astro`），footer 有链接
+过去——三种接入方式（注册成 MCP server / 装 `mushroom` skill / 直接读
+`llms.txt`）的说明和可复制命令。skill 的安装命令从
+`/agents/mushroom-skill.md`（`src/pages/agents/mushroom-skill.md.ts`）拉取，
+这个端点在构建期直接读 `.agents/skills/mushroom/SKILL.md`，不是手动维护的
+第二份拷贝——skill 内容改了，页面上的安装命令自动跟着更新，不会漂移。
+
+通用化到"任何服务都能这样对 agent 开放"的设计讨论在 `agent-feed/framework/
+DESIGN.md`——纯文档，不含代码，是站长要求先想清楚形状再决定要不要做。
+
 ### 为什么是 MCP，不是 Nostr / ActivityPub
 
 - **Nostr relay 广播**：生态里 iDoris 已经有 `agent-speaker-relay`（strfry Docker），
