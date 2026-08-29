@@ -7,7 +7,7 @@ pubDate: 2026-08-29
 updatedDate: 2026-08-29
 category: "Tech-News"
 tags: ["video generation", "AI", "open source", "inference", "post-training", "MLX", "Apple Silicon", "diffusion"]
-heroImage: "/assets/images/fastvideo-hao-ai-lab-unified-video-generation-inference-training-banner.jpg"
+heroImage: "../../assets/images/fastvideo-hao-ai-lab-unified-video-generation-inference-training-banner.jpg"
 author: "Mycelium Protocol"
 ---
 
@@ -144,6 +144,8 @@ FastVideo 是目前覆盖最全面的开源视频生成框架：从 Apple Silico
 **实时演示**: https://dreamverse.fastvideo.org
 
 ---
+
+<!--EN-->
 
 ## FastVideo: Unified Video Generation Framework — 5s Video in 1.8s
 
