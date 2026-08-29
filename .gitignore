@@ -2,6 +2,8 @@
 dist/
 # generated types
 .astro/
+# wrangler pages dev local state (KV/Vectorize sim, sourcemaps)
+.wrangler/
 
 # dependencies
 node_modules/
