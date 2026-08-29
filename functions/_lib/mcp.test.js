@@ -47,13 +47,6 @@ test('initialize 返回声明的协议版本和 capabilities，不需要加载�
 	assert.equal(recorder.called, false);
 });
 
-test('server/discover 返回支持的协议版本列表，不需要加载文章', async () => {
-	const recorder = { called: false };
-	const res = await handleJsonRpc({ jsonrpc: '2.0', id: 2, method: 'server/discover' }, callsLoadPosts(recorder));
-	assert.deepEqual(res.result.protocolVersions, [PROTOCOL_VERSION]);
-	assert.equal(recorder.called, false);
-});
-
 test('tools/list 包含三个工具，不需要加载文章', async () => {
 	const recorder = { called: false };
 	const res = await handleJsonRpc({ jsonrpc: '2.0', id: 3, method: 'tools/list' }, callsLoadPosts(recorder));
@@ -142,12 +135,24 @@ test('tools/call list_recent 按发布时间倒序，不依赖输入顺序', asy
 	);
 });
 
-test('tools/call 未知工具返回 JSON-RPC -32602', async () => {
+test('tools/call 未知工具返回 JSON-RPC -32602，不加载文章（round 2 review Medium）', async () => {
+	const recorder = { called: false };
 	const res = await handleJsonRpc(
 		{ jsonrpc: '2.0', id: 12, method: 'tools/call', params: { name: 'delete_everything', arguments: {} } },
-		loadFixturePosts,
+		callsLoadPosts(recorder),
 	);
 	assert.equal(res.error.code, -32602);
+	assert.equal(recorder.called, false);
+});
+
+test('tools/call get_post 缺少 id 时不加载文章就直接返回 isError（round 2 review Medium）', async () => {
+	const recorder = { called: false };
+	const res = await handleJsonRpc(
+		{ jsonrpc: '2.0', id: 121, method: 'tools/call', params: { name: 'get_post', arguments: {} } },
+		callsLoadPosts(recorder),
+	);
+	assert.equal(res.result.isError, true);
+	assert.equal(recorder.called, false);
 });
 
 test('tools/call 缺少 name 返回 -32602，不炸异常', async () => {

@@ -11,9 +11,15 @@
  * subscribe 这一套，如果同时对外声明 2026-07-28，就是自己承认的版本号和自己
  * 实际实现的方法集对不上——那才是真正的协议错误（round 1 review 抓到的问题）。
  * 2025-11-25 是这套方法集最后一个仍然有效的版本号，声明它是诚实的。
- * `server/discover` 单独加了一个方法（见下面），不依赖 initialize 握手，
- * 好让 2026-07-28 感知的新客户端至少能拿到一个诚实的"我是 2025-11-25"回答，
- * 而不是 -32601 method not found。
+ *
+ * 第一版本来加了一个 `server/discover` 方法想给 2026-07-28 感知的新客户端一个
+ * 更友好的探测结果，第二轮 review 指出这个方法本身的返回形状（`resultType`
+ * 包装、`supportedVersions` 字段名等）跟真正的 2026-07-28 discovery schema
+ * 对不上——等于用一个"看起来支持新协议但形状是错的"方法替换掉了一个诚实的
+ * -32601。2026-07-28 changelog 原文本来就写了 `server/discover` 是给客户端
+ * "MAY... use it as a backward-compatibility probe"，也就是说客户端本来就该
+ * 处理探测失败、回退到 initialize——-32601 是这条回退路径预期会遇到的信号，
+ * 不是要修的问题。于是把这个方法整个去掉，只诚实实现 2025-11-25 这一套。
  */
 
 const PROTOCOL_VERSION = '2025-11-25';
@@ -54,6 +60,8 @@ const TOOL_DEFS = [
 		},
 	},
 ];
+
+const TOOL_NAMES = new Set(TOOL_DEFS.map((t) => t.name));
 
 function jsonRpcError(id, code, message) {
 	return { jsonrpc: '2.0', id: id ?? null, error: { code, message } };
@@ -147,16 +155,6 @@ async function handleJsonRpc(request, loadPosts) {
 					serverInfo: { name: 'mycelium-blog-agent-feed', version: '0.1.0' },
 				});
 
-			// 2026-07-28 规范要求每个 server 实现这个方法用于能力发现/版本协商，
-			// 不依赖 initialize 握手（见文件头注释）。这里诚实回答"我支持
-			// 2025-11-25"，不冒充支持最新版本。
-			case 'server/discover':
-				return jsonRpcResult(id, {
-					protocolVersions: [PROTOCOL_VERSION],
-					capabilities: { tools: {}, resources: { subscribe: true } },
-					serverInfo: { name: 'mycelium-blog-agent-feed', version: '0.1.0' },
-				});
-
 			case 'tools/list':
 				return jsonRpcResult(id, { tools: TOOL_DEFS });
 
@@ -164,10 +162,19 @@ async function handleJsonRpc(request, loadPosts) {
 				if (typeof safeParams.name !== 'string' || !safeParams.name) {
 					return jsonRpcError(id, -32602, 'missing tool name');
 				}
+				if (!TOOL_NAMES.has(safeParams.name)) {
+					return jsonRpcError(id, -32602, `unknown tool: ${safeParams.name}`);
+				}
 				const args = safeParams.arguments && typeof safeParams.arguments === 'object' ? safeParams.arguments : {};
+				// round 2 review Medium：未知工具/缺必填参数这类"不用看内容就能判定
+				// 无效"的请求，不该先拉一次 ~7.7MB 的索引再拒绝——那是白白花一次
+				// fetch+parse 去驳回一个本来静态就能驳回的请求，也是廉价的资源放大
+				// 攻击面。get_post 的 id 是唯一一个必填静态参数，这里先查完。
+				if (safeParams.name === 'get_post' && (typeof args.id !== 'string' || !args.id)) {
+					return jsonRpcResult(id, { ...toolResultText({ error: 'not found' }), isError: true });
+				}
 				const posts = await loadPosts();
 				const result = callTool(posts, safeParams.name, args);
-				if (!result) return jsonRpcError(id, -32602, `unknown tool: ${safeParams.name}`);
 				return jsonRpcResult(id, result);
 			}
 
@@ -199,8 +206,13 @@ async function handleJsonRpc(request, loadPosts) {
 
 			case 'resources/subscribe':
 				if (safeParams.uri !== RESOURCE_URI) return jsonRpcError(id, -32602, `unknown resource: ${safeParams.uri}`);
-				// 实际推送在 functions/api/mcp.js 的 SSE 循环里做（无状态轮询式推送，
-				// 见 agent-feed/PLAN.md）；这里只确认订阅的 uri 有效，不需要文章内容。
+				// 只确认订阅的 uri 有效，不建立任何会话状态——这个 server 是无状态的，
+				// 这次调用和后面 functions/api/mcp.js 的 GET SSE 流之间没有真正的
+				// session 绑定（round 2 review High：一个严格遵循 MCP 传输规范的
+				// 客户端会期待"调用 resources/subscribe 之后，在自己已有的连接上
+				// 收到通知"，本 server 不是这么接的，见 agent-feed/PLAN.md 的
+				// "已知边界"）。诚实地说，这个方法目前只是一个"资源确实存在"的
+				// 确认，真正的推送要靠单独去开那个带 query 参数的 GET SSE 连接。
 				return jsonRpcResult(id, {});
 
 			case 'resources/unsubscribe':
