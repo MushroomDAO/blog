@@ -1,33 +1,23 @@
 {
-  "generatedAt": "2026-08-29T14:00:01Z",
+  "generatedAt": "2026-08-30T14:00:01Z",
   "period": {
-    "start": "2026-07-30",
-    "end": "2026-08-29"
+    "start": "2026-07-31",
+    "end": "2026-08-30"
   },
   "totals": {
-    "pageviews": 11800,
-    "visits": 11400,
+    "pageviews": 12000,
+    "visits": 11600,
     "bots": 0
   },
   "last7": {
-    "pv": 3200,
-    "visits": 3100
+    "pv": 3400,
+    "visits": 3300
   },
   "prior7": {
-    "pv": 3600,
-    "visits": 3500
+    "pv": 3500,
+    "visits": 3400
   },
   "daily": [
-    {
-      "date": "07-30",
-      "pv": 100,
-      "visits": 100
-    },
-    {
-      "date": "07-31",
-      "pv": 100,
-      "visits": 100
-    },
     {
       "date": "08-01",
       "pv": 300,
@@ -160,8 +150,13 @@
     },
     {
       "date": "08-29",
-      "pv": 200,
-      "visits": 200
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "date": "08-30",
+      "pv": 300,
+      "visits": 300
     }
   ],
   "countries": [
@@ -170,8 +165,8 @@
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 5600,
-      "visits": 5600
+      "pv": 5800,
+      "visits": 5800
     },
     {
       "code": "CN",
@@ -262,184 +257,185 @@
       "visits": 100
     }
   ],
-  "countryTotal": 11800,
+  "countryTotal": 12000,
   "referers": {
-    "direct": 6350,
-    "search": 3330,
-    "ecosystem": 820,
-    "ai": 50,
-    "other": 130
+    "direct": 7500,
+    "search": 3800,
+    "ecosystem": 400,
+    "ai": 100,
+    "other": 200
   },
   "pages": [
     {
       "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
       "titleEn": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
       "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
-      "pv": 460,
-      "visits": 460
+      "pv": 400,
+      "visits": 400
     },
     {
       "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
       "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
       "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
-      "pv": 420,
-      "visits": 420
-    },
-    {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 330,
-      "visits": 290
+      "pv": 300,
+      "visits": 300
     },
     {
       "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
       "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
       "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 230,
-      "visits": 230
-    },
-    {
-      "title": "my",
-      "titleEn": "my",
-      "path": "/my/",
-      "pv": 180,
-      "visits": 10
-    },
-    {
-      "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
-      "titleEn": "Running DeepSeek V4-Flash Locally: A Hardware Selection and Deployment Handbook",
-      "path": "/blog/deepseek-v4-flash-local-inference-guide/",
-      "pv": 160,
-      "visits": 160
-    },
-    {
-      "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
-      "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
-      "path": "/blog/hitchhikers-guide-agentic-ai-book/",
-      "pv": 160,
-      "visits": 160
-    },
-    {
-      "title": "小红书运营能工作流化吗？6 个 Codex Skills 给出一个答案",
-      "titleEn": "Can Xiaohongshu Operations Become a Workflow? Six Codex Skills Offer an Answer",
-      "path": "/blog/xiaohongshu-operations-codex-skills-workflow-systematic/",
-      "pv": 130,
-      "visits": 130
+      "pv": 300,
+      "visits": 300
     },
     {
       "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
       "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
       "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 130,
-      "visits": 110
+      "pv": 300,
+      "visits": 300
     },
     {
-      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
-      "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
-      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
-      "pv": 120,
-      "visits": 120
+      "title": "首页",
+      "titleEn": "Home",
+      "path": "/",
+      "pv": 300,
+      "visits": 200
     },
     {
-      "title": "Kimi K3 技术深析：KDA、Stable LatentMoE 与首个开源 3T 级模型",
-      "titleEn": "Kimi K3 Technical Deep Dive: KDA, Stable LatentMoE, and the First Open-Source 3T-Scale Model",
-      "path": "/blog/kimi-k3-technical-analysis-architecture-training-open-frontier/",
-      "pv": 110,
-      "visits": 110
+      "title": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画",
+      "titleEn": "juju-content-illustrations: An Agent Skill That Turns Articles into Juju-Style Hand-Drawn Illustrations",
+      "path": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
+      "pv": 200,
+      "visits": 200
     },
     {
-      "title": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节",
-      "titleEn": "threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl",
-      "path": "/blog/threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl/",
-      "pv": 100,
-      "visits": 90
+      "title": "用 AI 给文章配图：归藏 Social Card Skill 完整指南",
+      "titleEn": "AI Illustrations for Your Articles: Complete Guizang Social Card Skill Guide",
+      "path": "/blog/guizang-social-card-illustration-guide/",
+      "pv": 200,
+      "visits": 200
     },
     {
-      "title": "grill-me：181k Star 的 Claude Code Skill，用一个问题消灭 AI 编码最常见的失败模式",
-      "titleEn": "grill-me: The 181k-Star Claude Code Skill That Eliminates the Most Common AI Coding Failure Mode One Question at a Time",
-      "path": "/blog/grill-me-skill-mattpocock-claude-code-guide/",
-      "pv": 100,
-      "visits": 100
+      "title": "14天、5人，他们真的把AI编程助手整出来了",
+      "titleEn": "14 Days, 5 People: MiMo Code and the Vibe Coding Era",
+      "path": "/blog/mimo-code-vibe-coding-era/",
+      "pv": 200,
+      "visits": 200
     },
     {
-      "title": "MultiPost：一个浏览器插件，一键同步发内容到 10+ 平台",
-      "titleEn": "MultiPost: One Browser Extension, One Click to Publish Across 10+ Platforms",
-      "path": "/blog/multipost-extension-one-click-multi-platform-guide/",
-      "pv": 90,
-      "visits": 90
+      "title": "Ploy：Webflow 联合创始人的第三次创业——用 AI Agent 把网站变成增长引擎",
+      "titleEn": "Ploy: The Webflow Co-Founder's Third Startup Turns Websites into Growth Engines with AI Agents",
+      "path": "/blog/ploy-ai-webflow-founder-website-growth-engine-27m/",
+      "pv": 200,
+      "visits": 200
     },
     {
-      "title": "ChatCut × Codex / Claude Code：用提示词剪视频的完整教程，五套原创模板",
-      "titleEn": "ChatCut × Codex / Claude Code: Complete Video Editing Tutorial with 5 Original Prompt Templates",
-      "path": "/blog/chatcut-ai-video-editor-codex-claude-code-plugin-tutorial/",
-      "pv": 90,
-      "visits": 90
+      "title": "HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面",
+      "titleEn": "HugAgentOS: ZJU's Enterprise AgentOS Using Domain Ontology as the Agent Reasoning Control Plane",
+      "path": "/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
+      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
+      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "19000 星开源书：《深入理解 AI Agent》，10 章 92 个实验，从上下文工程到多 Agent 协作全覆盖",
+      "titleEn": "19k-Star Open-Source Book: 'AI Agents in Depth' — 10 Chapters, 92 Experiments, From Context Engineering to Multi-Agent Systems",
+      "path": "/blog/ai-agent-book-context-engineering-llm-agent-open-source-chinese/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "Agent 通信协议的第一张地图：读完这篇论文，我知道未来不会是一个赢家通吃",
+      "titleEn": "The First Map of LLM Agent Communication Protocols: Why the Future Won't Be Winner-Takes-All",
+      "path": "/blog/llm-agent-protocol-taxonomy-federated-stack-2026/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "Voicebox：把 ElevenLabs 和 WisprFlow 装进一个本地运行的开源 App",
+      "titleEn": "Voicebox: Local-First AI Voice Studio — ElevenLabs Output + WisprFlow Input in One Open-Source App",
+      "path": "/blog/voicebox-local-ai-voice-studio-elevenlabs-alternative/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "Google YouTube 自进化推荐系统：LLM Agent 替代 ML 工程师，双环架构工程落地指南",
+      "titleEn": "Google YouTube's Self-Evolving Recommendation System: LLM Agents Replace ML Engineers — Dual-Loop Architecture Engineering Guide",
+      "path": "/blog/google-self-evolving-recommendation-system-youtube-llm-agent/",
+      "pv": 200,
+      "visits": 200
     }
   ],
-  "devices": [],
+  "devices": [
+    {
+      "label": "desktop",
+      "count": 11200
+    },
+    {
+      "label": "mobile",
+      "count": 800
+    }
+  ],
   "os": [
     {
       "label": "Windows",
-      "count": 8300
+      "count": 7610
     },
     {
       "label": "MacOSX",
-      "count": 2000
+      "count": 1770
+    },
+    {
+      "label": "Unknown",
+      "count": 620
+    },
+    {
+      "label": "Linux",
+      "count": 380
+    },
+    {
+      "label": "Android",
+      "count": 240
+    },
+    {
+      "label": "iOS",
+      "count": 150
+    }
+  ],
+  "browsers": [
+    {
+      "label": "Chrome",
+      "count": 8900
+    },
+    {
+      "label": "Edge",
+      "count": 1500
     },
     {
       "label": "Unknown",
       "count": 600
     },
     {
-      "label": "Android",
+      "label": "Safari",
       "count": 400
     },
     {
-      "label": "Linux",
+      "label": "ChromeMobile",
       "count": 300
     },
     {
-      "label": "iOS",
+      "label": "ChromeMobileWebview",
       "count": 200
-    }
-  ],
-  "browsers": [
-    {
-      "label": "Chrome",
-      "count": 7560
-    },
-    {
-      "label": "Edge",
-      "count": 1700
-    },
-    {
-      "label": "Unknown",
-      "count": 630
-    },
-    {
-      "label": "Safari",
-      "count": 310
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 160
     },
     {
       "label": "MobileSafari",
-      "count": 110
-    },
-    {
-      "label": "ChromeMobileWebview",
       "count": 100
-    },
-    {
-      "label": "Firefox",
-      "count": 80
-    },
-    {
-      "label": "ChromeHeadless",
-      "count": 30
     }
   ]
 }
