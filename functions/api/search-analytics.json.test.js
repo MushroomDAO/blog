@@ -1,8 +1,9 @@
-// /api/search-analytics.json：登录门禁 + fetchSearchStats 解析逻辑的单元测试。
-// 这个端点刻意跟 /api/analytics.json 分开（见文件头注释：那个端点走共享边缘缓存，
-// 把登录用户才能看到的数据塞进去会泄露给所有访客），所以这里要单独测两件事：
-// (1) 没有合法登录 Cookie 一律 401，不发任何上游请求；(2) fetchSearchStats 本身
-// 的成功/未配置/无数据/网络失败四种路径都按预期降级。
+// /api/search-analytics.json：登录门禁 + FU-28 按会话限速 + fetchSearchStats 解析
+// 逻辑的单元测试。这个端点刻意跟 /api/analytics.json 分开（见文件头注释：那个端点
+// 走共享边缘缓存，把登录用户才能看到的数据塞进去会泄露给所有访客），所以这里要
+// 单独测几件事：(1) 没有合法登录 Cookie 一律 401，不发任何上游请求；(2) 登录后按
+// 会话限速，超限 429；(3) fetchSearchStats 本身的成功/未配置/无数据/网络失败四种
+// 路径都按预期降级。
 
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
@@ -21,6 +22,25 @@ function makeRequest({ cookie } = {}) {
 	return new Request('https://example.com/api/search-analytics.json', { method: 'GET', headers });
 }
 
+function makeFakeKv() {
+	const store = new Map();
+	return {
+		store,
+		async get(key) {
+			return store.has(key) ? store.get(key) : null;
+		},
+		async put(key, value) {
+			store.set(key, value);
+		},
+	};
+}
+
+// 大多数测试不关心限速本身，只需要一个能正常工作的 KV——FU-28 起 BLOG_SEARCH_KV
+// 是必需绑定，专门测"缺失 KV"/"限速"行为的用例会显式覆盖。
+function baseEnv(overrides = {}) {
+	return { BLOG_SEARCH_SESSION_SECRET: SESSION_SECRET, BLOG_SEARCH_KV: makeFakeKv(), CF_ANALYTICS_TOKEN: 'tok', ...overrides };
+}
+
 function withFetch(impl, fn) {
 	const original = globalThis.fetch;
 	globalThis.fetch = impl;
@@ -37,8 +57,7 @@ test('没有登录 Cookie：401，不发任何 Analytics Engine 请求', async (
 			throw new Error('should not be called');
 		},
 		async () => {
-			const env = { BLOG_SEARCH_SESSION_SECRET: SESSION_SECRET, CF_ANALYTICS_TOKEN: 'tok' };
-			const resp = await onRequestGet({ request: makeRequest(), env });
+			const resp = await onRequestGet({ request: makeRequest(), env: baseEnv() });
 			assert.equal(resp.status, 401);
 			assert.equal(resp.headers.get('cache-control'), 'private, no-store', '未授权响应也不能被共享缓存缓存住');
 		},
@@ -47,15 +66,36 @@ test('没有登录 Cookie：401，不发任何 Analytics Engine 请求', async (
 });
 
 test('过期/伪造 Cookie：同样 401', async () => {
-	const env = { BLOG_SEARCH_SESSION_SECRET: SESSION_SECRET, CF_ANALYTICS_TOKEN: 'tok' };
-	const resp = await onRequestGet({ request: makeRequest({ cookie: 'not-a-valid-cookie' }), env });
+	const resp = await onRequestGet({ request: makeRequest({ cookie: 'not-a-valid-cookie' }), env: baseEnv() });
 	assert.equal(resp.status, 401);
 });
 
 test('缺少 BLOG_SEARCH_SESSION_SECRET 绑定：503（fail-closed，不静默放行）', async () => {
-	const env = {};
+	const env = baseEnv({ BLOG_SEARCH_SESSION_SECRET: undefined });
 	const resp = await onRequestGet({ request: makeRequest(), env });
 	assert.equal(resp.status, 503);
+});
+
+// FU-28 回归测试（round 3 review 指出：这个仓库真实发生过 KV binding 被
+// wrangler pages deploy 悄悄冲掉的事故，见 PR #50）——BLOG_SEARCH_KV 缺失时不该
+// fail-closed 整个端点，登录门禁本身不依赖 KV，应该跳过限速直接放行，保留"KV 坏了
+// 站长还能打开这个端点帮自己诊断"这个诊断价值。
+test('缺少 BLOG_SEARCH_KV 绑定：跳过限速，登录态合法仍然 200（不该 fail-closed 整个端点）', async () => {
+	await withFetch(
+		async () => ({ ok: true, json: async () => ({ data: [{ searches: 1, unique_ips: 1 }] }) }),
+		async () => {
+			const cookie = await validCookie();
+			const env = baseEnv({ BLOG_SEARCH_KV: undefined });
+			const resp = await onRequestGet({ request: makeRequest({ cookie }), env });
+			assert.equal(resp.status, 200);
+		},
+	);
+});
+
+test('缺少 BLOG_SEARCH_KV 绑定 + 未登录：仍然 401（登录门禁不受影响）', async () => {
+	const env = baseEnv({ BLOG_SEARCH_KV: undefined });
+	const resp = await onRequestGet({ request: makeRequest(), env });
+	assert.equal(resp.status, 401);
 });
 
 test('登录态合法时：200，返回值带 private, no-store 缓存头', async () => {
@@ -63,10 +103,57 @@ test('登录态合法时：200，返回值带 private, no-store 缓存头', asyn
 		async () => ({ ok: true, json: async () => ({ data: [{ searches: 1, unique_ips: 1 }] }) }),
 		async () => {
 			const cookie = await validCookie();
-			const env = { BLOG_SEARCH_SESSION_SECRET: SESSION_SECRET, CF_ANALYTICS_TOKEN: 'tok' };
-			const resp = await onRequestGet({ request: makeRequest({ cookie }), env });
+			const resp = await onRequestGet({ request: makeRequest({ cookie }), env: baseEnv() });
 			assert.equal(resp.status, 200);
 			assert.equal(resp.headers.get('cache-control'), 'private, no-store');
+		},
+	);
+});
+
+// FU-28 回归测试：按会话限速，超限返回 429，且不会再打上游 Analytics Engine 请求
+// （不白白浪费站长自己的 token 配额）。
+test('FU-28：超过会话限速上限（30 次/5 分钟）时返回 429，且不再打上游请求', async () => {
+	let upstreamCalls = 0;
+	await withFetch(
+		async () => {
+			upstreamCalls += 1;
+			return { ok: true, json: async () => ({ data: [{ searches: 1, unique_ips: 1 }] }) };
+		},
+		async () => {
+			const cookie = await validCookie();
+			const env = baseEnv();
+			for (let i = 0; i < 30; i += 1) {
+				const resp = await onRequestGet({ request: makeRequest({ cookie }), env });
+				assert.equal(resp.status, 200, `第 ${i + 1} 次请求应该在限速上限内`);
+			}
+			const over = await onRequestGet({ request: makeRequest({ cookie }), env });
+			assert.equal(over.status, 429, '第 31 次请求应该被限速拦下');
+			// fetchSearchStats 每次成功调用会并发打 3 次上游 SQL 查询（totals/daily/top），
+			// 30 次放行的请求 = 90 次上游调用；被拦下的第 31 次不该再贡献任何上游调用。
+			assert.equal(upstreamCalls, 90, '第 31 次不该再打上游 Analytics Engine 请求');
+		},
+	);
+});
+
+test('FU-28：不同登录会话（不同 Cookie 值）各自独立计数，不互相占用额度', async () => {
+	await withFetch(
+		async () => ({ ok: true, json: async () => ({ data: [{ searches: 1, unique_ips: 1 }] }) }),
+		async () => {
+			// 两次 validCookie() 若在同一秒内调用，issuedAt 相同会产出字节相同的签名——
+			// 显式给 B 一个不同的 maxAgeSeconds，确保两个 Cookie 值一定不同，不依赖测试
+			// 运行时机跨没跨秒边界这种偶然性。
+			const cookieA = await validCookie();
+			const cookieB = await signSession(SESSION_SECRET, { issuedAt: Math.floor(Date.now() / 1000), maxAgeSeconds: 7200 });
+			assert.notEqual(cookieA, cookieB, '测试前提：两个会话的 Cookie 值必须不同');
+			const env = baseEnv();
+			// A 用满 30 次
+			for (let i = 0; i < 30; i += 1) {
+				await onRequestGet({ request: makeRequest({ cookie: cookieA }), env });
+			}
+			const aOver = await onRequestGet({ request: makeRequest({ cookie: cookieA }), env });
+			assert.equal(aOver.status, 429, 'A 应该已经被限速');
+			const bStill = await onRequestGet({ request: makeRequest({ cookie: cookieB }), env });
+			assert.equal(bStill.status, 200, 'B 是不同会话，不该被 A 的用量影响');
 		},
 	);
 });
@@ -83,11 +170,10 @@ test('onRequestGet: 配置了 CF_ANALYTICS_ENGINE_TOKEN 时优先用它，不用
 		},
 		async () => {
 			const cookie = await validCookie();
-			const env = {
-				BLOG_SEARCH_SESSION_SECRET: SESSION_SECRET,
+			const env = baseEnv({
 				CF_ANALYTICS_TOKEN: 'general-purpose-token',
 				CF_ANALYTICS_ENGINE_TOKEN: 'narrowly-scoped-token',
-			};
+			});
 			await onRequestGet({ request: makeRequest({ cookie }), env });
 			assert.ok(recordedTokens.every((h) => h === 'Bearer narrowly-scoped-token'), '应该只用专用 token，不掺 CF_ANALYTICS_TOKEN');
 		},
