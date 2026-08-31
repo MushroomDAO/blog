@@ -22,7 +22,13 @@ PER_SOURCE_CAP = 5  # 用户明确要求：任意单一渠道不超过 5 条，�
 # 值不值得写还得回 GitHub/HF 查一手，但没有它就少了一个发现渠道。
 # 下面每个数字都要 <= PER_SOURCE_CAP，改的时候留意别超。
 QUOTA = {"GitHub": 4, "HuggingFace": 3, "小红书": 3}
-assert all(v <= PER_SOURCE_CAP for v in QUOTA.values()), "某个源的配额超过了 PER_SOURCE_CAP"
+# FU-29：原来这里是硬断言，手滑把某个源的配额改到超过 PER_SOURCE_CAP 会让当天整条
+# forage 流水线在 import 阶段直接中止（无部分入库/去重）。改成自动 clamp + 打印警告：
+# 超限的源退回 PER_SOURCE_CAP，流水线继续跑，不会因为一个数字改错就全天颗粒无收。
+for _src, _cap in list(QUOTA.items()):
+    if _cap > PER_SOURCE_CAP:
+        print(f"WARNING: QUOTA[{_src!r}]={_cap} exceeds PER_SOURCE_CAP={PER_SOURCE_CAP}, clamping to {PER_SOURCE_CAP}", file=sys.stderr)
+        QUOTA[_src] = PER_SOURCE_CAP
 def quota_key(src):
     if src.startswith("小红书"): return "小红书"
     if src.startswith("X"): return "X"
