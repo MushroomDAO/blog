@@ -1,33 +1,23 @@
 {
-  "generatedAt": "2026-08-30T14:00:01Z",
+  "generatedAt": "2026-09-01T14:00:00Z",
   "period": {
-    "start": "2026-07-31",
-    "end": "2026-08-30"
+    "start": "2026-08-02",
+    "end": "2026-09-01"
   },
   "totals": {
-    "pageviews": 12000,
-    "visits": 11600,
+    "pageviews": 13300,
+    "visits": 13000,
     "bots": 0
   },
   "last7": {
-    "pv": 3400,
-    "visits": 3300
+    "pv": 4200,
+    "visits": 4200
   },
   "prior7": {
-    "pv": 3500,
-    "visits": 3400
+    "pv": 3000,
+    "visits": 2900
   },
   "daily": [
-    {
-      "date": "08-01",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "date": "08-02",
-      "pv": 100,
-      "visits": 0
-    },
     {
       "date": "08-03",
       "pv": 400,
@@ -155,287 +145,134 @@
     },
     {
       "date": "08-30",
-      "pv": 300,
-      "visits": 300
+      "pv": 400,
+      "visits": 400
+    },
+    {
+      "date": "08-31",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "date": "09-01",
+      "pv": 600,
+      "visits": 600
     }
   ],
   "countries": [
-    {
-      "code": "SG",
-      "flag": "🇸🇬",
-      "name": "新加坡",
-      "nameEn": "Singapore",
-      "pv": 5800,
-      "visits": 5800
-    },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 2500,
-      "visits": 2500
+      "pv": 5000,
+      "visits": 5000
     },
     {
-      "code": "TH",
-      "flag": "🇹🇭",
-      "name": "泰国",
-      "nameEn": "Thailand",
-      "pv": 800,
-      "visits": 500
-    },
-    {
-      "code": "US",
-      "flag": "🇺🇸",
-      "name": "美国",
-      "nameEn": "United States",
-      "pv": 800,
-      "visits": 800
-    },
-    {
-      "code": "HK",
-      "flag": "🇭🇰",
-      "name": "香港",
-      "nameEn": "Hong Kong",
-      "pv": 600,
-      "visits": 600
-    },
-    {
-      "code": "TW",
-      "flag": "🇹🇼",
-      "name": "台湾",
-      "nameEn": "Taiwan",
-      "pv": 600,
-      "visits": 500
+      "code": "SG",
+      "flag": "🇸🇬",
+      "name": "新加坡",
+      "nameEn": "Singapore",
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "code": "JP",
       "flag": "🇯🇵",
       "name": "日本",
       "nameEn": "Japan",
-      "pv": 300,
-      "visits": 300
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "code": "UA",
       "flag": "🇺🇦",
       "name": "UA",
       "nameEn": "UA",
-      "pv": 100,
-      "visits": 100
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "code": "NL",
-      "flag": "🇳🇱",
-      "name": "荷兰",
-      "nameEn": "Netherlands",
-      "pv": 100,
-      "visits": 100
+      "code": "US",
+      "flag": "🇺🇸",
+      "name": "美国",
+      "nameEn": "United States",
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "code": "CO",
-      "flag": "🇨🇴",
-      "name": "CO",
-      "nameEn": "CO",
-      "pv": 100,
-      "visits": 100
-    },
-    {
-      "code": "ID",
-      "flag": "🇮🇩",
-      "name": "印度尼西亚",
-      "nameEn": "Indonesia",
-      "pv": 100,
-      "visits": 100
-    },
-    {
-      "code": "KR",
-      "flag": "🇰🇷",
-      "name": "韩国",
-      "nameEn": "South Korea",
-      "pv": 100,
-      "visits": 100
+      "code": "CH",
+      "flag": "🇨🇭",
+      "name": "瑞士",
+      "nameEn": "Switzerland",
+      "pv": 1000,
+      "visits": 1000
     }
   ],
   "countryTotal": 12000,
   "referers": {
-    "direct": 7500,
-    "search": 3800,
-    "ecosystem": 400,
-    "ai": 100,
-    "other": 200
+    "direct": 5000,
+    "search": 7000,
+    "ecosystem": 0,
+    "ai": 0,
+    "other": 0
   },
-  "pages": [
-    {
-      "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
-      "titleEn": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
-      "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
-      "pv": 400,
-      "visits": 400
-    },
-    {
-      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
-      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
-      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
-      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
-      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
-      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
-      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 300,
-      "visits": 200
-    },
-    {
-      "title": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画",
-      "titleEn": "juju-content-illustrations: An Agent Skill That Turns Articles into Juju-Style Hand-Drawn Illustrations",
-      "path": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "用 AI 给文章配图：归藏 Social Card Skill 完整指南",
-      "titleEn": "AI Illustrations for Your Articles: Complete Guizang Social Card Skill Guide",
-      "path": "/blog/guizang-social-card-illustration-guide/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "14天、5人，他们真的把AI编程助手整出来了",
-      "titleEn": "14 Days, 5 People: MiMo Code and the Vibe Coding Era",
-      "path": "/blog/mimo-code-vibe-coding-era/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Ploy：Webflow 联合创始人的第三次创业——用 AI Agent 把网站变成增长引擎",
-      "titleEn": "Ploy: The Webflow Co-Founder's Third Startup Turns Websites into Growth Engines with AI Agents",
-      "path": "/blog/ploy-ai-webflow-founder-website-growth-engine-27m/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面",
-      "titleEn": "HugAgentOS: ZJU's Enterprise AgentOS Using Domain Ontology as the Agent Reasoning Control Plane",
-      "path": "/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
-      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
-      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "19000 星开源书：《深入理解 AI Agent》，10 章 92 个实验，从上下文工程到多 Agent 协作全覆盖",
-      "titleEn": "19k-Star Open-Source Book: 'AI Agents in Depth' — 10 Chapters, 92 Experiments, From Context Engineering to Multi-Agent Systems",
-      "path": "/blog/ai-agent-book-context-engineering-llm-agent-open-source-chinese/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Agent 通信协议的第一张地图：读完这篇论文，我知道未来不会是一个赢家通吃",
-      "titleEn": "The First Map of LLM Agent Communication Protocols: Why the Future Won't Be Winner-Takes-All",
-      "path": "/blog/llm-agent-protocol-taxonomy-federated-stack-2026/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Voicebox：把 ElevenLabs 和 WisprFlow 装进一个本地运行的开源 App",
-      "titleEn": "Voicebox: Local-First AI Voice Studio — ElevenLabs Output + WisprFlow Input in One Open-Source App",
-      "path": "/blog/voicebox-local-ai-voice-studio-elevenlabs-alternative/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Google YouTube 自进化推荐系统：LLM Agent 替代 ML 工程师，双环架构工程落地指南",
-      "titleEn": "Google YouTube's Self-Evolving Recommendation System: LLM Agents Replace ML Engineers — Dual-Loop Architecture Engineering Guide",
-      "path": "/blog/google-self-evolving-recommendation-system-youtube-llm-agent/",
-      "pv": 200,
-      "visits": 200
-    }
-  ],
-  "devices": [
-    {
-      "label": "desktop",
-      "count": 11200
-    },
-    {
-      "label": "mobile",
-      "count": 800
-    }
-  ],
+  "pages": [],
+  "devices": [],
   "os": [
     {
       "label": "Windows",
-      "count": 7610
+      "count": 7000
     },
     {
       "label": "MacOSX",
-      "count": 1770
-    },
-    {
-      "label": "Unknown",
-      "count": 620
-    },
-    {
-      "label": "Linux",
-      "count": 380
-    },
-    {
-      "label": "Android",
-      "count": 240
-    },
-    {
-      "label": "iOS",
-      "count": 150
+      "count": 5000
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 8900
+      "count": 8130
     },
     {
       "label": "Edge",
-      "count": 1500
+      "count": 1800
     },
     {
       "label": "Unknown",
-      "count": 600
+      "count": 640
     },
     {
       "label": "Safari",
-      "count": 400
+      "count": 250
     },
     {
       "label": "ChromeMobile",
-      "count": 300
+      "count": 180
     },
     {
-      "label": "ChromeMobileWebview",
-      "count": 200
+      "label": "Firefox",
+      "count": 100
     },
     {
       "label": "MobileSafari",
       "count": 100
+    },
+    {
+      "label": "ChromeMobileWebview",
+      "count": 100
+    },
+    {
+      "label": "ChromeHeadless",
+      "count": 20
     }
   ]
 }
