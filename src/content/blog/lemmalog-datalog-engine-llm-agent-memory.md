@@ -26,6 +26,8 @@ Lemmalog 的主张很直接：**agent 的记忆不该是"存得更多、检索�
 
 Lemmalog 的设计文档把这个问题说得更狠：当前主流记忆系统（Zep/Graphiti、Mem0、GraphRAG、Letta）存的是"抽取出来的事实"，但**什么都不演绎**——闭包、继承、矛盾检测、后果传播，要么每次查询都重新丢给 LLM 算一遍（贵、不稳定），要么干脆没有。LongMemEval 论文（arXiv:2410.10813）也指出，知识更新和时序推理是当前大模型记忆能力里表现最差的两项，掉分 21%-30%——根源是大多数记忆系统没有一个"原则性的替代模型"：一个事实过期了，到底该怎么处理，全靠运气。
 
+![相似不等于答案：向量库找到的是相似片段，Datalog 从规则里蕴含推出可追溯的结论](../../assets/images/lemmalog-datalog-engine-llm-agent-memory-fig-01.png)
+
 ## 架构：LLM 只在摄取边界，其余全是纯函数
 
 ```
@@ -51,7 +53,11 @@ Lemmalog 引擎 (Rust)
 - **magic-sets 按需求值（`ask_deep`）**：点查询只计算需求相关的切片，不用跑全量不动点
 - **混合检索（`context_for_query`）**：BM25 + 实体/图扩散加权 + 预算感知的位置化组装，替代"全部倒出来"
 
+![事实发生和系统得知是两条独立的时间线，撤回一条过期事实只重算真正依赖它的下游折纸，不用全量重来](../../assets/images/lemmalog-datalog-engine-llm-agent-memory-fig-02.png)
+
 实体消解那块设计尤其值得单独说一下：LLM 提议 `alias(本地名, 规范名)` 这样的星形边，Datalog 求闭包决定哪些实体其实是同一个；拓扑冲突（一个本地名有两个规范名）会派生出 `alias_conflict` 事实而不是硬合并身份；撤回一条别名边，整个闭包和所有下游视图在同一个 epoch 内联动收缩。这套安全性质全部有差分测试覆盖——开发过程中还真的靠这套差分测试抓到了两个长期潜伏的引擎 bug（scoped 重算漏掉同层依赖、失效步骤跑在下层视图物化之前）。
+
+![别名边被求闭包收拢成规范实体，拓扑冲突派生出告警而不是被强行合并，撤回一条边整个闭包同步收缩](../../assets/images/lemmalog-datalog-engine-llm-agent-memory-fig-03.png)
 
 ## 数字站不站得住脚？三个标准基准的实测结果
 
@@ -100,6 +106,8 @@ claude mcp add lemmalog -- $(pwd)/target/release/lemmalog-mcp
 
 注册后暴露 12 个 stdio JSON-RPC 工具，典型会话是这样的：宿主模型（Claude）读对话、用 `lemmalog_observe` 断言三元组（`Alice --works_at--> Acme`），Lemmalog 负责推导闭包、时序视图、规范化和聚合；查询用 `lemmalog_query`，要证据链用 `lemmalog_why`，要假设推演用 `lemmalog_what_if`。错误处理是专门为"自我纠正"设计的——不可解析的目标、被拒绝的规则批次都会带着分类前缀、出错输入原文和修正提示一起返回，而不是静默失败；`lemmalog_observe` 会报告每一行被丢弃的原因（代词/角色词做主语、混入了叙述性文字、缺 `--rel-->` 结构），确保抽取失败是"响亮的"，不是悄悄消失的。
 
+![Claude Code 通过 observe/query/why/what_if 四个入口操作 Lemmalog，出错的目标带着修正提示原路退回](../../assets/images/lemmalog-datalog-engine-llm-agent-memory-fig-04.png)
+
 需要持久化跨会话记忆，注册时带上 `--env LEMMALOG_MCP_PATH=/tmp/lemmalog.snapshot` 即可。仓库里还带了一份可以直接装进 `~/.claude/skills/` 的 agent skill，把"assert-as-you-verify、规则当实验、查询优于重新推理、信之前先 why"这套纪律写成了通用技能，不绑定某一个固定工作流。
 
 ## 作者是谁
@@ -145,6 +153,8 @@ This site has previously covered a few memory projects — Belief Context Graph 
 
 Lemmalog's design document states the problem more sharply: current mainstream memory systems (Zep/Graphiti, Mem0, GraphRAG, Letta) store *extracted facts* but **derive nothing** — closure, inheritance, contradiction detection, and consequence propagation are either redone by the LLM on every query (expensive, unreliable) or simply absent. The LongMemEval paper (arXiv:2410.10813) found that knowledge updates and temporal reasoning are frontier models' worst-performing memory abilities, dropping 21-30% — because most memory systems have no principled model for what happens when a fact goes stale.
 
+![Similar isn't the answer: a vector store surfaces similar fragments, Datalog derives a traceable conclusion from rules](../../assets/images/lemmalog-datalog-engine-llm-agent-memory-fig-01.png)
+
 ## Architecture: the LLM stays at the boundary, everything else is a pure function
 
 ```
@@ -170,7 +180,11 @@ Capabilities already shipped (not roadmap) include:
 - **Magic-sets demand evaluation (`ask_deep`)**: point queries only compute the demand-relevant slice instead of running the full fixpoint
 - **Hybrid retrieval (`context_for_query`)**: BM25 + entity/graph-boosted weighting + budget-aware positional assembly, replacing dump-everything
 
+![Fact-occurred and system-learned run on two separate timelines — retracting one stale fact only recomputes the origami downstream that actually depended on it](../../assets/images/lemmalog-datalog-engine-llm-agent-memory-fig-02.png)
+
 Entity resolution deserves a closer look: the LLM proposes star-shaped `alias(local, canonical)` edges, and Datalog derives the closure to decide which entities are actually the same thing. Topology violations (a local name with two canonicals) derive `alias_conflict` facts instead of silently merging identities; retracting an alias edge collapses the entire closure and every downstream view within the same epoch. These safety properties are covered by differential testing end to end — and that harness actually caught two long-lived engine bugs during development (scoped recompute missing same-stratum dependents; invalidation running before lower strata were materialized).
+
+![Alias edges collapse into a canonical entity through closure; a topology conflict derives a warning instead of a forced merge, and retracting one edge shrinks the whole closure in step](../../assets/images/lemmalog-datalog-engine-llm-agent-memory-fig-03.png)
 
 ## Do the numbers hold up? Three standardized benchmarks
 
@@ -218,6 +232,8 @@ claude mcp add lemmalog -- $(pwd)/target/release/lemmalog-mcp
 ```
 
 This registers 12 stdio JSON-RPC tools. A typical session: the host model (Claude) reads the conversation and asserts triples via `lemmalog_observe` (`Alice --works_at--> Acme`); Lemmalog derives closures, temporal views, canonicalizations, and aggregations. Queries go through `lemmalog_query`, provenance through `lemmalog_why`, hypothetical lookahead through `lemmalog_what_if`. Error handling is designed for self-correction — unparseable goals or rejected rule batches come back with a category prefix, the offending input, the precise reason, and a correction hint, rather than failing silently; `lemmalog_observe` reports every dropped line and why (pronoun subjects, prose contamination, missing `--rel-->` structure), so malformed extraction is loud, never lost.
+
+![Claude Code drives Lemmalog through four ports — observe/query/why/what_if — and a rejected goal comes back with a correction hint attached](../../assets/images/lemmalog-datalog-engine-llm-agent-memory-fig-04.png)
 
 For persistence across sessions, register with `--env LEMMALOG_MCP_PATH=/tmp/lemmalog.snapshot`. The repo also ships an agent skill installable directly into `~/.claude/skills/` that encodes the discipline (assert-as-you-verify, rules as experiments, query before re-reasoning, `why` before trusting) as a general-purpose skill, not tied to one fixed workflow.
 
