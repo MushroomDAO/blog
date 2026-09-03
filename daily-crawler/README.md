@@ -18,6 +18,7 @@ This directory turns daily research into a product-and-content pipeline:
 - [2026-08-31](./2026-08-31.md) — AI readiness scanner, autonomy ladder, Skills over MCP, framework-neutral runtime
 - [2026-09-01](./2026-09-01.md) — PaymentOps agents, outcome-based pricing, business capability gateway, semantic action firewall, Omni architecture
 - [2026-09-02](./2026-09-02.md) — FDE-as-a-Service, white-label Voice Agents, Agent supply-chain security, TrueForge runtime
+- [2026-09-03](./2026-09-03.md) — Agentic commerce readiness, shared workflow/MCP connectors, Agent FinOps, vertical decision loops
 
 ## Standard Review Lens
 
