@@ -24,7 +24,11 @@ Doop 是 Paper.design 的开源替代：一块多人实时设计画布，人在�
 
 一个 Canvas 是一个可分享的地址（`/c/<id>`），里面装若干 Frame——每个 Frame 是一块渲染真实 HTML 的画板，跑在 `<iframe sandbox="allow-scripts">` 里：脚本能执行，但没有同源访问权限，也碰不到宿主应用。新 HTML 通过 `postMessage` 传入，用 DOM diff 原地打补丁（`src/lib/frameRuntime.ts`），不会整页刷新导致白屏——`<script>` 变了就重新执行，没变的样式和字体保持不动。
 
+![Doop 每个 Frame 都是跑在沙箱 iframe 里的真实 HTML，不是截图](../../assets/images/doop-open-source-multiplayer-ai-design-canvas-fig-01.png)
+
 多人协同走的是一个 per-canvas 的 WebSocket room：光标位置、在线状态、每个 Frame 谁在编辑、拖拽位置，全部实时广播；REST 和 MCP 的写操作都经过同一套"共享 actions 层"广播进房间，所以人和 agent 的编辑走的是完全相同的管线，不存在"agent 编辑是二等公民"的情况。
+
+![人和 agent 的操作走同一条管线，实时广播进画布房间](../../assets/images/doop-open-source-multiplayer-ai-design-canvas-fig-02.png)
 
 ## Agent 怎么把设计"画"进去：15 个 MCP 工具
 
@@ -46,6 +50,8 @@ Doop 是 Paper.design 的开源替代：一块多人实时设计画布，人在�
 | `update_frame` / `delete_frame` | 改名/移动/缩放 / 删除 |
 
 三层"教 agent 怎么用"的设计值得单独提一句：MCP `initialize` 时的简短 instructions、`get_guide` 工具返回的完整操作手册（含"必须先截图审查"这类强制检查点）、以及每次工具调用结果里的"结果提示"（比如告诉 agent "你还没看过自己画的东西，调 `get_frame_screenshot` 再继续"）。这套三层引导据 README 说和 Paper.design 商业版用的是同一套架构。
+
+![agent 操作画布的强制闭环：动手改→截图审查→原地修正](../../assets/images/doop-open-source-multiplayer-ai-design-canvas-fig-03.png)
 
 **流式渲染怎么做到不卡顿**：agent 发来的 HTML 立刻落库，但观众看到的是打字机式的匀速重放（约 500 字符/秒，遇到积压会加速到约 8 秒内追平）——哪怕 agent 一次性甩来一大段完整 HTML，观众看到的也是平滑的"正在画"效果。重放过程中还会做"愈合"：半截的标签会被丢掉，没闭合的 `<script>` 直接截断（绝不执行半成品 JS），没闭合的 `<style>` 会被补上，防止页面因为半截样式而空白。人如果在检查器里直接改了 HTML，会立刻打断任何正在进行的流式重放——人接管优先。
 
@@ -114,7 +120,11 @@ Unlike most "agent generates a version and hands it to you" tools, Doop's premis
 
 A Canvas is a shareable address (`/c/<id>`) holding a number of Frames — each an artboard that renders real HTML inside `<iframe sandbox="allow-scripts">`: scripts run, but with no same-origin access and no reach into the host app. New HTML arrives via `postMessage` and gets DOM-morphed in place (`src/lib/frameRuntime.ts`) instead of a full reload — `<script>` tags that changed re-execute, unchanged styles and fonts stay untouched, so nothing white-flashes.
 
+![Every Doop Frame is real HTML rendered inside a sandboxed iframe, not a screenshot](../../assets/images/doop-open-source-multiplayer-ai-design-canvas-fig-01.png)
+
 Multiplayer runs over a per-canvas WebSocket room: cursor positions, presence, per-frame "who's editing," drag positions all broadcast live. REST and MCP mutations both flow through the same shared actions layer into that room, so human and agent edits go through identical plumbing — an agent's edit isn't a second-class citizen.
+
+![Human and agent edits share one pipeline, broadcast live into the canvas room](../../assets/images/doop-open-source-multiplayer-ai-design-canvas-fig-02.png)
 
 ## How agents "paint" into it: 15 MCP tools
 
@@ -136,6 +146,8 @@ Multiplayer runs over a per-canvas WebSocket room: cursor positions, presence, p
 | `update_frame` / `delete_frame` | Rename/move/resize / remove |
 
 Worth calling out is the three-layer approach to steering agents: brief `instructions` at MCP `initialize`, the full playbook returned by `get_guide` (including mandatory checkpoints like "review with a screenshot before moving on"), and result nudges baked into tool responses (e.g., telling the agent it hasn't *seen* its own design yet and should call `get_frame_screenshot`). The README says this three-layer scheme is the same architecture Paper.design's commercial product uses.
+
+![The mandatory loop for an agent touching the canvas: edit → review with a screenshot → fix in place](../../assets/images/doop-open-source-multiplayer-ai-design-canvas-fig-03.png)
 
 **How streaming stays smooth**: agent HTML lands in the store immediately, but viewers see a typewriter-style steady reveal (~500 chars/second, accelerating to clear any backlog within ~8s) — so even an agent that sends one giant chunk plays back as a smooth live build. Mid-reveal HTML gets "healed" before broadcast: a trailing half-written tag is dropped, an unclosed `<script>` is cut (never running half-written JS), and an unclosed `<style>` gets auto-closed so content paints instead of going blank. A human editing the HTML directly in the inspector immediately cancels any open stream — humans always take priority.
 
