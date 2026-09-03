@@ -250,9 +250,15 @@ Do not use `pipeline/m1/publisher.py` to save the article when the final slug ma
 3. **生成（Codex image_gen，无人值守）**：
    ```bash
    codex exec -C "$(pwd)" -s workspace-write \
-     "Use \$<matched-skill> 读取 src/content/blog/SLUG.md，挑 3-6 个关键认知锚点，逐张生成 16:9 纯白底手绘正文配图（主角承担核心动作，把该段的核心流程/逻辑骨架画出来），保存到 src/assets/images/，命名 SLUG-fig-01.png、SLUG-fig-02.png …。不要生成 banner，不要把多张拼成一张。"
+     "Use \$<matched-skill> 读取 src/content/blog/SLUG.md，挑 3-6 个关键认知锚点，逐张生成 16:9 纯白底手绘正文配图（主角承担核心动作，把该段的核心流程/逻辑骨架画出来）。用完 image_generation 工具后，每张图默认落在 ~/.codex/generated_images/<session-id>/exec-*.png（不是 src/assets/images/！），生成完必须在同一个回合里用 shell cp 把它们复制/重命名到 src/assets/images/SLUG-fig-01.png、SLUG-fig-02.png … ——这是硬性最后一步，没做完这步就不算完成。不要生成 banner，不要把多张拼成一张。"
    ```
-4. **压到 < 90KB（硬性要求）**：生成后逐张压缩，确保每张正文插图小于 90KB。手绘线稿调色板色彩少，降色即可大幅瘦身：
+   **超时要给够**：3-6 张图实测每张约 40-60 秒，Bash 调用这条命令时 `timeout` 至少给 480000（8 分钟），不要用默认 120s——上一次踩坑就是超时判定过早，图其实生成成功了（在 `~/.codex/generated_images/` 里），只是流程没等到 codex 把它们 cp 进仓库那一步。
+4. **就算判定"超时/失败"也要先捞一遍**：在标记这步失败之前，检查有没有真的生成出来但没来得及复制的孤儿文件——
+   ```bash
+   find ~/.codex/generated_images -mindepth 1 -maxdepth 1 -newermt "5 minutes ago"
+   ```
+   如果有新目录，进去看是不是这次生成的（16:9、手绘线稿风格），有就手动 `cp` 进 `src/assets/images/` 按 `SLUG-fig-NN.png` 命名再继续第 5 步，不要因为流程判超时就把已经花钱生成的图扔掉。
+5. **压到 < 90KB（硬性要求）**：生成后逐张压缩，确保每张正文插图小于 90KB。手绘线稿调色板色彩少，降色即可大幅瘦身：
    ```bash
    for f in src/assets/images/SLUG-fig-*.png; do
      magick "$f" -strip -colors 64 "$f"
@@ -260,10 +266,10 @@ Do not use `pipeline/m1/publisher.py` to save the article when the final slug ma
      [ "$(stat -f%z "$f")" -gt 92160 ] && magick "$f" -resize 1280x -strip -colors 48 "$f"
    done
    ```
-5. **插入**：在对应关键节点用 `![alt](../../assets/images/SLUG-fig-NN.png)` 插入；**中文与英文两侧都插**（双语对齐，和现有 minicpmo 等文章一致）。
-6. **兜底**：若 Codex image_gen 不可用 / 失败，记录并**跳过本步、不要阻塞发布**，提示用户稍后在 Codex 手动补图。
+6. **插入**：在对应关键节点用 `![alt](../../assets/images/SLUG-fig-NN.png)` 插入；**中文与英文两侧都插**（双语对齐，和现有 minicpmo 等文章一致）。
+7. **兜底**：只有在第 4 步确认 `~/.codex/generated_images/` 里也确实没有新产出（不是流程判超时，是真的没生成）时，才记录并**跳过本步、不要阻塞发布**，提示用户稍后在 Codex 手动补图。
 
-注意：图是位图 PNG；图上中文要少；生成后扫一眼错别字；每张 < 90KB（Astro 构建时还会再转 webp，体积更小）。
+注意：图是位图 PNG；图上中文要少；生成后扫一眼错别字；每张 < 90KB（Astro 构建时还会再转 webp，体积更小）。skill 本身不用复制进项目仓库——它已经镜像在 `~/.codex/skills/` 全局路径下，Codex 天然能读到，不存在"项目内才能调用"的限制；真正的坑是上面这条复制步骤缺失，不是 skill 的可见性问题。
 
 ### 4. Run SEO/GEO Check
 
