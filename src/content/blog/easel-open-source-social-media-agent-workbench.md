@@ -33,6 +33,8 @@ Easel 是浙江大学 REAL Lab 与北京大学 OpenDCAI Lab 联合做的开源�
 
 创作层独占 50 个（接近一半），说明这个项目把主要精力砸在"真的把内容做出来"这一步，而不是停在"发现热点、给建议"的浅层。
 
+![发现→策划→创作→发布→归因五层闭环，归因结果回流成下一轮发现的养分](../../assets/images/easel-open-source-social-media-agent-workbench-fig-01.png)
+
 ## 112 个 Skill 是清单还是真脚本？挑几个看细节
 
 这类项目最容易注水的地方就是"Skill 数量"——列一百个 prompt 模板也能报"112 个 Skill"。Easel 的能力地图（`docs/skill-function-mapping.md`）里每条都写清楚了具体实现方式，不是空话，举几个例子：
@@ -45,6 +47,8 @@ Easel 是浙江大学 REAL Lab 与北京大学 OpenDCAI Lab 联合做的开源�
 
 这份能力地图本身可信度不错，但**这属于读文档能验证的程度**——本文没有实际跑一遍这些 Skill，具体生成质量如何，还是要靠自己装一遍才知道。
 
+![翻开抽屉验真：有的Skill是真脚本，有的是API接线，有的还只是一张待实测的能力清单](../../assets/images/easel-open-source-social-media-agent-workbench-fig-02.png)
+
 ## 账号画像：六维持久化，profiles/ 目录
 
 每个账号一个 `profiles/<name>/` 目录，包含身份、风格、受众、平台、偏好与边界、长期记忆六个维度：
@@ -54,6 +58,8 @@ cp -r profiles/_template "profiles/MyCreatorProfile"
 ```
 
 也可以在 Web 工作台里创建和编辑。这个设计思路和本站 forage 雷达自己的 `preferences.yml` 反馈闭环是同一件事的两种实现——都是"让系统记住你的判断，而不是每次从零开始"。区别在于 Easel 把这套记忆绑定到"账号"，forage 绑定到"选题偏好"，服务的对象不一样，但"越用越懂你"这个设计目标是一致的。
+
+![身份、风格、受众、平台、边界、长期记忆六个维度扎进同一份账号画像，用得越多长得越贴合](../../assets/images/easel-open-source-social-media-agent-workbench-fig-03.png)
 
 ## 怎么跑起来
 
@@ -80,6 +86,8 @@ playwright install chromium   # 系统还需要装 FFmpeg
 README 原话说得很直白："小红书平台可能检测自动化操作，存在验证、限流或账号风控风险；建议使用预览与发布前检查，并由用户确认后手动发布，其他平台正常。"——一个开源项目自己在文档里承认"这个平台我们不建议你全自动"，这个坦诚程度值得一提，很多同类项目会把这句话藏起来或者干脆不提。
 
 本站自己的应对方式是另一条路：不追求全自动发布，而是每天定时从真实 Chrome Profile 里刷新 cookie（`scripts/refresh-xhs-cookie.sh`），保活登录态但发布动作仍然走人工确认。两者本质上是同一个判断——"小红书这类强风控平台，自动化的边界应该划在'保活/预览'而不是'无人值守发布'"——只是 Easel 把这句话写进了 README 里当默认行为，本站把它写进了脚本注释里当运维经验。这大概也是为什么 Easel 明确推荐"用 Web 前端而不是纯 CLI"：多一层人工预览环节，恰好卡在风控风险最大的那一步之前。
+
+![保活可以自动，但发布前必须经过预览和人工确认——风控风险最大的那一步，钥匙留在人手里](../../assets/images/easel-open-source-social-media-agent-workbench-fig-04.png)
 
 ## 缺口，说清楚
 
@@ -126,6 +134,8 @@ This site's own publishing pipeline is two separate tracks — M2 (WeChat Offici
 
 Produce alone accounts for nearly half the total, which tells you where the project put its weight: actually making the content, not stopping at "here's a trending topic, good luck."
 
+![Discover feeds Plan feeds Produce feeds Publish feeds Attribute, and the attribution results flow back to nourish the next round of discovery](../../assets/images/easel-open-source-social-media-agent-workbench-fig-01.png)
+
 ## Is 112 Skills a real number or a padded list? A few concrete examples
 
 This is exactly the kind of claim that's easy to inflate — listing a hundred prompt templates also gets you to "112 Skills." Easel's capability map (`docs/skill-function-mapping.md`) documents a concrete implementation approach for each entry, not vague description. A few examples:
@@ -138,6 +148,8 @@ This is exactly the kind of claim that's easy to inflate — listing a hundred p
 
 The capability map itself reads credibly, but **this is only as far as reading documentation can verify** — this article did not actually run these Skills; real output quality still needs a hands-on install to confirm.
 
+![Pulling the drawers open to verify: some Skills are real scripts, some are API wiring, some are still just an untested checklist item](../../assets/images/easel-open-source-social-media-agent-workbench-fig-02.png)
+
 ## Account profiles: six persistent dimensions under profiles/
 
 Each account gets a `profiles/<name>/` directory covering six dimensions: identity, style, audience, platforms, preferences and boundaries, and long-term memory:
@@ -147,6 +159,8 @@ cp -r profiles/_template "profiles/MyCreatorProfile"
 ```
 
 Profiles can also be created and edited from the Web workspace. This design mirrors something this site's own forage radar already does with its `preferences.yml` feedback loop — both are the same idea implemented twice: let the system remember your judgment instead of starting from zero every time. The difference is what the memory attaches to — Easel binds it to an "account," forage binds it to "topic preference" — but the underlying goal, a system that gets better the more you use it, is the same.
+
+![Six dimensions — identity, style, audience, platforms, boundaries, long-term memory — root into one account profile that fits better the more it's used](../../assets/images/easel-open-source-social-media-agent-workbench-fig-03.png)
 
 ## Getting it running
 
@@ -173,6 +187,8 @@ The minimum configuration is one LLM key (`ANTHROPIC_API_KEY` + `CLAUDE_MODEL`) 
 The README is unusually blunt: "Xiaohongshu may detect automated actions, risking verification challenges, reach restrictions, or account penalties. Use preview and preflight checks, and prefer human-confirmed publishing." — an open-source project admitting in its own docs "we don't recommend fully automating this one platform" is worth noting; plenty of comparable projects bury that line or skip it entirely.
 
 This site's own answer takes a different shape: instead of chasing full automation, a script refreshes the login cookie daily from a real Chrome profile (`scripts/refresh-xhs-cookie.sh`), keeping the session alive while the actual publish action still goes through human confirmation. Both are really the same judgment call — on a heavily risk-controlled platform like Xiaohongshu, automation should stop at "keep-alive / preview," not extend to "unattended publish" — Easel just wrote that call into its README as default behavior, while this site wrote it into a script comment as operational know-how. That's probably also why Easel explicitly recommends the Web frontend over the bare CLI: it adds one more human-preview checkpoint right before the highest-risk step.
+
+![Keep-alive can run unattended, but publishing still passes through preview and a human confirmation — the key to the riskiest step stays in a human hand](../../assets/images/easel-open-source-social-media-agent-workbench-fig-04.png)
 
 ## The gaps, stated plainly
 
