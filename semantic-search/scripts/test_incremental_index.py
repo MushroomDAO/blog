@@ -83,11 +83,13 @@ manifest_cache = {"bilingual-article": {"content_hash": {"zh": "hash-zh-1", "en"
 changed_for_upsert = [
     {"article_id": "bilingual-article", "language": "en", "text": "t", "title": "t", "tags": [], "url": "/x/", "content_hash": "hash-en-NEW"},
 ]
-# do_upsert 会调用 bvi.verify_batch_order/embed_all/upsert_vectors——这里只想测
-# manifest 合并这一段，所以把网络相关函数换成假的，只保留 embed 数量对得上即可。
+# do_upsert 会调用 bvi.verify_batch_order/embed_all/upsert_vectors/delete_by_ids（FU-32
+# 起，en 从 hash-en-OLD 变成 hash-en-NEW 会触发旧向量清理）——这里只想测 manifest 合并这
+# 一段，所以把网络相关函数换成假的，只保留 embed 数量对得上即可。
 incr.bvi.embed_all = lambda texts, label: [[0.0] * incr.bvi.EMBEDDING_DIMENSIONS for _ in texts]
 incr.bvi.verify_batch_order = lambda texts: None
 incr.bvi.upsert_vectors = lambda index_name, vectors: {"success": True}
+incr.bvi.delete_by_ids = lambda index_name, ids: {"success": True}
 incr.do_upsert(changed_for_upsert, manifest_cache, "ns", "v2")
 check("merge 后 en 的 content_hash 更新为新值",
       written["bilingual-article"]["content_hash"]["en"] == "hash-en-NEW")
@@ -173,6 +175,98 @@ try:
     check("load_articles 拒绝保留字 _global（回归测试）", False)
 except SystemExit as e:
     check("load_articles 拒绝保留字 _global（回归测试）", e.code == 1)
+
+# ---- 场景 11：FU-32 回归测试——文章内容被编辑时，do_upsert 必须删掉旧 content_hash
+# 对应的旧 chunk_id，不能任由它在 Vectorize 里变成陈旧孤儿。----
+written4 = {}
+deleted_calls = []
+
+
+def fake_write4(namespace_id, key, value):
+    written4[key] = value
+
+
+def fake_delete(index_name, ids):
+    deleted_calls.append(list(ids))
+    return {"success": True}
+
+
+mf.write_kv_entry = fake_write4
+incr.bvi.embed_all = lambda texts, label: [[0.0] * incr.bvi.EMBEDDING_DIMENSIONS for _ in texts]
+incr.bvi.verify_batch_order = lambda texts: None
+incr.bvi.upsert_vectors = lambda index_name, vectors: {"success": True}
+incr.bvi.delete_by_ids = fake_delete
+manifest_cache_edited = {"edited-article": {"content_hash": {"zh": "hash-OLD"}, "chunking_version": "v1", "indexed_at": "old"}}
+changed_edited = [
+    {"article_id": "edited-article", "language": "zh", "text": "t", "title": "t", "tags": [], "url": "/x/", "content_hash": "hash-NEW"},
+]
+incr.do_upsert(changed_edited, manifest_cache_edited, "ns", "v2")
+expected_old_id = incr.bvi.make_vector_id("edited-article", "zh", "hash-OLD")
+check("编辑文章后 delete_by_ids 被调用一次（回归测试，FU-32）", len(deleted_calls) == 1)
+check("delete_by_ids 收到的正是旧 content_hash 算出的 chunk_id（回归测试，FU-32）",
+      deleted_calls and deleted_calls[0] == [expected_old_id])
+check("manifest 仍然正确更新为新 content_hash（回归测试，FU-32）",
+      written4["edited-article"]["content_hash"]["zh"] == "hash-NEW")
+
+# ---- 场景 12：FU-32 回归测试——全新文章（manifest_cache 为 None）或新增语言（该语言此前
+# 没有 content_hash）没有旧向量可删，delete_by_ids 不应被调用。----
+deleted_calls.clear()
+written5 = {}
+mf.write_kv_entry = lambda namespace_id, key, value: written5.__setitem__(key, value)
+manifest_cache_new = {"brand-new-2": None}
+changed_new = [
+    {"article_id": "brand-new-2", "language": "zh", "text": "t", "title": "t", "tags": [], "url": "/x/", "content_hash": "hash-1"},
+]
+incr.do_upsert(changed_new, manifest_cache_new, "ns", "v2")
+check("全新文章不触发 delete_by_ids（回归测试，FU-32）", len(deleted_calls) == 0)
+
+deleted_calls.clear()
+manifest_cache_new_lang = {"bilingual-2": {"content_hash": {"zh": "hash-zh-1"}, "chunking_version": "v1", "indexed_at": "old"}}
+changed_new_lang = [
+    {"article_id": "bilingual-2", "language": "en", "text": "t", "title": "t", "tags": [], "url": "/x/", "content_hash": "hash-en-1"},
+]
+incr.do_upsert(changed_new_lang, manifest_cache_new_lang, "ns", "v2")
+check("既有文章新增一种语言不触发 delete_by_ids（回归测试，FU-32）", len(deleted_calls) == 0)
+
+# ---- 场景 13：FU-32 回归测试——delete_by_ids 返回 HTTP 200 + success=false 时必须抛异常，
+# 且不能写 manifest（跟 upsert_vectors 的 success=false 处理是同一套纪律）。----
+written6 = {}
+mf.write_kv_entry = lambda namespace_id, key, value: written6.__setitem__(key, value)
+incr.bvi.delete_by_ids = lambda index_name, ids: {"success": False, "errors": ["boom"]}
+manifest_cache_del_fail = {"del-fail-article": {"content_hash": {"zh": "hash-OLD"}, "chunking_version": "v1", "indexed_at": "old"}}
+changed_del_fail = [
+    {"article_id": "del-fail-article", "language": "zh", "text": "t", "title": "t", "tags": [], "url": "/x/", "content_hash": "hash-NEW"},
+]
+try:
+    incr.do_upsert(changed_del_fail, manifest_cache_del_fail, "ns", "v2")
+    check("delete_by_ids success=false 时 do_upsert 必须抛异常（回归测试，FU-32）", False)
+except RuntimeError:
+    check("delete_by_ids success=false 时 do_upsert 必须抛异常（回归测试，FU-32）", True)
+check("delete_by_ids 失败时 manifest 完全不写入（回归测试，FU-32）", "del-fail-article" not in written6)
+
+# ---- 场景 14：FU-32 回归测试——stale_chunk_ids 数量超过 bvi.BATCH_SIZE（比如 reconcile.py
+# 全库对账一次遇到很多篇被编辑的文章）时，delete_by_ids 必须跟 upsert 一样分批调用，不能
+# 把几百个 id 塞进一次请求。----
+written7 = {}
+deleted_batches = []
+mf.write_kv_entry = lambda namespace_id, key, value: written7.__setitem__(key, value)
+incr.bvi.delete_by_ids = lambda index_name, ids: (deleted_batches.append(list(ids)), {"success": True})[1]
+N = incr.bvi.BATCH_SIZE * 2 + 3  # 跨 3 个批次
+manifest_cache_many = {f"many-{i}": {"content_hash": {"zh": f"old-{i}"}, "chunking_version": "v1", "indexed_at": "old"} for i in range(N)}
+changed_many = [
+    {"article_id": f"many-{i}", "language": "zh", "text": "t", "title": "t", "tags": [], "url": "/x/", "content_hash": f"new-{i}"}
+    for i in range(N)
+]
+incr.bvi.embed_all = lambda texts, label: [[0.0] * incr.bvi.EMBEDDING_DIMENSIONS for _ in texts]
+incr.bvi.verify_batch_order = lambda texts: None
+incr.bvi.upsert_vectors = lambda index_name, vectors: {"success": True}
+incr.do_upsert(changed_many, manifest_cache_many, "ns", "v2")
+check(f"{N} 个待删 id 被分成 {-(-N // incr.bvi.BATCH_SIZE)} 批而不是一次全塞（回归测试，FU-32）",
+      len(deleted_batches) == -(-N // incr.bvi.BATCH_SIZE))
+check("每批大小都不超过 BATCH_SIZE（回归测试，FU-32）",
+      all(len(b) <= incr.bvi.BATCH_SIZE for b in deleted_batches))
+check("分批删除的 id 总数等于待删总数、无遗漏无重复（回归测试，FU-32）",
+      sorted(sum(deleted_batches, [])) == sorted({incr.bvi.make_vector_id(f"many-{i}", "zh", f"old-{i}") for i in range(N)}))
 
 print()
 if failures:

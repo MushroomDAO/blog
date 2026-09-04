@@ -22,9 +22,13 @@ T1.4.1：发布流程增量索引 hook。
 CLOUDFLARE_REGISTRAR_TOKEN/CLOUDFLARE_ACCOUNT_ID（同上两个脚本）。
 
 明确不做（见 docs/agent/tasks.md T1.4.1"明确不做"、architecture.md Phase 2）：
-不清理孤儿向量——chunk_id 是内容寻址的，编辑过的文章旧向量不会被这里删掉，留给
-T1.4.2 的 Cron 对账处理；也不处理"文章被删除"的情况（manifest 里有但本地文件没了的
-条目，这里完全不碰）。
+不处理"文章被删除"的情况（manifest 里有但本地文件没了的条目，这里完全不碰，留给
+T1.4.2 的 Cron 对账处理）。
+
+**FU-32 修复（2026-08-25）**：do_upsert 现在会在文章内容被编辑时一并清理旧 chunk_id
+对应的旧向量——之前这里的注释说"编辑过的文章旧向量不会被这里删掉"是过时的；孤儿向量
+清理原本只覆盖"文章被删除"这一类（T1.4.2 负责），但"内容被编辑、article_id 还在"这一类
+reconcile.py 的孤儿判定天然看不到，只有这里（新旧 chunk_id 都算得出来的地方）能修。
 """
 
 import importlib.util
@@ -165,6 +169,7 @@ def do_upsert(changed, manifest_cache, namespace_id, chunking_version):
     vectors = bvi.embed_all(texts, "incremental")
 
     plan = []
+    stale_chunk_ids = []
     for rec, vec in zip(changed, vectors):
         chunk_id = bvi.make_vector_id(rec["article_id"], rec["language"], rec["content_hash"])
         metadata = {
@@ -178,6 +183,18 @@ def do_upsert(changed, manifest_cache, namespace_id, chunking_version):
         }
         plan.append({"id": chunk_id, "values": vec, "metadata": metadata})
 
+        # FU-32：文章内容被编辑后，旧 chunk_id 对应的旧向量此前从未被清理——manifest 记录
+        # 被新 content_hash 覆盖后，旧向量在 Vectorize 里既没有 manifest 指针指向它，也不
+        # 满足 reconcile.py 的孤儿判定（那只看 article_id 还在不在本地，编辑后 article_id
+        # 显然还在）。search.js 按 article_id 取最高分，陈旧向量可能压过新向量、把编辑前的
+        # 旧标题/摘录送回查询结果。用 manifest_cache（本轮开始前的快照，不是 touched_articles——
+        # 后者会在本轮被逐步更新，取不到"编辑前"的原始值）里该语言的旧 content_hash 算出旧
+        # chunk_id，一并清掉。manifest_cache[aid] 为 None（全新文章，从未索引过）或缺该语言
+        # （该语言此前从未索引过，比如新增一种语言的翻译）时没有旧向量，跳过。
+        prev_hash = (manifest_cache.get(rec["article_id"]) or {}).get("content_hash", {}).get(rec["language"])
+        if prev_hash and prev_hash != rec["content_hash"]:
+            stale_chunk_ids.append(bvi.make_vector_id(rec["article_id"], rec["language"], prev_hash))
+
     print(f"TARGET: account={ACCOUNT_ID} index={INDEX_NAME} vectors={len(plan)}", file=sys.stderr)
     for i in range(0, len(plan), bvi.BATCH_SIZE):
         batch = plan[i : i + bvi.BATCH_SIZE]
@@ -189,6 +206,29 @@ def do_upsert(changed, manifest_cache, namespace_id, chunking_version):
         # 不报错，manifest 说"已索引"但向量其实没写进去。必须在写 manifest 之前挡住。
         if not result.get("success"):
             raise RuntimeError(f"Vectorize upsert failed (HTTP 200, success=false): {result.get('errors')}")
+
+    if stale_chunk_ids:
+        # 去重防御性处理（正常情况下每个 (article_id, language) 只贡献一个旧 id，不会重复，
+        # 但同一批 changed 理论上可能因上游数据异常出现重复记录，delete_by_ids 对重复 id
+        # 是安全的，这里去重只是减少一次没必要的请求体大小）。
+        stale_chunk_ids = sorted(set(stale_chunk_ids))
+        print(f"deleting {len(stale_chunk_ids)} stale chunk(s) from edited article(s)...", file=sys.stderr)
+        # 跟上面 upsert 用同一个 BATCH_SIZE 分批：这里的 stale_chunk_ids 是"整轮 changed 里
+        # 所有编辑过的文章"累积出来的，reconcile.py 的全库对账模式一次可能覆盖上百篇文章，
+        # 不分批会把上百个 id 塞进一次 delete_by_ids 请求——delete_by_ids 本身不做内部分批
+        # （不像 upsert_vectors 由调用方负责分批），Cloudflare Vectorize v2 对单次请求的 id
+        # 数量有多大没有查到明确文档保证，跟 upsert 走同一条已验证能用的批量大小最稳妥。
+        for i in range(0, len(stale_chunk_ids), bvi.BATCH_SIZE):
+            batch = stale_chunk_ids[i : i + bvi.BATCH_SIZE]
+            del_result = bvi.delete_by_ids(INDEX_NAME, batch)
+            print(f"  deleted stale {i + 1}-{i + len(batch)}/{len(stale_chunk_ids)}: {del_result.get('success')}", file=sys.stderr)
+            # 跟 upsert_vectors 同一套返回形状纪律：HTTP 200 + success=false 不抛异常，必须
+            # 显式检查。删除失败时不写 manifest——保持 manifest 停在旧 content_hash，下一轮
+            # diff 会把这条重新判成 changed，自然重试；如果这里假装成功继续写 manifest，旧
+            # 向量就会永久留在索引里，且没有任何机制会再去清理它（reconcile.py 的孤儿判定
+            # 看不到这类"内容被编辑"的陈旧向量，见本函数开头的说明）。
+            if not del_result.get("success"):
+                raise RuntimeError(f"Vectorize delete_by_ids failed for stale chunk(s): {del_result.get('errors')}")
 
     indexed_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     # 按文章合并写 manifest：同一篇文章的两个语言可能不是同一轮都变了，必须在已有记录
