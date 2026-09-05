@@ -1,25 +1,35 @@
 # 语义检索 / 智能推荐功能 实时状态 — progress
 
 > 「此刻仓库真实发生了什么」。由 `pilot run` 每一步更新。
-> 更新时间：2026-08-23（`pilot resume` 合并 PR #65 后同步）
+> 更新时间：2026-08-25（`pilot run` 批量清跟进账本进行中——FU-32 已开 PR，其余按主题分批处理）
 
 ## 当前聚焦
 - **Milestone**：M1 语义检索 / 智能推荐功能
 - **Feature**：F1.3（Phase 1）已全部 DONE。**F1.4（自动更新与增强，Phase 2）**——T1.4.1、
   T1.4.2 均已 DONE。剩 T1.4.3/T1.4.4，都是"可选增强，非必须"，T1.4.3 涉及真实 LLM 调用
   成本，不主动开工，等用户明确要不要做。
-- **分支 / worktree**：`../blog-F1.3-t136` 已清理。`../blog-chore-docsync`（PR #62，squash
-  `38123a0`）、`../blog-chore-t141-status`（PR #64，squash `8cec5d1`）、
-  `../blog-F1.4`（PR #63，squash `ad6a58e`）、`../blog-F1.4-t142`（PR #65，squash
-  `f9a61a4`）均已合并，worktree/分支待清理（`safe-cleanup.sh --squash-merged` 已列出命令，
-  由人执行，不代劳删除）。`../blog-chore-t142-fix` 是本次修一条 Low 级 mutationId bug +
-  同步任务状态用的 chore worktree（非 Feature，硬约束 #3）。
-- **PR**：#58~#65 均已合并。当前无待回执 PR。
+- **分支 / worktree**：2026-08-25 `pilot status` 已清理全部已合并残留——本地分支
+  16→1（只剩 `main`）、worktree 7→1（只剩主 checkout）。`../blog-chore-docsync`
+  （PR #62）、`../blog-chore-t141-status`（PR #64）、`../blog-chore-t142-fix`
+  （PR #66）、`../blog-F1.4`（PR #63）、`../blog-F1.4-t142`（PR #65）、
+  `../blog-followups`（PR #67）连同各自分支及 9 个 `pr-*-head` 残留分支均已删除。
+  远程分支已核实：`origin/dailyblog` 与 `main` 无 diff（0 commits ahead），
+  `origin/xiaobaobao` 有 8 个未合并 commit（微信多账号/xiaobaobao 主题池实验，
+  最后一次提交 2026-05-11），不能当废弃分支清理，留给用户裁决。仓库
+  `delete_branch_on_merge` 已确认为 `true`（GitHub 侧本来就开着，无需额外操作）。
+- **PR**：#58~#67 均已合并。**#68、#69 待人工 review**（本仓库无外部评审服务）。
+- **跟进账本批量清理进行中**（2026-08-25 用户明确要求先修 FU-32 再批量清、可分几个主题 PR）：
+  按可操作性分类——FU-32（内容编辑陈旧向量，独立于批量之外单独修）已开 PR；能改代码的
+  followups 按主题分几个 PR；账号级/仪表盘操作（FU-13/FU-26/FU-27 等）列清单交用户处理，
+  不塞进代码 PR；已裁定/存档类（FU-4/FU-6/FU-9/FU-11/FU-15/FU-17/FU-18/FU-31）维持 OPEN
+  不动，是记录不是待办。
 
 ## 进行中 / 待回执的 PR
 | Task | PR | 状态 | 备注 |
 |:---|:---|:---|:---|
-| （无） | — | — | #65 已合并，当前无待回执 PR |
+| FU-32 | [#68](https://github.com/MushroomDAO/blog/pull/68) | 待人工 review | 编辑文章后旧 chunk 未清理，3 轮对抗式自审无阻塞项 |
+| FU-24/FU-29/FU-30 | [#69](https://github.com/MushroomDAO/blog/pull/69) | 待人工 review | .env 占位符误当真值导出（4 轮，含发现并修复本机可复现的 wrangler 缓存 OAuth 身份悄悄部署问题）+ forage 配额断言改 clamp+warn + pagefind 精确锁版本 |
+| FU-25/FU-28 | 待推送 | 实现完成，3 轮对抗式自审进行中 | 搜索统计 IP 改带密钥 HMAC 哈希 + 统计端点补按会话限速 |
 
 ## 阻塞项（BLOCKED）
 - （无）**CI 自动部署问题已解决**（原 FU-14）：GitHub Actions 的 `CLOUDFLARE_API_TOKEN`
@@ -28,6 +38,12 @@
   脚本各自显式读 token）。这个 secret 从此不再被任何东西读取，不需要用户去 GitHub 更新它。
 
 ## 最近完成
+- 2026-08-23：**PR #67 合并**（`chore/followups-2026-08-24`）——批量处理 FU-5（baseline-results
+  查询编号错位订正）、FU-10（12-16 chunk 预算按每语言的语义在文档里补充明确说明）两条非阻塞
+  跟进项，纯文档/记录修正，无代码逻辑改动。
+- 2026-08-23：**PR #66 合并**（`fix/search-reconcile-mutationid`）——`reconcile.py` 的
+  `mutationId` 日志读漏了 Cloudflare v4 响应信封的嵌套层，永远打印 `None`；这是 PR #65
+  合并后另开的小修复，Low 级、不影响功能正确性，未在已拿 APPROVE 的分支上加 commit。
 - 2026-08-23：**PR #65 合并**（`feat/T1.4.2-cron-reconciliation`，squash `f9a61a4`）——
   T1.4.2 每日对账：`semantic-search/scripts/reconcile.py`（新）复用 T1.4.1 的全库 diff
   路径，新增两件事——① 漏索引文章重新 embed+upsert（同 `incremental-index.py --upsert`）、
@@ -211,35 +227,34 @@
   （已 cherry-pick 回 `main`）
 
 ## 跟进账本（不阻塞主线，见 followups.md）
-- **FU-12、FU-14、FU-16、FU-19、FU-20 均已关闭**（分别 done=PR#55/#54/#57/#57/#58，见上方
-  "最近完成"）。
-- 剩余 OPEN（**19 条**，比上一版记录的 13 条多了 FU-25~FU-30 这 6 条：FU-25~28 来自
-  PR #59/#60/#61 review，FU-29/FU-30 来自本 chore PR（#62）自己 3 轮对抗自审的
-  production-failure-mode 发现——FU-24 在上一版就已经在 13 条里，不是新增；维持现状，
-  等主线 F1.3/F1.4 做完后批量清，本轮不额外处理）：FU-4（ColBERT 评估）、FU-5
-  （baseline-results 编号错位）、FU-6（KV 限速器跨 PoP 弱点）、FU-7（凭据权限范围，已
-  部分满足）、FU-8（增量更新孤儿向量清理）、FU-9（16 片硬上限下的 token 超量残留）、FU-10
-  （12-16 chunk 预算是每篇还是每语言的文档歧义）、FU-11（KV read-modify-write 非原子，单
-  PoP 内并发竞态）、FU-13（建议给 Workers AI/Vectorize 配置用量告警）、FU-15（TLS
-  bypass，已确认是既定模式非遗留代码）、FU-17（缓存无失效钩子对接未来 T1.4.1）、FU-18
-  （缓存写入增加 KV 配额消耗）、FU-24（.env.example 占位符会被当真值导出）、FU-25（搜索
-  统计存明文 IP+查询词，PR#61 公开后数据主体从"仅站长"变成"任何访客"，隐私前提已变，需
-  重新评估）、FU-26（搜索统计端点未核实是否被 zone 级 Cache Rule 覆盖 no-store）、FU-27
-  （PR#61 公开后 IP 限速不约束总独立访客量，建议配用量告警）、FU-28
-  （`/api/search-analytics.json` 本身没有限速，实际影响低但登录系统已被 PR#61 重新定位，
-  原限速器"没了归宿"）、FU-29（forage stage.py 的 PER_SOURCE_CAP 断言在模块顶层，手滑改
-  QUOTA 超限会让当天整条流水线直接中止，非阻塞）、FU-30（pagefind 从精确锁定放宽成
-  `^1.5.2`，以后不带包名的 `pnpm update` 可能悄悄升级、打断 postbuild，非阻塞）、FU-31
-  （T1.4.1 review 新增：`incremental-index.py` 的 INDEX_NAME 写死，等真的要切索引版本再处理）。
-  **2026-08-23 更新（followups.sh 核实为 20 条 OPEN）**：FU-17 已在 T1.4.1 review 里做了裁定
-  （不做缓存主动失效，维持 6 小时 TTL，理由见 followups.md），但仍按既有惯例（同 FU-15）留在
-  OPEN 列表里作为已归档的说明性记录，不是待办；用户"等主线做完再批量清"的决定依然有效——
-  F1.4 还剩 T1.4.2，还没做完，本轮不批量清。
+- **FU-1、FU-2、FU-3、FU-5、FU-10、FU-12、FU-14、FU-16、FU-19、FU-20 均已关闭**
+  （FU-5/FU-10 于 2026-08-23 由 PR #67 批量处理关闭，其余分别
+  done=PR#34/#34/#34/#55/#54/#57/#57/#58，见上方"最近完成"）。
+- **`followups.sh count-open` 核实：剩余 19 条 OPEN**（2026-08-25 复核，比上一版记录的
+  20 条少了 FU-5/FU-10 这 2 条、但本版首次把 FU-32 计入，净减 1）：FU-4（ColBERT 评估）、
+  FU-6（KV 限速器跨 PoP 弱点）、FU-7（凭据权限范围，已部分满足）、FU-8（增量更新孤儿向量
+  清理，正式方案已转交 T1.4.2，但"内容编辑"这一类场景仍未覆盖，见 FU-32）、FU-9（16 片硬
+  上限下的 token 超量残留）、FU-11（KV read-modify-write 非原子，单 PoP 内并发竞态）、
+  FU-13（建议给 Workers AI/Vectorize 配置用量告警）、FU-15（TLS bypass，已确认是既定模式
+  非遗留代码）、FU-17（缓存无失效钩子，已裁定不做主动失效，留档不是待办）、FU-18（缓存写入
+  增加 KV 配额消耗，Paid 套餐下风险不成立，留档）、FU-24（.env.example 占位符会被当真值
+  导出）、FU-25（搜索统计存明文 IP+查询词，PR#61 公开后数据主体从"仅站长"变成"任何访客"，
+  隐私前提已变，需重新评估）、FU-26（搜索统计端点未核实是否被 zone 级 Cache Rule 覆盖
+  no-store）、FU-27（PR#61 公开后 IP 限速不约束总独立访客量，建议配用量告警）、FU-28
+  （`/api/search-analytics.json` 本身没有限速，登录系统已被 PR#61 重新定位，原限速器"没了
+  归宿"）、FU-29（forage stage.py 的 PER_SOURCE_CAP 断言在模块顶层，手滑改 QUOTA 超限会让
+  当天整条流水线直接中止，非阻塞）、FU-30（pagefind 从精确锁定放宽成 `^1.5.2`，以后不带
+  包名的 `pnpm update` 可能悄悄升级、打断 postbuild，非阻塞）、FU-31（`incremental-index.py`
+  的 INDEX_NAME 写死，等真的要切索引版本再处理）、FU-32（T1.4.2 review 新发现：内容被编辑后
+  旧 chunk 的陈旧向量从未清理，`find_orphans` 的孤儿判定只看 article_id 存不存在、不覆盖
+  "文章还在但内容变了"这类，FU-8 最初点名的场景实际仍未解决，建议在 `do_upsert` 里补上删旧
+  chunk_id 这一步）。
+- 用户此前决定"等主线做完再批量清"——**F1.4 主线（T1.4.1/T1.4.2）现在已完成**，下一轮
+  `pilot resume`/`pilot run` 若确认没有其它 READY task，应进入批量清账本流程，不用再等。
 
 ## 下一个 READY
 - **没有 READY task**。F1.4 的 T1.4.1/T1.4.2 均已 `DONE`。T1.4.3（LLM 一句话匹配理由）/
   T1.4.4（reranker）仍是 `BACKLOG`——都是"可选增强，非必须"，T1.4.3 涉及真实 LLM 调用
   成本（需配合成本监控），不主动开工，等用户明确要不要做。
-- 跟进账本还有 OPEN 项（含本轮新增的 FU-32），用户此前已明确"等主线做完再批量清"——
-  F1.4 主线（T1.4.1/T1.4.2）现在算做完了，下一轮 `pilot resume` 若确认没有其它 READY
-  task，应该进入 §2.5 批量清账本，不用再等。
+- 跟进账本还有 19 条 OPEN 项（含 FU-32），F1.4 主线已完成，下一轮触发 `pilot run/resume`
+  时应进入批量清账本，不用再等。
