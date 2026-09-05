@@ -20,6 +20,7 @@ This directory turns daily research into a product-and-content pipeline:
 - [2026-09-02](./2026-09-02.md) — FDE-as-a-Service, white-label Voice Agents, Agent supply-chain security, TrueForge runtime
 - [2026-09-03](./2026-09-03.md) — Agentic commerce readiness, shared workflow/MCP connectors, Agent FinOps, vertical decision loops
 - [2026-09-04](./2026-09-04.md) — In-page agents for legacy software, multilingual voice events, agent-native deployment, unified LLM/MCP/A2A gateway
+- [2026-09-05](./2026-09-05.md) — Local AI compute pools, agent-native SaaS via MCP, AI business continuity, business radar, Thailand subsidy-backed GTM
 
 ## Standard Review Lens
 
