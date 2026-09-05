@@ -5,11 +5,11 @@ cron 环境里能做的都做完：三层去重、配额、协议、README、五
 **做不了的是判断**——「核心增量是什么」「值得从哪几个角度写」需要真读懂内容。
 那部分留空标「待判断」，Claude 在会话里补。
 """
-import json, os, re, sys, base64, subprocess, hashlib, random
+import json, os, re, sys, glob, base64, subprocess, hashlib, random
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from store import conn, entities, norm
+from store import conn, entities, norm, published_match, ROOT
 
 OUT = "/tmp/forage"
 ENV = dict(os.environ); ENV["GH_DEBUG"] = ""
@@ -38,7 +38,10 @@ DOMAIN_VETO = [
     (r"\bjava\b|jvm|kotlin|scala|spring boot", "JVM系"),
     (r"common lisp|clojure|haskell|erlang|elixir", "小众函数式"),
     (r"\.net\b|c#|asp\.net", ".NET系"),
-    (r"\b3d\b|metaverse|元宇宙|unity|unreal", "3D/元宇宙"),
+    # unity 必须带词边界：不加的话 "community" 里的 "unity" 会命中，
+    # 而开源项目描述里 "community" 出现的频率高得离谱
+    # （VoltAgent/awesome-agent-skills 就这么被当成 3D 项目毙了）。
+    (r"\b3d\b|metaverse|元宇宙|\bunity\b|\bunreal\b", "3D/元宇宙"),
     (r"kubernetes|k8s|集群部署|sso|saml", "企业级"),
     # 内容类型
     (r"融资|轮融资|estimated valuation|行业观察", "纯新闻"),
@@ -81,13 +84,18 @@ def main():
     # 之前用 INSERT OR REPLACE 会把整行覆盖，连同用户的决定一起抹掉——
     # aegra 被用户标了「写」，第二天重新采到就被清成未决定了。
     decided = {r["title"] for r in c.execute("SELECT title FROM items WHERE decision!=''")}
+    # 已发布文章的 slug 集合，给 published_match 用。entities() 词袋去重
+    # （上面的 seen）对"neo-chat"这种复合项目名不可靠——连字符一拆就散了，
+    # 这里补一道子串匹配，直接防止已经写过的东西又冒进清单。
+    blog_slugs = {os.path.basename(f)[:-3]
+                  for f in glob.glob(os.path.join(ROOT, "src", "content", "blog", "*.md"))}
 
     # 一手源优先：GitHub > HF > 小红书 / X
     rank = lambda s: 3 if s == "GitHub" else 2 if s == "HuggingFace" else 1
     rows.sort(key=lambda r: -rank(r["src"]))
 
     kept, per_src, run_ents = [], {}, set()
-    drop = {"veto": 0, "seen": 0, "decided": 0, "cross": 0, "src_cap": 0, "total_cap": 0}
+    drop = {"veto": 0, "seen": 0, "published": 0, "decided": 0, "cross": 0, "src_cap": 0, "total_cap": 0}
 
     for r in rows:
         txt = f"{r['title']} {r.get('desc','')}"
@@ -96,6 +104,8 @@ def main():
         ents = {e for e in entities(txt) if len(e) > 4}
         if any(e in seen for e in ents):
             drop["seen"] += 1; continue
+        if published_match(r["title"], blog_slugs):
+            drop["published"] += 1; continue
         if r["title"] in decided:
             drop["decided"] += 1; continue
         if any(e in run_ents for e in ents):
@@ -134,7 +144,8 @@ def main():
             (iid, run, r["src"], r["src"], r["title"], r.get("url", ""), r.get("desc", ""),
              ",".join(sorted(entities(r["title"]))[:5]), 0, "[]",
              json.dumps(R, ensure_ascii=False), "", now, now))
-        for e in list(entities(r["title"]))[:5]:
+        # strict：雷达播种也只认真实体，别把 X 抓来的垃圾标题里的大写词灌进 seen
+        for e in list(entities(r["title"], strict=True))[:5]:
             c.execute("INSERT OR IGNORE INTO seen VALUES (?,?,?,?)", (e, now, "radar", r["title"][:60]))
     c.execute("INSERT OR REPLACE INTO seen VALUES (?,?,?,?)",
               ("__coverage__", now, "meta", json.dumps(cov, ensure_ascii=False)))
