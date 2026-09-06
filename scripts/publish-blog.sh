@@ -216,4 +216,14 @@ else
   echo "[5/5] skipped WeChat (pass --wechat to enable)"
 fi
 
+# ---- 5.8. refresh local knowledge base (mycelium-kb + basic-memory) ----
+# 让本地知识库(basic-memory MCP,给 blog/Heinu1 仓库用)跟着新文章更新。
+# 失败不影响发布本身——文章已上线,只是知识库暂时没吃到这篇,可手动补跑。
+echo "[5.8] refreshing local knowledge base…"
+if [ -x "$HOME/mycelium-kb/kb-refresh.sh" ]; then
+  "$HOME/mycelium-kb/kb-refresh.sh" 2>&1 | tail -8 || echo "  ⚠️ kb-refresh 失败,可手动执行: ~/mycelium-kb/kb-refresh.sh"
+else
+  echo "  ⏭  ~/mycelium-kb/kb-refresh.sh 不存在,跳过"
+fi
+
 echo "✅ done → https://$DOMAIN/blog/$SLUG/"

@@ -21,10 +21,13 @@ echo "=== $(date '+%F %T') forage 每日采集 ==="
 echo "[1/3] 采集各源…"
 python3 "$SKILL/collect.py" || { echo "采集失败"; exit 1; }
 
-echo "[2/3] 去重 + 限量 + 拉一手信息…"
+echo "[2/4] 去重 + 限量 + 拉一手信息…"
 python3 "$SKILL/stage.py" || { echo "入库失败"; exit 1; }
 
-echo "[3/3] 确认服务在跑…"
+echo "[3/4] 对账已发布文章（seen 重新播种 + write/dig 转 published）…"
+python3 "$SKILL/store.py" sync || echo "对账失败，不阻塞后续"
+
+echo "[4/4] 确认服务在跑…"
 if curl -s -m 3 http://127.0.0.1:8042/api/summary >/dev/null 2>&1; then
   echo "  ✓ 评审台已在 http://127.0.0.1:8042/"
 else

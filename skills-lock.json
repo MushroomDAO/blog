@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "lieflat-charts": {
+      "source": "larashero3-dotcom/lieflat-charts",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "681861979274af539fef4ea1323022c1a41f545482e2c452c679b17b9fff3b59"
+    },
     "llm-wiki": {
       "source": "nashsu/llm_wiki_skill",
       "sourceType": "github",

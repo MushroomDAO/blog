@@ -14,6 +14,63 @@
 
 ---
 
+## 仓库能力清单
+
+本仓库不只是一个 Astro 博客，而是一套"内容生产 + 多平台发布 + 站内智能功能 + 情报采集"的完整系统。按能力分类如下（每次更新维护者应重新核对本节，避免与实际代码脱节）：
+
+### 1. 博客站点本身（Astro + Cloudflare Pages）
+
+- Markdown/MDX 写作、双语并排显示（`<!--EN-->` 分隔）、5 分类 + 标签
+- RSS（`src/pages/rss.xml.js`）、Sitemap、Pagefind 全文关键词搜索（构建期生成索引）
+- **语义搜索**（`src/pages/search.astro` + `functions/api/search.js`）：query → bge-m3 embedding → Cloudflare Vectorize 检索，带查询缓存 + 按 IP 限速；`semantic-search/` 下有完整的分块/增量索引/对账脚本（`build-vectorize-index.py`、`incremental-index.py`、`reconcile.py`）
+- **站内数据看板**（`src/pages/analytics.astro`）：`pipeline/analytics/fetch-analytics.py` 拉取 Cloudflare Web Analytics（RUM）数据，构建期写入 `src/data/blog-analytics.json`
+- GitHub Discussions 评论系统（Giscus）
+- 多用户配置（`config/users/*.js`，按 `BLOG_USER` 环境变量切换域名/微信/小红书账号）
+
+### 2. 三条发布流水线（`pipeline/`）
+
+| 流水线 | 目标平台 | 实现 |
+|---|---|---|
+| M1 | Blog（Astro → Cloudflare Pages） | `pipeline/m1/`：润色（`polisher.py`）、封面生成（`cover_generator.py`）、发布（`publisher.py`/`m1-complete.sh`） |
+| M2 | 微信公众号草稿 | `pipeline/m2/`（Node.js）+ `submodules/wechat-*`（格式化/发布 skill 子模块） |
+| M3 | 小红书 | `pipeline/m3/`（Python 内容优化 + 封面）+ `pipeline/deploy/xiaohongshu-mcp/`（Dockerized Go MCP 服务） |
+
+一键入口：`scripts/auto-publish.sh` / `scripts/publish-blog.sh`（当前主脚本）/ `publish-xhs.sh` / `./deploy.sh`。
+
+### 3. 内容生产辅助 Agent Skills（`.agents/skills/`，镜像至 `.claude/skills/`）
+
+- `blog-publisher` — 文章发布主流程（触发词：发布/发布文章/发布blog）
+- `banner-creator` — 本机 FLUX.2 Klein (MLX) 生成 1200×630 写实无文字封面
+- `mage-vl` — 本机视觉语言模型看图/视频（配图 alt、图文匹配核查），全程离线不出网，无音频塔
+- `seo-geo` — 发布前 SEO + GEO（让 AI 引擎引用）24 点检查
+- `source-scanner` — 扫描 `source/` 新目录，提取内容生成双语初稿，交给 `blog-publisher` 发布
+- `forage` — 每日信息雷达（见下）
+- `xhs-mcp-cdp` / `xhs-mcp-docker` / `xhs-publisher` — 小红书自动发布的三种技术路线（CDP 模式 / Docker 扫码模式 / 统一发布 skill）
+- `network-switch` — 代理开关（访问 GitHub/Google 等外网资源）
+- `llm-wiki` — 查询本机 LLM Wiki 知识库桌面 App
+
+### 4. 每日情报雷达（forage，`radar/` + `.agents/skills/forage/`）
+
+巡检小红书关注列表/关键词、GitHub Trending、HuggingFace 新模型、X 时间线，按 `preferences.yml` 偏好画像打分，命中项去 GitHub/HuggingFace 拉一手资料，产出带独立分析的选题清单（`radar/index.html` 可视化，`radar/forage.db` 存档）。**全程只读，不发帖/评论/点赞/关注**。渠道数量硬约束：总数 ≤10，单渠道 ≤5。
+
+### 5. Newsletter 订阅系统（`pipeline/newsletter/`）
+
+后端：listmonk + Fly.io + Neon Postgres + AWS SES（`listmonk-fly/`、`listmonk-container/`）；`build-digest.py` 生成摘要邮件，`send-newsletter.sh` 发送。前端表单已直连后端 API（未套 iframe）。当前状态：后端已跑通，部分 DNS/AWS 权限项待人工处理。
+
+### 6. 仓库自动化治理（pilot，`.pilot.yml` + `docs/agent/`）
+
+接入 `pilot` skill 的三阶段流程（status/plan/run），规划文档存于 `docs/agent/`（architecture / spec / tasks / roadmap / progress / followups / acceptance / research）。本仓库单主干（无 preview 分支），PR 需人工 review + approve 才能合并（未接入外部评审服务）。
+
+### 7. 规划中 / 设计阶段
+
+- **Spore Cast 付费视频栏目**（`video-column/`）：博客配套的短视频付费栏目完整设计文档（产品/架构/模块/数据模型/内容生产/路线图），接入 AirAccount + SBT + aPNTs 积分闭环，尚未开发。
+
+### 8. 外部依赖 / Git 子模块（`submodules/`）
+
+`wechat-article-formatter`、`wechat-article-formatter-skill`、`wechat-article-publisher-skill`、`wechat-content-pipeline`、`xiaohongshu-mcp`、`xiaoheishu`。
+
+---
+
 ## 快速开始
 
 ```bash

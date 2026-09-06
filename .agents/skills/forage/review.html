@@ -20,6 +20,7 @@ button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
 .card.dig{border-left:4px solid var(--acc)}
 .card.skip{opacity:.38}
 .card.archive{border-left:4px solid var(--mut)}
+.card.published{opacity:.5;border-left:4px solid var(--ok)}
 .t{font-weight:600;font-size:1rem;margin-bottom:.25rem}
 .meta{color:var(--mut);font-size:.78rem;margin:.25rem 0}
 .tag{display:inline-block;font-size:.69rem;padding:.06rem .4rem;border:1px solid var(--line);border-radius:4px;margin-right:.28rem}
@@ -40,16 +41,17 @@ a{color:var(--acc)}
 <div class="sub">只做判断，不打分。决定和备注实时写入 SQLite，Claude 直接读库。</div>
 
 <div class="bar">
-  <button onclick="flt('all')" id="f-all" class="on">全部</button>
-  <button onclick="flt('undecided')" id="f-undecided">未决定</button>
+  <button onclick="flt('undecided')" id="f-undecided" class="on">未决定</button>
+  <button onclick="flt('all')" id="f-all">全部</button>
   <button onclick="flt('write')" id="f-write">已选写</button>
   <button onclick="flt('dig')" id="f-dig">要深挖</button>
+  <button onclick="flt('published')" id="f-published">已发布</button>
   <span class="stat" id="stat"></span>
 </div>
 <div id="list"></div></div>
 
 <script>
-let ITEMS=[], CUR='all';
+let ITEMS=[], CUR='undecided';
 const esc = s => String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 async function load(){
@@ -63,7 +65,9 @@ function render(){
     if(CUR==='undecided') return !d.decision;
     if(CUR==='write')     return d.decision==='write';
     if(CUR==='dig')       return d.decision==='dig';
-    return true;
+    if(CUR==='published') return d.decision==='published';
+    // 「全部」排除已发布：那些去「已发布」标签单独看，不跟还没处理完的混在一起
+    return d.decision!=='published';
   }).forEach(d=>{
     const c=document.createElement('div');
     c.className='card '+(d.decision||'');
@@ -119,12 +123,12 @@ async function decide(id,dec){
     body:JSON.stringify({id,decision:val})});
   it.decision=val; render();
 }
-function flt(f){CUR=f;['all','undecided','write','dig'].forEach(x=>
+function flt(f){CUR=f;['all','undecided','write','dig','published'].forEach(x=>
   document.getElementById('f-'+x).classList.toggle('on',x===f));render();}
 async function summary(){
   const s = await fetch('/api/summary').then(r=>r.json());
   document.getElementById('stat').textContent =
-    `共 ${s.total} · 写 ${s.write||0} · 再挖 ${s.dig||0} · 存档 ${s.archive||0} · 不要 ${s.skip||0} · 未决定 ${s.undecided||0}`;
+    `共 ${s.total} · 写 ${s.write||0} · 再挖 ${s.dig||0} · 存档 ${s.archive||0} · 不要 ${s.skip||0} · 已发布 ${s.published||0} · 未决定 ${s.undecided||0}`;
 }
 load();
 </script></body></html>

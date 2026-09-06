@@ -56,3 +56,7 @@ semantic-search/eval/manifest-plan.json
 semantic-search/eval/.manifest-kv-namespace-id
 semantic-search/eval/incremental-index-plan.json
 semantic-search/eval/reconcile-plan.json
+
+# 第三方 skill 的本地副本：20MB，自带 LICENSE，属于外部项目，不进本仓库
+# （实际被 Claude Code 加载的是 .claude/skills/ 那份镜像，本身也未跟踪）
+.agents/skills/lieflat-charts/
