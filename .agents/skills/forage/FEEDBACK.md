@@ -101,3 +101,42 @@ JVM 系（Java/Kotlin/Scala）、Lisp 系（Common Lisp/Clojure）、
 **修正**：「个人可及」的判据应该是「一个人能不能装能不能用」，
 不是「有没有依赖」。需要 PostgreSQL ≠ 需要运维团队。
 真正违反的是需要集群、需要 SSO、按席位卖给公司那种。
+
+## 2026-09-06（会话内补判，用户尚未反馈）
+- ⚠️ 规则误伤：`DSH 装进安卓手机` 系列（woaiys3/deepseek-harness-android-app 等）
+  会被 stage.py 的 DOMAIN_VETO `\bjava\b|jvm|kotlin` 拦掉。
+  → 误伤原因：这条 veto 的立意是「本站读者里用它做 AI 开发的占比」，
+    但 APK 的实现语言 ≠ 读者要写的语言——读者是**装 APK 的用户**，不是 Java 开发者。
+  → 建议调整：JVM 系 veto 只在「仓库主体是给开发者用的 JVM 框架/库」时生效，
+    终端用户产品（APK / 桌面 App）不看实现语言。可在 stage.py 加一条豁免：
+    描述里出现 `apk|app|安装包|termux|端侧` 时跳过 JVM veto。
+- ⚠️ 去重漏网：小红书「JIT-Age」没被 seen 表拦住，因为实体名 `jit-age` 与
+  已发文章里的 `jit-agent` 不同。本站 2026-09-05 刚发过 bingreeky/JIT。
+  → 建议调整：entities() 做归一化时把结尾的 `-age/-agent/-ai` 归到同一词根，
+    或对 seen 做前缀模糊匹配（长度 >4 时按前 6 字符前缀比对）。
+- ⚠️ 「X for MCP」噪音：unified-product-graph/tools（电商商品数据标准）
+  因为带 MCP 关键词被采进来，和已记录的「X for Claude Code」是同一个坑。
+  → 建议调整：veto 里的领域否决要在「MCP/Skill/Agent 关键词命中」之前先跑，
+    电商/商品数据/供应链应补进 DOMAIN_VETO。
+- ⚠️ 采集侧：X 源连续为 0（twitter-cli ClientTransaction/404），需修复。
+  小红书笔记正文读取需 xsec_token，裸 explore URL 返回 empty noteDetailMap，
+  collect.py 应在采集时把 xsec_token 一并存下来，否则后续调研拿不到正文。
+- ✅ 判为「只存档」但用户标了「写」：penaivanalejandro/gitlab-mcp-server（我给 60 分）
+  → 我的否决理由是「标准 API-to-MCP 包装，无独特机制」。这个理由站不住：
+    本站选题标准第一性原则是「我自己要不要用」，不是「机制新不新」。
+    一个 0★、PAT 不出本机、92 工具开箱即用的本地 MCP，对个人用户的价值
+    恰恰在于**它平庸且够用**——这正是「个人可及」原则本身。
+  → 调整：给 novelty 维度降权，不要用「机制新颖度」否决掉「原则全中 + 装了就能用」的工具。
+    bonus 里补一条「五原则全中」直接加分，避免被 novelty 拖死。
+- ⚠️ 用户对 JIT-Age 标 dig 并批注「重复了吧？你检查下」——已复核确认重复，见下方检查记录。
+  → 【复盘补充 2026-09-06 深夜】写稿时通读完整 README，发现我否决的理由完全不成立：
+    该项目 README 里有一张把 MCP 上下文税逐组量化的表（92 工具 = 27340 tokens，
+    平均每个工具定义 ~297 tokens），并给了三层收敛方案（GITLAB_TOOL_GROUPS 分组加载 /
+    GITLAB_READ_ONLY 只读 47 工具且按名字拒绝 / read_api 最小 token scope），
+    还默认阻断了 169.254.169.254 云元数据端点（SSRF 面）。
+    我在存档笔记里写的「如果它做出工具太多导致上下文爆炸的收敛方案，那才是可写的点」
+    —— 它本来就有，是我没读到。
+  → 硬调整：**调研阶段必须通读完整 README，不能只看前 1/3 就下判断。**
+    stage.py 只抓 readme[:2400] 存进 research.readme_head，我在会话里补判时
+    直接用了那个截断版。修法：补判时对判为「值得写」和「存疑」的条目，
+    一律用 gh api 重新拉全文 README，不要用 readme_head 做否决依据。
