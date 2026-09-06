@@ -21,6 +21,7 @@ This directory turns daily research into a product-and-content pipeline:
 - [2026-09-03](./2026-09-03.md) — Agentic commerce readiness, shared workflow/MCP connectors, Agent FinOps, vertical decision loops
 - [2026-09-04](./2026-09-04.md) — In-page agents for legacy software, multilingual voice events, agent-native deployment, unified LLM/MCP/A2A gateway
 - [2026-09-05](./2026-09-05.md) — Local AI compute pools, agent-native SaaS via MCP, AI business continuity, business radar, Thailand subsidy-backed GTM
+- [2026-09-06](./2026-09-06.md) — Human exception learning loops, isolated Agent execution boxes, delegated Agent spending policy, unified SME AI command center
 
 ## Standard Review Lens
 
