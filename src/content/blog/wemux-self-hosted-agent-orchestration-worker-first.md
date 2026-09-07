@@ -7,7 +7,7 @@ pubDate: "2026-09-07"
 updatedDate: "2026-09-07"
 category: "Tech-News"
 tags: ["AI Agent", "自托管", "开源", "Agent 编排", "Claude Code", "BYOK", "TypeScript", "本地优先"]
-heroImage: "../../assets/banner-ai-infrastructure.jpg"
+heroImage: "../../assets/images/wemux-self-hosted-agent-orchestration-worker-first-banner.jpg"
 author: "Mycelium Protocol"
 ---
 
