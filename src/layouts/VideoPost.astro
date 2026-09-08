@@ -1,5 +1,6 @@
 ---
 import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
 import Comments from '../components/Comments.astro';
 import Disclaimer from '../components/Disclaimer.astro';
@@ -16,11 +17,13 @@ type Props = {
 	pubDate: Date;
 	updatedDate?: Date;
 	coverImage?: ImageMetadata;
-	bilibiliUrl: string;
-	youtubeUrl: string;
+	bilibiliUrl?: string;
+	youtubeUrl?: string;
 	sourceRepoUrl?: string;
 	verdict?: string;
 	tags?: string[];
+	category?: 'Tech-Experiment' | 'Problem-Thinking' | 'Public-Goods';
+	isIntro?: boolean;
 };
 
 const {
@@ -51,6 +54,13 @@ const {
 			}
 			.title-section {
 				text-align: center;
+				margin-bottom: 1.5em;
+			}
+			/* 分类介绍页用封面图占播放器的位置 */
+			.intro-cover {
+				width: 100%;
+				height: auto;
+				border-radius: 12px;
 				margin-bottom: 1.5em;
 			}
 			.title-cn {
@@ -127,7 +137,12 @@ const {
 					</div>
 				</div>
 
-				<VideoFrame bilibiliUrl={bilibiliUrl} youtubeUrl={youtubeUrl} title={title} />
+				{/* 分类介绍页没有视频，只有正文；两个平台地址齐了才渲染播放器 */}
+				{bilibiliUrl && youtubeUrl ? (
+					<VideoFrame bilibiliUrl={bilibiliUrl} youtubeUrl={youtubeUrl} title={title} />
+				) : (
+					coverImage && <Image class="intro-cover" src={coverImage} alt="" width={1200} height={630} />
+				)}
 
 				{verdict && (
 					<p class="verdict">💡 {verdict}</p>

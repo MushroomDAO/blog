@@ -57,9 +57,20 @@ const dailyVideo = defineCollection({
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
 			coverImage: z.optional(image()),
-			// 同一条视频的两个平台地址：VideoFrame 组件按访客地域二选一展示
-			bilibiliUrl: z.string().url(),
-			youtubeUrl: z.string().url(),
+			// 同一条视频的两个平台地址：VideoFrame 组件按访客地域二选一展示。
+			// 分类介绍页（isIntro）本身不是一条视频，所以这两个字段是可选的——
+			// 缺任一个时 VideoPost 不渲染播放器，只出正文。
+			bilibiliUrl: z.string().url().optional(),
+			youtubeUrl: z.string().url().optional(),
+			// 三条内容线：
+			// Tech-Experiment  技术实验——开源仓库开盒实测
+			// Problem-Thinking 问题思考——痛点分析，以终为始（配套 /my/painpoints/ 痛点地图）
+			// Public-Goods     公共物品——开源组件 / Digital Commons 介绍
+			category: z
+				.enum(['Tech-Experiment', 'Problem-Thinking', 'Public-Goods'])
+				.default('Tech-Experiment'),
+			// 该分类的介绍文章：在 /video/ 列表里作为分类的门面置顶，不计入普通视频
+			isIntro: z.boolean().default(false),
 			// 被评测的开源仓库（这条系列的核心：从 local-first AI 需要的组件反向找仓库）
 			sourceRepoUrl: z.string().url().optional(),
 			// 一句话结论：推荐给谁用、值不值得看

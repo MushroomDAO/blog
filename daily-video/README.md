@@ -30,11 +30,28 @@
 - **`.agents/skills/daily-video-planner/`**：选题登记 + 脚本/图文帖草稿 + 本地预览，产出
   写进这个目录，同样不负责发布。
 
+## 三条内容线（2026-09-08 确立）
+
+`/video/` 下分三个 tab，对应 collection 的 `category` 字段：
+
+| category | 名称 | 做什么 |
+|---|---|---|
+| `Tech-Experiment` | 🔬 技术实验 | 开源仓库开盒：真机部署、真实负载、压到出问题，给能不能用的结论 |
+| `Problem-Thinking` | 🧠 问题思考 | 以终为始：先讲清痛点本身，再找当下解法；常驻入口是 `/my/painpoints/` 痛点地图 |
+| `Public-Goods` | 🌱 公共物品 | Digital Commons：一期讲一个我们自己做的开源组件 |
+
+三者是流水线关系：问题思考（确认真问题）→ 技术实验（验证现成方案够不够）→ 公共物品
+（不够的那块自己补并开源）。
+
+每条线各有一篇 `isIntro: true` 的分类介绍文章，在列表页作为该分类的门面卡片置顶展示
+（banner + 概述），不计入普通视频列表。介绍文章没有 `bilibiliUrl` / `youtubeUrl`，
+所以这两个字段在 schema 里是可选的，`VideoPost` 缺链接时不渲染播放器、改出封面图。
+
 ## 内容怎么进博客
 
 - Astro content collection：`dailyVideo`（定义在 `src/content.config.ts`），文件放
   `src/content/daily-video/*.md`
-- 列表页：`/video/`，详情页：`/video/<slug>/`
+- 列表页：`/video/`（默认展开三条线，`?cat=<category>` 落到单个 tab），详情页：`/video/<slug>/`
 - 导航：`Header.astro` 顶部菜单已加"🎬 Video"入口
 - 同一条视频两个平台链接（`bilibiliUrl` / `youtubeUrl`）由 `VideoFrame` 组件按访客地域
   （`/api/geo` Pages Function 读 Cloudflare 边缘的 `request.cf.country`）自动二选一展示，
