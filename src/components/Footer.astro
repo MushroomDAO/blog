@@ -7,7 +7,7 @@ const today = new Date();
 <footer>
 	&copy; {today.getFullYear()} 🍄 Mycelium = 🪵 Infras | 🦠 Protocols | 🕸️ Networks. All rights reserved.
 	<div class="subscribe-footer-block">
-		<p class="subscribe-footer-hint">📮 New article digest every 2 days, unsubscribe anytime</p>
+		<p class="subscribe-footer-hint">📮 订阅更新</p>
 		<SubscribeForm variant="footer" id="subscribe" />
 	</div>
 	<div class="social-links">
@@ -29,9 +29,19 @@ const today = new Date();
 				></path></svg
 			>
 		</a>
+		<a href="/rss.xml" target="_blank" title="RSS Feed">
+			<span class="sr-only">RSS Feed</span>
+			<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
+				><path
+					fill="currentColor"
+					d="M2.5 11a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2 5.5a.5.5 0 0 1 .5-.5A8.5 8.5 0 0 1 11 13.5a.5.5 0 0 1-1 0A7.5 7.5 0 0 0 2.5 6a.5.5 0 0 1-.5-.5zm0-3A.5.5 0 0 1 2.5 2 11.5 11.5 0 0 1 14 13.5a.5.5 0 0 1-1 0A10.5 10.5 0 0 0 2.5 3a.5.5 0 0 1-.5-.5z"
+				></path></svg
+			>
+		</a>
 	</div>
 	<div class="credits">
-		Built with <a href="https://astro.build" target="_blank">Astro</a>
+		<a href="/about/">About</a>
+		· Built with <a href="https://astro.build" target="_blank">Astro</a>
 		· <a href="/analytics/">📊 Website Analytics</a>
 		· <a href="/agents/">🤖 For AI Agents</a>
 	</div>
