@@ -7,31 +7,29 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_TITLE } from '../../consts';
 
-// 三条内容线。key 与 dailyVideo collection 的 category 枚举一一对应，
+// 三条内容线。key 与 dailyVideo collection 的 category 字段一一对应，
 // 顺序就是页面上 tab 的顺序。
+// 页面主体是视频本身——栏目介绍在这里只出一句话，详细的点进介绍文章看，
+// 避免访客为了看到今天更新的视频要先翻过三大块介绍（二次点击问题）。
 const CATEGORIES = [
 	{
 		key: 'Tech-Experiment',
 		icon: '🔬',
 		name: '技术实验',
-		nameEn: 'Tech Experiments',
-		blurb: '开源仓库开盒：挑一个真实仓库，装起来、跑起来、压到出问题为止，讲清楚它到底能不能用。',
+		oneLiner: '开源仓库开盒，真机部署实测，给能不能用的结论。',
 	},
 	{
 		key: 'Problem-Thinking',
 		icon: '🧠',
 		name: '问题思考',
-		nameEn: 'Problem Thinking',
-		blurb: '以终为始：先把现实世界的痛点一个个列出来，再反向去找解法。解法会随 AI 迭代过时，痛点通常不会。',
-		// 这条线的常驻入口：长期维护的痛点地图
-		hub: { href: '/my/painpoints/', label: '🧠 痛点地图' },
+		oneLiner: '以终为始，先讲透痛点本身，再反向找解法。',
+		hub: { href: '/my/painpoints/', label: '痛点地图' },
 	},
 	{
 		key: 'Public-Goods',
 		icon: '🌱',
 		name: '公共物品',
-		nameEn: 'Public Goods',
-		blurb: 'Digital Commons：一个视频讲一个我们自己做的开源组件，开源、免费、无许可，任何人都能直接拿去用。',
+		oneLiner: 'MushroomDAO 出品的开源组件，免费、无许可、拿去就能用。',
 	},
 ] as const;
 
@@ -39,22 +37,21 @@ const all = (await getCollection('dailyVideo')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-// 每条线：介绍文章置顶（isIntro），其余按时间倒序跟在后面
-const grouped = CATEGORIES.map((cat) => {
-	const items = all.filter((v) => v.data.category === cat.key);
-	return {
-		...cat,
-		intro: items.find((v) => v.data.isIntro) ?? null,
-		videos: items.filter((v) => !v.data.isIntro),
-	};
-});
+// 介绍文章不进视频流——它是分类说明，走上面那行「详细介绍 →」的链接
+const introBy = new Map(all.filter((v) => v.data.isIntro).map((v) => [v.data.category, v]));
+const videos = all.filter((v) => !v.data.isIntro);
+
+const catMeta = CATEGORIES.map((cat) => ({
+	...cat,
+	intro: introBy.get(cat.key) ?? null,
+	count: videos.filter((v) => v.data.category === cat.key).length,
+}));
 
 const PAGE_TITLE = `🎬 Video | ${SITE_TITLE}`;
 const PAGE_DESCRIPTION =
-	'三条内容线：技术实验（开源仓库开盒实测）、问题思考（痛点分析，以终为始）、公共物品（开源组件介绍）。B 站 / YouTube 双平台同步更新，免费看。';
-const PAGE_TITLE_EN = `🎬 Video | ${SITE_TITLE}`;
+	'三条内容线：技术实验（开源仓库开盒实测）、问题思考（痛点分析，以终为始）、公共物品（MushroomDAO 出品的开源组件）。每条视频 B 站 / YouTube 同步更新，免费看。';
 const PAGE_DESCRIPTION_EN =
-	'Three content lines: tech experiments (open-source repo teardowns), problem thinking (pain-point analysis, working backwards), and public goods (our open-source components). Free on Bilibili and YouTube.';
+	'Three content lines: tech experiments (open-source repo teardowns), problem thinking (pain-point analysis, working backwards), and public goods (open-source components by MushroomDAO). Every video ships to Bilibili and YouTube, always free.';
 ---
 
 <!doctype html>
@@ -63,46 +60,51 @@ const PAGE_DESCRIPTION_EN =
 		<BaseHead
 			title={PAGE_TITLE}
 			description={PAGE_DESCRIPTION}
-			titleEn={PAGE_TITLE_EN}
+			titleEn={PAGE_TITLE}
 			descriptionEn={PAGE_DESCRIPTION_EN}
 		/>
 		<style>
 			main {
-				width: 960px;
+				width: 1040px;
 				max-width: calc(100% - 2em);
 				margin: 0 auto;
-				padding: 2em 1em;
+				padding: 1.5em 1em 2em;
 			}
+
+			/* ── 页头：压到最矮，把首屏留给视频 ────────── */
 			.page-intro {
-				margin-bottom: 1.5em;
+				display: flex;
+				align-items: baseline;
+				flex-wrap: wrap;
+				gap: 0.6em;
+				margin-bottom: 0.9em;
 			}
 			.page-intro h1 {
-				margin-bottom: 0.3em;
-			}
-			.page-intro p {
-				color: rgb(var(--gray));
 				margin: 0;
+				font-size: 1.6em;
+			}
+			.page-intro span {
+				color: rgb(var(--gray));
+				font-size: 0.9em;
 			}
 
 			/* ── 分类 tab ───────────────────────────── */
 			.tab-bar {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 0.5em;
-				margin-bottom: 2em;
-				padding-bottom: 0.8em;
-				border-bottom: 1px solid rgba(var(--gray), 0.25);
+				gap: 0.45em;
+				margin-bottom: 0.9em;
 			}
 			.tab-item {
 				display: inline-flex;
 				align-items: center;
-				gap: 0.35em;
-				padding: 0.45em 0.9em;
+				gap: 0.3em;
+				padding: 0.35em 0.85em;
 				border-radius: 999px;
 				border: 1px solid rgba(var(--gray), 0.3);
 				background: transparent;
 				color: rgb(var(--gray-dark));
-				font-size: 0.95em;
+				font-size: 0.9em;
 				text-decoration: none;
 				cursor: pointer;
 				transition: all 0.18s ease;
@@ -117,131 +119,149 @@ const PAGE_DESCRIPTION_EN =
 				color: #fff;
 				font-weight: 600;
 			}
+			.tab-count {
+				font-size: 0.85em;
+				opacity: 0.7;
+			}
 
-			/* ── 分类区块 ───────────────────────────── */
-			.cat-section {
-				margin-bottom: 3em;
+			/* ── 栏目一句话说明：紧凑，不抢视频的位置 ──── */
+			.cat-notes {
+				margin: 0 0 1.4em;
+				padding: 0.7em 0.9em;
+				border-left: 3px solid var(--accent);
+				background: rgba(var(--gray), 0.06);
+				border-radius: 0 8px 8px 0;
 			}
-			.cat-header {
-				margin-bottom: 1em;
+			.cat-note {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: baseline;
+				gap: 0.4em;
+				font-size: 0.88em;
+				line-height: 1.9;
+				color: rgb(var(--gray));
 			}
-			.cat-header h2 {
-				margin: 0 0 0.2em;
-				font-size: 1.35em;
+			.cat-note strong {
+				color: rgb(var(--black));
+				font-weight: 600;
+			}
+			.cat-note a {
+				color: var(--accent);
+				text-decoration: none;
+				white-space: nowrap;
+			}
+			.cat-note a:hover {
+				text-decoration: underline;
+			}
+			.note-sep {
+				color: rgba(var(--gray), 0.5);
+			}
+
+			/* ── 视频网格：首屏主角 ─────────────────── */
+			.video-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.5rem 1.4rem;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.video-grid li {
+				display: flex;
+				flex-direction: column;
+			}
+			.video-card {
+				display: block;
+				text-decoration: none;
+			}
+			.thumb-wrap {
+				position: relative;
+				border-radius: 10px;
+				overflow: hidden;
+				background: rgba(var(--gray), 0.12);
+				aspect-ratio: 16 / 9;
+			}
+			.thumb-wrap img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+				transition: transform 0.25s ease;
+			}
+			.video-card:hover .thumb-wrap img {
+				transform: scale(1.03);
+			}
+			.thumb-badge {
+				position: absolute;
+				left: 0.5em;
+				top: 0.5em;
+				padding: 0.15em 0.5em;
+				border-radius: 999px;
+				background: rgba(0, 0, 0, 0.62);
+				color: #fff;
+				font-size: 0.72em;
+				backdrop-filter: blur(2px);
+			}
+			.video-card h3 {
+				margin: 0.55em 0 0.25em;
+				font-size: 1em;
+				line-height: 1.35;
 				color: rgb(var(--black));
 			}
-			.cat-header .cat-name-en {
-				font-size: 0.75em;
-				font-weight: 400;
+			.video-meta {
+				display: flex;
+				align-items: center;
+				gap: 0.5em;
+				font-size: 0.82em;
 				color: rgb(var(--gray));
-				margin-left: 0.5em;
 			}
-			.cat-header p {
-				margin: 0;
+			.video-verdict {
+				margin: 0.35em 0 0;
+				font-size: 0.85em;
+				line-height: 1.55;
 				color: rgb(var(--gray));
-				font-size: 0.95em;
-				line-height: 1.6;
 			}
-			.cat-hub {
-				display: inline-block;
-				margin-top: 0.6em;
-				font-size: 0.9em;
-				color: var(--accent);
+			/* 直达平台：想绕开本站直接看的人不用多点一次 */
+			.platform-links {
+				display: flex;
+				gap: 0.7em;
+				margin-top: 0.45em;
+				font-size: 0.8em;
+			}
+			.platform-links a {
+				color: rgb(var(--gray));
 				text-decoration: none;
 				border-bottom: 1px solid transparent;
 			}
-			.cat-hub:hover {
+			.platform-links a:hover {
+				color: var(--accent);
 				border-bottom-color: var(--accent);
 			}
 
-			/* ── 介绍卡（每个分类的门面：banner + 概述） ── */
-			.intro-card {
-				display: block;
-				text-decoration: none;
-				border: 1px solid rgba(var(--gray), 0.22);
-				border-radius: 14px;
-				overflow: hidden;
-				background: rgb(var(--surface));
-				transition: box-shadow 0.2s ease, transform 0.2s ease;
-			}
-			.intro-card:hover {
-				box-shadow: 0 6px 20px rgba(var(--black), 8%);
-				transform: translateY(-2px);
-			}
-			.intro-card img {
-				width: 100%;
-				height: 260px;
-				object-fit: cover;
-				display: block;
-			}
-			.intro-card-body {
-				padding: 1em 1.2em 1.2em;
-			}
-			.intro-card-body h3 {
-				margin: 0 0 0.4em;
-				font-size: 1.1em;
-				color: rgb(var(--black));
-				line-height: 1.35;
-			}
-			.intro-card-body p {
-				margin: 0;
+			/* ── 空态 ──────────────────────────────── */
+			.empty-state {
+				padding: 2.5em 1em;
+				text-align: center;
+				border: 1px dashed rgba(var(--gray), 0.35);
+				border-radius: 12px;
 				color: rgb(var(--gray));
-				font-size: 0.92em;
-				line-height: 1.65;
+			}
+			.empty-state p {
+				margin: 0 0 0.5em;
+			}
+			.empty-state a {
+				color: var(--accent);
+				text-decoration: none;
+			}
+			.empty-state a:hover {
+				text-decoration: underline;
 			}
 
-			/* ── 该分类下的视频列表 ─────────────────── */
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 1.5em 0 0;
-				padding: 0;
+			@media (max-width: 900px) {
+				.video-grid { grid-template-columns: repeat(2, 1fr); }
 			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li img {
-				width: 100%;
-				height: 200px;
-				object-fit: cover;
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1.2;
-				font-size: 1.1rem;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-				font-size: 0.9em;
-			}
-			.verdict-line {
-				margin: 0.4em 0 0;
-				font-size: 0.85em;
-				color: rgb(var(--gray));
-			}
-			.empty-state {
-				padding: 1.5em 0 0;
-				color: rgb(var(--gray));
-				font-size: 0.9em;
-			}
-			@media (max-width: 720px) {
-				ul { gap: 0.5em; }
-				ul li { width: 100%; text-align: center; }
-				ul li img { height: 180px; }
-				.intro-card img { height: 190px; }
+			@media (max-width: 600px) {
+				.video-grid { grid-template-columns: 1fr; gap: 1.3rem; }
 			}
 		</style>
 	</head>
@@ -250,88 +270,113 @@ const PAGE_DESCRIPTION_EN =
 		<main>
 			<div class="page-intro">
 				<h1>🎬 视频</h1>
-				<p>三条内容线，B 站和 YouTube 双平台同步更新，全部免费。</p>
+				<span>B 站 / YouTube 同步更新，全部免费</span>
 			</div>
 
-			<!-- tab：默认「全部」，三个分类都展开；点某个 tab 只留那一块。
-			     用 <a href="?cat=..."> 而不是纯 button，保证没 JS 时链接依然可分享、
-			     也能被搜索引擎跟进；实际切换由下面的脚本在客户端拦截，不刷新页面。 -->
-			<div class="tab-bar" id="tab-bar">
-				<a href="/video/" class="tab-item is-active" data-tab="all">全部</a>
-				{CATEGORIES.map((cat) => (
+			<!-- tab：默认「全部」。写成 <a href="?cat=..."> 而不是纯 button，
+			     没 JS 时链接仍可分享、可被搜索引擎跟进；实际切换由下面的脚本
+			     在客户端拦截，不刷新页面。 -->
+			<div class="tab-bar">
+				<a href="/video/" class="tab-item is-active" data-tab="all">
+					全部<span class="tab-count">{videos.length}</span>
+				</a>
+				{catMeta.map((cat) => (
 					<a href={`/video/?cat=${cat.key}`} class="tab-item" data-tab={cat.key} rel="nofollow">
 						<span>{cat.icon}</span><span>{cat.name}</span>
+						<span class="tab-count">{cat.count}</span>
 					</a>
 				))}
 			</div>
 
-			{grouped.map((cat) => (
-				<section class="cat-section" data-cat={cat.key}>
-					<div class="cat-header">
-						<h2>
-							{cat.icon} {cat.name}
-							<span class="cat-name-en">{cat.nameEn}</span>
-						</h2>
-						<p>{cat.blurb}</p>
+			<!-- 栏目说明：一句话就够，详细的点进介绍文章看 -->
+			<div class="cat-notes">
+				{catMeta.map((cat) => (
+					<div class="cat-note" data-note={cat.key}>
+						<strong>{cat.icon} {cat.name}</strong>
+						<span>{cat.oneLiner}</span>
 						{'hub' in cat && cat.hub && (
-							<a class="cat-hub" href={cat.hub.href}>{cat.hub.label} →</a>
+							<>
+								<a href={cat.hub.href}>{cat.hub.label} →</a>
+								<span class="note-sep">·</span>
+							</>
 						)}
+						{cat.intro && <a href={`/video/${cat.intro.id}/`}>详细介绍 →</a>}
 					</div>
+				))}
+			</div>
 
-					{cat.intro && (
-						<a class="intro-card" href={`/video/${cat.intro.id}/`}>
-							{cat.intro.data.coverImage && (
-								<Image width={960} height={480} src={cat.intro.data.coverImage} alt="" />
-							)}
-							<div class="intro-card-body">
-								<h3>{cat.intro.data.title}</h3>
-								<p>{cat.intro.data.description}</p>
-							</div>
-						</a>
-					)}
-
-					{cat.videos.length > 0 ? (
-						<ul>
-							{cat.videos.map((video) => (
-								<li>
-									<a href={`/video/${video.id}/`}>
+			{videos.length === 0 ? (
+				<div class="empty-state">
+					<p>第一条视频还在路上。</p>
+					<p>
+						想知道这三条线各自要做什么，先看
+						{catMeta.filter((c) => c.intro).map((c, i) => (
+							<>
+								{i > 0 && <span class="note-sep"> · </span>}
+								<a href={`/video/${c.intro!.id}/`}>{c.icon} {c.name}</a>
+							</>
+						))}
+						的介绍。
+					</p>
+				</div>
+			) : (
+				<ul class="video-grid">
+					{videos.map((video) => {
+						const meta = CATEGORIES.find((c) => c.key === video.data.category);
+						return (
+							<li data-cat={video.data.category}>
+								<a class="video-card" href={`/video/${video.id}/`}>
+									<div class="thumb-wrap">
 										{video.data.coverImage && (
-											<Image width={720} height={360} src={video.data.coverImage} alt="" />
+											<Image width={640} height={360} src={video.data.coverImage} alt="" />
 										)}
-										<span class="date">
-											<FormattedDate date={video.data.pubDate} />
-										</span>
-										<h4 class="title">{video.data.title}</h4>
-										{video.data.verdict && <p class="verdict-line">💡 {video.data.verdict}</p>}
-									</a>
-								</li>
-							))}
-						</ul>
-					) : (
-						!cat.intro && <p class="empty-state">这条线的第一条视频还在路上。</p>
-					)}
-				</section>
-			))}
+										{meta && <span class="thumb-badge">{meta.icon} {meta.name}</span>}
+									</div>
+									<h3>{video.data.title}</h3>
+									<div class="video-meta">
+										<FormattedDate date={video.data.pubDate} />
+									</div>
+									{video.data.verdict && <p class="video-verdict">💡 {video.data.verdict}</p>}
+								</a>
+								{(video.data.bilibiliUrl || video.data.youtubeUrl) && (
+									<div class="platform-links">
+										{video.data.bilibiliUrl && (
+											<a href={video.data.bilibiliUrl} target="_blank" rel="noopener" title="Watch on Bilibili">📺 B 站</a>
+										)}
+										{video.data.youtubeUrl && (
+											<a href={video.data.youtubeUrl} target="_blank" rel="noopener" title="Watch on YouTube">▶️ YouTube</a>
+										)}
+									</div>
+								)}
+							</li>
+						);
+					})}
+				</ul>
+			)}
 		</main>
 		<Footer />
 		<script>
 			// tab 切换：纯客户端显示/隐藏，不刷新页面，同时把选择同步进 URL，
 			// 这样刷新或分享链接还能回到同一个 tab。
 			const tabs = Array.from(document.querySelectorAll<HTMLAnchorElement>('.tab-item'));
-			const sections = Array.from(document.querySelectorAll<HTMLElement>('.cat-section'));
+			const cards = Array.from(document.querySelectorAll<HTMLElement>('.video-grid li'));
+			const notes = Array.from(document.querySelectorAll<HTMLElement>('.cat-note'));
+			const knownKeys = new Set(notes.map((n) => n.dataset.note));
 
 			function applyTab(key: string, pushUrl: boolean) {
-				const known = key !== 'all' && sections.some((s) => s.dataset.cat === key);
-				const active = known ? key : 'all';
+				const active = knownKeys.has(key) ? key : 'all';
 				for (const tab of tabs) {
 					tab.classList.toggle('is-active', tab.dataset.tab === active);
 				}
-				for (const section of sections) {
-					section.hidden = active !== 'all' && section.dataset.cat !== active;
+				// 选了某条线就只留那条线的说明，不然三行说明会一直压着视频
+				for (const note of notes) {
+					note.hidden = active !== 'all' && note.dataset.note !== active;
+				}
+				for (const card of cards) {
+					card.hidden = active !== 'all' && card.dataset.cat !== active;
 				}
 				if (pushUrl) {
-					const url = active === 'all' ? '/video/' : `/video/?cat=${active}`;
-					history.replaceState(null, '', url);
+					history.replaceState(null, '', active === 'all' ? '/video/' : `/video/?cat=${active}`);
 				}
 			}
 

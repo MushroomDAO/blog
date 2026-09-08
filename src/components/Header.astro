@@ -73,7 +73,10 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	nav a {
 		padding: 1em 0.5em;
-		color: var(--black);
+		/* --black 是 RGB 三元组，必须包 rgb()；裸 var(--black) 是非法颜色值，
+		   整条声明会被丢弃，而 Astro scoped 的 `nav a` 特异性又高过 .ext-link，
+		   结果是外链的强调色被这条坏声明连带吃掉。 */
+		color: rgb(var(--black));
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
@@ -126,12 +129,15 @@ import HeaderLink from './HeaderLink.astro';
 	.rss-icon:hover {
 		border-bottom-color: #ff9500;
 	}
-	.ext-link {
+	/* 写成 nav a.ext-link 而不是 .ext-link：Astro 给每个选择器都加 scope 属性，
+	   `nav a` 编译后是 (0,2,2)，单个 .ext-link 只有 (0,2,0)，会被上面那条
+	   color 覆盖掉。 */
+	nav a.ext-link {
 		font-weight: 600;
-		color: rgb(var(--accent));
+		color: var(--accent);
 	}
-	.ext-link:hover {
-		border-bottom-color: rgb(var(--accent));
+	nav a.ext-link:hover {
+		border-bottom-color: var(--accent);
 	}
 	@media (max-width: 720px) {
 		/* let nav links wrap instead of overflowing the viewport

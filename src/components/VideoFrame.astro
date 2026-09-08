@@ -128,7 +128,7 @@ const youtubeId = ytMatch?.[1] ?? null;
 		color: rgb(var(--gray));
 	}
 	.video-fallback a {
-		color: rgb(var(--accent));
+		color: var(--accent);
 		font-weight: 600;
 	}
 	.video-source-switch {
@@ -141,14 +141,14 @@ const youtubeId = ytMatch?.[1] ?? null;
 	}
 	.switch-source-btn {
 		padding: 0.4em 0.9em;
-		border: 1px solid rgb(var(--accent));
+		border: 1px solid var(--accent);
 		border-radius: 16px;
 		background: transparent;
-		color: rgb(var(--accent));
+		color: var(--accent);
 		cursor: pointer;
 		font-size: 0.9em;
 	}
 	.switch-source-btn:hover {
-		background: rgba(var(--accent), 0.1);
+		background: rgba(var(--accent-rgb), 0.1);
 	}
 </style>

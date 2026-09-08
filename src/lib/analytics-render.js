@@ -197,12 +197,12 @@ const pct = (n, total) => (total ? ((n / total) * 100).toFixed(1) : '0.0');
 
 const REF_COLORS = {
 	direct: 'rgb(var(--gray))',
-	search: 'rgb(var(--accent))',
+	search: 'var(--accent)',
 	ecosystem: '#1f8f86',
 	ai: '#8a5fd1',
 	other: 'rgb(var(--gray-light))',
 };
-const DEVICE_COLORS = ['rgb(var(--accent))', '#1f8f86', 'rgb(var(--gray))', '#8a5fd1', '#c9982e', '#5b9bd5'];
+const DEVICE_COLORS = ['var(--accent)', '#1f8f86', 'rgb(var(--gray))', '#8a5fd1', '#c9982e', '#5b9bd5'];
 
 const countryName = (c, lang) => (lang === 'zh' ? c.name : c.nameEn || c.name);
 const pageTitle = (p, lang) => (lang === 'zh' ? p.title : p.titleEn || p.title);
@@ -273,13 +273,13 @@ export function renderTrend(data) {
 
 	return `<g class="trend-grid">${grid}</g>
     <defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="rgb(var(--accent))" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="rgb(var(--accent))" stop-opacity="0" />
+      <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
     </linearGradient></defs>
     <path d="${areaPv}" fill="url(#areaFill)" stroke="none" />
     <path d="${path('visits')}" fill="none" stroke="#1f8f86" stroke-width="1.6" stroke-opacity="0.85" />
-    <path d="${linePv}" fill="none" stroke="rgb(var(--accent))" stroke-width="2.25" />
-    <circle cx="${xAt(n - 1)}" cy="${yAt(data.daily[n - 1].pv)}" r="4.5" fill="rgb(var(--accent))" stroke="#fff" stroke-width="2" />
+    <path d="${linePv}" fill="none" stroke="var(--accent)" stroke-width="2.25" />
+    <circle cx="${xAt(n - 1)}" cy="${yAt(data.daily[n - 1].pv)}" r="4.5" fill="var(--accent)" stroke="#fff" stroke-width="2" />
     ${labels}`;
 }
 

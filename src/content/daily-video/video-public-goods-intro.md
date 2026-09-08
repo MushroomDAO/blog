@@ -1,14 +1,22 @@
 ---
-title: "公共物品：一个视频讲一个开源组件，免费、无许可、拿去就能用"
-titleEn: "Public Goods: One Video, One Open-Source Component — Free, Permissionless, Yours to Use"
-description: "Digital Commons 是 Mycelium 的立身之本：开源、免费、无许可，任何人都可以使用、修改和部署。这条线一期讲一个我们自己做的组件——它解决什么痛点、怎么装、怎么改、怎么和别的组件拼起来，以及为什么我们不打算靠它收你的钱。"
-descriptionEn: "Digital commons are what Mycelium is built on: open source, free, permissionless — anyone may use, modify, and deploy them. This line covers one component we built per episode: what pain it solves, how to install it, how to modify it, how it composes with others, and why we don't plan to charge you for it."
+title: "公共物品：Mycelium Protocol 的数字公共物品，一个视频讲一个开源组件"
+titleEn: "Public Goods: Mycelium Protocol's Digital Commons — One Video, One Open-Source Component"
+description: "这条线讲的是 MushroomDAO 出品、Mycelium Protocol 生态下的数字公共物品（Digital Commons）：开源、免费、无许可，任何人都可以使用、修改和部署。一期一个组件——它解决什么痛点、怎么装、怎么改、怎么和别的组件拼起来，以及为什么我们不打算靠它收你的钱。"
+descriptionEn: "This line covers the digital commons built by MushroomDAO within the Mycelium Protocol ecosystem: open source, free, permissionless — anyone may use, modify, and deploy them. One component per episode: what pain it solves, how to install it, how to modify it, how it composes with others, and why we don't plan to charge you for it."
 pubDate: 2026-09-08
 coverImage: "../../assets/images/video-public-goods-intro-banner.jpg"
 category: Public-Goods
 isIntro: true
-tags: ["数字公共物品", "开源", "Digital Commons", "组件", "Mycelium"]
+tags: ["数字公共物品", "开源", "Digital Commons", "组件", "Mycelium Protocol", "MushroomDAO"]
 ---
+
+## 谁做的
+
+这条线里的每一个组件，都出自 **MushroomDAO**——[Mycelium Protocol](https://github.com/AAStarCommunity/Brood) 的治理组织。
+
+Mycelium Protocol 是一个去中心化协作网络，使命是「构建让合作更快、更多样的去中心化协作网络」，而**数字公共物品（Digital Commons）是它的立身之本**：协议层的一切产出默认开源、免费、无许可。MushroomDAO 负责把这件事组织起来——研发公共物品、维护社区国库、引导需要的社区用上协议。
+
+所以这条线不是「某个团队顺手开源了几个工具」，而是一个协议组织的核心产出被逐个讲清楚。
 
 ## 什么是数字公共物品
 
@@ -40,13 +48,21 @@ tags: ["数字公共物品", "开源", "Digital Commons", "组件", "Mycelium"]
 
 核心组件对个人和小社区**永久免费**，这是协议层的承诺，不是限时优惠。
 
-我们确实有商业实体做企业定制和托管服务，但那是另一件事——开源的那份不会因此被阉割或延迟发布。完整的双生模型（开源组织做公共物品、商业收入按比例回流社区国库）写在 [Mycelium 的使命文档](https://github.com/AAStarCommunity/Brood)里，公开可查。
+MushroomDAO 确实有对应的商业实体做企业定制和托管服务，但那是另一件事——开源的那份不会因此被阉割或延迟发布。Mycelium Protocol 的双生模型（开源组织做公共物品、商业收入按固定比例回流由 Gnosis Safe 多签管理的社区国库、全链上透明）写在 [Mycelium 的使命文档](https://github.com/AAStarCommunity/Brood)里，公开可查。
 
 ## 和另外两条线的关系
 
 这条线是另外两条的**出口**：[🧠 问题思考](/video/?cat=Problem-Thinking)确认了真问题，[🔬 技术实验](/video/?cat=Tech-Experiment)验证了现成方案不够，那么缺的那块由我们补上，然后开源出去。
 
 <!--EN-->
+
+## Who Builds These
+
+Every component in this line comes from **MushroomDAO** — the governing organization of [Mycelium Protocol](https://github.com/AAStarCommunity/Brood).
+
+Mycelium Protocol is a decentralized collaboration network whose mission is to "make cooperation faster and more diverse," and **digital commons are what it stands on**: everything the protocol layer produces is open source, free, and permissionless by default. MushroomDAO is what organizes that work — building the public goods, maintaining the community treasury, and helping communities actually adopt the protocol.
+
+So this line isn't "some team open-sourced a few tools on the side." It's a protocol organization's core output, explained one piece at a time.
 
 ## What a Digital Public Good Is
 
@@ -78,7 +94,7 @@ The cost is a bit more assembly on your side. The payoff is that no piece is un-
 
 Core components are **free forever** for individuals and small communities. That's a protocol-level commitment, not a limited-time promotion.
 
-We do run a commercial entity for enterprise customization and hosting, but that's a separate matter — the open-source version doesn't get crippled or delayed because of it. The full dual model (an open-source organization producing public goods, with a fixed share of commercial revenue flowing back to the community treasury) is documented publicly in [Mycelium's mission docs](https://github.com/AAStarCommunity/Brood).
+MushroomDAO does run a matching commercial entity for enterprise customization and hosting, but that's a separate matter — the open-source version doesn't get crippled or delayed because of it. Mycelium Protocol's dual model (an open-source organization producing public goods, with a fixed share of commercial revenue flowing back to a Gnosis Safe multisig community treasury, fully transparent on-chain) is documented publicly in [Mycelium's mission docs](https://github.com/AAStarCommunity/Brood).
 
 ## How It Relates to the Other Two Lines
 

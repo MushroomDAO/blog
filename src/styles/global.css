@@ -6,6 +6,9 @@
 
 :root {
 	--accent: #2337ff;
+	/* 同一个强调色的 RGB 三元组形式，专给 rgba(var(--accent-rgb), <alpha>) 用；
+	   --accent 是 hex，塞进 rgb()/rgba() 会让整条声明失效。两者必须同步改。 */
+	--accent-rgb: 35, 55, 255;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
@@ -25,6 +28,7 @@
    默认永远是亮色（light），这是产品要求，不是遗漏。 */
 :root[data-theme="dark"] {
 	--accent: #7c93ff;
+	--accent-rgb: 124, 147, 255;
 	--accent-dark: #4a63d6;
 	--black: 235, 238, 245;
 	--gray: 150, 165, 190;
