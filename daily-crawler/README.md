@@ -23,6 +23,7 @@ This directory turns daily research into a product-and-content pipeline:
 - [2026-09-05](./2026-09-05.md) — Local AI compute pools, agent-native SaaS via MCP, AI business continuity, business radar, Thailand subsidy-backed GTM
 - [2026-09-06](./2026-09-06.md) — Human exception learning loops, isolated Agent execution boxes, delegated Agent spending policy, unified SME AI command center
 - [2026-09-07](./2026-09-07.md) — Productized AI blueprints, proof-bearing finance agents, chat-channel distribution, vertical model routing, OpenClaw lifecycle operations
+- [2026-09-08](./2026-09-08.md) — Bounded Agent Work Units, AI labor economics, living-data loops, transaction intent contracts, creative-tool control planes
 
 ## Standard Review Lens
 
