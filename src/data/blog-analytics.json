@@ -1,28 +1,23 @@
 {
-  "generatedAt": "2026-09-07T14:00:02Z",
+  "generatedAt": "2026-09-08T14:00:01Z",
   "period": {
-    "start": "2026-08-08",
-    "end": "2026-09-07"
+    "start": "2026-08-09",
+    "end": "2026-09-08"
   },
   "totals": {
-    "pageviews": 14100,
+    "pageviews": 14300,
     "visits": 13600,
     "bots": 0
   },
   "last7": {
-    "pv": 3000,
-    "visits": 2700
+    "pv": 2900,
+    "visits": 2400
   },
   "prior7": {
-    "pv": 4000,
-    "visits": 3900
+    "pv": 4200,
+    "visits": 4200
   },
   "daily": [
-    {
-      "date": "08-09",
-      "pv": 300,
-      "visits": 300
-    },
     {
       "date": "08-10",
       "pv": 400,
@@ -160,6 +155,11 @@
     },
     {
       "date": "09-07",
+      "pv": 500,
+      "visits": 300
+    },
+    {
+      "date": "09-08",
       "pv": 400,
       "visits": 200
     }
@@ -208,159 +208,106 @@
   ],
   "countryTotal": 12000,
   "referers": {
-    "direct": 7770,
-    "search": 3370,
-    "ecosystem": 920,
-    "ai": 50,
-    "other": 90
+    "direct": 9200,
+    "search": 4200,
+    "ecosystem": 700,
+    "ai": 100,
+    "other": 100
   },
   "pages": [
     {
-      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
-      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
-      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 300,
-      "visits": 300
+      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
+      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
+      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
+      "pv": 2000,
+      "visits": 2000
     },
     {
-      "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
-      "titleEn": "M1 Max 64GB Local AI Complete Guide: Qwen3 Model Selection, Memory Management & Multi-Model Scheduling",
-      "path": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
-      "pv": 300,
-      "visits": 300
+      "title": "HarnessRouter：单容器自托管多 AI 编码 Agent，UHP 统一协议让 Claude Code / Codex / Hermes 共用一套 API",
+      "titleEn": "harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code",
+      "path": "/blog/harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code/",
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
-      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
-      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
-      "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
-      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
-      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
-      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 300,
-      "visits": 200
-    },
-    {
-      "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
-      "titleEn": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
-      "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面",
-      "titleEn": "HugAgentOS: ZJU's Enterprise AgentOS Using Domain Ontology as the Agent Reasoning Control Plane",
-      "path": "/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
-      "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
-      "path": "/blog/hitchhikers-guide-agentic-ai-book/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画",
-      "titleEn": "juju-content-illustrations: An Agent Skill That Turns Articles into Juju-Style Hand-Drawn Illustrations",
-      "path": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
-      "pv": 200,
-      "visits": 200
+      "title": "GameFactory-3A：让编程 Agent 直接生成 3A 游戏资产，UE5/Blender/Unity/three.js 全支持，Apache 2.0 开源",
+      "titleEn": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+      "path": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "title": "用 AI 给文章配图：归藏 Social Card Skill 完整指南",
       "titleEn": "AI Illustrations for Your Articles: Complete Guizang Social Card Skill Guide",
       "path": "/blog/guizang-social-card-illustration-guide/",
-      "pv": 200,
-      "visits": 200
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
-      "titleEn": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
-      "path": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
-      "pv": 200,
-      "visits": 200
+      "title": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构",
+      "titleEn": "Agency Agents: 50+ Specialized AI Roles in an Open-Source, Multi-Model Agency",
+      "path": "/blog/agency-agents-opensource-multi-model/",
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "title": "FDE 实战手册：大企业 vs 中小企业，前三个月该怎么干",
-      "titleEn": "applied-compute-specific-intelligence-enterprise-ai-workflow-training",
-      "path": "/blog/applied-compute-specific-intelligence-enterprise-ai-workflow-training/",
-      "pv": 200,
-      "visits": 100
+      "title": "browser-harness：一个会自己写代码的浏览器 Agent 工具——每次运行都在让自己变聪明",
+      "titleEn": "browser-harness-self-healing-cdp-agent-skill-chrome-automation",
+      "path": "/blog/browser-harness-self-healing-cdp-agent-skill-chrome-automation/",
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
-      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
-      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
-      "pv": 200,
-      "visits": 200
+      "title": "space/shibdao.eth",
+      "titleEn": "space/shibdao.eth",
+      "path": "/space/shibdao.eth",
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "title": "Ploy：Webflow 联合创始人的第三次创业——用 AI Agent 把网站变成增长引擎",
-      "titleEn": "Ploy: The Webflow Co-Founder's Third Startup Turns Websites into Growth Engines with AI Agents",
-      "path": "/blog/ploy-ai-webflow-founder-website-growth-engine-27m/",
-      "pv": 200,
-      "visits": 200
+      "title": "像上帝一样掌控 AI 小镇：GOD 项目本地搭建完全指南",
+      "titleEn": "Be a God to an Agent Town: Complete Local Setup Guide for the GOD Project",
+      "path": "/blog/god-agent-town-setup-guide/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "精准定阶：当前全域 Agent 生态 = 早期智人初创阶段",
+      "titleEn": "Precise Taxonomy: The Current Agent Ecosystem Is at the Early Homo Sapiens Stage",
+      "path": "/blog/agent-ecosystem-early-homo-sapiens-stage/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
+      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "终端界的 Zed：OxideTerm 用 GPUI + 纯 Rust SSH 把 iTerm2、Termius 和 VSCode Remote 做成了一个",
+      "titleEn": "The Zed of Terminals: OxideTerm Merges iTerm2, Termius, and VSCode Remote Into One with GPUI and Pure-Rust SSH",
+      "path": "/blog/oxideterm-ai-native-terminal-rust-gpui/",
+      "pv": 1000,
+      "visits": 1000
     }
   ],
   "devices": [
     {
       "label": "desktop",
-      "count": 11610
+      "count": 13700
     },
     {
       "label": "mobile",
-      "count": 590
+      "count": 600
     }
   ],
-  "os": [
-    {
-      "label": "Windows",
-      "count": 10600
-    },
-    {
-      "label": "MacOSX",
-      "count": 1800
-    },
-    {
-      "label": "Unknown",
-      "count": 900
-    },
-    {
-      "label": "iOS",
-      "count": 300
-    },
-    {
-      "label": "Android",
-      "count": 300
-    },
-    {
-      "label": "Linux",
-      "count": 200
-    }
-  ],
+  "os": [],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 8820
+      "count": 8980
     },
     {
       "label": "Edge",
@@ -368,11 +315,11 @@
     },
     {
       "label": "Unknown",
-      "count": 680
+      "count": 690
     },
     {
       "label": "Safari",
-      "count": 260
+      "count": 290
     },
     {
       "label": "ChromeMobile",
@@ -380,15 +327,15 @@
     },
     {
       "label": "MobileSafari",
-      "count": 130
-    },
-    {
-      "label": "Firefox",
       "count": 110
     },
     {
+      "label": "Firefox",
+      "count": 100
+    },
+    {
       "label": "ChromeMobileWebview",
-      "count": 70
+      "count": 50
     },
     {
       "label": "ChromeHeadless",
