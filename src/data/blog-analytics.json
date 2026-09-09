@@ -1,167 +1,67 @@
 {
-  "generatedAt": "2026-09-08T14:00:01Z",
+  "generatedAt": "2026-09-09T14:00:01Z",
   "period": {
-    "start": "2026-08-09",
-    "end": "2026-09-08"
+    "start": "2026-08-10",
+    "end": "2026-09-09"
   },
   "totals": {
-    "pageviews": 14300,
-    "visits": 13600,
-    "bots": 0
+    "pageviews": 12000,
+    "visits": 12000,
+    "bots": 20
   },
   "last7": {
-    "pv": 2900,
-    "visits": 2400
+    "pv": 9000,
+    "visits": 9000
   },
   "prior7": {
-    "pv": 4200,
-    "visits": 4200
+    "pv": 3000,
+    "visits": 3000
   },
   "daily": [
     {
-      "date": "08-10",
-      "pv": 400,
-      "visits": 400
-    },
-    {
-      "date": "08-11",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "date": "08-12",
-      "pv": 600,
-      "visits": 600
-    },
-    {
-      "date": "08-13",
-      "pv": 800,
-      "visits": 800
-    },
-    {
-      "date": "08-14",
-      "pv": 500,
-      "visits": 500
-    },
-    {
       "date": "08-15",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "date": "08-16",
-      "pv": 700,
-      "visits": 600
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "08-17",
-      "pv": 700,
-      "visits": 700
-    },
-    {
-      "date": "08-18",
-      "pv": 500,
-      "visits": 500
-    },
-    {
-      "date": "08-19",
-      "pv": 600,
-      "visits": 600
-    },
-    {
-      "date": "08-20",
-      "pv": 500,
-      "visits": 500
-    },
-    {
-      "date": "08-21",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "date": "08-23",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "date": "08-24",
-      "pv": 500,
-      "visits": 500
-    },
-    {
-      "date": "08-25",
-      "pv": 400,
-      "visits": 300
-    },
-    {
-      "date": "08-26",
-      "pv": 500,
-      "visits": 500
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "date": "08-27",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "date": "08-28",
-      "pv": 400,
-      "visits": 400
-    },
-    {
-      "date": "08-29",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "date": "08-30",
-      "pv": 400,
-      "visits": 400
-    },
-    {
-      "date": "08-31",
       "pv": 1000,
       "visits": 1000
     },
     {
-      "date": "09-01",
-      "pv": 600,
-      "visits": 600
+      "date": "08-30",
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "date": "09-02",
-      "pv": 500,
-      "visits": 500
+      "date": "08-31",
+      "pv": 2000,
+      "visits": 2000
+    },
+    {
+      "date": "09-01",
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-03",
-      "pv": 600,
-      "visits": 500
-    },
-    {
-      "date": "09-04",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "date": "09-05",
-      "pv": 300,
-      "visits": 300
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-06",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "date": "09-07",
-      "pv": 500,
-      "visits": 300
-    },
-    {
-      "date": "09-08",
-      "pv": 400,
-      "visits": 200
+      "pv": 1000,
+      "visits": 1000
     }
   ],
   "countries": [
@@ -208,122 +108,175 @@
   ],
   "countryTotal": 12000,
   "referers": {
-    "direct": 9200,
-    "search": 4200,
-    "ecosystem": 700,
-    "ai": 100,
-    "other": 100
+    "direct": 8070,
+    "search": 3350,
+    "ecosystem": 960,
+    "ai": 50,
+    "other": 90
   },
   "pages": [
     {
-      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
-      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
-      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
-      "pv": 2000,
-      "visits": 2000
+      "title": "Voicebox：把 ElevenLabs 和 WisprFlow 装进一个本地运行的开源 App",
+      "titleEn": "Voicebox: Local-First AI Voice Studio — ElevenLabs Output + WisprFlow Input in One Open-Source App",
+      "path": "/blog/voicebox-local-ai-voice-studio-elevenlabs-alternative/",
+      "pv": 300,
+      "visits": 300
     },
     {
-      "title": "HarnessRouter：单容器自托管多 AI 编码 Agent，UHP 统一协议让 Claude Code / Codex / Hermes 共用一套 API",
-      "titleEn": "harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code",
-      "path": "/blog/harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code/",
-      "pv": 1000,
-      "visits": 1000
+      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
+      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
+      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
+      "pv": 300,
+      "visits": 300
     },
     {
-      "title": "GameFactory-3A：让编程 Agent 直接生成 3A 游戏资产，UE5/Blender/Unity/three.js 全支持，Apache 2.0 开源",
-      "titleEn": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
-      "path": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
-      "pv": 1000,
-      "visits": 1000
+      "title": "首页",
+      "titleEn": "Home",
+      "path": "/",
+      "pv": 300,
+      "visits": 200
     },
     {
-      "title": "用 AI 给文章配图：归藏 Social Card Skill 完整指南",
-      "titleEn": "AI Illustrations for Your Articles: Complete Guizang Social Card Skill Guide",
-      "path": "/blog/guizang-social-card-illustration-guide/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构",
-      "titleEn": "Agency Agents: 50+ Specialized AI Roles in an Open-Source, Multi-Model Agency",
-      "path": "/blog/agency-agents-opensource-multi-model/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "browser-harness：一个会自己写代码的浏览器 Agent 工具——每次运行都在让自己变聪明",
-      "titleEn": "browser-harness-self-healing-cdp-agent-skill-chrome-automation",
-      "path": "/blog/browser-harness-self-healing-cdp-agent-skill-chrome-automation/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "space/shibdao.eth",
-      "titleEn": "space/shibdao.eth",
-      "path": "/space/shibdao.eth",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "像上帝一样掌控 AI 小镇：GOD 项目本地搭建完全指南",
-      "titleEn": "Be a God to an Agent Town: Complete Local Setup Guide for the GOD Project",
-      "path": "/blog/god-agent-town-setup-guide/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "精准定阶：当前全域 Agent 生态 = 早期智人初创阶段",
-      "titleEn": "Precise Taxonomy: The Current Agent Ecosystem Is at the Early Homo Sapiens Stage",
-      "path": "/blog/agent-ecosystem-early-homo-sapiens-stage/",
-      "pv": 1000,
-      "visits": 1000
+      "title": "HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面",
+      "titleEn": "HugAgentOS: ZJU's Enterprise AgentOS Using Domain Ontology as the Agent Reasoning Control Plane",
+      "path": "/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
+      "pv": 300,
+      "visits": 300
     },
     {
       "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
       "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
       "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 300,
+      "visits": 300
     },
     {
-      "title": "终端界的 Zed：OxideTerm 用 GPUI + 纯 Rust SSH 把 iTerm2、Termius 和 VSCode Remote 做成了一个",
-      "titleEn": "The Zed of Terminals: OxideTerm Merges iTerm2, Termius, and VSCode Remote Into One with GPUI and Pure-Rust SSH",
-      "path": "/blog/oxideterm-ai-native-terminal-rust-gpui/",
-      "pv": 1000,
-      "visits": 1000
+      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
+      "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
+      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
+      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
+      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
+      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
+      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
+      "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
+      "path": "/blog/hitchhikers-guide-agentic-ai-book/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画",
+      "titleEn": "juju-content-illustrations: An Agent Skill That Turns Articles into Juju-Style Hand-Drawn Illustrations",
+      "path": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "用 AI 给文章配图：归藏 Social Card Skill 完整指南",
+      "titleEn": "AI Illustrations for Your Articles: Complete Guizang Social Card Skill Guide",
+      "path": "/blog/guizang-social-card-illustration-guide/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
+      "titleEn": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
+      "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "FDE 实战手册：大企业 vs 中小企业，前三个月该怎么干",
+      "titleEn": "applied-compute-specific-intelligence-enterprise-ai-workflow-training",
+      "path": "/blog/applied-compute-specific-intelligence-enterprise-ai-workflow-training/",
+      "pv": 200,
+      "visits": 100
+    },
+    {
+      "title": "Ponytail：把「最懒的资深工程师」塞进你的 AI Agent——54% 代码减少，100% 安全",
+      "titleEn": "Ponytail: Put the Laziest Senior Engineer Inside Your AI Agent — 54% Less Code, 100% Safe",
+      "path": "/blog/ponytail-lazy-senior-dev-ai-agent-simplicity-skill/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
+      "titleEn": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
+      "path": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
+      "pv": 200,
+      "visits": 200
     }
   ],
   "devices": [
     {
       "label": "desktop",
-      "count": 13700
+      "count": 11990
     },
     {
       "label": "mobile",
-      "count": 600
+      "count": 530
     }
   ],
-  "os": [],
-  "browsers": [
+  "os": [
     {
-      "label": "Chrome",
-      "count": 8980
+      "label": "Windows",
+      "count": 9370
     },
     {
-      "label": "Edge",
-      "count": 1920
+      "label": "MacOSX",
+      "count": 1760
     },
     {
       "label": "Unknown",
-      "count": 690
+      "count": 660
+    },
+    {
+      "label": "Linux",
+      "count": 370
+    },
+    {
+      "label": "Android",
+      "count": 240
+    },
+    {
+      "label": "iOS",
+      "count": 120
+    }
+  ],
+  "browsers": [
+    {
+      "label": "Chrome",
+      "count": 9170
+    },
+    {
+      "label": "Edge",
+      "count": 1900
+    },
+    {
+      "label": "Unknown",
+      "count": 660
     },
     {
       "label": "Safari",
-      "count": 290
+      "count": 310
     },
     {
       "label": "ChromeMobile",
-      "count": 190
+      "count": 200
     },
     {
       "label": "MobileSafari",
@@ -335,11 +288,15 @@
     },
     {
       "label": "ChromeMobileWebview",
-      "count": 50
+      "count": 40
     },
     {
       "label": "ChromeHeadless",
       "count": 20
+    },
+    {
+      "label": "ChromeDerivative",
+      "count": 10
     }
   ]
 }
