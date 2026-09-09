@@ -59,7 +59,8 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	h2 {
 		margin: 0;
-		font-size: 1em;
+		/* 整体降一号：手机上站名太长会把导航挤到第二行，缩一点能多留一行空间 */
+		font-size: 0.9em;
 	}
 
 	h2 a,
@@ -72,7 +73,8 @@ import HeaderLink from './HeaderLink.astro';
 		justify-content: space-between;
 	}
 	nav a {
-		padding: 1em 0.5em;
+		padding: 0.85em 0.45em;
+		font-size: 0.9em;
 		/* --black 是 RGB 三元组，必须包 rgb()；裸 var(--black) 是非法颜色值，
 		   整条声明会被丢弃，而 Astro scoped 的 `nav a` 特异性又高过 .ext-link，
 		   结果是外链的强调色被这条坏声明连带吃掉。 */
@@ -93,8 +95,8 @@ import HeaderLink from './HeaderLink.astro';
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		width: 2.2em;
-		height: 2.2em;
+		width: 2em;
+		height: 2em;
 		padding: 0;
 		border: none;
 		border-radius: 50%;
@@ -121,8 +123,8 @@ import HeaderLink from './HeaderLink.astro';
 		gap: 0.5em;
 	}
 	.rss-icon {
-		padding: 1em 0.5em;
-		font-size: 1.1em;
+		padding: 0.85em 0.45em;
+		font-size: 1em;
 		text-decoration: none;
 		border-bottom: 4px solid transparent;
 	}
@@ -144,7 +146,8 @@ import HeaderLink from './HeaderLink.astro';
 		   (was a single non-wrapping flex row → horizontal page scroll on phones) */
 		nav { flex-wrap: wrap; }
 		.internal-links { flex-wrap: wrap; gap: 0.1em 0.4em; }
-		nav a { padding: 0.5em 0.4em; }
-		.rss-icon { padding: 0.5em 0.4em; }
+		nav a { padding: 0.45em 0.35em; font-size: 0.85em; }
+		.rss-icon { padding: 0.45em 0.35em; }
+		h2 { font-size: 0.85em; }
 	}
 </style>

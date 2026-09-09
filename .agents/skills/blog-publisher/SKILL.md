@@ -70,6 +70,10 @@ Return:
 8. Run SEO/GEO checks before deploy.
 9. Create the WeChat draft only after the final slug and Blog URL are confirmed.
 10. Do not create duplicate routes for the same article.
+11. **Run the duplicate check BEFORE writing a single word.** See "Step 0" below. A topic
+    that already exists on any of the three ledgers is not a new article.
+12. **After publishing, write the topic into MemPalace.** The ledger is only useful if it
+    is kept current; skipping this step is what made the 2026-09-09 duplicate possible.
 
 Allowed categories:
 - `Tech-News` default
@@ -136,6 +140,50 @@ English section, at the end:
 
 > © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
 ```
+
+## Step 0 (MANDATORY): Duplicate Check Before Writing
+
+```bash
+set -a; source .env; set +a
+node .agents/skills/blog-publisher/check-duplicate.cjs "<一手源 URL>" "<实体名>"
+```
+
+Exit code 0 = clear to write. Exit code 1 = stop and read the findings.
+
+**Three ledgers, all of them, every time:**
+
+| Ledger | What it is | Why it alone is not enough |
+|---|---|---|
+| `src/content/blog/` | Published articles | The blog step can fail after WeChat succeeded — then this ledger is silently missing an entry |
+| WeChat draft box | Queried live via `draft/batchget` | Local `pipeline/m2/output/` only records drafts made on *this* machine |
+| MemPalace | `~/.mempalace/palace/chroma.sqlite3` | Only useful if rule 12 is actually followed |
+
+**Known gap:** this account has no permission for `freepublish/batchget` (returns
+`48001 api unauthorized`), so **articles already mass-sent are invisible to the WeChat
+query** — they leave the draft box when published. The draft count dropping (11 → 6 was
+observed on 2026-09-09) means those articles still exist, just not where the API can see
+them. MemPalace is the only ledger that survives this, which is exactly why rule 12
+(write the topic into MemPalace after publishing) is not optional.
+
+**Query with BOTH forms**, because they catch different failures:
+
+- **the primary source URL** — catches "same repo, different title"
+- **the salient entity name** (e.g. `MiniCPM5-2B`, `goinfer`) — catches "same subject, different URL"
+
+The 2026-09-09 incident needed the second form: the earlier article cited
+`github.com/OpenBMB/MiniCPM` while the new one cited
+`huggingface.co/openbmb/MiniCPM5-2B`. Different URLs, same model. Title similarity alone
+also missed it — "MiniCPM5 + Meshy：…双开" scores under the threshold against
+"2B 打赢 4B：…". Only scanning body text for the entity name caught it.
+
+**Reading the result:**
+
+- Hit on all three ledgers → already published, do not write it again
+- Hit on WeChat but NOT blog → **the blog step failed last time**; backfill that article,
+  do not write a fresh one
+- Hit on blog but NOT MemPalace → the article exists, only the ledger entry is missing;
+  add the MemPalace drawer
+- No hit anywhere → proceed
 
 ## Fast Path: Existing Topic Or Short Article
 
