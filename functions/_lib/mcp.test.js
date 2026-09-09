@@ -82,6 +82,32 @@ test('tools/call search_posts 按关键词匹配正文，且不泄露 bodyMarkdo
 	assert.equal(payload.results[0].bodyMarkdown, undefined);
 });
 
+test('tools/call search_posts 参数名写错时报错，不能静默返回全部文章', async () => {
+	// 回归测试：以前传 q 而不是 query，query 会是 undefined，searchPosts 放行
+	// 全部文章并返回最近 20 篇。调用方看到「有结果但没有我要的那篇」，会误判
+	// 成索引没覆盖那篇文章。必须明确报错。
+	const res = await handleJsonRpc(
+		{ jsonrpc: '2.0', id: 60, method: 'tools/call', params: { name: 'search_posts', arguments: { q: 'MCP 协议' } } },
+		loadFixturePosts,
+	);
+	assert.equal(res.result.isError, true);
+	const payload = JSON.parse(res.result.content[0].text);
+	assert.match(payload.error, /unknown argument/);
+	// 错误信息要直接给出正确的参数名，别让调用方自己猜
+	assert.match(payload.error, /did you mean "query"/);
+	assert.equal(payload.results, undefined);
+});
+
+test('tools/call search_posts 无参数仍是合法调用（列出最近的）', async () => {
+	const res = await handleJsonRpc(
+		{ jsonrpc: '2.0', id: 61, method: 'tools/call', params: { name: 'search_posts', arguments: {} } },
+		loadFixturePosts,
+	);
+	assert.equal(res.result.isError, undefined);
+	const payload = JSON.parse(res.result.content[0].text);
+	assert.ok(payload.results.length > 0);
+});
+
 test('tools/call search_posts 按 tag 过滤', async () => {
 	const res = await handleJsonRpc(
 		{ jsonrpc: '2.0', id: 7, method: 'tools/call', params: { name: 'search_posts', arguments: { tag: 'other' } } },

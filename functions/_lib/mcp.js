@@ -118,7 +118,35 @@ function listRecent(posts, { limit } = {}) {
 		.map(({ bodyMarkdown, ...summary }) => summary);
 }
 
+// 参数名写错时不能装作没事。搜索的 query 缺失会让 searchPosts 放行全部文章、
+// 返回最近 20 篇，调用方看到「有 20 条结果但没有我要的那篇」，会误判成索引没
+// 覆盖那篇文章——2026-09-09 就是这么被误判的（调用方传了 q 而不是 query）。
+// 未知参数一律报错，并在错误里点名最可能想写的那个。
+const TOOL_ARG_NAMES = {
+	search_posts: ['query', 'tag', 'category', 'limit'],
+	get_post: ['id'],
+	list_recent: ['limit'],
+};
+
+function unknownArgError(name, args) {
+	const allowed = TOOL_ARG_NAMES[name];
+	if (!allowed || !args || typeof args !== 'object') return null;
+	const unknown = Object.keys(args).filter((k) => !allowed.includes(k));
+	if (!unknown.length) return null;
+	// q → query 这种最常见的缩写，直接把正确的名字给出来
+	const hint = unknown
+		.map((k) => {
+			const guess = allowed.find((a) => a.startsWith(k) || k.startsWith(a));
+			return guess ? `${k} (did you mean "${guess}"?)` : k;
+		})
+		.join(', ');
+	return `unknown argument(s) for ${name}: ${hint}. allowed: ${allowed.join(', ')}`;
+}
+
 function callTool(posts, name, args) {
+	const argError = unknownArgError(name, args);
+	if (argError) return { ...toolResultText({ error: argError }), isError: true };
+
 	switch (name) {
 		case 'search_posts':
 			return toolResultText({ results: searchPosts(posts, args) });

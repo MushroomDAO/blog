@@ -33,5 +33,30 @@ echo "☁️  部署到 Cloudflare Pages..."
 CLOUDFLARE_ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-7bf23342f21baa5ebfc7bc7b74f5a1f2}" \
   npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true
 
+# 4. 语义搜索索引
+# deploy.sh 之前只管构建和上传，不碰索引——于是走这条路发的文章会「网页能打开、
+# 关键词搜得到、语义搜索搜不到」。2026-09-09 那批 7 篇就是这么漏的。
+# 正规发布流程 scripts/publish-blog.sh 第 4.7 步会按 slug 增量索引；这里作为
+# 兜底，对比 dist 与索引 manifest，把缺的补上。
+echo "🔍 检查语义搜索索引..."
+if [ "${BLOG_SKIP_INDEX:-}" = "1" ]; then
+  echo "  ⏭  skipped (BLOG_SKIP_INDEX=1)"
+elif [ -z "${CLOUDFLARE_REGISTRAR_TOKEN:-}" ] || [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
+  echo "  ⚠️  缺 CLOUDFLARE_REGISTRAR_TOKEN / CLOUDFLARE_ACCOUNT_ID，跳过索引。"
+  echo "     文章已上线但语义搜索搜不到——先 source .env 再重跑，或 BLOG_SKIP_INDEX=1 静音。"
+elif [ ! -f semantic-search/scripts/incremental-index.py ]; then
+  echo "  ⚠️  找不到 semantic-search/scripts/incremental-index.py，跳过。"
+else
+  # 不带 --slug 就是全库（脚本自己打印 "full corpus"）。它按 manifest 比对内容
+  # 哈希，只对真正变了的文章 embed+upsert；没变的只做只读 KV GET，免费。
+  # 注意：这个脚本没有 --all 也没有 --help，多给一个参数会直接 exit 2。
+  if python3 semantic-search/scripts/incremental-index.py --upsert; then
+    echo "  ✓ 索引已同步"
+  else
+    echo "  ⚠️  索引更新失败——文章已上线但可能暂时搜不到。"
+    echo "     手动补跑：python3 semantic-search/scripts/incremental-index.py --slug <slug> --upsert"
+  fi
+fi
+
 echo "✅ 部署完成！"
 echo "🌐 访问: https://blog.mushroom.cv"
