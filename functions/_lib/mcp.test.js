@@ -82,6 +82,19 @@ test('tools/call search_posts 按关键词匹配正文，且不泄露 bodyMarkdo
 	assert.equal(payload.results[0].bodyMarkdown, undefined);
 });
 
+test('tools/call search_posts 多词查询按 AND 匹配，不要求连续出现', async () => {
+	// 回归测试：以前是整串 haystack.includes(query)，「长任务 Agent 状态内核」
+	// 这种自然查询必然 0 条（正文里没有这个连续子串），调用方会误判成索引缺失。
+	// 现在切词后每个词都要出现即可，顺序和相邻性都不要求。
+	const res = await handleJsonRpc(
+		{ jsonrpc: '2.0', id: 62, method: 'tools/call', params: { name: 'search_posts', arguments: { query: '协议 MCP' } } },
+		loadFixturePosts,
+	);
+	const payload = JSON.parse(res.result.content[0].text);
+	assert.equal(payload.results.length, 1);
+	assert.equal(payload.results[0].id, 'post-a');
+});
+
 test('tools/call search_posts 参数名写错时报错，不能静默返回全部文章', async () => {
 	// 回归测试：以前传 q 而不是 query，query 会是 undefined，searchPosts 放行
 	// 全部文章并返回最近 20 篇。调用方看到「有结果但没有我要的那篇」，会误判

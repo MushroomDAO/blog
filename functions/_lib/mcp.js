@@ -92,15 +92,22 @@ function searchPosts(posts, { query, tag, category, limit } = {}) {
 	const normalizedQuery = typeof query === 'string' ? query.trim().toLowerCase() : '';
 	const max = clampLimit(limit, MAX_SEARCH_RESULTS, MAX_SEARCH_RESULTS);
 
+	// 按空白切成词，每个词都要出现（AND），不要求连续。
+	// 以前是整串 includes()，于是「长任务 Agent 状态内核」这种自然查询必然
+	// 返回 0 条——正文里不会有这个连续子串——调用方会误判成索引里没有这篇。
+	// 单词查询的行为不变。中文不分词，一个中文短语仍按整体匹配，这是有意的：
+	// 这里是关键词兜底，真正的语义检索在 /api/search。
+	const terms = normalizedQuery.split(/\s+/).filter(Boolean);
+
 	const matches = sortByPubDateDesc(posts).filter((post) => {
 		if (tag && !post.tags.includes(tag)) return false;
 		if (category && post.category !== category) return false;
-		if (!normalizedQuery) return true;
+		if (!terms.length) return true;
 		const haystack = [post.title, post.titleEn, post.description, post.descriptionEn, ...post.tags, post.bodyMarkdown]
 			.filter(Boolean)
 			.join('\n')
 			.toLowerCase();
-		return haystack.includes(normalizedQuery);
+		return terms.every((t) => haystack.includes(t));
 	});
 
 	return matches.slice(0, max).map(({ bodyMarkdown, ...summary }) => summary);

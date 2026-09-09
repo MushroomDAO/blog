@@ -47,14 +47,34 @@ elif [ -z "${CLOUDFLARE_REGISTRAR_TOKEN:-}" ] || [ -z "${CLOUDFLARE_ACCOUNT_ID:-
 elif [ ! -f semantic-search/scripts/incremental-index.py ]; then
   echo "  ⚠️  找不到 semantic-search/scripts/incremental-index.py，跳过。"
 else
-  # 不带 --slug 就是全库（脚本自己打印 "full corpus"）。它按 manifest 比对内容
-  # 哈希，只对真正变了的文章 embed+upsert；没变的只做只读 KV GET，免费。
-  # 注意：这个脚本没有 --all 也没有 --help，多给一个参数会直接 exit 2。
-  if python3 semantic-search/scripts/incremental-index.py --upsert; then
-    echo "  ✓ 索引已同步"
+  # 只索引本次提交动过的文章。
+  # 不用全库扫描（不带 --slug 就是全库）：588 篇要跑十分钟以上，每次部署都等
+  # 不现实——实测那样会把 deploy 拖到超时，反而打出「索引更新失败」的假警报。
+  # 注意这个脚本没有 --all 也没有 --help，多给一个参数会直接 exit 2。
+  CHANGED_SLUGS=$(
+    { git diff --name-only HEAD~1 HEAD -- src/content/blog/ 2>/dev/null
+      git diff --name-only -- src/content/blog/ 2>/dev/null
+      git ls-files --others --exclude-standard -- src/content/blog/ 2>/dev/null
+    } | sed -n 's|^src/content/blog/\(.*\)\.mdx\{0,1\}$|\1|p' | sort -u
+  )
+  if [ -z "$CHANGED_SLUGS" ]; then
+    echo "  ✓ 本次没有文章变动，跳过"
   else
-    echo "  ⚠️  索引更新失败——文章已上线但可能暂时搜不到。"
-    echo "     手动补跑：python3 semantic-search/scripts/incremental-index.py --slug <slug> --upsert"
+    IDX_FAIL=""
+    for SLUG in $CHANGED_SLUGS; do
+      if python3 semantic-search/scripts/incremental-index.py --slug "$SLUG" --upsert >/dev/null 2>&1; then
+        echo "  ✓ $SLUG"
+      else
+        echo "  ⚠️  $SLUG 索引失败"
+        IDX_FAIL="1"
+      fi
+    done
+    if [ -n "$IDX_FAIL" ]; then
+      echo "     文章已上线但可能暂时搜不到。手动补跑："
+      echo "     python3 semantic-search/scripts/incremental-index.py --slug <slug> --upsert"
+    fi
+    echo "     全库对账（偶尔跑一次，约十分钟）："
+    echo "     python3 semantic-search/scripts/incremental-index.py --upsert"
   fi
 fi
 
