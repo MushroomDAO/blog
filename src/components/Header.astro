@@ -10,8 +10,12 @@ import HeaderLink from './HeaderLink.astro';
 			<HeaderLink href="/search/" title="Search" aria-label="Search">🔍</HeaderLink>
 			<HeaderLink href="/my/" title="My" aria-label="My">🧑‍💻</HeaderLink>
 			<HeaderLink href="/video/" title="Video" aria-label="Video">🎬</HeaderLink>
-			<a href="https://idoris.ai" target="_blank" rel="noopener" class="ext-link">iDoris.AI</a>
-			<a href="https://aastar.io/" target="_blank" rel="noopener" class="ext-link">AAStar</a>
+			<a href="https://idoris.ai" target="_blank" rel="noopener" class="ext-logo" title="iDoris.AI">
+				<img src="/images/logos/idoris-nav.png" alt="iDoris.AI" width="20" height="22" />
+			</a>
+			<a href="https://aastar.io/" target="_blank" rel="noopener" class="ext-logo" title="AAStar.io">
+				<img src="/images/logos/aastar-nav.png" alt="AAStar.io" width="23" height="22" />
+			</a>
 			<!-- 页内锚点滚动到 Footer 的真实订阅表单，不弹窗、不跳转到 listmonk -->
 			<a href="#subscribe" class="rss-icon" title="Subscribe" aria-label="Subscribe">📮</a>
 		</div>
@@ -138,6 +142,22 @@ import HeaderLink from './HeaderLink.astro';
 		font-weight: 600;
 		color: var(--accent);
 	}
+	/* 外链 logo：按高度对齐文字链，宽度随原图比例走，不强行拉成正方形 */
+	nav a.ext-logo {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.85em 0.4em;
+	}
+	nav a.ext-logo img {
+		height: 22px;
+		width: auto;
+		display: block;
+		transition: opacity 0.15s ease, transform 0.15s ease;
+	}
+	nav a.ext-logo:hover img {
+		opacity: 0.75;
+		transform: translateY(-1px);
+	}
 	nav a.ext-link:hover {
 		border-bottom-color: var(--accent);
 	}
@@ -145,7 +165,11 @@ import HeaderLink from './HeaderLink.astro';
 		/* let nav links wrap instead of overflowing the viewport
 		   (was a single non-wrapping flex row → horizontal page scroll on phones) */
 		nav { flex-wrap: wrap; }
-		.internal-links { flex-wrap: wrap; gap: 0.1em 0.4em; }
+		h2 { flex: 1 0 100%; }
+		.internal-links { flex: 1 1 auto; flex-wrap: wrap; gap: 0.1em 0.4em; }
+		.right-controls { flex: 0 0 auto; }
+		nav a.ext-logo { padding: 0.45em 0.3em; }
+		nav a.ext-logo img { height: 20px; }
 		nav a { padding: 0.45em 0.35em; font-size: 0.85em; }
 		.rss-icon { padding: 0.45em 0.35em; }
 		h2 { font-size: 0.85em; }
