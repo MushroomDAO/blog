@@ -118,8 +118,15 @@ def collect_xhs():
                 if not t:
                     continue
                 nid = n.get("note_id") or n.get("id") or ""
-                got.append(dict(src=src, title=t, desc="",
-                    url=f"https://www.xiaohongshu.com/explore/{nid}" if nid else "", stars=None))
+                # xsec_token 必须在采集这一刻存下来。裸 explore URL 读正文会返回
+                # empty noteDetailMap，事后再补要多跑一次 user-posts —— 2026-09-09
+                # 的调研就为此白费了 3 次调用。带在 URL 查询串里，后续
+                # `xhs read <url> --xsec-token <token>` 直接可用。
+                tok = n.get("xsec_token") or ""
+                url = f"https://www.xiaohongshu.com/explore/{nid}" if nid else ""
+                if url and tok:
+                    url += f"?xsec_token={tok}"
+                got.append(dict(src=src, title=t, desc="", url=url, stars=None))
         except (json.JSONDecodeError, AttributeError):
             pass
         return got

@@ -140,3 +140,50 @@ JVM 系（Java/Kotlin/Scala）、Lisp 系（Common Lisp/Clojure）、
     stage.py 只抓 readme[:2400] 存进 research.readme_head，我在会话里补判时
     直接用了那个截断版。修法：补判时对判为「值得写」和「存疑」的条目，
     一律用 gh api 重新拉全文 README，不要用 readme_head 做否决依据。
+
+## 2026-09-09（用户在 8042 标了 8 条 write / 1 条 skip，我按标记发布）
+
+### 发布结果：标了 8 条，实发 6 条
+
+| 条目 | 用户标记 | 实际处理 | 理由 |
+|---|---|---|---|
+| sizzlecar/ferrum-infer-rs | write | ✅ 已发 | — |
+| Abilityai/trinity | write | ✅ 已发 | — |
+| SimoneAvogadro/android-reverse-engineering-skill | write | ✅ 已发 | 8 月《GitHub 趋势月报》只一句话带过，可单独成篇 |
+| cmliu/CF-Workers-CheckProxyIP（小红书线索） | write | ✅ 已发 | — |
+| masihsultani/whiteboard-animator（小红书线索） | write | ✅ 已发 | — |
+| HauhauCS/Qwen3.8-27B-...-MTP-GGUF | write | ✅ 已发 | 与 8/20 发的 orcarouter MLX 版是不同仓库/不同生态，文内做了显式区分 |
+| deeplethe/utopia（小红书线索） | write | ❌ **未发，改标 skip** | **本站 2026-09-07 已发过同一仓库** |
+| openai-community/gpt2 | write | ❌ **未发，改标 skip** | 2022 上传、2024 最后修改，靠 1477 万累计下载常年挂 trending 第 10，无任何增量 |
+
+### 两条规则问题（都不是用户判错，是我这边的漏）
+
+- ⚠️ **stage.py 的已发布去重对中文标题完全失效。**
+  utopia 那条的标题是小红书的中文句子「【开源】如果说 RAG 是"让 AI 找到企业知识"，那 Utopia 想解决的」，
+  `repo_fragment()` 取到的是整个中文串，跟已发文章 slug
+  `utopia-deeplethe-enterprise-world-model-bitemporal-knowledge-graph` 匹配不上，
+  于是一个 9 月 7 日刚发过的仓库又冒了出来。
+  → 建议调整：小红书来源的条目，`published_match()` 除了用标题，还要用
+    `entities(title)` 抽出的**拉丁字母实体**（这里是 `utopia`）逐个去 slug 里做边界匹配。
+    中文标题里的英文项目名恰恰是最可靠的那部分，现在完全没被用上。
+
+- ⚠️ **HF trending 榜的"僵尸老模型"没有被挡。**
+  openai-community/gpt2 靠累计下载量常年挂在 trending 前 10，
+  但 `lastModified` 是 2024-02-19。这类条目每次都会被采进来。
+  → 建议调整：`collect_hf()` 加一条硬过滤——`lastModified` 距今超过 180 天的直接丢弃，
+    不进候选。这不是打分维度的问题，是"根本不该进入候选池"。
+
+### 已修复：collect.py 不存 xsec_token（2026-09-06 记过，这次真被咬）
+
+调研三条小红书线索时，`xhs read <裸 explore URL>` 全部返回
+`Note not found in HTML state: empty noteDetailMap`，只能额外跑一次 `xhs user-posts`
+把 token 捞回来再读 —— 白白多花 3 次调用，而小红书本来就有"一轮别使劲扫"的硬约束。
+
+→ **已改**：`collect_xhs()` 的 `take()` 现在把 `xsec_token` 拼进 URL 查询串
+（`?xsec_token=...`），后续 `xhs read <url> --xsec-token <token>` 直接可用。
+`.agents/` 和 `.claude/` 两份都已同步。
+
+### 采集侧仍未修
+
+- X 源连续为 0（twitter-cli ClientTransaction/404），已经连续多天。
+- GoogleTrends 源为 0：cron 调不动 MCP，只能在会话里补。这次也没补上。
