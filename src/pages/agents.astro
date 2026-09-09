@@ -7,8 +7,8 @@ import Header from '../components/Header.astro';
 <html lang="zh-CN">
 	<head>
 		<BaseHead
-			title="给 AI Agent 的入口"
-			titleEn="Entry Point for AI Agents"
+			title="给 AI Agent 的入口：一键安装我们的 Skill or MCP（free）"
+			titleEn="Entry Point for AI Agents: One-Click Install Our Skill or MCP (Free)"
 			description="这个博客不只是给人看的网页——它也对外提供 MCP 服务和一个 Claude Code skill，让你的个人 AI agent 可以直接查询、搜索、订阅这里的内容更新。"
 			descriptionEn="This blog isn't only a website for humans — it also exposes an MCP server and a Claude Code skill, so your personal AI agent can query, search, and subscribe to updates here directly."
 		/>
@@ -21,13 +21,27 @@ import Header from '../components/Header.astro';
 				color: rgb(var(--gray-dark));
 				line-height: 1.8;
 			}
+			/* 全局 h1 是 3.052em、h2 是 2.441em。这个页面原本只把 h1 压到 1.6em
+			   却没动 h2，结果 h1 比它下面的 h2 还小，层级是反的。
+			   两个一起定，保证 h1 > h2，同时别让长标题霸满一屏。 */
 			.agents-page h1 {
-				font-size: 1.6em;
+				font-size: 2em;
 				margin-bottom: 0.3em;
+				line-height: 1.3;
 			}
 			.agents-page h2 {
+				font-size: 1.4em;
 				margin-top: 1.6em;
 				margin-bottom: 0.5em;
+			}
+			/* 英文段的段首标题：视觉上和 h1 等重，但语义仍是 h2
+			   （一页只该有一个 h1）。没有它的话英文读者滚到下半页
+			   看不到这块在讲什么。 */
+			.agents-page .lang-title {
+				font-size: 2em;
+				margin-top: 0;
+				margin-bottom: 0.5em;
+				line-height: 1.3;
 			}
 			.agents-page p {
 				margin-bottom: 1em;
@@ -83,7 +97,7 @@ import Header from '../components/Header.astro';
 	<body>
 		<Header />
 		<main class="agents-page">
-			<h1>给 AI Agent 的入口</h1>
+			<h1>给 AI Agent 的入口：一键安装我们的 Skill or MCP（free）</h1>
 
 			<section class="lang-section" lang="zh-CN">
 				<p>
@@ -137,6 +151,7 @@ curl -s https://blog.mushroom.cv/agents/mushroom-skill.md -o ~/.claude/skills/mu
 			</section>
 
 			<section class="lang-section" lang="en">
+				<h2 class="lang-title">Entry Point for AI Agents: One-Click Install Our Skill or MCP (Free)</h2>
 				<p>
 					Beyond being a website for humans, this blog also exposes an <strong>MCP (Model Context Protocol) server</strong> —
 					your AI agent (e.g. Claude Code) can connect directly to search, read, and subscribe to articles here, instead of
