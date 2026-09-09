@@ -198,7 +198,9 @@ function loadM2Output() {
     try {
       const j = JSON.parse(fs.readFileSync(path.join(M2_OUTPUT, f), 'utf8'));
       const slug = f.replace(/\.json$/, '');
-      const body = `${slug} ${j.title || ''} ${j.digest || ''}`;
+      // sourceUrls 是 2026-09-09 之后新增的字段（见 pipeline/m2/index.js）；
+      // 老记录没有，只能靠 slug + 标题 + 摘要匹配
+      const body = `${slug} ${j.title || ''} ${j.digest || ''} ${(j.sourceUrls || []).join(' ')}`;
       items.push({
         where: 'm2log',
         id: slug,

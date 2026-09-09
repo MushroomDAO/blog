@@ -115,7 +115,20 @@ async function publish(markdownFile, options = {}) {
       'utf-8'
     );
     
-    // 保存 manifest
+    // 保存 manifest。
+    // sourceUrls 是给查重用的：用户发布后会手工删公众号草稿，草稿箱查不到
+    // 不等于没发过，所以这份本地记录是「发过什么」的主要账本之一
+    // （见 .agents/skills/blog-publisher/check-duplicate.cjs）。
+    // 只有标题的话，「同一个仓库、换个标题」就查不出来了，所以把正文里的
+    // github/huggingface/arxiv 源一起存下来。
+    const sourceUrls = [
+      ...new Set(
+        (markdown.match(
+          /(?:https?:\/\/)?(?:www\.)?(?:github\.com|huggingface\.co)\/[\w.-]+\/[\w.-]+/gi
+        ) || []).map((u) => u.replace(/^https?:\/\//, '').replace(/\/+$/, '').toLowerCase())
+      ),
+    ];
+
     fs.writeFileSync(
       path.join(outputDir, `${baseName}.json`),
       JSON.stringify({
@@ -124,6 +137,7 @@ async function publish(markdownFile, options = {}) {
         digest,
         mediaId: draft.mediaId,
         theme: result.theme,
+        sourceUrls,
         publishedAt: new Date().toISOString()
       }, null, 2),
       'utf-8'

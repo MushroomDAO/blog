@@ -1,0 +1,28 @@
+#!/bin/bash
+# 提交前自动把 MemPalace 导出到仓库账本 —— 让「export」这一步不用记。
+#
+# 为什么放在 pre-commit：账本的意义是跨机器查重，而「跨机器」发生的时刻
+# 就是 push。只要提交时账本是最新的，另一台机器克隆下来就查得到。
+# 靠人记着手工跑 export，迟早会漏——这次重复发布的成因就是「有个步骤靠人记」。
+#
+# 启用（每个克隆各做一次）：
+#   git config core.hooksPath .githooks
+
+set -e
+REPO="$(git rev-parse --show-toplevel)"
+SYNC="$REPO/.agents/skills/blog-publisher/sync-ledger.cjs"
+LEDGER="$REPO/.agents/skills/blog-publisher/published-ledger.jsonl"
+
+# 没有这台机器上的 MemPalace 就跳过——不该因此拦住提交
+[ -f "$HOME/.mempalace/palace/chroma.sqlite3" ] || exit 0
+[ -f "$SYNC" ] || exit 0
+command -v node >/dev/null 2>&1 || exit 0
+
+before=$(shasum "$LEDGER" 2>/dev/null | cut -d' ' -f1 || echo none)
+node "$SYNC" export >/dev/null 2>&1 || exit 0
+after=$(shasum "$LEDGER" 2>/dev/null | cut -d' ' -f1 || echo none)
+
+if [ "$before" != "$after" ]; then
+  git add "$LEDGER"
+  echo "[pre-commit] 发布账本有更新，已一并加入本次提交"
+fi

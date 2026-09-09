@@ -167,6 +167,23 @@ Exit code 0 = clear to write. Exit code 1 = stop and read the findings.
    not an accident — so the draft count is expected to be small and to fluctuate
    (11 → 6 within one day was observed on 2026-09-09).
 
+### Cross-machine setup (run once per clone)
+
+The ledgers only stay consistent across machines if these are in place:
+
+```bash
+git config core.hooksPath .githooks   # auto-exports MemPalace into the repo ledger on commit
+cp /path/to/.env .                    # NOT in git — WeChat and Cloudflare credentials
+```
+
+Without the hook, `published-ledger.jsonl` goes stale and the other machine's dedup
+silently misses whatever this machine published. Without `.env`, the WeChat ledger
+cannot be queried at all.
+
+`pipeline/m2/output/*.json` and `published-ledger.jsonl` both ride along in git, so a
+fresh clone can run the duplicate check immediately — even before MemPalace exists on
+that machine.
+
 Therefore: **"not in the draft box" NEVER means "not published."** The two ledgers that
 remember what actually went out are `pipeline/m2/output/*.json` (local, survives the
 manual deletion) and MemPalace (cross-machine, semantic). This is exactly why rule 12
