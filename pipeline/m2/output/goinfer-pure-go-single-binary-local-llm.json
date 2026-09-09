@@ -1,0 +1,8 @@
+{
+  "title": "整个大模型装进一个文件：goinfer 用纯 Go 跑推理，没有 Python、没有 llama.cpp、没有 CUDA 工具链",
+  "author": "Mycelium",
+  "digest": "goinfer 是一个纯 Go、无 cgo 的本地推理引擎，编译出单个静态二进制，支持 27 个模型家族、四种序列混合架",
+  "mediaId": "prCUE631thH1cmNLi42prOla-uFYx7tbvQydskzJz7axWDi1qytdCcsDdePCN0vb",
+  "theme": "blue",
+  "publishedAt": "2026-09-09T01:18:11.228Z"
+}

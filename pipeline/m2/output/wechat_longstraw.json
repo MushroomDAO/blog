@@ -1,0 +1,8 @@
+{
+  "title": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token",
+  "author": "Mycelium",
+  "digest": "推理已经支持百万 token，但 RL 后训练卡在 256K 以下。LongStraw 用驻留状态 + 响应回放 + 分",
+  "mediaId": "prCUE631thH1cmNLi42prBvAMwcMlNJbgpCVNCNb9zNtrqkTG1WX4z5ydXY5T6FU",
+  "theme": "mint",
+  "publishedAt": "2026-07-22T14:34:45.519Z"
+}

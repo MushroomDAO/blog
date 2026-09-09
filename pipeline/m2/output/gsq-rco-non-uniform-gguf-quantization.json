@@ -1,0 +1,8 @@
+{
+  "title": "27B 模型压到 11.8GB 还「任务无损」：奥地利 IST 用两篇论文的方法重做了 GGUF 量化",
+  "author": "Mycelium",
+  "digest": "均匀量化对所有张量一视同仁，GSQ-RCO 不是——它用梯度搜索按每个张量的敏感度分配精度，在总大小预算内做非均匀分配。",
+  "mediaId": "prCUE631thH1cmNLi42prHfaetz-6G_A_TgOjLr60Z7INWRleIAE1aTJuxxc4lSN",
+  "theme": "blue",
+  "publishedAt": "2026-09-09T01:18:22.304Z"
+}

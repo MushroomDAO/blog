@@ -56,14 +56,25 @@ function extractSources(text) {
 // 基本就是同一个选题。纯标题相似度抓不到这种 —— 09-08 那篇
 // 「MiniCPM5 + Meshy：…双开」和「2B 打赢 4B：…MiniCPM5-2B…」词面相似度只有
 // 个位数，但正文讲的是同一个模型。所以必须扫正文，不能只扫标题。
+// 领域通用词：出现在几乎每篇文章里，当实体名用会把所有文章都判成重复
+const GENERIC = new Set([
+  'model', 'models', 'local', '开源', 'opensource', 'framework', 'training',
+  'inference', 'quantization', 'agent', 'agents', 'context', 'python', 'docker',
+  'server', 'client', 'system', 'project', 'source', 'release', 'version',
+  'benchmark', 'transformer', 'transformers', 'llama', 'token', 'tokens',
+  'memory', 'cache', 'engine', 'service', 'services', 'install', 'config',
+]);
+
 function salientNames(s) {
   return [...new Set(
     String(s)
       .toLowerCase()
       .split(/[^a-z0-9.-]+/)
       .map((w) => w.replace(/^[.-]+|[.-]+$/g, ''))
-      // 至少 5 个字符、且带数字或连字符 —— 过滤掉 model/local/open 这类通用词
-      .filter((w) => w.length >= 5 && /[0-9-]/.test(w))
+      // 至少 5 个字符。早先这里还要求「带数字或连字符」——那会把 goinfer、
+      // meshy、ollama 这类纯字母项目名全过滤掉，查 goinfer 会得到「没查到」
+      // 的错误结论。改成显式黑名单过滤通用词。
+      .filter((w) => w.length >= 5 && !GENERIC.has(w))
       // 纯版本号/纯数字没有区分度
       .filter((w) => !/^[0-9.]+$/.test(w))
   )];
@@ -213,28 +224,57 @@ const MEMPALACE_DB = path.join(
   '.mempalace/palace/chroma.sqlite3'
 );
 
+// 仓库里的文本账本 —— 由 sync-ledger.cjs export 生成并提交。
+// 它存在的唯一理由是跨机器：MemPalace 的库在 ~/.mempalace/ 不跟仓库走，
+// 换台机器（比如 Mac mini）克隆下来，那边的库是空的或内容不同，
+// 查重结果就会取决于你坐在哪台机器前面 —— 那比没有查重更危险。
+const REPO_LEDGER = path.join(__dirname, 'published-ledger.jsonl');
+
 function loadMemPalace() {
-  if (!fs.existsSync(MEMPALACE_DB)) return { error: `找不到 ${MEMPALACE_DB}` };
-  try {
-    const out = execFileSync(
-      'sqlite3',
-      [MEMPALACE_DB, "SELECT replace(replace(c0, char(10), ' '), char(9), ' ') FROM embedding_fulltext_search_content;"],
-      { encoding: 'utf8', maxBuffer: 128 * 1024 * 1024 }
-    );
-    const items = out
-      .split('\n')
-      .filter((l) => l.trim())
-      .map((line, i) => ({
-        where: 'mempalace',
-        id: `drawer-${i}`,
-        title: line.slice(0, 60).trim(),
-        text: line.toLowerCase(),
-        sources: extractSources(line),
-      }));
-    return { items };
-  } catch (e) {
-    return { error: `读 mempalace 失败：${e.message}` };
+  const byText = new Map();
+  const notes = [];
+
+  // 本机实时库（有最新的、还没导出的）
+  if (fs.existsSync(MEMPALACE_DB)) {
+    try {
+      const out = execFileSync(
+        'sqlite3',
+        [MEMPALACE_DB, "SELECT replace(replace(c0, char(10), ' '), char(9), ' ') FROM embedding_fulltext_search_content;"],
+        { encoding: 'utf8', maxBuffer: 128 * 1024 * 1024 }
+      );
+      for (const line of out.split('\n')) {
+        if (line.trim()) byText.set(line.trim(), 'mempalace');
+      }
+    } catch (e) {
+      notes.push(`本机库读失败：${e.message}`);
+    }
+  } else {
+    notes.push('本机没有 MemPalace 库');
   }
+
+  // 仓库账本（有别的机器写的）
+  if (fs.existsSync(REPO_LEDGER)) {
+    for (const line of fs.readFileSync(REPO_LEDGER, 'utf8').split('\n')) {
+      if (!line.trim()) continue;
+      try {
+        const rec = JSON.parse(line);
+        if (rec.text && !byText.has(rec.text)) byText.set(rec.text, 'ledger');
+      } catch (e) {
+        /* 单行坏了不该让整次查重失败 */
+      }
+    }
+  } else {
+    notes.push('仓库账本不存在（跑 sync-ledger.cjs export）');
+  }
+
+  const items = [...byText.keys()].map((line, i) => ({
+    where: 'mempalace',
+    id: `drawer-${i}`,
+    title: line.slice(0, 60).trim(),
+    text: line.toLowerCase(),
+    sources: extractSources(line),
+  }));
+  return { items, error: notes.length ? notes.join('; ') : undefined };
 }
 
 // ── 主流程 ──────────────────────────────────────────────────────
@@ -276,7 +316,7 @@ function loadMemPalace() {
 
   const mpResult = loadMemPalace();
   const mempalace = mpResult.items || [];
-  if (mpResult.error) console.error(`⚠️  MemPalace 账本没查成（${mpResult.error}）`);
+  if (mpResult.error) console.error(`ℹ️  MemPalace：${mpResult.error}`);
 
   const all = [...blog, ...wechat, ...m2log, ...mempalace];
   console.log(
@@ -318,7 +358,7 @@ function loadMemPalace() {
     }
 
     if (!seen.size) {
-      console.log('   ✅ 两本账都没查到\n');
+      console.log('   ✅ 四本账都没查到\n');
       continue;
     }
     hit = true;
@@ -339,7 +379,7 @@ function loadMemPalace() {
     console.log('查到重复或疑似重复 —— 先人工确认再决定写不写。');
     console.log('注意：');
     console.log('  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。');
-    console.log('  · 三本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。');
+    console.log('  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。');
     process.exit(1);
   }
   process.exit(0);

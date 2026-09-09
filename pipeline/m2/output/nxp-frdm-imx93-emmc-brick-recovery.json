@@ -1,0 +1,8 @@
+{
+  "title": "NXP FRDM-IMX93 eMMC 变砖全记录：从一条 dd 命令到完整恢复",
+  "author": "Mycelium",
+  "digest": "生产 KMS 服务因一条少了 seek=66 的 dd 命令变砖。记录 macOS uuu 死路、ELE Anti-Ro",
+  "mediaId": "prCUE631thH1cmNLi42prAfOp1FdyUWgBm7EVBwoamqyIsmws31-5PBdCYpN2yTh",
+  "theme": "chengyun",
+  "publishedAt": "2026-06-10T08:51:46.976Z"
+}

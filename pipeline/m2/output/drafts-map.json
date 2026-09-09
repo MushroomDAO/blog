@@ -1,0 +1,472 @@
+{
+  "social-auto-upload-multi-platform-publishing-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prGkoqIXDVR2L_SIQTdlzXcXoPQ8X1wh1vWMCfilSZHe0",
+    "title": "把内容一次发到全平台：social-auto-upload 个人自动发布入门实测指南",
+    "publishedAt": "2026-06-21T02:59:47.827Z"
+  },
+  "ian-xiaohei-illustrations-beginner-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prJzPiJtw7MMRQ2MVdxMDv_OzIFCN7iTEjKj1ZuIxCzt6",
+    "title": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南",
+    "publishedAt": "2026-06-22T15:23:30.456Z"
+  },
+  "docker-android-containerized-emulator-ci-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prIDwfvveXR-VrDsHtC7whEDEzhiKzqORpZb3-HV6V4ni",
+    "title": "把安卓模拟器装进 Docker：docker-android 容器化模拟器入门与 CI 自动化测试指南",
+    "publishedAt": "2026-06-23T06:57:01.092Z"
+  },
+  "openmaple-local-managed-agent-platform-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prHF0uNWojGRmXbqsBn3qhLmI6Akx-0zPUv7XTmZKZCdd",
+    "title": "本地就能跑的 Agent 平台：OpenMaple 自托管 managed-agent 控制面入门",
+    "publishedAt": "2026-06-23T06:55:57.881Z"
+  },
+  "fireworks-ai-moat-deep-dive": {
+    "mediaId": "prCUE631thH1cmNLi42prF0Nli8TmP8zCgw_oKJo7dqaSeAHdUC2qV9dbi6T5-19",
+    "title": "拆解 Fireworks AI：4 年做到 150 亿美金估值，护城河到底在哪？",
+    "publishedAt": "2026-06-24T09:34:21.821Z"
+  },
+  "aether-small-model-cpu-ops-agent": {
+    "mediaId": "prCUE631thH1cmNLi42prKnKArCY9IXvUTnbHRoinRjQ_qp6dMIagrewkClA2y7u",
+    "title": "非得显卡？小模型跑在 CPU 上也照样快：Aether 小模型运维 Agent 全解析（转载）",
+    "publishedAt": "2026-06-24T11:46:38.091Z"
+  },
+  "lfm2-5-230m-small-model-developer": {
+    "mediaId": "prCUE631thH1cmNLi42prNNDg9YVjshU-XyQNENK9G9ERbfo_FicP9Mt-SBreyoX",
+    "title": "LFM2.5-230M 开发者探索指南：213 tok/s 的小模型，普通人能做什么？",
+    "publishedAt": "2026-06-26T05:16:14.162Z"
+  },
+  "train-character-lora-local-flux-mac": {
+    "mediaId": "prCUE631thH1cmNLi42prALQN0yeT3TL_yb4k3DgWCbIdIo1kq0poBt3A1lUYkXD",
+    "title": "在 Mac 上训练一个「专属角色」：用本地 FLUX + LoRA 让 AI 每次都画出同一个人",
+    "publishedAt": "2026-06-26T05:17:03.096Z"
+  },
+  "luma-island-desktop-work-island": {
+    "mediaId": "prCUE631thH1cmNLi42prK9txagCWSTf0TI9QEYGwAUiUyaCyxzcPz8H5kijsSS2",
+    "title": "光岛：一触即发的桌面工作岛，普通人和开发者都能用",
+    "publishedAt": "2026-06-26T05:17:25.615Z"
+  },
+  "domain-name-arbitrage-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prJDz2QroTNaMGnZXNdtk2NrEoiUik5l-QPjrrJPDdJlV",
+    "title": "12美元买入，25000美元卖出——普通人如何系统性寻找域名套利机会",
+    "publishedAt": "2026-07-05T07:20:03.341Z"
+  },
+  "deepseek-mac-studio-dwarfstar-ds4-local-inference-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prJBn3quC5b2rBedIGxjgWF0uHCcaVVHuue7050arCkR0",
+    "title": "DwarfStar：Mac Studio 跑 DeepSeek V4 Flash/PRO，从安装到 SSD 流式推理",
+    "publishedAt": "2026-07-05T07:20:31.532Z"
+  },
+  "automem-agent-memory-skill-training-framework-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prF5KogfLivTHH532qD40yX3DiRvGaYzi9FPqm9cjHlK-",
+    "title": "AutoMem：让 Agent 自动学会管理记忆，32B 追平 Claude Opus 4.5",
+    "publishedAt": "2026-07-05T07:20:52.982Z"
+  },
+  "openmongage-ai-video-studio-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prHJEPbLELGJvdnHBiKlmwnYVagmFDLKDAjc4YwJgk4mz",
+    "title": "OpenMontage：33K Stars，把 AI 助手变成视频工作室，$1.33 出一条 60 秒动画",
+    "publishedAt": "2026-07-05T07:21:15.202Z"
+  },
+  "video-production-buddy-zhiying-ai-pipeline-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prH52ZgRweikKEPTYJJFPpzuDp5anQ_oPRoE9yzbtlUYk",
+    "title": "织影 Video Production Buddy：AI 视频制作，每个阶段都要人工审批",
+    "publishedAt": "2026-07-05T07:21:37.385Z"
+  },
+  "paper2anything-agent-skills-academic-promotion-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prH8slxA3ytkaFeFZNhIJ3pqmrUdbQ4PRKFhbpR6CXjAp",
+    "title": "paper2anything：丢一个 PDF，AI 帮你出五种学术宣传物料",
+    "publishedAt": "2026-07-05T14:52:24.306Z"
+  },
+  "aohp-android-agent-os-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prMpwPk9_CvA7jbV1pHH9YMN_9fWzLs8bhYeIbV4AM-9l",
+    "title": "AOHP：让操作系统真正为 AI Agent 而生，清北港三校联合开源",
+    "publishedAt": "2026-07-05T14:59:14.217Z"
+  },
+  "google-search-trends-mcp-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prKkFjuG6pVNwWYu3GjmTyxZkyUCuMdAuxqS8iH04KZ5o",
+    "title": "Google Search Trends MCP 实战：让 AI 帮你在趋势爆发前抓住它",
+    "publishedAt": "2026-07-06T04:15:27.866Z"
+  },
+  "free-google-trends-mcp-studio-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prDoyQLfbQEcSvVW-Zb2fO_t5uO2hxCKYP_DllkYc9ByU",
+    "title": "免费 Google Trends MCP：小工作室的日常趋势雷达，和收费 MCP 这样搭配最省钱",
+    "publishedAt": "2026-07-06T04:23:02.411Z"
+  },
+  "agents-a1-35b-moe-horizon-scaling-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prAXB2Co4yBrC1VJRJO66vW8K9G-6EVVzTTUqNWrDAOJO",
+    "title": "Agents-A1：35B 追平万亿参数，路走得更长，不是模型堆得更大",
+    "publishedAt": "2026-07-06T09:48:13.632Z"
+  },
+  "brainstrust-agent-eval-six-generations-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prA9Vko3Dbf01l52mErgg70XIpQ_EIXS6iHo3h8PkFv1x",
+    "title": "Agent eval 的六代迭代：从看答案到看分布",
+    "publishedAt": "2026-07-06T15:52:25.940Z"
+  },
+  "graphmind-code-knowledge-graph-agent-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prJMF72FJe7Ak6U6KhET8_VMpttATvqM_w06Q59cQMUB8",
+    "title": "GraphMind：把代码库变成知识图谱，让 AI 永久记住你的架构",
+    "publishedAt": "2026-07-06T15:52:54.428Z"
+  },
+  "ai-intermediary-model-ahacreator-industry-transfer-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prKHw8Asfdx5mMTFrltciqCyfkCnQtbQ0BlFKGp-uSdd9",
+    "title": "抽成从35%打到5%：AhaCreator 证明了什么，还能迁移到哪些行业",
+    "publishedAt": "2026-07-06T16:06:22.221Z"
+  },
+  "open-connector-mcp-agent-integration-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prLf60Q3QKvLTEDoihkCg7bSFNl1xb6lyv1v8dFiYJtjN",
+    "title": "用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南",
+    "publishedAt": "2026-07-07T13:23:57.063Z"
+  },
+  "luxtts-voice-clone-podcast-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prCk65AiVWrDdlYys4pqXsgaZqWK88bOJAbAeQfuNgRvE",
+    "title": "用自己的声音做播客：LuxTTS 零成本语音克隆完整指南",
+    "publishedAt": "2026-07-07T16:13:21.512Z"
+  },
+  "ai-berkshire-value-investing-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prNIJ3dTbVZx6QzDEN0MOBmtFxHBp5wRrb7UkvRa8r0iT",
+    "title": "普通投资者如何用 AI Berkshire 做出专业级投研——以分析腾讯为例",
+    "publishedAt": "2026-07-08T04:07:15.852Z"
+  },
+  "gbrain-personal-ai-knowledge-brain-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prELN5hAAbhOPCJedRh_MVnjq0mcF9lD9aM58tYD96BCQ",
+    "title": "GBrain：Y Combinator CEO 开源的个人 AI 大脑——25000 星知识图谱系统完整介绍",
+    "publishedAt": "2026-07-08T04:07:45.140Z"
+  },
+  "pixelle-video-ai-short-video-engine-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prDghp8RC1CZSRmZdvJfKdvbtJdALA6aPDrP06hOA0jVB",
+    "title": "输入一句话生成完整短视频：Pixelle-Video 完整使用指南",
+    "publishedAt": "2026-07-08T09:30:31.621Z"
+  },
+  "gaussian-splatting-3dtiles-web-pipeline-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prN19nZ-mKDan71CgCVdGShwoOidwQQ_rJTWYLYK6UK8N",
+    "title": "高斯泼溅上 Web：3DGS → 3D Tiles 全开源工具链指南",
+    "publishedAt": "2026-07-08T13:36:02.801Z"
+  },
+  "errowsai-ai-companion-build-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prGpeBweDXGnT9x8QywQcOOLKMG0gLej7bg_t9yTLmye5",
+    "title": "用 ErrowsAI 搭建自己的 AI 伴侣平台：全栈开源指南",
+    "publishedAt": "2026-07-09T03:34:10.781Z"
+  },
+  "guizang-social-card-illustration-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prIlL5PPbAr8A7IaFw3-CCbHdpWbkBfQSZps0H3P4tS6U",
+    "title": "用 AI 给文章配图：归藏 Social Card Skill 完整指南",
+    "publishedAt": "2026-07-09T07:59:00.195Z"
+  },
+  "pixel-perfect-ui-frontend-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prG8IXnicRVcbU8p7fsO6WpsU5GQ8qVjBcpwSfWN-Rj5p",
+    "title": "Pixel Perfect：585★ 的 React 组件库，让前端 UI 直接变好看",
+    "publishedAt": "2026-07-09T03:35:04.282Z"
+  },
+  "tmem-parametric-memory-agent-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prLZN0Fs2ynQ65Eu1D4yAc84cUK6ZWWEXDjNYtnX5HTXv",
+    "title": "TMEM：给 Agent 装上「可学习的参数记忆」——阿里通义论文工程解析",
+    "publishedAt": "2026-07-09T06:17:33.002Z"
+  },
+  "alberta-gov-ai-harness-engineering-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prF1tcTrwU-aICIl_A6WpVCq3B-qQBmGmEGCiAALnZeIK",
+    "title": "当政府用 AI 军团干掉 40 年技术债：Alberta 开源方法论完全指南",
+    "publishedAt": "2026-07-09T06:43:37.371Z"
+  },
+  "agent-architecture-cybernetics-harness-design": {
+    "mediaId": "prCUE631thH1cmNLi42prMIW8bxjWsiIsmAC2_SXCuVdVXEU73xd_0902cS6C9eq",
+    "title": "读后感：Agent 架构的底层逻辑——从控制论看 Harness 设计",
+    "publishedAt": "2026-07-09T07:59:33.195Z"
+  },
+  "stock-sdk-personal-stock-feed-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prF_OSqD-coL3QyQkQTc-Gc4NQgEmjIkzDfa3HM05Yxf5",
+    "title": "用 Stock SDK 建立自己的股票信息源：从命令行到 AI 看盘",
+    "publishedAt": "2026-07-09T11:01:14.598Z"
+  },
+  "cloudflare-drop-instant-deploy-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prChdZeQUdYIZogpGzPMa5V1eBkN01azSr92V8uiG8R1v",
+    "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+    "publishedAt": "2026-07-09T11:26:05.197Z"
+  },
+  "adapta-self-hosted-local-knowledge-base-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prNYZoRCBtEhjeTqm3PHOOUilB-DiWHmzZQPncV5X4HTm",
+    "title": "用 Adapta 搭一个完全属于自己的本地知识库：一个诚实的上手指南",
+    "publishedAt": "2026-07-10T05:43:01.236Z"
+  },
+  "chatcut-codex-ai-video-editor-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prMvfq9aRQnxITki9e_vjOEGx-EidbV1k6t5-QDRKutS1",
+    "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
+    "publishedAt": "2026-07-10T08:02:13.704Z"
+  },
+  "h2o-llmstudio-finetune-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prOIBp4fd7pt-g38aJYEiZV4oENFseBomSElKjAGaw_G9",
+    "title": "H2O LLM Studio 实战指南：工程师如何从零微调专属大模型",
+    "publishedAt": "2026-07-10T08:06:55.129Z"
+  },
+  "opensquilla-multi-model-routing-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prE4RPp4R5qPY7E3lhSIFO2BebOK7hHP87X-q5jI5V5Lh",
+    "title": "OpenSquilla：用多模型路由挑战顶级大模型，花 1/9 的钱达到同等效果",
+    "publishedAt": "2026-07-10T14:25:42.163Z"
+  },
+  "lobsterai-guide-for-everyone": {
+    "mediaId": "prCUE631thH1cmNLi42prAj2eujFTPeZmS7-p3Q-z_fXZ53GIiepHE5qLOcfsscy",
+    "title": "LobsterAI 普通人使用指南：网易有道出品，桌面 AI Agent 一句话搞定办公",
+    "publishedAt": "2026-07-11T03:11:12.662Z"
+  },
+  "h2o-llmstudio-hardware-thailand-5090": {
+    "mediaId": "prCUE631thH1cmNLi42prNOnz6j9ErOzVvsZr1ODTTaq0eZUyPyff2Pgq5VuXHl6",
+    "title": "H2O LLM Studio 硬件选配：32GB 显存 GPU，从 7B 调到 34B 的完整方案",
+    "publishedAt": "2026-07-11T03:51:54.535Z"
+  },
+  "openilink-hub-wechat-bot-platform-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prExhzi_ffkuLsEDJYAXQB2uv4PTtOTYuYvutsYPAcpP4",
+    "title": "openilink-hub 搭建微信消息平台：开源自托管，20 款应用开箱即用",
+    "publishedAt": "2026-07-11T03:57:18.350Z"
+  },
+  "higgs-tts3-emotional-voice-game-assistant-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prBlyRrSCw6mlJUGvchQTv5osDWzlevwU5Jp5b7c35sNU",
+    "title": "Higgs TTS 3 部署指南：21 种情感控制，给游戏角色和 AI 助手配上真实的声音",
+    "publishedAt": "2026-07-11T06:25:20.387Z"
+  },
+  "self-fde-workbench-everyone-can-be-fde": {
+    "mediaId": "prCUE631thH1cmNLi42prIokxqouztEhSHrP4vlj_ZdGaoS83bI9H99ePypZtbxd",
+    "title": "每个人都是自己的 FDE：读完北上深杭 125 人调查之后",
+    "publishedAt": "2026-07-11T07:17:33.972Z"
+  },
+  "zhai-nan-home-lab-tiny-world-project-nomad": {
+    "mediaId": "prCUE631thH1cmNLi42prN0a6k3jhL9weAlUJmYlx6DLDwg3Zz_PUDSDWy1mOc0L",
+    "title": "宅在家也能封神：造个小世界，再备一套末日知识库",
+    "publishedAt": "2026-07-12T14:07:54.257Z"
+  },
+  "llm-agent-protocol-taxonomy-federated-stack-2026": {
+    "mediaId": "prCUE631thH1cmNLi42prAiBzwK3OEu8QWUzUfwfNmn47AYj6sjtSBZJ9Ks8fBjA",
+    "title": "Agent 通信协议的第一张地图：读完这篇论文，我知道未来不会是一个赢家通吃",
+    "publishedAt": "2026-07-12T14:20:03.199Z"
+  },
+  "clearcam-home-security-ai-semantic-search-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prMzw9icBbUBWBh7dS3HhjzsT5A6EAhC8X-oQ2AqQEm86",
+    "title": "普通家庭也能用：ClearCam 让旧摄像头变成能听懂你说话的 AI 监控",
+    "publishedAt": "2026-07-13T03:11:00.452Z"
+  },
+  "pixelrag-visual-web-crawler-screenshot-rag": {
+    "mediaId": "prCUE631thH1cmNLi42prEKsnyRLf6uYwN1OuNWZ77pWXkV-c_RDmAyVER3xXMxt",
+    "title": "网页爬虫的范式革命：PixelRAG 不读 HTML，它看截图",
+    "publishedAt": "2026-07-13T04:49:03.086Z"
+  },
+  "openviking-bytedance-context-database-for-ai-agents": {
+    "mediaId": "prCUE631thH1cmNLi42prCt9bn9jB2HW3fxJQjqiaf_A0EAgh3vChMYOR6wbaT0r",
+    "title": "字节跳动开源 OpenViking：给 AI Agent 造一个「会自我进化的上下文数据库」",
+    "publishedAt": "2026-07-13T07:21:36.354Z"
+  },
+  "gemini-3d-interactive-science-apps-react-three-fiber-tutorial": {
+    "mediaId": "prCUE631thH1cmNLi42prClrKQZeMV8caiFl056XXvNueSgLSKkggSIQzNxJNuAV",
+    "title": "用 Gemini + React Three Fiber 造 3D 互动科学应用：完整拆解与上手指南",
+    "publishedAt": "2026-07-14T00:09:24.917Z"
+  },
+  "pando-bridge-self-hosted-claude-mobile-companion": {
+    "mediaId": "prCUE631thH1cmNLi42prAVEvFMF5fLxV7iHHRKQXCoKOQ4Ix9If11b47s2Aj47m",
+    "title": "Pando：用自己的机器，养一个真正属于自己的 AI 小伙伴",
+    "publishedAt": "2026-07-13T09:15:20.613Z"
+  },
+  "marketing-studio-claude-code-one-command-launch-assets": {
+    "mediaId": "prCUE631thH1cmNLi42prPKF3h7Ty5lmWulPWKbOPtBOvewNn81QeR89qF_6TwXR",
+    "title": "一条命令搞定产品全套发布物料：Marketing Studio 完全上手指南",
+    "publishedAt": "2026-07-13T15:01:47.702Z"
+  },
+  "openthoughts-agent-sft-data-recipe-agentic-models": {
+    "mediaId": "prCUE631thH1cmNLi42prOo_qPB8l9_xlG8UI7QBap_A5VFcKV2mDoYQ1GtSANa3",
+    "title": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解",
+    "publishedAt": "2026-07-14T00:15:45.896Z"
+  },
+  "wan-dancer-14b-one-photo-dance-video-generation": {
+    "mediaId": "prCUE631thH1cmNLi42prF_UC0Ky-oZ8ghG2xeWo2IBwasKyGntMxF9vaIH3Rz_a",
+    "title": "一张照片跳到 160 秒：万相团队开源 Wan-Dancer-14B 本地部署全指南",
+    "publishedAt": "2026-07-14T00:22:22.745Z"
+  },
+  "nvidia-cursor-cto-async-coding-agents-self-driving-codebase": {
+    "mediaId": "prCUE631thH1cmNLi42prLC2hxmDDAkYPZtAFMr6DImTtgpUx7cxp9QoyWHS71VH",
+    "title": "按头安利：Cursor CTO 讲异步 Agent 与「自动驾驶」代码库",
+    "publishedAt": "2026-07-14T00:39:34.447Z"
+  },
+  "agent-island-claude-code-codex-status-companion-mac-windows": {
+    "mediaId": "prCUE631thH1cmNLi42prJIQhucKX2Bim5VbWfr5Uw_1Z8GGSoGLy1gPq-KqD1Uo",
+    "title": "按头安利：Agent Island —— 发完一轮去生活，该你了它会叫你",
+    "publishedAt": "2026-07-14T00:48:41.285Z"
+  },
+  "scroll-world-skill-claude-code-codex-3d-landing-page": {
+    "mediaId": "prCUE631thH1cmNLi42prFOysExz0Yybyg7Ki3idJpH38AixYuzZu1jZPG0EuwRN",
+    "title": "按头安利：scroll-world —— 一句话让 Fable 5 / GPT-5.6 替你造一个滚动飞进去的 3D 落地页",
+    "publishedAt": "2026-07-14T01:04:21.444Z"
+  },
+  "audar-asr-tts-arabic-first-speech-ai": {
+    "mediaId": "prCUE631thH1cmNLi42prD4u1RRr5K9clTZX0AXMh7yzPToisXP2TJNUg0nNv_k3",
+    "title": "按头安利：AudarAI —— 阿拉伯语 ASR 排行榜第一，还顺手做了个打赢 GPT-4o 的 TTS",
+    "publishedAt": "2026-07-15T11:45:10.926Z"
+  },
+  "clypra-open-source-video-editor-tauri-rust-ffmpeg": {
+    "mediaId": "prCUE631thH1cmNLi42prNq9JzXCI4s65RvVGeDHh6F7Moud_mKyd0gleGLe3nCe",
+    "title": "按头安利：Clypra —— 用 Tauri + Rust + FFmpeg 打造的开源视频编辑器，剪映 Pro 付费功能全免费",
+    "publishedAt": "2026-07-15T11:49:13.040Z"
+  },
+  "pixelle-video-ai-short-video-generator": {
+    "mediaId": "prCUE631thH1cmNLi42prHNIlFLbGuSQjoDbM0PONFOR0LYcUEo3XrIjdGYCpj3B",
+    "title": "一句话生成完整短视频：Pixelle-Video 开源引擎上手指南",
+    "publishedAt": "2026-07-15T11:54:55.832Z"
+  },
+  "exercises-dataset-fitness-app-data-layer": {
+    "mediaId": "prCUE631thH1cmNLi42prAwJWLQ4a0K555JD4OLKoQejmkkKW66XQ71kHTiOsl2T",
+    "title": "健身 App 的数据底座：exercises-dataset 1324 个动作数据集拆解与集成指南",
+    "publishedAt": "2026-07-15T12:57:55.177Z"
+  },
+  "audio8-asr-01b-on-device-speech-recognition": {
+    "mediaId": "prCUE631thH1cmNLi42prI1UQobC-qU7zqN-EUmTxBRXjxSNJbZCCII6iqSWA1hJ",
+    "title": "Audio8-ASR-0.1B：0.1B 参数，LibriSpeech 2.70 WER，iPhone 本地跑只占 200MB",
+    "publishedAt": "2026-07-15T13:08:00.574Z"
+  },
+  "livekit-agents-full-duplex-ai-voice-video-call": {
+    "mediaId": "prCUE631thH1cmNLi42prEadykiT-umxRETClRD_YOOIYITbLmFlDUz32UCBZS1L",
+    "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
+    "publishedAt": "2026-07-15T13:29:40.786Z"
+  },
+  "anthropic-founders-playbook-ai-startup-methodology": {
+    "mediaId": "prCUE631thH1cmNLi42prHRjpujsWE8krVo23Vnuqc-VPUsDZLiLjXegFOisrG-0",
+    "title": "Anthropic 的 AI 创业手册：四个阶段、十二个陷阱、如何用它自检你的 idea",
+    "publishedAt": "2026-07-15T13:58:23.358Z"
+  },
+  "good-gym-ai-fitness-rtmpose-exercise-counter": {
+    "mediaId": "prCUE631thH1cmNLi42prEz8wrkF-BoOKDl-uod1wqCdhKATBYsfycL8IStnOfIZ",
+    "title": "Good-GYM：用摄像头当教练，开源 AI 实时计数你的每一个动作",
+    "publishedAt": "2026-07-15T16:23:39.926Z"
+  },
+  "brain-connectome-data-size-fly-human-mouse": {
+    "mediaId": "prCUE631thH1cmNLi42prCdgHagMn-flz-8SZxKHv1AOM1wBkOauOdJTUvbqRedx",
+    "title": "脑子的数据量：从果蝇 20TB 到人脑 1.4PB，我们到底在测量什么",
+    "publishedAt": "2026-07-25T13:52:07.621Z"
+  },
+  "cloudflare-workers-ai-glm-kimi-deepseek-minimax": {
+    "mediaId": "prCUE631thH1cmNLi42prEGmUOnNwCXs4ZfQ7O2975uBut2IsE2nqQayzuTzhkt9",
+    "title": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token",
+    "publishedAt": "2026-08-04T17:42:33.757Z"
+  },
+  "ai-native-gtm-playbook-three-things-actually-changed": {
+    "mediaId": "prCUE631thH1cmNLi42prN_ASXWx_REsVc_C2RuF9R0Uscx6BCRAChQ-GMg7I2I_",
+    "title": "五家公司冲到 1 亿 ARR，打法完全不同：AI-Native GTM 手册读后，真正变了的只有三件事",
+    "publishedAt": "2026-08-06T03:29:48.681Z"
+  },
+  "hybrid-search-pagefind-vectorize-workers-ai-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prC5EEsx0-Rt4lzgpDaNzD0xX7_TnEZRv2hsiSBACivot",
+    "title": "给静态博客装一套「关键词 + 语义」混合搜索：从 Pagefind 到 Cloudflare Vectorize 的完整实战记录（附复刻指南）",
+    "publishedAt": "2026-08-23T05:40:20.048Z"
+  },
+  "lim-stateful-local-inference-persistent-kv-cache": {
+    "mediaId": "prCUE631thH1cmNLi42prJnyKBdZwzMGghG7xpTbXrnNd6pDhnZOS7xY8dGLSYOl",
+    "title": "LIM 调研：只有 2 星的本地推理管理器，把「KV-cache 永不丢弃」这件事做对了",
+    "publishedAt": "2026-08-28T04:39:44.523Z"
+  },
+  "platypus-self-hosted-multi-tenant-ai-agent-platform": {
+    "mediaId": "prCUE631thH1cmNLi42prGwZTgs6XevQwKZX8ZTYv0GW9x8OQD70BF_AnZ0m0DpU",
+    "title": "Platypus：自托管多租户 Agent 构建平台，看板只是它给 Agent 用的一个工具",
+    "publishedAt": "2026-08-28T05:14:14.688Z"
+  },
+  "apodex-1-1-mini-working-capability-local-agent-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prFhuZaLzsa1Pi3gqbHGWwJNJP8IaliFYJoG7zJpx_wfw",
+    "title": "Apodex 1.1 Mini 调研：训「持续干活的能力」，不是训「聊得更像」，35B 本地可跑",
+    "publishedAt": "2026-08-28T05:49:13.212Z"
+  },
+  "agent-network-anet-multi-runtime-agent-hub-fake-success-trap": {
+    "mediaId": "prCUE631thH1cmNLi42prEIYEE7MUFKF3NNqnJtXKHZfdyXeUgglsLfZW4p2Jnvt",
+    "title": "Agent Network 调研：不做又一个 Agent 平台，只做跨厂商 Agent 的通信层",
+    "publishedAt": "2026-08-28T06:26:24.709Z"
+  },
+  "aegra-self-hosted-langsmith-deployments-alternative": {
+    "mediaId": "prCUE631thH1cmNLi42prP7eBo04Fg3PDy_R_90sWWMyslXzhh9X9gnhcqkzU2PP",
+    "title": "Aegra：LangSmith Deployments 的自托管平替，SDK 不用换，代码不用改",
+    "publishedAt": "2026-08-28T06:59:39.275Z"
+  },
+  "pageindex-vectorless-reasoning-rag": {
+    "mediaId": "prCUE631thH1cmNLi42prEUVH-9JWXaWKlVWQExbYb3-6ANlfhGJA7AtVmH_F0DV",
+    "title": "PageIndex：不用向量库的 RAG，3.5 万星背后是真突破还是换了个地方花钱",
+    "publishedAt": "2026-08-28T09:00:35.637Z"
+  },
+  "wemm-embedding-tencent-multimodal-mrl": {
+    "mediaId": "prCUE631thH1cmNLi42prN0QytgmQoSbeSrJMpxn89c1vRbu-UBH0m0RWdG05JFr",
+    "title": "WeMM-Embedding-9B：腾讯统一多模态嵌入模型，同尺寸全面超越 Qwen3-VL-Embedding",
+    "publishedAt": "2026-08-30T14:37:31.816Z"
+  },
+  "pipecat-phonellm-alpha-1-voice-agent-model": {
+    "mediaId": "prCUE631thH1cmNLi42prCVIHuglF9DKWHeyNNiqYg1UbBwLb2v7TsRbUW_MlwUb",
+    "title": "PhoneLLM Alpha 1：Pipecat 罕见自研模型，专攻电话语音 Agent 的工具调用",
+    "publishedAt": "2026-08-30T14:38:59.424Z"
+  },
+  "openclaw-gateway-unattended-multi-agent-orchestration": {
+    "mediaId": "prCUE631thH1cmNLi42prK9Er-YPDTnlmOhlbBM7Kh9XqWSVw-MmAIYaTiKE_vA3",
+    "title": "多 Agent 无人值守跑 4 天做了什么：OpenClaw 网关架构拆解",
+    "publishedAt": "2026-08-30T14:40:17.545Z"
+  },
+  "lemmalog-datalog-engine-llm-agent-memory": {
+    "mediaId": "prCUE631thH1cmNLi42prKQqF0YPgf1OxdylhF33iSUZ040IrUijPd0TNZtcZhyw",
+    "title": "Lemmalog：把 Agent 记忆做成一个能演绎推理的数据库，而不是「记得更准的向量库」",
+    "publishedAt": "2026-09-02T16:09:59.986Z"
+  },
+  "doop-open-source-multiplayer-ai-design-canvas": {
+    "mediaId": "prCUE631thH1cmNLi42prEct8fYuPGBTuN_o2ObLvR5K-O7AjQEAkmmG5MacW6uO",
+    "title": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计",
+    "publishedAt": "2026-09-02T16:23:02.809Z"
+  },
+  "easel-open-source-social-media-agent-workbench": {
+    "mediaId": "prCUE631thH1cmNLi42prKq6HIBk4J-0-5lIeL0SoEXHUjx4_UfbsYgXs7Zw0C-I",
+    "title": "Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布",
+    "publishedAt": "2026-09-02T16:28:42.364Z"
+  },
+  "tnk-zero-trust-sandbox-local-llm-agent": {
+    "mediaId": "prCUE631thH1cmNLi42prEHOvVkZ22Fj2Q7oUHB2ysvqxLPBndr7pBXVsERXVABW",
+    "title": "tnk：给本地 LLM 和 AI Coding Agent 配一个零信任沙箱，而不是又一个推理引擎",
+    "publishedAt": "2026-09-05T01:37:29.876Z"
+  },
+  "lieflat-charts-agent-skill-data-visualization": {
+    "mediaId": "prCUE631thH1cmNLi42prKTZwxgHZ98IUA1XgudHIa7e6AqjetE6SipAq_gR-4f4",
+    "title": "Lieflat Charts 实测：一套遵循 Agent Skills 格式的数据可视化 skill，但\"开源\"这个词用错了",
+    "publishedAt": "2026-09-05T01:39:01.000Z"
+  },
+  "agentsight-ebpf-boundary-tracing-ai-agent-observability": {
+    "mediaId": "prCUE631thH1cmNLi42prFCqKMUZ4rkcxmK3yQRCNmueKdtFoOY1kZ2DJ6uL9TUu",
+    "title": "AgentSight：用 eBPF 从系统边界看 AI Agent 到底干了什么，不用装 SDK 也不用挂代理",
+    "publishedAt": "2026-09-05T16:13:56.213Z"
+  },
+  "tare-lossless-context-compression-cache-correct-output-aware": {
+    "mediaId": "prCUE631thH1cmNLi42prPstt4t1OCwuJRgoEJJsP7RpAZeji4PznLKRUsVWzPrp",
+    "title": "tare：压缩输入而不是改输出的省 token 方案，无损为默认，还专门绕开前缀缓存",
+    "publishedAt": "2026-09-06T03:16:38.850Z"
+  },
+  "tokentracker-local-first-token-cost-accounting-dedup": {
+    "mediaId": "prCUE631thH1cmNLi42prFEPxKkmg3QswBK4uUCCMXpSn-1Vgzwk0sqwIZ7UDCQD",
+    "title": "TokenTracker：省 token 之前，先确认你手上的数字没多算 1.6 到 3.7 倍",
+    "publishedAt": "2026-09-06T03:26:43.844Z"
+  },
+  "zinc-zig-inference-engine-amd-rocm-local-gguf": {
+    "mediaId": "prCUE631thH1cmNLi42prNC2YV80499CFL4Wc6uWoqRnO3jNgtLTEptfNGKGslIE",
+    "title": "ZINC：用 Zig 写的本地推理引擎，给那些买了 A 卡却被本地 AI 圈忽略的人",
+    "publishedAt": "2026-09-06T03:33:54.102Z"
+  },
+  "deepseek-v4-flash-vision-exp-multimodal-agent-dspark": {
+    "mediaId": "prCUE631thH1cmNLi42prBv3CAtZv0-ne4sjvS0sQKsKMF8T26OX98m6X_PKAuz8",
+    "title": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了",
+    "publishedAt": "2026-09-06T03:41:02.663Z"
+  },
+  "qwen38-27b-obliterated-v3-abliteration-blending-mmlu-tradeoff": {
+    "mediaId": "prCUE631thH1cmNLi42prHwLhuOXOgjHliCkpUDCzvOEM_jCg9XcXPb3Oz6Of9G8",
+    "title": "消融不是越彻底越好：Qwen3.8-27B-OBLITERATED 三代手术的取舍曲线",
+    "publishedAt": "2026-09-06T03:49:00.902Z"
+  },
+  "anthropic-plugin-marketplaces-four-repos-eli5-minimal-skill": {
+    "mediaId": "prCUE631thH1cmNLi42prI5c0vxmTl_D8Oq467G26BwxQSP4aX2SuftIjLrUg7Cq",
+    "title": "一个 5 行的 skill，和 Anthropic 那四个容易搞混的插件仓库",
+    "publishedAt": "2026-09-06T03:57:55.373Z"
+  },
+  "gws-google-workspace-cli-discovery-dynamic-commands-agent-skills": {
+    "mediaId": "prCUE631thH1cmNLi42prBkZntV8-cAZ3ajj7ZsjIPPYHJVPMewtkFfFD-_j4i58",
+    "title": "gws：命令面在运行时长出来的 CLI，以及它对本地优先意味着什么",
+    "publishedAt": "2026-09-06T04:04:44.170Z"
+  },
+  "awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt": {
+    "mediaId": "prCUE631thH1cmNLi42prEWwr5BC7-jLc1XJIsNzNwEEECc-3ojyGzK3DkteLi9G",
+    "title": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引",
+    "publishedAt": "2026-09-06T04:10:30.357Z"
+  },
+  "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop": {
+    "mediaId": "prCUE631thH1cmNLi42prI5F1EWABWz4BOPJ1UPFFsbWlcbAgv0-lN-LmQHhNPA7",
+    "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+    "publishedAt": "2026-09-06T04:16:08.968Z"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "title": "tare：压缩输入而不是改输出的省 token 方案，无损为默认，还专门绕开前缀缓存",
+  "author": "Mycelium",
+  "digest": "Rust 写的 LLM 上下文压缩工具，MIT，proxy / CLI / MCP / 库四种形态。三条别家没有的约束：",
+  "mediaId": "prCUE631thH1cmNLi42prPstt4t1OCwuJRgoEJJsP7RpAZeji4PznLKRUsVWzPrp",
+  "theme": "blue",
+  "publishedAt": "2026-09-06T03:16:38.850Z"
+}

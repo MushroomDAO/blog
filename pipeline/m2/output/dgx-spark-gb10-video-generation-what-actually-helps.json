@@ -1,0 +1,8 @@
+{
+  "title": "DGX Spark 上跑视频生成：FlashAttention 没用、torch.compile 没用、量化也没用",
+  "author": "Mycelium",
+  "digest": "FastVideo 给 NVIDIA DGX Spark（GB10）写的调优文档罕见地列了「什么没用」：编译 Flash",
+  "mediaId": "prCUE631thH1cmNLi42prAw5lJJiv_xObIt6VjmKoK-BNBKGAz7oRYFlQ2nOi0SA",
+  "theme": "blue",
+  "publishedAt": "2026-09-06T16:35:42.219Z"
+}
