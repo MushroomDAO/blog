@@ -216,6 +216,31 @@ Use this path when the user provides the topic, source link, README/project info
 
 Target time: 3-5 minutes, excluding external API/network delays.
 
+### 0. Save To Memory Palace First (三件套第一步，不可跳过)
+
+**Before writing a single line of the article**, save the source information to memory palace.
+
+What to save depends on what the user provided:
+- Source article / paper / GitHub repo → save as a `project_` memory: key findings, why it matters, the slug you'll use
+- User context or preferences revealed in this session → save as `user_` or `feedback_` memory
+
+```bash
+# Memory files live at:
+# /Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory/
+# MEMORY.md is the index — always update it when adding a new memory file
+```
+
+Minimum memory entry for each publish session:
+- File: `project_SLUG.md` (type: project)
+- Content: source, key points, publish date, both platform statuses
+
+**三件套检查**：每次发布必须同时完成三件：
+1. ✅ Memory Palace 已存
+2. ✅ Blog 部署并验证 200
+3. ✅ 公众号草稿已创建
+
+如果用户只说"发公众号"，默认也要确认 blog 是否同步发布，除非用户明确说只发一个平台。
+
 ### 1. Decide The Final Slug First
 
 Choose a short English slug before writing files.
@@ -504,6 +529,11 @@ The blog uses a **Chinese/English split** across meta tags:
 
 ## Validation Checklist
 
+三件套（必须全部完成，缺任何一项都是未完成）:
+- [ ] **Memory Palace 已存** — `/memory/project_SLUG.md` 文件存在，MEMORY.md 已更新
+- [ ] **Blog 已部署** — `wrangler pages deploy` 命令已执行（不只是 git commit）
+- [ ] **公众号草稿已创建** — pipeline/m2/output/SLUG.json 存在且有 media_id
+
 Before deploy:
 - [ ] markdown filename is English only
 - [ ] image filename is English only
@@ -518,10 +548,11 @@ Before deploy:
 - [ ] `pnpm build` succeeds
 
 After deploy:
-- [ ] final Blog URL returns `200`
+- [ ] **`curl -I https://blog.mushroom.cv/blog/SLUG/` 返回 200** (deploy 是否成功的唯一标准，commit 不算)
 - [ ] `/blog/` list shows the new article at or near the top
 - [ ] no old slug remains as an independent article
 - [ ] WeChat draft is created from the final slug
+- [ ] git commit includes the article file and banner
 
 ## Cleanup Rules
 
