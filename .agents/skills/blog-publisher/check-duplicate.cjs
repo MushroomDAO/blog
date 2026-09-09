@@ -172,7 +172,38 @@ async function loadWeChatDrafts() {
 }
 
 
-// ── 账本 3：MemPalace（知识库）─────────────────────────────────
+// ── 账本 3：本地公众号发布记录 ─────────────────────────────────
+// pipeline/m2/output/<slug>.json —— 每成功建一次草稿就落一条，
+// 用户发布后手工删草稿箱不会动它，所以它记得住「发过什么」，
+// 而草稿箱只记得「还没发什么」。局限：被 gitignore，只在本机；
+// 别的机器跑的那次（比如 09-08 的 MiniCPM5+Meshy）这里也没有。
+const M2_OUTPUT = path.join(M2, 'output');
+
+function loadM2Output() {
+  if (!fs.existsSync(M2_OUTPUT)) return { items: [] };
+  const items = [];
+  for (const f of fs.readdirSync(M2_OUTPUT)) {
+    if (!f.endsWith('.json')) continue;
+    try {
+      const j = JSON.parse(fs.readFileSync(path.join(M2_OUTPUT, f), 'utf8'));
+      const slug = f.replace(/\.json$/, '');
+      const body = `${slug} ${j.title || ''} ${j.digest || ''}`;
+      items.push({
+        where: 'm2log',
+        id: slug,
+        title: j.title || slug,
+        date: (j.publishedAt || '').slice(0, 10),
+        sources: extractSources(body),
+        text: body.toLowerCase(),
+      });
+    } catch (e) {
+      /* 单个坏文件不该让整次查重失败 */
+    }
+  }
+  return { items };
+}
+
+// ── 账本 4：MemPalace（知识库）─────────────────────────────────
 // mempalace 本来就是设计成发布账本的 —— 老条目都带着「已发布：<blog URL>
 // 公众号草稿已发」。但 2026-09 这批选题一条都没入库，账本断更了，
 // 于是它对查重完全没起作用。直读 chroma 的全文表，不依赖 MCP。
@@ -232,24 +263,25 @@ function loadMemPalace() {
       // 但已经群发出去的文章就查不到了 —— 那部分只能靠 MemPalace 兜底，
       // 所以「发布后入库」不是可选步骤。
       console.error(`ℹ️  已群发列表读不到（${wechatResult.error}）`);
-      console.error('   草稿箱正常。已群发的历史文章只能靠 MemPalace 账本兜底 —— 发布后必须入库。');
+      console.error('   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以');
+      console.error('   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。');
     } else {
       console.error(`⚠️  公众号账本没查成（${wechatResult.error}）`);
       console.error('   本次结果不完整，别当成完整查重。');
     }
   }
 
+  const m2Result = loadM2Output();
+  const m2log = m2Result.items || [];
+
   const mpResult = loadMemPalace();
   const mempalace = mpResult.items || [];
   if (mpResult.error) console.error(`⚠️  MemPalace 账本没查成（${mpResult.error}）`);
 
-  const all = [...blog, ...wechat, ...mempalace];
+  const all = [...blog, ...wechat, ...m2log, ...mempalace];
   console.log(
-    `账本：blog ${blog.length} 篇 + 公众号 ${wechat.length} 条（草稿 ${
-      wechat.filter((w) => w.where === 'wechat').length
-    } / 已群发 ${
-      wechat.filter((w) => w.where === 'wechat-pub').length
-    }）+ MemPalace ${mempalace.length} 抽屉\n`
+    `账本：blog ${blog.length} 篇 + 公众号草稿箱 ${wechat.length} 条 + ` +
+      `本地发布记录 ${m2log.length} 条 + MemPalace ${mempalace.length} 抽屉\n`
   );
 
   let hit = false;
@@ -295,6 +327,7 @@ function loadMemPalace() {
         f.e.where === 'blog' ? 'BLOG  '
         : f.e.where === 'mempalace' ? '知识库'
         : f.e.where === 'wechat-pub' ? `已群发 ${f.e.date}`
+        : f.e.where === 'm2log' ? `发过 ${f.e.date}`
         : `微信草稿 ${f.e.date}`;
       console.log(`   ${f.level === '重复' ? '❌' : '⚠️ '} [${tag}] ${f.e.title}`);
       console.log(`      ${f.why}`);
@@ -305,7 +338,7 @@ function loadMemPalace() {
   if (hit) {
     console.log('查到重复或疑似重复 —— 先人工确认再决定写不写。');
     console.log('注意：');
-    console.log('  · 公众号有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写一篇新的。');
+    console.log('  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。');
     console.log('  · 三本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。');
     process.exit(1);
   }

@@ -155,15 +155,23 @@ Exit code 0 = clear to write. Exit code 1 = stop and read the findings.
 | Ledger | What it is | Why it alone is not enough |
 |---|---|---|
 | `src/content/blog/` | Published articles | The blog step can fail after WeChat succeeded — then this ledger is silently missing an entry |
-| WeChat draft box | Queried live via `draft/batchget` | Local `pipeline/m2/output/` only records drafts made on *this* machine |
+| WeChat draft box | Live via `draft/batchget` | **Only shows what has NOT been sent yet** — see below |
+| `pipeline/m2/output/*.json` | One record per draft successfully created | gitignored, so it only covers drafts made on *this* machine |
 | MemPalace | `~/.mempalace/palace/chroma.sqlite3` | Only useful if rule 12 is actually followed |
 
-**Known gap:** this account has no permission for `freepublish/batchget` (returns
-`48001 api unauthorized`), so **articles already mass-sent are invisible to the WeChat
-query** — they leave the draft box when published. The draft count dropping (11 → 6 was
-observed on 2026-09-09) means those articles still exist, just not where the API can see
-them. MemPalace is the only ledger that survives this, which is exactly why rule 12
-(write the topic into MemPalace after publishing) is not optional.
+**The draft box is not a record of what was published.** Two things remove entries from it:
+
+1. The account has no `freepublish/batchget` permission (`48001 api unauthorized`), so
+   mass-sent articles cannot be listed at all.
+2. **The user deletes drafts by hand after publishing them.** This is the normal workflow,
+   not an accident — so the draft count is expected to be small and to fluctuate
+   (11 → 6 within one day was observed on 2026-09-09).
+
+Therefore: **"not in the draft box" NEVER means "not published."** The two ledgers that
+remember what actually went out are `pipeline/m2/output/*.json` (local, survives the
+manual deletion) and MemPalace (cross-machine, semantic). This is exactly why rule 12
+(write the topic into MemPalace after publishing) is not optional — MemPalace is the only
+ledger that survives both a machine change and the manual draft cleanup.
 
 **Query with BOTH forms**, because they catch different failures:
 
