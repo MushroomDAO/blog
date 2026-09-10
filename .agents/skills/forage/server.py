@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """forage 本地评审服务。
 
-只用标准库，无依赖。起在 127.0.0.1，不对外。
+只用标准库，无依赖。默认起在 127.0.0.1；FORAGE_HOST 可改（见下）。
 
     python3 .agents/skills/forage/server.py        # 默认 842 端口，自动开浏览器
 
@@ -16,6 +16,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from store import DB, DIMS, conn
 
 PORT = int(os.environ.get("FORAGE_PORT", "8042"))
+# 默认仍然只绑 127.0.0.1（不对外）。但 forage 采集搬到 Mac mini 之后，
+# radar/forage.db 在那台机器上，评审台也必须在那台机器上跑 —— 绑死 127.0.0.1
+# 就意味着你在 MacBook 上打不开它。所以留一个口子：FORAGE_HOST 设成
+# Tailscale IP，就只在自己的 tailnet 内可达（不是公网）。
+# 不想开这个口子的话，用 SSH 隧道也行：
+#   ssh -L 8042:127.0.0.1:8042 jason@<mac-mini>
+HOST = os.environ.get("FORAGE_HOST", "127.0.0.1")
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -130,8 +137,8 @@ def main():
     if not os.path.exists(DB):
         print("库不存在，先跑：python3 .agents/skills/forage/store.py init")
         sys.exit(1)
-    srv = http.server.ThreadingHTTPServer(("127.0.0.1", PORT), H)
-    url = f"http://127.0.0.1:{PORT}/"
+    srv = http.server.ThreadingHTTPServer((HOST, PORT), H)
+    url = f"http://{HOST}:{PORT}/"
     print(f"forage 评审台 → {url}")
     print(f"库：{DB}")
     print("打分和决定实时落库。Ctrl-C 停止。")
