@@ -246,7 +246,10 @@ if $INSTALL_CRON && ! $CHECK_ONLY; then
   # ---- 记忆同步：两台机器都装 ----
   # 它是双向的（rsync 按 mtime 新的赢 + MEMORY.md 取并集），两边同时跑不会互相
   # 覆盖，所以**不受运行权归属限制** —— 恰恰相反，只有两边都跑，记忆才真正同步。
-  echo "45 21 * * * cd $REPO && PATH=$P ./scripts/sync-memory.sh >> /tmp/blog-memory-sync.log 2>&1" >> "$TMPC"
+  # 每 15 分钟，跟仓库对齐同频（错开 7 分钟，别跟 sync-repo 撞在同一秒）。
+  # 原来是每天 21:45 一次 —— 那意味着另一台机器最多要等 24 小时才看得到你新写的
+  # 记忆。「哪台挂了都能无缝接手」这个前提要求记忆也是准实时的，不是隔夜的。
+  echo "7-59/15 * * * * cd $REPO && PATH=$P ./scripts/sync-memory.sh >> /tmp/blog-memory-sync.log 2>&1" >> "$TMPC"
 
   # ---- 有副作用的任务：只有 owner 装 ----
   if [ "$OWNER" = "$HOST" ]; then
@@ -261,11 +264,11 @@ EOF
   crontab "$TMPC" && rm -f "$TMPC"
 
   if [ "$OWNER" = "$HOST" ]; then
-    ok "已装 6 条 cron（*/15 仓库对齐 / 21:00 analytics / 21:10 forage / 21:15 xhs cookie / 21:30 newsletter / 21:45 记忆同步）"
+    ok "已装 6 条 cron（*/15 仓库对齐 / 21:00 analytics / 21:10 forage / 21:15 xhs cookie / 21:30 newsletter / 每15分记忆同步）"
     warn "8042 评审台是常驻进程，走 LaunchAgent 不是 cron：拷 ~/Library/LaunchAgents/cv.mushroom.forage.plist 过来，把里面的路径改成本机的，再 launchctl load"
     warn "refresh-xhs-cookie.sh 从 Chrome Profile 15 提取登录态 —— 新机器没有那个 profile，得先用同一个 Chrome 账号登录小红书并确认 profile 编号"
   else
-    ok "已装 2 条 cron（*/15 仓库对齐 / 21:45 记忆同步）—— 本机不是 owner，有副作用的 4 条没装"
+    ok "已装 2 条 cron（每15分：仓库对齐 + 记忆同步）—— 本机不是 owner，有副作用的 4 条没装"
   fi
   warn "cron 用的是非交互 shell：记忆同步要 push 到私有仓库，SSH key 必须无 passphrase 或已加进钥匙串，否则会静默失败（看 /tmp/blog-memory-sync.log）"
 fi
