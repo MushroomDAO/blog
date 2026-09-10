@@ -43,6 +43,18 @@ if [ -z "$DRY" ]; then
   git -C "$VAULT" pull --ff-only -q || echo "  ⚠️ pull 失败（可能有本地未推送的改动），继续对齐"
 fi
 
+# MEMORY.md 必须先单独合并成并集再进 rsync。它是**两边都会追加**的索引文件，
+# 按「新的赢」整文件覆盖会静默抹掉另一台新加的索引行（Mac mini 上就有 4 条）。
+if [ -f "$LOCAL/MEMORY.md" ] && [ -f "$VAULT/MEMORY.md" ]; then
+  echo "→ 合并 MEMORY.md 索引（取并集）"
+  if [ -n "$DRY" ]; then
+    echo "  （--dry，跳过合并）"
+  else
+    python3 scripts/merge-memory-index.py "$LOCAL/MEMORY.md" "$VAULT/MEMORY.md" | sed 's/^/  /'
+  fi
+fi
+
+# 其余每个文件各是一条记忆，通常只有一台机器在改，「修改时间新的赢」是对的。
 # -u = 只在源文件更新时才覆盖。两个方向各跑一次 = 两边都拿到对方的新东西。
 echo "→ 本机 → 记忆库"
 rsync -a -u $DRY --itemize-changes --exclude='README.md' --include='*.md' --exclude='*' "$LOCAL/" "$VAULT/"
