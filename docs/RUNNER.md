@@ -180,6 +180,12 @@ scripts/bootstrap-machine.sh --install-cron
 
 **二、1 个 LaunchAgent —— 唯一真正常驻的进程**
 
+> 📍 **从 MacBook 看 Mac mini 的评审台**：直接在浏览器打开
+> **http://100.107.243.106:8042/**（Tailscale IP，tailnet 内可达）。
+> `radar/forage.db` 在 Mac mini 上、不进 git，所以这是**唯一**能看到当晚采集结果的地方 ——
+> 在 MacBook 本地开 127.0.0.1:8042 看到的是另一个库。
+
+
 `cv.mushroom.forage.plist` 跑 `python3 .agents/skills/forage/server.py`，
 就是 8042 端口那个评审台的 web 服务。`RunAtLoad`（开机自启）+ `KeepAlive`（挂了自动重拉）。
 
