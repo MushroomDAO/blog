@@ -118,9 +118,15 @@ fi
 echo "[4/6] MemPalace 账本 …"
 if command -v node >/dev/null 2>&1; then
   node .agents/skills/blog-publisher/sync-ledger.cjs status 2>&1 | sed 's/^/     /'
-  if ! $CHECK_ONLY && command -v mempalace >/dev/null 2>&1; then
-    node .agents/skills/blog-publisher/sync-ledger.cjs import 2>&1 | sed 's/^/     /' || \
-      warn "import 失败，但查重不受影响 —— check-duplicate.cjs 直接读账本"
+  # 这里**故意不自动 import**。查重根本不需要它 —— check-duplicate.cjs 同时读
+  # chroma 和账本，别的机器写的条目照样查得到。而 import 走 `mempalace mine`，
+  # 它会重排并切分文本，哈希对不上账本原文，所以 status 永远显示「只在仓库」，
+  # 自动化跑就是每次重灌一遍（2026-09-10 实测：Mac mini palace 5 → 976 条）。
+  # 想让本机语义搜索也能命中别的机器写的内容，再手动跑一次：
+  #   node .agents/skills/blog-publisher/sync-ledger.cjs import
+  if ! $CHECK_ONLY; then
+    echo "     （不自动 import —— 查重不需要它，且 mempalace mine 会重排文本导致不收敛。"
+    echo "       想补本机语义搜索：node .agents/skills/blog-publisher/sync-ledger.cjs import）"
   fi
 else
   fail "没有 node，账本和发布流程都跑不了"

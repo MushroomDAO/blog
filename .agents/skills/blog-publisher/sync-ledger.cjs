@@ -33,13 +33,36 @@ const REPO = path.resolve(__dirname, '../../..');
 const LEDGER = path.join(REPO, '.agents/skills/blog-publisher/published-ledger.jsonl');
 const DB = path.join(process.env.HOME || '', '.mempalace/palace/chroma.sqlite3');
 
+// 从账本 import 进来的抽屉，导出时必须排除掉，否则会形成无界的反馈循环：
+// `mempalace mine` 会把文本重排（加 **Summary**、按 chunk 切分），哈希跟账本里
+// 的原文对不上，于是这些抽屉被 status 判成「只在本机」，下次 export 又把重排版
+// 灌回账本 —— 账本 369 → 1175 → 再 import → 再膨胀，没有收敛点。
+// 2026-09-10 在 Mac mini 上实测到：import 199 条后 status 仍显示 199 条只在仓库，
+// palace 从 5 条涨到 976 条。
+// 判据用 wing：import 统一进 IMPORT_WING，真实抽屉进各自的业务 wing。
+const IMPORT_WING = '_ledger-import';
+// 'published' 是 2026-09-10 那次事故用的 wing，留着兼容，别再用这个名字建 wing。
+const EXCLUDED_WINGS = [IMPORT_WING, 'published'];
+
 function readPalace() {
   if (!fs.existsSync(DB)) return [];
-  const out = execFileSync(
-    'sqlite3',
-    [DB, "SELECT replace(replace(c0, char(10), ' '), char(9), ' ') FROM embedding_fulltext_search_content;"],
-    { encoding: 'utf8', maxBuffer: 128 * 1024 * 1024 }
-  );
+  const notImported = EXCLUDED_WINGS.map(
+    (w) => `NOT EXISTS (SELECT 1 FROM embedding_metadata m WHERE m.id = c.rowid AND m.key = 'wing' AND m.string_value = '${w}')`
+  ).join(' AND ');
+  const sql =
+    "SELECT replace(replace(c.c0, char(10), ' '), char(9), ' ') " +
+    `FROM embedding_fulltext_search_content c WHERE ${notImported};`;
+  let out;
+  try {
+    out = execFileSync('sqlite3', [DB, sql], { encoding: 'utf8', maxBuffer: 128 * 1024 * 1024 });
+  } catch {
+    // 老版本 palace 可能没有 embedding_metadata 表，退回不过滤的读法
+    out = execFileSync(
+      'sqlite3',
+      [DB, "SELECT replace(replace(c0, char(10), ' '), char(9), ' ') FROM embedding_fulltext_search_content;"],
+      { encoding: 'utf8', maxBuffer: 128 * 1024 * 1024 }
+    );
+  }
   return out.split('\n').map((l) => l.trim()).filter(Boolean);
 }
 
@@ -87,14 +110,16 @@ if (cmd === 'import') {
   console.log(`账本里有 ${missing.length} 条本机没有，已摊到 ${path.relative(REPO, inbox)}/`);
 
   try {
-    execFileSync('mempalace', ['mine', inbox, '--wing', 'published', '--agent', 'sync-ledger', '--no-gitignore'],
+    execFileSync('mempalace', ['mine', inbox, '--wing', IMPORT_WING, '--agent', 'sync-ledger', '--no-gitignore'],
       { stdio: 'inherit' });
-    console.log(`✅ 导入完成：${missing.length} 条已进入本机 MemPalace。`);
+    console.log(`✅ 导入完成：${missing.length} 条已进入本机 MemPalace（wing=${IMPORT_WING}）。`);
+    console.log('   注意：mempalace mine 会重排并切分文本，所以再跑 status 仍会显示这些条目');
+    console.log('   「只在仓库」—— 那是正常的，不是没导入成功。导出时它们会被排除，不会污染账本。');
     fs.rmSync(inbox, { recursive: true, force: true });
   } catch (err) {
     console.error('❌ mempalace mine 失败。可能是没装 mempalace（brew/pipx），或 palace 未 init。');
     console.error(`   摊开的文件留在 ${path.relative(REPO, inbox)}/，修好后手动跑：`);
-    console.error(`   mempalace mine ${path.relative(REPO, inbox)} --wing published --no-gitignore`);
+    console.error(`   mempalace mine ${path.relative(REPO, inbox)} --wing ${IMPORT_WING} --no-gitignore`);
     console.error('   注意：查重不受影响 —— check-duplicate.cjs 直接读账本，不依赖这一步。');
     process.exit(1);
   }
