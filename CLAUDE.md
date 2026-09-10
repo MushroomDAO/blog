@@ -54,7 +54,9 @@ pnpm preview          # 预览构建结果
 | `config/users/` | 多用户配置（每用户一个 JS 文件，含博客域名、微信凭据、小红书 URL） |
 | `submodules/` | Git 子模块（xiaohongshu-mcp Go 源码、微信格式化工具等） |
 | `.agents/skills/` | Claude agent skill 定义（`blog-publisher`、`banner-creator`、`mage-vl` 等），提交进仓库的源 |
-| `.claude/skills/` | 上面那些 skill 的本地镜像，Claude Code 实际从这里加载；**未跟踪**，改完 `.agents/` 要 `cp -r` 同步过去 |
+| `.claude/skills/` | 上面那些 skill 的本地镜像，Claude Code 实际从这里加载；**未跟踪、是生成物**，改完 `.agents/` 跑 `scripts/bootstrap-machine.sh` 重新镜像，别手改 |
+| `.agents/memory/` | Claude Code 项目记忆的仓库副本，跨机器共享；双向对齐用 `scripts/sync-memory.sh` |
+| `.agents/codex-skills/` | Codex 侧插图 skill（小M / 小J / Baobao），bootstrap 会装到 `~/.codex/skills/` 和 `~/.claude/skills/` |
 
 ### 配图的视觉理解（mage-vl skill）
 
@@ -63,6 +65,19 @@ pnpm preview          # 预览构建结果
 检查配图和文章主题是否匹配、给视频抽帧。用法见 `.agents/skills/mage-vl/SKILL.md`。
 
 注意它**没有音频塔，做不了语音转文字**；筛图只出判定结果，不会自动删改文件。
+
+### 换机与 24/7 自动运行
+
+仓库要在 Mac mini 上 24 小时跑，MacBook Pro 保留完整能力做手动介入。
+
+- **新机器开工**：`scripts/bootstrap-machine.sh`（幂等，随时可重跑；`--check-only` 只体检）
+- **归属锁**：`config/runner.json` 的 `owner` 决定谁能自动跑有副作用的任务。
+  `run-daily.sh`（重复采集）和 `newsletter/local-fallback.sh`（**重复发信**）在入口
+  `source scripts/require-owner.sh`，非 owner 机器静默让路。手动跑加 `FORCE_RUN=1`。
+- **装不了的四样**：`.env` 凭据、FLUX 模型(5.9GB)、小红书 Chrome Profile 登录态、
+  8042 LaunchAgent —— 必须手动搬，bootstrap 会明确报出来而不是假装成功。
+
+完整交接步骤和「不跟 git 走的东西」清单见 `docs/RUNNER.md`。
 
 ### 多用户配置系统
 

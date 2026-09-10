@@ -1,0 +1,10 @@
+{
+  "_comment": "谁是这个仓库的 24/7 自动运行机。有副作用的定时任务（forage 采集、newsletter 群发）在非 owner 机器上会直接拒绝执行，防止两台机器同时跑导致重复采集/重复发信。手动调用不受影响。换机执行：scripts/bootstrap-machine.sh --claim-owner，然后 commit + push。",
+  "owner": "Jason-M1-Max-MacBook-Pro",
+  "ownerNote": "本机（MacBook Pro）。Mac Mini 接管后这里要改成 Mac Mini 的 LocalHostName。",
+  "claimedAt": "2026-09-10",
+  "guardedScripts": [
+    ".agents/skills/forage/run-daily.sh",
+    "pipeline/newsletter/local-fallback.sh"
+  ]
+}

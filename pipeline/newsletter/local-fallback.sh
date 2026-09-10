@@ -20,6 +20,10 @@
 set -uo pipefail
 cd "$(dirname "$0")/../.."
 
+# 群发有副作用且不可撤销：两台机器同时跑 = 订阅者收到两封一样的邮件。
+# 只有 24/7 运行权归属机才自动发。手动跑：FORCE_RUN=1 ...
+source ./scripts/require-owner.sh
+
 ENV_FILE="$HOME/Dev/.env"
 LOCK_DIR="/tmp/newsletter-local.lock"
 SKIP_WINDOW_HOURS=20   # 这么多小时内已有 campaign 就认为 Actions 发过了

@@ -1,0 +1,13 @@
+{
+  "title": "同一个 27B，换条路跑：HauhauCS 的 GGUF 版用 FastMTP 投机解码把生成速度拉到 3 倍",
+  "author": "Mycelium",
+  "digest": "HauhauCS/Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF 是 Qwen3.",
+  "mediaId": "prCUE631thH1cmNLi42prB6HrWWBPXSc0Vmm3CMIl334MAI7RiFLeXRWr8kZWddQ",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/hauhaucs/qwen3.8-27b-uncensored-hauhaucs-aggressive-mtp-gguf",
+    "huggingface.co/qwen/qwen3.8-27b",
+    "github.com/ggerganov/llama.cpp"
+  ],
+  "publishedAt": "2026-09-09T16:48:41.983Z"
+}

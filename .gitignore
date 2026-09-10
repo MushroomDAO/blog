@@ -39,11 +39,20 @@ source/*/
 !source/README.md
 !source/.gitkeep
 
-# Claude Code local skill mirror — .agents/skills/ is the tracked source
+# Claude Code local skill mirror — .agents/skills/ is the tracked source.
+# 由 scripts/bootstrap-machine.sh 从 .agents/skills/ 重新生成，不要手改这里面的东西。
 .claude/
+
+# sync-ledger.cjs import 的中转目录，导完即删
+.agents/skills/blog-publisher/.ledger-inbox/
 
 # run logs (already-tracked logs stay tracked)
 *.log
+
+# forage 的 SQLite 决策库。不入库是故意的：二进制、每晚全量重写、没法 review，
+# 两台机器都写还会冲突。丢了也不致命 —— store.py sync 每晚会从
+# src/content/blog/ 重新播种 seen 表，对「已发过的文章」的查重照样有效，
+# 丢的只是评审台里 write/skip 的历史标记。
 radar/
 
 # Playwright MCP debug output (console logs / page snapshots from browser automation runs)

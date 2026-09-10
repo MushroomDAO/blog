@@ -14,8 +14,15 @@
  * 一年下来仓库会膨胀几百 MB，而且完全没法 diff 和 review。
  *
  * 用法：
- *   node sync-ledger.cjs export   # 本机 MemPalace → 仓库账本（发布后跑）
+ *   node sync-ledger.cjs export   # 本机 MemPalace → 仓库账本（发布后跑，pre-commit 钩子自动跑）
+ *   node sync-ledger.cjs import   # 仓库账本 → 本机 MemPalace（新机器 bootstrap 时跑）
  *   node sync-ledger.cjs status   # 看两边差多少
+ *
+ * 关于 import：查重本身**不需要**它 —— check-duplicate.cjs 已经同时读
+ * chroma 和这份 JSONL 账本，所以另一台机器写的条目在这台机器上照样查得到。
+ * import 存在的意义是让本机 palace 自己补全，这样 mempalace 的语义搜索
+ * （以及 MCP 的 mempalace_search）也能命中别的机器写的内容，而不只是
+ * 精确文本查重能命中。
  */
 
 const fs = require('fs');
@@ -59,7 +66,39 @@ function hash(s) {
 
 const cmd = process.argv[2] || 'status';
 
-if (cmd === 'export') {
+if (cmd === 'import') {
+  // 只补本机缺的那些。走 `mempalace mine` 而不是直写 chroma——
+  // 直写 sqlite 会绕过向量化，条目进得去但搜不出来，比不导入更糟。
+  const palace = readPalace();
+  const have = new Set(palace.map(hash));
+  const missing = readLedger().filter((e) => !have.has(e.h));
+
+  if (!missing.length) {
+    console.log('✅ 本机 MemPalace 已包含账本里的全部条目，无需导入。');
+    process.exit(0);
+  }
+
+  const inbox = path.join(REPO, '.agents/skills/blog-publisher/.ledger-inbox');
+  fs.rmSync(inbox, { recursive: true, force: true });
+  fs.mkdirSync(inbox, { recursive: true });
+  for (const e of missing) {
+    fs.writeFileSync(path.join(inbox, `${e.h}.md`), e.text + '\n');
+  }
+  console.log(`账本里有 ${missing.length} 条本机没有，已摊到 ${path.relative(REPO, inbox)}/`);
+
+  try {
+    execFileSync('mempalace', ['mine', inbox, '--wing', 'published', '--agent', 'sync-ledger', '--no-gitignore'],
+      { stdio: 'inherit' });
+    console.log(`✅ 导入完成：${missing.length} 条已进入本机 MemPalace。`);
+    fs.rmSync(inbox, { recursive: true, force: true });
+  } catch (err) {
+    console.error('❌ mempalace mine 失败。可能是没装 mempalace（brew/pipx），或 palace 未 init。');
+    console.error(`   摊开的文件留在 ${path.relative(REPO, inbox)}/，修好后手动跑：`);
+    console.error(`   mempalace mine ${path.relative(REPO, inbox)} --wing published --no-gitignore`);
+    console.error('   注意：查重不受影响 —— check-duplicate.cjs 直接读账本，不依赖这一步。');
+    process.exit(1);
+  }
+} else if (cmd === 'export') {
   const palace = readPalace();
   const existing = readLedger();
   const seen = new Set(existing.map((e) => e.h));

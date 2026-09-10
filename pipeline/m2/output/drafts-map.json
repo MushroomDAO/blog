@@ -468,5 +468,35 @@
     "mediaId": "prCUE631thH1cmNLi42prI5F1EWABWz4BOPJ1UPFFsbWlcbAgv0-lN-LmQHhNPA7",
     "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
     "publishedAt": "2026-09-06T04:16:08.968Z"
+  },
+  "ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda": {
+    "mediaId": "prCUE631thH1cmNLi42prDCggBR3e9Nkf4URWi8mGDAOpKcwE2TCTmIG-L0YY9_Q",
+    "title": "Ferrum：一个 Rust 二进制跑本地推理，Metal 和 CUDA 共用同一套 runtime",
+    "publishedAt": "2026-09-09T15:34:34.719Z"
+  },
+  "trinity-abilityai-sovereign-agent-platform-per-agent-docker-audit": {
+    "mediaId": "prCUE631thH1cmNLi42prHpI8_t7U3TuJDbwB39yAszb25IbaQmjonhvrQ8iLVxu",
+    "title": "Trinity：每个 Agent 一个 Docker 容器，把「Claude Code 写的 Agent」搬进有审计的生产环境",
+    "publishedAt": "2026-09-09T15:48:31.215Z"
+  },
+  "android-reverse-engineering-claude-code-skill-r8-kotlin-name-recovery": {
+    "mediaId": "prCUE631thH1cmNLi42prD0RL5oF8KW7xTeZKjl3_qh7Boknse1T3bO-Kvfu5bKW",
+    "title": "R8 混淆藏不住的那串字符串：一个 Claude Code Skill 把 APK 的 API 挖出来",
+    "publishedAt": "2026-09-09T16:04:44.706Z"
+  },
+  "cf-workers-checkproxyip-single-file-worker-tcp-tls-probe": {
+    "mediaId": "prCUE631thH1cmNLi42prF-QzZH5KtQv_oq4oCf0bd7HAa8nqCdPK7rZKA3I2OeI",
+    "title": "一个 _worker.js 文件就是全部：CF-Workers-CheckProxyIP 在 Workers 上做 TCP/TLS 连通性体检",
+    "publishedAt": "2026-09-09T16:19:01.422Z"
+  },
+  "whiteboard-animator-cpu-only-hand-drawn-reveal-render-engine": {
+    "mediaId": "prCUE631thH1cmNLi42prONF3fYA8Cp6EQhOPSN2sEmAHSn2niELw8leT2EUYAuh",
+    "title": "把一张画变成「有人正在画」：whiteboard-animator 用纯 CPU 做手绘揭示动画",
+    "publishedAt": "2026-09-09T16:34:17.021Z"
+  },
+  "hauhaucs-qwen3-8-27b-gguf-fastmtp-speculative-decoding-kp-quant": {
+    "mediaId": "prCUE631thH1cmNLi42prB6HrWWBPXSc0Vmm3CMIl334MAI7RiFLeXRWr8kZWddQ",
+    "title": "同一个 27B，换条路跑：HauhauCS 的 GGUF 版用 FastMTP 投机解码把生成速度拉到 3 倍",
+    "publishedAt": "2026-09-09T16:48:41.983Z"
   }
 }
