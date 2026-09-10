@@ -110,14 +110,40 @@ scripts/bootstrap-machine.sh --install-cron
 > ⚠️ **第 2 步不能省。** cron 不会自己 `git pull`，归属锁只挡住了有守卫的那两个脚本；
 > `update-analytics.sh` 和 `refresh-xhs-cookie.sh` 没有守卫，旧机器上不删 cron 就会双跑。
 
-### 定时任务清单
+### 「24/7 运行」到底是什么
 
-| 时间 | 脚本 | 有归属锁吗 |
-|---|---|---|
-| 21:00 | `scripts/update-analytics.sh` | 否（幂等，双跑只是浪费） |
-| 21:10 | `.agents/skills/forage/run-daily.sh` | ✅ 有 |
-| 21:15 | `scripts/refresh-xhs-cookie.sh` | 否（只写本机 cookie 文件） |
-| 21:30 | `pipeline/newsletter/local-fallback.sh` | ✅ 有 |
+**不是一个常驻守护进程。** 是两样东西：
+
+**一、5 条 cron —— 被定时唤醒的一次性脚本，跑完就退出**
+
+| 时间 | 脚本 | 装在哪台 | 有归属锁吗 |
+|---|---|---|---|
+| 21:00 | `scripts/update-analytics.sh` | 仅 owner | 否（幂等，双跑只是浪费） |
+| 21:10 | `.agents/skills/forage/run-daily.sh` | 仅 owner | ✅ 有 |
+| 21:15 | `scripts/refresh-xhs-cookie.sh` | 仅 owner | 否（只写本机 cookie 文件） |
+| 21:30 | `pipeline/newsletter/local-fallback.sh` | 仅 owner | ✅ 有 |
+| 21:45 | `scripts/sync-memory.sh` | **两台都装** | 否（双向合并，两边都跑才同步） |
+
+**二、1 个 LaunchAgent —— 唯一真正常驻的进程**
+
+`cv.mushroom.forage.plist` 跑 `python3 .agents/skills/forage/server.py`，
+就是 8042 端口那个评审台的 web 服务。`RunAtLoad`（开机自启）+ `KeepAlive`（挂了自动重拉）。
+
+```bash
+scp 旧机器:~/Library/LaunchAgents/cv.mushroom.forage.plist ~/Library/LaunchAgents/
+# 把 plist 里的 /Users/jason/Dev/mycelium/blog 改成本机路径
+launchctl load ~/Library/LaunchAgents/cv.mushroom.forage.plist
+```
+
+### ⚠️ 它**不会**自动写文章
+
+这一点必须说清楚，免得期望错位。`run-daily.sh` 的注释里自己写了：
+
+> 这个脚本只做**机械部分**：采集 → 三层去重 → 拉协议和 README → 装库。
+> 它做不了的：写「核心增量」和「延展角度」——那是判断，需要 Claude 在会话里做。
+
+所以早上打开 8042 看到的条目会标着「待判断」。**24 小时跑的是采集和待命，
+不是 24 小时自动产出文章** —— 写稿、配图、发布仍然要你开一个会话。
 
 ---
 
@@ -136,11 +162,21 @@ Claude Code 真正读写的位置是 `~/.claude/projects/<repo-path>/memory/`。
 单条都不是凭据，打包公开就是一份现成的踩点材料。
 
 ```bash
-scripts/sync-memory.sh          # 拉取 → 双向对齐（新的赢）→ 自动提交并推回私有库
+scripts/sync-memory.sh          # 拉取 → 双向对齐 → 自动提交并推回私有库
 scripts/sync-memory.sh --dry    # 只看会动什么
 ```
 
 提交和推送是脚本自动做的 —— 靠人记得提交迟早会漏，另一台机器就读不到。
+`--install-cron` 会把它装成**每天 21:45 跑一次**，而且**两台机器都装** ——
+它是双向的，只有两边都跑记忆才真正同步。
+
+**`MEMORY.md` 是特殊处理的**：它是两边都会追加的索引，按「新的赢」整文件覆盖
+会静默抹掉另一台新加的行（Mac mini 上实测有 4 条会丢）。所以先用
+`scripts/merge-memory-index.py` 取并集，去重键是链接目标而不是整行文本。
+其余每个 `.md` 各是一条记忆、通常只有一台在改，「新的赢」是对的。
+
+**cron 环境的坑**：非交互 shell 里 push 到私有仓库，SSH key 必须无 passphrase
+或已加进钥匙串，否则会静默失败。看 `/tmp/blog-memory-sync.log`。
 
 **新机器需要 SSH key**：私有仓库走 `git@github.com:`，clone 不下来的话先
 `ssh -T git@github.com` 自测。bootstrap 会明确报这一条，不会静默跳过。
