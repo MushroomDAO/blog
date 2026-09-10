@@ -25,6 +25,7 @@ This directory turns daily research into a product-and-content pipeline:
 - [2026-09-07](./2026-09-07.md) — Productized AI blueprints, proof-bearing finance agents, chat-channel distribution, vertical model routing, OpenClaw lifecycle operations
 - [2026-09-08](./2026-09-08.md) — Bounded Agent Work Units, AI labor economics, living-data loops, transaction intent contracts, creative-tool control planes
 - [2026-09-09](./2026-09-09.md) — AI MSP/IT autopilot, local presence agents, synthetic-customer eval labs, lightweight AI Ops/observability
+- [2026-09-10](./2026-09-10.md) — Messaging-native business agents, merchant operating agents, governed team memory, evidence-first MSME underwriting
 
 ## Standard Review Lens
 
