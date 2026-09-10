@@ -26,12 +26,31 @@
 # ============================================================================
 set -euo pipefail
 
-VENV_PY="${XHS_VENV_PY:-$HOME/.local/pipx/venvs/xiaohongshu-cli/bin/python}"
 REFRESH_THRESHOLD_DAYS="${XHS_REFRESH_DAYS:-6}"
 
-if [ ! -x "$VENV_PY" ]; then
-  echo "[error] 找不到 xhs 的 python：$VENV_PY"
-  echo "        装：pipx install xiaohongshu-cli（或用 XHS_VENV_PY 指定）"
+# 找 xhs 的 python。pipx 的 venv 位置**不同机器不一样**：老版本在
+# ~/.local/pipx/venvs（MacBook），新版本改成了 ~/Library/Application Support/pipx/venvs
+# （Mac mini，brew 装的）。写死一个就必然在另一台上炸，所以按顺序探测，
+# 并且优先问 pipx 自己。
+find_venv_py() {
+  [ -n "${XHS_VENV_PY:-}" ] && { echo "$XHS_VENV_PY"; return; }
+  local base
+  if command -v pipx >/dev/null 2>&1; then
+    base=$(pipx environment --value PIPX_LOCAL_VENVS 2>/dev/null || true)
+    [ -n "$base" ] && [ -x "$base/xiaohongshu-cli/bin/python" ] && { echo "$base/xiaohongshu-cli/bin/python"; return; }
+  fi
+  for base in "$HOME/.local/pipx/venvs" \
+              "$HOME/Library/Application Support/pipx/venvs" \
+              "$HOME/.local/share/pipx/venvs"; do
+    [ -x "$base/xiaohongshu-cli/bin/python" ] && { echo "$base/xiaohongshu-cli/bin/python"; return; }
+  done
+  echo ""
+}
+
+VENV_PY="$(find_venv_py)"
+if [ -z "$VENV_PY" ] || [ ! -x "$VENV_PY" ]; then
+  echo "[error] 找不到 xhs 的 python（已试 pipx environment 和三个常见 venv 路径）"
+  echo "        装：pipx install xiaohongshu-cli（或用 XHS_VENV_PY 指定绝对路径）"
   exit 1
 fi
 
