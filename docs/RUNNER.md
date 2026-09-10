@@ -78,6 +78,59 @@ launchctl load ~/Library/LaunchAgents/cv.mushroom.forage.plist
 
 ---
 
+## 二点五、三个入口都往这个仓库里写
+
+这个仓库有三个入口会产生文章和发布动作：
+
+| 入口 | 跑在哪 | 触发方式 |
+|---|---|---|
+| 手动会话 | MacBook | 你开一个 Claude Code |
+| forage cron | Mac mini | 每晚 21:10 自动采集（只采集，不写文章）|
+| **Heinu1 微信 bot** | **Mac mini** | 你发条微信 → 它在 `~/Dev/mycelium/blog` 里 spawn `claude` |
+
+Heinu1（`~/Dev/tools/Heinu1`，launchd 标签 `com.heinu1.wechat-bot`）的默认
+workspace 就是这个仓库，所以微信驱动的写作和发布**发生在 Mac mini 上、同一个目录**。
+
+### 为什么需要 `sync-repo.sh`
+
+**Heinu1 完全不碰 git** —— 它只在配置好的 workspace 里起 claude，不 pull 也不 push。
+所以只要没人手动 pull，那台机器的树就一直漂。实测：2026-09-10 setup 时落后 14 个提交。
+
+后果不只是冲突：blog-publisher 查重要读 `src/content/blog/` 和
+`published-ledger.jsonl`，**两者都过时就会把发过的选题判成没发过然后重发一遍** ——
+正是四本账制度要防的事。
+
+```bash
+scripts/sync-repo.sh          # cron 每 15 分钟跑（两台都装）
+scripts/sync-repo.sh --dry    # 只报告会做什么
+```
+
+它足够胆小，三条都会让它跳过：
+
+- 有 `claude` 进程的 cwd 在本仓库 → bot 正在干活，别动
+- 已跟踪文件有改动 → 有人写了一半，别 rebase
+- rebase 失败 → `--abort` 交人工，绝不自动解冲突
+
+判「脏」用的是 `--untracked-files=no`。用全量口径的话工作区永远是脏的
+（`submodules/xiaoheishu` 里常年有未跟踪内容），脚本就永远跳过，等于没写。
+
+### ⚠️ MemPalace 的 import 不要自动化
+
+`sync-ledger.cjs import` 走 `mempalace mine`，**它会重排并切分文本**（加
+`**Summary**`、按 chunk 拆），哈希跟账本原文对不上。所以：
+
+- `status` 在 import 之后**仍然**显示这些条目「只在仓库」—— 那是正常的，不是没导进去
+- 自动化跑就是每次重灌一遍。实测：Mac mini palace 5 → 976 条
+- 更糟的是 pre-commit 钩子会 export，把重排版灌回账本（369 → 约 1175），
+  另一台再 import 再膨胀 —— **无界反馈循环**
+
+已经堵上：`readPalace()` 按 wing 排除 `_ledger-import` 和 `published`
+（后者是 2026-09-10 那次事故用的 wing 名，别再用）。bootstrap 也不再自动 import。
+
+**查重压根不需要 import** —— `check-duplicate.cjs` 同时读 chroma 和账本，
+别的机器写的条目照样查得到。import 只影响本机语义搜索能不能命中别的机器的内容，
+需要时手动跑一次即可。
+
 ## 三、两台机器怎么不打架
 
 ### 归属锁
@@ -114,7 +167,7 @@ scripts/bootstrap-machine.sh --install-cron
 
 **不是一个常驻守护进程。** 是两样东西：
 
-**一、5 条 cron —— 被定时唤醒的一次性脚本，跑完就退出**
+**一、6 条 cron —— 被定时唤醒的一次性脚本，跑完就退出**
 
 | 时间 | 脚本 | 装在哪台 | 有归属锁吗 |
 |---|---|---|---|
@@ -123,6 +176,7 @@ scripts/bootstrap-machine.sh --install-cron
 | 21:15 | `scripts/refresh-xhs-cookie.sh` | 仅 owner | 否（只写本机 cookie 文件） |
 | 21:30 | `pipeline/newsletter/local-fallback.sh` | 仅 owner | ✅ 有 |
 | 21:45 | `scripts/sync-memory.sh` | **两台都装** | 否（双向合并，两边都跑才同步） |
+| 每 15 分钟 | `scripts/sync-repo.sh` | **两台都装** | 否（自带三重胆小守卫） |
 
 **二、1 个 LaunchAgent —— 唯一真正常驻的进程**
 
