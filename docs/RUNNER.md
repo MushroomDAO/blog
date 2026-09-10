@@ -20,7 +20,7 @@ scripts/bootstrap-machine.sh
 |---|---|
 | 1 | `.agents/skills/*` → `.claude/skills/`（**Claude Code 实际加载的是后者**，前者才是真相源） |
 | 2 | `banner-creator` + 3 个插图 skill 装到 `~/.claude/skills/` 和 `~/.codex/skills/` |
-| 3 | `.agents/memory/` → `~/.claude/projects/<repo>/memory/`（只补缺失，不覆盖本机已有） |
+| 3 | clone 私有记忆库 `MushroomDAO/blog-memory` 到 `.agents/memory/`，再补到 `~/.claude/projects/<repo>/memory/`（只补缺失，不覆盖本机已有） |
 | 4 | 仓库账本 → 本机 MemPalace（`sync-ledger.cjs import`），并启用 git hooks |
 | 5 | 依赖体检，缺什么直接报，附修复命令 |
 | 6 | 24/7 运行权归属检查 |
@@ -125,16 +125,25 @@ scripts/bootstrap-machine.sh --install-cron
 
 两套记忆，机制不同：
 
-### Claude Code 项目记忆（34 个 md）
+### Claude Code 项目记忆（34 条）—— 在**私有**仓库里
 
-真身在 `~/.claude/projects/<repo-path>/memory/`，仓库里跟一份 `.agents/memory/`。
+Claude Code 真正读写的位置是 `~/.claude/projects/<repo-path>/memory/`。
+跟着 git 走的那一份在 **`MushroomDAO/blog-memory`（private）**，
+被 clone 到本仓库的 `.agents/memory/`（该路径在本仓库 `.gitignore` 里）。
+
+**为什么不放在本仓库**：`MushroomDAO/blog` 是公开的。记忆文件里没有任何密钥值，
+但含 AWS 账号 ID、IAM 用户名、私人邮箱、主密钥文件路径与完整变量名索引 ——
+单条都不是凭据，打包公开就是一份现成的踩点材料。
 
 ```bash
-scripts/sync-memory.sh          # 双向对齐，按修改时间新的赢
+scripts/sync-memory.sh          # 拉取 → 双向对齐（新的赢）→ 自动提交并推回私有库
 scripts/sync-memory.sh --dry    # 只看会动什么
 ```
 
-对齐完要 `git add .agents/memory && git commit && git push`，否则另一台读不到。
+提交和推送是脚本自动做的 —— 靠人记得提交迟早会漏，另一台机器就读不到。
+
+**新机器需要 SSH key**：私有仓库走 `git@github.com:`，clone 不下来的话先
+`ssh -T git@github.com` 自测。bootstrap 会明确报这一条，不会静默跳过。
 
 不用软链接是因为 Claude Code 会在那个目录里增删文件，软链接一旦失效是**静默**的 ——
 记忆会安静地写到别处，等你发现已经丢了一批。
@@ -165,6 +174,7 @@ node .agents/skills/blog-publisher/sync-ledger.cjs import   # 账本 → 本机�
 | FLUX 模型 + venv | 5.9GB | 新机器上装 |
 | `radar/forage.db` | 二进制、每晚全量重写、两边写会冲突 | 丢了不致命：`store.py sync` 每晚从 `src/content/blog/` 重新播种 seen 表，对已发文章的查重照常；丢的只是评审台的 write/skip 历史 |
 | `.claude/skills/` | 生成物 | bootstrap 重新生成 |
+| `.agents/memory/` | 它是私有仓库 `MushroomDAO/blog-memory` 的 clone，本仓库公开 | bootstrap 自动 clone（需 SSH key） |
 | 插图 skill 的 `assets/examples/` | 39MB，且 SKILL.md 自己说「只作低频视觉校准，不进入默认生成路径」 | 不需要 |
 | `.agents/skills/lieflat-charts/` | 第三方 20MB，自带 LICENSE | 要用单独装 |
 | Chrome Profile 15 登录态 | 绑定本机浏览器 | 见上文第二节 |

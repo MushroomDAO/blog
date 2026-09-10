@@ -55,7 +55,7 @@ pnpm preview          # 预览构建结果
 | `submodules/` | Git 子模块（xiaohongshu-mcp Go 源码、微信格式化工具等） |
 | `.agents/skills/` | Claude agent skill 定义（`blog-publisher`、`banner-creator`、`mage-vl` 等），提交进仓库的源 |
 | `.claude/skills/` | 上面那些 skill 的本地镜像，Claude Code 实际从这里加载；**未跟踪、是生成物**，改完 `.agents/` 跑 `scripts/bootstrap-machine.sh` 重新镜像，别手改 |
-| `.agents/memory/` | Claude Code 项目记忆的仓库副本，跨机器共享；双向对齐用 `scripts/sync-memory.sh` |
+| `.agents/memory/` | **私有仓库 `MushroomDAO/blog-memory` 的 clone**（本仓库公开，记忆含账号 ID/私人邮箱/密钥文件路径索引，故隔离）；对齐用 `scripts/sync-memory.sh`，它会自动提交并推回去 |
 | `.agents/codex-skills/` | Codex 侧插图 skill（小M / 小J / Baobao），bootstrap 会装到 `~/.codex/skills/` 和 `~/.claude/skills/` |
 
 ### 配图的视觉理解（mage-vl skill）
@@ -76,6 +76,7 @@ pnpm preview          # 预览构建结果
   `source scripts/require-owner.sh`，非 owner 机器静默让路。手动跑加 `FORCE_RUN=1`。
 - **装不了的四样**：`.env` 凭据、FLUX 模型(5.9GB)、小红书 Chrome Profile 登录态、
   8042 LaunchAgent —— 必须手动搬，bootstrap 会明确报出来而不是假装成功。
+- **记忆在私有仓库**：`MushroomDAO/blog-memory`，新机器需要 SSH key 才 clone 得下来。
 
 完整交接步骤和「不跟 git 走的东西」清单见 `docs/RUNNER.md`。
 

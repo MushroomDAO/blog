@@ -80,18 +80,36 @@ fi
 # 3. 项目记忆：仓库 ↔ Claude Code memory 目录
 # ---------------------------------------------------------------------------
 echo "[3/6] 同步项目记忆 …"
+# 记忆放在**另一个私有仓库**：本仓库是公开的，记忆里含 AWS 账号 ID、IAM 用户名、
+# 私人邮箱、主密钥文件路径与变量名索引 —— 无密钥值，但打包公开就是踩点材料。
+MEM_REPO="git@github.com:MushroomDAO/blog-memory.git"
+MEM_VAULT="$REPO/.agents/memory"
 MEM_LOCAL="$HOME/.claude/projects/$(echo "$REPO" | sed 's#/#-#g')/memory"
 if $CHECK_ONLY; then
-  [ -d "$MEM_LOCAL" ] && ok "本机 memory 目录有 $(ls "$MEM_LOCAL" 2>/dev/null | wc -l | tr -d ' ') 个文件" \
-                      || fail "本机没有 memory 目录 —— 偏好和教训全部缺失"
+  [ -d "$MEM_VAULT/.git" ] && ok "记忆库已 clone（$(ls "$MEM_VAULT"/*.md 2>/dev/null | wc -l | tr -d ' ') 个 md）" \
+                          || fail "没有 .agents/memory —— 跑一次不带 --check-only 的 bootstrap 来 clone"
+  [ -d "$MEM_LOCAL" ] && ok "本机 Claude memory 目录有 $(ls "$MEM_LOCAL" 2>/dev/null | wc -l | tr -d ' ') 个文件" \
+                      || fail "本机没有 Claude memory 目录 —— 偏好和教训全部缺失"
 else
-  mkdir -p "$MEM_LOCAL"
-  before=$(ls "$MEM_LOCAL" 2>/dev/null | wc -l | tr -d ' ')
-  # 只补本机没有的，绝不覆盖本机已有的 —— 本机那份可能比仓库新
-  rsync -a --ignore-existing .agents/memory/ "$MEM_LOCAL/"
-  after=$(ls "$MEM_LOCAL" 2>/dev/null | wc -l | tr -d ' ')
-  ok "memory: $before → $after 个文件（只补缺失，不覆盖本机已有）"
-  echo "     双向对齐用：scripts/sync-memory.sh"
+  if [ -d "$MEM_VAULT/.git" ]; then
+    git -C "$MEM_VAULT" pull --ff-only -q 2>/dev/null && ok "记忆库已更新到最新" \
+      || warn "记忆库 pull 失败（本地有未推送的改动？）—— 跑 scripts/sync-memory.sh 处理"
+  elif git ls-remote "$MEM_REPO" >/dev/null 2>&1; then
+    rm -rf "$MEM_VAULT"
+    git clone -q "$MEM_REPO" "$MEM_VAULT" && ok "已 clone 私有记忆库到 .agents/memory/"
+  else
+    fail "访问不了 $MEM_REPO —— 私有仓库，需要这台机器的 SSH key 已加进 GitHub 账号（ssh -T git@github.com 自测）"
+  fi
+
+  if [ -d "$MEM_VAULT" ]; then
+    mkdir -p "$MEM_LOCAL"
+    before=$(ls "$MEM_LOCAL" 2>/dev/null | wc -l | tr -d ' ')
+    # 只补本机没有的，绝不覆盖本机已有的 —— 本机那份可能比记忆库新
+    rsync -a --ignore-existing --exclude='README.md' --include='*.md' --exclude='*' "$MEM_VAULT/" "$MEM_LOCAL/"
+    after=$(ls "$MEM_LOCAL" 2>/dev/null | wc -l | tr -d ' ')
+    ok "Claude memory: $before → $after 个文件（只补缺失，不覆盖本机已有）"
+    echo "     日常双向对齐 + 推回私有库：scripts/sync-memory.sh"
+  fi
 fi
 
 # ---------------------------------------------------------------------------

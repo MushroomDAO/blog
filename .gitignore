@@ -46,6 +46,12 @@ source/*/
 # sync-ledger.cjs import 的中转目录，导完即删
 .agents/skills/blog-publisher/.ledger-inbox/
 
+# 项目记忆是**另一个私有仓库**（MushroomDAO/blog-memory）的 clone。
+# 本仓库是公开的，那些文件虽无密钥值，但含 AWS 账号 ID、IAM 用户名、
+# 私人邮箱、主密钥文件路径与变量名索引，打包公开等于踩点材料。
+# bootstrap-machine.sh 负责 clone，sync-memory.sh 负责对齐并推回去。
+.agents/memory/
+
 # run logs (already-tracked logs stay tracked)
 *.log
 
