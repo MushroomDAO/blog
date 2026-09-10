@@ -1,67 +1,177 @@
 {
-  "generatedAt": "2026-09-09T14:00:01Z",
+  "generatedAt": "2026-09-10T14:00:00Z",
   "period": {
-    "start": "2026-08-10",
-    "end": "2026-09-09"
+    "start": "2026-08-11",
+    "end": "2026-09-10"
   },
   "totals": {
-    "pageviews": 12000,
-    "visits": 12000,
-    "bots": 20
+    "pageviews": 12740,
+    "visits": 11750,
+    "bots": 0
   },
   "last7": {
-    "pv": 9000,
-    "visits": 9000
+    "pv": 2800,
+    "visits": 2520
   },
   "prior7": {
-    "pv": 3000,
-    "visits": 3000
+    "pv": 2940,
+    "visits": 2620
   },
   "daily": [
     {
+      "date": "08-11",
+      "pv": 60,
+      "visits": 60
+    },
+    {
+      "date": "08-12",
+      "pv": 610,
+      "visits": 580
+    },
+    {
+      "date": "08-13",
+      "pv": 480,
+      "visits": 450
+    },
+    {
+      "date": "08-14",
+      "pv": 540,
+      "visits": 530
+    },
+    {
       "date": "08-15",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 450,
+      "visits": 420
+    },
+    {
+      "date": "08-16",
+      "pv": 440,
+      "visits": 430
     },
     {
       "date": "08-17",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 510,
+      "visits": 500
+    },
+    {
+      "date": "08-18",
+      "pv": 510,
+      "visits": 500
+    },
+    {
+      "date": "08-19",
+      "pv": 420,
+      "visits": 420
+    },
+    {
+      "date": "08-20",
+      "pv": 330,
+      "visits": 280
+    },
+    {
+      "date": "08-21",
+      "pv": 350,
+      "visits": 340
+    },
+    {
+      "date": "08-22",
+      "pv": 240,
+      "visits": 230
+    },
+    {
+      "date": "08-23",
+      "pv": 270,
+      "visits": 220
+    },
+    {
+      "date": "08-24",
+      "pv": 460,
+      "visits": 410
+    },
+    {
+      "date": "08-25",
+      "pv": 380,
+      "visits": 350
+    },
+    {
+      "date": "08-26",
+      "pv": 450,
+      "visits": 410
     },
     {
       "date": "08-27",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 500,
+      "visits": 480
     },
     {
       "date": "08-28",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 390,
+      "visits": 280
+    },
+    {
+      "date": "08-29",
+      "pv": 300,
+      "visits": 280
     },
     {
       "date": "08-30",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 350,
+      "visits": 350
     },
     {
       "date": "08-31",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 540,
+      "visits": 540
     },
     {
       "date": "09-01",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 380,
+      "visits": 340
+    },
+    {
+      "date": "09-02",
+      "pv": 490,
+      "visits": 380
     },
     {
       "date": "09-03",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 490,
+      "visits": 450
+    },
+    {
+      "date": "09-04",
+      "pv": 290,
+      "visits": 280
+    },
+    {
+      "date": "09-05",
+      "pv": 270,
+      "visits": 270
     },
     {
       "date": "09-06",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 270,
+      "visits": 260
+    },
+    {
+      "date": "09-07",
+      "pv": 540,
+      "visits": 460
+    },
+    {
+      "date": "09-08",
+      "pv": 460,
+      "visits": 400
+    },
+    {
+      "date": "09-09",
+      "pv": 510,
+      "visits": 480
+    },
+    {
+      "date": "09-10",
+      "pv": 460,
+      "visits": 370
     }
   ],
   "countries": [
@@ -70,8 +180,8 @@
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 7000,
-      "visits": 7000
+      "pv": 8000,
+      "visits": 8000
     },
     {
       "code": "SG",
@@ -106,26 +216,19 @@
       "visits": 1000
     }
   ],
-  "countryTotal": 12000,
+  "countryTotal": 13000,
   "referers": {
-    "direct": 8070,
-    "search": 3350,
-    "ecosystem": 960,
-    "ai": 50,
-    "other": 90
+    "direct": 9900,
+    "search": 4100,
+    "ecosystem": 800,
+    "ai": 100,
+    "other": 100
   },
   "pages": [
     {
       "title": "Voicebox：把 ElevenLabs 和 WisprFlow 装进一个本地运行的开源 App",
       "titleEn": "Voicebox: Local-First AI Voice Studio — ElevenLabs Output + WisprFlow Input in One Open-Source App",
       "path": "/blog/voicebox-local-ai-voice-studio-elevenlabs-alternative/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
-      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
-      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
       "pv": 300,
       "visits": 300
     },
@@ -165,9 +268,16 @@
       "visits": 300
     },
     {
-      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
-      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
-      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
+      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
+      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
+      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
+      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
+      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
       "pv": 200,
       "visits": 200
     },
@@ -175,6 +285,13 @@
       "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
       "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
       "path": "/blog/hitchhikers-guide-agentic-ai-book/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
+      "titleEn": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
+      "path": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
       "pv": 200,
       "visits": 200
     },
@@ -200,13 +317,6 @@
       "visits": 200
     },
     {
-      "title": "FDE 实战手册：大企业 vs 中小企业，前三个月该怎么干",
-      "titleEn": "applied-compute-specific-intelligence-enterprise-ai-workflow-training",
-      "path": "/blog/applied-compute-specific-intelligence-enterprise-ai-workflow-training/",
-      "pv": 200,
-      "visits": 100
-    },
-    {
       "title": "Ponytail：把「最懒的资深工程师」塞进你的 AI Agent——54% 代码减少，100% 安全",
       "titleEn": "Ponytail: Put the Laziest Senior Engineer Inside Your AI Agent — 54% Less Code, 100% Safe",
       "path": "/blog/ponytail-lazy-senior-dev-ai-agent-simplicity-skill/",
@@ -214,9 +324,9 @@
       "visits": 200
     },
     {
-      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
-      "titleEn": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
-      "path": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
+      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
+      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
+      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
       "pv": 200,
       "visits": 200
     }
@@ -224,7 +334,7 @@
   "devices": [
     {
       "label": "desktop",
-      "count": 11990
+      "count": 12210
     },
     {
       "label": "mobile",
@@ -234,33 +344,33 @@
   "os": [
     {
       "label": "Windows",
-      "count": 9370
+      "count": 11200
     },
     {
       "label": "MacOSX",
-      "count": 1760
+      "count": 2200
     },
     {
       "label": "Unknown",
-      "count": 660
+      "count": 900
     },
     {
       "label": "Linux",
-      "count": 370
-    },
-    {
-      "label": "Android",
-      "count": 240
+      "count": 300
     },
     {
       "label": "iOS",
-      "count": 120
+      "count": 200
+    },
+    {
+      "label": "Android",
+      "count": 200
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 9170
+      "count": 9390
     },
     {
       "label": "Edge",
@@ -272,11 +382,11 @@
     },
     {
       "label": "Safari",
-      "count": 310
+      "count": 300
     },
     {
       "label": "ChromeMobile",
-      "count": 200
+      "count": 190
     },
     {
       "label": "MobileSafari",
@@ -291,12 +401,12 @@
       "count": 40
     },
     {
-      "label": "ChromeHeadless",
-      "count": 20
+      "label": "ChromeDerivative",
+      "count": 30
     },
     {
-      "label": "ChromeDerivative",
-      "count": 10
+      "label": "ChromeHeadless",
+      "count": 20
     }
   ]
 }
