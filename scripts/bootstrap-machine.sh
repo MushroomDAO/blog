@@ -168,7 +168,19 @@ else
          tar -xzf /tmp/codexdl/*.tar.gz -C /tmp/codexdl && cp /tmp/codexdl/codex-aarch64-apple-darwin ~/.local/bin/codex && chmod +x ~/.local/bin/codex"
 fi
 command -v mempalace >/dev/null 2>&1 && ok "mempalace"                 || warn "缺 mempalace —— 查重会退化为只读仓库账本（仍可用）。装：pipx install mempalace"
-command -v xhs       >/dev/null 2>&1 && ok "xhs（小红书采集）"          || warn "缺 xhs CLI —— forage 的小红书源会为 0。装：pipx install xiaohongshu-cli（还需要浏览器里有小红书登录态）"
+# xhs 同样是「装了不等于能用」：它靠 browser_cookie3 从浏览器读 cookie，
+# 换台机器没有那个登录态就直接 not_authenticated，而 forage 的小红书源会静默为 0。
+# 判断不走管道 —— `... | grep -q` 在 pipefail 下会被 SIGPIPE 反噬（本文件里踩过一次）。
+if command -v xhs >/dev/null 2>&1; then
+  _xhs_status=$(xhs status 2>&1 || true)
+  if printf '%s' "$_xhs_status" | grep -qi "not_authenticated\|no 'a1' cookie\|-101"; then
+    warn "xhs 装了但**没登录** —— forage 的小红书源会为 0。需要在本机浏览器里登录小红书（账号 Mushroom.cv），必要时确认 Chrome profile 编号"
+  else
+    ok "xhs（小红书采集，已登录）"
+  fi
+else
+  warn "缺 xhs CLI —— forage 的小红书源会为 0。装：pipx install xiaohongshu-cli"
+fi
 command -v wrangler  >/dev/null 2>&1 || npx wrangler --version >/dev/null 2>&1 && ok "wrangler（部署）" || warn "wrangler 走 npx，首次会现装"
 
 # 凭据
