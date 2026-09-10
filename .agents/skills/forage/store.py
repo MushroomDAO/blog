@@ -368,7 +368,9 @@ def import_decisions():
             d = json.loads(line)
         except json.JSONDecodeError:
             continue
-        cur = c.execute("SELECT decision, updated_at FROM items WHERE id=?", (d["id"],)).fetchone()
+        cur = c.execute(
+            "SELECT decision, u_total, updated_at FROM items WHERE id=?", (d["id"],)
+        ).fetchone()
         if cur is None:
             # 本机没见过这条 —— 别的机器 staged 并判过了，整条收进来
             cols = [k for k in _DEC_COLS if d.get(k) is not None]
@@ -378,8 +380,20 @@ def import_decisions():
             )
             added += 1
         else:
-            # 本机那条更新就别动它 —— 你刚在评审台点的，不能被隔了几分钟的远端盖掉
-            if (cur["updated_at"] or "") >= (d.get("updated_at") or ""):
+            # 合并规则是**非对称**的，不能简单「新的赢」——
+            # 真出过事（2026-09-10）：某条在 MacBook 上判了 published（9/9），
+            # Mac mini 今晚又把它 staged 了一遍（时间戳更新但没有判断）。
+            # 按「新的赢」，没判断的新行赢过有判断的旧行，decision 被抹掉，
+            # 这条已发过的下次就会重新冒出来当新线索 —— 正是本功能要防的事。
+            #
+            # 所以：有判断的一方永远赢过没判断的一方；两边都有判断时才比时间。
+            local_decided = bool(cur["decision"]) or cur["u_total"] is not None
+            remote_decided = bool(d.get("decision")) or d.get("u_total") is not None
+            if local_decided and not remote_decided:
+                skipped += 1
+                continue
+            if local_decided and remote_decided and (cur["updated_at"] or "") >= (d.get("updated_at") or ""):
+                # 都有判断，本机的更新 —— 你刚在评审台点的，不能被远端盖掉
                 skipped += 1
                 continue
             sets = [k for k in _DEC_COLS if k != "id" and d.get(k) is not None]
