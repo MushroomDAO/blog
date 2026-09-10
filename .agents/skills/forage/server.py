@@ -139,6 +139,16 @@ def main():
         sys.exit(1)
     srv = http.server.ThreadingHTTPServer((HOST, PORT), H)
     url = f"http://{HOST}:{PORT}/"
+    # 把真实监听地址落盘，让健康检查去读，而不是各处硬编码 127.0.0.1。
+    # 2026-09-10 踩到：服务改绑 Tailscale IP 之后，run-daily.sh 还在 curl
+    # 127.0.0.1，于是每晚误报「评审台没起来」——配置漂移的典型形态。
+    try:
+        marker = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "radar", ".server-url")
+        os.makedirs(os.path.dirname(marker), exist_ok=True)
+        with open(marker, "w", encoding="utf-8") as f:
+            f.write(url)
+    except OSError:
+        pass  # 落不下就落不下，不该因此不给服务
     print(f"forage 评审台 → {url}")
     print(f"库：{DB}")
     print("打分和决定实时落库。Ctrl-C 停止。")

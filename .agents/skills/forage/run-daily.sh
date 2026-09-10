@@ -32,8 +32,11 @@ echo "[3/4] 对账已发布文章（seen 重新播种 + write/dig 转 published�
 python3 "$SKILL/store.py" sync || echo "对账失败，不阻塞后续"
 
 echo "[4/4] 确认服务在跑…"
-if curl -s -m 3 http://127.0.0.1:8042/api/summary >/dev/null 2>&1; then
-  echo "  ✓ 评审台已在 http://127.0.0.1:8042/"
+# 地址从 server.py 落盘的 radar/.server-url 读，别硬编码 —— 服务可能绑在
+# Tailscale IP 上（forage.db 在这台机器，但你要从别的机器打开评审台）。
+BOARD_URL=$(cat radar/.server-url 2>/dev/null || echo "http://127.0.0.1:8042/")
+if curl -s -m 3 "${BOARD_URL%/}/api/summary" >/dev/null 2>&1; then
+  echo "  ✓ 评审台已在 ${BOARD_URL}"
 else
   echo "  ⚠️ 评审台没起来，检查 LaunchAgent：launchctl list | grep forage"
 fi

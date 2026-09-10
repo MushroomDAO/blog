@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  8042 评审台的常驻服务。这是整套里唯一真正常驻的进程（RunAtLoad + KeepAlive）。
+  安装：把 __REPO__ / __HOME__ / __FORAGE_HOST__ 替换成本机的值，放进
+  ~/Library/LaunchAgents/cv.mushroom.forage.plist，然后 launchctl load。
+
+  __FORAGE_HOST__ 填什么：
+    127.0.0.1        —— 只本机访问（默认、最安全）
+    <Tailscale IP>   —— forage.db 在这台机器但你要从别的机器打开评审台时用；
+                        只在自己的 tailnet 内可达，不是公网
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>cv.mushroom.forage</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>__REPO__/.agents/skills/forage/server.py</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>__REPO__</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>__HOME__/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    <key>FORAGE_NO_BROWSER</key>
+    <string>1</string>
+    <!-- 绑 Tailscale IP：forage.db 在这台机器上，评审台必须在这里跑，
+         但你要从 MacBook 打开它。tailnet 内可达，不是公网。 -->
+    <key>FORAGE_HOST</key>
+    <string>__FORAGE_HOST__</string>
+  </dict>
+
+  <!-- 开机自启，挂掉自动重拉 -->
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/forage-server.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/forage-server.err</string>
+</dict>
+</plist>
