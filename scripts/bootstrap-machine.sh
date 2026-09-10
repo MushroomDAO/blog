@@ -137,12 +137,28 @@ need pnpm    "npm i -g pnpm（项目规定用 pnpm，不用 npm）"
 need git     "xcode-select --install"
 need magick  "brew install imagemagick（banner 和插图压缩）"
 need ffmpeg  "brew install ffmpeg（视频线）"
-need gh      "brew install gh && gh auth login（forage 采 GitHub）"
+if command -v gh >/dev/null 2>&1; then
+  gh auth status >/dev/null 2>&1 && ok "gh（已登录）" || fail "gh 装了但没登录 —— forage 采不到 GitHub。跑 gh auth login"
+else
+  fail "缺 gh —— brew install gh && gh auth login（forage 采 GitHub）"
+fi
 need python3 "系统自带；缺了说明 PATH 有问题"
 
-command -v codex     >/dev/null 2>&1 && ok "codex（正文插图生成）"     || fail "缺 codex CLI —— 正文插图生成不了"
-command -v mempalace >/dev/null 2>&1 && ok "mempalace"                 || warn "缺 mempalace —— 查重会退化为只读仓库账本（仍可用）"
-command -v xhs       >/dev/null 2>&1 && ok "xhs（小红书采集）"          || warn "缺 xhs CLI —— forage 的小红书源会为 0"
+# codex：装了不等于能用 —— 没登录时 codex exec 会失败，而正文插图全靠它。
+# 这一条是实测踩到的：Mac mini 上 codex --version 正常但 login status 是 Not logged in。
+if command -v codex >/dev/null 2>&1; then
+  if codex login status 2>&1 | grep -qi "not logged in"; then
+    fail "codex 装了但**没登录** —— 正文插图会生成失败。跑一次交互式 \`codex login\`（需要浏览器）"
+  else
+    ok "codex（正文插图生成，已登录）"
+  fi
+else
+  fail "缺 codex CLI —— 正文插图生成不了。npm 装的版本可能缺平台二进制，最稳的是直接下 release：
+         gh release download rust-v0.154.0 --repo openai/codex --pattern 'codex-aarch64-apple-darwin.tar.gz' -D /tmp/codexdl
+         tar -xzf /tmp/codexdl/*.tar.gz -C /tmp/codexdl && cp /tmp/codexdl/codex-aarch64-apple-darwin ~/.local/bin/codex && chmod +x ~/.local/bin/codex"
+fi
+command -v mempalace >/dev/null 2>&1 && ok "mempalace"                 || warn "缺 mempalace —— 查重会退化为只读仓库账本（仍可用）。装：pipx install mempalace"
+command -v xhs       >/dev/null 2>&1 && ok "xhs（小红书采集）"          || warn "缺 xhs CLI —— forage 的小红书源会为 0。装：pipx install xiaohongshu-cli（还需要浏览器里有小红书登录态）"
 command -v wrangler  >/dev/null 2>&1 || npx wrangler --version >/dev/null 2>&1 && ok "wrangler（部署）" || warn "wrangler 走 npx，首次会现装"
 
 # 凭据
