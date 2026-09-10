@@ -147,7 +147,11 @@ need python3 "系统自带；缺了说明 PATH 有问题"
 # codex：装了不等于能用 —— 没登录时 codex exec 会失败，而正文插图全靠它。
 # 这一条是实测踩到的：Mac mini 上 codex --version 正常但 login status 是 Not logged in。
 if command -v codex >/dev/null 2>&1; then
-  if codex login status 2>&1 | grep -qi "not logged in"; then
+  # 先把输出收进变量再判断，不要用管道 —— `set -o pipefail` 下 grep -q 一匹配就
+  # 关管道，上游进程收到 SIGPIPE 退出非零，整条管道被判为失败，结果是
+  # 「没登录」被误判成「已登录」。这个假 ✓ 比没有检查更糟，实测踩到过。
+  _codex_login=$(codex login status 2>&1 || true)
+  if printf '%s' "$_codex_login" | grep -qi "not logged in"; then
     fail "codex 装了但**没登录** —— 正文插图会生成失败。跑一次交互式 \`codex login\`（需要浏览器）"
   else
     ok "codex（正文插图生成，已登录）"
