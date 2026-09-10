@@ -41,6 +41,18 @@ echo
 if [ -z "$DRY" ]; then
   echo "→ 拉取远端"
   git -C "$VAULT" pull --ff-only -q || echo "  ⚠️ pull 失败（可能有本地未推送的改动），继续对齐"
+
+  # forage 的人工判断（write/skip/dig + u_note）搭这趟车走 git。
+  # radar/forage.db 是二进制、每晚全量重写、两台都写会冲突，所以不进 git；
+  # 但你标过的判断重跑 forage 是复现不出来的，而且 stage.py 靠它做 decided 去重 ——
+  # 丢了的话被你否掉的选题会重新冒出来。
+  # 顺序要紧：先 import（吃下远端的判断），再 export（把本机的写出去），
+  # 这样两边的判断都留得住。合并规则是 updated_at 新的赢。
+  if [ -f radar/forage.db ]; then
+    echo "→ forage 判断"
+    python3 .agents/skills/forage/store.py import-decisions 2>&1 | sed 's/^/  /'
+    python3 .agents/skills/forage/store.py export-decisions 2>&1 | sed 's/^/  /'
+  fi
 fi
 
 # MEMORY.md 必须先单独合并成并集再进 rsync。它是**两边都会追加**的索引文件，

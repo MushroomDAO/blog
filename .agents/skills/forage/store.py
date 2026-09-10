@@ -308,6 +308,97 @@ def stats():
                 print(f"    我{x['ai_total']:>3} vs 你{x['u_total']:>3}  {x['title'][:48]}")
 
 
+
+
+# ── 决策的跨机器持久化 ──────────────────────────────────
+# radar/forage.db 是 SQLite 二进制、每晚全量重写、两台都写会冲突，所以不进 git。
+# 但里面有一样东西**不该跟着机器一起丢**：你标的 write / skip / dig 和 u_note ——
+# 那是人的判断，重跑 forage 重建不出来。而且 stage.py 靠它做「decided」去重，
+# 丢了的话被你否掉的选题会重新冒出来。
+#
+# 所以把判断（不是整个库）导出成文本，搭**私有记忆库**那趟车走 git。
+# 为什么是私有库不是公开仓库：u_note 里写的是「我为什么不写它」，属于编辑判断，
+# 不该公开。私有库已经每 15 分钟双向同步，不用新增任何定时任务。
+DECISIONS_PATH = os.path.join(ROOT, ".agents", "memory", "forage-decisions.jsonl")
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+# 只带「人的判断 + 认得出是哪条」所需的字段。research/hits 那些是机器产物，
+# 重跑就有，没必要塞进 git 让 diff 变得没法读。
+_DEC_COLS = [
+    "id", "run_date", "src", "title", "url",
+    "decision", "u_note", "u_total",
+    "u_relevance", "u_primary", "u_actionable", "u_novelty", "u_extensible",
+    "ai_total", "ai_note", "updated_at",
+]
+
+
+def export_decisions():
+    """把有人工判断的条目导出成 jsonl。按 id 排序，让 git diff 稳定。"""
+    c = conn()
+    rows = c.execute(
+        f"SELECT {', '.join(_DEC_COLS)} FROM items "
+        "WHERE (decision IS NOT NULL AND decision != '') OR u_total IS NOT NULL "
+        "ORDER BY id"
+    ).fetchall()
+    os.makedirs(os.path.dirname(DECISIONS_PATH), exist_ok=True)
+    with open(DECISIONS_PATH, "w", encoding="utf-8") as f:
+        for r in rows:
+            f.write(json.dumps({k: r[k] for k in _DEC_COLS}, ensure_ascii=False, sort_keys=True) + "\n")
+    print(f"✅ 导出 {len(rows)} 条判断 → {os.path.relpath(DECISIONS_PATH, ROOT)}")
+    if rows:
+        print("   （搭私有记忆库的车走 git，sync-memory.sh 会提交推送）")
+    return len(rows)
+
+
+def import_decisions():
+    """把别的机器的判断并进本机库。updated_at 新的赢；本机更新的不动。"""
+    if not os.path.exists(DECISIONS_PATH):
+        print("（没有 forage-decisions.jsonl，跳过）")
+        return 0
+    c = conn()
+    added = updated = skipped = 0
+    for line in open(DECISIONS_PATH, encoding="utf-8"):
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            d = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        cur = c.execute("SELECT decision, updated_at FROM items WHERE id=?", (d["id"],)).fetchone()
+        if cur is None:
+            # 本机没见过这条 —— 别的机器 staged 并判过了，整条收进来
+            cols = [k for k in _DEC_COLS if d.get(k) is not None]
+            c.execute(
+                f"INSERT INTO items ({', '.join(cols)}, created_at) VALUES ({', '.join('?' * len(cols))}, ?)",
+                [d[k] for k in cols] + [d.get("updated_at") or now()],
+            )
+            added += 1
+        else:
+            # 本机那条更新就别动它 —— 你刚在评审台点的，不能被隔了几分钟的远端盖掉
+            if (cur["updated_at"] or "") >= (d.get("updated_at") or ""):
+                skipped += 1
+                continue
+            sets = [k for k in _DEC_COLS if k != "id" and d.get(k) is not None]
+            c.execute(
+                f"UPDATE items SET {', '.join(k + '=?' for k in sets)} WHERE id=?",
+                [d[k] for k in sets] + [d["id"]],
+            )
+            updated += 1
+    c.commit()
+    print(f"✅ 导入判断：新增 {added}，更新 {updated}，本机更新故跳过 {skipped}")
+    return added + updated
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "stats"
-    {"init": init, "sync": sync, "stats": stats}.get(cmd, stats)()
+    {
+        "init": init,
+        "sync": sync,
+        "stats": stats,
+        "export-decisions": export_decisions,
+        "import-decisions": import_decisions,
+    }.get(cmd, stats)()
