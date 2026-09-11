@@ -26,6 +26,7 @@ This directory turns daily research into a product-and-content pipeline:
 - [2026-09-08](./2026-09-08.md) — Bounded Agent Work Units, AI labor economics, living-data loops, transaction intent contracts, creative-tool control planes
 - [2026-09-09](./2026-09-09.md) — AI MSP/IT autopilot, local presence agents, synthetic-customer eval labs, lightweight AI Ops/observability
 - [2026-09-10](./2026-09-10.md) — Messaging-native business agents, merchant operating agents, governed team memory, evidence-first MSME underwriting
+- [2026-09-11](./2026-09-11.md) — Embedded Agent Stores, Know-Your-Agent trust, WebMCP business capabilities, human-agent control planes
 
 ## Standard Review Lens
 
