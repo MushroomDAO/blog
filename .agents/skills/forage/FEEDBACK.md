@@ -187,3 +187,24 @@ JVM 系（Java/Kotlin/Scala）、Lisp 系（Common Lisp/Clojure）、
 
 - X 源连续为 0（twitter-cli ClientTransaction/404），已经连续多天。
 - GoogleTrends 源为 0：cron 调不动 MCP，只能在会话里补。这次也没补上。
+
+## 2026-09-11
+
+用户在 8042 标了 6 条 write，其中 5 条推翻或上调了我的判断（均未附理由）：
+
+- ✅ 判为「只存档」但用户要写：kepano/obsidian-skills（我给 60）—— 我的理由是 48k star 已被搬运烂
+  → 信号：「逆热度」扣分可能过重。本站没写过的高星仓库，即使别处搬运多，对本站读者仍是新的。
+- ✅ 判为「只存档」但用户要写：krea/Krea-2-Turbo（我给 42）—— 我的理由是 gated + 自定义协议 + 非新品
+  → 信号：「gated」不该直接压一手性到底，官方博客/发布页也算一手源。
+- ✅ 判为「跳过」但用户要写：MMC1410001/mcp-rag-server（我给 34）—— 我的理由是 0 star、通用 RAG 模板
+  → 信号：用户对「MCP + 本地 RAG」这类可上手工具的兴趣高于我对「新颖度」的要求。
+- ✅ 判为「存疑」但用户要写：m-a-p/YuE2-3B（72）、pilot-protocol/pilot-mcp（60）
+- ✔️ 一致：nex-agi/Nex-N2.5-mini 值得写；siray-image-mcp 和两条小区通知跳过。
+
+→ 暂不改权重（本批 5 条，攒够 10 条统一调）。倾向方向：下调逆热度扣分、gated 不再压一手性。
+
+### 采集侧改动
+- 移除博主「持续学习妹妹」（用户确认）：9/8、9/11 共 4 条全是小区/生活内容。
+- X 源：Mac mini 之前根本没装 twitter-cli（不是 404）。已 `pipx install twitter-cli`（0.8.5）。
+  `collect_x()` 改为只从 `~/Dev/.env` 读 `TWITTER_AUTH_TOKEN` / `TWITTER_CT0`，没配就跳过——
+  不让它回退读浏览器 cookie，因为那会弹 keychain 授权框（用户明确不要）。

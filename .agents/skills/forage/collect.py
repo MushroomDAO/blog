@@ -22,7 +22,7 @@ BLOGGERS = {
     "5b208f0511be100f9c278b53": "小天fotos",
     "5c6130b900000000110112e8": "机器之心",
     "5bfbd58b058555000168698b": "碳基智",
-    "56da5342aed7585cd6ba2bc5": "持续学习妹妹",
+    # 2026-09-11 移除「持续学习妹妹」：9/8、9/11 两轮 4 条全是小区/生活内容，已不相关
 }
 
 # 第一梯队常驻 + 第三梯队轮换（每次随机抽，避免每天搜出同一批）
@@ -39,6 +39,22 @@ PER_CALL = 5            # 单次调用最多取几条
 BLOGGERS_PER_RUN = 2    # 每轮只看 2 个博主，按天轮换
 
 cov = {}
+
+
+def load_env_file(path):
+    """读 KEY=VALUE 格式的 .env，不 source（那个文件不保证是合法 bash）。"""
+    out = {}
+    try:
+        for line in open(path, encoding="utf-8"):
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            k = k.removeprefix("export ").strip()
+            out[k] = v.strip().strip('"').strip("'")
+    except OSError:
+        pass
+    return out
 
 
 def sh(args, timeout=40):
@@ -161,8 +177,25 @@ def collect_xhs():
 
 
 def collect_x():
-    """可执行文件叫 twitter（不是 twitter-cli），用法 `twitter search "q" -n N`。"""
+    """可执行文件叫 twitter（不是 twitter-cli），用法 `twitter search "q" -n N`。
+
+    凭据只走环境变量 TWITTER_AUTH_TOKEN + TWITTER_CT0（放在 ~/Dev/.env）。
+    没配就直接跳过，**绝不让 twitter-cli 回退去读浏览器 cookie**——那条路径
+    会弹 macOS keychain 授权框，cron 半夜跑起来就卡在弹窗上（2026-09-11）。
+    """
     rows = []
+    if not os.path.exists(TWITTER):
+        cov["X"] = 0
+        cov["_x_error"] = "twitter-cli 未安装（pipx install twitter-cli）"
+        return rows
+    for k, v in load_env_file(os.path.expanduser("~/Dev/.env")).items():
+        if k.startswith("TWITTER_") and not ENV.get(k):
+            ENV[k] = v
+    if not (ENV.get("TWITTER_AUTH_TOKEN") and ENV.get("TWITTER_CT0")):
+        cov["X"] = 0
+        cov["_x_error"] = ("未配置 TWITTER_AUTH_TOKEN / TWITTER_CT0（写进 ~/Dev/.env）；"
+                           "为避免弹 keychain，不从浏览器读 cookie")
+        return rows
     for kw in ["claude code skill", "local llm", "open source agent"]:
         out = sh([TWITTER, "search", kw, "-n", "15"], timeout=45)
         if not out.strip():
