@@ -1,32 +1,27 @@
 {
-  "generatedAt": "2026-09-10T14:00:00Z",
+  "generatedAt": "2026-09-11T14:00:00Z",
   "period": {
-    "start": "2026-08-11",
-    "end": "2026-09-10"
+    "start": "2026-08-12",
+    "end": "2026-09-11"
   },
   "totals": {
-    "pageviews": 12740,
-    "visits": 11750,
+    "pageviews": 12730,
+    "visits": 11720,
     "bots": 0
   },
   "last7": {
-    "pv": 2800,
-    "visits": 2520
+    "pv": 2950,
+    "visits": 2640
   },
   "prior7": {
-    "pv": 2940,
+    "pv": 2840,
     "visits": 2620
   },
   "daily": [
     {
-      "date": "08-11",
-      "pv": 60,
-      "visits": 60
-    },
-    {
       "date": "08-12",
-      "pv": 610,
-      "visits": 580
+      "pv": 220,
+      "visits": 210
     },
     {
       "date": "08-13",
@@ -170,59 +165,120 @@
     },
     {
       "date": "09-10",
-      "pv": 460,
-      "visits": 370
+      "pv": 570,
+      "visits": 470
+    },
+    {
+      "date": "09-11",
+      "pv": 330,
+      "visits": 300
     }
   ],
   "countries": [
-    {
-      "code": "CN",
-      "flag": "🇨🇳",
-      "name": "中国",
-      "nameEn": "China",
-      "pv": 8000,
-      "visits": 8000
-    },
     {
       "code": "SG",
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 6270,
+      "visits": 6160
     },
     {
-      "code": "UA",
-      "flag": "🇺🇦",
-      "name": "UA",
-      "nameEn": "UA",
-      "pv": 1000,
-      "visits": 1000
+      "code": "CN",
+      "flag": "🇨🇳",
+      "name": "中国",
+      "nameEn": "China",
+      "pv": 3330,
+      "visits": 2960
     },
     {
       "code": "US",
       "flag": "🇺🇸",
       "name": "美国",
       "nameEn": "United States",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 820,
+      "visits": 710
     },
     {
-      "code": "CH",
-      "flag": "🇨🇭",
-      "name": "瑞士",
-      "nameEn": "Switzerland",
-      "pv": 1000,
-      "visits": 1000
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "pv": 570,
+      "visits": 530
+    },
+    {
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "pv": 470,
+      "visits": 230
+    },
+    {
+      "code": "JP",
+      "flag": "🇯🇵",
+      "name": "日本",
+      "nameEn": "Japan",
+      "pv": 450,
+      "visits": 380
+    },
+    {
+      "code": "TW",
+      "flag": "🇹🇼",
+      "name": "台湾",
+      "nameEn": "Taiwan",
+      "pv": 230,
+      "visits": 200
+    },
+    {
+      "code": "AR",
+      "flag": "🇦🇷",
+      "name": "阿根廷",
+      "nameEn": "Argentina",
+      "pv": 60,
+      "visits": 60
+    },
+    {
+      "code": "NL",
+      "flag": "🇳🇱",
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "pv": 60,
+      "visits": 60
+    },
+    {
+      "code": "KR",
+      "flag": "🇰🇷",
+      "name": "韩国",
+      "nameEn": "South Korea",
+      "pv": 40,
+      "visits": 20
+    },
+    {
+      "code": "CO",
+      "flag": "🇨🇴",
+      "name": "CO",
+      "nameEn": "CO",
+      "pv": 40,
+      "visits": 40
+    },
+    {
+      "code": "MY",
+      "flag": "🇲🇾",
+      "name": "马来西亚",
+      "nameEn": "Malaysia",
+      "pv": 30,
+      "visits": 30
     }
   ],
-  "countryTotal": 13000,
+  "countryTotal": 12590,
   "referers": {
-    "direct": 9900,
-    "search": 4100,
-    "ecosystem": 800,
-    "ai": 100,
-    "other": 100
+    "direct": 6000,
+    "search": 7000,
+    "ecosystem": 0,
+    "ai": 0,
+    "other": 0
   },
   "pages": [
     {
@@ -240,16 +296,16 @@
       "visits": 200
     },
     {
-      "title": "HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面",
-      "titleEn": "HugAgentOS: ZJU's Enterprise AgentOS Using Domain Ontology as the Agent Reasoning Control Plane",
-      "path": "/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
+      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
+      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
       "pv": 300,
       "visits": 300
     },
     {
-      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
-      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
-      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
+      "title": "HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面",
+      "titleEn": "HugAgentOS: ZJU's Enterprise AgentOS Using Domain Ontology as the Agent Reasoning Control Plane",
+      "path": "/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
       "pv": 300,
       "visits": 300
     },
@@ -266,6 +322,13 @@
       "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
       "pv": 300,
       "visits": 300
+    },
+    {
+      "title": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南",
+      "titleEn": "Illustrate Your Articles Without Drawing: A Beginner's Guide to ian-xiaohei-illustrations",
+      "path": "/blog/ian-xiaohei-illustrations-beginner-guide/",
+      "pv": 200,
+      "visits": 200
     },
     {
       "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
@@ -285,13 +348,6 @@
       "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
       "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
       "path": "/blog/hitchhikers-guide-agentic-ai-book/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
-      "titleEn": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
-      "path": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
       "pv": 200,
       "visits": 200
     },
@@ -317,16 +373,16 @@
       "visits": 200
     },
     {
-      "title": "Ponytail：把「最懒的资深工程师」塞进你的 AI Agent——54% 代码减少，100% 安全",
-      "titleEn": "Ponytail: Put the Laziest Senior Engineer Inside Your AI Agent — 54% Less Code, 100% Safe",
-      "path": "/blog/ponytail-lazy-senior-dev-ai-agent-simplicity-skill/",
+      "title": "FDE 实战手册：大企业 vs 中小企业，前三个月该怎么干",
+      "titleEn": "applied-compute-specific-intelligence-enterprise-ai-workflow-training",
+      "path": "/blog/applied-compute-specific-intelligence-enterprise-ai-workflow-training/",
       "pv": 200,
-      "visits": 200
+      "visits": 100
     },
     {
-      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
-      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
-      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
+      "title": "像上帝一样掌控 AI 小镇：GOD 项目本地搭建完全指南",
+      "titleEn": "Be a God to an Agent Town: Complete Local Setup Guide for the GOD Project",
+      "path": "/blog/god-agent-town-setup-guide/",
       "pv": 200,
       "visits": 200
     }
@@ -334,79 +390,63 @@
   "devices": [
     {
       "label": "desktop",
-      "count": 12210
+      "count": 12180
     },
     {
       "label": "mobile",
-      "count": 530
+      "count": 550
     }
   ],
   "os": [
     {
       "label": "Windows",
-      "count": 11200
+      "count": 7000
     },
     {
       "label": "MacOSX",
-      "count": 2200
+      "count": 4000
+    },
+    {
+      "label": "Linux",
+      "count": 1000
+    },
+    {
+      "label": "iOS",
+      "count": 1000
+    }
+  ],
+  "browsers": [
+    {
+      "label": "Chrome",
+      "count": 11300
+    },
+    {
+      "label": "Edge",
+      "count": 1700
     },
     {
       "label": "Unknown",
       "count": 900
     },
     {
-      "label": "Linux",
-      "count": 300
-    },
-    {
-      "label": "iOS",
-      "count": 200
-    },
-    {
-      "label": "Android",
-      "count": 200
-    }
-  ],
-  "browsers": [
-    {
-      "label": "Chrome",
-      "count": 9390
-    },
-    {
-      "label": "Edge",
-      "count": 1900
-    },
-    {
-      "label": "Unknown",
-      "count": 660
-    },
-    {
       "label": "Safari",
-      "count": 300
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 190
-    },
-    {
-      "label": "MobileSafari",
-      "count": 110
+      "count": 400
     },
     {
       "label": "Firefox",
+      "count": 200
+    },
+    {
+      "label": "MobileSafari",
+      "count": 200
+    },
+    {
+      "label": "ChromeMobile",
       "count": 100
     },
     {
       "label": "ChromeMobileWebview",
-      "count": 40
-    },
-    {
-      "label": "ChromeDerivative",
-      "count": 30
-    },
-    {
-      "label": "ChromeHeadless",
-      "count": 20
+      "count": 100
     }
   ]
 }
