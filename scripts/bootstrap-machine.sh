@@ -162,6 +162,17 @@ if command -v codex >/dev/null 2>&1; then
   else
     ok "codex（正文插图生成，已登录）"
   fi
+  # 只下 codex 主二进制还不够：0.154 起所有工具调用（shell、image_generation）都经
+  # codex-code-mode-host 转发，缺它时 codex exec 能启动、能登录，但一动工具就报
+  # 「failed to spawn code-mode host」，一张图都画不出来。2026-09-11 在 Mac mini 上实测踩到。
+  if [ -x "$(dirname "$(command -v codex)")/codex-code-mode-host" ]; then
+    ok "codex-code-mode-host（codex 工具调用依赖）"
+  else
+    _cv=$(codex --version 2>/dev/null | awk '{print $NF}')
+    fail "缺 codex-code-mode-host —— codex exec 调不了任何工具，正文插图生成不了。装（版本要和 codex 一致）：
+         gh release download rust-v${_cv:-0.154.0} --repo openai/codex --pattern 'codex-code-mode-host-aarch64-apple-darwin.tar.gz' -D /tmp/codexdl
+         tar -xzf /tmp/codexdl/codex-code-mode-host-*.tar.gz -C /tmp/codexdl && cp /tmp/codexdl/codex-code-mode-host-aarch64-apple-darwin \"$(dirname "$(command -v codex)")/codex-code-mode-host\""
+  fi
 else
   fail "缺 codex CLI —— 正文插图生成不了。npm 装的版本可能缺平台二进制，最稳的是直接下 release：
          gh release download rust-v0.154.0 --repo openai/codex --pattern 'codex-aarch64-apple-darwin.tar.gz' -D /tmp/codexdl
