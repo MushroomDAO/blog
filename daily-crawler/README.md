@@ -27,6 +27,7 @@ This directory turns daily research into a product-and-content pipeline:
 - [2026-09-09](./2026-09-09.md) — AI MSP/IT autopilot, local presence agents, synthetic-customer eval labs, lightweight AI Ops/observability
 - [2026-09-10](./2026-09-10.md) — Messaging-native business agents, merchant operating agents, governed team memory, evidence-first MSME underwriting
 - [2026-09-11](./2026-09-11.md) — Embedded Agent Stores, Know-Your-Agent trust, WebMCP business capabilities, human-agent control planes
+- [2026-09-12](./2026-09-12.md) — Agent egress policy, AI capacity unlock, CowAgent multi-channel teams, work-in-place Excel agents
 
 ## Standard Review Lens
 
