@@ -36,6 +36,16 @@ ul{margin:.3rem 0 .3rem 1rem;padding:0;font-size:.84rem}
 a{color:var(--acc)}
 .saved{color:var(--ok);font-size:.74rem;opacity:0;transition:opacity .2s}
 .saved.show{opacity:1}
+.go{background:var(--ok);color:#fff;border-color:var(--ok);font-weight:600}
+.go:hover{color:#fff;filter:brightness(1.08)}
+.go:disabled{opacity:.45;cursor:not-allowed;filter:none}
+.job{font-size:.8rem;margin:-.4rem 0 1rem;padding:.55rem .75rem;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.job b{font-weight:600}
+.job code{font-size:.76rem;background:var(--bg);padding:.05rem .3rem;border-radius:4px}
+.job ol{margin:.35rem 0 0 1.1rem;padding:0;color:var(--mut)}
+.job.running{border-left:4px solid var(--acc)}
+.job.done{border-left:4px solid var(--ok)}
+.job.failed{border-left:4px solid #dc2626}
 </style></head><body><div class="wrap">
 <h1>🍄 forage 评审台</h1>
 <div class="sub">只做判断，不打分。决定和备注实时写入 SQLite，Claude 直接读库。</div>
@@ -47,7 +57,9 @@ a{color:var(--acc)}
   <button onclick="flt('dig')" id="f-dig">要深挖</button>
   <button onclick="flt('published')" id="f-published">已发布</button>
   <span class="stat" id="stat"></span>
+  <button class="go" id="go" onclick="startJob()" title="Start writing and publishing every item marked write">今天审完了，开始写</button>
 </div>
+<div class="job" id="job" hidden></div>
 <div id="list"></div></div>
 
 <script>
@@ -127,8 +139,48 @@ function flt(f){CUR=f;['all','undecided','write','dig','published'].forEach(x=>
   document.getElementById('f-'+x).classList.toggle('on',x===f));render();}
 async function summary(){
   const s = await fetch('/api/summary').then(r=>r.json());
+  SUM = s; renderJob();
   document.getElementById('stat').textContent =
     `共 ${s.total} · 写 ${s.write||0} · 再挖 ${s.dig||0} · 存档 ${s.archive||0} · 不要 ${s.skip||0} · 已发布 ${s.published||0} · 未决定 ${s.undecided||0}`;
 }
-load();
+
+// ---- 「开始写」：拉起后台 Claude 会话，把标了「写」的条目写完并发布 ----
+let JOB={state:'idle'}, JOB_T=null, SUM={};
+function fmtTime(iso){ try{return new Date(iso).toLocaleString('zh-CN',{hour12:false});}catch(e){return iso||'';} }
+function renderJob(){
+  const el=document.getElementById('job'), go=document.getElementById('go');
+  const n=SUM.write||0, running=JOB.state==='running' && !JOB.stale;
+  go.disabled = running || n===0;
+  go.textContent = running ? '写作任务进行中…' : `今天审完了，开始写（${n} 篇）`;
+  if(!JOB.state || JOB.state==='idle'){ el.hidden=true; return; }
+  el.hidden=false; el.className='job '+JOB.state;
+  const log=(JOB.log||[]).slice(-6).map(l=>`<li>${esc(fmtTime(l.at))} · ${esc(l.msg)}</li>`).join('');
+  const att = JOB.session ? ` · 接进去看：<code>claude attach ${esc(JOB.session)}</code>` : '';
+  if(JOB.state==='running'){
+    el.innerHTML = `<b>✍️ 写作任务进行中</b>：${JOB.count} 篇 · ${esc(fmtTime(JOB.started))} 开始 · 已跑 ${JOB.hours??0} 小时${att}`
+      + (JOB.stale?`<br>⚠️ 超过 8 小时还没收尾，可能卡住了。attach 进去看看；确认不在跑了可以再按一次按钮重启。`:'')
+      + (log?`<ol>${log}</ol>`:'<br><span style="color:var(--mut)">还没有进度汇报（调研和写初稿阶段要一阵子）</span>');
+  } else {
+    el.innerHTML = `<b>${JOB.state==='done'?'✅ 上次写作任务完成':'❌ 上次写作任务失败'}</b>（${esc(fmtTime(JOB.finished))}）：${esc(JOB.summary||'')}${att}`
+      + (log?`<ol>${log}</ol>`:'');
+  }
+}
+async function loadJob(){
+  try{ JOB = await fetch('/api/job').then(r=>r.json()); }catch(e){ return; }
+  renderJob();
+  clearTimeout(JOB_T);
+  if(JOB.state==='running') JOB_T=setTimeout(async()=>{ await loadJob(); if(JOB.state!=='running') load(); }, 20000);
+}
+async function startJob(){
+  const n=SUM.write||0, left=SUM.undecided||0;
+  let msg=`开始写这 ${n} 篇？会自动写稿、配图，发布到 blog 并建公众号草稿。`;
+  if(left) msg+=`\n\n还有 ${left} 条没判，这次不会处理它们。`;
+  if(!confirm(msg)) return;
+  const go=document.getElementById('go'); go.disabled=true; go.textContent='正在拉起…';
+  const r=await fetch('/api/job/start',{method:'POST',headers:{'X-Forage':'1'}});
+  const d=await r.json().catch(()=>({error:'服务无响应'}));
+  if(!r.ok){ alert('没能开始：'+(d.error||r.status)+(d.output?'\n\n'+d.output:'')); }
+  loadJob();
+}
+load(); loadJob();
 </script></body></html>

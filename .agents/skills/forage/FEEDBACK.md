@@ -208,3 +208,23 @@ JVM 系（Java/Kotlin/Scala）、Lisp 系（Common Lisp/Clojure）、
 - X 源：Mac mini 之前根本没装 twitter-cli（不是 404）。已 `pipx install twitter-cli`（0.8.5）。
   `collect_x()` 改为只从 `~/Dev/.env` 读 `TWITTER_AUTH_TOKEN` / `TWITTER_CT0`，没配就跳过——
   不让它回退读浏览器 cookie，因为那会弹 keychain 授权框（用户明确不要）。
+
+## 2026-09-11 晚（用户在 8042 标了 9 条 write，全部发布）
+
+9 条全发：virtual-ai-infra-team、K2-Horizon-MoVA、果蝇连接组进游戏（小红书线索）、ECCV 2026 最佳论文（小红书线索）、
+ParallelHue、Qwen3.8-Flash-Next-GGUF、Krill、jarvis-py、all-MiniLM-L6-v2。后两篇过了零点，pubDate 记 9/12。
+
+### 调研中推翻的选题前提（写稿时必须回一手源，不能信标题）
+- virtual-ai-infra-team 名字像多 agent 团队，实际只有 Planner 一个 LLM 角色，其余全是确定性代码。
+- jarvis-py 自称离线，实测默认把录音以 FLAC 走明文 HTTP 发 Google STT。
+- all-MiniLM-L6-v2 是 2021 年老模型（上一批对 gpt2 的规则是「僵尸老模型不写」），用户仍标 write。
+  这次换了角度写成「为什么它还是下载第一 + 中文硬限制 + 2026 该换什么」，有本机实测，成立。
+  → 信号：老模型不是一律不写，前提是有新角度（默认依赖链、实测对比），不是翻新闻稿。
+
+### 流程侧
+- 并行写初稿时，子 agent 把稿子直接写进 src/content/blog/，会被正在发布的那篇的 build 一起编译上线。
+  → 已改：初稿一律写 radar/staging/，轮到发布才 mv 进去。流程固化在 write/WRITE-JOB.md。
+- 果蝇那条标题是中文句子，store.py sync 按标题匹配不上 slug，没自动转 published，手动标的。
+  （和 9/9 记的「中文标题去重失效」是同一个根因。）
+- 评审台加了「今天审完了，开始写」按钮：拉起 `claude --bg` 后台会话按 WRITE-JOB.md 执行，
+  进度写 radar/write-job.json，页面轮询显示。auto 权限模式 + settings.local.json 白名单。

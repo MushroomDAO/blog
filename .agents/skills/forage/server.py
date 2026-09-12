@@ -8,12 +8,15 @@
 页面上的每一次打分、每一个决定、每一条备注都直接写 SQLite，
 所以我随时能读到你的判断 —— 不用你复制粘贴。
 """
-import http.server, json, os, sqlite3, sys, threading, webbrowser
+import http.server, json, os, re, shutil, sqlite3, subprocess, sys, threading, webbrowser
 from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from store import DB, DIMS, conn
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "write"))
+import job as write_job
 
 PORT = int(os.environ.get("FORAGE_PORT", "8042"))
 # 默认仍然只绑 127.0.0.1（不对外）。但 forage 采集搬到 Mac mini 之后，
@@ -46,6 +49,66 @@ def fetch_items(run=None):
     return rows
 
 
+# ---- 「开始写」按钮 ----------------------------------------------------------
+# 评审完一按，拉起一个后台 Claude Code 会话（claude --bg）按 write/WRITE-JOB.md
+# 把标了「写」的条目写完、发布。不需要任何会话常驻：这个服务本来就是
+# LaunchAgent 常驻的，它负责拉起；后台会话自己跑完就退出，用 `claude attach <id>`
+# 可以随时接进去看。
+#
+# 权限：用 auto 模式，不用 bypassPermissions。这个页面没有登录，tailnet 里谁都能按，
+# 按钮背后不能挂一个无限制的 agent。发布流程固定用的命令在 .claude/settings.local.json
+# 里放行，超出范围的由 auto 模式的安全审核把关。
+ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
+STALE_HOURS = 8  # 跑超过这么久还没收尾，页面提示「可能卡住了」
+START_LOCK = threading.Lock()  # ThreadingHTTPServer：双击会并发进来两次
+
+
+def job_status():
+    j = write_job.read()
+    if j.get("state") == "running":
+        try:
+            started = datetime.fromisoformat(j["started"])
+            j["hours"] = round((datetime.now(timezone.utc) - started).total_seconds() / 3600, 1)
+            j["stale"] = j["hours"] >= STALE_HOURS
+        except (KeyError, ValueError):
+            pass
+    return j
+
+
+def start_write_job():
+    j = write_job.read()
+    if j.get("state") == "running" and not job_status().get("stale"):
+        return 409, {"error": "已经有一个写作任务在跑", "job": j}
+    c = conn()
+    items = [dict(r) for r in c.execute(
+        "SELECT id, title FROM items WHERE decision='write' ORDER BY updated_at")]
+    if not items:
+        return 400, {"error": "没有标「写」的条目"}
+    undecided = c.execute("SELECT COUNT(*) FROM items WHERE decision IS NULL OR decision=''").fetchone()[0]
+
+    claude = shutil.which("claude") or os.path.expanduser("~/.local/bin/claude")
+    today = datetime.now().strftime("%Y%m%d")
+    prompt = (f"读 .agents/skills/forage/write/WRITE-JOB.md 并严格按它执行：用户已在 8042 评审台判完，"
+              f"把 {len(items)} 条标了「写」的条目全部写完并发布（blog + 公众号草稿）。"
+              f"全程中文汇报，结束时必须用 job.py done 或 fail 收尾。")
+    try:
+        r = subprocess.run([claude, "--bg", "--permission-mode", "auto",
+                            "-n", f"forage-write-{today}", prompt],
+                           cwd=ROOT, capture_output=True, text=True, timeout=90)
+    except (OSError, subprocess.TimeoutExpired) as e:
+        return 500, {"error": f"拉起 claude 失败：{e}"}
+    out = (r.stdout or "") + (r.stderr or "")
+    # 形如「backgrounded · 8f2eef3b · forage-write-20260912」
+    m = re.search(r"backgrounded\s*·\s*([0-9a-f]{6,})", out)
+    if r.returncode != 0 or not m:
+        return 500, {"error": "claude --bg 没有返回会话 id", "output": out[-800:]}
+    j = {"state": "running", "session": m.group(1), "started": now(),
+         "count": len(items), "titles": [i["title"] for i in items],
+         "undecided_left": undecided, "log": []}
+    write_job.write(j)
+    return 200, j
+
+
 class H(http.server.BaseHTTPRequestHandler):
     def log_message(self, *a):
         pass  # 别把终端刷满
@@ -73,10 +136,20 @@ class H(http.server.BaseHTTPRequestHandler):
                 s[r["decision"] or "undecided"] = r["n"]
             s["rated"] = c.execute("SELECT COUNT(*) FROM items WHERE u_total IS NOT NULL").fetchone()[0]
             return self._send(200, json.dumps(s, ensure_ascii=False))
+        if p == "/api/job":
+            return self._send(200, json.dumps(job_status(), ensure_ascii=False))
         return self._send(404, json.dumps({"error": "not found"}))
 
     def do_POST(self):
         p = urlparse(self.path).path
+        if p == "/api/job/start":
+            # 别的网站可以用 text/plain 表单跨站 POST 过来（不触发 CORS 预检）。
+            # 要求一个自定义头，浏览器跨站发不了它，只有本页的 fetch 带得上。
+            if self.headers.get("X-Forage") != "1":
+                return self._send(403, json.dumps({"error": "forbidden"}))
+            with START_LOCK:
+                code, body = start_write_job()
+            return self._send(code, json.dumps(body, ensure_ascii=False))
         n = int(self.headers.get("Content-Length", 0))
         try:
             d = json.loads(self.rfile.read(n) or b"{}")
