@@ -50,6 +50,7 @@ BASE_TPL = """<!doctype html>
           <tr>
             <td style="padding-top:20px;border-top:1px solid #eee;font-size:12px;color:#888;text-align:center;">
               🍄 Mushroom Research Blog｜非营利个人科技观察<br/>
+              <span style="display:inline-block;margin:8px 0;line-height:1.6;">⚠️ 文中介绍的开源代码与模型仅供学习交流与技术借鉴，大多有待进一步研究和验证，请勿直接用于工作或生产环境。</span><br/>
               <a href="{{{{ UnsubscribeURL }}}}" style="color:#888;">退订</a>
             </td>
           </tr>
