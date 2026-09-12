@@ -1,0 +1,6 @@
+# pnpm 11+ 读这里的 allowBuilds；pnpm 10（CI 用的版本）读 package.json 的
+# pnpm.onlyBuiltDependencies。两份名单必须保持一致——加新包时两处都要改。
+allowBuilds:
+  esbuild: true
+  sharp: true
+  workerd: true

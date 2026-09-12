@@ -1,0 +1,4 @@
+# 独立安装的子项目：让 pnpm 向上找 workspace 根时停在这里，
+# 否则会被仓库根目录的 pnpm-workspace.yaml 吸进去，装成根项目的依赖。
+packages:
+  - "."
