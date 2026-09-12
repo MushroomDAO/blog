@@ -1,0 +1,16 @@
+{
+  "title": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上",
+  "author": "Mycelium",
+  "digest": "unsloth/Qwen3.8-Flash-Next-GGUF 是 Qwen4 架构预览版（125B 总参、6B 激活，",
+  "mediaId": "prCUE631thH1cmNLi42prOvj-ShlYK1x-JIwg8F_tAKko3kSJju7FjfTbh91hASk",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/unsloth/qwen3.8-flash-next-gguf",
+    "huggingface.co/qwen/qwen3.8-flash-next",
+    "github.com/ggml-org/llama.cpp",
+    "huggingface.co/api/models",
+    "github.com/qwenlm/qwen3.8-flash-next",
+    "github.com/lmstudio-ai/lmstudio-bug-tracker"
+  ],
+  "publishedAt": "2026-09-11T16:54:42.523Z"
+}

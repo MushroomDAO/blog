@@ -1,0 +1,19 @@
+{
+  "title": "Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？",
+  "author": "Mycelium",
+  "digest": "Nex-N2.5-mini 是 Nex-AGI 9 月 8 日开源的 Agent 模型，Apache-2.0，35.1B",
+  "mediaId": "prCUE631thH1cmNLi42prOQbbOkIh-DBSfHdvtN91LP0C8bdiiMixxsv0AmNpEQd",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/nex-agi/nex-n2.5-mini",
+    "github.com/nex-agi/nex-n2.5",
+    "huggingface.co/nex-agi/nex-n2-mini",
+    "huggingface.co/qwen/qwen3.5-35b-a3b",
+    "huggingface.co/abenzerps/nex-n2.5-mini-gguf",
+    "huggingface.co/mradermacher/nex-n2.5-mini-i1-gguf",
+    "huggingface.co/vontra/nex-n2.5-mini-mlx-oq4",
+    "huggingface.co/karmx/nex-n2.5-mini-mixed-q2q3-128k-gguf",
+    "github.com/ggml-org/llama.cpp"
+  ],
+  "publishedAt": "2026-09-11T02:41:10.841Z"
+}

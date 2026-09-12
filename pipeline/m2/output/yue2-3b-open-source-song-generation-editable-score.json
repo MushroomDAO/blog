@@ -1,0 +1,17 @@
+{
+  "title": "YuE2-3B：先写谱再唱歌的开源音乐模型，和 ACE-Step 1.5 差在哪",
+  "author": "Mycelium",
+  "digest": "YuE2-3B 开源歌曲生成：歌词+风格先出可编辑 ABC 乐谱再合成 48kHz 立体声，Agent 可改和弦改旋律再",
+  "mediaId": "prCUE631thH1cmNLi42prOZS8Dhl6-LFDdoQtdMQIZGISVkoi_z_RF6VX8P4-cEY",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/m-a-p/yue2-3b",
+    "github.com/multimodal-art-projection/yue",
+    "huggingface.co/datasets/m-a-p",
+    "huggingface.co/m-a-p/sheetsage2",
+    "huggingface.co/m-a-p/yue2-vae",
+    "huggingface.co/m-a-p/mert-v2-fullsong",
+    "huggingface.co/ace-step/ace-step1.5"
+  ],
+  "publishedAt": "2026-09-11T02:53:06.265Z"
+}

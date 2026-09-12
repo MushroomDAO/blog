@@ -1,0 +1,19 @@
+{
+  "title": "Krea 2 Turbo 值不值得本地跑？12.8B 开放权重文生图：8 步出图、年收入百万美元以下可商用",
+  "author": "Mycelium",
+  "digest": "Krea 2 Turbo 是 Krea 从零训练的 12.8B 参数文生图 DiT，用 TDM 蒸馏到 8 步、关闭 C",
+  "mediaId": "prCUE631thH1cmNLi42prEidapmERI3l0uFfFR9ju41xYnThnCcZEfuUnvmwj_OX",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/krea/krea-2-turbo",
+    "huggingface.co/krea/krea-2-raw",
+    "github.com/krea-ai/krea-2",
+    "huggingface.co/api/models",
+    "huggingface.co/vantagewithai/krea-2-turbo-gguf",
+    "huggingface.co/mflux-community/krea-2-turbo-mflux-q8",
+    "huggingface.co/comfy-org/krea-2",
+    "huggingface.co/black-forest-labs/flux.2-klein-4b",
+    "huggingface.co/black-forest-labs/flux.2-klein-9b"
+  ],
+  "publishedAt": "2026-09-11T02:59:30.042Z"
+}
