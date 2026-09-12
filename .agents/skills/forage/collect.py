@@ -239,6 +239,161 @@ def collect_trends():
     return []
 
 
+CRAWLER_REPO = "MushroomDAO/blog"
+CRAWLER_STOP = {"sme", "ai", "the", "a", "an", "of", "for", "and", "or", "to", "open", "source",
+                "open-source", "kit", "pack", "starter", "template", "v0", "lite", "mini"}
+
+
+def _crawler_repo_hints(component, links):
+    """给一条构想找「可能的一手源」：日报里直接链到的仓库优先，其次按组件名搜 GitHub。
+
+    只是线索，不是结论——搜出来的仓库可能只是同名，写之前要读 README 确认真的在做这件事。
+    返回 (hints, search_failed)：搜索本身失败时要如实告诉卡片「没确认」，
+    不能和「搜了，确实没有」混成一句「没找到对应开源项目」。
+    """
+    hints, seen, failed = [], set(), False
+    for owner, repo in re.findall(r"github\.com/([\w.-]+)/([\w.-]+)", " ".join(links)):
+        full = f"{owner}/{repo}".removesuffix(".git")
+        if full.lower() in seen or owner.lower() in ("orgs", "features", "topics"):
+            continue
+        seen.add(full.lower())
+        out = sh(["gh", "api", f"repos/{full}", "--jq",
+                  '[.full_name, .stargazers_count, (.license.spdx_id // "未声明"), .pushed_at[:10], (.description // "")] | @tsv'])
+        f = out.strip().split("\t")
+        if len(f) >= 5 and f[1].isdigit():
+            hints.append(dict(repo=f[0], stars=int(f[1]), lic=f[2], pushed=f[3], desc=f[4][:120], via="日报直链"))
+        else:
+            # 日报直链了仓库却查不到详情（网络/改名/删库）：保留链接，别让它从卡片上消失
+            hints.append(dict(repo=full, stars=None, lic="", pushed="", desc="（仓库详情没取到）", via="日报直链"))
+    name = re.split(r"[：:，,（(]", component)[0]  # 「sme-local-pool：PAIR profile、节点…」只取名字
+    words = [w for w in re.split(r"[\s/_+\-`]+", name.lower()) if w and w not in CRAWLER_STOP]
+    if len(words) >= 2 and len(hints) < 3:
+        try:
+            r = subprocess.run(["gh", "search", "repos", " ".join(words[:4]), "--sort", "stars", "--limit", "3",
+                                "--json", "fullName,stargazersCount,pushedAt,description"],
+                               capture_output=True, text=True, timeout=40, env=ENV)
+            found = json.loads(r.stdout) if r.returncode == 0 else None
+        except (OSError, subprocess.TimeoutExpired, ValueError):
+            found = None
+        if found is None:
+            failed = True
+        for r in found or []:
+            if r["fullName"].lower() in seen or r["stargazersCount"] < 100:
+                continue  # 100 星以下多半是同名空仓库，给了也是噪音
+            # 搜索是全文模糊匹配：「capacity map」会搜出疫情床位看板。
+            # 仓库名+简介里至少命中两个词才算沾边。
+            hay = f"{r['fullName']} {r.get('description') or ''}".lower()
+            if sum(w in hay for w in words[:4]) < 2:
+                continue
+            seen.add(r["fullName"].lower())
+            hints.append(dict(repo=r["fullName"], stars=r["stargazersCount"], lic="",
+                              pushed=(r.get("pushedAt") or "")[:10],
+                              desc=(r.get("description") or "")[:120], via=f"搜「{' '.join(words[:4])}」"))
+    return hints[:3], failed
+
+
+def parse_daily_crawler(md, day):
+    """纯解析：日报 markdown → 条目列表（不联网，repos 由调用方补）。拆出来是为了能测。"""
+    # 优先级表的列每天不一样（都含 Priority 列：9/10 的表头 4 列，9/12 的表头 6 列），
+    # 按表头关键词认列，不按列序
+    COLS = [("theme", r"theme|topic|主题"), ("pain", r"pain|痛点"),
+            ("component", r"component|capability|组件"), ("paid", r"paid|付费"), ("fit", r"content|内容")]
+    table, colmap = {}, None
+    for line in md.splitlines():
+        if re.match(r"\|\s*(Priority|优先级)\s*\|", line):
+            heads = [h.strip().lower() for h in line.strip().strip("|").split("|")][1:]
+            colmap = {}
+            for i, h in enumerate(heads):
+                for key, pat in COLS:
+                    if key not in colmap and re.search(pat, h):
+                        colmap[key] = i
+                        break
+            continue
+        m = re.match(r"\|\s*\*\*(S\d+)\*\*\s*\|(.+)\|\s*$", line)
+        if m and colmap is not None:
+            cells = [c.strip().strip("*").replace("`", "") for c in m.group(2).split("|")]
+            table[m.group(1)] = {k: cells[i] if i < len(cells) else "" for k, i in colmap.items()}
+
+    path = f"daily-crawler/{day}.md"
+    rows = []
+    # 标题写法也不统一：「## S1 — xx」「## S1. xx」「## S1：xx」
+    for sec in re.split(r"(?m)^## (?=S\d+\s*[—\-.:：])", md)[1:]:
+        head, _, body = sec.partition("\n")
+        m = re.match(r"(S\d+)\s*[—\-.:：]\s*(.+)", head.strip())
+        if not m:
+            continue
+        sid, title = m.group(1), m.group(2).strip()
+        # 最后一个 S 段会一路延续到文末的汇总/来源清单，截到下一个二级标题为止，
+        # 否则别的主题的链接会串进来
+        body = re.split(r"(?m)^## ", body)[0]
+        t = table.get(sid, {})
+        theme, pain, component, paid, fit = (t.get(k, "") for k in ("theme", "pain", "component", "paid", "fit"))
+        if not component:
+            # 表里没有组件列的日子，退回正文里第一个反引号包起来的 kebab 名
+            cm = re.search(r"`([a-z0-9]+(?:-[a-z0-9]+)+)`", body)
+            component = cm.group(1) if cm else ""
+        sig = re.search(r"(?s)### Signal\s*(.+?)(?=\n### |\Z)", body)
+        signal = re.sub(r"\s+", " ", re.sub(r"(?m)^Sources?:.*$|^- .*$|[*_`>]", "", sig.group(1) if sig else ""))
+        why = re.search(r"(?s)### Why it is worth tracking\s*(.+?)(?=\n### |\Z)", body)
+        links = sorted(set(u.rstrip(".,)") for u in re.findall(r"https?://[^\s<>)\]]+", body)))
+        rows.append(dict(
+            src="daily-crawler", title=f"[{day} {sid}] {theme or title}",
+            desc=f"{title} — {pain}", stars=None,
+            url=f"https://github.com/{CRAWLER_REPO}/blob/main/{path}",
+            crawler=dict(sid=sid, heading=title, pain=pain, component=component, paid=paid, fit=fit,
+                         signal=signal.strip()[:700],
+                         why=re.sub(r"\s+", " ", re.sub(r"[*_`>]", "", why.group(1)))[:400] if why else "",
+                         sources=[u for u in links if "github.com" not in u][:6],
+                         links=links, repos=[], repo_search_failed=False)))
+    return rows
+
+
+def collect_daily_crawler(day=None):
+    """daily-crawler：Codex 每天早上 8-9 点直推 main 的 SME AI 选题日报（S1-S4 构想）。
+
+    它是**建议和信息来源，不是一手源**：条目是产品/内容构想，大多没有对应仓库。
+    所以这里除了把构想拆出来，还机械地做两件事，让评审台上直接看到「写的依据」：
+      1. 摘出日报引用的原始报道/官方链接；
+      2. 找可能已经实现该构想的真实开源项目（日报直链的仓库 + 按组件名搜 GitHub）。
+    值不值得写由用户在评审台判；写的时候子 agent 仍须回一手源核实（见 write/WRITE-JOB.md）。
+
+    用 gh api 读 origin/main 上的文件，不碰工作区——这个仓库目录有多个会话共享，
+    cron 里 git pull / checkout 会打断别人。
+    """
+    day = day or datetime.now().strftime("%Y-%m-%d")  # day：补采/测试某一天
+    path = f"daily-crawler/{day}.md"
+    try:
+        r = subprocess.run(["gh", "api", f"repos/{CRAWLER_REPO}/contents/{path}", "--jq", ".content"],
+                           capture_output=True, text=True, timeout=40, env=ENV)
+        out, err, rc = r.stdout, r.stderr, r.returncode
+    except (OSError, subprocess.TimeoutExpired) as e:
+        out, err, rc = "", str(e), -1
+    # 「日报还没提交」和「读取失败」要分开报：前者早上 8 点前是常态，后者是故障，
+    # 混成一句会让采集失败看起来像「今天没东西」
+    if rc != 0:
+        cov["daily-crawler"] = 0
+        cov["_crawler_note"] = (f"{path} 还不存在（日报通常 8-9 点提交）" if "404" in err
+                                else f"读取 {path} 失败：{err.strip()[-160:] or f'rc={rc}'}")
+        return []
+    try:
+        md = base64.b64decode(out).decode("utf-8")
+    except ValueError as e:
+        cov["daily-crawler"] = 0
+        cov["_crawler_note"] = f"{path} 内容解码失败：{e}"
+        return []
+
+    rows = parse_daily_crawler(md, day)
+    for r in rows:
+        c = r["crawler"]
+        c["repos"], c["repo_search_failed"] = _crawler_repo_hints(c["component"], c.pop("links"))
+    # 保留日报自己的 S1→S4 顺序，但既没原始报道也没找到仓库的沉底——按规则写不了，别占名额
+    rows.sort(key=lambda r: not (r["crawler"]["repos"] or r["crawler"]["sources"]))
+    cov["daily-crawler"] = len(rows)
+    if not rows:
+        cov["_crawler_note"] = f"{path} 存在但没解析出 S 条目——日报格式可能变了，检查 parse_daily_crawler"
+    return rows
+
+
 def main():
     rows = []
     rows += collect_github()
