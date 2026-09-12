@@ -16,6 +16,36 @@ KNOWN_ERRORS="$SKILL_DIR/KNOWN_ERRORS.md"
 # 加载 .env
 if [ -f "$BLOG_DIR/.env" ]; then set -a; source "$BLOG_DIR/.env"; set +a; fi
 
+# FU-24：.env.example 里 CLOUDFLARE_API_TOKEN/CLOUDFLARE_ACCOUNT_ID 是字面占位符
+# （your_token_here/your_account_id_here）；忘替换时上面这行会原样导出，
+# step_blog_deploy 里的 `npx wrangler pages deploy` 会拿假 token 去请求 Cloudflare
+# API，报一个看不懂的鉴权错误而不是"没配置"。精确匹配未替换的占位符时按未设置处理。
+# round 2 review：比较前先去掉 CRLF/引号，跟 update-analytics.sh 已有的同款处理一致——
+# Windows 编辑过的 .env 残留的尾随 \r，或手滑加的引号，会让下面的精确匹配失效，占位符
+# 原样当成"已配置"导出。
+_strip_env_value() {
+  local v; v="$(printf '%s' "$1" | tr -d '\r')"
+  v="${v%\"}"; v="${v#\"}"; v="${v%\'}"; v="${v#\'}"
+  printf '%s' "$v"
+}
+_cf_placeholder_detected=false
+if [ "$(_strip_env_value "${CLOUDFLARE_API_TOKEN:-}")" = "your_token_here" ]; then
+  echo "⚠️  CLOUDFLARE_API_TOKEN in .env is still the .env.example placeholder — treating as unset" >&2
+  unset CLOUDFLARE_API_TOKEN
+  _cf_placeholder_detected=true
+fi
+if [ "$(_strip_env_value "${CLOUDFLARE_ACCOUNT_ID:-}")" = "your_account_id_here" ]; then
+  echo "⚠️  CLOUDFLARE_ACCOUNT_ID in .env is still the .env.example placeholder — treating as unset" >&2
+  unset CLOUDFLARE_ACCOUNT_ID
+  _cf_placeholder_detected=true
+fi
+# round 3 review：光 unset 不够——放任 wrangler 自己处理缺失 token，要么弹浏览器走
+# OAuth 登录卡最多 2 分钟（实测 wrangler 4.90.0 源码 isNonInteractiveOrCI()/
+# loginOrRefreshIfRequired() 的判断逻辑），要么本机恰好有缓存登录态时用一个跟 .env
+# 里配的完全不是同一个的账号悄悄部署成功，都不是"清楚报没配置"。真正的硬停放在
+# 下面 step_blog_deploy() 函数开头（$_cf_placeholder_detected 是这里设的全局变量，
+# bash 函数默认能读到），不在这里做，因为这里只是脚本启动阶段，还没到真正部署那一步。
+
 log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG_FILE"; }
 
 # ── 状态管理 ─────────────────────────────────────────────────────
@@ -381,6 +411,17 @@ heroImage: \"${hero_hint}\"
 step_blog_deploy() {
   local dir="$1"
   local slug; slug="$(state_get "$dir" "slug")"
+
+  # FU-24（round 3 review）：检测到占位符时在这里硬停，不让它走到 wrangler——理由见
+  # 文件前面 _cf_placeholder_detected 设置处的说明（放任 wrangler 自己处理缺失 token
+  # 要么弹浏览器卡住，要么可能用本机缓存的无关登录态悄悄部署成功）。走同样的
+  # record_known_error + return 1 失败路径，跟这个函数其它失败分支保持一致，让调用方
+  # （批处理循环）正常继续处理下一篇，不整体中止。
+  if [ "$_cf_placeholder_detected" = true ]; then
+    local err="CLOUDFLARE_API_TOKEN/CLOUDFLARE_ACCOUNT_ID in .env is still the .env.example placeholder"
+    log "❌ $err"; state_set "$dir" "blog" "failed"
+    record_known_error "blog_deploy" "$err" "slug=$slug"; return 1
+  fi
 
   log "Building..."
   if ! pnpm --prefix "$BLOG_DIR" build >> "$LOG_FILE" 2>&1; then

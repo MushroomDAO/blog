@@ -56,14 +56,29 @@ fi
 # 顺带去掉可能存在的引号（"..."/'...'）和 CRLF 的尾随 \r（round 2 review 指出：这个
 # 仓库自己的 local-fallback.sh 里 getv() 结尾就有 `tr -d '\r'`，这里最初漏了——CRLF
 # 的 .env 会让 token 带一个看不见的尾随字符，Cloudflare 那边只会报一个看不懂的 400）。
+_cf_placeholder_detected=false
 if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] && [ -f .env ]; then
   RAW_TOKEN="$(grep '^CLOUDFLARE_API_TOKEN=' .env | tail -1 | cut -d= -f2- || true)"
   RAW_TOKEN="${RAW_TOKEN%\"}"; RAW_TOKEN="${RAW_TOKEN#\"}"
   RAW_TOKEN="${RAW_TOKEN%\'}"; RAW_TOKEN="${RAW_TOKEN#\'}"
   RAW_TOKEN="$(printf '%s' "$RAW_TOKEN" | tr -d '\r')"
-  if [ -n "$RAW_TOKEN" ]; then
+  # FU-24：.env.example 里这一项的占位符是字面文本 your_token_here——如果复制成
+  # .env 却忘了替换，上面几行会把占位符原样读进 RAW_TOKEN，wrangler 会拿着这串假
+  # token 去请求 Cloudflare API，报一个看不懂的鉴权错误，而不是"没配置"。精确匹配
+  # 未替换的占位符时按"没配置"处理。
+  if [ -n "$RAW_TOKEN" ] && [ "$RAW_TOKEN" != "your_token_here" ]; then
     CLOUDFLARE_API_TOKEN="$RAW_TOKEN"
     export CLOUDFLARE_API_TOKEN
+  elif [ -n "$RAW_TOKEN" ]; then
+    # RAW_TOKEN 非空但等于占位符——明确是"填了占位符没替换"，不是"完全没填这一行"。
+    # round 3 review 指出：即使这是 cron 跑（没有 TTY），wrangler 缺 token 时也不
+    # 保证报错——如果这台机器上曾经 `wrangler login` 过、本地缓存了未过期的 OAuth
+    # 会话（实测 wrangler 4.90.0 源码：getAPIToken() 命中缓存时 loginOrRefreshIfRequired()
+    # 直接返回 true，根本不看是否有 TTY/是否 CI），部署会悄悄用那个跟这个项目无关
+    # 的旧登录身份成功，退出码是 0，没有人会发现。跟下面 [4/4] 部署前的硬停配合，
+    # 不让这种情况悄悄成功。
+    _cf_placeholder_detected=true
+    echo "  ⚠ .env 里的 CLOUDFLARE_API_TOKEN 还是 .env.example 的占位符 your_token_here 没替换"
   else
     echo "  ⚠ .env 里没有 CLOUDFLARE_API_TOKEN，本地部署大概率会失败（见 [4/4]）"
   fi
@@ -77,7 +92,9 @@ if [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ] && [ -f .env ]; then
   RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID%\"}"; RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID#\"}"
   RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID%\'}"; RAW_ACCOUNT_ID="${RAW_ACCOUNT_ID#\'}"
   RAW_ACCOUNT_ID="$(printf '%s' "$RAW_ACCOUNT_ID" | tr -d '\r')"
-  if [ -n "$RAW_ACCOUNT_ID" ]; then
+  # FU-24：同上，your_account_id_here 是 .env.example 的占位符，精确匹配时按
+  # "没配置"处理，不当成真实 account id 导出。
+  if [ -n "$RAW_ACCOUNT_ID" ] && [ "$RAW_ACCOUNT_ID" != "your_account_id_here" ]; then
     CLOUDFLARE_ACCOUNT_ID="$RAW_ACCOUNT_ID"
     export CLOUDFLARE_ACCOUNT_ID
   fi
@@ -109,6 +126,16 @@ else
   echo "  ✓ committed（push 结果见上）"
 fi
 
+# FU-24（round 3 review）：检测到占位符时在这里硬停，不让它走到 wrangler——数据
+# 已经在上面 [3/4] committed/pushed 了，跟下面本来就有的"部署失败=退出码 1"是同一套
+# 失败信号，cron 的邮件/监控能照常发现。不硬停的话，wrangler 缺 token 时不保证报错：
+# 这台机器如果曾经 `wrangler login` 过、缓存了未过期的 OAuth 会话，会悄悄用那个身份
+# 部署成功，退出码 0，没人会发现部署用的根本不是 .env 里配的那个账号。
+if [ "$_cf_placeholder_detected" = true ]; then
+  echo "  ⚠⚠⚠ .env 里的 CLOUDFLARE_API_TOKEN 还是占位符，拒绝部署（避免悄悄用本机缓存的无关登录态部署）——需要人工去 .env 填真实 token"
+  exit 1
+fi
+
 # 本地部署失败不让整个脚本报错退出——数据已经 push 过了，不算致命，但现在没有 CI
 # 兜底了，失败了就是真的失败，线上会一直卡在旧快照直到下一次成功部署，所以下面的
 # 警告要显眼，不能只是安慰性的"不是致命错误"。
@@ -126,6 +153,11 @@ CA="${NODE_EXTRA_CA_CERTS:-${CF_CA_CERT:-}}"
 # 又有人往 wrangler.toml 里加回这一行。）改成按 wrangler 实际支持的方式，部署前
 # 导出环境变量；CLOUDFLARE_ACCOUNT_ID 现在真的从 .env 读（见上面新增的读取块），
 # 这里的字面量只是 .env 缺这一项时的兜底。
+# 注（FU-24 round 2 review 指出）：.env 里的占位符 your_account_id_here 被上面的
+# FU-24 guard 当成"未设置"处理后，也会落到这条兜底——部署会用这个写死在仓库里的
+# account id 悄悄成功，而不是用户以为自己在 .env 里配的那个值。account id 不是密钥，
+# 悄悄成功不算安全问题，但如果这个仓库以后需要部署到另一个 Cloudflare 账号，别忘了
+# 这里还有一条硬编码兜底会覆盖掉一个"看起来配置了但其实是占位符"的 .env。
 export CLOUDFLARE_ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-7bf23342f21baa5ebfc7bc7b74f5a1f2}"
 if [ -n "$CA" ] && [ -f "$CA" ]; then
   NODE_EXTRA_CA_CERTS="$CA" npx wrangler pages deploy dist --project-name=blog-mushroom --branch=main --commit-dirty=true 2>&1 | tail -4
