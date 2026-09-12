@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""daily-crawler 日报解析的测试（不联网）。
+"""daily-crawler 解析与卡片生成的测试（不联网）。
 
     python3 .agents/skills/forage/test_daily_crawler.py
 
@@ -9,6 +9,7 @@ import os, sys, unittest
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import collect  # noqa: E402
+import stage    # noqa: E402
 
 # 9/10 那种：表头只有 Priority/Theme/capability/fit 四列，没有 pain/paid；文末有汇总段
 BRIEF_4COL = """# SME AI Daily Brief — 2026-09-10
@@ -86,6 +87,11 @@ class ParseDailyCrawler(unittest.TestCase):
         self.assertIn("Sept 9", s1["signal"])
         self.assertNotIn("**", s1["signal"])
 
+    def test_desc_has_no_dangling_dash_without_pain_column(self):
+        # 9/10 那种表头没有 pain 列：desc 不能以「 — 」结尾
+        rows = collect.parse_daily_crawler(BRIEF_4COL, "2026-09-10")
+        self.assertFalse(rows[0]["desc"].rstrip().endswith("—"), rows[0]["desc"])
+
     def test_heading_variants_and_backtick_component_fallback(self):
         rows = collect.parse_daily_crawler(BRIEF_NO_TABLE, "2026-09-01")
         self.assertEqual([r["crawler"]["sid"] for r in rows], ["S1", "S2"])
@@ -95,6 +101,45 @@ class ParseDailyCrawler(unittest.TestCase):
     def test_non_s_heading_is_not_an_item(self):
         rows = collect.parse_daily_crawler(BRIEF_NO_TABLE, "2026-09-01")
         self.assertNotIn("今日优先级", [r["crawler"]["heading"] for r in rows])
+
+
+class CrawlerCard(unittest.TestCase):
+    P = {"本地优先": False, "隐私自主": False, "开源开放": False, "个人可及": True, "一手可查": True}
+
+    def card(self, **kw):
+        cr = dict(sid="S1", heading="h", pain="", component="", paid="", fit="", signal="", why="",
+                  sources=[], repos=[], repo_search_failed=False)
+        cr.update(kw)
+        return stage.crawler_research(cr, self.P)
+
+    def test_gap_tells_what_kind_of_article(self):
+        repo = [dict(repo="a/b", stars=500, lic="MIT", pushed="", desc="", via="日报直链")]
+        self.assertIn("写之前读 README", self.card(repos=repo, sources=["https://x"])["gap"])
+        self.assertIn("项目拆解", self.card(repos=repo)["gap"])
+        self.assertIn("行业/产品观察", self.card(sources=["https://x"])["gap"])
+        self.assertIn("按规则不写", self.card()["gap"])
+
+    def test_no_evidence_is_not_primary_checkable(self):
+        self.assertFalse(self.card()["principles"]["一手可查"])
+        self.assertTrue(self.card(sources=["https://x"])["principles"]["一手可查"])
+
+    def test_failed_search_is_not_reported_as_nothing_found(self):
+        self.assertIn("未经确认", self.card(sources=["https://x"], repo_search_failed=True)["gap"])
+        self.assertNotIn("未经确认", self.card(sources=["https://x"])["gap"])
+
+    def test_unresolved_direct_repo_does_not_crash(self):
+        # 日报直链的仓库没取到详情时 stars=None；和整数混在一起比大小会 TypeError，
+        # stage.main() 不兜底 → 整晚入库中断（#78 评审 F1）
+        repos = [dict(repo="gone/repo", stars=None, lic="", pushed="", desc="", via="日报直链"),
+                 dict(repo="a/b", stars=500, lic="MIT", pushed="2026-09-01", desc="", via="搜")]
+        card = self.card(repos=repos)
+        self.assertEqual(card["stars"], 500)
+        self.assertEqual(card["lic"], "MIT")
+        only_none = self.card(repos=repos[:1])
+        self.assertIsNone(only_none["stars"])
+
+    def test_card_marks_idea_as_unverified(self):
+        self.assertTrue(self.card(heading="Agent Egress Policy")["core"].startswith("【日报构想·待核实】"))
 
 
 if __name__ == "__main__":

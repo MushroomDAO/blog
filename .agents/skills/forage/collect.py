@@ -338,7 +338,7 @@ def parse_daily_crawler(md, day):
         links = sorted(set(u.rstrip(".,)") for u in re.findall(r"https?://[^\s<>)\]]+", body)))
         rows.append(dict(
             src="daily-crawler", title=f"[{day} {sid}] {theme or title}",
-            desc=f"{title} — {pain}", stars=None,
+            desc=f"{title} — {pain}" if pain else title, stars=None,
             url=f"https://github.com/{CRAWLER_REPO}/blob/main/{path}",
             crawler=dict(sid=sid, heading=title, pain=pain, component=component, paid=paid, fit=fit,
                          signal=signal.strip()[:700],
@@ -401,6 +401,7 @@ def main():
     rows += collect_xhs()
     rows += collect_x()
     rows += collect_trends()
+    rows += collect_daily_crawler()
 
     json.dump(rows, open(f"{OUT}/raw.json", "w"), ensure_ascii=False)
     cov["_total"] = len(rows)
@@ -413,7 +414,7 @@ def main():
             continue
         flag = "  ⚠️ 该源为 0" if v == 0 else ""
         print(f"  {k:<14} {v:>5}{flag}")
-    for k in ("_xhs_error", "_trends_note", "_x_error"):
+    for k in ("_xhs_error", "_trends_note", "_x_error", "_crawler_note"):
         if cov.get(k):
             print(f"  注意：{cov[k]}")
 
