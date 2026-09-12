@@ -36,6 +36,9 @@ ul{margin:.3rem 0 .3rem 1rem;padding:0;font-size:.84rem}
 a{color:var(--acc)}
 .saved{color:var(--ok);font-size:.74rem;opacity:0;transition:opacity .2s}
 .saved.show{opacity:1}
+.refs{font-size:.79rem;margin-top:.4rem;padding:.4rem .6rem;border:1px dashed var(--line);border-radius:6px}
+.refs b{display:block;font-weight:600;margin-bottom:.15rem}
+.refs .via{color:var(--mut)}
 .go{background:var(--ok);color:#fff;border-color:var(--ok);font-weight:600}
 .go:hover{color:#fff;filter:brightness(1.08)}
 .go:disabled{opacity:.45;cursor:not-allowed;filter:none}
@@ -106,6 +109,11 @@ function render(){
               :`<div class="core">⚠️ <b>未挖到核心增量</b> — 按规则本不该进清单</div>`}
       ${(R.angles||[]).length?'<ul>'+R.angles.map(a=>'<li>'+esc(a)+'</li>').join('')+'</ul>':''}
       ${R.gap?`<div class="gap">缺口：${esc(R.gap)}</div>`:''}
+      ${(R.repos||[]).length?'<div class="refs"><b>候选开源项目</b>'+R.repos.map(h=>
+          `<div><a href="https://github.com/${esc(h.repo)}" target="_blank">${esc(h.repo)}</a> ⭐${h.stars??'?'}${h.lic?' · '+esc(h.lic):''}${h.pushed?' · 提交 '+esc(h.pushed):''} <span class="via">（${esc(h.via||'')}）</span>${h.desc?'<br><span class="via">'+esc(h.desc)+'</span>':''}</div>`).join('')+'</div>':''}
+      ${(R.sources||[]).length?'<div class="refs"><b>原始报道</b>'+R.sources.map(u=>{
+          let host=u; try{host=new URL(u).hostname.replace(/^www\./,'');}catch(e){}
+          return `<div><a href="${esc(u)}" target="_blank">${esc(host)}</a></div>`;}).join('')+'</div>':''}
       <div class="acts">
         <button class="${d.decision==='write'?'on':''}"   onclick="decide('${d.id}','write')">写</button>
         <button class="${d.decision==='dig'?'on':''}"     onclick="decide('${d.id}','dig')">再挖</button>

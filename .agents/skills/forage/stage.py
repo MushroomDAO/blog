@@ -21,7 +21,10 @@ PER_SOURCE_CAP = 5  # 用户明确要求：任意单一渠道不超过 5 条，�
 # 小红书的定位是线索源：它提供的是「有这么个东西」，
 # 值不值得写还得回 GitHub/HF 查一手，但没有它就少了一个发现渠道。
 # 下面每个数字都要 <= PER_SOURCE_CAP，改的时候留意别超。
-QUOTA = {"GitHub": 4, "HuggingFace": 3, "小红书": 3}
+# 2026-09-12 加 daily-crawler（Codex 的 SME AI 日报，取当天 S1/S2）。总数 10 不变，
+# 从 HF 和小红书各让 1 个名额：HF trending 常混进 gpt2/MiniLM 这类老模型，
+# 小红书本身也是线索源，和 daily-crawler 性质相同。
+QUOTA = {"GitHub": 4, "HuggingFace": 2, "小红书": 2, "daily-crawler": 2}
 # FU-29：原来这里是硬断言，手滑把某个源的配额改到超过 PER_SOURCE_CAP 会让当天整条
 # forage 流水线在 import 阶段直接中止（无部分入库/去重）。改成自动 clamp + 打印警告：
 # 超限的源退回 PER_SOURCE_CAP，流水线继续跑，不会因为一个数字改错就全天颗粒无收。
@@ -81,6 +84,35 @@ def principles(text, lic):
     }
 
 
+def crawler_research(cr, P):
+    """daily-crawler 构想 → 评审台卡片。日报自己的判断照搬，但明确标成「构想，待核实」。"""
+    repos, sources = cr.get("repos") or [], cr.get("sources") or []
+    top = max(repos, key=lambda h: h["stars"]) if repos else {}
+    P = dict(P, 一手可查=bool(repos or sources))
+    if repos and sources:
+        gap = "日报是构想不是一手源。有原始报道和候选仓库，写之前读 README 确认仓库真在做这件事"
+    elif repos:
+        gap = "日报是构想不是一手源。只有候选仓库、没有原始报道：可写成项目拆解，不宜写成趋势判断"
+    elif sources:
+        gap = "日报是构想不是一手源。有原始报道、没找到对应开源项目：只能写成行业/产品观察"
+    else:
+        gap = "日报是构想不是一手源。既没有原始报道也没找到对应仓库——按规则不写，最多存档"
+    if cr.get("repo_search_failed") and not repos:
+        # 搜索本身挂了 ≠ 没有对应项目，别让卡片替我们下「没有」的结论
+        gap += "（注意：GitHub 仓库搜索这次失败了，「没找到仓库」未经确认）"
+    angles = [a for a in (
+        f"痛点：{cr['pain']}" if cr.get("pain") else "",
+        f"可开源组件：{cr['component']}" if cr.get("component") else "",
+        f"可收费服务：{cr['paid']}" if cr.get("paid") else "",
+        f"日报内容评级：{cr['fit']}" if cr.get("fit") else "",
+        f"为什么值得跟：{cr['why']}" if cr.get("why") else "",
+    ) if a]
+    return dict(stars=top.get("stars"), lic=top.get("lic") or "—", lang="", pushed=top.get("pushed", ""),
+                core=f"【日报构想·待核实】{cr['heading']}。{cr.get('signal', '')}",
+                angles=angles, gap=gap, principles=P, readme_head="", staged=True,
+                sources=sources, repos=repos, crawler_sid=cr.get("sid"))
+
+
 def main():
     rows = json.load(open(f"{OUT}/raw.json"))
     cov = json.load(open(f"{OUT}/coverage.json"))
@@ -97,7 +129,9 @@ def main():
                   for f in glob.glob(os.path.join(ROOT, "src", "content", "blog", "*.md"))}
 
     # 一手源优先：GitHub > HF > 小红书 / X
-    rank = lambda s: 3 if s == "GitHub" else 2 if s == "HuggingFace" else 1
+    # daily-crawler 和 HF 同档：它排在采集顺序最后，放在第 1 档会被 X/小红书先占满总数 10，
+    # 用户点名要处理的源一条都进不来
+    rank = lambda s: 3 if s == "GitHub" else 2 if s in ("HuggingFace", "daily-crawler") else 1
     rows.sort(key=lambda r: -rank(r["src"]))
 
     kept, per_src, run_ents = [], {}, set()
@@ -105,9 +139,13 @@ def main():
 
     for r in rows:
         txt = f"{r['title']} {r.get('desc','')}"
-        if vetoed(txt):
+        crawler = r["src"] == "daily-crawler"
+        # daily-crawler 是用户点名要处理的 SME 业务日报，领域否决（财务/营销/企业级）
+        # 天然会误伤它的主题；实体去重也不适用——它的标题全是 memory/policy/action
+        # 这类通用词，查 seen 会误杀，写进 seen 更会反过来误杀以后的真仓库。
+        if not crawler and vetoed(txt):
             drop["veto"] += 1; continue
-        ents = {e for e in entities(txt) if len(e) > 4}
+        ents = set() if crawler else {e for e in entities(txt) if len(e) > 4}
         if any(e in seen for e in ents):
             drop["seen"] += 1; continue
         if published_match(r["title"], blog_slugs):
@@ -143,6 +181,8 @@ def main():
         R = dict(stars=r.get("stars"), lic=lic if lic != "NONE" else "未声明",
                  lang="", pushed="", core="", angles=[], gap="",
                  principles=P, readme_head=readme[:900], staged=True)
+        if r["src"] == "daily-crawler":
+            R = crawler_research(r["crawler"], P)
         iid = hashlib.sha1(f"{r['src']}|{r['title']}".encode()).hexdigest()[:16]
         c.execute("""INSERT OR IGNORE INTO items
             (id,run_date,src,author,title,url,descr,entity,auto_score,hits,research,ai_note,created_at,updated_at)
@@ -151,7 +191,7 @@ def main():
              ",".join(sorted(entities(r["title"]))[:5]), 0, "[]",
              json.dumps(R, ensure_ascii=False), "", now, now))
         # strict：雷达播种也只认真实体，别把 X 抓来的垃圾标题里的大写词灌进 seen
-        for e in list(entities(r["title"], strict=True))[:5]:
+        for e in ([] if r["src"] == "daily-crawler" else list(entities(r["title"], strict=True))[:5]):
             c.execute("INSERT OR IGNORE INTO seen VALUES (?,?,?,?)", (e, now, "radar", r["title"][:60]))
     c.execute("INSERT OR REPLACE INTO seen VALUES (?,?,?,?)",
               ("__coverage__", now, "meta", json.dumps(cov, ensure_ascii=False)))

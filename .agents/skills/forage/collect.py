@@ -401,6 +401,7 @@ def main():
     rows += collect_xhs()
     rows += collect_x()
     rows += collect_trends()
+    rows += collect_daily_crawler()
 
     json.dump(rows, open(f"{OUT}/raw.json", "w"), ensure_ascii=False)
     cov["_total"] = len(rows)
@@ -413,7 +414,7 @@ def main():
             continue
         flag = "  ⚠️ 该源为 0" if v == 0 else ""
         print(f"  {k:<14} {v:>5}{flag}")
-    for k in ("_xhs_error", "_trends_note", "_x_error"):
+    for k in ("_xhs_error", "_trends_note", "_x_error", "_crawler_note"):
         if cov.get(k):
             print(f"  注意：{cov[k]}")
 

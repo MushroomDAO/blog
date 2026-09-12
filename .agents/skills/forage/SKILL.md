@@ -61,6 +61,7 @@ description: |
 | GitHub | Trending + 关键词搜索 + 仓库详情 | `agent-reach` → `gh` CLI |
 | X / Twitter | 时间线 + 关键词搜索 + Thread | `agent-reach` → twitter-cli |
 | HuggingFace | 新模型、trending 模型 | **agent-reach 不覆盖**，直接调 HF API：<br>`https://huggingface.co/api/models?sort=trendingScore&limit=50` |
+| daily-crawler | Codex 每天 8-9 点直推 main 的 SME AI 日报（`daily-crawler/YYYY-MM-DD.md`），取当天 S1/S2 | `gh api` 读 origin/main（不碰共享工作区）。**建议和信息来源，不是一手源**：采集时摘出原始报道链接 + 找候选开源项目（日报直链仓库 + 按组件名搜 GitHub，≥100 星且名称/简介命中 ≥2 个词），卡片「缺口」栏写明能写成什么类型。不做领域否决、不进 seen 实体去重（标题全是通用词）。补采某天：`collect.collect_daily_crawler("2026-09-10")` |
 
 小红书 cookie 失效时的表现：`xhs -v status` 返回 `code: -101 无登录信息`。
 **这时不要静默跳过**——在当天清单顶部写明「小红书源缺失，本清单只覆盖其余源」，
