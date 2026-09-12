@@ -19,6 +19,15 @@ export PATH="/Users/jason/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/
 # 手动跑：FORCE_RUN=1 ./.agents/skills/forage/run-daily.sh
 source ./scripts/require-owner.sh
 
+# 当天已经采集过就让路：白天手动跑过一次，21:10 的 cron 不再重扫一遍——
+# 小红书一天只扫一轮（用户硬约束），重跑还会清掉白天没判的条目重采一批。
+# 手动再跑：FORCE_RUN=1 ./.agents/skills/forage/run-daily.sh
+LAST_RUN_FILE="radar/.last-run"
+if [ "${FORCE_RUN:-}" != "1" ] && [ "$(cat "$LAST_RUN_FILE" 2>/dev/null)" = "$(date +%F)" ]; then
+  echo "=== $(date '+%F %T') 今天已经采集过（${LAST_RUN_FILE}），跳过。要再跑加 FORCE_RUN=1 ==="
+  exit 0
+fi
+
 SKILL=".agents/skills/forage"
 echo "=== $(date '+%F %T') forage 每日采集 ==="
 
@@ -41,4 +50,6 @@ else
   echo "  ⚠️ 评审台没起来，检查 LaunchAgent：launchctl list | grep forage"
 fi
 
+# 能走到这里，说明采集和入库都没有 exit 1——这时才记「今天已跑」
+date +%F > "$LAST_RUN_FILE"
 echo "✅ 完成 $(date '+%F %T')"
