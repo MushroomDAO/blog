@@ -66,11 +66,17 @@ function makeMatch(articleId, score, overrides = {}) {
 	};
 }
 
+const TEST_SESSION_SECRET = 'test-session-secret-do-not-use-in-prod';
+
 async function makeEnv(overrides = {}) {
 	return {
 		BLOG_SEARCH_KV: makeFakeKv(),
 		AI: makeFakeAi(),
 		VECTORIZE_INDEX: makeFakeVectorize(),
+		// FU-25：真实部署里这个 secret 总是配置好的（登录 Cookie 签名要用），默认给测试
+		// env 也配上，跟生产环境行为一致；专门测"secret 缺失"这个边角情况的用例会显式
+		// 覆盖成 undefined。
+		BLOG_SEARCH_SESSION_SECRET: TEST_SESSION_SECRET,
 		...overrides,
 	};
 }
@@ -416,7 +422,7 @@ test('缓存：命中的缓存值不是数组（脏数据）时，当作未命�
 });
 
 // 搜索使用统计（用户明确要求：想看上线后有多少人在用、都搜了什么）。
-test('搜索统计：新计算的结果会写一条 Analytics Engine 数据点（ip/query/结果数/非缓存命中）', async () => {
+test('搜索统计：新计算的结果会写一条 Analytics Engine 数据点（query/结果数/非缓存命中）', async () => {
 	const recordedPoints = [];
 	const matches = [makeMatch('article-a', 0.7)];
 	const env = await makeEnv({
@@ -426,9 +432,65 @@ test('搜索统计：新计算的结果会写一条 Analytics Engine 数据点�
 	const resp = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { ip: '30.30.30.30' }), env });
 	assert.equal(resp.status, 200);
 	assert.equal(recordedPoints.length, 1);
-	assert.deepEqual(recordedPoints[0].indexes, ['30.30.30.30']);
 	assert.deepEqual(recordedPoints[0].blobs, ['pagefind']);
 	assert.deepEqual(recordedPoints[0].doubles, [1, 0], '结果数=1，cacheHit 标记=0（未命中缓存）');
+});
+
+// FU-25 回归测试：index1 存的是 HMAC(secret, IP)，不是明文 IP。
+test('搜索统计（FU-25）：index1 不是明文 IP，是带密钥的哈希值', async () => {
+	const recordedPoints = [];
+	const env = await makeEnv({
+		VECTORIZE_INDEX: makeFakeVectorize({ matches: [makeMatch('article-a', 0.7)] }),
+		SEARCH_ANALYTICS: makeFakeAnalytics({ recordedPoints }),
+	});
+	await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { ip: '30.30.30.30' }), env });
+	assert.equal(recordedPoints.length, 1);
+	assert.equal(recordedPoints[0].indexes.length, 1);
+	assert.notEqual(recordedPoints[0].indexes[0], '30.30.30.30', 'index1 不应该是明文 IP');
+	assert.match(recordedPoints[0].indexes[0], /^[0-9a-f]{32}$/, 'index1 应该是 128 位十六进制哈希');
+});
+
+test('搜索统计（FU-25）：同一个 IP 每次都算出同一个哈希（uniqueIps 统计要靠这个才准）', async () => {
+	const recorded1 = [];
+	const env1 = await makeEnv({
+		VECTORIZE_INDEX: makeFakeVectorize({ matches: [makeMatch('article-a', 0.7)] }),
+		SEARCH_ANALYTICS: makeFakeAnalytics({ recordedPoints: recorded1 }),
+	});
+	await onRequestPost({ request: makeRequest({ query: 'first query' }, { ip: '40.40.40.40' }), env: env1 });
+
+	const recorded2 = [];
+	const env2 = await makeEnv({
+		VECTORIZE_INDEX: makeFakeVectorize({ matches: [makeMatch('article-a', 0.7)] }),
+		SEARCH_ANALYTICS: makeFakeAnalytics({ recordedPoints: recorded2 }),
+	});
+	await onRequestPost({ request: makeRequest({ query: 'second query' }, { ip: '40.40.40.40' }), env: env2 });
+
+	assert.equal(recorded1[0].indexes[0], recorded2[0].indexes[0], '同一个 IP + 同一把密钥，两次请求应该算出同一个哈希');
+});
+
+test('搜索统计（FU-25）：不同 IP 算出不同哈希', async () => {
+	const recordedPoints = [];
+	const env = await makeEnv({
+		VECTORIZE_INDEX: makeFakeVectorize({ matches: [makeMatch('article-a', 0.7)] }),
+		SEARCH_ANALYTICS: makeFakeAnalytics({ recordedPoints }),
+	});
+	await onRequestPost({ request: makeRequest({ query: 'q1' }, { ip: '41.41.41.41' }), env });
+	await onRequestPost({ request: makeRequest({ query: 'q2' }, { ip: '42.42.42.42' }), env });
+	assert.equal(recordedPoints.length, 2);
+	assert.notEqual(recordedPoints[0].indexes[0], recordedPoints[1].indexes[0]);
+});
+
+test('搜索统计（FU-25）：BLOG_SEARCH_SESSION_SECRET 未配置时，index1 是空字符串，不退化成弱哈希/明文', async () => {
+	const recordedPoints = [];
+	const env = await makeEnv({
+		VECTORIZE_INDEX: makeFakeVectorize({ matches: [makeMatch('article-a', 0.7)] }),
+		SEARCH_ANALYTICS: makeFakeAnalytics({ recordedPoints }),
+		BLOG_SEARCH_SESSION_SECRET: undefined,
+	});
+	const resp = await onRequestPost({ request: makeRequest({ query: 'Pagefind' }, { ip: '43.43.43.43' }), env });
+	assert.equal(resp.status, 200, 'secret 缺失不该影响搜索请求本身');
+	assert.equal(recordedPoints.length, 1);
+	assert.deepEqual(recordedPoints[0].indexes, ['']);
 });
 
 test('搜索统计：缓存命中也会写一条数据点，cacheHit 标记为 1', async () => {

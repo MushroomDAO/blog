@@ -88,6 +88,40 @@ async function sha256Hex(text) {
 		.join('');
 }
 
+// FU-25：搜索统计以前存的是**明文** IP。这道端点 2026-08-23 去掉登录门禁后（见文件头
+// 说明），触发这条日志写入的从"仅站长自己"变成"任何匿名访客"，隐私前提已经变了——
+// 用带密钥的 HMAC-SHA256 而不是裸哈希：IPv4 地址空间只有 43 亿种，裸 SHA-256(ip) 几秒
+// 内就能建完整张彩虹表反查回真实 IP，等于没保护；带密钥且密钥不落库/不随数据集本身
+// 泄漏的 HMAC，在密钥不泄漏的前提下才是真正不可逆的。
+// 密钥固定复用（不像"每日轮换的盐"那种方案）是刻意的：同一个真实访客每次都映射到
+// 同一个哈希值，count(DISTINCT index1) 算出的 uniqueIps 才有意义——按天轮换的盐会
+// 把跨天访问的同一个人拆成"好几个不同 IP"，把这个统计指标本身做坏。复用
+// BLOG_SEARCH_SESSION_SECRET（登录 Cookie 签名用的同一把密钥）而不是新开一个专用
+// secret，避免为这一个小功能单独引入一个还需要用户手动 wrangler secret put 的新
+// 密钥、阻塞这条 followup 的落地。
+// 密钥缺失（BLOG_SEARCH_SESSION_SECRET 未配置——这个端点不像 search-analytics.json.js
+// 那样把它列为必需绑定）时不退化成弱哈希：直接不写 index1（传空字符串），宁可这次
+// 抽样丢一个维度，也不要用一个可预测的固定字符串当 HMAC key，那样跟没加密钥等价。
+//
+// security round 2 review：不能只靠"消息格式碰巧不会撞"来保证这个用途跟
+// signSession()/verifySession()（同一把密钥签会话 Cookie）不会互相干扰——那两处的
+// payload 是 base64url（不含冒号），这里的消息前缀"search-analytics-ip:"总带冒号，
+// 今天两个消息空间确实不重叠，但这是编码细节上的巧合，不是结构性保证，以后随便一次
+// 编码改动就可能悄悄破坏它。改成显式派生一把专用子密钥（HMAC(secret, 固定的子密钥
+// 派生用常量) 算出子密钥，再用子密钥去 HMAC 真正的 IP）——这样两个用途从密钥层面
+// 就是隔开的，不依赖消息格式，不会因为以后改了某处的编码方式而悄悄产生跨用途碰撞。
+async function hashIp(secret, ip) {
+	if (!secret || !ip) return '';
+	const rootKey = await crypto.subtle.importKey('raw', new TextEncoder().encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+	const subkeyBytes = await crypto.subtle.sign('HMAC', rootKey, new TextEncoder().encode('search-analytics-ip-subkey-v1'));
+	const subkey = await crypto.subtle.importKey('raw', subkeyBytes, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+	const sig = await crypto.subtle.sign('HMAC', subkey, new TextEncoder().encode(ip));
+	return Array.from(new Uint8Array(sig))
+		.map((b) => b.toString(16).padStart(2, '0'))
+		.join('')
+		.slice(0, 32); // 128 bit，个人博客量级的访客数远不足以在这个长度上产生碰撞，比完整 64 字节紧凑
+}
+
 // 搜索使用统计（用户明确要求：想看上线后有多少人在用、都搜了什么）。用 Workers
 // Analytics Engine 而不是复用 BLOG_SEARCH_KV：这个 KV namespace 已经同时扛着登录
 // 限速/搜索限速/缓存/manifest 四种用途（见 FU-18），事件日志这种「只写不太读、
@@ -97,14 +131,18 @@ async function sha256Hex(text) {
 // 用哈希"不记录用户原始查询原文"的设计不是同一个诉求：那是缓存层面尽量少存不必要的
 // 明文，这里是站长本人明确要求要能看到"搜了什么"这个可读的运营数据，Analytics
 // Engine 数据集本身不对外公开、只有账号持有者能查（见 functions/api/analytics.json.js
-// 的读取端）。
-// writeDataPoint 是同步调用（Cloudflare 在后台异步落盘，不阻塞这次响应），binding
-// 缺失时直接抛异常，包一层 try/catch 让统计功能本身的故障/未配置永远不影响搜索
-// 请求本身——这是运营可视化数据，不是安全控制，没有必要 fail-closed。
-function logSearchEvent(env, { ip, query, resultCount, cacheHit }) {
+// 的读取端）。query 本身不受 FU-25 影响——那条 followup 的隐私杠杆分析明确指出"谁"
+// （IP）才是能精确定位到具体某个人的维度，查询词本身的风险由站长自己权衡过、要保留
+// 可读性，这里不改。
+// writeDataPoint 是同步调用（Cloudflare 在后台异步落盘，不阻塞这次响应）；这里额外
+// await 一次 HMAC 计算（亚毫秒级），比 writeDataPoint 本身晚不了多少。binding 缺失/
+// HMAC 计算出错时直接抛异常，包一层 try/catch 让统计功能本身的故障/未配置永远不影响
+// 搜索请求本身——这是运营可视化数据，不是安全控制，没有必要 fail-closed。
+async function logSearchEvent(env, { ip, query, resultCount, cacheHit }) {
 	try {
+		const hashedIp = await hashIp(env.BLOG_SEARCH_SESSION_SECRET, ip);
 		env.SEARCH_ANALYTICS?.writeDataPoint({
-			indexes: [ip], // index1：按 IP 分组/抽样用
+			indexes: [hashedIp], // index1：HMAC(密钥, IP) 而不是明文 IP（FU-25），按访客分组/抽样用
 			blobs: [query], // blob1：归一化后的查询词原文
 			doubles: [resultCount, cacheHit ? 1 : 0], // double1：返回结果数，double2：是否命中缓存
 		});
@@ -212,7 +250,13 @@ export async function onRequestPost(context) {
 			// .catch 的一支，.map 一抛异常会把整个合并搜索打死，连 Pagefind 那半
 			// 本来能成功的结果都一起没了。非数组就当作没命中，走下面重新计算。
 			if (Array.isArray(parsed)) {
-				logSearchEvent(env, { ip, query, resultCount: parsed.length, cacheHit: true });
+				// logSearchEvent 现在是 async（FU-25 加了一次 HMAC 计算）——必须 await 完
+				// 再返回响应，否则 hashIp 里的 crypto.subtle.sign 这个 Promise 可能在
+				// Response 已经发出去之后才继续执行，Cloudflare Workers 不保证这种脱离
+				// 请求生命周期的悬空 Promise 会被跑完（跟 writeDataPoint 本身"同步调用，
+				// 后台异步落盘"不是一回事——那是 Cloudflare 平台对这一个 API 的保证，不
+				// 延伸到我们自己另起的 HMAC Promise）。
+				await logSearchEvent(env, { ip, query, resultCount: parsed.length, cacheHit: true });
 				return jsonResponse({ results: parsed }, 200);
 			}
 		}
@@ -278,7 +322,7 @@ export async function onRequestPost(context) {
 		// 忽略
 	}
 
-	logSearchEvent(env, { ip, query, resultCount: results.length, cacheHit: false });
+	await logSearchEvent(env, { ip, query, resultCount: results.length, cacheHit: false });
 	return jsonResponse({ results }, 200);
 }
 

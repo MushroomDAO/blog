@@ -14,9 +14,23 @@
  * 产生的数据，经由公开无认证端点泄露给所有人。这个端点单独存在、且显式
  * `cache-control: private, no-store`（从不进任何共享缓存），未登录一律 401，
  * 把"公开可缓存的流量看板"和"登录用户才能看的搜索统计"彻底分开，不共用同一个
- * 缓存条目。
+ * 缓存条目。这个端点能读到的是登录用户能查到的搜索词 + FU-25 之后带密钥哈希过的
+ * 访客标识（不再是原始 IP）。
+ *
+ * FU-28：按会话限速（`SESSION_RATE_LIMIT`，见下方）——每次成功请求会打 3 次上游
+ * Analytics Engine SQL API，用站长自己的 token。这道限速本来是 PR#61 之前挂在
+ * `/api/search` 上的 `SESSION_RATE_LIMIT`，去掉登录门禁时一起删掉了；PR#61 把登录
+ * 系统重新定位成"专门给这个端点 + 未来 AI 对话把关"，这个限速器搬到这里是合理的
+ * 下一步，不再是"没有归宿"。按会话（登录 Cookie 值的哈希，不是明文）而不是按 IP：
+ * 这个端点后面是真实的上游付费/限额 API 调用，按会话限更贴近"同一个登录会话别把
+ * 上游配额打爆"这个诉求，也不会因为站长在家里/公司/手机热点几个 IP 之间切换而
+ * 各自重新计数。
  *
  * 需要的环境变量：
+ *   BLOG_SEARCH_KV      可选（FU-28 起）——按会话限速的计数器用，跟 search-auth.js
+ *                       的登录限速、search.js 的查询缓存共用同一个 namespace。缺失
+ *                       时跳过限速（不是 fail-closed 503 整个端点）——见下方
+ *                       onRequestGet 里的说明，登录门禁本身不依赖它。
  *   CF_ANALYTICS_ENGINE_TOKEN  可选。专门给 Analytics Engine SQL API 用的 token；
  *                       没配就退化用 CF_ANALYTICS_TOKEN（见下）。
  *   CF_ANALYTICS_TOKEN  必需（若上面那个没配）——**不确定**现有权限范围是否覆盖
@@ -36,9 +50,21 @@
  */
 
 import { COOKIE_NAME, getCookie, verifySession } from '../_lib/auth.js';
+import { checkAndIncrement } from '../_lib/rate-limit.js';
 
 const DEFAULT_ACCOUNT_TAG = '7bf23342f21baa5ebfc7bc7b74f5a1f2';
 const SEARCH_DATASET = 'blog_search_events';
+// FU-28：见文件头注释。5 分钟 30 次跟 /api/search 原来的 IP 限速数值一致——这个端点
+// 后面是 3 次真实上游调用，不是一次，30 次/5 分钟已经足够宽松地覆盖"正常人反复刷新
+// 统计页"的场景，同时给"上游配额别被一个会话打爆"这个诉求一个明确上限。
+const SESSION_RATE_LIMIT = { prefix: 'searchstats:', windowSeconds: 5 * 60, maxAttempts: 30 };
+
+async function sha256Hex(text) {
+	const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+	return Array.from(new Uint8Array(digest))
+		.map((b) => b.toString(16).padStart(2, '0'))
+		.join('');
+}
 
 async function fetchSearchStats(token, accountTag) {
 	if (!token) return { error: 'not_configured' };
@@ -122,11 +148,28 @@ export async function onRequestGet(context) {
 	}
 
 	// 跟 /api/search 同一套登录门禁：只有能查语义检索的人，才能看这个功能自己的
-	// 使用统计——不是"公开流量看板"的一部分，见文件头注释。
+	// 使用统计——不是"公开流量看板"的一部分，见文件头注释。verifySession 只是纯
+	// HMAC 验签，不依赖 KV，登录门禁本身在 KV 出问题时也不受影响。
 	const cookieValue = getCookie(request, COOKIE_NAME);
 	const session = await verifySession(env.BLOG_SEARCH_SESSION_SECRET, cookieValue);
 	if (!session.valid) {
 		return json({ error: 'unauthorized' }, 401);
+	}
+
+	// FU-28：按会话限速，见文件头注释 + SESSION_RATE_LIMIT 常量处的说明。
+	// round 3 review 指出：这个仓库真实发生过 KV binding 被 `wrangler pages deploy`
+	// 悄悄冲掉的事故（见 PR #50、docs/agent/progress.md T1.3.6 证据段落，登录接口
+	// 一度 503）。如果把 BLOG_SEARCH_KV 缺失也做成整个端点 fail-closed 503，会丢掉
+	// 一个原本有价值的特性：持有效登录 Cookie 的站长（verifySession 纯 HMAC 验签，
+	// 不依赖 KV）本来在 KV 出问题时仍能打开这个端点，正好能帮站长诊断"是不是 KV
+	// 又被冲掉了"。限速是防滥用的纵深防御，不是这个端点的核心安全控制（核心控制
+	// 是上面的登录门禁）——KV 缺失时跳过限速直接放行，比把整个端点也搭进去更划算。
+	if (env.BLOG_SEARCH_KV) {
+		const sessionHash = await sha256Hex(cookieValue);
+		const limit = await checkAndIncrement(env.BLOG_SEARCH_KV, sessionHash, SESSION_RATE_LIMIT);
+		if (!limit.allowed) {
+			return json({ error: 'too many requests, try again later' }, 429);
+		}
 	}
 
 	const token = env.CF_ANALYTICS_ENGINE_TOKEN || env.CF_ANALYTICS_TOKEN;
