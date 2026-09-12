@@ -87,7 +87,8 @@ def principles(text, lic):
 def crawler_research(cr, P):
     """daily-crawler 构想 → 评审台卡片。日报自己的判断照搬，但明确标成「构想，待核实」。"""
     repos, sources = cr.get("repos") or [], cr.get("sources") or []
-    top = max(repos, key=lambda h: h["stars"]) if repos else {}
+    # 日报直链但没取到详情的仓库 stars=None，混进整数比大小会 TypeError，整晚入库跟着中断
+    top = max(repos, key=lambda h: h["stars"] or -1) if repos else {}
     P = dict(P, 一手可查=bool(repos or sources))
     if repos and sources:
         gap = "日报是构想不是一手源。有原始报道和候选仓库，写之前读 README 确认仓库真在做这件事"

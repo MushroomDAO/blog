@@ -87,6 +87,11 @@ class ParseDailyCrawler(unittest.TestCase):
         self.assertIn("Sept 9", s1["signal"])
         self.assertNotIn("**", s1["signal"])
 
+    def test_desc_has_no_dangling_dash_without_pain_column(self):
+        # 9/10 那种表头没有 pain 列：desc 不能以「 — 」结尾
+        rows = collect.parse_daily_crawler(BRIEF_4COL, "2026-09-10")
+        self.assertFalse(rows[0]["desc"].rstrip().endswith("—"), rows[0]["desc"])
+
     def test_heading_variants_and_backtick_component_fallback(self):
         rows = collect.parse_daily_crawler(BRIEF_NO_TABLE, "2026-09-01")
         self.assertEqual([r["crawler"]["sid"] for r in rows], ["S1", "S2"])
@@ -121,6 +126,17 @@ class CrawlerCard(unittest.TestCase):
     def test_failed_search_is_not_reported_as_nothing_found(self):
         self.assertIn("未经确认", self.card(sources=["https://x"], repo_search_failed=True)["gap"])
         self.assertNotIn("未经确认", self.card(sources=["https://x"])["gap"])
+
+    def test_unresolved_direct_repo_does_not_crash(self):
+        # 日报直链的仓库没取到详情时 stars=None；和整数混在一起比大小会 TypeError，
+        # stage.main() 不兜底 → 整晚入库中断（#78 评审 F1）
+        repos = [dict(repo="gone/repo", stars=None, lic="", pushed="", desc="", via="日报直链"),
+                 dict(repo="a/b", stars=500, lic="MIT", pushed="2026-09-01", desc="", via="搜")]
+        card = self.card(repos=repos)
+        self.assertEqual(card["stars"], 500)
+        self.assertEqual(card["lic"], "MIT")
+        only_none = self.card(repos=repos[:1])
+        self.assertIsNone(only_none["stars"])
 
     def test_card_marks_idea_as_unverified(self):
         self.assertTrue(self.card(heading="Agent Egress Policy")["core"].startswith("【日报构想·待核实】"))
