@@ -1,0 +1,14 @@
+{
+  "title": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI",
+  "author": "Mycelium",
+  "digest": "hsj576/virtual-ai-infra-team 不是多 agent 角色扮演，而是一个给本地大模型做「自动测速",
+  "mediaId": "prCUE631thH1cmNLi42prCIV6hxtZTC9SDlO7lvNCOuoNg7TUeoSN4oHqN1NHu-Z",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/hsj576/virtual-ai-infra-team",
+    "huggingface.co/z-lab/qwen3.8-27b-dflash2",
+    "huggingface.co/mlx-community/qwen3.8-27b-4bit",
+    "github.com/z-lab/dflash"
+  ],
+  "publishedAt": "2026-09-11T16:30:16.546Z"
+}

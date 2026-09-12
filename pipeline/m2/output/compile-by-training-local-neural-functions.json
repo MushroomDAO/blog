@@ -1,0 +1,11 @@
+{
+  "title": "用「编译」替代反复调大模型：Compile by Training 如何把 NLP 任务固化成本地神经函数",
+  "author": "Mycelium",
+  "digest": "用自然语言描述一次任务，让教师模型在编译期生成样例并训练小适配器，之后永远在本地跑——成本、延迟、供应商依赖一次性切断。",
+  "mediaId": "prCUE631thH1cmNLi42prCCbadbsJZZsfLMFCKxK_rzVbnpLCO4s-XywENgOoOEk",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/papers/2609.04199"
+  ],
+  "publishedAt": "2026-09-10T05:05:43.586Z"
+}

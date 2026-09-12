@@ -498,5 +498,80 @@
     "mediaId": "prCUE631thH1cmNLi42prB6HrWWBPXSc0Vmm3CMIl334MAI7RiFLeXRWr8kZWddQ",
     "title": "同一个 27B，换条路跑：HauhauCS 的 GGUF 版用 FastMTP 投机解码把生成速度拉到 3 倍",
     "publishedAt": "2026-09-09T16:48:41.983Z"
+  },
+  "obsidian-skills-agent-vault-local-memory": {
+    "mediaId": "prCUE631thH1cmNLi42prBrNeujglW7VYGRSEh8pk6UZYbILyvJrxOmnZ5E4DgHA",
+    "title": "obsidian-skills 上手：让 Claude Code 把 Obsidian 库当本地记忆层，Obsidian CEO 亲自写的 6 个 skill",
+    "publishedAt": "2026-09-11T02:34:55.898Z"
+  },
+  "nex-n2-5-mini-agentic-moe-mac-local-memory-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prOQbbOkIh-DBSfHdvtN91LP0C8bdiiMixxsv0AmNpEQd",
+    "title": "Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？",
+    "publishedAt": "2026-09-11T02:41:10.841Z"
+  },
+  "yue2-3b-open-source-song-generation-editable-score": {
+    "mediaId": "prCUE631thH1cmNLi42prOZS8Dhl6-LFDdoQtdMQIZGISVkoi_z_RF6VX8P4-cEY",
+    "title": "YuE2-3B：先写谱再唱歌的开源音乐模型，和 ACE-Step 1.5 差在哪",
+    "publishedAt": "2026-09-11T02:53:06.265Z"
+  },
+  "krea-2-turbo-open-weight-text-to-image-license-hardware": {
+    "mediaId": "prCUE631thH1cmNLi42prEidapmERI3l0uFfFR9ju41xYnThnCcZEfuUnvmwj_OX",
+    "title": "Krea 2 Turbo 值不值得本地跑？12.8B 开放权重文生图：8 步出图、年收入百万美元以下可商用",
+    "publishedAt": "2026-09-11T02:59:30.042Z"
+  },
+  "pilot-protocol-mcp-agent-p2p-overlay-network": {
+    "mediaId": "prCUE631thH1cmNLi42prJGsXGd8auUpoBYsiEkZ-LCIPOzv7jbUrX4gGov5D9Se",
+    "title": "Pilot Protocol 拆解：MCP 给 Agent 工具，它想给 Agent 同伴——但 435 个「专家」都跑在同一台机器上",
+    "publishedAt": "2026-09-11T03:07:16.222Z"
+  },
+  "mcp-rag-server-local-rag-claude-code-blueprint": {
+    "mediaId": "prCUE631thH1cmNLi42prCQ7iMkLM0TOUV9MT-eNm3-vaMmT-kfTbIDcPSQeicrP",
+    "title": "mcp-rag-server 拆解：830 行 Python 把文档库做成 Claude Code 能调用的检索工具",
+    "publishedAt": "2026-09-11T03:13:28.013Z"
+  },
+  "virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac": {
+    "mediaId": "prCUE631thH1cmNLi42prCIV6hxtZTC9SDlO7lvNCOuoNg7TUeoSN4oHqN1NHu-Z",
+    "title": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI",
+    "publishedAt": "2026-09-11T16:30:16.546Z"
+  },
+  "k2-horizon-mova-36b-a4b-mac-local-memory-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prJBydphepfsYLJkSuOqaLda1W2pjSK85wQ00yeSzaaGS",
+    "title": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？",
+    "publishedAt": "2026-09-11T16:44:21.323Z"
+  },
+  "malecns-fruit-fly-connectome-games-minecraft-driving": {
+    "mediaId": "prCUE631thH1cmNLi42prEYixudnqKpGfSWW24nCW-2ISGg4lxvdOGqlsUWQfhVs",
+    "title": "果蝇大脑被网友塞进《我的世界》和驾校：16.6 万神经元的连接组，离「上传意识」还差多远？",
+    "publishedAt": "2026-09-11T16:46:35.582Z"
+  },
+  "eccv-2026-best-paper-heat-kernel-textures-uv-free": {
+    "mediaId": "prCUE631thH1cmNLi42prDXa3iY0fQf0vn2UFZ2t6BuQ4riayZVrpFNQgJdKfsqz",
+    "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
+    "publishedAt": "2026-09-11T16:48:03.393Z"
+  },
+  "parallelhue-speculative-decoding-token-provenance-visualizer": {
+    "mediaId": "prCUE631thH1cmNLi42prPU6Pq2ko5u_ZkMVZ9fc33hKxT6RHtARaZEcTT2LeDyJ",
+    "title": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具",
+    "publishedAt": "2026-09-11T16:49:49.858Z"
+  },
+  "qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prOvj-ShlYK1x-JIwg8F_tAKko3kSJju7FjfTbh91hASk",
+    "title": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上",
+    "publishedAt": "2026-09-11T16:54:42.523Z"
+  },
+  "krill-mac-mlx-llm-runtime-coding-agent": {
+    "mediaId": "prCUE631thH1cmNLi42prM7VQhL0-2Nej9f4UNtBe-zZN1Lu_725Ee1-ou9akWgw",
+    "title": "Krill 拆解：一个 Swift 二进制同时当本地推理引擎和编程 Agent，「比 Ollama 快 1.57 倍」要打几折？",
+    "publishedAt": "2026-09-11T16:57:37.866Z"
+  },
+  "jarvis-py-local-voice-assistant-privacy-teardown": {
+    "mediaId": "prCUE631thH1cmNLi42prCz3Sov7kcGH6JhyjWC3Mh-oMSnqMjC_kem7-0aYpicd",
+    "title": "jarvis-py 拆解：标着「离线」的 Python 语音助手，联网时默认把录音明文发给 Google",
+    "publishedAt": "2026-09-11T17:06:19.435Z"
+  },
+  "all-minilm-l6-v2-default-embedding-chinese-limits-alternatives": {
+    "mediaId": "prCUE631thH1cmNLi42prCbeRgHPh6OnVwZQ0lg7LhDuaIhTVoiWJUDTUvY-NVBc",
+    "title": "all-MiniLM-L6-v2 凭什么五年后还是 HF 下载第一？一个 2021 年的默认嵌入模型、它的中文盲区和 2026 年的替换清单",
+    "publishedAt": "2026-09-11T17:33:23.496Z"
   }
 }

@@ -1,0 +1,24 @@
+{
+  "title": "all-MiniLM-L6-v2 凭什么五年后还是 HF 下载第一？一个 2021 年的默认嵌入模型、它的中文盲区和 2026 年的替换清单",
+  "author": "Mycelium",
+  "digest": "all-MiniLM-L6-v2 是 2021 年 8 月上传的 2270 万参数英文嵌入模型，近 30 天下载 2.5",
+  "mediaId": "prCUE631thH1cmNLi42prCbeRgHPh6OnVwZQ0lg7LhDuaIhTVoiWJUDTUvY-NVBc",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/sentence-transformers/all-minilm-l6-v2",
+    "huggingface.co/api/models",
+    "huggingface.co/docs/hub",
+    "github.com/huggingface/huggingface.js",
+    "github.com/chroma-core/chroma",
+    "github.com/maartengr/bertopic",
+    "github.com/maartengr/keybert",
+    "github.com/huggingface/transformers.js",
+    "github.com/langchain-ai/langchain",
+    "huggingface.co/baai/bge-small-zh-v1.5",
+    "huggingface.co/intfloat/multilingual-e5-small",
+    "huggingface.co/qwen/qwen3-embedding-0.6b",
+    "huggingface.co/baai/bge-m3",
+    "huggingface.co/jinaai/jina-embeddings-v5-text-nano"
+  ],
+  "publishedAt": "2026-09-11T17:33:23.496Z"
+}

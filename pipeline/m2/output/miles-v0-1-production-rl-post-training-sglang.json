@@ -1,0 +1,14 @@
+{
+  "title": "Miles v0.1：SGLang 团队填平学术 RL 和生产系统之间的鸿沟",
+  "author": "Mycelium",
+  "digest": "SGLang 团队发布 Miles v0.1，生产级 LLM/VLM RL 后训练框架。全异步 RL、P2P RDMA ",
+  "mediaId": "prCUE631thH1cmNLi42prPnaqS2SYn_5BgNGy0D6DHaTyzW92XejuNWDMKNtlvBB",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/radixark/miles",
+    "huggingface.co/papers/2609.08368",
+    "github.com/radixark/miles_diffusion",
+    "github.com/thudm/slime"
+  ],
+  "publishedAt": "2026-09-12T00:46:18.529Z"
+}

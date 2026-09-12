@@ -1,0 +1,13 @@
+{
+  "title": "mcp-rag-server 拆解：830 行 Python 把文档库做成 Claude Code 能调用的检索工具",
+  "author": "Mycelium",
+  "digest": "MMC1410001/mcp-rag-server 是一个 0 star、MIT 协议的最小 MCP + RAG 实现：",
+  "mediaId": "prCUE631thH1cmNLi42prCQ7iMkLM0TOUV9MT-eNm3-vaMmT-kfTbIDcPSQeicrP",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/mmc1410001/mcp-rag-server",
+    "github.com/wkentaro/gdown",
+    "huggingface.co/sentence-transformers/all-minilm-l6-v2"
+  ],
+  "publishedAt": "2026-09-11T03:13:28.013Z"
+}

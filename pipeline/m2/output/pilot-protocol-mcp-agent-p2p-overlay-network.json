@@ -1,0 +1,15 @@
+{
+  "title": "Pilot Protocol 拆解：MCP 给 Agent 工具，它想给 Agent 同伴——但 435 个「专家」都跑在同一台机器上",
+  "author": "Mycelium",
+  "digest": "读完 pilot-mcp 和 Pilot Protocol 主仓库的代码后的独立核实：P2P 加密隧道和 NAT 穿透是",
+  "mediaId": "prCUE631thH1cmNLi42prJGsXGd8auUpoBYsiEkZ-LCIPOzv7jbUrX4gGov5D9Se",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/pilot-protocol/pilot-mcp",
+    "github.com/pilot-protocol/pilotprotocol",
+    "github.com/pilot-protocol/rendezvous",
+    "github.com/pilot-protocol/trustedagents",
+    "github.com/pilot-protocol/wallet"
+  ],
+  "publishedAt": "2026-09-11T03:07:16.222Z"
+}

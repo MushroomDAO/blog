@@ -1,0 +1,22 @@
+{
+  "title": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？",
+  "author": "Mycelium",
+  "digest": "K2-Horizon-MoVA-36B-A4B 是 MBZUAI 基础模型研究院（IFM）9 月初开源的 Apache-",
+  "mediaId": "prCUE631thH1cmNLi42prJBydphepfsYLJkSuOqaLda1W2pjSK85wQ00yeSzaaGS",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/ifm/k2-horizon-mova-36b-a4b",
+    "huggingface.co/ifm/k2-horizon-mova-36b-a4b-gguf",
+    "huggingface.co/llm360/k2",
+    "huggingface.co/ifm/k2",
+    "huggingface.co/api/models",
+    "huggingface.co/ifm/k2-horizon-32b",
+    "github.com/mbzuai-ifm/llama.cpp",
+    "github.com/ggml-org/llama.cpp",
+    "huggingface.co/nani-nithin/k2-horizon-mova-36b-a4b-gguf",
+    "huggingface.co/abenzerps/k2-horizon-mova-36b-a4b-mlx-4bit",
+    "huggingface.co/mlx-community/k2-horizon-mova-36b-a4b-oq4e",
+    "huggingface.co/datasets/ifm"
+  ],
+  "publishedAt": "2026-09-11T16:44:21.323Z"
+}

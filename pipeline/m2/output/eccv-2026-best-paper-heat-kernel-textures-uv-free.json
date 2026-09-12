@@ -1,0 +1,14 @@
+{
+  "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
+  "author": "Mycelium",
+  "digest": "ECCV 2026 最佳论文颁给帝国理工的 HKTex：用约 4.8k 个贴在网格表面的各向异性热核取代 UV 贴图，3",
+  "mediaId": "prCUE631thH1cmNLi42prDXa3iY0fQf0vn2UFZ2t6BuQ4riayZVrpFNQgJdKfsqz",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/circle-group/hktex",
+    "github.com/circle-group/digeo",
+    "github.com/facebookresearch/large-sparse-reconstruction-model",
+    "huggingface.co/facebook/large-sparse-reconstruction-model"
+  ],
+  "publishedAt": "2026-09-11T16:48:03.393Z"
+}
