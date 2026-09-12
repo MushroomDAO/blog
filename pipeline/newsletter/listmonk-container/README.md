@@ -13,7 +13,7 @@
 
 ```bash
 cd pipeline/newsletter/listmonk-container
-npm install
+pnpm install   # package.json 锁定 pnpm@10.15.1，全局 pnpm 会自动切换；别用 npm（只有 pnpm-lock.yaml）
 
 # 改 wrangler.jsonc 里的 vars.PGHOST 为你的 Neon host
 # （PGUSER/PGDATABASE 如果 Neon 给的不是 "listmonk"，也要改）
@@ -26,8 +26,8 @@ npx wrangler secret put LISTMONK_ADMIN_PASSWORD
 # 或者直接用 psql 连 Neon 跑 listmonk 仓库里的 schema.sql：
 #   psql "$NEON_CONNECTION_STRING" -f ~/Dev/tools/listmonk/schema.sql
 
-npm run dev     # 本地验证 wrangler.jsonc/Container 配置能跑起来
-npm run deploy  # 部署到 Cloudflare
+pnpm run dev     # 本地验证 wrangler.jsonc/Container 配置能跑起来
+pnpm run deploy  # 部署到 Cloudflare
 ```
 
 ## 验证清单（对应 docs/NEWSLETTER_SUBSCRIPTION_PROPOSAL.md 任务 #7/#8）
