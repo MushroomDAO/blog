@@ -3,7 +3,9 @@ name: blog-publisher
 description: |
   Publish bilingual Astro blog posts for blog.mushroom.cv and create WeChat Official Account drafts.
 
-  Trigger when the user says: 发布, 发布文章, 发布blog, 发布公众号, publish blog, create WeChat draft.
+  Trigger when the user says: 发布文章, 发布blog, publish blog.
+
+  Do NOT use for "发布公众号" / "发微信" / "推送公众号" — those route to the wechat-publisher skill (小宝宝 account, default for this repo).
 
   Use for:
   - turning user-provided notes, links, README summaries, or markdown into a blog post
@@ -41,13 +43,12 @@ Project paths:
 ## Trigger Words
 
 Use this skill immediately when the user says any of:
-- `发布`
 - `发布文章`
 - `发布blog`
-- `发布公众号`
 - `发布：文件路径.md`
 - `publish blog`
-- `create WeChat draft`
+
+Do NOT trigger on `发布公众号` / `发微信` / `推送公众号` / `create WeChat draft` — those go to the `wechat-publisher` skill instead (小宝宝 account, this repo's default for WeChat).
 
 ## Required Output
 

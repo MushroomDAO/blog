@@ -81,7 +81,10 @@ pnpm preview          # 预览构建结果
 
 ### 发布触发词（AI Agent）
 
-当用户说"发布文章"、"发布blog"、"发布公众号"时，读取并执行 `.agents/skills/blog-publisher/SKILL.md` 中的标准流程。
+- 用户说"发布公众号"、"公众号发布"、"发微信"、"推送公众号"时 → 读取并执行 `.agents/skills/wechat-publisher/SKILL.md`（**默认目标：小宝宝公众号**，仅 M2，禁止 blog 部署，禁止科技主题/banner）。
+- 用户说"发布文章"、"发布blog"时 → 读取并执行 `.agents/skills/blog-publisher/SKILL.md`（mushroom blog，M1，仅在用户明确要求时才附带创建 WeChat 草稿）。
+
+**本仓库默认行为**：微信公众号相关发布一律默认发给小宝宝（xiaobaobao），无需用户每次显式指定 `BLOG_USER=xiaobaobao`；只有用户明确说"发到 mushroom 公众号"或类似措辞时才切换账号。
 
 ## Key Files
 
