@@ -29,6 +29,7 @@ This directory turns daily research into a product-and-content pipeline:
 - [2026-09-11](./2026-09-11.md) — Embedded Agent Stores, Know-Your-Agent trust, WebMCP business capabilities, human-agent control planes
 - [2026-09-12](./2026-09-12.md) — Agent egress policy, AI capacity unlock, CowAgent multi-channel teams, work-in-place Excel agents
 - [2026-09-13](./2026-09-13.md) — Voice-to-record frontline capture, local AI appliances, shadow-agent inventory, deterministic agent flows
+- [2026-09-14](./2026-09-14.md) — Manufacturing FDE, AI Kaizen project funnels, production-trace replay eval, AI-native office workbench
 
 ## Standard Review Lens
 
