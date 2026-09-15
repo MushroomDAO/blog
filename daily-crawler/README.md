@@ -30,6 +30,7 @@ This directory turns daily research into a product-and-content pipeline:
 - [2026-09-12](./2026-09-12.md) — Agent egress policy, AI capacity unlock, CowAgent multi-channel teams, work-in-place Excel agents
 - [2026-09-13](./2026-09-13.md) — Voice-to-record frontline capture, local AI appliances, shadow-agent inventory, deterministic agent flows
 - [2026-09-14](./2026-09-14.md) — Manufacturing FDE, AI Kaizen project funnels, production-trace replay eval, AI-native office workbench
+- [2026-09-15](./2026-09-15.md) — Vertical Agent Packs, finance connectivity fabric, open-source AI coworker workspaces, desktop software capability bridges, OPC AI teams
 
 ## Standard Review Lens
 
