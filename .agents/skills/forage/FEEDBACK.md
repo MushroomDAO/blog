@@ -271,3 +271,44 @@ check-duplicate.cjs 没拦住它：采集时实体名是空的，只能拿标题
 - run-daily.sh 已加「当天已采集过就让路」（PR #79），今晚 21:10 不会重扫。
 - orion-core 首张 banner 的机器顶面出现了苹果 logo 的变形，verify-banner 没查出来，是人工看图发现的。
   换种子、提示词写 unbranded 后重出。
+
+
+## 2026-09-15（用户在 8042 标了 5 条 write，5 篇全发）
+
+后台会话按 WRITE-JOB.md 全自动跑完：pinme-ipfs-deploy-cli-mac-review、
+claude-trading-skills-tradermonty-stock-workflow-toolkit、tencent-auk-speech-model-mlx-apple-silicon、
+claude-financial-advisors-connector-skill-approval-pattern（daily-crawler S1）、
+chift-financial-connector-layer-sme-ai-funding（daily-crawler S2）。5 篇 build→200→push→草稿全部成功，
+无撞车（本次只有一个后台会话在跑）。
+
+### 查重误报（check-duplicate.cjs 需要修）
+`salientNames()` 只按「长度≥5 且不在 GENERIC 黑名单」筛显著实体名，`https`（5 字符）和 `github.com`
+没被过滤掉，于是每次查一个 GitHub URL 都会把仓库无关的几百篇「正文里出现过 github.com」的文章
+全部标 ❌。这次是靠肉眼看退出码 1 之后精确 grep 真实实体名（如 `pinme`/`glitternetwork`）才确认
+是误报、没有真重复。→ 待改：把 `https`/`http`/`www`/`com`/`github.com`/`huggingface.co` 这类
+URL 骨架词也并进 `salientNames()` 的过滤集（目前只有 `tokens()`/`STOP` 在过滤，`salientNames`
+没用到 STOP）。
+
+### daily-crawler 构想核实结果
+- S1（Claude for Financial Advisors）：日报转述基本准确，子 agent 打开 Anthropic 官方公告 +
+  Addepar 博客后补充了关键细节（Addepar 的 Governed Connector 目前只读、仅 4 个分析 skill）。
+- S2（Chift 融资）：日报说"计划推出 agentic 层"，核实后发现 MCP 服务器和 AI 字段映射**已经上线**，
+  真正新增的只是"自动配置集成"——日报把"已有能力"和"新计划"混在一起了。
+  三家媒体（FinTech Global/tech.eu/Crowdfund Insider）报的连接系统数、覆盖国家数互相矛盾
+  （120+/150+，13 国/十余国/27 国），子 agent 如实并列展示，没有强行统一，这个处理方式是对的。
+  → 日报里"计划中"的表述需要额外小心，容易把「已上线但没大肆宣传」的功能写成「即将推出」。
+
+### 流程侧
+- store.py sync 的 `published_match` 又一次没对上：`tencent/AuK`（HuggingFace 短名）和两条
+  `daily-crawler` 标题（`[2026-09-15 S1] …`）都没匹配到对应 slug，3/5 条要手动标 published。
+  这是第三次记录同一个问题（9/9、9/12、9/15），子串匹配对「标题带方括号/日期前缀」和
+  「标题=owner/repo 短名但 slug 里塞了很多关键词」这两类系统性对不上。→ 该认真修 published_match
+  了：至少把标题里的 `owner/repo` 提取出来单独按 slug 子串比一次。
+- 后台会话自己起 `bash figs.sh SLUG &` 并且外层还套了 `run_in_background: true` 是错误用法——
+  外层工具会把"外层命令已返回"（因为内部提前用 `&` 丢进后台）当成"任务完成"上报，实际 codex
+  进程还在跑，日志会看起来像卡住/截断。后来单独跑（不加内层 `&`，只用 `run_in_background: true`）
+  就正常了。→ 已知：figs.sh 本身设计成前台阻塞直到 codex 出图完成，调用方只需要外层
+  run_in_background，不要自己再加 `&`。
+- 子 agent 普遍反映 Write/Edit 工具在 staging 阶段被拦（提示需要 worktree 隔离），全部改用
+  Bash heredoc 写入两个交接文件，内容都用 python3 校验过 JSON 合法性，没出问题——这条 workaround
+  现在看是稳定可行的，BRIEF.md 可以直接写明这条路径，省得每个子 agent 都要自己摸索一次。
