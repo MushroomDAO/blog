@@ -1,0 +1,12 @@
+{
+  "title": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多",
+  "author": "Mycelium",
+  "digest": "orion-core 是从桌面应用 OrionPod 拆出的 Rust Agent harness（MIT，3 star",
+  "mediaId": "prCUE631thH1cmNLi42prAzGZYY5UzREleasg6es2TKMINjQyDkmc42u_WKURasd",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/anistark/orion-core",
+    "github.com/ml-explore/mlx-lm"
+  ],
+  "publishedAt": "2026-09-12T13:22:06.640Z"
+}

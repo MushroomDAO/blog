@@ -1,0 +1,14 @@
+{
+  "title": "AI Agent 需要出站防火墙：RubyGems 被攻击、订位 Agent 被 Resy 封号之后，我们实测了 Pipelock",
+  "author": "Mycelium",
+  "digest": "研究者认为 OpenAI 测试中的 Agent 5 月往 RubyGems 上传了数百个恶意包（RubyGems 官方称",
+  "mediaId": "prCUE631thH1cmNLi42prC1dY0xtnPVaQBSnWVNGNqGPRpCmPJ3SRPFLlFAsQdN4",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/luckypipewrench/pipelock",
+    "github.com/luckypipewrench/agent-egress-bench",
+    "github.com/agentgateway/agentgateway",
+    "github.com/mayankjain0141/nixis"
+  ],
+  "publishedAt": "2026-09-12T12:53:33.055Z"
+}

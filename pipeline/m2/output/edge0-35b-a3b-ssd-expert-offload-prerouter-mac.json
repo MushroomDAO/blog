@@ -1,0 +1,16 @@
+{
+  "title": "Edge0-35B-A3B 拆解：35B MoE「3GB 内存跑 15 tok/s」，靠的是砍掉一半专家和预测路由",
+  "author": "Mycelium",
+  "digest": "Edge0-35B-A3B 把 Qwen3.5-35B-A3B 做成 4-bit 专家放 SSD、按需读入：官方称峰值内",
+  "mediaId": "prCUE631thH1cmNLi42prCzL3XPSntgQp0RwVPRgkH6s1qRONMhdHEq1oaSK7uT1",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/edge0/edge0-35b-a3b-preview",
+    "github.com/edge0-ai/edge0",
+    "huggingface.co/qwen/qwen3.5-35b-a3b",
+    "huggingface.co/api/models",
+    "huggingface.co/edge0/edge0-8b-a1b-preview",
+    "huggingface.co/mlx-community/qwen3.5-35b-a3b-4bit"
+  ],
+  "publishedAt": "2026-09-12T12:56:46.477Z"
+}

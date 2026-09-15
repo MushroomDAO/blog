@@ -573,5 +573,30 @@
     "mediaId": "prCUE631thH1cmNLi42prCbeRgHPh6OnVwZQ0lg7LhDuaIhTVoiWJUDTUvY-NVBc",
     "title": "all-MiniLM-L6-v2 凭什么五年后还是 HF 下载第一？一个 2021 年的默认嵌入模型、它的中文盲区和 2026 年的替换清单",
     "publishedAt": "2026-09-11T17:33:23.496Z"
+  },
+  "agent-egress-firewall-pipelock-rate-limit-kill-switch": {
+    "mediaId": "prCUE631thH1cmNLi42prC1dY0xtnPVaQBSnWVNGNqGPRpCmPJ3SRPFLlFAsQdN4",
+    "title": "AI Agent 需要出站防火墙：RubyGems 被攻击、订位 Agent 被 Resy 封号之后，我们实测了 Pipelock",
+    "publishedAt": "2026-09-12T12:53:33.055Z"
+  },
+  "edge0-35b-a3b-ssd-expert-offload-prerouter-mac": {
+    "mediaId": "prCUE631thH1cmNLi42prCzL3XPSntgQp0RwVPRgkH6s1qRONMhdHEq1oaSK7uT1",
+    "title": "Edge0-35B-A3B 拆解：35B MoE「3GB 内存跑 15 tok/s」，靠的是砍掉一半专家和预测路由",
+    "publishedAt": "2026-09-12T12:56:46.477Z"
+  },
+  "pentest-harness-deepseek-harness-rebrand-authorization-teardown": {
+    "mediaId": "prCUE631thH1cmNLi42prB-enqIygqgAsdQIfnZWRypMxDRDNEsew-0wvWX8e4wJ",
+    "title": "Pentest Harness 拆穿：给 DeepSeek Harness 换皮，再把授权边界删掉",
+    "publishedAt": "2026-09-12T12:58:26.158Z"
+  },
+  "localagi-local-ai-agent-platform-localai-mac": {
+    "mediaId": "prCUE631thH1cmNLi42prIALhFKgoRQqRqCGEnKieBVKSz1_cZdUkwrSNiS-4jSs",
+    "title": "LocalAGI 拆解：这个本地 Agent 平台已被 LocalAI 收进核心，Mac 用户该装哪一个？",
+    "publishedAt": "2026-09-12T12:59:38.950Z"
+  },
+  "orion-core-rust-agent-harness-local-llm-teardown": {
+    "mediaId": "prCUE631thH1cmNLi42prAzGZYY5UzREleasg6es2TKMINjQyDkmc42u_WKURasd",
+    "title": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多",
+    "publishedAt": "2026-09-12T13:22:06.640Z"
   }
 }
