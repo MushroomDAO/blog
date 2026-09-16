@@ -109,6 +109,26 @@ pnpm preview          # 预览构建结果
 
 当用户说"发布文章"、"发布blog"、"发布公众号"时，读取并执行 `.agents/skills/blog-publisher/SKILL.md` 中的标准流程。
 
+### ⚠️ Headless 调用（微信机器人）下禁止 Bash 后台任务
+
+这个仓库经常被 Heinu1 微信机器人以 **`claude --print`（一次性、非交互）** 模式驱动——
+用户在微信转发一个链接，机器人 spawn 一次 `claude --print`，这一轮结束进程就退出，
+**没有下一轮来接收"后台任务完成"的通知**。
+
+**因此在这个仓库里，任何发布流程（生成 banner、build、deploy 等）一律同步执行，
+禁止用 Bash 的 `run_in_background: true`。** 哪怕单步要跑 30–90 秒也要等它跑完再继续，
+绝不能说"正在后台生成，等待通知"就结束当前这一轮——那个通知永远不会有人来处理，
+流程会在那一步永久卡死：文章 markdown 写了、banner 可能都生成好了，但 build、deploy、
+git commit、建公众号草稿、给用户回报结果，一步都不会发生。
+
+真实发生过的例子：2026-09-16 一次任务同时给两篇文章后台生成 banner，回复"两个 banner
+正在生成中，等待完成通知"后当轮结束，两篇文章从此再没有后续——banner 有没有生成完、
+markdown 存不存在都不知道，用户隔了几个小时才发现"进展没了"。
+
+（这条规则不影响交互式使用——你自己在终端里手动跑 Claude Code 时，用
+`run_in_background: true` 批量出图正常可用，因为你会留在同一个会话里接收通知。
+只有"没有人会回来看这一轮"的 headless 调用才必须同步。）
+
 ## Key Files
 
 - `astro.config.mjs` — Astro 配置（站点域名、集成）

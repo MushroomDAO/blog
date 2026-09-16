@@ -49,14 +49,28 @@ Use this skill immediately when the user says any of:
 - `publish blog`
 - `create WeChat draft`
 
-## Required Output
+## Required Output（强制汇报，不可省略）
 
-Return:
-- final Blog URL
-- WeChat draft status and media ID, if M2 was requested
-- final markdown path
-- final banner path and size
-- any validation issue that remains
+每次三件套完成后，**必须**以如下格式汇报结果，不得用其他废话替代：
+
+```
+✅ Blog：https://blog.mushroom.cv/blog/SLUG/
+✅ 公众号草稿：已创建（media_id: XXXX）
+✅ 记忆：project_SLUG.md 已写入
+```
+
+如果任何一步失败：
+
+```
+❌ Blog：部署失败，原因：XXX
+❌ 公众号草稿：创建失败，原因：XXX
+```
+
+**规则**：
+- Blog URL 必须是完整的 https:// 地址
+- 不写 markdown 路径、banner 路径、build 输出等中间信息
+- 不写"三件套汇报"等标题，直接上结果
+- 不写废话段落，三行结果之外只写真正需要用户知道的异常
 
 ## Non-Negotiable Rules
 
