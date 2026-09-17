@@ -32,6 +32,7 @@ This directory turns daily research into a product-and-content pipeline:
 - [2026-09-14](./2026-09-14.md) — Manufacturing FDE, AI Kaizen project funnels, production-trace replay eval, AI-native office workbench
 - [2026-09-15](./2026-09-15.md) — Vertical Agent Packs, finance connectivity fabric, open-source AI coworker workspaces, desktop software capability bridges, OPC AI teams
 - [2026-09-16](./2026-09-16.md) — SME AI starter packs, implementation agents, conversation-to-action, DeepSeek Harness runtime, vertical FDE distribution
+- [2026-09-17](./2026-09-17.md) — AI-native professional services, agent state recovery, AI-commerce readiness, SOP-to-flow compilation, living customer-state agents
 
 ## Standard Review Lens
 
