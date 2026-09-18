@@ -1,177 +1,27 @@
 {
-  "generatedAt": "2026-09-17T14:00:00Z",
+  "generatedAt": "2026-09-18T14:00:00Z",
   "period": {
-    "start": "2026-08-18",
-    "end": "2026-09-17"
+    "start": "2026-08-19",
+    "end": "2026-09-18"
   },
   "totals": {
-    "pageviews": 13210,
-    "visits": 12070,
-    "bots": 0
+    "pageviews": 10000,
+    "visits": 10000,
+    "bots": 40
   },
   "last7": {
-    "pv": 3860,
-    "visits": 3590
+    "pv": 10000,
+    "visits": 10000
   },
   "prior7": {
-    "pv": 2910,
-    "visits": 2620
+    "pv": 0,
+    "visits": 0
   },
   "daily": [
     {
-      "date": "08-18",
-      "pv": 100,
-      "visits": 100
-    },
-    {
-      "date": "08-19",
-      "pv": 420,
-      "visits": 420
-    },
-    {
-      "date": "08-20",
-      "pv": 330,
-      "visits": 280
-    },
-    {
-      "date": "08-21",
-      "pv": 350,
-      "visits": 340
-    },
-    {
-      "date": "08-22",
-      "pv": 240,
-      "visits": 230
-    },
-    {
-      "date": "08-23",
-      "pv": 270,
-      "visits": 220
-    },
-    {
-      "date": "08-24",
-      "pv": 460,
-      "visits": 410
-    },
-    {
-      "date": "08-25",
-      "pv": 380,
-      "visits": 350
-    },
-    {
-      "date": "08-26",
-      "pv": 450,
-      "visits": 410
-    },
-    {
-      "date": "08-27",
-      "pv": 500,
-      "visits": 480
-    },
-    {
-      "date": "08-28",
-      "pv": 390,
-      "visits": 280
-    },
-    {
-      "date": "08-29",
-      "pv": 300,
-      "visits": 280
-    },
-    {
-      "date": "08-30",
-      "pv": 350,
-      "visits": 350
-    },
-    {
-      "date": "08-31",
-      "pv": 540,
-      "visits": 540
-    },
-    {
-      "date": "09-01",
-      "pv": 380,
-      "visits": 340
-    },
-    {
-      "date": "09-02",
-      "pv": 490,
-      "visits": 380
-    },
-    {
-      "date": "09-03",
-      "pv": 490,
-      "visits": 450
-    },
-    {
-      "date": "09-04",
-      "pv": 290,
-      "visits": 280
-    },
-    {
-      "date": "09-05",
-      "pv": 270,
-      "visits": 270
-    },
-    {
-      "date": "09-06",
-      "pv": 270,
-      "visits": 260
-    },
-    {
-      "date": "09-07",
-      "pv": 540,
-      "visits": 460
-    },
-    {
-      "date": "09-08",
-      "pv": 460,
-      "visits": 400
-    },
-    {
-      "date": "09-09",
-      "pv": 510,
-      "visits": 480
-    },
-    {
-      "date": "09-10",
-      "pv": 570,
-      "visits": 470
-    },
-    {
-      "date": "09-11",
-      "pv": 430,
-      "visits": 400
-    },
-    {
-      "date": "09-12",
-      "pv": 520,
-      "visits": 500
-    },
-    {
       "date": "09-13",
-      "pv": 480,
-      "visits": 420
-    },
-    {
-      "date": "09-14",
-      "pv": 580,
-      "visits": 530
-    },
-    {
-      "date": "09-15",
-      "pv": 660,
-      "visits": 630
-    },
-    {
-      "date": "09-16",
-      "pv": 540,
-      "visits": 500
-    },
-    {
-      "date": "09-17",
-      "pv": 650,
-      "visits": 610
+      "pv": 10000,
+      "visits": 10000
     }
   ],
   "countries": [
@@ -180,24 +30,24 @@
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 6800,
-      "visits": 6800
+      "pv": 6600,
+      "visits": 6600
     },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 4200,
-      "visits": 3800
+      "pv": 4300,
+      "visits": 3900
     },
     {
       "code": "US",
       "flag": "🇺🇸",
       "name": "美国",
       "nameEn": "United States",
-      "pv": 1100,
-      "visits": 1000
+      "pv": 1200,
+      "visits": 1100
     },
     {
       "code": "HK",
@@ -274,19 +124,19 @@
   ],
   "countryTotal": 14600,
   "referers": {
-    "direct": 7970,
-    "search": 3920,
-    "ecosystem": 1140,
-    "ai": 70,
-    "other": 110
+    "direct": 4000,
+    "search": 8000,
+    "ecosystem": 1000,
+    "ai": 0,
+    "other": 0
   },
   "pages": [
     {
       "title": "首页",
       "titleEn": "Home",
       "path": "/",
-      "pv": 490,
-      "visits": 340
+      "pv": 520,
+      "visits": 370
     },
     {
       "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
@@ -310,18 +160,32 @@
       "visits": 170
     },
     {
-      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
-      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
-      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
-      "pv": 170,
-      "visits": 170
-    },
-    {
       "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
       "titleEn": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
       "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
       "pv": 170,
       "visits": 170
+    },
+    {
+      "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
+      "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
+      "path": "/blog/hitchhikers-guide-agentic-ai-book/",
+      "pv": 170,
+      "visits": 170
+    },
+    {
+      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
+      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
+      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
+      "pv": 160,
+      "visits": 160
+    },
+    {
+      "title": "Marble 开源儿童课程知识图谱：1590 个微话题 + 3221 条前置关系，对齐主流课标",
+      "titleEn": "Marble's Open-Source Children's Curriculum Knowledge Graph: 1,590 Micro-Topics and 3,221 Prerequisite Links",
+      "path": "/blog/marble-os-taxonomy-children-curriculum-knowledge-graph/",
+      "pv": 160,
+      "visits": 160
     },
     {
       "title": "search",
@@ -331,13 +195,6 @@
       "visits": 20
     },
     {
-      "title": "Marble 开源儿童课程知识图谱：1590 个微话题 + 3221 条前置关系，对齐主流课标",
-      "titleEn": "Marble's Open-Source Children's Curriculum Knowledge Graph: 1,590 Micro-Topics and 3,221 Prerequisite Links",
-      "path": "/blog/marble-os-taxonomy-children-curriculum-knowledge-graph/",
-      "pv": 140,
-      "visits": 140
-    },
-    {
       "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
       "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
       "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
@@ -345,16 +202,9 @@
       "visits": 120
     },
     {
-      "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
-      "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
-      "path": "/blog/hitchhikers-guide-agentic-ai-book/",
-      "pv": 130,
-      "visits": 130
-    },
-    {
-      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
-      "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
-      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
+      "title": "grill-me：181k Star 的 Claude Code Skill，用一个问题消灭 AI 编码最常见的失败模式",
+      "titleEn": "grill-me: The 181k-Star Claude Code Skill That Eliminates the Most Common AI Coding Failure Mode One Question at a Time",
+      "path": "/blog/grill-me-skill-mattpocock-claude-code-guide/",
       "pv": 120,
       "visits": 120
     },
@@ -366,23 +216,23 @@
       "visits": 20
     },
     {
-      "title": "grill-me：181k Star 的 Claude Code Skill，用一个问题消灭 AI 编码最常见的失败模式",
-      "titleEn": "grill-me: The 181k-Star Claude Code Skill That Eliminates the Most Common AI Coding Failure Mode One Question at a Time",
-      "path": "/blog/grill-me-skill-mattpocock-claude-code-guide/",
+      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
+      "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
+      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
+      "pv": 110,
+      "visits": 110
+    },
+    {
+      "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
+      "titleEn": "M1 Max 64GB Local AI Complete Guide: Qwen3 Model Selection, Memory Management & Multi-Model Scheduling",
+      "path": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
       "pv": 100,
       "visits": 100
     },
     {
-      "title": "OpenMinis 实测 + 隐私架构完全指南：本地大模型 + Tailscale，个人数据永不出家门",
-      "titleEn": "OpenMinis Hands-On and a Complete Privacy Architecture Guide: Local Models Plus Tailscale, Data Never Leaves Home",
-      "path": "/blog/openminis-private-personal-ai-tailscale-local-model-complete-guide/",
-      "pv": 90,
-      "visits": 80
-    },
-    {
-      "title": "LobsterAI 普通人使用指南：网易有道出品，桌面 AI Agent 一句话搞定办公",
-      "titleEn": "LobsterAI for Everyone: NetEase Youdao's Desktop AI Agent — Real Work Done with One Prompt",
-      "path": "/blog/lobsterai-guide-for-everyone/",
+      "title": "DwarfStar：Mac Studio 跑 DeepSeek V4 Flash/PRO，从安装到 SSD 流式推理",
+      "titleEn": "DwarfStar (ds4): Run DeepSeek V4 Flash/PRO Locally on Mac Studio — Install, SSD Streaming, Distributed Inference",
+      "path": "/blog/deepseek-mac-studio-dwarfstar-ds4-local-inference-guide/",
       "pv": 90,
       "visits": 90
     }
@@ -390,11 +240,11 @@
   "devices": [
     {
       "label": "desktop",
-      "count": 12490
+      "count": 12730
     },
     {
       "label": "mobile",
-      "count": 710
+      "count": 740
     },
     {
       "label": "tablet",
@@ -404,69 +254,45 @@
   "os": [
     {
       "label": "Windows",
-      "count": 9710
+      "count": 10500
     },
     {
       "label": "MacOSX",
-      "count": 1880
+      "count": 2200
     },
     {
       "label": "Unknown",
-      "count": 700
+      "count": 1000
     },
     {
       "label": "Linux",
-      "count": 440
+      "count": 400
     },
     {
       "label": "Android",
-      "count": 270
+      "count": 300
     },
     {
       "label": "iOS",
-      "count": 210
+      "count": 200
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 9270
+      "count": 7000
     },
     {
       "label": "Edge",
-      "count": 2280
-    },
-    {
-      "label": "Unknown",
-      "count": 700
-    },
-    {
-      "label": "Safari",
-      "count": 350
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 280
-    },
-    {
-      "label": "MobileSafari",
-      "count": 130
+      "count": 4000
     },
     {
       "label": "Firefox",
-      "count": 70
+      "count": 1000
     },
     {
-      "label": "ChromeMobileWebview",
-      "count": 60
-    },
-    {
-      "label": "ChromeHeadless",
-      "count": 40
-    },
-    {
-      "label": "ChromeDerivative",
-      "count": 30
+      "label": "MobileSafari",
+      "count": 1000
     }
   ]
 }
