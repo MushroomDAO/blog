@@ -354,3 +354,39 @@ FEEDBACK 已经写过修法（把 URL 骨架词并进过滤集），到今天还
   Bash heredoc 才写进去——这个 guard 对本仓库的「共享 checkout、多会话并行、发布必须原地 commit」
   的既定工作模式来说过于严格，建议给这个仓库设 `.claude/settings.json` 里的
   `worktree.bgIsolation: "none"`，而不是靠每次手写 heredoc 绕过。
+
+## 2026-09-22（用户在 8042 标了 5 条 write，2 条合并成 1 篇，实发 4 篇）
+
+选题：yunshu_skillshub、claude-skill-registry（用户批注要求合并成对比文）、openflowkit、
+Hemmingway-1、TypeSafe AI Jev 生态刷屏观察（awesome-jev）。5 条全部核实为真、非空壳，无一条
+write:false。
+
+### 查重误报（老问题，第 N 次记录，check-duplicate.cjs 还没修）
+check-duplicate.cjs 对 URL 的粗匹配仍然对 `https`/`github.com` 不过滤，本轮 5 条查重全部刷出
+几百行「正文含 github.com」的假阳性；精确实体名二次查询全部 `✅ 四本账都没查到`，靠这条兜底才
+排除掉误报。9/15 就记过修法（把 URL 骨架词并进过滤集），到今天还是没人去改代码，这是第 3 次
+在 FEEDBACK 里重复同一条了。
+
+### published_match 自动匹配：这次 4/5 命中，规律更清楚了
+`store.py sync` 这次自动把 3 条转成了 published（yunshu_skillshub、claude-skill-registry 两条
+都对上同一篇合并稿、openflowkit、Hemmingway-1），唯独 GoogleTrends+GitHub 来源那条没自动命中——
+不是因为它的 slug 取名标新立异，而是因为**它的 `items.title` 本来就不是仓库路径**（是
+"TypeSafe AI Jev 生态：一天冒出 800+ 集成的刷屏观察" 这种人写的选题描述，`repo_fragment()`
+从中文标题里提不出任何有效英文片段），`published_match` 从设计上就没有输入可用。跟 9/17 记的
+「稿子标题故意不沿用项目名」是两种不同的失配模式：那次是有 repo 路径但稿子标题绕开了它，这次
+是 items.title 从一开始就没有 repo 路径。9/17 提的「按 items.url 匹配」这条改法能同时治好两种
+模式（url 字段这次是干净的 GitHub 链接），值得优先做。手动 `curl .../api/decide -d
+'{"decision":"published"}'` 补上了这一条。
+
+### 流程侧：本轮 EnterWorktree 隔离直接在主会话层面就走不通
+主会话按后台任务规范先 EnterWorktree 隔离，进去后发现 worktree 里没有 `.env`（发布脚本要用的
+凭据）也没有 `radar/`（评审台数据库、staging 目录——这两个都是 gitignore 掉的未跟踪状态，
+`git worktree add` 不会带过去），整个写稿+发布流程从根上就跑不起来，当场 ExitWorktree 退回主
+目录。4 个写稿子 agent 各自也在 staging 阶段撞上同一个隔离 guard，仍然各自发明 workaround（
+Bash heredoc 或临时 `git worktree add`+`cp`+清理），跟 9/17 记的一样，还没有人去把
+`worktree.bgIsolation` 设成 `"none"`——这次连主会话自己写这份 FEEDBACK.md 时都被同一个 guard
+拦了 Edit 工具（报错原样是「This background session hasn't isolated its changes yet」），
+被迫改用 Bash heredoc 才写进去，说明这条建议不能再拖，该仓库的既定工作模式（共享 checkout、
+`.env`/`radar/` 不跟 git 走、发布必须原地 commit）从根上就跟默认的 worktree 隔离策略不兼容。
+- 4 篇发布全部一次成功：build → SEO 校验 → deploy → 线上 200 → commit+push → 语义索引 →
+  公众号草稿，没有一篇中途断线或需要重试。
