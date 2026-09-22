@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-21T14:00:00Z",
+  "generatedAt": "2026-09-22T14:00:00Z",
   "period": {
-    "start": "2026-08-22",
-    "end": "2026-09-21"
+    "start": "2026-08-23",
+    "end": "2026-09-22"
   },
   "totals": {
     "pageviews": 16000,
     "visits": 15000,
-    "bots": 40
+    "bots": 0
   },
   "last7": {
     "pv": 8000,
@@ -86,141 +86,83 @@
   ],
   "countries": [
     {
-      "code": "SG",
-      "flag": "🇸🇬",
-      "name": "新加坡",
-      "nameEn": "Singapore",
-      "pv": 6260,
-      "visits": 6170
-    },
-    {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 4210,
-      "visits": 3690
-    },
-    {
-      "code": "US",
-      "flag": "🇺🇸",
-      "name": "美国",
-      "nameEn": "United States",
-      "pv": 1010,
-      "visits": 930
-    },
-    {
-      "code": "HK",
-      "flag": "🇭🇰",
-      "name": "香港",
-      "nameEn": "Hong Kong",
-      "pv": 690,
-      "visits": 640
-    },
-    {
-      "code": "JP",
-      "flag": "🇯🇵",
-      "name": "日本",
-      "nameEn": "Japan",
-      "pv": 610,
-      "visits": 510
-    },
-    {
-      "code": "TH",
-      "flag": "🇹🇭",
-      "name": "泰国",
-      "nameEn": "Thailand",
-      "pv": 420,
-      "visits": 190
-    },
-    {
-      "code": "TW",
-      "flag": "🇹🇼",
-      "name": "台湾",
-      "nameEn": "Taiwan",
-      "pv": 320,
-      "visits": 280
-    },
-    {
-      "code": "NL",
-      "flag": "🇳🇱",
-      "name": "荷兰",
-      "nameEn": "Netherlands",
-      "pv": 70,
-      "visits": 70
-    },
-    {
-      "code": "AE",
-      "flag": "🇦🇪",
-      "name": "阿联酋",
-      "nameEn": "United Arab Emirates",
-      "pv": 70,
-      "visits": 70
-    },
-    {
-      "code": "MY",
-      "flag": "🇲🇾",
-      "name": "马来西亚",
-      "nameEn": "Malaysia",
-      "pv": 70,
-      "visits": 40
-    },
-    {
-      "code": "AR",
-      "flag": "🇦🇷",
-      "name": "阿根廷",
-      "nameEn": "Argentina",
-      "pv": 50,
-      "visits": 50
-    },
-    {
-      "code": "PE",
-      "flag": "🇵🇪",
-      "name": "PE",
-      "nameEn": "PE",
-      "pv": 50,
-      "visits": 50
-    }
-  ],
-  "countryTotal": 14190,
-  "referers": {
-    "direct": 8590,
-    "search": 4450,
-    "ecosystem": 1170,
-    "ai": 50,
-    "other": 100
-  },
-  "pages": [
-    {
-      "title": "如何真正做好研究：Anthropic 研究员 Vivek 的 7 条核心原则",
-      "titleEn": "How to Be Good at Research: 7 Core Principles from an Anthropic AI Safety Researcher",
-      "path": "/blog/how-to-be-good-at-research-vivek-guide/",
       "pv": 10000,
       "visits": 10000
     }
   ],
-  "devices": [],
-  "os": [],
-  "browsers": [
+  "countryTotal": 10000,
+  "referers": {
+    "direct": 9400,
+    "search": 5200,
+    "ecosystem": 1100,
+    "ai": 100,
+    "other": 0
+  },
+  "pages": [],
+  "devices": [
     {
-      "label": "Chrome",
-      "count": 9900
+      "label": "desktop",
+      "count": 13700
     },
     {
-      "label": "Edge",
-      "count": 2620
+      "label": "mobile",
+      "count": 880
+    },
+    {
+      "label": "tablet",
+      "count": 20
+    }
+  ],
+  "os": [
+    {
+      "label": "Windows",
+      "count": 10840
+    },
+    {
+      "label": "MacOSX",
+      "count": 1960
     },
     {
       "label": "Unknown",
-      "count": 750
+      "count": 770
     },
     {
-      "label": "Safari",
+      "label": "Linux",
+      "count": 410
+    },
+    {
+      "label": "Android",
       "count": 360
     },
     {
+      "label": "iOS",
+      "count": 260
+    }
+  ],
+  "browsers": [
+    {
+      "label": "Chrome",
+      "count": 10010
+    },
+    {
+      "label": "Edge",
+      "count": 2740
+    },
+    {
+      "label": "Unknown",
+      "count": 770
+    },
+    {
       "label": "ChromeMobile",
-      "count": 340
+      "count": 350
+    },
+    {
+      "label": "Safari",
+      "count": 330
     },
     {
       "label": "MobileSafari",
@@ -228,7 +170,7 @@
     },
     {
       "label": "ChromeMobileWebview",
-      "count": 90
+      "count": 100
     },
     {
       "label": "Firefox",
