@@ -449,9 +449,11 @@ const postsData = posts.map(post => ({
 									</div>
 								</a>
 							</li>
-							{/* 原生广告：每 6 篇插一个信息流位。没有分类属性，不参与分类筛选/加载更多的
-							计数，只在"全部"视图下常驻显示——见下面 filterPosts() 里对 .in-feed-ad 的排除逻辑 */}
-							{AD_SLOT_IN_FEED && (index + 1) % 6 === 0 && (
+							{/* 原生广告：只在首屏就可见的前 12 篇里每 6 篇插一个（最多 2 个）。
+							不要对全部几百篇文章都插一份隐藏在 hidden-post 里的广告——那些 <ins>
+							的 push() 会在不可见时就发起填充请求，等于"用户看不到的广告"，
+							踩 AdSense 政策红线，也白白多打广告请求。 */}
+							{AD_SLOT_IN_FEED && index < 12 && (index + 1) % 6 === 0 && (
 								<li class="in-feed-ad">
 									<AdUnit slot={AD_SLOT_IN_FEED} layout="in-feed" layoutKey={AD_LAYOUT_KEY_IN_FEED} />
 								</li>
