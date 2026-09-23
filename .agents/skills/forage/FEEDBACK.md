@@ -390,3 +390,30 @@ Bash heredoc 或临时 `git worktree add`+`cp`+清理），跟 9/17 记的一样
 `.env`/`radar/` 不跟 git 走、发布必须原地 commit）从根上就跟默认的 worktree 隔离策略不兼容。
 - 4 篇发布全部一次成功：build → SEO 校验 → deploy → 线上 200 → commit+push → 语义索引 →
   公众号草稿，没有一篇中途断线或需要重试。
+## 2026-09-23 写稿批次（用户标 3 条写）
+
+用户标了 3 条「写」（garmin-mcp-local、Humanizer-zh、anthropics/launch-your-agent，均无批注），
+3 条全部写完并发布 blog；**公众号草稿 3 篇全部没建成**，原因见下。
+
+### 公众号 40164：本机出口 IP 不在白名单
+- 本机出口 IP 是 223.204.81.131，微信接口返回 `errcode 40164 invalid ip`。连查重脚本
+  `check-duplicate.cjs`（要拉草稿箱）都直接崩，不只是建草稿失败。查重只能退回 grep 本地文章库。
+- 这个只能用户去公众号后台「设置与开发 → 基本配置 → IP 白名单」加 IP（生效需 5-10 分钟），
+  会话里不该也无法绕过。补建草稿命令（每篇）：
+  `cd pipeline/m2 && node index.js ../../src/content/blog/<slug>.md --theme blue`
+- 建议：`publish-blog.sh` 在 [5/5] 之前就用 40164 预检直接提示「blog 已发、草稿待补」，
+  别让 5 张图各报一遍 token 错。
+
+### 子 agent 又撞 worktree guard（同 9/17、9/22）
+3 个子 agent 都被拦，各自建了临时 worktree 写稿，主会话手动 cp 回 radar/staging，用完清理。
+`worktree.bgIsolation` 仍没设成 `"none"`，第 4 次记这条了。
+
+### banner 验证脚本漏检「伪汉字」
+humanizer-zh 第一版 banner 提示词写了「Chinese manuscript page」，FLUX 画出一整页乱码伪汉字，
+`verify-banner` 的 text 检测没报（PASSED）。靠 Read 看图才发现，换成「空白稿纸+放大镜+铅笔」重出。
+banner_prompt 里别出现 Chinese text/manuscript/page 之类会诱发画字的场景。
+
+### 发布结果
+- 3 篇 build → 校验 → deploy → 线上 200 → commit+push → 语义索引 全部成功。
+- garmin 稿：实测发现全新安装 mcp 2.x 导致 ImportError、execute_sql 的 WITH…DELETE 可写入，
+  均已如实写进文章；未用真实 Garmin 账号，联网链路未实测，文中已标注。
