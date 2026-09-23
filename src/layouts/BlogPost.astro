@@ -1,12 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 import { getCollection, type CollectionEntry } from 'astro:content';
+import AdUnit from '../components/AdUnit.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Comments from '../components/Comments.astro';
 import Disclaimer from '../components/Disclaimer.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import { AD_SLOT_IN_ARTICLE } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'] & { id?: string };
 
@@ -228,6 +230,11 @@ const related = allPosts
 			.prose :global(p) {
 				margin-bottom: 1em;
 			}
+			.in-article-ad {
+				max-width: 800px;
+				margin: 2em auto;
+				padding: 0 2em;
+			}
 			/* 相关文章 */
 			.related-posts {
 				max-width: 1400px;
@@ -370,7 +377,14 @@ const related = allPosts
 						)}
 					</div>
 				</div>
-				
+
+				<!-- 原生广告：正文读完之后、相关文章之前，不打断阅读 -->
+				{AD_SLOT_IN_ARTICLE && (
+					<div class="in-article-ad">
+						<AdUnit slot={AD_SLOT_IN_ARTICLE} layout="in-article" />
+					</div>
+				)}
+
 				<!-- 相关文章 -->
 				{related.length > 0 && (
 					<div class="related-posts">
