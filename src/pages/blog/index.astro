@@ -269,13 +269,18 @@ const postsData = posts.map(post => ({
 				display: block;
 			}
 			.in-feed-ad {
-				display: flex;
-				align-items: center;
-				justify-content: center;
 				min-height: 200px;
 				background: linear-gradient(var(--gray-gradient)) no-repeat;
 				border-radius: 12px;
 				overflow: hidden;
+			}
+			/* 广告容器必须是普通块级、占满 li 的宽度——之前用过 display:flex 把
+			   <ins> 变成 flex item，flex item 默认不沿主轴拉伸，<ins> 在广告
+			   内容注入前是 0 宽，Google 的 fluid 广告脚本量出 0 宽容器就直接
+			   不渲染了，页面上看到的就是一片空白。 */
+			.in-feed-ad .adsbygoogle {
+				display: block;
+				width: 100%;
 			}
 			.title {
 				margin: 0;
