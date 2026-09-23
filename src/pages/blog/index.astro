@@ -454,11 +454,13 @@ const postsData = posts.map(post => ({
 									</div>
 								</a>
 							</li>
-							{/* 原生广告：只在首屏就可见的前 12 篇里每 6 篇插一个（最多 2 个）。
-							不要对全部几百篇文章都插一份隐藏在 hidden-post 里的广告——那些 <ins>
-							的 push() 会在不可见时就发起填充请求，等于"用户看不到的广告"，
+							{/* 原生广告：每页只放 1 个，第 6 篇后面。同一个 slot 在同一屏放两份，
+							大概率会拉到同一条素材（尤其账号/广告位刚建、流量还没起来，Google
+							经常用同一条 house ad 兜底），两个一样反而显得重复，不如只放一个。
+							另外不要对全部几百篇文章都插一份隐藏在 hidden-post 里的广告——那些
+							<ins> 的 push() 会在不可见时就发起填充请求，等于"用户看不到的广告"，
 							踩 AdSense 政策红线，也白白多打广告请求。 */}
-							{AD_SLOT_IN_FEED && index < 12 && (index + 1) % 6 === 0 && (
+							{AD_SLOT_IN_FEED && index === 5 && (
 								<li class="in-feed-ad">
 									<AdUnit slot={AD_SLOT_IN_FEED} layout="in-feed" layoutKey={AD_LAYOUT_KEY_IN_FEED} />
 								</li>
