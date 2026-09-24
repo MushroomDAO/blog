@@ -124,6 +124,9 @@ def main():
           byBot: rumPageloadEventsAdaptiveGroups(limit: 5, filter: {{{filt}}}, orderBy: [count_DESC]) {{
             count dimensions {{ bot }}
           }}
+          sampling: rumPageloadEventsAdaptiveGroups(limit: 1, filter: {{{filt}}}) {{
+            avg {{ sampleInterval }}
+          }}
         }}
       }}
     }}
@@ -140,6 +143,18 @@ def main():
             "ERROR: inconsistent GraphQL response — daily is empty but byPage/byCountry "
             "are not (Cloudflare Analytics API glitch, seen 2026-08-13). Refusing to write "
             "a broken snapshot; keeping the last good one. Just re-run.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    # 2026-09-22 的快照撞到过：Cloudflare 临时把采样粒度调到 1:1000，整份数据只剩
+    # 十几个样本、全是 1000 的整数倍，国家分布完全失真（真实是新加坡第一，快照里只剩中国）。
+    # 正常是 1:10。粒度太粗就不写盘，保留上一份好快照。
+    interval = (d.get("sampling") or [{}])[0].get("avg", {}).get("sampleInterval") or 0
+    if interval > 100:
+        print(
+            f"ERROR: Cloudflare returned sampleInterval≈{interval:.0f} (normally ~10) — "
+            "data too coarse to trust. Refusing to overwrite the last good snapshot; re-run later.",
             file=sys.stderr,
         )
         sys.exit(1)

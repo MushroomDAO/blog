@@ -29,6 +29,8 @@ export const STRINGS = {
 		kpiVisits: 'Visits',
 		kpiLast7: 'Pageviews, last 7 days',
 		kpiRegions: 'Regions reached',
+		kpiOverseas: 'Outside mainland China',
+		overseasPv: (n) => `${n} pageviews`,
 		botsExcluded: (n) => `${n} bot requests excluded`,
 		pagesPerVisit: (n) => `~${n} pages per visit`,
 		countriesIn30d: 'countries / regions in 30 days',
@@ -115,6 +117,8 @@ export const STRINGS = {
 		kpiVisits: '独立访问',
 		kpiLast7: '近 7 天浏览量',
 		kpiRegions: '覆盖地区',
+		kpiOverseas: '海外占比（非中国大陆）',
+		overseasPv: (n) => `${n} 次浏览`,
 		botsExcluded: (n) => `已剔除 ${n} 次机器人抓取`,
 		pagesPerVisit: (n) => `约 ${n} 页 / 次访问`,
 		countriesIn30d: '个国家/地区，30 天内',
@@ -225,6 +229,10 @@ export function renderKpis(data, lang) {
 	const dir = deltaPv > 0 ? 'up' : deltaPv < 0 ? 'down' : 'flat';
 	const arrow = deltaPv > 0 ? '▲' : deltaPv < 0 ? '▼' : '–';
 	const perVisit = data.totals.visits ? (data.totals.pageviews / data.totals.visits).toFixed(2) : '0.00';
+	// 大陆访客基本加载不出 Google 广告，海外占比是广告收入的前置指标
+	const cnPv = data.countries.find((c) => c.code === 'CN')?.pv ?? 0;
+	const overseasPv = Math.max(0, (data.countryTotal || 0) - cnPv);
+	const overseasPct = data.countryTotal ? ((overseasPv / data.countryTotal) * 100).toFixed(1) : '0.0';
 
 	return `
     <div class="kpi">
@@ -246,6 +254,11 @@ export function renderKpis(data, lang) {
       <div class="label">${esc(t.kpiRegions)}</div>
       <div class="value">${data.countries.length}+</div>
       <div class="delta flat">${esc(t.countriesIn30d)}</div>
+    </div>
+    <div class="kpi">
+      <div class="label">${esc(t.kpiOverseas)}</div>
+      <div class="value">${overseasPct}%</div>
+      <div class="delta flat">${esc(t.overseasPv(fmt(overseasPv)))}</div>
     </div>`;
 }
 
