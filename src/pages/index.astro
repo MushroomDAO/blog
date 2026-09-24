@@ -1,11 +1,12 @@
 ---
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
+import AdUnit from '../components/AdUnit.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { AD_LAYOUT_KEY_IN_FEED, AD_SLOT_IN_FEED, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -328,6 +329,16 @@ const postsData = posts.map(post => ({
 			.hidden-post {
 				display: none !important;
 			}
+			.in-feed-ad {
+				min-height: 200px;
+				background: linear-gradient(var(--gray-gradient)) no-repeat;
+				border-radius: 12px;
+				overflow: hidden;
+			}
+			.in-feed-ad .adsbygoogle {
+				display: block;
+				width: 100%;
+			}
 			.load-more {
 				text-align: center;
 				padding: 2em 0;
@@ -416,25 +427,32 @@ const postsData = posts.map(post => ({
 				</div>
 				<ul id="posts-list">
 					{listPosts.map((post, index) => (
-						<li data-category={post.data.category || 'Other'} data-index={index} class={index >= 12 ? 'hidden-post' : ''}>
-							<a href={`/blog/${post.id}/`}>
-								{post.data.heroImage && (
-									<Image width={720} height={360} src={post.data.heroImage} alt="" />
-								)}
-								<div class="meta-row">
-									<span class="category-small">{post.data.category}</span>
-									<span class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</span>
-								</div>
-								<h4 class="title">{post.data.title}</h4>
-								<div class="tags-bar">
-									{post.data.tags?.map(tag => (
-										<span class="tag-link">#{tag}</span>
-									))}
-								</div>
-							</a>
-						</li>
+						<>
+							<li data-category={post.data.category || 'Other'} data-index={index} class={index >= 12 ? 'hidden-post' : ''}>
+								<a href={`/blog/${post.id}/`}>
+									{post.data.heroImage && (
+										<Image width={720} height={360} src={post.data.heroImage} alt="" />
+									)}
+									<div class="meta-row">
+										<span class="category-small">{post.data.category}</span>
+										<span class="date">
+											<FormattedDate date={post.data.pubDate} />
+										</span>
+									</div>
+									<h4 class="title">{post.data.title}</h4>
+									<div class="tags-bar">
+										{post.data.tags?.map(tag => (
+											<span class="tag-link">#{tag}</span>
+										))}
+									</div>
+								</a>
+							</li>
+							{AD_SLOT_IN_FEED && index === 5 && (
+								<li class="in-feed-ad">
+									<AdUnit slot={AD_SLOT_IN_FEED} layout="in-feed" layoutKey={AD_LAYOUT_KEY_IN_FEED} />
+								</li>
+							)}
+						</>
 					))}
 				</ul>
 				<div id="load-more" class="load-more" style="display: none;">
@@ -547,7 +565,7 @@ const postsData = posts.map(post => ({
 					const postsList = document.getElementById('posts-list');
 					const selectedCategory = new URL(window.location.href).searchParams.get('category');
 					
-					const allHiddenPosts = Array.from(postsList.querySelectorAll('li.hidden-post'));
+					const allHiddenPosts = Array.from(postsList.querySelectorAll('li.hidden-post:not(.in-feed-ad)'));
 					const hiddenPosts = allHiddenPosts.filter(post => {
 						const category = post.getAttribute('data-category') || 'Other';
 						return !selectedCategory || category === selectedCategory;
@@ -570,7 +588,7 @@ const postsData = posts.map(post => ({
 					const selectedCategory = new URL(window.location.href).searchParams.get('category');
 					
 					let hiddenCount = 0;
-					postsList.querySelectorAll('li.hidden-post').forEach(post => {
+					postsList.querySelectorAll('li.hidden-post:not(.in-feed-ad)').forEach(post => {
 						const category = post.getAttribute('data-category') || 'Other';
 						if (!selectedCategory || category === selectedCategory) {
 							hiddenCount++;
@@ -599,7 +617,7 @@ const postsData = posts.map(post => ({
 					
 					const postsList = document.getElementById('posts-list');
 					const emptyState = document.getElementById('empty-state');
-					const allPosts = postsList.querySelectorAll('li');
+					const allPosts = postsList.querySelectorAll('li:not(.in-feed-ad)');
 					let visibleCount = 0;
 					let shownCount = 0;
 					
@@ -619,7 +637,11 @@ const postsData = posts.map(post => ({
 							post.classList.add('hidden-post');
 						}
 					});
-					
+
+					postsList.querySelectorAll('li.in-feed-ad').forEach(ad => {
+						ad.style.display = selectedCategory ? 'none' : '';
+					});
+
 					if (visibleCount === 0) {
 						postsList.style.display = 'none';
 						emptyState.style.display = '';
