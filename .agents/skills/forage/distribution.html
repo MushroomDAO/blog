@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>英文分发草稿</title>
+<style>
+:root{--bg:#faf9f7;--fg:#1a1a1a;--mut:#6b6b6b;--line:#e3e0da;--card:#fff;--acc:#c2410c;--ok:#2f8f5b;--code:#f3f1ec}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#eceae4;--mut:#9a978f;--line:#2f2d26;--card:#1e1c16;--acc:#fb923c;--ok:#4ade80;--code:#25231c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.62 -apple-system,"PingFang SC",system-ui,sans-serif;padding:1.5rem 1rem}
+.wrap{max-width:900px;margin:0 auto}
+h1{font-size:1.35rem;margin:0 0 .2rem}
+.sub{color:var(--mut);font-size:.83rem;margin-bottom:1.1rem}
+a{color:var(--acc)}
+button,select{font:inherit;font-size:.82rem;padding:.3rem .72rem;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg);cursor:pointer}
+button:hover{border-color:var(--acc);color:var(--acc)}
+.bar{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;margin-bottom:1rem}
+.card.posted{border-left:4px solid var(--ok)}
+.t{font-weight:600;font-size:1.02rem}
+.meta{color:var(--mut);font-size:.8rem;margin:.2rem 0 .6rem}
+.tabs{display:flex;gap:.3rem;border-bottom:1px solid var(--line);margin:.4rem 0 .7rem}
+.tabs button{border:none;border-bottom:2px solid transparent;border-radius:0;background:none;padding:.35rem .7rem}
+.tabs button.on{border-bottom-color:var(--acc);color:var(--acc);font-weight:600}
+.acts{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin-bottom:.6rem;font-size:.82rem}
+.acts .go{background:var(--acc);color:#fff;border-color:var(--acc);text-decoration:none;padding:.3rem .72rem;border-radius:6px}
+.sec{border:1px solid var(--line);border-radius:8px;margin-bottom:.55rem}
+.sec-h{display:flex;justify-content:space-between;align-items:center;gap:.5rem;padding:.35rem .6rem;background:var(--code);border-radius:8px 8px 0 0;font-size:.8rem;font-weight:600}
+.sec pre{margin:0;padding:.6rem .7rem;white-space:pre-wrap;word-break:break-word;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace}
+.note{font-size:.8rem;color:var(--mut);white-space:pre-wrap;margin:.2rem 0 .6rem}
+.mark{display:flex;gap:.4rem;align-items:center;margin-top:.6rem;font-size:.8rem;flex-wrap:wrap}
+.mark input{flex:1;min-width:14rem;font:inherit;font-size:.8rem;padding:.3rem .5rem;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+.chip{display:inline-block;font-size:.72rem;padding:.05rem .45rem;border-radius:4px;margin-right:.3rem;border:1px solid var(--line)}
+.chip.y{border-color:var(--ok);color:var(--ok)}
+.toast{position:fixed;bottom:1.2rem;left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:.4rem .9rem;border-radius:6px;font-size:.82rem;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+details.readme{margin-bottom:1rem}
+details.readme summary{cursor:pointer;font-weight:600;font-size:.9rem;margin-bottom:.4rem}
+.md table{border-collapse:collapse;font-size:.8rem;margin:.5rem 0}
+.md td,.md th{border:1px solid var(--line);padding:.25rem .45rem;vertical-align:top}
+.md code{background:var(--code);padding:0 .25rem;border-radius:3px;font-size:.85em}
+.empty{color:var(--mut);padding:2rem 0;text-align:center}
+</style></head><body><div class="wrap">
+<h1>📣 英文分发草稿</h1>
+<div class="sub">每周一自动筛选、写草稿，<b>不会自动发帖</b>。用自己的账号发完后，把帖子链接填回来记账。
+  <a href="/">← 回评审台</a></div>
+<div class="bar"><label>周次 <select id="week" onchange="load(this.value)" aria-label="Select week"></select></label></div>
+<details class="readme" id="readme-box" open><summary>本周总结：所有候选的判断和发帖建议</summary><div class="md card" id="readme"></div></details>
+<div id="list"></div>
+<div class="toast" id="toast"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+<script>
+const esc = s => String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const PLAT = {hn:'Hacker News', reddit:'Reddit', devto:'dev.to'};
+let DATA = null; const TEXT = {};
+
+// 页面走 Tailscale IP 的 http，不是安全上下文，navigator.clipboard 不可用，用 textarea 兜底
+function copyText(s){
+  const done = ok => toast(ok ? '已复制' : '复制失败，请手动选择');
+  if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(s).then(()=>done(true), ()=>done(false));
+  const ta = document.createElement('textarea'); ta.value = s; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select(); let ok=false; try{ ok=document.execCommand('copy'); }catch(e){}
+  ta.remove(); done(ok);
+}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1200);}
+
+// 草稿格式：「**标签**」单独一行开启一段，直到下一个标签或 ---。
+// Body 段是帖子正文，一直到文件结尾，正文里的加粗小标题不能被切开。
+function sections(md){
+  const out=[]; let cur={label:'说明',lines:[]};
+  for (const line of md.split('\n')){
+    if (/^#\s/.test(line) && !/^body$/i.test(cur.label)) continue;
+    if (/^body$/i.test(cur.label)){ cur.lines.push(line); continue; }
+    const m = line.match(/^\*\*(.+?)\*\*\s*$/);
+    if (m || /^---\s*$/.test(line)){
+      if (cur.lines.join('').trim()) out.push({label:cur.label, text:cur.lines.join('\n').trim()});
+      cur = {label: m ? m[1] : '说明', lines:[]};
+    } else cur.lines.push(line);
+  }
+  if (cur.lines.join('').trim()) out.push({label:cur.label, text:cur.lines.join('\n').trim()});
+  return out;
+}
+const find = (secs, re) => secs.find(s => re.test(s.label));
+
+function platformLink(pf, md, it){
+  const secs = sections(md);
+  if (pf==='hn'){
+    const t = find(secs,/^title/i), u = find(secs,/^url$/i);
+    const url = u ? u.text.split('\n')[0].trim() : it.blogUrl;
+    const q = `u=${encodeURIComponent(url)}` + (t ? `&t=${encodeURIComponent(t.text.split('\n')[0].trim())}` : '');
+    return `<a class="go" href="https://news.ycombinator.com/submitlink?${q}" target="_blank" rel="noopener" title="Open Hacker News submit form prefilled with title and URL">去 HN 提交（已预填）</a>`;
+  }
+  if (pf==='reddit'){
+    const sub = (secs.map(s=>s.label).join(' ').match(/r\/([A-Za-z0-9_]+)/)||[])[1];
+    const t = find(secs,/^title/i);
+    if (!sub) return '';
+    const q = t ? `?title=${encodeURIComponent(t.text.split('\n')[0].trim())}` : '';
+    return `<a class="go" href="https://www.reddit.com/r/${sub}/submit${q}" target="_blank" rel="noopener" title="Open the subreddit submit page">去 r/${esc(sub)} 发帖</a>`;
+  }
+  return `<a class="go" href="https://dev.to/new" target="_blank" rel="noopener" title="Open the dev.to editor">去 dev.to 新建文章</a>`;
+}
+
+function renderPanel(it, pf){
+  const md = it.files[pf], raw = `/distribution/raw/${DATA.week}/${it.slug}/${pf}.md`;
+  const key = `${it.slug}:${pf}`; TEXT[key] = md;
+  let body;
+  if (pf==='devto'){
+    body = `<div class="sec"><div class="sec-h">完整文章（含 front matter，直接粘进 dev.to 编辑器）<button onclick="copyText(TEXT['${key}'])" title="Copy the full article">复制全文</button></div><pre>${esc(md)}</pre></div>`;
+  } else {
+    body = sections(md).map((s,i)=>{
+      const k = `${key}:${i}`; TEXT[k] = s.text;
+      return `<div class="sec"><div class="sec-h">${esc(s.label)}<button onclick="copyText(TEXT['${k}'])" title="Copy this section">复制</button></div><pre>${esc(s.text)}</pre></div>`;
+    }).join('');
+  }
+  const posted = ((it.ledger||{}).posts||{})[pf];
+  return `<div class="acts">${platformLink(pf, md, it)}
+      <a href="${raw}" target="_blank" title="Open the raw draft file">草稿原文地址</a></div>
+    ${body}
+    <div class="mark">发帖链接：<input type="text" id="mk-${esc(it.slug)}-${pf}" value="${esc(posted?posted.link:'')}" placeholder="发完后把帖子地址贴在这里" aria-label="Post URL">
+      <button onclick="mark('${esc(it.slug)}','${pf}')" title="Save the post link">${posted?'更新':'标记已发布'}</button></div>`;
+}
+
+function render(){
+  const L = document.getElementById('list'); L.innerHTML='';
+  const rb = document.getElementById('readme'), box = document.getElementById('readme-box');
+  box.hidden = !DATA.readme;
+  if (DATA.readme) rb.innerHTML = window.marked ? marked.parse(DATA.readme) : `<pre>${esc(DATA.readme)}</pre>`;
+  if (!DATA.items.length){ L.innerHTML = `<div class="empty">${DATA.week?'这一周没有选中的文章':'还没有草稿，等周一的任务跑完'}</div>`; return; }
+  DATA.items.forEach(it=>{
+    const pfs = Object.keys(PLAT).filter(p=>it.files[p]);
+    const posts = (it.ledger||{}).posts||{};
+    const c = document.createElement('div');
+    c.className = 'card' + (Object.keys(posts).length ? ' posted' : '');
+    c.innerHTML = `<div class="t">${esc(it.titleEn)}</div>
+      <div class="meta"><a href="${esc(it.blogUrl)}" target="_blank" rel="noopener">${esc(it.blogUrl)}</a><br>
+        ${pfs.map(p=>`<span class="chip ${posts[p]?'y':''}">${PLAT[p]} ${posts[p]?'已发':'未发'}</span>`).join('')}</div>
+      <div class="tabs">${pfs.map((p,i)=>`<button class="${i?'':'on'}" data-pf="${p}" title="Show ${PLAT[p]} draft">${PLAT[p]}</button>`).join('')}</div>
+      <div class="panel"></div>`;
+    const panel = c.querySelector('.panel');
+    const show = pf => { panel.innerHTML = renderPanel(it, pf);
+      c.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on', b.dataset.pf===pf)); };
+    c.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>show(b.dataset.pf));
+    if (pfs.length) show(pfs[0]);
+    L.appendChild(c);
+  });
+}
+
+async function mark(slug, pf){
+  const link = document.getElementById(`mk-${slug}-${pf}`).value.trim();
+  const r = await fetch('/api/distribution/mark',{method:'POST',headers:{'Content-Type':'application/json','X-Forage':'1'},
+    body:JSON.stringify({slug, platform:pf, link})});
+  const d = await r.json().catch(()=>({}));
+  if (!r.ok){ toast(d.error||'保存失败'); return; }
+  toast(link?'已记为已发布':'已清除'); load(DATA.week);
+}
+
+async function load(week){
+  DATA = await fetch('/api/distribution'+(week?`?week=${encodeURIComponent(week)}`:'')).then(r=>r.json());
+  const sel = document.getElementById('week');
+  sel.innerHTML = DATA.weeks.map(w=>`<option ${w===DATA.week?'selected':''}>${esc(w)}</option>`).join('');
+  render();
+}
+load();
+</script></body></html>

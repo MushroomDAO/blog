@@ -10,7 +10,7 @@
 """
 import http.server, json, os, re, shutil, sqlite3, subprocess, sys, threading, webbrowser
 from datetime import datetime, timezone
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from store import DB, DIMS, conn
@@ -109,6 +109,72 @@ def start_write_job():
     return 200, j
 
 
+# ---- 英文分发草稿（distribute/run-weekly.sh 产出）---------------------------
+DIST = os.path.join(ROOT, "radar", "distribution")
+DIST_LEDGER = os.path.join(DIST, "ledger.json")
+DIST_FILES = ("hn.md", "reddit.md", "devto.md")
+WEEK_RE = re.compile(r"^\d{4}-W\d{2}$")
+SLUG_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
+
+
+def dist_ledger():
+    try:
+        return json.load(open(DIST_LEDGER, encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def dist_weeks():
+    if not os.path.isdir(DIST):
+        return []
+    return sorted((w for w in os.listdir(DIST) if WEEK_RE.match(w)), reverse=True)
+
+
+def dist_week(week):
+    wdir = os.path.join(DIST, week)
+    titles = {}
+    try:
+        for c in json.load(open(os.path.join(wdir, "candidates.json"), encoding="utf-8"))["candidates"]:
+            titles[c["slug"]] = c.get("titleEn") or c["slug"]
+    except (OSError, ValueError, KeyError):
+        pass
+    ledger = dist_ledger()
+    items = []
+    for slug in sorted(os.listdir(wdir)):
+        sdir = os.path.join(wdir, slug)
+        if not (SLUG_RE.match(slug) and os.path.isdir(sdir)):
+            continue
+        files = {f: open(os.path.join(sdir, f), encoding="utf-8").read()
+                 for f in DIST_FILES if os.path.exists(os.path.join(sdir, f))}
+        items.append({"slug": slug, "titleEn": titles.get(slug, slug),
+                      "blogUrl": f"https://blog.mushroom.cv/blog/{slug}/",
+                      "ledger": ledger.get(slug, {}), "files": files})
+    readme = os.path.join(wdir, "README.md")
+    return {"week": week, "weeks": dist_weeks(), "items": items,
+            "readme": open(readme, encoding="utf-8").read() if os.path.exists(readme) else ""}
+
+
+def dist_mark(d):
+    slug, platform, link = d.get("slug", ""), d.get("platform", ""), (d.get("link") or "").strip()
+    if not SLUG_RE.match(slug) or platform not in ("hn", "reddit", "devto"):
+        return 400, {"error": "bad slug/platform"}
+    if link and not re.match(r"^https?://", link):
+        return 400, {"error": "链接要以 http(s):// 开头"}
+    ledger = dist_ledger()
+    e = ledger.setdefault(slug, {})
+    posts = e.setdefault("posts", {})
+    if link:
+        posts[platform] = {"link": link, "at": now()}
+    else:
+        posts.pop(platform, None)
+    e["status"] = "posted" if posts else "drafted"
+    tmp = DIST_LEDGER + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(ledger, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, DIST_LEDGER)
+    return 200, {"ok": True, "ledger": e}
+
+
 class H(http.server.BaseHTTPRequestHandler):
     def log_message(self, *a):
         pass  # 别把终端刷满
@@ -138,6 +204,23 @@ class H(http.server.BaseHTTPRequestHandler):
             return self._send(200, json.dumps(s, ensure_ascii=False))
         if p == "/api/job":
             return self._send(200, json.dumps(job_status(), ensure_ascii=False))
+        if p in ("/distribution", "/distribution/"):
+            return self._send(200, open(os.path.join(HERE, "distribution.html"), "rb").read(),
+                              "text/html; charset=utf-8")
+        if p == "/api/distribution":
+            weeks = dist_weeks()
+            week = (parse_qs(urlparse(self.path).query).get("week") or [""])[0] or (weeks[0] if weeks else "")
+            if not WEEK_RE.match(week) or week not in weeks:
+                return self._send(200, json.dumps({"week": "", "weeks": weeks, "items": [], "readme": ""}))
+            return self._send(200, json.dumps(dist_week(week), ensure_ascii=False))
+        # 每份草稿一个可直接打开的地址：/distribution/raw/<week>/<slug>/<file>
+        m = re.match(r"^/distribution/raw/([^/]+)/([^/]+)/([^/]+)$", p)
+        if m:
+            week, slug, fn = m.groups()
+            if WEEK_RE.match(week) and SLUG_RE.match(slug) and fn in DIST_FILES:
+                fp = os.path.join(DIST, week, slug, fn)
+                if os.path.exists(fp):
+                    return self._send(200, open(fp, "rb").read(), "text/plain; charset=utf-8")
         return self._send(404, json.dumps({"error": "not found"}))
 
     def do_POST(self):
@@ -151,6 +234,16 @@ class H(http.server.BaseHTTPRequestHandler):
                 code, body = start_write_job()
             return self._send(code, json.dumps(body, ensure_ascii=False))
         n = int(self.headers.get("Content-Length", 0))
+        if p == "/api/distribution/mark":
+            if self.headers.get("X-Forage") != "1":
+                return self._send(403, json.dumps({"error": "forbidden"}))
+            try:
+                d = json.loads(self.rfile.read(n) or b"{}")
+            except Exception:
+                return self._send(400, json.dumps({"error": "bad json"}))
+            with START_LOCK:
+                code, body = dist_mark(d)
+            return self._send(code, json.dumps(body, ensure_ascii=False))
         try:
             d = json.loads(self.rfile.read(n) or b"{}")
         except Exception:
