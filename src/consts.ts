@@ -8,5 +8,6 @@ export const SITE_DESCRIPTION = 'Mycelium Protocol 技术博客：AI 代理、We
 // 去 AdSense 后台「广告 → 按广告单元 → 新建广告单元」建好对应类型后把值填进来。
 export const AD_CLIENT = 'ca-pub-3323568150935057';
 export const AD_SLOT_IN_ARTICLE = '6860537295'; // In-article ads：嵌入文章正文末尾
+export const AD_SLOT_IN_ARTICLE_MID = '8250776050'; // In-article ads：正文中段（h2 标题前）
 export const AD_SLOT_IN_FEED = '5739027316'; // In-feed ads：嵌入 /blog 列表页信息流
 export const AD_LAYOUT_KEY_IN_FEED = '-6t+ed+2i-1n-4w'; // In-feed ads 专属，建单元时 AdSense 生成
