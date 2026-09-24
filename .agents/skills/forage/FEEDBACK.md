@@ -417,3 +417,30 @@ banner_prompt 里别出现 Chinese text/manuscript/page 之类会诱发画字的
 - 3 篇 build → 校验 → deploy → 线上 200 → commit+push → 语义索引 全部成功。
 - garmin 稿：实测发现全新安装 mcp 2.x 导致 ImportError、execute_sql 的 WITH…DELETE 可写入，
   均已如实写进文章；未用真实 Garmin 账号，联网链路未实测，文中已标注。
+
+## 2026-09-24 写稿批次（用户标 3 条写）
+
+用户标了 3 条「写」（EXXETA/exxperts、yandex/AliceAI-Foundation-80B-A3B-Base、nvidia/Nemotron-3-Diarization，
+均无批注），3 条全部写完并发布：blog 线上 200 + push + 公众号草稿 3 篇全部建成（40164 本次没出现）。
+
+### 正文插图全部缺失：Codex 额度耗尽
+- `figs.sh` 启动 6 秒即退出，codex 日志：`You've hit your usage limit ... try again at Sep 30th, 2026 11:32 PM`。
+- 3 篇都只有 FLUX banner，`insert.py` 已按设计删掉 FIG 占位。额度恢复后可补图：
+  `bash .agents/skills/forage/write/figs.sh <slug>` → `insert.py <slug>`（稿子已在 src/content/blog，需先重新加占位或手插图片语法）→ 重发布。
+  交接 JSON 的 figs 描述留在 radar/staging/<slug>.json。
+- 建议：`figs.sh` 在日志里识别 usage limit 直接报「额度耗尽」，别只报「仓库里没有图」。
+
+### 采集侧问题
+- HF 两条的许可证采集显示「未声明」，实际分别是 Apache-2.0（AliceAI，LICENSE 文件）和 OpenMDW-1.1
+  （Nemotron-3-Diarization，模型卡）。HF 条目的 lic 应读 cardData.license / tags 里的 `license:` 前缀，
+  AliceAI 的 descr 里就带着 `license:apache-2.0`。
+- 查重脚本把「https」「github.com」当实体名命中知识库，每条都报 3 个假重复，实体抽取要过滤 URL 片段。
+
+### 子 agent 又撞 worktree guard（第 5 次）
+3 个子 agent 写 radar/staging 都被拦，各建临时 worktree，主会话 cp 回来后已 `git worktree remove`。
+
+### 值得记一笔的实测
+- Nemotron-3-Diarization：模型卡指向的 NeMo-Speech.cpp v0.1.0 跑不了（`pre_ln transformer variant is not supported`），
+  需源码构建 main；M4 Metal v3-offline 10 分钟音频 3.1 秒。
+- AliceAI 分词器：142 段纯中文比 Qwen3-Next 多 58% token。
+- exxperts：npm ci + build + 30 个冒烟测试本机通过。
