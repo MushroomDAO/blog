@@ -104,6 +104,8 @@ title: "中文标题"
 titleEn: "English Title"
 description: "中文描述"
 descriptionEn: "English description"
+wechatTitle: "公众号标题，≤30字"
+wechatDigest: "公众号摘要，≤54字，一句完整的话"
 pubDate: "YYYY-MM-DD"
 updatedDate: "YYYY-MM-DD"
 category: "Tech-News"
@@ -111,6 +113,27 @@ tags: ["tag1", "tag2", "tag3"]
 heroImage: "../../assets/images/SLUG-banner.jpg"
 ---
 ```
+
+## WeChat 搜一搜 Rules (Critical)
+
+Source: WeChat's official 搜一搜 tutorials, summarized in `docs/WECHAT-SOUSOU-RULES.md`.
+`scripts/publish-blog.sh` runs `node pipeline/m2/wechat-lint.js` and **fails** when
+`wechatTitle`/`wechatDigest` is missing or too long (articles dated 2026-09-25+;
+older articles are not backfilled and only get warnings).
+
+- **`wechatTitle` ≤30 字**: 实体名 + 一句核心结论. The blog `title` stays as-is for
+  SEO; WeChat search truncates long titles and penalizes keyword stacking.
+  - Good: `AgentJev-0.6B：小模型决策准确率超过 Laya`
+  - Bad: `AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92%`
+  - No clickbait (震惊/炸裂/王炸/看完…), no title unrelated to the opening.
+- **`wechatDigest` ≤54 字**, one complete sentence (shown under the title in search/share cards).
+- **First sentence = plain-language "what is it / what problem does it solve"**.
+  Put `owner/repo`, license, and star count in the second sentence, not the first.
+- **Bold sparingly**: at most 1 bold per H2 section, only on the conclusion sentence
+  (bold renders in the theme color in WeChat; lint warns above 3/千字 or 12 total).
+- **Originality**: every teardown needs at least one paragraph of our own verification
+  or independent conclusion. WeChat ranks declared-original articles first for identical
+  content, and 原创 only holds if the content really is ours.
 
 ## WeChat Link Rule (Critical)
 
@@ -553,6 +576,8 @@ Before deploy:
 - [ ] image filename is English only
 - [ ] `titleEn` exists
 - [ ] `descriptionEn` exists
+- [ ] `wechatTitle` ≤30 字、`wechatDigest` ≤54 字 (`node pipeline/m2/wechat-lint.js <md>` passes)
+- [ ] first sentence says what it is in plain language; ≤1 bold per H2 section
 - [ ] `pubDate` is today for a new article
 - [ ] `updatedDate` is set
 - [ ] `category` is set

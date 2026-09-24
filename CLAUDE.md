@@ -102,6 +102,7 @@ pnpm preview          # 预览构建结果
 
 - 所有文章文件名必须用英文（不允许中文文件名）
 - Frontmatter 字段：`title`、`description`、`pubDate`、`category`、`tags`、`lang`
+- 公众号专用字段 `wechatTitle`（≤30 字）、`wechatDigest`（≤54 字），2026-09-25 起新文章必填；规则见 `docs/WECHAT-SOUSOU-RULES.md`
 - 5 个分类：`Tech-Experiment`、`Progress-Report`、`Research`、`Tech-News`、`Other`
 - 双语文章格式：中文主体 + `<!--EN-->` 分隔符后接英文版
 

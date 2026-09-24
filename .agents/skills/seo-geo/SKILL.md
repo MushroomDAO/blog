@@ -65,6 +65,7 @@ grep -E "^(title|description|titleEn|descriptionEn|tags|pubDate|category):" "$FI
 - [ ] H2/H3 层次清晰，不超过 3 级
 - [ ] **标题包含关键词**（尤其是 H2）
 - [ ] 文章开头 100 字内包含核心关键词
+- [ ] 公众号：`wechatTitle` ≤30 字不堆关键词、`wechatDigest` ≤54 字完整一句、每个 H2 小节最多 1 处加粗（见 docs/WECHAT-SOUSOU-RULES.md）
 - [ ] 内链：引用本站其他相关文章（PageRank 分发）
 - [ ] 外链：引用权威来源（增加可信度）
 

@@ -186,10 +186,10 @@ function generateDisclaimer(theme) {
 `;
 }
 
-// 生成顶部 watermark
-function generateHeaderWatermark() {
+// 原文出处标记。放在正文之后：搜一搜不建议正文前出现推广类内容
+function generateSourceNote() {
   return `
-<div style="text-align:center;margin-bottom:20px;padding:12px;background:#fafaf9;border-radius:8px;border:1px dashed #ddd;">
+<div style="text-align:center;margin-top:32px;padding:12px;background:#fafaf9;border-radius:8px;border:1px dashed #ddd;">
   <span style="font-size:14px;color:#666;">🍄 原文发布于 blog.mushroom.cv</span>
 </div>
 `;
@@ -422,8 +422,7 @@ async function render(markdown, themeName = null, wechatClient = null) {
   // 渲染
   let html = marked.parse(content);
   
-  // 添加顶部 watermark
-  const headerWatermark = generateHeaderWatermark();
+  const sourceNote = generateSourceNote();
   
   // 添加免责声明（正文之后，品牌条之前）
   const disclaimer = generateDisclaimer(theme);
@@ -432,7 +431,7 @@ async function render(markdown, themeName = null, wechatClient = null) {
   const footerBanner = generateFooterBanner(theme);
 
   // 包裹外层容器
-  html = `<section style="background:rgba(0,0,0,0.02);border-radius:12px;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;">${headerWatermark}${html}${disclaimer}${footerBanner}</section>`;
+  html = `<section style="background:rgba(0,0,0,0.02);border-radius:12px;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;">${html}${sourceNote}${disclaimer}${footerBanner}</section>`;
   
   return {
     frontmatter,

@@ -16,6 +16,9 @@ const blog = defineCollection({
 			description: z.string(),
 			// 英文描述
 			descriptionEn: z.string().optional(),
+			// 公众号专用标题/摘要（≤30 / ≤54 字），见 docs/WECHAT-SOUSOU-RULES.md
+			wechatTitle: z.string().optional(),
+			wechatDigest: z.string().optional(),
 			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),

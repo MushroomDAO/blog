@@ -131,6 +131,9 @@ if [ ! -f "$(python3 -c "import os;print(os.path.normpath('$hero_path'))")" ]; t
   echo "      bash .agents/skills/banner-creator/generate-banner.sh \"$SLUG\" \"<english scene prompt>\""
   fm_fail=1
 fi
+# WeChat 搜一搜 rules (docs/WECHAT-SOUSOU-RULES.md): wechatTitle/wechatDigest
+# are required for articles dated 2026-09-25+; older ones only get warnings.
+node pipeline/m2/wechat-lint.js "$MD_FILE" || fm_fail=1
 [ "$fm_fail" -eq 0 ] || { echo "❌ frontmatter/SEO checks failed — fix and rerun"; exit 1; }
 echo "  ✓ frontmatter OK (tags=$tagcount, bilingual, banner present)"
 

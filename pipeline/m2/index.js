@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const { render, getRandomTheme, THEMES } = require('./renderer/wechat-renderer');
 const { WeChatClient } = require('./wechat-api/client');
+const { lint } = require('./wechat-lint');
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
@@ -50,6 +51,9 @@ async function publish(markdownFile, options = {}) {
   // 读取并渲染 Markdown
   console.log('[2/5] Rendering markdown...');
   const markdown = fs.readFileSync(markdownFile, 'utf-8');
+  // 搜一搜规则检查：这里只打印，拦截在 scripts/publish-blog.sh 里做
+  const check = lint(markdown);
+  check.errors.concat(check.warnings).forEach((m) => console.warn(`   ⚠️ ${m}`));
   
   // 如果没有指定主题，使用随机主题
   const selectedTheme = theme || getRandomTheme();
@@ -60,6 +64,8 @@ async function publish(markdownFile, options = {}) {
   // 渲染（异步，可能包含图片上传）
   const result = await render(markdown, selectedTheme, wechat);
   
+  // 公众号标题优先用 wechatTitle，博客的 title 为 SEO 服务，通常更长
+  result.title = check.title;
   console.log(`   Title: ${result.title}`);
   console.log(`   Theme: ${THEMES[result.theme].name} (${result.theme})`);
   
@@ -83,9 +89,7 @@ async function publish(markdownFile, options = {}) {
   
   // 发布草稿
   console.log('[4/5] Creating draft...');
-  const digest = result.frontmatter.description 
-    ? result.frontmatter.description.substring(0, 60) 
-    : '';
+  const digest = check.digest;
   
   try {
     const draft = await wechat.createDraft({
