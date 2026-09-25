@@ -1,286 +1,167 @@
 {
-  "generatedAt": "2026-09-24T14:00:00Z",
+  "generatedAt": "2026-09-25T14:00:01Z",
   "period": {
-    "start": "2026-08-25",
-    "end": "2026-09-24"
+    "start": "2026-08-26",
+    "end": "2026-09-25"
   },
   "totals": {
-    "pageviews": 17000,
-    "visits": 16000,
+    "pageviews": 10000,
+    "visits": 10000,
     "bots": 0
   },
   "last7": {
-    "pv": 8000,
-    "visits": 7000
+    "pv": 10000,
+    "visits": 10000
   },
   "prior7": {
-    "pv": 9000,
-    "visits": 9000
+    "pv": 0,
+    "visits": 0
   },
   "daily": [
     {
-      "date": "08-27",
-      "pv": 2000,
-      "visits": 2000
-    },
-    {
-      "date": "08-28",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "date": "08-30",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "date": "08-31",
-      "pv": 2000,
-      "visits": 2000
-    },
-    {
-      "date": "09-01",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "date": "09-03",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "date": "09-06",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "date": "09-10",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
       "date": "09-13",
-      "pv": 2000,
-      "visits": 2000
-    },
-    {
-      "date": "09-16",
-      "pv": 1000,
-      "visits": 0
-    },
-    {
-      "date": "09-19",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "date": "09-20",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "date": "09-21",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "date": "09-23",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 10000,
+      "visits": 10000
     }
   ],
-  "countries": [],
-  "countryTotal": 0,
+  "countries": [
+    {
+      "code": "SG",
+      "flag": "🇸🇬",
+      "name": "新加坡",
+      "nameEn": "Singapore",
+      "pv": 6550,
+      "visits": 6440
+    },
+    {
+      "code": "CN",
+      "flag": "🇨🇳",
+      "name": "中国",
+      "nameEn": "China",
+      "pv": 4390,
+      "visits": 3810
+    },
+    {
+      "code": "US",
+      "flag": "🇺🇸",
+      "name": "美国",
+      "nameEn": "United States",
+      "pv": 1090,
+      "visits": 980
+    },
+    {
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "pv": 810,
+      "visits": 750
+    },
+    {
+      "code": "JP",
+      "flag": "🇯🇵",
+      "name": "日本",
+      "nameEn": "Japan",
+      "pv": 620,
+      "visits": 520
+    },
+    {
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "pv": 360,
+      "visits": 140
+    },
+    {
+      "code": "TW",
+      "flag": "🇹🇼",
+      "name": "台湾",
+      "nameEn": "Taiwan",
+      "pv": 300,
+      "visits": 280
+    },
+    {
+      "code": "AE",
+      "flag": "🇦🇪",
+      "name": "阿联酋",
+      "nameEn": "United Arab Emirates",
+      "pv": 80,
+      "visits": 80
+    },
+    {
+      "code": "NL",
+      "flag": "🇳🇱",
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "pv": 80,
+      "visits": 80
+    },
+    {
+      "code": "MY",
+      "flag": "🇲🇾",
+      "name": "马来西亚",
+      "nameEn": "Malaysia",
+      "pv": 70,
+      "visits": 40
+    },
+    {
+      "code": "PE",
+      "flag": "🇵🇪",
+      "name": "PE",
+      "nameEn": "PE",
+      "pv": 60,
+      "visits": 60
+    },
+    {
+      "code": "FR",
+      "flag": "🇫🇷",
+      "name": "法国",
+      "nameEn": "France",
+      "pv": 60,
+      "visits": 60
+    }
+  ],
+  "countryTotal": 14910,
   "referers": {
-    "direct": 8860,
-    "search": 4860,
+    "direct": 8970,
+    "search": 4730,
     "ecosystem": 1260,
     "ai": 40,
     "other": 120
   },
-  "pages": [
-    {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 620,
-      "visits": 380
-    },
-    {
-      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
-      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
-      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 350,
-      "visits": 340
-    },
-    {
-      "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
-      "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
-      "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
-      "pv": 280,
-      "visits": 240
-    },
-    {
-      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
-      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
-      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
-      "pv": 210,
-      "visits": 210
-    },
-    {
-      "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
-      "titleEn": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
-      "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
-      "pv": 190,
-      "visits": 190
-    },
-    {
-      "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
-      "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
-      "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
-      "pv": 190,
-      "visits": 170
-    },
-    {
-      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
-      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
-      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
-      "pv": 180,
-      "visits": 180
-    },
-    {
-      "title": "Jev Browser Use：Jev 负责点击导航，Codex 负责思考验收，浏览器自动化快 5-10 倍",
-      "titleEn": "Jev Browser Use: Jev Clicks and Navigates, Codex Thinks and Verifies — 5-10x Faster Browser Automation",
-      "path": "/blog/jev-browser-use-jev-clicks-codex-thinks-browser-automation-skill/",
-      "pv": 180,
-      "visits": 180
-    },
-    {
-      "title": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题",
-      "titleEn": "Kev: Jared Palmer's Open-Source Local Decision Model — One Forward Pass, Many Questions",
-      "path": "/blog/kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora/",
-      "pv": 160,
-      "visits": 150
-    },
-    {
-      "title": "Marble 开源儿童课程知识图谱：1590 个微话题 + 3221 条前置关系，对齐主流课标",
-      "titleEn": "Marble's Open-Source Children's Curriculum Knowledge Graph: 1,590 Micro-Topics and 3,221 Prerequisite Links",
-      "path": "/blog/marble-os-taxonomy-children-curriculum-knowledge-graph/",
-      "pv": 150,
-      "visits": 150
-    },
-    {
-      "title": "search",
-      "titleEn": "search",
-      "path": "/search/",
-      "pv": 140,
-      "visits": 20
-    },
-    {
-      "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
-      "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
-      "path": "/blog/hitchhikers-guide-agentic-ai-book/",
-      "pv": 130,
-      "visits": 130
-    },
-    {
-      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
-      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
-      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 130,
-      "visits": 120
-    },
-    {
-      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
-      "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
-      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
-      "pv": 130,
-      "visits": 130
-    },
-    {
-      "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
-      "titleEn": "M1 Max 64GB Local AI Complete Guide: Qwen3 Model Selection, Memory Management & Multi-Model Scheduling",
-      "path": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
-      "pv": 130,
-      "visits": 130
-    }
-  ],
+  "pages": [],
   "devices": [
     {
       "label": "desktop",
-      "count": 16000
-    },
-    {
-      "label": "mobile",
-      "count": 1000
+      "count": 10000
     }
   ],
   "os": [
     {
       "label": "Windows",
-      "count": 11900
+      "count": 11220
     },
     {
       "label": "MacOSX",
-      "count": 2700
+      "count": 1980
     },
     {
       "label": "Unknown",
-      "count": 800
+      "count": 820
     },
     {
       "label": "Linux",
-      "count": 300
+      "count": 420
     },
     {
       "label": "Android",
-      "count": 300
+      "count": 370
     },
     {
       "label": "iOS",
-      "count": 200
+      "count": 310
     }
   ],
-  "browsers": [
-    {
-      "label": "Chrome",
-      "count": 10300
-    },
-    {
-      "label": "Edge",
-      "count": 2840
-    },
-    {
-      "label": "Unknown",
-      "count": 810
-    },
-    {
-      "label": "Safari",
-      "count": 380
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 360
-    },
-    {
-      "label": "MobileSafari",
-      "count": 190
-    },
-    {
-      "label": "ChromeMobileWebview",
-      "count": 100
-    },
-    {
-      "label": "Firefox",
-      "count": 80
-    },
-    {
-      "label": "ChromeDerivative",
-      "count": 40
-    },
-    {
-      "label": "ChromeHeadless",
-      "count": 40
-    }
-  ]
+  "browsers": []
 }
