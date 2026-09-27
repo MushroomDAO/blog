@@ -475,6 +475,29 @@ git commit --amend --no-edit 2>/dev/null || git commit -m "feat(blog): publish S
 
 Skip the commit if nothing is staged (no error).
 
+### 7.6. Update Semantic Search Index (不可跳过)
+
+部署成功后把这篇文章写进语义搜索索引（Vectorize），否则 `/api/search` 和 mushroom
+skill 的语义检索搜不到它。`scripts/publish-blog.sh` 的 [4.7] 会自动做这一步，
+**但走 Fast Path 手动 build/deploy 时必须手动跑**——2026-09-27 发现连续 8 篇文章
+都走了 Fast Path、全漏了索引。
+
+```bash
+set -a; source .env; set +a
+python3 semantic-search/scripts/incremental-index.py --slug SLUG --upsert
+```
+
+- 只 embed 这一篇内容变了的语言版本（zh/en），没变就跳过，不花钱
+- 输出里要看到 `upserted ...: True` 和 `updated manifest for 1 article(s)`
+- 失败不影响已上线的文章，但要在汇报里说明「语义索引未更新」，事后补跑
+- 刚写入后几十秒内可能还搜不到（Vectorize 最终一致 + 查询缓存），不算失败
+
+不确定之前有没有漏的，去掉 `--slug` 先 dry-run 全库对账（只读，免费）：
+`python3 semantic-search/scripts/incremental-index.py`，有差异再加 `--upsert`。
+
+MCP 关键词索引（`/api/mcp` 的 `search_posts`）是构建时生成的，deploy 之后自动就是最新的，
+不需要额外操作。
+
 ### 8. Create WeChat Draft Last
 
 Only run this after the final Blog slug and URL are confirmed.
@@ -590,6 +613,7 @@ After deploy:
 - [ ] **`curl -I https://blog.mushroom.cv/blog/SLUG/` 返回 200** (deploy 是否成功的唯一标准，commit 不算)
 - [ ] `/blog/` list shows the new article at or near the top
 - [ ] no old slug remains as an independent article
+- [ ] **语义索引已更新** — `incremental-index.py --slug SLUG --upsert` 输出 `upserted ...: True`（publish-blog.sh 的 [4.7] 自动做；Fast Path 必须手动跑）
 - [ ] WeChat draft is created from the final slug
 - [ ] git commit includes the article file and banner
 
