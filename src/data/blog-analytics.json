@@ -1,244 +1,292 @@
 {
-  "generatedAt": "2026-09-26T14:00:00Z",
+  "generatedAt": "2026-09-27T14:00:01Z",
   "period": {
-    "start": "2026-08-27",
-    "end": "2026-09-26"
+    "start": "2026-08-28",
+    "end": "2026-09-27"
   },
   "totals": {
-    "pageviews": 15800,
-    "visits": 14600,
+    "pageviews": 15420,
+    "visits": 14150,
     "bots": 40
   },
   "last7": {
-    "pv": 4000,
-    "visits": 3700
+    "pv": 4150,
+    "visits": 3720
   },
   "prior7": {
-    "pv": 4300,
-    "visits": 4000
+    "pv": 4350,
+    "visits": 4120
   },
   "daily": [
     {
-      "date": "08-27",
-      "pv": 100,
-      "visits": 100
-    },
-    {
       "date": "08-28",
-      "pv": 400,
-      "visits": 400
+      "pv": 30,
+      "visits": 30
     },
     {
       "date": "08-29",
       "pv": 300,
-      "visits": 300
+      "visits": 280
     },
     {
       "date": "08-30",
-      "pv": 400,
-      "visits": 400
+      "pv": 350,
+      "visits": 350
     },
     {
       "date": "08-31",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 540,
+      "visits": 540
     },
     {
       "date": "09-01",
-      "pv": 600,
-      "visits": 600
+      "pv": 380,
+      "visits": 340
     },
     {
       "date": "09-02",
-      "pv": 500,
-      "visits": 500
+      "pv": 490,
+      "visits": 380
     },
     {
       "date": "09-03",
-      "pv": 600,
-      "visits": 500
+      "pv": 490,
+      "visits": 450
     },
     {
       "date": "09-04",
-      "pv": 300,
-      "visits": 300
+      "pv": 290,
+      "visits": 280
     },
     {
       "date": "09-05",
-      "pv": 300,
-      "visits": 300
+      "pv": 270,
+      "visits": 270
     },
     {
       "date": "09-06",
-      "pv": 300,
-      "visits": 300
+      "pv": 270,
+      "visits": 260
     },
     {
       "date": "09-07",
-      "pv": 500,
-      "visits": 300
+      "pv": 540,
+      "visits": 460
     },
     {
       "date": "09-08",
-      "pv": 400,
-      "visits": 200
-    },
-    {
-      "date": "09-09",
-      "pv": 600,
-      "visits": 600
-    },
-    {
-      "date": "09-10",
-      "pv": 700,
-      "visits": 600
-    },
-    {
-      "date": "09-11",
-      "pv": 100,
-      "visits": 100
-    },
-    {
-      "date": "09-12",
-      "pv": 400,
+      "pv": 460,
       "visits": 400
     },
     {
-      "date": "09-13",
-      "pv": 1100,
-      "visits": 1000
+      "date": "09-09",
+      "pv": 510,
+      "visits": 480
     },
     {
-      "date": "09-14",
-      "pv": 1000,
-      "visits": 900
+      "date": "09-10",
+      "pv": 570,
+      "visits": 470
     },
     {
-      "date": "09-15",
-      "pv": 200,
-      "visits": 200
+      "date": "09-11",
+      "pv": 430,
+      "visits": 400
     },
     {
-      "date": "09-16",
-      "pv": 200,
-      "visits": 100
-    },
-    {
-      "date": "09-17",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "date": "09-18",
-      "pv": 500,
+      "date": "09-12",
+      "pv": 520,
       "visits": 500
     },
     {
+      "date": "09-13",
+      "pv": 480,
+      "visits": 420
+    },
+    {
+      "date": "09-14",
+      "pv": 580,
+      "visits": 530
+    },
+    {
+      "date": "09-15",
+      "pv": 660,
+      "visits": 630
+    },
+    {
+      "date": "09-16",
+      "pv": 540,
+      "visits": 500
+    },
+    {
+      "date": "09-17",
+      "pv": 800,
+      "visits": 760
+    },
+    {
+      "date": "09-18",
+      "pv": 680,
+      "visits": 670
+    },
+    {
       "date": "09-19",
-      "pv": 300,
-      "visits": 300
+      "pv": 460,
+      "visits": 430
     },
     {
       "date": "09-20",
-      "pv": 600,
+      "pv": 630,
       "visits": 600
     },
     {
       "date": "09-21",
-      "pv": 600,
-      "visits": 500
+      "pv": 700,
+      "visits": 650
     },
     {
       "date": "09-22",
-      "pv": 600,
-      "visits": 600
+      "pv": 550,
+      "visits": 510
     },
     {
       "date": "09-23",
-      "pv": 600,
-      "visits": 500
+      "pv": 660,
+      "visits": 550
     },
     {
       "date": "09-24",
-      "pv": 700,
-      "visits": 700
+      "pv": 730,
+      "visits": 660
     },
     {
       "date": "09-25",
-      "pv": 600,
-      "visits": 500
+      "pv": 470,
+      "visits": 430
     },
     {
       "date": "09-26",
-      "pv": 300,
-      "visits": 300
+      "pv": 560,
+      "visits": 510
+    },
+    {
+      "date": "09-27",
+      "pv": 480,
+      "visits": 410
     }
   ],
   "countries": [
-    {
-      "code": "CN",
-      "flag": "🇨🇳",
-      "name": "中国",
-      "nameEn": "China",
-      "pv": 8000,
-      "visits": 7000
-    },
     {
       "code": "SG",
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 3000,
-      "visits": 3000
+      "pv": 7000,
+      "visits": 6900
+    },
+    {
+      "code": "CN",
+      "flag": "🇨🇳",
+      "name": "中国",
+      "nameEn": "China",
+      "pv": 4100,
+      "visits": 3500
     },
     {
       "code": "HK",
       "flag": "🇭🇰",
       "name": "香港",
       "nameEn": "Hong Kong",
-      "pv": 2000,
-      "visits": 2000
-    },
-    {
-      "code": "JP",
-      "flag": "🇯🇵",
-      "name": "日本",
-      "nameEn": "Japan",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 1400,
+      "visits": 1300
     },
     {
       "code": "US",
       "flag": "🇺🇸",
       "name": "美国",
       "nameEn": "United States",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 1300,
+      "visits": 1200
     },
     {
-      "code": "CH",
-      "flag": "🇨🇭",
-      "name": "瑞士",
-      "nameEn": "Switzerland",
-      "pv": 1000,
-      "visits": 1000
+      "code": "JP",
+      "flag": "🇯🇵",
+      "name": "日本",
+      "nameEn": "Japan",
+      "pv": 600,
+      "visits": 600
+    },
+    {
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "pv": 300,
+      "visits": 0
+    },
+    {
+      "code": "TW",
+      "flag": "🇹🇼",
+      "name": "台湾",
+      "nameEn": "Taiwan",
+      "pv": 200,
+      "visits": 100
+    },
+    {
+      "code": "ID",
+      "flag": "🇮🇩",
+      "name": "印度尼西亚",
+      "nameEn": "Indonesia",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "code": "JO",
+      "flag": "🇯🇴",
+      "name": "JO",
+      "nameEn": "JO",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "code": "NL",
+      "flag": "🇳🇱",
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "code": "CZ",
+      "flag": "🇨🇿",
+      "name": "CZ",
+      "nameEn": "CZ",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "code": "KE",
+      "flag": "🇰🇪",
+      "name": "KE",
+      "nameEn": "KE",
+      "pv": 100,
+      "visits": 100
     }
   ],
-  "countryTotal": 16000,
+  "countryTotal": 15900,
   "referers": {
-    "direct": 9070,
-    "search": 4590,
-    "ecosystem": 1280,
-    "ai": 40,
-    "other": 120
+    "direct": 9330,
+    "search": 4670,
+    "ecosystem": 1270,
+    "ai": 20,
+    "other": 130
   },
   "pages": [
     {
       "title": "首页",
       "titleEn": "Home",
       "path": "/",
-      "pv": 600,
-      "visits": 300
+      "pv": 700,
+      "visits": 400
     },
     {
       "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
@@ -251,13 +299,6 @@
       "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
       "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
       "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
-      "titleEn": "ECCV 2026 Best Paper, Unpacked: Heat Kernel Textures Drop UV Unwrapping, and Li Fei-Fei's Perceptual Loss Wins Test of Time",
-      "path": "/blog/eccv-2026-best-paper-heat-kernel-textures-uv-free/",
       "pv": 300,
       "visits": 300
     },
@@ -276,30 +317,30 @@
       "visits": 300
     },
     {
-      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
-      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
-      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
-      "pv": 200,
-      "visits": 200
+      "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
+      "titleEn": "ECCV 2026 Best Paper, Unpacked: Heat Kernel Textures Drop UV Unwrapping, and Li Fei-Fei's Perceptual Loss Wins Test of Time",
+      "path": "/blog/eccv-2026-best-paper-heat-kernel-textures-uv-free/",
+      "pv": 300,
+      "visits": 300
     },
     {
-      "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
-      "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
-      "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
+      "title": "手搓脚本产品化成 CLI：Karpathy 的 LLM Wiki 想法值 2100 万浏览，有人 40 小时把它变成了流水线",
+      "titleEn": "From Script to CLI in 40 Hours: Karpathy's LLM Wiki Idea Hit 21M Views, Someone Built the Pipeline",
+      "path": "/blog/llmwiki-cli-karpathy-knowledge-pipeline/",
       "pv": 200,
       "visits": 200
-    },
-    {
-      "title": "search",
-      "titleEn": "search",
-      "path": "/search/",
-      "pv": 200,
-      "visits": 100
     },
     {
       "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
       "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
       "path": "/blog/chatcut-codex-ai-video-editor-guide/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "Agent 的社交网络：EigenFlux 把 AI Agent 连成了一张广播互联的信息网",
+      "titleEn": "The Social Network for AI Agents: EigenFlux Builds a Broadcast Network Where Agents Talk to Each Other",
+      "path": "/blog/eigenflux-agent-social-network/",
       "pv": 200,
       "visits": 200
     },
@@ -311,16 +352,9 @@
       "visits": 200
     },
     {
-      "title": "Audio8-ASR-0.1B：0.1B 参数，LibriSpeech 2.70 WER，iPhone 本地跑只占 200MB",
-      "titleEn": "Audio8-ASR-0.1B: 0.1B Parameters, 2.70 WER on LibriSpeech, 200 MB on-device iPhone Inference",
-      "path": "/blog/audio8-asr-01b-on-device-speech-recognition/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "手搓脚本产品化成 CLI：Karpathy 的 LLM Wiki 想法值 2100 万浏览，有人 40 小时把它变成了流水线",
-      "titleEn": "From Script to CLI in 40 Hours: Karpathy's LLM Wiki Idea Hit 21M Views, Someone Built the Pipeline",
-      "path": "/blog/llmwiki-cli-karpathy-knowledge-pipeline/",
+      "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
+      "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
+      "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
       "pv": 200,
       "visits": 200
     },
@@ -332,9 +366,23 @@
       "visits": 200
     },
     {
-      "title": "Agent 的社交网络：EigenFlux 把 AI Agent 连成了一张广播互联的信息网",
-      "titleEn": "The Social Network for AI Agents: EigenFlux Builds a Broadcast Network Where Agents Talk to Each Other",
-      "path": "/blog/eigenflux-agent-social-network/",
+      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
+      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
+      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "GameFactory-3A：让编程 Agent 直接生成 3A 游戏资产，UE5/Blender/Unity/three.js 全支持，Apache 2.0 开源",
+      "titleEn": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+      "path": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "AnySearch：专为 AI Agent 设计的搜索基础设施，打通金融、法律、学术认证数据源",
+      "titleEn": "AnySearch: Search Infrastructure Built for AI Agents — Unlocking Authenticated Vertical Data Sources",
+      "path": "/blog/anysearch-ai-agent-search-infrastructure/",
       "pv": 200,
       "visits": 200
     }
@@ -342,83 +390,71 @@
   "devices": [
     {
       "label": "desktop",
-      "count": 14100
+      "count": 14210
     },
     {
       "label": "mobile",
-      "count": 980
+      "count": 1180
     },
     {
       "label": "tablet",
-      "count": 20
+      "count": 30
     }
   ],
   "os": [
     {
       "label": "Windows",
-      "count": 11250
+      "count": 11430
     },
     {
       "label": "MacOSX",
-      "count": 1910
+      "count": 1790
     },
     {
       "label": "Unknown",
-      "count": 800
+      "count": 890
     },
     {
       "label": "Linux",
-      "count": 440
+      "count": 510
     },
     {
       "label": "Android",
-      "count": 370
+      "count": 440
     },
     {
       "label": "iOS",
-      "count": 330
+      "count": 360
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 10340
+      "count": 11400
     },
     {
       "label": "Edge",
-      "count": 2760
+      "count": 2500
     },
     {
       "label": "Unknown",
-      "count": 800
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 370
+      "count": 700
     },
     {
       "label": "Safari",
-      "count": 360
+      "count": 600
     },
     {
-      "label": "MobileSafari",
-      "count": 210
-    },
-    {
-      "label": "ChromeMobileWebview",
-      "count": 100
+      "label": "ChromeMobile",
+      "count": 300
     },
     {
       "label": "Firefox",
-      "count": 80
+      "count": 200
     },
     {
-      "label": "ChromeDerivative",
-      "count": 40
-    },
-    {
-      "label": "ChromeHeadless",
-      "count": 40
+      "label": "MobileSafari",
+      "count": 200
     }
   ]
 }
