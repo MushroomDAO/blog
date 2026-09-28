@@ -1,32 +1,27 @@
 {
-  "generatedAt": "2026-09-27T14:00:01Z",
+  "generatedAt": "2026-09-28T14:00:00Z",
   "period": {
-    "start": "2026-08-28",
-    "end": "2026-09-27"
+    "start": "2026-08-29",
+    "end": "2026-09-28"
   },
   "totals": {
-    "pageviews": 15420,
-    "visits": 14150,
+    "pageviews": 16150,
+    "visits": 14740,
     "bots": 40
   },
   "last7": {
-    "pv": 4150,
-    "visits": 3720
+    "pv": 4450,
+    "visits": 3910
   },
   "prior7": {
-    "pv": 4350,
-    "visits": 4120
+    "pv": 4470,
+    "visits": 4240
   },
   "daily": [
     {
-      "date": "08-28",
-      "pv": 30,
-      "visits": 30
-    },
-    {
       "date": "08-29",
-      "pv": 300,
-      "visits": 280
+      "pv": 60,
+      "visits": 60
     },
     {
       "date": "08-30",
@@ -170,8 +165,13 @@
     },
     {
       "date": "09-27",
-      "pv": 480,
-      "visits": 410
+      "pv": 640,
+      "visits": 560
+    },
+    {
+      "date": "09-28",
+      "pv": 840,
+      "visits": 690
     }
   ],
   "countries": [
@@ -180,221 +180,115 @@
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 7000,
-      "visits": 6900
+      "pv": 6890,
+      "visits": 6810
     },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 4100,
-      "visits": 3500
-    },
-    {
-      "code": "HK",
-      "flag": "🇭🇰",
-      "name": "香港",
-      "nameEn": "Hong Kong",
-      "pv": 1400,
-      "visits": 1300
+      "pv": 4680,
+      "visits": 4030
     },
     {
       "code": "US",
       "flag": "🇺🇸",
       "name": "美国",
       "nameEn": "United States",
-      "pv": 1300,
-      "visits": 1200
+      "pv": 1220,
+      "visits": 1000
+    },
+    {
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "pv": 860,
+      "visits": 800
     },
     {
       "code": "JP",
       "flag": "🇯🇵",
       "name": "日本",
       "nameEn": "Japan",
-      "pv": 600,
-      "visits": 600
-    },
-    {
-      "code": "TH",
-      "flag": "🇹🇭",
-      "name": "泰国",
-      "nameEn": "Thailand",
-      "pv": 300,
-      "visits": 0
+      "pv": 700,
+      "visits": 570
     },
     {
       "code": "TW",
       "flag": "🇹🇼",
       "name": "台湾",
       "nameEn": "Taiwan",
-      "pv": 200,
-      "visits": 100
+      "pv": 310,
+      "visits": 280
     },
     {
-      "code": "ID",
-      "flag": "🇮🇩",
-      "name": "印度尼西亚",
-      "nameEn": "Indonesia",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "code": "JO",
-      "flag": "🇯🇴",
-      "name": "JO",
-      "nameEn": "JO",
-      "pv": 100,
-      "visits": 100
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "pv": 290,
+      "visits": 120
     },
     {
       "code": "NL",
       "flag": "🇳🇱",
       "name": "荷兰",
       "nameEn": "Netherlands",
-      "pv": 100,
-      "visits": 100
+      "pv": 110,
+      "visits": 110
     },
     {
-      "code": "CZ",
-      "flag": "🇨🇿",
-      "name": "CZ",
-      "nameEn": "CZ",
-      "pv": 100,
-      "visits": 100
+      "code": "AE",
+      "flag": "🇦🇪",
+      "name": "阿联酋",
+      "nameEn": "United Arab Emirates",
+      "pv": 90,
+      "visits": 90
     },
     {
-      "code": "KE",
-      "flag": "🇰🇪",
-      "name": "KE",
-      "nameEn": "KE",
-      "pv": 100,
-      "visits": 100
+      "code": "MY",
+      "flag": "🇲🇾",
+      "name": "马来西亚",
+      "nameEn": "Malaysia",
+      "pv": 70,
+      "visits": 40
+    },
+    {
+      "code": "DE",
+      "flag": "🇩🇪",
+      "name": "德国",
+      "nameEn": "Germany",
+      "pv": 70,
+      "visits": 60
+    },
+    {
+      "code": "FR",
+      "flag": "🇫🇷",
+      "name": "法国",
+      "nameEn": "France",
+      "pv": 70,
+      "visits": 60
     }
   ],
   "countryTotal": 15900,
   "referers": {
-    "direct": 9330,
-    "search": 4670,
-    "ecosystem": 1270,
-    "ai": 20,
-    "other": 130
+    "direct": 10300,
+    "search": 5100,
+    "ecosystem": 1400,
+    "ai": 0,
+    "other": 0
   },
-  "pages": [
-    {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 700,
-      "visits": 400
-    },
-    {
-      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
-      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
-      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
-      "pv": 400,
-      "visits": 400
-    },
-    {
-      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
-      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
-      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖",
-      "titleEn": "The Hitchhiker's Guide to Agentic AI: The Most Comprehensive Agent Engineering Reference of 2026",
-      "path": "/blog/hitchhikers-guide-agentic-ai-book/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？",
-      "titleEn": "Nex-N2.5-mini: A 35B/~3B-Active Open Agentic Model — How Much Mac Memory Do You Need?",
-      "path": "/blog/nex-n2-5-mini-agentic-moe-mac-local-memory-guide/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
-      "titleEn": "ECCV 2026 Best Paper, Unpacked: Heat Kernel Textures Drop UV Unwrapping, and Li Fei-Fei's Perceptual Loss Wins Test of Time",
-      "path": "/blog/eccv-2026-best-paper-heat-kernel-textures-uv-free/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "手搓脚本产品化成 CLI：Karpathy 的 LLM Wiki 想法值 2100 万浏览，有人 40 小时把它变成了流水线",
-      "titleEn": "From Script to CLI in 40 Hours: Karpathy's LLM Wiki Idea Hit 21M Views, Someone Built the Pipeline",
-      "path": "/blog/llmwiki-cli-karpathy-knowledge-pipeline/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "ChatCut × Codex：用 AI Agent 剪视频，提示词就是剪辑台",
-      "titleEn": "ChatCut × Codex: Edit Video with an AI Agent — Your Prompt Is the Timeline",
-      "path": "/blog/chatcut-codex-ai-video-editor-guide/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Agent 的社交网络：EigenFlux 把 AI Agent 连成了一张广播互联的信息网",
-      "titleEn": "The Social Network for AI Agents: EigenFlux Builds a Broadcast Network Where Agents Talk to Each Other",
-      "path": "/blog/eigenflux-agent-social-network/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
-      "titleEn": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
-      "path": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
-      "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
-      "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "从大厂 SWE 到 AI Infra：一年入门指南，从贡献 SGLang PR 开始",
-      "titleEn": "From Big-Tech SWE to AI Infra in One Year: A Guide Starting with SGLang Contributions",
-      "path": "/blog/swe-to-ai-infra-sglang-contribution-guide/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
-      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
-      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "GameFactory-3A：让编程 Agent 直接生成 3A 游戏资产，UE5/Blender/Unity/three.js 全支持，Apache 2.0 开源",
-      "titleEn": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
-      "path": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "AnySearch：专为 AI Agent 设计的搜索基础设施，打通金融、法律、学术认证数据源",
-      "titleEn": "AnySearch: Search Infrastructure Built for AI Agents — Unlocking Authenticated Vertical Data Sources",
-      "path": "/blog/anysearch-ai-agent-search-infrastructure/",
-      "pv": 200,
-      "visits": 200
-    }
-  ],
+  "pages": [],
   "devices": [
     {
       "label": "desktop",
-      "count": 14210
+      "count": 14760
     },
     {
       "label": "mobile",
-      "count": 1180
+      "count": 1360
     },
     {
       "label": "tablet",
@@ -404,15 +298,15 @@
   "os": [
     {
       "label": "Windows",
-      "count": 11430
+      "count": 11830
     },
     {
       "label": "MacOSX",
-      "count": 1790
+      "count": 1920
     },
     {
       "label": "Unknown",
-      "count": 890
+      "count": 960
     },
     {
       "label": "Linux",
@@ -420,41 +314,53 @@
     },
     {
       "label": "Android",
-      "count": 440
+      "count": 510
     },
     {
       "label": "iOS",
-      "count": 360
+      "count": 420
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 11400
+      "count": 10880
     },
     {
       "label": "Edge",
-      "count": 2500
+      "count": 2890
     },
     {
       "label": "Unknown",
-      "count": 700
-    },
-    {
-      "label": "Safari",
-      "count": 600
+      "count": 960
     },
     {
       "label": "ChromeMobile",
-      "count": 300
+      "count": 410
     },
     {
-      "label": "Firefox",
-      "count": 200
+      "label": "Safari",
+      "count": 340
     },
     {
       "label": "MobileSafari",
-      "count": 200
+      "count": 300
+    },
+    {
+      "label": "ChromeMobileWebview",
+      "count": 160
+    },
+    {
+      "label": "Firefox",
+      "count": 90
+    },
+    {
+      "label": "ChromeDerivative",
+      "count": 80
+    },
+    {
+      "label": "ChromeHeadless",
+      "count": 40
     }
   ]
 }
