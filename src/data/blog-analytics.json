@@ -1,472 +1,93 @@
 {
-  "generatedAt": "2026-09-29T14:00:00Z",
+  "generatedAt": "2026-09-30T14:00:01Z",
   "period": {
-    "start": "2026-08-30",
-    "end": "2026-09-29"
+    "start": "2026-08-31",
+    "end": "2026-09-30"
   },
   "totals": {
-    "pageviews": 16440,
-    "visits": 15000,
-    "bots": 30
+    "pageviews": 30000,
+    "visits": 30000,
+    "bots": 0
   },
   "last7": {
-    "pv": 4510,
-    "visits": 3980
+    "pv": 30000,
+    "visits": 30000
   },
   "prior7": {
-    "pv": 4360,
-    "visits": 4120
+    "pv": 0,
+    "visits": 0
   },
   "daily": [
     {
-      "date": "08-30",
-      "pv": 90,
-      "visits": 90
-    },
-    {
-      "date": "08-31",
-      "pv": 540,
-      "visits": 540
-    },
-    {
-      "date": "09-01",
-      "pv": 380,
-      "visits": 340
-    },
-    {
-      "date": "09-02",
-      "pv": 490,
-      "visits": 380
-    },
-    {
-      "date": "09-03",
-      "pv": 490,
-      "visits": 450
-    },
-    {
-      "date": "09-04",
-      "pv": 290,
-      "visits": 280
-    },
-    {
-      "date": "09-05",
-      "pv": 270,
-      "visits": 270
-    },
-    {
-      "date": "09-06",
-      "pv": 270,
-      "visits": 260
-    },
-    {
-      "date": "09-07",
-      "pv": 540,
-      "visits": 460
-    },
-    {
-      "date": "09-08",
-      "pv": 460,
-      "visits": 400
-    },
-    {
-      "date": "09-09",
-      "pv": 510,
-      "visits": 480
-    },
-    {
-      "date": "09-10",
-      "pv": 570,
-      "visits": 470
-    },
-    {
-      "date": "09-11",
-      "pv": 430,
-      "visits": 400
-    },
-    {
-      "date": "09-12",
-      "pv": 520,
-      "visits": 500
-    },
-    {
       "date": "09-13",
-      "pv": 480,
-      "visits": 420
-    },
-    {
-      "date": "09-14",
-      "pv": 580,
-      "visits": 530
-    },
-    {
-      "date": "09-15",
-      "pv": 660,
-      "visits": 630
-    },
-    {
-      "date": "09-16",
-      "pv": 540,
-      "visits": 500
-    },
-    {
-      "date": "09-17",
-      "pv": 800,
-      "visits": 760
-    },
-    {
-      "date": "09-18",
-      "pv": 680,
-      "visits": 670
-    },
-    {
-      "date": "09-19",
-      "pv": 460,
-      "visits": 430
-    },
-    {
-      "date": "09-20",
-      "pv": 630,
-      "visits": 600
-    },
-    {
-      "date": "09-21",
-      "pv": 700,
-      "visits": 650
-    },
-    {
-      "date": "09-22",
-      "pv": 550,
-      "visits": 510
-    },
-    {
-      "date": "09-23",
-      "pv": 660,
-      "visits": 550
-    },
-    {
-      "date": "09-24",
-      "pv": 730,
-      "visits": 660
-    },
-    {
-      "date": "09-25",
-      "pv": 470,
-      "visits": 430
-    },
-    {
-      "date": "09-26",
-      "pv": 560,
-      "visits": 510
+      "pv": 10000,
+      "visits": 10000
     },
     {
       "date": "09-27",
-      "pv": 640,
-      "visits": 560
+      "pv": 10000,
+      "visits": 10000
     },
     {
       "date": "09-28",
-      "pv": 1030,
-      "visits": 870
-    },
-    {
-      "date": "09-29",
-      "pv": 420,
-      "visits": 400
+      "pv": 10000,
+      "visits": 10000
     }
   ],
   "countries": [
-    {
-      "code": "SG",
-      "flag": "🇸🇬",
-      "name": "新加坡",
-      "nameEn": "Singapore",
-      "pv": 7060,
-      "visits": 6980
-    },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 4680,
-      "visits": 4010
+      "pv": 20000,
+      "visits": 20000
     },
     {
-      "code": "US",
-      "flag": "🇺🇸",
-      "name": "美国",
-      "nameEn": "United States",
-      "pv": 1280,
-      "visits": 1050
-    },
-    {
-      "code": "HK",
-      "flag": "🇭🇰",
-      "name": "香港",
-      "nameEn": "Hong Kong",
-      "pv": 910,
-      "visits": 850
-    },
-    {
-      "code": "JP",
-      "flag": "🇯🇵",
-      "name": "日本",
-      "nameEn": "Japan",
-      "pv": 700,
-      "visits": 570
-    },
-    {
-      "code": "TW",
-      "flag": "🇹🇼",
-      "name": "台湾",
-      "nameEn": "Taiwan",
-      "pv": 320,
-      "visits": 290
-    },
-    {
-      "code": "TH",
-      "flag": "🇹🇭",
-      "name": "泰国",
-      "nameEn": "Thailand",
-      "pv": 280,
-      "visits": 110
-    },
-    {
-      "code": "NL",
-      "flag": "🇳🇱",
-      "name": "荷兰",
-      "nameEn": "Netherlands",
-      "pv": 120,
-      "visits": 120
-    },
-    {
-      "code": "AE",
-      "flag": "🇦🇪",
-      "name": "阿联酋",
-      "nameEn": "United Arab Emirates",
-      "pv": 90,
-      "visits": 90
-    },
-    {
-      "code": "FR",
-      "flag": "🇫🇷",
-      "name": "法国",
-      "nameEn": "France",
-      "pv": 70,
-      "visits": 60
-    },
-    {
-      "code": "DE",
-      "flag": "🇩🇪",
-      "name": "德国",
-      "nameEn": "Germany",
-      "pv": 70,
-      "visits": 60
-    },
-    {
-      "code": "MY",
-      "flag": "🇲🇾",
-      "name": "马来西亚",
-      "nameEn": "Malaysia",
-      "pv": 70,
-      "visits": 40
+      "code": "SG",
+      "flag": "🇸🇬",
+      "name": "新加坡",
+      "nameEn": "Singapore",
+      "pv": 10000,
+      "visits": 10000
     }
   ],
-  "countryTotal": 16190,
+  "countryTotal": 30000,
   "referers": {
-    "direct": 9910,
-    "search": 4920,
-    "ecosystem": 1440,
+    "direct": 9950,
+    "search": 4900,
+    "ecosystem": 1480,
     "ai": 20,
-    "other": 150
+    "other": 140
   },
-  "pages": [
-    {
-      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
-      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
-      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "GameFactory-3A：让编程 Agent 直接生成 3A 游戏资产，UE5/Blender/Unity/three.js 全支持，Apache 2.0 开源",
-      "titleEn": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
-      "path": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "Bespoke Nimble：一天之内做一个会读概率的 9B 决策模型",
-      "titleEn": "Bespoke Nimble: A 9B Decision Model Built in One Day That Reads Probabilities",
-      "path": "/blog/bespoke-nimble-9b-open-decision-model-logprob-jev-rival/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "如何真正做好研究：Anthropic 研究员 Vivek 的 7 条核心原则",
-      "titleEn": "How to Be Good at Research: 7 Core Principles from an Anthropic AI Safety Researcher",
-      "path": "/blog/how-to-be-good-at-research-vivek-guide/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
-      "titleEn": "Build a Full-Duplex AI Voice Call App: LiveKit Agents + Aliyun STT + Cartesia TTS",
-      "path": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "'CloddsBot：基于 Claude 的开源 AI 交易 Agent，自主横扫 1000+ 市场'",
-      "titleEn": "CloddsBot: Open-Source AI Trading Agent Built on Claude, Running Autonomously Across 1000+ Markets",
-      "path": "/blog/cloddsbot-ai-trading-agent-1000-markets/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面",
-      "titleEn": "HugAgentOS: ZJU's Enterprise AgentOS Using Domain Ontology as the Agent Reasoning Control Plane",
-      "path": "/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
-      "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
-      "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
-      "pv": 1000,
-      "visits": 0
-    },
-    {
-      "title": "Meta Astryx：为 AI Agent 而生的 React 设计系统，内置 MCP Server + Token 优化 CLI",
-      "titleEn": "Meta Astryx: React Design System Built for AI Agents — MCP Server + Token-Optimized CLI",
-      "path": "/blog/meta-astryx-react-design-system-ai-agent-mcp-cli/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "space/shibdao.eth",
-      "titleEn": "space/shibdao.eth",
-      "path": "/space/shibdao.eth",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
-      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
-      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查",
-      "titleEn": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios",
-      "path": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
-      "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
-      "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "Jev：TypeSafe AI 的 RLCD 决策模型，输出 Token 免费、最高快 200 倍",
-      "titleEn": "Jev: TypeSafe AI's RLCD Decision Model — Free Output Tokens, Up to 200x Faster",
-      "path": "/blog/typesafe-ai-jev-system-one-model-rlcd-decision-ai-enterprise/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "精准定阶：当前全域 Agent 生态 = 早期智人初创阶段",
-      "titleEn": "Precise Taxonomy: The Current Agent Ecosystem Is at the Early Homo Sapiens Stage",
-      "path": "/blog/agent-ecosystem-early-homo-sapiens-stage/",
-      "pv": 1000,
-      "visits": 1000
-    }
-  ],
+  "pages": [],
   "devices": [
     {
       "label": "desktop",
-      "count": 14990
+      "count": 17000
     },
     {
       "label": "mobile",
-      "count": 1420
-    },
-    {
-      "label": "tablet",
-      "count": 30
+      "count": 2000
     }
   ],
-  "os": [
-    {
-      "label": "Windows",
-      "count": 12010
-    },
-    {
-      "label": "MacOSX",
-      "count": 1950
-    },
-    {
-      "label": "Unknown",
-      "count": 1000
-    },
-    {
-      "label": "Linux",
-      "count": 520
-    },
-    {
-      "label": "Android",
-      "count": 520
-    },
-    {
-      "label": "iOS",
-      "count": 440
-    }
-  ],
+  "os": [],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 11100
+      "count": 9000
     },
     {
       "label": "Edge",
-      "count": 2900
+      "count": 7000
+    },
+    {
+      "label": "MobileSafari",
+      "count": 2000
     },
     {
       "label": "Unknown",
       "count": 1000
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 400
-    },
-    {
-      "label": "Safari",
-      "count": 340
-    },
-    {
-      "label": "MobileSafari",
-      "count": 320
-    },
-    {
-      "label": "ChromeMobileWebview",
-      "count": 180
-    },
-    {
-      "label": "Firefox",
-      "count": 90
-    },
-    {
-      "label": "ChromeDerivative",
-      "count": 80
-    },
-    {
-      "label": "ChromeHeadless",
-      "count": 30
     }
   ]
 }
