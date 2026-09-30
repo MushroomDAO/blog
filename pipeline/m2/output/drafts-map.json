@@ -643,5 +643,40 @@
     "mediaId": "prCUE631thH1cmNLi42prI_6FTJIGc98-7CKgRapDNmz6mGDAJvEoZ2KBEma_7nY",
     "title": "HuggingFace 上的 Qwen-2.5-1B-RLCD：不是 1B、没有 RLCD、也没有模型权重",
     "publishedAt": "2026-09-17T15:24:14.279Z"
+  },
+  "yunshu-skillshub-vs-claude-skill-registry-comparison": {
+    "mediaId": "prCUE631thH1cmNLi42prC9CJfg7Da0pLMEfvz57u60NVMTpyuof4YQcyCgJj2si",
+    "title": "云舒 SkillsHub 对比 claude-skill-registry：38 个手作 Skill vs 16 万条爬来的 SKILL.md，该用哪个？",
+    "publishedAt": "2026-09-22T14:53:33.600Z"
+  },
+  "openflowkit-diagram-mcp-local-first-teardown": {
+    "mediaId": "prCUE631thH1cmNLi42prLbpcwMDpr1qKfi7fYDucIX5Ypy-L1ZM5N-mxuRHU27l",
+    "title": "OpenFlowKit 拆解：一个真在维护的开源画图 SPA，能被 Claude 直接调用",
+    "publishedAt": "2026-09-22T14:54:52.005Z"
+  },
+  "hemmingway-1-27b-writing-model-benchmark-claims-teardown": {
+    "mediaId": "prCUE631thH1cmNLi42prOqFOQe8QtZncFOSBEeAhIwpDw77q8-purHfeOSCvpfo",
+    "title": "Hemmingway-1：一个「写得像人」的 27B 模型，能力靠自建榜单证明，还是 Qwen3.8 的一次精调？",
+    "publishedAt": "2026-09-22T14:56:05.438Z"
+  },
+  "jev-awesome-list-gold-rush-fact-check": {
+    "mediaId": "prCUE631thH1cmNLi42prNYTCbE5D93BFsUgstPd2oCZXYascF6JbqF_ClpYtki2",
+    "title": "TypeSafe AI 的 Jev 生态刷屏：所谓「一天冒出 800+」，我们扒开一个索引仓库和 74 份「awesome」清单核实了一遍",
+    "publishedAt": "2026-09-22T14:57:09.877Z"
+  },
+  "yandex-aliceai-foundation-80b-a3b-base-moe-teardown": {
+    "mediaId": "prCUE631thH1cmNLi42prLVCqoPepRtUPrSWXRVkp_gJnaUu6oNahXQ8AVzNozWz",
+    "title": "Yandex开源80B基座模型：中文多耗58% token",
+    "publishedAt": "2026-09-24T14:36:03.525Z"
+  },
+  "exxperts-local-first-ai-agent-approval-gated-memory-teardown": {
+    "mediaId": "prCUE631thH1cmNLi42prHt3xQHDKQUO8B1fZfa5_4NO7q66UmHepDsbSyWN1mKH",
+    "title": "exxperts拆解：记忆要你批准的本地AI同事",
+    "publishedAt": "2026-09-24T14:37:11.141Z"
+  },
+  "nemotron-3-diarization-8-speaker-streaming-mac-test": {
+    "mediaId": "prCUE631thH1cmNLi42prNPbFV0FwpW4L_eZmNIRTm35B-hITZP5t-gbCpPko0fp",
+    "title": "英伟达Nemotron说话人分离模型Mac实测",
+    "publishedAt": "2026-09-24T14:49:03.555Z"
   }
 }
