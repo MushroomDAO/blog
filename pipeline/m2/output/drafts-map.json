@@ -678,5 +678,20 @@
     "mediaId": "prCUE631thH1cmNLi42prNPbFV0FwpW4L_eZmNIRTm35B-hITZP5t-gbCpPko0fp",
     "title": "英伟达Nemotron说话人分离模型Mac实测",
     "publishedAt": "2026-09-24T14:49:03.555Z"
+  },
+  "sealref-keychain-secret-refs-coding-agent-redaction-teardown": {
+    "mediaId": "prCUE631thH1cmNLi42prL0pc2lhmDvIyPP-OkeHWZ_wwwPmgBiH-JXeR8EOhc4B",
+    "title": "sealref实测：Agent密钥隔离，15种输出漏了10种",
+    "publishedAt": "2026-10-02T04:21:38.158Z"
+  },
+  "phonon-2-parakeet-2bit-qat-mac-asr-test": {
+    "mediaId": "prCUE631thH1cmNLi42prO4fCqLm18IWhW4LUuZ6thlKIw2u3dOc2-u4A7gK7lO7",
+    "title": "Phonon-2实测：164MB英文听写，中文不可用",
+    "publishedAt": "2026-10-02T04:25:30.626Z"
+  },
+  "cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune": {
+    "mediaId": "prCUE631thH1cmNLi42prJ5VuxJi-6BiqLDFhXeY9beJNCHX8VyyezZPeOXo3lfV",
+    "title": "Cloudflare开源Clef决策模型：兼容Jev能本地跑",
+    "publishedAt": "2026-10-02T04:27:52.061Z"
   }
 }
