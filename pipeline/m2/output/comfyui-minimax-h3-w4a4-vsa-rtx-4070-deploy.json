@@ -1,0 +1,16 @@
+{
+  "title": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案",
+  "author": "Mycelium",
+  "digest": "sepiablue-ai 开源，GPL-3.0，46 stars。两个 ComfyUI 节点把 MiniMax H3 视",
+  "mediaId": "prCUE631thH1cmNLi42prBCJmRNUZN4nB807ejXqnnEpCOxvHDCn0TeTj5z6WHrP",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/sepiablue-ai/comfyui-minimax-h3-w4a4-vsa",
+    "github.com/sepiablue-ai/minimax_h3_workflows",
+    "huggingface.co/matlowai/minimax-h3-fused-turbo-int8-convrot",
+    "huggingface.co/barelymining/comfyui-minimax-h3-fastvideo",
+    "huggingface.co/comfy-org/minimax-h3",
+    "huggingface.co/kijai/minimax-h3-experimental"
+  ],
+  "publishedAt": "2026-09-20T14:53:02.014Z"
+}

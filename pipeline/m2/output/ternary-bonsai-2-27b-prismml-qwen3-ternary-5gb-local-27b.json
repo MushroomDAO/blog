@@ -1,0 +1,13 @@
+{
+  "title": "Ternary Bonsai 2-27B：5.9 GB 跑 27B 模型，三值量化保留 98.2% 性能，比标准 2-bit 强 12 分",
+  "author": "Mycelium",
+  "digest": "PrismML 基于 Qwen3.8-27B 发布 Ternary Bonsai 2-27B，三值量化（1.72 bit",
+  "mediaId": "prCUE631thH1cmNLi42prLJ5UAmYo1PkMWfRdYBwiggJ_sG8gkxJtpuHnbx8XEJG",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/prism-ml/ternary-bonsai-2-27b-gguf",
+    "huggingface.co/prism-ml/ternary-bonsai-2-27b-mlx-2bit",
+    "github.com/prismml-eng/llama.cpp"
+  ],
+  "publishedAt": "2026-09-18T01:38:21.974Z"
+}

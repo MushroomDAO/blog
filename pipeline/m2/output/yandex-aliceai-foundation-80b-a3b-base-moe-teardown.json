@@ -1,0 +1,20 @@
+{
+  "title": "Yandex开源80B基座模型：中文多耗58% token",
+  "author": "Mycelium",
+  "digest": "从零训练的80B-A3B基座，Apache-2.0，俄语强；中文多耗58%token，Mac需48GB起",
+  "mediaId": "prCUE631thH1cmNLi42prLVCqoPepRtUPrSWXRVkp_gJnaUu6oNahXQ8AVzNozWz",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/yandex/aliceai-foundation-80b-a3b-base",
+    "github.com/vllm-project/vllm",
+    "huggingface.co/api/models",
+    "huggingface.co/qwen/qwen3-next-80b-a3b-instruct",
+    "huggingface.co/yamada114514/aliceai-foundation-80b-a3b-base-gguf",
+    "huggingface.co/amaimedia/aliceai-foundation-80b-a3b-bf16-gguf",
+    "huggingface.co/yamada114514/aliceai-foundation-80b-a3b-base-mlx-4bit",
+    "huggingface.co/hosstia/aliceai-foundation-80b-a3b-base-mlx-2bit",
+    "github.com/yandex/yalm-100b",
+    "huggingface.co/yandex/yandexgpt-5-lite-8b-pretrain"
+  ],
+  "publishedAt": "2026-09-24T14:36:03.525Z"
+}

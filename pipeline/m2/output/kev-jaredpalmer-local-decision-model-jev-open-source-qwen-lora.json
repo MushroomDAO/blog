@@ -1,0 +1,12 @@
+{
+  "title": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题",
+  "author": "Mycelium",
+  "digest": "Apache-2.0，LoRA + 块因果掩码，文档编码一次、多个问题并发出概率分布，不生成文字。4B 版 OOD 准确",
+  "mediaId": "prCUE631thH1cmNLi42prNJmUiknTc-4a2z5Wt6uOOjhCh63euDjoBZr4SYuhC79",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/jaredpalmer/kev",
+    "github.com/jaredpalmer/kev.git"
+  ],
+  "publishedAt": "2026-09-20T05:50:05.484Z"
+}

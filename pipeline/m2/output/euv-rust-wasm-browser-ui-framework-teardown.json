@@ -1,0 +1,12 @@
+{
+  "title": "euv：wasm-bindgen封装的Rust前端框架拆解",
+  "author": "Mycelium",
+  "digest": "MIT 15星；基于wasm-bindgen非独立编译链；html!宏+Signal响应式+CSS宏；Yew/Leptos早先五年",
+  "mediaId": "prCUE631thH1cmNLi42prFtuottxZ9mQkgs3tAEIKMva_3EntmIUSuvVMkaitdvF",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/euv-dev/euv",
+    "github.com/euv-dev/euv.git"
+  ],
+  "publishedAt": "2026-10-05T06:59:10.315Z"
+}

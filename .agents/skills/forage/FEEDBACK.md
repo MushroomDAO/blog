@@ -444,3 +444,24 @@ banner_prompt 里别出现 Chinese text/manuscript/page 之类会诱发画字的
   需源码构建 main；M4 Metal v3-offline 10 分钟音频 3.1 秒。
 - AliceAI 分词器：142 段纯中文比 Qwen3-Next 多 58% token。
 - exxperts：npm ci + build + 30 个冒烟测试本机通过。
+
+## 2026-10-02 写稿批次（用户标 3 条写）
+
+用户标了 3 条「写」（anhermon/sealref、FermionResearch/Phonon-2、Cloudflare/clef-flash，均无批注），
+3 条全部写完并发布：blog 线上 200 + push + 公众号草稿 3 篇全部建成；插图 Codex 正常出图（4 张/篇，410–516 秒）。
+
+### 子 agent 又撞 worktree guard（第 6 次）
+3 个子 agent 写 radar/staging 都被拦：一个建了 linked worktree、一个写 /tmp、一个写 job tmp，主会话 cp 回来，
+worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tmp/staging/`，主会话统一搬，省得各自想办法。
+
+### 采集侧问题
+- 查重脚本仍把「https」「github.com」「cloudflare」当实体名命中知识库，3 条都报假重复（上次已记，未修）。
+- HF 两条 lic 仍显示「未声明」，实际 Phonon-2 权重 CC-BY-4.0、Clef 系列 Apache-2.0（同上次问题）。
+- Clef 线索说「付费 RL 微调平台」偏夸大：实际目前是 FDE 陪跑服务，未公布价格。
+- Decision Index 是 multimodalart 维护的社区榜，并非 Cloudflare 自建；但 Clef 分数是 Cloudflare 自报，上游 index.json 无 Clef 条目。
+
+### 值得记一笔的实测
+- sealref：假密钥 15 种输出 5 拦 10 漏；`echo "$K"|base64`（带换行）和 README 示例 `curl -u` 加 `-v` 的 Basic 头属意外泄露。
+  真实钥匙串写入在 Agent 会话里 `security -i` 挂起 >2 分钟（代码无超时）。
+- Phonon-2：M4 16GB 约 100 倍实时，峰值内存 3.8GB 起（加载时展开 16 位稠密副本）；中文输出伪拼音。PR #232 截至 10-02 未合并。
+- Clef-flash：本机 16GB 没跑（bf16 19GB）；GGUF 版不含联合 schema 头，llama.cpp 里只是普通 Qwen。

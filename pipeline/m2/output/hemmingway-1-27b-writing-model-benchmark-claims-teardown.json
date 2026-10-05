@@ -1,0 +1,15 @@
+{
+  "title": "Hemmingway-1：一个「写得像人」的 27B 模型，能力靠自建榜单证明，还是 Qwen3.8 的一次精调？",
+  "author": "Mycelium",
+  "digest": "Hemmingway-1 是初创 Altworld 发布的 27B 文本模型，底子是 Qwen3.8-27B 的文本塔微",
+  "mediaId": "prCUE631thH1cmNLi42prOqFOQe8QtZncFOSBEeAhIwpDw77q8-purHfeOSCvpfo",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/altworld/hemmingway-1",
+    "huggingface.co/api/models",
+    "github.com/lukeckprobierts/hemmingway-1",
+    "huggingface.co/qwen/qwen3.8-27b",
+    "github.com/repos/lukeckprobierts"
+  ],
+  "publishedAt": "2026-09-22T14:56:05.438Z"
+}

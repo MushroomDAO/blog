@@ -1,0 +1,14 @@
+{
+  "title": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南",
+  "author": "Mycelium",
+  "digest": "阿里千问 2026-09-20 开源。7.1B 参数 32 层 Block-Causal DiT + Qwen3-VL-",
+  "mediaId": "prCUE631thH1cmNLi42prKdPqxxNO_q859fESwcJiukg2fdgmwmZz13Va-rGcdIS",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/qwenlm/qwen-image-2.1",
+    "huggingface.co/qwen/qwen-image-2.1",
+    "github.com/huggingface/diffusers.git",
+    "github.com/huggingface/diffusers"
+  ],
+  "publishedAt": "2026-09-20T14:34:54.544Z"
+}

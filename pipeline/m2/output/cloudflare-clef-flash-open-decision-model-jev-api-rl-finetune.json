@@ -1,0 +1,15 @@
+{
+  "title": "Cloudflare开源Clef决策模型：兼容Jev能本地跑",
+  "author": "Mycelium",
+  "digest": "Apache-2.0开源9B/27B；榜首系自报；托管价为Jev的2-6倍；16GB Mac可跑4bit",
+  "mediaId": "prCUE631thH1cmNLi42prJ5VuxJi-6BiqLDFhXeY9beJNCHX8VyyezZPeOXo3lfV",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/cloudflare/clef-flash",
+    "huggingface.co/cloudflare/clef",
+    "huggingface.co/spaces/multimodalart",
+    "huggingface.co/mlx-community/clef-flash-4bit",
+    "huggingface.co/mlx-community/clef-4bit"
+  ],
+  "publishedAt": "2026-10-02T04:27:52.061Z"
+}

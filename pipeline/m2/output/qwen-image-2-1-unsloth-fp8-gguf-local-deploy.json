@@ -1,0 +1,13 @@
+{
+  "title": "Qwen-Image-2.1 本地部署：Unsloth FP8/GGUF，6GB 显存能跑，Mac 16GB 统一内存也行",
+  "author": "Mycelium",
+  "digest": "Qwen-Image-2.1 的本地部署门槛被 Unsloth 打下来了。FP8 + 钉住内存 offload：6-8G",
+  "mediaId": "prCUE631thH1cmNLi42prGKlYkguzs7PV1dEXYMrUP8jrfCwz2tPCjzOclf5gJGJ",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/unsloth/qwen-image-2.1-fp8",
+    "huggingface.co/unsloth/qwen-image-2.1-gguf",
+    "github.com/leejet/stable-diffusion.cpp"
+  ],
+  "publishedAt": "2026-09-24T13:11:15.946Z"
+}

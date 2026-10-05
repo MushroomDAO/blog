@@ -2,7 +2,11 @@
   "title": "Qwen3-ASR：小企业搭建本地双语语音 AI 客服的完整指南",
   "author": "Mycelium",
   "digest": "Qwen3-ASR 是阿里云开源的多语言语音识别模型（0.6B/1.7B），支持52种语言和22种中国方言。本文评估它是",
-  "mediaId": "prCUE631thH1cmNLi42prEnVT1hMa3rH1VN98Cn0KlWKZK8TGEU94d7__hqAerBh",
-  "theme": "purple",
-  "publishedAt": "2026-09-02T01:54:57.966Z"
+  "mediaId": "prCUE631thH1cmNLi42prLkB4iqRQpgT00UfAXAwco-5T93JgUbPOrR99UjmyaAM",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/qwenlm/qwen3-asr",
+    "huggingface.co/collections/qwen"
+  ],
+  "publishedAt": "2026-09-16T16:19:02.296Z"
 }

@@ -1,0 +1,15 @@
+{
+  "title": "Phonon-2实测：164MB英文听写，中文不可用",
+  "author": "Mycelium",
+  "digest": "2.1比特Parakeet，Mac上百倍实时，英文163词错1个，中文成乱码拼音",
+  "mediaId": "prCUE631thH1cmNLi42prO4fCqLm18IWhW4LUuZ6thlKIw2u3dOc2-u4A7gK7lO7",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/fermionresearch/phonon-2",
+    "github.com/fermionresearch/phonon",
+    "github.com/huggingface/open_asr_leaderboard",
+    "huggingface.co/nvidia/parakeet-tdt-0.6b-v3",
+    "huggingface.co/moondream/parakeet-redux"
+  ],
+  "publishedAt": "2026-10-02T04:25:30.626Z"
+}

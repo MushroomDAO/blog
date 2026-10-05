@@ -1,0 +1,16 @@
+{
+  "title": "英伟达Nemotron说话人分离模型Mac实测",
+  "author": "Mycelium",
+  "digest": "NVIDIA开源1亿参数说话人分离模型，最多8人可商用；Mac要源码编译，真人样本零混淆，合成语音失手。",
+  "mediaId": "prCUE631thH1cmNLi42prNPbFV0FwpW4L_eZmNIRTm35B-hITZP5t-gbCpPko0fp",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/nvidia/nemotron-3-diarization",
+    "github.com/nvidia/nemo-speech.cpp",
+    "huggingface.co/blog/nvidia",
+    "huggingface.co/nvidia/diar_streaming_sortformer_4spk-v2.1",
+    "huggingface.co/pyannote/speaker-diarization-community-1",
+    "huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b"
+  ],
+  "publishedAt": "2026-09-24T14:49:03.555Z"
+}

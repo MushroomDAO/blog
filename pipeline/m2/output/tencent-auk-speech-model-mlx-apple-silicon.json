@@ -1,0 +1,15 @@
+{
+  "title": "腾讯开源 AuK：1.5B 语音生成+编辑大一统模型，Mac 能跑到多小内存？",
+  "author": "Mycelium",
+  "digest": "腾讯混元开源 AuK，1.5B 扩散 Transformer 用一句自然语言指令统一 16 项语音任务（零样本克隆、内容",
+  "mediaId": "prCUE631thH1cmNLi42prMMcQpjt_7fgEGazTJj3kwfbqIrnFKgY0H7fnN6sTapL",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/tencent/auk",
+    "github.com/tencent-hunyuan/auk",
+    "huggingface.co/api/models",
+    "huggingface.co/tencent/auk-flash",
+    "github.com/audio-editing-challenge/audio-editing-challenge-baseline"
+  ],
+  "publishedAt": "2026-09-15T12:51:23.361Z"
+}
