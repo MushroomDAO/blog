@@ -1,185 +1,105 @@
 {
-  "generatedAt": "2026-10-04T14:00:00Z",
+  "generatedAt": "2026-10-05T14:00:01Z",
   "period": {
-    "start": "2026-09-04",
-    "end": "2026-10-04"
+    "start": "2026-09-05",
+    "end": "2026-10-05"
   },
   "totals": {
-    "pageviews": 18210,
-    "visits": 16580,
-    "bots": 30
+    "pageviews": 22000,
+    "visits": 21000,
+    "bots": 0
   },
   "last7": {
-    "pv": 5410,
-    "visits": 4840
+    "pv": 13000,
+    "visits": 13000
   },
   "prior7": {
-    "pv": 4310,
-    "visits": 3870
+    "pv": 8000,
+    "visits": 7000
   },
   "daily": [
     {
-      "date": "09-04",
-      "pv": 90,
-      "visits": 90
-    },
-    {
-      "date": "09-05",
-      "pv": 270,
-      "visits": 270
-    },
-    {
       "date": "09-06",
-      "pv": 270,
-      "visits": 260
-    },
-    {
-      "date": "09-07",
-      "pv": 540,
-      "visits": 460
-    },
-    {
-      "date": "09-08",
-      "pv": 460,
-      "visits": 400
-    },
-    {
-      "date": "09-09",
-      "pv": 510,
-      "visits": 480
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-10",
-      "pv": 570,
-      "visits": 470
-    },
-    {
-      "date": "09-11",
-      "pv": 430,
-      "visits": 400
-    },
-    {
-      "date": "09-12",
-      "pv": 520,
-      "visits": 500
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-13",
-      "pv": 480,
-      "visits": 420
-    },
-    {
-      "date": "09-14",
-      "pv": 580,
-      "visits": 530
-    },
-    {
-      "date": "09-15",
-      "pv": 660,
-      "visits": 630
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "date": "09-16",
-      "pv": 540,
-      "visits": 500
-    },
-    {
-      "date": "09-17",
-      "pv": 800,
-      "visits": 760
-    },
-    {
-      "date": "09-18",
-      "pv": 680,
-      "visits": 670
+      "pv": 1000,
+      "visits": 0
     },
     {
       "date": "09-19",
-      "pv": 460,
-      "visits": 430
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-20",
-      "pv": 630,
-      "visits": 600
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-21",
-      "pv": 700,
-      "visits": 650
-    },
-    {
-      "date": "09-22",
-      "pv": 550,
-      "visits": 510
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-23",
-      "pv": 660,
-      "visits": 550
-    },
-    {
-      "date": "09-24",
-      "pv": 730,
-      "visits": 660
-    },
-    {
-      "date": "09-25",
-      "pv": 470,
-      "visits": 430
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-26",
-      "pv": 560,
-      "visits": 510
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "date": "09-27",
-      "pv": 640,
-      "visits": 560
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-28",
-      "pv": 1030,
-      "visits": 870
+      "pv": 3000,
+      "visits": 3000
     },
     {
       "date": "09-29",
-      "pv": 650,
-      "visits": 590
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-30",
-      "pv": 530,
-      "visits": 530
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "date": "10-01",
-      "pv": 930,
-      "visits": 800
-    },
-    {
-      "date": "10-02",
-      "pv": 860,
-      "visits": 800
+      "pv": 3000,
+      "visits": 3000
     },
     {
       "date": "10-03",
-      "pv": 550,
-      "visits": 490
-    },
-    {
-      "date": "10-04",
-      "pv": 860,
-      "visits": 760
+      "pv": 1000,
+      "visits": 1000
     }
   ],
   "countries": [],
   "countryTotal": 0,
   "referers": {
-    "direct": 11670,
-    "search": 4740,
-    "ecosystem": 1630,
+    "direct": 12030,
+    "search": 4720,
+    "ecosystem": 1650,
     "ai": 20,
     "other": 150
   },
@@ -188,34 +108,34 @@
       "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
       "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
       "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
-      "pv": 1970,
-      "visits": 1670
+      "pv": 2160,
+      "visits": 1850
     },
     {
       "title": "首页",
       "titleEn": "Home",
       "path": "/",
-      "pv": 810,
-      "visits": 600
+      "pv": 800,
+      "visits": 590
     },
     {
       "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
       "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
       "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 320,
-      "visits": 310
-    },
-    {
-      "title": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题",
-      "titleEn": "Kev: Jared Palmer's Open-Source Local Decision Model — One Forward Pass, Many Questions",
-      "path": "/blog/kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora/",
-      "pv": 260,
-      "visits": 240
+      "pv": 330,
+      "visits": 320
     },
     {
       "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
       "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
       "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
+      "pv": 260,
+      "visits": 240
+    },
+    {
+      "title": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题",
+      "titleEn": "Kev: Jared Palmer's Open-Source Local Decision Model — One Forward Pass, Many Questions",
+      "path": "/blog/kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora/",
       "pv": 260,
       "visits": 240
     },
@@ -230,14 +150,21 @@
       "title": "blog",
       "titleEn": "blog",
       "path": "/blog/",
-      "pv": 180,
-      "visits": 10
+      "pv": 190,
+      "visits": 20
     },
     {
       "title": "Qwen-Image-2.1 本地部署：Unsloth FP8/GGUF，6GB 显存能跑，Mac 16GB 统一内存也行",
       "titleEn": "Qwen-Image-2.1 Local Deploy: Unsloth FP8/GGUF, Runs on 6GB VRAM, Mac 16GB Unified Memory Too",
       "path": "/blog/qwen-image-2-1-unsloth-fp8-gguf-local-deploy/",
-      "pv": 160,
+      "pv": 170,
+      "visits": 160
+    },
+    {
+      "title": "Marble 开源儿童课程知识图谱：1590 个微话题 + 3221 条前置关系，对齐主流课标",
+      "titleEn": "Marble's Open-Source Children's Curriculum Knowledge Graph: 1,590 Micro-Topics and 3,221 Prerequisite Links",
+      "path": "/blog/marble-os-taxonomy-children-curriculum-knowledge-graph/",
+      "pv": 150,
       "visits": 150
     },
     {
@@ -248,30 +175,9 @@
       "visits": 150
     },
     {
-      "title": "Marble 开源儿童课程知识图谱：1590 个微话题 + 3221 条前置关系，对齐主流课标",
-      "titleEn": "Marble's Open-Source Children's Curriculum Knowledge Graph: 1,590 Micro-Topics and 3,221 Prerequisite Links",
-      "path": "/blog/marble-os-taxonomy-children-curriculum-knowledge-graph/",
-      "pv": 150,
-      "visits": 150
-    },
-    {
-      "title": "explore",
-      "titleEn": "explore",
-      "path": "/explore",
-      "pv": 130,
-      "visits": 60
-    },
-    {
-      "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
-      "titleEn": "ECCV 2026 Best Paper, Unpacked: Heat Kernel Textures Drop UV Unwrapping, and Li Fei-Fei's Perceptual Loss Wins Test of Time",
-      "path": "/blog/eccv-2026-best-paper-heat-kernel-textures-uv-free/",
-      "pv": 130,
-      "visits": 130
-    },
-    {
-      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
-      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
-      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
+      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
+      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
+      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
       "pv": 130,
       "visits": 130
     },
@@ -283,21 +189,35 @@
       "visits": 120
     },
     {
-      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
-      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
-      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
+      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
+      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
+      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
       "pv": 130,
       "visits": 130
+    },
+    {
+      "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
+      "titleEn": "ECCV 2026 Best Paper, Unpacked: Heat Kernel Textures Drop UV Unwrapping, and Li Fei-Fei's Perceptual Loss Wins Test of Time",
+      "path": "/blog/eccv-2026-best-paper-heat-kernel-textures-uv-free/",
+      "pv": 130,
+      "visits": 130
+    },
+    {
+      "title": "explore",
+      "titleEn": "explore",
+      "path": "/explore",
+      "pv": 130,
+      "visits": 60
     }
   ],
   "devices": [
     {
       "label": "desktop",
-      "count": 15790
+      "count": 15980
     },
     {
       "label": "mobile",
-      "count": 2380
+      "count": 2550
     },
     {
       "label": "tablet",
@@ -307,65 +227,21 @@
   "os": [
     {
       "label": "Windows",
-      "count": 12000
-    },
-    {
-      "label": "Unknown",
-      "count": 3000
-    },
-    {
-      "label": "MacOSX",
-      "count": 3000
+      "count": 30000
     },
     {
       "label": "Linux",
-      "count": 2000
-    },
-    {
-      "label": "iOS",
-      "count": 2000
+      "count": 10000
     }
   ],
   "browsers": [
     {
-      "label": "Chrome",
-      "count": 12140
-    },
-    {
       "label": "Edge",
-      "count": 2600
+      "count": 20000
     },
     {
-      "label": "Unknown",
-      "count": 1630
-    },
-    {
-      "label": "MobileSafari",
-      "count": 470
-    },
-    {
-      "label": "ChromeMobileWebview",
-      "count": 470
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 360
-    },
-    {
-      "label": "Safari",
-      "count": 340
-    },
-    {
-      "label": "ChromeDerivative",
-      "count": 100
-    },
-    {
-      "label": "Firefox",
-      "count": 70
-    },
-    {
-      "label": "ChromeHeadless",
-      "count": 30
+      "label": "Chrome",
+      "count": 20000
     }
   ]
 }
