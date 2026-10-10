@@ -115,7 +115,8 @@ const postsData = posts.map(post => ({
 			}
 			.carousel-container {
 				display: flex;
-				transition: transform 0.5s ease-in-out;
+				transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+				will-change: transform;
 			}
 			.carousel-slide {
 				min-width: 100%;
@@ -482,59 +483,97 @@ const postsData = posts.map(post => ({
 					const container = document.getElementById('carouselContainer');
 					const prevBtn = document.getElementById('carouselPrev');
 					const nextBtn = document.getElementById('carouselNext');
-					const dots = document.querySelectorAll('.carousel-dot');
-					const slides = document.querySelectorAll('.carousel-slide');
+					const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+					const originalSlides = Array.from(container.querySelectorAll('.carousel-slide'));
+					const total = originalSlides.length;
 					
-					if (slides.length <= 1) return;
+					if (total <= 1) return;
 					
-					let currentIndex = 0;
+					// 头尾克隆，实现真正匀速、单向平滑无缝循环
+					const firstClone = originalSlides[0].cloneNode(true);
+					const lastClone = originalSlides[total - 1].cloneNode(true);
+					container.appendChild(firstClone);
+					container.insertBefore(lastClone, originalSlides[0]);
+					
+					let currentIndex = 1; // 1 对应原始第 1 张
+					let isTransitioning = false;
 					let autoplayInterval;
+					const TRANSITION_STYLE = 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
+					const INTERVAL_TIME = 6000; // 停留 6 秒，节奏更舒缓
 					
-					function goToSlide(index) {
-						if (index < 0) index = slides.length - 1;
-						if (index >= slides.length) index = 0;
-						
-						currentIndex = index;
-						container.style.transform = `translateX(-${currentIndex * 100}%)`;
-						
+					// 初始定位到真实第 1 张
+					container.style.transition = 'none';
+					container.style.transform = `translateX(-100%)`;
+					void container.offsetHeight;
+					container.style.transition = TRANSITION_STYLE;
+					
+					function updateDots(realIndex) {
 						dots.forEach((dot, i) => {
-							dot.classList.toggle('active', i === currentIndex);
+							dot.classList.toggle('active', i === realIndex);
 						});
 					}
 					
+					function goToSlide(index, animate = true) {
+						if (isTransitioning && animate) return;
+						if (animate) isTransitioning = true;
+						
+						currentIndex = index;
+						container.style.transition = animate ? TRANSITION_STYLE : 'none';
+						container.style.transform = `translateX(-${currentIndex * 100}%)`;
+						
+						// 计算对应的真实圆点索引
+						const realIndex = (currentIndex - 1 + total) % total;
+						updateDots(realIndex);
+					}
+					
 					function nextSlide() {
+						if (carousel.offsetParent === null && carousel.style.display === 'none') return;
 						goToSlide(currentIndex + 1);
 					}
 					
 					function prevSlide() {
+						if (carousel.offsetParent === null && carousel.style.display === 'none') return;
 						goToSlide(currentIndex - 1);
 					}
 					
+					container.addEventListener('transitionend', () => {
+						isTransitioning = false;
+						// 滑到尾部克隆项（视觉上的第 1 张）时，无感瞬切回真实的第 1 张
+						if (currentIndex >= total + 1) {
+							goToSlide(1, false);
+						} 
+						// 滑到开头克隆项（视觉上的最后一张）时，无感瞬切回真实的最后一张
+						else if (currentIndex <= 0) {
+							goToSlide(total, false);
+						}
+					});
+					
 					function startAutoplay() {
-						autoplayInterval = setInterval(nextSlide, 5000);
+						stopAutoplay();
+						autoplayInterval = setInterval(nextSlide, INTERVAL_TIME);
 					}
 					
 					function stopAutoplay() {
-						clearInterval(autoplayInterval);
+						if (autoplayInterval) {
+							clearInterval(autoplayInterval);
+							autoplayInterval = null;
+						}
 					}
 					
 					// 事件监听
 					if (prevBtn) prevBtn.addEventListener('click', () => {
 						prevSlide();
-						stopAutoplay();
 						startAutoplay();
 					});
 					
 					if (nextBtn) nextBtn.addEventListener('click', () => {
 						nextSlide();
-						stopAutoplay();
 						startAutoplay();
 					});
 					
 					dots.forEach((dot, index) => {
 						dot.addEventListener('click', () => {
-							goToSlide(index);
-							stopAutoplay();
+							goToSlide(index + 1);
 							startAutoplay();
 						});
 					});
@@ -542,6 +581,15 @@ const postsData = posts.map(post => ({
 					// 鼠标悬停暂停
 					carousel.addEventListener('mouseenter', stopAutoplay);
 					carousel.addEventListener('mouseleave', startAutoplay);
+					
+					// 页面后台时暂停，切回时恢复，防止累积突发连切
+					document.addEventListener('visibilitychange', () => {
+						if (document.hidden) {
+							stopAutoplay();
+						} else {
+							startAutoplay();
+						}
+					});
 					
 					// 触摸滑动支持
 					let touchStartX = 0;
