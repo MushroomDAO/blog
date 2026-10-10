@@ -1,223 +1,303 @@
 {
-  "generatedAt": "2026-10-05T14:00:01Z",
+  "generatedAt": "2026-10-10T14:00:01Z",
   "period": {
-    "start": "2026-09-05",
-    "end": "2026-10-05"
+    "start": "2026-09-10",
+    "end": "2026-10-10"
   },
   "totals": {
-    "pageviews": 22000,
-    "visits": 21000,
+    "pageviews": 20430,
+    "visits": 18820,
     "bots": 0
   },
   "last7": {
-    "pv": 13000,
-    "visits": 13000
+    "pv": 5680,
+    "visits": 5330
   },
   "prior7": {
-    "pv": 8000,
-    "visits": 7000
+    "pv": 5190,
+    "visits": 4640
   },
   "daily": [
     {
-      "date": "09-06",
-      "pv": 1000,
-      "visits": 1000
+      "date": "09-10",
+      "pv": 110,
+      "visits": 100
     },
     {
-      "date": "09-10",
-      "pv": 1000,
-      "visits": 1000
+      "date": "09-11",
+      "pv": 430,
+      "visits": 400
+    },
+    {
+      "date": "09-12",
+      "pv": 520,
+      "visits": 500
     },
     {
       "date": "09-13",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 480,
+      "visits": 420
+    },
+    {
+      "date": "09-14",
+      "pv": 580,
+      "visits": 530
+    },
+    {
+      "date": "09-15",
+      "pv": 660,
+      "visits": 630
     },
     {
       "date": "09-16",
-      "pv": 1000,
-      "visits": 0
+      "pv": 540,
+      "visits": 500
+    },
+    {
+      "date": "09-17",
+      "pv": 800,
+      "visits": 760
+    },
+    {
+      "date": "09-18",
+      "pv": 680,
+      "visits": 670
     },
     {
       "date": "09-19",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 460,
+      "visits": 430
     },
     {
       "date": "09-20",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 630,
+      "visits": 600
     },
     {
       "date": "09-21",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 700,
+      "visits": 650
+    },
+    {
+      "date": "09-22",
+      "pv": 550,
+      "visits": 510
     },
     {
       "date": "09-23",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 660,
+      "visits": 550
+    },
+    {
+      "date": "09-24",
+      "pv": 730,
+      "visits": 660
+    },
+    {
+      "date": "09-25",
+      "pv": 470,
+      "visits": 430
     },
     {
       "date": "09-26",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 560,
+      "visits": 510
     },
     {
       "date": "09-27",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 640,
+      "visits": 560
     },
     {
       "date": "09-28",
-      "pv": 3000,
-      "visits": 3000
+      "pv": 1030,
+      "visits": 870
     },
     {
       "date": "09-29",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 650,
+      "visits": 590
     },
     {
       "date": "09-30",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 530,
+      "visits": 530
     },
     {
       "date": "10-01",
-      "pv": 3000,
-      "visits": 3000
+      "pv": 930,
+      "visits": 800
+    },
+    {
+      "date": "10-02",
+      "pv": 860,
+      "visits": 800
     },
     {
       "date": "10-03",
-      "pv": 1000,
+      "pv": 550,
+      "visits": 490
+    },
+    {
+      "date": "10-04",
+      "pv": 1110,
       "visits": 1000
+    },
+    {
+      "date": "10-05",
+      "pv": 570,
+      "visits": 560
+    },
+    {
+      "date": "10-06",
+      "pv": 780,
+      "visits": 670
+    },
+    {
+      "date": "10-07",
+      "pv": 700,
+      "visits": 650
+    },
+    {
+      "date": "10-08",
+      "pv": 1090,
+      "visits": 1040
+    },
+    {
+      "date": "10-09",
+      "pv": 880,
+      "visits": 860
+    },
+    {
+      "date": "10-10",
+      "pv": 550,
+      "visits": 550
     }
   ],
   "countries": [],
   "countryTotal": 0,
   "referers": {
-    "direct": 12030,
-    "search": 4720,
-    "ecosystem": 1650,
-    "ai": 20,
-    "other": 150
+    "direct": 12000,
+    "search": 11000,
+    "ecosystem": 1000,
+    "ai": 0,
+    "other": 0
   },
   "pages": [
     {
       "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
       "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
       "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
-      "pv": 2160,
-      "visits": 1850
+      "pv": 2300,
+      "visits": 2300
     },
     {
       "title": "首页",
       "titleEn": "Home",
       "path": "/",
-      "pv": 800,
-      "visits": 590
-    },
-    {
-      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
-      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
-      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 330,
-      "visits": 320
-    },
-    {
-      "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
-      "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
-      "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
-      "pv": 260,
-      "visits": 240
-    },
-    {
-      "title": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题",
-      "titleEn": "Kev: Jared Palmer's Open-Source Local Decision Model — One Forward Pass, Many Questions",
-      "path": "/blog/kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora/",
-      "pv": 260,
-      "visits": 240
-    },
-    {
-      "title": "Jev Browser Use：Jev 负责点击导航，Codex 负责思考验收，浏览器自动化快 5-10 倍",
-      "titleEn": "Jev Browser Use: Jev Clicks and Navigates, Codex Thinks and Verifies — 5-10x Faster Browser Automation",
-      "path": "/blog/jev-browser-use-jev-clicks-codex-thinks-browser-automation-skill/",
-      "pv": 220,
-      "visits": 220
-    },
-    {
-      "title": "blog",
-      "titleEn": "blog",
-      "path": "/blog/",
-      "pv": 190,
-      "visits": 20
+      "pv": 900,
+      "visits": 700
     },
     {
       "title": "Qwen-Image-2.1 本地部署：Unsloth FP8/GGUF，6GB 显存能跑，Mac 16GB 统一内存也行",
       "titleEn": "Qwen-Image-2.1 Local Deploy: Unsloth FP8/GGUF, Runs on 6GB VRAM, Mac 16GB Unified Memory Too",
       "path": "/blog/qwen-image-2-1-unsloth-fp8-gguf-local-deploy/",
-      "pv": 170,
-      "visits": 160
+      "pv": 300,
+      "visits": 300
     },
     {
-      "title": "Marble 开源儿童课程知识图谱：1590 个微话题 + 3221 条前置关系，对齐主流课标",
-      "titleEn": "Marble's Open-Source Children's Curriculum Knowledge Graph: 1,590 Micro-Topics and 3,221 Prerequisite Links",
-      "path": "/blog/marble-os-taxonomy-children-curriculum-knowledge-graph/",
-      "pv": 150,
-      "visits": 150
-    },
-    {
-      "title": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查",
-      "titleEn": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios",
-      "path": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
-      "pv": 150,
-      "visits": 150
-    },
-    {
-      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
-      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
-      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
-      "pv": 130,
-      "visits": 130
-    },
-    {
-      "title": "YuE2-3B：先写谱再唱歌的开源音乐模型，和 ACE-Step 1.5 差在哪",
-      "titleEn": "YuE2-3B: Open Song Generation That Writes an Editable Score First",
-      "path": "/blog/yue2-3b-open-source-song-generation-editable-score/",
-      "pv": 130,
-      "visits": 120
-    },
-    {
-      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
-      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
-      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
-      "pv": 130,
-      "visits": 130
+      "title": "Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？",
+      "titleEn": "Nex-N2.5-mini: A 35B/~3B-Active Open Agentic Model — How Much Mac Memory Do You Need?",
+      "path": "/blog/nex-n2-5-mini-agentic-moe-mac-local-memory-guide/",
+      "pv": 300,
+      "visits": 300
     },
     {
       "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
       "titleEn": "ECCV 2026 Best Paper, Unpacked: Heat Kernel Textures Drop UV Unwrapping, and Li Fei-Fei's Perceptual Loss Wins Test of Time",
       "path": "/blog/eccv-2026-best-paper-heat-kernel-textures-uv-free/",
-      "pv": 130,
-      "visits": 130
+      "pv": 300,
+      "visits": 300
     },
     {
-      "title": "explore",
-      "titleEn": "explore",
-      "path": "/explore",
-      "pv": 130,
-      "visits": 60
+      "title": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查",
+      "titleEn": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios",
+      "path": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "title": "Cloudflare 开源 Clef 决策模型：兼容 Jev API、9B 版 Mac 可跑，榜首成绩是自报的",
+      "titleEn": "Cloudflare Open-Sources Clef Decision Models: Jev-API Compatible, the 9B Runs on a Mac, and the Top Score Is Self-Reported",
+      "path": "/blog/cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时",
+      "titleEn": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime",
+      "path": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "OpenSquilla：同样预算，更高智能密度——开源 AI Agent 的 Token 效率革命",
+      "titleEn": "OpenSquilla: Same Budget, Higher Intelligence Density — The Open-Source Token Efficiency Revolution",
+      "path": "/blog/opensquilla-token-efficient-ai-agent-open-source/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "mu（μ）：编程 Agent 的判断核，35 个决策点交给小模型，大模型只管写代码",
+      "titleEn": "mu (μ): A Coding Agent's Judgment Kernel — 35 Decision Points for a Small Model, Big Model Just Codes",
+      "path": "/blog/mu-coding-agent-judgment-kernel-35-decision-points-hive/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
+      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
+      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "Marble 开源儿童课程知识图谱：1590 个微话题 + 3221 条前置关系，对齐主流课标",
+      "titleEn": "Marble's Open-Source Children's Curriculum Knowledge Graph: 1,590 Micro-Topics and 3,221 Prerequisite Links",
+      "path": "/blog/marble-os-taxonomy-children-curriculum-knowledge-graph/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "KaLM-Jev 本地部署指南：从安装到对接业务流程，附硬件选型与再训练说明",
+      "titleEn": "KaLM-Jev Local Deployment Guide: Installation, Hardware Selection, Business Integration, and Fine-Tuning",
+      "path": "/blog/kalm-jev-local-judgment-engine-hardware-deploy/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "光岛：一触即发的桌面工作岛，普通人和开发者都能用",
+      "titleEn": "Luma Island: One Touch, Work Starts — A Desktop Work Island for Everyone",
+      "path": "/blog/luma-island-desktop-work-island/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "IndexTTS-2.5：生产级零样本 TTS，一段参考音频克隆音色 + 细粒度情感与语速控制",
+      "titleEn": "index-tts-25-production-tts-voice-clone-emotion-multilingual",
+      "path": "/blog/index-tts-25-production-tts-voice-clone-emotion-multilingual/",
+      "pv": 200,
+      "visits": 200
     }
   ],
   "devices": [
     {
       "label": "desktop",
-      "count": 15980
+      "count": 17440
     },
     {
       "label": "mobile",
-      "count": 2550
+      "count": 2950
     },
     {
       "label": "tablet",
@@ -227,21 +307,29 @@
   "os": [
     {
       "label": "Windows",
-      "count": 30000
+      "count": 40000
     },
     {
       "label": "Linux",
-      "count": 10000
+      "count": 20000
     }
   ],
   "browsers": [
     {
-      "label": "Edge",
-      "count": 20000
+      "label": "Chrome",
+      "count": 14000
     },
     {
-      "label": "Chrome",
-      "count": 20000
+      "label": "Edge",
+      "count": 6000
+    },
+    {
+      "label": "Unknown",
+      "count": 3000
+    },
+    {
+      "label": "MobileSafari",
+      "count": 1000
     }
   ]
 }
