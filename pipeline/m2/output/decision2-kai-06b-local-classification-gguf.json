@@ -1,0 +1,14 @@
+{
+  "title": "0.6B小模型做判断：Kai本地部署拆解",
+  "author": "Mycelium",
+  "digest": "400MB量化文件做分类与评分；专用运行时、概率漂移和部署边界一次讲清。",
+  "mediaId": "prCUE631thH1cmNLi42prFofz5jfSIXTX172KnOIkvyiSrgemU2kjevvTImJ2hWM",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/vllm-sr/decision-2.0-kai-0.6b",
+    "huggingface.co/vllm-sr/decision-2.0-kai-0.6b-gguf",
+    "github.com/vllm-project/semantic-router",
+    "github.com/xunzhuo/llama.cpp"
+  ],
+  "publishedAt": "2026-10-11T04:20:18.978Z"
+}

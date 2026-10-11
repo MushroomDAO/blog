@@ -693,5 +693,20 @@
     "mediaId": "prCUE631thH1cmNLi42prJ5VuxJi-6BiqLDFhXeY9beJNCHX8VyyezZPeOXo3lfV",
     "title": "Cloudflare开源Clef决策模型：兼容Jev能本地跑",
     "publishedAt": "2026-10-02T04:27:52.061Z"
+  },
+  "needle3-121m-local-tool-calling-ladder-model": {
+    "mediaId": "prCUE631thH1cmNLi42prLIT80gPKdW-Yiwfq9cnIdqhd-06ClIbYhXgk1ulGgZI",
+    "title": "Needle 3实测：小模型能接管工具吗",
+    "publishedAt": "2026-10-11T04:17:43.926Z"
+  },
+  "whistle-17mb-local-speech-to-tool-calls": {
+    "mediaId": "prCUE631thH1cmNLi42prJNiPBncQz8zQzCy8zRWflPZlFLHzZQJTQDGP5J_Zjy1",
+    "title": "16.9MB语音模型，把一句话变成工具调用",
+    "publishedAt": "2026-10-11T04:19:13.926Z"
+  },
+  "decision2-kai-06b-local-classification-gguf": {
+    "mediaId": "prCUE631thH1cmNLi42prFofz5jfSIXTX172KnOIkvyiSrgemU2kjevvTImJ2hWM",
+    "title": "0.6B小模型做判断：Kai本地部署拆解",
+    "publishedAt": "2026-10-11T04:20:18.978Z"
   }
 }

@@ -465,3 +465,14 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
   真实钥匙串写入在 Agent 会话里 `security -i` 挂起 >2 分钟（代码无超时）。
 - Phonon-2：M4 16GB 约 100 倍实时，峰值内存 3.8GB 起（加载时展开 16 位稠密副本）；中文输出伪拼音。PR #232 截至 10-02 未合并。
 - Clef-flash：本机 16GB 没跑（bf16 19GB）；GGUF 版不含联合 schema 头，llama.cpp 里只是普通 Qwen。
+
+## 2026-10-11 Hugging Face 小模型专项
+
+用户要求先 commit all，再用 forage 选 3 个 Hugging Face 小模型并写文章。按已保存的「写了就默认发」偏好，三篇均完成双语正文、写实封面、每篇 4 张小M配图、Blog 200、语义索引和公众号草稿。选题：Needle 3、Whistle、Decision-2.0-Kai-0.6B。
+
+- 已写项目排除：Clef、Phonon-2、humanizer、Spark-X2.5；Kolibri-1 激活3.46B但总78B，不作为微型部署候选。Needle 3 是已有 Needle 2 的实质代际更新。
+- 本机结果：Needle 3 英文双调用79ms，中文调灯高分0.8668却漏判；Whistle 合成英语转写25ms、双模型调用96ms。均单次进程墙钟，不是完整评测或真实设备执行。Kai仅核验代码、文件与发布方验证，未跑本机推理。
+- 实际文件与营销区间要分开：Needle 3 当前35.3MB，卡片仍8–29MB；Whistle16.9MB，双模型52.3MB。
+- 隐私核验：GH README声明 binary 默认遥测，HF card称不读环境变量，两者冲突；Python源码支持optout，但不能据此证明binary无出网。
+- 采集侧：agent-reach在此shell缺失；本次只按用户指定查HF，不宣称全平台覆盖。查重器URL仍被https/huggingface.co通用字符串污染，精确实体复查三项无重复。
+- MemPalace mine返回Chroma INTEGER/BLOB类型错误，新增全文记录为0；已保存3个项目记忆文件与仓库持久账本，不把退出码0当作成功。

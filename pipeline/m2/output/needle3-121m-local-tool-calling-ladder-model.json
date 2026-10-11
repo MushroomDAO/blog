@@ -1,0 +1,14 @@
+{
+  "title": "Needle 3实测：小模型能接管工具吗",
+  "author": "Mycelium",
+  "digest": "121M模型79毫秒拆出双调用，中文却高置信度漏判。端侧部署还要看体积、遥测和微调边界。",
+  "mediaId": "prCUE631thH1cmNLi42prLIT80gPKdW-Yiwfq9cnIdqhd-06ClIbYhXgk1ulGgZI",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/cactus-compute/needle3",
+    "github.com/cactus-compute/needle",
+    "huggingface.co/api/models",
+    "huggingface.co/cactus-compute/whistle"
+  ],
+  "publishedAt": "2026-10-11T04:17:43.926Z"
+}

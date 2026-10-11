@@ -1,0 +1,13 @@
+{
+  "title": "16.9MB语音模型，把一句话变成工具调用",
+  "author": "Mycelium",
+  "digest": "M4实测Whistle：合成英语转写25ms，语音到工具调用96ms。支持7种语言，不含中文。",
+  "mediaId": "prCUE631thH1cmNLi42prJNiPBncQz8zQzCy8zRWflPZlFLHzZQJTQDGP5J_Zjy1",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/cactus-compute/whistle",
+    "huggingface.co/cactus-compute/needle3",
+    "github.com/cactus-compute/needle"
+  ],
+  "publishedAt": "2026-10-11T04:19:13.926Z"
+}
