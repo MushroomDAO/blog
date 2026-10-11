@@ -1,0 +1,30 @@
+{
+  "figures": [
+    {
+      "file": "vorssaint-utils-macos-menu-bar-toolkit-fig-01.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 74215
+    },
+    {
+      "file": "vorssaint-utils-macos-menu-bar-toolkit-fig-02.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 75144
+    },
+    {
+      "file": "vorssaint-utils-macos-menu-bar-toolkit-fig-03.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 83518
+    }
+  ],
+  "visualInspection": "Passed: onlyneededmodules,independentpermissionkeys,hash/signature/ticketbeforeinstallation;white16:9,readableChinese,Xiao-Mactive",
+  "compression": "ImageMagickonly"
+}

@@ -1,0 +1,13 @@
+{
+  "releaseCommit": "aea106cb5d52045c99810cf672da891d2a20b67d",
+  "sourcePath": "Sources/Vorssaint/Services/Audio/AppVolumeMixer.swift",
+  "audioTapAvailabilityEvidence": [
+    "if #available(macOS 14.4, *) { return true }",
+    "guard #available(macOS 14.4, *), let token = builds.begin(app.id) else { return }",
+    "guard #available(macOS 14.4, *) else { return nil }",
+    "guard #available(macOS 14.4, *) else { return }",
+    "@available(macOS 14.4, *)",
+    "@available(macOS 14.4, *)"
+  ],
+  "feature": "per-app mixer process taps requiremacOS14.4+"
+}

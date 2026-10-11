@@ -1,0 +1,101 @@
+{
+  "sha": "21eb10b80c4cb81fb4ff81c93a6d3afb18e74651",
+  "node_id": "C_kwDOS4xLO9oAKDIxZWIxMGI4MGM0Y2I4MWZiNGZmODFjOTNhNmQzYWZiMThlNzQ2NTE",
+  "commit": {
+    "author": {
+      "name": "vorssaint",
+      "email": "vorssaint@gmail.com",
+      "date": "2026-10-10T16:50:32Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-10T16:50:32Z"
+    },
+    "message": "Update README",
+    "tree": {
+      "sha": "d4c1352a4795e2bfb8a59010e492b2170c9c7c3a",
+      "url": "https://api.github.com/repos/vorssaint/vorssaint-utils/git/trees/d4c1352a4795e2bfb8a59010e492b2170c9c7c3a"
+    },
+    "url": "https://api.github.com/repos/vorssaint/vorssaint-utils/git/commits/21eb10b80c4cb81fb4ff81c93a6d3afb18e74651",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqymzYCRC1aQ7uu5UhlAAA7kwQAI9Z7CTpfX65zUNvvRdGqgUE\nF48BKPzUxRxSPWq+dR2M56WbPAnKflvxwJiG65fjYI06dNIDqZBGBbW8xrGveas5\n7Zh5d/EGD0VDnPZ9G0hlADaVZqmG0jBydASGh3099tdcmE+40qfE3Sm/tet2tNKc\ncLv23tGTD0q1zAeZzAMkHJYnEx7+0+ig44CbOS9xoFqiDli/b9Iy1efaYuOkLUIK\nG32izuSz3SviRrzAn6863bF0bjDO2ZdX2BT9668qcwO9GkaV4R71bMOl/3ZiAsfW\nE4u9RlEqMa5bUsgFKqdWE7O1wTwt3FIb5+ZSjbk0aZboWnC3D7HKh6yuZKimqbrW\nGyHINMxBcd7D7aK+Rl3ZHjKF5DVl9blnYJBtTFiNK6Honbz0YxNEwk6HQYT4Uo/k\nlHBxA6PQxaUUoHSAO9gb7dNHnUPZboP1kOmvLKtb0XD9BxfiaWZ+UYPtd/0Zr553\n3ugDya/oRycMWk/BEPIKaGGKXHR3Ux/sayFvo1Vw/ak89hoDbPIbQ62gviA9nSeg\nRep77oL4JNN6GHkMno/sE9L1Gn4vCd0+/ftPEa7OZc5JnIW8eiTiwJsmeXAaAsl7\nZkmUCnN9aJvPdzIrJZTjZAt73EC+tOiG8pWLoBYrVSYIC2ngt2Z6KM1MQQ/eG8cR\nbzXp3fuqUdg5Qdt3euTu\n=x4Lo\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree d4c1352a4795e2bfb8a59010e492b2170c9c7c3a\nparent 47c2653c3ced7b0118ff88b653ebb2425c690021\nauthor vorssaint <vorssaint@gmail.com> 1791651032 -0300\ncommitter GitHub <noreply@github.com> 1791651032 -0300\n\nUpdate README",
+      "verified_at": "2026-10-10T16:50:33Z"
+    }
+  },
+  "url": "https://api.github.com/repos/vorssaint/vorssaint-utils/commits/21eb10b80c4cb81fb4ff81c93a6d3afb18e74651",
+  "html_url": "https://github.com/vorssaint/vorssaint-utils/commit/21eb10b80c4cb81fb4ff81c93a6d3afb18e74651",
+  "comments_url": "https://api.github.com/repos/vorssaint/vorssaint-utils/commits/21eb10b80c4cb81fb4ff81c93a6d3afb18e74651/comments",
+  "author": {
+    "login": "vorssaint",
+    "id": 259901989,
+    "node_id": "U_kgDOD33KJQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/259901989?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vorssaint",
+    "html_url": "https://github.com/vorssaint",
+    "followers_url": "https://api.github.com/users/vorssaint/followers",
+    "following_url": "https://api.github.com/users/vorssaint/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vorssaint/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vorssaint/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vorssaint/subscriptions",
+    "organizations_url": "https://api.github.com/users/vorssaint/orgs",
+    "repos_url": "https://api.github.com/users/vorssaint/repos",
+    "events_url": "https://api.github.com/users/vorssaint/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vorssaint/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "47c2653c3ced7b0118ff88b653ebb2425c690021",
+      "url": "https://api.github.com/repos/vorssaint/vorssaint-utils/commits/47c2653c3ced7b0118ff88b653ebb2425c690021",
+      "html_url": "https://github.com/vorssaint/vorssaint-utils/commit/47c2653c3ced7b0118ff88b653ebb2425c690021"
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "additions": 1,
+    "deletions": 1
+  },
+  "files": [
+    {
+      "sha": "9805c9801179d700e439c9b4ad41ed6d20ee8808",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/vorssaint/vorssaint-utils/blob/21eb10b80c4cb81fb4ff81c93a6d3afb18e74651/README.md",
+      "raw_url": "https://github.com/vorssaint/vorssaint-utils/raw/21eb10b80c4cb81fb4ff81c93a6d3afb18e74651/README.md",
+      "contents_url": "https://api.github.com/repos/vorssaint/vorssaint-utils/contents/README.md?ref=21eb10b80c4cb81fb4ff81c93a6d3afb18e74651",
+      "patch": "@@ -9,7 +9,7 @@\n \n <p align=\"center\">\n   One menu bar icon doing the job of a dozen paid Mac apps.<br>\n-  Free, open source, and local-first.\n+  Install only what you use.\n </p>\n \n <p align=\"center\">"
+    }
+  ]
+}

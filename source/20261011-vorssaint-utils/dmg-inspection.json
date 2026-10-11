@@ -1,0 +1,29 @@
+{
+  "version": "3.4.1",
+  "build": "101",
+  "minimumSystemVersion": "14.0",
+  "bundleIdentifier": "com.vorssaint.utils",
+  "executableSHA256": "c64dd689143572758fd6974934979b8a15c4b96ad2da6529cd3f166a7cac3b2f",
+  "appExecuted": false,
+  "installedIntoApplications": false,
+  "architecture": {
+    "exitCode": 0,
+    "output": "<readonly-dmg>/Vorssaint.app/Contents/MacOS/Vorssaint: Mach-O 64-bit executable arm64\n\n"
+  },
+  "signatureInfo": {
+    "exitCode": 0,
+    "output": "\nExecutable=/private<readonly-dmg>/Vorssaint.app/Contents/MacOS/Vorssaint\nIdentifier=com.vorssaint.utils\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=150431 flags=0x10000(runtime) hashes=4690+7 location=embedded\nVersionPlatform=1\nVersionMin=917504\nVersionSDK=1705216\nHash type=sha256 size=32\nCandidateCDHash sha256=6fd4b787e1a234831e93e51ae178fab26897c91b\nCandidateCDHashFull sha256=6fd4b787e1a234831e93e51ae178fab26897c91b596ce6de6cb3b0783650a5db\nHash choices=sha256\nCMSDigest=6fd4b787e1a234831e93e51ae178fab26897c91b596ce6de6cb3b0783650a5db\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=28950528\nExecutable Segment flags=0x1\nPage size=16384\nCDHash=6fd4b787e1a234831e93e51ae178fab26897c91b\nSignature size=8973\nAuthority=Developer ID Application: Pedro Gomes (3D485NHW29)\nAuthority=Developer ID Certification Authority\nAuthority=Apple Root CA\nTimestamp=9 Oct BE 2569 at 06:43:08\nNotarization Ticket=stapled\nInfo.plist entries=32\nTeamIdentifier=3D485NHW29\nRuntime Version=26.5.0\nSealed Resources version=2 rules=13 files=36\nInternal requirements count=1 size=180\n"
+  },
+  "signatureVerify": {
+    "exitCode": 0,
+    "output": "\n--prepared:/private<readonly-dmg>/Vorssaint.app/Contents/Frameworks/libVorssaintNowPlaying.dylib\n--validated:/private<readonly-dmg>/Vorssaint.app/Contents/Frameworks/libVorssaintNowPlaying.dylib\n<readonly-dmg>/Vorssaint.app: valid on disk\n<readonly-dmg>/Vorssaint.app: satisfies its Designated Requirement\n"
+  },
+  "gatekeeper": {
+    "exitCode": 0,
+    "output": "\n<readonly-dmg>/Vorssaint.app: accepted\nsource=Notarized Developer ID\n"
+  },
+  "notarizationTicket": {
+    "exitCode": 0,
+    "output": "Processing: <readonly-dmg>/Vorssaint.app\nThe validate action worked!\n\n"
+  }
+}

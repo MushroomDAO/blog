@@ -1,0 +1,15 @@
+# Vorssaint Utils distribution verification — 2026-10-11
+
+Source https://github.com/vorssaint/vorssaint-utils. RawKB material reused; exactsource/entity dedup hitrawmaterialonly,nooldpublication.
+Main documentation commit21eb10b80c4cb81fb4ff81c93a6d3afb18e74651. Releasev3.4.1 commit aea106cb5d52045c99810cf672da891d2a20b67d, published2026-10-08. GitHub snapshot26110stars.
+OfficialAppleSilicon/macOS14+; codeGPL3-or-later andseparatetrademarkidentity rules. SourceUIfeatures/screenshots areofficial,notourlocalappcapture.
+
+DownloadedVorssaint-3.4.1.dmg26722813bytes. SHA256d3cebdd07795826294d821946cb1d40f5e8b85d2883a81153c552046cc80ab3a matchesreleaseassetdigest. Mountedread-onlywithhdiutil,nobrowse; inspectedapp;detachedafterward. Noappstart,Applicationsinstall,permissionrequests orsystemchanges.
+Info.plist3.4.1/build101/macOS14.0;arm64mainexecutable;codesignstrictdeepverify0;GatekeeperacceptedNotarizedDeveloperID;staplervalidate0. Distributionvalidationonly,nofunctional/performance/securityaudit.
+ReleaseAppVolumeMixer.swiftgatesprocess taps onmacOS14.4;overall14.0minimumdoesnotpromiseeveryfeature. Release notes putperappAirPlayonmacOS27+.
+
+Local-first isnotfullyoffline: updatechecks,speedtest,Homebrew,optionallyrics/AIpricelist andexplicittemporarycapturesharing usevisibleconnections;networkprivacyclaims areofficialstatements,notourpackettrace. Systemclipboardclearingdoesnotdeletealready-savedhistory. OptionalAIAgents readsusage/model/projectmetadata;noactivationinthissession.
+
+Reproduce distributionchecks onMac withfixedofficialDMG: verifySHA256; mountreadonly; readInfo.plist;filemainbinary;codesign --verify --deep --strict;spctl --assess --type execute; xcrun stapler validate;detach. Neverexecutetheappjusttoinspectmetadata. Hashmatchdoesnotestablishdefect-freesoftware.
+
+Bannerdecision: inspectedofficialFeaturesHubtext-heavyUI andportraitVolumeMixershotwhosehorizontalcropdropscontrols;neithercomprehensivelyshowsmodulartoolkit. GeneratedlocalFLUX2Klein4B audio/mouseworkbench;firstseed87machinepassbutvisualbrandartifactrejected,finalseed89passedmachineQAandvisualinspection,1200x630,92203bytes. Body3Xiao-Mfiguresgenerated1600x900,<90000byteseach,visualQApassed.

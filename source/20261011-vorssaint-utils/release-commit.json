@@ -1,0 +1,125 @@
+{
+  "sha": "aea106cb5d52045c99810cf672da891d2a20b67d",
+  "node_id": "C_kwDOS4xLO9oAKGFlYTEwNmNiNWQ1MjA0NWM5OTgxMGNmNjcyZGE4OTFkMmEyMGI2N2Q",
+  "commit": {
+    "author": {
+      "name": "Vorssaint",
+      "email": "vorssaint@gmail.com",
+      "date": "2026-10-08T23:30:15Z"
+    },
+    "committer": {
+      "name": "Vorssaint",
+      "email": "vorssaint@gmail.com",
+      "date": "2026-10-08T23:30:15Z"
+    },
+    "message": "Update release",
+    "tree": {
+      "sha": "362bccc23c60400aa4c6c3084786566c015f7c9d",
+      "url": "https://api.github.com/repos/vorssaint/vorssaint-utils/git/trees/362bccc23c60400aa4c6c3084786566c015f7c9d"
+    },
+    "url": "https://api.github.com/repos/vorssaint/vorssaint-utils/git/commits/aea106cb5d52045c99810cf672da891d2a20b67d",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg1YB0HNPXet0pHOa6lT5+gEtLlx\nQ222H8qiERE27KbVUAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQECO8nTbCnb2m8Hy3k9Ebj03KMjrlLkbX6c92boh/vOPqh1aaDoUHebm5X37zKxULi\nO4OwCmjpJFw+LLGRSZ+wc=\n-----END SSH SIGNATURE-----",
+      "payload": "tree 362bccc23c60400aa4c6c3084786566c015f7c9d\nparent 25aa41f6960ba1273762f7b3903ddd980b889f84\nauthor Vorssaint <vorssaint@gmail.com> 1791502215 -0300\ncommitter Vorssaint <vorssaint@gmail.com> 1791502215 -0300\n\nUpdate release\n",
+      "verified_at": "2026-10-08T23:30:18Z"
+    }
+  },
+  "url": "https://api.github.com/repos/vorssaint/vorssaint-utils/commits/aea106cb5d52045c99810cf672da891d2a20b67d",
+  "html_url": "https://github.com/vorssaint/vorssaint-utils/commit/aea106cb5d52045c99810cf672da891d2a20b67d",
+  "comments_url": "https://api.github.com/repos/vorssaint/vorssaint-utils/commits/aea106cb5d52045c99810cf672da891d2a20b67d/comments",
+  "author": {
+    "login": "vorssaint",
+    "id": 259901989,
+    "node_id": "U_kgDOD33KJQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/259901989?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vorssaint",
+    "html_url": "https://github.com/vorssaint",
+    "followers_url": "https://api.github.com/users/vorssaint/followers",
+    "following_url": "https://api.github.com/users/vorssaint/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vorssaint/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vorssaint/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vorssaint/subscriptions",
+    "organizations_url": "https://api.github.com/users/vorssaint/orgs",
+    "repos_url": "https://api.github.com/users/vorssaint/repos",
+    "events_url": "https://api.github.com/users/vorssaint/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vorssaint/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "vorssaint",
+    "id": 259901989,
+    "node_id": "U_kgDOD33KJQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/259901989?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vorssaint",
+    "html_url": "https://github.com/vorssaint",
+    "followers_url": "https://api.github.com/users/vorssaint/followers",
+    "following_url": "https://api.github.com/users/vorssaint/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vorssaint/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vorssaint/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vorssaint/subscriptions",
+    "organizations_url": "https://api.github.com/users/vorssaint/orgs",
+    "repos_url": "https://api.github.com/users/vorssaint/repos",
+    "events_url": "https://api.github.com/users/vorssaint/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vorssaint/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "25aa41f6960ba1273762f7b3903ddd980b889f84",
+      "url": "https://api.github.com/repos/vorssaint/vorssaint-utils/commits/25aa41f6960ba1273762f7b3903ddd980b889f84",
+      "html_url": "https://github.com/vorssaint/vorssaint-utils/commit/25aa41f6960ba1273762f7b3903ddd980b889f84"
+    }
+  ],
+  "stats": {
+    "total": 10,
+    "additions": 5,
+    "deletions": 5
+  },
+  "files": [
+    {
+      "sha": "30c9731854f48a011e0a2c7d6b93515b4c3044f3",
+      "filename": "CHANGELOG.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/vorssaint/vorssaint-utils/blob/aea106cb5d52045c99810cf672da891d2a20b67d/CHANGELOG.md",
+      "raw_url": "https://github.com/vorssaint/vorssaint-utils/raw/aea106cb5d52045c99810cf672da891d2a20b67d/CHANGELOG.md",
+      "contents_url": "https://api.github.com/repos/vorssaint/vorssaint-utils/contents/CHANGELOG.md?ref=aea106cb5d52045c99810cf672da891d2a20b67d",
+      "patch": "@@ -4,7 +4,7 @@ All notable changes to this project are documented here. The format follows\n [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses\n [Semantic Versioning](https://semver.org/).\n \n-## [Unreleased]\n+## [3.4.1] - 2026-10-08\n \n ### Summary\n Dynamic Island now works on Macs and displays without a notch, on every display at once and on the Lock Screen. It adds a companion, Watch for any window, more AI agents, and new music, audio and calendar controls, while using much less battery. Window layout gets configurable snap areas, screenshots can go to the Shelf or a temporary link, and many bugs are fixed."
+    },
+    {
+      "sha": "1347d4ad958abdb46913beb440e0018de79ad1b6",
+      "filename": "Resources/Info.plist",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/vorssaint/vorssaint-utils/blob/aea106cb5d52045c99810cf672da891d2a20b67d/Resources%2FInfo.plist",
+      "raw_url": "https://github.com/vorssaint/vorssaint-utils/raw/aea106cb5d52045c99810cf672da891d2a20b67d/Resources%2FInfo.plist",
+      "contents_url": "https://api.github.com/repos/vorssaint/vorssaint-utils/contents/Resources%2FInfo.plist?ref=aea106cb5d52045c99810cf672da891d2a20b67d",
+      "patch": "@@ -41,13 +41,13 @@\n \t<key>CFBundlePackageType</key>\n \t<string>APPL</string>\n \t<key>CFBundleShortVersionString</key>\n-\t<string>3.4.1-beta.5</string>\n+\t<string>3.4.1</string>\n \t<key>CFBundleSupportedPlatforms</key>\n \t<array>\n \t\t<string>MacOSX</string>\n \t</array>\n \t<key>CFBundleVersion</key>\n-\t<string>100</string>\n+\t<string>101</string>\n \t<key>LSApplicationCategoryType</key>\n \t<string>public.app-category.utilities</string>\n \t<key>LSMinimumSystemVersion</key>"
+    },
+    {
+      "sha": "2911bdd1b5b5eef59bfbbff574bec77b0a591f19",
+      "filename": "Tests/SwitcherModelFeatureTests.swift",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/vorssaint/vorssaint-utils/blob/aea106cb5d52045c99810cf672da891d2a20b67d/Tests%2FSwitcherModelFeatureTests.swift",
+      "raw_url": "https://github.com/vorssaint/vorssaint-utils/raw/aea106cb5d52045c99810cf672da891d2a20b67d/Tests%2FSwitcherModelFeatureTests.swift",
+      "contents_url": "https://api.github.com/repos/vorssaint/vorssaint-utils/contents/Tests%2FSwitcherModelFeatureTests.swift?ref=aea106cb5d52045c99810cf672da891d2a20b67d",
+      "patch": "@@ -1982,10 +1982,10 @@ enum SwitcherModelFeatureTests {\n         // decision above is made consciously, never by omission.\n         let releasePlist = NSDictionary(contentsOfFile: \"Resources/Info.plist\")\n         let plistVersion = (releasePlist?[\"CFBundleShortVersionString\"] as? String) ?? \"\"\n-        suite.expect(plistVersion == \"3.4.1-beta.5\",\n+        suite.expect(plistVersion == \"3.4.1\",\n                \"bumping the app version requires re-deciding the support prompt pin above\")\n         let plistBuild = (releasePlist?[\"CFBundleVersion\"] as? String) ?? \"\"\n-        suite.expect(plistBuild == \"100\",\n+        suite.expect(plistBuild == \"101\",\n                \"every app version needs its own incremented bundle build\")\n         suite.expect(SupportUpdateIntroInfo.releaseVersion == \"3.4.1\",\n                \"the support prompt is prepared for the 3.4.1 stable release\")"
+    }
+  ]
+}

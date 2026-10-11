@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-11",
+  "metaLengths": {
+    "title": 27,
+    "titleEn": 41,
+    "description": 160,
+    "descriptionEn": 156,
+    "wechatTitle": 19,
+    "wechatDigest": 31
+  },
+  "bilingual": true,
+  "copyrightBlocks": true,
+  "tags": 6,
+  "questionHeadings": 20,
+  "faqPairsEachLanguage": 4,
+  "sources": "PinnedmainREADME/privacy/permissions andexactv3.4.1releaseimplementation",
+  "originalEvidence": "DMGhash,arm64,plist,codesign,Gatekeeper,stapledticket; noapplicationexecution",
+  "bodyFigures": "3passed1600x900,<90000bytes,descriptivealtsinbothlanguages"
+}
