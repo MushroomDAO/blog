@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "vectorIdsRequested": [
+    "ff3b43a72284fc0d0a71655c18223b70e83f6639dbf1b78b",
+    "8e9a97ea6aa47b2d48e50df2d1d61c7b11cd1662bfc4d855"
+  ],
+  "vectors": [
+    {
+      "id": "ff3b43a72284fc0d0a71655c18223b70e83f6639dbf1b78b",
+      "metadata": {
+        "article_id": "onetake-envmanage-source-check",
+        "content_hash": "6441c19b45e6c06b",
+        "excerpt": "onetake 与 EnvManage：两款工具的来源与使用边界 onetake 用代码智能体制作一镜到底产品动效，EnvManage 用 SwiftUI 管理 Mac 环境变量。本文核对两款独立工具的真实仓库，纠正作者账号拼写，区分非商业免费版与 Pro 商用授权，说明 EnvManage 当前缺少许可和商店确认，并记录动作库检查及原生应用构建结果，帮助从笔记线索找到可复核的来源。 onetake EnvManage Agent Skills SwiftUI macOS 动效制作 onetake 怎样把动效串成一条镜头？ 免费版与 Pro 到底差在哪里",
+        "language": "zh",
+        "tags": [
+          "onetake",
+          "EnvManage",
+          "Agent Skills",
+          "SwiftUI",
+          "macOS",
+          "动效制作"
+        ],
+        "title": "onetake 与 EnvManage：两款工具的来源与使用边界",
+        "url": "/blog/onetake-envmanage-source-check/"
+      },
+      "dimension": 1024
+    },
+    {
+      "id": "8e9a97ea6aa47b2d48e50df2d1d61c7b11cd1662bfc4d855",
+      "metadata": {
+        "article_id": "onetake-envmanage-source-check",
+        "content_hash": "6ef57dec02479fe7",
+        "excerpt": "onetake and EnvManage: Sources, Licenses and Local Checks Verify onetake and EnvManage repositories, motion-film and native Mac workflows, license limits, local checks and the difference between claims and evidence. onetake EnvManage Agent Skills SwiftUI macOS 动效制作 How does oneta",
+        "language": "en",
+        "tags": [
+          "onetake",
+          "EnvManage",
+          "Agent Skills",
+          "SwiftUI",
+          "macOS",
+          "动效制作"
+        ],
+        "title": "onetake and EnvManage: Sources, Licenses and Local Checks",
+        "url": "/blog/onetake-envmanage-source-check/"
+      },
+      "dimension": 1024
+    }
+  ]
+}

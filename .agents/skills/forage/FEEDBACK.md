@@ -525,3 +525,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - peekaboo-macos-native-ui-agent：MIT、5282Star快照、v4.9.0；macOS15+/npmNode22+，原生观察动作与Agent/MCP层分开，stdio可用说明、HTTP/SSE保留未实现。main固定commit文档可能领先release，区别CLI与Agent/MCP输入策略、宿主权限和模型图像外发路径。
 - 本机仅验证4.9.0version/help/permissionquery/dry-run。Bridge/local操作权限未授予，预演not_invoked、零toolcalls、backgroundOnly；不声称截图/点击/完整任务实测，不读取剪贴板/桌面或申请权限。
 - 双语SEO/GEO、主题FLUX81合格封面+3小M图、Blog200与列表首页第6、4图200、公众号draft/get标题封面3图正文核验、zh/en索引及新query命中全部完成。项目记忆与MEMORY索引保存，MemPalace SQLite0→2确认。证据source/20261011-peekaboo/。
+
+
+## 2026-10-11 onetake / EnvManage 来源核对与首次发布
+
+- c02d3d80-6879-4871-9dd1-f40098a86266：机器人泛词github查重误报，正确源URL/精确实体只命中原KB，无旧发布，首次合并来源核对文章onetake-envmanage-source-check。原账号feilangyuan404，更正feitangyuan/onetake；另一个匹配工具wbbk/envmanage独立。agent-reach本机不可用，用用户允许的Jina抓取，17README图保存botmedia。
+- onetake非商业PolyForm许可，Pro商用另授权；未买付费包，不写成MIT/无限制开源；11案例目录/中文README10条分开。EnvManage固定tree无LICENSE，CNmacSoftware查询0不推断全球无发行、不确认AppStore路径。
+- 本机上游motion58PASS；EnvManage官方buildApp+DMG、自检14PASS0fail、7配置hash不变，无GUI/完整电影生成/真实环境编辑实测。源码独立观察备份失败不阻断、selftest失败仍exit0/SELFTEST_OK，需要核对失败计数。
+- 双语SEO/GEO、FLUX83主题合格banner+3小M图、Blog200列表首页第6与4图200、公众号draft/get标题封面3图正文核验；zh/en索引upsert成功、get_by_ids向量与元数据确认，初次query存在异步延迟，后续Englishquery首位0.682814。项目记忆与MemPalace SQLite0→3核验完成。证据source/20261011-onetake-envmanage/。
