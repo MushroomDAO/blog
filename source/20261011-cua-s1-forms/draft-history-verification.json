@@ -1,0 +1,12 @@
+{
+  "mediaId": "prCUE631thH1cmNLi42prGbLSv877O8U0ff1OQyc07RmEimHdMFasIdA1t1rVAjb",
+  "createdAt": "2026-09-20T06:25:07.009Z",
+  "historicalCreation": "local persisted M2 receipt",
+  "currentDraftGet": {
+    "errcode": 40007,
+    "meaning": "invalid media_id"
+  },
+  "currentlyAvailable": false,
+  "massPublished": "unknown; freepublish access unavailable",
+  "action": "preserve historical mediaId; do not blindly recreate historical successful draft"
+}

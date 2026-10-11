@@ -501,3 +501,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - 官网33个在线figure与仓库8个完整示例是不同口径，均有一手证据。MIT Ryan2026；Nodekit20.10+与skillsCLI1.7.1的22.20+要求分开；3D为beta，Figure30–90min/更大任务数小时是作者估计。
 - 本机Node26.10.0重建官方百分表示例明暗两主题，输出无gitdiff。HeadlessChrome减少动画键盘Home/End/ArrowRight分别18/10/14px，aria一致；桌面和390px深色移动页无横溢/控制台错误。仅验证既有示例，未声称从零生成新图或复现完整几何/3D审计。
 - 完成anatomy-claude-interactive-isometric-figures：官方发动机/水槽图合格banner、3张小M图、双语SEO/GEO、Blog列表首位与4图200、带完整MIT许可的交互示例HTML200、zh/en索引、公众号draft/get核验。MemPalace新增2条发布记录SQLite确认；证据source/20261011-anatomy/。
+
+
+## 2026-10-11 CUA-S1-Forms 历史发布核对
+
+- 任务f8d4f0f7-fbb5-4370-93d4-50c574f2b213；精确CUA-S1-Forms实体已出现在2026-09-20完整Cua双语文章与本地成功M2记录中，复用cua-computer-use-2-0-desktop-agent-benchmark-trajectory-cua-s1，不另写重复文、不重部署/生成封面/新建草稿。
+- Blog200，Sept20历史列表位置135，原FLUX封面机器检查全部通过且公开图片200；语义manifest两语言unchanged，精确Cua主题query返回文章第1。只补缺失的项目记忆和MemPalace账本，SQLite确认新增发布条目。
+- 旧M2 mediaId曾在2026-09-20创建；当前draft/get40007失效。不能据此断言未发布，不能盲目重建，保留真实历史ID并明确当前不可读；freepublish无权限，无法分辨发送或手工删除。
+- 官方模型卡核对：706048参数、约2.83MBsafetensors，单次前向评分、不生成；抽取与执行在模型外。新版只支持safetensors+JSON。100%/196决策是作者报告、支持results文档未在库内且当前libs不复现；不是本次实测，也不泛化为端到端成功率。未运行新模型或改写旧文。证据source/20261011-cua-s1-forms/。
