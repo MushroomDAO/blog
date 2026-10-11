@@ -1,0 +1,35 @@
+Usage
+  peekaboo mcp [options]
+
+Summary
+  Model Context Protocol server operations
+
+DESCRIPTION
+  Model Context Protocol server operations
+  The MCP command runs Peekaboo as an MCP server, exposing its tools to AI clients
+like Codex, Claude Code, and Cursor.
+
+EXAMPLES:
+  peekaboo mcp                          # Start MCP server on stdio
+  peekaboo mcp serve                     # Explicitly start MCP server
+  peekaboo mcp serve --transport stdio   # Explicitly select stdio transport
+
+OPTIONS
+  --log-level <log-level>           Set log level (trace|verbose|debug|info|warning|error|critical)
+  --bridge-socket <bridge-socket>   Override the socket path for a Peekaboo Bridge host
+  --input-strategy <input-strategy>  Override UI input strategy: actionFirst, synthFirst, actionOnly, or synthOnly
+  --transport <transport>           Transport type (stdio; HTTP/SSE are reserved but not implemented)
+  --port <port>                     Reserved port for future HTTP/SSE transport support
+  --browser-handoff <browser-handoff>  Consume one signed browser handoff receipt into this server's scoped child
+
+FLAGS
+  -v, --verbose                Enable verbose logging
+  --json, -j                   Emit machine-readable JSON output
+  --no-remote                  Force local execution; skip remote hosts even if available
+  --allow-foreground           Authorize foreground/global UI and browser user activation for this MCP server
+  --allow-temporary-clipboard  Allow bounded temporary clipboard paste to exact snapshots; UI remains background-only
+
+Subcommands:
+  serve     Start Peekaboo as an MCP server
+
+Default subcommand: serve

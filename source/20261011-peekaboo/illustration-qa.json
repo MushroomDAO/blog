@@ -1,0 +1,30 @@
+{
+  "generatedSession": "01a12bb3-0092-7102-8251-9bb4998848a2",
+  "figures": [
+    {
+      "file": "peekaboo-macos-native-ui-agent-fig-01.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 58201
+    },
+    {
+      "file": "peekaboo-macos-native-ui-agent-fig-02.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 43332
+    },
+    {
+      "file": "peekaboo-macos-native-ui-agent-fig-03.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 72312
+    }
+  ],
+  "visualInspection": "Passed. White16:9 Xiao-M, readable minimal labels, observe/act/verify, exact window vs sibling, preview/permissions/validation kept distinct. No claims that local test performed real desktop actions."
+}

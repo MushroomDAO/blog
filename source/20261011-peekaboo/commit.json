@@ -1,0 +1,113 @@
+{
+  "sha": "509f12ce7958f220b693608106a135a7ac163775",
+  "node_id": "C_kwDOOuskXtoAKDUwOWYxMmNlNzk1OGYyMjBiNjkzNjA4MTA2YTEzNWE3YWMxNjM3NzU",
+  "commit": {
+    "author": {
+      "name": "Peter Steinberger",
+      "email": "steipete@gmail.com",
+      "date": "2026-10-11T09:32:24Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-11T09:32:24Z"
+    },
+    "message": "build(deps): update Swift Subprocess to 1.0.1 (#1019)\n\nbuild(deps): update Swift Subprocess to 1.0.1\n\nMerged after green exact-head CI and autoreview (round 8).",
+    "tree": {
+      "sha": "30d54914d6924a8bcdf11fa08db30a5a7342aa20",
+      "url": "https://api.github.com/repos/openclaw/Peekaboo/git/trees/30d54914d6924a8bcdf11fa08db30a5a7342aa20"
+    },
+    "url": "https://api.github.com/repos/openclaw/Peekaboo/git/commits/509f12ce7958f220b693608106a135a7ac163775",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqy1eoCRC1aQ7uu5UhlAAA2HAQAIxRBEkjY0Z9IPyyiv6pbw3x\nA0uwG3FuVLBefuwN7HjNn9LL59BJiphh9EXPbrnIwSB6DeXVaexj3CuxujMoh0UN\n+g8NvU2zZxsG4CAcJQgys11TMHbl08bXMnT10PFvY3mPxKb20KBakyeUjsF7xvpo\nkxUykMSBNvYRAqUZ9RIsTJ4O+Ze+ugX5aqHABFfy2VF6uXpCTkR4ogZBuFz4HUna\nORNS+XA2iasGX7dVs62ThAbYVhH02bTfeix66vmUGKFohrxb6f/MrRBKiJY40YHK\nwp5fXsDpO6X0QghruRe1xehsyNC0eY0k8gCA/So6Tg8e8S//L7hGF3Z8WhHbO/fK\nhwZykCFL+TQY66fL4caU21Svf/EO4DxXNW/Z+nBVK8mt+Uw6/KrVlPXt5Ed7juHL\nptA6Gq9EDr/7oJ17Dttlg11CroqHPI5efT+vNozX7lPGOoM+xtfeS0hos4cL3UZ5\n35/4vivDVTH3rFX5lUbnAySdDEStV3xre81bGRnVk5wu66IjDN50anEHN/9li+q/\nVEXZsCJVEeYVyEWx8MGsPkSiTOD/40wExV+gL/VZJbjueSqZL4HpTIY7Qp02VFR/\nCvLmv4+QBLeq4xV+jeVCFBEL9XxbDlv+qCnGx8O7cHvo1OpY0CL8KCwLf6OpMEcj\nPBpsg+EZlemTYIFUVGoN\n=eKsd\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 30d54914d6924a8bcdf11fa08db30a5a7342aa20\nparent 5afcafb5ca7e4f3fe524ce1139d624e811cf3043\nauthor Peter Steinberger <steipete@gmail.com> 1791711144 -0700\ncommitter GitHub <noreply@github.com> 1791711144 -0700\n\nbuild(deps): update Swift Subprocess to 1.0.1 (#1019)\n\nbuild(deps): update Swift Subprocess to 1.0.1\n\nMerged after green exact-head CI and autoreview (round 8).",
+      "verified_at": "2026-10-11T09:32:24Z"
+    }
+  },
+  "url": "https://api.github.com/repos/openclaw/Peekaboo/commits/509f12ce7958f220b693608106a135a7ac163775",
+  "html_url": "https://github.com/openclaw/Peekaboo/commit/509f12ce7958f220b693608106a135a7ac163775",
+  "comments_url": "https://api.github.com/repos/openclaw/Peekaboo/commits/509f12ce7958f220b693608106a135a7ac163775/comments",
+  "author": {
+    "login": "steipete",
+    "id": 58493,
+    "node_id": "MDQ6VXNlcjU4NDkz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/58493?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/steipete",
+    "html_url": "https://github.com/steipete",
+    "followers_url": "https://api.github.com/users/steipete/followers",
+    "following_url": "https://api.github.com/users/steipete/following{/other_user}",
+    "gists_url": "https://api.github.com/users/steipete/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/steipete/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/steipete/subscriptions",
+    "organizations_url": "https://api.github.com/users/steipete/orgs",
+    "repos_url": "https://api.github.com/users/steipete/repos",
+    "events_url": "https://api.github.com/users/steipete/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/steipete/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "5afcafb5ca7e4f3fe524ce1139d624e811cf3043",
+      "url": "https://api.github.com/repos/openclaw/Peekaboo/commits/5afcafb5ca7e4f3fe524ce1139d624e811cf3043",
+      "html_url": "https://github.com/openclaw/Peekaboo/commit/5afcafb5ca7e4f3fe524ce1139d624e811cf3043"
+    }
+  ],
+  "stats": {
+    "total": 5,
+    "additions": 3,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "a7a24b7e8e9861ffd7f2dff73500c53094623a3d",
+      "filename": "Apps/Peekaboo.xcworkspace/xcshareddata/swiftpm/Package.resolved",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/openclaw/Peekaboo/blob/509f12ce7958f220b693608106a135a7ac163775/Apps%2FPeekaboo.xcworkspace%2Fxcshareddata%2Fswiftpm%2FPackage.resolved",
+      "raw_url": "https://github.com/openclaw/Peekaboo/raw/509f12ce7958f220b693608106a135a7ac163775/Apps%2FPeekaboo.xcworkspace%2Fxcshareddata%2Fswiftpm%2FPackage.resolved",
+      "contents_url": "https://api.github.com/repos/openclaw/Peekaboo/contents/Apps%2FPeekaboo.xcworkspace%2Fxcshareddata%2Fswiftpm%2FPackage.resolved?ref=509f12ce7958f220b693608106a135a7ac163775",
+      "patch": "@@ -212,8 +212,8 @@\n       \"kind\" : \"remoteSourceControl\",\n       \"location\" : \"https://github.com/swiftlang/swift-subprocess.git\",\n       \"state\" : {\n-        \"revision\" : \"b3937ab85dd32f6e9435914599c1519074769c1a\",\n-        \"version\" : \"1.0.0\"\n+        \"revision\" : \"55d30558b8b12c0343793421328fe81a4919c776\",\n+        \"version\" : \"1.0.1\"\n       }\n     },\n     {"
+    },
+    {
+      "sha": "81516791bf23307d0e72a4eb30cc9d0e29f64a01",
+      "filename": "CHANGELOG.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/openclaw/Peekaboo/blob/509f12ce7958f220b693608106a135a7ac163775/CHANGELOG.md",
+      "raw_url": "https://github.com/openclaw/Peekaboo/raw/509f12ce7958f220b693608106a135a7ac163775/CHANGELOG.md",
+      "contents_url": "https://api.github.com/repos/openclaw/Peekaboo/contents/CHANGELOG.md?ref=509f12ce7958f220b693608106a135a7ac163775",
+      "patch": "@@ -2,6 +2,7 @@\n \n ## Unreleased\n \n+- Update Swift Subprocess to 1.0.1 for close-on-exec pipe handling and single-owner output-descriptor cleanup in CLI child processes, preserving the Swift 6.2 and macOS baselines.\n - Stop an idle `peekaboo mcp` (and other window-tracking hosts) from burning CPU whenever unrelated applications launch or quit: AXorcist now indexes workspace applications by identity and stops re-reading resolved PIDs, cutting the cost from ~0.68 s to ~0.02 s of CPU per launch and quit on a Mac with ~600 running applications. Thanks @coygeek for the detailed report! #1005.\n - Update AXorcist to 0.2.2 so SwiftPM consumers of Peekaboo's library products get the idle-observer CPU fix, plus `collectAll` request-timeout handling, complete observation subscriptions, and fast observer-removal failure reporting.\n - Update the shared Swift Log lock to 1.16.1 and Swift Configuration to 1.2.2 for corrected multiplexed log metadata and empty configuration values, preserving the supported Swift and macOS baselines."
+    }
+  ]
+}

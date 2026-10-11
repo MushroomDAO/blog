@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-11",
+  "article": "src/content/blog/peekaboo-macos-native-ui-agent.md",
+  "seo_geo": {
+    "bilingual": true,
+    "copyright_blocks": true,
+    "question_headings": 18,
+    "faq_pairs_each_language": 4,
+    "tags": 5,
+    "sources": "pinned official README, MCP, permissions, automation, release",
+    "original_observation": "pinned npm version/help/permission diagnosis and dry-run only",
+    "meta_lengths": {
+      "title": 28,
+      "titleEn": 43,
+      "description": 159,
+      "descriptionEn": 156,
+      "wechatTitle": 20,
+      "wechatDigest": 33
+    },
+    "image_qa": "Banner self-verification passed; three 1600x900 figures visually inspected, each <90000 bytes, each embedded in both languages.",
+    "meta_lengths_pass": true
+  },
+  "dedup": "Only original raw KB; exact source/entity absent from published Blog/live drafts/M2/publication ledger."
+}

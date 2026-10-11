@@ -1,0 +1,278 @@
+---
+summary: 'Drive Peekaboo’s autonomous agent via peekaboo agent'
+read_when:
+  - 'testing natural-language automation end-to-end'
+  - 'resuming or debugging cached agent sessions'
+---
+
+# `peekaboo agent`
+
+`agent` hands a natural-language task to `PeekabooAgentService`, which in turn orchestrates the full toolset (see, click, type, menu, etc.). The command handles session caching, terminal capability detection, progress spinners, and audio capture so you can run the exact same agent loop the macOS app uses.
+
+## Subcommands and options
+| Command or flag | Description |
+| --- | --- |
+| `run [task]` | Run a task. `run` is the default, so `peekaboo agent "task"` remains valid. |
+| `resume [session-id]` | Resume the most recent session, or the exact full session ID, in chat mode. |
+| `sessions` | Print cached sessions with full IDs, tasks, lifecycle status, and stored policy maximum; accepts only the global `--json` output switch. |
+| `chat [initial-prompt]` | Start the interactive chat loop. |
+| `--dry-run` | Emit a deterministic preview of a required text task without calling a model, invoking tools, transcribing audio, or creating a session. Human output names the requested foreground choice, effective UI authority, and automatic desktop-context setting. JSON also includes `automaticDesktopContext`, `uiAuthority.requestedForeground`, `uiAuthority.effectivePolicy`, and `uiAuthority.backgroundOnly` under `result`. |
+| `--max-steps <n>` | Cap model turns to `1...100` (default: 100). One turn may contain multiple tool calls. |
+| `--model gpt-5.6|gpt-5-mini|claude-opus-5|claude-fable-5|claude-sonnet-5|gemini-3-flash|minimax|minimax-cn/<model>|openrouter/<provider>/<model>|ollama/<model>|lmstudio/<model>` | Override the configured model. Concrete OpenAI and Anthropic selections are preserved; generic `gpt`/`openai` select GPT-5.6 Sol. Input is validated against supported hosted providers and local model providers. |
+| `--no-cache` | Run ephemerally without saving a resumable session. Cannot be combined with resume/list flags. |
+| `--no-desktop-context` | Skip new automatic desktop-context collection for this run, chat, or resume invocation. Saved conversation history, tool access, and UI authority are unchanged. |
+| `--allow-foreground` | Human opt-in for this invocation to use foreground/global UI routes. New sessions persist it as an immutable maximum; each later resume must opt in again. It never exposes the Shell tool. |
+| `--allow-temporary-clipboard` | Human opt-in for bounded temporary base64 paste to a fresh exact snapshot, without granting foreground UI. New sessions store a maximum; every resume needs the flag again. |
+| `--quiet` / `--simple` / `--no-color` / `--debug-terminal` | Control output mode; the command auto-detects terminal capabilities when you don’t override it. |
+| `--audio` / `--audio-file <path>` | Use microphone input or pipe audio from disk. |
+
+## Implementation notes
+- The command resolves output “modes” (`minimal`, `compact`, `enhanced`, `quiet`, `verbose`) using terminal detection heuristics; `--simple` and `--no-color` force minimal mode, while `--quiet` suppresses progress output entirely.
+- Task and tool text used in terminal titles has C0/C1 control scalars removed before either VibeTunnel or ANSI output. Accents, emoji and Unicode joiners remain intact; title text cannot introduce additional terminal escape commands.
+- JSON and quiet runs skip progress-event construction and rendering but retain provider streaming, typed tool results,
+  usage, execution traces, safety metadata, and session history. SDK event delegates keep receiving events by default;
+  `receivesAgentEvents = false` opts out for one execution without changing provider selection.
+- The SDK's `executeTaskStreaming` callback receives typed text chunks, including whitespace, without native reasoning,
+  tool events, or a duplicated final summary. Callbacks are awaited in order and share the model's existing terminal
+  buffering policy. They are progress, not confirmation of task success; the returned result or thrown error remains
+  authoritative, and terminal tools can add a final reason that is not a model text chunk.
+- Custom OpenAI-compatible streaming no longer prints endpoint/model metadata or request previews, including for
+  GPT-5-named models or the former `DEBUG_OPENAI` switch. Separate verbose-generation and decoding diagnostics are unchanged.
+- Compatible-provider streams assemble indexed tool-argument fragments before the Agent validates and executes them.
+  Complete batches are delivered at a successful terminal; incomplete or malformed arguments fail before dispatch,
+  while explicit empty no-argument calls remain supported. Agent schema and background-authority checks still apply.
+- Session metadata lives inside `agentService` (PeekabooCore). `agent resume` grabs the most recent session, `agent sessions` prints the cached list, and `--no-cache` keeps a run in memory.
+- Automatic desktop context is enabled by default. Before model turns it reads the frontmost application/window,
+  cursor position, and running-application names; it also reads a clipboard preview when the clipboard tool is available.
+  `--no-desktop-context` skips this new collection and injection for every turn of the current invocation, including
+  chat and resume. It does not remove desktop information already present in saved conversation history, disable
+  model-requested tool observations, restrict tools to one application, or change foreground authority. It is not an
+  application sandbox. `--no-cache` remains a separate session-persistence choice; neither flag disables ordinary
+  runtime initialization or snapshot/coordination storage.
+- Copy the full ID printed by `agent sessions`; shortened prefixes are display hints, not valid resume identifiers. A status
+  of `active` means the saved session is resumable, not that a process is currently executing or that the session is
+  free for concurrent use. Use one process per session; if another run is using it, wait and retry the same full ID.
+- Every new Agent session is background-only by default. Provider and MCP arguments are validated first; the runtime
+  then enforces the immutable authority ceiling before dispatch, including foreground aliases, shared-pointer tools,
+  focus/activation, foreground capture, global shared system UI mutations, Space switch/follow, persistent clipboard
+  writes, browser setup, and browser page fronting. Space listing and unfollowed window moves remain available.
+  The pinned browser provider also treats every Puppeteer page evaluation as a user gesture. Background Agent catalogs
+  therefore hide page discovery, snapshots, navigation, waits, element interaction, and raw script evaluation, and the
+  execution boundary refuses a copied call before provider status or execution. `--allow-foreground` exposes those
+  routes and reports them as foreground browser-protocol delivery even when the page is not visibly raised.
+  Refusals report `effect: refused`,
+  `mutation_dispatched: false`, and `retry_safe: true`.
+- Native scalar unions retain their provider-facing alternatives. In particular, `set_value` accepts JSON strings,
+  booleans, integers, and finite numbers without converting them to strings. Arrays, objects, null, missing required
+  fields, and unknown arguments are rejected before dispatch. Other schemas retain their compatibility projection;
+  richer semantic validation and native target and receipt checks still apply at the native tool boundary.
+- Background-only Agent raw `press` requires a fresh exact non-dialog snapshot receipt. Targetless, app/PID-only,
+  window-selector-only, and `foreground: true` forms are refused. Its semantic effect is unverifiable, so observe the
+  exact target before another mutation.
+- Exact targeted `dialog click`, non-forced `dismiss`, and `input` remain available with an explicit app, PID, or
+  window target. Click/dismiss use prepared one-shot receipts; input resolves the exact target and uses background
+  AXValue. Targetless input, file actions, forced dismiss, and foreground routes remain unavailable.
+- `--allow-foreground` is accepted only as human authority. A new session saves foreground permission as its immutable
+  maximum, but every later process invocation defaults back to background-only and must pass the flag again. A
+  background-only session cannot be broadened on resume, and editing session JSON cannot authorize foreground work.
+  Each continuation regenerates its system prompt for the current invocation ceiling, so a stored foreground-capable
+  session resumed without the flag does not keep foreground examples or guidance.
+- Each execution tailors actionable system-prompt guidance to its acquired, filtered tool catalog. Disabled tools no
+  longer contribute recipes; authority, outcome-evidence and fresh-observation rules remain unconditional. Both
+  streaming and nonstreaming execution preserve message identity/history and use the same prompt in failure checkpoints.
+  `peekaboo learn` similarly describes its filtered catalog. Tool availability never grants additional authority.
+- Background-only Agent typing requires an explicit fresh exact non-dialog snapshot; an optional element ID must come
+  from that snapshot. Snapshot typing cannot include competing app/PID/window selectors. Direct-text paste
+  remains available through a generation-pinned app/PID/window authorization with a canonical background result.
+  Targetless, foreground, current-clipboard, and binary paste remain refused by default.
+- `--allow-temporary-clipboard` independently admits `paste` with `dataBase64` + `uti`, a fresh exact non-dialog,
+  non-system-UI `snapshot`, and optional `alsoText` and `restore_delay_ms` (`0...10000`, default `150`). The data and
+  text companion together are limited to 10 MB. This form rejects app/PID/window selectors, file/image paths,
+  `allowLarge`, ambient current-clipboard paste, persistent clipboard writes, and foreground UI. Direct-text paste
+  keeps its existing app/PID/window route and does not use the clipboard. A remote rich-paste host must negotiate
+  protocol 1.41 and prepared clipboard-guarded delivery; there is no fallback to a weaker route.
+- Temporary clipboard permission briefly changes the General clipboard and requires silent read permission and a
+  complete prior snapshot. Cleanup restores only while Peekaboo still owns the write generation and preserves a
+  newer copy. Prepared input remains unverified and retry-unsafe, even after cleanup; observe the exact receiver
+  before continuing and never blindly replay it. A failure after claiming the clipboard may truthfully retain a
+  global/foreground-mode `clipboard_transaction` outcome without any input target or count. The UI authority remains
+  background-only; the grant never permits accepted foreground input.
+- Saved clipboard maxima are optional additive session data (missing means false), not signed permission. A normal
+  resume grants nothing regardless of stored prompts, metadata, or edited JSON. A fresh flag cannot exceed the saved
+  maximum. Legacy foreground maxima already include clipboard capability. Nested Agent and protocol-1.31 managed
+  Agent launches continue to use background-only authority without this grant.
+- Foreground permission never exposes the Shell tool. Normal Agent toolsets omit `shell`, and the execution boundary
+  still refuses it after `--allow-foreground`. Foreground UI authority is not a process sandbox: a trusted prompt can
+  operate terminal or scripting apps through their UI, so grant `--allow-foreground` only to trusted prompts. Use
+  Peekaboo's native app/window/Accessibility/browser tools for UI automation.
+- Agent execution stays in the caller process by default. Pass the global `--bridge-socket <path>` option to route its tools through one specific Bridge host; `--no-remote` keeps the run strictly caller-local.
+- An explicit nonempty `PEEKABOO_ALLOW_TOOLS` containing only known tools that cannot reach native capture (after
+  `PEEKABOO_DISABLE_TOOLS`) skips capture-owner startup checks when automatic visual enhancements are disabled.
+  For example, `inspect_ui,click,type,set_value,press` needs no capture-owner probe. Unknown tools, nested `agent`,
+  native pixel-producing tools, and absent or blank allow-lists remain conservative. `--no-desktop-context` alone does
+  not disable capture safety. Browser-provider screenshots use their existing transport without native capture-owner
+  leases. Ordinary host routing, initialization, and snapshot invalidation remain unchanged.
+- A Bridge-routed Agent never borrows the host's shared browser root. A browser-filtered Agent run opens no browser
+  scope. Each browser-enabled Agent session opens one distinct end-capable remote child and capability namespace; within
+  one running Agent service, continuations of the same persistent session reuse that child while different sessions
+  remain isolated. Opens and ends coalesce under bounded capacity. Session deletion and ephemeral completion end the
+  exact child; unconfirmed cleanup is retained as retryable debt and blocks session reuse until the host confirms it. A
+  remote provider without scoped-session support refuses before browser dispatch instead of falling back to shared state.
+- Protocol 1.31 qualification can instead ask an eligible Bridge host to launch the exact authenticated Peekaboo CLI
+  peer for one fixed background-only `agent run --no-cache --bridge-socket <serving-host> --json` execution. This is one
+  long request through terminal `waitpid`, not a public two-call Agent lifecycle. The host accepts the task but no
+  executable, shell, AppleScript, JXA, arbitrary argv, or environment input. The CLI blocks at its earliest entry point
+  on a host-owned anonymous pipe, so `SIGCONT` alone cannot pass the exact process/code/path and owner-private
+  challenge acknowledgement gate. The outer request owns no desktop lane, while each nested tool call owns its exact
+  lane and signed receipt. The fixed background toolset omits Shell; process-group cleanup is not a general macOS
+  sandbox against a compromised signed CLI or native code that deliberately detaches. A pre-1.31 or
+  capability-disabled host refuses before launch, and a response lost after pipe release is retry-unsafe. Its
+  qualification-only CLI adapter emits the canonical signed receipt bundle and is deliberately absent from help and
+  shell completions; ordinary users should invoke `peekaboo agent` directly.
+- An unrelated legacy owner-unaware Bridge does not block Agent startup or non-capturing app/window/Accessibility
+  tools through an explicitly selected current Bridge. Pixel-producing calls remain refused before dispatch for that
+  process lifetime; after fixing the owner, start a fresh Agent process before retrying capture.
+- When another live process holds ScreenCaptureKit, an explicitly selected ready Bridge that proves classic capture
+  and request-local engine selection can serve automatic `see` and `image` observations without changing hosts.
+  Explicit modern capture and SCK-only `capture live`/`verify_state` final screenshots remain refused before transport
+  for that Agent process. Classic fallback does not relax target, snapshot, listener-identity, or signed-result checks.
+- Agent executions run under the top-level command runtime, so environment variables, credentials, and logging levels match the top-level CLI state. Text-task dry-run previews bypass runtime construction entirely.
+- New configurations select GPT-5.6 and Opus 5. Credential-only Anthropic discovery uses Opus 4.8 for zero-retention compatibility, while saved configuration and session model pins remain unchanged.
+- `--dry-run` is a zero-provider text-task preview: it echoes the normalized instruction with explicit zero
+  model/tool/session effects. It neither selects nor probes a UI host, so unavailable Bridge sockets, capture owners,
+  or UI permissions cannot block a valid preview. It skips configuration and credential loading, so malformed local
+  configuration cannot contaminate the preview's JSON output. A missing task or audio input is invalid instead of entering
+  chat/help or transcription; step limits and the Agent-disable switch are still validated.
+- Audio flags wire into Tachikoma’s audio stack: `--audio` opens the microphone and `--audio-file` loads a WAV/CAF file.
+- Generation uses `agent.temperature` and `agent.maxTokens` from the shared config written by the macOS Settings UI.
+  Token requests are capped to model capability; unsupported temperature controls are omitted automatically.
+- A run fails when its final permitted turn still requests tools and therefore needs another model turn to interpret
+  their results. Already-dispatched actions are not rolled back. Inspect current app state before continuing, and do
+  not blindly repeat the task. Unless `--no-cache` is set, the run saves a resumable session; after inspection, resume
+  that session rather than starting its actions again. Ephemeral runs cannot be resumed. A larger `--max-steps` budget
+  can be selected for a future run or saved-session continuation, but does not make replay safe.
+- Native `ollama/<model>` runs replay each assistant tool call and named tool result on the next model turn. Ollama
+  support is model-dependent, and native text arrives incrementally with a model-dependent chunk cadence. See the
+  [Ollama guide](../providers/ollama.md).
+- Native tool observations appear once in Agent context, with action safety metadata and verification receipts
+  preserved separately. Existing saved sessions remain readable; this does not compact or discard observation history.
+- For `see` and `inspect_ui`, provider requests use `meta.ui_elements` as the canonical element listing only when
+  re-rendering that table exactly reproduces the complete human listing. Headers, warnings, interaction guidance, and
+  all other metadata remain intact. Ambiguous, incomplete, mismatched, and error results pass through unchanged.
+  This request-only projection does not alter raw MCP/CLI output, execution traces, saved history, or observation frequency.
+
+### JSON execution trace
+
+`--json` retains the legacy `result.toolCalls` array for compatibility and adds
+`result.executionTrace`. The trace correlates each provider-emitted call ID with its runtime result and reports one of
+four dispositions: `executed/succeeded`, `executed/failed`, `skipped-before-dispatch`, or `missing-result`. This lets a
+validator distinguish a model's attempted calls from mutations Peekaboo actually dispatched.
+
+`result.content` is unchanged model-generated narrative, and `success: true` reports Agent-run completion, not
+confirmation of every action. When the bounded trace contains non-confirmed action outcomes or incomplete outcome
+coverage, `result.recordedOutcomeNotice` explains their recorded status. Later observations can verify effects without
+rewriting an earlier `dispatched_unverified` outcome. Notice counts cover only retained tool-trace entries, not nested
+authenticated receipt bundles; missing or truncated outcomes are never counted as confirmed. The same notice appears
+in non-quiet CLI/chat completion output and MCP Agent metadata. Non-quiet MCP output adds a separate text block;
+quiet CLI stdout and the MCP Agent's quiet text remain unchanged.
+
+Legacy `result.toolCalls[].arguments` remains a string for compatibility, but that string is now deterministic JSON
+derived from the same bounded, privacy-safe argument projection as the execution trace. It never contains Swift type
+descriptions or runtime addresses. Calls beyond the trace limit and any call/trace mismatch use
+`{"redacted":true}` rather than raw provider arguments.
+
+Live tool-start and tool-update argument previews also redact `dataBase64` payloads, including incomplete streamed
+values, before display. This changes presentation only; the authorized tool still receives the supplied payload.
+
+`executionTrace.entries[].arguments` is a JSON object rather than the legacy string preview. Trace arguments are
+bounded and allowlist only audit-relevant targeting, delivery modes, action enums, timeouts, predicate kinds, and safe
+boolean controls. Content-bearing and unknown values are represented by typed redaction summaries, including typed or
+pasted text, expected values, messages, prompts, shell commands, URLs, open targets, queries, labels, paths, and binary
+image data. Field names also follow one closed policy at the top level and inside allowed containers; unknown
+provider-authored names become deterministic `__peekaboo_trace_unknown_field_<n>` placeholders in sorted order. Each
+`result` is a bounded status summary, not the raw tool payload; screenshot bytes and arbitrary output
+text are intentionally omitted. The trace is capped at 512 entries and reports `totalCallCount` plus `truncated` when
+calls were omitted.
+
+When the step limit is exhausted, `--json` still exits nonzero with `success: false` and `error.code: AGENT_ERROR`.
+Its failure `data` includes `maxSteps`, the same sanitized `executionTrace`, and a `sessionId` only when the session
+was saved. It does not emit raw conversation messages or tool payloads, and a partial trace is not task-completion
+evidence. On resume the trace includes retained session history, as it does for a successful result.
+
+Tool results blocked by pending snapshot cleanup retain `snapshot_invalidation.tool_executed: false` and
+`snapshot_invalidation.retry_tool: true` in Agent metadata. These describe the blocked tool, not permission to replay
+an earlier mutation; inspect current state and distinguish cleanup retries from newly dispatched input.
+Browser-provider metadata is filtered and namespaced before projection, including results from legacy read-only
+clients, so provider-authored cleanup or action claims cannot become Peekaboo-owned receipts.
+
+Authorized paste errors retain the content-free `clipboard_cleanup_status` in model-facing tool-error results and
+structured failure metadata: `restored`, `preserved_newer_contents`, or `not_needed`. The final JSON execution trace
+keeps its smaller status-summary allowlist and does not include this field. Cleanup status does not confirm paste input
+or change its retry safety, and prior clipboard contents are not included.
+
+Mutating trace entries expose `mutationDispatch` as `dispatched`, `not_dispatched`, or `possibly_dispatched`.
+`mutation_dispatched` is retained in the bounded result summary only when the tool explicitly reported the legacy
+boolean (or Peekaboo itself skipped the call before dispatch). Older or opaque results are `possibly_dispatched`, omit
+the legacy boolean, and report `retry_safe: false` so clients do not replay a mutation whose dispatch is unknown.
+
+## Chat mode
+
+Peekaboo now ships a dependency-free interactive chat loop described in detail in `docs/agent-chat.md`. Key behaviors:
+
+- Running `peekaboo agent` without a task automatically enters chat mode when stdout is a TTY. `agent resume [session-id]` also enters chat so piped prompts can continue the saved session.
+- `agent chat` forces the loop even when piped or redirected, making it easy for other agents to seed prompts programmatically.
+- `/help` is available inside the loop at any time and is printed the moment the loop starts. `/help` is also mentioned in the initial “Type /help…” banner so operators know what to do.
+- Pressing `Esc` during an active turn cancels the run immediately and brings you back to the prompt; Ctrl+C still works as a fallback.
+- Chat sessions reuse context via the same agent session cache; use `agent resume [session-id]` to hook the loop into an existing conversation.
+- Ctrl+C cancels the current turn; pressing it again (while idle) exits the loop. Ctrl+D exits when idle.
+
+For automation flows that cannot attach to a TTY, use `agent chat` with standard input. Session resumes also consume standard input and exit nonzero when a resumed turn fails; explicit `agent chat` keeps the loop alive.
+
+## Examples
+```bash
+# Let the agent sign into Slack using GPT-5.6 with verbose tracing
+peekaboo agent "Check Slack mentions" --model gpt-5.6 --verbose
+
+# Use GPT-6 Astra, Sol, or Luna (the gpt-6 shortcut selects Astra)
+peekaboo agent "Check the current window" --model gpt-6-astra
+peekaboo agent "Check the current window" --model gpt-6-sol
+peekaboo agent "Check the current window" --model gpt-6-luna
+
+# Use GPT-6.1 Sol (the gpt-6.1 shortcut selects Sol 6.1)
+peekaboo agent "Check the current window" --model gpt-6.1-sol
+
+# Use GPT-5.6 Sol (the gpt-5.6 shortcut selects Sol)
+peekaboo agent "Check the current window" --model gpt-5.6
+
+# Use Claude Sonnet 5
+peekaboo agent "Check the current window" --model claude-sonnet-5
+
+# Keep the agent loop local through Ollama
+peekaboo agent "Check the current window" --model ollama/llama3.3
+
+# Run ephemerally without automatically collecting unrelated desktop context
+peekaboo agent run "Inspect the Playground window" --no-cache --no-desktop-context --no-remote
+
+# Use an OpenRouter-hosted model
+peekaboo agent "Check the current window" --model openrouter/xiaomi/mimo-v2.5-pro
+
+# Explicitly authorize foreground/global UI for this new resumable session
+peekaboo agent "Demonstrate the workflow visibly" --allow-foreground
+
+# Dry-run the same task without executing any tools
+peekaboo agent "Install the nightly build" --dry-run
+
+# Resume the most recent session
+peekaboo agent resume
+
+# Resume one exact session from the full ID printed by `agent sessions`
+peekaboo agent resume 12345678-1234-1234-1234-123456789abc
+
+# List cached sessions as JSON
+peekaboo agent sessions --json
+```
+
+## Troubleshooting
+- Verify Screen Recording + Accessibility permissions (`peekaboo permissions status`).
+- Confirm your process with `peekaboo app list`, its exact window with `peekaboo window list`, and current UI with `peekaboo see` before rerunning.
+- Re-run with `--json` or `--verbose` to surface detailed errors.

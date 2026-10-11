@@ -1,0 +1,462 @@
+---
+summary: 'Review Model Context Protocol (MCP) in Peekaboo guidance'
+read_when:
+  - 'planning work related to model context protocol (mcp) in peekaboo'
+  - 'debugging or extending features described here'
+---
+
+# Model Context Protocol (MCP) in Peekaboo
+
+This document explains how Peekaboo exposes its automation tools as an MCP server and how to install it in MCP clients.
+
+## Overview
+
+Peekaboo runs as an MCP server over stdio, exposing its native tools (image, see, click, etc.) to external MCP clients such as Codex, Claude Code, or Cursor.
+Peekaboo no longer hosts or manages external MCP servers; configure your MCP client to launch `peekaboo mcp` directly.
+By default, the MCP process owns its lifecycle and keeps support services process-local. An explicit
+`--bridge-socket <path>` instead attaches MCP tools to that existing Bridge host and skips the embedded support daemon.
+In both modes, MCP never publishes `daemon.sock`, `bridge.sock`, or another Bridge listener itself.
+The explicit route also owns capture preflight for the server lifetime: Peekaboo reuses one authenticated client bound
+to that listener's process generation and does not consult unrelated auxiliary Bridge sockets during caller routing.
+Startup verifies that the selected host advertises process ownership. The host then enforces the canonical
+ScreenCaptureKit lease at every real SCK leaf by rescanning all same-user potential Peekaboo processes, including
+owner-unaware processes that started after acquisition. Caller-local MCP retains the broader legacy-socket scan because
+no external Bridge generation owns its capture path.
+
+Snapshots returned by current `see` calls use producer-bound references with the exact form `ps1_` plus 32 lowercase
+hexadecimal digits. Follow-up tools carrying that reference stay with its unique authenticated producer; a missing,
+ambiguous, incompatible, or unreachable owner is a pre-dispatch refusal, never a reason to recreate the snapshot or
+replay the action elsewhere. An explicit MCP `--bridge-socket` remains strict for the server lifetime. See
+[Bridge snapshot authority](bridge-host.md#snapshot-authority) for routing and protocol 1.34 capability negotiation.
+
+Action-oriented UI tools include:
+
+- `click`, `scroll`, `type`, and `press` for the background-safe interaction surface.
+- `set_value` for direct accessibility value mutation on settable fields and controls.
+- `select_text` for literal text selection or caret placement without changing the text value.
+- `action` for invoking a named accessibility action such as `AXPress`, `AXShowMenu`, or `AXIncrement`.
+
+Inventory is exposed on the nouns: use `app` with `action: "list"` for running applications and `window` with
+`action: "list"` plus `app` for window IDs, bounds, off-screen state, and combined-observation eligibility. Each
+window line and the response `_meta.windows` row reports `observation_capability`: `combined_eligible` means the exact
+combined raster plus AX route is eligible, not guaranteed to return usable AX elements. `pixels_only` includes the stable
+`no_matching_accessibility_window` reason and directs the caller to `see` with `no_elements: true`. `unknown` with
+`accessibility_enumeration_incomplete` means a timeout or partial AX result could not prove either mode and the caller
+must refresh the inventory; `raster_capture_unverified` keeps an AX-only row unknown when stable pixel metadata was not
+available. A null capability means the selected host predates this additive inventory evidence. The former generic `list` tool and its
+duplicate `server_status` view are not exposed. `menu` supports only application-menu `list` and `click` actions;
+status items use the dedicated menubar surface. MCP retains `sleep` because an MCP client may not have shell access.
+
+Call `see` first and pass actionable element IDs through these tools when possible. Element-targeted calls preserve action-first routing; coordinate calls always use the synthetic path. OCR-only text is semantic evidence, not an element-action target.
+The same action tools are available to CLI users as `peekaboo set-value`, `peekaboo select-text`, and `peekaboo action`.
+`set_value` and `action` are exposed only when their resolved input strategy enables action invocation
+(`actionFirst` or `actionOnly`). They are hidden under `synthFirst` or `synthOnly`, because these operations do not
+have a synthetic-input equivalent.
+
+Supported transports:
+
+- **stdio**: supported and default.
+- **http / sse**: recognized flags, but server transports are not implemented yet.
+
+Applications linking `PeekabooCore` can pass an MCP Swift SDK `Transport` to
+`PeekabooMCPServer.serve(transport:)`. The host owns connection setup and transport policy; `serve` waits for
+the transport to complete, then disconnects the SDK session and releases its tool context. Startup failures also
+disconnect the session and release that context. Shutdown closes tool-call admission, cancels accepted calls, and
+waits for them to finish before releasing their context; cancelling the serving task uses the same cleanup path.
+Host-provided transports and tool services must cooperate with task cancellation. Use one server instance per accepted connection;
+concurrent `serve` calls on the same instance are rejected before connecting a second transport. A successful
+return confirms cleanup; incomplete cleanup throws. This entry point does not add a built-in HTTP or SSE server.
+For an accepted `NetworkTransport` connection, disable SDK reconnection so a disconnected peer ends the session.
+
+Peekaboo validates numeric arguments before a tool or mutation lane runs. Fields published as `integer` accept exact
+whole values (including whole-number JSON doubles and integer strings) but reject fractional, non-finite, and
+out-of-range values. Fields published as `number` must be finite. Rejections report `mutation_dispatched: false` and
+`retry_safe: true`; an invalid optional value is never treated as omitted or replaced by a default.
+
+The stdio server reserves stdout exclusively for newline-delimited JSON-RPC messages. Tools never stream raw payload
+bytes onto that channel. In particular, MCP `clipboard` rejects `outputPath: "-"`; omit `outputPath` for UTF-8 text or
+provide a filesystem path for binary clipboard data. The separate CLI `clipboard get --output -` contract is unchanged.
+
+## Analyzing existing image files
+
+The `analyze` tool accepts existing `.png`, `.jpg`, `.jpeg`, and `.webp` files. Image-file analysis accepts
+at most **10 MiB (10,485,760 bytes)** of raw file data, including files exactly at that limit. Resize or compress
+larger images before retrying. Directories and special files such as FIFOs are rejected before provider dispatch;
+ordinary readable regular files, including symlinks and hardlinks to them, remain supported.
+
+The AI service detects PNG, JPEG, GIF, and WebP MIME types from the bytes first, then uses a supported filename
+extension when detection is unavailable. Unknown data retains the existing PNG fallback; this is MIME selection,
+not image validity checking. Data-only image analysis uses the same byte detection and PNG fallback without
+imposing the file-input size limit. The MCP tool's accepted extensions are unchanged.
+
+## Install in MCP clients
+
+Most MCP clients can launch Peekaboo through either the npm package or a local binary.
+
+Use npm when you want the published release:
+
+```json
+{
+  "mcpServers": {
+    "peekaboo": {
+      "command": "npx",
+      "args": ["-y", "@steipete/peekaboo", "mcp"]
+    }
+  }
+}
+```
+
+Use a local binary when developing Peekaboo or testing a checkout:
+
+```json
+{
+  "mcpServers": {
+    "peekaboo": {
+      "command": "/path/to/peekaboo",
+      "args": ["mcp"]
+    }
+  }
+}
+```
+
+If your client supports environment variables, add provider and logging settings under `env`:
+
+```json
+{
+  "mcpServers": {
+    "peekaboo": {
+      "command": "npx",
+      "args": ["-y", "@steipete/peekaboo", "mcp"],
+      "env": {
+        "PEEKABOO_AI_PROVIDERS": "openai/gpt-5.6,anthropic/claude-opus-5",
+        "PEEKABOO_LOG_LEVEL": "info"
+      }
+    }
+  }
+}
+```
+
+Common environment variables:
+
+- `PEEKABOO_AI_PROVIDERS`: comma-separated provider list.
+- `PEEKABOO_LOG_LEVEL`: `debug`, `info`, `warn`, or `error`.
+- `OPENAI_API_KEY`: OpenAI API key for GPT models.
+- `ANTHROPIC_API_KEY`: Anthropic API key for Claude models.
+- `X_AI_API_KEY` or `XAI_API_KEY`: xAI API key for Grok models.
+- `PEEKABOO_OLLAMA_BASE_URL` / `OLLAMA_BASE_URL`: native Ollama server base. The Peekaboo-specific variable wins,
+  then the Ollama variable, config, and finally `http://localhost:11434`; do not append `/v1`.
+
+## Verify client setup
+
+Run the server manually first:
+
+```
+peekaboo mcp
+```
+
+Then restart your MCP client and ask it to list available tools or take a screenshot. Peekaboo should expose the same native tools that `peekaboo tools` reports.
+
+## CLI usage
+
+Show help:
+
+```
+peekaboo mcp --help
+```
+
+Start the server (defaults to stdio):
+
+```
+peekaboo mcp
+```
+
+Explicit transport:
+
+```
+peekaboo mcp serve --transport stdio
+```
+
+## Observation Targets
+
+The MCP `image` and `see` tools share target parsing with the desktop observation pipeline:
+
+- omit `app_target`, pass `screen`, or pass `screen:N` for display capture;
+- pass `frontmost` for the current foreground app window;
+- pass `menubar` for menu-bar capture;
+- pass `PID:1234`, `PID:1234:2`, `App Name`, `App Name:2`, or `App Name:Window Title` for app/window capture.
+
+`image` is the cheap screenshot-only tool and accepts `app_target`, `path`, and `format` naming shared with the
+observation surface. Use `see` when element detection and snapshot IDs are required. The `press` tool accepts either
+`keys: ["cmd+c", "Return"]` for a chord sequence or `key: "c"` plus `modifiers: ["cmd"]` for one chord.
+
+The `see` tool accepts an exact CoreGraphics `window_id` by itself or with an `app_target` naming the owning
+application or PID. `inspect_ui` requires that application/PID owner hint. Peekaboo resolves and generation-pins the
+real owner before using the ID. Do not combine `window_id` with a window title or index suffix in `app_target`; choose
+one window selector so stale inputs cannot redirect work to a sibling window from the same process. `window_id` is a
+positive 32-bit integer; strings, fractional numbers, zero, negative values, and out-of-range values fail before
+capture or Accessibility traversal begins.
+
+For an explicit `window_id`, `inspect_ui` rejects an empty Accessibility result even when an older host omits truncation
+metadata, returning `ACCESSIBILITY_INCOMPLETE` in that case. Existing timeout and truncation diagnostics take precedence.
+App and frontmost inspections may still return a successful empty list, even when the host reports the window it inspected.
+
+Both `see` and `inspect_ui` accept `fresh: true` to require a new, uncached Accessibility traversal. The default is
+`false`, preserving normal cache behavior. Cached, unknown, or unacknowledged fresh results are refused before a
+usable snapshot is published. Screenshot-backed `see` requires the additive `desktopObservationFreshAccessibilityTree`
+Bridge capability; update and relaunch older hosts rather than falling back to cached evidence. Freshness is not
+available for pixel-only tools or menu-bar capture, and it does not imply a complete tree or atomic screenshot/AX
+acquisition. Partial observations keep their existing authority restrictions; selection readback remains focused-field-only.
+
+Public `_meta.used_cache` reports `true` for a known AX cache hit and `false` for a known uncached traversal on both
+observation tools. Omission means unknown or not applicable, not a cache miss. For example, call `inspect_ui` with
+`{"app_target":"TextEdit","fresh":true}` for a fresh AX-only read, or add the same `fresh` flag to `see` for pixels too.
+
+`see` also accepts the closed `capture_engine` values `auto` (default), `modern`, and `classic`. The choice is carried
+in that observation request to the selected host; incapable hosts refuse it before capture. `classic` never enters
+ScreenCaptureKit, so it is the safe request-local recovery path when the selected host proves classic but blocks auto/modern
+capture. A selected-host owner refusal remains fixed for the MCP process lifetime; update or relaunch that exact host
+and start a fresh MCP process before retrying auto/modern capture.
+
+When a different live process holds ScreenCaptureKit, an explicitly selected ready host that proves classic capture
+and request-local engine selection can instead serve automatic `see` and `image` observations as classic on that
+same authenticated connection. Explicit `modern` and SCK-only capture operations remain refused before transport
+for the process lifetime. Missing capabilities, unknown readiness, implicit routing, and caller-local behavior do
+not gain this fallback, and a replaced listener requires a fresh runtime.
+
+Every successful MCP `see` response includes the selected raw or annotated screenshot as inline image content. When
+multiple calls intentionally share the same `path`, each response still returns pixels owned by its own capture; the
+path remains the caller-requested publication destination and therefore contains whichever concurrent write finishes
+last.
+
+Set `ocr: true` on `see` to add text recognized locally by Apple Vision on the selected runtime host to the
+Accessibility map. OCR is additive, never replaces accessible controls, preserves incomplete-AX warnings and exact
+capture receipts, and does not use a provider or network upload. Remote OCR requires a Bridge host advertising
+`desktopObservationOCR`; MCP refuses an incapable host before sending the dynamic observation request. Update and
+relaunch that host, or use a caller-local MCP runtime when local OCR is intentional. OCR rows include confidence and
+global logical bounds, are marked non-actionable, and are refused by element interaction tools. If a deliberate pixel
+action is necessary, use explicit coordinates bound to the exact `snapshot`/`coordinate_reference` returned by `see`.
+
+Observation and capture do not activate a target by default. `see` and `inspect_ui` only perform the focus-changing `AXWebArea` retry when `web_focus: true` is supplied. `image` and live `capture` use `capture_focus: "background"` by default; pass `capture_focus: "foreground"` when activating the target is intentional. The legacy `auto` value remains accepted for focus-if-needed compatibility.
+
+Successful `see` and `inspect_ui` responses include optional `_meta.focused_element` when the observation already
+proved one focused element. It preserves the existing identity fields (`processIdentifier`, `windowID`, `role`,
+optional `title`/`identifier`, and global-logical `frame`, also for ROI captures); it does not invent a snapshot-local
+element ID or expose a field value. Missing focus means unknown, including cached or ambiguous observations, not
+that the window has no focused element. This metadata adds no AX read, grants no input authority, and does not bypass
+normal snapshot or live receiver validation. Native Agent tools retain the same field under `meta.focused_element`.
+External MCP clients may not show `_meta` to their model; this addition alone does not guarantee model-visible focus
+in those clients, and the observation's text summary is unchanged.
+
+Pass `include_elements: true` to `see` or `inspect_ui` to also receive the element table as data in
+`_meta.ui_elements`, together with `_meta.snapshot_id`. Each row uses the same type and field names as
+`ui_elements[]` in `peekaboo see --json` (`id`, semantic `role`, raw `ax_role`, `title`, `label`, `value`,
+`description`, `role_description`, `help`, `identifier`, `confidence`, `bounds` `{x, y, width, height}`,
+`is_actionable`, `is_enabled`, `is_selected`, `is_value_settable`, `keyboard_shortcut`, `selected_text_range`; absent values are omitted).
+`see` bounds follow the same presentation rules as the CLI, so ROI results are ROI-local; application-partial
+observations make no actionable or value-settable claims. Clients that act on element IDs across calls can read this
+table instead of parsing the text summary. The option is off by default because a window can expose hundreds of
+elements. The table includes full collected field values rather than the prose summary's shortened display values;
+without the option, the response is unchanged.
+
+Fresh, complete exact-window observations can include `selected_text_range: {location, length}` for the uniquely
+proven focused text field. Offsets and lengths use UTF-16 code units, not user-perceived characters; zero length
+means a caret and absence means unknown. This is independent of `is_selected`/`AXSelected` and the `selected`
+verification predicate. Both `see` and `inspect_ui` also include a short `Text selection <id>: UTF-16 location …,
+length …` line in their normal text output when available, including native Agent calls without `include_elements`.
+
+Use `select_text` with `on`, nonempty literal `text`, optional adjacent `prefix`/`suffix`, and
+`selection_type: text|cursor_before|cursor_after` to mutate a selection. It requires a fresh exact-window snapshot
+and a settable native selection, not a writable value or prior field focus. It never focuses, types, or uses the
+clipboard. Missing/ambiguous text refuses; accepted but unverified writes require a new observation before retry.
+See [select-text](commands/select-text.md) for native capability limits and UTF-16 result fields.
+
+This optional probe reads no selected-text content, performs no focus change, and grants no input authority. The
+same native receiver must retain identity, focus, and readable nonsecure metadata across the range read. Cached,
+partial, truncated, ambiguous, secure, or unreadable observations omit it. The probe shares at most 50 ms and one
+quarter of the remaining observation budget, never extending the original deadline; a slow app or older host may
+omit the range. Continue to use fresh snapshots and ordinary live receiver validation for input.
+
+Successful `capture` results bind every retained frame and `contact.png` to capture-session-authored SHA-256 values.
+MCP exposes them in `artifact_sha256`; finalization revalidates those bytes, complete PNG decoding and dimensions, and
+the exact semantic `metadata.json` result before reporting success.
+
+The MCP `image` tool stores logical 1x captures by default. Pass `scale: "native"` or `retina: true` to request native display pixels. Set `max_dimension` to a positive integer to cap the longest output edge while preserving aspect ratio; inline `format: "data"` captures default to 1500 pixels when no cap is supplied.
+
+### Capture coordinate context
+
+The `image` and `see` tools include an additive, versioned `coordinate_context` object in response `_meta`. It describes how the delivered raster maps to Peekaboo's canonical top-left-origin global display coordinates, which are measured in logical points:
+
+- `logical_bounds`: the capture rectangle in global logical points;
+- `delivered_image_size`: the actual raster dimensions returned to the client, after any `max_dimension` resize;
+- `native_scale`: the display's native pixel-to-point scale when known;
+- `output_scale`: the delivered raster's effective pixel-to-point scale;
+- `display` and `window`: the resolved capture identities when available;
+- `reference_id`: the snapshot ID for `see` results, or `null` for standalone `image` results.
+- `viewport`: present for ROI results, with the full source window, requested/delivered crop rectangles, global crop
+  bounds, and uncropped source raster size.
+
+Consumers should check `version` before interpreting the object. Version `1` uses `logical_space: "global_display_points"` and `origin: "top_left"`. To convert an image-local pixel `(px, py)` to a global logical point, scale it against `delivered_image_size` and add the `logical_bounds` origin; do not assume a fixed Retina factor. The fields are additive, so clients that do not understand them can continue ignoring `_meta`.
+
+### Exact-window ROI
+
+MCP `see` accepts `roi: "x,y,width,height"` in top-left-origin, window-local logical points. ROI requires an exact
+`window_id` and must create a fresh snapshot, so omit `snapshot`. Peekaboo captures and inspects the generation-pinned
+full window, then returns only the pixel-aligned crop. AX/OCR results are filtered to intersecting elements, and
+response element frames are clipped and translated into ROI-local logical coordinates. The stored snapshot retains
+global frames for element-ID actions.
+
+The response's `coordinate_context.viewport.source_logical_bounds` remains the full window receipt used for freshness
+and dispatch validation; `logical_bounds` describes only the delivered crop. `click` with `coordinate_space:
+"image_pixels"` or `"normalized"` maps through the crop while still rejecting moved, resized, missing, reused, or
+owner-changed windows before dispatch. Reusing the snapshot for a later full-window observation replaces the ROI
+mapping and clears stale annotation state.
+
+`image` intentionally has no ROI argument: screenshot-only calls do not create the fresh snapshot/reference binding
+required for safe follow-up background coordinates. Use `see` for a crop that will drive automation.
+
+ROI requires Bridge protocol 1.21. CLI host selection and MCP remote dispatch reject older hosts before sending the
+request, so a pre-1.21 host cannot ignore the crop or acknowledge only part of the snapshot. After dispatch, the
+client also decodes the quarantined raster and checks its real pixel dimensions against the crop receipt before
+publishing files or the snapshot. A compatible host must enable desktop observation plus the snapshot-publication
+operations used to finalize the validated result. Current clients additionally require the independently negotiated
+protocol 1.34 `producerBoundSnapshotReferences` capability before creating or publishing the reference; an old 1.34
+host cannot cause the result to be rebound locally.
+
+The `click` and `paste` tools publish flat object schemas without root-level `oneOf`, `allOf`, or `anyOf`, so MCP clients
+can forward them to providers such as Anthropic without schema rewriting. Peekaboo enforces cross-field constraints
+at runtime before dispatch; the flat catalog does not relax target, receipt, or foreground-consent requirements.
+
+Snapshot-backed `click`, `action`, `set_value`, `select_text`, `scroll`, `type`, and `press` reserve mutation authority in the snapshot's
+producer store before focus or input. Pending or consumed snapshots are refused before dispatch. Outcomes requiring
+fresh observation, missing canonical outcomes, and unknown completion prevent replay; explicit historical reads remain
+available. Confirmed outcomes that do not require fresh observation release the reservation. Modifier-click and
+pixel-focus typing retain their existing single host-owned lease. Selector-driven `paste` remains snapshot-independent.
+
+The `click` tool accepts exactly one target shape: `on`, `query`, or `coords`. Runtime validation requires every
+background `coords` call to include either `snapshot` or `coordinate_reference`; a PID alone is only a consistency
+check and never replaces the receipt. Both fields must be nonempty and identify a fresh exact-window `see` capture.
+Pass `coordinate_space: "image_pixels"` for delivered-raster pixels or `coordinate_space: "normalized"` for values
+from 0 through 1, plus the snapshot's `reference_id` as `coordinate_reference`. Missing, empty, stale, out-of-bounds,
+moved-window, owner-changed, or process-generation-changed references fail before automation. Validation errors include
+`mutation_dispatched: false` and `retry_safe: true`, and do not invalidate snapshots as mutations. Foreground global
+coordinates remain snapshot-free only with explicit `foreground: true` (or the deprecated `background: false` inverse
+alias); either reference opts into capture-context and live-target validation even when `coordinate_space` is omitted.
+
+The `double`, `triple`, `right`, and `middle` click booleans are mutually exclusive; conflicts are rejected before snapshot lookup or dispatch. Background right-, double-, middle-, and triple-clicks use exact PID/window-routed native events without activating the app or moving the physical cursor. Middle/triple require a fresh exact-window snapshot, Event Synthesizing permission, Bridge protocol 1.30, and the `statelessClickVariants` capability; older hosts are refused before the request is encoded. Every event revalidates the normal-layer window owner, process generation, bounds, and point. Since macOS provides no application-level acknowledgment for routed pointer events, successful dispatch responses include `verified: false` and `effect: "unverifiable"`; canonical metadata retains `click_type`, exact target identity/receipt, and three dispatched units for middle or seven for triple. An unprovable or changed route is refused rather than redirected through the desktop-global event tap.
+
+For `click.query`, `wait_for` is a maximum wait in milliseconds (default 5000, maximum 60000). If the current snapshot
+has no match, Peekaboo reads a fresh Accessibility tree for that exact window without taking screenshots or focusing
+it, and uses the matching observation's fresh element ID. The original window ID, owner process generation, and
+bounds stay pinned throughout; a changed target is refused, not adopted. Modifier-click keeps its original screenshot
+lease for coordinate authority and uses only the matched point from the fresh tree.
+Unmatched and timed-out samples are never stored as snapshots, so polling does not evict existing UI snapshots.
+The remaining monotonic budget bounds observation, and a late match never starts a click. An admitted click keeps
+its normal completion and retry-safety semantics; `wait_for` does not cancel already-dispatched input. Zero checks
+only the current snapshot. A missing `on` ID is snapshot-local and is reported immediately, never remapped to a
+later observation.
+
+`click.modifiers` accepts a nonempty unique array of `cmd`, `shift`, and `option`. It is deliberately foreground-only and requires `foreground: true` plus an explicit non-`latest` exact-window screenshot snapshot. Control and right contextual modifier-clicks are refused because restoring the prior foreground would dismiss their result. Bridge protocol 1.33 hosts must advertise `foregroundModifierClickSnapshotLease`; the host leaf then leases the snapshot and owns exact target preflight, one prebuilt modifier-bearing HID mouse sequence that never changes shared keyboard state, and compare-and-swap restoration as one global operation. Response metadata includes `modifiers`, `cursor_restoration`, and `focus_restoration`; restoration reports `preserved_newer_state` when concurrent user or application activity superseded Peekaboo's write.
+
+Default background-only MCP/Agent `type` requires an explicit fresh exact non-dialog snapshot receipt; an optional
+element ID must come from that snapshot. Snapshot typing cannot include competing app, PID, or window selectors;
+implicit-latest, selector-only, and targetless forms are refused before dispatch. Direct CLI and explicitly
+foreground-capable runtimes retain their documented process-targeted typing routes.
+
+`type.coords` adds atomic pixel-focus typing for exact screenshot snapshots. Supply `snapshot`, optional matching `coordinate_reference`, and `coordinate_space` (`global_display_points`, `image_pixels`, or `normalized`). It cannot be combined with `on`, app/PID/window selectors, or foreground delivery. Bridge protocol 1.33 retains the focus-only Accessibility write and every keyboard unit under one process lane and exact target receipt; successful dispatch units equal keyboard units plus the focus write, and any completed prefix is reported retry-unsafe. The focus prelude never presses a button or selects a row, and its confirmation cannot confirm the separate typing leaf. Only deterministic clear-plus-literal typing can promote through an exact private value readback.
+
+`press` preserves provider-authored `target_identity` and `target_receipt` in public `_meta` when its contributing
+phases attest a compatible common target. A missing or contradictory leaf target is not filled from setup focus
+or descriptive PID/window fields. Typed failures retain the receipts of the dispatched phases when those agree.
+The existing confirmed-effect requirement is unchanged: an accepted but unverified chord still returns an error,
+with its actual dispatch count, retry-safety guidance, and any provider-authored receipt; observe before continuing.
+
+Successful `type` responses preserve the typing result's `target_identity` and `target_receipt` in public `_meta`,
+including ordinary and pixel-focus typing. Process identities retain the generation as a lossless decimal string;
+exact-window identities also retain the window ID. Missing result identity, including untargeted foreground typing,
+adds neither field: request selectors are not substituted for a returned target receipt.
+
+Process, exact-window, and pixel-focus type requests containing non-empty text, clear, or editable focused-text keys require Bridge protocol 1.36 and `compositeTypeDelivery`. Direct AX text, selection/deletion keys, and clear each count as one dispatch and zero key presses; event fallback counts only its posted keys, and requests using both mechanisms report composite delivery. Event-only special keys keep their earlier protocol compatibility, while older or capability-missing sessions refuse AX-capable input before focus or text dispatch.
+
+Background-only raw `press` likewise requires an explicit fresh exact non-dialog snapshot. App/PID-only,
+window-selector-only, targetless, and foreground forms are refused by policy before dispatch. The exact target and
+focused element are revalidated for every chord, but macOS does not acknowledge semantic effect; observe that target
+again before another mutation. Direct CLI callers may also use its documented exact-window selector form.
+
+Process-targeted MCP `paste` and element `click` calls retain one application process-generation receipt instead of
+relying on a reusable numeric PID. Paste validates before each emitted unit and clicks validate around dispatch. MCP
+and Agent foreground-capable or embedded runtimes require Bridge protocol 1.22 for process-only typed routes; default
+background MCP/Agent never selects that route. Older hosts are rejected before input rather than being allowed to
+ignore the receipt.
+
+The MCP `paste` tool also keeps window selectors exact in background mode. With `window_id`, `window_title`, or
+`window_index`, it resolves one window and carries that window's ID, owner PID, and bounds into the atomic keyboard
+dispatch; it never degrades the request to process-only delivery that could reach a sibling window. Direct text
+revalidates the exact focused destination throughout typing and never touches the clipboard. If process-targeted or
+exact-window direct text fails or is cancelled after dispatch begins, a prefix may already have been inserted;
+Peekaboo returns `paste_outcome: "indeterminate"`, `partial_text_possible: true`, `retry_safe: false`,
+`clipboard_mutated: false`, and `requires_fresh_observation: true`, with `characters_typed: null` rather than guessing
+the delivered prefix length when the input receipt cannot provide one. When the receipt does contain an emitted-unit
+count, `characters_typed` reports that lower bound. Rich/binary and current-clipboard payloads require the same
+exact-window capability before clipboard mutation or Cmd+V dispatch, then return the normal retry-unsafe
+may-have-pasted result because macOS does not acknowledge receiver consumption.
+
+Pointer tools use an explicit interruption policy. Background `scroll` accepts an element `on` or an exact-window `coords` point. Coordinates require a fresh pixel-backed reference and prefer the hit's nearest proven AX scroll owner. Documented unavailable hit testing or verified ancestry without an exposed owner may instead use that independent pixel authority for the existing visible native-WebKit wheel route, retaining the requested point without claiming an AX receiver. Positive ownership conflicts and native lookup failures refuse. Coordinates never search arbitrary descendants or siblings, move the shared cursor, or imply foreground permission. Wheel delivery remains unverifiable and retry-unsafe; Electron/Chromium/Catalyst and stale targets do not gain a new fallback. Set `foreground: true` only for existing element/targetless, smooth, or delayed scrolling—not coordinates.
+
+MCP scroll coordinates match click: global display points by default, with `coordinate_space: "image_pixels"` or `"normalized"` mapped through the delivered image scale and ROI using `coordinate_reference`. A supplied `snapshot` must match the reference. CLI `scroll --at` deliberately defaults to window-relative logical points; `--global` selects the global basis. Coordinate scroll requires protocol 1.43 plus `backgroundCoordinateScroll`; older or capability-missing execution hosts refuse before dispatch.
+
+The default catalog includes `drag` only in its background-safe form: an explicit fresh `snapshot`, two finite endpoints inside its exact window, a linear path, 1–10000 ms duration, and 1–96 samples. Coordinates are global logical points. This separate protocol-1.39 operation retains one held-pointer owner and exact-window lane through cleanup; it never activates, moves the shared cursor, or falls back to foreground. Its `dispatchedUnverified` result counts primer, down, samples, and up (`steps + 3`), retains the target receipt, and is retry-unsafe until independently observed. Cross-window/app drops, modifiers, and human profiles need explicit foreground authority. `move` remains excluded from background-only MCP/Agent catalogs and requires foreground consent.
+
+Background process mutations resolve application selectors through the complete mutation inventory before rewriting them to a generation-pinned PID. Exact case-insensitive names, exact bundle IDs, and explicit PIDs are accepted; fuzzy partial application names are refused before the tool leaf runs. Read-only application/window discovery keeps its fuzzy compatibility behavior.
+
+MCP `menu` foreground click and list plan one exact application/window authority before focus. Path and named clicks carry that PID and process generation through dispatch, while foreground listing rejects a returned menu tree whose owner generation changed. If menu access fails after focus, the response retains the focus outcome and exact window receipt. Background menu listing remains read-only and keeps fuzzy selector compatibility.
+
+```json
+{
+  "coords": "300,220",
+  "coordinate_space": "image_pixels",
+  "coordinate_reference": "snapshot-id-from-exact-window-see"
+}
+```
+
+Use the shared physical pointer only with explicit foreground consent:
+
+```json
+{
+  "coords": "300,220",
+  "foreground": true
+}
+```
+
+Atomic background pixel-focus typing:
+
+```json
+{
+  "text": "hello",
+  "coords": "320,180",
+  "coordinate_space": "image_pixels",
+  "snapshot": "snapshot-id-from-exact-window-see"
+}
+```
+
+Explicit foreground modifier-click with restoration reporting:
+
+```json
+{
+  "on": "captured-element-id",
+  "snapshot": "snapshot-id-from-exact-window-see",
+  "foreground": true,
+  "modifiers": ["cmd", "shift"]
+}
+```
+
+## Troubleshooting
+
+- Ensure Screen Recording + Accessibility permissions are granted (`peekaboo permissions status`).
+- The `permissions` tool reads one complete snapshot from the selected execution host. Missing Screen Recording or
+  Accessibility is a tool failure; missing Event Synthesizing remains a structured limitation for background keyboard
+  and foreground synthetic pointer actions rather than a global failure.
+- If the MCP client cannot connect, confirm you are launching Peekaboo with `mcp` or `mcp serve` and that the client is using stdio transport.
+- Use absolute binary paths for local checkouts.
+- Confirm the binary is executable (`chmod +x /path/to/peekaboo`).
+- Set `PEEKABOO_LOG_LEVEL=debug` while diagnosing startup issues.
+- Check Peekaboo logs with `./scripts/pblog.sh -f` from a source checkout.

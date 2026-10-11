@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "data": {
+    "selectedSource": "bridge",
+    "sources": [
+      {
+        "source": "bridge",
+        "permissions": [
+          {
+            "isRequired": true,
+            "grantInstructions": "System Settings > Privacy & Security > Screen Recording",
+            "isGranted": false,
+            "name": "Screen Recording"
+          },
+          {
+            "isRequired": true,
+            "grantInstructions": "System Settings > Privacy & Security > Accessibility",
+            "isGranted": false,
+            "name": "Accessibility"
+          },
+          {
+            "isRequired": false,
+            "grantInstructions": "System Settings > Privacy & Security > Accessibility",
+            "isGranted": false,
+            "name": "Event Synthesizing"
+          }
+        ],
+        "displayName": "Peekaboo Bridge",
+        "isSelected": true
+      },
+      {
+        "source": "local",
+        "permissions": [
+          {
+            "isRequired": true,
+            "grantInstructions": "System Settings > Privacy & Security > Screen Recording",
+            "isGranted": false,
+            "name": "Screen Recording"
+          },
+          {
+            "isRequired": true,
+            "grantInstructions": "System Settings > Privacy & Security > Accessibility",
+            "isGranted": false,
+            "name": "Accessibility"
+          },
+          {
+            "isRequired": false,
+            "grantInstructions": "System Settings > Privacy & Security > Accessibility",
+            "isGranted": false,
+            "name": "Event Synthesizing"
+          }
+        ],
+        "displayName": "local runtime",
+        "isSelected": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "result" : {
+    "automaticDesktopContext" : false,
+    "content" : "Dry run preview. No model or tools were invoked.",
+    "dryRun" : true,
+    "executionTrace" : {
+      "entries" : [
+
+      ],
+      "totalCallCount" : 0,
+      "truncated" : false
+    },
+    "instruction" : "Inspect a disposable local test window without changing it",
+    "metadata" : {
+      "executionTime" : 0,
+      "modelName" : "not_invoked",
+      "toolCallCount" : 0
+    },
+    "modelExecution" : "skipped",
+    "sessionId" : null,
+    "toolCalls" : [
+
+    ],
+    "uiAuthority" : {
+      "backgroundOnly" : true,
+      "effectivePolicy" : "background_only",
+      "requestedForeground" : false,
+      "requestedTemporaryClipboard" : false,
+      "temporaryClipboardPaste" : false
+    },
+    "usage" : null
+  },
+  "success" : true
+}

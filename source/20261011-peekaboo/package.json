@@ -1,0 +1,100 @@
+{
+  "name": "@steipete/peekaboo",
+  "version": "4.9.0",
+  "description": "macOS automation MCP server with screen capture, UI interaction, and AI analysis",
+  "private": false,
+  "type": "module",
+  "main": "peekaboo-mcp.js",
+  "bin": {
+    "peekaboo": "peekaboo",
+    "peekaboo-mcp": "peekaboo-mcp.js"
+  },
+  "files": [
+    "peekaboo",
+    "libswiftCompatibility*.dylib",
+    "peekaboo-mcp.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "setup:swift": "python3 scripts/setup-swift-workspace.py setup",
+    "test:swift-workspace": "python3 scripts/test-swift-workspace.py",
+    "test:log-scripts": "bash scripts/test-playground-log-wrapper.sh && node --test tests/pblog.test.mjs tests/playground-log.test.mjs",
+    "build:cli": "python3 scripts/setup-swift-workspace.py run -- swift build --package-path Apps/CLI",
+    "build:cli:release": "python3 scripts/setup-swift-workspace.py run -- swift build --configuration release --package-path Apps/CLI",
+    "build:swift": "./scripts/build-swift-arm.sh",
+    "build:swift:all": "./scripts/build-swift-universal.sh",
+    "app:restart": "./scripts/restart-peekaboo.sh",
+    "app:install-companion": "./scripts/restart-peekaboo.sh --deployment",
+    "build": "pnpm run build:cli",
+    "test:safe": "pnpm run setup:swift && pnpm run test:swift-workspace && pnpm run test:log-scripts && pnpm run test:ambient-state-policy && pnpm run test:mcp-wrapper && pnpm run test:guidance && pnpm run test:codeql-build-graph && pnpm run test:release-validation && pnpm run test:docs && pnpm run test:docs-site && node --test tests/homebrew-release-assets.test.mjs && scripts/test-source-provenance.sh && scripts/test-terminal-artifact-env.sh && scripts/test-release-version.sh && node scripts/test-release-driver-contract.mjs && python3 scripts/test-release-archive-publication.py && scripts/test-read-macho-info-plist.sh && scripts/test-artifact-tree-manifest.sh && scripts/test-controller-source-manifest.sh && scripts/test-atomic-rename-exclusive.sh && scripts/test-terminal-artifact-policy.sh && node scripts/test-terminal-archive-policy.mjs && node scripts/test-terminal-dmg-payload.mjs && scripts/test-terminal-manifest-portability.sh && scripts/test-build-node-runtime-macos.sh && scripts/test-build-playground-artifact.sh && scripts/test-build-terminal-dmg.sh && scripts/test-notarize-terminal-artifact.sh && scripts/test-release-signing-policy.sh && scripts/test-release-package-resolution.sh && scripts/test-release-binary-reuse.sh && scripts/test-codesign-with-retry.sh && scripts/test-sign-release-app.sh && scripts/test-swift-runtime-libraries.sh && python3 scripts/test-standalone-cli-install.py && scripts/test-create-release-dmg.sh && scripts/test-restart-peekaboo.sh && scripts/test-swiftpm-consumer.sh && node scripts/test-update-appcast-entry.mjs && node --no-warnings scripts/test-chrome-devtools-mcp-contract.mjs && node --no-warnings scripts/test-browser-provider-connection.mjs && pnpm run test:release-preflight && pnpm run test:background-certification && swift test ${PEEKABOO_BUILD_JOBS:+--jobs \"$PEEKABOO_BUILD_JOBS\"} --package-path Core/PeekabooFoundation && PEEKABOO_INCLUDE_AUTOMATION_TESTS=true PEEKABOO_INCLUDE_AMBIENT_STATE_TESTS=false swift test ${PEEKABOO_BUILD_JOBS:+--jobs \"$PEEKABOO_BUILD_JOBS\"} --package-path Apps/CLI -Xswiftc -DPEEKABOO_SKIP_AUTOMATION --no-parallel",
+    "test:mcp-wrapper": "node --test tests/peekaboo-mcp-*.test.mjs",
+    "test:ambient-state-policy": "node --test tests/ambient-state-test-policy.test.mjs",
+    "test:guidance": "node --test tests/background-capability-guidance.test.mjs tests/subprocess-integration-guidance.test.mjs",
+    "test:codeql-build-graph": "node --test tests/codeql-build-graph.test.mjs",
+    "test:release-validation": "node --test tests/release-validation-workflow.test.mjs",
+    "test:docs-site": "node --test tests/docs-site-*.test.mjs",
+    "test:release-preflight": "node --test tests/release-preflight-contract.test.mjs",
+    "test:background-certification": "scripts/test-background-certification.sh",
+    "test:automation": "pnpm run setup:swift && PEEKABOO_INCLUDE_AUTOMATION_TESTS=true swift test --package-path Apps/CLI --no-parallel",
+    "test:automation:read": "pnpm run setup:swift && RUN_AUTOMATION_READ=true PEEKABOO_INCLUDE_AUTOMATION_TESTS=true swift test --package-path Apps/CLI --no-parallel",
+    "test:automation:input": "pnpm run setup:swift && PEEKABOO_INCLUDE_AUTOMATION_TESTS=true PEEKABOO_RUN_INPUT_AUTOMATION_TESTS=true swift test --package-path Core/PeekabooCore --no-parallel",
+    "test:automation:local": "pnpm run setup:swift && bash -lc 'BIN_PATH=$(swift build --package-path Apps/CLI --show-bin-path) && RUN_LOCAL_TESTS=true PEEKABOO_INCLUDE_AUTOMATION_TESTS=true PEEKABOO_RUN_INPUT_AUTOMATION_TESTS=true PEEKABOO_CLI_PATH=\"$BIN_PATH/peekaboo\" swift test --package-path Apps/CLI --no-parallel'",
+    "test:all": "pnpm run setup:swift && bash -lc 'set -euo pipefail; cd Apps/CLI && swift test -Xswiftc -DPEEKABOO_SKIP_AUTOMATION --no-parallel && PEEKABOO_INCLUDE_AUTOMATION_TESTS=true swift test --no-parallel'",
+    "test": "pnpm run test:safe",
+    "tachikoma:test:integration": "zsh -lc 'source ~/.profile >/dev/null 2>&1; cd Tachikoma; INTEGRATION_TESTS=1 swift test --no-parallel -Xswiftc -DLIVE_PROVIDER_TESTS'",
+    "lint:swift": "swiftlint lint --config .swiftlint.yml",
+    "lint": "pnpm run lint:swift",
+    "format:swift": "swiftformat .",
+    "format:check": "swiftformat --lint .",
+    "format": "pnpm run format:swift",
+    "prepare-release": "node scripts/prepare-release.js",
+    "release:mac-app": "./scripts/release-macos-app.sh",
+    "docs:list": "node scripts/docs-list.mjs",
+    "test:docs": "node --test tests/docs-list-metadata.test.mjs",
+    "docs:site": "node scripts/build-docs-site.mjs",
+    "lint:docs": "node scripts/docs-lint.mjs",
+    "benchmark:tools": "Apps/Playground/scripts/peekaboo-perf.sh",
+    "test:benchmark-tools": "scripts/test-peekaboo-perf.sh",
+    "oracle": "pnpm -C ../oracle oracle",
+    "postinstall": "chmod +x peekaboo peekaboo-mcp.js 2>/dev/null || true",
+    "check:changed": "pnpm run test:safe",
+    "test:changed": "pnpm run test:safe",
+    "crabbox:hydrate": "crabbox actions hydrate",
+    "crabbox:run": "crabbox run",
+    "crabbox:stop": "crabbox stop",
+    "crabbox:warmup": "crabbox warmup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openclaw/Peekaboo.git"
+  },
+  "author": "Peter Steinberger <steipete@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/openclaw/Peekaboo/issues"
+  },
+  "homepage": "https://github.com/openclaw/Peekaboo#readme",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "macos",
+    "automation",
+    "screen-capture",
+    "ai"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "devDependencies": {
+    "chrome-devtools-mcp": "1.10.1"
+  },
+  "packageManager": "pnpm@11.28.4+sha512.f905a61563f89b49a292634d3d87d024cfdea9dccf5c66b2ccc261675fa7b2774320a959db472e6caa7f9ff7314709cd50d06c8fd64addb60647377a78d250ff"
+}
