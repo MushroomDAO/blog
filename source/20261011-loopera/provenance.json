@@ -1,0 +1,18 @@
+{
+  "sourceUrl": "https://github.com/Loopera-ai/loopera",
+  "treeSha": "996e589bb6451d583f328ac2a34331df103d4ee5",
+  "fetchedAt": "2026-10-11",
+  "files": {
+    "README-source.md": "3dc7a0f4b751319730c94a69c70e22aa919a0b41bf984413b6571a39585e5f31",
+    "LICENSE-source.txt": "5bb89ee6629181cb61b0e8c14ded142cf982d580df450f7d224f6e6a7475f0f5",
+    "jina-source.txt": "3877d0ac4f100fa7b5b32da3aed326006e1c1a5ece64a02007d5dbbf85630db4",
+    "repo-tree.json": "e8e921e91560cc69cf30c2bb89f0eae56d83aeed72faa399c7cb840b0b1630c1"
+  },
+  "runtimeAudit": "No runnable application source, installer, CLI or public API in the public tree. Did not download parquet datasets or execute backtests.",
+  "licensingAudit": "Read LICENSE parameters; BSL 1.1, None additional use grant, change date 2030-09-09 and Apache 2.0 change license.",
+  "rawKB": "existing entries confirmed by read-only SQLite query; not rewritten",
+  "agentReach": "not on PATH and skill absent from known catalogs; authorized Jina fallback used",
+  "downloadedImages": [
+    "/Users/jason/.heinu1-bot/media/loopera-official-architecture.png"
+  ]
+}

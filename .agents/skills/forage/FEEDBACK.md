@@ -476,3 +476,12 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - 隐私核验：GH README声明 binary 默认遥测，HF card称不读环境变量，两者冲突；Python源码支持optout，但不能据此证明binary无出网。
 - 采集侧：agent-reach在此shell缺失；本次只按用户指定查HF，不宣称全平台覆盖。查重器URL仍被https/huggingface.co通用字符串污染，精确实体复查三项无重复。
 - MemPalace mine返回Chroma INTEGER/BLOB类型错误，新增全文记录为0；已保存3个项目记忆文件与仓库持久账本，不把退出码0当作成功。
+
+## 2026-10-11 Loopera 历史内容补偿
+
+- 用户授权收到素材默认 KB + 双语 Blog + 公众号草稿。任务 history-20261011-loopera；一手源 https://github.com/Loopera-ai/loopera，精确实体 Loopera。
+- 查重命中原始链接和摘要两个 KB 记录，未命中 Blog、草稿或 M2 发布记录；素材入库不等于发布，不重复创建原始 KB 条目，补齐缺失渠道。
+- 当前交付是产品/技术文档，BSL 1.1，无可运行源码/安装包/CLI/公开 API；不归为可本地部署的开源 Agent。
+- 独立核对：147=130+17，130=125+5；停止位置分类合计127而非125，公开口径未解释。数字是官方研究活动快照，不能转成胜率或盈利承诺。
+- 完成：loopera-factor-research-evidence-gates，匹配主题的 FLUX 写实封面及三张小M图，SEO/GEO，Blog/四张图片200，列表前列，zh/en索引，公众号草稿 draft/get核验。MemPalace新增2条发布记录已用SQLite核对。
+- 采集：agent-reach在此shell及已知技能目录缺失，按用户允许使用Jina Reader与GitHub官方raw/API；原始快照及失败可重试状态保存在source/20261011-loopera/。

@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-11",
+  "method": "public README/LICENSE/GitHub recursive tree; no internal execution",
+  "allAttempts": 147,
+  "validCandidates": 130,
+  "stoppedValidCandidates": 125,
+  "admitted": 5,
+  "invalidAttempts": 17,
+  "stoppingCategories": [
+    52,
+    45,
+    11,
+    9,
+    7,
+    3
+  ],
+  "stoppingCategorySum": 127,
+  "denominatorMismatch": "public document does not provide record-level mapping; cannot assert overlap or corrected count",
+  "admissionPercentAll": 3.4013605442176873,
+  "admissionPercentValid": 3.8461538461538463,
+  "backtestReproduced": false,
+  "source": "https://github.com/Loopera-ai/loopera"
+}
