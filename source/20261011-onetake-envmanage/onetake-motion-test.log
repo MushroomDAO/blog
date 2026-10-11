@@ -1,0 +1,60 @@
+  PASS  every ease maps 0 → 0 and 1 → 1
+  PASS  t80 linear = 0.8  0.800
+  PASS  t80 smooth = 0.713  0.713
+  PASS  t80 smoother = 0.674  0.673
+  PASS  t80 quadOut = 0.553  0.553
+  PASS  t80 cubicOut = 0.415  0.415
+  PASS  t80 quartOut = 0.331  0.332
+  PASS  t80 quintOut = 0.275  0.275
+  PASS  t80 expoOut = 0.232  0.232
+  PASS  bezier solver matches brute force  max err 5.8e-6
+  PASS  spring settles to 1 (zeta 0.3)
+  PASS  springVel is the derivative of spring (zeta 0.3)  max err 1.0e-7
+  PASS  spring settles to 1 (zeta 0.6)
+  PASS  springVel is the derivative of spring (zeta 0.6)  max err 1.3e-7
+  PASS  spring settles to 1 (zeta 0.95)
+  PASS  springVel is the derivative of spring (zeta 0.95)  max err 1.4e-7
+  PASS  spring settles to 1 (zeta 1)
+  PASS  springVel is the derivative of spring (zeta 1)  max err 1.4e-7
+  PASS  spring settles to 1 (zeta 1.4)
+  PASS  springVel is the derivative of spring (zeta 1.4)  max err 1.4e-7
+  PASS  spring is continuous across zeta = 1
+  PASS  spring() is bit-identical to the template spr()
+  PASS  settle() gives a usable hold length  0.270 s for zeta .6 omega 22
+  PASS  iris covers the farthest corner at k = 1
+  PASS  zoomThrough fills the frame with the target at k = 1
+  PASS  zoomThrough starts at identity
+  PASS  view() is identity for a centred camera
+  PASS  view() puts the camera point at the frame centre
+  PASS  view() parallax: a layer at depth 1 moves half as far
+  PASS  lattice() dots stay px on screen
+  PASS  lattice() covers the frame
+  PASS  unproject() inverts project()
+  PASS  screenTravel() is 0 for a still camera
+  PASS  screenTravel() of a 10 px pan at zoom 2 is 20 px
+  PASS  gather lands on its target
+  PASS  ribbon settles on the last panel
+  PASS  impactSplit rejoins after the hit
+  PASS  typeOn types at cps
+  PASS  drift pushes by amount across the hold
+  PASS  sim.magnet is deterministic and finite
+  PASS  sim.follow is deterministic and finite
+  PASS  sim.jelly is deterministic and finite
+  PASS  sim.verlet is deterministic and finite
+  PASS  every move returns finite numbers from t = -1 to 4
+  PASS  swiftSpring: .smooth is critically damped at ω 2π/d
+  PASS  lightField: rest horizon at 0.84 H, flood above the frame
+  PASS  ripple: rings lead in order and all leave the frame
+  PASS  silk: 16×20 RGBA, deterministic, drifts with tau
+  PASS  silk: the ember ramp has its dark fold between two brights
+  PASS  carouselLoop: still before start, ~speed in the run, stopped after
+  PASS  timeWarp: Ui(U(t)) = t  7.1e-15
+  PASS  timeWarp: knots hit, 1:1 after the last
+  PASS  timeWarp: refuses knots that go back in time
+  PASS  timeWarp: slopes report slow and fast stretches
+  PASS  tr: picks the language, falls back to en, passes strings
+  PASS  subAt: inside, fades, outside
+  PASS  stage: replica-local → plane
+  PASS  zoomFor: 13 px text at 0.75 needs ×2.67 for 26 px
+
+ALL PASS

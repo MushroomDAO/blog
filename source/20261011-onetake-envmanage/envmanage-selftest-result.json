@@ -1,0 +1,18 @@
+{
+  "commit": "f0dbb7f5785a30adf6a21d42ae08d4942556aa0d",
+  "exitCode": 0,
+  "summary": [
+    "扫描：共 70 条（系统 12 / 用户 8 / 运行时 50）",
+    "重复：2 组",
+    "运行时：8 个",
+    "PATH：31 项，缺失 6 项",
+    "敏感变量：2 条（默认遮蔽）",
+    "增量自检：通过 14 项，失败 0 项",
+    "SELFTEST_OK"
+  ],
+  "shellConfigFilesChecked": 7,
+  "shellConfigHashesUnchanged": true,
+  "appBuilt": true,
+  "dmgBuilt": true,
+  "scope": "Official local build and headless selftest; no GUI, real config edit, runtime activation/install/remove, or full rollback/concurrency test."
+}

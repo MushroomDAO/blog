@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-11",
+  "metaLengths": {
+    "title": 32,
+    "titleEn": 57,
+    "description": 160,
+    "descriptionEn": 157,
+    "wechatTitle": 25,
+    "wechatDigest": 34
+  },
+  "bilingual": true,
+  "copyright": true,
+  "tags": 6,
+  "questionHeadings": 18,
+  "faqPairsEachLanguage": 4,
+  "bluf": "Separate tools described immediately",
+  "sources": "Pinned official source/license and salespage; AppleCNsearch narrow scope",
+  "originalEvidence": "58 upstream motionchecks, nativebuild,14selftests0fail,7configs unchanged; backupfailure nonblocking andselftestexit limits inspected",
+  "bodyImages": "3verified16:9figures <90000bytes,bilingualalt and matchinganchors"
+}

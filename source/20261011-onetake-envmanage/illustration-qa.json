@@ -1,0 +1,31 @@
+{
+  "originalSession": "01a12bbf-f855-7323-9dfd-04482b8aadc8",
+  "compression": "ImageMagick near-white normalization,1600x900,palette128",
+  "visualInspection": "Passed: continuouscarry,threedistinctenvscopes,previewandbackupresultbeforewrite; minimalChinese correct; nofaces; themealigned",
+  "images": [
+    {
+      "file": "src/assets/images/onetake-envmanage-source-check-fig-01.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 47618
+    },
+    {
+      "file": "src/assets/images/onetake-envmanage-source-check-fig-02.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 58065
+    },
+    {
+      "file": "src/assets/images/onetake-envmanage-source-check-fig-03.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 46876
+    }
+  ]
+}

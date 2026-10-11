@@ -1,0 +1,605 @@
+{
+  "sha": "f0dbb7f5785a30adf6a21d42ae08d4942556aa0d",
+  "url": "https://api.github.com/repos/wbbk/envmanage/git/trees/f0dbb7f5785a30adf6a21d42ae08d4942556aa0d",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6203569628eeb058a6483229364aa852f79185d2",
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/trees/6203569628eeb058a6483229364aa852f79185d2"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b36ae4fe1ebd3f2e0b7f1e17fe13a0a536c3f360",
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/trees/b36ae4fe1ebd3f2e0b7f1e17fe13a0a536c3f360"
+    },
+    {
+      "path": ".github/workflows/build-macos.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cb497b2a6ac1bf68d9723470cebedc37fb4b7e3",
+      "size": 11871,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/0cb497b2a6ac1bf68d9723470cebedc37fb4b7e3"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1016af99649e797aeae637963c474527d441bf64",
+      "size": 863,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/1016af99649e797aeae637963c474527d441bf64"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90d9a5f3cba0840a9bc4d7f7784f5dc896677f1c",
+      "size": 11686,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/90d9a5f3cba0840a9bc4d7f7784f5dc896677f1c"
+    },
+    {
+      "path": "Screenshots",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5574f1cbe10c326cb92b67876bb7b87a9a16e3a8",
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/trees/5574f1cbe10c326cb92b67876bb7b87a9a16e3a8"
+    },
+    {
+      "path": "Screenshots/env.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b420dd5f471f7c0846fed4aa484206915d35d2f2",
+      "size": 321532,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/b420dd5f471f7c0846fed4aa484206915d35d2f2"
+    },
+    {
+      "path": "Screenshots/path.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d1080a2b854302b27e3f4fd471bdba856349ac1",
+      "size": 301926,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/2d1080a2b854302b27e3f4fd471bdba856349ac1"
+    },
+    {
+      "path": "Screenshots/project.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5b302ecd094798961972b1e79cd95327adea0dd",
+      "size": 267080,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/e5b302ecd094798961972b1e79cd95327adea0dd"
+    },
+    {
+      "path": "Screenshots/runtime.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d9a15505ae0ed8f5ed0289ed3b3a7f00f5ccb77",
+      "size": 328916,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/4d9a15505ae0ed8f5ed0289ed3b3a7f00f5ccb77"
+    },
+    {
+      "path": "Screenshots/settings.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5131af817e3b02a4f259e2345a401fb27b970d8a",
+      "size": 289794,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/5131af817e3b02a4f259e2345a401fb27b970d8a"
+    },
+    {
+      "path": "Scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3936b0f8533121d4ca77ab2f5cc1154e8c7f60a3",
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/trees/3936b0f8533121d4ca77ab2f5cc1154e8c7f60a3"
+    },
+    {
+      "path": "Scripts/make_icon.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a258b318d0833e1e5f736b6e8ca1b97b402eb01",
+      "size": 4934,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/2a258b318d0833e1e5f736b6e8ca1b97b402eb01"
+    },
+    {
+      "path": "Sources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5347c965080f1e93a147c6b204c1c6818fcb9650",
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/trees/5347c965080f1e93a147c6b204c1c6818fcb9650"
+    },
+    {
+      "path": "Sources/App",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7154fae57930fbee862a59bedd9207cf9d15b946",
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/trees/7154fae57930fbee862a59bedd9207cf9d15b946"
+    },
+    {
+      "path": "Sources/App/EnvManageApp.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7047401577ff2e3757de4f80a5d303881cc1af7b",
+      "size": 1930,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/7047401577ff2e3757de4f80a5d303881cc1af7b"
+    },
+    {
+      "path": "Sources/App/HelpWindow.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46f2f92d66e974cf226744e3925ef14712667d29",
+      "size": 1160,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/46f2f92d66e974cf226744e3925ef14712667d29"
+    },
+    {
+      "path": "Sources/App/ScreenshotMode.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f82da9f7a3c5e4ed37abe1c782519225a6314b7",
+      "size": 2015,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/9f82da9f7a3c5e4ed37abe1c782519225a6314b7"
+    },
+    {
+      "path": "Sources/App/SelfTest.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bab21ea14d0a2ec89e512fcaea6c4e424a2ac47",
+      "size": 7023,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/3bab21ea14d0a2ec89e512fcaea6c4e424a2ac47"
+    },
+    {
+      "path": "Sources/Models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ea4d86de9f2f6365aa2877ac454c178c1d26099a",
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/trees/ea4d86de9f2f6365aa2877ac454c178c1d26099a"
+    },
+    {
+      "path": "Sources/Models/DuplicateGroup.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81edcf709b6974af20fb70f6d9915e3362ac28e2",
+      "size": 2303,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/81edcf709b6974af20fb70f6d9915e3362ac28e2"
+    },
+    {
+      "path": "Sources/Models/EnvironmentVariable.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4699315b645bf7cfebb1474ac520ba1c836d838b",
+      "size": 4082,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/4699315b645bf7cfebb1474ac520ba1c836d838b"
+    },
+    {
+      "path": "Sources/Models/PathEntry.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49094b53741a03077945371fdd34042c768caadf",
+      "size": 617,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/49094b53741a03077945371fdd34042c768caadf"
+    },
+    {
+      "path": "Sources/Models/RuntimeEnvironment.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5d08a98d6ebb2b3aeb1ed4c10f81dce4ced2730",
+      "size": 539,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/e5d08a98d6ebb2b3aeb1ed4c10f81dce4ced2730"
+    },
+    {
+      "path": "Sources/Models/RuntimeInstall.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e8393b506dd20b6d6fe279ad8b83eb87b8e0e73",
+      "size": 1205,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/6e8393b506dd20b6d6fe279ad8b83eb87b8e0e73"
+    },
+    {
+      "path": "Sources/Models/RuntimeLanguage.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f58bbd3c3aae359938bc5117a36055dc0f47ed3",
+      "size": 878,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/7f58bbd3c3aae359938bc5117a36055dc0f47ed3"
+    },
+    {
+      "path": "Sources/Services",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa002fc783045e77ae10fd9c05adb9ea7559165a",
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/trees/aa002fc783045e77ae10fd9c05adb9ea7559165a"
+    },
+    {
+      "path": "Sources/Services/AppPaths.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e50a947e068d316e36c9ef3a0d6ebdd058f6aeb6",
+      "size": 2129,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/e50a947e068d316e36c9ef3a0d6ebdd058f6aeb6"
+    },
+    {
+      "path": "Sources/Services/BackupService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52e45617063050e028de873e3f88c3fd06add7b3",
+      "size": 2456,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/52e45617063050e028de873e3f88c3fd06add7b3"
+    },
+    {
+      "path": "Sources/Services/CommandResolver.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acdc51ce766c3c4ae1059cfdfad743bfd5759390",
+      "size": 2733,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/acdc51ce766c3c4ae1059cfdfad743bfd5759390"
+    },
+    {
+      "path": "Sources/Services/CppRuntimeProvider.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b8aca23631c4f305a43827bdd422f592073b60b",
+      "size": 2378,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/8b8aca23631c4f305a43827bdd422f592073b60b"
+    },
+    {
+      "path": "Sources/Services/DiagnosticsService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27cddac3fa3268b71f7e0643e71169963ffaa59d",
+      "size": 3456,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/27cddac3fa3268b71f7e0643e71169963ffaa59d"
+    },
+    {
+      "path": "Sources/Services/DiffService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92024a2e12b7f06cb98c53dd256c3fe0bcfb6e45",
+      "size": 3663,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/92024a2e12b7f06cb98c53dd256c3fe0bcfb6e45"
+    },
+    {
+      "path": "Sources/Services/DuplicateService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "416cef51d6bf444377ef16b48e65f604dc9fcea0",
+      "size": 3800,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/416cef51d6bf444377ef16b48e65f604dc9fcea0"
+    },
+    {
+      "path": "Sources/Services/EditService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0149c8bf1dd979145dcb0ee29347b0c120274075",
+      "size": 10109,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/0149c8bf1dd979145dcb0ee29347b0c120274075"
+    },
+    {
+      "path": "Sources/Services/FileSnapshotUndoManager.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2b6d121f5945ebfefa00a48d214b591115b1ef5",
+      "size": 2796,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/a2b6d121f5945ebfefa00a48d214b591115b1ef5"
+    },
+    {
+      "path": "Sources/Services/FileStore.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac995ec738c76246b7867f6db53878876673d291",
+      "size": 8310,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/ac995ec738c76246b7867f6db53878876673d291"
+    },
+    {
+      "path": "Sources/Services/GoRuntimeProvider.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "142b25c5da03e2f4c9e5e52b194d3eb55326643e",
+      "size": 2963,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/142b25c5da03e2f4c9e5e52b194d3eb55326643e"
+    },
+    {
+      "path": "Sources/Services/GuiEnvService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7331576ccc19204652e8bb7fbafd255ab1ade3c9",
+      "size": 5021,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/7331576ccc19204652e8bb7fbafd255ab1ade3c9"
+    },
+    {
+      "path": "Sources/Services/JavaRuntimeProvider.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b847798e63d713c49968d85b4ca33248f9c63a9",
+      "size": 4357,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/3b847798e63d713c49968d85b4ca33248f9c63a9"
+    },
+    {
+      "path": "Sources/Services/LanguageRuntimeProvider.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b639322f9d862e79ec9ad2ab5fe9ac9fe55f3b36",
+      "size": 1785,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/b639322f9d862e79ec9ad2ab5fe9ac9fe55f3b36"
+    },
+    {
+      "path": "Sources/Services/ManagedPathService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef87b438125c87c80558851b5d3b78aa457473da",
+      "size": 3429,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/ef87b438125c87c80558851b5d3b78aa457473da"
+    },
+    {
+      "path": "Sources/Services/NodeRuntimeProvider.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b247542c1e8b2cd4bdb2e30e3a793a2cea0b65bc",
+      "size": 3200,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/b247542c1e8b2cd4bdb2e30e3a793a2cea0b65bc"
+    },
+    {
+      "path": "Sources/Services/PathService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f01cc0b9edfdbf3b3677014061921b6efc1d8c86",
+      "size": 1452,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/f01cc0b9edfdbf3b3677014061921b6efc1d8c86"
+    },
+    {
+      "path": "Sources/Services/ProfileService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "703511b411d63cfe98388e950f5fa22b10a68fd2",
+      "size": 6094,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/703511b411d63cfe98388e950f5fa22b10a68fd2"
+    },
+    {
+      "path": "Sources/Services/ProjectEnvScanner.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcf15ee8c02ea74db6996d4d2736b2246d1bab03",
+      "size": 4398,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/fcf15ee8c02ea74db6996d4d2736b2246d1bab03"
+    },
+    {
+      "path": "Sources/Services/PythonRuntimeProvider.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "965e75e5f1ee4304e6f5430e6bd2024b0dcb3c82",
+      "size": 8440,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/965e75e5f1ee4304e6f5430e6bd2024b0dcb3c82"
+    },
+    {
+      "path": "Sources/Services/RuntimeInstallService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0699658cfccd53c78d0c4923850b89d1e80c741b",
+      "size": 12732,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/0699658cfccd53c78d0c4923850b89d1e80c741b"
+    },
+    {
+      "path": "Sources/Services/RuntimeService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe63cff5408a78620d17a7f116e2e571b734c3e0",
+      "size": 4714,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/fe63cff5408a78620d17a7f116e2e571b734c3e0"
+    },
+    {
+      "path": "Sources/Services/ShellConfigService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36e37e6a9bce0aa4e5d669b795045a6b5d365293",
+      "size": 8471,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/36e37e6a9bce0aa4e5d669b795045a6b5d365293"
+    },
+    {
+      "path": "Sources/Services/ShellTool.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da02292023355890c9e96742a4aaa2d1d77ead29",
+      "size": 4361,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/da02292023355890c9e96742a4aaa2d1d77ead29"
+    },
+    {
+      "path": "Sources/Services/ToolboxService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5798bf2f3d9cc8b4793e10419eb8a781aa36f2d9",
+      "size": 3415,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/5798bf2f3d9cc8b4793e10419eb8a781aa36f2d9"
+    },
+    {
+      "path": "Sources/Services/ValueExpander.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d20124285eb0a3b18b630fdb6eec988afab2555",
+      "size": 3207,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/4d20124285eb0a3b18b630fdb6eec988afab2555"
+    },
+    {
+      "path": "Sources/Services/VenvService.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe37587547054b48b3dc10d0fdee307286fc8eca",
+      "size": 5435,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/fe37587547054b48b3dc10d0fdee307286fc8eca"
+    },
+    {
+      "path": "Sources/Services/WriteAudit.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7499a400fb1d5ef9f9ee9436708db3d486a456ac",
+      "size": 2609,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/7499a400fb1d5ef9f9ee9436708db3d486a456ac"
+    },
+    {
+      "path": "Sources/ViewModels",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b68744c298c98a0be80dcca64a36dc6b8397e6c",
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/trees/9b68744c298c98a0be80dcca64a36dc6b8397e6c"
+    },
+    {
+      "path": "Sources/ViewModels/EnvManagerViewModel.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecbd7a390e0f996d9388a81f658703a2903c90b8",
+      "size": 20092,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/ecbd7a390e0f996d9388a81f658703a2903c90b8"
+    },
+    {
+      "path": "Sources/Views",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b8ef41498636ec052526a9ab1bb9895f00cc727",
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/trees/7b8ef41498636ec052526a9ab1bb9895f00cc727"
+    },
+    {
+      "path": "Sources/Views/ChangePreviewSheet.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cfdb0b6d9f90b3a2eba21fb04c246141feee1d0",
+      "size": 4164,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/9cfdb0b6d9f90b3a2eba21fb04c246141feee1d0"
+    },
+    {
+      "path": "Sources/Views/CommandFinderView.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71a81986603e7c6a57c4867a88662c7dd4dbe991",
+      "size": 5708,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/71a81986603e7c6a57c4867a88662c7dd4dbe991"
+    },
+    {
+      "path": "Sources/Views/Components.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "788c7dcd20493f6760163199c7173d0ac2206bf2",
+      "size": 5882,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/788c7dcd20493f6760163199c7173d0ac2206bf2"
+    },
+    {
+      "path": "Sources/Views/ContentView.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "031b9798e1de3c8a024892e72824131c0b57392a",
+      "size": 8002,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/031b9798e1de3c8a024892e72824131c0b57392a"
+    },
+    {
+      "path": "Sources/Views/DuplicatesView.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "838367fda8892e98eb67d5001b6716272ee49a9a",
+      "size": 7436,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/838367fda8892e98eb67d5001b6716272ee49a9a"
+    },
+    {
+      "path": "Sources/Views/EnvDiffSheet.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e8a8d5f6f3a0b63fcf69c43b8cec6c2ad225774",
+      "size": 7447,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/6e8a8d5f6f3a0b63fcf69c43b8cec6c2ad225774"
+    },
+    {
+      "path": "Sources/Views/EnvironmentVariablesView.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f1e778c706bc81c4384dd23cba8b7801af4fb2d",
+      "size": 7151,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/8f1e778c706bc81c4384dd23cba8b7801af4fb2d"
+    },
+    {
+      "path": "Sources/Views/InstallRuntimeSheet.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f5ff2fb69b3b37e217da1bb1496beaba7416514",
+      "size": 6988,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/1f5ff2fb69b3b37e217da1bb1496beaba7416514"
+    },
+    {
+      "path": "Sources/Views/PathEntriesView.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddbc5c7ac64c5c8fe3561bb4f4593c0df2a3c25c",
+      "size": 8692,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/ddbc5c7ac64c5c8fe3561bb4f4593c0df2a3c25c"
+    },
+    {
+      "path": "Sources/Views/ProjectEnvView.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ff780423d27d33adaa6205f7eb2d18dc04c0187",
+      "size": 12388,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/0ff780423d27d33adaa6205f7eb2d18dc04c0187"
+    },
+    {
+      "path": "Sources/Views/RuntimeManagerView.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1710a723df9b8cc135747029ebc0319706bbed1",
+      "size": 10381,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/e1710a723df9b8cc135747029ebc0319706bbed1"
+    },
+    {
+      "path": "Sources/Views/SettingsView.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b12b279211536c748e0a44a125784e74298de369",
+      "size": 25118,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/b12b279211536c748e0a44a125784e74298de369"
+    },
+    {
+      "path": "Sources/Views/Theme.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5efd8fac5df53b1ce9537185ebc5ceb63f4942b",
+      "size": 3036,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/b5efd8fac5df53b1ce9537185ebc5ceb63f4942b"
+    },
+    {
+      "path": "Sources/Views/VariableDetailPanel.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d68788936938f205825caf86ae073075b27d7d7",
+      "size": 11769,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/2d68788936938f205825caf86ae073075b27d7d7"
+    },
+    {
+      "path": "Sources/Views/VariableRowView.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01d89f0923f631448badce8264d3e3c5e9f39157",
+      "size": 6516,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/01d89f0923f631448badce8264d3e3c5e9f39157"
+    },
+    {
+      "path": "Sources/Views/VariableSheets.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56212db619e9779165ec5da0cc9bcb8eedf9ace8",
+      "size": 4142,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/56212db619e9779165ec5da0cc9bcb8eedf9ace8"
+    },
+    {
+      "path": "Sources/Views/VersionComboBox.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "521e51a86691100311fc6741d85ecbf1531936aa",
+      "size": 3312,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/521e51a86691100311fc6741d85ecbf1531936aa"
+    },
+    {
+      "path": "build.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87da1ae32f6b3beeb70d813df2fa8456b5c01029",
+      "size": 3898,
+      "url": "https://api.github.com/repos/wbbk/envmanage/git/blobs/87da1ae32f6b3beeb70d813df2fa8456b5c01029"
+    }
+  ],
+  "truncated": false
+}
