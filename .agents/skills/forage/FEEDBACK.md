@@ -533,3 +533,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - onetake非商业PolyForm许可，Pro商用另授权；未买付费包，不写成MIT/无限制开源；11案例目录/中文README10条分开。EnvManage固定tree无LICENSE，CNmacSoftware查询0不推断全球无发行、不确认AppStore路径。
 - 本机上游motion58PASS；EnvManage官方buildApp+DMG、自检14PASS0fail、7配置hash不变，无GUI/完整电影生成/真实环境编辑实测。源码独立观察备份失败不阻断、selftest失败仍exit0/SELFTEST_OK，需要核对失败计数。
 - 双语SEO/GEO、FLUX83主题合格banner+3小M图、Blog200列表首页第6与4图200、公众号draft/get标题封面3图正文核验；zh/en索引upsert成功、get_by_ids向量与元数据确认，初次query存在异步延迟，后续Englishquery首位0.682814。项目记忆与MemPalace SQLite0→3核验完成。证据source/20261011-onetake-envmanage/。
+
+
+## 2026-10-11 Vorssaint Utils 安装包核对与首发
+
+- f914638b-f8e9-45ff-8b66-06422df2fe61：机器人泛词GitHub/Releases查重误报；精确仓库URL/实体仅原KB命中，无旧Blog/M2发布，首次双语vorssaint-utils-macos-menu-bar-toolkit，原素材复用。GPL3-or-later与品牌身份规则分开，AppleSilicon/macOS14+。
+- 官方v3.4.1DMG26722813bytes，SHA匹配GitHubdigest；只读挂载检查arm64、plist3.4.1/build101/min14.0、codesignstrictdeep/GatekeeperNotarizedDeveloperID/staplervalidate全部通过，随后detach；无安装/运行/授权/系统调整，不声称功能或性能实测。对应release源码混音processTap需14.4+，ReleaseAirPlay27+，最低系统不等于全部功能最低。
+- 按需模块与独立权限是主要分析；local-first≠offline，更新/测速/Homebrew/歌词/显式分享等网络路径保留；清空系统剪贴板≠清空历史；AIAgents用量展示≠智能体执行。隐私功能说明归因官方，未抓包或完整审计。
+- SEO/GEO、最终FLUX89合格音频/鼠标工作台封面+3小M图、Blog200列表首页第9/4图200、M2draft/get标题封面3图正文一致、zh/en索引upsertTrue/freshquery第1分0.7883247、项目记忆与MemPalaceSQLite0→2核验全部完成。首seed87视觉品牌形状不合格已弃用，最终89无文字/人脸且视觉验收；只用ImageMagick压图。证据source/20261011-vorssaint-utils/。
