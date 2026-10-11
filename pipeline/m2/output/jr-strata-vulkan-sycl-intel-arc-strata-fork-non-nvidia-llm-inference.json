@@ -1,0 +1,13 @@
+{
+  "title": "JR-Strata：Strata移植Intel Arc和Vulkan",
+  "author": "Mycelium",
+  "digest": "MIT；Intel Arc B60验证；解码33.5 tok/s 128K；Vulkan全GPU版开发中；Strata分叉",
+  "mediaId": "prCUE631thH1cmNLi42prPYcvpn-HTtGz_1qxPPnHeDrzbCKy0GkeEdl2GdEZY1m",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/goldlionren/jr-strata",
+    "github.com/goldlionren/jr-strata-vulkan",
+    "github.com/niko1221/strata"
+  ],
+  "publishedAt": "2026-10-07T07:41:26.516Z"
+}

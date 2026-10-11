@@ -1,0 +1,12 @@
+{
+  "title": "腾讯5B全模态解析Youtu-Parsing-Omni",
+  "author": "Mycelium",
+  "digest": "88星；License含EU排除；8模态→统一JSON；OmniDocBench 96.96 SOTA",
+  "mediaId": "prCUE631thH1cmNLi42prMSmLHA91pBSUd11cdQhsGPwr_H4RCRSGBW1SxQ3cuhf",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/tencentcloudadp/youtu-parsing",
+    "huggingface.co/tencent/youtu-parsing-omni"
+  ],
+  "publishedAt": "2026-10-10T03:31:47.098Z"
+}
