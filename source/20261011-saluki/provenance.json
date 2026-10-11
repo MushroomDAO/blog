@@ -1,0 +1,11 @@
+{
+  "checked": "2026-10-11",
+  "salukiSource": "https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0",
+  "salukiRevision": "4f60eba09f4b6db63c72915d328d97e1d93edb8c",
+  "bonsaiSource": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
+  "bonsaiRevision": "b072e1d3b35a0a630cece372c2127528e0994386",
+  "banner": "original local FLUX.2 Klein 4B, seed61; no official hero reused; source card assets not a suitable photo cover; self-verification passed",
+  "body": "three original image_gen Xiao-M illustrations, compressed PNG; QA separate",
+  "ownMeasurement": "4 synthetic exact-function-and-argument smoke cases; no external tool execution and no full BFCL replication",
+  "rawKB": "robot existing record; no new raw ingestion"
+}

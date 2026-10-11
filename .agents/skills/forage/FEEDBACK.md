@@ -485,3 +485,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - 独立核对：147=130+17，130=125+5；停止位置分类合计127而非125，公开口径未解释。数字是官方研究活动快照，不能转成胜率或盈利承诺。
 - 完成：loopera-factor-research-evidence-gates，匹配主题的 FLUX 写实封面及三张小M图，SEO/GEO，Blog/四张图片200，列表前列，zh/en索引，公众号草稿 draft/get核验。MemPalace新增2条发布记录已用SQLite核对。
 - 采集：agent-reach在此shell及已知技能目录缺失，按用户允许使用Jina Reader与GitHub官方raw/API；原始快照及失败可重试状态保存在source/20261011-loopera/。
+
+
+## 2026-10-11 Saluki 历史内容补偿
+
+- 任务 history-20261011-saluki；精确 HF源URL及 Saluki 实体查重只命中机器人素材KB，Blog/M2/公众号无旧发布；复用原始KB，完成缺失渠道。Bonsai2旧文作为内链，未重建。
+- 官方九项比值平均96.05%，含超100%的工具项、不同harness公开参照；不可直接比较Bonsai2另十四项98.2%。数学/推理应写82–85%，非统一96%。120题88/84/70与并行100题42/35是官方子集，不是完整BFCL或我们的复现。
+- 本地证据：固定revision7,898,369,152字节GGUF，SHA256匹配；M4/16GiB、官方原版llama.cpp b11552、2048ctx、Jinja、thinkingoff、temp0，4个合成工具schema/参数检查全过（含两道并行）。短输出7.90–8.10token/s，墙钟10.4–16.6s含prefill；不推断完整准确率、峰值内存或相对Bonsai速度。
+- 完成：saluki-27b-gguf-tools-bonsai2；匹配主题FLUX封面+3张小M正文图、双语稿、SEO/GEO、Blog与4图200、列表第4、zh/en索引、公众号draft/get确认；MemPalace新发布抽屉SQLite验证成功。全部证据保存source/20261011-saluki/。

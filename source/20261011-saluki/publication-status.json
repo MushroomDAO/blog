@@ -1,0 +1,20 @@
+{
+  "task": "history-20261011-saluki",
+  "slug": "saluki-27b-gguf-tools-bonsai2",
+  "kb": "raw material already ingested by robot; reused",
+  "duplicateDecision": "raw KB hit only; published channels missing; backfill authorized",
+  "sourceUrl": "https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0",
+  "blog": "verified-200",
+  "blogUrl": "https://blog.mushroom.cv/blog/saluki-27b-gguf-tools-bonsai2/",
+  "listPosition": 4,
+  "wechat": "draft-created-and-verified",
+  "mediaId": "prCUE631thH1cmNLi42prJPJuuRX8aHKiHPwnNXDCYD-CTuY1j_4RRM6QA4T3w9P",
+  "massPublished": false,
+  "index": "zh/en upsert True; manifest updated",
+  "memory": "project file and MEMORY index saved; MemPalace publication record verified with SQLite",
+  "memPalaceNewDrawers": 2,
+  "localSmoke": "4/4 synthetic exact schema/argument checks passed; not full benchmark; AppleM4 16GiB, stock b11552,2048ctx",
+  "banner": "FLUXseed61 original matches topic; verification passed",
+  "bodyImages": "three Xiao-M illustrations all <90KB",
+  "localKBRefresh": "~/mycelium-kb/kb-refresh.sh absent; optional alternate refresher skipped, raw KB and MemPalace confirmed"
+}

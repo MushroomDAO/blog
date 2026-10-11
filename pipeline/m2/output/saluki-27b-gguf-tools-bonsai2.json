@@ -1,0 +1,14 @@
+{
+  "title": "Saluki 27B：工具调用与 Bonsai 怎么选",
+  "author": "Mycelium",
+  "digest": "Saluki 用约7.9GB权重保留工具接口，但数学短板和评测口径仍需分开看。",
+  "mediaId": "prCUE631thH1cmNLi42prJPJuuRX8aHKiHPwnNXDCYD-CTuY1j_4RRM6QA4T3w9P",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/conwayresearch/underdog-saluki-27b-1.0",
+    "huggingface.co/prism-ml/ternary-bonsai-2-27b-gguf",
+    "github.com/ggml-org/llama.cpp",
+    "github.com/prismml-eng/llama.cpp"
+  ],
+  "publishedAt": "2026-10-11T06:05:38.269Z"
+}
