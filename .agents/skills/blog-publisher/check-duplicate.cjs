@@ -66,8 +66,12 @@ const GENERIC = new Set([
 ]);
 
 function salientNames(s) {
+  const value = String(s).trim();
+  if (/^[\w.-]+\/[\w.-]+$/.test(value)) return [value.toLowerCase()];
+  const withoutUrls = value.replace(/(?:https?:\/\/|www\.)[^\s]+/gi, '')
+    .replace(/(?:github\.com|huggingface\.co|arxiv\.org)\/[^\s]+/gi, '');
   return [...new Set(
-    String(s)
+    withoutUrls
       .toLowerCase()
       .split(/[^a-z0-9.-]+/)
       .map((w) => w.replace(/^[.-]+|[.-]+$/g, ''))
@@ -136,6 +140,7 @@ async function loadWeChatDrafts() {
   const token = await c.getAccessToken();
   const items = [];
   const errors = [];
+  let draftRead = false;
 
   // 两个端点都要查：
   //   draft/batchget       —— 还没群发的草稿
@@ -159,6 +164,7 @@ async function loadWeChatDrafts() {
         break;
       }
       const batch = data.item || [];
+      if (ep === 'draft') draftRead = true;
       for (const it of batch) {
         // freepublish 的结构多一层 content.news_item，字段名也不同
         const news = (it.content && it.content.news_item) || [];
@@ -179,7 +185,7 @@ async function loadWeChatDrafts() {
       if (batch.length < 20) break;
     }
   }
-  return { items, error: errors.length ? errors.join('; ') : undefined };
+  return { items, draftRead, error: errors.length ? errors.join('; ') : undefined };
 }
 
 
@@ -280,7 +286,7 @@ function loadMemPalace() {
 }
 
 // ── 主流程 ──────────────────────────────────────────────────────
-(async () => {
+async function main() {
   const args = process.argv.slice(2);
   if (!args.length) {
     console.error('用法: node check-duplicate.cjs <一手源URL或关键词> [更多...]');
@@ -300,7 +306,7 @@ function loadMemPalace() {
   if (wechatResult.error) {
     const onlyFreepublish =
       /freepublish/.test(wechatResult.error) && !/draft:/.test(wechatResult.error);
-    if (onlyFreepublish && wechat.length) {
+    if (onlyFreepublish && wechatResult.draftRead) {
       // 48001 = 这个号没有「已群发列表」接口权限（订阅号常见）。草稿箱查到了，
       // 但已经群发出去的文章就查不到了 —— 那部分只能靠 MemPalace 兜底，
       // 所以「发布后入库」不是可选步骤。
@@ -385,4 +391,7 @@ function loadMemPalace() {
     process.exit(1);
   }
   process.exit(0);
-})();
+}
+
+module.exports = { normalize, extractSources, salientNames };
+if (require.main === module) main().catch(err => { console.error(err.message); process.exitCode = 2; });
