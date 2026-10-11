@@ -44,6 +44,11 @@ const IMPORT_WING = '_ledger-import';
 // 'published' 是 2026-09-10 那次事故用的 wing，留着兼容，别再用这个名字建 wing。
 const EXCLUDED_WINGS = [IMPORT_WING, 'published'];
 
+// Bot routing identifiers are internal metadata, not public article facts.
+function publicLedgerText(text) {
+  return String(text).replace(/\*\*(?:User|Session)\*\*:\s*\S+\s*/g, '').trim();
+}
+
 function readPalace() {
   if (!fs.existsSync(DB)) return [];
   const notImported = EXCLUDED_WINGS.map(
@@ -63,7 +68,7 @@ function readPalace() {
       { encoding: 'utf8', maxBuffer: 128 * 1024 * 1024 }
     );
   }
-  return out.split('\n').map((l) => l.trim()).filter(Boolean);
+  return out.split('\n').map(publicLedgerText).filter(Boolean);
 }
 
 function readLedger() {
@@ -75,7 +80,8 @@ function readLedger() {
     .map((l) => {
       try { return JSON.parse(l); } catch { return null; }
     })
-    .filter(Boolean);
+    .filter(Boolean)
+    .map(e => { const text=publicLedgerText(e.text); return {...e,text,h:hash(text)}; });
 }
 
 // 内容哈希做去重键 —— 同一条抽屉在两台机器上导出应该产生同一个 id
