@@ -1,0 +1,44 @@
+[
+  {
+    "model": "Qwen/Qwen3-ASR-0.6B",
+    "revision": "5eb144179a02acc5e5ba31e748d22b0cf3e303b0",
+    "license": "apache-2.0",
+    "gated": false
+  },
+  {
+    "model": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+    "revision": "5d83992436eae1d760afd27aff78a71d676296fc",
+    "license": "apache-2.0",
+    "gated": false
+  },
+  {
+    "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+    "revision": "26291f793822fb6be9555850f06dfe95f2d7e695",
+    "license": "other",
+    "gated": false
+  },
+  {
+    "model": "FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+    "revision": "29e01c4e8d000f4bcd70751be16fa94bf3d85a18",
+    "license": "apache-2.0",
+    "gated": false
+  },
+  {
+    "model": "emotion2vec/emotion2vec_plus_base",
+    "revision": "b318240bfe67db81a8c572ecb37ce9c3759b81c9",
+    "license": "other",
+    "gated": false
+  },
+  {
+    "model": "FunAudioLLM/SenseVoiceSmall",
+    "revision": "3847d57b6bdf2dd8875cb1508d2af43d80a16bf7",
+    "license": "other",
+    "gated": false
+  },
+  {
+    "model": "nvidia/NVIDIA-NemotronLabs-VoiceChat-11B",
+    "revision": "443794ea956ef0065f001967ffd00e77f519cb39",
+    "license": "openmdw-1.1",
+    "gated": false
+  }
+]

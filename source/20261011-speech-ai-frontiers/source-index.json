@@ -1,0 +1,161 @@
+[
+  {
+    "repo": "kyutai-labs/moshi",
+    "url": "https://github.com/kyutai-labs/moshi",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "stars": 11202,
+    "commit": "e6a55d2722a65870ef52a6c9f6ecfc0e90f38362",
+    "readmeBytes": 14420,
+    "licenseReadmeNote": "Python/web MIT; Rust Apache2; official weights CC-BY4; API rootlicense is not wholeprojectlicense"
+  },
+  {
+    "repo": "NVIDIA/personaplex",
+    "url": "https://github.com/NVIDIA/personaplex",
+    "branch": "main",
+    "license": "MIT",
+    "stars": 10619,
+    "commit": "3428dfd95309a7f3c84fd93259ded0f810d1ff91",
+    "readmeBytes": 8278
+  },
+  {
+    "repo": "QwenLM/Qwen3-Omni",
+    "url": "https://github.com/QwenLM/Qwen3-Omni",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "stars": 4043,
+    "commit": "e4235853125589c789f06a2dd83e9f4126df5e9d",
+    "readmeBytes": 101283
+  },
+  {
+    "repo": "QwenLM/Qwen3-ASR",
+    "url": "https://github.com/QwenLM/Qwen3-ASR",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "stars": 3678,
+    "commit": "7c6daf77a2421100f5fb066495372c00129d39ff",
+    "readmeBytes": 60537
+  },
+  {
+    "repo": "QwenLM/Qwen3-TTS",
+    "url": "https://github.com/QwenLM/Qwen3-TTS",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "stars": 13732,
+    "commit": "022e286b98fbec7e1e916cb940cdf532cd9f488e",
+    "readmeBytes": 60501
+  },
+  {
+    "repo": "FunAudioLLM/SenseVoice",
+    "url": "https://github.com/FunAudioLLM/SenseVoice",
+    "branch": "main",
+    "license": "MIT",
+    "stars": 9492,
+    "commit": "586bbdb2b052f4fe19322581825228b6810a9fb3",
+    "readmeBytes": 26816
+  },
+  {
+    "repo": "FunAudioLLM/CosyVoice",
+    "url": "https://github.com/FunAudioLLM/CosyVoice",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "stars": 23921,
+    "commit": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+    "readmeBytes": 13764
+  },
+  {
+    "repo": "modelscope/FunASR",
+    "url": "https://github.com/modelscope/FunASR",
+    "branch": "main",
+    "license": "MIT",
+    "stars": 20642,
+    "commit": "e7e61293d308f4342ab9307895e710e4b51b949c",
+    "readmeBytes": 24205
+  },
+  {
+    "repo": "pipecat-ai/pipecat",
+    "url": "https://github.com/pipecat-ai/pipecat",
+    "branch": "main",
+    "license": "BSD-2-Clause",
+    "stars": 16353,
+    "commit": "53d313b176f65246e451282d5d03537574f54835",
+    "readmeBytes": 43079
+  },
+  {
+    "repo": "livekit/agents",
+    "url": "https://github.com/livekit/agents",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "stars": 14691,
+    "commit": "e7d4cf20804e1faf3867878976dcaf1750a07d1c",
+    "readmeBytes": 16994
+  },
+  {
+    "repo": "snakers4/silero-vad",
+    "url": "https://github.com/snakers4/silero-vad",
+    "branch": "master",
+    "license": "MIT",
+    "stars": 10404,
+    "commit": "1e261b036686cd0017d500ee96acd1c4ba572a9d",
+    "readmeBytes": 9725
+  },
+  {
+    "repo": "k2-fsa/sherpa-onnx",
+    "url": "https://github.com/k2-fsa/sherpa-onnx",
+    "branch": "master",
+    "license": "Apache-2.0",
+    "stars": 15220,
+    "commit": "9db1af1871ed78cee9357c23898e5a7d8702d21a",
+    "readmeBytes": 54754
+  },
+  {
+    "repo": "facebookresearch/audioseal",
+    "url": "https://github.com/facebookresearch/audioseal",
+    "branch": "main",
+    "license": "MIT",
+    "stars": 796,
+    "commit": "e63a8a0e5cdf7bb797159c92ba15961557fe9bd2",
+    "readmeBytes": 9671
+  },
+  {
+    "repo": "speechbrain/speechbrain",
+    "url": "https://github.com/speechbrain/speechbrain",
+    "branch": "develop",
+    "license": "Apache-2.0",
+    "stars": 11864,
+    "commit": "89ead74d163463d30c62329a09cfdb4c54f5abc1",
+    "readmeBytes": 23162
+  },
+  {
+    "repo": "openai/whisper",
+    "url": "https://github.com/openai/whisper",
+    "commit": "86098128c0b4f24f0e2aa2994de830614b474227",
+    "license": "MIT",
+    "branch": "main",
+    "readmeBytes": 8246
+  },
+  {
+    "repo": "SYSTRAN/faster-whisper",
+    "url": "https://github.com/SYSTRAN/faster-whisper",
+    "commit": "a52b026ac844c02117865e61968547639b60a6f8",
+    "license": "MIT",
+    "branch": "master",
+    "readmeBytes": 15249
+  },
+  {
+    "repo": "ddlBoJack/emotion2vec",
+    "url": "https://github.com/ddlBoJack/emotion2vec",
+    "commit": "a0e606c668227ab0c01527e196a4acc42b1efad9",
+    "license": null,
+    "branch": "main",
+    "readmeBytes": 12546
+  },
+  {
+    "repo": "kyutai-labs/delayed-streams-modeling",
+    "url": "https://github.com/kyutai-labs/delayed-streams-modeling",
+    "commit": "4c4f65e147df056adf3346290d64c7b9649b18c9",
+    "license": "Apache-2.0",
+    "branch": "main",
+    "readmeBytes": 15389
+  }
+]

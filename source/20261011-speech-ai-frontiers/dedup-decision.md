@@ -1,0 +1,2 @@
+# Dedup — topic versus supporting sources
+Robot broadsixdirectionquery clear. Supplemental primaryMoshi/QwenASRURL+exact modelentities found prior singlemodel/productteardowns; exact sixfrontiertopic/slugabsent. User explicitly authorized a new systematiccross-direction survey andarticle. Priorarticlescovercomponents, not six-way research map with evaluation/compute/licensing/project design. Link relatedposts rather than rewrite/duplicate them. RawKBmaterial alreadyrobotingested. Finalslug ai-speech-six-frontiers-open-source.

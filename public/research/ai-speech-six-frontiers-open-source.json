@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-11",
+  "articleSlug": "ai-speech-six-frontiers-open-source",
+  "selection": "representative primarysource map acrosssixdirections; notcomplete leaderboard",
+  "repos": [
+    {
+      "repo": "kyutai-labs/moshi",
+      "url": "https://github.com/kyutai-labs/moshi",
+      "branch": "main",
+      "license": "Apache-2.0",
+      "commit": "e6a55d2722a65870ef52a6c9f6ecfc0e90f38362",
+      "readmeBytes": 14420,
+      "licenseReadmeNote": "Python/web MIT; Rust Apache2; official weights CC-BY4; API rootlicense is not wholeprojectlicense"
+    },
+    {
+      "repo": "NVIDIA/personaplex",
+      "url": "https://github.com/NVIDIA/personaplex",
+      "branch": "main",
+      "license": "MIT",
+      "commit": "3428dfd95309a7f3c84fd93259ded0f810d1ff91",
+      "readmeBytes": 8278
+    },
+    {
+      "repo": "QwenLM/Qwen3-Omni",
+      "url": "https://github.com/QwenLM/Qwen3-Omni",
+      "branch": "main",
+      "license": "Apache-2.0",
+      "commit": "e4235853125589c789f06a2dd83e9f4126df5e9d",
+      "readmeBytes": 101283
+    },
+    {
+      "repo": "QwenLM/Qwen3-ASR",
+      "url": "https://github.com/QwenLM/Qwen3-ASR",
+      "branch": "main",
+      "license": "Apache-2.0",
+      "commit": "7c6daf77a2421100f5fb066495372c00129d39ff",
+      "readmeBytes": 60537
+    },
+    {
+      "repo": "QwenLM/Qwen3-TTS",
+      "url": "https://github.com/QwenLM/Qwen3-TTS",
+      "branch": "main",
+      "license": "Apache-2.0",
+      "commit": "022e286b98fbec7e1e916cb940cdf532cd9f488e",
+      "readmeBytes": 60501
+    },
+    {
+      "repo": "FunAudioLLM/SenseVoice",
+      "url": "https://github.com/FunAudioLLM/SenseVoice",
+      "branch": "main",
+      "license": "MIT",
+      "commit": "586bbdb2b052f4fe19322581825228b6810a9fb3",
+      "readmeBytes": 26816
+    },
+    {
+      "repo": "FunAudioLLM/CosyVoice",
+      "url": "https://github.com/FunAudioLLM/CosyVoice",
+      "branch": "main",
+      "license": "Apache-2.0",
+      "commit": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+      "readmeBytes": 13764
+    },
+    {
+      "repo": "modelscope/FunASR",
+      "url": "https://github.com/modelscope/FunASR",
+      "branch": "main",
+      "license": "MIT",
+      "commit": "e7e61293d308f4342ab9307895e710e4b51b949c",
+      "readmeBytes": 24205
+    },
+    {
+      "repo": "pipecat-ai/pipecat",
+      "url": "https://github.com/pipecat-ai/pipecat",
+      "branch": "main",
+      "license": "BSD-2-Clause",
+      "commit": "53d313b176f65246e451282d5d03537574f54835",
+      "readmeBytes": 43079
+    },
+    {
+      "repo": "livekit/agents",
+      "url": "https://github.com/livekit/agents",
+      "branch": "main",
+      "license": "Apache-2.0",
+      "commit": "e7d4cf20804e1faf3867878976dcaf1750a07d1c",
+      "readmeBytes": 16994
+    },
+    {
+      "repo": "snakers4/silero-vad",
+      "url": "https://github.com/snakers4/silero-vad",
+      "branch": "master",
+      "license": "MIT",
+      "commit": "1e261b036686cd0017d500ee96acd1c4ba572a9d",
+      "readmeBytes": 9725
+    },
+    {
+      "repo": "k2-fsa/sherpa-onnx",
+      "url": "https://github.com/k2-fsa/sherpa-onnx",
+      "branch": "master",
+      "license": "Apache-2.0",
+      "commit": "9db1af1871ed78cee9357c23898e5a7d8702d21a",
+      "readmeBytes": 54754
+    },
+    {
+      "repo": "facebookresearch/audioseal",
+      "url": "https://github.com/facebookresearch/audioseal",
+      "branch": "main",
+      "license": "MIT",
+      "commit": "e63a8a0e5cdf7bb797159c92ba15961557fe9bd2",
+      "readmeBytes": 9671
+    },
+    {
+      "repo": "speechbrain/speechbrain",
+      "url": "https://github.com/speechbrain/speechbrain",
+      "branch": "develop",
+      "license": "Apache-2.0",
+      "commit": "89ead74d163463d30c62329a09cfdb4c54f5abc1",
+      "readmeBytes": 23162
+    },
+    {
+      "repo": "openai/whisper",
+      "url": "https://github.com/openai/whisper",
+      "commit": "86098128c0b4f24f0e2aa2994de830614b474227",
+      "license": "MIT",
+      "branch": "main",
+      "readmeBytes": 8246
+    },
+    {
+      "repo": "SYSTRAN/faster-whisper",
+      "url": "https://github.com/SYSTRAN/faster-whisper",
+      "commit": "a52b026ac844c02117865e61968547639b60a6f8",
+      "license": "MIT",
+      "branch": "master",
+      "readmeBytes": 15249
+    },
+    {
+      "repo": "ddlBoJack/emotion2vec",
+      "url": "https://github.com/ddlBoJack/emotion2vec",
+      "commit": "a0e606c668227ab0c01527e196a4acc42b1efad9",
+      "license": null,
+      "branch": "main",
+      "readmeBytes": 12546
+    },
+    {
+      "repo": "kyutai-labs/delayed-streams-modeling",
+      "url": "https://github.com/kyutai-labs/delayed-streams-modeling",
+      "commit": "4c4f65e147df056adf3346290d64c7b9649b18c9",
+      "license": "Apache-2.0",
+      "branch": "main",
+      "readmeBytes": 15389
+    }
+  ],
+  "modelCards": [
+    {
+      "model": "Qwen/Qwen3-ASR-0.6B",
+      "revision": "5eb144179a02acc5e5ba31e748d22b0cf3e303b0",
+      "license": "apache-2.0",
+      "gated": false
+    },
+    {
+      "model": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+      "revision": "5d83992436eae1d760afd27aff78a71d676296fc",
+      "license": "apache-2.0",
+      "gated": false
+    },
+    {
+      "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+      "revision": "26291f793822fb6be9555850f06dfe95f2d7e695",
+      "license": "other",
+      "gated": false,
+      "licenseName": "apache-2.0",
+      "note": "card license=other,license_name=apache-2.0; do not silently normalize discrepancy"
+    },
+    {
+      "model": "FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+      "revision": "29e01c4e8d000f4bcd70751be16fa94bf3d85a18",
+      "license": "apache-2.0",
+      "gated": false
+    },
+    {
+      "model": "emotion2vec/emotion2vec_plus_base",
+      "revision": "b318240bfe67db81a8c572ecb37ce9c3759b81c9",
+      "license": "other",
+      "gated": false
+    },
+    {
+      "model": "FunAudioLLM/SenseVoiceSmall",
+      "revision": "3847d57b6bdf2dd8875cb1508d2af43d80a16bf7",
+      "license": "other",
+      "gated": false
+    },
+    {
+      "model": "nvidia/NVIDIA-NemotronLabs-VoiceChat-11B",
+      "revision": "443794ea956ef0065f001967ffd00e77f519cb39",
+      "license": "openmdw-1.1",
+      "gated": false
+    }
+  ],
+  "additionalSources": [
+    {
+      "url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+      "license": "cc-by-4.0"
+    },
+    {
+      "url": "https://huggingface.co/nvidia/personaplex-7b-v1",
+      "license": "NVIDIA Open Model License; gatedacceptance; currentanonymouscardfetch401"
+    },
+    {
+      "url": "https://github.com/asvspoof-challenge/asvspoof5",
+      "note": "official baselines/readme checked; APIrate limit prevented pinnedcommit lookup"
+    },
+    {
+      "url": "https://huggingface.co/datasets/google/fleurs",
+      "license": "cc-by-4.0",
+      "languages": 102
+    },
+    {
+      "url": "https://www.openslr.org/33/",
+      "license": "Apache2.0"
+    },
+    {
+      "url": "https://mozilladatacollective.com/",
+      "note": "check specific CommonVoiceversion/data terms"
+    }
+  ],
+  "localVerification": {
+    "modelCommit": "1e261b036686cd0017d500ee96acd1c4ba572a9d",
+    "modelBytes": 2327524,
+    "modelSha256": "1a153a22f4509e292a94e67d6f9b85e8deb25b4988682b7e174c65279d8788e3",
+    "hardware": "Apple M4",
+    "RAM": "16GiB",
+    "runtime": "1.31.0",
+    "provider": "CPUExecutionProvider",
+    "threads": 1,
+    "sampleRate": 16000,
+    "chunkSamples": 512,
+    "chunkAudioMs": 32,
+    "contextSamples": 64,
+    "sessionLoadMs": 19.130999920889735,
+    "fixture": "macOS say synthesizedEnglish, resampled16kmono; deterministic whiteGaussian noise and silence; no cloned real voice",
+    "scope": "one pass percase; no AEC/network/playback/end-to-end conversation or semantic interruption test; threshold fractions are not detectionaccuracy",
+    "results": [
+      {
+        "case": "synthetic-speech-clean",
+        "secondsAudio": 5.493875,
+        "chunks": 172,
+        "elapsedSeconds": 0.015793124912306666,
+        "RTF": 0.0028746786034095544,
+        "chunkMsP50": 0.07537496276199818,
+        "chunkMsP95": 0.0814999220892787,
+        "firstChunkMs": 0.6181658245623112,
+        "fractionChunksAbove05": 0.8895348837209303,
+        "probMax": 0.999999463558197,
+        "probMean": 0.892615248817344
+      },
+      {
+        "case": "speech-white-noise-20dB",
+        "secondsAudio": 5.493875,
+        "chunks": 172,
+        "elapsedSeconds": 0.014768125023692846,
+        "RTF": 0.002688107214614975,
+        "chunkMsP50": 0.07333303801715374,
+        "chunkMsP95": 0.07443688809871674,
+        "firstChunkMs": 0.19166595302522182,
+        "fractionChunksAbove05": 0.8837209302325582,
+        "probMax": 0.9999984502792358,
+        "probMean": 0.8934191430723945
+      },
+      {
+        "case": "speech-white-noise-0dB",
+        "secondsAudio": 5.493875,
+        "chunks": 172,
+        "elapsedSeconds": 0.014589875005185604,
+        "RTF": 0.002655661988156921,
+        "chunkMsP50": 0.07341685704886913,
+        "chunkMsP95": 0.07531244773417711,
+        "firstChunkMs": 0.07229181937873363,
+        "fractionChunksAbove05": 0.8488372093023255,
+        "probMax": 0.9999755620956421,
+        "probMean": 0.8638611392572869
+      },
+      {
+        "case": "silence",
+        "secondsAudio": 5.493875,
+        "chunks": 172,
+        "elapsedSeconds": 0.014445791952311993,
+        "RTF": 0.0026294358630860716,
+        "chunkMsP50": 0.07291603833436966,
+        "chunkMsP95": 0.07556239143013954,
+        "firstChunkMs": 0.0724999699741602,
+        "fractionChunksAbove05": 0.0,
+        "probMax": 0.00891074538230896,
+        "probMean": 0.0029985577214595885
+      }
+    ]
+  },
+  "metrics": [
+    "clientFirstPlayableAudioP50P95",
+    "endpointWait",
+    "interruptionAudibleStop",
+    "falseAndMissedInterruptions",
+    "streamingRevisions",
+    "RTFWithScope",
+    "memoryAndConcurrency",
+    "WER/CER",
+    "macroF1/UA",
+    "watermarkFalsePositiveAndRobustness",
+    "ASVspoofTrack1minDCFandEER"
+  ]
+}
