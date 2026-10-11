@@ -1,0 +1,14 @@
+{
+  "task": "ca6de80c-c9ea-4d9b-b86a-a684ce70f3f4",
+  "slug": "peekaboo-macos-native-ui-agent",
+  "rawKB": "robot material reused; no duplicate raw ingestion",
+  "dedup": "raw KB only; first article and draft",
+  "blog": "verified200",
+  "listPosition": 6,
+  "images": "4 publicimages200",
+  "wechat": "live draft/get verified title/cover/3images and final manuscript",
+  "semanticIndex": "zh/en upsertTrue; query returns newarticle",
+  "memory": "projectfile+MEMORYindex saved; SQLite0→2 verified",
+  "gitArticleCommit": "25f77f2",
+  "updatedAt": "2026-10-11T16:08:38.795820+00:00"
+}

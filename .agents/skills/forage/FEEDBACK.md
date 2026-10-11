@@ -517,3 +517,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - 完成ai-speech-six-frontiers-open-source：18固定版本仓库及官方HF/数据/论文资料，六方向模型/工程区别、许可/算力、统一延迟协议、3个课题与8周计划；双语正文、匹配FLUX73封面+4小M图、SEO/GEO、Blog列表首位与5图200、来源JSON/复现脚本公开核验、zh/en索引、公众号draft/get标题封面4图确认。MemPalace新增2个slug命中抽屉SQLite核验。
 - 概念校准：全双工≠端到端；原生流式≠离线分块；RTF≠首音频/打断停声；MoE激活3B≠加载3B权重；语言数与方言/研究系列/发布checkpoint边界分开。SenseVoiceSmall5语而非系列50+，代码MIT不等权重MIT；MoshiPython/网页MIT,RustApache,weightsCCBY；PersonaPlexNVIDIAweights，VoiceChatOpenMDW；QwenOmniHFlicenseother但license_nameApache元数据差异保留。
 - 本机仅做SileroVAD：M4/16GiB、单线程ONNXCPU，2.327MB固定SHA，32ms块+64history，5.494s系统TTS×clean/20dB/0dB/silence，RTF0.00263–0.00287，warmP95约0.074–0.082ms，load19.1ms另计；阈值比例不是准确率，单次/后台未隔离，不推断整机/多语种/回声/语义打断效果。公开脚本与逐块结果可复核。未重复模型排行榜或声称项目设计已取得研究成果。
+
+
+## 2026-10-11 Peekaboo 首次发布
+
+- ca6de80c-c9ea-4d9b-b86a-a684ce70f3f4：机器人泛词查重误报大量github；精确源URL和Peekaboo仅命中原始KB，无旧Blog/M2/草稿发布，继续首次写作，复用原素材。
+- peekaboo-macos-native-ui-agent：MIT、5282Star快照、v4.9.0；macOS15+/npmNode22+，原生观察动作与Agent/MCP层分开，stdio可用说明、HTTP/SSE保留未实现。main固定commit文档可能领先release，区别CLI与Agent/MCP输入策略、宿主权限和模型图像外发路径。
+- 本机仅验证4.9.0version/help/permissionquery/dry-run。Bridge/local操作权限未授予，预演not_invoked、零toolcalls、backgroundOnly；不声称截图/点击/完整任务实测，不读取剪贴板/桌面或申请权限。
+- 双语SEO/GEO、主题FLUX81合格封面+3小M图、Blog200与列表首页第6、4图200、公众号draft/get标题封面3图正文核验、zh/en索引及新query命中全部完成。项目记忆与MEMORY索引保存，MemPalace SQLite0→2确认。证据source/20261011-peekaboo/。
