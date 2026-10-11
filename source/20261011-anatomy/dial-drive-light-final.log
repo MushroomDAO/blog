@@ -1,0 +1,6 @@
+eval: {"checkpoint":"Home","readout":"block 1 · reads 18.0 px"}
+eval: {"checkpoint":"End","readout":"block 3 · reads 10.0 px"}
+shot source/20261011-anatomy/dial-end.png · readout "block 3 · reads 10.0 px"
+eval: {"checkpoint":"ArrowRight","readout":"block 2 · reads 14.0 px","aria":"block 2 · reads 14.0 px","sideways":false}
+shot source/20261011-anatomy/dial-middle.png · readout "block 2 · reads 14.0 px"
+console: clean

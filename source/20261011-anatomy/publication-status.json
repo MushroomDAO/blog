@@ -1,0 +1,22 @@
+{
+  "task": "history-20261011-anatomy",
+  "slug": "anatomy-claude-interactive-isometric-figures",
+  "sourceUrl": "https://github.com/wheresryan22/anatomy",
+  "sourceCommit": "dbf697a527bbf7d358668e1557cb1e35ff725d46",
+  "kb": "robot raw material already ingested; reused",
+  "duplicateDecision": "generic English Anatomy hits unrelated; exact owner/repo only KB; no prior published article",
+  "blog": "verified-200",
+  "blogUrl": "https://blog.mushroom.cv/blog/anatomy-claude-interactive-isometric-figures/",
+  "listPosition": 1,
+  "images": "4 verified200",
+  "interactiveDemo": "verified200; upstream example mirrored with complete MIT attribution",
+  "wechat": "draft-created-and-verified",
+  "mediaId": "prCUE631thH1cmNLi42prLH1Z1si3ChHe4BRWohQDVW3PSey7HeyEIoHs2KGcXnp",
+  "massPublished": false,
+  "index": "zh/en upsert True; manifest updated",
+  "memory": "project file/MEMORY index written, MemPalace new2drawers verified bySQLite",
+  "localSmoke": "official dial sample both themes byte-identical rebuild; keyboard18/10/14; aria match; desktop/mobile clean console and nooverflow; not freshClaude generation or fullaudits",
+  "banner": "adopted two official README images; topic matches; verifier passed; source UI text warning permitted",
+  "gitArticleCommit": "4e9337a",
+  "optionalKBRefresh": "~/mycelium-kb/kb-refresh.sh absent; rawKB and MemPalace confirmed separately"
+}

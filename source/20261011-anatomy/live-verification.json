@@ -1,0 +1,41 @@
+{
+  "blogUrl": "https://blog.mushroom.cv/blog/anatomy-claude-interactive-isometric-figures/",
+  "status": 200,
+  "listStatus": 200,
+  "listPositionAmongUniqueLinks": 1,
+  "firstLinks": [
+    "anatomy-claude-interactive-isometric-figures",
+    "decision2-kai-06b-local-classification-gguf",
+    "loopera-factor-research-evidence-gates",
+    "needle3-121m-local-tool-calling-ladder-model",
+    "saluki-27b-gguf-tools-bonsai2",
+    "whistle-17mb-local-speech-to-tool-calls"
+  ],
+  "images": [
+    {
+      "url": "https://blog.mushroom.cv/_astro/anatomy-claude-interactive-isometric-figures-banner.BoVUXwPJ_Z1r33IJ.webp",
+      "status": 200,
+      "bytes": 23320
+    },
+    {
+      "url": "https://blog.mushroom.cv/_astro/anatomy-claude-interactive-isometric-figures-fig-01.BWXgIPaF_Z2mgqFo.webp",
+      "status": 200,
+      "bytes": 26480
+    },
+    {
+      "url": "https://blog.mushroom.cv/_astro/anatomy-claude-interactive-isometric-figures-fig-02.B3BdxMsB_Z1Af1Vj.webp",
+      "status": 200,
+      "bytes": 22206
+    },
+    {
+      "url": "https://blog.mushroom.cv/_astro/anatomy-claude-interactive-isometric-figures-fig-03.6K0wILvu_22zb6h.webp",
+      "status": 200,
+      "bytes": 24122
+    }
+  ],
+  "interactiveDemo": {
+    "status": 200,
+    "bytes": 137746,
+    "upstreamMIT": true
+  }
+}

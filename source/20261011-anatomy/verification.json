@@ -1,0 +1,27 @@
+{
+  "checked": "2026-10-11",
+  "source": "https://github.com/wheresryan22/anatomy",
+  "commit": "dbf697a527bbf7d358668e1557cb1e35ff725d46",
+  "node": "v26.10.0",
+  "repositoryExamples": 8,
+  "officialWebsiteGallery": 33,
+  "license": "MIT Copyright2026Ryan",
+  "build": "dial-indicator both themes; no diff versus committed outputs",
+  "browser": {
+    "lightReducedMotion": [
+      "Home block1 reads18.0px",
+      "End screenshot block3 reads10.0px",
+      "ArrowRight block2 reads14.0px; aria matches"
+    ],
+    "desktop": "no horizontal overflow; console clean",
+    "darkMobile390": "no horizontal overflow; console clean"
+  },
+  "notPerformed": [
+    "new Claude figure generation",
+    "full Raptor geometry audit",
+    "all WebGL checks",
+    "full3D orbit audit"
+  ],
+  "mirror": "public/explainers/anatomy-dial-indicator.html; only license/attribution HTMLcomment prepended",
+  "banner": "two official README source images adopted;1200x630,92946bytes; text warning source UI permitted; no faces"
+}

@@ -1,0 +1,55 @@
+[
+  [
+    "wait",
+    500
+  ],
+  [
+    "key",
+    "Home"
+  ],
+  [
+    "wait",
+    800
+  ],
+  [
+    "eval",
+    "(()=>{const t=document.querySelector('[data-readout]').textContent;if(t!=='block 1 · reads 18.0 px')throw Error(t);return {checkpoint:'Home',readout:t};})()"
+  ],
+  [
+    "key",
+    "End"
+  ],
+  [
+    "wait",
+    1100
+  ],
+  [
+    "until",
+    "document.querySelector('[data-readout]').textContent === 'block 3 · reads 10.0 px'",
+    4000
+  ],
+  [
+    "eval",
+    "(()=>{const t=document.querySelector('[data-readout]').textContent;if(t!=='block 3 · reads 10.0 px')throw Error(t);return {checkpoint:'End',readout:t};})()"
+  ],
+  [
+    "shot",
+    "source/20261011-anatomy/dial-end.png"
+  ],
+  [
+    "key",
+    "ArrowRight"
+  ],
+  [
+    "wait",
+    1100
+  ],
+  [
+    "eval",
+    "(()=>{const t=document.querySelector('[data-readout]').textContent;if(t!=='block 2 · reads 14.0 px')throw Error(t);const stage=document.querySelector('.iso-stage');return {checkpoint:'ArrowRight',readout:t,aria:stage.getAttribute('aria-valuetext'),sideways:document.documentElement.scrollWidth>innerWidth};})()"
+  ],
+  [
+    "shot",
+    "source/20261011-anatomy/dial-middle.png"
+  ]
+]

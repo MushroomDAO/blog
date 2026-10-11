@@ -1,0 +1,22 @@
+{
+  "source": "https://github.com/wheresryan22/anatomy",
+  "commit": "dbf697a527bbf7d358668e1557cb1e35ff725d46",
+  "checked": "2026-10-11",
+  "bannerSources": [
+    ".github/assets/raptor-engine-firing.webp",
+    ".github/assets/ripple-tank.webp"
+  ],
+  "method": "banner-creator adopted official README example screenshots; no own page or source-text screenshot; attribution in article",
+  "sourceLicense": "MIT Copyright2026Ryan",
+  "website": "https://skills.wheresryan.sh/anatomy",
+  "galleryCount": 33,
+  "repoExamples": 8,
+  "bodyImages": "3 original Xiao-M images, QA separate",
+  "interactiveMirror": "public/explainers/anatomy-dial-indicator.html with complete MIT/attribution comment",
+  "hashes": {
+    "README.md": "05e981dabc432480eda8698ddc0a1e1b75a2444a4cb8e512cdc1ca2672fccb8d",
+    "SKILL.md": "8798bed1ba9b1cc5d0e6f77a9613ab61a707ce3fb7fc0750d20b7c0c3ca1d893",
+    "LICENSE": "87c078ab9d90a3044f359e6b563d4e6afea7aa060897cf4f21618687b3856796",
+    "examples/dial-indicator/dial-indicator-light.html": "bc1810e340d916a25cc1749589b44096b7e41970f22fa7fce569bbefc0613093"
+  }
+}

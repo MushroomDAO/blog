@@ -1,0 +1,2 @@
+# Dedup decision — 2026-10-11
+Robot generic Anatomy query matched unrelated English uses in five existing posts (skill-anatomy, human anatomy, coding agents anatomy, etc.). Exact sourceURL https://github.com/wheresryan22/anatomy had no ledger hit. Exact owner/repo only matched freshly ingested raw KB material. No Blog, live draft, local M2 or publication ledger for this project; raw material is already in KB. Authorized to complete original writing and missing publishing steps without recreating raw KB. Final slug anatomy-claude-interactive-isometric-figures.

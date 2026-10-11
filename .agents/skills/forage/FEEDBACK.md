@@ -493,3 +493,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - 官方九项比值平均96.05%，含超100%的工具项、不同harness公开参照；不可直接比较Bonsai2另十四项98.2%。数学/推理应写82–85%，非统一96%。120题88/84/70与并行100题42/35是官方子集，不是完整BFCL或我们的复现。
 - 本地证据：固定revision7,898,369,152字节GGUF，SHA256匹配；M4/16GiB、官方原版llama.cpp b11552、2048ctx、Jinja、thinkingoff、temp0，4个合成工具schema/参数检查全过（含两道并行）。短输出7.90–8.10token/s，墙钟10.4–16.6s含prefill；不推断完整准确率、峰值内存或相对Bonsai速度。
 - 完成：saluki-27b-gguf-tools-bonsai2；匹配主题FLUX封面+3张小M正文图、双语稿、SEO/GEO、Blog与4图200、列表第4、zh/en索引、公众号draft/get确认；MemPalace新发布抽屉SQLite验证成功。全部证据保存source/20261011-saluki/。
+
+
+## 2026-10-11 Anatomy 历史内容补偿
+
+- history-20261011-anatomy：机器人泛词Anatomy查重命中5篇无关英文用法；精确GitHubURL无发布命中，wheresryan22/anatomy仅命中刚录入素材KB。复用素材，原始写作与缺失渠道继续，不另建KB。
+- 官网33个在线figure与仓库8个完整示例是不同口径，均有一手证据。MIT Ryan2026；Nodekit20.10+与skillsCLI1.7.1的22.20+要求分开；3D为beta，Figure30–90min/更大任务数小时是作者估计。
+- 本机Node26.10.0重建官方百分表示例明暗两主题，输出无gitdiff。HeadlessChrome减少动画键盘Home/End/ArrowRight分别18/10/14px，aria一致；桌面和390px深色移动页无横溢/控制台错误。仅验证既有示例，未声称从零生成新图或复现完整几何/3D审计。
+- 完成anatomy-claude-interactive-isometric-figures：官方发动机/水槽图合格banner、3张小M图、双语SEO/GEO、Blog列表首位与4图200、带完整MIT许可的交互示例HTML200、zh/en索引、公众号draft/get核验。MemPalace新增2条发布记录SQLite确认；证据source/20261011-anatomy/。
