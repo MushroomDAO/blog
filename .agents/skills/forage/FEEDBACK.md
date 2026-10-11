@@ -509,3 +509,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - Blog200，Sept20历史列表位置135，原FLUX封面机器检查全部通过且公开图片200；语义manifest两语言unchanged，精确Cua主题query返回文章第1。只补缺失的项目记忆和MemPalace账本，SQLite确认新增发布条目。
 - 旧M2 mediaId曾在2026-09-20创建；当前draft/get40007失效。不能据此断言未发布，不能盲目重建，保留真实历史ID并明确当前不可读；freepublish无权限，无法分辨发送或手工删除。
 - 官方模型卡核对：706048参数、约2.83MBsafetensors，单次前向评分、不生成；抽取与执行在模型外。新版只支持safetensors+JSON。100%/196决策是作者报告、支持results文档未在库内且当前libs不复现；不是本次实测，也不泛化为端到端成功率。未运行新模型或改写旧文。证据source/20261011-cua-s1-forms/。
+
+
+## 2026-10-11 语音AI六方向系统调研
+
+- ce06020a-150b-449d-a0e9-6981b278c3ba：用户明确要求六方向开源模型/方案系统调研并三件套。Moshi/Qwen等已有单模型文作为内链；新六方向主题未发布，独立综合地图不重复单项目拆解。原素材KB已机器人录入，复用。
+- 完成ai-speech-six-frontiers-open-source：18固定版本仓库及官方HF/数据/论文资料，六方向模型/工程区别、许可/算力、统一延迟协议、3个课题与8周计划；双语正文、匹配FLUX73封面+4小M图、SEO/GEO、Blog列表首位与5图200、来源JSON/复现脚本公开核验、zh/en索引、公众号draft/get标题封面4图确认。MemPalace新增2个slug命中抽屉SQLite核验。
+- 概念校准：全双工≠端到端；原生流式≠离线分块；RTF≠首音频/打断停声；MoE激活3B≠加载3B权重；语言数与方言/研究系列/发布checkpoint边界分开。SenseVoiceSmall5语而非系列50+，代码MIT不等权重MIT；MoshiPython/网页MIT,RustApache,weightsCCBY；PersonaPlexNVIDIAweights，VoiceChatOpenMDW；QwenOmniHFlicenseother但license_nameApache元数据差异保留。
+- 本机仅做SileroVAD：M4/16GiB、单线程ONNXCPU，2.327MB固定SHA，32ms块+64history，5.494s系统TTS×clean/20dB/0dB/silence，RTF0.00263–0.00287，warmP95约0.074–0.082ms，load19.1ms另计；阈值比例不是准确率，单次/后台未隔离，不推断整机/多语种/回声/语义打断效果。公开脚本与逐块结果可复核。未重复模型排行榜或声称项目设计已取得研究成果。
