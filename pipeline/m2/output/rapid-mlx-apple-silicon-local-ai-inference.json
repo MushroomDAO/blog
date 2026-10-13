@@ -4,5 +4,18 @@
   "digest": "Rapid-MLX 是专为 Apple Silicon 优化的本地 LLM 推理引擎：0.08s 缓存首字延迟、100%",
   "mediaId": "prCUE631thH1cmNLi42prIAytTSqNQsgMufnWJf3-PfoBwdm_pwud6Ccf9_nwmUJ",
   "theme": "blue",
-  "publishedAt": "2026-06-02T05:30:13.656Z"
+  "publishedAt": "2026-06-02T05:30:13.656Z",
+  "sourceUrls": [
+    "github.com/raullenchai/rapid-mlx"
+  ],
+  "wechatStatus": "recorded",
+  "currentVerifiedMediaId": "",
+  "currentVerification": {
+    "checkedAt": "2026-10-13T03:35:49.596Z",
+    "draftFound": false,
+    "oldDraftGetErrcode": 40007,
+    "publishedListErrcode": 48001,
+    "error": "远程草稿无匹配，旧ID返回40007；已发布列表返回48001无权限，当前状态未核验。",
+    "action": "preservedcreationreceipt;no newdraft/update/delete"
+  }
 }
