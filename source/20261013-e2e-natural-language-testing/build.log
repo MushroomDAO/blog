@@ -1,0 +1,2 @@
+$ node scripts/prepare-build.ts && tsc --project tsconfig.build.json && node scripts/write-sibling-versions.ts && node ../../scripts/stamp-dist.ts
+$ node -e "require('node:fs').rmSync('dist',{recursive:true,force:true})" && tsc --project tsconfig.build.json && node ../../scripts/stamp-dist.ts

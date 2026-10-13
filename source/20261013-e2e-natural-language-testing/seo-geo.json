@@ -1,0 +1,27 @@
+{
+  "bilingual": true,
+  "copyrights": true,
+  "questions": true,
+  "FAQ": true,
+  "BLUF": true,
+  "primarySourcesPinned": true,
+  "ownVerification": true,
+  "unverifiedGrowthSeparated": true,
+  "relatedArticle": true,
+  "descriptions": [
+    158,
+    158
+  ],
+  "wechat": [
+    24,
+    39
+  ],
+  "bodyIllustrations": {
+    "count": 3,
+    "insertions": 6,
+    "dimensions": "1280x720",
+    "maxBytes": 42789,
+    "visualQA": "all passed"
+  },
+  "banner": "seed96 passed machine and visual review, 1200x630, 91402 bytes"
+}
