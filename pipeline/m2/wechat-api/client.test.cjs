@@ -4,7 +4,8 @@ const axios = require('axios');
 const { WeChatClient } = require('./client');
 
 const article = { title: 'Mellum', digest: 'Verified model', content: '<p>actual body</p>', thumbMediaId: 'new-cover' };
-const news = { title: article.title, digest: article.digest, content: article.content, thumb_media_id: article.thumbMediaId };
+const news = { title: article.title, author: 'Mycelium', digest: article.digest, content: article.content,
+  content_source_url: '', thumb_media_id: article.thumbMediaId, need_open_comment: 1, only_fans_can_comment: 0 };
 const entry = (id, content = news) => ({ media_id: id, create_time: 123, content: { news_item: [content] } });
 
 async function simulate(readLedger, run, error = Object.assign(new Error('socket hang up'), { code: 'ECONNRESET' })) {
@@ -35,6 +36,22 @@ test('a matching title with different content is not reused or blindly recreated
     assert.equal(calls.filter(x => x.endpoint.endsWith('/draft/add')).length, 1);
   });
 });
+
+for (const [field, value] of [['author', 'different-author'], ['content_source_url', 'https://example.org/other'], ['need_open_comment', 0], ['only_fans_can_comment', 1]]) {
+  test(`different ${field} preserves failure instead of accepting a stale draft`, async () => {
+    await simulate(async () => ({ item: [entry('old', { ...news, [field]: value })] }), async (client, calls, error) => {
+      await assert.rejects(client.createDraft(article), e => e === error);
+      assert.equal(calls.filter(x => x.endpoint.endsWith('/draft/add')).length, 1);
+    });
+  });
+  test(`missing ${field} cannot be treated as verified publication metadata`, async () => {
+    const incomplete={...news};delete incomplete[field];
+    await simulate(async () => ({ item: [entry('unknown', incomplete)] }), async (client, calls, error) => {
+      await assert.rejects(client.createDraft(article), e => e === error);
+      assert.equal(calls.filter(x => x.endpoint.endsWith('/draft/add')).length, 1);
+    });
+  });
+}
 
 test('an empty server ledger preserves the original error and never retries creation', async () => {
   await simulate(async () => ({ item: [] }), async (client, calls, error) => {

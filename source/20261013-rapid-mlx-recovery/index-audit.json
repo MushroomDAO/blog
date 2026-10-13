@@ -1,0 +1,88 @@
+{
+  "currentIds": [
+    "9d37265d94a81352aed0ea8ef0a5c8c184b0054291ad7b09",
+    "1d77061e872cf52cdb33aa1e90e33339d6ea8fefefb1e6b0"
+  ],
+  "currentPresent": [
+    {
+      "id": "9d37265d94a81352aed0ea8ef0a5c8c184b0054291ad7b09",
+      "metadata": {
+        "article_id": "rapid-mlx-apple-silicon-local-ai-inference",
+        "content_hash": "e91a9c6bb1e48b92",
+        "excerpt": "Rapid-MLX：Mac 推理与编码 Agent 工具调用 Rapid-MLX 是基于 MLX 的 Apple Silicon 本地推理服务器，兼容 OpenAI 与 Anthropic 接口，服务编码智能体的工具调用。本文复核官方仓库、Claude Code 配置及性能说明，解释两类端点地址的区别、解析器与模型能力的边界，纠正旧稿的实测归因，提供接入方法与多轮任务验收建议。 Rapid-MLX Apple Silicon MLX Local-AI Tool-Calling Coding-Agent 两种 API 兼容，具体省了什么？ 怎样接入 Cla",
+        "language": "zh",
+        "tags": [
+          "Rapid-MLX",
+          "Apple Silicon",
+          "MLX",
+          "Local-AI",
+          "Tool-Calling",
+          "Coding-Agent"
+        ],
+        "title": "Rapid-MLX：Mac 推理与编码 Agent 工具调用",
+        "url": "/blog/rapid-mlx-apple-silicon-local-ai-inference/"
+      }
+    },
+    {
+      "id": "1d77061e872cf52cdb33aa1e90e33339d6ea8fefefb1e6b0",
+      "metadata": {
+        "article_id": "rapid-mlx-apple-silicon-local-ai-inference",
+        "content_hash": "80b27fef0b082304",
+        "excerpt": "Rapid-MLX: Local Mac Inference for Coding Agents Rapid-MLX connects coding agents to local MLX models through OpenAI and Anthropic APIs. We check endpoint setup, tool-use limits, and vendor performance claims. Rapid-MLX Apple Silicon MLX Local-AI Tool-Calling Coding-Agent What do",
+        "language": "en",
+        "tags": [
+          "Rapid-MLX",
+          "Apple Silicon",
+          "MLX",
+          "Local-AI",
+          "Tool-Calling",
+          "Coding-Agent"
+        ],
+        "title": "Rapid-MLX: Local Mac Inference for Coding Agents",
+        "url": "/blog/rapid-mlx-apple-silicon-local-ai-inference/"
+      }
+    }
+  ],
+  "articleFilteredMatches": [
+    {
+      "id": "9d37265d94a81352aed0ea8ef0a5c8c184b0054291ad7b09",
+      "score": 0.9999987,
+      "metadata": {
+        "article_id": "rapid-mlx-apple-silicon-local-ai-inference",
+        "content_hash": "e91a9c6bb1e48b92",
+        "excerpt": "Rapid-MLX：Mac 推理与编码 Agent 工具调用 Rapid-MLX 是基于 MLX 的 Apple Silicon 本地推理服务器，兼容 OpenAI 与 Anthropic 接口，服务编码智能体的工具调用。本文复核官方仓库、Claude Code 配置及性能说明，解释两类端点地址的区别、解析器与模型能力的边界，纠正旧稿的实测归因，提供接入方法与多轮任务验收建议。 Rapid-MLX Apple Silicon MLX Local-AI Tool-Calling Coding-Agent 两种 API 兼容，具体省了什么？ 怎样接入 Cla",
+        "language": "zh",
+        "tags": [
+          "Rapid-MLX",
+          "Apple Silicon",
+          "MLX",
+          "Local-AI",
+          "Tool-Calling",
+          "Coding-Agent"
+        ],
+        "title": "Rapid-MLX：Mac 推理与编码 Agent 工具调用",
+        "url": "/blog/rapid-mlx-apple-silicon-local-ai-inference/"
+      }
+    },
+    {
+      "id": "1d77061e872cf52cdb33aa1e90e33339d6ea8fefefb1e6b0",
+      "score": 0.8562606,
+      "metadata": {
+        "article_id": "rapid-mlx-apple-silicon-local-ai-inference",
+        "content_hash": "80b27fef0b082304",
+        "excerpt": "Rapid-MLX: Local Mac Inference for Coding Agents Rapid-MLX connects coding agents to local MLX models through OpenAI and Anthropic APIs. We check endpoint setup, tool-use limits, and vendor performance claims. Rapid-MLX Apple Silicon MLX Local-AI Tool-Calling Coding-Agent What do",
+        "language": "en",
+        "tags": [
+          "Rapid-MLX",
+          "Apple Silicon",
+          "MLX",
+          "Local-AI",
+          "Tool-Calling",
+          "Coding-Agent"
+        ],
+        "title": "Rapid-MLX: Local Mac Inference for Coding Agents",
+        "url": "/blog/rapid-mlx-apple-silicon-local-ai-inference/"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# Rapid-MLX existing-post correction
+Checked2026-10-13, taska1f146cc-f91e-4528-b13a-ae1869bb0da0. Same slugrapid-mlx-apple-silicon-local-ai-inference, preserveJune2pubDate, updatedOct13. Do notdescribeasfirstappearance thisweek.
+
+Primaryrepository https://github.com/raullenchai/Rapid-MLX at8f076c1971ac9a645c3a2ef13365cf32ae037a58; README anddocs/agents/claude-code.md downloaded/read. Apache2, MLX, OpenAIchat/responsesandAnthropicmessages. OpenAIbasehost/v1 vsAnthropicbarehost; ClaudeANTHROPIC_BASE_URL+ANTHROPIC_API_KEY, notoldOPENAI_BASE_URL. Explicitport8000 avoidsdefault8000-8009portselection ambiguity. Commands guidanceonly, notexecutedlocally. Request/stream/protocol/modeltoolcompetence separate. No model inference/throughput/end-to-endtooltests claimed.
+
+Older article fastest/4.2X/100%/ourmeasurementtables unsupportedbyowntrace; removeunqualifiedclaims/tables, don'trelabelvendorbench asours. CurrentREADME conditionedhwd/models/weights/defaults andsinglerun caveats notuniversalMacpromise. Removeoutdatedfixedparser/alias/testcounts andoldreleaseaslatest. Preserveoriginalarticleprivatelyforaudit, notrepublishasduplicate. Updatedarticlekeepsproducttopic, notmanagementinstructionascontent.
+
+Oldlegacycoding-screencover52801B1200x630 unsigned, insufficientcurrentprovenance/textqualification. Repoimagesmostlylogos/text/tables; usematchedlocalFLUX102silvercompactcomputer/bluecables/keyboard photo. Newbanner92280B1200x630 passedprovenance/OCR/facesandhumaninspection. New3Xiao-Mfiguresforprotocolbridge/toolfeedbackloop/fairbenchmarkconditions.
+
+LiveoldBlog200; verifyupdatedcanonURL/bothlanguagecolumns/allimagesaftertargeteddeploy. DateorderingbyoriginalpubDate, do notfalsifynewpubDatefortopposition.
+
+WeChatpublishedAPI48001unauthorized; currentdraftlist8nomatch; olddraft/get40007invalid. PreserveJune2receiptmediaIDprCUE631thH1cmNLi42prIAytTSqNQsgMufnWJf3-PfoBwdm_pwud6Ccf9_nwmUJ andoriginaldate/title/digest. Currentstatusrecorded, currentmediaIdempty, archivedMediaIdold. Do notcreateorupdatedraft; absencefromcurrentdraftsdoesnotproveunpublished. BlogrevisionmaynotmatcharchivedWechatcontent, explicitlyunverified. Remotechecksread-only.
+
+RawKB reused. Projectmemoryandsourceevidencesavedbeforearticleedit. Canonicaldeploywithout--wechat; zh/enindexrefreshrequiredforcorrectedcontent. RecoveredM2receiptappendverification/sourceURLs only, preservecreationcredential. Unrelatedsharedworkspaceclient.jstestchangesleftuntouched.
