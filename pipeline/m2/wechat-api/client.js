@@ -141,9 +141,47 @@ class WeChatClient {
         throw new Error(`Create draft failed: ${JSON.stringify(data)}`);
       }
     } catch (error) {
+      // A lost response can follow a successful draft/add. Read the server
+      // ledger before returning failure; never issue a second draft/add here.
+      if (['ECONNRESET', 'ECONNABORTED', 'ETIMEDOUT', 'EPIPE', 'ERR_NETWORK'].includes(error.code)) {
+        try {
+          const recovered = await this.findCreatedDraft(payload.articles[0], token);
+          if (recovered) {
+            console.warn('ℹ️ Draft response lost; recovered the matching server draft');
+            return recovered;
+          }
+        } catch (readError) {
+          console.error('❌ Draft reconciliation failed; do not blindly recreate:', readError.message);
+        }
+      }
       console.error('❌ Create draft failed:', error.message);
       throw error;
     }
+  }
+
+  async findCreatedDraft(expected, token) {
+    if (!expected.thumb_media_id || !expected.content) return undefined;
+    const matches = new Map();
+    for (let offset = 0; ; offset += 20) {
+      const { data } = await axios.post(
+        `https://api.weixin.qq.com/cgi-bin/draft/batchget?access_token=${token}`,
+        { offset, count: 20, no_content: 0 }, { timeout: 15000 }
+      );
+      if (data.errcode) throw new Error(`Draft ledger read failed: ${data.errcode}`);
+      if (!Array.isArray(data.item)) throw new Error('Draft ledger response is incomplete');
+      for (const item of data.item) {
+        const news = item.content?.news_item;
+        if (news?.length !== 1 || !item.media_id) continue;
+        const article = news[0];
+        if (article.title === expected.title && article.digest === expected.digest
+            && article.thumb_media_id === expected.thumb_media_id && article.content === expected.content) {
+          matches.set(item.media_id, {mediaId: item.media_id, createTime: item.create_time, recovered: true});
+        }
+      }
+      if (data.item.length < 20) break;
+    }
+    if (matches.size > 1) throw new Error('Multiple identical server drafts require reconciliation');
+    return matches.values().next().value;
   }
 }
 
