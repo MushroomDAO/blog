@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-13",
+  "source": "https://a-hidden-infrastructure.spun.earth/",
+  "paperDOI": "10.1126/science.adu4373",
+  "paperSelfArchiveURL": "https://drive.google.com/uc?export=download&id=1KRl_nslx1-uNc5A0PdZcjkSpOt--RadL",
+  "pdfSHA256": "63e39ba3ca8ab594ee7f4c51a61f0a6feacaf56d6ebaedb7d8e578ab654acd7a",
+  "reader": "Jina Reader; agent-reach absent",
+  "studies": 322,
+  "cores": ">16000",
+  "biomes": 9,
+  "densityResolutionApproxKm2": 1,
+  "lengthKm": 1.1e+17,
+  "lengthSDkm": 1.3e+16,
+  "biomassMtC": 300,
+  "biomassSDMtC": 60,
+  "depthScope": {
+    "authorArchiveCm": 15,
+    "liveAboutCm": 10,
+    "decision": "disclose discrepancy; quote archive scope explicitly, not silently reconcile"
+  },
+  "scope": "living AM hyphae; not all fungal groups, necromass, wet weight, annual sequestration or planet-wide connected organism",
+  "verification": "source comparison, units, browser load; no independent global model reproduction",
+  "savedFiles": [
+    "/Users/jason/.heinu1-bot/media/spun-hidden-infrastructure-og.jpg",
+    "/Users/jason/.heinu1-bot/media/spun-hyphal-soil-cube.png",
+    "/Users/jason/.heinu1-bot/media/spun-infrastructure-map.png"
+  ],
+  "banner": {
+    "method": "local FLUX.2 Klein 4B",
+    "seed": 97,
+    "size": "1200x630",
+    "bytes": 96451,
+    "machineQA": "passed",
+    "visualQA": "passed; illustrative root/filament scene, not research photograph"
+  }
+}
