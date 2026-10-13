@@ -1,0 +1,22 @@
+{
+  "taskId": "a1f146cc-f91e-4528-b13a-ae1869bb0da0",
+  "date": "2026-10-13",
+  "slug": "rapid-mlx-apple-silicon-local-ai-inference",
+  "originalPubDate": "2026-06-02",
+  "action": "Reuse old slug and historical WeChat credential. Correct documented errors and missing qualified images, not create duplicate article/draft.",
+  "source": "https://github.com/raullenchai/Rapid-MLX",
+  "sourceRevision": "8f076c1971ac9a645c3a2ef13365cf32ae037a58",
+  "dedup": "ExactURL/namefound existingBlog and June2M2; rawKB material reused. Adjacent mentions nottreatedasnewarticle.",
+  "wechatStatus": "recorded",
+  "archivedMediaId": "prCUE631thH1cmNLi42prIAytTSqNQsgMufnWJf3-PfoBwdm_pwud6Ccf9_nwmUJ",
+  "currentMediaId": "",
+  "reason": "draftlist8 nomatch, olddraftget40007, publishedlist48001 unauthorized; currentstateunverified, no newcreate/update/delete.",
+  "corrections": [
+    "old speedtable and fastest/100% framing notsupportedbylocaltrace",
+    "Claude Code incorrectly OPENAI_BASE_URL; use Anthropicbarehost andANTHROPIC_BASE_URL",
+    "counts/releases/starsfromJune notcurrent",
+    "oldcodingphoto unsigned/noqualifiedprovenance; newmatchedFLUX102",
+    "localAPIcompatibility notuniversaltasksuccess"
+  ],
+  "scope": "source/docs verification only; no model inference/speed/tool E2E test"
+}

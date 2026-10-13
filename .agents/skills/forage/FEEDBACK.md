@@ -592,3 +592,10 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - FLUX101 cover+3Xiao-Mfigs verified; Blog/list2/fourimages200; draft/getcover+3bodyimages/correctedprice/pinnedsource verified. zh/enupsert, semanticqueryfirst0.742426.
 - WeChat media_id: prCUE631thH1cmNLi42prM0s1VIWGtCRz_3M42Krxlj_VfE5Axa-NR5OMF4I3uev
 - Task076af8c6-583e-46df-9ac5-98a8ac644dd7. Retained sharedworkspaceM2recoveryfix; targetedtransporttests recorded separately.
+
+## 2026-10-13 — Rapid-MLX existing-post correction
+- Reused June2 slug https://blog.mushroom.cv/blog/rapid-mlx-apple-silicon-local-ai-inference/ , preservedpubDate/updatedOct13, notnewarticle/newthisweek. Exactrepo/nameledgerdedup oldBlog+M2; botrawKB reused.
+- Repo8f076c1971ac9a645c3a2ef13365cf32ae037a58 README/ClaudeCodeguide checked. Correctedunsupportedfastest/100percent/localmeasurementclaims, stalefixedcounts, ClaudeOPENAI_BASE_URL error ->Anthropicbarehost/ANTHROPIC_BASE_URL+key. No modelinference/agentE2E orspeedbench claimed.
+- QualifiedFLUX102cover+3Xiao-Mfigs replaceunverifiedlegacyphoto; all4images/Blog200/bothlanguagecolumns, list719 retainsoldJune2sort. zh/enindexupsert andstale2cleanup, directnewmetadataread, freshqueryfirst0.6754743; removedonly3 ownstaleverificationquerycaches.
+- WeChat recorded only: June2creationcredential preserved prCUE631thH1cmNLi42prIAytTSqNQsgMufnWJf3-PfoBwdm_pwud6Ccf9_nwmUJ; remote8draftsnomatch/oldget40007/publishedAPI48001 unauthorized. Currentstatusunverified, mediaIdempty/archiveIDold. No newdraft/update/delete, archivedcontent maydifferfromcorrectedBlog.
+- Taska1f146cc-f91e-4528-b13a-ae1869bb0da0. SharedworkspaceM2metadatarecoveryfixpreserved,15targetedtestspass; no unrelatedcodeedits byarticleworkflow.
