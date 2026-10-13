@@ -1,0 +1,22 @@
+{
+  "title": 24,
+  "titleEn": 53,
+  "description": 153,
+  "descriptionEn": 157,
+  "wechatTitle": 18,
+  "wechatDigest": 44,
+  "bilingual": true,
+  "copyrights": true,
+  "FAQ": true,
+  "primarySources": true,
+  "ownBrowserVerification": true,
+  "unitsAndDepthDiscrepancy": true,
+  "images": {
+    "baobao": 3,
+    "officialMap": 1,
+    "bilingualInsertions": 8,
+    "dimensions": "1280x720",
+    "maxIllustrationBytes": 69559,
+    "visualQA": "passed"
+  }
+}
