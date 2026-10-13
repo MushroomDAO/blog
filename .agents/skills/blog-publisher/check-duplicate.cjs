@@ -137,7 +137,9 @@ async function loadWeChatDrafts() {
     return { error: '缺少 WECHAT_APP_ID / WECHAT_APP_SECRET（先 source .env）' };
   }
   const c = new WeChatClient(WECHAT_APP_ID, WECHAT_APP_SECRET);
-  const token = await c.getAccessToken();
+  let token;
+  try { token = await c.getAccessToken(); }
+  catch (e) { return { error: e.message }; }
   const items = [];
   const errors = [];
   let draftRead = false;
@@ -303,6 +305,7 @@ async function main() {
   const blog = loadBlogEntries();
   const wechatResult = await loadWeChatDrafts();
   const wechat = wechatResult.items || [];
+  let wechatIncomplete = false;
   if (wechatResult.error) {
     const onlyFreepublish =
       /freepublish/.test(wechatResult.error) && !/draft:/.test(wechatResult.error);
@@ -314,6 +317,7 @@ async function main() {
       console.error('   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以');
       console.error('   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。');
     } else {
+      wechatIncomplete = true;
       console.error(`⚠️  公众号账本没查成（${wechatResult.error}）`);
       console.error('   本次结果不完整，别当成完整查重。');
     }
@@ -366,7 +370,7 @@ async function main() {
     }
 
     if (!seen.size) {
-      console.log('   ✅ 四本账都没查到\n');
+      console.log(wechatIncomplete ? '   已读取的本地账本未命中；公众号远程账本不可用\n' : '   ✅ 四本账都没查到\n');
       continue;
     }
     hit = true;
@@ -383,6 +387,8 @@ async function main() {
     console.log('');
   }
 
+  console.log('```dedup-result\n' + JSON.stringify({duplicate:hit,localLedgersRead:!mpResult.error,wechatError:wechatIncomplete ? wechatResult.error : ''}) + '\n```');
+  if (wechatIncomplete) process.exit(2);
   if (hit) {
     console.log('查到重复或疑似重复 —— 先人工确认再决定写不写。');
     console.log('注意：');
