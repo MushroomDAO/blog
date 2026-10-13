@@ -541,3 +541,12 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - 官方v3.4.1DMG26722813bytes，SHA匹配GitHubdigest；只读挂载检查arm64、plist3.4.1/build101/min14.0、codesignstrictdeep/GatekeeperNotarizedDeveloperID/staplervalidate全部通过，随后detach；无安装/运行/授权/系统调整，不声称功能或性能实测。对应release源码混音processTap需14.4+，ReleaseAirPlay27+，最低系统不等于全部功能最低。
 - 按需模块与独立权限是主要分析；local-first≠offline，更新/测速/Homebrew/歌词/显式分享等网络路径保留；清空系统剪贴板≠清空历史；AIAgents用量展示≠智能体执行。隐私功能说明归因官方，未抓包或完整审计。
 - SEO/GEO、最终FLUX89合格音频/鼠标工作台封面+3小M图、Blog200列表首页第9/4图200、M2draft/get标题封面3图正文一致、zh/en索引upsertTrue/freshquery第1分0.7883247、项目记忆与MemPalaceSQLite0→2核验全部完成。首seed87视觉品牌形状不合格已弃用，最终89无文字/人脸且视觉验收；只用ImageMagick压图。证据source/20261011-vorssaint-utils/。
+
+## 2026-10-13 — Seal AI video workbench
+- Source: https://github.com/wenlei-xu/Seal ; pinned 643b6367a37a3c6d16fb54fd92378aadbe4303ec.
+- Dedup found only bot raw KB; completed first bilingual publication at https://blog.mushroom.cv/blog/seal-ai-video-workbench/ .
+- Windows v1.7.8 complete ZIP exists; runtime-v1 is dependency, macOS full editing/ASR distribution not accepted. MIT plus third-party notices, local storage with external provider inputs and charges.
+- Local Bun tests: 12 pass, 0 fail, 204 expectations (skill selection/request budget only; no GUI, provider, render or video quality test).
+- Topic-matched FLUX seed95 cover and 3 current Xiao-M figures passed visual review. Blog/list/4 images and live WeChat draft/get verified. zh/en index upserted.
+- WeChat media ID: prCUE631thH1cmNLi42prE7SoaGS4y9IKr17KrrUTNDRlw5HH3iBhGbkslIBi_4i
+- Task: b5975d0f-1e94-436e-bd65-1335e99ab62a.
