@@ -1,0 +1,26 @@
+{
+  "bilingual": true,
+  "bothCopyrights": true,
+  "questionHeadings": true,
+  "bothFAQ": true,
+  "sourcesPinned": true,
+  "ownTests": true,
+  "scopeLimited": true,
+  "relatedArticle": true,
+  "providerBoundary": true,
+  "descriptionLengths": [
+    155,
+    156
+  ],
+  "wechatLengths": [
+    17,
+    42
+  ],
+  "bodyFigures": {
+    "count": 3,
+    "insertions": 6,
+    "dimensions": "1200x675",
+    "maxBytes": 48476,
+    "visualQA": "all passed"
+  }
+}

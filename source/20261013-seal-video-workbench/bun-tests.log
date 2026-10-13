@@ -1,0 +1,22 @@
+bun test v1.4.2 (744846f84)
+
+agent-host/selected-skill.test.mjs:
+(pass) explicit selection loads the full frozen entry and records its actual version [6.45ms]
+
+agent-host/request-budget.test.mjs:
+(pass) 单轮预算 > 达到上限后拒绝并把原因说清楚；同一轮内计数累加 [0.07ms]
+(pass) 单轮预算 > 新一轮从零开始：上一轮耗尽不影响下一轮 [0.02ms]
+(pass) 单轮预算 > 两张画布的并发轮次各用自己的预算，不互相计数 [0.02ms]
+(pass) 单轮预算 > 工具步骤是独立的一条线，并且可以直接丢给上层当错误 [0.04ms]
+(pass) 单轮预算 > max 为 0 或缺失时不限制，而不是立刻拒绝 [0.08ms]
+(pass) 总预算 > 默认关闭：没有显式 limit 时永远允许 [0.04ms]
+(pass) 总预算 > 显式启用后按独立计数拒绝，并说明这是总预算 [0.02ms]
+(pass) server 接线 > ops 调用带宿主凭据与当前回合，不再用 owner 凭据自报身份 [0.03ms]
+(pass) server 接线 > 预算按轮构造并跑在独立的异步上下文里 [0.04ms]
+(pass) server 接线 > 模型能力描述里不再有 operationId，幂等键只由宿主生成 [0.01ms]
+(pass) server 接线 > Chat 信封里的引用进入模型上下文 [0.01ms]
+
+ 12 pass
+ 0 fail
+ 204 expect() calls
+Ran 12 tests across 2 files. [84.00ms]

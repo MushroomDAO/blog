@@ -1,0 +1,31 @@
+{
+  "source": "https://github.com/wenlei-xu/Seal",
+  "commit": "643b6367a37a3c6d16fb54fd92378aadbe4303ec",
+  "date": "2026-10-13",
+  "reader": "Jina Reader (agent-reach unavailable)",
+  "license": "MIT; separate third-party licenses",
+  "latestApplicationRelease": "v1.7.8",
+  "platform": "Windows amd64",
+  "applicationZipBytes": 651043409,
+  "macOS": "full editing/ASR release acceptance not complete",
+  "tests": {
+    "runner": "bun",
+    "files": [
+      "agent-host/selected-skill.test.mjs",
+      "agent-host/request-budget.test.mjs"
+    ],
+    "pass": 12,
+    "fail": 0,
+    "expectations": 204,
+    "scope": "isolated logic/source wiring; not desktop GUI, full pi session, rendering, provider or quality benchmark"
+  },
+  "savedFiles": [
+    "/Users/jason/.heinu1-bot/media/seal-lockup-20261013.png",
+    "/Users/jason/.heinu1-bot/media/seal-cover-20261013.png"
+  ],
+  "banner": {
+    "seed93": "rejected after visual review: lettering despite OCR passing",
+    "seed94": "rejected: OCR DIIME CON",
+    "seed95": "passed machine verification and visual review, 1200x630, 94283 bytes"
+  }
+}
