@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-13",
+  "repoRevision": "427d605d4985c2d49a795493ef6c5d66413057d1",
+  "businessPage": {
+    "status": 200,
+    "pageErrors": [],
+    "FAQActions": 5,
+    "NousHostedBusiness": true,
+    "EnterpriseSSOListed": true,
+    "perMemberSpendCapsListed": true,
+    "auditWordOnPublicPage": false,
+    "scope": "public marketing page and FAQ only; no paid tenant, access enforcement, SSO, SLA or audit runtime test"
+  },
+  "cloudPrice": {
+    "status": 200,
+    "standardName": true,
+    "standardPrice051": true,
+    "proPrice099": true,
+    "olderMediumName": false,
+    "authenticated": false,
+    "scope": "public quoted price only, not account checkout or actual charged invoice"
+  },
+  "priceCorrection": "Current HTML and Chromium show Standard0.51/day and Pro0.99/day; indexed browser tool/search cache still had Medium0.56/Large1.09. Use current dated quote; no checkout/billed invoice verification. Standardcontinuous30day=15.30USD beforeinference/tools; stoppedstorage0.03/day.",
+  "sourceSha256": {
+    "business.html": "32d2e763a81ad9eeda787ce3f1bcd61a0377bfd1f59f0c76ed2ca56c45a5134d",
+    "cloud.html": "a3f5a02cff9fce1058da00085efcec91cd674bbcee5003ce44083bec8c480dbc",
+    "privacy.html": "e35195b69d63646f8e3ca84b6c342a7b3ccd0e9ae0b3a3e5284116e38d556482",
+    "README.md": "c8c3009b1cf6e8d6e48e96a9b4c549d9ab0c86fdaffd91b19f3e9d9b37d93d9d",
+    "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+    "SECURITY.md": "08b733d1f2c71f8cdd87200beb10c06185d0912a6eb19bbf69149dbb4e207a55",
+    "portal-doc.md": "61beb2b8ba6c054c41fe7b1ef6ce591de70fae8c8d263094c4a6c8b54f799a9f"
+  },
+  "sourceImagesInspected": [
+    "official-hero.webp: anime astronautface, inappropriatecover",
+    "official-enterprise.webp: stylizedhand with substantialblacknegativearea, unsuitablecover"
+  ],
+  "banner": "local FLUX101,1200x63093772bytes,machineverificationandhumanviewpassed"
+}

@@ -583,3 +583,12 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - FLUX100 cover +threeXiao-Mfigures, publicBlog/list2/fourimages200. zh/enindexupsert andsearchfirst0.6708925. WeChatdraft/getcover+3imagesverified. Initial draft/add socket hangup aftersuccess; unique remote draft reconciled, receipt recovered, no repeatcreate.
 - WeChat media_id: prCUE631thH1cmNLi42prLsTP17uU60DB4vh3tMwp2cwNPOcLMknGvEi1MltGxXC
 - Task: c3b312e0-799c-4944-9c01-04a66625ca4e.
+
+## 2026-10-13 — Hermes enterprise business
+- New angle: Nousfundraising/currentBusinessEnterprise ratherthan repeating olderHermesruntime article. ExactfundraiseURLclear, rawKB reused; olderrepomatches inspected andlinked. Recoveryprimaryreferencesread, othertopicsnotprocessed.
+- https://blog.mushroom.cv/blog/hermes-enterprise-open-source-business-model/ ; MIT core/BYOproviders remainsfree. Paidresourcebilling/managedhosting/teamoperations/customdelivery; company90M vsWSJ1.5Bvaluation, clone24M/token2.5%internalestimates notpayingusers, annualizedforecastnotauditedprofit orEnterprisesegmentincome.
+- BusinessNoushostedteamtenant/centralcredits/membercaps/rolekeyadmin/skilllibrary; Enterprisecustomerinfra/customdeploySSO/SLA/onboardingcontactsales. No unverifiedcompleteaudit/certificationclaim. PrivacyModeNouspayloadlimits/exceptions/metadata/thirdpartyterms; onpremexecution canstillcallcloudservices, genericpolicy notEnterpriseDPA.
+- PublicChromiumBusiness200/5FAQ/noJSerrors; CloudcurrentHTML+ChromiumStandard0.51/day vsoldindexedMedium0.56,30day15.30excludesinference/tools. Repo427d605d4985c2d49a795493ef6c5d66413057d1 license/Security/PortalDocs read. No paidtenant, SSO, isolation/loadtest, invoice orprofitabilitymeasurement.
+- FLUX101 cover+3Xiao-Mfigs verified; Blog/list2/fourimages200; draft/getcover+3bodyimages/correctedprice/pinnedsource verified. zh/enupsert, semanticqueryfirst0.742426.
+- WeChat media_id: prCUE631thH1cmNLi42prM0s1VIWGtCRz_3M42Krxlj_VfE5Axa-NR5OMF4I3uev
+- Task076af8c6-583e-46df-9ac5-98a8ac644dd7. Retained sharedworkspaceM2recoveryfix; targetedtransporttests recorded separately.
