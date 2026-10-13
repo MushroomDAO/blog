@@ -1,0 +1,11 @@
+{
+  "code_repair": [
+    "full",
+    "evaluate",
+    "verify"
+  ],
+  "gui": [
+    "full",
+    "smoke"
+  ]
+}
