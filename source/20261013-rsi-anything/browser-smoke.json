@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "browser": "140.0.7339.16",
+  "episodes": [
+    {
+      "seed": 190000,
+      "initial_hash": "58b9c77a9fb09ca62b4e555e5dafd705c27fca87271cda500980b8c8a62d94fd",
+      "steps": 3,
+      "success": true
+    },
+    {
+      "seed": 190001,
+      "initial_hash": "4cc12259365d20a61616542d6a59a251ed9d961aba3a35b15ff61945de1ce431",
+      "steps": 3,
+      "success": true
+    },
+    {
+      "seed": 190002,
+      "initial_hash": "fbbc5123f94e84a6f2f3f63bb2e49f9f28f708933d337ef3638fc8543cc647a8",
+      "steps": 1,
+      "success": true
+    },
+    {
+      "seed": 190003,
+      "initial_hash": "047ee7fd15b5b6eeee8ad9e4f03793f5573b9bc0d12658f2e9f235541729d7cd",
+      "steps": 1,
+      "success": true
+    }
+  ],
+  "model_or_training_result": false
+}
