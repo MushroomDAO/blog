@@ -550,3 +550,12 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - Topic-matched FLUX seed95 cover and 3 current Xiao-M figures passed visual review. Blog/list/4 images and live WeChat draft/get verified. zh/en index upserted.
 - WeChat media ID: prCUE631thH1cmNLi42prE7SoaGS4y9IKr17KrrUTNDRlw5HH3iBhGbkslIBi_4i
 - Task: b5975d0f-1e94-436e-bd65-1335e99ab62a.
+
+## 2026-10-13 — tester-army/e2e
+- Source: https://github.com/tester-army/e2e ; pinned fc9064415d427060fad1d406c4c491dda248ad4f (SDK 0.20.0, web 0.14.0).
+- Exact URL/entity dedup raw KB only; completed initial bilingual article https://blog.mushroom.cv/blog/e2e-natural-language-testing/ .
+- Natural-language actions plus concrete assertions. Only verified act replays; agent assertions/waits/extract live, strict cache has live exceptions, CI defaults read-only and init ignores recordings. Weekly +6440 unverified; current snapshot 9590 not reliability evidence.
+- Local Chromium fixture and upstream scripted model: 3 files / 99 pass, 0 fail; nine flows record then replay with zero scripted-model calls. Not a real-model success-rate, mobile or performance benchmark.
+- FLUX seed96 cover and 3 Xiao-M figures checked; Blog/list/4 images and live draft/get verified; zh/en index upserted; fresh query returns article first, score 0.6836482.
+- WeChat media_id: prCUE631thH1cmNLi42prF4pmWT65bgDfIC6Ad2upu_usegt-TWwXX77jMxZpCAi
+- Task: 9f69e871-833f-46cc-a8a7-fb8e716540e3.
