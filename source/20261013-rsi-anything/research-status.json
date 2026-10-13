@@ -1,0 +1,32 @@
+{
+  "source": "https://github.com/Gen-Verse/RSI-Anything",
+  "commit": "2582a0f11495af595d41bab3babec57d2c3fb80e",
+  "dedup": "raw KB only; no Blog/draft/local receipt/ledger match",
+  "publishedApiError": 48001,
+  "workflowTests": 22,
+  "bannerDecision": "Source overview/framework figures are text-dense scientific diagrams, not suitable hero; local FLUX generation.",
+  "reactionTests": 9,
+  "reactionAssetCheck": {
+    "candidateCount": 321,
+    "checksumVerified": true
+  },
+  "browserSmoke": {
+    "episodes": 4,
+    "actions": [
+      3,
+      3,
+      1,
+      1
+    ],
+    "modelOrTrainingResult": false
+  },
+  "paperReproduction": false,
+  "cliTaskAdapters": [
+    "code_repair",
+    "gui"
+  ],
+  "domainSpecificEntryPoints": [
+    "laboratory_planning/infer.py",
+    "reaction_optimization/infer.py"
+  ]
+}

@@ -599,3 +599,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - QualifiedFLUX102cover+3Xiao-Mfigs replaceunverifiedlegacyphoto; all4images/Blog200/bothlanguagecolumns, list719 retainsoldJune2sort. zh/enindexupsert andstale2cleanup, directnewmetadataread, freshqueryfirst0.6754743; removedonly3 ownstaleverificationquerycaches.
 - WeChat recorded only: June2creationcredential preserved prCUE631thH1cmNLi42prIAytTSqNQsgMufnWJf3-PfoBwdm_pwud6Ccf9_nwmUJ; remote8draftsnomatch/oldget40007/publishedAPI48001 unauthorized. Currentstatusunverified, mediaIdempty/archiveIDold. No newdraft/update/delete, archivedcontent maydifferfromcorrectedBlog.
 - Taska1f146cc-f91e-4528-b13a-ae1869bb0da0. SharedworkspaceM2metadatarecoveryfixpreserved,15targetedtestspass; no unrelatedcodeedits byarticleworkflow.
+
+## 2026-10-13 — RSI-Anything
+- New topic, exactURL/entity dedup rawbotKB only; currentdraft/localreceipt/Blog no prior match. PublishedAPI48001 gap recorded. Repo2582a0f11495af595d41bab3babec57d2c3fb80e, paper2610.13912v1 reviewed.
+- https://blog.mushroom.cv/blog/rsi-anything-world-model-retention/ ; shared protocol notuniversalweights. AuthorCodeContests26.3→29.2→31.2 fixedcoder, GUIselectedalpha0 controller99 vs pureworld98, OSWorldrelativegain notpoints, LabHorizonplanningscore notwetlab, Suzuki321pool offlineyieldreplay/frozenpredictor noonlineparameterupdate, immunehypothesisnottherapeuticefficacy.
+- Own workflow22tests+reaction9tests pass; packagedprior321checksumverified, syntheticCLIcandidate46; Chromium140.0.7339.16 fourruleepisodes seeds190000–190003/actions3,3,1,1 pass. No modelbenchmark, training or physicalexperiment reproduction.
+- FLUX103cover+threeXiao-Mfigures verified; Blog/bilingual/list5/fourimages200. zh/enupserttrue,freshqueryfirst0.66472584. Draft/get currentcover+3figures+sourcepin/testscope verified.
+- Media_id: prCUE631thH1cmNLi42prIBDJ4ftvV-y8e2iTMJR2gFNAPq3o8Cgha-Qjc9AIBhj
+- Memoryproject+indexsaved, MemPalacemine2drawers/exactslug2, ledgerexport3. Taskf3521f95-fff4-4b97-a616-7dcfe8d9509f.

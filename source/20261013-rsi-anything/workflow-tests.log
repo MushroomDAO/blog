@@ -1,0 +1,29 @@
+test_auth_removed_on_cross_host_redirect (test_assets.AssetContracts.test_auth_removed_on_cross_host_redirect) ... ok
+test_destination_symlink_rejected (test_assets.AssetContracts.test_destination_symlink_rejected) ... ok
+test_download_corruption_leaves_no_partial_target (test_assets.AssetContracts.test_download_corruption_leaves_no_partial_target) ... ok
+test_profile_upgrade_reuses_verified_files_and_retains_full_manifest (test_assets.AssetContracts.test_profile_upgrade_reuses_verified_files_and_retains_full_manifest) ... Downloading evaluation.tgz
+Downloading training.tgz
+ok
+test_rejects_traversal_links_duplicates_and_missing_files (test_assets.AssetContracts.test_rejects_traversal_links_duplicates_and_missing_files) ... ok
+test_changed_recipe_refuses_resume (test_workflow.WorkflowContracts.test_changed_recipe_refuses_resume) ... ok
+test_code_repair_checkpoint_chain_uses_this_run (test_workflow.WorkflowContracts.test_code_repair_checkpoint_chain_uses_this_run) ... ok
+test_failed_stage_stops_following_stages_and_records_log (test_workflow.WorkflowContracts.test_failed_stage_stops_following_stages_and_records_log) ... ok
+test_foreign_directory_is_preserved (test_workflow.WorkflowContracts.test_foreign_directory_is_preserved) ... ok
+test_gui_runtime_namespace_and_paths (test_workflow.WorkflowContracts.test_gui_runtime_namespace_and_paths) ... ok
+test_invalid_recipe_types_have_actionable_cli_errors (test_workflow.WorkflowContracts.test_invalid_recipe_types_have_actionable_cli_errors) ... ok
+test_plan_runs_without_ml_imports_or_run_directory (test_workflow.WorkflowContracts.test_plan_runs_without_ml_imports_or_run_directory) ... ok
+test_real_stage_and_resume_skip_completed_work (test_workflow.WorkflowContracts.test_real_stage_and_resume_skip_completed_work) ... ok
+test_relative_settings_and_venv_symlink_preserved (test_workflow.WorkflowContracts.test_relative_settings_and_venv_symlink_preserved) ... ok
+test_resume_detects_changed_checkpoint_contents (test_workflow.WorkflowContracts.test_resume_detects_changed_checkpoint_contents) ... ok
+test_resume_detects_changed_stage_output (test_workflow.WorkflowContracts.test_resume_detects_changed_stage_output) ... ok
+test_retry_archives_partial_output_and_preserves_completed_stage (test_workflow.WorkflowContracts.test_retry_archives_partial_output_and_preserves_completed_stage) ... ok
+test_run_lock_refuses_second_owner (test_workflow.WorkflowContracts.test_run_lock_refuses_second_owner) ... ok
+test_same_run_cannot_be_overwritten (test_workflow.WorkflowContracts.test_same_run_cannot_be_overwritten) ... ok
+test_source_directory_cannot_be_run_root (test_workflow.WorkflowContracts.test_source_directory_cannot_be_run_root) ... ok
+test_source_identity_includes_browser_assets (test_workflow.WorkflowContracts.test_source_identity_includes_browser_assets) ... ok
+test_success_exit_requires_expected_artifact (test_workflow.WorkflowContracts.test_success_exit_requires_expected_artifact) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.272s
+
+OK
