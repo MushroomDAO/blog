@@ -575,3 +575,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - FLUX98 cover and3 Xiao-M figures checked. Blog/list2/four images200; draft/get cover+3 figures verified. zh/en index upserted and query first0.7301959.
 - WeChat media_id: prCUE631thH1cmNLi42prPZWsAJBC_a8OjglxrvwtFisJohcfbzzroMqEc4jDWi4
 - Task56989df2-6756-4645-9d1e-7b9824290013. Previous SPUN live and draft verified, user status question excluded from article.
+
+## 2026-10-13 — JetBrains Mellum2.1 Thinking
+- Sources ModelScope primaryAPI200; officialHFmodel92ddae9fc7665e9f801d141d2e5a6b2caf2460c4 andGGUF20b439426f1e997ba575eaccaf4856ac0f76f5d5; JetBrainsOctoberannouncement andspeedchart. Exactdedup rawKB only; genericdomain/brand falsepositives resolved. Otherrecoverytopics untouched.
+- Published bilingual https://blog.mushroom.cv/blog/mellum21-thinking-coding-agent/ ; repositoryRL executionability, officialscores selfreported, WorkBench regression/Qwenremaininglead disclosed. Totalvsactiveparameter memory distinct. ActualGGUFfiles exist despiteoldcomingsoon; Q4_K_M8.071GB/MXFP4_MOE7.030GB. Wikitexttokenagreement notcodingretention. FP8H2002304/256 speednotMacpromise.
+- Own boundedartifactcheck HTTP206 first64bytes GGUFv3 and sixofficialchat-template serializationchecks passed. Diskheadroom ~8GiB; nofullweightdownload/hash/inference, tool execution, speedorbenchmarkreproduction.
+- FLUX100 cover +threeXiao-Mfigures, publicBlog/list2/fourimages200. zh/enindexupsert andsearchfirst0.6708925. WeChatdraft/getcover+3imagesverified. Initial draft/add socket hangup aftersuccess; unique remote draft reconciled, receipt recovered, no repeatcreate.
+- WeChat media_id: prCUE631thH1cmNLi42prLsTP17uU60DB4vh3tMwp2cwNPOcLMknGvEi1MltGxXC
+- Task: c3b312e0-799c-4944-9c01-04a66625ca4e.

@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-13",
+  "modelRevision": "92ddae9fc7665e9f801d141d2e5a6b2caf2460c4",
+  "ggufRevision": "20b439426f1e997ba575eaccaf4856ac0f76f5d5",
+  "modelScopeApiStatus": 200,
+  "BF16SafetensorBytes": 24300538808,
+  "files": [
+    {
+      "file": "Mellum2.1-12B-A2.5B-Thinking-BF16.gguf",
+      "bytes": 24311970080,
+      "GB": 24.312,
+      "GiB": 22.6423,
+      "sha256": "e49e3920b55e848f02e372741a0035ad8d7ebc56b1623f14a4e18734bf35c280"
+    },
+    {
+      "file": "Mellum2.1-12B-A2.5B-Thinking-MXFP4_MOE.gguf",
+      "bytes": 7029537056,
+      "GB": 7.0295,
+      "GiB": 6.5468,
+      "sha256": "cf09584a30423f6f80b0c9fe2f42e152520dabf08fecd1cad641ce21a7588166"
+    },
+    {
+      "file": "Mellum2.1-12B-A2.5B-Thinking-Q4_K_M.gguf",
+      "bytes": 8071295264,
+      "GB": 8.0713,
+      "GiB": 7.517,
+      "sha256": "ecc4d5b8107fc219e23c494b2d107552137637b6c6002ee713e0ba8af7fa2755"
+    },
+    {
+      "file": "Mellum2.1-12B-A2.5B-Thinking-Q6_K.gguf",
+      "bytes": 10879834400,
+      "GB": 10.8798,
+      "GiB": 10.1326,
+      "sha256": "12aec619f6a2c82b1ea8998f03665b3b5fc5bb758af97efdf4b1ec7a822b8668"
+    },
+    {
+      "file": "Mellum2.1-12B-A2.5B-Thinking-Q8_0.gguf",
+      "bytes": 12925417760,
+      "GB": 12.9254,
+      "GiB": 12.0377,
+      "sha256": "69e0ac02a16586c2c9e991f1e3b8a1eb403882e7ab9e69ea01eb23dbbbc6841f"
+    }
+  ],
+  "rangeVerification": {
+    "status": 206,
+    "downloadedBytes": 64,
+    "magic": "GGUF",
+    "version": 3,
+    "tensorCount": 339,
+    "metadataCount": 47,
+    "scope": "first64bytes only, no full-file hash verification"
+  },
+  "templateChecks": [
+    {
+      "name": "assistant generation prefix",
+      "passed": true
+    },
+    {
+      "name": "no-thinking prefix",
+      "passed": true
+    },
+    {
+      "name": "tool schema and system included",
+      "passed": true
+    },
+    {
+      "name": "tool call JSON",
+      "passed": true
+    },
+    {
+      "name": "tool result delimiter",
+      "passed": true
+    },
+    {
+      "name": "multipart text normalized",
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "freeDiskBytes": 8446439424,
+  "inferenceRun": false,
+  "reason": "Insufficient working disk headroom for responsible complete model download; no speed, correctness, tool execution or benchmark claim."
+}
