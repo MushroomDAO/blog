@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-13",
+  "checks": [
+    {
+      "name": "wrong source revision rejected before import",
+      "passed": true
+    },
+    {
+      "name": "source directory must be explicitly supplied",
+      "passed": true
+    },
+    {
+      "name": "copied script writes its own receipt without touching original checkout",
+      "passed": true
+    }
+  ],
+  "passed": 3,
+  "sourceCommit": "9c000659a7d34ded894db90161c27cc0b55bb745",
+  "syntheticChecksPassed": 11
+}
