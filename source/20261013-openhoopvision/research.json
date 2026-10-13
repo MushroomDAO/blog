@@ -1,0 +1,47 @@
+{
+  "source": "https://github.com/feifeifei85/OpenHoopVision",
+  "commit": "9c000659a7d34ded894db90161c27cc0b55bb745",
+  "sourceVersion": "0.1.0",
+  "date": "2026-10-13",
+  "weights": {
+    "basketball_jersey_number.ckpt": {
+      "checkoutBytes": 133,
+      "lfsSize": 95393299,
+      "lfsOid": "sha256:6a8cb1c5b316288e71b10fcc35f5e44fdfc670190818ddc6a718067bf2790c13"
+    },
+    "rf-detr-basketball.pth": {
+      "checkoutBytes": 134,
+      "lfsSize": 128404145,
+      "lfsOid": "sha256:43932f5e4425c176d967f938dd134db3dbf9271176ecdd4888a4b0e702c8a977"
+    },
+    "sports_model.pth.tar-60": {
+      "checkoutBytes": 133,
+      "lfsSize": 30393613,
+      "lfsOid": "sha256:8d5b2fd8763db34c2aad69810466adf413f0426d9f8119d322227e0e639c5fbd"
+    },
+    "yolo26s-pose-court-33kp.pt": {
+      "checkoutBytes": 133,
+      "lfsSize": 29147054,
+      "lfsOid": "sha256:d6948452314f299f265f68018738b44ea4231ccdc6f3301db23859b9c3dabe31"
+    },
+    "yolov8n-pose.pt": {
+      "checkoutBytes": 132,
+      "lfsSize": 6832633,
+      "lfsOid": "sha256:c6fa93dd1ee4a2c18c900a45c1d864a1c6f7aba75d84f91648a30b7fb641d212"
+    }
+  },
+  "declaredCheckpointBytes": 290170744,
+  "license": "README declares original code/project models Apache-2.0; no standalone LICENSE in pinned tree; third parties separate incl Ultralytics AGPL-3.0",
+  "metrics": "author report: 71 shots,7 videos,F1 84.29%, team47/59; not independently rerun",
+  "smoke": "11 synthetic scoring/court checks passed; no model/real video/end-to-end quality test",
+  "geometry": "NBA-named court paths,28.65x15.24m, three point radius7.24m; not verified for arbitrary youth courts",
+  "devices": "runner selects CUDA0 else CPU, no automatic MPS path in inspected branch",
+  "banner": {
+    "method": "local FLUX.2 Klein 4B",
+    "seed": 98,
+    "bytes": 91565,
+    "dimensions": "1200x630",
+    "machineQA": "passed",
+    "visualQA": "passed; no people"
+  }
+}

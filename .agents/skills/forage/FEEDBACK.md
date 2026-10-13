@@ -567,3 +567,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - FLUX97 explanatory cover + official map + three Baobao figures verified; Blog/list(position3)/five images200; draft/get four body images and cover verified. zh/en semantic upsert true; fresh query first, score0.69592214.
 - WeChat media_id: prCUE631thH1cmNLi42prOS16vBUmmbj7zB2yfPMlSSn3y_osOJeGX3QK1BgQoG-
 - Task: a66031bc-2f8d-46c1-a641-08df3026e272.
+
+## 2026-10-13 — OpenHoopVision
+- Source https://github.com/feifeifei85/OpenHoopVision ; pinned9c000659a7d34ded894db90161c27cc0b55bb745, package0.1.0. Recovery reference list read; other topics untouched. Exact URL clear and name raw KB only; completed first publication.
+- https://blog.mushroom.cv/blog/openhoopvision-basketball-video-analysis/ ; annotated recorded video + basketball_frame_v2 JSONL. Author shot F1 84.29% on71 shots/7 videos, not independently rerun.
+- Eleven synthetic court/scoring checks passed, no model/real footage inference. NBA-named fixed geometry, two_point_fallback, unknown-team queue and CPU route documented. LFS pointers not weights; declared checkpoint bytes290170744. README Apache2 declaration, no standalone LICENSE in pinned tree; third-party licenses separate.
+- FLUX98 cover and3 Xiao-M figures checked. Blog/list2/four images200; draft/get cover+3 figures verified. zh/en index upserted and query first0.7301959.
+- WeChat media_id: prCUE631thH1cmNLi42prPZWsAJBC_a8OjglxrvwtFisJohcfbzzroMqEc4jDWi4
+- Task56989df2-6756-4645-9d1e-7b9824290013. Previous SPUN live and draft verified, user status question excluded from article.
