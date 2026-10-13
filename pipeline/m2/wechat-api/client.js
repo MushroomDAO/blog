@@ -173,8 +173,9 @@ class WeChatClient {
         const news = item.content?.news_item;
         if (news?.length !== 1 || !item.media_id) continue;
         const article = news[0];
-        if (article.title === expected.title && article.digest === expected.digest
-            && article.thumb_media_id === expected.thumb_media_id && article.content === expected.content) {
+        const fields = ['title', 'author', 'digest', 'content', 'content_source_url',
+          'thumb_media_id', 'need_open_comment', 'only_fans_can_comment'];
+        if (fields.every(field => article[field] === expected[field])) {
           matches.set(item.media_id, {mediaId: item.media_id, createTime: item.create_time, recovered: true});
         }
       }
