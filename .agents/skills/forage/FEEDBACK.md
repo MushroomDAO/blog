@@ -559,3 +559,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - FLUX seed96 cover and 3 Xiao-M figures checked; Blog/list/4 images and live draft/get verified; zh/en index upserted; fresh query returns article first, score 0.6836482.
 - WeChat media_id: prCUE631thH1cmNLi42prF4pmWT65bgDfIC6Ad2upu_usegt-TWwXX77jMxZpCAi
 - Task: 9f69e871-833f-46cc-a8a7-fb8e716540e3.
+
+## 2026-10-13 — SPUN A Hidden Infrastructure
+- Source: https://a-hidden-infrastructure.spun.earth/ ; Science DOI 10.1126/science.adu4373, SPUN-linked author archive read. Exact URL/domain dedup raw KB only; generic hidden/infrastructure false positives resolved.
+- Published bilingual https://blog.mushroom.cv/blog/spun-hidden-infrastructure/ ; 322 studies/>16000 cores, global live AM hyphal density predictions; not all fungi or literal connectivity. Carbon biomass ~300±60 Mt C, not wet weight or annual permanent removal. Disclosed About10cm vs author archive15cm scope mismatch.
+- Jina fallback (agent-reach unavailable), official OG/cube and map screenshot saved. Local Chromium map200, visible canvas/legend, no page JS errors; no global-model or field-data reproduction claimed.
+- FLUX97 explanatory cover + official map + three Baobao figures verified; Blog/list(position3)/five images200; draft/get four body images and cover verified. zh/en semantic upsert true; fresh query first, score0.69592214.
+- WeChat media_id: prCUE631thH1cmNLi42prOS16vBUmmbj7zB2yfPMlSSn3y_osOJeGX3QK1BgQoG-
+- Task: a66031bc-2f8d-46c1-a641-08df3026e272.
