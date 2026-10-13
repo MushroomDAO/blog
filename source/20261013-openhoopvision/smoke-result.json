@@ -1,0 +1,115 @@
+{
+  "sourceCommit": "9c000659a7d34ded894db90161c27cc0b55bb745",
+  "scope": "synthetic court coordinates and event dictionaries, no detector/weights/real video inference",
+  "geometry": {
+    "lengthM": 28.65,
+    "widthM": 15.24,
+    "threePointRadiusM": 7.24
+  },
+  "passed": 11,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "under basket is two points",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "outside left arc is three points",
+      "actual": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "name": "near arc boundary remains uncertain",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "name": "corner three",
+      "actual": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "name": "missing court coordinates stay unknown",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "name": "out-of-court coordinates stay unknown",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "name": "nonfinite court coordinates stay unknown",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "name": "same made-shot object applied once",
+      "actual": {
+        "dark": 3,
+        "light": 0
+      },
+      "expected": {
+        "dark": 3,
+        "light": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "unknown team keeps score pending",
+      "actual": [
+        {
+          "dark": 0,
+          "light": 0
+        },
+        1
+      ],
+      "expected": [
+        {
+          "dark": 0,
+          "light": 0
+        },
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "later team observation resolves pending score",
+      "actual": [
+        {
+          "dark": 0,
+          "light": 3
+        },
+        0
+      ],
+      "expected": [
+        {
+          "dark": 0,
+          "light": 3
+        },
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "miss adds no points",
+      "actual": {
+        "dark": 0,
+        "light": 0
+      },
+      "expected": {
+        "dark": 0,
+        "light": 0
+      },
+      "passed": true
+    }
+  ]
+}
