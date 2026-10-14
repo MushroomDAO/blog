@@ -607,3 +607,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - FLUX103cover+threeXiao-Mfigures verified; Blog/bilingual/list5/fourimages200. zh/enupserttrue,freshqueryfirst0.66472584. Draft/get currentcover+3figures+sourcepin/testscope verified.
 - Media_id: prCUE631thH1cmNLi42prIBDJ4ftvV-y8e2iTMJR2gFNAPq3o8Cgha-Qjc9AIBhj
 - Memoryproject+indexsaved, MemPalacemine2drawers/exactslug2, ledgerexport3. Taskf3521f95-fff4-4b97-a616-7dcfe8d9509f.
+
+## 2026-10-14 — Map3d
+- Explicit cartesiancs/map3d city-map candidate after repeatedbare project request; no invented confirmation. Pin2c5d732477ba7c55995572aae926bf80303c00b9. Genericgithubdedupfalsepositivesexcluded, exactURLclear/entityrawKBonly; publishedAPI48001gap recorded.
+- https://blog.mushroom.cv/blog/map3d-openstreetmap-glb/ ; MITsource vsOSMdataODbL separate. Footprintextrusion/GLB, heightdefault10 andlevels*2.2 overridingheight; constant51000localprojection notsurveyguarantee. Complexrelationswithouttopgeometryskipped, externaltile/Overpass/HDR dependencies.
+- Own originaltsc/Vitebuildpassed; actualChromium unchangedfrontend, synthetic2buildings/1road download6344B glTFv2/3meshes/depth11and10/nopageerrors. Initialrapidpointertiming correctednormaldwell, notappsource. No realcityaccuracy/FPS/Blenderimporttest claimed.
+- OfficialREADMEsceneadoptedqualifiedcover+threeXiao-Mfigures; Blog/list1/bilingual/fourimages200, remotecurrentdraft/get0cover+3bodyimages/pin/scopeverified. zh/enupsert,publicqueryfirst0.68656856.
+- WeChat media_id: prCUE631thH1cmNLi42prG8SdUq3Q-qMxJtVRkkJ8QAwTFULaiusWPjpor9REcCZ
+- RawKBreused,projectfile/indexsaved,MemPalacemine3drawers/exactslug1/ledgerexport4. Taskdcfcbca7-2258-4f71-bd4e-8fcda3acc8c5.
