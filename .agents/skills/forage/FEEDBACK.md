@@ -615,3 +615,10 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - OfficialREADMEsceneadoptedqualifiedcover+threeXiao-Mfigures; Blog/list1/bilingual/fourimages200, remotecurrentdraft/get0cover+3bodyimages/pin/scopeverified. zh/enupsert,publicqueryfirst0.68656856.
 - WeChat media_id: prCUE631thH1cmNLi42prG8SdUq3Q-qMxJtVRkkJ8QAwTFULaiusWPjpor9REcCZ
 - RawKBreused,projectfile/indexsaved,MemPalacemine3drawers/exactslug1/ledgerexport4. Taskdcfcbca7-2258-4f71-bd4e-8fcda3acc8c5.
+
+## 2026-10-14 — Decision 3.0
+- ExactModelScope/HFedgeURLclear, d3-edge entityrawKBonly, genericDecision falsepositivesexcluded. PublishedAPI48001gap retained. SixofficialpinnedHFmodelcards/code reviewed; d3fc2d74bd48ec29ae42d4330a543913f7858e3f40, edgefe71f8e1dad1d0198386de78345b13f25c319b36.
+- https://blog.mushroom.cv/blog/decision30-multimodal-system-one/ ; currentJev0.3.2scores/Oct13performance keptseparatefromuserold0.3.1numbers. Realparamcountsincludevision;255code readout/no generatedtext, eachquestioncomputesequence, multiquestionnotfree; confidenceentropy notcalibratedcorrectness. Video2fps/max32 frames/0.2MP, MI325Xwarm latency notMacpromise; batchingthroughput/memory/near-tiedecisionchanges disclosed.
+- ActualunchangededgeBF16CPU fullpackageverification, isolatedtorch2.14/transformers5.17/torchvision.29deps. Sixsyntheticcontracts pass;3realcalls/sixquestions output0eachrequest. Textreturns.9985/receipt.9996 buturgencyexpected.754/Routinehighest/Today.2038; receiptcard.9751 matchesvisibleimage; official4s32frames8fps blueleft→greenright, modeldirection.7748/colorchange.7617. No fullbenchmark, latency/CoreML/ANEmeasurement. Modelcache~/.cache/mycelium-models/d3-edge-fe71f8e1.
+- FLUX105qualifiedcover(first104visualrejectedlabels)+3Xiao-Mfigs. Blog/list1/bilingual/fourimages200; currentdraft/get0cover+3images/pin/localurgencycaseverified. zh/enindexupsert/queryfirst0.6689012.
+- Media_id prCUE631thH1cmNLi42prMFHq3m_aKg2inNGKSSxX7PevpAjea9GTN44sMQfS-rM ; MemPalacemine3/exactslug1/export4. Task8fdbce9f-2256-4b8b-8784-685309caf965.

@@ -1,0 +1,20 @@
+{
+  "title": "Decision 3.0：多模态输入直接做判断",
+  "author": "Mycelium",
+  "digest": "六档模型返回选项概率，适合分类与路由，但一次请求并不等于一次前向。",
+  "mediaId": "prCUE631thH1cmNLi42prMFHq3m_aKg2inNGKSSxX7PevpAjea9GTN44sMQfS-rM",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/fluidinference/fluiduse",
+    "github.com/vllm-project/semantic-router",
+    "https://github.com/vllm-project/semantic-router",
+    "https://huggingface.co/vllm-sr/d3",
+    "https://huggingface.co/vllm-sr/d3-edge",
+    "https://modelscope.cn/collections/vllm-sr/Decision-30",
+    "huggingface.co/vllm-sr/d3",
+    "huggingface.co/vllm-sr/d3-edge"
+  ],
+  "publishedAt": "2026-10-14T08:29:10.101Z",
+  "wechatStatus": "draft",
+  "currentVerifiedMediaId": "prCUE631thH1cmNLi42prMFHq3m_aKg2inNGKSSxX7PevpAjea9GTN44sMQfS-rM"
+}
