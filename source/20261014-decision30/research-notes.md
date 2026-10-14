@@ -1,0 +1,15 @@
+# Decision 3.0 primary-source audit — 2026-10-14
+
+ExactModelScopecollection/HFedge URLs no prior Blog/draft/receipt; d3-edge exact entity rawbotKB only. GenericDecision/semantic/router false positives excluded. Published API48001 unavailable; no historical credential for this topic. Rawbot KB reused.
+
+Six pinned HF API+README/config snapshots model-snapshots.json. Flagshipfc2d74bd48ec29ae42d4330a543913f7858e3f40, edgefe71f8e1dad1d0198386de78345b13f25c319b36. Cards updatedJev0.3.2 2026Oct12 boards/sameweightsasv3.1.0; user0.3.1numbers notcombined. Exactparamtotal includesvision .594/.853/2.213/4.539/8.393/26.085B; cards .59/.85/2.21/4.54/8.39/26.09. Currenttext20.2/32.3/38.9/52.6/55.8/66.3; vision31.7/42.1/54.7/63.2/66.9/71.3, authorquotedboard notours. InternalPerception19140threechoicequestions d377.4 edge46.6, notJevscore. EdgeOOD12.9 vsd360.5.
+
+Reviewed modeling_d3.py/d3_runtime.py/d3_format.py/decision_config.json:255single-token codes, FP32readout, prompt laststate, optionsoftmax noautoregressiveanswer. AutoModelonequestionperforward, multiplequestioncallnotconstantcost. score2–10orderedlevels maps toexpectedindex; noulaffirmativeprob; confidence1-normalizedentropy notcalibratedcorrectness. Jsonstateserializestext. Imagesmax1638400pixels;videos2fps min4/max32sampledwholevideo atmax200704pixel/frame, canmissshortevents. RuntimeCPUreference kernels supported, noGPUoptimclaim.
+
+Newlatency AutoModelwarmoneMI325X:edge6.6/58.6/274ms vsd354.4/290/500 text/image10svideo,330token/1456x1092/1080p defaults,3warmups<=20times. Enginebatching861rps vs single9.9ms, changed0.151% decisions;memoryAutoModel5.2GiB/Engineexact15.9/batch19.9. Newer-thanpublishedimages anddevchannel caveat inmodelcard; noMacorCPUtransferofspeedclaimed.
+
+OfficialApplearticle Oct11 https://vllm-semantic-router.netlify.app/blog/decision-3-0-on-apple-silicon/ inspected. FluidInference/FluidUse CoreML route, notourCoreMLrun orANEbenchmark. ModelScopegivenURL fetched aspage; actualartifactresearchHF primary.
+
+Localrealedge smoke:isolatedvenv retainsMLenvtorch2.14, installsTransformers5.17/accelerate/torchvision.29/OpenCV; unchangedpinnedpackage/fullmanifestcheck inclweights passed atload. Initialenv missingaccelerate andvision deps correctedlocally; no sharedenv upgrades. Sixsyntheticcontractchecks; actualCPU three calls/six questions. Text returns.9985/receiptp_yes.9996, urgencyexpectedlevel.7542 withToday.2038andRoutine.4496; don'tcallallcorrect. Receiptcard.9751 matchesactualsamplevisiblePaidbycard. Video4seconds32sourceframes8fps shows squareblueleft→greenright; response right.7748/colorchange.7617; no fullbenchmarkorlatency measurement. Usagetext332/image966/video1716,output0all. Sampleinspectfirst/lastframes viewed, no scientificaccuracyclaimfromsixquestions. Scripts/results saved.
+
+Officialsourcehero assets/banner.png ismostlylargewords/darkempty, rejected. FLUX104 machine gatepassedbutrootvisualfoundgarbled equipmentlabels, rejected. Regenerated105 glassprism/fibers themedphotograph passesOCR/faces/framing androotview, no labels. ThreeXiao-M explanatoryfigs pending.
