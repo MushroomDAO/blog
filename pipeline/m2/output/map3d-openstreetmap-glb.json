@@ -1,0 +1,16 @@
+{
+  "title": "Map3d：开放地图变城市三维底图",
+  "author": "Mycelium",
+  "digest": "框选地图生成建筑与道路，再导出GLB，但模型精度仍取决于地图数据。",
+  "mediaId": "prCUE631thH1cmNLi42prG8SdUq3Q-qMxJtVRkkJ8QAwTFULaiusWPjpor9REcCZ",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/cartesiancs/map3d",
+    "github.com/cartesiancs/map3d.git",
+    "https://github.com/cartesiancs/map3d",
+    "https://www.openstreetmap.org/copyright"
+  ],
+  "publishedAt": "2026-10-14T02:48:22.898Z",
+  "wechatStatus": "draft",
+  "currentVerifiedMediaId": "prCUE631thH1cmNLi42prG8SdUq3Q-qMxJtVRkkJ8QAwTFULaiusWPjpor9REcCZ"
+}

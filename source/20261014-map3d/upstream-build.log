@@ -1,0 +1,28 @@
+
+> map3d@0.0.0 build
+> tsc -b && vite build
+
+
+[vite:dts] You are building a library that may not need to generate declaration files.
+
+vite v6.1.1 building for production...
+transforming...
+node_modules/three-stdlib/libs/lottie.js (13062:32): Use of eval in "node_modules/three-stdlib/libs/lottie.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+node_modules/three/examples/jsm/libs/lottie_canvas.module.js (13973:30): Use of eval in "node_modules/three/examples/jsm/libs/lottie_canvas.module.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+node_modules/three/examples/jsm/libs/chevrotain.module.min.js (2:7044): Use of eval in "node_modules/three/examples/jsm/libs/chevrotain.module.min.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+✓ 2576 modules transformed.
+rendering chunks...
+
+[vite:dts] Start generate declaration files...
+computing gzip size...
+[vite:dts] Declaration files built in 274ms.
+
+dist/index.html                     0.39 kB │ gzip:   0.27 kB
+dist/assets/index-DQD0G4vq.css     16.37 kB │ gzip:   6.71 kB
+dist/assets/index-DPEy4RaL.js   1,409.18 kB │ gzip: 403.97 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.04s

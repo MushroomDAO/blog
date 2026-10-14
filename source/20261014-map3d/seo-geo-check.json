@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-14",
+  "fields": {
+    "title": 23,
+    "titleEn": 54,
+    "description": 154,
+    "descriptionEn": 155,
+    "wechatTitle": 17,
+    "wechatDigest": 33
+  },
+  "blufBoth": true,
+  "faqPairsEach": 3,
+  "questionHeadings": true,
+  "primarySources": true,
+  "officialClaimsVsOwnFixtureSeparated": true,
+  "copyrightCount": 2,
+  "illustrations": {
+    "count": 3,
+    "bilingualImageLines": 6,
+    "dimensions": "1280x720",
+    "bytes": [
+      63246,
+      41012,
+      78185
+    ],
+    "rootVisualCheck": "pass"
+  }
+}
