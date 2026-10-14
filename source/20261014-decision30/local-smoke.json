@@ -1,0 +1,104 @@
+{
+  "model": "vllm-sr/d3-edge",
+  "revision": "fe71f8e1dad1d0198386de78345b13f25c319b36",
+  "device": "cpu",
+  "torch": "2.14.0",
+  "contract_checks": {
+    "choice_mapping": true,
+    "yes_probability": true,
+    "score_expectation": true,
+    "ten_second_sampling": true,
+    "long_video_cap": true,
+    "invalid_score_rejected": true
+  },
+  "model_results": {
+    "text": {
+      "model": "d3-edge",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "returns",
+          "probabilities": {
+            "returns": 0.9985114952402598,
+            "billing": 0.0007986433936721016,
+            "technical": 0.0006898613660680799
+          },
+          "confidence": 0.9888902465219831
+        },
+        "receipt": {
+          "type": "noul",
+          "noul": 0.9995724027912471
+        },
+        "urgency": {
+          "type": "score",
+          "score": 0.7542001160502503,
+          "probabilities": {
+            "0": 0.4495972662924091,
+            "1": 0.34660535136493154,
+            "2": 0.20379738234265937
+          },
+          "confidence": 0.043495537283390506,
+          "legend": {
+            "0": "Routine",
+            "1": "Soon",
+            "2": "Today"
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 332,
+        "output_tokens": 0
+      }
+    },
+    "image": {
+      "model": "d3-edge",
+      "answers": {
+        "payment": {
+          "type": "choice",
+          "choice": "card",
+          "probabilities": {
+            "card": 0.975110320011704,
+            "cash": 0.0099462149244143,
+            "gift card": 0.014943465063881731
+          },
+          "confidence": 0.87871102667758
+        }
+      },
+      "usage": {
+        "input_tokens": 966,
+        "output_tokens": 0
+      }
+    },
+    "video": {
+      "model": "d3-edge",
+      "answers": {
+        "direction": {
+          "type": "choice",
+          "choice": "right",
+          "probabilities": {
+            "right": 0.7747781392153821,
+            "left": 0.06663835147974419,
+            "still": 0.15858350930487378
+          },
+          "confidence": 0.38993720470869575
+        },
+        "color_change": {
+          "type": "noul",
+          "noul": 0.761675011540577
+        }
+      },
+      "usage": {
+        "input_tokens": 1716,
+        "output_tokens": 0
+      }
+    }
+  },
+  "benchmark_reproduction": false,
+  "performance_measurement": false,
+  "artifactVerification": "official runtime verify=full completed before model loading",
+  "runtimeEnvironment": {
+    "transformers": "5.17.0",
+    "torchvision": "0.29.0",
+    "modelCache": "/Users/jason/.cache/mycelium-models/d3-edge-fe71f8e1"
+  }
+}
