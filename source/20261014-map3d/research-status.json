@@ -1,0 +1,22 @@
+{
+  "source": "https://github.com/cartesiancs/map3d",
+  "commit": "2c5d732477ba7c55995572aae926bf80303c00b9",
+  "identity": "dominant city-map candidate after repeated bare project-name request; identity stated explicitly in article",
+  "dedup": "no prior post/receipt/currentdraft; raw bot KB reused; github generic falsepositive excluded",
+  "publishedApiError": 48001,
+  "npmCi": true,
+  "npmBuild": true,
+  "fixture": "two buildings and one road, no real city data accuracy claim",
+  "GLB": {
+    "bytes": 6344,
+    "version": 2,
+    "meshes": 3,
+    "depths": [
+      11,
+      10
+    ]
+  },
+  "browserPageErrors": 0,
+  "banner": "official README screenshot adopted1200x63093690B; source/format/faces gatepassed,UItextwarningacceptable",
+  "scope": "no FPS/performance benchmark or every importer verified"
+}
