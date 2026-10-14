@@ -1,0 +1,44 @@
+{
+  "asOf": "2026-10-14",
+  "ownModelTests": "Not run, explicitly excluded by user",
+  "sources": {
+    "Drama": "https://huggingface.co/fishaudio/drama-3",
+    "Breeze": "https://huggingface.co/BreezeBlue/Breeze-TTS-2",
+    "S2": "https://huggingface.co/fishaudio/s2-pro",
+    "FishGitHub": "https://github.com/fishaudio/fish-speech",
+    "BreezeGitHub": "https://github.com/breezeblue-ai/breeze-tts",
+    "AAProvider": "https://artificialanalysis.ai/text-to-speech/leaderboard/provider-voice/open-weights",
+    "AAControlled": "https://artificialanalysis.ai/text-to-speech/leaderboard/controlled-voice",
+    "DramaReport": "https://arxiv.org/html/2610.18010v1",
+    "BreezeBenchmarks": "https://breezeblue.ai/breeze-tts-2"
+  },
+  "repositoryCommits": {
+    "fish-speech": "541566932abbaebcb0a40e562a1f846738383f38",
+    "breeze-tts": "6eba901d1845353802652c708a4740fdfc5baa75"
+  },
+  "AAProviderElo": {
+    "Drama3Preview": 1243,
+    "BreezeTTS2": 1221,
+    "S2Pro": 1118
+  },
+  "AAControlledElo": {
+    "Drama3Preview": 1058,
+    "BreezeTTS2": 1017,
+    "S2Pro": 1001
+  },
+  "boundaries": [
+    "AA hosted Preview is not proof of local checkpoint parity",
+    "AA scales differ by board and controlled voices cover English",
+    "Vendor hardware/performance settings differ; no cross-hardware speed rank",
+    "User 5090 timing is unattributed observation; RTF division only",
+    "Drama Step-Audio-Edit emotion 58.2 trails cited Step-Audio-EditX 69.3, style 81.8 leads",
+    "Current weight licenses checked separately from code license"
+  ],
+  "banner": {
+    "source": "FLUX.2 Klein local, seed 107; public source images were small logos/text diagrams or identifiable-person promo media",
+    "manualInspection": "No faces, no readable or garbled labels; on-topic three studio microphones",
+    "sha256": "db203609b7fe7b139225e9f3dc314ba2670a88ef144ceb419fb5a662c6ea2682"
+  },
+  "DramaRepoBytes": 41502593757,
+  "bodyImages": "3 Xiao-M illustrations, 1280x720, each below90000bytes; originals in ~/.codex/generated_images/01a13b03-30df-7861-875f-d051d5d09fb9"
+}
