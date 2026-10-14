@@ -622,3 +622,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - ActualunchangededgeBF16CPU fullpackageverification, isolatedtorch2.14/transformers5.17/torchvision.29deps. Sixsyntheticcontracts pass;3realcalls/sixquestions output0eachrequest. Textreturns.9985/receipt.9996 buturgencyexpected.754/Routinehighest/Today.2038; receiptcard.9751 matchesvisibleimage; official4s32frames8fps blueleft→greenright, modeldirection.7748/colorchange.7617. No fullbenchmark, latency/CoreML/ANEmeasurement. Modelcache~/.cache/mycelium-models/d3-edge-fe71f8e1.
 - FLUX105qualifiedcover(first104visualrejectedlabels)+3Xiao-Mfigs. Blog/list1/bilingual/fourimages200; currentdraft/get0cover+3images/pin/localurgencycaseverified. zh/enindexupsert/queryfirst0.6689012.
 - Media_id prCUE631thH1cmNLi42prMFHq3m_aKg2inNGKSSxX7PevpAjea9GTN44sMQfS-rM ; MemPalacemine3/exactslug1/export4. Task8fdbce9f-2256-4b8b-8784-685309caf965.
+
+## 2026-10-14 — Drama 3 / Breeze TTS 2 / Fish S2 Pro
+
+- Public-only comparison requested; no downloaded weights, inference, listening or speed benchmark. Official HF snapshots and repositories checked, not treated as reproduced capability.
+- https://blog.mushroom.cv/blog/drama3-breeze2-fish-s2-comparison/ ; AA provider-voice Preview 1243/1221/1118 and controlled-voice1058/1017/1001 separate Elo scales/English coverage. Vendor Seed-TTS WER and model-judged VoiceDesign/Step-Audio-Edit kept distinct. Drama final emotion58.2 trails cited comparator69.3, style81.8 leads.
+- RTX5090 user observations S2 3.6s/Breeze6.8s for10s audio are unattributed; arithmetic RTF0.36/0.68 only. DGXSpark/H100/H200 settings not speed-ranked. Drama total35B/active3B does not imply3B memory; Breeze eager7.7GiB/fast14.4GiB. Weight commercial permissions checked separately from code license.
+- Matched FLUX107 verified microphone cover +3 Xiao-M figs; bilingual/list2/fourimages200. Current remote draft/get0 verifies cover/threeimages/pin/public-only; media_id prCUE631thH1cmNLi42prOQNdDawCvY-BcphicV8wJEV4NQSTR2ggUvD-x7bM131. MemPalace mine4/exactslug2/export5. Task bec2f477-96d0-4b56-a31b-209c59ba4b09.
+- zh/en semantic upsert verified; public query first hit0.72855765. Feature article+records pushed, PR91 https://github.com/MushroomDAO/blog/pull/91 pending normal review; Blog remains live independently.

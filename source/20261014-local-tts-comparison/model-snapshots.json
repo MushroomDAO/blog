@@ -1,0 +1,71 @@
+[
+  {
+    "repo": "fishaudio/drama-3",
+    "sha": "e0a9218aa48888270f06ef1ed9ea67622c0e17d2",
+    "parameters": 35899643008,
+    "files": [
+      ".gitattributes",
+      "LICENSE",
+      "README.md",
+      "chat_template.jinja",
+      "codec.pth",
+      "config.json",
+      "model-00001-of-00008.safetensors",
+      "model-00002-of-00008.safetensors",
+      "model-00003-of-00008.safetensors",
+      "model-00004-of-00008.safetensors",
+      "model-00005-of-00008.safetensors",
+      "model-00006-of-00008.safetensors",
+      "model-00007-of-00008.safetensors",
+      "model-00008-of-00008.safetensors",
+      "model.safetensors.index.json",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ]
+  },
+  {
+    "repo": "BreezeBlue/Breeze-TTS-2",
+    "sha": "3e28c5151381a722f1d8661b4118c298caa77aa4",
+    "parameters": 3466363713,
+    "files": [
+      ".gitattributes",
+      "LICENSE",
+      "README.md",
+      "assets/breezeblue-logo.png",
+      "assets/tts-elo-leaderboard.svg",
+      "audio_tokenizer/config.json",
+      "audio_tokenizer/configuration.json",
+      "audio_tokenizer/model.safetensors",
+      "audio_tokenizer/preprocessor_config.json",
+      "config.json",
+      "generation_config.json",
+      "model-00001-of-00002.safetensors",
+      "model-00002-of-00002.safetensors",
+      "model.safetensors.index.json",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ]
+  },
+  {
+    "repo": "fishaudio/s2-pro",
+    "sha": "1de9996b6be38b745688de084d87a5633f714e4e",
+    "parameters": 4561852416,
+    "files": [
+      ".gitattributes",
+      "LICENSE.md",
+      "README.md",
+      "chat_template.jinja",
+      "codec.pth",
+      "config.json",
+      "model-00001-of-00002.safetensors",
+      "model-00002-of-00002.safetensors",
+      "model.safetensors.index.json",
+      "overview.png",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ]
+  }
+]
