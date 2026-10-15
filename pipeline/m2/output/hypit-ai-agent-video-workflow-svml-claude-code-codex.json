@@ -7,5 +7,10 @@
   "sourceUrls": [
     "github.com/hypit-ai/hypit"
   ],
-  "publishedAt": "2026-09-16T16:19:16.787Z"
+  "publishedAt": "2026-09-16T16:19:16.787Z",
+  "wechatStatus": "recorded",
+  "archivedMediaId": "prCUE631thH1cmNLi42prFY7i4oh00LfW2rr38F8K9iksZEdeM8mLNzyeUE8MUfS",
+  "currentVerifiedMediaId": "",
+  "currentStatusCheckedAt": "2026-10-15",
+  "wechatError": "旧创建凭证对应的media_id当前draft/get返回40007，且不在远程草稿箱；已发布列表接口返回48001无权限，当前状态未核验。保留旧凭证，未重复创建。"
 }
