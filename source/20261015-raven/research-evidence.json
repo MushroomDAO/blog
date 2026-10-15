@@ -1,0 +1,36 @@
+{
+  "source": "https://github.com/EverMind-AI/Raven",
+  "commit": "6b938a4267cb1f3bf1453a39ccc7d580e0eea9fd",
+  "paper": "https://arxiv.org/abs/2609.33439v1",
+  "dedup": "Only rawbotKB and substringRavenna falsepositives; nooldarticle/localreceipt/currentdraft. Publishedlist48001 unauthorized gap recorded.",
+  "benchmarks": {
+    "MAOB": "140tasks matchedbackbones; capturedgraphs/no workers executed; Qwen3.8EM.711 vs.607 strongestbaseline",
+    "HarnessEvolution": "Raven report reuses HarnessBankv2 frozenQwen3.6-27B Opus4.8evolver K3 trainselected/heldout; AppWorld41.3→56.7; SWE26tasksubsetnotpassespairedcriterion"
+  },
+  "implementation": {
+    "orchestration": "hostlocal, notdurabledistributedworkflowservice; opt-inworker generation vsdefault; externalACPintegrationdoesnotguaranteecharter enforcement",
+    "Evolver": "standalone repo tool; currentplannedretirementpending signoff, launcheronlyAppWorld; seal/pathwhitelistnotphysicalisolation; Gate-bmissinginstrumentationfailsopen",
+    "Curator": "experimental sourceonly, notinstalledwheel",
+    "memory": "EverOS+SkillForge, persistence/retrievalnotautomaticfactvalidation"
+  },
+  "localTest": {
+    "files": [
+      "tests/test_evolver_gates.py",
+      "tests/test_evolver_scoring.py"
+    ],
+    "unchangedSource": true,
+    "passed": 37,
+    "modelCalls": 0,
+    "command": "PYTHONPATH=/tmp/raven-20261015 /tmp/raven-review-venv/bin/python -m pytest --noconftest -o addopts='' /tmp/raven-20261015/tests/test_evolver_gates.py /tmp/raven-20261015/tests/test_evolver_scoring.py -q -p no:cacheprovider",
+    "scope": "gates/scoring only; no fullagent, AppWorld, realLLMevolution, modelbenchmark, or longrun test",
+    "warning": "asyncio_mode config unrecognized becauseasyncpluginabsent; selectedtests synchronous. First invocation inheritedxdist-nflag; overriddenaddoptsforfinalsuccessfulrun."
+  },
+  "banner": {
+    "source": "FLUX2Kleinlocal seed108,94180bytes,1200x630,photo ofraven/coastalflock",
+    "reason": "Officialbanner/poster predominantlytext/illustration unsuitable; generated matchedphoto",
+    "manualInspection": "No text/faces, framefilled, on-topic",
+    "sha256": "3d5ecaf9a4d346de8a8b66990de9842a1944d9212bcd5845c98c74b383cbfa95"
+  },
+  "bodyImages": "3 Xiao-M figs1280x720/66976,62100,72720bytes, originals preserved in generated_images/01a13cf0-b27e-7863-92ab-4663291207e5",
+  "externalDocRoutes": "orchestration/evolver/self-evolution-map all200"
+}
