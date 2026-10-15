@@ -1,0 +1,35 @@
+usage: X2StreamingASR Inference [-h] [--config CONFIG]
+                                [--model_path MODEL_PATH]
+                                [--lora_path LORA_PATH] [--device DEVICE]
+                                [--audio AUDIO] [--input_file INPUT_FILE]
+                                [--output_file OUTPUT_FILE]
+                                [--batch_size BATCH_SIZE]
+                                [--stream-batch-rows STREAM_BATCH_ROWS]
+                                [--limit LIMIT] [--return_timestamps]
+                                [--adaptive-latency]
+                                [--emit-word-prob-threshold EMIT_WORD_PROB_THRESHOLD]
+                                [--emit-word-prob-space {full_vocab,pad_word}]
+                                [--mode {,streaming,offline}]
+                                [--language {,zh,en,cs}]
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG
+  --model_path MODEL_PATH
+  --lora_path LORA_PATH
+  --device DEVICE
+  --audio AUDIO
+  --input_file INPUT_FILE
+  --output_file OUTPUT_FILE
+  --batch_size BATCH_SIZE
+  --stream-batch-rows STREAM_BATCH_ROWS
+  --limit LIMIT
+  --return_timestamps
+  --adaptive-latency
+  --emit-word-prob-threshold EMIT_WORD_PROB_THRESHOLD
+  --emit-word-prob-space {full_vocab,pad_word}
+  --mode {,streaming,offline}
+  --language {,zh,en,cs}
+                        Language tag: zh, en, or cs (Chinese-English code-
+                        switching). Defaults to zh unless the input path names
+                        a known English corpus.

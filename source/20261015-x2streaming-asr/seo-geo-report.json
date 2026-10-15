@@ -1,0 +1,34 @@
+{
+  "titleLength": 33,
+  "titleEnLength": 54,
+  "descriptionLength": 158,
+  "descriptionEnLength": 155,
+  "wechatTitleLength": 24,
+  "wechatDigestLength": 35,
+  "bilingual": true,
+  "BLUF": true,
+  "FAQ": true,
+  "bodyImageReferences": 6,
+  "images": [
+    {
+      "file": "x2streaming-asr-append-only-fig-01.png",
+      "size": 37990,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "x2streaming-asr-append-only-fig-02.png",
+      "size": 39563,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "x2streaming-asr-append-only-fig-03.png",
+      "size": 67109,
+      "dimensions": "1280x720"
+    }
+  ],
+  "copyright": true,
+  "sourcePinned": true,
+  "internalLink": true,
+  "independentAnalysis": "Acoustic commitment versus completed intent/action authorization; forced reference-boundary comparison is not runtime speedup; mean/P95 distinction; live versus default offline demo events.",
+  "scope": "CLI help/source review only, no model inference or benchmark."
+}
