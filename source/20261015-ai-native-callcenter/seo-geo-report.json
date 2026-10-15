@@ -1,0 +1,34 @@
+{
+  "titleLength": 39,
+  "titleEnLength": 58,
+  "descriptionLength": 159,
+  "descriptionEnLength": 153,
+  "wechatTitleLength": 15,
+  "wechatDigestLength": 28,
+  "bilingual": true,
+  "BLUF": true,
+  "FAQ": true,
+  "bodyImageReferences": 6,
+  "images": [
+    {
+      "file": "ai-native-callcenter-self-hosted-fig-01.png",
+      "size": 36447,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "ai-native-callcenter-self-hosted-fig-02.png",
+      "size": 39823,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "ai-native-callcenter-self-hosted-fig-03.png",
+      "size": 52999,
+      "dimensions": "1280x720"
+    }
+  ],
+  "copyright": true,
+  "sourcePinned": true,
+  "internalLink": true,
+  "independentAnalysis": "GoembeddedUI/API versus external switch/database; localhosting versus cloud audio egress; prototype versus productionacceptance; separate humanphoneextension.",
+  "scope": "Go flow/flowsim -race pass109top/231withsubtests,1live skip;121installerfixturespass; no realcalls/fullstack/provider/loadtest."
+}
