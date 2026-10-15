@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-15",
+  "task": "8b9cea09-a3fb-45c0-85fb-41946450b157",
+  "sources": [
+    "https://www.paperinstruments.com/blog/ultramarine",
+    "https://www.paperinstruments.com/ultramarine",
+    "https://x.com/bertgodel/status/2110400987622265232",
+    "https://github.com/paper-instruments/feather-train",
+    "https://docs.paperinstruments.com/docs/ultramarine",
+    "https://docs.paperinstruments.com/docs/ultramarine/billing",
+    "https://api.paperinstruments.com/v1/pricing"
+  ],
+  "codeCommit": "d8649447cf58dc75eafe0b30b2d40dbe56470f34",
+  "codeLicense": "MIT",
+  "weights": "Official page coming soon, no verified released HF checkpoint/license; founder estimates2weeks",
+  "budget": "Founder self-report5people/~300k all-in POSTtraining, no independent cost audit; pretrainedGLM5.3Flash excluded as inheritedbase",
+  "dedup": "ExactprimaryURLs clear. Broad entity splitter matches Flash/Paper unrelated content; literal localUltramarine/feather-train zero. OriginalbotKB alreadyexists. Remote drafts read, published48001gap. No oldmediaID or article to reuse.",
+  "ownValidation": {
+    "hardware": "M4 16GB",
+    "cliHelpExitCode": 0,
+    "tests": "Unmodified test_file_mutation.py and test_read.py",
+    "passed": 48,
+    "pytestReportedSeconds": 4.25,
+    "paidAPIInference": false,
+    "modelInference": false,
+    "RLTraining": false,
+    "E2BContainers": false,
+    "OfficeAcceptance": false
+  },
+  "boundaries": [
+    "Internal59.3vs57.8 not universal superiority or complete-task passrate",
+    "Scores mix company runs and published developer/leaderboard baselines",
+    "Cost .13vs8.19 roundedratio63, workloadAPIpricing not speedup or universalinvoice",
+    "Diligence/APEX belowFable; codingbelowbase",
+    "MITframework not unreleasedweightslicense",
+    "Modelscore not human acceptance; no statisticalsignificance inferred frommeans"
+  ],
+  "pricing": {
+    "object": "price_card",
+    "model": "ultramarine-1-flash",
+    "version": "metronome-53082032-e4ec-47f4-8428-893d50697077",
+    "effective_at": 1791928800,
+    "unit": "per_1m_tokens",
+    "uncached_input_usd": "0.15",
+    "cached_input_usd": "0.03",
+    "output_usd": "0.50",
+    "uncached_input_nanodollars_per_token": 150,
+    "cached_input_nanodollars_per_token": 30,
+    "output_nanodollars_per_token": 500
+  },
+  "savedSourceImage": "/Users/jason/.heinu1-bot/media/ultramarine-official-og-20261015.png"
+}
