@@ -1,0 +1,13 @@
+{
+  "slug": "helix-foundry-company-ontology",
+  "blogUrl": "https://blog.mushroom.cv/blog/helix-foundry-company-ontology/",
+  "mediaId": "prCUE631thH1cmNLi42prJ3I9UAhSeiPmaSDMw0Y5VKKJ1ubi-ooBws7dH4gaF0O",
+  "wechatStatus": "draft",
+  "task": "8ed8bf8a-2da2-46f1-af9e-3d522324310c",
+  "blog": "verified200,bilingual,list2,fourimages200",
+  "kb": "original bot KB reused; research project mined1file2drawers, exactslug1; ledger export3",
+  "semanticIndex": "zh/en upsert; public query rank1 score0.6283455",
+  "verification": "39 upstream tests passed using real DuckDB, in-memory metadata and provider fixtures; no live SaaS, model or HelixDB persistence test",
+  "git": "article49aad6e and records6812215 pushed; PR95 pending normal review/merge stacked on Anthropic workshop",
+  "prUrl": "https://github.com/MushroomDAO/blog/pull/95"
+}
