@@ -1,0 +1,34 @@
+{
+  "titleLength": 30,
+  "titleEnLength": 58,
+  "descriptionLength": 159,
+  "descriptionEnLength": 157,
+  "wechatTitleLength": 21,
+  "wechatDigestLength": 31,
+  "bilingual": true,
+  "BLUF": true,
+  "FAQ": true,
+  "bodyImageReferences": 6,
+  "images": [
+    {
+      "file": "indra-ocr-cpu-document-parsing-fig-02.png",
+      "size": 64742,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "indra-ocr-cpu-document-parsing-fig-01.png",
+      "size": 53004,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "indra-ocr-cpu-document-parsing-fig-03.png",
+      "size": 59330,
+      "dimensions": "1280x720"
+    }
+  ],
+  "copyright": true,
+  "sourcePinned": true,
+  "internalLink": true,
+  "independentAnalysis": "Steady32corethroughput vs singlepagelatency; hybridPDF vs forcedOCR; PPtext vs fullpipeline; recognizer vs multimodelbundle; code vs weightslicense; Chineseextra t retained.",
+  "scope": "RealM4CPU inference3paths2fixtures,27upstreamtestspass; identifiers/boxes/markdown verified; Chineseextra t, noCER/IoU/OPB/math/throughputcomparison."
+}
