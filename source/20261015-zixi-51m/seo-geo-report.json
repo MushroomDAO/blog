@@ -1,0 +1,15 @@
+{
+  "titleLength": 41,
+  "titleEnLength": 47,
+  "descriptionLength": 160,
+  "descriptionEnLength": 155,
+  "wechatTitleLength": 18,
+  "wechatDigestLength": 31,
+  "bilingual": true,
+  "BLUF": true,
+  "FAQ": true,
+  "bodyImageReferences": 6,
+  "audioPlayerBothLanguages": true,
+  "copyright": true,
+  "independentAnalysis": "Actual CPU/MPS two texts each, integrity not perceptual quality or speed; ownvoice finetuning notzero-shot; undeclared huggingface-hub/loguru; no training run."
+}
