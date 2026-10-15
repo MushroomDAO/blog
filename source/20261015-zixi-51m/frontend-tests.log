@@ -1,0 +1,32 @@
+.........                                                                [100%]
+=============================== warnings summary ===============================
+../../../../../private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/__init__.py:44
+  /private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/__init__.py:44: SyntaxWarning: invalid escape sequence '\.'
+    re_han_default = re.compile("([\u4E00-\u9FD5a-zA-Z0-9+#&\._%\-]+)", re.U)
+
+../../../../../private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/__init__.py:46
+  /private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/__init__.py:46: SyntaxWarning: invalid escape sequence '\s'
+    re_skip_default = re.compile("(\r\n|\s)", re.U)
+
+../../../../../private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/finalseg/__init__.py:78
+  /private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/finalseg/__init__.py:78: SyntaxWarning: invalid escape sequence '\.'
+    re_skip = re.compile("([a-zA-Z0-9]+(?:\.\d+)?%?)")
+
+../../../../../private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/posseg/__init__.py:16
+  /private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/posseg/__init__.py:16: SyntaxWarning: invalid escape sequence '\.'
+    re_skip_detail = re.compile("([\.0-9]+|[a-zA-Z0-9]+)")
+
+../../../../../private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/posseg/__init__.py:17
+  /private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/posseg/__init__.py:17: SyntaxWarning: invalid escape sequence '\.'
+    re_han_internal = re.compile("([\u4E00-\u9FD5a-zA-Z0-9+#&\._]+)")
+
+../../../../../private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/posseg/__init__.py:18
+  /private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/posseg/__init__.py:18: SyntaxWarning: invalid escape sequence '\s'
+    re_skip_internal = re.compile("(\r\n|\s)")
+
+../../../../../private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/posseg/__init__.py:21
+  /private/tmp/zixi-51m-venv/lib/python3.12/site-packages/jieba/posseg/__init__.py:21: SyntaxWarning: invalid escape sequence '\.'
+    re_num = re.compile("[\.0-9]+")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+9 passed, 7 warnings in 1.33s
