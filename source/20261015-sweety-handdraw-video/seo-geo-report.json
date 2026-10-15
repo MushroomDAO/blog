@@ -1,0 +1,14 @@
+{
+  "titleLength": 34,
+  "titleEnLength": 55,
+  "descriptionLength": 159,
+  "descriptionEnLength": 153,
+  "wechatTitleLength": 16,
+  "wechatDigestLength": 33,
+  "bilingual": true,
+  "BLUF": true,
+  "FAQ": true,
+  "bodyImageReferences": 6,
+  "copyright": true,
+  "independentAnalysis": "Narration-first timing, semanticparts vs image beauty, service/model/voice separation; actual59tests and sinetonefixture only, no newfinishedstory/TTS/subjective acceptance; ExifToolmissing; localrender notwholepipelineoffline."
+}

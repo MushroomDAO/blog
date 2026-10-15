@@ -1,0 +1,16 @@
+{
+  "status": "offline_runtime_checks_passed",
+  "fixture_only": true,
+  "visual_acceptance_claimed": false,
+  "checks": [
+    "variable pages and beat counts",
+    "actual-audio timing",
+    "960x540 at 24fps",
+    "Chinese stroke tips and punctuation",
+    "tiny isolated color patch",
+    "ink-only artwork",
+    "full H264/AAC decode",
+    "runtime fixtures cannot be delivered",
+    "changed manifest blocks old verification"
+  ]
+}
