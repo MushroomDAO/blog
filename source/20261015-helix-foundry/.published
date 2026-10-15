@@ -8,5 +8,6 @@
   "kb": "original bot KB reused; research project mined1file2drawers, exactslug1; ledger export3",
   "semanticIndex": "zh/en upsert; public query rank1 score0.6283455",
   "verification": "39 upstream tests passed using real DuckDB, in-memory metadata and provider fixtures; no live SaaS, model or HelixDB persistence test",
-  "git": "article49aad6e; records pending push/review"
+  "git": "article49aad6e and records6812215 pushed; PR95 pending normal review/merge stacked on Anthropic workshop",
+  "prUrl": "https://github.com/MushroomDAO/blog/pull/95"
 }
