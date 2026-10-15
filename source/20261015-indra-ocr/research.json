@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-15",
+  "task": "1e875eb7-832d-4404-8b6c-624e2a8578eb",
+  "sources": [
+    "https://github.com/datalab-to/indra",
+    "https://www.datalab.to/blog/indra-ocr",
+    "https://huggingface.co/datalab-to/indra-ocr",
+    "https://huggingface.co/datalab-to/indra-ocr/blob/main/LICENSE"
+  ],
+  "codeCommit": "3d773aeedc5d79d1d0a2a04007a9075cd71a59f4",
+  "packageVersion": "0.3.2",
+  "modelRevision": "ed345c7f158eddbc7dee0c6a7269afb75a94f7e8",
+  "modelTag": "v3.1.1",
+  "dedup": "OnlyrawbotKBentity, exactrepo/blogURLs clear. BotpriorbroadPaddleOCR/Datalab hits unrelated. No existingBlog/localM2/currentdraft; published48001gap.",
+  "licenses": {
+    "code": "Apache2",
+    "weights": "ModifiedOpenRAIL-M; >20Mpriorgrossrevenue or >20Mcumulativeequity/debt and competitionclause, personal/research exceptions pertext"
+  },
+  "authorBenchmarkBoundaries": [
+    "49.4pps32coreEPYC/same300pages/OCR/singlethreadworkerpercore/Indra3runsothers1/excludesload+warmup",
+    "37.7pps includesload in300pagejob;4coresteady7.3",
+    "228msmedian4vCPUauto vs303OCR, cannotinversebatchthroughput",
+    "auto41.3text vsOCR33.5 vsPPv6text35.8 vsPPStructurefull55.6",
+    "OPB16288passfailchecks2937pages, notCER; PPStructure19pagesomitted",
+    "mathresultsseparatebench timing andtable54.8belowdefault56.4",
+    "1Mmainrecognizer nottotal6modelbundle18158743B",
+    "Chinese136checks64.7 vsPPv5mobile65.4, notsamePPv6comparator"
+  ],
+  "ownValidation": {
+    "hardware": "M4 16GB",
+    "provider": "CPUExecutionProvider",
+    "threads": 2,
+    "cases": 3,
+    "fixtures": 2,
+    "assertions": "nonerror/nonemptytext+markdown+blocks, finiteorderedlineboxes, identifiers/amounts and sourcepath",
+    "englishPathsSameText": true,
+    "chineseExtraLine": "t",
+    "upstreamTestsPassed": 27,
+    "throughputBenchmark": false,
+    "OPBReproduction": false,
+    "mathTests": false,
+    "complexTableOrHandwritingTests": false
+  },
+  "banner": {
+    "generator": "localFLUX.2Klein4B",
+    "seed": 119,
+    "bytes": 67973,
+    "verification": "machine+rootvisualpass",
+    "discardedSeeds": [
+      117,
+      118
+    ],
+    "reason": "hardware lettering despite OCRpass; removed equipment entirely"
+  },
+  "weightsLicenseExceptionScope": "Personal/research exceptions in revenue/funding clauses; not generalized to competingproducts clause"
+}
