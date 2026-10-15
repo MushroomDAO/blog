@@ -1,0 +1,28 @@
+{
+  "asOf": "2026-10-15",
+  "repository": "https://github.com/HelixDB/helix-foundry",
+  "commit": "00d7927d7c08e16c58316e006959f052427e7fa1",
+  "license": "Apache-2.0",
+  "dedup": "Exact source URL and hyphenated slug absent from publication ledgers. Exact phrase only in original bot KB. Name checker splits common Foundry/Helix tokens, producing unrelated hits. Remote drafts empty; published list permission48001 unavailable. No existing Helix publication receipt found.",
+  "architecture": "HelixDB metadata/ontology; local Parquet snapshots; isolated DuckDB queries; S3 import connector, not mandatory snapshot backend.",
+  "limits": [
+    "single-user loopback app without login",
+    "deterministic initial ontology and optional AI descriptions",
+    "execution validation does not prove business semantics",
+    "object edits are overlays, not source writeback",
+    "hosted AI context can leave device"
+  ],
+  "localVerification": {
+    "command": "pnpm build:sdk && pnpm exec vitest run tests/onboarding-ontology.test.ts tests/analyst-trace.test.ts",
+    "testFiles": 2,
+    "passed": 39,
+    "durationSeconds": 6.57,
+    "scope": "Unmodified upstream tests: real local DuckDB, in-memory metadata, mocked executor transport/provider fixtures; no real HelixDB, cloud AI or SaaS integration."
+  },
+  "banner": {
+    "source": "https://raw.githubusercontent.com/HelixDB/helix-foundry/00d7927d7c08e16c58316e006959f052427e7fa1/docs/assets/hero.png",
+    "bytes": 87001,
+    "dimensions": "1200x630",
+    "verified": "provenance/framing/faces pass, official UI text allowed; manually inspected"
+  }
+}

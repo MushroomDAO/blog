@@ -1,0 +1,15 @@
+{
+  "titleLength": 30,
+  "titleEnLength": 39,
+  "descriptionLength": 153,
+  "descriptionEnLength": 154,
+  "wechatTitleLength": 22,
+  "wechatDigestLength": 29,
+  "bilingual": true,
+  "bodyImageReferences": 6,
+  "copyright": true,
+  "BLUF": true,
+  "FAQ": true,
+  "sourcePin": true,
+  "independentAnalysis": "Identity resolution and business definitions require review; single-user boundary; S3 import role; 39 tests scoped with fixtures, no full-stack claims."
+}

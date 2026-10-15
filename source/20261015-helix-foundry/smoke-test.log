@@ -1,0 +1,30 @@
+
+> helix-foundry@ build:sdk /private/tmp/helix-foundry-20261015
+> pnpm --filter @helix-foundry/shared build && pnpm --filter @helix-foundry/sdk build
+
+
+> @helix-foundry/shared@0.1.0 build /private/tmp/helix-foundry-20261015/packages/shared
+> tsc -p tsconfig.build.json
+
+
+> @helix-foundry/sdk@0.1.0 build /private/tmp/helix-foundry-20261015/packages/sdk
+> tsc -p tsconfig.build.json
+
+
+ RUN  v3.2.7 /private/tmp/helix-foundry-20261015
+
+ ✓ tests/analyst-trace.test.ts (24 tests) 237ms
+ ✓ tests/onboarding-ontology.test.ts (15 tests) 3388ms
+   ✓ confirms a reviewed ontology, builds a pipeline-backed view from it and publishes it  309ms
+   ✓ publishes a computed overview without calling the model  309ms
+   ✓ queues a build left waiting for the former review page again on confirm  338ms
+   ✓ finishes publishing once started and refuses Stop meanwhile  310ms
+   ✓ restarts a failed build on Retry or on confirming again, as the acting owner  319ms
+   ✓ serves the published records as a graph, whole or around one record  429ms
+   ✓ tries a build again by itself when the database stops, and resumes it  447ms
+
+ Test Files  2 passed (2)
+      Tests  39 passed (39)
+   Start at  08:53:00
+   Duration  6.57s (transform 286ms, setup 0ms, collect 2.71s, tests 3.63s, environment 0ms, prepare 46ms)
+

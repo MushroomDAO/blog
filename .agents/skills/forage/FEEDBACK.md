@@ -654,3 +654,10 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - Useralsoincluded unrelatedBetterRemoteDisplay; optionalscopequestionoffered, noanswer, statedassumptionKBonly. JinaReader+rawREADMEfetch succeeded, noimagesfound; macOS14+HiDPI/privateCGVirtualDisplay/sourcebuildvsMASlimitscaptured. RawbotKB reused; fullsourcebody+summaryadded withoutsecondarticle.
 - FLUX109linkedfolderscover+3Xiao-Mfigs; bilingual/list1/fourimages200/currentdraft/get0cover+3images/pin/scope. Media_id prCUE631thH1cmNLi42prJ4Ln7AdTzhFrd5nTcB-UZBhdEKsNINP_sNvNGu4Ek3x ; zh/enupsert/publicqueryfirst0.8114744; MemPalacemine3files14drawers/exactslug2/Bettermentions13/export18. Task54b73c78-57dc-4f1c-8192-37a6009bdf9b.
 - Article and proof records pushed; PR94 https://github.com/MushroomDAO/blog/pull/94 pending normal review/merge stacked on Raven. Blog verified live independently.
+
+## 2026-10-15 — Helix Foundry
+
+- https://blog.mushroom.cv/blog/helix-foundry-company-ontology/ ; official HelixDB/helix-foundry, Apache-2.0, pinned00d7927d7c08e16c58316e006959f052427e7fa1. Exact URL/slug absent, original KB only; generic Foundry token false positives reviewed. Remote published-list48001 gap, draftbox empty before creation.
+- HelixDB ontology/control state, local Parquet snapshots, DuckDB isolated SQL; S3 is import source. Deterministic initial ontology with AI descriptions, subsequent reviewed proposals. Single-user/no-login/loopback only; local inference default, explicit hosted providers send bounded context. Executed SQL is traceable but does not establish business semantics; object overlays do not write back source records.
+- Two unmodified upstream suites39passed; real DuckDB, MemoryStore and mocked provider/transport, no live SaaS, inference or HelixDB persistence test. Official graph UI adopted cover87001bytes+3 Xiao-M figures43163/52998/43232bytes, bilingual references. Blog list2/fourimages200; current draft/get verified cover+3images.
+- Media_id prCUE631thH1cmNLi42prJ3I9UAhSeiPmaSDMw0Y5VKKJ1ubi-ooBws7dH4gaF0O; semantic query first score0.6283455; MemPalace mine1file2drawers/exactslug1, ledgerexport3. Task8ed8bf8a-2da2-46f1-af9e-3d522324310c.
