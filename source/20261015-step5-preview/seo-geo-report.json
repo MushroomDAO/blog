@@ -1,0 +1,14 @@
+{
+  "titleLength": 41,
+  "titleEnLength": 46,
+  "descriptionLength": 160,
+  "descriptionEnLength": 154,
+  "wechatTitleLength": 22,
+  "wechatDigestLength": 33,
+  "bilingual": true,
+  "BLUF": true,
+  "FAQ": true,
+  "bodyImageReferences": 6,
+  "copyright": true,
+  "independentAnalysis": "Active vs total memory, context vs concurrency, model aliases/ports, draft dependency boundary, tokenbudget explanation and conditionalaccuracy caveat; no own inference/RL benchmark."
+}
