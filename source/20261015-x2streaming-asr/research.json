@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-15",
+  "codeCommit": "0aca80597bb1399c0be4002de5bc62c0a779c542",
+  "modelRevision": "4c8df16b8d7f8b50c95590c4d7907436ebe4aa08",
+  "paperVersion": "2609.08672v4",
+  "sources": [
+    "https://github.com/X-Square-Robot/X2Streaming-ASR",
+    "https://huggingface.co/x-square-robot/X2Streaming-ASR-4B-1009",
+    "https://arxiv.org/abs/2609.08672v4"
+  ],
+  "retrieval": "agent-reach unavailable; Jina Reader plus raw Git/HF and PDF cross-check",
+  "ownValidation": {
+    "hardware": "Apple M4 16GB",
+    "cliHelpExitCode": 0,
+    "modelInference": false,
+    "benchmarks": false,
+    "weightsDownloaded": false
+  },
+  "keyBoundaries": [
+    "commit latency relative to forced-aligned acoustic endpoints, not demonstrated full interaction latency",
+    "append-only does not imply correct transcription or complete intent",
+    "paper v4 forced t_end+640ms comparison mean401ms; README396ms",
+    "10 datasets, README12 rows splits AISHELL2",
+    "default demo offline enabled; final_text may come from offline result",
+    "inference-only repository; no released full GRPO training pipeline"
+  ],
+  "savedFiles": [
+    "/Users/jason/.heinu1-bot/media/x2streaming-asr-beaver_logo-20261015.png",
+    "/Users/jason/.heinu1-bot/media/x2streaming-asr-features_grid_en-20261015.png",
+    "/Users/jason/.heinu1-bot/media/x2streaming-asr-features_grid_zh-20261015.png",
+    "/Users/jason/.heinu1-bot/media/x2streaming-asr-readme_results-20261015.png",
+    "/Users/jason/.heinu1-bot/media/x2streaming-asr-readme_use_cases-20261015.png",
+    "/Users/jason/.heinu1-bot/media/x2streaming-asr-readme_why-20261015.png",
+    "/Users/jason/.heinu1-bot/media/x2streaming-asr-streaming_asr-20261015.png"
+  ]
+}
