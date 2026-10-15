@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-15",
+  "task": "11b1f817-901b-4670-8b8f-0b8462003b5d",
+  "source": "https://github.com/rasonyang/ai-native-callcenter",
+  "commit": "b4a1ceb4abdd7ab183df576e65f7a5e013f7e23e",
+  "license": "Apache-2.0",
+  "latestRelease": "v0.4.0",
+  "latestReleaseDate": "2026-10-10",
+  "releaseVsMain": "Article source pinned current main, releaseinstaller may differ; select fixedreleaseforreproducibility",
+  "dedup": "ExactrepoURLclear; onlyoriginalbotKBentity; two unrelatedAI-nativearticles33percenttitle matches excluded. No oldarticle/localM2/currentdraft. Publishedlist48001gap.",
+  "keyCorrections": [
+    "Go embedsREST/SSE/WebUI, NOT FreeSWITCH/PostgreSQL",
+    "One-lineinstaller usesDockerCompose published app+FreeSWITCHimages andPostgres; notzeroexternaldependencies",
+    "Human browsercontrols but audio requiresseparateweb-sip-phoneChromeextension",
+    "Cloudprovidersreceiveaudio; selfhostingnotdataresidency",
+    "gatewayprotocolsupportdoesnotprovefullyofflineprivateinference",
+    "SingletenantdeploymentperAGENTS",
+    "Providerselectedatstartup, language doesnotselectprovider",
+    "Officialperformanceclaims prohibiteduntilnondevbenchmarkcampaign; no verifiedproductioncapacityclaim"
+  ],
+  "ownValidation": {
+    "hardware": "M4 16GB",
+    "goVersion": "1.27.1 darwin/arm64",
+    "command": "go test -race -json ./internal/flow ./internal/flowsim",
+    "passedTopLevelTests": 109,
+    "passedEventsIncludingSubtests": 231,
+    "skipped": 1,
+    "skipTest": "TestLiveSeedScenarios",
+    "failed": 0,
+    "installerFixtureTestsPassed": 121,
+    "installerFixtureFailures": 0,
+    "fullStackDeployed": false,
+    "liveModelCalls": false,
+    "paidOutboundCalls": false,
+    "humanAudioTransfer": false,
+    "loadTest": false
+  },
+  "bannerDecision": "Onlyofficialasset is text-heavy prototypeUI GIF, inspected; generated matchedheadset/networkappliance cover instead.",
+  "banner": {
+    "generator": "local FLUX.2 Klein4B",
+    "seed": 116,
+    "bytes": 83588,
+    "verification": "machine and root visual passed",
+    "discardedSeed115": "tiny equipment markings despite OCR pass; simplified subject"
+  },
+  "releaseInstallerFlagsChecked": [
+    "--check",
+    "--provider none"
+  ]
+}

@@ -1,0 +1,28 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6ad0ebac-3ae03991-1ef67f6a）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 836 篇 + 公众号草稿箱 6 条 + 本地发布记录 819 条 + MemPalace 1741 抽屉
+
+── 查：https://github.com/rasonyang/ai-native-callcenter
+   ✅ 四本账都没查到
+
+── 查：ai-native-callcenter
+   ⚠️  [BLOG  ] 普通组织的 AI-native 转型路线：6 步框架
+      标题相似度 33%
+   ⚠️  [BLOG  ] AI Native 的三个层级：个人、组织与区域
+      标题相似度 33%
+   ⚠️  [发过 2026-04-30] 普通组织的 AI-native 转型路线：6 步框架
+      标题相似度 33%
+   ⚠️  [发过 2026-04-30] AI Native 的三个层级：个人、组织与区域
+      标题相似度 33%
+   ❌ [知识库] # 一行命令自建AI呼叫中心  **Summary**: 一行命令自建AI呼叫中心 GitHub 趋势榜上的新东西，把自
+      正文出现实体名「ai-native-callcenter」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

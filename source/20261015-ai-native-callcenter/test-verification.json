@@ -1,0 +1,22 @@
+{
+  "command": "go test -race -json ./internal/flow ./internal/flowsim",
+  "topLevelPassed": 109,
+  "passedIncludingSubtests": 231,
+  "skipped": [
+    "TestLiveSeedScenarios"
+  ],
+  "failed": 0,
+  "packages": [
+    {
+      "package": "github.com/rasonyang/ai-native-callcenter/internal/flow",
+      "status": "pass"
+    },
+    {
+      "package": "github.com/rasonyang/ai-native-callcenter/internal/flowsim",
+      "status": "pass"
+    }
+  ],
+  "installerFixtureTests": 121,
+  "installerFailures": 0,
+  "scope": "No fullstack/realcall/paidprovider/transfer/loadrun"
+}
