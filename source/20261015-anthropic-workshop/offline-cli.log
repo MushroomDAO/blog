@@ -1,0 +1,10 @@
+
+Available breakouts:
+  00-warmup               This is the company-briefing agent from the guided demo, but assembled
+  account-intelligence    Build a pre-renewal briefing agent. Before an AE walks into a renewal 
+  chief-of-staff          Build an agent that manages an executive's calendar, prepares meeting 
+  customer-support        Build a tier-1 support agent that triages tickets, searches the knowle
+  freeform                You have your own use case in mind. Here's a blank canvas with the ful
+  sre-agent               Build an on-call assistant that investigates production alerts, correl
+
+Run one with: ./workshop breakout <name>
