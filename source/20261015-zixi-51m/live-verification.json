@@ -1,0 +1,37 @@
+{
+  "url": "https://blog.mushroom.cv/blog/zixi-51m-mac-local-tts/",
+  "status": 200,
+  "images": [
+    {
+      "url": "https://blog.mushroom.cv/_astro/zixi-51m-mac-local-tts-banner.Ct7D1tHZ_Z1HuDgD.webp",
+      "status": 200,
+      "bytes": 22370
+    },
+    {
+      "url": "https://blog.mushroom.cv/_astro/zixi-51m-mac-local-tts-fig-01.CMuCAc1A_Z93oRX.webp",
+      "status": 200,
+      "bytes": 27784
+    },
+    {
+      "url": "https://blog.mushroom.cv/_astro/zixi-51m-mac-local-tts-fig-02.d9863aSU_277AKu.webp",
+      "status": 200,
+      "bytes": 23690
+    },
+    {
+      "url": "https://blog.mushroom.cv/_astro/zixi-51m-mac-local-tts-fig-03.B91v8kSh_2lX5bW.webp",
+      "status": 200,
+      "bytes": 36964
+    }
+  ],
+  "listPosition": 5,
+  "englishColumn": true,
+  "documentedScope": true,
+  "pinnedSourceInArticle": true,
+  "audio": {
+    "url": "https://blog.mushroom.cv/audio/zixi-51m-mps-smoke.wav",
+    "status": 200,
+    "bytes": 538272,
+    "wavHeader": true,
+    "matchesLocalSHA256": true
+  }
+}
