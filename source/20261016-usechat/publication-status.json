@@ -7,7 +7,7 @@
   "blogStatus": "new",
   "blog": "200,bilingual,all4images200,pin/scopeverified,listPosition3",
   "kb": "Raw bot material reused; research memory mined with two source files; exact slug2; ledger exported6",
-  "semanticIndex": "zh/en upsert accepted; manifest2unchanged; public propagation pending",
+  "semanticIndex": "zh/en upsert accepted; manifest2unchanged; public query rank1 score0.7079384",
   "scope": {
     "build": "passed via pnpm -r build; root wrapper initially failed missing corepack",
     "typecheck": "passed",
@@ -21,5 +21,7 @@
       "native Helper",
       "paid vision endpoint"
     ]
-  }
+  },
+  "prUrl": "https://github.com/MushroomDAO/blog/pull/107",
+  "git": "Articlec82e76b, evidence2ecede7 pushed; PR107 normal review, stacked on Valtz"
 }

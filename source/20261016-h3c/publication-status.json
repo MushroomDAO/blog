@@ -7,7 +7,7 @@
   "blogStatus": "new",
   "blog": "200,bilingual,all4images200,pin/scopeverified,listPosition1",
   "kb": "Raw bot material reused; research memory mined with two source files; exact slug2; ledger exported6",
-  "semanticIndex": "zh/en upsert accepted; manifest2unchanged; public propagation pending",
+  "semanticIndex": "zh/en upsert accepted; manifest2unchanged; public query rank1 score0.80259645",
   "scope": {
     "build": "make -j4 passed",
     "tests": "make test passed",
@@ -25,5 +25,7 @@
       "end-to-end memory or latency",
       "full MLX/model parity"
     ]
-  }
+  },
+  "prUrl": "https://github.com/MushroomDAO/blog/pull/107",
+  "git": "Articlec82e76b, evidence2ecede7 pushed; PR107 normal review, stacked on Valtz"
 }
