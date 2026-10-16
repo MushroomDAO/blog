@@ -1,0 +1,9 @@
+=== [verify-banner] src/assets/images/valtz-local-ai-creative-studio-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=https://raw.githubusercontent.com/tgo-app-dev/valtz/cc02e25140571a18fad103f9cd6cf0190c5e97c1/docs/images/1c_preview.png crop=1740x840+524+260
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 81651B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/valtz-local-ai-creative-studio-banner.jpg ===

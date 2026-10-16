@@ -1,0 +1,12 @@
+[ RUN  ] controller.upscalers_run_as_settings_have_them
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-26253/ctl-upscale-settings-1/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+    FAILED /tmp/valtz-20261016/tests/controller-test.cc:5966: v["tuning"]["values"]["i8_gemm"] == !m5
+valtz info  [project] created upscale (01a1439e-01bc-7e6e-b2dd-2c332078a205)
+valtz info  [project] imported small.png as copied image (PNG, 32x24, BT.709 sRGB (full))
+    FAILED /tmp/valtz-20261016/tests/controller-test.cc:5997: t["i8_gemm"] == !m5
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-26253/ctl-upscale-settings-1/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+[ FAIL ] controller.upscalers_run_as_settings_have_them
+
+1 ran, 0 passed, 1 failed, 0 skipped

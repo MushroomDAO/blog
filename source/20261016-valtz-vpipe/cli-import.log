@@ -1,0 +1,7 @@
+valtz info  [cache] /Users/jason/Library/Application Support/com.tgous.valtz/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] imported original.png as copied image (PNG, 64x64, untagged)
+{"job":"01a1439d-7281-7d40-82ad-b329008d6625","kind":"job.queued","op":"import","purpose":"import","seq":3,"title":"Import original.png"}
+{"asset":"01a1439d-7283-778f-9481-63e2f2f86694","job":"01a1439d-7281-7d40-82ad-b329008d6625","kind":"assets.changed","project":"01a1439d-7218-7b6e-a645-b56aa4657155","reason":"imported","seq":4}
+{"job":"01a1439d-7281-7d40-82ad-b329008d6625","kind":"job.progress","progress":1.0,"seq":5}
+{"imported":1,"job":"01a1439d-7281-7d40-82ad-b329008d6625","kind":"job.finished","project":"01a1439d-7218-7b6e-a645-b56aa4657155","seq":6}
