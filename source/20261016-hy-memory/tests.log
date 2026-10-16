@@ -1,0 +1,52 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0
+rootdir: /private/tmp/hy-memory-20261016
+configfile: pyproject.toml
+plugins: asyncio-1.4.0, anyio-4.15.1
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 42 items
+
+tests/test_models.py::TestEnums::test_memory_layer_values PASSED         [  2%]
+tests/test_models.py::TestEnums::test_memory_layer_from_string PASSED    [  4%]
+tests/test_models.py::TestEnums::test_memory_layer_invalid_string PASSED [  7%]
+tests/test_models.py::TestEnums::test_memory_input_type_values PASSED    [  9%]
+tests/test_models.py::TestEnums::test_agent_process_mode_values PASSED   [ 11%]
+tests/test_models.py::TestEnums::test_task_status_values PASSED          [ 14%]
+tests/test_models.py::TestEnums::test_delete_scope_values PASSED         [ 16%]
+tests/test_models.py::TestQAPair::test_qa_pair_creation PASSED           [ 19%]
+tests/test_models.py::TestQAPair::test_qa_pair_to_dict PASSED            [ 21%]
+tests/test_models.py::TestQAPair::test_qa_pair_from_dict PASSED          [ 23%]
+tests/test_models.py::TestQAPair::test_qa_pair_to_content PASSED         [ 26%]
+tests/test_models.py::TestAddRequest::test_add_request_text_basic PASSED [ 28%]
+tests/test_models.py::TestAddRequest::test_add_request_qa PASSED         [ 30%]
+tests/test_models.py::TestAddRequest::test_add_request_get_content_text PASSED [ 33%]
+tests/test_models.py::TestAddRequest::test_add_request_get_content_qa PASSED [ 35%]
+tests/test_models.py::TestAddRequest::test_add_request_validates_text_content PASSED [ 38%]
+tests/test_models.py::TestAddRequest::test_add_request_validates_qa_pair PASSED [ 40%]
+tests/test_models.py::TestAddRequest::test_add_request_layer_normalization PASSED [ 42%]
+tests/test_models.py::TestAddRequest::test_add_request_agent_mode_normalization PASSED [ 45%]
+tests/test_models.py::TestAddRequest::test_add_request_auto_extract_compatibility PASSED [ 47%]
+tests/test_models.py::TestAddRequest::test_add_request_to_dict PASSED    [ 50%]
+tests/test_models.py::TestAddResponse::test_add_response_success PASSED  [ 52%]
+tests/test_models.py::TestAddResponse::test_add_response_with_extracted_ids PASSED [ 54%]
+tests/test_models.py::TestAddResponse::test_add_response_to_dict PASSED  [ 57%]
+tests/test_models.py::TestAsyncAddResponse::test_async_response PASSED   [ 59%]
+tests/test_models.py::TestAsyncAddResponse::test_async_response_to_dict PASSED [ 61%]
+tests/test_models.py::TestRecallRequest::test_recall_request_basic PASSED [ 64%]
+tests/test_models.py::TestRecallRequest::test_recall_request_with_filters PASSED [ 66%]
+tests/test_models.py::TestRecallRequest::test_recall_request_weights PASSED [ 69%]
+tests/test_models.py::TestMemoryEntry::test_memory_entry_creation PASSED [ 71%]
+tests/test_models.py::TestMemoryEntry::test_memory_entry_build_isolation_key PASSED [ 73%]
+tests/test_models.py::TestMemoryEntry::test_memory_entry_to_dict PASSED  [ 76%]
+tests/test_models.py::TestBatchDeleteRequest::test_batch_delete_by_ids PASSED [ 78%]
+tests/test_models.py::TestBatchDeleteRequest::test_batch_delete_by_scene PASSED [ 80%]
+tests/test_models.py::TestBatchDeleteRequest::test_batch_delete_dangerous_requires_confirm PASSED [ 83%]
+tests/test_lite_mode_rag.py::test_lite_add_then_search_returns_raw_memory PASSED [ 85%]
+tests/test_lite_mode_rag.py::test_lite_ignores_layers_and_scene_and_returns_only_raw PASSED [ 88%]
+tests/test_lite_mode_rag.py::test_lite_add_with_tools_still_writes_only_raw PASSED [ 90%]
+tests/test_lite_mode_rag.py::test_pro_default_search_still_hides_raw PASSED [ 92%]
+tests/test_source_filtering.py::test_source_normalization_and_exclude_precedence PASSED [ 95%]
+tests/test_source_filtering.py::test_vector_source_filter_is_applied_before_limit[chroma] PASSED [ 97%]
+tests/test_source_filtering.py::test_evolution_chain_does_not_leak_excluded_source PASSED [100%]
+
+============================= 42 passed in 12.13s ==============================

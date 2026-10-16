@@ -1,0 +1,14 @@
+=== [banner-creator] hy-memory-sdk-memhub-memory-writer → src/assets/images/hy-memory-sdk-memhub-memory-writer-banner.jpg (seed=125, 1200x630, <98KB) ===
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:07<01:57,  7.81s/it] 12%|█▎        | 2/16 [00:14<01:41,  7.24s/it] 19%|█▉        | 3/16 [00:21<01:31,  7.07s/it] 25%|██▌       | 4/16 [00:28<01:24,  7.02s/it] 31%|███▏      | 5/16 [00:35<01:17,  7.01s/it] 38%|███▊      | 6/16 [00:42<01:09,  6.98s/it] 44%|████▍     | 7/16 [00:49<01:03,  7.01s/it] 50%|█████     | 8/16 [00:56<00:55,  6.99s/it] 56%|█████▋    | 9/16 [01:03<00:48,  6.98s/it] 62%|██████▎   | 10/16 [01:10<00:41,  6.98s/it] 69%|██████▉   | 11/16 [01:17<00:34,  6.95s/it] 75%|███████▌  | 12/16 [01:24<00:27,  6.93s/it] 81%|████████▏ | 13/16 [01:31<00:20,  6.93s/it] 88%|████████▊ | 14/16 [01:37<00:13,  6.90s/it] 94%|█████████▍| 15/16 [01:44<00:06,  6.88s/it]100%|██████████| 16/16 [01:51<00:00,  6.86s/it]100%|██████████| 16/16 [01:51<00:00,  6.97s/it]
+Peak MLX memory: 7.96 GB
+=== [banner-creator] done: src/assets/images/hy-memory-sdk-memhub-memory-writer-banner.jpg (1200x630, 90102B) ===
+=== [verify-banner] src/assets/images/hy-memory-sdk-memhub-memory-writer-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=125 steps=16
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 90102B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/hy-memory-sdk-memhub-memory-writer-banner.jpg ===
+PATH: src/assets/images/hy-memory-sdk-memhub-memory-writer-banner.jpg
