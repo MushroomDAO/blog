@@ -1,0 +1,9 @@
+Scope: 4 of 5 workspace projects
+packages/model-provider typecheck$ tsc -p tsconfig.json --noEmit
+packages/core typecheck$ tsc -p tsconfig.json --noEmit
+packages/model-provider typecheck: Done
+packages/core typecheck: Done
+packages/cli typecheck$ tsc -p tsconfig.json --noEmit
+packages/sdk typecheck$ tsc -p tsconfig.json --noEmit
+packages/sdk typecheck: Done
+packages/cli typecheck: Done

@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "created": true,
+  "configPath": "/tmp/usechat-smoke-20261016/config/config.json",
+  "config": {
+    "model": {},
+    "helper": {},
+    "output": {
+      "defaultFormat": "markdown"
+    },
+    "wechat": {
+      "sendRequiresConfirm": true
+    },
+    "dataDir": "/tmp/usechat-smoke-20261016/data"
+  },
+  "validation": {
+    "ok": false,
+    "issues": [
+      {
+        "path": "model.provider",
+        "reasonCode": "model_provider_missing",
+        "message": "请设置模型 provider，例如：usechat config set model.provider openai-compatible"
+      },
+      {
+        "path": "model.baseUrl",
+        "reasonCode": "model_base_url_missing",
+        "message": "请设置 OpenAI-compatible baseUrl，例如：usechat config set model.baseUrl https://api.openai.com/v1"
+      },
+      {
+        "path": "model.name",
+        "reasonCode": "model_name_missing",
+        "message": "请设置视觉模型名称，例如：usechat config set model.name gpt-4.1-mini"
+      },
+      {
+        "path": "model.apiKeyEnv",
+        "reasonCode": "model_api_key_env_missing",
+        "message": "请设置 API key 环境变量名，例如：usechat config set model.apiKeyEnv OPENAI_API_KEY"
+      }
+    ],
+    "config": {
+      "model": {},
+      "helper": {},
+      "output": {
+        "defaultFormat": "markdown"
+      },
+      "wechat": {
+        "sendRequiresConfirm": true
+      },
+      "dataDir": "/tmp/usechat-smoke-20261016/data"
+    }
+  }
+}
