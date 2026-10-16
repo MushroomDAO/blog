@@ -1,0 +1,40 @@
+{
+  "task": "f12e2847-75e8-4c33-ae44-c9704f0e9c03",
+  "checkedAt": "2026-10-16",
+  "host": "Apple M4, 16GB, macOS 26.6.2",
+  "agentReach": "Unavailable in installed tools and local skill locations; Jina Reader and official source fetch used instead",
+  "publishedApiGap": "48001; no permission to read published list",
+  "rawKB": "Bot already ingested raw material; reused, not duplicated",
+  "slug": "h3c-minimax-h3-metal-inference",
+  "sources": [
+    "https://github.com/antirez/h3.c"
+  ],
+  "pin": "8974cc055ea9c02fcd14cc27dfda3e1027c05153",
+  "dedup": "Only raw bot material naming antirez/h3.c; no same-topic Blog/local M2/current remote draft",
+  "scopeDecision": "Separate article by default material-publishing authorization; no response to optional two-topic clarification",
+  "validation": {
+    "build": "make -j4 passed",
+    "tests": "make test passed",
+    "hostChecks": 1768,
+    "audioPrimitives": 6,
+    "skippedFixtureBranches": 11,
+    "syntheticMp4Bytes": 51750,
+    "ffprobe": [
+      "h264 video",
+      "aac audio"
+    ],
+    "notTested": [
+      "MiniMax-H3 model weights",
+      "real generation",
+      "end-to-end memory or latency",
+      "full MLX/model parity"
+    ]
+  },
+  "saved_files": [],
+  "banner": {
+    "method": "local FLUX",
+    "seed": 122,
+    "rootVisual": "passed: empty photographic film and copper wave; no text/faces"
+  },
+  "illustrations": "Three independent generated XiaoM diagrams, root visual pass; 1280x720, under90000B; six bilingual refs"
+}

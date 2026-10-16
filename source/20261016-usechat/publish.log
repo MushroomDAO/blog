@@ -1,0 +1,55 @@
+🍄 publish-blog | user=mushroom project=blog-mushroom slug=usechat-wechat-agent-runtime
+[1/5] validating frontmatter & SEO…
+  ✓ 公众号标题「UseChat：把微信窗口接入Agent」(20 字)
+  ✓ frontmatter OK (tags=5, bilingual, banner present)
+[2/5] building…
+└─────────────────────────────────────────────────────────────────────────┘
+
+Finished in 2.615 seconds
+  ✓ route built: /blog/usechat-wechat-agent-runtime/
+[3/5] deploying to Cloudflare Pages (blog-mushroom)…
+  ⚠️ no CA bundle set (CF_CA_CERT/NODE_EXTRA_CA_CERTS) — falling back to TLS bypass.
+     To fix the root cause, point CF_CA_CERT at your proxy CA .pem.
+✨ Uploading _redirects
+✨ Uploading Functions bundle
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://488e1e19.blog-mushroom.pages.dev
+[4/5] validating live URL…
+  https://blog.mushroom.cv/blog/usechat-wechat-agent-runtime/ → 200
+[4.5] committing article to git…
+[pre-commit] 发布账本有更新，已一并加入本次提交
+[publish/usechat-h3c-reviews c82e76b] feat(blog): publish usechat-wechat-agent-runtime
+ 11 files changed, 455 insertions(+)
+ create mode 100644 src/assets/images/h3c-minimax-h3-metal-inference-banner.jpg
+ create mode 100644 src/assets/images/h3c-minimax-h3-metal-inference-fig-01.png
+ create mode 100644 src/assets/images/h3c-minimax-h3-metal-inference-fig-02.png
+ create mode 100644 src/assets/images/h3c-minimax-h3-metal-inference-fig-03.png
+ create mode 100644 src/assets/images/usechat-wechat-agent-runtime-banner.jpg
+ create mode 100644 src/assets/images/usechat-wechat-agent-runtime-fig-01.png
+ create mode 100644 src/assets/images/usechat-wechat-agent-runtime-fig-02.png
+ create mode 100644 src/assets/images/usechat-wechat-agent-runtime-fig-03.png
+ create mode 100644 src/content/blog/h3c-minimax-h3-metal-inference.md
+ create mode 100644 src/content/blog/usechat-wechat-agent-runtime.md
+  ✓ committed
+  ✓ 远端已同步
+[4.7] updating semantic search index for usechat-wechat-agent-runtime…
+checking 1 article(s) (usechat-wechat-agent-runtime)
+diff: 2 changed/new, 0 unchanged (wrote /Users/jason/Dev/mycelium/blog/semantic-search/eval/incremental-index-plan.json)
+  + usechat-wechat-agent-runtime [zh]
+  + usechat-wechat-agent-runtime [en]
+embedding 2 changed record(s) (calls Workers AI)...
+  verifying batch order on 2 samples...
+  batch order verified OK
+  embedding incremental 1-2/2...
+TARGET: account=7bf23342f21baa5ebfc7bc7b74f5a1f2 index=blog-search-v1 vectors=2
+  upserted 1-2/2: True
+updated manifest for 1 article(s)
+  ✓ search index updated
+[5/5] creating WeChat draft… (egress IP: 223.206.43.10 — must be in the WeChat IP allowlist; 40164 = not whitelisted)
+   Title: UseChat：把微信窗口接入Agent
+✅ Draft created: media_id=prCUE631thH1cmNLi42prAstar_FkxVGmUVha5dukh8caIbeMoxMu3Gh9LH4Lo1J
+   Title: UseChat：把微信窗口接入Agent
+  ✓ recorded mapping: usechat-wechat-agent-runtime → prCUE631thH1cmNL…
+[5.8] refreshing local knowledge base…
+  ⏭  ~/mycelium-kb/kb-refresh.sh 不存在,跳过
+✅ done → https://blog.mushroom.cv/blog/usechat-wechat-agent-runtime/

@@ -1,0 +1,23 @@
+{
+  "ok": false,
+  "platform": "darwin",
+  "checks": [
+    {
+      "id": "platform",
+      "ok": true,
+      "message": "平台支持：darwin"
+    },
+    {
+      "id": "model",
+      "ok": false,
+      "reasonCode": "model_not_configured",
+      "message": "模型未完整配置；read 需要 model.provider/baseUrl/name/apiKeyEnv。"
+    },
+    {
+      "id": "helper",
+      "ok": false,
+      "reasonCode": "helper_manifest_missing",
+      "message": "WeChat channel helper manifest is missing: /tmp/usechat-smoke-20261016/missing-helper/manifest.json"
+    }
+  ]
+}
