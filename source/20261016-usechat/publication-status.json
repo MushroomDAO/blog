@@ -1,0 +1,25 @@
+{
+  "slug": "usechat-wechat-agent-runtime",
+  "blogUrl": "https://blog.mushroom.cv/blog/usechat-wechat-agent-runtime/",
+  "mediaId": "prCUE631thH1cmNLi42prAstar_FkxVGmUVha5dukh8caIbeMoxMu3Gh9LH4Lo1J",
+  "wechatStatus": "draft",
+  "task": "f12e2847-75e8-4c33-ae44-c9704f0e9c03",
+  "blogStatus": "new",
+  "blog": "200,bilingual,all4images200,pin/scopeverified,listPosition3",
+  "kb": "Raw bot material reused; research memory mined with two source files; exact slug2; ledger exported6",
+  "semanticIndex": "zh/en upsert accepted; manifest2unchanged; public propagation pending",
+  "scope": {
+    "build": "passed via pnpm -r build; root wrapper initially failed missing corepack",
+    "typecheck": "passed",
+    "tests": 132,
+    "passed": 129,
+    "failed": 3,
+    "failure": "CLI dry-run without Helper fails manifest_missing; reproduced with isolated config",
+    "notTested": [
+      "real chat capture",
+      "real read/write",
+      "native Helper",
+      "paid vision endpoint"
+    ]
+  }
+}

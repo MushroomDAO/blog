@@ -1,0 +1,29 @@
+{
+  "slug": "h3c-minimax-h3-metal-inference",
+  "blogUrl": "https://blog.mushroom.cv/blog/h3c-minimax-h3-metal-inference/",
+  "mediaId": "prCUE631thH1cmNLi42prDqaVW2Wlhq34htEGWKPu5J5obJtwYh9LsggIX-DgOJ_",
+  "wechatStatus": "draft",
+  "task": "f12e2847-75e8-4c33-ae44-c9704f0e9c03",
+  "blogStatus": "new",
+  "blog": "200,bilingual,all4images200,pin/scopeverified,listPosition1",
+  "kb": "Raw bot material reused; research memory mined with two source files; exact slug2; ledger exported6",
+  "semanticIndex": "zh/en upsert accepted; manifest2unchanged; public propagation pending",
+  "scope": {
+    "build": "make -j4 passed",
+    "tests": "make test passed",
+    "hostChecks": 1768,
+    "audioPrimitives": 6,
+    "skippedFixtureBranches": 11,
+    "syntheticMp4Bytes": 51750,
+    "ffprobe": [
+      "h264 video",
+      "aac audio"
+    ],
+    "notTested": [
+      "MiniMax-H3 model weights",
+      "real generation",
+      "end-to-end memory or latency",
+      "full MLX/model parity"
+    ]
+  }
+}
