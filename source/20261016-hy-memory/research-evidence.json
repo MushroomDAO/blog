@@ -1,0 +1,51 @@
+{
+  "task": "2aba3080-5fdc-4def-8c23-f8b9fe20c58b",
+  "checkedAt": "2026-10-16",
+  "slug": "hy-memory-sdk-memhub-memory-writer",
+  "sources": [
+    "https://github.com/Tencent-Hunyuan/Hy-Memory",
+    "https://huggingface.co/tencent/Hy-Memory-30B-A3B"
+  ],
+  "dedup": "Exact primary URLs clear; entities only newly ingested bot material; no same-topic Blog/localM2/currentdraft. RawKB reused",
+  "publishedApiGap": "48001 unauthorized",
+  "fetch": "Line-broken paths repaired. agent-reach unavailable; both Jina Reader pages and official raw README/config fetched. Jina published timestamp not used as release evidence",
+  "model": {
+    "role": "memorywriter notgeneralanswerer",
+    "totalWeightBytes": 60129463808,
+    "activeParametersApprox": "3B",
+    "totalParametersApprox": "30B",
+    "loadedLocally": false,
+    "eval": "Author fixed20percent subset, sixmetricmean/framework then fourframeworkmean, writeronlychanged;55.49vs54.62notgeneralcapability; noCIinquotedtables"
+  },
+  "validation": {
+    "host": "M4/16GB/macOS26.6.2/Python3.12",
+    "environment": "isolatedvenv,sourceeditable[dev]",
+    "tests": 42,
+    "passed": 42,
+    "scope": "upstream models/lite/source normalization/Chroma source-before-limit/evolutionchainexclusion",
+    "fixture": "litefixed8dimembeddings andmockcomponents; no networksemanticqualitytest",
+    "notTested": [
+      "fullsuite",
+      "30Bmodel",
+      "paidmodels",
+      "MemHubGUI/backgroundruntime",
+      "crossappimports",
+      "endtoendbenchmarks"
+    ]
+  },
+  "installGap": "publicnpm memhub-cli/latest404; v1.0.0assets Macarm64DMG+Linuxarm64/x64ZIP, no standalone releasemanifest inattachments; noclaimallartifactsbroken",
+  "saved_files": [
+    "/Users/jason/.heinu1-bot/media/hy-memory-repo-logo.png",
+    "/Users/jason/.heinu1-bot/media/hy-memory-architecture.svg",
+    "/Users/jason/.heinu1-bot/media/hy-memory-hunyuanlogo.png",
+    "/Users/jason/.heinu1-bot/media/hy-memory-fig3_cross_harness_colm.png",
+    "/Users/jason/.heinu1-bot/media/hy-memory-fig1_training_process.png"
+  ],
+  "banner": {
+    "rejectedSeed": 124,
+    "reason": "Rootvisualfoundtinyfabricatedtextdespitemachinepass",
+    "replacementSeed": 125,
+    "rootVisual": "Replacement125 passed: glass bowls and colored beads sorted in three groups, linked by copper wire; no text/faces; 1200x630/90102B"
+  },
+  "illustrations": "3independentXiaoMdiagrams,rootvisualpassed,1280x720/52146,56377,67085bytes;6bilingualrefs"
+}

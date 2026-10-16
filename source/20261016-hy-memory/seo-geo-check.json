@@ -1,0 +1,54 @@
+{
+  "slug": "hy-memory-sdk-memhub-memory-writer",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/hy-memory-sdk-memhub-memory-writer-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 90102
+    },
+    {
+      "path": "src/assets/images/hy-memory-sdk-memhub-memory-writer-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 52146
+    },
+    {
+      "path": "src/assets/images/hy-memory-sdk-memhub-memory-writer-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 56377
+    },
+    {
+      "path": "src/assets/images/hy-memory-sdk-memhub-memory-writer-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 67085
+    }
+  ]
+}
