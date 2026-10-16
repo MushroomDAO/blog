@@ -1,0 +1,28 @@
+../../build/web/assets/katex--I9wbx8F.js                           258.95 kB │ gzip:    77.50 kB
+../../build/web/assets/document-DEINXAb2.js                        289.22 kB │ gzip:    69.33 kB
+../../build/web/assets/index-JLUVzAAi.js                           338.70 kB │ gzip:   104.12 kB
+../../build/web/assets/css-COPifKOW.js                             389.05 kB │ gzip:   120.83 kB
+../../build/web/assets/cytoscape.esm-Yq6u8L66.js                   434.85 kB │ gzip:   137.78 kB
+../../build/web/assets/messageMarkdown-CNXgrmkD.js                 509.10 kB │ gzip:   161.30 kB
+../../build/web/assets/wasm-BnjxR4X6.js                            622.32 kB │ gzip:   232.09 kB
+../../build/web/assets/chunk-FOHPRMQF-DzxwRta7.js                  662.10 kB │ gzip:   143.16 kB
+../../build/web/assets/tiptapHost-QmvTwKpF.js                      717.04 kB │ gzip:   223.64 kB
+../../build/web/assets/cpp-Ct9pQPqT.js                             785.46 kB │ gzip:    58.22 kB
+../../build/web/assets/replyStream-DBrY6Uz6.js                     983.02 kB │ gzip:   307.81 kB
+../../build/web/assets/dist-CsyB0UlE.js                          1,590.43 kB │ gzip:   490.02 kB
+../../build/web/assets/workspace-B6Hh3CIN.js                     5,575.59 kB │ gzip: 1,570.86 kB
+../../build/web/assets/css-iUrJ3Kb4.js                           6,231.51 kB │ gzip: 1,595.57 kB
+
+✓ built in 2.51s
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+$ bun scripts/build.ts
+$ bun scripts/build.ts
+MCP 已构建到 /private/tmp/toonflow-20261016/build/mcp
+Bundled 3087 modules in 217ms
+
+  index.js  22.39 MB  (entry point)
+

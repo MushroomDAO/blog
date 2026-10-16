@@ -1,0 +1,30 @@
+{
+  "runtime": "1.4.2",
+  "sourcePin": "d2e94aca7b59659ff6b4ca15f03cf134ec7f0e1d",
+  "bind": "127.0.0.1 ephemeral",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "body": "<!doctype html>\n<html lang=\"zh-CN\" data-theme=\"light\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Toonflow</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-JLUVzAAi.js\"></script>\n    <link rel=\"modulepreload\" crossorigin href=\"/assets/rolldown-runtime-Dd_uD5pT.js\">\n    <link rel=\"modulepreload\" crossorigin href=\"/assets/runtime-core.esm-bundler-BQN2Yjms.js\">\n    <link rel=\"modulepreload\" crossorigin href=\"/assets/runtime-dom.esm-bundler-BCTyQUCp.js\">\n    <link rel=\"modulepreload\" crossorigin href"
+    },
+    {
+      "path": "/api/workspaces/list",
+      "status": 200,
+      "body": "{\"code\":200,\"data\":{\"path\":\"\",\"absolutePath\":\"/private/tmp/toonflowSmokeData/workspaces\",\"parent\":null,\"directories\":[{\"name\":\"checkProject\",\"path\":\"checkProject\"}]},\"message\":\"Success\"}"
+    },
+    {
+      "path": "/api/workspaces/files/write?directory=%2Ftmp%2FtoonflowSmokeData%2Fworkspaces%2FcheckProject&path=shotNotes.txt",
+      "status": 200,
+      "body": "{\"code\":200,\"data\":null,\"message\":\"Success\"}"
+    },
+    {
+      "path": "/api/workspaces/files/read?directory=%2Ftmp%2FtoonflowSmokeData%2Fworkspaces%2FcheckProject&path=shotNotes.txt",
+      "status": 200,
+      "body": "Original fixture only: review reference images before generating video.\n"
+    }
+  ],
+  "roundTripEqual": true,
+  "modelsCalled": false,
+  "scope": "source createApp and built web/plugins; no production entry/MCP runtime initialization, GUI interaction or generation"
+}
