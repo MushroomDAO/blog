@@ -1,0 +1,14 @@
+Using CPython 3.14.7
+Creating virtual environment at: .venv
+Resolved 14 packages in 2ms
+   Building harborrl @ file:///private/tmp/harborrl-20261016
+      Built harborrl @ file:///private/tmp/harborrl-20261016
+error: Failed to download `iniconfig==2.3.0`
+  cause: Request failed after 3 retries in 4.6s
+  cause: Failed to fetch: http://mirrors.i.h.pjlab.org.cn/repository/pypi-proxy/packages/iniconfig/2.3.0/iniconfig-2.3.0-py3-none-any.whl
+  cause: error sending request for url (http://mirrors.i.h.pjlab.org.cn/repository/pypi-proxy/packages/iniconfig/2.3.0/iniconfig-2.3.0-py3-none-any.whl)
+  cause: client error (Connect)
+  cause: dns error
+  cause: failed to lookup address information: nodename nor servname provided, or not known
+
+hint: `iniconfig` (v2.3.0) was included because `harborrl[dev]` (v0.1.0) depends on `pytest` (v9.1.1) which depends on `iniconfig`
