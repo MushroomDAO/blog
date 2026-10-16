@@ -1,0 +1,21 @@
+{
+  "sourceBuildVersion": "1.3.5",
+  "sourceProfiles": [
+    "htp",
+    "ocl",
+    "cpu"
+  ],
+  "apkJsVersion": "1.4.3",
+  "apkProfiles": [
+    "htp",
+    "ocl",
+    "cpu",
+    "bmoe",
+    "mtp"
+  ],
+  "apkBytes": 80831356,
+  "sha256": "cbc508fc8e6bce9ca8707bab1469ca9a94c03eed6f2f79ff56753a9335cadbd1",
+  "zipCrc": "passed",
+  "syntax": "bash and node passed",
+  "scope": "No Android/native execution or inference"
+}

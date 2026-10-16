@@ -1,0 +1,84 @@
+{
+  "task": "4c8444de-4659-49ea-898c-8ce20f8f9e55",
+  "checkedAt": "2026-10-16",
+  "slug": "pocketorca-35b-moe-phone-server",
+  "source": "https://github.com/PocketOrca/PocketOrca-LLM",
+  "pin": "c44f529a21158e57d2344a3da5af0939b17bd6cb",
+  "tag": "v1.4.3 points samecommit",
+  "releaseDate": "2026-10-14T11:33:28Z",
+  "dedup": "PrimaryURL absent; exactentity hitonlycurrentrawbotKB; no samearticle/localM2/currentdraft; rawKBreused",
+  "publishedApiGap": "48001 unauthorized",
+  "authorReport": {
+    "device": "GalaxyS25/Snapdragon8Elite/12GB",
+    "model": "Qwen3.6-35B-A3B-Q4_K_M.gguf",
+    "decodeApproxTokensPerSec": "5-6",
+    "ttftApproxSeconds": 3,
+    "byteIdentical": "authorclaimnotreproduced",
+    "independentBenchmark": false
+  },
+  "apk": {
+    "url": "https://github.com/PocketOrca/PocketOrca-LLM/releases/download/v1.4.3/PocketOrca-LLM-v1.4.3-release.apk",
+    "bytes": 80831356,
+    "sha256": "cbc508fc8e6bce9ca8707bab1469ca9a94c03eed6f2f79ff56753a9335cadbd1",
+    "matchesGithubAssetDigest": true,
+    "version": "1.4.3/117",
+    "profiles": [
+      "htp",
+      "ocl",
+      "cpu",
+      "bmoe",
+      "mtp"
+    ],
+    "moeLibraries": [
+      "libbmoehttp.so",
+      "libbmoecli.so"
+    ],
+    "minSdk": 29,
+    "releaseMinimum": "Android12/arm64; manifestnotruntimeproof"
+  },
+  "sourceGap": {
+    "buildVersion": "1.3.5/61",
+    "sourceProfiles": [
+      "htp",
+      "ocl",
+      "cpu"
+    ],
+    "startHost": "0.0.0.0",
+    "conclusion": "cannotcertifyreleaseLAN/authordeterministicrebuildfromthissnapshot; notAPKfailureproof"
+  },
+  "privacy": "localinferenceversusLANrequests/responsesversusoptionalremoteprovider; remotecredentialencryptionnotproofinboundauth; noblanketneverleavesclaim",
+  "checks": {
+    "zipCrc": "passed",
+    "shellSyntax": "build.sh/build-verify.sh passed bash-n only",
+    "jsSyntax": "source and APK app.js passed node--check",
+    "apkInstalled": false,
+    "deviceInference": false,
+    "nativeExecuted": false,
+    "jvmTests": "notrun: noJavaRuntime/AndroidSDK onhost",
+    "sourceTag": "c44f529a21158e57d2344a3da5af0939b17bd6cb",
+    "sourceBuildVersion": "1.3.5",
+    "sourceProfiles": [
+      "htp",
+      "ocl",
+      "cpu"
+    ],
+    "apkVersion": "1.4.3",
+    "apkProfiles": [
+      "htp",
+      "ocl",
+      "cpu",
+      "bmoe",
+      "mtp"
+    ],
+    "manifestMinSdk": 29,
+    "releaseRequires": "Android12arm64; manifestmin29notrealcompatibilityproof"
+  },
+  "license": "OwnappMIT/llamaMIT; MoEApache2perrelease; Qualcommprebuiltrestrictedownhardware; modeltermsseparate",
+  "banner": {
+    "rejectedSeed": 126,
+    "reason": "Rootfoundtinyfabricatedrouterlabeldespitemachinepass",
+    "replacementSeed": 127,
+    "rootVisual": "Replacement127passed,phonebluescreenglassspheres+copperwire,no text/faces;1200x630/73488B"
+  },
+  "illustrations": "3independentXiaoMdiagrams,rootvisualpass;1280x720/60557,51904,47985B;6bilingualrefs"
+}
