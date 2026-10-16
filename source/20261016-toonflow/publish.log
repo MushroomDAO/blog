@@ -1,0 +1,50 @@
+🍄 publish-blog | user=mushroom project=blog-mushroom slug=toonflow-short-drama-workflow
+[1/5] validating frontmatter & SEO…
+  ✓ 公众号标题「Toonflow：130元短剧案例怎么读」(20 字)
+  ✓ frontmatter OK (tags=5, bilingual, banner present)
+[2/5] building…
+└─────────────────────────────────────────────────────────────────────────┘
+
+Finished in 2.550 seconds
+  ✓ route built: /blog/toonflow-short-drama-workflow/
+[3/5] deploying to Cloudflare Pages (blog-mushroom)…
+  ⚠️ no CA bundle set (CF_CA_CERT/NODE_EXTRA_CA_CERTS) — falling back to TLS bypass.
+     To fix the root cause, point CF_CA_CERT at your proxy CA .pem.
+✨ Uploading _redirects
+✨ Uploading Functions bundle
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://36322426.blog-mushroom.pages.dev
+[4/5] validating live URL…
+  https://blog.mushroom.cv/blog/toonflow-short-drama-workflow/ → 200
+[4.5] committing article to git…
+[pre-commit] 发布账本有更新，已一并加入本次提交
+[publish/toonflow-short-drama-workflow 041a6a5] feat(blog): publish toonflow-short-drama-workflow
+ 6 files changed, 278 insertions(+)
+ create mode 100644 src/assets/images/toonflow-short-drama-workflow-banner.jpg
+ create mode 100644 src/assets/images/toonflow-short-drama-workflow-fig-01.png
+ create mode 100644 src/assets/images/toonflow-short-drama-workflow-fig-02.png
+ create mode 100644 src/assets/images/toonflow-short-drama-workflow-fig-03.png
+ create mode 100644 src/content/blog/toonflow-short-drama-workflow.md
+  ✓ committed
+  ✓ 远端已同步
+[4.7] updating semantic search index for toonflow-short-drama-workflow…
+checking 1 article(s) (toonflow-short-drama-workflow)
+diff: 2 changed/new, 0 unchanged (wrote /Users/jason/Dev/mycelium/blog/semantic-search/eval/incremental-index-plan.json)
+  + toonflow-short-drama-workflow [zh]
+  + toonflow-short-drama-workflow [en]
+embedding 2 changed record(s) (calls Workers AI)...
+  verifying batch order on 2 samples...
+  batch order verified OK
+  embedding incremental 1-2/2...
+TARGET: account=7bf23342f21baa5ebfc7bc7b74f5a1f2 index=blog-search-v1 vectors=2
+  upserted 1-2/2: True
+updated manifest for 1 article(s)
+  ✓ search index updated
+[5/5] creating WeChat draft… (egress IP: 223.206.43.10 — must be in the WeChat IP allowlist; 40164 = not whitelisted)
+   Title: Toonflow：130元短剧案例怎么读
+✅ Draft created: media_id=prCUE631thH1cmNLi42prMiDtsKL3rWN9N5w-9usT5v_ljANewL_l7XfC2934my2
+   Title: Toonflow：130元短剧案例怎么读
+  ✓ recorded mapping: toonflow-short-drama-workflow → prCUE631thH1cmNL…
+[5.8] refreshing local knowledge base…
+  ⏭  ~/mycelium-kb/kb-refresh.sh 不存在,跳过
+✅ done → https://blog.mushroom.cv/blog/toonflow-short-drama-workflow/

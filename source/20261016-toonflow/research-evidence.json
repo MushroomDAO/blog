@@ -1,0 +1,55 @@
+{
+  "task": "2aecc942-7100-44a7-83fe-5d7bd1e54ea0",
+  "checkedAt": "2026-10-16",
+  "slug": "toonflow-short-drama-workflow",
+  "source": "https://github.com/HBAI-Ltd/Toonflow-app",
+  "pin": "d2e94aca7b59659ff6b4ca15f03cf134ec7f0e1d",
+  "dedup": "Exact source absent across ledgers; entity hit only current bot raw material; no article/localM2/currentdraft; raw KB reused",
+  "publishedApiGap": "48001 unauthorized",
+  "case": {
+    "provenance": "pinned official README section5",
+    "productionHoursApprox": 2,
+    "finalMinutesApprox": 2,
+    "costYuanApprox": 130,
+    "languageYuanApprox": 10,
+    "videoYuanApprox": 120,
+    "imagesYuanApprox": "<1",
+    "languageModel": "Claude Opus4.6",
+    "imageModel": "GPT Image2",
+    "videoModel": "Seedance2.0",
+    "publicDemo": "compressed480p",
+    "independentlyReproduced": false,
+    "missing": [
+      "itemizedattemptledger",
+      "retrycharges",
+      "acceptancerate",
+      "laborbreakdown"
+    ]
+  },
+  "license": "Current pinned LICENSE MIT; historical release terms separate",
+  "validation": {
+    "host": "M4/16GB/macOS26.6.2",
+    "runtime": "Bun1.4.2; upstream packageManager andDocker1.3.14",
+    "install": "frozenlockfile902packages successful",
+    "build": "build:server success; stdio source mode644->755 only, no codecontentedit",
+    "smoke": "Source createApp with builtweb/plugins,isolateddata,loopbackephemeral;4HTTP200;originaltextPUT/GETequal",
+    "notTested": [
+      "productionstartupentry",
+      "completeMCPruntime",
+      "browserGUI",
+      "nativeclients",
+      "Android",
+      "Docker",
+      "paidmodels",
+      "generatedfilm",
+      "130yuancostreproduction"
+    ]
+  },
+  "banner": {
+    "method": "localFLUX",
+    "seed": 123,
+    "sourceArtworkRejected": "Official canvasLight mostlyUI/text, not cover; source screenshots not own measurements",
+    "rootVisual": "Paper theatre set, blank film and lamp; nofaces/text; machinepassed"
+  },
+  "illustrations": "Three independent XiaoM diagrams; root visual pass;1280x720/43631,74493,70739bytes; six bilingualreferences"
+}
