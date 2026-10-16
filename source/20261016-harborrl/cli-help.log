@@ -1,0 +1,20 @@
+usage: harborrl [-h] [-model MODEL] [-harness HARNESS] [-task TASK] [-alg ALG]
+                [--config CONFIG_OPTION] [--set SET] [--dry-run]
+                {train,doctor} [config_path]
+
+Public entry point for the native HarborRL training pipeline.
+
+positional arguments:
+  {train,doctor}
+  config_path           YAML configuration file
+
+options:
+  -h, --help            show this help message and exit
+  -model MODEL          Slime model preset to select
+  -harness HARNESS      agent harness to select
+  -task TASK            task ID to select from the locked catalog
+  -alg ALG              training algorithm to select
+  --config CONFIG_OPTION
+                        YAML configuration file
+  --set SET
+  --dry-run

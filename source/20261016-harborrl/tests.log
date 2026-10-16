@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0
+rootdir: /tmp/harborrl-20261016
+configfile: pyproject.toml
+plugins: asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 89 items
+
+../../../../../tmp/harborrl-20261016/tests/harborrl/test_native_contracts.py . [  1%]
+.........................                                                [ 29%]
+../../../../../tmp/harborrl-20261016/tests/harborrl/test_native_gateway.py . [ 30%]
+..............................                                           [ 64%]
+../../../../../tmp/harborrl-20261016/tests/harborrl/test_native_lifecycle.py . [ 65%]
+...........                                                              [ 77%]
+../../../../../tmp/harborrl-20261016/tests/harborrl/test_native_training.py . [ 78%]
+......                                                                   [ 85%]
+../../../../../tmp/harborrl-20261016/tests/harborrl/test_slime_v032_exporter.py . [ 86%]
+............                                                             [100%]
+
+============================== 89 passed in 4.26s ==============================
