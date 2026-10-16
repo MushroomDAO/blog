@@ -1,0 +1,97 @@
+{
+  "bytes": 80831356,
+  "sha256": "cbc508fc8e6bce9ca8707bab1469ca9a94c03eed6f2f79ff56753a9335cadbd1",
+  "profiles": {
+    "llamaDir": "jniLibs",
+    "profiles": {
+      "htp": {
+        "name": "Hexagon NPU",
+        "binary": "libllamaserver.so",
+        "args": "--load-mode none -m {MODEL} --ctx-size 8192 --ubatch-size 1024 -fa on -ctk q8_0 -ctv q8_0 -ngl 99 --device HTP0",
+        "requires": [
+          "Q4_0",
+          "Q4_1",
+          "Q8_0",
+          "IQ4_NL",
+          "MXFP4",
+          "F16",
+          "F32"
+        ]
+      },
+      "ocl": {
+        "name": "OpenCL (Adreno GPU)",
+        "binary": "libllamaocl.so",
+        "args": "--load-mode none -m {MODEL} --ctx-size 8192 -fa on -ctk q8_0 -ctv q8_0 -ngl 99",
+        "requires": []
+      },
+      "cpu": {
+        "name": "CPU (4 threads)",
+        "binary": "libllamaserver.so",
+        "args": "--load-mode none -m {MODEL} --ctx-size 4096 -fa on -ctk q8_0 -ctv q8_0 --threads 4",
+        "requires": []
+      },
+      "bmoe": {
+        "name": "BigMoE 磁盘流式",
+        "binary": "libbmoecli.so",
+        "args": "--chatml --moe-stream --cache-mb auto --cache-ceil-mb 4000 --io-threads 4 --ctx-size 4096 -m {MODEL}",
+        "requires": [],
+        "engine": "bmoe"
+      },
+      "mtp": {
+        "name": "NPU + MTP (Qwen3.5 MTP-GGUF)",
+        "binary": "libllamaserver.so",
+        "args": "-ngl 99 --load-mode none -m {MODEL} -fa on --parallel 1 -ctk q8_0 -ctv q8_0 --spec-type draft-mtp --spec-draft-n-max 1 --device HTP0 --ctx-size 32768 --threads 4",
+        "requires": [
+          "Q4_0",
+          "Q4_1",
+          "Q8_0",
+          "IQ4_NL",
+          "MXFP4",
+          "F16",
+          "F32"
+        ]
+      }
+    }
+  },
+  "nativeFiles": [
+    "lib/arm64-v8a/lbmlibggml-htp-v75.so",
+    "lib/arm64-v8a/libcutils.so",
+    "lib/arm64-v8a/libggml-cpu.so",
+    "lib/arm64-v8a/libhidlbase.so",
+    "lib/arm64-v8a/lbmlibggml-htp-v73.so",
+    "lib/arm64-v8a/libllama-common.so",
+    "lib/arm64-v8a/lbmggml-base.so",
+    "lib/arm64-v8a/lbmllama.so",
+    "lib/arm64-v8a/lbmllama-common.so",
+    "lib/arm64-v8a/libutils.so",
+    "lib/arm64-v8a/libbmoehttp.so",
+    "lib/arm64-v8a/libmtmd.so",
+    "lib/arm64-v8a/libggml-opencl.so",
+    "lib/arm64-v8a/libllama-server-impl.so",
+    "lib/arm64-v8a/libhardware.so",
+    "lib/arm64-v8a/libOCLstub.so",
+    "lib/arm64-v8a/lbmggml.so",
+    "lib/arm64-v8a/libc++.so",
+    "lib/arm64-v8a/vendor.qti.hardware.dsp-V1-ndk.so",
+    "lib/arm64-v8a/lbmlibggml-htp-v79.so",
+    "lib/arm64-v8a/lbmggml-cpu.so",
+    "lib/arm64-v8a/libcdsprpc.so",
+    "lib/arm64-v8a/libdmabufheap.so",
+    "lib/arm64-v8a/libbase.so",
+    "lib/arm64-v8a/libggml-htp-v75.so",
+    "lib/arm64-v8a/libllama.so",
+    "lib/arm64-v8a/libggml-htp-v73.so",
+    "lib/arm64-v8a/libggml.so",
+    "lib/arm64-v8a/android.hardware.common-V2-ndk.so",
+    "lib/arm64-v8a/libjnisrv.so",
+    "lib/arm64-v8a/libggml-hexagon.so",
+    "lib/arm64-v8a/libggml-base.so",
+    "lib/arm64-v8a/libggml-htp-v81.so",
+    "lib/arm64-v8a/libllamaserver.so",
+    "lib/arm64-v8a/lbmggml-hexagon.so",
+    "lib/arm64-v8a/lbmlibggml-htp-v81.so",
+    "lib/arm64-v8a/libbmoecli.so",
+    "lib/arm64-v8a/libvmmem.so",
+    "lib/arm64-v8a/libggml-htp-v79.so"
+  ]
+}
