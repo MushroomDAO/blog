@@ -1,0 +1,34 @@
+{
+  "titleLength": 22,
+  "titleEnLength": 47,
+  "descriptionLength": 154,
+  "descriptionEnLength": 151,
+  "wechatTitleLength": 18,
+  "wechatDigestLength": 36,
+  "bilingual": true,
+  "BLUF": true,
+  "FAQ": true,
+  "copyright": true,
+  "sourcePinned": true,
+  "internalLink200": true,
+  "bodyImageReferences": 6,
+  "images": [
+    {
+      "file": "valtz-local-ai-creative-studio-fig-01.png",
+      "bytes": 55851,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "valtz-local-ai-creative-studio-fig-02.png",
+      "bytes": 42164,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "valtz-local-ai-creative-studio-fig-03.png",
+      "bytes": 42467,
+      "dimensions": "1280x720"
+    }
+  ],
+  "independentAnalysis": "Recipe provenance not bitwise guarantee; LMDBworkingcopy vs CBORsavedpackage; Fleet wholejobs not pooledGPUmemory; local vscloud; explicitbuild/testfailureboundaries",
+  "scope": "No-engine core/CLI only;210ran192passed1failed17skip; onefailure rerun reproduced; originalPNG64x64CLIroundtrip; noGUI/inference/performance/liveFleet"
+}

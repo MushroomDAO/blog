@@ -1,0 +1,45 @@
+{
+  "sourceCommit": "cc02e25140571a18fad103f9cd6cf0190c5e97c1",
+  "platform": "Apple M4 / 16GB / macOS26.6.2",
+  "compiler": "AppleClang21.0.0.21000101",
+  "build": {
+    "VALTZ_WITH_VPIPE": "OFF",
+    "VALTZ_BUILD_APP": "OFF",
+    "status": "success",
+    "targets": [
+      "valtz_core",
+      "valtzctl",
+      "valtz_test"
+    ]
+  },
+  "tests": {
+    "ran": 210,
+    "passed": 192,
+    "failed": 1,
+    "skipped": 17
+  },
+  "failedCase": "controller.upscalers_run_as_settings_have_them",
+  "failedAssertions": [
+    "controller-test.cc:5966 i8_gemm == !m5",
+    "controller-test.cc:5997 i8_gemm == !m5"
+  ],
+  "rerun": "1ran0passed1failed0skipped",
+  "cli": {
+    "createProject": true,
+    "importOriginalPNG": "64x64 copied",
+    "reopen": "1 image source v1",
+    "savedFormat": [
+      "project.cbor",
+      "blobs/8c/8cc9958d1e610f9f9d68df91da3633b1b4bf34f6cd47681971e60b701c3e0f1d.png"
+    ],
+    "copiedBytesMatchSHA256": "8cc9958d1e610f9f9d68df91da3633b1b4bf34f6cd47681971e60b701c3e0f1d"
+  },
+  "notVerified": [
+    "SwiftUI build or launch",
+    "Vpipe execution",
+    "model inference",
+    "generation quality/speed",
+    "multiMac real jobs",
+    "paid cloud"
+  ]
+}

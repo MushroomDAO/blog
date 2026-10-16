@@ -1,0 +1,24 @@
+{
+  "task": "36004f9f-25d9-409a-a538-5e1809ec1aa7",
+  "checkedAt": "2026-10-16",
+  "sourceURL": "https://github.com/tgo-app-dev/valtz",
+  "sourceCommit": "cc02e25140571a18fad103f9cd6cf0190c5e97c1",
+  "sourceScope": "README illustrations, CMake/presets, record/workspace/agent/fleet/tuning declarations and implementation, NOTICE, original tests and CLI",
+  "dedup": "SourceURLonly30percentVpipeKB similarity; exactValtz onlyoriginalrawbotKB. No same-topic existing Blog/local M2/current draft. Related Vpipe article retained as internal context, not duplicated. Published-list API48001 permission gap recorded.",
+  "latestRelease": "v0.1.0.10",
+  "releaseDate": "2026-10-15T10:02:09Z",
+  "dmgBytes": 47372748,
+  "minimumPlatform": "Apple Silicon/macOS26.2+ perrelease/CMakedefault; README26+ lessspecific",
+  "license": "AppMPL2/VpipeApache2; SDKApacheplanned; exampleextensionsalreadyApache; modelweightsseparate",
+  "scope": "No-engine originalsourcebuild/test +CLIprojectroundtrip; noAIinference/SwiftUI/paidcloud/liveFleet",
+  "failure": "210ran192passed1failed17skip; i8_gemmsettings assertion failure reproduced independently; no root-cause or production-impact claim",
+  "banner": {
+    "sourceURL": "https://raw.githubusercontent.com/tgo-app-dev/valtz/cc02e25140571a18fad103f9cd6cf0190c5e97c1/docs/images/1c_preview.png",
+    "originalSavedFile": "/Users/jason/.heinu1-bot/media/valtz-official-preview.png",
+    "originalSHA256": "004b7193ff6fd63aa4e776ec666fe514293bbaddf5fe619f6f3ea491e2c0c95f",
+    "crop": "1740x840+524+260 thencover1200x630",
+    "bytes": 81651,
+    "verification": "adopted/machine+rootvisual pass; author generationpreview, not ourgeneration",
+    "rejectedFraming": "Firstcrop used wrong displayed dimensions and left broad blankside; second still clippedHUD; final crop inside preview removesHUD/empty margins."
+  }
+}

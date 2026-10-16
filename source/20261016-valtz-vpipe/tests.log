@@ -1,0 +1,749 @@
+[ RUN  ] base.uuid_v7_roundtrip_and_order
+[  OK  ] base.uuid_v7_roundtrip_and_order
+[ RUN  ] base.uuid_unique_under_burst
+[  OK  ] base.uuid_unique_under_burst
+[ RUN  ] base.sha256_known_vector
+[  OK  ] base.sha256_known_vector
+[ RUN  ] base.rational_normalizes
+[  OK  ] base.rational_normalizes
+[ RUN  ] base.utf8_prefix_cuts_on_a_character
+[  OK  ] base.utf8_prefix_cuts_on_a_character
+[ RUN  ] base.to_text_replaces_invalid_utf8
+[  OK  ] base.to_text_replaces_invalid_utf8
+[ RUN  ] base.utf8_truncate_marks_the_cut
+[  OK  ] base.utf8_truncate_marks_the_cut
+[ RUN  ] base.one_line_folds_whitespace
+[  OK  ] base.one_line_folds_whitespace
+[ RUN  ] base.fit_columns_by_display_width
+[  OK  ] base.fit_columns_by_display_width
+[ RUN  ] base.base64_is_rfc4648
+[  OK  ] base.base64_is_rfc4648
+[ RUN  ] cache.lru_eviction_under_budget_skips_pinned
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/cache-1: 0 entries, 0 MB of 0 MB budget
+[  OK  ] cache.lru_eviction_under_budget_skips_pinned
+[ RUN  ] cache.survives_reopen_and_wipes_scratch
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/cache-2: 0 entries, 0 MB of 20480 MB budget
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/cache-2: 1 entries, 0 MB of 20480 MB budget
+[  OK  ] cache.survives_reopen_and_wipes_scratch
+[ RUN  ] cache.keys_are_content_derived_and_safe
+[  OK  ] cache.keys_are_content_derived_and_safe
+[ RUN  ] lmdb.put_get_and_dupsort
+[  OK  ] lmdb.put_get_and_dupsort
+[ RUN  ] lmdb.map_grows_instead_of_failing
+[  OK  ] lmdb.map_grows_instead_of_failing
+[ RUN  ] media.probe_16bit_p3_png_with_alpha
+[  OK  ] media.probe_16bit_p3_png_with_alpha
+[ RUN  ] media.probe_rejects_missing_and_garbage
+[  OK  ] media.probe_rejects_missing_and_garbage
+[ RUN  ] media.probe_movie_when_available
+[ SKIP ] media.probe_movie_when_available (set VALTZ_TEST_MOVIE to a video file)
+[ RUN  ] media.a_sound_is_heard_as_one_channel
+[  OK  ] media.a_sound_is_heard_as_one_channel
+[ RUN  ] media.soundtrack_joins_at_its_own_length
+[ SKIP ] media.soundtrack_joins_at_its_own_length (set VALTZ_TEST_MOVIE to a video file)
+[ RUN  ] media.probe_counts_the_picture_not_the_sound
+[ SKIP ] media.probe_counts_the_picture_not_the_sound (set VALTZ_TEST_MOVIE to a video file)
+[ RUN  ] media.pixel_format_table_roundtrips_fourcc
+[  OK  ] media.pixel_format_table_roundtrips_fourcc
+[ RUN  ] media.probe_reads_exif_fields
+[  OK  ] media.probe_reads_exif_fields
+[ RUN  ] media.exif_block_is_upright_at_the_result_size
+[  OK  ] media.exif_block_is_upright_at_the_result_size
+[ RUN  ] media.crop_is_data_and_places_the_content
+[  OK  ] media.crop_is_data_and_places_the_content
+[ RUN  ] media.keyframes_interpolate_linearly
+[  OK  ] media.keyframes_interpolate_linearly
+[ RUN  ] media.keyframes_hold_or_ease_on
+[  OK  ] media.keyframes_hold_or_ease_on
+[ RUN  ] media.a_clip_decodes_with_its_look
+[ SKIP ] media.a_clip_decodes_with_its_look (set VALTZ_TEST_MOVIE to a video file)
+[ RUN  ] media.a_709_export_keeps_a_709_clips_colour
+[  OK  ] media.a_709_export_keeps_a_709_clips_colour
+[ RUN  ] media.a_709_clip_drawn_again_keeps_its_colour
+[  OK  ] media.a_709_clip_drawn_again_keeps_its_colour
+[ RUN  ] media.a_stack_reads_from_where_it_starts
+[ SKIP ] media.a_stack_reads_from_where_it_starts (set VALTZ_TEST_MOVIE to a video file)
+[ RUN  ] media.a_sound_is_cut_to_the_sample
+[  OK  ] media.a_sound_is_cut_to_the_sample
+[ RUN  ] media.a_low_rate_sound_is_encoded_as_aac_allows
+[  OK  ] media.a_low_rate_sound_is_encoded_as_aac_allows
+[ RUN  ] project.create_reopen_and_text_assets
+valtz info  [project] created Alpha (01a1439b-8655-7668-a78a-e8f155f3dbab)
+[  OK  ] project.create_reopen_and_text_assets
+[ RUN  ] project.identical_content_is_stored_once
+valtz info  [project] created Dedup (01a1439b-8697-723e-ad3a-d9ab3f80fc59)
+[  OK  ] project.identical_content_is_stored_once
+[ RUN  ] project.staleness_follows_content
+valtz info  [project] created Stale (01a1439b-86f3-716f-82ba-2df6eb5d960d)
+[  OK  ] project.staleness_follows_content
+[ RUN  ] project.recipe_cycles_are_refused
+valtz info  [project] created Cycle (01a1439b-87a4-7a13-9b62-420a8f72b58a)
+[  OK  ] project.recipe_cycles_are_refused
+[ RUN  ] project.subjects_reference_assets
+valtz info  [project] created Subjects (01a1439b-87eb-7616-af03-95454d374c67)
+[  OK  ] project.subjects_reference_assets
+[ RUN  ] project.history_is_kept_in_time_order
+valtz info  [project] created History (01a1439b-8835-79a8-bd7f-f84e25d9db13)
+[  OK  ] project.history_is_kept_in_time_order
+[ RUN  ] project.refuses_cloud_synced_paths
+[  OK  ] project.refuses_cloud_synced_paths
+[ RUN  ] project.placement_policy
+[  OK  ] project.placement_policy
+[ RUN  ] project.linked_original_moves_changes_and_goes_missing
+valtz info  [project] created Link (01a1439b-8891-7e77-a800-5877badc92af)
+valtz info  [project] imported camera-original.txt as linked text (, 0x0, untagged)
+valtz info  [project] linked source /private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/link-23/renamed.txt relocated
+valtz info  [project] linked source /private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/link-23/renamed.txt modified -> new version
+[  OK  ] project.linked_original_moves_changes_and_goes_missing
+[ RUN  ] project.derived_names_are_unique_and_fit
+valtz info  [project] created Names (01a1439b-895c-7d5e-bfa6-688dfff16ae3)
+[  OK  ] project.derived_names_are_unique_and_fit
+[ RUN  ] project.modifiers_are_recorded_not_applied
+valtz info  [project] created Mods (01a1439b-8997-7e6a-ab35-d631e69a4b2c)
+[  OK  ] project.modifiers_are_recorded_not_applied
+[ RUN  ] workspace.records_keep_what_they_do_not_know
+[  OK  ] workspace.records_keep_what_they_do_not_know
+[ RUN  ] workspace.saves_reverts_and_resumes
+valtz info  [project] created Saved (01a1439b-89e8-7d00-90ea-85524a319ac3)
+valtz info  [project] created Saved (01a1439b-8b19-72e9-a9d8-6b50b48a055c)
+[  OK  ] workspace.saves_reverts_and_resumes
+[ RUN  ] workspace.undo_redo_coalesce_and_join
+valtz info  [project] created U (01a1439b-8b65-7ed0-bf37-6ee1e4310932)
+[  OK  ] workspace.undo_redo_coalesce_and_join
+[ RUN  ] workspace.unknown_parts_are_kept
+valtz info  [project] created X (01a1439b-8cdb-7d28-beed-21519b9d6943)
+valtz info  [project] created X (01a1439b-8d7c-7a1c-b454-0c4c81cb6737)
+valtz info  [project] created X (01a1439b-8e08-7a81-a0e8-406012cffe9c)
+[  OK  ] workspace.unknown_parts_are_kept
+[ RUN  ] workspace.a_format_1_package_is_saved_as_format_2
+valtz info  [project] created Old (01a1439b-8e33-766f-94fc-5177bbd0b2e4)
+valtz info  [project] created Old (01a1439b-8e8d-74ca-b325-1e35ae1bb432)
+valtz info  [project] created Old (01a1439b-8f0a-7fd7-b3a2-f3686d1f0625)
+[  OK  ] workspace.a_format_1_package_is_saved_as_format_2
+[ RUN  ] workspace.save_as_and_the_media_undo_keeps
+valtz info  [project] created Untitled (01a1439b-8f57-7a5e-989a-8031383f8def)
+[  OK  ] workspace.save_as_and_the_media_undo_keeps
+[ RUN  ] models.neural_engine_cores_by_chip
+[  OK  ] models.neural_engine_cores_by_chip
+[ RUN  ] models.builtin_catalog_parses_and_links
+[  OK  ] models.builtin_catalog_parses_and_links
+[ RUN  ] models.a_quantized_variant_runs_as_its_source
+[  OK  ] models.a_quantized_variant_runs_as_its_source
+[ RUN  ] models.catalog_rejects_dangling_references
+[  OK  ] models.catalog_rejects_dangling_references
+[ RUN  ] models.assistant_follows_memory_tier
+[  OK  ] models.assistant_follows_memory_tier
+[ RUN  ] models.capability_resolution
+[  OK  ] models.capability_resolution
+[ RUN  ] models.partial_download_is_not_installed
+[  OK  ] models.partial_download_is_not_installed
+[ RUN  ] models.auto_order_is_catalog_data
+[  OK  ] models.auto_order_is_catalog_data
+[ RUN  ] models.ref2va_turbo_brings_its_shift
+[  OK  ] models.ref2va_turbo_brings_its_shift
+[ RUN  ] models.english_only_models
+[  OK  ] models.english_only_models
+[ RUN  ] models.tuning_for_speech
+[  OK  ] models.tuning_for_speech
+[ RUN  ] models.tuning_for_an_upscaler
+[  OK  ] models.tuning_for_an_upscaler
+[ RUN  ] models.a_models_acceleration_loras_are_listed
+[  OK  ] models.a_models_acceleration_loras_are_listed
+[ RUN  ] models.a_continuation_has_presets_of_its_own
+[  OK  ] models.a_continuation_has_presets_of_its_own
+[ RUN  ] models.tuning_for_a_song
+[  OK  ] models.tuning_for_a_song
+[ RUN  ] models.a_subdir_is_its_own_install
+[  OK  ] models.a_subdir_is_its_own_install
+[ RUN  ] models.a_file_is_its_own_install
+[  OK  ] models.a_file_is_its_own_install
+[ RUN  ] models.tuning_settles_presets_and_custom
+[  OK  ] models.tuning_settles_presets_and_custom
+[ RUN  ] models.favor_presets_follow_the_catalog
+[  OK  ] models.favor_presets_follow_the_catalog
+[ RUN  ] models.tuning_loras
+[  OK  ] models.tuning_loras
+[ RUN  ] models.checkpoint_kind_reads_the_weights
+[  OK  ] models.checkpoint_kind_reads_the_weights
+[ RUN  ] models.tuning_checkpoints
+[  OK  ] models.tuning_checkpoints
+[ RUN  ] models.families_and_links
+[  OK  ] models.families_and_links
+[ RUN  ] models.memory_bandwidth_by_chip
+[  OK  ] models.memory_bandwidth_by_chip
+[ RUN  ] assist.extracts_json_from_chatty_replies
+[  OK  ] assist.extracts_json_from_chatty_replies
+[ RUN  ] assist.parses_enhance_reply
+[  OK  ] assist.parses_enhance_reply
+[ RUN  ] assist.parses_intent_reply
+[  OK  ] assist.parses_intent_reply
+[ RUN  ] assist.heuristic_intents
+[  OK  ] assist.heuristic_intents
+[ RUN  ] assist.a_song_s_style_and_lyrics
+[  OK  ] assist.a_song_s_style_and_lyrics
+[ RUN  ] assist.inline_media_become_their_tags
+[  OK  ] assist.inline_media_become_their_tags
+[ RUN  ] assist.positional_reference_tags
+[  OK  ] assist.positional_reference_tags
+[ RUN  ] assist.inline_pictures_become_tags
+[  OK  ] assist.inline_pictures_become_tags
+[ RUN  ] assist.the_helper_writes_in_the_model_s_language
+[  OK  ] assist.the_helper_writes_in_the_model_s_language
+[ RUN  ] assist.qwen_images_writer_frames_the_request
+[  OK  ] assist.qwen_images_writer_frames_the_request
+[ RUN  ] assist.yue2_s_song_writer
+[  OK  ] assist.yue2_s_song_writer
+[ RUN  ] assist.speech_s_fields_and_words
+[  OK  ] assist.speech_s_fields_and_words
+[ RUN  ] assist.names_leave_markdown_out
+[  OK  ] assist.names_leave_markdown_out
+[ RUN  ] assist.a_reply_is_read_as_it_comes
+[  OK  ] assist.a_reply_is_read_as_it_comes
+[ RUN  ] assist.a_prompt_outline_follows_the_row
+[  OK  ] assist.a_prompt_outline_follows_the_row
+[ RUN  ] assist.built_in_outlines_follow_their_guides
+[  OK  ] assist.built_in_outlines_follow_their_guides
+[ RUN  ] assist.an_outline_s_keyframe_markers
+[  OK  ] assist.an_outline_s_keyframe_markers
+[ RUN  ] assist.h3_s_own_skill_is_built_in
+[  OK  ] assist.h3_s_own_skill_is_built_in
+[ RUN  ] assist.a_clip_is_asked_for_through_its_guide
+[  OK  ] assist.a_clip_is_asked_for_through_its_guide
+[ RUN  ] assist.a_clip_s_sections_are_put_together
+[  OK  ] assist.a_clip_s_sections_are_put_together
+[ RUN  ] assist.a_suggestion_s_names_become_the_row_s_tags
+[  OK  ] assist.a_suggestion_s_names_become_the_row_s_tags
+[ RUN  ] assist.a_transcript_is_summarized
+[  OK  ] assist.a_transcript_is_summarized
+[ RUN  ] assist.a_video_summary_is_written
+[  OK  ] assist.a_video_summary_is_written
+[ RUN  ] assist.a_shot_counts_its_own_shots
+[  OK  ] assist.a_shot_counts_its_own_shots
+[ RUN  ] agent.the_helper_is_handed_the_conversation_as_written
+[  OK  ] agent.the_helper_is_handed_the_conversation_as_written
+[ RUN  ] agent.a_turns_speed_is_counted
+[  OK  ] agent.a_turns_speed_is_counted
+[ RUN  ] agent.the_cloud_requests_are_each_apis_own
+[  OK  ] agent.the_cloud_requests_are_each_apis_own
+[ RUN  ] agent.the_cloud_streams_are_read_back
+[  OK  ] agent.the_cloud_streams_are_read_back
+[ RUN  ] agent.the_cloud_backend_speaks_to_a_server
+[  OK  ] agent.the_cloud_backend_speaks_to_a_server
+[ RUN  ] fleet.a_schedule_opens_on_its_days_and_hours
+[  OK  ] fleet.a_schedule_opens_on_its_days_and_hours
+[ RUN  ] fleet.the_key_is_the_name_and_the_secret
+[  OK  ] fleet.the_key_is_the_name_and_the_secret
+[ RUN  ] fleet.the_configuration_keeps_its_key_not_its_secret
+[  OK  ] fleet.the_configuration_keeps_its_key_not_its_secret
+[ RUN  ] fleet.offload_policies_and_sharing_are_kept
+[  OK  ] fleet.offload_policies_and_sharing_are_kept
+[ RUN  ] fleet.messages_are_framed_and_read_whole
+[  OK  ] fleet.messages_are_framed_and_read_whole
+[ RUN  ] fleet.a_job_goes_to_a_member_and_comes_back
+[ SKIP ] fleet.a_job_goes_to_a_member_and_comes_back (set VALTZ_TEST_FLEET=1 (two members on this Mac's loopback))
+[ RUN  ] fleet.the_members_arithmetic_is_added_up
+[ SKIP ] fleet.the_members_arithmetic_is_added_up (set VALTZ_TEST_FLEET=1 (two members on this Mac's loopback))
+[ RUN  ] ext.admits_within_the_window
+[  OK  ] ext.admits_within_the_window
+[ RUN  ] ext.upgrades_old_manifests
+[  OK  ] ext.upgrades_old_manifests
+[ RUN  ] ext.reads_a_package
+[  OK  ] ext.reads_a_package
+[ RUN  ] ext.discovers_in_order
+[  OK  ] ext.discovers_in_order
+[ RUN  ] ext.catalog_takes_a_contribution
+[  OK  ] ext.catalog_takes_a_contribution
+[ RUN  ] ext.declared_tuning_options
+[  OK  ] ext.declared_tuning_options
+[ RUN  ] ext.recognition_rules_file_weights
+[  OK  ] ext.recognition_rules_file_weights
+[ RUN  ] ext.controller_takes_extensions
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ext-ctl-47/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz warn  [extensions] com.acme.future not taken: too-new {"current":1,"interface":2} (/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ext-ctl-47/exts/future.valtzext)
+valtz info  [extensions] com.acme.test 1.0.0 taken (1 model(s), interface 1)
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ext-ctl-47/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz warn  [extensions] com.acme.future not taken: too-new {"current":1,"interface":2} (/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ext-ctl-47/exts/future.valtzext)
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ext-ctl-47/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+[  OK  ] ext.controller_takes_extensions
+[ RUN  ] controller.event_bus_coalesces_previews
+[  OK  ] controller.event_bus_coalesces_previews
+[ RUN  ] controller.event_with_invalid_utf8_serializes
+[  OK  ] controller.event_with_invalid_utf8_serializes
+[ RUN  ] controller.import_without_engine
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-48/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created P (01a1439b-9109-71e4-ba42-b911b4e01764)
+valtz info  [project] imported note.txt as copied text (, 0x0, untagged)
+[  OK  ] controller.import_without_engine
+[ RUN  ] controller.prompts_are_assets
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-prompt-49/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created P (01a1439b-917f-7cfd-83a8-d50b63549db2)
+[  OK  ] controller.prompts_are_assets
+[ RUN  ] controller.a_prompt_keeps_the_name_it_is_given
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-prompt-name-50/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created P (01a1439b-928a-734e-9af2-6f7b0fa0cd6b)
+[  OK  ] controller.a_prompt_keeps_the_name_it_is_given
+[ RUN  ] controller.an_applied_suggestion_keeps_the_words_before_it
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-prompt-enhanced-51/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created P (01a1439b-9407-71f9-8884-65c4b5ea1ce2)
+[  OK  ] controller.an_applied_suggestion_keeps_the_words_before_it
+[ RUN  ] controller.ephemeral_project_keeps_thumbnails_in_its_package
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-eph-52/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created anon (01a1439b-9526-7449-86c0-926f88a5cff1)
+valtz info  [project] imported pic.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] created named (01a1439b-9572-7db3-9dc8-ca9556b5139c)
+valtz info  [project] imported pic.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+[  OK  ] controller.ephemeral_project_keeps_thumbnails_in_its_package
+[ RUN  ] composition.layers_and_flatten
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-layers-53/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-layers (01a1439b-95e1-7d95-bf88-2cdb557106e2)
+valtz info  [project] imported base.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported red.png as copied image (PNG, 8x8, BT.709 sRGB (full))
+[  OK  ] composition.layers_and_flatten
+[ RUN  ] composition.a_still_has_pages
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-pages-54/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-pages (01a1439b-972a-7f6d-8a49-7467153c496c)
+valtz info  [project] imported grey.png as copied image (PNG, 40x20, BT.709 sRGB (full))
+valtz info  [project] imported red.png as copied image (PNG, 4x4, BT.709 sRGB (full))
+valtz info  [project] imported blue.png as copied image (PNG, 4x4, BT.709 sRGB (full))
+valtz info  [project] imported Doc, page 1 as copied image (PNG, 40x20, BT.709 sRGB (full))
+valtz info  [project] imported Doc, page 2 as copied image (PNG, 40x20, BT.709 sRGB (full))
+valtz info  [project] imported Doc, page 3 as copied image (PNG, 40x20, BT.709 sRGB (full))
+valtz info  [project] imported Doc, page 4 as copied image (PNG, 40x20, BT.709 sRGB (full))
+[  OK  ] composition.a_still_has_pages
+[ RUN  ] composition.canvas_size_is_anchored
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-canvas-55/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-canvas (01a1439b-994a-7a0b-9241-924a72ee2fce)
+valtz info  [project] imported base.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+[  OK  ] composition.canvas_size_is_anchored
+[ RUN  ] composition.the_project_is_one_composition
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-project-56/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-project (01a1439b-99f0-76bd-9f84-dd8b94ec894e)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported tone.wav as copied audio (, 0x0, untagged)
+[  OK  ] composition.the_project_is_one_composition
+[ RUN  ] controller.offload_policies_send_jobs_and_sharing_withholds
+[ SKIP ] controller.offload_policies_send_jobs_and_sharing_withholds (set VALTZ_TEST_FLEET=1 (two members on this Mac's loopback))
+[ RUN  ] controller.closing_a_project_stops_its_tasks
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-close-tasks-57/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+valtz info  [project] created a (01a1439b-9ad4-7fa1-bad0-d1c3e41bea89)
+valtz info  [project] created b (01a1439b-9b2d-71a2-90fb-53e785e37f3a)
+valtz info  [jobs] job 01a1439b-9b7f-74b6-b16d-acb001aae889: its project closed, stopped
+valtz info  [jobs] job 01a1439b-9b9f-77e5-b936-7325879c3c5b: its project closed, stopped
+[  OK  ] controller.closing_a_project_stops_its_tasks
+[ RUN  ] controller.tasks_queue_and_are_withdrawn_by_undo
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-tasks-58/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+valtz info  [project] created tasks (01a1439b-9bf0-7c96-b238-1d5b11c5daa1)
+valtz info  [build] job 01a1439b-9c57-7cf7-a67c-8250b58822a1: its request undone, withdrawn
+valtz info  [build] job 01a1439b-9cb7-7447-99eb-9b642e435ab2: its request undone, withdrawn
+valtz info  [build] job 01a1439b-9cb7-7447-99eb-9b642e435ab2: withdrawn, its result dropped
+[  OK  ] controller.tasks_queue_and_are_withdrawn_by_undo
+[ RUN  ] controller.a_job_waits_only_for_what_it_needs_downloading
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-downloads-59/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+valtz info  [project] created downloads (01a1439b-9d3b-73de-8608-4c286f48b1f6)
+valtz info  [build] job 01a1439b-9da3-7d28-ac00-70435b579d61: waits for Z-Image Turbo to download
+valtz info  [build] job 01a1439b-9da3-7d28-ac00-70435b579d61: Z-Image Turbo downloaded, queued
+valtz info  [build] job 01a1439b-9dc6-77e9-bb3c-1527300609ed: waits for Qwen-Image 2.1 to download
+valtz warn  [jobs] Download Qwen-Image 2.1 01a1439b-9da8-7d5f-bf5d-e610fc627fb7 failed: HTTP 500
+valtz info  [build] job 01a1439b-9dc6-77e9-bb3c-1527300609ed: Qwen-Image 2.1 did not download
+valtz warn  [jobs] a green kite (2) 01a1439b-9dc6-77e9-bb3c-1527300609ed failed: It waited for Qwen-Image 2.1 to download, and the download failed.
+valtz info  [build] job 01a1439b-9e09-7206-8b11-8df29c6b97bb: waits for FLUX.2 [klein] 9B to download
+[  OK  ] controller.a_job_waits_only_for_what_it_needs_downloading
+[ RUN  ] controller.a_real_download_runs_beside_a_generation
+[ SKIP ] controller.a_real_download_runs_beside_a_generation (set VALTZ_TEST_DOWNLOAD=1 or a catalog id (downloads; Krea 2 installed))
+[ RUN  ] controller.a_gated_download_takes_a_token_kept_nowhere
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-gated-60/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+valtz warn  [jobs] Download Krea 2 Turbo 01a1439b-9e18-76bd-9ef9-4406cd7c760e failed: ModelFetchStage('model-fetch'): download of 'model.safetensors' failed: HTTP 401
+valtz warn  [jobs] Download FLUX.2 [klein] 9B 01a1439b-9f53-739d-b8ba-046f0aba9d4f failed: xet grant for 'black-forest-labs/FLUX.2-klein-9B': HTTP 403
+valtz warn  [jobs] Download Z-Image Turbo 01a1439b-9ffd-7cf6-b538-55c623293c6d failed: download of 'x' failed: HTTP 401
+[  OK  ] controller.a_gated_download_takes_a_token_kept_nowhere
+[ RUN  ] controller.favor_picks_a_models_quantized_variant
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-variant-61/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+valtz info  [project] created variants (01a1439b-a0cb-71da-a9f6-3e476c3c6948)
+[  OK  ] controller.favor_picks_a_models_quantized_variant
+[ RUN  ] composition.instantiate_is_a_new_layer
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-instantiate-62/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-instantiate (01a1439b-a18e-76d8-80d1-fee9386a8ee4)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported blue.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+[  OK  ] composition.instantiate_is_a_new_layer
+[ RUN  ] composition.a_clip_on_a_blank_layer_follows_the_content
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-sequence-63/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-sequence (01a1439b-a2b1-7dd2-b850-eff8e0d47362)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+[  OK  ] composition.a_clip_on_a_blank_layer_follows_the_content
+[ RUN  ] composition.a_result_lands_in_a_new_layer_or_its_own
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-land-64/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-land (01a1439b-a3f3-70c3-9467-16142f4d8a63)
+valtz info  [project] imported red.png as copied image (PNG, 32x32, BT.709 sRGB (full))
+valtz info  [project] imported blue.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported tone.wav as copied audio (, 0x0, untagged)
+[  OK  ] composition.a_result_lands_in_a_new_layer_or_its_own
+[ RUN  ] controller.a_projects_view_state_is_saved_with_it
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-view-65/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created W (01a1439b-a4f9-73e3-aa00-8a576b986e2b)
+valtz info  [project] created W (01a1439b-a5a7-77dd-bf02-01abba3f1b40)
+[  OK  ] controller.a_projects_view_state_is_saved_with_it
+[ RUN  ] composition.the_project_output_is_set_up_and_kept
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-output-66/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-output (01a1439b-a5f5-742e-91d4-08c91b554be2)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-output-claim-67/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-output-claim (01a1439b-a696-7bd1-8e2e-6a932c70b96b)
+[  OK  ] composition.the_project_output_is_set_up_and_kept
+[ RUN  ] media.sound_and_pictures_are_made_an_outputs_own
+[  OK  ] media.sound_and_pictures_are_made_an_outputs_own
+[ RUN  ] media.a_text_box_wraps_and_cuts_at_a_line
+[  OK  ] media.a_text_box_wraps_and_cuts_at_a_line
+[ RUN  ] media.a_text_is_measured_line_by_line
+[  OK  ] media.a_text_is_measured_line_by_line
+[ RUN  ] media.a_markup_object_casts_a_shadow_and_glows
+[  OK  ] media.a_markup_object_casts_a_shadow_and_glows
+[ RUN  ] media.a_polygon_and_gradients_are_drawn
+[  OK  ] media.a_polygon_and_gradients_are_drawn
+[ RUN  ] media.a_path_curves_through_its_points
+[  OK  ] media.a_path_curves_through_its_points
+[ RUN  ] media.a_still_is_written_as_a_pdf_its_vectors_kept
+[  OK  ] media.a_still_is_written_as_a_pdf_its_vectors_kept
+[ RUN  ] controller.a_still_exports_as_a_pdf
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-pdf-74/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+valtz info  [project] created pdf (01a1439c-bbe4-74d6-abf4-6b4c6a1c7bb5)
+valtz info  [project] imported grey.png as copied image (PNG, 200x120, BT.709 sRGB (full))
+valtz info  [project] imported red.png as copied image (PNG, 40x40, BT.709 sRGB (full))
+[  OK  ] controller.a_still_exports_as_a_pdf
+[ RUN  ] media.a_long_text_flows_onto_pages
+[  OK  ] media.a_long_text_flows_onto_pages
+[ RUN  ] media.a_long_soft_stroke_paints_in_a_moment
+[  OK  ] media.a_long_soft_stroke_paints_in_a_moment
+[ RUN  ] controller.an_asset_is_renamed
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-rename-76/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created ctl-rename (01a1439c-be4e-7f7a-96d3-84f4724902ef)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+[  OK  ] controller.an_asset_is_renamed
+[ RUN  ] composition.decompose_carries_placement
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-decompose-77/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-decompose (01a1439c-bed9-761b-ae4c-92cc278dee07)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported blue.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+[  OK  ] composition.decompose_carries_placement
+[ RUN  ] composition.edited_copy_capture_and_flatten
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-copies-78/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-copies (01a1439c-c040-7e45-8629-798f4875fef3)
+valtz info  [project] imported red.png as copied image (PNG, 8x8, BT.709 sRGB (full))
+valtz info  [project] imported base.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported blue.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported dark red as copied image (PNG, 8x8, BT.709 sRGB (full))
+[  OK  ] composition.edited_copy_capture_and_flatten
+[ RUN  ] composition.the_project_canvas_is_its_own
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-project-canvas-79/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-project-canvas (01a1439c-c189-77fc-ad6e-b4d6bcf99223)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported green.png as copied image (PNG, 24x12, BT.709 sRGB (full))
+[  OK  ] composition.the_project_canvas_is_its_own
+[ RUN  ] composition.a_layer_is_cut_at_the_canvas_not_its_frame
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-canvas-cut-80/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-canvas-cut (01a1439c-c2ef-7f52-ae1a-c7bfad3754dc)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported blue.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+[  OK  ] composition.a_layer_is_cut_at_the_canvas_not_its_frame
+[ RUN  ] composition.canvas_size_resizes_the_frame
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-frame-81/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-frame (01a1439c-c3ef-7cd2-830e-15c51c120619)
+valtz info  [project] imported red.png as copied image (PNG, 16x12, BT.709 sRGB (full))
+valtz info  [project] imported blue.png as copied image (PNG, 4x4, BT.709 sRGB (full))
+[  OK  ] composition.canvas_size_resizes_the_frame
+[ RUN  ] composition.markup_masks_and_merge
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-markup-82/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-markup (01a1439c-c5b7-73fb-9840-ca20118a212e)
+valtz info  [project] imported base.png as copied image (PNG, 64x64, BT.709 sRGB (full))
+valtz info  [project] imported base.png (2) (merged) as copied image (PNG, 64x64, BT.709 sRGB (full))
+[  OK  ] composition.markup_masks_and_merge
+[ RUN  ] composition.markup_objects_are_arranged
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-arrange-83/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-arrange (01a1439c-c782-7ad8-b531-6554cc1139cb)
+valtz info  [project] imported base.png as copied image (PNG, 200x100, BT.709 sRGB (full))
+[  OK  ] composition.markup_objects_are_arranged
+[ RUN  ] composition.layer_time_speed_and_transitions
+[  OK  ] composition.layer_time_speed_and_transitions
+[ RUN  ] composition.a_timeline_draws_and_sounds_in_time
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-timeline-84/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-timeline (01a1439c-c84a-7e81-b427-3e997775c917)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported blue.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported a.wav as copied audio (, 0x0, untagged)
+valtz info  [project] imported b.wav as copied audio (, 0x0, untagged)
+[  OK  ] composition.a_timeline_draws_and_sounds_in_time
+[ RUN  ] composition.a_dip_goes_through_black_or_white
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-dip-85/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-dip (01a1439c-c9c5-761c-bec1-e43ca09f7802)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported blue.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported glass.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+[  OK  ] composition.a_dip_goes_through_black_or_white
+[ RUN  ] composition.a_clip_is_cut_in_two_parts
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-split-86/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-split (01a1439c-cb1c-7d09-a617-f7ecdb0d2e5f)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported shot.mov as linked video (Apple ProRes 422 HQ, 16x16, BT.709 BT.709 (limited))
+valtz info  [project] imported tone.wav as copied audio (, 0x0, untagged)
+[  OK  ] composition.a_clip_is_cut_in_two_parts
+[ RUN  ] composition.a_clip_is_read_sparse_for_a_summary
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-summary-87/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-summary (01a1439c-ce5a-7e53-9dc8-84e261e0da3e)
+valtz info  [project] imported red.png as copied image (PNG, 640x360, BT.709 sRGB (full))
+valtz info  [project] imported blue.png as copied image (PNG, 640x360, BT.709 sRGB (full))
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-summary-87/support/cache: 1 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+[  OK  ] composition.a_clip_is_read_sparse_for_a_summary
+[ RUN  ] composition.a_sound_composition_takes_a_clips_sound
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-clip-sound-88/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-clip-sound (01a1439c-d017-768b-a7ce-3f29c1539c2b)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported tone.wav as copied audio (, 0x0, untagged)
+valtz info  [project] imported loud.mov as linked video (Apple ProRes 422 HQ, 16x16, BT.709 BT.709 (limited))
+valtz info  [project] imported mute.mov as linked video (Apple ProRes 422 HQ, 16x16, BT.709 BT.709 (limited))
+[  OK  ] composition.a_sound_composition_takes_a_clips_sound
+[ RUN  ] composition.a_clip_runs_its_frames_not_its_sound
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-clip-frames-89/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-clip-frames (01a1439c-d23f-7f5a-a5cb-6d05dc342894)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [project] imported long-sound.mov as linked video (Apple ProRes 422 HQ, 16x16, BT.709 BT.709 (limited))
+[  OK  ] composition.a_clip_runs_its_frames_not_its_sound
+[ RUN  ] composition.a_drawing_is_copied_and_a_layer_duplicated
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-drawing-90/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-drawing (01a1439c-d358-7487-9e19-79499d48be0b)
+[  OK  ] composition.a_drawing_is_copied_and_a_layer_duplicated
+[ RUN  ] composition.a_drawing_lifts_moves_and_fuses
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-drawing-lift-91/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-drawing-lift (01a1439c-d4cb-7277-b7ff-9571b3c09ae5)
+[  OK  ] composition.a_drawing_lifts_moves_and_fuses
+[ RUN  ] composition.a_locked_layer_refuses_changes
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-lock-92/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-lock (01a1439c-d660-7e06-b306-17b8fedba991)
+[  OK  ] composition.a_locked_layer_refuses_changes
+[ RUN  ] composition.a_markup_timeline_moves_between_its_keys
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-markup-keys-93/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-markup-keys (01a1439c-d7eb-7e43-b68c-f5ced3c6679e)
+[  OK  ] composition.a_markup_timeline_moves_between_its_keys
+[ RUN  ] composition.a_timelines_frame_is_on_black_as_it_plays
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-frame-black-94/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-frame-black (01a1439c-d8c2-7f5f-8905-da29e7e346e4)
+[  OK  ] composition.a_timelines_frame_is_on_black_as_it_plays
+[ RUN  ] composition.a_still_on_a_timeline_runs_a_second
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-still-second-95/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-still-second (01a1439c-d945-7b1a-a9ef-0251d0dc7c5b)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+[  OK  ] composition.a_still_on_a_timeline_runs_a_second
+[ RUN  ] composition.a_layers_key_moves_on_every_track
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-key-move-96/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-key-move (01a1439c-da48-7413-a7d7-0582931d074c)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+[  OK  ] composition.a_layers_key_moves_on_every_track
+[ RUN  ] composition.layers_go_in_folders
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-folders-97/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-folders (01a1439c-db4e-74ad-bd1e-b52eeee9cf5e)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+[  OK  ] composition.layers_go_in_folders
+[ RUN  ] composition.a_pitch_follows_the_speed_or_is_held
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/comp-pitch-98/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created comp-pitch (01a1439c-dcd3-7fc3-9cd6-8c24d783a4f6)
+valtz info  [project] imported tone.wav as copied audio (, 0x0, untagged)
+2026-10-16 14:28:36.245 valtz_test[18195:135228961] Audio files cannot be non-interleaved. Ignoring setting AVLinearPCMIsNonInterleaved YES.
+2026-10-16 14:28:36.273 valtz_test[18195:135228961] Audio files cannot be non-interleaved. Ignoring setting AVLinearPCMIsNonInterleaved YES.
+[  OK  ] composition.a_pitch_follows_the_speed_or_is_held
+[ RUN  ] composition.a_schema_1_project_is_migrated
+[  OK  ] composition.a_schema_1_project_is_migrated
+[ RUN  ] controller.undo_save_revert_and_resume
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-document-99/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created Doc (01a1439c-ddf6-7880-82d9-6916144842cd)
+valtz info  [project] imported red.png as copied image (PNG, 16x16, BT.709 sRGB (full))
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-document-99/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created Doc (01a1439c-df62-7038-ab82-da3c97654c30)
+[  OK  ] controller.undo_save_revert_and_resume
+[ RUN  ] controller.a_clip_stack_draws_its_layers
+[ SKIP ] controller.a_clip_stack_draws_its_layers (set VALTZ_TEST_MOVIE to a video file)
+[ RUN  ] controller.job_timing_estimates_and_records
+[  OK  ] controller.job_timing_estimates_and_records
+[ RUN  ] controller.out_of_memory_names_what_to_change
+[  OK  ] controller.out_of_memory_names_what_to_change
+[ RUN  ] capture.a_blank_sound_records_into_itself
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/capture-100/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created capture (01a1439c-dfc0-7301-9671-80c0277109b5)
+[  OK  ] capture.a_blank_sound_records_into_itself
+[ RUN  ] capture.a_recording_lands_on_its_composition
+[ SKIP ] capture.a_recording_lands_on_its_composition (set VALTZ_TEST_CAPTURE to system or a microphone's id)
+[ RUN  ] capture.the_camera_takes_a_still_and_a_clip
+[ SKIP ] capture.the_camera_takes_a_still_and_a_clip (set VALTZ_TEST_CAMERA=1 (the default camera))
+[ RUN  ] controller.stale_and_markup_media_survive_save_and_reopen
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/keep-media-101/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created Keep (01a1439c-e05b-7401-b0aa-255cb379d428)
+valtz info  [project] created Keep (01a1439c-e13a-799f-ad6a-60e817962210)
+[  OK  ] controller.stale_and_markup_media_survive_save_and_reopen
+[ RUN  ] controller.the_chosen_helper_is_kept_and_falls_back_to_auto
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/helper-102/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created helper (01a1439c-e193-7191-9fde-d50f2ce010aa)
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/helper-102/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/helper-102/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+[  OK  ] controller.the_chosen_helper_is_kept_and_falls_back_to_auto
+[ RUN  ] controller.upscalers_run_as_settings_have_them
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-upscale-settings-103/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+    FAILED /tmp/valtz-20261016/tests/controller-test.cc:5966: v["tuning"]["values"]["i8_gemm"] == !m5
+valtz info  [project] created upscale (01a1439c-e1fc-777b-ad85-6b1e0811c902)
+valtz info  [project] imported small.png as copied image (PNG, 32x24, BT.709 sRGB (full))
+    FAILED /tmp/valtz-20261016/tests/controller-test.cc:5997: t["i8_gemm"] == !m5
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/ctl-upscale-settings-103/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+[ FAIL ] controller.upscalers_run_as_settings_have_them
+[ RUN  ] controller.a_clip_opens_and_ends_on_pictures
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/first-last-104/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+valtz info  [project] created first-last (01a1439c-e2a4-7206-a64c-c052964a378b)
+valtz info  [project] imported closed.png as copied image (PNG, 32x32, BT.709 sRGB (full))
+valtz info  [project] imported open.png as copied image (PNG, 32x32, BT.709 sRGB (full))
+valtz info  [build] shot (continue) drawn for the model
+[  OK  ] controller.a_clip_opens_and_ends_on_pictures
+[ RUN  ] controller.a_guide_and_a_grabbed_frame
+[ SKIP ] controller.a_guide_and_a_grabbed_frame (set VALTZ_TEST_MOVIE to a video file)
+[ RUN  ] controller.a_downloaded_rewriter_takes_the_guides_place
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/rewriters-105/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+[  OK  ] controller.a_downloaded_rewriter_takes_the_guides_place
+[ RUN  ] agent.the_tools_build_a_deck
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/agent-deck-106/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created deck (01a1439c-e42f-704e-baa9-dc0b227b2059)
+valtz info  [project] imported blue.png as copied image (PNG, 32x18, BT.709 sRGB (full))
+valtz info  [agent] session 01a1439c-e476-716d-8204-c934181f5ea1 started ({"kind":"test"})
+[  OK  ] agent.the_tools_build_a_deck
+[ RUN  ] agent.a_long_text_is_laid_on_pages
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/agent-flow-107/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created flow (01a1439c-e588-709a-ac09-9e7146c201bd)
+valtz info  [agent] session 01a1439c-e5b7-7ff8-a5c4-9f5c446e71b3 started ({"kind":"test"})
+[  OK  ] agent.a_long_text_is_laid_on_pages
+[ RUN  ] agent.review_waits_and_a_skip_is_told
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/agent-review-108/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: none
+valtz info  [project] created review (01a1439c-f35b-73c8-a86d-a00110009e80)
+valtz info  [agent] session 01a1439c-f393-72c8-a564-bb6d28cdbcea started ({"kind":"test"})
+[  OK  ] agent.review_waits_and_a_skip_is_told
+[ RUN  ] agent.a_generated_picture_lands_in_its_box
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/agent-land-109/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+valtz info  [project] created land (01a1439c-f689-7f67-a6db-dfcdb0d222c0)
+valtz info  [agent] session 01a1439c-f6d7-7691-b12c-66ae622e177e started ({"kind":"test"})
+[  OK  ] agent.a_generated_picture_lands_in_its_box
+[ RUN  ] agent.the_tools_cut_a_timeline
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/agent-timeline-110/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+valtz info  [project] created vlog (01a1439c-f8b7-7bb6-8ca0-ce6443ccc339)
+valtz info  [project] imported red.png as copied image (PNG, 32x32, BT.709 sRGB (full))
+valtz info  [project] imported blue.png as copied image (PNG, 32x32, BT.709 sRGB (full))
+valtz info  [project] imported tone.wav as copied audio (, 0x0, untagged)
+valtz info  [project] imported beach.mov as linked video (Apple ProRes 422 HQ, 32x32, BT.709 BT.709 (limited))
+valtz info  [project] imported market.mov as linked video (Apple ProRes 422 HQ, 32x32, BT.709 BT.709 (limited))
+valtz info  [agent] session 01a1439c-fa7f-7b85-aac0-43c25b800023 started ({"kind":"test"})
+[  OK  ] agent.the_tools_cut_a_timeline
+[ RUN  ] agent.a_long_scene_is_shot_after_shot
+valtz info  [cache] /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/valtz-test-18195/agent-scene-111/support/cache: 0 entries, 0 MB of 20480 MB budget
+valtz info  [controller] valtz 0.1.0 on Apple M4 (16 GB, 10 GPU cores), engine: held
+valtz info  [project] created scene (01a1439c-fde2-75f2-95d5-985f989d742d)
+valtz info  [project] imported keeper.png as copied image (PNG, 32x32, BT.709 sRGB (full))
+valtz info  [project] imported tone.wav as copied audio (, 0x0, untagged)
+valtz info  [agent] session 01a1439c-feef-7f27-ad4c-290bc5a64650 started ({"kind":"test"})
+valtz warn  [jobs] Shot 5 01a1439d-03e1-7bea-b823-f9284a9edae5 failed: out of memory
+[  OK  ] agent.a_long_scene_is_shot_after_shot
+[ RUN  ] agent.a_fleet_member_runs_the_turns
+[ SKIP ] agent.a_fleet_member_runs_the_turns (set VALTZ_TEST_FLEET=1 (two members on this Mac's loopback))
+[ RUN  ] model_input.crop_keeps_the_centre_planar
+[  OK  ] model_input.crop_keeps_the_centre_planar
+[ RUN  ] model_input.orientation_is_applied
+[  OK  ] model_input.orientation_is_applied
+[ RUN  ] model_input.alpha_is_straight
+[  OK  ] model_input.alpha_is_straight
+[ RUN  ] model_input.f16_keeps_a_sixteen_bit_ramp
+[  OK  ] model_input.f16_keeps_a_sixteen_bit_ramp
+[ RUN  ] model_input.adjustments_apply_in_linear_light_and_clamp
+[  OK  ] model_input.adjustments_apply_in_linear_light_and_clamp
+[ RUN  ] model_input.adjustments_are_data
+[  OK  ] model_input.adjustments_are_data
+[ RUN  ] model_input.camera_raw_is_developed_upright
+[ SKIP ] model_input.camera_raw_is_developed_upright (set VALTZ_TEST_RAW to a camera RAW)
+[ RUN  ] model_input.crop_places_the_picture_on_its_canvas
+[  OK  ] model_input.crop_places_the_picture_on_its_canvas
+[ RUN  ] model_input.gpu_planes_match_the_cpu
+valtz info  [media] model inputs drawn on the GPU, straight into the engine's buffers
+[gpu_planar] 97x61 c3: 0 of 17751 samples differ, worst 0
+[gpu_planar] 97x61 c4: 0 of 23668 samples differ, worst 0
+[gpu_planar] 64x48 c3: 0 of 9216 samples differ, worst 0
+[gpu_planar] 80x80 c4: 0 of 25600 samples differ, worst 0
+[gpu_planar] 50x31 c3: 0 of 4650 samples differ, worst 0
+[  OK  ] model_input.gpu_planes_match_the_cpu
+[ RUN  ] model_input.gpu_planes_bench
+[ SKIP ] model_input.gpu_planes_bench (set VALTZ_TEST_BENCH=1 to time it)
+[ RUN  ] model_input.stack_surface_bench
+[ SKIP ] model_input.stack_surface_bench (set VALTZ_TEST_BENCH=1 to time it)
+[ RUN  ] i18n.render_message_fills_named_arguments
+[  OK  ] i18n.render_message_fills_named_arguments
+[ RUN  ] i18n.every_core_message_is_in_the_catalog
+[  OK  ] i18n.every_core_message_is_in_the_catalog
+[ RUN  ] i18n.translations_keep_their_placeholders
+[  OK  ] i18n.translations_keep_their_placeholders
+
+210 ran, 192 passed, 1 failed, 17 skipped
+[model_input] ramp: 64 distinct f16 steps, 10 u8; f16 0.2998..0.3384
+[model_input] grey 0.5020, +1 EV 0.6880 (want 0.6885); light grey +2 EV 0.9995
