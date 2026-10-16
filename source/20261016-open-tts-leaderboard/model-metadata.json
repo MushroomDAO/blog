@@ -1,0 +1,104 @@
+[
+  {
+    "id": "hexgrad/Kokoro-82M",
+    "sha": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "license": "apache-2.0",
+    "codeLinks": [
+      "https://github.com/hexgrad/kokoro",
+      "https://github.com/hexgrad/misaki",
+      "https://github.com/yl4579/StyleTTS2",
+      "https://github.com/koniwa/koniwa"
+    ]
+  },
+  {
+    "id": "sahilmahendrakar/Paradee-8M-v1.0",
+    "sha": "c7f83f86c04e84d0ae94cbe1aad7618e0544f80a",
+    "license": "apache-2.0",
+    "codeLinks": [
+      "https://github.com/sahilmahendrakar/paradee",
+      "https://github.com/hexgrad/misaki",
+      "https://github.com/BytedanceSpeech/seed-tts-eval",
+      "https://github.com/QwenAudio/CV3-Eval"
+    ]
+  },
+  {
+    "id": "Supertone/supertonic-3",
+    "sha": "3cadd1ee6394adea1bd021217a0e650ede09a323",
+    "license": "openrail",
+    "codeLinks": [
+      "https://github.com/supertone-inc/supertonic"
+    ]
+  },
+  {
+    "id": "fishaudio/s2-pro",
+    "sha": "1de9996b6be38b745688de084d87a5633f714e4e",
+    "license": "other",
+    "codeLinks": [
+      "https://github.com/fishaudio/fish-speech"
+    ]
+  },
+  {
+    "id": "k2-fsa/OmniVoice",
+    "sha": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+    "license": null,
+    "codeLinks": [
+      "https://github.com/k2-fsa/OmniVoice"
+    ]
+  },
+  {
+    "id": "kyutai/pocket-tts",
+    "error": "HTTP Error 401: Unauthorized"
+  },
+  {
+    "id": "FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+    "sha": "29e01c4e8d000f4bcd70751be16fa94bf3d85a18",
+    "license": "apache-2.0",
+    "codeLinks": [
+      "https://github.com/FunAudioLLM/CV3-Eval",
+      "https://github.com/FunAudioLLM/CosyVoice.git",
+      "https://github.com/FunAudioLLM/CosyVoice",
+      "https://github.com/modelscope/FunASR",
+      "https://github.com/modelscope/FunCodec",
+      "https://github.com/shivammehta25/Matcha-TTS",
+      "https://github.com/yangdongchao/AcademiCodec",
+      "https://github.com/wenet-e2e/wenet"
+    ]
+  },
+  {
+    "id": "ResembleAI/chatterbox",
+    "sha": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+    "license": "mit",
+    "codeLinks": [
+      "https://github.com/user-attachments/assets",
+      "https://github.com/FunAudioLLM/CosyVoice",
+      "https://github.com/yl4579/HiFTNet",
+      "https://github.com/meta-llama/llama3",
+      "https://github.com/resemble-ai/perth"
+    ]
+  },
+  {
+    "id": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+    "sha": "0c0e3051f131929182e2c023b9537f8b1c68adfe",
+    "license": "apache-2.0",
+    "codeLinks": [
+      "https://github.com/QwenLM/Qwen3-TTS.git",
+      "https://github.com/Dao-AILab/flash-attention",
+      "https://github.com/QwenLM/Qwen3-TTS",
+      "https://github.com/vllm-project/vllm-omni",
+      "https://github.com/vllm-project/vllm-omni.git"
+    ]
+  },
+  {
+    "id": "BreezeBlue/Breeze-TTS-2",
+    "sha": "3e28c5151381a722f1d8661b4118c298caa77aa4",
+    "license": "other",
+    "codeLinks": [
+      "https://github.com/breezeblue-ai/breeze-tts",
+      "https://github.com/breezeblue-ai/tts-voice-design-benchmark",
+      "https://github.com/breezeblue-ai/TTS-Voice-Direction-Benchmark",
+      "https://github.com/breezeblue-ai/TTS-Latency-Benchmark",
+      "https://github.com/breezeblue-ai/breeze-tts.git",
+      "https://github.com/QwenLM/Qwen3-TTS"
+    ]
+  }
+]

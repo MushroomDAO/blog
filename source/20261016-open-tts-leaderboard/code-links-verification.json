@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://github.com/hexgrad/kokoro",
+    "status": 200,
+    "finalUrl": "https://github.com/hexgrad/kokoro"
+  },
+  {
+    "url": "https://github.com/sahilmahendrakar/paradee",
+    "status": 200,
+    "finalUrl": "https://github.com/sahilmahendrakar/paradee"
+  },
+  {
+    "url": "https://github.com/supertone-inc/supertonic",
+    "status": 200,
+    "finalUrl": "https://github.com/supertone-oss-archive/supertonic"
+  },
+  {
+    "url": "https://github.com/fishaudio/fish-speech",
+    "status": 200,
+    "finalUrl": "https://github.com/fishaudio/fish-speech"
+  },
+  {
+    "url": "https://github.com/k2-fsa/OmniVoice",
+    "status": 200,
+    "finalUrl": "https://github.com/k2-fsa/OmniVoice"
+  },
+  {
+    "url": "https://github.com/kyutai/pocket-tts",
+    "status": 404
+  },
+  {
+    "url": "https://github.com/FunAudioLLM/CosyVoice",
+    "status": 200,
+    "finalUrl": "https://github.com/QwenAudio/CosyVoice"
+  },
+  {
+    "url": "https://github.com/resemble-ai/chatterbox",
+    "status": 200,
+    "finalUrl": "https://github.com/resemble-ai/chatterbox"
+  },
+  {
+    "url": "https://github.com/QwenLM/Qwen3-TTS",
+    "status": 200,
+    "finalUrl": "https://github.com/QwenLM/Qwen3-TTS"
+  },
+  {
+    "url": "https://github.com/breezeblue-ai/breeze-tts",
+    "status": 200,
+    "finalUrl": "https://github.com/breezeblue-ai/breeze-tts"
+  },
+  {
+    "url": "https://github.com/kyutai-labs/pocket-tts",
+    "status": 200,
+    "evidence": "official README fetched successfully; incorrect kyutai owner link corrected before publishing"
+  }
+]
