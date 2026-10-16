@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "open-tts-leaderboard-october-2026",
+      "title": "Open TTS Top 10: October English and Chinese Rankings",
+      "url": "/blog/open-tts-leaderboard-october-2026/",
+      "language": "en",
+      "excerpt": "Open TTS Top 10: October English and Chinese Rankings Review the October Open TTS Leaderboard: English and Chinese Top 10, voice cloning, A100 and CPU latency, plus reproducible sources and deployment caveats. TTS Hugging Face 语音合成 开源模型 模型评测 Which October update is this? Define t",
+      "score": 0.6207844
+    },
+    {
+      "article_id": "moss-tts-v15-multilingual-voice-clone",
+      "title": "MOSS-TTS v1.5: 31 Languages, Explicit Pause Control, Stabler Voice Cloning — Apache 2.0 Open Source",
+      "url": "/blog/moss-tts-v15-multilingual-voice-clone/",
+      "language": "en",
+      "excerpt": "MOSS-TTS v1.5: 31 Languages, Explicit Pause Control, Stabler Voice Cloning — Apache 2.0 Open Source OpenMOSS (Fudan NLP / Shanghai Innovation Institute / MOSI.AI) releases MOSS-TTS v1.5: 31 languages, [pause X.Ys] inline pause control, lower variance voice cloning, improved punct",
+      "score": 0.51995754
+    },
+    {
+      "article_id": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota",
+      "title": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军",
+      "url": "/blog/moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota/",
+      "language": "zh",
+      "excerpt": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军 OpenMOSS 开源的 MOSS-Transcribe-Diarize 0.9B（1.5K stars），SOTA 端到端音频理解模型，一个模型同时完成长音频多说话人转写、说话人分离（diarization）、精确时间戳和声学事件标注。架构：Qwen3-0.6B 解码器 + Whisper-Medium 编码器 + 4x 时序合并 MLP 桥接。支持 50+ 语言。输出格式 [时间戳][S01]文本[时间戳]。",
+      "score": 0.501447
+    },
+    {
+      "article_id": "index-tts-25-production-tts-voice-clone-emotion-multilingual",
+      "title": "index-tts-25-production-tts-voice-clone-emotion-multilingual",
+      "url": "/blog/index-tts-25-production-tts-voice-clone-emotion-multilingual/",
+      "language": "en",
+      "excerpt": "index-tts-25-production-tts-voice-clone-emotion-multilingual index-tts/index-tts, ⭐22,615, Python, IndexTTS-2.5 released 2026-08-10. Zero-shot TTS system that clones a voice from a single reference audio. Supports Chinese, English, Japanese, Spanish, and Arabic with cross-lingual",
+      "score": 0.471624
+    },
+    {
+      "article_id": "llm-agent-protocol-taxonomy-federated-stack-2026",
+      "title": "The First Map of LLM Agent Communication Protocols: Why the Future Won't Be Winner-Takes-All",
+      "url": "/blog/llm-agent-protocol-taxonomy-federated-stack-2026/",
+      "language": "en",
+      "excerpt": "The First Map of LLM Agent Communication Protocols: Why the Future Won't Be Winner-Takes-All arXiv:2606.19135 builds a five-dimension taxonomy of 9 active open-source LLM agent communication protocols. Conclusion: short-term convergence pressure, long-term federated layered stack",
+      "score": 0.4704402
+    },
+    {
+      "article_id": "knowhere-2-document-parsing-agentic-rag",
+      "title": "Knowhere 2.0: Dual-Track Document Parsing + Hierarchy-Native Memory for Structure-Aware RAG",
+      "url": "/blog/knowhere-2-document-parsing-agentic-rag/",
+      "language": "en",
+      "excerpt": "Knowhere 2.0: Dual-Track Document Parsing + Hierarchy-Native Memory for Structure-Aware RAG Knowhere by Ontos-AI — 3.5k stars, open-sourced 2026-05-07. Version 2.0 (September 2026) introduces dual-track parsing: Vision Page + Text Track converge into a hierarchy-native memory sch",
+      "score": 0.4696867
+    },
+    {
+      "article_id": "anthropic-threat-intelligence-report-september-2026",
+      "title": "Anthropic 威胁情报报告（2026年9月）：AI 把攻防成本倒置了",
+      "url": "/blog/anthropic-threat-intelligence-report-september-2026/",
+      "language": "zh",
+      "excerpt": "Anthropic 威胁情报报告（2026年9月）：AI 把攻防成本倒置了 Anthropic 公开记录 2025.12-2026.8 间 Claude 被滥用的七大类真实案例：俄罗斯间谍、ShinyHunters 供应链攻击、中国高校漏洞研究、多大洲选举干预……关键结论：AI 正在压平国家级行为者与个人攻击者之间的能力鸿沟。 AI-security threat-intelligence Anthropic cyberattack influence-operations 2026 为什么这份报告值得认真读 网络行动：三个典型案例 GTG-20006（",
+      "score": 0.466151
+    },
+    {
+      "article_id": "cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course",
+      "title": "CMU 11-768 AI Agents：OpenHands 作者亲授，从零搭 Harness、建评测、用 RL 训 Agent，视频讲义全开放",
+      "url": "/blog/cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course/",
+      "language": "zh",
+      "excerpt": "CMU 11-768 AI Agents：OpenHands 作者亲授，从零搭 Harness、建评测、用 RL 训 Agent，视频讲义全开放 CMU 语言技术研究所秋季新课，Graham Neubig（OpenHands 核心创始人）+ Daniel Fried 主讲。28 节课三阶段：搭 ReAct Harness→建 LLM-as-judge 评测→SFT+RL 训练 Agent。YouTube 播放列表已上传前 4 讲，3 次作业 starter code 已开放，GitHub 组织 cmu-agents。官网 cmu-agents.com。 ",
+      "score": 0.46433097
+    },
+    {
+      "article_id": "microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact",
+      "title": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率",
+      "url": "/blog/microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact/",
+      "language": "zh",
+      "excerpt": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率 microsoft/TRELLIS.2 是 TRELLIS（CVPR'25 Spotlight）的续作，10745 stars，MIT，Python。核心创新：O-Voxel「无场」稀疏体素结构取代等值面场，天然支持开放表面（衣物/叶片）、非流形几何、内部封闭结构；4B 参数模型 512³ 分辨率 H100 上约 3 秒，1024³ 约 17 秒；完整 PBR 材质（Base Color/Roughness/Metallic/Opacity）；网",
+      "score": 0.46148488
+    },
+    {
+      "article_id": "audio8-tts-preview-0.6b-multilingual-zero-shot-voice-cloning-dualAR",
+      "title": "Audio8 TTS Preview 0.6B：0.6B 参数打赢 4.6B 的 TTS 模型——11 语言零样本声音克隆",
+      "url": "/blog/audio8-tts-preview-0.6b-multilingual-zero-shot-voice-cloning-dualAR/",
+      "language": "zh",
+      "excerpt": "Audio8 TTS Preview 0.6B：0.6B 参数打赢 4.6B 的 TTS 模型——11 语言零样本声音克隆 Audio8 TTS Preview 是一个 0.6B 参数的多语言文本转语音模型，采用 DualAR 架构（慢 AR 预测语义 token + 快 AR 预测声学码本），支持 11 种语言（含粤语）零样本声音克隆。Seed-TTS 英语 WER 1.506，以 0.6B 参数规模超越 Fish S2 Pro（4.6B）、Higgs Audio v2（4.7B）。Apache 2.0，HuggingFace 开放权重。 一、基本信息",
+      "score": 0.46083438
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "titleLength": 19,
+  "titleEnLength": 53,
+  "descriptionLength": 160,
+  "descriptionEnLength": 155,
+  "wechatTitleLength": 19,
+  "wechatDigestLength": 39,
+  "bilingual": true,
+  "BLUF": true,
+  "FAQ": true,
+  "bodyImageReferences": 6,
+  "images": [
+    {
+      "file": "open-tts-leaderboard-october-2026-fig-01.png",
+      "bytes": 33770,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "open-tts-leaderboard-october-2026-fig-02.png",
+      "bytes": 59062,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "open-tts-leaderboard-october-2026-fig-03.png",
+      "bytes": 42883,
+      "dimensions": "1280x720"
+    }
+  ],
+  "copyright": true,
+  "sourcePinned": true,
+  "tableRowsCheckedAgainstPublicAPI": 40,
+  "internalLink": true,
+  "scope": "No model inference or listening test. October9 official snapshot queried October16.",
+  "independentAnalysis": "Dataset/mode/hardware coverage; p50/p95 reversal; metadata conflicts; missing vszero; no universal quality ranking."
+}

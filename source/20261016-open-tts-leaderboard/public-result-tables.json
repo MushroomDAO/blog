@@ -1,0 +1,1815 @@
+{
+  "english": {
+    "headers": [
+      "Rank",
+      "Model",
+      "Average WER ⬇️",
+      "Average RTFx ⬆️",
+      "Size (B)",
+      "License",
+      "# languages",
+      "Voice cloning",
+      "Batch inference",
+      "Transformers"
+    ],
+    "data": [
+      [
+        1,
+        "hexgrad/Kokoro-82M",
+        1.46,
+        71.15,
+        0.08,
+        "apache 2.0",
+        "8",
+        "—",
+        "—",
+        "—"
+      ],
+      [
+        2,
+        "sahilmahendrakar/Paradee-8M-v1.0",
+        1.47,
+        5.85,
+        0.01,
+        "apache-2.0",
+        "1",
+        "—",
+        "—",
+        "—"
+      ],
+      [
+        3,
+        "Supertone/supertonic-3",
+        1.54,
+        47.32,
+        0.1,
+        "Open RAIL-M",
+        "31",
+        "—",
+        "✅",
+        "—"
+      ],
+      [
+        4,
+        "fishaudio/s2-pro",
+        1.58,
+        0.4,
+        4.95,
+        "custom",
+        "83",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        5,
+        "k2-fsa/OmniVoice",
+        1.61,
+        37.56,
+        0.81,
+        "cc-by-nc",
+        "646",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        6,
+        "kyutai/pocket-tts",
+        1.62,
+        9.09,
+        0.1,
+        "cc-by-4.0",
+        "6",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        7,
+        "FunAudioLLM/Fun-CosyVoice3-0.5B-2512 (RL)",
+        1.68,
+        5.88,
+        0.11,
+        "cc-by-4.0",
+        "9",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        8,
+        "ResembleAI/chatterbox (ChatterboxTTS)",
+        1.7,
+        2.07,
+        0.8,
+        "mit",
+        "—",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        9,
+        "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+        1.71,
+        13.32,
+        1.92,
+        "apache 2.0",
+        "10",
+        "—",
+        "✅",
+        "—"
+      ],
+      [
+        10,
+        "BreezeBlue/Breeze-TTS-2",
+        1.72,
+        3.32,
+        3.47,
+        "custom",
+        "2",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        11,
+        "LiquidAI/LFM2.5-Audio-1.5B",
+        1.77,
+        1.78,
+        1.53,
+        "custom",
+        "1",
+        "—",
+        "—",
+        "—"
+      ],
+      [
+        12,
+        "microsoft/VibeVoice-Realtime-0.5B",
+        1.82,
+        2.71,
+        1.36,
+        "mit",
+        "10",
+        "—",
+        "—",
+        "—"
+      ],
+      [
+        13,
+        "nvidia/magpie_tts_multilingual_357m",
+        2.04,
+        12.68,
+        0.31,
+        "custom",
+        "9",
+        "—",
+        "—",
+        "—"
+      ],
+      [
+        14,
+        "facebook/seamless-m4t-v2-large",
+        2.07,
+        169.5,
+        1.67,
+        "cc-by-nc-4.0",
+        "96",
+        "—",
+        "✅",
+        "✅"
+      ],
+      [
+        15,
+        "owensong/Inflect-Micro-v2",
+        2.19,
+        87.76,
+        0.01,
+        "apache 2.0",
+        "—",
+        "—",
+        "—",
+        "—"
+      ],
+      [
+        16,
+        "bosonai/higgs-tts-2-3b-base",
+        2.22,
+        15.37,
+        5.38,
+        "custom",
+        "4",
+        "✅",
+        "✅",
+        "✅"
+      ],
+      [
+        17,
+        "IndexTeam/IndexTTS-2.5",
+        2.23,
+        2.23,
+        1.67,
+        "custom",
+        "5",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        18,
+        "microsoft/speecht5_tts",
+        2.23,
+        115.99,
+        0.14,
+        "mit",
+        "—",
+        "—",
+        "✅",
+        "✅"
+      ],
+      [
+        19,
+        "OpenMOSS-Team/MOSS-TTS",
+        2.33,
+        3.43,
+        8.49,
+        "apache 2.0",
+        "20",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        20,
+        "tencent/AuK",
+        2.48,
+        7.4,
+        1.53,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        21,
+        "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+        2.54,
+        11.46,
+        35.26,
+        "apache 2.0",
+        "—",
+        "—",
+        "—",
+        "✅"
+      ],
+      [
+        22,
+        "tencent/AuK-Flash",
+        2.7,
+        40.55,
+        1.53,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        23,
+        "mistralai/Voxtral-4B-TTS-2603",
+        2.71,
+        46.84,
+        4.0,
+        "cc-by-nc-4.0",
+        "9",
+        "—",
+        "✅",
+        "—"
+      ],
+      [
+        24,
+        "bosonai/higgs-tts-3-4b",
+        3.23,
+        53.66,
+        4.65,
+        "custom",
+        "102",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        25,
+        "openbmb/VoxCPM2",
+        3.38,
+        1.8,
+        2.38,
+        "apache 2.0",
+        "30",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        26,
+        "neuphonic/neutts-nano",
+        3.44,
+        1.4,
+        1.05,
+        "custom",
+        "—",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        27,
+        "neuphonic/neutts-nano-q8-gguf",
+        3.54,
+        8.18,
+        0.82,
+        "custom",
+        "—",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        28,
+        "sesame/csm-1b",
+        3.71,
+        8.15,
+        1.77,
+        "apache 2.0",
+        "—",
+        "—",
+        "✅",
+        "✅"
+      ],
+      [
+        29,
+        "owensong/Inflect-Nano-v1",
+        4.68,
+        65.42,
+        0.01,
+        "apache 2.0",
+        "—",
+        "—",
+        "—",
+        "—"
+      ],
+      [
+        30,
+        "vibevoice/VibeVoice-1.5B-hf",
+        5.76,
+        22.54,
+        2.7,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "✅"
+      ],
+      [
+        31,
+        "vibevoice/VibeVoice-7B-hf",
+        6.02,
+        14.78,
+        9.34,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "✅"
+      ]
+    ],
+    "metadata": {
+      "display_value": [
+        [
+          "1",
+          "<a target=\"_blank\" href=\"https://huggingface.co/hexgrad/Kokoro-82M\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">hexgrad/Kokoro-82M</a>",
+          "🥇 1.46",
+          "71.15"
+        ],
+        [
+          "2",
+          "<a target=\"_blank\" href=\"https://huggingface.co/sahilmahendrakar/Paradee-8M-v1.0\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">sahilmahendrakar/Paradee-8M-v1.0</a>",
+          "🥈 1.47",
+          "5.85"
+        ],
+        [
+          "3",
+          "<a target=\"_blank\" href=\"https://huggingface.co/Supertone/supertonic-3\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Supertone/supertonic-3</a>",
+          "🥉 1.54",
+          "47.32"
+        ],
+        [
+          "4",
+          "<a target=\"_blank\" href=\"https://huggingface.co/fishaudio/s2-pro\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">fishaudio/s2-pro</a>",
+          "1.58",
+          "0.40"
+        ],
+        [
+          "5",
+          "<a target=\"_blank\" href=\"https://huggingface.co/k2-fsa/OmniVoice\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">k2-fsa/OmniVoice</a>",
+          "1.61",
+          "37.56"
+        ],
+        [
+          "6",
+          "<a target=\"_blank\" href=\"https://huggingface.co/kyutai/pocket-tts\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">kyutai/pocket-tts</a>",
+          "1.62",
+          "9.09"
+        ],
+        [
+          "7",
+          "<a target=\"_blank\" href=\"https://huggingface.co/FunAudioLLM/Fun-CosyVoice3-0.5B-2512\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">FunAudioLLM/Fun-CosyVoice3-0.5B-2512 (RL)</a>",
+          "1.68",
+          "5.88"
+        ],
+        [
+          "8",
+          "<a target=\"_blank\" href=\"https://huggingface.co/ResembleAI/chatterbox\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">ResembleAI/chatterbox (ChatterboxTTS)</a>",
+          "1.70",
+          "2.07"
+        ],
+        [
+          "9",
+          "<a target=\"_blank\" href=\"https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice</a>",
+          "1.71",
+          "13.32"
+        ],
+        [
+          "10",
+          "<a target=\"_blank\" href=\"https://huggingface.co/BreezeBlue/Breeze-TTS-2\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">BreezeBlue/Breeze-TTS-2</a>",
+          "1.72",
+          "3.32"
+        ],
+        [
+          "11",
+          "<a target=\"_blank\" href=\"https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">LiquidAI/LFM2.5-Audio-1.5B</a>",
+          "1.77",
+          "1.78"
+        ],
+        [
+          "12",
+          "<a target=\"_blank\" href=\"https://huggingface.co/microsoft/VibeVoice-Realtime-0.5B\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">microsoft/VibeVoice-Realtime-0.5B</a>",
+          "1.82",
+          "2.71"
+        ],
+        [
+          "13",
+          "<a target=\"_blank\" href=\"https://huggingface.co/nvidia/magpie_tts_multilingual_357m\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">nvidia/magpie_tts_multilingual_357m</a>",
+          "2.04",
+          "12.68"
+        ],
+        [
+          "14",
+          "<a target=\"_blank\" href=\"https://huggingface.co/facebook/seamless-m4t-v2-large\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">facebook/seamless-m4t-v2-large</a>",
+          "2.07",
+          "🥇 169.50"
+        ],
+        [
+          "15",
+          "<a target=\"_blank\" href=\"https://huggingface.co/owensong/Inflect-Micro-v2\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">owensong/Inflect-Micro-v2</a>",
+          "2.19",
+          "🥉 87.76"
+        ],
+        [
+          "16",
+          "<a target=\"_blank\" href=\"https://huggingface.co/bosonai/higgs-tts-2-3b-base\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">bosonai/higgs-tts-2-3b-base</a>",
+          "2.22",
+          "15.37"
+        ],
+        [
+          "17",
+          "<a target=\"_blank\" href=\"https://huggingface.co/IndexTeam/IndexTTS-2.5\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">IndexTeam/IndexTTS-2.5</a>",
+          "2.23",
+          "2.23"
+        ],
+        [
+          "18",
+          "<a target=\"_blank\" href=\"https://huggingface.co/microsoft/speecht5_tts\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">microsoft/speecht5_tts</a>",
+          "2.23",
+          "🥈 115.99"
+        ],
+        [
+          "19",
+          "<a target=\"_blank\" href=\"https://huggingface.co/OpenMOSS-Team/MOSS-TTS\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">OpenMOSS-Team/MOSS-TTS</a>",
+          "2.33",
+          "3.43"
+        ],
+        [
+          "20",
+          "<a target=\"_blank\" href=\"https://huggingface.co/tencent/AuK\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">tencent/AuK</a>",
+          "2.48",
+          "7.40"
+        ],
+        [
+          "21",
+          "<a target=\"_blank\" href=\"https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Qwen/Qwen3-Omni-30B-A3B-Instruct</a>",
+          "2.54",
+          "11.46"
+        ],
+        [
+          "22",
+          "<a target=\"_blank\" href=\"https://huggingface.co/tencent/AuK-Flash\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">tencent/AuK-Flash</a>",
+          "2.70",
+          "40.55"
+        ],
+        [
+          "23",
+          "<a target=\"_blank\" href=\"https://huggingface.co/mistralai/Voxtral-4B-TTS-2603\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">mistralai/Voxtral-4B-TTS-2603</a>",
+          "2.71",
+          "46.84"
+        ],
+        [
+          "24",
+          "<a target=\"_blank\" href=\"https://huggingface.co/bosonai/higgs-tts-3-4b\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">bosonai/higgs-tts-3-4b</a>",
+          "3.23",
+          "53.66"
+        ],
+        [
+          "25",
+          "<a target=\"_blank\" href=\"https://huggingface.co/openbmb/VoxCPM2\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">openbmb/VoxCPM2</a>",
+          "3.38",
+          "1.80"
+        ],
+        [
+          "26",
+          "<a target=\"_blank\" href=\"https://huggingface.co/neuphonic/neutts-nano\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">neuphonic/neutts-nano</a>",
+          "3.44",
+          "1.40"
+        ],
+        [
+          "27",
+          "<a target=\"_blank\" href=\"https://huggingface.co/neuphonic/neutts-nano-q8-gguf\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">neuphonic/neutts-nano-q8-gguf</a>",
+          "3.54",
+          "8.18"
+        ],
+        [
+          "28",
+          "<a target=\"_blank\" href=\"https://huggingface.co/sesame/csm-1b\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">sesame/csm-1b</a>",
+          "3.71",
+          "8.15"
+        ],
+        [
+          "29",
+          "<a target=\"_blank\" href=\"https://huggingface.co/owensong/Inflect-Nano-v1\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">owensong/Inflect-Nano-v1</a>",
+          "4.68",
+          "65.42"
+        ],
+        [
+          "30",
+          "<a target=\"_blank\" href=\"https://huggingface.co/vibevoice/VibeVoice-1.5B-hf\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">vibevoice/VibeVoice-1.5B-hf</a>",
+          "5.76",
+          "22.54"
+        ],
+        [
+          "31",
+          "<a target=\"_blank\" href=\"https://huggingface.co/vibevoice/VibeVoice-7B-hf\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">vibevoice/VibeVoice-7B-hf</a>",
+          "6.02",
+          "14.78"
+        ]
+      ]
+    }
+  },
+  "chinese": {
+    "headers": [
+      "Rank",
+      "Model",
+      "Average WER ⬇️",
+      "Average RTFx ⬆️",
+      "Size (B)",
+      "License",
+      "# languages",
+      "Voice cloning",
+      "Batch inference",
+      "Transformers"
+    ],
+    "data": [
+      [
+        1,
+        "k2-fsa/OmniVoice",
+        0.92,
+        48.45,
+        0.81,
+        "cc-by-nc",
+        "646",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        2,
+        "tencent/AuK",
+        0.93,
+        7.67,
+        1.53,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        3,
+        "FunAudioLLM/Fun-CosyVoice3-0.5B-2512 (RL)",
+        0.99,
+        2.76,
+        0.11,
+        "cc-by-4.0",
+        "9",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        4,
+        "OpenMOSS-Team/MOSS-TTS",
+        1.02,
+        25.37,
+        8.49,
+        "apache 2.0",
+        "20",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        5,
+        "tencent/AuK-Flash",
+        1.03,
+        44.34,
+        1.53,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        6,
+        "fishaudio/s2-pro",
+        1.09,
+        0.4,
+        4.95,
+        "custom",
+        "83",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        7,
+        "openbmb/VoxCPM2",
+        1.11,
+        1.77,
+        2.38,
+        "apache 2.0",
+        "30",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        8,
+        "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+        1.14,
+        11.98,
+        35.26,
+        "apache 2.0",
+        "—",
+        "—",
+        "—",
+        "✅"
+      ],
+      [
+        9,
+        "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+        1.15,
+        14.58,
+        1.92,
+        "apache 2.0",
+        "10",
+        "—",
+        "✅",
+        "—"
+      ],
+      [
+        10,
+        "BreezeBlue/Breeze-TTS-2",
+        1.17,
+        3.29,
+        3.47,
+        "custom",
+        "2",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        11,
+        "bosonai/higgs-tts-3-4b",
+        1.18,
+        70.41,
+        4.65,
+        "custom",
+        "102",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        12,
+        "IndexTeam/IndexTTS-2.5",
+        1.61,
+        2.29,
+        1.67,
+        "custom",
+        "5",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        13,
+        "bosonai/higgs-tts-2-3b-base",
+        1.8,
+        17.65,
+        5.38,
+        "custom",
+        "4",
+        "✅",
+        "✅",
+        "✅"
+      ],
+      [
+        14,
+        "nvidia/magpie_tts_multilingual_357m",
+        1.8,
+        14.18,
+        0.31,
+        "custom",
+        "9",
+        "—",
+        "—",
+        "—"
+      ],
+      [
+        15,
+        "vibevoice/VibeVoice-1.5B-hf",
+        2.62,
+        22.61,
+        2.7,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "✅"
+      ],
+      [
+        16,
+        "vibevoice/VibeVoice-7B-hf",
+        3.94,
+        13.14,
+        9.34,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "✅"
+      ],
+      [
+        17,
+        "facebook/seamless-m4t-v2-large",
+        5.66,
+        218.19,
+        1.67,
+        "cc-by-nc-4.0",
+        "96",
+        "—",
+        "✅",
+        "✅"
+      ],
+      [
+        18,
+        "ResembleAI/chatterbox (ChatterboxMultilingualTTS)",
+        25.22,
+        1.3,
+        0.8,
+        "mit",
+        "23",
+        "✅",
+        "—",
+        "—"
+      ]
+    ],
+    "metadata": {
+      "display_value": [
+        [
+          "1",
+          "<a target=\"_blank\" href=\"https://huggingface.co/k2-fsa/OmniVoice\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">k2-fsa/OmniVoice</a>",
+          "🥇 0.92",
+          "🥉 48.45"
+        ],
+        [
+          "2",
+          "<a target=\"_blank\" href=\"https://huggingface.co/tencent/AuK\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">tencent/AuK</a>",
+          "🥈 0.93",
+          "7.67"
+        ],
+        [
+          "3",
+          "<a target=\"_blank\" href=\"https://huggingface.co/FunAudioLLM/Fun-CosyVoice3-0.5B-2512\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">FunAudioLLM/Fun-CosyVoice3-0.5B-2512 (RL)</a>",
+          "🥉 0.99",
+          "2.76"
+        ],
+        [
+          "4",
+          "<a target=\"_blank\" href=\"https://huggingface.co/OpenMOSS-Team/MOSS-TTS\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">OpenMOSS-Team/MOSS-TTS</a>",
+          "1.02",
+          "25.37"
+        ],
+        [
+          "5",
+          "<a target=\"_blank\" href=\"https://huggingface.co/tencent/AuK-Flash\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">tencent/AuK-Flash</a>",
+          "1.03",
+          "44.34"
+        ],
+        [
+          "6",
+          "<a target=\"_blank\" href=\"https://huggingface.co/fishaudio/s2-pro\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">fishaudio/s2-pro</a>",
+          "1.09",
+          "0.40"
+        ],
+        [
+          "7",
+          "<a target=\"_blank\" href=\"https://huggingface.co/openbmb/VoxCPM2\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">openbmb/VoxCPM2</a>",
+          "1.11",
+          "1.77"
+        ],
+        [
+          "8",
+          "<a target=\"_blank\" href=\"https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Qwen/Qwen3-Omni-30B-A3B-Instruct</a>",
+          "1.14",
+          "11.98"
+        ],
+        [
+          "9",
+          "<a target=\"_blank\" href=\"https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice</a>",
+          "1.15",
+          "14.58"
+        ],
+        [
+          "10",
+          "<a target=\"_blank\" href=\"https://huggingface.co/BreezeBlue/Breeze-TTS-2\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">BreezeBlue/Breeze-TTS-2</a>",
+          "1.17",
+          "3.29"
+        ],
+        [
+          "11",
+          "<a target=\"_blank\" href=\"https://huggingface.co/bosonai/higgs-tts-3-4b\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">bosonai/higgs-tts-3-4b</a>",
+          "1.18",
+          "🥈 70.41"
+        ],
+        [
+          "12",
+          "<a target=\"_blank\" href=\"https://huggingface.co/IndexTeam/IndexTTS-2.5\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">IndexTeam/IndexTTS-2.5</a>",
+          "1.61",
+          "2.29"
+        ],
+        [
+          "13",
+          "<a target=\"_blank\" href=\"https://huggingface.co/bosonai/higgs-tts-2-3b-base\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">bosonai/higgs-tts-2-3b-base</a>",
+          "1.80",
+          "17.65"
+        ],
+        [
+          "14",
+          "<a target=\"_blank\" href=\"https://huggingface.co/nvidia/magpie_tts_multilingual_357m\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">nvidia/magpie_tts_multilingual_357m</a>",
+          "1.80",
+          "14.18"
+        ],
+        [
+          "15",
+          "<a target=\"_blank\" href=\"https://huggingface.co/vibevoice/VibeVoice-1.5B-hf\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">vibevoice/VibeVoice-1.5B-hf</a>",
+          "2.62",
+          "22.61"
+        ],
+        [
+          "16",
+          "<a target=\"_blank\" href=\"https://huggingface.co/vibevoice/VibeVoice-7B-hf\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">vibevoice/VibeVoice-7B-hf</a>",
+          "3.94",
+          "13.14"
+        ],
+        [
+          "17",
+          "<a target=\"_blank\" href=\"https://huggingface.co/facebook/seamless-m4t-v2-large\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">facebook/seamless-m4t-v2-large</a>",
+          "5.66",
+          "🥇 218.19"
+        ],
+        [
+          "18",
+          "<a target=\"_blank\" href=\"https://huggingface.co/ResembleAI/chatterbox\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">ResembleAI/chatterbox (ChatterboxMultilingualTTS)</a>",
+          "25.22",
+          "1.30"
+        ]
+      ]
+    }
+  },
+  "clone-english": {
+    "headers": [
+      "Rank",
+      "Model",
+      "Average WER ⬇️",
+      "Average RTFx ⬆️",
+      "Average SIM ⬆️",
+      "Size (B)",
+      "License",
+      "# languages",
+      "Voice cloning",
+      "Batch inference",
+      "Transformers"
+    ],
+    "data": [
+      [
+        1,
+        "bosonai/higgs-tts-3-4b",
+        1.59,
+        43.34,
+        64.69,
+        4.65,
+        "custom",
+        "102",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        2,
+        "k2-fsa/OmniVoice",
+        1.69,
+        20.44,
+        71.98,
+        0.81,
+        "cc-by-nc",
+        "646",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        3,
+        "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        1.81,
+        7.49,
+        69.33,
+        1.92,
+        "apache 2.0",
+        "10",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        4,
+        "openbmb/VoxCPM2",
+        1.82,
+        1.79,
+        70.87,
+        2.38,
+        "apache 2.0",
+        "30",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        5,
+        "fishaudio/s2-pro",
+        1.82,
+        0.4,
+        62.03,
+        4.95,
+        "custom",
+        "83",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        6,
+        "kyutai/pocket-tts",
+        1.9,
+        8.91,
+        46.7,
+        0.1,
+        "cc-by-4.0",
+        "6",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        7,
+        "FunAudioLLM/Fun-CosyVoice3-0.5B-2512 (RL)",
+        1.96,
+        5.43,
+        58.25,
+        0.11,
+        "cc-by-4.0",
+        "9",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        8,
+        "tencent/AuK",
+        2.07,
+        4.38,
+        75.08,
+        1.53,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        9,
+        "tencent/AuK-Flash",
+        2.08,
+        22.58,
+        74.19,
+        1.53,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        10,
+        "OpenMOSS-Team/MOSS-TTS",
+        2.15,
+        10.72,
+        64.89,
+        8.49,
+        "apache 2.0",
+        "20",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        11,
+        "IndexTeam/IndexTTS-2.5",
+        2.27,
+        1.98,
+        56.29,
+        1.67,
+        "custom",
+        "5",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        12,
+        "BreezeBlue/Breeze-TTS-2",
+        2.29,
+        3.12,
+        65.46,
+        3.47,
+        "custom",
+        "2",
+        "✅",
+        "—",
+        "—"
+      ],
+      [
+        13,
+        "bosonai/higgs-tts-2-3b-base",
+        3.36,
+        2.15,
+        65.97,
+        5.38,
+        "custom",
+        "4",
+        "✅",
+        "✅",
+        "✅"
+      ],
+      [
+        14,
+        "neuphonic/neutts-nano",
+        3.44,
+        1.43,
+        37.23,
+        1.05,
+        "custom",
+        "—",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        15,
+        "neuphonic/neutts-nano-q8-gguf",
+        3.54,
+        8.27,
+        36.96,
+        0.82,
+        "custom",
+        "—",
+        "✅",
+        "✅",
+        "—"
+      ],
+      [
+        16,
+        "vibevoice/VibeVoice-7B-hf",
+        4.42,
+        16.57,
+        59.08,
+        9.34,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "✅"
+      ],
+      [
+        17,
+        "vibevoice/VibeVoice-1.5B-hf",
+        4.92,
+        22.13,
+        56.03,
+        2.7,
+        "mit",
+        "2",
+        "✅",
+        "✅",
+        "✅"
+      ]
+    ],
+    "metadata": {
+      "display_value": [
+        [
+          "1",
+          "<a target=\"_blank\" href=\"https://huggingface.co/bosonai/higgs-tts-3-4b\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">bosonai/higgs-tts-3-4b</a>",
+          "🥇 1.59",
+          "🥇 43.34",
+          "64.69"
+        ],
+        [
+          "2",
+          "<a target=\"_blank\" href=\"https://huggingface.co/k2-fsa/OmniVoice\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">k2-fsa/OmniVoice</a>",
+          "🥈 1.69",
+          "20.44",
+          "🥉 71.98"
+        ],
+        [
+          "3",
+          "<a target=\"_blank\" href=\"https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Qwen/Qwen3-TTS-12Hz-1.7B-Base</a>",
+          "🥉 1.81",
+          "7.49",
+          "69.33"
+        ],
+        [
+          "4",
+          "<a target=\"_blank\" href=\"https://huggingface.co/openbmb/VoxCPM2\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">openbmb/VoxCPM2</a>",
+          "1.82",
+          "1.79",
+          "70.87"
+        ],
+        [
+          "5",
+          "<a target=\"_blank\" href=\"https://huggingface.co/fishaudio/s2-pro\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">fishaudio/s2-pro</a>",
+          "1.82",
+          "0.40",
+          "62.03"
+        ],
+        [
+          "6",
+          "<a target=\"_blank\" href=\"https://huggingface.co/kyutai/pocket-tts\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">kyutai/pocket-tts</a>",
+          "1.90",
+          "8.91",
+          "46.70"
+        ],
+        [
+          "7",
+          "<a target=\"_blank\" href=\"https://huggingface.co/FunAudioLLM/Fun-CosyVoice3-0.5B-2512\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">FunAudioLLM/Fun-CosyVoice3-0.5B-2512 (RL)</a>",
+          "1.96",
+          "5.43",
+          "58.25"
+        ],
+        [
+          "8",
+          "<a target=\"_blank\" href=\"https://huggingface.co/tencent/AuK\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">tencent/AuK</a>",
+          "2.07",
+          "4.38",
+          "🥇 75.08"
+        ],
+        [
+          "9",
+          "<a target=\"_blank\" href=\"https://huggingface.co/tencent/AuK-Flash\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">tencent/AuK-Flash</a>",
+          "2.08",
+          "🥈 22.58",
+          "🥈 74.19"
+        ],
+        [
+          "10",
+          "<a target=\"_blank\" href=\"https://huggingface.co/OpenMOSS-Team/MOSS-TTS\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">OpenMOSS-Team/MOSS-TTS</a>",
+          "2.15",
+          "10.72",
+          "64.89"
+        ],
+        [
+          "11",
+          "<a target=\"_blank\" href=\"https://huggingface.co/IndexTeam/IndexTTS-2.5\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">IndexTeam/IndexTTS-2.5</a>",
+          "2.27",
+          "1.98",
+          "56.29"
+        ],
+        [
+          "12",
+          "<a target=\"_blank\" href=\"https://huggingface.co/BreezeBlue/Breeze-TTS-2\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">BreezeBlue/Breeze-TTS-2</a>",
+          "2.29",
+          "3.12",
+          "65.46"
+        ],
+        [
+          "13",
+          "<a target=\"_blank\" href=\"https://huggingface.co/bosonai/higgs-tts-2-3b-base\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">bosonai/higgs-tts-2-3b-base</a>",
+          "3.36",
+          "2.15",
+          "65.97"
+        ],
+        [
+          "14",
+          "<a target=\"_blank\" href=\"https://huggingface.co/neuphonic/neutts-nano\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">neuphonic/neutts-nano</a>",
+          "3.44",
+          "1.43",
+          "37.23"
+        ],
+        [
+          "15",
+          "<a target=\"_blank\" href=\"https://huggingface.co/neuphonic/neutts-nano-q8-gguf\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">neuphonic/neutts-nano-q8-gguf</a>",
+          "3.54",
+          "8.27",
+          "36.96"
+        ],
+        [
+          "16",
+          "<a target=\"_blank\" href=\"https://huggingface.co/vibevoice/VibeVoice-7B-hf\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">vibevoice/VibeVoice-7B-hf</a>",
+          "4.42",
+          "16.57",
+          "59.08"
+        ],
+        [
+          "17",
+          "<a target=\"_blank\" href=\"https://huggingface.co/vibevoice/VibeVoice-1.5B-hf\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">vibevoice/VibeVoice-1.5B-hf</a>",
+          "4.92",
+          "🥉 22.13",
+          "56.03"
+        ]
+      ]
+    }
+  },
+  "stream-a100": {
+    "headers": [
+      "Rank",
+      "Model",
+      "TTFA p95 (ms)",
+      "TTFA p50 (ms)",
+      "RTFx ⬆️",
+      "Streaming API",
+      "Size (B)"
+    ],
+    "data": [
+      [
+        1,
+        "Serveurperso/Qwen3-TTS-GGUF¹",
+        25.1,
+        20.9,
+        5.83,
+        "✅",
+        1.92
+      ],
+      [
+        2,
+        "LiquidAI/LFM2.5-Audio-1.5B (audio.cpp)²",
+        28.7,
+        26.6,
+        8.76,
+        "✅",
+        1.53
+      ],
+      [
+        3,
+        "kyutai/pocket-tts (audio.cpp)³",
+        33.5,
+        29.2,
+        11.07,
+        "✅",
+        0.1
+      ],
+      [
+        4,
+        "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice (photon)⁴",
+        34.3,
+        33.1,
+        9.36,
+        "✅",
+        1.92
+      ],
+      [
+        5,
+        "kyutai/pocket-tts",
+        44.0,
+        41.0,
+        6.49,
+        "✅",
+        0.1
+      ],
+      [
+        6,
+        "BreezeBlue/Breeze-TTS-2",
+        46.5,
+        44.1,
+        2.49,
+        "✅",
+        3.47
+      ],
+      [
+        7,
+        "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice (photon)⁵",
+        50.7,
+        45.2,
+        11.13,
+        "✅",
+        0.9
+      ],
+      [
+        8,
+        "owensong/Inflect-Micro-v2",
+        88.6,
+        66.7,
+        84.78,
+        "—",
+        0.01
+      ],
+      [
+        9,
+        "microsoft/VibeVoice-Realtime-0.5B",
+        91.4,
+        79.6,
+        1.6,
+        "✅",
+        1.36
+      ],
+      [
+        10,
+        "LiquidAI/LFM2.5-Audio-1.5B",
+        99.7,
+        97.3,
+        1.24,
+        "✅",
+        1.53
+      ],
+      [
+        11,
+        "mistralai/Voxtral-4B-TTS-2603",
+        120.5,
+        115.5,
+        5.64,
+        "✅",
+        4.0
+      ],
+      [
+        12,
+        "hexgrad/Kokoro-82M (photon)⁶",
+        123.6,
+        77.8,
+        50.68,
+        "—",
+        0.08
+      ],
+      [
+        13,
+        "hexgrad/Kokoro-82M",
+        130.6,
+        102.7,
+        38.87,
+        "—",
+        0.08
+      ],
+      [
+        14,
+        "openbmb/VoxCPM2",
+        159.7,
+        157.5,
+        1.04,
+        "✅",
+        2.38
+      ],
+      [
+        15,
+        "bosonai/higgs-tts-3-4b",
+        164.3,
+        155.6,
+        4.23,
+        "✅",
+        4.65
+      ],
+      [
+        16,
+        "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice⁷",
+        395.7,
+        389.0,
+        2.71,
+        "✅",
+        1.92
+      ],
+      [
+        17,
+        "fishaudio/s2-pro",
+        502.4,
+        451.7,
+        2.76,
+        "✅",
+        4.95
+      ],
+      [
+        18,
+        "neuphonic/neutts-nano-q8-gguf",
+        507.7,
+        372.5,
+        4.32,
+        "✅",
+        0.82
+      ],
+      [
+        19,
+        "sahilmahendrakar/Paradee-8M-v1.0",
+        1084.3,
+        1028.6,
+        4.17,
+        "—",
+        0.01
+      ],
+      [
+        20,
+        "facebook/seamless-m4t-v2-large",
+        1562.9,
+        898.8,
+        4.98,
+        "—",
+        1.67
+      ],
+      [
+        21,
+        "Supertone/supertonic-3 (audio.cpp)⁸",
+        1813.6,
+        600.1,
+        8.12,
+        "—",
+        0.1
+      ],
+      [
+        22,
+        "Supertone/supertonic-3",
+        2051.8,
+        1911.3,
+        3.17,
+        "—",
+        0.1
+      ],
+      [
+        23,
+        "FunAudioLLM/Fun-CosyVoice3-0.5B-2512 (RL)",
+        8039.2,
+        2565.7,
+        1.46,
+        "✅",
+        0.11
+      ]
+    ],
+    "metadata": {
+      "display_value": [
+        [
+          1,
+          "<a target=\"_blank\" href=\"https://huggingface.co/Serveurperso/Qwen3-TTS-GGUF\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Serveurperso/Qwen3-TTS-GGUF</a><sup>¹</sup>",
+          "🥇 25.1",
+          "🥇 20.9",
+          "5.83"
+        ],
+        [
+          2,
+          "<a target=\"_blank\" href=\"https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">LiquidAI/LFM2.5-Audio-1.5B (audio.cpp)</a><sup>²</sup>",
+          "🥈 28.7",
+          "🥈 26.6",
+          "8.76"
+        ],
+        [
+          3,
+          "<a target=\"_blank\" href=\"https://huggingface.co/kyutai/pocket-tts\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">kyutai/pocket-tts (audio.cpp)</a><sup>³</sup>",
+          "🥉 33.5",
+          "🥉 29.2",
+          "11.07"
+        ],
+        [
+          4,
+          "<a target=\"_blank\" href=\"https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice (photon)</a><sup>⁴</sup>",
+          "34.3",
+          "33.1",
+          "9.36"
+        ],
+        [
+          5,
+          "<a target=\"_blank\" href=\"https://huggingface.co/kyutai/pocket-tts\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">kyutai/pocket-tts</a>",
+          "44.0",
+          "41.0",
+          "6.49"
+        ],
+        [
+          6,
+          "<a target=\"_blank\" href=\"https://huggingface.co/BreezeBlue/Breeze-TTS-2\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">BreezeBlue/Breeze-TTS-2</a>",
+          "46.5",
+          "44.1",
+          "2.49"
+        ],
+        [
+          7,
+          "<a target=\"_blank\" href=\"https://huggingface.co/Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice (photon)</a><sup>⁵</sup>",
+          "50.7",
+          "45.2",
+          "11.13"
+        ],
+        [
+          8,
+          "<a target=\"_blank\" href=\"https://huggingface.co/owensong/Inflect-Micro-v2\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">owensong/Inflect-Micro-v2</a>",
+          "88.6",
+          "66.7",
+          "🥇 84.78"
+        ],
+        [
+          9,
+          "<a target=\"_blank\" href=\"https://huggingface.co/microsoft/VibeVoice-Realtime-0.5B\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">microsoft/VibeVoice-Realtime-0.5B</a>",
+          "91.4",
+          "79.6",
+          "1.60"
+        ],
+        [
+          10,
+          "<a target=\"_blank\" href=\"https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">LiquidAI/LFM2.5-Audio-1.5B</a>",
+          "99.7",
+          "97.3",
+          "1.24"
+        ],
+        [
+          11,
+          "<a target=\"_blank\" href=\"https://huggingface.co/mistralai/Voxtral-4B-TTS-2603\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">mistralai/Voxtral-4B-TTS-2603</a>",
+          "120.5",
+          "115.5",
+          "5.64"
+        ],
+        [
+          12,
+          "<a target=\"_blank\" href=\"https://huggingface.co/hexgrad/Kokoro-82M\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">hexgrad/Kokoro-82M (photon)</a><sup>⁶</sup>",
+          "123.6",
+          "77.8",
+          "🥈 50.68"
+        ],
+        [
+          13,
+          "<a target=\"_blank\" href=\"https://huggingface.co/hexgrad/Kokoro-82M\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">hexgrad/Kokoro-82M</a>",
+          "130.6",
+          "102.7",
+          "🥉 38.87"
+        ],
+        [
+          14,
+          "<a target=\"_blank\" href=\"https://huggingface.co/openbmb/VoxCPM2\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">openbmb/VoxCPM2</a>",
+          "159.7",
+          "157.5",
+          "1.04"
+        ],
+        [
+          15,
+          "<a target=\"_blank\" href=\"https://huggingface.co/bosonai/higgs-tts-3-4b\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">bosonai/higgs-tts-3-4b</a>",
+          "164.3",
+          "155.6",
+          "4.23"
+        ],
+        [
+          16,
+          "<a target=\"_blank\" href=\"https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice</a><sup>⁷</sup>",
+          "395.7",
+          "389.0",
+          "2.71"
+        ],
+        [
+          17,
+          "<a target=\"_blank\" href=\"https://huggingface.co/fishaudio/s2-pro\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">fishaudio/s2-pro</a>",
+          "502.4",
+          "451.7",
+          "2.76"
+        ],
+        [
+          18,
+          "<a target=\"_blank\" href=\"https://huggingface.co/neuphonic/neutts-nano-q8-gguf\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">neuphonic/neutts-nano-q8-gguf</a>",
+          "507.7",
+          "372.5",
+          "4.32"
+        ],
+        [
+          19,
+          "<a target=\"_blank\" href=\"https://huggingface.co/sahilmahendrakar/Paradee-8M-v1.0\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">sahilmahendrakar/Paradee-8M-v1.0</a>",
+          "1084.3",
+          "1028.6",
+          "4.17"
+        ],
+        [
+          20,
+          "<a target=\"_blank\" href=\"https://huggingface.co/facebook/seamless-m4t-v2-large\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">facebook/seamless-m4t-v2-large</a>",
+          "1562.9",
+          "898.8",
+          "4.98"
+        ],
+        [
+          21,
+          "<a target=\"_blank\" href=\"https://huggingface.co/Supertone/supertonic-3\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Supertone/supertonic-3 (audio.cpp)</a><sup>⁸</sup>",
+          "1813.6",
+          "600.1",
+          "8.12"
+        ],
+        [
+          22,
+          "<a target=\"_blank\" href=\"https://huggingface.co/Supertone/supertonic-3\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Supertone/supertonic-3</a>",
+          "2051.8",
+          "1911.3",
+          "3.17"
+        ],
+        [
+          23,
+          "<a target=\"_blank\" href=\"https://huggingface.co/FunAudioLLM/Fun-CosyVoice3-0.5B-2512\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">FunAudioLLM/Fun-CosyVoice3-0.5B-2512 (RL)</a>",
+          "8039.2",
+          "2565.7",
+          "1.46"
+        ]
+      ]
+    }
+  },
+  "stream-cpu": {
+    "headers": [
+      "Rank",
+      "Model",
+      "TTFA p95 (ms)",
+      "TTFA p50 (ms)",
+      "RTFx ⬆️",
+      "Streaming API",
+      "Size (B)"
+    ],
+    "data": [
+      [
+        1,
+        "kyutai/pocket-tts",
+        164.9,
+        125.9,
+        3.19,
+        "✅",
+        0.1
+      ],
+      [
+        2,
+        "kyutai/pocket-tts (audio.cpp)¹",
+        182.3,
+        73.6,
+        2.49,
+        "✅",
+        0.1
+      ],
+      [
+        3,
+        "LiquidAI/LFM2.5-Audio-1.5B (audio.cpp)²",
+        341.1,
+        273.6,
+        1.2,
+        "✅",
+        1.53
+      ],
+      [
+        4,
+        "sahilmahendrakar/Paradee-8M-v1.0",
+        996.9,
+        390.1,
+        11.48,
+        "—",
+        0.01
+      ],
+      [
+        5,
+        "owensong/Inflect-Micro-v2",
+        1292.4,
+        526.7,
+        8.18,
+        "—",
+        0.01
+      ],
+      [
+        6,
+        "hexgrad/Kokoro-82M (photon)³",
+        2259.6,
+        803.3,
+        5.39,
+        "—",
+        0.08
+      ],
+      [
+        7,
+        "hexgrad/Kokoro-82M",
+        2373.6,
+        852.2,
+        5.46,
+        "—",
+        0.08
+      ],
+      [
+        8,
+        "Supertone/supertonic-3 (audio.cpp)⁴",
+        4371.8,
+        1552.8,
+        3.03,
+        "—",
+        0.1
+      ]
+    ],
+    "metadata": {
+      "display_value": [
+        [
+          1,
+          "<a target=\"_blank\" href=\"https://huggingface.co/kyutai/pocket-tts\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">kyutai/pocket-tts</a>",
+          "🥇 164.9",
+          "🥈 125.9",
+          "3.19"
+        ],
+        [
+          2,
+          "<a target=\"_blank\" href=\"https://huggingface.co/kyutai/pocket-tts\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">kyutai/pocket-tts (audio.cpp)</a><sup>¹</sup>",
+          "🥈 182.3",
+          "🥇 73.6",
+          "2.49"
+        ],
+        [
+          3,
+          "<a target=\"_blank\" href=\"https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">LiquidAI/LFM2.5-Audio-1.5B (audio.cpp)</a><sup>²</sup>",
+          "🥉 341.1",
+          "🥉 273.6",
+          "1.20"
+        ],
+        [
+          4,
+          "<a target=\"_blank\" href=\"https://huggingface.co/sahilmahendrakar/Paradee-8M-v1.0\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">sahilmahendrakar/Paradee-8M-v1.0</a>",
+          "996.9",
+          "390.1",
+          "🥇 11.48"
+        ],
+        [
+          5,
+          "<a target=\"_blank\" href=\"https://huggingface.co/owensong/Inflect-Micro-v2\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">owensong/Inflect-Micro-v2</a>",
+          "1292.4",
+          "526.7",
+          "🥈 8.18"
+        ],
+        [
+          6,
+          "<a target=\"_blank\" href=\"https://huggingface.co/hexgrad/Kokoro-82M\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">hexgrad/Kokoro-82M (photon)</a><sup>³</sup>",
+          "2259.6",
+          "803.3",
+          "5.39"
+        ],
+        [
+          7,
+          "<a target=\"_blank\" href=\"https://huggingface.co/hexgrad/Kokoro-82M\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">hexgrad/Kokoro-82M</a>",
+          "2373.6",
+          "852.2",
+          "🥉 5.46"
+        ],
+        [
+          8,
+          "<a target=\"_blank\" href=\"https://huggingface.co/Supertone/supertonic-3\" style=\"color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;\">Supertone/supertonic-3 (audio.cpp)</a><sup>⁴</sup>",
+          "4371.8",
+          "1552.8",
+          "3.03"
+        ]
+      ]
+    }
+  }
+}
