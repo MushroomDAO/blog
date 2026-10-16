@@ -11,6 +11,9 @@
     "https://github.com/threerocks/sweety-handdraw-video/blob/main/skills/sweety-handdraw-video/references/quality-gates.md"
   ],
   "publishedAt": "2026-10-15T12:47:41.091Z",
-  "wechatStatus": "draft",
-  "currentVerifiedMediaId": "prCUE631thH1cmNLi42prHnGbXc8a2yu9vTLLzRsvPvarjO0hEHXiq7gX_PdzmUU"
+  "wechatStatus": "recorded",
+  "currentVerifiedMediaId": "",
+  "archivedMediaId": "prCUE631thH1cmNLi42prHnGbXc8a2yu9vTLLzRsvPvarjO0hEHXiq7gX_PdzmUU",
+  "verifiedAt": "2026-10-16T03:09:26.981Z",
+  "wechatError": "旧创建凭证对应的 draft/get 返回40007，当前远程草稿箱无匹配；已发布列表接口返回48001无权限，当前状态未核验。保留旧凭证，未重复创建。"
 }

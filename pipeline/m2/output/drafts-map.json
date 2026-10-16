@@ -836,7 +836,12 @@
   "sweety-handdraw-video-pipeline": {
     "mediaId": "prCUE631thH1cmNLi42prHnGbXc8a2yu9vTLLzRsvPvarjO0hEHXiq7gX_PdzmUU",
     "title": "Sweety：长文变手绘讲解视频",
-    "publishedAt": "2026-10-15T12:47:41.091Z"
+    "publishedAt": "2026-10-15T12:47:41.091Z",
+    "wechatStatus": "recorded",
+    "currentVerifiedMediaId": "",
+    "archivedMediaId": "prCUE631thH1cmNLi42prHnGbXc8a2yu9vTLLzRsvPvarjO0hEHXiq7gX_PdzmUU",
+    "verifiedAt": "2026-10-16T03:09:26.981Z",
+    "wechatError": "旧创建凭证对应的 draft/get 返回40007，当前远程草稿箱无匹配；已发布列表接口返回48001无权限，当前状态未核验。保留旧凭证，未重复创建。"
   },
   "x2streaming-asr-append-only": {
     "mediaId": "prCUE631thH1cmNLi42prNKsH3d63-QLj_qwUv5Cb0NEkw6eIrqdTDUqXxcH1Edm",
