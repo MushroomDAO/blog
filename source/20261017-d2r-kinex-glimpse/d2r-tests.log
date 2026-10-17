@@ -1,0 +1,71 @@
+test_cache_requires_free_space_and_available_usage (test_cache_budget.CacheTests) ... ok
+test_configuration_errors_identify_missing_or_invalid_json_without_exposing_input (test_input_config.InputTests) ... ok
+test_download_errors_are_bounded_and_do_not_expose_signed_urls (test_input_config.InputTests) ... ok
+test_drive_download_verifies_bytes_and_preserves_completed_archive (test_input_config.InputTests) ... ok
+test_drive_links (test_input_config.InputTests) ... ok
+test_json_url_checksum_and_identity (test_input_config.InputTests) ... ok
+test_missing_upstream_table_or_new_resource_folder_stops_preparation (test_ios_package.IOSPackageTests) ... ok
+test_upstream_project_resources_survive_staging_build_and_packaging (test_ios_package.IOSPackageTests) ... ok
+test_existing_archive_cache_is_verified_without_downloading_again (test_macos.MacBuildTests) ... Reused verified original game archive; download skipped
+ok
+test_mac_release_checks_both_packages_before_publishing (test_macos.MacBuildTests) ... ERROR
+test_native_changes_reuse_generation_but_changed_generators_do_not (test_macos.MacBuildTests) ... ok
+test_prepared_archive_allows_native_changes_and_rejects_generation_changes (test_macos.MacBuildTests) ... Mac prepared input verified; ready for native compilation
+Mac prepared input verified; ready for native compilation
+ok
+test_prepared_cache_integrity_and_macos_executable_platform (test_macos.MacBuildTests) ... ok
+test_final_app_checks_program_tables_shaders_and_generated_overlays (test_macos.MacShaderTests) ... ok
+test_missing_reflection_invalid_json_and_wrong_chain_are_rejected (test_macos.MacShaderTests) ... ok
+test_retarget_copies_metadata_without_expanding_filenames_into_arguments (test_macos.MacShaderTests) ... ok
+test_download_cache_reuses_verified_bytes_and_recovers_from_corruption (test_prepared.PreparedTests) ... Prepared package downloaded and verified; ready to cache before extraction
+Reused verified prepared package; download skipped
+Prepared package downloaded and verified; ready to cache before extraction
+ok
+test_existing_package_uses_selected_native_sources_and_fresh_build_identity (test_prepared.PreparedTests) ... Selected source: c6e3efb419b5de22906f2972b984cc74d8cff4c1 build: v1.2.3-src-c6e3efb419b5
+ios/tools/gen_assets.py: 0.0s
+Reused game table: dm_vault_tab.h
+Reused game table: dm_hud_exp.h
+Reused game table: dm_bright_levels.inc
+ios/tools/gen_romfs_overlay.py: 0.0s
+Prepared package and source compatibility verified
+Native runtime source: c6e3efb419b5de22906f2972b984cc74d8cff4c1
+ok
+test_macho_platform_and_load_commands (test_prepared.PreparedTests) ... ok
+test_modified_payload_or_wrong_program_is_rejected (test_prepared.PreparedTests) ... ok
+test_setup_outputs_produce_a_verified_game_and_metal_payload (test_prepared.PreparedTests) ... ok
+test_zip_and_tar_paths_and_links_are_checked_before_extraction (test_prepared.PreparedTests) ... ok
+test_asset_uploads_are_concurrent (test_publish.PublishTests) ... ok
+test_mismatched_variants_and_failed_server_checksum_do_not_publish (test_publish.PublishTests) ... ok
+test_release_has_verified_variants_and_retry_reuses_matching_assets (test_publish.PublishTests) ... Published verified packages: https://github.com/owner/repo/releases/tag/test
+Published verified packages: https://github.com/owner/repo/releases/tag/test
+ok
+test_cached_generated_files_restore_without_replacing_native_sources (test_runtime_inputs.InterfaceCacheTests) ... Reused interface resources for the selected source
+ok
+test_native_changes_keep_cache_but_ui_text_and_inputs_invalidate_it (test_runtime_inputs.InterfaceCacheTests) ... ok
+test_invalid_range_index_cannot_write_outside_resource_directory (test_runtime_inputs.RuntimeInputTests) ... ok
+test_small_input_preserves_original_addresses_and_metadata (test_runtime_inputs.RuntimeInputTests) ... ok
+test_ui_updates_reuse_heavy_outputs_but_game_rewrite_changes_do_not (test_runtime_inputs.RuntimeInputTests) ... ok
+test_latest_release_and_explicit_source_selection (test_source_selection.SourceTests) ... ok
+test_versions_repeat_builds_and_runtime_commits (test_source_selection.SourceTests) ... ok
+test_changed_xcode_build_invalidates_module_cache_identity (test_xcode_selection.XcodeSelectionTests) ... ok
+test_metadata_selects_latest_sdk_with_only_one_xcrun_probe (test_xcode_selection.XcodeSelectionTests) ... ok
+test_unusable_latest_sdk_falls_back_to_verified_compatible_installation (test_xcode_selection.XcodeSelectionTests) ... ok
+
+======================================================================
+ERROR: test_mac_release_checks_both_packages_before_publishing (test_macos.MacBuildTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/d2r-build-20261017/tests/test_macos.py", line 191, in test_mac_release_checks_both_packages_before_publishing
+    macos.publish()
+  File "/private/tmp/d2r-build-20261017/scripts/macos.py", line 327, in publish
+    for item, minimum in zip(report['packages'], ('26.0', '15.0'), strict=True):
+TypeError: zip() takes no keyword arguments
+
+----------------------------------------------------------------------
+Ran 35 tests in 2.143s
+
+FAILED (errors=1)
+Selected source: 0e7a4caf0f54a0a59272e15a0ae864072942f770 build: v1.2.3
+Selected source: 0e7a4caf0f54a0a59272e15a0ae864072942f770 build: v1.2.3
+Selected source: 0e7a4caf0f54a0a59272e15a0ae864072942f770 build: v1.2.3
+Selected source: dfe8ab50394da9bf6762cc696b71bc74e357311c build: v1.2.3-src-dfe8ab50394d
