@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "scenario-blender-generation-mcp",
+      "url": "https://blog.mushroom.cv/blog/scenario-blender-generation-mcp/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/scenario-blender-generation-mcp-banner.BGMQA9Mf_1a85dP.webp",
+          "status": 200,
+          "bytes": 29310
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/scenario-blender-generation-mcp-fig-01.BwvQEjl9_10IdGl.webp",
+          "status": 200,
+          "bytes": 46220
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/scenario-blender-generation-mcp-fig-02.5t4Ase_8_ZEzRkD.webp",
+          "status": 200,
+          "bytes": 53810
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/scenario-blender-generation-mcp-fig-03.mWW3GhuS_29Ropb.webp",
+          "status": 200,
+          "bytes": 62644
+        }
+      ],
+      "listPosition": 10,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}

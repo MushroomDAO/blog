@@ -1,0 +1,46 @@
+{
+  "blocklist": [],
+  "data": [
+    {
+      "archive_hash": "sha256:01b91ed6908a9a59ffce6ba7ee1e49c4599c583498cdf37577a61633978929a0",
+      "archive_size": 18894810,
+      "archive_url": "./scenario-0.11.0.zip",
+      "blender_version_min": "5.0.0",
+      "copyright": [
+        "2026 Scenario Inc."
+      ],
+      "id": "scenario",
+      "license": [
+        "SPDX:GPL-3.0-or-later"
+      ],
+      "maintainer": "Scenario Inc. <support@scenario.com>",
+      "name": "Scenario",
+      "permissions": {
+        "clipboard": "Copy asset ids, errors and MCP setup; paste into the prompt",
+        "files": "Save generated media to disk and import it into the scene",
+        "network": "Scenario API (api.cloud.scenario.com), local agents on 127.0.0.1"
+      },
+      "platforms": [
+        "linux-x64",
+        "windows-x64",
+        "macos-arm64",
+        "macos-x64"
+      ],
+      "python_versions": [
+        "3.11",
+        "3.13"
+      ],
+      "schema_version": "1.0.0",
+      "tagline": "AI images, video, 3D and PBR materials from Scenario",
+      "tags": [
+        "3D View",
+        "Material",
+        "Import-Export"
+      ],
+      "type": "add-on",
+      "version": "0.11.0",
+      "website": "https://blender.scenario.com/"
+    }
+  ],
+  "version": "v1"
+}
