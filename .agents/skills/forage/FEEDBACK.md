@@ -836,3 +836,12 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - New Blog https://blog.mushroom.cv/blog/glimpse-visual-reasoning-game-bug-review/ ; current remotely verified WeChat draft prCUE631thH1cmNLi42prJE7nr3cK-l2facHZQzXdUrUrCFW8BId5ggToszPoPtg . Cover,3bodyimages,pinnedsource,scope verified.
 - Project memory and semantic index updated; exact KB/manifest/public-query verification recorded separately. Normal stacked PR base publish/motonav-round-screen-navigation.
 - Final public semantic retrieval: d2r-mobile-build-ios-macos rank1 score0.686127, kinex-coding-agents-robot-harness rank1 score0.62982833, glimpse-visual-reasoning-game-bug-review rank1 score0.6882153; manifest6unchanged. PR115 normal review https://github.com/MushroomDAO/blog/pull/115 .
+
+
+## 2026-10-17 — Scenario for Blender cloud generation and local MCP
+
+- https://blog.mushroom.cv/blog/scenario-blender-generation-mcp/ ; officialrepo scenario-labs/blender-plugin pin ca4fcf397e2e3e88ee1899964cf14600c7499ddd, manifest/release0.11.0 Oct14, GPL3orLaterfirstparty. ExactdeduprawbotKBonly; broad Scenario Blender genericword falsepositives manually resolved. PublishedAPI48001 unavailable; permanentrecords/currentdraftschecked.
+- Blender>=5.0,localMCP sceneconnection vscloudgeneration/CU spending; quotesmaytransmitpromptbeforeGenerate, separateuploads; arbitraryPythonoptinoff; credentialsBlenderprefsnotOSkeychain. Uncertainpaidjobs reconciliationnotblindresubmit; imageautoimport notalllanes.
+- Actual100upstreamoffline tests protocol/rejection/exportpolicy pass in existingisolatedPython3.12.14; pinneduv0.9.26unavailable(default and explicitPyPI), notlockedenv/fullsuite. NoBlenderinstall/account/upload/paidgeneration/quality/perf/multiOSacceptance. Sourceunchanged.
+- OriginalFLUX139cover90372B root/machinepass,3XiaoMfigures bothlanguages,SEO/GEOcheck. Currentremote draft/get verifiedcover3images/source/scope media_id prCUE631thH1cmNLi42prEB1NM4AJ2_1uPku6xpjZ7dGltLMynJD0BM8fwUYUni4.4publicimages200/listposition recorded. RawbotKB reused; projectmemoryandindex ledger synchronized separately. Task9213aac1-bd22-436b-b6b6-27fa3a9c1cc4.
+- Final public semantic retrieval rank1 score0.7214374; manifest2unchanged. OfficialZIP18894810B checksummatchesextensionindex,255members CRCpass,notinstalled/executed. PR116 normal review https://github.com/MushroomDAO/blog/pull/116 .

@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-17",
+  "taskId": "9213aac1-bd22-436b-b6b6-27fa3a9c1cc4",
+  "repo": "https://github.com/scenario-labs/blender-plugin",
+  "commit": "ca4fcf397e2e3e88ee1899964cf14600c7499ddd",
+  "manifest": "0.11.0",
+  "latestRelease": {
+    "tag": "blender-plugin-v0.11.0",
+    "published": "2026-10-14T20:12:31Z"
+  },
+  "license": "GPL-3.0-or-later firstparty extension; services/dependencies/assets separate",
+  "dedup": "exactURL/repo onlyrawbotKB; broad Scenario Blender splitter hits irrelevant genericwords; no exactlocalarticle/M2receipt; currentdraftschecked, publishedAPI48001unavailable",
+  "localVerification": {
+    "python": "3.12.14",
+    "upstreamTests": [
+      "tests/unit/test_mcp_protocol.py",
+      "tests/unit/test_mcp_rejection.py",
+      "tests/unit/test_film_export_policy.py"
+    ],
+    "passed": 100,
+    "scope": "offline, loopback and mocks; not full suite/native/live",
+    "lockedEnv": "uv0.9.26 could not resolve from available package registry with default and explicitPyPI index; fallback existing isolatedPython env; no upstreamcode/lockchanges",
+    "command": "/tmp/opengcua-review312-venv/bin/python -m pytest tests/unit/test_mcp_protocol.py tests/unit/test_mcp_rejection.py tests/unit/test_film_export_policy.py -rx"
+  },
+  "notPerformed": [
+    "Blender extension installation",
+    "account authentication",
+    "project uploads",
+    "paid generation",
+    "quality/latency/crossOS tests"
+  ],
+  "keyBoundaries": [
+    "localMCPnotlocalinference",
+    "cloudquotescantransmitpromptbeforeGenerate",
+    "arbitraryPythonoptinoff",
+    "credentialsBlenderprefsnotOSkeychain",
+    "uncertainpaidjobsrequireconciliationnotblindresubmit"
+  ],
+  "sourceMedia": "3officialimagesarchived;480pxgalleryrejectedforcover;originalconceptcovergenerated",
+  "extensionRepositoryHTTP": "200",
+  "extensionRepositoryEntry": {
+    "id": "scenario",
+    "version": "0.11.0",
+    "blender_version_min": "5.0.0"
+  },
+  "bannerRootVisualInspection": true,
+  "packageVerification": {
+    "source": "https://blender.scenario.com/repo/scenario-0.11.0.zip",
+    "bytes": 18894810,
+    "sha256": "01b91ed6908a9a59ffce6ba7ee1e49c4599c583498cdf37577a61633978929a0",
+    "matchesOfficialRepository": true,
+    "zipCRCValid": true,
+    "manifestPath": "blender_manifest.toml",
+    "members": 255,
+    "nativeInstalledOrExecuted": false
+  },
+  "figuresRootVisualInspection": true,
+  "figures": "3separateXiaoM PNGs,1280x720,under90000B each; conceptualnotruntime"
+}

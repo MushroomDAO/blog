@@ -1,0 +1,93 @@
+{
+  "query": "Scenario for Blender Cloud Generation Meets Local MCP",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.7214374,
+    "article_id": "scenario-blender-generation-mcp"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "scenario-blender-generation-mcp",
+        "title": "Scenario for Blender: Cloud Generation Meets Local MCP",
+        "url": "/blog/scenario-blender-generation-mcp/",
+        "language": "en",
+        "excerpt": "Scenario for Blender: Cloud Generation Meets Local MCP Scenario for Blender brings cloud generation and local MCP tools into a scene. Review setup, credits, privacy, job recovery and 100 offline tests with limits. Blender Generative AI MCP 3D What workflows does Scenario for Blen",
+        "score": 0.7214374
+      },
+      {
+        "article_id": "blender-mcp-control-blender-3d-any-llm-mcp-claude-code",
+        "title": "Blender MCP：用自然语言控制 Blender 3D，接任意 LLM，26K stars 社区插件",
+        "url": "/blog/blender-mcp-control-blender-3d-any-llm-mcp-claude-code/",
+        "language": "zh",
+        "excerpt": "Blender MCP：用自然语言控制 Blender 3D，接任意 LLM，26K stars 社区插件 ahujasid/blender-mcp 是把 Blender 3D 接入任意 LLM 的社区 MCP 插件，26K stars，MIT 协议。三步安装：安装 uv → 配置 MCP 服务器 → 安装 Blender 插件。能力：自然语言创建/修改/删除 3D 对象、材质控制、场景信息获取、在 Blender 里直接执行 Python 代码、从 Poly Haven 下载资产和 HDRI、从 Sketchfab 搜索模型、通过 Hyper3D Ro",
+        "score": 0.58202195
+      },
+      {
+        "article_id": "mcp-dev-runtime-openai-tunnel-local-dev-mcp-server",
+        "title": "mcp-dev-runtime: One Command to Expose Your Local Dev Machine to ChatGPT — OpenAI Tunnel + 6 MCP Tools Bundled",
+        "url": "/blog/mcp-dev-runtime-openai-tunnel-local-dev-mcp-server/",
+        "language": "en",
+        "excerpt": "mcp-dev-runtime: One Command to Expose Your Local Dev Machine to ChatGPT — OpenAI Tunnel + 6 MCP Tools Bundled dolibali/mcp-dev-runtime — 3 stars, Apache-2.0, TypeScript. Bundles the OpenAI official Tunnel client and 6 local development MCP tools (shell exec/PTY/code patch/image ",
+        "score": 0.54458535
+      },
+      {
+        "article_id": "free-google-trends-mcp-studio-guide",
+        "title": "免费 Google Trends MCP：小工作室的日常趋势雷达，和收费 MCP 这样搭配最省钱",
+        "url": "/blog/free-google-trends-mcp-studio-guide/",
+        "language": "zh",
+        "excerpt": "免费 Google Trends MCP：小工作室的日常趋势雷达，和收费 MCP 这样搭配最省钱 purahmanian/google-trends-mcp 是一个 MIT 开源、无需 API Key、纯 npx 一行装的 Google Trends MCP，直接吐官方 0–100 数据。它数据源只有 Google，但正因为『官方真值 + 免费无限量（悠着点用）+ 地域下钻』，恰好能当日常主力雷达，把收费的多源 MCP 省着用在关键验证上。本文给小工作室/小公司一套双 MCP 搭配的低成本趋势捕捉流水线，从发现到写分析文章到发布。 MCP Google ",
+        "score": 0.54404193
+      },
+      {
+        "article_id": "google-search-trends-mcp-guide",
+        "title": "Google Search Trends MCP 实战：让 AI 帮你在趋势爆发前抓住它",
+        "url": "/blog/google-search-trends-mcp-guide/",
+        "language": "zh",
+        "excerpt": "Google Search Trends MCP 实战：让 AI 帮你在趋势爆发前抓住它 一个 MCP，把 Google 搜索、YouTube、TikTok、Reddit、Amazon、npm、Steam 等 25+ 数据源的趋势喂给 AI，无需爬虫、无需 Google API Key。本文手把手教普通用户 5 分钟接入（Claude Desktop / Cursor / VS Code），并给出一套用 Trends 做内容选题、商机捕捉、灵感发现的完整方法论——包括如何在趋势曲线的『第一导数』阶段抢占先机。 MCP Google Trends AI A",
+        "score": 0.5365761
+      },
+      {
+        "article_id": "nowhere-mcp-ai-embodied-earth-walk",
+        "title": "乌有乡：给 AI 一个身体，在真实地球上走一走",
+        "url": "/blog/nowhere-mcp-ai-embodied-earth-walk/",
+        "language": "zh",
+        "excerpt": "乌有乡：给 AI 一个身体，在真实地球上走一走 yuyixuanfu/nowhere 是一个 MCP 服务器，让 AI 落地到真实地理坐标，感知地形、天气、电台、历史、气味。没有账号，没有血条，只有一个身体在地球上。 MCP AI具身 地理 Claude Code Python 开源工具 agent 地形 乌有乡 一、开一扇门 二、能感知什么 三、13 个工具 四、5 种用法 方式 1：Claude Code / Cursor MCP 客户端（最主要） 方式 2：命令行试玩 方式 3：HTTP API 方式 4：网页旁观 方式 5：Python 直接 A",
+        "score": 0.5310038
+      },
+      {
+        "article_id": "open-connector-mcp-agent-integration-guide",
+        "title": "用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南",
+        "url": "/blog/open-connector-mcp-agent-integration-guide/",
+        "language": "zh",
+        "excerpt": "用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南 open-connector 是一个开源的认证网关，把 1000+ SaaS 服务（GitHub、HackerNews、Twitter、知乎、Cloudflare 等）封装成统一的 MCP 接口，接入 Claude Code 或任何 MCP 兼容的 AI 助手之后，Agent 可以直接查询热门仓库、抓取热帖、操作账号资源——不用再一个个配置 API key 和 OAuth，一次部署解决所有集成。 MCP open-connector Claude Code ",
+        "score": 0.5255279
+      },
+      {
+        "article_id": "seeder-mcp-project-manager",
+        "title": "Seeder：自托管项目管理工具，原生支持 MCP，让 AI 直接读写你的任务",
+        "url": "/blog/seeder-mcp-project-manager/",
+        "language": "zh",
+        "excerpt": "Seeder：自托管项目管理工具，原生支持 MCP，让 AI 直接读写你的任务 Seeder 是一个开源自托管项目管理工具，运行在 Cloudflare Workers 上，原生内置 MCP 服务器，让 Claude、Cursor 等 AI 助手直接读写任务和客户请求，所有操作完整记录在活动流中。 项目管理 MCP Claude Code Cloudflare Workers 开源工具 AI Agent 项目管理工具为什么总让人不满意？ Seeder 能做什么？ 项目与看板 客户请求队列 公开客户看板 每日计划器 活动流（审计日志） 白标支持 最值得关注",
+        "score": 0.52203566
+      },
+      {
+        "article_id": "cove-book-forge-mcp-pdf-epub-agent-skill-obsidian-codex-claude",
+        "title": "cove-book-forge-mcp：把 PDF/EPUB 书籍锻造成 Agent Skill，一次分析，Codex/Claude Code 永久复用",
+        "url": "/blog/cove-book-forge-mcp-pdf-epub-agent-skill-obsidian-codex-claude/",
+        "language": "zh",
+        "excerpt": "cove-book-forge-mcp：把 PDF/EPUB 书籍锻造成 Agent Skill，一次分析，Codex/Claude Code 永久复用 moonlin1213/cove-book-forge-mcp 是一个本地优先的开源 MCP 服务器，把 PDF 或 EPUB 书籍转化为可复用的 AI 知识——稳定指纹缓存章节分析，同一份结果同时输出 Obsidian 笔记和可安装的 Agent Skill（兼容 Codex、Claude Code）。支持 OpenAI/DeepSeek/Anthropic 三类 Provider，完整书籍锻造作业可",
+        "score": 0.5202922
+      },
+      {
+        "article_id": "voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone",
+        "title": "Give Your AI Agent a Voice with Open-Source Voicebox — MCP Voice Layer in Practice",
+        "url": "/blog/voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone/",
+        "language": "en",
+        "excerpt": "Give Your AI Agent a Voice with Open-Source Voicebox — MCP Voice Layer in Practice jamiepine/voicebox, 55K stars, MIT, Tauri+Python desktop app with a built-in MCP server for Claude Code, Cursor, and Windsurf. Seven local TTS engines (Qwen3-TTS, Chatterbox, Kokoro, etc.) + Whispe",
+        "score": 0.5174267
+      }
+    ]
+  }
+}
