@@ -1,0 +1,89 @@
+{
+  "query": "scenario-labs blender-plugin Creative Units",
+  "found": false,
+  "match": null,
+  "response": {
+    "results": [
+      {
+        "article_id": "agent-plugins-openai-codex-multi-client-open-spec-analysis",
+        "title": "The Agent Plugins Spec: Build Once, Run on Codex, ChatGPT, Cursor, Copilot, VS Code and Kiro",
+        "url": "/blog/agent-plugins-openai-codex-multi-client-open-spec-analysis/",
+        "language": "en",
+        "excerpt": "The Agent Plugins Spec: Build Once, Run on Codex, ChatGPT, Cursor, Copilot, VS Code and Kiro OpenAI + AWS + Cursor + GitHub + Microsoft + Vercel jointly released the Agent Plugins spec: a three-layer architecture of Skills, Connectors, and MCP servers. One plugin.json deploys acr",
+        "score": 0.53946704
+      },
+      {
+        "article_id": "the-startup-rsmdt-claude-code-spec-driven-multi-agent",
+        "title": "The Agentic Startup: A Startup Team Workflow for Claude Code",
+        "url": "/blog/the-startup-rsmdt-claude-code-spec-driven-multi-agent/",
+        "language": "en",
+        "excerpt": "The Agentic Startup: A Startup Team Workflow for Claude Code rsmdt's open-source multi-agent framework for Claude Code, 367 stars, MIT License, Shell. Core idea: spec before code. 10 slash commands cover requirements through delivery; three-tier complexity dispatch (Direct / Incr",
+        "score": 0.5188251
+      },
+      {
+        "article_id": "openswarm-autonomous-ai-dev-team-claude-code-linear",
+        "title": "OpenSwarm：把 Claude Code + Codex 组成自主开发团队，从 Linear issue 到 PR 全自动",
+        "url": "/blog/openswarm-autonomous-ai-dev-team-claude-code-linear/",
+        "language": "zh",
+        "excerpt": "OpenSwarm：把 Claude Code + Codex 组成自主开发团队，从 Linear issue 到 PR 全自动 MIT 开源的 AI 开发团队编排器：从 Linear 拾取任务，Worker/Reviewer 对儿流水线，LanceDB 每仓库认知记忆，PR 自动驾驶，CI merge gate，SWE-bench Lite Hybrid 模式 3/3 解决。856 stars，TypeScript。 AI-agent open-source Claude-Code multi-agent developer-tools Linear ",
+        "score": 0.5094503
+      },
+      {
+        "article_id": "opencreator-krillinai-local-ai-creator-studio-codex-agent",
+        "title": "OpenCreator：KrillinAI 进化为本地 AI 创作工作台，内置 Codex Agent + 10 个可视化工具",
+        "url": "/blog/opencreator-krillinai-local-ai-creator-studio-codex-agent/",
+        "language": "zh",
+        "excerpt": "OpenCreator：KrillinAI 进化为本地 AI 创作工作台，内置 Codex Agent + 10 个可视化工具 krillinai/OpenCreator，11.9K stars，Apache 2.0。前身是 AI 视频翻译工具 KrillinAI，现已扩展为本地 AI 创作工作台。React 18 + Electron + Fastify，以 Codex CLI 为 Agent 引擎，支持视频翻译配音、封面图生成、小红书笔记、短视频脚本、火柴人动画等 10 个内置工具，外加 Agent 对话模式与视觉工作台双向状态同步。主要成本门槛：C",
+        "score": 0.5088366
+      },
+      {
+        "article_id": "lance-bytedance-3b-multimodal-unified",
+        "title": "ByteDance Open-Sources Lance: 3B Parameters, Six Tasks, VBench Top Among Unified Models",
+        "url": "/blog/lance-bytedance-3b-multimodal-unified/",
+        "language": "en",
+        "excerpt": "ByteDance Open-Sources Lance: 3B Parameters, Six Tasks, VBench Top Among Unified Models ByteDance Intelligent Creation Lab open-sources Lance: 3B active parameters unifying image understanding/generation/editing and video understanding/generation/editing. GenEval 0.90 tied first,",
+        "score": 0.50671375
+      },
+      {
+        "article_id": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+        "title": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+        "url": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
+        "language": "en",
+        "excerpt": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity OpenDCAI/GameFactory-3A is an open-source 3A game-generation skill and asset framework — Apache 2.0, Python, 256 stars. Core approach: connect coding agents (Claude Code, Codex, Gemini CLI) to a structured ",
+        "score": 0.5043719
+      },
+      {
+        "article_id": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+        "title": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+        "url": "/blog/sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation/",
+        "language": "en",
+        "excerpt": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation Sprite Studio is an open-source (MIT) local-first AI 2D game art desktop workbench built with Tauri 2, Svelte, Rust, SQLite, and Codex CLI. Features chat-based sprite generation, sequential AI animation (identity + nei",
+        "score": 0.49677697
+      },
+      {
+        "article_id": "juju-content-illustrations-skill-ai-visual-content-guide",
+        "title": "juju-content-illustrations: An Agent Skill That Turns Articles into Juju-Style Hand-Drawn Illustrations",
+        "url": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
+        "language": "en",
+        "excerpt": "juju-content-illustrations: An Agent Skill That Turns Articles into Juju-Style Hand-Drawn Illustrations Juju Organizing Lab's content illustration skill. One trigger phrase, AI automatically converts articles, tutorials, and methodologies into white-background light-linework illu",
+        "score": 0.494651
+      },
+      {
+        "article_id": "storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard",
+        "title": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4",
+        "url": "/blog/storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard/",
+        "language": "zh",
+        "excerpt": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4 xiaozhang-art/storyflow-ai 开源，Multi-Agent 漫剧自动生成平台，7 步 Agent 流水线（剧本→角色→分镜→图片/配音并行→图生视频→合成），含 Director 决策引擎、断点续传、Montage 渲染引擎，Docker Compose 一键部署。 multi-agent video generation AI open source comic LLM FastAPI Docker 一段文字进去，一部漫剧出来 7 个 Age",
+        "score": 0.49313042
+      },
+      {
+        "article_id": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+        "title": "PenguinHarness：用 4 个 Skill 把 Agent 调优变成有版本、有固定考题、有分数记录的实验闭环",
+        "url": "/blog/penguin-harness-self-evolving-agent-builder-skills-benchmark/",
+        "language": "zh",
+        "excerpt": "PenguinHarness：用 4 个 Skill 把 Agent 调优变成有版本、有固定考题、有分数记录的实验闭环 Prism-Shadow/penguin-harness，1140 stars，Apache-2.0，TypeScript。LlamaFactory 作者 Yaowei Zheng 的新项目，2026-07-19 开源。全自动 Agent 构建平台：一句话让 Agent 构建 Agent 应用（DeepSeek V4 Pro 跑一个 RAG 应用花费 $0.02），数据分析准确率最高、成本是 Claude Code 的 1/70。核心亮",
+        "score": 0.49311084
+      }
+    ]
+  }
+}
