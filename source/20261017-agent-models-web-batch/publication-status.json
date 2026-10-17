@@ -29,6 +29,36 @@
   "blog": "4new; all200/bilingual/list1-4/16assets200; downloadable helper200 byte-match",
   "wechat": "4new current remote draft/get verified cover3images/bodypin+scope each",
   "kb": "raw bot material reused; 4project files mined8drawers; exactslugs verified; ledgerexport14",
-  "semanticIndex": "all8language vectors upsert accepted; public retrieval propagation checked separately",
-  "git": "854781a/ed742de pushed"
+  "semanticIndex": {
+    "upsert": "8 language vectors accepted",
+    "manifest": "4articles x2languages unchanged",
+    "publicSearch": [
+      {
+        "slug": "nemotron-35-super-vl-bolt-local-models",
+        "query": "Nemotron 3.5 Super VL Bolt 24GB",
+        "rank": 1,
+        "score": 0.66051203
+      },
+      {
+        "slug": "opengcua-generalist-computer-use-stack",
+        "query": "OpenGCUA 通用电脑操作 技术栈",
+        "rank": 1,
+        "score": 0.619988
+      },
+      {
+        "slug": "atticus-mac-voice-assistant",
+        "query": "SaarthurR Atticus 本地语音 Claude",
+        "rank": 1,
+        "score": 0.6164824
+      },
+      {
+        "slug": "indexnow-website-push-indexing-guide",
+        "query": "IndexNow keyLocation 普通网站 部署指南",
+        "rank": 1,
+        "score": 0.69309694
+      }
+    ]
+  },
+  "git": "854781a/ed742de articles and e184deb evidence pushed; PR113 normal review stacked on OpenTiny",
+  "prUrl": "https://github.com/MushroomDAO/blog/pull/113"
 }
