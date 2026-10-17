@@ -1,88 +1,92 @@
 {
-  "query": "scenario-labs blender-plugin Creative Units",
-  "found": false,
-  "match": null,
+  "query": "Scenario for Blender Cloud Generation Meets Local MCP",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.7214374,
+    "article_id": "scenario-blender-generation-mcp"
+  },
   "response": {
     "results": [
       {
-        "article_id": "agent-plugins-openai-codex-multi-client-open-spec-analysis",
-        "title": "The Agent Plugins Spec: Build Once, Run on Codex, ChatGPT, Cursor, Copilot, VS Code and Kiro",
-        "url": "/blog/agent-plugins-openai-codex-multi-client-open-spec-analysis/",
+        "article_id": "scenario-blender-generation-mcp",
+        "title": "Scenario for Blender: Cloud Generation Meets Local MCP",
+        "url": "/blog/scenario-blender-generation-mcp/",
         "language": "en",
-        "excerpt": "The Agent Plugins Spec: Build Once, Run on Codex, ChatGPT, Cursor, Copilot, VS Code and Kiro OpenAI + AWS + Cursor + GitHub + Microsoft + Vercel jointly released the Agent Plugins spec: a three-layer architecture of Skills, Connectors, and MCP servers. One plugin.json deploys acr",
-        "score": 0.53946704
+        "excerpt": "Scenario for Blender: Cloud Generation Meets Local MCP Scenario for Blender brings cloud generation and local MCP tools into a scene. Review setup, credits, privacy, job recovery and 100 offline tests with limits. Blender Generative AI MCP 3D What workflows does Scenario for Blen",
+        "score": 0.7214374
       },
       {
-        "article_id": "the-startup-rsmdt-claude-code-spec-driven-multi-agent",
-        "title": "The Agentic Startup: A Startup Team Workflow for Claude Code",
-        "url": "/blog/the-startup-rsmdt-claude-code-spec-driven-multi-agent/",
-        "language": "en",
-        "excerpt": "The Agentic Startup: A Startup Team Workflow for Claude Code rsmdt's open-source multi-agent framework for Claude Code, 367 stars, MIT License, Shell. Core idea: spec before code. 10 slash commands cover requirements through delivery; three-tier complexity dispatch (Direct / Incr",
-        "score": 0.5188251
-      },
-      {
-        "article_id": "openswarm-autonomous-ai-dev-team-claude-code-linear",
-        "title": "OpenSwarm：把 Claude Code + Codex 组成自主开发团队，从 Linear issue 到 PR 全自动",
-        "url": "/blog/openswarm-autonomous-ai-dev-team-claude-code-linear/",
+        "article_id": "blender-mcp-control-blender-3d-any-llm-mcp-claude-code",
+        "title": "Blender MCP：用自然语言控制 Blender 3D，接任意 LLM，26K stars 社区插件",
+        "url": "/blog/blender-mcp-control-blender-3d-any-llm-mcp-claude-code/",
         "language": "zh",
-        "excerpt": "OpenSwarm：把 Claude Code + Codex 组成自主开发团队，从 Linear issue 到 PR 全自动 MIT 开源的 AI 开发团队编排器：从 Linear 拾取任务，Worker/Reviewer 对儿流水线，LanceDB 每仓库认知记忆，PR 自动驾驶，CI merge gate，SWE-bench Lite Hybrid 模式 3/3 解决。856 stars，TypeScript。 AI-agent open-source Claude-Code multi-agent developer-tools Linear ",
-        "score": 0.5094503
+        "excerpt": "Blender MCP：用自然语言控制 Blender 3D，接任意 LLM，26K stars 社区插件 ahujasid/blender-mcp 是把 Blender 3D 接入任意 LLM 的社区 MCP 插件，26K stars，MIT 协议。三步安装：安装 uv → 配置 MCP 服务器 → 安装 Blender 插件。能力：自然语言创建/修改/删除 3D 对象、材质控制、场景信息获取、在 Blender 里直接执行 Python 代码、从 Poly Haven 下载资产和 HDRI、从 Sketchfab 搜索模型、通过 Hyper3D Ro",
+        "score": 0.58202195
       },
       {
-        "article_id": "opencreator-krillinai-local-ai-creator-studio-codex-agent",
-        "title": "OpenCreator：KrillinAI 进化为本地 AI 创作工作台，内置 Codex Agent + 10 个可视化工具",
-        "url": "/blog/opencreator-krillinai-local-ai-creator-studio-codex-agent/",
+        "article_id": "mcp-dev-runtime-openai-tunnel-local-dev-mcp-server",
+        "title": "mcp-dev-runtime: One Command to Expose Your Local Dev Machine to ChatGPT — OpenAI Tunnel + 6 MCP Tools Bundled",
+        "url": "/blog/mcp-dev-runtime-openai-tunnel-local-dev-mcp-server/",
+        "language": "en",
+        "excerpt": "mcp-dev-runtime: One Command to Expose Your Local Dev Machine to ChatGPT — OpenAI Tunnel + 6 MCP Tools Bundled dolibali/mcp-dev-runtime — 3 stars, Apache-2.0, TypeScript. Bundles the OpenAI official Tunnel client and 6 local development MCP tools (shell exec/PTY/code patch/image ",
+        "score": 0.54458535
+      },
+      {
+        "article_id": "free-google-trends-mcp-studio-guide",
+        "title": "免费 Google Trends MCP：小工作室的日常趋势雷达，和收费 MCP 这样搭配最省钱",
+        "url": "/blog/free-google-trends-mcp-studio-guide/",
         "language": "zh",
-        "excerpt": "OpenCreator：KrillinAI 进化为本地 AI 创作工作台，内置 Codex Agent + 10 个可视化工具 krillinai/OpenCreator，11.9K stars，Apache 2.0。前身是 AI 视频翻译工具 KrillinAI，现已扩展为本地 AI 创作工作台。React 18 + Electron + Fastify，以 Codex CLI 为 Agent 引擎，支持视频翻译配音、封面图生成、小红书笔记、短视频脚本、火柴人动画等 10 个内置工具，外加 Agent 对话模式与视觉工作台双向状态同步。主要成本门槛：C",
-        "score": 0.5088366
+        "excerpt": "免费 Google Trends MCP：小工作室的日常趋势雷达，和收费 MCP 这样搭配最省钱 purahmanian/google-trends-mcp 是一个 MIT 开源、无需 API Key、纯 npx 一行装的 Google Trends MCP，直接吐官方 0–100 数据。它数据源只有 Google，但正因为『官方真值 + 免费无限量（悠着点用）+ 地域下钻』，恰好能当日常主力雷达，把收费的多源 MCP 省着用在关键验证上。本文给小工作室/小公司一套双 MCP 搭配的低成本趋势捕捉流水线，从发现到写分析文章到发布。 MCP Google ",
+        "score": 0.54404193
       },
       {
-        "article_id": "lance-bytedance-3b-multimodal-unified",
-        "title": "ByteDance Open-Sources Lance: 3B Parameters, Six Tasks, VBench Top Among Unified Models",
-        "url": "/blog/lance-bytedance-3b-multimodal-unified/",
-        "language": "en",
-        "excerpt": "ByteDance Open-Sources Lance: 3B Parameters, Six Tasks, VBench Top Among Unified Models ByteDance Intelligent Creation Lab open-sources Lance: 3B active parameters unifying image understanding/generation/editing and video understanding/generation/editing. GenEval 0.90 tied first,",
-        "score": 0.50671375
-      },
-      {
-        "article_id": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
-        "title": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
-        "url": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
-        "language": "en",
-        "excerpt": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity OpenDCAI/GameFactory-3A is an open-source 3A game-generation skill and asset framework — Apache 2.0, Python, 256 stars. Core approach: connect coding agents (Claude Code, Codex, Gemini CLI) to a structured ",
-        "score": 0.5043719
-      },
-      {
-        "article_id": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
-        "title": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
-        "url": "/blog/sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation/",
-        "language": "en",
-        "excerpt": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation Sprite Studio is an open-source (MIT) local-first AI 2D game art desktop workbench built with Tauri 2, Svelte, Rust, SQLite, and Codex CLI. Features chat-based sprite generation, sequential AI animation (identity + nei",
-        "score": 0.49677697
-      },
-      {
-        "article_id": "juju-content-illustrations-skill-ai-visual-content-guide",
-        "title": "juju-content-illustrations: An Agent Skill That Turns Articles into Juju-Style Hand-Drawn Illustrations",
-        "url": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
-        "language": "en",
-        "excerpt": "juju-content-illustrations: An Agent Skill That Turns Articles into Juju-Style Hand-Drawn Illustrations Juju Organizing Lab's content illustration skill. One trigger phrase, AI automatically converts articles, tutorials, and methodologies into white-background light-linework illu",
-        "score": 0.494651
-      },
-      {
-        "article_id": "storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard",
-        "title": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4",
-        "url": "/blog/storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard/",
+        "article_id": "google-search-trends-mcp-guide",
+        "title": "Google Search Trends MCP 实战：让 AI 帮你在趋势爆发前抓住它",
+        "url": "/blog/google-search-trends-mcp-guide/",
         "language": "zh",
-        "excerpt": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4 xiaozhang-art/storyflow-ai 开源，Multi-Agent 漫剧自动生成平台，7 步 Agent 流水线（剧本→角色→分镜→图片/配音并行→图生视频→合成），含 Director 决策引擎、断点续传、Montage 渲染引擎，Docker Compose 一键部署。 multi-agent video generation AI open source comic LLM FastAPI Docker 一段文字进去，一部漫剧出来 7 个 Age",
-        "score": 0.49313042
+        "excerpt": "Google Search Trends MCP 实战：让 AI 帮你在趋势爆发前抓住它 一个 MCP，把 Google 搜索、YouTube、TikTok、Reddit、Amazon、npm、Steam 等 25+ 数据源的趋势喂给 AI，无需爬虫、无需 Google API Key。本文手把手教普通用户 5 分钟接入（Claude Desktop / Cursor / VS Code），并给出一套用 Trends 做内容选题、商机捕捉、灵感发现的完整方法论——包括如何在趋势曲线的『第一导数』阶段抢占先机。 MCP Google Trends AI A",
+        "score": 0.5365761
       },
       {
-        "article_id": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
-        "title": "PenguinHarness：用 4 个 Skill 把 Agent 调优变成有版本、有固定考题、有分数记录的实验闭环",
-        "url": "/blog/penguin-harness-self-evolving-agent-builder-skills-benchmark/",
+        "article_id": "nowhere-mcp-ai-embodied-earth-walk",
+        "title": "乌有乡：给 AI 一个身体，在真实地球上走一走",
+        "url": "/blog/nowhere-mcp-ai-embodied-earth-walk/",
         "language": "zh",
-        "excerpt": "PenguinHarness：用 4 个 Skill 把 Agent 调优变成有版本、有固定考题、有分数记录的实验闭环 Prism-Shadow/penguin-harness，1140 stars，Apache-2.0，TypeScript。LlamaFactory 作者 Yaowei Zheng 的新项目，2026-07-19 开源。全自动 Agent 构建平台：一句话让 Agent 构建 Agent 应用（DeepSeek V4 Pro 跑一个 RAG 应用花费 $0.02），数据分析准确率最高、成本是 Claude Code 的 1/70。核心亮",
-        "score": 0.49311084
+        "excerpt": "乌有乡：给 AI 一个身体，在真实地球上走一走 yuyixuanfu/nowhere 是一个 MCP 服务器，让 AI 落地到真实地理坐标，感知地形、天气、电台、历史、气味。没有账号，没有血条，只有一个身体在地球上。 MCP AI具身 地理 Claude Code Python 开源工具 agent 地形 乌有乡 一、开一扇门 二、能感知什么 三、13 个工具 四、5 种用法 方式 1：Claude Code / Cursor MCP 客户端（最主要） 方式 2：命令行试玩 方式 3：HTTP API 方式 4：网页旁观 方式 5：Python 直接 A",
+        "score": 0.5310038
+      },
+      {
+        "article_id": "open-connector-mcp-agent-integration-guide",
+        "title": "用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南",
+        "url": "/blog/open-connector-mcp-agent-integration-guide/",
+        "language": "zh",
+        "excerpt": "用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南 open-connector 是一个开源的认证网关，把 1000+ SaaS 服务（GitHub、HackerNews、Twitter、知乎、Cloudflare 等）封装成统一的 MCP 接口，接入 Claude Code 或任何 MCP 兼容的 AI 助手之后，Agent 可以直接查询热门仓库、抓取热帖、操作账号资源——不用再一个个配置 API key 和 OAuth，一次部署解决所有集成。 MCP open-connector Claude Code ",
+        "score": 0.5255279
+      },
+      {
+        "article_id": "seeder-mcp-project-manager",
+        "title": "Seeder：自托管项目管理工具，原生支持 MCP，让 AI 直接读写你的任务",
+        "url": "/blog/seeder-mcp-project-manager/",
+        "language": "zh",
+        "excerpt": "Seeder：自托管项目管理工具，原生支持 MCP，让 AI 直接读写你的任务 Seeder 是一个开源自托管项目管理工具，运行在 Cloudflare Workers 上，原生内置 MCP 服务器，让 Claude、Cursor 等 AI 助手直接读写任务和客户请求，所有操作完整记录在活动流中。 项目管理 MCP Claude Code Cloudflare Workers 开源工具 AI Agent 项目管理工具为什么总让人不满意？ Seeder 能做什么？ 项目与看板 客户请求队列 公开客户看板 每日计划器 活动流（审计日志） 白标支持 最值得关注",
+        "score": 0.52203566
+      },
+      {
+        "article_id": "cove-book-forge-mcp-pdf-epub-agent-skill-obsidian-codex-claude",
+        "title": "cove-book-forge-mcp：把 PDF/EPUB 书籍锻造成 Agent Skill，一次分析，Codex/Claude Code 永久复用",
+        "url": "/blog/cove-book-forge-mcp-pdf-epub-agent-skill-obsidian-codex-claude/",
+        "language": "zh",
+        "excerpt": "cove-book-forge-mcp：把 PDF/EPUB 书籍锻造成 Agent Skill，一次分析，Codex/Claude Code 永久复用 moonlin1213/cove-book-forge-mcp 是一个本地优先的开源 MCP 服务器，把 PDF 或 EPUB 书籍转化为可复用的 AI 知识——稳定指纹缓存章节分析，同一份结果同时输出 Obsidian 笔记和可安装的 Agent Skill（兼容 Codex、Claude Code）。支持 OpenAI/DeepSeek/Anthropic 三类 Provider，完整书籍锻造作业可",
+        "score": 0.5202922
+      },
+      {
+        "article_id": "voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone",
+        "title": "Give Your AI Agent a Voice with Open-Source Voicebox — MCP Voice Layer in Practice",
+        "url": "/blog/voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone/",
+        "language": "en",
+        "excerpt": "Give Your AI Agent a Voice with Open-Source Voicebox — MCP Voice Layer in Practice jamiepine/voicebox, 55K stars, MIT, Tauri+Python desktop app with a built-in MCP server for Claude Code, Cursor, and Windsurf. Seven local TTS engines (Qwen3-TTS, Chatterbox, Kokoro, etc.) + Whispe",
+        "score": 0.5174267
       }
     ]
   }
