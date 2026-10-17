@@ -1,0 +1,232 @@
+
+> robot-root@ build:components /private/tmp/tiny-robot-20261017
+> pnpm -r --filter @opentiny/tiny-robot-chat... build
+
+Scope: 4 of 9 workspace projects
+packages/kit build$ tsup src/index.ts src/core.ts src/node.ts --format cjs,esm --dts --minify
+packages/svgs build$ npm run convert && vue-tsc && vite build
+packages/svgs build: npm warn Unknown env config "npm-globalconfig". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+packages/svgs build: npm warn Unknown env config "recursive". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+packages/svgs build: npm warn Unknown env config "patched-dependencies". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+packages/svgs build: npm warn Unknown env config "verify-deps-before-run". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+packages/svgs build: npm warn Unknown env config "_jsr-registry". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+packages/svgs build: npm warn Unknown env config "overrides". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+packages/svgs build: > @opentiny/tiny-robot-svgs@0.5.1 convert
+packages/svgs build: > tsx ./scripts/convert.ts -F && tsx ./scripts/append-compat-aliases.ts
+packages/kit build: CLI Building entry: src/core.ts, src/index.ts, src/node.ts
+packages/kit build: CLI Using tsconfig: tsconfig.json
+packages/kit build: CLI tsup v8.5.1
+packages/kit build: CLI Target: es2020
+packages/kit build: CJS Build start
+packages/kit build: ESM Build start
+packages/kit build: DTS Build start
+packages/kit build: ESM dist/index.mjs          19.04 KB
+packages/kit build: ESM dist/chunk-PAM32LHZ.mjs 44.44 KB
+packages/kit build: ESM dist/node.mjs           6.73 KB
+packages/kit build: ESM dist/core.mjs           1.45 KB
+packages/kit build: ESM dist/chunk-LD3HUL7V.mjs 7.50 KB
+packages/kit build: ESM ⚡️ Build success in 888ms
+packages/kit build: CJS dist/node.js  14.74 KB
+packages/kit build: CJS dist/index.js 71.67 KB
+packages/kit build: CJS dist/core.js  52.02 KB
+packages/kit build: CJS ⚡️ Build success in 888ms
+packages/svgs build: 生成组件: IconAgent
+packages/svgs build: 生成组件: IconAi
+packages/svgs build: 生成组件: IconAnalytics
+packages/svgs build: 生成组件: IconArrowDown
+packages/svgs build: 生成组件: IconArrowLeft
+packages/svgs build: 生成组件: IconArrowRight
+packages/svgs build: 生成组件: IconArrowUp
+packages/svgs build: 生成组件: IconAssociate
+packages/svgs build: 生成组件: IconAtom
+packages/svgs build: 生成组件: IconBailian
+packages/svgs build: 生成组件: IconBell
+packages/svgs build: 生成组件: IconBrowser
+packages/svgs build: 生成组件: IconCancelled
+packages/svgs build: 生成组件: IconCheck
+packages/svgs build: 生成组件: IconClaude
+packages/svgs build: 生成组件: IconClose
+packages/svgs build: 生成组件: IconCollapseLeft
+packages/svgs build: 生成组件: IconCollapseRight
+packages/svgs build: 生成组件: IconConsultation
+packages/svgs build: 生成组件: IconControls
+packages/svgs build: 生成组件: IconCopy
+packages/svgs build: 生成组件: IconDeepseek
+packages/svgs build: 生成组件: IconDelete
+packages/svgs build: 生成组件: IconDislikeFilled
+packages/svgs build: 生成组件: IconDislike
+packages/svgs build: 生成组件: IconDownload
+packages/svgs build: 生成组件: IconEditPen
+packages/svgs build: 生成组件: IconEdit
+packages/svgs build: 生成组件: IconEmptyFile
+packages/svgs build: 生成组件: IconEmptySearch
+packages/svgs build: 生成组件: IconEnterFullScreen
+packages/svgs build: 生成组件: IconErrorFilled
+packages/svgs build: 生成组件: IconError
+packages/svgs build: 生成组件: IconExitFullScreen
+packages/svgs build: 生成组件: IconExit
+packages/svgs build: 生成组件: IconFavorite
+packages/svgs build: 生成组件: IconFileExcel
+packages/svgs build: 生成组件: IconFileFolder
+packages/svgs build: 生成组件: IconFileImage
+packages/svgs build: 生成组件: IconFileNone
+packages/svgs build: 生成组件: IconFileOther
+packages/svgs build: 生成组件: IconFilePdf
+packages/svgs build: 生成组件: IconFilePpt
+packages/svgs build: 生成组件: IconFileRemove
+packages/svgs build: 生成组件: IconFileWord
+packages/svgs build: 生成组件: IconGemini
+packages/svgs build: 生成组件: IconGenerativeUi
+packages/svgs build: 生成组件: IconHistory
+packages/svgs build: 生成组件: IconImageUpload
+packages/svgs build: 生成组件: IconImageWarning
+packages/svgs build: 生成组件: IconInfoFilled
+packages/svgs build: 生成组件: IconInfo
+packages/svgs build: 生成组件: IconLikeFilled
+packages/svgs build: 生成组件: IconLike
+packages/svgs build: 生成组件: IconLoading
+packages/svgs build: 生成组件: IconLogo
+packages/svgs build: 生成组件: IconMenuCollapse
+packages/svgs build: 生成组件: IconMenuExpand
+packages/svgs build: 生成组件: IconModelscope
+packages/svgs build: 生成组件: IconMoreCircle
+packages/svgs build: 生成组件: IconMore
+packages/svgs build: 生成组件: IconNewSession
+packages/svgs build: 生成组件: IconNoData
+packages/svgs build: 生成组件: IconOllama
+packages/svgs build: 生成组件: IconOpenai
+packages/svgs build: 生成组件: IconOpenrouter
+packages/svgs build: 生成组件: IconPhone
+packages/svgs build: 生成组件: IconPin
+packages/svgs build: 生成组件: IconPlugin
+packages/svgs build: 生成组件: IconPlus
+packages/svgs build: 生成组件: IconRecordingWave
+packages/svgs build: 生成组件: IconRefresh
+packages/svgs build: 生成组件: IconRiskyImage
+packages/svgs build: 生成组件: IconScan
+packages/svgs build: 生成组件: IconSearch
+packages/svgs build: 生成组件: IconSelected
+packages/svgs build: 生成组件: IconSend
+packages/svgs build: 生成组件: IconSetting
+packages/svgs build: 生成组件: IconShare
+packages/svgs build: 生成组件: IconShell
+packages/svgs build: 生成组件: IconSparkles
+packages/svgs build: 生成组件: IconStop
+packages/svgs build: 生成组件: IconSuccessFilled
+packages/svgs build: 生成组件: IconSuccess
+packages/svgs build: 生成组件: IconTable
+packages/svgs build: 生成组件: IconThink
+packages/svgs build: 生成组件: IconTop
+packages/svgs build: 生成组件: IconTypeAll
+packages/svgs build: 生成组件: IconUnselected
+packages/svgs build: 生成组件: IconUploadFailed
+packages/svgs build: 生成组件: IconUploadLoading
+packages/svgs build: 生成组件: IconUpload
+packages/svgs build: 生成组件: IconUser
+packages/svgs build: 生成组件: IconVideo
+packages/svgs build: 生成组件: IconVoice
+packages/svgs build: 生成组件: IconWarning
+packages/svgs build: 生成index.ts文件，共导出 96 个组件
+packages/svgs build: 追加兼容别名 7 个
+packages/kit build: DTS ⚡️ Build success in 1839ms
+packages/kit build: DTS dist/core.d.ts             3.31 KB
+packages/kit build: DTS dist/index.d.ts            23.01 KB
+packages/kit build: DTS dist/node.d.ts             2.39 KB
+packages/kit build: DTS dist/utils-BU3S01cZ.d.ts   26.37 KB
+packages/kit build: DTS dist/memory-D5-6x16B.d.ts  5.99 KB
+packages/kit build: DTS dist/core.d.mts            3.31 KB
+packages/kit build: DTS dist/index.d.mts           23.01 KB
+packages/kit build: DTS dist/node.d.mts            2.40 KB
+packages/kit build: DTS dist/utils-qjtrSW_r.d.mts  26.37 KB
+packages/kit build: DTS dist/memory-D5-6x16B.d.mts 5.99 KB
+packages/kit build: Done
+packages/svgs build: vite v5.4.21 building for production...
+packages/svgs build: transforming...
+packages/svgs build: ✓ 195 modules transformed.
+packages/svgs build: rendering chunks...
+packages/svgs build: [vite:dts] Start generate declaration files...
+packages/svgs build: computing gzip size...
+packages/svgs build: [vite:dts] Start rollup declaration files...
+packages/svgs build: Analysis will use the bundled TypeScript version 5.9.3
+packages/svgs build: dist/tiny-robot-svgs.js  286.03 kB │ gzip: 129.16 kB
+packages/svgs build: [vite:dts] Declaration files built in 2045ms.
+packages/svgs build: ✓ built in 2.18s
+packages/svgs build: Done
+packages/components build$ vue-tsc && vite build
+packages/components build: vite v5.4.21 building for production...
+packages/components build: transforming...
+packages/components build: ✓ 536 modules transformed.
+packages/components build: rendering chunks...
+packages/components build: [vite:dts] Start generate declaration files...
+packages/components build: computing gzip size...
+packages/components build: dist/style.css                        200.92 kB │ gzip: 30.20 kB
+packages/components build: dist/base-popper/index.js               0.07 kB │ gzip:  0.08 kB
+packages/components build: dist/history/index.js                   0.07 kB │ gzip:  0.08 kB
+packages/components build: dist/_plugin-vue_export-helper.js       0.13 kB │ gzip:  0.12 kB
+packages/components build: dist/useSenderContentRegistration.js    0.19 kB │ gzip:  0.16 kB
+packages/components build: dist/conversations/index.js             0.29 kB │ gzip:  0.22 kB
+packages/components build: dist/useStableId.js                     0.29 kB │ gzip:  0.22 kB
+packages/components build: dist/utils.js                           0.31 kB │ gzip:  0.24 kB
+packages/components build: dist/sender-actions/index.js            0.35 kB │ gzip:  0.21 kB
+packages/components build: dist/bubble/index.js                    0.48 kB │ gzip:  0.26 kB
+packages/components build: dist/useTeleportTarget.js               0.70 kB │ gzip:  0.37 kB
+packages/components build: dist/useSlotRefs.js                     0.96 kB │ gzip:  0.51 kB
+packages/components build: dist/icon-button/index.js               1.04 kB │ gzip:  0.55 kB
+packages/components build: dist/welcome/index.js                   1.20 kB │ gzip:  0.62 kB
+packages/components build: dist/Switch.js                          1.33 kB │ gzip:  0.64 kB
+packages/components build: dist/ExtensionDetailSummary.js          1.36 kB │ gzip:  0.66 kB
+packages/components build: dist/container/index.js                 2.42 kB │ gzip:  1.02 kB
+packages/components build: dist/prompts/index.js                   2.48 kB │ gzip:  1.06 kB
+packages/components build: dist/mcp-extension-detail/index.js      2.48 kB │ gzip:  1.10 kB
+packages/components build: dist/theme-provider/index.js            3.00 kB │ gzip:  1.24 kB
+packages/components build: dist/config.js                          3.46 kB │ gzip:  1.10 kB
+packages/components build: dist/skill-extension-detail/index.js    4.41 kB │ gzip:  1.60 kB
+packages/components build: dist/index8.js                          4.56 kB │ gzip:  1.78 kB
+packages/components build: dist/flow-layout-buttons/index.js       4.76 kB │ gzip:  1.72 kB
+packages/components build: dist/action-group/index.js              5.24 kB │ gzip:  1.87 kB
+packages/components build: dist/drag-overlay/index.js              5.34 kB │ gzip:  1.68 kB
+packages/components build: dist/suggestion-pills/index.js          6.30 kB │ gzip:  2.27 kB
+packages/components build: dist/dropdown-menu/index.js             7.00 kB │ gzip:  2.55 kB
+packages/components build: dist/mcp-add-form/index.js              7.30 kB │ gzip:  2.35 kB
+packages/components build: dist/feedback/index.js                  7.32 kB │ gzip:  2.17 kB
+packages/components build: dist/index2.js                          7.49 kB │ gzip:  2.33 kB
+packages/components build: dist/sender-compat/index.js             7.61 kB │ gzip:  2.25 kB
+packages/components build: dist/index3.js                          8.48 kB │ gzip:  3.02 kB
+packages/components build: dist/index.js                           8.54 kB │ gzip:  2.90 kB
+packages/components build: dist/mcp-extension-storage/index.js    10.90 kB │ gzip:  3.45 kB
+packages/components build: dist/index5.js                         12.09 kB │ gzip:  3.60 kB
+packages/components build: dist/index7.js                         13.87 kB │ gzip:  4.43 kB
+packages/components build: dist/skill-import-form/index.js        15.39 kB │ gzip:  5.87 kB
+packages/components build: dist/attachments/index.js              20.07 kB │ gzip:  5.91 kB
+packages/components build: dist/mcp-extension-form/index.js       20.14 kB │ gzip:  5.68 kB
+packages/components build: dist/mcp-server-picker/index.js        22.50 kB │ gzip:  5.63 kB
+packages/components build: dist/index4.js                         23.28 kB │ gzip:  7.63 kB
+packages/components build: dist/floating-ui.dom.js                25.21 kB │ gzip:  8.01 kB
+packages/components build: dist/anchor/index.js                   25.87 kB │ gzip:  7.34 kB
+packages/components build: dist/model-selector/index.js           33.33 kB │ gzip:  8.74 kB
+packages/components build: dist/extension-manager/index.js        34.37 kB │ gzip:  9.19 kB
+packages/components build: dist/layout/index.js                   36.77 kB │ gzip:  9.52 kB
+packages/components build: dist/index6.js                         37.31 kB │ gzip: 10.53 kB
+packages/components build: dist/sender/index.js                   83.90 kB │ gzip: 22.73 kB
+packages/components build: dist/suggestion-popover/index.js      106.64 kB │ gzip: 73.92 kB
+packages/components build: [vite:dts] Start rollup declaration files...
+packages/components build: Analysis will use the bundled TypeScript version 5.9.3
+packages/components build: [vite:dts] Declaration files built in 3961ms.
+packages/components build: ✓ built in 4.80s
+packages/components build: Done
+packages/chat build$ pnpm type-check && vite build
+packages/chat build: > @opentiny/tiny-robot-chat@0.5.1 type-check /private/tmp/tiny-robot-20261017/packages/chat
+packages/chat build: > vue-tsc --noEmit
+packages/chat build: vite v5.4.21 building for production...
+packages/chat build: transforming...
+packages/chat build: ✓ 66 modules transformed.
+packages/chat build: rendering chunks...
+packages/chat build: [vite:dts] Start generate declaration files...
+packages/chat build: computing gzip size...
+packages/chat build: dist/style.css   13.83 kB │ gzip:  2.64 kB
+packages/chat build: dist/index.js   129.94 kB │ gzip: 33.37 kB
+packages/chat build: [vite:dts] Start rollup declaration files...
+packages/chat build: Analysis will use the bundled TypeScript version 5.9.3
+packages/chat build: [vite:dts] Declaration files built in 1862ms.
+packages/chat build: ✓ built in 2.05s
+packages/chat build: Done

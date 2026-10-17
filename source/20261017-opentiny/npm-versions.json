@@ -1,0 +1,27 @@
+{
+  "@opentiny/tiny-robot": {
+    "latest": "0.5.1",
+    "legacy-v0.3-rc": "0.3.5-rc.0",
+    "legacy-v0.3": "0.3.5",
+    "legacy-v0.3-beta": "0.3.6-beta.0",
+    "alpha": "0.5.2-alpha.19",
+    "rc": "1.0.0-rc.1",
+    "beta": "1.0.0-beta.2"
+  },
+  "@opentiny/tiny-robot-chat": {
+    "bootstrap": "0.0.0",
+    "latest": "0.4.1",
+    "alpha": "0.5.2-alpha.19",
+    "rc": "1.0.0-rc.1",
+    "beta": "1.0.0-beta.2"
+  },
+  "@opentiny/tiny-robot-kit": {
+    "latest": "0.5.1",
+    "legacy-v0.3-rc": "0.3.5-rc.0",
+    "legacy-v0.3": "0.3.5",
+    "legacy-v0.3-beta": "0.3.6-beta.0",
+    "alpha": "0.5.2-alpha.19",
+    "rc": "1.0.0-rc.1",
+    "beta": "1.0.0-beta.2"
+  }
+}

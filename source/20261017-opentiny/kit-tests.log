@@ -1,0 +1,89 @@
+
+ RUN  v4.1.12 /private/tmp/tiny-robot-20261017/packages/kit
+
+(node:93971) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:93969) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:93970) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ❯ src/skills/test/fsStorage.test.ts (14 tests | 1 failed) 142ms
+     × lists existing skill directories, imports another skill, and deletes skills 2ms
+ ❯ src/skills/test/loaderNode.test.ts (7 tests | 3 failed | 1 skipped) 25ms
+     × loads weather skill directory as SkillDefinition 6ms
+     × loads multi-file skill references as resources 1ms
+     × loads skill details with warnings 1ms
+(node:93989) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/skills/test/fsStorage.test.ts > FsSkillStorage > lists existing skill directories, imports another skill, and deletes skills
+Error: ENOENT: no such file or directory, lstat '/private/tmp/tiny-robot-20261017/packages/kit/src/skills/test/.cache/weather'
+ ❯ src/skills/test/fsStorage.test.ts:306:5
+    304|     const weatherRoot = fileURLToPath(new URL('./.cache/weather', impo…
+    305|     const vueRoot = fileURLToPath(new URL('./.cache/vue-best-practices…
+    306|     await cp(weatherRoot, join(root, 'weather'), {
+       |     ^
+    307|       recursive: true,
+    308|     })
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  src/skills/test/loaderNode.test.ts > node loadSkill > loads weather skill directory as SkillDefinition
+Error: ENOENT: no such file or directory, scandir '/private/tmp/tiny-robot-20261017/packages/kit/src/skills/test/.cache/weather'
+ ❯ walk src/skills/loader/fs.ts:15:21
+     13|   const walk = async (directory: string) => {
+     14|     throwIfSkillLoadCancelled(context.signal)
+     15|     const entries = await readdir(directory, {
+       |                     ^
+     16|       withFileTypes: true,
+     17|     })
+ ❯ loadFsSkillFiles src/skills/loader/fs.ts:56:3
+ ❯ src/skills/loader/node.ts:11:19
+ ❯ src/skills/loader/utils.ts:38:22
+ ❯ src/skills/test/loaderNode.test.ts:32:25
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  src/skills/test/loaderNode.test.ts > node loadSkill > loads multi-file skill references as resources
+Error: ENOENT: no such file or directory, scandir '/private/tmp/tiny-robot-20261017/packages/kit/src/skills/test/.cache/vue-best-practices'
+ ❯ walk src/skills/loader/fs.ts:15:21
+     13|   const walk = async (directory: string) => {
+     14|     throwIfSkillLoadCancelled(context.signal)
+     15|     const entries = await readdir(directory, {
+       |                     ^
+     16|       withFileTypes: true,
+     17|     })
+ ❯ loadFsSkillFiles src/skills/loader/fs.ts:56:3
+ ❯ src/skills/loader/node.ts:11:19
+ ❯ src/skills/loader/utils.ts:38:22
+ ❯ src/skills/test/loaderNode.test.ts:42:25
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  src/skills/test/loaderNode.test.ts > node loadSkill > loads skill details with warnings
+Error: ENOENT: no such file or directory, scandir '/private/tmp/tiny-robot-20261017/packages/kit/src/skills/test/.cache/weather'
+ ❯ walk src/skills/loader/fs.ts:15:21
+     13|   const walk = async (directory: string) => {
+     14|     throwIfSkillLoadCancelled(context.signal)
+     15|     const entries = await readdir(directory, {
+       |                     ^
+     16|       withFileTypes: true,
+     17|     })
+ ❯ loadFsSkillFiles src/skills/loader/fs.ts:56:3
+ ❯ src/skills/loader/node.ts:11:19
+ ❯ src/skills/loader/utils.ts:38:22
+ ❯ src/skills/test/loaderNode.test.ts:164:25
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+
+ Test Files  2 failed | 19 passed (21)
+      Tests  4 failed | 187 passed | 1 skipped (192)
+   Start at  08:03:35
+   Duration  902ms (transform 1.65s, setup 0ms, import 2.95s, tests 1.14s, environment 1ms)
+
+undefined
+/private/tmp/tiny-robot-20261017/packages/kit:
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command failed with exit code 1: vitest run

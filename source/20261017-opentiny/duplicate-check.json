@@ -1,0 +1,20 @@
+✅ Access token obtained
+账本：blog 846 篇 + 公众号草稿箱 11 条 + 本地发布记录 829 条 + MemPalace 1819 抽屉
+
+── 查：https://github.com/opentiny/tiny-robot
+   ✅ 四本账都没查到
+
+── 查：TinyRobot
+   ✅ 四本账都没查到
+
+── 查：OpenTiny
+   ❌ [知识库] # 华为开源OpenTiny，Agent的UI组件库  **Summary**: 华为开源OpenTiny，Agent的
+      正文出现实体名「opentiny」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
