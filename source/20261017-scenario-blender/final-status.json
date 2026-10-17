@@ -1,0 +1,44 @@
+{
+  "slug": "scenario-blender-generation-mcp",
+  "blogUrl": "https://blog.mushroom.cv/blog/scenario-blender-generation-mcp/",
+  "blogHTTP": 200,
+  "listPosition": 10,
+  "bilingual": true,
+  "publicImages": [
+    {
+      "url": "https://blog.mushroom.cv/_astro/scenario-blender-generation-mcp-banner.BGMQA9Mf_1a85dP.webp",
+      "status": 200,
+      "bytes": 29310
+    },
+    {
+      "url": "https://blog.mushroom.cv/_astro/scenario-blender-generation-mcp-fig-01.BwvQEjl9_10IdGl.webp",
+      "status": 200,
+      "bytes": 46220
+    },
+    {
+      "url": "https://blog.mushroom.cv/_astro/scenario-blender-generation-mcp-fig-02.5t4Ase_8_ZEzRkD.webp",
+      "status": 200,
+      "bytes": 53810
+    },
+    {
+      "url": "https://blog.mushroom.cv/_astro/scenario-blender-generation-mcp-fig-03.mWW3GhuS_29Ropb.webp",
+      "status": 200,
+      "bytes": 62644
+    }
+  ],
+  "wechatStatus": "draft",
+  "mediaId": "prCUE631thH1cmNLi42prEB1NM4AJ2_1uPku6xpjZ7dGltLMynJD0BM8fwUYUni4",
+  "remoteDraftVerified": true,
+  "kb": "projectnote mined andexactslugverified; originalrawbotmaterial reused",
+  "semantic": {
+    "upsertedVectors": 2,
+    "unchangedManifestRecords": 2,
+    "publicRetrieval": {
+      "rank": 1,
+      "score": 0.7214374,
+      "article_id": "scenario-blender-generation-mcp"
+    }
+  },
+  "pr": "https://github.com/MushroomDAO/blog/pull/116",
+  "limitations": "100selectedoffline tests inexistingPython3.12; pinneduvunavailable; no nativeBlender/livegeneration/performance"
+}
