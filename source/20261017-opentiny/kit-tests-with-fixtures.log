@@ -1,0 +1,27 @@
+
+> @opentiny/tiny-robot-kit@0.5.1 pretest /private/tmp/tiny-robot-20261017/packages/kit
+> node scripts/download-skill-fixtures.mjs
+
+Downloading skill fixture: skills/weather@58672075219d09495de6489ad0821d276ac84f13
+Downloading skill fixture: skills/vue-best-practices@b9d14d022da6a0a8bdcb824557f40bca6fbc1845
+
+> @opentiny/tiny-robot-kit@0.5.1 test /private/tmp/tiny-robot-20261017/packages/kit
+> vitest run
+
+
+ RUN  v4.1.12 /private/tmp/tiny-robot-20261017/packages/kit
+
+(node:95007) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:95011) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:95012) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:95010) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+ Test Files  21 passed (21)
+      Tests  191 passed | 1 skipped (192)
+   Start at  08:04:01
+   Duration  677ms (transform 951ms, setup 0ms, import 1.70s, tests 964ms, environment 1ms)
+

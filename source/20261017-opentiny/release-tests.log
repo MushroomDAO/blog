@@ -1,0 +1,21 @@
+✔ updates all public packages and preserves unrelated JSON content (3.709125ms)
+✔ rejects unusable npm dist-tags without changing files (2.473084ms)
+✔ repairs an invalid current version when the target version is valid (2.67825ms)
+✔ validates every package before writing any file (2.044958ms)
+✔ rolls back files when a later write fails (2.435958ms)
+✔ publish verification accepts synchronized prerelease packages on their channel (2.9015ms)
+✔ publish verification accepts synchronized stable packages on latest (2.180333ms)
+✔ publish verification rejects prerelease numeric identifiers with leading zeroes (2.702291ms)
+✔ publish verification rejects a numeric prerelease channel unusable by npm (1.869666ms)
+✔ publish verification rejects a mismatched runtime package (2.12175ms)
+✔ publish verification rejects a version that does not match the Git tag (1.94925ms)
+✔ publish verification rejects a dist-tag that does not match the package version (1.56975ms)
+✔ publish verifier CLI fails before publication when package versions diverge (43.408ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 110.805916

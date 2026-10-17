@@ -1,0 +1,33 @@
+{
+  "commit": "7a5b22ccaa9cafd0a2ad14dce526d79c03e90070",
+  "sourceModified": false,
+  "install": "unfrozen ignore-scripts; no committed lockfile",
+  "build": "pnpm build:components passed including Kit,SVG,components,Chat",
+  "kit": {
+    "passed": 191,
+    "skipped": 1,
+    "failed": 0,
+    "initialMissingFixtures": 4,
+    "resolved": "official pretest pinned fixtures"
+  },
+  "chat": {
+    "passed": 18,
+    "failed": 0
+  },
+  "releaseScripts": {
+    "passed": 13,
+    "failed": 0
+  },
+  "notTested": [
+    "real model",
+    "real business MCP",
+    "production authorization",
+    "browser UI acceptance",
+    "performance"
+  ],
+  "resolvedLockSha256": "291b76f260445ccc0e179b397c882b5134d5146e159a11e2e83a8de2b3288e83",
+  "versions": {
+    "node": "see environment log",
+    "pnpm": "10.34.5"
+  }
+}
