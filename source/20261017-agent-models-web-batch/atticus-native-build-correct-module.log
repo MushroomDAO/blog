@@ -1,0 +1,89 @@
+Atticus.swift:195:19: warning: value 'snapshot' was defined but never used; consider replacing with boolean test [#no-usage]
+ 193 |     }
+ 194 |     private func ramp(to target: Float32) {
+ 195 |         guard let snapshot = original else { return }
+     |                   `- warning: value 'snapshot' was defined but never used; consider replacing with boolean test [#no-usage]
+ 196 |         generation += 1; let mine = generation, from = scale, steps = 6
+ 197 |         for step in 1...steps {
+
+Atticus.swift:1424:9: warning: result of call to 'fcntl' is unused [#no-usage]
+1422 |         let p = py(["--wait"], ["ATTICUS_UI": "1", "ATTICUS_FRONT": mine, "ATTICUS_SCREEN": targetScreen, "ATTICUS_COMMIT": commit, "ATTICUS_SELECTION": warmSel == "\u{1}" ? "" : warmSel, "ATTICUS_CARET": warmSel == "\u{1}" ? "1" : "", "ATTICUS_FOCUS_GUARD": "1"])
+1423 |         let pipe = Pipe(), inp = Pipe(); p.standardOutput = pipe; p.standardInput = inp
+1424 |         fcntl(inp.fileHandleForWriting.fileDescriptor, F_SETNOSIGPIPE, 1)   // a worker can exit before we write; let the catch handle EPIPE
+     |         `- warning: result of call to 'fcntl' is unused [#no-usage]
+1425 |         var buffer = Data()
+1426 |         let feed = { [weak self] (d: Data) in
+
+Atticus.swift:1587:9: warning: result of call to 'fcntl' is unused [#no-usage]
+1585 |         guard process == nil else { return }
+1586 |         let p = py(["--agents"]), out = Pipe(), inp = Pipe(); p.standardOutput = out; p.standardInput = inp; p.standardError = FileHandle.nullDevice
+1587 |         fcntl(inp.fileHandleForWriting.fileDescriptor,F_SETNOSIGPIPE,1)
+     |         `- warning: result of call to 'fcntl' is unused [#no-usage]
+1588 |         process = p; input = inp.fileHandleForWriting; output = out
+1589 |         out.fileHandleForReading.readabilityHandler = { [weak self] file in
+
+Atticus.swift:2063:35: warning: 'fullPath(forApplication:)' was deprecated in macOS 11.0: Use -[NSWorkspace URLForApplicationWithBundleIdentifier:] instead. [#DeprecatedDeclaration]
+2061 |     static func bundle(_ app: String) -> String? {
+2062 |         NSWorkspace.shared.runningApplications.first { $0.localizedName == app }?.bundleIdentifier
+2063 |             ?? NSWorkspace.shared.fullPath(forApplication: app).flatMap { Bundle(path: $0)?.bundleIdentifier }
+     |                                   `- warning: 'fullPath(forApplication:)' was deprecated in macOS 11.0: Use -[NSWorkspace URLForApplicationWithBundleIdentifier:] instead. [#DeprecatedDeclaration]
+2064 |     }
+2065 | 
+
+Atticus.swift:2567:13: warning: result of call to 'fcntl' is unused [#no-usage]
+2565 |         DispatchQueue.global().async { [weak self] in
+2566 |             let p = py(["--feedback"]), input = Pipe(), out = Pipe(); p.standardInput = input; p.standardOutput = out
+2567 |             fcntl(input.fileHandleForWriting.fileDescriptor, F_SETNOSIGPIPE, 1)
+     |             `- warning: result of call to 'fcntl' is unused [#no-usage]
+2568 |             do { try p.run(); try input.fileHandleForWriting.write(contentsOf:JSONSerialization.data(withJSONObject:["include":include,"version":version,"text":text])); try input.fileHandleForWriting.close() }
+2569 |             catch { if p.isRunning { p.terminate() }; DispatchQueue.main.async { if self?.feedbackJob == job { self?.send("feedback", ["error":"Could not prepare feedback. Try again.","revision":revision]) } }; return }
+
+Atticus.swift:2637:13: warning: result of call to 'fcntl' is unused [#no-usage]
+2635 |         DispatchQueue.global().async { [weak self] in
+2636 |             let p = py(["--meetings"]), input = Pipe(), output = Pipe(); p.standardInput = input; p.standardOutput = output
+2637 |             fcntl(input.fileHandleForWriting.fileDescriptor, F_SETNOSIGPIPE, 1)
+     |             `- warning: result of call to 'fcntl' is unused [#no-usage]
+2638 |             var result: [String: Any] = ["error": "Could not open saved meetings. Try again."]
+2639 |             do {
+
+Atticus.swift:3113:9: warning: result of call to 'fcntl' is unused [#no-usage]
+3111 |         let id = archive.id
+3112 |         let p = py(["--meetings"]), input = Pipe(), output = Pipe(); p.standardInput = input; p.standardOutput = output
+3113 |         fcntl(input.fileHandleForWriting.fileDescriptor, F_SETNOSIGPIPE, 1)
+     |         `- warning: result of call to 'fcntl' is unused [#no-usage]
+3114 |         do { try p.run() } catch { return }; finishing = p
+3115 |         DispatchQueue.global().async { [weak self] in
+
+Atticus.swift:3334:9: warning: result of call to 'fcntl' is unused [#no-usage]
+3332 |         let p = py(["--meeting-live"]), input = Pipe(), output = Pipe()
+3333 |         p.standardInput = input; p.standardOutput = output
+3334 |         fcntl(input.fileHandleForWriting.fileDescriptor, F_SETNOSIGPIPE, 1)
+     |         `- warning: result of call to 'fcntl' is unused [#no-usage]
+3335 |         answerProcess = p; answerInput = input; answerOutput = output; answerBuffer = Data()
+3336 |         let g = generation
+
+Atticus.swift:3374:20: warning: value 'id' was defined but never used; consider replacing with boolean test [#no-usage]
+3372 |         guard let p = answerProcess, p.isRunning, let input = answerInput,
+3373 |               var body = try? JSONSerialization.data(withJSONObject: data) else {
+3374 |             if let id = answering { finishAnswer(["error": "Could not start"], process: answerProcess) }; return
+     |                    `- warning: value 'id' was defined but never used; consider replacing with boolean test [#no-usage]
+3375 |         }
+3376 |         body.append(10)
+
+Atticus.swift:3395:9: warning: result of call to 'fcntl' is unused [#no-usage]
+3393 |     func worker(_ command: String, _ data: [String: Any], _ done: @escaping ([String: Any]) -> Void) {
+3394 |         let p = py([command]), input = Pipe(), output = Pipe(); p.standardInput = input; p.standardOutput = output
+3395 |         fcntl(input.fileHandleForWriting.fileDescriptor, F_SETNOSIGPIPE, 1)
+     |         `- warning: result of call to 'fcntl' is unused [#no-usage]
+3396 |         process = p; let g = generation
+3397 |         do { try p.run() } catch { process = nil; done(["error": "Could not start"]); return }
+
+Atticus.swift:71:63: warning: forming 'UnsafeMutableRawPointer' to a variable of type '[T]'; this is likely incorrect because 'T' may contain an object reference.
+  69 |     guard AudioObjectGetPropertyDataSize(obj, &a, 0, nil, &size) == noErr, size > 0 else { return [] }
+  70 |     var out = [T](repeating: zero, count: Int(size) / MemoryLayout<T>.stride)
+  71 |     return AudioObjectGetPropertyData(obj, &a, 0, nil, &size, &out) == noErr ? out : []
+     |                                                               `- warning: forming 'UnsafeMutableRawPointer' to a variable of type '[T]'; this is likely incorrect because 'T' may contain an object reference.
+  72 | }
+  73 | 
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
