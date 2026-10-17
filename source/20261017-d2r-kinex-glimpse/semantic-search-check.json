@@ -88,129 +88,105 @@
     }
   },
   "kinex-coding-agents-robot-harness": {
-    "query": "Kinex devices tools skills",
-    "found": false,
+    "query": "Kinex 机器人 Pi 设备工具技能 132 仿真",
+    "found": true,
     "response": {
       "results": [
         {
-          "article_id": "echo-slides-skill-extract-slides-from-video-claude-code-skill",
-          "title": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片",
-          "url": "/blog/echo-slides-skill-extract-slides-from-video-claude-code-skill/",
+          "article_id": "kinex-coding-agents-robot-harness",
+          "title": "Kinex：让编程 Agent 接入机器人",
+          "url": "/blog/kinex-coding-agents-robot-harness/",
           "language": "zh",
-          "excerpt": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片 xiangzhouEcho/Echo-Slides-Skill 开源 Claude Code Skill，npx skills add 一行装到全局，Claude Code/Codex/Cursor/OpenCode 通用，双签名去重（dHash+RGB网格），实测20分钟演讲39页零重复。 Claude Code skill video slides open source AI tools productivity agent 这个痛点存在了很久 核心洞察",
-          "score": 0.5347603
+          "excerpt": "Kinex：让编程 Agent 接入机器人 Kinex 用设备、工具与技能三层，把编程 Agent 连接到机器人、仿真器和模型服务。本文核查 Apache 2.0 仓库、Pi 基础与插件边界，重算官方 396 条仿真记录，并运行设备驱动契约测试。文章解释成功率与成本估计的适用条件，给出模拟环境起步、硬件标定及故障退出的验收路径，不把公开演示当作实机保证。 Robotics AI Agent Open Source Simulation Kinex 如何把文字任务接到物理设备？ 官方 78% 成功率是怎么来的？ 普通开发者怎样跑第一条闭环？ 我们本机验证了",
+          "score": 0.62982833
         },
         {
-          "article_id": "nikola-hand-drawn-explainer-video-codex-skill",
-          "title": "Nikola: A Codex Skill That Turns Any Topic Into Hand-drawn Explainer Videos",
-          "url": "/blog/nikola-hand-drawn-explainer-video-codex-skill/",
-          "language": "en",
-          "excerpt": "Nikola: A Codex Skill That Turns Any Topic Into Hand-drawn Explainer Videos A Codex skill for Chinese-language hand-drawn explainer videos — stroke-by-stroke narrative and procedural animation paths, VolcanoEngine TTS voiceover, outputs real MP4s with subtitles and editable timel",
-          "score": 0.5320386
-        },
-        {
-          "article_id": "codex-skills-gaixianggeng-workbuddy-marketplace-openai-agent-skill",
-          "title": "OpenAI Codex 技能市场的入口：一个小仓库打开 295 个 WorkBuddy 技能——含 47 个微信/腾讯自动化",
-          "url": "/blog/codex-skills-gaixianggeng-workbuddy-marketplace-openai-agent-skill/",
+          "article_id": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+          "title": "5块钱让大模型学会看图做几何题：GRPO 后训练的低成本实验",
+          "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/",
           "language": "zh",
-          "excerpt": "OpenAI Codex 技能市场的入口：一个小仓库打开 295 个 WorkBuddy 技能——含 47 个微信/腾讯自动化 gaixianggeng/codex-skills 是一个只有 2 个 star 的小仓库，却包含两个极具价值的 Codex 技能：init-project-workspace 初始化工作区，workbuddy-skills-navigator 打开一个 295 技能的 AI Agent 市场。这个市场里有 47 个微信/腾讯相关技能、159 个 AI/Agent 工具，全部通过 Git + Python CLI 管理。本文拆解",
-          "score": 0.5137836
+          "excerpt": "5块钱让大模型学会看图做几何题：GRPO 后训练的低成本实验 KMnO4-zx/agentic-rl-lab，147 stars，Apache 2.0，Python。用 PyTRIO 远程训练平台 + GRPO 算法，5元在 Qwen3.5-4B 上做几何图形问答（GeoQA）的 Vision RL 后训练，准确率从 71% 升到 87%（+16pp）。全系列复现了 10 篇 RL 算法论文（GRPO/DAPO/GSPO/Search-R1/ReTool 等），核心主题：只写数据、reward 和 loss——把 infra 交给远端，让 RL 后训练的",
+          "score": 0.5141571
         },
         {
-          "article_id": "xiaohongshu-operations-codex-skills-workflow-systematic",
-          "title": "Can Xiaohongshu Operations Become a Workflow? Six Codex Skills Offer an Answer",
-          "url": "/blog/xiaohongshu-operations-codex-skills-workflow-systematic/",
+          "article_id": "pi-muselinn-harness-kimi-code-subagents-goal-plan-tui",
+          "title": "Whatever the Pi Coding Agent Lacks, pi-muselinn-harness Supplies",
+          "url": "/blog/pi-muselinn-harness-kimi-code-subagents-goal-plan-tui/",
           "language": "en",
-          "excerpt": "Can Xiaohongshu Operations Become a Workflow? Six Codex Skills Offer an Answer 小红书 Codex Skills 内容运营 工作流 AI工具 自动化 Can Xiaohongshu Operations Be Systematized? 6 Codex Skills Offer an Answer What Problem It Solves 6 Skills, Each Solving One Thing `xiaohongshu-suite`: Parent Skill, ",
-          "score": 0.5125056
+          "excerpt": "Whatever the Pi Coding Agent Lacks, pi-muselinn-harness Supplies pi-muselinn-harness is a TypeScript extension package that ports Kimi Code's core subsystems — Swarm parallel subagents, Goal lifecycle, Plan mode, 18-level permission chain, Hooks engine, 7-scope Skills — into the ",
+          "score": 0.5087242
         },
         {
-          "article_id": "grill-with-docs-domain-modeling-grilling-skills-requirement-workflow",
-          "title": "The Requirements Triage Triple: grilling + domain-modeling + grill-with-docs — Turn Fuzzy Requirements into Executable Documentation",
-          "url": "/blog/grill-with-docs-domain-modeling-grilling-skills-requirement-workflow/",
+          "article_id": "tokentracker-local-first-token-cost-accounting-dedup",
+          "title": "TokenTracker: Before Saving Tokens, Check Your Numbers Aren't 1.6-3.7x Too High",
+          "url": "/blog/tokentracker-local-first-token-cost-accounting-dedup/",
           "language": "en",
-          "excerpt": "The Requirements Triage Triple: grilling + domain-modeling + grill-with-docs — Turn Fuzzy Requirements into Executable Documentation Three Claude Code skills by Matt Pocock on skills.sh: grilling for relentless interrogation, domain-modeling for unified project language, and gril",
-          "score": 0.49958107
+          "excerpt": "TokenTracker: Before Saving Tokens, Check Your Numbers Aren't 1.6-3.7x Too High A local-first token and cost tracker for AI coding tools, covering 36 of them — 1,522 stars, MIT. The real technical point is deduplication: reqId-based dedup (the ccusage approach) over-counts provid",
+          "score": 0.5076156
         },
         {
-          "article_id": "reverse-skill-ai-agent-cybersecurity-penetration-skill-router",
-          "title": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents",
-          "url": "/blog/reverse-skill-ai-agent-cybersecurity-penetration-skill-router/",
-          "language": "en",
-          "excerpt": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents zhaoxuya520's open-source AI agent cybersecurity skill router, 20.9k stars, MIT. Solves the core problem of agents not knowing which security tool to use — 41 routing rules auto-class",
-          "score": 0.48578978
-        },
-        {
-          "article_id": "nature-skills-yuan1z0825-academic-paper-skill-collection",
-          "title": "nature-skills: 18 AI Skills for the Whole Academic Paper Workflow, 34k Stars in Two Months",
-          "url": "/blog/nature-skills-yuan1z0825-academic-paper-skill-collection/",
-          "language": "en",
-          "excerpt": "nature-skills: 18 AI Skills for the Whole Academic Paper Workflow, 34k Stars in Two Months nature-skills is a community-built collection of 18 AI skills for the full academic paper workflow, started by Yuan Yizhe. Skills cover figures, polishing, writing, review response, citatio",
-          "score": 0.4839551
-        },
-        {
-          "article_id": "jev-skill-agent-decision-9-skills-90-scenarios-openrouter",
-          "title": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios",
-          "url": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
-          "language": "en",
-          "excerpt": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios MIT, 34 stars, open-sourced today. SKILL.md format, 9 domain-specific skills covering 90 labeled scenarios: triage, document evidence, UI actions, tool routing, code review, and more. R",
-          "score": 0.48394763
-        },
-        {
-          "article_id": "claude-trading-skills-tradermonty-stock-workflow-toolkit",
-          "title": "2833 星的 Claude 交易技能包：74 个 Skill 覆盖选股到复盘，但它明确说自己不下单",
-          "url": "/blog/claude-trading-skills-tradermonty-stock-workflow-toolkit/",
+          "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+          "title": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具",
+          "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
           "language": "zh",
-          "excerpt": "2833 星的 Claude 交易技能包：74 个 Skill 覆盖选股到复盘，但它明确说自己不下单 tradermonty/claude-trading-skills 是一套 MIT 协议的 Claude Code 交易工作流技能包，2833 星、647 fork，74 个 Skill 分 6 大领域，覆盖选股筛选、仓位计算、复盘记账，但作者反复强调不是信号服务、不自动下单、不构成投资建议。 Claude Code Claude Skills 量化交易 开源工具 Alpaca 股票投资 风险提示 为什么关注这个项目？ 这套东西到底是什么：74 个 Sk",
-          "score": 0.48195443
+          "excerpt": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具 hikarioyama/ParallelHue（MIT，35 star，零运行时依赖）把本地大模型的多路并发流式输出画进终端，只有调度器和反分词器的遥测跟 SSE 逐字节对得上，才按验证步上色。真正的 exact 模式只支持 vLLM 0.26.x，靠 7 个内部方法挂钩实现，官方的有效证据只有一次 16 路 GLM 运行（16,384 个 token）。我们在 Mac mini 上跑通了 72 个测试，用模拟服务器确认了它在证据不足时会失败或降级，另外发现：只要模型名里带 qw",
+          "score": 0.5001809
         },
         {
-          "article_id": "video-expert-analyzer-mac-mlx-local-model-complete-guide",
-          "title": "Video Expert Analyzer Complete Guide: Walter Murch's Six Rules + Mac MLX Local Model Full Walkthrough",
-          "url": "/blog/video-expert-analyzer-mac-mlx-local-model-complete-guide/",
+          "article_id": "grpo-small-model-engineering-guide",
+          "title": "A GRPO Engineering Guide for Small Models: Eighty Dollars of Training to Beat o3",
+          "url": "/blog/grpo-small-model-engineering-guide/",
           "language": "en",
-          "excerpt": "Video Expert Analyzer Complete Guide: Walter Murch's Six Rules + Mac MLX Local Model Full Walkthrough Deep dive into ALBEDO-TABAI/Video-expert-analyzer: from scene detection to 5D AI scoring, covering tool architecture, cloud API path, and full Mac local MLX model deployment via ",
-          "score": 0.48076117
+          "excerpt": "A GRPO Engineering Guide for Small Models: Eighty Dollars of Training to Beat o3 GRPO (Group Relative Policy Optimization) makes it practical for small specialist models to outperform frontier LLMs on narrow tasks. This guide integrates ART, ms-swift, OpenClaw-RL, and six real en",
+          "score": 0.49931622
+        },
+        {
+          "article_id": "earendil-what-is-a-harness-pi-minimal-agent-four-primitives",
+          "title": "读《What is a Harness?》：Model 负责聪明，Harness 负责让这份聪明变成「能干活」",
+          "url": "/blog/earendil-what-is-a-harness-pi-minimal-agent-four-primitives/",
+          "language": "zh",
+          "excerpt": "读《What is a Harness?》：Model 负责聪明，Harness 负责让这份聪明变成「能干活」 Earendil 团队写了一篇极简博客《What is a Harness?》，用攀岩 Harness 的比喻把 Agent Harness 压缩成四件事：System Prompt（工作说明）、Tools（手和脚）、Agentic Loop（根据上一步结果决定下一步的能力）、Translation Layer（换模型不换工作流）。这篇文章是读后感，试图把这个比喻推到底，然后说说为什么 Pi 把「极简」当成第一原则，而不是功能完备。 Agent",
+          "score": 0.49915704
+        },
+        {
+          "article_id": "pixel-perfect-ui-frontend-guide",
+          "title": "Pixel Perfect: 585★ React Component Library That Makes Your Frontend Actually Look Good",
+          "url": "/blog/pixel-perfect-ui-frontend-guide/",
+          "language": "en",
+          "excerpt": "Pixel Perfect: 585★ React Component Library That Makes Your Frontend Actually Look Good Pixel Perfect (585★) is a precision-crafted React component library with 330+ copy-paste components: glass morphism buttons, 3D push buttons, metal effects, mouse followers, and text animation",
+          "score": 0.4959999
+        },
+        {
+          "article_id": "easel-open-source-social-media-agent-workbench",
+          "title": "Easel: An Open-Source Social Media Agent Workbench, 112 Skills, Six-Platform Publishing",
+          "url": "/blog/easel-open-source-social-media-agent-workbench/",
+          "language": "en",
+          "excerpt": "Easel: An Open-Source Social Media Agent Workbench, 112 Skills, Six-Platform Publishing An open-source social-media creator Agent from Zhejiang University's REAL Lab and Peking University's OpenDCAI Lab: built on OpenClaw, 112 Skills across six layers (foundation/discover/plan/pr",
+          "score": 0.4956171
+        },
+        {
+          "article_id": "peekaboo-macos-native-ui-agent",
+          "title": "Peekaboo：让 AI 看见并操作 Mac 原生界面",
+          "url": "/blog/peekaboo-macos-native-ui-agent/",
+          "language": "zh",
+          "excerpt": "Peekaboo：让 AI 看见并操作 Mac 原生界面 Peekaboo 是面向 Mac 的开源桌面自动化工具，把截图、辅助功能界面树与点击输入接进 CLI、菜单栏应用和 MCP。本文核对4.9.0、5282Star快照、窗口定位与后台规则，并记录本地版本检查、权限诊断及Agent预演结果，说明何时使用原生UI工具、何时优先API，以及如何避免把命令已发出误判为任务成功。 Peekaboo macOS MCP 桌面自动化 AI Agent Peekaboo 到底补上了哪一层？ 怎样安装和接入 MCP？ 为什么窗口和快照比点击坐标更重要？ 后台运行意味着",
+          "score": 0.4942858
         }
       ]
     }
   },
   "glimpse-visual-reasoning-game-bug-review": {
-    "query": "Glimpse visual reasoning game",
-    "found": false,
+    "query": "Elorian Glimpse 视觉推理 录屏 时间戳",
+    "found": true,
     "response": {
       "results": [
         {
-          "article_id": "vibegame-prompt-to-game-ai-native-engine-adversarial-agent-team",
-          "title": "VibeGame：用自然语言描述，8个 Agent 协作，直接生成可玩的完整 2D 游戏",
-          "url": "/blog/vibegame-prompt-to-game-ai-native-engine-adversarial-agent-team/",
+          "article_id": "glimpse-visual-reasoning-game-bug-review",
+          "title": "Glimpse：让视频验收回到具体画面",
+          "url": "/blog/glimpse-visual-reasoning-game-bug-review/",
           "language": "zh",
-          "excerpt": "VibeGame：用自然语言描述，8个 Agent 协作，直接生成可玩的完整 2D 游戏 南京大学 + 南洋理工大学联合发布 VibeGame，一个 AI-native 游戏引擎 + 对抗性 Agent 团队框架，能从自然语言 prompt 和参考图片直接生成并持续编辑完整的 2D 网页游戏，支持 IP 迁移、类型迁移和规则重构。 AI 游戏开发 多智能体 vibe-coding Claude 开源 game-development 核心挑战：游戏为什么比普通软件难生成 三层架构 第一层：AI-Native 游戏引擎 第二层：对抗性 Agent 团队（A",
-          "score": 0.5504596
-        },
-        {
-          "article_id": "vibe-coding-prompt-template-khazp-agents-md-prd-mvp-workflow-guide",
-          "title": "Vibe Coding 的正确打开方式：KhazP 的 5 步结构化工作流——从想法到 MVP 不迷路",
-          "url": "/blog/vibe-coding-prompt-template-khazp-agents-md-prd-mvp-workflow-guide/",
-          "language": "zh",
-          "excerpt": "Vibe Coding 的正确打开方式：KhazP 的 5 步结构化工作流——从想法到 MVP 不迷路 GitHub 2700+ Star 的 vibe-coding-prompt-template 不是一套 prompt，而是一套完整的 AI 编程方法论：先在 Chat 里完成市场调研、PRD、技术设计，再进 IDE 生成 AGENTS.md 让 Agent 拥有完整上下文，最后 Plan→Execute→Verify 循环推进到 MVP。支持 Claude Code、Cursor、Codex、Gemini CLI。 一、为什么 vibe coding",
-          "score": 0.53336173
-        },
-        {
-          "article_id": "infinitediffusion-terrain-generation-guide",
-          "title": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文",
-          "url": "/blog/infinitediffusion-terrain-generation-guide/",
-          "language": "zh",
-          "excerpt": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文 Alexander Goslin 以独立研究者身份，用 RTX 3090 Ti 发表 SIGGRAPH 2026 论文 InfiniteDiffusion，将扩散模型改造为懒惰采样，实现无界、O(1) 随机访问、确定性的无限地形生成。本文整理复现路径与游戏/工程应用方向。 扩散模型 程序化生成 游戏开发 SIGGRAPH 地形生成 AI图形 独立研究 先说这件事本身有多不寻常 论文在解决什么问题？ 原始资源 30 分钟复现路径 Step 0：环境 St",
-          "score": 0.5201066
-        },
-        {
-          "article_id": "lingchat-ai-galgame-emotion-desktop-pet-tauri",
-          "title": "LingChat: Immersive AI Galgame Companion — 18-Class Emotion Recognition, Screen Perception, Live2D, Built on Tauri 2 + Vue 3",
-          "url": "/blog/lingchat-ai-galgame-emotion-desktop-pet-tauri/",
-          "language": "en",
-          "excerpt": "LingChat: Immersive AI Galgame Companion — 18-Class Emotion Recognition, Screen Perception, Live2D, Built on Tauri 2 + Vue 3 SlimeBoyOwO/LingChat, AGPL-3.0, Rust, 2,255 stars. Immersive AI Galgame companion chat: self-trained 18-class emotion recognition, desktop screenshot perce",
-          "score": 0.51998
+          "excerpt": "Glimpse：让视频验收回到具体画面 Glimpse 是 Elorian 发布的视觉推理研究预览，可回看视频并定位疑点。本文核实官方入口、公开评测和开源状态，区分游戏验收案例与可复现基准，提供录像分段、规则输入、时间戳证据、人工复核及缺陷回归的工程方案。视觉定位不等于源码定位，模型信心也不是经过校准的正确率，所有流程建议与未验证范围均有明确说明。 Vision Language Model Video Understanding Game QA AI Agent Glimpse 开源了吗，应该去哪里找？ 公开结果能证明它最擅长找游戏 Bug 吗？ 怎样",
+          "score": 0.6882153
         },
         {
           "article_id": "openhoopvision-basketball-video-analysis",
@@ -218,47 +194,71 @@
           "url": "/blog/openhoopvision-basketball-video-analysis/",
           "language": "zh",
           "excerpt": "OpenHoopVision：把篮球录像变成轨迹和事件数据 OpenHoopVision 面向业余和青少年篮球录像，将检测、跟踪、球员身份、球场映射和事件推断连接起来，输出标注视频与JSONL。本文核对官方源码与作者报告的投篮指标，完成11项合成计分检查，说明两分兜底、固定球场几何、Git LFS权重及CPU路径的使用边界，并给教练与开发者提供可复核的试用流程。 OpenHoopVision Computer Vision Basketball Video Analysis Tracking Open Source 从一段录像，能得到什么？ 作者的指标，",
-          "score": 0.5132582
+          "score": 0.5321082
         },
         {
-          "article_id": "gepa-reflective-prompt-evolution-vs-reinforcement-learning",
-          "title": "GEPA：让 LLM 阅读自己的执行轨迹进化 Prompt，比 GRPO 少用 35x rollout 却赢 20%",
-          "url": "/blog/gepa-reflective-prompt-evolution-vs-reinforcement-learning/",
+          "article_id": "minicpmo-booking-desk-realtime-voice-appointment-agent",
+          "title": "MiniCPM-o Booking Desk：全双工语音预约台，状态机控 DB 写入，Judge LLM 防幻觉确认",
+          "url": "/blog/minicpmo-booking-desk-realtime-voice-appointment-agent/",
           "language": "zh",
-          "excerpt": "GEPA：让 LLM 阅读自己的执行轨迹进化 Prompt，比 GRPO 少用 35x rollout 却赢 20% 来自 UC Berkeley、Stanford、MIT、Databricks 的 ICLR 2026 口头报告论文：GEPA 让 LLM 通过阅读自己的执行轨迹，自动反思、进化并合并 prompt 经验，在 HotpotQA 等任务上比 GRPO 平均高 10%，比 MIPROv2 高 12%，同时只需不到 3% 的 rollout 数量。 GEPA Prompt优化 强化学习 LLM GRPO 进化算法 AI Agent ICLR 20",
-          "score": 0.51069194
+          "excerpt": "MiniCPM-o Booking Desk：全双工语音预约台，状态机控 DB 写入，Judge LLM 防幻觉确认 AlessandroBonomo28/Minicpm-o-booking-desk，Python，MiniCPM-o 4.5 驱动的实时语音预约台 Demo。三通道架构：音频（VAD+Whisper）+ 视觉（每秒刷新的操作员屏幕帧）+ 控制 token（force_speak/force_listen）。状态机全权控制 DB 写入，模型输出不直接碰数据库；Judge LLM 核查模型口播内容防幻觉确认。实测 4 分 13 秒，2 次预约",
+          "score": 0.4944423
         },
         {
-          "article_id": "belief-context-graph-bcg-agent-memory-confidence-provenance-deterministic-reasoning",
-          "title": "Belief Context Graph：把 Agent 记忆从「检索」升级为「置信度感知的信念图」",
-          "url": "/blog/belief-context-graph-bcg-agent-memory-confidence-provenance-deterministic-reasoning/",
+          "article_id": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+          "title": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+          "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/",
+          "language": "en",
+          "excerpt": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry KMnO4-zx/agentic-rl-lab, 147 stars, Apache 2.0, Python. GRPO post-training on Qwen3.5-4B for geometric visual QA (GeoQA) with PyTRIO remote compute — ¥5, 100 steps, accuracy from 71% to 87% (+16pp). The full series reprod",
+          "score": 0.49428973
+        },
+        {
+          "article_id": "cli-zoo-otter-wren-tmux-ai-coding-workflow-shell-tools",
+          "title": "cli-zoo：otter 一条命令拉起 tmux 工位，wren 两行实时显示 token 消耗",
+          "url": "/blog/cli-zoo-otter-wren-tmux-ai-coding-workflow-shell-tools/",
           "language": "zh",
-          "excerpt": "Belief Context Graph：把 Agent 记忆从「检索」升级为「置信度感知的信念图」 bigai-nlco/belief-context-graph 开源，BCG 用可审计的置信度、证据溯源、冲突检测把 Agent 记忆升级为信念图，解决长程推理中「该不该相信这个事实」的核心问题，MIT 许可，⭐59。 agent memory knowledge graph LLM reasoning open source confidence provenance BIGAI 现有 Agent 记忆的盲区 BCG 的核心：四个能力 1. 信念提取（",
-          "score": 0.5104692
+          "excerpt": "cli-zoo：otter 一条命令拉起 tmux 工位，wren 两行实时显示 token 消耗 模型大家都在用同一批，差距在工位上。Spoon94 的 cli-zoo 收了两只小动物：otter 用一条命令把 Claude Code / tmux / yazi / nvim / lazygit 拼成整洁的开发会话，wren 在状态栏实时显示 token 用量、缓存命中率、上下文占用。 shell tmux developer-tools claude-code open-source workflow otter：一条命令拉起整个 AI 开发会话 w",
+          "score": 0.48267114
         },
         {
-          "article_id": "om-ai-lab-vlx-flow-seek-go-physical-ai",
-          "title": "om-ai-lab's VLX Trio: Teaching AI to See, Pinpoint and Navigate the Physical World",
-          "url": "/blog/om-ai-lab-vlx-flow-seek-go-physical-ai/",
-          "language": "en",
-          "excerpt": "om-ai-lab's VLX Trio: Teaching AI to See, Pinpoint and Navigate the Physical World om-ai-lab releases three VLX models tackling the hardest problems in physical AI: VLX-Flow for streaming video memory, VLX-Seek for fine-grained spatial grounding via region tokens, and VLX-Go — a ",
-          "score": 0.5103549
+          "article_id": "openscreen-free-screen-recorder",
+          "title": "OpenScreen：免费开源的 Screen Studio 替代品",
+          "url": "/blog/openscreen-free-screen-recorder/",
+          "language": "zh",
+          "excerpt": "OpenScreen：免费开源的 Screen Studio 替代品 无需39美元每月，立刻获得智能缩放、鼠标跟随等专业录屏功能！OpenScreen是一个完全免费、跨平台的屏幕演示视频制作工具，被视为商业软件 Screen Studio 的开源替代方案。 screen-recorder open-source Screen-Studio video-production 1. 项目定位与核心价值 2. 核心功能特性 智能缩放与跟随 丰富的视觉定制 运动模糊（Motion Blur） 后期标注与编辑 灵活导出 3. 技术栈与社区活跃度 4. 适用场景 总",
+          "score": 0.48161507
         },
         {
-          "article_id": "deepseek-v4-flash-vision-exp-multimodal-agent-dspark",
-          "title": "DeepSeek-V4-Flash-Vision-Exp: Bolting on Vision Without Losing Text Agent Ability",
-          "url": "/blog/deepseek-v4-flash-vision-exp-multimodal-agent-dspark/",
-          "language": "en",
-          "excerpt": "DeepSeek-V4-Flash-Vision-Exp: Bolting on Vision Without Losing Text Agent Ability The first experimental multimodal model in the DeepSeek-V4 family, published Aug 31 — 184k downloads and 651 likes in five days, MIT. Vision modules were added to the DeepSeek-V4-Flash architecture ",
-          "score": 0.5098225
+          "article_id": "decision30-multimodal-system-one",
+          "title": "Decision 3.0：让文字、图片和视频直接进入决策接口",
+          "url": "/blog/decision30-multimodal-system-one/",
+          "language": "zh",
+          "excerpt": "Decision 3.0：让文字、图片和视频直接进入决策接口 Decision 3.0 将文本、JSON、图片和视频接入 System One 决策接口，返回选项概率而不生成长回答。本文核对六个规格的官方模型卡与推理代码，区分请求与前向计算，更新 Jev 0.3.2 评测与 MI325X 延迟，并分析小模型的泛化边界、视频采样限制、服务吞吐和内存代价，给出业务验证的接入路径。 Decision 3.0 vLLM Semantic Router System One 多模态 决策模型 开源 不生成回答，具体怎样得到决策？ 六个规格怎样比较？ 文字、图片、视",
+          "score": 0.48054025
         },
         {
-          "article_id": "godogen-autonomous-game-dev-godot-bevy-claude",
-          "title": "Godogen: Describe a Game, Get a Playable Game — Autonomous Dev Pipeline with Claude Code and Codex",
-          "url": "/blog/godogen-autonomous-game-dev-godot-bevy-claude/",
+          "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+          "title": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具",
+          "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+          "language": "zh",
+          "excerpt": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具 hikarioyama/ParallelHue（MIT，35 star，零运行时依赖）把本地大模型的多路并发流式输出画进终端，只有调度器和反分词器的遥测跟 SSE 逐字节对得上，才按验证步上色。真正的 exact 模式只支持 vLLM 0.26.x，靠 7 个内部方法挂钩实现，官方的有效证据只有一次 16 路 GLM 运行（16,384 个 token）。我们在 Mac mini 上跑通了 72 个测试，用模拟服务器确认了它在证据不足时会失败或降级，另外发现：只要模型名里带 qw",
+          "score": 0.47973633
+        },
+        {
+          "article_id": "call-md-videodb-ai-meeting-real-time-mcp-agent-loop",
+          "title": "Call.md: An AI Meeting Assistant That Turns a Call into a Real-Time Agent Loop",
+          "url": "/blog/call-md-videodb-ai-meeting-real-time-mcp-agent-loop/",
           "language": "en",
-          "excerpt": "Godogen: Describe a Game, Get a Playable Game — Autonomous Dev Pipeline with Claude Code and Codex Godogen (3,200+ stars) turns a one-line game idea into a complete, playable Godot or Bevy project. It plans, codes, generates assets, runs the engine, checks screenshots, and self-r",
-          "score": 0.50736016
+          "excerpt": "Call.md: An AI Meeting Assistant That Turns a Call into a Real-Time Agent Loop VideoDB's open-source Electron desktop AI meeting assistant. Dual-channel real-time transcription (you vs them), live AI suggestions + MCP auto-triggering during calls, structured summaries + action it",
+          "score": 0.47914627
+        },
+        {
+          "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+          "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+          "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+          "language": "zh",
+          "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+          "score": 0.476985
         }
       ]
     }
