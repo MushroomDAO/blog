@@ -1,0 +1,17 @@
+{
+  "title": "Nemotron 3.5：百万上下文与24GB",
+  "author": "Mycelium",
+  "digest": "核对 Super VL、Bolt 与待发布 E4B，讲清上下文、部署条件和公开评测。",
+  "mediaId": "prCUE631thH1cmNLi42prHbOojWbrN716rDikQAmkZWRX9_pWWyHWlkg_Rja4dil",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/nvidia/nvidia-nemotron-3.5-super-vl-120b-a12b-nvfp4",
+    "huggingface.co/nvidia/nvidia-nemotron-3.5-bolt-74b-a9b-24gb",
+    "huggingface.co/nvidia/nvidia-nemotron-3.5-bolt-74b-a9b-24gb-gguf",
+    "github.com/vllm-project/vllm",
+    "github.com/ggml-org/llama.cpp",
+    "github.com/nvidia/model-optimizer",
+    "github.com/nvidia-nemo/gym"
+  ],
+  "publishedAt": "2026-10-17T01:23:52.607Z"
+}

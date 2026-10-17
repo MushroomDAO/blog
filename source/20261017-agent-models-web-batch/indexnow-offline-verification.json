@@ -1,0 +1,20 @@
+{
+  "checks": [
+    "dedup/root-key",
+    "scheme-host",
+    "empty-key",
+    "wrong-host",
+    "userinfo",
+    "port",
+    "fragment",
+    "ftp",
+    "whitespace",
+    "empty-list",
+    "over-limit",
+    "10000-boundary",
+    "CLI-file-output"
+  ],
+  "passed": 13,
+  "networkRequests": 0,
+  "liveIndexingMeasured": false
+}
