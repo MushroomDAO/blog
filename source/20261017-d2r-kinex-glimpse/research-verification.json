@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-17",
+  "taskId": "01aab571-1dee-4913-ad9b-440e40fb50ae",
+  "dedup": {
+    "currentRawMaterialKBOnly": true,
+    "newArticles": 3,
+    "publishedWeChatAPI": "48001 unauthorized; local permanent records and KB checked"
+  },
+  "d2r": {
+    "repo": "jiayx/d2r-mobile-build",
+    "commit": "e92853236714bbf96642faadd781dccf29da9c9c",
+    "license": "MIT for workflow repository; game assets separate",
+    "testCommand": "python3.12 -m unittest discover -s tests -v",
+    "testsPassed": 35,
+    "initialSystemPythonFailure": "zip strict keyword unavailable; resolved using upstream-CI-compatible Python 3.12",
+    "gameResourcesDownloaded": false,
+    "applicationCompiled": false,
+    "hardwareGameTest": false,
+    "banner": "FLUX seed138, cropped to eliminate generated keyboard glyphs, adopted with provenance; original conceptual phone scene"
+  },
+  "kinex": {
+    "repo": "stacx-lab/kinex",
+    "commit": "15207927c6669fe98f1213a3fd05148e0fe938d3",
+    "license": "Apache-2.0",
+    "localTests": "9 upstream driver_contract.py tests passed with Python 3.12",
+    "releasedEpisodesRecomputed": 396,
+    "realRobotOrSimulatorRun": false,
+    "datasetCommit": "cfd43319636672a7dfba9c7cd3a783f7307adee2",
+    "datasetSHA256": "74eba953f23ddc5fb81de80f32774d80105a86bcf78562450aca5bfb1c97530c"
+  },
+  "glimpse": {
+    "publisher": "Elorian",
+    "launch": "2026-10-16",
+    "officialSource": "https://elorian.ai/blog/introducing-glimpse",
+    "available": "API and chat UI research preview",
+    "officialDownloadableWeightsVerified": false,
+    "hfElorianSearchResults": 0,
+    "developerGameCase": "secondary retelling found; complete original recording and labels not obtained; not treated as reproduced result",
+    "apiCalled": false,
+    "independentGameBenchmarkRun": false,
+    "banner": "FLUX seed137, cropped to prism to remove tiny generated lens lettering missed by OCR; original conceptual scene"
+  },
+  "illustrations": "original conceptual; not device or model evidence",
+  "bannerVisualReview": "Root inspected final d2r crop, Kinex and Glimpse crop; no human faces or lettering in final compositions.",
+  "figureCorrection": {
+    "file": "glimpse-visual-reasoning-game-bug-review-fig-02.png",
+    "reason": "Original timeline labels had wrong ordering; generated replacement aligns overlap, source timestamp and local-plus-offset arithmetic. Final is a schematic, not a measured plot.",
+    "selectedGeneration": "01a1478c-ca61-78e0-87df-d848725fb285/exec-4e1df382-5eda-4248-be73-305b8b924459.png",
+    "completion": "Root accepted generated replacement and ended further refinement; copied and compressed to1280x720 palette48 under90000B",
+    "rootFinalVisualInspection": true
+  }
+}

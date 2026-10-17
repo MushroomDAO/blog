@@ -822,3 +822,17 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - ActualM4: portableJDK17.0.20.1 archive185851019B SHA256196d13ba5f10414bef7f6a05a9b3f00edacb18ebacef2b99485db9e2ee18f0e8 matchesofficialAPI, no globalinstall/sourceedits.3upstreamJava suitespass:12cruisescenarios,12styles+capture/invalidIDs,17areacases. NoAndroidApp/firmwarebuild,KotlinweatherJSONtests,hardware/BLE/GPS/liveAPI/road/performance.
 - FLUX134 conceptualcover93443B machine/rootpass;3XiaoM bodyfigures+6refs/SEOchecked. NewBlog200/bilingual/list3/all4images/pin/scope; currentremote draft/get0 cover3images/pin/scope media_id prCUE631thH1cmNLi42prBa9OjLSmP4KUm7ZUppK6CMlu8EfDBSibIgv9remGJCM. Projectmemorymined/exactslug1; rawmaterialreused; ledgerexport6. Semanticzh/enupsertaccepted/manifest2unchanged. Article1588f51pushed. Task50885262-fb9f-4461-8f73-8c5e7d994963.
 - Final public semantic retrieval rank1 score0.7340865; PR114 normal review https://github.com/MushroomDAO/blog/pull/114 .
+
+
+## 2026-10-17 — D2R build / Kinex / Glimpse
+
+- Task01aab571-1dee-4913-ad9b-440e40fb50ae. Three separate primary-source subjects; exact URL/entity dedup only raw bot KB, reused. Published WeChat API48001 unavailable; permanent local receipts and current draft box checked.
+- D2R MIT workflow pin e92853236714bbf96642faadd781dccf29da9c9c. Python3.12 35 upstream tool tests pass after old system interpreter strict-zip error. No game resources/build/install/gameplay.
+- Kinex Apache2 pin15207927c6669fe98f1213a3fd05148e0fe938d3.9upstream driver-contract tests pass; independently recomputed396 official episodes, Kinex103/132 $1.888 vs native-control96/132 $3.306. EstimatedAPIcost notbills; no simulator/model/robot run.
+- Glimpse officialElorian launchOct16 API/chat preview; no verified official downloadable weights, not same-name benchmark/app. Gamecase originalcompleteevidenceunavailable, not independenttest. QAintegrationproposal separates observation/time/localization/source-diagnosis/humanconfirmation. No paidAPI/bench.
+- Three originalconceptcovers and9XiaoMfigures, bilingual6refs each. Finalmanualcrop removed fakeglyphs missedbyOCR fromD2R/Glimpsecovers; Glimpse timeaxis regenerated/corrected. SEO/GEO/metadata/dimensions/bytes pass. All3live200/bilingual/12assets200/listpositions2,5,3.
+- New Blog https://blog.mushroom.cv/blog/d2r-mobile-build-ios-macos/ ; current remotely verified WeChat draft prCUE631thH1cmNLi42prKFyDCdFPYY_UxWzlxb0qAojfHZEbOC_kESAMl8K9UV- . Cover,3bodyimages,pinnedsource,scope verified.
+- New Blog https://blog.mushroom.cv/blog/kinex-coding-agents-robot-harness/ ; current remotely verified WeChat draft prCUE631thH1cmNLi42prPih_cY818Dv7v2h2y581o8mQv5pARJ0J5kUWGNlEzv7 . Cover,3bodyimages,pinnedsource,scope verified.
+- New Blog https://blog.mushroom.cv/blog/glimpse-visual-reasoning-game-bug-review/ ; current remotely verified WeChat draft prCUE631thH1cmNLi42prJE7nr3cK-l2facHZQzXdUrUrCFW8BId5ggToszPoPtg . Cover,3bodyimages,pinnedsource,scope verified.
+- Project memory and semantic index updated; exact KB/manifest/public-query verification recorded separately. Normal stacked PR base publish/motonav-round-screen-navigation.
+- Final public semantic retrieval: d2r-mobile-build-ios-macos rank1 score0.686127, kinex-coding-agents-robot-harness rank1 score0.62982833, glimpse-visual-reasoning-game-bug-review rank1 score0.6882153; manifest6unchanged. PR115 normal review https://github.com/MushroomDAO/blog/pull/115 .
