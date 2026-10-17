@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "nemotron-35-super-vl-bolt-local-models",
+    "name": "NVIDIA Nemotron3.5 Super VL / Bolt",
+    "source": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+    "notes": "Official Oct15 release: SuperVL120B/A12B1Mtext-image-video→text, Bolt74B/A9B IQ2QAT256K target24GBbatch1/128K; E4B4GB comingOct23 not yet tested/released. OpenMDW1.1. No model download or inference on16GBM4."
+  },
+  {
+    "slug": "opengcua-generalist-computer-use-stack",
+    "name": "OpenGCUA",
+    "source": "https://github.com/Tongyi-MAI/OpenGCUA",
+    "notes": "Pin625b1cebde1f772328a238881121b76691b8895b Apache2. First release has no trained model. HF API models/datasets/spaces OpenGCUA all empty; official org exists. GUI+code+AX/API unified; official45.3→64.9partialscore8models/53%fewersteps not measured speedup; SDK and realdevice preliminary."
+  },
+  {
+    "slug": "atticus-mac-voice-assistant",
+    "name": "Atticus Mac",
+    "source": "https://github.com/SaarthurR/atticus-mac",
+    "notes": "Pin0f4d8d79e3db4e9447a80deab847369423b295ad MIT/macOS26. NativeASR local; default ClaudeCode/paidplan cloudreasoning, optionalDevin/customserver. Freeapp notfreeplan; localaudio notallprocessinglocal. Installer modifieslogin/keychain; localreview compileonly noinstall."
+  },
+  {
+    "slug": "indexnow-website-push-indexing-guide",
+    "name": "IndexNow",
+    "source": "https://www.indexnow.org/documentation",
+    "notes": "Protocol owner hosted-public-key proof; not a secret or login credential. POST up to10000 samehost URLs;200submitted/202validationpending notcrawl/index/rank guarantees. Currentregistry Bing,Yandex,Seznam,Naver,Yep,InternetArchive,Amazonbot; noGoogle. GoogleIndexingAPIrestrictedJobs/livevideo. CMS/plugin/Cloudflare or ownCI afterdeployment; changesonly/queue/retry/sitemap/robots/canonical; no livecustomerwebsiteconfiguration ornotifications yet."
+  }
+]

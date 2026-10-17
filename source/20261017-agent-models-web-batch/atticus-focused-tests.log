@@ -1,0 +1,44 @@
+test_import_uses_scratch_config (test_00_config.ConfigTests.test_import_uses_scratch_config) ... ok
+test_a_correction_is_learned_into_its_category_from_that_ask (test_profile.ProfileTests.test_a_correction_is_learned_into_its_category_from_that_ask) ... ok
+test_fake_mac_import_refreshes_each_source_and_keeps_user_facts (test_profile.ProfileTests.test_fake_mac_import_refreshes_each_source_and_keeps_user_facts) ... ok
+test_form_prompt_explicitly_uses_matching_profile_fields_without_submission (test_profile.ProfileTests.test_form_prompt_explicitly_uses_matching_profile_fields_without_submission) ... ok
+test_import_command_reads_only_the_fake_mac_payload (test_profile.ProfileTests.test_import_command_reads_only_the_fake_mac_payload) ... ok
+test_legacy_profile_migrates_without_loss (test_profile.ProfileTests.test_legacy_profile_migrates_without_loss) ... ok
+test_only_relevant_categories_join_the_short_always_line (test_profile.ProfileTests.test_only_relevant_categories_join_the_short_always_line) ... ok
+test_profile_prompt_cost_is_small_for_three_common_asks (test_profile.ProfileTests.test_profile_prompt_cost_is_small_for_three_common_asks) ... PROFILE PROMPT CHARS: {"email_dad": {"after": 201, "before": 161}, "form": {"after": 208, "before": 161}, "unrelated": {"after": 123, "before": 161}}
+ok
+test_receipt_lists_what_the_ask_remembered_and_forgot_by_category (test_profile.ProfileTests.test_receipt_lists_what_the_ask_remembered_and_forgot_by_category) ... /private/tmp/atticus-20261017/atticus.py:4132: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/tmpwq8l_kwj/memory.md' mode='r' encoding='UTF-8'>
+  rules = [l[2:].strip() for l in open(MEMORY)] if os.path.exists(MEMORY) else []
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_remember_command_runs_the_gate_with_earlier_turns (test_profile.ProfileTests.test_remember_command_runs_the_gate_with_earlier_turns) ... ok
+test_remember_that_uses_the_users_words_from_the_turn_before (test_profile.ProfileTests.test_remember_that_uses_the_users_words_from_the_turn_before) ... ok
+test_screen_injection_cannot_mutate_and_sensitive_values_never_leave_storage (test_profile.ProfileTests.test_screen_injection_cannot_mutate_and_sensitive_values_never_leave_storage) ... ok
+test_settings_edits_a_rule_in_place_and_forgets_one_rule_exactly (test_profile.ProfileTests.test_settings_edits_a_rule_in_place_and_forgets_one_rule_exactly) ... ok
+test_the_gate_still_refuses_what_the_user_never_said (test_profile.ProfileTests.test_the_gate_still_refuses_what_the_user_never_said) ... ok
+test_explicit_open_remains_foreground_and_mutating_scripts_are_kept (test_replay.ReplayTests.test_explicit_open_remains_foreground_and_mutating_scripts_are_kept) ... ok
+test_failed_direct_open_falls_back_instead_of_claiming_success (test_replay.ReplayTests.test_failed_direct_open_falls_back_instead_of_claiming_success) ... ok
+test_first_ai_answer_saves_memory_and_log_in_a_fresh_directory (test_replay.ReplayTests.test_first_ai_answer_saves_memory_and_log_in_a_fresh_directory) ... ok
+test_guarded_background_open_does_not_poll_or_sleep (test_replay.ReplayTests.test_guarded_background_open_does_not_poll_or_sleep) ... ok
+test_legacy_three_steps_upgrade_and_replay_native_actions_without_ai_or_reads (test_replay.ReplayTests.test_legacy_three_steps_upgrade_and_replay_native_actions_without_ai_or_reads) ... ok
+test_native_menu_bypasses_map_capture_but_waits_for_confirmation (test_replay.ReplayTests.test_native_menu_bypasses_map_capture_but_waits_for_confirmation) ... ok
+test_new_shortcuts_drop_reads_and_keep_the_target_when_front_app_changes (test_replay.ReplayTests.test_new_shortcuts_drop_reads_and_keep_the_target_when_front_app_changes) ... ok
+test_recent_memory_creates_missing_scratch_directory (test_replay.ReplayTests.test_recent_memory_creates_missing_scratch_directory) ... ok
+test_reference_ask_receives_recent_target_and_agent_history (test_replay.ReplayTests.test_reference_ask_receives_recent_target_and_agent_history) ... ok
+test_unsupported_peekaboo_falls_back_without_running (test_replay.ReplayTests.test_unsupported_peekaboo_falls_back_without_running) ... ok
+test_disabled_does_not_send (test_telemetry.TelemetryTests.test_disabled_does_not_send) ... ok
+test_success_is_daily_and_failure_can_retry (test_telemetry.TelemetryTests.test_success_is_daily_and_failure_can_retry) ... /private/tmp/atticus-20261017/atticus.py:2454: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/atticus telemetry 3stp5y9z/id' mode='w' encoding='UTF-8'>
+  open(idf, 'w').write(base64.b32encode(os.urandom(10)).decode())
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/atticus-20261017/atticus.py:2455: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/atticus telemetry 3stp5y9z/id' mode='r' encoding='UTF-8'>
+  body = json.dumps({'api_key': POSTHOG_KEY, 'event': event, 'distinct_id': open(idf).read(), 'properties': {'$process_person_profile': False, **(props or {})}})
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/atticus-20261017/atticus.py:2463: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/atticus telemetry 3stp5y9z/pinged' mode='r' encoding='UTF-8'>
+  if not POSTHOG_KEY or not pref('stats', True) or (os.path.exists(stamp) and open(stamp).read() == day):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.821s
+
+OK
