@@ -1,6 +1,6 @@
 from pathlib import Path
 import subprocess,json,concurrent.futures
-p=Path(__file__).parent;topics=json.loads((p/'topics.json').read_text());queries={'d2r-mobile-build-ios-macos':['d2r-mobile-build','D2R Mobile iOS macOS build workflow'],'kinex-coding-agents-robot-harness':['Kinex robotics harness','Kinex devices tools skills'],'glimpse-visual-reasoning-game-bug-review':['Glimpse Elorian video bug review','Glimpse visual reasoning game']}
+p=Path(__file__).parent;topics=json.loads((p/'topics.json').read_text());queries={'d2r-mobile-build-ios-macos':['d2r-mobile-build','D2R Mobile iOS macOS build workflow'],'kinex-coding-agents-robot-harness':['Kinex 机器人 Pi 设备工具技能 132 仿真','stacx-lab kinex robotics 103 132'],'glimpse-visual-reasoning-game-bug-review':['Elorian Glimpse 视觉推理 录屏 时间戳','Glimpse visual reasoning October 16 2026']}
 old=json.loads((p/'semantic-search-check.json').read_text()) if (p/'semantic-search-check.json').exists() else {}
 def check(t):
  slug=t['slug'];r=old.get(slug,{})

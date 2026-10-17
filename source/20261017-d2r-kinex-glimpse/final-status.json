@@ -1,0 +1,26 @@
+{
+  "taskId": "01aab571-1dee-4913-ad9b-440e40fb50ae",
+  "blog": "3 new articles, all live200, bilingual,12 images200",
+  "wechat": "3 current remote drafts verified, cover and3bodyimages each",
+  "kb": "raw material reused;3project notes mined and exactslugverified; ledger908",
+  "semantic": "6vectors accepted; manifest6unchanged; all3 public retrieval verified",
+  "retrieval": {
+    "d2r-mobile-build-ios-macos": {
+      "rank": 1,
+      "score": 0.686127,
+      "query": "d2r-mobile-build"
+    },
+    "kinex-coding-agents-robot-harness": {
+      "rank": 1,
+      "score": 0.62982833,
+      "query": "Kinex 机器人 Pi 设备工具技能 132 仿真"
+    },
+    "glimpse-visual-reasoning-game-bug-review": {
+      "rank": 1,
+      "score": 0.6882153,
+      "query": "Elorian Glimpse 视觉推理 录屏 时间戳"
+    }
+  },
+  "pullRequest": "https://github.com/MushroomDAO/blog/pull/115",
+  "publishedWeChatVisibilityGap": "48001 api unauthorized; does not affect current verified drafts"
+}
