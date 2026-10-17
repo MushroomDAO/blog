@@ -1,0 +1,13 @@
+=== [adopt-banner] glimpse-visual-reasoning-game-bug-review ← 1 source image(s) → src/assets/images/glimpse-visual-reasoning-game-bug-review-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /tmp/glimpse-prism-banner-crop.jpg
+=== [adopt-banner] done: src/assets/images/glimpse-visual-reasoning-game-bug-review-banner.jpg (1200x630, 75194B) ===
+=== [verify-banner] src/assets/images/glimpse-visual-reasoning-game-bug-review-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/tmp/glimpse-prism-banner-crop.jpg
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 75194B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/glimpse-visual-reasoning-game-bug-review-banner.jpg ===
+PATH: src/assets/images/glimpse-visual-reasoning-game-bug-review-banner.jpg
