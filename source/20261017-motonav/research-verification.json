@@ -1,0 +1,26 @@
+{
+  "source": "https://github.com/zyn950929/MotoNav",
+  "pin": "3b93facfd244b0477950189b6e26aa913b2ded78",
+  "task": "50885262-fb9f-4461-8f73-8c5e7d994963",
+  "fetch": "JinaReaderHTTP200 fullREADME; clonedsource. Agentreachskill/commandnotinstalled; allowedfallback.",
+  "dedup": "Only current rawbotmaterial; no Blog/currentdraft/localM2. PublishedAPI48001 gap.",
+  "license": "Custom noncommercial terms for ownedcode/firmware/materials; thirdpartylicenses separate. No unconditional commercial/resale rights.",
+  "media": "14sourceimages/GIFs saved; docs distinguishes real/desktop/AIprivacyedited/AIgenerated. Not republished as blanket licensed artwork. Own FLUX134 cover concept explicitly labeled.",
+  "tests": "3 upstream pureJava suites pass:12cruisescenarios,12mapstyles+capture/invalidID,17areacases; portableJDK17 verifiedhash/no systeminstall.",
+  "notTested": [
+    "AndroidAppBuild",
+    "firmwareBuild",
+    "KotlinQWeatherJSONparser",
+    "hardware",
+    "BLE",
+    "GPS",
+    "road",
+    "map/weatherAPI"
+  ],
+  "versions": {
+    "app": "8.3.19",
+    "firmware": "7.8.11",
+    "board": "Waveshare ESP32-S3-Touch-AMOLED-1.75",
+    "resolution": "466x466"
+  }
+}
