@@ -1,0 +1,5 @@
+# SEO/GEO review
+
+English slug, Tech-News, five tags and2026-10-18dates. Bilingual155/157characterdescriptions, titlelimits, alignedBLUF/questionheadings/threeFAQs/copyrights. Pinnedfirstpartysources andverifiedHarborRLinternalroute. Threeconceptfiguresaligned; generatedphotographheroexplainedasconceptnotpaperfigure.
+
+Frozenweightsnotzerocost, taskvsimprovementlibrary,authorbenchmarkmaxima/metricunits/METAexception, editorvs executorbudget distinct. Offline2taskdemo+resume+5testsratherthanrealmodelclaim. Independentjudge/heldout/networkleakageboundariesexplicit;max-tasksperdomain,failedjudgingdenominator,andbaselinereportingclear. No“indefiniteautonomousimprovement”promise.

@@ -1,0 +1,30 @@
+{
+  "checkedDeliverables": [
+    {
+      "task": "ledger-2",
+      "mode": "agg",
+      "answer": "Total: 20.25",
+      "matchesDemoExpected": true
+    },
+    {
+      "task": "ledger-2",
+      "mode": "seq",
+      "answer": "Total: 20.25",
+      "matchesDemoExpected": true
+    },
+    {
+      "task": "ledger-1",
+      "mode": "agg",
+      "answer": "Total: 85.15",
+      "matchesDemoExpected": true
+    },
+    {
+      "task": "ledger-1",
+      "mode": "seq",
+      "answer": "Total: 85.15",
+      "matchesDemoExpected": true
+    }
+  ],
+  "expectedFrom": "deterministicdemo fixture notpaperbenchmark",
+  "liveModel": false
+}
