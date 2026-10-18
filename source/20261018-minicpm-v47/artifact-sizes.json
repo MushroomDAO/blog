@@ -1,0 +1,32 @@
+{
+  "standardTotalTensorBytes": 70425751648,
+  "standardShardCount": 16,
+  "ggufFiles": [
+    {
+      "file": "MiniCPM-V-4_7-35B-A3B-Q4_K_M.gguf",
+      "bytes": 21166255008,
+      "decimalGB": 21.166255008
+    },
+    {
+      "file": "MiniCPM-V-4_7-35B-A3B-mix_q3gud_im.gguf",
+      "bytes": 15503944896,
+      "decimalGB": 15.503944896
+    },
+    {
+      "file": "dspark-MiniCPM-V-4_7-35B-A3B-F16.gguf",
+      "bytes": 789442368,
+      "decimalGB": 0.789442368
+    },
+    {
+      "file": "mmproj-model-f16-4x.gguf",
+      "bytes": 910491648,
+      "decimalGB": 0.910491648
+    },
+    {
+      "file": "mmproj-model-f16.gguf",
+      "bytes": 1119575840,
+      "decimalGB": 1.11957584
+    }
+  ],
+  "units": "decimal GB not runtime memory"
+}

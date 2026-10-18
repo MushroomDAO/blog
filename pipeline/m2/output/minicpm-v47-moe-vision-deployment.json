@@ -1,0 +1,15 @@
+{
+  "title": "MiniCPM-V 4.7：35B视觉模型上端侧",
+  "author": "Mycelium",
+  "digest": "热榜之外，拆解专家预加载、视觉压缩与量化文件；3GB内存不等于整个模型只有3GB。",
+  "mediaId": "prCUE631thH1cmNLi42prLCEA_EFiE7slyCPP-ee5PZ-saa4-YZ_FfT1sv70zyww",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/openbmb/minicpm-v-4.7-35b-a3b",
+    "github.com/openbmb/llama.cpp-omni",
+    "huggingface.co/openbmb/minicpm-v-4.7-35b-a3b-gguf",
+    "github.com/openbmb/minicpm-v",
+    "github.com/openbmb/minicpm-v-apps"
+  ],
+  "publishedAt": "2026-10-18T05:21:25.688Z"
+}

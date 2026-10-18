@@ -1,0 +1,36 @@
+{
+  "articles": [
+    {
+      "slug": "minicpm-v47-moe-vision-deployment",
+      "url": "https://blog.mushroom.cv/blog/minicpm-v47-moe-vision-deployment/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/minicpm-v47-moe-vision-deployment-banner.DT6zCy8R_Z13huFx.webp",
+          "status": 200,
+          "bytes": 22686
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/minicpm-v47-moe-vision-deployment-fig-01.Dv7gWjbi_Nbs9H.webp",
+          "status": 200,
+          "bytes": 46324
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/minicpm-v47-moe-vision-deployment-fig-02.DVdMADHW_Z2sd5qS.webp",
+          "status": 200,
+          "bytes": 41126
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/minicpm-v47-moe-vision-deployment-fig-03.D5B-QjQY_Z26Pz1A.webp",
+          "status": 200,
+          "bytes": 45716
+        }
+      ],
+      "listPosition": 3,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ],
+  "listOrderNote": "Position3 among articles tied at pubDate2026-10-18; current-day group at top, stable existing ordering preserved."
+}
