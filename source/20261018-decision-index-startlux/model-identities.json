@@ -1,0 +1,58 @@
+[
+  {
+    "name": "27B-AutoThink",
+    "sha": "dd62d5cd84a483d75bdd548880bbf08bdd3f67a4",
+    "license": "cc-by-nc-4.0",
+    "base": null,
+    "total": 27356728560
+  },
+  {
+    "name": "27B-Instant",
+    "sha": "32e7d35d74db615c4a059181efbf21c5421f3561",
+    "license": "cc-by-nc-4.0",
+    "base": null,
+    "total": 27781427952
+  },
+  {
+    "name": "9B-AutoThink",
+    "sha": "efc649d8493b5b7353cf2ed6da0cdcbc215958ef",
+    "license": "cc-by-nc-4.0",
+    "base": null,
+    "total": 9409813744
+  },
+  {
+    "name": "4B-AutoThink",
+    "sha": "23dd4c513ef387705bb13fd8caadc2d5c863082f",
+    "license": "cc-by-nc-4.0",
+    "base": null,
+    "total": 4539265536
+  },
+  {
+    "name": "2B-Instant",
+    "sha": "f1e6cd147dda82c9ffa3e8e725d5c1f175566fb1",
+    "license": "cc-by-nc-4.0",
+    "base": null,
+    "total": 2274069824
+  },
+  {
+    "name": "0.8B-Instant",
+    "sha": "6496ae641cc71b149ce9dad69bd97f2a44e7bf11",
+    "license": "cc-by-nc-4.0",
+    "base": null,
+    "total": 873438784
+  },
+  {
+    "name": "4B-AutoThink-MLX-4bit",
+    "sha": "251cceb4fdd68693b7a2e6a5759989fbf1d7618e",
+    "license": "cc-by-nc-4.0",
+    "base": "startlux-models/StartLux-Decision-v1.1-4B-AutoThink",
+    "total": 4539265536
+  },
+  {
+    "name": "0.8B-Instant-MLX-4bit",
+    "sha": "a5e0196cd8a46485bb7a2731a904c987280a0491",
+    "license": "cc-by-nc-4.0",
+    "base": "startlux-models/StartLux-Decision-v1.1-0.8B-Instant",
+    "total": 852985920
+  }
+]
