@@ -1,0 +1,36 @@
+{
+  "dataset": "ADSKAILab/Zero-To-CAD-1m",
+  "split": "test",
+  "rowOffset": 0,
+  "uuid": "4b3aaa7b-f278-fc6a-8f9f-28fd4893be76",
+  "datasetMetadataRevision": "09dbd1805a5e73a2757f380b93042b8089cd4f3f",
+  "sourceSha256": "9686c1142aa1f0ce97f248239a520b2c66e032bde894fd62420186838290ce4c",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "cadquery": "2.6.1"
+  },
+  "valid": true,
+  "solidCount": 1,
+  "faceCount": 14,
+  "sourceReportedFaceCount": 14,
+  "volume": 52927.541177777224,
+  "referenceVolume": 52927.5411777765,
+  "volumeMatchesReference": true,
+  "bboxLengths": [
+    67.20065767391668,
+    87.11887807668042,
+    12.020857793882541
+  ],
+  "referenceBboxLengths": [
+    67.1809890786,
+    87.11393203930001,
+    12.0
+  ],
+  "stepRoundTripValid": true,
+  "stepBytes": 53364,
+  "stlBytes": 60684,
+  "modelInference": false,
+  "newPrediction": false,
+  "benchmarkReproduction": false
+}
