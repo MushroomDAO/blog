@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "zero-to-cad-multiview-reconstruction",
+      "url": "https://blog.mushroom.cv/blog/zero-to-cad-multiview-reconstruction/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/zero-to-cad-multiview-reconstruction-banner.BP9cNOPG_Po3rJ.webp",
+          "status": 200,
+          "bytes": 57314
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/zero-to-cad-multiview-reconstruction-fig-01.CCfzas3m_3wWFf.webp",
+          "status": 200,
+          "bytes": 47490
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/zero-to-cad-multiview-reconstruction-fig-02.46kTOoSY_Z1zJ8Rl.webp",
+          "status": 200,
+          "bytes": 43278
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/zero-to-cad-multiview-reconstruction-fig-03.DlKqJfLs_Z12qfXn.webp",
+          "status": 200,
+          "bytes": 51962
+        }
+      ],
+      "listPosition": 1,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}
