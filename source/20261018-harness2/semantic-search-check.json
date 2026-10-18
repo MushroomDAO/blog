@@ -1,0 +1,93 @@
+{
+  "query": "Harness2 Google Research frozen weights two recursion levels demo",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.6535948,
+    "article_id": "harness2-recursive-agent-improvement"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "harness2-recursive-agent-improvement",
+        "title": "Google Harness2: Recursive Agent Improvement",
+        "url": "/blog/harness2-recursive-agent-improvement/",
+        "language": "en",
+        "excerpt": "Google Harness2: Recursive Agent Improvement Explore Google Harness2: fixed-weight agent improvement, Propose-Probe-Compose, continual experience libraries, published results and a credential-free demo. Harness2 Google Research Agent Harness Engineering 递归自我改进 What changes when w",
+        "score": 0.6535948
+      },
+      {
+        "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+        "title": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+        "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+        "language": "en",
+        "excerpt": "agentic-harness-engineering-observability-self-evolution-coding-agent Fudan+PKU+Qiji Zhifeng, arXiv:2604.25850, MIT, Python. AHE proposes a closed loop that evolves the harness — not the model weights — using three observability pillars (component / experience / decision) to let ",
+        "score": 0.5777921
+      },
+      {
+        "article_id": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+        "title": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+        "url": "/blog/penguin-harness-self-evolving-agent-builder-skills-benchmark/",
+        "language": "en",
+        "excerpt": "penguin-harness-self-evolving-agent-builder-skills-benchmark Prism-Shadow/penguin-harness, 1140 stars, Apache-2.0, TypeScript. A new project by LlamaFactory author Yaowei Zheng, open-sourced 2026-07-19. Automated agent builder platform: one sentence builds a complete agent app ($",
+        "score": 0.5553292
+      },
+      {
+        "article_id": "neural-imprint-atomgradient-continual-learning-device-ai",
+        "title": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始",
+        "url": "/blog/neural-imprint-atomgradient-continual-learning-device-ai/",
+        "language": "zh",
+        "excerpt": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始 质子梯度（AtomGradient）发布 Neural Imprint 白皮书 v2（2026-09-17），提出让已部署 AI 在持续使用中积累经验、更新模型状态，无需重新训练。三个 Gen-1 组件：RPP（激活空间用户建模）、DSR（稀疏注意力缓存管理）、FrogJump（层跳过加速）。实测：90B 模型在手机上跑 200 轮对话峰值 5.5GB，语音合成中位延迟 32.28ms。CC BY-NC-ND 4.0。 continual-learning on-d",
+        "score": 0.5427278
+      },
+      {
+        "article_id": "meta-harness-end-to-end-harness-optimization",
+        "title": "别再手搓 Agent 脚手架了：Stanford Meta-Harness 让 AI 自己搜索最优 harness",
+        "url": "/blog/meta-harness-end-to-end-harness-optimization/",
+        "language": "zh",
+        "excerpt": "别再手搓 Agent 脚手架了：Stanford Meta-Harness 让 AI 自己搜索最优 harness Stanford IRIS Lab 的 Meta-Harness（arXiv:2603.28052，Chelsea Finn、Omar Khattab 等）把决定「给模型存什么、取什么、喂什么」的 harness 代码本身变成可自动优化的对象：用一个能读源码、分数和执行轨迹的 agentic proposer 做外层搜索。文本分类 +7.7 分且省 75% token，IMO 级数学 +4.7 分，TerminalBench-2 上自动发现",
+        "score": 0.541012
+      },
+      {
+        "article_id": "google-self-evolving-recommendation-system-youtube-llm-agent",
+        "title": "Google YouTube 自进化推荐系统：LLM Agent 替代 ML 工程师，双环架构工程落地指南",
+        "url": "/blog/google-self-evolving-recommendation-system-youtube-llm-agent/",
+        "language": "zh",
+        "excerpt": "Google YouTube 自进化推荐系统：LLM Agent 替代 ML 工程师，双环架构工程落地指南 arXiv:2602.10226，RecSys 2026，Google YouTube 团队。LLM（Gemini 2.5）驱动双环 Agent 架构，自主发现优化器、神经架构和奖励函数改进，优于64%人工 launches。本文深度解析论文架构，并给出可落地的工程实现指南。 推荐系统 AI Agent Google YouTube LLM 自进化 强化学习 机器学习工程 论文解读 一、一句话总结这篇论文 二、问题背景：为什么传统方式走到了瓶颈 三",
+        "score": 0.5401763
+      },
+      {
+        "article_id": "knowhere-2-document-parsing-agentic-rag",
+        "title": "Knowhere 2.0：双通道文档解析 + 层级原生记忆，让 RAG 读懂文档结构",
+        "url": "/blog/knowhere-2-document-parsing-agentic-rag/",
+        "language": "zh",
+        "excerpt": "Knowhere 2.0：双通道文档解析 + 层级原生记忆，让 RAG 读懂文档结构 Knowhere，Ontos-AI出品，3.5k stars，2026-05-07开源。2026-09版本2.0上线双通道解析：Vision Page（视觉页面）+ Text Track（文本轨）融合为同一层级原生记忆模式，既保留文本结构精度，又让复杂PDF/PPT被视觉模型整页理解。支持超长PDF（数百页）和图纸集路由，输出结果绑定到文档、章节、源页、相关资产，天然适配Agentic RAG。 open-source rag document-parsing agen",
+        "score": 0.53693324
+      },
+      {
+        "article_id": "reef-self-evolving-agent-open-source-infrastructure-human-agent-society",
+        "title": "Reef: Open-Source Infrastructure for Self-Evolving Agents That Turn User Interactions Into Training Data",
+        "url": "/blog/reef-self-evolving-agent-open-source-infrastructure-human-agent-society/",
+        "language": "en",
+        "excerpt": "Reef: Open-Source Infrastructure for Self-Evolving Agents That Turn User Interactions Into Training Data Human-Agent-Society team (MIT, NUS) open-sources Reef. Core insight: real user interactions can become training data for the next learning cycle. Reef provides a four-stage lo",
+        "score": 0.53453463
+      },
+      {
+        "article_id": "cmu-better-harnesses-smaller-models-slm-agent-cost-reduction-engineering",
+        "title": "模型可以小，脚手架要聪明——CMU 论文拆解：用 Harness 适配让 SLM 以 4% 成本追平 LLM",
+        "url": "/blog/cmu-better-harnesses-smaller-models-slm-agent-cost-reduction-engineering/",
+        "language": "zh",
+        "excerpt": "模型可以小，脚手架要聪明——CMU 论文拆解：用 Harness 适配让 SLM 以 4% 成本追平 LLM 卡内基梅隆大学最新论文（arXiv:2607.08938）证明：对于重复性业务任务，小模型（3B~30B active params）配合针对性适配的 harness，可以用 4% 的成本恢复 89.7% 的 LLM 性能。本文深度分析论文框架，提炼 5 条工程上可直接落地的操作指南。 Agent SLM Harness 成本优化 工程实践 LLM CMU 核心洞察：任务难度可以从模型转移到 harness 失败模式分类：知道哪里出错才能对症下药",
+        "score": 0.5343514
+      },
+      {
+        "article_id": "phonon-2-parakeet-2bit-qat-mac-asr-test",
+        "title": "Phonon-2 Tested: A 164 MB 2.1-Bit Parakeet That Handles English Dictation and Fails at Chinese",
+        "url": "/blog/phonon-2-parakeet-2bit-qat-mac-asr-test/",
+        "language": "en",
+        "excerpt": "Phonon-2 Tested: A 164 MB 2.1-Bit Parakeet That Handles English Dictation and Fails at Chinese Phonon-2 is Fermion Research's English ASR model: NVIDIA Parakeet TDT 0.6B v3 retrained with quantization-aware training to about 2.1 bits (five values per weight). It is a 164 MB downl",
+        "score": 0.5334053
+      }
+    ]
+  }
+}

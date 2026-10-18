@@ -1,0 +1,86 @@
+{
+  "task": "e2fc8e82-ae22-4820-bce1-111f77e0d86c",
+  "inputImage": "/Users/jason/.heinu1-bot/media/a6f7509d-4a2b-4563-a2f9-ba586af35e76.jpg",
+  "recognizedTopic": "Google Research Harness²",
+  "commit": "1cfe254e8d25b15f37048c3730134686abe60335",
+  "paper": "2610.14224v1",
+  "paperPublished": "2026-10-09",
+  "sourceLicense": "Apache-2.0",
+  "packageVersion": "0.1.0",
+  "documentedPlatform": "Linux/Python3.12",
+  "localEnvironment": "macOS/Python3.12.14",
+  "upstreamTestsPassed": 5,
+  "demo": {
+    "domain": "accounting",
+    "n_tasks": 2,
+    "seed": null,
+    "done": 2,
+    "failed": 0,
+    "tasks": [
+      {
+        "task": "ledger-1",
+        "status": "ok",
+        "library_entries_before": {
+          "agg": 0,
+          "seq": 0
+        }
+      },
+      {
+        "task": "ledger-2",
+        "status": "ok",
+        "library_entries_before": {
+          "agg": 1,
+          "seq": 1
+        }
+      }
+    ],
+    "execution_count": 28,
+    "editor_calls": 32
+  },
+  "resumedDemo": {
+    "domain": "accounting",
+    "n_tasks": 2,
+    "seed": null,
+    "done": 2,
+    "failed": 0,
+    "tasks": [
+      {
+        "task": "ledger-1",
+        "status": "skipped",
+        "library_entries_before": {
+          "agg": 0,
+          "seq": 0
+        }
+      },
+      {
+        "task": "ledger-2",
+        "status": "skipped",
+        "library_entries_before": {
+          "agg": 1,
+          "seq": 1
+        }
+      }
+    ],
+    "execution_count": 0,
+    "editor_calls": 0
+  },
+  "liveModelsOrVertex": false,
+  "completeBenchmarksInstalled": false,
+  "paperScoresReproduced": false,
+  "dedup": "onlyrawimageKB; imagepathgenericterms and Harness² normalizedharness falsepositives resolved; exactrepo/harness2/paper clear",
+  "wechatPublishedListError": 48001,
+  "officialProjectPage": "curl succeeded, web tool failed to open",
+  "documentedEvaluationRisks": [
+    "JobBenchrubricdownload observed in releasevalidation",
+    "unrestrictednetwork",
+    "Codexsandboxdisabled",
+    "unscoredfailedjudges",
+    "max-tasksperdomain"
+  ],
+  "sha256": {
+    "README-upstream.md": "17639ac4194bb5c042cbf645430a772ae9be81baee95ab41eaea73cafa138f23",
+    "experiments-upstream.md": "ce168deb03d4607c70e00e092701d2f6d5987db04e09779b0e3cad48b7fca558",
+    "demo-result.json": "ae26f2fd3fd8aa79e90662e560dae575b745b8d0563bb5ff042f32089f7c4da3",
+    "demo-resume-result.json": "8a5cbf988c8af5dc2be7c62c8ebb8aad41330f0a4c3cf1adb531b1e3c79119b4"
+  }
+}
