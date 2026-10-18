@@ -1,0 +1,27 @@
+usage: build_app.py [-h] [--update UPDATE] -k KEYS [-o OUT] [--work WORK]
+                    [--firmware FIRMWARE | --shared-fonts SHARED_FONTS]
+                    game
+
+Build one native macOS app from TOTK base 1.0.0 (XCI/NSP), optionally with the
+separate 1.1.2 update.
+
+positional arguments:
+  game                  the game file (.xci or .nsp), base game 1.0.0
+
+options:
+  -h, --help            show this help message and exit
+  --update UPDATE       separate cumulative 1.1.2 update NSP; outputs the same
+                        single app
+  -k, --keys KEYS       your prod.keys
+  -o, --out OUT         the app to write (default: "Tears of the Kingdom.app"
+                        next to the game file)
+  --work WORK           work folder (default: TOTK_build next to the game
+                        file)
+  --firmware FIRMWARE   unpacked firmware NCA directory providing the six
+                        expected shared fonts (needed for NSP unless --shared-
+                        fonts or valid cached fonts are available)
+  --shared-fonts SHARED_FONTS
+                        previously extracted shared-font directory containing
+                        the six verified .bfttf files
+
+example: python3 build_app.py ~/Games/totk.xci -k ~/keys/prod.keys
