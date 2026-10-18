@@ -877,3 +877,12 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - Frozenweights,task-levelPPCandpersistentperdomainimprovementlibrary; parallelwidth/sequentialdepth. PapereditorOpus4.8 separateexecutorcost. Authorup-toWB11.5/JB4.5points andLABPartial11.8percentagepoints notuniversalallbaselinewins. ActualreleasewarnsJobBenchrubricaccess,unrestrictednetwork/Codexsandboxdisabled,unscoredfailures; max-tasksperdomainnotglobal.
 - ActualPython3.12.14/macOS credentialfreedemo2tasksbothmodes,k2,28executions32deterministiceditorcalls. Resume2skipped0newcalls;5upstreamworkflowtests passed. No live model/Vertex/fullbench/scoreorcostreproduction,notfullMacbenchmarkacceptance.
 - FLUX142rootrejectedtext/corebeingedited;143qualifiedtopiccover,3XiaoMfigures,bilingualSEO.4images200/listmembershipchecked. Currentremote draft/getverifiedcover3images/source/scope mediaId prCUE631thH1cmNLi42prHkYI_ue8fhACKp5D3V2NWGSVrk0WORst-vh1BvCbPV2. RawimageKB reused;memory,indexledgerupdated. Taske2fc8e82-ae22-4820-bce1-111f77e0d86c.
+
+
+## 2026-10-18 — MiniCPM-V 4.7 MoE vision deployment
+
+- https://blog.mushroom.cv/blog/minicpm-v47-moe-vision-deployment/ ; task2702336e-aeab-431b-acb8-91c51e5285b8. Exact source/model dedup: raw KB only, no previous Blog/M2; remote four drafts checked; published API48001 unavailable.
+- Global HF Trending snapshot2026-10-18T05:11UTC rank4 confirmed via API and rendered page; historical top3 unverified. Popularity is not capability.
+- Official35B/A3B/phone RAM separated; LES prefetch preserves actual routing, misses still fetched; DSpark and quantization distinct. Author iPhone and iPad decode results not our measurements. Vision4x/16x CharXiv75.60/69.20, not universally negligible loss.
+- Actual65536byte GGUF prefix audit, config40layers/256experts/8selected matches partial header; standard tensor bytes70.43GB, mixed GGUF15.50GB plus matching vision module. No full weight integrity, model inference, mobile installation or performance test.
+- FLUX144 topic cover and3 XiaoM body figures verified; bilingual SEO/GEO, public article/four images/list and current draft/get verified. mediaId prCUE631thH1cmNLi42prLCEA_EFiE7slyCPP-ee5PZ-saa4-YZ_FfT1sv70zyww. KB, semantic index and ledger updated.

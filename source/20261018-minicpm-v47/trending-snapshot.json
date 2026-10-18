@@ -1,0 +1,60 @@
+{
+  "retrievedAtUTC": "2026-10-18T05:11:47.898786+00:00",
+  "url": "https://huggingface.co/api/models?sort=trendingScore&direction=-1&limit=50",
+  "scope": "global models, no task/language filters, descending trendingScore",
+  "entries": 50,
+  "target": "openbmb/MiniCPM-V-4.7-35B-A3B",
+  "rank": 4,
+  "top10": [
+    {
+      "rank": 1,
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "trendingScore": 982
+    },
+    {
+      "rank": 2,
+      "id": "google/embeddinggemma-2",
+      "trendingScore": 873
+    },
+    {
+      "rank": 3,
+      "id": "jialinyyzz/humanizer",
+      "trendingScore": 761
+    },
+    {
+      "rank": 4,
+      "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
+      "trendingScore": 727
+    },
+    {
+      "rank": 5,
+      "id": "fishaudio/drama-3",
+      "trendingScore": 605
+    },
+    {
+      "rank": 6,
+      "id": "black-forest-labs/flux-3-image-klein-comfy",
+      "trendingScore": 555
+    },
+    {
+      "rank": 7,
+      "id": "meta-models/Muse-Spark-Open-816B-A42B",
+      "trendingScore": 478
+    },
+    {
+      "rank": 8,
+      "id": "Lightricks/LTX-2.5",
+      "trendingScore": 458
+    },
+    {
+      "rank": 9,
+      "id": "LiquidAI/LFM2.5-24B-A2B",
+      "trendingScore": 434
+    },
+    {
+      "rank": 10,
+      "id": "black-forest-labs/flux-3-image-klein",
+      "trendingScore": 426
+    }
+  ]
+}

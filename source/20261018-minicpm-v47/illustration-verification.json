@@ -1,0 +1,59 @@
+[
+  {
+    "file": "src/assets/images/minicpm-v47-moe-vision-deployment-fig-01.png",
+    "source": "/Users/jason/.codex/generated_images/01a14d70-d2a8-7353-969f-14dd2824e0ba/exec-cc162758-8e70-48a1-9309-a7c30bf97841.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 64321,
+    "palette_limit": 64,
+    "actual_colors": 63,
+    "pure_white_percent": 91.48,
+    "sha256": "9bb2373659610555bd8e7a413defa28160002dd2667e68d52e75c1dcc812d81f",
+    "attempts": [
+      {
+        "palette": 64,
+        "bytes": 64321
+      }
+    ]
+  },
+  {
+    "file": "src/assets/images/minicpm-v47-moe-vision-deployment-fig-02.png",
+    "source": "/Users/jason/.codex/generated_images/01a14d70-d2a8-7353-969f-14dd2824e0ba/exec-23be6481-3141-45ce-b891-d7f8d22b5a4f.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 55074,
+    "palette_limit": 64,
+    "actual_colors": 64,
+    "pure_white_percent": 91.53,
+    "sha256": "39114b56f6ad86be09917a12705300410fa02b1847c62af1433092531753e056",
+    "attempts": [
+      {
+        "palette": 64,
+        "bytes": 55074
+      }
+    ]
+  },
+  {
+    "file": "src/assets/images/minicpm-v47-moe-vision-deployment-fig-03.png",
+    "source": "/Users/jason/.codex/generated_images/01a14d70-d2a8-7353-969f-14dd2824e0ba/exec-5441ef15-5209-4505-864c-e9a845658bb6.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 64814,
+    "palette_limit": 64,
+    "actual_colors": 61,
+    "pure_white_percent": 90.35,
+    "sha256": "2d04ed81c2025cbe2dc94eecf78985edf335c8f7832e842e5686db130c7bfc5e",
+    "attempts": [
+      {
+        "palette": 64,
+        "bytes": 64814
+      }
+    ]
+  }
+]
