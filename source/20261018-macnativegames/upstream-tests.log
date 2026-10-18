@@ -1,0 +1,24 @@
+test_corruption_rejected_by_exefs_and_romfs_integrity (test_game_containers.Containers.test_corruption_rejected_by_exefs_and_romfs_integrity) ... ok
+test_firmware_flat_and_registered_directories (test_game_containers.Containers.test_firmware_flat_and_registered_directories) ... ok
+test_fonts_verify_bytes_and_complete_manifest (test_game_containers.Containers.test_fonts_verify_bytes_and_complete_manifest) ... ok
+test_full_extraction_xci_nsp_and_common_ticket (test_game_containers.Containers.test_full_extraction_xci_nsp_and_common_ticket) ... ok
+test_invalid_partition_tables (test_game_containers.Containers.test_invalid_partition_tables) ... ok
+test_mac_only (test_game_containers.Containers.test_mac_only) ... ok
+test_missing_personalized_conflicting_and_wrong_tickets (test_game_containers.Containers.test_missing_personalized_conflicting_and_wrong_tickets) ... ok
+test_missing_titlekek (test_game_containers.Containers.test_missing_titlekek) ... ok
+test_nsp_missing_fonts_stops_before_build (test_game_containers.Containers.test_nsp_missing_fonts_stops_before_build) ... ok
+test_reject_update_and_other_title (test_game_containers.Containers.test_reject_update_and_other_title) ... ok
+test_update_metadata_with_base_program_id (test_game_containers.Containers.test_update_metadata_with_base_program_id) ... ok
+test_bundle_contains_only_selected_game_version (test_updates.Updates.test_bundle_contains_only_selected_game_version) ... ok
+test_merge_ticket_privacy_and_failure_cleanup (test_updates.Updates.test_merge_ticket_privacy_and_failure_cleanup) ... ok
+test_real_ticket_signature_byte_order (test_updates.Updates.test_real_ticket_signature_byte_order) ... ok
+test_update_exefs_and_base_rejection (test_updates.Updates.test_update_exefs_and_base_rejection) ... ok
+test_wrong_version_stops_before_rewrite (test_updates.Updates.test_wrong_version_stops_before_rewrite) ... {"status": "pass", "files": 1, "sha256": "79d9e1faaa3253dbe4b445afc1bf27e25bfb0e2d7b1cca809afefa899bc5de5e"}
+{"status": "pass", "files": 1, "sha256": "79d9e1faaa3253dbe4b445afc1bf27e25bfb0e2d7b1cca809afefa899bc5de5e"}
+[11:30:13] 1/4 code: extracting the ExeFS from the game file
+ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.393s
+
+OK

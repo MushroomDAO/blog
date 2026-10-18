@@ -861,3 +861,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - AuthortestQwen10000vsGPT1000subset; IoU/CDsuccessfuloutputsonly,normalized64cubed,best45degrotation. ABC2B61%/.377vsGPT5.2High66.2%/.344. Do notclaimuniversalwin/manufacturingacceptance.
 - Actualsingleofficialgroundtruthtestcode replay withCadQuery2.6.1/isolatedPython3.12,validsolid/STEP-STL/STEProundtrip. No modelweightsdownload/inference/benchmark/perftest. CardsApache2, noverifiedofficialfullGitHubpipeline.
 - Adoptedofficialsamplegallerycover root/machinepass,3XiaoMfigures,bilingualSEO,4images200/listverified. Currentremote draft/get verifiedmediaId prCUE631thH1cmNLi42prDxa5EPKSOe4hZznLuUYUaKIFzOfyAbBqIcruyqxhonv. RawbotKB reused, projectmemorymined/indexledgersynchronized. Task7f030e5f-bd68-4ba8-9a16-16bb9ee97e5d.
+
+
+## 2026-10-18 — MacNativeGames native TOTK on Apple silicon
+
+- https://blog.mushroom.cv/blog/macnativegames-totk-native-mac/ ; source https://github.com/ly05010419/MacNativeGames pinb75994fb305d883004361e277f555596f286331e. Exactdedup rawbotKBonly,nooldarticle/M2receipt; currentdraftboxchecked,publishedAPI48001unavailable. Agent-reachnotinstalledskill/command; JinaReaderfallbacksucceeded, crosscheckedpinnedsource. No sourcebodyimages.
+- CPUARM64mostlydirect/limitedrewrites,Horizonserviceshost,NVNMetal4/RyujinxSPIRV/SPIRVCrossMSLtranslation; notuniversalSwitchsupport. MacSilicon/macOS26+,TOTK1.0base+1.1.2NSPupdate,1.4.3notruntimesupported,noiOS. README NSZclaim conflictsCLI/source/docs; nocompressedupdatepromise.
+- Actual16upstreamsyntheticcontainer/updatetests passed Python3.14.8 pinnedrequirements. Prebuilt5120728B SHAmatches, notexecuted/attested. No games/realkeys/nativefullbuild/GPU/gameplay/FPSbenchmark. AuthorwarmcacheM4~90/menu120 notours,settings/framegeneration/coldvswarm/p99/fullmaplimits explained.
+- FLUX140rootrejected badge/PCtower;141qualifiedcover,3XiaoMfigures,bilingualSEO.4publicimages200/listmembershipchecked. Currentremote draft/getverifiedcover3images/source/scope; mediaId prCUE631thH1cmNLi42prMjStlFZJf4fmddo8PKTHe1oMZxm1MqAeeErYmFyDaZS. KB/indexledger synchronized with proofs. Task4250f407-e9ba-4079-8125-8a0292caecc7.
