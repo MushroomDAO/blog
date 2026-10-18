@@ -1,0 +1,54 @@
+{
+  "slug": "startlux-decision-typed-decision-model-jev-compatible-games-demo",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/startlux-decision-typed-decision-model-jev-compatible-games-demo-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 92719
+    },
+    {
+      "path": "src/assets/images/startlux-decision-typed-decision-model-jev-compatible-games-demo-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 89524
+    },
+    {
+      "path": "src/assets/images/startlux-decision-typed-decision-model-jev-compatible-games-demo-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 49017
+    },
+    {
+      "path": "src/assets/images/startlux-decision-typed-decision-model-jev-compatible-games-demo-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 60456
+    }
+  ]
+}

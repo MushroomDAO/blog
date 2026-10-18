@@ -845,3 +845,10 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - Actual100upstreamoffline tests protocol/rejection/exportpolicy pass in existingisolatedPython3.12.14; pinneduv0.9.26unavailable(default and explicitPyPI), notlockedenv/fullsuite. NoBlenderinstall/account/upload/paidgeneration/quality/perf/multiOSacceptance. Sourceunchanged.
 - OriginalFLUX139cover90372B root/machinepass,3XiaoMfigures bothlanguages,SEO/GEOcheck. Currentremote draft/get verifiedcover3images/source/scope media_id prCUE631thH1cmNLi42prEB1NM4AJ2_1uPku6xpjZ7dGltLMynJD0BM8fwUYUni4.4publicimages200/listposition recorded. RawbotKB reused; projectmemoryandindex ledger synchronized separately. Task9213aac1-bd22-436b-b6b6-27fa3a9c1cc4.
 - Final public semantic retrieval rank1 score0.7214374; manifest2unchanged. OfficialZIP18894810B checksummatchesextensionindex,255members CRCpass,notinstalled/executed. PR116 normal review https://github.com/MushroomDAO/blog/pull/116 .
+
+
+## 2026-10-18 — Decision Index 0.3.2 and StartLux existing article update
+
+- Updated existing https://blog.mushroom.cv/blog/startlux-decision-typed-decision-model-jev-compatible-games-demo/ ; preserve original2026-10-03 pubDate, updatedDate2026-10-18, no duplicate article. Board snapshot generated2026-10-16,174configurations, exactTop10 densegroups. PaperAutoThink73.37 public notofficialInstantFull69.12.
+- Full20/50/30 requires privateequating; arithmetic all174 maximumdifference0.011923 fromroundeddata.15officialindex03offline tests pass. No model/fullbenchmark/privatequestions/performance claims. Instantbidirectional vsAutoThinkgate; paper0.9 vsdefault0.6; authorheldoutPivotpairaccuracy distinction.
+- CodeApache2 doesnotauthorize commercialweights:8checkedv1.1cards CC-BY-NC4.0. ExistingqualifiedFLUX99cover reused,3newXiaoMfigures, bilingualSEO. CurrentremoteoldID40007 and publishedAPI48001; preservedreceipt prCUE631thH1cmNLi42prEkI4L5q27TY-LAHrnEQjQjBB4kYEoV81J9LoLeZJEFM ; currentmediaIdempty,wechatStatusrecorded, didnotcreateanotherpossiblypublishedarticle. RawbotKB reused; finalmemory/indexledgerproofs recorded. Taskab55420e-c1b1-4f3d-8bda-c6db52e8e139.

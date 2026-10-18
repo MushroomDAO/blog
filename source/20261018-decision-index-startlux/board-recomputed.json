@@ -1,0 +1,1325 @@
+{
+  "label": "Decision Index 0.3.2",
+  "generatedUTC": "2026-10-16T19:00:10Z",
+  "sha256": "7b5a4586e1260d58dd534721d5f7ce278718effe469d3912747cff48cc7b8a51",
+  "entries": 174,
+  "top10": [
+    {
+      "engine": "startlux-decision-v1.1-27b-instant",
+      "pub": 72.88,
+      "same_skills": 64.82,
+      "new_domains": 61.41,
+      "v": 69.12,
+      "lab": false,
+      "jev": false,
+      "rank_v": 1,
+      "rank_pub": 1,
+      "name": "StartLux-Decision v1.1 27B",
+      "eq": {
+        "S": 64.51,
+        "O": 74.28
+      },
+      "rank_tie": 1,
+      "tied": false,
+      "parts": {
+        "public": 14.58,
+        "same_skills": 32.26,
+        "new_domains": 22.29
+      },
+      "new": true
+    },
+    {
+      "engine": "vllm-sr-d3-v310",
+      "pub": 65.45,
+      "same_skills": 62.83,
+      "new_domains": 60.51,
+      "v": 66.26,
+      "lab": false,
+      "jev": false,
+      "rank_v": 2,
+      "rank_pub": 5,
+      "name": "vLLM-SR d3 (27B)",
+      "eq": {
+        "S": 62.5,
+        "O": 73.08
+      },
+      "rank_tie": 2,
+      "tied": true,
+      "parts": {
+        "public": 13.09,
+        "same_skills": 31.25,
+        "new_domains": 21.92
+      },
+      "new": true
+    },
+    {
+      "engine": "linne-oak-1.0",
+      "pub": 63.94,
+      "same_skills": 62.44,
+      "new_domains": 60.12,
+      "v": 65.61,
+      "lab": false,
+      "jev": false,
+      "rank_v": 3,
+      "rank_pub": 9,
+      "name": "linne-oak 1.0 (31B)",
+      "eq": {
+        "S": 62.11,
+        "O": 72.55
+      },
+      "rank_tie": 2,
+      "tied": true,
+      "parts": {
+        "public": 12.79,
+        "same_skills": 31.05,
+        "new_domains": 21.76
+      },
+      "new": true
+    },
+    {
+      "engine": "pplx-decider-v1.2",
+      "pub": 67.74,
+      "same_skills": 64.3,
+      "new_domains": 55.78,
+      "v": 65.55,
+      "lab": false,
+      "jev": false,
+      "rank_v": 4,
+      "rank_pub": 3,
+      "name": "Perplexity Decider v1.2 (27B)",
+      "eq": {
+        "S": 63.99,
+        "O": 66.7
+      },
+      "rank_tie": 2,
+      "tied": true,
+      "parts": {
+        "public": 13.55,
+        "same_skills": 31.99,
+        "new_domains": 20.01
+      },
+      "new": true
+    },
+    {
+      "engine": "decider-31b",
+      "pub": 64.27,
+      "same_skills": 61.79,
+      "new_domains": 58.32,
+      "v": 64.62,
+      "lab": false,
+      "jev": false,
+      "rank_v": 5,
+      "rank_pub": 8,
+      "name": "Decider 31B (NVFP4)",
+      "eq": {
+        "S": 61.45,
+        "O": 70.12
+      },
+      "rank_tie": 3,
+      "tied": true,
+      "parts": {
+        "public": 12.85,
+        "same_skills": 30.73,
+        "new_domains": 21.04
+      },
+      "new": true
+    },
+    {
+      "engine": "amos-1-large",
+      "pub": 64.94,
+      "same_skills": 62.69,
+      "new_domains": 55.53,
+      "v": 64.08,
+      "lab": false,
+      "jev": false,
+      "rank_v": 6,
+      "rank_pub": 7,
+      "name": "Amos 1 Large (27B)",
+      "eq": {
+        "S": 62.37,
+        "O": 66.37
+      },
+      "rank_tie": 3,
+      "tied": true,
+      "parts": {
+        "public": 12.99,
+        "same_skills": 31.18,
+        "new_domains": 19.91
+      },
+      "new": true
+    },
+    {
+      "engine": "sieve-31b",
+      "pub": 62.52,
+      "same_skills": 60.89,
+      "new_domains": 58.31,
+      "v": 63.81,
+      "lab": false,
+      "jev": false,
+      "rank_v": 7,
+      "rank_pub": 15,
+      "name": "Sieve 31B",
+      "eq": {
+        "S": 60.54,
+        "O": 70.11
+      },
+      "rank_tie": 3,
+      "tied": true,
+      "parts": {
+        "public": 12.5,
+        "same_skills": 30.27,
+        "new_domains": 21.03
+      },
+      "new": true
+    },
+    {
+      "engine": "lychee-27b",
+      "pub": 62.76,
+      "same_skills": 62.52,
+      "new_domains": 54.12,
+      "v": 62.99,
+      "lab": false,
+      "jev": false,
+      "rank_v": 8,
+      "rank_pub": 13,
+      "name": "Lychee-27B",
+      "eq": {
+        "S": 62.19,
+        "O": 64.47
+      },
+      "rank_tie": 4,
+      "tied": true,
+      "parts": {
+        "public": 12.55,
+        "same_skills": 31.1,
+        "new_domains": 19.34
+      },
+      "new": true
+    },
+    {
+      "engine": "knowline-35b-a3b-gen1",
+      "pub": 69.49,
+      "same_skills": 62.97,
+      "new_domains": 50.05,
+      "v": 62.92,
+      "lab": false,
+      "jev": false,
+      "rank_v": 9,
+      "rank_pub": 2,
+      "name": "KnowLine 35B-A3B Gen1",
+      "eq": {
+        "S": 62.65,
+        "O": 58.99
+      },
+      "rank_tie": 4,
+      "tied": true,
+      "parts": {
+        "public": 13.9,
+        "same_skills": 31.32,
+        "new_domains": 17.7
+      },
+      "new": true
+    },
+    {
+      "engine": "bobcat-1.3",
+      "pub": 59.31,
+      "same_skills": 59.9,
+      "new_domains": 58.71,
+      "v": 62.83,
+      "lab": false,
+      "jev": false,
+      "rank_v": 10,
+      "rank_pub": 27,
+      "name": "Bobcat 1.3 (31B)",
+      "eq": {
+        "S": 59.54,
+        "O": 70.65
+      },
+      "rank_tie": 4,
+      "tied": true,
+      "parts": {
+        "public": 11.86,
+        "same_skills": 29.77,
+        "new_domains": 21.19
+      },
+      "new": true
+    }
+  ],
+  "formula": {
+    "id": "v0.3-final",
+    "decided_utc": "2026-10-06",
+    "equated": true,
+    "tie_band": 0.9,
+    "equating": {
+      "bases": 21,
+      "public": {
+        "mean": 23.5,
+        "sd": 16.54
+      },
+      "same_skills": {
+        "mean": 24.27,
+        "sd": 16.35
+      },
+      "new_domains": {
+        "mean": 23.68,
+        "sd": 12.29
+      }
+    },
+    "gap_band": {
+      "bases": 21,
+      "sd": 0.91
+    }
+  },
+  "weights": {
+    "public": 0.2,
+    "same_skills": 0.5,
+    "new_domains": 0.3
+  },
+  "maxRoundedDataDifference": 0.011922390347439915,
+  "checks": [
+    {
+      "name": "StartLux-Decision v1.1 27B",
+      "published": 69.12,
+      "recomputed": 69.11983049793099,
+      "difference": 0.00016950206901356069
+    },
+    {
+      "name": "vLLM-SR d3 (27B)",
+      "published": 66.26,
+      "recomputed": 66.26389921444799,
+      "difference": 0.003899214447983468
+    },
+    {
+      "name": "linne-oak 1.0 (31B)",
+      "published": 65.61,
+      "recomputed": 65.60717343604979,
+      "difference": 0.002826563950208083
+    },
+    {
+      "name": "Perplexity Decider v1.2 (27B)",
+      "published": 65.55,
+      "recomputed": 65.5557366746043,
+      "difference": 0.005736674604307268
+    },
+    {
+      "name": "Decider 31B (NVFP4)",
+      "published": 64.62,
+      "recomputed": 64.617659492937,
+      "difference": 0.0023405070630104774
+    },
+    {
+      "name": "Amos 1 Large (27B)",
+      "published": 64.08,
+      "recomputed": 64.08044621444549,
+      "difference": 0.0004462144454890904
+    },
+    {
+      "name": "Sieve 31B",
+      "published": 63.81,
+      "recomputed": 63.80839270633493,
+      "difference": 0.001607293665074394
+    },
+    {
+      "name": "Lychee-27B",
+      "published": 62.99,
+      "recomputed": 62.98918098551071,
+      "difference": 0.0008190144892950002
+    },
+    {
+      "name": "KnowLine 35B-A3B Gen1",
+      "published": 62.92,
+      "recomputed": 62.919562141220204,
+      "difference": 0.0004378587797972955
+    },
+    {
+      "name": "Bobcat 1.3 (31B)",
+      "published": 62.83,
+      "recomputed": 62.82713756491316,
+      "difference": 0.0028624350868398096
+    },
+    {
+      "name": "span-02 (Gemma 4 26B-A4B)",
+      "published": 62.56,
+      "recomputed": 62.564057200727575,
+      "difference": 0.004057200727572763
+    },
+    {
+      "name": "Darwin-27B-ZTC",
+      "published": 62.46,
+      "recomputed": 62.465293167414394,
+      "difference": 0.0052931674143934515
+    },
+    {
+      "name": "Jev 1.14",
+      "published": 61.53,
+      "recomputed": 61.535894760415346,
+      "difference": 0.005894760415344535
+    },
+    {
+      "name": "MORJ 1.0.1 (Gemma 4 31B)",
+      "published": 60.96,
+      "recomputed": 60.95994656653801,
+      "difference": 5.3433461992824505e-05
+    },
+    {
+      "name": "AnyJev L0 \u00b7 Gemma-4-31B",
+      "published": 60.22,
+      "recomputed": 60.220216854159034,
+      "difference": 0.00021685415903505145
+    },
+    {
+      "name": "Fastino GLiDE no-thinking (28B)",
+      "published": 60.21,
+      "recomputed": 60.21189688043534,
+      "difference": 0.0018968804353391988
+    },
+    {
+      "name": "Sieve 27B",
+      "published": 60.17,
+      "recomputed": 60.16538363653103,
+      "difference": 0.004616363468969098
+    },
+    {
+      "name": "Jev 1.13",
+      "published": 60.11,
+      "recomputed": 60.11036928160683,
+      "difference": 0.00036928160682947464
+    },
+    {
+      "name": "Torchcast Decision 27B",
+      "published": 59.91,
+      "recomputed": 59.90835926376582,
+      "difference": 0.0016407362341794851
+    },
+    {
+      "name": "OneJev1.5-27B",
+      "published": 59.9,
+      "recomputed": 59.897139595354865,
+      "difference": 0.0028604046451334852
+    },
+    {
+      "name": "Shisa DE-2 (repeat)",
+      "published": 59.77,
+      "recomputed": 59.76851240286352,
+      "difference": 0.001487597136481611
+    },
+    {
+      "name": "Matilda Jev v1.5",
+      "published": 59.23,
+      "recomputed": 59.23747394639733,
+      "difference": 0.007473946397333009
+    },
+    {
+      "name": "deck31b (Gemma 4 31B)",
+      "published": 59.03,
+      "recomputed": 59.02652302286984,
+      "difference": 0.003476977130162595
+    },
+    {
+      "name": "Kev 27B",
+      "published": 58.78,
+      "recomputed": 58.782577844795625,
+      "difference": 0.0025778447956241735
+    },
+    {
+      "name": "Quyet-1.0-Large",
+      "published": 58.71,
+      "recomputed": 58.71002621658542,
+      "difference": 2.6216585418126215e-05
+    },
+    {
+      "name": "RSI-Jev v6.1 VL 27B (effort auto)",
+      "published": 58.66,
+      "recomputed": 58.6618698078794,
+      "difference": 0.0018698078794017192
+    },
+    {
+      "name": "decisio 0.6.0 (Gemma 4 31B)",
+      "published": 58.55,
+      "recomputed": 58.55623653152783,
+      "difference": 0.006236531527832767
+    },
+    {
+      "name": "Qwen Decision 27B noncausal LoRA",
+      "published": 58.52,
+      "recomputed": 58.51872605708627,
+      "difference": 0.0012739429137340608
+    },
+    {
+      "name": "garas (Gemma 4 31B)",
+      "published": 58.34,
+      "recomputed": 58.343952861902594,
+      "difference": 0.0039528619025901435
+    },
+    {
+      "name": "Wald-26B-A4B",
+      "published": 58.29,
+      "recomputed": 58.29361905828313,
+      "difference": 0.0036190582831281404
+    },
+    {
+      "name": "linne-fern 1.0 (27B)",
+      "published": 57.81,
+      "recomputed": 57.809555378057794,
+      "difference": 0.0004446219422078457
+    },
+    {
+      "name": "Blink v0.3 26B-A4B (NVFP4)",
+      "published": 57.76,
+      "recomputed": 57.76220653772367,
+      "difference": 0.0022065377236728523
+    },
+    {
+      "name": "Decider chat \u00b7 Gemma-4-31B",
+      "published": 57.62,
+      "recomputed": 57.62029968423646,
+      "difference": 0.0002996842364595409
+    },
+    {
+      "name": "SynACK Decide 26B-A4B v7",
+      "published": 57.46,
+      "recomputed": 57.461663250249444,
+      "difference": 0.0016632502494431378
+    },
+    {
+      "name": "Surogate Rune 26B-A4B v3",
+      "published": 57.43,
+      "recomputed": 57.432889273743854,
+      "difference": 0.0028892737438539484
+    },
+    {
+      "name": "Xor 26B-A4B v1.1",
+      "published": 57.07,
+      "recomputed": 57.07052947250817,
+      "difference": 0.0005294725081697038
+    },
+    {
+      "name": "JEV-35B",
+      "published": 56.95,
+      "recomputed": 56.94768236526551,
+      "difference": 0.002317634734495755
+    },
+    {
+      "name": "AJev lora1 (Gemma 4 26B-A4B)",
+      "published": 56.43,
+      "recomputed": 56.43130186646363,
+      "difference": 0.0013018664636277322
+    },
+    {
+      "name": "GEV-26B-Decide",
+      "published": 56.17,
+      "recomputed": 56.17534000194087,
+      "difference": 0.005340001940865591
+    },
+    {
+      "name": "Nace.AI Drex v2.0 (35B-A3B)",
+      "published": 55.94,
+      "recomputed": 55.93739022551339,
+      "difference": 0.0026097744866078187
+    },
+    {
+      "name": "frontier-infra Jebadiah 27B v2.1",
+      "published": 55.94,
+      "recomputed": 55.94253846517519,
+      "difference": 0.002538465175192073
+    },
+    {
+      "name": "vLLM-SR Decision 2.0 Vega 27B",
+      "published": 55.88,
+      "recomputed": 55.87936889094587,
+      "difference": 0.0006311090541331055
+    },
+    {
+      "name": "vLLM-SR d3-flash (9B)",
+      "published": 55.79,
+      "recomputed": 55.79182596427319,
+      "difference": 0.001825964273187708
+    },
+    {
+      "name": "JEV-27B",
+      "published": 55.64,
+      "recomputed": 55.64267803813547,
+      "difference": 0.0026780381354711835
+    },
+    {
+      "name": "JADE",
+      "published": 55.56,
+      "recomputed": 55.56141104749392,
+      "difference": 0.0014110474939172946
+    },
+    {
+      "name": "Eikos-27B-FP8 Qwen3.8-27B LoRA",
+      "published": 55.34,
+      "recomputed": 55.34327337060787,
+      "difference": 0.0032733706078644786
+    },
+    {
+      "name": "Perplexity Decider Flash v1.2 (4B)",
+      "published": 54.81,
+      "recomputed": 54.81124231679369,
+      "difference": 0.0012423167936859159
+    },
+    {
+      "name": "reflex Qwen3.8-27B-FP8 (pmscr)",
+      "published": 54.72,
+      "recomputed": 54.71577966721658,
+      "difference": 0.004220332783418712
+    },
+    {
+      "name": "Bespoke Nimble 9B v3",
+      "published": 54.67,
+      "recomputed": 54.67905473483576,
+      "difference": 0.009054734835757472
+    },
+    {
+      "name": "OneJev1.5-9B",
+      "published": 53.29,
+      "recomputed": 53.29839122829281,
+      "difference": 0.00839122829280825
+    },
+    {
+      "name": "Cloudflare clef",
+      "published": 53.08,
+      "recomputed": 53.07769228855164,
+      "difference": 0.0023077114483598393
+    },
+    {
+      "name": "vLLM-SR d3-mini (4B)",
+      "published": 52.61,
+      "recomputed": 52.60962265136868,
+      "difference": 0.00037734863131788643
+    },
+    {
+      "name": "simple-jev \u00b7 Qwen3.8-27B (featherless)",
+      "published": 51.79,
+      "recomputed": 51.79392035990574,
+      "difference": 0.003920359905741577
+    },
+    {
+      "name": "JPT-35B-A3B",
+      "published": 51.41,
+      "recomputed": 51.41001023681021,
+      "difference": 1.0236810211949887e-05
+    },
+    {
+      "name": "Decider chat \u00b7 Qwen3.6-27B",
+      "published": 51.25,
+      "recomputed": 51.24643977476032,
+      "difference": 0.0035602252396813583
+    },
+    {
+      "name": "Xor 1.2",
+      "published": 51.15,
+      "recomputed": 51.15288193827557,
+      "difference": 0.002881938275571372
+    },
+    {
+      "name": "Sieve 9B v2",
+      "published": 50.89,
+      "recomputed": 50.88659665126417,
+      "difference": 0.0034033487358300363
+    },
+    {
+      "name": "AJev lora7 (Gemma 4 12B)",
+      "published": 50.68,
+      "recomputed": 50.68471869673512,
+      "difference": 0.004718696735118044
+    },
+    {
+      "name": "Nace.AI Drex v1.5",
+      "published": 49.72,
+      "recomputed": 49.721428833765046,
+      "difference": 0.0014288337650469884
+    },
+    {
+      "name": "Standard One 8B SH (v4)",
+      "published": 49.56,
+      "recomputed": 49.56006834825061,
+      "difference": 6.83482506076416e-05
+    },
+    {
+      "name": "Winnow-12B",
+      "published": 49.27,
+      "recomputed": 49.27434838000114,
+      "difference": 0.004348380001140129
+    },
+    {
+      "name": "OneJev1.5-4B",
+      "published": 49.17,
+      "recomputed": 49.176470783785334,
+      "difference": 0.006470783785331946
+    },
+    {
+      "name": "CoCo-Decision-4B 2.3.0",
+      "published": 48.82,
+      "recomputed": 48.8193319697524,
+      "difference": 0.0006680302476027578
+    },
+    {
+      "name": "Decider 35B-A3B",
+      "published": 48.53,
+      "recomputed": 48.531564201521334,
+      "difference": 0.001564201521333075
+    },
+    {
+      "name": "JevK5 9B v0.3.3",
+      "published": 48.35,
+      "recomputed": 48.35653230915465,
+      "difference": 0.0065323091546503065
+    },
+    {
+      "name": "Cloudflare clef-omni (30B-A3B)",
+      "published": 48.28,
+      "recomputed": 48.28545106909225,
+      "difference": 0.005451069092245575
+    },
+    {
+      "name": "vLLM-SR Decision 2.0 Lux 9B",
+      "published": 48.21,
+      "recomputed": 48.211843601247125,
+      "difference": 0.001843601247124127
+    },
+    {
+      "name": "decisio 0.4.0 (Qwen3.6-35B-A3B)",
+      "published": 47.72,
+      "recomputed": 47.716170502360136,
+      "difference": 0.0038294976398631775
+    },
+    {
+      "name": "Cloudflare clef-flash",
+      "published": 47.61,
+      "recomputed": 47.61313825665679,
+      "difference": 0.003138256656789906
+    },
+    {
+      "name": "decisio 0.4.0 (Gemma 4 12B)",
+      "published": 47.47,
+      "recomputed": 47.473735111960444,
+      "difference": 0.003735111960445181
+    },
+    {
+      "name": "JoshuaSP diffgemma",
+      "published": 47.32,
+      "recomputed": 47.323333766295164,
+      "difference": 0.003333766295163798
+    },
+    {
+      "name": "Hopper 12B (trained)",
+      "published": 47.27,
+      "recomputed": 47.27190416116134,
+      "difference": 0.0019041611613346276
+    },
+    {
+      "name": "ezjev 4B s2",
+      "published": 46.95,
+      "recomputed": 46.95035433695877,
+      "difference": 0.0003543369587646339
+    },
+    {
+      "name": "PurpleMIST-Flash-1.0",
+      "published": 46.83,
+      "recomputed": 46.83309703570442,
+      "difference": 0.0030970357044211028
+    },
+    {
+      "name": "RSI-Jev v6.1 VL 4B",
+      "published": 46.33,
+      "recomputed": 46.33028283356101,
+      "difference": 0.00028283356100899937
+    },
+    {
+      "name": "Sieve 4B",
+      "published": 46.11,
+      "recomputed": 46.10877302100363,
+      "difference": 0.001226978996371031
+    },
+    {
+      "name": "Jevfire Qwen3.8-27B",
+      "published": 45.55,
+      "recomputed": 45.55603718992841,
+      "difference": 0.006037189928413511
+    },
+    {
+      "name": "JEV-9B",
+      "published": 45.21,
+      "recomputed": 45.2093934602857,
+      "difference": 0.0006065397142975826
+    },
+    {
+      "name": "vLLM-SR Decision 2.0 Nox 4B",
+      "published": 44.95,
+      "recomputed": 44.95329294844519,
+      "difference": 0.003292948445185573
+    },
+    {
+      "name": "frontier-infra Jebadiah 9B v2.1",
+      "published": 44.91,
+      "recomputed": 44.90623035560101,
+      "difference": 0.003769644398985861
+    },
+    {
+      "name": "jiwo 4B v2",
+      "published": 44.83,
+      "recomputed": 44.835685963327634,
+      "difference": 0.0056859633276360455
+    },
+    {
+      "name": "Sieve 9B",
+      "published": 44.59,
+      "recomputed": 44.59229079110089,
+      "difference": 0.002290791100890033
+    },
+    {
+      "name": "JPT-9B Qwen3.5-9B LoRA",
+      "published": 44.45,
+      "recomputed": 44.44619037381527,
+      "difference": 0.003809626184732906
+    },
+    {
+      "name": "Aplomb 1",
+      "published": 43.77,
+      "recomputed": 43.77106463323903,
+      "difference": 0.00106463323902517
+    },
+    {
+      "name": "FlyMy.AI Decision 4B v1.6",
+      "published": 43.65,
+      "recomputed": 43.64626950132253,
+      "difference": 0.0037304986774699955
+    },
+    {
+      "name": "Kev 9B v2",
+      "published": 43.27,
+      "recomputed": 43.26810717049489,
+      "difference": 0.0018928295051097166
+    },
+    {
+      "name": "Hopper (G) 1.2 Qwen3.5-4B LoRA",
+      "published": 42.61,
+      "recomputed": 42.61679228034029,
+      "difference": 0.006792280340292223
+    },
+    {
+      "name": "Jev-Omni",
+      "published": 42.35,
+      "recomputed": 42.34930343906062,
+      "difference": 0.0006965609393816408
+    },
+    {
+      "name": "djev diffgemma",
+      "published": 41.78,
+      "recomputed": 41.77867484815233,
+      "difference": 0.0013251518476735669
+    },
+    {
+      "name": "JPT-4B Qwen3.5-4B LoRA",
+      "published": 41.63,
+      "recomputed": 41.6300139144975,
+      "difference": 1.3914497500877587e-05
+    },
+    {
+      "name": "JevK5 v0.3",
+      "published": 41.54,
+      "recomputed": 41.54215321872286,
+      "difference": 0.0021532187228601174
+    },
+    {
+      "name": "Bespoke Nimble 9B v2",
+      "published": 40.95,
+      "recomputed": 40.94843654496458,
+      "difference": 0.0015634550354235444
+    },
+    {
+      "name": "Solomon v1.1",
+      "published": 40.85,
+      "recomputed": 40.858121731946866,
+      "difference": 0.00812173194686494
+    },
+    {
+      "name": "Decider 4B",
+      "published": 40.33,
+      "recomputed": 40.32365129652162,
+      "difference": 0.0063487034783804575
+    },
+    {
+      "name": "Saracura PT-BR 4B",
+      "published": 40.17,
+      "recomputed": 40.169723735515056,
+      "difference": 0.0002762644849454432
+    },
+    {
+      "name": "razorback16 diffgemma",
+      "published": 40.04,
+      "recomputed": 40.03723347342386,
+      "difference": 0.002766526576138517
+    },
+    {
+      "name": "Standard One 3B SH (v2)",
+      "published": 39.85,
+      "recomputed": 39.852234919118246,
+      "difference": 0.0022349191182442496
+    },
+    {
+      "name": "Kev 4B r10",
+      "published": 39.5,
+      "recomputed": 39.502906139349015,
+      "difference": 0.002906139349015291
+    },
+    {
+      "name": "LiquidAI d1-3B",
+      "published": 38.9,
+      "recomputed": 38.904563870579246,
+      "difference": 0.004563870579247009
+    },
+    {
+      "name": "vLLM-SR d3-nano (2B)",
+      "published": 38.86,
+      "recomputed": 38.86816908901347,
+      "difference": 0.00816908901347091
+    },
+    {
+      "name": "Winnow-E4B",
+      "published": 38.73,
+      "recomputed": 38.731050489819175,
+      "difference": 0.001050489819178324
+    },
+    {
+      "name": "Lev1 3.7B",
+      "published": 38.63,
+      "recomputed": 38.63400163729245,
+      "difference": 0.004001637292446958
+    },
+    {
+      "name": "RSI-Jev v5.0 VL 3B",
+      "published": 38.44,
+      "recomputed": 38.44765249089909,
+      "difference": 0.0076524908990904805
+    },
+    {
+      "name": "InternLM Intern-Decision Qwen3.5-4B",
+      "published": 38.21,
+      "recomputed": 38.209104729485944,
+      "difference": 0.0008952705140572448
+    },
+    {
+      "name": "TokenRhythm NeoHorse-Jev-4B",
+      "published": 37.97,
+      "recomputed": 37.970277916707104,
+      "difference": 0.00027791670710541894
+    },
+    {
+      "name": "Ryotide Qwen v0.3.1",
+      "published": 36.99,
+      "recomputed": 36.997482615587124,
+      "difference": 0.0074826155871221545
+    },
+    {
+      "name": "Kas 4B",
+      "published": 36.7,
+      "recomputed": 36.703034101965,
+      "difference": 0.003034101964999536
+    },
+    {
+      "name": "Interfaze lev Qwen3.5-4B LoRA",
+      "published": 36.53,
+      "recomputed": 36.53119434760863,
+      "difference": 0.001194347608631574
+    },
+    {
+      "name": "mmastrac diffgemma",
+      "published": 36.3,
+      "recomputed": 36.29485742367803,
+      "difference": 0.005142576321965464
+    },
+    {
+      "name": "Jevstral 8B",
+      "published": 35.93,
+      "recomputed": 35.935294859449144,
+      "difference": 0.005294859449143985
+    },
+    {
+      "name": "Intelif Qwen3-4B",
+      "published": 34.25,
+      "recomputed": 34.259174451270646,
+      "difference": 0.009174451270645534
+    },
+    {
+      "name": "Together Tev1 Qwen3.5-4B",
+      "published": 34.14,
+      "recomputed": 34.14092412468305,
+      "difference": 0.0009241246830526961
+    },
+    {
+      "name": "Jobe Qwen3.5-4B",
+      "published": 33.06,
+      "recomputed": 33.06346513786351,
+      "difference": 0.0034651378635075503
+    },
+    {
+      "name": "Gevva E4B",
+      "published": 33.02,
+      "recomputed": 33.023289678836875,
+      "difference": 0.003289678836871701
+    },
+    {
+      "name": "vLLM-SR d3-lite (0.8B)",
+      "published": 32.33,
+      "recomputed": 32.332802208603,
+      "difference": 0.002802208603000622
+    },
+    {
+      "name": "openvons Qwen3-4B",
+      "published": 32.26,
+      "recomputed": 32.25844108359896,
+      "difference": 0.0015589164010378909
+    },
+    {
+      "name": "open-jev (pngwn)",
+      "published": 32.09,
+      "recomputed": 32.09114242204821,
+      "difference": 0.0011424220482041392
+    },
+    {
+      "name": "Jev-Style 2B v3",
+      "published": 31.42,
+      "recomputed": 31.424440740215438,
+      "difference": 0.0044407402154362785
+    },
+    {
+      "name": "Metask-Jev-4B",
+      "published": 30.96,
+      "recomputed": 30.96057890480563,
+      "difference": 0.0005789048056286106
+    },
+    {
+      "name": "Sieve 2B v2",
+      "published": 30.84,
+      "recomputed": 30.842441312521302,
+      "difference": 0.002441312521302308
+    },
+    {
+      "name": "Cam1",
+      "published": 30.78,
+      "recomputed": 30.78815967333776,
+      "difference": 0.008159673337758022
+    },
+    {
+      "name": "OneJev1.5-0.8B",
+      "published": 29.01,
+      "recomputed": 29.01333913104062,
+      "difference": 0.0033391310406187813
+    },
+    {
+      "name": "SemIf Qwen3.5-4B Base",
+      "published": 28.84,
+      "recomputed": 28.83310536151069,
+      "difference": 0.0068946384893102675
+    },
+    {
+      "name": "Gevva E2B",
+      "published": 28.18,
+      "recomputed": 28.18302346205239,
+      "difference": 0.0030234620523899025
+    },
+    {
+      "name": "vera-core",
+      "published": 28.07,
+      "recomputed": 28.07254998096461,
+      "difference": 0.002549980964609233
+    },
+    {
+      "name": "vLLM-SR Decision 2.0 Sol 2B",
+      "published": 27.07,
+      "recomputed": 27.070540336366555,
+      "difference": 0.0005403363665550387
+    },
+    {
+      "name": "Decider 2B",
+      "published": 25.8,
+      "recomputed": 25.808522465493688,
+      "difference": 0.008522465493687292
+    },
+    {
+      "name": "mini-jev Qwen3-4B",
+      "published": 25.16,
+      "recomputed": 25.15751725751027,
+      "difference": 0.0024827424897289063
+    },
+    {
+      "name": "jiwo 0.8B v2",
+      "published": 24.87,
+      "recomputed": 24.871607691790896,
+      "difference": 0.0016076917908947053
+    },
+    {
+      "name": "FLock this-that 1.2",
+      "published": 24.56,
+      "recomputed": 24.56192902411896,
+      "difference": 0.0019290241189615642
+    },
+    {
+      "name": "EXAONE-4.0-1.2B-JEV v0.3",
+      "published": 23.31,
+      "recomputed": 23.316962240254007,
+      "difference": 0.006962240254008378
+    },
+    {
+      "name": "Sieve 0.8B",
+      "published": 23.06,
+      "recomputed": 23.059626771970947,
+      "difference": 0.00037322802905137564
+    },
+    {
+      "name": "InternLM Intern-Decision Qwen3.5-2B",
+      "published": 22.58,
+      "recomputed": 22.57517773083211,
+      "difference": 0.004822269167888749
+    },
+    {
+      "name": "Crivo-150M",
+      "published": 22.21,
+      "recomputed": 22.217098613277994,
+      "difference": 0.007098613277992882
+    },
+    {
+      "name": "Strands Decider 2B",
+      "published": 21.34,
+      "recomputed": 21.344412204547094,
+      "difference": 0.004412204547094234
+    },
+    {
+      "name": "Saina Helm 2.0",
+      "published": 20.82,
+      "recomputed": 20.819909202429564,
+      "difference": 9.079757043650716e-05
+    },
+    {
+      "name": "Sieve 2B",
+      "published": 20.53,
+      "recomputed": 20.533297805580233,
+      "difference": 0.0032978055802317385
+    },
+    {
+      "name": "vLLM-SR d3-edge (0.6B)",
+      "published": 20.24,
+      "recomputed": 20.238983619610682,
+      "difference": 0.0010163803893163958
+    },
+    {
+      "name": "JPT-0.8B Qwen3.5-0.8B LoRA",
+      "published": 18.73,
+      "recomputed": 18.729197467919768,
+      "difference": 0.0008025320802325098
+    },
+    {
+      "name": "Sifr 0.8B v3.1",
+      "published": 17.79,
+      "recomputed": 17.79715799374445,
+      "difference": 0.007157993744449698
+    },
+    {
+      "name": "tasksource Decider nano v4 (150M)",
+      "published": 17.63,
+      "recomputed": 17.63041029851972,
+      "difference": 0.0004102985197214082
+    },
+    {
+      "name": "vLLM-SR Decision 2.0 Eos 0.8B",
+      "published": 17.47,
+      "recomputed": 17.480308139433617,
+      "difference": 0.010308139433618635
+    },
+    {
+      "name": "DecisionTune 1.0",
+      "published": 16.72,
+      "recomputed": 16.718793723546405,
+      "difference": 0.0012062764535940573
+    },
+    {
+      "name": "Bosun v3.1 1.7B LoRA",
+      "published": 15.82,
+      "recomputed": 15.817924998071579,
+      "difference": 0.0020750019284214716
+    },
+    {
+      "name": "Bekko System One v0 400M",
+      "published": 15.24,
+      "recomputed": 15.244363334602362,
+      "difference": 0.0043633346023614905
+    },
+    {
+      "name": "Dinah-0",
+      "published": 13.87,
+      "recomputed": 13.88192239034744,
+      "difference": 0.011922390347439915
+    },
+    {
+      "name": "Kev 0.8B r15",
+      "published": 13.66,
+      "recomputed": 13.66079296213077,
+      "difference": 0.0007929621307702917
+    },
+    {
+      "name": "vLLM-SR Decision 2.0 Kai 0.6B",
+      "published": 13.61,
+      "recomputed": 13.615749379794618,
+      "difference": 0.0057493797946186476
+    },
+    {
+      "name": "Together Tev1 Qwen3.5-0.8B",
+      "published": 12.02,
+      "recomputed": 12.025088376467778,
+      "difference": 0.005088376467778488
+    },
+    {
+      "name": "Jev-Style 0.8B v3",
+      "published": 11.91,
+      "recomputed": 11.907799663086026,
+      "difference": 0.0022003369139742546
+    },
+    {
+      "name": "Crivo-32M",
+      "published": 11.87,
+      "recomputed": 11.876261583595227,
+      "difference": 0.006261583595227549
+    },
+    {
+      "name": "Kodiak v0.2 1B (accuracy)",
+      "published": 11.8,
+      "recomputed": 11.806947624059738,
+      "difference": 0.006947624059737478
+    },
+    {
+      "name": "InternLM Intern-Decision Qwen3.5-0.8B",
+      "published": 11.78,
+      "recomputed": 11.784349310620255,
+      "difference": 0.004349310620256119
+    },
+    {
+      "name": "vera-spark",
+      "published": 11.46,
+      "recomputed": 11.461397441543935,
+      "difference": 0.0013974415439346188
+    },
+    {
+      "name": "GLiNER2.5-Decide",
+      "published": 9.24,
+      "recomputed": 9.246446901212545,
+      "difference": 0.0064469012125449865
+    },
+    {
+      "name": "LiquidAI d1-omni-600M",
+      "published": 9.09,
+      "recomputed": 9.09908578864993,
+      "difference": 0.009085788649930038
+    },
+    {
+      "name": "Bosun v3.1 0.6B LoRA",
+      "published": 8.69,
+      "recomputed": 8.694013700504875,
+      "difference": 0.004013700504875928
+    },
+    {
+      "name": "Bekko System One v0 68M",
+      "published": 8.42,
+      "recomputed": 8.423621317647177,
+      "difference": 0.0036213176471768804
+    },
+    {
+      "name": "Von 1.3",
+      "published": 8.17,
+      "recomputed": 8.175951159914705,
+      "difference": 0.005951159914705073
+    },
+    {
+      "name": "jeff GLiFormer-large",
+      "published": 7.71,
+      "recomputed": 7.707310465981394,
+      "difference": 0.0026895340186063876
+    },
+    {
+      "name": "JevK5 Lite",
+      "published": 6.29,
+      "recomputed": 6.29139332591824,
+      "difference": 0.0013933259182401514
+    },
+    {
+      "name": "CLM-v0.1-8B Qwen3-8B heads",
+      "published": 6.24,
+      "recomputed": 6.240295916970863,
+      "difference": 0.0002959169708631748
+    },
+    {
+      "name": "LFM2.5-2.6B-RLCD",
+      "published": 6.13,
+      "recomputed": 6.133367726427844,
+      "difference": 0.0033677264278439978
+    },
+    {
+      "name": "Laya",
+      "published": 4.43,
+      "recomputed": 4.42926731909536,
+      "difference": 0.0007326809046395155
+    },
+    {
+      "name": "MoganAI Lavoir ModernBERT-large",
+      "published": 4.39,
+      "recomputed": 4.390899216936274,
+      "difference": 0.0008992169362747049
+    },
+    {
+      "name": "DM-JEPA 1.1",
+      "published": 4.05,
+      "recomputed": 4.057209381835013,
+      "difference": 0.007209381835012962
+    },
+    {
+      "name": "Qwen-2.5-1B-RLCD",
+      "published": 3.9,
+      "recomputed": 3.9001675562290545,
+      "difference": 0.00016755622905462175
+    },
+    {
+      "name": "Bekko System One v0 17M",
+      "published": 2.93,
+      "recomputed": 2.940571857978571,
+      "difference": 0.010571857978570964
+    },
+    {
+      "name": "Supersonic Labs Julia 1",
+      "published": 2.56,
+      "recomputed": 2.5624861613952326,
+      "difference": 0.0024861613952325
+    },
+    {
+      "name": "system-one-gemma",
+      "published": 1.25,
+      "recomputed": 1.2602014417131386,
+      "difference": 0.010201441713138637
+    },
+    {
+      "name": "Verdict",
+      "published": 0,
+      "recomputed": 0,
+      "difference": 0
+    },
+    {
+      "name": "LFM2.5-350M-RLCD",
+      "published": 0,
+      "recomputed": 0,
+      "difference": 0
+    },
+    {
+      "name": "Nirnaya 0.4B",
+      "published": 0,
+      "recomputed": 0,
+      "difference": 0
+    },
+    {
+      "name": "Zev",
+      "published": 0,
+      "recomputed": 0,
+      "difference": 0
+    }
+  ]
+}

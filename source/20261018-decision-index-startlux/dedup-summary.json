@@ -1,0 +1,11 @@
+{
+  "task": "ab55420e-c1b1-4f3d-8bda-c6db52e8e139",
+  "exactSourceAndEntityCheck": "existing StartLux article and original M2 receipt found; DecisionPivot raw bot KB material only",
+  "action": "update existing slug",
+  "sourceParserFalsePositive": "HF Space URL collapsed to spaces/multimodalart and matched unrelated Clef article; exact subject inspection resolved",
+  "wechatDraftBoxEntries": 6,
+  "matchingRemoteDraft": false,
+  "oldDraftGet": 40007,
+  "publishedList": 48001,
+  "wechatAction": "recorded; retain old receipt and do not create a duplicate"
+}
