@@ -1,0 +1,42 @@
+[
+  {
+    "file": "src/assets/images/zero-to-cad-multiview-reconstruction-banner.jpg",
+    "bytes": 97176,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "sha256": "24a9769d42ba4dc06664a0cc660e90b146387dcb2c6d953aee33220d2c46a1a8",
+    "rootVisualReview": "pass; matched topic and readable labels; figure1 has8inputcards"
+  },
+  {
+    "file": "src/assets/images/zero-to-cad-multiview-reconstruction-fig-01.png",
+    "bytes": 78381,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "sha256": "d54a6313f11f4aa3984fea4101f9ffd5454269868b364c91cfdec58cb2e259f9",
+    "rootVisualReview": "pass; matched topic and readable labels; figure1 has8inputcards"
+  },
+  {
+    "file": "src/assets/images/zero-to-cad-multiview-reconstruction-fig-02.png",
+    "bytes": 65550,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "sha256": "599e20828c67316544737df6712e4635f7b45f21807a0b5f510796d87ac5ba1e",
+    "rootVisualReview": "pass; matched topic and readable labels; figure1 has8inputcards"
+  },
+  {
+    "file": "src/assets/images/zero-to-cad-multiview-reconstruction-fig-03.png",
+    "bytes": 82488,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "sha256": "91cf09b4cd2c771d2bd6202f5e2a70cfcb7db7ffe9c1ad29f90a3b46c3202e4b",
+    "rootVisualReview": "pass; matched topic and readable labels; figure1 has8inputcards"
+  }
+]

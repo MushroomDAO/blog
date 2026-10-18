@@ -852,3 +852,12 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - Updated existing https://blog.mushroom.cv/blog/startlux-decision-typed-decision-model-jev-compatible-games-demo/ ; preserve original2026-10-03 pubDate, updatedDate2026-10-18, no duplicate article. Board snapshot generated2026-10-16,174configurations, exactTop10 densegroups. PaperAutoThink73.37 public notofficialInstantFull69.12.
 - Full20/50/30 requires privateequating; arithmetic all174 maximumdifference0.011923 fromroundeddata.15officialindex03offline tests pass. No model/fullbenchmark/privatequestions/performance claims. Instantbidirectional vsAutoThinkgate; paper0.9 vsdefault0.6; authorheldoutPivotpairaccuracy distinction.
 - CodeApache2 doesnotauthorize commercialweights:8checkedv1.1cards CC-BY-NC4.0. ExistingqualifiedFLUX99cover reused,3newXiaoMfigures, bilingualSEO. CurrentremoteoldID40007 and publishedAPI48001; preservedreceipt prCUE631thH1cmNLi42prEkI4L5q27TY-LAHrnEQjQjBB4kYEoV81J9LoLeZJEFM ; currentmediaIdempty,wechatStatusrecorded, didnotcreateanotherpossiblypublishedarticle. RawbotKB reused; finalmemory/indexledgerproofs recorded. Taskab55420e-c1b1-4f3d-8bda-c6db52e8e139.
+
+
+## 2026-10-18 — Autodesk Zero-to-CAD multiview reconstruction
+
+- https://blog.mushroom.cv/blog/zero-to-cad-multiview-reconstruction/ ; exactprimaryURL/entity dedup rawbotKBonly, broad PT-5.2 falsepositives resolved. No oldarticle/M2receipt; remote draftbox checked, publishedAPI48001unavailable.
+- OfficialHFmodel8cf9260904aa6eb29f0826e3585f25b7df61ff89, paper2604.24479v1 Apr27 notnewOctrelease.8clean256renders notphonephotos; generatedCadQuery notnativeDWG/historyrecovery. Datasynthesisgptoss120b separatefromfine-tuned2B.
+- AuthortestQwen10000vsGPT1000subset; IoU/CDsuccessfuloutputsonly,normalized64cubed,best45degrotation. ABC2B61%/.377vsGPT5.2High66.2%/.344. Do notclaimuniversalwin/manufacturingacceptance.
+- Actualsingleofficialgroundtruthtestcode replay withCadQuery2.6.1/isolatedPython3.12,validsolid/STEP-STL/STEProundtrip. No modelweightsdownload/inference/benchmark/perftest. CardsApache2, noverifiedofficialfullGitHubpipeline.
+- Adoptedofficialsamplegallerycover root/machinepass,3XiaoMfigures,bilingualSEO,4images200/listverified. Currentremote draft/get verifiedmediaId prCUE631thH1cmNLi42prDxa5EPKSOe4hZznLuUYUaKIFzOfyAbBqIcruyqxhonv. RawbotKB reused, projectmemorymined/indexledgersynchronized. Task7f030e5f-bd68-4ba8-9a16-16bb9ee97e5d.
