@@ -1,0 +1,93 @@
+{
+  "query": "Decision Index 0.3 Leaderboard StartLux AutoThink",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.7560103,
+    "article_id": "startlux-decision-typed-decision-model-jev-compatible-games-demo"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "startlux-decision-typed-decision-model-jev-compatible-games-demo",
+        "title": "Decision Index 0.3 榜单怎么看？StartLux与AutoThink解析",
+        "url": "/blog/startlux-decision-typed-decision-model-jev-compatible-games-demo/",
+        "language": "zh",
+        "excerpt": "Decision Index 0.3 榜单怎么看？StartLux与AutoThink解析 Decision Index 0.3 衡量结构化决策能力。本文列出 0.3.2 榜单前十条配置，解释 Public 与 Full score、随机校正、尺度映射及并列规则，核查 StartLux Instant、AutoThink 和 DecisionPivot 的分数、阈值与量化部署条件，更新生成机制与商用许可说明。 Decision Index StartLux DecisionPivot MLX 决策模型 Decision Index 到底测什么？ 为什么 ",
+        "score": 0.7560103
+      },
+      {
+        "article_id": "agentjev-0-6b-system-one-decision-model-qwen3",
+        "title": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92%",
+        "url": "/blog/agentjev-0-6b-system-one-decision-model-qwen3/",
+        "language": "zh",
+        "excerpt": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92% AgentJev-0.6B，Qwen3-0.6B底座+置换等变决策头，System-1 AI Agent 决策模型。Typed Decisions 2000题 79.25%（1585/2000）超 Laya 77.00%（+2.25pt）。零输出 token 解码，约 50ms 一次前向。Shared Prefix KV Cache 在 64 候选时骨干 token 从 33,547 降至 2",
+        "score": 0.5197727
+      },
+      {
+        "article_id": "decision2-kai-06b-local-classification-gguf",
+        "title": "Decision 2.0 Kai: 0.6B Decisions in a 400MB GGUF",
+        "url": "/blog/decision2-kai-06b-local-classification-gguf/",
+        "language": "en",
+        "excerpt": "Decision 2.0 Kai: 0.6B Decisions in a 400MB GGUF Decision 2.0 Kai makes typed decisions with 0.6B parameters. We audit its 400.9MB GGUF, required runtime and quantization drift; local inference is untested. Decision 2.0 小模型 Hugging Face 本地 AI GGUF 语义路由 Qwen3 Why would a local wor",
+        "score": 0.512912
+      },
+      {
+        "article_id": "decision30-multimodal-system-one",
+        "title": "Decision 3.0：让文字、图片和视频直接进入决策接口",
+        "url": "/blog/decision30-multimodal-system-one/",
+        "language": "zh",
+        "excerpt": "Decision 3.0：让文字、图片和视频直接进入决策接口 Decision 3.0 将文本、JSON、图片和视频接入 System One 决策接口，返回选项概率而不生成长回答。本文核对六个规格的官方模型卡与推理代码，区分请求与前向计算，更新 Jev 0.3.2 评测与 MI325X 延迟，并分析小模型的泛化边界、视频采样限制、服务吞吐和内存代价，给出业务验证的接入路径。 Decision 3.0 vLLM Semantic Router System One 多模态 决策模型 开源 不生成回答，具体怎样得到决策？ 六个规格怎样比较？ 文字、图片、视",
+        "score": 0.50532705
+      },
+      {
+        "article_id": "flux3-black-forest-labs-multimodal-video-audio-action-local-deployment-guide",
+        "title": "FLUX.3 深度解析：图像+视频+音频+机器人动作，一个模型，本地部署完整指南与硬件成本评估",
+        "url": "/blog/flux3-black-forest-labs-multimodal-video-audio-action-local-deployment-guide/",
+        "language": "zh",
+        "excerpt": "FLUX.3 深度解析：图像+视频+音频+机器人动作，一个模型，本地部署完整指南与硬件成本评估 Black Forest Labs 于2026-07-23发布FLUX.3，单一多模态基础模型联合学习图像/视频/音频/动作，Early Access API已上线。本文深度解析FLUX.3架构、能力、评测数据，以及现有FLUX.1/2系列全套本地部署方案：mflux（Apple Silicon）、ComfyUI（NVIDIA）、硬件选配建议和成本对比。 FLUX 图像生成 视频生成 多模态 Black Forest Labs 本地部署 Apple Silic",
+        "score": 0.50162524
+      },
+      {
+        "article_id": "h3c-minimax-h3-metal-inference",
+        "title": "h3.c: Native MiniMax-H3 Inference on Apple Silicon",
+        "url": "/blog/h3c-minimax-h3-metal-inference/",
+        "language": "en",
+        "excerpt": "h3.c: Native MiniMax-H3 Inference on Apple Silicon Explore antirez h3.c, a native MiniMax-H3 engine for Apple Silicon: Metal pipelines, speed and memory tradeoffs, plus our build and foundational test results. h3.c MiniMax-H3 Apple Silicon Metal 本地AI What does the engine contain?",
+        "score": 0.48952603
+      },
+      {
+        "article_id": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota",
+        "title": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军",
+        "url": "/blog/moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota/",
+        "language": "zh",
+        "excerpt": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军 OpenMOSS 开源的 MOSS-Transcribe-Diarize 0.9B（1.5K stars），SOTA 端到端音频理解模型，一个模型同时完成长音频多说话人转写、说话人分离（diarization）、精确时间戳和声学事件标注。架构：Qwen3-0.6B 解码器 + Whisper-Medium 编码器 + 4x 时序合并 MLP 桥接。支持 50+ 语言。输出格式 [时间戳][S01]文本[时间戳]。",
+        "score": 0.48595896
+      },
+      {
+        "article_id": "shengli-dahui-victory-meeting-local-ai-meeting-notes-business-knowledge",
+        "title": "shengli-dahui-victory-meeting-local-ai-meeting-notes-business-knowledge",
+        "url": "/blog/shengli-dahui-victory-meeting-local-ai-meeting-notes-business-knowledge/",
+        "language": "en",
+        "excerpt": "shengli-dahui-victory-meeting-local-ai-meeting-notes-business-knowledge Victory Meeting (胜利的大会) is a local-first AI meeting assistant for business teams — v1.0.0-test, macOS Apple Silicon only. Core flow: record or upload audio → local transcription → deep business notes (conclus",
+        "score": 0.48406544
+      },
+      {
+        "article_id": "alibaba-skill-up-agent-skill-eval-evolution",
+        "title": "alibaba/skill-up: Agent Skill Evaluation and Auto-Evolution Loop — Eval + Auto-Fix in One Command",
+        "url": "/blog/alibaba-skill-up-agent-skill-eval-evolution/",
+        "language": "en",
+        "excerpt": "alibaba/skill-up: Agent Skill Evaluation and Auto-Evolution Loop — Eval + Auto-Fix in One Command alibaba/skill-up — 1,031 stars, Apache-2.0, Go. Alibaba's agent skill evaluation and evolution tool, 1K+ stars in 4 months. Declarative YAML test cases + rule/script/agent judge stra",
+        "score": 0.48389712
+      },
+      {
+        "article_id": "ornith-1-agentic-coding-self-scaffold-guide",
+        "title": "Ornith-1.0 Developer Guide: Self-Scaffolding AI That Beats Claude Opus 4.7 — Across 9B to 397B",
+        "url": "/blog/ornith-1-agentic-coding-self-scaffold-guide/",
+        "language": "en",
+        "excerpt": "Ornith-1.0 Developer Guide: Self-Scaffolding AI That Beats Claude Opus 4.7 — Across 9B to 397B DeepReinforce open-sources Ornith-1.0: 9B / 35B MoE / 397B MoE models specialized for agentic coding. The key innovation is self-scaffolding RL — the model learns to write its own orche",
+        "score": 0.48047656
+      }
+    ]
+  }
+}
