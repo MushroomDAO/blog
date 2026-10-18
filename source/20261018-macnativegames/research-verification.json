@@ -1,0 +1,34 @@
+{
+  "task": "4250f407-e9ba-4079-8125-8a0292caecc7",
+  "retrieval": {
+    "requestedSkill": "agent-reach",
+    "skillAndCommandAvailable": false,
+    "fallback": "user-permitted Jina Reader plus pinned git source",
+    "jinaSuccess": true
+  },
+  "dedup": "exactURL/entity rawbotKBonly; no oldarticle/M2receipt; currentdraftbox checked",
+  "publishedListError": 48001,
+  "scope": {
+    "upstreamTests": 16,
+    "testData": "synthetic containers and tickets",
+    "python": "3.14.8",
+    "gameFiles": false,
+    "realKeys": false,
+    "fullNativeAppBuild": false,
+    "prebuiltTranslatorExecution": false,
+    "gpuGameplayOrFPSTest": false
+  },
+  "commit": "b75994fb305d883004361e277f555596f286331e",
+  "readmeCodeMismatch": "README mentions NSZ updates; CLI NSP, source filters NCA and no NCZ decoder found, technical document lists NSZ unsupported. Do not claim compressed update compatibility.",
+  "performance": "author M4 warmed-cache observations, not independently reproduced",
+  "inspectedSourcePaths": [
+    "build_app.py",
+    "games/totk/third_party/d2r/patch_nso.py",
+    "games/totk/runtime/loader.c",
+    "games/totk/third_party/d2r_gfx/gfx/nvn/nvn_mtl.m",
+    "games/totk/scripts/extract_exefs.py",
+    "games/totk/scripts/extract_update_romfs.py"
+  ],
+  "sourceImagesFound": false,
+  "downloadedSourceImages": []
+}
