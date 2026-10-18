@@ -869,3 +869,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - CPUARM64mostlydirect/limitedrewrites,Horizonserviceshost,NVNMetal4/RyujinxSPIRV/SPIRVCrossMSLtranslation; notuniversalSwitchsupport. MacSilicon/macOS26+,TOTK1.0base+1.1.2NSPupdate,1.4.3notruntimesupported,noiOS. README NSZclaim conflictsCLI/source/docs; nocompressedupdatepromise.
 - Actual16upstreamsyntheticcontainer/updatetests passed Python3.14.8 pinnedrequirements. Prebuilt5120728B SHAmatches, notexecuted/attested. No games/realkeys/nativefullbuild/GPU/gameplay/FPSbenchmark. AuthorwarmcacheM4~90/menu120 notours,settings/framegeneration/coldvswarm/p99/fullmaplimits explained.
 - FLUX140rootrejected badge/PCtower;141qualifiedcover,3XiaoMfigures,bilingualSEO.4publicimages200/listmembershipchecked. Currentremote draft/getverifiedcover3images/source/scope; mediaId prCUE631thH1cmNLi42prMjStlFZJf4fmddo8PKTHe1oMZxm1MqAeeErYmFyDaZS. KB/indexledger synchronized with proofs. Task4250f407-e9ba-4079-8125-8a0292caecc7.
+
+
+## 2026-10-18 — Google Harness2 recursive agent improvement
+
+- https://blog.mushroom.cv/blog/harness2-recursive-agent-improvement/ ; screenshotrecognizedHarness², google-research/harness2 pin1cfe254e8d25b15f37048c3730134686abe60335, paper2610.14224v1. Exactdedupclear exceptrawimageKB; imagepath/harnessnormalizationgenericfalsepositivesresolved. Remote3draftschecked,noM2old,publishedAPI48001unavailable.
+- Frozenweights,task-levelPPCandpersistentperdomainimprovementlibrary; parallelwidth/sequentialdepth. PapereditorOpus4.8 separateexecutorcost. Authorup-toWB11.5/JB4.5points andLABPartial11.8percentagepoints notuniversalallbaselinewins. ActualreleasewarnsJobBenchrubricaccess,unrestrictednetwork/Codexsandboxdisabled,unscoredfailures; max-tasksperdomainnotglobal.
+- ActualPython3.12.14/macOS credentialfreedemo2tasksbothmodes,k2,28executions32deterministiceditorcalls. Resume2skipped0newcalls;5upstreamworkflowtests passed. No live model/Vertex/fullbench/scoreorcostreproduction,notfullMacbenchmarkacceptance.
+- FLUX142rootrejectedtext/corebeingedited;143qualifiedtopiccover,3XiaoMfigures,bilingualSEO.4images200/listmembershipchecked. Currentremote draft/getverifiedcover3images/source/scope mediaId prCUE631thH1cmNLi42prHkYI_ue8fhACKp5D3V2NWGSVrk0WORst-vh1BvCbPV2. RawimageKB reused;memory,indexledgerupdated. Taske2fc8e82-ae22-4820-bce1-111f77e0d86c.
