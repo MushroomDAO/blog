@@ -1,0 +1,93 @@
+{
+  "query": "MiniCPM-V 4.7 35B-A3B LES memory storage vision compression",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.70668757,
+    "article_id": "minicpm-v47-moe-vision-deployment"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "minicpm-v47-moe-vision-deployment",
+        "title": "MiniCPM-V 4.7: MoE Vision and On-Device Deployment",
+        "url": "/blog/minicpm-v47-moe-vision-deployment/",
+        "language": "en",
+        "excerpt": "MiniCPM-V 4.7: MoE Vision and On-Device Deployment Explore MiniCPM-V 4.7 35B-A3B: its Trending snapshot, visual compression, LES expert scheduling, quantized files, deployment options and memory trade-offs. MiniCPM-V OpenBMB MoE 端侧AI 视觉语言模型 What happened to the Trending claim? Ho",
+        "score": 0.70668757
+      },
+      {
+        "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+        "title": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行",
+        "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行 OrcaRouter 发布的 Qwen3.8-27B 消融对齐（abliterated）MLX 量化版本，672 likes，trending。基于 Qwen3.8-27B —— 一个 64 层混合架构模型（48 层 Gated DeltaNet 线性注意力 + 每 4 层一个全注意力层），原生视觉语言塔，262K 上下文，MTP 头。提供 2/4/6/8-bit 四个精度（affine 量化，grou",
+        "score": 0.55235916
+      },
+      {
+        "article_id": "h2o-llmstudio-hardware-thailand-5090",
+        "title": "H2O LLM Studio Hardware Guide: VRAM Selection for 7B to 34B Fine-Tuning",
+        "url": "/blog/h2o-llmstudio-hardware-thailand-5090/",
+        "language": "en",
+        "excerpt": "H2O LLM Studio Hardware Guide: VRAM Selection for 7B to 34B Fine-Tuning VRAM requirements and H2O LLM Studio configs for 7B, 13B, and 34B fine-tuning. 大模型微调 显存 GPU",
+        "score": 0.5415592
+      },
+      {
+        "article_id": "edge0-35b-a3b-ssd-expert-offload-prerouter-mac",
+        "title": "Edge0-35B-A3B Teardown: How a 35B MoE Claims 15 tok/s in 3GB — Half the Experts, Predicted Routing",
+        "url": "/blog/edge0-35b-a3b-ssd-expert-offload-prerouter-mac/",
+        "language": "en",
+        "excerpt": "Edge0-35B-A3B Teardown: How a 35B MoE Claims 15 tok/s in 3GB — Half the Experts, Predicted Routing Edge0-35B-A3B turns Qwen3.5-35B-A3B into 4-bit experts streamed from SSD on demand. The card claims 2.9GiB peak memory, 14.9–17.7 tok/s on a 24GB M4 Pro, and a 3.9-point quality los",
+        "score": 0.54107916
+      },
+      {
+        "article_id": "airllm-70b-inference-4gb-gpu-layer-streaming",
+        "title": "AirLLM：4GB 显存跑 70B 大模型，无需量化",
+        "url": "/blog/airllm-70b-inference-4gb-gpu-layer-streaming/",
+        "language": "zh",
+        "excerpt": "AirLLM：4GB 显存跑 70B 大模型，无需量化 lyogavin 开源的大模型极限推理工具，30k stars，Apache 2.0。通过逐层流式加载，在单张 4GB 显卡上运行 70B 模型，无需量化/蒸馏/剪枝。Kimi K3（2.8T）3.72GB、DeepSeek-V3（671B）约 12GB、Qwen3-235B 约 3GB。v3.0 新增 FP8 支持。支持 CUDA、Apple Silicon（macOS），同一 AutoModel 接口覆盖所有主流模型。 本地推理 大模型 显存优化 AppleSilicon DeepSeek Qw",
+        "score": 0.53969693
+      },
+      {
+        "article_id": "mage-vl-microsoft-codec-native-streaming-video-understanding-model",
+        "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
+        "url": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
+        "language": "zh",
+        "excerpt": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B 微软 7 月 29 日发布 Mage-VL，一个用编解码器（Codec）逻辑重新设计视觉编码器的 4B 多模态模型。核心创新 Mage-ViT 不对视频帧均匀采样，而是保留 I 帧所有 patch、只保留 P 帧运动显著 patch，将视觉 token 减少超过 75%，推理速度最高提升 3.5×。同等参数下视频理解全面超越 Qwen3-VL-4B，还具备主动流式感知能力——只在发生重要事件时才开口。Apache 2.0，HuggingFace ",
+        "score": 0.52561706
+      },
+      {
+        "article_id": "k2-horizon-mova-36b-a4b-mac-local-memory-guide",
+        "title": "K2 Horizon MoVA 36B-A4B: MBZUAI Puts Mixture-of-Experts Inside Attention Values. How Much Mac Memory Does It Need?",
+        "url": "/blog/k2-horizon-mova-36b-a4b-mac-local-memory-guide/",
+        "language": "en",
+        "excerpt": "K2 Horizon MoVA 36B-A4B: MBZUAI Puts Mixture-of-Experts Inside Attention Values. How Much Mac Memory Does It Need? K2-Horizon-MoVA-36B-A4B is an Apache-2.0, text-only MoE released in early September by MBZUAI's Institute of Foundation Models (IFM): 37.44B total parameters, ~4.66B",
+        "score": 0.5176245
+      },
+      {
+        "article_id": "comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy",
+        "title": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案",
+        "url": "/blog/comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy/",
+        "language": "zh",
+        "excerpt": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案 sepiablue-ai 开源，GPL-3.0，46 stars。两个 ComfyUI 节点把 MiniMax H3 视频生成塞进 12GB 消费级 GPU：W4A4 量化（FC1 层 ConvRot 预转换缓存）+ 流式 VSA 稀疏注意力（FastH3 官方 gate 文件）。RTX 4070 12GB 实测：832×1408×124帧约 3m29s，峰值 11.5GB 显存，比 INT8 基线快约 11%。需 Amp",
+        "score": 0.5141156
+      },
+      {
+        "article_id": "nemotron-35-super-vl-bolt-local-models",
+        "title": "英伟达 Nemotron 3.5：百万上下文 Super VL、24GB Bolt 与待发布 E4B",
+        "url": "/blog/nemotron-35-super-vl-bolt-local-models/",
+        "language": "zh",
+        "excerpt": "英伟达 Nemotron 3.5：百万上下文 Super VL、24GB Bolt 与待发布 E4B 英伟达发布 Nemotron 3.5 Super VL 与 Bolt 74B，另预告 E4B 小模型。本文核对百万上下文、24GB 部署目标、视觉输入、量化方法、公开评测和开源工具入口，区分已发布权重与十月二十三日上线计划，并说明显存预算、后端兼容和许可证条件，帮助本地 Agent 开发者按硬件与任务选型。 NVIDIA Nemotron 视觉模型 本地推理 Agent 三个名字，对应什么机器与任务？ 百万上下文的 Super VL，强在哪里？ Bolt",
+        "score": 0.5038578
+      },
+      {
+        "article_id": "om-ai-lab-vlx-flow-seek-go-physical-ai",
+        "title": "om-ai-lab's VLX Trio: Teaching AI to See, Pinpoint and Navigate the Physical World",
+        "url": "/blog/om-ai-lab-vlx-flow-seek-go-physical-ai/",
+        "language": "en",
+        "excerpt": "om-ai-lab's VLX Trio: Teaching AI to See, Pinpoint and Navigate the Physical World om-ai-lab releases three VLX models tackling the hardest problems in physical AI: VLX-Flow for streaming video memory, VLX-Seek for fine-grained spatial grounding via region tokens, and VLX-Go — a ",
+        "score": 0.5016146
+      }
+    ]
+  }
+}
