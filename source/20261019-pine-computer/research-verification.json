@@ -1,0 +1,34 @@
+{
+  "dateUTC": "2026-10-19T04:40:38.339953+00:00",
+  "blogDate": "2026-10-05",
+  "companyReleaseDate": "2026-10-09",
+  "videoDuration": "1:43 matches103seconds",
+  "initialFollowers1200Verified": false,
+  "exact2430wViewsVerified": false,
+  "creatorNetworkDisclosure": "AISC says participated,23mviews; not proof alltraffic paid or organic",
+  "datasetRevision": "bd9df2a8a140f30bf67e4c4409e9323b579d2577",
+  "actualAudit": "Four downloaded public dataset files matched publisher SHA256,106accepted row arithmetic recomputed",
+  "actualHostedAPIExecution": false,
+  "SDKInstalledOrRuntimePinned": false,
+  "sourceTextHashes": {
+    "launch-blog.txt": "22b466d6a22f07209a340b501268d795020410ee6652a4169c1f424b13885ec2",
+    "persistence.txt": "cabc728acf22c27250385ac341695c3e7c42a02fbad572ccd88865949b40e358",
+    "agent.txt": "ff56c0b183c2e595e4248376ef490f90b4d87cf204de60845484f135b00d0161",
+    "sessions.txt": "246d8ceae927d33c7812f0aa0c0808815902b665c0cb6b22d9d8bf9cae3e6ef0",
+    "skills.txt": "1746cc7fd8c9909775bd552822b85579165d3a33a74cc6488b0200c6eb97816c",
+    "how-computer-works.txt": "3906932a7c0a743a16a1388ea7d7256be5c9c43226c787bfa6a1e7415ca9a3d4",
+    "overview.txt": "398772e71c4cd589271cd159836879a580627a07cbd239e8864d0a15e8ec46bd",
+    "trust.txt": "7cc5d262bde65093c12dcc6072123822f36f78c67408c1777c782d0114eeb223",
+    "saasbench.txt": "73532b8fbd5b6f3f950e34ca63da340d68c35becf88863b7342e336394d8f42f",
+    "manifesto.txt": "e6b2d06749b9560ac49ff6f33682229c881e0852f53d1b97c5dea4062909e9af"
+  },
+  "currentProtocol": "Turnaddressedrun/answer;needsinputendsturn,answerstartsnext; not oldersearchpausedsameturn",
+  "gatedPages": [
+    "getting-started",
+    "integration",
+    "tokens",
+    "sdks"
+  ],
+  "runtimeSourceStatus": "roadmap auditthenopen source, complete public runtime not confirmed",
+  "securityStatus": "vendor disclosure, SOC2TypeII in progress, no independent deployment audit performed"
+}
