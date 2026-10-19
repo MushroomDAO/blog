@@ -1,0 +1,93 @@
+{
+  "query": "AgentEar local voice input macOS preview Markdown",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.64111036,
+    "article_id": "agentear-local-voice-input-preview"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "agentear-local-voice-input-preview",
+        "title": "AgentEar: Local Voice Input and Its ARM64 Preview",
+        "url": "/blog/agentear-local-voice-input-preview/",
+        "language": "en",
+        "excerpt": "AgentEar: Local Voice Input and Its ARM64 Preview AgentEar connects local voice input to a Markdown knowledge base. Explore its README, macOS 26 ARM64 preview, model setup, privacy limits and package checks. AgentEar 语音输入 本地AI macOS 知识库 开源 How Is It Different from Basic Dictation",
+        "score": 0.64111036
+      },
+      {
+        "article_id": "aham-voice-meeting-recording-guide",
+        "title": "Aham Voice: Local Offline Meeting Transcription for Mac — Speaker Diarization + AI Minutes with Your Own LLM",
+        "url": "/blog/aham-voice-meeting-recording-guide/",
+        "language": "en",
+        "excerpt": "Aham Voice: Local Offline Meeting Transcription for Mac — Speaker Diarization + AI Minutes with Your Own LLM Aham Voice is a macOS-native, local-first meeting transcription app (MIT). FunASR transcription + CAM++ speaker diarization + emotion2vec sentiment — all offline. Your aud",
+        "score": 0.5415204
+      },
+      {
+        "article_id": "auraai-phase-planning-agent24-small-model-experiment",
+        "title": "AuraAI 阶段规划：Agent24 框架、小模型实验与 AgentSpeaker",
+        "url": "/blog/auraai-phase-planning-agent24-small-model-experiment/",
+        "language": "zh",
+        "excerpt": "AuraAI 阶段规划：Agent24 框架、小模型实验与 AgentSpeaker AuraAI 当前三条并行线：Agent24-Desktop（可插拔个人 AI 助手框架）正在积极推进；Mac 本地小模型实验给出了 64GB vs 128GB 的明确选型结论；AgentSpeaker（Nostr agent 通信协议）处于低优先级维护状态。 AuraAI Agent24 小模型 Mac本地AI AgentSpeaker Nostr 硬件选型 一、Agent24-Desktop：核心框架，积极推进 定位 架构设计 核心设计原则 参考实现 当前状态 二、",
+        "score": 0.52316785
+      },
+      {
+        "article_id": "meta-muse-glimmer-30b-local-agent-dense-multimodal-apache",
+        "title": "meta-muse-glimmer-30b-local-agent-dense-multimodal-apache",
+        "url": "/blog/meta-muse-glimmer-30b-local-agent-dense-multimodal-apache/",
+        "language": "en",
+        "excerpt": "meta-muse-glimmer-30b-local-agent-dense-multimodal-apache Meta open-sources Muse Glimmer 30B: 29.6B parameters, Dense architecture, image+text input, 131K context, distilled from Muse Spark with focused training on Agent tasks, multi-step reasoning, Tool Use, Coding, and failure ",
+        "score": 0.5219272
+      },
+      {
+        "article_id": "wake-gpui-coding-agent-session-browser-claude-codex-macos-native",
+        "title": "Wake：macOS 原生 Agent 会话管理器，Rust + GPUI，把 Claude Code/Codex/13 个 Agent 的历史汇聚一处",
+        "url": "/blog/wake-gpui-coding-agent-session-browser-claude-codex-macos-native/",
+        "language": "zh",
+        "excerpt": "Wake：macOS 原生 Agent 会话管理器，Rust + GPUI，把 Claude Code/Codex/13 个 Agent 的历史汇聚一处 iAmCorey/Wake 是 macOS 原生 Agent 会话浏览器，387 stars，MIT，Rust + GPUI（gpui 0.2 + gpui-component 0.5），2026-08-18 发布。读取 13 个 Agent 的本地会话数据（Claude Code、Codex CLI、OpenCode、Kiro、Gemini CLI、Grok Build 等），统一浏览/全文搜索/一键",
+        "score": 0.52083045
+      },
+      {
+        "article_id": "wwdc26-mlx-local-agentic-ai-mac-engineering-guide",
+        "title": "WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建",
+        "url": "/blog/wwdc26-mlx-local-agentic-ai-mac-engineering-guide/",
+        "language": "zh",
+        "excerpt": "WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建 Apple MLX 团队在 WWDC26 Session 232 中讲透了在 Mac 本地运行 AI Agent 的完整技术栈：MLX → MLX-LM → MLX-LM Server → Agent 框架，三步起服务，六个开源框架横向对比，支持多 Mac 分布式推理。本文对原始 session 做深度解析，附完整工程落地代码。 MLX Apple Silicon Agent Loop WWDC26 本地推理 开源 AI Engineering 工程实践 一、苹果官方",
+        "score": 0.5201763
+      },
+      {
+        "article_id": "peekaboo-macos-native-ui-agent",
+        "title": "Peekaboo: Native Mac UI Tools for AI Agents",
+        "url": "/blog/peekaboo-macos-native-ui-agent/",
+        "language": "en",
+        "excerpt": "Peekaboo: Native Mac UI Tools for AI Agents Explore Peekaboo 4.9.0 for Mac screenshots, native UI actions and stdio MCP, with local CLI checks, permission limits and a practical verification workflow. Peekaboo macOS MCP 桌面自动化 AI Agent What layer does Peekaboo add? How do installa",
+        "score": 0.51792604
+      },
+      {
+        "article_id": "voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone",
+        "title": "用开源 Voicebox 给 AI Agent 装上嗓子 — MCP 语音层工程实践",
+        "url": "/blog/voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone/",
+        "language": "zh",
+        "excerpt": "用开源 Voicebox 给 AI Agent 装上嗓子 — MCP 语音层工程实践 jamiepine/voicebox，55K stars，MIT，Tauri+Python 桌面应用，内置 MCP server 直连 Claude Code/Cursor/Windsurf。7 款本地 TTS 引擎（Qwen3-TTS、Chatterbox、Kokoro 等）+ Whisper STT + 零样本声音克隆，全程本地推理，完全私有。一行命令让 Agent 开口说话。 voice-AI TTS MCP AI-Agent Voicebox local-AI ",
+        "score": 0.51552624
+      },
+      {
+        "article_id": "voicebox-local-ai-voice-studio-elevenlabs-alternative",
+        "title": "Voicebox: Local-First AI Voice Studio — ElevenLabs Output + WisprFlow Input in One Open-Source App",
+        "url": "/blog/voicebox-local-ai-voice-studio-elevenlabs-alternative/",
+        "language": "en",
+        "excerpt": "Voicebox: Local-First AI Voice Studio — ElevenLabs Output + WisprFlow Input in One Open-Source App voicebox is a local-first AI voice studio combining 7 TTS engines (Qwen3-TTS, LuxTTS, Chatterbox, TADA, Kokoro), Whisper STT, an MCP server, and Claude Code integration. Runs fully ",
+        "score": 0.5145738
+      },
+      {
+        "article_id": "mac-studio-vs-amd-vs-cloud-gpu-local-ai",
+        "title": "继续等Mac Studio还是投入AMD怀抱Or云GPU？",
+        "url": "/blog/mac-studio-vs-amd-vs-cloud-gpu-local-ai/",
+        "language": "zh",
+        "excerpt": "继续等Mac Studio还是投入AMD怀抱Or云GPU？ 2026年本地AI推理硬件选购完全指南：Mac Mini M4 Pro、Mac Studio M4 Max / M3 Ultra、AMD Minisforum MS-S1 MAX、云GPU（AutoDL/RunPod）四路横评，TTS/ASR/ImageGen/VideoGen/TxtGen/VibeCoding六大场景HuggingFace Top-3模型推荐与成本对比。 本地AI推理 Mac Studio Mac Mini AMD Minisforum 云GPU RunPod AutoDL ",
+        "score": 0.50806963
+      }
+    ]
+  }
+}
