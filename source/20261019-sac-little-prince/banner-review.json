@@ -1,0 +1,22 @@
+{
+  "source": "https://pbs.twimg.com/media/HUpgX9Jb0AAZWIv.jpg",
+  "sourceArticle": "https://x.com/i/article/2110601994578866176",
+  "originalDownloadedDimensions": [
+    1200,
+    900
+  ],
+  "crop": [
+    780,
+    410,
+    240,
+    5
+  ],
+  "output": [
+    1200,
+    630
+  ],
+  "bytes": 96737,
+  "machineReview": "pass no text/faces",
+  "rootVisualReview": "accepted, reference art crop, not screenshot of our game or a video frame",
+  "initialCrop": "root rejected extra text/sidebar, second crop accepted"
+}

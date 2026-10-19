@@ -1,0 +1,44 @@
+{
+  "checkedAtUTC": "2026-10-19T01:37:55.558341+00:00",
+  "homepageStatus": 200,
+  "homepageSha256": "7f022fe8fdceedbaf8f0acd1975bf1a06414392aa3fd4d59032d621fa4babf60",
+  "webgpuMentioned": true,
+  "bootstrapFiles": [
+    {
+      "url": "https://littleprince.dev/Build/ad81cd047a09dcd0497b2e9d14616bb2.data.br",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Last-Modified": "Fri, 16 Oct 2026 11:46:48 GMT"
+      }
+    },
+    {
+      "url": "https://littleprince.dev/Build/e28e52d4bf2b7b05c1b407ec6f064005.framework.js.br",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Last-Modified": "Thu, 15 Oct 2026 13:13:31 GMT"
+      }
+    },
+    {
+      "url": "https://littleprince.dev/Build/135779e5fc13a65d8f56ccacd0d63be2.wasm.br",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/wasm",
+        "Last-Modified": "Fri, 16 Oct 2026 11:46:37 GMT"
+      }
+    },
+    {
+      "url": "https://littleprince.dev/Build/6b3bafb3a2a035f26594a4eb5466318a.loader.js",
+      "status": 200,
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Content-Length": "27120",
+        "Last-Modified": "Fri, 16 Oct 2026 11:50:59 GMT"
+      }
+    }
+  ],
+  "gameplayExecuted": false,
+  "unityOrBlenderBuildExecuted": false,
+  "fullDataDownloaded": false
+}

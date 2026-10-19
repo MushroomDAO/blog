@@ -1,0 +1,8 @@
+{
+  "sameTask": "5ad09468-1658-402b-9fbe-99ca809de988",
+  "reuseLocalFinalArticleAnd4Images": true,
+  "localM2ReceiptExists": false,
+  "onlineBeforeDeploy": "HTTP200 was homepage fallback, not an article; expected title, source ID and article text absent",
+  "botRepeatDuplicate": "raw KB material only",
+  "action": "complete missing deployment and one new draft after identity verification"
+}
