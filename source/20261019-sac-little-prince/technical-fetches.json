@@ -1,0 +1,54 @@
+[
+  {
+    "key": "unity-pipeline",
+    "url": "https://docs.unity.com/en-us/unity-cli/unity-pipeline/unity-pipeline-package",
+    "status": 200,
+    "bytes": 390780,
+    "sha256": "1e282de17f1c580b9367e95fff22c92b7573045504d459a9dfab1d6ef08f17d5"
+  },
+  {
+    "key": "unity-mcp-current",
+    "url": "https://docs.unity.com/en-us/unity-cli/replace-mcp-server-unity-cli",
+    "status": 200,
+    "bytes": 439498,
+    "sha256": "42d699a668d444cd4f0a77300ac7a8d1d3e2dcd0f13b42171956a38065e5b9b3"
+  },
+  {
+    "key": "tripo-h31",
+    "url": "https://developers.tripo3d.ai/en/models/v3-1",
+    "status": 200,
+    "bytes": 66131,
+    "sha256": "e46dc51ea828d6d03c0dc32695fdf24217a1af148ade562d64b6c51c5c08b3fc"
+  },
+  {
+    "key": "tripo-p20",
+    "url": "https://www.tripo3d.ai/features/smart-mesh",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "key": "arp-remap",
+    "url": "https://lucky3d.fr/auto-rig-pro/doc/remap_doc.html",
+    "status": 200,
+    "bytes": 27059,
+    "sha256": "73b06261470005a278dab7fd02459f56c505956ca885093f82bd9857f334e3ae"
+  },
+  {
+    "key": "arp-export",
+    "url": "https://lucky3d.fr/auto-rig-pro/doc/ge_export_doc.html",
+    "status": 200,
+    "bytes": 93474,
+    "sha256": "05589d978b652d068d68dd07051f58ff27ac553c80330bb7898f94bb11b939e0"
+  },
+  {
+    "key": "game-loader",
+    "url": "https://littleprince.dev/6b3bafb3a2a035f26594a4eb5466318a.loader.js",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "unity-web-deploy",
+    "url": "https://docs.unity3d.com/6000.0/Documentation/Manual/webgl-deploying.html",
+    "status": 200,
+    "bytes": 19582,
+    "sha256": "29d92f5b7813c4ce71425c8f24d151ee69d658ccd40cc370c49be9ddb4391043"
+  }
+]

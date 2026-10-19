@@ -886,3 +886,11 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - Official35B/A3B/phone RAM separated; LES prefetch preserves actual routing, misses still fetched; DSpark and quantization distinct. Author iPhone and iPad decode results not our measurements. Vision4x/16x CharXiv75.60/69.20, not universally negligible loss.
 - Actual65536byte GGUF prefix audit, config40layers/256experts/8selected matches partial header; standard tensor bytes70.43GB, mixed GGUF15.50GB plus matching vision module. No full weight integrity, model inference, mobile installation or performance test.
 - FLUX144 topic cover and3 XiaoM body figures verified; bilingual SEO/GEO, public article/four images/list and current draft/get verified. mediaId prCUE631thH1cmNLi42prLCEA_EFiE7slyCPP-ee5PZ-saa4-YZ_FfT1sv70zyww. KB, semantic index and ledger updated.
+
+
+## 2026-10-19 — Sac Little Prince AI3D production tutorial
+
+- https://blog.mushroom.cv/blog/sac-little-prince-ai-game-workflow/ ; task5ad09468-1658-402b-9fbe-99ca809de988. Original @Saccc_c launch2109962425512734739/tutorial share2110694725640474759/actual article2110601994578866176,Oct15created/Oct17modified. Full text via FxTwitter proxy; direct X403. ExactsourceID/handle/home dedupclear,current5drafts checked,publishedAPI48001 unavailable. Broad common-word falsepositives resolved.
+- Source promises next-week full GitHub code; matching official game repository not located in source/home/candidate Sac-Y8publicrepos/search. Do not invent repo or treat community collection as source.16days/300wviews authorclaims. Original model labels not verified API IDs.
+- Tutorial adds vertical-slice acceptance, asset budgets/provenance, ARPskin/export, Mixamo mapping, IKpropownership and runtime/offline distinction, browser deployment. Official Unity CLI+Pipeline supported; old assistantembeddedMCP deprecated,CLI MCP not deprecated.
+- Actual home200+4buildHEAD200; no full data/gameplay,Blender/Unity build,assetgeneration or benchmark. Author scene reference cover crop qualified,3XiaoMfigures,bilingualSEO. Article+4images200/list,remote draft/get cover3images/source/scope mediaId prCUE631thH1cmNLi42prJEzmchpiFbRLTqmCYCxXqa8DC7-06E2Y1lequAMeZgL. KB/index/ledger refreshed.
