@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "dataset": "pine-ai/pine-computer-saasbench-results",
+  "release": "2026-09-18-saas-bench-1.1",
+  "system": "Pine Computer",
+  "benchmark": {
+    "name": "SaaS-Bench 1.1",
+    "suite_version": "d38803b44197"
+  },
+  "evaluation_window_utc": {
+    "started_at": "2026-09-18T05:50:40Z",
+    "finished_at": "2026-09-19T04:33:38Z"
+  },
+  "selection": {
+    "selected_tasks": 106,
+    "total_attempts": 125,
+    "accepted_runs": 106,
+    "unique_tasks": 106,
+    "excluded_invalid_or_superseded_runs": 19,
+    "superseded_after_benchmark_fixes": 16,
+    "other_invalid_runs": 3,
+    "operator_validated_runs": 0
+  },
+  "headline": {
+    "checkpoint_score": 0.7833,
+    "resolved_score": 0.2736,
+    "tasks_resolved": 29,
+    "tasks_with_results": 106,
+    "tasks_scored": 106,
+    "tasks_unscored": 0
+  },
+  "metrics": {
+    "tasks": 106,
+    "checks_passed": 1077,
+    "checks_total": 1375,
+    "check_pass_rate": 0.7832727272727272,
+    "fully_resolved_tasks": 29,
+    "fully_resolved_rate": 0.27358490566037735,
+    "completed_runs": 98,
+    "timeout_runs": 8
+  },
+  "domains": [
+    {
+      "domain": "agriculture",
+      "tasks": 12,
+      "checks_passed": 33,
+      "checks_total": 43,
+      "check_pass_rate": 0.7674418604651163,
+      "fully_resolved_tasks": 8,
+      "fully_resolved_rate": 0.6666666666666666,
+      "completed_runs": 12,
+      "timeout_runs": 0
+    },
+    {
+      "domain": "business",
+      "tasks": 15,
+      "checks_passed": 198,
+      "checks_total": 235,
+      "check_pass_rate": 0.8425531914893617,
+      "fully_resolved_tasks": 3,
+      "fully_resolved_rate": 0.2,
+      "completed_runs": 10,
+      "timeout_runs": 5
+    },
+    {
+      "domain": "healthcare",
+      "tasks": 16,
+      "checks_passed": 169,
+      "checks_total": 245,
+      "check_pass_rate": 0.689795918367347,
+      "fully_resolved_tasks": 1,
+      "fully_resolved_rate": 0.0625,
+      "completed_runs": 16,
+      "timeout_runs": 0
+    },
+    {
+      "domain": "media",
+      "tasks": 20,
+      "checks_passed": 190,
+      "checks_total": 235,
+      "check_pass_rate": 0.8085106382978723,
+      "fully_resolved_tasks": 8,
+      "fully_resolved_rate": 0.4,
+      "completed_runs": 20,
+      "timeout_runs": 0
+    },
+    {
+      "domain": "software",
+      "tasks": 31,
+      "checks_passed": 336,
+      "checks_total": 443,
+      "check_pass_rate": 0.7584650112866818,
+      "fully_resolved_tasks": 8,
+      "fully_resolved_rate": 0.25806451612903225,
+      "completed_runs": 28,
+      "timeout_runs": 3
+    },
+    {
+      "domain": "teamwork",
+      "tasks": 12,
+      "checks_passed": 151,
+      "checks_total": 174,
+      "check_pass_rate": 0.867816091954023,
+      "fully_resolved_tasks": 1,
+      "fully_resolved_rate": 0.08333333333333333,
+      "completed_runs": 12,
+      "timeout_runs": 0
+    }
+  ],
+  "evidence": {
+    "raw_traces_public": false,
+    "archive_count": 106,
+    "archive_bytes": 3319013501,
+    "hash_algorithm": "SHA-256",
+    "integrity_verified_archives": 106
+  },
+  "verification_status": "Publisher integrity checks completed; independent outcome verification is not claimed."
+}

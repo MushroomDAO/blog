@@ -1,0 +1,93 @@
+{
+  "query": "Pine Computer event driven agent runtime benchmark persistence",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.6221449,
+    "article_id": "pine-computer-agent-runtime-engineering"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "pine-computer-agent-runtime-engineering",
+        "title": "Pine Computer: Agent Runtime Engineering Report",
+        "url": "/blog/pine-computer-agent-runtime-engineering/",
+        "language": "en",
+        "excerpt": "Pine Computer: Agent Runtime Engineering Report Explore Pine Computer’s agent runtime, event-driven perception, identity, recovery and costs, with an audit of public results and an integration review. Pine Computer AI Agent 云计算 Computer Use 工程架构 What is verified about the launch?",
+        "score": 0.6221449
+      },
+      {
+        "article_id": "prime-agent-primeintellect-self-improving-rlm-coding-agent",
+        "title": "Prime Agent: PrimeIntellect's Open-Source Self-Improving RLM Coding Agent",
+        "url": "/blog/prime-agent-primeintellect-self-improving-rlm-coding-agent/",
+        "language": "en",
+        "excerpt": "Prime Agent: PrimeIntellect's Open-Source Self-Improving RLM Coding Agent PrimeIntellect's open-source self-improving agent, 7.6k stars, MIT License. Introduces RLM (Recursive Language Model) that treats context as variables and tool calls as functions, running inside a persisten",
+        "score": 0.53440297
+      },
+      {
+        "article_id": "deepseek-reasonix-terminal-coding-agent-prefix-cache",
+        "title": "DeepSeek-Reasonix：围绕前缀缓存稳定性设计的终端编程 Agent",
+        "url": "/blog/deepseek-reasonix-terminal-coding-agent-prefix-cache/",
+        "language": "zh",
+        "excerpt": "DeepSeek-Reasonix：围绕前缀缓存稳定性设计的终端编程 Agent esengine 开源的 DeepSeek 原生终端编程 Agent，33k stars，MIT License，Go 重写版。架构核心是前缀缓存稳定性——真实用户单日 435M 输入 token，99.82% 缓存命中，实际费用 ~$12 而非 ~$61。支持长时运行、QQ 频道远程接入、Tauri 桌面客户端，npm install -g reasonix 一键安装。 编程Agent DeepSeek 前缀缓存 终端工具 长任务Agent 成本优化 Mycelium 前",
+        "score": 0.52908874
+      },
+      {
+        "article_id": "cindy-local-first-ai-agent-cross-harness-memory-electron-react-native",
+        "title": "Cindy：跨 Harness 持久记忆的本地优先开源 AI Agent，纠正一次、处处生效",
+        "url": "/blog/cindy-local-first-ai-agent-cross-harness-memory-electron-react-native/",
+        "language": "zh",
+        "excerpt": "Cindy：跨 Harness 持久记忆的本地优先开源 AI Agent，纠正一次、处处生效 Cindy 是一个 Electron + React Native 的本地优先 AI Agent，把 Claude Code、Codex 等多个 Harness 统一在一个客户端里，共享跨 Harness 的持久记忆、Skills 和 Orca 多 Agent 编排，Apache-2.0 开源，可用自己的 Claude Code/Codex 订阅直接接入。 一、它是什么 二、跨 Harness 持久记忆 三、Orca 多 Agent 编排 四、技术架构 仓库结构",
+        "score": 0.5286031
+      },
+      {
+        "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+        "title": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时",
+        "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+        "language": "zh",
+        "excerpt": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时 复旦+北大+奇迹智风，arXiv:2604.25850，MIT，Python。AHE 提出一个闭环：不动模型权重，只进化 harness——通过三层可观测性（组件/经验/决策），让 Evolve Agent 自动分析 trace、提出修改、预测效果，下一轮自动验证。10次迭代把 GPT-5.4 在 Terminal-Bench 2 上从 69.7% 提升到 77.0%，超过手写 Codex-CLI（71.9%）。冻结后的 harness ",
+        "score": 0.52362025
+      },
+      {
+        "article_id": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+        "title": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+        "url": "/blog/penguin-harness-self-evolving-agent-builder-skills-benchmark/",
+        "language": "en",
+        "excerpt": "penguin-harness-self-evolving-agent-builder-skills-benchmark Prism-Shadow/penguin-harness, 1140 stars, Apache-2.0, TypeScript. A new project by LlamaFactory author Yaowei Zheng, open-sourced 2026-07-19. Automated agent builder platform: one sentence builds a complete agent app ($",
+        "score": 0.52322966
+      },
+      {
+        "article_id": "maka-agent-runtime-host-event-log-desktop-tui-eval",
+        "title": "Maka 调研：把「日志」当成 Agent 运行时的唯一真相源",
+        "url": "/blog/maka-agent-runtime-host-event-log-desktop-tui-eval/",
+        "language": "zh",
+        "excerpt": "Maka 调研：把「日志」当成 Agent 运行时的唯一真相源 调研本地优先 Agent 工作台 Maka：核心设计是「Log is the Runtime」——模型消息、工具调用、工具结果、终止事实全部进 Runtime Event Log，会话、UI、模型上下文、崩溃恢复都是这份日志的投影，而不是各自维护一份状态。Desktop（Electron+React）、TUI/CLI、Eval 基准测试三种入口共用同一个 Runtime Host，执行语义完全一致。Apache-2.0，1374 star，macOS Apple Silicon 早期公开版。",
+        "score": 0.5213602
+      },
+      {
+        "article_id": "neural-imprint-atomgradient-continual-learning-device-ai",
+        "title": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始",
+        "url": "/blog/neural-imprint-atomgradient-continual-learning-device-ai/",
+        "language": "zh",
+        "excerpt": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始 质子梯度（AtomGradient）发布 Neural Imprint 白皮书 v2（2026-09-17），提出让已部署 AI 在持续使用中积累经验、更新模型状态，无需重新训练。三个 Gen-1 组件：RPP（激活空间用户建模）、DSR（稀疏注意力缓存管理）、FrogJump（层跳过加速）。实测：90B 模型在手机上跑 200 轮对话峰值 5.5GB，语音合成中位延迟 32.28ms。CC BY-NC-ND 4.0。 continual-learning on-d",
+        "score": 0.520227
+      },
+      {
+        "article_id": "dense-mem-governed-ai-memory-mcp-evidence-provenance",
+        "title": "Dense-Mem 调研：AI 记忆不该是「想存就存」，而该有证据链和权限",
+        "url": "/blog/dense-mem-governed-ai-memory-mcp-evidence-provenance/",
+        "language": "zh",
+        "excerpt": "Dense-Mem 调研：AI 记忆不该是「想存就存」，而该有证据链和权限 调研自托管 MCP 记忆服务 Dense-Mem：核心理念是「受治理的 AI 记忆」，模型写入的是一份「提案」，真正能不能变成持久状态由服务端的确定性策略和封闭 schema 校验决定；证据精确、持久、只增不删，生命周期变更只改变有效状态，从不抹除溯源链；关系只有在证据支持「合格」时才成为活跃的图边，未决的候选和假设默认不会被召回。Go 1.26 + PostgreSQL/pgvector 做持久权威，Redis 只做协调。Apache-2.0，36 star，配套研究预印本。 ",
+        "score": 0.5179592
+      },
+      {
+        "article_id": "harness2-recursive-agent-improvement",
+        "title": "Google Harness2: Recursive Agent Improvement",
+        "url": "/blog/harness2-recursive-agent-improvement/",
+        "language": "en",
+        "excerpt": "Google Harness2: Recursive Agent Improvement Explore Google Harness2: fixed-weight agent improvement, Propose-Probe-Compose, continual experience libraries, published results and a credential-free demo. Harness2 Google Research Agent Harness Engineering 递归自我改进 What changes when w",
+        "score": 0.51746744
+      }
+    ]
+  }
+}

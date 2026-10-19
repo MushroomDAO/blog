@@ -1,0 +1,151 @@
+{
+  "verified_at": "2026-10-19T04:43:00.431919+00:00",
+  "generator": "built-in image_gen",
+  "separate_generation_calls": 3,
+  "final_image_count": 3,
+  "prompts": [
+    "/tmp/pine-computer-illustrations/prompt-01.txt",
+    "/tmp/pine-computer-illustrations/prompt-02.txt",
+    "/tmp/pine-computer-illustrations/prompt-03.txt"
+  ],
+  "generation_sources": [
+    "/Users/jason/.codex/generated_images/01a15275-4b9e-7330-a084-e23d6a1f66cb/exec-99928dc1-3be8-4754-9585-9e6f62ac9cfc.png",
+    "/Users/jason/.codex/generated_images/01a15275-4b9e-7330-a084-e23d6a1f66cb/exec-85141b05-2b58-4148-96f7-e027ced1063c.png",
+    "/Users/jason/.codex/generated_images/01a15275-4b9e-7330-a084-e23d6a1f66cb/exec-9892de2e-2754-4e93-b650-d0ff6f8dad87.png"
+  ],
+  "files": [
+    {
+      "source": "/tmp/pine-computer-illustrations/raw-01.png",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "target": "/Users/jason/Dev/mycelium/blog/src/assets/images/pine-computer-agent-runtime-engineering-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 78251,
+      "sha256": "22d97780cf53d4249f17dc7b0cc7ff03d3035109f9fcd78f66410b0045df3579",
+      "palette_colors": 256,
+      "pure_white_fraction": 0.8996994357638889,
+      "corners": "all RGB 255,255,255",
+      "processing": "Lanczos resize; requested pure-white normalization for pixels with every RGB channel >=245; PNG palette compression without dithering. No semantic edits.",
+      "size_search": [
+        {
+          "palette_colors": 256,
+          "bytes": 78251
+        }
+      ]
+    },
+    {
+      "source": "/tmp/pine-computer-illustrations/raw-02.png",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "target": "/Users/jason/Dev/mycelium/blog/src/assets/images/pine-computer-agent-runtime-engineering-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 77174,
+      "sha256": "cb9e06fefa1ba3815d50503a775c0e0c708aee6508921f4da266d7a9f8e4e4c9",
+      "palette_colors": 256,
+      "pure_white_fraction": 0.8868934461805555,
+      "corners": "all RGB 255,255,255",
+      "processing": "Lanczos resize; requested pure-white normalization for pixels with every RGB channel >=245; PNG palette compression without dithering. No semantic edits.",
+      "size_search": [
+        {
+          "palette_colors": 256,
+          "bytes": 77174
+        }
+      ]
+    },
+    {
+      "source": "/tmp/pine-computer-illustrations/raw-03.png",
+      "source_dimensions": [
+        1672,
+        940
+      ],
+      "target": "/Users/jason/Dev/mycelium/blog/src/assets/images/pine-computer-agent-runtime-engineering-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 76361,
+      "sha256": "9561301f2daa80bcd30f9ad8cc21e1b7d16db8324bebd92e0d38cbac0814046a",
+      "palette_colors": 256,
+      "pure_white_fraction": 0.9056727430555556,
+      "corners": "all RGB 255,255,255",
+      "processing": "Lanczos resize; requested pure-white normalization for pixels with every RGB channel >=245; PNG palette compression without dithering. No semantic edits.",
+      "size_search": [
+        {
+          "palette_colors": 256,
+          "bytes": 76361
+        }
+      ]
+    }
+  ],
+  "visual_review": {
+    "method": "Direct inspection of all three raw generations and all final 1280x720 PNGs. Semantics are visual review, not automated OCR.",
+    "common_checks": [
+      "16:9 pure-white background",
+      "Active red-white XiaoM protagonist",
+      "Sparse short readable labels",
+      "No dense screens or numeric benchmarks",
+      "No top-left title"
+    ],
+    "results": [
+      {
+        "figure": 1,
+        "review": "PASS",
+        "checks": [
+          "Bell and structured object/change card deliver notification to XiaoM.",
+          "XiaoM handles changed-object card and action-result card.",
+          "Small intact optional image magnifier remains available, labeled 按需看图."
+        ]
+      },
+      {
+        "figure": 2,
+        "review": "PASS",
+        "checks": [
+          "Exactly one Computer keyring supplies two separate workbenches.",
+          "同一登录 and matching account icons convey one shared tenant login.",
+          "Session A and B each have their own window and file tray. XiaoM actively operates both.",
+          "No separate-user, tenant-isolation or security-isolation claim."
+        ]
+      },
+      {
+        "figure": 3,
+        "review": "PASS",
+        "checks": [
+          "Durably clipped token and one task spool show same-job recovery after response loss.",
+          "去重≠恰好一次 explicitly limits request deduplication guarantees.",
+          "XiaoM verifies an external business receipt and deposits an artifact in 自有存储.",
+          "再停止 toggle remains untouched beyond own storage: verify and export before stopping."
+        ]
+      }
+    ]
+  },
+  "source_file_comparison": {
+    "src/content/blog/pine-computer-agent-runtime-engineering.md": {
+      "before_sha256": "10fad5d8ad58d50679f01a081da21c1cfb26fa3e005a44bf3d995e443eefa30c",
+      "after_sha256": "81fadaa592d81c04067a3b0ba7b0a5425f2ce62e1078c1177a066784e06ea295",
+      "unchanged": false
+    },
+    "src/assets/images/pine-computer-agent-runtime-engineering-banner.jpg": {
+      "before_sha256": "418a7afe7ee0654d1ef96196d1a48d562e6501bdbe354b12b70f814e6c3c982f",
+      "after_sha256": "418a7afe7ee0654d1ef96196d1a48d562e6501bdbe354b12b70f814e6c3c982f",
+      "unchanged": true
+    }
+  },
+  "scope": {
+    "article_writes_by_this_task": false,
+    "banner_writes_by_this_task": false,
+    "published_by_this_task": false,
+    "committed_by_this_task": false
+  },
+  "concurrent_source_change": "Article hash changed during generation; this task issued no article writes. Banner hash unchanged. The three illustration-relevant passages and references remain consistent with the requested illustrations.",
+  "all_image_requirements_passed": true
+}
