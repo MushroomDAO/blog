@@ -1,0 +1,93 @@
+{
+  "query": "PraisonAI five layer agent stack managed agents scheduling",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.6095925,
+    "article_id": "praisonai-five-layer-agent-stack-managed-agents"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "praisonai-five-layer-agent-stack-managed-agents",
+        "title": "PraisonAI: Five Layers, One Question Each — So You Know Which Layer to Debug",
+        "url": "/blog/praisonai-five-layer-agent-stack-managed-agents/",
+        "language": "en",
+        "excerpt": "PraisonAI: Five Layers, One Question Each — So You Know Which Layer to Debug Most agent frameworks hand you one or two layers and leave the rest as homework. PraisonAI splits an agent into five — Prompt, Context, Harness, Loop, Graph — each answering one debugging question, wrapp",
+        "score": 0.6095925
+      },
+      {
+        "article_id": "llm-agent-protocol-taxonomy-federated-stack-2026",
+        "title": "The First Map of LLM Agent Communication Protocols: Why the Future Won't Be Winner-Takes-All",
+        "url": "/blog/llm-agent-protocol-taxonomy-federated-stack-2026/",
+        "language": "en",
+        "excerpt": "The First Map of LLM Agent Communication Protocols: Why the Future Won't Be Winner-Takes-All arXiv:2606.19135 builds a five-dimension taxonomy of 9 active open-source LLM agent communication protocols. Conclusion: short-term convergence pressure, long-term federated layered stack",
+        "score": 0.57914215
+      },
+      {
+        "article_id": "agent-recursive-self-learning-agentoptimizer-prorl",
+        "title": "How Agents Learn to Learn Recursively: AgentOptimizer + ProRL's Complete Stack",
+        "url": "/blog/agent-recursive-self-learning-agentoptimizer-prorl/",
+        "language": "en",
+        "excerpt": "How Agents Learn to Learn Recursively: AgentOptimizer + ProRL's Complete Stack NVIDIA Research's Shaokun Zhang presented at BAAI Conference: AgentOptimizer treats functions as learnable weights; ProRL Agent turns rollout into a decoupled API service. Together they form a complete",
+        "score": 0.5785561
+      },
+      {
+        "article_id": "building-ai-agent-six-step-framework",
+        "title": "从0到1构建AI Agent：六步实战指南",
+        "url": "/blog/building-ai-agent-six-step-framework/",
+        "language": "zh",
+        "excerpt": "从0到1构建AI Agent：六步实战指南 一线工程师六周落地AI Agent的系统化方法论：任务定义、SOP设计、MVP验证、工具集成、测试迭代、部署监控。 AI-Agent LLM 实战框架 LangChain 工程实践 引言：当\"智能代理\"不再是概念，而是可落地的生产力工具 Step 1：用具体示例定义代理的\"工作说明书\" Step 2：设计标准化操作流程(SOP)，为Agent绘制\"工作手册\" Step 3：聚焦核心推理任务，构建最小可行产品(MVP) Step 4：连接数据源与工具，构建Agent的\"感知与行动\"能力 Step 5：系统化测试与",
+        "score": 0.5571055
+      },
+      {
+        "article_id": "wwdc26-mlx-local-agentic-ai-mac-engineering-guide",
+        "title": "WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建",
+        "url": "/blog/wwdc26-mlx-local-agentic-ai-mac-engineering-guide/",
+        "language": "zh",
+        "excerpt": "WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建 Apple MLX 团队在 WWDC26 Session 232 中讲透了在 Mac 本地运行 AI Agent 的完整技术栈：MLX → MLX-LM → MLX-LM Server → Agent 框架，三步起服务，六个开源框架横向对比，支持多 Mac 分布式推理。本文对原始 session 做深度解析，附完整工程落地代码。 MLX Apple Silicon Agent Loop WWDC26 本地推理 开源 AI Engineering 工程实践 一、苹果官方",
+        "score": 0.55691653
+      },
+      {
+        "article_id": "harness-engineering-llm-agent-deterministic-structured-planning",
+        "title": "框架工程（Harness Engineering）：用确定性执行层替代提示词工程——arXiv:2608.26197 实验全解析",
+        "url": "/blog/harness-engineering-llm-agent-deterministic-structured-planning/",
+        "language": "zh",
+        "excerpt": "框架工程（Harness Engineering）：用确定性执行层替代提示词工程——arXiv:2608.26197 实验全解析 arXiv:2608.26197「Harness Engineering for Predictable Agentic Systems」是一篇9页实证研究，作者 Saransh Dhage（独立研究者，非谷歌）用两个模型×两个任务×100次重复跑出了一个反直觉结论：在 LLM Agent 外面套确定性执行层，不一定能提升可复现性——甚至可能变差。真正有效的关键只有一个：结构化规划（Structured Planning）。本",
+        "score": 0.55229044
+      },
+      {
+        "article_id": "local-ai-agent-ai-book-review",
+        "title": "Agent AI: A Survey on Multimodal Interaction and the Path to AGI",
+        "url": "/blog/local-ai-agent-ai-book-review/",
+        "language": "en",
+        "excerpt": "Agent AI: A Survey on Multimodal Interaction and the Path to AGI Li Fei-Fei's 2024 survey paper Agent AI systematically reviews five multimodal HCI frontiers for AI Agent systems and their application prospects. AI-Agent 多模态HCI AGI 李飞飞 综述论文 Background Why AI Agent as the Central ",
+        "score": 0.55223584
+      },
+      {
+        "article_id": "agentic-ai-systems-python-comprehensive-guide",
+        "title": "Agentic AI 系统全景：用 Python 构建智能 Agent 的核心框架",
+        "url": "/blog/agentic-ai-systems-python-comprehensive-guide/",
+        "language": "zh",
+        "excerpt": "Agentic AI 系统全景：用 Python 构建智能 Agent 的核心框架 Agentic AI 系统的核心概念全景：从 ReAct 循环到多 Agent 编排，从工具调用到记忆管理，从 LangChain/LangGraph 到 AutoGen/CrewAI，覆盖构建生产级 AI Agent 所需的架构模式、Python 实现和工程实践。面向希望系统性理解 Agentic AI 的开发者和建设者。 AI Agent Agentic AI LangChain Python 多智能体 工具调用 记忆管理 MCP 为什么 Agentic AI 是现在",
+        "score": 0.55100596
+      },
+      {
+        "article_id": "how-to-build-agents-software-company-guide",
+        "title": "Software Company Transformation: How to Build Agents — 8-Step Process and 6 Hard-Won Lessons from Leading Teams",
+        "url": "/blog/how-to-build-agents-software-company-guide/",
+        "language": "en",
+        "excerpt": "Software Company Transformation: How to Build Agents — 8-Step Process and 6 Hard-Won Lessons from Leading Teams The industry's recognized agent development bibles are just two: Anthropic's Building Effective Agents and OpenAI's Practical Guide. This article builds on them to reco",
+        "score": 0.5460661
+      },
+      {
+        "article_id": "hindsight-agent-memory-retain-recall-reflect",
+        "title": "Hindsight: 30K Stars Agent Memory Framework — 5-Level Bio-Inspired Architecture + Self-Built AMB Benchmark",
+        "url": "/blog/hindsight-agent-memory-retain-recall-reflect/",
+        "language": "en",
+        "excerpt": "Hindsight: 30K Stars Agent Memory Framework — 5-Level Bio-Inspired Architecture + Self-Built AMB Benchmark vectorize-io/hindsight, MIT, Python/Rust/TypeScript, 30,050 stars. Open-source agent memory system: 5-level bio-inspired memory hierarchy (world facts → experience facts → o",
+        "score": 0.54514045
+      }
+    ]
+  }
+}

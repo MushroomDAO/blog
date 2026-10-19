@@ -1,0 +1,26 @@
+{
+  "cover": {
+    "generatedLocally": "FLUX.2 Klein seed146",
+    "bytes": 94247,
+    "rootVisualReview": "pass: five transparent layers over circuitry, topic metaphor",
+    "machineVerification": "pass provenance, dimensions, framing, no OCR text, no faces"
+  },
+  "figures": [
+    {
+      "figure": 1,
+      "rootVisualReview": "pass: readable labels, matching engineering claim, white background",
+      "bytes": 22355
+    },
+    {
+      "figure": 2,
+      "rootVisualReview": "pass: readable labels, matching engineering claim, white background",
+      "bytes": 27526
+    },
+    {
+      "figure": 3,
+      "rootVisualReview": "pass: readable labels, matching engineering claim, white background",
+      "bytes": 31251
+    }
+  ],
+  "originalDirectory": "/Users/jason/.codex/generated_images/01a1527e-9170-7180-86aa-75fe5554cf3d"
+}
