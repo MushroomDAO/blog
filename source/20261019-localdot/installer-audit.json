@@ -1,0 +1,12 @@
+{
+  "publicDownloadURL": "https://downloads.localdot.dev/install.sh",
+  "curlHTTPStatus": 200,
+  "bytes": 76952,
+  "sha256": "89de0cae283ca9a5253594042ea5c96cd2779f215ba10c1c13079329feb20d37",
+  "matchesPinnedRepositoryInstaller": false,
+  "shellSyntax": "pass bash -n",
+  "executedInstaller": false,
+  "downloadedAppOrImages": false,
+  "deployedStack": false,
+  "note": "Initial urllib requests returned403; ordinary curl succeeded200. No installer execution or binary signature audit."
+}

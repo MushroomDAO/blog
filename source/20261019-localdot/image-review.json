@@ -1,0 +1,26 @@
+{
+  "cover": {
+    "origin": "local FLUX.2 Klein seed148",
+    "bytes": 92581,
+    "machineVerification": "pass provenance, size, dimensions, framing, no text/faces",
+    "rootVisualReview": "pass: laptop plus separate transparent computer metaphor; not a product photo or hardware requirement"
+  },
+  "figures": [
+    {
+      "figure": 1,
+      "bytes": 85245,
+      "rootVisualReview": "pass: correct labels and relevant article flow"
+    },
+    {
+      "figure": 2,
+      "bytes": 58265,
+      "rootVisualReview": "pass: correct labels and relevant article flow"
+    },
+    {
+      "figure": 3,
+      "bytes": 65670,
+      "rootVisualReview": "pass: correct labels and relevant article flow"
+    }
+  ],
+  "originalDirectory": "/Users/jason/.codex/generated_images/01a15463-a40a-7cc0-8aff-7c6916c991a6"
+}
