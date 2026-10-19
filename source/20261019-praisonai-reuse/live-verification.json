@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "praisonai-five-layer-agent-stack-managed-agents",
+      "url": "https://blog.mushroom.cv/blog/praisonai-five-layer-agent-stack-managed-agents/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/praisonai-five-layer-agent-stack-managed-agents-banner.C7_0G5Ho_1OjSCk.webp",
+          "status": 200,
+          "bytes": 43264
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/praisonai-five-layer-agent-stack-managed-agents-fig-01.BhLdpdkJ_2bLDot.webp",
+          "status": 200,
+          "bytes": 32400
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/praisonai-five-layer-agent-stack-managed-agents-fig-02.CEoEkjwy_1besLM.webp",
+          "status": 200,
+          "bytes": 46984
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/praisonai-five-layer-agent-stack-managed-agents-fig-03.CsW73U1__vjNiS.webp",
+          "status": 200,
+          "bytes": 47726
+        }
+      ],
+      "listPosition": 283,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}
