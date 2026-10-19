@@ -1,0 +1,43 @@
+[
+  {
+    "key": "launch-blog",
+    "url": "https://r.jina.ai/https://pinecomputer.io/blog/introducing-pine-computer/",
+    "status": 200,
+    "bytes": 12182
+  },
+  {
+    "key": "homepage",
+    "url": "https://pinecomputer.io/",
+    "status": 200,
+    "bytes": 75899
+  },
+  {
+    "key": "docs-index",
+    "url": "https://console.pinecomputer.io/docs",
+    "status": 200,
+    "bytes": 9986
+  },
+  {
+    "key": "llms",
+    "url": "https://console.pinecomputer.io/llms.txt",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "persistence",
+    "url": "https://r.jina.ai/https://console.pinecomputer.io/docs/persistence",
+    "status": 200,
+    "bytes": 7885
+  },
+  {
+    "key": "how-computer-works",
+    "url": "https://r.jina.ai/https://console.pinecomputer.io/docs/how-a-computer-works",
+    "status": 200,
+    "bytes": 3958
+  },
+  {
+    "key": "agent",
+    "url": "https://r.jina.ai/https://console.pinecomputer.io/docs/agent",
+    "status": 200,
+    "bytes": 13840
+  }
+]
