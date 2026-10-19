@@ -919,3 +919,12 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - Actual readonly packageaudit:6345251B SHA256matches,arm64,codesigndeepstrict0,DMGspctlacceptedNotarizedDeveloperID,app+DMGstapler0;imageunmounted.Noappinstallorlaunch,microphone,modeldownload,ASRaccuracy/speedtest,noreproduciblebuildclaim. Sourceiconarchivedmedia.
 - Clipboard+CmdV/noautomaticEnter,routesauthority/Markdownrender/rebuildableindex;replaynotreclassification. OptionalLLM/localASR privacy doesnotcoverremoteendpoint,search,webhookor thirdpartynotessync. Halfduplexnotfull,and13MBidle/.26sASRhistoricalnotourpreviewperformance.
 - FLUX147cover+3XiaoMfigures,bilingualSEO. Blog+4images200/listchecked,currentremote draft/getverifiedmediaId prCUE631thH1cmNLi42prFwuuwj0E3ddyHJ4EH74voEJCC5hMWuMhp8iOE95CIhl. KB/index/ledgerupdated.
+
+
+## 2026-10-19 — localDot official repository and local AI computer
+
+- https://blog.mushroom.cv/blog/localdot-local-ai-computer/ ; task887fa09a-c53c-4195-89c7-5d3b5f4ac07a. Officialwebsite localdot.dev footer→Shadowhusky/localdot→website verified. PublicMITactualsource pinned e5054494125d09c6db86aba322be5e46cb8618ca. Exactsite/repoURL+localDot deduprawKBonly,current3draftschecked,publishedAPI48001 unavailable.
+- DockerLinuxdesktop/browser/brain/gateway+daemonReactUI+GoKeyd,notnewphysicalcomputer. API/plan/localendpointrequiresvision+tools;notanytextmodel,nofreeAPIcreditclaim. MacAppleSilicon/Linuxx64Docker28+,WindowsWSL2alpha;IntelMac/LinuxARM64packagesabsentcurrently. GitHubreleases/latest404notlackofsource;ownpublicdownloadchannel.
+- Realcurl200installer76952B/bashedsyntaxonly,publicvsfixedsource2channelvaluesdifferent. ActualGo1.27.1upstreampolicy22testfunctionspass,0failed;notnetguard/DNS/fullsecurityaudit. Noinstaller/image/wholeapp/model/UI/performancetest.
+- Hostedmodelsseescreenshots/context,defaultlocalrecordingnotoffline;optionalrelayoff,trafficthroughrelay/Cloudflare. Keydstandins+approvalrulesdocumentednotourwhole-systemproof. Replaynotexternalundo,hidden-tabcontinuationnotcrashrecoveryguarantee.
+- SourceUIperson+textnotbanner;FLUX148conceptcover+3XiaoMfigures,bilingualSEO. Publicarticle+4images200/listchecked,currentremote draft/getverifiedmediaId prCUE631thH1cmNLi42prD19UXR4KxmehVGYpIaRGIB09-1kfScbRRqkahK9K1ia. KB/index/ledgerupdated.
