@@ -1,0 +1,41 @@
+{
+  "hostMacOS": "26.6.2",
+  "sha256": "f6c16a8966ba90081a514e093759878071399ed3524e1e502e65ab650547d270",
+  "bytes": 6345251,
+  "expectedSHA256": "f6c16a8966ba90081a514e093759878071399ed3524e1e502e65ab650547d270",
+  "tests": {
+    "file": {
+      "returncode": 0,
+      "stdout": "/Volumes/AgentEar Preview ARM64 macOS26/AgentEar.app/Contents/MacOS/AgentEar: Mach-O 64-bit executable arm64\n",
+      "stderr": ""
+    },
+    "app_signature": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/Volumes/AgentEar Preview ARM64 macOS26/AgentEar.app: valid on disk\n/Volumes/AgentEar Preview ARM64 macOS26/AgentEar.app: satisfies its Designated Requirement\n"
+    },
+    "signature_details": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Executable=/Volumes/AgentEar Preview ARM64 macOS26/AgentEar.app/Contents/MacOS/AgentEar\nIdentifier=ai.idoris.agentear\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=9534 flags=0x10000(runtime) hashes=287+7 location=embedded\nVersionPlatform=1\nVersionMin=720896\nVersionSDK=1705216\nHash type=sha256 size=32\nCandidateCDHash sha256=2fe41b3a8bbbc3a9b72243e50146c482ebf90a0f\nCandidateCDHashFull sha256=2fe41b3a8bbbc3a9b72243e50146c482ebf90a0fa41115370c76537f098ccad6\nHash choices=sha256\nCMSDigest=2fe41b3a8bbbc3a9b72243e50146c482ebf90a0fa41115370c76537f098ccad6\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=4521984\nExecutable Segment flags=0x1\nPage size=16384\nCDHash=2fe41b3a8bbbc3a9b72243e50146c482ebf90a0f\nSignature size=9044\nAuthority=Developer ID Application: Huifeng Jiao (HYAP444FN9)\nAuthority=Developer ID Certification Authority\nAuthority=Apple Root CA\nTimestamp=15 Oct BE 2569 at 13:57:03\nNotarization Ticket=stapled\nInfo.plist entries=13\nTeamIdentifier=HYAP444FN9\nRuntime Version=26.5.0\nSealed Resources version=2 rules=13 files=308\nInternal requirements count=1 size=180\n"
+    },
+    "dmg_gatekeeper": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "source/20261019-agentear/AgentEar-0.27.0-preview.20261015.1-macos26-arm64.dmg: accepted\nsource=Notarized Developer ID\n"
+    },
+    "app_stapler": {
+      "returncode": 0,
+      "stdout": "Processing: /Volumes/AgentEar Preview ARM64 macOS26/AgentEar.app\nThe validate action worked!\n",
+      "stderr": ""
+    },
+    "dmg_stapler": {
+      "returncode": 0,
+      "stdout": "Processing: /Users/jason/Dev/mycelium/blog/source/20261019-agentear/AgentEar-0.27.0-preview.20261015.1-macos26-arm64.dmg\nThe validate action worked!\n",
+      "stderr": ""
+    }
+  },
+  "executedApp": false,
+  "microphoneAccessed": false,
+  "modelsDownloaded": false
+}

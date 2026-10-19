@@ -910,3 +910,12 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - Current remote2drafts checked, old receipt draft/get40007 and freepublish48001. Preserve archived mediaId prCUE631thH1cmNLi42prLZMNAVgiV9D1MyIKob4QR-VdJts8JH2vxO0BPF-3yOw; recorded only, currentmediaId empty, no duplicate creation or WeChat mutation.
 - Pinnedofficial README d27f03229bff65796419a4e26de114f41763eb67. Five-line quickstart singleAgent; explicit Agents/AgentFlow and tools required; 24/7marketing notsoaktest. BudgetExceededError may map genericerror. Localorchestration notofflineinference; customtoolbackendboundary separatelyverified. Schedulingtrigger notcrashrecovery/exactlyonce.
 - Oldmatchingcoverunsignedfailedprovenance; regeneratedFLUX146qualified+3XiaoMfigures, SEOmeta/updateddate/source-scopefixes. Historicalstars/issues datequalified. TenPythoncodeblocksASTpassed, no model/sandbox/performance/24h execution. Publicarticle+4images200/listmembershipchecked,indexKBledgerupdated.
+
+
+## 2026-10-19 — AgentEar local voice input preview
+
+- https://blog.mushroom.cv/blog/agentear-local-voice-input-preview/ ; task22024452-d700-4d65-aee2-0fbd57c4c2c9. Correct malformed releaseURL by removingcomma+Chineseinstruction. ExactrepoURL+AgentEar hitsrawKBonly; oldiDoristitle33%falsepositive resolvedwithlocalexactrg. Current2draftschecked,publishedAPI48001 unavailable,noexistingM2. Agent-reachskill/commandnotlocated;actualJinaReader200+GitHubAPI+fixedREADME fetched.
+- Source5ac61569dcc551d7e0a4ee90538251f25a36d319. Requested0.27previewpublishedOct19despiteOct15tag. READMEhistoricalcompletepipeline vs thiscorepreviewARM64macOS26+,signednotarizedDMG,noincludedweights/voices. Maintainerdownload/installpersistenceacceptance notrealWhisper/microphonequality. General0.27Qwen3memorynotesnotuniformpreviewbenchmark.
+- Actual readonly packageaudit:6345251B SHA256matches,arm64,codesigndeepstrict0,DMGspctlacceptedNotarizedDeveloperID,app+DMGstapler0;imageunmounted.Noappinstallorlaunch,microphone,modeldownload,ASRaccuracy/speedtest,noreproduciblebuildclaim. Sourceiconarchivedmedia.
+- Clipboard+CmdV/noautomaticEnter,routesauthority/Markdownrender/rebuildableindex;replaynotreclassification. OptionalLLM/localASR privacy doesnotcoverremoteendpoint,search,webhookor thirdpartynotessync. Halfduplexnotfull,and13MBidle/.26sASRhistoricalnotourpreviewperformance.
+- FLUX147cover+3XiaoMfigures,bilingualSEO. Blog+4images200/listchecked,currentremote draft/getverifiedmediaId prCUE631thH1cmNLi42prFwuuwj0E3ddyHJ4EH74voEJCC5hMWuMhp8iOE95CIhl. KB/index/ledgerupdated.

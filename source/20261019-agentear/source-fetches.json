@@ -1,0 +1,38 @@
+[
+  {
+    "file": "tree.json",
+    "url": "https://api.github.com/repos/iDoris-ai/AgentEar/git/trees/5ac61569dcc551d7e0a4ee90538251f25a36d319?recursive=1",
+    "bytes": 86629,
+    "sha256": "27f6785218bdd3466c09867b6180244cd651ac953175b82d4d86ad6ade006bb2"
+  },
+  {
+    "file": "Cargo.toml",
+    "url": "https://raw.githubusercontent.com/iDoris-ai/AgentEar/5ac61569dcc551d7e0a4ee90538251f25a36d319/Cargo.toml",
+    "bytes": 1149,
+    "sha256": "8ae0b309c9e37c5bc7aec6f9c4f101aa17ff7299b6ca0172f52751126f96366b"
+  },
+  {
+    "file": "LICENSE",
+    "url": "https://raw.githubusercontent.com/iDoris-ai/AgentEar/5ac61569dcc551d7e0a4ee90538251f25a36d319/LICENSE",
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "file": "NOTICE",
+    "url": "https://raw.githubusercontent.com/iDoris-ai/AgentEar/5ac61569dcc551d7e0a4ee90538251f25a36d319/NOTICE",
+    "bytes": 1507,
+    "sha256": "b0923b4ee2a3e986c644007ab3e430ca1ac8a83952d756333e79c470b61c6b7b"
+  },
+  {
+    "file": "AgentEar-0.27.0-preview.20261015.1-macos26-arm64.dmg",
+    "url": "https://github.com/iDoris-ai/AgentEar/releases/download/v0.27.0-preview.20261015.1/AgentEar-0.27.0-preview.20261015.1-macos26-arm64.dmg",
+    "bytes": 6345251,
+    "sha256": "f6c16a8966ba90081a514e093759878071399ed3524e1e502e65ab650547d270"
+  },
+  {
+    "file": "SHA256SUMS",
+    "url": "https://github.com/iDoris-ai/AgentEar/releases/download/v0.27.0-preview.20261015.1/SHA256SUMS",
+    "bytes": 119,
+    "sha256": "0b615057551eed6d989f6b52227a4063be8522752e994873f542508246067775"
+  }
+]
