@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "localdot-local-ai-computer",
+      "url": "https://blog.mushroom.cv/blog/localdot-local-ai-computer/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/localdot-local-ai-computer-banner.Br2zPFqQ_Z1F3u2n.webp",
+          "status": 200,
+          "bytes": 33496
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/localdot-local-ai-computer-fig-01.L6M2C150_1fPtHy.webp",
+          "status": 200,
+          "bytes": 73854
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/localdot-local-ai-computer-fig-02.D3WOsd95_Z273Bre.webp",
+          "status": 200,
+          "bytes": 48480
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/localdot-local-ai-computer-fig-03.BhdFD3Lx_2yjJU.webp",
+          "status": 200,
+          "bytes": 55100
+        }
+      ],
+      "listPosition": 2,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}

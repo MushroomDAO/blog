@@ -1,0 +1,75 @@
+[
+  {
+    "file": "README.md",
+    "url": "https://raw.githubusercontent.com/Shadowhusky/localdot/e5054494125d09c6db86aba322be5e46cb8618ca/README.md",
+    "status": 200,
+    "bytes": 8676,
+    "sha256": "6ffbceb28aea25067aaa749cff4282fddb6ec9797912e6f243fae10cd50e4c85"
+  },
+  {
+    "file": "README.zh-CN.md",
+    "url": "https://raw.githubusercontent.com/Shadowhusky/localdot/e5054494125d09c6db86aba322be5e46cb8618ca/README.zh-CN.md",
+    "status": 200,
+    "bytes": 9521,
+    "sha256": "114aa4a48286b95e7ae507f88c2e3c605e67b20318704d783009540c8eed6bc9"
+  },
+  {
+    "file": "LICENSE",
+    "url": "https://raw.githubusercontent.com/Shadowhusky/localdot/e5054494125d09c6db86aba322be5e46cb8618ca/LICENSE",
+    "status": 200,
+    "bytes": 1077,
+    "sha256": "3f7382d9aa13ddedc5bfa6e21e46ae0eb26aa056ff6732e1bf4e05268a131776"
+  },
+  {
+    "file": "THIRD-PARTY.md",
+    "url": "https://raw.githubusercontent.com/Shadowhusky/localdot/e5054494125d09c6db86aba322be5e46cb8618ca/THIRD-PARTY.md",
+    "status": 200,
+    "bytes": 3460,
+    "sha256": "4a797767f1d39ae330290d42c8f43e76bfbf519083ff32d92a10a2f68db82e23"
+  },
+  {
+    "file": "docs__install.md",
+    "url": "https://raw.githubusercontent.com/Shadowhusky/localdot/e5054494125d09c6db86aba322be5e46cb8618ca/docs/install.md",
+    "status": 200,
+    "bytes": 27778,
+    "sha256": "421c449909f9683d19d3f959771c541d75db144e0750adcb7c51eb1850ddda5b"
+  },
+  {
+    "file": "docs__remote-access.md",
+    "url": "https://raw.githubusercontent.com/Shadowhusky/localdot/e5054494125d09c6db86aba322be5e46cb8618ca/docs/remote-access.md",
+    "status": 200,
+    "bytes": 9280,
+    "sha256": "dac7f72c824bee2b75ca4db790c1ff89e63bf7ddc9f012a9266607caf8ed22e9"
+  },
+  {
+    "file": "docs__models.md",
+    "url": "https://raw.githubusercontent.com/Shadowhusky/localdot/e5054494125d09c6db86aba322be5e46cb8618ca/docs/models.md",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "docs__safety.md",
+    "url": "https://raw.githubusercontent.com/Shadowhusky/localdot/e5054494125d09c6db86aba322be5e46cb8618ca/docs/safety.md",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "package.json",
+    "url": "https://raw.githubusercontent.com/Shadowhusky/localdot/e5054494125d09c6db86aba322be5e46cb8618ca/package.json",
+    "status": 200,
+    "bytes": 1654,
+    "sha256": "71175a754db56c7788e2824b4fb3c8460cb414bec61e1024abcbf9dbf90c9143"
+  },
+  {
+    "file": "install.sh",
+    "url": "https://raw.githubusercontent.com/Shadowhusky/localdot/e5054494125d09c6db86aba322be5e46cb8618ca/install.sh",
+    "status": 200,
+    "bytes": 76835,
+    "sha256": "dc246ac124f5b3bb3a22ac5aa118950ab22b0c0230560ddc6b555495fabb9b67"
+  },
+  {
+    "file": "tree.json",
+    "url": "https://api.github.com/repos/Shadowhusky/localdot/git/trees/e5054494125d09c6db86aba322be5e46cb8618ca?recursive=1",
+    "status": 200,
+    "bytes": 1006864,
+    "sha256": "770c4d26fd4ddee5082748e54cba41da9362b34ca43b878445cbdf9b24528e7e"
+  }
+]
