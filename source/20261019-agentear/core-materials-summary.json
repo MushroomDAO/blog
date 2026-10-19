@@ -1,0 +1,41 @@
+{
+  "schema": "agentear-core-materials-v1",
+  "package": {
+    "name": "AgentEar",
+    "version": "0.27.0",
+    "bundle_id": "ai.idoris.agentear",
+    "architecture": "arm64"
+  },
+  "source_basis": {
+    "merged_commit": "5ac61569dcc551d7e0a4ee90538251f25a36d319",
+    "tree": "470844185418992f6d4d6608a8e01872370de22f",
+    "equivalent_accepted_commit": "c9384bd2f247a3ad26f667fd159f2bace2a7e360",
+    "cargo_lock_sha256": "b02952d136cb0ac7dc8e7f867c68248a2d6e46cf88d6a2cadebe3941d3622c8e",
+    "binary_reproducibility_attestation": false
+  },
+  "scope": {
+    "model_weights": "none bundled",
+    "voice_files": "none bundled",
+    "licenses": "conservative full168 dependency graph, not binary attribution",
+    "text_packages": 153,
+    "upstream_statement_only_packages": 15,
+    "verbatim_text_files": 286,
+    "legal_clearance": false,
+    "native_binary_sha256": "Pre-sign input provenance only. Developer ID signing changes Mach-O bytes. Final signed-file SHA-256 values belong to external release evidence; these values are not a post-sign installed-file integrity manifest."
+  },
+  "preview_minimum_os": {
+    "minimum_macos": "26.0",
+    "scope": "this private ARM64 preview artifact only (AgentEar 0.27.0, ai.idoris.agentear). Not a product-wide long-term compatibility policy; the source scripts/bundle.sh declares 11.0 and is unchanged.",
+    "override_reason": "The bundled llama-funasr-sensevoice (default builtin zh/en ASR) has LC_BUILD_VERSION minos 26.0. The QA-verified engine bytes were kept unmodified instead of rebuilding or patching Mach-O headers, so the preview declares the floor it actually needs.",
+    "macho_minos_static_read": {
+      "Contents/MacOS/AgentEar": "11.0",
+      "Contents/Resources/vendor/bin/whisper-cli": "11.0",
+      "Contents/Resources/vendor/bin/llama-funasr-sensevoice": "26.0"
+    },
+    "not_claimed": [
+      "support on macOS 11-15 (default ASR cannot start there)",
+      "any product-wide change to the 11.0 minimum",
+      "legal clearance or signing/notarization approval"
+    ]
+  }
+}

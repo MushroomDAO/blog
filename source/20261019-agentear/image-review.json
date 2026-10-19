@@ -1,0 +1,27 @@
+{
+  "cover": {
+    "model": "local FLUX.2 Klein",
+    "seed": 147,
+    "bytes": 93282,
+    "rootVisualReview": "pass: microphone beside laptop and blank cards, thematic photograph not a product screenshot",
+    "machineVerification": "pass: provenance, framing, dimensions, size, no OCR text and no faces"
+  },
+  "body": [
+    {
+      "figure": 1,
+      "bytes": 76425,
+      "rootVisualReview": "pass: correct sparse labels and matching article claim"
+    },
+    {
+      "figure": 2,
+      "bytes": 67777,
+      "rootVisualReview": "pass: correct sparse labels and matching article claim"
+    },
+    {
+      "figure": 3,
+      "bytes": 88284,
+      "rootVisualReview": "pass: correct sparse labels and matching article claim"
+    }
+  ],
+  "originalDirectory": "/Users/jason/.codex/generated_images/01a153dc-b47a-7bc2-954f-4f3596cd6a2a"
+}
