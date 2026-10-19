@@ -1,0 +1,13 @@
+=== [adopt-banner] sac-little-prince-ai-game-workflow ← 1 source image(s) → src/assets/images/sac-little-prince-ai-game-workflow-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /Users/jason/.heinu1-bot/media/sac-little-prince-scene-crop.jpg
+=== [adopt-banner] done: src/assets/images/sac-little-prince-ai-game-workflow-banner.jpg (1200x630, 96737B) ===
+=== [verify-banner] src/assets/images/sac-little-prince-ai-game-workflow-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/Users/jason/.heinu1-bot/media/sac-little-prince-scene-crop.jpg
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 96737B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/sac-little-prince-ai-game-workflow-banner.jpg ===
+PATH: src/assets/images/sac-little-prince-ai-game-workflow-banner.jpg

@@ -1,0 +1,93 @@
+{
+  "query": "Sac Little Prince production guide original tutorial Tripo rigging Unity",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.6952325,
+    "article_id": "sac-little-prince-ai-game-workflow"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "sac-little-prince-ai-game-workflow",
+        "title": "Sac’s Little Prince: An AI 3D Game Production Guide",
+        "url": "/blog/sac-little-prince-ai-game-workflow/",
+        "language": "en",
+        "excerpt": "Sac’s Little Prince: An AI 3D Game Production Guide Trace Sac’s Little Prince AI game workflow: references, Tripo assets, Blender rigging, Unity tools, animation retargeting and browser deployment checks. AI游戏开发 Tripo Blender Unity 角色动画 Where are the original post, video and sour",
+        "score": 0.6952325
+      },
+      {
+        "article_id": "grpo-small-model-engineering-guide",
+        "title": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径",
+        "url": "/blog/grpo-small-model-engineering-guide/",
+        "language": "zh",
+        "excerpt": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径 GRPO（Group Relative Policy Optimization）让小模型在垂直任务上碾压frontier大模型成为可能。本文整合 ART、ms-swift、OpenClaw-RL 等开源仓库，以及 ART·E（Qwen 2.5 14B超越o3，$80训练）、MCP·RL等6个真实工程案例，给出完整的工程路径：任务选择→数据构造→奖励函数设计→训练循环→监控与避坑。 GRPO 强化学习 小模型 Qwen 微调 LLM训练 AI工程 Mycelium 为什么 GRPO 适合小模型专",
+        "score": 0.5102639
+      },
+      {
+        "article_id": "vpipe-minimax-h3-apple-silicon-video-audio-local-metal-cpp-pipeline",
+        "title": "M5 Air 16GB 本地跑 33B 视频模型：vpipe 实测，15 分钟生成 3.75 秒有声视频",
+        "url": "/blog/vpipe-minimax-h3-apple-silicon-video-audio-local-metal-cpp-pipeline/",
+        "language": "zh",
+        "excerpt": "M5 Air 16GB 本地跑 33B 视频模型：vpipe 实测，15 分钟生成 3.75 秒有声视频 tgo-app-dev/vpipe 是一个 C++ 编写的苹果芯片多模态 AI 运行时，整个 build 产物不到 25MB。它把 MiniMax H3（33B）跑在 16GB M5 MacBook Air 上——视频和音轨由同一个去噪循环生成，不是事后配音。实测 960×544 / 24fps / 3.75s / 8-step DiT，约 15 分钟。项目完成度极高：pipeline JSON 规范、浏览器 Web UI、手机扫码接入、本地 MCP",
+        "score": 0.47375202
+      },
+      {
+        "article_id": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+        "title": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+        "url": "/blog/sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation/",
+        "language": "en",
+        "excerpt": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation Sprite Studio is an open-source (MIT) local-first AI 2D game art desktop workbench built with Tauri 2, Svelte, Rust, SQLite, and Codex CLI. Features chat-based sprite generation, sequential AI animation (identity + nei",
+        "score": 0.4714576
+      },
+      {
+        "article_id": "how-to-develop-webgl-3d-game-threejs-complete-guide",
+        "title": "如何开发一个 WebGL 游戏：逆向拆解 messenger.abeto.co 的完整技术栈",
+        "url": "/blog/how-to-develop-webgl-3d-game-threejs-complete-guide/",
+        "language": "zh",
+        "excerpt": "如何开发一个 WebGL 游戏：逆向拆解 messenger.abeto.co 的完整技术栈 通过逆向分析一款真实上线的卡通风格 WebGL 多人游戏，拆解 Three.js r180、postprocessing、Svelte 5、WebSocket 的完整技术架构，给出可落地的开发路线图。 WebGL Three.js 游戏开发 Svelte postprocessing WebSocket 前端 游戏截图 完整技术栈拆解 核心渲染层 UI 框架 & 构建 3D 资产管线 后处理效果——画面丝滑的关键 卡通渲染实现 渲染性能优化 InstancedM",
+        "score": 0.46615213
+      },
+      {
+        "article_id": "pixelle-video-ai-short-video-engine-guide",
+        "title": "Turn One Sentence Into a Complete Short Video: Pixelle-Video Complete Guide",
+        "url": "/blog/pixelle-video-ai-short-video-engine-guide/",
+        "language": "en",
+        "excerpt": "Turn One Sentence Into a Complete Short Video: Pixelle-Video Complete Guide Pixelle-Video (24,456★, AIDC-AI) is a fully automated short video engine — input a topic, get a complete video with AI script, illustrations, voiceover, and BGM. Windows one-click package needs zero setup",
+        "score": 0.4646386
+      },
+      {
+        "article_id": "standrig-ai-2d-rigging-mcp-psd-cubism",
+        "title": "StandRig：AI 直接当 rigger，MCP 原生的 2D 角色建模系统",
+        "url": "/blog/standrig-ai-2d-rigging-mcp-psd-cubism/",
+        "language": "zh",
+        "excerpt": "StandRig：AI 直接当 rigger，MCP 原生的 2D 角色建模系统 开发者预览版开源工具：把分层 PSD 喂给本地服务，Claude Code 等 AI 通过 MCP 直接编辑 Mesh、Deformer 和参数，配套 cubism-api-bridge 打通 Live2D Cubism Editor。AI 不再是辅助，而是替代了传统 rigging 的手工部分。 AI-agent MCP Live2D VTuber 2D-rigging open-source Rigging 的时间消耗去哪了 StandRig 的做法 快速上手 cubi",
+        "score": 0.46042442
+      },
+      {
+        "article_id": "marketing-studio-claude-code-one-command-launch-assets",
+        "title": "One Command for Your Full Product Launch Asset Suite: Marketing Studio Complete Guide",
+        "url": "/blog/marketing-studio-claude-code-one-command-launch-assets/",
+        "language": "en",
+        "excerpt": "One Command for Your Full Product Launch Asset Suite: Marketing Studio Complete Guide ucsandman/marketing-studio (85⭐) is a Claude Code skill suite — type /marketing in your product repo and an AI agent auto-produces brand tokens, screen recording, logo animation, launch video, v",
+        "score": 0.45495027
+      },
+      {
+        "article_id": "clypra-open-source-video-editor-tauri-rust-ffmpeg",
+        "title": "按头安利：Clypra —— 用 Tauri + Rust + FFmpeg 打造的开源视频编辑器，剪映 Pro 付费功能全免费",
+        "url": "/blog/clypra-open-source-video-editor-tauri-rust-ffmpeg/",
+        "language": "zh",
+        "excerpt": "按头安利：Clypra —— 用 Tauri + Rust + FFmpeg 打造的开源视频编辑器，剪映 Pro 付费功能全免费 Clypra 是一款用 Tauri v2 + React + Rust 打造的跨平台开源视频编辑器（MIT 协议），专注把 CapCut／剪映 Pro 的付费专业功能全部本地免费化：多轨时间轴、硬件加速解码、H.264/H.265/ProRes 导出，无水印无订阅。本文覆盖硬件配置建议、完整本地编译部署流程、首个视频导出全过程。 开源工具 视频编辑 Tauri Rust 本地部署 它是什么 核心功能（完全免费） 硬件配置要求 ",
+        "score": 0.45212853
+      },
+      {
+        "article_id": "mcp-rag-server-local-rag-claude-code-blueprint",
+        "title": "mcp-rag-server 拆解：830 行 Python 把文档库做成 Claude Code 能调用的检索工具",
+        "url": "/blog/mcp-rag-server-local-rag-claude-code-blueprint/",
+        "language": "zh",
+        "excerpt": "mcp-rag-server 拆解：830 行 Python 把文档库做成 Claude Code 能调用的检索工具 MMC1410001/mcp-rag-server 是一个 0 star、MIT 协议的最小 MCP + RAG 实现：本地 all-MiniLM-L6-v2 嵌入、ChromaDB 持久化、5 个 MCP 工具。我们读完全部代码并在 Mac mini 上实测：39 个测试全过、检索单次 7-105 毫秒，但中文检索基本失效、单文件 Drive 导入已被 gdown 6 弄坏。文中给出改成全本地的路径。 MCP RAG Claude Co",
+        "score": 0.45172572
+      }
+    ]
+  }
+}
