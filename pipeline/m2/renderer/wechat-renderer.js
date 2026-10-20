@@ -6,6 +6,10 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
+function escapeCodeText(text) {
+  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 // 主题配置 - 扩展更多主题
 const THEMES = {
   claude: {
@@ -358,16 +362,16 @@ async function render(markdown, themeName = null, wechatClient = null) {
     },
     
     code(token) {
-      const code = token.text;
+      const code = escapeCodeText(token.text);
       const lines = code.split('\n').map(line => 
-        `<tr><td style="padding:4px 12px;font-family:'Courier New',monospace;font-size:14px;line-height:1.6;color:${theme.codeText};white-space:pre;">${line.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</td></tr>`
+        `<tr><td style="padding:4px 12px;font-family:'Courier New',monospace;font-size:14px;line-height:1.6;color:${theme.codeText};white-space:pre;">${line}</td></tr>`
       ).join('');
       
       return `<table style="width:100%;margin:20px 0;background:${theme.codeBg};border-radius:8px;overflow:hidden;"><tbody>${lines}</tbody></table>`;
     },
     
     codespan(token) {
-      return `<code style="background:${theme.bgGray};padding:2px 6px;border-radius:4px;font-family:'Courier New',monospace;font-size:14px;color:${theme.primary};">${token.text}</code>`;
+      return `<code style="background:${theme.bgGray};padding:2px 6px;border-radius:4px;font-family:'Courier New',monospace;font-size:14px;color:${theme.primary};">${escapeCodeText(token.text)}</code>`;
     },
     
     strong(token) {
