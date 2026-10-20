@@ -1,0 +1,35 @@
+{
+  "banner": {
+    "method": "FLUX.2 Klein seed150",
+    "machineVerification": "pass: framing, dimensions, size, OCR, faces, provenance",
+    "visualReview": "Unmarked mini PC illustrating integrated compute, no external graphics card. Conceptual, not hardware-test photography.",
+    "rejectedSeed149": "OCR text detected; not used"
+  },
+  "figures": {
+    "method": "imagegen through instructed illustration skill",
+    "visualReview": "Reviewed all three final PNGs: integrated GPU/shared memory, distinct PP/decode/TTFT, and cached-prefix versus cold input. White background and readable labels.",
+    "bilingualInsertion": true
+  },
+  "assets": [
+    {
+      "path": "src/assets/images/strix-halo-halogen-gufo-prefill-banner.jpg",
+      "sha256": "243b3fd7b82694af0ed4cd38af82c50df213cc01dae970aae6011f36c36f35aa",
+      "bytes": 93553
+    },
+    {
+      "path": "src/assets/images/strix-halo-halogen-gufo-prefill-fig-01.png",
+      "sha256": "74b1d4002ba5f0addbf9d3396376a5757d23e271fa1cb9de7d2592e0d66529f8",
+      "bytes": 84270
+    },
+    {
+      "path": "src/assets/images/strix-halo-halogen-gufo-prefill-fig-02.png",
+      "sha256": "b577fe64089ebf5dc9a99c15de281ce49c801645f0311122916f18d9292836ef",
+      "bytes": 70425
+    },
+    {
+      "path": "src/assets/images/strix-halo-halogen-gufo-prefill-fig-03.png",
+      "sha256": "99bf887a921c907eb9b9a7bbdd657c1eb8e1a37ec20de513cee3db012f673f88",
+      "bytes": 83033
+    }
+  ]
+}

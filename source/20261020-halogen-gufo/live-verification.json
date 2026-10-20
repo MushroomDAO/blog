@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "strix-halo-halogen-gufo-prefill",
+      "url": "https://blog.mushroom.cv/blog/strix-halo-halogen-gufo-prefill/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/strix-halo-halogen-gufo-prefill-banner.DpRQX65Y_Z2bax92.webp",
+          "status": 200,
+          "bytes": 31562
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/strix-halo-halogen-gufo-prefill-fig-01.EQOiaR5e_2rMgsz.webp",
+          "status": 200,
+          "bytes": 58030
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/strix-halo-halogen-gufo-prefill-fig-02.Cwm3AwN6_Z2bILLh.webp",
+          "status": 200,
+          "bytes": 33690
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/strix-halo-halogen-gufo-prefill-fig-03.0g3BCaEx_1toIMo.webp",
+          "status": 200,
+          "bytes": 95622
+        }
+      ],
+      "listPosition": 1,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}

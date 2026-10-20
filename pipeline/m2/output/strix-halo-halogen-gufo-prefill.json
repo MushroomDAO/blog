@@ -1,0 +1,15 @@
+{
+  "title": "395跑大模型：Halogen与Gufo",
+  "author": "Mycelium",
+  "digest": "接近两千的Prefill有数据支持，但模型、量化、缓存与输出速度必须分开看。",
+  "mediaId": "prCUE631thH1cmNLi42prPW8RqGUqEW6Ua79Wqvo-YNJ2THoDF0CscH6WN5P8Wbu",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/gufo-org/gufo",
+    "github.com/peonist-ai/halogen-flash-server",
+    "github.com/peonist-ai/halogen-server",
+    "github.com/orenaksakal/strix-halo-gufo-halogen-configs"
+  ],
+  "publishedAt": "2026-10-20T00:22:21.054Z",
+  "updateReason": "Added cached-prefix figure via draft/update, retaining the original media_id; read back and compared all rendered text and three image URLs/alts. WeChat normalizes entities and image attributes."
+}
