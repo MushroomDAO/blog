@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "abot-recon-streaming-3d-reconstruction",
+    "checks": {
+      "descriptions": true,
+      "titleEn": true,
+      "wechatTitle": true,
+      "wechatDigest": true,
+      "bilingual": true,
+      "copyright": true,
+      "faq": true,
+      "questionHeadings": true,
+      "date": true,
+      "category": true,
+      "tags": true,
+      "figuresBothLanguages": true,
+      "primarySources": true,
+      "internalLink": true,
+      "scope": true
+    },
+    "assets": [
+      {
+        "path": "src/assets/images/abot-recon-streaming-3d-reconstruction-banner.jpg",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 94546
+      },
+      {
+        "path": "src/assets/images/abot-recon-streaming-3d-reconstruction-fig-01.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 63370
+      },
+      {
+        "path": "src/assets/images/abot-recon-streaming-3d-reconstruction-fig-02.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 77943
+      },
+      {
+        "path": "src/assets/images/abot-recon-streaming-3d-reconstruction-fig-03.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 64430
+      }
+    ]
+  },
+  {
+    "slug": "openui-1-generative-ui-engineering",
+    "checks": {
+      "descriptions": true,
+      "titleEn": true,
+      "wechatTitle": true,
+      "wechatDigest": true,
+      "bilingual": true,
+      "copyright": true,
+      "faq": true,
+      "questionHeadings": true,
+      "date": true,
+      "category": true,
+      "tags": true,
+      "figuresBothLanguages": true,
+      "primarySources": true,
+      "internalLink": true,
+      "scope": true
+    },
+    "assets": [
+      {
+        "path": "src/assets/images/openui-1-generative-ui-engineering-banner.jpg",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 87889
+      },
+      {
+        "path": "src/assets/images/openui-1-generative-ui-engineering-fig-01.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 53094
+      },
+      {
+        "path": "src/assets/images/openui-1-generative-ui-engineering-fig-02.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 44545
+      },
+      {
+        "path": "src/assets/images/openui-1-generative-ui-engineering-fig-03.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 66003
+      }
+    ]
+  }
+]

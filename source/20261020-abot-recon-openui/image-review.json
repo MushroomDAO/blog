@@ -1,0 +1,60 @@
+[
+  {
+    "slug": "abot-recon-streaming-3d-reconstruction",
+    "assets": [
+      {
+        "path": "src/assets/images/abot-recon-streaming-3d-reconstruction-banner.jpg",
+        "bytes": 94546,
+        "sha256": "6b0d0d8cad8c82746c7c0862d443a0e9dcff1c20062cace8eb2801e95efe1f8a"
+      },
+      {
+        "path": "src/assets/images/abot-recon-streaming-3d-reconstruction-fig-01.png",
+        "bytes": 63370,
+        "sha256": "e3b9be88f879f45548bad08a8db60117aa8bbfff8af65e627ba5d28af270adfb"
+      },
+      {
+        "path": "src/assets/images/abot-recon-streaming-3d-reconstruction-fig-02.png",
+        "bytes": 77943,
+        "sha256": "32bb2a936853d846d2ee7c078631f4f5a7440101138e1d8ccd774d99b0b3cdb4"
+      },
+      {
+        "path": "src/assets/images/abot-recon-streaming-3d-reconstruction-fig-03.png",
+        "bytes": 64430,
+        "sha256": "e859a31a80c9033a501cb5caf28052c155cf8e7c84a5ceae362265f845acfd53"
+      }
+    ],
+    "bannerProvenance": "official teaser adopted",
+    "machineBannerVerification": "pass; sourcecaptionOCRwarningaccepted for official ABot teaser; no faces",
+    "rootVisualReview": "Reviewed final cover and all3illustrations. Correct topic, legible labels, white figure background, no claim of our own hardware/video/model result.",
+    "bilingualFigures": true
+  },
+  {
+    "slug": "openui-1-generative-ui-engineering",
+    "assets": [
+      {
+        "path": "src/assets/images/openui-1-generative-ui-engineering-banner.jpg",
+        "bytes": 87889,
+        "sha256": "ee7e47c78d330901036a1b80283944f6f8984af88e70cac8cfca671bad41455f"
+      },
+      {
+        "path": "src/assets/images/openui-1-generative-ui-engineering-fig-01.png",
+        "bytes": 53094,
+        "sha256": "09e06e4cb2364d4484d9a31e7524b69d3191dd675d12f9f4f7fdb7815d2c3fb9"
+      },
+      {
+        "path": "src/assets/images/openui-1-generative-ui-engineering-fig-02.png",
+        "bytes": 44545,
+        "sha256": "d78e5820d42796748ed16ef4a0161e106fe4f20cd11464c70f757deadfc2e6ff"
+      },
+      {
+        "path": "src/assets/images/openui-1-generative-ui-engineering-fig-03.png",
+        "bytes": 66003,
+        "sha256": "1b5c3ca3386252533cf2cf242fab7a1e19ae06c1c19d4f6e48b9ebba9e38ecd5"
+      }
+    ],
+    "bannerProvenance": "FLUX.2 Klein seed151 conceptual modular glass tiles",
+    "machineBannerVerification": "pass; sourcecaptionOCRwarningaccepted for official ABot teaser; no faces",
+    "rootVisualReview": "Reviewed final cover and all3illustrations. Correct topic, legible labels, white figure background, no claim of our own hardware/video/model result.",
+    "bilingualFigures": true
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "revision": "6e3b2e1257464a74dfceff22eb33190bd228276e",
+  "torchVersion": "2.14.0",
+  "device": "cpu",
+  "checks": [
+    "upstream geometry example: relative translation -2",
+    "local origin transforms to world x=0,2",
+    "single-frame relative trajectory empty"
+  ],
+  "passed": true,
+  "scope": "Actual geometry helpers loaded in isolation; no model/weights/video/CUDA/SLAM accuracy or speed test."
+}
