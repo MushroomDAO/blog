@@ -1,0 +1,54 @@
+{
+  "slug": "ascii-portrait-browser-animation",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "internal_link": true,
+    "alt": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/ascii-portrait-browser-animation-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 94483
+    },
+    {
+      "path": "src/assets/images/ascii-portrait-browser-animation-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 82960
+    },
+    {
+      "path": "src/assets/images/ascii-portrait-browser-animation-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 71379
+    },
+    {
+      "path": "src/assets/images/ascii-portrait-browser-animation-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 61419
+    }
+  ]
+}
