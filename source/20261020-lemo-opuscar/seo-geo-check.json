@@ -1,0 +1,54 @@
+{
+  "slug": "lemo-opuscar-code-video-skill",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/lemo-opuscar-code-video-skill-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 91452
+    },
+    {
+      "path": "src/assets/images/lemo-opuscar-code-video-skill-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 60916
+    },
+    {
+      "path": "src/assets/images/lemo-opuscar-code-video-skill-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 38632
+    },
+    {
+      "path": "src/assets/images/lemo-opuscar-code-video-skill-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 65154
+    }
+  ]
+}

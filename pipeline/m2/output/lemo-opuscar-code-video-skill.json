@@ -1,0 +1,14 @@
+{
+  "title": "Lemo Opuscar：用代码拍51种风格短片",
+  "author": "Mycelium",
+  "digest": "它把导演指南、风格与渲染工具打包成Skill，中文配音、模型成本和成片验收仍需分清。",
+  "mediaId": "prCUE631thH1cmNLi42prE-Eof8c4N3-Uv6Fqiv0i_6LpOfkWJGwVIi-j4sS8OBD",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/lemomo-ai/lemo-opuscar.git",
+    "github.com/lemomo-ai/lemo-opuscar"
+  ],
+  "publishedAt": "2026-10-20T00:48:42.402Z",
+  "updatedAt": "2026-10-20T00:51:09.888Z",
+  "updateReason": "Fixed inline-code escaping in renderer and updated the same existing draft; no second draft/add."
+}
