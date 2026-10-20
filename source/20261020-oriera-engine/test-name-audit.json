@@ -1,0 +1,33 @@
+{
+  "defaultCount": 115,
+  "providersCount": 37,
+  "repeatedNames": [
+    "oriera_genai::config::tests::base_urls_are_overridable",
+    "oriera_genai::config::tests::factory_offline_by_default",
+    "oriera_genai::config::tests::kinds_roundtrip_and_default_to_mock",
+    "oriera_genai::hot_swap::tests::bare_world_lands_nothing",
+    "oriera_genai::hot_swap::tests::lands_behind_the_logical_name",
+    "oriera_genai::hot_swap::tests::regeneration_keeps_one_entry_and_swaps_payload",
+    "oriera_genai::mock::tests::empty_name_is_rejected",
+    "oriera_genai::mock::tests::lifecycle_is_queued_running_succeeded",
+    "oriera_genai::mock::tests::output_is_deterministic_across_providers",
+    "oriera_genai::mock::tests::polls_after_terminal_keep_returning_the_asset",
+    "oriera_genai::mock::tests::unknown_task_is_a_provider_error",
+    "oriera_genai::mock::tests::unsupported_kind_fails_fast",
+    "oriera_genai::mock::tests::video_requests_land_video_stubs",
+    "oriera_genai::system::tests::bare_world_boots_without_panicking",
+    "oriera_genai::system::tests::full_lifecycle_lands_a_validated_swap_and_event",
+    "oriera_genai::system::tests::in_flight_is_bounded_by_limits",
+    "oriera_genai::system::tests::limits_clamp_through_one_entry_point",
+    "oriera_genai::system::tests::provider_failure_lands_a_placeholder_not_a_crash",
+    "oriera_genai::system::tests::unsupported_requests_fail_without_placeholder",
+    "oriera_genai::tests::capabilities_gate_kinds",
+    "oriera_genai::tests::limits_clamp_through_one_entry_point",
+    "oriera_genai::tests::oversized_payload_is_rejected",
+    "oriera_genai::tests::stubs_pass_their_format_signatures",
+    "oriera_genai::tests::task_status_terminality",
+    "oriera_genai::tests::tiny_glb_is_a_valid_asset",
+    "oriera_genai::tests::wrong_magic_is_rejected"
+  ],
+  "uniqueCheckIdentifiers": 126
+}

@@ -1,0 +1,58 @@
+   Compiling serde_core v1.0.229
+   Compiling tracing-core v0.1.36
+   Compiling syn v2.0.119
+   Compiling tracing-attributes v0.1.31
+   Compiling tracing v0.1.44
+   Compiling oriera-ecs v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-ecs)
+   Compiling oriera-core v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-core)
+   Compiling serde_json v1.0.154
+   Compiling oriera-genai v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-genai)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 10.05s
+     Running unittests src/lib.rs (target/debug/deps/oriera_genai-43352d5ef8954660)
+
+running 37 tests
+test hot_swap::tests::lands_behind_the_logical_name ... ok
+test hot_swap::tests::bare_world_lands_nothing ... ok
+test mock::tests::empty_name_is_rejected ... ok
+test mock::tests::output_is_deterministic_across_providers ... ok
+test mock::tests::polls_after_terminal_keep_returning_the_asset ... ok
+test config::tests::kinds_roundtrip_and_default_to_mock ... ok
+test config::tests::base_urls_are_overridable ... ok
+test hot_swap::tests::regeneration_keeps_one_entry_and_swaps_payload ... ok
+test config::tests::factory_offline_by_default ... ok
+test mock::tests::lifecycle_is_queued_running_succeeded ... ok
+test mock::tests::unknown_task_is_a_provider_error ... ok
+test mock::tests::unsupported_kind_fails_fast ... ok
+test mock::tests::video_requests_land_video_stubs ... ok
+test seedance::tests::model_override_flows_into_the_request ... ok
+test seedance::tests::non_video_kinds_are_unsupported ... ok
+test seedance::tests::create_then_poll_then_download ... ok
+test seedance::tests::pending_and_failed_statuses_map_correctly ... ok
+test system::tests::bare_world_boots_without_panicking ... ok
+test system::tests::full_lifecycle_lands_a_validated_swap_and_event ... ok
+test system::tests::in_flight_is_bounded_by_limits ... ok
+test system::tests::limits_clamp_through_one_entry_point ... ok
+test system::tests::provider_failure_lands_a_placeholder_not_a_crash ... ok
+test system::tests::unsupported_requests_fail_without_placeholder ... ok
+test tests::capabilities_gate_kinds ... ok
+test tests::limits_clamp_through_one_entry_point ... ok
+test tests::oversized_payload_is_rejected ... ok
+test tests::stubs_pass_their_format_signatures ... ok
+test tests::task_status_terminality ... ok
+test tests::tiny_glb_is_a_valid_asset ... ok
+test tests::wrong_magic_is_rejected ... ok
+test tripo::tests::foreign_task_ids_are_rejected ... ok
+test tripo::tests::create_then_poll_then_download ... ok
+test tripo::tests::missing_key_fails_fast ... ok
+test tripo::tests::non_3d_kinds_are_unsupported ... ok
+test tripo::tests::nonzero_code_is_an_error ... ok
+test tripo::tests::pending_statuses_map_to_running ... ok
+test tripo::tests::vendor_failure_maps_to_failed_status ... ok
+
+test result: ok. 37 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests oriera_genai
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
