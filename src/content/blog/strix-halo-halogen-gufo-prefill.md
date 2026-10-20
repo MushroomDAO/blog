@@ -50,6 +50,8 @@ AMD 官方规格给出 256-bit LPDDR5x、最高 128 GB 内存和 LPDDR5x-8000。
 
 这张表的名义输入是 `pp2048 / tg128`，其中 depth 表示已经存在的会话缓存前缀。**“128K 深度仍有 1557”描述的是深上下文下处理新增约 2K token，并非冷启动重新处理全部 128K。**
 
+![复用128K缓存后只处理约2K新增输入，与冷启动处理全部128K是不同工作量](../../assets/images/strix-halo-halogen-gufo-prefill-fig-03.png)
+
 Gufo 的这些 Flash-Next 表在 2026-10-18 刷新，记录构建 `fec4759d`。文档说明多数点是一份 warmed 样本，不能理解为经过大量重复测量后，每台机器都能稳定落在同一个值。
 
 模型本身也很重要。同一固定仓库的 Qwen3.8-27B Q4 表，零深度 AR prefill 是 648.89 token/s。395 不是装了专用引擎后，所有模型都会自动到 1800。Flash-Next 的 MoE、混合循环/QSA 结构与 dense 27B 的计算路径不同，总参数规模也不能直接当作每 token 的计算量。
@@ -226,6 +228,8 @@ The pinned Gufo documentation reports Qwen3.8-Flash-Next using Unsloth's four-sh
 | 131,072 | 130,932 | 2047 | 1557.18 token/s | 27.85 token/s |
 
 The nominal workload is `pp2048 / tg128`; depth describes an existing conversation-cache prefix. **The 128K-depth result measures roughly 2K additional tokens against that prefix, not a cold reprocessing of all 128K.**
+
+![Reusing a 128K prefix and processing about 2K new tokens differs from a cold 128K prompt](../../assets/images/strix-halo-halogen-gufo-prefill-fig-03.png)
 
 These Flash-Next tables were refreshed on 2026-10-18 using build `fec4759d`. Most points are one warmed sample, not a large repeated estimate guaranteeing the same speed on every host.
 
