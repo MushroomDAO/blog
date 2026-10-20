@@ -1,102 +1,177 @@
 {
-  "generatedAt": "2026-10-13T14:00:00Z",
+  "generatedAt": "2026-10-20T14:00:00Z",
   "period": {
-    "start": "2026-09-13",
-    "end": "2026-10-13"
+    "start": "2026-09-20",
+    "end": "2026-10-20"
   },
   "totals": {
-    "pageviews": 24000,
-    "visits": 23000,
-    "bots": 20
+    "pageviews": 21530,
+    "visits": 20010,
+    "bots": 10
   },
   "last7": {
-    "pv": 11000,
-    "visits": 11000
+    "pv": 4350,
+    "visits": 4170
   },
   "prior7": {
-    "pv": 10000,
-    "visits": 10000
+    "pv": 5710,
+    "visits": 5510
   },
   "daily": [
     {
-      "date": "09-13",
-      "pv": 2000,
-      "visits": 2000
-    },
-    {
-      "date": "09-16",
-      "pv": 1000,
-      "visits": 0
-    },
-    {
-      "date": "09-19",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
       "date": "09-20",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 150,
+      "visits": 150
     },
     {
       "date": "09-21",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 700,
+      "visits": 650
+    },
+    {
+      "date": "09-22",
+      "pv": 550,
+      "visits": 510
     },
     {
       "date": "09-23",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 660,
+      "visits": 550
+    },
+    {
+      "date": "09-24",
+      "pv": 730,
+      "visits": 660
+    },
+    {
+      "date": "09-25",
+      "pv": 470,
+      "visits": 430
     },
     {
       "date": "09-26",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 560,
+      "visits": 510
     },
     {
       "date": "09-27",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 640,
+      "visits": 560
     },
     {
       "date": "09-28",
-      "pv": 3000,
-      "visits": 3000
+      "pv": 1030,
+      "visits": 870
     },
     {
       "date": "09-29",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 650,
+      "visits": 590
     },
     {
       "date": "09-30",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 530,
+      "visits": 530
     },
     {
       "date": "10-01",
-      "pv": 3000,
-      "visits": 3000
+      "pv": 930,
+      "visits": 800
+    },
+    {
+      "date": "10-02",
+      "pv": 860,
+      "visits": 800
     },
     {
       "date": "10-03",
-      "pv": 1000,
+      "pv": 550,
+      "visits": 490
+    },
+    {
+      "date": "10-04",
+      "pv": 1110,
       "visits": 1000
     },
     {
       "date": "10-05",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 570,
+      "visits": 560
     },
     {
       "date": "10-06",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 780,
+      "visits": 670
+    },
+    {
+      "date": "10-07",
+      "pv": 700,
+      "visits": 650
+    },
+    {
+      "date": "10-08",
+      "pv": 1090,
+      "visits": 1040
     },
     {
       "date": "10-09",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 880,
+      "visits": 860
+    },
+    {
+      "date": "10-10",
+      "pv": 780,
+      "visits": 770
+    },
+    {
+      "date": "10-11",
+      "pv": 690,
+      "visits": 670
+    },
+    {
+      "date": "10-12",
+      "pv": 810,
+      "visits": 770
+    },
+    {
+      "date": "10-13",
+      "pv": 760,
+      "visits": 750
+    },
+    {
+      "date": "10-14",
+      "pv": 730,
+      "visits": 720
+    },
+    {
+      "date": "10-15",
+      "pv": 610,
+      "visits": 590
+    },
+    {
+      "date": "10-16",
+      "pv": 530,
+      "visits": 490
+    },
+    {
+      "date": "10-17",
+      "pv": 650,
+      "visits": 610
+    },
+    {
+      "date": "10-18",
+      "pv": 420,
+      "visits": 410
+    },
+    {
+      "date": "10-19",
+      "pv": 810,
+      "visits": 770
+    },
+    {
+      "date": "10-20",
+      "pv": 600,
+      "visits": 580
     }
   ],
   "countries": [
@@ -105,104 +180,102 @@
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 30000,
-      "visits": 30000
+      "pv": 11000,
+      "visits": 11000
     },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 20000,
-      "visits": 20000
+      "pv": 4000,
+      "visits": 3000
     },
     {
-      "code": "US",
-      "flag": "🇺🇸",
-      "name": "美国",
-      "nameEn": "United States",
-      "pv": 10000,
-      "visits": 10000
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "pv": 2000,
+      "visits": 2000
+    },
+    {
+      "code": "KR",
+      "flag": "🇰🇷",
+      "name": "韩国",
+      "nameEn": "South Korea",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "code": "GB",
+      "flag": "🇬🇧",
+      "name": "英国",
+      "nameEn": "United Kingdom",
+      "pv": 1000,
+      "visits": 1000
     }
   ],
-  "countryTotal": 60000,
+  "countryTotal": 19000,
   "referers": {
-    "direct": 14660,
-    "search": 4950,
-    "ecosystem": 1570,
+    "direct": 13000,
+    "search": 8000,
+    "ecosystem": 1000,
     "ai": 0,
-    "other": 190
+    "other": 0
   },
-  "pages": [
+  "pages": [],
+  "devices": [
     {
-      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
-      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
-      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 10000,
-      "visits": 10000
+      "label": "desktop",
+      "count": 17000
     },
     {
-      "title": "如何真正做好研究：Anthropic 研究员 Vivek 的 7 条核心原则",
-      "titleEn": "How to Be Good at Research: 7 Core Principles from an Anthropic AI Safety Researcher",
-      "path": "/blog/how-to-be-good-at-research-vivek-guide/",
-      "pv": 10000,
-      "visits": 10000
-    },
-    {
-      "title": "claude-mem：95K 星的 Agent 跨会话记忆插件，工程拆解",
-      "titleEn": "claude-mem: Engineering Teardown of the 95K-Star Agent Persistent Memory Plugin",
-      "path": "/blog/claude-mem-persistent-context-agent-session-memory-typescript/",
-      "pv": 10000,
-      "visits": 10000
-    },
-    {
-      "title": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查",
-      "titleEn": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios",
-      "path": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
-      "pv": 10000,
-      "visits": 10000
-    },
-    {
-      "title": "Superset：一个工作区跑 100 个 Agent，Claude Code、Codex、OpenCode 同时干活——普通人上手指南",
-      "titleEn": "superset-parallel-coding-agent-workspace-claude-codex-opencode",
-      "path": "/blog/superset-parallel-coding-agent-workspace-claude-codex-opencode/",
-      "pv": 10000,
-      "visits": 10000
-    },
-    {
-      "title": "HiCAD：用自然语言建 3D 模型，直接导出 STL 去打印",
-      "titleEn": "HiCAD: Describe in Natural Language, Get a 3D-Printable Parametric Model",
-      "path": "/blog/hicad-ai-cad-3d-modeling-platform/",
-      "pv": 10000,
-      "visits": 10000
+      "label": "mobile",
+      "count": 2000
     }
   ],
-  "devices": [],
-  "os": [
+  "os": [],
+  "browsers": [
     {
-      "label": "Windows",
-      "count": 15900
+      "label": "Chrome",
+      "count": 15000
     },
     {
       "label": "Unknown",
-      "count": 2400
+      "count": 2370
     },
     {
-      "label": "MacOSX",
-      "count": 2000
+      "label": "Edge",
+      "count": 2250
     },
     {
-      "label": "Linux",
-      "count": 1000
+      "label": "ChromeMobileWebview",
+      "count": 650
     },
     {
-      "label": "Android",
-      "count": 500
+      "label": "MobileSafari",
+      "count": 590
     },
     {
-      "label": "iOS",
-      "count": 400
+      "label": "Safari",
+      "count": 260
+    },
+    {
+      "label": "ChromeMobile",
+      "count": 180
+    },
+    {
+      "label": "ChromeDerivative",
+      "count": 120
+    },
+    {
+      "label": "Firefox",
+      "count": 100
+    },
+    {
+      "label": "ChromeHeadless",
+      "count": 10
     }
-  ],
-  "browsers": []
+  ]
 }
