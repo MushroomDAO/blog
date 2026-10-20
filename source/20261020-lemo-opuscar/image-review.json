@@ -1,0 +1,27 @@
+{
+  "banner": "FLUX.2 Klein seed152, original conceptual paper film workshop; machine provenance/framing/dimensions/size/OCR/face checks pass; root visually reviewed",
+  "bodyFigures": "Three final PNGs visually reviewed by root: directing+style production, deterministic time\u2192browser frames\u2192FFmpeg, staged review and film+rebuildable source. Readable, white backgrounds, correct topic.",
+  "bothLanguagesContainAllFigures": true,
+  "assets": [
+    {
+      "path": "src/assets/images/lemo-opuscar-code-video-skill-banner.jpg",
+      "bytes": 91452,
+      "sha256": "9805ae3bf9e18beb7c4731b358182f59b13dcb6ae5e3c0488f3ec8dc42b0cc8e"
+    },
+    {
+      "path": "src/assets/images/lemo-opuscar-code-video-skill-fig-01.png",
+      "bytes": 60916,
+      "sha256": "4796179af42e2e3a277087817a60d9a55524db6f8da7165530ab4be741d2f398"
+    },
+    {
+      "path": "src/assets/images/lemo-opuscar-code-video-skill-fig-02.png",
+      "bytes": 38632,
+      "sha256": "82d24f42cdaf658a62a94011873f5312da61bd455825d7a713163e66d74ea5ac"
+    },
+    {
+      "path": "src/assets/images/lemo-opuscar-code-video-skill-fig-03.png",
+      "bytes": 65154,
+      "sha256": "9e74ecb5f94c29bdba5d005b07fb4fa34f51e4780460d734575d978402a9e144"
+    }
+  ]
+}

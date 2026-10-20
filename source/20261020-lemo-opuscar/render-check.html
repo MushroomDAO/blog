@@ -1,0 +1,3 @@
+<!doctype html><meta charset="utf-8"><style>html,body{margin:0;overflow:hidden}</style><canvas id="stage"></canvas><script>
+const c=document.getElementById('stage'),g=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;window.DUR=2;window.render=t=>{g.fillStyle='#ffffff';g.fillRect(0,0,c.width,c.height);g.fillStyle='#2563eb';g.beginPath();g.arc(60+(c.width-120)*t/window.DUR,c.height/2,32,0,Math.PI*2);g.fill();};window.READY=true;window.render(0);
+</script>

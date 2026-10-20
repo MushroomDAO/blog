@@ -1,0 +1,30 @@
+{
+  "revision": "b5e8ef93930b6d828f352055a689320f138237b1",
+  "platform": "macOS ARM64",
+  "renderer": "unmodified pinned core/render files",
+  "browser": "existing Google Chrome via PLAYWRIGHT_CHROME, fresh automated context",
+  "playwrightCore": "1.63.0",
+  "input": "our original blue-circle Canvas page, no external assets",
+  "checks": {
+    "twoDifferentTimesProduceDifferentImages": true,
+    "sameTimeRepeatByteIdentical": true,
+    "width": 640,
+    "height": 360,
+    "codec": "h264",
+    "fps": "24/1",
+    "frames": 48,
+    "durationSeconds": 2.0,
+    "audioStreams": 0,
+    "decodedFrames": 48,
+    "uniqueDecodedFrameHashes": 48
+  },
+  "sha256": {
+    "video": "b8f7951121356b5350385647ca18c721b08d3cf5afddb0351ed040814f7ad028",
+    "still05": "6aea1b1daf502b2f066474349c1ae1f19d9b70244b949052f7cd37c65f538a10",
+    "still15": "20ddf30567b08eccb120230509dc0bdfa98ab51776126393ee82293aa6788ae4"
+  },
+  "scope": "Actual renderer+browser+FFmpeg smoke test, not model/skill workflow, demo style reproduction, voice, music, aesthetic, quality or speed benchmark.",
+  "workers": 1,
+  "sizeOverride": "640x360",
+  "frameRateOverride": 24
+}
