@@ -1,0 +1,54 @@
+{
+  "slug": "thinkterm-multi-agent-terminal",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/thinkterm-multi-agent-terminal-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 92867
+    },
+    {
+      "path": "src/assets/images/thinkterm-multi-agent-terminal-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 55809
+    },
+    {
+      "path": "src/assets/images/thinkterm-multi-agent-terminal-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 68969
+    },
+    {
+      "path": "src/assets/images/thinkterm-multi-agent-terminal-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 55054
+    }
+  ]
+}

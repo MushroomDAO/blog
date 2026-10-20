@@ -1,0 +1,14 @@
+
+running 10 tests
+test proc_match::tests::eval_payloads_are_never_mined_for_agent_names ... ok
+test proc_match::tests::known_package_layouts_identify_generic_entry_scripts ... ok
+test proc_match::tests::cmd_and_powershell_command_lines_unwrap ... ok
+test proc_match::tests::extra_process_aliases_cover_names_the_manifests_lack ... ok
+test proc_match::tests::npm_shims_identify_through_the_interpreter_argv ... ok
+test proc_match::tests::cursor_bundled_node_identifies_by_install_layout ... ok
+test proc_match::tests::plain_agent_binaries_identify_directly ... ok
+test proc_match::tests::retitled_interpreters_identify_by_their_new_title ... ok
+test proc_match::tests::versioned_launcher_paths_identify_by_parent_directory ... ok
+test proc_match::tests::symlinked_shims_identify_by_their_target ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
