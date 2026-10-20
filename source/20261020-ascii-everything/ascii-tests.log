@@ -1,0 +1,148 @@
+  ✓ 144 deterministic frames survive encoder output and WebM muxing
+  ✓ Safari-style 1 µs frame timestamp rounding still writes the exact WebM timeline
+  ✓ slow rendering and encoder backpressure never skip timeline frames
+  ✓ a fast renderer waits for a slow encoder instead of accumulating frames
+  ✓ unsupported VP9 falls back to matching VP8 MIME and WebM track
+  ✓ rejected VP9 query falls back to matching VP8 MIME and WebM track
+  ✓ a one-frame loop and absent optional chunk durations preserve explicit container timing
+  ✓ nonintegral frame intervals cover exactly one requested duration
+  ✓ cancellation interrupts a stalled capability check and ignores late output
+  ✓ cancellation interrupts a stalled encoder flush and ignores late output
+  ✓ completion progress waits for flushed encoded output
+  ✓ a renderer cannot resize the canvas during export
+  ✓ a failing progress callback releases asynchronous encoding resources
+  ✓ signal cancellation releases frames, encoder, timers, and listeners
+  ✓ visibility cancellation releases frames, encoder, timers, and listeners
+  ✓ pagehide cancellation releases frames, encoder, timers, and listeners
+  ✓ already hidden requests do not allocate an encoder
+  ✓ already aborted requests do not allocate an encoder
+  ✓ render failure cannot publish a partial loop
+  ✓ frame allocation failure cannot publish a partial loop
+  ✓ encoder allocation failure cannot publish a partial loop
+  ✓ encode failure cannot publish a partial loop
+  ✓ async encoder failure cannot publish a partial loop
+  ✓ flush failure cannot publish a partial loop
+  ✓ missing output failure cannot publish a partial loop
+  ✓ empty output failure cannot publish a partial loop
+  ✓ missing final frame after flush failure cannot publish a partial loop
+  ✓ all output missing failure cannot publish a partial loop
+  ✓ duplicate output failure cannot publish a partial loop
+  ✓ invalid timestamp failure cannot publish a partial loop
+  ✓ invalid duration failure cannot publish a partial loop
+  ✓ unexpected codec change failure cannot publish a partial loop
+  ✓ unexpected dimensions failure cannot publish a partial loop
+  ✓ configure failure cannot publish a partial loop
+  ✓ flush timeout failure cannot publish a partial loop
+  ✓ noEncoder reports unsupported instead of falling back to lossy realtime capture
+  ✓ noFrame reports unsupported instead of falling back to lossy realtime capture
+  ✓ noSupportQuery reports unsupported instead of falling back to lossy realtime capture
+  ✓ unsupported codec configurations reject without rendering
+  ✓ never-ending capability query rejects and clears its watchdog
+  ✓ unexpected capability query failure rejects and clears its watchdog
+  ✓ invalid zero duration rejects before allocating frames
+  ✓ invalid nonfinite duration rejects before allocating frames
+  ✓ invalid zero frame rate rejects before allocating frames
+  ✓ invalid excessive frame rate rejects before allocating frames
+  ✓ invalid missing renderer rejects before allocating frames
+  ✓ editor adapter success preserves immutable snapshot ownership
+  ✓ editor adapter record-failure preserves immutable snapshot ownership
+  ✓ editor adapter download-failure preserves immutable snapshot ownership
+  ✓ editor adapter create-failure preserves immutable snapshot ownership
+  ✓ editor adapter unsupported preserves immutable snapshot ownership
+  ✓ editor adapter cleared-during-export preserves immutable snapshot ownership
+Motion export regressions passed (52 scenarios; synthetic codecs, real WebM parser).
+  ✓ startup restoration never replaces an explicitly selected photo
+  ✓ a newer decoded photo wins and superseded bitmaps are released
+  ✓ cancelled segmentation resolves cleanly instead of throwing during cleanup
+  ✓ stale completed segmentation disposes its mask without publishing it
+  ✓ analysis blocks scheduled and direct render work
+  ✓ loader reports real phases and completes only after the portrait is drawn
+  ✓ skipping separation keeps the original background and rejects late masks
+  ✓ an old first-yield continuation cannot overwrite a new loader phase
+  ✓ an obsolete completion callback never hides a newer loader
+  ✓ clear dismisses a pending loader and late model loading cannot bring it back
+  ✓ model failure stays in rendering phase until the fallback portrait appears
+  ✓ an inference timeout renders a fallback and disposes any late mask without reopening the loader
+  ✓ conversion failures release the modal instead of leaving it on its final phase
+  ✓ late GPU presentation failures cannot strand the loader or escape its recovery path
+  ✓ reduced motion completes the same render lifecycle without a decorative delay
+  ✓ clear resets the visible session and cancels delayed settings saves
+  ✓ a storage open that finishes after clear cannot put the photo back
+  ✓ a delayed settings write cannot cross a clear boundary
+  ✓ a newly selected photo is saved after an in-flight clear, never deleted by it
+  ✓ blocked or timed-out storage opens reject and release a late connection
+  ✓ one rejected storage write does not poison subsequent queued saves
+  ✓ a photo still decoding cannot repopulate a cleared session
+  ✓ saved editor settings are compact and restored only within valid bounds
+  ✓ viewport changes preserve artwork geometry and respect the pixel budget
+  ✓ accepted source aspect ratios never exceed the final rounded render budget
+  ✓ an explicit preset wins over a portrait and never silently falls back
+  ✓ an explicit portrait takes priority over saved assets
+  ✓ an embed without a source shows a en error without loading old assets
+  ✓ an embed without a source shows a zh error without loading old assets
+  ✓ embed geometry notifications can reach a cross-origin parent without exposing samples
+  ✓ explicit synthetic presets validate both supported versions and reject malformed input
+  ✓ export snapshots isolate glyphs and settings from subsequent editor changes
+  ✓ snapshot allocation failure releases every buffer already created
+  ✓ clear aborts an active video and suppresses a late encoder completion
+  ✓ TimeoutError reports a en recovery message and permits a clean retry
+  ✓ EncodingError reports a en recovery message and permits a clean retry
+  ✓ TimeoutError reports a zh recovery message and permits a clean retry
+  ✓ EncodingError reports a zh recovery message and permits a clean retry
+  ✓ clear suppresses a PNG encode that finishes after the session was removed
+  ✓ WebGL fallback never redraws an old portrait after the session was cleared
+  ✓ failed WebGL compile and link paths release allocated shader resources
+  ✓ animated glyph operations repeat exactly at the six-second loop boundary
+  ✓ preset loading enforces the stream limit and cancels oversized reads
+Editor runtime regression checks passed (43 scenarios; synthetic browser primitives).
+  ✓ a fresh public editor starts in English
+  ✓ a legacy Chinese preference does not change the public English default
+  ✓ only an explicit public preference restores Chinese
+  ✓ public English and unknown preferences resolve to English
+  ✓ an explicit public language selection persists only to its own key
+  ✓ blocked preference storage leaves the editor usable in English
+  ✓ embed language overrides the public preference without changing it
+  ✓ non-embed language query does not override the explicit public choice
+  ✓ dropdown mounting is idempotent and preserves the native selection as its source of truth
+  ✓ clicking the value text toggles once even when rendering detaches the click target
+  ✓ clicking the color swatch toggles once even when rendering detaches the click target
+  ✓ clicking the demo thumbnail toggles once even when rendering detaches the click target
+  ✓ committing a new dropdown option emits exactly one input and one change
+  ✓ arrow keys only move the active option until Enter commits
+  ✓ Escape dismisses a pending option without committing
+  ✓ Tab dismisses a pending option without committing
+  ✓ outside dismisses a pending option without committing
+  ✓ disabled and hidden options cannot be selected by pointer or keyboard
+  ✓ disabled controls cannot open and becoming disabled dismisses an open popup
+  ✓ translated names and option labels synchronize without changing the native value
+  ✓ opening a second control closes the first and reuses exactly one popup
+  ✓ dynamic demo options appear with their previews and commit through the native select
+  ✓ programmatic source changes synchronize the trigger without emitting a user change
+  ✓ Home and End skip disabled boundaries and Space commits only the active option
+  ✓ typeahead highlights matching text without committing or accepting composition input
+  ✓ disabled optgroups and fieldsets remain disabled in the enhanced control
+  ✓ scroll inside the popup is safe while window scroll and resize dismiss it
+  ✓ label activation toggles once and moving focus outside cancels pending navigation
+  ✓ held Enter and Space keys cannot repeat a commit or reopen the popup
+  ✓ unsupported DOM capabilities leave the native-control fallback untouched
+30 select and public-language regressions passed.
+▶ preview server HTTP, filesystem boundaries, and static release links
+  ✔ GET and HEAD return matching metadata, MIME types, and exact file bytes (14.55025ms)
+  ✔ missing files and directories without an index return 404 without listing contents (1.7365ms)
+  ✔ unsupported methods return 405 and a precise Allow header (1.418916ms)
+  ✔ malformed escapes, NULs, and encoded backslashes return 400 (1.386709ms)
+  ✔ dotfiles, Git metadata, environment files, and dependency trees stay private (2.098833ms)
+  ✔ literal and encoded traversal cannot escape the served root (2.427083ms)
+  ✔ symlinks to outside files, outside directories, and protected files are blocked (1.133667ms)
+  ✔ the real project serves every referenced local script, stylesheet, and demo with exact bytes (16.606417ms)
+  ✔ a static copy also resolves resources beneath a repository-style URL prefix (16.448458ms)
+  ✔ READMEs and asset notices have resolvable local links and images (1098.746584ms)
+✔ preview server HTTP, filesystem boundaries, and static release links (1175.610125ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1178.373708
