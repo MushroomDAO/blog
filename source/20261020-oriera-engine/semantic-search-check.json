@@ -1,0 +1,93 @@
+{
+  "query": "OriEra Engine v0.3.0 generative assets 152 test executions Rust runtime",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.67225885,
+    "article_id": "oriera-engine-v03-generative-assets"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "oriera-engine-v03-generative-assets",
+        "title": "OriEra v0.3.0: Generated Assets in the Engine Loop",
+        "url": "/blog/oriera-engine-v03-generative-assets/",
+        "language": "en",
+        "excerpt": "OriEra v0.3.0: Generated Assets in the Engine Loop OriEra Engine v0.3.0: generative asset interfaces, validation, hot swap, 11 workspace members, overlapping test counts, and a verified offline mock example. OriEra Rust 游戏引擎 生成式AI 开源项目 What problem does L8 address? Do 11 crates m",
+        "score": 0.67225885
+      },
+      {
+        "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+        "title": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime",
+        "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+        "language": "en",
+        "excerpt": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime ADK-Rust v2.2.0 by zavora-ai — not a Google official project, but splits the agent runtime into 43 independently publishable crates. Type-safe, fully async, 568 μs agent loop overhead. Supports Gemini/OpenAI/Ant",
+        "score": 0.5396865
+      },
+      {
+        "article_id": "orion-core-rust-agent-harness-local-llm-teardown",
+        "title": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多",
+        "url": "/blog/orion-core-rust-agent-harness-local-llm-teardown/",
+        "language": "zh",
+        "excerpt": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多 orion-core 是从桌面应用 OrionPod 拆出的 Rust Agent harness（MIT，3 star，crates.io 下载 74 次）：提供工具调用循环、按整轮裁剪的上下文预算、10 种聊天模板和 15 种流式事件，但不带工具、沙箱、记忆和 MCP，现成后端只有一个 OpenAI 兼容 HTTP 客户端。我们在 M4 Mac mini 上接 mlx_lm.server + Qwen2.5-1.5B ",
+        "score": 0.53888696
+      },
+      {
+        "article_id": "ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda",
+        "title": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA",
+        "url": "/blog/ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda/",
+        "language": "en",
+        "excerpt": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA sizzlecar/ferrum-infer-rs is a pure-Rust local inference engine: one binary, no Python runtime, with Apple Silicon Metal and NVIDIA CUDA served by the same runtime behind OpenAI-compatible ",
+        "score": 0.51511955
+      },
+      {
+        "article_id": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+        "title": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+        "url": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
+        "language": "en",
+        "excerpt": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity OpenDCAI/GameFactory-3A is an open-source 3A game-generation skill and asset framework — Apache 2.0, Python, 256 stars. Core approach: connect coding agents (Claude Code, Codex, Gemini CLI) to a structured ",
+        "score": 0.49547175
+      },
+      {
+        "article_id": "mdya-rust-local-markdown-search-chinese-test-871-docs",
+        "title": "mdya 实测：871 篇中文笔记索引 8 分钟，但语义检索在中文上是失效的",
+        "url": "/blog/mdya-rust-local-markdown-search-chinese-test-871-docs/",
+        "language": "zh",
+        "excerpt": "mdya 实测：871 篇中文笔记索引 8 分钟，但语义检索在中文上是失效的 Rust 写的本地 Markdown 检索原语 mdya，BM25 + 端侧向量 + MCP，单二进制。我拿自己 871 篇笔记（10MB）实测：索引 8 分 01 秒，占 176MB，BM25 查询 30ms、向量 530ms。但对照实验揭穿了一个问题——字面命中的中文查询两条路都准，换成同义改写就全崩，因为默认模型 ruri-v3-30m 是日语的、FTS 分词用的是日语 ipadic 词典。多语言的 EmbeddingGemma 是 gated 模型，直接 401 拉不下",
+        "score": 0.49225226
+      },
+      {
+        "article_id": "grpo-small-model-engineering-guide",
+        "title": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径",
+        "url": "/blog/grpo-small-model-engineering-guide/",
+        "language": "zh",
+        "excerpt": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径 GRPO（Group Relative Policy Optimization）让小模型在垂直任务上碾压frontier大模型成为可能。本文整合 ART、ms-swift、OpenClaw-RL 等开源仓库，以及 ART·E（Qwen 2.5 14B超越o3，$80训练）、MCP·RL等6个真实工程案例，给出完整的工程路径：任务选择→数据构造→奖励函数设计→训练循环→监控与避坑。 GRPO 强化学习 小模型 Qwen 微调 LLM训练 AI工程 Mycelium 为什么 GRPO 适合小模型专",
+        "score": 0.4910361
+      },
+      {
+        "article_id": "tare-lossless-context-compression-cache-correct-output-aware",
+        "title": "tare：压缩输入而不是改输出的省 token 方案，无损为默认，还专门绕开前缀缓存",
+        "url": "/blog/tare-lossless-context-compression-cache-correct-output-aware/",
+        "language": "zh",
+        "excerpt": "tare：压缩输入而不是改输出的省 token 方案，无损为默认，还专门绕开前缀缓存 Rust 写的 LLM 上下文压缩工具，MIT，proxy / CLI / MCP / 库四种形态。三条别家没有的约束：无损为默认（有损手段必须显式开启）、cache-correct（识别前缀缓存断点，只压动态后缀，不让一个改动的字节作废 10 倍缓存折扣）、output-aware（压过头模型会用更啰嗦的输出补偿，它监测输出 token 尖峰并自动降低压缩力度）。实测 43.8–73.3%，语料和复现脚本都提交在仓库里。9 个 crates、228 个测试。 上下文压",
+        "score": 0.48556596
+      },
+      {
+        "article_id": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
+        "title": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
+        "url": "/blog/ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust/",
+        "language": "en",
+        "excerpt": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust akitaonrails/ai-memory is a Rust-based long-term memory solution for AI coding agents — 3,953 stars, MIT license. Core capability: lifecycle hooks auto-capture the essence of each Claude Code/Codex/Cursor session;",
+        "score": 0.4849916
+      },
+      {
+        "article_id": "grok-build-xai-coding-agent-rust-tui-fullscreen-acp",
+        "title": "Grok Build: xAI Open-Sources Its Rust Coding Agent — Fullscreen TUI and ACP Protocol",
+        "url": "/blog/grok-build-xai-coding-agent-rust-tui-fullscreen-acp/",
+        "language": "en",
+        "excerpt": "Grok Build: xAI Open-Sources Its Rust Coding Agent — Fullscreen TUI and ACP Protocol xai-org/grok-build ⭐26283 — SpaceXAI's open-source terminal coding agent in Rust, fullscreen mouse-interactive TUI, file editing/shell execution/web search/long-task management, interactive/headl",
+        "score": 0.48411077
+      }
+    ]
+  }
+}

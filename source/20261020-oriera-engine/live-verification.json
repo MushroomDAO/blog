@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "oriera-engine-v03-generative-assets",
+      "url": "https://blog.mushroom.cv/blog/oriera-engine-v03-generative-assets/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/oriera-engine-v03-generative-assets-banner.B28MUfwv_Z1YIqCt.webp",
+          "status": 200,
+          "bytes": 45262
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/oriera-engine-v03-generative-assets-fig-01.DpHBu86u_Z1tBn3L.webp",
+          "status": 200,
+          "bytes": 53756
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/oriera-engine-v03-generative-assets-fig-02.BzYOKuai_ZQmgLq.webp",
+          "status": 200,
+          "bytes": 48350
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/oriera-engine-v03-generative-assets-fig-03.DqPePKc5_ZBT8Xe.webp",
+          "status": 200,
+          "bytes": 61610
+        }
+      ],
+      "listPosition": 6,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}
