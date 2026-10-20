@@ -1,0 +1,93 @@
+{
+  "query": "ThinkTerm terminal persistent mux server coding agents RoversX 139",
+  "found": true,
+  "match": {
+    "rank": 2,
+    "score": 0.615638,
+    "article_id": "thinkterm-multi-agent-terminal"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "deepseek-reasonix-terminal-coding-agent-prefix-cache",
+        "title": "DeepSeek-Reasonix: A Terminal Coding Agent Designed Around Prefix Cache Stability",
+        "url": "/blog/deepseek-reasonix-terminal-coding-agent-prefix-cache/",
+        "language": "en",
+        "excerpt": "DeepSeek-Reasonix: A Terminal Coding Agent Designed Around Prefix Cache Stability esengine's open-source DeepSeek-native terminal coding agent, 33k stars, MIT License, Go rewrite. Architecture is built around prefix-cache stability — real user: 435M input tokens in one day, 99.82",
+        "score": 0.6229305
+      },
+      {
+        "article_id": "thinkterm-multi-agent-terminal",
+        "title": "ThinkTerm: A Rust Terminal for Multi-Agent Coding",
+        "url": "/blog/thinkterm-multi-agent-terminal/",
+        "language": "en",
+        "excerpt": "ThinkTerm: A Rust Terminal for Multi-Agent Coding ThinkTerm is a Rust terminal for multi-agent coding: persistent sessions, remote access, status detection, setup, licensing, and verified engineering limits. ThinkTerm AI Agent Rust Terminal 开源工具 Is it an editor or a coordination ",
+        "score": 0.615638
+      },
+      {
+        "article_id": "herdr-coding-agent-runtime-persistent-terminal-multiplexer-rust",
+        "title": "herdr-coding-agent-runtime-persistent-terminal-multiplexer-rust",
+        "url": "/blog/herdr-coding-agent-runtime-persistent-terminal-multiplexer-rust/",
+        "language": "en",
+        "excerpt": "herdr-coding-agent-runtime-persistent-terminal-multiplexer-rust herdrdev/herdr, 26.5k stars, Apache 2.0, Rust. A persistent terminal runtime designed for the multi-agent era: close the lid, drop the network, restart the machine — agents keep working, sessions stay alive, reattach",
+        "score": 0.61147505
+      },
+      {
+        "article_id": "prime-agent-primeintellect-self-improving-rlm-coding-agent",
+        "title": "Prime Agent: PrimeIntellect's Open-Source Self-Improving RLM Coding Agent",
+        "url": "/blog/prime-agent-primeintellect-self-improving-rlm-coding-agent/",
+        "language": "en",
+        "excerpt": "Prime Agent: PrimeIntellect's Open-Source Self-Improving RLM Coding Agent PrimeIntellect's open-source self-improving agent, 7.6k stars, MIT License. Introduces RLM (Recursive Language Model) that treats context as variables and tool calls as functions, running inside a persisten",
+        "score": 0.5687984
+      },
+      {
+        "article_id": "loopx-loop-engineering-state-kernel-long-running-agents",
+        "title": "LoopX: A Local State Kernel for Long-Running Agents — Goals, Gates, Todos, Evidence and Quotas",
+        "url": "/blog/loopx-loop-engineering-state-kernel-long-running-agents/",
+        "language": "en",
+        "excerpt": "LoopX: A Local State Kernel for Long-Running Agents — Goals, Gates, Todos, Evidence and Quotas LoopX is a lightweight loop engineering state kernel and local control plane for long-running AI agents: durable goals, human-judgment gates, executable todos, quota-aware auto-wake, ev",
+        "score": 0.5289727
+      },
+      {
+        "article_id": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+        "title": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+        "url": "/blog/munder-difflin-multi-agent-harness-claude-codex-local-first/",
+        "language": "en",
+        "excerpt": "munder-difflin-multi-agent-harness-claude-codex-local-first Munder Difflin (MIT, 3888 stars, Electron+React+TypeScript) is a local-first multi-agent harness desktop app. It wraps Claude Code, OpenAI Codex, xAI Grok, Kimi Code, Qwen, GitHub Copilot CLI, and 9 other CLIs as real PT",
+        "score": 0.5256617
+      },
+      {
+        "article_id": "tmax-allenai-open-rl-terminal-agent-training-recipe",
+        "title": "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27%",
+        "url": "/blog/tmax-allenai-open-rl-terminal-agent-training-recipe/",
+        "language": "zh",
+        "excerpt": "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27% AllenAI 开源 TMax，目前最强的终端 Agent RL 训练配方。9B 参数模型在 Terminal-Bench 2.0 达到 27%，超越更大规模的闭源竞品。数据集 15K 任务，比此前最大终端 Agent 数据集大 2.5 倍，配套 SFT + DPPO RL 训练流程全套开源。 Agent 终端Agent RL训练 AllenAI 开源 Terminal-Bench Qwen Mycelium 核心结果 四阶段配方",
+        "score": 0.52555966
+      },
+      {
+        "article_id": "treg-openrouter-agent-tools-unified-api-credential-proxy",
+        "title": "treg：Agent 工具的 OpenRouter，一个入口调用 2850+ 个真实世界 API",
+        "url": "/blog/treg-openrouter-agent-tools-unified-api-credential-proxy/",
+        "language": "zh",
+        "excerpt": "treg：Agent 工具的 OpenRouter，一个入口调用 2850+ 个真实世界 API Superdesign 团队开源 treg——「OpenRouter for Agent Tools」。一个 token、一个入口，访问约 57 家数据服务商的 2850+ 个接口，覆盖 SEO 外链、社交趋势、人员/公司信息、广告、抓取等。按次计费（最低几分钱），无需注册供应商账号。同时支持团队自有 API Key 共享，让所有人的 Agent 都能使用同一套已有能力，而无需把密钥交出去。Apache 2.0，可自托管。 开源 Agent工具 API代理 ",
+        "score": 0.52517885
+      },
+      {
+        "article_id": "flowix-markdown-notebook-agent-memory-mcp-claude-code-codex",
+        "title": "Flowix：Markdown 笔记本变成 AI Agent 的持久记忆，MCP 直连 Claude Code / Codex / Hermes",
+        "url": "/blog/flowix-markdown-notebook-agent-memory-mcp-claude-code-codex/",
+        "language": "zh",
+        "excerpt": "Flowix：Markdown 笔记本变成 AI Agent 的持久记忆，MCP 直连 Claude Code / Codex / Hermes Flowix 是一个开源（MIT）的本地优先桌面 Markdown 笔记本，329 stars，基于 Tauri 2 + TypeScript + Rust。核心定位：把用户的笔记变成 AI Agent 的持久上下文。内置 flowix-cli MCP server，Codex、Claude Code、OpenCode、Hermes 等工具通过 MCP 或 CLI 直接读写同一份笔记；附带 dsh-flowix",
+        "score": 0.5234846
+      },
+      {
+        "article_id": "grok-build-xai-coding-agent-rust-tui-fullscreen-acp",
+        "title": "Grok Build: xAI Open-Sources Its Rust Coding Agent — Fullscreen TUI and ACP Protocol",
+        "url": "/blog/grok-build-xai-coding-agent-rust-tui-fullscreen-acp/",
+        "language": "en",
+        "excerpt": "Grok Build: xAI Open-Sources Its Rust Coding Agent — Fullscreen TUI and ACP Protocol xai-org/grok-build ⭐26283 — SpaceXAI's open-source terminal coding agent in Rust, fullscreen mouse-interactive TUI, file editing/shell execution/web search/long-task management, interactive/headl",
+        "score": 0.5220398
+      }
+    ]
+  }
+}
