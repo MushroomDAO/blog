@@ -1,0 +1,14 @@
+{
+  "package": "@openuidev/lang-core@1.0.1",
+  "nodeVersion": "v26.10.0",
+  "checks": [
+    "registered component parses without errors",
+    "custom function call parses without errors",
+    "unregistered component produces unknown-component diagnostic",
+    "custom action registered with typed params",
+    "stored message content/context/end roundtrip",
+    "local declared function produces75.0%"
+  ],
+  "passed": true,
+  "scope": "Actual published JS core package; no model API, DOM rendering, browser click, backend authorization or UI quality/speed test. npm lifecycle scripts disabled."
+}
