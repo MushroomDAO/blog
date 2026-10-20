@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-20",
+  "scope": "Pinned source and Compose structure review only. No runtime, throughput or business-income test.",
+  "dockerCLIAvailable": false,
+  "services": {
+    "plausible_db": {
+      "image": "postgres:16-alpine",
+      "persistentMounts": 1,
+      "healthcheck": true,
+      "publishedPorts": []
+    },
+    "plausible_events_db": {
+      "image": "clickhouse/clickhouse-server:24.12-alpine",
+      "persistentMounts": 6,
+      "healthcheck": true,
+      "publishedPorts": []
+    },
+    "plausible": {
+      "image": "ghcr.io/plausible/community-edition:v3.2.1",
+      "persistentMounts": 1,
+      "healthcheck": false,
+      "publishedPorts": []
+    }
+  },
+  "applicationWaitsForBothHealthyDatabases": true,
+  "licenseScopes": {
+    "core": "AGPLv3-or-later",
+    "deploymentFiles": "MIT",
+    "trackerPackage": "MIT",
+    "enterpriseNotice": "Separate restricted-use notice, not blanket AGPL coverage"
+  },
+  "files": [
+    {
+      "path": "analytics-README.md",
+      "sha256": "48cb983fc85b3fbd91d9cdeaba6864b13d35de5a1e7cd160ab6764b9318ae69f"
+    },
+    {
+      "path": "analytics-LICENSE.md",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    {
+      "path": "analytics-extra-lib-license.ex",
+      "sha256": "c337f1e45bf13fff7ba50a7012132dea3ca6c3298fe8d33b2b8bbee7b14fbdb5"
+    },
+    {
+      "path": "analytics-tracker-npm_package-LICENSE.md",
+      "sha256": "9704f7d3dbcffcef54c049dd800ef4aa46f7661d9fce51e413bdb5edec8a1fac"
+    },
+    {
+      "path": "community-edition-README.md",
+      "sha256": "614576669906e17b8e916f5bc6e3550fbdaf5a89cde04097adbd8189060e18a9"
+    },
+    {
+      "path": "community-edition-LICENSE",
+      "sha256": "6bd413795a0171bdbcc0819a12ab806dfcc954fc203dc8ea95c0dbf7d70f66af"
+    },
+    {
+      "path": "community-edition-compose.yml",
+      "sha256": "f16fddbef452a41ef2ae435a40f8107d8eec73ca0a31138a80ba2ce7674f2ca7"
+    }
+  ]
+}

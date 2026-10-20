@@ -1,0 +1,14 @@
+=== [adopt-banner] plausible-analytics-consulting-white-label ← 1 source image(s) → src/assets/images/plausible-analytics-consulting-white-label-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← source/20261020-plausible-analytics/dashboard-cover-crop.png
+=== [adopt-banner] done: src/assets/images/plausible-analytics-consulting-white-label-banner.jpg (1200x630, 84511B) ===
+=== [verify-banner] src/assets/images/plausible-analytics-consulting-white-label-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=source/20261020-plausible-analytics/dashboard-cover-crop.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 84511B (< 99000B)
+  WARN text: 27 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: • 149 current visitors | = Filter | • Last 91 days | UNIQUE VISITORS | 934k 0% | TOTAL VISITS | 1.5M >7% | TOTAL PAGEVIEWS
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/plausible-analytics-consulting-white-label-banner.jpg ===
+PATH: src/assets/images/plausible-analytics-consulting-white-label-banner.jpg
