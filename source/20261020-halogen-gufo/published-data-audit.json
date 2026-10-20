@@ -1,0 +1,98 @@
+{
+  "sourceRevision": "877518953c153b2aac57f7b77fc904e8540b1fde",
+  "publisherMeasuredOn": "2026-10-18",
+  "sourceSHA256": "ab8d8ca5607336cf3306ae0207fd069a818375e25d4aabc2821e043ab61aff2a",
+  "rowsChecked": 8,
+  "rows": [
+    {
+      "nominalDepth": 0,
+      "cachedTokens": 0,
+      "newPromptTokens": 2040,
+      "outputTokens": 128,
+      "reportedPP": 1801.01,
+      "reportedARDecode": 28.29,
+      "documentationMatchesJSON": true,
+      "measuredSamples": 1
+    },
+    {
+      "nominalDepth": 4096,
+      "cachedTokens": 4095,
+      "newPromptTokens": 2043,
+      "outputTokens": 128,
+      "reportedPP": 1727.95,
+      "reportedARDecode": 28.27,
+      "documentationMatchesJSON": true,
+      "measuredSamples": 1
+    },
+    {
+      "nominalDepth": 8192,
+      "cachedTokens": 8184,
+      "newPromptTokens": 2048,
+      "outputTokens": 128,
+      "reportedPP": 1721.41,
+      "reportedARDecode": 28.27,
+      "documentationMatchesJSON": true,
+      "measuredSamples": 1
+    },
+    {
+      "nominalDepth": 12288,
+      "cachedTokens": 12249,
+      "newPromptTokens": 2047,
+      "outputTokens": 128,
+      "reportedPP": 1710.64,
+      "reportedARDecode": 28.21,
+      "documentationMatchesJSON": true,
+      "measuredSamples": 1
+    },
+    {
+      "nominalDepth": 16384,
+      "cachedTokens": 16324,
+      "newPromptTokens": 2047,
+      "outputTokens": 128,
+      "reportedPP": 1706.86,
+      "reportedARDecode": 28.25,
+      "documentationMatchesJSON": true,
+      "measuredSamples": 1
+    },
+    {
+      "nominalDepth": 32768,
+      "cachedTokens": 32718,
+      "newPromptTokens": 2029,
+      "outputTokens": 128,
+      "reportedPP": 1672.6,
+      "reportedARDecode": 28.18,
+      "documentationMatchesJSON": true,
+      "measuredSamples": 1
+    },
+    {
+      "nominalDepth": 65536,
+      "cachedTokens": 65447,
+      "newPromptTokens": 2058,
+      "outputTokens": 128,
+      "reportedPP": 1602.93,
+      "reportedARDecode": 28.09,
+      "documentationMatchesJSON": true,
+      "measuredSamples": 1
+    },
+    {
+      "nominalDepth": 131072,
+      "cachedTokens": 130932,
+      "newPromptTokens": 2047,
+      "outputTokens": 128,
+      "reportedPP": 1557.18,
+      "reportedARDecode": 27.85,
+      "documentationMatchesJSON": true,
+      "measuredSamples": 1
+    }
+  ],
+  "scope": "Published JSON/table/count consistency only. Full raw phase timings are not in this JSON. No engine execution, hardware, inference, correctness or latency reproduction.",
+  "illustrativeArithmetic": {
+    "promptTokens": 10000,
+    "assumedPP": 1800,
+    "idealPrefillSeconds": 5.555555555555555,
+    "outputTokens": 1000,
+    "assumedDecode": 40,
+    "idealDecodeSeconds": 25.0,
+    "scope": "Hypothetical rates for explanation, excludes all extra overhead and cache effects; not measured."
+  }
+}

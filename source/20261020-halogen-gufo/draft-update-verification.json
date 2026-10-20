@@ -1,0 +1,12 @@
+{
+  "mediaId": "prCUE631thH1cmNLi42prPW8RqGUqEW6Ua79Wqvo-YNJ2THoDF0CscH6WN5P8Wbu",
+  "operation": "draft/update",
+  "createdNewDraft": false,
+  "updateErrcode": 0,
+  "readBackAllNormalizedTextMatches": true,
+  "imageURLsAndAltsMatch": true,
+  "bodyImageCount": 3,
+  "coverPresent": true,
+  "actualHTMLSHA256": "d37c94fc3614a28845db5440b8a444de8081464533cffcdf36dfc7b934088924",
+  "normalization": "HTMLParser entity decoding; whitespace ignored for text; img src/data-src mapped; attribute order ignored."
+}

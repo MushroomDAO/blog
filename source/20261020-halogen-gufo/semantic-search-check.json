@@ -1,0 +1,93 @@
+{
+  "query": "Halogen Gufo Strix Halo prefill 395 benchmark cache",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.7491875,
+    "article_id": "strix-halo-halogen-gufo-prefill"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "strix-halo-halogen-gufo-prefill",
+        "title": "Halogen vs Gufo: Strix Halo Prefill Near 2,000 tok/s",
+        "url": "/blog/strix-halo-halogen-gufo-prefill/",
+        "language": "en",
+        "excerpt": "Halogen vs Gufo: Strix Halo Prefill Near 2,000 tok/s Ryzen AI Max+ 395 prefill near 2,000 tok/s without a discrete GPU: review Halogen and Gufo, models, quantization, cache, decode and deployment requirements. Strix Halo Halogen Gufo 本地推理 AMD Prefill What Does “No External GPU” M",
+        "score": 0.7491875
+      },
+      {
+        "article_id": "comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy",
+        "title": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案",
+        "url": "/blog/comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy/",
+        "language": "zh",
+        "excerpt": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案 sepiablue-ai 开源，GPL-3.0，46 stars。两个 ComfyUI 节点把 MiniMax H3 视频生成塞进 12GB 消费级 GPU：W4A4 量化（FC1 层 ConvRot 预转换缓存）+ 流式 VSA 稀疏注意力（FastH3 官方 gate 文件）。RTX 4070 12GB 实测：832×1408×124帧约 3m29s，峰值 11.5GB 显存，比 INT8 基线快约 11%。需 Amp",
+        "score": 0.5363552
+      },
+      {
+        "article_id": "kairic-edge-iu4-strix-halo-native-4bit-lane-qwen38-27b",
+        "title": "IU4 原生 4bit 通道：AMD Strix Halo 上让量化从「省显存」变成「算得快」",
+        "url": "/blog/kairic-edge-iu4-strix-halo-native-4bit-lane-qwen38-27b/",
+        "language": "zh",
+        "excerpt": "IU4 原生 4bit 通道：AMD Strix Halo 上让量化从「省显存」变成「算得快」 jcbtc/Qwen3.8-27B-IU4-Kairic-Edge 是已知第一个在 AMD gfx1151 上跑通加速 IU4 通道的 LLM，Apache-2.0。多数「4bit 模型」只是 4bit 存储、算之前还要展开成更宽格式；它把 4bit 权重和激活直接喂进 RDNA 3.5 的 V_WMMA_I32_16X16X16_IU4 指令。实测 104.66 TOPS（FP16 的 1.94 倍）、47.73 tok/s（比 Unsloth Q4 快 8",
+        "score": 0.53073156
+      },
+      {
+        "article_id": "cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune",
+        "title": "Cloudflare Open-Sources Clef Decision Models: Jev-API Compatible, the 9B Runs on a Mac, and the Top Score Is Self-Reported",
+        "url": "/blog/cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune/",
+        "language": "en",
+        "excerpt": "Cloudflare Open-Sources Clef Decision Models: Jev-API Compatible, the 9B Runs on a Mac, and the Top Score Is Self-Reported On 2026-10-01 Cloudflare released Clef (Qwen3.8-27B base, 27.36B params) and Clef-flash (Qwen3.5-9B, 9.41B params) under Apache-2.0: one forward pass, a prob",
+        "score": 0.52423066
+      },
+      {
+        "article_id": "glm-5-3-flash-ox-alpha-320b-native-multimodal-open-source",
+        "title": "GLM-5.3-Flash（Ox Alpha）开源：321B MoE 原生多模态，30T token 预训练，稀疏+线性注意力混合架构，MIT",
+        "url": "/blog/glm-5-3-flash-ox-alpha-320b-native-multimodal-open-source/",
+        "language": "zh",
+        "excerpt": "GLM-5.3-Flash（Ox Alpha）开源：321B MoE 原生多模态，30T token 预训练，稀疏+线性注意力混合架构，MIT 2026-08-26 晚，智谱 z.ai 开源 GLM-5.3-Flash（代号 Ox Alpha）。约 321B 参数、激活 18B 的 MoE 模型，GLM-5 系列首个原生多模态版本，原生支持文字、图片、视频处理，使用 30T 多模态 token 预训练。架构上首次引入稀疏注意力与线性注意力混合（DSA），并配套异步强化学习训练基础设施。权重已上传 HuggingFace（zai-org/GLM-5.3-F",
+        "score": 0.51702625
+      },
+      {
+        "article_id": "zinc-zig-inference-engine-amd-rocm-local-gguf",
+        "title": "ZINC: A Zig Inference Engine for the AMD GPUs the Local-AI Scene Keeps Ignoring",
+        "url": "/blog/zinc-zig-inference-engine-amd-rocm-local-gguf/",
+        "language": "en",
+        "excerpt": "ZINC: A Zig Inference Engine for the AMD GPUs the Local-AI Scene Keeps Ignoring Local-inference coverage on this blog has long been stuck on Apple Silicon and CUDA, leaving AMD a blank. ZINC is written in Zig and packs a CLI, browser chat, model manager, and OpenAI-compatible API",
+        "score": 0.5130344
+      },
+      {
+        "article_id": "h3c-minimax-h3-metal-inference",
+        "title": "h3.c: Native MiniMax-H3 Inference on Apple Silicon",
+        "url": "/blog/h3c-minimax-h3-metal-inference/",
+        "language": "en",
+        "excerpt": "h3.c: Native MiniMax-H3 Inference on Apple Silicon Explore antirez h3.c, a native MiniMax-H3 engine for Apple Silicon: Metal pipelines, speed and memory tradeoffs, plus our build and foundational test results. h3.c MiniMax-H3 Apple Silicon Metal 本地AI What does the engine contain?",
+        "score": 0.5095231
+      },
+      {
+        "article_id": "ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda",
+        "title": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA",
+        "url": "/blog/ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda/",
+        "language": "en",
+        "excerpt": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA sizzlecar/ferrum-infer-rs is a pure-Rust local inference engine: one binary, no Python runtime, with Apple Silicon Metal and NVIDIA CUDA served by the same runtime behind OpenAI-compatible ",
+        "score": 0.507805
+      },
+      {
+        "article_id": "eccv-2026-best-paper-heat-kernel-textures-uv-free",
+        "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
+        "url": "/blog/eccv-2026-best-paper-heat-kernel-textures-uv-free/",
+        "language": "zh",
+        "excerpt": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖 ECCV 2026 最佳论文颁给帝国理工的 HKTex：用约 4.8k 个贴在网格表面的各向异性热核取代 UV 贴图，313 个 Objaverse 模型上平均 96.6KB、LPIPS 优于所有对比方法，代码 MIT 开源但只支持 Linux + NVIDIA。时间检验奖授予 2016 年的感知损失、SSD 和 Learning without Forgetting。我们在 Mac 上复现了它的数学底座并指出三个落地障碍。 ECCV 2",
+        "score": 0.50352746
+      },
+      {
+        "article_id": "dgx-spark-gb10-video-generation-what-actually-helps",
+        "title": "DGX Spark 上跑视频生成：FlashAttention 没用、torch.compile 没用、量化也没用",
+        "url": "/blog/dgx-spark-gb10-video-generation-what-actually-helps/",
+        "language": "zh",
+        "excerpt": "DGX Spark 上跑视频生成：FlashAttention 没用、torch.compile 没用、量化也没用 FastVideo 给 NVIDIA DGX Spark（GB10）写的调优文档罕见地列了「什么没用」：编译 FlashAttention 零加速、torch.compile VAE 触发重编译风暴只剩 1.1x、长序列模型上的 fp8/nvfp4 线性层量化约等于噪声。真正有用的只有一条——换蒸馏少步模型，3 步 40 秒 vs 全步 12 分钟，约 18 倍。根因是 GB10 的 128GB 统一内存只有约 270 GB/s 带宽，比数",
+        "score": 0.5008434
+      }
+    ]
+  }
+}
