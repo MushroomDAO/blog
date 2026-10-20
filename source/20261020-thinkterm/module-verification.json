@@ -1,0 +1,11 @@
+{
+  "pin": "109de1d1690f6e3658e58725bf510f06af40ebfe",
+  "source": "mux/src/agent_status/proc_match.rs",
+  "sha256": "ecb2f8dcdf353836ef6cf67a88309b8214f987e953903c8355cbebf951319612",
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "command": "rustc --edition=2021 --test check.rs -o check && ./check",
+  "wrapper": "#[path = \"PINNED_PROC_MATCH_FILE\"] mod proc_match;",
+  "passed": 10,
+  "failed": 0,
+  "scope": "Unmodified upstream pure std module tests only. No full application, live agents, GUI, remote mux, accuracy or performance test."
+}
