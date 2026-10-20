@@ -1,0 +1,93 @@
+{
+  "query": "DeepInfer offline core DeepSeek V4.1 Flash SM100 Ascend 950 production cache",
+  "found": true,
+  "match": {
+    "rank": 2,
+    "score": 0.6249332,
+    "article_id": "deepinfer-deepseek-inference-framework"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "deepseek-mac-studio-dwarfstar-ds4-local-inference-guide",
+        "title": "DwarfStar (ds4): Run DeepSeek V4 Flash/PRO Locally on Mac Studio — Install, SSD Streaming, Distributed Inference",
+        "url": "/blog/deepseek-mac-studio-dwarfstar-ds4-local-inference-guide/",
+        "language": "en",
+        "excerpt": "DwarfStar (ds4): Run DeepSeek V4 Flash/PRO Locally on Mac Studio — Install, SSD Streaming, Distributed Inference antirez built DwarfStar (ds4), a pure-C local inference engine for DeepSeek V4 Flash/PRO, optimized for Apple Silicon Metal, CUDA, and ROCm. This guide covers hardware",
+        "score": 0.6576828
+      },
+      {
+        "article_id": "deepinfer-deepseek-inference-framework",
+        "title": "DeepInfer：DeepSeek开源推理核心，部署前要看懂哪些边界？",
+        "url": "/blog/deepinfer-deepseek-inference-framework/",
+        "language": "zh",
+        "excerpt": "DeepInfer：DeepSeek开源推理核心，部署前要看懂哪些边界？ DeepInfer 是 DeepSeek 开源的高性能推理框架，本次发布提供面向 DeepSeek-V4.1-Flash 的离线推理核心。结合 README、问答和源码，介绍硬件要求、并行调度、投机解码、结构化输出及生产服务缺失组件，解释四卡预填充与六十四卡解码图表的口径，核对缓存、草稿接受率与确定性配置边界。 DeepInfer DeepSeek 大模型推理 分布式系统 开源项目 开源的是哪一部分，完整服务还差什么？ 哪些硬件可以按官方路径部署？ 它把推理优化放在哪些层？ SWA",
+        "score": 0.6249332
+      },
+      {
+        "article_id": "antirez-ds4-deepseek-v4-flash-mac-metal-inference",
+        "title": "Token Freedom Accelerating: Redis Creator Runs DeepSeek V4 Flash Natively on Mac",
+        "url": "/blog/antirez-ds4-deepseek-v4-flash-mac-metal-inference/",
+        "language": "en",
+        "excerpt": "Token Freedom Accelerating: Redis Creator Runs DeepSeek V4 Flash Natively on Mac Redis creator antirez open-sources ds4 — a Mac-native Metal inference engine purpose-built for DeepSeek V4 Flash. 40,000 lines of C + 17 Metal shaders, 2-bit asymmetric quantization, disk-persistent ",
+        "score": 0.61093885
+      },
+      {
+        "article_id": "deepseek-v4-flash-local-inference-guide",
+        "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+        "url": "/blog/deepseek-v4-flash-local-inference-guide/",
+        "language": "zh",
+        "excerpt": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册 DeepSeek V4-Flash 284B MoE 模型本地推理完全指南：为什么「13B 激活参数」不等于 13B 内存需求，四档硬件方案对比，以及 Mac M4 Ultra、多卡 GPU、vLLM 的实操步骤。 DeepSeek V4 本地推理 MoE vLLM Mac M4 Ultra GPU推理 量化 llama.cpp AI部署 一、先搞清楚：MoE 的内存陷阱 \"激活参数\" ≠ \"推理内存\" V4-Flash 的实际内存占用 额外内存开销 二、四档硬件方案 方案 A：Mac A",
+        "score": 0.5846095
+      },
+      {
+        "article_id": "freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference",
+        "title": "freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference",
+        "url": "/blog/freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference/",
+        "language": "en",
+        "excerpt": "freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference FlashML-org/FreeToken is an edge-native MoE inference engine — Apache 2.0, Python, 2,105 stars. Core: run 290B+ MoE models (DeepSeek-V4-Flash, Qwen3.6-35B, GLM-5.2) locally on consumer GPUs (RTX 30/40/50) at inter",
+        "score": 0.5835122
+      },
+      {
+        "article_id": "deepseek-reasonix-terminal-coding-agent-prefix-cache",
+        "title": "DeepSeek-Reasonix: A Terminal Coding Agent Designed Around Prefix Cache Stability",
+        "url": "/blog/deepseek-reasonix-terminal-coding-agent-prefix-cache/",
+        "language": "en",
+        "excerpt": "DeepSeek-Reasonix: A Terminal Coding Agent Designed Around Prefix Cache Stability esengine's open-source DeepSeek-native terminal coding agent, 33k stars, MIT License, Go rewrite. Architecture is built around prefix-cache stability — real user: 435M input tokens in one day, 99.82",
+        "score": 0.5784905
+      },
+      {
+        "article_id": "deepseek-v4-flash-vision-exp-multimodal-agent-dspark",
+        "title": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了",
+        "url": "/blog/deepseek-v4-flash-vision-exp-multimodal-agent-dspark/",
+        "language": "zh",
+        "excerpt": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了 DeepSeek-V4 家族第一个实验性多模态模型，8 月 31 日上线，五天 18.4 万下载、651 likes，MIT。在 DeepSeek-V4-Flash 架构上加视觉模块并继续训练：多模态 agent 能力大幅提升，而七项文本 agent 基准里六项不降反升。三项超过 Opus-4.8（DeepSWE 59.3、Agents' Last Exam 27.3、ZeroBench 35.0）。DSpark 推测解码的 draft 权重和 targ",
+        "score": 0.5644675
+      },
+      {
+        "article_id": "ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda",
+        "title": "Ferrum：一个 Rust 二进制跑本地推理，Metal 和 CUDA 共用同一套 runtime",
+        "url": "/blog/ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda/",
+        "language": "zh",
+        "excerpt": "Ferrum：一个 Rust 二进制跑本地推理，Metal 和 CUDA 共用同一套 runtime sizzlecar/ferrum-infer-rs 是一个纯 Rust 的本地推理引擎：单个二进制、无 Python 运行时，Apple Silicon Metal 与 NVIDIA CUDA 共用同一个 runtime，提供 OpenAI 兼容的 Chat Completions 和 Responses API。README 里给了带 95% 置信区间的实测吞吐——M1 Max 32GB 上 Qwen3.5 4B 并发 16 时 61.9 ± 0.1 ",
+        "score": 0.56105095
+      },
+      {
+        "article_id": "dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile",
+        "title": "dsh-plugin-mobile-gateway：给 DeepSeek Harness 加上移动端，手机扫码就能用，Tailscale 一行命令搞定远程",
+        "url": "/blog/dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile/",
+        "language": "zh",
+        "excerpt": "dsh-plugin-mobile-gateway：给 DeepSeek Harness 加上移动端，手机扫码就能用，Tailscale 一行命令搞定远程 Clarklevis1995/dsh-plugin-mobile-gateway，MIT 开源，JavaScript 插件，给 DeepSeek Harness (DSH) 增加 WebSocket 移动网关。支持局域网直连、Linux 公网一键 TLS、Tailscale 远程接入三种部署方式。配套 iOS 17+ SwiftUI 原生客户端，双向同步会话、实时流、Human-in-the-loop",
+        "score": 0.5473292
+      },
+      {
+        "article_id": "dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem",
+        "title": "dsh-tui-pi：DeepSeek Harness 的社区 TUI 生态，把编码 Agent 终端做成了 pi 风格",
+        "url": "/blog/dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem/",
+        "language": "zh",
+        "excerpt": "dsh-tui-pi：DeepSeek Harness 的社区 TUI 生态，把编码 Agent 终端做成了 pi 风格 DeepSeek Harness (dsh) 是 DeepSeek 的编码 Agent 运行时，类比 Claude Code。dsh-tui-pi 是社区构建的 pi 风格 TUI 插件套件，提供实时子 Agent 监控、历史回溯与分叉、飞书手机遥控、动态上下文裁剪、MCP 适配器等 15+ 功能，以及 8 个配套插件。 AI DeepSeek TUI Terminal Agent 编码Agent 插件 开源 dsh MCP 先说 d",
+        "score": 0.542164
+      }
+    ]
+  }
+}

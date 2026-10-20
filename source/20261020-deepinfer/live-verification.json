@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "deepinfer-deepseek-inference-framework",
+      "url": "https://blog.mushroom.cv/blog/deepinfer-deepseek-inference-framework/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepinfer-deepseek-inference-framework-banner.CClTEcBR_1t3RpI.webp",
+          "status": 200,
+          "bytes": 79218
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepinfer-deepseek-inference-framework-fig-01.y73U-HtD_Z1l2OjW.webp",
+          "status": 200,
+          "bytes": 78722
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepinfer-deepseek-inference-framework-fig-02.CUfw7N4s_2C82i.webp",
+          "status": 200,
+          "bytes": 61540
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepinfer-deepseek-inference-framework-fig-03.CiarhGLM_1vctCI.webp",
+          "status": 200,
+          "bytes": 70912
+        }
+      ],
+      "listPosition": 3,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}
