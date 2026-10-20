@@ -1,0 +1,56 @@
+{
+  "repo": "https://github.com/lemomo-ai/lemo-opuscar",
+  "revision": "b5e8ef93930b6d828f352055a689320f138237b1",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "61891edc3866c9ffa83c32b13c6b6287ea324615f06dd374d4d83552419bbfc1",
+      "bytes": 27046
+    },
+    {
+      "path": "DIRECTOR.md",
+      "sha256": "108ef62d8891ac91dc4551c53ad43073f4eaf684163cf2ccbb2820645aa3f1c9",
+      "bytes": 10626
+    },
+    {
+      "path": "TECHNIQUE.md",
+      "sha256": "f7e010551eb5321889b8d4ad97670dee47764585ae3e0a81fd52825fb758ad20",
+      "bytes": 13127
+    },
+    {
+      "path": "core/README.md",
+      "sha256": "0092f98f44a773b3d4a031b4fd9abab4d4d8abadd7b01c758821a4d8c01a3aa2",
+      "bytes": 7473
+    },
+    {
+      "path": "core/render/browser.mjs",
+      "sha256": "3ab7f7310b4280445239ca3de537654531ff2d8bcc362fdd444f0f524c7e8c73",
+      "bytes": 1705
+    },
+    {
+      "path": "core/render/serve.mjs",
+      "sha256": "4c8cd80108a6aaf3158a0eec06145e9010fc203ea9b0ab094b3c3ff4f030c900",
+      "bytes": 3082
+    },
+    {
+      "path": "core/render/page.mjs",
+      "sha256": "45796dc94e93fec177d3f162886e447292877971b695e6ebb0dbd6af43693d7a",
+      "bytes": 4879
+    },
+    {
+      "path": "core/render/still.mjs",
+      "sha256": "64028e6255d5488bbf72d4a3b01c93c41fd9e7523c1effdd15766ec588dcc679",
+      "bytes": 1851
+    },
+    {
+      "path": "core/render/video.mjs",
+      "sha256": "1615965f62b1eac4696540171d6961bcae53feffd9922d90ce76358d06381755",
+      "bytes": 6804
+    },
+    {
+      "path": "requirements-voice.txt",
+      "sha256": "15326b2ce01aa28a5ad8feed8dcf5f39be109ace796ddf4287fdea7d4719f591",
+      "bytes": 247
+    }
+  ]
+}

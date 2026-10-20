@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "lemo-opuscar-code-video-skill",
+      "url": "https://blog.mushroom.cv/blog/lemo-opuscar-code-video-skill/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/lemo-opuscar-code-video-skill-banner.8vjeTcHh_15Xucv.webp",
+          "status": 200,
+          "bytes": 32616
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/lemo-opuscar-code-video-skill-fig-01.Def0LL32_1fibF7.webp",
+          "status": 200,
+          "bytes": 44102
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/lemo-opuscar-code-video-skill-fig-02.CIsriBuQ_Z2tYiAN.webp",
+          "status": 200,
+          "bytes": 26848
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/lemo-opuscar-code-video-skill-fig-03.CxqARyXX_2pS4DR.webp",
+          "status": 200,
+          "bytes": 46810
+        }
+      ],
+      "listPosition": 2,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}
