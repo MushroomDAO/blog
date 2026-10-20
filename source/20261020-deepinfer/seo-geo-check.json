@@ -1,0 +1,54 @@
+{
+  "slug": "deepinfer-deepseek-inference-framework",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/deepinfer-deepseek-inference-framework-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 95823
+    },
+    {
+      "path": "src/assets/images/deepinfer-deepseek-inference-framework-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 60081
+    },
+    {
+      "path": "src/assets/images/deepinfer-deepseek-inference-framework-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 39016
+    },
+    {
+      "path": "src/assets/images/deepinfer-deepseek-inference-framework-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 47860
+    }
+  ]
+}
