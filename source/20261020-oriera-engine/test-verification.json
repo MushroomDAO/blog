@@ -1,0 +1,31 @@
+{
+  "pin": "14b4e42d4972239eb86adfdc036ed78508d7ec30",
+  "workspaceMemberCount": 11,
+  "defaultWorkspace": {
+    "passed": 115,
+    "unitTests": 112,
+    "doctests": 3,
+    "failed": 0
+  },
+  "genaiProviders": {
+    "passed": 37,
+    "failed": 0,
+    "defaultGenaiTestsRerun": 26
+  },
+  "totalPassingExecutions": 152,
+  "deduplicatedNamedChecks": 126,
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "example": {
+    "command": "cargo run -p oriera-genai --example hotswap",
+    "submitted": 2,
+    "succeeded": 2,
+    "failed": 0,
+    "degraded": 0,
+    "bytesIn": 168,
+    "npcPropBefore": 24,
+    "npcPropAfter": 84,
+    "provider": "mock-genai-v1",
+    "assets": 2
+  },
+  "scope": "Pinned upstream workspace and providers feature tests + real offline mock asset pipeline. No paid service calls, generated mesh quality, GPU rendering, desktop GUI or AR/mobile/BCI hardware tests.152 is execution count across overlapping configurations, not152unique test functions."
+}

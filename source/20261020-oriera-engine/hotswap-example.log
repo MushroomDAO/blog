@@ -1,0 +1,24 @@
+   Compiling oriera-genai v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-genai)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.41s
+     Running `target/debug/examples/hotswap`
+╔══════════════════════════════════════════════╗
+║  OriEra L8 · genai hot swap (mock, keyless)  ║
+╚══════════════════════════════════════════════╝
+  Before   : npc_prop = 24 bytes (hand-authored)
+
+  Running 8 frames...
+    frame 2: 0.00 ms — landed bgm_intro  by mock-genai-v1
+    frame 2: 0.00 ms — landed npc_prop   by mock-genai-v1
+    frame 2: swapped 2 asset(s) into the store
+
+  ═══ Report ═══
+  npc_prop : 24 → 84 bytes (provider mock-genai-v1)
+  bgm_intro: 84 bytes, glTF magic = true
+  Meter    : submitted 2 · succeeded 2 · failed 0 · degraded 0 · bytes_in 168
+  Props    : 2 entities from AssetLanded events: [bgm_intro, npc_prop]
+  Store    : 2 asset(s)
+
+  ── L2 per-system timings (last frame) ──
+    l8-genai        0.000 ms
+
+  ✅ Closed loop: L8 request → poll → validate → PendingSwaps → L4 insert_named

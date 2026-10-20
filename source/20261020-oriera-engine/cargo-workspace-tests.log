@@ -1,0 +1,348 @@
+    Updating crates.io index
+     Locking 82 packages to latest compatible versions
+      Adding criterion v0.5.1 (available: v0.8.2)
+ Downloading crates ...
+  Downloaded anes v0.1.6
+  Downloaded cast v0.3.0
+  Downloaded ciborium-ll v0.2.2
+  Downloaded clap_lex v1.1.1
+  Downloaded crossbeam-deque v0.8.8
+  Downloaded either v1.19.0
+  Downloaded ciborium-io v0.2.2
+  Downloaded clap v4.6.7
+  Downloaded criterion-plot v0.5.0
+  Downloaded crossbeam-epoch v0.9.21
+  Downloaded crossbeam-utils v0.8.23
+  Downloaded ciborium v0.2.2
+  Downloaded is-terminal v0.4.17
+  Downloaded lazy_static v1.5.1
+  Downloaded criterion v0.5.1
+  Downloaded plotters-backend v0.3.7
+  Downloaded plotters-svg v0.3.7
+  Downloaded oorandom v11.1.5
+  Downloaded clap_builder v4.6.7
+  Downloaded itertools v0.10.5
+  Downloaded plotters v0.3.7
+  Downloaded libc v0.2.191
+  Downloaded smallvec v1.16.3
+  Downloaded serde_json v1.0.154
+  Downloaded tinytemplate v1.2.1
+  Downloaded syn v3.0.9
+  Downloaded unicode-ident v1.0.27
+  Downloaded zerocopy v0.8.63
+  Downloaded zerocopy-derive v0.8.63
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling once_cell v1.21.4
+   Compiling pin-project-lite v0.2.17
+   Compiling oriera-common v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-common)
+   Compiling oriera-asset v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-asset)
+   Compiling cfg-if v1.0.5
+   Compiling crossbeam-utils v0.8.23
+   Compiling serde_core v1.0.229
+   Compiling crossbeam-epoch v0.9.21
+   Compiling regex-syntax v0.8.11
+   Compiling tracing-core v0.1.36
+   Compiling zerocopy v0.8.63
+   Compiling zmij v1.0.23
+   Compiling autocfg v1.5.1
+   Compiling serde v1.0.229
+   Compiling crossbeam-deque v0.8.8
+   Compiling regex-automata v0.4.18
+   Compiling num-traits v0.2.19
+   Compiling libc v0.2.191
+   Compiling rayon-core v1.13.0
+   Compiling either v1.19.0
+   Compiling serde_json v1.0.154
+   Compiling clap_lex v1.1.1
+   Compiling anstyle v1.0.14
+   Compiling itoa v1.0.18
+   Compiling ciborium-io v0.2.2
+   Compiling memchr v2.8.3
+   Compiling plotters-backend v0.3.7
+   Compiling plotters-svg v0.3.7
+   Compiling clap_builder v4.6.7
+   Compiling itertools v0.10.5
+   Compiling syn v2.0.119
+   Compiling syn v3.0.9
+   Compiling same-file v1.0.6
+   Compiling cast v0.3.0
+   Compiling bitflags v2.13.2
+   Compiling criterion-plot v0.5.0
+   Compiling walkdir v2.5.0
+   Compiling clap v4.6.7
+   Compiling regex v1.13.1
+   Compiling anes v0.1.6
+   Compiling oorandom v11.1.5
+   Compiling lazy_static v1.5.1
+   Compiling log v0.4.34
+   Compiling sharded-slab v0.1.7
+   Compiling oriera-pal v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-pal)
+   Compiling tracing-log v0.2.0
+   Compiling matchers v0.2.0
+   Compiling thread_local v1.1.10
+   Compiling smallvec v1.16.3
+   Compiling nu-ansi-term v0.50.3
+   Compiling serde_derive v1.0.229
+   Compiling rayon v1.12.0
+   Compiling tracing-attributes v0.1.31
+   Compiling zerocopy-derive v0.8.63
+   Compiling tracing v0.1.44
+   Compiling is-terminal v0.4.17
+   Compiling plotters v0.3.7
+   Compiling oriera-core v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-core)
+   Compiling oriera-ecs v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-ecs)
+   Compiling tracing-subscriber v0.3.23
+   Compiling oriera-subsys v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-subsys)
+   Compiling oriera-genai v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-genai)
+   Compiling oriera-render v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-render)
+   Compiling oriera-infer v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-infer)
+   Compiling oriera-agent v0.3.0 (/private/tmp/oriera-v03-audit/crates/oriera-agent)
+   Compiling tinytemplate v1.2.1
+   Compiling oriera-pc v0.3.0 (/private/tmp/oriera-v03-audit/platforms/pc)
+   Compiling half v2.7.1
+   Compiling ciborium-ll v0.2.2
+   Compiling ciborium v0.2.2
+   Compiling criterion v0.5.1
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 17.09s
+     Running unittests src/lib.rs (target/debug/deps/oriera_agent-7642a1aa754ae16e)
+
+running 21 tests
+test genai::tests::fallback_names_are_deterministic_and_distinct ... ok
+test genai::tests::negation_before_intent_suppresses_generation ... ok
+test genai::tests::non_generation_utteances_return_none ... ok
+test cognition::tests::cognition_boots_on_a_bare_world_without_panicking ... ok
+test genai::tests::parses_3d_and_video_intents ... ok
+test memory::tests::retrieval_prefers_keyword_and_partner ... ok
+test genai::tests::explicit_names_are_extracted ... ok
+test cognition::tests::director_advances_story_and_days ... ok
+test memory::tests::unknown_agent_is_empty ... ok
+test tests::negation_after_intent_does_not_suppress ... ok
+test memory::tests::caps_at_sixty_per_agent ... ok
+test tests::negation_before_intent_suppresses_it ... ok
+test tests::parses_clear ... ok
+test tests::parses_count ... ok
+test tests::parses_gravity ... ok
+test tests::parses_spawn ... ok
+test tests::parses_speed ... ok
+test tests::parses_teleport ... ok
+test tests::teleport_needs_two_numbers ... ok
+test tests::unknown_falls_through ... ok
+test cognition::tests::cognition_drives_dialogue_on_engine_ticks ... ok
+
+test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/oriera_asset-0ee0988c7ed535eb)
+
+running 3 tests
+test tests::named_assets_hot_swap_behind_the_same_name ... ok
+test tests::names_are_independent_per_type ... ok
+test tests::unload_frees_payload_and_registration ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/oriera_common-e350cd4576d98dbe)
+
+running 2 tests
+test tests::elapsed_is_zero_for_later_since ... ok
+test tests::token_usage_accumulates ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/oriera_core-a43f7520cbbc9c99)
+
+running 6 tests
+test tests::single_in_budget_frame_resets_the_streak ... ok
+test tests::custom_budget_changes_the_grading_curve ... ok
+test tests::tick_records_per_system_timings_in_run_order ... ok
+test tests::scheduler_passes_world_to_systems ... ok
+test tests::exactly_at_ratio_threshold_is_not_an_overrun ... ok
+test tests::sustained_overruns_fire_one_warning_per_streak ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/oriera_ecs-194140d5dadb8a01)
+
+running 18 tests
+test tests::event_types_are_independent_queues ... ok
+test tests::clear_despawns_all_and_stales_handles ... ok
+test tests::despawn_clears_components ... ok
+test tests::events_drain_in_write_order ... ok
+test tests::for_each_mut_joins_without_clone ... ok
+test tests::for_each2_mut_joins_without_clone ... ok
+test tests::generation_invalidates_stale_handles ... ok
+test tests::get_and_get_mut ... ok
+test tests::insert_and_query ... ok
+test tests::remove_component ... ok
+test tests::resource_or_default_inserts_when_missing ... ok
+test tests::resources_are_type_keyed_singletons ... ok
+test tests::spawn_and_count ... ok
+test tests::spawn_empty ... ok
+test tests::stale_handle_rejected ... ok
+test tests::panicking_closure_does_not_lose_the_column ... ok
+test tests::event_flood_is_capped_and_keeps_the_newest ... ok
+test tests::bench_10k_entities ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running unittests src/lib.rs (target/debug/deps/oriera_genai-5bb2db152bbaa2e7)
+
+running 26 tests
+test config::tests::kinds_roundtrip_and_default_to_mock ... ok
+test hot_swap::tests::bare_world_lands_nothing ... ok
+test hot_swap::tests::lands_behind_the_logical_name ... ok
+test hot_swap::tests::regeneration_keeps_one_entry_and_swaps_payload ... ok
+test config::tests::base_urls_are_overridable ... ok
+test config::tests::factory_offline_by_default ... ok
+test mock::tests::empty_name_is_rejected ... ok
+test mock::tests::output_is_deterministic_across_providers ... ok
+test mock::tests::polls_after_terminal_keep_returning_the_asset ... ok
+test mock::tests::lifecycle_is_queued_running_succeeded ... ok
+test mock::tests::unknown_task_is_a_provider_error ... ok
+test mock::tests::unsupported_kind_fails_fast ... ok
+test mock::tests::video_requests_land_video_stubs ... ok
+test system::tests::bare_world_boots_without_panicking ... ok
+test system::tests::full_lifecycle_lands_a_validated_swap_and_event ... ok
+test system::tests::in_flight_is_bounded_by_limits ... ok
+test system::tests::limits_clamp_through_one_entry_point ... ok
+test system::tests::provider_failure_lands_a_placeholder_not_a_crash ... ok
+test system::tests::unsupported_requests_fail_without_placeholder ... ok
+test tests::capabilities_gate_kinds ... ok
+test tests::limits_clamp_through_one_entry_point ... ok
+test tests::oversized_payload_is_rejected ... ok
+test tests::stubs_pass_their_format_signatures ... ok
+test tests::task_status_terminality ... ok
+test tests::tiny_glb_is_a_valid_asset ... ok
+test tests::wrong_magic_is_rejected ... ok
+
+test result: ok. 26 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/oriera_infer-9a2515f44ae90e6c)
+
+running 15 tests
+test provider::choice_tests::default_base_urls_are_sane ... ok
+test provider::tests::default_last_usage_is_zero_for_minimal_backends ... ok
+test provider::tests::rule_provider_reports_usage_after_each_call ... ok
+test provider::tests::rule_provider_is_deterministic_and_keyworded ... ok
+test provider::choice_tests::creators_choose_any_vendor_through_data ... ok
+test tests::count_writes_stats_without_touching_entities ... ok
+test tests::frame_budget_spreads_a_command_flood ... ok
+test tests::clear_and_gravity_commands_touch_the_world ... ok
+test tests::set_speed_scales_velocities ... ok
+test tests::default_budget_covers_typical_bursts ... ok
+test tests::spawns_are_deterministic ... ok
+test tests::spawn_command_creates_entities ... ok
+test tests::teleport_shifts_every_position ... ok
+test tests::unknown_commands_are_rejected_not_executed ... ok
+test tests::usage_meter_accumulates_across_calls ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/oriera_pal-e73d263504eb03c2)
+
+running 11 tests
+test capability::tests::ar_glasses_has_90fps_budget ... ok
+test gfx::tests::null_backend_round_trips ... ok
+test capability::tests::bci_bits_are_zero_in_v1 ... ok
+test net::tests::offline_transport_reports_disconnected ... ok
+test input::tests::null_source_polls_nothing ... ok
+test net::tests::routing_is_deterministic ... ok
+test net::tests::edge_wins_for_tight_budgets_when_present ... ok
+test net::tests::privacy_pins_tasks_on_device ... ok
+test storage::tests::memory_storage_round_trip ... ok
+test xr::tests::stub_session_has_no_tracking ... ok
+test net::tests::npu_takes_small_payloads_locally ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/oriera_pc-b2394403d5f3b8f0)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/oriera_render-88aca051ba00078d)
+
+running 5 tests
+test tests::in_budget_frames_reset_the_degrade_streak ... ok
+test tests::sustained_overruns_degrade_quality ... ok
+test tests::counts_visible_positions ... ok
+test tests::batching_reduces_draw_calls_at_lower_tiers ... ok
+test tests::recovery_needs_headroom_and_patience ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/oriera_subsys-dadad803c30bf34d)
+
+running 5 tests
+test tests::effective_is_the_single_clamp_entry_point ... ok
+test tests::absurd_time_scale_is_clamped_not_fatal ... ok
+test tests::gravity_resource_drives_acceleration ... ok
+test tests::integrates_velocity_and_bounces ... ok
+test tests::time_scale_paces_the_simulation ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests oriera_agent
+
+running 2 tests
+test crates/oriera-agent/src/genai.rs - genai (line 9) - compile ... ok
+test crates/oriera-agent/src/lib.rs - (line 18) - compile ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+   Doc-tests oriera_asset
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests oriera_common
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests oriera_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests oriera_ecs
+
+running 1 test
+test crates/oriera-ecs/src/lib.rs - (line 25) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.44s
+
+   Doc-tests oriera_genai
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests oriera_infer
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests oriera_pal
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests oriera_render
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests oriera_subsys
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
