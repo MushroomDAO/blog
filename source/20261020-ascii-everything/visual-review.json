@@ -1,0 +1,89 @@
+{
+  "allEightViewedByRoot": true,
+  "asciiCoverDarkEdge": "Part of original high-contrast synthetic mecha artwork, not padding. No human faces.",
+  "everythingCover": "Official appwall inspected and rejected because of visible people;FLUX154 conceptual office tools chosen.",
+  "articles": [
+    {
+      "slug": "ascii-portrait-browser-animation",
+      "images": [
+        {
+          "path": "src/assets/images/ascii-portrait-browser-animation-banner.jpg",
+          "dimensions": [
+            1200,
+            630
+          ],
+          "bytes": 94483,
+          "rootVisualReview": true
+        },
+        {
+          "path": "src/assets/images/ascii-portrait-browser-animation-fig-01.png",
+          "dimensions": [
+            1280,
+            720
+          ],
+          "bytes": 82960,
+          "rootVisualReview": true
+        },
+        {
+          "path": "src/assets/images/ascii-portrait-browser-animation-fig-02.png",
+          "dimensions": [
+            1280,
+            720
+          ],
+          "bytes": 71379,
+          "rootVisualReview": true
+        },
+        {
+          "path": "src/assets/images/ascii-portrait-browser-animation-fig-03.png",
+          "dimensions": [
+            1280,
+            720
+          ],
+          "bytes": 61419,
+          "rootVisualReview": true
+        }
+      ]
+    },
+    {
+      "slug": "everything-open-source-app-suite",
+      "images": [
+        {
+          "path": "src/assets/images/everything-open-source-app-suite-banner.jpg",
+          "dimensions": [
+            1200,
+            630
+          ],
+          "bytes": 91968,
+          "rootVisualReview": true
+        },
+        {
+          "path": "src/assets/images/everything-open-source-app-suite-fig-01.png",
+          "dimensions": [
+            1280,
+            720
+          ],
+          "bytes": 54749,
+          "rootVisualReview": true
+        },
+        {
+          "path": "src/assets/images/everything-open-source-app-suite-fig-02.png",
+          "dimensions": [
+            1280,
+            720
+          ],
+          "bytes": 28816,
+          "rootVisualReview": true
+        },
+        {
+          "path": "src/assets/images/everything-open-source-app-suite-fig-03.png",
+          "dimensions": [
+            1280,
+            720
+          ],
+          "bytes": 58521,
+          "rootVisualReview": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "articles": [
+    {
+      "slug": "ascii-portrait-browser-animation",
+      "url": "https://blog.mushroom.cv/blog/ascii-portrait-browser-animation/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/ascii-portrait-browser-animation-banner.Bsv8_YTe_2sMbkR.webp",
+          "status": 200,
+          "bytes": 28878
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ascii-portrait-browser-animation-fig-01.BP9mh7g2_1Ps7rF.webp",
+          "status": 200,
+          "bytes": 76618
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ascii-portrait-browser-animation-fig-02.DSPTC8pA_Xni7c.webp",
+          "status": 200,
+          "bytes": 50456
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ascii-portrait-browser-animation-fig-03.B1vJKuD0_GwxBQ.webp",
+          "status": 200,
+          "bytes": 40664
+        }
+      ],
+      "listPosition": 2,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    },
+    {
+      "slug": "everything-open-source-app-suite",
+      "url": "https://blog.mushroom.cv/blog/everything-open-source-app-suite/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/everything-open-source-app-suite-banner.5axsJJ2M_Z1ul7LS.webp",
+          "status": 200,
+          "bytes": 35496
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/everything-open-source-app-suite-fig-01.CEa2r-Uy_7saIa.webp",
+          "status": 200,
+          "bytes": 55448
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/everything-open-source-app-suite-fig-02.zKUcRQ8-_ZLzhMC.webp",
+          "status": 200,
+          "bytes": 35042
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/everything-open-source-app-suite-fig-03.DiF8GKmg_Z2b3cpp.webp",
+          "status": 200,
+          "bytes": 52376
+        }
+      ],
+      "listPosition": 3,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}
