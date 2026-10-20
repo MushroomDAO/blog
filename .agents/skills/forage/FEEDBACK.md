@@ -928,3 +928,12 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - Realcurl200installer76952B/bashedsyntaxonly,publicvsfixedsource2channelvaluesdifferent. ActualGo1.27.1upstreampolicy22testfunctionspass,0failed;notnetguard/DNS/fullsecurityaudit. Noinstaller/image/wholeapp/model/UI/performancetest.
 - Hostedmodelsseescreenshots/context,defaultlocalrecordingnotoffline;optionalrelayoff,trafficthroughrelay/Cloudflare. Keydstandins+approvalrulesdocumentednotourwhole-systemproof. Replaynotexternalundo,hidden-tabcontinuationnotcrashrecoveryguarantee.
 - SourceUIperson+textnotbanner;FLUX148conceptcover+3XiaoMfigures,bilingualSEO. Publicarticle+4images200/listchecked,currentremote draft/getverifiedmediaId prCUE631thH1cmNLi42prD19UXR4KxmehVGYpIaRGIB09-1kfScbRRqkahK9K1ia. KB/index/ledgerupdated.
+
+
+## 2026-10-20 —395 Halogen and Gufo prefill scope
+
+- https://blog.mushroom.cv/blog/strix-halo-halogen-gufo-prefill/ ; task39df2739-d064-480d-a224-10e5079c42a0. ExactGufo/HalogenURLs+entitydeduprawKBonly,4draftschecked,publishedAPI48001 unavailable. PinGufo877518953c153b2aac57f7b77fc904e8540b1fde/Halogen002589b11480cf3422f209b336c19dcc208fc69f.
+- 395=RyzenAIMax+395StrixHalo/Radeon8060Sgfx1151,integratedGPUnotCPU/NPUonly. GufoMITvsHalogenEULAcompiledcore;donotlabelbothopensource. Modellicensesseparate. Public1801/1836PPconditional,notdecodeorallmodels.
+- GufoOct18FlashNextQ4ARtable:nominalpp2048afterdepthcache,d0actual2040cache0/1801.01PP,d128kactual130932cache+2047new/1557.18PP. Dense27BQ4d0PP648.89differentmodel. AR28.29,MTPmixed35.79,repetition116.93;8user245.81sumindividualratesnotcommonwallclock. Historicalreferencebaselinesnotfreshuniversalwinner.
+- Halogen0.18.11v2cacheoff8k1836/32k1785,10promptdraftmean64.2tg;85Wpackage128GB,notwallpower. README1821/1.6s/21solder0.18.0separate:syntheticsweepvsrealtext,cacheagentturnvsfresh34k. Earlycacheoncalibrationreusefixed,donotcrosscompareversions. Native~111GiBdownload,notsmallinstaller;BIOSUMAsettingsengine-specific,PodmangroupsnotDocker.
+- Actual8rowJSON/md/countauditonly,rawtimingsnotpublicJSON,noperformance/qualityreproductionor395test. CommunitySep28configs153prompt/3slotsnotbulkPPor3fullcontexts,hardwareflagsnotuniversalrecipe. FLUX149OCRrejected,150qualified+3XiaoMfigures,bilingualSEO. Publicarticle4images/listverified,currentremote draft/getmediaId prCUE631thH1cmNLi42prPW8RqGUqEW6Ua79Wqvo-YNJ2THoDF0CscH6WN5P8Wbu. KB/indexledgerupdated.
