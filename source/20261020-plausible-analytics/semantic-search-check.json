@@ -1,0 +1,93 @@
+{
+  "query": "Plausible Analytics consulting and white-label services",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.75345397,
+    "article_id": "plausible-analytics-consulting-white-label"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "plausible-analytics-consulting-white-label",
+        "title": "Plausible Analytics: Consulting and White-Label Services",
+        "url": "/blog/plausible-analytics-consulting-white-label/",
+        "language": "en",
+        "excerpt": "Plausible Analytics: Consulting and White-Label Services Build a recurring analytics service with Plausible: compare CE hosting and official white-label options, licensing boundaries, delivery scope and real costs. Plausible Analytics Web Analytics Open Source White Label Consult",
+        "score": 0.75345397
+      },
+      {
+        "article_id": "easel-open-source-social-media-agent-workbench",
+        "title": "Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布",
+        "url": "/blog/easel-open-source-social-media-agent-workbench/",
+        "language": "zh",
+        "excerpt": "Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布 浙大 REAL Lab + 北大 OpenDCAI Lab 开源的社媒创作 Agent：基于 OpenClaw，112 个 Skill 分六层（基础/发现/策划/创作/发布/归因），Python CLI + Web 工作台，支持小红书/抖音/快手/知乎/B站/视频号六平台登录发布。账号画像六维持久化，越用越懂账号。Apache-2.0，187 star，两周新。 AI Agent 开源 内容创作 自动化 小红书 OpenClaw Python 工作流 多平台 B",
+        "score": 0.5164082
+      },
+      {
+        "article_id": "claude-financial-advisors-connector-skill-approval-pattern",
+        "title": "Claude for Financial Advisors 拆解：垂直 AI 正在变成「连接器+技能+审批+审计」的打包件",
+        "url": "/blog/claude-financial-advisors-connector-skill-approval-pattern/",
+        "language": "zh",
+        "excerpt": "Claude for Financial Advisors 拆解：垂直 AI 正在变成「连接器+技能+审批+审计」的打包件 Anthropic 2026年9月14日发布 Claude for Financial Advisors，打包约18个连接器和8个工作流技能，定价70-120美元/用户/月，交易和合规决策仍必须人工批准。本文核实三条一手源，判断这套模式对中国中小企业和独立开发者的可复制性与局限。 Claude for Financial Advisors 垂直 Agent Anthropic Connector 合规 AI 中小企业 AI Agen",
+        "score": 0.5163566
+      },
+      {
+        "article_id": "integral-maxed-oss-ai-native-professional-services",
+        "title": "AI 干活，持证会计师签字：从 Integral 的 1800 万欧元融资看专业服务的新架构",
+        "url": "/blog/integral-maxed-oss-ai-native-professional-services/",
+        "language": "zh",
+        "excerpt": "AI 干活，持证会计师签字：从 Integral 的 1800 万欧元融资看专业服务的新架构 柏林公司 Integral 2026-09-16 宣布 1800 万欧元 A 轮，两年内累计融资超 3000 万欧元，用 AI 代理处理记账对账、专业人士审核例外并承担法律责任；同一天我们核实了报道里提到的开源项目 Maxed OSS，它是真实维护的 17 个仓库，把金额计算、对账、签名验证这类确定性工作做成 AI 可调用的工具。 AI Agent SME AI 会计自动化 开源工具 专业服务 Integral 融资 一手源 Integral 到底在卖什么？ A",
+        "score": 0.5144697
+      },
+      {
+        "article_id": "brand-strategy-guide-claude-skill-for-startups",
+        "title": "把 5 万元的品牌咨询装进 Claude：brand-strategy-guide 让小团队也能做品牌全案",
+        "url": "/blog/brand-strategy-guide-claude-skill-for-startups/",
+        "language": "zh",
+        "excerpt": "把 5 万元的品牌咨询装进 Claude：brand-strategy-guide 让小团队也能做品牌全案 brand-strategy-guide 是一个开源的 Claude Code 技能，把专业品牌咨询方法论变成一套可对话的 AI 系统。早期创业者不用花 1.5 万到 5 万美元请咨询公司，靠 22 轮结构化对话或一份问卷，就能产出 40-100 页的品牌全案。本文讲清它是什么、谁能用、怎么上手。 品牌策略 Claude Code AI Skill 创业 Brand Strategy 开源工具 小团队 一、它解决的是一个真实的痛点 二、它到底是什么",
+        "score": 0.5129455
+      },
+      {
+        "article_id": "alibaba-skill-up-agent-skill-eval-evolution",
+        "title": "alibaba/skill-up：Agent Skill 的评估与自动进化闭环——Eval + 自修复一键跑通",
+        "url": "/blog/alibaba-skill-up-agent-skill-eval-evolution/",
+        "language": "zh",
+        "excerpt": "alibaba/skill-up：Agent Skill 的评估与自动进化闭环——Eval + 自修复一键跑通 alibaba/skill-up，1,031 stars，Apache-2.0，Go。阿里巴巴出品的 Agent Skill 评估与进化工具，4 个月 1000+ stars。声明式 YAML 测试用例 + rule/script/agent 三种 judge 策略 + skill-upper 自动读取失败报告修复 Skill，形成 Eval → 失败分析 → 自动修复 → 再 Eval 的闭环。支持 Claude Code、Codex、Qwe",
+        "score": 0.50874895
+      },
+      {
+        "article_id": "lieflat-charts-agent-skill-data-visualization",
+        "title": "Lieflat Charts 实测：一套遵循 Agent Skills 格式的数据可视化 skill，但\"开源\"这个词用错了",
+        "url": "/blog/lieflat-charts-agent-skill-data-visualization/",
+        "language": "zh",
+        "excerpt": "Lieflat Charts 实测：一套遵循 Agent Skills 格式的数据可视化 skill，但\"开源\"这个词用错了 实测 Agent Skills 生态里的数据可视化 skill Lieflat Charts（moxt.ai 出品，兼容 Claude Code/Codex）：装上后用本站今天的真实采集数据（forage 雷达）跑出一张 Tick Rows 图，记录选型过程和产出。GitHub 4633 star，但作者在 X 上说\"我开源的\"其实不准确——License 是 PolyForm Noncommercial 1.0.0，只允许学习、",
+        "score": 0.50852203
+      },
+      {
+        "article_id": "archestra-enterprise-ai-platform-mcp-gateway-guardrails-llm-proxy-k8s",
+        "title": "Archestra：企业级一体化 AI 平台，MCP 网关 + LLM 代理 + 双 LLM 护栏 + K8s 编排，AGPL 开源",
+        "url": "/blog/archestra-enterprise-ai-platform-mcp-gateway-guardrails-llm-proxy-k8s/",
+        "language": "zh",
+        "excerpt": "Archestra：企业级一体化 AI 平台，MCP 网关 + LLM 代理 + 双 LLM 护栏 + K8s 编排，AGPL 开源 archestra-ai/archestra 是一个企业级一体化 AI 平台，4201 stars，TypeScript，AGPL 3.0（30人以下团队免费）。一个 URL、一个 Token，涵盖：LLM 网关（Anthropic/OpenAI/Azure/Bedrock/DeepSeek，带费用限额和虚拟 API Key）、MCP 网关（OAuth + On-Behalf-Of，工具以用户身份运行）、A2A 网关、私有",
+        "score": 0.50804234
+      },
+      {
+        "article_id": "newsjack-ai-pr-skill-pack-agent-newsjacking",
+        "title": "Newsjack：把 AI Agent 变成 PR 团队的开源技能包，30+ 技能覆盖新闻蹭热、危机公关、AI 搜索可见度",
+        "url": "/blog/newsjack-ai-pr-skill-pack-agent-newsjacking/",
+        "language": "zh",
+        "excerpt": "Newsjack：把 AI Agent 变成 PR 团队的开源技能包，30+ 技能覆盖新闻蹭热、危机公关、AI 搜索可见度 elvisun/newsjack，1,257 stars，MIT。Go CLI + Markdown skill 文件格式，安装后 Claude Code/Codex 等 Agent 获得 30+ PR 专业技能：新闻监控与蹭热点检测、pitch 邮件撰写、记者匹配、危机公关保持声明、AEO/GEO AI 搜索引擎可见度优化。Elvis Sun + PR 专家 Carly Martinetti 共同开发，配套 Medialyst 商",
+        "score": 0.49909008
+      },
+      {
+        "article_id": "agent-lightning-microsoft-research-rl-framework-train-agents-real-harness",
+        "title": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习",
+        "url": "/blog/agent-lightning-microsoft-research-rl-framework-train-agents-real-harness/",
+        "language": "zh",
+        "excerpt": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习 microsoft/agent-lightning，MIT 开源，Python，18K stars。三个组件（Trainer/API Gateway/Rollout Controller），Agent 代码零改动，用真实工具链训练。Qwen3.5-9B 只用 6K 样本，SWE-bench Verified 从 41.8% 涨到 56.4%（+14.6pp）。支持 AutoGen、LangChain、OpenAI Agents SDK 及任意",
+        "score": 0.49719092
+      }
+    ]
+  }
+}

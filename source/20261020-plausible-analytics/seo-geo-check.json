@@ -1,0 +1,54 @@
+{
+  "slug": "plausible-analytics-consulting-white-label",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/plausible-analytics-consulting-white-label-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 84511
+    },
+    {
+      "path": "src/assets/images/plausible-analytics-consulting-white-label-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 82904
+    },
+    {
+      "path": "src/assets/images/plausible-analytics-consulting-white-label-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 60843
+    },
+    {
+      "path": "src/assets/images/plausible-analytics-consulting-white-label-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 83818
+    }
+  ]
+}
