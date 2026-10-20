@@ -1,0 +1,66 @@
+{
+  "articles": [
+    {
+      "slug": "abot-recon-streaming-3d-reconstruction",
+      "url": "https://blog.mushroom.cv/blog/abot-recon-streaming-3d-reconstruction/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/abot-recon-streaming-3d-reconstruction-banner.O62HbonQ_Z1HnqSN.webp",
+          "status": 200,
+          "bytes": 61182
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/abot-recon-streaming-3d-reconstruction-fig-01.7RLjeKkR_ZFi0zQ.webp",
+          "status": 200,
+          "bytes": 55166
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/abot-recon-streaming-3d-reconstruction-fig-02.CrmmDSI0_Z1Pp5c6.webp",
+          "status": 200,
+          "bytes": 98806
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/abot-recon-streaming-3d-reconstruction-fig-03._vY10qpe_1zU8k1.webp",
+          "status": 200,
+          "bytes": 44464
+        }
+      ],
+      "listPosition": 1,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    },
+    {
+      "slug": "openui-1-generative-ui-engineering",
+      "url": "https://blog.mushroom.cv/blog/openui-1-generative-ui-engineering/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/openui-1-generative-ui-engineering-banner.DcsY2_dU_15iUOk.webp",
+          "status": 200,
+          "bytes": 26754
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/openui-1-generative-ui-engineering-fig-01.DVQSfCe4_ZUD9xj.webp",
+          "status": 200,
+          "bytes": 47004
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/openui-1-generative-ui-engineering-fig-02.B7xvHFJz_ZYdSwV.webp",
+          "status": 200,
+          "bytes": 39108
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/openui-1-generative-ui-engineering-fig-03.BM4qYgjH_qH1Dd.webp",
+          "status": 200,
+          "bytes": 64154
+        }
+      ],
+      "listPosition": 2,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}
