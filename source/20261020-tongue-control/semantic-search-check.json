@@ -1,0 +1,93 @@
+{
+  "query": "MouthPad tongue input computer mouse dental scan retainer",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.56746274,
+    "article_id": "mouthpad-tongue-control-fact-check"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "mouthpad-tongue-control-fact-check",
+        "title": "MouthPad: Fact-Checking the $47 Tongue-Controlled Retainer",
+        "url": "/blog/mouthpad-tongue-control-fact-check/",
+        "language": "en",
+        "excerpt": "MouthPad: Fact-Checking the $47 Tongue-Controlled Retainer Trace the viral $47 tongue-controlled retainer story, verify MouthPad pricing and its developer, and inspect what the public USB bridge code actually provides. MouthPad Augmental Assistive Technology Open Source MouthIO W",
+        "score": 0.56746274
+      },
+      {
+        "article_id": "moss-tts-v15-multilingual-voice-clone",
+        "title": "MOSS-TTS v1.5：31 种语言、显式停顿控制、更稳的声音克隆，Apache 2.0 开源",
+        "url": "/blog/moss-tts-v15-multilingual-voice-clone/",
+        "language": "zh",
+        "excerpt": "MOSS-TTS v1.5：31 种语言、显式停顿控制、更稳的声音克隆，Apache 2.0 开源 复旦 NLP、上海创新研究院、模思智能联合的 OpenMOSS 团队发布 MOSS-TTS v1.5：31 种语言、[pause 3.2s] 显式停顿控制、声音克隆方差更小、标点韵律更自然，Apache 2.0 商用友好，PyTorch/GGUF/ONNX/MLX 全部支持。 TTS 语音合成 开源 MOSS-TTS 声音克隆 多语言 AI语音 OpenMOSS v1.5 的四个实质变化 多语言扩到 31 种 声音克隆更稳、方差更小 显式停顿控制：`[pa",
+        "score": 0.51058143
+      },
+      {
+        "article_id": "moss-tts-nano-ultralight-multilingual-tts-open-source",
+        "title": "0.1B 参数跑满 20 种语言：MOSS-TTS-Nano 超轻量 TTS 开源",
+        "url": "/blog/moss-tts-nano-ultralight-multilingual-tts-open-source/",
+        "language": "zh",
+        "excerpt": "0.1B 参数跑满 20 种语言：MOSS-TTS-Nano 超轻量 TTS 开源 OpenMOSS 开源 MOSS-TTS-Nano，0.1B 参数，纯 CPU 运行，48kHz 双声道输出，支持 20 种语言零样本声音克隆。单核 CPU（M4 MacBook Air）流畅推理，ONNX 运行无需 PyTorch，可嵌入浏览器扩展与边缘设备。 TTS 语音合成 开源 MOSS ONNX 声音克隆 轻量模型 本地部署 项目背景 核心技术架构 核心功能 极致轻量化 + 低延迟 零样本声音克隆 多语言支持 部署方式 实际意义 快速开始 常见问题",
+        "score": 0.50913525
+      },
+      {
+        "article_id": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota",
+        "title": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军",
+        "url": "/blog/moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota/",
+        "language": "zh",
+        "excerpt": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军 OpenMOSS 开源的 MOSS-Transcribe-Diarize 0.9B（1.5K stars），SOTA 端到端音频理解模型，一个模型同时完成长音频多说话人转写、说话人分离（diarization）、精确时间戳和声学事件标注。架构：Qwen3-0.6B 解码器 + Whisper-Medium 编码器 + 4x 时序合并 MLP 桥接。支持 50+ 语言。输出格式 [时间戳][S01]文本[时间戳]。",
+        "score": 0.49294192
+      },
+      {
+        "article_id": "voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone",
+        "title": "Give Your AI Agent a Voice with Open-Source Voicebox — MCP Voice Layer in Practice",
+        "url": "/blog/voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone/",
+        "language": "en",
+        "excerpt": "Give Your AI Agent a Voice with Open-Source Voicebox — MCP Voice Layer in Practice jamiepine/voicebox, 55K stars, MIT, Tauri+Python desktop app with a built-in MCP server for Claude Code, Cursor, and Windsurf. Seven local TTS engines (Qwen3-TTS, Chatterbox, Kokoro, etc.) + Whispe",
+        "score": 0.49270576
+      },
+      {
+        "article_id": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+        "title": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+        "url": "/blog/munder-difflin-multi-agent-harness-claude-codex-local-first/",
+        "language": "en",
+        "excerpt": "munder-difflin-multi-agent-harness-claude-codex-local-first Munder Difflin (MIT, 3888 stars, Electron+React+TypeScript) is a local-first multi-agent harness desktop app. It wraps Claude Code, OpenAI Codex, xAI Grok, Kimi Code, Qwen, GitHub Copilot CLI, and 9 other CLIs as real PT",
+        "score": 0.49018788
+      },
+      {
+        "article_id": "cove-book-forge-mcp-pdf-epub-agent-skill-obsidian-codex-claude",
+        "title": "cove-book-forge-mcp：把 PDF/EPUB 书籍锻造成 Agent Skill，一次分析，Codex/Claude Code 永久复用",
+        "url": "/blog/cove-book-forge-mcp-pdf-epub-agent-skill-obsidian-codex-claude/",
+        "language": "zh",
+        "excerpt": "cove-book-forge-mcp：把 PDF/EPUB 书籍锻造成 Agent Skill，一次分析，Codex/Claude Code 永久复用 moonlin1213/cove-book-forge-mcp 是一个本地优先的开源 MCP 服务器，把 PDF 或 EPUB 书籍转化为可复用的 AI 知识——稳定指纹缓存章节分析，同一份结果同时输出 Obsidian 笔记和可安装的 Agent Skill（兼容 Codex、Claude Code）。支持 OpenAI/DeepSeek/Anthropic 三类 Provider，完整书籍锻造作业可",
+        "score": 0.4880956
+      },
+      {
+        "article_id": "opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx",
+        "title": "opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx",
+        "url": "/blog/opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx/",
+        "language": "en",
+        "excerpt": "opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx akdeb/OpenToys is the local-first version of ElatoAI: ESP32-S3 as the hardware terminal, Apple Silicon Mac handles all inference (Whisper Turbo ASR + Qwen3-TTS/Chatterbox + MLX LLMs) over WebSocket via the toy's own WiFi",
+        "score": 0.4876439
+      },
+      {
+        "article_id": "huggingface-speech-to-speech-local-voice-agent-robot-pipeline",
+        "title": "HuggingFace Speech-to-Speech：一行安装本地语音助手，延迟低到像真人，驱动数千台机器人",
+        "url": "/blog/huggingface-speech-to-speech-local-voice-agent-robot-pipeline/",
+        "language": "zh",
+        "excerpt": "HuggingFace Speech-to-Speech：一行安装本地语音助手，延迟低到像真人，驱动数千台机器人 huggingface/speech-to-speech 是一个低延迟、全模块化的本地语音 Agent 流水线（VAD → STT → LLM → TTS），兼容 OpenAI Realtime API。10.6K stars，Apache 2.0，`pip install speech-to-speech` 一行启动。已在数千台 Reachy Mini 机器人的对话后端中跑生产。每个组件均可替换，Apple Silicon 原生支持。 语音",
+        "score": 0.48516417
+      },
+      {
+        "article_id": "meta-muse-voice-transcribe-realtime-asr-diarization-msl",
+        "title": "Meta Muse Voice Transcribe：MSL 首款实时音频感知模型，单模型做 ASR + 说话人分离 + 端点检测",
+        "url": "/blog/meta-muse-voice-transcribe-realtime-asr-diarization-msl/",
+        "language": "zh",
+        "excerpt": "Meta Muse Voice Transcribe：MSL 首款实时音频感知模型，单模型做 ASR + 说话人分离 + 端点检测 Meta Superintelligence Labs 发布 Muse Voice Transcribe，首款实时音频感知模型，单模型集成流式 ASR、20+ 说话人分离和端点检测，支持多语言无缝切换，通过 RL 训练的自适应延迟机制登顶 Artificial Analysis 流式语音识别和公开说话人分离排行榜。 AI ASR Meta 语音识别 说话人分离 实时 MSL 这个模型解决了什么问题 核心特性 关键技术：自适应",
+        "score": 0.48352042
+      }
+    ]
+  }
+}
