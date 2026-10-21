@@ -1,0 +1,51 @@
+# Anthropic employment and expectations: source review
+
+Task416e1276-5951-4c32-af71-0ab2ea98a94a. Retrieved2026-10-20.
+
+## Exact report pairing and duplication
+
+https://www.anthropic.com/research/expectations-for-the-future explicitlypairs twoOct16reports:
+https://www.anthropic.com/research/employment-at-anthropic
+https://www.anthropic.com/research/ai-expectations-gap
+
+Not the older2025-12-02 engineering survey. Exact2URLs had no published article, currentdraft or localreceipt/KBpublication. GenericEnglishreporttitlewords matchedunrelatedarticles; inspectednamesandexactreferences. OriginalbotrawmaterialalreadyKB; no duplicateingest. Live5draftsread; freepublish48001unavailable,localrecords andledgerchecked. Newresearchmemoryfiled beforewriting.
+
+## Primary PDF snapshots
+
+Employment20pages:
+https://www-cdn.anthropic.com/72628f1863c53432195db83279252dfd2cb53158/Employment%20at%20Anthropic.pdf
+
+Expectations16pages:
+https://www-cdn.anthropic.com/a28f24814c56e2834a3eae7b13946f19d3e97ec4/The%20AI%20Expectations%20Gap.pdf
+
+ExpectationsAppendix6pages(webreaderreviewed):
+https://www-cdn.anthropic.com/1bc1a3067f9c9883d6d556b38f26fd4f1e1b640f/The%20AI%20Expectations%20Gap%20-%20Appendix.pdf
+
+Initialurllib403; publiccurlMozillaUA fetchedPDFs/image successfully. JinaReaderfetchedofficialpagebody. PDFKitnative20/16pagecounts,text extraction and actualvisualreview of employmentFigure1page4,Figure3page7, expectationsFigure5page8. No PDF/fullcopyrightedreporttext redistributed in evidencebundle; auditcanfetchpinnedCDNURLs.
+
+## Employment findings and guardrails
+
+Internalemployment,AIuse/output/surveys/communication/calendar/hiringrecords plus17interviews. Junior shareofnewtechnicalhires27to9percent; incumbentjuniorheadcountshare21to14differentdenominator; technicaldepartmentshare61to56notabsolutehiringdecline. Articleusesnewhire27to9only. Authorobservationwindowearly2025through2026,Figure1endsMay2026.
+
+6to1Augustemployee-directedinteractiveagenthours,pooledsubagents; runtimeincludinginference/activetools,excludeswait>30min; humanhoursheadcount*40weeklyassumption. Not6agentsperperson,notequalproductivitymultiplier. Jointoverviewusesagentnumberwording; detailedreportcaptionclarifieshours,ourarticlefollowsreport.
+
+Adoptionnotrandom, potentialprojectselectionbias. Sameperson/month/directoryqualityproxies:deletion/reversion/lintsuppression/needfixing/skippedtests; notallquality/businessimpactobserved. 192codingagentadopters74nonadopters; fullautonomousadoptersalreadyupwardtrajectory. Articlekeepscausalcautionwithoutclaimingre-estimation.
+
+Reportinterviewscorecardsautomaticallycodedthemesamonghiredemployees, notallemploymentmarket/auditedskillvalue; autonomyjudgmentincreasingmentionsnotcausalhiringcoefficient. Attentionbottleneckandmeta-workmakeourworkflowhypothesesrelevant; no claimoriginaltraininginterventiontested.
+
+## Expectations populations and guardrails
+
+SurveyAugust2026. Overall10980USadults weightedonlineoptin,1334staffunweighted. USfuturequestionshalf2027half2030. Figure5 ownwork2030uses2278USemployed and1147staff, visuallycheckedPDFpage8, NOTfullsample. Means28US/75staff; staffslider/publicrangesmidpoints. Articleusesquestion-specificdenominators.
+
+Viewsaboutcapability/automation not measured2030capacity, causaleffectofworkingatlab, orcompanyofficialhiringplans. Staffheadcountgrowth95percent andmedian66percent arepersonalbeliefsnotcommitment; notincludedascompanyforecast. GDP5.4vs17.1modelimpliedsamples3259US/1093staff, notsurveyallrespondents; articledoesnotrepeatnumbers,explicitlylabelsmodelmapping/assumptions. Occupationalmix,access,selection/incentiveslimitgeneralization.
+
+## Independent analysis
+
+Task-learningpipeline,juniorentryopportunities,definition->generation->verification->responsibilityworkflow,reviewqueues,hiringrubric,pilotwithquality/rework/humanreviewbaseline. Proposalsnotempiricallyvalidatedbyreports. Nointernalmicrodataorstatisticalcausalreanalysis,noemploymentforecast/modelbenchmark. Do notsaylayoffsproven, junioremploymentban, or6xproductivity.
+
+## Cover and body images
+
+Official employmentreportthemeart:
+https://www-cdn.anthropic.com/images/4zrzovbb/website/e6c18d30f931ae76d4b600558f5a11377306f1d9-2000x1125.jpg
+
+Publicabstractart2000x1125, deliberatelyadoptedbanner1200x63094229bytes,provenance/OCR/framing/nofacespassed/rootviewed. Creditbothlanguagebodies; thirdpartyrightsretained. ThreeXiaoJbodyfiguresbecauseResearch/workorganization/socialtheme, notXiaoMtechtooldefault. NoAI-generatedscientificcharts/numericalresults.

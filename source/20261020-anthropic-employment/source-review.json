@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-20",
+  "scope": "Document snapshot and definition review only; no internal-data or causal-model replication.",
+  "documents": [
+    {
+      "name": "employment.pdf",
+      "url": "https://www-cdn.anthropic.com/72628f1863c53432195db83279252dfd2cb53158/Employment%20at%20Anthropic.pdf",
+      "sha256": "62cb814eeaa6b7410a0d715f630524e9046a03666351fbde8c6bbe4bbde2fefd",
+      "bytes": 2042091
+    },
+    {
+      "name": "expectations.pdf",
+      "url": "https://www-cdn.anthropic.com/a28f24814c56e2834a3eae7b13946f19d3e97ec4/The%20AI%20Expectations%20Gap.pdf",
+      "sha256": "7fb32df800d6e293c08a1c0ef4f4e8a56fe3e54ef5c50b65d28a85c71bd9d321",
+      "bytes": 1060991
+    }
+  ],
+  "pdfInspection": [
+    {
+      "extractedCharacters": 36659,
+      "pages": 20,
+      "renderedFile": "employment-checked-figure.png",
+      "renderedPage": 4,
+      "report": "employment"
+    },
+    {
+      "extractedCharacters": 25499,
+      "pages": 16,
+      "renderedFile": "expectations-checked-figure.png",
+      "renderedPage": 8,
+      "report": "expectations"
+    }
+  ],
+  "figure5Sample": {
+    "employedUSRespondents": 2278,
+    "staffRespondents": 1147,
+    "USWeighted": true,
+    "staffWeighted": false,
+    "visuallyReviewed": true
+  },
+  "fullSurveySample": {
+    "USAdults": 10980,
+    "staff": 1334
+  },
+  "notes": "Question-specific and full-survey denominators kept separate; 6to1 is runtime versus assumed human hours, not headcount."
+}

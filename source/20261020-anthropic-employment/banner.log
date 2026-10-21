@@ -1,0 +1,13 @@
+=== [adopt-banner] anthropic-employment-ai-expectations-reports ← 1 source image(s) → src/assets/images/anthropic-employment-ai-expectations-reports-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← source/20261020-anthropic-employment/official-hero.jpg
+=== [adopt-banner] done: src/assets/images/anthropic-employment-ai-expectations-reports-banner.jpg (1200x630, 94229B) ===
+=== [verify-banner] src/assets/images/anthropic-employment-ai-expectations-reports-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=source/20261020-anthropic-employment/official-hero.jpg
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 94229B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/anthropic-employment-ai-expectations-reports-banner.jpg ===
+PATH: src/assets/images/anthropic-employment-ai-expectations-reports-banner.jpg

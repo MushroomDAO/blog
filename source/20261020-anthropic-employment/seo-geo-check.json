@@ -1,0 +1,54 @@
+{
+  "slug": "anthropic-employment-ai-expectations-reports",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/anthropic-employment-ai-expectations-reports-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 94229
+    },
+    {
+      "path": "src/assets/images/anthropic-employment-ai-expectations-reports-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 86045
+    },
+    {
+      "path": "src/assets/images/anthropic-employment-ai-expectations-reports-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 78932
+    },
+    {
+      "path": "src/assets/images/anthropic-employment-ai-expectations-reports-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 88067
+    }
+  ]
+}
