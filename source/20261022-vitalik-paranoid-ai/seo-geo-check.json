@@ -1,0 +1,54 @@
+{
+  "slug": "vitalik-paranoid-ai-zkapi-tor",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/vitalik-paranoid-ai-zkapi-tor-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 88973
+    },
+    {
+      "path": "src/assets/images/vitalik-paranoid-ai-zkapi-tor-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 32645
+    },
+    {
+      "path": "src/assets/images/vitalik-paranoid-ai-zkapi-tor-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 48856
+    },
+    {
+      "path": "src/assets/images/vitalik-paranoid-ai-zkapi-tor-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 42831
+    }
+  ]
+}

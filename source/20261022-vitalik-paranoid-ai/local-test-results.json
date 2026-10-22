@@ -1,0 +1,29 @@
+{
+  "commit": "0fb263b0da04986cfe5c63b12340c1581018ae9b",
+  "command": "go test -json ./internal/relay ./internal/rewriter ./internal/cover",
+  "toolchain": "go version go1.27.1 darwin/arm64",
+  "results": {
+    "run": 38,
+    "output": 86,
+    "pass": 32,
+    "skip": 6
+  },
+  "packages": [
+    {
+      "Package": "github.com/ethereum/zkapi/zkapi-clientd/internal/relay",
+      "Action": "pass",
+      "Elapsed": 1.096
+    },
+    {
+      "Package": "github.com/ethereum/zkapi/zkapi-clientd/internal/rewriter",
+      "Action": "pass",
+      "Elapsed": 1.5310000000000001
+    },
+    {
+      "Package": "github.com/ethereum/zkapi/zkapi-clientd/internal/cover",
+      "Action": "pass",
+      "Elapsed": 2.618
+    }
+  ],
+  "scope": "Local fixtures only; no real Tor, local LLM generation, paid inference or transactions"
+}
