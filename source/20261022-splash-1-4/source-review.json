@@ -1,0 +1,33 @@
+{
+  "commit": "1482f6bbc2abf12375332725302019594150b6cb",
+  "tag": "1.4.0",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "9832d63ed93560cfdc9d9b6ff115e357ad9e00f6617d5f2e6adf59a41e119d61"
+    },
+    {
+      "path": "docs/performance.md",
+      "sha256": "cad955a4a4e930f0a9c9385686caaa8eee52aaa442e77545d6a7a31e0ad003ce"
+    },
+    {
+      "path": "DEVELOPMENT.md",
+      "sha256": "6c972982ae13dbefba5a3bed31b77af4563c7726030fc6819707e14c323c23e2"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "install/families.py",
+      "sha256": "c1652b527be7d2291ccf1f68c3409ec007043e6c326b27ad38213f1f97aa4b0e"
+    },
+    {
+      "path": "dev/tests/server/test_memory_release.py",
+      "sha256": "dfe45b29a1325f004fd0807d2448a2096c95f95259d618c8e62489570ae188ba"
+    }
+  ],
+  "officialBenchmarksOnly": true,
+  "noInferenceRun": true,
+  "cover": "Old FLUX42 rejected for generated garbled lettering; no suitable README image found; replacementFLUX165 same broad engine theme, rootviewed,0warnings."
+}
