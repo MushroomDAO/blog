@@ -22,6 +22,7 @@ const blog = defineCollection({
 			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
+			lastPublishedAt: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
 			// 分类标签：技术实验 | 进度汇报 | 专题研究 | 最新科技
 			tags: z.array(z.string()).default([]),
