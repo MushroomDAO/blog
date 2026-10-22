@@ -14,7 +14,7 @@ python3 scripts/test_stamp_blog_publication.py
 bash -n scripts/publish-blog.sh
 ```
 
-Three Node cases cover updated old articles entering latest8, same-day precise publication ordering and stable legacy fallback. Two Python cases cover preserved body/calendar dates, replacement rather than duplicate timestamps, deterministic same-time reruns and invalid frontmatter refusal. Actual Astro build passed.
+Four Node cases cover updated old articles entering latest8, same-day precise publication ordering, stable legacy fallback and same local-day timestamps whose UTC date is the previous day. Two Python cases cover preserved body/calendar dates, replacement rather than duplicate timestamps, deterministic same-time reruns and invalid frontmatter refusal. Actual Astro build passed.
 
 verify-home.py compares the recorded pre-fix carousel with the built and public post-fix page, asserts exactly8 slides and Splash first, requests the actual first image and checks originalpubDate. Fresh isolated-profile headlessChrome loaded the live page; its first original slide points toSplash and the screenshot was visually reviewed. No user browser profile was used. Homepage and first image returned200.
 
