@@ -137,6 +137,10 @@ node pipeline/m2/wechat-lint.js "$MD_FILE" || fm_fail=1
 [ "$fm_fail" -eq 0 ] || { echo "❌ frontmatter/SEO checks failed — fix and rerun"; exit 1; }
 echo "  ✓ frontmatter OK (tags=$tagcount, bilingual, banner present)"
 
+if [ "$DO_DEPLOY" = true ]; then
+  python3 scripts/stamp-blog-publication.py "$MD_FILE"
+fi
+
 # ---- 2. build ----
 echo "[2/5] building…"
 pnpm build 2>&1 | tail -3

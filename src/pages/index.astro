@@ -6,14 +6,15 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import { compareRecentPosts, postActivityDate } from '../lib/post-activity';
 import { AD_LAYOUT_KEY_IN_FEED, AD_SLOT_IN_FEED, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-// 取最新8篇文章作为轮播
-const carouselPosts = posts.slice(0, 8);
+// 轮播展示最近发布或更新；下方列表仍按原始发布日期排列。
+const carouselPosts = posts.toSorted(compareRecentPosts).slice(0, 8);
 
 // 轮播之后剩余的文章（用于列表展示）
 const listPosts = posts.filter(post => 
@@ -398,7 +399,7 @@ const postsData = posts.map(post => ({
 										<div class="carousel-meta">
 											<span class="carousel-category">{post.data.category}</span>
 											<span class="carousel-date">
-												<FormattedDate date={post.data.pubDate} />
+												<FormattedDate date={postActivityDate(post.data)} />
 											</span>
 										</div>
 										<h2 class="carousel-title">{post.data.title}</h2>

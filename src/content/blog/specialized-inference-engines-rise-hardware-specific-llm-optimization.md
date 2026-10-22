@@ -12,6 +12,7 @@ wechatTitle: "Splash更新：Mac加速要看哪些条件"
 wechatDigest: "复核官方95tok/s与缓存测试，拆解SSD流式加载、量化和长上下文的取舍。"
 
 updatedDate: "2026-10-22"
+lastPublishedAt: "2026-10-22T15:34:29Z"
 ---
 
 Splash 1.4.0 是面向 M3 及更新 Mac 的本地大模型推理引擎，此次重点是让 Flash-Next 这类大模型在统一内存与 SSD 之间协同运行。我们复核的官方 M5 Pro 64GB 数据是 95 tok/s 解码、32K 提示词 1,312 tok/s 预填充、缓存命中首 token 171ms，没有找到“120 tok/s”在同一模型和设置下的对应证据，也没有把这些官方数字写成我们的实测。
