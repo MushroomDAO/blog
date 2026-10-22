@@ -23,3 +23,9 @@ test('legacy posts use dates and a stable tie break, rather than filesystem orde
 	assert.equal(postActivityDate(a.data).toISOString(), '2026-10-22T00:00:00.000Z');
 	assert.deepEqual([b, a].sort(compareRecentPosts).map(post => post.id), ['a', 'b']);
 });
+
+test('same local-day publications retain time order when their UTC timestamps fall on the previous day', () => {
+	const earlier = { id: 'a-earlier', data: { pubDate: new Date('2026-10-22'), lastPublishedAt: new Date('2026-10-21T18:00:00Z') } };
+	const later = { id: 'z-later', data: { pubDate: new Date('2026-10-22'), lastPublishedAt: new Date('2026-10-21T19:00:00Z') } };
+	assert.deepEqual([earlier, later].sort(compareRecentPosts).map(post => post.id), ['z-later', 'a-earlier']);
+});
