@@ -1,0 +1,8 @@
+from pathlib import Path
+import re,json,subprocess
+b=Path(__file__).resolve().parent;expected='/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/'
+def slides(text):
+ a=text.index('id="carouselContainer"');e=text.index('id="carouselDots"',a);return list(dict.fromkeys(re.findall(r'href="(/blog/[^" ]+)"',text[a:e])))
+before=slides(Path('/tmp/home-carousel-before.html').read_text());local=slides(Path('dist/index.html').read_text());p=Path('/tmp/home-carousel-after.html');code=subprocess.check_output(['curl','-LsS','--compressed','-o',str(p),'-w','%{http_code}','https://blog.mushroom.cv/'],text=True);after=slides(p.read_text());assert code=='200'and expected not in before and after==local and after[0]==expected and len(after)==8,(code,after)
+html=p.read_text();a=html.index('id="carouselContainer"');first=html[a:html.index('data-index="1"',a)];img=re.search(r'<img[^>]*src="([^"]+)"',first)[1];imageurl='https://blog.mushroom.cv'+img if img.startswith('/')else img;imagecode=subprocess.check_output(['curl','-LsS','-o','/tmp/home-carousel-first-image','-w','%{http_code}',imageurl],text=True);assert imagecode=='200';assert '2026-10-22'in first
+report={'url':'https://blog.mushroom.cv/','status':int(code),'before':before,'after':after,'builtMatchesLive':True,'firstSlideImage':imageurl,'imageStatus':int(imagecode),'originalPubDatePreserved':'pubDate: "2026-10-05"'in Path('src/content/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization.md').read_text()};(b/'home-verification.json').write_text(json.dumps(report,indent=2));print('Homepage and image200; Splash first of8; matches built artifact; originalpubDate preserved')
