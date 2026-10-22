@@ -1,0 +1,62 @@
+{
+  "pin": "2aaf2552ce21154928b9f9c83582e41a637f5910",
+  "sourceReviewOnly": true,
+  "noDockerAvailable": true,
+  "runtimeTested": false,
+  "performanceMeasuredByUs": false,
+  "banner": "FLUX157; official assets reviewed were animated schematic SVG panels/logo, not photographic hero",
+  "sources": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/Ephemeral-AI-Lab/layerfs/2aaf2552ce21154928b9f9c83582e41a637f5910/LICENSE",
+      "sha256": "e20a92efe4b92c0460bd0c475395166e37b6450ed410af155fa0ed99d479f676",
+      "statementsVerified": [
+        "MIT License"
+      ]
+    },
+    {
+      "path": "sdk/js/README.md",
+      "url": "https://raw.githubusercontent.com/Ephemeral-AI-Lab/layerfs/2aaf2552ce21154928b9f9c83582e41a637f5910/sdk/js/README.md",
+      "sha256": "3cf0359f57d6889a536d0be88331525417cda7c431e5e69ca79f4558447080bc",
+      "statementsVerified": [
+        "Linux only",
+        "ext4, xfs, btrfs",
+        "An Exec message describes that execution and creates",
+        "workspace.commit(ws"
+      ]
+    },
+    {
+      "path": "dsh/README.md",
+      "url": "https://raw.githubusercontent.com/Ephemeral-AI-Lab/layerfs/2aaf2552ce21154928b9f9c83582e41a637f5910/dsh/README.md",
+      "sha256": "bf0d7fab5af674d9697b3314ed3ae5a5124b269eaae50627f65fd8a8c3fd84bd",
+      "statementsVerified": [
+        "22.19",
+        "Docker"
+      ]
+    },
+    {
+      "path": "benchmark/pjdfstest/records/20261019T224251Z.md",
+      "url": "https://raw.githubusercontent.com/Ephemeral-AI-Lab/layerfs/2aaf2552ce21154928b9f9c83582e41a637f5910/benchmark/pjdfstest/records/20261019T224251Z.md",
+      "sha256": "7e64c09f89bb4f28daa517a03531143933ab9330b5581d76a8bd85b03a77e516",
+      "statementsVerified": [
+        "707 assertions",
+        "432 as cascades",
+        "atime is not kept apart from mtime"
+      ]
+    },
+    {
+      "path": "benchmark/fio/records/20261020T000148Z.md",
+      "url": "https://raw.githubusercontent.com/Ephemeral-AI-Lab/layerfs/2aaf2552ce21154928b9f9c83582e41a637f5910/benchmark/fio/records/20261020T000148Z.md",
+      "sha256": "7cc96cced1a0115a8513d1b2712a50b06637b826a850409951ecfb230aa5ad8c",
+      "statementsVerified": [
+        "0.31×",
+        "Disposable fsync does not",
+        "6.9×"
+      ]
+    }
+  ],
+  "reportedRatioArithmeticOnly": {
+    "fsBench": 1.71,
+    "dedup": 19.93
+  }
+}

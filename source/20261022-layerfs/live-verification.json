@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "layerfs-v1-recursive-agent-filesystem",
+      "url": "https://blog.mushroom.cv/blog/layerfs-v1-recursive-agent-filesystem/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/layerfs-v1-recursive-agent-filesystem-banner.DZDsVlXV_ZsGHMC.webp",
+          "status": 200,
+          "bytes": 29280
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/layerfs-v1-recursive-agent-filesystem-fig-01.CRsoXrhp_Z16iWdC.webp",
+          "status": 200,
+          "bytes": 27022
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/layerfs-v1-recursive-agent-filesystem-fig-02.B0m20qKU_iE80U.webp",
+          "status": 200,
+          "bytes": 38488
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/layerfs-v1-recursive-agent-filesystem-fig-03.DvD8tYXR_aebTC.webp",
+          "status": 200,
+          "bytes": 35632
+        }
+      ],
+      "listPosition": 1,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}
