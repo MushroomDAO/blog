@@ -1,0 +1,7 @@
+from pathlib import Path
+import json,hashlib,subprocess
+b=Path(__file__).resolve().parent;r=Path('/tmp/splash-1-4-research');s=json.loads((b/'source-review.json').read_text());assert subprocess.check_output(['git','-C',str(r),'rev-parse','HEAD'],text=True).strip()==s['commit']
+for x in s['files']:assert hashlib.sha256((r/x['path']).read_bytes()).hexdigest()==x['sha256']
+readme=(r/'README.md').read_text();release=(b/'release-body.md').read_text() if (b/'release-body.md').exists() else json.load(__import__('urllib.request',fromlist=['urlopen']).urlopen(__import__('urllib.request',fromlist=['Request']).Request('https://api.github.com/repos/incoai/splash/releases/tags/1.4.0',headers={'User-Agent':'MyceliumResearch'})))['body'];checks={'decode95':'95 tok/s'in readme,'prefill1312':'1,312 tok/s'in readme,'cached171':'171 ms'in readme,'ratio212':'212×'in readme,'sameGGUFStrata':'Strata serving the same GGUF'in readme,'all16Hit':'all 16 replayed prompts hit the cache'in release,'notFlashNextMLX':'Flash-Next MLX checkpoints are not supported'in release,'verificationRepeatability':'--verify-rows all'in release,'activeKVScope':'The 27B and 35B keep active KV resident'in release}
+assert all(checks.values()),checks
+(b/'source-verification.json').write_text(json.dumps({'commit':s['commit'],'hashCount':len(s['files']),'checks':checks,'inferenceReproduced':False,'serviceTest':'Not loaded: Python3.9 match syntax; Python3.12 llguidance missing'},indent=2));print('Source conditions and release boundaries verified')
