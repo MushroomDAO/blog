@@ -13,6 +13,7 @@ export function postActivityDate(data: PostDates): Date {
 
 export function compareRecentPosts(a: DatedPost, b: DatedPost): number {
 	return postActivityDate(b.data).valueOf() - postActivityDate(a.data).valueOf()
+		|| (b.data.lastPublishedAt?.valueOf() ?? 0) - (a.data.lastPublishedAt?.valueOf() ?? 0)
 		|| b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 		|| a.id.localeCompare(b.id);
 }
