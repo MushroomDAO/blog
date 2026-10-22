@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "vitalik-paranoid-ai-zkapi-tor",
+      "url": "https://blog.mushroom.cv/blog/vitalik-paranoid-ai-zkapi-tor/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/vitalik-paranoid-ai-zkapi-tor-banner.CbMxHb-u_Z1kJCQd.webp",
+          "status": 200,
+          "bytes": 27620
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/vitalik-paranoid-ai-zkapi-tor-fig-01.B-HKDqgE_ZWgIqF.webp",
+          "status": 200,
+          "bytes": 29788
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/vitalik-paranoid-ai-zkapi-tor-fig-02.CQZLR-n5_35iKz.webp",
+          "status": 200,
+          "bytes": 45996
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/vitalik-paranoid-ai-zkapi-tor-fig-03.CnzDxHYJ_1UiCo7.webp",
+          "status": 200,
+          "bytes": 34496
+        }
+      ],
+      "listPosition": 6,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}

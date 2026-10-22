@@ -1,0 +1,15 @@
+{
+  "commit": "0fb263b0da04986cfe5c63b12340c1581018ae9b",
+  "hashesVerified": 13,
+  "checks": {
+    "clientMIT": true,
+    "mainnetUndeployed": true,
+    "sepoliaUndeployed": true,
+    "oldPackageNotPrivacy": true,
+    "rewriterDirect": true,
+    "attachmentsNotAnonymized": true,
+    "noProvenTrafficProtection": true,
+    "goMod1_25": true,
+    "guide1_26": true
+  }
+}
