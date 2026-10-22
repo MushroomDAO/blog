@@ -1,0 +1,56 @@
+{
+  "slug": "specialized-inference-engines-rise-hardware-specific-llm-optimization",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "preservedPubDate": true,
+    "updatedDate": true,
+    "correctsUnverified120": true,
+    "cacheScope": true,
+    "noPerformanceRun": true,
+    "modelCompatibility": true,
+    "historicalOtherEngines": true,
+    "pinnedSource": true,
+    "noPlaceholders": true
+  },
+  "images": [
+    {
+      "name": "specialized-inference-engines-rise-llm-hardware-optimization-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 92742
+    },
+    {
+      "name": "splash-1-4-update-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 64947
+    },
+    {
+      "name": "splash-1-4-update-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 85877
+    },
+    {
+      "name": "splash-1-4-update-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 73906
+    }
+  ]
+}

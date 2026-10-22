@@ -1,0 +1,17 @@
+{
+  "commit": "1482f6bbc2abf12375332725302019594150b6cb",
+  "hashCount": 6,
+  "checks": {
+    "decode95": true,
+    "prefill1312": true,
+    "cached171": true,
+    "ratio212": true,
+    "sameGGUFStrata": true,
+    "all16Hit": true,
+    "notFlashNextMLX": true,
+    "verificationRepeatability": true,
+    "activeKVScope": true
+  },
+  "inferenceReproduced": false,
+  "serviceTest": "Not loaded: Python3.9 match syntax; Python3.12 llguidance missing"
+}
