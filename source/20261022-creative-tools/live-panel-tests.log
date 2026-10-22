@@ -1,0 +1,8 @@
+test_optional_fields_follow_current_value (test_cycle_replay.CycleReplayTest.test_optional_fields_follow_current_value) ... ok
+test_returning_to_same_time_restores_pixels (test_cycle_replay.CycleReplayTest.test_returning_to_same_time_restores_pixels) ... ok
+test_returning_to_same_time_restores_text_and_highlight (test_cycle_replay.CycleReplayTest.test_returning_to_same_time_restores_text_and_highlight) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 17.540s
+
+OK
