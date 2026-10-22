@@ -1,0 +1,54 @@
+{
+  "slug": "onetake-envmanage-source-check",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/onetake-envmanage-source-check-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 91271
+    },
+    {
+      "path": "src/assets/images/onetake-envmanage-source-check-fig-01.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 47618
+    },
+    {
+      "path": "src/assets/images/onetake-envmanage-source-check-fig-02.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 58065
+    },
+    {
+      "path": "src/assets/images/onetake-envmanage-source-check-fig-03.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 46876
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-22",
+  "newArticles": 3,
+  "updatedExisting": 1,
+  "checks": [
+    "Chinese and English BLUF, question headings, FAQs and source URLs",
+    "Descriptions150to160, WeChattitle<=30,digest<=54",
+    "Pinned sources; no invented broad speedup or dataset ranking",
+    "Ondine source-review-only; live-panel3tests124points2secondsmoke; motion45JSONrecords no metric rerun",
+    "MIT code vs separate example/data rights; onetake noncommercial original remains explicit",
+    "Original onetake matched cover and slug reused; currentdraftunverifiedrecorded no duplicate",
+    "Theme covers selected after excluding text-heavy upstream imagery",
+    "All figure assets required in both languages; final file checks before deploy"
+  ]
+}
