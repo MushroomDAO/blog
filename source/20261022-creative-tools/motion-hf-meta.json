@@ -1,0 +1,18 @@
+{
+  "id": "myshi/motion-viewer",
+  "sha": "e7b802662074144b5912b471c354aba499671a16",
+  "sdk": "static",
+  "private": false,
+  "disabled": false,
+  "runtime": {
+    "stage": "RUNNING",
+    "hardware": {
+      "current": null,
+      "requested": null
+    },
+    "replicas": {
+      "requested": 1,
+      "current": 1
+    }
+  }
+}

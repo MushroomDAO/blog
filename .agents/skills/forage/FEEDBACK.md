@@ -992,3 +992,13 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 ## 2026-10-22 — LayerFS v1 recursive agent filesystem
 
 - https://blog.mushroom.cv/blog/layerfs-v1-recursive-agent-filesystem/ Pinned v1.0.0 2aaf2552ce21154928b9f9c83582e41a637f5910 MIT source-only. Recursive branches not self-improvement; filesystem history not process snapshot/security sandbox. Disposable has no crash/powerloss durability. Linux ext4/xfs/btrfs; Mac DSH web uses Linux Docker, desktop untested/Pi planned. Explicit workspace commit; complete-tree import includes ignored files. Official earlier e5c7aaae05 single sample fsbench1.71x/dedup19.9x scoped, fio seqwrite0.31x passthrough and fsync6.9x lacks durability flush. POSIX707 differential assertions include cascades, not full conformance. No Docker/runtime/perf/recovery test. Themed FLUX157 cover plus3XiaoM figures visually checked. Bilingual public4assets200/currentdraftget/semantic/KB verified. Exact source URL no publication; entity hit only raw bot material;rawbotKBreused. Taskce42e364-bf7c-4575-9582-0d37b382d5c4.
+
+
+## 2026-10-22 — Ondine, live-panel, motion datasets and onetake update
+
+- https://blog.mushroom.cv/blog/ondine-rust-mermaid-compiler/ Blog new, WeChat draft.
+- https://blog.mushroom.cv/blog/live-panel-skill-animated-architecture/ Blog new, WeChat draft.
+- https://blog.mushroom.cv/blog/animation-datasets-motion-viewer/ Blog new, WeChat draft.
+- https://blog.mushroom.cv/blog/onetake-envmanage-source-check/ Blog updated, WeChat recorded.
+
+Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine mount-only bytes/benchmark lanes kept separate; no speed/layout rerun. live-panel original 3 browser tests pass,124points0problems,2second H26424frames smoke; moving counters not live telemetry. Motion45qualityJSONentries9thresholds, not metrics reproduction; tool/list/data licenses separate. onetake official19secondClawd case film-only, no20yuan receipt; old draft40007/absentbox plus48001 means recorded, not recreated. Task e6d6d22c-7207-4fa9-86c8-17a1a5b901d0.
