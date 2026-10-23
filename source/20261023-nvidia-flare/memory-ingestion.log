@@ -1,0 +1,33 @@
+  No mempalace.yaml found in /private/tmp/flare-memory-only — using auto-detected defaults (wing='flare_memory_only'). Directories with the same basename will share a wing; add mempalace.yaml to disambiguate.
+/Users/jason/Library/Application Support/pipx/venvs/mempalace/lib/python3.14/site-packages/mempalace/palace.py:287: EmbedderIdentityUnknownWarning: palace collection 'mempalace_drawers' has no recorded embedder identity; assuming the current model 'minilm'. Run `mempalace palace set-embedder --model <name>` to record it.
+  _enforce_embedder_identity(collection, palace_path, collection_name, create=create)
+
+=======================================================
+  MemPalace Mine
+=======================================================
+  Wing:    blog
+  Rooms:   general
+  Files:   1
+  Palace:  /Users/jason/.mempalace/palace
+  Device:  coreml
+  .gitignore: DISABLED
+-------------------------------------------------------
+
+  + [   1/1] project_nvidia-flare-local-inference.md            +1
+
+  Hallways: +134 within-wing entity link(s)
+
+  Entity tunnels: +21 cross-wing entity link(s)
+
+=======================================================
+  Done.
+  Files processed: 1
+  Files skipped (already filed or other): 0
+  Drawers filed: 1
+
+  By room:
+    general              1 files
+
+  Next: mempalace search "what you're looking for"
+=======================================================
+

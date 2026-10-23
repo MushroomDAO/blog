@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-23T01:50:12.021215+00:00",
+  "articles": [
+    {
+      "slug": "nvidia-flare-local-inference",
+      "url": "https://blog.mushroom.cv/blog/nvidia-flare-local-inference/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-flare-local-inference-banner.CPs9h17T_Z1DiPfq.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-flare-local-inference-fig-01.Drh0qP0K_Z1YHgUm.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-flare-local-inference-fig-02.1qnGt3sm_xqbyh.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-flare-local-inference-fig-03.CqjRmlk-_281FSD.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-flare-local-inference-banner.CPs9h17T.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 4,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/nvidia-flare-local-inference/",
+    "/blog/occamy-dressage-agent-learning/",
+    "/blog/moki-whiteboard-local-mcp/",
+    "/blog/flint-local-coding-rec-engine/",
+    "/blog/gamescaling-game-agents-cpt/",
+    "/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
+    "/blog/animation-datasets-motion-viewer/",
+    "/blog/layerfs-v1-recursive-agent-filesystem/"
+  ]
+}

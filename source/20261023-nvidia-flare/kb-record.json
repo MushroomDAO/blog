@@ -1,0 +1,24 @@
+{
+  "title": "NVIDIA Flare本地Rust推理架构",
+  "summary": "NVIDIA开源Flare研究原型，由Python Ignition提前准备模型，再由Rust Helios提供本地推理服务，重点面向长对话和编程Agent。官方文档提供DeepSeek V4.1 Flash及DGX Spark多机流程，但单机TP4包与多机包需分别准备，运行包还依赖伴随payload文件。FP8缓存存在模型相关精度例外，实际速度仍需在匹配硬件上验证。",
+  "tags": [
+    "NVIDIA",
+    "本地推理",
+    "Rust",
+    "DGX Spark",
+    "AI Agent"
+  ],
+  "entities": [
+    "NVIDIA",
+    "Flare",
+    "Ignition",
+    "Helios",
+    "DeepSeek",
+    "DGX Spark"
+  ],
+  "content_type": "url",
+  "saved_files": [
+    "/Users/jason/.heinu1-bot/media/nvidia-flare-logo-20261023.png",
+    "/Users/jason/.heinu1-bot/media/nvidia-flare-architecture-20261023.png"
+  ]
+}

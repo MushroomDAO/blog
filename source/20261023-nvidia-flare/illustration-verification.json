@@ -1,0 +1,29 @@
+[
+  {
+    "file": "src/assets/images/nvidia-flare-local-inference-fig-01.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 89282,
+    "rootVisualReview": "passed original images: stage separation, complete state, exact four cards/four hosts"
+  },
+  {
+    "file": "src/assets/images/nvidia-flare-local-inference-fig-02.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 82679,
+    "rootVisualReview": "passed original images: stage separation, complete state, exact four cards/four hosts"
+  },
+  {
+    "file": "src/assets/images/nvidia-flare-local-inference-fig-03.png",
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 89408,
+    "rootVisualReview": "passed original images: stage separation, complete state, exact four cards/four hosts"
+  }
+]
