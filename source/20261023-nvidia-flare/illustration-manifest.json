@@ -1,0 +1,65 @@
+{
+  "generator": "built-in image_gen",
+  "generation_calls": 3,
+  "prompt_file": "prompts.json",
+  "source_article": "src/content/blog/nvidia-flare-local-inference.md",
+  "source_article_sha256_when_read": "5f87c1d981011a88eaf28de18adff85f80423e940756340cfd5ba207d46e0f62",
+  "scope": "Only illustration assets and archive written. Article and publishing ledger changed concurrently outside this task; no article edit, publish or git commit performed by this task.",
+  "processing": "Originals copied byte-for-byte. Near-white pixels (all RGB >=248) normalized to white; padded from 1672x941 to exact 16:9 at 1680x945 without cropping; Lanczos resized to 1280x720; nondithered adaptive palette PNG compression.",
+  "figures": [
+    {
+      "figure": "01",
+      "anchor": "Python preparation and Rust replay",
+      "final": "src/assets/images/nvidia-flare-local-inference-fig-01.png",
+      "bytes": 89282,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "palette_colors": 96,
+      "sha256": "40ebb5076d7be627326b06472fa201b1b299131eb239f032719fdb9fd685ee15",
+      "original": "source/20261023-nvidia-flare/generated-assets/originals/nvidia-flare-local-inference-fig-01.png",
+      "original_bytes": 1296669,
+      "original_sha256": "0b1455152cf48bf5f079b13b1c26bcc6ab74b983eef554dcd8b80f9e55baf2ff",
+      "generator_source": "/Users/jason/.codex/generated_images/01a1666d-a1e8-7e13-8f7f-bcedba758ae6/exec-0d656f79-d61f-4283-8270-233b1ee83e2b.png",
+      "visual_qa": "Checked generated image: active red-cap/cream-stem XiaoM, sparse legible Chinese labels, white background, intended anchor. Figure 03 counts: four cards in one chassis; four separate hosts; independent tracks and packages.",
+      "final_png_visual_qa": "Passed after compression: labels legible, lines intact, white background and intended anchor preserved."
+    },
+    {
+      "figure": "02",
+      "anchor": "Complete continuation state travels together",
+      "final": "src/assets/images/nvidia-flare-local-inference-fig-02.png",
+      "bytes": 82679,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "palette_colors": 32,
+      "sha256": "c7500d77036dcea481dff9d2c5b8ff9895f28171a3022364768c52a2556d8874",
+      "original": "source/20261023-nvidia-flare/generated-assets/originals/nvidia-flare-local-inference-fig-02.png",
+      "original_bytes": 1466798,
+      "original_sha256": "2039ef1c683e728e580b500020eb6c2f34a97e55e378a30a385ba7faf4686119",
+      "generator_source": "/Users/jason/.codex/generated_images/01a1666d-a1e8-7e13-8f7f-bcedba758ae6/exec-1acaa6a4-48ce-4721-b971-1bc2ef6a6181.png",
+      "visual_qa": "Checked generated image: active red-cap/cream-stem XiaoM, sparse legible Chinese labels, white background, intended anchor. Figure 03 counts: four cards in one chassis; four separate hosts; independent tracks and packages.",
+      "final_png_visual_qa": "Passed after compression: labels legible, lines intact, white background and intended anchor preserved."
+    },
+    {
+      "figure": "03",
+      "anchor": "Separately prepared single-host and multi-host TP4 packages",
+      "final": "src/assets/images/nvidia-flare-local-inference-fig-03.png",
+      "bytes": 89408,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "palette_colors": 64,
+      "sha256": "221eee0396824193f8a8cc34096c9375693f6a57f611521f7ed7c7ed41bfa88b",
+      "original": "source/20261023-nvidia-flare/generated-assets/originals/nvidia-flare-local-inference-fig-03.png",
+      "original_bytes": 1358483,
+      "original_sha256": "12e3c0a9f2f969f4bde995db9ac4c39a9c6bc7beb89dcc0956cfee93153da25f",
+      "generator_source": "/Users/jason/.codex/generated_images/01a1666d-a1e8-7e13-8f7f-bcedba758ae6/exec-4fb19cdf-8a16-4e43-94c6-75065d9a8685.png",
+      "visual_qa": "Checked generated image: active red-cap/cream-stem XiaoM, sparse legible Chinese labels, white background, intended anchor. Figure 03 counts: four cards in one chassis; four separate hosts; independent tracks and packages.",
+      "final_png_visual_qa": "Passed after compression: labels legible, lines intact, white background and intended anchor preserved."
+    }
+  ]
+}

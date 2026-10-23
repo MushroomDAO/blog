@@ -1,0 +1,12 @@
+{
+  "title": "NVIDIA Flare：Rust怎样服务本地Agent",
+  "author": "Mycelium",
+  "digest": "拆解Python导出与Rust服务的分工，讲清DeepSeek部署、Spark组网和长对话缓存的边界。",
+  "mediaId": "prCUE631thH1cmNLi42prMwn_qIcYT17wV9vwiXanHiXYZ8qTubdjF22K6XqyeWx",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/nvidia/flare-local-inference.git",
+    "github.com/nvidia/flare-local-inference"
+  ],
+  "publishedAt": "2026-10-23T01:50:33.429Z"
+}

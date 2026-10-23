@@ -1,0 +1,150 @@
+usage: ignition export [MODEL] [options]
+
+prepare a native model package
+
+positional arguments:
+  MODEL                 recipe alias, repository id, or checkpoint directory
+                        (default: defaults.model)
+
+options:
+  -h, --help            show this help message and exit
+  --config PATH         configuration file (default:
+                        ~/.config/flare/config.toml)
+  --output FILE         destination .safetensors file (default: a snapshot in
+                        the package cache)
+  --no-weights          require cached stored-data blobs; export execution
+                        resources and metadata
+  --repo-id NAMESPACE/REPOSITORY
+                        Hugging Face target used to organize local exports
+                        (default: recipe target)
+  --official-source URL
+                        published checkpoint repository URL
+  --gpus LIST           GPU indices as NVML enumerates them, such as 0, 0,1,
+                        or 0-3; their count is the tensor-parallel size
+                        (default: first GPUs that fit)
+  --max-concurrency N   maximum simultaneously active requests (default:
+                        defaults.max_concurrency, else the recipe default)
+  --verbose             per-phase detail on stderr
+  --image-concurrency N
+                        maximum active image requests; excess requests queue
+                        independently of text (default: smaller of 4 and max
+                        concurrency)
+  --shard-size SIZE     maximum payload file size including its header; at
+                        most 64G (default: 64G)
+
+capacity and compression:
+  --expert-scale-compression [MODE]
+                        losslessly compress routed-expert quantization scales
+                        to reduce GPU weight memory. MODE: csf, a compressed
+                        scale encoding expanded during execution. With no
+                        MODE, selects csf; omitted flag preserves native
+                        scales. See MODEL --help for recipe support and
+                        estimated savings
+  --prefill-chunk-size N
+                        most prompt tokens per prefill step; larger chunks
+                        reach a long prompt's first token sooner and pause
+                        other requests longer; a multiple of 64 (default: see
+                        MODEL --help)
+  --prompt-logprobs     capture dedicated prefill graphs for raw prompt token
+                        logprobs
+  --mixed-prefill       capture graphs combining prompt prefill with decode or
+                        verification (Qwen only; default: disabled)
+
+speculative decoding:
+  MTP flags configure speculative decoding, including DSpark and DFlash.
+  Recipe defaults and limits: ignition export MODEL --help.
+
+  --no-mtp              disable multi-token speculation: load no draft model
+                        and decode one token per step; cannot accompany other
+                        speculation flags
+  --mtp-draft-tokens N  most draft tokens verified per round; limits and
+                        defaults depend on MODEL. 0 selects width-one rounds
+                        while retaining draft state; --no-mtp excludes it
+  --no-mtp-adaptive-verification
+                        default to the maximum verification width where
+                        captured, otherwise width one
+  --speculative-token-capacity N
+                        maximum target-token rows in wider speculative graphs;
+                        width one covers every request batch. Rectangular
+                        graphs require batch * width <= N, where width is
+                        drafts + 1; packed rounds share N rows across request
+                        prefixes (default: see MODEL --help)
+  --speculative-graph-budget N
+                        maximum captured packed round graphs, independently of
+                        target-token rows; excludes mandatory width-one and
+                        ordinary graphs. Requires packed adaptive learned
+                        speculation (default: see MODEL --help)
+  --mtp-proposal-source {mtp,copy}
+                        where drafts come from: the learned draft model, or
+                        copy for continuations from shared decoded history,
+                        which loads no draft model (default: mtp)
+  --history-drafts      also draft continuations copied from shared decoded
+                        history
+
+advanced options:
+  --mla-compute-mode {auto,bf16}
+                        constrain MLA arithmetic while retaining packed KV
+                        storage and compatible kernel tuning (default: auto;
+                        bf16 requires the preparation API)
+  --autotune-effort {off,low,medium,high,max}
+                        kernel search effort: off uses heuristics; low applies
+                        broad exclusions; medium balances search cost; high
+                        keeps conservative exclusions; max searches all legal
+                        candidates (default: medium)
+  --compile-workers N   CPU compiler process budget per host, shared by local
+                        preparation ranks; bounded by available RAM and device
+                        memory (default: automatic)
+  --tuning-gpus LIST    local GPUs for kernel tuning, starting with --gpus and
+                        followed by complete TP replicas; serving TP size is
+                        unchanged (default: serving GPUs)
+  --no-context-parallel
+                        keep each rank's attention context whole instead of
+                        sharding it across tensor-parallel ranks; fewer cached
+                        tokens (default: the recipe's)
+  --no-stream-overlap   run every concurrent branch (shared experts,
+                        projection chains, query chains) serially on the main
+                        stream, to diagnose scheduling-dependent faults;
+                        slower (default: overlap)
+  --no-compile          development: capture graphs without compiling forwards
+  --online-mxfp8        store the recipe's eligible BF16 projections as MXFP8
+                        while loading; faster decode at reduced precision
+                        (Kimi K3 KDA, MLA except batched key/value, shared
+                        experts, MoE latent projections, and DSpark draft
+                        context, outputs and MLPs; default: checkpoint
+                        precision)
+  --language-model-only
+                        prepare no vision encoder and reject images; its
+                        weights and scratch become KV pages (Kimi K3; default:
+                        the recipe's image support)
+
+multi-host tensor parallelism:
+  --roce-ring           route collectives and fabric TCP through neighbors in
+                        rank order
+  --transfer-streams N  checkpoint and export fabric TCP streams per peer,
+                        1..64 (default: 8)
+  --ranks N             tensor-parallel ranks, one per host; this process is
+                        rank zero (default: 1); an export assembles all ranks
+                        at --output on rank zero
+  --rendezvous ADDR:PORT
+                        IPv4 address and port on which rank zero admits its
+                        peers
+
+Available model recipes:
+  MODEL                     GPUs          Drafts (default/max)
+  qwen3.8-flash             1,2,4         5/7
+  qwen3.8-27b               1             none
+  glm-5.3-flash             1,2,4         5/7
+  deepseek-v4.1-flash       4             5/7
+  deepseek-v4-flash         2,4           5/5
+  mimo-v2.6-pro-mopd        2,4,8         7/7
+  kimi-k3-mxfp4-csf         16            7/7
+  kimi-k3                   16            7/7
+  kimi-k3-dspark            16            7/7
+  step5-preview-nvfp4       4,8,16        3/3
+  nemotron-bolt-24gb        1             7/7
+  minimax-m3-1-flash        4             5/7
+
+Show a recipe's defaults, limits, and optional features:
+  ignition export MODEL --help
+MODEL also accepts org/repository[@revision] or a checkpoint directory.
+GPU counts are supported tensor-parallel sizes; memory must still fit.

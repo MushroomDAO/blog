@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-23T01:50:42.898Z",
+  "drafts": [
+    {
+      "slug": "nvidia-flare-local-inference",
+      "mediaId": "prCUE631thH1cmNLi42prMwn_qIcYT17wV9vwiXanHiXYZ8qTubdjF22K6XqyeWx",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "117aeccc4b0924528891d08d0cdca5f0581a82c9aff3e4b8b84a39d53bdb17fb",
+      "remoteTextHash": "117aeccc4b0924528891d08d0cdca5f0581a82c9aff3e4b8b84a39d53bdb17fb",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "f9061155ca8a61591666c14cead29a590bcdf0536c66eddf704b78d7c3cb8423",
+      "remoteContentHash": "19d88040fb80f886989c2a2ce9af432cf6f6d2d62c64a1a8083dd45a68d2ca40"
+    }
+  ]
+}

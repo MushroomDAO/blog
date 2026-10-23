@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "nvidia-flare-local-inference",
+      "title": "NVIDIA Flare: Rust Inference for Local Agents",
+      "url": "/blog/nvidia-flare-local-inference/",
+      "language": "en",
+      "excerpt": "NVIDIA Flare: Rust Inference for Local Agents Explore NVIDIA Flare's prepared CUDA graphs, Rust serving runtime, DeepSeek TP4 recipes, Spark networking and the practical limits of API compatibility. NVIDIA Flare Rust DGX Spark 本地推理 DeepSeek What does “pure Rust” actually mean? Wh",
+      "score": 0.56155163
+    },
+    {
+      "article_id": "ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda",
+      "title": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA",
+      "url": "/blog/ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda/",
+      "language": "en",
+      "excerpt": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA sizzlecar/ferrum-infer-rs is a pure-Rust local inference engine: one binary, no Python runtime, with Apple Silicon Metal and NVIDIA CUDA served by the same runtime behind OpenAI-compatible ",
+      "score": 0.52237785
+    },
+    {
+      "article_id": "huggingface-speech-to-speech-voice-agent-vad-stt-llm-tts-local",
+      "title": "huggingface-speech-to-speech-voice-agent-vad-stt-llm-tts-local",
+      "url": "/blog/huggingface-speech-to-speech-voice-agent-vad-stt-llm-tts-local/",
+      "language": "en",
+      "excerpt": "huggingface-speech-to-speech-voice-agent-vad-stt-llm-tts-local huggingface/speech-to-speech, 12,080 stars, Apache-2.0, Python. A low-latency, fully modular voice-agent pipeline: VAD → STT → LLM → TTS, exposed through an OpenAI Realtime-compatible WebSocket API. Every component is",
+      "score": 0.5212111
+    },
+    {
+      "article_id": "jarvis-py-local-voice-assistant-privacy-teardown",
+      "title": "jarvis-py 拆解：标着「离线」的 Python 语音助手，联网时默认把录音明文发给 Google",
+      "url": "/blog/jarvis-py-local-voice-assistant-privacy-teardown/",
+      "language": "zh",
+      "excerpt": "jarvis-py 拆解：标着「离线」的 Python 语音助手，联网时默认把录音明文发给 Google Shaan-alpha/jarvis-py 是一个 6 star、MIT 协议的 Python 桌面语音助手：openWakeWord 唤醒、Ollama phi3、fastembed 记忆、三层路由。我们读完代码并在 Mac mini 上实测：269 个测试全过，但联网时语音默认经明文 HTTP 发给 Google，唤醒阈值 0.3 下 18 条近音干扰句有 11 条误唤醒，文档 RAG 的 0.6 阈值让 6 个真问题一个都没注入。 语音助手 本",
+      "score": 0.51784647
+    },
+    {
+      "article_id": "huggingface-speech-to-speech-local-voice-agent-robot-pipeline",
+      "title": "HuggingFace Speech-to-Speech：一行安装本地语音助手，延迟低到像真人，驱动数千台机器人",
+      "url": "/blog/huggingface-speech-to-speech-local-voice-agent-robot-pipeline/",
+      "language": "zh",
+      "excerpt": "HuggingFace Speech-to-Speech：一行安装本地语音助手，延迟低到像真人，驱动数千台机器人 huggingface/speech-to-speech 是一个低延迟、全模块化的本地语音 Agent 流水线（VAD → STT → LLM → TTS），兼容 OpenAI Realtime API。10.6K stars，Apache 2.0，`pip install speech-to-speech` 一行启动。已在数千台 Reachy Mini 机器人的对话后端中跑生产。每个组件均可替换，Apple Silicon 原生支持。 语音",
+      "score": 0.513635
+    },
+    {
+      "article_id": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
+      "title": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
+      "url": "/blog/ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust/",
+      "language": "en",
+      "excerpt": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust akitaonrails/ai-memory is a Rust-based long-term memory solution for AI coding agents — 3,953 stars, MIT license. Core capability: lifecycle hooks auto-capture the essence of each Claude Code/Codex/Cursor session;",
+      "score": 0.5103399
+    },
+    {
+      "article_id": "conversationalvoice-averalabs-full-duplex-training-data-pipeline",
+      "title": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线",
+      "url": "/blog/conversationalvoice-averalabs-full-duplex-training-data-pipeline/",
+      "language": "zh",
+      "excerpt": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线 avera-labs/ConversationalVoice，51 stars，BSL 1.1 许可证（非生产免费，生产环境商用需授权，4年后转 MIT）。AveraLabs 出品，配套 arXiv 2609.08147 论文。一条 9 阶段 Celery 流水线，将真实双人录音自动转成全双工语音模型训练数据，每段对话产出三类数据：分离 / 重建 / 扩写。内部使用 DialogueSidon（说话人分离）、Qwen3-ASR（转写）、Qwen3-TTS（语音合成）。",
+      "score": 0.5063335
+    },
+    {
+      "article_id": "nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling",
+      "title": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出",
+      "url": "/blog/nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling/",
+      "language": "zh",
+      "excerpt": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出 NVIDIA NemotronLabs VoiceChat 11B（HF: nvidia/NVIDIA-NemotronLabs-VoiceChat-11B，442 likes，OpenMDW-1.1）是首个开源、全双工、支持工具调用的端到端语音对话模型。不是 ASR→LLM→TTS 的串联流水线，而是单一模型以 12.5 Hz（80ms/帧）同时输出文本、工具调用标记、声学编码三个通道。基于 Nemotron-",
+      "score": 0.5039983
+    },
+    {
+      "article_id": "nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent",
+      "title": "NVIDIA VoiceChat 11B: The First Open-Source Full-Duplex Speech Agent with Tool Calling",
+      "url": "/blog/nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent/",
+      "language": "en",
+      "excerpt": "NVIDIA VoiceChat 11B: The First Open-Source Full-Duplex Speech Agent with Tool Calling NVIDIA NemotronLabs' open-source 11B end-to-end full-duplex speech model, released 2026-08-03, OpenMDW 1.1 research license. Unified architecture for simultaneous streaming speech understanding",
+      "score": 0.50166965
+    },
+    {
+      "article_id": "cuti-harness-open-source-video-world-generator-deepseek-harness-long-video",
+      "title": "Cuti Harness: Open-Source Long-Horizon Video World Generator — Multi-Turn Conversation Grows 15s to 3 Minutes, No Local GPU",
+      "url": "/blog/cuti-harness-open-source-video-world-generator-deepseek-harness-long-video/",
+      "language": "en",
+      "excerpt": "Cuti Harness: Open-Source Long-Horizon Video World Generator — Multi-Turn Conversation Grows 15s to 3 Minutes, No Local GPU VideoVerses/Cuti-Harness, MIT open source, TypeScript + Python, plugin-based video world generator on DeepSeek Harness. Multi-turn conversation grows from 1",
+      "score": 0.49512798
+    }
+  ]
+}
