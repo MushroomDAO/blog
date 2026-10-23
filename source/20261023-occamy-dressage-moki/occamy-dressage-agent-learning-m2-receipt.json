@@ -1,0 +1,14 @@
+{
+  "title": "Occamy与Dressage：Agent怎样从经验中学习",
+  "author": "Mycelium",
+  "digest": "找到官方模型和训练框架，讲清任务轨迹怎样进入强化学习，以及自进化还缺哪些环节。",
+  "mediaId": "prCUE631thH1cmNLi42prNfXmncl2nu9Yn6JpSA_nOjyQg_5l1Kt93AnjxlaI-xN",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/accio-lab/occamy",
+    "huggingface.co/accio-lab/occamy-1.0",
+    "github.com/accio-lab/dressage",
+    "huggingface.co/datasets/accio-lab"
+  ],
+  "publishedAt": "2026-10-23T01:32:08.672Z"
+}

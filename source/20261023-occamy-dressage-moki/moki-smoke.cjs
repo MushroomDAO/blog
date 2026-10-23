@@ -1,0 +1,25 @@
+const esbuild=require('/Users/jason/Dev/tools/Heinu1/bot/node_modules/esbuild');
+const fs=require('fs');
+const source=`
+import assert from 'node:assert/strict';
+import {mkdtempSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {WhiteboardStore,VersionConflictError} from '/tmp/mycelium-moki-20261023/src/server/store.ts';
+import {pages,addElements,updateElements,inspectSnapshot,richTextValue} from '/tmp/mycelium-moki-20261023/src/core/board.ts';
+const dir=mkdtempSync(join(tmpdir(),'mycelium-moki-store-'));const path=join(dir,'board.db');
+let store=new WhiteboardStore(path);const b=store.create('Smoke board','research');const page=pages(b.snapshot)[0];let id;
+assert.equal(store.db.prepare('PRAGMA journal_mode').get().journal_mode,'wal');
+const next=store.mutate(b.id,'research','add',{},s=>{id=addElements(s,page.id,[{kind:'note',text:'Original note',x:10,y:20}])[0].id},b.version);
+assert.equal(inspectSnapshot(next.snapshot).shapeCount,1);assert.equal(next.version,b.version+1);
+assert.throws(()=>store.mutate(b.id,'stale-agent','update',{},s=>updateElements(s,[{id,text:'Stale overwrite'}]),b.version),VersionConflictError);
+assert.equal(richTextValue(store.get(b.id).snapshot.document.store[id].props.richText),'Original note');
+const fresh=store.mutate(b.id,'research','update',{},s=>updateElements(s,[{id,text:'Accepted update',x:80}]),next.version);
+assert.equal(fresh.snapshot.document.store[id].x,80);store.close();store=new WhiteboardStore(path);
+assert.equal(richTextValue(store.get(b.id).snapshot.document.store[id].props.richText),'Accepted update');assert.equal(store.get(b.id).version,fresh.version);
+const other=store.create('Optional guard','research');store.rename(other.id,'Human edit','human',other.version);store.rename(other.id,'Agent edit without version','agent');assert.equal(store.get(other.id).title,'Agent edit without version');
+const audit=store.db.prepare('SELECT count(*) AS n FROM board_audit WHERE board_id=?').get(b.id).n;assert.equal(audit,3);store.close();
+console.log(JSON.stringify({WAL:true,createAndAdd:true,staleVersionRejected:true,freshUpdateAccepted:true,persistedAfterReopen:true,auditEntries:audit,omittedVersionAllowed:true,UIRun:false,MCPProtocolTest:false}));
+`;
+esbuild.buildSync({stdin:{contents:source,resolveDir:'/tmp/mycelium-moki-20261023',sourcefile:'research-smoke.ts',loader:'ts'},bundle:true,platform:'node',format:'esm',outfile:'/tmp/mycelium-moki-store-smoke.mjs'});
+require('child_process').execFileSync(process.execPath,['/tmp/mycelium-moki-store-smoke.mjs'],{stdio:'inherit'});

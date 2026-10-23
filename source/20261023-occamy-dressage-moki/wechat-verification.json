@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-23T01:33:24.618Z",
+  "drafts": [
+    {
+      "slug": "occamy-dressage-agent-learning",
+      "mediaId": "prCUE631thH1cmNLi42prNfXmncl2nu9Yn6JpSA_nOjyQg_5l1Kt93AnjxlaI-xN",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "f1e284fe6cc6caead71ec7de538004913e7167205c6af3973c15109512c8eac3",
+      "remoteTextHash": "f1e284fe6cc6caead71ec7de538004913e7167205c6af3973c15109512c8eac3",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "297607c168b58fffab7451de18bbc9c458123472d9366d50b29058301abb9065",
+      "remoteContentHash": "c157e5ab5584fec7123587db9cf3a9ecff687c5ac364541ac52b5e8dcdee8ad5"
+    },
+    {
+      "slug": "moki-whiteboard-local-mcp",
+      "mediaId": "prCUE631thH1cmNLi42prM2tb1k5HmiXtriw1_LMxqjzQaleeBTUumZIyyJK9DKF",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "5cebe1361909953332fa2ea6f6c197c26ea866572cced7c9aaa25022d4961e15",
+      "remoteTextHash": "5cebe1361909953332fa2ea6f6c197c26ea866572cced7c9aaa25022d4961e15",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "b0445a3faf9627b8eceb326dc2c5c5e296a50f22c5374a081aa41847359da1d6",
+      "remoteContentHash": "a88fd88e1ec5948856e0c31d77b04a60ec9d3fb1a01ca796cdee7b76615b5aa1"
+    }
+  ]
+}
