@@ -13,16 +13,16 @@ Markdown Content:
 
 Appearance settings
 
-*   
+*
 Platform
 
-    *   
+    *
 AI CODE CREATION
         *   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)
         *   [GitHub Copilot app Direct agents from issue to merge](https://github.com/features/ai/github-app)
         *   [MCP Registry Integrate external tools](https://github.com/mcp)
 
-    *   
+    *
 DEVELOPER WORKFLOWS
         *   [Actions Automate any workflow](https://github.com/features/actions)
         *   [Codespaces Instant dev environments](https://github.com/features/codespaces)
@@ -30,13 +30,13 @@ DEVELOPER WORKFLOWS
         *   [Code Review Manage code changes](https://github.com/features/code-review)
         *   [Code Quality Enforce quality at merge](https://github.com/features/code-quality)
 
-    *   
+    *
 APPLICATION SECURITY
         *   [GitHub Advanced Security Find and fix vulnerabilities](https://github.com/security/advanced-security)
         *   [Code security Secure your code as you build](https://github.com/security/advanced-security/code-security)
         *   [Secret protection Stop leaks before they start](https://github.com/security/advanced-security/secret-protection)
 
-    *   
+    *
 EXPLORE
         *   [Why GitHub](https://github.com/why-github)
         *   [Documentation](https://docs.github.com/)
@@ -46,17 +46,17 @@ EXPLORE
 
 [View all features](https://github.com/features)
 
-*   
+*
 Solutions
 
-    *   
+    *
 BY COMPANY SIZE
         *   [Enterprises](https://github.com/enterprise)
         *   [Small and medium teams](https://github.com/team)
         *   [Startups](https://github.com/enterprise/startups)
         *   [Nonprofits](https://github.com/solutions/industry/nonprofits)
 
-    *   
+    *
 BY USE CASE
         *   [App Modernization](https://github.com/solutions/use-case/app-modernization)
         *   [DevSecOps](https://github.com/solutions/use-case/devsecops)
@@ -64,7 +64,7 @@ BY USE CASE
         *   [CI/CD](https://github.com/solutions/use-case/ci-cd)
         *   [View all use cases](https://github.com/solutions/use-case)
 
-    *   
+    *
 BY INDUSTRY
         *   [Healthcare](https://github.com/solutions/industry/healthcare)
         *   [Financial services](https://github.com/solutions/industry/financial-services)
@@ -74,10 +74,10 @@ BY INDUSTRY
 
 [View all solutions](https://github.com/solutions)
 
-*   
+*
 Resources
 
-    *   
+    *
 EXPLORE BY TOPIC
         *   [AI](https://github.com/resources/articles?topic=ai)
         *   [Software Development](https://github.com/resources/articles?topic=software-development)
@@ -85,7 +85,7 @@ EXPLORE BY TOPIC
         *   [Security](https://github.com/resources/articles?topic=security)
         *   [View all topics](https://github.com/resources/articles)
 
-    *   
+    *
 EXPLORE BY TYPE
         *   [Customer stories](https://github.com/customer-stories)
         *   [Events & webinars](https://github.com/resources/events)
@@ -93,7 +93,7 @@ EXPLORE BY TYPE
         *   [Business insights](https://github.com/solutions/executive-insights)
         *   [GitHub Skills](https://skills.github.com/)
 
-    *   
+    *
 SUPPORT & SERVICES
         *   [Documentation](https://docs.github.com/)
         *   [Customer support](https://support.github.com/)
@@ -103,34 +103,34 @@ SUPPORT & SERVICES
 
 [View all resources](https://github.com/resources)
 
-*   
+*
 Open Source
 
-    *   
+    *
 COMMUNITY
         *   [GitHub Sponsors Fund open source developers](https://github.com/open-source/sponsors)
 
-    *   
+    *
 PROGRAMS
         *   [Security Lab](https://securitylab.github.com/)
         *   [Maintainer Community](https://maintainers.github.com/)
         *   [GitHub Stars](https://stars.github.com/)
         *   [Archive Program](https://archiveprogram.github.com/)
 
-    *   
+    *
 REPOSITORIES
         *   [Topics](https://github.com/topics)
         *   [Trending](https://github.com/trending)
         *   [Collections](https://github.com/collections)
 
-*   
+*
 Enterprise
 
-    *   
+    *
 ENTERPRISE SOLUTIONS
         *   [Enterprise platform AI-powered developer platform](https://github.com/enterprise)
 
-    *   
+    *
 AVAILABLE ADD-ONS
         *   [GitHub Advanced Security Enterprise-grade security features](https://github.com/security/advanced-security)
         *   [Copilot for Business Enterprise-grade AI features](https://github.com/features/copilot/copilot-business)
@@ -359,7 +359,7 @@ No releases published
 
 ## Footer
 
-[](https://github.com/) © 2026 GitHub,Inc. 
+[](https://github.com/) © 2026 GitHub,Inc.
 
 ### Footer navigation
 
@@ -370,7 +370,7 @@ No releases published
 *   [Community](https://github.community/)
 *   [Docs](https://docs.github.com/)
 *   [Contact](https://support.github.com/?tags=dotcom-footer)
-*    Manage cookies 
-*    Do not share my personal information 
+*    Manage cookies
+*    Do not share my personal information
 
  You can’t perform that action at this time.
