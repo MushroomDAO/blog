@@ -4,7 +4,7 @@ titleEn: "minimax-h3-context-ir-prompt-orchestration-multimodal-video"
 description: "MiniMax H3 的完整系统由三个模块组成：H3-Context-IR、H3-Base 和 H3-Regenerate-2K。开源的是 H3-Base，但官方强烈建议接入 H3-Context-IR。它是一套「托管式预处理与编排系统」，负责把用户的自然语言创作意图（含图像、音频、视频参考）转换成 H3-Base 可以直接执行的结构化上下文中间表示（Context Intermediate Representation）。本文深度拆解 H3-Context-IR 的工作原理、内部工作流、与 H3-Base 的接口设计，以及如何在不接入 API 的情况下手动复现其功能。"
 descriptionEn: "MiniMax H3's complete system has three modules: H3-Context-IR, H3-Base, and H3-Regenerate-2K. Only H3-Base is open-sourced, but MiniMax strongly recommends integrating H3-Context-IR. It is a managed pre-processing and orchestration system that converts user creative intent (including image, audio, video references) into the structured Context Intermediate Representation that H3-Base can execute directly. This article deep-dives into how H3-Context-IR works, its internal workflow, its interface with H3-Base, and how to manually replicate its function without the API."
 pubDate: "2026-08-14"
-updatedDate: "2026-08-14"
+updatedDate: "2026-10-23"
 category: "Tech-News"
 tags: ["MiniMax H3", "视频生成", "Context-IR", "多模态", "Prompt工程", "AI视频", "创意工作流", "开源"]
 heroImage: "../../assets/images/minimax-h3-context-ir-prompt-orchestration-multimodal-video-banner.jpg"
@@ -227,6 +227,11 @@ H3-Context-IR 对输入的文本、图像、视频进行内容审核，这个设
 
 ---
 
+### 延伸阅读
+
+- [h3.c：MiniMax-H3 的 Mac 原生推理引擎](/blog/h3c-minimax-h3-metal-inference/)
+- [MiniMax H3 视频生成的本地加速工程实践](/blog/minimax-h3-video-generation-local-acceleration-engineering-guide/)
+
 *Mycelium Protocol — 追踪 AI 系统的底层演化*
 
 ---
@@ -349,6 +354,11 @@ H3-Context-IR + H3-Base is an **intent-translation layer + execution layer** sep
 **Uncontrollable auto-completion**: H3-Context-IR fills in unspecified semantic details automatically. For power users who want exact control of every dimension, this auto-completion may be noise rather than help.
 
 ---
+
+### Further reading
+
+- [h3.c: A Native Mac Inference Engine for MiniMax-H3](/blog/h3c-minimax-h3-metal-inference/)
+- [Local Acceleration Engineering for MiniMax H3 Video Generation](/blog/minimax-h3-video-generation-local-acceleration-engineering-guide/)
 
 *Mycelium Protocol — tracking the deep evolution of AI systems*
 

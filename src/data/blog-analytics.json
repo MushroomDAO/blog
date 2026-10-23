@@ -1,177 +1,177 @@
 {
-  "generatedAt": "2026-10-21T14:00:00Z",
+  "generatedAt": "2026-10-23T14:00:01Z",
   "period": {
-    "start": "2026-09-21",
-    "end": "2026-10-21"
+    "start": "2026-09-23",
+    "end": "2026-10-23"
   },
   "totals": {
-    "pageviews": 21560,
-    "visits": 20060,
+    "pageviews": 22200,
+    "visits": 21300,
     "bots": 10
   },
   "last7": {
-    "pv": 4410,
-    "visits": 4230
+    "pv": 4300,
+    "visits": 4200
   },
   "prior7": {
-    "pv": 5740,
-    "visits": 5580
+    "pv": 5400,
+    "visits": 5300
   },
   "daily": [
     {
-      "date": "09-21",
-      "pv": 90,
-      "visits": 70
-    },
-    {
-      "date": "09-22",
-      "pv": 550,
-      "visits": 510
-    },
-    {
       "date": "09-23",
-      "pv": 660,
-      "visits": 550
+      "pv": 100,
+      "visits": 100
     },
     {
       "date": "09-24",
-      "pv": 730,
-      "visits": 660
+      "pv": 700,
+      "visits": 700
     },
     {
       "date": "09-25",
-      "pv": 470,
-      "visits": 430
+      "pv": 600,
+      "visits": 500
     },
     {
       "date": "09-26",
-      "pv": 560,
-      "visits": 510
+      "pv": 700,
+      "visits": 700
     },
     {
       "date": "09-27",
-      "pv": 640,
-      "visits": 560
+      "pv": 300,
+      "visits": 200
     },
     {
       "date": "09-28",
-      "pv": 1030,
-      "visits": 870
+      "pv": 1300,
+      "visits": 1200
     },
     {
       "date": "09-29",
-      "pv": 650,
-      "visits": 590
+      "pv": 700,
+      "visits": 600
     },
     {
       "date": "09-30",
-      "pv": 530,
-      "visits": 530
+      "pv": 700,
+      "visits": 700
     },
     {
       "date": "10-01",
-      "pv": 930,
-      "visits": 800
+      "pv": 900,
+      "visits": 900
     },
     {
       "date": "10-02",
-      "pv": 860,
+      "pv": 800,
       "visits": 800
     },
     {
       "date": "10-03",
-      "pv": 550,
-      "visits": 490
+      "pv": 400,
+      "visits": 400
     },
     {
       "date": "10-04",
-      "pv": 1110,
-      "visits": 1000
+      "pv": 1400,
+      "visits": 1400
     },
     {
       "date": "10-05",
-      "pv": 570,
-      "visits": 560
+      "pv": 200,
+      "visits": 200
     },
     {
       "date": "10-06",
-      "pv": 780,
-      "visits": 670
+      "pv": 900,
+      "visits": 700
     },
     {
       "date": "10-07",
-      "pv": 700,
-      "visits": 650
+      "pv": 1000,
+      "visits": 900
     },
     {
       "date": "10-08",
-      "pv": 1090,
-      "visits": 1040
+      "pv": 500,
+      "visits": 500
     },
     {
       "date": "10-09",
-      "pv": 880,
-      "visits": 860
+      "pv": 1300,
+      "visits": 1300
     },
     {
       "date": "10-10",
-      "pv": 780,
-      "visits": 770
+      "pv": 1600,
+      "visits": 1600
     },
     {
       "date": "10-11",
-      "pv": 690,
-      "visits": 670
+      "pv": 1100,
+      "visits": 1100
     },
     {
       "date": "10-12",
-      "pv": 810,
-      "visits": 770
+      "pv": 700,
+      "visits": 700
     },
     {
       "date": "10-13",
-      "pv": 760,
-      "visits": 750
+      "pv": 600,
+      "visits": 600
     },
     {
       "date": "10-14",
-      "pv": 730,
-      "visits": 720
+      "pv": 600,
+      "visits": 600
     },
     {
       "date": "10-15",
-      "pv": 610,
-      "visits": 590
+      "pv": 600,
+      "visits": 500
     },
     {
       "date": "10-16",
-      "pv": 530,
-      "visits": 490
+      "pv": 200,
+      "visits": 200
     },
     {
       "date": "10-17",
-      "pv": 650,
-      "visits": 610
+      "pv": 900,
+      "visits": 900
     },
     {
       "date": "10-18",
-      "pv": 420,
-      "visits": 410
+      "pv": 400,
+      "visits": 400
     },
     {
       "date": "10-19",
-      "pv": 810,
-      "visits": 770
+      "pv": 900,
+      "visits": 800
     },
     {
       "date": "10-20",
-      "pv": 710,
-      "visits": 690
+      "pv": 400,
+      "visits": 400
     },
     {
       "date": "10-21",
-      "pv": 680,
-      "visits": 670
+      "pv": 700,
+      "visits": 700
+    },
+    {
+      "date": "10-22",
+      "pv": 400,
+      "visits": 400
+    },
+    {
+      "date": "10-23",
+      "pv": 600,
+      "visits": 600
     }
   ],
   "countries": [
@@ -180,207 +180,227 @@
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 8000,
-      "visits": 8000
+      "pv": 9980,
+      "visits": 9960
     },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 4000,
-      "visits": 4000
+      "pv": 5120,
+      "visits": 4480
     },
     {
       "code": "US",
       "flag": "🇺🇸",
       "name": "美国",
       "nameEn": "United States",
-      "pv": 3000,
-      "visits": 3000
+      "pv": 2220,
+      "visits": 1930
+    },
+    {
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "pv": 800,
+      "visits": 770
     },
     {
       "code": "JP",
       "flag": "🇯🇵",
       "name": "日本",
       "nameEn": "Japan",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "code": "NL",
-      "flag": "🇳🇱",
-      "name": "荷兰",
-      "nameEn": "Netherlands",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "code": "KE",
-      "flag": "🇰🇪",
-      "name": "KE",
-      "nameEn": "KE",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 630,
+      "visits": 550
     },
     {
       "code": "TW",
       "flag": "🇹🇼",
       "name": "台湾",
       "nameEn": "Taiwan",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 370,
+      "visits": 350
+    },
+    {
+      "code": "NL",
+      "flag": "🇳🇱",
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "pv": 350,
+      "visits": 350
+    },
+    {
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "pv": 260,
+      "visits": 150
+    },
+    {
+      "code": "CO",
+      "flag": "🇨🇴",
+      "name": "CO",
+      "nameEn": "CO",
+      "pv": 220,
+      "visits": 220
+    },
+    {
+      "code": "AE",
+      "flag": "🇦🇪",
+      "name": "阿联酋",
+      "nameEn": "United Arab Emirates",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "code": "ID",
+      "flag": "🇮🇩",
+      "name": "印度尼西亚",
+      "nameEn": "Indonesia",
+      "pv": 190,
+      "visits": 190
     },
     {
       "code": "DE",
       "flag": "🇩🇪",
       "name": "德国",
       "nameEn": "Germany",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "code": "GB",
-      "flag": "🇬🇧",
-      "name": "英国",
-      "nameEn": "United Kingdom",
-      "pv": 1000,
-      "visits": 0
+      "pv": 190,
+      "visits": 120
     }
   ],
-  "countryTotal": 21000,
+  "countryTotal": 21500,
   "referers": {
-    "direct": 15430,
-    "search": 4470,
-    "ecosystem": 1500,
+    "direct": 17000,
+    "search": 4200,
+    "ecosystem": 900,
     "ai": 0,
-    "other": 160
+    "other": 100
   },
   "pages": [
     {
       "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
       "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
       "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
-      "pv": 2300,
-      "visits": 2300
+      "pv": 2710,
+      "visits": 2340
     },
     {
       "title": "首页",
       "titleEn": "Home",
       "path": "/",
-      "pv": 1100,
-      "visits": 800
+      "pv": 820,
+      "visits": 660
     },
     {
-      "title": "Qwen-Image-2.1 本地部署：Unsloth FP8/GGUF，6GB 显存能跑，Mac 16GB 统一内存也行",
-      "titleEn": "Qwen-Image-2.1 Local Deploy: Unsloth FP8/GGUF, Runs on 6GB VRAM, Mac 16GB Unified Memory Too",
-      "path": "/blog/qwen-image-2-1-unsloth-fp8-gguf-local-deploy/",
-      "pv": 400,
-      "visits": 400
-    },
-    {
-      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
-      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
-      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行",
-      "titleEn": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks",
-      "path": "/blog/openmuse-copilotkit-personal-ai-agent-browser-workspace/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "PixOffice：给 AI 多智能体加一层 2D 办公室可视化，三种接入方式详解",
-      "titleEn": "PixOffice: How to Integrate 2D Office Scene Visualization Into Your AI Agent System",
-      "path": "/blog/pixoffice-2d-office-frontend-ai-agent-integration-guide/",
-      "pv": 300,
-      "visits": 100
+      "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
+      "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
+      "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
+      "pv": 280,
+      "visits": 280
     },
     {
       "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
       "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
       "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 300,
-      "visits": 300
+      "pv": 260,
+      "visits": 260
+    },
+    {
+      "title": "Qwen-Image-2.1 本地部署：Unsloth FP8/GGUF，6GB 显存能跑，Mac 16GB 统一内存也行",
+      "titleEn": "Qwen-Image-2.1 Local Deploy: Unsloth FP8/GGUF, Runs on 6GB VRAM, Mac 16GB Unified Memory Too",
+      "path": "/blog/qwen-image-2-1-unsloth-fp8-gguf-local-deploy/",
+      "pv": 240,
+      "visits": 230
+    },
+    {
+      "title": "explore",
+      "titleEn": "explore",
+      "path": "/explore",
+      "pv": 200,
+      "visits": 130
+    },
+    {
+      "title": "MiniMax H3 本地视频生成完整工程指南：五条加速路径，从 RTX 4070 到多卡集群",
+      "titleEn": "MiniMax H3 Local Video Generation Engineering Guide: Five Acceleration Paths, from RTX 4070 to Multi-GPU Clusters",
+      "path": "/blog/minimax-h3-video-generation-local-acceleration-engineering-guide/",
+      "pv": 180,
+      "visits": 180
     },
     {
       "title": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查",
       "titleEn": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios",
       "path": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
-      "pv": 300,
-      "visits": 300
+      "pv": 170,
+      "visits": 170
     },
     {
-      "title": "OpenSquilla：同样预算，更高智能密度——开源 AI Agent 的 Token 效率革命",
-      "titleEn": "OpenSquilla: Same Budget, Higher Intelligence Density — The Open-Source Token Efficiency Revolution",
-      "path": "/blog/opensquilla-token-efficient-ai-agent-open-source/",
-      "pv": 200,
-      "visits": 200
+      "title": "blog",
+      "titleEn": "blog",
+      "path": "/blog/",
+      "pv": 160,
+      "visits": 30
     },
     {
-      "title": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时",
-      "titleEn": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime",
-      "path": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
-      "pv": 200,
-      "visits": 200
+      "title": "PixOffice：给 AI 多智能体加一层 2D 办公室可视化，三种接入方式详解",
+      "titleEn": "PixOffice: How to Integrate 2D Office Scene Visualization Into Your AI Agent System",
+      "path": "/blog/pixoffice-2d-office-frontend-ai-agent-integration-guide/",
+      "pv": 150,
+      "visits": 120
     },
     {
-      "title": "专用推理引擎崛起：六个框架深度拆解，以及普通人如何从中受益",
-      "titleEn": "The Rise of Specialized LLM Inference Engines: Six Frameworks Analyzed, and What It Means for You",
-      "path": "/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
-      "pv": 200,
-      "visits": 200
+      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
+      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
+      "pv": 150,
+      "visits": 140
     },
     {
-      "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
-      "titleEn": "ECCV 2026 Best Paper, Unpacked: Heat Kernel Textures Drop UV Unwrapping, and Li Fei-Fei's Perceptual Loss Wins Test of Time",
-      "path": "/blog/eccv-2026-best-paper-heat-kernel-textures-uv-free/",
-      "pv": 200,
-      "visits": 200
+      "title": "OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行",
+      "titleEn": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks",
+      "path": "/blog/openmuse-copilotkit-personal-ai-agent-browser-workspace/",
+      "pv": 150,
+      "visits": 150
     },
     {
-      "title": "Bespoke Nimble：一天之内做一个会读概率的 9B 决策模型",
-      "titleEn": "Bespoke Nimble: A 9B Decision Model Built in One Day That Reads Probabilities",
-      "path": "/blog/bespoke-nimble-9b-open-decision-model-logprob-jev-rival/",
-      "pv": 200,
-      "visits": 200
+      "title": "MacNativeGames：把《王国之泪》打包成Mac应用的技术拆解",
+      "titleEn": "MacNativeGames: Tears of the Kingdom on Apple Silicon",
+      "path": "/blog/macnativegames-totk-native-mac/",
+      "pv": 150,
+      "visits": 150
     },
     {
-      "title": "果蝇大脑被网友塞进《我的世界》和驾校：16.6 万神经元的连接组，离「上传意识」还差多远？",
-      "titleEn": "A Fruit Fly Brain in Minecraft and Driving School: How Far Is a 166,700-Neuron Connectome From an Uploaded Mind?",
-      "path": "/blog/malecns-fruit-fly-connectome-games-minecraft-driving/",
-      "pv": 200,
-      "visits": 200
+      "title": "'MiniMax H3 加速五件套：稀疏注意力、混合注意力、并行解码，15 秒视频压进 6.6 秒'",
+      "titleEn": "MiniMax H3 Accelerated: Five Open-Source Speedups — Sparse Attention, Hybrid Attention, Parallel Decoding",
+      "path": "/blog/minimax-h3-accelerated-fasth3-sol-h3-vdn-pdd-lightx2v-five-open-source-speedups/",
+      "pv": 130,
+      "visits": 130
     },
     {
-      "title": "Hemmingway-1：一个「写得像人」的 27B 模型，能力靠自建榜单证明，还是 Qwen3.8 的一次精调？",
-      "titleEn": "Hemmingway-1: A 27B Model That 'Writes Like a Person' — Backed by Self-Run Benchmarks or Just a Qwen3.8 Fine-Tune?",
-      "path": "/blog/hemmingway-1-27b-writing-model-benchmark-claims-teardown/",
-      "pv": 200,
-      "visits": 200
+      "title": "YuE2-3B：先写谱再唱歌的开源音乐模型，和 ACE-Step 1.5 差在哪",
+      "titleEn": "YuE2-3B: Open Song Generation That Writes an Editable Score First",
+      "path": "/blog/yue2-3b-open-source-song-generation-editable-score/",
+      "pv": 130,
+      "visits": 130
     }
   ],
   "devices": [
     {
       "label": "desktop",
-      "count": 18710
+      "count": 19800
     },
     {
       "label": "mobile",
-      "count": 2820
-    },
-    {
-      "label": "tablet",
-      "count": 30
+      "count": 2400
     }
   ],
   "os": [
     {
       "label": "Windows",
-      "count": 14290
+      "count": 14500
     },
     {
       "label": "MacOSX",
@@ -388,49 +408,49 @@
     },
     {
       "label": "Unknown",
-      "count": 2320
+      "count": 2410
     },
     {
       "label": "Linux",
-      "count": 1030
+      "count": 1080
     },
     {
       "label": "Android",
-      "count": 840
+      "count": 820
     },
     {
       "label": "iOS",
-      "count": 630
+      "count": 620
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 15120
+      "count": 15540
     },
     {
       "label": "Unknown",
-      "count": 2320
+      "count": 2410
     },
     {
       "label": "Edge",
-      "count": 2240
+      "count": 2080
     },
     {
       "label": "ChromeMobileWebview",
-      "count": 630
+      "count": 620
     },
     {
       "label": "MobileSafari",
-      "count": 580
+      "count": 570
     },
     {
       "label": "Safari",
-      "count": 270
+      "count": 250
     },
     {
       "label": "ChromeMobile",
-      "count": 170
+      "count": 160
     },
     {
       "label": "ChromeDerivative",
@@ -438,7 +458,7 @@
     },
     {
       "label": "Firefox",
-      "count": 100
+      "count": 120
     },
     {
       "label": "ChromeHeadless",
