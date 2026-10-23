@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-23T01:11:29.032541+00:00",
+  "articles": [
+    {
+      "slug": "flint-local-coding-rec-engine",
+      "url": "https://blog.mushroom.cv/blog/flint-local-coding-rec-engine/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/flint-local-coding-rec-engine-banner.WRaVp7DX_7Kyni.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/flint-local-coding-rec-engine-fig-01.BVGzfXEW_Z2209RN.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/flint-local-coding-rec-engine-fig-02.Dp7HShfK_Z1QN2ff.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/flint-local-coding-rec-engine-fig-03.DOy7swRd_Z27kwaW.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/flint-local-coding-rec-engine-banner.WRaVp7DX.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 1,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    },
+    {
+      "slug": "gamescaling-game-agents-cpt",
+      "url": "https://blog.mushroom.cv/blog/gamescaling-game-agents-cpt/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/gamescaling-game-agents-cpt-banner.C4gu3_KX_1fkuGw.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gamescaling-game-agents-cpt-fig-01.BHR3E1JA_Z1brHPQ.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gamescaling-game-agents-cpt-fig-02.BhgQEtQY_1wV3Y6.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gamescaling-game-agents-cpt-fig-03.DW_3Bata_Z1Gu63W.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gamescaling-game-agents-cpt-banner.C4gu3_KX.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 2,
+      "homepageContainsArticle": true,
+      "carouselRank": 2
+    }
+  ],
+  "carouselSlides": [
+    "/blog/flint-local-coding-rec-engine/",
+    "/blog/gamescaling-game-agents-cpt/",
+    "/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
+    "/blog/animation-datasets-motion-viewer/",
+    "/blog/layerfs-v1-recursive-agent-filesystem/",
+    "/blog/live-panel-skill-animated-architecture/",
+    "/blog/ondine-rust-mermaid-compiler/",
+    "/blog/pr-agency-founder-communications-playbook/"
+  ]
+}
