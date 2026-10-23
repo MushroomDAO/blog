@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-23",
+  "taskId": "534b08fb-73b7-4f59-856c-5cb9fcf9a908",
+  "dedup": "raw KB only; no previous Blog/M2 records",
+  "occamy": {
+    "modelRevision": "72ca96031d8d11650882b5fae8dad88412a76155",
+    "datasetRevision": "5fab44cc7ca1545d5ff2bf43d277dca93b24ba60",
+    "dataScope": "released subset",
+    "inferenceRun": false,
+    "RLTrainingRun": false,
+    "MLXMetalAcceptance": "pending per model card"
+  },
+  "dressage": {
+    "commit": "3e3142fe8ea07e4504c3b20a936a4c201a3de44c",
+    "sourceTestFunctionsPassed": 4,
+    "backend": "mock HTTP",
+    "pytestSuiteRun": false,
+    "pytestUnavailable": true
+  },
+  "moki": {
+    "commit": "9273947dee37de7c9cf88d4d84454ba47e62eef4",
+    "version": "0.1.7",
+    "coreSQLiteSmoke": "passed",
+    "optionalVersionOmissionAcceptsWrite": true,
+    "UIRun": false,
+    "MCPProtocolTest": false,
+    "registeredTools": [
+      "whiteboard_rename",
+      "whiteboard_duplicate",
+      "whiteboard_delete_board",
+      "whiteboard_get_thumbnail",
+      "whiteboard_list",
+      "whiteboard_create",
+      "whiteboard_inspect",
+      "whiteboard_create_page",
+      "whiteboard_manage_pages",
+      "whiteboard_manage_page_groups",
+      "whiteboard_add_elements",
+      "whiteboard_update_elements",
+      "whiteboard_align_elements",
+      "whiteboard_delete_elements",
+      "whiteboard_export",
+      "whiteboard_native_edit"
+    ],
+    "coreSmokeResults": {
+      "WAL": true,
+      "createAndAdd": true,
+      "staleVersionRejected": true,
+      "freshUpdateAccepted": true,
+      "persistedAfterReopen": true,
+      "auditEntries": 3,
+      "omittedVersionAllowed": true,
+      "UIRun": false,
+      "MCPProtocolTest": false
+    }
+  },
+  "covers": {
+    "occamy": "localFLUX seed168; reviewed",
+    "moki": "official canvas-light screenshot; reviewed; source UI text permitted"
+  }
+}

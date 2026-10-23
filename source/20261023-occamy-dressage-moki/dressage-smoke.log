@@ -1,0 +1,5 @@
+PASS test_sglang_router_client_wait_until_ready_uses_workers_health
+PASS test_generation_controller_resume_keeps_paused_when_backend_not_ready
+PASS test_generation_controller_resume_releases_after_backend_ready
+PASS test_generation_controller_skips_zero_output_preempt_routed_experts
+4 source test functions passed; mock backend readiness only; no GPU/RL run.

@@ -1,0 +1,144 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "requested_images": 3,
+  "created_at": "2026-10-23T08:26:14.778075+07:00",
+  "article": "/Users/jason/Dev/mycelium/blog/src/content/blog/moki-whiteboard-local-mcp.md",
+  "article_sha256_before": "a217551d939837035ad67d46e872a044a25a4f1c8596ceb0637828eb1cbdc900",
+  "references": [
+    "SKILL.md",
+    "references/style-dna.md",
+    "references/mushroom-ip.md",
+    "references/composition-patterns.md",
+    "references/prompt-template.md",
+    "references/qa-checklist.md"
+  ],
+  "images": [
+    {
+      "index": 1,
+      "source_generated_path": "/Users/jason/.codex/generated_images/01a1665c-6b97-7a23-9fff-288089fa5e01/exec-b4989d4f-f2d6-4072-a0d7-4d7ad135d353.png",
+      "preserved_original": "/Users/jason/Dev/mycelium/blog/source/20261023-occamy-dressage-moki/generated-assets/moki-whiteboard-local-mcp-illustrations/generation-20261023T082614/originals/fig-01.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1131245,
+      "original_sha256": "6c044d646e61326c1e7ba1e96463516c6720acaaf104b55ae40127ae98becba4",
+      "output": "/Users/jason/Dev/mycelium/blog/src/assets/images/moki-whiteboard-local-mcp-fig-01.png",
+      "output_dimensions": [
+        1536,
+        864
+      ],
+      "output_bytes": 41774,
+      "output_sha256": "69ca78f3d75f99415f61db31e2ec291ea60f9173560fc946b0cbf7814b8fcd25",
+      "prompt": "Generate exactly ONE standalone 16:9 horizontal Chinese article illustration, ideally 1536x864. Use case: illustration-story. Pure solid white #FFFFFF background, minimalist black hand-drawn thin slightly wobbly pen outlines, generous white space (at least 40%), subject around 50-60% of image. Flat restrained red, orange, blue accents. Clean absurd product sketch drawn by a serious engineer. No shading, gradients, paper texture, noise, commercial vector illustration, realistic UI, formal flowchart, PPT, title, heading, border around the whole image, watermark, childish cuteness.\nRequired protagonist XiaoM 小M: small mushroom worker with rounded RED dome cap, 3-5 WHITE polka dots, CREAM stem body, BLACK hand-drawn contours, two tiny BLACK dot eyes on cream stem, thin limbs, deadpan serious expression. Red dotted cap + pale body, never solid-black body. One or two thin ORANGE mycelium threads carry the actual information involved in the scene, not decorative roots. XiaoM performs the core action. Readable sparse handwritten Chinese labels only as specified. No extra explanatory text. Invent a fresh low-tech physical metaphor; no conveyor, fish, generic architecture boxes, control lever, toolbox stamping or mascot in corner. Single unpartitioned scene, not a composite or multi-panel image.\nTheme: an agent reads and edits REAL objects on a shared whiteboard, rather than merely chatting.\nScene: a floating, slightly irregular whiteboard at center-right, three individually outlined physical paper cards on its surface, one connected line between two cards. A serious XiaoM straddles the lower rim of this board as an actual repair worker. With one hand it lifts a corner of a real board card to read its small identity tag \"ID 07\"; with the other it uses a pen to directly revise the SAME card's line of writing. One orange mycelium filament runs from its hand to the specific card, tracing a read-and-write loop with two very subtle arrowheads. The visible board object is tangible and changed by its action. A tiny blue label \"读写对象\" beside the hand, and \"同一画布\" by the lower board edge. No chat bubbles at all, no chat window, no human. Main meaning is direct manipulation of an identified object, not text conversation. Leave broad empty white margins and upper-left region empty. Text ONLY \"ID 07\", \"读写对象\", \"同一画布\".",
+      "processing": {
+        "copied_before_compression": true,
+        "resize": "aspect-preserving white padding if needed; no content cropped",
+        "png_palette_colors": 128,
+        "quantizer": "FASTOCTREE",
+        "dither": false,
+        "limit_bytes": 90000,
+        "palette_white_point": "Near-white palette entries (all RGB >=248) encoded as pure white during PNG compression; originals preserved"
+      },
+      "saved_at": "2026-10-23T08:27:40.911867+07:00",
+      "visual_qa": {
+        "reviewed": true,
+        "protagonist_performs_core_action": true,
+        "red_cap_white_dots_cream_stem_black_contours": true,
+        "orange_information_path": true,
+        "minimal_readable_labels": true,
+        "theme_matches_article": true
+      }
+    },
+    {
+      "index": 2,
+      "source_generated_path": "/Users/jason/.codex/generated_images/01a1665c-6b97-7a23-9fff-288089fa5e01/exec-0f602f58-1fba-44f8-b4e8-17453e07c09f.png",
+      "preserved_original": "/Users/jason/Dev/mycelium/blog/source/20261023-occamy-dressage-moki/generated-assets/moki-whiteboard-local-mcp-illustrations/generation-20261023T082614/originals/fig-02.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1267493,
+      "original_sha256": "769a22e0fc9b9e7b273a569248af7df32c6e6e550d8c1ffdbde8a29517825e90",
+      "output": "/Users/jason/Dev/mycelium/blog/src/assets/images/moki-whiteboard-local-mcp-fig-02.png",
+      "output_dimensions": [
+        1536,
+        864
+      ],
+      "output_bytes": 70534,
+      "output_sha256": "c8a6f573d196ed44bad429cf8647e8f2091c591795da7f11f12176b22044265e",
+      "prompt": "Generate exactly ONE standalone 16:9 horizontal Chinese article illustration, ideally 1536x864. Use case: illustration-story. Pure solid white #FFFFFF background, minimalist black hand-drawn thin slightly wobbly pen outlines, generous white space (at least 40%), subject around 50-60% of image. Flat restrained red, orange, blue accents. Clean absurd product sketch drawn by a serious engineer. No shading, gradients, paper texture, noise, commercial vector illustration, realistic UI, formal flowchart, PPT, title, heading, border around the whole image, watermark, childish cuteness.\nRequired protagonist XiaoM 小M: small mushroom worker with rounded RED dome cap, 3-5 WHITE polka dots, CREAM stem body, BLACK hand-drawn contours, two tiny BLACK dot eyes on cream stem, thin limbs, deadpan serious expression. Red dotted cap + pale body, never solid-black body. One or two thin ORANGE mycelium threads carry the actual information involved in the scene, not decorative roots. XiaoM performs the core action. Readable sparse handwritten Chinese labels only as specified. No extra explanatory text. Invent a fresh low-tech physical metaphor; no conveyor, fish, generic architecture boxes, control lever, toolbox stamping or mascot in corner. Single unpartitioned scene, not a composite or multi-panel image.\nTheme: two writers share one board object; an update carrying a stale version ticket is rejected, preserving the new human edit.\nOne compact absurd physical scene centered on a small whiteboard card on an easel. A minimally drawn adult HUMAN HAND from the left has just written the card's large content \"B\"; a blue version tab attached to the board reads \"v2\". On the right XiaoM is the second writer: pushing its proposed replacement paper \"A\" toward the card with one hand, and presenting a clearly visible old punch-ticket \"v1\" with the other. XiaoM itself operates a small comparison caliper at the edge of the card, placing the old v1 ticket next to the current v2 tab; a tiny RED X at that contact stops the proposed A sheet from reaching or covering B. Short red handwritten label \"旧版拒绝\" exactly at the rejection; blue label \"人已更新\" beside the human hand. One short orange mycelium strand from XiaoM carries the attempted update toward the red rejection cross and stops there. B remains fully visible, current v2 unchanged. Depict an explicit submitted version ticket, never imply protection of all unversioned writes. Two writers are the human hand and XiaoM, not two unrelated decorative mushrooms. Text ONLY \"A\", \"B\", \"v1\", \"v2\", \"旧版拒绝\", \"人已更新\". No separate flowchart nodes.",
+      "processing": {
+        "copied_before_compression": true,
+        "resize": "aspect-preserving white padding if needed; no content cropped",
+        "png_palette_colors": 128,
+        "quantizer": "FASTOCTREE",
+        "dither": false,
+        "limit_bytes": 90000,
+        "palette_white_point": "Near-white palette entries (all RGB >=248) encoded as pure white during PNG compression; originals preserved"
+      },
+      "saved_at": "2026-10-23T08:28:20.525558+07:00",
+      "visual_qa": {
+        "reviewed": true,
+        "protagonist_performs_core_action": true,
+        "red_cap_white_dots_cream_stem_black_contours": true,
+        "orange_information_path": true,
+        "minimal_readable_labels": true,
+        "theme_matches_article": true
+      }
+    },
+    {
+      "index": 3,
+      "source_generated_path": "/Users/jason/.codex/generated_images/01a1665c-6b97-7a23-9fff-288089fa5e01/exec-73b19b3b-0969-4eda-a2e2-c789fa380f15.png",
+      "preserved_original": "/Users/jason/Dev/mycelium/blog/source/20261023-occamy-dressage-moki/generated-assets/moki-whiteboard-local-mcp-illustrations/generation-20261023T082614/originals/fig-03.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1176303,
+      "original_sha256": "ef2a51b8895368256cd664cae8ec95317872d5c6396ad27eeb7cfcfe2206c1e6",
+      "output": "/Users/jason/Dev/mycelium/blog/src/assets/images/moki-whiteboard-local-mcp-fig-03.png",
+      "output_dimensions": [
+        1536,
+        864
+      ],
+      "output_bytes": 49089,
+      "output_sha256": "135e9d9fec3e639d1b41ed57c6773ae1abf9d9e5df924aa6bc3a9912de5cd310",
+      "prompt": "Generate exactly ONE standalone 16:9 horizontal Chinese article illustration, ideally 1536x864. Use case: illustration-story. Pure solid white #FFFFFF background, minimalist black hand-drawn thin slightly wobbly pen outlines, generous white space (at least 40%), subject around 50-60% of image. Flat restrained red, orange, blue accents. Clean absurd product sketch drawn by a serious engineer. No shading, gradients, paper texture, noise, commercial vector illustration, realistic UI, formal flowchart, PPT, title, heading, border around the whole image, watermark, childish cuteness.\nRequired protagonist XiaoM 小M: small mushroom worker with rounded RED dome cap, 3-5 WHITE polka dots, CREAM stem body, BLACK hand-drawn contours, two tiny BLACK dot eyes on cream stem, thin limbs, deadpan serious expression. Red dotted cap + pale body, never solid-black body. One or two thin ORANGE mycelium threads carry the actual information involved in the scene, not decorative roots. XiaoM performs the core action. Readable sparse handwritten Chinese labels only as specified. No extra explanatory text. Invent a fresh low-tech physical metaphor; no conveyor, fish, generic architecture boxes, control lever, toolbox stamping or mascot in corner. Single unpartitioned scene, not a composite or multi-panel image.\nTheme: a local database stays on the computer, while inspected CONTENT may cross to an external cloud model. Show an unambiguous visible device boundary.\nOne low-tech hand-drawn scene: a wide open suitcase-like LAPTOP housing on the left with its outline serving as the clear local enclosure, not a realistic app screenshot. Inside it a little cylindrical storage container, label \"本地数据库\", remains firmly planted. Inside the same enclosure XiaoM actively SCOOPS a small paper content strip out of that local container and FEEDS it along one thin orange mycelium thread through a visibly drawn notch in the laptop's right wall. XiaoM is the active sender, both arms occupied feeding the paper strip. The orange thread carries two small strips of content past the enclosure's right wall, across obvious white empty space, into a small simple blue cloud OUTSIDE on the far right, label \"外部模型\". At the precise crossing put a tiny black tick and short handwritten label \"本机边界\"; above the traveling strips one small orange label \"内容出站\". The database cylinder stays entirely INSIDE; only copies of content flow outside. Serious, spare, no security shield, no lock, no claim of automatic protection. The device outline and crossing must read instantly. Text ONLY \"本地数据库\", \"本机边界\", \"内容出站\", \"外部模型\".",
+      "processing": {
+        "copied_before_compression": true,
+        "resize": "aspect-preserving white padding if needed; no content cropped",
+        "png_palette_colors": 128,
+        "quantizer": "FASTOCTREE",
+        "dither": false,
+        "limit_bytes": 90000,
+        "palette_white_point": "Near-white palette entries (all RGB >=248) encoded as pure white during PNG compression; originals preserved"
+      },
+      "saved_at": "2026-10-23T08:28:54.632124+07:00",
+      "visual_qa": {
+        "reviewed": true,
+        "protagonist_performs_core_action": true,
+        "red_cap_white_dots_cream_stem_black_contours": true,
+        "orange_information_path": true,
+        "minimal_readable_labels": true,
+        "theme_matches_article": true
+      }
+    }
+  ],
+  "article_sha256_after": "16c4461d231a4971560a800bf7188ac8950a1526cd525cc8eee2e83d0b45050c",
+  "article_changed_during_run": true,
+  "article_write_operations_by_this_task": 0,
+  "article_observation": "Article hash changed during generation; this task issued no article writes and did not revert concurrent changes.",
+  "verification": {
+    "exactly_three_generated": true,
+    "all_requested_copies_finished": true,
+    "all_pngs_below_90000_bytes": true,
+    "all_16_9": true,
+    "pure_white_background_palette": true,
+    "originals_intact": true,
+    "article_edited_by_this_task": false,
+    "banner_created": false,
+    "published": false,
+    "git_operations": false
+  }
+}
