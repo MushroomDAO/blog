@@ -1,0 +1,19 @@
+{
+  "kind": "maintenance",
+  "taskId": "43c77f86-7274-4f68-993a-60394ca5986c",
+  "checkedAt": "2026-10-23T00:55:55.618459+00:00",
+  "historicalArticles": 71,
+  "online200": 71,
+  "localReceiptsMatched": 71,
+  "remoteDrafts": 2,
+  "recordedUnverified": 69,
+  "publishedListError": 48001,
+  "falseFailuresReconciled": 1,
+  "failedJobsRemaining": 0,
+  "newBlogDeployments": 0,
+  "newDrafts": 0,
+  "routingFixCommit": "cf1caf3",
+  "testsPassed": 24,
+  "typecheck": "passed",
+  "serviceReload": "deferred until current reply completes and bot has no active CLI or pending work"
+}

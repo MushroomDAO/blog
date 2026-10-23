@@ -1,0 +1,48 @@
+
+> heinu1-wechat-bot@1.0.0 test
+> tsx --test tests/*.test.ts
+
+✔ migrates Claude history without exposing it to Codex, scoped by user/workspace/provider (83.446458ms)
+✔ parses chunked Unicode + final unterminated JSON, deduplicates tools, returns final summary (81.028292ms)
+[codex] Saved thread unavailable; starting a new conversation
+✔ resume uses explicit thread and retries a missing one only before doing work (138.09ms)
+✔ rejects failed or incomplete turns even when CLI exits 0 (83.350833ms)
+✔ WeChat /status identifies Codex, /new starts fresh, next task resumes the saved thread (110.753958ms)
+[claude] exit 1: You've hit your weekly limit
+[router] error: claude: You've hit your weekly limit
+✔ explicit backend/model selection persists and routes isolated histories to the correct CLI (169.84825ms)
+[router] error: Codex: You have hit your usage limit
+✔ pending messages block switching and Codex quota errors offer explicit fallback without replay (48.558083ms)
+✔ /stop kills a command child as well as the Codex process (45.047709ms)
+✔ auto routing uses Luna for read-only replies and Sol before research/publishing; manual choice wins (0.793167ms)
+✔ maintenance routing recognizes failure records and homepage carousel troubleshooting without authorizing articles (0.080666ms)
+✔ asking whether Blog published returns saved channel receipts without starting another article (4.015334ms)
+✔ duplicate-publication control reaches the agent with a non-publishing boundary and no publisher invocation (59.585ms)
+✔ recent publication queries order recovered results by receipt time rather than original message time (4.199083ms)
+[router] error: 公众号 IP 白名单拒绝（40164）：203.0.113.8 不在白名单。请在公众号后台「设置与开发 → 基本配置 → IP 白名单」添加该 IP，保留已有条目，之后发 /retry all。已暂停自动重试。
+✔ actual duplicate-check failure preserves the WeChat IP cause and never exposes credentials (83.840792ms)
+✔ WeChat whitelist failure saves KB, pauses automatic retries, and resumes manually after repair (69.868167ms)
+[router] error: 公众号 IP 白名单拒绝（40164）：203.0.113.8 不在白名单。请在公众号后台「设置与开发 → 基本配置 → IP 白名单」添加该 IP，保留已有条目，之后发 /retry all。已暂停自动重试。
+[router] publication reply delivery failed; saved for next message
+[router] execution acknowledgement delivery failed; continuing saved task
+✔ partial publication keeps the verified Blog link, reports every channel, and resumes only the missing draft (137.820458ms)
+✔ publication reports survive a restart and delivery failure without replaying the completed publication (20.548125ms)
+[router] publication reply delivery failed; saved for next message
+✔ a failed initial acknowledgement cannot block KB or publication and the final result is sent later without replay (87.776292ms)
+✔ real verifier validates live Blog independently and rejects a forged WeChat media ID (8.575875ms)
+✔ archived WeChat receipts preserve uncertainty and never claim a current draft exists (0.041416ms)
+[router] error: 公众号草稿缺失
+[router] reply pending: no message context
+[router] error: KB unavailable
+✔ publication jobs dedup and ingest before CLI, persist partial failure, then resume and verify completion (134.790833ms)
+✔ KB failure blocks writing and keeps complete content for retry (13.644708ms)
+✔ received messages survive a crash during turn buffering, dedup redelivery, and attach atomically to a job (16.242584ms)
+✔ explicit failure compensation takes priority over new queued material and an occupied slot retains its queue (6.497958ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1699.496417
