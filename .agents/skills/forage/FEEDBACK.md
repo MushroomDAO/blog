@@ -1017,3 +1017,12 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 ## 2026-10-22 — Splash 1.4.0 source update, existing article reused
 
 - https://blog.mushroom.cv/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/ Splash1.4 tag1482f6b pinned. Official95tok/s not unverified120;1312prefill32K,171mscachedTTFTall16hit,171aggregate4requests. SameQ2_0GGUFMac20GPU64GBStrata scope; rounded1.3x not blanket30percent. No inference performance reproduced. Local service test import blocked Python3.9match syntax and Python3.12missingllguidance, no assertions passed. ReplacementFLUX165cover and3XiaoMimages rootreviewed. PreservedpubDateOct5; otherfiveengines historical only. WeChat recorded only; preserve archived receipt and do not recreate while published status is unverified. Task462f0d88-deb5-4fe3-abe6-1d3778ff76ad.
+
+
+## 2026-10-23 — 评审台「开始写」4 条
+
+- 标「写」4 条，实发 4 篇：superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx、cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor、laya-aayushch-local-first-ai-notification-command-center、deepseek-v41-flash-1017-uncensored-fp8-teardown；无跳过。博客与公众号草稿均已建。
+- 查重：aayushch/laya 与已发「Laya ANE」重名但是完全不同的项目；DeepSeek 去审查版与旧 V4-Flash 部署文非同一主题。两条都不是真重复。
+- 采集侧问题：store.py sync 的 published_match 按标题实体匹配 slug，owner/repo 与 slug 不一致的条目（laya、DeepSeek 微调版）不会被自动转 published，本次手动更新。
+- 子 agent 未带 wechatTitle/wechatDigest（BRIEF.md 未要求），其中 3 篇由主会话补；建议 BRIEF 把这两个字段列为必填。
+- 本次当前分支为 publish/nvidia-flare-local-inference，发布提交推到该分支而非 main；figs.sh 并行需用 nohup（macOS 无 setsid）。
