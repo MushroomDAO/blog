@@ -1,0 +1,32 @@
+{
+  "rootReviewed": true,
+  "figures": [
+    {
+      "file": "src/assets/images/underdog-bark-3-local-asr-fig-01.png",
+      "size": [
+        1600,
+        900
+      ],
+      "bytes": 50662,
+      "sha256": "35ce5077bfc7f8971dc8f6a550a14441605bc690fef2c82fddcfaa4871e89a37"
+    },
+    {
+      "file": "src/assets/images/underdog-bark-3-local-asr-fig-02.png",
+      "size": [
+        1600,
+        900
+      ],
+      "bytes": 73074,
+      "sha256": "fd14d9e6f49c08cbe07892ff04cf8ad4010a228df1139c70ea7e1b5ebf1e0e0c"
+    },
+    {
+      "file": "src/assets/images/underdog-bark-3-local-asr-fig-03.png",
+      "size": [
+        1440,
+        810
+      ],
+      "bytes": 86487,
+      "sha256": "8a643061f6d6f037ebac65fd97a80338a8caf4eb3d39e517586b5b274e4a4f31"
+    }
+  ]
+}
