@@ -1,0 +1,925 @@
+---
+license: other
+license_name: h2o-model-non-commercial-licence-v1.1
+license_link: https://huggingface.co/h2oai/h2o-lightning-31b/blob/main/LICENSE
+base_model: google/gemma-4-31B-it
+library_name: transformers
+pipeline_tag: image-text-to-text
+tags:
+- decision-making
+- calibration
+- multimodal
+- typed-decisions
+- decision-model
+extra_gated_heading: "Accept the H2O Model Non-Commercial Licence to access this model"
+extra_gated_prompt: "This model is released under the H2O Model Non-Commercial Licence v1.1 (see the LICENSE file): non-commercial, non-production use only."
+extra_gated_fields:
+  I have read and agree to the H2O Model Non-Commercial Licence in the LICENSE file: checkbox
+extra_gated_button_content: "Agree and request access"
+---
+
+# H2O-Lightning-31B
+
+![H2O Lightning: Decision Models](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/resolve/main/h2o-lightning-31b/banner.png)
+
+H2O-Lightning-31B is a 31B-parameter decision model from H2O.ai, built on
+[google/gemma-4-31B-it](https://huggingface.co/google/gemma-4-31B-it). It answers typed decision questions about a
+record (a document, a ticket, a policy, a conversation), and about images that come with the record. It returns a
+probability for every option:
+
+- **choice**: picks one of a set of named options.
+- **yes/no** (`noul`): gives the probability that a statement is true.
+- **score**: gives an ordinal level on a stated scale, with its probability distribution.
+
+## Leading on Benchmarks
+
+![Leading on Benchmarks: #1 of 166, Intelligence (Jev-class models, open or API), JevBench board v1.7.47, ahead of Chon-1.0-12B; #2 of 139, Capability (open-weight Jev-class models; #3 of 166 Jev-class models, open or API), JevBench board v1.7.47, ahead of basal-omni-1.0-ultra; #2 of 139, Composite (open-weight Jev-class models; behind only our H2O-Lightning-4B; #10 of 166 Jev-class models, open or API), JevBench board v1.7.47, ahead of Torchcast Decision 4B; #1 of 54, Capability (Jev-class models, open or API), ImageJevBench edition v0.3.0, ahead of kettei-fat; #1 of 54, Intelligence (Jev-class models, open or API), ImageJevBench edition v0.3.0, ahead of Sage 1.4 + images, beta; #2 of 45, Composite (open-weight Jev-class models; #4 of 54 Jev-class models, open or API), ImageJevBench edition v0.3.0, ahead of Surogate Rune 26B-A4B v3; #16 of 229, Text (board score, its private sets, among every entry it ranks), Decision Index 0.4.1, ahead of Bespoke Nimble v4 Max (27B); #11 of 55, Vision (full score, public and private sets, among every entrant), Decision Index vision 0.4, ahead of Aleria Judge 1.1.0 (Gemma 4 31B)](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/resolve/main/h2o-lightning-31b/leading_on_benchmarks_grid_2026-10-22.png)
+
+[Vector SVG](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/blob/main/h2o-lightning-31b/leading_on_benchmarks_grid_2026-10-22.svg)
+
+- **#1 of 166 — Intelligence** (Jev-class models, open or API), JevBench board v1.7.47, 2026-10-22; ahead of Chon-1.0-12B (79.86) ([details](#jevbench-board-results))
+- **#2 of 139 — Capability** (open-weight Jev-class models; #3 of 166 Jev-class models, open or API), JevBench board v1.7.47, 2026-10-22; ahead of basal-omni-1.0-ultra (82.54) ([details](#jevbench-board-results))
+- **#2 of 139 — Composite** (open-weight Jev-class models; behind only our H2O-Lightning-4B; #10 of 166 Jev-class models, open or API), JevBench board v1.7.47, 2026-10-22; ahead of Torchcast Decision 4B (73.03) ([details](#jevbench-board-results))
+- **#1 of 54 — Capability** (Jev-class models, open or API), ImageJevBench edition v0.3.0, 2026-10-22; ahead of kettei-fat (75.89) ([details](#imagejevbench))
+- **#1 of 54 — Intelligence** (Jev-class models, open or API), ImageJevBench edition v0.3.0, 2026-10-22; ahead of Sage 1.4 + images, beta (68.13) ([details](#imagejevbench))
+- **#2 of 45 — Composite** (open-weight Jev-class models; #4 of 54 Jev-class models, open or API), ImageJevBench edition v0.3.0, 2026-10-22; ahead of Surogate Rune 26B-A4B v3 (42.46) ([details](#imagejevbench))
+- **#16 of 229 — Text** (board score, its private sets, among every entry it ranks), Decision Index 0.4.1, 2026-10-22; ahead of Bespoke Nimble v4 Max (27B) (66.56) ([details](#decision-index-board))
+- **#11 of 55 — Vision** (full score, public and private sets, among every entrant), Decision Index vision 0.4, 2026-10-22; ahead of Aleria Judge 1.1.0 (Gemma 4 31B) (70.05) ([details](#decision-index-board))
+
+**How to run it** (recommended setup first):
+
+- **Recommended: our vLLM build, two-way reading.** Our per-request attention build of vLLM 0.30.0, with the shim
+  (`lightning_31b_shim.py`) in front, reads each request two-way. It has three profiles:
+  - `two-way`, the default for API serving and for JevBench: one read per question.
+    `bash h2o-lightning-31b/serve.sh --profile two-way`, or `run_default.sh` for JevBench.
+  - `decision-index`, the Decision Index runbook (`bash h2o-lightning-31b/run_decision_index.sh`; also accepted as
+    `balanced`): adds the conditional re-read. A text choice or yes/no answer below 0.90 is read a second time and the
+    two reads are averaged; an unsure image question is read again at 1120 soft tokens. Decision Index 0.3 public text index 67.75 (the full public run, on H100s; the v1.0
+    runbook scored 66.69). Against `two-way`, on a 2,003-row slice of the Decision Index kit measured on one L40S: text
+    +1.93 [+0.80, +3.28]; JevBench 214 of 231 against 215; median latency 262 ms against 136 ms on that GPU. The re-read writes the request in FlexDM v1.0's header layout ([FlexDM](https://github.com/1000luca/FlexDM), MIT;
+    the layout is Will Cole's, MIT), with decider's chat-layout parts (Apache-2.0) and shisa-ai/shisa-de-2's read-twice;
+    the notices are in NOTICE.
+  - `decision-index-max`, opt-in (`bash h2o-lightning-31b/serve.sh --profile decision-index-max`): the same re-read
+    below 0.95. On the same slice: text +1.82 [+0.69, +3.21]; JevBench 214 of 231; median latency 309 ms. The two are
+    equal within noise (difference -0.11 [-0.34, 0.00]); the runbook uses the one with fewer re-reads.
+- Fallback: stock vLLM 0.30.0, one-way reading, for a server without our build: `bash h2o-lightning-31b/serve.sh` with
+  no profile. It scores lower on the Decision Index: text 65.29 and vision 75.21 on one H100, against 66.69 and 75.64
+  for two-way reading on one RTX PRO 6000 (see [the fallback](#fallback-stock-vllm-one-way-only)).
+- Cost: billed input tokens are the same in all three profiles; each read is one forward pass and one output token.
+  The re-read profiles process 1.24x (`decision-index`) and 1.43x (`decision-index-max`) the tokens they bill.
+- Options: the re-read and the other switches are under [Inference options](#inference-options).
+
+This card describes release `v1.2` (checkpoint step 22276).
+
+## JevBench board results
+
+H2O-Lightning-31B and our H2O-Lightning-4B are neck and neck at the top of the JevBench open-weights composite (73.44 and 73.82).
+
+On the public [JevBench board](https://benchmarkheaven.com/jev-models) (board v1.7.47, read 2026-10-22; the API's release v1.6.40), the board's own run of this model (the same weights as this release) scores:
+
+| Intelligence | Calibration | Speed | Cost | Capability | Composite |
+|---|---|---|---|---|---|
+| **80.15** | 90.19 | 89.84 | 50.57 | **85.17** | **73.44** |
+
+Every placement below ranks the board's Jev-class models only: those within its cost and latency limits (166 models, 139 of them open-weight, not counting the board's two reference rows).
+
+- **Intelligence: #1 of the board's 166 Jev-class models, open or API** (next: Chon-1.0-12B, 79.86).
+- **Capability** (the board's mean of Intelligence and Calibration): **#2 of 139 open-weight Jev-class models** (behind Chon-1.0-12B, 85.34) and **#3 of 166 Jev-class models** (an API model, kettei-fat, 86.31, is first).
+- **Composite** (the board's official score: the harmonic mean of the four axes, weighted equally): **#2 of 139 open-weight Jev-class models**, behind our H2O-Lightning-4B (73.82), and tenth of 166 Jev-class models, API included.
+
+The board estimates Cost from the base model's reference price per token and the tokens our server reports.
+
+Screenshots of the board, 2026-10-22 (open-weight models, then all models with the board's API rows shown):
+
+![JevBench board v1.7.47, 2026-10-22, Capability, open-weight models: H2O-Lightning-31B #2 at 85.2](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/resolve/main/h2o-lightning-31b/jbboard_31b_capability_open_2026-10-22_b1747.png)
+
+![JevBench board v1.7.47, 2026-10-22, Capability, all models: H2O-Lightning-31B third row at 85.2, behind kettei-fat (API) and Chon-1.0-12B](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/resolve/main/h2o-lightning-31b/jbboard_31b_capability_all_2026-10-22_b1747.png)
+
+![JevBench board v1.7.47, 2026-10-22, Composite, open-weight models: H2O-Lightning-31B #2 at 73.4, behind H2O-Lightning-4B](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/resolve/main/h2o-lightning-31b/jbboard_31b_composite_open_2026-10-22_b1747.png)
+
+![JevBench board v1.7.47, 2026-10-22, Composite, all models: H2O-Lightning-31B tenth row at 73.4 with the API rows shown, #2 open-weight](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/resolve/main/h2o-lightning-31b/jbboard_31b_composite_all_2026-10-22_b1747.png)
+
+### ImageJevBench
+
+On the board's [ImageJevBench page](https://benchmarkheaven.com/image-jev-bench) (edition v0.3.0, read 2026-10-22), the board's own run of this model with images (the same weights) scores:
+
+| Intelligence | Calibration | Speed | Cost | Capability | Composite |
+|---|---|---|---|---|---|
+| **75.61** | 86.15 | 83.80 | 43.70 | **80.88** | 51.22 |
+
+Every placement below ranks the edition's Jev-class models only (54 models, 45 of them open-weight).
+
+- **Capability: #1 of 54 Jev-class models** (next: kettei-fat, 75.89).
+- **Intelligence: #1 of 54 Jev-class models, open or API** (next: Sage 1.4 + images, beta, 68.13).
+- **Composite: #2 of 45 open-weight Jev-class models** (behind Imajev-4B, 63.71) **and fourth of 54 Jev-class models**, held back by the board's Cost score for this self-hosted run (43.70, from measured GPU time at $1.19 per GPU-hour: $0.075 per 1,000 decisions). A Cost score under 50 scales the composite by (Cost / 50)², here 0.76 (without it, 67.06); the other three axes are all above 75.
+
+Screenshots of the ImageJevBench page, 2026-10-22:
+
+![ImageJevBench v0.3.0 2026-10-22, Capability, models within the board's caps: H2O-Lightning-31B #1 at 80.9](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/resolve/main/h2o-lightning-31b/jbboard_31b_image_capability_all_2026-10-22.png)
+
+![ImageJevBench v0.3.0 2026-10-22, composite, all models: H2O-Lightning-31B #5 at 51.2 (all rows; fourth of the Jev-class models)](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/resolve/main/h2o-lightning-31b/jbboard_31b_image_composite_all_2026-10-22.png)
+
+![ImageJevBench v0.3.0 2026-10-22, composite, open-weight LLM decoders: H2O-Lightning-31B second row at 51.2, behind Imajev-4B](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/resolve/main/h2o-lightning-31b/jbboard_31b_image_composite_open_2026-10-22.png)
+
+## Decision Index board
+
+![Decision Index board (as generated 2026-10-22), public and private bars per entry, in the board's order: H2O-Lightning-31B text public 66.69, board score 66.58 (rank 16, 15 entries above); vision public 76.51, private 64.60 (rank 11, 10 entries above); 4 entries below ours in each panel](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/resolve/main/h2o-lightning-31b/di_board_31b.png)
+
+[Vector SVG](https://huggingface.co/datasets/h2oai/h2o-lightning-card-assets/blob/main/h2o-lightning-31b/di_board_31b.svg) · Every bar is the Decision Index board's own number for that entry, ours included, read from a saved copy of the board ([Hugging Face Space multimodalart/jev-decision-index](https://huggingface.co/spaces/multimodalart/jev-decision-index), as generated on 2026-10-22; text Decision Index 0.4.1, vision 0.4). Each panel shows every entry the board ranks above H2O-Lightning-31B and 4 below it, in the board's order. Text: the public index and the board's text score, which ranks the board: its private sets only (same skills 60%, new domains 40%, each equated to the public scale; public weight 0%). Vision: the public and the private score; the board ranks by their mean. On text our 31B is 16th (66.58; the board groups entries into 0.9-point tie bands and lists ours as tied), and its new-domains score, 55.20 before equating, is the lowest of the entries shown. On vision it is 11th (70.56): its public score, 76.51, is fourth on the board, and its private score, 64.60, is the lowest of the entries ranked above it (11.91 points lower than its public score).
+
+**Which setup to use.** Each benchmark has one command, and the profile behind it sets every setting:
+
+| you want | run | settings | GPU |
+|---|---|---|---|
+| the Decision Index | `bash h2o-lightning-31b/run_decision_index.sh` | the `decision-index` profile; set nothing | sized for one RTX PRO 6000; accuracy measured on one L40S |
+| JevBench | `bash h2o-lightning-31b/run_default.sh` | the `two-way` profile; set nothing | measured on one RTX PRO 6000 |
+| the Decision Index profile with more re-reads (opt-in) | `bash h2o-lightning-31b/serve.sh --profile decision-index-max` | the `decision-index-max` profile | one L40S |
+| your own API serving on our vLLM build | `bash h2o-lightning-31b/serve.sh --profile two-way` | the `two-way` profile | one RTX PRO 6000 |
+| the Decision Index on stock vLLM (lower scores) | [the fallback command](#fallback-stock-vllm-one-way-only) | two settings, given there | one H100 80GB |
+| your own API serving on stock vLLM | `bash h2o-lightning-31b/serve.sh` | none (3,000-token selection) | one H100 80GB |
+
+`run_decision_index.sh` and `run_default.sh` install the engine and check `/health` against their profile before they
+say ready; `serve.sh --profile ...` does the same without the install; none of them looks at the GPU beyond one memory
+check.
+
+## Recommended: how to run for the Decision Index
+
+**For Decision Index maintainers: run it this way.** The engine sizes are for one NVIDIA RTX PRO 6000 (96 GB); the re-read profiles' accuracy was measured on one L40S at
+`MAX_LEN` 8,192.
+One shipped command installs the pinned engine, serves the model with the settings the expected numbers below were measured with,
+checks the running server against every value of the profile, and only then says it is ready. There is nothing to
+choose and no setting to type: run the one command in step 2.
+
+What it serves: our vLLM build, reading each request two-way (the model's trained two-way reading, full-attention layers
+looking both ways) and switches a request to one-way, read whole, when its record is longer than the two-way window or
+its two-way prefill would be slow. No record is ever cut, selected or summarised.
+
+**Machine.** One NVIDIA RTX PRO 6000 (96 GB), NVIDIA driver 580 or newer (vLLM 0.30.0 installs PyTorch's CUDA 13.0
+build), Linux, Python 3.10 to 3.12 with its `venv` module, a C compiler, curl and git. Disk: about 63 GB for the
+download and about 12 GB for the engine's environment (and about 17 GB to rebuild the vision suite). On a minimal image
+such as `pytorch/pytorch:2.8.0-cuda12.8-cudnn9-runtime`:
+
+```bash
+apt-get update && apt-get install -y gcc g++ curl git cabextract && pip install uv
+```
+
+**1. Download** this release. The repository is gated: accept the licence on the model page, then log in.
+
+```bash
+pip install -U huggingface_hub && hf auth login
+hf download h2oai/h2o-lightning-31b --revision v1.2 --local-dir h2o-lightning-31b
+```
+
+**2. Start the server** with the one shipped command:
+
+```bash
+bash h2o-lightning-31b/run_decision_index.sh
+```
+
+**What it installs.** On the first run only, vLLM 0.30.0 (with the measured PyTorch 2.13.0, transformers 5.20.0 and
+torchcodec 0.17.0) into `./di-venv` (beside where you run it), with our per-request attention build laid over it: the
+changed files of [h2oai/vllm](https://github.com/h2oai/vllm) at commit `6bc6d5a839923abd64ab1f63a513258d74a5e16f`, each checked against
+`engine/vllm_per_request_attention.SHA256SUMS`. Every later run checks the version and every file again, and refuses a
+changed engine. No package is installed outside `./di-venv`; vLLM's compile caches go under `~/.cache`.
+
+It does four things, and stops with `REFUSE:` and the reason on any mismatch:
+
+a. checks the NVIDIA driver (580 or newer), Python, a C compiler, curl and git, and that the shipped files are this
+   release's (`engine/package.SHA256SUMS`);
+b. installs or checks the engine, as above;
+c. runs `serve.sh --profile decision-index` in that environment: the GPU's memory checked against the profile's GPU,
+   vLLM started with the arguments the shim prints, the shim started with `--profile decision-index`. The profile's
+   settings are below. **Every setting in this table is a default that `--profile decision-index` (and
+   `run_decision_index.sh`, which uses it) applies by itself: you set none of them when you start with the Decision Index
+   option, and the shim refuses any of them from the environment.**
+
+   | setting | value |
+   |---|---|
+   | engine | our vLLM build, reading each request two-way or one-way |
+   | weights | FP8 (vLLM's online FP8 of the bf16 checkpoint, `--quantization fp8`) |
+   | context (`MAX_LEN`) | 131,072 tokens, every Decision Index record read whole |
+   | two-way | a request whose questions' two-way prompts (the record plus each question) add up to at most the latency cap below, and whose record fits the two-way window (8,192 tokens; `TWO_WAY_WINDOW`) |
+   | one-way, read whole | any other request: one whose summed two-way prompt is over 4,096 tokens (the latency cap), so a single question about a 6,000-token record is read one-way |
+   | readout orders | one read per question (no option-order second read; see [Two-order reading](#two-order-reading-off-in-both-runbooks)) |
+   | conditional re-read | a text choice or yes/no answer whose top probability is under 0.90 is read a second time, with the request written out twice, and the two reads are averaged; only for requests of up to 2,000 tokens; score questions are read once and images get the image re-read (next row) instead; the layout is FlexDM's (MIT; see NOTICE) |
+   | images | one read at Gemma-4's 560-token image budget; a choice or score image question whose top probability is under 0.8 is read again at 1120 and the two reads averaged (the 1120 re-read; yes/no is not re-read) |
+   | record (`state`) | read whole up to 126,976 tokens; a record that does not fit is refused with HTTP 422, never cut |
+   | temperatures and yes/no floor | as shipped: one-way choice 0.7, score 0.7, yes/no 0.6, images 0.59; two-way 0.7, 0.7, 0.5, 0.54; floor 0.801 |
+
+   For reference only (the profile sets them; do not export them): the re-read row is `SHIM_REREAD_BELOW=0.9`,
+   `SHIM_REREAD_COMBINE=avg`, `SHIM_REREAD_MAX_TOKENS=2000`, `SHIM_REREAD_LAYOUT=header`; the image row is
+   `SHIM_IMAGE_REREAD_BUDGET=1120`, `SHIM_IMAGE_REREAD_BELOW=0.8`, `SHIM_IMAGE_ORDERS=1`. See
+   [Conditional re-read](#conditional-re-read-a-second-read-of-an-unsure-text-answer) and [Image re-read](#image-re-read-on-in-the-decision-index-runbook).
+
+d. waits for the server and compares its `/health` with the profile, field by field
+   (`lightning_31b_shim.py --profile decision-index --check-health`): `"ok": true`; `profile.name`
+   `"decision-index"`; `serving.attention_mode` `"auto"`; the two-way start-up check passed
+   (`serving.two_way.mode_probe_result.ok`); `auto.engine` `"one"`, `auto.max_total_tokens` the cap and
+   `auto.two_way_window` the window; `max_state_tokens` 126976 and `selector` `"none"`; the temperatures of both readings
+   (one-way choice 0.7, score 0.7, yes/no 0.6, images 0.59; two-way 0.7, 0.7, 0.5, 0.54); the yes/no floor 0.801;
+   readout orders `"off"` (one read); the image re-read `{"budget": 1120, "below": 0.8}` in both readings, with image
+   orders `1`.
+
+Before it reports ready, `serve.sh` sends one warm-up request down every path this configuration serves (`warmup.py`:
+two-way, several questions at once, a request over the latency cap, a record over the two-way window, a long record,
+an image at the 560 budget and at the 1120 re-read budget), so no real request pays a first-use compile; until then
+`/health` answers 503 with `"warming": true`. When it prints `DECISION INDEX SERVER READY on http://127.0.0.1:8741`, the
+server is the measured configuration.
+Every answer states which reading served it (`effort_used.attention_mode` and `effort_used.attention_reason`).
+
+**3. Run the Decision Index kit** (edition 0.3) against the server, from a second shell (the server keeps the first)
+and in its own environment:
+
+```bash
+uv venv --python 3.12 kit && VIRTUAL_ENV=kit uv pip install "decision-index[vision] @ git+https://github.com/apolinario/decision-index@f8552a1" pillow==13.0.0 numpy
+kit/bin/decision-index suite download --edition 0.3 --dir suite-0.3
+kit/bin/decision-index run --edition 0.3 --suite-dir suite-0.3 --engine http --option base_url=http://127.0.0.1:8741 --option model=h2oai/h2o-lightning-31b --out runs/text
+kit/bin/decision-index score --edition 0.3 --suite-dir suite-0.3 --results runs/text/results.jsonl --engine http --out runs/text/score
+kit/bin/decision-index vision run --dir <vision suite dir> --engine decide --option base_url=http://127.0.0.1:8741 --option path=/v1/systemone --option protocol=decisions --option model=h2oai/h2o-lightning-31b --option max_pixels=1638400 --workers 16 --out runs/vision
+kit/bin/decision-index vision score --dir <vision suite dir> --results runs/vision/results.jsonl --out runs/vision/score
+```
+
+- `<vision suite dir>` is `WORK/vision`, written by the rebuild in the last item below, or the pinned vision suite you
+  already hold (`decision-index vision verify` must pass on it).
+- One text run in a single process takes days on one GPU. The measured text run was split, as a speed-up only: the
+  kit's own row list (rows unchanged) into 16 files round-robin (row i to file i mod 16), each read by its own `decision-index run --rows`
+  against the same server, the untouched results concatenated and scored by `decision-index score`. The shipped
+  `di_tools/di_text_sharded.sh` does exactly that, and it replaces the text `run` and `score` lines above (it writes
+  `runs/text/results.jsonl` and scores it into `runs/text/score`). The script itself was written after the measured run,
+  but the 16 row files it makes are byte-identical to the ones that run read. It needs `decision-index` on the
+  `PATH`, e.g. the `kit` environment activated:
+
+  ```bash
+  . kit/bin/activate
+  bash h2o-lightning-31b/di_tools/di_text_sharded.sh suite-0.3 http://127.0.0.1:8741 h2oai/h2o-lightning-31b runs/text 16
+  ```
+
+- Build the vision suite with the kit's own builder, giving it Microsoft's core-fonts Arial Bold: the kit draws
+  Mind2Web's box labels in Arial Bold, and only that font reproduces the pinned images. The file is `arialbd.ttf`
+  from `arial32.exe` (the core-fonts package Ubuntu's `ttf-mscorefonts-installer` downloads, from
+  <https://downloads.sourceforge.net/corefonts/arial32.exe>; sha256 of `arial32.exe`
+  `85297a4d146e9c87ac6f74822734bdee5f4b2a722d7eaa584b7f2cbf76f478f6`, of `arialbd.ttf`
+  `4044aa6b5bebbc36980206b45b0aaaaa5681552a48bcadb41746d5d1d71fd7b4`):
+
+  ```bash
+  curl -L -o arial32.exe https://downloads.sourceforge.net/corefonts/arial32.exe   # check its sha256 against the one above
+  cabextract -L -F '*.ttf' arial32.exe        # gives arialbd.ttf; check its sha256 against the one above
+  kit/bin/decision-index suite rebuild --vision --work WORK --font "$PWD/arialbd.ttf"
+  kit/bin/decision-index vision verify --dir WORK/vision
+  ```
+
+  `vision verify` must pass on all 11 benchmarks; the vision command above then runs as written. Without that font
+  the kit falls back to Pillow's default font, Mind2Web's image bytes differ from the pin, and the vision run stops
+  before reading anything. For the measured suite only Mind2Web was rebuilt with this font, by the kit's own builder
+  (the other ten sets come from an earlier build of the same kit), and the suite passed `vision verify` on all 11; a
+  from-scratch `suite rebuild --vision --font` of all eleven was not run end to end.
+
+**How to tell it is right.**
+
+- The command printed `DECISION INDEX SERVER READY on http://127.0.0.1:8741`: it says that only after the warm-up and
+  after every `/health` value above matched the profile.
+- The kit's scores land at the expected numbers: Decision Index 0.3 public text index **67.75** (this profile's full
+  public run, on H100s at `MAX_LEN` 81,920; the first row of the table below) and vision **76.59** (with the
+  1120 image re-read, on one RTX PRO 6000; see [Image re-read](#image-re-read-on-in-the-decision-index-runbook)). The engine reads in FP8 with many requests at once, so a rerun can differ
+  in the second decimal. The table's per-profile text numbers are a 2,003-row slice on an L40S, for comparing profiles.
+- In the kit's results, every response carries `effort_used.attention_mode` (`bidirectional` for a two-way read,
+  `causal` for one-way), and an image response re-read at 1120 carries `effort_used.image_reread`.
+
+**What not to change.**
+
+- No environment variables for the server: the command starts it with a clean environment (only the GPU selection,
+  `CUDA_VISIBLE_DEVICES`, the library path, `PATH`, `HOME`, `HF_HOME` and the three sizes for another GPU pass through), and the shim refuses a
+  setting of its profile from the environment.
+- No edits to the downloaded files: the command checks the files it serves with (`serve.sh`, the shim, its configs,
+  the warm-up, the engine's checksums) against `engine/package.SHA256SUMS` and refuses a changed one.
+- Not stock vLLM: the one-way fallback below is a different configuration with its own, lower numbers.
+- Not `run_default.sh` for the Decision Index: it is the `two-way` profile, which leaves out the 1120 image re-read
+  and would cut a record over 126,976 tokens down with BM25 (no Decision Index record reaches that); this card's
+  Decision Index numbers were not checked against it.
+- The kit commands as written in step 3, with `max_pixels=1638400` for vision.
+
+**Expected numbers** (this release; the middle column is the configuration above):
+
+| Measure | `two-way` (no re-read) | `decision-index` (this runbook) | `decision-index-max` (opt-in) |
+|---|---|---|---|
+| Decision Index 0.3 public text index, full public run (six H100 80GB) | not run | **67.75** (complete; 0 refused) | not run |
+| Decision Index 0.3 text, 2,003-row kit slice (one L40S) | 64.13 | **66.07** (+1.93 [+0.80, +3.28]) | **65.95** (+1.82 [+0.69, +3.21]) |
+| Decision Index 0.3 public vision index | 75.78 (one L40S; images read once) | **76.59** (one RTX PRO 6000; the 1120 image re-read) | 76.59 (the same image path) |
+| JevBench (231 public items, in-house; one L40S) | 215 / 231 | 214 / 231 | 214 / 231 |
+| tokens processed per token billed | 1.00x | 1.24x | 1.43x |
+
+The full public run (first row): this release's `decision-index` profile with `run_decision_index.sh`'s settings on six
+H100 80GB, one vLLM server each at `MAX_LEN` 81,920 and two-way window 16,384 (our vLLM build, two-way reading with
+one-way for long or heavy requests), the kit's rows split across them and scored once by the kit's own scorer:
+140,178 rows scored, complete, none refused or cut (the v1.0 runbook scored 66.69 on the same public index; the H100
+is not the profile's RTX PRO 6000). The other rows: measured on one NVIDIA L40S (48 GB) with our vLLM build at `MAX_LEN` 8,192 (the largest that fits that GPU), the
+three profiles' shims on the same vLLM server. Text: the kit's 0.3 public text suite read by all three, scored with the
+kit's formula by our paired-bootstrap script on the 2,003 rows all three answered (1,875 cases; a slice, not the kit's
+own score of the full public index; the changes are paired, with 95% bootstrap intervals). Records longer than the
+L40S context were refused and are not in the slice, so no row of it is cut; the re-read applies only to requests of
+up to 2,000 tokens. Also measured: the 231 JevBench public items one at a time, and the token counts on a 420-request kit sample (2,197
+decisions; 267.7 input tokens billed per decision in all three). The `two-way` vision index is the full public vision suite (12,210 rows) on the same L40S (images read once); the
+`decision-index` vision index, 76.59, is the full suite on one RTX PRO 6000 with the same 1120 image re-read (see
+[Image re-read](#image-re-read-on-in-the-decision-index-runbook)). The L40S is not the profile's
+RTX PRO 6000. The stock vLLM one-way fallback has its own table in
+[the fallback](#fallback-stock-vllm-one-way-only).
+
+**Latency** (one L40S, indicative only, not the Decision Index board's RTX PRO 6000; one request at a time, a single
+client process):
+
+| profile | requests | median | mean | p95 (ms) |
+|---|---:|---:|---:|---:|
+| `two-way` | 420 | 136 | 466 | 1,797 |
+| `decision-index` (this runbook) | 420 | 262 | 552 | 1,831 |
+| `decision-index-max` (opt-in) | 420 | 309 | 620 | 2,007 |
+
+420 Decision Index 0.3 kit requests (2,197 decisions), each sent once, one at a time from one client, on the same L40S
+engine as the table above. The board's latency rule (median, mean and 80th percentile each at most 1,000 ms) applies on
+the board's GPU; these L40S figures show the re-read's relative cost. On one H100, the `two-way` profile over 1,650
+rows measured median 56, mean 158 and 80th percentile 206 ms.
+
+**Troubleshooting.**
+
+- Two copies on one machine: `run_decision_index.sh` always uses ports 8000 (vLLM) and 8741 (the shim), so run
+  one copy per machine.
+- `REFUSE: no C compiler` or `serve.sh needs a C compiler`: vLLM compiles the model at start-up. Install
+  `gcc g++` (and `curl git`) as in Machine above.
+- `REFUSE: ... is not the pinned per-request attention build`: `./di-venv` holds another vLLM. Remove the folder and
+  run the command again; it reinstalls.
+- `the two-way warm-up through the shim failed`: the engine answered the two-way start-up check like a one-way
+  engine, which is what stock vLLM does (it ignores the per-request flag). The cause is an engine that is not the
+  pinned build; remove `./di-venv` and run again.
+- `Could not find nvcc` at the first request: FlashInfer's sampler compiles itself on first use and needs the CUDA
+  toolkit, which minimal images lack. The decisions never sample, so `serve.sh` turns that sampler off
+  (`VLLM_USE_FLASHINFER_SAMPLER=0`); the error means it was turned back on in the environment.
+- `CUDA out of memory` at start: the engine takes 92% of the GPU's memory (`GPU_UTIL` 0.92); `nvidia-smi` shows what
+  else holds memory on it.
+- `the warm-up failed (above)`: a warm-up request (`warmup.py`, one per path) did not answer 200; the line above it
+  names the path and the server's answer. A path that fails the warm-up would fail real requests the same way.
+- `REFUSE: the server is not the decision-index profile's configuration`: the lines under it name each `/health` field
+  and the value the profile expects; a changed file in the download is the usual cause (download the release again).
+- `This profile is for one NVIDIA RTX PRO 6000 (96 GB) and this GPU has ... MiB`: the GPU has less memory than the
+  profile's; see Another GPU below.
+- `profile decision-index sets ... itself` or `... would change the measured configuration`: a `SHIM_*` variable is set
+  in your environment; unset it (the profile sets the shim's settings itself).
+- `the shipped configs are not the measured ones`: `serve_config.json` or `serve_config_two_way.json` was changed;
+  download the release again.
+- `shim: ENGINE CHECK FAILED` (and HTTP 503 on every request): vLLM was not started as the profile needs; the message
+  names the command to start it with.
+
+**Other ways to start the same server (not needed for a measured run).** `run_decision_index.sh` above is the
+measured run; the notes below are for maintainers who start the pieces themselves.
+
+**Where the settings live.** Every Decision Index value is the shim's `decision-index` profile
+(`lightning_31b_shim.py`, `PROFILES`): the shim's settings, the vLLM engine's arguments and sizes, the vLLM version
+and the per-request attention commit. The script holds none of them; it installs the engine and starts vLLM and the
+shim with what the profile says. If you run the shim yourself, pass `--profile decision-index`: start vLLM (with our
+per-request attention build installed, as below) with the arguments the shim prints, then the shim with the profile.
+At start the shim checks the engine (the served model and its context, the chat rendering, the per-request attention
+build answering both readings) and refuses every request, naming the command to start vLLM with, until it matches; the
+weight format and memory settings are not visible to it, so start vLLM with the printed arguments as they are. `bash h2o-lightning-31b/serve.sh
+--profile decision-index` is the script's server without the install step (for an environment that has the engine).
+
+```bash
+. di-venv/bin/activate   # the engine's environment, as run_decision_index.sh installs it
+python3 h2o-lightning-31b/lightning_31b_shim.py --profile decision-index --print-vllm-args \
+  | VLLM_USE_FLASHINFER_SAMPLER=0 xargs -d '\n' vllm serve h2o-lightning-31b --host 127.0.0.1 --port 8000 &
+python3 h2o-lightning-31b/lightning_31b_shim.py --profile decision-index --tokenizer h2o-lightning-31b/tokenizer.json
+```
+
+**Another GPU.** The profile's sizes are the RTX PRO 6000's; the command refuses a GPU with less memory and has
+no other GPU logic. On another GPU set the three sizes yourself, e.g. for one 80 GB H100 (the sizes of the 67.75 full public
+run above, on six H100s): `MAX_LEN=81920 TWO_WAY_WINDOW=16384
+GPU_UTIL=0.92 bash h2o-lightning-31b/run_decision_index.sh`. A record is then read whole only up to `MAX_LEN` - 4,096 =
+77,824 tokens, and a longer one is refused with HTTP 422 and scored wrong; `/health` lists the sizes under
+`profile.overrides`. The card's 67.75 full public text index was measured with these sizes; its other scores come
+from other GPUs.
+
+## Recommended: how to run for JevBench
+
+Follow these steps literally; there is nothing to choose. The machine, the download and the engine are the Decision
+Index block's, and so are the settings, with two differences: a record over 126,976 tokens is cut down by BM25
+selection instead of refused, and images get no 1120 re-read (see
+[Two-order reading](#two-order-reading-off-in-both-runbooks) for why both blocks read text once).
+
+**Machine and download** as in steps "Machine" and 1 of the Decision Index block. This runbook is the shim's
+`two-way` profile; it is also the default server for general use on our vLLM build.
+
+**Start the server** with the one shipped command:
+
+```bash
+bash h2o-lightning-31b/run_default.sh
+```
+
+It does the same steps as `run_decision_index.sh` with the `two-way` profile (the GPU check, the pinned engine, every setting fixed, `/health` compared field by
+field) with BM25 selection over 126,976 tokens and no conditional re-read, and prints `DEFAULT SERVER READY on http://127.0.0.1:8741` when the server is the
+measured configuration. **Every setting in this table is a default that the `two-way` profile (and
+`run_default.sh`, which uses it) applies by itself: you set none of them.**
+
+| setting | value |
+|---|---|
+| engine | our vLLM build, reading each request two-way or one-way, FP8 weights |
+| reading | two-way by default; one-way, read whole, for a record over the two-way window or a request over the latency cap |
+| readout orders | one read (`off`) |
+| temperatures and yes/no floor | as shipped: one-way choice 0.7, score 0.7, yes/no 0.6, images 0.59; two-way 0.7, 0.7, 0.5, 0.54; floor 0.801 |
+| record (`state`) | read whole up to 126,976 tokens; a longer record is cut down to fit by BM25 selection (`SHIM_SELECTOR=v2`), never refused (a record with no part matching the question keeps its head and tail around a `...` line instead, `effort_used.state_selection` `"no match; head+tail"`) |
+
+**Run JevBench** with the JevBench harness against `http://127.0.0.1:8741/v1/systemone` (model name
+`h2oai/h2o-lightning-31b`), one request at a time: the board's speed rule reads serial latency. The numbers below came
+from our own client (not the board's harness) sending each of the 231 public items once, serially, to that endpoint.
+
+**Expected numbers** (this release, the command above, one RTX PRO 6000 96 GB; the 231 JevBench public items, a
+separate pass from the Decision Index run):
+
+| Measure | Value |
+|---|---|
+| JevBench, 231 public items (in-house) | **214 / 231** (easy 48/48, original 72/72, hard 94/111; 0 errors) |
+| latency, one request at a time | median 46 ms, p95 392 ms |
+| Speed | 86.47 (the board's rule for a self-hosted row: latency x 2 + 0.15 s, then 100 - 20 log10(s / 0.1) at p50 and p95, averaged) |
+| input tokens per decision | 650 (mean `usage.input_tokens`; the longest item 3,875) |
+| Intelligence, Calibration, Cost, composite | not computed here: the board computes Intelligence and Calibration on its own sealed and judged items, Cost needs its input price for this model, and the composite needs all four |
+
+A pre-release build of this release (the same weights), the command above, one NVIDIA RTX PRO 6000 Blackwell Server Edition: each of the 231 items sent once, one at a time from one client, after the Decision Index run on the same server hardware. The Speed axis comes from our reproduction of JevBench's public scorer (v1.4.0 composite files), which gives the board's composite for our published 4B row; only the Speed axis is computed here, from the serial latency. The pass read every record whole; the command above selects with BM25 only a record over 126,976 tokens, which none of these items is.
+
+The board's own scores for this model, all four axes and the composite, are in the JevBench board results section near the top of this card.
+
+## Fallback: stock vLLM, one-way only
+
+Without our vLLM build, stock vLLM 0.30.0 serves the model one-way (no two-way reading), with the same shim and the
+same kit commands. This is not a benchmark runbook: it is for an engine without our build, it scores lower on the
+Decision Index (text 65.29 and vision 75.21 here, on one H100, against 66.69 and 75.64 for two-way reading without
+the re-read, on one RTX PRO 6000), and its two settings below are the only ones you set. On JevBench it scored 216 of 231 against
+the runbook's 214, 2 items apart; separate runs of one setup differ by a couple of items (see the parity note under
+Two-way reading), and the card does not test that difference for significance. Both benchmark runbooks use
+our vLLM build (two-way reading) because it scored higher on the Decision Index (text 66.69 against 65.29, vision 75.64 against 75.21,
+both without the conditional re-read; different GPUs, one run each, no paired interval).
+
+**Hardware.** One NVIDIA H100 80GB (the GPU these one-way numbers were measured on). Any FP8-capable GPU with at least 80 GB should work but has not
+been measured.
+
+**1. Install** vLLM 0.30.0 in a fresh Python 3.12 virtual environment (the measured environment: vllm 0.30.0,
+torch 2.13.0, transformers 5.20.0, torchcodec 0.17.0, Python 3.12), and download this release. The machine also needs
+a C compiler and curl: vLLM compiles the model at start-up, and `serve.sh` stops with a message when either is
+missing. Minimal images such as `pytorch/pytorch:2.8.0-cuda12.8-cudnn9-runtime` have neither
+(`apt-get install -y gcc g++ curl`). The
+repository is gated: accept the licence on the model page, then log in (`hf auth login`).
+
+```bash
+python3.12 -m venv .venv && . .venv/bin/activate
+pip install "vllm==0.30.0" "torchcodec==0.17.0"
+hf auth login
+hf download h2oai/h2o-lightning-31b --revision v1.2 --local-dir h2o-lightning-31b
+```
+
+**2. Serve** with the shipped script and exactly these two settings, which read every record whole:
+
+```bash
+SHIM_MAX_STATE_TOKENS=126976 SHIM_SELECTOR=none bash h2o-lightning-31b/serve.sh
+```
+
+This starts vLLM on port 8000 and the shim on port 8741:
+
+| setting (stock vLLM, the Decision Index command) | value |
+|---|---|
+| attention | one-way (stock vLLM generate runner; the default) |
+| weights | FP8 (vLLM's online FP8 of the bf16 checkpoint, `--quantization fp8`; the default) |
+| context (`MAX_LEN`) | 131,072 tokens (the default) |
+| readout orders | one read (`1`, the default) |
+| record (`state`) | read whole, up to 126,976 tokens; a record that does not fit is refused with HTTP 422, never cut |
+| Box questions | on wherever images are read (no setting); needs an engine with structured outputs |
+
+The Decision Index kit does not allow an engine to shorten its inputs; a refused record is scored as a wrong answer.
+
+**Timeouts.** The shim waits up to 180 s for vLLM's answer to a request (`SHIM_TIMEOUT`, in seconds), sends it once
+more on a fresh connection, and otherwise answers HTTP 502, which the kit scores as a wrong answer (and three failures
+in a row can stop a kit run). In the one-read run in the Expected numbers table below, a few requests near the end of one dataset
+waited through both tries and were answered 502 after about 360 s; the error note under the table counts them. The
+two-order run under [Two-order reading](#two-order-reading-off-in-both-runbooks) had none. The cause is not known. For your own serving only, not for this command: `SHIM_TIMEOUT=1800` gives a slow request
+more time; it was not set for any number on this card.
+At start-up the shim prints `shim: NOT the benchmarked configuration: SHIM_SELECTOR, SHIM_MAX_STATE_TOKENS override
+serve_config.json`. That line is expected with this command: `serve_config.json` holds the serving default
+(3,000-token selection), and the two settings above replace it with the Decision Index configuration.
+For every other use, see [API serving on stock vLLM](#api-serving-on-stock-vllm-servesh-as-shipped-3000-token-selection).
+
+**3. Check** that the server is ready and configured as above. `curl -s http://127.0.0.1:8741/health` must return
+`"ok": true`, `"max_state_tokens": 126976` and `"selector": "none"`, and, under `"readout"`, `"orders": "off"` (one read:
+`"orders": 1` in serve_config.json is reported as `"off"`) and `"choice_cutoff": 0.8` (reported even while the second
+read is off).
+
+Then run the kit as in step 3 of the Decision Index section.
+
+**Expected numbers, one-way** (this release, this configuration, one H100 80GB):
+
+| Measure | Result |
+|---|---|
+| Decision Index 0.3 public text: index (balanced skill) | **65.29** (balanced raw 74.10; breadth skill 64.60) |
+| text area skill: Knowledge & Reasoning | 53.07 |
+| text area skill: Language Understanding | 67.59 |
+| text area skill: Retrieval & Classification | 64.09 |
+| text area skill: Tools & Automation | 84.30 |
+| text area skill: Arts & Human Taste | 58.62 |
+| text requests | 140,620 sent, 140,616 answered; 0 refused, 4 errors. The kit scores 140,178 of them: it leaves out the 442 requests on its own fixed exclusion list, applied at scoring time |
+| Decision Index 0.3 public vision: index | **75.21** |
+| vision accuracy: CV-Bench | 88.37 (2,038 rows, all answered) |
+| vision accuracy: BLINK | 78.98 (961 rows, all answered) |
+| vision accuracy: RealWorldQA | 78.61 (589 rows, all answered) |
+| vision accuracy: CharXiv | 86.09 (532 rows, all answered) |
+| vision accuracy: InfographicVQA | 97.54 (244 rows, all answered) |
+| vision accuracy: Mind2Web | 89.21 (973 rows, all answered) |
+| vision accuracy: Winoground | 91.25 (800 rows, all answered) |
+| vision accuracy: KIE (CORD+FUNSD) | 94.73 (2,465 rows, all answered) |
+| vision accuracy: Moderation (Hateful Memes) | 76.92 (1,213 rows, all answered) |
+| vision accuracy: R-Bench-M | 45.71 (665 rows, all answered) |
+| vision accuracy: MMMU-Pro vision | 51.45 (1,730 rows, all answered) |
+| JevBench, measured in-house on the 231 public JevBench items; not part of the kit reproduction | **216 / 231** (easy 48/48, original 72/72, hard 96/111; 0 errors) |
+
+Measured on a pre-release build of this release (the same weights) with the command above, one H100 80GB (the run set `SHIM_READOUT_ORDERS=1`, which this release's serve_config.json sets itself: "orders": 1, one read). The index is the kit's chance-corrected skill score; the vision rows list plain accuracy. The one-way path this command runs is that build's code (the card's tests check that this release's shim sends vLLM the same requests and serve.sh starts it the same way); what was added since (the profiles, the warm-up, the two-way reading, the image re-read, the head-and-tail fallback) does not change this command's answers. The run's 4 errors are HTTP 502 answers from its shim after 360 s or more (CLINC150+OOS); the kit scores them as wrong.
+
+The vision numbers were read on a suite that passes `decision-index vision verify` on all 11 benchmarks.
+
+## API serving on stock vLLM: serve.sh as shipped (3,000-token selection)
+
+For general API serving on stock vLLM, not for either benchmark: `bash h2o-lightning-31b/serve.sh` with no settings. It is the one-way
+fallback above, except for long records. A `state` of up to 3,000 tokens is sent whole. From a longer one, the shim keeps the parts most
+relevant to the question: whole paragraphs, lines or fields, ranked by BM25 against the question and its options,
+with their headings, up to 3,000 tokens. The question and its options are never cut. When no part of a long record
+matches the question, or the record cannot be split into fitting parts, it is cut to its head and tail around a `...`
+line and answered (`effort_used.state_selection` `"no match; head+tail"`); selection never refuses. This keeps every
+request short and its latency even.
+
+What the selection costs or gains, on the Decision Index text rows whose records are longer than 3,000 tokens (stock
+vLLM one-way on one H100, the same rows under both settings):
+
+| Dataset | Rows | Serving default (3,000-token selection) | Whole record (Decision Index configuration) |
+|---|---:|---:|---:|
+| API-Bank | 508 | 82.28% | 84.25% |
+| POP909-CL | 68 | 52.94% | 58.82% |
+| When2Call MCQ | 6 | 50.00% | 66.67% |
+| All | 582 | 78.52% | 81.10% |
+
+Top-1 accuracy on the 582 Decision Index 0.3 public text rows whose record is longer than 3,000 tokens, both settings measured on a pre-release build of this release (the same weights) (choice temperature 0.7). 44 answers differ between them: the whole read is right on 21 of those and the selection on 6. No request was refused in either setting.
+
+## Inference options
+
+**For the Decision Index, use only the runbook block above; nothing in this section changes it.** The same holds for
+JevBench and its block. This section lists every option the model has, so that other uses (your own API serving, other
+benchmarks) can choose; for each it says whether it is on in the two benchmark runbooks (where the profile sets it, and
+you set nothing) and what it is for elsewhere. "Use it for" never means "add it to a benchmark runbook".
+
+Three setups have full benchmark numbers on this card, and every number below names the one it comes from (a few
+option measurements use a variant, named where it appears):
+
+- **Decision Index runbook**: our vLLM build, two-way (one-way for long or heavy requests), with the conditional
+  re-read, `run_decision_index.sh`.
+- **JevBench runbook** (also the default server for general use on our build): the same setup, `run_default.sh`.
+- **Stock vLLM one-way**: the fallback without our vLLM build, `serve.sh`, one H100 80GB.
+
+### Two-way reading
+- **What it does:** the full-attention layers read the prompt both ways (the reading the model was trained for), per
+  request, on our vLLM build.
+- **Decision Index runbook:** on. **JevBench runbook:** on. Set by the profiles.
+- **Elsewhere:** needs our vLLM build (`READING=two-way` with `serve.sh`, or `serve.sh --profile two-way`); stock vLLM
+  reads one-way only. Use it for: any serving on our build.
+- **Measured:** Decision Index text 66.69 (two-way reading, one read: the v1.0 runbook, one RTX PRO 6000) against 65.29 (stock vLLM
+  one-way, one H100); vision, both reading each image once at 560, 75.64 against 75.21. The GPU differs as well as the reading. See
+  [the two-way details](#two-way-reading-on-in-both-runbooks-needs-our-vllm-build).
+
+### Routing long or heavy requests one-way
+- **What it does:** a record longer than the two-way window, or a request whose questions add up to more than the
+  latency cap of two-way prompt tokens, is read one-way, whole.
+- **Decision Index runbook:** on (cap 4,096 summed two-way prompt tokens; window 8,192). **JevBench runbook:** on (the
+  same). Set by the profiles. A request is read two-way only when its questions' prompts add up to at most the cap.
+- **Elsewhere:** `SHIM_AUTO_MAX_TOTAL_TOKENS` sets the cap. Use it for: keeping two-way latency even.
+- **Measured:** in the Decision Index runbook's full text run, 126,893 requests read two-way and 13,727 one-way.
+
+### Two-order reading (a second read of an unsure choice question)
+- **What it does:** a choice question whose first read is unsure (top probability under 0.8) is read again with its
+  options reversed, and the two reads are averaged.
+- **Decision Index runbook:** off. **JevBench runbook:** off. (The Decision Index runbook's conditional re-read below
+  is a different second read.)
+- **Elsewhere:** off by default; `SHIM_READOUT_ORDERS=auto` turns it on, for your own serving on stock vLLM one-way
+  (one run each: text +0.49, vision +0.33, no interval computed). Not with the two-way reading, where it adds nothing.
+- **Measured:** on the Decision Index runbook (two-way), no gain: text -0.02, 95% paired bootstrap interval [-0.38, +0.38]. On stock vLLM one-way:
+  text +0.49, vision +0.33, JevBench -2 of 231. See [Two-order reading](#two-order-reading-off-in-both-runbooks).
+
+### Third and fourth reads
+- **What it does:** a choice question still unsure after two reads is read in rotated option orders (or once in the
+  other reading) and all reads are averaged.
+- **Decision Index runbook:** off. **JevBench runbook:** off.
+- **Elsewhere:** no switch; not offered.
+- **Measured:** top-1 accuracy in percentage points against two reads, on our own Decision Index development rows (not
+  the public 0.3 kit scored on this card), read on
+  our vLLM build (12,020 rows one-way, 12,004 two-way): one-way +0.04 (third read) to +0.11 (fourth), two-way -0.08 to
+  -0.10. Within noise, so not used.
+
+### Conditional re-read (a second read of an unsure text answer)
+- **What it does:** a text choice or yes/no answer whose top probability is under a threshold is read a second time,
+  with the request written out twice, and the two reads are averaged. Only requests of up to 2,000 tokens are re-read.
+  Score questions are never re-read; images get the [image re-read](#image-re-read-at-a-larger-image-budget) instead.
+- **Decision Index runbook:** on, below 0.90 (the `decision-index` profile, also accepted as `balanced`).
+  **JevBench runbook:** off (the `two-way` profile reads once).
+- **Elsewhere:** `serve.sh --profile decision-index-max` re-reads below 0.95: more re-reads, no measured gain over
+  0.90. Use the re-read for: accuracy on unsure text answers when a higher median latency is acceptable.
+- **Measured** (one L40S, a 2,003-row Decision Index kit slice, against `two-way` on the same engine): text +1.93
+  [+0.80, +3.28] below 0.90 and +1.82 [+0.69, +3.21] below 0.95 (equal within noise: -0.11 [-0.34, 0.00]); JevBench
+  214 of 231 in both against 215; tokens processed 1.24x and 1.43x the tokens billed; median latency 262 and 309 ms
+  against 136 ms (L40S, indicative).
+- **Attribution:** The re-read writes the request in FlexDM v1.0's header layout ([FlexDM](https://github.com/1000luca/FlexDM), MIT;
+  the layout is Will Cole's, MIT), with decider's chat-layout parts (Apache-2.0) and shisa-ai/shisa-de-2's read-twice;
+  the notices are in NOTICE.
+
+### Image re-read at a larger image budget
+- **What it does:** an image choice or score question whose top probability is under 0.8 is read again at Gemma-4's
+  1120-token image budget (instead of 560) and the two reads are averaged.
+- **Decision Index runbook:** on (1120, under 0.8). **JevBench runbook:** off. Set by the profiles.
+- **Elsewhere:** off by default (`SHIM_IMAGE_REREAD_BUDGET=1120 SHIM_IMAGE_REREAD_BELOW=0.8` turns it on). Use it for:
+  accuracy on images when latency matters less; it about doubles the 95th-percentile latency of an image request, which
+  is why the JevBench runbook (whose speed score reads the 95th percentile) leaves it off.
+- **Measured:** on the Decision Index runbook's engine, vision 76.59 with it against 75.64 reading once (+0.95
+  [+0.41, +1.54]); see [Image re-read](#image-re-read-on-in-the-decision-index-runbook).
+
+### Per-type temperatures and the yes/no floor
+- **What it does:** each answer's probabilities are tempered by question type (fitted on our own development and
+  calibration sets, never on the Decision Index), and a yes/no answer is reported at no less than 0.801 on its chosen
+  side (the answer itself never changes).
+- **Decision Index runbook:** on. **JevBench runbook:** on. **Stock vLLM one-way:** on. The shipped values: one-way
+  choice 0.7, score 0.7, yes/no 0.6, images 0.59; two-way 0.7, 0.7, 0.5, images 0.54; floor 0.801.
+- **Elsewhere:** on as shipped; `SHIM_TEMPERATURE*`, `SHIM_IMAGE_TEMPERATURE` and `SHIM_NOUL_FLOOR` (0 turns the floor
+  off) change them, for example behind a fallback that needs raw probabilities. See [Other settings](#other-settings).
+
+### Long records: read whole, or cut down by BM25
+- **What it does:** a record over the token budget is either refused (read whole, HTTP 422) or cut down to its most
+  relevant parts by BM25 selection (with no match, its head and tail are kept; never refused).
+- **Decision Index runbook:** read whole up to 126,976 tokens, refused above (the kit forbids shortening inputs, and
+  its longest record fits). **JevBench runbook:** whole up to 126,976 tokens, BM25 above.
+- **Stock vLLM one-way, Decision Index command:** read whole up to 126,976 tokens. **`serve.sh` as shipped:** BM25
+  down to 3,000 tokens. Use it for: general API serving, where short prompts keep latency even.
+- **Measured:** on the 582 Decision Index text rows longer than 3,000 tokens, stock vLLM one-way: 81.10% top-1 read
+  whole against 78.52% with 3,000-token selection; see [API serving on stock vLLM](#api-serving-on-stock-vllm-servesh-as-shipped-3000-token-selection).
+
+### Weights: FP8 or bf16
+- **What it does:** vLLM's online FP8 of the bf16 checkpoint, or the bf16 checkpoint itself.
+- **Decision Index runbook:** FP8. **JevBench runbook:** FP8. **Stock vLLM one-way:** FP8 (the default).
+- **Elsewhere:** `QUANT=none` serves bf16. Use FP8 on one GPU: bf16 does not fit the Decision Index's long records on
+  one 80 GB H100. See [FP8 or bf16 weights](#fp8-or-bf16-weights).
+
+### Bounding-box questions
+- **What it does:** a `box` question answers with a bounding box in an image.
+- **Everywhere:** on, with no setting to turn it off: a box question on an image deployment is answered by one
+  guided (JSON-schema) generation. An engine without structured outputs refuses it with HTTP 422; requests
+  without a box question are unaffected. Not measured on the Decision Index. See [Box questions](#box-questions).
+
+### Read timeout and the start-up checks
+- **What it does:** a vLLM answer slower than 180 s is sent once more, then answered HTTP 502; before its first
+  answer the shim reads fixed probe requests and refuses (HTTP 503) an engine that does not read as configured.
+- **Decision Index runbook:** on. **JevBench runbook:** on. **Stock vLLM one-way:** the timeout is on (`SHIM_TIMEOUT`).
+
+## Option details
+
+The measurements behind the options above. None of them changes a benchmark runbook.
+
+### Two-order reading (off in both runbooks)
+
+**Should a Decision Index run turn it on? No.** On the Decision Index runbook (our vLLM build, two-way) a second read adds
+nothing: text index -0.02, 95% interval [-0.38, +0.38], on a partial index (the runbook with `SHIM_READOUT_ORDERS=auto` against the same
+runbook reading once, paired over the 20 of the 43 text benchmarks both runs finished (the `auto` run was stopped
+early); the halves of the rows split by case hash +0.16
+and -0.20; the second read taken on 26.5% of the choice answers). Re-reading only the near ties moves it by 0.00 to +0.03 (a separate lever study on reads of the full kit from the
+two-way reference engine on one H100, the pooling runner, which is not a setup on this card; within each margin the same
+rows read once and with near ties re-read: top-two margin under 0.1, 66.82 both; under 0.2, 66.78 against 66.75).
+These are cited measurements from our own
+study (paired case-level bootstrap of the kit's scoring, 2,000 draws), not recomputed by the card's tests. So neither
+runbook uses the option-order second read: on two-way reading it adds nothing (the Decision Index runbook's second read
+is the conditional re-read, a different method), and on stock vLLM one-way it cost JevBench 2 of 231 items. Two-way
+reading without either second read already scores 66.69, above both columns of the table below, though that table
+is a different setup (stock vLLM one-way, one H100).
+
+A choice question can be read a second time with its options in reverse order, and answered with the mean probability
+of each option; this removes some of the model's preference for an option's position. **The table below is stock vLLM,
+one-way only** (the fallback, not a benchmark runbook): there the second read helps the Decision Index a little (text
++0.49, vision +0.33) and costs JevBench 2 of 231 items.
+
+**Stock vLLM one-way, with and without the second read** (one H100 80GB):
+
+| Measure (stock vLLM one-way) | stock vLLM one-way: two orders (`auto`, cutoff 0.8) | stock vLLM one-way: one read (the default) |
+|---|---|---|
+| Decision Index 0.3 public text: index | **65.78** | **65.29** |
+| Decision Index 0.3 public vision: index | **75.54** | **75.21** |
+| JevBench (231 items, in-house) | 214 / 231 | 216 / 231 |
+| choice questions read twice | text 19.49% (60,149 of 308,559); vision 18.42% (2,249 of 12,210) | none |
+| prompt tokens processed, over one read | text +16.50%, vision +19.59% (`usage.processed_input_tokens` against `usage.input_tokens`) | text +0.00%, vision +0.00% |
+| text requests | 140,620 sent, 140,620 answered; 0 refused, 0 errors | 140,620 sent, 140,616 answered; 0 refused, 4 errors |
+
+Both measured on a pre-release build of this release (the same weights) with the one-way fallback's Decision Index command, one H100 80GB, one run each; the only difference is `SHIM_READOUT_ORDERS=1` in the second. The second read moves the text index by +0.49 and the vision index by +0.33, and JevBench by -2 items. The one-read run's 4 errors are HTTP 502 answers from its shim after 360 s or more (CLINC150+OOS); the kit scores them as wrong.
+
+- **Why the fallback's Decision Index command reads once too:** its measured numbers are the one-read run, and the
+  second read costs 16-20% more prompt tokens and 2 JevBench items. The fallback's Decision Index command is the two
+  settings given there, no more; the left column is a measurement, not a command to run.
+- **Switch (for your own serving on stock vLLM one-way):** `SHIM_READOUT_ORDERS=auto` reads again when the first read's top
+  probability is under 0.8 (`SHIM_READOUT_CUTOFF_CHOICE` changes the cutoff); `SHIM_READOUT_ORDERS=2` reads every choice
+  question twice; one request can choose with `"kwargs": {"readout": {"orders": "auto"}}` (or 2, or 1). The margin gate
+  (`SHIM_READOUT_GATE=margin`, `SHIM_READOUT_MARGIN`, default 0.1) is available with `SHIM_READOUT_ORDERS=auto` and off by
+  default. Yes/no, score and Box questions are always read once; the default is one read (`"orders": 1` in
+  `serve_config.json` under `"readout"`).
+- **Cost:** one more prompt for each choice question that takes it. The state part comes from vLLM's prefix cache, so
+  the added work is mostly the question and its options. `usage.input_tokens` does not change;
+  `usage.processed_input_tokens` counts both reads. A merged answer carries `"orders": 2`.
+- **How the cutoff was chosen:** on Decision Index development rows at choice temperature 0.7, the shipped one, from
+  reads of an intermediate checkpoint of the same training run, as the cutoff with the smallest share of second reads
+  that keeps the accuracy of reading every choice question in both orders. The same rule on reads of this
+  release's weights (under the shipped 3,000-token selection) confirms 0.8: 89.28% with 15.9% of choice questions
+  read twice, against 89.25% with both orders everywhere, on the half it is chosen on; 89.00% at 15.1% against 89.08%
+  on the held-out half. The shim compares the first read's top probability after the temperature, so a different
+  choice temperature changes which questions get the second read.
+
+### Two-way reading (on in both runbooks; needs our vLLM build)
+
+The model was trained to read with its full-attention layers looking both ways (two-way, or bidirectional, attention)
+as well as one-way. Both benchmark runbooks read two-way by default.
+
+- **How:** our vLLM build (per-request attention) serves both readings, chosen per request. The shim marks each two-way
+  read (`vllm_xargs` `attention_mode: bidirectional`); the engine prefills that prompt whole with the full-attention
+  layers reading both ways and the sliding layers one-way, and keeps it out of the prefix cache. An unmarked read is
+  stock one-way. Before its first answer the shim reads fixed probe requests both ways and refuses to start (HTTP 503)
+  unless the marked read answers like the two-way reference and the plain one like the one-way reading.
+- **Routing:** a request reads two-way unless its record is longer than the two-way window, its summed two-way prompt
+  is over the latency cap, or it has a Box question; those read one-way, whole. A request can choose with
+  `"kwargs": {"attention_mode": "two-way"}` or `"one-way"`.
+- **Cost:** a two-way read computes its whole prompt (no prefix cache), so a request with many questions about one long
+  record costs more two-way than one-way; the latency cap sends those one-way.
+- **Parity:** measured through the shim in FP8 on one 80 GB H100, against reference reads of the same rows (stock
+  vLLM one-way, and a two-way reference engine on vLLM's pooling runner, which is not a setup on this card):
+  JevBench's 231 items two-way against the pooling reference (a reference engine this card does not offer) mean |dp|
+  0.0096, p95 0.039, 214/231 correct against 217; the 231 items one-way on our vLLM build against stock vLLM mean |dp|
+  0.011, 214/231 on both (a separate stock vLLM run from the fallback table's 216: runs of one setup differ by a couple
+  of items); a 500-row Decision Index slice two-way against the pooling reference
+  mean |dp| 0.011, p95 0.040. The per-request attention itself was checked in bf16 on GPU: where the one-way and
+  two-way readings give different clear answers, an unmarked read gives the one-way answer and a marked read the
+  two-way answer. In FP8 the pooling runner's own reads move between starts on near-tie rows, so the pooling reference
+  is not an exact one.
+
+### Two-way reading on other GPUs
+
+The Decision Index and JevBench runbooks do no GPU detection: they assume one RTX PRO 6000 and refuse a smaller GPU.
+Only plain `serve.sh` with `READING=two-way` (your own serving on our build, without a profile) looks its sizes up in the
+two-row table below. With `READING=two-way`, `serve.sh` reads the GPU's memory at start and picks the engine's sizes itself; only measured
+GPU classes have sizes, and on any other GPU it stops and asks for them. Set values always win.
+
+| GPU class (memory reported by `nvidia-smi`) | `MAX_LEN` (context) | `TWO_WAY_WINDOW` | `GPU_UTIL` |
+|---|---|---|---|
+| 96 GB (92,000 to 100,000 MiB; one RTX PRO 6000 96 GB) | 131,072 | 8,192 | 0.92 |
+| 80 GB (76,000 to 86,000 MiB; one H100 80GB) | 81,920 | 16,384 | 0.92 |
+
+Other GPUs (e.g. H100 80 GB): sizes tested to start and serve, not the Decision Index setup. The Decision Index configuration above is
+one RTX PRO 6000 96 GB only.
+
+The engine's prefill step (`--max-num-batched-tokens`) is the two-way window plus one token for each running sequence
+(`MAX_NUM_SEQS`, default 1024, vLLM's own default on these GPUs), so a window-sized two-way prompt runs beside a full
+batch of running answers instead of waiting for them to finish; the shim still reads nothing longer than the window
+two-way.
+
+On another GPU, set `MAX_LEN`, `TWO_WAY_WINDOW` and `GPU_UTIL` (the same three sizes as for the runbooks). `READING=two-way PLAN_SIZES=1 bash serve.sh`
+prints the sizes it would use and starts nothing. The Decision Index runbook sets the 96 GB values itself.
+
+### Long records
+
+- The two benchmark runbooks differ in two places: here, and the 1120 image re-read (on in the Decision Index runbook only). `SHIM_MAX_STATE_TOKENS=<n>` sets the budget (it never exceeds
+  `MAX_LEN` - 4,096); `SHIM_SELECTOR=none` sends every record whole and answers 422 when one is over the budget;
+  `SHIM_SELECTOR=basic` is an older paragraph selector.
+- Read whole with refusal (`SHIM_SELECTOR=none`) is used only by the Decision Index runbook and the Decision Index
+  fallback command, because the kit does not allow shortening inputs and its longest record fits the context. Every
+  other setup selects an over-context record down to fit with BM25 and never refuses it (a record with no part matching the question, or one the selector cannot cut into fitting parts, is cut to its head and tail around a `...` line, as in training, and answered): the default command
+  (`run_default.sh`, up to 126,976 tokens whole) and `serve.sh` as shipped (3,000-token selection), on either GPU class.
+
+### FP8 or bf16 weights
+
+- **Default:** FP8 (vLLM's online FP8, W8A8 dynamic, about 32 GiB of weights on the GPU).
+- **Switch:** `QUANT=none bash serve.sh` serves bf16 (about 59 GiB of weights plus the KV cache; lower `MAX_LEN` to fit).
+- **Cost / gain:** bf16 does not fit the Decision Index's long records on one 80 GB H100. Measured with the `serve.sh` of a pre-release build of this release (the same weights) and `QUANT=none`: the weights take 58.99 GiB, and at `GPU_UTIL` 0.90 (the one-way `serve.sh` default) vLLM refused to start at `MAX_LEN` 131,072, 65,536, 49,152 and 32,768: the KV cache needs 23.29 / 18.29 / 17.04 / 15.79 GiB there, and 7.9 GiB is left. vLLM's own estimate of the longest context that fits is 9,392 tokens. So on one H100 the stock one-way Decision Index command needs FP8 (bf16 on the 96 GB RTX PRO 6000 is not measured). A matched FP8 against bf16 read, on the records that fit a short context, is not yet measured.
+
+### Image re-read (on in the Decision Index runbook)
+
+An image choice or score question whose top probability is under a threshold is read again at a larger image budget (Gemma-4's 1120
+soft tokens instead of the 560 the shim sends), and the answer is the mean of the two reads (yes/no image questions
+are read once).
+
+- **Default:** off (`SHIM_IMAGE_REREAD_BUDGET` 0). The Decision Index runbook turns it on at 1120 under 0.8, with
+  `SHIM_IMAGE_ORDERS=1` (no option-order second read for images, so the 1120 re-read is the only extra image read). The default command and the API
+  setup keep it off: it about doubles the 95th-percentile latency of an image request, and JevBench's speed score reads
+  the 95th percentile.
+- **Threshold:** re-reading below 0.9 instead (2,601 of the 12,210 vision rows re-read, against 1,898 below 0.8)
+  scored 76.98 against 76.59 on the same GPU, +0.39 [-0.02, +0.79] paired, halves +0.19 [-0.41, +0.71] and +0.57
+  [+0.03, +1.17] (the same bootstrap; cited, not recomputed by the card's tests); not adopted, since the gain is not
+  clear of noise on both halves.
+- **Switch:** `SHIM_IMAGE_REREAD_BUDGET=1120 SHIM_IMAGE_REREAD_BELOW=0.8`; `/health` reports the setting and counts the
+  re-reads (`auto.image_rereads` with the two-way reading; `images.reread_count` on a one-way server).
+- **Measured** (paired over the 12,210 vision rows, the case-level bootstrap of the kit's own scoring: +0.95 index points,
+  95% interval [+0.41, +1.54], from our own study of the two runs below (2,000 draws; not recomputed by the card's tests); the two halves of the rows split by case hash +0.84 [+0.005, +1.70] and
+  +1.06 [+0.31, +1.80]):
+
+| Measure | one read (560) | with the 1120 re-read under 0.8 |
+|---|---|---|
+| Decision Index 0.3 public vision: index | **75.64** | **76.59** (+0.95) |
+| vision accuracy: CV-Bench | 88.47 | 88.47 (+0.00) |
+| vision accuracy: BLINK | 78.98 | 79.40 (+0.42) |
+| vision accuracy: RealWorldQA | 77.25 | 78.78 (+1.53) |
+| vision accuracy: CharXiv | 85.71 | 87.78 (+2.07) |
+| vision accuracy: InfographicVQA | 97.95 | 98.36 (+0.41) |
+| vision accuracy: Mind2Web | 89.83 | 89.72 (-0.10) |
+| vision accuracy: Winoground | 92.62 | 93.00 (+0.38) |
+| vision accuracy: KIE (CORD+FUNSD) | 94.52 | 94.56 (+0.04) |
+| vision accuracy: Moderation (Hateful Memes) | 77.82 | 77.82 (+0.00) |
+| vision accuracy: R-Bench-M | 47.37 | 49.77 (+2.41) |
+| vision accuracy: MMMU-Pro vision | 52.20 | 54.62 (+2.43) |
+| image questions re-read | none | 15.54% (1,898 of 12,210) |
+| vision latency, one request at a time (150 rows) | median 233, mean 258, p80 277, p95 401 ms | median 241, mean 377, p80 702, p95 848 ms |
+
+Both on a pre-release build of this release (the same weights) with our vLLM build (two-way reading), one RTX PRO 6000 96 GB, the vision suite of the command above (1.6 MP cap); the only difference is the image re-read (`SHIM_IMAGE_REREAD_BUDGET=1120`, `SHIM_IMAGE_REREAD_BELOW=0.8`); neither run took an option-order second read of images. Differences are computed from unrounded accuracies; these 150 latency rows are a separate sample from the Latency table's.
+
+### Box questions
+
+A `box` question (`{"type": "box", "instructions": "the coffee mug in `photo`"}`) answers with a bounding box in
+fractions of the image, its confidence, and the probability that the target is present. **Always on** wherever
+images are read (there is no on/off setting since v1.2): the box comes from one guided (JSON-schema) generation, so
+the engine needs structured outputs (vLLM has them on by default); an engine without them refuses a request
+with a box question with HTTP 422, and requests without one are unaffected. A text-only deployment refuses a box question with HTTP 400.
+`box.mode` `"generate"` (one constrained generation of the box) is the mode to use with this release.
+
+### Other settings
+
+- `SHIM_NOUL_FLOOR=0` turns the yes/no commit floor off, so P(yes) is reported as read (for a deployment behind a
+  fallback). As shipped, a yes/no answer is reported at no less than 0.801 on its chosen side; the answer never
+  changes.
+- The calibration temperatures, fitted on our own development and calibration sets (never on the Decision Index):
+  one-way (`serve_config.json`) choice 0.7, score 0.7, yes/no 0.6, images 0.59. Two-way
+  (`serve_config_two_way.json`) choice 0.7, score 0.7, yes/no 0.5, images 0.54.
+  `SHIM_TEMPERATURE` (every type), `SHIM_TEMPERATURE_CHOICE` / `_SCORE` / `_NOUL` and `SHIM_IMAGE_TEMPERATURE`
+  override them.
+- `serve.sh` keeps vLLM's compile cache in one folder per reading mode, image setting and weight format
+  (`~/.cache/vllm/h2o-lightning-31b/<mode>-<images>-<weights>`): vLLM 0.30 would otherwise reuse a graph compiled
+  for another image setting (for example `MAX_IMAGES=0`) and fail at start-up. `VLLM_CACHE_ROOT` overrides it.
+- `MAX_LEN`, `GPU_UTIL`, `VLLM_PORT`, `PORT` and `VLLM_ARGS` adapt `serve.sh` to other hardware.
+
+## The API
+
+Send requests to `POST /v1/systemone`. One request can carry several questions about the same state:
+
+```json
+{"state": "Ticket 4471: since 09:10 the checkout page returns HTTP 500 for every customer; no orders have gone through in 40 minutes. Severity guide: P1 = a revenue path fully down; P2 = degraded but working; P3 = cosmetic.",
+ "questions": {
+   "priority":  {"type": "choice", "instructions": "Which priority does the severity guide assign?",
+                 "criteria": {"p1": "Revenue path fully down", "p2": "Degraded but working", "p3": "Cosmetic"}},
+   "all_users": {"type": "noul", "instructions": "The problem affects every customer.",
+                 "criteria": {"true": "Affects everyone", "false": "Affects only some"}},
+   "urgency":   {"type": "score", "instructions": "How urgent is this ticket?", "criteria": ["Low", "Medium", "High"]}}}
+```
+
+Each answer carries its probabilities and a `confidence`. `usage.input_tokens` counts the prompt head that the
+questions share once; `usage.output_tokens` is one label token read per answered question.
+
+**Images.** Put each image in the request as a `data:image/...;base64,...` URI, anywhere inside `state` or in a
+top-level `images` list. Up to 4 images per request; image answers use their own temperature (`serve_config.json`,
+`"image"`). The shim also serves `POST /v1/decisions` (OpenAI's Decisions API shape, `client.decisions.create` in the `openai` Python package).
+
+**Status codes.** An input the shim cannot take (more than 255 options, an unknown question type, a malformed
+question, more than 4 images, an image vLLM cannot load) gets HTTP 422; an empty request gets 400. A misconfigured
+vLLM (wrong served name, too small a context, a different chat rendering or tokenizer) is a 503, so a broken server
+stops a run instead of scoring it.
+
+**Tests** (no GPU): `python3 h2o-lightning-31b/test_shim.py` and `python3 h2o-lightning-31b/test_security.py`.
+
+## Limitations
+
+- Evaluated mostly in English. Up to 255 options per question; a request with more gets 422.
+- The probabilities are calibrated for decision questions of this kind, not for open-ended text.
+- Not a chat model: it answers one decision per question and does not generate explanations.
+- No video input.
+
+## Credits
+
+- **Cygnet** ([blockbrain-ai/cygnet-recipe](https://github.com/blockbrain-ai/cygnet-recipe), commit `74f9555`, MIT):
+  the prompt layout and the one-token option-letter readout this shim implements. Its MIT copyright and permission
+  notice are in [LICENSE-cygnet](https://huggingface.co/h2oai/h2o-lightning-31b/blob/main/LICENSE-cygnet). Cygnet credits the one-token readout approach to [NInfer](https://github.com/igorls/ninfer).
+- **Header layout** (the conditional re-read of the decision-index and decision-index-max profiles, and SHIM_LAYOUT=header):
+  built token for token as [FlexDM](https://github.com/1000luca/FlexDM) v1.0 builds it (MIT), a layout FlexDM takes
+  from [Will Cole](https://github.com/wcole3) (MIT); their MIT notices are in
+  [LICENSE-flexdm](https://huggingface.co/h2oai/h2o-lightning-31b/blob/main/LICENSE-flexdm) and
+  [LICENSE-wcole3](https://huggingface.co/h2oai/h2o-lightning-31b/blob/main/LICENSE-wcole3). Its chat layout parts and
+  the `_index` position annotation of long arrays are [decider](https://github.com/Mapika/decider)'s (Apache-2.0).
+  Reading the user turn twice follows shisa-ai/shisa-de-2.
+- **Weights:** built on Google DeepMind's [gemma-4-31B-it](https://huggingface.co/google/gemma-4-31B-it) (revision
+  `842da3794eaa0b77d5f08bae87a17459d91ff475`, Apache-2.0).
+- **Serving:** [vLLM](https://github.com/vllm-project/vllm) 0.30.0 (Apache-2.0), unmodified for the one-way fallback;
+  the two-way reading runs on our vLLM build with per-request attention ([h2oai/vllm](https://github.com/h2oai/vllm), a
+  modified vLLM 0.30.0, Apache-2.0). This repository ships no vLLM code; the Apache License 2.0 is in
+  [LICENSE-APACHE-2.0](https://huggingface.co/h2oai/h2o-lightning-31b/blob/main/LICENSE-APACHE-2.0).
+
+See [NOTICE](https://huggingface.co/h2oai/h2o-lightning-31b/blob/main/NOTICE).
+
+## License
+
+Non-commercial. See [LICENSE](https://huggingface.co/h2oai/h2o-lightning-31b/blob/main/LICENSE).
+
+Based on google/gemma-4-31B-it (Apache-2.0, Copyright Google); Apache-2.0 text: https://www.apache.org/licenses/LICENSE-2.0
+
+The portions of the shim taken from Cygnet are under the MIT License in [LICENSE-cygnet](https://huggingface.co/h2oai/h2o-lightning-31b/blob/main/LICENSE-cygnet). The header layout's portions taken from FlexDM and Will Cole are under the MIT License in [LICENSE-flexdm](https://huggingface.co/h2oai/h2o-lightning-31b/blob/main/LICENSE-flexdm) and [LICENSE-wcole3](https://huggingface.co/h2oai/h2o-lightning-31b/blob/main/LICENSE-wcole3); decider's under the Apache License 2.0 in [LICENSE-APACHE-2.0](https://huggingface.co/h2oai/h2o-lightning-31b/blob/main/LICENSE-APACHE-2.0).

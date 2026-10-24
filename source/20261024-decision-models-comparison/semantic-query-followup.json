@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-24T15:28:25.735949+00:00",
+  "query": "Baseten mammoth-1 elephant-1 H2O Lightning 31B TypeSafe Jev 0.4.1",
+  "response": {
+    "results": [
+      {
+        "article_id": "decision-models-comparison",
+        "title": "Baseten、H2O 与 Jev 决策模型横评：先对齐榜单，再谈选型",
+        "url": "/blog/decision-models-comparison/",
+        "language": "zh",
+        "excerpt": "Baseten、H2O 与 Jev 决策模型横评：先对齐榜单，再谈选型 Baseten mammoth-1、elephant-1，H2O Lightning 与 TypeSafe Jev 都能输出结构化概率决策，但榜单版本、视觉路径、许可证与部署成本不同。本文核对 Jev Decision Index 0.4 与 0.4.1，解释 H2O 31B 的非商业限制、Jev 实验性图片支持，以及企业应怎样设计拒答、复核和上线验收。 Decision Models Baseten H2O TypeSafe Jev Decision Index 71.24 分为什",
+        "score": 0.71076673
+      },
+      {
+        "article_id": "agentjev-0-6b-system-one-decision-model-qwen3",
+        "title": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92%",
+        "url": "/blog/agentjev-0-6b-system-one-decision-model-qwen3/",
+        "language": "zh",
+        "excerpt": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92% AgentJev-0.6B，Qwen3-0.6B底座+置换等变决策头，System-1 AI Agent 决策模型。Typed Decisions 2000题 79.25%（1585/2000）超 Laya 77.00%（+2.25pt）。零输出 token 解码，约 50ms 一次前向。Shared Prefix KV Cache 在 64 候选时骨干 token 从 33,547 降至 2",
+        "score": 0.5275378
+      },
+      {
+        "article_id": "kalm-jev-local-judgment-engine-hardware-deploy",
+        "title": "KaLM-Jev Local Deployment Guide: Installation, Hardware Selection, Business Integration, and Fine-Tuning",
+        "url": "/blog/kalm-jev-local-judgment-engine-hardware-deploy/",
+        "language": "en",
+        "excerpt": "KaLM-Jev Local Deployment Guide: Installation, Hardware Selection, Business Integration, and Fine-Tuning KaLM-Jev — 32 stars, open-sourced 2026-09-21. A local Jev-style judgment engine built on KaLM-Reranker-V1 (Nano/Small/Large). /v1/systemone endpoint compatible with TypeSafe A",
+        "score": 0.52095056
+      },
+      {
+        "article_id": "llm2jev-local-jev-api-prefill-only-binary-inference",
+        "title": "LLM2Jev: Clone Jev's /v1/systemone with Any Local LLM — Prefill-Only Binary Inference Teardown",
+        "url": "/blog/llm2jev-local-jev-api-prefill-only-binary-inference/",
+        "language": "en",
+        "excerpt": "LLM2Jev: Clone Jev's /v1/systemone with Any Local LLM — Prefill-Only Binary Inference Teardown Yinsongxu/LLM2Jev — 125 stars, Apache 2.0. A 3-day-old project that turns any HuggingFace causal language model into a local Jev-compatible /v1/systemone decision engine. Core technique",
+        "score": 0.50753397
+      },
+      {
+        "article_id": "browser-use-jev-ultrafast-dom-web-agent",
+        "title": "jev-ultrafast：browser-use × TypeSafe Jev，DOM 结构化状态代替截图，Google Flights 7.1 秒",
+        "url": "/blog/browser-use-jev-ultrafast-dom-web-agent/",
+        "language": "zh",
+        "excerpt": "jev-ultrafast：browser-use × TypeSafe Jev，DOM 结构化状态代替截图，Google Flights 7.1 秒 browser-use/jev-ultrafast，19K+ stars，Python，browser-use 官方出品。核心思路：把浏览器状态变成编号元素表格，用 TypeSafe Jev 一次请求同时决策「操作类型 + 目标元素」，只有需要输入文字时才调小 LLM。默认 Agent 循环零截图，browser protocol 调用从 1092 次降到 101 次，任务时间中位数从 9.45s 降到 ",
+        "score": 0.5049099
+      },
+      {
+        "article_id": "typesafe-ai-jev-system-one-model-rlcd-decision-ai-enterprise",
+        "title": "Jev：TypeSafe AI 的 RLCD 决策模型，输出 Token 免费、最高快 200 倍",
+        "url": "/blog/typesafe-ai-jev-system-one-model-rlcd-decision-ai-enterprise/",
+        "language": "zh",
+        "excerpt": "Jev：TypeSafe AI 的 RLCD 决策模型，输出 Token 免费、最高快 200 倍 前 OpenAI 研究员 Diogo Almeida 创立 TypeSafe AI，2026-09-15 发布首个 System One Model「Jev」：RLCD 训练，并行采样非逐 token 生成，输入 $0.042/百万 token，输出免费。不生成文字，专为企业工作流三类决策（判断/选择/打分）设计，峰值快 200 倍、便宜 444 倍。4000 万美元种子轮，DCVC 领投。 decision-AI RLCD enterprise-AI s",
+        "score": 0.4875756
+      },
+      {
+        "article_id": "ornith-1-agentic-coding-self-scaffold-guide",
+        "title": "Ornith-1.0：自搭脚手架 AI，9B 打赢 Gemma4-31B，397B 超越 Claude Opus 4.7",
+        "url": "/blog/ornith-1-agentic-coding-self-scaffold-guide/",
+        "language": "zh",
+        "excerpt": "Ornith-1.0：自搭脚手架 AI，9B 打赢 Gemma4-31B，397B 超越 Claude Opus 4.7 DeepReinforce 开源 Ornith-1.0 系列：9B / 35B MoE / 397B MoE，专攻 Agentic Coding。核心创新是自搭脚手架 RL——让模型学会给自己写工作流，而不是人工设计固定 harness。397B 在 Terminal-Bench 2.1 和 SWE-Bench Verified 双超 Claude Opus 4.7，35B MoE 反超参数大 10 倍的 Qwen3.5-397B。 ",
+        "score": 0.48660123
+      },
+      {
+        "article_id": "ornith-1-coding-agent-model-mac-mini-local-inference",
+        "title": "Ornith-1.0: Self-Improving Coding Agent Model — 9B Beats 35B, 60 t/s on Mac mini",
+        "url": "/blog/ornith-1-coding-agent-model-mac-mini-local-inference/",
+        "language": "en",
+        "excerpt": "Ornith-1.0: Self-Improving Coding Agent Model — 9B Beats 35B, 60 t/s on Mac mini deepreinforce-ai open-sources Ornith-1.0: RL jointly optimizes scaffold and answer — the 9B outperforms Qwen3.5-35B on Terminal-Bench and NL2Repo; the 35B MoE surpasses Qwen3.5-397B. APEX-I-Compact M",
+        "score": 0.482566
+      },
+      {
+        "article_id": "ornith-1-0-agentic-code-llm-rl-training-guide",
+        "title": "Ornith-1.0: DeepReinforce's SOTA Agentic Coding LLM — Engineering Guide for Training Your Own with RL",
+        "url": "/blog/ornith-1-0-agentic-code-llm-rl-training-guide/",
+        "language": "en",
+        "excerpt": "Ornith-1.0: DeepReinforce's SOTA Agentic Coding LLM — Engineering Guide for Training Your Own with RL Ornith-1.0 is DeepReinforce's SOTA agentic code generation LLM (9B/35B/397B), achieving SWE-bench Verified 75.6. Uses hybrid MoE+GatedDeltaNet architecture, 256K context, RL trai",
+        "score": 0.47796085
+      },
+      {
+        "article_id": "cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune",
+        "title": "Cloudflare Open-Sources Clef Decision Models: Jev-API Compatible, the 9B Runs on a Mac, and the Top Score Is Self-Reported",
+        "url": "/blog/cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune/",
+        "language": "en",
+        "excerpt": "Cloudflare Open-Sources Clef Decision Models: Jev-API Compatible, the 9B Runs on a Mac, and the Top Score Is Self-Reported On 2026-10-01 Cloudflare released Clef (Qwen3.8-27B base, 27.36B params) and Clef-flash (Qwen3.5-9B, 9.41B params) under Apache-2.0: one forward pass, a prob",
+        "score": 0.47569025
+      }
+    ]
+  },
+  "matched": [
+    {
+      "article_id": "decision-models-comparison",
+      "title": "Baseten、H2O 与 Jev 决策模型横评：先对齐榜单，再谈选型",
+      "url": "/blog/decision-models-comparison/",
+      "language": "zh",
+      "excerpt": "Baseten、H2O 与 Jev 决策模型横评：先对齐榜单，再谈选型 Baseten mammoth-1、elephant-1，H2O Lightning 与 TypeSafe Jev 都能输出结构化概率决策，但榜单版本、视觉路径、许可证与部署成本不同。本文核对 Jev Decision Index 0.4 与 0.4.1，解释 H2O 31B 的非商业限制、Jev 实验性图片支持，以及企业应怎样设计拒答、复核和上线验收。 Decision Models Baseten H2O TypeSafe Jev Decision Index 71.24 分为什",
+      "score": 0.71076673
+    }
+  ]
+}
