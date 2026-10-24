@@ -1,0 +1,22 @@
+(node:86497) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+ ⛅️ wrangler 4.90.0
+───────────────────
+✨ Compiled Worker successfully
+Uploading... (5608/5836)
+Uploading... (5684/5836)
+Uploading... (5760/5836)
+Uploading... (5836/5836)
+✨ Success! Uploaded 228 files (5608 already uploaded) (6.69 sec)
+
+✨ Uploading _headers
+✨ Uploading _redirects
+✨ Uploading Functions bundle
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://b59ec4e2.blog-mushroom.pages.dev
+npm notice
+npm notice New major version of npm available! 11.19.1 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

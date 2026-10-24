@@ -1,0 +1,32 @@
+{
+  "rootReviewed": true,
+  "figures": [
+    {
+      "file": "src/assets/images/appflowy-self-host-services-fig-01.png",
+      "size": [
+        1536,
+        864
+      ],
+      "bytes": 64953,
+      "sha256": "849c3ec7623a039816192fe94d614c5065ef624ba7e273c208426ca037c4000e"
+    },
+    {
+      "file": "src/assets/images/appflowy-self-host-services-fig-02.png",
+      "size": [
+        1536,
+        864
+      ],
+      "bytes": 49706,
+      "sha256": "15297b6ca4fcb9c69d7ea5bae9bbac22319ee91bead9eb4bcb7fc6ace8b71999"
+    },
+    {
+      "file": "src/assets/images/appflowy-self-host-services-fig-03.png",
+      "size": [
+        1536,
+        864
+      ],
+      "bytes": 71219,
+      "sha256": "ed833d216fd74ebebab138fe71fa251b90db55cbe6f59d2e40dad973e1c0cd4e"
+    }
+  ]
+}
