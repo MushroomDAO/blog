@@ -1,0 +1,20 @@
+[
+  {
+    "repo": "AppFlowy",
+    "archived": false,
+    "license": "AGPL-3.0",
+    "commit": "5cf3a365dec0d59f64bad1ee4bb1050471a39b93"
+  },
+  {
+    "repo": "AppFlowy-Cloud",
+    "archived": true,
+    "license": "AGPL-3.0",
+    "commit": "c5bcfd33edd46ced4a9b4fdb7ddb3bbf8c0326da"
+  },
+  {
+    "repo": "AppFlowy-SelfHost-Commercial",
+    "archived": false,
+    "license": "NOASSERTION",
+    "commit": "511fa3222f217bf1c2b6d1d183d3f2ecc30065a9"
+  }
+]

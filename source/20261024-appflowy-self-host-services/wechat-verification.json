@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-24T12:53:09.720Z",
+  "drafts": [
+    {
+      "slug": "appflowy-self-host-services",
+      "mediaId": "prCUE631thH1cmNLi42prD4zqsrjDcw82EhQH5msciAAXHnySCEagCitnr21ZEgG",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "bcf899109e59473d9c7fad61d09d7f44304a7f8df3d736baa18bb8bd10b82fb3",
+      "remoteTextHash": "bcf899109e59473d9c7fad61d09d7f44304a7f8df3d736baa18bb8bd10b82fb3",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "510276da9f121311f1c063f63bb0362cd0721e964eff3566c1dc25c196143603",
+      "remoteContentHash": "07cf1fec47c6f86f503e29393cf5d0fdd6fd8906c033daf03dad36dd6521ab27"
+    }
+  ]
+}
