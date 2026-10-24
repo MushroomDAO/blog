@@ -1,0 +1,13 @@
+from pathlib import Path
+import json,datetime,shutil
+s=Path(__file__).resolve().parent;slug='gradium-phonon-local-tts';task='a0d98835-f681-4c21-bc5d-c25280147876'
+p=json.loads((s/'public-verification.json').read_text())['articles'][0];w=json.loads((s/'wechat-verification.json').read_text())['drafts'][0]
+assert p['HTTP']==200 and p['carouselRank']==1 and w['fullTextMatches'] and w['coverMatches']
+r={'slug':slug,'blogUrl':'https://blog.mushroom.cv/blog/'+slug+'/','mediaId':w['mediaId'],'wechatStatus':'draft','wechatError':''}
+(s/'publication-result.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n')
+j=Path('/Users/jason/.heinu1-bot/jobs')/task;(j/'publication-result.json').write_text(json.dumps({**r,'results':[r]},ensure_ascii=False,indent=2)+'\n')
+(s/'.published').write_text(r['blogUrl']+'\n2026-10-24\n');(s/'.state.json').write_text(json.dumps({'status':'published','verifiedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),**r},ensure_ascii=False,indent=2)+'\n')
+m=Path('/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory/project_'+slug+'.md');t=m.read_text().replace('Local English synthesis pending; Blog/Wechat pending.','M4/16GiB officialptts0.4.1 CPU1thread q8 seed123 localmodel/defaultvoice, sandbox-exec deny network*,4sec24kHzmonoPCM16 nonzeroWAV exit0. NotWER/latency/peakRAMbenchmark, nohumanlisteningstudy. Diskfull initially; removed ownrebuildableBarktmpmodelcache thenretriessucceeded. Blog '+r['blogUrl']+' HTTP200/list/carousel/5assets verified. CurrentremoteWeChat '+r['mediaId']+' fulltext/3orderedimages/metadata/cover/comments verified. Semanticzh/enupserted. FLUXseed175cover replacedseed174 tiny-pseudotext;3XiaoMfigures verified.');m.write_text(t);shutil.copy(m,Path('/tmp/phonon-memory-only')/m.name)
+f=Path('.agents/skills/forage/FEEDBACK.md');entry='\n\n## 2026-10-24 — Gradium Phonon on-device TTS\n\n- '+r['blogUrl']+' Distinct fromPhonon2ASR.31MenApache2, all40mmono/multiCCBYNC;noChinese;31Mcount excludescodec,64.5MBq8 notRAM.7ms warmedM5CPU backend/threaddependent/excludesvoiceconditioning,1.70%makerEnglishhard500LLMWER notourbenchmark. ActualM4/16GiB ptts0.4.1digestverified CPU1threadq8seed123, pinnedmodel/localvoice, sandbox-exec deny network*,4sec24kHzmonoPCM16WAV validnonzero. Noformalquality/speed/RAMbenchmark. Initialdiskfull repairedbydeleting ownrebuildabletmpBarkweightcache. Topiccover+3figs, bilingualSEO, publiclist/carousel/assets,currentdraftbody/images/cover/comments,semantic andKBverified. Task '+task+'.\n'
+if r['blogUrl']not in f.read_text():f.write_text(f.read_text().rstrip()+entry)
+print(json.dumps(r))

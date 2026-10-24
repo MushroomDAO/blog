@@ -1,0 +1,19 @@
+{
+  "title": "Gradium Phonon本地TTS与许可核查",
+  "summary": "Gradium Phonon的31M英文q8权重约64.5MB，采用Apache-2.0；40M各单语言和多语言版本均采用CC BY-NC 4.0，公开家族不含中文。7ms属于官方特定M5配置预热测试，1.70%为厂商困难文本英文评估结果，不能当作所有设备和文本的保证。M4、16GiB本机已在禁网进程沙箱内用本地模型和音色生成4秒WAV，未复现音质、WER或正式速度基准。",
+  "tags": [
+    "Phonon",
+    "语音合成",
+    "本地AI",
+    "模型许可",
+    "Rust"
+  ],
+  "entities": [
+    "Gradium",
+    "Phonon",
+    "Pocket TTS",
+    "Mimi",
+    "Apple M4"
+  ],
+  "content_type": "text"
+}

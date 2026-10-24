@@ -1,0 +1,9 @@
+2026-10-24T13:07:11.324570Z  INFO avx: false, neon: true, simd128: false, f16c: false
+2026-10-24T13:07:11.324807Z  INFO loading model
+2026-10-24T13:07:11.324834Z  INFO loading Hugging Face tokenizer path="/private/tmp/phonon-31m-model/tokenizer.json"
+2026-10-24T13:07:11.381723Z  INFO model loaded device=cpu voices=["custom", "default"] languages=["en"]
+2026-10-24T13:07:11.381763Z  INFO normalizing text lang="en" rewrites="default" normalized=The meeting starts at nine. Please send the report tomorrow.
+2026-10-24T13:07:11.381769Z  INFO generating
+2026-10-24T13:07:11.496193Z  INFO generated 4.00s in 0.11s (RTF=0.0286, first chunk 15ms)
+2026-10-24T13:07:11.496228Z  INFO peak RSS: 254.55 MB
+2026-10-24T13:07:11.496647Z  INFO wrote source/20261024-gradium-phonon-tts/smoke.wav
