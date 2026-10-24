@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-24T15:29:10.488910+00:00",
+  "articles": [
+    {
+      "slug": "decision-models-comparison",
+      "url": "https://blog.mushroom.cv/blog/decision-models-comparison/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/decision-models-comparison-banner.DKw97SKL_Z10Aya3.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/decision-models-comparison-fig-01.NdI_0vyy_ZOHIgo.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/decision-models-comparison-fig-02.D0u6y9WA_2jHItm.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/decision-models-comparison-fig-03.Bttw9HtQ_Z2j80JI.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/decision-models-comparison-banner.DKw97SKL.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 2,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/decision-models-comparison/",
+    "/blog/gradium-phonon-local-tts/",
+    "/blog/appflowy-self-host-services/",
+    "/blog/ming-3-tts-small-model-evaluation/",
+    "/blog/underdog-bark-3-local-asr/",
+    "/blog/nvidia-openshell-agent-runtime/",
+    "/blog/flint-local-coding-rec-engine/",
+    "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/"
+  ]
+}

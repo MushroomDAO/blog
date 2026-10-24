@@ -1,0 +1,86 @@
+{
+  "mammoth.txt": {
+    "fetched_sha256": "dac5b380cf360cbc76cd9b0f6a187d933e1b9c3307c1ebd443019e38135f161c",
+    "stored_normalized_sha256": "f4a8b6174ea4707a4ce1bfbf0d244bacd1c1f4a4b450281f4928393b17ed7e81"
+  },
+  "h2o31.txt": {
+    "fetched_sha256": "8d99a95154d87a3b7d57434d2d48d42acc2addd0657e1d985dc0f99aff7b6103",
+    "stored_normalized_sha256": "8d99a95154d87a3b7d57434d2d48d42acc2addd0657e1d985dc0f99aff7b6103"
+  },
+  "baseten.txt": {
+    "fetched_sha256": "4ee7bf00732d2cba2fec15172d8f0bb9ed4770fc4d031942796760e7453e249f",
+    "stored_normalized_sha256": "40cdbe6c8fdb7d874513f31b174d598c0f92c2cfb61c2d4429e6964809b8f336"
+  },
+  "jev-images.txt": {
+    "fetched_sha256": "b6836110409e88ff406b7044992d38828bbc95106a30b7831a6e29b998e1edeb",
+    "stored_normalized_sha256": "6cb3e1049987222d2f1f74fb35eb65bad34d7d8ef22bd23be632f565a15af92b"
+  },
+  "h2o31-license.txt": {
+    "fetched_sha256": "79b6e3a5ac2564062f14b48a706293cd4a2cdc71f76ca5fc5125d75912b40c9d",
+    "stored_normalized_sha256": "79b6e3a5ac2564062f14b48a706293cd4a2cdc71f76ca5fc5125d75912b40c9d"
+  },
+  "board-tree.txt": {
+    "fetched_sha256": "3656677b4127cdb6dc3b20724761c868aea00d22d00063abba6c208fbf0ae028",
+    "stored_normalized_sha256": "6e7b3711b06bca7884de308158799bfe58e0aff52b0fb4234eb327e8c5311b75"
+  },
+  "board-data.txt": {
+    "fetched_sha256": "68f9211771a3ebb6520fb2dd4d303d4e9c9a9649a65e360436e4f5b3ea1855fe",
+    "stored_normalized_sha256": "27d99d037fe4d4d9ce09a220ddd508f99a78083d5ab692ab684eaf06c1948c0e"
+  },
+  "h2o-search.txt": {
+    "fetched_sha256": "db5e7b344b823456f782704d788498195a2d039b1ec002690255a4a142054d64",
+    "stored_normalized_sha256": "aa3cce791f0f32d766f95ae9e622c65df442c0acea1ffcfb3e06f8e60f790267"
+  },
+  "jev-jaggedness.txt": {
+    "fetched_sha256": "f4bef6bdad41b84d4e8f7a14e9ce38aa9f8a55714b294ecf30b191482439affe",
+    "stored_normalized_sha256": "442e68fd6e390c9b48a69f55af4d876b0f68814c00686188106fd542c8ba6d3f"
+  },
+  "elephant.txt": {
+    "fetched_sha256": "0c1f7c170191d0906218c3b34ad7a11ae4bc49a04d210eb12e5bb7a5461648f7",
+    "stored_normalized_sha256": "0c1f7c170191d0906218c3b34ad7a11ae4bc49a04d210eb12e5bb7a5461648f7"
+  },
+  "board-vision.txt": {
+    "fetched_sha256": "6c465423ccee46d279c1953a4ac4c751271b62e347347e4f1fe46e26c04f9d7d",
+    "stored_normalized_sha256": "95b39d1cc0f7687f87f6ee499a903c2e60a10cefa55df1134b60a98889a77655"
+  },
+  "jev-models-readable.txt": {
+    "fetched_sha256": "afd9483d1edc3d7362fa6e3b19223b736f44698f20ab6553250fad5d65181cd3",
+    "stored_normalized_sha256": "62a0d2c95b8d0dbc6aac54d7f419af59638e491b22e31c81990a5948a2c23d92"
+  },
+  "jev-index.txt": {
+    "fetched_sha256": "e817e47899099364d29633f157ac5de74f936c849bdf5a14382e31ba4a09c688",
+    "stored_normalized_sha256": "b9f26bfc92cb4c16178a9144561fe882994508c3a972e238cab251951cf29a50"
+  },
+  "board-readable.txt": {
+    "fetched_sha256": "5684a16ae41de1a543309e82c6c3a82846bc21e8c4e5bb5ed5b3a6f7758967de",
+    "stored_normalized_sha256": "aa5a30273329bc02eb66f2e262582eec1adb7d5a768d8d3526b14d175948fad2"
+  },
+  "board-method.txt": {
+    "fetched_sha256": "bf299b4961972eae6c8c6924c494e934205e72eab1aa062b9b3457eebcbc1bdc",
+    "stored_normalized_sha256": "080b40c66833ecc9af8dfa8a3db7e5e8d50af722c21302c4f5e7a642298fe4e6"
+  },
+  "jev-models.txt": {
+    "fetched_sha256": "ea492c3cbeb5125e58297f83ec88ef74d71ad897c9d369e495d8cf2526f939fc",
+    "stored_normalized_sha256": "fc931746c66ceb4db12a3456b6b4854a76fe8e484ab9256f5c020d36300cae97"
+  },
+  "h2o4.txt": {
+    "fetched_sha256": "9ae6af4cc141e60974b8005ce3a066a1cd7e975a1965188be2df7ddc2253c079",
+    "stored_normalized_sha256": "9ae6af4cc141e60974b8005ce3a066a1cd7e975a1965188be2df7ddc2253c079"
+  },
+  "jev-md.txt": {
+    "fetched_sha256": "bed299c24098aaf2223f2244127041fcc5d0c3a77a2cbaa4daf7eb14bd755343",
+    "stored_normalized_sha256": "096735a55d54ac540750531339df99da1344b6b696601ea3eec9c747318059fc"
+  },
+  "h2o31-meta.txt": {
+    "fetched_sha256": "82bbbc8d173de90747045e5fe32e6e1157e489b392ac6b8c91407aa49b8edd93",
+    "stored_normalized_sha256": "6ea5cb468b0fcb9241aa73abb88049e93c14132fb5d4db016cf2a61b75ac91b0"
+  },
+  "baseten-readable.txt": {
+    "fetched_sha256": "bd1cfa5e9f0be61137201838e9cf005110473d2b45b3bb720f71ff4ce951e537",
+    "stored_normalized_sha256": "b674fd50dafe34ba1c7bfff64aa3cbae766b714366edd4206d6c3c112c109d74"
+  },
+  "board.txt": {
+    "fetched_sha256": "e3a55c70093b4e049fc5c1bf40d542938a4cf7b67a56438301961bda3a3c7ebe",
+    "stored_normalized_sha256": "5e2d2db2dd44a809412f79e74ae205a9115a138c0090ac19d6bb6b7775ce16f1"
+  }
+}

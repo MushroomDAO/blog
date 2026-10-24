@@ -1,0 +1,26 @@
+{
+  "mammoth": {
+    "repo": "baselabs/mammoth-1",
+    "sha": "61cec44c281c693992e3d6ebeb44dd3402dfa186",
+    "license": "mit",
+    "gated": false
+  },
+  "elephant": {
+    "repo": "baselabs/elephant-1",
+    "sha": "b3f8a93462fb1051a9de031e94a7ff380e254072",
+    "license": "mit",
+    "gated": false
+  },
+  "h2o4": {
+    "repo": "h2oai/h2o-lightning-4b",
+    "sha": "e7b32490c9d2a994bd75a4d1ea7e45716080175e",
+    "license": "apache-2.0",
+    "gated": false
+  },
+  "h2o31": {
+    "repo": "h2oai/h2o-lightning-31b",
+    "sha": "3e10b65a7a2b8ebedd77228a52f7acefee6e8230",
+    "license": "other",
+    "gated": "auto"
+  }
+}

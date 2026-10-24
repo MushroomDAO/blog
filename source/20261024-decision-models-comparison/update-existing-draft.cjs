@@ -1,0 +1,10 @@
+const fs=require('fs'),path=require('path'),assert=require('assert');
+const root=path.resolve(__dirname,'../..'),req=require('module').createRequire(path.join(root,'pipeline/m2/index.js')),axios=req('axios'),{WeChatClient}=req('./wechat-api/client.js');
+(async()=>{
+const env=Object.fromEntries(fs.readFileSync(path.join(root,'.env'),'utf8').split('\n').filter(x=>/^[A-Z_]+=/.test(x)).map(x=>{const i=x.indexOf('=');return[x.slice(0,i),x.slice(i+1).replace(/^["']|["']$/g,'')]}));
+const c=new WeChatClient(env.WECHAT_APP_ID,env.WECHAT_APP_SECRET),token=await c.getAccessToken(),slug='decision-models-comparison',rp=path.join(root,'pipeline/m2/output',slug+'.json'),rec=JSON.parse(fs.readFileSync(rp));
+const {data:before}=await axios.post('https://api.weixin.qq.com/cgi-bin/draft/get?access_token='+token,{media_id:rec.mediaId});assert(!before.errcode);const a=before.news_item[0];assert(a.title===rec.title&&a.digest===rec.digest);const content=fs.readFileSync(path.join(root,'pipeline/m2/output',slug+'.html'),'utf8');assert(content.includes('本文原文：https://blog.mushroom.cv/blog/'+slug+'/'));
+const articles={title:a.title,author:a.author,digest:a.digest,content,content_source_url:'https://blog.mushroom.cv/blog/'+slug+'/',thumb_media_id:a.thumb_media_id,need_open_comment:a.need_open_comment,only_fans_can_comment:a.only_fans_can_comment,original_article_type:1};
+const {data}=await axios.post('https://api.weixin.qq.com/cgi-bin/draft/update?access_token='+token,{media_id:rec.mediaId,index:0,articles});assert(data.errcode===0,JSON.stringify(data));
+rec.updatedAt=new Date().toISOString();rec.updateReason='Add canonical URL in visible body and source URL; same draft and cover retained';fs.writeFileSync(rp,JSON.stringify(rec,null,2)+'\n');fs.writeFileSync(path.join(__dirname,'draft-update-receipt.json'),JSON.stringify({mediaId:rec.mediaId,operation:'draft/update',createdNewDraft:false,checkedPriorTitle:true,coverRetained:true,result:data,updatedAt:rec.updatedAt},null,2)+'\n');console.log(JSON.stringify({mediaId:rec.mediaId,operation:'draft/update',result:data}));
+})().catch(e=>{console.error(e.message);process.exit(1)});

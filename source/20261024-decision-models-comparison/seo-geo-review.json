@@ -1,0 +1,14 @@
+{
+  "slug": "decision-models-comparison",
+  "bilingual": true,
+  "checks": [
+    "Bilingual BLUF, versioned numerical facts and primary URLs",
+    "Question headings and three FAQ entries in each language",
+    "English slug, bilingual meta, dates, category, >=3 tags",
+    "Three aligned images with alt text; required copyright in both languages",
+    "No invented local inference or security results; public and full score separated",
+    "Temporary free offer dated; H2O31B noncommercial nonproduction terms explicit",
+    "External source URLs remain visible in WeChat"
+  ],
+  "editor_review": "Reviewed banner and all three figures visually; no text or face on cover, illustration meanings align."
+}
