@@ -1,0 +1,12 @@
+{
+  "title": "Ming语音模型：0.5B的成绩与部署门槛",
+  "author": "Mycelium",
+  "digest": "核对独立榜单与官方评测，讲清小参数、实际权重和Mac部署之间的差别。",
+  "mediaId": "prCUE631thH1cmNLi42prCPgmCb7suVKVtsTnLPkE0U7-ZGTBM7AgXHNzytDLsTk",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/inclusionai/ming-3.0-tts",
+    "huggingface.co/inclusionai/ming-3.0-tts-0.5b"
+  ],
+  "publishedAt": "2026-10-24T08:45:56.623Z"
+}

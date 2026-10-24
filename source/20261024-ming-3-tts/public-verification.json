@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-24T08:45:31.770402+00:00",
+  "articles": [
+    {
+      "slug": "ming-3-tts-small-model-evaluation",
+      "url": "https://blog.mushroom.cv/blog/ming-3-tts-small-model-evaluation/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/ming-3-tts-small-model-evaluation-banner.BzZP213Z_ZzBsBG.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ming-3-tts-small-model-evaluation-fig-01.Bu4-kfFy_1Rc6RX.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ming-3-tts-small-model-evaluation-fig-02.Cb9wrZEz_Z1URs9M.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ming-3-tts-small-model-evaluation-fig-03.DfaTDMhW_11ugi1.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ming-3-tts-small-model-evaluation-banner.BzZP213Z.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 1,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/ming-3-tts-small-model-evaluation/",
+    "/blog/underdog-bark-3-local-asr/",
+    "/blog/nvidia-openshell-agent-runtime/",
+    "/blog/flint-local-coding-rec-engine/",
+    "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+    "/blog/laya-aayushch-local-first-ai-notification-command-center/",
+    "/blog/cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor/",
+    "/blog/superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx/"
+  ]
+}
