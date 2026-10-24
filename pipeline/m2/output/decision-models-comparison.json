@@ -1,0 +1,19 @@
+{
+  "title": "决策模型横评：Baseten、H2O与Jev",
+  "author": "Mycelium",
+  "digest": "核对榜单版本、模型许可和视觉部署条件，给出企业决策模型选型路径。",
+  "mediaId": "prCUE631thH1cmNLi42prDCVb5S8vDXZb4LBr8gKvLcVchiaKQoQIyTSMsqQ9N6j",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/spaces/multimodalart",
+    "huggingface.co/baselabs/mammoth-1",
+    "huggingface.co/baselabs/elephant-1",
+    "huggingface.co/h2oai/h2o-lightning-4b",
+    "huggingface.co/h2oai/h2o-lightning-4b-gguf",
+    "huggingface.co/h2oai/h2o-lightning-31b",
+    "github.com/h2oai/vllm"
+  ],
+  "publishedAt": "2026-10-24T15:26:26.761Z",
+  "updatedAt": "2026-10-24T15:28:05.656Z",
+  "updateReason": "Add canonical URL in visible body and source URL; same draft and cover retained"
+}

@@ -1050,3 +1050,7 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 ## 2026-10-24 — Gradium Phonon on-device TTS
 
 - https://blog.mushroom.cv/blog/gradium-phonon-local-tts/ Distinct fromPhonon2ASR.31MenApache2, all40mmono/multiCCBYNC;noChinese;31Mcount excludescodec,64.5MBq8 notRAM.7ms warmedM5CPU backend/threaddependent/excludesvoiceconditioning,1.70%makerEnglishhard500LLMWER notourbenchmark. ActualM4/16GiB ptts0.4.1digestverified CPU1threadq8seed123, pinnedmodel/localvoice, sandbox-exec deny network*,4sec24kHzmonoPCM16WAV validnonzero. Noformalquality/speed/RAMbenchmark. Initialdiskfull repairedbydeleting ownrebuildabletmpBarkweightcache. Topiccover+3figs, bilingualSEO, publiclist/carousel/assets,currentdraftbody/images/cover/comments,semantic andKBverified. Task a0d98835-f681-4c21-bc5d-c25280147876.
+
+## 2026-10-24 — Baseten / H2O / Jev decision-model comparison
+
+- https://blog.mushroom.cv/blog/decision-models-comparison/ Exactdedup foundrawKBonly, no priorarticle/draft. Baseten0.4release71.24/62.65 separated from0.4.1snapshot68.44/60.26, Jev60.24/H2O31B66.58;4BJevBench73.82 not mixed. H2O31Bnoncommercialnonproduction vs4BApache2;560/1120softtokensnotpixels;whole-recordprofileconditional;Jevexperimentalimages nottextonly;1.13injectioncaveat not1.14test. No inference or localbenchmark. Topiccover+3figs,bilingualSEO,publicURL/assets/list/carousel,semanticquery,currentdraft fulltext/images/cover/comments verified. CanonicalURL repaired by updating same draftID, no duplicate. Task56f5d554-20bb-45cf-981b-853954bb8ab3.

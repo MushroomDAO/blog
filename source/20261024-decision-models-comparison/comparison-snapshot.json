@@ -1,0 +1,5783 @@
+{
+  "retrieved_utc": "2026-10-24T15:19:38.828212+00:00",
+  "generated_utc": "2026-10-22T20:10:35Z",
+  "suite": {
+    "requests": 110201,
+    "scoreable": 109759,
+    "benchmarks": 42,
+    "jev_benchmarks": 42,
+    "panel": 37,
+    "panel_full": 37,
+    "categories": 5,
+    "dropped": [
+      "MiniWoB++",
+      "Boxoban",
+      "RTFM",
+      "ScienceWorld",
+      "Hanabi",
+      "Codenames"
+    ],
+    "hardware": "1 x NVIDIA RTX PRO 6000",
+    "jev_version": "jev-1.14.0",
+    "panel_id": "decision-index-0.3",
+    "calibration_note": "32 benchmarks with a per-field right or wrong answer (ToolRet, BRIGHT and RouterBench excluded), each weighted equally; a 1-in-6 sample of requests; confidence is the probability placed on the chosen option. Rows an entrant trained on count as wrong here too.",
+    "formulas": [
+      {
+        "id": "balanced_raw",
+        "normalization": "raw",
+        "formula": "100*sum_c(0.2*category[c])",
+        "label": "Public index, raw accuracy"
+      },
+      {
+        "id": "balanced_skill",
+        "normalization": "skill",
+        "formula": "0.60*private_same_skills + 0.40*private_new_domains, both mapped onto the public scale with untuned stock models",
+        "label": "Full score"
+      },
+      {
+        "id": "breadth_skill",
+        "normalization": "skill",
+        "shift": 0.1,
+        "formula": "100*(product_c((0.1+0.9*category[c])**0.2)-0.1)/0.9",
+        "label": "Public index, breadth"
+      }
+    ],
+    "edition": "release-v4",
+    "label": "Decision Index 0.4.1",
+    "corpus_sha256": "b2b56d6fb636837ca469e689087bdbf373dda8de7638aa2da6793e6eda0792d5",
+    "base_edition": "release-v2.1",
+    "note": null,
+    "areas": {
+      "knowledge": [
+        25,
+        30,
+        31,
+        32,
+        33,
+        43,
+        44,
+        45,
+        57,
+        58,
+        28
+      ],
+      "language": [
+        11,
+        12,
+        29,
+        38,
+        39,
+        40,
+        41,
+        42,
+        59
+      ],
+      "retrieval": [
+        4,
+        5,
+        36,
+        37,
+        56,
+        61
+      ],
+      "tools": [
+        1,
+        2,
+        3,
+        9,
+        62
+      ],
+      "arts": [
+        20,
+        21,
+        22,
+        23,
+        50,
+        64
+      ]
+    },
+    "not_in_index": [
+      {
+        "id": 6,
+        "name": "RouterBench"
+      },
+      {
+        "id": 10,
+        "name": "SGD"
+      },
+      {
+        "id": 24,
+        "name": "MMLU"
+      },
+      {
+        "id": 26,
+        "name": "ARC-Easy"
+      },
+      {
+        "id": 27,
+        "name": "ARC-Challenge"
+      }
+    ],
+    "lower_rules": [],
+    "headline": "balanced_skill",
+    "chance_levels": [
+      {
+        "id": 25,
+        "name": "GPQA Diamond",
+        "area": "knowledge",
+        "chance": 0.25,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 30,
+        "name": "GSM8K",
+        "area": "knowledge",
+        "chance": 0.175,
+        "label": "Uniform random choice",
+        "method": "per track: 4-choice and 10-choice versions corrected separately, then averaged"
+      },
+      {
+        "id": 31,
+        "name": "ChessBench",
+        "area": "knowledge",
+        "chance": 0.0819,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 32,
+        "name": "MuSR",
+        "area": "knowledge",
+        "chance": 0.371,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 33,
+        "name": "SATA-Bench",
+        "area": "knowledge",
+        "chance": 0.0131,
+        "label": "Random whole-case guesses",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 43,
+        "name": "CRUXEval",
+        "area": "knowledge",
+        "chance": 0.3697,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 44,
+        "name": "CLadder",
+        "area": "knowledge",
+        "chance": 0.5,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 45,
+        "name": "HLE",
+        "area": "knowledge",
+        "chance": 0.1641,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 57,
+        "name": "MMLU-Pro",
+        "area": "knowledge",
+        "chance": 0.1109,
+        "label": "uniform random choice, mean of 1/options",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 58,
+        "name": "BBH",
+        "area": "knowledge",
+        "chance": 0.3101,
+        "label": "uniform random choice, mean of 1/options",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 11,
+        "name": "ContractNLI",
+        "area": "language",
+        "chance": 0.3085,
+        "label": "Random choices · F1",
+        "method": "F1 of random guessing over the fixed label set"
+      },
+      {
+        "id": 12,
+        "name": "ANLI",
+        "area": "language",
+        "chance": 0.3324,
+        "label": "Random choices · F1",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 28,
+        "name": "WinoGrande",
+        "area": "language",
+        "chance": 0.5,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 29,
+        "name": "HellaSwag",
+        "area": "language",
+        "chance": 0.25,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 38,
+        "name": "ACOS",
+        "area": "language",
+        "chance": 0.031,
+        "label": "Always yes · per-review F1",
+        "method": "per-review F1 of answering yes to every aspect-and-sentiment pair (a fair coin scores lower)"
+      },
+      {
+        "id": 39,
+        "name": "FinEntity",
+        "area": "language",
+        "chance": 0.3201,
+        "label": "Random choices · F1",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 40,
+        "name": "iSarcasmEval",
+        "area": "language",
+        "chance": 0.2227,
+        "label": "Random choices · F1",
+        "method": "track A English: F1 of random guessing on the sarcastic class"
+      },
+      {
+        "id": 41,
+        "name": "VAST",
+        "area": "language",
+        "chance": 0.3333,
+        "label": "Random choices · F1",
+        "method": "F1 of random guessing over the fixed label set"
+      },
+      {
+        "id": 42,
+        "name": "NLI4CT",
+        "area": "language",
+        "chance": 0.486,
+        "label": "Random choices · F1",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 59,
+        "name": "RAGTruth",
+        "area": "language",
+        "chance": 0.5177,
+        "label": "Always \"hallucinated\" · F1",
+        "method": "F1 of always answering \"hallucinated\" (a fair coin scores lower)"
+      },
+      {
+        "id": 4,
+        "name": "BANKING77",
+        "area": "retrieval",
+        "chance": 0.0127,
+        "label": "Random choices · F1",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 5,
+        "name": "CLINC150",
+        "area": "retrieval",
+        "chance": 0.006,
+        "label": "Random choices · F1",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 36,
+        "name": "BRIGHT",
+        "area": "retrieval",
+        "chance": 0.116,
+        "label": "Random ranking, answerable queries",
+        "method": "per query: expected nDCG@10 of a random ranking of that query's candidates, answerable queries only"
+      },
+      {
+        "id": 37,
+        "name": "Amazon ESCI",
+        "area": "retrieval",
+        "chance": 0.2027,
+        "label": "Random choices · F1",
+        "method": "F1 of random guessing over the fixed label set"
+      },
+      {
+        "id": 56,
+        "name": "PhishNChips",
+        "area": "retrieval",
+        "chance": 0.5,
+        "label": "uniform random choice, mean of 1/options",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 61,
+        "name": "HoVer",
+        "area": "retrieval",
+        "chance": 0.5,
+        "label": "uniform random choice, mean of 1/options",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 1,
+        "name": "BFCL",
+        "area": "tools",
+        "chance": 0.2592,
+        "label": "Random whole-case guesses",
+        "method": "all fields of a case right by chance"
+      },
+      {
+        "id": 2,
+        "name": "ToolRet",
+        "area": "tools",
+        "chance": 0.1341,
+        "label": "Random ranking, answerable queries",
+        "method": "per query: expected nDCG@10 of a random ranking of that query's candidates, answerable queries only"
+      },
+      {
+        "id": 3,
+        "name": "API-Bank",
+        "area": "tools",
+        "chance": 0.0189,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 9,
+        "name": "Home appliances",
+        "area": "tools",
+        "chance": 0,
+        "label": "Random whole-case guesses",
+        "method": "all fields of a case right by chance, on the kept rows"
+      },
+      {
+        "id": 62,
+        "name": "When2Call",
+        "area": "tools",
+        "chance": 0.25,
+        "label": "uniform random choice, mean of 1/options",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 20,
+        "name": "BPoMP",
+        "area": "arts",
+        "chance": 0.5,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 21,
+        "name": "Humicroedit",
+        "area": "arts",
+        "chance": 0.5,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 22,
+        "name": "POP909",
+        "area": "arts",
+        "chance": 0.0078,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 23,
+        "name": "cfcolor",
+        "area": "arts",
+        "chance": 0.5,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 50,
+        "name": "Habermas",
+        "area": "arts",
+        "chance": 0.311,
+        "label": "Uniform random choice",
+        "method": "expected score of uniform random choice over each question's options"
+      },
+      {
+        "id": 64,
+        "name": "New Yorker",
+        "area": "arts",
+        "chance": 0.2,
+        "label": "uniform random choice, mean of 1/options",
+        "method": "expected score of uniform random choice over each question's options"
+      }
+    ],
+    "index_note": "The public index averages the 37 benchmarks of the 0.2.1 panel in five areas, with GSM8K rebuilt and ForecastBench retired. Each benchmark is chance-corrected first, (score - chance) / (1 - chance) clipped to 0-1, so 0 means random guessing and 100 means perfect. Every score is coverage-adjusted, so an unanswered or unsupported request counts as wrong. The headline Full score comes from private tests only; this public index is shown alongside it, and benchmarks marked + also show each model's score on the private benchmark of the same competency.",
+    "changes": [
+      "The main ranking is the Full score: 60% private tests of the same skills and 40% private tasks from new domains, each put on the public scale using untuned stock models. Public benchmarks are still run and shown, but no longer count toward the Full score, so the ranking rests entirely on tests nobody can train on.",
+      "GSM8K is rebuilt, ForecastBench is retired from the public index, and WinoGrande now counts under Knowledge & Reasoning."
+    ],
+    "area_weights": {
+      "knowledge": 0.258494,
+      "language": 0.258494,
+      "retrieval": 0.200229,
+      "tools": 0.182783,
+      "arts": 0.1
+    },
+    "area_sizing": "sqrt",
+    "gold": {
+      "1": 1.2,
+      "3": 1.2,
+      "4": 1.2,
+      "5": 1.2,
+      "12": 1.2,
+      "25": 1.2,
+      "28": 1.2,
+      "29": 1.2,
+      "36": 1.2,
+      "45": 1.2,
+      "48": 1.2,
+      "57": 1.2,
+      "58": 1.2
+    },
+    "index_notes": [
+      {
+        "id": 6,
+        "name": "RouterBench",
+        "note": "Not in the index: the prompt reveals that GPT-4 is the best route, so the top models all pick GPT-4 and score within a fraction of a point of each other. Scores stay visible."
+      },
+      {
+        "id": 10,
+        "name": "SGD",
+        "note": "Not in the index: build bug, pending re-run. The builder gave every SGD row the whole dialogue, including the turns after the one being classified. Scores stay visible; SGD returns to the index once re-run with the fixed builder."
+      }
+    ]
+  },
+  "rows": [
+    {
+      "engine": "mammoth-1",
+      "name": "baselabs mammoth-1 (27B)",
+      "long_name": "baselabs mammoth-1 (27B)",
+      "variant": null,
+      "meta": {
+        "kind": "full fine-tune",
+        "technique": "autoregressive",
+        "technique_name": "autoregressive",
+        "served_params": 27356728560,
+        "params_estimated": false,
+        "params_from_name": false,
+        "trained_bytes": null,
+        "model_url": "https://huggingface.co/baselabs/mammoth-1",
+        "code_url": null,
+        "base_model": "Qwen/Qwen3.5-27B",
+        "base_url": "https://huggingface.co/Qwen/Qwen3.5-27B",
+        "weights_repo": "baselabs/mammoth-1",
+        "served_checkpoint": "9d1962f193e48a68cf0f3598dc7fb4462fd23ad9",
+        "org": {
+          "id": "baselabs",
+          "name": "baselabs",
+          "logo": "data/orgs/baselabs.png"
+        },
+        "pr": 260,
+        "new": true,
+        "show_notes": true
+      },
+      "completed": 110201,
+      "counts": {
+        "ok": 110201,
+        "unsupported": 0,
+        "error": 0
+      },
+      "lifted": false,
+      "calibration": {
+        "acc": 0.8266,
+        "conf": 0.8653,
+        "ece": 0.0408,
+        "brier": 0.2377,
+        "over95": 0.0137,
+        "n": 34411,
+        "benchmarks": 31,
+        "rel": [
+          {
+            "lo": 0,
+            "w": 0.0026,
+            "conf": 0.0772,
+            "acc": 0.2456
+          },
+          {
+            "lo": 0.1,
+            "w": 0.0116,
+            "conf": 0.1531,
+            "acc": 0.1653
+          },
+          {
+            "lo": 0.2,
+            "w": 0.0139,
+            "conf": 0.2517,
+            "acc": 0.2851
+          },
+          {
+            "lo": 0.3,
+            "w": 0.0192,
+            "conf": 0.3503,
+            "acc": 0.3059
+          },
+          {
+            "lo": 0.4,
+            "w": 0.0256,
+            "conf": 0.4546,
+            "acc": 0.3383
+          },
+          {
+            "lo": 0.5,
+            "w": 0.0698,
+            "conf": 0.5484,
+            "acc": 0.5254
+          },
+          {
+            "lo": 0.6,
+            "w": 0.0627,
+            "conf": 0.6487,
+            "acc": 0.5826
+          },
+          {
+            "lo": 0.7,
+            "w": 0.0572,
+            "conf": 0.7506,
+            "acc": 0.6205
+          },
+          {
+            "lo": 0.8,
+            "w": 0.0668,
+            "conf": 0.8539,
+            "acc": 0.7225
+          },
+          {
+            "lo": 0.9,
+            "w": 0.6705,
+            "conf": 0.9879,
+            "acc": 0.9671
+          }
+        ],
+        "areas": {
+          "knowledge": {
+            "ece": 0.0563,
+            "acc": 0.779,
+            "conf": 0.8285
+          },
+          "language": {
+            "ece": 0.0153,
+            "acc": 0.9135,
+            "conf": 0.9271
+          },
+          "retrieval": {
+            "ece": 0.1139,
+            "acc": 0.7402,
+            "conf": 0.8541
+          },
+          "tools": {
+            "ece": 0.032,
+            "acc": 0.9557,
+            "conf": 0.9853
+          },
+          "arts": {
+            "ece": 0.0531,
+            "acc": 0.7567,
+            "conf": 0.7645
+          }
+        }
+      },
+      "gaps": null,
+      "latency": {
+        "median": 220.1,
+        "p95": 712.5,
+        "mean": 435.1
+      },
+      "results": {
+        "1": {
+          "score": 0.9823,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 1694,
+          "answered": 1694,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 331.3
+        },
+        "2": {
+          "score": 0.7042,
+          "jev": null,
+          "metric": "nDCG@10",
+          "requests": 685,
+          "answered": 685,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 2517.5
+        },
+        "3": {
+          "score": 0.8898,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 508,
+          "answered": 508,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 1519.8
+        },
+        "4": {
+          "score": 0.9391,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3080,
+          "answered": 3080,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 306.5
+        },
+        "5": {
+          "score": 0.976,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5500,
+          "answered": 5500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 391
+        },
+        "6": {
+          "score": 0.7932,
+          "jev": null,
+          "metric": "selected quality (quality objective)",
+          "requests": 10000,
+          "answered": 10000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 453.6
+        },
+        "9": {
+          "score": 1,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 88,
+          "answered": 88,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 752.9
+        },
+        "10": {
+          "score": 0.4272,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 2500,
+          "answered": 2500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 358.7
+        },
+        "11": {
+          "score": 0.8562,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 123,
+          "answered": 123,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 749.6
+        },
+        "12": {
+          "score": 0.8293,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3200,
+          "answered": 3200,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 302.1
+        },
+        "20": {
+          "score": 0.991,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 298.6
+        },
+        "21": {
+          "score": 0.6944,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2628,
+          "answered": 2628,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 298.8
+        },
+        "22": {
+          "score": 0.777,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2000,
+          "answered": 2000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 1300.9
+        },
+        "23": {
+          "score": 0.6768,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 304.3
+        },
+        "24": {
+          "score": 0.9002,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 14033,
+          "answered": 14033,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 298.6
+        },
+        "25": {
+          "score": 0.5918,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 196,
+          "answered": 196,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 300.4
+        },
+        "26": {
+          "score": 0.9937,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2376,
+          "answered": 2376,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 296.1
+        },
+        "27": {
+          "score": 0.9761,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1172,
+          "answered": 1172,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 298.8
+        },
+        "28": {
+          "score": 0.9613,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1267,
+          "answered": 1267,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 298.3
+        },
+        "29": {
+          "score": 0.9848,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 10042,
+          "answered": 10042,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 299
+        },
+        "30": {
+          "score": 0.8851,
+          "jev": 0.7301,
+          "metric": "accuracy (4- and 10-choice)",
+          "requests": 2638,
+          "answered": 2638,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "31": {
+          "score": 0.331,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 314.1
+        },
+        "32": {
+          "score": 0.9189,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 752,
+          "answered": 752,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 310.4
+        },
+        "33": {
+          "score": 0.6218,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 1650,
+          "answered": 1650,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 345.2
+        },
+        "36": {
+          "score": 0.4808,
+          "jev": null,
+          "metric": "nDCG@10",
+          "requests": 220,
+          "answered": 220,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 4054.5
+        },
+        "37": {
+          "score": 0.6463,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 303
+        },
+        "38": {
+          "score": 0.68,
+          "jev": null,
+          "metric": "per-review F1",
+          "requests": 1565,
+          "answered": 1565,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 1143.9
+        },
+        "39": {
+          "score": 0.9536,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 979,
+          "answered": 979,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 302.7
+        },
+        "40": {
+          "score": 0.6808,
+          "jev": null,
+          "metric": "Sarcasm F1 · track A, English",
+          "requests": 4600,
+          "answered": 4600,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 301.6
+        },
+        "41": {
+          "score": 0.7545,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3006,
+          "answered": 3006,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 300.5
+        },
+        "42": {
+          "score": 0.8793,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5500,
+          "answered": 5500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 305.3
+        },
+        "43": {
+          "score": 0.9544,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 570,
+          "answered": 570,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 298.9
+        },
+        "44": {
+          "score": 0.957,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 299.3
+        },
+        "45": {
+          "score": 0.1956,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 501,
+          "answered": 501,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 301.3
+        },
+        "50": {
+          "score": 0.6342,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1676,
+          "answered": 1676,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 309.7
+        },
+        "56": {
+          "score": 0.971,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2000,
+          "answered": 2000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 328.7
+        },
+        "57": {
+          "score": 0.7495,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 12032,
+          "answered": 12032,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 299.4
+        },
+        "58": {
+          "score": 0.9624,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5507,
+          "answered": 5507,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 298.3
+        },
+        "59": {
+          "score": 0.8582,
+          "jev": null,
+          "metric": "F1 on hallucinated class",
+          "requests": 2700,
+          "answered": 2700,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 310.2
+        },
+        "61": {
+          "score": 0.908,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 4000,
+          "answered": 4000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 304.2
+        },
+        "62": {
+          "score": 0.9168,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 3652,
+          "answered": 3652,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 311.4
+        },
+        "64": {
+          "score": 0.8731,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 528,
+          "answered": 528,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 298.5
+        }
+      },
+      "benchmarks": {
+        "1": {
+          "raw": 0.9823,
+          "skill": 0.9761,
+          "coverage": 1,
+          "random": 0.2592,
+          "tracks": [],
+          "combined": 0.9669,
+          "private_eq": 0.975
+        },
+        "2": {
+          "raw": 0.7042,
+          "skill": 0.6585,
+          "coverage": 1,
+          "random": 0.1341,
+          "tracks": [],
+          "combined": 0.7045,
+          "private_eq": 0.7462
+        },
+        "3": {
+          "raw": 0.8898,
+          "skill": 0.8877,
+          "coverage": 1,
+          "random": 0.0189,
+          "tracks": [],
+          "combined": 0.9276,
+          "private_eq": 0.9288
+        },
+        "4": {
+          "raw": 0.9391,
+          "skill": 0.9383,
+          "coverage": 1,
+          "random": 0.0127,
+          "tracks": [],
+          "combined": 0.8784,
+          "private_eq": 0.8803
+        },
+        "5": {
+          "raw": 0.976,
+          "skill": 0.9759,
+          "coverage": 1,
+          "random": 0.006,
+          "tracks": [],
+          "combined": 0.8186,
+          "private_eq": 0.8207
+        },
+        "6": {
+          "raw": 0.7932,
+          "skill": 0.5151,
+          "coverage": 1,
+          "random": 0.5735,
+          "tracks": []
+        },
+        "9": {
+          "raw": 1,
+          "skill": 1,
+          "coverage": 1,
+          "random": 0,
+          "tracks": [],
+          "combined": 0.9302,
+          "private_eq": 0.93
+        },
+        "10": {
+          "raw": 0.4272,
+          "skill": 0.0469,
+          "coverage": 1,
+          "random": 0.399,
+          "tracks": []
+        },
+        "11": {
+          "raw": 0.8562,
+          "skill": 0.7921,
+          "coverage": 1,
+          "random": 0.3085,
+          "tracks": []
+        },
+        "12": {
+          "raw": 0.8293,
+          "skill": 0.7443,
+          "coverage": 1,
+          "random": 0.3324,
+          "tracks": [],
+          "combined": 0.473,
+          "private_eq": 0.6515
+        },
+        "20": {
+          "raw": 0.9913,
+          "skill": 0.9826,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.9867,
+          "private_eq": 0.9929
+        },
+        "21": {
+          "raw": 0.6944,
+          "skill": 0.3889,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.4378,
+          "private_eq": 0.7216
+        },
+        "22": {
+          "raw": 0.7746,
+          "skill": 0.7729,
+          "coverage": 1,
+          "random": 0.0078,
+          "tracks": [],
+          "combined": 0.5409,
+          "private_eq": 0.5487
+        },
+        "23": {
+          "raw": 0.695,
+          "skill": 0.39,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": []
+        },
+        "24": {
+          "raw": 0.9002,
+          "skill": 0.8669,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": []
+        },
+        "25": {
+          "raw": 0.5918,
+          "skill": 0.4558,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "private_eq": 0.6737,
+          "combined": 0.5609
+        },
+        "26": {
+          "raw": 0.9937,
+          "skill": 0.9916,
+          "coverage": 1,
+          "random": 0.2502,
+          "tracks": []
+        },
+        "27": {
+          "raw": 0.9761,
+          "skill": 0.9681,
+          "coverage": 1,
+          "random": 0.2502,
+          "tracks": []
+        },
+        "28": {
+          "raw": 0.9613,
+          "skill": 0.9226,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.5774,
+          "private_eq": 0.7906
+        },
+        "29": {
+          "raw": 0.9848,
+          "skill": 0.9797,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "combined": 1.001,
+          "private_eq": 1
+        },
+        "30": {
+          "raw": 0.8851,
+          "skill": 0.8619,
+          "coverage": 1,
+          "random": 0.175,
+          "tracks": [
+            {
+              "track": "4-choice",
+              "raw": 0.906,
+              "random": 0.25
+            },
+            {
+              "track": "10-choice",
+              "raw": 0.8643,
+              "random": 0.1
+            }
+          ],
+          "combined": 0.8475,
+          "private_eq": 0.8748
+        },
+        "31": {
+          "raw": 0.331,
+          "skill": 0.2714,
+          "coverage": 1,
+          "random": 0.0819,
+          "tracks": [],
+          "combined": 0.1026,
+          "private_eq": 0.1846
+        },
+        "32": {
+          "raw": 0.9189,
+          "skill": 0.8711,
+          "coverage": 1,
+          "random": 0.371,
+          "tracks": [],
+          "combined": 0.4981,
+          "private_eq": 0.6873
+        },
+        "33": {
+          "raw": 0.6218,
+          "skill": 0.6168,
+          "coverage": 1,
+          "random": 0.0131,
+          "tracks": [],
+          "combined": 0.4512,
+          "private_eq": 0.4636
+        },
+        "36": {
+          "raw": 0.4808,
+          "skill": 0.4126,
+          "coverage": 1,
+          "random": 0.116,
+          "tracks": [],
+          "combined": 0.4186,
+          "private_eq": 0.491
+        },
+        "37": {
+          "raw": 0.6463,
+          "skill": 0.5563,
+          "coverage": 1,
+          "random": 0.2027,
+          "tracks": [],
+          "combined": 0.5747,
+          "private_eq": 0.664
+        },
+        "38": {
+          "raw": 0.68,
+          "skill": 0.6698,
+          "coverage": 1,
+          "random": 0.031,
+          "tracks": [],
+          "combined": 0.7744,
+          "private_eq": 0.7829
+        },
+        "39": {
+          "raw": 0.9536,
+          "skill": 0.9318,
+          "coverage": 1,
+          "random": 0.3201,
+          "tracks": [],
+          "combined": 0.5778,
+          "private_eq": 0.7155
+        },
+        "40": {
+          "raw": 0.6808,
+          "skill": 0.5893,
+          "coverage": 1,
+          "random": 0.2227,
+          "tracks": [
+            {
+              "track": "A · Arabic",
+              "score": 0.5419,
+              "headline": false
+            },
+            {
+              "track": "A · English",
+              "score": 0.6808,
+              "headline": true
+            },
+            {
+              "track": "C · Arabic pairs",
+              "score": 0.965,
+              "headline": false
+            },
+            {
+              "track": "C · English pairs",
+              "score": 0.985,
+              "headline": false
+            }
+          ],
+          "combined": 0.6435,
+          "private_eq": 0.7253
+        },
+        "41": {
+          "raw": 0.7545,
+          "skill": 0.6318,
+          "coverage": 1,
+          "random": 0.3333,
+          "tracks": [],
+          "combined": 0.5924,
+          "private_eq": 0.7307
+        },
+        "42": {
+          "raw": 0.8793,
+          "skill": 0.7652,
+          "coverage": 1,
+          "random": 0.486,
+          "tracks": [],
+          "combined": 1.001,
+          "private_eq": 1
+        },
+        "43": {
+          "raw": 0.9544,
+          "skill": 0.9276,
+          "coverage": 1,
+          "random": 0.3697,
+          "tracks": [],
+          "combined": 0.5369,
+          "private_eq": 0.7108
+        },
+        "44": {
+          "raw": 0.957,
+          "skill": 0.914,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.7975,
+          "private_eq": 0.8994
+        },
+        "45": {
+          "raw": 0.1956,
+          "skill": 0.0377,
+          "coverage": 1,
+          "random": 0.1641,
+          "tracks": []
+        },
+        "50": {
+          "raw": 0.6342,
+          "skill": 0.4692,
+          "coverage": 1,
+          "random": 0.311,
+          "tracks": [],
+          "combined": 0.3338,
+          "private_eq": 0.5455
+        },
+        "56": {
+          "raw": 0.971,
+          "skill": 0.942,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.6377,
+          "private_eq": 0.8204
+        },
+        "57": {
+          "raw": 0.7495,
+          "skill": 0.7183,
+          "coverage": 1,
+          "random": 0.1109,
+          "tracks": [],
+          "private_eq": 0.5596,
+          "combined": 0.5
+        },
+        "58": {
+          "raw": 0.9624,
+          "skill": 0.9455,
+          "coverage": 1,
+          "random": 0.3101,
+          "tracks": [],
+          "private_eq": 0.5598,
+          "combined": 0.3556
+        },
+        "59": {
+          "raw": 0.8582,
+          "skill": 0.706,
+          "coverage": 1,
+          "random": 0.5177,
+          "tracks": [],
+          "combined": 0.2777,
+          "private_eq": 0.6551
+        },
+        "61": {
+          "raw": 0.908,
+          "skill": 0.816,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.6209,
+          "private_eq": 0.8121
+        },
+        "62": {
+          "raw": 0.9168,
+          "skill": 0.8891,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "combined": 0.5972,
+          "private_eq": 0.7006
+        },
+        "64": {
+          "raw": 0.8731,
+          "skill": 0.8414,
+          "coverage": 1,
+          "random": 0.2,
+          "tracks": [],
+          "combined": 0.8361,
+          "private_eq": 0.8696
+        }
+      },
+      "coverage": 1,
+      "pending": 0,
+      "notes": [
+        "New in the 2026-10-18 PR batch (PR #244); updated to revision 9d1962f in PR #260.",
+        "Public 0.3 run from PR #260 adopted (kit rescore 75.34, equal to the claim). Private tests run by the lab on one RTX PRO 6000 with the author's serving at revision 8f9f8619, whose weights are identical to 9d1962f; decision agreement with the submitted rows 99.85% on 831 rows (bar 98.5%).",
+        "Weights are public on the Hugging Face Hub under a proprietary license.",
+        "Training data not disclosed.",
+        "One private new-domain test is not counted for this model: our checks found signs its training data overlapped it. Its new-domain score uses the remaining tests, put on the same scale with the same stock models."
+      ],
+      "scores": {
+        "balanced_raw": 81.19,
+        "balanced_skill": 68.44,
+        "breadth_skill": 75,
+        "public_skill": 75.34
+      },
+      "frozen_scores": {
+        "balanced_raw": 81.19,
+        "balanced_skill": 75.34,
+        "breadth_skill": 75
+      },
+      "categories": [
+        {
+          "id": "knowledge",
+          "raw": 0.7351,
+          "skill": 0.6799,
+          "combined": 0.521,
+          "coverage": 1,
+          "pending": 0,
+          "n": 11
+        },
+        {
+          "id": "language",
+          "raw": 0.834,
+          "skill": 0.7611,
+          "combined": 0.6709,
+          "coverage": 1,
+          "pending": 0,
+          "n": 9
+        },
+        {
+          "id": "retrieval",
+          "raw": 0.8182,
+          "skill": 0.7737,
+          "combined": 0.6624,
+          "coverage": 1,
+          "pending": 0,
+          "n": 6
+        },
+        {
+          "id": "tools",
+          "raw": 0.9014,
+          "skill": 0.886,
+          "combined": 0.8343,
+          "coverage": 1,
+          "pending": 0,
+          "n": 5
+        },
+        {
+          "id": "arts",
+          "raw": 0.7771,
+          "skill": 0.6408,
+          "combined": 0.627,
+          "coverage": 1,
+          "pending": 0,
+          "n": 6
+        }
+      ],
+      "v03": {
+        "engine": "mammoth-1",
+        "pub": 75.34,
+        "same_skills": 66.26,
+        "new_domains": 56.27,
+        "v": 68.44,
+        "lab": false,
+        "jev": false,
+        "rank_v": 3,
+        "rank_pub": 1,
+        "name": "baselabs mammoth-1 (27B)",
+        "eq": {
+          "S": 65.98,
+          "O": 72.14
+        },
+        "rank_tie": 3,
+        "tied": true,
+        "parts": {
+          "public": 0,
+          "same_skills": 39.59,
+          "new_domains": 28.86
+        }
+      },
+      "new_in_edition": true
+    },
+    {
+      "engine": "elephant-1-baselabs",
+      "name": "baselabs elephant-1 (9B)",
+      "long_name": "baselabs elephant-1 (9B)",
+      "variant": null,
+      "meta": {
+        "kind": "full fine-tune",
+        "technique": "autoregressive",
+        "technique_name": "autoregressive",
+        "served_params": 9409813744,
+        "params_estimated": false,
+        "params_from_name": false,
+        "trained_bytes": null,
+        "model_url": "https://huggingface.co/baselabs/elephant-1",
+        "code_url": null,
+        "base_model": "Qwen/Qwen3.5-9B",
+        "base_url": "https://huggingface.co/Qwen/Qwen3.5-9B",
+        "weights_repo": "baselabs/elephant-1",
+        "served_checkpoint": "14537f08b0374edf9867ed0a4d2bd8df59e0400c",
+        "org": {
+          "id": "baselabs",
+          "name": "baselabs",
+          "logo": "data/orgs/baselabs.png"
+        },
+        "pr": 243,
+        "new": true,
+        "show_notes": true
+      },
+      "completed": 110201,
+      "counts": {
+        "ok": 110201,
+        "unsupported": 0,
+        "error": 0
+      },
+      "lifted": false,
+      "calibration": {
+        "acc": 0.8013,
+        "conf": 0.8571,
+        "ece": 0.0578,
+        "brier": 0.2711,
+        "over95": 0.0154,
+        "n": 34411,
+        "benchmarks": 31,
+        "rel": [
+          {
+            "lo": 0,
+            "w": 0.0052,
+            "conf": 0.0795,
+            "acc": 0.1676
+          },
+          {
+            "lo": 0.1,
+            "w": 0.0138,
+            "conf": 0.148,
+            "acc": 0.1881
+          },
+          {
+            "lo": 0.2,
+            "w": 0.0108,
+            "conf": 0.2555,
+            "acc": 0.2489
+          },
+          {
+            "lo": 0.3,
+            "w": 0.0203,
+            "conf": 0.3552,
+            "acc": 0.2792
+          },
+          {
+            "lo": 0.4,
+            "w": 0.0242,
+            "conf": 0.4495,
+            "acc": 0.3536
+          },
+          {
+            "lo": 0.5,
+            "w": 0.0752,
+            "conf": 0.5483,
+            "acc": 0.4976
+          },
+          {
+            "lo": 0.6,
+            "w": 0.0584,
+            "conf": 0.6478,
+            "acc": 0.5074
+          },
+          {
+            "lo": 0.7,
+            "w": 0.06,
+            "conf": 0.7476,
+            "acc": 0.6155
+          },
+          {
+            "lo": 0.8,
+            "w": 0.086,
+            "conf": 0.8527,
+            "acc": 0.6906
+          },
+          {
+            "lo": 0.9,
+            "w": 0.6461,
+            "conf": 0.9852,
+            "acc": 0.9558
+          }
+        ],
+        "areas": {
+          "knowledge": {
+            "ece": 0.0634,
+            "acc": 0.742,
+            "conf": 0.7992
+          },
+          "language": {
+            "ece": 0.0205,
+            "acc": 0.9025,
+            "conf": 0.9229
+          },
+          "retrieval": {
+            "ece": 0.1966,
+            "acc": 0.681,
+            "conf": 0.8774
+          },
+          "tools": {
+            "ece": 0.0281,
+            "acc": 0.9603,
+            "conf": 0.9831
+          },
+          "arts": {
+            "ece": 0.0353,
+            "acc": 0.7386,
+            "conf": 0.7627
+          }
+        }
+      },
+      "gaps": null,
+      "latency": {
+        "median": 113.7,
+        "p95": 253.3,
+        "mean": 221.5
+      },
+      "results": {
+        "1": {
+          "score": 0.9829,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 1694,
+          "answered": 1694,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 113.4
+        },
+        "2": {
+          "score": 0.6765,
+          "jev": null,
+          "metric": "nDCG@10",
+          "requests": 685,
+          "answered": 685,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 889.7
+        },
+        "3": {
+          "score": 0.8898,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 508,
+          "answered": 508,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 541.3
+        },
+        "4": {
+          "score": 0.9292,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3080,
+          "answered": 3080,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 104.6
+        },
+        "5": {
+          "score": 0.9734,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5500,
+          "answered": 5500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 137.2
+        },
+        "6": {
+          "score": 0.7979,
+          "jev": null,
+          "metric": "selected quality (quality objective)",
+          "requests": 10000,
+          "answered": 10000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 167.5
+        },
+        "9": {
+          "score": 1,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 88,
+          "answered": 88,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 349.3
+        },
+        "10": {
+          "score": 0.0893,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 2500,
+          "answered": 2500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 125.6
+        },
+        "11": {
+          "score": 0.8668,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 123,
+          "answered": 123,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 408.2
+        },
+        "12": {
+          "score": 0.7925,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3200,
+          "answered": 3200,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.8
+        },
+        "20": {
+          "score": 0.9882,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.4
+        },
+        "21": {
+          "score": 0.6689,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2628,
+          "answered": 2628,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97
+        },
+        "22": {
+          "score": 0.7805,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2000,
+          "answered": 2000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 463.7
+        },
+        "23": {
+          "score": 0.6654,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 100.9
+        },
+        "24": {
+          "score": 0.8443,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 14033,
+          "answered": 14033,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.5
+        },
+        "25": {
+          "score": 0.4439,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 196,
+          "answered": 196,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.3
+        },
+        "26": {
+          "score": 0.9886,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2376,
+          "answered": 2376,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.1
+        },
+        "27": {
+          "score": 0.9659,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1172,
+          "answered": 1172,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.3
+        },
+        "28": {
+          "score": 0.9242,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1267,
+          "answered": 1267,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.3
+        },
+        "29": {
+          "score": 0.9724,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 10042,
+          "answered": 10042,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.7
+        },
+        "30": {
+          "score": 0.7604,
+          "jev": 0.7301,
+          "metric": "accuracy (4- and 10-choice)",
+          "requests": 2638,
+          "answered": 2638,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "31": {
+          "score": 0.2944,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 105.6
+        },
+        "32": {
+          "score": 0.8777,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 752,
+          "answered": 752,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 105.7
+        },
+        "33": {
+          "score": 0.5885,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 1650,
+          "answered": 1650,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 128.7
+        },
+        "36": {
+          "score": 0.4719,
+          "jev": null,
+          "metric": "nDCG@10",
+          "requests": 220,
+          "answered": 220,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 1469.6
+        },
+        "37": {
+          "score": 0.6251,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 98.9
+        },
+        "38": {
+          "score": 0.6601,
+          "jev": null,
+          "metric": "per-review F1",
+          "requests": 1565,
+          "answered": 1565,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 453
+        },
+        "39": {
+          "score": 0.9514,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 979,
+          "answered": 979,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 98.7
+        },
+        "40": {
+          "score": 0.6206,
+          "jev": null,
+          "metric": "Sarcasm F1 · track A, English",
+          "requests": 4600,
+          "answered": 4600,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.2
+        },
+        "41": {
+          "score": 0.7542,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3006,
+          "answered": 3006,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.5
+        },
+        "42": {
+          "score": 0.8603,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5500,
+          "answered": 5500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 100.1
+        },
+        "43": {
+          "score": 0.9123,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 570,
+          "answered": 570,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.6
+        },
+        "44": {
+          "score": 0.9532,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.3
+        },
+        "45": {
+          "score": 0.1697,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 501,
+          "answered": 501,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 98.4
+        },
+        "50": {
+          "score": 0.6068,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1676,
+          "answered": 1676,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 102.6
+        },
+        "56": {
+          "score": 0.969,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2000,
+          "answered": 2000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 120.3
+        },
+        "57": {
+          "score": 0.6462,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 12032,
+          "answered": 12032,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97.1
+        },
+        "58": {
+          "score": 0.9515,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5507,
+          "answered": 5507,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 97
+        },
+        "59": {
+          "score": 0.8526,
+          "jev": null,
+          "metric": "F1 on hallucinated class",
+          "requests": 2700,
+          "answered": 2700,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 103.4
+        },
+        "61": {
+          "score": 0.8992,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 4000,
+          "answered": 4000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 99.8
+        },
+        "62": {
+          "score": 0.9146,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 3652,
+          "answered": 3652,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 103.6
+        },
+        "64": {
+          "score": 0.822,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 528,
+          "answered": 528,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 98.1
+        }
+      },
+      "benchmarks": {
+        "1": {
+          "raw": 0.9829,
+          "skill": 0.9769,
+          "coverage": 1,
+          "random": 0.2592,
+          "tracks": [],
+          "combined": 0.9534,
+          "private_eq": 0.9651
+        },
+        "2": {
+          "raw": 0.6765,
+          "skill": 0.6264,
+          "coverage": 1,
+          "random": 0.1341,
+          "tracks": [],
+          "combined": 0.7062,
+          "private_eq": 0.7476
+        },
+        "3": {
+          "raw": 0.8898,
+          "skill": 0.8877,
+          "coverage": 1,
+          "random": 0.0189,
+          "tracks": [],
+          "combined": 0.9118,
+          "private_eq": 0.9135
+        },
+        "4": {
+          "raw": 0.9292,
+          "skill": 0.9283,
+          "coverage": 1,
+          "random": 0.0127,
+          "tracks": [],
+          "combined": 0.8587,
+          "private_eq": 0.8611
+        },
+        "5": {
+          "raw": 0.9734,
+          "skill": 0.9732,
+          "coverage": 1,
+          "random": 0.006,
+          "tracks": [],
+          "combined": 0.7673,
+          "private_eq": 0.7703
+        },
+        "6": {
+          "raw": 0.7979,
+          "skill": 0.5261,
+          "coverage": 1,
+          "random": 0.5735,
+          "tracks": []
+        },
+        "9": {
+          "raw": 1,
+          "skill": 1,
+          "coverage": 1,
+          "random": 0,
+          "tracks": [],
+          "combined": 0.8695,
+          "private_eq": 0.87
+        },
+        "10": {
+          "raw": 0.0893,
+          "skill": 0,
+          "coverage": 1,
+          "random": 0.399,
+          "tracks": []
+        },
+        "11": {
+          "raw": 0.8668,
+          "skill": 0.8073,
+          "coverage": 1,
+          "random": 0.3085,
+          "tracks": []
+        },
+        "12": {
+          "raw": 0.7925,
+          "skill": 0.6892,
+          "coverage": 1,
+          "random": 0.3324,
+          "tracks": [],
+          "combined": 0.509,
+          "private_eq": 0.6753
+        },
+        "20": {
+          "raw": 0.9882,
+          "skill": 0.9764,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.9721,
+          "private_eq": 0.9857
+        },
+        "21": {
+          "raw": 0.6689,
+          "skill": 0.3379,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.3672,
+          "private_eq": 0.6867
+        },
+        "22": {
+          "raw": 0.7829,
+          "skill": 0.7812,
+          "coverage": 1,
+          "random": 0.0078,
+          "tracks": [],
+          "combined": 0.5424,
+          "private_eq": 0.5501
+        },
+        "23": {
+          "raw": 0.6979,
+          "skill": 0.3958,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": []
+        },
+        "24": {
+          "raw": 0.8443,
+          "skill": 0.7924,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": []
+        },
+        "25": {
+          "raw": 0.4439,
+          "skill": 0.2585,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "private_eq": 0.5844,
+          "combined": 0.4405
+        },
+        "26": {
+          "raw": 0.9886,
+          "skill": 0.9848,
+          "coverage": 1,
+          "random": 0.2502,
+          "tracks": []
+        },
+        "27": {
+          "raw": 0.9659,
+          "skill": 0.9545,
+          "coverage": 1,
+          "random": 0.2502,
+          "tracks": []
+        },
+        "28": {
+          "raw": 0.9242,
+          "skill": 0.8484,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.5873,
+          "private_eq": 0.7955
+        },
+        "29": {
+          "raw": 0.9724,
+          "skill": 0.9632,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "combined": 1.001,
+          "private_eq": 1
+        },
+        "30": {
+          "raw": 0.7604,
+          "skill": 0.7134,
+          "coverage": 1,
+          "random": 0.175,
+          "tracks": [
+            {
+              "track": "4-choice",
+              "raw": 0.8165,
+              "random": 0.25
+            },
+            {
+              "track": "10-choice",
+              "raw": 0.7043,
+              "random": 0.1
+            }
+          ],
+          "combined": 0.6835,
+          "private_eq": 0.741
+        },
+        "31": {
+          "raw": 0.2944,
+          "skill": 0.2315,
+          "coverage": 1,
+          "random": 0.0819,
+          "tracks": [],
+          "combined": 0.0962,
+          "private_eq": 0.1788
+        },
+        "32": {
+          "raw": 0.8777,
+          "skill": 0.8056,
+          "coverage": 1,
+          "random": 0.371,
+          "tracks": [],
+          "combined": 0.4208,
+          "private_eq": 0.6392
+        },
+        "33": {
+          "raw": 0.5885,
+          "skill": 0.583,
+          "coverage": 1,
+          "random": 0.0131,
+          "tracks": [],
+          "combined": 0.4512,
+          "private_eq": 0.4636
+        },
+        "36": {
+          "raw": 0.4719,
+          "skill": 0.4025,
+          "coverage": 1,
+          "random": 0.116,
+          "tracks": [],
+          "combined": 0.3946,
+          "private_eq": 0.47
+        },
+        "37": {
+          "raw": 0.6251,
+          "skill": 0.5298,
+          "coverage": 1,
+          "random": 0.2027,
+          "tracks": [],
+          "combined": 0.5617,
+          "private_eq": 0.6537
+        },
+        "38": {
+          "raw": 0.6601,
+          "skill": 0.6492,
+          "coverage": 1,
+          "random": 0.031,
+          "tracks": [],
+          "combined": 0.7618,
+          "private_eq": 0.7708
+        },
+        "39": {
+          "raw": 0.9514,
+          "skill": 0.9285,
+          "coverage": 1,
+          "random": 0.3201,
+          "tracks": [],
+          "combined": 0.5767,
+          "private_eq": 0.7148
+        },
+        "40": {
+          "raw": 0.6206,
+          "skill": 0.5118,
+          "coverage": 1,
+          "random": 0.2227,
+          "tracks": [
+            {
+              "track": "A · Arabic",
+              "score": 0.4955,
+              "headline": false
+            },
+            {
+              "track": "A · English",
+              "score": 0.6206,
+              "headline": true
+            },
+            {
+              "track": "C · Arabic pairs",
+              "score": 0.97,
+              "headline": false
+            },
+            {
+              "track": "C · English pairs",
+              "score": 0.955,
+              "headline": false
+            }
+          ],
+          "combined": 0.532,
+          "private_eq": 0.6396
+        },
+        "41": {
+          "raw": 0.7542,
+          "skill": 0.6313,
+          "coverage": 1,
+          "random": 0.3333,
+          "tracks": [],
+          "combined": 0.5739,
+          "private_eq": 0.7185
+        },
+        "42": {
+          "raw": 0.8603,
+          "skill": 0.7282,
+          "coverage": 1,
+          "random": 0.486,
+          "tracks": [],
+          "combined": 0.7416,
+          "private_eq": 0.8682
+        },
+        "43": {
+          "raw": 0.9123,
+          "skill": 0.8608,
+          "coverage": 1,
+          "random": 0.3697,
+          "tracks": [],
+          "combined": 0.2735,
+          "private_eq": 0.5467
+        },
+        "44": {
+          "raw": 0.9532,
+          "skill": 0.9064,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.7922,
+          "private_eq": 0.8968
+        },
+        "45": {
+          "raw": 0.1697,
+          "skill": 0.0067,
+          "coverage": 1,
+          "random": 0.1641,
+          "tracks": []
+        },
+        "50": {
+          "raw": 0.6068,
+          "skill": 0.4293,
+          "coverage": 1,
+          "random": 0.311,
+          "tracks": [],
+          "combined": 0.2031,
+          "private_eq": 0.4565
+        },
+        "56": {
+          "raw": 0.969,
+          "skill": 0.938,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.6288,
+          "private_eq": 0.816
+        },
+        "57": {
+          "raw": 0.6462,
+          "skill": 0.6021,
+          "coverage": 1,
+          "random": 0.1109,
+          "tracks": [],
+          "private_eq": 0.5733,
+          "combined": 0.5156
+        },
+        "58": {
+          "raw": 0.9515,
+          "skill": 0.9297,
+          "coverage": 1,
+          "random": 0.3101,
+          "tracks": [],
+          "private_eq": 0.5299,
+          "combined": 0.3118
+        },
+        "59": {
+          "raw": 0.8526,
+          "skill": 0.6944,
+          "coverage": 1,
+          "random": 0.5177,
+          "tracks": [],
+          "combined": 0.2206,
+          "private_eq": 0.6279
+        },
+        "61": {
+          "raw": 0.8992,
+          "skill": 0.7984,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.6834,
+          "private_eq": 0.843
+        },
+        "62": {
+          "raw": 0.9146,
+          "skill": 0.8861,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "combined": 0.6177,
+          "private_eq": 0.7158
+        },
+        "64": {
+          "raw": 0.822,
+          "skill": 0.7775,
+          "coverage": 1,
+          "random": 0.2,
+          "tracks": [],
+          "combined": 0.7489,
+          "private_eq": 0.8006
+        }
+      },
+      "coverage": 1,
+      "pending": 0,
+      "notes": [
+        "New in the 2026-10-18 PR batch (PR #243).",
+        "Submitted public 0.3 run adopted (kit rescore 72.24, equal to the claim). Private tests run by the lab on one RTX PRO 6000 with the author's serving; decision agreement with the submitted rows 99.84% on 819 rows (bar 98.5%).",
+        "Weights are public on the Hugging Face Hub under a proprietary license.",
+        "Training includes train splits of Decision Index benchmarks (author-declared).",
+        "One private new-domain test is not counted for this model: our checks found signs its training data overlapped it. Its new-domain score uses the remaining tests, put on the same scale with the same stock models."
+      ],
+      "scores": {
+        "balanced_raw": 78.88,
+        "balanced_skill": 60.26,
+        "breadth_skill": 71.68,
+        "public_skill": 72.24
+      },
+      "frozen_scores": {
+        "balanced_raw": 78.88,
+        "balanced_skill": 72.24,
+        "breadth_skill": 71.68
+      },
+      "categories": [
+        {
+          "id": "knowledge",
+          "raw": 0.6791,
+          "skill": 0.6063,
+          "combined": 0.4577,
+          "coverage": 1,
+          "pending": 0,
+          "n": 11
+        },
+        {
+          "id": "language",
+          "raw": 0.8174,
+          "skill": 0.7376,
+          "combined": 0.6213,
+          "coverage": 1,
+          "pending": 0,
+          "n": 9
+        },
+        {
+          "id": "retrieval",
+          "raw": 0.8095,
+          "skill": 0.7623,
+          "combined": 0.6513,
+          "coverage": 1,
+          "pending": 0,
+          "n": 6
+        },
+        {
+          "id": "tools",
+          "raw": 0.896,
+          "skill": 0.8796,
+          "combined": 0.8207,
+          "coverage": 1,
+          "pending": 0,
+          "n": 5
+        },
+        {
+          "id": "arts",
+          "raw": 0.7611,
+          "skill": 0.6163,
+          "combined": 0.5667,
+          "coverage": 1,
+          "pending": 0,
+          "n": 6
+        }
+      ],
+      "v03": {
+        "engine": "elephant-1-baselabs",
+        "pub": 72.24,
+        "same_skills": 62.44,
+        "new_domains": 44.41,
+        "v": 60.26,
+        "lab": false,
+        "jev": false,
+        "rank_v": 40,
+        "rank_pub": 4,
+        "name": "baselabs elephant-1 (9B)",
+        "eq": {
+          "S": 62.11,
+          "O": 57.49
+        },
+        "rank_tie": 10,
+        "tied": true,
+        "parts": {
+          "public": 0,
+          "same_skills": 37.27,
+          "new_domains": 22.99
+        }
+      },
+      "new_in_edition": true
+    },
+    {
+      "engine": "glide-v1.2",
+      "name": "Fastino GLiDE 1.2",
+      "long_name": "Fastino GLiDE 1.2",
+      "variant": null,
+      "meta": {
+        "kind": "full fine-tune",
+        "technique": "autoregressive",
+        "technique_name": "autoregressive",
+        "served_params": 27800000000,
+        "params_estimated": false,
+        "params_from_name": false,
+        "trained_bytes": null,
+        "model_url": "https://huggingface.co/fastino/GLiDE",
+        "code_url": "https://huggingface.co/fastino/GLiDE/tree/main/glide",
+        "base_model": "Qwen/Qwen3.8-27B",
+        "base_url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "weights_repo": "fastino/GLiDE",
+        "served_checkpoint": "a7e45896be7c96ba3354891da790c5ec99c30b6c",
+        "weights_note": null,
+        "org": {
+          "id": "fastino",
+          "name": "Fastino",
+          "logo": "data/orgs/fastino.png"
+        },
+        "pr": 255,
+        "replaces": "decision-27b-ckpt-nothink",
+        "new": true
+      },
+      "completed": 110201,
+      "counts": {
+        "ok": 110201,
+        "unsupported": 0,
+        "error": 0
+      },
+      "lifted": false,
+      "calibration": {
+        "acc": 0.8149,
+        "conf": 0.8262,
+        "ece": 0.0204,
+        "brier": 0.2568,
+        "over95": 0.0072,
+        "n": 34411,
+        "benchmarks": 31,
+        "rel": [
+          {
+            "lo": 0,
+            "w": 0.009,
+            "conf": 0.0816,
+            "acc": 0.1135
+          },
+          {
+            "lo": 0.1,
+            "w": 0.0187,
+            "conf": 0.1404,
+            "acc": 0.227
+          },
+          {
+            "lo": 0.2,
+            "w": 0.0066,
+            "conf": 0.2448,
+            "acc": 0.3639
+          },
+          {
+            "lo": 0.3,
+            "w": 0.0231,
+            "conf": 0.3529,
+            "acc": 0.4347
+          },
+          {
+            "lo": 0.4,
+            "w": 0.0347,
+            "conf": 0.4522,
+            "acc": 0.4216
+          },
+          {
+            "lo": 0.5,
+            "w": 0.0789,
+            "conf": 0.5484,
+            "acc": 0.5137
+          },
+          {
+            "lo": 0.6,
+            "w": 0.0684,
+            "conf": 0.6494,
+            "acc": 0.6223
+          },
+          {
+            "lo": 0.7,
+            "w": 0.0816,
+            "conf": 0.7502,
+            "acc": 0.6683
+          },
+          {
+            "lo": 0.8,
+            "w": 0.1189,
+            "conf": 0.8562,
+            "acc": 0.838
+          },
+          {
+            "lo": 0.9,
+            "w": 0.56,
+            "conf": 0.976,
+            "acc": 0.9736
+          }
+        ],
+        "areas": {
+          "knowledge": {
+            "ece": 0.0753,
+            "acc": 0.7287,
+            "conf": 0.7753
+          },
+          "language": {
+            "ece": 0.0181,
+            "acc": 0.9015,
+            "conf": 0.8834
+          },
+          "retrieval": {
+            "ece": 0.0348,
+            "acc": 0.8163,
+            "conf": 0.8358
+          },
+          "tools": {
+            "ece": 0.0388,
+            "acc": 0.9474,
+            "conf": 0.986
+          },
+          "arts": {
+            "ece": 0.0415,
+            "acc": 0.751,
+            "conf": 0.7216
+          }
+        }
+      },
+      "gaps": null,
+      "latency": {
+        "median": 92.9,
+        "p95": 1121.1,
+        "mean": 284
+      },
+      "results": {
+        "1": {
+          "score": 0.9734,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 1694,
+          "answered": 1694,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 308.2
+        },
+        "2": {
+          "score": 0.7122,
+          "jev": null,
+          "metric": "nDCG@10",
+          "requests": 685,
+          "answered": 685,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 3217.8
+        },
+        "3": {
+          "score": 0.8701,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 508,
+          "answered": 508,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 1613.4
+        },
+        "4": {
+          "score": 0.9201,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3080,
+          "answered": 3080,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 187.8
+        },
+        "5": {
+          "score": 0.9589,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5500,
+          "answered": 5500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 325.4
+        },
+        "6": {
+          "score": 0.7964,
+          "jev": null,
+          "metric": "selected quality (quality objective)",
+          "requests": 10000,
+          "answered": 10000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 906
+        },
+        "9": {
+          "score": 1,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 88,
+          "answered": 88,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 3996.2
+        },
+        "10": {
+          "score": 0.6727,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 2500,
+          "answered": 2500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 233.7
+        },
+        "11": {
+          "score": 0.847,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 123,
+          "answered": 123,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 6667.3
+        },
+        "12": {
+          "score": 0.806,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3200,
+          "answered": 3200,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 64.6
+        },
+        "20": {
+          "score": 0.9838,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 65
+        },
+        "21": {
+          "score": 0.6861,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2628,
+          "answered": 2628,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 55.1
+        },
+        "22": {
+          "score": 0.7935,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2000,
+          "answered": 2000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 1388.7
+        },
+        "23": {
+          "score": 0.6628,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 120.7
+        },
+        "24": {
+          "score": 0.8841,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 14033,
+          "answered": 14033,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 59.3
+        },
+        "25": {
+          "score": 0.5816,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 196,
+          "answered": 196,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 68.1
+        },
+        "26": {
+          "score": 0.9903,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2376,
+          "answered": 2376,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 56.6
+        },
+        "27": {
+          "score": 0.9718,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1172,
+          "answered": 1172,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 58.1
+        },
+        "28": {
+          "score": 0.9463,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1267,
+          "answered": 1267,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 54.7
+        },
+        "29": {
+          "score": 0.9771,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 10042,
+          "answered": 10042,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 81.9
+        },
+        "30": {
+          "score": 0.8529,
+          "jev": 0.7301,
+          "metric": "accuracy (4- and 10-choice)",
+          "requests": 2638,
+          "answered": 2638,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "31": {
+          "score": 0.2512,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 187
+        },
+        "32": {
+          "score": 0.762,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 752,
+          "answered": 752,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 191.6
+        },
+        "33": {
+          "score": 0.4491,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 1650,
+          "answered": 1650,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 681
+        },
+        "36": {
+          "score": 0.4856,
+          "jev": null,
+          "metric": "nDCG@10",
+          "requests": 220,
+          "answered": 220,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 4497
+        },
+        "37": {
+          "score": 0.6145,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 85.5
+        },
+        "38": {
+          "score": 0.6282,
+          "jev": null,
+          "metric": "per-review F1",
+          "requests": 1565,
+          "answered": 1565,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 1974.4
+        },
+        "39": {
+          "score": 0.9426,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 979,
+          "answered": 979,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 83.4
+        },
+        "40": {
+          "score": 0.6943,
+          "jev": null,
+          "metric": "Sarcasm F1 · track A, English",
+          "requests": 4600,
+          "answered": 4600,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 54.9
+        },
+        "41": {
+          "score": 0.8076,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3006,
+          "answered": 3006,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 65.4
+        },
+        "42": {
+          "score": 0.872,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5500,
+          "answered": 5500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 119.9
+        },
+        "43": {
+          "score": 0.8316,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 570,
+          "answered": 570,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 64.8
+        },
+        "44": {
+          "score": 0.9286,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 64.1
+        },
+        "45": {
+          "score": 0.1816,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 501,
+          "answered": 501,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 81
+        },
+        "50": {
+          "score": 0.6444,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1676,
+          "answered": 1676,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 167.4
+        },
+        "56": {
+          "score": 0.8585,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2000,
+          "answered": 2000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 459.7
+        },
+        "57": {
+          "score": 0.7804,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 12032,
+          "answered": 12032,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 67.8
+        },
+        "58": {
+          "score": 0.9299,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5507,
+          "answered": 5507,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 65.2
+        },
+        "59": {
+          "score": 0.8562,
+          "jev": null,
+          "metric": "F1 on hallucinated class",
+          "requests": 2700,
+          "answered": 2700,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 162.7
+        },
+        "61": {
+          "score": 0.8898,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 4000,
+          "answered": 4000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 101.3
+        },
+        "62": {
+          "score": 0.9162,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 3652,
+          "answered": 3652,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 161
+        },
+        "64": {
+          "score": 0.8295,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 528,
+          "answered": 528,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": 66.8
+        }
+      },
+      "benchmarks": {
+        "1": {
+          "raw": 0.9734,
+          "skill": 0.9641,
+          "coverage": 1,
+          "random": 0.2592,
+          "tracks": [],
+          "combined": 0.9465,
+          "private_eq": 0.9601
+        },
+        "2": {
+          "raw": 0.7122,
+          "skill": 0.6676,
+          "coverage": 1,
+          "random": 0.1341,
+          "tracks": [],
+          "combined": 0.6994,
+          "private_eq": 0.7418
+        },
+        "3": {
+          "raw": 0.8701,
+          "skill": 0.8676,
+          "coverage": 1,
+          "random": 0.0189,
+          "tracks": [],
+          "combined": 0.9433,
+          "private_eq": 0.944
+        },
+        "4": {
+          "raw": 0.9201,
+          "skill": 0.9191,
+          "coverage": 1,
+          "random": 0.0127,
+          "tracks": [],
+          "combined": 0.8854,
+          "private_eq": 0.8871
+        },
+        "5": {
+          "raw": 0.9589,
+          "skill": 0.9587,
+          "coverage": 1,
+          "random": 0.006,
+          "tracks": [],
+          "combined": 0.8829,
+          "private_eq": 0.8839
+        },
+        "6": {
+          "raw": 0.7964,
+          "skill": 0.5226,
+          "coverage": 1,
+          "random": 0.5735,
+          "tracks": []
+        },
+        "9": {
+          "raw": 1,
+          "skill": 1,
+          "coverage": 1,
+          "random": 0,
+          "tracks": [],
+          "combined": 0.9252,
+          "private_eq": 0.925
+        },
+        "10": {
+          "raw": 0.6727,
+          "skill": 0.4554,
+          "coverage": 1,
+          "random": 0.399,
+          "tracks": []
+        },
+        "11": {
+          "raw": 0.847,
+          "skill": 0.7787,
+          "coverage": 1,
+          "random": 0.3085,
+          "tracks": []
+        },
+        "12": {
+          "raw": 0.806,
+          "skill": 0.7094,
+          "coverage": 1,
+          "random": 0.3324,
+          "tracks": [],
+          "combined": 0.5298,
+          "private_eq": 0.689
+        },
+        "20": {
+          "raw": 0.984,
+          "skill": 0.9679,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.9577,
+          "private_eq": 0.9786
+        },
+        "21": {
+          "raw": 0.6861,
+          "skill": 0.3721,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.2968,
+          "private_eq": 0.6519
+        },
+        "22": {
+          "raw": 0.794,
+          "skill": 0.7924,
+          "coverage": 1,
+          "random": 0.0078,
+          "tracks": [],
+          "combined": 0.5675,
+          "private_eq": 0.5748
+        },
+        "23": {
+          "raw": 0.6762,
+          "skill": 0.3524,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": []
+        },
+        "24": {
+          "raw": 0.8841,
+          "skill": 0.8455,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": []
+        },
+        "25": {
+          "raw": 0.5816,
+          "skill": 0.4422,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "private_eq": 0.709,
+          "combined": 0.6085
+        },
+        "26": {
+          "raw": 0.9903,
+          "skill": 0.9871,
+          "coverage": 1,
+          "random": 0.2502,
+          "tracks": []
+        },
+        "27": {
+          "raw": 0.9718,
+          "skill": 0.9624,
+          "coverage": 1,
+          "random": 0.2502,
+          "tracks": []
+        },
+        "28": {
+          "raw": 0.9463,
+          "skill": 0.8926,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.6581,
+          "private_eq": 0.8305
+        },
+        "29": {
+          "raw": 0.9771,
+          "skill": 0.9695,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "combined": 1.001,
+          "private_eq": 1
+        },
+        "30": {
+          "raw": 0.8529,
+          "skill": 0.8245,
+          "coverage": 1,
+          "random": 0.175,
+          "tracks": [
+            {
+              "track": "4-choice",
+              "raw": 0.8916,
+              "random": 0.25
+            },
+            {
+              "track": "10-choice",
+              "raw": 0.8143,
+              "random": 0.1
+            }
+          ],
+          "combined": 0.7661,
+          "private_eq": 0.8084
+        },
+        "31": {
+          "raw": 0.2512,
+          "skill": 0.1844,
+          "coverage": 1,
+          "random": 0.0819,
+          "tracks": [],
+          "combined": 0.0702,
+          "private_eq": 0.1552
+        },
+        "32": {
+          "raw": 0.762,
+          "skill": 0.6216,
+          "coverage": 1,
+          "random": 0.371,
+          "tracks": [],
+          "combined": 0.4054,
+          "private_eq": 0.6296
+        },
+        "33": {
+          "raw": 0.4491,
+          "skill": 0.4418,
+          "coverage": 1,
+          "random": 0.0131,
+          "tracks": [],
+          "combined": 0.4154,
+          "private_eq": 0.4286
+        },
+        "36": {
+          "raw": 0.4856,
+          "skill": 0.4181,
+          "coverage": 1,
+          "random": 0.116,
+          "tracks": [],
+          "combined": 0.4226,
+          "private_eq": 0.4945
+        },
+        "37": {
+          "raw": 0.6145,
+          "skill": 0.5164,
+          "coverage": 1,
+          "random": 0.2027,
+          "tracks": [],
+          "combined": 0.6477,
+          "private_eq": 0.7215
+        },
+        "38": {
+          "raw": 0.6282,
+          "skill": 0.6163,
+          "coverage": 1,
+          "random": 0.031,
+          "tracks": [],
+          "combined": 0.7548,
+          "private_eq": 0.7641
+        },
+        "39": {
+          "raw": 0.9426,
+          "skill": 0.9156,
+          "coverage": 1,
+          "random": 0.3201,
+          "tracks": [],
+          "combined": 0.5803,
+          "private_eq": 0.7172
+        },
+        "40": {
+          "raw": 0.6943,
+          "skill": 0.6067,
+          "coverage": 1,
+          "random": 0.2227,
+          "tracks": [
+            {
+              "track": "A · Arabic",
+              "score": 0.4857,
+              "headline": false
+            },
+            {
+              "track": "A · English",
+              "score": 0.6943,
+              "headline": true
+            },
+            {
+              "track": "C · Arabic pairs",
+              "score": 0.95,
+              "headline": false
+            },
+            {
+              "track": "C · English pairs",
+              "score": 0.98,
+              "headline": false
+            }
+          ],
+          "combined": 0.5795,
+          "private_eq": 0.6761
+        },
+        "41": {
+          "raw": 0.8076,
+          "skill": 0.7115,
+          "coverage": 1,
+          "random": 0.3333,
+          "tracks": [],
+          "combined": 0.4952,
+          "private_eq": 0.6666
+        },
+        "42": {
+          "raw": 0.872,
+          "skill": 0.751,
+          "coverage": 1,
+          "random": 0.486,
+          "tracks": [],
+          "combined": 0.9955,
+          "private_eq": 0.9972
+        },
+        "43": {
+          "raw": 0.8316,
+          "skill": 0.7328,
+          "coverage": 1,
+          "random": 0.3697,
+          "tracks": [],
+          "combined": 0.8169,
+          "private_eq": 0.8853
+        },
+        "44": {
+          "raw": 0.9286,
+          "skill": 0.8572,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.7708,
+          "private_eq": 0.8862
+        },
+        "45": {
+          "raw": 0.1816,
+          "skill": 0.0209,
+          "coverage": 1,
+          "random": 0.1641,
+          "tracks": []
+        },
+        "50": {
+          "raw": 0.6444,
+          "skill": 0.4839,
+          "coverage": 1,
+          "random": 0.311,
+          "tracks": [],
+          "combined": 0.3338,
+          "private_eq": 0.5455
+        },
+        "56": {
+          "raw": 0.8585,
+          "skill": 0.717,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.8626,
+          "private_eq": 0.9316
+        },
+        "57": {
+          "raw": 0.7804,
+          "skill": 0.753,
+          "coverage": 1,
+          "random": 0.1109,
+          "tracks": [],
+          "private_eq": 0.8995,
+          "combined": 0.8867
+        },
+        "58": {
+          "raw": 0.9299,
+          "skill": 0.8984,
+          "coverage": 1,
+          "random": 0.3101,
+          "tracks": [],
+          "private_eq": 0.5199,
+          "combined": 0.2971
+        },
+        "59": {
+          "raw": 0.8562,
+          "skill": 0.7018,
+          "coverage": 1,
+          "random": 0.5177,
+          "tracks": [],
+          "combined": 0.2716,
+          "private_eq": 0.6522
+        },
+        "61": {
+          "raw": 0.8898,
+          "skill": 0.7796,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.6834,
+          "private_eq": 0.843
+        },
+        "62": {
+          "raw": 0.9162,
+          "skill": 0.8883,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "combined": 0.693,
+          "private_eq": 0.7716
+        },
+        "64": {
+          "raw": 0.8295,
+          "skill": 0.7869,
+          "coverage": 1,
+          "random": 0.2,
+          "tracks": [],
+          "combined": 0.778,
+          "private_eq": 0.8236
+        }
+      },
+      "coverage": 1,
+      "pending": 0,
+      "notes": [
+        "New in the 2026-10-21 PR batch (PR #255).",
+        "Replaces the earlier board entry decision-27b-ckpt-nothink (newer version of the same model).",
+        "Submitted public 0.3 run adopted (kit rescore 71.99). Private tests run by the lab on one RTX PRO 6000 with the author's serving; decision agreement with the submitted rows 99.90% on 895 rows (bar 98.5%).",
+        "Model repository is private; the lab ran the weights shared for evaluation."
+      ],
+      "scores": {
+        "balanced_raw": 78.89,
+        "balanced_skill": 71.52,
+        "breadth_skill": 71.44,
+        "public_skill": 71.99
+      },
+      "frozen_scores": {
+        "balanced_raw": 78.89,
+        "balanced_skill": 71.99,
+        "breadth_skill": 71.44
+      },
+      "categories": [
+        {
+          "id": "knowledge",
+          "raw": 0.6816,
+          "skill": 0.6059,
+          "combined": 0.5727,
+          "coverage": 1,
+          "pending": 0,
+          "n": 11
+        },
+        {
+          "id": "language",
+          "raw": 0.8285,
+          "skill": 0.7549,
+          "combined": 0.6564,
+          "coverage": 1,
+          "pending": 0,
+          "n": 9
+        },
+        {
+          "id": "retrieval",
+          "raw": 0.7879,
+          "skill": 0.7224,
+          "combined": 0.7307,
+          "coverage": 1,
+          "pending": 0,
+          "n": 6
+        },
+        {
+          "id": "tools",
+          "raw": 0.8964,
+          "skill": 0.8804,
+          "combined": 0.8491,
+          "coverage": 1,
+          "pending": 0,
+          "n": 5
+        },
+        {
+          "id": "arts",
+          "raw": 0.769,
+          "skill": 0.6259,
+          "combined": 0.5867,
+          "coverage": 1,
+          "pending": 0,
+          "n": 6
+        }
+      ],
+      "v03": {
+        "engine": "glide-v1.2",
+        "pub": 71.99,
+        "same_skills": 68.57,
+        "new_domains": 59.66,
+        "v": 71.52,
+        "lab": false,
+        "jev": false,
+        "rank_v": 1,
+        "rank_pub": 5,
+        "name": "Fastino GLiDE 1.2",
+        "eq": {
+          "S": 68.31,
+          "O": 76.32
+        },
+        "rank_tie": 1,
+        "tied": false,
+        "parts": {
+          "public": 0,
+          "same_skills": 40.99,
+          "new_domains": 30.53
+        }
+      },
+      "new_in_edition": true
+    },
+    {
+      "engine": "h2o-lightning-31b",
+      "name": "H2O Lightning 31B",
+      "long_name": "H2O Lightning 31B",
+      "variant": null,
+      "meta": {
+        "kind": "full fine-tune",
+        "technique": "autoregressive",
+        "technique_name": "autoregressive",
+        "served_params": 31273086512,
+        "params_estimated": false,
+        "params_from_name": false,
+        "trained_bytes": null,
+        "model_url": "https://huggingface.co/h2oai/h2o-lightning-31b",
+        "code_url": null,
+        "base_model": "google/gemma-4-31B-it",
+        "base_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "weights_repo": null,
+        "served_checkpoint": null,
+        "org": {
+          "id": "h2oai",
+          "name": "H2O.ai",
+          "logo": "data/orgs/h2oai.png"
+        },
+        "pr": 253,
+        "new": true
+      },
+      "completed": 110201,
+      "counts": {
+        "ok": 110201,
+        "unsupported": 0,
+        "error": 0
+      },
+      "lifted": false,
+      "calibration": {
+        "acc": 0.7785,
+        "conf": 0.8575,
+        "ece": 0.0842,
+        "brier": 0.3333,
+        "over95": 0.046,
+        "n": 34411,
+        "benchmarks": 31,
+        "rel": [
+          {
+            "lo": 0,
+            "w": 0.0106,
+            "conf": 0.0763,
+            "acc": 0.1518
+          },
+          {
+            "lo": 0.1,
+            "w": 0.0121,
+            "conf": 0.1414,
+            "acc": 0.2141
+          },
+          {
+            "lo": 0.2,
+            "w": 0.0072,
+            "conf": 0.2563,
+            "acc": 0.3092
+          },
+          {
+            "lo": 0.3,
+            "w": 0.0107,
+            "conf": 0.3569,
+            "acc": 0.2604
+          },
+          {
+            "lo": 0.4,
+            "w": 0.0231,
+            "conf": 0.4574,
+            "acc": 0.4813
+          },
+          {
+            "lo": 0.5,
+            "w": 0.0613,
+            "conf": 0.5455,
+            "acc": 0.4769
+          },
+          {
+            "lo": 0.6,
+            "w": 0.0451,
+            "conf": 0.6517,
+            "acc": 0.477
+          },
+          {
+            "lo": 0.7,
+            "w": 0.0548,
+            "conf": 0.7504,
+            "acc": 0.6219
+          },
+          {
+            "lo": 0.8,
+            "w": 0.0933,
+            "conf": 0.8569,
+            "acc": 0.6557
+          },
+          {
+            "lo": 0.9,
+            "w": 0.6818,
+            "conf": 0.9605,
+            "acc": 0.8979
+          }
+        ],
+        "areas": {
+          "knowledge": {
+            "ece": 0.093,
+            "acc": 0.7194,
+            "conf": 0.7961
+          },
+          "language": {
+            "ece": 0.0288,
+            "acc": 0.8815,
+            "conf": 0.8992
+          },
+          "retrieval": {
+            "ece": 0.2656,
+            "acc": 0.6435,
+            "conf": 0.9083
+          },
+          "tools": {
+            "ece": 0.0211,
+            "acc": 0.9428,
+            "conf": 0.961
+          },
+          "arts": {
+            "ece": 0.0816,
+            "acc": 0.7208,
+            "conf": 0.8024
+          }
+        }
+      },
+      "gaps": null,
+      "latency": {
+        "median": 57.2,
+        "p95": 622.2,
+        "mean": 152.4
+      },
+      "results": {
+        "1": {
+          "score": 0.9782,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 1694,
+          "answered": 1694,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "2": {
+          "score": 0.6923,
+          "jev": null,
+          "metric": "nDCG@10",
+          "requests": 685,
+          "answered": 685,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "3": {
+          "score": 0.8406,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 508,
+          "answered": 508,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "4": {
+          "score": 0.9112,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3080,
+          "answered": 3080,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "5": {
+          "score": 0.9443,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5500,
+          "answered": 5500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "6": {
+          "score": 0.7879,
+          "jev": null,
+          "metric": "selected quality (quality objective)",
+          "requests": 10000,
+          "answered": 10000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "9": {
+          "score": 0.9886,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 88,
+          "answered": 88,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "10": {
+          "score": 0.0462,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 2500,
+          "answered": 2500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "11": {
+          "score": 0.8301,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 123,
+          "answered": 123,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "12": {
+          "score": 0.7801,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3200,
+          "answered": 3200,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "20": {
+          "score": 0.9826,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "21": {
+          "score": 0.6781,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2628,
+          "answered": 2628,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "22": {
+          "score": 0.6525,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2000,
+          "answered": 2000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "23": {
+          "score": 0.6666,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "24": {
+          "score": 0.8777,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 14033,
+          "answered": 14033,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "25": {
+          "score": 0.551,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 196,
+          "answered": 196,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "26": {
+          "score": 0.9907,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2376,
+          "answered": 2376,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "27": {
+          "score": 0.9778,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1172,
+          "answered": 1172,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "28": {
+          "score": 0.9234,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1267,
+          "answered": 1267,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "29": {
+          "score": 0.9542,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 10042,
+          "answered": 10042,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "30": {
+          "score": 0.8609,
+          "jev": 0.7301,
+          "metric": "accuracy (4- and 10-choice)",
+          "requests": 2638,
+          "answered": 2638,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "31": {
+          "score": 0.2546,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "32": {
+          "score": 0.6835,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 752,
+          "answered": 752,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "33": {
+          "score": 0.3182,
+          "jev": null,
+          "metric": "case exact accuracy",
+          "requests": 1650,
+          "answered": 1650,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "36": {
+          "score": 0.4316,
+          "jev": null,
+          "metric": "nDCG@10",
+          "requests": 220,
+          "answered": 220,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "37": {
+          "score": 0.5706,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "38": {
+          "score": 0.4785,
+          "jev": null,
+          "metric": "per-review F1",
+          "requests": 1565,
+          "answered": 1565,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "39": {
+          "score": 0.9083,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 979,
+          "answered": 979,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "40": {
+          "score": 0.5952,
+          "jev": null,
+          "metric": "Sarcasm F1 · track A, English",
+          "requests": 4600,
+          "answered": 4600,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "41": {
+          "score": 0.8137,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 3006,
+          "answered": 3006,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "42": {
+          "score": 0.8586,
+          "jev": null,
+          "metric": "macro-F1",
+          "requests": 5500,
+          "answered": 5500,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "43": {
+          "score": 0.8386,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 570,
+          "answered": 570,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "44": {
+          "score": 0.8658,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5000,
+          "answered": 5000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "45": {
+          "score": 0.1178,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 501,
+          "answered": 501,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "50": {
+          "score": 0.6337,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 1676,
+          "answered": 1676,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "56": {
+          "score": 0.8015,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 2000,
+          "answered": 2000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "57": {
+          "score": 0.7233,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 12032,
+          "answered": 12032,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "58": {
+          "score": 0.8613,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 5507,
+          "answered": 5507,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "59": {
+          "score": 0.788,
+          "jev": null,
+          "metric": "F1 on hallucinated class",
+          "requests": 2700,
+          "answered": 2700,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "61": {
+          "score": 0.8093,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 4000,
+          "answered": 4000,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "62": {
+          "score": 0.8395,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 3652,
+          "answered": 3652,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        },
+        "64": {
+          "score": 0.8258,
+          "jev": null,
+          "metric": "accuracy",
+          "requests": 528,
+          "answered": 528,
+          "unsupported": 0,
+          "errors": 0,
+          "median_ms": null
+        }
+      },
+      "benchmarks": {
+        "1": {
+          "raw": 0.9782,
+          "skill": 0.9705,
+          "coverage": 1,
+          "random": 0.2592,
+          "tracks": [],
+          "combined": 0.9669,
+          "private_eq": 0.975
+        },
+        "2": {
+          "raw": 0.6923,
+          "skill": 0.6447,
+          "coverage": 1,
+          "random": 0.1341,
+          "tracks": [],
+          "combined": 0.7068,
+          "private_eq": 0.7481
+        },
+        "3": {
+          "raw": 0.8406,
+          "skill": 0.8375,
+          "coverage": 1,
+          "random": 0.0189,
+          "tracks": [],
+          "combined": 0.9224,
+          "private_eq": 0.9237
+        },
+        "4": {
+          "raw": 0.9112,
+          "skill": 0.9101,
+          "coverage": 1,
+          "random": 0.0127,
+          "tracks": [],
+          "combined": 0.8781,
+          "private_eq": 0.88
+        },
+        "5": {
+          "raw": 0.9443,
+          "skill": 0.944,
+          "coverage": 1,
+          "random": 0.006,
+          "tracks": [],
+          "combined": 0.8215,
+          "private_eq": 0.8236
+        },
+        "6": {
+          "raw": 0.7879,
+          "skill": 0.5027,
+          "coverage": 1,
+          "random": 0.5735,
+          "tracks": []
+        },
+        "9": {
+          "raw": 0.9886,
+          "skill": 0.9886,
+          "coverage": 1,
+          "random": 0,
+          "tracks": [],
+          "combined": 0.8645,
+          "private_eq": 0.865
+        },
+        "10": {
+          "raw": 0.0462,
+          "skill": 0,
+          "coverage": 1,
+          "random": 0.399,
+          "tracks": []
+        },
+        "11": {
+          "raw": 0.8301,
+          "skill": 0.7543,
+          "coverage": 1,
+          "random": 0.3085,
+          "tracks": []
+        },
+        "12": {
+          "raw": 0.7801,
+          "skill": 0.6706,
+          "coverage": 1,
+          "random": 0.3324,
+          "tracks": [],
+          "combined": 0.5654,
+          "private_eq": 0.7125
+        },
+        "20": {
+          "raw": 0.9821,
+          "skill": 0.9641,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.9867,
+          "private_eq": 0.9929
+        },
+        "21": {
+          "raw": 0.6781,
+          "skill": 0.3562,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.2869,
+          "private_eq": 0.647
+        },
+        "22": {
+          "raw": 0.6439,
+          "skill": 0.6412,
+          "coverage": 1,
+          "random": 0.0078,
+          "tracks": [],
+          "combined": 0.407,
+          "private_eq": 0.4173
+        },
+        "23": {
+          "raw": 0.6763,
+          "skill": 0.3526,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": []
+        },
+        "24": {
+          "raw": 0.8777,
+          "skill": 0.8369,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": []
+        },
+        "25": {
+          "raw": 0.551,
+          "skill": 0.4014,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "private_eq": 0.5106,
+          "combined": 0.341
+        },
+        "26": {
+          "raw": 0.9907,
+          "skill": 0.9876,
+          "coverage": 1,
+          "random": 0.2502,
+          "tracks": []
+        },
+        "27": {
+          "raw": 0.9778,
+          "skill": 0.9704,
+          "coverage": 1,
+          "random": 0.2502,
+          "tracks": []
+        },
+        "28": {
+          "raw": 0.9234,
+          "skill": 0.8468,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.5974,
+          "private_eq": 0.8005
+        },
+        "29": {
+          "raw": 0.9542,
+          "skill": 0.9389,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "combined": 0.9879,
+          "private_eq": 0.9903
+        },
+        "30": {
+          "raw": 0.8609,
+          "skill": 0.834,
+          "coverage": 1,
+          "random": 0.175,
+          "tracks": [
+            {
+              "track": "4-choice",
+              "raw": 0.8976,
+              "random": 0.25
+            },
+            {
+              "track": "10-choice",
+              "raw": 0.8241,
+              "random": 0.1
+            }
+          ],
+          "combined": 0.8031,
+          "private_eq": 0.8386
+        },
+        "31": {
+          "raw": 0.2546,
+          "skill": 0.1881,
+          "coverage": 1,
+          "random": 0.0819,
+          "tracks": [],
+          "combined": 0.0669,
+          "private_eq": 0.1522
+        },
+        "32": {
+          "raw": 0.6835,
+          "skill": 0.4968,
+          "coverage": 1,
+          "random": 0.371,
+          "tracks": [],
+          "combined": 0.382,
+          "private_eq": 0.6151
+        },
+        "33": {
+          "raw": 0.3182,
+          "skill": 0.3091,
+          "coverage": 1,
+          "random": 0.0131,
+          "tracks": [],
+          "combined": 0.4307,
+          "private_eq": 0.4436
+        },
+        "36": {
+          "raw": 0.4316,
+          "skill": 0.357,
+          "coverage": 1,
+          "random": 0.116,
+          "tracks": [],
+          "combined": 0.4092,
+          "private_eq": 0.4828
+        },
+        "37": {
+          "raw": 0.5706,
+          "skill": 0.4614,
+          "coverage": 1,
+          "random": 0.2027,
+          "tracks": [],
+          "combined": 0.6015,
+          "private_eq": 0.6851
+        },
+        "38": {
+          "raw": 0.4785,
+          "skill": 0.4618,
+          "coverage": 1,
+          "random": 0.031,
+          "tracks": [],
+          "combined": 0.6153,
+          "private_eq": 0.6305
+        },
+        "39": {
+          "raw": 0.9083,
+          "skill": 0.8651,
+          "coverage": 1,
+          "random": 0.3201,
+          "tracks": [],
+          "combined": 0.5908,
+          "private_eq": 0.7243
+        },
+        "40": {
+          "raw": 0.5952,
+          "skill": 0.4793,
+          "coverage": 1,
+          "random": 0.2227,
+          "tracks": [
+            {
+              "track": "A · Arabic",
+              "score": 0.6035,
+              "headline": false
+            },
+            {
+              "track": "A · English",
+              "score": 0.5952,
+              "headline": true
+            },
+            {
+              "track": "C · Arabic pairs",
+              "score": 0.91,
+              "headline": false
+            },
+            {
+              "track": "C · English pairs",
+              "score": 0.985,
+              "headline": false
+            }
+          ],
+          "combined": 0.3768,
+          "private_eq": 0.5203
+        },
+        "41": {
+          "raw": 0.8137,
+          "skill": 0.7205,
+          "coverage": 1,
+          "random": 0.3333,
+          "tracks": [],
+          "combined": 0.5636,
+          "private_eq": 0.7117
+        },
+        "42": {
+          "raw": 0.8586,
+          "skill": 0.7249,
+          "coverage": 1,
+          "random": 0.486,
+          "tracks": [],
+          "combined": 0.931,
+          "private_eq": 0.9644
+        },
+        "43": {
+          "raw": 0.8386,
+          "skill": 0.7439,
+          "coverage": 1,
+          "random": 0.3697,
+          "tracks": [],
+          "combined": 0.7,
+          "private_eq": 0.8124
+        },
+        "44": {
+          "raw": 0.8658,
+          "skill": 0.7316,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.6798,
+          "private_eq": 0.8412
+        },
+        "45": {
+          "raw": 0.1178,
+          "skill": 0,
+          "coverage": 1,
+          "random": 0.1641,
+          "tracks": []
+        },
+        "50": {
+          "raw": 0.6337,
+          "skill": 0.4683,
+          "coverage": 1,
+          "random": 0.311,
+          "tracks": [],
+          "combined": 0.2322,
+          "private_eq": 0.4763
+        },
+        "56": {
+          "raw": 0.8015,
+          "skill": 0.603,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.7589,
+          "private_eq": 0.8803
+        },
+        "57": {
+          "raw": 0.7233,
+          "skill": 0.6888,
+          "coverage": 1,
+          "random": 0.1109,
+          "tracks": [],
+          "private_eq": 0.6552,
+          "combined": 0.6087
+        },
+        "58": {
+          "raw": 0.8613,
+          "skill": 0.799,
+          "coverage": 1,
+          "random": 0.3101,
+          "tracks": [],
+          "private_eq": 0.5326,
+          "combined": 0.3157
+        },
+        "59": {
+          "raw": 0.788,
+          "skill": 0.5604,
+          "coverage": 1,
+          "random": 0.5177,
+          "tracks": [],
+          "combined": 0.2827,
+          "private_eq": 0.6575
+        },
+        "61": {
+          "raw": 0.8093,
+          "skill": 0.6186,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.6549,
+          "private_eq": 0.8289
+        },
+        "62": {
+          "raw": 0.8395,
+          "skill": 0.786,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "combined": 0.6589,
+          "private_eq": 0.7463
+        },
+        "64": {
+          "raw": 0.8258,
+          "skill": 0.7822,
+          "coverage": 1,
+          "random": 0.2,
+          "tracks": [],
+          "combined": 0.7877,
+          "private_eq": 0.8313
+        }
+      },
+      "coverage": 1,
+      "pending": 0,
+      "notes": [
+        "New in the 2026-10-21 PR batch (PR #253).",
+        "Submitted public 0.3 run adopted (kit rescore 66.69). Private tests run by the lab on one RTX PRO 6000 with the author's serving (FP8); decision agreement with the submitted rows 98.42% on 831 rows (bar 96%).",
+        "Served in FP8 as in the submitted run, so the quantized agreement bar applies.",
+        "Serving uses H2O's public vLLM build with per-request attention.",
+        "H2O Model Non-Commercial Licence v1.1 (gated, automatic approval); evaluation and benchmarking allowed.",
+        "Per-benchmark times are not shown: the board run sent requests in batches, so its timings are batch wall-clock. The latency shown is the single-request measurement."
+      ],
+      "scores": {
+        "balanced_raw": 74.93,
+        "balanced_skill": 66.58,
+        "breadth_skill": 66.04,
+        "public_skill": 66.69
+      },
+      "frozen_scores": {
+        "balanced_raw": 74.93,
+        "balanced_skill": 66.69,
+        "breadth_skill": 66.04
+      },
+      "categories": [
+        {
+          "id": "knowledge",
+          "raw": 0.6361,
+          "skill": 0.5489,
+          "combined": 0.4906,
+          "coverage": 1,
+          "pending": 0,
+          "n": 11
+        },
+        {
+          "id": "language",
+          "raw": 0.7823,
+          "skill": 0.6912,
+          "combined": 0.6219,
+          "coverage": 1,
+          "pending": 0,
+          "n": 9
+        },
+        {
+          "id": "retrieval",
+          "raw": 0.7464,
+          "skill": 0.657,
+          "combined": 0.6887,
+          "coverage": 1,
+          "pending": 0,
+          "n": 6
+        },
+        {
+          "id": "tools",
+          "raw": 0.8709,
+          "skill": 0.8498,
+          "combined": 0.8328,
+          "coverage": 1,
+          "pending": 0,
+          "n": 5
+        },
+        {
+          "id": "arts",
+          "raw": 0.74,
+          "skill": 0.5941,
+          "combined": 0.54,
+          "coverage": 1,
+          "pending": 0,
+          "n": 6
+        }
+      ],
+      "v03": {
+        "engine": "h2o-lightning-31b",
+        "pub": 66.69,
+        "same_skills": 64.07,
+        "new_domains": 55.2,
+        "v": 66.58,
+        "lab": false,
+        "jev": false,
+        "rank_v": 16,
+        "rank_pub": 18,
+        "name": "H2O Lightning 31B",
+        "eq": {
+          "S": 63.76,
+          "O": 70.82
+        },
+        "rank_tie": 4,
+        "tied": true,
+        "parts": {
+          "public": 0,
+          "same_skills": 38.25,
+          "new_domains": 28.33
+        }
+      },
+      "new_in_edition": true
+    },
+    {
+      "engine": "jev",
+      "name": "Jev 1.14",
+      "version": "jev-1.14.0",
+      "edition": "Lab run, 2026-10-14",
+      "results": {
+        "1": {
+          "score": 0.964,
+          "metric": "case exact accuracy",
+          "cases": 1694,
+          "median_ms": 922.1,
+          "p95_ms": null,
+          "usd": null
+        },
+        "2": {
+          "score": 0.6505,
+          "metric": "nDCG@10",
+          "cases": 685,
+          "median_ms": 1012.5,
+          "p95_ms": null,
+          "usd": null
+        },
+        "3": {
+          "score": 0.8661,
+          "metric": "accuracy",
+          "cases": 508,
+          "median_ms": 992.8,
+          "p95_ms": null,
+          "usd": null
+        },
+        "4": {
+          "score": 0.7994,
+          "metric": "macro-F1",
+          "cases": 3080,
+          "median_ms": 837.1,
+          "p95_ms": null,
+          "usd": null
+        },
+        "5": {
+          "score": 0.9028,
+          "metric": "macro-F1",
+          "cases": 5500,
+          "median_ms": 556.4,
+          "p95_ms": null,
+          "usd": null
+        },
+        "6": {
+          "score": 0.7988,
+          "metric": "selected quality (quality objective)",
+          "cases": 10000,
+          "median_ms": 508.5,
+          "p95_ms": null,
+          "usd": null
+        },
+        "9": {
+          "score": 0.4545,
+          "metric": "case exact accuracy",
+          "cases": 88,
+          "median_ms": 883.7,
+          "p95_ms": null,
+          "usd": null
+        },
+        "10": {
+          "score": 0.0903,
+          "metric": "macro-F1",
+          "cases": 2500,
+          "median_ms": 1008.8,
+          "p95_ms": null,
+          "usd": null
+        },
+        "11": {
+          "score": 0.7076,
+          "metric": "macro-F1",
+          "cases": 123,
+          "median_ms": 853.8,
+          "p95_ms": null,
+          "usd": null
+        },
+        "12": {
+          "score": 0.7427,
+          "metric": "macro-F1",
+          "cases": 3200,
+          "median_ms": 828.8,
+          "p95_ms": null,
+          "usd": null
+        },
+        "20": {
+          "score": 0.9006,
+          "metric": "accuracy",
+          "cases": 5000,
+          "median_ms": 585.4,
+          "p95_ms": null,
+          "usd": null
+        },
+        "21": {
+          "score": 0.6176,
+          "metric": "accuracy",
+          "cases": 2628,
+          "median_ms": 1001.1,
+          "p95_ms": null,
+          "usd": null
+        },
+        "22": {
+          "score": 0.1645,
+          "metric": "accuracy",
+          "cases": 2000,
+          "median_ms": 924.4,
+          "p95_ms": null,
+          "usd": null
+        },
+        "23": {
+          "score": 0.6634,
+          "metric": "accuracy",
+          "cases": 5000,
+          "median_ms": 610.2,
+          "p95_ms": null,
+          "usd": null
+        },
+        "24": {
+          "score": 0.9167,
+          "metric": "accuracy",
+          "cases": 14033,
+          "median_ms": 525.1,
+          "p95_ms": null,
+          "usd": null
+        },
+        "25": {
+          "score": 0.7551,
+          "metric": "accuracy",
+          "cases": 196,
+          "median_ms": 998.8,
+          "p95_ms": null,
+          "usd": null
+        },
+        "26": {
+          "score": 0.9933,
+          "metric": "accuracy",
+          "cases": 2376,
+          "median_ms": 919.6,
+          "p95_ms": null,
+          "usd": null
+        },
+        "27": {
+          "score": 0.9761,
+          "metric": "accuracy",
+          "cases": 1172,
+          "median_ms": 934.3,
+          "p95_ms": null,
+          "usd": null
+        },
+        "28": {
+          "score": 0.9108,
+          "metric": "accuracy",
+          "cases": 1267,
+          "median_ms": 913.4,
+          "p95_ms": null,
+          "usd": null
+        },
+        "29": {
+          "score": 0.9434,
+          "metric": "accuracy",
+          "cases": 10042,
+          "median_ms": 480.4,
+          "p95_ms": null,
+          "usd": null
+        },
+        "30": {
+          "score": 0.7301,
+          "metric": "accuracy (4- and 10-choice)",
+          "cases": 2638,
+          "median_ms": null,
+          "p95_ms": null,
+          "usd": null
+        },
+        "31": {
+          "score": 0.1688,
+          "metric": "accuracy",
+          "cases": 5000,
+          "median_ms": 587.9,
+          "p95_ms": null,
+          "usd": null
+        },
+        "32": {
+          "score": 0.7261,
+          "metric": "accuracy",
+          "cases": 752,
+          "median_ms": 1002.5,
+          "p95_ms": null,
+          "usd": null
+        },
+        "33": {
+          "score": 0.2788,
+          "metric": "case exact accuracy",
+          "cases": 1650,
+          "median_ms": 874.9,
+          "p95_ms": null,
+          "usd": null
+        },
+        "36": {
+          "score": 0.4705,
+          "metric": "nDCG@10",
+          "cases": 220,
+          "median_ms": 809.3,
+          "p95_ms": null,
+          "usd": null
+        },
+        "37": {
+          "score": 0.5718,
+          "metric": "macro-F1",
+          "cases": 5000,
+          "median_ms": 616.6,
+          "p95_ms": null,
+          "usd": null
+        },
+        "38": {
+          "score": 0.3314,
+          "metric": "per-review F1",
+          "cases": 1565,
+          "median_ms": 1015.9,
+          "p95_ms": null,
+          "usd": null
+        },
+        "39": {
+          "score": 0.8768,
+          "metric": "macro-F1",
+          "cases": 979,
+          "median_ms": 920.9,
+          "p95_ms": null,
+          "usd": null
+        },
+        "40": {
+          "score": 0.5327,
+          "metric": "Sarcasm F1 · track A, English",
+          "cases": 4600,
+          "median_ms": 627.3,
+          "p95_ms": null,
+          "usd": null
+        },
+        "41": {
+          "score": 0.7365,
+          "metric": "macro-F1",
+          "cases": 3006,
+          "median_ms": 835.8,
+          "p95_ms": null,
+          "usd": null
+        },
+        "42": {
+          "score": 0.8512,
+          "metric": "macro-F1",
+          "cases": 5500,
+          "median_ms": 575,
+          "p95_ms": null,
+          "usd": null
+        },
+        "43": {
+          "score": 0.7474,
+          "metric": "accuracy",
+          "cases": 570,
+          "median_ms": 1044,
+          "p95_ms": null,
+          "usd": null
+        },
+        "44": {
+          "score": 0.8858,
+          "metric": "accuracy",
+          "cases": 5000,
+          "median_ms": 629.8,
+          "p95_ms": null,
+          "usd": null
+        },
+        "45": {
+          "score": 0.1936,
+          "metric": "accuracy",
+          "cases": 501,
+          "median_ms": 923.6,
+          "p95_ms": null,
+          "usd": null
+        },
+        "50": {
+          "score": 0.4457,
+          "metric": "accuracy",
+          "cases": 1676,
+          "median_ms": 937.3,
+          "p95_ms": null,
+          "usd": null
+        },
+        "56": {
+          "score": 0.8375,
+          "metric": "accuracy",
+          "cases": 2000,
+          "median_ms": 1582.9,
+          "p95_ms": null,
+          "usd": null
+        },
+        "57": {
+          "score": 0.8213,
+          "metric": "accuracy",
+          "cases": 12032,
+          "median_ms": 517.5,
+          "p95_ms": null,
+          "usd": null
+        },
+        "58": {
+          "score": 0.9319,
+          "metric": "accuracy",
+          "cases": 5507,
+          "median_ms": 503.5,
+          "p95_ms": null,
+          "usd": null
+        },
+        "59": {
+          "score": 0.7512,
+          "metric": "F1 on hallucinated class",
+          "cases": 2700,
+          "median_ms": 514.2,
+          "p95_ms": null,
+          "usd": null
+        },
+        "61": {
+          "score": 0.7675,
+          "metric": "accuracy",
+          "cases": 4000,
+          "median_ms": 510.7,
+          "p95_ms": null,
+          "usd": null
+        },
+        "62": {
+          "score": 0.8165,
+          "metric": "accuracy",
+          "cases": 3652,
+          "median_ms": 520,
+          "p95_ms": null,
+          "usd": null
+        },
+        "64": {
+          "score": 0.7254,
+          "metric": "accuracy",
+          "cases": 528,
+          "median_ms": 507.8,
+          "p95_ms": null,
+          "usd": null
+        }
+      },
+      "latency": {
+        "median": 196,
+        "p95": 296.8,
+        "note": "Hosted API, network round-trip from our lab: one sequential HTTPS client on the latency-v1 sample. Not comparable to the on-card single-process figures."
+      },
+      "interactive": [],
+      "references": [
+        {
+          "catalog_id": 25,
+          "model": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
+          "score": 0.9374,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
+          "score": 0.5913,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "GPT-6 Astra (max)",
+          "score": 0.9606,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "GPT-6 Astra (max)",
+          "score": 0.5468,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+          "score": 0.9323,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+          "score": 0.5487,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
+          "score": 0.9263,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
+          "score": 0.5547,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "Muse Spark 1.3 (max)",
+          "score": 0.9354,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "Muse Spark 1.3 (max)",
+          "score": 0.487,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "GPT-5.6 Sol (max)",
+          "score": 0.9414,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "GPT-5.6 Sol (max)",
+          "score": 0.4949,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "Qwen3.8 Max (0902)",
+          "score": 0.9283,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "Qwen3.8 Max (0902)",
+          "score": 0.431,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "GLM-5.3 (max)",
+          "score": 0.9172,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "GLM-5.3 (max)",
+          "score": 0.4226,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "Grok 4.6 (high)",
+          "score": 0.9495,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "Grok 4.6 (high)",
+          "score": 0.4291,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "Kimi K3 (max)",
+          "score": 0.9354,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "Kimi K3 (max)",
+          "score": 0.469,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "Step 5 Preview",
+          "score": 0.4648,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "GPT-5.6 Terra (max)",
+          "score": 0.9253,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "GPT-5.6 Terra (max)",
+          "score": 0.4291,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "GLM 5.3 Flash",
+          "score": 0.9121,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "GLM 5.3 Flash",
+          "score": 0.3985,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 25,
+          "model": "Gemini 3.8 Flash (high)",
+          "score": 0.9525,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "Gemini 3.8 Flash (high)",
+          "score": 0.4782,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 45,
+          "model": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
+          "score": 0.3925,
+          "metric": "Accuracy"
+        },
+        {
+          "catalog_id": 34,
+          "model": "Claude Fable 5",
+          "score": 0.819,
+          "metric": "AVG@5 accuracy"
+        },
+        {
+          "catalog_id": 34,
+          "model": "Claude Opus 5",
+          "score": 0.806,
+          "metric": "AVG@5 accuracy"
+        }
+      ],
+      "summary_notes": [
+        "Run by the lab through the TypeSafe API (model id jev-1.14.0) with the same clients, rows and scoring as the Jev 1.13 run; only the model id differs.",
+        "Metrics exclude failed/incomplete cases; coverage is explicit. No silent replacement of failures.",
+        "Latency includes HTTPS and service scheduling; not isolated model inference.",
+        "The interactive games and the extra benchmarks of the Jev 1.13 release run were not run for 1.14."
+      ],
+      "calibration": {
+        "acc": 0.7431,
+        "conf": 0.8165,
+        "ece": 0.0799,
+        "brier": 0.3567,
+        "over95": 0.0265,
+        "n": 34411,
+        "benchmarks": 31,
+        "rel": [
+          {
+            "lo": 0,
+            "w": 0.0005,
+            "conf": 0.0843,
+            "acc": 0.1429
+          },
+          {
+            "lo": 0.1,
+            "w": 0.0225,
+            "conf": 0.1574,
+            "acc": 0.1142
+          },
+          {
+            "lo": 0.2,
+            "w": 0.0307,
+            "conf": 0.2411,
+            "acc": 0.1246
+          },
+          {
+            "lo": 0.3,
+            "w": 0.0276,
+            "conf": 0.3466,
+            "acc": 0.4647
+          },
+          {
+            "lo": 0.4,
+            "w": 0.0324,
+            "conf": 0.4529,
+            "acc": 0.4043
+          },
+          {
+            "lo": 0.5,
+            "w": 0.0689,
+            "conf": 0.5476,
+            "acc": 0.5088
+          },
+          {
+            "lo": 0.6,
+            "w": 0.0743,
+            "conf": 0.6442,
+            "acc": 0.5259
+          },
+          {
+            "lo": 0.7,
+            "w": 0.0787,
+            "conf": 0.7453,
+            "acc": 0.6231
+          },
+          {
+            "lo": 0.8,
+            "w": 0.1066,
+            "conf": 0.848,
+            "acc": 0.7007
+          },
+          {
+            "lo": 0.9,
+            "w": 0.5577,
+            "conf": 0.98,
+            "acc": 0.9196
+          }
+        ],
+        "areas": {
+          "knowledge": {
+            "ece": 0.0658,
+            "acc": 0.7286,
+            "conf": 0.7741
+          },
+          "language": {
+            "ece": 0.0424,
+            "acc": 0.84,
+            "conf": 0.8792
+          },
+          "retrieval": {
+            "ece": 0.2445,
+            "acc": 0.6207,
+            "conf": 0.8646
+          },
+          "tools": {
+            "ece": 0.0275,
+            "acc": 0.9414,
+            "conf": 0.9643
+          },
+          "arts": {
+            "ece": 0.0854,
+            "acc": 0.5768,
+            "conf": 0.6611
+          }
+        }
+      },
+      "scores": {
+        "balanced_raw": 69.98,
+        "balanced_skill": 60.24,
+        "breadth_skill": 60.07,
+        "public_skill": 60.7
+      },
+      "frozen_scores": {
+        "balanced_raw": 69.98,
+        "balanced_skill": 60.7,
+        "breadth_skill": 60.07
+      },
+      "categories": [
+        {
+          "id": "knowledge",
+          "raw": 0.656,
+          "skill": 0.5712,
+          "combined": 0.4655,
+          "coverage": 1,
+          "pending": 0,
+          "n": 11
+        },
+        {
+          "id": "language",
+          "raw": 0.7245,
+          "skill": 0.6118,
+          "combined": 0.58,
+          "coverage": 1,
+          "pending": 0,
+          "n": 9
+        },
+        {
+          "id": "retrieval",
+          "raw": 0.7249,
+          "skill": 0.6353,
+          "combined": 0.648,
+          "coverage": 1,
+          "pending": 0,
+          "n": 6
+        },
+        {
+          "id": "tools",
+          "raw": 0.7625,
+          "skill": 0.7378,
+          "combined": 0.7443,
+          "coverage": 1,
+          "pending": 0,
+          "n": 5
+        },
+        {
+          "id": "arts",
+          "raw": 0.5838,
+          "skill": 0.3916,
+          "combined": 0.4772,
+          "coverage": 1,
+          "pending": 0,
+          "n": 6
+        }
+      ],
+      "benchmarks": {
+        "1": {
+          "raw": 0.964,
+          "skill": 0.9514,
+          "coverage": 1,
+          "random": 0.2592,
+          "tracks": [],
+          "combined": 0.8444,
+          "private_eq": 0.8853
+        },
+        "2": {
+          "raw": 0.6505,
+          "skill": 0.5964,
+          "coverage": 1,
+          "random": 0.1341,
+          "tracks": [],
+          "combined": 0.653,
+          "private_eq": 0.7021
+        },
+        "3": {
+          "raw": 0.8661,
+          "skill": 0.8635,
+          "coverage": 1,
+          "random": 0.0189,
+          "tracks": [],
+          "combined": 0.8855,
+          "private_eq": 0.888
+        },
+        "4": {
+          "raw": 0.7994,
+          "skill": 0.7968,
+          "coverage": 1,
+          "random": 0.0127,
+          "tracks": [],
+          "combined": 0.8698,
+          "private_eq": 0.8719
+        },
+        "5": {
+          "raw": 0.9028,
+          "skill": 0.9022,
+          "coverage": 1,
+          "random": 0.006,
+          "tracks": [],
+          "combined": 0.736,
+          "private_eq": 0.7396
+        },
+        "6": {
+          "raw": 0.7988,
+          "skill": 0.5283,
+          "coverage": 1,
+          "random": 0.5735,
+          "tracks": []
+        },
+        "9": {
+          "raw": 0.4545,
+          "skill": 0.4545,
+          "coverage": 1,
+          "random": 0,
+          "tracks": [],
+          "combined": 0.5838,
+          "private_eq": 0.5875
+        },
+        "10": {
+          "raw": 0.0903,
+          "skill": 0,
+          "coverage": 1,
+          "random": 0.399,
+          "tracks": []
+        },
+        "11": {
+          "raw": 0.7076,
+          "skill": 0.5771,
+          "coverage": 1,
+          "random": 0.3085,
+          "tracks": []
+        },
+        "12": {
+          "raw": 0.7427,
+          "skill": 0.6146,
+          "coverage": 1,
+          "random": 0.3324,
+          "tracks": [],
+          "combined": 0.4933,
+          "private_eq": 0.6649
+        },
+        "20": {
+          "raw": 0.9041,
+          "skill": 0.8082,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.8637,
+          "private_eq": 0.9321
+        },
+        "21": {
+          "raw": 0.6176,
+          "skill": 0.2352,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.3069,
+          "private_eq": 0.6569
+        },
+        "22": {
+          "raw": 0.1596,
+          "skill": 0.153,
+          "coverage": 1,
+          "random": 0.0078,
+          "tracks": [],
+          "combined": 0.1888,
+          "private_eq": 0.2033
+        },
+        "23": {
+          "raw": 0.6504,
+          "skill": 0.3007,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": []
+        },
+        "24": {
+          "raw": 0.9167,
+          "skill": 0.8889,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": []
+        },
+        "25": {
+          "raw": 0.7551,
+          "skill": 0.6735,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "private_eq": 0.5532,
+          "combined": 0.3984
+        },
+        "26": {
+          "raw": 0.9933,
+          "skill": 0.9911,
+          "coverage": 1,
+          "random": 0.2502,
+          "tracks": []
+        },
+        "27": {
+          "raw": 0.9761,
+          "skill": 0.9681,
+          "coverage": 1,
+          "random": 0.2502,
+          "tracks": []
+        },
+        "28": {
+          "raw": 0.9108,
+          "skill": 0.8216,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.6632,
+          "private_eq": 0.833
+        },
+        "29": {
+          "raw": 0.9434,
+          "skill": 0.9245,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "combined": 0.9681,
+          "private_eq": 0.9756
+        },
+        "30": {
+          "raw": 0.7301,
+          "skill": 0.6784,
+          "coverage": 1,
+          "random": 0.175,
+          "tracks": [
+            {
+              "track": "4-choice",
+              "raw": 0.8044,
+              "random": 0.25
+            },
+            {
+              "track": "10-choice",
+              "raw": 0.6558,
+              "random": 0.1
+            }
+          ],
+          "combined": 0.7605,
+          "private_eq": 0.8038
+        },
+        "31": {
+          "raw": 0.1688,
+          "skill": 0.0947,
+          "coverage": 1,
+          "random": 0.0819,
+          "tracks": [],
+          "combined": 0.0929,
+          "private_eq": 0.1758
+        },
+        "32": {
+          "raw": 0.7261,
+          "skill": 0.5645,
+          "coverage": 1,
+          "random": 0.371,
+          "tracks": [],
+          "combined": 0.3201,
+          "private_eq": 0.5766
+        },
+        "33": {
+          "raw": 0.2788,
+          "skill": 0.2692,
+          "coverage": 1,
+          "random": 0.0131,
+          "tracks": [],
+          "combined": 0.2046,
+          "private_eq": 0.223
+        },
+        "36": {
+          "raw": 0.4705,
+          "skill": 0.401,
+          "coverage": 1,
+          "random": 0.116,
+          "tracks": [],
+          "combined": 0.3887,
+          "private_eq": 0.4649
+        },
+        "37": {
+          "raw": 0.5718,
+          "skill": 0.463,
+          "coverage": 1,
+          "random": 0.2027,
+          "tracks": [],
+          "combined": 0.6048,
+          "private_eq": 0.6877
+        },
+        "38": {
+          "raw": 0.3314,
+          "skill": 0.31,
+          "coverage": 1,
+          "random": 0.031,
+          "tracks": [],
+          "combined": 0.4874,
+          "private_eq": 0.508
+        },
+        "39": {
+          "raw": 0.8768,
+          "skill": 0.8188,
+          "coverage": 1,
+          "random": 0.3201,
+          "tracks": [],
+          "combined": 0.565,
+          "private_eq": 0.7069
+        },
+        "40": {
+          "raw": 0.5327,
+          "skill": 0.3989,
+          "coverage": 1,
+          "random": 0.2227,
+          "tracks": [
+            {
+              "track": "A · Arabic",
+              "score": 0.5145,
+              "headline": false
+            },
+            {
+              "track": "A · English",
+              "score": 0.5327,
+              "headline": true
+            },
+            {
+              "track": "C · Arabic pairs",
+              "score": 0.795,
+              "headline": false
+            },
+            {
+              "track": "C · English pairs",
+              "score": 0.965,
+              "headline": false
+            }
+          ],
+          "combined": 0.3662,
+          "private_eq": 0.5122
+        },
+        "41": {
+          "raw": 0.7365,
+          "skill": 0.6047,
+          "coverage": 1,
+          "random": 0.3333,
+          "tracks": [],
+          "combined": 0.5031,
+          "private_eq": 0.6718
+        },
+        "42": {
+          "raw": 0.8512,
+          "skill": 0.7105,
+          "coverage": 1,
+          "random": 0.486,
+          "tracks": [],
+          "combined": 0.8068,
+          "private_eq": 0.9013
+        },
+        "43": {
+          "raw": 0.7474,
+          "skill": 0.5992,
+          "coverage": 1,
+          "random": 0.3697,
+          "tracks": [],
+          "combined": 0.583,
+          "private_eq": 0.7395
+        },
+        "44": {
+          "raw": 0.8858,
+          "skill": 0.7716,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.7226,
+          "private_eq": 0.8624
+        },
+        "45": {
+          "raw": 0.1936,
+          "skill": 0.0353,
+          "coverage": 1,
+          "random": 0.1641,
+          "tracks": []
+        },
+        "50": {
+          "raw": 0.4457,
+          "skill": 0.1955,
+          "coverage": 1,
+          "random": 0.311,
+          "tracks": [],
+          "combined": 0.3264,
+          "private_eq": 0.5405
+        },
+        "56": {
+          "raw": 0.8375,
+          "skill": 0.675,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.6462,
+          "private_eq": 0.8246
+        },
+        "57": {
+          "raw": 0.8213,
+          "skill": 0.799,
+          "coverage": 1,
+          "random": 0.1109,
+          "tracks": [],
+          "private_eq": 0.6484,
+          "combined": 0.601
+        },
+        "58": {
+          "raw": 0.9319,
+          "skill": 0.9013,
+          "coverage": 1,
+          "random": 0.3101,
+          "tracks": [],
+          "private_eq": 0.5156,
+          "combined": 0.2908
+        },
+        "59": {
+          "raw": 0.7512,
+          "skill": 0.4841,
+          "coverage": 1,
+          "random": 0.5177,
+          "tracks": [],
+          "combined": 0.3897,
+          "private_eq": 0.7085
+        },
+        "61": {
+          "raw": 0.7675,
+          "skill": 0.535,
+          "coverage": 1,
+          "random": 0.5,
+          "tracks": [],
+          "combined": 0.6322,
+          "private_eq": 0.8177
+        },
+        "62": {
+          "raw": 0.8165,
+          "skill": 0.7553,
+          "coverage": 1,
+          "random": 0.25,
+          "tracks": [],
+          "combined": 0.7067,
+          "private_eq": 0.7818
+        },
+        "64": {
+          "raw": 0.7254,
+          "skill": 0.6568,
+          "coverage": 1,
+          "random": 0.2,
+          "tracks": [],
+          "combined": 0.7003,
+          "private_eq": 0.7622
+        }
+      },
+      "coverage": 1,
+      "pending": 0,
+      "v03": {
+        "engine": "jev",
+        "pub": 60.7,
+        "same_skills": 59.28,
+        "new_domains": 48.26,
+        "v": 60.24,
+        "lab": false,
+        "jev": true,
+        "rank_v": 41,
+        "rank_pub": 47,
+        "name": "Jev 1.14",
+        "eq": {
+          "S": 58.91,
+          "O": 62.24
+        },
+        "rank_tie": 10,
+        "tied": true,
+        "parts": {
+          "public": 0,
+          "same_skills": 35.34,
+          "new_domains": 24.9
+        }
+      },
+      "meta": {
+        "org": {
+          "id": "typesafe-ai",
+          "name": "typesafe.ai",
+          "logo": "data/orgs/typesafe-ai.png"
+        }
+      }
+    }
+  ],
+  "h2o4_absent_from_text_snapshot": true
+}
