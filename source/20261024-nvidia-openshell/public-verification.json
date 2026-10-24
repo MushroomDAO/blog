@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-24T02:15:56.711110+00:00",
+  "articles": [
+    {
+      "slug": "nvidia-openshell-agent-runtime",
+      "url": "https://blog.mushroom.cv/blog/nvidia-openshell-agent-runtime/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-openshell-agent-runtime-banner.PX5pDVtw_1mQ9sS.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-openshell-agent-runtime-fig-01.DoDZjhlp_ZefVbF.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-openshell-agent-runtime-fig-02.CV3HRoTX_Zw3hSx.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-openshell-agent-runtime-fig-03.CAnqITGq_1lrwco.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-openshell-agent-runtime-banner.PX5pDVtw.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 1,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/nvidia-openshell-agent-runtime/",
+    "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+    "/blog/laya-aayushch-local-first-ai-notification-command-center/",
+    "/blog/cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor/",
+    "/blog/superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx/",
+    "/blog/nvidia-flare-local-inference/",
+    "/blog/occamy-dressage-agent-learning/",
+    "/blog/moki-whiteboard-local-mcp/"
+  ]
+}

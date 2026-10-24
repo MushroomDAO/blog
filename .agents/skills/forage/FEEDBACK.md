@@ -1026,3 +1026,7 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 - 采集侧问题：store.py sync 的 published_match 按标题实体匹配 slug，owner/repo 与 slug 不一致的条目（laya、DeepSeek 微调版）不会被自动转 published，本次手动更新。
 - 子 agent 未带 wechatTitle/wechatDigest（BRIEF.md 未要求），其中 3 篇由主会话补；建议 BRIEF 把这两个字段列为必填。
 - 本次当前分支为 publish/nvidia-flare-local-inference，发布提交推到该分支而非 main；figs.sh 并行需用 nohup（macOS 无 setsid）。
+
+## 2026-10-24 — NVIDIA OpenShell agent runtime
+
+- https://blog.mushroom.cv/blog/nvidia-openshell-agent-runtime/ Apache2.0; official stablev0.1.5 downloaded and SHA256verified. Three actual standalone policy checks: within_boundary0, exceeds_boundary1 with /tmp write counterexample, unresolved nested path unsupported3. Not live sandbox enforcement or escape/security audit. Official main source pinned. Generated topic cover plus3XiaoM figures, bilingualSEO. Public route/assets/carousel, remote draft fulltext/images/metadata/cover/comments and semanticsearch verified; rawKBreused, exactsource/entity dedupno oldpublication. Task29868b1d-03d9-4c13-a81b-da33c734f5a8.

@@ -1,0 +1,81 @@
+{
+  "created": "2026-10-24",
+  "generator": "built-in image_gen",
+  "article": "src/content/blog/nvidia-openshell-agent-runtime.md",
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "assets": [
+    {
+      "anchor": "Anchor01",
+      "generated_path": "/Users/jason/.codex/generated_images/01a16bac-8073-79b2-9bae-447e9483baa2/exec-e5a27020-38cd-44ff-a28c-009eaff0e8d9.png",
+      "original": "originals/fig-01.png",
+      "final": "src/assets/images/nvidia-openshell-agent-runtime-fig-01.png",
+      "prompt": "Generate exactly ONE standalone 16:9 horizontal Chinese article illustration, ideally 1536x864. Use case: illustration-story; mature sparse absurd editorial ink sketch for a technical article, NOT a slide.\nPure #FFFFFF white background with no paper texture, no shadows, no gradients, no noise. Slightly wobbly fine black hand-drawn ink outlines, large quiet margins and at least 40% empty white space. Sparse tiny handwritten Chinese labels next to objects, no title, no top-left heading, no legend, no PPT grid, no infographic boxes, no polished vector art, no commercial illustration, no children’s cartoon.\nThe central actor is XiaoM (小M), serious deadpan little mushroom doing the conceptual work: red dome mushroom cap with 3–5 WHITE dots, cream stem with black outline, tiny BLACK dot eyes, thin black arms and legs, no clothes, no smile, not a cute mascot. Include only 1–2 thin ORANGE mycelium threads serving the action. Red is mostly the mushroom cap; annotations may use restrained orange/blue/red. All scene and text safely within the central 85% of canvas.\nAnchor01, Sandbox versus Supervisor. Draw a low-tech isolated workshop as a spare cutaway room at left center, enclosing XiaoM actually working at a small bench, handling a tool and a workpiece. The room has continuous solid walls, one single narrow exit at its RIGHT wall, and no other opening. A completely SEPARATE trusted gatekeeper, a plain tall black-outline mechanical figure, stands physically OUTSIDE the room to the right. Its arm operates the external latch on the ONLY exit. XiaoM has no access to this latch. A single thin orange mycelium/request thread from the bench reaches the sole exit and stops for inspection by the gatekeeper; no bypass path. This should read as an odd little workshop with an outside warden, with natural irregular perspective and much white air. Room = execution, external gatekeeper = authorization. No key props in this first picture.\nOnly these handwritten labels, correctly drawn beside their actual objects: \"隔离工作间\" beside room; \"Sandbox\" small below that; \"唯一出口\" beside the single opening; \"门外审批\" beside the separate gatekeeper; \"Supervisor\" small beneath gatekeeper label. No other text. Do not imply the Sandbox itself is trusted to authorize its own escape.",
+      "original_pixels": [
+        1672,
+        941
+      ],
+      "original_bytes": 1242029,
+      "original_sha256": "7abda83eb7306415eba3bb975c28608bc16de9da7fc08b6da0d5316054d20237",
+      "pixels": [
+        1280,
+        720
+      ],
+      "bytes": 60249,
+      "palette_colors": 256,
+      "sha256": "95048f62e5b3ae4b03309914c509ed8843c5525571b76a7fa20856cb96a3fa03",
+      "processing": "Fit on pure-white 1280x720 canvas with Lanczos downscale; 256-color fast-octree indexed PNG without dithering; near-white palette entries normalized to white and identical indices merged. Original untouched."
+    },
+    {
+      "anchor": "Anchor02",
+      "generated_path": "/Users/jason/.codex/generated_images/01a16bac-8073-79b2-9bae-447e9483baa2/exec-e01e9a37-563e-43bf-8f90-e5b9420260e4.png",
+      "original": "originals/fig-02.png",
+      "final": "src/assets/images/nvidia-openshell-agent-runtime-fig-02.png",
+      "prompt": "Generate exactly ONE standalone 16:9 horizontal Chinese article illustration, ideally 1536x864. Use case: illustration-story; mature sparse absurd editorial ink sketch for a technical article, NOT a slide.\nPure #FFFFFF white background with no paper texture, no shadows, no gradients, no noise. Slightly wobbly fine black hand-drawn ink outlines, large quiet margins and at least 40% empty white space. Sparse tiny handwritten Chinese labels next to objects, no title, no top-left heading, no legend, no PPT grid, no infographic boxes, no polished vector art, no commercial illustration, no children’s cartoon.\nThe central actor is XiaoM (小M), serious deadpan little mushroom doing the conceptual work: red dome mushroom cap with 3–5 WHITE dots, cream stem with black outline, tiny BLACK dot eyes, thin black arms and legs, no clothes, no smile, not a cute mascot. Include only 1–2 thin ORANGE mycelium threads serving the action. Red is mostly the mushroom cap; annotations may use restrained orange/blue/red. All scene and text safely within the central 85% of canvas.\nAnchor02, provider credential injection. A spare isolated workroom at left center contains XiaoM PUSHING an OPEN envelope out through the wall's only tiny mail slot. The envelope INSIDE the workroom contains only a blank request sheet, visibly NO key and NO credential. Beside it inside the room is handwritten \"请求，无密钥\". A small thin orange mycelium thread connects XiaoM’s foot to the request sheet and terminates at slot; it never becomes a key. OUTSIDE the room, a separate plain tall black-outline mechanical gatekeeper receives the envelope. Farther right, entirely outside and beside one approved destination mailbox with a small blue tick, the gatekeeper's other hand adds a SINGLE small physical KEY to the outgoing envelope right next to that mailbox. Show the envelope’s open flap so the key addition is clear. The ONE key is ONLY at the approved endpoint on the trusted side, never inside the agent room, never carried by XiaoM. No key moving left. Use one envelope at the slot and its outward continuation at the destination as a light hand-drawn motion echo, not panels. Uncluttered irregular physical vignette, not a formal flowchart.\nOnly handwritten labels: \"Agent 工作间\" on inside room edge; \"请求，无密钥\" by inside request; \"门外注入\" by gatekeeper’s key-adding hand; \"批准目的地\" beside the approved mailbox. No real key strings, no API-key values, no other text. The illustration explains credentials attach outside to approved requests, not that business data never leaves.",
+      "original_pixels": [
+        1672,
+        941
+      ],
+      "original_bytes": 1240145,
+      "original_sha256": "6c41cc5f082ee7071389de22fbcfe2c224847fecbdddea1516ebbcbeccb8ab17",
+      "pixels": [
+        1280,
+        720
+      ],
+      "bytes": 50125,
+      "palette_colors": 256,
+      "sha256": "5a6c0cbb89540cbc30f023b2195134e09e18f242255ef372a7d4f592d3b91880",
+      "processing": "Fit on pure-white 1280x720 canvas with Lanczos downscale; 256-color fast-octree indexed PNG without dithering; near-white palette entries normalized to white and identical indices merged. Original untouched."
+    },
+    {
+      "anchor": "Anchor03",
+      "generated_path": "/Users/jason/.codex/generated_images/01a16bac-8073-79b2-9bae-447e9483baa2/exec-dc6c4f82-52ed-41d4-89e2-dd2b99c39bdc.png",
+      "original": "originals/fig-03.png",
+      "final": "src/assets/images/nvidia-openshell-agent-runtime-fig-03.png",
+      "prompt": "Generate exactly ONE standalone 16:9 horizontal Chinese article illustration, ideally 1536x864. Use case: illustration-story; mature sparse absurd editorial ink sketch for a technical article, NOT a slide.\nPure #FFFFFF white background with no paper texture, no shadows, no gradients, no noise. Slightly wobbly fine black hand-drawn ink outlines, large quiet margins and at least 40% empty white space. Sparse tiny handwritten Chinese labels next to objects, no title, no top-left heading, no legend, no PPT grid, no infographic boxes, no polished vector art, no commercial illustration, no children’s cartoon.\nThe central actor is XiaoM (小M), serious deadpan little mushroom doing the conceptual work: red dome mushroom cap with 3–5 WHITE dots, cream stem with black outline, tiny BLACK dot eyes, thin black arms and legs, no clothes, no smile, not a cute mascot. Include only 1–2 thin ORANGE mycelium threads serving the action. Red is mostly the mushroom cap; annotations may use restrained orange/blue/red. All scene and text safely within the central 85% of canvas.\nAnchor03, three independent permission-check outcomes. ONE XiaoM sits at a plain spare inspection desk, actively testing THREE physical permission slips fanned out unevenly across the desk. A low crooked black boundary hoop is the tangible test gauge, not a flowchart. The first slip fits INSIDE the boundary hoop and has a GREEN hand-drawn checkmark plus handwritten \"边界内\" and tiny \"读 /usr\". The second slip visibly protrudes OUTSIDE the hoop: a RED rejection X, handwritten \"越界\" and concrete counterexample \"反例：写 /tmp\". The third slip has an unresolved folded / tangled end, a large ORANGE question mark and handwritten \"无法证明\"; it remains ON THE DESK, not admitted and has NO green check. XiaoM is holding and examining that third uncertain slip through a simple magnifying glass, blank serious eyes. A single thin orange mycelium curls from XiaoM’s foot to that slip, serving the inspection action. Three slips with distinct outcomes are the only colorful results; no fourth slip, no panels, no table, no UI.\nSmall handwritten caution near the uncertain slip, verbatim: \"无法证明 ≠ 通过\". This is a verdict about a policy checker, NOT proof of whole-system security. Use exactly these sparse short labels only. Green for the successful result ONLY, red for the violated boundary ONLY, orange for unsupported uncertainty. Keep all three outcomes visible and distinct in a mature, loose, absurd ink scene with plenty of pure white space.",
+      "original_pixels": [
+        1672,
+        941
+      ],
+      "original_bytes": 1297026,
+      "original_sha256": "05d58f0a02339f0161485dd29bcd3556c4d9551b41f2492ee44b9e3e4892245b",
+      "pixels": [
+        1280,
+        720
+      ],
+      "bytes": 59579,
+      "palette_colors": 256,
+      "sha256": "94616914f9ca8fa039e3172ae1718c0536dfcbfae58db2b59901819f7aa2b2e2",
+      "processing": "Fit on pure-white 1280x720 canvas with Lanczos downscale; 256-color fast-octree indexed PNG without dithering; near-white palette entries normalized to white and identical indices merged. Original untouched."
+    }
+  ],
+  "article_sha256": "fd7dafe645284232294c95daad5175bb874bc61e33f9af00d6018afb41530bca",
+  "index_tree_before": "f7d571d1010539520bebe5be2f6a2c0280d05027",
+  "qa": {
+    "visual_review": "All three reviewed: outside authorization; key absent from agent room and added on trusted approved route; green pass, red write /tmp counterexample, orange unresolved is not pass.",
+    "final_review": "Passed visual review of all three final PNGs: Chinese labels readable; orange mycelium retained; green/red/orange outcomes intact; exact 1280x720, each below 90000 bytes, pure-white background. Original files byte-identical, ignored and untracked.",
+    "scope": "Only three final PNGs and generated-assets originals/manifest were written by this task. No article edits, staging, commit or publishing performed.",
+    "article_sha256_at_finish": "7110500210376f2ec62fd98f78364ae3ce72f86a09a298fa1fe96cd311aef498",
+    "concurrent_change_observed": "Article hash changed during final verification; this task never wrote the article. Existing concurrent edits were preserved.",
+    "index_unchanged": true
+  }
+}
