@@ -1,0 +1,33 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6adc472f-05b63b70-23f3c4d6）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 893 篇 + 公众号草稿箱 3 条 + 本地发布记录 876 条 + MemPalace 3237 抽屉
+
+── 查：https://huggingface.co/RecursiveSI/flint
+   ❌ [BLOG  ] Flint 本地编程模型：40B MoE、rec 引擎与 125 token/s 的条件
+      一手源相同: recursivesi/flint
+   ❌ [发过 2026-10-23] Flint：本地编程快，但先看48GB门槛
+      一手源相同: recursivesi/flint
+   ❌ [知识库] --- name: Recursive Flint and rec local coding description:
+      一手源相同: recursivesi/flint
+   ❌ [知识库] --- name: Recursive Flint and rec local coding description:
+      一手源相同: recursivesi/flint
+
+── 查：https://github.com/recursive-oss/rec
+   ❌ [BLOG  ] Flint 本地编程模型：40B MoE、rec 引擎与 125 token/s 的条件
+      一手源相同: recursive-oss/rec
+   ❌ [发过 2026-10-23] Flint：本地编程快，但先看48GB门槛
+      一手源相同: recursive-oss/rec
+   ❌ [知识库] --- name: Recursive Flint and rec local coding description:
+      一手源相同: recursive-oss/rec
+   ❌ [知识库] --- name: Recursive Flint and rec local coding description:
+      一手源相同: recursive-oss/rec
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
