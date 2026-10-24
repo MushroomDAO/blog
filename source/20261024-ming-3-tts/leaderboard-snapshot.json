@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-24T08:39:42.071935+00:00",
+  "controlled": {
+    "url": "https://artificialanalysis.ai/text-to-speech/leaderboard/controlled-voice",
+    "elo": 1071,
+    "interval": 16,
+    "rank": 14,
+    "rankRange": [
+      10,
+      20
+    ],
+    "samples": 2058
+  },
+  "provider": {
+    "url": "https://artificialanalysis.ai/text-to-speech/leaderboard/provider-voice",
+    "elo": 1191,
+    "interval": 14,
+    "rank": 19,
+    "rankRange": [
+      18,
+      22
+    ],
+    "samples": 2169,
+    "openWeightsRankInFAQ": 3
+  },
+  "pronunciation": {
+    "score": 93.2,
+    "provenance": "project README quoting AA; score not exposed by readable methodology page, not independently recalculated"
+  }
+}

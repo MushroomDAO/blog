@@ -1,0 +1,1 @@
+{"title":"Ming语音模型：小参数与真实部署边界","summary":"蚂蚁inclusionAI公开Ming-3.0-TTS代码和权重，采用MIT许可，0.5B稠密版本与7.9B总参数tiny版本需要区分。独立英文听感榜显示其具有竞争力，但不是所有模型与任务第一；93.2%发音鲁棒性保留为项目方引用结果。发布包主权重约2.96GB，官方参考实现以CUDA为主，本机仅验证八项任务输入协议，未做语音合成或Mac性能测试。","tags":["语音合成","Ming-3.0-TTS","开源模型","本地AI","模型评测"],"entities":["蚂蚁集团","inclusionAI","Ming-3.0-TTS","Artificial Analysis","Qwen2.5"],"content_type":"text"}

@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-24T08:39:42.071715+00:00",
+  "scope": "source inspection, not device inference",
+  "checks": [
+    {
+      "file": "infer.py",
+      "matches": [
+        {
+          "line": 52,
+          "text": "parser.add_argument(\"--device\", default=\"cuda:0\")"
+        }
+      ]
+    },
+    {
+      "file": "ming_tts.py",
+      "matches": [
+        {
+          "line": 84,
+          "text": "local_path, torch_dtype=torch.bfloat16, low_cpu_mem_usage=True,"
+        }
+      ]
+    },
+    {
+      "file": "modeling_bailingmm.py",
+      "matches": [
+        {
+          "line": 406,
+          "text": "with torch.autocast(device_type='cuda', dtype=torch.bfloat16):"
+        },
+        {
+          "line": 496,
+          "text": "with torch.autocast(device_type='cuda', dtype=torch.bfloat16):"
+        },
+        {
+          "line": 530,
+          "text": "with torch.autocast(device_type='cuda', dtype=torch.bfloat16):"
+        }
+      ]
+    }
+  ]
+}
