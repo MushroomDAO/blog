@@ -1,0 +1,19 @@
+{
+  "title": "Bark 3.0本地英文语音模型核查",
+  "summary": "Underdog Bark 3.0标准版为163MB下载的英文ASR模型，Clean是基于Plus的180MB清理口述版本，权重与加载脚本以CC-BY 4.0公开。7.82%是团队报告的AMI词错误率，Bark结果尚非榜单正式条目；官网半秒处理五分钟属于M5 Max原生应用路径的宣称。M4、16GB本机已跑通一段合成英文短句，但未复现完整会议评测或官方速度，下载体积也不等于运行内存。",
+  "tags": [
+    "语音识别",
+    "Bark 3.0",
+    "本地AI",
+    "MLX",
+    "开源模型"
+  ],
+  "entities": [
+    "Underdog",
+    "Bark 3.0",
+    "ConwayResearch",
+    "NVIDIA Parakeet",
+    "Whisper"
+  ],
+  "content_type": "text"
+}
