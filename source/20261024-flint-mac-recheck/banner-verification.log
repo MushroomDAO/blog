@@ -1,0 +1,9 @@
+=== [verify-banner] src/assets/images/flint-local-coding-rec-engine-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=https://framerusercontent.com/images/nZJFD8QzKDt1n6DzHGYivX9DXQ.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 68529B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/flint-local-coding-rec-engine-banner.jpg ===

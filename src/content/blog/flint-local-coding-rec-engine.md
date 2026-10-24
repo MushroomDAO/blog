@@ -6,7 +6,7 @@ descriptionEn: "A source-checked guide to Recursive Flint: 40B MoE weights, rec 
 wechatTitle: "Flint：本地编程快，但先看48GB门槛"
 wechatDigest: "核对Flint模型卡与rec引擎，讲清速度条件、内存要求和本地编程接入方法。"
 pubDate: "2026-10-23"
-updatedDate: "2026-10-23"
+updatedDate: "2026-10-24"
 category: "Tech-News"
 tags: ["Flint", "Recursive", "MoE", "本地编程", "Apple Silicon"]
 heroImage: "../../assets/images/flint-local-coding-rec-engine-banner.jpg"
@@ -15,7 +15,7 @@ lastPublishedAt: "2026-10-23T01:09:10Z"
 
 Flint 是把编程模型放到本地运行的新选择：模型开源，速度值得关注，但官方 rec 路线要求至少 48GB 统一内存，125 token/s 也有特定测试条件。
 
-> 一手资料核对：2026-10-23。本文没有下载权重或测量模型速度；本机只有16GiB内存，不满足rec公开要求。
+> 一手资料核对：2026-10-24。本文没有下载权重或测量模型速度；本机只有16GiB内存，不满足rec公开要求。
 > 发布说明：https://recursive.com/updates/introducing-recursive-flint
 > 模型卡：https://huggingface.co/RecursiveSI/flint
 > 推理引擎：https://github.com/recursive-oss/rec
@@ -67,6 +67,25 @@ rec README明确列出：M4 Pro、48GB统一内存、4bit权重、1K—252K输�
 
 这里还有一个常见坑：Hugging Face页面顶部的自动生成Transformers代码，不能替代模型卡正文。正文明确写着尚未提供Transformers modeling代码；BF16参考服务路线是仓库内SGLang kit。
 
+## 哪些 Mac 符合官方安装与使用条件？
+
+截至2026年10月24日，rec README同时限定芯片和内存。只有满足其中一个条件还不够；下表指官方rec路线，不是对所有第三方量化后端的结论。
+
+| Mac配置 | 当前官方rec路线的判断 |
+|---|---|
+| Intel Mac | 不支持；安装脚本要求Apple Silicon arm64 |
+| M1、M2、M3系列，即便有48GB以上内存 | 不在README当前支持的芯片名单中，本文未验证替代路线 |
+| 基础款M4或M5 | 不能仅凭同代芯片推定支持；当前名单明确写Pro/Max型号 |
+| 任意16GB、24GB或32GB Mac | 低于48GB门槛；本机M4/16GiB因此没有运行模型推理 |
+| M4 Pro、M5 Pro或M5 Max，统一内存至少48GB | 符合公开的芯片与内存条件，还需约30GB空闲磁盘并通过`rec doctor` |
+| 上述支持芯片，配备64GB或更多统一内存 | 同样达到最低要求，额外余量可用于系统和上下文；不代表所有长上下文都能开满 |
+
+不要把30GB空闲磁盘理解成30GB内存，也不要把内存交换当成官方支持。约19.9GB的4-bit纯权重估算尚未包含量化元数据、KV缓存、运行时、macOS、编辑器和浏览器。选择48GB机器时，先关闭无关大程序，从短上下文和单Agent开始；这些是容量管理建议，不是本文测得的稳定性保证。
+
+安装前可以用`system_profiler SPHardwareDataType`核对芯片与统一内存，用`df -h`看实际安装位置的剩余空间，用`node --version`检查pi所需的Node.js 22。首次下载后再谈离线使用。80GB左右的BF16模型仓库下载与rec约30GB磁盘路线不同，不要在Mac上先照搬SGLang的GPU参考教程。
+
+来源：https://github.com/recursive-oss/rec#requirements
+
 ## 普通开发者怎样接到本地编程 Agent？
 
 rec当前公开支持M4 Pro、M5 Pro、M5 Max，至少48GB统一内存、约30GB可用磁盘；pi还需要Node.js 22。下面是官方入口，经资料核对，本文未在16GiB机器上执行安装：
@@ -98,7 +117,7 @@ rec优化的是单会话。并行开多个Agent时不要套用单会话吞吐预
 
 ## Eureka Machine 是全自动训练工厂吗？
 
-发布说明的准确表述是“小团队与Agent在不到四个月内协作”，Eureka Machine参与架构、量化、内核和训练等研究环节。它支持提出方案、实验和迭代，不足以证明整个项目无人参与，也不代表完整训练流水线已经公开。
+模型卡说明它经过从零预训练、中训、监督微调和强化学习。公开权重、分词器与推理代码，不等于公开了可完整重现这些阶段的训练数据和训练工厂。发布说明的准确表述是“小团队与Agent在不到四个月内协作”，Eureka Machine参与架构、量化、内核和训练等研究环节。它支持提出方案、实验和迭代，不足以证明整个项目无人参与，也不代表完整训练流水线已经公开。
 
 更有参考价值的是模型与运行时协同优化的路线：本地编程的竞争不只在模型分数，也在你能否在目标硬件上持续得到可验收的修改。
 
@@ -126,7 +145,7 @@ Apache-2.0权重可本地使用，不需要为本地推理支付模型API调用�
 
 Flint is an open coding model for local agents. Its speed claims are interesting, but the official rec path requires at least 48GB of unified memory. The advertised 125 tokens/s is conditional, not a universal laptop result.
 
-Sources checked on October 23, 2026. We did not download weights or benchmark inference: this host has 16GiB RAM.
+Sources checked on October 24, 2026. We did not download weights or benchmark inference: this host has 16GiB RAM.
 
 Announcement: https://recursive.com/updates/introducing-recursive-flint
 Model card: https://huggingface.co/RecursiveSI/flint
@@ -158,7 +177,7 @@ For repository questions with long inputs and short answers, prompt processing a
 
 ## Are the coding results independently verified?
 
-The model card reports 54.9% on Terminal-Bench 2.1,89.7% on SWE-bench Pro v 2 and 74.2% on SWE-bench Verified. These are developer results, not our reproduction. Agentic results average pass@1 over at least five attempts; they are not pass@5. Harnesses and network access differ across evaluations, so cross-source scores need care.
+The model card reports 54.9% on Terminal-Bench 2.1,89.7% on SWE-bench Pro v2 and 74.2% on SWE-bench Verified. These are developer results, not our reproduction. Agentic results average pass@1 over at least five attempts; they are not pass@5. Harnesses and network access differ across evaluations, so cross-source scores need care.
 
 Start with a bounded bug and a clear test command. Record accepted changes, tool failures and total completion time, rather than selecting a model on generation speed alone.
 
@@ -167,6 +186,25 @@ Start with a bounded bug and a clear test command. Record accepted changes, tool
 The launch post advertises up to 512K and recommends staying within 256K. The checked checkpoint card and configuration document 262,144. Use the supported configuration for your exact checkpoint and runtime rather than copying the headline maximum into another backend. Prompt and output share the budget.
 
 Also distinguish Hugging Face's automatically generated usage widget from the actual card: the card says Transformers modeling code is not yet included. Its BF16 reference deployment uses the supplied SGLang kit.
+
+## Which Mac configurations meet the official requirements?
+
+As of October 24, 2026, rec requires both a listed chip and enough unified memory. This table covers rec, not every third-party quantized runtime.
+
+| Configuration | Status for the documented rec route |
+|---|---|
+| Intel Mac | Unsupported: the installer requires Apple Silicon arm64 |
+| M1, M2 or M3 family, even with 48GB or more | Not in the current README support list; alternatives were not tested here |
+| Base M4 or M5 | Same-generation branding is insufficient; the list names specific Pro/Max chips |
+| Any 16GB,24GB or32GB Mac | Below the48GB minimum; our M4/16GiB host did not run inference |
+| M4 Pro, M5 Pro or M5 Max with at least48GB | Meets the published chip/memory requirements; also needs about30GB free disk and a successful `rec doctor` check |
+| A supported chip with64GB or more | Meets the minimum with more headroom; does not guarantee every long context will fit |
+
+Disk space is not unified memory, and swap is not a documented substitute. The roughly19.9GB4-bit weight-only estimate excludes quantization metadata, KV cache, runtime allocations, macOS and other applications. Starting with a short context and one agent is a capacity-management suggestion, not a measured stability guarantee.
+
+Check the chip and memory with `system_profiler SPHardwareDataType`, available storage with `df -h`, and the Node.js22 prerequisite for pi with `node --version`. Initial downloads require connectivity. The roughly80GB BF16 checkpoint and its GPU-oriented SGLang kit are a different deployment route from rec's roughly30GB disk requirement.
+
+Source: https://github.com/recursive-oss/rec#requirements
 
 ## How should a local developer start?
 
@@ -182,7 +220,7 @@ rec launch pi
 
 `rec launch opencode` is another option. The first run downloads the model and harness. The server can remain running after the terminal closes; stop it with `rec stop`.
 
-For another client, start `rec serve`, then use `http://127.0.0.1:11500/v 1`, model `flint`, and the local key returned by `rec auth token`. Keep that key private. rec targets single-session use; multiple agents should not inherit its single-session speed expectations.
+For another client, start `rec serve`, then use `http://127.0.0.1:11500/v1`, model `flint`, and the local key returned by `rec auth token`. Keep that key private. rec targets single-session use; multiple agents should not inherit its single-session speed expectations.
 
 The announcement lists other runtimes including llama.cpp and Ollama. Check their actual versions and quantizations separately. A locally served model also does not prevent its agent tools or plugins from sending data elsewhere.
 
@@ -190,7 +228,7 @@ The announcement lists other runtimes including llama.cpp and Ollama. Check thei
 
 ## What was automated?
 
-Recursive describes a small team working with agents, with Eureka Machine contributing across architecture, training, quantization and kernels. That supports a story of assisted research, not a claim that humans were absent or that the complete training system is open.
+The card describes from-scratch pretraining, mid-training, supervised fine-tuning and reinforcement learning. Public weights, tokenizer and inference code do not establish that the complete training data and pipeline are available. Recursive describes a small team working with agents, with Eureka Machine contributing across architecture, training, quantization and kernels. That supports a story of assisted research, not a claim that humans were absent or that the complete training system is open.
 
 The useful engineering lesson is co-design: model quality, representation and runtime have to work together on the hardware you actually own.
 
