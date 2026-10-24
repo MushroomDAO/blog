@@ -1,0 +1,88 @@
+{
+  "query": "NVIDIA OpenShell：给自主Agent配上可执行权限边界与Supervisor凭证隔离",
+  "response": {
+    "results": [
+      {
+        "article_id": "nvidia-openshell-agent-runtime",
+        "title": "NVIDIA OpenShell：给自主 Agent 配上可执行的权限边界",
+        "url": "/blog/nvidia-openshell-agent-runtime/",
+        "language": "zh",
+        "excerpt": "NVIDIA OpenShell：给自主 Agent 配上可执行的权限边界 NVIDIA OpenShell采用Apache-2.0开源，通过沙箱、独立Supervisor、网络策略和凭证代理约束Agent。本文介绍0.1.x架构、Mac与Linux部署条件、OpenCode接入流程，并实测v0.1.5策略验证器的通过、越界和无法验证三种结果，同时区分策略检查与真实运行安全的边界。 NVIDIA OpenShell AI Agent 沙箱 权限策略 开源工具 OpenShell解决的是哪一层问题？ Gateway、Sandbox与Supervisor怎样",
+        "score": 0.7221937
+      },
+      {
+        "article_id": "omni-open-source-company-ai-agent-permission-aware",
+        "title": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么",
+        "url": "/blog/omni-open-source-company-ai-agent-permission-aware/",
+        "language": "zh",
+        "excerpt": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么 调研自托管开源公司级 AI Agent Omni：接入 Google Drive、Gmail、Slack、Confluence、Jira、HubSpot 等企业常用工具，核心设计是「权限感知的公司上下文」——索引信息的可见范围严格继承自源系统的权限，不会因为被索引过就绕开原本的访问控制。混合检索（BM25全文+pgvector语义）全部收在一个 Postgres 里，不需要额外的 Elasticsearch 或专用向量库。沙箱代码执行走隔离 Docker 网络+只读根文件系统",
+        "score": 0.5846213
+      },
+      {
+        "article_id": "jev-skill-agent-decision-9-skills-90-scenarios-openrouter",
+        "title": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查",
+        "url": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
+        "language": "zh",
+        "excerpt": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查 MIT，34 stars，今天刚开源。SKILL.md 格式，9 个专域 Skill 覆盖 90 个标注场景：分诊、文档证据、UI 操控、工具路由、代码审查等。需 OpenRouter API key 调 TypeSafe Jev，无本地权重。显式禁止无 key 时静默降级，只能做 agent simulation 且必须标注。 agent-skills jev decision-model routing claude-code open-s",
+        "score": 0.5808647
+      },
+      {
+        "article_id": "onecli-ai-agent-credential-gateway-secret-vault-rust",
+        "title": "OneCLI：让 AI Agent 永远看不到真实密钥的开源凭证网关",
+        "url": "/blog/onecli-ai-agent-credential-gateway-secret-vault-rust/",
+        "language": "zh",
+        "excerpt": "OneCLI：让 AI Agent 永远看不到真实密钥的开源凭证网关 onecli/onecli，2746 stars，Apache-2.0，Rust + TypeScript。在 agent 和 API 之间插一个 MITM 网关，agent 只持有占位符，网关透明注入真实凭证。HN 两次上榜，NanoClaw 和 Bitwarden 均已集成。一行命令本地跑起来。 AI安全 AI Agent 开源 Rust 密钥管理 安全工具 网关 MCP 一、问题：每个 agent 都拿着真实密钥 二、解法：不交给 agent，替它注入 三、架构：Rust 网关 ",
+        "score": 0.57976806
+      },
+      {
+        "article_id": "trinity-abilityai-sovereign-agent-platform-per-agent-docker-audit",
+        "title": "Trinity：每个 Agent 一个 Docker 容器，把「Claude Code 写的 Agent」搬进有审计的生产环境",
+        "url": "/blog/trinity-abilityai-sovereign-agent-platform-per-agent-docker-audit/",
+        "language": "zh",
+        "excerpt": "Trinity：每个 Agent 一个 Docker 容器，把「Claude Code 写的 Agent」搬进有审计的生产环境 Abilityai/trinity 是一个 Apache-2.0 的自托管 Agent 平台，口号是「Claude Code 写 Agent，Trinity 跑它」。每个 Agent 独占一个 Docker 容器，配 cron 调度 + Redis 分布式锁、四层 RBAC、只追加的平台审计日志、人在环的 Operator Queue、OpenTelemetry 成本与 token 追踪。每个 Agent 可分别选 Claude",
+        "score": 0.57756674
+      },
+      {
+        "article_id": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+        "title": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工",
+        "url": "/blog/munder-difflin-multi-agent-harness-claude-codex-local-first/",
+        "language": "zh",
+        "excerpt": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工 Munder Difflin（MIT，3888 stars，Electron+React+TypeScript）是一个本地多 Agent Harness 桌面应用，把 Claude Code、OpenAI Codex、xAI Grok、Kimi Code、Qwen、GitHub Copilot CLI 等 12 种 CLI 包成真实 PTY 进程，用像素风 The Office 场景可视化——每个 Agent ",
+        "score": 0.5751276
+      },
+      {
+        "article_id": "open-connector-saas-auth-gateway-ai-agents",
+        "title": "OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth",
+        "url": "/blog/open-connector-saas-auth-gateway-ai-agents/",
+        "language": "zh",
+        "excerpt": "OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth oomol-lab 开源了 OpenConnector，一个 AI Agent 专用的认证网关，Composio 的开源替代。接 1000+ SaaS 提供者、10000+ 预制 Action，凭据永远留在网关边界内，Agent 只能拿到执行结果。支持 SDK/CLI/MCP/HTTP 多接入方式，可部署到 Docker、Cloudflare Workers 或 Fly.io。 AI Agent OAuth SaaS集成 MCP Cloudflare 开源工具",
+        "score": 0.5735561
+      },
+      {
+        "article_id": "reverse-skill-ai-agent-cybersecurity-penetration-skill-router",
+        "title": "reverse-skill：给 AI Agent 装上逆向工程与渗透测试的神经系统",
+        "url": "/blog/reverse-skill-ai-agent-cybersecurity-penetration-skill-router/",
+        "language": "zh",
+        "excerpt": "reverse-skill：给 AI Agent 装上逆向工程与渗透测试的神经系统 zhaoxuya520 开源的 AI Agent 安全技能路由包，20.9k stars，MIT License。解决 AI Agent 做安全分析时不知道用哪个工具的核心痛点——41条路由规则自动识别任务类型（APK/ELF/JS/PCAP/CTF），按需自举 jadx/Frida/Ghidra/BurpSuite 等工具链，自动沉淀经验到知识库。支持 Claude Code、Codex、Cursor、Kiro、Cline。 安全技能 AI渗透测试 逆向工程 Claud",
+        "score": 0.57348233
+      },
+      {
+        "article_id": "cloudflare-computer-agent-runtime-isolate-container",
+        "title": "@cloudflare/computer：给每个 Agent 一台自己的电脑",
+        "url": "/blog/cloudflare-computer-agent-runtime-isolate-container/",
+        "language": "zh",
+        "excerpt": "@cloudflare/computer：给每个 Agent 一台自己的电脑 Cloudflare 在 Agents Week 发布 @cloudflare/computer：让 Agent 在同一个虚拟文件系统里动态切换 Isolate（快、廉价）和 Container（完整 Linux），把 Durable Object 的水平无限扩展和容器的垂直能力合二为一。早期预览已开源，给 AI 编程/任务 Agent 提供新的计算基础。 CloudflareAgents Agent架构 Cloudflare Workers 容器 Isolate AI基础设施",
+        "score": 0.57342094
+      },
+      {
+        "article_id": "superset-parallel-coding-agent-workspace-claude-codex-opencode",
+        "title": "Superset：一个工作区跑 100 个 Agent，Claude Code、Codex、OpenCode 同时干活——普通人上手指南",
+        "url": "/blog/superset-parallel-coding-agent-workspace-claude-codex-opencode/",
+        "language": "zh",
+        "excerpt": "Superset：一个工作区跑 100 个 Agent，Claude Code、Codex、OpenCode 同时干活——普通人上手指南 Superset（GitHub: superset-sh/superset，⭐13.5k）是一个 macOS 桌面应用，可以把 Claude Code、Codex、OpenCode 等任意命令行 AI 编程 agent 放进同一个工作区，每个 agent 跑在独立的 git worktree 里，100 个并行互不干扰。内置浏览器、diff 查看器、定时自动化、CLI、MCP Server 接入，iOS 版在路上。免费",
+        "score": 0.57326424
+      }
+    ]
+  },
+  "matchingNewArticle": true
+}

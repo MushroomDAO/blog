@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-24T02:16:35.028Z",
+  "drafts": [
+    {
+      "slug": "nvidia-openshell-agent-runtime",
+      "mediaId": "prCUE631thH1cmNLi42prL4HSA_-oLZR1jo9QpDwB8o4WQuXEoUiY4M62py1r93y",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "b3a31b8c56c0f815fd283a4dc489b30292c8d8fe7b362b55ca36c25b860dabb9",
+      "remoteTextHash": "b3a31b8c56c0f815fd283a4dc489b30292c8d8fe7b362b55ca36c25b860dabb9",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "1cc1bd0aabcba3fc418145d599df38774de8fb0e7826804eb7167453850a25ea",
+      "remoteContentHash": "f0fcdaee666cb0682a1134585aaa17e37188f2fd2a37c36c39eb5096b2ec64c3"
+    }
+  ]
+}

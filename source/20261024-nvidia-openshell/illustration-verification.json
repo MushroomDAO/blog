@@ -1,0 +1,33 @@
+{
+  "rootVisualReview": true,
+  "figures": [
+    {
+      "file": "src/assets/images/nvidia-openshell-agent-runtime-fig-01.png",
+      "bytes": 60249,
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "95048f62e5b3ae4b03309914c509ed8843c5525571b76a7fa20856cb96a3fa03"
+    },
+    {
+      "file": "src/assets/images/nvidia-openshell-agent-runtime-fig-02.png",
+      "bytes": 50125,
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "5a6c0cbb89540cbc30f023b2195134e09e18f242255ef372a7d4f592d3b91880"
+    },
+    {
+      "file": "src/assets/images/nvidia-openshell-agent-runtime-fig-03.png",
+      "bytes": 59579,
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "94616914f9ca8fa039e3172ae1718c0536dfcbfae58db2b59901819f7aa2b2e2"
+    }
+  ],
+  "colors": "final palette preserves green pass and orange unresolved; inspected"
+}
