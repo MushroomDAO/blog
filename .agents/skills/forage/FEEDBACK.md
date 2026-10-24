@@ -1038,3 +1038,7 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 ## 2026-10-24 — Flint Mac hardware clarification (existing article)
 
 - Reused /blog/flint-local-coding-rec-engine/ after exact HF/repo dedup. Added bilingual official-rec hardware matrix: M4 Pro/M5 Pro/M5 Max,48GB unified memory,~30GB disk; pi Node22.16/24/32GB belowminimum; other chips not listed rather than proven impossible with all runtimes. Corrected English /v1 API typo. Reused verified cover/3figures. Build/publicHTTP200/list5/images checked; semantic2vectorsupserted. No inference on M4/16GiB. Old draft absent from remote3, draft/get40007, publishedAPI48001: preserved archived credential, recorded only, no draft/add. Task e4fe5c3d-fe6e-4eda-9e85-e6e53ab6cf69.
+
+## 2026-10-24 — Ming-3.0-TTS source and deployment review
+
+- https://blog.mushroom.cv/blog/ming-3-tts-small-model-evaluation/ MITcode/weights,0.5Bdense versus7.9Btiny distinguished. LiveAAcontrolled1071rank14/provider1191rank19 versusREADME1069rank13/1188rank17; English preference not universal quality. Pronunciation93.2 attributed to project quotingAA; methodology page accessible but individualresult notreadable. MainHFweight2.96GB plusCAM++28.3MB. CUDAdefault/BF16/autocast, no Maccompatibility or speeds claimed.8actualupstreamtaskinputchecks, noaudioinference. Cover+3figs, bilingualSEO, publicURL/list/carousel/images,currentremoteWeChatfullbody/images/cover/comments and KBledger verified. Task 46f25b6d-8622-454e-937d-2c0ff4ec9ef0.

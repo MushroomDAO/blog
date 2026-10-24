@@ -1,0 +1,156 @@
+{
+  "article": "src/content/blog/ming-3-tts-small-model-evaluation.md",
+  "tool": "image_gen.imagegen",
+  "generation_calls": 3,
+  "final_image_count": 3,
+  "prompts": "prompts.json",
+  "generation_records": "generation-records.json",
+  "processing": {
+    "method": "Pillow MEDIANCUT base palette plus separately reserved red/orange/blue accent colors, no dithering",
+    "framing": "contain without cropping or stretching on exact 16:9 white canvas",
+    "white_cleanup": "RGB channels all >=238 become pure white before quantization",
+    "selection": "largest listed exact 16:9 dimensions, then richest palette fitting strict size cap"
+  },
+  "protected_files_unchanged": {
+    "src/content/blog/ming-3-tts-small-model-evaluation.md": "287e21964a340265ec2bb0df64437b5b680490c17899d2b82865b601aa973a13",
+    "src/assets/images/ming-3-tts-small-model-evaluation-banner.jpg": "671a34abf8505499cefec93e24b5a2b922786366c025e6da40f475be8382a12a"
+  },
+  "visual_inspection_status": "Passed for all three original and final images",
+  "images": [
+    {
+      "figure": "fig-01",
+      "tool": "image_gen.imagegen",
+      "original": "source/20261024-ming-3-tts/generated-assets/fig-01-original.png",
+      "original_sha256": "86728a7279883b5ef1aaac7d1d61cdfb0a2bd113c2bcda496d1665b5e9f630e5",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1210217,
+      "generated_path": "/Users/jason/.codex/generated_images/01a16d0f-ebc6-7682-9261-b17eccbd051e/exec-d78eca8b-afe7-418f-8164-0b6125f1339a.png",
+      "final": "src/assets/images/ming-3-tts-small-model-evaluation-fig-01.png",
+      "final_sha256": "e3b328240e44159fa62d1db42157ff3791132d049a1fc7133a883e0f3fd0b4ff",
+      "dimensions": [
+        1440,
+        810
+      ],
+      "bytes": 74648,
+      "palette_colors_limit": 128,
+      "actual_palette_colors": 116,
+      "white_background_rgb": [
+        255,
+        255,
+        255
+      ],
+      "white_pixel_fraction": 0.9137,
+      "accent_pixel_counts": {
+        "red": 889,
+        "orange": 1197,
+        "blue": 4020
+      },
+      "exact_16_9": true,
+      "below_90000_bytes": true,
+      "transparent": false,
+      "visual_inspection": {
+        "status": "passed",
+        "method": "Direct visual inspection of tool original and final palette PNG using view_image",
+        "notes": "Inspected original and final PNG: black-capped XiaoM actively assembles backbone, audio decoder and speaker module; 0.5B tag attaches only to backbone with separate red 非内存 reminder; no total memory specification.",
+        "accent_colors_preserved": true,
+        "pure_white_background": true,
+        "minimal_labels_readable": true
+      }
+    },
+    {
+      "figure": "fig-02",
+      "tool": "image_gen.imagegen",
+      "original": "source/20261024-ming-3-tts/generated-assets/fig-02-original.png",
+      "original_sha256": "6eee601e07a84bed27899048a132609316d0e011d9365279bee258812bab5b0a",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1140061,
+      "generated_path": "/Users/jason/.codex/generated_images/01a16d0f-ebc6-7682-9261-b17eccbd051e/exec-390ab9ef-df94-4d75-9f8b-43486ad3049c.png",
+      "final": "src/assets/images/ming-3-tts-small-model-evaluation-fig-02.png",
+      "final_sha256": "266ae7e300e98de042cb07d20af54772584ca102d9924a4e81a1eaa1a398d258",
+      "dimensions": [
+        1440,
+        810
+      ],
+      "bytes": 52015,
+      "palette_colors_limit": 128,
+      "actual_palette_colors": 104,
+      "white_background_rgb": [
+        255,
+        255,
+        255
+      ],
+      "white_pixel_fraction": 0.9502,
+      "accent_pixel_counts": {
+        "red": 437,
+        "orange": 1007,
+        "blue": 2087
+      },
+      "exact_16_9": true,
+      "below_90000_bytes": true,
+      "transparent": false,
+      "visual_inspection": {
+        "status": "passed",
+        "method": "Direct visual inspection of tool original and final palette PNG using view_image",
+        "notes": "Inspected original and final PNG: exactly three separate cards labelled 听感偏好, 发音正确, 音色相似; distinct icons; no scores, rankings, tables or fabricated results.",
+        "accent_colors_preserved": true,
+        "pure_white_background": true,
+        "minimal_labels_readable": true
+      }
+    },
+    {
+      "figure": "fig-03",
+      "tool": "image_gen.imagegen",
+      "original": "source/20261024-ming-3-tts/generated-assets/fig-03-original.png",
+      "original_sha256": "b5c58c489c81581a0cdd303bec8a8df1c432abda5c917af02ea784eb276e32f0",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1224822,
+      "generated_path": "/Users/jason/.codex/generated_images/01a16d0f-ebc6-7682-9261-b17eccbd051e/exec-5303d183-94a2-4f78-8bfb-542628ee46aa.png",
+      "final": "src/assets/images/ming-3-tts-small-model-evaluation-fig-03.png",
+      "final_sha256": "1b1fc4fa1603289d41a9adfe21e43d4114b0055293db74dea0e8a9f8eef566cb",
+      "dimensions": [
+        1440,
+        810
+      ],
+      "bytes": 64356,
+      "palette_colors_limit": 128,
+      "actual_palette_colors": 105,
+      "white_background_rgb": [
+        255,
+        255,
+        255
+      ],
+      "white_pixel_fraction": 0.9226,
+      "accent_pixel_counts": {
+        "red": 1232,
+        "orange": 299,
+        "blue": 945
+      },
+      "exact_16_9": true,
+      "below_90000_bytes": true,
+      "transparent": false,
+      "visual_inspection": {
+        "status": "passed",
+        "method": "Direct visual inspection of tool original and final palette PNG using view_image",
+        "notes": "Inspected original and final PNG: three separate trays for 权重文件, 输入协议, 设备兼容; device connection remains open with blue question mark and explicit red Mac未验证; no passed inference claim.",
+        "accent_colors_preserved": true,
+        "pure_white_background": true,
+        "minimal_labels_readable": true
+      }
+    }
+  ],
+  "scope": {
+    "article_edited": false,
+    "banner_edited": false,
+    "published": false,
+    "git_commands_run": false
+  }
+}
