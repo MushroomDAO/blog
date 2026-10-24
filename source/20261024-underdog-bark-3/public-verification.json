@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-24T02:31:28.456411+00:00",
+  "articles": [
+    {
+      "slug": "underdog-bark-3-local-asr",
+      "url": "https://blog.mushroom.cv/blog/underdog-bark-3-local-asr/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/underdog-bark-3-local-asr-banner.BdbZtdxy_2hyl0u.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/underdog-bark-3-local-asr-fig-01.P2Dm2Tjr_Z122Tvi.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/underdog-bark-3-local-asr-fig-02.C9op6pzT_liUHo.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/underdog-bark-3-local-asr-fig-03.2r1gjPZh_Z1YEWNc.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/underdog-bark-3-local-asr-banner.BdbZtdxy.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 2,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/underdog-bark-3-local-asr/",
+    "/blog/nvidia-openshell-agent-runtime/",
+    "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+    "/blog/laya-aayushch-local-first-ai-notification-command-center/",
+    "/blog/cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor/",
+    "/blog/superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx/",
+    "/blog/nvidia-flare-local-inference/",
+    "/blog/occamy-dressage-agent-learning/"
+  ]
+}

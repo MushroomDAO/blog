@@ -1,0 +1,18 @@
+{
+  "model": "ConwayResearch/Underdog-Bark-3.0",
+  "revision": "85db2ad18ab41e534a222ee253c29191d77ed919",
+  "runtime": "public bark_mlx.py FP16, mlx-audio0.5.3",
+  "host": "macOS-26.6.2-arm64-arm-64bit",
+  "audio": "Apple say Samantha synthetic English, mono16kHz WAV",
+  "reference": "The meeting starts at nine. Please send the report tomorrow.",
+  "transcript": "the meeting starts at nine please send the report tomorrow",
+  "audioFrames": 51834,
+  "sampleRate": 16000,
+  "modelDownloadBytes": 163398645,
+  "audioSha256": "d215f48d524afd3f6813ac2a31e3505f454da9f2d8c23314e99a1208e41407db",
+  "scope": "one synthetic short clip, not natural meeting quality, benchmark WER, speed or Clean evaluation. HF_HUB_OFFLINE=1, TRANSFORMERS_OFFLINE=1 during local load/inference.",
+  "chip": "Apple M4",
+  "physicalMemoryBytes": 17179869184,
+  "expandedFp16WeightsBytes": 1254183774,
+  "modelSha256": "c18de9418d73cbeb80b8c1287b392d480a56e191ef4a81d1baaa1b02e66d92ed"
+}
