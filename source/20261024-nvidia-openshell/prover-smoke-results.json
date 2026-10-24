@@ -1,0 +1,96 @@
+{
+  "officialRelease": "v0.1.5",
+  "platform": "macOS Apple Silicon",
+  "archiveSha256": "faf52754dd3abce02651cf571da5ff93137571789c3bb618d09f28fdf2d4507f",
+  "results": [
+    {
+      "candidate": "within.yaml",
+      "boundary": "boundary.yaml",
+      "exitCode": 0,
+      "output": {
+        "schema_version": 1,
+        "prover_version": "0.1.5",
+        "check": "boundary",
+        "coverage": {
+          "domains": [
+            "filesystem",
+            "network_l4",
+            "network_rest",
+            "process",
+            "landlock"
+          ]
+        },
+        "result": "within_boundary",
+        "exit_code": 0,
+        "inputs": {
+          "candidate": "/Users/jason/Dev/mycelium/blog/source/20261024-nvidia-openshell/within.yaml",
+          "boundary": "/Users/jason/Dev/mycelium/blog/source/20261024-nvidia-openshell/boundary.yaml"
+        },
+        "counterexample": null,
+        "reason_code": null,
+        "reason": null
+      }
+    },
+    {
+      "candidate": "exceeds.yaml",
+      "boundary": "boundary.yaml",
+      "exitCode": 1,
+      "output": {
+        "schema_version": 1,
+        "prover_version": "0.1.5",
+        "check": "boundary",
+        "coverage": {
+          "domains": [
+            "filesystem",
+            "network_l4",
+            "network_rest",
+            "process",
+            "landlock"
+          ]
+        },
+        "result": "exceeds_boundary",
+        "exit_code": 1,
+        "inputs": {
+          "candidate": "/Users/jason/Dev/mycelium/blog/source/20261024-nvidia-openshell/exceeds.yaml",
+          "boundary": "/Users/jason/Dev/mycelium/blog/source/20261024-nvidia-openshell/boundary.yaml"
+        },
+        "counterexample": {
+          "domain": "filesystem",
+          "access": "write",
+          "path": "/tmp"
+        },
+        "reason_code": null,
+        "reason": null
+      }
+    },
+    {
+      "candidate": "nested.yaml",
+      "boundary": "path-boundary.yaml",
+      "exitCode": 3,
+      "output": {
+        "schema_version": 1,
+        "prover_version": "0.1.5",
+        "check": "boundary",
+        "coverage": {
+          "domains": [
+            "filesystem",
+            "network_l4",
+            "network_rest",
+            "process",
+            "landlock"
+          ]
+        },
+        "result": "unsupported",
+        "exit_code": 3,
+        "inputs": {
+          "candidate": "/Users/jason/Dev/mycelium/blog/source/20261024-nvidia-openshell/nested.yaml",
+          "boundary": "/Users/jason/Dev/mycelium/blog/source/20261024-nvidia-openshell/path-boundary.yaml"
+        },
+        "counterexample": null,
+        "reason_code": "unresolved_filesystem_path",
+        "reason": "filesystem write containment for '/tmp/cache' depends on sandbox path resolution; use matching paths in candidate and boundary"
+      }
+    }
+  ],
+  "scope": "Standalone policy boundary verification only. No running sandbox enforcement, attack resistance, gateway, credentials or agent tested."
+}
