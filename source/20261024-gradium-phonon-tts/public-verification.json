@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-24T13:19:19.240329+00:00",
+  "articles": [
+    {
+      "slug": "gradium-phonon-local-tts",
+      "url": "https://blog.mushroom.cv/blog/gradium-phonon-local-tts/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/gradium-phonon-local-tts-banner.qc6lPWLc_Z1KeKD7.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gradium-phonon-local-tts-fig-01.DE01hUo5_1cnvdj.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gradium-phonon-local-tts-fig-02.CKGoLU4r_wd221.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gradium-phonon-local-tts-fig-03.BEEW5WR1_ZOSK51.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gradium-phonon-local-tts-banner.qc6lPWLc.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 2,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/gradium-phonon-local-tts/",
+    "/blog/appflowy-self-host-services/",
+    "/blog/ming-3-tts-small-model-evaluation/",
+    "/blog/underdog-bark-3-local-asr/",
+    "/blog/nvidia-openshell-agent-runtime/",
+    "/blog/flint-local-coding-rec-engine/",
+    "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+    "/blog/laya-aayushch-local-first-ai-notification-command-center/"
+  ]
+}

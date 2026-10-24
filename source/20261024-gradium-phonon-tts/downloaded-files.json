@@ -1,0 +1,27 @@
+{
+  "revision": "92741c5b07d085ff840e26fea8ce43110b87852f",
+  "files": [
+    {
+      "file": "config.json",
+      "bytes": 4634,
+      "sha256": "b5d0f88353638370d94035b7d73d7d6577c0554d78f8d7ecfd40490aae39ae85"
+    },
+    {
+      "file": "model.q8.gguf",
+      "bytes": 64512352,
+      "sha256": "a7d9aad2cd6dc66473f24a08bc6d2939030ef4d751ef82349361fbef3272dbae",
+      "matchesHfLfsHash": true
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 277967,
+      "sha256": "691a00068fa7b989f2f3e5ae5daa2d1a5bb319f2d5360deafcfb19a8bb6e7936"
+    },
+    {
+      "file": "default-voice.safetensors",
+      "bytes": 256136,
+      "sha256": "dc537478eaadc1a5257fcda2e3501ab81e14c111a5d95a5838f350db2afd0f1a",
+      "matchesHfLfsHash": true
+    }
+  ]
+}

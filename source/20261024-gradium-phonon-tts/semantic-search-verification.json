@@ -1,0 +1,13 @@
+{
+  "query": "Gradium Phonon 64.5MB 本地语音合成 7ms 商用许可",
+  "matches": [
+    {
+      "article_id": "gradium-phonon-local-tts",
+      "title": "Gradium Phonon：64.5MB本地语音合成，7ms与商用许可怎么读？",
+      "url": "/blog/gradium-phonon-local-tts/",
+      "language": "zh",
+      "excerpt": "Gradium Phonon：64.5MB本地语音合成，7ms与商用许可怎么读？ 核查Gradium Phonon官方权重与Rust推理库，区分31M英文Apache-2.0与40M各版本非商用许可，拆解64.5MB下载、7ms首音和困难文本1.7%词错率的条件；记录M4、16GB机器在禁网沙箱内生成WAV的功能验证，并说明首次下载、音色制作、中文支持和最低内存等问题不能混为一谈。 Gradium Phonon 语音合成 本地AI Rust 开源模型 官方仓库与权重在哪里？ 31M、40M与64.5MB分别指什么？ 7ms首音，包含了哪些时间？ 1.7%",
+      "score": 0.79145783
+    }
+  ]
+}

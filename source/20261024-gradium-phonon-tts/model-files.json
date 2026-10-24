@@ -1,0 +1,61 @@
+{
+  "revision": "92741c5b07d085ff840e26fea8ce43110b87852f",
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 1620
+    },
+    {
+      "name": "README.md",
+      "bytes": 10478
+    },
+    {
+      "name": "chat_template.jinja",
+      "bytes": 1513
+    },
+    {
+      "name": "config.json",
+      "bytes": 4634
+    },
+    {
+      "name": "default-voice.safetensors",
+      "bytes": 256136
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 220
+    },
+    {
+      "name": "model.q4k.gguf",
+      "bytes": 55075168
+    },
+    {
+      "name": "model.q8.gguf",
+      "bytes": 64512352
+    },
+    {
+      "name": "model.safetensors",
+      "bytes": 102823920
+    },
+    {
+      "name": "processor_config.json",
+      "bytes": 747
+    },
+    {
+      "name": "tokenizer.5.0.0.json",
+      "bytes": 302879
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 277967
+    },
+    {
+      "name": "tokenizer.model",
+      "bytes": 65045
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 575
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "rootReviewed": true,
+  "figures": [
+    {
+      "file": "src/assets/images/gradium-phonon-local-tts-fig-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 72644,
+      "sha256": "72b90d316cfc66c51bc4a25aca420406637328269b3b6fdcfae6c0df9a825582"
+    },
+    {
+      "file": "src/assets/images/gradium-phonon-local-tts-fig-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 61787,
+      "sha256": "964b76a3660809f395fc3033ef70e6ee736726190c1b903f1e2192a2ee65585b"
+    },
+    {
+      "file": "src/assets/images/gradium-phonon-local-tts-fig-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 60989,
+      "sha256": "9d09da3cbb7e0dd02665fbf1d326cf44bfa9e2bba7e748a4f33819c2ab69eb60"
+    }
+  ]
+}

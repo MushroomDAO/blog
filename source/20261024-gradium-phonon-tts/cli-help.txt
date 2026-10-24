@@ -1,0 +1,30 @@
+Generate speech with Phonon
+
+Usage: ptts [OPTIONS] [TEXT]
+
+Arguments:
+  [TEXT]  Text to synthesize
+
+Options:
+  -o, --output <OUTPUT>                Output WAV file path [default: out.wav]
+  -v, --voice <VOICE>                  Voice: a voice of the checkpoint or of the voice catalog, by name or catalog voice ID, a path to a voice `.safetensors`, or a path to a ~10s audio file to clone. Defaults to the checkpoint's `default` voice, or its first bundled voice by name
+  -t, --temperature <TEMPERATURE>      Sampling temperature [default: 0.3]
+  -s, --seed <SEED>                    Sampling seed [default: 4242424242424242]
+  -m, --model <MODEL>                  Model to load: a local directory holding config.json, weights, tokenizer and voices, or a Hugging Face repo as hf://owner/name or hf://owner/name@revision. Use a commit as the revision to reproduce a release. Defaults to the default model, downloaded from the Hub and cached on first use. [default: hf://gradium/phonon-31m-en@8c64b55ec301728e2d1695bfea87a08a267d0c2d]
+      --voice-catalog <VOICE_CATALOG>  Voice catalog to look --voice up in when the checkpoint has no voice of that name: a Hugging Face repo as hf://owner/name[@revision], or a local JSONL file or folder holding voices.jsonl. Only the voice that is used is downloaded [default: hf://gradium/phonon-voices@da6c9ec0d47be8df5c87c730a3aa97187f3229c3]
+      --list-voices                    List the voices of --voice-catalog, then exit
+      --tokenizer <TOKENIZER>          Tokenizer to load, as a path to a `tokenizer.json`. Defaults to the one the checkpoint ships
+      --weights <WEIGHTS>              Weights file to load from the repo or directory, e.g. `model.q8.gguf` for a checkpoint that ships both f32 and quantized weights. Defaults to the standard weights matching --quant, then f32 weights
+      --device <DEVICE>                Device to run on: auto, cpu, cuda, vulkan or metal [default: auto]
+      --quant <QUANT>                  Weight format for the flow-LM linears, e.g. q8_0 or q4k. CPU only
+      --cfg-coef <CFG_COEF>            Classifier-free guidance coefficient. 1.0 disables it
+      --condition <NAME=VALUE>         Set a conditioner, e.g. duration_delta=0.5; repeatable
+      --threads <THREADS>              Number of CPU threads for tensor ops. Defaults to one per logical core
+      --lang <LANG>                    Language the text is normalized as before tokenizing: `en`, `fr`, `de`, `es` or `pt`. Required: the spoken forms differ per language, so there is nothing safe to guess. `none` hands the text to the tokenizer as written, which the model reads less well
+      --rewrites <REWRITES>            Which word rewrites run on the normalized text: `default` (numbers, currency, dashed-digits, emails, urls, abbreviations, elongations), `all` (those and phones, times, dates), `none`, or a comma-separated list of rule names. Has no effect with `--lang none` [default: default]
+  -h, --help                           Print help
+  -V, --version                        Print version
+
+Developer:
+      --rng-values <RNG_VALUES>  Replay noise from a JSON array of floats instead of sampling it, so a run can be compared against the reference implementation step for step
+      --chrome-tracing           Write a Chrome trace of the run to ./trace-<timestamp>.json

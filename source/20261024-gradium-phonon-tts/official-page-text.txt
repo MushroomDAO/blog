@@ -1,0 +1,643 @@
+Open-Sourcing Phonon: A Suite of Frontier On-Device TTS Models | Gradium
+New
+Introducing Phonon ・ Our first open, on-device TTS model
+New
+Introducing Phonon ・ Our first open, on-device TTS model
+Check it out
+Products
+Pricing
+Blog
+Resources
+Talk to us
+Sign in
+Talk to us
+Sign in
+Spotlight post
+Gradium Extends Funding to $100 Million and Expands to Silicon Valley
+Gradium extends its seed funding to $100 million, welcoming new investors including NVIDIA, and opens a San Francisco Bay Area office to scale its real-time voice AI.
+July 8, 2026
+3 min read
+Models
+Text-to-Speech
+Turn text into natural sounding voice
+Speech-to-Text
+Transcribe audio into text instantly
+Live Translation
+Convert voice to voice in real time
+Voice Cloning
+Instance or pro voice clone
+Voice Design
+A brand-new voice from a text prompt
+Phonon
+Our open, on-device TTS model
+Showcase
+Agent Demo
+Test our voice agent live
+Gradbot
+Build voice agents in a single prompt
+Build
+From idea to prototype in minutes
+Community
+Builders, researchers and creators
+App Gallery
+Apps built on Gradium
+Latest post
+Gradium releases Phonon, an open-source text-to-speech model that runs on any device
+Trained on NVIDIA GPUs, Phonon generates natural speech locally in as little as 64.5 MB, on phones, laptops, embedded hardware and in the browser.
+October 21, 2026
+4 min read
+Build
+Docs
+Start building in minutes
+Release Notes
+See what's new in Gradium
+Status
+Monitor system performance
+Trust
+Security and compliance
+Company
+About
+Meet the team behind Gradium
+Careers
+Come build with us
+Press
+Media and news resources
+Products
+Pricing
+Blog
+Resources
+Talk to us
+Sign in
+Spotlight post
+Gradium Extends Funding to $100 Million and Expands to Silicon Valley
+Gradium extends its seed funding to $100 million, welcoming new investors including NVIDIA, and opens a San Francisco Bay Area office to scale its real-time voice AI.
+July 8, 2026
+3 min read
+Models
+Text-to-Speech
+Turn text into natural sounding voice
+Speech-to-Text
+Transcribe audio into text instantly
+Live Translation
+Convert voice to voice in real time
+Voice Cloning
+Instance or pro voice clone
+Voice Design
+A brand-new voice from a text prompt
+Phonon
+Our open, on-device TTS model
+Showcase
+Agent Demo
+Test our voice agent live
+Gradbot
+Build voice agents in a single prompt
+Build
+From idea to prototype in minutes
+Community
+Builders, researchers and creators
+App Gallery
+Apps built on Gradium
+Latest post
+Gradium releases Phonon, an open-source text-to-speech model that runs on any device
+Trained on NVIDIA GPUs, Phonon generates natural speech locally in as little as 64.5 MB, on phones, laptops, embedded hardware and in the browser.
+October 21, 2026
+4 min read
+Build
+Docs
+Start building in minutes
+Release Notes
+See what's new in Gradium
+Status
+Monitor system performance
+Trust
+Security and compliance
+Company
+About
+Meet the team behind Gradium
+Careers
+Come build with us
+Press
+Media and news resources
+Blog
+Announcement
+Open-Sourcing Phonon: A Suite of Frontier On-Device TTS Models
+October 20, 2026
+8 min read
+Contents
+Today, we're open-sourcing
+Phonon
+, now a family of 31m and 40m parameter text-to-speech (TTS) models that set a new standard for naturalness and accuracy on-device, making natural, high-quality speech possible even on the most resource-constrained hardware.
+Phonon pushes the frontier of speech quality at this scale. Our English models deliver best-in-class naturalness and accuracy, while our multilingual models mark an even bigger leap forward, dramatically advancing the state of the art across five languages.
+And they're exceptionally fast. Phonon 31m starts speaking in just 7 ms on a laptop CPU and is available under Apache 2.0. Phonon 40m comes in both language-specific variants and a single multilingual model supporting English, French, German, Spanish, and Portuguese with the same weights. All models are optimized for more than 10 major hardware platforms: CPU (Intel, Arm, WebAssembly), GPU (CUDA, Vulkan, Metal, WebGPU), and NPU (Apple Core ML, Snapdragon®).
+Type a sentence in the box below. The voice you hear is generated inside this browser tab, with no server involved.
+Click to test
+A new wave of language models recently appeared starting with Kyutai’s effort on Pocket TTS. These models are small enough to run on a laptop or a phone, and still provide high-quality speech in real-time [4]. Until now, on-device voice still meant compromises: limited language coverage, models too large for the memory budget, or quality too low to ship. Phonon is built for local inference first: the text stays on the device, the voice works without a network, and usage is unlimited at no extra cost. Every app that speaks brings voice one step closer to being the default interface between humans and machines.
+Phonon does three things on device:
+Speaks with any voice
+: 100+ built-in, or any voice you clone or design with Gradium
+Speaks any text
+, including numbers, dates and codes, in five languages
+Runs anywhere
+: phones, laptops, single-board computers and web browsers
+We release these models as open weight to empower the community to create new voice-powered applications. Here are some demos built by our friends at Autonomous, Modal and Xybrid AI.
+Harry Potter hat voice
+Autonomous's robot, Lamp, puts on a sorting hat and talks in character, voiced by Phonon.
+Demo
+Phonon voice bot on Modal
+A low-latency voice agent built with Pipecat on Modal. Phonon runs on the agent's CPU-only container, so first audio needs no network hop.
+Demo
+Codebase
+Magpie TTS meets Phonon
+NVIDIA Magpie TTS meets Gradium Phonon: two open models in a scripted dialogue, Magpie in Adi's voice and Phonon in Sterling's.
+Demo
+Du coté de chez Swann
+Proust's Du côté de chez Swann, read aloud page by page, with an Italian translation to read and hear alongside the French.
+Try it
+Xybrid game demo
+A sci-fi video game on a desert planet, its voices generated by Phonon on the player's own machine.
+Demo
+Phonon Translate
+Type in English and hear it in French: Qwen translates, Phonon speaks both languages, and MLX runs it all on your device.
+Mobile Demo
+Desktop Demo
+Little Voices
+Ask the angel and the devil on your shoulder anything: a Pipecat app in Python on iPhone, with Phonon 31m giving both their voices, no network.
+Demo
+Codebase
+Offline FM
+Offline FM
+An offline dino runner where Rex hosts a radio show, voiced live by Phonon inside your browser tab. Pick a voice, give Rex a topic.
+Try it
+Demo
+On watch
+On watch
+Phonon on an Apple Watch with Wi-Fi switched off, talking you through a coffee brew step by step, entirely on the wrist.
+Demo
+RepCoach
+RepCoach
+An iPhone app that counts your reps out loud and keeps you going, with no signal needed.
+Demo
+Chrome
+Phonon Chrome extension
+A Chrome extension that reads any text on the web aloud, with Phonon running in the browser.
+Demo
+What we release today: a suite of open-weight Phonon models
+Phonon is the open release of the model we announced in April
+[1]
+. Since then it has been in private beta, and we have built on it with our partners and early users
+[2]
+[3]
+. Their feedback shaped this release: smaller sizes, more languages and support for any custom voice, e.g. via voice design.
+It comes in two sizes, so you can trade footprint for quality depending on where it runs. We release the English Phonon 31m under an Apache 2.0 license so developers can build new applications on it freely, from prototypes to commercial products. Phonon 40m is the one to pick when expressivity and accuracy on hard text matter most: it gets closer to larger models and comes in 5 languages. Phonon 40m multilingual covers five languages in a single model, such that a single set of weights can serve more users in your apps. Each use case comes with specific memory constraints, language requirements or fine-tuning needs: reach out to us
+here
+for commercial usage and custom models.
+Phonon
+31m
+Phonon
+40m
+Phonon
+40m multilingual
+Size (q8)
+64 MB
+74.6 MB
+74.6 MB
+Languages
+EN
+EN, FR, DE, ES, PT, one model per language
+EN, FR, DE, ES, PT in one model
+Built-in voices
+37 (25 + 12 characters)
+12 to 37 per language
+102
+License
+Apache 2.0
+CC BY-NC
+CC BY-NC
+Best for
+Smallest footprint
+Best expressivity and accuracy
+Multilingual apps
+Phonon
+31m
+Size (q8)
+64 MB
+Languages
+EN
+Built-in voices
+37 (25 + 12 characters)
+License
+Apache 2.0
+Best for
+Smallest footprint
+Phonon
+40m
+Size (q8)
+74.6 MB
+Languages
+EN, FR, DE, ES, PT, one model per language
+Built-in voices
+12 to 37 per language
+License
+CC BY-NC
+Best for
+Best expressivity and accuracy
+Phonon
+40m multilingual
+Size (q8)
+74.6 MB
+Languages
+EN, FR, DE, ES, PT in one model
+Built-in voices
+102
+License
+CC BY-NC
+Best for
+Multilingual apps
+All models read numbers, dates and other structured text correctly through text normalization, and let you set the speaking speed and normalize loudness.
+Benchmarks: naturalness, accuracy and inference performance
+Naturalness (ELO)
+Developers judge a TTS model first by how it sounds. We had independent listeners compare Phonon with Kokoro, Magpie, NeuTTS and Pocket TTS in blind pairwise tests, in each language (1,189 raters, 17,270 votes).
+English
+“
+Honestly, do you think I should call him? Or just let it go?
+”
+Phonon
+40m
+Juniper
+Kokoro
+af_heart
+English
+“
+I understand this is confusing. In simple terms, you paid the first part of the repair, and we cover the rest.
+”
+Phonon
+31m
+Zoey
+Kokoro
+af_heart
+Spanish
+“
+Sinceramente, es la sorpresa mas bonita que nadie me ha preparado nunca
+”
+Phonon
+40m
+Celia
+Kokoro
+ef_dora
+French
+“
+Ah oui, bien sûr, tu vas ranger ta chambre demain, comme tous les autres jours depuis un mois.
+”
+Phonon
+31m
+Tiphaine
+Kokoro
+ff_siwis
+Accuracy (WER)
+TTS models are known to struggle with complex structured data, typically phone numbers, email addresses and postal codes. Our models use text normalization to maximize performance on this type of data. We built a test set of 500 sentences per language from hard cases developers sent us, the ones their current models get wrong. On this set, Phonon 31m and 40m make fewer errors than any other model of their size. The smallest model trades some accuracy for size; for tight memory budgets and specific kinds of text, a custom model trained on your use case gets you both.
+Every system reads the same sentences with the same four female voices per language.
+English
+French
+Spanish
+Portuguese (BR)
+German
+Zoey · Juniper · Everly · Harper
+1
+Phonon 31m
+1.70%
+2
+Phonon 40m multilingual
+2.11%
+3
+Phonon 40m
+2.22%
+4
+Kokoro
+3.50%
+5
+Kitten TTS
+7.40%
+6
+NeuTTS Nano
+8.71%
+7
+Magpie
+▶
+27.51%
+Transcripts by qwen3.8-omni-flash, LLM WER by gemma-4-31b-it. Kokoro: en af_heart / bella / nicole / sarah, its one female voice in fr / es / pt, no German. Magpie: Aria and Sofia. Kitten: four female voices, English only. NeuTTS: no Portuguese. NeuTTS clones 10 s Gradium renders of the four voices.
+Temperature
+Phonon
+40m
+“
+Noted, minus three degrees Celsius.
+”
+Kokoro
+“
+Noted, de Gracy.
+”
+Phone number
+Phonon
+31m
+“
+Call us on zero two zero seven nine four six zero zero one eight.
+”
+Kokoro
+“
+Call us on 2079 4618.
+”
+Delivery window
+Phonon
+40m
+multilingual
+“
+Your delivery window is 9:30 to 11:30.
+”
+Kokoro
+“
+Your delivery window is nine point three to eleven point three.
+”
+Version number
+Phonon
+40m
+multilingual
+“
+Version 3.10 fixed the login bug.
+”
+Kokoro
+“
+Version 3.1, fix the login bug.
+”
+The test set is public on Hugging Face:
+gradium/tts-hard-sentences-202610
+.
+Inference performance: supported devices
+Phonon ships with its own inference stack and q8 GGUF weights, with backends for CPU, Metal, CUDA, Vulkan, WebGPU and Apple Core ML. On a MacBook Air M5 CPU, Phonon starts speaking in 7 ms; Kokoro takes 517 ms. On a Raspberry Pi 5, Phonon 31m starts speaking in 38 ms and runs 3.7 times faster than real time; Kokoro needs 7 seconds to start and runs below real time.
+Laptop
+Mobile
+Raspberry Pi 5
+Jetson Orin Nano
+WebGPU
+MacBook Air M5 · without KleidiAI
+macOS 26.7.1
+Speed
+× real time · higher is faster
+CPU · 1 core
+Phonon 31m
+11.6×
+Phonon 40m
+11.3×
+Kokoro
+7.28×
+Magpie
+1.01×
+CPU · 4 threads
+Phonon 31m
+29.9×
+Phonon 40m
+27.9×
+Kokoro
+10.9×
+Magpie
+2.32×
+Time to first audio
+lower is better
+CPU · 1 core
+Phonon 31m
+13.6 ms
+Phonon 40m
+17.3 ms
+Kokoro
+776 ms*
+Magpie
+627 ms
+CPU · 4 threads
+Phonon 31m
+6.9 ms
+Phonon 40m
+8.8 ms
+Kokoro
+517 ms*
+Magpie
+239 ms
+MacBook Air M5 · with Arm KleidiAI
+macOS 26.7.1
+Speed
+× real time · higher is faster
+CPU · 1 core
+Phonon 31m
+20.5×
+Phonon 40m
+19.5×
+CPU · 4 threads
+Phonon 31m
+41.5×
+Phonon 40m
+39.2×
+Time to first audio
+lower is better
+CPU · 1 core
+Phonon 31m
+5.8 ms
+Phonon 40m
+7.1 ms
+CPU · 4 threads
+Phonon 31m
+6.5 ms
+Phonon 40m
+7.8 ms
+MacBook Air M5 · with Apple Accelerate + Arm KleidiAI
+macOS 26.7.1
+Speed
+× real time · higher is faster
+CPU · 1 core
+Phonon 31m
+26.0×
+Phonon 40m
+23.9×
+CPU · 4 threads
+Phonon 31m
+46.7×
+Phonon 40m
+38.9×
+Time to first audio
+lower is better
+CPU · 1 core
+Phonon 31m
+5 ms
+Phonon 40m
+6.3 ms
+CPU · 4 threads
+Phonon 31m
+5.4 ms
+Phonon 40m
+6.7 ms
+× real time = seconds of audio per second of compute. Time to first audio includes the text prompt, not the one-off voice conditioning. 1-core rows run the serial bench loop (pinned to one core on the Raspberry Pi 5 and the Samsung Galaxy S22); multi-thread rows run the streaming path with the decoder on its own thread. Kokoro (hexgrad's PyTorch package) and Magpie (NVIDIA NeMo-Speech.cpp and NeMo) run at default settings on the same sentence; each bar is its fastest measured setup in that group. * Kokoro does not stream, so its first audio is the whole sentence. Phonon 40m multilingual shares Phonon 40m's architecture and was not measured separately. Web browser runs (20 October 2026) use Phonon 31m on the sentence "Phonon runs entirely on your device.", best of the runs per device; WebGPU generates 4 frames per batch, so its time to first audio is higher than on CPU. One English sentence, about 5 s of audio, median of 10 runs after 2 warm-ups (phones 5): "The quick brown fox jumps over the lazy dog, then naps in the warm afternoon sun."
+Phonon runs on Arm processors and Snapdragon® platforms inside today’s phones and laptops, and both launch partners helped us make it fast:
+Arm is the foundational compute platform for mobile AI, powering 99% of the world's smartphones, and is helping enable a new generation of AI-powered PCs. KleidiAI is Arm’s library of optimised building blocks that makes AI models run faster on Arm processors. Phonon integrates KleidiAI, so developers running Phonon on Arm hardware get faster inference out of the box. Phonon runs on Arm CPUs with KleidiAI acceleration: 28 ms to first audio and a real-time factor of 0.066, measured by our partners at Arm.
+Arm.
+Arm CPUs power nearly every smartphone and every Apple Silicon Mac. Phonon integrates KleidiAI, Arm’s library of optimized building blocks for AI, so it runs faster on Arm hardware out of the box: 28 ms to first audio and 15x faster than real time, as measured by our partners at Arm.
+Qualcomm Technologies.
+With our partners at Qualcomm Technologies, Inc., we’re bringing Phonon to Snapdragon® Mobile Platforms. Leveraging custom-built Snapdragon 8 Elite Gen 5 and Qualcomm Oryon™ CPU, Phonon starts speaking in 7.5 ms and runs 24x faster than real time.
+Custom voices for every app
+Most on-device models ship with a limited set of pre-packaged voices. But every product needs its own: character voices for a game, an angry pirate for a themed app, an encouraging coach for language learning. Voice cloning helps, but is hard to scale: every voice needs a speaker, their consent and a recording.
+Phonon works with both instant voice cloning and voice design. Clone a voice from a short consented recording, or describe a new one in plain text, in Gradium Studio or through the API. Download the voice file, load it in Phonon, and it runs fully on device. Creating voices is free and unlimited, on top of the 102 built-in ones, including 12 English character voices made with voice design, so every user of your app can have their own.
+How Phonon works
+Phonon builds on our earlier research at Kyutai on Continuous Audio Language Models (
+arXiv
+), which led to the development of Pocket TTS and demonstrated real-time, high-quality speech synthesis on consumer CPUs [4], with latest developments that push miniaturization even further (
+Orsini, 2026
+). At Gradium, we are extending this research towards accurate, multilingual, and controllable on-device speech synthesis for real-world applications.
+Phonon is based on a causal transformer backbone. The backbone takes as prefix the text embeddings concatenated with the speaker embeddings. The text embeddings come from a SentencePiece tokenizer with a 4,000-token vocabulary, so the model reads raw text with no phoneme conversion, which makes it easy to extend Phonon to new languages.
+The backbone is then used in an auto-regressive way, generating a latent vector for each 80 ms frame. A flow-matching head turns this vector, together with random noise, into continuous audio embeddings in a single step. These audio embeddings are converted to 80 ms of 24 kHz PCM audio data via a smaller variant of the
+Mimi
+decoder. An end-of-speech (EOS) head also operates on the latent vector to decide when to stop the generation.
+The different Phonon model sizes correspond to a different number of layers and hidden size used in the backbone. All the models are distilled from a larger Phonon teacher. The same flow-matching head and Mimi decoder are shared by all the Phonon models.
+Phonon
+31m
+Phonon
+40m
+Parameters
+31m
+40m
+Transformer layers
+6
+9
+Width
+512
+512
+Attention heads
+8
+8
+Phonon
+31m
+Parameters
+31m
+Transformer layers
+6
+Width
+512
+Attention heads
+8
+Phonon
+40m
+Parameters
+40m
+Transformer layers
+9
+Width
+512
+Attention heads
+8
+All Phonon variants were trained on a cluster of NVIDIA H100 GPUs, using NCCL for distributed training and CUDA Graphs to speed up research experiments on very small models.
+Custom models for your product
+At this size, a model built around your constraints beats a generic one. So we also train custom Phonon models with design partners: smaller ones for tight memory budgets, other languages including Korean, Arabic and Japanese, or models fine-tuned on your own vocabulary.
+Automotive is a good example. A voice in the car has to run on embedded hardware with limited memory, respond instantly so the driver isn’t kept waiting, keep working in tunnels and areas with no coverage, and handle the languages of every market the car ships to. FORVIA and Appning by FORVIA are design partners using Phonon in joint R&D in an automotive context.
+Get started
+Download the weights from Hugging Face:
+Phonon 31m
+and
+Phonon 40m
+. The inference code is on GitHub at
+github.com/gradium-ai/xn-ptts
+, and the README covers installation, a quick-start and the integrations for Rust, Python (with a CLI), Swift and JavaScript/WASM. The repo also includes a WebSocket server and an OpenAI-compatible server. Point your coding agent at it and start building.
+Using a coding agent? Paste this prompt:
+~/phonon/setup.prompt
+Copy
+1
+Set up Phonon, Gradium's on-device text-to-speech model, in this project.
+2
+Clone
+https://github.com/gradium-ai/xn-ptts
+and follow its README.
+3
+Download the Phonon 31m English weights from https://huggingface.co/gradium/phonon-31m-en into a model folder containing config.json, model.q8.gguf, tokenizer.json and voices/, and set MODEL_DIR to that folder.
+4
+Use the Python package with quant q8 to synthesize
+"Hello from Phonon"
+with the voice Freya into out.wav.
+5
+Confirm the file plays, then report the time to first audio.
+Phonon is also available in the tools and libraries you already use:
+MLX-Audio:
+run Phonon natively on Apple Silicon from day 0.
+Transformers:
+load Phonon from the Hugging Face Hub.
+LM Studio:
+Phonon powers Read aloud in Bionic by LM Studio.
+Ollama:
+Phonon is integrated in Ollama.
+Need a smaller model, another language or a model fine-tuned for your product?
+Reach out here
+.
+Gradium Phonon is our first open release. Tell us what you build.
+References
+[1]
+Gradium Phonon: on-device TTS for consumer apps, NPCs and offline products
+, 3 April 2026
+[2]
+Evaluating Phonon: how we made the best TTS model for edge devices
+, 9 April 2026
+[3]
+Phonon update: 1.00% WER on Seed-TTS
+, 26 May 2026
+[4] Kyutai, Pocket TTS blog post (
+kyutai.org
+, January 2026)
+Qualcomm, Qualcomm Oryon and Snapdragon are trademarks or registered trademarks of Qualcomm Incorporated. Snapdragon and Qualcomm branded products are products of Qualcomm Technologies, Inc. and/or its subsidiaries.
+Related posts
+Jul 15, 2026
+Research
+Smaller, clearer, better: Phonon Multilingual beats Magpie and NeuTTS Nano in French, German, and Spanish
+Phonon, our 100M-parameter on-device Text-To-Speech model, produces up to 3.5x fewer word errors than NVIDIA's Magpie TTS in French, German, and Spanish at 3.6x fewer parameters, and leads NeuTTS Nano on both word error rate and speaker similarity. It clones a reference voice across five languages: English, French, German, Spanish, and Portuguese.
+Discover
+May 26, 2026
+Research
+Phonon update: 1.00% WER on Seed-TTS, smaller than every model we beat
+Phonon, our 100M-parameter on-device Text-To-Speech model, reaches 1.00% WER on the Seed-TTS English benchmark, outperforming NeuTTS Air, KaniTTS2, and NeuTTS Nano. With a fixed voice, it drops to 0.83% WER, ahead of Kokoro and Magpie.
+Discover
+Apr 3, 2026
+Announcement
+Gradium Phonon: On-Device TTS for Consumer Apps, NPCs, and Offline Products
+Announcing Gradium Phonon, our new on-device text-to-speech model designed for consumer apps, NPCs, and offline products.
+Discover
+Models
+Text-to-Speech
+Speech-to-Text
+Live Translation
+Voice Cloning
+Voice Design
+Phonon
+Showcase
+Agent Demo
+Gradbot
+Build
+Community
+App Gallery
+Build
+Pricing
+Pricing FAQ
+Docs
+Release Notes
+Status
+Company
+About
+Blog
+Careers
+Press
+Contact
+Socials
+X
+GitHub
+LinkedIn
+Discord
+Legal
+Terms of Service
+Privacy Policy
+Data Processing Agreement
+Trust Center
+HDS Guarantees
+Legal & Privacy FAQ
+Cookie Settings
+©
+2026
+Gradium. All rights reserved.
