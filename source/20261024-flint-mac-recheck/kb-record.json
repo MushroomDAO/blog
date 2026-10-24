@@ -1,0 +1,1 @@
+{"title":"Flint模型评估与Mac硬件门槛","summary":"Flint是Recursive公开的39.8B总参数、约2.5B激活参数MoE编程模型，模型权重和rec推理引擎采用Apache-2.0协议。官方rec路线当前列出M4 Pro、M5 Pro或M5 Max、至少48GB统一内存、约30GB空闲磁盘，pi还需要Node.js 22。原评估文章已补充双语Mac配置对照表；125 token/s属于官方特定条件结果，本机16GB未运行推理。","tags":["Flint","本地AI","Mac","MoE","编程模型"],"entities":["Recursive","Flint","rec","Eureka Machine","Apple"],"content_type":"text"}
