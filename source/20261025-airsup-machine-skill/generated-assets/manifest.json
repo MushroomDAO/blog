@@ -1,0 +1,118 @@
+{
+  "article": "airsup-machine-skill",
+  "requested_count": 3,
+  "generator": "built-in image_gen",
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "character": "Red dome cap, white spots, cream stem, black dot eyes, thin limbs; active deadpan protagonist",
+  "assets": [
+    {
+      "id": 1,
+      "topic": "prompt-to-interactive-geometry",
+      "anchor": "Prompt → equations → procedural mechanical geometry → interactive HTML",
+      "labels": [
+        "提示",
+        "方程",
+        "程序化几何",
+        "交互 HTML"
+      ],
+      "prompt": "prompts/fig-01.txt",
+      "original": "originals/fig-01.png",
+      "final": "src/assets/images/airsup-machine-skill-fig-01.png",
+      "generation_source_path": "/Users/jason/.codex/generated_images/01a170d0-ef2f-72b0-a028-d5610fc6f5a4/exec-087f602b-2141-4a15-9755-abd0d52fd751.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1297938,
+      "original_sha256": "584e01c13614db17691f0f9fd273a5d0ee4a88cbedd19350debc22c46973aacf",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "aspect_ratio": "16:9",
+      "bytes": 84088,
+      "palette_colors": 128,
+      "pure_white_pixel_fraction": 0.914,
+      "sha256": "2205672088d400e5547dc0ac02fa796ba52698a63519e77b145b68deb0f3f8b3",
+      "qa": {
+        "visual_review": "passed: current XiaoM design, active core action, sparse legible labels, no numerical claims, ample white space",
+        "white_background": true,
+        "exact_16_9": true,
+        "under_90000_bytes": true
+      }
+    },
+    {
+      "id": 2,
+      "topic": "model-versus-measurement",
+      "anchor": "Computed engine power comes from a simplified model; assumptions must be checked against real measurements",
+      "labels": [
+        "简化模型",
+        "假设",
+        "实测校验"
+      ],
+      "prompt": "prompts/fig-02.txt",
+      "original": "originals/fig-02.png",
+      "final": "src/assets/images/airsup-machine-skill-fig-02.png",
+      "generation_source_path": "/Users/jason/.codex/generated_images/01a170d0-ef2f-72b0-a028-d5610fc6f5a4/exec-3e605034-f071-448f-95f1-9365168ebe07.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1226431,
+      "original_sha256": "18767aed47fc1c875c3667291559d527ade14a87204cd67206fcd829671dfcd9",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "aspect_ratio": "16:9",
+      "bytes": 75447,
+      "palette_colors": 128,
+      "pure_white_pixel_fraction": 0.9125,
+      "sha256": "600f3446cd0a5febbbf99e3be5378a86bac1d10ceef98ebc6bca9889f9942610",
+      "qa": {
+        "visual_review": "passed: current XiaoM design, active core action, sparse legible labels, no numerical claims, ample white space",
+        "white_background": true,
+        "exact_16_9": true,
+        "under_90000_bytes": true
+      }
+    },
+    {
+      "id": 3,
+      "topic": "single-html-runtime-dependencies",
+      "anchor": "A single HTML file still relies on browser GPU, CDN assets, and recording tools",
+      "labels": [
+        "一份 HTML",
+        "浏览器 GPU",
+        "CDN 资源",
+        "录制工具"
+      ],
+      "prompt": "prompts/fig-03.txt",
+      "original": "originals/fig-03.png",
+      "final": "src/assets/images/airsup-machine-skill-fig-03.png",
+      "generation_source_path": "/Users/jason/.codex/generated_images/01a170d0-ef2f-72b0-a028-d5610fc6f5a4/exec-42b0884b-0d63-4ed7-a680-07d95a166b5c.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1307538,
+      "original_sha256": "7265a7e61bc21f85383cf7d56c2137b408f874d0dd85bf975c808f90fdb854a0",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "aspect_ratio": "16:9",
+      "bytes": 83388,
+      "palette_colors": 128,
+      "pure_white_pixel_fraction": 0.9065,
+      "sha256": "be667d15d30f299a5af9fe359d30441925def69714768336fc79333f588f3989",
+      "qa": {
+        "visual_review": "passed: current XiaoM design, active core action, sparse legible labels, no numerical claims, ample white space",
+        "white_background": true,
+        "exact_16_9": true,
+        "under_90000_bytes": true
+      }
+    }
+  ],
+  "created_date": "2026-10-25",
+  "processing": "Exact 16:9 crop/resize to 1280x720, near-white normalization, optimized palette PNG; generated originals retained unchanged."
+}
