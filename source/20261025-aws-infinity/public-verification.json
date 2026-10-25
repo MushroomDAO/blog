@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-25T02:00:30.138006+00:00",
+  "articles": [
+    {
+      "slug": "aws-infinity-agent-runtime",
+      "url": "https://blog.mushroom.cv/blog/aws-infinity-agent-runtime/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/aws-infinity-agent-runtime-banner.B8A6ITsg_IBnym.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/aws-infinity-agent-runtime-fig-01.AXhK4UNP_260XjC.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/aws-infinity-agent-runtime-fig-02.4noG8JiA_HrOpF.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/aws-infinity-agent-runtime-fig-03.DGlen89-_20akBQ.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/aws-infinity-agent-runtime-banner.B8A6ITsg.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 2,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/aws-infinity-agent-runtime/",
+    "/blog/apple-foundation-models-fm-cli/",
+    "/blog/decision-models-comparison/",
+    "/blog/gradium-phonon-local-tts/",
+    "/blog/appflowy-self-host-services/",
+    "/blog/ming-3-tts-small-model-evaluation/",
+    "/blog/underdog-bark-3-local-asr/",
+    "/blog/nvidia-openshell-agent-runtime/"
+  ]
+}
