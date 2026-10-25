@@ -1,0 +1,15 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6add6385-27f8b58b-04f12a5a）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 899 篇 + 公众号草稿箱 9 条 + 本地发布记录 882 条 + MemPalace 3286 抽屉
+
+── 查：https://github.com/AirsupHQ/machine-skill
+   ✅ 四本账都没查到
+
+── 查：AirsupHQ/machine-skill
+   ✅ 四本账都没查到
+
+```dedup-result
+{"duplicate":false,"localLedgersRead":true,"wechatError":""}
+```

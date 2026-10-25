@@ -1,0 +1,14 @@
+=== [adopt-banner] airsup-machine-skill ← 1 source image(s) → src/assets/images/airsup-machine-skill-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /Users/jason/.heinu1-bot/media/airsup-machine-turbofan.jpg
+=== [adopt-banner] done: src/assets/images/airsup-machine-skill-banner.jpg (1200x630, 92024B) ===
+=== [verify-banner] src/assets/images/airsup-machine-skill-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/Users/jason/.heinu1-bot/media/airsup-machine-turbofan.jpg
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 92024B (< 99000B)
+  WARN text: 25 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: /machine a turbofan jet engine, the kind that pushes a widebody off the runway | Bypass duct | of thrust | LP turbine | 599 °C out | HP turbine | 12,968 гpm - 1,035°C) | Combustor
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/airsup-machine-skill-banner.jpg ===
+PATH: src/assets/images/airsup-machine-skill-banner.jpg

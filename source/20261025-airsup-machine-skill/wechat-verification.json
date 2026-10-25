@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-25T02:12:37.454Z",
+  "drafts": [
+    {
+      "slug": "airsup-machine-skill",
+      "mediaId": "prCUE631thH1cmNLi42prEVQ2telQfph6AMkbICpO_lAqC91jFYFgytOC6ElYTdh",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "40b251ef3f12a0a976e404386f1238d06ece934fee43bb0ccf7641f92275288f",
+      "remoteTextHash": "40b251ef3f12a0a976e404386f1238d06ece934fee43bb0ccf7641f92275288f",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "0a5e1404b7251fe2866211d1cc60d24922eb27e115b59a500cac2bbb9f614011",
+      "remoteContentHash": "1046bc8785ef97aebb9ea8b539355662c4e4d08cb65ccc2f411a69eb4d9dae6d"
+    }
+  ]
+}

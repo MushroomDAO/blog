@@ -1062,3 +1062,10 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 ## 2026-10-25 — AWS Infinity suspend/resume agent runtime
 
 - https://blog.mushroom.cv/blog/aws-infinity-agent-runtime/ OfficialrepoHydroApache2;75kPi8GBextrapolation from80kEPYCsinglethreadsimulatedmodel/inmemorystores, notPi/realinference. agent_scaletoolfixedstringnotbuild. Fouractualpinnedupstreammocktests pass:dedup,step,rebuildstrandedcall,localpendingtool. Embeddeddriverstillalive vssteprelease;rebuildstoreobjects notmachinerecovery;noAWSresources/modelbills/perfbenchmark. AdoptedAWSofficialFigure3coverperuser,originalsource/hash/rightscredit,rootreviewedwholelabels;3XiaoM,bilingualSEO,publicURL/assets/list/carousel/currentdraftbody/cover/images/comments/canonical andKBverified;semantic2upserted. SuppliedPytro001/airsup-Lab404,notinstalled/notmergedintostory. Taskf3708dde-1fd8-435f-9018-90be578e8a24.
+
+## 2026-10-25 — Airsup Machine Skill
+
+- Published https://blog.mushroom.cv/blog/airsup-machine-skill/ after exact repository/entity dedup; generic Cursor matches were unrelated.
+- Found official MIT repository AirsupHQ/machine-skill. Analyzed simplified solvers and BMEP assumptions; the supplied 249cc power example remains unverified.
+- M4/16GiB Chromium functional smoke passed: WebGL2, throttle output changes, cutaway and explode controls. No performance, recording or physical accuracy claim.
+- Official turbofan cover adopted and verified; three XiaoM figures, bilingual SEO, live URL/images/list/carousel and remote draft full text/images/cover/comments/canonical checked. KB and semantic index updated. Task f0fa217e-75b8-4592-84f8-ad3420cbcc7e.

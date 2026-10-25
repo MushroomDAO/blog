@@ -1,0 +1,56 @@
+{
+  "revision": "e0bd066ac5beaf48512935de2fc0f0e55636853a",
+  "scope": "Official turbofan browser interaction, not performance or physical accuracy",
+  "errors": [],
+  "failedRequests": [],
+  "before": {
+    "webgl2": true,
+    "sliders": [
+      {
+        "type": "range",
+        "id": "",
+        "value": "0"
+      }
+    ],
+    "buttons": [
+      "PauseSpace",
+      "ExplodeE",
+      "Cut awayC",
+      "X-rayX",
+      "SlowS",
+      "LabelsL",
+      "Throw a fan bladeB"
+    ],
+    "text": "Fan\nBypass duct\nHP compressor\nCombustor\nHP turbine\nLP turbine\n/machine a turbofan jet engine, the kind that pushes a widebody off the runway\nthree.js\nPhysics\nFilm\nNo. 01\nTurbofan\nground run\nThrust · ground idle\n21kN\nN1 22.0 % · TGT 553 °C · fuel 0.45 kg/s\nThrottle\n0 %\nIdle\nTake-off\n1 m\nPauseSpace\nExplodeE\nCut awayC\nX-rayX\nSlowS\nLabelsL\nThrow a fan bladeB\nHow it is computed"
+  },
+  "after": {
+    "sliders": [
+      {
+        "id": "",
+        "value": "100"
+      }
+    ],
+    "text": "Fan\nBypass duct\nHP compressor\nCombustor\nHP turbine\nLP turbine\n/machine a turbofan jet engine, the kind that pushes a widebody off the runway\nthree.js\nPhysics\nFilm\nNo. 01\nTurbofan\nground run\nThrust · spooling up\n289kN\nN1 91.1 % · TGT 905 °C · fuel 2.39 kg/s\nThrottle\n100 %\nIdle\nTake-off\n1 m\nPauseSpace\nExplodeE\nCut awayC\nX-rayX\nSlowS\nLabelsL\nThrow a fan bladeB\nHow it is computed"
+  },
+  "cut": {
+    "target": 1,
+    "state": 0.6835139741407746
+  },
+  "explode": {
+    "target": 1,
+    "state": 0.6708801580617658
+  },
+  "success": true,
+  "environment": {
+    "chip": "Apple M4",
+    "memoryGiB": 16,
+    "macOS": "26.6.2",
+    "browser": "cached Chromium headless shell build 1243",
+    "controller": "playwright-core 1.56.1",
+    "launchFlags": [
+      "--ignore-gpu-blocklist",
+      "--use-angle=metal"
+    ],
+    "servedFrom": "loopback HTTP; external CDN/font/HDR requests permitted"
+  }
+}
