@@ -1,0 +1,14 @@
+=== [adopt-banner] aws-infinity-agent-runtime ← 1 source image(s) → src/assets/images/aws-infinity-agent-runtime-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← source/20261025-aws-infinity/official-banner-layout.png
+=== [adopt-banner] done: src/assets/images/aws-infinity-agent-runtime-banner.jpg (1200x630, 84845B) ===
+=== [verify-banner] src/assets/images/aws-infinity-agent-runtime-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=source/20261025-aws-infinity/official-banner-layout.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 84845B (< 99000B)
+  WARN text: 14 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: Event source | Input queue | Parent thread | Event thread (auto-spawned) | subscription event (group: parent) | slice: spawn event thread, re-enqueue | event (group: child) | slice: process event
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/aws-infinity-agent-runtime-banner.jpg ===
+PATH: src/assets/images/aws-infinity-agent-runtime-banner.jpg

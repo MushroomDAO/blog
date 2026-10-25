@@ -1,0 +1,11 @@
+{
+  "title": "AWS Infinity：Agent休眠省什么",
+  "author": "Mycelium",
+  "digest": "核对官方并发测试，拆解休眠恢复机制，并验证本地与无服务器模式的边界。",
+  "mediaId": "prCUE631thH1cmNLi42prMPjo28_WGI7KCOraAu0r40xMTiGDHmD_UIM4jxm5dXv",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/hydro-project/infinity"
+  ],
+  "publishedAt": "2026-10-25T02:00:45.992Z"
+}

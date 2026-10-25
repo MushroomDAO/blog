@@ -1,0 +1,12 @@
+{
+  "slug": "aws-infinity-agent-runtime",
+  "checks": "Bilingual BLUF/meta/FAQ, question headings, ISOdates, tags, alt images, primary sources and CC attribution passed. MainrepoURL identitydedup clear. Official sourcebanner credited separately. Measured/quoted/suggested scopes explicit.",
+  "testScope": "Four pinned upstreammockunit tests, notliveprovider/Lambda/Pi/memorybenchmark; reconstructed session shares in-memory objects.",
+  "criticalDistinctions": [
+    "Pi extrapolation not Pi benchmark",
+    "Mock completion/tool output not realmodel/build",
+    "Embeddedpendingdriver differs step/serverless",
+    "Statehistory not arbitraryprocesssnapshot",
+    "Waitingcompute reduction not totalbillzero"
+  ]
+}

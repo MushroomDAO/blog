@@ -1,0 +1,7 @@
+    Finished `test` profile [unoptimized] target(s) in 0.10s
+     Running unittests src/lib.rs (/tmp/infinity-core-target/debug/deps/infinity_agent_core-31c72759dc8b2d35)
+
+running 1 test
+test system::tests::driver_stays_alive_waiting_for_tool_result ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 107 filtered out; finished in 0.00s
