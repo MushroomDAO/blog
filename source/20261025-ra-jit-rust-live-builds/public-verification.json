@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-25T13:55:47.811768+00:00",
+  "articles": [
+    {
+      "slug": "ra-jit-blaze-rust-live-builds",
+      "url": "https://blog.mushroom.cv/blog/ra-jit-blaze-rust-live-builds/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/ra-jit-blaze-rust-live-builds-banner.GvQG35Dn_ZKnYzU.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ra-jit-blaze-rust-live-builds-fig-01.CWPBYAr-_ZPXamV.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ra-jit-blaze-rust-live-builds-fig-02.BNVa9YLb_Z1qRxtU.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ra-jit-blaze-rust-live-builds-fig-03.B2Rd3Frv_UTRta.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ra-jit-blaze-rust-live-builds-banner.GvQG35Dn.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 5,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/ra-jit-blaze-rust-live-builds/",
+    "/blog/town-townie-research/",
+    "/blog/pstack-engineering-workflow/",
+    "/blog/airsup-machine-skill/",
+    "/blog/aws-infinity-agent-runtime/",
+    "/blog/apple-foundation-models-fm-cli/",
+    "/blog/decision-models-comparison/",
+    "/blog/gradium-phonon-local-tts/"
+  ]
+}

@@ -1,0 +1,38 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6ade0768-4ff0dcfe-6dee74c2）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 902 篇 + 公众号草稿箱 7 条 + 本地发布记录 885 条 + MemPalace 3307 抽屉
+
+── 查：https://github.com/indexable-inc/ra-jit
+   ✅ 四本账都没查到
+
+── 查：ra-jit
+   ❌ [知识库] # 改一行代码，编译快92倍  **Summary**: 改一行代码，编译快92倍 改一行 Rust 代码，重新编译只要
+      正文出现实体名「ra-jit」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
+
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6ade082d-759e3cac-0270044d）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 902 篇 + 公众号草稿箱 7 条 + 本地发布记录 885 条 + MemPalace 3307 抽屉
+
+── 查：https://github.com/indexable-inc/blaze
+   ✅ 四本账都没查到
+
+── 查：indexable-inc/blaze
+   ✅ 四本账都没查到
+
+```dedup-result
+{"duplicate":false,"localLedgersRead":true,"wechatError":""}
+```
+
+Assessment: the only old-name hit is raw source KB from this task; no article or draft receipt. Proceed with one canonical new slug.

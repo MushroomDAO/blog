@@ -1,0 +1,136 @@
+{
+  "article_slug": "ra-jit-blaze-rust-live-builds",
+  "generated_on": "2026-10-25",
+  "article_context": "ra-jit renamed blaze on 2026-10-24 (context supplied by user)",
+  "generator": "image_gen.imagegen",
+  "generation_calls": 3,
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "references_read": [
+    "style-dna.md",
+    "mushroom-ip.md",
+    "composition-patterns.md",
+    "prompt-template.md",
+    "qa-checklist.md"
+  ],
+  "compression": "Near-white RGB pixels with all channels >= 246 become pure white; resize to exact 16:9 with Lanczos; palette quantization without dithering; optimized PNG. Originals unchanged.",
+  "byte_limit_exclusive": 90000,
+  "assets": [
+    {
+      "figure": 1,
+      "topic": "resident-compiler-function-swap",
+      "alt_zh": "小M在保持就绪的常驻编译工坊中，只替换房屋的一块函数砖。",
+      "labels_zh": [
+        "常驻编译器",
+        "工坊就绪",
+        "只换一个函数"
+      ],
+      "original": "source/20261025-ra-jit-rust-live-builds/generated-assets/fig-01-original.png",
+      "original_tool_path": "/Users/jason/.codex/generated_images/01a17351-1c94-70a0-bee9-f3eaf926c7ef/exec-eb3010ee-c577-4902-b7ae-4a365dca6d23.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1255558,
+      "original_sha256": "0e2d42c4b22e9298bdaca65b5f816a87e9743e3a3f32f3ead992fa490c1bf24b",
+      "prompt": "source/20261025-ra-jit-rust-live-builds/generated-assets/fig-01-prompt.txt",
+      "final": "src/assets/images/ra-jit-blaze-rust-live-builds-fig-01.png",
+      "width": 1440,
+      "height": 810,
+      "palette_colors": 48,
+      "bytes": 83626,
+      "sha256": "8243be6a36d9da3a6ace333a334e1cc0ee218825a71876f428039744933c6c97",
+      "qa": {
+        "original_visually_inspected": true,
+        "final_visually_inspected": true,
+        "png_decodes": true,
+        "exact_16_9": true,
+        "under_90000_bytes": true,
+        "white_background": true,
+        "no_numeric_speed_claims": true,
+        "chinese_labels_legible": true,
+        "mushroom_performs_core_action": true,
+        "notes": "Resident-ready compiler press stays set up; Xiao-M actively swaps one brick in an intact house. All three Chinese labels legible."
+      },
+      "prompt_sha256": "53775aee6a9407c8d9760566a08c3d1aeef2000d44f07242009a622b51e27084"
+    },
+    {
+      "figure": 2,
+      "topic": "separate-timing-boundaries",
+      "alt_zh": "小M操作三只独立秒表，分别测量冷启动、热构建和在线应用，不承诺具体速度。",
+      "labels_zh": [
+        "冷启动",
+        "热构建",
+        "在线应用",
+        "分开计时"
+      ],
+      "original": "source/20261025-ra-jit-rust-live-builds/generated-assets/fig-02-original.png",
+      "original_tool_path": "/Users/jason/.codex/generated_images/01a17351-1c94-70a0-bee9-f3eaf926c7ef/exec-c33f6657-82fb-4179-9cab-4e964a37dc2e.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1030608,
+      "original_sha256": "26328f3e3ca9372f309150f40adfd656cc5477d8e59c54f6aab18af2da5954bf",
+      "prompt": "source/20261025-ra-jit-rust-live-builds/generated-assets/fig-02-prompt.txt",
+      "final": "src/assets/images/ra-jit-blaze-rust-live-builds-fig-02.png",
+      "width": 1600,
+      "height": 900,
+      "palette_colors": 128,
+      "bytes": 83017,
+      "sha256": "bc6cfa16470370d97623a955e162c4e566462e295674ca08d86afdd2b1f02653",
+      "qa": {
+        "original_visually_inspected": true,
+        "final_visually_inspected": true,
+        "png_decodes": true,
+        "exact_16_9": true,
+        "under_90000_bytes": true,
+        "white_background": true,
+        "no_numeric_speed_claims": true,
+        "chinese_labels_legible": true,
+        "mushroom_performs_core_action": true,
+        "notes": "Exactly three independent stopwatches; cold start, warm build, and live apply have separate labels and local boundaries. No numeric timings or speed promises."
+      },
+      "prompt_sha256": "af696a47d4e4224d3bbb1dc097cb4752a1af42fee46348061eacd91add239ab1"
+    },
+    {
+      "figure": 3,
+      "topic": "stored-data-shape-restart",
+      "alt_zh": "小M发现新形状无法装入已有数据占据的模具，选择重启；同形状的函数砖仍可替换。",
+      "labels_zh": [
+        "函数可换",
+        "已有数据",
+        "形状变了",
+        "重启"
+      ],
+      "original": "source/20261025-ra-jit-rust-live-builds/generated-assets/fig-03-original.png",
+      "original_tool_path": "/Users/jason/.codex/generated_images/01a17351-1c94-70a0-bee9-f3eaf926c7ef/exec-151f4f04-7837-4f44-8a14-da73674a327b.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1229922,
+      "original_sha256": "3c67fb6075a4c1fd9c8be6a847944eb1f04b0c21dc5b1393174e6ce9434728d5",
+      "prompt": "source/20261025-ra-jit-rust-live-builds/generated-assets/fig-03-prompt.txt",
+      "final": "src/assets/images/ra-jit-blaze-rust-live-builds-fig-03.png",
+      "width": 1600,
+      "height": 900,
+      "palette_colors": 48,
+      "bytes": 86445,
+      "sha256": "6fd63e8f37bb62db19cd4d7be79e76ef0e15d36e75cbdfd1610b6aede7443822",
+      "qa": {
+        "original_visually_inspected": true,
+        "final_visually_inspected": true,
+        "png_decodes": true,
+        "exact_16_9": true,
+        "under_90000_bytes": true,
+        "white_background": true,
+        "no_numeric_speed_claims": true,
+        "chinese_labels_legible": true,
+        "mushroom_performs_core_action": true,
+        "notes": "Round stored data remains in the occupied mold; incompatible square piece stays outside; Xiao-M chooses the restart lever. Separate function slot shows compatible replacement. All four Chinese labels legible."
+      },
+      "prompt_sha256": "2225d1aab14038397207b0aea28bbb94ab9040f65f033ca78e0c86e2d027e494"
+    }
+  ],
+  "status": "complete: three originals, three prompts and three final PNG assets saved; final images visually inspected"
+}

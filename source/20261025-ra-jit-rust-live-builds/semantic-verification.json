@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-25T13:57:50.123157+00:00",
+  "query": "blaze ra-jit 常驻编译器 Rust 毫秒重编译与热更新真实边界",
+  "matched": [
+    {
+      "article_id": "ra-jit-blaze-rust-live-builds",
+      "title": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界",
+      "url": "/blog/ra-jit-blaze-rust-live-builds/",
+      "language": "zh",
+      "excerpt": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界 ra-jit 已更名为 blaze。本文核对官方暖构建基准、常驻编译架构、Apple Silicon 与 Linux 支持，以及 Rust 1.99.0、内存和借用检查限制，并在 M4 Mac 上验证函数修改与测试流程，解释为何局部补丁延迟不能等同于完整构建或画面更新速度，也不能承诺每个项目都快 92 倍。 Rust ra-jit blaze 编译器 热更新 开发工具 blaze 为什么能省掉修改后的大量等待？ “92 倍”和“10–24 倍”应该怎样看？ 毫秒构建与“不重启热更新",
+      "score": 0.8367873
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "ra-jit-blaze-rust-live-builds",
+        "title": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界",
+        "url": "/blog/ra-jit-blaze-rust-live-builds/",
+        "language": "zh",
+        "excerpt": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界 ra-jit 已更名为 blaze。本文核对官方暖构建基准、常驻编译架构、Apple Silicon 与 Linux 支持，以及 Rust 1.99.0、内存和借用检查限制，并在 M4 Mac 上验证函数修改与测试流程，解释为何局部补丁延迟不能等同于完整构建或画面更新速度，也不能承诺每个项目都快 92 倍。 Rust ra-jit blaze 编译器 热更新 开发工具 blaze 为什么能省掉修改后的大量等待？ “92 倍”和“10–24 倍”应该怎样看？ 毫秒构建与“不重启热更新",
+        "score": 0.8367873
+      },
+      {
+        "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+        "title": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时",
+        "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+        "language": "zh",
+        "excerpt": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时 zavora-ai 社区维护的 ADK-Rust v2.2.0——不是 Google 官方项目，但把 Agent 运行时拆成 43 个可独立发布的 crate，按需引用。Type-safe、全异步、568 μs agent loop 开销，支持 Gemini/OpenAI/Anthropic/Ollama，含 graph 工作流、durable resume、realtime 语音、adk-skill 解析。本文做一次工程拆解。 rust agent-runtim",
+        "score": 0.6024467
+      },
+      {
+        "article_id": "ratatui-rust-tui-terminal-ui-guide",
+        "title": "Ratatui：Codex、grok-build、CodeWhale 都选了它——Rust 终端 UI 的事实标准，21k stars",
+        "url": "/blog/ratatui-rust-tui-terminal-ui-guide/",
+        "language": "zh",
+        "excerpt": "Ratatui：Codex、grok-build、CodeWhale 都选了它——Rust 终端 UI 的事实标准，21k stars Ratatui 是 Rust 终端 UI 的事实标准。Codex 锁了定制 revision，grok-build 自建 inline+textarea，CodeWhale 跟进上游 0.30——三者实现不同，但渲染层的选择是一致的。sub-millisecond 即时渲染、约束式布局、15+ 内置 Widget、纯 Rust 零 C 依赖，生态已扩展到 WebAssembly / UEFI / 嵌入式设备。 Rust ",
+        "score": 0.5808988
+      },
+      {
+        "article_id": "tare-lossless-context-compression-cache-correct-output-aware",
+        "title": "tare: Lossless-by-Default Context Compression That Keeps the Prefix Cache Warm",
+        "url": "/blog/tare-lossless-context-compression-cache-correct-output-aware/",
+        "language": "en",
+        "excerpt": "tare: Lossless-by-Default Context Compression That Keeps the Prefix Cache Warm A Rust context-compression tool for LLM coding agents — MIT, shipping as proxy, CLI, MCP server, and libraries. Three constraints nobody else combines: lossless by default (lossy transforms are opt-in)",
+        "score": 0.5650684
+      },
+      {
+        "article_id": "herdr-coding-agent-runtime-persistent-terminal-multiplexer-rust",
+        "title": "herdr-coding-agent-runtime-persistent-terminal-multiplexer-rust",
+        "url": "/blog/herdr-coding-agent-runtime-persistent-terminal-multiplexer-rust/",
+        "language": "en",
+        "excerpt": "herdr-coding-agent-runtime-persistent-terminal-multiplexer-rust herdrdev/herdr, 26.5k stars, Apache 2.0, Rust. A persistent terminal runtime designed for the multi-agent era: close the lid, drop the network, restart the machine — agents keep working, sessions stay alive, reattach",
+        "score": 0.5611835
+      },
+      {
+        "article_id": "thinkterm-multi-agent-terminal",
+        "title": "ThinkTerm: A Rust Terminal for Multi-Agent Coding",
+        "url": "/blog/thinkterm-multi-agent-terminal/",
+        "language": "en",
+        "excerpt": "ThinkTerm: A Rust Terminal for Multi-Agent Coding ThinkTerm is a Rust terminal for multi-agent coding: persistent sessions, remote access, status detection, setup, licensing, and verified engineering limits. ThinkTerm AI Agent Rust Terminal 开源工具 Is it an editor or a coordination ",
+        "score": 0.5610636
+      },
+      {
+        "article_id": "liteparse-llamaindex-local-document-parser",
+        "title": "LiteParse：LlamaIndex 团队开源本地文档解析引擎，Rust 核心+四端绑定+精确边界框，8.3k Star",
+        "url": "/blog/liteparse-llamaindex-local-document-parser/",
+        "language": "zh",
+        "excerpt": "LiteParse：LlamaIndex 团队开源本地文档解析引擎，Rust 核心+四端绑定+精确边界框，8.3k Star run-llama/liteparse 是 LlamaIndex 团队推出的开源本地文档解析引擎：Rust 核心，原生支持 Node.js、Python、Browser WASM。基于 PDFium 的空间文本提取 + bounding box，双轨解析（native PDF + selective OCR），为 AI Agent 提供截图和布局信息，无云依赖，无隐私顾虑。v2.0.4，8.3k Stars。 LlamaIndex",
+        "score": 0.5609777
+      },
+      {
+        "article_id": "mdya-rust-local-markdown-search-chinese-test-871-docs",
+        "title": "mdya 实测：871 篇中文笔记索引 8 分钟，但语义检索在中文上是失效的",
+        "url": "/blog/mdya-rust-local-markdown-search-chinese-test-871-docs/",
+        "language": "zh",
+        "excerpt": "mdya 实测：871 篇中文笔记索引 8 分钟，但语义检索在中文上是失效的 Rust 写的本地 Markdown 检索原语 mdya，BM25 + 端侧向量 + MCP，单二进制。我拿自己 871 篇笔记（10MB）实测：索引 8 分 01 秒，占 176MB，BM25 查询 30ms、向量 530ms。但对照实验揭穿了一个问题——字面命中的中文查询两条路都准，换成同义改写就全崩，因为默认模型 ruri-v3-30m 是日语的、FTS 分词用的是日语 ipadic 词典。多语言的 EmbeddingGemma 是 gated 模型，直接 401 拉不下",
+        "score": 0.55021816
+      },
+      {
+        "article_id": "ondine-rust-mermaid-compiler",
+        "title": "Ondine：Rust 重写 Mermaid，速度之外先看布局与体积口径",
+        "url": "/blog/ondine-rust-mermaid-compiler/",
+        "language": "zh",
+        "excerpt": "Ondine：Rust 重写 Mermaid，速度之外先看布局与体积口径 Ondine 用 Rust 把 Mermaid 文本编译为 SVG，可在构建时替文档网站完成解析与布局。本文定位仓库，拆解极小挂载代码与 WASM 编译器的区别，核对 33 类图、612 个向量的官方性能报告，解释热调用、冷启动和布局质量的不同问题，并给出 Markdown、Vite 与 Node 接入及迁移验收方法。 Ondine Mermaid Rust SVG Developer Tools Rust 重写，究竟换掉哪一段？ 210 字节，为什么不是完整 Mermaid 的替",
+        "score": 0.54797953
+      },
+      {
+        "article_id": "miles-v0-1-production-rl-post-training-sglang",
+        "title": "Miles v0.1：SGLang 团队填平学术 RL 和生产系统之间的鸿沟",
+        "url": "/blog/miles-v0-1-production-rl-post-training-sglang/",
+        "language": "zh",
+        "excerpt": "Miles v0.1：SGLang 团队填平学术 RL 和生产系统之间的鸿沟 SGLang 团队发布 Miles v0.1，生产级 LLM/VLM RL 后训练框架。全异步 RL、P2P RDMA 权重同步（万亿参数秒级更新）、TITO 消除 token 往返损耗、R3 修复 MoE 路由不一致、自动容错恢复——每块都是工业级设计。 RL post-training SGLang LLM open-source LMSYS 学术 RL 代码进生产，会在哪里翻车 架构：三层解耦 五个关键技术点 1. 全异步 RL 2. P2P RDMA 权重更新 3. T",
+        "score": 0.5476474
+      }
+    ]
+  }
+}

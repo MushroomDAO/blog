@@ -1,0 +1,6 @@
+Functional smoke, no performance benchmark.
+Download https://github.com/indexable-inc/blaze/releases/download/nightly/ra-jit-aarch64-apple-darwin.tar.gz and SHA256SUMS. Require archive SHA25629e29754367ae1b35d519194dcadded0699505a660fed07b48b4dc704428fb99 for exactly this tested package. Nightly is mutable; do not silently substitute a newer package when reproducing.
+Extract to a private directory and put its executable directory first on PATH. Set RA_JIT_HOME and RA_JIT_CACHE to private directories; RUSTUP_TOOLCHAIN=1.99.0; rust-src installed. Do not use enable.
+Use saved Cargo.toml/main.rs. Initial version has41 rather than42 in function and test. Run cargo ra-jit run; wait for worker ready. Change41to42. Run cargo ra-jit run; confirm output42 and [ra-jit], then status confirms devdaemon build.
+Run cargo ra-jit test once to build test profile, then again when worker ready. Confirm1testpassed and [ra-jit]/testdaemon status. Run cargo +1.99.0 check without global interception. Stop only own daemon using same RA_JIT_HOME cargo ra-jit stop.
+Check saved logs and final-status against verification.json. Timings embedded in raw logs are single observations, not validated speed measurements and not article performance claims.
