@@ -1,0 +1,33 @@
+{
+  "sourceRevision": "341f6c2d3a32632489c918535a60805089ea0fe1",
+  "cases": [
+    {
+      "test": "duplicate_message_returns_handled",
+      "passed": true,
+      "log": "test-dedup.txt",
+      "command": "CARGO_TARGET_DIR=/tmp/infinity-core-target CARGO_PROFILE_DEV_DEBUG=0 CARGO_INCREMENTAL=0 cargo test --manifest-path /tmp/infinity-runtime-source/Cargo.toml --locked -p infinity-agent-core --lib duplicate_message_returns_handled"
+    },
+    {
+      "test": "step_mode_runs_single_slice",
+      "passed": true,
+      "log": "test-step.txt",
+      "command": "CARGO_TARGET_DIR=/tmp/infinity-core-target CARGO_PROFILE_DEV_DEBUG=0 CARGO_INCREMENTAL=0 cargo test --manifest-path /tmp/infinity-runtime-source/Cargo.toml --locked -p infinity-agent-core --lib step_mode_runs_single_slice"
+    },
+    {
+      "test": "rebooted_session_settles_persisted_unanswered_tool_call",
+      "passed": true,
+      "log": "test-rebuild.txt",
+      "command": "CARGO_TARGET_DIR=/tmp/infinity-core-target CARGO_PROFILE_DEV_DEBUG=0 CARGO_INCREMENTAL=0 cargo test --manifest-path /tmp/infinity-runtime-source/Cargo.toml --locked -p infinity-agent-core --lib rebooted_session_settles_persisted_unanswered_tool_call"
+    },
+    {
+      "test": "driver_stays_alive_waiting_for_tool_result",
+      "passed": true,
+      "log": "test-local-tool.txt",
+      "command": "CARGO_TARGET_DIR=/tmp/infinity-core-target CARGO_PROFILE_DEV_DEBUG=0 CARGO_INCREMENTAL=0 cargo test --manifest-path /tmp/infinity-runtime-source/Cargo.toml --locked -p infinity-agent-core --lib driver_stays_alive_waiting_for_tool_result"
+    }
+  ],
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "hardware": "Apple M4\n17179869184",
+  "scope": "Actual upstream test code with mockprovider/inmemory stores. No productioninference/cloudresources/memorybenchmark or Pi test.",
+  "cleanup": "Own temporary Cargo target directory removed after logs captured to restore disk space."
+}

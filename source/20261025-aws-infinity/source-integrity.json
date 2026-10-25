@@ -1,0 +1,110 @@
+{
+  "test-step.txt": {
+    "downloaded_or_created_sha256": "616b28f95ae6a4309699267027163fc54a45592cbc06d80125de469f81c03e66",
+    "stored_normalized_sha256": "909ed03e9da9e491ef4291f73e975f0b164cb1a9378acc43d39c7b3e3ee14697"
+  },
+  "docs__docs__infinity-runtime__quickstart__launching-your-first-agent.md": {
+    "downloaded_or_created_sha256": "8df68ab4601a3b2fc0bf3ea608f0cd7d8a9baad42537c11b194ba3e30487de93",
+    "stored_normalized_sha256": "8df68ab4601a3b2fc0bf3ea608f0cd7d8a9baad42537c11b194ba3e30487de93"
+  },
+  "Cargo.toml": {
+    "downloaded_or_created_sha256": "d9686b9f4a0330216e2589e316e990024af7fa2ed53b883ce1bd10f790a213e9",
+    "stored_normalized_sha256": "d9686b9f4a0330216e2589e316e990024af7fa2ed53b883ce1bd10f790a213e9"
+  },
+  "aws-post.txt": {
+    "downloaded_or_created_sha256": "aa48f0414fa8edfcd7ffdd2a0577b799f562e12e166c3c9cc8eb01bbab11499a",
+    "stored_normalized_sha256": "ae52555d475c0e1b931e94a5f94d65523f498a0f7f66e4c27fdfe8e6b07cb2ed"
+  },
+  "dedup.txt": {
+    "downloaded_or_created_sha256": "2b0ecb571a1a2d925431af1478d8155fb847b372574ad774927fee6182858870",
+    "stored_normalized_sha256": "2b0ecb571a1a2d925431af1478d8155fb847b372574ad774927fee6182858870"
+  },
+  "fig-02.prompt.txt": {
+    "downloaded_or_created_sha256": "051265845f57179064ab1db66fff2e4293d125c0c84999f2607f98a7c95c0be4",
+    "stored_normalized_sha256": "051265845f57179064ab1db66fff2e4293d125c0c84999f2607f98a7c95c0be4"
+  },
+  "banner-verification.txt": {
+    "downloaded_or_created_sha256": "1df0c4142b28ab3d289a99911761d3b5f9977a110dcffa57f4f8f64122c26538",
+    "stored_normalized_sha256": "1df0c4142b28ab3d289a99911761d3b5f9977a110dcffa57f4f8f64122c26538"
+  },
+  "aws-visible.txt": {
+    "downloaded_or_created_sha256": "75e464b74c443a6d56cdd0ba49dcb43fa35f606e5875fb460b98978f71f6198e",
+    "stored_normalized_sha256": "75e464b74c443a6d56cdd0ba49dcb43fa35f606e5875fb460b98978f71f6198e"
+  },
+  "crates__infinity-agent-core__examples__agent_scale.rs": {
+    "downloaded_or_created_sha256": "86099c04998d42a1ed6136530551b0fb04e713f8562a004bd496ed7ba82dcd4c",
+    "stored_normalized_sha256": "86099c04998d42a1ed6136530551b0fb04e713f8562a004bd496ed7ba82dcd4c"
+  },
+  "test-rebuild.txt": {
+    "downloaded_or_created_sha256": "52ea647b5f405e361e8bc2873c0d4b18cf2f47533f9fffefe7fd01e7c139b09a",
+    "stored_normalized_sha256": "7221cc7837657aa88f00e3a8a672efa1d185e2c751399baf7dc91e4713ea6ba0"
+  },
+  "test-local-tool.txt": {
+    "downloaded_or_created_sha256": "89d95dd27073ddd98d9097b69d2a9d0e833000f10329380967d881cee46201f2",
+    "stored_normalized_sha256": "357e2ff109e841d5473e3489ba658b6b40c076ebd4951ec6e4aecaa0626e4e65"
+  },
+  "fig-03.prompt.txt": {
+    "downloaded_or_created_sha256": "7c9ae7cc3e389c3a0d3fb227bb1830ea6637913b3bb4c272c76340bd1617d05e",
+    "stored_normalized_sha256": "7c9ae7cc3e389c3a0d3fb227bb1830ea6637913b3bb4c272c76340bd1617d05e"
+  },
+  "docs__docs__infinity-runtime__architecture.md": {
+    "downloaded_or_created_sha256": "0b5d91baebab54626b4ccbd8f68d7ef78b2a79c0eee9812a2f788bdbe39a77eb",
+    "stored_normalized_sha256": "0b5d91baebab54626b4ccbd8f68d7ef78b2a79c0eee9812a2f788bdbe39a77eb"
+  },
+  "docs__docs__infinity-runtime__serverless__architecture.mdx": {
+    "downloaded_or_created_sha256": "86961c8ac1b18b666c9bc506e6d66df8bc85a22b98e878233b37114fcea32bc8",
+    "stored_normalized_sha256": "86961c8ac1b18b666c9bc506e6d66df8bc85a22b98e878233b37114fcea32bc8"
+  },
+  "repo.txt": {
+    "downloaded_or_created_sha256": "b4ad85e8c918605fcb83c2362d7518eb452357b726d360dd67ac3267da63efac",
+    "stored_normalized_sha256": "5f17972f932954e8a16daaba1f9ea936680c66439b3004941e4faeb1fe7aa6ba"
+  },
+  "crates__infinity-agent-core__src__system__tests.rs": {
+    "downloaded_or_created_sha256": "d78392d8489fa6f3284b031726434d83152cf268e5fadac0de85c0b067f8613c",
+    "stored_normalized_sha256": "d78392d8489fa6f3284b031726434d83152cf268e5fadac0de85c0b067f8613c"
+  },
+  "docs__docs__infinity-runtime__quickstart__adding-tools.md": {
+    "downloaded_or_created_sha256": "769bb1cd713340fc9faf8185d62f8132e45e74f3703c9e6a64cae6fb469d7b89",
+    "stored_normalized_sha256": "769bb1cd713340fc9faf8185d62f8132e45e74f3703c9e6a64cae6fb469d7b89"
+  },
+  "test-dedup.txt": {
+    "downloaded_or_created_sha256": "4a44bce392fecec7a7453cce6e317e2dcd52e2c4f34b3167803af02155c7ff1a",
+    "stored_normalized_sha256": "b119bc7106cee1e4999dd165b644db69936c7a093714be7e9885f5667ecc46e5"
+  },
+  "readme.txt": {
+    "downloaded_or_created_sha256": "38626d1a2e6aa1399277377b1171df0cf47ad1ededd7c1e91d22f137de354135",
+    "stored_normalized_sha256": "38626d1a2e6aa1399277377b1171df0cf47ad1ededd7c1e91d22f137de354135"
+  },
+  "fig-01.prompt.txt": {
+    "downloaded_or_created_sha256": "75036316d12c37963122235d04ca16389ba646cb5f0458790fb773326d4a5349",
+    "stored_normalized_sha256": "75036316d12c37963122235d04ca16389ba646cb5f0458790fb773326d4a5349"
+  },
+  "docs__docs__infinity-runtime__serverless__quickstart.mdx": {
+    "downloaded_or_created_sha256": "d201df43ff31baae738add2bef00b5fdde4b3a5989abff88a3b13b67b71b0629",
+    "stored_normalized_sha256": "d201df43ff31baae738add2bef00b5fdde4b3a5989abff88a3b13b67b71b0629"
+  },
+  "fig-03.refine.prompt.txt": {
+    "downloaded_or_created_sha256": "4ef5aaba89154b2f8a2909748f9ff19c29fbe670f84b372925ab8100b765d146",
+    "stored_normalized_sha256": "4ef5aaba89154b2f8a2909748f9ff19c29fbe670f84b372925ab8100b765d146"
+  },
+  "LICENSE.txt": {
+    "downloaded_or_created_sha256": "d3970fa1d5641f043f6b5603517cf16b1171c65e4495dd8697f3c93a7c891f35",
+    "stored_normalized_sha256": "d3970fa1d5641f043f6b5603517cf16b1171c65e4495dd8697f3c93a7c891f35"
+  },
+  "crates__infinity-agent-core__Cargo.toml": {
+    "downloaded_or_created_sha256": "b7d75c4044b6e8ea1958b7ced5e811657110d501a3af3a780123c1802432bbf6",
+    "stored_normalized_sha256": "b7d75c4044b6e8ea1958b7ced5e811657110d501a3af3a780123c1802432bbf6"
+  },
+  "tree.txt": {
+    "downloaded_or_created_sha256": "cf97f9a1675826a2990817d113c84bea599ecb01b3441c9d349d8a1902211470",
+    "stored_normalized_sha256": "28d5ed6ffc808f5986a80b4ba085cd5cf558fc759e365ea7b934c5ebb4f0bcf1"
+  },
+  "fig-02.refine.prompt.txt": {
+    "downloaded_or_created_sha256": "5d2b0398172d8ff5e4a1bec3f482ddc2ea952f390432df481c20c803c2af114f",
+    "stored_normalized_sha256": "5d2b0398172d8ff5e4a1bec3f482ddc2ea952f390432df481c20c803c2af114f"
+  },
+  "upstream-agent-guidelines.txt": {
+    "downloaded_or_created_sha256": "990bc3f789ee13b1b4ca4fc5910093a5a78bfc149d53aae365dbd23e4a8c319b",
+    "stored_normalized_sha256": "990bc3f789ee13b1b4ca4fc5910093a5a78bfc149d53aae365dbd23e4a8c319b"
+  }
+}

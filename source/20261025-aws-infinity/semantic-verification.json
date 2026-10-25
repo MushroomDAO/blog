@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-25T02:01:50.701155+00:00",
+  "query": "AWS Infinity Hydro Agent suspend resume 树莓派 75000 模拟模型",
+  "matched": [
+    {
+      "article_id": "aws-infinity-agent-runtime",
+      "title": "AWS Infinity：让 Agent 等工具时休眠，7.5万并发意味着什么？",
+      "url": "/blog/aws-infinity-agent-runtime/",
+      "language": "zh",
+      "excerpt": "AWS Infinity：让 Agent 等工具时休眠，7.5万并发意味着什么？ AWS与伯克利合作开源Infinity，用执行片、状态存储和消息队列让Agent在等待工具时挂起。本文找到官方仓库与范例图，拆解7.5万Agent的树莓派内存换算、Rust本地与serverless模式、RAP和MCP兼容路径，并记录四个上游测试，说明省下的等待计算不等于模型、工具和云服务总成本归零。 AWS Infinity AI Agent Rust Serverless Hydro 7.5 万 Agent，是怎样测出来的？ 它保存的是整个进程，还是一段对话？ 本地模式",
+      "score": 0.65957
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "aws-infinity-agent-runtime",
+        "title": "AWS Infinity：让 Agent 等工具时休眠，7.5万并发意味着什么？",
+        "url": "/blog/aws-infinity-agent-runtime/",
+        "language": "zh",
+        "excerpt": "AWS Infinity：让 Agent 等工具时休眠，7.5万并发意味着什么？ AWS与伯克利合作开源Infinity，用执行片、状态存储和消息队列让Agent在等待工具时挂起。本文找到官方仓库与范例图，拆解7.5万Agent的树莓派内存换算、Rust本地与serverless模式、RAP和MCP兼容路径，并记录四个上游测试，说明省下的等待计算不等于模型、工具和云服务总成本归零。 AWS Infinity AI Agent Rust Serverless Hydro 7.5 万 Agent，是怎样测出来的？ 它保存的是整个进程，还是一段对话？ 本地模式",
+        "score": 0.65957
+      },
+      {
+        "article_id": "cohesity-agent-resilience-backup-restore-ai-agents",
+        "title": "Agent Resilience 拆解：Cohesity 想给 AI 员工装 Time Machine，现在只护得住亚马逊 Bedrock",
+        "url": "/blog/cohesity-agent-resilience-backup-restore-ai-agents/",
+        "language": "zh",
+        "excerpt": "Agent Resilience 拆解：Cohesity 想给 AI 员工装 Time Machine，现在只护得住亚马逊 Bedrock 2026-09-16 Cohesity 发布 Agent Resilience，备份/恢复 AI Agent 的记忆、配置、权限和依赖拓扑；核实后发现目前只支持 AWS Bedrock、限定部分客户、年底才 GA，微软和谷歌仍在路线图。我们核实了两篇官方一手源，并对照本地部署场景给出现成能抄的开源思路。 AI Agent Cohesity 灾难恢复 本地部署 Agent 记忆 企业级AI基础设施 Cohesity 到",
+        "score": 0.5800244
+      },
+      {
+        "article_id": "hindsight-agent-memory-retain-recall-reflect",
+        "title": "Hindsight：30K stars Agent 记忆框架，五层仿生结构 + 自建 AMB 基准",
+        "url": "/blog/hindsight-agent-memory-retain-recall-reflect/",
+        "language": "zh",
+        "excerpt": "Hindsight：30K stars Agent 记忆框架，五层仿生结构 + 自建 AMB 基准 vectorize-io/hindsight，MIT，Python/Rust/TypeScript，30,050 stars。开源 Agent 记忆系统：五层仿生记忆架构（世界事实→经历事实→观测→心智模型→知识页），Retain/Recall/Reflect 三路操作，四路并行检索（语义+BM25+图关系+时序），内置 pg0 嵌入式 PostgreSQL+pgvector，60+ 集成覆盖 Claude Code/LangGraph/CrewAI，自建",
+        "score": 0.55627036
+      },
+      {
+        "article_id": "x2streaming-asr-append-only",
+        "title": "X2Streaming-ASR：不回退的流式识别，32ms该怎么看",
+        "url": "/blog/x2streaming-asr-append-only/",
+        "language": "zh",
+        "excerpt": "X2Streaming-ASR：不回退的流式识别，32ms该怎么看 X2Streaming-ASR 把流式识别拆成何时提交与提交什么，以可学习的等待策略输出不可回退的文字。本文核对官方仓库、模型卡与论文第四版，拆解80毫秒决策节拍、字符级强化学习、平均与尾延迟，说明32毫秒为何不是端到端速度，并提供部署起步、语言配置和关闭离线复核的方法，讨论语音Agent接入时的稳定性与执行边界。 X2Streaming-ASR 语音识别 流式ASR 语音Agent 开源模型 X2Streaming-ASR 改的是“何时交卷” 论文的三阶段训练，仓库只提供推理 32毫秒",
+        "score": 0.54314995
+      },
+      {
+        "article_id": "hermes-agent-nous-research-self-improving-skill-loop",
+        "title": "Hermes Agent 调研：不是套壳，是一整套会自我进化的 Agent 运行时",
+        "url": "/blog/hermes-agent-nous-research-self-improving-skill-loop/",
+        "language": "zh",
+        "excerpt": "Hermes Agent 调研：不是套壳，是一整套会自我进化的 Agent 运行时 调研 Nous Research 开源的 Hermes Agent：MIT 协议、23 万+ star。核心卖点是「闭环学习」——从任务经验里自动生成技能、技能在使用中自我改进、周期性提醒自己沉淀记忆、跨会话检索过往对话。内置 cron 调度支持自然语言定时任务无人值守运行，7 种终端后端支持从 5 美元 VPS 到 Serverless 休眠唤醒，跨 Telegram/Discord/Slack/WhatsApp/Signal 单网关接入。本文从两条小红书线索一路查到这",
+        "score": 0.54202914
+      },
+      {
+        "article_id": "infinitediffusion-terrain-generation-guide",
+        "title": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文",
+        "url": "/blog/infinitediffusion-terrain-generation-guide/",
+        "language": "zh",
+        "excerpt": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文 Alexander Goslin 以独立研究者身份，用 RTX 3090 Ti 发表 SIGGRAPH 2026 论文 InfiniteDiffusion，将扩散模型改造为懒惰采样，实现无界、O(1) 随机访问、确定性的无限地形生成。本文整理复现路径与游戏/工程应用方向。 扩散模型 程序化生成 游戏开发 SIGGRAPH 地形生成 AI图形 独立研究 先说这件事本身有多不寻常 论文在解决什么问题？ 原始资源 30 分钟复现路径 Step 0：环境 St",
+        "score": 0.5419206
+      },
+      {
+        "article_id": "awesome-loop-engineering-agent-loops-guide",
+        "title": "Loop Engineering：AI Agent 系统的第四层工程，设计循环，不只是设计提示词",
+        "url": "/blog/awesome-loop-engineering-agent-loops-guide/",
+        "language": "zh",
+        "excerpt": "Loop Engineering：AI Agent 系统的第四层工程，设计循环，不只是设计提示词 awesome-loop-engineering 是一个为「循环型 AI Agent 系统」构建的知识图谱：545 个来源审计过的资源、20 个运行模式、20 个循环契约、8 个可运行的 runtime 起点。Loop Engineering 是提示词工程/上下文工程/框架工程之上的第四层，专门治理 Agent 工作随时间循环、验证、持久化状态、决定下一步行动的方式。 AI Agent Loop Engineering 循环系统 Agent工程 提示词工程 ",
+        "score": 0.5368524
+      },
+      {
+        "article_id": "orca-ade-parallel-ai-agent-orchestration",
+        "title": "Orca：67K stars 的并行 Agent 编排台，把 40+ CLI Agent 变成一支舰队",
+        "url": "/blog/orca-ade-parallel-ai-agent-orchestration/",
+        "language": "zh",
+        "excerpt": "Orca：67K stars 的并行 Agent 编排台，把 40+ CLI Agent 变成一支舰队 Stably AI(YC W22) 出品的开源 ADE，MIT 协议。一个 prompt 扇出给多个 Agent，各跑独立 worktree，Design Mode 点 UI 元素直喂 Agent，SSH 远端机器、手机 App 随时调度——这是目前把「Agent 当舰队管」想得最透的工具。 AI-agent open-source developer-tools Claude-Code parallel-agents Orca 问题是什么 核心设计：",
+        "score": 0.5358359
+      },
+      {
+        "article_id": "apodex-1-1-mini-working-capability-local-agent-guide",
+        "title": "Apodex 1.1 Mini 调研：训「持续干活的能力」，不是训「聊得更像」，35B 本地可跑",
+        "url": "/blog/apodex-1-1-mini-working-capability-local-agent-guide/",
+        "language": "zh",
+        "excerpt": "Apodex 1.1 Mini 调研：训「持续干活的能力」，不是训「聊得更像」，35B 本地可跑 调研 Apodex/Apodex-1.1-mini：Qwen3.5-35B-A3B（256 专家/8 激活，约 3B 激活参数）的 Agent 微调版，Apache-2.0，图文输入文本输出，中英双语。配套论文 arXiv:2608.23283 提出「working capability」概念——不是比谁推理更强，而是比谁能在文件/搜索/代码环境里持续干活、失败后能恢复、最终交付可验证的结果。训练分两条线：Environment Scaling（扩展可验证的",
+        "score": 0.53079975
+      },
+      {
+        "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+        "title": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时",
+        "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+        "language": "zh",
+        "excerpt": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时 复旦+北大+奇迹智风，arXiv:2604.25850，MIT，Python。AHE 提出一个闭环：不动模型权重，只进化 harness——通过三层可观测性（组件/经验/决策），让 Evolve Agent 自动分析 trace、提出修改、预测效果，下一轮自动验证。10次迭代把 GPT-5.4 在 Terminal-Bench 2 上从 69.7% 提升到 77.0%，超过手写 Codex-CLI（71.9%）。冻结后的 harness ",
+        "score": 0.5304753
+      }
+    ]
+  }
+}

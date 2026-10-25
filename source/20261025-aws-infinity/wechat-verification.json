@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-25T02:00:47.218Z",
+  "drafts": [
+    {
+      "slug": "aws-infinity-agent-runtime",
+      "mediaId": "prCUE631thH1cmNLi42prMPjo28_WGI7KCOraAu0r40xMTiGDHmD_UIM4jxm5dXv",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "9db3859f422b1a5c091d83b9201aaf5ecb0277443a3c2774c6b329f502003bb6",
+      "remoteTextHash": "9db3859f422b1a5c091d83b9201aaf5ecb0277443a3c2774c6b329f502003bb6",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "145b6deba8c9a8576936e256c535cedf9d187fca3d8da624809e092812d9b1b9",
+      "remoteContentHash": "2c13baa40b5923f5883e0fe95f009f5c7eaac84d39af6db4ebfcf127fd22b22a"
+    }
+  ]
+}

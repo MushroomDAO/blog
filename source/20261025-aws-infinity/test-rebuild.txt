@@ -1,0 +1,7 @@
+    Finished `test` profile [unoptimized] target(s) in 0.11s
+     Running unittests src/lib.rs (/tmp/infinity-core-target/debug/deps/infinity_agent_core-31c72759dc8b2d35)
+
+running 1 test
+test system::tests::rebooted_session_settles_persisted_unanswered_tool_call ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 107 filtered out; finished in 0.00s
