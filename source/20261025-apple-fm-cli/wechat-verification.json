@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-25T01:48:38.680Z",
+  "drafts": [
+    {
+      "slug": "apple-foundation-models-fm-cli",
+      "mediaId": "prCUE631thH1cmNLi42prKe1SZryJzlmz0MmGwyQOLI-EeoE5NPGVmT14C5u6HOb",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "2dadd6af9a9faa3bc4a2ac94deba45c4859901f9e5e4e6fcefc1767572d6eddc",
+      "remoteTextHash": "2dadd6af9a9faa3bc4a2ac94deba45c4859901f9e5e4e6fcefc1767572d6eddc",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "87b3d2f6447da230b31f39695aacfac5582c0ce7b9f80d34b409b8e0d7494b89",
+      "remoteContentHash": "860c11c958a6244f5754c02404e0e2f73de1823583b2d73b8aa2ac91f09abda1"
+    }
+  ]
+}
