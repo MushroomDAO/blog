@@ -1,0 +1,32 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6add663a-2ce5333b-664dba6d）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 900 篇 + 公众号草稿箱 10 条 + 本地发布记录 883 条 + MemPalace 3293 抽屉
+
+── 查：https://github.com/cursor/plugins/tree/main/pstack
+   ✅ 四本账都没查到
+
+── 查：pstack
+   ❌ [BLOG  ] Unlazy：用 Depth Tree + 可运行验证门，卡住 AI 代理「谎报完成」
+      正文出现实体名「pstack」
+   ❌ [知识库] Unlazy (Leonxlnx/unlazy) — AI 代理防偷懒技能，Depth Tree + Gate Cont
+      正文出现实体名「pstack」
+   ❌ [知识库] "报告，直到所有gate通过。连续6次拦截无进展后自动释放。  与pstack关系: pstack管整体流程质量，Unl
+      正文出现实体名「pstack」
+   ❌ [知识库] # Machine Skill机械仿真技能  **Summary**: 已找到官方开源仓库 AirsupHQ/machi
+      正文出现实体名「pstack」
+   ❌ [知识库] # Lauren Tan  **Summary**: Lauren Tan SpaceXAI 工程师 Lauren Ta
+      正文出现实体名「pstack」
+   ❌ [知识库] Unlazy (Leonxlnx/unlazy) — AI 代理防偷懒技能，Depth Tree + Gate Cont
+      正文出现实体名「pstack」
+   ❌ [知识库] # 我把 Cursor 工程师 Lauren Tan  **Summary**: 我把 Cursor 工程师 Laure
+      正文出现实体名「pstack」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

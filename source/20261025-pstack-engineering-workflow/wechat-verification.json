@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-25T02:20:41.278Z",
+  "drafts": [
+    {
+      "slug": "pstack-engineering-workflow",
+      "mediaId": "prCUE631thH1cmNLi42prCc9yDiVsrq7tubE5A8SniIma22dbg00DeSptBYMcv3W",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "7be757cccb67caed90b4733f41cda5b3c96665ffc3d44e83a647fb7336e7663c",
+      "remoteTextHash": "7be757cccb67caed90b4733f41cda5b3c96665ffc3d44e83a647fb7336e7663c",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "9521beead978a24f6b9979110859cfd941c9b4755bf32f26fdff03185582c7c2",
+      "remoteContentHash": "2b10c2d0982ca37b79c4c652f256355e1f18b5d1a44a75efdab66315b2862bdb"
+    }
+  ]
+}

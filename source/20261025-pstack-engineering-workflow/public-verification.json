@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-25T02:19:50.458756+00:00",
+  "articles": [
+    {
+      "slug": "pstack-engineering-workflow",
+      "url": "https://blog.mushroom.cv/blog/pstack-engineering-workflow/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/pstack-engineering-workflow-banner.DjIMF-mZ_2mlmui.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pstack-engineering-workflow-fig-01.B9boolr5_Z2cTvaU.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pstack-engineering-workflow-fig-02.C3uPhTgN_2pxczi.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pstack-engineering-workflow-fig-03.CV_qVVJH_Z14bejU.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pstack-engineering-workflow-banner.DjIMF-mZ.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 4,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/pstack-engineering-workflow/",
+    "/blog/airsup-machine-skill/",
+    "/blog/aws-infinity-agent-runtime/",
+    "/blog/apple-foundation-models-fm-cli/",
+    "/blog/decision-models-comparison/",
+    "/blog/gradium-phonon-local-tts/",
+    "/blog/appflowy-self-host-services/",
+    "/blog/ming-3-tts-small-model-evaluation/"
+  ]
+}
