@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-25T02:21:14.196825+00:00",
+  "query": "pstack Lauren Tan 工程工作流 58技能 验证 ketchup",
+  "matched": [
+    {
+      "article_id": "pstack-engineering-workflow",
+      "title": "pstack 实践指南：Lauren Tan 如何让 AI 先调查、再构建和验证",
+      "url": "/blog/pstack-engineering-workflow/",
+      "language": "zh",
+      "excerpt": "pstack 实践指南：Lauren Tan 如何让 AI 先调查、再构建和验证 解析 Lauren Tan 开源的 pstack 工程工作流，核对 58 项技能、24 条原则与 23 个任务剧本，给出 Cursor、Claude Code 的接入方式和小团队采用路线。 pstack Lauren Tan AI Agent 工程工作流 Cursor 先校正：54 项技能还是 58 项？ pstack 的核心不是技能菜单，而是任务剧本 普通团队如何开始用？ Claude Code、Grok Bot 和 Pi 能直接照抄吗？ 为什么要先深入，再并行？ 24 ",
+      "score": 0.6730482
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "pstack-engineering-workflow",
+        "title": "pstack 实践指南：Lauren Tan 如何让 AI 先调查、再构建和验证",
+        "url": "/blog/pstack-engineering-workflow/",
+        "language": "zh",
+        "excerpt": "pstack 实践指南：Lauren Tan 如何让 AI 先调查、再构建和验证 解析 Lauren Tan 开源的 pstack 工程工作流，核对 58 项技能、24 条原则与 23 个任务剧本，给出 Cursor、Claude Code 的接入方式和小团队采用路线。 pstack Lauren Tan AI Agent 工程工作流 Cursor 先校正：54 项技能还是 58 项？ pstack 的核心不是技能菜单，而是任务剧本 普通团队如何开始用？ Claude Code、Grok Bot 和 Pi 能直接照抄吗？ 为什么要先深入，再并行？ 24 ",
+        "score": 0.6730482
+      },
+      {
+        "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+        "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+        "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+        "language": "zh",
+        "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+        "score": 0.53282124
+      },
+      {
+        "article_id": "grill-me-skill-mattpocock-claude-code-guide",
+        "title": "grill-me：181k Star 的 Claude Code Skill，用一个问题消灭 AI 编码最常见的失败模式",
+        "url": "/blog/grill-me-skill-mattpocock-claude-code-guide/",
+        "language": "zh",
+        "excerpt": "grill-me：181k Star 的 Claude Code Skill，用一个问题消灭 AI 编码最常见的失败模式 Matt Pocock 的 grill-me skill 在 GitHub 拿下 18.1 万 Star，单独安装量超 62 万次。它解决的问题只有一个：你以为 AI 理解了你想要什么，但它没有。本文拆解 grill-me 的工作机制、grill-with-docs 的进阶用法、以及 chaseai 扩展的跨模型对抗评审。 Claude Code AI编程 grill-me Matt Pocock Skill 工程实践 AI工具 提示",
+        "score": 0.51840496
+      },
+      {
+        "article_id": "reverse-skill-ai-agent-cybersecurity-penetration-skill-router",
+        "title": "reverse-skill：给 AI Agent 装上逆向工程与渗透测试的神经系统",
+        "url": "/blog/reverse-skill-ai-agent-cybersecurity-penetration-skill-router/",
+        "language": "zh",
+        "excerpt": "reverse-skill：给 AI Agent 装上逆向工程与渗透测试的神经系统 zhaoxuya520 开源的 AI Agent 安全技能路由包，20.9k stars，MIT License。解决 AI Agent 做安全分析时不知道用哪个工具的核心痛点——41条路由规则自动识别任务类型（APK/ELF/JS/PCAP/CTF），按需自举 jadx/Frida/Ghidra/BurpSuite 等工具链，自动沉淀经验到知识库。支持 Claude Code、Codex、Cursor、Kiro、Cline。 安全技能 AI渗透测试 逆向工程 Claud",
+        "score": 0.51810503
+      },
+      {
+        "article_id": "addy-agent-skills-google-engineering-guide",
+        "title": "Agent Skills：Google 工程师 67K 星，24 Skill + 8 命令覆盖完整研发链路",
+        "url": "/blog/addy-agent-skills-google-engineering-guide/",
+        "language": "zh",
+        "excerpt": "Agent Skills：Google 工程师 67K 星，24 Skill + 8 命令覆盖完整研发链路 Google Chrome Engineering Manager Addy Osmani 开源 agent-skills（67K⭐），将谷歌软件工程规范（Hyrum定律、Beyonce规则、Chesterton栅栏等）封装为 24 个 Skill + 8 条命令，覆盖 DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP 完整开发链路，兼容 Claude Code / Cursor / Gemini CLI / Windsur",
+        "score": 0.51753145
+      },
+      {
+        "article_id": "maintain-repo-wiki-llm-engineering-wiki-skill-repo-self-evolution",
+        "title": "maintain-repo-wiki：让 LLM Agent 把工程事实而非总结写进 Wiki",
+        "url": "/blog/maintain-repo-wiki-llm-engineering-wiki-skill-repo-self-evolution/",
+        "language": "zh",
+        "excerpt": "maintain-repo-wiki：让 LLM Agent 把工程事实而非总结写进 Wiki dingrancho-alt/maintain-repo-wiki，13 stars，Python，2026-07-07。面向单仓库/多仓库的生产级工程 Wiki Skill：不把代码「总结成一篇文档」，而是把接口契约、字段传播、业务流程、排障路径这类可验证工程事实组织成能持续更新、审计、检索的知识系统。三种知识库拓扑（Repo/System/Knowledge Repo）、九类页面、Audit→Confirm→Apply 受控写入流程、可选 Capabili",
+        "score": 0.51723254
+      },
+      {
+        "article_id": "claude-trading-skills-tradermonty-stock-workflow-toolkit",
+        "title": "2833 星的 Claude 交易技能包：74 个 Skill 覆盖选股到复盘，但它明确说自己不下单",
+        "url": "/blog/claude-trading-skills-tradermonty-stock-workflow-toolkit/",
+        "language": "zh",
+        "excerpt": "2833 星的 Claude 交易技能包：74 个 Skill 覆盖选股到复盘，但它明确说自己不下单 tradermonty/claude-trading-skills 是一套 MIT 协议的 Claude Code 交易工作流技能包，2833 星、647 fork，74 个 Skill 分 6 大领域，覆盖选股筛选、仓位计算、复盘记账，但作者反复强调不是信号服务、不自动下单、不构成投资建议。 Claude Code Claude Skills 量化交易 开源工具 Alpaca 股票投资 风险提示 为什么关注这个项目？ 这套东西到底是什么：74 个 Sk",
+        "score": 0.51306206
+      },
+      {
+        "article_id": "anthropic-plugin-marketplaces-four-repos-eli5-minimal-skill",
+        "title": "一个 5 行的 skill，和 Anthropic 那四个容易搞混的插件仓库",
+        "url": "/blog/anthropic-plugin-marketplaces-four-repos-eli5-minimal-skill/",
+        "language": "zh",
+        "excerpt": "一个 5 行的 skill，和 Anthropic 那四个容易搞混的插件仓库 网上流传「Anthropic 公开了内部员工高频使用的 Claude Code Skill——ELI5」。回查一手源：它确实存在，但不在官方 skills 仓库，而在社区插件市场 anthropics/claude-plugins-community，署名作者 Thariq Shihipar，MIT。「内部员工高频使用」这个说法找不到一手依据。顺着这条线把 Anthropic 的四个插件/skill 仓库理清楚：skills（19 个 Agent Skills）、claude-",
+        "score": 0.5099299
+      },
+      {
+        "article_id": "anthropic-agent-workshop-engineering-guide",
+        "title": "Anthropic Agent Workshops: A Practical Engineering Guide",
+        "url": "/blog/anthropic-agent-workshop-engineering-guide/",
+        "language": "en",
+        "excerpt": "Anthropic Agent Workshops: A Practical Engineering Guide Find Anthropic's official agent workshops and build a business workflow, separating free materials, API costs, mock tools and production engineering needs. Anthropic Claude Agent SDK 多智能体 业务自动化 工程实践 Where are the official s",
+        "score": 0.50522614
+      },
+      {
+        "article_id": "unlazy-depth-tree-anti-laziness-gate-contract-claude-code",
+        "title": "Unlazy：用 Depth Tree + 可运行验证门，卡住 AI 代理「谎报完成」",
+        "url": "/blog/unlazy-depth-tree-anti-laziness-gate-contract-claude-code/",
+        "language": "zh",
+        "excerpt": "Unlazy：用 Depth Tree + 可运行验证门，卡住 AI 代理「谎报完成」 Unlazy 是一个 Claude Code / Codex 技能包，用 Depth Tree 方法将任务拆成 N 层，每个叶节点都获得整个任务的完整时间预算——努力程度随深度倍增。核心是可运行验证门（GATES.md），只有所有 CHECK 通过、EVIDENCE 记录在案，才允许报告完成。2,300+ Star，创建于 2026-08-09。 开源 Claude Code Agent技能 防偷懒 Depth Tree 验证门 Unlazy AI代理 问题是什么 D",
+        "score": 0.5047805
+      }
+    ]
+  }
+}

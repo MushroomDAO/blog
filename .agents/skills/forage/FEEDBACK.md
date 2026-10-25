@@ -1069,3 +1069,10 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 - Found official MIT repository AirsupHQ/machine-skill. Analyzed simplified solvers and BMEP assumptions; the supplied 249cc power example remains unverified.
 - M4/16GiB Chromium functional smoke passed: WebGL2, throttle output changes, cutaway and explode controls. No performance, recording or physical accuracy claim.
 - Official turbofan cover adopted and verified; three XiaoM figures, bilingual SEO, live URL/images/list/carousel and remote draft full text/images/cover/comments/canonical checked. KB and semantic index updated. Task f0fa217e-75b8-4592-84f8-ad3420cbcc7e.
+
+## 2026-10-25 — Lauren Tan pstack engineering workflow
+
+- Published https://blog.mushroom.cv/blog/pstack-engineering-workflow/ after resolving incidental Unlazy references and raw KB matches. No prior dedicated article or draft.
+- Pinned official cursor/plugins version 0.15.32: 58 skills including 24 principles, 2 agents, 23 playbooks. Corrected ketchup/catchup and teach versus reflect; current author profile @xai-org.
+- Static source audit only: no plugin installation, Grok Bot execution, coding-quality trial or speed/token benchmark. Explained Cursor and Claude Code adapter differences and single-agent acceptance before isolated parallelism.
+- Bilingual article, verified local FLUX cover and 3 XiaoM figures. Live URL/images/carousel and remote draft text/images/cover/comments/canonical verified; semantic vectors upserted and KB persisted. Task 621c6c14-0f43-4368-ab69-8a56fd084e42.

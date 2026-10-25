@@ -1,0 +1,12 @@
+{
+  "version": "0.15.32",
+  "revision": "e73df471cd4bd918367e99f3dd9c51bd53ddf5f0",
+  "skills": 58,
+  "principles": 24,
+  "otherSkills": 34,
+  "subagents": 2,
+  "playbooks": 23,
+  "catchupExists": false,
+  "ketchupExists": true,
+  "scope": "Static pinned repository inventory, not agent execution benchmark"
+}
