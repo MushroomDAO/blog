@@ -1,299 +1,311 @@
 {
-  "generatedAt": "2026-10-24T14:00:00Z",
+  "generatedAt": "2026-10-25T14:00:01Z",
   "period": {
-    "start": "2026-09-24",
-    "end": "2026-10-24"
+    "start": "2026-09-25",
+    "end": "2026-10-25"
   },
   "totals": {
-    "pageviews": 22020,
-    "visits": 20630,
-    "bots": 10
+    "pageviews": 24000,
+    "visits": 23000,
+    "bots": 0
   },
   "last7": {
-    "pv": 4950,
-    "visits": 4760
+    "pv": 11000,
+    "visits": 10000
   },
   "prior7": {
-    "pv": 4780,
-    "visits": 4600
+    "pv": 13000,
+    "visits": 13000
   },
   "daily": [
     {
-      "date": "09-24",
-      "pv": 160,
-      "visits": 140
-    },
-    {
-      "date": "09-25",
-      "pv": 470,
-      "visits": 430
-    },
-    {
       "date": "09-26",
-      "pv": 560,
-      "visits": 510
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "date": "09-27",
-      "pv": 640,
-      "visits": 560
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-28",
-      "pv": 1030,
-      "visits": 870
+      "pv": 3000,
+      "visits": 3000
     },
     {
       "date": "09-29",
-      "pv": 650,
-      "visits": 590
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "09-30",
-      "pv": 530,
-      "visits": 530
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "date": "10-01",
-      "pv": 930,
-      "visits": 800
-    },
-    {
-      "date": "10-02",
-      "pv": 860,
-      "visits": 800
+      "pv": 3000,
+      "visits": 3000
     },
     {
       "date": "10-03",
-      "pv": 550,
-      "visits": 490
-    },
-    {
-      "date": "10-04",
-      "pv": 1110,
+      "pv": 1000,
       "visits": 1000
     },
     {
       "date": "10-05",
-      "pv": 570,
-      "visits": 560
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "10-06",
-      "pv": 780,
-      "visits": 670
-    },
-    {
-      "date": "10-07",
-      "pv": 700,
-      "visits": 650
-    },
-    {
-      "date": "10-08",
-      "pv": 1090,
-      "visits": 1040
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "10-09",
-      "pv": 880,
-      "visits": 860
-    },
-    {
-      "date": "10-10",
-      "pv": 780,
-      "visits": 770
-    },
-    {
-      "date": "10-11",
-      "pv": 690,
-      "visits": 670
-    },
-    {
-      "date": "10-12",
-      "pv": 810,
-      "visits": 770
-    },
-    {
-      "date": "10-13",
-      "pv": 760,
-      "visits": 750
-    },
-    {
-      "date": "10-14",
-      "pv": 730,
-      "visits": 720
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "date": "10-15",
-      "pv": 610,
-      "visits": 590
-    },
-    {
-      "date": "10-16",
-      "pv": 530,
-      "visits": 490
-    },
-    {
-      "date": "10-17",
-      "pv": 650,
-      "visits": 610
-    },
-    {
-      "date": "10-18",
-      "pv": 420,
-      "visits": 410
+      "pv": 1000,
+      "visits": 0
     },
     {
       "date": "10-19",
-      "pv": 810,
-      "visits": 770
-    },
-    {
-      "date": "10-20",
-      "pv": 710,
-      "visits": 690
-    },
-    {
-      "date": "10-21",
-      "pv": 930,
-      "visits": 920
-    },
-    {
-      "date": "10-22",
-      "pv": 740,
-      "visits": 710
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "date": "10-23",
-      "pv": 900,
-      "visits": 820
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "10-24",
-      "pv": 440,
-      "visits": 440
+      "pv": 3000,
+      "visits": 3000
     }
   ],
-  "countries": [],
-  "countryTotal": 0,
+  "countries": [
+    {
+      "code": "SG",
+      "flag": "🇸🇬",
+      "name": "新加坡",
+      "nameEn": "Singapore",
+      "pv": 11100,
+      "visits": 11100
+    },
+    {
+      "code": "CN",
+      "flag": "🇨🇳",
+      "name": "中国",
+      "nameEn": "China",
+      "pv": 4500,
+      "visits": 4300
+    },
+    {
+      "code": "US",
+      "flag": "🇺🇸",
+      "name": "美国",
+      "nameEn": "United States",
+      "pv": 2400,
+      "visits": 2200
+    },
+    {
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "pv": 1000,
+      "visits": 900
+    },
+    {
+      "code": "TW",
+      "flag": "🇹🇼",
+      "name": "台湾",
+      "nameEn": "Taiwan",
+      "pv": 500,
+      "visits": 500
+    },
+    {
+      "code": "NL",
+      "flag": "🇳🇱",
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "pv": 400,
+      "visits": 400
+    },
+    {
+      "code": "JP",
+      "flag": "🇯🇵",
+      "name": "日本",
+      "nameEn": "Japan",
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "code": "ID",
+      "flag": "🇮🇩",
+      "name": "印度尼西亚",
+      "nameEn": "Indonesia",
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "pv": 200,
+      "visits": 0
+    },
+    {
+      "code": "DE",
+      "flag": "🇩🇪",
+      "name": "德国",
+      "nameEn": "Germany",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "code": "PL",
+      "flag": "🇵🇱",
+      "name": "PL",
+      "nameEn": "PL",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "code": "NG",
+      "flag": "🇳🇬",
+      "name": "NG",
+      "nameEn": "NG",
+      "pv": 100,
+      "visits": 100
+    }
+  ],
+  "countryTotal": 22000,
   "referers": {
-    "direct": 16170,
-    "search": 4300,
-    "ecosystem": 1390,
+    "direct": 40000,
+    "search": 20000,
+    "ecosystem": 0,
     "ai": 0,
-    "other": 160
+    "other": 0
   },
   "pages": [
     {
       "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
       "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
       "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
-      "pv": 2670,
-      "visits": 2310
+      "pv": 2500,
+      "visits": 2100
     },
     {
       "title": "首页",
       "titleEn": "Home",
       "path": "/",
-      "pv": 810,
-      "visits": 700
-    },
-    {
-      "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
-      "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
-      "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
-      "pv": 260,
-      "visits": 260
-    },
-    {
-      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
-      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
-      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 250,
-      "visits": 250
-    },
-    {
-      "title": "Qwen-Image-2.1 本地部署：Unsloth FP8/GGUF，6GB 显存能跑，Mac 16GB 统一内存也行",
-      "titleEn": "Qwen-Image-2.1 Local Deploy: Unsloth FP8/GGUF, Runs on 6GB VRAM, Mac 16GB Unified Memory Too",
-      "path": "/blog/qwen-image-2-1-unsloth-fp8-gguf-local-deploy/",
-      "pv": 230,
-      "visits": 220
-    },
-    {
-      "title": "explore",
-      "titleEn": "explore",
-      "path": "/explore",
-      "pv": 200,
-      "visits": 130
-    },
-    {
-      "title": "MiniMax H3 本地视频生成完整工程指南：五条加速路径，从 RTX 4070 到多卡集群",
-      "titleEn": "MiniMax H3 Local Video Generation Engineering Guide: Five Acceleration Paths, from RTX 4070 to Multi-GPU Clusters",
-      "path": "/blog/minimax-h3-video-generation-local-acceleration-engineering-guide/",
-      "pv": 190,
-      "visits": 190
-    },
-    {
-      "title": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查",
-      "titleEn": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios",
-      "path": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
-      "pv": 170,
-      "visits": 170
-    },
-    {
-      "title": "MacNativeGames：把《王国之泪》打包成Mac应用的技术拆解",
-      "titleEn": "MacNativeGames: Tears of the Kingdom on Apple Silicon",
-      "path": "/blog/macnativegames-totk-native-mac/",
-      "pv": 170,
-      "visits": 170
-    },
-    {
-      "title": "blog",
-      "titleEn": "blog",
-      "path": "/blog/",
-      "pv": 160,
-      "visits": 30
+      "pv": 900,
+      "visits": 800
     },
     {
       "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
       "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
       "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 160,
-      "visits": 150
+      "pv": 400,
+      "visits": 400
     },
     {
-      "title": "PixOffice：给 AI 多智能体加一层 2D 办公室可视化，三种接入方式详解",
-      "titleEn": "PixOffice: How to Integrate 2D Office Scene Visualization Into Your AI Agent System",
-      "path": "/blog/pixoffice-2d-office-frontend-ai-agent-integration-guide/",
-      "pv": 150,
-      "visits": 120
-    },
-    {
-      "title": "OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行",
-      "titleEn": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks",
-      "path": "/blog/openmuse-copilotkit-personal-ai-agent-browser-workspace/",
-      "pv": 150,
-      "visits": 150
+      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
+      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
+      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
+      "pv": 400,
+      "visits": 400
     },
     {
       "title": "'MiniMax H3 加速五件套：稀疏注意力、混合注意力、并行解码，15 秒视频压进 6.6 秒'",
       "titleEn": "MiniMax H3 Accelerated: Five Open-Source Speedups — Sparse Attention, Hybrid Attention, Parallel Decoding",
       "path": "/blog/minimax-h3-accelerated-fasth3-sol-h3-vdn-pdd-lightx2v-five-open-source-speedups/",
-      "pv": 130,
-      "visits": 130
+      "pv": 300,
+      "visits": 300
     },
     {
-      "title": "mu（μ）：编程 Agent 的判断核，35 个决策点交给小模型，大模型只管写代码",
-      "titleEn": "mu (μ): A Coding Agent's Judgment Kernel — 35 Decision Points for a Small Model, Big Model Just Codes",
-      "path": "/blog/mu-coding-agent-judgment-kernel-35-decision-points-hive/",
-      "pv": 130,
-      "visits": 130
+      "title": "DwarfStar：Mac Studio 跑 DeepSeek V4 Flash/PRO，从安装到 SSD 流式推理",
+      "titleEn": "DwarfStar (ds4): Run DeepSeek V4 Flash/PRO Locally on Mac Studio — Install, SSD Streaming, Distributed Inference",
+      "path": "/blog/deepseek-mac-studio-dwarfstar-ds4-local-inference-guide/",
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "title": "OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行",
+      "titleEn": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks",
+      "path": "/blog/openmuse-copilotkit-personal-ai-agent-browser-workspace/",
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+      "titleEn": "Running DeepSeek V4-Flash Locally: A Hardware Selection and Deployment Handbook",
+      "path": "/blog/deepseek-v4-flash-local-inference-guide/",
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "title": "用自己的声音做播客：LuxTTS 零成本语音克隆完整指南",
+      "titleEn": "Make Podcasts in Your Own Voice: LuxTTS Zero-Cost Voice Cloning Guide",
+      "path": "/blog/luxtts-voice-clone-podcast-guide/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "Realtime-Venus：全双工 AI 交互系统本地部署指南，双 Loop 架构 + 9B Omni 模型开源",
+      "titleEn": "Realtime-Venus Local Deployment Guide: Full-Duplex AI with Dual-Loop Architecture and Open 9B Omni Model",
+      "path": "/blog/realtime-venus-fulldup-interactive-dual-loop-local-deploy/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "镜探 + Avatar Forge：从拆解爆款到数字人口播，Agent Skill 组合完成整条视频创作流水线",
+      "titleEn": "CineSleuth + Avatar Forge: From Film Analysis to Digital Human Video — Agent Skills for the Full Creator Pipeline",
+      "path": "/blog/avatar-forge-cine-sleuth-video-digital-human-agent-skill/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "blog",
+      "titleEn": "blog",
+      "path": "/blog/",
+      "pv": 200,
+      "visits": 100
+    },
+    {
+      "title": "27B 模型压到 11.8GB 还「任务无损」：奥地利 IST 用两篇论文的方法重做了 GGUF 量化",
+      "titleEn": "A 27B Model at 11.8GB, Task-Lossless: IST Austria Rebuilt GGUF Quantization With Two Papers' Worth of Method",
+      "path": "/blog/gsq-rco-non-uniform-gguf-quantization/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "'AutoAgent：首个自优化智能体开源库'",
+      "titleEn": "AutoAgent: The World's First Self-Optimizing AI Agent Framework",
+      "path": "/blog/autoagent-self-optimizing-agent/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "读后感：Agent 架构的底层逻辑——从控制论看 Harness 设计",
+      "titleEn": "Commentary: The Deep Logic of Agent Architecture — Designing Resilient Agents Through a Cybernetics Lens",
+      "path": "/blog/agent-architecture-cybernetics-harness-design/",
+      "pv": 200,
+      "visits": 200
     }
   ],
   "devices": [
     {
       "label": "desktop",
-      "count": 19210
+      "count": 19200
     },
     {
       "label": "mobile",
@@ -304,56 +316,27 @@
       "count": 40
     }
   ],
-  "os": [
-    {
-      "label": "Windows",
-      "count": 40000
-    },
-    {
-      "label": "Linux",
-      "count": 20000
-    }
-  ],
+  "os": [],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 15730
+      "count": 16000
     },
     {
       "label": "Unknown",
-      "count": 2430
+      "count": 3000
     },
     {
       "label": "Edge",
-      "count": 2050
-    },
-    {
-      "label": "ChromeMobileWebview",
-      "count": 620
-    },
-    {
-      "label": "MobileSafari",
-      "count": 560
-    },
-    {
-      "label": "Safari",
-      "count": 230
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 150
-    },
-    {
-      "label": "ChromeDerivative",
-      "count": 120
+      "count": 3000
     },
     {
       "label": "Firefox",
-      "count": 120
+      "count": 1000
     },
     {
-      "label": "ChromeHeadless",
-      "count": 10
+      "label": "MobileSafari",
+      "count": 1000
     }
   ]
 }

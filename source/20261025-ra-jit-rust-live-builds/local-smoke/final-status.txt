@@ -1,0 +1,8 @@
+plain cargo: not through ra-jit (`ra-jit enable` turns it on)
+daemon: pid 74239, version 0.0.0-3ad3370-18e0426dc9ebce00, exits after 1800s idle
+  worker: pid 74240, /private/tmp/blaze-smoke/project/, log /tmp/blaze-smoke/daemon/spares/0/log
+    /private/tmp/blaze-smoke/project: ready
+  worker: pid 74655, /private/tmp/blaze-smoke/project/, log /tmp/blaze-smoke/daemon/spares/1/log
+    /private/tmp/blaze-smoke/project: ready
+/private/tmp/blaze-smoke/project (dev, ff80be2f41703920): 1 builds by the daemon, 0 by cargo
+/private/tmp/blaze-smoke/project (test, c95aed6718767c9c): 1 builds by the daemon, 0 by cargo

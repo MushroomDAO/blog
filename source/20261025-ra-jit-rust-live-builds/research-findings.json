@@ -1,0 +1,19 @@
+{
+  "cutoff": "2026-10-25",
+  "canonicalRepository": "https://github.com/indexable-inc/blaze",
+  "oldRepository": "https://github.com/indexable-inc/ra-jit",
+  "revision": "988efedad0331e57d4d0184abbd225d2223e7051",
+  "renamed": "2026-10-24",
+  "license": "MIT OR Apache-2.0",
+  "claims": {
+    "92x": "Exact92x not found in pinned currentREADME/benchmarks; closest notable widely-usedfunction bevyLinuxARM row32.13s/352ms~91x, not universal",
+    "platformGeometricMeans": "Official10xMac/24xLinuxARM/11xLinuxx86, mixededits; perhost only",
+    "nushellLeafLinuxX86": "1.25s/236ms=5.3x",
+    "biomeLeafLinuxX86": "2.12s/2.38s=0.9x",
+    "borrowChecker": "main and usage/checker docs inconsistent percent; incomplete, retain independent rustc CI",
+    "liveReleaseBoundary": "macAppleSilicon; Linuxx86 main nextrelease per usage docs; not claimallLinuxlivereleased"
+  },
+  "officialMacBenchHost": "M5Max18cores128GiB macOS27.0.1 busyload48 3edits; not localM4",
+  "ownTestScope": "Isolated officialnightlySHA256-verified executable; simple function edit42 and test+rustc functional only. No speedup benchmark, largeproject build or liveprocess demonstration.",
+  "cover": "Official animated firemark dark/empty; generated FLUX205 electronics workbench metaphor,not product screenshot"
+}
