@@ -1,0 +1,33 @@
+{
+  "cutoff": "2026-10-25",
+  "entity": "Town.com, Inc. / Townie; not Val Town",
+  "coverage": "44 direct full-text pages in main fetch plus 1Password, initial homepage/docs/news/price pages and web reader sources",
+  "sourceFallbacks": {
+    "Menlo": "direct fetch403; official article read through web tool",
+    "YouTube": "web fetch cache miss; used official a16z publisher Apple Podcasts episode description for pivot confirmation",
+    "Fortune": "entry linked from official Town press index; full subscriber story not relied on"
+  },
+  "verifiedFacts": [
+    "Official A55M June3 andB108M Oct19 1Bvaluation",
+    "Pricing snapshot annual equivalents and monthly-only Starter",
+    "team integration connecting-account access documented",
+    "member removal does not stop personal routines, support required for complete offboarding",
+    "1Password coming soon and personal US vault limits",
+    "modes can allow autonomous actions",
+    "no-training default differs from no processing/storage"
+  ],
+  "notVerified": [
+    "private security reports",
+    "actual customer workflow execution",
+    "claimed ARR/growth independently audited",
+    "paid trial",
+    "full API or source code availability"
+  ],
+  "analysis": [
+    "measure waiting and accepted-case cost",
+    "copies not equivalent to shared instance",
+    "network effects require useful authorized handoffs",
+    "model neutrality does not eliminate application lock-in"
+  ],
+  "publishedClaimEvidence": "Article numbered source directory; source manifest with full fetch hashes"
+}

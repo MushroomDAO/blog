@@ -1076,3 +1076,10 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 - Pinned official cursor/plugins version 0.15.32: 58 skills including 24 principles, 2 agents, 23 playbooks. Corrected ketchup/catchup and teach versus reflect; current author profile @xai-org.
 - Static source audit only: no plugin installation, Grok Bot execution, coding-quality trial or speed/token benchmark. Explained Cursor and Claude Code adapter differences and single-agent acceptance before isolated parallelism.
 - Bilingual article, verified local FLUX cover and 3 XiaoM figures. Live URL/images/carousel and remote draft text/images/cover/comments/canonical verified; semantic vectors upserted and KB persisted. Task 621c6c14-0f43-4368-ab69-8a56fd084e42.
+
+## 2026-10-25 — Town and Townie public product research
+
+- Published https://blog.mushroom.cv/blog/town-townie-research/ after exact URL/entity dedup found raw KB only. Company is Town.com, not Val Town.
+- Covered company history, official financing, product modules, authorized handoffs, shared workflows, users, annual pricing and credits. Reviewed 44 direct full-text sources plus 1Password and official web/podcast sources; investor accounts labeled interested, growth self-reported.
+- Critical documented limits: shared connecting-account access; removing a member does not stop personal routines; 1Password still coming soon; copies versus shared instances; approval overrides; no-training default does not mean no cloud processing or stored context. No paid/private trial or security/ROI benchmark.
+- Adopted official Bo/Claus artwork with rights credit; 3 XiaoM figures. Bilingual SEO, public article/images/carousel and remote draft full text/images/cover/comments/canonical verified. Semantic index and KB updated. Task fe905b52-d459-4920-89d8-ab154dae83c3.
