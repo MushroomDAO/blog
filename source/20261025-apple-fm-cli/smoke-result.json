@@ -1,0 +1,7 @@
+{
+  "backend" : "SystemLanguageModel.default",
+  "os" : "Version 26.6.2 (Build 25G83)",
+  "prompt" : "请用一句简体中文解释什么是 AI Agent。",
+  "response" : "AI Agent是一种能够自主执行任务、学习从环境中获取信息并做出决策的计算机系统。",
+  "scope" : "One functional generation via Swift on macOS 26; not the macOS 27 fm CLI or a benchmark"
+}

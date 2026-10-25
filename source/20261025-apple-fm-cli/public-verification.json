@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-25T01:48:21.107733+00:00",
+  "articles": [
+    {
+      "slug": "apple-foundation-models-fm-cli",
+      "url": "https://blog.mushroom.cv/blog/apple-foundation-models-fm-cli/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/apple-foundation-models-fm-cli-banner.BRfFAUsL_LJQAe.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/apple-foundation-models-fm-cli-fig-01.ByhtJg61_Z1cEOqc.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/apple-foundation-models-fm-cli-fig-02.Bw1ivvAO_Z25SNG8.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/apple-foundation-models-fm-cli-fig-03.C1BRLb5c_1BwDuP.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/apple-foundation-models-fm-cli-banner.BRfFAUsL.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 1,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/apple-foundation-models-fm-cli/",
+    "/blog/decision-models-comparison/",
+    "/blog/gradium-phonon-local-tts/",
+    "/blog/appflowy-self-host-services/",
+    "/blog/ming-3-tts-small-model-evaluation/",
+    "/blog/underdog-bark-3-local-asr/",
+    "/blog/nvidia-openshell-agent-runtime/",
+    "/blog/flint-local-coding-rec-engine/"
+  ]
+}

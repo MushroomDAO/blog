@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-25",
+  "tool": "built-in image_gen",
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "prompt_archive": "prompts.json",
+  "requested_final_count": 3,
+  "encoding": "Exact 16:9 resize; palette PNG, no dithering; near-white palette entries merged to #FFFFFF; originals preserved unchanged.",
+  "scope": "Only illustration assets and this archive; no article/banner edits, git operations, or publishing.",
+  "figures": [
+    {
+      "figure": "01",
+      "original": "fig-01-original.png",
+      "original_generation_path": "/Users/jason/.codex/generated_images/01a170ba-91f7-7581-b662-baed5baa1464/exec-55ec8366-4f1c-44a5-bb29-ceb583e1862a.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "d0310d8e50e45d9e2670f166ac8d09771382107fec29222cf05a85f32b29f406",
+      "final": "src/assets/images/apple-foundation-models-fm-cli-fig-01.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 68734,
+      "palette_color_budget": 64,
+      "sha256": "c38bace98ce99bd223d2d76896b8460d9231addda3f63594294683e757b37f6e",
+      "visual_qa": "Two access interfaces feed one shared OS mechanism; only macOS26 API and macOS27 fm labels; no chat app installation.",
+      "status": "copied-and-file-verified"
+    },
+    {
+      "figure": "02",
+      "original": "fig-02-original.png",
+      "original_generation_path": "/Users/jason/.codex/generated_images/01a170ba-91f7-7581-b662-baed5baa1464/exec-201d43c7-8ce3-4de6-94f1-618b4f7d0029.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "da22ee368a05aa5d04f0277067cb59458432e723f82ae526cb3f8c250514398e",
+      "final": "src/assets/images/apple-foundation-models-fm-cli-fig-02.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 36157,
+      "palette_color_budget": 64,
+      "sha256": "0afb7c18e0fe3020449de4a29504d609fd7f045d1351c4eed82bec2830c4b645",
+      "visual_qa": "One laptop processes a document within 本地; separate dashed optional cloud route PCC 联网; no crossed-out cloud.",
+      "status": "copied-and-file-verified"
+    },
+    {
+      "figure": "03",
+      "original": "fig-03-original.png",
+      "original_generation_path": "/Users/jason/.codex/generated_images/01a170ba-91f7-7581-b662-baed5baa1464/exec-c3704fe1-dad4-4e85-bd6a-1db390f2abd9.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "6987487a7f359e018cab66240c1c63e139a94ef010c082f99bd9503c92df39a5",
+      "final": "src/assets/images/apple-foundation-models-fm-cli-fig-03.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 53540,
+      "palette_color_budget": 64,
+      "sha256": "ec0bd688a844edda3ae0cab1835fe9109491aa2f2e340a499d74c8866adc1d8d",
+      "visual_qa": "合成文档 -> JSON 提案 inspected by Xiao M -> 人工确认 operated by human hand -> 执行; no bypass.",
+      "status": "copied-and-file-verified"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-25T01:49:36.486381+00:00",
+  "query": "macOS 27 fm CLI 苹果终端 本地AI Foundation Models license",
+  "matched": [
+    {
+      "article_id": "apple-foundation-models-fm-cli",
+      "title": "macOS 27 的 fm：Mac 自带本地 AI，怎样从终端用起来？",
+      "url": "/blog/apple-foundation-models-fm-cli/",
+      "language": "zh",
+      "excerpt": "macOS 27 的 fm：Mac 自带本地 AI，怎样从终端用起来？ 苹果在macOS 27预装fm命令行工具，让用户从终端调用Foundation Models。本文核对M1等机型、系统版本、模型下载与地区条件，解释本地推理和Private Cloud Compute的区别，给出首次使用及脚本接入步骤，并记录M4、macOS 26通过Swift接口完成中文生成的功能验证。 Apple Foundation Models macOS 本地AI CLI Apple Silicon fm 是苹果自带的，还是需要安装的开源项目？ M1 能用吗？需要多少内存和",
+      "score": 0.7258096
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "apple-foundation-models-fm-cli",
+        "title": "macOS 27 的 fm：Mac 自带本地 AI，怎样从终端用起来？",
+        "url": "/blog/apple-foundation-models-fm-cli/",
+        "language": "zh",
+        "excerpt": "macOS 27 的 fm：Mac 自带本地 AI，怎样从终端用起来？ 苹果在macOS 27预装fm命令行工具，让用户从终端调用Foundation Models。本文核对M1等机型、系统版本、模型下载与地区条件，解释本地推理和Private Cloud Compute的区别，给出首次使用及脚本接入步骤，并记录M4、macOS 26通过Swift接口完成中文生成的功能验证。 Apple Foundation Models macOS 本地AI CLI Apple Silicon fm 是苹果自带的，还是需要安装的开源项目？ M1 能用吗？需要多少内存和",
+        "score": 0.7258096
+      },
+      {
+        "article_id": "apfel-apple-silicon-local-ai",
+        "title": "apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence",
+        "url": "/blog/apfel-apple-silicon-local-ai/",
+        "language": "zh",
+        "excerpt": "apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence apfel 是一款开源 CLI 工具，让开发者在 Apple Silicon Mac 上直接调用 Apple Foundation Model，无需 API Key、完全本地化运行。 apple-intelligence macOS CLI local-LLM MCP 什么是 apfel？ 核心价值 主要功能 🖥️ 多样化交互方式 🔧 UNIX 集成 🌐 OpenAI 兼容服务器 🛠️ MCP 工具支持 💬 上下文管理 技术要求与限制 环境要求 ",
+        "score": 0.63567084
+      },
+      {
+        "article_id": "localagi-local-ai-agent-platform-localai-mac",
+        "title": "LocalAGI 拆解：这个本地 Agent 平台已被 LocalAI 收进核心，Mac 用户该装哪一个？",
+        "url": "/blog/localagi-local-ai-agent-platform-localai-mac/",
+        "language": "zh",
+        "excerpt": "LocalAGI 拆解：这个本地 Agent 平台已被 LocalAI 收进核心，Mac 用户该装哪一个？ mudler/LocalAGI（1972 星，MIT，Go）自称 OpenAI Responses API 的「完整替代」、不上云。我们读完 README、compose 和代码：/v1/responses 里 stream、temperature、instructions 等 7 个字段解析后没被用上，12 个 release 附件全是 0，默认 compose 在局域网暴露 root:root 的 SSH；它从 2026 年 3 月起已被 4.",
+        "score": 0.5857259
+      },
+      {
+        "article_id": "gradium-phonon-local-tts",
+        "title": "Gradium Phonon: Local TTS, Latency and License Limits",
+        "url": "/blog/gradium-phonon-local-tts/",
+        "language": "en",
+        "excerpt": "Gradium Phonon: Local TTS, Latency and License Limits Review Gradium Phonon: Apache versus noncommercial weights, latency claims, hard-text WER and an M4 offline synthesis check with local model and voice files. Gradium Phonon 语音合成 本地AI Rust 开源模型 Where are the original releases? ",
+        "score": 0.5791271
+      },
+      {
+        "article_id": "m1-max-64gb-local-ai-model-selection-memory-guide",
+        "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
+        "url": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
+        "language": "zh",
+        "excerpt": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度 持续更新：M1 Max 64GB MacBook 本地AI最佳组合方案。涵盖 Apple Intelligence 3B 复用、Qwen3-30B-A3B/27B/32B 全8bit部署、oMLX多模型调度、48GB可用内存边界测算与系统精简。 M1Max 本地模型 Qwen3 oMLX 内存管理 Apple Intelligence LLM 隐私AI 一、核心硬件与基础定位 二、Apple Intelligence 原生 3B 模型利用方案 三、Qwen3 三大主力模型差异",
+        "score": 0.56955624
+      },
+      {
+        "article_id": "mac-studio-vs-amd-vs-cloud-gpu-local-ai",
+        "title": "继续等Mac Studio还是投入AMD怀抱Or云GPU？",
+        "url": "/blog/mac-studio-vs-amd-vs-cloud-gpu-local-ai/",
+        "language": "zh",
+        "excerpt": "继续等Mac Studio还是投入AMD怀抱Or云GPU？ 2026年本地AI推理硬件选购完全指南：Mac Mini M4 Pro、Mac Studio M4 Max / M3 Ultra、AMD Minisforum MS-S1 MAX、云GPU（AutoDL/RunPod）四路横评，TTS/ASR/ImageGen/VideoGen/TxtGen/VibeCoding六大场景HuggingFace Top-3模型推荐与成本对比。 本地AI推理 Mac Studio Mac Mini AMD Minisforum 云GPU RunPod AutoDL ",
+        "score": 0.56671286
+      },
+      {
+        "article_id": "ornith-1-coding-agent-model-mac-mini-local-inference",
+        "title": "Ornith-1.0：自改进 Coding Agent 模型，9B 打 35B，Mac mini 本地跑 60 t/s",
+        "url": "/blog/ornith-1-coding-agent-model-mac-mini-local-inference/",
+        "language": "zh",
+        "excerpt": "Ornith-1.0：自改进 Coding Agent 模型，9B 打 35B，Mac mini 本地跑 60 t/s deepreinforce-ai 开源 Ornith-1.0：RL 同时优化脚手架和解答，9B 在 Terminal-Bench 和 NL2Repo 上碾压 Qwen3.5-35B，35B MoE 超过 Qwen3.5-397B。APEX-I-Compact MTP GGUF + 16GB Mac mini 实测 60 t/s，总结/排版远超原版模型，无无限重复问题。 本地模型 Coding Agent Apple Silicon Ma",
+        "score": 0.56325257
+      },
+      {
+        "article_id": "zixi-51m-mac-local-tts",
+        "title": "zixi-51M on Mac: CPU and MPS Inference Verified",
+        "url": "/blog/zixi-51m-mac-local-tts/",
+        "language": "en",
+        "excerpt": "zixi-51M on Mac: CPU and MPS Inference Verified Run zixi-51M Chinese TTS on a Mac: verified CPU and MPS audio, pinned weights, install steps, training data format, dependency gaps and fine-tuning limits. zixi-51M TTS Apple Silicon 本地AI 语音合成 模型微调 What actually ran? Why is it appro",
+        "score": 0.5602469
+      },
+      {
+        "article_id": "apodex-1-1-mini-working-capability-local-agent-guide",
+        "title": "Apodex 1.1 Mini 调研：训「持续干活的能力」，不是训「聊得更像」，35B 本地可跑",
+        "url": "/blog/apodex-1-1-mini-working-capability-local-agent-guide/",
+        "language": "zh",
+        "excerpt": "Apodex 1.1 Mini 调研：训「持续干活的能力」，不是训「聊得更像」，35B 本地可跑 调研 Apodex/Apodex-1.1-mini：Qwen3.5-35B-A3B（256 专家/8 激活，约 3B 激活参数）的 Agent 微调版，Apache-2.0，图文输入文本输出，中英双语。配套论文 arXiv:2608.23283 提出「working capability」概念——不是比谁推理更强，而是比谁能在文件/搜索/代码环境里持续干活、失败后能恢复、最终交付可验证的结果。训练分两条线：Environment Scaling（扩展可验证的",
+        "score": 0.5579268
+      },
+      {
+        "article_id": "idoris-project-launch--how-an-independent-researcher-builds-",
+        "title": "iDoris 立项思考：一个普通研究者如何构建可持续进化的本地 AI 模型",
+        "url": "/blog/idoris-project-launch--how-an-independent-researcher-builds-/",
+        "language": "zh",
+        "excerpt": "iDoris 立项思考：一个普通研究者如何构建可持续进化的本地 AI 模型 iDoris 是面向「个人→社区→城市」三层场景的本地 AI 模型项目。本文从约束推导出「必须分层+必须联邦」的结论；选定 Qwen3.5/3.6 同基座+分层 LoRA 架构；以 DP-SGD+算法可审计实现「权重可上传+原始数据不出本机」。我们不回避不确定性。 iDoris 本地AI Local AI Federated LoRA Mycelium Aura AI Qwen3 Progress-Report 摘要 §1 起点：一个真实但被忽略的问题 §2 约束：先把限制条件摆",
+        "score": 0.5575441
+      }
+    ]
+  }
+}
