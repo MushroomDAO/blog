@@ -1,0 +1,115 @@
+{
+  "article_slug": "pstack-engineering-workflow",
+  "created_at": "2026-10-25T02:18:34.582473+00:00",
+  "generator": "built-in image_gen.imagegen; one independent call per figure",
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "character": "Current XiaoM: red cap, white spots, cream stem, black dot eyes, thin limbs, deadpan",
+  "figure_count": 3,
+  "processing": "Pillow 12.3.0; normalize near-white pixels (all RGB channels >=245) to white, fit without cropping, palette PNG with no dithering, near-white palette entries normalized to pure white",
+  "figures": [
+    {
+      "figure": 1,
+      "anchor": "Investigate existing code, make a small change, drive the application, save verified context",
+      "prompt": "source/20261025-pstack-engineering-workflow/generated-assets/prompts/fig-01.txt",
+      "generated_source": "/Users/jason/.codex/generated_images/01a170d7-d9dd-7b61-bbf7-54e7eb7ad39e/exec-3b1afac7-47c4-48e7-ac0e-6754565c696d.png",
+      "archived_original": "source/20261025-pstack-engineering-workflow/generated-assets/originals/fig-01.png",
+      "original_bytes": 1399827,
+      "original_sha256": "5aca2eea99fe0262fe9bb8a087021e7257f5a4961a6a99293c833e15601e7659",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "final": "src/assets/images/pstack-engineering-workflow-fig-01.png",
+      "final_bytes": 85711,
+      "final_sha256": "de03382800aa0ba7cc012feac9054d69b0e9cb8bff914d11f65faaaf6e675fd4",
+      "final_dimensions": [
+        1280,
+        720
+      ],
+      "palette_colors": 48,
+      "pure_white_fraction": 0.8476,
+      "checks": {
+        "png": true,
+        "exact_16_9": true,
+        "under_90000_bytes": true,
+        "white_corners": true
+      }
+    },
+    {
+      "figure": 2,
+      "anchor": "One agent defines task boundaries, workers edit isolated worktrees, reunite for verification",
+      "prompt": "source/20261025-pstack-engineering-workflow/generated-assets/prompts/fig-02.txt",
+      "generated_source": "/Users/jason/.codex/generated_images/01a170d7-d9dd-7b61-bbf7-54e7eb7ad39e/exec-818d1698-8105-46eb-bc97-9292930e592c.png",
+      "archived_original": "source/20261025-pstack-engineering-workflow/generated-assets/originals/fig-02.png",
+      "original_bytes": 1367892,
+      "original_sha256": "0d5dac4acbd28baf4bd22dadadf195c6f9ac10b22a0af825269a5a9d1ad7bdef",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "final": "src/assets/images/pstack-engineering-workflow-fig-02.png",
+      "final_bytes": 88774,
+      "final_sha256": "ff3b5efc18eaa626ff9d3030f34ffbe0b14da2b3048e958ad1dd406254976e1e",
+      "final_dimensions": [
+        1280,
+        720
+      ],
+      "palette_colors": 64,
+      "pure_white_fraction": 0.8536,
+      "checks": {
+        "png": true,
+        "exact_16_9": true,
+        "under_90000_bytes": true,
+        "white_corners": true
+      }
+    },
+    {
+      "figure": 3,
+      "anchor": "A passing build is one checkpoint; real user action and visible result demonstrate behavior",
+      "prompt": "source/20261025-pstack-engineering-workflow/generated-assets/prompts/fig-03.txt",
+      "generated_source": "/Users/jason/.codex/generated_images/01a170d7-d9dd-7b61-bbf7-54e7eb7ad39e/exec-7d7447ff-852b-4e42-9a3c-0a70b610a0b0.png",
+      "archived_original": "source/20261025-pstack-engineering-workflow/generated-assets/originals/fig-03.png",
+      "original_bytes": 1173944,
+      "original_sha256": "7ec1c4c57c810865a42b4e3d23618c50f4402438b9b534024700597b21bd9f6e",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "final": "src/assets/images/pstack-engineering-workflow-fig-03.png",
+      "final_bytes": 88381,
+      "final_sha256": "d37d4d240b737c92718d7c3198cda33bd807cb52c24ba717a9bcabb9afbe4e99",
+      "final_dimensions": [
+        1536,
+        864
+      ],
+      "palette_colors": 96,
+      "pure_white_fraction": 0.9164,
+      "checks": {
+        "png": true,
+        "exact_16_9": true,
+        "under_90000_bytes": true,
+        "white_corners": true
+      }
+    }
+  ],
+  "visual_review": {
+    "status": "passed",
+    "method": "Inspected all three original generated illustrations and each final compressed PNG separately",
+    "checks": {
+      "three_separate_figures": true,
+      "current_red_cap_white_spots_cream_stem_character": true,
+      "xiaom_performs_core_actions": true,
+      "pure_white_background": true,
+      "short_legible_chinese_annotations": true,
+      "no_numbers": true,
+      "no_simulated_screenshots": true,
+      "no_title_or_watermark": true,
+      "anchors_match_requested_sequence": true
+    },
+    "notes": [
+      "Figure 01: inspection, single-gear repair, actual crank operation and observed flag recorded in a notebook",
+      "Figure 02: lone planner draws boundaries, three separate worker trays, shared assembly and crank verification",
+      "Figure 03: passed build arch precedes a hand-operated switch and a visibly lit lamp"
+    ]
+  }
+}
