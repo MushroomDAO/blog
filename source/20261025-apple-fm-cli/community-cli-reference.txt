@@ -1,0 +1,289 @@
+# `fm` CLI reference
+
+Every command and flag, captured by running the tool. ANSI colors stripped.
+The `fm serve` HTTP API has its own document: [`serve-api.md`](serve-api.md).
+
+**Build:** macOS 27.0 (`26A5425a`) · `FoundationModels.framework` 2.0.68 · `/usr/bin/fm` dated 2026-08-27 · verified 2026-09-06.
+Earlier builds had a `pcc` tier and `fm quota-usage`; this one removed both, added
+`fm license`, and turned `fm chat` into a full-screen TUI.
+
+```
+% fm <command> [options]
+```
+
+## Before anything runs: the licence gate
+
+`fm` refuses **every** command, `--help` included, until the Legal Notice & Terms
+have been accepted machine-wide by a privileged user:
+
+```console
+$ fm respond 'hi'
+YOU HAVE NOT AGREED TO THE APPLE FOUNDATION MODELS CLI LEGAL NOTICE & TERMS.
+Agreeing to the Apple Foundation Models CLI Legal Notice & Terms applies to every
+user on the machine, so it must be run as a privileged user (e.g. 'sudo fm license').
+
+$ sudo fm license          # prints the notice, prompts [yes, no]
+$ fm license --status
+Agreed to license FM1 version 1.0 on Sep 5, 2026 at 21:38.
+```
+
+Acceptance is machine-wide. A beta that changes the licence version re-prompts
+everyone on the machine.
+
+There is **no `fm --version`**: `Error: Unknown option '--version'`.
+
+## Commands
+
+| Command | Purpose |
+|---------|---------|
+| `respond` | Generate a response to a prompt (one-shot) |
+| `chat` | Interactive chat session (persisted to `~/.fm/sessions/`) |
+| `count-tokens` | Count tokens with the on-device tokenizer |
+| `schema` | Generate a JSON generation schema (for guided generation) |
+| `serve` | Start an OpenAI Chat-Completions API server |
+| `available` | Check model availability |
+| `license` | Show and agree to the Legal Notice & Terms |
+
+> **Removed on 2.0.68:** `fm quota-usage`. It only ever reported Private Cloud
+> Compute quota, and the `pcc` tier no longer exists here.
+
+## Models (execution tiers)
+
+| Model | Meaning | Status |
+|-------|---------|--------|
+| `system` | On-device Apple Foundation Model (default, and the only option) | ✅ available |
+
+`pcc` is gone; the argument parser now rejects the value:
+
+```console
+$ fm available --model pcc
+Error: The value 'pcc' is invalid for '--model <model>'. Please provide one of 'system'.
+```
+
+---
+
+## `fm respond`
+
+```
+fm respond [options] '<prompt>'
+echo '<prompt>' | fm respond            # reads stdin
+```
+
+| Option | Notes |
+|--------|-------|
+| `-m, --model <system>` | Execution tier (only `system`) |
+| `-i, --instructions <text>` | System instructions |
+| `--schema <file>` | JSON schema file → **constrained/guided generation** |
+| `--text <text>` | Add a text segment to the prompt (repeatable) |
+| `--image <path>` | Add an image (multimodal / vision, repeatable) |
+| `--label <name>` | Label for the corresponding `--image`, paired by order. **Requires `--tool`.** |
+| `--tool <name>` | Enable a built-in tool: `barcode` or `ocr` (repeatable) |
+| `--resume <file>` | Continue a saved conversation from its transcript |
+| `--save-transcript <name>` | Persist the transcript after responding |
+| `--[no-]stream` | Stream tokens (default **on**) |
+| `-g, --greedy` | Greedy (deterministic) sampling |
+| `-v, --verbose` | Verbose — prints "Creating session with …" |
+| `--show-assets` | Not listed in `--help`. Prints the model assets used for the request |
+| **System-model only:** | |
+| `--use-case <general\|content-tagging>` | Selects a use-case adapter. `content-tagging` returns comma-separated tags. |
+| `--guardrails <level>` | `default` or `permissive-content-transformations` |
+
+### `--show-assets`
+
+New on 2.0.68 and not listed in `--help`. It prints which model assets served the
+request:
+
+```console
+$ fm respond --no-stream --show-assets 'Name one color.'
+Assets used:
+- com.apple.fm.language.instruct_3b.fm_api_generic.draft?variant=generic_sparse_16.0.81754.13.204770,0
+- com.apple.fm.language.instruct_3b.tokenizer?variant=generic_sparse_16.0.0.13.204691,0
+- com.apple.fm.language.instruct_3b.fm_api_generic_3b?variant=generic_sparse_16.1.0.13.103120,0
+Blue
+```
+
+Handy for confirming which model build you're talking to after an OS update.
+
+### Tools and labels
+
+An unknown tool name lists the valid ones:
+
+```console
+$ fm respond --tool bogus 'hi'
+Error: Unknown tool 'bogus'. Known: barcode, ocr.
+
+$ fm respond --image a.png --label r 'x'
+Error: --label has no effect without an image-using tool. Enable --tool barcode or --tool ocr (or drop the --label flag).
+```
+
+Vision does **not** require a tool. `--image` alone works — the tools add classical
+Vision OCR/barcode reading on top:
+
+```console
+$ fm respond --no-stream --image receipt.png --text 'What text is in this image?'
+TOTAL: $42.50
+Receipt 2026
+```
+
+
+**Examples that work:**
+```bash
+fm respond 'What is Swift?'
+fm respond --greedy --no-stream 'Say hello in three words.'
+#   → Hello, friend.               (0.26–0.30 s warm)
+fm respond --use-case content-tagging 'Apple shipped a CLI for on-device AI.'
+#   → Apple, CLI, AI, on-device, software    (sampled — varies per run)
+fm respond --schema movie.json 'Give me a classic sci-fi film.'
+#   → {"title": "2001: A Space Odyssey", "year": 1966, "rewatchable": true}
+fm respond --image photo.jpg --text 'What is in this image?'
+fm respond --image receipt.jpg --label receipt --tool ocr 'Total on this receipt?'
+```
+
+---
+
+## `fm chat`
+
+Full-screen TUI as of 2.0.68 — bottom input pane, live status line (model, input /
+output tokens, context size, turn count), streaming Markdown rendering, tab-completed
+`@path` file references, in-session image attachment, and model-generated session
+names. Sessions saved to `~/.fm/sessions/`.
+
+| Option | Notes |
+|--------|-------|
+| `-m, --model <system>` | Tier for this session |
+| `--set-default-model <system>` | Persist default tier for future `fm chat` |
+| `-r, --resume <name>` | Resume a saved session |
+| `--continue` | Continue the most recent session |
+| `-i, --instructions <text>` | System instructions (mutually exclusive with `--resume`) |
+| `--tool <name>` | Enable a built-in tool: `barcode` or `ocr` (repeatable) |
+
+**In-REPL slash commands:** `/help`, `/model <system>`, `/instructions [text]`,
+`/appearance <dark|light|auto>`, `/sessions` (list saved sessions), `/resume <name>`,
+`/save`, `/clear`, `/tools [add|remove <name>]`, `exit`.
+
+> Renamed on 2.0.68: `/history` → **`/sessions`**, `/load` → **`/resume`**.
+> `/increase-limit` was removed with the PCC tier.
+
+Piping into it degrades to a basic REPL rather than failing:
+
+```console
+$ echo "hi" | fm chat
+you>  fm> Hello! How can I help you today?you>
+```
+
+---
+
+## `fm count-tokens`
+
+On-device tokenizer only. Output is `Token count: N` in a TTY, a bare integer when piped (`-q/--quiet` forces bare).
+
+```bash
+fm count-tokens 'What is Swift?'                      # → 5
+fm count-tokens -i 'You are a helpful assistant' 'What is Swift?'   # → 65
+fm count-tokens --transcript session.json             # → 29
+fm count-tokens -i 'You are concise' --image a.jpg --text 'Describe' 'Follow up'
+```
+
+Supports `--instructions`, repeatable `--text` / `--image`, and **`--transcript <file>`**
+(new on 2.0.68) to count a saved transcript as a framed conversation.
+
+A bare prompt counts raw content only. Adding `--instructions` or `--transcript`
+counts the *framed* request including chat-template turn markers — which is why
+`'What is Swift?'` is 5 tokens alone and 65 with instructions attached.
+
+`--schema` and `--verbose` are both rejected here:
+`The --verbose option is not supported with the count-tokens command. Use --quiet for bare-integer output in scripts.`
+
+---
+
+## `fm schema object` — guided-generation schema builder
+
+Emits a JSON Schema (with an `x-order` extension to preserve field order) for use with `respond --schema`.
+
+| Option | Notes |
+|--------|-------|
+| `--name <Name>` | Root object type name (required) |
+| `--string/--integer/--double/--boolean <name>` | Declare a typed property |
+| `--object <name> --schema <json>` | Nested object (compose with `$(fm schema object …)`); emits a `$defs` entry + `$ref` |
+| `--anyOf --schema … --schema …` | Union type; choices become `$defs` + an `anyOf` array |
+| `--array` / `--optional` / `--description <text>` | Modifiers on the **preceding** property |
+| dot notation | `address.street` auto-creates nested objects |
+
+`--int` works as an undocumented alias for `--integer` (Apple's own top-level
+`fm --help` example uses it, but only `--integer` is listed under OPTIONS).
+
+> **Bug in Apple's help text — still present on 2.0.68.** The USAGE block for
+> `fm schema object` shows `--nested address --schema …`, but there is no such flag:
+> `Error: SchemaError(… Unknown argument: --nested)`. The working flag is
+> `--object`, which is what PROPERTY DECLARATIONS lists. Unchanged across three
+> builds now.
+
+```bash
+fm schema object --name Movie --string title --integer year --boolean rewatchable
+fm schema object --name Restaurant --string title \
+  --object address --schema "$(fm schema object --name Address --string zip)"
+fm schema object --name SearchResult --anyOf \
+  --schema "$(fm schema object --name Found --string name)" \
+  --schema "$(fm schema object --name NotFound --string reason)"
+```
+
+> **`x-order` is mandatory, not cosmetic** on the CLI's `--schema` path. A
+> hand-written JSON Schema without it is rejected outright. (`fm serve`'s
+> `response_format: json_schema` does **not** require it — see
+> [`serve-api.md`](serve-api.md).) `enum` and `minimum`/`maximum` work but
+> have no builder flags. Full capability matrix and recipes:
+> [`guided-generation.md`](guided-generation.md).
+
+---
+
+## `fm available`
+
+```console
+$ fm available                    # checks all tiers
+System model available
+$ fm available --model system
+System model available
+```
+
+With `pcc` gone there is only one tier, so `fm available` now exits `0` on a healthy
+host. The 2.0.62-era advice to chain probes with `;` rather than `&&` no longer
+applies.
+
+**Exit codes** across the CLI:
+
+| Situation | Exit |
+|---|---|
+| Success | `0` |
+| Runtime / validation error (`--tool bogus`, unknown command) | `1` |
+| Argument-parser rejection (`--model pcc`) | `64` |
+
+---
+
+## `fm serve` — OpenAI Chat-Completions API server
+
+```
+fm serve                              # default TCP, 127.0.0.1:1976
+fm serve --host 0.0.0.0 --port 1976   # TCP, custom bind
+fm serve --socket /tmp/fm.sock        # Unix-domain socket (recommended for local bindings)
+```
+`--socket` is mutually exclusive with `--host`/`--port`.
+
+| Method | Path | Behavior |
+|--------|------|----------|
+| `GET`  | `/health` | model availability + reasons |
+| `GET`  | `/v1/models` | OpenAI model list (`system` only) |
+| `POST` | `/v1/chat/completions` | streaming and non-streaming |
+
+**The full API — request/response shapes, which parameters are actually honored,
+structured output, vision, CORS, error codes, and client wiring — is documented
+separately in [`serve-api.md`](serve-api.md).**
+
+Four things to know before you point a client at it:
+
+- **No authentication of any kind.** Bind to `127.0.0.1` unless you mean to expose it.
+- **Tool calling is broken on 2.0.68.** A `tools` request returns the argument JSON
+  as ordinary `content` with `finish_reason:"stop"` and no `tool_calls` array. Do
+  not enable tool calling in an agent framework against this build.
+- **`max_tokens` is accepted and ignored.** `temperature` is honored.
+- **Its banner and access log are TTY-gated** — redirect stdout and you get an empty
+  file. Capture through `tmux` or `script`.

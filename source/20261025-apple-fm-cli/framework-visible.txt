@@ -1,0 +1,278 @@
+Foundation Models framework - Apple Developer
+View in English
+Apple Developer
+Get Started
+Explore Get Started
+Overview
+Learn
+Apple Developer Program
+Stay Updated
+Latest News
+Hello Developer
+Platforms
+Explore Platforms
+Apple Platforms
+iOS
+iPadOS
+macOS
+tvOS
+visionOS
+watchOS
+App Store
+Featured
+Design
+Distribution
+Games
+Accessories
+Web
+Home
+CarPlay
+Technologies
+Explore Technologies
+Overview
+Xcode
+Swift
+SwiftUI
+Featured
+Accessibility
+AI & Machine Learning
+App Intents
+Apple Intelligence
+Games
+Security
+Xcode Cloud
+Community
+Explore Community
+Overview
+Meet with Apple events
+Community events
+Developer Forums
+Open Source
+Featured
+WWDC
+Swift Student Challenge
+Developer Stories
+App Store Awards
+Apple Design Awards
+Apple Developer Centers
+Documentation
+Explore Documentation
+Documentation Library
+Technology Overviews
+Sample Code
+Human Interface Guidelines
+Videos
+Release Notes
+Featured Updates
+iOS
+iPadOS
+macOS
+watchOS
+visionOS
+tvOS
+Xcode
+Downloads
+Explore Downloads
+All Downloads
+Operating Systems
+Applications
+Design Resources
+Featured
+Xcode
+TestFlight
+Fonts
+SF Symbols
+Icon Composer
+Support
+Explore Support
+Overview
+Help Guides
+Developer Forums
+Feedback Assistant
+Contact Us
+Featured
+Account Help
+App Review Guidelines
+App Review Help
+App Store Connect Help
+Upcoming Requirements
+Agreements and Guidelines
+System Status
+Quick Links
+Events
+News
+Forums
+Sample Code
+Videos
+AI & Machine Learning
+Open Menu
+Close Menu
+Overview
+What‘s New
+Resources
+Get started with the Foundation Models framework
+The Foundation Models framework is the best way to use any large language model in your app. Whether you’re generating a quick summary or creating dynamic agents, the framework has what you need.
+Overview
+The Foundation Models framework is a native Swift API for integrating any large language model into your app — including direct access to the Apple Foundation Models on-device and in Private Cloud Compute. Powerful capabilities like guided generation, tool calling, image understanding, and Dynamic Profiles are built in, so you have what you need to build unique experiences.
+What’s new in the Foundation Models framework
+Meet the Foundation Models framework
+Foundation Models framework
+Human Interface Guidelines for Generative AI
+Image understanding
+Multimodal prompts let you pass images alongside text so your app can reason about visual content. This opens up new categories of experiences you can build with image understanding — it's as simple as attaching an image to your prompt. The Vision framework is also integrated directly, giving your model purpose-built tools like OCR for precise text extraction and barcode readers for quick code scanning — all on-device.
+What’s new in image understanding
+Model support
+The Foundation Models framework gives you direct access to the on-device foundation model at the core of Apple Intelligence so you can build experiences that are smart, private, and work without internet connectivity.
+On-device models are highly useful for many tasks, yet sometimes you need a larger model for a more complex workflow. The Foundation Models framework now extends to server models — like Claude, Gemini, and more — all through the same Swift API, with full support for features like tool calling and guided generation. Any model provider can create a Swift package conforming to the
+Language Model protocol
+, a fundamental component of the framework that allows you to pick the right language model for your app.
+Supported third-party models
+Core AI Language Models
+MLX Language Models
+Claude
+Gemini
+Private Cloud Compute
+For those just getting started, developers who are enrolled in the App Store Small Business Program and have fewer than two million first-time App Store downloads can access the Apple Foundation Models running on Private Cloud Compute with no cloud API cost.*  This delivers frontier-level intelligence with unparalleled privacy protections, ensuring that your users' data is not stored or accessible to Apple or anyone else.
+Learn more about Private Cloud Compute
+Build with the new Apple Foundation Model on Private Cloud Compute
+Bring an LLM provider to the Foundation Models framework
+Dynamic Profiles
+Dynamic Profiles are new declarative APIs for continuously updating your session's model, tools, and instructions on the fly. Rather than creating a session with a fixed configuration, you define profiles — each with its own model, temperature, reasoning level, and toolset — and swap between them within a single continuous session. The session transcript is shared across every profile switch, so your app gets more contextual intelligence with less prompting. Dynamic Profiles are designed to be adaptable building blocks: use them to build AI agents, skills, or any other high-level abstraction your app needs.
+Build agentic app experiences with the Foundation Models framework
+Debug and profile agentic app experiences with Instruments
+LLM search using Core Spotlight
+Evaluations framework
+The Evaluations framework gives you the ability to test your prompts and validate that your intelligence-powered features work correctly across dynamic conditions, going beyond what unit tests alone can catch. Whether you're iterating on instructions, switching models, or tuning a Dynamic Profile, Evaluations gives you confidence that your app's behavior holds up before you ship.
+Meet the Evaluations framework
+Improve your prompts by hill-climbing with Evaluations
+Create robust evaluations for agentic apps
+CLI
+The new
+fm
+command line tool in macOS 27 lets you streamline scripting, automate model workflows, and accelerate your development without writing a line of app code. You can prototype quickly, giving you a fast path from idea to implementation.
+Build AI-powered scripts with the
+fm
+CLI and Python SDK
+Open source
+To help you get started with adopting emerging AI patterns, the Foundation Models framework utilities package adds experimental abstractions on top of the framework — including custom skills, context management helpers, and a Chat Completions client that connects to a hosted model of your choice.
+The Foundation Models SDK for Python extends the framework into the Python ecosystem, letting you integrate with popular tooling and evaluation packages in Python.
+Foundation Models framework utilities package
+Foundation Models SDK for Python
+Requirements
+The Acceptable Use Requirements for the Foundation Models framework outline prohibited uses of Apple Foundation Models. Additionally, pursuant to Article 53(1)(b) of the AI Act, we make available information and documentation to providers of AI systems who intend to integrate AFM 3 Cloud into their AI systems.
+Acceptable Use Requirements for the Foundation Models framework
+AFM 3 Cloud Model Documentation Form
+Developer Footer
+*Certain Apple Intelligence features that rely on server-side models are subject to daily usage limits, including but not limited to Siri AI, Intelligent Photo Editing Tools, Image Playground, AFM 3 Cloud models in Shortcuts, and Developer apps using Apple Foundation Models in Private Cloud Compute. Daily limits may vary by feature, request complexity, system demand, system policies, and other factors. Expanded access to such features will be available for a fee in the future. Use of these features is subject to the Apple Intelligence Terms and Conditions. Learn more at
+apple.com/apple-intelligence
+.
+Foundation Models framework
+Platforms
+Open Menu
+Close Menu
+iOS
+iPadOS
+macOS
+tvOS
+visionOS
+watchOS
+App Store
+Tools
+Open Menu
+Close Menu
+Swift
+SwiftUI
+Swift Playground
+TestFlight
+Xcode
+Xcode Cloud
+Icon Composer
+SF Symbols
+Technologies
+Open Menu
+Close Menu
+Accessibility
+Accessories
+AI & Machine Learning
+Apple In-App Purchase
+Apple Intelligence
+Audio & Video
+Augmented Reality
+Business
+Design
+Distribution
+Education
+Games
+Health & Fitness
+Localization
+Maps & Location
+Security
+Safari & Web
+Resources
+Open Menu
+Close Menu
+Documentation
+Downloads
+Sample Code
+Videos
+Documentation Archive
+Support
+Open Menu
+Close Menu
+Help Guides & Articles
+Contact Us
+Forums
+Feedback & Bug Reporting
+System Status
+Account
+Open Menu
+Close Menu
+Apple Developer
+App Store Connect
+Certificates, IDs, & Profiles
+Feedback Assistant
+Programs
+Open Menu
+Close Menu
+Apple Developer Program
+Apple Developer Enterprise Program
+App Store Small Business Program
+MFi Program
+Mini Apps Partner Program
+News Partner Program
+Video Partner Program
+Security Bounty Program
+Security Research Device Program
+Events
+Open Menu
+Close Menu
+Meet with Apple
+Apple Developer Centers
+App Store Awards
+Apple Design Awards
+Apple Developer Academies
+WWDC
+Read the
+latest news
+.
+Get the
+Apple Developer app
+.
+Follow us on
+bilibili
+,
+LinkedIn
+,
+WeChat
+, and
+YouTube
+.
+Light
+Dark
+Auto
+Copyright ©  2026
+Apple Inc.
+All rights reserved.
+Terms of Use
+Privacy Policy
+Agreements and Guidelines

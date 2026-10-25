@@ -1,0 +1,444 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6add5e7d-5e250607-270809b6）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 897 篇 + 公众号草稿箱 7 条 + 本地发布记录 880 条 + MemPalace 3269 抽屉
+
+── 查：https://developer.apple.com/videos/play/wwdc2026/334/
+   ✅ 四本账都没查到
+
+── 查：Foundation Models CLI
+   ❌ [BLOG  ] AI Agent 需要出站防火墙：RubyGems 被攻击、订位 Agent 被 Resy 封号之后，我们实测了 Pipelock
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 【开源】Agent Game Forge：用 AI Agent 驱动 2D 游戏开发的本地 IDE
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 按头安利：Agent Island —— 发完一轮去生活，该你了它会叫你
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] AI 协作实战手册：一位在读博士的科研、写作、编码工作流——人是主变量
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] AI Native 的三个层级：个人、组织与区域
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 语音 AI 六大方向：开源模型、工程方案与可复现课题地图
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] AirAccount 合约 v0.17.2-beta.3：把地基打扎实，为主网做准备
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Anthropic 两份报告：AI 如何改变招聘、工作与未来预期
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Apple 官方容器工具来了：一个容器一个 VM，Mac 本地开发的底层能力正在重写
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Archestra：企业级一体化 AI 平台，MCP 网关 + LLM 代理 + 双 LLM 护栏 + K8s 编排，AGPL 开源
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] ArtCraft：用 Claude Opus 5.5 并行开发的七套 Rust 原生 Adobe 替代工具
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] authentik 2026.8：OpenID 官方认证、Rust 重写、PAM，自托管 IdP 的新里程碑
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] pixiv/three-vrm 调研：把「虚拟形象」这件事做成 Web 标准件
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 22 节课读懂 Agent 系统怎么建：awesome-agent-architecture 的 Harness 工程地图
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] awesome-rsi：AI 递归自我改进资源精选库——从哥德尔机到 2026 年自我修改 Agent 的完整图谱
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Belief Context Graph：把 Agent 记忆从「检索」升级为「置信度感知的信念图」
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course.md
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 读 cordiverse/paper：为什么「可逆副作用」是插件系统最难的问题，以及它对 AI Agent 自我净化意味着什么
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] cove-book-forge-mcp：把 PDF/EPUB 书籍锻造成 Agent Skill，一次分析，Codex/Claude Code 永久复用
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 油管大神 Dan Koe：用 Reddit 做 SEO+GEO 的四步打法，恐怖在哪里
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 三足鼎立：读 Codex Harness、DeepSeek Harness 与 AgentScope 2.0 的横评
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] DeepTutor：终身个性化 AI 家教，真正记住你学到哪了，多 RAG 引擎+长期记忆+Skills 生态，Docker 自托管
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 领域专用小模型：Manning 新书《Domain-Specific SLMs》完整阅读指南
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] dots.tts：2B 全连续自回归 TTS——为什么不用离散 Token，以及这个科研底座能赋能哪些新应用
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 具身智能技术指南：15K 星，VLA 与机器人策略学习的中文路线图
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 以太坊放弃 Poseidon 读后感：一次反向适配，如何给后量子路线抢回两年
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] ExcalidrawZ：4年，把 Excalidraw 做成真正的原生 App
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 健身 App 的数据底座：exercises-dataset 1324 个动作数据集拆解与集成指南
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] FDE 怎么炼成：审计先行 + 30 天拆流程，读「一页 Digest」的方法论笔记
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] FireRedTTS3：24 语言 + 21 种中文方言零样本声音克隆，指令控制变声和语音编辑
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] FLUX.3 深度解析：图像+视频+音频+机器人动作，一个模型，本地部署完整指南与硬件成本评估
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] GEO 实战手册：SEO 之后，如何让 AI 帮你说话？
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 用 GPT-Live 构建全双工 AI 语音客服系统：从架构理解到落地实践
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] h3.c：MiniMax-H3的Mac原生推理引擎
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Herdr：用牧羊人的方式管理你的 AI Agent 群
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 《Agentic AI 漫游指南》：最完整的 Agent 全栈工程书，MCP/A2A/RAG 全覆盖
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 如何真正做好研究：Anthropic 研究员 Vivek 的 7 条核心原则
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Hy Memory：SDK、MemHub与专用记忆模型
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] iDoris 立项思考：一个普通研究者如何构建可持续进化的本地 AI 模型
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] IndexTTS-2.5：生产级零样本 TTS，一段参考音频克隆音色 + 细粒度情感与语速控制
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Kandinsky 6.0 Video：双流 CrossDiT，音视频同步生成开源了
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Kinex：让编程 Agent 接入机器人
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Lemo Opuscar：51种风格的代码制片Skill，怎么用、花什么钱？
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] LFM2.5-230M 开发者探索指南：213 tok/s 的小模型，普通人能做什么？
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Ling-3.0-Tiny：7.9B 总参数激活仅 1.3B，蚂蚁百灵把混合推理 MoE 推进了端侧
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] LiquidAI d1：不生成一个 token 就给出决策的多模态边缘模型
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Agent 通信协议的第一张地图：读完这篇论文，我知道未来不会是一个赢家通吃
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] LTX-2：Lightricks 开源 22B 音视频 DiT，开源视频生成进入三强时代
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 57.5%：互联网的主角换了，只是大多数人还没发现
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Map3d：把开放地图变成可导出的城市三维底图
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Marble 开源儿童课程知识图谱：1590 个微话题 + 3221 条前置关系，对齐主流课标
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 美团图灵 Agent 评测两年实践：当 Agent 评测从打分动作变成工程基础设施
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Meta Muse Glimmer 30B：专为本地 Agent 设计的 30B 小钢炮
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 微软 AI For Beginners：63k Stars 的 12 周 24 课 AI 入门课程
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] MOSS-TTS v1.5：31 种语言、显式停顿控制、更稳的声音克隆，Apache 2.0 开源
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 2026 多智能体框架全景：6 大主流库对比 + 选型指南 + 工程落地代码
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Needle 2：14MB、45M 参数、跑在手机里的工具调用基础模型——Simple Attention Network 架构解析
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Needle 3 实测：121M 小模型，79 毫秒拆出两个工具调用
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 红杉的终局判断：AI 应用公司的终点是每家都变成 Neo-Lab
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] oh-my-mermaid：让 AI 把你的代码库画成可导航的架构图
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Omarchy：DHH 造的 AI 原生 Linux，9 个 Agent 开箱即用，Omacom 基金会 800 万美元背书
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 开源TTS十强：10月英语榜与中文对照
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 浙大开源 OpenStory（万象谱）：LLM 驱动多 Agent 让《红楼梦》和《西部世界》活起来
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Osaurus：在你的 Mac 上拥有 AI——密码学身份、沙盒 VM、隐私过滤，纯 Swift 原生
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] PenguinHarness：用 4 个 Skill 把 Agent 调优变成有版本、有固定考题、有分数记录的实验闭环
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 这个开源 Agent 框架的核心设计，可能是目前最「聪明」的取舍
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] PipesHub：开源企业 AI 上下文层——把知识图谱、权限感知 RAG、MCP 工具和 Agent 统一到一个自托管系统
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 从像素到动效:Pixel2SVG-HTML + Pixel2Motion 如何把一张 Logo 截图变成可审查的品牌动画
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Plausible Analytics 如何做成按月收费的分析服务？
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Postiz：33K stars 的开源 Agent 社媒调度工具，让 AI 替你运营 30+ 平台
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Prime Agent：PrimeIntellect 开源的自改进 RLM 编程 Agent
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] PromptSoul：用自然语言给 Live2D 角色加动作，AI 不碰骨骼
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Raven 论文解读：让多个 Agent 协作，也让工作流程接受检验
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 2026 年实时强化学习 Agent 全景：从 OpenClaw-RL 到 Cursor Composer 2.5，模型开始在使用中自我进化
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] rise-meaning-economy-capital-social-instinct.md
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] RuView：9.4 万星的 WiFi DensePose，不开摄像头隔墙感知呼吸和心率，姿态追踪数字请打折
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Seal：把画布、剪辑和 AI 助手放进一个工作台
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 我们给发布流程加了一个 SEO/GEO 优化步骤——让 AI 引擎也能找到你的文章
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 软件层的退场与重构：AI-Native 时代，你的产品下一个用户是另一个 Agent
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Spark-X2.5-4B：一个 4B 模型在 Agent 榜上打穿 9B，但 GGUF 只放了未量化版
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Stan Store 深度分析：创作者变现平台的集成支付逻辑、核心缺陷与下一代方向
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] stanford-cs329a-self-improving-ai-agents-course-open-materials.md
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 把市场部外包给 Agent：没有市场团队的技术型创业公司增长指南
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 14 台 Mac 跨越四国做 RL 后训练：Pluralis Research 的 stoa 实验
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 从大厂 SWE 到 AI Infra：一年入门指南，从贡献 SGLang PR 开始
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 腾讯开源 AuK：1.5B 语音生成+编辑大一统模型，Mac 能跑到多小内存？
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] LLM Wiki 的知识更新问题，Tencent 用 Agent Memory 这样解——TencentDB-Agent-Memory 拆解
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] 8K星 · 最小的 OpenID Certified™ 认证服务器：Tinyauth 全解析
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] TradingAgents：把交易公司搬进 AI——96k Stars 的多 Agent 金融交易框架
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Jev：TypeSafe AI 的 RLCD 决策模型，输出 Token 免费、最高快 200 倍
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Ultramarine 1 Flash：30万美元后训练，知识工作能做到哪一步
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Valtz：Mac本地AI创作的素材与时间线
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] VibeVoice：微软开源的前沿语音 AI 家族，ASR 一次跑60分钟，CPU 也能实时推理
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Vitalik 的 AI 偏执模式：zkAPI、Tor 与本地改写的隐私边界
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Agent 是什么？从意图到自主：封装了决策、规划和执行的智能体
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] xkagent-code-over-tools-python-agent-runtime.md
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] Yandex 开源 AliceAI-Foundation-80B-A3B 基座模型：Apache-2.0 属实，俄语强，中文分词比 Qwen 多耗 58%
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] YC 内部 AI 系统的真相:数据集中 → 工具注册表 → 技能自我进化
+      正文出现实体名「foundation」
+   ❌ [BLOG  ] YC Summer 2026 全批次分析：236 家公司，AI Agent 与 Physical AI 双线爆发
+      正文出现实体名「foundation」
+   ❌ [发过 2026-08-29] Needle 2：14MB、45M 参数、跑在手机里的工具调用基础模型——Simple Attention Network 架构解析
+      正文出现实体名「foundation」
+   ❌ [发过 2026-08-22] Omarchy：DHH 造的 AI 原生 Linux，9 个 Agent 开箱即用，Omacom 基金会 800 万美元背书
+      正文出现实体名「foundation」
+   ❌ [发过 2026-09-24] Yandex开源80B基座模型：中文多耗58% token
+      正文出现实体名「foundation」
+   ❌ [知识库] 【Omarchy：DHH的AI原生Linux】basecamp/omarchy，MIT，Shell，28,045 sta
+      正文出现实体名「foundation」
+   ❌ [知识库] goauthentik/authentik: 24,003 stars，Python，自托管开源 Identity Pr
+      正文出现实体名「foundation」
+   ❌ [知识库] # Tinyauth：最小的 OpenID Certified™ 认证服务器  **Summary**: tinyaut
+      正文出现实体名「foundation」
+   ❌ [知识库] published/general/d09ddf80|OpenID;Traefik;Certified;Foundati
+      正文出现实体名「foundation」
+   ❌ [知识库] rned head输出校准置信分，阈值上执行/阈值下升级 4. 工具检索: 声明大目录，内置检索头每次选top-5 5.
+      正文出现实体名「foundation」
+   ❌ [知识库] /chat/completions - Anthropic: http://127.0.0.1:1337/anthrop
+      正文出现实体名「foundation」
+   ❌ [知识库] --- name: yandex-aliceai-foundation-80b-a3b-base-moe-teard d
+      正文出现实体名「foundation」
+   ❌ [知识库] blog/general/project_yandex_aliceai_foundation_80b_a3|Yandex
+      正文出现实体名「foundation」
+   ❌ [知识库] # Hands-On AI Engineering — NL 自然语言 SQLite 数据分析 Agent  **Sum
+      正文出现实体名「foundation」
+   ❌ [知识库] --- name: Raven multi-agent harness description: EverMind Ra
+      正文出现实体名「foundation」
+   ❌ [知识库] ll; 13thirdpartypresets viaACP/CLI/OpenAIcompatible; EverOSm
+      正文出现实体名「foundation」
+   ❌ [知识库] # Vitalik的AI偏执模式与隐私边界  **Summary**: 已定位Vitalik原帖及zkAPI隐私客户端代
+      正文出现实体名「foundation」
+   ❌ [知识库] 4发布 - [Pages 部署是整体快照替换](feedback_pages_deploy_full_snapshot_
+      正文出现实体名「foundation」
+   ❌ [知识库] iceai_foundation_80b_a3b_base_moe_teard.md) — Apache-2.0；骨架照
+      正文出现实体名「foundation」
+   ❌ [知识库] blog/general/project_yandex_aliceai_foundation_80b_a3|Yandex
+      正文出现实体名「foundation」
+   ❌ [知识库] # 苹果悄悄给 Mac 装了一个免费 AI！终端直接调用 🤯  **Summary**: 苹果悄悄给 Mac 装了一个
+      正文出现实体名「foundation」
+   ❌ [知识库] ## Osaurus — macOS 原生 AI 哈尼斯（Swift）  **仓库**: osaurus-ai/osau
+      正文出现实体名「foundation」
+   ❌ [知识库] Needle 2 — 14MB端侧工具调用基础模型，Simple Attention Network  GitHub:
+      正文出现实体名「foundation」
+   ❌ [知识库] # Vitalik的AI偏执模式与隐私边界  **Summary**: 已定位Vitalik原帖及zkAPI隐私客户端代
+      正文出现实体名「foundation」
+   ❌ [知识库] # Tinyauth：最小的 OpenID Certified™ 认证服务器  **Summary**: tinyaut
+      正文出现实体名「foundation」
+   ❌ [知识库] # Hands-On AI Engineering — NL 自然语言 SQLite 数据分析 Agent  **Sum
+      正文出现实体名「foundation」
+
+── 查：fm respond
+   ❌ [BLOG  ] 用 Adapta 搭一个完全属于自己的本地知识库：一个诚实的上手指南
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Anatomy：把技术概念做成可操作的机器，33 个在线示例
+      正文出现实体名「respond」
+   ❌ [BLOG  ] AnimaWorks 深度指南：开源 Python 智能体框架，五层记忆体系让 AI 真正「记住」你
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Anthropic 开源商业 Agent 蓝图：用 Claude 为你的业务场景构建自己的 Agent
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Anthropic 两份报告：AI 如何改变招聘、工作与未来预期
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Anthropic 官方 launch-your-agent 拆解：不是模板也不是 CLI，是一个带你把 Agent 部署到 Claude Managed Agents 的 Claude Code Skill
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Aura AI 宣言：让每一个人平等拥有 AI
+      正文出现实体名「respond」
+   ❌ [BLOG  ] blender-threejs-product-skills：四个 Skill 把工程模型变成 Web 3D
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Call.md：把会议变成实时 Agent 循环的 AI 会议助手
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 一个 _worker.js 文件就是全部：CF-Workers-CheckProxyIP 在 Workers 上做 TCP/TLS 连通性体检
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Agent Resilience 拆解：Cohesity 想给 AI 员工装 Time Machine，现在只护得住亚马逊 Bedrock
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Confucius4-R2T2：网易有道的真流式 ASR——用 LSP 彻底消除文字抖动
+      正文出现实体名「respond」
+   ❌ [BLOG  ] CopilotKit：Agent 和用户之间那层你必须亲手搭的桥，36k stars，AG-UI 协议缔造者
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 比 Stripe 便宜 80%：稳定币正在系统性重写跨境支付的成本结构
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Baseten、H2O 与 Jev 决策模型横评：先对齐榜单，再谈选型
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Decision 2.0 Kai：0.6B 小模型做本地判断，400MB GGUF 的部署边界
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Duix-Avatar（前 HeyGem）：本地离线数字人视频生成深度拆解
+      正文出现实体名「respond」
+   ❌ [BLOG  ] exxperts 拆解：记忆要你批准才写入的本地 AI 同事，「数据不出本机」要打几折？
+      正文出现实体名「respond」
+   ❌ [BLOG  ] FramePack：ControlNet 作者开源，6G 显存生成 1 分钟视频，F1+P1 双版抗漂移
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Full-Duplex-Model 拆解：两路全双工语音方案，最低配 RTX 4090，AEC3 是关键
+      正文出现实体名「respond」
+   ❌ [BLOG  ] FunClip：用语音识别做视频剪辑的索引层
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 用 GPT-Live 构建全双工 AI 语音客服系统：从架构理解到落地实践
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 需求整理三连击：grilling + domain-modeling + grill-with-docs，把模糊需求变成可执行文档
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Hairline：33 个等距线条动效，零依赖，给网页加一层科技感
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 同一个 27B，换条路跑：HauhauCS 的 GGUF 版用 FastMTP 投机解码把生成速度拉到 3 倍
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Herdr 多 Agent 工作流最佳实践：从入门用法到 VPS 远程会话
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Huabu：微软研究院造的画布 AI——把你和 Agent 的思考放在同一张无限画板上
+      正文出现实体名「respond」
+   ❌ [BLOG  ] iDoris 立项思考：一个普通研究者如何构建可持续进化的本地 AI 模型
+      正文出现实体名「respond」
+   ❌ [BLOG  ] IndexNow 深入指南：普通网站怎样主动通知搜索引擎，又不误把提交当收录
+      正文出现实体名「respond」
+   ❌ [BLOG  ] AI 干活，持证会计师签字：从 Integral 的 1800 万欧元融资看专业服务的新架构
+      正文出现实体名「respond」
+   ❌ [BLOG  ] jev-chat-JARVIS：Android 聊天副驾驶，无障碍服务读屏 + Jev 判断模型分析意图
+      正文出现实体名「respond」
+   ❌ [BLOG  ] KaLM-Jev 本地部署指南：从安装到对接业务流程，附硬件选型与再训练说明
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Kimi AgentENV：驱动 Kimi K3 RL 训练的 Firecracker 沙箱基础设施深度拆解
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Kimi K3 技术深析：KDA、Stable LatentMoE 与首个开源 3T 级模型
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Krill 拆解：一个 Swift 二进制同时当本地推理引擎和编程 Agent，「比 Ollama 快 1.57 倍」要打几折？
+      正文出现实体名「respond」
+   ❌ [BLOG  ] last-ai-built-by-humans-recursive-self-improvement-hci.md
+      正文出现实体名「respond」
+   ❌ [BLOG  ] lil agents：住在 Mac Dock 上的 AI 桌面伴侣
+      正文出现实体名「respond」
+   ❌ [BLOG  ] LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS
+      正文出现实体名「respond」
+   ❌ [BLOG  ] LTX-2：Lightricks 开源 22B 音视频 DiT，开源视频生成进入三强时代
+      正文出现实体名「respond」
+   ❌ [BLOG  ] MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 给 AI Agent 装一个 CMO 大脑：marketingskills 开源营销技能包
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Midday：两个人的财务 OS，被 Ramp 收购前已服务 2 万家公司
+      正文出现实体名「respond」
+   ❌ [BLOG  ] MiniCPM-V 4.7：35B-A3B视觉模型与端侧部署解析
+      正文出现实体名「respond」
+   ❌ [BLOG  ] MiniCPM-o 实测：面壁智能小钢炮，端侧全双工 Omni 模型选型指南
+      正文出现实体名「respond」
+   ❌ [BLOG  ] minimax-h3-accelerated-fasth3-sol-h3-vdn-pdd-lightx2v-five-open-source-speedups.md
+      正文出现实体名「respond」
+   ❌ [BLOG  ] OpenAI 实时语音一小时花 $18，这两个开源模型让你不花一分钱
+      正文出现实体名「respond」
+   ❌ [BLOG  ] MotoNav：Android 手机配 ESP32-S3 圆屏，自己做一个导航副屏
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Needle：2600 万参数，把 Gemini 的工具调用能力塞进手表和眼镜
+      正文出现实体名「respond」
+   ❌ [BLOG  ] NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出
+      正文出现实体名「respond」
+   ❌ [BLOG  ] NVIDIA VoiceChat 11B：第一个支持工具调用的开源全双工语音 Agent
+      正文出现实体名「respond」
+   ❌ [BLOG  ] OmniRoute：290 个 AI 提供商、一个端点、永不限流——免费 AI 网关的暴力美学
+      正文出现实体名「respond」
+   ❌ [BLOG  ] OpenKnowledge + WikiSkill：搭建真正让 Agent 能读懂的知识库
+      正文出现实体名「respond」
+   ❌ [BLOG  ] OpenGCUA 首版开源：电脑 Agent 不只点鼠标，模型权重仍在路上
+      正文出现实体名「respond」
+   ❌ [BLOG  ] OpenPanels：给AI Agent装上本地可视化工作台，5个面板从写作到发布
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 华为 OpenTiny 的 Agent UI：TinyRobot 能做什么，怎样接入业务
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 一张桌子，十个宇宙：Evan Jia 的 Blender 个人主页开源了
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Plausible Analytics 如何做成按月收费的分析服务？
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Proma：把 Chat、Agent、Skills、MCP 和微信桥接做进一个本地优先桌面应用
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 蛐蛐 QuQu：本地中文语音输入法深度拆解，Wispr Flow 开源替代
+      正文出现实体名「respond」
+   ❌ [BLOG  ] HuggingFace 上的 Qwen-2.5-1B-RLCD：不是 1B、没有 RLCD、也没有模型权重
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Realtime-Venus：全双工 AI 交互系统本地部署指南，双 Loop 架构 + 9B Omni 模型开源
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 软件层的退场与重构：AI-Native 时代，你的产品下一个用户是另一个 Agent
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Stan Store 深度分析：创作者变现平台的集成支付逻辑、核心缺陷与下一代方向
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Decision Index 0.3 榜单怎么看？StartLux与AutoThink解析
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 395 不外接显卡，Prefill 接近 2000？拆解 Halogen 与 Gufo
+      正文出现实体名「respond」
+   ❌ [BLOG  ] sweety-handdraw-video：把长文做成边画边讲的视频
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Vitalik 的 AI 偏执模式：zkAPI、Tor 与本地改写的隐私边界
+      正文出现实体名「respond」
+   ❌ [BLOG  ] Vorssaint：把 Mac 日常工具收进一个菜单栏
+      正文出现实体名「respond」
+   ❌ [BLOG  ] 小红书运营能工作流化吗？6 个 Codex Skills 给出一个答案
+      正文出现实体名「respond」
+   ❌ [知识库] # 多智能体扩展的科学规律：260配置跨架构量化研究  **Summary**: Google Research、Dee
+      正文出现实体名「respond」
+   ❌ [知识库] le.io/for-freelancers-agencies ; https://plausible.io/tradem
+      正文出现实体名「respond」
+   ❌ [知识库] e so sourcereviewonlynotruntime/perf/productiontest. Slug pl
+      正文出现实体名「respond」
+   ❌ [知识库] 7.0.0.1:3090`（本机） - Tailscale Serve 做私有 HTTPS 入口，不用 Funnel（不
+      正文出现实体名「respond」
+   ❌ [知识库] # 苹果悄悄给 Mac 装了一个免费 AI！终端直接调用 🤯  **Summary**: 苹果悄悄给 Mac 装了一个
+      正文出现实体名「respond」
+   ❌ [知识库] # 多智能体扩展的科学规律：260配置跨架构量化研究  **Summary**: Google Research、Dee
+      正文出现实体名「respond」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

@@ -1,0 +1,18 @@
+{
+  "wwdc334-visible.txt": {
+    "stored_sha256": "0e52c4bf52a47dde43dad9f0a9e44accef865e07335b95b4b355806a25a6387d",
+    "processing": "HTML text extraction, expand tabs and trim line-end whitespace; original downloaded document hashes recorded separately in sources.json"
+  },
+  "framework-visible.txt": {
+    "stored_sha256": "1424bc01f3284705c189d2ec4dee00f08c3df23891d02a4b4ff141c9c2b85b59",
+    "processing": "HTML text extraction, expand tabs and trim line-end whitespace; original downloaded document hashes recorded separately in sources.json"
+  },
+  "apple-support-visible.txt": {
+    "stored_sha256": "77d2276a4949d8dcef9fe399ea2593a6e54bda014794954c7c0844488a98cb34",
+    "processing": "HTML text extraction, expand tabs and trim line-end whitespace; original downloaded document hashes recorded separately in sources.json"
+  },
+  "wwdc319-visible.txt": {
+    "stored_sha256": "64947250581f3b788df4fc45b8e1470c3ddc9d04fa4f525eee79626a3c8dd8ff",
+    "processing": "HTML text extraction, expand tabs and trim line-end whitespace; original downloaded document hashes recorded separately in sources.json"
+  }
+}
