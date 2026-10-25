@@ -1,0 +1,117 @@
+{
+  "article_slug": "town-townie-research",
+  "created_at": "2026-10-25T12:05:45.026538+07:00",
+  "generator": "built-in image_gen.imagegen; one independent call per figure",
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "original_generation_directory": "/Users/jason/.codex/generated_images/01a17170-18c3-7b71-b2bc-83a68416752f",
+  "requested_deliverables": 3,
+  "final_deliverables": 3,
+  "processing": "Resize to exact 1440x810; indexed PNG without dithering; merge near-white neutral palette entries to RGB 255,255,255 for clean white background and compression; PNG optimize level 9.",
+  "scope": "Only illustration originals, prompts, manifest, and requested final PNGs written. No article, banner, git or publishing operations.",
+  "files": [
+    {
+      "figure": 1,
+      "anchor": "个人效率与交接等待",
+      "visible_labels": [
+        "个人快",
+        "交接等"
+      ],
+      "prompt_file": "source/20261025-town-townie-research/generated-assets/prompts.txt",
+      "prompt_section": "FIGURE 01",
+      "original": {
+        "path": "source/20261025-town-townie-research/generated-assets/town-townie-research-fig-01-original.png",
+        "bytes": 1315377,
+        "sha256": "23281c0727755dda8761390e8363a8fefe6927cee85def226bebb9e296c7f370"
+      },
+      "final": {
+        "path": "src/assets/images/town-townie-research-fig-01.png",
+        "bytes": 76170,
+        "sha256": "f54ce259c074b414db90f06e2bc22d9169b43380144b1445adb96d9e574c82af",
+        "format": "PNG",
+        "width": 1440,
+        "height": 810,
+        "aspect_ratio": "16:9",
+        "palette_colors_requested": 256,
+        "exact_white_pixel_fraction": 0.8084,
+        "palette_method": "MAXCOVERAGE (preserves sparse blue/orange/red accents)"
+      },
+      "qa": {
+        "visual_inspection": "passed; current red-cap white-dot XiaoM participates in core action; correct short Chinese labels; no metrics, screenshots, page titles or panels",
+        "size_under_90000_bytes": true,
+        "pure_white_corners": true,
+        "exact_16_9": true
+      }
+    },
+    {
+      "figure": 2,
+      "anchor": "授权上下文、助理回应、人工复核、对外执行",
+      "visible_labels": [
+        "授权资料",
+        "助理回应",
+        "人工复核",
+        "对外执行"
+      ],
+      "prompt_file": "source/20261025-town-townie-research/generated-assets/prompts.txt",
+      "prompt_section": "FIGURE 02",
+      "original": {
+        "path": "source/20261025-town-townie-research/generated-assets/town-townie-research-fig-02-original.png",
+        "bytes": 1282719,
+        "sha256": "95970b0b0fcb835590c98c74df88c364ec61b0fb35e5ef2670475bc2cf8911c5"
+      },
+      "final": {
+        "path": "src/assets/images/town-townie-research-fig-02.png",
+        "bytes": 73102,
+        "sha256": "327031a38177e30c1b26b2764443ba61524b3b082ff3a8f4396639f447565ab3",
+        "format": "PNG",
+        "width": 1440,
+        "height": 810,
+        "aspect_ratio": "16:9",
+        "palette_colors_requested": 256,
+        "exact_white_pixel_fraction": 0.8654,
+        "palette_method": "MAXCOVERAGE (preserves sparse blue/orange/red accents)"
+      },
+      "qa": {
+        "visual_inspection": "passed; current red-cap white-dot XiaoM participates in core action; correct short Chinese labels; no metrics, screenshots, page titles or panels",
+        "size_under_90000_bytes": true,
+        "pure_white_corners": true,
+        "exact_16_9": true
+      }
+    },
+    {
+      "figure": 3,
+      "anchor": "团队连接继承账号权限；移除成员后个人例程仍运行",
+      "visible_labels": [
+        "账号权限",
+        "团队连接",
+        "移除成员",
+        "个人例程仍运行",
+        "两处都查"
+      ],
+      "prompt_file": "source/20261025-town-townie-research/generated-assets/prompts.txt",
+      "prompt_section": "FIGURE 03",
+      "original": {
+        "path": "source/20261025-town-townie-research/generated-assets/town-townie-research-fig-03-original.png",
+        "bytes": 1309238,
+        "sha256": "b1abb656b9db40175f50b0e0a29d21fb9c6f3331d618530aa919858cb1744268"
+      },
+      "final": {
+        "path": "src/assets/images/town-townie-research-fig-03.png",
+        "bytes": 89895,
+        "sha256": "708fd7ad1bc67a2ebdea2ae2371ebdda7106d5c3802e968a843a9ecb01936c08",
+        "format": "PNG",
+        "width": 1440,
+        "height": 810,
+        "aspect_ratio": "16:9",
+        "palette_colors_requested": 256,
+        "exact_white_pixel_fraction": 0.8763,
+        "palette_method": "MAXCOVERAGE (preserves sparse blue/orange/red accents)"
+      },
+      "qa": {
+        "visual_inspection": "passed; current red-cap white-dot XiaoM participates in core action; correct short Chinese labels; no metrics, screenshots, page titles or panels",
+        "size_under_90000_bytes": true,
+        "pure_white_corners": true,
+        "exact_16_9": true
+      }
+    }
+  ]
+}

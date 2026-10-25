@@ -1,0 +1,365 @@
+[
+  {
+    "url": "https://www.town.com/pricing",
+    "http": 200,
+    "finalUrl": "https://www.town.com/pricing",
+    "file": "www.town.com--pricing.txt",
+    "htmlSHA256": "05ccdb48543615e68d736f74dd413884d97c5bc35b16fb8cce31d53068c7d392",
+    "textBytes": 10583
+  },
+  {
+    "url": "https://www.town.com/press/series-a",
+    "http": 200,
+    "finalUrl": "https://www.town.com/press/series-a",
+    "file": "www.town.com--press--series-a.txt",
+    "htmlSHA256": "9b003c1f9bdf3cebe1bed548b817bd7cf5f1d2c242cb90d1daae79068f2d6675",
+    "textBytes": 7108
+  },
+  {
+    "url": "https://www.town.com/press/series-b",
+    "http": 200,
+    "finalUrl": "https://www.town.com/press/series-b",
+    "file": "www.town.com--press--series-b.txt",
+    "htmlSHA256": "fc767fe46dcf43cbb66088c5f041bf4a7a86178dc1ffea3f0acaf0dc6124301e",
+    "textBytes": 5333
+  },
+  {
+    "url": "https://www.town.com/operate-at-the-speed-of-ai",
+    "http": 200,
+    "finalUrl": "https://www.town.com/operate-at-the-speed-of-ai",
+    "file": "www.town.com--operate-at-the-speed-of-ai.txt",
+    "htmlSHA256": "d25758d071e14ffbc89667b12cef03825a8d3026041b6641c616dc586b7c68cc",
+    "textBytes": 5900
+  },
+  {
+    "url": "https://www.town.com/why-we-built-town",
+    "http": 200,
+    "finalUrl": "https://www.town.com/why-we-built-town",
+    "file": "www.town.com--why-we-built-town.txt",
+    "htmlSHA256": "c8854d3b2291a67379b2135886673de05f3747082a3e9fdb8650f3ddd5d57665",
+    "textBytes": 5860
+  },
+  {
+    "url": "https://www.town.com/town-redesign",
+    "http": 200,
+    "finalUrl": "https://www.town.com/town-redesign",
+    "file": "www.town.com--town-redesign.txt",
+    "htmlSHA256": "9e8e08a78adcef4602f5aed0ba21fd00e1b6eb26328b055941aec5052bf932be",
+    "textBytes": 3405
+  },
+  {
+    "url": "https://www.town.com/group-text",
+    "http": 200,
+    "finalUrl": "https://www.town.com/group-text",
+    "file": "www.town.com--group-text.txt",
+    "htmlSHA256": "dc99db480f4e846743a5e46c0601378cf9a8a442a7192a7592a854b6cec36f76",
+    "textBytes": 4374
+  },
+  {
+    "url": "https://www.town.com/text-town",
+    "http": 200,
+    "finalUrl": "https://www.town.com/text-town",
+    "file": "www.town.com--text-town.txt",
+    "htmlSHA256": "a7423f420cb396a0275c3aeaced9eccda3c0d5a80b0f19a9fa0272650c2e435a",
+    "textBytes": 3980
+  },
+  {
+    "url": "https://www.town.com/how-a-townie-gets-to-know-you",
+    "http": 200,
+    "finalUrl": "https://www.town.com/how-a-townie-gets-to-know-you",
+    "file": "www.town.com--how-a-townie-gets-to-know-you.txt",
+    "htmlSHA256": "b41ec242aee85305362e78ce11bf8f5c0855ce3ce577ff8502c79ee09bb27a15",
+    "textBytes": 4309
+  },
+  {
+    "url": "https://www.town.com/trust",
+    "http": 200,
+    "finalUrl": "https://www.town.com/trust",
+    "file": "www.town.com--trust.txt",
+    "htmlSHA256": "4040b631564a75f206c505e264ba7284bd306a1d08925f57e2dc94b7f98dced8",
+    "textBytes": 7301
+  },
+  {
+    "url": "https://www.town.com/privacy-policy",
+    "http": 200,
+    "finalUrl": "https://www.town.com/privacy-policy",
+    "file": "www.town.com--privacy-policy.txt",
+    "htmlSHA256": "6593fe7149cbf88cc18f48431f6de4ada7fa06c6b58ca4201980ddacbffba34e",
+    "textBytes": 41115
+  },
+  {
+    "url": "https://www.town.com/terms-of-service",
+    "http": 200,
+    "finalUrl": "https://www.town.com/terms-of-service",
+    "file": "www.town.com--terms-of-service.txt",
+    "htmlSHA256": "1a5b38a6a06809a393251a3ba6218bafbb9ccf878bcea78f6cd97a35a5961a0f",
+    "textBytes": 59063
+  },
+  {
+    "url": "https://www.town.com/dpa",
+    "http": 200,
+    "finalUrl": "https://www.town.com/dpa",
+    "file": "www.town.com--dpa.txt",
+    "htmlSHA256": "029468deca4914214843708b0c38c62b2f534eb648990449457a516b7793714e",
+    "textBytes": 48284
+  },
+  {
+    "url": "https://www.town.com/security-practices",
+    "http": 200,
+    "finalUrl": "https://www.town.com/security-practices",
+    "file": "www.town.com--security-practices.txt",
+    "htmlSHA256": "afaff4db6667ecef05bbc7f88b53749e1c985f62c8d4464075aa48d5714f565b",
+    "textBytes": 4813
+  },
+  {
+    "url": "https://www.town.com/subprocessors",
+    "http": 200,
+    "finalUrl": "https://www.town.com/subprocessors",
+    "file": "www.town.com--subprocessors.txt",
+    "htmlSHA256": "896c8f16639b690fcb8e8367f7604cbdb2034cef0630b45f96432324d404501c",
+    "textBytes": 4078
+  },
+  {
+    "url": "https://www.town.com/ai-model-providers",
+    "http": 200,
+    "finalUrl": "https://www.town.com/ai-model-providers",
+    "file": "www.town.com--ai-model-providers.txt",
+    "htmlSHA256": "a5510136748dd6ba41e90ead7315fdddfb4f964463dfbdc8d8098ce2459028dc",
+    "textBytes": 3325
+  },
+  {
+    "url": "https://www.town.com/docs/teams",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/teams",
+    "file": "www.town.com--docs--teams.txt",
+    "htmlSHA256": "a3f311516d93cef62db96f35ce183b966e2743dad17d441eeb35c5962232c5e5",
+    "textBytes": 11999
+  },
+  {
+    "url": "https://www.town.com/docs/billing/plans",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/billing/plans",
+    "file": "www.town.com--docs--billing--plans.txt",
+    "htmlSHA256": "ed93d49d5145ed44894af677d89855d22db32f6b585b16eda1d1152e20b1cc2d",
+    "textBytes": 7191
+  },
+  {
+    "url": "https://www.town.com/docs/billing/credits",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/billing/credits",
+    "file": "www.town.com--docs--billing--credits.txt",
+    "htmlSHA256": "79fd5eb2077ee123632bbb87a7c8010fb10d4c7d8b617f89a7477eda77768a94",
+    "textBytes": 15622
+  },
+  {
+    "url": "https://www.town.com/docs/billing/trials",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/billing/trials",
+    "file": "www.town.com--docs--billing--trials.txt",
+    "htmlSHA256": "7d4fbbdeee094ead0a3a4df4c64e8dddb7212f3741b9cef484fd09a7ebbd141c",
+    "textBytes": 5626
+  },
+  {
+    "url": "https://www.town.com/docs/safety/modes-approvals",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/safety/modes-approvals",
+    "file": "www.town.com--docs--safety--modes-approvals.txt",
+    "htmlSHA256": "065c8927fe57bfe47b2008aa6505e60fe6fcca316d31f8226dea8f7db062e773",
+    "textBytes": 13943
+  },
+  {
+    "url": "https://www.town.com/docs/safety/security",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/safety/security",
+    "file": "www.town.com--docs--safety--security.txt",
+    "htmlSHA256": "76dacedcf81dfd39d964ca024af060431afc4ea6a8d5ca14caa0e3f553b01470",
+    "textBytes": 10480
+  },
+  {
+    "url": "https://www.town.com/docs/features/context-and-memory",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/features/context-and-memory",
+    "file": "www.town.com--docs--features--context-and-memory.txt",
+    "htmlSHA256": "1f32d997c9626c12a25275dafaafcaf8dde46888fae3bfb4f7fce2e0a7720223",
+    "textBytes": 9625
+  },
+  {
+    "url": "https://www.town.com/docs/features/profiles",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/features/profiles",
+    "file": "www.town.com--docs--features--profiles.txt",
+    "htmlSHA256": "bebfc954b635e9459d21a82a994366320579652617385ca19e4ce4e7c1b86ffa",
+    "textBytes": 6181
+  },
+  {
+    "url": "https://www.town.com/docs/features/wiki",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/features/wiki",
+    "file": "www.town.com--docs--features--wiki.txt",
+    "htmlSHA256": "93a0c301b36cf63218193e70aba43bbe1ac5a9bbff06b8cb01d1cc0d428d350c",
+    "textBytes": 5477
+  },
+  {
+    "url": "https://www.town.com/docs/features/skills",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/features/skills",
+    "file": "www.town.com--docs--features--skills.txt",
+    "htmlSHA256": "40520eae86d184f1fea7bd6e16c5cf423e46761bed40119914a64dc6c2096819",
+    "textBytes": 4134
+  },
+  {
+    "url": "https://www.town.com/docs/features/tasks",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/features/tasks",
+    "file": "www.town.com--docs--features--tasks.txt",
+    "htmlSHA256": "ab5addda6a5c101dba0ccba07a90fa8b068cac571bda76238c1ae5b07d3ab12d",
+    "textBytes": 5294
+  },
+  {
+    "url": "https://www.town.com/docs/features/routines",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/features/routines",
+    "file": "www.town.com--docs--features--routines.txt",
+    "htmlSHA256": "2cd2a46bf889d4b5f04c14b558c080a6eb8281497a4be70a86c44e0df8a57204",
+    "textBytes": 7577
+  },
+  {
+    "url": "https://www.town.com/docs/features/decks",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/features/decks",
+    "file": "www.town.com--docs--features--decks.txt",
+    "htmlSHA256": "3f788491793f1dddd26509c2e97bb95dc194a0213ca5ea0154d6c1ac262e3414",
+    "textBytes": 16442
+  },
+  {
+    "url": "https://www.town.com/docs/features/recordings",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/features/recordings",
+    "file": "www.town.com--docs--features--recordings.txt",
+    "htmlSHA256": "0292efd91f62ded6395ae0a7c90528591cfaeddc39283be8b022ba8a339fdace",
+    "textBytes": 7944
+  },
+  {
+    "url": "https://www.town.com/docs/features/suggestions",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/features/suggestions",
+    "file": "www.town.com--docs--features--suggestions.txt",
+    "htmlSHA256": "a97970a16c2debda82f4179e3ca23c79e27bda86993d498d14352653e0ba3957",
+    "textBytes": 5864
+  },
+  {
+    "url": "https://www.town.com/docs/features/scheduling",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/features/scheduling",
+    "file": "www.town.com--docs--features--scheduling.txt",
+    "htmlSHA256": "07c56c372cc6eceb5971fad1e2673643513df648b9be3a323b090832f37d3f44",
+    "textBytes": 7269
+  },
+  {
+    "url": "https://www.town.com/docs/getting-started/reaching-your-townie",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/getting-started/reaching-your-townie",
+    "file": "www.town.com--docs--getting-started--reaching-your-townie.txt",
+    "htmlSHA256": "6a6aa2002388c6349b4e0fa92515ff3bba84665fe3a00447ea9cf7902b9ff6b3",
+    "textBytes": 6091
+  },
+  {
+    "url": "https://www.town.com/docs/integrations/mcp-servers",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/integrations/mcp-servers",
+    "file": "www.town.com--docs--integrations--mcp-servers.txt",
+    "htmlSHA256": "5a6cb1e86874bae6baea581884f3cbc536f8f2e7af9cb776dff6e52698c1d8d5",
+    "textBytes": 6677
+  },
+  {
+    "url": "https://www.town.com/docs/routines/custom-routines/concepts/calling-agents",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/routines/custom-routines/concepts/calling-agents",
+    "file": "www.town.com--docs--routines--custom-routines--concepts--calling-agents.txt",
+    "htmlSHA256": "8858eaa77b322e0777be009511f930f79835b42a8dc6dc5725e28038c7103bef",
+    "textBytes": 6974
+  },
+  {
+    "url": "https://www.town.com/docs/routines/custom-routines/concepts/steps-and-caching",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/routines/custom-routines/concepts/steps-and-caching",
+    "file": "www.town.com--docs--routines--custom-routines--concepts--steps-and-caching.txt",
+    "htmlSHA256": "427ae17f72a204658c6ad4782b2e873236287d8133575b0a077b80e096c8458c",
+    "textBytes": 5407
+  },
+  {
+    "url": "https://www.town.com/docs/routines/custom-routines/triggers",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/routines/custom-routines/triggers",
+    "file": "www.town.com--docs--routines--custom-routines--triggers.txt",
+    "htmlSHA256": "3716a509a177f66c8539ae94523ba6750e1b8976db0eade42640db2d6f83a520",
+    "textBytes": 11544
+  },
+  {
+    "url": "https://www.town.com/docs/routines/stock-routines/routine-sharing",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/routines/stock-routines/routine-sharing",
+    "file": "www.town.com--docs--routines--stock-routines--routine-sharing.txt",
+    "htmlSHA256": "e88a427d2aa484cd48ad4a5670c9c479395ceba51f35dee44d98d02d2dc5cc28",
+    "textBytes": 6395
+  },
+  {
+    "url": "https://www.town.com/docs/admin-setup/google-workspace",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/admin-setup/google-workspace",
+    "file": "www.town.com--docs--admin-setup--google-workspace.txt",
+    "htmlSHA256": "2fda159e011a5414b9b6e2665c70cc5cdc1f26de2bab8fd734c7fda2b4631cfc",
+    "textBytes": 17049
+  },
+  {
+    "url": "https://www.town.com/docs/admin-setup/microsoft-entra",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/admin-setup/microsoft-entra",
+    "file": "www.town.com--docs--admin-setup--microsoft-entra.txt",
+    "htmlSHA256": "1bde297402ae77b42db9b706d5927da68b7d92997b1f98139890e2c3a0f03a7b",
+    "textBytes": 8325
+  },
+  {
+    "url": "https://www.town.com/docs/teams/billing",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/teams/billing",
+    "file": "www.town.com--docs--teams--billing.txt",
+    "htmlSHA256": "49521992f2d1df150e7982b1785ada310b075ef0ace94f950d97541d5bcf2ef0",
+    "textBytes": 13960
+  },
+  {
+    "url": "https://www.town.com/docs/using-town/ios",
+    "http": 200,
+    "finalUrl": "https://www.town.com/docs/using-town/ios",
+    "file": "www.town.com--docs--using-town--ios.txt",
+    "htmlSHA256": "305c8497894e850bd27fc54690fe5b522e1e2ba025973ce7a517c4df6beb6582",
+    "textBytes": 5778
+  },
+  {
+    "url": "https://www.town.com/careers",
+    "http": 200,
+    "finalUrl": "https://www.town.com/careers",
+    "file": "www.town.com--careers.txt",
+    "htmlSHA256": "c99f9bd83a4a818719104afcdfe3d62e2d9e816f1cf8c47d3190ca13010a1e07",
+    "textBytes": 5261
+  },
+  {
+    "url": "https://menlovc.com/perspective/talk-of-the-town-menlo-is-co-leading-towns-108m-series-b/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://a16z.com/announcement/investing-in-town/",
+    "http": 200,
+    "finalUrl": "https://a16z.com/announcement/investing-in-town/",
+    "file": "a16z.com--announcement--investing-in-town.txt",
+    "htmlSHA256": "970ee2475af8ddcc38a484fbe7d21f3a954a38bd5f90386817b363f3b7a33ce6",
+    "textBytes": 15124
+  },
+  {
+    "url": "https://www.town.com/docs/integrations/1password",
+    "http": 200,
+    "file": "1password-body.txt",
+    "status": "coming soon",
+    "lastUpdated": "2026-10-23"
+  }
+]

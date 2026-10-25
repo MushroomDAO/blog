@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-25T05:08:40.943625+00:00",
+  "articles": [
+    {
+      "slug": "town-townie-research",
+      "url": "https://blog.mushroom.cv/blog/town-townie-research/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/town-townie-research-banner.DW21wiBC_Z13gEMP.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/town-townie-research-fig-01.fwlCFoCd_2esL6W.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/town-townie-research-fig-02.BweVyKIw_13Hsre.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/town-townie-research-fig-03.BayieQU4_Z1MkzpO.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/town-townie-research-banner.DW21wiBC.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 5,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/town-townie-research/",
+    "/blog/pstack-engineering-workflow/",
+    "/blog/airsup-machine-skill/",
+    "/blog/aws-infinity-agent-runtime/",
+    "/blog/apple-foundation-models-fm-cli/",
+    "/blog/decision-models-comparison/",
+    "/blog/gradium-phonon-local-tts/",
+    "/blog/appflowy-self-host-services/"
+  ]
+}
