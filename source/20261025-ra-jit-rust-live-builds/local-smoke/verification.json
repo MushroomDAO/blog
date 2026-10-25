@@ -1,0 +1,19 @@
+{
+  "host": {
+    "os": "26.6.2",
+    "cpu": "Apple M4",
+    "memoryBytes": 17179869184,
+    "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)"
+  },
+  "archiveURL": "https://github.com/indexable-inc/blaze/releases/download/nightly/ra-jit-aarch64-apple-darwin.tar.gz",
+  "sha256": "29e29754367ae1b35d519194dcadded0699505a660fed07b48b4dc704428fb99",
+  "runtimeBuild": "0.0.0-3ad3370-18e0426dc9ebce00",
+  "testsPassed": 1,
+  "editedOutput": "42",
+  "devDaemonBuilds": 1,
+  "testDaemonBuilds": 1,
+  "globalEnableUsed": false,
+  "liveProcessTested": false,
+  "performanceBenchmark": false,
+  "daemonStopped": true
+}

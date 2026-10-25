@@ -1083,3 +1083,10 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 - Covered company history, official financing, product modules, authorized handoffs, shared workflows, users, annual pricing and credits. Reviewed 44 direct full-text sources plus 1Password and official web/podcast sources; investor accounts labeled interested, growth self-reported.
 - Critical documented limits: shared connecting-account access; removing a member does not stop personal routines; 1Password still coming soon; copies versus shared instances; approval overrides; no-training default does not mean no cloud processing or stored context. No paid/private trial or security/ROI benchmark.
 - Adopted official Bo/Claus artwork with rights credit; 3 XiaoM figures. Bilingual SEO, public article/images/carousel and remote draft full text/images/cover/comments/canonical verified. Semantic index and KB updated. Task fe905b52-d459-4920-89d8-ab154dae83c3.
+
+## 2026-10-25 — ra-jit renamed blaze, Rust warm-build audit
+
+- Published https://blog.mushroom.cv/blog/ra-jit-blaze-rust-live-builds/ after old/new repository and exact-entity dedup found raw KB only. Rename on2026-10-24 and dualMIT/Apache2.0 verified at988efedad0331e57d4d0184abbd225d2223e7051.
+- No universal92x claim: official platform geometric means10x/24x/11x concern mixed edits; Linuxx86 nushell function5.3x and biome0.9x; ARMbevy widely-usedfunction~91x specific case. Separate cold/warm/liveapply/visiblefeedback; 128GiB upstreamMac not our16GiB.
+- OwnM4 functional smoke: checkedofficialnightlyhash,41to42 behaviorchange,dev/testdaemon builds,1testpassed,independentRust1.99check. No ownspeedup or live-state test. Runtimeintegration/platform/release distinction,memory cost,incompleteborrowcheckerexplicit.
+- BilingualSEO,FLUX205cover,3XiaoM figures; public article/images/carousel and remoteWeChat fulltext/images/cover/comments/canonical verified. KB and semanticindex persisted; live semanticquery matched after eventualconsistency. Task202d35fc-39b4-48fd-a293-f17365fc7b81.

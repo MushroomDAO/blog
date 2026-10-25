@@ -1,0 +1,97 @@
+[
+  {
+    "file": "upstream-docs--usage.md",
+    "sha256": "fee1da2d3d1e0ab3e29d8785d325970c4a102d2c798c59dd48045bd7001100f2",
+    "bytes": 5279
+  },
+  {
+    "file": "upstream-docs--borrowck.md",
+    "sha256": "b2a9c582efb6fe69ac4b33cf536d1460df901beb04745eba289250705ccb1c13",
+    "bytes": 38548
+  },
+  {
+    "file": "upstream-docs--benchmarks--hotpatch--linux-x86_64.json",
+    "sha256": "78a36bb762c0a382de724baaf5e5a67287bcb5e300fc24113441227f25bbabbc",
+    "bytes": 2337
+  },
+  {
+    "file": "upstream-Cargo.toml",
+    "sha256": "0c0fb40369164a477d4547f32a4f0269707c1a24082e86ab213120e384f5e8db",
+    "bytes": 10220
+  },
+  {
+    "file": "upstream-docs--tiers.md",
+    "sha256": "3950182dbbe1b40cbf182a775d41812273e42fabcbaa2de03e7988d26c6513d0",
+    "bytes": 20487
+  },
+  {
+    "file": "upstream-docs--results.md",
+    "sha256": "2e2d159c86b0119a99f1035a7fd8fa11936fc73f4ffe0f08d131dbf118a4f78a",
+    "bytes": 43802
+  },
+  {
+    "file": "upstream-docs--benchmarks.md",
+    "sha256": "a131e28c1e8ffb212867ef10e14bc7d9b8563ff193fd91b40b803b2eee8a619d",
+    "bytes": 173600
+  },
+  {
+    "file": "upstream-harness--bench.py",
+    "sha256": "7d191be764eec1506086ce4630e279340f6b3b30b0824e469ffefcaef5252cd4",
+    "bytes": 63052
+  },
+  {
+    "file": "upstream-install.sh",
+    "sha256": "54a16f32aad4c27a316a4c5bb35391d311a562fa177cdb63a6449b712250fcb9",
+    "bytes": 10828
+  },
+  {
+    "file": "upstream-docs--cargo.md",
+    "sha256": "2edc6587202e7f661b4e9a4ebae809b577e58956d5c76517ef24b5f9fd87cc33",
+    "bytes": 36157
+  },
+  {
+    "file": "upstream-readme.txt",
+    "sha256": "93a55ecce308425d0a1b933b8123d37670201dd657d289c8228728facd4bc725",
+    "bytes": 5547
+  },
+  {
+    "file": "upstream-docs--install.md",
+    "sha256": "e5ef0c224225aed387532b9dadd476e938f7038ddc4f644aea3a9072af36d7ac",
+    "bytes": 3345
+  },
+  {
+    "file": "upstream-docs--reports--PERF.md",
+    "sha256": "123746b288231563dda3ca7c01319176b0efa9df5a3cb18debdd62a3ebb507ab",
+    "bytes": 16839
+  },
+  {
+    "file": "upstream-docs--benchmarks--macos-arm64.json",
+    "sha256": "e0ac060187996a5441fb5700b45fd06b3e776918b6aa95e4f8691223fd321bf7",
+    "bytes": 33283
+  },
+  {
+    "file": "upstream-docs--platforms.md",
+    "sha256": "457dc305770358570c4eef974ba52421499ef41ed16c5225d7fc7d38b88b4776",
+    "bytes": 12891
+  },
+  {
+    "file": "upstream-docs--architecture.md",
+    "sha256": "f1ef76bc2598e23532a8ce45015e8c2e31701d7337311acdf5ed5b9f91ed1743",
+    "bytes": 27197
+  },
+  {
+    "file": "upstream-docs--brand--fire--header-light.webp",
+    "sha256": "25e623401fed171d529b7b248b845f977c0300fa3c95d309c25d5e75450f5f7b",
+    "bytes": 12004
+  },
+  {
+    "file": "upstream-docs--benchmarks--hotpatch--macbook.json",
+    "sha256": "da58030c5e6e3af45fd579a27ed3866045be6fe99b41fc69dd08485edd3706d3",
+    "bytes": 2302
+  },
+  {
+    "file": "upstream-docs--benchmarks--linux-x86-64.json",
+    "sha256": "f4268d70e894c7830c94959f0d1420a61d3cbe704378d9d2cb8bdd3abcc6e8fa",
+    "bytes": 195337
+  }
+]
