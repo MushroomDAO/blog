@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-25T02:14:06.552508+00:00",
+  "query": "AirsupHQ machine-skill 机械仿真 BMEP",
+  "matched": [
+    {
+      "article_id": "airsup-machine-skill",
+      "title": "Machine Skill：用 AI 生成机械仿真网页，物理数值该怎么信？",
+      "url": "/blog/airsup-machine-skill/",
+      "language": "zh",
+      "excerpt": "Machine Skill：用 AI 生成机械仿真网页，物理数值该怎么信？ 找到 AirsupHQ/machine-skill 官方仓库，解析 Claude Code 如何生成带剖面、爆炸图和参数控制的 Three.js 机械演示，核查公式、外部依赖和录制流程。 Machine Skill Three.js Claude Code 机械仿真 开源 它到底是模型、CAD，还是一个 skill？ 官方示例展示了什么？ 算出 16.9 kW，就证明模型准确吗？ 怎么开始使用？ 一个 HTML，是否意味着离线零依赖？ 我们实际核验到了哪一步？ 常见问题 能直接导",
+      "score": 0.5990286
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "airsup-machine-skill",
+        "title": "Machine Skill：用 AI 生成机械仿真网页，物理数值该怎么信？",
+        "url": "/blog/airsup-machine-skill/",
+        "language": "zh",
+        "excerpt": "Machine Skill：用 AI 生成机械仿真网页，物理数值该怎么信？ 找到 AirsupHQ/machine-skill 官方仓库，解析 Claude Code 如何生成带剖面、爆炸图和参数控制的 Three.js 机械演示，核查公式、外部依赖和录制流程。 Machine Skill Three.js Claude Code 机械仿真 开源 它到底是模型、CAD，还是一个 skill？ 官方示例展示了什么？ 算出 16.9 kW，就证明模型准确吗？ 怎么开始使用？ 一个 HTML，是否意味着离线零依赖？ 我们实际核验到了哪一步？ 常见问题 能直接导",
+        "score": 0.5990286
+      },
+      {
+        "article_id": "anthropic-mhs-model-hardware-standard-ai-agents-physical-devices-open-hardware",
+        "title": "Anthropic MHS: AI Takes Over the Physical World — Where Open Hardware Fits In",
+        "url": "/blog/anthropic-mhs-model-hardware-standard-ai-agents-physical-devices-open-hardware/",
+        "language": "en",
+        "excerpt": "Anthropic MHS: AI Takes Over the Physical World — Where Open Hardware Fits In Anthropic's Model Hardware Standard (MHS) research preview unifies how AI agents operate physical devices. Analysis of MHS architecture, early results from Genentech/CMU/QuEra, and engineering guidance ",
+        "score": 0.51934177
+      },
+      {
+        "article_id": "grpo-small-model-engineering-guide",
+        "title": "A GRPO Engineering Guide for Small Models: Eighty Dollars of Training to Beat o3",
+        "url": "/blog/grpo-small-model-engineering-guide/",
+        "language": "en",
+        "excerpt": "A GRPO Engineering Guide for Small Models: Eighty Dollars of Training to Beat o3 GRPO (Group Relative Policy Optimization) makes it practical for small specialist models to outperform frontier LLMs on narrow tasks. This guide integrates ART, ms-swift, OpenClaw-RL, and six real en",
+        "score": 0.50742453
+      },
+      {
+        "article_id": "blcaptain-meta-skill-agent-skill-creation-methodology",
+        "title": "BLCaptain Meta Skill: Package Your Repeated AI Explanations into a Once-Installed, Always-Reusable Agent Skill",
+        "url": "/blog/blcaptain-meta-skill-agent-skill-creation-methodology/",
+        "language": "en",
+        "excerpt": "BLCaptain Meta Skill: Package Your Repeated AI Explanations into a Once-Installed, Always-Reusable Agent Skill Ever found yourself re-explaining the same SOP, prompts, and expert knowledge to AI every new conversation? BLCaptain Meta Skill is an open-source methodology package th",
+        "score": 0.50363183
+      },
+      {
+        "article_id": "research-note-example",
+        "title": "科研笔记示例：深度学习模型优化方法",
+        "url": "/blog/research-note-example/",
+        "language": "zh",
+        "excerpt": "科研笔记示例：深度学习模型优化方法 记录最近在模型训练过程中的一些优化技巧 deep-learning optimization research 背景 问题描述 解决方案 1. 学习率调度优化 2. 混合精度训练 实验结果 总结 参考",
+        "score": 0.4966186
+      },
+      {
+        "article_id": "bespoke-nimble-9b-open-decision-model-logprob-jev-rival",
+        "title": "Bespoke Nimble：一天之内做一个会读概率的 9B 决策模型",
+        "url": "/blog/bespoke-nimble-9b-open-decision-model-logprob-jev-rival/",
+        "language": "zh",
+        "excerpt": "Bespoke Nimble：一天之内做一个会读概率的 9B 决策模型 Bespoke Labs 开源了 Nimble，一个基于 Qwen3.5-9B LoRA 的决策模型——它不写字，只在你给的选项里选一个，直接读 logprobs。数据、配方、权重全部公开，本文做一次工程层面的完整拆解。 open-source decision-model logprob LoRA inference Qwen 它解决的问题 工作方式 底层机制 数据和训练 基准测试 本地运行（Mac Apple Silicon） 适用场景 关键限制 工程价值",
+        "score": 0.49431846
+      },
+      {
+        "article_id": "anthropic-agent-workshop-engineering-guide",
+        "title": "Anthropic Agent Workshops: A Practical Engineering Guide",
+        "url": "/blog/anthropic-agent-workshop-engineering-guide/",
+        "language": "en",
+        "excerpt": "Anthropic Agent Workshops: A Practical Engineering Guide Find Anthropic's official agent workshops and build a business workflow, separating free materials, API costs, mock tools and production engineering needs. Anthropic Claude Agent SDK 多智能体 业务自动化 工程实践 Where are the official s",
+        "score": 0.49341306
+      },
+      {
+        "article_id": "minicpm5-meshy-ondevice-rl-framework",
+        "title": "MiniCPM5 + Meshy: OpenBMB Launches On-Device SOTA LLMs and an Async RL Training Engine",
+        "url": "/blog/minicpm5-meshy-ondevice-rl-framework/",
+        "language": "en",
+        "excerpt": "MiniCPM5 + Meshy: OpenBMB Launches On-Device SOTA LLMs and an Async RL Training Engine OpenBMB simultaneously releases MiniCPM5 (1B/2B on-device SOTA) and Meshy async RL engine. RL+OPD training yields +10.96 on reasoning benchmarks, standard LlamaForCausalLM architecture runs on ",
+        "score": 0.4910023
+      },
+      {
+        "article_id": "skillflow-flow-driven-skill-evolution-agent",
+        "title": "SkillFlow: Flow-Driven Recursive Skill Evolution That Beats All Baselines on 14 Benchmarks",
+        "url": "/blog/skillflow-flow-driven-skill-evolution-agent/",
+        "language": "en",
+        "excerpt": "SkillFlow: Flow-Driven Recursive Skill Evolution That Beats All Baselines on 14 Benchmarks SkillFlow from CUHK-Shenzhen, NUS, and NTU uses flow-matching training signals instead of heuristic LLM judgments to autonomously manage agent skill libraries, achieving +41.2% average EM w",
+        "score": 0.49047723
+      },
+      {
+        "article_id": "staffdeck-openbmb-enterprise-digital-employee-platform",
+        "title": "StaffDeck: ModelBest + Tsinghua THUNLP Open-Source Enterprise Digital Employee Platform with State-Machine SOPs",
+        "url": "/blog/staffdeck-openbmb-enterprise-digital-employee-platform/",
+        "language": "en",
+        "excerpt": "StaffDeck: ModelBest + Tsinghua THUNLP Open-Source Enterprise Digital Employee Platform with State-Machine SOPs ModelBest, Tsinghua THUNLP, and OpenBMB jointly open-source StaffDeck, converting employee expertise and business processes into runnable digital employees: state-machi",
+        "score": 0.48946002
+      }
+    ]
+  }
+}

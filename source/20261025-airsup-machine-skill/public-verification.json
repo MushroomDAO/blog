@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-25T02:12:14.932470+00:00",
+  "articles": [
+    {
+      "slug": "airsup-machine-skill",
+      "url": "https://blog.mushroom.cv/blog/airsup-machine-skill/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/airsup-machine-skill-banner.DEelAPTv_Z2viQU3.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/airsup-machine-skill-fig-01.Dr-SbUDr_1gf8Qd.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/airsup-machine-skill-fig-02.CuHJ_mWO_D13Lj.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/airsup-machine-skill-fig-03.C4-hmpdF_Z1kKFjq.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/airsup-machine-skill-banner.DEelAPTv.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 1,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/airsup-machine-skill/",
+    "/blog/aws-infinity-agent-runtime/",
+    "/blog/apple-foundation-models-fm-cli/",
+    "/blog/decision-models-comparison/",
+    "/blog/gradium-phonon-local-tts/",
+    "/blog/appflowy-self-host-services/",
+    "/blog/ming-3-tts-small-model-evaluation/",
+    "/blog/underdog-bark-3-local-asr/"
+  ]
+}
