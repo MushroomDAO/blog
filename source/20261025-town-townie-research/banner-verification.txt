@@ -1,0 +1,13 @@
+=== [adopt-banner] town-townie-research ← 1 source image(s) → src/assets/images/town-townie-research-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← source/20261025-town-townie-research/official-art-composite.png
+=== [adopt-banner] done: src/assets/images/town-townie-research-banner.jpg (1200x630, 93166B) ===
+=== [verify-banner] src/assets/images/town-townie-research-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=source/20261025-town-townie-research/official-art-composite.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 93166B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/town-townie-research-banner.jpg ===
+PATH: src/assets/images/town-townie-research-banner.jpg

@@ -1,0 +1,24 @@
+{
+  "bilingual": true,
+  "BLUFBoth": true,
+  "FAQ": true,
+  "requiredFrontmatter": true,
+  "canonicalAndCopyrightBoth": true,
+  "externalPrimaryLinks": true,
+  "sourceSnapshot": "2026-10-25",
+  "factVsInference": "Public claims, no private workspace test; pilot is proposal",
+  "independentAnalysis": [
+    "end-to-end waiting vs drafting speed",
+    "team account permissions and offboarding",
+    "copies vs shared workflows",
+    "model neutrality vs application lock-in"
+  ],
+  "pricing": "Annual equivalents distinguished from monthly Starter; credits not tokens; overage opt-in",
+  "researchLimits": [
+    "No NDA audit reports",
+    "No paid/private product test",
+    "No guarantee of every public/social item"
+  ],
+  "banner": "Official Bo/Claus full figures proportionally fitted and adopted; verified 1200x630 <99KB no text/faces",
+  "thirdPartyRights": "Cover excluded from article CC license scope"
+}

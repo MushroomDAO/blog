@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-25T05:09:42.335Z",
+  "drafts": [
+    {
+      "slug": "town-townie-research",
+      "mediaId": "prCUE631thH1cmNLi42prB8Ax8IrA-J5wJikcWpcQKAj07corZLQEDPcVUMDTpuz",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "a85f9e0ed135281fd5ff77a696edc17a6b1933935410dfdf4e44823d50bf2bd3",
+      "remoteTextHash": "a85f9e0ed135281fd5ff77a696edc17a6b1933935410dfdf4e44823d50bf2bd3",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "0c3588cb212c7cab1f62f4ce06bd1df171de8f8585da7cc38988f02012caae8f",
+      "remoteContentHash": "5cc6f9ae8ca8cd90d2d846ce6c545975426d54baead63c5e2ce9b7c938677495"
+    }
+  ]
+}
