@@ -1,0 +1,183 @@
+{
+  "scope": "Installationbytes and5upstreamNodehelperchecks; no endtoendAIUIquality or browserexportvalidation",
+  "node": "v26.10.0",
+  "installed": [
+    {
+      "skill": "better-accessibility",
+      "path": "/Users/jason/.codex/skills/better-accessibility",
+      "fileCount": 8,
+      "hashesMatch": true,
+      "manualInvocation": false,
+      "codexExplicitOnly": false
+    },
+    {
+      "skill": "better-colors",
+      "path": "/Users/jason/.codex/skills/better-colors",
+      "fileCount": 8,
+      "hashesMatch": true,
+      "manualInvocation": false,
+      "codexExplicitOnly": false
+    },
+    {
+      "skill": "better-interface",
+      "path": "/Users/jason/.codex/skills/better-interface",
+      "fileCount": 3,
+      "hashesMatch": true,
+      "manualInvocation": false,
+      "codexExplicitOnly": false
+    },
+    {
+      "skill": "better-layout",
+      "path": "/Users/jason/.codex/skills/better-layout",
+      "fileCount": 4,
+      "hashesMatch": true,
+      "manualInvocation": false,
+      "codexExplicitOnly": false
+    },
+    {
+      "skill": "better-typography",
+      "path": "/Users/jason/.codex/skills/better-typography",
+      "fileCount": 8,
+      "hashesMatch": true,
+      "manualInvocation": false,
+      "codexExplicitOnly": false
+    },
+    {
+      "skill": "better-ui",
+      "path": "/Users/jason/.codex/skills/better-ui",
+      "fileCount": 8,
+      "hashesMatch": true,
+      "manualInvocation": false,
+      "codexExplicitOnly": false
+    },
+    {
+      "skill": "better-writing",
+      "path": "/Users/jason/.codex/skills/better-writing",
+      "fileCount": 3,
+      "hashesMatch": true,
+      "manualInvocation": false,
+      "codexExplicitOnly": false
+    },
+    {
+      "skill": "break",
+      "path": "/Users/jason/.codex/skills/break",
+      "fileCount": 3,
+      "hashesMatch": true,
+      "manualInvocation": true,
+      "codexExplicitOnly": true
+    },
+    {
+      "skill": "build-design",
+      "path": "/Users/jason/.codex/skills/build-design",
+      "fileCount": 3,
+      "hashesMatch": true,
+      "manualInvocation": false,
+      "codexExplicitOnly": false
+    },
+    {
+      "skill": "explain-interface",
+      "path": "/Users/jason/.codex/skills/explain-interface",
+      "fileCount": 6,
+      "hashesMatch": true,
+      "manualInvocation": true,
+      "codexExplicitOnly": true
+    },
+    {
+      "skill": "interface-review",
+      "path": "/Users/jason/.codex/skills/interface-review",
+      "fileCount": 4,
+      "hashesMatch": true,
+      "manualInvocation": true,
+      "codexExplicitOnly": true
+    },
+    {
+      "skill": "state-machine",
+      "path": "/Users/jason/.codex/skills/state-machine",
+      "fileCount": 3,
+      "hashesMatch": true,
+      "manualInvocation": true,
+      "codexExplicitOnly": true
+    },
+    {
+      "skill": "teardown",
+      "path": "/Users/jason/.codex/skills/teardown",
+      "fileCount": 30,
+      "hashesMatch": true,
+      "manualInvocation": false,
+      "codexExplicitOnly": false
+    },
+    {
+      "skill": "variant",
+      "path": "/Users/jason/.codex/skills/variant",
+      "fileCount": 3,
+      "hashesMatch": true,
+      "manualInvocation": true,
+      "codexExplicitOnly": true
+    }
+  ],
+  "embeddedInBlogTests": [
+    {
+      "script": "test-flipbook.cjs",
+      "exitCode": 0,
+      "stdout": "Passed ordered frames, end-only labels, shared fit, key cancellation, failures and the ease.\n",
+      "stderr": ""
+    },
+    {
+      "script": "test-geometry.cjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "/Users/jason/Dev/mycelium/blog/source/20261026-jakub-krehel-skills/upstream/skills/teardown/scripts/test-geometry.cjs:30\n  const u = G.unit([1, 2, 0]), v = [0, 0, 1], center = [4, 5, 6], radius = 13, tolerance = .006;\n              ^\n\nTypeError: G.unit is not a function\n    at /Users/jason/Dev/mycelium/blog/source/20261026-jakub-krehel-skills/upstream/skills/teardown/scripts/test-geometry.cjs:30:15\n    at test (/Users/jason/Dev/mycelium/blog/source/20261026-jakub-krehel-skills/upstream/skills/teardown/scripts/test-geometry.cjs:5:3)\n    at Object.<anonymous> (/Users/jason/Dev/mycelium/blog/source/20261026-jakub-krehel-skills/upstream/skills/teardown/scripts/test-geometry.cjs:29:1)\n    at Module._compile (node:internal/modules/cjs/loader:1956:14)\n    at Object..js (node:internal/modules/cjs/loader:2096:10)\n    at Module.load (node:internal/modules/cjs/loader:1678:32)\n    at Module._load (node:internal/modules/cjs/loader:1470:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:33:47\n\nNode.js v26.10.0\n"
+    },
+    {
+      "script": "test-render-queue.cjs",
+      "exitCode": 0,
+      "stdout": "Passed preview superseding, debouncing, export priority and snapshots, model errors and worker failure.\n",
+      "stderr": ""
+    },
+    {
+      "script": "test-theme.cjs",
+      "exitCode": 0,
+      "stdout": "Passed system changes, explicit override, reload, reset, subscriptions, cross-tab updates and unavailable storage.\n",
+      "stderr": ""
+    },
+    {
+      "script": "test-viewer-builder.cjs",
+      "exitCode": 0,
+      "stdout": "Passed embedded text safety, library loading, script parsing, worker dispatch and parameter validation.\n",
+      "stderr": ""
+    }
+  ],
+  "tests": [
+    {
+      "script": "test-flipbook.cjs",
+      "exitCode": 0,
+      "stdout": "Passed ordered frames, end-only labels, shared fit, key cancellation, failures and the ease.\n",
+      "stderr": ""
+    },
+    {
+      "script": "test-geometry.cjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"passed\": 28,\n  \"checks\": [\n    \"Projected circle samples honor plane, radius and chord tolerance\",\n    \"Rounded housing profiles preserve width, height and corner radii\",\n    \"Hollow lathes preserve their bore and closed surface connectivity\",\n    \"Spring wire is closed and fits its radial envelope\",\n    \"Thread pitch and handedness repeat at the same angular phase\",\n    \"Knurl starts and screw proportions produce valid finite geometry\",\n    \"Isolation restores edges hidden by another complete solid\",\n    \"Edge-on cylinder facets retain both long silhouettes at different resolutions\",\n    \"Camera angles preserve distances and keep world Z upright at zero roll\",\n    \"Concave extrusions preserve volume, winding and open notches\",\n    \"Rigid placement moves every feature and rotates explosion vectors without translation\",\n    \"Paper anchors agree with rendered bounds after camera and explosion changes\",\n    \"Missing or invalid geometry fails before producing a blank NaN drawing\",\n    \"Small spring silhouettes are identical in millimeters and meters\",\n    \"Submesh composition preserves indices, features and the complete part identity\",\n    \"Lofts close and face outward whichever way their rings run\",\n    \"Lathes reject crossing profiles and can skip rings on smooth curves\",\n    \"Trails follow part explosions, hide behind solids and stay out of part groups\",\n    \"Rounded rings share sample angles so differently sized shells loft cleanly\",\n    \"Open skins keep their rim, glass hides nothing and line-only parts still fit the page\",\n    \"Lathe points on the axis do not draw radial outlines\",\n    \"Lathes turn onto other axes and sweeps close into tubes and rings\",\n    \"Extrusions cut real holes that stay open through the part\",\n    \"Closed sweeps meet without a twist on a three-dimensional loop and screws take defaults\",\n    \"Sweeps keep their section through right-angle turns\",\n    \"Feature lines own their endpoints and part IDs are strings\",\n    \"Fills cover each part once, behind its ink and in depth order\",\n    \"Annotations label each visible part beside the drawing\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "test-render-queue.cjs",
+      "exitCode": 0,
+      "stdout": "Passed preview superseding, debouncing, export priority and snapshots, model errors and worker failure.\n",
+      "stderr": ""
+    },
+    {
+      "script": "test-theme.cjs",
+      "exitCode": 0,
+      "stdout": "Passed system changes, explicit override, reload, reset, subscriptions, cross-tab updates and unavailable storage.\n",
+      "stderr": ""
+    },
+    {
+      "script": "test-viewer-builder.cjs",
+      "exitCode": 0,
+      "stdout": "Passed embedded text safety, library loading, script parsing, worker dispatch and parameter validation.\n",
+      "stderr": ""
+    }
+  ],
+  "moduleScopeFinding": "Blog package type=module makes require of UMD geometry.js return ESM namespace lacking unit; identical bytes at globally installed skill root pass. No upstream code changed."
+}
