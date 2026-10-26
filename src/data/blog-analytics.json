@@ -1,92 +1,177 @@
 {
-  "generatedAt": "2026-10-25T14:00:01Z",
+  "generatedAt": "2026-10-26T14:00:00Z",
   "period": {
-    "start": "2026-09-25",
-    "end": "2026-10-25"
+    "start": "2026-09-26",
+    "end": "2026-10-26"
   },
   "totals": {
-    "pageviews": 24000,
-    "visits": 23000,
-    "bots": 0
+    "pageviews": 22080,
+    "visits": 20770,
+    "bots": 10
   },
   "last7": {
-    "pv": 11000,
-    "visits": 10000
+    "pv": 4680,
+    "visits": 4540
   },
   "prior7": {
-    "pv": 13000,
-    "visits": 13000
+    "pv": 4510,
+    "visits": 4340
   },
   "daily": [
     {
       "date": "09-26",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 290,
+      "visits": 260
     },
     {
       "date": "09-27",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 640,
+      "visits": 560
     },
     {
       "date": "09-28",
-      "pv": 3000,
-      "visits": 3000
+      "pv": 1030,
+      "visits": 870
     },
     {
       "date": "09-29",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 650,
+      "visits": 590
     },
     {
       "date": "09-30",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 530,
+      "visits": 530
     },
     {
       "date": "10-01",
-      "pv": 3000,
-      "visits": 3000
+      "pv": 930,
+      "visits": 800
+    },
+    {
+      "date": "10-02",
+      "pv": 860,
+      "visits": 800
     },
     {
       "date": "10-03",
-      "pv": 1000,
+      "pv": 550,
+      "visits": 490
+    },
+    {
+      "date": "10-04",
+      "pv": 1110,
       "visits": 1000
     },
     {
       "date": "10-05",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 570,
+      "visits": 560
     },
     {
       "date": "10-06",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 780,
+      "visits": 670
+    },
+    {
+      "date": "10-07",
+      "pv": 700,
+      "visits": 650
+    },
+    {
+      "date": "10-08",
+      "pv": 1090,
+      "visits": 1040
     },
     {
       "date": "10-09",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 880,
+      "visits": 860
+    },
+    {
+      "date": "10-10",
+      "pv": 780,
+      "visits": 770
+    },
+    {
+      "date": "10-11",
+      "pv": 690,
+      "visits": 670
+    },
+    {
+      "date": "10-12",
+      "pv": 810,
+      "visits": 770
+    },
+    {
+      "date": "10-13",
+      "pv": 760,
+      "visits": 750
+    },
+    {
+      "date": "10-14",
+      "pv": 730,
+      "visits": 720
     },
     {
       "date": "10-15",
-      "pv": 1000,
-      "visits": 0
+      "pv": 610,
+      "visits": 590
+    },
+    {
+      "date": "10-16",
+      "pv": 530,
+      "visits": 490
+    },
+    {
+      "date": "10-17",
+      "pv": 650,
+      "visits": 610
+    },
+    {
+      "date": "10-18",
+      "pv": 420,
+      "visits": 410
     },
     {
       "date": "10-19",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 810,
+      "visits": 770
+    },
+    {
+      "date": "10-20",
+      "pv": 710,
+      "visits": 690
+    },
+    {
+      "date": "10-21",
+      "pv": 930,
+      "visits": 920
+    },
+    {
+      "date": "10-22",
+      "pv": 740,
+      "visits": 710
     },
     {
       "date": "10-23",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 900,
+      "visits": 820
     },
     {
       "date": "10-24",
-      "pv": 3000,
-      "visits": 3000
+      "pv": 570,
+      "visits": 570
+    },
+    {
+      "date": "10-25",
+      "pv": 420,
+      "visits": 420
+    },
+    {
+      "date": "10-26",
+      "pv": 410,
+      "visits": 410
     }
   ],
   "countries": [
@@ -95,248 +180,255 @@
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 11100,
-      "visits": 11100
+      "pv": 10410,
+      "visits": 10400
     },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 4500,
-      "visits": 4300
+      "pv": 5070,
+      "visits": 4490
     },
     {
       "code": "US",
       "flag": "🇺🇸",
       "name": "美国",
       "nameEn": "United States",
-      "pv": 2400,
-      "visits": 2200
+      "pv": 2230,
+      "visits": 1940
     },
     {
       "code": "HK",
       "flag": "🇭🇰",
       "name": "香港",
       "nameEn": "Hong Kong",
-      "pv": 1000,
-      "visits": 900
-    },
-    {
-      "code": "TW",
-      "flag": "🇹🇼",
-      "name": "台湾",
-      "nameEn": "Taiwan",
-      "pv": 500,
-      "visits": 500
-    },
-    {
-      "code": "NL",
-      "flag": "🇳🇱",
-      "name": "荷兰",
-      "nameEn": "Netherlands",
-      "pv": 400,
-      "visits": 400
+      "pv": 730,
+      "visits": 700
     },
     {
       "code": "JP",
       "flag": "🇯🇵",
       "name": "日本",
       "nameEn": "Japan",
-      "pv": 300,
-      "visits": 300
+      "pv": 600,
+      "visits": 530
     },
     {
-      "code": "ID",
-      "flag": "🇮🇩",
-      "name": "印度尼西亚",
-      "nameEn": "Indonesia",
-      "pv": 300,
-      "visits": 300
+      "code": "TW",
+      "flag": "🇹🇼",
+      "name": "台湾",
+      "nameEn": "Taiwan",
+      "pv": 370,
+      "visits": 360
     },
     {
-      "code": "TH",
-      "flag": "🇹🇭",
-      "name": "泰国",
-      "nameEn": "Thailand",
-      "pv": 200,
-      "visits": 0
+      "code": "NL",
+      "flag": "🇳🇱",
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "pv": 340,
+      "visits": 340
+    },
+    {
+      "code": "CO",
+      "flag": "🇨🇴",
+      "name": "CO",
+      "nameEn": "CO",
+      "pv": 240,
+      "visits": 240
     },
     {
       "code": "DE",
       "flag": "🇩🇪",
       "name": "德国",
       "nameEn": "Germany",
-      "pv": 200,
-      "visits": 200
+      "pv": 220,
+      "visits": 140
     },
     {
-      "code": "PL",
-      "flag": "🇵🇱",
-      "name": "PL",
-      "nameEn": "PL",
-      "pv": 100,
-      "visits": 100
+      "code": "ID",
+      "flag": "🇮🇩",
+      "name": "印度尼西亚",
+      "nameEn": "Indonesia",
+      "pv": 190,
+      "visits": 190
     },
     {
-      "code": "NG",
-      "flag": "🇳🇬",
-      "name": "NG",
-      "nameEn": "NG",
-      "pv": 100,
-      "visits": 100
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "pv": 190,
+      "visits": 120
+    },
+    {
+      "code": "AE",
+      "flag": "🇦🇪",
+      "name": "阿联酋",
+      "nameEn": "United Arab Emirates",
+      "pv": 170,
+      "visits": 170
     }
   ],
-  "countryTotal": 22000,
+  "countryTotal": 21720,
   "referers": {
-    "direct": 40000,
-    "search": 20000,
-    "ecosystem": 0,
+    "direct": 16190,
+    "search": 4420,
+    "ecosystem": 1310,
     "ai": 0,
-    "other": 0
+    "other": 160
   },
   "pages": [
     {
       "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
       "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
       "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
-      "pv": 2500,
-      "visits": 2100
-    },
-    {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 900,
-      "visits": 800
-    },
-    {
-      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
-      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
-      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 400,
-      "visits": 400
-    },
-    {
-      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
-      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
-      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 400,
-      "visits": 400
-    },
-    {
-      "title": "'MiniMax H3 加速五件套：稀疏注意力、混合注意力、并行解码，15 秒视频压进 6.6 秒'",
-      "titleEn": "MiniMax H3 Accelerated: Five Open-Source Speedups — Sparse Attention, Hybrid Attention, Parallel Decoding",
-      "path": "/blog/minimax-h3-accelerated-fasth3-sol-h3-vdn-pdd-lightx2v-five-open-source-speedups/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "DwarfStar：Mac Studio 跑 DeepSeek V4 Flash/PRO，从安装到 SSD 流式推理",
-      "titleEn": "DwarfStar (ds4): Run DeepSeek V4 Flash/PRO Locally on Mac Studio — Install, SSD Streaming, Distributed Inference",
-      "path": "/blog/deepseek-mac-studio-dwarfstar-ds4-local-inference-guide/",
-      "pv": 300,
-      "visits": 300
-    },
-    {
-      "title": "OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行",
-      "titleEn": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks",
-      "path": "/blog/openmuse-copilotkit-personal-ai-agent-browser-workspace/",
-      "pv": 300,
-      "visits": 300
+      "pv": 4000,
+      "visits": 3000
     },
     {
       "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
       "titleEn": "Running DeepSeek V4-Flash Locally: A Hardware Selection and Deployment Handbook",
       "path": "/blog/deepseek-v4-flash-local-inference-guide/",
-      "pv": 300,
-      "visits": 300
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "title": "用自己的声音做播客：LuxTTS 零成本语音克隆完整指南",
-      "titleEn": "Make Podcasts in Your Own Voice: LuxTTS Zero-Cost Voice Cloning Guide",
-      "path": "/blog/luxtts-voice-clone-podcast-guide/",
-      "pv": 200,
-      "visits": 200
+      "title": "Valtz：Mac本地AI创作的素材与时间线",
+      "titleEn": "Valtz: Local AI Creation and Composition on Mac",
+      "path": "/blog/valtz-local-ai-creative-studio/",
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "title": "Realtime-Venus：全双工 AI 交互系统本地部署指南，双 Loop 架构 + 9B Omni 模型开源",
-      "titleEn": "Realtime-Venus Local Deployment Guide: Full-Duplex AI with Dual-Loop Architecture and Open 9B Omni Model",
+      "title": "LLM-as-a-Verifier：无需训练的通用 Agent 验证框架，三域 SOTA",
+      "titleEn": "LLM-as-a-Verifier: A Training-Free General Verification Framework Achieving SOTA Across Three Domains",
+      "path": "/blog/llm-as-a-verifier-general-framework/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "Semantica：AI 界的开源 Palantir，用知识图谱解决企业 AI 最难的问题——决策溯源",
+      "titleEn": "semantica-graph-native-ai-provenance-enterprise-knowledge-graph",
+      "path": "/blog/semantica-graph-native-ai-provenance-enterprise-knowledge-graph/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "Ploy：Webflow 联合创始人的第三次创业——用 AI Agent 把网站变成增长引擎",
+      "titleEn": "Ploy: The Webflow Co-Founder's Third Startup Turns Websites into Growth Engines with AI Agents",
+      "path": "/blog/ploy-ai-webflow-founder-website-growth-engine-27m/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "如何举办一次黑客松：从零开始的完整指南（附免费工具推荐）",
+      "titleEn": "How to Host a Hackathon: A Complete Guide for Beginners (With Free Tools)",
+      "path": "/blog/how-to-host-hackathon-free-tools-complete-guide/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "claude-mem：95K 星的 Agent 跨会话记忆插件，工程拆解",
+      "titleEn": "claude-mem: Engineering Teardown of the 95K-Star Agent Persistent Memory Plugin",
+      "path": "/blog/claude-mem-persistent-context-agent-session-memory-typescript/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "Agent 的社交网络：EigenFlux 把 AI Agent 连成了一张广播互联的信息网",
+      "titleEn": "The Social Network for AI Agents: EigenFlux Builds a Broadcast Network Where Agents Talk to Each Other",
+      "path": "/blog/eigenflux-agent-social-network/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "IndexNow 深入指南：普通网站怎样主动通知搜索引擎，又不误把提交当收录",
+      "titleEn": "IndexNow Guide: Notify Search Engines After Publishing",
+      "path": "/blog/indexnow-website-push-indexing-guide/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "sweety-handdraw-video：把长文做成边画边讲的视频",
+      "titleEn": "Sweety Handdraw Video: From Article to Narrated Drawing",
+      "path": "/blog/sweety-handdraw-video-pipeline/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "GPT-6 Astra 究竟带来了什么：不是更聪明，是第一次能真正帮你干活",
+      "titleEn": "What GPT-6 Astra Actually Brings: Not Just Smarter — The First Model That Can Do the Work For You",
+      "path": "/blog/gpt-6-astra-openai-computer-use-breakthrough-what-it-actually-brings/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "Realtime-Venus：双9B全双工模型、异步Agent与部署核查",
+      "titleEn": "Realtime-Venus: Full-Duplex Models and Async Agents",
       "path": "/blog/realtime-venus-fulldup-interactive-dual-loop-local-deploy/",
-      "pv": 200,
-      "visits": 200
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "title": "镜探 + Avatar Forge：从拆解爆款到数字人口播，Agent Skill 组合完成整条视频创作流水线",
-      "titleEn": "CineSleuth + Avatar Forge: From Film Analysis to Digital Human Video — Agent Skills for the Full Creator Pipeline",
-      "path": "/blog/avatar-forge-cine-sleuth-video-digital-human-agent-skill/",
-      "pv": 200,
-      "visits": 200
+      "title": "mu（μ）：编程 Agent 的判断核，35 个决策点交给小模型，大模型只管写代码",
+      "titleEn": "mu (μ): A Coding Agent's Judgment Kernel — 35 Decision Points for a Small Model, Big Model Just Codes",
+      "path": "/blog/mu-coding-agent-judgment-kernel-35-decision-points-hive/",
+      "pv": 1000,
+      "visits": 1000
     },
     {
-      "title": "blog",
-      "titleEn": "blog",
-      "path": "/blog/",
-      "pv": 200,
-      "visits": 100
-    },
-    {
-      "title": "27B 模型压到 11.8GB 还「任务无损」：奥地利 IST 用两篇论文的方法重做了 GGUF 量化",
-      "titleEn": "A 27B Model at 11.8GB, Task-Lossless: IST Austria Rebuilt GGUF Quantization With Two Papers' Worth of Method",
-      "path": "/blog/gsq-rco-non-uniform-gguf-quantization/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "'AutoAgent：首个自优化智能体开源库'",
-      "titleEn": "AutoAgent: The World's First Self-Optimizing AI Agent Framework",
-      "path": "/blog/autoagent-self-optimizing-agent/",
-      "pv": 200,
-      "visits": 200
-    },
-    {
-      "title": "读后感：Agent 架构的底层逻辑——从控制论看 Harness 设计",
-      "titleEn": "Commentary: The Deep Logic of Agent Architecture — Designing Resilient Agents Through a Cybernetics Lens",
-      "path": "/blog/agent-architecture-cybernetics-harness-design/",
-      "pv": 200,
-      "visits": 200
+      "title": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南",
+      "titleEn": "Illustrate Your Articles Without Drawing: A Beginner's Guide to ian-xiaohei-illustrations",
+      "path": "/blog/ian-xiaohei-illustrations-beginner-guide/",
+      "pv": 1000,
+      "visits": 1000
     }
   ],
-  "devices": [
-    {
-      "label": "desktop",
-      "count": 19200
-    },
-    {
-      "label": "mobile",
-      "count": 2770
-    },
-    {
-      "label": "tablet",
-      "count": 40
-    }
-  ],
+  "devices": [],
   "os": [],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 16000
+      "count": 15790
     },
     {
       "label": "Unknown",
-      "count": 3000
+      "count": 2390
     },
     {
       "label": "Edge",
-      "count": 3000
+      "count": 2070
     },
     {
-      "label": "Firefox",
-      "count": 1000
+      "label": "ChromeMobileWebview",
+      "count": 620
     },
     {
       "label": "MobileSafari",
-      "count": 1000
+      "count": 570
+    },
+    {
+      "label": "Safari",
+      "count": 220
+    },
+    {
+      "label": "ChromeMobile",
+      "count": 170
+    },
+    {
+      "label": "ChromeDerivative",
+      "count": 120
+    },
+    {
+      "label": "Firefox",
+      "count": 120
+    },
+    {
+      "label": "ChromeHeadless",
+      "count": 10
     }
   ]
 }
