@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-26T13:06:56.809184+00:00",
+  "articles": [
+    {
+      "slug": "wevisone-vl-unified-vision",
+      "url": "https://blog.mushroom.cv/blog/wevisone-vl-unified-vision/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/wevisone-vl-unified-vision-banner.JTgm7Tyw_1fwWTc.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/wevisone-vl-unified-vision-fig-01.B7o2ymXr_Z2sG7P1.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/wevisone-vl-unified-vision-fig-02.fQJnmuOY_Z2lxaaF.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/wevisone-vl-unified-vision-fig-03.DV58fz0z_2wzH6I.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/wevisone-vl-unified-vision-banner.JTgm7Tyw.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 3,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/wevisone-vl-unified-vision/",
+    "/blog/layerfs-v1-recursive-agent-filesystem/",
+    "/blog/realtime-venus-fulldup-interactive-dual-loop-local-deploy/",
+    "/blog/pagesift-rust-crawler/",
+    "/blog/jakub-krehel-interface-skills/",
+    "/blog/ra-jit-blaze-rust-live-builds/",
+    "/blog/town-townie-research/",
+    "/blog/pstack-engineering-workflow/"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "checks": {
+    "title": true,
+    "titleEn": true,
+    "description": true,
+    "descriptionEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "pubDate": true,
+    "updatedDate": true,
+    "category": true,
+    "heroImage": true,
+    "tags": true,
+    "bilingual": true,
+    "copyrightBoth": true,
+    "threeIllustrationsBoth": true,
+    "questionHeadingsBoth": true,
+    "primarySourcesBoth": true,
+    "verifiedVsUnverifiedSeparated": true,
+    "noModelPerformanceClaim": true,
+    "canonicalVisibleBoth": true
+  },
+  "editorialNotes": [
+    "Official quality scores not our reproduction",
+    "No support found for circulated latency/VRAM claims",
+    "Parser smoke tests distinguished from model performance",
+    "Weight HTTP headers distinguished from runtime memory",
+    "Source-matched official rabbit matting cover credited"
+  ]
+}

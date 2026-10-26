@@ -1118,3 +1118,9 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 - Official157snapshots100MB19.9x andfsbench1.71x remain scoped v1.0 single-sample claims. Automatic checkpoints require integration; Disposable still lacks crash/powerloss durability. Highlighted release verification gaps rather than inventing Linux/runtime coverage.
 - Deploy2e59de6f; page/fiveimagevariants200,list25,carousel1; two semantic vectors upserted,old2deleted,livequerymatched updated Chinese title. Original KB source refreshed in place.
 - Old WeChat creation credential retained unchanged; currentdraft/get40007,remote5draftsnomatch,publishedAPI48001. recorded/currentstatusunverified; no duplicate draft/add. Task9cffcb0b-0e14-4598-b68b-c7da89f07dee.
+
+## 2026-10-26 — WeVisOne-VL unified perception audit
+
+- Published https://blog.mushroom.cv/blog/wevisone-vl-unified-vision/ after exactTencent repo/entity/HF/arxiv dedup found rawKBonly; botgenericapache/arxiv duplicate rejected. Pin9a6bcd85404505df0d05cfb5d97512ccacf35dee,paper2610.31329v1. Seven tasks/Qwen3VL/9.6Mpixeldecoderverified; no support found in reviewed primarysources for circulated4090 152->48ms/10.8->6GB comparison, keptunverified.
+- M4lightverification ran two upstream parsertests plusNoneempty check, no modelinference/quality/performance claims. Header-only2B F16/4B F32storageaudit distinguished from runtimeVRAM; auto device lacksMPS andCPUforcesFP32. F1Mean/IoU/MAD/rejection scopes explained.
+- Officialrabbitmattingcoverwithcredit/provenance+3XiaoMfigures;SEO/build/deployac8738f2,page/fiveimages200,list3carousel1. Semantic2vectors/liveENquerymatched. RemoteWeChatfulltext/ordered3images/cover/metadata/commentscanonical verified. Missingcanonicalfoundatverification fixed on SAMEverifieddraftID with draft/update, reused3imageURLs/cover, no duplicateadd. Taskc0d99021-2ec9-4469-a25a-ec9639139019.
