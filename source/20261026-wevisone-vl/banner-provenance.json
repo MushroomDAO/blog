@@ -1,0 +1,16 @@
+{
+  "origin": "official README teaser, rabbit alpha-matting panel only",
+  "source": "https://raw.githubusercontent.com/Tencent/WeVisOne-VL/9a6bcd85404505df0d05cfb5d97512ccacf35dee/assets/teaser.png",
+  "sourceDimensions": [
+    2253,
+    1089
+  ],
+  "crop": [
+    1285,
+    73,
+    938,
+    642
+  ],
+  "purpose": "article-specific illustration of pixel-level alpha matting",
+  "credit": "Tencent WeChat Vision; official qualitative example, not our inference result"
+}

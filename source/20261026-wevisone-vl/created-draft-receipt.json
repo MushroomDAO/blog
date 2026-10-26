@@ -1,0 +1,17 @@
+{
+  "title": "WeVisOne-VL：统一视觉任务的能力与边界",
+  "author": "Mycelium",
+  "digest": "核查七类视觉任务、模型权重与部署边界，流传的4090速度显存对比尚未找到一手依据。",
+  "mediaId": "prCUE631thH1cmNLi42prD5IKoEvZR_2YVOWOzqgUy4KG_qOPfTKsHAn35VnEO6j",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/tencent/wevisone-vl",
+    "huggingface.co/tencent/wevisone-vl-2b",
+    "huggingface.co/tencent/wevisone-vl-4b",
+    "huggingface.co/spaces/hugging-apps",
+    "github.com/tencent/wevisone-vl.git"
+  ],
+  "publishedAt": "2026-10-26T13:03:28.036Z",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/wevisone-vl-unified-vision/",
+  "updatedAt": "2026-10-26T13:05:41.730Z"
+}

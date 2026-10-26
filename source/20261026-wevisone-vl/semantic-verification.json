@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-26T13:04:06.796358+00:00",
+  "query": "WeVisOne-VL seven vision tasks pixel decoder unverified RTX4090 latency memory audit",
+  "matched": [
+    {
+      "article_id": "wevisone-vl-unified-vision",
+      "title": "WeVisOne-VL: Seven Vision Tasks, One Careful Audit",
+      "url": "/blog/wevisone-vl-unified-vision/",
+      "language": "en",
+      "excerpt": "WeVisOne-VL: Seven Vision Tasks, One Careful Audit Audit Tencent WeVisOne-VL: seven vision tasks, 2B/4B weights, a pixel decoder, reported benchmarks, deployment limits and unverified RTX 4090 speed claims. WeVisOne-VL 计算机视觉 OCR 图像分割 开源模型 Does one request produce all seven output",
+      "score": 0.72497326
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "wevisone-vl-unified-vision",
+        "title": "WeVisOne-VL: Seven Vision Tasks, One Careful Audit",
+        "url": "/blog/wevisone-vl-unified-vision/",
+        "language": "en",
+        "excerpt": "WeVisOne-VL: Seven Vision Tasks, One Careful Audit Audit Tencent WeVisOne-VL: seven vision tasks, 2B/4B weights, a pixel decoder, reported benchmarks, deployment limits and unverified RTX 4090 speed claims. WeVisOne-VL 计算机视觉 OCR 图像分割 开源模型 Does one request produce all seven output",
+        "score": 0.72497326
+      },
+      {
+        "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+        "title": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+        "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+        "language": "en",
+        "excerpt": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision OrcaRouter's abliterated (refusal-removed) MLX quantization of Qwen3.8-27B — 672 likes, trending. Architecture: 64-layer hybrid (48 Gated DeltaNet linear attention + 1 full attention every 4 layers), native vision-langu",
+        "score": 0.54362386
+      },
+      {
+        "article_id": "deepseek-v41-flash-1017-uncensored-fp8-teardown",
+        "title": "Teardown of the Uncensored DeepSeek-V4.1-Flash-1017 FP8: 100% HarmBench Compliance, a 3.86pp MMLU Drop, and a 510GB Hardware Wall",
+        "url": "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+        "language": "en",
+        "excerpt": "Teardown of the Uncensored DeepSeek-V4.1-Flash-1017 FP8: 100% HarmBench Compliance, a 3.86pp MMLU Drop, and a 510GB Hardware Wall The uncensored FP8 release of DeepSeek-V4.1-Flash-1017 by dealignai (MIT, 3,808 downloads, 265 likes, created 2026-10-18) self-reports 320/320 HarmBen",
+        "score": 0.5317178
+      },
+      {
+        "article_id": "sensenova-vision-unified-cv-hardware-guide",
+        "title": "SenseNova-Vision：一个7B模型做完所有CV任务，需要什么硬件？",
+        "url": "/blog/sensenova-vision-unified-cv-hardware-guide/",
+        "language": "zh",
+        "excerpt": "SenseNova-Vision：一个7B模型做完所有CV任务，需要什么硬件？ SenseNova-Vision-7B-MoT 把目标检测、深度估计、分割、3D重建等所有CV任务统一成一个生成模型。Web Demo跑起来需要1张80GB显卡，完整benchmark需要8张80GB，训练至少2台8×80GB机器。详细硬件配置指南。 计算机视觉 多模态 AI模型 GPU 硬件 深度估计 目标检测 分割 开源 一、一个模型，所有计算机视觉任务 二、硬件需求：不同使用场景的配置要求 场景 1：单图推理（本地测试） 场景 2：Web Demo（Gradio 界面）",
+        "score": 0.5221664
+      },
+      {
+        "article_id": "glimpse-visual-reasoning-game-bug-review",
+        "title": "Glimpse：让视频验收回到具体画面",
+        "url": "/blog/glimpse-visual-reasoning-game-bug-review/",
+        "language": "zh",
+        "excerpt": "Glimpse：让视频验收回到具体画面 Glimpse 是 Elorian 发布的视觉推理研究预览，可回看视频并定位疑点。本文核实官方入口、公开评测和开源状态，区分游戏验收案例与可复现基准，提供录像分段、规则输入、时间戳证据、人工复核及缺陷回归的工程方案。视觉定位不等于源码定位，模型信心也不是经过校准的正确率，所有流程建议与未验证范围均有明确说明。 Vision Language Model Video Understanding Game QA AI Agent Glimpse 开源了吗，应该去哪里找？ 公开结果能证明它最擅长找游戏 Bug 吗？ 怎样",
+        "score": 0.5187376
+      },
+      {
+        "article_id": "ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda",
+        "title": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA",
+        "url": "/blog/ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda/",
+        "language": "en",
+        "excerpt": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA sizzlecar/ferrum-infer-rs is a pure-Rust local inference engine: one binary, no Python runtime, with Apple Silicon Metal and NVIDIA CUDA served by the same runtime behind OpenAI-compatible ",
+        "score": 0.51608557
+      },
+      {
+        "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+        "title": "ParallelHue: A Speculative-Decoding Visualizer That Refuses to Color What It Can't Prove",
+        "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+        "language": "en",
+        "excerpt": "ParallelHue: A Speculative-Decoding Visualizer That Refuses to Color What It Can't Prove hikarioyama/ParallelHue (MIT, 35 stars, zero runtime dependencies) renders concurrent local-LLM streams in the terminal and colors them by verified generation step only when scheduler and det",
+        "score": 0.5134505
+      },
+      {
+        "article_id": "lemmalog-datalog-engine-llm-agent-memory",
+        "title": "Lemmalog: Agent Memory as a Deductive Database, Not a Better Vector Store",
+        "url": "/blog/lemmalog-datalog-engine-llm-agent-memory/",
+        "language": "en",
+        "excerpt": "Lemmalog: Agent Memory as a Deductive Database, Not a Better Vector Store JordyZomer/lemmalog, one week old: a Rust Datalog engine treating agent memory as a deductive database — the LLM only asserts facts, rules derive closures, temporal projection and contradiction detection. B",
+        "score": 0.5116357
+      },
+      {
+        "article_id": "virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac",
+        "title": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI",
+        "url": "/blog/virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac/",
+        "language": "zh",
+        "excerpt": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI hsj576/virtual-ai-infra-team 不是多 agent 角色扮演，而是一个给本地大模型做「自动测速、升级、回滚」的控制器：模型只提计划，确定性代码判决。README 的 18.14→37.52 tok/s（+106.84%）我们重算无误，但这个中位数来自代码题；按提示词拆开，散文题只快 50.6%，9 个样本的均值是 +89%。167 个测试本机全过，4 道质量门禁题被我们一句话骗过，候选库里只有 1",
+        "score": 0.5095141
+      },
+      {
+        "article_id": "deepseek-v4-flash-local-inference-guide",
+        "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+        "url": "/blog/deepseek-v4-flash-local-inference-guide/",
+        "language": "zh",
+        "excerpt": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册 DeepSeek V4-Flash 284B MoE 模型本地推理完全指南：为什么「13B 激活参数」不等于 13B 内存需求，四档硬件方案对比，以及 Mac M4 Ultra、多卡 GPU、vLLM 的实操步骤。 DeepSeek V4 本地推理 MoE vLLM Mac M4 Ultra GPU推理 量化 llama.cpp AI部署 一、先搞清楚：MoE 的内存陷阱 \"激活参数\" ≠ \"推理内存\" V4-Flash 的实际内存占用 额外内存开销 二、四档硬件方案 方案 A：Mac A",
+        "score": 0.50839263
+      }
+    ]
+  }
+}

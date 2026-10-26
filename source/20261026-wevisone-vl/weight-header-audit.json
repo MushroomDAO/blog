@@ -1,0 +1,18 @@
+{
+  "2B": {
+    "headerBytes": 75784,
+    "tensorElements": 2441744384,
+    "elementsByDtype": {
+      "F16": 2441744384
+    },
+    "scope": "safetensors HTTP header only, no model inference"
+  },
+  "4B": {
+    "headerBytes": 88240,
+    "tensorElements": 4830581248,
+    "elementsByDtype": {
+      "F32": 4830581248
+    },
+    "scope": "safetensors HTTP header only, no model inference"
+  }
+}
