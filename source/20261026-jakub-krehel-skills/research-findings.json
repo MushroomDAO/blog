@@ -1,0 +1,18 @@
+{
+  "installedCount": 14,
+  "allFileBytesMatch": true,
+  "reference": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+  "explicitSkills": [
+    "break",
+    "explain-interface",
+    "interface-review",
+    "state-machine",
+    "variant"
+  ],
+  "testScriptsPassed": 5,
+  "geometryChecksPassed": 28,
+  "browserEndToEndTested": false,
+  "AIQualityMeasured": false,
+  "moduleScopeDifferenceRetained": true,
+  "nextTurnAvailability": true
+}

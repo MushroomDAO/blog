@@ -1,0 +1,13 @@
+=== [adopt-banner] jakub-krehel-interface-skills ← 1 source image(s) → src/assets/images/jakub-krehel-interface-skills-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← source/20261026-jakub-krehel-skills/official-hero.png
+=== [adopt-banner] done: src/assets/images/jakub-krehel-interface-skills-banner.jpg (1200x630, 15223B) ===
+=== [verify-banner] src/assets/images/jakub-krehel-interface-skills-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=source/20261026-jakub-krehel-skills/official-hero.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 15223B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/jakub-krehel-interface-skills-banner.jpg ===
+PATH: src/assets/images/jakub-krehel-interface-skills-banner.jpg

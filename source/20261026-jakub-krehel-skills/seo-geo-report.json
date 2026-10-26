@@ -1,0 +1,18 @@
+{
+  "bilingual": true,
+  "requiredFrontmatter": true,
+  "copyrightBoth": true,
+  "canonicalBoth": true,
+  "threeFiguresBoth": true,
+  "FAQBoth": true,
+  "questionHeadingsBoth": true,
+  "descriptionLengths": {
+    "description": 159,
+    "descriptionEn": 160
+  },
+  "BLUFBoth": true,
+  "primarySources": true,
+  "ownVerification": "14 installs/filecomparison;5helper scripts and28geometrychecks outside ESMblog",
+  "limits": "No AIquality benchmark,browserexport orFigma trial; module-scope failure retained",
+  "thirdPartyCoverRights": true
+}
