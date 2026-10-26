@@ -1,0 +1,98 @@
+{
+  "article_slug": "jakub-krehel-interface-skills",
+  "created_at": "2026-10-26T00:36:35.770172+00:00",
+  "count": 3,
+  "generation_tool": "built-in image_gen.imagegen; three separate generation calls",
+  "transparent_background": false,
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "references_read": [
+    "style-dna.md",
+    "mushroom-ip.md",
+    "composition-patterns.md",
+    "prompt-template.md",
+    "qa-checklist.md"
+  ],
+  "compression": {
+    "library": "Pillow 12.3.0",
+    "steps": [
+      "Convert original to RGB",
+      "Resize to 1280x720 with LANCZOS",
+      "Normalize pixels whose minimum RGB channel is at least 248 to pure white",
+      "Apply 3x3 median filter for compression denoising",
+      "MEDIANCUT palette quantization without dithering: 96 colors for figures 01 and 03; 80 for figure 02",
+      "Save PNG with optimize=True and compress_level=9"
+    ],
+    "strict_max_bytes_exclusive": 90000
+  },
+  "figures": [
+    {
+      "id": "fig-01",
+      "topic": "Domain-specific tools tune one interface",
+      "alt_zh": "红帽白点的小M用字形、颜色、间距和键盘焦点工具调整同一个界面。",
+      "prompt": "source/20261026-jakub-krehel-skills/generated-assets/fig-01-prompt.txt",
+      "original_png": "source/20261026-jakub-krehel-skills/generated-assets/fig-01-original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1240754,
+      "original_sha256": "871018d2f6448a71b10517632cd1c6ed7b3591cf21ac92fee8f88bc3e7829843",
+      "generation_source_path": "/Users/jason/.codex/generated_images/01a1759f-e2d8-7573-a096-c41f543a0632/exec-6a435657-1b32-4c13-b18e-2357fd9b05be.png",
+      "final_png": "src/assets/images/jakub-krehel-interface-skills-fig-01.png",
+      "final_dimensions": [
+        1280,
+        720
+      ],
+      "final_bytes": 66128,
+      "final_sha256": "d954066da9e8c7943f30a923361aa923385a6b2ec0906defc66e472d5b0a2f07",
+      "palette_colors": 96,
+      "visual_inspection": "Passed: final compressed PNG opened and inspected; core action, red cap with white spots, cream stem, short Chinese labels, white background and readable boundaries retained."
+    },
+    {
+      "id": "fig-02",
+      "topic": "Evidence attached to a specific defect; taste and unseen areas remain separate",
+      "alt_zh": "小M用放大镜检查坏按钮并挂上证据票，旁边分别标明偏好与未验证区域。",
+      "prompt": "source/20261026-jakub-krehel-skills/generated-assets/fig-02-prompt.txt",
+      "original_png": "source/20261026-jakub-krehel-skills/generated-assets/fig-02-original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1300240,
+      "original_sha256": "600982c3c2f729ce3339fc1172e124d6b8daf725e3628602c15046b5fb07b3ae",
+      "generation_source_path": "/Users/jason/.codex/generated_images/01a1759f-e2d8-7573-a096-c41f543a0632/exec-c5f48b76-853e-4faa-8f55-0fd6bce44993.png",
+      "final_png": "src/assets/images/jakub-krehel-interface-skills-fig-02.png",
+      "final_dimensions": [
+        1280,
+        720
+      ],
+      "final_bytes": 86506,
+      "final_sha256": "4607809b1f8d0c298bf33be4a0dc171d494b0f25c45072e6fa740fc035343011",
+      "palette_colors": 80,
+      "visual_inspection": "Passed: final compressed PNG opened and inspected; core action, red cap with white spots, cream stem, short Chinese labels, white background and readable boundaries retained."
+    },
+    {
+      "id": "fig-03",
+      "topic": "Expose component states before polishing; distinguish real component from fake harness",
+      "alt_zh": "小M转动空态、加载、出错、完成四态轮，虚线另一侧是假支架，抛光布暂放脚边。",
+      "prompt": "source/20261026-jakub-krehel-skills/generated-assets/fig-03-prompt.txt",
+      "original_png": "source/20261026-jakub-krehel-skills/generated-assets/fig-03-original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1291901,
+      "original_sha256": "f57f77afd87e261bc98bf879b3b70fca334a37e499910cb878c617a900c62eb1",
+      "generation_source_path": "/Users/jason/.codex/generated_images/01a1759f-e2d8-7573-a096-c41f543a0632/exec-4b8ab4a7-cad6-454e-b31c-1eed47513c7b.png",
+      "final_png": "src/assets/images/jakub-krehel-interface-skills-fig-03.png",
+      "final_dimensions": [
+        1280,
+        720
+      ],
+      "final_bytes": 79244,
+      "final_sha256": "c8f45e54e81712762f969a090c597391e5d1e32c709524baa5198bdb40eaee4b",
+      "palette_colors": 96,
+      "visual_inspection": "Passed: final compressed PNG opened and inspected; core action, red cap with white spots, cream stem, short Chinese labels, white background and readable boundaries retained."
+    }
+  ]
+}

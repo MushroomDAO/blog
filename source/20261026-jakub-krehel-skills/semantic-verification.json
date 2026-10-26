@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-26T00:40:26.561841+00:00",
+  "query": "Jakub Krehel interface skills fourteen better-interface typography accessibility",
+  "matched": [
+    {
+      "article_id": "jakub-krehel-interface-skills",
+      "title": "Jakub Krehel's 14 Skills for Better Interfaces",
+      "url": "/blog/jakub-krehel-interface-skills/",
+      "language": "en",
+      "excerpt": "Jakub Krehel's 14 Skills for Better Interfaces A guide to Jakub Krehel's 14 interface skills: installation, evidence-based reviews, UI states and technical drawings, with local checks and integration limits. Agent Skills 界面设计 设计工程 无障碍 Codex Claude Code What does the installation ",
+      "score": 0.71703154
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "jakub-krehel-interface-skills",
+        "title": "Jakub Krehel's 14 Skills for Better Interfaces",
+        "url": "/blog/jakub-krehel-interface-skills/",
+        "language": "en",
+        "excerpt": "Jakub Krehel's 14 Skills for Better Interfaces A guide to Jakub Krehel's 14 interface skills: installation, evidence-based reviews, UI states and technical drawings, with local checks and integration limits. Agent Skills 界面设计 设计工程 无障碍 Codex Claude Code What does the installation ",
+        "score": 0.71703154
+      },
+      {
+        "article_id": "nature-skills-yuan1z0825-academic-paper-skill-collection",
+        "title": "nature-skills: 18 AI Skills for the Whole Academic Paper Workflow, 34k Stars in Two Months",
+        "url": "/blog/nature-skills-yuan1z0825-academic-paper-skill-collection/",
+        "language": "en",
+        "excerpt": "nature-skills: 18 AI Skills for the Whole Academic Paper Workflow, 34k Stars in Two Months nature-skills is a community-built collection of 18 AI skills for the full academic paper workflow, started by Yuan Yizhe. Skills cover figures, polishing, writing, review response, citatio",
+        "score": 0.52616924
+      },
+      {
+        "article_id": "jev-browser-use-jev-clicks-codex-thinks-browser-automation-skill",
+        "title": "Jev Browser Use：Jev 负责点击导航，Codex 负责思考验收，浏览器自动化快 5-10 倍",
+        "url": "/blog/jev-browser-use-jev-clicks-codex-thinks-browser-automation-skill/",
+        "language": "zh",
+        "excerpt": "Jev Browser Use：Jev 负责点击导航，Codex 负责思考验收，浏览器自动化快 5-10 倍 wy-coliney/jev-browser-use，MIT，JavaScript，Codex/Claude Code Skill。把浏览器操作分工：Jev（TypeSafe 决策模型）负责点击/滚动/跳转/切换，Codex 负责输入文字/读页面/判断/验收。动作循环不增加额外模型轮次，实测 EZCollegeApp 工作流快 5-10 倍，100K token 成本 $0.0042 vs GPT-6 Astra $1.00。 browser-a",
+        "score": 0.5258757
+      },
+      {
+        "article_id": "juju-content-illustrations-skill-ai-visual-content-guide",
+        "title": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画",
+        "url": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
+        "language": "zh",
+        "excerpt": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画 卷卷整理研究所 × 内容插画 Skill。一句话触发，AI 自动把文章、教程、方法论转成白底轻线稿的手绘卡片——主角是白色比熊卷卷，最多生成 10 张，支持 6 种比例，颜色有语义，场景有隐喻。60 stars，MIT 开源，可装进 Claude Code 或 Codex 直接用。 AgentSkill AI生图 内容创作 ClaudeCode 插画 手绘风格 创作者工具 开源 Skill 卷卷是谁 它能做什么 支持的 6 种比例 视觉语",
+        "score": 0.5188132
+      },
+      {
+        "article_id": "ian-xiaohei-illustrations-beginner-guide",
+        "title": "Illustrate Your Articles Without Drawing: A Beginner's Guide to ian-xiaohei-illustrations",
+        "url": "/blog/ian-xiaohei-illustrations-beginner-guide/",
+        "language": "en",
+        "excerpt": "Illustrate Your Articles Without Drawing: A Beginner's Guide to ian-xiaohei-illustrations ian-xiaohei-illustrations is an Agent Skill for Codex / Claude Code that turns your Chinese articles into 16:9 white-background hand-drawn illustrations, starring a small black creature name",
+        "score": 0.5162843
+      },
+      {
+        "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+        "title": "\"Don't Submit Skills You Created Three Hours Ago\": A Cross-Vendor Curated List and Its Four Quality Criteria",
+        "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+        "language": "en",
+        "excerpt": "\"Don't Submit Skills You Created Three Hours Ago\": A Cross-Vendor Curated List and Its Four Quality Criteria A hand-curated list of 1,497 agent skills — 33.8k stars, MIT, explicitly billed as hand-picked, not AI-slop generated. Two things make it genuinely useful: a table of skil",
+        "score": 0.5127026
+      },
+      {
+        "article_id": "jev-skill-agent-decision-9-skills-90-scenarios-openrouter",
+        "title": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查",
+        "url": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
+        "language": "zh",
+        "excerpt": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查 MIT，34 stars，今天刚开源。SKILL.md 格式，9 个专域 Skill 覆盖 90 个标注场景：分诊、文档证据、UI 操控、工具路由、代码审查等。需 OpenRouter API key 调 TypeSafe Jev，无本地权重。显式禁止无 key 时静默降级，只能做 agent simulation 且必须标注。 agent-skills jev decision-model routing claude-code open-s",
+        "score": 0.51109207
+      },
+      {
+        "article_id": "xiaohongshu-operations-codex-skills-workflow-systematic",
+        "title": "Can Xiaohongshu Operations Become a Workflow? Six Codex Skills Offer an Answer",
+        "url": "/blog/xiaohongshu-operations-codex-skills-workflow-systematic/",
+        "language": "en",
+        "excerpt": "Can Xiaohongshu Operations Become a Workflow? Six Codex Skills Offer an Answer 小红书 Codex Skills 内容运营 工作流 AI工具 自动化 Can Xiaohongshu Operations Be Systematized? 6 Codex Skills Offer an Answer What Problem It Solves 6 Skills, Each Solving One Thing `xiaohongshu-suite`: Parent Skill, ",
+        "score": 0.5104826
+      },
+      {
+        "article_id": "anatomy-claude-interactive-isometric-figures",
+        "title": "Anatomy: Claude Skills for Interactive Machine Explainers",
+        "url": "/blog/anatomy-claude-interactive-isometric-figures/",
+        "language": "en",
+        "excerpt": "Anatomy: Claude Skills for Interactive Machine Explainers Anatomy turns technical concepts into interactive machines with Claude Code. Explore 33 gallery figures, SVG outputs, local sample checks, and build limits. Anatomy Claude Code Agent Skills SVG 交互可视化 Why turn a concept int",
+        "score": 0.5102517
+      },
+      {
+        "article_id": "img2threejs-photo-to-threejs-code",
+        "title": "img2threejs：给AI一张图，拿回一个可动的Three.js 3D代码",
+        "url": "/blog/img2threejs-photo-to-threejs-code/",
+        "language": "zh",
+        "excerpt": "img2threejs：给AI一张图，拿回一个可动的Three.js 3D代码 16天 8591 星。img2threejs 给 Claude Code 加了一个 /img2threejs 技能：输入一张参考图，输出的不是 mesh 文件，而是纯 TypeScript 代码，从几何基元和程序化着色器重新建造这个物体，带运行时层级、可以直接动画。 Three.js 3D生成 WebGL Claude Code AI工具 程序化生成 generative Mycelium 核心区别：代码，不是网格 8 阶段流水线：细节驱动的雕刻 CS2 武器：极端质量测试 ",
+        "score": 0.50951093
+      }
+    ]
+  }
+}

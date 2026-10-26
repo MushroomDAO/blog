@@ -1,0 +1,12 @@
+{
+  "repository": "jakubkrehel/skills",
+  "ref": "592aedc44d7d5b3e29740984252902f3e5402a1c",
+  "installer": "Codexskill-installerinstall-skill-from-github.py",
+  "scope": "personalCodex",
+  "destination": "/Users/jason/.codex/skills",
+  "count": 14,
+  "filesMatchPinnedSource": true,
+  "existingSkillOverwrites": 0,
+  "blogDependenciesChanged": false,
+  "available": "nextturn"
+}
