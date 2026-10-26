@@ -1,0 +1,44 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6adea759-75934ad4-34a7c539）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 905 篇 + 公众号草稿箱 5 条 + 本地发布记录 888 条 + MemPalace 3332 抽屉
+
+── 查：https://huggingface.co/inclusionAI/Realtime-Venus
+   ❌ [BLOG  ] Realtime-Venus：全双工 AI 交互系统本地部署指南，双 Loop 架构 + 9B Omni 模型开源
+      一手源相同: inclusionai/realtime-venus
+   ❌ [发过 2026-09-20] Realtime-Venus：全双工 AI 交互系统本地部署指南，双 Loop 架构 + 9B Omni 模型开源
+      一手源相同: inclusionai/realtime-venus
+   ❌ [知识库] --- name: project_realtime_venus description: Realtime-Venus
+      一手源相同: inclusionai/realtime-venus
+   ⚠️  [知识库] blog/general/project_realtime_venus|Harness;Realtime;Venus;A
+      标题相似度 33%
+
+── 查：Realtime-Venus
+   ❌ [BLOG  ] Realtime-Venus：全双工 AI 交互系统本地部署指南，双 Loop 架构 + 9B Omni 模型开源
+      正文出现实体名「realtime-venus」
+   ❌ [发过 2026-09-20] Realtime-Venus：全双工 AI 交互系统本地部署指南，双 Loop 架构 + 9B Omni 模型开源
+      正文出现实体名「realtime-venus」
+   ❌ [知识库] --- name: project_realtime_venus description: Realtime-Venus
+      正文出现实体名「realtime-venus」
+   ❌ [知识库] **：双 Loop - Loop 1（前台）：持续感知 + 音视频理解 + 实时响应 + 主动打招呼 - Loop 2（
+      正文出现实体名「realtime-venus」
+   ⚠️  [知识库] blog/general/project_realtime_venus|Harness;Realtime;Venus;A
+      标题相似度 40%
+   ❌ [知识库] ndmarker](project_mediapipe_pose_landmarker.md) — 37K stars；
+      正文出现实体名「realtime-venus」
+   ❌ [知识库] ，桌面操控降格为工具调用；表单100% - [jev-skill](project_jev_skill.md) — 34
+      正文出现实体名「realtime-venus」
+   ❌ [知识库] # 来源： Hugging Face inclusionAI/R  **Summary**: 来源： Hugging F
+      正文出现实体名「realtime-venus」
+
+── 查：https://arxiv.org/abs/2609.13814
+   ✅ 四本账都没查到
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

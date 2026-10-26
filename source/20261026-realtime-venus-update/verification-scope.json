@@ -1,0 +1,35 @@
+{
+  "checkedPaths": [
+    "download_models.py",
+    "install.sh",
+    "start.sh",
+    "config.json",
+    "harness/config.json",
+    "frontend/Realtime-Venus-Omni/offline_chat.py",
+    "frontend/Realtime-Venus-Omni/duplex_chat.py",
+    "frontend/Realtime-Venus-Audio/audio_offline_chat.py",
+    "frontend/Realtime-Venus-Audio/audio_duplex_chat.py",
+    "requirements.txt"
+  ],
+  "pathCheck": "all present in pinned GitHub tree",
+  "benchmarkCheck": "reviewed report v3 tables 2, 3, 4, 6, 8; no GPU reproduction",
+  "memoryGainPercentagePoints": 5.88,
+  "sourceSha256": {
+    "upstream-frontend--Realtime-Venus-Audio--README.md": "a3b6e96402ec5a7a72d2187cb950f31750711e0200c0966eb646f35127cd399d",
+    "upstream-README.md": "74cbb30a252ddceca7dba716175b524d24a9baac9fe4172baf863a646813370b",
+    "hf-metadata.json": "a885b9befaaee7355f01484b32f4c391128fc9718c097f439ccd58b2ce5b4e35",
+    "upstream-demos--README.md": "496b9069014203edb33135d282a7d3bec7ab8c7575d26970a9fbba13e4ce2e39",
+    "upstream-harness--README.md": "5cf4e05a7c7513a3e281804f52fcffe985ce34ef5a4ddeed76d186fd5128a36c",
+    "model-card.txt": "aa05864258ba44881bdfe5481bd23d99a8bf0d9952e8d79286b004302409db89",
+    "upstream-download_models.py": "b12604f110cb9e2bfc365a6137f8ae390d80c0cae0d6286e231bfd7ec303e176",
+    "upstream-LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "upstream-frontend--Realtime-Venus-Omni--README.md": "2d63cd922f39309000d3db187f3cdf448eaefb2d4490af3f59182e345dcb3e05",
+    "paper.html": "8c5202b0ed507be64d1fc5658c5b8c0c68fa23de17d4ea2e6f1dc52cf71564e3",
+    "upstream-config.json": "065db6fc343228ae38d256f9036f84dc24bd4072b832f78ec2ebc2c89512e7f6"
+  },
+  "limitations": [
+    "M4 16GB source/metadata audit only",
+    "No model inference, GPU memory or latency measurement",
+    "Root README versus component Demo README mismatch retained explicitly"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-26T01:13:10.285599+00:00",
+  "hfRevision": "007097ab5d304ff1fff154bedf415b088717ec8d",
+  "checkpointSizes": {
+    "Realtime-Venus-Omni/": {
+      "safetensorsBytes": 18743802932,
+      "completeDirectoryBytes": 20084171408
+    },
+    "Realtime-Venus-Audio/": {
+      "safetensorsBytes": 18743802932,
+      "completeDirectoryBytes": 19993734943
+    }
+  },
+  "measurement": "Hub file metadata only; not VRAM or inference",
+  "repoRevision": "e53ae8d5bde92b30364b26f2e4c13c9db7a8ffea",
+  "paperVersion": "2609.13814v3",
+  "originalPublication": "2026-09-20",
+  "action": "Correct existing article in place; do not create a new route or draft",
+  "sources": [
+    "https://huggingface.co/inclusionAI/Realtime-Venus",
+    "https://github.com/inclusionAI/Realtime-Venus",
+    "https://arxiv.org/abs/2609.13814v3"
+  ],
+  "documentConflict": "root README says Omni-only demo; component Demo README documents Audio selection"
+}
