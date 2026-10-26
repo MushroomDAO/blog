@@ -1,0 +1,14 @@
+{
+  "status": "source-unavailable",
+  "checkedAt": "2026-10-26T00:46:46.528886+00:00",
+  "sourceURL": "https://xhslink.cn/o/1Fn5G8uKa9b",
+  "noteId": "6ade01f9000000002a028b03",
+  "reason": "Public fetch and Jina only return login page; existing xhs0.6.4 status timed out and own process group stopped. AgentReach skill read from official repository; command unavailable, doctor could not run; no install/update/login.",
+  "bodyObtained": false,
+  "imagesObtained": false,
+  "publishedArticle": false,
+  "wechatDraftCreated": false,
+  "retryRule": "Obtain accessible note/originalimages first; do not fabricate episode or create duplicate article.",
+  "archivedAt": "/Users/jason/.heinu1-bot/jobs/2d056360-ba0e-4d5f-b29c-c47b4595257f/failed-sources/xhs-podcast",
+  "note": "Kept outside source scanner input to avoid publishing a login shell or failure log as an article."
+}

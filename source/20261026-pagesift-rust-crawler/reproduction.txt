@@ -1,0 +1,3 @@
+Create isolatedPython3.12venv;pip install pagesift==0.20.0. Run pagesift.convert onoffline-fixture.html withonly_main_content=True,url=https://example.org/fixture;assertuniquemarkerpresent,scriptmarkerabsent,titlecorrect,metadataisdict. Savedoutputoffline-output.md isactualresult.
+Then pagesift.scrape("https://blog.mushroom.cv/blog/jakub-krehel-interface-skills/",formats=["markdown"],timeout=25000),recordstatus,engine,title,expectedmarker. Originaloutputretainedlocalpublic-page-output.txt,notcommittedthirdpartyfullarticle.
+Do notinclude metadata in formats or treatdictasattribute. Timeoutmilliseconds;first25attemptwasoperatorunitmistake. Current installedpackageversion0.20.0not0.70CLIcore. No timingloop/perfclaim. local-verification.json retainserrorsandcorrectedresult.

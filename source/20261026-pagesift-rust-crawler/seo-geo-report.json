@@ -1,0 +1,19 @@
+{
+  "bilingual": true,
+  "requiredFrontmatter": true,
+  "copyrightBoth": true,
+  "canonicalBoth": true,
+  "threeFiguresBoth": true,
+  "FAQBoth": true,
+  "questionHeadingsBoth": true,
+  "BLUFBoth": true,
+  "descriptionLengths": {
+    "description": 155,
+    "descriptionEn": 157
+  },
+  "primarySources": true,
+  "upstreamVsOwnNumbers": "Authors0.60countsderivedarithmeticonly;0.70syntheticseparate;ownfunctionaltestsnotbenchmark",
+  "versionBoundaries": "repo0.70/Python0.20;metadataoptionexamplemismatch;timeoutms",
+  "sourceFailure": "SeparateXHSfailurearchived;notinventedpodcast",
+  "thirdPartyRights": true
+}
