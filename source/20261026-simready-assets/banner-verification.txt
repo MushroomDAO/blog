@@ -1,0 +1,15 @@
+=== [adopt-banner] nvidia-simready-assets-audit ← 2 source image(s) → src/assets/images/nvidia-simready-assets-audit-banner.jpg (1200x630) ===
+  tile 1: 600x630  ← /Users/jason/.heinu1-bot/jobs/d254dd11-da48-487a-aef4-1c92cc08876a/verification/box_corrugated_brown_b08--simready_usd--.thumbs--sm_box_corrugated_brown_b08_01_thumbnail.png
+  tile 2: 600x630  ← /Users/jason/.heinu1-bot/jobs/d254dd11-da48-487a-aef4-1c92cc08876a/verification/engineAssembly_v6_engine_a01--simready_usd--.thumbs--sm_engineAssembly_v6_engine_a01_01_thumbnail.png
+=== [adopt-banner] done: src/assets/images/nvidia-simready-assets-audit-banner.jpg (1200x630, 77357B) ===
+=== [verify-banner] src/assets/images/nvidia-simready-assets-audit-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/Users/jason/.heinu1-bot/jobs/d254dd11-da48-487a-aef4-1c92cc08876a/verification/box_corrugated_brown_b08--simready_usd--.thumbs--sm_box_corrugated_brown_b08_01_thumbnail.png,/Users/jason/.heinu1-bot/jobs/d254dd11-da48-487a-aef4-1c92cc08876a/verification/engineAssembly_v6_engine_a01--simready_usd--.thumbs--sm_engineAssembly_v6_engine_a01_01_thumbnail.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 77357B (< 99000B)
+  WARN text: 3 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: 81-A03 | Dinghà Trin | The ber cannet be
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/nvidia-simready-assets-audit-banner.jpg ===
+PATH: src/assets/images/nvidia-simready-assets-audit-banner.jpg

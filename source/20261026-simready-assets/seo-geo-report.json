@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "checks": {
+    "title": true,
+    "titleEn": true,
+    "description": true,
+    "descriptionEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "pubDate": true,
+    "updatedDate": true,
+    "category": true,
+    "tags": true,
+    "heroImage": true,
+    "bilingual": true,
+    "copyrightBoth": true,
+    "threeFiguresBoth": true,
+    "questionHeadingsBoth": true,
+    "canonicalVisibleBoth": true,
+    "primarySourcesBoth": true,
+    "scopeAndLimits": true
+  },
+  "notes": [
+    "Full root directory count versus UI filesize and truncated metadata separated",
+    "One package with BOM/field/composition audit, no physics engines run",
+    "Package evidence distinguished from embedded dated nonblocking failures",
+    "SampleCCBY licenses checked; no blanket license statement"
+  ]
+}
