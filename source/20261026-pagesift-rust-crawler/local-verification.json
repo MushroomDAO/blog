@@ -1,0 +1,28 @@
+{
+  "version": "0.20.0",
+  "python": "3.12.14",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "offlineSuccess": true,
+  "articleMarkerRetained": true,
+  "scriptMarkerAbsent": true,
+  "metadataIsDict": true,
+  "title": "PageSift local fixture",
+  "markdownLength": 3362,
+  "initialPublicAttempt": {
+    "errorType": "UnsupportedOption",
+    "error": "UNSUPPORTED_OPTION: format \"metadata\" is not supported (supported: markdown, html, raw_html, links, images)"
+  },
+  "incorrectTimeoutAttempt": {
+    "errorType": "InvalidRequest",
+    "error": "INVALID_REQUEST: timeout is in milliseconds and must be at least 1000"
+  },
+  "publicPage": {
+    "success": true,
+    "status": 200,
+    "engine": "http",
+    "title": "Jakub Krehel 的 14 项界面 Skill：把设计细节变成可检查的工程流程",
+    "markerRetained": true,
+    "metadataIsDict": true,
+    "markdownLength": 18634
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "article_slug": "pagesift-rust-crawler",
+  "created_date": "2026-10-26",
+  "requested_count": 3,
+  "generated_count": 3,
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "references_read": [
+    "style-dna.md",
+    "mushroom-ip.md",
+    "composition-patterns.md",
+    "prompt-template.md",
+    "qa-checklist.md"
+  ],
+  "originals_preserved": true,
+  "figures": [
+    {
+      "figure": 1,
+      "generator": "built-in image_gen.imagegen; separate call per figure",
+      "generation_source": "/Users/jason/.codex/generated_images/01a175ac-8f3c-7080-b3c5-4651dbf9ef60/exec-a7e093d2-32ad-4ca3-87b4-bbca3ebaa5e8.png",
+      "prompt": "prompt-01.txt",
+      "original": "original-01.png",
+      "original_bytes": 1399431,
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "bf00fddb0a5d38b6a04ad081264d09608ce2748284f3fb7825d9bb2bb58432d1",
+      "final": "src/assets/images/pagesift-rust-crawler-fig-01.png",
+      "final_bytes": 84097,
+      "final_dimensions": [
+        1280,
+        720
+      ],
+      "final_sha256": "5111b294f8938797cc23aab73498e57d3937afa48fda91b03ed6cd1274eea351",
+      "compression": {
+        "method": "Lanczos resize to exact 16:9; near-white cleanup (all RGB channels >=245); adaptive indexed PNG, no dithering, optimize level 9",
+        "palette_colors": 128,
+        "attempts": [
+          {
+            "dimensions": [
+              1280,
+              720
+            ],
+            "palette_colors": 128,
+            "bytes": 84097
+          }
+        ]
+      },
+      "qa": {
+        "visual_inspection": "passed",
+        "notes": "XiaoM actively shakes sieve; title and table survive on Markdown sheet; navigation and advertising scraps discarded; sparse legible labels; no long code.",
+        "exact_16_9": true,
+        "under_90000_bytes": true,
+        "white_corners": true,
+        "no_article_banner_git_memory_or_publish_changes": true
+      }
+    },
+    {
+      "figure": 2,
+      "generator": "built-in image_gen.imagegen; separate call per figure",
+      "generation_source": "/Users/jason/.codex/generated_images/01a175ac-8f3c-7080-b3c5-4651dbf9ef60/exec-29893789-1c4c-485f-9e02-480d5bc4581e.png",
+      "prompt": "prompt-02.txt",
+      "original": "original-02.png",
+      "original_bytes": 1253988,
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "627a086e4146a35f7034f1e2a6626f8bb5b531074ae5b1d74997cd49e3e142ef",
+      "final": "src/assets/images/pagesift-rust-crawler-fig-02.png",
+      "final_bytes": 80317,
+      "final_dimensions": [
+        1280,
+        720
+      ],
+      "final_sha256": "1ba4aac2bc038d7d7a4a4abb52b9ce7a6f1bd5afe5ac12e59badc5fb948e192f",
+      "compression": {
+        "method": "Lanczos resize to exact 16:9; near-white cleanup (all RGB channels >=245); adaptive indexed PNG, no dithering, optimize level 9",
+        "palette_colors": 128,
+        "attempts": [
+          {
+            "dimensions": [
+              1280,
+              720
+            ],
+            "palette_colors": 128,
+            "bytes": 80317
+          }
+        ]
+      },
+      "qa": {
+        "visual_inspection": "passed",
+        "notes": "Three separate labeled baskets for scheduled tasks, HTTP 200 pages and useful documents; XiaoM counts with separate notebook columns; no totals, ratios or performance claims.",
+        "exact_16_9": true,
+        "under_90000_bytes": true,
+        "white_corners": true,
+        "no_article_banner_git_memory_or_publish_changes": true
+      }
+    },
+    {
+      "figure": 3,
+      "generator": "built-in image_gen.imagegen; separate call per figure",
+      "generation_source": "/Users/jason/.codex/generated_images/01a175ac-8f3c-7080-b3c5-4651dbf9ef60/exec-ec3de162-b181-4e8f-a1a9-8fd85d0b115e.png",
+      "prompt": "prompt-03.txt",
+      "original": "original-03.png",
+      "original_bytes": 1148099,
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "aa9a9f0e3850adaa062527f3afcab6a3e67598233b588bf93b9e5069a5cee1dd",
+      "final": "src/assets/images/pagesift-rust-crawler-fig-03.png",
+      "final_bytes": 53207,
+      "final_dimensions": [
+        1280,
+        720
+      ],
+      "final_sha256": "9d8ac781f67bff73b75386fb21640de431576df4ecbaeb3cc54279026fd22d26",
+      "compression": {
+        "method": "Lanczos resize to exact 16:9; near-white cleanup (all RGB channels >=245); adaptive indexed PNG, no dithering, optimize level 9",
+        "palette_colors": 128,
+        "attempts": [
+          {
+            "dimensions": [
+              1280,
+              720
+            ],
+            "palette_colors": 128,
+            "bytes": 53207
+          }
+        ]
+      },
+      "qa": {
+        "visual_inspection": "passed",
+        "notes": "XiaoM lifts admission gate beside bounded waiting lane; processing table has occupied and empty places; browser station labeled only for JS pages; simple physical scene.",
+        "exact_16_9": true,
+        "under_90000_bytes": true,
+        "white_corners": true,
+        "no_article_banner_git_memory_or_publish_changes": true
+      }
+    }
+  ]
+}

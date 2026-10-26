@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-26T00:52:42.363074+00:00",
+  "articles": [
+    {
+      "slug": "pagesift-rust-crawler",
+      "url": "https://blog.mushroom.cv/blog/pagesift-rust-crawler/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/pagesift-rust-crawler-banner.aDautdtG_1628WJ.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pagesift-rust-crawler-fig-01.BRhPEC_d_Z1lwaxf.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pagesift-rust-crawler-fig-02.DSIn6YKT_1Udcqw.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pagesift-rust-crawler-fig-03.f_ivOjie_ZQTFkY.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pagesift-rust-crawler-banner.aDautdtG.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 2,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/pagesift-rust-crawler/",
+    "/blog/jakub-krehel-interface-skills/",
+    "/blog/ra-jit-blaze-rust-live-builds/",
+    "/blog/town-townie-research/",
+    "/blog/pstack-engineering-workflow/",
+    "/blog/airsup-machine-skill/",
+    "/blog/aws-infinity-agent-runtime/",
+    "/blog/apple-foundation-models-fm-cli/"
+  ]
+}
