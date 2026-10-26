@@ -1,0 +1,27 @@
+{
+  "packageProfile": "Package1.0",
+  "packageChecks": "FET_030_STANDARD andFET_032_STANDARDpassed",
+  "embeddedProfile": "Robotics-Prop",
+  "embeddedVersion": "4.0.0",
+  "byDate": {
+    "2026-02-11": {
+      "total": 8,
+      "passed": 3,
+      "false": 5,
+      "falseNonblocking": 0
+    },
+    "2026-08-18": {
+      "total": 18,
+      "passed": 18,
+      "false": 0,
+      "falseNonblocking": 0
+    },
+    "2026-10-09": {
+      "total": 25,
+      "passed": 15,
+      "false": 10,
+      "falseNonblocking": 10
+    }
+  },
+  "interpretation": "Different scopes/dates/required-vs-optional results; not a claim every field is measured or every runtime test passed; we did not rerun Foundation validators or physics simulation"
+}

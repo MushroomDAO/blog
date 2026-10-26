@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-26T13:24:37.132046+00:00",
+  "query": "NVIDIA SimReady 2575资产 OpenUSD 纸箱 BOM 物理字段 许可核查",
+  "matched": [
+    {
+      "article_id": "nvidia-simready-assets-audit",
+      "title": "NVIDIA SimReady：2575个资产之外，物理数据怎样落地？",
+      "url": "/blog/nvidia-simready-assets-audit/",
+      "language": "zh",
+      "excerpt": "NVIDIA SimReady：2575个资产之外，物理数据怎样落地？ NVIDIA SimReady Assets在Hugging Face公开2575个资产包，页面显示约472GB。本文实际枚举目录、下载58.3MB纸箱样本并检查OpenUSD、物理字段、37项BOM哈希和许可，解释仿真资产与普通模型的区别，以及包校验、运行验证和真实物理之间的边界。 SimReady NVIDIA OpenUSD 物理AI 机器人仿真 2575个、472GB，到底在数什么？ 为什么普通3D模型还不够？ 我们下载了什么，实际验证到了哪一步？ 纸箱里真的有质量、重心和摩",
+      "score": 0.6852776
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "nvidia-simready-assets-audit",
+        "title": "NVIDIA SimReady：2575个资产之外，物理数据怎样落地？",
+        "url": "/blog/nvidia-simready-assets-audit/",
+        "language": "zh",
+        "excerpt": "NVIDIA SimReady：2575个资产之外，物理数据怎样落地？ NVIDIA SimReady Assets在Hugging Face公开2575个资产包，页面显示约472GB。本文实际枚举目录、下载58.3MB纸箱样本并检查OpenUSD、物理字段、37项BOM哈希和许可，解释仿真资产与普通模型的区别，以及包校验、运行验证和真实物理之间的边界。 SimReady NVIDIA OpenUSD 物理AI 机器人仿真 2575个、472GB，到底在数什么？ 为什么普通3D模型还不够？ 我们下载了什么，实际验证到了哪一步？ 纸箱里真的有质量、重心和摩",
+        "score": 0.6852776
+      },
+      {
+        "article_id": "nvidia-openshell-agent-runtime",
+        "title": "NVIDIA OpenShell：给自主 Agent 配上可执行的权限边界",
+        "url": "/blog/nvidia-openshell-agent-runtime/",
+        "language": "zh",
+        "excerpt": "NVIDIA OpenShell：给自主 Agent 配上可执行的权限边界 NVIDIA OpenShell采用Apache-2.0开源，通过沙箱、独立Supervisor、网络策略和凭证代理约束Agent。本文介绍0.1.x架构、Mac与Linux部署条件、OpenCode接入流程，并实测v0.1.5策略验证器的通过、越界和无法验证三种结果，同时区分策略检查与真实运行安全的边界。 NVIDIA OpenShell AI Agent 沙箱 权限策略 开源工具 OpenShell解决的是哪一层问题？ Gateway、Sandbox与Supervisor怎样",
+        "score": 0.547916
+      },
+      {
+        "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+        "title": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具",
+        "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+        "language": "zh",
+        "excerpt": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具 hikarioyama/ParallelHue（MIT，35 star，零运行时依赖）把本地大模型的多路并发流式输出画进终端，只有调度器和反分词器的遥测跟 SSE 逐字节对得上，才按验证步上色。真正的 exact 模式只支持 vLLM 0.26.x，靠 7 个内部方法挂钩实现，官方的有效证据只有一次 16 路 GLM 运行（16,384 个 token）。我们在 Mac mini 上跑通了 72 个测试，用模拟服务器确认了它在证据不足时会失败或降级，另外发现：只要模型名里带 qw",
+        "score": 0.51157165
+      },
+      {
+        "article_id": "openhoopvision-basketball-video-analysis",
+        "title": "OpenHoopVision：把篮球录像变成轨迹和事件数据",
+        "url": "/blog/openhoopvision-basketball-video-analysis/",
+        "language": "zh",
+        "excerpt": "OpenHoopVision：把篮球录像变成轨迹和事件数据 OpenHoopVision 面向业余和青少年篮球录像，将检测、跟踪、球员身份、球场映射和事件推断连接起来，输出标注视频与JSONL。本文核对官方源码与作者报告的投篮指标，完成11项合成计分检查，说明两分兜底、固定球场几何、Git LFS权重及CPU路径的使用边界，并给教练与开发者提供可复核的试用流程。 OpenHoopVision Computer Vision Basketball Video Analysis Tracking Open Source 从一段录像，能得到什么？ 作者的指标，",
+        "score": 0.51079065
+      },
+      {
+        "article_id": "minicpmo-booking-desk-realtime-voice-appointment-agent",
+        "title": "MiniCPM-o Booking Desk：全双工语音预约台，状态机控 DB 写入，Judge LLM 防幻觉确认",
+        "url": "/blog/minicpmo-booking-desk-realtime-voice-appointment-agent/",
+        "language": "zh",
+        "excerpt": "MiniCPM-o Booking Desk：全双工语音预约台，状态机控 DB 写入，Judge LLM 防幻觉确认 AlessandroBonomo28/Minicpm-o-booking-desk，Python，MiniCPM-o 4.5 驱动的实时语音预约台 Demo。三通道架构：音频（VAD+Whisper）+ 视觉（每秒刷新的操作员屏幕帧）+ 控制 token（force_speak/force_listen）。状态机全权控制 DB 写入，模型输出不直接碰数据库；Judge LLM 核查模型口播内容防幻觉确认。实测 4 分 13 秒，2 次预约",
+        "score": 0.5088332
+      },
+      {
+        "article_id": "video-production-buddy-zhiying-ai-pipeline-guide",
+        "title": "织影 Video Production Buddy：AI 视频制作，每个阶段都要人工审批",
+        "url": "/blog/video-production-buddy-zhiying-ai-pipeline-guide/",
+        "language": "zh",
+        "excerpt": "织影 Video Production Buddy：AI 视频制作，每个阶段都要人工审批 video-production-buddy/video-production-buddy（AGPLv3，Python）是一个强调人工管控的 AI 视频制作系统，中文名织影。和一键生成不同，它用 YAML 管线配置和 Markdown skills 把制作分成多个阶段（策划→脚本→素材→渲染→审查），每阶段都有审批门（Approval Gate）。Backlot 看板实时显示进度、花费和每个提供商决策，审批通过才能继续。适合对视频质量有要求、需要可溯源制作流程的用户",
+        "score": 0.5019666
+      },
+      {
+        "article_id": "authentik-2026-8-oidc-certified-rust-rewrite-pam",
+        "title": "authentik 2026.8: OpenID Certification, a Rust Rewrite and PAM — a Milestone for Self-Hosted IdPs",
+        "url": "/blog/authentik-2026-8-oidc-certified-rust-rewrite-pam/",
+        "language": "en",
+        "excerpt": "authentik 2026.8: OpenID Certification, a Rust Rewrite and PAM — a Milestone for Self-Hosted IdPs goauthentik/authentik — open-source Identity Provider, 24k stars, Python, self-hosted alternative to Okta/Auth0/Entra ID. v2026.8 highlights: OpenID Foundation official certification",
+        "score": 0.49986196
+      },
+      {
+        "article_id": "omni-open-source-company-ai-agent-permission-aware",
+        "title": "Omni: An Open-Source Company Agent Where Permissions Travel With the Data",
+        "url": "/blog/omni-open-source-company-ai-agent-permission-aware/",
+        "language": "en",
+        "excerpt": "Omni: An Open-Source Company Agent Where Permissions Travel With the Data A deep dive into Omni, an open-source, self-hosted company-wide AI agent: connects to Google Drive, Gmail, Slack, Confluence, Jira, HubSpot and other workplace tools, with permission-aware company context a",
+        "score": 0.4995643
+      },
+      {
+        "article_id": "deepseek-v41-flash-1017-uncensored-fp8-teardown",
+        "title": "DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛",
+        "url": "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+        "language": "zh",
+        "excerpt": "DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛 dealignai 发布的 DeepSeek-V4.1-Flash-1017 去审查 FP8 版（MIT，3808 下载、265 likes，2026-10-18 创建）自报 HarmBench-320 全部顺从、MMLU 抽样 87.63% 降到 83.77%。但模型卡不披露消融方法，基线来自另一套服务栈，磁盘 510GB、仅在 4×H200 上验证，Mac 跑不了这个版本。 DeepSeek 消融",
+        "score": 0.49894795
+      },
+      {
+        "article_id": "comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy",
+        "title": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案",
+        "url": "/blog/comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy/",
+        "language": "zh",
+        "excerpt": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案 sepiablue-ai 开源，GPL-3.0，46 stars。两个 ComfyUI 节点把 MiniMax H3 视频生成塞进 12GB 消费级 GPU：W4A4 量化（FC1 层 ConvRot 预转换缓存）+ 流式 VSA 稀疏注意力（FastH3 官方 gate 文件）。RTX 4070 12GB 实测：832×1408×124帧约 3m29s，峰值 11.5GB 显存，比 INT8 基线快约 11%。需 Amp",
+        "score": 0.49205264
+      }
+    ]
+  }
+}

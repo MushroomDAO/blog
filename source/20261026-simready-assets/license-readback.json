@@ -1,0 +1,17 @@
+{
+  "verifiedSamples": [
+    {
+      "asset": "box_corrugated_brown_b08",
+      "license": "CC BY4.0",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/blob/524747d9b5e1f21b5b18b56041788c01d745f1a1/box_corrugated_brown_b08/.metadata/LICENSE.txt"
+    },
+    {
+      "asset": "engineAssembly_v6_engine_a01",
+      "license": "CC BY4.0",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "source": "https://huggingface.co/datasets/nvidia/simready-assets/blob/524747d9b5e1f21b5b18b56041788c01d745f1a1/engineAssembly_v6_engine_a01/.metadata/LICENSE.txt"
+    }
+  ],
+  "scope": "two sampled package license files; not a whole-library license audit"
+}
