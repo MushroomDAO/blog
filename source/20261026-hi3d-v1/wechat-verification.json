@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-26T16:09:39.896Z",
+  "drafts": [
+    {
+      "slug": "hi3d-v1-geometry-refinement",
+      "mediaId": "prCUE631thH1cmNLi42prLujCCdw_-ZYSyrOLNwl1Gz-bhTRrWLJvAfB5IYV9D9g",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "1022c97ea18adb084455757ac5597a001654cca13e1f6a5528878c682740e8b7",
+      "remoteTextHash": "1022c97ea18adb084455757ac5597a001654cca13e1f6a5528878c682740e8b7",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "728bab7b87697938850ae79b4329bd11e9bcc4f21875ccea686fff044783c5dd",
+      "remoteContentHash": "b35dafc7a630667a47cf49708479028fe8596646e57a3e9f6172e04c92cc59c1"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-26T16:11:08.660826+00:00",
+  "articles": [
+    {
+      "slug": "hi3d-v1-geometry-refinement",
+      "url": "https://blog.mushroom.cv/blog/hi3d-v1-geometry-refinement/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/hi3d-v1-geometry-refinement-banner.BQ9gYfd1_ZQTFa9.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hi3d-v1-geometry-refinement-fig-01.DS_efncW_Z1bXmLM.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hi3d-v1-geometry-refinement-fig-02.BtSRjKP1_Z1jaif2.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hi3d-v1-geometry-refinement-fig-03.zMKw5ivi_Z1TocKt.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hi3d-v1-geometry-refinement-banner.BQ9gYfd1.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 1,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/hi3d-v1-geometry-refinement/",
+    "/blog/nvidia-simready-assets-audit/",
+    "/blog/wevisone-vl-unified-vision/",
+    "/blog/layerfs-v1-recursive-agent-filesystem/",
+    "/blog/realtime-venus-fulldup-interactive-dual-loop-local-deploy/",
+    "/blog/pagesift-rust-crawler/",
+    "/blog/jakub-krehel-interface-skills/",
+    "/blog/ra-jit-blaze-rust-live-builds/"
+  ]
+}
