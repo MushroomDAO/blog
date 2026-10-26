@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-26T00:53:53.286Z",
+  "drafts": [
+    {
+      "slug": "pagesift-rust-crawler",
+      "mediaId": "prCUE631thH1cmNLi42prFFjG5tP-q-D7_4GTT5ZDszl5yYeXpuBy7r9-q10KfVY",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "bab00e3e8a5675592d7de566c13640c638b0f8485c0fc9ce2705a0d00f27504b",
+      "remoteTextHash": "bab00e3e8a5675592d7de566c13640c638b0f8485c0fc9ce2705a0d00f27504b",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "c23256caffe9815966d5b849cf345949737197dcec6efc317df34de9515d7675",
+      "remoteContentHash": "de98e94fddcf0170c824d63f562feb40d1ea04291aaf52efcba36052d0ad33d6"
+    }
+  ]
+}

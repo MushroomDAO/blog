@@ -1,0 +1,19 @@
+{
+  "canonicalRepository": "https://github.com/YOLOW92/pagesift",
+  "sameNameExcluded": "https://github.com/joeychilson/pagesift",
+  "revision": "e6dca8e476bf69ef8d6e7d238874a136966b4cd5",
+  "repoVersion": "0.70.0",
+  "testedPythonVersion": "0.20.0",
+  "license": "AGPL-3.0-only with commercial option",
+  "ownSmoke": {
+    "offlineSuccess": true,
+    "articleMarkerRetained": true,
+    "scriptMarkerAbsent": true,
+    "publicHTTP": 200,
+    "publicEngine": "http"
+  },
+  "ownPerformanceBenchmark": false,
+  "SDKMismatch": "Pythonformatsmetadataunsupported;metadataisdict;timeoutmilliseconds",
+  "derivedFigures": "See denominator-audit.json;arithmeticonauthorsreportnotbenchmark",
+  "otherTopic": "XHSbodyandimagesnotobtained;see podcast-acquisition-failure.json"
+}
