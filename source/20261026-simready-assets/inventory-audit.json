@@ -1,0 +1,25 @@
+{
+  "revision": "524747d9b5e1f21b5b18b56041788c01d745f1a1",
+  "rootDirectories": 2575,
+  "rootEntries": 2576,
+  "rootPages": 3,
+  "HFDisplayedSize": "472 GB",
+  "sizeScope": "Hugging Face UI total; not an independently summed full inventory",
+  "metadataSiblingsCappedAt": 100000,
+  "metadataLastPath": "kitchenware_knife_h01/simready_usd/Textures/.thumbs/256x256/t_knife_midnight_blue_h01_nor.png.png",
+  "note": "Do not sum capped100000siblings to claim full dataset size. Root directories independently enumerated across3pages.",
+  "firstAssets": [
+    "CT_injection_system_a01",
+    "IV_pole_a01",
+    "IV_pole_a02",
+    "IV_pole_a03",
+    "IV_pole_a04"
+  ],
+  "lastAssets": [
+    "wire_machineGuard_a04",
+    "wire_securityRoom_b01",
+    "wire_securityRoom_b03",
+    "workshopSystem_scheduleBoard_service_a01",
+    "workstation_factory_a01"
+  ]
+}

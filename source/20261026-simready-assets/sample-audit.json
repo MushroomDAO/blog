@@ -1,0 +1,977 @@
+{
+  "usdVersion": [
+    0,
+    26,
+    11
+  ],
+  "root": "/Users/jason/.heinu1-bot/jobs/d254dd11-da48-487a-aef4-1c92cc08876a/verification/sample-package/box_corrugated_brown_b08/simready_usd/sm_box_corrugated_brown_b08_01.usd",
+  "defaultPrim": "/RootNode",
+  "metersPerUnit": 1.0,
+  "upAxis": "Z",
+  "kilogramsPerUnit": 1.0,
+  "defaultPrimCount": 61,
+  "variantSets": {
+    "MuJoCo": {
+      "choices": [
+        "Disabled",
+        "Enabled"
+      ],
+      "selected": "Disabled"
+    },
+    "Newton": {
+      "choices": [
+        "Disabled",
+        "Enabled"
+      ],
+      "selected": "Disabled"
+    },
+    "PhysX": {
+      "choices": [
+        "Disabled",
+        "Enabled"
+      ],
+      "selected": "Enabled"
+    }
+  },
+  "defaultAuthoredFields": [
+    {
+      "prim": "/RootNode",
+      "values": {
+        "semantics:labels:wikidata_class": "[cardboard box]",
+        "semantics:labels:wikidata_qcode": "[Q1395006]"
+      }
+    },
+    {
+      "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/sm_box_corrugated_b08_mesh_00",
+      "values": {
+        "physics:approximation": "sdf",
+        "physics:centerOfMass": "(0.018982148, 0.022006312, 0.14574067)",
+        "physics:diagonalInertia": "(0.037400853, 0.035076838, 0.026578726)",
+        "physics:mass": "0.6563460826873779",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      }
+    },
+    {
+      "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__cardboard__brown_a",
+      "values": {
+        "semantics:labels:material": "[cardboard]"
+      }
+    },
+    {
+      "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__cardboard__trim_a",
+      "values": {
+        "semantics:labels:material": "[cardboard]"
+      }
+    },
+    {
+      "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__paper__decals_black_a",
+      "values": {
+        "semantics:labels:material": "[paper]"
+      }
+    },
+    {
+      "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__paper__decals_blue_a",
+      "values": {
+        "semantics:labels:material": "[paper]"
+      }
+    },
+    {
+      "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__nylon__tape_a",
+      "values": {
+        "semantics:labels:material": "[nylon]"
+      }
+    },
+    {
+      "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__cardboard__brown_a",
+      "values": {
+        "physics:density": "689.0",
+        "physics:dynamicFriction": "0.699999988079071",
+        "physics:restitution": "0.4000000059604645",
+        "physics:staticFriction": "0.699999988079071",
+        "semantics:labels:material": "[cardboard]"
+      }
+    },
+    {
+      "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__cardboard__trim_a",
+      "values": {
+        "physics:density": "689.0",
+        "physics:dynamicFriction": "0.699999988079071",
+        "physics:restitution": "0.4000000059604645",
+        "physics:staticFriction": "0.699999988079071",
+        "semantics:labels:material": "[cardboard]"
+      }
+    },
+    {
+      "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__paper__decals_black_a",
+      "values": {
+        "physics:density": "900.0",
+        "physics:dynamicFriction": "0.44999998807907104",
+        "physics:restitution": "0.11999999731779099",
+        "physics:staticFriction": "0.5",
+        "semantics:labels:material": "[paper]"
+      }
+    },
+    {
+      "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__paper__decals_blue_a",
+      "values": {
+        "physics:density": "900.0",
+        "physics:dynamicFriction": "0.44999998807907104",
+        "physics:restitution": "0.11999999731779099",
+        "physics:staticFriction": "0.5",
+        "semantics:labels:material": "[paper]"
+      }
+    },
+    {
+      "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__nylon__tape_a",
+      "values": {
+        "physics:density": "1400.0",
+        "physics:dynamicFriction": "0.4000000059604645",
+        "physics:restitution": "0.30000001192092896",
+        "physics:staticFriction": "0.4000000059604645",
+        "semantics:labels:material": "[nylon]"
+      }
+    }
+  ],
+  "enabledVariantFields": {
+    "PhysX": [
+      {
+        "prim": "/RootNode",
+        "values": {
+          "semantics:labels:wikidata_class": "[cardboard box]",
+          "semantics:labels:wikidata_qcode": "[Q1395006]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/sm_box_corrugated_b08_mesh_00",
+        "values": {
+          "physics:approximation": "sdf",
+          "physics:centerOfMass": "(0.018982148, 0.022006312, 0.14574067)",
+          "physics:diagonalInertia": "(0.037400853, 0.035076838, 0.026578726)",
+          "physics:mass": "0.6563460826873779",
+          "physics:principalAxes": "(1, 0, 0, 0)"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__cardboard__brown_a",
+        "values": {
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__cardboard__trim_a",
+        "values": {
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__paper__decals_black_a",
+        "values": {
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__paper__decals_blue_a",
+        "values": {
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__nylon__tape_a",
+        "values": {
+          "semantics:labels:material": "[nylon]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__cardboard__brown_a",
+        "values": {
+          "physics:density": "689.0",
+          "physics:dynamicFriction": "0.699999988079071",
+          "physics:restitution": "0.4000000059604645",
+          "physics:staticFriction": "0.699999988079071",
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__cardboard__trim_a",
+        "values": {
+          "physics:density": "689.0",
+          "physics:dynamicFriction": "0.699999988079071",
+          "physics:restitution": "0.4000000059604645",
+          "physics:staticFriction": "0.699999988079071",
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__paper__decals_black_a",
+        "values": {
+          "physics:density": "900.0",
+          "physics:dynamicFriction": "0.44999998807907104",
+          "physics:restitution": "0.11999999731779099",
+          "physics:staticFriction": "0.5",
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__paper__decals_blue_a",
+        "values": {
+          "physics:density": "900.0",
+          "physics:dynamicFriction": "0.44999998807907104",
+          "physics:restitution": "0.11999999731779099",
+          "physics:staticFriction": "0.5",
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__nylon__tape_a",
+        "values": {
+          "physics:density": "1400.0",
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.30000001192092896",
+          "physics:staticFriction": "0.4000000059604645",
+          "semantics:labels:material": "[nylon]"
+        }
+      }
+    ],
+    "MuJoCo": [
+      {
+        "prim": "/RootNode",
+        "values": {
+          "semantics:labels:wikidata_class": "[cardboard box]",
+          "semantics:labels:wikidata_qcode": "[Q1395006]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/sm_box_corrugated_b08_mesh_00",
+        "values": {
+          "physics:approximation": "convexHull",
+          "physics:centerOfMass": "(0.018982148, 0.022006312, 0.14574067)",
+          "physics:diagonalInertia": "(0.037400853, 0.035076838, 0.026578726)",
+          "physics:mass": "0.6563460826873779",
+          "physics:principalAxes": "(1, 0, 0, 0)"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__cardboard__brown_a",
+        "values": {
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__cardboard__trim_a",
+        "values": {
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__paper__decals_black_a",
+        "values": {
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__paper__decals_blue_a",
+        "values": {
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__nylon__tape_a",
+        "values": {
+          "semantics:labels:material": "[nylon]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__cardboard__brown_a",
+        "values": {
+          "physics:density": "689.0",
+          "physics:dynamicFriction": "0.699999988079071",
+          "physics:restitution": "0.4000000059604645",
+          "physics:staticFriction": "0.699999988079071",
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__cardboard__trim_a",
+        "values": {
+          "physics:density": "689.0",
+          "physics:dynamicFriction": "0.699999988079071",
+          "physics:restitution": "0.4000000059604645",
+          "physics:staticFriction": "0.699999988079071",
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__paper__decals_black_a",
+        "values": {
+          "physics:density": "900.0",
+          "physics:dynamicFriction": "0.44999998807907104",
+          "physics:restitution": "0.11999999731779099",
+          "physics:staticFriction": "0.5",
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__paper__decals_blue_a",
+        "values": {
+          "physics:density": "900.0",
+          "physics:dynamicFriction": "0.44999998807907104",
+          "physics:restitution": "0.11999999731779099",
+          "physics:staticFriction": "0.5",
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__nylon__tape_a",
+        "values": {
+          "physics:density": "1400.0",
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.30000001192092896",
+          "physics:staticFriction": "0.4000000059604645",
+          "semantics:labels:material": "[nylon]"
+        }
+      }
+    ],
+    "Newton": [
+      {
+        "prim": "/RootNode",
+        "values": {
+          "semantics:labels:wikidata_class": "[cardboard box]",
+          "semantics:labels:wikidata_qcode": "[Q1395006]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/sm_box_corrugated_b08_mesh_00",
+        "values": {
+          "physics:centerOfMass": "(0.018982148, 0.022006312, 0.14574067)",
+          "physics:diagonalInertia": "(0.037400853, 0.035076838, 0.026578726)",
+          "physics:mass": "0.6563460826873779",
+          "physics:principalAxes": "(1, 0, 0, 0)"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__cardboard__brown_a",
+        "values": {
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__cardboard__trim_a",
+        "values": {
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__paper__decals_black_a",
+        "values": {
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__paper__decals_blue_a",
+        "values": {
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/Geometry/sm_box_corrugated_b08_obj_00/VisualMaterials/opaque__nylon__tape_a",
+        "values": {
+          "semantics:labels:material": "[nylon]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__cardboard__brown_a",
+        "values": {
+          "physics:density": "689.0",
+          "physics:dynamicFriction": "0.699999988079071",
+          "physics:restitution": "0.4000000059604645",
+          "physics:staticFriction": "0.699999988079071",
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__cardboard__trim_a",
+        "values": {
+          "physics:density": "689.0",
+          "physics:dynamicFriction": "0.699999988079071",
+          "physics:restitution": "0.4000000059604645",
+          "physics:staticFriction": "0.699999988079071",
+          "semantics:labels:material": "[cardboard]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__paper__decals_black_a",
+        "values": {
+          "physics:density": "900.0",
+          "physics:dynamicFriction": "0.44999998807907104",
+          "physics:restitution": "0.11999999731779099",
+          "physics:staticFriction": "0.5",
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__paper__decals_blue_a",
+        "values": {
+          "physics:density": "900.0",
+          "physics:dynamicFriction": "0.44999998807907104",
+          "physics:restitution": "0.11999999731779099",
+          "physics:staticFriction": "0.5",
+          "semantics:labels:material": "[paper]"
+        }
+      },
+      {
+        "prim": "/RootNode/PhysicsMaterials/physics_mat_opaque__nylon__tape_a",
+        "values": {
+          "physics:density": "1400.0",
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.30000001192092896",
+          "physics:staticFriction": "0.4000000059604645",
+          "semantics:labels:material": "[nylon]"
+        }
+      }
+    ]
+  },
+  "bomChecks": [
+    {
+      "path": "simready_usd/sm_box_corrugated_brown_b08_01.usd",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/.thumbs/sm_box_corrugated_brown_b08_01_thumbnail.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/.thumbs/sm_box_corrugated_brown_b08_01_thumbnail_dark.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/.thumbs/256x256/sm_box_corrugated_brown_b08_01.usd.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/.thumbs/256x256/sm_box_corrugated_brown_b08_01.usd_light.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/.thumbs/256x256/sm_box_corrugated_brown_b08_01.usd_transparent.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/Textures/t_corrugatedboxes_b01_tile01_albedo.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/Textures/T_Plastic_Black_A_ORM.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/Textures/t_corrugatedboxes_b01_tile01_normal.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/Textures/t_corrugatedboxes_b01_tile01_orm.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/Textures/t_corrugatedboxes_b01_trim_normal.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/Textures/t_corrugatedboxes_b01_trim_orm.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/Textures/t_corrugatedboxes_b01_trim_Albedo.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/base.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/geometries.usd",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/instances.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/instances_mujoco.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/instances_newton.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/instances_physx.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/materials.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/MuJoCo/disabled.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/MuJoCo/enabled.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/Newton/enabled.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/Newton/disabled.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/PhysX/disabled.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/PhysX/enabled.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/payloads/Physics/physics.usda",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/source_assets/OmniPBR.mdl",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/source_assets/OmniPBRBase.mdl",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/source_assets/OmniPBR_ClearCoat.mdl",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/source_assets/T_Plastic_Black_A_ORM.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/source_assets/t_corrugatedboxes_b01_tile01_albedo.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/source_assets/t_corrugatedboxes_b01_tile01_normal.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/source_assets/t_corrugatedboxes_b01_tile01_orm.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/source_assets/t_corrugatedboxes_b01_trim_Albedo.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/source_assets/t_corrugatedboxes_b01_trim_normal.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    },
+    {
+      "path": "simready_usd/source_assets/t_corrugatedboxes_b01_trim_orm.png",
+      "exists": true,
+      "sizeMatches": true,
+      "sha256Matches": true
+    }
+  ],
+  "bomAllPass": true,
+  "dependencyLayers": 15,
+  "dependencyAssets": 8,
+  "unresolvedDependencies": [],
+  "embeddedHistoricalValidation": {
+    "profile": "Robotics-Prop",
+    "profile_version": "4.0.0",
+    "validated_features": {
+      "2026-02-11": {
+        "FET000_CORE": {
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET001_BASE_NEUTRAL": {
+          "dependencies": "[]",
+          "failing requirements": "['AA.001']",
+          "passed": false,
+          "version": "0.1.0"
+        },
+        "FET003_BASE_NEUTRAL": {
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET003_BASE_PHYSX": {
+          "dependencies": "[{'FET003_BASE_NEUTRAL': {'version': '0.1.0'}}]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET004_BASE_NEUTRAL": {
+          "dependencies": "[{'FET003_BASE_NEUTRAL': {'version': '0.1.0'}}]",
+          "failing requirements": "['RB.MB.001']",
+          "passed": false,
+          "version": "0.1.0"
+        },
+        "FET004_BASE_PHYSX": {
+          "dependencies": "[{'FET003_BASE_PHYSX': {'version': '0.1.0'}}, {'FET004_BASE_NEUTRAL': {'version': '0.1.0'}}]",
+          "failing requirements": "['RB.MB.001']",
+          "passed": false,
+          "version": "0.1.0"
+        },
+        "FET005_BASE_NEUTRAL": {
+          "dependencies": "[]",
+          "failing requirements": "['GSP.001']",
+          "passed": false,
+          "version": "0.1.0"
+        },
+        "FET006_BASE_MDL": {
+          "dependencies": "[]",
+          "failing requirements": "['VM.MDL.001']",
+          "passed": false,
+          "version": "0.1.0"
+        }
+      },
+      "2026-08-18": {
+        "FET_000_MUJOCO": {
+          "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RV.010', 'com.nvidia.simready.RV.008']",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_000_NEWTON": {
+          "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RV.010', 'com.nvidia.simready.RV.005']",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_000_PHYSX": {
+          "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RV.002', 'com.nvidia.simready.RV.001', 'com.nvidia.simready.RV.010']",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_000_STANDARD": {
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_001_STANDARD": {
+          "dependencies": "[]",
+          "passed": true,
+          "version": "1.0.1"
+        },
+        "FET_003_MUJOCO": {
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_003_NEWTON": {
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_003_PHYSX": {
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.4.0"
+        },
+        "FET_003_STANDARD": {
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.2.0"
+        },
+        "FET_004_MUJOCO": {
+          "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_004_NEWTON": {
+          "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_004_PHYSX": {
+          "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+          "passed": true,
+          "version": "0.4.0"
+        },
+        "FET_004_STANDARD": {
+          "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+          "passed": true,
+          "version": "0.2.0"
+        },
+        "FET_005_STANDARD": {
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_006_MDL": {
+          "dependencies": "[]",
+          "optional requirements": "['com.nvidia.simready.VM.MAT.001', 'com.nvidia.simready.VM.MDL.001']",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_006_STANDARD": {
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_007_STANDARD": {
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.2.0"
+        },
+        "FET_100_ISAAC": {
+          "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+          "passed": true,
+          "version": "0.4.0"
+        }
+      },
+      "2026-10-09": {
+        "FET_000_MUJOCO": {
+          "blocking_failure": false,
+          "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RV.008', 'com.nvidia.simready.RV.010']",
+          "passed": false,
+          "version": "0.1.0"
+        },
+        "FET_000_NEWTON": {
+          "blocking_failure": false,
+          "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RV.005', 'com.nvidia.simready.RV.010']",
+          "passed": false,
+          "version": "0.1.0"
+        },
+        "FET_000_PHYSX": {
+          "blocking_failure": false,
+          "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RV.001', 'com.nvidia.simready.RV.002', 'com.nvidia.simready.RV.010']",
+          "passed": false,
+          "version": "0.1.0"
+        },
+        "FET_000_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.2.0"
+        },
+        "FET_001_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "passed": true,
+          "version": "1.0.1"
+        },
+        "FET_003_MUJOCO": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_003_NEWTON": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_003_PHYSX": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.4.0"
+        },
+        "FET_003_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.2.0"
+        },
+        "FET_004_MUJOCO": {
+          "blocking_failure": false,
+          "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+          "passed": false,
+          "version": "0.1.0"
+        },
+        "FET_004_NEWTON": {
+          "blocking_failure": false,
+          "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+          "passed": false,
+          "version": "0.1.0"
+        },
+        "FET_004_PHYSX": {
+          "blocking_failure": false,
+          "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+          "passed": false,
+          "version": "0.4.0"
+        },
+        "FET_004_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+          "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+          "passed": false,
+          "version": "0.2.0"
+        },
+        "FET_005_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_006_MDL": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "optional requirements": "['com.nvidia.simready.VM.TEX.005']",
+          "passed": false,
+          "version": "0.2.0"
+        },
+        "FET_006_OPENPBR": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "optional requirements": "['com.nvidia.simready.VM.PBR.001']",
+          "passed": false,
+          "version": "0.1.0"
+        },
+        "FET_006_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.2.0"
+        },
+        "FET_007_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.2.0"
+        },
+        "FET_010_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "optional requirements": "['com.nvidia.simready.DISP.001']",
+          "passed": false,
+          "version": "0.1.0"
+        },
+        "FET_011_RTX": {
+          "blocking_failure": false,
+          "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_011_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.2.0"
+        },
+        "FET_031_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_033_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[{'FET_031_STANDARD': {'version': '0.1.0'}}]",
+          "passed": true,
+          "version": "0.4.0"
+        },
+        "FET_046_STANDARD": {
+          "blocking_failure": false,
+          "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+          "passed": true,
+          "version": "0.1.0"
+        },
+        "FET_100_ISAAC": {
+          "blocking_failure": false,
+          "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+          "passed": true,
+          "version": "0.4.0"
+        }
+      }
+    }
+  },
+  "scope": "One complete package read/compose/BOM audit on Mac. No physics engine, rendering, robot training, sim-to-real, or full-library validation."
+}

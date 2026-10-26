@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen",
+  "skill": "mycelium-mushroom-illustrations",
+  "created_date": "2026-10-26",
+  "requested_count": 3,
+  "aspect_ratio": "16:9",
+  "max_bytes_exclusive": 90000,
+  "originals_policy": "Keep full-resolution generated originals in tool cache; copy compressed PNG derivatives into requested workspace paths.",
+  "images": [
+    {
+      "id": 1,
+      "output": "src/assets/images/nvidia-simready-assets-audit-fig-01.png",
+      "prompt": "Use case: stylized-concept. Create ONE standalone 16:9 horizontal Chinese article body illustration, a single continuous hand-drawn scene, not a collage or multi-panel image. Pure #FFFFFF white background. Thin slightly wobbly BLACK pen line art, flat small color accents only. Large quiet margins, at least 40% empty white space; sparse editorial product-sketch feeling, quietly absurd and serious. No paper texture, no shadows, no gradient, no gray or cream background. Xiao-M 小M must perform the central action: a small mushroom creature with rounded RED dome cap with 3–5 WHITE polka dots, CREAM/off-white stem body, BLACK hand-drawn outline, two tiny BLACK dot eyes on the pale stem, thin arms and legs, deadpan serious expression. Flat red cap, not solid-black mushroom, not realistic, not 3D, not cute mascot. Color only the cap red, stem off-white, and a few orange/blue/red fine handwritten accents; all objects predominantly black outlines with white interior. No top-left title or any title, no logo, no watermark, no PPT, no commercial illustration, no corporate infographic, no formal flowchart, no grids, no complex architecture, no tables. Render only the short Chinese labels explicitly listed below; no English paragraphs, no invented numbers.\nScene 1 — appearance asset becomes simulation-ready through machine-readable properties. Xiao-M is actively lifting a simple attractive cardboard-box MODEL with both thin arms and placing it onto a small peculiar PHYSICS EXPERIMENT BENCH. One single box, box drawn as a clean wire/outline object with a folded lid and tape line, no realistic texture. The box is just a visually plausible shape: its looks alone do not encode behavior. The bench has three tiny dangling property tags physically tethered to the box/bench: handwritten “质量”, “碰撞”, “语义”. Connect each tag to a small punched-data tab, suggesting machine-readable properties, without numbers, equations, screens, or engineering chart. A minimal blue dashed collision outline around the box can clarify collision shape, and a tiny balance/spring under its support can suggest mass. A restrained orange motion arc traces Xiao-M placing the box, not a large process arrow. The scene should convey adding inspectable parameters to a good-looking asset, not claiming the box has passed physical testing. Only labels: “质量” in blue, “碰撞” in orange, “语义” in red. Keep the whole action centered with lots of white space, physically quirky pen sketch, no sales deck. Exactly one independent image.",
+      "status": "copied-and-verified",
+      "original_cache_path": "/Users/jason/.codex/generated_images/01a17858-2a78-72d0-b489-1376b19ed228/exec-9448f868-714d-431c-83e4-a59aa08d9034.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 54351,
+      "sha256": "f4d39717a5e7331bfb732b0b6b7a06d883a09441a1c0b750e508c53cb48e1107",
+      "original_sha256": "92221cf36bbddd6d30c59e63d92d97e1ecf0a34e5ffe9c6fcb513bf3762b9d91",
+      "compression": {
+        "method": "Pillow contain on white 1280x720 canvas; normalize near-white background; indexed PNG without dithering",
+        "palette_colors": 128,
+        "attempts": [
+          {
+            "palette_colors": 128,
+            "bytes": 54351
+          }
+        ]
+      },
+      "qa": {
+        "standalone": true,
+        "white_background": true,
+        "xiaom_red_white_dotted_cap_cream_stem": true,
+        "visual_review": "passed",
+        "short_labels_legible": true
+      }
+    },
+    {
+      "id": 2,
+      "output": "src/assets/images/nvidia-simready-assets-audit-fig-02.png",
+      "prompt": "Use case: stylized-concept. Create ONE standalone 16:9 horizontal Chinese article body illustration, a single continuous hand-drawn scene, not a collage or multi-panel image. Pure #FFFFFF white background. Thin slightly wobbly BLACK pen line art, flat small color accents only. Large quiet margins, at least 40% empty white space; sparse editorial product-sketch feeling, quietly absurd and serious. No paper texture, no shadows, no gradient, no gray or cream background. Xiao-M 小M must perform the central action: a small mushroom creature with rounded RED dome cap with 3–5 WHITE polka dots, CREAM/off-white stem body, BLACK hand-drawn outline, two tiny BLACK dot eyes on the pale stem, thin arms and legs, deadpan serious expression. Flat red cap, not solid-black mushroom, not realistic, not 3D, not cute mascot. Color only the cap red, stem off-white, and a few orange/blue/red fine handwritten accents; all objects predominantly black outlines with white interior. No top-left title or any title, no logo, no watermark, no PPT, no commercial illustration, no corporate infographic, no formal flowchart, no grids, no complex architecture, no tables. Render only the short Chinese labels explicitly listed below; no English paragraphs, no invented numbers.\nScene 2 — download ONE COMPLETE dependency bundle on demand from a LARGE asset library. Xiao-M is actively reaching into a tall sparse library cabinet and extracting ONE small complete open drawstring parcel by its handle; the cabinet recedes slightly but occupies only a modest area with several unlabelled parcel outlines, suggesting a large collection without counts. The one selected package stays visibly tied together as a complete unit. Inside its open top are just four miniature black-outline items: a little box model, a material swatch, a rolled texture tile with simple hatch, and a spring/collision-outline physical layer; these items are visibly connected to each other by one or two thin orange threads and all enclosed by the same parcel boundary. Emphasize intact dependencies, not many disconnected downloaded files. The model MUST visibly connect to material/texture and physics INSIDE the package. Tiny handwritten labels next to these items only: “模型”, “材质”, “纹理”, “物理”. A single short blue label on the cabinet is allowed: “资产库”. No USD text, no isolated USD icon, no hard numbers, no “472GB”, no file-size labels, no cloud-download UI, no huge arrows. Sparse hand-drawn physical scene with Xiao-M visibly taking just one bundle. Exactly one independent image.",
+      "status": "copied-and-verified",
+      "original_cache_path": "/Users/jason/.codex/generated_images/01a17858-2a78-72d0-b489-1376b19ed228/exec-454500a2-ef52-44fc-a075-e843483b0c5a.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 83283,
+      "sha256": "fa7f7226e75a76a16faf075a5871c736f0e606af629bb4949ea23362bba0eebc",
+      "original_sha256": "7261852496bea4c310c4864e6df4c1a492f125f9bc9a22cafd5109141bcdffd1",
+      "compression": {
+        "method": "Pillow contain on white 1280x720 canvas; normalize near-white background; indexed PNG without dithering",
+        "palette_colors": 128,
+        "attempts": [
+          {
+            "palette_colors": 128,
+            "bytes": 83283
+          }
+        ]
+      },
+      "qa": {
+        "standalone": true,
+        "white_background": true,
+        "xiaom_red_white_dotted_cap_cream_stem": true,
+        "visual_review": "passed",
+        "short_labels_legible": true
+      }
+    },
+    {
+      "id": 3,
+      "output": "src/assets/images/nvidia-simready-assets-audit-fig-03.png",
+      "prompt": "Use case: stylized-concept. Create ONE standalone 16:9 horizontal Chinese article body illustration, a single continuous hand-drawn scene, not a collage or multi-panel image. Pure #FFFFFF white background. Thin slightly wobbly BLACK pen line art, flat small color accents only. Large quiet margins, at least 40% empty white space; sparse editorial product-sketch feeling, quietly absurd and serious. No paper texture, no shadows, no gradient, no gray or cream background. Xiao-M 小M must perform the central action: a small mushroom creature with rounded RED dome cap with 3–5 WHITE polka dots, CREAM/off-white stem body, BLACK hand-drawn outline, two tiny BLACK dot eyes on the pale stem, thin arms and legs, deadpan serious expression. Flat red cap, not solid-black mushroom, not realistic, not 3D, not cute mascot. Color only the cap red, stem off-white, and a few orange/blue/red fine handwritten accents; all objects predominantly black outlines with white interior. No top-left title or any title, no logo, no watermark, no PPT, no commercial illustration, no corporate infographic, no formal flowchart, no grids, no complex architecture, no tables. Render only the short Chinese labels explicitly listed below; no English paragraphs, no invented numbers.\nScene 3 — package/field audit evidence is different from actual physical simulation run evidence. Xiao-M sits working in the middle of a very simple desk and actively holds TWO small magnifying glasses with thin arms, one aimed at a PACKAGE-CHECK RECEIPT on the left, the other aimed at a separate PHYSICS EXPERIMENT LOG on the right. Left: a small narrow receipt clipped to a tied parcel, with only short handwritten “包” and “字段” and two small blue checkmarks, showing package/field validation passed. Right: a distinct open experiment notebook with handwritten “运行” and a tiny sketch of a box touching a plane plus a small empty circular evidence marker with a restrained red “?” beside it, indicating actual runtime verification remains a separate question. The right notebook MUST NOT show a success checkmark. Avoid any claim that all physics simulations were run. Between the two documents, an extremely small hand-drawn red “≠” communicates non-equivalence, without a caption. No arrows linking passed receipt to successful physics; no big headline, no data table, no charts, no long text, no test-result numbers. Only Chinese words: “包”, “字段”, “运行”; only other marks are ticks, question mark, non-equality symbol, and a few unlabelled pen strokes. Keep documents and gestures easy to distinguish with lots of empty white space. Exactly one independent image.",
+      "status": "copied-and-verified",
+      "original_cache_path": "/Users/jason/.codex/generated_images/01a17858-2a78-72d0-b489-1376b19ed228/exec-ecde58da-66c4-4077-b9ee-fd983f598e20.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 61342,
+      "sha256": "e08166662954c95ace254da1d78e931547fc522c7e64e70376025d6c4166106c",
+      "original_sha256": "400504241d77707e45c162950c793a7c0a37976d2296ce02ae728c43c5934822",
+      "compression": {
+        "method": "Pillow contain on white 1280x720 canvas; normalize near-white background; indexed PNG without dithering",
+        "palette_colors": 128,
+        "attempts": [
+          {
+            "palette_colors": 128,
+            "bytes": 61342
+          }
+        ]
+      },
+      "qa": {
+        "standalone": true,
+        "white_background": true,
+        "xiaom_red_white_dotted_cap_cream_stem": true,
+        "visual_review": "passed",
+        "short_labels_legible": true
+      }
+    }
+  ],
+  "status": "complete",
+  "generation_calls": 3,
+  "qa_notes": [
+    "Figure 01: mass/collision/semantics tags connected to box experiment bench.",
+    "Figure 02: one intact selected bundle connects model, material, texture, physics; no hard size numbers.",
+    "Figure 03: checked package/fields receipt separated from runtime notebook with unresolved question; no simulated-success assertion."
+  ],
+  "rootReview": {
+    "pass": true,
+    "images": 3,
+    "notes": "Viewed final delivery images; correct XiaoM IP; clear asset parameters, complete dependency bundle, package/field checks versus actual runtime distinction; no unsupported performance numbers."
+  }
+}

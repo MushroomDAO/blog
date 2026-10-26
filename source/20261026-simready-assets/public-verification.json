@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-26T13:23:15.312336+00:00",
+  "articles": [
+    {
+      "slug": "nvidia-simready-assets-audit",
+      "url": "https://blog.mushroom.cv/blog/nvidia-simready-assets-audit/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-simready-assets-audit-banner.BaKNGs6G_NuA1i.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-simready-assets-audit-fig-01.8ZZiG8jX_Z1GTeiC.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-simready-assets-audit-fig-02.CPu4Gnz-_Z1sIBYL.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-simready-assets-audit-fig-03.1PnDEzXU_ZPrO8p.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/nvidia-simready-assets-audit-banner.BaKNGs6G.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 2,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/nvidia-simready-assets-audit/",
+    "/blog/wevisone-vl-unified-vision/",
+    "/blog/layerfs-v1-recursive-agent-filesystem/",
+    "/blog/realtime-venus-fulldup-interactive-dual-loop-local-deploy/",
+    "/blog/pagesift-rust-crawler/",
+    "/blog/jakub-krehel-interface-skills/",
+    "/blog/ra-jit-blaze-rust-live-builds/",
+    "/blog/town-townie-research/"
+  ]
+}
