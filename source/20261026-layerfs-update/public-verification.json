@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-26T12:50:41.728219+00:00",
+  "articles": [
+    {
+      "slug": "layerfs-v1-recursive-agent-filesystem",
+      "url": "https://blog.mushroom.cv/blog/layerfs-v1-recursive-agent-filesystem/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/layerfs-v1-recursive-agent-filesystem-banner.DZDsVlXV_ZsGHMC.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/layerfs-v1-recursive-agent-filesystem-fig-01.CRsoXrhp_Z16iWdC.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/layerfs-v1-recursive-agent-filesystem-fig-02.B0m20qKU_iE80U.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/layerfs-v1-recursive-agent-filesystem-fig-03.DvD8tYXR_aebTC.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/layerfs-v1-recursive-agent-filesystem-banner.DZDsVlXV.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 25,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/layerfs-v1-recursive-agent-filesystem/",
+    "/blog/realtime-venus-fulldup-interactive-dual-loop-local-deploy/",
+    "/blog/pagesift-rust-crawler/",
+    "/blog/jakub-krehel-interface-skills/",
+    "/blog/ra-jit-blaze-rust-live-builds/",
+    "/blog/town-townie-research/",
+    "/blog/pstack-engineering-workflow/",
+    "/blog/airsup-machine-skill/"
+  ]
+}
