@@ -1,0 +1,26 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6adf4d68-4c4603f2-2440854e）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 905 篇 + 公众号草稿箱 5 条 + 本地发布记录 888 条 + MemPalace 3347 抽屉
+
+── 查：https://github.com/Tencent/WeVisOne-VL
+   ✅ 四本账都没查到
+
+── 查：WeVisOne-VL
+   ❌ [知识库] # 10 月 22 日，微信视觉团队在 arXiv 公开 WeV  **Summary**: 10 月 22 日，微信视
+      正文出现实体名「wevisone-vl」
+
+── 查：https://huggingface.co/tencent/WeVisOne-VL-2B
+   ✅ 四本账都没查到
+
+── 查：https://arxiv.org/abs/2610.31329
+   ✅ 四本账都没查到
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

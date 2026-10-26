@@ -1,0 +1,26 @@
+{
+  "reviewDate": "2026-10-26",
+  "primarySourcesChecked": [
+    "pinned repo README",
+    "HF2B and4B modelcards",
+    "arxiv2610.31329v1 fullHTML"
+  ],
+  "paperPhraseSearch": {
+    "RTX4090": false,
+    "48ms": false,
+    "152ms": false,
+    "6GB": false,
+    "10.8GB": false
+  },
+  "conclusion": "No primary-source benchmark found for circulated RTX4090 comparison; not established, not disproved by this search",
+  "scope": "No model inference or GPU performance reproduction",
+  "sourceSha256": {
+    "readme.md": "510be16107cdb4e9169b8e4ca6fb3927bd6ee26945ffffbaa2b50a3d2de72a99",
+    "hf2.md": "5197db4c44cd8da4968eca0f10c6bf15c8cf0a3e0690e296aa3b722dead601b7",
+    "hf4.md": "2ea80f93490d3bd5e11eea5d942474700ea65a94803b451582a5317997749be8",
+    "paper.html": "6e702d43f87c9ef67f467408f704b16df9215215d4744d3a06c2f1e7cf353a63",
+    "wevisone_vl--engine.py": "46cd1de7e4d5d34eac7361644d829cc6dfc63703cef3479d3c1ee47170d9e1b6",
+    "evaluation--utils--parser.py": "6a3391a433845ab6bce74306386616a44f0a28cc7dc30f99e9efe0b6aa24ac31"
+  },
+  "remoteLedger": "draft list read by dedup; no exact WeVisOne topic; published-list API48001 unauthorized"
+}
