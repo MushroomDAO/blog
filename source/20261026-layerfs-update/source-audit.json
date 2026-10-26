@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-26",
+  "release": "v1.1.0",
+  "releaseCommitPrefix": "9f97a7ec95",
+  "repoMain": "ad78914e36b258b360daf13aec164b5655814689",
+  "sources": [
+    "https://git-scm.com/docs/git-worktree",
+    "https://github.com/Ephemeral-AI-Lab/layerfs/releases/tag/v1.1.0",
+    "https://github.com/Ephemeral-AI-Lab/layerfs/blob/v1.1.0/api/README.md",
+    "https://github.com/Ephemeral-AI-Lab/layerfs/blob/v1.1.0/docs/release-notes/1.1.0/README.md"
+  ],
+  "sha256": {
+    "release.json": "262d5853f148e83a4a4d38e177b2e3e223d29fc1a9f8dc4b92f6ee21a8a7236d",
+    "api-readme.md": "41e2d52455839b8198bf3b6373fffce493a6775561e071baac2c46916a8fc8de",
+    "release-record.md": "a5932f89e7813960482e95ce858ecda409d5e08f1206f2ede921dd6420bb5933",
+    "git-worktree.html": "fc85b27e7c99d569f865c0b33fc3b2614e4befa5702b665d1139382ee79a4791"
+  },
+  "localRuntimeReproduction": false,
+  "performance": "official single-sample v1.0 benchmarks only; 1.1 makes no new performance claim",
+  "reusedAssets": [
+    "original verified cover",
+    "original three matching body figures"
+  ],
+  "wechat": "40007 old draft absent; 48001 published API unauthorized; preserve credential; do not recreate"
+}
