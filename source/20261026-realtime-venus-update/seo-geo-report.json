@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "title": true,
+    "titleEn": true,
+    "description": true,
+    "descriptionEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "pubDate": true,
+    "updatedDate": true,
+    "heroImage": true,
+    "category": true,
+    "tags": true,
+    "englishSlug": true,
+    "CN_EN": true,
+    "copyrightBoth": true,
+    "threeFiguresBoth": true,
+    "questionHeadingsBoth": true,
+    "sourcesBoth": true,
+    "pubDatePreserved": true,
+    "officialResultsLabeled": true
+  },
+  "status": "pass",
+  "notes": [
+    "Preserve original route/date; substantive update 2026-10-26",
+    "Author-reported results; independent source and metadata audit only",
+    "Related internal link, bilingual FAQ, plain source URLs, image alt text"
+  ]
+}
