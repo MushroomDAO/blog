@@ -1,15 +1,16 @@
 ---
-title: "LayerFS v1.0.0：给 AI Agent 分支文件系统，先看清持久性边界"
-titleEn: "LayerFS v1.0.0: Recursive Filesystems for AI Agents"
-description: "LayerFS 为 AI Agent 提供可分支、提交与合并的文件工作区，让并行试错共享已有内容。本文核对 v1.0.0 的 MIT 仓库、SQLite 与 FUSE 架构、递归分支流程、Mac 的 DSH 接入及官方单次测试，说明源码构建、POSIX 差异和 Disposable Store 的崩溃与断电持久性限制。"
-descriptionEn: "Explore LayerFS v1.0.0: recursive agent workspaces, SQLite and FUSE, DSH on Mac, official benchmarks, source builds and critical durability limitations."
+title: "LayerFS：共享工作区、worktree对比与1.1升级边界"
+titleEn: "LayerFS: Worktrees, Agent Workspaces and v1.1 Changes"
+description: "LayerFS 用共享历史和独立可写工作区支持并行 Agent。本文比较 Git worktree 的共享与检出成本，补充1.1.0的SDK破坏性变更、Mac与Windows接入，核对1.0官方去重与性能测试，并说明自动提交和持久性边界。"
+descriptionEn: "Compare LayerFS with Git worktrees, review breaking v1.1 API changes and Mac access, and audit reported v1.0 benchmarks, checkpoints and durability limits."
 wechatTitle: "LayerFS：给 AI Agent 分支文件系统"
 wechatDigest: "从递归分支、DSH 接入到官方测试，读懂 LayerFS 的用途与持久性边界。"
 pubDate: "2026-10-22"
-updatedDate: "2026-10-22"
+updatedDate: "2026-10-26"
 category: "Tech-News"
 tags: ["LayerFS", "AI Agent", "Filesystem", "FUSE", "Open Source"]
 heroImage: "../../assets/images/layerfs-v1-recursive-agent-filesystem-banner.jpg"
+lastPublishedAt: "2026-10-26T12:49:25Z"
 ---
 
 LayerFS 让多个 AI Agent 各自在一份完整的文件工作区里试错，再把选中的文件改动提交、合并到共同历史。它希望降低“复制整个环境、维护多份目录、手工收拾结果”的成本，尤其适合一个任务展开多条候选路径的场景。
@@ -21,6 +22,37 @@ LayerFS 让多个 AI Agent 各自在一份完整的文件工作区里试错，�
 仓库：https://github.com/Ephemeral-AI-Lab/layerfs
 
 发布说明：https://github.com/Ephemeral-AI-Lab/layerfs/releases/tag/v1.0.0
+
+## LayerFS是否应该直接替代worktree？
+
+先校正比较对象：Git worktree共享仓库的对象库，并非为每个Agent复制一份完整Git历史。增加的成本主要是各自的工作目录，以及项目如何安装依赖、写缓存和生成构建产物；这些成本不能都归给Git。
+
+LayerFS值得比较的是“完整运行文件树的复用与增量保存”。若任务频繁生成大量相似候选环境，它可能减少重复内容；若团队只是维护少量补丁，现有worktree和依赖缓存是否已经够用，需要实际测量。这里没有新的LayerFS与worktree实测。
+
+Git官方说明：https://git-scm.com/docs/git-worktree
+
+## 10月26日更新：1.1.0改变了什么？
+
+官方已在10月24日发布1.1.0。本文保留原链接和下面的1.0架构、评测核查，先补充新版本边界：旧SDK示例只适用于明确固定的1.0环境，不能直接对新版本照抄。
+
+| 1.1.0变化 | 接入影响 |
+| --- | --- |
+| `@layerfs/sdk`拆为`@layerfs/agent`、`@layerfs/backend`、`@layerfs/runtime` | 分别面向Agent操作、后台读取与运行环境管理；源码移到`api/` |
+| `LayerFS.open/init`工厂与显式Sandbox | 先创建Sandbox，再调用`workspace.mount(sandbox, branch)`；旧构造方式与调用需要迁移 |
+| 新增`layerfs`命令 | 仅有Bash工具的Agent也有调用入口，不代表安装后每一步天然自动存档 |
+| macOS与Windows接入 | 经LayerFS home的worker转发Store操作；Mac用Linux容器，Windows用WSL2，不能称为APFS/NTFS原生FUSE |
+
+这次以次版本号发布了破坏性SDK变更，官方说明为此作了版本承诺豁免。它仍是源码发布，组件版本仍需匹配，Disposable模式仍不保证崩溃或断电持久性。新版本没有新增性能主张，下面的1.71倍和19.9倍依然来自1.0测试。
+
+发布记录还明确列出未完成的验证：这次没有Linux主机运行发布测试，Linux FUSE和真实Store JavaScript测试未执行。官方列出的Mac/Windows场景结果属于作者验证，本次没有复现。选型应结合这些缺口，不能只看“全绿”摘要。
+
+1.1发布说明：https://github.com/Ephemeral-AI-Lab/layerfs/releases/tag/v1.1.0
+
+1.1包与调用说明：https://github.com/Ephemeral-AI-Lab/layerfs/blob/v1.1.0/api/README.md
+
+1.1完整验证记录：https://github.com/Ephemeral-AI-Lab/layerfs/blob/v1.1.0/docs/release-notes/1.1.0/README.md
+
+以下为固定在v1.0.0的架构、示例与测试分析；版本差异以上面的更新说明为准。
 
 ## “递归文件系统”究竟递归在哪里？
 
@@ -76,7 +108,7 @@ await l.workspace.unmount(ws);
 
 ## Mac 能跑吗，v1.0.0 应该怎样开始？
 
-底层 Store 调用要求 Linux，且 Store 位于 daemon 共享的本地 ext4、xfs 或 btrfs。直接在 macOS/APFS 上调用这条路径，会收到 `Unsupported`，不能把 JavaScript SDK 误读为跨平台原生文件系统。
+v1.0的底层 Store 调用要求 Linux，且 Store 位于 daemon 共享的本地 ext4、xfs 或 btrfs。直接在 macOS/APFS 上调用这条路径，会收到 `Unsupported`，不能把 JavaScript SDK 误读为跨平台原生文件系统。
 
 官方提供 LayerFS × DSH，即 DeepSeek Harness 插件接入路径：Mac 运行客户端，Linux 原生插件和 daemon 在 Docker 环境内工作。文档当前覆盖的是 `dsh web`，桌面版本尚未测试；Pi 集成仍列为计划。
 
@@ -141,7 +173,7 @@ fio 原始记录：https://github.com/Ephemeral-AI-Lab/layerfs/blob/v1.0.0/bench
 
 ### 可以把它直接装到 Mac 的项目目录上吗？
 
-当前原生 Store 路径不支持 APFS。Mac 的官方 DSH 接入依赖 Linux Docker 环境，并且需要自行构建相同版本组件。
+v1.0原生Store路径不支持APFS；1.1通过worker开放Mac客户端访问，底层仍使用Linux环境。两者都不能误读为APFS原生实现。
 
 ---
 
@@ -158,6 +190,32 @@ Ephemeral-AI-Lab released v1.0.0 on October 21, 2026 under MIT. This article rev
 Repository: https://github.com/Ephemeral-AI-Lab/layerfs
 
 Release: https://github.com/Ephemeral-AI-Lab/layerfs/releases/tag/v1.0.0
+
+## Should LayerFS directly replace Git worktrees?
+
+Git worktrees share repository objects; they are not independent copies of the complete Git history. Separate checked-out files, dependencies, caches and build output are different costs. The useful comparison is how a complete working environment is created, reused and collected.
+
+LayerFS may benefit workloads exploring many similar environments. Teams maintaining a few patches should compare their existing worktree and dependency-cache setup before switching. This update includes no direct LayerFS-versus-worktree experiment.
+
+Git documentation: https://git-scm.com/docs/git-worktree
+
+## October 26 update: what changed in v1.1?
+
+Version 1.1.0 was released on October 24. This article retains its original URL and the pinned v1.0 architecture and benchmark review below. The old SDK example is historical and must not be copied unchanged into v1.1.
+
+The API now separates agent operations, backend reads and runtime management into `@layerfs/agent`, `@layerfs/backend` and `@layerfs/runtime`, under `api/`. Clients use `LayerFS.open/init`; create a Sandbox explicitly before `workspace.mount(sandbox, branch)`. A new `layerfs` CLI serves agents using Bash. These are breaking SDK changes despite the minor version number; upstream explicitly waived its earlier versioning promise.
+
+Mac access uses a Linux-container worker; Windows uses WSL2. Client access does not make the filesystem native to APFS or NTFS. The release remains source-only, requires matching components and retains the Disposable profile without crash or power-loss durability.
+
+There is no new performance claim: the 1.71× and 19.9× figures remain v1.0 measurements. The release record also discloses that no Linux host ran this release's tests; Linux FUSE and real-Store JavaScript tests were not executed. Reported Mac/Windows scenarios are upstream verification, not our reproduction.
+
+Release: https://github.com/Ephemeral-AI-Lab/layerfs/releases/tag/v1.1.0
+
+API guide: https://github.com/Ephemeral-AI-Lab/layerfs/blob/v1.1.0/api/README.md
+
+Verification record: https://github.com/Ephemeral-AI-Lab/layerfs/blob/v1.1.0/docs/release-notes/1.1.0/README.md
+
+The following architecture, examples and benchmark discussion remain explicitly pinned to v1.0.0.
 
 ## What makes the filesystem recursive?
 
@@ -253,7 +311,7 @@ No. The v1.0.0 release explicitly excludes crash and power-loss durability for i
 
 ### Is it a native Mac filesystem?
 
-The direct Store path does not support APFS. The documented Mac integration uses Linux Docker components that must be built from matching versions.
+The v1.0 direct Store path does not support APFS. Version 1.1 adds worker-mediated Mac client access using Linux components; this is not native APFS support. Match component versions.
 
 ---
 
