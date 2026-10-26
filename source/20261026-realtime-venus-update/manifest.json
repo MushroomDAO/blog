@@ -1,0 +1,174 @@
+{
+  "date": "2026-10-26",
+  "skill": "mycelium-mushroom-illustrations",
+  "generation_tool": "image_gen",
+  "generation_calls": 3,
+  "independent_images": true,
+  "final_image_count": 3,
+  "compression": {
+    "resize": [
+      1600,
+      900
+    ],
+    "resampler": "Pillow LANCZOS",
+    "method": "fixed 34-color palette PNG quantization",
+    "dithering": false,
+    "png_compress_level": 9,
+    "png_optimize": true,
+    "note": "Delivery resizing and palette compression only. Near-white background maps to pure white; no manual drawing or text changes."
+  },
+  "images": [
+    {
+      "figure": 1,
+      "theme": "前台持续听看并委托异步后台，双循环并行",
+      "labels": [
+        "持续听看",
+        "委托",
+        "异步后台"
+      ],
+      "prompt": "source/20261026-realtime-venus-update/fig-01-prompt.txt",
+      "prompt_sha256": "c26c6fd522e62b778fa0f9e2afbe32ecde7191c79d03d94c06b48fb36fdb02e2",
+      "original_cache_path": "/Users/jason/.codex/generated_images/01a175c1-f8d0-7772-8256-7c5493cf730b/exec-90be69fa-695c-40c4-a3ed-0eec1ca15141.png",
+      "original_bytes": 1181646,
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "bf3cf520eb64992301fb81ae69a00a1672bc6e9eca48b6ae0e11ec6a0ee7b26e",
+      "final_path": "src/assets/images/realtime-venus-fulldup-interactive-dual-loop-local-deploy-fig-01.png",
+      "final_bytes": 39414,
+      "final_dimensions": [
+        1600,
+        900
+      ],
+      "aspect_ratio": "16:9",
+      "format": "PNG",
+      "final_sha256": "cfb7c9e2475a776984e4a103cecbe5d4cd3032817c41ec28485e27d4af1983b7",
+      "pure_white_pixel_fraction": 0.90749,
+      "checks": {
+        "exists_at_requested_path": true,
+        "under_90000_bytes": true,
+        "exact_16_9": true,
+        "pure_white_background": true,
+        "visual_review_of_final": true,
+        "labels_reviewed": true,
+        "original_retained_in_generation_cache": true
+      }
+    },
+    {
+      "figure": 2,
+      "theme": "任务完成后等待谈话空隙，回到原会话再被用户听到",
+      "labels": [
+        "任务完成",
+        "等空隙",
+        "原会话",
+        "用户听到"
+      ],
+      "prompt": "source/20261026-realtime-venus-update/fig-02-prompt.txt",
+      "prompt_sha256": "413a2d6cf3fdf02929ae850c6fe82723f1d8c9d1aa1a70ebe040b9d4c05cc212",
+      "original_cache_path": "/Users/jason/.codex/generated_images/01a175c1-f8d0-7772-8256-7c5493cf730b/exec-5a0701fe-0272-4b85-9aaa-8f38062c7047.png",
+      "original_bytes": 1171986,
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "76df091b37d0ed12f153d59487eba9e062b8a262005f2adf73fc7d0bc89a980b",
+      "final_path": "src/assets/images/realtime-venus-fulldup-interactive-dual-loop-local-deploy-fig-02.png",
+      "final_bytes": 38536,
+      "final_dimensions": [
+        1600,
+        900
+      ],
+      "aspect_ratio": "16:9",
+      "format": "PNG",
+      "final_sha256": "e12fd58f30610c0de70ed2847e72e3cbd3aea0e6a4f964655072b401ff62a42a",
+      "pure_white_pixel_fraction": 0.90718,
+      "checks": {
+        "exists_at_requested_path": true,
+        "under_90000_bytes": true,
+        "exact_16_9": true,
+        "pure_white_background": true,
+        "visual_review_of_final": true,
+        "labels_reviewed": true,
+        "original_retained_in_generation_cache": true
+      }
+    },
+    {
+      "figure": 3,
+      "theme": "Mac 浏览器经隧道连接远端 NVIDIA GPU，CUDA 推理位于远端",
+      "labels": [
+        "Mac 浏览器",
+        "隧道",
+        "远端",
+        "NVIDIA GPU",
+        "CUDA 推理"
+      ],
+      "prompt": "source/20261026-realtime-venus-update/fig-03-prompt.txt",
+      "prompt_sha256": "e96529086f62ee81ccb3f9b43fb28388f85e3f7a3b5127c3629aa8d70cda246a",
+      "original_cache_path": "/Users/jason/.codex/generated_images/01a175c1-f8d0-7772-8256-7c5493cf730b/exec-25a96ba6-a6dc-484c-b2af-f6844965866d.png",
+      "original_bytes": 1198388,
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "b3691b651eec5c0823fdec62bf565660cbccaa7a504f44a8c71ac983e4ae30e2",
+      "final_path": "src/assets/images/realtime-venus-fulldup-interactive-dual-loop-local-deploy-fig-03.png",
+      "final_bytes": 45771,
+      "final_dimensions": [
+        1600,
+        900
+      ],
+      "aspect_ratio": "16:9",
+      "format": "PNG",
+      "final_sha256": "ece51a1097e39484c4d1041988d4ea6228a53a984336f1c37b452d08632e995e",
+      "pure_white_pixel_fraction": 0.89097,
+      "checks": {
+        "exists_at_requested_path": true,
+        "under_90000_bytes": true,
+        "exact_16_9": true,
+        "pure_white_background": true,
+        "visual_review_of_final": true,
+        "labels_reviewed": true,
+        "original_retained_in_generation_cache": true
+      }
+    }
+  ],
+  "protected_files": {
+    "src/content/blog/realtime-venus-fulldup-interactive-dual-loop-local-deploy.md": {
+      "before_sha256": "87f72c1ceda202a62620408fc98c1c24eca6e64e96b008fe19b9333aa45fd20f",
+      "after_sha256": "d0076b4deb200b9b9e40e9284f7041d3ffbb895ca2420f434ed29d2230856a30",
+      "unchanged_during_interval": false,
+      "written_by_this_task": false
+    },
+    "src/assets/images/realtime-venus-fulldup-interactive-dual-loop-local-deploy-banner.jpg": {
+      "before_sha256": "cf338d5f6d703df30e8146ca1d4c95e01b61e6901b76feb13e0b4d83cfb01b68",
+      "after_sha256": "cf338d5f6d703df30e8146ca1d4c95e01b61e6901b76feb13e0b4d83cfb01b68",
+      "unchanged_during_interval": true,
+      "written_by_this_task": false
+    }
+  },
+  "concurrent_change_note": "The article hash changed between initial read and delivery verification. This task never wrote the article. The concurrent change was preserved; no rollback was attempted. Banner hash remained identical.",
+  "constraints": {
+    "article_written_by_this_task": false,
+    "banner_written_by_this_task": false,
+    "git_invoked": false,
+    "published": false,
+    "subagents_used": false
+  },
+  "qa": {
+    "status": "passed",
+    "final_images_visually_reviewed": true,
+    "all_three_required_not_optional": true,
+    "character": "Red cap with white spots; pale stem; black outlines and black dot eyes.",
+    "semantic_review": [
+      "Headset and ongoing perception coexist with task handoff to an independent background loop.",
+      "Completed parcel remains held while waiting for a conversation gap; same conversation leads to the listening ear.",
+      "Mac contains only browser/client UI; tunnel reaches a separate remote NVIDIA GPU; CUDA inference label is inside the remote server."
+    ]
+  },
+  "rootReview": {
+    "reviewedFinalImages": 3,
+    "pass": true,
+    "notes": "Final compressed images visually inspected; correct dual-loop/delivery/remote-CUDA concepts; sparse readable annotations; white background; correct XiaoM IP."
+  }
+}
