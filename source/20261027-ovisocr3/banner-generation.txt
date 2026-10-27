@@ -1,0 +1,32 @@
+=== [banner-creator] ovisocr3-unified-document-model → src/assets/images/ovisocr3-unified-document-model-banner.jpg (seed=104, 1200x630, <98KB) ===
+
+  0%|          | 0/16 [00:00<?, ?it/s]
+  6%|▋         | 1/16 [00:13<03:27, 13.80s/it]
+ 12%|█▎        | 2/16 [00:21<02:19,  9.95s/it]
+ 19%|█▉        | 3/16 [00:27<01:51,  8.55s/it]
+ 25%|██▌       | 4/16 [00:34<01:35,  7.93s/it]
+ 31%|███▏      | 5/16 [00:41<01:22,  7.54s/it]
+ 38%|███▊      | 6/16 [00:48<01:13,  7.33s/it]
+ 44%|████▍     | 7/16 [00:55<01:04,  7.20s/it]
+ 50%|█████     | 8/16 [01:02<00:56,  7.09s/it]
+ 56%|█████▋    | 9/16 [01:09<00:49,  7.06s/it]
+ 62%|██████▎   | 10/16 [01:16<00:42,  7.02s/it]
+ 69%|██████▉   | 11/16 [01:23<00:35,  7.05s/it]
+ 75%|███████▌  | 12/16 [01:30<00:27,  6.96s/it]
+ 81%|████████▏ | 13/16 [01:36<00:20,  6.88s/it]
+ 88%|████████▊ | 14/16 [01:43<00:13,  6.86s/it]
+ 94%|█████████▍| 15/16 [01:50<00:06,  6.85s/it]
+100%|██████████| 16/16 [01:57<00:00,  6.85s/it]
+100%|██████████| 16/16 [01:57<00:00,  7.34s/it]
+Peak MLX memory: 7.96 GB
+=== [banner-creator] done: src/assets/images/ovisocr3-unified-document-model-banner.jpg (1200x630, 87994B) ===
+=== [verify-banner] src/assets/images/ovisocr3-unified-document-model-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=104 steps=16
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 87994B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/ovisocr3-unified-document-model-banner.jpg ===
+PATH: src/assets/images/ovisocr3-unified-document-model-banner.jpg

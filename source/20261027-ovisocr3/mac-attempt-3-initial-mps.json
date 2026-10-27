@@ -1,0 +1,34 @@
+{
+  "sourceRevision": "4833d5d2afa6e769ee933f024504d67ace80a24c",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "scope": "Two synthetic clean English document cases only. No benchmark, multilingual, difficult image, caption or crosspage evaluation.",
+  "cases": [
+    {
+      "task": "plain_ocr",
+      "prompt": "Read all the text in the image. Directly output the content.\n\nRules:\n1. Preserve the original text exactly without translation, paraphrasing, correction, or completion.\n2. Follow the natural human reading order.\n3. Output plain text only. Use spaces and line breaks only to preserve text separation and reading order.\n4. Do not output Markdown, HTML, JSON, bounding boxes, category labels, explanations, or code fences.",
+      "inputTokens": 406,
+      "generatedTokens": 26,
+      "generationWallSeconds": 187.16384045779705,
+      "output": "INVOICE\n\nInvoice No: INV-1042\n\nDate: 2026-10-27",
+      "expectedStringsPresent": false
+    },
+    {
+      "task": "kie_fields",
+      "prompt": "Extract the values for the following keys from the image: [\"Invoice No\", \"Total\", \"Purchase Order\"]. Return a JSON object using exactly these keys. Keep the values exactly as shown, use empty strings for missing values, and use arrays for repeated values. Output JSON only.",
+      "inputTokens": 370,
+      "generatedTokens": 27,
+      "generationWallSeconds": 30.55092683294788,
+      "output": "{\"Invoice No\":\"INV-1042\",\"Total\":\"USD 128.50\",\"Purchase Order\":\"\"}",
+      "jsonValid": true,
+      "fieldsCorrect": true
+    }
+  ],
+  "torch": "2.14.0",
+  "transformers": "5.16.1",
+  "device": "mps",
+  "dtype": "float32",
+  "fallback": "1",
+  "weightBytes": 1706030528,
+  "imageSha256": "03c502e055e4915621625c69b91f9e6d4d7c0485579c8cd6e1145b9cb6e54982",
+  "completed": true
+}

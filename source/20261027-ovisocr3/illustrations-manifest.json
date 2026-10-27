@@ -1,0 +1,92 @@
+{
+  "topic": "OvisOCR3 small unified OCR and document understanding model",
+  "created_date": "2026-10-27",
+  "skill": "mycelium-mushroom-illustrations",
+  "generation_mode": "built-in image_gen",
+  "deliverable_count": 3,
+  "maximum_bytes_exclusive": 90000,
+  "files": [
+    {
+      "figure": 1,
+      "file": "src/assets/images/ovisocr3-unified-document-model-fig-01.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 82401,
+      "sha256": "2467ce65c655469908dbb80ed12c767e410067e7f8233254c12c7e4319057768",
+      "palette_colors_requested": 48,
+      "background_corner": "srgb(255,255,255)",
+      "original_generated_image": "/Users/jason/.codex/generated_images/01a17df8-a590-7962-ae49-c863bab0cb71/exec-3ca94f0b-abfc-4c3b-b697-3684f397badd.png",
+      "prompt_file": "fig-01-prompt.txt",
+      "edit_prompt_file": null,
+      "compression": {
+        "tool": "ImageMagick",
+        "resize_mode": "contain and white extent; no crop",
+        "white_threshold": "97%",
+        "dither": false,
+        "png_compression_level": 9
+      }
+    },
+    {
+      "figure": 2,
+      "file": "src/assets/images/ovisocr3-unified-document-model-fig-02.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 82102,
+      "sha256": "7e94861d89365b705c83e48f5ba864ddada824d9882eec30c985076c6d90f54d",
+      "palette_colors_requested": 48,
+      "background_corner": "srgb(255,255,255)",
+      "original_generated_image": "/Users/jason/.codex/generated_images/01a17df8-a590-7962-ae49-c863bab0cb71/exec-62af0602-05d2-46f3-a9e9-7a99516e3203.png",
+      "prompt_file": "fig-02-prompt.txt",
+      "edit_prompt_file": "fig-02-edit-prompt.txt",
+      "compression": {
+        "tool": "ImageMagick",
+        "resize_mode": "contain and white extent; no crop",
+        "white_threshold": "97%",
+        "dither": false,
+        "png_compression_level": 9
+      }
+    },
+    {
+      "figure": 3,
+      "file": "src/assets/images/ovisocr3-unified-document-model-fig-03.png",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "bytes": 78080,
+      "sha256": "a1f063a2d413e6951b3e4e7cbb5aec5a41c43a1893fa0126426e809e6312eb0b",
+      "palette_colors_requested": 32,
+      "background_corner": "srgb(255,255,255)",
+      "original_generated_image": "/Users/jason/.codex/generated_images/01a17df8-a590-7962-ae49-c863bab0cb71/exec-06313463-2258-4cdc-b6bc-4dbf1b990c33.png",
+      "prompt_file": "fig-03-prompt.txt",
+      "edit_prompt_file": null,
+      "compression": {
+        "tool": "ImageMagick",
+        "resize_mode": "contain and white extent; no crop",
+        "white_threshold": "97%",
+        "dither": false,
+        "png_compression_level": 9
+      }
+    }
+  ],
+  "semantics": {
+    "figure1": "One scanned page -> one compact OvisOCR3 model -> document structure, OCR, key-value fields, figure description, reconstructed table. No score claims.",
+    "figure2": "Page2 + page3 -> updated page2; carry updated page2 into the second two-page operation with page1; retain source-page evidence tabs 1,2,3 on final table.",
+    "figure3": "Check JSON against template and original invoice using magnifier; raw invoice evidence retained, missing JSON field empty; public demo upload visually separated from local processing without an automatic upload arrow."
+  },
+  "retained_initial_figure2": "/Users/jason/.codex/generated_images/01a17df8-a590-7962-ae49-c863bab0cb71/exec-5a393f77-9fb8-46cb-860a-d9b75a3c752a.png",
+  "validation": {
+    "png_signature": true,
+    "exact_16_9": true,
+    "all_below_90000_bytes": true,
+    "opaque_white_corner": true,
+    "visual_review": "Passed on all three final compressed files: five distinct output types; corrected intermediate page2 transfer arrow and page trail; invoice/template/JSON check with empty missing field and separate public upload area; red cap with white spots and cream stem throughout.",
+    "exactly_three_final_assets": true,
+    "temporary_compression_files_removed": true
+  },
+  "cleanup": "Temporary compression candidates removed automatically. Original generated images retained at their original paths. Existing source material left in place."
+}
