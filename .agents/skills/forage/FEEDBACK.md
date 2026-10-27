@@ -1138,3 +1138,5 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 - 无跳过。
 - 流程问题：新文章必填 wechatTitle(≤30)/wechatDigest(≤54)，子 agent 的 BRIEF.md 未要求，首次发布被 lint 拦下，需手补；建议在 BRIEF.md frontmatter 模板里加这两个字段。
 - 采集侧：无新发现。
+
+- 2026-10-27 pi-rust rpi0.10.0: published https://blog.mushroom.cv/blog/pi-rust-agent-runtime/; MIT, Rust1.88, embedded agent runtime. AppleSilicon release checksum and local deterministic realwrite toolloop verified, no realLLM/performance/crash test. Draft prCUE631thH1cmNLi42prNh0DzuJ5sn7pbKfu2PzKWr00ejG8ybDN6qo57Nx-px0 remotely verified; source dedup rawKBonly.
