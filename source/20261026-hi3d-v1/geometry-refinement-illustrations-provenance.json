@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-10-26T16:08:53.751573+00:00",
+  "generation_tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "model": "Not exposed by the built-in image generation tool",
+  "generation_calls": 3,
+  "separate_images": true,
+  "reference_images_supplied": false,
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "postprocessing": "ImageMagick: fit and center-pad to 1280x720; flood-fill connected near-white background (3.5% fuzz) from all four corners; no-dither palette compression; restore near-white palette entries (1% fuzz) to pure white, preserving cream stem fill. No semantic edits.",
+  "visual_review": {
+    "reviewer": "Codex visual inspection of all three built-in outputs",
+    "character": "Red cap, white spots, cream stem, black dot eyes; actively participates in each scene.",
+    "claims": "Geometry refinement only; existing mesh and image inputs shown; no texture improvement or automatic game-ready claim.",
+    "labels": "Only image 2 has readable text: 512, 1024, 1536."
+  },
+  "images": [
+    {
+      "figure": 1,
+      "meaning": "Existing coarse mesh plus matching teapot reference image enter a refinement station; finer geometry exits.",
+      "original_path": "/Users/jason/.codex/generated_images/01a178f1-10ed-7eb3-a337-28bcc9eeea3e/exec-bdd1c99d-a810-4e65-98aa-87b0d0140410.png",
+      "original_sha256": "39ed8c9765b8e0a1157fb3478d8fe3f2974ec92b38342027fca13fbadc605706",
+      "original_bytes": 1234101,
+      "original_preserved": true,
+      "prompt_path": "source/20261026-hi3d-v1/geometry-refinement-fig-01-prompt.txt",
+      "prompt_sha256": "5dd77a0af26aa246035442682645be8f49fbad87c74d10f0ebb0811857a934cd",
+      "final_path": "src/assets/images/hi3d-v1-geometry-refinement-fig-01.png",
+      "final_sha256": "6660509ebc992a48996a372052ff8f3ffd50b114a33b556ba394973ab7d7f31a",
+      "bytes": 72708,
+      "width": 1280,
+      "height": 720,
+      "aspect_ratio": "16:9",
+      "palette_colors_limit": 96,
+      "background": "#FFFFFF"
+    },
+    {
+      "figure": 2,
+      "meaning": "XiaoM climbs three mesh steps with increasing geometric subdivision, labeled 512, 1024, 1536 only.",
+      "original_path": "/Users/jason/.codex/generated_images/01a178f1-10ed-7eb3-a337-28bcc9eeea3e/exec-742b880c-8df6-4f75-8d9e-7d27657bece8.png",
+      "original_sha256": "01fa1a5beb57cc0f4ac9b1d70a997b9cf002ee363f17f705a1ad32f216ab7343",
+      "original_bytes": 1083001,
+      "original_preserved": true,
+      "prompt_path": "source/20261026-hi3d-v1/geometry-refinement-fig-02-prompt.txt",
+      "prompt_sha256": "1c97de1c878c64ba3bc8f2174c79f37d6b91de6ae3be534e8e7a95d60556953e",
+      "final_path": "src/assets/images/hi3d-v1-geometry-refinement-fig-02.png",
+      "final_sha256": "efa6087fcd8a4d08adf8a718fd3451e4579330f4e0be7f7f174803ada519d4b6",
+      "bytes": 64151,
+      "width": 1280,
+      "height": 720,
+      "aspect_ratio": "16:9",
+      "palette_colors_limit": 96,
+      "background": "#FFFFFF"
+    },
+    {
+      "figure": 3,
+      "meaning": "Manual workshop inspection of geometry, scale, topology and license before export; no automatic game-ready claim.",
+      "original_path": "/Users/jason/.codex/generated_images/01a178f1-10ed-7eb3-a337-28bcc9eeea3e/exec-50b11784-5641-4862-9780-1cbd25893296.png",
+      "original_sha256": "0314c74f7dba2db4a034c8ce41f97a9c4c8a89887eca7839ad68c6ce10140dfc",
+      "original_bytes": 1383633,
+      "original_preserved": true,
+      "prompt_path": "source/20261026-hi3d-v1/geometry-refinement-fig-03-prompt.txt",
+      "prompt_sha256": "66526c56f9e26e5a25e0aeb66b4fe8244cc57a40ba0e69dc69cb8f36fbfc1be1",
+      "final_path": "src/assets/images/hi3d-v1-geometry-refinement-fig-03.png",
+      "final_sha256": "33c5896fe1135b230ce86a2379b69e6e12af76aec51f9bfef38966f072b10c3d",
+      "bytes": 86980,
+      "width": 1280,
+      "height": 720,
+      "aspect_ratio": "16:9",
+      "palette_colors_limit": 64,
+      "background": "#FFFFFF"
+    }
+  ]
+}

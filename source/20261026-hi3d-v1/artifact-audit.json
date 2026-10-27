@@ -1,0 +1,36 @@
+{
+  "revision": "d502e938cbedc6e87aba8884614c5ca6d177a4b6",
+  "components": [
+    {
+      "component": "vae",
+      "range": "bytes 0-7/376629712",
+      "headerBytes": 15496,
+      "elements": 94153480,
+      "dtypes": {
+        "I64": 72,
+        "F32": 94153408
+      }
+    },
+    {
+      "component": "transformer_512",
+      "range": "bytes 0-7/3675679280",
+      "headerBytes": 52648,
+      "elements": 1805497888,
+      "dtypes": {
+        "F32": 32315424,
+        "F16": 1773182464
+      }
+    },
+    {
+      "component": "transformer_1024",
+      "range": "bytes 0-7/3675679280",
+      "headerBytes": 52648,
+      "elements": 1805497888,
+      "dtypes": {
+        "F32": 32315424,
+        "F16": 1773182464
+      }
+    }
+  ],
+  "method": "HTTP Range headers/configs only; no weights or inference"
+}

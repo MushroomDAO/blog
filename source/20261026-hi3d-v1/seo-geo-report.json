@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-26T16:05:17.290052+00:00",
+  "checks": {
+    "EnglishKeywordSlug": true,
+    "FrontmatterComplete": true,
+    "TitleEnUnder60": true,
+    "Bilingual": true,
+    "BothCopyright": true,
+    "BothCanonicalURL": true,
+    "EachThreeIllustrations": true,
+    "QuestionHeadings": true,
+    "EachFAQ": true,
+    "FactsAndLimits": true,
+    "NoPrimaryMarkdownLinks": true,
+    "BLUF": true,
+    "OriginalAudit": true,
+    "InternalLink": true
+  },
+  "notes": [
+    "No fabricated benchmark. No guaranteed GEO uplift.",
+    "Astro generates article schema; no FAQ schema claimed.",
+    "Body images awaited before build; original official media not redistributed."
+  ],
+  "finalMarkdownSHA256": "aa4899d8650d2a9fb91ea88a7c3a9b44fb448203d85dd9b802a88049fc3aae53",
+  "finalImages": [
+    {
+      "name": "hi3d-v1-geometry-refinement-banner.jpg",
+      "bytes": 79598,
+      "sha256": "472e0780edeef421c240cd904742485b2dcb869567f3370052d1ad4df49522d0"
+    },
+    {
+      "name": "hi3d-v1-geometry-refinement-fig-01.png",
+      "bytes": 72708,
+      "sha256": "6660509ebc992a48996a372052ff8f3ffd50b114a33b556ba394973ab7d7f31a"
+    },
+    {
+      "name": "hi3d-v1-geometry-refinement-fig-02.png",
+      "bytes": 64151,
+      "sha256": "efa6087fcd8a4d08adf8a718fd3451e4579330f4e0be7f7f174803ada519d4b6"
+    },
+    {
+      "name": "hi3d-v1-geometry-refinement-fig-03.png",
+      "bytes": 86980,
+      "sha256": "33c5896fe1135b230ce86a2379b69e6e12af76aec51f9bfef38966f072b10c3d"
+    }
+  ]
+}
