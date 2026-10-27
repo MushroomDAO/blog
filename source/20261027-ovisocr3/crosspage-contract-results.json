@@ -1,0 +1,11 @@
+{
+  "passed": 5,
+  "checks": [
+    "No-continuation leaves both pages unchanged",
+    "Positive merge replaces only the bound table fragments and preserves other text",
+    "Document-global pages [2,3] rejected where pair-local [1,2] is required",
+    "Multiple merged tables rejected without explicit fragment bindings",
+    "Crop references qualified to their source page and explicitly remapped"
+  ],
+  "scope": "Synthetic postprocessing contracts only; no visual table recognition, model inference, browser rendering or benchmark reproduction."
+}

@@ -1,0 +1,14 @@
+{
+  "query": "OvisOCR3 文档解析 字段抽取 跨页表格 JSON模板",
+  "checkedAt": "2026-10-27T16:24:31.311517+00:00",
+  "matches": [
+    {
+      "article_id": "ovisocr3-unified-document-model",
+      "title": "OvisOCR3：0.8B 统一文档解析、字段抽取与跨页表格",
+      "url": "/blog/ovisocr3-unified-document-model/",
+      "language": "zh",
+      "excerpt": "OvisOCR3：0.8B 统一文档解析、字段抽取与跨页表格 OvisOCR3 是阿里巴巴 ATH-MaaS 开源的 0.8B 文档理解模型，统一解析、通用 OCR、关键信息抽取、图片描述与跨页表格重建。本文核对模型卡、在线体验源码和提示词，解释评测成绩、JSON 模板与严格 Schema 的区别、两阶段递归拼表、演示缓存、部署条件及 Mac 本地测试边界，并给出票据和金融文档的接入流程。 OvisOCR3 OCR Document AI KIE Local AI Open Source 五类能力分别解决什么问题？ 官方成绩该怎样读，哪些不是第一？ KI",
+      "score": 0.7265044
+    }
+  ]
+}

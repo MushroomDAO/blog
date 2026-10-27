@@ -1,0 +1,21 @@
+{
+  "url": "https://arxiv.org/html/2610.33066v1",
+  "submitted": "2026-10-20",
+  "DocFigCapBench": {
+    "type": "in-house",
+    "pages": 182,
+    "figureTargets": 372,
+    "captionJudge": "Qwen3.8-Max",
+    "captionScale": "0-10"
+  },
+  "CrossTabBench": {
+    "type": "in-house",
+    "pagePairs": 890,
+    "images": 1780,
+    "positivePairs": 491,
+    "negativePairs": 399,
+    "relationDenominator": "all 890 pairs",
+    "reconstructionTEDSDenominator": "491 reference tables; negatives excluded, misses and invalid positives remain zero"
+  },
+  "benchmarkReproduced": false
+}

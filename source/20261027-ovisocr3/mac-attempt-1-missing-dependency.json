@@ -1,0 +1,16 @@
+{
+  "sourceRevision": "4833d5d2afa6e769ee933f024504d67ace80a24c",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "scope": "Two synthetic clean English document cases only. No benchmark, multilingual, difficult image, caption or crosspage evaluation.",
+  "cases": [],
+  "torch": "2.14.0",
+  "transformers": "5.16.1",
+  "device": "mps",
+  "dtype": "float32",
+  "fallback": "1",
+  "weightBytes": 1706030528,
+  "imageSha256": "03c502e055e4915621625c69b91f9e6d4d7c0485579c8cd6e1145b9cb6e54982",
+  "completed": false,
+  "error": "ImportError('\\nQwen3VLVideoProcessor requires the Torchvision library but it was not found in your environment. Check out the instructions on the\\ninstallation page: https://pytorch.org/get-started/locally/ and follow the ones that match your environment.\\nPlease note that you may need to restart your runtime after installation.\\n')",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/jason/Dev/mycelium/blog/source/20261027-ovisocr3/smoke-mac.py\", line 20, in <module>\n    processor=AutoProcessor.from_pretrained(str(modelpath),local_files_only=True,min_pixels=448*448,max_pixels=640*640)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jason/venvs/ml/lib/python3.12/site-packages/transformers/models/auto/processing_auto.py\", line 330, in from_pretrained\n    return processor_class.from_pretrained(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jason/venvs/ml/lib/python3.12/site-packages/transformers/processing_utils.py\", line 1735, in from_pretrained\n    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, processor_dict, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jason/venvs/ml/lib/python3.12/site-packages/transformers/processing_utils.py\", line 1875, in _get_arguments_from_pretrained\n    sub_processor = auto_processor_class.from_pretrained(\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jason/venvs/ml/lib/python3.12/site-packages/transformers/models/auto/video_processing_auto.py\", line 380, in from_pretrained\n    return video_processor_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jason/venvs/ml/lib/python3.12/site-packages/transformers/utils/import_utils.py\", line 2359, in __getattribute__\n    requires_backends(cls, cls._backends)\n  File \"/Users/jason/venvs/ml/lib/python3.12/site-packages/transformers/utils/import_utils.py\", line 2345, in requires_backends\n    raise ImportError(\"\".join(failed))\nImportError: \nQwen3VLVideoProcessor requires the Torchvision library but it was not found in your environment. Check out the instructions on the\ninstallation page: https://pytorch.org/get-started/locally/ and follow the ones that match your environment.\nPlease note that you may need to restart your runtime after installation.\n\n"
+}
