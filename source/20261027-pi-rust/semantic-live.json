@@ -1,0 +1,100 @@
+{
+  "checkedAt": "2026-10-27T08:43:37.336641+00:00",
+  "query": {
+    "query": "rpi pi-rust 0.10.0 Rust 本机工具执行 可嵌入 运行时 Mac"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "pi-rust-agent-runtime",
+        "title": "pi-rust: A Rust Coding Agent You Can Embed and Test",
+        "url": "/blog/pi-rust-agent-runtime/",
+        "language": "en",
+        "excerpt": "pi-rust: A Rust Coding Agent You Can Embed and Test Review pi-rust v0.10.0: embeddable Rust agents, Mac installation, native plugins, durable sessions, remote mode, and a verified local tool-call smoke test. pi-rust Rust AI Agent 开发工具 本地测试 What makes the architecture useful? How ",
+        "score": 0.7473012
+      },
+      {
+        "article_id": "pagesift-rust-crawler",
+        "title": "PageSift: A Rust Crawler for AI, Beyond the Headlines",
+        "url": "/blog/pagesift-rust-crawler/",
+        "language": "en",
+        "excerpt": "PageSift: A Rust Crawler for AI, Beyond the Headlines PageSift offers Rust crawling and content extraction for AI. We audit benchmark denominators, SDK versions and deployment, with a Python smoke test on a Mac. PageSift Rust 爬虫 数据提取 RAG 开源工具 Where does PageSift fit? Why bounded ",
+        "score": 0.62004447
+      },
+      {
+        "article_id": "pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring",
+        "title": "Pulse：一排光环贴着屏幕边缘，告诉你 Claude Code 还剩多少",
+        "url": "/blog/pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring/",
+        "language": "zh",
+        "excerpt": "Pulse：一排光环贴着屏幕边缘，告诉你 Claude Code 还剩多少 qunqin24/Pulse 开源，macOS 浮动监控工具，三个彩环实时显示 Claude Code / Codex / Antigravity 用量，贴边停靠收缩为6pt细条，从提供商账户直读真实限额，自适应刷新，无后台零上传，Apache 2.0。 macOS Claude Code Codex AI tools open source Swift usage monitor productivity menu bar 那个永恒的问题 一排光环，贴着屏幕边缘 真实的限额，不",
+        "score": 0.604105
+      },
+      {
+        "article_id": "orion-core-rust-agent-harness-local-llm-teardown",
+        "title": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多",
+        "url": "/blog/orion-core-rust-agent-harness-local-llm-teardown/",
+        "language": "zh",
+        "excerpt": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多 orion-core 是从桌面应用 OrionPod 拆出的 Rust Agent harness（MIT，3 star，crates.io 下载 74 次）：提供工具调用循环、按整轮裁剪的上下文预算、10 种聊天模板和 15 种流式事件，但不带工具、沙箱、记忆和 MCP，现成后端只有一个 OpenAI 兼容 HTTP 客户端。我们在 M4 Mac mini 上接 mlx_lm.server + Qwen2.5-1.5B ",
+        "score": 0.5909991
+      },
+      {
+        "article_id": "arle-local-llm-distillation-guide",
+        "title": "arle Practical Guide: Run Local LLMs on Any Laptop, Then Distill a 4B Model to Match a 35B",
+        "url": "/blog/arle-local-llm-distillation-guide/",
+        "language": "en",
+        "excerpt": "arle Practical Guide: Run Local LLMs on Any Laptop, Then Distill a 4B Model to Match a 35B arle is a pure-Rust local LLM runtime — one binary for OpenAI-compatible serving, local agents, and on-policy distillation training. A 35B MoE hits 85 tok/s on an M4 Pro MacBook. OPD distil",
+        "score": 0.59042233
+      },
+      {
+        "article_id": "sleepless-aboudjem-macbook-lid-closed-battery-pmset",
+        "title": "Sleepless：盖上盖子不睡觉——用 pmset 解决 Mac 最顽固的痛点",
+        "url": "/blog/sleepless-aboudjem-macbook-lid-closed-battery-pmset/",
+        "language": "zh",
+        "excerpt": "Sleepless：盖上盖子不睡觉——用 pmset 解决 Mac 最顽固的痛点 Aboudjem/Sleepless，Swift，MIT。macOS 原生菜单栏工具，用 pmset disablesleep 让 MacBook 盖盖后仍保持唤醒——不需要外接显示器，不需要电源，有电量底线和自动关闭定时器。Amphetamine/KeepingYouAwake/caffeinate 都解决不了这个问题；Sleepless 是唯一用对了机制的开源替代方案。 macOS 工具 Mac 开源 Swift 效率 Mycelium 为什么其他工具都解决不了这个问题",
+        "score": 0.58876514
+      },
+      {
+        "article_id": "clypra-open-source-video-editor-tauri-rust-ffmpeg",
+        "title": "按头安利：Clypra —— 用 Tauri + Rust + FFmpeg 打造的开源视频编辑器，剪映 Pro 付费功能全免费",
+        "url": "/blog/clypra-open-source-video-editor-tauri-rust-ffmpeg/",
+        "language": "zh",
+        "excerpt": "按头安利：Clypra —— 用 Tauri + Rust + FFmpeg 打造的开源视频编辑器，剪映 Pro 付费功能全免费 Clypra 是一款用 Tauri v2 + React + Rust 打造的跨平台开源视频编辑器（MIT 协议），专注把 CapCut／剪映 Pro 的付费专业功能全部本地免费化：多轨时间轴、硬件加速解码、H.264/H.265/ProRes 导出，无水印无订阅。本文覆盖硬件配置建议、完整本地编译部署流程、首个视频导出全过程。 开源工具 视频编辑 Tauri Rust 本地部署 它是什么 核心功能（完全免费） 硬件配置要求 ",
+        "score": 0.583397
+      },
+      {
+        "article_id": "peekaboo-macos-native-ui-agent",
+        "title": "Peekaboo: Native Mac UI Tools for AI Agents",
+        "url": "/blog/peekaboo-macos-native-ui-agent/",
+        "language": "en",
+        "excerpt": "Peekaboo: Native Mac UI Tools for AI Agents Explore Peekaboo 4.9.0 for Mac screenshots, native UI actions and stdio MCP, with local CLI checks, permission limits and a practical verification workflow. Peekaboo macOS MCP 桌面自动化 AI Agent What layer does Peekaboo add? How do installa",
+        "score": 0.5828886
+      },
+      {
+        "article_id": "ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda",
+        "title": "Ferrum：一个 Rust 二进制跑本地推理，Metal 和 CUDA 共用同一套 runtime",
+        "url": "/blog/ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda/",
+        "language": "zh",
+        "excerpt": "Ferrum：一个 Rust 二进制跑本地推理，Metal 和 CUDA 共用同一套 runtime sizzlecar/ferrum-infer-rs 是一个纯 Rust 的本地推理引擎：单个二进制、无 Python 运行时，Apple Silicon Metal 与 NVIDIA CUDA 共用同一个 runtime，提供 OpenAI 兼容的 Chat Completions 和 Responses API。README 里给了带 95% 置信区间的实测吞吐——M1 Max 32GB 上 Qwen3.5 4B 并发 16 时 61.9 ± 0.1 ",
+        "score": 0.5824251
+      },
+      {
+        "article_id": "codexboard-mac-codex-task-board-mobile-lark",
+        "title": "CodexBoard：Apple Silicon Mac 上把 Codex CLI 接上任务看板，飞书/Web 手机端远程监控执行过程",
+        "url": "/blog/codexboard-mac-codex-task-board-mobile-lark/",
+        "language": "zh",
+        "excerpt": "CodexBoard：Apple Silicon Mac 上把 Codex CLI 接上任务看板，飞书/Web 手机端远程监控执行过程 RocYan98/CodexBoard，115 stars，TypeScript，无开源许可证。运行在 Apple Silicon Mac（macOS 13+）上的本地任务看板，把 Codex CLI 执行过程绑定到 Kanban 看板，支持通过飞书（Lark）或 Web 浏览器在手机端实时监控进度、审批变更、查看代码 Diff。需要公网 frp 服务器作为内网穿透，一周内迭代 10 个版本，目前仍为 0.1.x pre",
+        "score": 0.581978
+      }
+    ]
+  },
+  "matched": [
+    {
+      "article_id": "pi-rust-agent-runtime",
+      "title": "pi-rust: A Rust Coding Agent You Can Embed and Test",
+      "url": "/blog/pi-rust-agent-runtime/",
+      "language": "en",
+      "excerpt": "pi-rust: A Rust Coding Agent You Can Embed and Test Review pi-rust v0.10.0: embeddable Rust agents, Mac installation, native plugins, durable sessions, remote mode, and a verified local tool-call smoke test. pi-rust Rust AI Agent 开发工具 本地测试 What makes the architecture useful? How ",
+      "score": 0.7473012
+    }
+  ]
+}

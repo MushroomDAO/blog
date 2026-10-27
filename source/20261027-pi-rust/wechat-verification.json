@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-27T08:43:00.715Z",
+  "drafts": [
+    {
+      "slug": "pi-rust-agent-runtime",
+      "mediaId": "prCUE631thH1cmNLi42prNh0DzuJ5sn7pbKfu2PzKWr00ejG8ybDN6qo57Nx-px0",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "6f7b304ff132e93a1f4fd2e2244c79edb4f34b666316e9d73dfb50f85128ae2d",
+      "remoteTextHash": "6f7b304ff132e93a1f4fd2e2244c79edb4f34b666316e9d73dfb50f85128ae2d",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "6033d07d5c31e83aaa09b1ad5176375d181a6ac913c2c34f11b44efc33764f06",
+      "remoteContentHash": "64b068089696e2fcebfe061f49ae756a2b4862b02fb4cdba4a934caeabe9467b"
+    }
+  ]
+}

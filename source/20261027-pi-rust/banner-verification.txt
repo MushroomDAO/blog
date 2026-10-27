@@ -1,0 +1,14 @@
+=== [banner-creator] pi-rust-agent-runtime → src/assets/images/pi-rust-agent-runtime-banner.jpg (seed=84, 1200x630, <98KB) ===
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:13<03:24, 13.62s/it] 12%|█▎        | 2/16 [00:20<02:14,  9.60s/it] 19%|█▉        | 3/16 [00:27<01:47,  8.27s/it] 25%|██▌       | 4/16 [00:33<01:31,  7.63s/it] 31%|███▏      | 5/16 [00:40<01:20,  7.30s/it] 38%|███▊      | 6/16 [00:47<01:11,  7.14s/it] 44%|████▍     | 7/16 [00:54<01:03,  7.02s/it] 50%|█████     | 8/16 [01:00<00:55,  6.97s/it] 56%|█████▋    | 9/16 [01:07<00:48,  6.95s/it] 62%|██████▎   | 10/16 [01:14<00:41,  6.89s/it] 69%|██████▉   | 11/16 [01:21<00:34,  6.87s/it] 75%|███████▌  | 12/16 [01:28<00:27,  6.84s/it] 81%|████████▏ | 13/16 [01:35<00:20,  6.88s/it] 88%|████████▊ | 14/16 [01:42<00:13,  6.89s/it] 94%|█████████▍| 15/16 [01:49<00:06,  6.91s/it]100%|██████████| 16/16 [01:55<00:00,  6.91s/it]100%|██████████| 16/16 [01:55<00:00,  7.25s/it]
+Peak MLX memory: 7.96 GB
+=== [banner-creator] done: src/assets/images/pi-rust-agent-runtime-banner.jpg (1200x630, 75095B) ===
+=== [verify-banner] src/assets/images/pi-rust-agent-runtime-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=84 steps=16
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 75095B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/pi-rust-agent-runtime-banner.jpg ===
+PATH: src/assets/images/pi-rust-agent-runtime-banner.jpg

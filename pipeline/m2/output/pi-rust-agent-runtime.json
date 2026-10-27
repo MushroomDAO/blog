@@ -1,0 +1,11 @@
+{
+  "title": "pi-rust：能嵌入程序的Rust编程Agent",
+  "author": "Mycelium",
+  "digest": "实测rpi的本机工具调用闭环，讲清可嵌入运行时、原生插件与离线模式的边界。",
+  "mediaId": "prCUE631thH1cmNLi42prNh0DzuJ5sn7pbKfu2PzKWr00ejG8ybDN6qo57Nx-px0",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/bigfish1913/pi-rust"
+  ],
+  "publishedAt": "2026-10-27T08:42:09.554Z"
+}
