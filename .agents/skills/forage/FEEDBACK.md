@@ -1140,3 +1140,5 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 - 采集侧：无新发现。
 
 - 2026-10-27 pi-rust rpi0.10.0: published https://blog.mushroom.cv/blog/pi-rust-agent-runtime/; MIT, Rust1.88, embedded agent runtime. AppleSilicon release checksum and local deterministic realwrite toolloop verified, no realLLM/performance/crash test. Draft prCUE631thH1cmNLi42prNh0DzuJ5sn7pbKfu2PzKWr00ejG8ybDN6qo57Nx-px0 remotely verified; source dedup rawKBonly.
+
+- 2026-10-27 RoboHarness V2 / roboharness-v2-workspace：用户素材补完整链接后，精确 URL/实体查重仅原始 KB，未发现旧 Blog、M2 凭证或远程草稿；已发布列表 48001 无权限已记录。固定 a0936867e0db7d0ef3eabe10688468edaea190d8，V2 设计页明确结果另发，未套用 V1 成绩。M4 16GB 独立环境 16 项上游 CPU 边界测试通过，无模型/仿真/真机或性能实测。生成主题封面与三张小M图。Blog 及五个图片资源200，列表第4、轮播第1；公众号 draft/get 全文/3图/元数据/封面/原文/评论核验一致。双语语义写入成功，实时英文检索0.7228268；原路径 MemPalace 定向写入并回读4条。https://blog.mushroom.cv/blog/roboharness-v2-workspace/

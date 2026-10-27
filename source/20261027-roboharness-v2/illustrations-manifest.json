@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-27",
+  "topic": "RoboHarness V2 workspace as robot harness",
+  "skill": "mycelium-mushroom-illustrations",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "separate_calls": 3,
+    "generated_images": 3
+  },
+  "required_asset_count": 3,
+  "output_constraints": {
+    "format": "PNG",
+    "width": 1280,
+    "height": 720,
+    "aspect_ratio": "16:9",
+    "maximum_bytes_exclusive": 90000,
+    "background": "#FFFFFF"
+  },
+  "character": "XiaoM: red cap with white spots, cream stem, black dot eyes; active participant.",
+  "postprocessing": {
+    "tool": "ImageMagick",
+    "operations": [
+      "Resize within 1280x720, centered white extent to exact 16:9",
+      "Flatten alpha on white; normalize near-white colors with 3% fuzz, preserving cream stems",
+      "Strip metadata; no dithering; 32-color PNG palette; PNG compression level 9, filter 5"
+    ],
+    "command_template": "magick ORIGINAL -resize 1280x720 -background white -gravity center -extent 1280x720 -alpha remove -fuzz 3% -fill white -opaque white -strip +dither -colors 32 -define png:compression-level=9 -define png:compression-filter=5 PNG8:OUTPUT"
+  },
+  "technical_reading": {
+    "local_reference": "source/20261027-roboharness-v2/upstream-v2-readme.md",
+    "boundaries": [
+      "Conceptual explanatory illustrations, not benchmark evidence.",
+      "tools.py and the short gripper.move snippet are illustrative labels/pseudocode, not an exact RoboHarness API listing.",
+      "Tool-file repair and observation feedback do not imply model-weight training.",
+      "Physical safety gate and rollout review are an editorial deployment-safety boundary, not a claim that RoboHarness V2 implements or certifies a hardware safety gate.",
+      "No numerical performance or safety guarantee is asserted."
+    ]
+  },
+  "visual_review": {
+    "completed": true,
+    "reviewed_artifacts": "All three final encoded PNGs were visually inspected before installation.",
+    "checks": [
+      "Separate white-background images; no montage",
+      "Red cap / white spots / cream stem XiaoM identity retained",
+      "Chinese labels legible and sparse",
+      "Figure 1: manual, camera observation, editable tool file and two robot arms; file-to-joint arrow",
+      "Figure 2: failed grasp -> tool edit -> small retest -> new camera observation -> inspection, closed loop",
+      "Figure 3: isolated workspace, external simulator/evaluator, evidence review, closed physical gate and idle physical robot",
+      "No scores, benchmark charts, self-training or guaranteed-success graphics"
+    ]
+  },
+  "cleanup": {
+    "temporary_compression_files_removed": true,
+    "original_generations_preserved": true
+  },
+  "assets": [
+    {
+      "figure": 1,
+      "purpose": "Files to joints",
+      "path": "src/assets/images/roboharness-v2-workspace-fig-01.png",
+      "prompt": "source/20261027-roboharness-v2/fig-01-prompt.txt",
+      "original_generation_path": "/Users/jason/.codex/generated_images/01a17ca4-7932-7852-85b7-7f46b341aee8/exec-df7ece67-035a-4687-b5bc-2e4b218cd6ee.png",
+      "bytes": 44576,
+      "width": 1280,
+      "height": 720,
+      "sha256": "eb8926ca7f24dfffc36f3056fc2f71b7744458312e63086622241fc406ed4249",
+      "white_corner_pixels": [
+        "srgb(255,255,255)",
+        "srgb(255,255,255)",
+        "srgb(255,255,255)",
+        "srgb(255,255,255)"
+      ],
+      "prompt_sha256": "639d75010dcf3ceb294d8baadf928cbb4dbe8262da01b44aa2bfffd17df8040b",
+      "original_sha256": "398cbf92696a03705635d23aaa6b05ee03f6545f2a6c68fe6e57577515b0261d"
+    },
+    {
+      "figure": 2,
+      "purpose": "Tool repair and retest loop",
+      "path": "src/assets/images/roboharness-v2-workspace-fig-02.png",
+      "prompt": "source/20261027-roboharness-v2/fig-02-prompt.txt",
+      "original_generation_path": "/Users/jason/.codex/generated_images/01a17ca4-7932-7852-85b7-7f46b341aee8/exec-e8ae0185-3665-4a23-a095-31b3eef730e6.png",
+      "bytes": 45646,
+      "width": 1280,
+      "height": 720,
+      "sha256": "9be47349ee568bc75c82e24741ccbf65d7965b11fd7d4181ccdc6aebf17e0e12",
+      "white_corner_pixels": [
+        "srgb(255,255,255)",
+        "srgb(255,255,255)",
+        "srgb(255,255,255)",
+        "srgb(255,255,255)"
+      ],
+      "prompt_sha256": "7b4f26fb17bf66e1dd1a2c851492a0a375f3fe8c47d6ff753cbefaff464de56a",
+      "original_sha256": "f4252a2183103891ff6be61890793f465b5e968306d23813efd04537b8119ee6"
+    },
+    {
+      "figure": 3,
+      "purpose": "Isolation, independent evaluation and reviewed rollout",
+      "path": "src/assets/images/roboharness-v2-workspace-fig-03.png",
+      "prompt": "source/20261027-roboharness-v2/fig-03-prompt.txt",
+      "original_generation_path": "/Users/jason/.codex/generated_images/01a17ca4-7932-7852-85b7-7f46b341aee8/exec-b05a8606-2fda-4191-82c9-10f9a93c6a55.png",
+      "bytes": 51418,
+      "width": 1280,
+      "height": 720,
+      "sha256": "31279f492b57b6c9cb7c7b28fb52cfc9c12344c9347e2582c50bed641c8d6c16",
+      "white_corner_pixels": [
+        "srgb(255,255,255)",
+        "srgb(255,255,255)",
+        "srgb(255,255,255)",
+        "srgb(255,255,255)"
+      ],
+      "prompt_sha256": "2fd136a8951acafce975aad2e87299c838f68992bcd5d78c697eb1ae960a4db7",
+      "original_sha256": "8b9482c7d044745ea7f722207b06676fb22fd2ee3f9a50a95efd949d020413e3"
+    }
+  ],
+  "validation": {
+    "png_signature_crc_and_idat": "pass",
+    "exact_16_9": "pass",
+    "each_under_90000_bytes": "pass",
+    "white_corners": "pass",
+    "exactly_three_final_assets": "pass",
+    "temporary_files_removed": "pass"
+  }
+}
