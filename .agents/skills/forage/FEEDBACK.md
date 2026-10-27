@@ -1132,3 +1132,9 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 - CC-BY4.0 checked boxmanifest/licenseandenginecoverlicense;officialtwoassetthumbnailcovercredited/cropped+3XiaoMfigures. BilingualSEO/build/deployd4099248,page/fiveimages200,list2carousel1,semantic2vectors/liveZHmatch. RemoteWeChatfullbody/ordered3images/cover/metadata/comments/canonicalbodyURLverified. M2sourceUrls savedasfullHFdataset/spacepaths. KBsourcepersisted. Taskd254dd11-da48-487a-aef4-1c92cc08876a.
 
 - 2026-10-26 Hi3D v1.0: published https://blog.mushroom.cv/blog/hi3d-v1-geometry-refinement/; source/weight-header audit, no CUDA inference. Coarse mesh + image required; custom commercial terms; reported benchmarks distinguished. Remote draft prCUE631thH1cmNLi42prLujCCdw_-ZYSyrOLNwl1Gz-bhTRrWLJvAfB5IYV9D9g verified; raw KB only before writing, no duplicate.
+
+## 2026-10-27 评审台「开始写」
+- 用户标「写」3 条：xllama、Nanbeige4.3-33B、facebook/sam3，均无批注；查重均通过，3 条全发（blog+公众号草稿）。
+- 无跳过。
+- 流程问题：新文章必填 wechatTitle(≤30)/wechatDigest(≤54)，子 agent 的 BRIEF.md 未要求，首次发布被 lint 拦下，需手补；建议在 BRIEF.md frontmatter 模板里加这两个字段。
+- 采集侧：无新发现。
