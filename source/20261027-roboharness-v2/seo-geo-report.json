@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "bilingual": true,
+    "slugEnglish": true,
+    "requiredFields": true,
+    "titleLengths": true,
+    "tagsAtLeast3": true,
+    "cnQuestionHeadings": true,
+    "enQuestionHeadings": true,
+    "threeIllustrationReferencesEach": true,
+    "copyrightBoth": true,
+    "canonicalBoth": true,
+    "primarySources": true,
+    "independentVerification": true,
+    "evidenceScope": true,
+    "internalLink": true
+  },
+  "sourceReview": "BLUF in both languages; V1/V2 separated; deployment and safety recommendations distinguished from tested evidence. No claimed GEO uplift."
+}
