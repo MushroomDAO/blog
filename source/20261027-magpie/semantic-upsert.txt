@@ -1,0 +1,15 @@
+checking 2 article(s) (magpie-multi-agent-model-gateway, postiz-agentic-social-media-scheduling-open-source)
+diff: 4 changed/new, 0 unchanged (wrote /Users/jason/Dev/mycelium/blog/semantic-search/eval/incremental-index-plan.json)
+  + magpie-multi-agent-model-gateway [zh]
+  + magpie-multi-agent-model-gateway [en]
+  + postiz-agentic-social-media-scheduling-open-source [zh]
+  + postiz-agentic-social-media-scheduling-open-source [en]
+embedding 4 changed record(s) (calls Workers AI)...
+  verifying batch order on 4 samples...
+  batch order verified OK
+  embedding incremental 1-4/4...
+TARGET: account=7bf23342f21baa5ebfc7bc7b74f5a1f2 index=blog-search-v1 vectors=4
+  upserted 1-4/4: True
+deleting 2 stale chunk(s) from edited article(s)...
+  deleted stale 1-2/2: True
+updated manifest for 2 article(s)

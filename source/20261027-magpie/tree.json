@@ -1,0 +1,55 @@
+{
+  "sha": "5a9fb36a1090a347e6e07112088a557fb7fb867a",
+  "truncated": false,
+  "tree": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66de40b158808bd09c212713e37caf3e83b0d330",
+      "size": 23069,
+      "url": "https://api.github.com/repos/yetone/magpie/git/blobs/66de40b158808bd09c212713e37caf3e83b0d330"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "222359c87a0c4bd8f9e12fd27f1fcfaacb11887f",
+      "size": 22848,
+      "url": "https://api.github.com/repos/yetone/magpie/git/blobs/222359c87a0c4bd8f9e12fd27f1fcfaacb11887f"
+    },
+    {
+      "path": "docs/session-relocation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1756dfd8d03d96a7ecbf862b30a6cbbc6509a5f8",
+      "size": 3151,
+      "url": "https://api.github.com/repos/yetone/magpie/git/blobs/1756dfd8d03d96a7ecbf862b30a6cbbc6509a5f8"
+    },
+    {
+      "path": "docs/subsystems/library.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e9104b445c9aa8315f3356c823455aee08aef2c",
+      "size": 55840,
+      "url": "https://api.github.com/repos/yetone/magpie/git/blobs/7e9104b445c9aa8315f3356c823455aee08aef2c"
+    },
+    {
+      "path": "go.mod",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47912812e488a811d39aa1a1571467c2cab6a127",
+      "size": 2457,
+      "url": "https://api.github.com/repos/yetone/magpie/git/blobs/47912812e488a811d39aa1a1571467c2cab6a127"
+    },
+    {
+      "path": "site/public/img/agents-light.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9148e6a97d64896410fe91a4410b36142440d94b",
+      "size": 216903,
+      "url": "https://api.github.com/repos/yetone/magpie/git/blobs/9148e6a97d64896410fe91a4410b36142440d94b"
+    }
+  ],
+  "note": "Filtered to reviewed paths; original full API tree omitted to reduce archive noise."
+}

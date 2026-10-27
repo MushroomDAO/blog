@@ -1,0 +1,9 @@
+{
+  "build": "../20261027-magpie/build-verification.json",
+  "deployment": "../20261027-magpie/deployment.txt",
+  "publicReadback": "../20261027-magpie/public-verification.json",
+  "semanticBatchUpsert": "../20261027-magpie/semantic-upsert.txt",
+  "semanticReadback": "../20261027-magpie/semantic-verification.json",
+  "wechat": "existing-wechat-status.json",
+  "publication": "publication-result.json"
+}

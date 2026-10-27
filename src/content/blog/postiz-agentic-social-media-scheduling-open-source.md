@@ -1,219 +1,193 @@
 ---
-title: "Postiz：33K stars 的开源 Agent 社媒调度工具，让 AI 替你运营 30+ 平台"
-titleEn: "Postiz: 33K-Star Open-Source Agentic Social Media Scheduler for 30+ Platforms"
-description: "gitroomhq/postiz-app，开源 Buffer/Hootsuite 替代品。AGPL-3.0，TypeScript + Next.js + Redis，支持 30+ 社交平台，AI Agent（Claude/ChatGPT/Codex）直接接入做内容生成和分发。33718 stars，6305 forks，3年持续活跃。"
-descriptionEn: "gitroomhq/postiz-app — open-source Buffer/Hootsuite alternative. AGPL-3.0, TypeScript + Next.js + Redis, 30+ social platforms, AI agents (Claude/ChatGPT/Codex) plug in natively for content generation and distribution. 33,718 stars, 6,305 forks, 3 years of active development."
+title: "Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？"
+titleEn: "Postiz: Open-Source Facts Behind the Source-Leak Story"
+description: "Postiz 官方 2024 年公告已公开源码地址。本文区分可核实的开源事实与未核实的解雇、营销策划传闻，介绍多平台排期、Agent 接入、自托管边界及可审计发布流程，并纠正旧文对 AGPL 和数据出网的过度概括。"
+descriptionEn: "Postiz was already publicly open source in 2024. This update separates repository evidence from employment rumors and examines scheduling, agent access, self-hosting and licensing."
+wechatTitle: "Postiz源码泄露传闻与开源事实"
+wechatDigest: "核对早已公开的源码，说明社媒排期、Agent接入和自托管的真实边界。"
 pubDate: "2026-07-24"
-updatedDate: "2026-07-24"
-category: "Tech-Experiment"
-tags: ["开源", "社交媒体", "AI Agent", "调度工具", "TypeScript", "自托管", "Next.js", "内容创作"]
+updatedDate: "2026-10-28"
+category: "Tech-News"
+tags: ["Postiz", "开源", "社交媒体", "AI Agent", "自托管"]
 heroImage: "../../assets/images/postiz-agentic-social-media-scheduling-open-source-banner.jpg"
+lastPublishedAt: "2026-10-27T17:00:40Z"
 ---
 
-> **仓库**：gitroomhq/postiz-app · TypeScript · AGPL-3.0 · 33718 stars
-> **最新版本**：v2.21.10（2026-06-22）
-> **官方定位**：The ultimate agentic social media scheduling tool
+Postiz 是一个支持团队协作、多平台排期和自动化接入的社交媒体管理工具。“被解雇后才把整套源码放出来”不是理解它的可靠起点：官方在 2024 年 10 月 26 日的公告中，就明确给出了同一个开源仓库地址。
 
----
+本文于 2026-10-27 在原文章链接上更新，复用既有选题，补充传闻核查并纠正旧文错误。没有另建重复文章，也没有把旧公众号创建凭证当成当前草稿仍存在的证据。
 
-## 一、它是什么
+官方仓库：https://github.com/gitroomhq/postiz-app
+官网：https://postiz.com
+文档：https://docs.postiz.com
+本文原文：https://blog.mushroom.cv/blog/postiz-agentic-social-media-scheduling-open-source/
 
-Postiz 是一个开源的 AI 驱动社交媒体调度平台。最直接的类比是 Buffer 或 Hootsuite——但有三个关键差异：
+## “被炒后泄密”，哪些已经能核实？
 
-**自托管**。拉一个 Docker 镜像，数据和账号凭证全在自己机器上，不经过第三方服务器。
+用户提供的故事涉及 Will 与创始人 Nevo，核心传播句是离职后公开完整代码。要判断它，必须拆开三个命题。
 
-**Agent 原生**。Postiz 不只是让你定时发帖，而是让 AI Agent（Claude、ChatGPT、Codex、Cursor 等）直接接入，做内容生成、排期决策、自动分发的全流程自动化。
+| 命题 | 本次核验结果 | 能得出的结论 |
+|---|---|---|
+| 这次才首次公开源码 | 官方 2024-10-26 公告已指向 gitroomhq/postiz-app | 不成立，公开源码早于这轮故事 |
+| Will 确实被解雇，且担任营销负责人 | 未取得足以独立确认劳动或顾问关系的一手材料 | 不能把社交说法升级为已核实人事事实 |
+| 双方联合策划了营销戏码 | 未取得直接承认或其他充分证据 | 可以分析传播机制，不能断言合谋 |
 
-**30+ 平台**。Instagram、YouTube、LinkedIn、TikTok、Facebook、X、Bluesky、Mastodon、Discord、Slack、Telegram、Nostr、Warpcast（Farcaster）、WordPress、Medium、dev.to、Hashnode……以及更多。
+![2024年已有官方开源记录，晚近传闻不能改写这个时间线](../../assets/images/postiz-agentic-social-media-scheduling-open-source-fig-01.png)
 
----
+最直接的一手证据是 Nevo David 署名的旧公告：发布日期 2024-10-26，介绍 v1.6.7、自托管和团队功能，文末同时列出注册、开源与文档地址。这已经足以否定“最近才开放这份产品源码”，不需要借助猜测当事人动机。
 
-## 二、为什么是"agentic"
+公告：https://postiz.com/news/postiz-v1-6-7-more-social-media-platforms
 
-传统社媒调度工具的工作流是：**人写内容 → 工具定时发出去**。Postiz 的工作流是：
+本次 GitHub API 返回仓库创建时间为 2023-07-08，星标 39,076。创建时间本身不能证明当日仓库就公开，星标也不是实际部署量或收入，因此文章用有日期的官方公告确立公开历史，不把仓库年龄和 forks 当商业成功证明。
 
-**Agent 生成草稿 → 你审核（或不审核）→ 自动多平台分发**
+## 它的产品价值是什么？
 
-具体来说：
+Postiz 把素材、渠道、团队评论、排期和发布操作放到同一个工作台，并提供公共 API、Node SDK 与自动化集成。对于一个同时运营多个社媒账号的小团队，价值是减少重复上传与排期操作，让每条内容的渠道版本有迹可查。
 
-- 对接 OpenAI、Claude、Codex 等模型 API
-- 在可视化日历里对每个平台单独定制内容变体（同一主题，LinkedIn 版本和 TikTok 版本各写各的）
-- 批量操作：Agent 一次就能排好一整周的内容
-- 集成 AI 配图生成能力
+当前 README 同时提供官方云服务与自托管开源版。支持哪些渠道、哪些操作可以自动化，应以对应渠道文档和实际账号权限为准。“支持某个平台”不代表能绕过它的开发者申请、OAuth、付费接口和限流。
 
-这不是"ChatGPT 帮你写一条帖子"的浅层集成，而是把 Agent 作为内容流水线的一个节点接进来。
+官方列出的技术栈包含 pnpm 工作区、Next.js、NestJS、Prisma/PostgreSQL、Temporal 和邮件服务；不能继续沿用“前端加 Redis 就能完整运行”的简化描述。上线需要按当前 Docker Compose 与环境变量说明配置实际依赖。
 
----
+## Agent 应该如何进入发布流程？
 
-## 三、技术栈
+合理的落地顺序是：Agent 提供渠道变体与配图建议，人工确认，排期服务执行，最后读取平台回执。模型决定“可能发什么”，发布服务负责执行已授权的动作，两者之间保留审核记录。
 
-Next.js + TypeScript + Redis。主体是纯 TypeScript（占代码量约 78%），少量 JavaScript 和 CSS。
+![草稿经过审核进入渠道队列，回执决定是否重试](../../assets/images/postiz-agentic-social-media-scheduling-open-source-fig-02.png)
 
-AGPL-3.0 许可证——这个选择值得单独关注。AGPL 意味着：如果你把 Postiz 部署成 SaaS 向用户提供服务，必须开放你的修改。这是 Hashicorp / Supabase 模式的镜像——在代码层面阻止竞争性 SaaS 克隆，同时自己运营 postiz.com 作为商业变现入口。
+例如一家小型软件公司发布新版本，可以先只接一个测试社媒账号。给同一主题准备短帖、专业长帖和视频简介，审核链接、图片版权、产品事实和时区。第一次不要同时向所有正式账号发送。
 
-**自托管方式**：
+发布账本至少记录内部任务 ID、内容版本哈希、目标账号、计划时间、平台返回 ID 与状态。网络超时后先查平台或服务端记录：超时只说明客户端没收到结果，不证明发布失败。这个幂等设计是本文的工程建议，不是声称 Postiz 已为所有渠道提供统一的去重保证。
 
-```bash
-docker compose up -d
-```
+试运行一周看三个指标：从定稿到成功排期的时间、重复发布次数、失败能否定位到渠道/凭证/素材。浏览量可以评估内容效果，却不能替代交付可靠性。
 
-官方文档提供了完整的 Docker Compose 配置，覆盖数据库、Redis、后端和前端。
+API入口：https://docs.postiz.com/public-api
 
----
+## 自托管真的意味着数据不出设备吗？
 
-## 四、数字说明它的位置
+不是。自托管意味着你可以控制应用服务、数据库和存储的位置。发布到外部社交平台仍需把内容发送出去；使用外部 AI、邮件服务、对象存储或其他集成，也会形成相应出网链路。
 
-- 33,718 stars，6305 forks
-- 2023年7月创建，2026年7月仍活跃更新（每天有 push）
-- 最新版 v2.21.10，说明有持续的版本维护节奏
-- 157 个 open issues，61 个 open PR
+![自托管控制核心服务，外部平台和可选AI仍是数据接收方](../../assets/images/postiz-agentic-social-media-scheduling-open-source-fig-03.png)
 
-对比同类工具：Buffer 2023年才部分开源（仅发布层），Hootsuite 完全闭源。Postiz 3年做到 33K stars，是 Agent 时代第一个真正意义上的全功能开源替代。
+因此评估时画出实际数据路径：账号令牌放哪里、哪些进日志、谁能执行发布、备份如何加密、离职成员如何撤权。云版少运维，自托管增加控制权，也增加升级、备份、故障恢复和凭证管理责任。本文没有连接真实社媒账号，也未完成自托管安装验收。
 
----
+## AGPL 能阻止别人做商业克隆吗？
 
-## 五、AGPL 的商业逻辑
+不能这样概括。仓库当前为 AGPL-3.0，许可允许依条件使用、修改与分发，也允许商业用途。其网络交互相关源码提供义务需要结合实际修改、交互与分发方式判断；并不是“只要收费就违法”，也不是“企业内部使用一律没有义务”。
 
-Postiz 是"开源核心 + 云服务"模式，但 AGPL 比 MIT 严得多。
+旧文把 AGPL 描述成阻断竞品 SaaS 的工具，并把个人与内部部署一概说成无须关注许可，这些表述过度，本次已删除。部署前应检查仓库 LICENSE、所用依赖与具体业务安排；商标、托管服务和源码许可也要分开看。
 
-**AGPL 的实际影响**：
-- **个人自托管**：完全自由，无需开放源码（你不向公众提供服务）
-- **企业内部自托管**：同上，只要不对外服务就不触发
-- **商业 SaaS**：必须开放修改——这就砍掉了"拿开源代码建竞品 SaaS"的路
+许可原文：https://github.com/gitroomhq/postiz-app/blob/main/LICENSE
 
-对于个人开发者和中小团队：AGPL 对你没有影响，自托管即可。
+## 常见问题
 
----
+### 能免费跑起来吗？
 
-## 六、什么人应该关注
+开源版源码可按许可使用，但服务器、数据库、存储、邮件、模型和社媒接口可能有成本。开源不等于整个运营链路零成本。
 
-**内容创作者 / KOL**：跨平台发布从手动同步变成一次排期多平台自动分发，配合 AI 草稿生成，重复劳动大幅减少。
+### 有 3.9 万星就能证明成熟吗？
 
-**团队 / 公司**：自托管意味着账号凭证不离开自己服务器。对于管理数十个社媒账号的市场团队，这是重要的安全考量。
+只能说明关注度。本次采集数值是时间点快照；可靠性要看自己的渠道、权限和故障恢复验收。
 
-**开发者**：TypeScript 全栈，结构相对清晰，可以 fork 做定制化。AGPL 在自用场景下不构成障碍。
+### 所以这一定是营销 stunt？
 
-**不适合**：需要实时互动（评论回复、DM 处理）的重度社媒运营——Postiz 的核心是发布调度，互动模块是补充，不是主要能力。
+不能据此定案。可以确认“早就开源”，不能从“故事有流量”反推双方提前协商。读者更值得关注的是产品能否解决排期问题。
 
----
+## 给中小团队的判断
 
-## 七、判断
+传播把“公开代码”包装成冲突事件，容易让人错把叙事新鲜度当产品新鲜度。更稳妥的判断流程是先找官方仓库与历史公告，再核对许可，最后用一个真实渠道跑通草稿、审核、排期、回执与恢复。
 
-Postiz 踩在了一个真实的市场空白上：**自托管 + Agent 驱动 + 多平台**同时成立的工具，市场上基本没有竞品。
+已有多 Agent 工具的读者，可以结合 Magpie 的连接与资源管理分析阅读：https://blog.mushroom.cv/blog/magpie-multi-agent-model-gateway/
 
-33K stars 在 3 年内积累，不是靠 Hacker News 热帖刷出来的——6305 个 forks 说明很多人在实际部署和定制。这是真实活跃度的可靠信号。
-
-最值得关注的方向是"agentic scheduling"：当 AI Agent 能自主决策发什么、什么时候发、发哪个平台，Postiz 就不只是工具，而是成了内容团队的 Agent 工作台。这件事在 2026 年还在成形阶段，Postiz 的 v2.x 已经打了一半基础。
-
-对比 Buzz（Block 的工作台）：Buzz 的 Agent 是团队内部协作的 participant；Postiz 的 Agent 是内容生产和分发流水线的 operator。两个方向都值得跟。
+资料均来自官方仓库、README、许可与带日期公告。未核实的人事关系和策划动机不作为事实发布。
 
 ---
 
-*数据来源：GitHub gitroomhq/postiz-app，2026-07-24 采集。*
-
-© 2026 Author: Mycelium Protocol
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
 
 <!--EN-->
 
-> **Repository**: gitroomhq/postiz-app · TypeScript · AGPL-3.0 · 33,718 stars
-> **Latest Release**: v2.21.10 (2026-06-22)
-> **Official Positioning**: The ultimate agentic social media scheduling tool
+Postiz is a social media management product for team collaboration, scheduling and automation. Its source was already publicly linked in an official announcement dated October 26, 2024. A recent “fired employee releases the source” narrative should not be mistaken for the project's first open-source release.
+
+This October 27, 2026 update keeps the existing article URL, adds the fact check and corrects earlier overstatements. It does not create a duplicate article or treat an archived WeChat receipt as proof that a draft still exists.
+
+Repository: https://github.com/gitroomhq/postiz-app
+Website: https://postiz.com
+Documentation: https://docs.postiz.com
+Original article: https://blog.mushroom.cv/blog/postiz-agentic-social-media-scheduling-open-source/
+
+## What can be established about the story?
+
+Separate three claims: whether the source became public for the first time; whether the reported dismissal and marketing role are accurate; and whether the parties coordinated a campaign.
+
+The first claim is contradicted by an official, dated announcement. We did not obtain sufficient primary evidence to independently establish the employment relationship or coordinated intent. Neither should be presented as a proven personnel event or conspiracy.
+
+![The official open-source record predates the later source-leak narrative](../../assets/images/postiz-agentic-social-media-scheduling-open-source-fig-01.png)
+
+Nevo David's October 26, 2024 announcement covers v1.6.7, team functions and self-hosting, and explicitly links the same source repository:
+https://postiz.com/news/postiz-v1-6-7-more-social-media-platforms
+
+The GitHub API returned a repository creation date of July 8, 2023 and 39,076 stars at retrieval. Creation does not establish when a repository became public. Stars and forks do not establish production adoption or revenue. The dated announcement is the relevant evidence for prior public availability.
+
+## What is the product useful for?
+
+Postiz centralizes channel-specific content, team comments, schedules and publishing. Its README offers a managed cloud product and a self-hosted open-source edition, with a public API, Node SDK and automation integrations.
+
+Platform support remains subject to each channel's permissions, OAuth requirements, API access and rate limits. It does not bypass those requirements.
+
+The current listed stack includes pnpm workspaces, Next.js, NestJS, Prisma/PostgreSQL, Temporal and email services. Follow the current deployment documentation and dependency configuration rather than assuming a front end plus Redis is a complete installation.
+
+## How should an agent participate?
+
+A practical workflow is: generate channel-specific drafts, review facts and assets, approve a schedule, execute publishing, and read receipts. Keep model suggestions distinct from permission to publish.
+
+![Draft approval, channel queues and receipts make retries reviewable](../../assets/images/postiz-agentic-social-media-scheduling-open-source-fig-02.png)
+
+Start with one test account. Check links, image rights, product claims and time zones before broad distribution. A useful ledger records task ID, content hash, target account, schedule, returned platform ID and status.
+
+After a network timeout, reconcile server or platform state before retrying. A missing response is not proof of failure. This is our engineering recommendation, not a claim that Postiz guarantees uniform idempotency across every channel.
+
+Measure time from approved copy to successful scheduling, duplicate publications and whether failures can be traced to credentials, assets or channels. Impressions measure content performance, not delivery correctness.
+
+API documentation: https://docs.postiz.com/public-api
+
+## Does self-hosting keep all data local?
+
+No. It gives control over application infrastructure, databases and storage. Publishing still sends content to social platforms. Optional AI, email, storage and other integrations have their own data paths.
+
+![Self-hosted infrastructure still communicates with external platforms and optional AI services](../../assets/images/postiz-agentic-social-media-scheduling-open-source-fig-03.png)
+
+Review token storage, logs, publishing permissions, backups and member offboarding. Self-hosting adds operational responsibilities as well as control. This review did not connect social accounts or validate a deployed installation.
+
+## Does AGPL prevent commercial clones?
+
+That is an incorrect generalization. The current repository uses AGPL-3.0, which permits commercial use subject to its conditions. Source-offer obligations depend on relevant modifications, network interaction and distribution circumstances. Charging money alone is not the violation test, and internal enterprise use is not a universal exemption.
+
+The earlier article overstated both points and claimed self-hosting prevented all third-party data transfer. Those statements have been removed. Review the actual license and dependencies for a deployment; trademarks and hosted-service terms are separate matters.
+
+License: https://github.com/gitroomhq/postiz-app/blob/main/LICENSE
+
+## FAQ
+
+### Is the whole system free to operate?
+
+No. Infrastructure, storage, models, email and platform APIs may cost money even when the source is available under an open-source license.
+
+### Do the stars prove reliability?
+
+No. They measure attention at a point in time. Test the exact channels, permissions and recovery paths you require.
+
+### Was the firing story definitely staged?
+
+The evidence reviewed does not establish that. Prior public availability is verified; coordinated intent is not.
+
+## Assessment
+
+The useful evaluation sequence is repository history, license, channel requirements and a real draft-to-receipt trial. A dramatic source-release narrative changes none of those engineering checks.
+
+Related gateway and resource-management review: https://blog.mushroom.cv/blog/magpie-multi-agent-model-gateway/
+
+Sources are the official repository, README, license and dated announcement. Unverified employment claims and campaign intent are not treated as established facts.
 
 ---
 
-## 1. What It Is
-
-Postiz is an open-source, AI-driven social media scheduling platform. The closest analogy is Buffer or Hootsuite — but with three critical differences:
-
-**Self-hosted.** Pull a Docker image and your data and account credentials stay entirely on your own machine — nothing passes through third-party servers.
-
-**Agent-native.** Postiz doesn't just let you schedule posts — it lets AI agents (Claude, ChatGPT, Codex, Cursor, etc.) plug directly into the workflow for content generation, scheduling decisions, and fully automated distribution.
-
-**30+ platforms.** Instagram, YouTube, LinkedIn, TikTok, Facebook, X, Bluesky, Mastodon, Discord, Slack, Telegram, Nostr, Warpcast (Farcaster), WordPress, Medium, dev.to, Hashnode… and more.
-
----
-
-## 2. Why "Agentic"
-
-The traditional social scheduling workflow is: **human writes content → tool posts it at a set time.** Postiz's workflow is:
-
-**Agent generates draft → you review (or don't) → automatic multi-platform distribution**
-
-In practice:
-
-- Connects to OpenAI, Claude, Codex, and other model APIs
-- Lets you customize content variants per platform in a visual calendar (same topic, different copy for LinkedIn vs. TikTok)
-- Batch operations: agents can schedule an entire week of content in one pass
-- Integrates AI image generation for post visuals
-
-This isn't a shallow "ChatGPT helps you write a caption" integration. It's wiring agents in as a node in the content pipeline.
-
----
-
-## 3. Tech Stack
-
-Next.js + TypeScript + Redis. The codebase is primarily TypeScript (~78% of code volume), with some JavaScript and CSS.
-
-AGPL-3.0 license — a choice worth noting. AGPL means: if you deploy Postiz as a SaaS to serve users publicly, you must open-source your modifications. This mirrors the Hashicorp / Supabase playbook — blocking competitive SaaS clones at the license layer while running postiz.com as the commercial monetization outlet.
-
-**Self-hosting:**
-
-```bash
-docker compose up -d
-```
-
-Official docs provide a complete Docker Compose configuration covering database, Redis, backend, and frontend.
-
----
-
-## 4. The Numbers Tell Its Position
-
-- 33,718 stars, 6,305 forks
-- Created July 2023; still actively updated in July 2026 (daily commits)
-- Latest version v2.21.10 — a sustained release cadence
-- 157 open issues, 61 open PRs
-
-For context: Buffer only partially open-sourced in 2023 (publishing layer only); Hootsuite remains fully closed. Postiz hit 33K stars in three years and is the first genuinely full-featured open-source alternative built for the agentic era.
-
----
-
-## 5. The Business Logic of AGPL
-
-Postiz follows an "open-core + cloud service" model, but AGPL carries significantly stronger copyleft than MIT.
-
-**Practical AGPL impact:**
-- **Personal self-hosting**: completely free, no source disclosure required (you're not providing a public service)
-- **Enterprise internal deployment**: same — no trigger as long as it's not external-facing
-- **Commercial SaaS**: must disclose modifications — this cuts off the "clone the open-source code and build a competing SaaS" path
-
-For individual developers and small teams: AGPL creates no friction. Self-host and you're done.
-
----
-
-## 6. Who Should Pay Attention
-
-**Content creators / influencers**: Cross-platform publishing shifts from manual copy-paste to a single scheduling action with AI-generated drafts. Repetitive labor drops significantly.
-
-**Teams and companies**: Self-hosting means account credentials never leave your own servers. For marketing teams managing dozens of social accounts, this is a meaningful security consideration.
-
-**Developers**: Full TypeScript stack with a reasonably clean structure — forkable and customizable. AGPL doesn't apply in personal-use scenarios.
-
-**Not the right fit for**: Heavy social media operations requiring real-time engagement (comment replies, DM handling). Postiz's core is publishing and scheduling; engagement tools are supplementary, not the main capability.
-
----
-
-## 7. Assessment
-
-Postiz occupies a genuine market gap: **self-hosted + agent-driven + multi-platform** simultaneously — no real competitor does all three.
-
-33K stars accumulated over three years isn't the product of a viral post. The 6,305 forks tell the real story — thousands of people are actually deploying and customizing it. That's a reliable signal of genuine adoption.
-
-The most interesting direction to watch is "agentic scheduling": when AI agents can autonomously decide what to publish, when to publish it, and which platform to target, Postiz stops being a tool and becomes an agent workspace for content teams. That vision is still forming in 2026, but Postiz's v2.x has laid roughly half the foundation.
-
-Compare with Buzz (Block's workspace, covered in a previous post): Buzz's agents are participants in internal team collaboration; Postiz's agents are operators in the content production and distribution pipeline. Both directions are worth tracking.
-
----
-
-*Data source: GitHub gitroomhq/postiz-app, collected 2026-07-24.*
-
-© 2026 Author: Mycelium Protocol
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.

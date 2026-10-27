@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-27T17:34:06.711902+00:00",
+  "results": [
+    {
+      "slug": "magpie-multi-agent-model-gateway",
+      "foundCurrentTitle": true,
+      "match": {
+        "article_id": "magpie-multi-agent-model-gateway",
+        "title": "Magpie：把多 Agent、多模型和配置资源收进一个本地网关",
+        "url": "/blog/magpie-multi-agent-model-gateway/",
+        "language": "zh",
+        "excerpt": "Magpie：把多 Agent、多模型和配置资源收进一个本地网关 Magpie 是 yetone 开源的 MIT 多模型网关与 Agent 配置管理工具。本文核对模型路由、订阅桥接、会话、MCP 与技能分发的实际边界，给出渐进接入和回退方案，解释隐私脱敏默认关闭、统计设置与代理链路风险。 Magpie AI Agent 模型网关 MCP 本地工具 为什么工具越多，配置反而成了负担？ 账号切换、路由组和会话，各解决什么？ Library 会不会覆盖自己的 AGENTS.md 和技能？ 本地网关就一定更安全吗？ 怎样接入，出问题怎样退回？ 常见问题 一个 A",
+        "score": 0.77927166
+      },
+      "query": "Magpie 本地网关 多模型 账号路由 Library 配置资源"
+    },
+    {
+      "slug": "postiz-agentic-social-media-scheduling-open-source",
+      "foundCurrentTitle": true,
+      "match": {
+        "article_id": "postiz-agentic-social-media-scheduling-open-source",
+        "title": "Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？",
+        "url": "/blog/postiz-agentic-social-media-scheduling-open-source/",
+        "language": "zh",
+        "excerpt": "Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？ Postiz 官方 2024 年公告已公开源码地址。本文区分可核实的开源事实与未核实的解雇、营销策划传闻，介绍多平台排期、Agent 接入、自托管边界及可审计发布流程，并纠正旧文对 AGPL 和数据出网的过度概括。 Postiz 开源 社交媒体 AI Agent 自托管 “被炒后泄密”，哪些已经能核实？ 它的产品价值是什么？ Agent 应该如何进入发布流程？ 自托管真的意味着数据不出设备吗？ AGPL 能阻止别人做商业克隆吗？ 常见问题 能免费跑起来吗？ 有 3.9 万星就能证明成熟吗？",
+        "score": 0.785683
+      },
+      "query": "Postiz 被炒后泄露源码核查 2024年官方开源公告"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-27T17:30:41.005Z",
+  "drafts": [
+    {
+      "slug": "magpie-multi-agent-model-gateway",
+      "mediaId": "prCUE631thH1cmNLi42prJwPHH7pz1FFH0wXBO8KnSXN8bRvId1UUFhyZ5Ya1PhR",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "dadec0e0c6f00a73f7e78735905fbfdbfb8d107eb76a62c1012339cb04127b9f",
+      "remoteTextHash": "dadec0e0c6f00a73f7e78735905fbfdbfb8d107eb76a62c1012339cb04127b9f",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "29686d510d3a97180b0e4532f5d837225a35c4982664bdc85b95bbf55476869b",
+      "remoteContentHash": "c87b60b765bf5dec1484ae3932a9c64c0ac4118f9564452d9223c0047aa2f1fb"
+    }
+  ]
+}

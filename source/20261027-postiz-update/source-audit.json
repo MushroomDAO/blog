@@ -1,0 +1,33 @@
+{
+  "retrievedAt": "2026-10-27T16:49:36.840116+00:00",
+  "repository": "gitroomhq/postiz-app",
+  "files": {
+    "duplicate-check.txt": "668b594bc96670f46681c47911fa62d11f306f3b31a1568a5693a855781fd4bd",
+    "official-2024.html": "df034700e8dd39232ec5db516f9eeb32ae63d31f891d62cd030c3d28c97c8503",
+    "official-ui.png": "b669cffa32c6f3f82f93a31b84d85adcddfa9397d6682b7e7d79c75a5f8f3076",
+    "online-search.json": "4c7e11d3c7a34d6ac0862a42ddeda062073300669d2073ae8b9faeeb88a20980",
+    "repo.json": "b889783768ef3713c82f87d317318511f7a0c82afe56340dbc55487bbe6642ae",
+    "readme.md": "03ca37863c7ea1f663ea620f46277da45708f7e8079b5c5568517a10c042a0c5",
+    "license.txt": "d322fb1066693d8ed25495d11029f443aa793316852749e1389773c1946251b3",
+    "head-commit.json": "e4ce988ff10cf83a60b624af67fe91d8e330e0899f1fbc1a1efd43eac7463187",
+    "check-existing-wechat.cjs": "ad0c148b5acd1eb7ebd8138ee1c88b87b2cf26df61c958181fd775b85b42a217",
+    "existing-wechat-status.json": "6ec6d6c04b6037acef2d03124254fa856ef504f232c5680b2401f6a56e3934b5"
+  },
+  "verification": "Primary documentation review; no end-to-end installation or account actions performed.",
+  "claimAudit": {
+    "publicSourceBeforeRumor": "Official Oct26,2024 announcement points to same repo",
+    "repositoryCreatedAtIsNotPublicReleaseProof": true,
+    "willEmploymentAndCMORole": "unverified",
+    "coordinatedStunt": "unverified",
+    "socialMirrorFetch": "403; not used as factual evidence",
+    "oldDraft": "absent remotely; direct40007; published48001; preserve no recreate"
+  },
+  "kbReconciliation": "Historical Postiz KB record is a cross-machine ledger import whose temporary source_file no longer exists. Preserve it. Mine exactly one explicit amendment under the canonical article project memory, identifying this as an update and retaining the archived media credential; do not re-ingest raw material or create a new publication.",
+  "archivalWhitespaceNormalization": {
+    "file": "readme.md",
+    "originalSHA256": "03ca37863c7ea1f663ea620f46277da45708f7e8079b5c5568517a10c042a0c5",
+    "normalizedSHA256": "fc37b9faa6191e6ba9a5aab70f478a0f2e566349070222a37b09502340f1eb77",
+    "originalRetained": "/Users/jason/.heinu1-bot/jobs/6d943056-5f06-4715-b922-5abf575fb4c6/original-source-files/postiz-readme.md",
+    "reason": "Remove trailing whitespace from archival README only for git diff check; published article and images unchanged."
+  }
+}
