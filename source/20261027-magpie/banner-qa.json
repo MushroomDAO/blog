@@ -1,0 +1,7 @@
+{
+  "file": "src/assets/images/magpie-multi-agent-model-gateway-banner.jpg",
+  "sha256": "e02522c5496757dfefb75b5f0df83ffba44fd6bf41925021190ebf3e4cb4058f",
+  "manualReview": "pass: topic matched, no people or readable generated words; Magpie uses explicitly recorded crop of local generated source",
+  "automatedQA": "pass: provenance, 1200x630, <99000B, no text, no faces",
+  "bytes": 61993
+}

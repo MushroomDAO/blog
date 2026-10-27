@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "postiz-agentic-social-media-scheduling-open-source",
+      "title": "Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？",
+      "url": "/blog/postiz-agentic-social-media-scheduling-open-source/",
+      "language": "zh",
+      "excerpt": "Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？ Postiz 官方 2024 年公告已公开源码地址。本文区分可核实的开源事实与未核实的解雇、营销策划传闻，介绍多平台排期、Agent 接入、自托管边界及可审计发布流程，并纠正旧文对 AGPL 和数据出网的过度概括。 Postiz 开源 社交媒体 AI Agent 自托管 “被炒后泄密”，哪些已经能核实？ 它的产品价值是什么？ Agent 应该如何进入发布流程？ 自托管真的意味着数据不出设备吗？ AGPL 能阻止别人做商业克隆吗？ 常见问题 能免费跑起来吗？ 有 3.9 万星就能证明成熟吗？",
+      "score": 0.785683
+    },
+    {
+      "article_id": "opencut-open-source-capcut-alternative-viral",
+      "title": "OpenCut：一周暴涨 7 万 Star，开源 CapCut 替代品的重构之路",
+      "url": "/blog/opencut-open-source-capcut-alternative-viral/",
+      "language": "zh",
+      "excerpt": "OpenCut：一周暴涨 7 万 Star，开源 CapCut 替代品的重构之路 OpenCut 是一个开源 CapCut 替代方案，一周内涨了 7 万 Star 成为 2025 年 7 月最热 GitHub 项目。文章解析它为什么爆火、正在发生什么重构、Rust 核心 + MCP Server 的新架构意味着什么。 开源 视频编辑 CapCut TypeScript Rust MCP GitHub 一周 7 万 Star 背后 OpenCut 现在是什么 经典版（已归档） 重写版（进行中） 重写带来的三个能力 1. Editor API 2. MCP ",
+      "score": 0.52181435
+    },
+    {
+      "article_id": "block-buzz-nostr-human-agent-workspace",
+      "title": "Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上",
+      "url": "/blog/block-buzz-nostr-human-agent-workspace/",
+      "language": "zh",
+      "excerpt": "Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上 Block（Jack Dorsey 旗下公司）2026年3月开源的 Buzz：人类和 AI Agent 在同一个 Nostr relay 上协作，每个操作都是加密签名的事件。7374 stars，Rust + Tauri + React，支持 Claude Code / Codex / Goose 直接接入。自托管，数据主权在你手里。 Nostr AI Agent 开源 自托管 协作工具 Rust Claude Code Block 一、它是什么 二、为什么是 Nost",
+      "score": 0.5171507
+    },
+    {
+      "article_id": "authentik-2026-8-oidc-certified-rust-rewrite-pam",
+      "title": "authentik 2026.8：OpenID 官方认证、Rust 重写、PAM，自托管 IdP 的新里程碑",
+      "url": "/blog/authentik-2026-8-oidc-certified-rust-rewrite-pam/",
+      "language": "zh",
+      "excerpt": "authentik 2026.8：OpenID 官方认证、Rust 重写、PAM，自托管 IdP 的新里程碑 goauthentik/authentik 开源 Identity Provider，24k stars，Python，自托管替代 Okta/Auth0/Entra ID。v2026.8 三大亮点：通过 OpenID Foundation 官方认证（8个profile）、服务器与 Proxy Outpost 完成 Rust 重写、企业版新增特权访问管理（PAM）。另有用户多账号切换、自定义字段、LDAP 嵌套组同步、策略绑定到期、PostgreS",
+      "score": 0.5107706
+    },
+    {
+      "article_id": "pinme-ipfs-deploy-cli-mac-review",
+      "title": "PinMe Hands-On: One Command to IPFS, but the Full-Stack Template Lands on Cloudflare Workers",
+      "url": "/blog/pinme-ipfs-deploy-cli-mac-review/",
+      "language": "en",
+      "excerpt": "PinMe Hands-On: One Command to IPFS, but the Full-Stack Template Lands on Cloudflare Workers PinMe is glitternetwork's zero-config deploy CLI: 3,742 GitHub stars, MIT license, last commit 2026-09-12. We verified locally via npx: `pinme --version` returns 2.0.12, and `pinme upload",
+      "score": 0.49487048
+    },
+    {
+      "article_id": "lieflat-charts-agent-skill-data-visualization",
+      "title": "Lieflat Charts 实测：一套遵循 Agent Skills 格式的数据可视化 skill，但\"开源\"这个词用错了",
+      "url": "/blog/lieflat-charts-agent-skill-data-visualization/",
+      "language": "zh",
+      "excerpt": "Lieflat Charts 实测：一套遵循 Agent Skills 格式的数据可视化 skill，但\"开源\"这个词用错了 实测 Agent Skills 生态里的数据可视化 skill Lieflat Charts（moxt.ai 出品，兼容 Claude Code/Codex）：装上后用本站今天的真实采集数据（forage 雷达）跑出一张 Tick Rows 图，记录选型过程和产出。GitHub 4633 star，但作者在 X 上说\"我开源的\"其实不准确——License 是 PolyForm Noncommercial 1.0.0，只允许学习、",
+      "score": 0.49362838
+    },
+    {
+      "article_id": "mediapipe-pose-landmarker-blazepose-33-keypoints-on-device",
+      "title": "MediaPipe Pose Landmarker：BlazePose 33 个关键点，跑在设备上",
+      "url": "/blog/mediapipe-pose-landmarker-blazepose-33-keypoints-on-device/",
+      "language": "zh",
+      "excerpt": "MediaPipe Pose Landmarker：BlazePose 33 个关键点，跑在设备上 你搜到的 google.github.io/mediapipe/solutions/pose.html 是旧 API，已于 2023 年 3 月废弃。现行版本是 google-ai-edge/mediapipe v1.0.0（37K stars，Apache-2.0），走 Tasks API，支持 Python/JS/Android/iOS，推理全在设备端。本文把两代 API 对比清楚，给出今天能直接跑的代码。 mediapipe pose-estimat",
+      "score": 0.49305144
+    },
+    {
+      "article_id": "gaussian-splatting-3dtiles-web-pipeline-guide",
+      "title": "高斯泼溅上 Web：3DGS → 3D Tiles 全开源工具链指南",
+      "url": "/blog/gaussian-splatting-3dtiles-web-pipeline-guide/",
+      "language": "zh",
+      "excerpt": "高斯泼溅上 Web：3DGS → 3D Tiles 全开源工具链指南 WilliamLiu-1997 整理的三件套开源工具链：把 3DGS PLY 转换为 3D Tiles、本地检查调整、接入 CesiumJS / Three.js，用 2GB 内存处理 20GB 级别扫描数据的完整解决方案。 高斯泼溅 3DGS 3D Tiles WebGIS CesiumJS Three.js 数字孪生 开源工具链 为什么 PLY 直接上 Web 会有问题？ 完整 Pipeline 一览 工具一：3DGS-PLY-3DTiles-Converter 安装和基本用法 核",
+      "score": 0.49109825
+    },
+    {
+      "article_id": "openai-codex-cli-rust-terminal-coding-agent-chatgpt-open-source",
+      "title": "OpenAI Codex CLI：108K stars 的开源终端编码 Agent，Rust 重写，ChatGPT 账号直接登录",
+      "url": "/blog/openai-codex-cli-rust-terminal-coding-agent-chatgpt-open-source/",
+      "language": "zh",
+      "excerpt": "OpenAI Codex CLI：108K stars 的开源终端编码 Agent，Rust 重写，ChatGPT 账号直接登录 openai/codex 是 OpenAI 开源（Apache 2.0）的本地终端编码 Agent，108K stars，Rust 实现，16.5K forks。支持 ChatGPT Plus/Pro/Business 账号直连（无需 API Key），四种部署形态（CLI/IDE/桌面应用/云端 Web），内置 Skills 系统、Slash 命令、AGENTS.md 支持、执行策略沙箱。OpenAI 同时设立 100 万美",
+      "score": 0.488438
+    },
+    {
+      "article_id": "deepseek-v4-vibe-coding-market-impact",
+      "title": "DeepSeek V4 到来之后的 Vibe Coding 变化评估",
+      "url": "/blog/deepseek-v4-vibe-coding-market-impact/",
+      "language": "zh",
+      "excerpt": "DeepSeek V4 到来之后的 Vibe Coding 变化评估 2026年4月24日 DeepSeek-V4 正式发布：1M上下文、1.6T参数、V4-Flash输出仅¥2/M token。本文分析其对 Cursor、Copilot、Claude Code 等 Vibe Coding 工具市场的价格冲击与结构性重塑。 DeepSeek DeepSeek V4 Vibe Coding AI编程 Cursor Claude Code 大模型定价 API价格 开源 一、DeepSeek V4 核心参数 模型规格 官方定价 Benchmark 表现 二、对",
+      "score": 0.48832402
+    }
+  ]
+}

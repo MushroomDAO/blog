@@ -1,0 +1,14 @@
+=== [banner-creator] postiz-agentic-social-media-scheduling-open-source → src/assets/images/postiz-agentic-social-media-scheduling-open-source-banner.jpg (seed=8318, 1200x630, <98KB) ===
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:13<03:29, 13.97s/it] 12%|█▎        | 2/16 [00:20<02:16,  9.73s/it] 19%|█▉        | 3/16 [00:27<01:49,  8.43s/it] 25%|██▌       | 4/16 [00:34<01:33,  7.82s/it] 31%|███▏      | 5/16 [00:41<01:22,  7.51s/it] 38%|███▊      | 6/16 [00:48<01:12,  7.26s/it] 44%|████▍     | 7/16 [00:55<01:04,  7.20s/it] 50%|█████     | 8/16 [01:02<00:57,  7.19s/it] 56%|█████▋    | 9/16 [01:09<00:50,  7.23s/it] 62%|██████▎   | 10/16 [01:16<00:42,  7.13s/it] 69%|██████▉   | 11/16 [01:23<00:35,  7.00s/it] 75%|███████▌  | 12/16 [01:30<00:27,  6.91s/it] 81%|████████▏ | 13/16 [01:37<00:20,  6.96s/it] 88%|████████▊ | 14/16 [01:43<00:13,  6.91s/it] 94%|█████████▍| 15/16 [01:51<00:06,  6.97s/it]100%|██████████| 16/16 [01:57<00:00,  6.90s/it]100%|██████████| 16/16 [01:57<00:00,  7.37s/it]
+Peak MLX memory: 7.96 GB
+=== [banner-creator] done: src/assets/images/postiz-agentic-social-media-scheduling-open-source-banner.jpg (1200x630, 94168B) ===
+=== [verify-banner] src/assets/images/postiz-agentic-social-media-scheduling-open-source-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=8318 steps=16
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 94168B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/postiz-agentic-social-media-scheduling-open-source-banner.jpg ===
+PATH: src/assets/images/postiz-agentic-social-media-scheduling-open-source-banner.jpg

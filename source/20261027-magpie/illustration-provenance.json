@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "model": "Not exposed by tool",
+    "transparent_background": false
+  },
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "brief_source": "Blog-publisher delegated illustration brief for user-requested Magpie article, 2026-10-27",
+  "external_visual_references": [],
+  "originals_preserved": true,
+  "assets": [
+    {
+      "id": "01",
+      "topic": "Magpie: multiple coding agents converge through ONE LOCAL gateway and then branch to different model providers. Invent a low-tech patchboard scene. On left three tiny different coding terminal objects feed thin orange cables into a SINGLE squat local patchboard in center. XiaoM is seated within the patchboard seriously turning its one routing dial; the entire patchboard and XiaoM mechanism are the single gateway, not an additional hop. On right its three outgoing cables lead to three different spare model-service vessels. Show unmistakable many-to-one-to-many flow, short orange arrowheads on cables. Center is the ONLY local gateway. Do not show providers connecting directly to agents. Short labels ONLY: \"编码代理\" above the left group; \"本地网关\" below XiaoM patchboard; \"模型服务商\" above right group; three small blue provider labels \"甲\", \"乙\", \"丙\" next to right vessels. No provider logos. One sparse red underline below 本地网关.",
+      "prompt_file": "source/20261027-magpie/illustration-prompts/fig-01.txt",
+      "original_file": "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-51e45249-0ba1-485d-abfd-f7bc836c53d1.png",
+      "output_file": "src/assets/images/magpie-multi-agent-model-gateway-fig-01.png",
+      "visual_review": {
+        "raw": "pass",
+        "final": "pass",
+        "method": "Direct visual inspection of each final compressed PNG with view_image",
+        "checked": [
+          "Chinese label spelling and readability",
+          "Current red cap white dots and pale stem XiaoM",
+          "XiaoM performs central action",
+          "White background and sparse annotations",
+          "Requested conceptual boundaries"
+        ],
+        "semantic_notes": "Multiple coding agents converge through one local gateway before branching to model providers. Current XiaoM operates the gateway.",
+        "reviewed_asset_sha256": "9fd15feafa2ee8842556dcfa256eeb2d57c0b42d6fcf22e18f25458a496668b5",
+        "reviewed_at_utc": "2026-10-27T16:56:19.046487+00:00"
+      },
+      "original_sha256": "f0f92016add59ce96ac03b38d02b81ff31db2a476067cf49bed19de53fef84b2",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "9fd15feafa2ee8842556dcfa256eeb2d57c0b42d6fcf22e18f25458a496668b5",
+      "bytes": 81663,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "aspect_ratio": "16:9",
+      "palette_colors_limit": 64,
+      "compression_command": [
+        "magick",
+        "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-51e45249-0ba1-485d-abfd-f7bc836c53d1.png",
+        "-resize",
+        "1536x864",
+        "-background",
+        "white",
+        "-gravity",
+        "center",
+        "-extent",
+        "1536x864",
+        "-channel",
+        "RGB",
+        "-white-threshold",
+        "97%",
+        "+channel",
+        "-dither",
+        "None",
+        "-colors",
+        "64",
+        "-strip",
+        "-define",
+        "png:compression-level=9",
+        "PNG8:src/assets/images/magpie-multi-agent-model-gateway-fig-01.compressing.png"
+      ],
+      "compression_note": "Lossy palette quantization and resize; near-white RGB channels normalized independently to retain pale stem color. Metadata stripped from delivery PNG. Original generated PNG retained.",
+      "prompt_sha256": "885fb6bf0007524b399a63d5ca7bf4104b72d4fa388453184c5a629706479dbb",
+      "corner_pixels": "srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)",
+      "automated_checks": "pass"
+    },
+    {
+      "id": "02",
+      "topic": "Magpie: one shared library materializes skills, MCP and instructions into distinct agent-specific configs, with ownership boundary. A small shared source rack at left contains three separate thin tabs labeled \"技能\", \"MCP\", \"指令\". In center XiaoM seriously operates a hand-cranked paper-folding press, folding copies into TWO very visibly distinct configuration sheets at right: one tall narrow page and one broad page with folded corner, labeled \"代理甲配置\" and \"代理乙配置\". Orange short flow from source through press into the two pages. On each output page its upper few lines are in a blue bracket and lower lines are black behind a thin red boundary. One shared blue annotation \"管理写入\" points to blue upper lines; one shared black annotation \"用户自有\" points to black lower lines; red annotation \"只改自己写的\" sits near boundary. The machine writes only the managed portion. No erasing, deleting or writing the user-owned lower area. Keep lower lines intact. This should feel like absurd paper-folding work, not a formal diagram. Exactly eight short labels as specified.",
+      "prompt_file": "source/20261027-magpie/illustration-prompts/fig-02.txt",
+      "original_file": "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-96b3f2ad-5f42-4a4c-8e50-1164dd7505d2.png",
+      "output_file": "src/assets/images/magpie-multi-agent-model-gateway-fig-02.png",
+      "visual_review": {
+        "raw": "pass",
+        "final": "pass",
+        "method": "Direct visual inspection of each final compressed PNG with view_image",
+        "checked": [
+          "Chinese label spelling and readability",
+          "Current red cap white dots and pale stem XiaoM",
+          "XiaoM performs central action",
+          "White background and sparse annotations",
+          "Requested conceptual boundaries"
+        ],
+        "semantic_notes": "Shared skills, MCP and instructions become distinct agent configuration sheets; managed writes and user-owned content are separated.",
+        "reviewed_asset_sha256": "0bc123717b102b054dc222fc89c4e73a8a5e9b42d1d830a5f8b627d583571aac",
+        "reviewed_at_utc": "2026-10-27T16:56:19.211196+00:00"
+      },
+      "original_sha256": "951115795f4698d43c600ac068805e5c41580aa45cd35b749aa155cd1291c817",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "0bc123717b102b054dc222fc89c4e73a8a5e9b42d1d830a5f8b627d583571aac",
+      "bytes": 85342,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "aspect_ratio": "16:9",
+      "palette_colors_limit": 64,
+      "compression_command": [
+        "magick",
+        "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-96b3f2ad-5f42-4a4c-8e50-1164dd7505d2.png",
+        "-resize",
+        "1536x864",
+        "-background",
+        "white",
+        "-gravity",
+        "center",
+        "-extent",
+        "1536x864",
+        "-channel",
+        "RGB",
+        "-white-threshold",
+        "97%",
+        "+channel",
+        "-dither",
+        "None",
+        "-colors",
+        "64",
+        "-strip",
+        "-define",
+        "png:compression-level=9",
+        "PNG8:src/assets/images/magpie-multi-agent-model-gateway-fig-02.compressing.png"
+      ],
+      "compression_note": "Lossy palette quantization and resize; near-white RGB channels normalized independently to retain pale stem color. Metadata stripped from delivery PNG. Original generated PNG retained.",
+      "prompt_sha256": "d7a90b399f31dd50fecb4dcc7126e8cc0ad332ce7c497ee0c030b67b74953d7f",
+      "corner_pixels": "srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)",
+      "automated_checks": "pass"
+    },
+    {
+      "id": "03",
+      "topic": "Magpie privacy masking is OFF BY DEFAULT, deliberately user-enabled, detection NOT universal. One compact absurd tabletop stencil device for masking sensitive text. XiaoM actively and deliberately moves a mechanical lever from left detent to right detent: left detent has clear label \"默认关闭\" and a hollow small position marker; right detent has clear blue label \"手动开启\" with XiaoM's hand on it. A single input paper strip labeled \"敏感信息\" enters device; after enabled device a small output card shows only \"***\". A blue label by stencil reads \"本地脱敏\". A little unmasked dot slipping around the stencil is circled in red with exact caution \"仍可能漏检\". Make that limitation legible. A short orange arrow leads toward a small remote flask labeled \"模型服务\". Do NOT show locks, protective shields, 100%, universal guarantees or automatically enabled protection. One scene with two lever positions, not a before-after panel or two separate images. Only six Chinese labels plus \"***\".",
+      "prompt_file": "source/20261027-magpie/illustration-prompts/fig-03.txt",
+      "original_file": "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-e1c13a43-32c5-41cb-9fb2-68f42473667c.png",
+      "output_file": "src/assets/images/magpie-multi-agent-model-gateway-fig-03.png",
+      "visual_review": {
+        "raw": "pass",
+        "final": "pass",
+        "method": "Direct visual inspection of each final compressed PNG with view_image",
+        "checked": [
+          "Chinese label spelling and readability",
+          "Current red cap white dots and pale stem XiaoM",
+          "XiaoM performs central action",
+          "White background and sparse annotations",
+          "Requested conceptual boundaries"
+        ],
+        "semantic_notes": "Labels explicitly say 默认关闭, 手动开启 and 仍可能漏检; no universal detection guarantee.",
+        "reviewed_asset_sha256": "330933faf494c205565caceb35ce75aa2f3cbf9ae01d7089b2a3cbe7469cf5ec",
+        "reviewed_at_utc": "2026-10-27T16:56:19.214609+00:00"
+      },
+      "original_sha256": "9ad7fe63e42be185c0d0110491523cac19054c9004dd4643f70469deb9ac0c40",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "330933faf494c205565caceb35ce75aa2f3cbf9ae01d7089b2a3cbe7469cf5ec",
+      "bytes": 71901,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "aspect_ratio": "16:9",
+      "palette_colors_limit": 64,
+      "compression_command": [
+        "magick",
+        "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-e1c13a43-32c5-41cb-9fb2-68f42473667c.png",
+        "-resize",
+        "1536x864",
+        "-background",
+        "white",
+        "-gravity",
+        "center",
+        "-extent",
+        "1536x864",
+        "-channel",
+        "RGB",
+        "-white-threshold",
+        "97%",
+        "+channel",
+        "-dither",
+        "None",
+        "-colors",
+        "64",
+        "-strip",
+        "-define",
+        "png:compression-level=9",
+        "PNG8:src/assets/images/magpie-multi-agent-model-gateway-fig-03.compressing.png"
+      ],
+      "compression_note": "Lossy palette quantization and resize; near-white RGB channels normalized independently to retain pale stem color. Metadata stripped from delivery PNG. Original generated PNG retained.",
+      "prompt_sha256": "523266b97a9c9989762099c2adbc231d70506aaeba51dd368d8775f9b836d195",
+      "corner_pixels": "srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)",
+      "automated_checks": "pass"
+    }
+  ],
+  "prepared_at_utc": "2026-10-27T16:54:57.499787+00:00",
+  "status": "complete; all three delivery assets visually inspected and validated"
+}
