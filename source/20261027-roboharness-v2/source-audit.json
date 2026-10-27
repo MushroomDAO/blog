@@ -1,0 +1,18 @@
+{
+  "sourceCommit": "a0936867e0db7d0ef3eabe10688468edaea190d8",
+  "sources": [
+    "https://github.com/BinceQu/RoboHarness",
+    "https://bincequ.github.io/RoboHarness/v2/",
+    "https://arxiv.org/abs/2610.14018"
+  ],
+  "retrieval": "agent-reach skill public-native route; CLI not installed, doctor unavailable; urllib retrieved full page and pinned source",
+  "dedup": "Exact URL clear; exact entity only raw bot KB, no existing article or M2 credential. Remote draft read, published API48001 unavailable.",
+  "v2Results": "Design note: results will follow in separate posts.",
+  "savedFiles": [
+    "/Users/jason/.heinu1-bot/media/roboharness-v2-v1_to_v2-roboharness_v1_to_v2_transparent.png",
+    "/Users/jason/.heinu1-bot/media/roboharness-v2-fig-perception-files-nobar.svg",
+    "/Users/jason/.heinu1-bot/media/roboharness-v2-fig-action-space.svg",
+    "/Users/jason/.heinu1-bot/media/roboharness-v2-fig-call-chain.svg",
+    "/Users/jason/.heinu1-bot/media/roboharness-v2-fig-workspace-tree.svg"
+  ]
+}
