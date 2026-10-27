@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "noPendingText": true,
+    "bilingual": true,
+    "requiredFields": true,
+    "titleLengths": true,
+    "tagsAtLeast3": true,
+    "questionHeadingsBoth": true,
+    "threeBodyImagesEach": true,
+    "copyrightBoth": true,
+    "canonicalBoth": true,
+    "primarySources": true,
+    "internalLink": true,
+    "sourceCaveats": true,
+    "independentChecks": true,
+    "assetsExist": true
+  },
+  "review": "BLUF, FAQ and primary plain URLs in both languages. Separate author metrics, postprocessing checks, and limited local inference attempts. No claimed GEO uplift."
+}

@@ -1,0 +1,13 @@
+{
+  "title": "OvisOCR3：小模型统一五类文档任务",
+  "author": "Mycelium",
+  "digest": "OvisOCR3 用一个0.8B模型处理文档解析、文字识别、字段抽取、图片理解和跨页表格。",
+  "mediaId": "prCUE631thH1cmNLi42prMeFFSNBuuPR70lgnpLSp4aiF8P_zzOL4XcjHwrMhK5e",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/ath-maas/ovisocr3",
+    "huggingface.co/spaces/ath-maas",
+    "github.com/ath-maas/ovis"
+  ],
+  "publishedAt": "2026-10-27T16:19:44.304Z"
+}
