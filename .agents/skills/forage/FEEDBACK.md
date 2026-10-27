@@ -1144,3 +1144,14 @@ Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine 
 - 2026-10-27 RoboHarness V2 / roboharness-v2-workspace：用户素材补完整链接后，精确 URL/实体查重仅原始 KB，未发现旧 Blog、M2 凭证或远程草稿；已发布列表 48001 无权限已记录。固定 a0936867e0db7d0ef3eabe10688468edaea190d8，V2 设计页明确结果另发，未套用 V1 成绩。M4 16GB 独立环境 16 项上游 CPU 边界测试通过，无模型/仿真/真机或性能实测。生成主题封面与三张小M图。Blog 及五个图片资源200，列表第4、轮播第1；公众号 draft/get 全文/3图/元数据/封面/原文/评论核验一致。双语语义写入成功，实时英文检索0.7228268；原路径 MemPalace 定向写入并回读4条。https://blog.mushroom.cv/blog/roboharness-v2-workspace/
 
 - 2026-10-27 OvisOCR3 / ovisocr3-unified-document-model：模型与Space精确查重仅原始KB，线上MCP无同题文章；无旧M2凭证/远程草稿，已发布列表48001缺口记录。固定模型4833d5d2afa6e769ee933f024504d67ace80a24c、Space72851f1a4d49e480527a2dc05c920356c9e3d581。纠正Schema为输出模板、跨页两阶段递归/默认单表绑定、Space示例Stage1缓存；官方成绩非各列第一，内部评测口径明确。M4/16GB真实离线Transformers/MPS+CPU fallback，KIE字段及缺失空值正确；首轮OCR漏金额原样保留，300秒软时限补验完整四行并EOS，不报吞吐或最低内存。发布脚本5项后处理契约检查通过，未做视觉跨页评测。封面与三张小M图已核验。Blog及5图片200，列表第3、轮播第1；公众号draft/get全文/3图/元数据/封面/原文/评论匹配。双语向量写入，中文实时检索0.7265044；MemPalace原路径写入并回读6条。https://blog.mushroom.cv/blog/ovisocr3-unified-document-model/
+
+
+## 2026-10-28 · Magpie 与 Postiz：新稿与旧稿分别处理
+
+Magpie 对应 yetone/magpie（MIT），以原生配置适配和本地模型网关为主；隐私脱敏默认关闭，发行版有可关闭统计，会话管理不等于跨 Agent 状态无损交接。新双语文章 magpie-multi-agent-model-gateway 已上线，公众号全文/三图/封面/元数据/评论设置回读匹配。
+
+Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slug 更新，保留首次发布日期。官方2024-10-26公告已指向源码，解雇关系与联合营销意图未获独立核验；修正旧文 AGPL 禁止商业克隆、内部使用一律豁免、自托管零出网等过度表述。旧 media_id 不在草稿箱，draft/get40007、已发布接口48001，标记 recorded，不重复创建。
+
+两篇合并一次构建和生产部署；936页、图片与首页轮播已核验。语义索引4向量写入、删除旧稿2条向量，新查询已命中当前标题。KB保留原始素材与历史导入，只增量写入两个发布项目记录并回读通过。Magpie封面初版文字被拒，改用同一本地生成图的明确记录裁切并重新通过检查；Postiz使用匹配本地生成封面。没有实测安装、模型供应商接入或社媒账号发布。
+
+耗时复盘：本机负载约45，其他仓库长期PR标签脚本占用CPU；单次Astro700.26秒、Pagefind145.422秒。今后同批内容准备齐再合并构建，先报真实已完成链接；不能把已成功内容盲目重建。

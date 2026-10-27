@@ -1,0 +1,9 @@
+=== [verify-banner] src/assets/images/magpie-multi-agent-model-gateway-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=8317 steps=16 crop=400x210+600+0
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 61993B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/magpie-multi-agent-model-gateway-banner.jpg ===

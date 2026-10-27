@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "magpie-multi-agent-model-gateway",
+      "title": "Magpie：把多 Agent、多模型和配置资源收进一个本地网关",
+      "url": "/blog/magpie-multi-agent-model-gateway/",
+      "language": "zh",
+      "excerpt": "Magpie：把多 Agent、多模型和配置资源收进一个本地网关 Magpie 是 yetone 开源的 MIT 多模型网关与 Agent 配置管理工具。本文核对模型路由、订阅桥接、会话、MCP 与技能分发的实际边界，给出渐进接入和回退方案，解释隐私脱敏默认关闭、统计设置与代理链路风险。 Magpie AI Agent 模型网关 MCP 本地工具 为什么工具越多，配置反而成了负担？ 账号切换、路由组和会话，各解决什么？ Library 会不会覆盖自己的 AGENTS.md 和技能？ 本地网关就一定更安全吗？ 怎样接入，出问题怎样退回？ 常见问题 一个 A",
+      "score": 0.77927166
+    },
+    {
+      "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+      "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+      "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+      "language": "zh",
+      "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+      "score": 0.6150744
+    },
+    {
+      "article_id": "llm-dock-docker-compose-local-llm-dashboard",
+      "title": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板",
+      "url": "/blog/llm-dock-docker-compose-local-llm-dashboard/",
+      "language": "zh",
+      "excerpt": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板 LLM-Dock 是一个管理本地 LLM 推理服务的 Web 面板：自动扫描 HuggingFace 缓存发现模型，llama.cpp 跑 GGUF、vLLM 跑 safetensors，3300-3400 端口段自动分配，一键起停，自动注册进 Open WebUI，还能在面板里直接跑 llama-bench 并把结果存库对比。前提是 Linux + NVIDIA。 本地推理 Docker llama.cpp vLLM 运维 开源 Open Web",
+      "score": 0.61311495
+    },
+    {
+      "article_id": "opensquilla-multi-model-routing-guide",
+      "title": "OpenSquilla：用多模型路由挑战顶级大模型，花 1/9 的钱达到同等效果",
+      "url": "/blog/opensquilla-multi-model-routing-guide/",
+      "language": "zh",
+      "excerpt": "OpenSquilla：用多模型路由挑战顶级大模型，花 1/9 的钱达到同等效果 OpenSquilla（5600+ Star，Apache 2.0）是一个 token 高效的微内核 AI Agent，其核心 SquillaRouter 在本地设备上把每轮对话路由到最便宜且能胜任的模型。基准测试显示：多模型路由（$0.69）vs 单独使用 Claude Opus 4.7（$6.23），评分几乎相同，成本降低 9 倍。 OpenSquilla 多模型路由 SquillaRouter AI Agent Token效率 开源 LLM 成本优化 微内核 一个颠覆",
+      "score": 0.6129577
+    },
+    {
+      "article_id": "adapta-self-hosted-local-knowledge-base-guide",
+      "title": "用 Adapta 搭一个完全属于自己的本地知识库：一个诚实的上手指南",
+      "url": "/blog/adapta-self-hosted-local-knowledge-base-guide/",
+      "language": "zh",
+      "excerpt": "用 Adapta 搭一个完全属于自己的本地知识库：一个诚实的上手指南 Adapta 是一个自托管的私有大模型平台，把 RAG 知识检索和 LoRA 微调塞进同一个 OpenAI 兼容接口。本文带普通个人从零跑通纯 CPU 的本地知识库，同时诚实交代它 2 个 star、单人原型的真实状态和安全红线。 本地知识库 RAG 自托管 LoRA 隐私 Docker 开源 大模型 先说清楚：这个项目现在是什么状态 它到底解决什么问题 普通个人的可行路径：纯 CPU 的本地知识库 你需要准备什么 第一步：把服务跑起来 第二步：下载一个基础模型 第三步：改掉那个致命的",
+      "score": 0.6056733
+    },
+    {
+      "article_id": "open-connector-mcp-agent-integration-guide",
+      "title": "用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南",
+      "url": "/blog/open-connector-mcp-agent-integration-guide/",
+      "language": "zh",
+      "excerpt": "用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南 open-connector 是一个开源的认证网关，把 1000+ SaaS 服务（GitHub、HackerNews、Twitter、知乎、Cloudflare 等）封装成统一的 MCP 接口，接入 Claude Code 或任何 MCP 兼容的 AI 助手之后，Agent 可以直接查询热门仓库、抓取热帖、操作账号资源——不用再一个个配置 API key 和 OAuth，一次部署解决所有集成。 MCP open-connector Claude Code ",
+      "score": 0.5917782
+    },
+    {
+      "article_id": "omniroute-free-ai-gateway-290-providers-never-stop-coding",
+      "title": "OmniRoute：290 个 AI 提供商、一个端点、永不限流——免费 AI 网关的暴力美学",
+      "url": "/blog/omniroute-free-ai-gateway-290-providers-never-stop-coding/",
+      "language": "zh",
+      "excerpt": "OmniRoute：290 个 AI 提供商、一个端点、永不限流——免费 AI 网关的暴力美学 diegosouzapw/OmniRoute，27824 stars，MIT，5个月 500+ 贡献者。一个端点路由到 290+ AI 提供商（90+ 免费），4层自动 fallback 级联，19种路由策略，RTK+Caveman 压缩节省 15-95% tokens，MCP 104工具，~1.53B 免费 tokens/月。 AI网关 开源 Claude Code 免费AI 路由 MCP token压缩 开发工具 一、它解决什么问题 二、规模 三、4 层自",
+      "score": 0.5884951
+    },
+    {
+      "article_id": "openmaple-local-managed-agent-platform-guide",
+      "title": "本地就能跑的 Agent 平台：OpenMaple 自托管 managed-agent 控制面入门",
+      "url": "/blog/openmaple-local-managed-agent-platform-guide/",
+      "language": "zh",
+      "excerpt": "本地就能跑的 Agent 平台：OpenMaple 自托管 managed-agent 控制面入门 OpenMaple（Apache-2.0 开源）是一个能在本地一键跑起来的 managed-agent 控制面：它把内部 Agent 平台常见的能力拆成一套资源模型——Agent、Environment、Session、Vault、Runtime Pool、Sandbox Pool、Event Log，外加 SDK / CLI / REST API。一条 setup-local-docker.sh 起 Web(8080)、API(27951)、MySQL、",
+      "score": 0.58676505
+    },
+    {
+      "article_id": "kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora",
+      "title": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题",
+      "url": "/blog/kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora/",
+      "language": "zh",
+      "excerpt": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题 Apache-2.0，LoRA + 块因果掩码，文档编码一次、多个问题并发出概率分布，不生成文字。4B 版 OOD 准确率 0.790，比 Jev 低 6~7 个点，上限 8192 token，本地 Mac 可跑。 decision-model local-ai qwen lora classification open-source 核心设计：一次编码，多路分支 三种问题类型 四个模型变体 训练细节 不足之处（文档已明写，不是挖出来的） 本地运行 横向对比 怎么看这件事",
+      "score": 0.58286786
+    },
+    {
+      "article_id": "mcp-dev-runtime-openai-tunnel-local-dev-mcp-server",
+      "title": "mcp-dev-runtime：一条命令把本地开发机暴露给 ChatGPT——OpenAI Tunnel + 6 个 MCP 工具的打包方案",
+      "url": "/blog/mcp-dev-runtime-openai-tunnel-local-dev-mcp-server/",
+      "language": "zh",
+      "excerpt": "mcp-dev-runtime：一条命令把本地开发机暴露给 ChatGPT——OpenAI Tunnel + 6 个 MCP 工具的打包方案 dolibali/mcp-dev-runtime，3 stars，Apache-2.0，TypeScript。把 OpenAI 官方 Tunnel 客户端和 6 个本地开发 MCP 工具（shell 执行/PTY 交互/代码 patch/图片查看/进程管理）打包成跨平台运行时，内置 Node.js 24.21.0。一条 mdr start 同时启动 MCP 服务和 Tunnel，对接的是 ChatGPT（非 cla",
+      "score": 0.57653004
+    }
+  ]
+}

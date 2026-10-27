@@ -1,0 +1,8 @@
+from pathlib import Path
+import re,json
+root=Path(__file__).resolve().parents[2]
+for slug,archive in [('magpie-multi-agent-model-gateway','magpie'),('postiz-agentic-social-media-scheduling-open-source','postiz-update')]:
+ s=(root/'src/content/blog'/f'{slug}.md').read_text();cn,en=s.split('<!--EN-->');fm=cn.split('---',2)[1]
+ checks={'requiredFields':all(re.search('^'+k+':',fm,re.M)for k in ['title','titleEn','description','descriptionEn','wechatTitle','wechatDigest','pubDate','updatedDate','category','tags','heroImage','lastPublishedAt']),'titleLength':all(len(json.loads(re.search('^'+k+': (.*)',fm,re.M)[1]))<=60 for k in ['title','titleEn']),'threeTags':len(json.loads(re.search('^tags: (.*)',fm,re.M)[1]))>=3,'threeFiguresBoth':all(x.count('-fig-0')==3 for x in [cn,en]),'copyrightBoth':all('© 2026 Author: Mycelium Protocol.'in x for x in [cn,en]),'canonicalBoth':all('https://blog.mushroom.cv/blog/'+slug+'/'in x for x in [cn,en]),'faqBoth':'## 常见问题'in cn and '## FAQ'in en,'internalLinksBoth':all(x.count('https://blog.mushroom.cv/blog/')>=2 for x in [cn,en]),'assets':all((root/'src/assets/images'/(slug+'-'+x)).exists()for x in ['banner.jpg','fig-01.png','fig-02.png','fig-03.png']),'noPlaceholder':not any(x in s for x in ['TODO','PLACEHOLDER','待补'])}
+ report={'checks':checks,'review':'BLUF, bilingual primary plain URLs, FAQ, dated evidence, explicit installation not tested. Magpie defaults and boundaries verified in official docs; Postiz employment and coordinated intent not established; commercial-use and data-locality overclaims removed.'}
+ (root/'source'/('20261027-'+archive)/'seo-geo-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print(slug,checks);assert all(checks.values())
