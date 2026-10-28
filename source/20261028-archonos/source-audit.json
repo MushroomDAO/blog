@@ -1,0 +1,15 @@
+{
+  "source": "https://github.com/dmquant/archonos-pub",
+  "retrieval": "agent-reach skill public-web priority; CLI unavailable, doctor not run",
+  "images": "No PNG/JPG/WebP source images found in clone; no source images downloaded",
+  "tests": "14 upstream module checks passed; no full107test or deployment/modelcall test",
+  "dedup": "Only original raw KB matched. No local article/M2 credential; remote blocked40164, actual M2 attempt once after Blog.",
+  "saved_files": [],
+  "imageAudit": "No README bitmap illustrations. Only additional repository image is lucide.svg UI icon sprite, not an article illustration; no source images downloaded.",
+  "archivalNormalization": {
+    "file": "README.md",
+    "originalSHA256": "66fd4649feb77db2c55101bc3e3958ee2beeab4bf066a485b2a3261df642024b",
+    "originalRetained": "/tmp/archonos-research/README.md",
+    "reason": "Remove trailing whitespace only for repository checks"
+  }
+}

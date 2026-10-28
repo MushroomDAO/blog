@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "memory-harness-local-first-programmable-auditable-long-term-memory",
+      "title": "Memory Harness: Local-First, Programmable & Auditable Long-Term Memory for AI Agents",
+      "url": "/blog/memory-harness-local-first-programmable-auditable-long-term-memory/",
+      "language": "en",
+      "excerpt": "Memory Harness: Local-First, Programmable & Auditable Long-Term Memory for AI Agents luoyif/memory-harness open-sources a six-layer auditable memory workspace (Evidence → Agent Asset), local hybrid RAG, 24 MCP tools, multi-AI collaboration with isolated drafts — all fully local, ",
+      "score": 0.5601972
+    },
+    {
+      "article_id": "openpanels-local-ai-agent-visual-workspace",
+      "title": "OpenPanels: A Local Visual Workspace for AI Agents, Five Panels from Writing to Publishing",
+      "url": "/blog/openpanels-local-ai-agent-visual-workspace/",
+      "language": "en",
+      "excerpt": "OpenPanels: A Local Visual Workspace for AI Agents, Five Panels from Writing to Publishing mooqii open-sources OpenPanels, a local-first visual workspace for AI agents, written in Rust, MIT license. Five panels cover the full pipeline from knowledge management and document writin",
+      "score": 0.5599948
+    },
+    {
+      "article_id": "moki-whiteboard-local-mcp",
+      "title": "MOKI 白板：让 Agent 通过 MCP 直接读写本地画布",
+      "url": "/blog/moki-whiteboard-local-mcp/",
+      "language": "zh",
+      "excerpt": "MOKI 白板：让 Agent 通过 MCP 直接读写本地画布 JKZeng-cell/moki-whiteboard是MIT开源的本地无限白板，结合React、Electron、SQLite和16个MCP工具。本文核对部署入口、版本冲突保护、数据边界，并实际验证存储、拒绝过期修改与持久化。 MOKI MCP 白板 本地优先 Agent工具 它是什么，解决什么问题？ MCP 如何接入现有画布？ 版本冲突保护是自动强制的吗？ 怎样运行并接到 Agent？ “本地优先”是否意味着内容绝不出电脑？ 我们会怎样把它用于一个真实项目？ 常见问题 它自带 AI 模型",
+      "score": 0.5533693
+    },
+    {
+      "article_id": "peekaboo-macos-native-ui-agent",
+      "title": "Peekaboo: Native Mac UI Tools for AI Agents",
+      "url": "/blog/peekaboo-macos-native-ui-agent/",
+      "language": "en",
+      "excerpt": "Peekaboo: Native Mac UI Tools for AI Agents Explore Peekaboo 4.9.0 for Mac screenshots, native UI actions and stdio MCP, with local CLI checks, permission limits and a practical verification workflow. Peekaboo macOS MCP 桌面自动化 AI Agent What layer does Peekaboo add? How do installa",
+      "score": 0.55293417
+    },
+    {
+      "article_id": "scenario-blender-generation-mcp",
+      "title": "Scenario for Blender：云端生成与本地 Agent 接入",
+      "url": "/blog/scenario-blender-generation-mcp/",
+      "language": "zh",
+      "excerpt": "Scenario for Blender：云端生成与本地 Agent 接入 Scenario for Blender 把云端图片、视频、3D、材质和音频生成接入 Blender，并通过本地 MCP 接口连接 Agent。本文核查 0.11.0 版本、安装更新、账号额度、数据流向和任务恢复，运行上游离线测试，区分 GPL 插件代码、云端模型服务与未验证效果，给出从单张图片到场景资产的起步路径。 Blender Generative AI MCP 3D Scenario for Blender 能做哪些工作？ 如何安装，为什么需要独立扩展源？ 插件开源，为什",
+      "score": 0.5485233
+    },
+    {
+      "article_id": "persona-vrm-avatar-ai-voice-mcp",
+      "title": "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex",
+      "url": "/blog/persona-vrm-avatar-ai-voice-mcp/",
+      "language": "zh",
+      "excerpt": "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex xikhar 开源了 Persona，一个跨平台桌面 VRM 角色应用，监听 Codex/ChatGPT 的音频输出，实时驱动嘴型同步和肢体动画。通过 MCP 暴露动画控制接口，AI Agent 可以直接调用 play_animation 让角色表达情绪。3天 680 星，MIT，支持 Linux/Windows/macOS。 VRM AI语音 MCP 桌面应用 Electron Three.js Codex Mycelium 它做什么 隐私优先的音频捕获 MCP 接口：Agent",
+      "score": 0.53887635
+    },
+    {
+      "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+      "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+      "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+      "language": "zh",
+      "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+      "score": 0.53767616
+    },
+    {
+      "article_id": "mcp-dev-runtime-openai-tunnel-local-dev-mcp-server",
+      "title": "mcp-dev-runtime：一条命令把本地开发机暴露给 ChatGPT——OpenAI Tunnel + 6 个 MCP 工具的打包方案",
+      "url": "/blog/mcp-dev-runtime-openai-tunnel-local-dev-mcp-server/",
+      "language": "zh",
+      "excerpt": "mcp-dev-runtime：一条命令把本地开发机暴露给 ChatGPT——OpenAI Tunnel + 6 个 MCP 工具的打包方案 dolibali/mcp-dev-runtime，3 stars，Apache-2.0，TypeScript。把 OpenAI 官方 Tunnel 客户端和 6 个本地开发 MCP 工具（shell 执行/PTY 交互/代码 patch/图片查看/进程管理）打包成跨平台运行时，内置 Node.js 24.21.0。一条 mdr start 同时启动 MCP 服务和 Tunnel，对接的是 ChatGPT（非 cla",
+      "score": 0.5372871
+    },
+    {
+      "article_id": "agent-plugins-openai-codex-multi-client-open-spec-analysis",
+      "title": "The Agent Plugins Spec: Build Once, Run on Codex, ChatGPT, Cursor, Copilot, VS Code and Kiro",
+      "url": "/blog/agent-plugins-openai-codex-multi-client-open-spec-analysis/",
+      "language": "en",
+      "excerpt": "The Agent Plugins Spec: Build Once, Run on Codex, ChatGPT, Cursor, Copilot, VS Code and Kiro OpenAI + AWS + Cursor + GitHub + Microsoft + Vercel jointly released the Agent Plugins spec: a three-layer architecture of Skills, Connectors, and MCP servers. One plugin.json deploys acr",
+      "score": 0.5372437
+    },
+    {
+      "article_id": "genoffice-ai-office-suite",
+      "title": "GenOffice：让 AI 直接修改 Office 文件，而不只是给建议",
+      "url": "/blog/genoffice-ai-office-suite/",
+      "language": "zh",
+      "excerpt": "GenOffice：让 AI 直接修改 Office 文件，而不只是给建议 GenOffice 是支持 Word、Excel、PowerPoint、PDF、Markdown 和 HTML 的开源办公套件，AI 能在编辑器中直接修改内容。本文整理格式支持、修订与撤销、第三方模型、CLI 和 MCP 接入，解释本地编辑与云端 AI 的数据边界、默认统计和企业目录授权，并说明复杂文档兼容性仍需验证。 GenOffice AI办公 开源软件 Office MCP GenOffice 的六种编辑器分别做什么？ AI 修改内容，怎样让人看得清？ 能接自己的模型吗？ ",
+      "score": 0.53717804
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "created_at": "2026-10-28T05:29:42.619Z",
+  "generator": "image_gen.imagegen",
+  "generation_calls": 3,
+  "model": "Tool default; exact backend model not exposed",
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "prompt_file": "source/20261028-archonos/illustration-prompts.json",
+  "input": "Three themes supplied directly by user; no reference image inputs.",
+  "records": [
+    {
+      "figure": 1,
+      "theme": "Chief of staff routes user tasks to specialist seats with local CLI tools.",
+      "generated_source": "/Users/jason/.codex/generated_images/01a180f3-5a45-7742-b7c2-b13bbdc4abf1/exec-c1d7cbf9-a780-49b1-8d9f-b8e031cb091d.png",
+      "original_copy": "source/20261028-archonos/illustration-01.original.png",
+      "original_bytes": 1259923,
+      "original_sha256": "10dc090fe15e6f8dddb9ab1ee22bc13787ea37549fdef420136589a0502b9b06",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "final_path": "src/assets/images/archonos-local-agent-workbench-fig-01.png",
+      "bytes": 77442,
+      "dimensions": [
+        1152,
+        648
+      ],
+      "sha256": "2c15e289cc7449b1f6debd4ff9a62e227c405cd3a4b3c0f0dbef99917d394beb",
+      "processing": {
+        "resize": "contain on pure white, no cropping",
+        "palette_colours": 128,
+        "dither": 0,
+        "compression_level": 9
+      },
+      "visual_review": "Pass: current red cap / white spots / pale stem XiaoM participates in core action; sparse legible Chinese labels; white background; requested conceptual boundary visible."
+    },
+    {
+      "figure": 2,
+      "theme": "MCP default deny; explicit authorization per seat; not a sandbox guarantee.",
+      "generated_source": "/Users/jason/.codex/generated_images/01a180f3-5a45-7742-b7c2-b13bbdc4abf1/exec-cd7bb28d-cddd-437f-8162-fdaa3908f8c1.png",
+      "original_copy": "source/20261028-archonos/illustration-02.original.png",
+      "original_bytes": 1189554,
+      "original_sha256": "f80d96a9090d43158467fd3ef0a777ccdae1a982d6a30ccab487e5fd17ae1379",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "final_path": "src/assets/images/archonos-local-agent-workbench-fig-02.png",
+      "bytes": 22137,
+      "dimensions": [
+        1024,
+        576
+      ],
+      "sha256": "b33350097b2ca9ca49afe1b0672f5a2f790cca6274879fd7cd914c6f8d4ed71a",
+      "processing": {
+        "resize": "contain on pure white, no cropping",
+        "palette_colours": 128,
+        "dither": 0,
+        "compression_level": 9
+      },
+      "visual_review": "Pass: current red cap / white spots / pale stem XiaoM participates in core action; sparse legible Chinese labels; white background; requested conceptual boundary visible."
+    },
+    {
+      "figure": 3,
+      "theme": "Skill improvement proposal passes tests and human review before adoption.",
+      "generated_source": "/Users/jason/.codex/generated_images/01a180f3-5a45-7742-b7c2-b13bbdc4abf1/exec-11e9a1dd-56b7-4f86-a58d-926a245cb5f9.png",
+      "original_copy": "source/20261028-archonos/illustration-03.original.png",
+      "original_bytes": 1658001,
+      "original_sha256": "3174ca76f9a15dce5a2e6c6f77cc890472b1cb72480a1eb3555ef82ba80d03a9",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "final_path": "src/assets/images/archonos-local-agent-workbench-fig-03.png",
+      "bytes": 85458,
+      "dimensions": [
+        1024,
+        576
+      ],
+      "sha256": "a170fb71a4690e0c4e7c9cf1dbf0f7bc787fce3ee464939f7a69b86339c00d04",
+      "processing": {
+        "resize": "contain on pure white, no cropping",
+        "palette_colours": 128,
+        "dither": 0,
+        "compression_level": 9
+      },
+      "visual_review": "Pass: current red cap / white spots / pale stem XiaoM participates in core action; sparse legible Chinese labels; white background; requested conceptual boundary visible."
+    }
+  ]
+}
