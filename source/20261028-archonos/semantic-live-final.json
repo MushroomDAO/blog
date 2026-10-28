@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "archonos-local-agent-workbench",
+      "title": "ArchonOS：把本地编程助手、MCP与任务产物放进一个工作台",
+      "url": "/blog/archonos-local-agent-workbench/",
+      "language": "zh",
+      "excerpt": "ArchonOS：把本地编程助手、MCP与任务产物放进一个工作台 ArchonOS是MIT许可的个人与小团队Agent工作台，整合参谋长路由、本地CLI、MCP授权、Canvas修订和技能改进。本文核对公开仓库，修正文档安装路径，报告14项模块测试，并区分本地部署、云同步和真实模型执行的边界。 ArchonOS AI Agent MCP 本地工具 开源 “智能操作系统”具体是什么？ 工具授权与执行隔离是一回事吗？ Canvas与技能改进如何落地？ 如何正确开始安装？ “本地运行”是否意味着完全离线？ 常见问题 可以把现有Claude或Codex会话无损搬",
+      "score": 0.75384283
+    },
+    {
+      "article_id": "localdot-local-ai-computer",
+      "title": "localDot 开源仓库找到了：给 AI 一台本地电脑",
+      "url": "/blog/localdot-local-ai-computer/",
+      "language": "zh",
+      "excerpt": "localDot 开源仓库找到了：给 AI 一台本地电脑 localDot 的官方开源仓库是 Shadowhusky/localdot，采用 MIT 许可证。它在本机 Docker 中运行 Linux 桌面，让 AI 使用浏览器、终端和文件，并提供观看、接管、回放和模型选择。本文说明安装要求、源码结构、权限与数据边界，并记录安装脚本检查及出站策略测试，供读者选型。 localDot AI Agent Computer Use 本地部署 Docker 开源 它给 AI 的“电脑”到底是什么？ 开放的是哪些代码？ 普通用户怎么装？ 模型能换，但不等于任意模型",
+      "score": 0.59965396
+    },
+    {
+      "article_id": "memory-harness-local-first-programmable-auditable-long-term-memory",
+      "title": "Memory Harness：本地优先、可编排、可审计的 AI 长期记忆工作台",
+      "url": "/blog/memory-harness-local-first-programmable-auditable-long-term-memory/",
+      "language": "zh",
+      "excerpt": "Memory Harness：本地优先、可编排、可审计的 AI 长期记忆工作台 luoyif/memory-harness 开源，六层可追溯记忆架构（Evidence→能力资产），本地混合 RAG，24 个 MCP 工具，多 AI 协作但草稿彼此隔离，完全本地无云依赖。 AI memory MCP local-first RAG agents open source long-term memory knowledge management AI 的记忆问题一直没有被认真解决 六层可追溯记忆架构 混合 RAG，完全本地无依赖 多 AI 协作，但草稿彼此隔",
+      "score": 0.596614
+    },
+    {
+      "article_id": "browser-harness-self-healing-cdp-agent-skill-chrome-automation",
+      "title": "browser-harness：一个会自己写代码的浏览器 Agent 工具——每次运行都在让自己变聪明",
+      "url": "/blog/browser-harness-self-healing-cdp-agent-skill-chrome-automation/",
+      "language": "zh",
+      "excerpt": "browser-harness：一个会自己写代码的浏览器 Agent 工具——每次运行都在让自己变聪明 browser-use/browser-harness 是一个通过 Chrome DevTools Protocol（CDP）直接控制真实浏览器的 Agent 工具——没有 Selenium、没有 Playwright 包装层，一条 WebSocket 到底。Agent 遇到不会的操作，就地写 helper 函数，下次复用；遇到特定网站的操作，自动生成 domain skill 文件并归档。核心代码约 1000 行，4 个核心文件。是 Claude C",
+      "score": 0.5955204
+    },
+    {
+      "article_id": "gws-google-workspace-cli-discovery-dynamic-commands-agent-skills",
+      "title": "gws：命令面在运行时长出来的 CLI，以及它对本地优先意味着什么",
+      "url": "/blog/gws-google-workspace-cli-discovery-dynamic-commands-agent-skills/",
+      "language": "zh",
+      "excerpt": "gws：命令面在运行时长出来的 CLI，以及它对本地优先意味着什么 把整个 Google Workspace 收进一个命令行工具，Rust 写的，3 万 stars。工程上最值得看的是它不带静态命令列表：运行时读 Google 的 Discovery Service，用返回的文档动态构建 clap 命令树，Google 加了 API 方法它就自动支持。仓库还带 100 多个 SKILL.md，每个 API 一个，外加 50 个精选 recipe。需要澄清两件事：它挂在 googleworkspace 组织下，但 README 明写不是官方支持的 Goog",
+      "score": 0.59419715
+    },
+    {
+      "article_id": "browser-use-macos-harness-mac-desktop-agent-six-primitives",
+      "title": "macOS Harness：Browser Use 出品，六个原始 API 给 LLM 完整 Mac 控制权，无框架、无模板、无工具预置",
+      "url": "/blog/browser-use-macos-harness-mac-desktop-agent-six-primitives/",
+      "language": "zh",
+      "excerpt": "macOS Harness：Browser Use 出品，六个原始 API 给 LLM 完整 Mac 控制权，无框架、无模板、无工具预置 macOS Harness 是 Browser Use 团队（主仓库 110k Star）开源的最薄 Mac 桌面 Agent 框架。核心设计：不预置任何应用专属工具，给 LLM 六个原始 API（see/key/type/click/ax/script），让 Agent 在任务执行过程中自行编写缺失的逻辑。一个 Python 进程直接连接 macOS 原生层（CGWindow/CGEvent/AX/AppleEven",
+      "score": 0.59015685
+    },
+    {
+      "article_id": "mcp-dev-runtime-openai-tunnel-local-dev-mcp-server",
+      "title": "mcp-dev-runtime：一条命令把本地开发机暴露给 ChatGPT——OpenAI Tunnel + 6 个 MCP 工具的打包方案",
+      "url": "/blog/mcp-dev-runtime-openai-tunnel-local-dev-mcp-server/",
+      "language": "zh",
+      "excerpt": "mcp-dev-runtime：一条命令把本地开发机暴露给 ChatGPT——OpenAI Tunnel + 6 个 MCP 工具的打包方案 dolibali/mcp-dev-runtime，3 stars，Apache-2.0，TypeScript。把 OpenAI 官方 Tunnel 客户端和 6 个本地开发 MCP 工具（shell 执行/PTY 交互/代码 patch/图片查看/进程管理）打包成跨平台运行时，内置 Node.js 24.21.0。一条 mdr start 同时启动 MCP 服务和 Tunnel，对接的是 ChatGPT（非 cla",
+      "score": 0.5862422
+    },
+    {
+      "article_id": "harnesskit-agent-skill-manager",
+      "title": "HarnessKit：管理你所有 AI Agent 的 Skill/MCP/Plugin/Hook",
+      "url": "/blog/harnesskit-agent-skill-manager/",
+      "language": "zh",
+      "excerpt": "HarnessKit：管理你所有 AI Agent 的 Skill/MCP/Plugin/Hook Agent 多、Skill/MCP/Plugin/Hook 分散难管理？HarnessKit 帮你一键搞定！集中式桌面工具，统一管理所有 AI Agent 的扩展、配置、记忆与规则。 HarnessKit AI Agent MCP Skill Plugin Hook Claude Code Cursor Copilot 工具管理 HarnessKit 核心功能",
+      "score": 0.58440983
+    },
+    {
+      "article_id": "openmaple-local-managed-agent-platform-guide",
+      "title": "本地就能跑的 Agent 平台：OpenMaple 自托管 managed-agent 控制面入门",
+      "url": "/blog/openmaple-local-managed-agent-platform-guide/",
+      "language": "zh",
+      "excerpt": "本地就能跑的 Agent 平台：OpenMaple 自托管 managed-agent 控制面入门 OpenMaple（Apache-2.0 开源）是一个能在本地一键跑起来的 managed-agent 控制面：它把内部 Agent 平台常见的能力拆成一套资源模型——Agent、Environment、Session、Vault、Runtime Pool、Sandbox Pool、Event Log，外加 SDK / CLI / REST API。一条 setup-local-docker.sh 起 Web(8080)、API(27951)、MySQL、",
+      "score": 0.58402914
+    },
+    {
+      "article_id": "andrew-ng-openworker-desktop-ai-coworker-local-aisuite",
+      "title": "OpenWorker：吴恩达开源的桌面 AI 协作者，本地运行 + 批准门 + 25+ 工具集成",
+      "url": "/blog/andrew-ng-openworker-desktop-ai-coworker-local-aisuite/",
+      "language": "zh",
+      "excerpt": "OpenWorker：吴恩达开源的桌面 AI 协作者，本地运行 + 批准门 + 25+ 工具集成 andrewyng/openworker，4天前刚开源。MIT，Python + TypeScript + Tauri + Rust，本地运行，BYOK（带自己的 key 或跑 Ollama），25+ 工具集成，批准门机制保留人类最终审批权。吴恩达 aisuite 的实战参考实现。 AI Agent 开源 桌面应用 本地优先 吴恩达 aisuite 工作流 自托管 一、它是什么 二、架构：三层 三、核心机制：批准门 四、支持什么 五、技术底层：aisuite",
+      "score": 0.58383006
+    }
+  ]
+}

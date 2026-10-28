@@ -1,0 +1,12 @@
+✔ complete publication advances once and late events cannot roll it back (0.47025ms)
+✔ gap freezes the view until a complete snapshot; restart requires snapshot (0.107958ms)
+✔ scope, schema, invalid counters and immutable conflicts fail closed (0.90725ms)
+✔ view metadata never copies credentials, arbitrary URLs or vendor bodies (0.333916ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4601.247333
