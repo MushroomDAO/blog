@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-29T09:50:21.304127+00:00",
+  "reason": "Initial JSON prompt exhausted 96 generated tokens before a visible final answer. Only max_tokens changed, to 512. Initial failure retained.",
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "Return only a JSON object with keys name and quantity. Do not add explanations."
+      },
+      {
+        "role": "user",
+        "content": "Order: 3 notebooks. Extract name as notebooks and quantity as integer."
+      }
+    ],
+    "temperature": 0.0,
+    "top_k": 50,
+    "repeat_penalty": 1.1,
+    "max_tokens": 512,
+    "seed": 42,
+    "stream": false
+  },
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"name\": \"notebooks\",\n  \"quantity\": 3\n}",
+          "reasoningSummary": "The model reasoned about the requested extraction before emitting the final JSON.",
+          "reasoningCharacters": 417,
+          "reasoningSha256": "e9d6e8f31fc061d75bee68f4acb68131c1fff7f27a0c9d466bf0e24e01eaad52"
+        }
+      }
+    ],
+    "created": 1793267421,
+    "model": "/tmp/lfm3-model/LFM3-1.7B-Q4_K_M.gguf",
+    "system_fingerprint": "b11960-8642541b2",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 125,
+      "prompt_tokens": 48,
+      "total_tokens": 173,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-SXQyqas8DYIyhbamPR97zPXXnTk7vuiC",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 48,
+      "prompt_ms": 101.516,
+      "prompt_per_token_ms": 2.114916666666667,
+      "prompt_per_second": 472.8318688679617,
+      "predicted_n": 125,
+      "predicted_ms": 1619.293,
+      "predicted_per_token_ms": 13.058814516129031,
+      "predicted_per_second": 76.57662943025136
+    }
+  },
+  "observed": {
+    "name": "notebooks",
+    "quantity": 3
+  },
+  "matched": true
+}

@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-10-29T10:04:03.036098+00:00",
+  "query": "Liquid AI LFM3：六款端侧模型怎么选，Mac 上能跑到哪一步？",
+  "matches": [],
+  "response": {
+    "results": [
+      {
+        "article_id": "lfm2-5-230m-small-model-developer",
+        "title": "LFM2.5-230M 开发者探索指南：213 tok/s 的小模型，普通人能做什么？",
+        "url": "/blog/lfm2-5-230m-small-model-developer/",
+        "language": "zh",
+        "excerpt": "LFM2.5-230M 开发者探索指南：213 tok/s 的小模型，普通人能做什么？ Liquid AI 开源的 LFM2.5-230M 在手机 CPU 上跑出 213 tok/s，Raspberry Pi 上 42 tok/s，支持 32K 上下文和 Tool Use。本文从 6 个方向拆解普通开发者可以用它做什么：端侧 Agent、浏览器推理、Android App、低成本微调、IoT 部署和多 Agent 协作。 小模型 边缘AI LFM2.5 Liquid AI 端侧推理 开发者指南 一、先搞清楚：这个小模型为什么值得关注？ 为什么 Liqui",
+        "score": 0.6485504
+      },
+      {
+        "article_id": "wwdc26-mlx-local-agentic-ai-mac-engineering-guide",
+        "title": "WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建",
+        "url": "/blog/wwdc26-mlx-local-agentic-ai-mac-engineering-guide/",
+        "language": "zh",
+        "excerpt": "WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建 Apple MLX 团队在 WWDC26 Session 232 中讲透了在 Mac 本地运行 AI Agent 的完整技术栈：MLX → MLX-LM → MLX-LM Server → Agent 框架，三步起服务，六个开源框架横向对比，支持多 Mac 分布式推理。本文对原始 session 做深度解析，附完整工程落地代码。 MLX Apple Silicon Agent Loop WWDC26 本地推理 开源 AI Engineering 工程实践 一、苹果官方",
+        "score": 0.60714084
+      },
+      {
+        "article_id": "needle3-121m-local-tool-calling-ladder-model",
+        "title": "Needle 3 实测：121M 小模型，79 毫秒拆出两个工具调用",
+        "url": "/blog/needle3-121m-local-tool-calling-ladder-model/",
+        "language": "zh",
+        "excerpt": "Needle 3 实测：121M 小模型，79 毫秒拆出两个工具调用 Needle 3 是可裁成 2—20 层的 121M 端侧工具调用模型。本文在 M4 Mac mini 实测英文双调用耗时 79 毫秒，却发现中文调灯请求被高置信度漏判；核对当前权重 35.3MB、引擎自报运行内存、上下文窗口与默认遥测说明，并区分本地 LoRA 的 4-bit 输出和平台微调的校准路径。 Needle 3 Hugging Face 小模型 工具调用 端侧AI 本地部署 从 Needle 2 到 Needle 3，变的是什么？ 121M 参数为什么还能这么小？ 35.3",
+        "score": 0.600514
+      },
+      {
+        "article_id": "ling-3-0-tiny-ant-7b-moe-edge-device-mla-kda",
+        "title": "Ling-3.0-Tiny：7.9B 总参数激活仅 1.3B，蚂蚁百灵把混合推理 MoE 推进了端侧",
+        "url": "/blog/ling-3-0-tiny-ant-7b-moe-edge-device-mla-kda/",
+        "language": "zh",
+        "excerpt": "Ling-3.0-Tiny：7.9B 总参数激活仅 1.3B，蚂蚁百灵把混合推理 MoE 推进了端侧 蚂蚁百灵（Ling-Ant）开源轻量混合推理 MoE 模型 Ling-3.0-Tiny：总参数 7.9B、激活仅 1.3B，KDA 与 MLA 3:1 交替结构配合 128 专家稀疏 MoE，提供 BF16/FP8/INT4 三个精度版本。FP8 精度下 MacBook 上输出速度 86-90 tokens/s，8K 上下文峰值内存仅 8.34GiB。在智能指数评测获 25 分（比 Gemma-4-26B 低 1 分），Agent 得分超越 31B 级别",
+        "score": 0.5881857
+      },
+      {
+        "article_id": "m1-max-64gb-local-ai-model-selection-memory-guide",
+        "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
+        "url": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
+        "language": "zh",
+        "excerpt": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度 持续更新：M1 Max 64GB MacBook 本地AI最佳组合方案。涵盖 Apple Intelligence 3B 复用、Qwen3-30B-A3B/27B/32B 全8bit部署、oMLX多模型调度、48GB可用内存边界测算与系统精简。 M1Max 本地模型 Qwen3 oMLX 内存管理 Apple Intelligence LLM 隐私AI 一、核心硬件与基础定位 二、Apple Intelligence 原生 3B 模型利用方案 三、Qwen3 三大主力模型差异",
+        "score": 0.58634686
+      },
+      {
+        "article_id": "airllm-70b-inference-4gb-gpu-layer-streaming",
+        "title": "AirLLM：4GB 显存跑 70B 大模型，无需量化",
+        "url": "/blog/airllm-70b-inference-4gb-gpu-layer-streaming/",
+        "language": "zh",
+        "excerpt": "AirLLM：4GB 显存跑 70B 大模型，无需量化 lyogavin 开源的大模型极限推理工具，30k stars，Apache 2.0。通过逐层流式加载，在单张 4GB 显卡上运行 70B 模型，无需量化/蒸馏/剪枝。Kimi K3（2.8T）3.72GB、DeepSeek-V3（671B）约 12GB、Qwen3-235B 约 3GB。v3.0 新增 FP8 支持。支持 CUDA、Apple Silicon（macOS），同一 AutoModel 接口覆盖所有主流模型。 本地推理 大模型 显存优化 AppleSilicon DeepSeek Qw",
+        "score": 0.58387685
+      },
+      {
+        "article_id": "mac-studio-vs-amd-vs-cloud-gpu-local-ai",
+        "title": "继续等Mac Studio还是投入AMD怀抱Or云GPU？",
+        "url": "/blog/mac-studio-vs-amd-vs-cloud-gpu-local-ai/",
+        "language": "zh",
+        "excerpt": "继续等Mac Studio还是投入AMD怀抱Or云GPU？ 2026年本地AI推理硬件选购完全指南：Mac Mini M4 Pro、Mac Studio M4 Max / M3 Ultra、AMD Minisforum MS-S1 MAX、云GPU（AutoDL/RunPod）四路横评，TTS/ASR/ImageGen/VideoGen/TxtGen/VibeCoding六大场景HuggingFace Top-3模型推荐与成本对比。 本地AI推理 Mac Studio Mac Mini AMD Minisforum 云GPU RunPod AutoDL ",
+        "score": 0.57846826
+      },
+      {
+        "article_id": "decision30-multimodal-system-one",
+        "title": "Decision 3.0：让文字、图片和视频直接进入决策接口",
+        "url": "/blog/decision30-multimodal-system-one/",
+        "language": "zh",
+        "excerpt": "Decision 3.0：让文字、图片和视频直接进入决策接口 Decision 3.0 将文本、JSON、图片和视频接入 System One 决策接口，返回选项概率而不生成长回答。本文核对六个规格的官方模型卡与推理代码，区分请求与前向计算，更新 Jev 0.3.2 评测与 MI325X 延迟，并分析小模型的泛化边界、视频采样限制、服务吞吐和内存代价，给出业务验证的接入路径。 Decision 3.0 vLLM Semantic Router System One 多模态 决策模型 开源 不生成回答，具体怎样得到决策？ 六个规格怎样比较？ 文字、图片、视",
+        "score": 0.57444966
+      },
+      {
+        "article_id": "idoris-project-launch--how-an-independent-researcher-builds-",
+        "title": "iDoris 立项思考：一个普通研究者如何构建可持续进化的本地 AI 模型",
+        "url": "/blog/idoris-project-launch--how-an-independent-researcher-builds-/",
+        "language": "zh",
+        "excerpt": "iDoris 立项思考：一个普通研究者如何构建可持续进化的本地 AI 模型 iDoris 是面向「个人→社区→城市」三层场景的本地 AI 模型项目。本文从约束推导出「必须分层+必须联邦」的结论；选定 Qwen3.5/3.6 同基座+分层 LoRA 架构；以 DP-SGD+算法可审计实现「权重可上传+原始数据不出本机」。我们不回避不确定性。 iDoris 本地AI Local AI Federated LoRA Mycelium Aura AI Qwen3 Progress-Report 摘要 §1 起点：一个真实但被忽略的问题 §2 约束：先把限制条件摆",
+        "score": 0.5715702
+      },
+      {
+        "article_id": "ling-3-0-flash-inclusionai-moe-coding-model-mac-openrouter-guide",
+        "title": "Ling 3.0 Flash 初测：让人意外的编程模型——124B MoE，每 token 只激活 5B 参数",
+        "url": "/blog/ling-3-0-flash-inclusionai-moe-coding-model-mac-openrouter-guide/",
+        "language": "zh",
+        "excerpt": "Ling 3.0 Flash 初测：让人意外的编程模型——124B MoE，每 token 只激活 5B 参数 蚂蚁集团 inclusionAI 于 7 月 23 日发布 Ling 3.0 Flash：124B MoE 架构，每 token 激活 5.1B 参数，256K 上下文，在 OpenRouter 永久免费。编程性能超预期，可通过 MLX 在 Mac 统一内存上本地运行。本文整理模型规格、技术架构、Mac 本地部署和 API 接入方式。 一、模型规格 二、背后的公司：蚂蚁集团 inclusionAI 三、为什么编程能力超预期 四、在 Mac 上运",
+        "score": 0.5675074
+      }
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-29T10:08:19.726924+00:00",
+  "query": "Liquid AI LFM3 six local models Mac smoke test modalities license",
+  "matches": [
+    {
+      "article_id": "lfm3-liquid-ai-local-multimodal-models",
+      "title": "Liquid AI LFM3: Six local models and a Mac smoke test",
+      "url": "/blog/lfm3-liquid-ai-local-multimodal-models/",
+      "language": "en",
+      "excerpt": "Liquid AI LFM3: Six local models and a Mac smoke test Compare Liquid AI's six LFM3 models: modalities, context limits, license and Mac runtime support, with a local text test that exposes an output-budget pitfall. Liquid AI LFM3 Local AI Multimodal Decision Models Which LFM3 mode",
+      "score": 0.70707875
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "lfm3-liquid-ai-local-multimodal-models",
+        "title": "Liquid AI LFM3: Six local models and a Mac smoke test",
+        "url": "/blog/lfm3-liquid-ai-local-multimodal-models/",
+        "language": "en",
+        "excerpt": "Liquid AI LFM3: Six local models and a Mac smoke test Compare Liquid AI's six LFM3 models: modalities, context limits, license and Mac runtime support, with a local text test that exposes an output-budget pitfall. Liquid AI LFM3 Local AI Multimodal Decision Models Which LFM3 mode",
+        "score": 0.70707875
+      },
+      {
+        "article_id": "arle-local-llm-distillation-guide",
+        "title": "arle Practical Guide: Run Local LLMs on Any Laptop, Then Distill a 4B Model to Match a 35B",
+        "url": "/blog/arle-local-llm-distillation-guide/",
+        "language": "en",
+        "excerpt": "arle Practical Guide: Run Local LLMs on Any Laptop, Then Distill a 4B Model to Match a 35B arle is a pure-Rust local LLM runtime — one binary for OpenAI-compatible serving, local agents, and on-policy distillation training. A 35B MoE hits 85 tok/s on an M4 Pro MacBook. OPD distil",
+        "score": 0.5654125
+      },
+      {
+        "article_id": "airllm-70b-inference-4gb-gpu-layer-streaming",
+        "title": "AirLLM: Run a 70B Model on 4GB of VRAM, No Quantization Required",
+        "url": "/blog/airllm-70b-inference-4gb-gpu-layer-streaming/",
+        "language": "en",
+        "excerpt": "AirLLM: Run a 70B Model on 4GB of VRAM, No Quantization Required lyogavin's open-source extreme-inference toolkit, 30k stars, Apache 2.0. Layer-by-layer streaming loads 70B models on a single 4GB GPU — no quantization, distillation, or pruning. Kimi K3 (2.8T) in 3.72GB, DeepSeek-",
+        "score": 0.5463676
+      },
+      {
+        "article_id": "m1-max-64gb-local-ai-model-selection-memory-guide",
+        "title": "M1 Max 64GB Local AI Complete Guide: Qwen3 Model Selection, Memory Management & Multi-Model Scheduling",
+        "url": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
+        "language": "en",
+        "excerpt": "M1 Max 64GB Local AI Complete Guide: Qwen3 Model Selection, Memory Management & Multi-Model Scheduling Continuously updated: the optimal local AI stack for M1 Max 64GB MacBook. Covers Apple Intelligence 3B reuse, Qwen3-30B-A3B/27B/32B full 8-bit deployment, oMLX multi-model sched",
+        "score": 0.54174435
+      },
+      {
+        "article_id": "video-expert-analyzer-mac-mlx-local-model-complete-guide",
+        "title": "Video Expert Analyzer Complete Guide: Walter Murch's Six Rules + Mac MLX Local Model Full Walkthrough",
+        "url": "/blog/video-expert-analyzer-mac-mlx-local-model-complete-guide/",
+        "language": "en",
+        "excerpt": "Video Expert Analyzer Complete Guide: Walter Murch's Six Rules + Mac MLX Local Model Full Walkthrough Deep dive into ALBEDO-TABAI/Video-expert-analyzer: from scene detection to 5D AI scoring, covering tool architecture, cloud API path, and full Mac local MLX model deployment via ",
+        "score": 0.5386889
+      },
+      {
+        "article_id": "wwdc26-mlx-local-agentic-ai-mac-engineering-guide",
+        "title": "WWDC26 Official: Running a Complete Agentic Loop Locally on Mac — Four-Layer Stack Step-by-Step",
+        "url": "/blog/wwdc26-mlx-local-agentic-ai-mac-engineering-guide/",
+        "language": "en",
+        "excerpt": "WWDC26 Official: Running a Complete Agentic Loop Locally on Mac — Four-Layer Stack Step-by-Step Apple MLX team at WWDC26 Session 232 walked through the complete four-layer stack for running AI agents locally on Mac: MLX → MLX-LM → MLX-LM Server → Agent framework. Three steps to s",
+        "score": 0.53695154
+      },
+      {
+        "article_id": "localagi-local-ai-agent-platform-localai-mac",
+        "title": "LocalAGI 拆解：这个本地 Agent 平台已被 LocalAI 收进核心，Mac 用户该装哪一个？",
+        "url": "/blog/localagi-local-ai-agent-platform-localai-mac/",
+        "language": "zh",
+        "excerpt": "LocalAGI 拆解：这个本地 Agent 平台已被 LocalAI 收进核心，Mac 用户该装哪一个？ mudler/LocalAGI（1972 星，MIT，Go）自称 OpenAI Responses API 的「完整替代」、不上云。我们读完 README、compose 和代码：/v1/responses 里 stream、temperature、instructions 等 7 个字段解析后没被用上，12 个 release 附件全是 0，默认 compose 在局域网暴露 root:root 的 SSH；它从 2026 年 3 月起已被 4.",
+        "score": 0.52888834
+      },
+      {
+        "article_id": "ling-3-0-flash-inclusionai-moe-coding-model-mac-openrouter-guide",
+        "title": "Ling 3.0 Flash 初测：让人意外的编程模型——124B MoE，每 token 只激活 5B 参数",
+        "url": "/blog/ling-3-0-flash-inclusionai-moe-coding-model-mac-openrouter-guide/",
+        "language": "zh",
+        "excerpt": "Ling 3.0 Flash 初测：让人意外的编程模型——124B MoE，每 token 只激活 5B 参数 蚂蚁集团 inclusionAI 于 7 月 23 日发布 Ling 3.0 Flash：124B MoE 架构，每 token 激活 5.1B 参数，256K 上下文，在 OpenRouter 永久免费。编程性能超预期，可通过 MLX 在 Mac 统一内存上本地运行。本文整理模型规格、技术架构、Mac 本地部署和 API 接入方式。 一、模型规格 二、背后的公司：蚂蚁集团 inclusionAI 三、为什么编程能力超预期 四、在 Mac 上运",
+        "score": 0.527761
+      },
+      {
+        "article_id": "apple-foundation-models-fm-cli",
+        "title": "Apple fm CLI: Local AI in the macOS Terminal",
+        "url": "/blog/apple-foundation-models-fm-cli/",
+        "language": "en",
+        "excerpt": "Apple fm CLI: Local AI in the macOS Terminal Use Apple's fm CLI on macOS 27: setup, hardware requirements, offline boundaries and scripting, with an M4 Swift generation check on macOS 26 clearly separated. Apple Foundation Models macOS 本地AI CLI Apple Silicon What ships with macOS",
+        "score": 0.52449447
+      },
+      {
+        "article_id": "kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora",
+        "title": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题",
+        "url": "/blog/kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora/",
+        "language": "zh",
+        "excerpt": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题 Apache-2.0，LoRA + 块因果掩码，文档编码一次、多个问题并发出概率分布，不生成文字。4B 版 OOD 准确率 0.790，比 Jev 低 6~7 个点，上限 8192 token，本地 Mac 可跑。 decision-model local-ai qwen lora classification open-source 核心设计：一次编码，多路分支 三种问题类型 四个模型变体 训练细节 不足之处（文档已明写，不是挖出来的） 本地运行 横向对比 怎么看这件事",
+        "score": 0.52015764
+      }
+    ]
+  }
+}
