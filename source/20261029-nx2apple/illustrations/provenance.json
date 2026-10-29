@@ -1,0 +1,44 @@
+{
+  "generated_at_utc": "2026-10-29T03:43:27.754Z",
+  "article": "src/content/blog/nx2apple-switch-apple-builder.md",
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "generation_calls": 3,
+  "article_sha256_before": "92de3e80f50833c42dda2561c74e99045f656e8ec43d23b2586e83239bb3d942",
+  "banner_sha256_before": "83755aee7ae9a3003304969f46ae5d02279e1964f0891666571d0781401d40c2",
+  "images": [
+    {
+      "figure": 1,
+      "tool": "image_gen.imagegen",
+      "source_path": "/Users/jason/.codex/generated_images/01a185c0-758e-7563-9fa5-742c30932cdc/exec-8fbe4748-9327-4b61-a9bf-e9712b99e42f.png",
+      "saved_original": "source/20261029-nx2apple/illustrations/originals/nx2apple-switch-apple-builder-fig-01.png",
+      "prompt_file": "fig-01.prompt.txt",
+      "transparent_background": false
+    },
+    {
+      "figure": 2,
+      "tool": "image_gen.imagegen",
+      "source_path": "/Users/jason/.codex/generated_images/01a185c0-758e-7563-9fa5-742c30932cdc/exec-2185e72f-761d-46f1-a3d6-f1cd63f64e88.png",
+      "saved_original": "source/20261029-nx2apple/illustrations/originals/nx2apple-switch-apple-builder-fig-02.png",
+      "prompt_file": "fig-02.prompt.txt",
+      "transparent_background": false
+    },
+    {
+      "figure": 3,
+      "tool": "image_gen.imagegen",
+      "source_path": "/Users/jason/.codex/generated_images/01a185c0-758e-7563-9fa5-742c30932cdc/exec-8ae75992-827e-4299-8e3b-cbbb8f7a04f9.png",
+      "saved_original": "source/20261029-nx2apple/illustrations/originals/nx2apple-switch-apple-builder-fig-03.png",
+      "prompt_file": "fig-03.prompt.txt",
+      "transparent_background": false
+    }
+  ],
+  "final_validation": {
+    "exactly_three_separate_generated_figures": true,
+    "all_outputs_1200x675_indexed_png8_under_90000_bytes": true,
+    "visual_review": "All three final compressed files inspected: legible Chinese labels, red spotted XiaoM performing the action, white backgrounds; evidence categories distinct and resource container separate from app.",
+    "article_written_by_this_task": false,
+    "banner_written_by_this_task": false,
+    "article_sha256_observed_after": "8b5480630286ea6b6b7d2081601d1682fb876f2115a888c36345ea06a25e54f7",
+    "banner_sha256_observed_after": "83755aee7ae9a3003304969f46ae5d02279e1964f0891666571d0781401d40c2",
+    "concurrent_change_note": "Article hash changed during execution; this illustration task performed no writes to the article. Preserve concurrent edits."
+  }
+}
