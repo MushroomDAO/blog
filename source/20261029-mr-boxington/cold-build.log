@@ -1,0 +1,14 @@
+mbx[setup]: first build on this machine
+mbx[setup]:   cache is /tmp/boxington-smoke/proof-qv8cgmx2/cache, shared by every checkout and worktree, pruned to 10.0 GiB
+mbx[setup]:   this filesystem supports reflinks, so target/ shares disk with the cache instead of copying
+mbx[setup]:   target/ is managed: deleted when its checkout is gone, unused for 30 days, over 20.0 GiB total, or the disk runs low
+mbx[setup]:   `mbx gc --dry-run` previews cleanup; `mbx settings ls gc` shows every limit
+   Compiling cache_probe v0.1.0 (/private/tmp/boxington-smoke/proof-qv8cgmx2/checkout-a)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.99s
+mbx[cache]: 0 hits, 0 misses, 0 prefetched; 0 B downloaded, 0 B uploaded, 472.8 KiB stored locally
+mbx[cache]: could not look up 2 compilations: no usable dep-info from an earlier build and no prediction to derive an action key from
+mbx[cache]: bypassed 5 compilations: 4 compiler-query, 1 standard-input
+mbx[cache]: compiler time: 0s estimated avoided; 378.3ms spent (2 unconsulted in 378.3ms)
+mbx[cache]: slowest uncached crates: cache_probe 378.3ms
+mbx[cache]: wrapper phases (cumulative, exclusive): compiler 397.1ms, flight_wait 436µs, key 26.2ms, lookup 184µs, permit_wait 2.3ms, predict 1.4ms, startup 227µs, store 15.6ms, unattributed 347.8ms
+mbx[cache]: timing: 1.03s session, 0s prefetch; cumulative 0s remote lookup, 0s blob transfer, 10.4ms CAS write, 0s materialization

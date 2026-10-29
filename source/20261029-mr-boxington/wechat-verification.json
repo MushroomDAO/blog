@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-29T09:18:42.345Z",
+  "drafts": [
+    {
+      "slug": "mr-boxington-rust-cargo-shared-cache",
+      "mediaId": "prCUE631thH1cmNLi42prPMbo0ISSteYnEdy4Ayuppwi2Ki2E1kuKp3wlCMWglX-",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "a8a13003e810ee38ba08ca704778d2faee343a89c85ead95a6742ff5745df622",
+      "remoteTextHash": "a8a13003e810ee38ba08ca704778d2faee343a89c85ead95a6742ff5745df622",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/mr-boxington-rust-cargo-shared-cache/",
+      "localContentHash": "a59cd9fd59042015a7c0c2ac0ce9e27dfa6dd1cfeaade60051f5c01626b8b48e",
+      "remoteContentHash": "7101397488efd333c85642bbfff1adc4d1879fe16c2530ccb5bfd5e3c5acab2a"
+    }
+  ]
+}
