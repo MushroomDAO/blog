@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-10-29T10:52:54.856820+00:00",
+  "query": "硬件钱包客户资料泄露 弱种子 固件修复 供应链植入 七品牌风险核查",
+  "response": {
+    "results": [
+      {
+        "article_id": "cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt",
+        "title": "cloudflare/security-audit-skill：20 个 Markdown 文件怎么成了 Cloudflare 内部漏洞扫描器",
+        "url": "/blog/cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt/",
+        "language": "zh",
+        "excerpt": "cloudflare/security-audit-skill：20 个 Markdown 文件怎么成了 Cloudflare 内部漏洞扫描器 Cloudflare 开源安全审计 Skill，MIT，22K 星。本质是 ~300KB 结构化提示词，六阶段对抗验证流程，发现者不验证自己的漏洞，覆盖 13 个攻击域含 AI/LLM 安全。内部 Project Glasswing：145 仓库，30K 行代码约 80 个 bug，14 小时完成。 安全 AI Agent Claude Code Cloudflare 漏洞扫描 开源拆解 项目背景 第一个反直觉结",
+        "score": 0.5559387
+      },
+      {
+        "article_id": "deepinfer-deepseek-inference-framework",
+        "title": "DeepInfer：DeepSeek开源推理核心，部署前要看懂哪些边界？",
+        "url": "/blog/deepinfer-deepseek-inference-framework/",
+        "language": "zh",
+        "excerpt": "DeepInfer：DeepSeek开源推理核心，部署前要看懂哪些边界？ DeepInfer 是 DeepSeek 开源的高性能推理框架，本次发布提供面向 DeepSeek-V4.1-Flash 的离线推理核心。结合 README、问答和源码，介绍硬件要求、并行调度、投机解码、结构化输出及生产服务缺失组件，解释四卡预填充与六十四卡解码图表的口径，核对缓存、草稿接受率与确定性配置边界。 DeepInfer DeepSeek 大模型推理 分布式系统 开源项目 开源的是哪一部分，完整服务还差什么？ 哪些硬件可以按官方路径部署？ 它把推理优化放在哪些层？ SWA",
+        "score": 0.55203825
+      },
+      {
+        "article_id": "plausible-analytics-consulting-white-label",
+        "title": "Plausible Analytics 如何做成按月收费的分析服务？",
+        "url": "/blog/plausible-analytics-consulting-white-label/",
+        "language": "zh",
+        "excerpt": "Plausible Analytics 如何做成按月收费的分析服务？ Plausible Analytics能成为网站分析顾问的服务底座，但自托管、白标和云端转售需要分别核对。本文结合仓库、Community Edition部署文件、白标指南与商标规则，比较客户自持云订阅、官方白标集成和CE代运维三条路线，拆解月度交付、成本核算、数据归属及退出机制，说明AGPL、MIT及企业功能的边界。 Plausible Analytics Web Analytics Open Source White Label Consulting Plausible适合解决哪些",
+        "score": 0.54262716
+      },
+      {
+        "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+        "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+        "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+        "language": "zh",
+        "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+        "score": 0.5334747
+      },
+      {
+        "article_id": "china-departure-flight-price-monitor-ctrip-fliggy-qunar-southeast-asia-lcc",
+        "title": "Monitoring Cheap Flights Out of China: From OTA Reverse Engineering to Direct Low-Cost Carrier Access",
+        "url": "/blog/china-departure-flight-price-monitor-ctrip-fliggy-qunar-southeast-asia-lcc/",
+        "language": "en",
+        "excerpt": "Monitoring Cheap Flights Out of China: From OTA Reverse Engineering to Direct Low-Cost Carrier Access Complete Flight Price Monitoring for China-Departing Travelers: From OTA Reverse Engineering to LCC Direct Access The Three Data Scenarios The Key Open Source Tool: JiPiao Critic",
+        "score": 0.5332455
+      },
+      {
+        "article_id": "deepseek-v4-flash-local-inference-guide",
+        "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+        "url": "/blog/deepseek-v4-flash-local-inference-guide/",
+        "language": "zh",
+        "excerpt": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册 DeepSeek V4-Flash 284B MoE 模型本地推理完全指南：为什么「13B 激活参数」不等于 13B 内存需求，四档硬件方案对比，以及 Mac M4 Ultra、多卡 GPU、vLLM 的实操步骤。 DeepSeek V4 本地推理 MoE vLLM Mac M4 Ultra GPU推理 量化 llama.cpp AI部署 一、先搞清楚：MoE 的内存陷阱 \"激活参数\" ≠ \"推理内存\" V4-Flash 的实际内存占用 额外内存开销 二、四档硬件方案 方案 A：Mac A",
+        "score": 0.5276195
+      },
+      {
+        "article_id": "duix-avatar-heygem-local-digital-human-video-clone-teardown",
+        "title": "Duix-Avatar（前 HeyGem）：本地离线数字人视频生成深度拆解",
+        "url": "/blog/duix-avatar-heygem-local-digital-human-video-clone-teardown/",
+        "language": "en",
+        "excerpt": "数字人 视频生成 本地推理 Docker 开源拆解 Duix-Avatar (formerly HeyGem): Local Offline Digital Human Video Cloning — Deep Teardown Project Background Core Three-Component Architecture Hardware Requirements \"10-Second Clone\" Claim Check What \"Local Offline\" Actually Means License Trap: Custom \"DU",
+        "score": 0.5254814
+      },
+      {
+        "article_id": "deepseek-reasonix-terminal-coding-agent-prefix-cache",
+        "title": "DeepSeek-Reasonix：围绕前缀缓存稳定性设计的终端编程 Agent",
+        "url": "/blog/deepseek-reasonix-terminal-coding-agent-prefix-cache/",
+        "language": "zh",
+        "excerpt": "DeepSeek-Reasonix：围绕前缀缓存稳定性设计的终端编程 Agent esengine 开源的 DeepSeek 原生终端编程 Agent，33k stars，MIT License，Go 重写版。架构核心是前缀缓存稳定性——真实用户单日 435M 输入 token，99.82% 缓存命中，实际费用 ~$12 而非 ~$61。支持长时运行、QQ 频道远程接入、Tauri 桌面客户端，npm install -g reasonix 一键安装。 编程Agent DeepSeek 前缀缓存 终端工具 长任务Agent 成本优化 Mycelium 前",
+        "score": 0.52244616
+      },
+      {
+        "article_id": "reverse-skill-ai-agent-cybersecurity-penetration-skill-router",
+        "title": "reverse-skill：给 AI Agent 装上逆向工程与渗透测试的神经系统",
+        "url": "/blog/reverse-skill-ai-agent-cybersecurity-penetration-skill-router/",
+        "language": "zh",
+        "excerpt": "reverse-skill：给 AI Agent 装上逆向工程与渗透测试的神经系统 zhaoxuya520 开源的 AI Agent 安全技能路由包，20.9k stars，MIT License。解决 AI Agent 做安全分析时不知道用哪个工具的核心痛点——41条路由规则自动识别任务类型（APK/ELF/JS/PCAP/CTF），按需自举 jadx/Frida/Ghidra/BurpSuite 等工具链，自动沉淀经验到知识库。支持 Claude Code、Codex、Cursor、Kiro、Cline。 安全技能 AI渗透测试 逆向工程 Claud",
+        "score": 0.5222931
+      },
+      {
+        "article_id": "memory-harness-local-first-programmable-auditable-long-term-memory",
+        "title": "Memory Harness：本地优先、可编排、可审计的 AI 长期记忆工作台",
+        "url": "/blog/memory-harness-local-first-programmable-auditable-long-term-memory/",
+        "language": "zh",
+        "excerpt": "Memory Harness：本地优先、可编排、可审计的 AI 长期记忆工作台 luoyif/memory-harness 开源，六层可追溯记忆架构（Evidence→能力资产），本地混合 RAG，24 个 MCP 工具，多 AI 协作但草稿彼此隔离，完全本地无云依赖。 AI memory MCP local-first RAG agents open source long-term memory knowledge management AI 的记忆问题一直没有被认真解决 六层可追溯记忆架构 混合 RAG，完全本地无依赖 多 AI 协作，但草稿彼此隔",
+        "score": 0.5218496
+      }
+    ]
+  }
+}

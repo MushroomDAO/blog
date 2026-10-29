@@ -1,0 +1,116 @@
+[
+  {
+    "id": "ledger-implant",
+    "url": "https://support.ledger.com/article/Ledger-s-Response-to-the-Hardware-Implant-Attack",
+    "status": 200,
+    "finalUrl": "https://support.ledger.com/article/Ledger-s-Response-to-the-Hardware-Implant-Attack",
+    "bytes": 77623,
+    "sha256": "0383df571475de69183695934889a034657ed5fca7bc7d77e972432bd380b9dc",
+    "textChars": 0
+  },
+  {
+    "id": "ledger-global-e",
+    "url": "https://support.ledger.com/article/Global-e-Incident-to-Order-Data---January-2026",
+    "status": 200,
+    "finalUrl": "https://support.ledger.com/article/Global-e-Incident-to-Order-Data---January-2026",
+    "bytes": 77623,
+    "sha256": "184f4618ad3ea90956097c90e7b3fe49574b2a7f1e02b4d9ebb869e20ff7163a",
+    "textChars": 0
+  },
+  {
+    "id": "coldcard-status",
+    "url": "https://coldcard.com/security/status",
+    "status": 200,
+    "finalUrl": "https://coldcard.com/security/status",
+    "bytes": 68758,
+    "sha256": "7b7086c3d01fdd17d8cd3cc4b5d32e2281445bf1d1f487de6dfb74bf6dfa87ff",
+    "textChars": 16749
+  },
+  {
+    "id": "trezor-chip",
+    "url": "https://trezor.io/blog/news/Trezor-response-TROPIC01-chip-disclosure-no-impact-to-your-funds",
+    "status": 200,
+    "finalUrl": "https://trezor.io/blog/news/Trezor-response-TROPIC01-chip-disclosure-no-impact-to-your-funds",
+    "bytes": 608153,
+    "sha256": "c45ad4aa3c3e49225cbb2cb16cd1354179497626302961fde993bc4be9120066",
+    "textChars": 9525
+  },
+  {
+    "id": "trezor-shipmonk",
+    "url": "https://trezor.io/blog/news/recent-customer-data-exposed-in-shipping-provider-incident",
+    "status": 200,
+    "finalUrl": "https://trezor.io/blog/news/recent-customer-data-exposed-in-shipping-provider-incident",
+    "bytes": 612353,
+    "sha256": "6a147a0fa570da767a1042680cc5740666e013f9dd4f266ef7c418f5dc6f2c2b",
+    "textChars": 10441
+  },
+  {
+    "id": "trezor-brevo",
+    "url": "https://trezor.io/blog/news/security-incident-at-brevo-our-third-party-email-provider",
+    "status": 200,
+    "finalUrl": "https://trezor.io/blog/news/security-incident-at-brevo-our-third-party-email-provider",
+    "bytes": 577573,
+    "sha256": "795cde3ed5f53b8f446680ede0b684cb205a7698c3381c3b9abad591186d7173",
+    "textChars": 5212
+  },
+  {
+    "id": "bitbox-dixence",
+    "url": "https://blog.bitbox.swiss/en/bitbox-08-2026-dixence-update/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "bitbox-brevo",
+    "url": "https://blog.bitbox.swiss/en/email-address-exposure-at-newsletter-provider-brevo/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "safepal-order",
+    "url": "https://safepal.com/es/blog/security-update",
+    "status": 200,
+    "finalUrl": "https://safepal.com/es/blog/security-update",
+    "bytes": 66950,
+    "sha256": "ead498e8a3aeb8fea0606b2707d08875182ba8ef243452b73f3e179285ff3773",
+    "textChars": 10765
+  },
+  {
+    "id": "donjon-tangem",
+    "url": "https://donjon.ledger.com/blog/bypassing-tangem-card-security-with-laser-attack/",
+    "status": 200,
+    "finalUrl": "https://donjon.ledger.com/blog/bypassing-tangem-card-security-with-laser-attack/",
+    "bytes": 46141,
+    "sha256": "5e6383d9b9f1565f1d99fd94aa073ec95309d6a62b3b7111e72c6999158db4b7",
+    "textChars": 21661
+  },
+  {
+    "id": "tangem-response",
+    "url": "https://tangem.com/en-GB/blog/post/lfi-response/",
+    "status": 200,
+    "finalUrl": "https://tangem.com/en-GB/blog/post/lfi-response/",
+    "bytes": 161218,
+    "sha256": "488e6347ac78c8d647f61644fed1a84b5dbc417f435f4168087f074ceabaae26",
+    "textChars": 13100
+  },
+  {
+    "id": "tangem-logs",
+    "url": "https://tangem.com/en/blog/post/tangem-resolves-log-issue/",
+    "status": 200,
+    "finalUrl": "https://tangem.com/en/blog/post/tangem-resolves-log-issue/",
+    "bytes": 179586,
+    "sha256": "bdb919c760035ba8f671222766c1db1997f67f3ee8bfcef5a5e040a0482562e0",
+    "textChars": 11878
+  },
+  {
+    "id": "keystone-news",
+    "url": "https://www.theblock.co/news/business/2026-10-25-keystone-customers-say-breach-exposed-data-the-hardware-wallet-maker-promised-to-delete-431613",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "keystone-x",
+    "url": "https://x.com/KeystoneWallet/status/2114719318722404578",
+    "status": 200,
+    "finalUrl": "https://x.com/KeystoneWallet/status/2114719318722404578",
+    "bytes": 365614,
+    "sha256": "6c96011f445f2d50ad4dfdb280b4962344204840ca12c873bfee08fc90812851",
+    "textChars": 19378
+  }
+]
