@@ -1,0 +1,29 @@
+{
+ "run": "first-training",
+ "stop_reason": "completed all epochs",
+ "final_commit": "eb42b783bf8c7b18ac781c1ad0b968c57ef457a8",
+ "final_tag": "first-training/final",
+ "tree": "/private/tmp/hermit-source/.demo/first-training/trees/prompt-only",
+ "branch": "first-training",
+ "steps": 2,
+ "bootstrap": false,
+ "spending": {
+  "usd": {
+   "rollout": 0.0,
+   "evolver": 0.0
+  },
+  "tokens": {
+   "rollout": 0,
+   "evolver": 0
+  },
+  "unknown_cost_calls": 0,
+  "seconds": 2.4
+ },
+ "checkpoints": [
+  "first-training/ckpt-epoch-1"
+ ],
+ "finalize": "current adapter",
+ "warnings": [
+  "sandbox.enabled is false: what the Evolver starts runs unconfined; it can read anything on this machine, including the test split, and reach the network."
+ ]
+}

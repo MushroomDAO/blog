@@ -1,0 +1,86 @@
+{
+  "checkedAt": "2026-10-29T08:45:37.074878+00:00",
+  "query": "Hermit harness adapter evolution GEPA SkillOpt MetaWorld Model 外部适配器 持续学习",
+  "results": [
+    {
+      "article_id": "hermit-harness-adapter-evolution",
+      "title": "Hermit：不改模型，让 Agent 的外部适配器持续演化",
+      "url": "/blog/hermit-harness-adapter-evolution/",
+      "language": "zh",
+      "excerpt": "Hermit：不改模型，让 Agent 的外部适配器持续演化 Hermit 用任务反馈演化 Agent 外部适配器，保留原模型与运行框架。本文核对 GEPA、SkillOpt、MetaWorld Model、Harness² 和 Continual Harness，实跑离线训练、评测与部署，解释结构检查和性能筛选的区别，并介绍 Mac、Python 版本、隔离限制及试点建议。 Hermit AI Agent 持续学习 RSI 开源 Hermit 学的是什么，和训练模型有什么区别？ 五种已支持方法该怎样选？ 训练循环中，谁负责判断更新是否更好？ 怎样在 M",
+      "score": 0.76270044
+    },
+    {
+      "article_id": "neohorse-1-recursive-self-improvement-agentic-post-training",
+      "title": "NeoHorse-1：第一个认真搭递归自我改进原型的开源小模型",
+      "url": "/blog/neohorse-1-recursive-self-improvement-agentic-post-training/",
+      "language": "zh",
+      "excerpt": "NeoHorse-1：第一个认真搭递归自我改进原型的开源小模型 TokenRhythm 用 Routing Harness 让 4B/9B 模型自己观察执行轨迹、估算能力缺口、把反馈注回训练混合——十项基准平均 +5.93 vs Qwen3.5-4B。这不只是一次后训练，是一个闭环的雏形。 LLM post-training recursive-self-improvement agent open-source Qwen3.5 递归自我改进：为什么这个方向重要 Routing Harness：核心机制 训练方法：两个核心组件 测评结果 4B 档（对比 ",
+      "score": 0.5916983
+    },
+    {
+      "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "title": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时",
+      "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+      "language": "zh",
+      "excerpt": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时 复旦+北大+奇迹智风，arXiv:2604.25850，MIT，Python。AHE 提出一个闭环：不动模型权重，只进化 harness——通过三层可观测性（组件/经验/决策），让 Evolve Agent 自动分析 trace、提出修改、预测效果，下一轮自动验证。10次迭代把 GPT-5.4 在 Terminal-Bench 2 上从 69.7% 提升到 77.0%，超过手写 Codex-CLI（71.9%）。冻结后的 harness ",
+      "score": 0.5805785
+    },
+    {
+      "article_id": "hiroute-local-model-routing",
+      "title": "HiRoute：让本地路由器按任务选择模型",
+      "url": "/blog/hiroute-local-model-routing/",
+      "language": "zh",
+      "excerpt": "HiRoute：让本地路由器按任务选择模型 HiRoute 是面向 AI 编程助手的本地模型路由器，支持普通与主力模型组、按难度判断、任务分支、有限故障转移和会话审计。本文核对它如何区分新用户任务与工具续接、决策服务与执行模型、缓存与成本，以及 macOS 和 Linux 安装条件，并披露本地 Hermes 适配测试的通过与失败范围。 HiRoute model-routing coding-agents Rust cost-optimization local-first 一次长任务里，哪些步骤值得换模型？ 难度、表现评分与执行模型怎样分工？ 故障转移",
+      "score": 0.57758504
+    },
+    {
+      "article_id": "cmu-better-harnesses-smaller-models-slm-agent-cost-reduction-engineering",
+      "title": "模型可以小，脚手架要聪明——CMU 论文拆解：用 Harness 适配让 SLM 以 4% 成本追平 LLM",
+      "url": "/blog/cmu-better-harnesses-smaller-models-slm-agent-cost-reduction-engineering/",
+      "language": "zh",
+      "excerpt": "模型可以小，脚手架要聪明——CMU 论文拆解：用 Harness 适配让 SLM 以 4% 成本追平 LLM 卡内基梅隆大学最新论文（arXiv:2607.08938）证明：对于重复性业务任务，小模型（3B~30B active params）配合针对性适配的 harness，可以用 4% 的成本恢复 89.7% 的 LLM 性能。本文深度分析论文框架，提炼 5 条工程上可直接落地的操作指南。 Agent SLM Harness 成本优化 工程实践 LLM CMU 核心洞察：任务难度可以从模型转移到 harness 失败模式分类：知道哪里出错才能对症下药",
+      "score": 0.5754357
+    },
+    {
+      "article_id": "gamescaling-game-agents-cpt",
+      "title": "GameScaling: What Game Pretraining Transfers",
+      "url": "/blog/gamescaling-game-agents-cpt/",
+      "language": "en",
+      "excerpt": "GameScaling: What Game Pretraining Transfers GameScaling studies gameplay pretraining across 120 configurations. Explore its eight checkpoints, transfer limits, real-time evaluations and verified offline client tests. GameScaling 游戏智能体 Qwen3.5 具身智能 持续预训练 Is this related to Flint?",
+      "score": 0.56941247
+    },
+    {
+      "article_id": "harness2-recursive-agent-improvement",
+      "title": "Google Harness²：模型不变，让Agent改进自己的工作方法",
+      "url": "/blog/harness2-recursive-agent-improvement/",
+      "language": "zh",
+      "excerpt": "Google Harness²：模型不变，让Agent改进自己的工作方法 Google Research 的 Harness² 保持模型权重不变，通过修改提示词、工具、Skills 和脚本改进任务执行。本文拆解两层递归与 Propose–Probe–Compose，核查三类基准的公开成绩，并给出无需模型凭证的离线起步路径，说明真实模型运行的成本、网络泄漏、独立判分与经验库污染边界。 Harness2 Google Research Agent Harness Engineering 递归自我改进 模型不训练，究竟改什么？ 第一层递归：当前任务怎么改？ 第",
+      "score": 0.5679893
+    },
+    {
+      "article_id": "gepa-reflective-prompt-evolution-vs-reinforcement-learning",
+      "title": "GEPA：让 LLM 阅读自己的执行轨迹进化 Prompt，比 GRPO 少用 35x rollout 却赢 20%",
+      "url": "/blog/gepa-reflective-prompt-evolution-vs-reinforcement-learning/",
+      "language": "zh",
+      "excerpt": "GEPA：让 LLM 阅读自己的执行轨迹进化 Prompt，比 GRPO 少用 35x rollout 却赢 20% 来自 UC Berkeley、Stanford、MIT、Databricks 的 ICLR 2026 口头报告论文：GEPA 让 LLM 通过阅读自己的执行轨迹，自动反思、进化并合并 prompt 经验，在 HotpotQA 等任务上比 GRPO 平均高 10%，比 MIPROv2 高 12%，同时只需不到 3% 的 rollout 数量。 GEPA Prompt优化 强化学习 LLM GRPO 进化算法 AI Agent ICLR 20",
+      "score": 0.5637749
+    },
+    {
+      "article_id": "hermes-agent-nous-research-self-improving-skill-loop",
+      "title": "Hermes Agent 调研：不是套壳，是一整套会自我进化的 Agent 运行时",
+      "url": "/blog/hermes-agent-nous-research-self-improving-skill-loop/",
+      "language": "zh",
+      "excerpt": "Hermes Agent 调研：不是套壳，是一整套会自我进化的 Agent 运行时 调研 Nous Research 开源的 Hermes Agent：MIT 协议、23 万+ star。核心卖点是「闭环学习」——从任务经验里自动生成技能、技能在使用中自我改进、周期性提醒自己沉淀记忆、跨会话检索过往对话。内置 cron 调度支持自然语言定时任务无人值守运行，7 种终端后端支持从 5 美元 VPS 到 Serverless 休眠唤醒，跨 Telegram/Discord/Slack/WhatsApp/Signal 单网关接入。本文从两条小红书线索一路查到这",
+      "score": 0.5593853
+    },
+    {
+      "article_id": "prime-agent-primeintellect-self-improving-rlm-coding-agent",
+      "title": "Prime Agent：PrimeIntellect 开源的自改进 RLM 编程 Agent",
+      "url": "/blog/prime-agent-primeintellect-self-improving-rlm-coding-agent/",
+      "language": "zh",
+      "excerpt": "Prime Agent：PrimeIntellect 开源的自改进 RLM 编程 Agent PrimeIntellect 开源的自改进 Agent，7.6k stars，MIT License。引入 RLM（递归语言模型）把 context 当变量、工具调用当函数，运行在持久 IPython REPL 中。通过 Continual Harness 把提示词/记忆/技能描述持久化为可精炼的 durable state，支持子 Agent 并行、后台 daemon 会话、Agent 间直接通信、/goal 跨轮次持久目标和 /autonomous 自主模式",
+      "score": 0.55930185
+    }
+  ]
+}

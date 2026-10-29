@@ -1,0 +1,119 @@
+Hermit — Train Your Harness Adapter
+Hermit
+/
+2026
+·
+Harness adapters
+·
+Continual learning for agents
+Train, evaluate and deploy
+harness adapters
+: trainable external harnesses that adapt an existing agent to new scenarios without touching its harness or model.
+Trainable
+No harness changes
+Transferable
+RL-style loop
+GEPA · SkillOpt · MWM · Harness² · Continual Harness
+Codex · Claude Code
+Code
+Documentation
+Methods
+How it works
+Collaboration demo
+The adapter learns, the agent stays fixed
+Task feedback improves an external harness adapter while the original model and harness stay unchanged.
+§
+Supported Harness Evolution Methods
+Use an existing method, or bring your own Evolver to the same training framework.
+GEPA
+SkillOpt
+MetaWorld Model
+Harness²
+Continual Harness
+Coming soon: ACE · ReHarness.
+Compare methods and requirements →
+§
+What Hermit gives you out of the box
+Hermit is an open-source framework with
+one training loop
+for harness adapters. Bring your tasks and feedback; choose a learning method or write your own. It provides shared infrastructure for:
+One Trainer for every method: rollouts, judge feedback, an Evolver step, a checked commit, the next version
+Built-in evolution methods and a shared interface for your own Evolver
+Adapters as files in a git tree: inspect every version, roll back, ship the final one
+Deploy workspaces for Codex, Claude Code or Pi, or export supported contents as a native plugin for compatible hosts
+Adapter specification checks and versioned updates, with sandboxing for supported learner programs
+Any model backend by reference: Fireworks, OpenAI, Anthropic, DeepSeek, vLLM, SGLang, Ollama
+Open source · Apache 2.0
+Train an adapter for your agent on your own tasks.
+Star on GitHub
+Quick start
+§
+Why a harness adapter
+Need
+Agents meet scenarios their harness was not written for: a new domain, a new tool, a stream of tasks whose rules only show in the feedback. They should
+keep learning in deployment
+.
+Today
+Two ways to adapt an agent:
+edit its harness by hand
+, which does not scale and does not learn, or
+fine-tune the model
+, which is expensive, opaque, and tied to one model.
+Why
+A harness adapter puts the learnable part
+outside
+the agent: an instruction file, skills, tools, a world model of the venue. The base stays frozen, the adapter trains from feedback, and the same adapter moves between compatible harnesses.
+§
+How it works: an RL-style loop for harnesses
+One loop, many methods
+The Trainer runs a batch of tasks through the acting agent with the current adapter, scores them with your judge, and hands the trajectories and feedback to an Evolver. The Evolver proposes a new adapter; the Trainer checks it against the template and commits it as the next version.
+From the command line
+Or write your own loop
+Implement your update logic in an Evolver. The Trainer manages specification checks, versioning, run records and evaluation support.
+§
+Examples and recipes
+A harness adapter for collaboration
+Five Codex agents, one Lean theorem. A shared harness adapter connects their plans, messages and verified lemmas, so each agent can build on the others’ work without modifying Codex itself.
+Shared adapter, coordinated agents
+The diagram shows how agents communicate through the adapter; the replay below shows their contributions to one proof.
+Explore the Lean collaboration adapter →
+Train adapters on your tasks
+Start from a runnable recipe, connect your tasks and feedback, and choose an evolution method.
+OfficeQA
+Optimize document-analysis skills or adapt throughout a task stream with GEPA, SkillOpt, Harness² and Continual Harness.
+Explore recipe →
+CL-Bench
+Build environment knowledge from experience with MWM and prompt-only adapters.
+Explore recipe →
+ServeLearnBench
+Learn a changing policy while serving requests, then evaluate the adapter on held-out tasks.
+Explore recipe →
+§
+Get started
+Requires Python 3.12+ and Git.
+From source (recommended)
+Clone the repository to run examples, reproduce recipes and develop your own evolution methods.
+git clone https://github.com/Infini-AI-Lab/hermit.git
+cd hermit
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+hermit --help
+Also available on PyPI
+Install the framework CLI and bundled adapter templates in your Python environment:
+python -m pip install hermit-harness
+hermit --help
+The included examples and benchmark recipes use files from the source checkout. See
+Installation
+for method-specific dependencies.
+Offline Quick Start
+·
+train with an API model
+·
+run OfficeQA
+·
+bring your own task
+·
+build a new method
+Hermit · Apache-2.0 ·
+github.com/Infini-AI-Lab/hermit

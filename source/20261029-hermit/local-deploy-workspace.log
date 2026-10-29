@@ -1,0 +1,15 @@
+{
+  "host": "codex",
+  "adapter_id": "prompt-only",
+  "version": "1.0",
+  "adapter": "/private/tmp/hermit-source/.demo/first-training/first-training/checkout",
+  "workspace": "/private/tmp/hermit-source/.demo/first-training/workspace",
+  "context_injected_via": "AGENTS.md",
+  "server_name": null,
+  "server": null,
+  "roles": {},
+  "role_name_map": {},
+  "skills_dir": null,
+  "skills": [],
+  "audit_log": null
+}

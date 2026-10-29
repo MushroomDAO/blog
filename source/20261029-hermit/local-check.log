@@ -1,0 +1,8 @@
+[ok] template — {'id': 'prompt-only', 'version': '1.0', 'contract': '2', 'name': 'Prompt only'}
+[ok] evolver — learner (evolver.py:FormatEvolver)
+[ok] task
+[ok] sandbox — enabled=False, enforce=required, network=none, env=[]
+[ok] budgets — hard {'usd': None, 'tokens': 1000, 'hours': 0.02}, 1 epoch(s)
+[ok] agent probe — task train-1: score 0.0, 0 s, api speed null, cost 0.0
+[warning] sandbox.enabled is false: what the Evolver starts runs unconfined; it can read anything on this machine, including the test split, and reach the network.
+check looks only at the basic items above. Passing it does not guarantee that the settings are free of problems or that the run will succeed.

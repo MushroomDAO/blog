@@ -1,0 +1,13 @@
+eval final: repeat 1/1 on 2 test tasks
+{
+ "adapter": "final",
+ "commit": "eb42b783bf8c7b18ac781c1ad0b968c57ef457a8",
+ "tasks": 2,
+ "repeats": 1,
+ "mean_score": 1.0,
+ "solved_once": 1.0,
+ "cost_usd": 0.0,
+ "unknown_cost_tasks": 0,
+ "errors": 0,
+ "wall_s": 0.0
+}
