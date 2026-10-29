@@ -1,0 +1,25 @@
+{
+  "tag": "pdf-latest",
+  "assets": [
+    {
+      "name": "CS146S-book-en.pdf",
+      "size": 553717,
+      "url": "https://github.com/FL-Bin/stanford-ai-course/releases/download/pdf-latest/CS146S-book-en.pdf"
+    },
+    {
+      "name": "CS146S-book-zh.pdf",
+      "size": 841431,
+      "url": "https://github.com/FL-Bin/stanford-ai-course/releases/download/pdf-latest/CS146S-book-zh.pdf"
+    },
+    {
+      "name": "CS146S-notes-en.pdf",
+      "size": 180980,
+      "url": "https://github.com/FL-Bin/stanford-ai-course/releases/download/pdf-latest/CS146S-notes-en.pdf"
+    },
+    {
+      "name": "CS146S-notes-zh.pdf",
+      "size": 479887,
+      "url": "https://github.com/FL-Bin/stanford-ai-course/releases/download/pdf-latest/CS146S-notes-zh.pdf"
+    }
+  ]
+}
