@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-29T11:03:38.068543+00:00",
+  "passed": true,
+  "checks": {
+    "slug": true,
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "tags": true,
+    "dates": true,
+    "bilingual": true,
+    "copyright": true,
+    "illustrationAnchors": true,
+    "faq": true,
+    "pinnedSource": true,
+    "localEvidence": true,
+    "limits": true,
+    "internalLinkExists": true
+  },
+  "analysis": "BLUF,stagecomparison,firstpartyURL references,pinneddata,3FAQs,independent local verification,clear evidence limits;no promises of traffic or quality",
+  "manualImageReview": {
+    "cover": "seed8115 passed,1200x630,96356B,no lettering or faces;sourceOG archived not used",
+    "figures": "3 separate1120x630 PNGs,25103/20330/21952B,legible Chinese labels,conceptualnotUIoractualvideotest"
+  }
+}
