@@ -1,0 +1,8 @@
+cache explanation: last recorded build
+  command: cargo build --offline --target-dir /tmp/boxington-smoke/proof-qv8cgmx2/target-c
+  results: 4 compiler-query, 1 miss, 1 standard-input, 1 unconsulted
+
+missed crates
+
+cache_probe
+  no earlier build recorded key details for this crate; the cache may be cold, this action may use another adapter, or its history may have expired

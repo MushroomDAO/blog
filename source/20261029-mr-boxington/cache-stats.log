@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "byte_accounting": "logical",
+  "store": "/tmp/boxington-smoke/proof-qv8cgmx2/cache/actions",
+  "objects": 14,
+  "object_bytes": 484195,
+  "action_results": 2,
+  "action_result_bytes": 744,
+  "total_bytes": 484939,
+  "live_checkouts": 2,
+  "stale_checkouts": 0,
+  "target_directories": 0,
+  "target_bytes": 0,
+  "incremental_directories": 2,
+  "incremental_units": 2,
+  "incremental_bytes": 189892,
+  "incremental_live_checkouts": 2,
+  "incremental_stale_checkouts": 0,
+  "incremental_untracked_directories": 0,
+  "generated_directories": 0,
+  "generated_bytes": 0,
+  "combined_total_bytes": 674831
+}

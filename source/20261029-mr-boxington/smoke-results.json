@@ -1,0 +1,118 @@
+{
+  "root": "/tmp/boxington-smoke/proof-qv8cgmx2",
+  "conditions": {
+    "targets": "three distinct fresh explicit dirs",
+    "globalSetup": "not run",
+    "cache": "/tmp/boxington-smoke/proof-qv8cgmx2/cache",
+    "benchmark": "not a timing or performance comparison",
+    "cargoIncrementalSetting": "CARGO_INCREMENTAL=0; mbx learned_incremental left at its default, observed private state after edit"
+  },
+  "steps": [
+    {
+      "label": "toolchain",
+      "args": [
+        "rustc",
+        "--version"
+      ],
+      "cwd": "/tmp/boxington-smoke/proof-qv8cgmx2/checkout-a",
+      "exitCode": 0
+    },
+    {
+      "label": "lockfile",
+      "args": [
+        "cargo",
+        "generate-lockfile",
+        "--offline"
+      ],
+      "cwd": "/tmp/boxington-smoke/proof-qv8cgmx2/checkout-a",
+      "exitCode": 0
+    },
+    {
+      "label": "cold-build",
+      "args": [
+        "/tmp/boxington-bin/mbx",
+        "build",
+        "--offline",
+        "--target-dir",
+        "/tmp/boxington-smoke/proof-qv8cgmx2/target-a"
+      ],
+      "cwd": "/tmp/boxington-smoke/proof-qv8cgmx2/checkout-a",
+      "exitCode": 0
+    },
+    {
+      "label": "cross-checkout-build",
+      "args": [
+        "/tmp/boxington-bin/mbx",
+        "build",
+        "--offline",
+        "--target-dir",
+        "/tmp/boxington-smoke/proof-qv8cgmx2/target-b"
+      ],
+      "cwd": "/tmp/boxington-smoke/proof-qv8cgmx2/checkout-b",
+      "exitCode": 0
+    },
+    {
+      "label": "restored-program",
+      "output": "42",
+      "exitCode": 0
+    },
+    {
+      "label": "explain-restored",
+      "args": [
+        "/tmp/boxington-bin/mbx",
+        "explain",
+        "--last"
+      ],
+      "cwd": "/tmp/boxington-smoke/proof-qv8cgmx2/checkout-b",
+      "exitCode": 0
+    },
+    {
+      "label": "modified-build",
+      "args": [
+        "/tmp/boxington-bin/mbx",
+        "build",
+        "--offline",
+        "--target-dir",
+        "/tmp/boxington-smoke/proof-qv8cgmx2/target-c"
+      ],
+      "cwd": "/tmp/boxington-smoke/proof-qv8cgmx2/checkout-b",
+      "exitCode": 0
+    },
+    {
+      "label": "modified-program",
+      "output": "43",
+      "exitCode": 0
+    },
+    {
+      "label": "explain-modified",
+      "args": [
+        "/tmp/boxington-bin/mbx",
+        "explain",
+        "--last"
+      ],
+      "cwd": "/tmp/boxington-smoke/proof-qv8cgmx2/checkout-b",
+      "exitCode": 0
+    },
+    {
+      "label": "cache-stats",
+      "args": [
+        "/tmp/boxington-bin/mbx",
+        "cache",
+        "stats",
+        "--json"
+      ],
+      "cwd": "/tmp/boxington-smoke/proof-qv8cgmx2/checkout-b",
+      "exitCode": 0
+    },
+    {
+      "label": "gc-preview",
+      "args": [
+        "/tmp/boxington-bin/mbx",
+        "gc",
+        "--dry-run"
+      ],
+      "cwd": "/tmp/boxington-smoke/proof-qv8cgmx2/checkout-b",
+      "exitCode": 0
+    }
+  ]
+}
