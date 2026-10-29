@@ -1,0 +1,33 @@
+{
+  "tag_name": "v0.2.3",
+  "published_at": "2026-10-28T10:14:26Z",
+  "updated_at": "2026-10-28T11:38:12Z",
+  "html_url": "https://github.com/Fantasy1316/deskflow-ddc/releases/tag/v0.2.3",
+  "body": "## 更新内容\n\n- 修复 macOS 从 Dock 右键退出时可能遗留键鼠引擎的问题；退出会等待所属引擎清理完成，系统注销与关机使用异步退出确认。\n- macOS 增加独立引擎守护进程，主应用异常结束后清理所属引擎，并核验进程身份，避免影响其他程序。\n- 修复单独测试输入源后沿用旧画面来源的问题；更换配对凭据后清除旧设备来源。\n- 禁用页面浏览器右键菜单，普通界面文字默认不可选中。输入框、主机名、IP、已显示配对码、错误和活动记录仍可复制。\n- 新增跨系统修饰键映射，可统一 Mac Command 与 Windows Ctrl 的常用快捷键。\n- 改善睡眠、热插拔及 Windows 屏幕句柄变化后的恢复；停止并重新开始共享时保留最近画面来源。\n\n## 下载与升级\n\n**本次为 v0.2.3 重新发布。即使已安装此前的 0.2.3，也请重新下载并更新两端。**\n\n- **macOS Apple Silicon，macOS 14+**：下载 `Deskflow-DDC-0.2.3-macos-arm64.zip`，解压后将应用放入“应用程序”。\n- **Windows 10/11 x64**：下载 `Deskflow-DDC-0.2.3-windows-x64-portable.zip`，完整解压后运行 `Deskflow DDC.exe`，保留 DLL 和 `resources`；需要已安装 Microsoft Edge WebView2 Runtime。\n- 两端先停止共享并退出旧版，再同时更新。保留 0.2 系列配置、设备身份及配对凭据，内置 Deskflow 1.27.0。\n- Windows 旧版数字句柄形式的独立屏幕设置需要重新选择并保存。macOS 更新后请核对辅助功能权限。\n\n## 已知限制\n\n- Mac 应用使用 ad-hoc 签名，未经 Apple 公证；Windows 程序未配置发行签名。\n- DDC/CI 取决于显示器、接口和扩展坞；发送成功不代表物理画面已确认。\n- 退出保护用于回收所属引擎，不等同于键鼠无响应时的独立紧急停止功能；偶发键鼠失效尚不能确认已根治。\n- 自动化回归测试通过，真实系统注销、关机和双机显示器场景仍需实际验证。\n\n出现异常时，请导出两端诊断日志并附上复现步骤。文件校验值见 `SHA256SUMS`。\n",
+  "assets": [
+    {
+      "name": "Deskflow-DDC-0.2.3-macos-arm64.zip",
+      "size": 35196218,
+      "updated_at": "2026-10-28T11:37:47Z",
+      "url": "https://github.com/Fantasy1316/deskflow-ddc/releases/download/v0.2.3/Deskflow-DDC-0.2.3-macos-arm64.zip"
+    },
+    {
+      "name": "Deskflow-DDC-0.2.3-windows-x64-portable.zip",
+      "size": 24369655,
+      "updated_at": "2026-10-28T11:37:41Z",
+      "url": "https://github.com/Fantasy1316/deskflow-ddc/releases/download/v0.2.3/Deskflow-DDC-0.2.3-windows-x64-portable.zip"
+    },
+    {
+      "name": "package-manifest.json",
+      "size": 468,
+      "updated_at": "2026-10-28T11:37:06Z",
+      "url": "https://github.com/Fantasy1316/deskflow-ddc/releases/download/v0.2.3/package-manifest.json"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 211,
+      "updated_at": "2026-10-28T11:37:06Z",
+      "url": "https://github.com/Fantasy1316/deskflow-ddc/releases/download/v0.2.3/SHA256SUMS"
+    }
+  ]
+}

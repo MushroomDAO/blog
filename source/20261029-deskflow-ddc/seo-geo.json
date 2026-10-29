@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "required_frontmatter": true,
+    "english_slug": true,
+    "first_person_absent": true,
+    "copyright_bilingual": true,
+    "question_headings": true,
+    "faq_bilingual": true,
+    "source_pinned": true,
+    "hardware_test_scope_explicit": true,
+    "internal_link_exists": true,
+    "body_images_bilingual": true,
+    "all_local_images_exist": true,
+    "body_images_under90kb": true,
+    "description_length": 153,
+    "descriptionEn_length": 154
+  },
+  "review": "BLUF, primary repo and release sources, version/date, table-based setup, targeted source observation, original frontend test evidence, explicit hardware/native test limits, bilingual questions/FAQ, image alt and copyright checked. No speedup, cloud privacy certification or hardware compatibility invented."
+}
