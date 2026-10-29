@@ -1,0 +1,26 @@
+Local demo note: preserve this line.
+
+# Project instructions
+
+This workspace has a harness adapter deployed.
+Project-specific instructions belong outside the managed adapter block below.
+
+
+<!-- hermit:prompt-only:start -->
+
+---
+
+## Adapter: `prompt-only`
+
+> Managed by Harness Adapter. Source: `ADAPTER.md` · Version: `1.0`.
+> Only this marked block is replaced when the adapter context is refreshed.
+
+### Output policy
+
+Output format: uppercase.
+
+**End of adapter: `prompt-only`**
+
+---
+
+<!-- hermit:prompt-only:end -->

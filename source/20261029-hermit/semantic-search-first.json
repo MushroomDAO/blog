@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "hermes-agent-nous-research-self-improving-skill-loop",
+      "title": "Hermes Agent 调研：不是套壳，是一整套会自我进化的 Agent 运行时",
+      "url": "/blog/hermes-agent-nous-research-self-improving-skill-loop/",
+      "language": "zh",
+      "excerpt": "Hermes Agent 调研：不是套壳，是一整套会自我进化的 Agent 运行时 调研 Nous Research 开源的 Hermes Agent：MIT 协议、23 万+ star。核心卖点是「闭环学习」——从任务经验里自动生成技能、技能在使用中自我改进、周期性提醒自己沉淀记忆、跨会话检索过往对话。内置 cron 调度支持自然语言定时任务无人值守运行，7 种终端后端支持从 5 美元 VPS 到 Serverless 休眠唤醒，跨 Telegram/Discord/Slack/WhatsApp/Signal 单网关接入。本文从两条小红书线索一路查到这",
+      "score": 0.6335524
+    },
+    {
+      "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "title": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时",
+      "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+      "language": "zh",
+      "excerpt": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时 复旦+北大+奇迹智风，arXiv:2604.25850，MIT，Python。AHE 提出一个闭环：不动模型权重，只进化 harness——通过三层可观测性（组件/经验/决策），让 Evolve Agent 自动分析 trace、提出修改、预测效果，下一轮自动验证。10次迭代把 GPT-5.4 在 Terminal-Bench 2 上从 69.7% 提升到 77.0%，超过手写 Codex-CLI（71.9%）。冻结后的 harness ",
+      "score": 0.6153427
+    },
+    {
+      "article_id": "prime-agent-primeintellect-self-improving-rlm-coding-agent",
+      "title": "Prime Agent：PrimeIntellect 开源的自改进 RLM 编程 Agent",
+      "url": "/blog/prime-agent-primeintellect-self-improving-rlm-coding-agent/",
+      "language": "zh",
+      "excerpt": "Prime Agent：PrimeIntellect 开源的自改进 RLM 编程 Agent PrimeIntellect 开源的自改进 Agent，7.6k stars，MIT License。引入 RLM（递归语言模型）把 context 当变量、工具调用当函数，运行在持久 IPython REPL 中。通过 Continual Harness 把提示词/记忆/技能描述持久化为可精炼的 durable state，支持子 Agent 并行、后台 daemon 会话、Agent 间直接通信、/goal 跨轮次持久目标和 /autonomous 自主模式",
+      "score": 0.6021336
+    },
+    {
+      "article_id": "hiroute-local-model-routing",
+      "title": "HiRoute：让本地路由器按任务选择模型",
+      "url": "/blog/hiroute-local-model-routing/",
+      "language": "zh",
+      "excerpt": "HiRoute：让本地路由器按任务选择模型 HiRoute 是面向 AI 编程助手的本地模型路由器，支持普通与主力模型组、按难度判断、任务分支、有限故障转移和会话审计。本文核对它如何区分新用户任务与工具续接、决策服务与执行模型、缓存与成本，以及 macOS 和 Linux 安装条件，并披露本地 Hermes 适配测试的通过与失败范围。 HiRoute model-routing coding-agents Rust cost-optimization local-first 一次长任务里，哪些步骤值得换模型？ 难度、表现评分与执行模型怎样分工？ 故障转移",
+      "score": 0.60108507
+    },
+    {
+      "article_id": "harness2-recursive-agent-improvement",
+      "title": "Google Harness²：模型不变，让Agent改进自己的工作方法",
+      "url": "/blog/harness2-recursive-agent-improvement/",
+      "language": "zh",
+      "excerpt": "Google Harness²：模型不变，让Agent改进自己的工作方法 Google Research 的 Harness² 保持模型权重不变，通过修改提示词、工具、Skills 和脚本改进任务执行。本文拆解两层递归与 Propose–Probe–Compose，核查三类基准的公开成绩，并给出无需模型凭证的离线起步路径，说明真实模型运行的成本、网络泄漏、独立判分与经验库污染边界。 Harness2 Google Research Agent Harness Engineering 递归自我改进 模型不训练，究竟改什么？ 第一层递归：当前任务怎么改？ 第",
+      "score": 0.60015243
+    },
+    {
+      "article_id": "gamescaling-game-agents-cpt",
+      "title": "GameScaling：游戏数据能把小模型训练成通用玩家吗？",
+      "url": "/blog/gamescaling-game-agents-cpt/",
+      "language": "zh",
+      "excerpt": "GameScaling：游戏数据能把小模型训练成通用玩家吗？ GameScaling用120组实验研究游戏Agent的持续预训练，开放0.8B到27B八个权重。本文拆解跨游戏泛化、实时评测、200ms动作协议和源码离线测试，区分推理开源与未公开训练数据。 GameScaling 游戏智能体 Qwen3.5 具身智能 持续预训练 它与本地编程模型 Flint 有什么关系？ 多玩游戏，真的会更通用吗？ 为什么必须同时看暂停与实时两种分数？ 开放了哪些模型，显存怎样估算？ 从截图到动作，工程接口有哪些坑？ 怎样先做一个可复核的最小验证？ 常见问题 它可以复现完",
+      "score": 0.59646857
+    },
+    {
+      "article_id": "agent24-self-evolving-personal-agent-framework",
+      "title": "Agent24：让你的个人 AI Agent 24 小时在线、自我进化",
+      "url": "/blog/agent24-self-evolving-personal-agent-framework/",
+      "language": "zh",
+      "excerpt": "Agent24：让你的个人 AI Agent 24 小时在线、自我进化 Agent24 是一套为「个人 AI Agent」设计的模块化跨平台框架：Electron 壳 + 可插拔能力模块 + 多 AI 适配 + 分层记忆 + SkillClaw 风格自进化引擎。本文介绍它的设计理念、架构与技术决策，作为项目启动声明。 Agent24 AI Agent Self-Evolving Electron Modular Framework Personal AI Open Source AuraAI Progress-Report 一个被反复确认的痛点：AI 不",
+      "score": 0.5943943
+    },
+    {
+      "article_id": "herdr-coding-agent-runtime-persistent-terminal-multiplexer-rust",
+      "title": "Herdr：用牧羊人的方式管理你的 AI Agent 群",
+      "url": "/blog/herdr-coding-agent-runtime-persistent-terminal-multiplexer-rust/",
+      "language": "zh",
+      "excerpt": "Herdr：用牧羊人的方式管理你的 AI Agent 群 herdrdev/herdr，26.5k stars，Apache 2.0，Rust。一个专为多 AI Agent 时代设计的终端持久化运行时：关盖子、断网络、重启机器——Agent 继续跑，session 继续在，随时从任何终端或 SSH 重连。每个 pane 实时标注 working/blocked/idle 状态，Agent 卡住需要人介入时主动告知。单 Rust 二进制，无 Electron，支持 Claude Code/Codex/Cursor/opencode/Grok，有插件市场。 ",
+      "score": 0.59226227
+    },
+    {
+      "article_id": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+      "title": "PenguinHarness：用 4 个 Skill 把 Agent 调优变成有版本、有固定考题、有分数记录的实验闭环",
+      "url": "/blog/penguin-harness-self-evolving-agent-builder-skills-benchmark/",
+      "language": "zh",
+      "excerpt": "PenguinHarness：用 4 个 Skill 把 Agent 调优变成有版本、有固定考题、有分数记录的实验闭环 Prism-Shadow/penguin-harness，1140 stars，Apache-2.0，TypeScript。LlamaFactory 作者 Yaowei Zheng 的新项目，2026-07-19 开源。全自动 Agent 构建平台：一句话让 Agent 构建 Agent 应用（DeepSeek V4 Pro 跑一个 RAG 应用花费 $0.02），数据分析准确率最高、成本是 Claude Code 的 1/70。核心亮",
+      "score": 0.590489
+    },
+    {
+      "article_id": "reef-self-evolving-agent-open-source-infrastructure-human-agent-society",
+      "title": "Reef：自进化 Agent 的开源工程基础设施，把「用户交互」变成下一轮学习数据",
+      "url": "/blog/reef-self-evolving-agent-open-source-infrastructure-human-agent-society/",
+      "language": "zh",
+      "excerpt": "Reef：自进化 Agent 的开源工程基础设施，把「用户交互」变成下一轮学习数据 MIT、NUS 等机构的 Human-Agent-Society 团队开源 Reef。它的核心判断：真实用户交互可以成为下一轮学习数据。Reef 提供四环学习闭环（Serve→Observe→Grow→Commit），支持模型权重和 Agent Harness 两类更新对象，SkillClaw 配方无需 GPU 即可运行。 AI Agent 自进化 开源 强化学习 Self-Improving Harness 持续学习 MIT NUS 核心判断：用户交互就是训练数据 四环",
+      "score": 0.58984405
+    }
+  ]
+}
