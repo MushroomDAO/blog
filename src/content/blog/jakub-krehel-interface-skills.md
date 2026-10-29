@@ -1,21 +1,23 @@
 ---
-title: "Jakub Krehel 的 14 项界面 Skill：把设计细节变成可检查的工程流程"
-titleEn: "Jakub Krehel's 14 Skills for Better Interfaces"
+title: "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能"
+titleEn: "Jakub Krehel Teardown: SVG Diagrams and 14 Interface Skills"
 description: "jakubkrehel/skills 是一套 MIT 开源的界面设计工程技能，涵盖排版、颜色、布局、无障碍、文案、状态检查与技术插图。本文拆解 14 项技能如何协作、如何安装到 Codex 或 Claude Code，以及审阅、改代码和视觉验证的边界，并记录安装校验、随附脚本检查与 ESM 项目接入时遇到的兼容问题。"
-descriptionEn: "A guide to Jakub Krehel's 14 interface skills: installation, evidence-based reviews, UI states and technical drawings, with local checks and integration limits."
-wechatTitle: "14项界面Skill：AI设计怎么落地"
-wechatDigest: "拆解Jakub Krehel的开源设计技能，附安装验证、使用顺序与兼容边界。"
+descriptionEn: "Explore Jakub Krehel’s teardown skill and 14 interface skills, with an offline diagram demo, verified SVG and PNG exports, editable colors and explicit limits."
+wechatTitle: "teardown拆解图Skill：着色与导出实测"
+wechatDigest: "沿用14项技能总览，新增概念拆解图的离线预览、部件着色与SVG、PNG导出验证。"
 pubDate: "2026-10-26"
-updatedDate: "2026-10-26"
+updatedDate: "2026-10-29"
 category: "Tech-News"
 tags: ["Agent Skills", "界面设计", "设计工程", "无障碍", "Codex", "Claude Code"]
 heroImage: "../../assets/images/jakub-krehel-interface-skills-banner.jpg"
-lastPublishedAt: "2026-10-26T00:36:55Z"
+lastPublishedAt: "2026-10-29T04:23:37Z"
 ---
+
+`teardown` 可以把物品或概念层次构建成可着色、可标注、可导出的技术解释图。本文在原有技能库总览上，新增了离线预览和实际 SVG、PNG 导出的验证；未知内部结构仍须标为示意，不能当作制造工程图。
 
 `jakubkrehel/skills` 把界面设计经验整理成了 14 项可供编程 Agent 使用的技能。它最有用的地方，是让“这个页面不太对劲”变成有位置、有证据、有修复顺序的检查，而不只是让 AI 换一种配色。
 
-作者 Jakub Krehel 也是设计工程杂志 Interfaces 的作者。仓库采用 MIT 许可证；本文核对的是 2026-10-26 的提交 `592aedc44d7d5b3e29740984252902f3e5402a1c`，Claude Code 插件清单版本为 `1.17.0`。Mycelium Protocol 已在本机完成 14 项技能安装和文件一致性校验，但没有据此宣称网站设计效果获得了可量化提升。
+作者 Jakub Krehel 也是设计工程杂志 Interfaces 的作者。仓库采用 MIT 许可证；2026-10-29 再次核对的提交仍为 `592aedc44d7d5b3e29740984252902f3e5402a1c`，Claude Code 插件清单版本为 `1.17.0`。Mycelium Protocol 已在本机完成 14 项技能安装和文件一致性校验，但没有据此宣称网站设计效果获得了可量化提升。
 
 仓库：https://github.com/jakubkrehel/skills
 
@@ -33,7 +35,7 @@ npx skills add jakubkrehel/skills
 
 大部分技能用 Markdown 描述规则和工作步骤，按需读取旁边的参考文件。`teardown` 还带有几何、投影、预览和导出相关代码。因此它既不完全等于一条提示词，也不能简单当成一套前端组件库。
 
-我们实际运行了只列出技能的命令，CLI 返回 `Found 14 skills`：
+初次安装时实际运行了只列出技能的命令，CLI 返回 `Found 14 skills`：
 
 ```sh
 npx --yes skills add jakubkrehel/skills --list
@@ -137,7 +139,7 @@ Claude Code 也有官方仓库提供的插件路线：
 
 仓库说明中，skills CLI 路线使用 `/better-interface` 这类名称，插件路线带命名空间，例如 `/interfaces:better-interface`。Codex 中则可按技能名明确引用，例如 `$better-interface`。
 
-这次我们使用当前环境的 skill-installer，把固定提交的全部 14 项装入 Codex 个人技能目录，保留各项参考资料和 `agents/openai.yaml`，未在博客项目中再装一份，也未修改博客依赖。它们将在下一轮对话可用。
+2026-10-26 的安装使用当前环境的 skill-installer，把固定提交的全部 14 项装入 Codex 个人技能目录，保留各项参考资料和 `agents/openai.yaml`，未在博客项目中再装一份，也未修改博客依赖。技能现已在当前环境可用。
 
 另一个值得留意的设置是：`interface-review`、`variant`、`break`、`state-machine`、`explain-interface` 五项同时设置了 Claude Code 的 `disable-model-invocation: true` 和 Codex 的 `allow_implicit_invocation: false`。这些文件表达了必须明确调用的意图，实际执行仍由宿主决定。
 
@@ -145,13 +147,73 @@ Claude Code 也有官方仓库提供的插件路线：
 
 ## 本机验证了什么，遇到了什么问题？
 
-我们将安装目录里的全部文件与固定提交逐项比对，14 项全部一致。随后在已安装的 `teardown` 目录运行五个随附 Node 检查脚本，全部退出成功；其中几何脚本报告 28 项检查通过。
+初次安装将目录里的全部文件与固定提交逐项比对，14 项全部一致。随后在已安装的 `teardown` 目录运行五个随附 Node 检查脚本，全部退出成功；其中几何脚本报告 28 项检查通过。
 
-这覆盖了几何、预览排队、主题、翻页和页面构建等辅助逻辑，没有覆盖一次完整的 AI 生成任务、浏览器里的所有导出按钮、Figma 接入或设计质量。
+上述是 2026-10-26 的初次辅助逻辑检查，不包含浏览器导出。2026-10-29 新增的 teardown 预览和真实下载验证见下一节；两次验证范围不同，也都不构成 Figma 接入或设计质量的保证。
 
 检查还遇到一个可复现的环境差异：把同一份源码放到本博客的目录中，几何脚本报 `G.unit is not a function`。本博客的 `package.json` 设置了 `type: module`，使辅助代码的 `.js` 文件按 ESM 解释，而测试按 CommonJS 导入它。相同文件在个人技能目录下通过。
 
-我们没有修改上游来掩盖这个结果。它提醒使用者：按项目安装或把辅助脚本复制进既有工程后，要重新检查模块作用域；在一个目录里通过，不意味着换个项目仍会自动通过。
+该检查未修改上游源码。它提醒使用者：按项目安装或把辅助脚本复制进既有工程后，要重新检查模块作用域；在一个目录里通过，不意味着换个项目仍会自动通过。
+
+## teardown 怎样做出可编辑的拆解图？
+
+它的入口是技能规则，而非一个独立的文生图模型。Agent 先收集对象、资料、部件关系与尺寸依据，再用随附几何和投影代码建立一份共同结构，由它生成装配与爆炸视图。这样切换视角时，部件关系有同一份几何依据。
+
+除了真实物品，也可以解释显示层、界面层等概念结构。但照片看不到的内部构造、随意补出的尺寸，都必须写进证据记录，区分实测、估算和虚构。漂亮的剖面不能证明某个真实产品内部确实如此。
+
+固定版本规则：https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/teardown/SKILL.md
+
+### 安装之后，给它什么任务？
+
+只安装这一项可以使用：
+
+```sh
+npx skills add jakubkrehel/skills --skill teardown
+```
+
+在支持的宿主里明确调用 `teardown`；Codex 可用 `$teardown`，Claude Code 插件安装的命令名称则可能带 `interfaces` 命名空间，不能把不同安装方式混为一谈。可以从这样的需求开始：
+
+```text
+使用 teardown，制作一个三层光学结构的概念拆解图。
+三层分别叫 Source layer、Filter layer、Cover layer。
+全部几何与尺寸都是虚构示意，在 evidence.md 明确记录。
+保持装配图与爆炸图使用相同几何，给三个部件稳定的 ID。
+提供单部件颜色、填色、名称引线和整体拆解间距控制。
+输出独立 HTML 预览，以及 SVG 和 300 dpi PNG。
+先检查最小、默认、最大宽度，再检查装配、爆炸和展开视图。
+```
+
+参考资料充足时，可以把这段概念要求换成实际对象的照片、尺寸表或 CAD。涉及教学或产品说明，先指定读者需要理解的部件关系，通常比要求“画得复杂”更有用。
+
+### 颜色、标注与导出分别在哪里改？
+
+`drawing.json` 定义部件 ID、显示名称、参数范围与初始颜色；模型脚本产生几何。预览页面可以选择整体或单个部件调色、开关填色、显示名称引线，以及切换装配和爆炸状态。普通标注开关不等于自动生成尺寸、公差或完整工程编号。
+
+生成时需要 Node 环境和构建依赖，包括 `jspdf`、`svg2pdf.js`、Inter 字体包；构建完成的单文件 HTML 把脚本与字体打包进去。制作阶段需要工具与依赖，离线查看阶段则可以不依赖外部 CDN。
+
+SVG 适合继续编辑线条和颜色，PNG 适合文章与幻灯片。页面还提供 PDF；本次只确认 PDF 成功下载，没有独立解析其内部矢量保真度。不能把导出按钮存在写成所有格式已全面验证。
+
+### 实际示例验证到了哪一步？
+
+2026-10-29 的演示使用三个圆角薄板，宽度范围 70–110，默认 90；这些数值全部虚构。它只说明“下层发出信息，经中层处理，到上层呈现”的层次，不代表任何真实显示器的光学设计。
+
+![teardown实际导出的三层概念拆解图，三个部件分别着色，并带名称引线；结构与尺寸均为示意](../../assets/images/jakub-krehel-interface-skills-teardown-demo.png)
+
+可交互预览：https://blog.mushroom.cv/demos/teardown-layers/
+
+SVG：https://blog.mushroom.cv/demos/teardown-layers/layer-stack-exploded-technical.svg
+
+PNG：https://blog.mushroom.cv/demos/teardown-layers/layer-stack-exploded-technical.png
+
+验证分为三层：
+
+- 随附 proof 脚本生成最小、默认、最大宽度与三种视图组合，共 9 组图稿；未出现检查警告。
+- 隔离 Chrome 会话打开本地 HTML，三个部件正常显示；切换装配和爆炸状态、开启名称标注、把中层色相改为 280 后，从真实按钮下载文件。
+- SVG 元数据记录中层颜色为 `#594fd7`，保留三个填色部件与标注；PNG 文件实读为 4961×3508、约 300 dpi，人工查看没有发现部件或引线裁切。运行时未观察到外部网络请求或脚本异常。
+
+示例使用独立的 CommonJS 工作目录，绕开下文记录的 ESM 作用域差异，没有修改博客依赖或上游实现。此次没有测试复杂曲面、任意 CAD 导入、所有参数组合或制造精度；三块板的成功不能外推为任意机械总成都能自动准确拆解。
+
+技术绘图的真正门槛仍是资料和验证。它适合把知识变成可读、可修改的说明图，尤其适合教程、产品结构讲解和层次关系演示。若目标是维修、加工或安全判断，应回到有来源的结构资料与专业 CAD 流程。
 
 ## 值不值得装？
 
@@ -298,7 +360,7 @@ Use the skills CLI's interactive choices to select an agent and installation sco
 
 Its repository guidance distinguishes CLI-style `/better-interface` from plugin-style `/interfaces:better-interface`. In Codex, a skill can be referenced explicitly by name, such as `$better-interface`.
 
-For this task we used the environment's skill-installer helper to install the pinned revision into the personal Codex skills directory, including references and `agents/openai.yaml`. No second installation or dependency change was made inside the blog. The skills become available on the next turn.
+The original October 26 installation used the environment's skill-installer helper to install the pinned revision into the personal Codex skills directory, including references and `agents/openai.yaml`. No second installation or dependency change was made inside the blog. The skills are now available in this environment.
 
 Five procedures declare explicit invocation in both host configurations: `interface-review`, `variant`, `break`, `state-machine` and `explain-interface`. Their frontmatter uses `disable-model-invocation: true`, and their Codex metadata uses `allow_implicit_invocation: false`. Host implementations determine actual enforcement.
 
@@ -308,11 +370,37 @@ Plugin manifest: https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e2974
 
 Every installed file matched the pinned source across all 14 skills. All five bundled Node helper-check scripts passed from the installed `teardown` directory. The geometry script reported 28 successful checks.
 
-These cover helper behavior such as geometry, render queues, themes, flipbooks and viewer building. They do not verify an end-to-end AI design task, every browser export control, Figma access or design quality.
+Those October 26 checks covered helpers, not browser exports. The October 29 viewer and actual-download checks below extend that scope; neither establishes Figma integration or design quality.
 
-We also reproduced an integration difference. Placing the same files under this blog caused the geometry check to fail with `G.unit is not a function`. The blog's `type: module` setting makes `.js` helpers load as ESM, while that test imports them through CommonJS. Identical files passed in the personal skills directory.
+The initial check also reproduced an integration difference. Placing the same files under this blog caused the geometry check to fail with `G.unit is not a function`. The blog's `type: module` setting makes `.js` helpers load as ESM, while that test imports them through CommonJS. Identical files passed in the personal skills directory.
 
-We did not patch upstream to hide that result. Project-local installation and copying helpers into an application deserve their own module-scope checks; success in one directory does not establish success in another.
+No upstream patch was used to hide that result. Project-local installation and copying helpers into an application deserve their own module-scope checks; success in one directory does not establish success in another.
+
+## How does teardown produce editable technical diagrams?
+
+`teardown` is a procedure with geometry, projection and export helpers. It builds a shared geometric description, then uses it for assembled and exploded views. It can describe physical objects or conceptual layers. Hidden structures and invented dimensions must be recorded as illustrative; the result is not a toleranced manufacturing drawing.
+
+Install just this skill with `npx skills add jakubkrehel/skills --skill teardown`. Invoke it explicitly in the host: `$teardown` in Codex, or the appropriate namespaced command when installed as a Claude Code plugin. Provide the intended reader, component relationships, reference photographs or CAD, known dimensions and required output formats.
+
+A useful first request is: “Create three conceptual layers named Source, Filter and Cover; record all geometry as invented in evidence.md; keep assembled and exploded views coherent; provide individual colors, fills, name leaders, an offline HTML viewer, SVG and 300 dpi PNG; check minimum, default and maximum widths.”
+
+The configuration stores stable part IDs, names, parameter ranges and initial hues. The viewer controls overall or individual colors, tint fills, annotations and explosion spacing. Name leaders do not automatically provide manufacturing dimensions or tolerances. Building requires Node dependencies such as jsPDF, svg2pdf.js and the Inter font package; the resulting single HTML file bundles runtime assets.
+
+![Actual exported teardown drawing: three colored conceptual layers with name leaders; all geometry and dimensions are invented](../../assets/images/jakub-krehel-interface-skills-teardown-demo.png)
+
+Interactive example: https://blog.mushroom.cv/demos/teardown-layers/
+
+Editable SVG: https://blog.mushroom.cv/demos/teardown-layers/layer-stack-exploded-technical.svg
+
+300 dpi PNG: https://blog.mushroom.cv/demos/teardown-layers/layer-stack-exploded-technical.png
+
+The October 29 example used three rounded plates with an illustrative width range of 70–110 and default 90. Nine proof combinations covered minimum/default/maximum widths and assembled/exploded/spread views without reported warnings. A fresh isolated Chrome session rendered all three parts, switched assembled and exploded views, enabled labels, changed the filter hue to 280, and downloaded SVG, PNG and PDF through the actual buttons.
+
+The exported SVG metadata retained filter color `#594fd7`, three filled components and annotations. The PNG measured 4961×3508 pixels at approximately 300 dpi; visual inspection found no clipped parts or leaders. No external runtime network request or JavaScript exception was observed. PDF download succeeded, but its internal vector fidelity was not independently parsed or verified.
+
+This demonstration uses an isolated CommonJS directory, addressing the module-scope issue in the original checks without changing blog dependencies or upstream code. It does not establish complex-surface support, arbitrary CAD import, every parameter combination or engineering accuracy. Its value is an editable explanation artifact grounded in explicit evidence, suitable for teaching and product communication.
+
+Pinned instructions: https://github.com/jakubkrehel/skills/blob/592aedc44d7d5b3e29740984252902f3e5402a1c/skills/teardown/SKILL.md
 
 ## Is the collection worth adopting?
 

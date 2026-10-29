@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-10-29T04:25:57.035545+00:00",
+  "articles": [
+    {
+      "slug": "jakub-krehel-interface-skills",
+      "url": "https://blog.mushroom.cv/blog/jakub-krehel-interface-skills/",
+      "title": "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能",
+      "listRank": 15,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/jakub-krehel-interface-skills-banner.BgGJxTRP.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 15223
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/jakub-krehel-interface-skills-banner.BgGJxTRP_ZqEsm9.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 1806
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/jakub-krehel-interface-skills-fig-01.BBMILL6h_DRJgL.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 36180
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/jakub-krehel-interface-skills-fig-02.CFYEu3WY_2ROH8.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 40100
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/jakub-krehel-interface-skills-fig-03.DHb7YdYb_1fIwdS.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 39970
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/jakub-krehel-interface-skills-teardown-demo.BXyc_TgL_Z157wqd.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 17488
+        }
+      ]
+    }
+  ],
+  "hostedHtmlNote": "Cloudflare adds its site analytics beacon; local standalone HTML has no runtime network dependency.",
+  "artifacts": [
+    {
+      "url": "https://blog.mushroom.cv/demos/teardown-layers/",
+      "bytes": 692412,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://blog.mushroom.cv/demos/teardown-layers/layer-stack-exploded-technical.svg",
+      "bytes": 12691,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "url": "https://blog.mushroom.cv/demos/teardown-layers/layer-stack-exploded-technical.png",
+      "bytes": 466035,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://blog.mushroom.cv/demos/teardown-layers/layer-stack-exploded-technical.pdf",
+      "bytes": 9858,
+      "contentType": "application/pdf"
+    }
+  ]
+}

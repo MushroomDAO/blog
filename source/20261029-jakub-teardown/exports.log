@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "format": "svg",
+      "file": "layer-stack-exploded-technical.svg",
+      "bytes": 12691
+    },
+    {
+      "format": "png",
+      "file": "layer-stack-exploded-technical.png",
+      "bytes": 466035
+    },
+    {
+      "format": "pdf",
+      "file": "layer-stack-exploded-technical.pdf",
+      "bytes": 9858
+    }
+  ],
+  "metadata": {
+    "subject": "layer-stack",
+    "concept": true,
+    "parameters": {
+      "width": 90
+    },
+    "explosion": 1,
+    "linework": "technical",
+    "annotate": true,
+    "isolated": null,
+    "colors": {
+      "base": "#202020",
+      "parts": {
+        "source": "#00768a",
+        "filter": "#594fd7",
+        "cover": "#007c60"
+      }
+    },
+    "fills": [
+      "source",
+      "filter",
+      "cover"
+    ]
+  },
+  "errors": [],
+  "network": [],
+  "scope": "Three conceptual plates; part hue, annotations, assembled/exploded, actual SVG/PNG/PDF downloads. No manufacturing validation."
+}

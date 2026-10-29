@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "frontmatter": true,
+    "bilingual": true,
+    "copyright": true,
+    "question_heading": true,
+    "primary_pin": true,
+    "diagram_alt": true,
+    "first_person_removed": true,
+    "reuse_slug": true,
+    "proof_scope_explicit": true,
+    "internal_demo_link": true
+  },
+  "notes": "Existing English slug and original pubDate preserved. Updated date and publication stamp refreshed. BLUF, primary sources, FAQ, bilingual copyrights, original test limits and meaningful image alt present. Existing qualified hero + 3 original XiaoM illustrations reused; new actual diagram appended. No ranking/quality uplift claimed."
+}

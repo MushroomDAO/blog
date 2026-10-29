@@ -1,0 +1,12 @@
+{
+ "dependencies":"node_modules",
+ "modelScripts":["model.js"],
+ "drawings":[{
+  "id":"layer-stack","title":"Illustrative optical stack",
+  "description":"A three-part concept showing source, filter and cover. Invented geometry; not a real display or manufacturing drawing.",
+  "concept":true,
+  "parts":[{"id":"source","name":"Source layer"},{"id":"filter","name":"Filter layer"},{"id":"cover","name":"Cover layer"}],
+  "parameters":[{"key":"width","label":"Illustrative width","min":70,"max":110,"default":90,"step":10,"unit":"mm"}],
+  "colors":{"hues":{"source":215,"filter":30,"cover":170},"fills":["source","filter","cover"]}
+ }]
+}
