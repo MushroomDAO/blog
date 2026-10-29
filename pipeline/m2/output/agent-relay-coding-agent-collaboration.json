@@ -1,0 +1,16 @@
+{
+  "title": "Agent Relay：让编程Agent直接协作",
+  "author": "Mycelium",
+  "digest": "核对四类开源组件，实测本地消息路径，并给出团队试点步骤与权限边界。",
+  "mediaId": "prCUE631thH1cmNLi42prHI8Ibpl2-CTlAJkVv4VgVXrFGx1lwwK33VHvfpoTdux",
+  "blogUrl": "https://blog.mushroom.cv/blog/agent-relay-coding-agent-collaboration/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/agent-relay-coding-agent-collaboration/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/agentworkforce/relay",
+    "github.com/agentworkforce/relayfile",
+    "github.com/agentworkforce/relayhistory",
+    "github.com/agentworkforce/flows"
+  ],
+  "publishedAt": "2026-10-29T08:01:33.559Z"
+}

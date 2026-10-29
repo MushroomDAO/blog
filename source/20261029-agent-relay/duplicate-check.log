@@ -1,0 +1,168 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6ae2f9ec-4c9e8208-60654875）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 923 篇 + 公众号草稿箱 6 条 + 本地发布记录 905 条 + MemPalace 3496 抽屉
+
+── 查：https://github.com/AgentWorkforce/relay
+   ✅ 四本账都没查到
+
+── 查：Agent Relay
+   ❌ [BLOG  ] Agent Speaker 进度汇报：用 Nostr 构建个体+AI 的自组织协作网络
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Agent24：让你的个人 AI Agent 24 小时在线、自我进化
+      正文出现实体名「relay」
+   ❌ [BLOG  ] 读「$200/月 AI 干掉后勤部」：模式可行，但有三个洞他没填
+      正文出现实体名「relay」
+   ❌ [BLOG  ] AI Native 的三个层级：个人、组织与区域
+      正文出现实体名「relay」
+   ❌ [BLOG  ] AirAccount KMS Beta2（v0.20.0）发布：私钥永不出 TEE，NXP 真机 34/34 端测通过
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Anthropic MHS：AI 正式接管物理世界——开源硬件的下一个机会在哪里
+      正文出现实体名「relay」
+   ❌ [BLOG  ] AuraAI 阶段规划：Agent24 框架、小模型实验与 AgentSpeaker
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Bento：一个 HTML 文件装下整套办公软件——560KB 的 PowerPoint 替代品
+      正文出现实体名「relay」
+   ❌ [BLOG  ] bitchat：蓝牙 Mesh + Nostr 双轨制去中心化通信协议深度拆解
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上
+      正文出现实体名「relay」
+   ❌ [BLOG  ] M5Stack StopWatch 变成 Codex 物理控制器：BLE 麦克风 + 额度仪表盘 + 四向 Agent 触摸，vibe coding 专属硬件
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Deskflow DDC：两台电脑共用显示器和键鼠，怎样接线与配置？
+      正文出现实体名「relay」
+   ❌ [BLOG  ] dsh-remote-deepseek-harness-mobile-tailscale-pwa-mac.md
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Agent 的社交网络：EigenFlux 把 AI Agent 连成了一张广播互联的信息网
+      正文出现实体名「relay」
+   ❌ [BLOG  ] FluxDown：Rust 驱动的免费开源 IDM 替代，内置 MCP Server
+      正文出现实体名「relay」
+   ❌ [BLOG  ] garmin-mcp-local 拆解：把 Garmin 健康数据缓存到本机 SQLite 给 Claude 查，「全本地」只对了一半
+      正文出现实体名「relay」
+   ❌ [BLOG  ] 共工空间：让 AI 同事在群里接力干活
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Hairline：33 个等距线条动效，零依赖，给网页加一层科技感
+      正文出现实体名「relay」
+   ❌ [BLOG  ] HiRoute：让本地路由器按任务选择模型
+      正文出现实体名「relay」
+   ❌ [BLOG  ] K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？
+      正文出现实体名「relay」
+   ❌ [BLOG  ] localDot 开源仓库找到了：给 AI 一台本地电脑
+      正文出现实体名「relay」
+   ❌ [BLOG  ] 47 美元舌控牙套是真的吗？MouthPad 与开源代码核查
+      正文出现实体名「relay」
+   ❌ [BLOG  ] nanoMuse：同一个 Agent 装在你的所有设备上
+      正文出现实体名「relay」
+   ❌ [BLOG  ] OmniRoute：290 个 AI 提供商、一个端点、永不限流——免费 AI 网关的暴力美学
+      正文出现实体名「relay」
+   ❌ [BLOG  ] OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth
+      正文出现实体名「relay」
+   ❌ [BLOG  ] OpenMinis 实测 + 隐私架构完全指南：本地大模型 + Tailscale，个人数据永不出家门
+      正文出现实体名「relay」
+   ❌ [BLOG  ] orca-ade-parallel-ai-agent-orchestration.md
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Osaurus：在你的 Mac 上拥有 AI——密码学身份、沙盒 VM、隐私过滤，纯 Swift 原生
+      正文出现实体名「relay」
+   ❌ [BLOG  ] P2WLAN 自托管部署工程指南：Control + Relay 全栈搭建，从零到联机
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Pentest Harness 拆穿：给 DeepSeek Harness 换皮，再把授权边界删掉
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Pilot Protocol 拆解：MCP 给 Agent 工具，它想给 Agent 同伴——但 435 个「专家」都跑在同一台机器上
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Sphere SDK：给 AI Agent 发身份、钱包和直接结算能力，Agent 经济底层基础设施来了
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Tailcat：没有 Tailscale 的 Tailscale——零帐号 WireGuard 点对点加密通道
+      正文出现实体名「relay」
+   ❌ [BLOG  ] AI-Infra-Guard：腾讯朱雀实验室的 AI 红队平台——MCP 扫描、Skill 审计、2000+ CVE 规则一体化
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Toonflow：两小时130元短剧案例背后
+      正文出现实体名「relay」
+   ❌ [BLOG  ] treg：Agent 工具的 OpenRouter，一个入口调用 2850+ 个真实世界 API
+      正文出现实体名「relay」
+   ❌ [BLOG  ] Vitalik 的 AI 偏执模式：zkAPI、Tor 与本地改写的隐私边界
+      正文出现实体名「relay」
+   ⚠️  [发过 2026-04-09] Agent：从效率替代到组织变革
+      标题相似度 33%
+   ❌ [发过 2026-04-17] Agent Speaker 进度汇报：用 Nostr 构建个体+AI 的自组织协作网络
+      正文出现实体名「relay」
+   ❌ [发过 2026-08-03] Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上
+      正文出现实体名「relay」
+   ❌ [发过 2026-10-20] 舌控牙套核查：真实产品与开源边界
+      正文出现实体名「relay」
+   ❌ [发过 2026-10-09] nanoMuse：多设备共享的本地Agent开源了
+      正文出现实体名「relay」
+   ❌ [发过 2026-10-05] P2WLAN：P2P虚拟局域网自托管工程指南
+      正文出现实体名「relay」
+   ❌ [知识库] # block/buzz — 人机协作 Nostr relay 工作台  **Summary**: Block（Jack
+      正文出现实体名「relay」
+   ❌ [知识库] 【GitHub 仓库】block/buzz — A hive mind communication platform
+      正文出现实体名「relay」
+   ❌ [知识库] t clone repoa.myproject.com 直接工作  == 七个界面 == - Home：个性化 feed
+      正文出现实体名「relay」
+   ❌ [知识库] 频道  == 技术栈 == Rust workspace（Cargo）+ TypeScript/React + Taur
+      正文出现实体名「relay」
+   ❌ [知识库] "A workspace where humans and agents build together, on a re
+      正文出现实体名「relay」
+   ❌ [知识库] ## Osaurus — macOS 原生 AI 哈尼斯（Swift）  **仓库**: osaurus-ai/osau
+      正文出现实体名「relay」
+   ❌ [知识库] zation · vsock bridge）  ### 关键特性  **密码学身份**：每个参与者（人、Agent、设备
+      正文出现实体名「relay」
+   ❌ [知识库] Groq, xAI） - Tier 3: 廉价（GLM $0.5, MiniMax $0.2） - Tier 4: 免费
+      正文出现实体名「relay」
+   ❌ [知识库] # P2WLAN：开源跨平台P2P虚拟局域网工具自托管部署指南  **Summary**: yhan-sun/p2wla
+      正文出现实体名「relay」
+   ❌ [知识库] tschecked,publishedAPI48001 unavailable. Reuse rawbotmateria
+      正文出现实体名「relay」
+   ❌ [知识库] # 舌控牙套：真实产品与收购传闻核查  **Summary**: 找到真实产品MouthPad，开发商为Augmenta
+      正文出现实体名「relay」
+   ❌ [知识库] --- name: MouthPad tongue-control claim investigation descri
+      正文出现实体名「relay」
+   ❌ [知识库] b.com/RobertDaleSmith/mouthpad-usb ; https://news.mit.edu/20
+      正文出现实体名「relay」
+   ❌ [知识库] ges source/scopeverified. mediaId prCUE631thH1cmNLi42prCbd3z
+      正文出现实体名「relay」
+   ❌ [知识库] --- name: project_nanomuse description: nanoMuse — 浙大团队GPL-3
+      正文出现实体名「relay」
+   ❌ [知识库] 平台**：Android arm64（Hands可用）/ iOS TestFlight（Hands不可用）/ Windo
+      正文出现实体名「relay」
+   ❌ [知识库] e-poetry-api 诗泉](project_chinese_poetry_api.md) — GPL-3.0 3.
+      正文出现实体名「relay」
+   ❌ [知识库] --- name: project_gonggong_space description: yoqu/gonggong-
+      正文出现实体名「relay」
+   ❌ [知识库] --- name: project_hairline description: lucasmarkes/hairline
+      正文出现实体名「relay」
+   ❌ [知识库] top...) / Coding(terminal/patch...) / Security(padlock/locke
+      正文出现实体名「relay」
+   ❌ [知识库] --- name: project_p2wlan description: P2WLAN P2P虚拟局域网工具 — MI
+      正文出现实体名「relay」
+   ❌ [知识库] 控制面：Go + SQLite（身份/设备/虚拟IP/信令） - Relay：Go，只在直连不可用时参与，只转发密文 -
+      正文出现实体名「relay」
+   ❌ [知识库] blog/general/project_p2wlan|Relay;Rust;Flutter;Ubuntu|2026-0
+      正文出现实体名「relay」
+   ❌ [知识库] # YC 开源新作 Agent Relay：重塑AI工作方式  **Summary**: YC 开源新作 Agent R
+      正文出现实体名「relay」
+   ❌ [知识库] ## Osaurus — macOS 原生 AI 哈尼斯（Swift）  **仓库**: osaurus-ai/osau
+      正文出现实体名「relay」
+   ❌ [知识库] # block/buzz — 人机协作 Nostr relay 工作台  **Summary**: Block（Jack
+      正文出现实体名「relay」
+   ❌ [知识库] # P2WLAN：开源跨平台P2P虚拟局域网工具自托管部署指南  **Summary**: yhan-sun/p2wla
+      正文出现实体名「relay」
+   ❌ [知识库] # 舌控牙套：真实产品与收购传闻核查  **Summary**: 找到真实产品MouthPad，开发商为Augmenta
+      正文出现实体名「relay」
+   ❌ [知识库] 【GitHub 仓库】block/buzz — A hive mind communication platform
+      正文出现实体名「relay」
+   ❌ [知识库] # P2WLAN：开源跨平台P2P虚拟局域网工具自托管部署指南  **Summary**: yhan-sun/p2wla
+      正文出现实体名「relay」
+   ❌ [知识库] b.com/RobertDaleSmith/mouthpad-usb ; https://news.mit.edu/20
+      正文出现实体名「relay」
+   ❌ [知识库] ## OmniRoute — 免费 AI 网关，290+ 提供商一个端点  **仓库**: diegosouzapw/O
+      正文出现实体名「relay」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

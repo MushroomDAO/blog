@@ -1,0 +1,59 @@
+[request] Request client error {
+  app_version: '0.1.0',
+  sdk_version: 'unknown',
+  environment: 'development',
+  source: 'request',
+  request_id: 'a24e3fd9-231c-40a5-91fc-862a4d365dc7',
+  route: '/v1/inbox',
+  method: 'GET',
+  origin_actor: 'unknown',
+  status_code: 401,
+  status_class: '4xx',
+  duration_ms: 0,
+  route_group: 'api_v1',
+  auth_scheme: 'none',
+  content_type: 'application/json',
+  error_code: 'unauthorized',
+  error_reason: 'Missing or invalid Authorization header'
+}
+[delivery.route] provider not delivery-ready; delivery deferred {
+  workspace_id: '241468497536532480',
+  node_id: 'node_direct_241468497603641344',
+  provider_name: 'default',
+  agent_id: '241468497603641344',
+  delivery_id: 'del_241468497658167297'
+}
+SEND {"ok":true,"data":{"conversation_id":"dm_de7162a7722542bacde50a4e","message":{"id":"241468497658167296","agent_id":"241468497586864128","agent_name":"alice","agent_address":"alice@direct","text":"demo decision: use integer cents","injection_mode":"wait","attachments":[],"metadata":{"injection_mode":"wait"}},"created_at":"2026-10-29T07:49:36.000Z","id":"241468497658167296","from_agent_id":"241468497586864128","to":"bob","text":"demo decision: use integer cents","injection_mode":"wait","attachments":[],"metadata":{"injection_mode":"wait"}}}
+[request] Request client error {
+  app_version: '0.1.0',
+  sdk_version: 'unknown',
+  environment: 'development',
+  source: 'request',
+  request_id: 'b681515c-bc14-4495-bcbf-7732865866ad',
+  route: '/v1/dm',
+  method: 'POST',
+  origin_actor: 'unknown',
+  status_code: 400,
+  status_class: '4xx',
+  duration_ms: 1,
+  route_group: 'api_v1',
+  auth_scheme: 'bearer_agent_token',
+  content_type: 'application/json',
+  actor_fingerprint: '6b53f5490aad7ad4',
+  error_code: 'invalid_request',
+  error_reason: 'text is required'
+}
+{
+  "engine": "12.2.1",
+  "node": "v22.23.4",
+  "checks": [
+    "workspace created",
+    "two synthetic agents registered",
+    "unauthenticated inbox refused with 401",
+    "DM accepted",
+    "recipient inbox contains exact message",
+    "sender inbox accessible with its own token",
+    "empty DM refused with 400"
+  ],
+  "scope": "In-process Hono HTTP request handlers with real SQLite; no TCP/WebSocket, model sessions, cloud, external providers or performance test."
+}
