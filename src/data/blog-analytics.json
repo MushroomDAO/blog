@@ -1,37 +1,27 @@
 {
-  "generatedAt": "2026-10-27T14:00:04Z",
+  "generatedAt": "2026-10-29T14:00:00Z",
   "period": {
-    "start": "2026-09-27",
-    "end": "2026-10-27"
+    "start": "2026-09-29",
+    "end": "2026-10-29"
   },
   "totals": {
-    "pageviews": 21750,
-    "visits": 20540,
-    "bots": 10
+    "pageviews": 21300,
+    "visits": 20280,
+    "bots": 20
   },
   "last7": {
-    "pv": 4410,
-    "visits": 4290
+    "pv": 3900,
+    "visits": 3820
   },
   "prior7": {
-    "pv": 4460,
-    "visits": 4280
+    "pv": 4790,
+    "visits": 4600
   },
   "daily": [
     {
-      "date": "09-27",
-      "pv": 160,
-      "visits": 150
-    },
-    {
-      "date": "09-28",
-      "pv": 1030,
-      "visits": 870
-    },
-    {
       "date": "09-29",
-      "pv": 650,
-      "visits": 590
+      "pv": 230,
+      "visits": 190
     },
     {
       "date": "09-30",
@@ -170,8 +160,18 @@
     },
     {
       "date": "10-27",
-      "pv": 300,
-      "visits": 300
+      "pv": 440,
+      "visits": 440
+    },
+    {
+      "date": "10-28",
+      "pv": 550,
+      "visits": 550
+    },
+    {
+      "date": "10-29",
+      "pv": 470,
+      "visits": 470
     }
   ],
   "countries": [
@@ -180,79 +180,103 @@
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 10000,
-      "visits": 10000
+      "pv": 10600,
+      "visits": 10590
     },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 5000,
-      "visits": 5000
+      "pv": 4580,
+      "visits": 4100
     },
     {
       "code": "US",
       "flag": "🇺🇸",
       "name": "美国",
       "nameEn": "United States",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 2060,
+      "visits": 1910
+    },
+    {
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "pv": 690,
+      "visits": 660
     },
     {
       "code": "JP",
       "flag": "🇯🇵",
       "name": "日本",
       "nameEn": "Japan",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "code": "NL",
-      "flag": "🇳🇱",
-      "name": "荷兰",
-      "nameEn": "Netherlands",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "code": "KE",
-      "flag": "🇰🇪",
-      "name": "KE",
-      "nameEn": "KE",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 490,
+      "visits": 450
     },
     {
       "code": "TW",
       "flag": "🇹🇼",
       "name": "台湾",
       "nameEn": "Taiwan",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 360,
+      "visits": 350
+    },
+    {
+      "code": "NL",
+      "flag": "🇳🇱",
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "pv": 310,
+      "visits": 310
+    },
+    {
+      "code": "CO",
+      "flag": "🇨🇴",
+      "name": "CO",
+      "nameEn": "CO",
+      "pv": 220,
+      "visits": 220
     },
     {
       "code": "DE",
       "flag": "🇩🇪",
       "name": "德国",
       "nameEn": "Germany",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 190,
+      "visits": 110
     },
     {
-      "code": "GB",
-      "flag": "🇬🇧",
-      "name": "英国",
-      "nameEn": "United Kingdom",
-      "pv": 1000,
-      "visits": 0
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "pv": 180,
+      "visits": 120
+    },
+    {
+      "code": "ID",
+      "flag": "🇮🇩",
+      "name": "印度尼西亚",
+      "nameEn": "Indonesia",
+      "pv": 170,
+      "visits": 170
+    },
+    {
+      "code": "AE",
+      "flag": "🇦🇪",
+      "name": "阿联酋",
+      "nameEn": "United Arab Emirates",
+      "pv": 160,
+      "visits": 160
     }
   ],
-  "countryTotal": 23000,
+  "countryTotal": 20940,
   "referers": {
-    "direct": 16060,
-    "search": 4330,
-    "ecosystem": 1210,
+    "direct": 15960,
+    "search": 4170,
+    "ecosystem": 1020,
     "ai": 0,
     "other": 150
   },
@@ -265,20 +289,6 @@
       "visits": 1000
     },
     {
-      "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
-      "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
-      "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
-      "pv": 2000,
-      "visits": 2000
-    },
-    {
-      "title": "HiCAD：用自然语言建 3D 模型，直接导出 STL 去打印",
-      "titleEn": "HiCAD: Describe in Natural Language, Get a 3D-Printable Parametric Model",
-      "path": "/blog/hicad-ai-cad-3d-modeling-platform/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
       "title": "Murmur：一个人的 AI 电台——主动播出、有声音、会记得你",
       "titleEn": "Murmur: A Whole Radio Station for an Audience of One — Proactive AI Companion Radio with a Human Voice",
       "path": "/blog/murmur-radio-companion-ai-radio-voice-host-claude-agent/",
@@ -286,65 +296,51 @@
       "visits": 1000
     },
     {
-      "title": "Hemmingway-1：一个「写得像人」的 27B 模型，能力靠自建榜单证明，还是 Qwen3.8 的一次精调？",
-      "titleEn": "Hemmingway-1: A 27B Model That 'Writes Like a Person' — Backed by Self-Run Benchmarks or Just a Qwen3.8 Fine-Tune?",
-      "path": "/blog/hemmingway-1-27b-writing-model-benchmark-claims-teardown/",
+      "title": "World Monitor：一个人几天做出 Palantir 战情室的开源平替，78K stars",
+      "titleEn": "World Monitor: One Person Built an Open-Source Palantir War Room in Days, 78K Stars",
+      "path": "/blog/worldmonitor-elie-habib-palantir-gotham-open-source-alternative-3d-globe/",
       "pv": 1000,
       "visits": 1000
     },
     {
-      "title": "FramePack：ControlNet 作者开源，6G 显存生成 1 分钟视频，F1+P1 双版抗漂移",
-      "titleEn": "FramePack: ControlNet Author's Open-Source Long Video Diffusion — 6GB VRAM, 1-Minute 30fps, F1+P1 Anti-Drift Dual Versions",
-      "path": "/blog/framepack-lllyasviel-long-video-diffusion-guide/",
+      "title": "AgentSight：用 eBPF 从系统边界看 AI Agent 到底干了什么，不用装 SDK 也不用挂代理",
+      "titleEn": "AgentSight: eBPF Boundary Tracing for AI Agents — No SDK, No Proxy",
+      "path": "/blog/agentsight-ebpf-boundary-tracing-ai-agent-observability/",
       "pv": 1000,
       "visits": 1000
     },
     {
-      "title": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI",
-      "titleEn": "Virtual AI Infra Team: A Local 27B That Picks Its Own Speedup (18 to 37 tok/s), With Only One AI on the Team",
-      "path": "/blog/virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac/",
+      "title": "M5Stack StopWatch 变成 Codex 物理控制器：BLE 麦克风 + 额度仪表盘 + 四向 Agent 触摸，vibe coding 专属硬件",
+      "titleEn": "codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos",
+      "path": "/blog/codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos/",
       "pv": 1000,
       "visits": 1000
     },
     {
-      "title": "PixOffice：给 AI 多智能体加一层 2D 办公室可视化，三种接入方式详解",
-      "titleEn": "PixOffice: How to Integrate 2D Office Scene Visualization Into Your AI Agent System",
-      "path": "/blog/pixoffice-2d-office-frontend-ai-agent-integration-guide/",
+      "title": "光岛：一触即发的桌面工作岛，普通人和开发者都能用",
+      "titleEn": "Luma Island: One Touch, Work Starts — A Desktop Work Island for Everyone",
+      "path": "/blog/luma-island-desktop-work-island/",
       "pv": 1000,
       "visits": 1000
     },
     {
-      "title": "Superset：一个工作区跑 100 个 Agent，Claude Code、Codex、OpenCode 同时干活——普通人上手指南",
-      "titleEn": "superset-parallel-coding-agent-workspace-claude-codex-opencode",
-      "path": "/blog/superset-parallel-coding-agent-workspace-claude-codex-opencode/",
+      "title": "'CMU 11-768 AI Agents：OpenHands 作者亲授，从零搭 Harness、建评测、用 RL 训 Agent，视频讲义全开放'",
+      "titleEn": "CMU 11-768 AI Agents: OpenHands Creator Teaches — Build a Harness From Scratch, Evaluate, Train With RL, All Materials Open",
+      "path": "/blog/cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course/",
       "pv": 1000,
       "visits": 1000
     },
     {
-      "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
-      "titleEn": "M1 Max 64GB Local AI Complete Guide: Qwen3 Model Selection, Memory Management & Multi-Model Scheduling",
-      "path": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
+      "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
+      "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
+      "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
       "pv": 1000,
       "visits": 1000
     },
     {
-      "title": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查",
-      "titleEn": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios",
-      "path": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "'MiniMax H3 加速五件套：稀疏注意力、混合注意力、并行解码，15 秒视频压进 6.6 秒'",
-      "titleEn": "MiniMax H3 Accelerated: Five Open-Source Speedups — Sparse Attention, Hybrid Attention, Parallel Decoding",
-      "path": "/blog/minimax-h3-accelerated-fasth3-sol-h3-vdn-pdd-lightx2v-five-open-source-speedups/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "Omarchy：DHH 造的 AI 原生 Linux，9 个 Agent 开箱即用，Omacom 基金会 800 万美元背书",
-      "titleEn": "omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch",
-      "path": "/blog/omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch/",
+      "title": "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27%",
+      "titleEn": "TMax: AllenAI's Strongest Open RL Recipe for Terminal Agents — 9B Hits 27% on Terminal-Bench 2.0",
+      "path": "/blog/tmax-allenai-open-rl-terminal-agent-training-recipe/",
       "pv": 1000,
       "visits": 1000
     },
@@ -356,9 +352,37 @@
       "visits": 1000
     },
     {
-      "title": "M5Stack StopWatch 变成 Codex 物理控制器：BLE 麦克风 + 额度仪表盘 + 四向 Agent 触摸，vibe coding 专属硬件",
-      "titleEn": "codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos",
-      "path": "/blog/codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos/",
+      "title": "Omarchy：DHH 造的 AI 原生 Linux，9 个 Agent 开箱即用，Omacom 基金会 800 万美元背书",
+      "titleEn": "omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch",
+      "path": "/blog/omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
+      "titleEn": "M1 Max 64GB Local AI Complete Guide: Qwen3 Model Selection, Memory Management & Multi-Model Scheduling",
+      "path": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
+      "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
+      "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "Superset：一个工作区跑 100 个 Agent，Claude Code、Codex、OpenCode 同时干活——普通人上手指南",
+      "titleEn": "superset-parallel-coding-agent-workspace-claude-codex-opencode",
+      "path": "/blog/superset-parallel-coding-agent-workspace-claude-codex-opencode/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "PixOffice：给 AI 多智能体加一层 2D 办公室可视化，三种接入方式详解",
+      "titleEn": "PixOffice: How to Integrate 2D Office Scene Visualization Into Your AI Agent System",
+      "path": "/blog/pixoffice-2d-office-frontend-ai-agent-integration-guide/",
       "pv": 1000,
       "visits": 1000
     }
@@ -366,21 +390,25 @@
   "devices": [
     {
       "label": "desktop",
-      "count": 50000
+      "count": 18000
+    },
+    {
+      "label": "mobile",
+      "count": 2000
     }
   ],
   "os": [
     {
       "label": "Windows",
-      "count": 14520
+      "count": 14480
     },
     {
       "label": "MacOSX",
-      "count": 2570
+      "count": 2400
     },
     {
       "label": "Unknown",
-      "count": 2280
+      "count": 2190
     },
     {
       "label": "Linux",
@@ -388,33 +416,37 @@
     },
     {
       "label": "Android",
-      "count": 760
+      "count": 690
     },
     {
       "label": "iOS",
-      "count": 580
+      "count": 490
+    },
+    {
+      "label": "ChromeOS",
+      "count": 10
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 15790
+      "count": 15680
     },
     {
       "label": "Unknown",
-      "count": 2280
+      "count": 2190
     },
     {
       "label": "Edge",
-      "count": 1980
+      "count": 1880
     },
     {
       "label": "ChromeMobileWebview",
-      "count": 600
+      "count": 550
     },
     {
       "label": "MobileSafari",
-      "count": 530
+      "count": 440
     },
     {
       "label": "Safari",
@@ -422,7 +454,7 @@
     },
     {
       "label": "ChromeMobile",
-      "count": 150
+      "count": 140
     },
     {
       "label": "Firefox",
@@ -430,11 +462,11 @@
     },
     {
       "label": "ChromeDerivative",
-      "count": 90
+      "count": 80
     },
     {
       "label": "ChromeHeadless",
-      "count": 10
+      "count": 20
     }
   ]
 }
