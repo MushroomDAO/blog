@@ -1,0 +1,16 @@
+{
+  "version": "14.0.0",
+  "tarball": "https://registry.npmjs.org/agent-relay/-/agent-relay-14.0.0.tgz",
+  "integrity": "sha512-L5O9xYCEQbMx5mIA7DzTOLJ7zj9ZJoSIp0UwjuqBscfXWen2wfK5PZ3MVvL5Dz84TbL0N7INMd8jAEPDxF2f/A==",
+  "sourceStringMatches": [
+    {
+      "file": "package/dist/cli/bootstrap.js",
+      "term": "sessions-only"
+    },
+    {
+      "file": "package/dist/cli/mcp/shared-sessions-client.js",
+      "term": "sessions-only"
+    }
+  ],
+  "note": "Package-content inspection only; CLI and Cloud not executed. See setup.js for command aliases."
+}

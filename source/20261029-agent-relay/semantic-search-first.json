@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "areal-agent-self-evolution-developer-guide",
+      "title": "AReaL 2.0：让已部署的 Agent 持续自我进化的工程指南",
+      "url": "/blog/areal-agent-self-evolution-developer-guide/",
+      "language": "zh",
+      "excerpt": "AReaL 2.0：让已部署的 Agent 持续自我进化的工程指南 蚂蚁集团、港科大、清华联合提出的下一代 Agentic RL 系统论文，核心问题：企业级 Agent 部署后就「冻结」了，没有系统基础设施支撑它从真实交互中持续学习。本文分析三大支柱（ATDP轨迹协议、数据代理、演进控制平面），并提供基于开源 AReaL 框架的开发者接入指南。 强化学习 Agent 自我进化 AReaL 蚂蚁集团 在线RL LLM训练 开源 问题：Agent 为什么总是\"冻结\"在部署那一刻？ 三大缺失的基础设施支柱 支柱一：ATDP — Agent 轨迹数据协议 支柱二",
+      "score": 0.6653297
+    },
+    {
+      "article_id": "how-to-build-agents-software-company-guide",
+      "title": "软件公司转型：如何开发 Agent？一线团队的 8 步流程与 6 条避坑建议",
+      "url": "/blog/how-to-build-agents-software-company-guide/",
+      "language": "zh",
+      "excerpt": "软件公司转型：如何开发 Agent？一线团队的 8 步流程与 6 条避坑建议 业内公认的 agent 开发「教科书」只有两份：Anthropic 的 Building Effective Agents 和 OpenAI 的 Practical Guide。本文在此基础上还原头部团队（Sierra、Devin、Cursor）实际跑的 8 步流程，给出 agent 分类的两个正交维度，以及「eval-first」「工具设计 > prompt 工程」等 6 条经反复踩坑验证的具体建议。 Agent开发 AI工程 MCP Eval Anthropic OpenA",
+      "score": 0.6628894
+    },
+    {
+      "article_id": "building-ai-agent-six-step-framework",
+      "title": "从0到1构建AI Agent：六步实战指南",
+      "url": "/blog/building-ai-agent-six-step-framework/",
+      "language": "zh",
+      "excerpt": "从0到1构建AI Agent：六步实战指南 一线工程师六周落地AI Agent的系统化方法论：任务定义、SOP设计、MVP验证、工具集成、测试迭代、部署监控。 AI-Agent LLM 实战框架 LangChain 工程实践 引言：当\"智能代理\"不再是概念，而是可落地的生产力工具 Step 1：用具体示例定义代理的\"工作说明书\" Step 2：设计标准化操作流程(SOP)，为Agent绘制\"工作手册\" Step 3：聚焦核心推理任务，构建最小可行产品(MVP) Step 4：连接数据源与工具，构建Agent的\"感知与行动\"能力 Step 5：系统化测试与",
+      "score": 0.65228415
+    },
+    {
+      "article_id": "multica-open-source-managed-agents-platform-design-patterns",
+      "title": "Multica：4.1 万 Star 的开源 Agent 团队基础设施，五个最值得借鉴的设计模式",
+      "url": "/blog/multica-open-source-managed-agents-platform-design-patterns/",
+      "language": "zh",
+      "excerpt": "Multica：4.1 万 Star 的开源 Agent 团队基础设施，五个最值得借鉴的设计模式 Multica 把编程 Agent 变成真正的队友：在看板上分配任务、自主接手执行、报告阻塞、积累可复用技能。4.1 万 Stars，Go + Next.js，支持 14 种 Agent CLI，可自托管。本文拆解五个最值得借鉴的架构设计——以及一个值得关注的本地优先替代思路。 Multi-Agent Agent团队协作 开源基础设施 Claude Code Codex Go 看板 任务编排 可复用技能 自托管 一句话理解 五个最值得借鉴的设计模式 模式一：",
+      "score": 0.6512256
+    },
+    {
+      "article_id": "replit-self-driving-company-agent-whole-company",
+      "title": "Replit 如何让 Agent 进入整家公司：自动驾驶公司实践，工程效率 5.8x，代码输出翻三倍",
+      "url": "/blog/replit-self-driving-company-agent-whole-company/",
+      "language": "zh",
+      "excerpt": "Replit 如何让 Agent 进入整家公司：自动驾驶公司实践，工程效率 5.8x，代码输出翻三倍 Replit CEO Amjad Masad 的《The Self-Driving Company》记录了 Replit 过去六个月用 AI Agent 重构整个公司运转方式的真实过程：工程效率 5.8x、PR reversion 率持平、支持工单处理快 60%、放弃七位数 SaaS 产品转用内部 Agent……最重要的发现：人没有被自动化掉，而是被晋升了。 AI Agent Replit 自动化公司 Loop Engineering 工程效率 AI转型",
+      "score": 0.65041304
+    },
+    {
+      "article_id": "anthropic-agent-workshop-engineering-guide",
+      "title": "Anthropic 官方 Agent 工作坊：从免费教材到业务流程落地",
+      "url": "/blog/anthropic-agent-workshop-engineering-guide/",
+      "language": "zh",
+      "excerpt": "Anthropic 官方 Agent 工作坊：从免费教材到业务流程落地 Anthropic 的官方 Agent 工作坊提供工具、子代理协作、记忆与业务案例。本文给出公告、活动和源码入口，区分免费教材与付费模型调用，核对模拟数据和样例维护状态，并以客服流程说明环境准备、角色拆分、真实系统接入、权限审批、幂等执行、预算和评测的方法，帮助把教学练习转化为可检查的业务试点，而非承诺免费无人公司。 Anthropic Claude Agent SDK 多智能体 业务自动化 工程实践 官方出处在哪里？ 教材里的“协作”是怎么发生的？ 第一步：先跑固定版本的业务练习 ",
+      "score": 0.6436382
+    },
+    {
+      "article_id": "agent-plugins-openai-codex-multi-client-open-spec-analysis",
+      "title": "Agent Plugins 规范深度解析：一次构建，Codex / ChatGPT / Cursor / Copilot / VS Code / Kiro 全通",
+      "url": "/blog/agent-plugins-openai-codex-multi-client-open-spec-analysis/",
+      "language": "zh",
+      "excerpt": "Agent Plugins 规范深度解析：一次构建，Codex / ChatGPT / Cursor / Copilot / VS Code / Kiro 全通 OpenAI 联合 AWS、Cursor、GitHub、Microsoft、Vercel 发布 Agent Plugins 规范：Skills + Connectors + MCP 三层架构，180 个官方插件已在 marketplace，一份 plugin.json 对接六大客户端。本文深度拆解规范结构，并分析这个开放标准在未来 Agent 分发战争中打开的真实机会窗口。 Agent Plug",
+      "score": 0.64336324
+    },
+    {
+      "article_id": "agent-speaker-progress-report-155926",
+      "title": "Agent Speaker 进度汇报：用 Nostr 构建个体+AI 的自组织协作网络",
+      "url": "/blog/agent-speaker-progress-report-155926/",
+      "language": "zh",
+      "excerpt": "Agent Speaker 进度汇报：用 Nostr 构建个体+AI 的自组织协作网络 Agent Speaker + Relay：基于 Nostr 协议和 Mycelium，为每一个个体和 AI Agent 提供去中心化的发现、通信与协作能力。无平台垄断，自发自组织，跨越物理边界。Phase 1 已完成，Phase 2 进行中。 Agent Speaker Nostr Mycelium Aura AI 去中心化 AI协作 开源 Progress 我们在做什么 为什么是 Nostr？为什么不用微信群、Slack、Discord？ 两个核心组件 Agent",
+      "score": 0.6412345
+    },
+    {
+      "article_id": "agentic-ai-systems-python-comprehensive-guide",
+      "title": "Agentic AI 系统全景：用 Python 构建智能 Agent 的核心框架",
+      "url": "/blog/agentic-ai-systems-python-comprehensive-guide/",
+      "language": "zh",
+      "excerpt": "Agentic AI 系统全景：用 Python 构建智能 Agent 的核心框架 Agentic AI 系统的核心概念全景：从 ReAct 循环到多 Agent 编排，从工具调用到记忆管理，从 LangChain/LangGraph 到 AutoGen/CrewAI，覆盖构建生产级 AI Agent 所需的架构模式、Python 实现和工程实践。面向希望系统性理解 Agentic AI 的开发者和建设者。 AI Agent Agentic AI LangChain Python 多智能体 工具调用 记忆管理 MCP 为什么 Agentic AI 是现在",
+      "score": 0.640216
+    },
+    {
+      "article_id": "agent-customer-service-architecture-teardown-review",
+      "title": "拆解一个「已落地」的智能客服 Agent 项目：概念体系、逻辑链路与工程落地判断",
+      "url": "/blog/agent-customer-service-architecture-teardown-review/",
+      "language": "zh",
+      "excerpt": "拆解一个「已落地」的智能客服 Agent 项目：概念体系、逻辑链路与工程落地判断 读一篇公众号里已脱敏的智能客服 Agent 项目拆解：从概念体系梳理、逻辑流程串联，到工程落地判断——如果用 n8n 搭建这套循环该怎么设计节点、做成 Agent 该接什么模型、怎么把这套架构落地成真正可用的智能客服产品。 Agent架构 智能客服 对话系统 RAG检索 意图识别 n8n LLM工程落地 读后感 架构设计 多轮对话管理 一、概念体系梳理 1.1 技术架构层：七个子系统 1.2 工程组织层：一张贯穿全流程的项目管理海报 二、概念之间的逻辑链路 2.1 主链路：",
+      "score": 0.63815343
+    }
+  ]
+}
