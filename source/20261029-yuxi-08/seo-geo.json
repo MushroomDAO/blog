@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "frontmatter": true,
+    "slug_reused": true,
+    "original_pubDate_preserved": true,
+    "prerelease_explicit": true,
+    "fixed_tag_commit": true,
+    "npm_registry_caveat": true,
+    "fullstack_test_scope": true,
+    "no_first_person": true,
+    "questions_and_faq": true,
+    "copyrights": true,
+    "images_bilingual": true,
+    "images_exist": true,
+    "images_under90kb": true,
+    "authoritative_links": true,
+    "internal_link": true,
+    "description_length": 155,
+    "descriptionEn_length": 160
+  },
+  "review": "BLUF, primary release/pinned guides, version/date status, source CLI checks, npm availability and deployment isolation/migration limits, FAQ, bilingual alt/copyrights and internal link reviewed. No benchmark, fullstack or independent security claim. Qualified photographic replacement cover and 3 original body figures."
+}
