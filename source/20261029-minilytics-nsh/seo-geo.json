@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "minilytics-cloudflare-revenue-attribution",
+    "titleLength": 29,
+    "titleEnLength": 54,
+    "descriptionLengths": [
+      159,
+      159
+    ],
+    "bilingual": true,
+    "copyright": true,
+    "FAQ": true,
+    "BLUF": true,
+    "sourcePinsAndTestScope": true,
+    "figureAnchors": 3,
+    "questionHeadings": 16,
+    "wechatLint": "passed",
+    "internalLink": "exact related article URL",
+    "manualSourceReview": "separate sourceclaims/localchecks and inferredadvice",
+    "notes": "Astro supplies H1/headinganchors and article schema; no unsupported FAQschema/citationgain promised."
+  },
+  {
+    "slug": "nsh-native-shell-cross-platform-ui",
+    "titleLength": 46,
+    "titleEnLength": 46,
+    "descriptionLengths": [
+      160,
+      157
+    ],
+    "bilingual": true,
+    "copyright": true,
+    "FAQ": true,
+    "BLUF": true,
+    "sourcePinsAndTestScope": true,
+    "figureAnchors": 3,
+    "questionHeadings": 16,
+    "wechatLint": "passed",
+    "internalLink": "exact related article URL",
+    "manualSourceReview": "separate sourceclaims/localchecks and inferredadvice",
+    "notes": "Astro supplies H1/headinganchors and article schema; no unsupported FAQschema/citationgain promised."
+  }
+]

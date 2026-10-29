@@ -1,0 +1,53 @@
+ok - dashboard API needs login
+ok - wrong password rejected
+ok - login
+ok - domain is normalised
+ok - pageview accepted
+ok - other domains rejected
+ok - bots silently dropped
+ok - bad webhook signature rejected
+ok - webhook accepted
+ok - duplicate webhook is fine
+ok - 2 visitors (got 2)
+ok - 3 pageviews (got 3)
+ok - net revenue 49.00 after refund (got 4900)
+ok - one customer (renewal not double counted)
+ok - bounce rate 50%
+ok - avg session time 21s (got 21000)
+ok - two online
+ok - revenue credited to X
+ok - Google visit, no revenue
+ok - campaign "launch-tweet" made the money
+ok - trailing slash normalised (/pricing)
+ok - goal with revenue
+ok - session hostname is the entry host
+ok - filter by referrer
+ok - filter by visited page
+ok - journey lists payment + renewal
+ok - visitor profile
+ok - funnel 1,1,1 (got 1,1,1)
+ok - generic payments API attributes
+ok - payment without metadata starts unlinked
+ok - return page links it and credits ChatGPT
+ok - subscription return page seen before webhook still links
+ok - timing match credits the medium-article ref
+ok - with 3 checkout clickers, the one who came back after paying gets it
+ok - ambiguous timing is not guessed
+ok - rematch explains: "4 people clicked checkout before this payment and 2 came back right after; too close to call"
+ok - period today (15 buckets, hour)
+ok - period yesterday (24 buckets, hour)
+ok - period 24h (24 buckets, hour)
+ok - period 48h (48 buckets, hour)
+ok - period 7d (7 buckets, day)
+ok - period 30d (30 buckets, day)
+ok - period 90d (90 buckets, day)
+ok - period 12m (53 buckets, week)
+ok - period all (15 buckets, hour)
+ok - granularity hour -> day
+ok - granularity day -> day
+ok - granularity week -> week
+ok - granularity month -> month
+ok - live view: 10 online, 30 recent events
+ok - site deleted
+
+All smoke tests passed

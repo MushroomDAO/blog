@@ -1,0 +1,38 @@
+✓ bundled /private/tmp/nsh-smoke-app/App.tsx (1115 B in 1.5 ms)
+perf commit: 19 ops, 887µs (list js 0µs), 20 mount items, 7 nodes
+perf first frame: eval 1394µs, total 2876µs
+── open(/private/tmp/nsh-smoke-app/App.tsx): 20 items
+   LayoutDirection { rtl: false }
+   Create { id: 2, kind: View }
+   Create { id: 4, kind: Text }
+   Insert { parent: 2, child: 4, before: None }
+   Create { id: 8, kind: View }
+   TrackStates { id: 8, states: 1 }
+   Create { id: 10, kind: Text }
+   Insert { parent: 8, child: 10, before: None }
+   Insert { parent: 2, child: 8, before: None }
+   Insert { parent: 1, child: 2, before: None }
+   ViewStyle { id: 2, style: ViewStyle { background_color: Color(4294967295), border_radius: 0pt, corner_radius: Corners { top_left: None, top_right: None, bottom_right: None, bottom_left: None }, continuous_corners: false, borders: Borders { widths: Edges { top: 0pt, right: 0pt, bottom: 0pt, left: 0pt }, colors: [Color(255), Color(255), Color(255), Color(255)], style: Solid }, opacity: 1.0, overflow_hidden: false, shadow: Shadow { color: Color(255), offset_x: 0pt, offset_y: -3pt, opacity: 0.0, radius: 3pt }, transform: [], tint_color: None, elevation: 0pt, transform_origin: TransformOrigin { x: 50%, y: 50%, z: 0pt }, object_position: ObjectPosition { x: PositionAxis { from_end: false, offset: 50% }, y: PositionAxis { from_end: false, offset: 50% } }, backface_hidden: false, effects: None, blend_mode: Normal, backdrop_material: UltraThin, glass_effect: None, outline: Outline { width: 0pt, color: Color(255), style: Solid, offset: 0pt }, hidden: false, cursor: Auto, transition: None, animation: None } }
+   ViewStyle { id: 8, style: ViewStyle { background_color: Color(387389439), border_radius: 10pt, corner_radius: Corners { top_left: None, top_right: None, bottom_right: None, bottom_left: None }, continuous_corners: false, borders: Borders { widths: Edges { top: 0pt, right: 0pt, bottom: 0pt, left: 0pt }, colors: [Color(255), Color(255), Color(255), Color(255)], style: Solid }, opacity: 1.0, overflow_hidden: false, shadow: Shadow { color: Color(255), offset_x: 0pt, offset_y: -3pt, opacity: 0.0, radius: 3pt }, transform: [], tint_color: None, elevation: 0pt, transform_origin: TransformOrigin { x: 50%, y: 50%, z: 0pt }, object_position: ObjectPosition { x: PositionAxis { from_end: false, offset: 50% }, y: PositionAxis { from_end: false, offset: 50% } }, backface_hidden: false, effects: None, blend_mode: Normal, backdrop_material: UltraThin, glass_effect: None, outline: Outline { width: 0pt, color: Color(255), style: Solid, offset: 0pt }, hidden: false, cursor: Auto, transition: None, animation: None } }
+   Events { id: 8, events: EventMask([1, 0]) }
+   ViewProps { id: 8, props: ViewProps { pointer_events: Auto, hit_slop: Edges { top: 0pt, right: 0pt, bottom: 0pt, left: 0pt }, long_press_delay: None, ripple: None, accessibility: Accessibility { accessible: None, label: None, hint: None, role: Button, state: AccessibilityState { disabled: false, selected: false, checked: None, busy: false, expanded: None }, value: None, hidden: false, live_region: None, actions: [] }, test_id: None, pan_activation: None, pan_scroll_handoff: false, window_drag: None, focusable: None, selectable_view: false } }
+   Frame { id: 2, x: 0, y: 0, w: 390, h: 844 }
+   Frame { id: 4, x: 187, y: 373, w: 17, h: 36 }
+   Frame { id: 8, x: 160, y: 425, w: 70, h: 46 }
+   Frame { id: 10, x: 20, y: 12, w: 30, h: 22 }
+   Text { id: 4, text: "0", content: 17x36 @ 0,0 }
+   Text { id: 10, text: "Tap", content: 30x22 @ 0,0 }
+perf event Press on view 8
+perf event js: 129µs
+perf commit: 1 ops, 21µs (list js 0µs), 1 mount items, 7 nodes
+perf turn: 56µs (timers and tasks 2µs)
+── press(Tap): 1 items
+   Text { id: 4, text: "1", content: 17x36 @ 0,0 }
+perf event Press on view 8
+perf event js: 23µs
+perf commit: 1 ops, 12µs (list js 0µs), 1 mount items, 7 nodes
+perf turn: 26µs (timers and tasks 0µs)
+── press(Tap): 1 items
+   Text { id: 4, text: "2", content: 17x36 @ 0,0 }
+✓ /private/tmp/nsh-smoke-app/App.test.tsx › counts taps (662ms)
+✓ 1 test: 1 passed, 0 failed (671ms)
