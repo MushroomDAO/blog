@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-29T10:52:46.941Z",
+  "drafts": [
+    {
+      "slug": "hardware-wallet-security-2026-claim-audit",
+      "mediaId": "prCUE631thH1cmNLi42prOXLXDtmJhbTQ1TZEPzD8WLiB_XZSYpE_-NBcU-lUOyq",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "404e582ed1ea2a5a121f9cddc563deb68a8e24bbf38066a2743a2486a54030e2",
+      "remoteTextHash": "404e582ed1ea2a5a121f9cddc563deb68a8e24bbf38066a2743a2486a54030e2",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/hardware-wallet-security-2026-claim-audit/",
+      "localContentHash": "a90cf1c1b1baf64df60f34ed3d107ffb57cb4b3d496aa5971eba997e8723b5ff",
+      "remoteContentHash": "372c1dc2b35096b56fa9201bd0dc7354dacc08295b2be0dbbe6fedb4d3d9cd6f"
+    }
+  ]
+}

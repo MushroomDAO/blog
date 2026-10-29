@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-29T10:42:13.251826+00:00",
+  "imagePath": "/Users/jason/.heinu1-bot/media/c438be25-b164-492a-a454-d3554575ccb6.jpg",
+  "imageSha256": "47fcea50a5821941d617f37d1c8198446e65381b05931a2ed87b525ebf1b24fc",
+  "method": "visual inspection and macOS Vision OCR; Mage not run",
+  "walletBrands": [
+    "Ledger",
+    "Trezor",
+    "COLDCARD / Coinkite",
+    "Tangem",
+    "BitBox / Shift Crypto",
+    "SafePal",
+    "Keystone"
+  ],
+  "otherEntities": {
+    "CryptoBilis": "reseller",
+    "CoinTracking": "portfolio/tax service",
+    "Brevo": "email service",
+    "ShipMonk": "fulfillment provider",
+    "Global-e": "ecommerce partner"
+  },
+  "issues": [
+    "Safe7 misattributed to SafePal",
+    "future November/December rows as of October29",
+    "loss sum 43+111+87=241 million, not claimed350 million; none independently reconciled",
+    "mixes PII breaches, physical PoCs and actual fund theft",
+    "Trezor ShipMonk August/September not March; Ledger Global-e January not September"
+  ]
+}
