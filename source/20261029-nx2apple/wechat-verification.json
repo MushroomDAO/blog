@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-29T03:48:43.981Z",
+  "drafts": [
+    {
+      "slug": "nx2apple-switch-apple-builder",
+      "mediaId": "prCUE631thH1cmNLi42prJHySAQlcdwuiTyegH2e04vle_k7nSIoAzsGGJVUf1Pf",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "6beaf71a0fff27b86386b05d7bd12e113340cd885c5c04d8056c56c5e3f943d2",
+      "remoteTextHash": "6beaf71a0fff27b86386b05d7bd12e113340cd885c5c04d8056c56c5e3f943d2",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/nx2apple-switch-apple-builder/",
+      "localContentHash": "c62bc780d98bf046c7466bffa61b97abbb204ad08567cc032fef20b4e2347d29",
+      "remoteContentHash": "26defc982a0181bce11372e15b80299cc0e5e1ffb0eeb23c7a6c63fc87a7d5f8"
+    }
+  ]
+}
