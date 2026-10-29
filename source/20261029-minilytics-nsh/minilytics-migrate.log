@@ -1,0 +1,168 @@
+
+ ⛅️ wrangler 4.152.0 (update available 4.155.0)
+───────────────────────────────────────────────
+Resource location: local
+
+Use --remote if you want to access the remote instance.
+
+Migrations to be applied:
+┌───────────────────────────┐
+│ name                      │
+├───────────────────────────┤
+│ 0001_init.sql             │
+├───────────────────────────┤
+│ 0002_login_failures.sql   │
+├───────────────────────────┤
+│ 0003_payment_matching.sql │
+├───────────────────────────┤
+│ 0004_session_location.sql │
+├───────────────────────────┤
+│ 0005_accounts.sql         │
+├───────────────────────────┤
+│ 0006_stripe.sql           │
+├───────────────────────────┤
+│ 0007_payment_product.sql  │
+└───────────────────────────┘
+? About to apply 7 migration(s)
+Your database may not be available to serve requests during the migration, continue?
+🤖 Using fallback value in non-interactive context: yes
+🌀 Executing on local database minilytics (00000000-0000-0000-0000-000000000000) from .wrangler/state/v3/d1:
+🌀 To execute on your remote database, add a --remote flag to your wrangler command.
+🚣 13 commands executed successfully.
+┌───────────────────────────┬────────┐
+│ name                      │ status │
+├───────────────────────────┼────────┤
+│ 0001_init.sql             │ ✅     │
+├───────────────────────────┼────────┤
+│ 0002_login_failures.sql   │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0003_payment_matching.sql │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0004_session_location.sql │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0005_accounts.sql         │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0006_stripe.sql           │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0007_payment_product.sql  │ 🕒️    │
+└───────────────────────────┴────────┘
+🌀 Executing on local database minilytics (00000000-0000-0000-0000-000000000000) from .wrangler/state/v3/d1:
+🌀 To execute on your remote database, add a --remote flag to your wrangler command.
+🚣 3 commands executed successfully.
+┌───────────────────────────┬────────┐
+│ name                      │ status │
+├───────────────────────────┼────────┤
+│ 0001_init.sql             │ ✅     │
+├───────────────────────────┼────────┤
+│ 0002_login_failures.sql   │ ✅     │
+├───────────────────────────┼────────┤
+│ 0003_payment_matching.sql │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0004_session_location.sql │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0005_accounts.sql         │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0006_stripe.sql           │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0007_payment_product.sql  │ 🕒️    │
+└───────────────────────────┴────────┘
+🌀 Executing on local database minilytics (00000000-0000-0000-0000-000000000000) from .wrangler/state/v3/d1:
+🌀 To execute on your remote database, add a --remote flag to your wrangler command.
+🚣 4 commands executed successfully.
+┌───────────────────────────┬────────┐
+│ name                      │ status │
+├───────────────────────────┼────────┤
+│ 0001_init.sql             │ ✅     │
+├───────────────────────────┼────────┤
+│ 0002_login_failures.sql   │ ✅     │
+├───────────────────────────┼────────┤
+│ 0003_payment_matching.sql │ ✅     │
+├───────────────────────────┼────────┤
+│ 0004_session_location.sql │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0005_accounts.sql         │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0006_stripe.sql           │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0007_payment_product.sql  │ 🕒️    │
+└───────────────────────────┴────────┘
+🌀 Executing on local database minilytics (00000000-0000-0000-0000-000000000000) from .wrangler/state/v3/d1:
+🌀 To execute on your remote database, add a --remote flag to your wrangler command.
+🚣 3 commands executed successfully.
+┌───────────────────────────┬────────┐
+│ name                      │ status │
+├───────────────────────────┼────────┤
+│ 0001_init.sql             │ ✅     │
+├───────────────────────────┼────────┤
+│ 0002_login_failures.sql   │ ✅     │
+├───────────────────────────┼────────┤
+│ 0003_payment_matching.sql │ ✅     │
+├───────────────────────────┼────────┤
+│ 0004_session_location.sql │ ✅     │
+├───────────────────────────┼────────┤
+│ 0005_accounts.sql         │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0006_stripe.sql           │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0007_payment_product.sql  │ 🕒️    │
+└───────────────────────────┴────────┘
+🌀 Executing on local database minilytics (00000000-0000-0000-0000-000000000000) from .wrangler/state/v3/d1:
+🌀 To execute on your remote database, add a --remote flag to your wrangler command.
+🚣 5 commands executed successfully.
+┌───────────────────────────┬────────┐
+│ name                      │ status │
+├───────────────────────────┼────────┤
+│ 0001_init.sql             │ ✅     │
+├───────────────────────────┼────────┤
+│ 0002_login_failures.sql   │ ✅     │
+├───────────────────────────┼────────┤
+│ 0003_payment_matching.sql │ ✅     │
+├───────────────────────────┼────────┤
+│ 0004_session_location.sql │ ✅     │
+├───────────────────────────┼────────┤
+│ 0005_accounts.sql         │ ✅     │
+├───────────────────────────┼────────┤
+│ 0006_stripe.sql           │ 🕒️    │
+├───────────────────────────┼────────┤
+│ 0007_payment_product.sql  │ 🕒️    │
+└───────────────────────────┴────────┘
+🌀 Executing on local database minilytics (00000000-0000-0000-0000-000000000000) from .wrangler/state/v3/d1:
+🌀 To execute on your remote database, add a --remote flag to your wrangler command.
+🚣 3 commands executed successfully.
+┌───────────────────────────┬────────┐
+│ name                      │ status │
+├───────────────────────────┼────────┤
+│ 0001_init.sql             │ ✅     │
+├───────────────────────────┼────────┤
+│ 0002_login_failures.sql   │ ✅     │
+├───────────────────────────┼────────┤
+│ 0003_payment_matching.sql │ ✅     │
+├───────────────────────────┼────────┤
+│ 0004_session_location.sql │ ✅     │
+├───────────────────────────┼────────┤
+│ 0005_accounts.sql         │ ✅     │
+├───────────────────────────┼────────┤
+│ 0006_stripe.sql           │ ✅     │
+├───────────────────────────┼────────┤
+│ 0007_payment_product.sql  │ 🕒️    │
+└───────────────────────────┴────────┘
+🌀 Executing on local database minilytics (00000000-0000-0000-0000-000000000000) from .wrangler/state/v3/d1:
+🌀 To execute on your remote database, add a --remote flag to your wrangler command.
+🚣 6 commands executed successfully.
+┌───────────────────────────┬────────┐
+│ name                      │ status │
+├───────────────────────────┼────────┤
+│ 0001_init.sql             │ ✅     │
+├───────────────────────────┼────────┤
+│ 0002_login_failures.sql   │ ✅     │
+├───────────────────────────┼────────┤
+│ 0003_payment_matching.sql │ ✅     │
+├───────────────────────────┼────────┤
+│ 0004_session_location.sql │ ✅     │
+├───────────────────────────┼────────┤
+│ 0005_accounts.sql         │ ✅     │
+├───────────────────────────┼────────┤
+│ 0006_stripe.sql           │ ✅     │
+├───────────────────────────┼────────┤
+│ 0007_payment_product.sql  │ ✅     │
+└───────────────────────────┴────────┘

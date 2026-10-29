@@ -1,0 +1,13 @@
+
+> minilytics@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /private/tmp/minilytics-source
+
+ ✓ test/core.test.ts (23 tests) 26ms
+
+ Test Files  1 passed (1)
+      Tests  23 passed (23)
+   Start at  16:26:38
+   Duration  519ms (transform 77ms, setup 0ms, collect 92ms, tests 26ms, environment 0ms, prepare 45ms)

@@ -1,0 +1,13 @@
+checking 2 article(s) (minilytics-cloudflare-revenue-attribution, nsh-native-shell-cross-platform-ui)
+diff: 4 changed/new, 0 unchanged (wrote /Users/jason/Dev/mycelium/blog/semantic-search/eval/incremental-index-plan.json)
+  + minilytics-cloudflare-revenue-attribution [zh]
+  + minilytics-cloudflare-revenue-attribution [en]
+  + nsh-native-shell-cross-platform-ui [zh]
+  + nsh-native-shell-cross-platform-ui [en]
+embedding 4 changed record(s) (calls Workers AI)...
+  verifying batch order on 4 samples...
+  batch order verified OK
+  embedding incremental 1-4/4...
+TARGET: account=7bf23342f21baa5ebfc7bc7b74f5a1f2 index=blog-search-v1 vectors=4
+  upserted 1-4/4: True
+updated manifest for 2 article(s)

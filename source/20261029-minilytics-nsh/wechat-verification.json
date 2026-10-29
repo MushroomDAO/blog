@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-29T09:41:13.760Z",
+  "drafts": [
+    {
+      "slug": "minilytics-cloudflare-revenue-attribution",
+      "mediaId": "prCUE631thH1cmNLi42prJBGWhv7mK36u5aJGzLBLWyM1yU6K4qw0hBDKCMOGv3H",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "43aa9d8c51d31064292b5a4befe294e95648cb572709a9629fac126406adc8d4",
+      "remoteTextHash": "43aa9d8c51d31064292b5a4befe294e95648cb572709a9629fac126406adc8d4",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/minilytics-cloudflare-revenue-attribution/",
+      "localContentHash": "3c9a0dee7bd6ee5447bc3d7ae886d33a6ce204427d1073aa240d4e41a0978799",
+      "remoteContentHash": "718b68ad1f96819168357be39ca0071d2b540ee36bf6db2ae6fb50507b444090"
+    },
+    {
+      "slug": "nsh-native-shell-cross-platform-ui",
+      "mediaId": "prCUE631thH1cmNLi42prJfVOwOj9qG9v0r91BwwgJlBVvP3HZQaC90f3AseCOxe",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "03823236fc88efc7dc2d6b0ffa2be318ceda5f46190b744cc17c251e98a9044b",
+      "remoteTextHash": "03823236fc88efc7dc2d6b0ffa2be318ceda5f46190b744cc17c251e98a9044b",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/nsh-native-shell-cross-platform-ui/",
+      "localContentHash": "bfc26dbb7577a0268581fbcd51280d635b33d672622d46ac3b7601b5a6a11c7f",
+      "remoteContentHash": "7224ec6cb834e76d9331cae937879005c1d98177be7959e47e5035434fa27bb9"
+    }
+  ]
+}
