@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WebMCP read-only stock demo</title>
+<style>body{font:17px/1.6 system-ui,sans-serif;margin:40px auto;padding:0 22px;max-width:800px;color:#152d36;background:#f9fbfc}h1{line-height:1.2}section{background:white;border:1px solid #bbcdd3;border-radius:12px;padding:22px;margin:18px 0}button,select{font:inherit;padding:8px 14px;margin:5px 6px 5px 0}button{cursor:pointer}button:disabled{cursor:default}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eef4f6;padding:16px;border-radius:8px}small{color:#405f68}a{color:#005b7c}:focus-visible{outline:3px solid #005b7c;outline-offset:3px}</style>
+<h1>WebMCP: a read-only stock lookup</h1>
+<p>Fictional in-memory data. No purchases, accounts, API keys or model calls. A normal form remains usable without WebMCP.</p>
+<section><h2>Manual form</h2><form id="lookup-form" toolname="lookup_demo_stock_form" tooldescription="Look up fictional demo stock using the normal form; no order is placed."><label for="sku">Demo product</label><select id="sku" name="sku" required><option value="demo-a">Notebook</option><option value="demo-b">Adapter</option><option value="demo-c">Lamp</option></select><button type="submit">Look up manually</button></form><small>This declarative form deliberately omits toolautosubmit. Browser preview support varies.</small></section>
+<section><h2>Structured tool</h2><p id="status" role="status">Checking preview API…</p><button id="discover" disabled>Discover tools</button><button id="invoke" disabled>Call read-only tool</button><button id="dispose" disabled>Remove imperative tool</button><pre id="result" aria-live="polite">No lookup yet.</pre></section>
+<p><small>Checked against the October 27, 2026 community draft. API shape and browser support can change. Enabling a preview API is not proof of an autonomous agent or performance improvement.</small></p>
+<p><a href="https://blog.mushroom.cv/blog/webmcp-chrome-browser-tools-api-guide/">Read the bilingual guide</a> · <a href="https://github.com/webmachinelearning/webmcp">Specification repository</a></p>
+<script>
+const inventory = Object.freeze({ 'demo-a':8, 'demo-b':3, 'demo-c':0 });
+const tool = {
+  name:'lookup_demo_stock',
+  description:'Look up fictional stock. No order, payment or reservation is created.',
+  inputSchema:{type:'object',properties:{sku:{type:'string',enum:Object.keys(inventory),description:'The demo product identifier.'}},required:['sku'],additionalProperties:false},
+  execute:async args=>{
+    if(!args || typeof args !== 'object' || Object.keys(args).length!==1 || typeof args.sku!=='string' || !Object.hasOwn(inventory,args.sku)) throw new TypeError('Choose a known demo product identifier.');
+    return {sku:args.sku,stock:inventory[args.sku],fictional:true};
+  },
+  annotations:{readOnlyHint:true}
+};
+const output=value=>document.getElementById('result').textContent=JSON.stringify(value,null,2);
+let controller;
+async function register(){controller=new AbortController();await document.modelContext.registerTool(tool,{signal:controller.signal});return true;}
+window.demo={tool,register,dispose:()=>controller?.abort()};
+document.getElementById('lookup-form').addEventListener('submit',event=>{event.preventDefault();const result={sku:document.getElementById('sku').value,stock:inventory[document.getElementById('sku').value],fictional:true};output(result);if(event.agentInvoked && typeof event.respondWith==='function')event.respondWith(Promise.resolve(result));});
+window.demoReady=(async()=>{
+ if(!document.modelContext){document.getElementById('status').textContent='Preview API unavailable. Use a compatible browser and local testing flag, or use the manual form.';return {available:false};}
+ try{await register();document.getElementById('status').textContent='Native preview tool registered. This is not an LLM agent.';
+ for(const id of ['discover','invoke','dispose'])document.getElementById(id).disabled=false;
+ document.getElementById('discover').onclick=async()=>{try{output((await document.modelContext.getTools()).map(t=>({name:t.name,description:t.description,inputSchema:t.inputSchema})));}catch(e){output({error:e.name,message:e.message});}};
+ document.getElementById('invoke').onclick=async()=>{try{const tools=await document.modelContext.getTools(),entry=tools.find(t=>t.name===tool.name);if(!entry)throw Error('Tool removed; reload to register again.');const result=await document.modelContext.executeTool(entry,{sku:document.getElementById('sku').value});output(typeof result==='string'?JSON.parse(result):result);}catch(e){output({error:e.name,message:e.message});}};
+ document.getElementById('dispose').onclick=()=>{window.demo.dispose();document.getElementById('status').textContent='Imperative registration aborted. The normal form remains available.';};
+ return {available:true};}catch(e){document.getElementById('status').textContent='Preview registration failed: '+e.name;return {available:true,error:e.name,message:e.message};}
+})();
+</script></html>

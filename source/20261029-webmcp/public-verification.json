@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-29T07:38:09.712981+00:00",
+  "articles": [
+    {
+      "slug": "webmcp-chrome-browser-tools-api-guide",
+      "url": "https://blog.mushroom.cv/blog/webmcp-chrome-browser-tools-api-guide/",
+      "title": "WebMCP 实测：从猜按钮到调用工具，网页自动化怎么变了？",
+      "listRank": 6,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/webmcp-chrome-browser-tools-api-guide-banner.BtUuUQ5x.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 89118
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/webmcp-chrome-browser-tools-api-guide-banner.BtUuUQ5x_Z1mxa7D.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 27122
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/webmcp-chrome-browser-tools-api-guide-fig-01.CE9nxaBE_Zk0XI.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 36630
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/webmcp-chrome-browser-tools-api-guide-fig-02.Bjd3DQBP_Z1jTSUI.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 41876
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/webmcp-chrome-browser-tools-api-guide-fig-03.BYOx0s5T_Z2vq9AI.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 40216
+        }
+      ]
+    }
+  ],
+  "demo": {
+    "url": "https://blog.mushroom.cv/demos/webmcp-readonly/",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "contentMatchesExcludingHostAnalytics": true
+  }
+}

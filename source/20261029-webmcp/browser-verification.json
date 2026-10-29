@@ -1,0 +1,130 @@
+{
+  "checkedAt": "2026-10-29T07:31:50.354Z",
+  "browser": "Google Chrome 156.0.8078.49",
+  "baseline": {
+    "flags": [],
+    "available": {
+      "available": false
+    },
+    "probe": {
+      "secure": true,
+      "documentAPI": false,
+      "navigatorAPI": false,
+      "methods": []
+    },
+    "errors": [],
+    "manual": "{\n  \"sku\": \"demo-a\",\n  \"stock\": 8,\n  \"fictional\": true\n}"
+  },
+  "preview": {
+    "flags": [
+      "--enable-features=WebMCP,WebMCPTesting",
+      "--enable-blink-features=WebMCP,WebMCPTesting"
+    ],
+    "available": {
+      "available": true
+    },
+    "probe": {
+      "secure": true,
+      "documentAPI": true,
+      "navigatorAPI": false,
+      "methods": [
+        "ontoolchange",
+        "ontoolactivated",
+        "ontoolcancel",
+        "executeTool",
+        "getTools",
+        "registerTool",
+        "constructor"
+      ]
+    },
+    "errors": [],
+    "manual": {
+      "sku": "demo-a",
+      "stock": 8,
+      "fictional": true
+    },
+    "tools": [
+      {
+        "name": "lookup_demo_stock",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "sku": {
+              "type": "string",
+              "enum": [
+                "demo-a",
+                "demo-b",
+                "demo-c"
+              ],
+              "description": "The demo product identifier."
+            }
+          },
+          "required": [
+            "sku"
+          ],
+          "additionalProperties": false
+        },
+        "annotations": {
+          "consequentialHint": false,
+          "debugging": false,
+          "readOnlyHint": true,
+          "untrustedContentHint": false
+        }
+      },
+      {
+        "name": "lookup_demo_stock_form",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "sku": {
+              "type": "string",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "const": "demo-a",
+                  "title": "Notebook"
+                },
+                {
+                  "type": "string",
+                  "const": "demo-b",
+                  "title": "Adapter"
+                },
+                {
+                  "type": "string",
+                  "const": "demo-c",
+                  "title": "Lamp"
+                }
+              ],
+              "enum": [
+                "demo-a",
+                "demo-b",
+                "demo-c"
+              ],
+              "description": "Demo product"
+            }
+          },
+          "required": [
+            "sku"
+          ]
+        }
+      }
+    ],
+    "lookup": "{\"sku\":\"demo-b\",\"stock\":3,\"fictional\":true}",
+    "invalid": {
+      "rejected": true,
+      "error": "UnknownError"
+    },
+    "duplicate": {
+      "rejected": true,
+      "error": "InvalidStateError"
+    },
+    "afterAbort": [
+      "lookup_demo_stock_form"
+    ],
+    "afterReregister": [
+      "lookup_demo_stock",
+      "lookup_demo_stock_form"
+    ]
+  },
+  "scope": "Native read-only browser demo with local fixtures. No LLM, no real website, no timing/cost benchmark, no extension or real browser profile change."
+}
