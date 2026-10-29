@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-29T10:02:50.682Z",
+  "drafts": [
+    {
+      "slug": "lfm3-liquid-ai-local-multimodal-models",
+      "mediaId": "prCUE631thH1cmNLi42prELQoIIzWdt6L3rnCRnMMnyO7y321MGLaMssVxprJyjn",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "934e2072826104cb41550d41e7fbb6f7cb31fa2be762fedd748a0a5c03bb83dc",
+      "remoteTextHash": "934e2072826104cb41550d41e7fbb6f7cb31fa2be762fedd748a0a5c03bb83dc",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/lfm3-liquid-ai-local-multimodal-models/",
+      "localContentHash": "5054431a89d45962d8c725a845206d3547515e181ee1b0a54f9ea2b20260c186",
+      "remoteContentHash": "cee90a882f61d27c83c4b12bd304ec09e9ce88cf261e957657362b9eb9b31a7d"
+    }
+  ]
+}

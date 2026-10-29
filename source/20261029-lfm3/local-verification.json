@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-29T09:51:34.953313+00:00",
+  "host": {
+    "chip": "Apple M4",
+    "memoryGB": 16,
+    "macOS": "26.6.2"
+  },
+  "runtime": {
+    "version": "0.8.0-dev",
+    "build": 11960,
+    "commit": "8642541b2",
+    "officialReleaseURL": "https://github.com/ggml-org/llama.cpp/releases/tag/b11960",
+    "archiveName": "llama-b11960-bin-macos-arm64.tar.gz",
+    "sha256": "sha256:58e5a5e1d7c2bf66cedd9c29e0323f3e570660a70a1e2156d32eed08f4cc1e3c",
+    "digestVerified": true,
+    "globalInstall": false
+  },
+  "model": {
+    "repo": "LiquidAI/LFM3-1.7B-GGUF",
+    "revision": "bad5729bba61d076fff20d2548e62526665af215",
+    "file": "LFM3-1.7B-Q4_K_M.gguf",
+    "bytes": 1099627808,
+    "sha256": "3793e1e6e2266919d6e015287221b41100175a98eddaba92e111aed3b05c93c4",
+    "lfsDigestVerified": true
+  },
+  "smoke": {
+    "contextConfigured": 4096,
+    "parallel": 1,
+    "initialMaxTokens": 96,
+    "matchedInitially": 2,
+    "casesInitially": 3,
+    "truncatedJSONRetained": true,
+    "followupOnlyChange": "max_tokens512",
+    "followupGeneratedTokens": 125,
+    "followupExpectedJSON": true
+  },
+  "limits": [
+    "Not a benchmark, no throughput conclusion",
+    "No audio/vision/omni/d1 inference",
+    "No 256K context or peak RAM measurement",
+    "No MLX inference; official card says support in progress",
+    "No private input, account API or global toolchain changes"
+  ],
+  "serverStopped": true
+}

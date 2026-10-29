@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-29T09:55:48.713022+00:00",
+  "slug": "lfm3-liquid-ai-local-multimodal-models",
+  "frontmatterComplete": true,
+  "titleLengths": [
+    37,
+    53
+  ],
+  "descriptionLengths": [
+    155,
+    159
+  ],
+  "BLUF": "present both languages",
+  "FAQ": "3QAs both languages",
+  "sourceFacts": "7 primary cards/revisions and pinnedlicense",
+  "originalVerification": "real isolated textGGUFtest, initial JSON truncation retained, only budget changed in followup",
+  "bilingualScopeEquivalent": true,
+  "images": "3semantic anchors with bilingualalt, covermachineQA0fail0warnmanualaccepted",
+  "internalLink": "exact earlierLiquidAId1article URL",
+  "externalLinks": "plain primaryURLs surviveWeChat",
+  "schema": "Astroarticle schema and heading anchors; no claimedFAQPage injection or uplift",
+  "wechatLint": "passed",
+  "risksDisclosed": [
+    "No family-wide runtime test",
+    "No 256K/peakRAM/performance test",
+    "MLXsupportstillinprogress",
+    "commerciallicense threshold",
+    "officialbenchmark claims notindependent"
+  ]
+}

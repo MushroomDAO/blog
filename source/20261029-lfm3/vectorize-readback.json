@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-10-29T10:07:10.801696+00:00",
+  "info": {
+    "result": {
+      "dimensions": 1024,
+      "vectorCount": 1676,
+      "processedUpToDatetime": "2026-10-29T10:02:50.938Z",
+      "processedUpToMutation": "2d14d9ff-7b22-4af4-b230-1a8e2bad3bbf"
+    },
+    "result_info": null,
+    "success": true,
+    "errors": [],
+    "messages": []
+  },
+  "requestedIds": [
+    "8d5e9c15fd5bd3626e32625f203d441802f7afb2ece3ac59",
+    "21f39c1a8fc52566bdd0dacd18ebf962f92bdc96914eba16"
+  ],
+  "vectors": [
+    {
+      "id": "8d5e9c15fd5bd3626e32625f203d441802f7afb2ece3ac59",
+      "metadata": {
+        "article_id": "lfm3-liquid-ai-local-multimodal-models",
+        "content_hash": "0f764520f740e22a",
+        "excerpt": "Liquid AI LFM3：六款端侧模型怎么选，Mac 上能跑到哪一步？ Liquid AI 发布 LFM3 开放权重家族，六款约20亿参数模型共享一个底座，覆盖文本、视觉、音频、全模态与决策。本文逐项核对模型卡、上下文、语音范围和商业许可，解释三混合架构及 Mac 部署的版本要求，并保留本地文本测试中输出预算不足的失败记录，区分权重可下载、工具已支持与真实任务能力这三件不同的事。 Liquid AI LFM3 Local AI Multimodal Decision Models 六款 LFM3 分别解决什么问题？ 三混合架构为什么值得看？ 视频、1",
+        "language": "zh",
+        "tags": [
+          "Liquid AI",
+          "LFM3",
+          "Local AI",
+          "Multimodal",
+          "Decision Models"
+        ],
+        "title": "Liquid AI LFM3：六款端侧模型怎么选，Mac 上能跑到哪一步？",
+        "url": "/blog/lfm3-liquid-ai-local-multimodal-models/"
+      },
+      "dimensions": 1024
+    },
+    {
+      "id": "21f39c1a8fc52566bdd0dacd18ebf962f92bdc96914eba16",
+      "metadata": {
+        "article_id": "lfm3-liquid-ai-local-multimodal-models",
+        "content_hash": "440ee0e2e21398ba",
+        "excerpt": "Liquid AI LFM3: Six local models and a Mac smoke test Compare Liquid AI's six LFM3 models: modalities, context limits, license and Mac runtime support, with a local text test that exposes an output-budget pitfall. Liquid AI LFM3 Local AI Multimodal Decision Models Which LFM3 mode",
+        "language": "en",
+        "tags": [
+          "Liquid AI",
+          "LFM3",
+          "Local AI",
+          "Multimodal",
+          "Decision Models"
+        ],
+        "title": "Liquid AI LFM3: Six local models and a Mac smoke test",
+        "url": "/blog/lfm3-liquid-ai-local-multimodal-models/"
+      },
+      "dimensions": 1024
+    }
+  ],
+  "success": true
+}
