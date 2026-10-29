@@ -1,0 +1,5 @@
+cache explanation: last recorded build
+  command: cargo build --offline --target-dir /tmp/boxington-smoke/proof-qv8cgmx2/target-b
+  results: 4 compiler-query, 2 hit, 1 standard-input
+
+no cache misses were recorded

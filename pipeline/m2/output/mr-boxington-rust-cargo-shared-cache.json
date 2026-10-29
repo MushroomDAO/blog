@@ -1,0 +1,13 @@
+{
+  "title": "mbx：多个Rust工作区共享编译缓存",
+  "author": "Mycelium",
+  "digest": "实测跨路径缓存复用，说明增量编译、磁盘清理与并行构建的边界。",
+  "mediaId": "prCUE631thH1cmNLi42prPMbo0ISSteYnEdy4Ayuppwi2Ki2E1kuKp3wlCMWglX-",
+  "blogUrl": "https://blog.mushroom.cv/blog/mr-boxington-rust-cargo-shared-cache/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/mr-boxington-rust-cargo-shared-cache/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/jdx/mr-boxington"
+  ],
+  "publishedAt": "2026-10-29T09:18:16.132Z"
+}

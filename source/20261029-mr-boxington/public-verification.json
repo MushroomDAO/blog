@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-29T09:17:29.441197+00:00",
+  "articles": [
+    {
+      "slug": "mr-boxington-rust-cargo-shared-cache",
+      "url": "https://blog.mushroom.cv/blog/mr-boxington-rust-cargo-shared-cache/",
+      "title": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存",
+      "listRank": 6,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/mr-boxington-rust-cargo-shared-cache-banner.DO1h0fjA.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 91532
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/mr-boxington-rust-cargo-shared-cache-banner.DO1h0fjA_1Rr0pN.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 38418
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/mr-boxington-rust-cargo-shared-cache-fig-01.DY2BXtz6_jLGp7.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 22192
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/mr-boxington-rust-cargo-shared-cache-fig-02.CncRJnuV_1nDE4M.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 17626
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/mr-boxington-rust-cargo-shared-cache-fig-03.5F2x7MyD_BHFgu.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 23808
+        }
+      ]
+    }
+  ]
+}

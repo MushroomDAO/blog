@@ -1,0 +1,86 @@
+{
+  "checkedAt": "2026-10-29T09:20:22.683170+00:00",
+  "query": "mr boxington mbx Rust Cargo shared cache worktree 私有增量 编译产物",
+  "results": [
+    {
+      "article_id": "mr-boxington-rust-cargo-shared-cache",
+      "title": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存",
+      "url": "/blog/mr-boxington-rust-cargo-shared-cache/",
+      "language": "zh",
+      "excerpt": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存 mr boxington 的 mbx 为 Rust 项目复用 Cargo 编译产物，管理 target 目录并协调并行构建。本文核对安装与缓存原理，在 Mac 验证不同路径源码副本的命中、修改后的正确输出和清理预览，区分共享缓存、Cargo 新鲜度与私有增量状态，说明工作树、CI、磁盘预算及调试信息路径的使用边界。 Rust Cargo mr boxington 构建缓存 开发工具 mbx 怎样复用编译工作？ 共享缓存、增量状态与 target 是一回事吗？ 在 Mac 上怎样先试",
+      "score": 0.72189146
+    },
+    {
+      "article_id": "block-buzz-nostr-human-agent-workspace",
+      "title": "Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上",
+      "url": "/blog/block-buzz-nostr-human-agent-workspace/",
+      "language": "zh",
+      "excerpt": "Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上 Block（Jack Dorsey 旗下公司）2026年3月开源的 Buzz：人类和 AI Agent 在同一个 Nostr relay 上协作，每个操作都是加密签名的事件。7374 stars，Rust + Tauri + React，支持 Claude Code / Codex / Goose 直接接入。自托管，数据主权在你手里。 Nostr AI Agent 开源 自托管 协作工具 Rust Claude Code Block 一、它是什么 二、为什么是 Nost",
+      "score": 0.52733266
+    },
+    {
+      "article_id": "orion-core-rust-agent-harness-local-llm-teardown",
+      "title": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多",
+      "url": "/blog/orion-core-rust-agent-harness-local-llm-teardown/",
+      "language": "zh",
+      "excerpt": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多 orion-core 是从桌面应用 OrionPod 拆出的 Rust Agent harness（MIT，3 star，crates.io 下载 74 次）：提供工具调用循环、按整轮裁剪的上下文预算、10 种聊天模板和 15 种流式事件，但不带工具、沙箱、记忆和 MCP，现成后端只有一个 OpenAI 兼容 HTTP 客户端。我们在 M4 Mac mini 上接 mlx_lm.server + Qwen2.5-1.5B ",
+      "score": 0.5266611
+    },
+    {
+      "article_id": "mcp-rag-server-local-rag-claude-code-blueprint",
+      "title": "mcp-rag-server: A Minimal MCP + Local RAG Blueprint for Claude Code",
+      "url": "/blog/mcp-rag-server-local-rag-claude-code-blueprint/",
+      "language": "en",
+      "excerpt": "mcp-rag-server: A Minimal MCP + Local RAG Blueprint for Claude Code MMC1410001/mcp-rag-server is a 0-star, MIT-licensed minimal MCP + RAG server: local all-MiniLM-L6-v2 embeddings, persistent ChromaDB, five MCP tools. We read all of the code and ran it on a Mac mini: 39/39 tests ",
+      "score": 0.52563316
+    },
+    {
+      "article_id": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
+      "title": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
+      "url": "/blog/ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust/",
+      "language": "en",
+      "excerpt": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust akitaonrails/ai-memory is a Rust-based long-term memory solution for AI coding agents — 3,953 stars, MIT license. Core capability: lifecycle hooks auto-capture the essence of each Claude Code/Codex/Cursor session;",
+      "score": 0.5146687
+    },
+    {
+      "article_id": "openswarm-autonomous-ai-dev-team-claude-code-linear",
+      "title": "OpenSwarm：把 Claude Code + Codex 组成自主开发团队，从 Linear issue 到 PR 全自动",
+      "url": "/blog/openswarm-autonomous-ai-dev-team-claude-code-linear/",
+      "language": "zh",
+      "excerpt": "OpenSwarm：把 Claude Code + Codex 组成自主开发团队，从 Linear issue 到 PR 全自动 MIT 开源的 AI 开发团队编排器：从 Linear 拾取任务，Worker/Reviewer 对儿流水线，LanceDB 每仓库认知记忆，PR 自动驾驶，CI merge gate，SWE-bench Lite Hybrid 模式 3/3 解决。856 stars，TypeScript。 AI-agent open-source Claude-Code multi-agent developer-tools Linear ",
+      "score": 0.5129849
+    },
+    {
+      "article_id": "yuxi-self-hosted-knowledge-agent-rag-graph-multi-agent-mcp",
+      "title": "Yuxi 0.8 beta5：知识、协作与执行如何接成工作流？",
+      "url": "/blog/yuxi-self-hosted-knowledge-agent-rag-graph-multi-agent-mcp/",
+      "language": "zh",
+      "excerpt": "Yuxi 0.8 beta5：知识、协作与执行如何接成工作流？ Yuxi 0.8 beta5 把知识检索、多智能体协作、人工引导与文件交付接成企业工作流。本文沿用旧文章链接，核对官方预发布标签、Container 与 Cube 沙盒边界、知识 MCP 和公开 API，并记录新版 CLI 的15项源码测试及 npm 查询结果，说明 Mac 试用条件和旧版不可原地升级的限制。 Yuxi RAG 多智能体 MCP 自托管 Docker 它解决的是哪一类问题？ 0.8 最值得关注的变化是什么？ 团队权限与工具账号怎样管理？ 排队、引导和停止有何区别？ 知识 MC",
+      "score": 0.50899136
+    },
+    {
+      "article_id": "meshy-openbmb-async-rl-training-framework",
+      "title": "Every RL Role as a Service: OpenBMB Open-Sources Meshy, Where Sync and Fully-Async Differ by One Knob",
+      "url": "/blog/meshy-openbmb-async-rl-training-framework/",
+      "language": "en",
+      "excerpt": "Every RL Role as a Service: OpenBMB Open-Sources Meshy, Where Sync and Fully-Async Differ by One Knob Meshy is OpenBMB's open-source asynchronous RL training framework — and the engine behind MiniCPM5. It models inference, training and rollout as independent services communicatin",
+      "score": 0.50695115
+    },
+    {
+      "article_id": "memory-harness-local-first-programmable-auditable-long-term-memory",
+      "title": "Memory Harness: Local-First, Programmable & Auditable Long-Term Memory for AI Agents",
+      "url": "/blog/memory-harness-local-first-programmable-auditable-long-term-memory/",
+      "language": "en",
+      "excerpt": "Memory Harness: Local-First, Programmable & Auditable Long-Term Memory for AI Agents luoyif/memory-harness open-sources a six-layer auditable memory workspace (Evidence → Agent Asset), local hybrid RAG, 24 MCP tools, multi-AI collaboration with isolated drafts — all fully local, ",
+      "score": 0.5043188
+    },
+    {
+      "article_id": "ccteam-multi-agent-cross-vendor-orchestration",
+      "title": "ccteam：用 8 个 MCP 工具把 Claude、Codex、Grok、Kimi 编成一支真正的编程团队",
+      "url": "/blog/ccteam-multi-agent-cross-vendor-orchestration/",
+      "language": "zh",
+      "excerpt": "ccteam：用 8 个 MCP 工具把 Claude、Codex、Grok、Kimi 编成一支真正的编程团队 ccteam 是一个 Rust 写的守护进程，让你现有的编程 Agent 跨厂商协作——Claude 规划，Codex 苦干，Grok 快速回答，Kimi 批量便宜处理，Telegram/飞书/浏览器统一指挥，本地优先无云依赖。 Multi-Agent Claude Code Codex Grok Kimi MCP Agent编排 开源工具 Rust 团队协作 问题：你有五个优秀的编程 Agent，但它们互不认识 架构：一个守护进程，8 个 M",
+      "score": 0.5041859
+    }
+  ]
+}

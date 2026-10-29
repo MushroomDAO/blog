@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
+      "title": "ai-memory：让 AI 编程助手真正记住「上次做到哪了」，跨工具无缝交接，Rust 实现，Wiki 存 Git",
+      "url": "/blog/ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust/",
+      "language": "zh",
+      "excerpt": "ai-memory：让 AI 编程助手真正记住「上次做到哪了」，跨工具无缝交接，Rust 实现，Wiki 存 Git akitaonrails/ai-memory 是一个 Rust 实现的 AI 编程助手长期记忆方案，3953 stars，MIT 许可证。核心能力：用生命周期 Hook 自动捕获每次 Claude Code/Codex/Cursor 等会话的精华，会话结束时编译为结构化 Wiki 页面存入 Git 仓库（纯 Markdown，可 grep、可 Obsidian 同步）；下次无论用哪个工具打开同一目录，都能收到「上次做到哪里」的交接块。支持",
+      "score": 0.5757851
+    },
+    {
+      "article_id": "orion-core-rust-agent-harness-local-llm-teardown",
+      "title": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多",
+      "url": "/blog/orion-core-rust-agent-harness-local-llm-teardown/",
+      "language": "zh",
+      "excerpt": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多 orion-core 是从桌面应用 OrionPod 拆出的 Rust Agent harness（MIT，3 star，crates.io 下载 74 次）：提供工具调用循环、按整轮裁剪的上下文预算、10 种聊天模板和 15 种流式事件，但不带工具、沙箱、记忆和 MCP，现成后端只有一个 OpenAI 兼容 HTTP 客户端。我们在 M4 Mac mini 上接 mlx_lm.server + Qwen2.5-1.5B ",
+      "score": 0.5560767
+    },
+    {
+      "article_id": "ra-jit-blaze-rust-live-builds",
+      "title": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界",
+      "url": "/blog/ra-jit-blaze-rust-live-builds/",
+      "language": "zh",
+      "excerpt": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界 ra-jit 已更名为 blaze。本文核对官方暖构建基准、常驻编译架构、Apple Silicon 与 Linux 支持，以及 Rust 1.99.0、内存和借用检查限制，并在 M4 Mac 上验证函数修改与测试流程，解释为何局部补丁延迟不能等同于完整构建或画面更新速度，也不能承诺每个项目都快 92 倍。 Rust ra-jit blaze 编译器 热更新 开发工具 blaze 为什么能省掉修改后的大量等待？ “92 倍”和“10–24 倍”应该怎样看？ 毫秒构建与“不重启热更新",
+      "score": 0.54803556
+    },
+    {
+      "article_id": "grok-build-xai-coding-agent-rust-tui-fullscreen-acp",
+      "title": "Grok Build：xAI 开源 Rust 编码 Agent，全屏 TUI + ACP 协议",
+      "url": "/blog/grok-build-xai-coding-agent-rust-tui-fullscreen-acp/",
+      "language": "zh",
+      "excerpt": "Grok Build：xAI 开源 Rust 编码 Agent，全屏 TUI + ACP 协议 xai-org/grok-build ⭐26283，SpaceXAI（xAI）开源的终端编码 Agent，Rust 实现，全屏鼠标交互 TUI，支持文件编辑/命令执行/网页搜索/长任务，交互/无头/编辑器嵌入三种模式，ACP 协议，MCP/Skills/插件/沙盒，Apache 2.0。 AI coding agent Rust TUI xAI open source MCP ACP terminal coding tools xAI 把自己的编码 Agent",
+      "score": 0.5466772
+    },
+    {
+      "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+      "title": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时",
+      "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+      "language": "zh",
+      "excerpt": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时 zavora-ai 社区维护的 ADK-Rust v2.2.0——不是 Google 官方项目，但把 Agent 运行时拆成 43 个可独立发布的 crate，按需引用。Type-safe、全异步、568 μs agent loop 开销，支持 Gemini/OpenAI/Anthropic/Ollama，含 graph 工作流、durable resume、realtime 语音、adk-skill 解析。本文做一次工程拆解。 rust agent-runtim",
+      "score": 0.5430538
+    },
+    {
+      "article_id": "block-buzz-nostr-human-agent-workspace",
+      "title": "Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上",
+      "url": "/blog/block-buzz-nostr-human-agent-workspace/",
+      "language": "zh",
+      "excerpt": "Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上 Block（Jack Dorsey 旗下公司）2026年3月开源的 Buzz：人类和 AI Agent 在同一个 Nostr relay 上协作，每个操作都是加密签名的事件。7374 stars，Rust + Tauri + React，支持 Claude Code / Codex / Goose 直接接入。自托管，数据主权在你手里。 Nostr AI Agent 开源 自托管 协作工具 Rust Claude Code Block 一、它是什么 二、为什么是 Nost",
+      "score": 0.54301506
+    },
+    {
+      "article_id": "roboharness-v2-workspace",
+      "title": "RoboHarness V2：让机器人工作空间成为 Agent 的控制台",
+      "url": "/blog/roboharness-v2-workspace/",
+      "language": "zh",
+      "excerpt": "RoboHarness V2：让机器人工作空间成为 Agent 的控制台 RoboHarness V2 将机器人构型、关节手册、实时感知、Python 动作工具和任务技能放进同一个工作目录，让 coding agent 读代码、改工具并根据新观测纠错。本文结合官方设计说明与固定版本源码，解析 R1 Pro、ARX X5 的控制契约、仿真部署路径、本机边界测试及真机迁移限制，并区分 V1 论文成绩与 V2 尚待公开的结果。 RoboHarness Robotics Coding Agent Embodied AI Open Source RoboHarne",
+      "score": 0.5424771
+    },
+    {
+      "article_id": "ccteam-multi-agent-cross-vendor-orchestration",
+      "title": "ccteam：用 8 个 MCP 工具把 Claude、Codex、Grok、Kimi 编成一支真正的编程团队",
+      "url": "/blog/ccteam-multi-agent-cross-vendor-orchestration/",
+      "language": "zh",
+      "excerpt": "ccteam：用 8 个 MCP 工具把 Claude、Codex、Grok、Kimi 编成一支真正的编程团队 ccteam 是一个 Rust 写的守护进程，让你现有的编程 Agent 跨厂商协作——Claude 规划，Codex 苦干，Grok 快速回答，Kimi 批量便宜处理，Telegram/飞书/浏览器统一指挥，本地优先无云依赖。 Multi-Agent Claude Code Codex Grok Kimi MCP Agent编排 开源工具 Rust 团队协作 问题：你有五个优秀的编程 Agent，但它们互不认识 架构：一个守护进程，8 个 M",
+      "score": 0.54055923
+    },
+    {
+      "article_id": "tare-lossless-context-compression-cache-correct-output-aware",
+      "title": "tare：压缩输入而不是改输出的省 token 方案，无损为默认，还专门绕开前缀缓存",
+      "url": "/blog/tare-lossless-context-compression-cache-correct-output-aware/",
+      "language": "zh",
+      "excerpt": "tare：压缩输入而不是改输出的省 token 方案，无损为默认，还专门绕开前缀缓存 Rust 写的 LLM 上下文压缩工具，MIT，proxy / CLI / MCP / 库四种形态。三条别家没有的约束：无损为默认（有损手段必须显式开启）、cache-correct（识别前缀缓存断点，只压动态后缀，不让一个改动的字节作废 10 倍缓存折扣）、output-aware（压过头模型会用更啰嗦的输出补偿，它监测输出 token 尖峰并自动降低压缩力度）。实测 43.8–73.3%，语料和复现脚本都提交在仓库里。9 个 crates、228 个测试。 上下文压",
+      "score": 0.53612936
+    },
+    {
+      "article_id": "cloudflare-computer-agent-runtime-isolate-container",
+      "title": "@cloudflare/computer：给每个 Agent 一台自己的电脑",
+      "url": "/blog/cloudflare-computer-agent-runtime-isolate-container/",
+      "language": "zh",
+      "excerpt": "@cloudflare/computer：给每个 Agent 一台自己的电脑 Cloudflare 在 Agents Week 发布 @cloudflare/computer：让 Agent 在同一个虚拟文件系统里动态切换 Isolate（快、廉价）和 Container（完整 Linux），把 Durable Object 的水平无限扩展和容器的垂直能力合二为一。早期预览已开源，给 AI 编程/任务 Agent 提供新的计算基础。 CloudflareAgents Agent架构 Cloudflare Workers 容器 Isolate AI基础设施",
+      "score": 0.5359683
+    }
+  ]
+}
