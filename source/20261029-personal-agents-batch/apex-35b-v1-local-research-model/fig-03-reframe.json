@@ -1,0 +1,13 @@
+{
+  "reason": "Initial final image had clipped lower caption; replaced through image_gen edit. Earlier worker provenance describes initial version only.",
+  "reference": "src/assets/images/apex-35b-v1-local-research-model-fig-03.png",
+  "editedOriginal": "fig-03-reframed-original.png",
+  "toolOutput": "/Users/jason/.codex/generated_images/01a12967-1164-7de1-9d32-82532d99429b/exec-101fde3d-1de6-4787-8e4a-3dce22a526d9.png",
+  "prompt": "Preserve suitcase,mushroom,labels权重缓存工作区系统;removeclippedbottomcaptionandbracket,shrinkforwhitemargin",
+  "sha256": "0b3775c975fc85a54592377ffec0e44a8a0155b624e005d8e1223b10bef64ef6",
+  "bytes": 28085,
+  "dimensions": [
+    1200,
+    675
+  ]
+}

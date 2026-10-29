@@ -1,0 +1,83 @@
+{
+  "checkedAt": "2026-10-29T04:10:08.377Z",
+  "drafts": [
+    {
+      "slug": "personalagenteval-personal-agent-benchmark",
+      "mediaId": "prCUE631thH1cmNLi42prHHzEum-EIMMefEaaL9u0JjXgpseTWwMduypB2BmIYkp",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "948a804aa54b29840c56c4481ee7f5dfdb57e8eccb983ebcccb523bbfbc0ef9f",
+      "remoteTextHash": "948a804aa54b29840c56c4481ee7f5dfdb57e8eccb983ebcccb523bbfbc0ef9f",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "4ab8f9c663badfbeb11455571689b043419028596ab31940cee5ebea7a8607a3",
+      "remoteContentHash": "1257080f01065b79911f3daf1e69e39ae3ea87f3cdd6b50b0d032806ca6352da"
+    },
+    {
+      "slug": "hiroute-local-model-routing",
+      "mediaId": "prCUE631thH1cmNLi42prNaq8GIm8ooFufeIWT_57u0Eia5UdMJr3z5CZw34_P8r",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "424d113e4011cda72774d68c8a226f7942ba197c6f5e586c71764dcee519f178",
+      "remoteTextHash": "424d113e4011cda72774d68c8a226f7942ba197c6f5e586c71764dcee519f178",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "adedcaf3bf050e527cd6d22d12c5bec3e2988730787d352c8b533ff14bc36d29",
+      "remoteContentHash": "2d2f8e4f6cb1322005d9c75c224e71f81dca9aa8ac7fb296b72d4da413a066b6"
+    },
+    {
+      "slug": "apex-35b-v1-local-research-model",
+      "mediaId": "prCUE631thH1cmNLi42prHpej0FLfNlYnTfKDygkZg2VNAvEoflRLX2nLEA0ZrIb",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "a7fd36d190b49e67dca5f227e7b657ff0d0eaefb53b8f6b2035e17e35012818d",
+      "remoteTextHash": "a7fd36d190b49e67dca5f227e7b657ff0d0eaefb53b8f6b2035e17e35012818d",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "f2a4795a37b98f490cfb97eb15b29b1339103a447227fb23aa9b93abaf0879a0",
+      "remoteContentHash": "4ceff18598f831814c74fe1420f26001d589a81ac29f96d2b5c8770f10da4322"
+    }
+  ]
+}

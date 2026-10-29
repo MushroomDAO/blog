@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "personalagenteval-personal-agent-benchmark",
+    "query": "PersonalAgentEval 个人偏好 历史账户 共同任务152",
+    "matches": [
+      {
+        "article_id": "personalagenteval-personal-agent-benchmark",
+        "title": "PersonalAgentEval：个人助手会执行，还要懂用户",
+        "url": "/blog/personalagenteval-personal-agent-benchmark/",
+        "language": "zh",
+        "excerpt": "PersonalAgentEval：个人助手会执行，还要懂用户 PersonalAgentEval 将个人偏好、历史账户与跨领域事务放进同一评测环境，关注助手能否主动发现隐藏约束并完成任务。本文核对公开榜单的共同样本、历史长度和评分方法，解释为什么执行成功不等于理解用户，并提出个人助手团队可采用的验收与回归方案，同时区分公开结果和完整开源评测套件。 PersonalAgentEval MatrAIx AI-agents evaluation personalization 为什么“替用户订好餐厅”仍可能失败？ 公开数据到底测了多少？ 榜单成绩该怎样读？ ",
+        "score": 0.6422375
+      }
+    ]
+  },
+  {
+    "slug": "hiroute-local-model-routing",
+    "query": "HiRoute 本地路由 新任务 工具续接 候选故障转移",
+    "matches": [
+      {
+        "article_id": "hiroute-local-model-routing",
+        "title": "HiRoute：让本地路由器按任务选择模型",
+        "url": "/blog/hiroute-local-model-routing/",
+        "language": "zh",
+        "excerpt": "HiRoute：让本地路由器按任务选择模型 HiRoute 是面向 AI 编程助手的本地模型路由器，支持普通与主力模型组、按难度判断、任务分支、有限故障转移和会话审计。本文核对它如何区分新用户任务与工具续接、决策服务与执行模型、缓存与成本，以及 macOS 和 Linux 安装条件，并披露本地 Hermes 适配测试的通过与失败范围。 HiRoute model-routing coding-agents Rust cost-optimization local-first 一次长任务里，哪些步骤值得换模型？ 难度、表现评分与执行模型怎样分工？ 故障转移",
+        "score": 0.72279966
+      }
+    ]
+  },
+  {
+    "slug": "apex-35b-v1-local-research-model",
+    "query": "Apex 35B 量化20.22GiB Mac32GB 研究工具调用",
+    "matches": [
+      {
+        "article_id": "apex-35b-v1-local-research-model",
+        "title": "Apex-35B：科研编程模型的能力、部署与 Mac 内存账",
+        "url": "/blog/apex-35b-v1-local-research-model/",
+        "language": "zh",
+        "excerpt": "Apex-35B：科研编程模型的能力、部署与 Mac 内存账 Apex-35B-V1.0 基于 Qwen3.6-35B-A3B 继续训练，提供 35B 总参数、约 3B 激活与 262K 共享上下文，面向编程、工具调用和科研工作流。本文核对官方评测、递归自改进的实际含义、BF16 与 GGUF 下载、聊天模板和部署细节，并根据真实量化文件大小分析 Mac 内存条件，明确本地未运行模型。 Apex-35B MoE local-LLM research-agents Apple-Silicon open-weights 所谓科研能力，具体体现在哪里？ 评测表",
+        "score": 0.7013639
+      }
+    ]
+  }
+]

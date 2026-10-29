@@ -1,0 +1,15 @@
+checking 3 article(s) (personalagenteval-personal-agent-benchmark, hiroute-local-model-routing, apex-35b-v1-local-research-model)
+diff: 6 changed/new, 0 unchanged (wrote /Users/jason/Dev/mycelium/blog/semantic-search/eval/incremental-index-plan.json)
+  + personalagenteval-personal-agent-benchmark [zh]
+  + personalagenteval-personal-agent-benchmark [en]
+  + hiroute-local-model-routing [zh]
+  + hiroute-local-model-routing [en]
+  + apex-35b-v1-local-research-model [zh]
+  + apex-35b-v1-local-research-model [en]
+embedding 6 changed record(s) (calls Workers AI)...
+  verifying batch order on 5 samples...
+  batch order verified OK
+  embedding incremental 1-6/6...
+TARGET: account=7bf23342f21baa5ebfc7bc7b74f5a1f2 index=blog-search-v1 vectors=6
+  upserted 1-6/6: True
+updated manifest for 3 article(s)
