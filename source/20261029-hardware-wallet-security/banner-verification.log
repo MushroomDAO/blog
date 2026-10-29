@@ -1,0 +1,14 @@
+=== [adopt-banner] hardware-wallet-security-2026-claim-audit ← 1 source image(s) → src/assets/images/hardware-wallet-security-2026-claim-audit-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← https://imagedelivery.net/dvYzklbs_b5YaLRtI16Mnw/6a24ec1a-41b2-4209-822f-d7a69fcadc00/public
+=== [adopt-banner] done: src/assets/images/hardware-wallet-security-2026-claim-audit-banner.jpg (1200x630, 93824B) ===
+=== [verify-banner] src/assets/images/hardware-wallet-security-2026-claim-audit-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=https://imagedelivery.net/dvYzklbs_b5YaLRtI16Mnw/6a24ec1a-41b2-4209-822f-d7a69fcadc00/public
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 93824B (< 99000B)
+  WARN text: 2 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: secured with | TROPIC01
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/hardware-wallet-security-2026-claim-audit-banner.jpg ===
+PATH: src/assets/images/hardware-wallet-security-2026-claim-audit-banner.jpg

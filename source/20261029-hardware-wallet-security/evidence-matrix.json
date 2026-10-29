@@ -1,0 +1,109 @@
+{
+  "checkedAt": "2026-10-29T10:47:10.315665+00:00",
+  "method": "Public-document research; no hardware attack reproduction or independent loss audit",
+  "evidence": [
+    {
+      "entity": "Ledger",
+      "date": "2026-01",
+      "class": "customer order data",
+      "url": "https://www.theregister.com/security/2026/01/06/ledger-confirms-customer-data-lifted-after-global-e-snafu/2443622",
+      "limits": "Reporting quotes Ledger and Global-e; no seed compromise established"
+    },
+    {
+      "entity": "Ledger / CryptoBilis",
+      "date": "2026-10",
+      "class": "physical supply-chain implant",
+      "url": "https://therecord.media/ledger-cryptocurrency-wallet-implant-theft",
+      "limits": "Reported Ledger confirmation; total loss unconfirmed; not evidence of manufacturer intent"
+    },
+    {
+      "entity": "COLDCARD",
+      "date": "2026-07; living advisory",
+      "class": "weak seed entropy / acknowledged theft",
+      "url": "https://coldcard.com/security/status",
+      "limits": "Firmware remediation is distinct from existing affected-seed migration"
+    },
+    {
+      "entity": "Trezor Safe7",
+      "date": "2026-06",
+      "class": "chip-level physical research",
+      "url": "https://trezor.io/blog/news/Trezor-response-TROPIC01-chip-disclosure-no-impact-to-your-funds",
+      "limits": "Vendor response claims additional device layers; not independent proof of whole-wallet safety"
+    },
+    {
+      "entity": "Trezor / ShipMonk",
+      "date": "2026-08-13; updated09-04",
+      "class": "customer shipping data",
+      "url": "https://trezor.io/blog/news/recent-customer-data-exposed-in-shipping-provider-incident",
+      "limits": "80689 customers; contact records distinct from keys"
+    },
+    {
+      "entity": "Tangem",
+      "date": "2026-07-09",
+      "class": "physical laser fault injection research",
+      "url": "https://donjon.ledger.com/blog/bypassing-tangem-card-security-with-laser-attack/",
+      "limits": "Donjon is competitor Ledger laboratory; lab prerequisites; no generalized real-world loss claim"
+    },
+    {
+      "entity": "Tangem response",
+      "date": "2026-07-09",
+      "class": "vendor response",
+      "url": "https://tangem.com/en-GB/blog/post/lfi-response/",
+      "limits": "Practical barriers and no known related theft are vendor claims"
+    },
+    {
+      "entity": "BitBox",
+      "date": "2026-08-17",
+      "class": "conditional firmware / bootloader / Silent Payments issues",
+      "url": "https://blog.bitbox.swiss/en/bitbox-08-2026-dixence-update/",
+      "limits": "Read via web; native403;9.26.5 fixed August batch, existing seeds unaffected per vendor"
+    },
+    {
+      "entity": "SafePal",
+      "date": "2026-08",
+      "class": "order-tracking authorization flaw",
+      "url": "https://safepal.com/es/blog/security-update",
+      "limits": "39798 contact/order records; not demonstrated wallet browser-extension breach"
+    },
+    {
+      "entity": "Trezor / Brevo",
+      "date": "2026-09",
+      "class": "email data and phishing",
+      "url": "https://trezor.io/blog/news/security-incident-at-brevo-our-third-party-email-provider",
+      "limits": "347149 subscriber email addresses exported; not stolen wallets"
+    },
+    {
+      "entity": "Brevo",
+      "date": "2026-09",
+      "class": "SSO incident postmortem",
+      "url": "https://status.brevo.com/incidents/01M266V1CZKJQNGZRNEGFD5CQE/write-up",
+      "limits": "Legitimate mail infrastructure does not establish benign message intent"
+    },
+    {
+      "entity": "Keystone",
+      "date": "2026-10-26",
+      "class": "customer data and WebAuth authenticity-key exposure",
+      "url": "https://x.com/KeystoneWallet/status/2114719318722404578",
+      "limits": "25964 buyer records; unpaid records not necessarily unique people; authenticity key not user signing key; plans not independently verified"
+    },
+    {
+      "entity": "Ledger Recover",
+      "date": "2023-05-18; updated2026-04-09",
+      "class": "optional recovery trust boundary",
+      "url": "https://www.ledger.com/academy/what-is-ledger-recover",
+      "limits": "Disclosed optional service is not proof of covert malicious backdoor"
+    }
+  ],
+  "fetchLimits": [
+    "Ledger support pages returned JS shells with no readable body; article relies on separately read reporting for incident facts",
+    "BitBox native fetch403; read via web backend",
+    "Keystone official X statement fetched natively; web X access can403"
+  ],
+  "imageCorrections": [
+    "Safe7 misattributed to SafePal",
+    "future November/December rows as of October29",
+    "loss sum 43+111+87=241 million, not claimed350 million; none independently reconciled",
+    "mixes PII breaches, physical PoCs and actual fund theft",
+    "Trezor ShipMonk August/September not March; Ledger Global-e January not September"
+  ]
+}
