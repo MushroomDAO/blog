@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-10-29T10:59:31.281459+00:00",
+  "repo": "UnderleveledBuilder/awesome-short-drama-skills",
+  "url": "https://github.com/UnderleveledBuilder/awesome-short-drama-skills",
+  "commit": "4c3ba567a35325bd9041858d56116fc4ebbcdc43",
+  "license": "CC0-1.0",
+  "metadataDate": "2026-10-26",
+  "items": 99,
+  "groups": {
+    "pipeline": 23,
+    "writing": 10,
+    "visual": 39,
+    "source": 3,
+    "craft": 5,
+    "companion": 3,
+    "platform": 16
+  },
+  "formats": {
+    "skill": 81,
+    "prompts": 2,
+    "app": 16
+  },
+  "liveDataItems": 99,
+  "starsSnapshot": 1209,
+  "authorVerified": "GitHub UnderleveledBuilder, profile name Underleveled Builder; README X @UnderleveledDev; user wording tao not independently verified",
+  "fetch": {
+    "agentReach": "SKILL.md and executable not found after searches; doctor unavailable",
+    "jinaReader": "HTTP403",
+    "githubConnector": "README,finder,eval documentation fetched successfully",
+    "gitClone": "pinned source clone successful",
+    "officialSite": "HTML and data.json successful"
+  },
+  "savedImages": [
+    {
+      "url": "https://shortdramaskills.com/static/og.png",
+      "path": "/Users/jason/.heinu1-bot/media/short-drama-skills-official-og-20261029.png",
+      "sha256": "25bb6a48fe6cdfbd409f9ff5a0b7301a09fc9152712a0b3b6a92af3cbfb44664",
+      "note": "Official social card is text-dominated and stale82+14; retained for KB, not used as banner"
+    }
+  ],
+  "tests": {
+    "python": "3.12.14; default clone directory python lacked tomllib, corrected with explicit3.12",
+    "validate": "passed99projects4stacks",
+    "readmeCheck": "passed",
+    "round1": {
+      "files": 636,
+      "mismatches": 0,
+      "opusPrompts": 120,
+      "gptPrompts": 121
+    },
+    "round2": {
+      "files": 1011,
+      "mismatches": 0,
+      "opusPrompts": 397,
+      "gptPrompts": 397
+    }
+  },
+  "limits": [
+    "No skills installed globally",
+    "No new upstream contestant scripts, judging responses or videos generated; publication illustration/embedding steps are separate",
+    "Checks establish artifact consistency, not quality or real-world audience retention"
+  ]
+}

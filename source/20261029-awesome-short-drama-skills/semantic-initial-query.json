@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-29T11:11:20.807365+00:00",
+  "query": "Awesome Short Drama Skills selector catalogue adaptation script storyboard public evaluation",
+  "matched": false,
+  "hits": [],
+  "response": {
+    "results": [
+      {
+        "article_id": "awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt",
+        "title": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引",
+        "url": "/blog/awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt/",
+        "language": "zh",
+        "excerpt": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引 Agents 222 个、Instructions 193 个、Skills 416 个、Plugins 100 个——这套分类本身比清单更值得看：agent 是接 MCP 的专门角色，instruction 是按文件模式自动生效的编码规范，skill 是自包含带资源的文件夹，plugin 是打包好的组合。另一个值得抄的做法是 llms.txt：一份 941 行、308KB 的机器可读索引，专门给 AI agent 读，让它自己找该用哪个资源。",
+        "score": 0.51576704
+      },
+      {
+        "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+        "title": "\"Don't Submit Skills You Created Three Hours Ago\": A Cross-Vendor Curated List and Its Four Quality Criteria",
+        "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+        "language": "en",
+        "excerpt": "\"Don't Submit Skills You Created Three Hours Ago\": A Cross-Vendor Curated List and Its Four Quality Criteria A hand-curated list of 1,497 agent skills — 33.8k stars, MIT, explicitly billed as hand-picked, not AI-slop generated. Two things make it genuinely useful: a table of skil",
+        "score": 0.5087523
+      },
+      {
+        "article_id": "jakub-krehel-interface-skills",
+        "title": "Jakub Krehel Teardown: SVG Diagrams and 14 Interface Skills",
+        "url": "/blog/jakub-krehel-interface-skills/",
+        "language": "en",
+        "excerpt": "Jakub Krehel Teardown: SVG Diagrams and 14 Interface Skills Explore Jakub Krehel’s teardown skill and 14 interface skills, with an offline diagram demo, verified SVG and PNG exports, editable colors and explicit limits. Agent Skills 界面设计 设计工程 无障碍 Codex Claude Code What does the i",
+        "score": 0.4988779
+      },
+      {
+        "article_id": "xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills",
+        "title": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过",
+        "url": "/blog/xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills/",
+        "language": "zh",
+        "excerpt": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过 B1lli/xhs-favorites-distiller，Apache 2.0，Python 3.10+，把小红书（或微信）收藏里的方法蒸馏成可安装的 Agent skill。核心机制：价值筛选 + 消融测试 + 自然触发验证，未经证实的候选不进入宿主发现目录。消融实验显示去掉「自然触发」要求后，3/3 案例出现提前激活；全流程测试 24/24 正确通过。 open-source agent-skills xiaohongshu ",
+        "score": 0.4900705
+      },
+      {
+        "article_id": "anthropic-plugin-marketplaces-four-repos-eli5-minimal-skill",
+        "title": "A Five-Line Skill, and Anthropic's Four Easily-Confused Plugin Repositories",
+        "url": "/blog/anthropic-plugin-marketplaces-four-repos-eli5-minimal-skill/",
+        "language": "en",
+        "excerpt": "A Five-Line Skill, and Anthropic's Four Easily-Confused Plugin Repositories A widely shared claim: 'Anthropic released ELI5, a Claude Code Skill its own staff use constantly.' Checking the primary source: the skill exists, but not in the official skills repository — it lives in t",
+        "score": 0.48966187
+      },
+      {
+        "article_id": "agent-skills-open-standard-progressive-disclosure-anthropic",
+        "title": "Agent Skills: The Open Standard Quietly Tying Together Several Projects We Covered Today",
+        "url": "/blog/agent-skills-open-standard-progressive-disclosure-anthropic/",
+        "language": "en",
+        "excerpt": "Agent Skills: The Open Standard Quietly Tying Together Several Projects We Covered Today A deep dive into Agent Skills, an open standard: a SKILL.md file (name/description metadata plus instructions) with optional scripts, reference docs, and templates makes a portable skill pack",
+        "score": 0.48959398
+      },
+      {
+        "article_id": "video-shotcraft-claude-code-remotion-cinematic-product-videos",
+        "title": "video-shotcraft: Let an AI Agent Produce Cinema-Grade Product Films",
+        "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/",
+        "language": "en",
+        "excerpt": "video-shotcraft: Let an AI Agent Produce Cinema-Grade Product Films Vincentwei1021's open-source Claude Code/Codex agent video production skill, 3832 stars. Includes 104 shot recipe cards, 161 motion style previews, complete Remotion template Ink Press (36.2s/1920×1080/30fps), 14",
+        "score": 0.48922312
+      },
+      {
+        "article_id": "cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice",
+        "title": "ClipTalk：用自然语言剪视频，VLM + 24 个 Skill 驱动的 Agentic 视频编辑系统",
+        "url": "/blog/cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice/",
+        "language": "zh",
+        "excerpt": "ClipTalk：用自然语言剪视频，VLM + 24 个 Skill 驱动的 Agentic 视频编辑系统 非商业自定义许可，126 stars。三层架构：Python FastAPI + Node Pi Agent + 浏览器。24 个 SKILL.md 技能，VLM 理解画面，本地 SenseVoice/TalkNet/SFace/YOLOX 识别人脸/声纹/活跃发言人，FFmpeg 执行剪辑。6 步审批门禁，V2 算法比基线慢 14s。仅支持 Linux x86-64/WSL2，不支持 macOS/ARM。 video-editing agent ",
+        "score": 0.48918205
+      },
+      {
+        "article_id": "pstack-engineering-workflow",
+        "title": "pstack: Investigate, Build, Verify, Keep Context",
+        "url": "/blog/pstack-engineering-workflow/",
+        "language": "en",
+        "excerpt": "pstack: Investigate, Build, Verify, Keep Context A practical review of Lauren Tan's pstack: verified skill counts, task playbooks, real behavior checks, Cursor and Claude Code setup, and team adoption limits. pstack Lauren Tan AI Agent 工程工作流 Cursor Is the current count 54 or 58? ",
+        "score": 0.48914883
+      },
+      {
+        "article_id": "alibaba-skill-up-agent-skill-eval-evolution",
+        "title": "alibaba/skill-up：Agent Skill 的评估与自动进化闭环——Eval + 自修复一键跑通",
+        "url": "/blog/alibaba-skill-up-agent-skill-eval-evolution/",
+        "language": "zh",
+        "excerpt": "alibaba/skill-up：Agent Skill 的评估与自动进化闭环——Eval + 自修复一键跑通 alibaba/skill-up，1,031 stars，Apache-2.0，Go。阿里巴巴出品的 Agent Skill 评估与进化工具，4 个月 1000+ stars。声明式 YAML 测试用例 + rule/script/agent 三种 judge 策略 + skill-upper 自动读取失败报告修复 Skill，形成 Eval → 失败分析 → 自动修复 → 再 Eval 的闭环。支持 Claude Code、Codex、Qwe",
+        "score": 0.48682004
+      }
+    ]
+  }
+}

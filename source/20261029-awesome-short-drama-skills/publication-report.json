@@ -1,0 +1,92 @@
+{
+  "slug": "awesome-short-drama-skills-guide",
+  "blog": {
+    "checkedAt": "2026-10-29T11:10:29.220708+00:00",
+    "articles": [
+      {
+        "slug": "awesome-short-drama-skills-guide",
+        "url": "https://blog.mushroom.cv/blog/awesome-short-drama-skills-guide/",
+        "title": "Awesome Short Drama Skills：83 个短剧技能项目怎么选？",
+        "listRank": 3,
+        "carouselRank": 1,
+        "images": [
+          {
+            "url": "https://blog.mushroom.cv/_astro/awesome-short-drama-skills-guide-banner.CAV-DlTj.jpg",
+            "status": 200,
+            "contentType": "image/jpeg",
+            "bytes": 96356
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/awesome-short-drama-skills-guide-banner.CAV-DlTj_rGe1c.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 80680
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/awesome-short-drama-skills-guide-fig-01.aL3FYWQM_1HCpBq.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 21182
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/awesome-short-drama-skills-guide-fig-02.D1BsfpEp_1ONe7X.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 21520
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/awesome-short-drama-skills-guide-fig-03.eGn1aBqd_19oF0A.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 25484
+          }
+        ]
+      }
+    ]
+  },
+  "wechat": {
+    "checkedAt": "2026-10-29T11:11:18.639Z",
+    "drafts": [
+      {
+        "slug": "awesome-short-drama-skills-guide",
+        "mediaId": "prCUE631thH1cmNLi42prPw2HCc35Gx5170C_z5QkZCeh0AhQUnSlWPhFtiKQ7Vv",
+        "titleMatches": true,
+        "authorMatches": true,
+        "digestMatches": true,
+        "htmlExact": false,
+        "fullTextMatches": true,
+        "imageIdentitiesMatch": true,
+        "imageCount": 3,
+        "localTextHash": "22b00af67f060ccf264f0357bb1573ee67d34aea393342f633301508b0e1b5d6",
+        "remoteTextHash": "22b00af67f060ccf264f0357bb1573ee67d34aea393342f633301508b0e1b5d6",
+        "platformRewrites": [
+          "external anchor wrappers removed",
+          "numeric entity escaping",
+          "img src converted to data-src and CDN resolution 0 to640"
+        ],
+        "canonicalInBody": false,
+        "copyrightPresent": true,
+        "coverMatches": true,
+        "needOpenComment": 1,
+        "onlyFansComment": 0,
+        "contentSourceUrl": "https://blog.mushroom.cv/blog/awesome-short-drama-skills-guide/",
+        "localContentHash": "72b9c6815fe70d9ad8e000e37bae269f53cfca90997abca3885c879bb37e6df3",
+        "remoteContentHash": "52673f159ec6b47d011c3a937b79b19f0047ec154a1471a908eb0169c06fde02"
+      }
+    ]
+  },
+  "semantic": {
+    "vectorsUpserted": 2,
+    "liveMatched": true,
+    "language": "zh",
+    "score": 0.7729342
+  },
+  "sourceFetch": "agent-reach unavailable/Jina403;GitHubconnector+clone+officialsite/dataJSONsuccessful",
+  "savedFiles": [
+    "/Users/jason/.heinu1-bot/media/short-drama-skills-official-og-20261029.png"
+  ],
+  "deployment": "https://74f11bf3.blog-mushroom.pages.dev",
+  "build": "pnpm build passed;5 frozen inputhashes unchanged",
+  "dedup": "canonical source URL/entity clear;13draftsread;publishedAPI48001unavailable;noexistingmatch",
+  "duplicatesCreated": false
+}
