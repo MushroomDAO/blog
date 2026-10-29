@@ -1,0 +1,27 @@
+? Verifying lockfile against supply-chain policies (151 entries)...
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +91
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 91, reused 41, downloaded 42, added 82
+Progress: resolved 91, reused 41, downloaded 49, added 90
+✓ Lockfile passes supply-chain policies (151 entries in 2.3s)
+Progress: resolved 91, reused 41, downloaded 50, added 91, done
+
+dependencies:
++ @tauri-apps/api 2.12.4
++ lucide-vue-next 0.468.0
++ vue 3.5.44
++ zod 3.25.76
+
+devDependencies:
++ @tauri-apps/cli 2.12.4
++ @types/node 22.20.5
++ @vitejs/plugin-vue 6.0.10
++ prettier 3.6.2
++ typescript 5.9.3
++ vite 7.3.7
++ vitest 3.2.7
++ vue-tsc 3.3.13
+
+Done in 3.2s using pnpm v11.8.0
