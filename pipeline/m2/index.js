@@ -39,6 +39,8 @@ async function publish(markdownFile, options = {}) {
     console.error(`❌ File not found: ${markdownFile}`);
     process.exit(1);
   }
+  const baseName = path.basename(markdownFile, '.md');
+  const blogUrl = `https://blog.mushroom.cv/blog/${baseName}/`;
   
   // 加载配置
   console.log('[1/5] Loading config...');
@@ -97,6 +99,7 @@ async function publish(markdownFile, options = {}) {
       author: author,
       digest: digest,
       content: result.html,
+      sourceUrl: blogUrl,
       thumbMediaId: thumbMediaId,
       needOpenComment: true,
       onlyFansCanComment: false,
@@ -109,8 +112,6 @@ async function publish(markdownFile, options = {}) {
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
-    
-    const baseName = path.basename(markdownFile, '.md');
     
     // 保存 HTML
     fs.writeFileSync(
@@ -140,6 +141,8 @@ async function publish(markdownFile, options = {}) {
         author,
         digest,
         mediaId: draft.mediaId,
+        blogUrl,
+        contentSourceUrl: blogUrl,
         theme: result.theme,
         sourceUrls,
         publishedAt: new Date().toISOString()
