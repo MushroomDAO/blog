@@ -1,0 +1,34 @@
+🚀 M2 WeChat Publisher
+======================
+
+[1/5] Loading config...
+[2/5] Rendering markdown...
+Using theme: 蓝色专业 (blue)
+   Found 3 image(s) to process...
+   Uploading local image: lfm3-liquid-ai-local-multimodal-models-fig-01.png...
+✅ Access token obtained
+✅ Image uploaded: lfm3-liquid-ai-local-multimodal-models-fig-01.png
+   ✅ Local image processed
+   Uploading local image: lfm3-liquid-ai-local-multimodal-models-fig-02.png...
+✅ Image uploaded: lfm3-liquid-ai-local-multimodal-models-fig-02.png
+   ✅ Local image processed
+   Uploading local image: lfm3-liquid-ai-local-multimodal-models-fig-03.png...
+✅ Image uploaded: lfm3-liquid-ai-local-multimodal-models-fig-03.png
+   ✅ Local image processed
+   Title: LFM3：六款端侧模型怎么选
+   Theme: 蓝色专业 (blue)
+[3/5] Processing cover image...
+✅ Cover uploaded: media_id=prCUE631thH1cmNLi42prHozBjZRjN-l2PdISe2CakVS8ICIKa5UyoN2ozJEgXrw
+[4/5] Creating draft...
+✅ Draft created: media_id=prCUE631thH1cmNLi42prELQoIIzWdt6L3rnCRnMMnyO7y321MGLaMssVxprJyjn
+[5/5] Saving output...
+
+✅ Publish successful!
+
+📋 Draft Info:
+   Title: LFM3：六款端侧模型怎么选
+   Theme: 蓝色专业 (blue)
+   Media ID: prCUE631thH1cmNLi42prELQoIIzWdt6L3rnCRnMMnyO7y321MGLaMssVxprJyjn
+   Preview: https://mp.weixin.qq.com
+
+📁 Output: pipeline/m2/output/lfm3-liquid-ai-local-multimodal-models.html

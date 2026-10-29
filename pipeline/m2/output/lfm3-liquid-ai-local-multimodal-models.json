@@ -1,0 +1,21 @@
+{
+  "title": "LFM3：六款端侧模型怎么选",
+  "author": "Mycelium",
+  "digest": "从模态与许可到Mac实测，区分开放权重、工具兼容和任务能力。",
+  "mediaId": "prCUE631thH1cmNLi42prELQoIIzWdt6L3rnCRnMMnyO7y321MGLaMssVxprJyjn",
+  "blogUrl": "https://blog.mushroom.cv/blog/lfm3-liquid-ai-local-multimodal-models/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/lfm3-liquid-ai-local-multimodal-models/",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/collections/liquidai",
+    "huggingface.co/liquidai/lfm3-1.7b",
+    "huggingface.co/liquidai/d1-2b",
+    "huggingface.co/liquidai/d1-omni-2b",
+    "huggingface.co/liquidai/lfm3-1.7b-gguf",
+    "huggingface.co/liquidai/lfm3-1.7b-mlx-4bit",
+    "huggingface.co/liquidai/lfm3-vl-2b",
+    "huggingface.co/liquidai/lfm3-audio-2b",
+    "huggingface.co/liquidai/lfm3-omni-2b"
+  ],
+  "publishedAt": "2026-10-29T10:02:11.069Z"
+}

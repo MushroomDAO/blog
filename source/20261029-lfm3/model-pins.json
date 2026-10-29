@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-10-29T09:48:53.432580+00:00",
+  "models": [
+    {
+      "model": "LiquidAI/LFM3-Audio-2B",
+      "revision": "cddb56b5ec9b4703f9b3b2d0500143d1fff2fee0",
+      "cardUrl": "https://huggingface.co/LiquidAI/LFM3-Audio-2B/blob/cddb56b5ec9b4703f9b3b2d0500143d1fff2fee0/README.md",
+      "configUrl": "https://huggingface.co/LiquidAI/LFM3-Audio-2B/resolve/cddb56b5ec9b4703f9b3b2d0500143d1fff2fee0/config.json"
+    },
+    {
+      "model": "LiquidAI/LFM3-1.7B-MLX-4bit",
+      "revision": "d0ca73dcfa70ce18733754a492cdc1fb0123262d",
+      "cardUrl": "https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-4bit/blob/d0ca73dcfa70ce18733754a492cdc1fb0123262d/README.md",
+      "configUrl": "https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-4bit/resolve/d0ca73dcfa70ce18733754a492cdc1fb0123262d/config.json"
+    },
+    {
+      "model": "LiquidAI/LFM3-1.7B-Base",
+      "revision": "545fc8f4c7b5fa9f405105274cd29c4f8f44b526",
+      "cardUrl": "https://huggingface.co/LiquidAI/LFM3-1.7B-Base/blob/545fc8f4c7b5fa9f405105274cd29c4f8f44b526/README.md",
+      "configUrl": "https://huggingface.co/LiquidAI/LFM3-1.7B-Base/resolve/545fc8f4c7b5fa9f405105274cd29c4f8f44b526/config.json"
+    },
+    {
+      "model": "LiquidAI/LFM3-1.7B",
+      "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+      "cardUrl": "https://huggingface.co/LiquidAI/LFM3-1.7B/blob/ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7/README.md",
+      "configUrl": "https://huggingface.co/LiquidAI/LFM3-1.7B/resolve/ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7/config.json"
+    },
+    {
+      "model": "LiquidAI/d1-Omni-2B",
+      "revision": "c8d48c08dada0191c6b362820f055cfb49c99426",
+      "cardUrl": "https://huggingface.co/LiquidAI/d1-Omni-2B/blob/c8d48c08dada0191c6b362820f055cfb49c99426/README.md",
+      "configUrl": "https://huggingface.co/LiquidAI/d1-Omni-2B/resolve/c8d48c08dada0191c6b362820f055cfb49c99426/config.json"
+    },
+    {
+      "model": "LiquidAI/d1-2B",
+      "revision": "cfe5760ff5d5998f91d9ac56bd4b2dbd96996d41",
+      "cardUrl": "https://huggingface.co/LiquidAI/d1-2B/blob/cfe5760ff5d5998f91d9ac56bd4b2dbd96996d41/README.md",
+      "configUrl": "https://huggingface.co/LiquidAI/d1-2B/resolve/cfe5760ff5d5998f91d9ac56bd4b2dbd96996d41/config.json"
+    },
+    {
+      "model": "LiquidAI/LFM3-VL-2B",
+      "revision": "ba44bd51db20a2753f28c273a1571ccaa210d954",
+      "cardUrl": "https://huggingface.co/LiquidAI/LFM3-VL-2B/blob/ba44bd51db20a2753f28c273a1571ccaa210d954/README.md",
+      "configUrl": "https://huggingface.co/LiquidAI/LFM3-VL-2B/resolve/ba44bd51db20a2753f28c273a1571ccaa210d954/config.json"
+    },
+    {
+      "model": "LiquidAI/LFM3-Omni-2B",
+      "revision": "5797d07c125503bd4f4c0e7f915ae2d3d703e8de",
+      "cardUrl": "https://huggingface.co/LiquidAI/LFM3-Omni-2B/blob/5797d07c125503bd4f4c0e7f915ae2d3d703e8de/README.md",
+      "configUrl": "https://huggingface.co/LiquidAI/LFM3-Omni-2B/resolve/5797d07c125503bd4f4c0e7f915ae2d3d703e8de/config.json"
+    },
+    {
+      "model": "LiquidAI/LFM3-1.7B-GGUF",
+      "revision": "bad5729bba61d076fff20d2548e62526665af215",
+      "cardUrl": "https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF/blob/bad5729bba61d076fff20d2548e62526665af215/README.md",
+      "configUrl": "https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF/resolve/bad5729bba61d076fff20d2548e62526665af215/config.json"
+    }
+  ]
+}
