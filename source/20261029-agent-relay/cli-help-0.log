@@ -1,0 +1,35 @@
+Usage: agent-relay [options] [command]
+
+Agent-to-agent messaging
+
+Options:
+  -V, --version        Output the version number
+  -h, --help           display help for command
+
+Commands:
+  node                 Run and manage this machine's relay node
+  version              Show version information
+  update [options]     Check for updates and install if available
+  uninstall [options]  Remove agent-relay data, configuration, and global
+                       binaries
+  fleet                Inspect and manage Agent Relay fleet nodes
+  status               Show workspace, cloud login, and local broker status
+  telemetry [action]   Manage anonymous telemetry (enable/disable/status)
+  cloud                Cloud account, provider auth, and workflow commands
+  workspace            Create and switch between workspaces
+  observer [options]   Mint a read-only observer link so a human can follow
+                       this workspace
+  agent                Manage workspace agents and local delivery controls
+  channel              Manage channels (requires agent token)
+  message              Post, read, and react to messages (requires agent token)
+  integration          Webhooks and event subscriptions
+  capabilities         Register and invoke agent capabilities (commands)
+  skills               Install Agent Relay skills into your coding harnesses
+  file                 relayfile — read and write provider files through a
+                       local mount
+  flows                relayflows — author, check, run, and deploy agent
+                       workflows
+  sessions             Relay session history — search, replay, and export past
+                       sessions
+  mcp [options]        Run the Agent Relay MCP stdio server
+  help [command]       display help for command
