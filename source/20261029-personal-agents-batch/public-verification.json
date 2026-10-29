@@ -1,0 +1,122 @@
+{
+  "checkedAt": "2026-10-29T04:08:27.219066+00:00",
+  "articles": [
+    {
+      "slug": "personalagenteval-personal-agent-benchmark",
+      "url": "https://blog.mushroom.cv/blog/personalagenteval-personal-agent-benchmark/",
+      "title": "PersonalAgentEval：个人助手会执行，还要懂用户",
+      "listRank": 4,
+      "carouselRank": 3,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/personalagenteval-personal-agent-benchmark-banner.C401pVQF.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 92944
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/personalagenteval-personal-agent-benchmark-banner.C401pVQF_mOie0.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 32370
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/personalagenteval-personal-agent-benchmark-fig-01.CGpdmmjG_MTNrC.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 23544
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/personalagenteval-personal-agent-benchmark-fig-02.CCp6b1S6_YIXay.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 26264
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/personalagenteval-personal-agent-benchmark-fig-03.DJqznlVg_1IMBTp.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 28232
+        }
+      ]
+    },
+    {
+      "slug": "hiroute-local-model-routing",
+      "url": "https://blog.mushroom.cv/blog/hiroute-local-model-routing/",
+      "title": "HiRoute：让本地路由器按任务选择模型",
+      "listRank": 2,
+      "carouselRank": 2,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/hiroute-local-model-routing-banner.CDrZv--N.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 72692
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hiroute-local-model-routing-banner.CDrZv--N_g4R6o.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 17372
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hiroute-local-model-routing-fig-01.CIfI-tNj_Z2efXuR.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 23400
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hiroute-local-model-routing-fig-02.BSJnzdJm_1x3pT1.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 26034
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hiroute-local-model-routing-fig-03.B02-OGQX_Z1C3wpA.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 25662
+        }
+      ]
+    },
+    {
+      "slug": "apex-35b-v1-local-research-model",
+      "url": "https://blog.mushroom.cv/blog/apex-35b-v1-local-research-model/",
+      "title": "Apex-35B：科研编程模型的能力、部署与 Mac 内存账",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/apex-35b-v1-local-research-model-banner.BV0_xGId.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94537
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/apex-35b-v1-local-research-model-banner.BV0_xGId_ZCOGWb.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 53102
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/apex-35b-v1-local-research-model-fig-01.CI-ybIxO_qgUFg.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 29910
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/apex-35b-v1-local-research-model-fig-02.bFfQHd7T_8b8rG.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 51908
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/apex-35b-v1-local-research-model-fig-03.j1Urs8fU_1LNKmQ.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 30442
+        }
+      ]
+    }
+  ]
+}

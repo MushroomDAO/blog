@@ -1,0 +1,125 @@
+{
+  "sourceURLs": [
+    "https://personalagenteval.com/",
+    "https://personalagenteval.com/blog/",
+    "https://personalagenteval.com/data/assistants/board.json",
+    "https://personalagenteval.com/data/assistants/tasks.json"
+  ],
+  "generated": "2026-10-13T18:49-07:00",
+  "method": {
+    "boot": 5000,
+    "seed": 0,
+    "pass": 0.9,
+    "fail": 0.1,
+    "tier_holds": 0.9,
+    "models": {
+      "backend": "gemini",
+      "model": "gemini-3.8-flash",
+      "provider": "Google, through Vertex AI",
+      "roles": [
+        "simulated user",
+        "yes/no checks on the conversation and on messages",
+        "found-it-first classifier",
+        "off-environment judge"
+      ]
+    },
+    "llm": {
+      "share": 0.415
+    }
+  },
+  "taskPool": 265,
+  "commonTaskCount": 152,
+  "collectionComplete": false,
+  "resolved": [
+    {
+      "name": "Instinct",
+      "n": 152,
+      "resolved": 0.605,
+      "ci_resolved": [
+        0.53,
+        0.68
+      ]
+    },
+    {
+      "name": "OpenAI Dots",
+      "n": 152,
+      "resolved": 0.559,
+      "ci_resolved": [
+        0.483,
+        0.636
+      ]
+    },
+    {
+      "name": "Grok Bot",
+      "n": 152,
+      "resolved": 0.5,
+      "ci_resolved": [
+        0.422,
+        0.577
+      ]
+    },
+    {
+      "name": "Hark Pro",
+      "n": 152,
+      "resolved": 0.441,
+      "ci_resolved": [
+        0.368,
+        0.513
+      ]
+    },
+    {
+      "name": "Meta Muse",
+      "n": 152,
+      "resolved": 0.289,
+      "ci_resolved": [
+        0.216,
+        0.363
+      ]
+    },
+    {
+      "name": "Gemini Spark",
+      "n": 152,
+      "resolved": 0.257,
+      "ci_resolved": [
+        0.19,
+        0.323
+      ]
+    },
+    {
+      "name": "Manus Cue",
+      "n": 152,
+      "resolved": 0.191,
+      "ci_resolved": [
+        0.126,
+        0.256
+      ]
+    }
+  ],
+  "officialGGUF": [
+    {
+      "rfilename": "Apex-35B-V1.0-BF16-00001-of-00002.gguf",
+      "size": 44867100160
+    },
+    {
+      "rfilename": "Apex-35B-V1.0-BF16-00002-of-00002.gguf",
+      "size": 26199894560
+    },
+    {
+      "rfilename": "Apex-35B-V1.0-Q4_K_M.gguf",
+      "size": 21713463136
+    },
+    {
+      "rfilename": "Apex-35B-V1.0-Q5_K_M.gguf",
+      "size": 25347532640
+    },
+    {
+      "rfilename": "Apex-35B-V1.0-Q6_K.gguf",
+      "size": 29208731488
+    },
+    {
+      "rfilename": "Apex-35B-V1.0-Q8_0.gguf",
+      "size": 37802149728
+    }
+  ],
+  "note": "Only published statistics summarized; raw benchmark worlds and full fetched pages retained locally rather than mirrored in public git."
+}
