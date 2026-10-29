@@ -1,0 +1,9 @@
+=== [verify-banner] src/assets/images/yuxi-self-hosted-knowledge-agent-rag-graph-multi-agent-mcp-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=7 steps=16
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 93995B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/yuxi-self-hosted-knowledge-agent-rag-graph-multi-agent-mcp-banner.jpg ===
