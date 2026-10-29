@@ -1,0 +1,34 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6ae2b799-7687c51e-1d1f462d）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 917 篇 + 公众号草稿箱 6 条 + 本地发布记录 899 条 + MemPalace 3431 抽屉
+
+── 查：https://themodernsoftware.dev
+   ✅ 四本账都没查到
+
+── 查：CS146S
+   ❌ [BLOG  ] stanford-cs146s-modern-software-developer-ai-coding-agent-mcp-course.md
+      正文出现实体名「cs146s」
+   ❌ [发过 2026-09-16] Stanford CS146S：《现代软件开发者》，MCP/Claude Code/Warp 十周实战，讲义全开放
+      正文出现实体名「cs146s」
+   ❌ [知识库] 00 15s→6.6s - [DSH Remote](project_dsh_remote.md) — 7 stars
+      正文出现实体名「cs146s」
+   ❌ [知识库] 硬件编码，TestFlight公测 - [Hypit AI Agent 视频工作流](project_hypit.md)
+      正文出现实体名「cs146s」
+   ❌ [知识库] --- name: project_stanford_cs146s description: Stanford CS14
+      正文出现实体名「cs146s」
+   ❌ [知识库] Lin, Brent Ju） **时间**：Fall 2025，3 学分，教室 420-041  **课程核心**：AI
+      正文出现实体名「cs146s」
+   ❌ [知识库] blog/general/project_stanford_cs146s|Claude Code;Stanford;Mo
+      正文出现实体名「cs146s」
+   ❌ [知识库] # 不要第一人称，下面是引用开源仓库的文章，要学习入门 AI 的  **Summary**: 不要第一人称，下面是引用开
+      正文出现实体名「cs146s」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
