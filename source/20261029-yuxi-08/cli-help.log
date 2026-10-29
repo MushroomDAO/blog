@@ -1,0 +1,20 @@
+Usage: yuxi [options] [command]
+
+Yuxi command line client
+
+Options:
+  -V, --version     output the version number
+  -h, --help        display help for command
+
+Commands:
+  remote            管理 Yuxi 远程服务
+  agent             查看可用 Agent
+  thread            管理 Agent Thread
+  file              准备消息的 draft 文件
+  kb                查询知识库
+  login [options]
+  whoami [options]
+  status [options]
+  logout [options]
+  chat [options]
+  help [command]    display help for command

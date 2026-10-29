@@ -1,0 +1,31 @@
+
+> @xerrors/yuxi@0.1.0 test
+> npm run build && node --test test/*.test.js
+
+
+> @xerrors/yuxi@0.1.0 build
+> tsc -p tsconfig.json
+
+✔ reconnects from the last cursor after a clean stream interruption (252.657625ms)
+✔ 当前 Turn 的增量保留换行，持久输出确认完成且重复事件不会叠加 (2.498042ms)
+✔ 事件过期且没有任何正文增量，仍取得目标轮的持久结果 (0.3665ms)
+✔ 目标 Input 排队时按消费归属找 Turn，断流后补齐最终正文 (0.841334ms)
+✔ 相邻轮次已完成和事件断流都不能将目标轮结算 (1757.331166ms)
+✔ 协作等待继续观察，用户问答等待交还控制 (0.353958ms)
+✔ uses Public v1 knowledge paths, bodies, and bearer authentication (36.013625ms)
+✔ maps structured HTTP errors without hiding the server status (8.6615ms)
+✔ preserves Session resources through CLI create and retrieve (4.006208ms)
+✔ uses the server status when a structured error omits its code and message (2.566208ms)
+✔ uploads binary draft once and sends its id with the original PNG data URL (1.3095ms)
+✔ 已接收的 POST 响应被断开后用原键读取回执，不重新提交 (3.940375ms)
+✔ normalizes API suffix and preserves remote selection (4.1445ms)
+✔ parses SSE fields and multiline data (4.302875ms)
+✔ 断流时丢弃尚未结束的事件帧 (0.256375ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1879.695791
