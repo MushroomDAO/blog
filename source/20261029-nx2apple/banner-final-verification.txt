@@ -1,0 +1,9 @@
+=== [verify-banner] src/assets/images/nx2apple-switch-apple-builder-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=6402 steps=16 crop=1200x420+0+210
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 88370B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/nx2apple-switch-apple-builder-banner.jpg ===
