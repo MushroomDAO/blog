@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-10-29T11:12:43.147408+00:00",
+  "query": "短剧技能选型目录 83个项目 16个平台 公开盲评与分镜工作流",
+  "matched": true,
+  "hits": [
+    {
+      "article_id": "awesome-short-drama-skills-guide",
+      "title": "Awesome Short Drama Skills：83 个短剧技能项目怎么选？",
+      "url": "/blog/awesome-short-drama-skills-guide/",
+      "language": "zh",
+      "excerpt": "Awesome Short Drama Skills：83 个短剧技能项目怎么选？ Awesome Short Drama Skills 按创作阶段、视频模型和智能体整理短剧工具，附带选型助手与公开盲评。本文核查其83个技能项目、16个平台和CC0许可范围，复核两轮评测的文件指纹与提示词记录，说明如何从改编、剧本、分镜走到视频生成，以及安装范围、商用授权、成本和评测结论的实际边界。 Agent Skills AI Video Short Drama Open Source Creative Workflow 83 个项目，究竟收录了什么？ 一条安装命令，",
+      "score": 0.7729342
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "awesome-short-drama-skills-guide",
+        "title": "Awesome Short Drama Skills：83 个短剧技能项目怎么选？",
+        "url": "/blog/awesome-short-drama-skills-guide/",
+        "language": "zh",
+        "excerpt": "Awesome Short Drama Skills：83 个短剧技能项目怎么选？ Awesome Short Drama Skills 按创作阶段、视频模型和智能体整理短剧工具，附带选型助手与公开盲评。本文核查其83个技能项目、16个平台和CC0许可范围，复核两轮评测的文件指纹与提示词记录，说明如何从改编、剧本、分镜走到视频生成，以及安装范围、商用授权、成本和评测结论的实际边界。 Agent Skills AI Video Short Drama Open Source Creative Workflow 83 个项目，究竟收录了什么？ 一条安装命令，",
+        "score": 0.7729342
+      },
+      {
+        "article_id": "awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt",
+        "title": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引",
+        "url": "/blog/awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt/",
+        "language": "zh",
+        "excerpt": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引 Agents 222 个、Instructions 193 个、Skills 416 个、Plugins 100 个——这套分类本身比清单更值得看：agent 是接 MCP 的专门角色，instruction 是按文件模式自动生效的编码规范，skill 是自包含带资源的文件夹，plugin 是打包好的组合。另一个值得抄的做法是 llms.txt：一份 941 行、308KB 的机器可读索引，专门给 AI agent 读，让它自己找该用哪个资源。",
+        "score": 0.5912273
+      },
+      {
+        "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+        "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+        "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+        "language": "zh",
+        "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+        "score": 0.5813541
+      },
+      {
+        "article_id": "easel-open-source-social-media-agent-workbench",
+        "title": "Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布",
+        "url": "/blog/easel-open-source-social-media-agent-workbench/",
+        "language": "zh",
+        "excerpt": "Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布 浙大 REAL Lab + 北大 OpenDCAI Lab 开源的社媒创作 Agent：基于 OpenClaw，112 个 Skill 分六层（基础/发现/策划/创作/发布/归因），Python CLI + Web 工作台，支持小红书/抖音/快手/知乎/B站/视频号六平台登录发布。账号画像六维持久化，越用越懂账号。Apache-2.0，187 star，两周新。 AI Agent 开源 内容创作 自动化 小红书 OpenClaw Python 工作流 多平台 B",
+        "score": 0.5787661
+      },
+      {
+        "article_id": "cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice",
+        "title": "ClipTalk：用自然语言剪视频，VLM + 24 个 Skill 驱动的 Agentic 视频编辑系统",
+        "url": "/blog/cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice/",
+        "language": "zh",
+        "excerpt": "ClipTalk：用自然语言剪视频，VLM + 24 个 Skill 驱动的 Agentic 视频编辑系统 非商业自定义许可，126 stars。三层架构：Python FastAPI + Node Pi Agent + 浏览器。24 个 SKILL.md 技能，VLM 理解画面，本地 SenseVoice/TalkNet/SFace/YOLOX 识别人脸/声纹/活跃发言人，FFmpeg 执行剪辑。6 步审批门禁，V2 算法比基线慢 14s。仅支持 Linux x86-64/WSL2，不支持 macOS/ARM。 video-editing agent ",
+        "score": 0.56179583
+      },
+      {
+        "article_id": "nature-skills-yuan1z0825-academic-paper-skill-collection",
+        "title": "nature-skills：学术论文全流程 18 个 AI Skill，两个月 3.4 万星",
+        "url": "/blog/nature-skills-yuan1z0825-academic-paper-skill-collection/",
+        "language": "zh",
+        "excerpt": "nature-skills：学术论文全流程 18 个 AI Skill，两个月 3.4 万星 袁一哲（Yuan1z0825）发起、开源社区共同维护的 Nature 级学术论文 AI Skill 合集，18 个技能覆盖图表、润色、写作、投稿、审稿回复、引用核验、数据管理、PPT、专利转化、文献检索全链路，Apache 2.0，发布两个月 GitHub 3.4 万星。npx skills add Yuan1z0825/nature-skills 一键安装，支持 Claude Code / Codex / OpenClaw / OpenCode / Herme",
+        "score": 0.56064326
+      },
+      {
+        "article_id": "jev-skill-agent-decision-9-skills-90-scenarios-openrouter",
+        "title": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查",
+        "url": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
+        "language": "zh",
+        "excerpt": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查 MIT，34 stars，今天刚开源。SKILL.md 格式，9 个专域 Skill 覆盖 90 个标注场景：分诊、文档证据、UI 操控、工具路由、代码审查等。需 OpenRouter API key 调 TypeSafe Jev，无本地权重。显式禁止无 key 时静默降级，只能做 agent simulation 且必须标注。 agent-skills jev decision-model routing claude-code open-s",
+        "score": 0.5555502
+      },
+      {
+        "article_id": "storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard",
+        "title": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4",
+        "url": "/blog/storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard/",
+        "language": "zh",
+        "excerpt": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4 xiaozhang-art/storyflow-ai 开源，Multi-Agent 漫剧自动生成平台，7 步 Agent 流水线（剧本→角色→分镜→图片/配音并行→图生视频→合成），含 Director 决策引擎、断点续传、Montage 渲染引擎，Docker Compose 一键部署。 multi-agent video generation AI open source comic LLM FastAPI Docker 一段文字进去，一部漫剧出来 7 个 Age",
+        "score": 0.54768544
+      },
+      {
+        "article_id": "agent-skills-open-standard-progressive-disclosure-anthropic",
+        "title": "Agent Skills 标准调研：今天写的好几个项目背后，都是同一份规范",
+        "url": "/blog/agent-skills-open-standard-progressive-disclosure-anthropic/",
+        "language": "zh",
+        "excerpt": "Agent Skills 标准调研：今天写的好几个项目背后，都是同一份规范 调研 Agent Skills 开放标准：一个 SKILL.md 文件（含 name/description 元数据+指令）加可选的脚本/参考文档/模板，就是一个可移植、可跨产品复用的技能包。核心机制是三阶段渐进式披露——发现阶段只加载名字和描述、激活阶段任务匹配才读全文、执行阶段才按需跑脚本或加载引用文件，让 Agent 能同时挂载大量技能而不撑爆上下文。由 Anthropic 原创发布为开放标准，本文同一批写的 Hermes Agent、Nerve、Humanizer 都兼容",
+        "score": 0.54515105
+      },
+      {
+        "article_id": "codex-skills-gaixianggeng-workbuddy-marketplace-openai-agent-skill",
+        "title": "OpenAI Codex 技能市场的入口：一个小仓库打开 295 个 WorkBuddy 技能——含 47 个微信/腾讯自动化",
+        "url": "/blog/codex-skills-gaixianggeng-workbuddy-marketplace-openai-agent-skill/",
+        "language": "zh",
+        "excerpt": "OpenAI Codex 技能市场的入口：一个小仓库打开 295 个 WorkBuddy 技能——含 47 个微信/腾讯自动化 gaixianggeng/codex-skills 是一个只有 2 个 star 的小仓库，却包含两个极具价值的 Codex 技能：init-project-workspace 初始化工作区，workbuddy-skills-navigator 打开一个 295 技能的 AI Agent 市场。这个市场里有 47 个微信/腾讯相关技能、159 个 AI/Agent 工具，全部通过 Git + Python CLI 管理。本文拆解",
+        "score": 0.5424274
+      }
+    ]
+  }
+}

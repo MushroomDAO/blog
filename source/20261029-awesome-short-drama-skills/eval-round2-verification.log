@@ -1,0 +1,93 @@
+1. 指纹清单：1011 个文件，0 个不符，0 个不在清单里
+2. 评审提示词：重建 397 次 Opus 调用，397 次和记录一致
+2. 评审提示词：重建 397 次 GPT 调用，397 次和记录一致
+3. 重算的数字：
+== 评审 opus
+  Tomsawyerhu__Chinese-WebNovel-Skill                     topic 29-4-0  积分 31
+  lingfengQAQ__webnovel-writer                            topic 27-4-2  积分 29
+  Hao0321__ai-short-drama                                 topic 19-4-10  积分 21
+  0xsline__short-drama                                    topic 17-7-9  积分 20.5
+  xindoo__sumeru                                          topic 16-5-12  积分 18.5
+  LanyXiaosheng__bookflow-skill                           topic 13-6-14  积分 16
+  tance-mang__chinese-webnovel-skills                     topic 13-4-16  积分 15
+  qingyabailu-git__webfiction-write                       topic 11-5-17  积分 13.5
+  baseline                                                topic 9-4-20  积分 11
+  xiaofeng-928__chinese-longnovel-skill                   topic 7-6-20  积分 10
+  dama-cyber__Distilled-Novel-Toolbox                     topic 8-3-22  积分 9.5
+  zenstory-ai__oh-story-claudecode                        topic 2-2-29  积分 3
+  topic: 换序一致 171/198，判甲 185 判乙 211 判平 0，判长的赢 199/396
+  引文找得到 3031/3745（81%）
+  分项（赢-平-输，每场两种顺序各算一次）：
+   0xsline__short-drama                                    卖点 16-7-43  新意 40-1-25  冲突和爽点 31-5-30  续航 39-11-16  上屏 30-8-28
+   Hao0321__ai-short-drama                                 卖点 35-9-22  新意 55-4-7  冲突和爽点 25-5-36  续航 30-13-23  上屏 32-7-27
+   LanyXiaosheng__bookflow-skill                           卖点 42-5-19  新意 37-3-26  冲突和爽点 27-5-34  续航 5-13-48  上屏 44-9-13
+   Tomsawyerhu__Chinese-WebNovel-Skill                     卖点 59-4-3  新意 47-2-17  冲突和爽点 63-0-3  续航 36-19-11  上屏 56-6-4
+   baseline                                                卖点 37-9-20  新意 25-5-36  冲突和爽点 15-6-45  续航 16-10-40  上屏 12-9-45
+   dama-cyber__Distilled-Novel-Toolbox                     卖点 21-7-38  新意 16-3-47  冲突和爽点 22-5-39  续航 22-13-31  上屏 14-8-44
+   lingfengQAQ__webnovel-writer                            卖点 53-9-4  新意 54-1-11  冲突和爽点 55-1-10  续航 23-21-22  上屏 50-9-7
+   qingyabailu-git__webfiction-write                       卖点 22-2-42  新意 28-1-37  冲突和爽点 27-8-31  续航 29-16-21  上屏 20-11-35
+   tance-mang__chinese-webnovel-skills                     卖点 35-6-25  新意 22-4-40  冲突和爽点 30-8-28  续航 21-11-34  上屏 29-8-29
+   xiaofeng-928__chinese-longnovel-skill                   卖点 6-5-55  新意 26-5-35  冲突和爽点 25-5-36  续航 33-20-13  上屏 11-5-50
+   xindoo__sumeru                                          卖点 24-6-36  新意 22-3-41  冲突和爽点 36-6-24  续航 30-20-16  上屏 39-8-19
+   zenstory-ai__oh-story-claudecode                        卖点 8-7-51  新意 6-4-56  冲突和爽点 11-4-51  续航 15-27-24  上屏 13-4-49
+== 评审 gpt
+  Hao0321__ai-short-drama                                 topic 27-2-4  积分 28
+  Tomsawyerhu__Chinese-WebNovel-Skill                     topic 26-3-4  积分 27.5
+  lingfengQAQ__webnovel-writer                            topic 23-4-6  积分 25
+  LanyXiaosheng__bookflow-skill                           topic 23-1-9  积分 23.5
+  qingyabailu-git__webfiction-write                       topic 17-2-14  积分 18
+  tance-mang__chinese-webnovel-skills                     topic 15-3-15  积分 16.5
+  0xsline__short-drama                                    topic 11-3-19  积分 12.5
+  xindoo__sumeru                                          topic 11-2-20  积分 12
+  baseline                                                topic 10-3-20  积分 11.5
+  xiaofeng-928__chinese-longnovel-skill                   topic 9-2-22  积分 10
+  dama-cyber__Distilled-Novel-Toolbox                     topic 8-2-23  积分 9
+  zenstory-ai__oh-story-claudecode                        topic 3-3-27  积分 4.5
+  topic: 换序一致 183/198，判甲 194 判乙 201 判平 1，判长的赢 233/395
+  引文找得到 3360/3526（95%）
+  分项（赢-平-输，每场两种顺序各算一次）：
+   0xsline__short-drama                                    卖点 17-3-46  新意 35-4-27  冲突和爽点 25-2-39  续航 28-8-30  上屏 15-21-30
+   Hao0321__ai-short-drama                                 卖点 48-4-14  新意 60-3-3  冲突和爽点 40-9-17  续航 45-6-15  上屏 23-18-25
+   LanyXiaosheng__bookflow-skill                           卖点 45-7-14  新意 18-7-41  冲突和爽点 24-18-24  续航 43-8-15  上屏 51-9-6
+   Tomsawyerhu__Chinese-WebNovel-Skill                     卖点 52-4-10  新意 29-2-35  冲突和爽点 44-8-14  续航 46-8-12  上屏 52-12-2
+   baseline                                                卖点 36-7-23  新意 19-7-40  冲突和爽点 21-4-41  续航 12-13-41  上屏 27-12-27
+   dama-cyber__Distilled-Novel-Toolbox                     卖点 17-7-42  新意 13-4-49  冲突和爽点 20-12-34  续航 25-11-30  上屏 15-10-41
+   lingfengQAQ__webnovel-writer                            卖点 53-6-7  新意 62-0-4  冲突和爽点 42-3-21  续航 12-15-39  上屏 24-25-17
+   qingyabailu-git__webfiction-write                       卖点 22-3-41  新意 31-1-34  冲突和爽点 40-7-19  续航 41-8-17  上屏 19-21-26
+   tance-mang__chinese-webnovel-skills                     卖点 28-6-32  新意 28-2-36  冲突和爽点 29-6-31  续航 28-13-25  上屏 24-24-18
+   xiaofeng-928__chinese-longnovel-skill                   卖点 19-5-42  新意 40-5-21  冲突和爽点 23-4-39  续航 22-10-34  上屏 8-9-49
+   xindoo__sumeru                                          卖点 20-5-41  新意 20-3-43  冲突和爽点 32-4-30  续航 18-21-27  上屏 25-20-21
+   zenstory-ai__oh-story-claudecode                        卖点 9-3-54  新意 18-8-40  冲突和爽点 12-11-43  续航 9-13-44  上屏 12-21-33
+== 两位评审：逐场一致 305/396，kappa 0.54；最终结果一致 135/198，kappa 0.43；有争议 63 对
+== 故事分组 opus：25 组；同一参赛者 1/36，不同参赛者 13/594
+   0xsline__short-drama                                    撞题 2/3，和对照组撞 1
+   Hao0321__ai-short-drama                                 撞题 0/3，和对照组撞 0
+   LanyXiaosheng__bookflow-skill                           撞题 1/3，和对照组撞 1
+   Tomsawyerhu__Chinese-WebNovel-Skill                     撞题 1/3，和对照组撞 0
+   baseline                                                撞题 3/3，和对照组撞 0
+   dama-cyber__Distilled-Novel-Toolbox                     撞题 2/3，和对照组撞 1
+   lingfengQAQ__webnovel-writer                            撞题 2/3，和对照组撞 0
+   qingyabailu-git__webfiction-write                       撞题 2/3，和对照组撞 1
+   tance-mang__chinese-webnovel-skills                     撞题 1/3，和对照组撞 0
+   xiaofeng-928__chinese-longnovel-skill                   撞题 3/3，和对照组撞 0
+   xindoo__sumeru                                          撞题 1/3，和对照组撞 0
+   zenstory-ai__oh-story-claudecode                        撞题 1/3，和对照组撞 0
+== 故事分组 gpt：26 组；同一参赛者 1/36，不同参赛者 11/594
+   0xsline__short-drama                                    撞题 2/3，和对照组撞 1
+   Hao0321__ai-short-drama                                 撞题 0/3，和对照组撞 0
+   LanyXiaosheng__bookflow-skill                           撞题 1/3，和对照组撞 1
+   Tomsawyerhu__Chinese-WebNovel-Skill                     撞题 1/3，和对照组撞 0
+   baseline                                                撞题 3/3，和对照组撞 0
+   dama-cyber__Distilled-Novel-Toolbox                     撞题 2/3，和对照组撞 1
+   lingfengQAQ__webnovel-writer                            撞题 0/3，和对照组撞 0
+   qingyabailu-git__webfiction-write                       撞题 2/3，和对照组撞 1
+   tance-mang__chinese-webnovel-skills                     撞题 1/3，和对照组撞 0
+   xiaofeng-928__chinese-longnovel-skill                   撞题 2/3，和对照组撞 0
+   xindoo__sumeru                                          撞题 1/3，和对照组撞 0
+   zenstory-ai__oh-story-claudecode                        撞题 1/3，和对照组撞 0
+   两种分组的调整兰德指数 0.92
+== 主角的姓：许 11，沈 6，宋 3，温 3，林 3（共 36 份）
+   人名里有「砚」：11 份，8 个参赛者（含对照组）
+   人名里有「周砚」：4 份，4 个参赛者（含对照组）
+   人名里有「禾」：5 份，4 个参赛者（含对照组）
+== 故事卡里提到「账」的：18 份，12 个参赛者（含对照组）
