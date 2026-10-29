@@ -1,0 +1,15 @@
+
+> minilytics@0.1.0 build
+> vite build
+
+vite v6.4.5 building for production...
+transforming...
+✓ 676 modules transformed.
+rendering chunks...
+computing gzip size...
+../../dist/index.html                        1.69 kB │ gzip:   0.89 kB
+../../dist/assets/index-D7XIqeaN.css        32.96 kB │ gzip:   6.18 kB
+../../dist/assets/LiveView-B-YMMjus.css     69.94 kB │ gzip:  10.11 kB
+../../dist/assets/index-D2DedBt4.js        676.22 kB │ gzip: 193.92 kB
+../../dist/assets/LiveView-CAE5wO9M.js   1,065.12 kB │ gzip: 287.46 kB
+✓ built in 4.58s

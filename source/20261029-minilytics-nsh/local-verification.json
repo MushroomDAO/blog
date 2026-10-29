@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-29T09:34:03.649304+00:00",
+  "minilytics": {
+    "commit": "4058dc39e0d9aeaf26ed49c0eef07b559523398f",
+    "typecheck": true,
+    "unitTests": 23,
+    "build": true,
+    "localD1SmokeAssertions": 51,
+    "realPayments": false,
+    "productionAnalyticsDeployment": false
+  },
+  "nsh": {
+    "main": "ba9bf5c17b04a6ec020691fbc608ce944bf2f9b5",
+    "testedVersion": "0.3.0",
+    "testedCommit": "76fa8a7fed47ea51aea01fa85bb40960be15d984",
+    "archiveSha256": "34fdd2ec43d5e22986723e7633acf9223e365bd5bace1a502b5ae24fb75c266c",
+    "digestMatchesAPIAndOfficialChecksum": true,
+    "init": true,
+    "build": true,
+    "typecheck": true,
+    "headlessTests": 1,
+    "macosNativeTests": 1,
+    "webPackaging": true,
+    "webInteractionTested": false,
+    "mobileTested": false,
+    "gpuBenchmark": false
+  },
+  "host": {
+    "chip": "Apple M4",
+    "memoryGB": 16,
+    "macOS": "26.6.2"
+  },
+  "dedup": "9 remote drafts readable, published48001 unavailable; no historical article or receipt; Minilytics rawKBonly. Native Shell broad matches false positives, exactlongbridge/nsh clear."
+}

@@ -1,0 +1,14 @@
+=== [adopt-banner] minilytics-cloudflare-revenue-attribution ← 1 source image(s) → src/assets/images/minilytics-cloudflare-revenue-attribution-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /tmp/minilytics-source/public/landing/dashboard.png
+=== [adopt-banner] done: src/assets/images/minilytics-cloudflare-revenue-attribution-banner.jpg (1200x630, 77966B) ===
+=== [verify-banner] src/assets/images/minilytics-cloudflare-revenue-attribution-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/tmp/minilytics-source/public/landing/dashboard.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 77966B (< 99000B)
+  WARN text: 69 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: • Visitors | 5,221 | 540% т | 260 | 195 | 130 | Sep 28 | Channel
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/minilytics-cloudflare-revenue-attribution-banner.jpg ===
+PATH: src/assets/images/minilytics-cloudflare-revenue-attribution-banner.jpg
