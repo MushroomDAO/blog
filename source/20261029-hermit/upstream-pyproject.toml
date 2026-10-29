@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermit-harness"
+version = "0.1.0"
+description = "Train harness adapters: templates, Evolvers, a Trainer and evolving tasks; deploy adapters into Codex and Claude Code"
+readme = "README-pypi.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = [
+    "mcp==2.2.0",
+    "jsonschema==4.26.0",
+    "PyYAML==6.0.3",
+    "packaging>=24",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+# Source-only method dependencies: groups are not included in PyPI package metadata.
+# From the checkout root, use pip >=25.1: python -m pip install -e . --group <method>.
+[dependency-groups]
+gepa = [
+    "gepa @ git+https://github.com/gepa-ai/gepa@d771eb21b5dd3228bc3f567293d2ccfc423fc900",
+]
+skillopt = [
+    "skillopt @ git+https://github.com/microsoft/SkillOpt@79124b37e9a6371e13b753f8bcd7adb1e493ade1",
+    "json_repair>=0.61.0",
+]
+harness2 = [
+    "harness2 @ git+https://github.com/google-research/harness2@1cfe254e8d25b15f37048c3730134686abe60335",
+]
+all = [
+    { include-group = "gepa" },
+    { include-group = "skillopt" },
+    { include-group = "harness2" },
+]
+
+[project.scripts]
+hermit = "hermit.cli:main"
+
+[project.urls]
+Homepage = "https://infini-ai-lab.github.io/hermit/"
+Repository = "https://github.com/Infini-AI-Lab/hermit"
+Documentation = "https://infini-ai-lab.github.io/hermit/docs/"
+Issues = "https://github.com/Infini-AI-Lab/hermit/issues"
+Changelog = "https://github.com/Infini-AI-Lab/hermit/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+include = ["hermit*"]
+
+[tool.setuptools.package-data]
+hermit = ["defaults.yaml", "backends.yaml", "algorithms/evolvers/**/*", "algorithms/templates/**/*",
+          "algorithms/templates/**/.agents/**/*", "algorithms/templates/**/.codex/**/*",
+          "algorithms/templates/**/.hermit/**/*"]   # globs skip dot-directories
+
+[tool.setuptools.exclude-package-data]
+"*" = ["**/__pycache__/*", "**/*.pyc", "**/*.pyo"]
+
+[tool.setuptools]
+include-package-data = true

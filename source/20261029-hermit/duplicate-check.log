@@ -1,0 +1,29 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6ae30411-54ab9fa9-17f532b5）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 924 篇 + 公众号草稿箱 7 条 + 本地发布记录 906 条 + MemPalace 3507 抽屉
+
+── 查：https://github.com/Infini-AI-Lab/hermit
+   ❌ [知识库] # 目前已接入的：GEPA · SkillOpt · MetaW  **Summary**: 目前已接入的：GEPA ·
+      一手源相同: infini-ai-lab/hermit
+
+── 查：Hermit
+   ❌ [BLOG  ] Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上
+      正文出现实体名「hermit」
+   ❌ [BLOG  ] K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？
+      正文出现实体名「hermit」
+   ❌ [知识库] 频道  == 技术栈 == Rust workspace（Cargo）+ TypeScript/React + Taur
+      正文出现实体名「hermit」
+   ❌ [知识库] # 目前已接入的：GEPA · SkillOpt · MetaW  **Summary**: 目前已接入的：GEPA ·
+      正文出现实体名「hermit」
+   ❌ [知识库] 【GitHub 仓库】block/buzz — A hive mind communication platform
+      正文出现实体名「hermit」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
