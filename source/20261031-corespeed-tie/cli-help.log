@@ -1,0 +1,97 @@
+cs — CoreSpeed CLI
+
+Commands:
+  cs login                           Sign in through the browser
+    [--org <id>]                       Sign in to this org (else pick one when you have several)
+  cs logout                          Remove this machine's stored session
+  cs whoami                          Show the current user, org, permissions and key ceiling
+  cs switch [<org-id>]               Change the active org (prompts when no id is given)
+  cs token                           Print a fresh access token (JWT)
+  cs keys create <name>              Create a new API key
+    [--permission <slug>]…             Give it a permission you hold (repeatable; none by default)
+  cs keys list                       List your API keys
+  cs keys revoke <id>                Revoke an API key by ID
+  cs keys rotate <id>                Rotate an API key by ID
+  cs mcp-config                      Emit MCP client config JSON (5-min bearer)
+  cs connectors list                 List available connectors + connection status
+  cs connectors connect <id>         Open the connector's dashboard page to connect it
+  cs connectors disconnect <id>      Disconnect a connector (its single account)
+    [--account <alias-or-id>]          Disconnect exactly one account, by alias or id
+  cs connectors accounts list        List your connected accounts across connectors
+  cs connectors accounts remove <connector> <alias>
+                                     Remove one account by alias
+  cs connectors accounts rename <connector> <current-alias> <new-alias>
+                                     Rename one account's alias
+  cs remote add <slug> --url <https://…> --auth oauth|static_bearer|none [--header <name>]…
+                                     Register an org remote MCP server (admin)
+    [--name "Display Name"] [--client-id <id>] [--yes]
+                                       secrets are prompted on stdin; oauth auto-detects
+                                       DCR (no registration endpoint → --client-id)
+  cs remote list                     List this org's remote MCP connectors
+  cs remote show <slug>              Show one remote connector (url, auth, snapshot)
+  cs remote refresh <slug>           Re-pull its tools/list snapshot (admin, 60s cooldown)
+  cs remote remove <slug>            Deregister it — registration + snapshots + credential (admin)
+  cs mcp search <words…>             Find tools for a task, best match first, one line each
+    [--limit <n>] [--json]             default 10; --json prints the matches' full definitions
+  cs mcp get <tool>                  Show one tool in full: description, input schema, a call
+    [--json]                           to start from; --json prints its definition verbatim
+  cs mcp call <tool> [jsonArgs]      Call a tool and print its result: structuredContent when
+    [--raw]                            it has one, else its content (JSON pretty-printed);
+                                       --raw prints the CallToolResult as it arrived. Exits
+                                       non-zero when the tool did not do what it was asked
+  cs mcp list [--json]               Every tool, one line each; --json prints their definitions
+  cs drive put <file> <path>         Store a local file at a path in your Drive (a new version
+    [--mime <type>] [--access org]     when the path exists); --access org shows a new path to the
+                                       organization. The type comes from the file's extension
+  cs drive get <path|id> [<file>|-]  Download a file to <file> (default: its own name here), or
+                                       to stdout with -; a drv_* file id or dver_* version id works
+  cs drive ls [<prefix>]             List a folder's files and sub-folders, one line each
+    [--recursive] [--json]             --recursive: every file under it; --json: as the server said
+  cs drive mv <from> <to>            Rename or move a file (out of tmp/ keeps it)
+  cs drive rm <path>                 Delete a file and every version of it
+  cs drive share <path> <access>     private | org | link | public; --rotate issues a new link
+    [--rotate]
+  cs drive usage                     Kept bytes against the plan, and what sits under tmp/
+  cs usage                           Show wallet balance (available credit) and plan
+  cs tie                             Tie this machine to your org: choose a folder to share,
+                                       start tied (the daemon that holds the link, also at
+                                       login), then check it end to end. With no session here
+                                       it shows a code to enter at app.corespeed.io/tie from any
+                                       device you are signed in on; nothing signs in on this
+                                       machine. With an API key in the environment the key's
+                                       principal (you, or an agent) owns the machine
+    [--root <folder>]                  Share a shell and files in this folder (no question)
+    [--share]                          Share the machine with your organization from the start
+    [--slug <slug>] [--name <name>]    Name the device
+    [--pair <code>]                    A code from the dashboard's "Tie a machine": no sign-in
+                                       here; the machine is whoever made the code's
+    [--pair-again]                     already tied: a new credential; the old one stops working
+  cs tie status [--json]             This machine's device on CoreSpeed and its daemon
+  cs tie pause | resume              Refuse every call to this machine / take calls again
+  cs tie provider <p> on|off         Switch a provider: shell, browser, screen or mcp:<slug>
+    [--root <folder>]…                 shell: on shares the folder too; off stops sharing just that one
+  cs tie mcp add <slug> [--env K=V]… [--cwd <dir>] -- <command> [args…]
+                                     Host a local stdio MCP server's tools on this device
+  cs tie mcp remove <slug>           Stop hosting it
+  cs untie                           Revoke this machine's device, delete its credential, stop tied
+                                       and its start at login
+    [--forget]                         only forget it here, without asking CoreSpeed
+  cs --help                          Show this help
+
+Account & org context:
+  Commands act on your active org (see 'cs whoami'; change it with 'cs switch').
+  'cs connectors connect' opens the dashboard in the org active there; switch
+  orgs in the dashboard first to connect elsewhere. Aliases come from
+  'cs connectors accounts list' or the account badges in 'cs connectors list'.
+  Shared org-wide accounts can be removed only by their creator or an org admin.
+
+Exit codes:
+  0  success
+  1  usage error, or the request was refused (not found, conflict, invalid input)
+  3  not signed in, or the session was rejected — run 'cs login'
+  4  the account cannot do this now (no active org, payment required, suspended, permission)
+  5  CoreSpeed unreachable, rate-limited or answering badly — retry later
+  6  the tool call waits for a human's approval and has not run — run the
+     manage__approval_wait call printed on stderr, right away
+
+Documentation: https://corespeed.io/docs/cli

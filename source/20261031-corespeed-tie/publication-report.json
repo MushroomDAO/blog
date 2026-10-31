@@ -1,0 +1,123 @@
+{
+  "slug": "corespeed-tie-mac-studio-guide",
+  "blog": {
+    "checkedAt": "2026-10-31T05:59:29.702847+00:00",
+    "articles": [
+      {
+        "slug": "corespeed-tie-mac-studio-guide",
+        "url": "https://blog.mushroom.cv/blog/corespeed-tie-mac-studio-guide/",
+        "title": "CoreSpeed TIE：把Mac Studio交给Agent，开源了哪些？",
+        "listRank": 1,
+        "carouselRank": 1,
+        "images": [
+          {
+            "url": "https://blog.mushroom.cv/_astro/corespeed-tie-mac-studio-guide-banner.eQwO_cd7.jpg",
+            "status": 200,
+            "contentType": "image/jpeg",
+            "bytes": 83926
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/corespeed-tie-mac-studio-guide-banner.eQwO_cd7_t26aq.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 20188
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/corespeed-tie-mac-studio-guide-fig-01.QnrgiqZ3_KeONx.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 15214
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/corespeed-tie-mac-studio-guide-fig-02.CzwAx3tm_Z28kmRM.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 21360
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/corespeed-tie-mac-studio-guide-fig-03.B4n-jGdz_Z25Bh8y.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 20386
+          }
+        ]
+      }
+    ]
+  },
+  "wechat": {
+    "checkedAt": "2026-10-31T06:00:03.696Z",
+    "drafts": [
+      {
+        "slug": "corespeed-tie-mac-studio-guide",
+        "mediaId": "prCUE631thH1cmNLi42prMaADzXkRy-XXQEhH657obmo9iTU0_kOexqJ5YSNhzq6",
+        "titleMatches": true,
+        "authorMatches": true,
+        "digestMatches": true,
+        "htmlExact": false,
+        "fullTextMatches": true,
+        "imageIdentitiesMatch": true,
+        "imageCount": 3,
+        "localTextHash": "11f789ef4d11c15766b2ec8f19f00a9c34b9e10dbdbd64eb1d0f2981625faf1a",
+        "remoteTextHash": "11f789ef4d11c15766b2ec8f19f00a9c34b9e10dbdbd64eb1d0f2981625faf1a",
+        "platformRewrites": [
+          "external anchor wrappers removed",
+          "numeric entity escaping",
+          "img src converted to data-src and CDN resolution 0 to640"
+        ],
+        "canonicalInBody": false,
+        "copyrightPresent": true,
+        "coverMatches": true,
+        "needOpenComment": 1,
+        "onlyFansComment": 0,
+        "contentSourceUrl": "https://blog.mushroom.cv/blog/corespeed-tie-mac-studio-guide/",
+        "localContentHash": "905653ac5d74fb7b199079212e8545f89be7a521a9f57cf12cac1baa34894d4a",
+        "remoteContentHash": "59b96015c95576e17dec76e9006575caf5990a1e67522dc0d0bdcf79456b1bcb"
+      }
+    ]
+  },
+  "semantic": {
+    "vectorsUpserted": 2,
+    "liveMatched": true,
+    "language": "zh",
+    "score": 0.73949164
+  },
+  "sourceFetch": "agent-reach unavailable;GitHub connector and official public sites/native fetch fallback",
+  "deployment": "https://bfe35ee0.blog-mushroom.pages.dev",
+  "build": "passed; frozen article and four images unchanged",
+  "duplicatesCreated": false,
+  "reusedArticles": [
+    {
+      "slug": "aws-infinity-agent-runtime",
+      "blogUrl": "https://blog.mushroom.cv/blog/aws-infinity-agent-runtime/",
+      "blogStatus": 200,
+      "title": "AWS Infinity：让 Agent 等工具时休眠，7.5万并发意味着什么？",
+      "archivedMediaId": "prCUE631thH1cmNLi42prMPjo28_WGI7KCOraAu0r40xMTiGDHmD_UIM4jxm5dXv",
+      "currentDraftExists": false,
+      "wechatError": "Oldmedia_idnotinremotedrafts(40007);publishedlisting48001unauthorized;currentpublicationstatusunverified;notrecreated",
+      "wechatCode": 40007,
+      "action": "reuse existing article;do not create duplicate;published listing48001unavailable",
+      "wechatStatus": "recorded",
+      "mediaId": "",
+      "publishedListingError": "48001 api unauthorized"
+    },
+    {
+      "slug": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+      "blogUrl": "https://blog.mushroom.cv/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
+      "blogStatus": 200,
+      "title": "GameFactory-3A：让编程 Agent 直接生成 3A 游戏资产，UE5/Blender/Unity/three.js 全支持，Apache 2.0 开源",
+      "archivedMediaId": "prCUE631thH1cmNLi42prMJm8Ep8Q8K5VwOogC3CKVvgUhLXhS-KBHGwDa-JAgOf",
+      "currentDraftExists": false,
+      "wechatError": "Oldmedia_idnotinremotedrafts(40007);publishedlisting48001unauthorized;currentpublicationstatusunverified;notrecreated",
+      "wechatCode": 40007,
+      "action": "reuse existing article;do not create duplicate;published listing48001unavailable",
+      "wechatStatus": "recorded",
+      "mediaId": "",
+      "publishedListingError": "48001 api unauthorized"
+    }
+  ],
+  "limits": [
+    "Public repository verifies plugins/Skills; complete TIE source or selfhosting not established",
+    "CLI help/version and eight manifest checks only; no pairing, desktop operation, policy enforcement or Mac Studio benchmark",
+    "Old Infinity/GameFactory drafts absent, published API48001; keep archived credentials and do not recreate"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "query": "CoreSpeed TIE Mac Studio plugin source permission boundaries",
+  "response": {
+    "results": [
+      {
+        "article_id": "seal-ai-video-workbench",
+        "title": "Seal：把画布、剪辑和 AI 助手放进一个工作台",
+        "url": "/blog/seal-ai-video-workbench/",
+        "language": "zh",
+        "excerpt": "Seal：把画布、剪辑和 AI 助手放进一个工作台 Seal 是本地优先的 AI 视频创作工作台，将画布、资产库、时间线剪辑、创作助手和 Skill Hub 连接起来。本文核对官方源码与 v1.7.8 Windows 发行包，区分本地素材存储与外部模型调用，说明 macOS 发行边界，并复跑技能选择和请求预算测试，给出适合创作者提交的改进建议及试用前检查要点。 Seal AI Video Video Editing Local First Agent Skills Seal 怎样把想法接到成片？ 创作助手和 Skill Hub 各自负责什么？ 本地优先，",
+        "score": 0.51922023
+      },
+      {
+        "article_id": "codexboard-mac-codex-task-board-mobile-lark",
+        "title": "CodexBoard：Apple Silicon Mac 上把 Codex CLI 接上任务看板，飞书/Web 手机端远程监控执行过程",
+        "url": "/blog/codexboard-mac-codex-task-board-mobile-lark/",
+        "language": "zh",
+        "excerpt": "CodexBoard：Apple Silicon Mac 上把 Codex CLI 接上任务看板，飞书/Web 手机端远程监控执行过程 RocYan98/CodexBoard，115 stars，TypeScript，无开源许可证。运行在 Apple Silicon Mac（macOS 13+）上的本地任务看板，把 Codex CLI 执行过程绑定到 Kanban 看板，支持通过飞书（Lark）或 Web 浏览器在手机端实时监控进度、审批变更、查看代码 Diff。需要公网 frp 服务器作为内网穿透，一周内迭代 10 个版本，目前仍为 0.1.x pre",
+        "score": 0.5177785
+      },
+      {
+        "article_id": "yue2-3b-open-source-song-generation-editable-score",
+        "title": "YuE2-3B：先写谱再唱歌的开源音乐模型，和 ACE-Step 1.5 差在哪",
+        "url": "/blog/yue2-3b-open-source-song-generation-editable-score/",
+        "language": "zh",
+        "excerpt": "YuE2-3B：先写谱再唱歌的开源音乐模型，和 ACE-Step 1.5 差在哪 YuE2-3B 开源歌曲生成：歌词+风格先出可编辑 ABC 乐谱再合成 48kHz 立体声，Agent 可改和弦改旋律再生成；RTX 4090 上 3.6 分钟歌 71 秒。本文对比 ACE-Step 1.5，拆解「超过 Suno v5」的自家基准与 best-of-8 前提、云上每首歌边际成本估算、CC BY-NC 非商用协议和 Mac 现状。 AI Music YuE2 音乐生成 开源模型 ACE-Step Suno替代 Agentic Editing 本地部署 一句话",
+        "score": 0.51571345
+      },
+      {
+        "article_id": "codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos",
+        "title": "用 M5Stack 手表做 Codex Micro 控制器：BLE HID + 额度仪表盘 + USB 麦克风",
+        "url": "/blog/codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos/",
+        "language": "zh",
+        "excerpt": "用 M5Stack 手表做 Codex Micro 控制器：BLE HID + 额度仪表盘 + USB 麦克风 digitsisyph/codex-micro-stopwatch，MIT，C++/Swift，2026-08-05 发布。把 M5Stack StopWatch Dev Kit C152（466×466 圆形 AMOLED，ESP32-S3）变成 Codex Micro 兼容的 BLE HID 控制器，同时在表盘上显示本周 Codex 剩余额度和 reset 倒计时。双 BLE 通道设计：HID 通道走标准 Codex Micro 协议（Pu",
+        "score": 0.51298386
+      },
+      {
+        "article_id": "ra-jit-blaze-rust-live-builds",
+        "title": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界",
+        "url": "/blog/ra-jit-blaze-rust-live-builds/",
+        "language": "zh",
+        "excerpt": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界 ra-jit 已更名为 blaze。本文核对官方暖构建基准、常驻编译架构、Apple Silicon 与 Linux 支持，以及 Rust 1.99.0、内存和借用检查限制，并在 M4 Mac 上验证函数修改与测试流程，解释为何局部补丁延迟不能等同于完整构建或画面更新速度，也不能承诺每个项目都快 92 倍。 Rust ra-jit blaze 编译器 热更新 开发工具 blaze 为什么能省掉修改后的大量等待？ “92 倍”和“10–24 倍”应该怎样看？ 毫秒构建与“不重启热更新",
+        "score": 0.5060474
+      },
+      {
+        "article_id": "fastmcp-typescript-mcp-server-framework",
+        "title": "FastMCP：用几十行 TypeScript 搭 MCP 服务器，5 个月 3000+ star",
+        "url": "/blog/fastmcp-typescript-mcp-server-framework/",
+        "language": "zh",
+        "excerpt": "FastMCP：用几十行 TypeScript 搭 MCP 服务器，5 个月 3000+ star FastMCP 是 TypeScript 版 MCP 服务器框架，内置 Session 管理、OAuth 认证、Edge Runtime 支持和 CLI 调试工具，比官方 SDK 省去大量样板代码。5 个月获 3145 star，周均下载 46 万次。 MCP TypeScript 开源 FastMCP Cloudflare Workers AI工具 开发者工具 为什么需要 FastMCP？ 核心特性一览 Session 管理 零配置 OAuth Edge",
+        "score": 0.5018575
+      },
+      {
+        "article_id": "specialized-inference-engines-rise-hardware-specific-llm-optimization",
+        "title": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照",
+        "url": "/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
+        "language": "zh",
+        "excerpt": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照 Splash 1.4.0 为 Apple Silicon 增加 Qwen3.8-Flash-Next、专家与 PLE 的 SSD 流式加载及长上下文支持。本文复核官方同机 Q2_0 对照，区分解码、预填充、缓存首字延迟和并发总吞吐，核对120tok/s的来源，并说明量化精度、内存预算、磁盘读写及可重复性的代价。 推理引擎 LLM WASM 性能优化 Apple Silicon NVIDIA AMD 开源工具 Splash 1.4.0 的速度数字，到底测了什么？ 为什么要把专家、PLE 和 KV",
+        "score": 0.49915275
+      },
+      {
+        "article_id": "deepseek-v41-flash-1017-uncensored-fp8-teardown",
+        "title": "DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛",
+        "url": "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+        "language": "zh",
+        "excerpt": "DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛 dealignai 发布的 DeepSeek-V4.1-Flash-1017 去审查 FP8 版（MIT，3808 下载、265 likes，2026-10-18 创建）自报 HarmBench-320 全部顺从、MMLU 抽样 87.63% 降到 83.77%。但模型卡不披露消融方法，基线来自另一套服务栈，磁盘 510GB、仅在 4×H200 上验证，Mac 跑不了这个版本。 DeepSeek 消融",
+        "score": 0.49531603
+      },
+      {
+        "article_id": "krea-2-turbo-open-weight-text-to-image-license-hardware",
+        "title": "Krea 2 Turbo 值不值得本地跑？12.8B 开放权重文生图：8 步出图、年收入百万美元以下可商用",
+        "url": "/blog/krea-2-turbo-open-weight-text-to-image-license-hardware/",
+        "language": "zh",
+        "excerpt": "Krea 2 Turbo 值不值得本地跑？12.8B 开放权重文生图：8 步出图、年收入百万美元以下可商用 Krea 2 Turbo 是 Krea 从零训练的 12.8B 参数文生图 DiT，用 TDM 蒸馏到 8 步、关闭 CFG，支持 1K–2K 分辨率。本文从个人开发者本地出图的角度拆它：官方全套 bf16 权重约 35.7GB，社区 Q4 GGUF 主干 7.49GB；许可证允许年收入低于 100 万美元的主体商用，但要求内容过滤、衍生模型名须以 Krea 开头，且 Krea 可提前 30 天通知终止授权。并和 FLUX.2 klein 4B/9",
+        "score": 0.49479118
+      },
+      {
+        "article_id": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+        "title": "Sprite Studio：本地优先 AI 2D 游戏美术工作台，Rust 骨骼引擎确定性渲染 + Codex 驱动逐帧动画",
+        "url": "/blog/sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation/",
+        "language": "zh",
+        "excerpt": "Sprite Studio：本地优先 AI 2D 游戏美术工作台，Rust 骨骼引擎确定性渲染 + Codex 驱动逐帧动画 Sprite Studio 是一个开源（MIT）的本地优先 AI 2D 游戏美术桌面工作台，基于 Tauri 2 + Svelte + Rust + SQLite + Codex CLI。支持聊天生成精灵、AI 逐帧动画（身份参考 + 邻帧参考保证风格连贯）、原生 Rust 骨骼绑定引擎（关节点 + 胶囊骨骼 + IK + 确定性像素渲染，无需图像生成）、以及 PNG 精灵表导出。覆盖 macOS、Windows、Linux，内置",
+        "score": 0.49410206
+      }
+    ]
+  }
+}

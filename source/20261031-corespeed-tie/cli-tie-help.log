@@ -1,0 +1,6 @@
+Usage: cs tie [--root <folder>] [--share | --pair <code>] [--slug <slug>] [--name <name>] [--pair-again]
+       cs tie status [--json]
+       cs tie pause | resume
+       cs tie provider <shell|browser|screen|mcp:<slug>> on|off [--root <folder>]…
+       cs tie mcp add <slug> [--env K=V]… [--cwd <dir>] -- <command> [args…]
+       cs tie mcp remove <slug>

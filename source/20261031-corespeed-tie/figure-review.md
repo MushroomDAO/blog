@@ -1,0 +1,1 @@
+Three final figures manually inspected: bridge between remote agent and local tools; work directory, account privileges and approvals as separate controls; read, controlled write and exit checks. All match article captions, with legible Chinese labels. No actual TIE interface or security certification is implied.
