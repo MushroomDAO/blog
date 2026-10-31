@@ -1,0 +1,141 @@
+{
+  "shots": [
+    {
+      "name": "desktop-landscape",
+      "image": ".lgui/build/verify/desktop-landscape.png",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "safeArea": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "errors": [],
+      "sha256": "d30212b5dc9e910e47b3b6f63e75fdee4bbb687133cee77e43c6a220a4008308",
+      "bytes": 481707
+    },
+    {
+      "name": "desktop-portrait",
+      "image": ".lgui/build/verify/desktop-portrait.png",
+      "viewport": {
+        "width": 1080,
+        "height": 1920
+      },
+      "safeArea": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "errors": [],
+      "sha256": "d623a4c57ff46d2b6bb84f2575e6c5643fd85f02a315d5b405641da76677eb91",
+      "bytes": 458555
+    },
+    {
+      "name": "ultrawide-landscape",
+      "image": ".lgui/build/verify/ultrawide-landscape.png",
+      "viewport": {
+        "width": 2560,
+        "height": 1080
+      },
+      "safeArea": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "errors": [],
+      "sha256": "6344e9dd4eefa3de762cc1e9a92dba5b7f0d55d101c8df44550cb0b57a931a94",
+      "bytes": 488078
+    },
+    {
+      "name": "ultrawide-portrait",
+      "image": ".lgui/build/verify/ultrawide-portrait.png",
+      "viewport": {
+        "width": 1080,
+        "height": 2560
+      },
+      "safeArea": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "errors": [],
+      "sha256": "c45d92dc0b58f7b327d03590769ed355753a8e685862340dc378297ab0d2f5b5",
+      "bytes": 462382
+    },
+    {
+      "name": "phone-landscape-landscape",
+      "image": ".lgui/build/verify/phone-landscape-landscape.png",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "safeArea": {
+        "top": 0,
+        "right": 47,
+        "bottom": 21,
+        "left": 47
+      },
+      "errors": [],
+      "sha256": "507a5bfd1e79cac4d011b248f210085ad47eeca3cd006feed3401eb276c32b7d",
+      "bytes": 92337
+    },
+    {
+      "name": "tablet-landscape",
+      "image": ".lgui/build/verify/tablet-landscape.png",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "safeArea": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "errors": [],
+      "sha256": "e155327ca1737d5a9f5b3f1c0261043da51910b757628da8ed7c264f283a124b",
+      "bytes": 176003
+    },
+    {
+      "name": "phone-portrait-portrait",
+      "image": ".lgui/build/verify/phone-portrait-portrait.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "safeArea": {
+        "top": 47,
+        "right": 0,
+        "bottom": 34,
+        "left": 0
+      },
+      "errors": [],
+      "sha256": "e10226f425be553ea6ee5a427c687d08658b40b5fd17f1c6340e523d47131ee9",
+      "bytes": 86356
+    },
+    {
+      "name": "tablet-portrait-portrait",
+      "image": ".lgui/build/verify/tablet-portrait-portrait.png",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "safeArea": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "errors": [],
+      "sha256": "fe6b2465787bd9c0393856298c758a34757bef41f93338a1f33c633ee7b629a0",
+      "bytes": 198156
+    }
+  ],
+  "manualReview": "All8viewed in contact sheet; desktoplandscape andphoneportrait also full-size. Different layouts visible; no target-device compatibility claimed."
+}

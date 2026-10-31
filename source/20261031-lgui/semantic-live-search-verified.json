@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-10-31T11:01:52.515621+00:00",
+  "query": "LGUI LumioGames 浏览器 游戏UI FairyGUI Unity 许可 18项测试",
+  "matched": true,
+  "hits": [
+    {
+      "article_id": "lgui-browser-game-ui-guide",
+      "title": "LGUI：让Agent在浏览器做游戏UI，离开引擎的边界在哪？",
+      "url": "/blog/lgui-browser-game-ui-guide/",
+      "language": "zh",
+      "excerpt": "LGUI：让Agent在浏览器做游戏UI，离开引擎的边界在哪？ LumioGames的LGUI把FairyGUI界面、TypeScript业务逻辑、Node测试和浏览器预览组织成一套Agent可执行的游戏UI流程。本文核查官方仓库、背包示例和Unity导出边界，实际运行环境检查、18项交互测试与8张适配截图，说明Mac使用条件、当前开发版本及限制竞品的源码许可。 LGUI LumioGames Game UI Agent Skills FairyGUI 什么工作真正离开了游戏引擎？ 为什么它强调Agent，而不只是一个UI编辑器？ 本地到底跑通了哪些步骤",
+      "score": 0.7071873
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "lgui-browser-game-ui-guide",
+        "title": "LGUI：让Agent在浏览器做游戏UI，离开引擎的边界在哪？",
+        "url": "/blog/lgui-browser-game-ui-guide/",
+        "language": "zh",
+        "excerpt": "LGUI：让Agent在浏览器做游戏UI，离开引擎的边界在哪？ LumioGames的LGUI把FairyGUI界面、TypeScript业务逻辑、Node测试和浏览器预览组织成一套Agent可执行的游戏UI流程。本文核查官方仓库、背包示例和Unity导出边界，实际运行环境检查、18项交互测试与8张适配截图，说明Mac使用条件、当前开发版本及限制竞品的源码许可。 LGUI LumioGames Game UI Agent Skills FairyGUI 什么工作真正离开了游戏引擎？ 为什么它强调Agent，而不只是一个UI编辑器？ 本地到底跑通了哪些步骤",
+        "score": 0.7071873
+      },
+      {
+        "article_id": "lingchat-ai-galgame-emotion-desktop-pet-tauri",
+        "title": "LingChat：沉浸式 AI 恋爱游戏伴侣，18 类情绪识别 + 截屏感知 + Live2D，Tauri 2 + Vue 3",
+        "url": "/blog/lingchat-ai-galgame-emotion-desktop-pet-tauri/",
+        "language": "zh",
+        "excerpt": "LingChat：沉浸式 AI 恋爱游戏伴侣，18 类情绪识别 + 截屏感知 + Live2D，Tauri 2 + Vue 3 SlimeBoyOwO/LingChat，AGPL-3.0，Rust，2,255 stars。沉浸式 AI 恋爱游戏（Galgame）聊天软件：自训练 18 类情绪识别模型、截屏感知主动评论、Live2D 角色服装切换、VITS 语音合成（GPU 约 1 秒）、多角色剧情脚本 + 好感系统、番茄计时 / 日程管理。架构：Tauri 2 Rust 后端 + Vue 3 前端 + PixiJS Live2D 渲染。API 驱动，默认",
+        "score": 0.5739421
+      },
+      {
+        "article_id": "lfm3-liquid-ai-local-multimodal-models",
+        "title": "Liquid AI LFM3：六款端侧模型怎么选，Mac 上能跑到哪一步？",
+        "url": "/blog/lfm3-liquid-ai-local-multimodal-models/",
+        "language": "zh",
+        "excerpt": "Liquid AI LFM3：六款端侧模型怎么选，Mac 上能跑到哪一步？ Liquid AI 发布 LFM3 开放权重家族，六款约20亿参数模型共享一个底座，覆盖文本、视觉、音频、全模态与决策。本文逐项核对模型卡、上下文、语音范围和商业许可，解释三混合架构及 Mac 部署的版本要求，并保留本地文本测试中输出预算不足的失败记录，区分权重可下载、工具已支持与真实任务能力这三件不同的事。 Liquid AI LFM3 Local AI Multimodal Decision Models 六款 LFM3 分别解决什么问题？ 三混合架构为什么值得看？ 视频、1",
+        "score": 0.5591017
+      },
+      {
+        "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+        "title": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具",
+        "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+        "language": "zh",
+        "excerpt": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具 hikarioyama/ParallelHue（MIT，35 star，零运行时依赖）把本地大模型的多路并发流式输出画进终端，只有调度器和反分词器的遥测跟 SSE 逐字节对得上，才按验证步上色。真正的 exact 模式只支持 vLLM 0.26.x，靠 7 个内部方法挂钩实现，官方的有效证据只有一次 16 路 GLM 运行（16,384 个 token）。我们在 Mac mini 上跑通了 72 个测试，用模拟服务器确认了它在证据不足时会失败或降级，另外发现：只要模型名里带 qw",
+        "score": 0.5585991
+      },
+      {
+        "article_id": "threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl",
+        "title": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节",
+        "url": "/blog/threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl/",
+        "language": "zh",
+        "excerpt": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节 achrefelouafi 开源的 Elemental Sandbox 用 Three.js + Vite + 手写 GLSL，在浏览器里程序化生成 10 种 3A 游戏级技能特效——冰霜迸裂、枝状闪电、陨石撞击、能量光束、虚空刀刃、凤凰……全部无贴图、无精灵表、无预烘焙网格。938 个参数配有实时滑块，按 P 暂停后仍可继续调整，成为研究游戏 VFX 系统的最佳交互式沙盒。MIT 许可，npm run dev 即跑。 Three.js WebGL G",
+        "score": 0.5559006
+      },
+      {
+        "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+        "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+        "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+        "language": "zh",
+        "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+        "score": 0.55364215
+      },
+      {
+        "article_id": "llm-dock-docker-compose-local-llm-dashboard",
+        "title": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板",
+        "url": "/blog/llm-dock-docker-compose-local-llm-dashboard/",
+        "language": "zh",
+        "excerpt": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板 LLM-Dock 是一个管理本地 LLM 推理服务的 Web 面板：自动扫描 HuggingFace 缓存发现模型，llama.cpp 跑 GGUF、vLLM 跑 safetensors，3300-3400 端口段自动分配，一键起停，自动注册进 Open WebUI，还能在面板里直接跑 llama-bench 并把结果存库对比。前提是 Linux + NVIDIA。 本地推理 Docker llama.cpp vLLM 运维 开源 Open Web",
+        "score": 0.55292016
+      },
+      {
+        "article_id": "lfm2-5-230m-small-model-developer",
+        "title": "LFM2.5-230M 开发者探索指南：213 tok/s 的小模型，普通人能做什么？",
+        "url": "/blog/lfm2-5-230m-small-model-developer/",
+        "language": "zh",
+        "excerpt": "LFM2.5-230M 开发者探索指南：213 tok/s 的小模型，普通人能做什么？ Liquid AI 开源的 LFM2.5-230M 在手机 CPU 上跑出 213 tok/s，Raspberry Pi 上 42 tok/s，支持 32K 上下文和 Tool Use。本文从 6 个方向拆解普通开发者可以用它做什么：端侧 Agent、浏览器推理、Android App、低成本微调、IoT 部署和多 Agent 协作。 小模型 边缘AI LFM2.5 Liquid AI 端侧推理 开发者指南 一、先搞清楚：这个小模型为什么值得关注？ 为什么 Liqui",
+        "score": 0.55281717
+      },
+      {
+        "article_id": "gods-eye-view-browser-geospatial-intelligence-real-data-3d-globe",
+        "title": "God's Eye View：浏览器里的卫星侦察视角，数据全是真实的，MIT 开源，35K Stars",
+        "url": "/blog/gods-eye-view-browser-geospatial-intelligence-real-data-3d-globe/",
+        "language": "zh",
+        "excerpt": "God's Eye View：浏览器里的卫星侦察视角，数据全是真实的，MIT 开源，35K Stars bilawalsidhu/gods-eye-view，35K stars，MIT 开源，JavaScript + CesiumJS + WebGL + Google 3D Tiles。浏览器里的地理空间情报平台：15 个实时数据层，包括 11,000+ 架飞机、全球船只、838 颗卫星轨道、地震、CCTV、NASA 火灾探测。支持语音控制、座舱视角、热成像传感器模拟。无需 API Key 即可启动。 open-source geospatial OSI",
+        "score": 0.5456229
+      },
+      {
+        "article_id": "gemma-4-released--a-new-benchmark-for-local-open-source-mode",
+        "title": "Gemma 4 发布：本地开源模型的新标杆",
+        "url": "/blog/gemma-4-released--a-new-benchmark-for-local-open-source-mode/",
+        "language": "zh",
+        "excerpt": "Gemma 4 发布：本地开源模型的新标杆 Google DeepMind 发布 Gemma 4，支持原生多模态、256K 长文本、Agent 友好，开源模型也能媲美闭源旗舰 gemma gemini llm open-source ai-agent 四档规模，全场景覆盖 技术特性有点炸 性能表现 上手体验 值得试试",
+        "score": 0.53860104
+      }
+    ]
+  }
+}

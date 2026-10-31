@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-10-31T11:00:46.459045+00:00",
+  "query": "LGUI LumioGames browser game UI FairyGUI TypeScript Unity source available",
+  "hits": [],
+  "response": {
+    "results": [
+      {
+        "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+        "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+        "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+        "language": "zh",
+        "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+        "score": 0.54742175
+      },
+      {
+        "article_id": "agent-game-forge-ai-2d-game-ide",
+        "title": "【开源】Agent Game Forge：用 AI Agent 驱动 2D 游戏开发的本地 IDE",
+        "url": "/blog/agent-game-forge-ai-2d-game-ide/",
+        "language": "zh",
+        "excerpt": "【开源】Agent Game Forge：用 AI Agent 驱动 2D 游戏开发的本地 IDE 123 Star 开源项目 Agent Game Forge（AGF）——本地优先的 2D 游戏 IDE，让 Codex 或 Claude Code 帮你从一句描述生成完整游戏。精灵图、parallax 背景、物理、场景编辑器全部内置，Apache 2.0 协议。 Agent Game Forge AI游戏开发 Claude Code Codex 本地优先 开源 2D游戏 TypeScript Tech-News 是什么？ 核心能力 Bring Your ",
+        "score": 0.5308585
+      },
+      {
+        "article_id": "godogen-autonomous-game-dev-godot-bevy-claude",
+        "title": "Godogen：一句话生成可玩游戏，Claude Code + Codex 的自动游戏开发流水线",
+        "url": "/blog/godogen-autonomous-game-dev-godot-bevy-claude/",
+        "language": "zh",
+        "excerpt": "Godogen：一句话生成可玩游戏，Claude Code + Codex 的自动游戏开发流水线 3200+ Star 开源项目 Godogen，输入一句游戏创意，自动完成架构规划、代码编写、素材生成、引擎运行、截图检查、缺陷修复，最终交付完整的 Godot/Bevy 游戏项目。面向独立开发者和小团队的 AI 游戏工作室。 Godogen Claude Code Godot Bevy AI游戏开发 自动化 开源 独立游戏 Tech-News 是什么？ 核心能力拆解 双引擎支持 多模型素材生成 截图驱动的自我修复 发布架构 快速开始 1. 环境准备 2. ",
+        "score": 0.52174157
+      },
+      {
+        "article_id": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+        "title": "GameFactory-3A：让编程 Agent 直接生成 3A 游戏资产，UE5/Blender/Unity/three.js 全支持，Apache 2.0 开源",
+        "url": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
+        "language": "zh",
+        "excerpt": "GameFactory-3A：让编程 Agent 直接生成 3A 游戏资产，UE5/Blender/Unity/three.js 全支持，Apache 2.0 开源 OpenDCAI/GameFactory-3A 是一个开源的 3A 游戏生成 Skill 和资产框架，Apache 2.0，Python，256 stars。核心思路：把 Claude Code、Codex、Gemini CLI 等编程 Agent 接入一套结构化的 Skill 体系，Agent 读 agent_skills/setting_overview.md 后，自动调用图像生成、3D",
+        "score": 0.52061313
+      },
+      {
+        "article_id": "lingchat-ai-galgame-emotion-desktop-pet-tauri",
+        "title": "LingChat：沉浸式 AI 恋爱游戏伴侣，18 类情绪识别 + 截屏感知 + Live2D，Tauri 2 + Vue 3",
+        "url": "/blog/lingchat-ai-galgame-emotion-desktop-pet-tauri/",
+        "language": "zh",
+        "excerpt": "LingChat：沉浸式 AI 恋爱游戏伴侣，18 类情绪识别 + 截屏感知 + Live2D，Tauri 2 + Vue 3 SlimeBoyOwO/LingChat，AGPL-3.0，Rust，2,255 stars。沉浸式 AI 恋爱游戏（Galgame）聊天软件：自训练 18 类情绪识别模型、截屏感知主动评论、Live2D 角色服装切换、VITS 语音合成（GPU 约 1 秒）、多角色剧情脚本 + 好感系统、番茄计时 / 日程管理。架构：Tauri 2 Rust 后端 + Vue 3 前端 + PixiJS Live2D 渲染。API 驱动，默认",
+        "score": 0.52006865
+      },
+      {
+        "article_id": "crawl4ai-open-source-llm-web-crawler-scraper-guide",
+        "title": "crawl4ai-open-source-llm-web-crawler-scraper-guide",
+        "url": "/blog/crawl4ai-open-source-llm-web-crawler-scraper-guide/",
+        "language": "en",
+        "excerpt": "crawl4ai-open-source-llm-web-crawler-scraper-guide unclecode/crawl4ai, 77.6k stars, Apache 2.0, Python, GitHub's #1 open-source crawler. Designed for LLMs and AI agents: outputs clean Markdown directly, supports JS-rendered pages, deep crawl (BFS/DFS), session reuse, proxies, CSS",
+        "score": 0.519231
+      },
+      {
+        "article_id": "liteparse-llamaindex-local-document-parser",
+        "title": "LiteParse：LlamaIndex 团队开源本地文档解析引擎，Rust 核心+四端绑定+精确边界框，8.3k Star",
+        "url": "/blog/liteparse-llamaindex-local-document-parser/",
+        "language": "zh",
+        "excerpt": "LiteParse：LlamaIndex 团队开源本地文档解析引擎，Rust 核心+四端绑定+精确边界框，8.3k Star run-llama/liteparse 是 LlamaIndex 团队推出的开源本地文档解析引擎：Rust 核心，原生支持 Node.js、Python、Browser WASM。基于 PDFium 的空间文本提取 + bounding box，双轨解析（native PDF + selective OCR），为 AI Agent 提供截图和布局信息，无云依赖，无隐私顾虑。v2.0.4，8.3k Stars。 LlamaIndex",
+        "score": 0.5130915
+      },
+      {
+        "article_id": "gh-copilot-code-review-cli",
+        "title": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review",
+        "url": "/blog/gh-copilot-code-review-cli/",
+        "language": "zh",
+        "excerpt": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review GitHub CLI v2.88.0 新功能实测：在终端直接邀请 Copilot 审查 PR，无需跳转浏览器，附隐私风险提示 github copilot cli code-review developer-tools 核心能力 如何使用 免费吗？ 隐私警告（必读） 能用其他 AI CLI 吗？ 额外优化：大型团队福音 总结",
+        "score": 0.5099864
+      },
+      {
+        "article_id": "openmuse-copilotkit-personal-ai-agent-browser-workspace",
+        "title": "OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行",
+        "url": "/blog/openmuse-copilotkit-personal-ai-agent-browser-workspace/",
+        "language": "zh",
+        "excerpt": "OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行 OpenMuse，CopilotKit出品，MIT，2026-09-22开源。个人AI助理模板：持久化Chromium浏览器（跨任务保留Profile）、可选Linux工作区（终端+文件）、持久化后台任务（SQL租约协调）、Gmail/Google Calendar连接器、iOS/Android/Web全平台。Built on CopilotKit + AG-UI，任意Agent后端接入，可自己部署可二次开发。直接对标Meta Muse发布时机。 ope",
+        "score": 0.5090631
+      },
+      {
+        "article_id": "grok-build-xai-coding-agent-rust-tui-fullscreen-acp",
+        "title": "Grok Build：xAI 开源 Rust 编码 Agent，全屏 TUI + ACP 协议",
+        "url": "/blog/grok-build-xai-coding-agent-rust-tui-fullscreen-acp/",
+        "language": "zh",
+        "excerpt": "Grok Build：xAI 开源 Rust 编码 Agent，全屏 TUI + ACP 协议 xai-org/grok-build ⭐26283，SpaceXAI（xAI）开源的终端编码 Agent，Rust 实现，全屏鼠标交互 TUI，支持文件编辑/命令执行/网页搜索/长任务，交互/无头/编辑器嵌入三种模式，ACP 协议，MCP/Skills/插件/沙盒，Apache 2.0。 AI coding agent Rust TUI xAI open source MCP ACP terminal coding tools xAI 把自己的编码 Agent",
+        "score": 0.50841355
+      }
+    ]
+  }
+}
