@@ -1,0 +1,26 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6ae61291-212e0d61-0888cd3a）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 935 篇 + 公众号草稿箱 8 条 + 本地发布记录 917 条 + MemPalace 3613 抽屉
+
+── 查：https://github.com/deepseek-ai/dsh-superagent-prototype
+   ⚠️  [知识库] 【DeepSeek Harness (dsh) 深度分析】 GitHub：deepseek-ai/deepseek-ha
+      标题相似度 38%
+
+── 查：dsh-superagent-prototype
+   ✅ 四本账都没查到
+
+── 查：Super-agent
+   ⚠️  [发过 2026-04-09] Agent：从效率替代到组织变革
+      标题相似度 33%
+   ❌ [知识库] # 原标题：《Super-agent设计探索：迈向更自主的Age  **Summary**: 原标题：《Super-ag
+      正文出现实体名「super-agent」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

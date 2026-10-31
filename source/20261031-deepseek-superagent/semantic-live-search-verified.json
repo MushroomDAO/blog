@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-10-31T16:34:16.225525+00:00",
+  "query": "DeepSeek Super-agent 从事件接入到可靠交付 官方原型 七个练习",
+  "matched": true,
+  "hits": [
+    {
+      "article_id": "deepseek-superagent-engineering-guide",
+      "title": "DeepSeek Super-agent工程实践：从事件接入到可靠交付",
+      "url": "/blog/deepseek-superagent-engineering-guide/",
+      "language": "zh",
+      "excerpt": "DeepSeek Super-agent工程实践：从事件接入到可靠交付 DeepSeek的Super-agent设计把全局路由、隔离执行和持续事件流连接起来。本文追溯文章与官方MIT原型，逐项对照架构设想和源码实现，分析授权、订阅直通、上下文预算、持久化及恢复边界，并提供复用真实Engine、SQLite和Effects的离线练习，帮助团队分阶段构建可验证的Agent框架。 DeepSeek Super-agent Agent Engineering Event Driven Durable Execution 原文找到了吗，哪些内容能直接核实？ 应该复",
+      "score": 0.7565742
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "deepseek-superagent-engineering-guide",
+        "title": "DeepSeek Super-agent工程实践：从事件接入到可靠交付",
+        "url": "/blog/deepseek-superagent-engineering-guide/",
+        "language": "zh",
+        "excerpt": "DeepSeek Super-agent工程实践：从事件接入到可靠交付 DeepSeek的Super-agent设计把全局路由、隔离执行和持续事件流连接起来。本文追溯文章与官方MIT原型，逐项对照架构设想和源码实现，分析授权、订阅直通、上下文预算、持久化及恢复边界，并提供复用真实Engine、SQLite和Effects的离线练习，帮助团队分阶段构建可验证的Agent框架。 DeepSeek Super-agent Agent Engineering Event Driven Durable Execution 原文找到了吗，哪些内容能直接核实？ 应该复",
+        "score": 0.7565742
+      },
+      {
+        "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+        "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+        "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+        "language": "zh",
+        "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+        "score": 0.60676056
+      },
+      {
+        "article_id": "how-to-build-agents-software-company-guide",
+        "title": "软件公司转型：如何开发 Agent？一线团队的 8 步流程与 6 条避坑建议",
+        "url": "/blog/how-to-build-agents-software-company-guide/",
+        "language": "zh",
+        "excerpt": "软件公司转型：如何开发 Agent？一线团队的 8 步流程与 6 条避坑建议 业内公认的 agent 开发「教科书」只有两份：Anthropic 的 Building Effective Agents 和 OpenAI 的 Practical Guide。本文在此基础上还原头部团队（Sierra、Devin、Cursor）实际跑的 8 步流程，给出 agent 分类的两个正交维度，以及「eval-first」「工具设计 > prompt 工程」等 6 条经反复踩坑验证的具体建议。 Agent开发 AI工程 MCP Eval Anthropic OpenA",
+        "score": 0.6031372
+      },
+      {
+        "article_id": "building-ai-agent-six-step-framework",
+        "title": "从0到1构建AI Agent：六步实战指南",
+        "url": "/blog/building-ai-agent-six-step-framework/",
+        "language": "zh",
+        "excerpt": "从0到1构建AI Agent：六步实战指南 一线工程师六周落地AI Agent的系统化方法论：任务定义、SOP设计、MVP验证、工具集成、测试迭代、部署监控。 AI-Agent LLM 实战框架 LangChain 工程实践 引言：当\"智能代理\"不再是概念，而是可落地的生产力工具 Step 1：用具体示例定义代理的\"工作说明书\" Step 2：设计标准化操作流程(SOP)，为Agent绘制\"工作手册\" Step 3：聚焦核心推理任务，构建最小可行产品(MVP) Step 4：连接数据源与工具，构建Agent的\"感知与行动\"能力 Step 5：系统化测试与",
+        "score": 0.5997767
+      },
+      {
+        "article_id": "lilbot-agent-local-coding-trial",
+        "title": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱",
+        "url": "/blog/lilbot-agent-local-coding-trial/",
+        "language": "zh",
+        "excerpt": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱 LilBot-agent 是纯 Python 开源本地编码 Agent，Windows 优先，原生适配 DeepSeek 等 OpenAI 兼容模型，内置全屏 TUI 驾驶舱、多子代理/Team 协作、五层权限沙箱、持久化记忆、MCP 外部工具对接，153 Stars，本文从开发者试用视角逐层拆解。 本地Agent AI编程 DeepSeek MCP Python 多智能体 Windows 开源工具 为什么会有 LilBot-agent？ 快速安装与第一次启动（Win",
+        "score": 0.59673
+      },
+      {
+        "article_id": "anthropic-agent-workshop-engineering-guide",
+        "title": "Anthropic 官方 Agent 工作坊：从免费教材到业务流程落地",
+        "url": "/blog/anthropic-agent-workshop-engineering-guide/",
+        "language": "zh",
+        "excerpt": "Anthropic 官方 Agent 工作坊：从免费教材到业务流程落地 Anthropic 的官方 Agent 工作坊提供工具、子代理协作、记忆与业务案例。本文给出公告、活动和源码入口，区分免费教材与付费模型调用，核对模拟数据和样例维护状态，并以客服流程说明环境准备、角色拆分、真实系统接入、权限审批、幂等执行、预算和评测的方法，帮助把教学练习转化为可检查的业务试点，而非承诺免费无人公司。 Anthropic Claude Agent SDK 多智能体 业务自动化 工程实践 官方出处在哪里？ 教材里的“协作”是怎么发生的？ 第一步：先跑固定版本的业务练习 ",
+        "score": 0.59519064
+      },
+      {
+        "article_id": "reverse-skill-ai-agent-cybersecurity-penetration-skill-router",
+        "title": "reverse-skill：给 AI Agent 装上逆向工程与渗透测试的神经系统",
+        "url": "/blog/reverse-skill-ai-agent-cybersecurity-penetration-skill-router/",
+        "language": "zh",
+        "excerpt": "reverse-skill：给 AI Agent 装上逆向工程与渗透测试的神经系统 zhaoxuya520 开源的 AI Agent 安全技能路由包，20.9k stars，MIT License。解决 AI Agent 做安全分析时不知道用哪个工具的核心痛点——41条路由规则自动识别任务类型（APK/ELF/JS/PCAP/CTF），按需自举 jadx/Frida/Ghidra/BurpSuite 等工具链，自动沉淀经验到知识库。支持 Claude Code、Codex、Cursor、Kiro、Cline。 安全技能 AI渗透测试 逆向工程 Claud",
+        "score": 0.59359455
+      },
+      {
+        "article_id": "s1-deepresearch-long-horizon-research-agent",
+        "title": "32B 小模型逼近 GPT-5.2：S1-DeepResearch 如何用数据而非参数训练长程研究 Agent",
+        "url": "/blog/s1-deepresearch-long-horizon-research-agent/",
+        "language": "zh",
+        "excerpt": "32B 小模型逼近 GPT-5.2：S1-DeepResearch 如何用数据而非参数训练长程研究 Agent ScienceOne 开源 S1-DeepResearch-32B，能连续调用工具 150+ 轮、跨 20 个基准逼近 GPT-5.2/Claude-4.6/GLM-5，却只用 SFT、不用 RL。它的秘密是一套图谱驱动的轨迹构造范式：知识图谱出题、Agent 跑轨迹、五维验证过滤。本文拆解方法、跑分，并梳理业界对深度研究 Agent 的反思。 AI Agent Deep Research 深度研究 长程任务 轨迹数据 Qwen3 开源模型 S",
+        "score": 0.59076285
+      },
+      {
+        "article_id": "openthoughts-agent-sft-data-recipe-agentic-models",
+        "title": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解",
+        "url": "/blog/openthoughts-agent-sft-data-recipe-agentic-models/",
+        "language": "zh",
+        "excerpt": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解 UC Berkeley、Stanford、Bespoke Labs 等多机构合作的 OpenThoughts-Agent 论文（arXiv:2606.24855）做了迄今最系统的 Agent SFT 数据配方研究：6 阶段流水线、100+ 消融实验、100K 数据集，微调 Qwen3-32B 达 7 基准均值 44.8%，超越 Nemotron 3.9pp。最有价值的不是模型权重，而是那套可复用的数据选取逻辑。 AI Agent SFT 数据配方 开源 这",
+        "score": 0.5901677
+      },
+      {
+        "article_id": "kinex-coding-agents-robot-harness",
+        "title": "Kinex：让编程 Agent 接入机器人",
+        "url": "/blog/kinex-coding-agents-robot-harness/",
+        "language": "zh",
+        "excerpt": "Kinex：让编程 Agent 接入机器人 Kinex 用设备、工具与技能三层，把编程 Agent 连接到机器人、仿真器和模型服务。本文核查 Apache 2.0 仓库、Pi 基础与插件边界，重算官方 396 条仿真记录，并运行设备驱动契约测试。文章解释成功率与成本估计的适用条件，给出模拟环境起步、硬件标定及故障退出的验收路径，不把公开演示当作实机保证。 Robotics AI Agent Open Source Simulation Kinex 如何把文字任务接到物理设备？ 官方 78% 成功率是怎么来的？ 普通开发者怎样跑第一条闭环？ 我们本机验证了",
+        "score": 0.5880573
+      }
+    ]
+  }
+}
