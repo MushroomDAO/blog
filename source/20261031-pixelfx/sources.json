@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-31T06:43:34.222381+00:00",
+  "repository": "https://github.com/patch-gg/pixelfx",
+  "commit": "fe7103c36d94e02f2d7df7d8f7a341e493837cde",
+  "createdAt": "2026-10-30T06:43:25Z",
+  "observedStars": 451,
+  "starLimit": "Changing single API snapshot; no daily gain independently measured",
+  "primarySources": [
+    "https://patch-gg.github.io/pixelfx/",
+    "https://github.com/patch-gg/pixelfx/blob/main/NOTICE.md",
+    "https://github.com/patch-gg/pixelfx/blob/main/gallery/fonts/NOTICE.md",
+    "https://github.com/patch-gg/pixelfx/tree/main/skills/pixelfx",
+    "https://www.spritefusion.com/blog/how-to-make-good-pixel-art-effects-with-claude"
+  ],
+  "banner": "Official docs/readme/montage.gif coalesced frame30; original project art, not generated interpretation",
+  "limits": [
+    "One local Chrome path, not all browser/hosted configurations",
+    "No target engine importer or concurrent effects benchmark",
+    "Skill read, not new-model-authoring session"
+  ]
+}
