@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-31T16:22:46.299916+00:00",
+  "passed": true,
+  "checks": {
+    "titles": true,
+    "descriptions": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "tags": true,
+    "dates": true,
+    "category": true,
+    "bilingual": true,
+    "copyright": true,
+    "figures": true,
+    "questions": true,
+    "FAQ": true,
+    "sourcePin": true,
+    "sourceGap": true,
+    "testLimits": true,
+    "labDownload": true,
+    "BLUF": true,
+    "internalLinks": true
+  },
+  "lengths": {
+    "title": 35,
+    "titleEn": 57,
+    "description": 152,
+    "descriptionEn": 157,
+    "wechatTitle": 24,
+    "wechatDigest": 33
+  },
+  "manualReview": [
+    "Primarycodeandcreditedreprintfulltextcomparisonclearlydistinguished",
+    "OriginalWeChatbodyaccessfailureexplicit;noinventedofficialblogURL",
+    "Architecture/prototype/ownedexerciseboundariesexplicit",
+    "ExternalURLsplaintosurviveWeChat;equivalentbilingualFAQandlimits",
+    "Astrometaandheadingsuseexistingtemplate;noextraFAQschema"
+  ]
+}

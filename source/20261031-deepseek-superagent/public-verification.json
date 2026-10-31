@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-31T16:30:02.343513+00:00",
+  "articles": [
+    {
+      "slug": "deepseek-superagent-engineering-guide",
+      "url": "https://blog.mushroom.cv/blog/deepseek-superagent-engineering-guide/",
+      "title": "DeepSeek Super-agent工程实践：从事件接入到可靠交付",
+      "listRank": 2,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepseek-superagent-engineering-guide-banner.DMe9fMYF.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 91636
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepseek-superagent-engineering-guide-banner.DMe9fMYF_btzXQ.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 38240
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepseek-superagent-engineering-guide-fig-01.8wLPNyNK_Z2vlHlV.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 33282
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepseek-superagent-engineering-guide-fig-02.17_DfJuL_1G5QGN.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 31656
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepseek-superagent-engineering-guide-fig-03.B6qcMr12_8DGQF.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 49758
+        }
+      ]
+    }
+  ]
+}

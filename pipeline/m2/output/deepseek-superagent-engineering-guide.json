@@ -1,0 +1,16 @@
+{
+  "title": "DeepSeek Super-agent怎么落地",
+  "author": "Mycelium",
+  "digest": "对照官方原型拆解事件、授权与恢复，并提供七个可运行的离线工程练习。",
+  "mediaId": "prCUE631thH1cmNLi42prCgLqDyCs16oqWTnam7f9vKnQYNQxddNcRAwV4uunl8F",
+  "blogUrl": "https://blog.mushroom.cv/blog/deepseek-superagent-engineering-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/deepseek-superagent-engineering-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/deepseek-ai/dsh-superagent-prototype",
+    "github.com/deepseek-ai/deepseek-harness",
+    "github.com/cordiverse/cordis",
+    "github.com/deepseek-ai/dsh-superagent-prototype.git"
+  ],
+  "publishedAt": "2026-10-31T16:30:38.072Z"
+}

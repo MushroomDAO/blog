@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-31T16:22:46.298951+00:00",
+  "repository": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+  "commit": "6337fc823ce20251c8de8085948165c81aaa701e",
+  "license": "MIT",
+  "prototypeVersion": "0.1.0",
+  "originalArticleEntry": "https://mp.weixin.qq.com/s/zoS7GlReWPhfCjENGxXCdg",
+  "originalFetchStatus": "NativeandJinafetchreturnedCAPTCHA;originalbodywasnotretrieved",
+  "officialDomainSearch": "DeepSeekhome,Harness,newsandsitemapchecked;nostandalonefullarticleentryfound",
+  "fullTextComparison": "https://www.chaincatcher.com/article/2300676",
+  "reprintCredit": "DeepSeek产品部;articleacknowledgesYujiaQiaoauthor",
+  "primaryCodeSources": [
+    "README.md",
+    "docs/001-domain.md",
+    "docs/002-authorization.md",
+    "docs/003-execution.md",
+    "docs/004-prompts.md",
+    "docs/006-deployment.md",
+    "docs/007-architecture.md",
+    "src/core/engine.ts",
+    "src/app/store.ts",
+    "src/app/effects.ts",
+    "src/sources/github-channel.ts"
+  ],
+  "limits": [
+    "Researchprototypenotformalproductorfuturedesignfullyimplemented",
+    "No liveLLM/provider/GitHub/Feishu runtime enabled",
+    "No realprocesskill,powerloss,HA,OSsandboxorinjectionresistancetest",
+    "No vendorbenchmarkreproduced"
+  ],
+  "relatedFoundations": [
+    "https://github.com/deepseek-ai/deepseek-harness",
+    "https://github.com/cordiverse/cordis"
+  ]
+}

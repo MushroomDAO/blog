@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-31T16:32:26.537320+00:00",
+  "query": "DeepSeek Super-agent 工程实践 Engine SQLite Effects 七个离线练习 订阅授权",
+  "matched": false,
+  "hits": [],
+  "response": {
+    "results": [
+      {
+        "article_id": "deepseek-reasonix-terminal-coding-agent-prefix-cache",
+        "title": "DeepSeek-Reasonix：围绕前缀缓存稳定性设计的终端编程 Agent",
+        "url": "/blog/deepseek-reasonix-terminal-coding-agent-prefix-cache/",
+        "language": "zh",
+        "excerpt": "DeepSeek-Reasonix：围绕前缀缓存稳定性设计的终端编程 Agent esengine 开源的 DeepSeek 原生终端编程 Agent，33k stars，MIT License，Go 重写版。架构核心是前缀缓存稳定性——真实用户单日 435M 输入 token，99.82% 缓存命中，实际费用 ~$12 而非 ~$61。支持长时运行、QQ 频道远程接入、Tauri 桌面客户端，npm install -g reasonix 一键安装。 编程Agent DeepSeek 前缀缓存 终端工具 长任务Agent 成本优化 Mycelium 前",
+        "score": 0.58317983
+      },
+      {
+        "article_id": "openthoughts-agent-sft-data-recipe-agentic-models",
+        "title": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解",
+        "url": "/blog/openthoughts-agent-sft-data-recipe-agentic-models/",
+        "language": "zh",
+        "excerpt": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解 UC Berkeley、Stanford、Bespoke Labs 等多机构合作的 OpenThoughts-Agent 论文（arXiv:2606.24855）做了迄今最系统的 Agent SFT 数据配方研究：6 阶段流水线、100+ 消融实验、100K 数据集，微调 Qwen3-32B 达 7 基准均值 44.8%，超越 Nemotron 3.9pp。最有价值的不是模型权重，而是那套可复用的数据选取逻辑。 AI Agent SFT 数据配方 开源 这",
+        "score": 0.5804131
+      },
+      {
+        "article_id": "ai-agent-book-context-engineering-llm-agent-open-source-chinese",
+        "title": "19k-Star Open-Source Book: 'AI Agents in Depth' — 10 Chapters, 92 Experiments, From Context Engineering to Multi-Agent Systems",
+        "url": "/blog/ai-agent-book-context-engineering-llm-agent-open-source-chinese/",
+        "language": "en",
+        "excerpt": "19k-Star Open-Source Book: 'AI Agents in Depth' — 10 Chapters, 92 Experiments, From Context Engineering to Multi-Agent Systems Li Bojie's 'AI Agents in Depth: Design Principles and Engineering Practice', bojieli/ai-agent-book, 19,005 stars, Apache-2.0. Built around the formula Ag",
+        "score": 0.57964236
+      },
+      {
+        "article_id": "deepseek-v4-flash-vision-exp-multimodal-agent-dspark",
+        "title": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了",
+        "url": "/blog/deepseek-v4-flash-vision-exp-multimodal-agent-dspark/",
+        "language": "zh",
+        "excerpt": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了 DeepSeek-V4 家族第一个实验性多模态模型，8 月 31 日上线，五天 18.4 万下载、651 likes，MIT。在 DeepSeek-V4-Flash 架构上加视觉模块并继续训练：多模态 agent 能力大幅提升，而七项文本 agent 基准里六项不降反升。三项超过 Opus-4.8（DeepSWE 59.3、Agents' Last Exam 27.3、ZeroBench 35.0）。DSpark 推测解码的 draft 权重和 targ",
+        "score": 0.57565355
+      },
+      {
+        "article_id": "superlinked-sie-inference-engine-agent",
+        "title": "SIE: One Cluster for Every Model Your Agent Needs — Superlinked's Open-Source Unified Inference Engine",
+        "url": "/blog/superlinked-sie-inference-engine-agent/",
+        "language": "en",
+        "excerpt": "SIE: One Cluster for Every Model Your Agent Needs — Superlinked's Open-Source Unified Inference Engine superlinked/sie (2,286 stars, Apache 2.0) is an open-source self-hosted inference engine that unifies all 5 agent task types (search, document conversion, structured extraction,",
+        "score": 0.5726355
+      },
+      {
+        "article_id": "lilbot-agent-local-coding-trial",
+        "title": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱",
+        "url": "/blog/lilbot-agent-local-coding-trial/",
+        "language": "zh",
+        "excerpt": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱 LilBot-agent 是纯 Python 开源本地编码 Agent，Windows 优先，原生适配 DeepSeek 等 OpenAI 兼容模型，内置全屏 TUI 驾驶舱、多子代理/Team 协作、五层权限沙箱、持久化记忆、MCP 外部工具对接，153 Stars，本文从开发者试用视角逐层拆解。 本地Agent AI编程 DeepSeek MCP Python 多智能体 Windows 开源工具 为什么会有 LilBot-agent？ 快速安装与第一次启动（Win",
+        "score": 0.56531173
+      },
+      {
+        "article_id": "s1-deepresearch-long-horizon-research-agent",
+        "title": "32B 小模型逼近 GPT-5.2：S1-DeepResearch 如何用数据而非参数训练长程研究 Agent",
+        "url": "/blog/s1-deepresearch-long-horizon-research-agent/",
+        "language": "zh",
+        "excerpt": "32B 小模型逼近 GPT-5.2：S1-DeepResearch 如何用数据而非参数训练长程研究 Agent ScienceOne 开源 S1-DeepResearch-32B，能连续调用工具 150+ 轮、跨 20 个基准逼近 GPT-5.2/Claude-4.6/GLM-5，却只用 SFT、不用 RL。它的秘密是一套图谱驱动的轨迹构造范式：知识图谱出题、Agent 跑轨迹、五维验证过滤。本文拆解方法、跑分，并梳理业界对深度研究 Agent 的反思。 AI Agent Deep Research 深度研究 长程任务 轨迹数据 Qwen3 开源模型 S",
+        "score": 0.5647399
+      },
+      {
+        "article_id": "xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills",
+        "title": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过",
+        "url": "/blog/xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills/",
+        "language": "zh",
+        "excerpt": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过 B1lli/xhs-favorites-distiller，Apache 2.0，Python 3.10+，把小红书（或微信）收藏里的方法蒸馏成可安装的 Agent skill。核心机制：价值筛选 + 消融测试 + 自然触发验证，未经证实的候选不进入宿主发现目录。消融实验显示去掉「自然触发」要求后，3/3 案例出现提前激活；全流程测试 24/24 正确通过。 open-source agent-skills xiaohongshu ",
+        "score": 0.5597007
+      },
+      {
+        "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+        "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+        "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+        "language": "zh",
+        "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+        "score": 0.5594558
+      },
+      {
+        "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+        "title": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时",
+        "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+        "language": "zh",
+        "excerpt": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时 复旦+北大+奇迹智风，arXiv:2604.25850，MIT，Python。AHE 提出一个闭环：不动模型权重，只进化 harness——通过三层可观测性（组件/经验/决策），让 Evolve Agent 自动分析 trace、提出修改、预测效果，下一轮自动验证。10次迭代把 GPT-5.4 在 Terminal-Bench 2 上从 69.7% 提升到 77.0%，超过手写 Codex-CLI（71.9%）。冻结后的 harness ",
+        "score": 0.5573172
+      }
+    ]
+  }
+}

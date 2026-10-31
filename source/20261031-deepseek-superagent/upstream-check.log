@@ -1,0 +1,43 @@
+$ pnpm typecheck && pnpm test && pnpm build
+$ tsc --noEmit
+$ vitest run
+
+ RUN  v4.1.8 /private/tmp/superagent-research/repo
+
+
+ Test Files  59 passed (59)
+      Tests  1197 passed (1197)
+   Start at  23:11:30
+   Duration  24.30s (transform 6.56s, setup 0ms, import 16.36s, tests 75.26s, environment 8.98s)
+
+$ tsdown
+ℹ tsdown v0.22.14 powered by rolldown v1.2.7
+ℹ config file: /private/tmp/superagent-research/repo/tsdown.config.ts
+ℹ entry: src/index.ts, src/sources/github.ts, src/sources/feishu.ts
+ℹ target: es2024
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/client/index.tsx
+ℹ target: node22.19.0
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+
+ WARN  We recommend using the ESM format instead of CommonJS.
+The ESM format is compatible with modern platforms and runtimes, and most new libraries are now distributed only in ESM format.
+Learn more at https://nodejs.org/en/learn/modules/publishing-a-package#how-did-we-get-here
+
+ℹ [CJS] lib/client.js  358.52 kB │ gzip: 86.10 kB
+ℹ [CJS] 1 files, total: 358.52 kB
+✔ Build complete in 1675ms
+ℹ [ESM] lib/index.js                 450.26 kB │ gzip: 127.44 kB
+ℹ [ESM] lib/github-watch.js           33.91 kB │ gzip:  10.88 kB
+ℹ [ESM] lib/feishu-watch.js            0.60 kB │ gzip:   0.29 kB
+ℹ [ESM] lib/feishu-rAGM9U9b.js        48.32 kB │ gzip:  14.48 kB
+ℹ [ESM] lib/poll-Dh7J1cdM.js          38.48 kB │ gzip:  13.79 kB
+ℹ [ESM] lib/github-pull-gSbjzypm.js   25.42 kB │ gzip:   8.22 kB
+ℹ [ESM] lib/index.d.ts                24.97 kB │ gzip:   7.77 kB
+ℹ [ESM] lib/feishu-watch.d.ts          5.98 kB │ gzip:   2.02 kB
+ℹ [ESM] lib/github-watch.d.ts          0.39 kB │ gzip:   0.22 kB
+ℹ [ESM] lib/kind-CC2z1Ko1.d.ts        35.84 kB │ gzip:   9.11 kB
+ℹ [ESM] lib/intake-BntR4bhz.d.ts      29.31 kB │ gzip:   9.25 kB
+ℹ [ESM] 11 files, total: 693.50 kB
+✔ Build complete in 1854ms

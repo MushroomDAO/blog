@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-10-31T16:31:11.890532+00:00",
+  "query": "DeepSeek Super-agent engineering Engine SQLite Effects offline integration exercise",
+  "hits": [],
+  "response": {
+    "results": [
+      {
+        "article_id": "superlinked-sie-inference-engine-agent",
+        "title": "SIE: One Cluster for Every Model Your Agent Needs — Superlinked's Open-Source Unified Inference Engine",
+        "url": "/blog/superlinked-sie-inference-engine-agent/",
+        "language": "en",
+        "excerpt": "SIE: One Cluster for Every Model Your Agent Needs — Superlinked's Open-Source Unified Inference Engine superlinked/sie (2,286 stars, Apache 2.0) is an open-source self-hosted inference engine that unifies all 5 agent task types (search, document conversion, structured extraction,",
+        "score": 0.5510304
+      },
+      {
+        "article_id": "cordiverse-cordis-spatiotemporal-composability-plugin-paradigm-paper",
+        "title": "cordiverse-cordis-spatiotemporal-composability-plugin-paradigm-paper",
+        "url": "/blog/cordiverse-cordis-spatiotemporal-composability-plugin-paradigm-paper/",
+        "language": "en",
+        "excerpt": "cordiverse-cordis-spatiotemporal-composability-plugin-paradigm-paper cordiverse/paper is the academic preprint (2026-08-13) behind Cordis, the framework powering DeepSeek Harness. It proposes a 'Spatiotemporal Composability' programming paradigm: Temporal Composability ensures a ",
+        "score": 0.53635377
+      },
+      {
+        "article_id": "deepseek-v4-flash-vision-exp-multimodal-agent-dspark",
+        "title": "DeepSeek-V4-Flash-Vision-Exp: Bolting on Vision Without Losing Text Agent Ability",
+        "url": "/blog/deepseek-v4-flash-vision-exp-multimodal-agent-dspark/",
+        "language": "en",
+        "excerpt": "DeepSeek-V4-Flash-Vision-Exp: Bolting on Vision Without Losing Text Agent Ability The first experimental multimodal model in the DeepSeek-V4 family, published Aug 31 — 184k downloads and 651 likes in five days, MIT. Vision modules were added to the DeepSeek-V4-Flash architecture ",
+        "score": 0.53593594
+      },
+      {
+        "article_id": "lilbot-agent-local-coding-trial",
+        "title": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱",
+        "url": "/blog/lilbot-agent-local-coding-trial/",
+        "language": "zh",
+        "excerpt": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱 LilBot-agent 是纯 Python 开源本地编码 Agent，Windows 优先，原生适配 DeepSeek 等 OpenAI 兼容模型，内置全屏 TUI 驾驶舱、多子代理/Team 协作、五层权限沙箱、持久化记忆、MCP 外部工具对接，153 Stars，本文从开发者试用视角逐层拆解。 本地Agent AI编程 DeepSeek MCP Python 多智能体 Windows 开源工具 为什么会有 LilBot-agent？ 快速安装与第一次启动（Win",
+        "score": 0.52902853
+      },
+      {
+        "article_id": "dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem",
+        "title": "dsh-tui-pi: The Community TUI Ecosystem for DeepSeek Harness — A Pi-Style Terminal for Your Coding Agent",
+        "url": "/blog/dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem/",
+        "language": "en",
+        "excerpt": "dsh-tui-pi: The Community TUI Ecosystem for DeepSeek Harness — A Pi-Style Terminal for Your Coding Agent DeepSeek Harness (dsh) is DeepSeek's coding agent runtime, analogous to Claude Code. dsh-tui-pi is a community-built pi-style TUI plugin suite offering real-time subagent moni",
+        "score": 0.5243291
+      },
+      {
+        "article_id": "s1-deepresearch-long-horizon-research-agent",
+        "title": "32B 小模型逼近 GPT-5.2：S1-DeepResearch 如何用数据而非参数训练长程研究 Agent",
+        "url": "/blog/s1-deepresearch-long-horizon-research-agent/",
+        "language": "zh",
+        "excerpt": "32B 小模型逼近 GPT-5.2：S1-DeepResearch 如何用数据而非参数训练长程研究 Agent ScienceOne 开源 S1-DeepResearch-32B，能连续调用工具 150+ 轮、跨 20 个基准逼近 GPT-5.2/Claude-4.6/GLM-5，却只用 SFT、不用 RL。它的秘密是一套图谱驱动的轨迹构造范式：知识图谱出题、Agent 跑轨迹、五维验证过滤。本文拆解方法、跑分，并梳理业界对深度研究 Agent 的反思。 AI Agent Deep Research 深度研究 长程任务 轨迹数据 Qwen3 开源模型 S",
+        "score": 0.52334255
+      },
+      {
+        "article_id": "deepinfer-deepseek-inference-framework",
+        "title": "DeepInfer: DeepSeek Inference Core and Deployment Limits",
+        "url": "/blog/deepinfer-deepseek-inference-framework/",
+        "language": "en",
+        "excerpt": "DeepInfer: DeepSeek Inference Core and Deployment Limits DeepInfer: supported hardware, offline deployment, parallelism, speculative decoding, cache boundaries, benchmark accounting, and production service gaps. DeepInfer DeepSeek 大模型推理 分布式系统 开源项目 What is included, and what remai",
+        "score": 0.52252954
+      },
+      {
+        "article_id": "nvidia-flare-local-inference",
+        "title": "NVIDIA Flare 开源：Rust 推理运行时，怎样服务 DeepSeek 与本地 Agent？",
+        "url": "/blog/nvidia-flare-local-inference/",
+        "language": "zh",
+        "excerpt": "NVIDIA Flare 开源：Rust 推理运行时，怎样服务 DeepSeek 与本地 Agent？ 核查NVIDIA Flare官方仓库，拆解Python Ignition准备模型、Rust Helios在线服务、预捕获CUDA Graph和FP8缓存设计，并整理DeepSeek V4.1 Flash单机TP4、四台DGX Spark部署与接口兼容限制。 NVIDIA Flare Rust DGX Spark 本地推理 DeepSeek “纯 Rust”究竟省掉了哪一段？ 为什么长对话和 Agent 值得单独优化？ DeepSeek V4.1 Fla",
+        "score": 0.5118339
+      },
+      {
+        "article_id": "openthoughts-agent-sft-data-recipe-agentic-models",
+        "title": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解",
+        "url": "/blog/openthoughts-agent-sft-data-recipe-agentic-models/",
+        "language": "zh",
+        "excerpt": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解 UC Berkeley、Stanford、Bespoke Labs 等多机构合作的 OpenThoughts-Agent 论文（arXiv:2606.24855）做了迄今最系统的 Agent SFT 数据配方研究：6 阶段流水线、100+ 消融实验、100K 数据集，微调 Qwen3-32B 达 7 基准均值 44.8%，超越 Nemotron 3.9pp。最有价值的不是模型权重，而是那套可复用的数据选取逻辑。 AI Agent SFT 数据配方 开源 这",
+        "score": 0.510733
+      },
+      {
+        "article_id": "skillopt-microsoft-self-evolving-agent-skills-optimization",
+        "title": "SkillOpt：微软联合上交复旦同济，让 AI Agent 的 Skill 像神经网络一样被训练",
+        "url": "/blog/skillopt-microsoft-self-evolving-agent-skills-optimization/",
+        "language": "zh",
+        "excerpt": "SkillOpt：微软联合上交复旦同济，让 AI Agent 的 Skill 像神经网络一样被训练 微软研究院联合上海交通大学、复旦大学、同济大学发布 SkillOpt——首个对 AI Agent Skill 文档进行系统化优化的框架，在 52 个评测单元全部获胜，让普通开发者无需训练模型就能持续提升 Agent 能力。 AI Agent SkillOpt Microsoft Research Skill Optimization Open Source Self-Evolving Agents 问题：Skill 的三条死路 核心思路：文本空间的深度学习",
+        "score": 0.5023942
+      }
+    ]
+  }
+}
