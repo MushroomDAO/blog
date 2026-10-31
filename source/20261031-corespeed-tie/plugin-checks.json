@@ -1,0 +1,54 @@
+{
+  "commit": "edb5d7f25cbd1fa9d99ed05a9af916dfd88c88b2",
+  "checks": [
+    {
+      "name": "Manifests are valid JSON",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "The MCP servers sign in with OAuth",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Codex and the Directory get the plugin surface; Claude Code the full server",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "The CLI plugin is skills-only and bundles the same cs-cli skill",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "At most three default prompts",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Short descriptions fit the Directory listing",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "All corespeed manifests carry the same version",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "The Cursor plugin uses the plugin surface",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "scope": "Only upstream run blocks for local JSON/manifests; no GitHub Actions checkout or thirdparty scanner action; no login,devicepairing,GUIpermissiongrant or remotecontrol"
+}

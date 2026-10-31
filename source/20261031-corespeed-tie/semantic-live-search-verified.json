@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-10-31T06:00:35.853773+00:00",
+  "query": "CoreSpeed TIE Mac工作目录账户权限审批开关与公开插件源码",
+  "matched": true,
+  "hits": [
+    {
+      "article_id": "corespeed-tie-mac-studio-guide",
+      "title": "CoreSpeed TIE：把Mac Studio交给Agent，开源了哪些？",
+      "url": "/blog/corespeed-tie-mac-studio-guide/",
+      "language": "zh",
+      "excerpt": "CoreSpeed TIE：把Mac Studio交给Agent，开源了哪些？ CoreSpeed TIE让MCP智能体调用Mac上的终端、文件、已登录浏览器、桌面应用和本地工具。本文找到官方Apache许可插件仓库，区分插件、原生CLI与托管服务的公开范围，核查Mac安装条件、Node版本变化、目录与审批边界，并记录八项配置检查和原生CLI基础测试，给出分阶段试用与退出方法。 CoreSpeed TIE MCP Mac Studio Computer Use TIE把哪些本机能力提供给Agent？ 开源仓库里到底有什么？ Mac Studio需要什么条",
+      "score": 0.73949164
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "corespeed-tie-mac-studio-guide",
+        "title": "CoreSpeed TIE：把Mac Studio交给Agent，开源了哪些？",
+        "url": "/blog/corespeed-tie-mac-studio-guide/",
+        "language": "zh",
+        "excerpt": "CoreSpeed TIE：把Mac Studio交给Agent，开源了哪些？ CoreSpeed TIE让MCP智能体调用Mac上的终端、文件、已登录浏览器、桌面应用和本地工具。本文找到官方Apache许可插件仓库，区分插件、原生CLI与托管服务的公开范围，核查Mac安装条件、Node版本变化、目录与审批边界，并记录八项配置检查和原生CLI基础测试，给出分阶段试用与退出方法。 CoreSpeed TIE MCP Mac Studio Computer Use TIE把哪些本机能力提供给Agent？ 开源仓库里到底有什么？ Mac Studio需要什么条",
+        "score": 0.73949164
+      },
+      {
+        "article_id": "codexboard-mac-codex-task-board-mobile-lark",
+        "title": "CodexBoard：Apple Silicon Mac 上把 Codex CLI 接上任务看板，飞书/Web 手机端远程监控执行过程",
+        "url": "/blog/codexboard-mac-codex-task-board-mobile-lark/",
+        "language": "zh",
+        "excerpt": "CodexBoard：Apple Silicon Mac 上把 Codex CLI 接上任务看板，飞书/Web 手机端远程监控执行过程 RocYan98/CodexBoard，115 stars，TypeScript，无开源许可证。运行在 Apple Silicon Mac（macOS 13+）上的本地任务看板，把 Codex CLI 执行过程绑定到 Kanban 看板，支持通过飞书（Lark）或 Web 浏览器在手机端实时监控进度、审批变更、查看代码 Diff。需要公网 frp 服务器作为内网穿透，一周内迭代 10 个版本，目前仍为 0.1.x pre",
+        "score": 0.5941976
+      },
+      {
+        "article_id": "nvidia-openshell-agent-runtime",
+        "title": "NVIDIA OpenShell：给自主 Agent 配上可执行的权限边界",
+        "url": "/blog/nvidia-openshell-agent-runtime/",
+        "language": "zh",
+        "excerpt": "NVIDIA OpenShell：给自主 Agent 配上可执行的权限边界 NVIDIA OpenShell采用Apache-2.0开源，通过沙箱、独立Supervisor、网络策略和凭证代理约束Agent。本文介绍0.1.x架构、Mac与Linux部署条件、OpenCode接入流程，并实测v0.1.5策略验证器的通过、越界和无法验证三种结果，同时区分策略检查与真实运行安全的边界。 NVIDIA OpenShell AI Agent 沙箱 权限策略 开源工具 OpenShell解决的是哪一层问题？ Gateway、Sandbox与Supervisor怎样",
+        "score": 0.58907217
+      },
+      {
+        "article_id": "mcp-dev-runtime-openai-tunnel-local-dev-mcp-server",
+        "title": "mcp-dev-runtime：一条命令把本地开发机暴露给 ChatGPT——OpenAI Tunnel + 6 个 MCP 工具的打包方案",
+        "url": "/blog/mcp-dev-runtime-openai-tunnel-local-dev-mcp-server/",
+        "language": "zh",
+        "excerpt": "mcp-dev-runtime：一条命令把本地开发机暴露给 ChatGPT——OpenAI Tunnel + 6 个 MCP 工具的打包方案 dolibali/mcp-dev-runtime，3 stars，Apache-2.0，TypeScript。把 OpenAI 官方 Tunnel 客户端和 6 个本地开发 MCP 工具（shell 执行/PTY 交互/代码 patch/图片查看/进程管理）打包成跨平台运行时，内置 Node.js 24.21.0。一条 mdr start 同时启动 MCP 服务和 Tunnel，对接的是 ChatGPT（非 cla",
+        "score": 0.5725434
+      },
+      {
+        "article_id": "cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune",
+        "title": "Cloudflare 开源 Clef 决策模型：兼容 Jev API、9B 版 Mac 可跑，榜首成绩是自报的",
+        "url": "/blog/cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune/",
+        "language": "zh",
+        "excerpt": "Cloudflare 开源 Clef 决策模型：兼容 Jev API、9B 版 Mac 可跑，榜首成绩是自报的 Cloudflare 2026-10-01 以 Apache-2.0 开源 Clef（Qwen3.8-27B 底座，273.6 亿参数）和 Clef-flash（Qwen3.5-9B，94.1 亿参数），一次前向给每个选项出概率、零输出 token，兼容 Jev /v1/systemone。Decision Index 上 Clef 61.21 高于 Jev 57.91，但这是 Cloudflare 自己跑的、上游榜单未复现，社区 MLX 抽样",
+        "score": 0.5715221
+      },
+      {
+        "article_id": "fastmcp-typescript-mcp-server-framework",
+        "title": "FastMCP：用几十行 TypeScript 搭 MCP 服务器，5 个月 3000+ star",
+        "url": "/blog/fastmcp-typescript-mcp-server-framework/",
+        "language": "zh",
+        "excerpt": "FastMCP：用几十行 TypeScript 搭 MCP 服务器，5 个月 3000+ star FastMCP 是 TypeScript 版 MCP 服务器框架，内置 Session 管理、OAuth 认证、Edge Runtime 支持和 CLI 调试工具，比官方 SDK 省去大量样板代码。5 个月获 3145 star，周均下载 46 万次。 MCP TypeScript 开源 FastMCP Cloudflare Workers AI工具 开发者工具 为什么需要 FastMCP？ 核心特性一览 Session 管理 零配置 OAuth Edge",
+        "score": 0.5647523
+      },
+      {
+        "article_id": "superset-parallel-coding-agent-workspace-claude-codex-opencode",
+        "title": "Superset：一个工作区跑 100 个 Agent，Claude Code、Codex、OpenCode 同时干活——普通人上手指南",
+        "url": "/blog/superset-parallel-coding-agent-workspace-claude-codex-opencode/",
+        "language": "zh",
+        "excerpt": "Superset：一个工作区跑 100 个 Agent，Claude Code、Codex、OpenCode 同时干活——普通人上手指南 Superset（GitHub: superset-sh/superset，⭐13.5k）是一个 macOS 桌面应用，可以把 Claude Code、Codex、OpenCode 等任意命令行 AI 编程 agent 放进同一个工作区，每个 agent 跑在独立的 git worktree 里，100 个并行互不干扰。内置浏览器、diff 查看器、定时自动化、CLI、MCP Server 接入，iOS 版在路上。免费",
+        "score": 0.5631158
+      },
+      {
+        "article_id": "cf-workers-checkproxyip-single-file-worker-tcp-tls-probe",
+        "title": "一个 _worker.js 文件就是全部：CF-Workers-CheckProxyIP 在 Workers 上做 TCP/TLS 连通性体检",
+        "url": "/blog/cf-workers-checkproxyip-single-file-worker-tcp-tls-probe/",
+        "language": "zh",
+        "excerpt": "一个 _worker.js 文件就是全部：CF-Workers-CheckProxyIP 在 Workers 上做 TCP/TLS 连通性体检 cmliu/CF-Workers-CheckProxyIP 把页面、DNS 解析、TCP/TLS 探测全塞进一个 _worker.js，复制粘贴进 Cloudflare 控制台就能跑。技术看点是它用 cloudflare:sockets 在 Worker 里真的建 TCP 连接做 TLS 握手，再靠两个固定探针推断候选目标是 ipv4_only 还是双栈。免费套餐的子请求上限逼出了「每批最多 15 个域名、3 秒",
+        "score": 0.56057096
+      },
+      {
+        "article_id": "seal-ai-video-workbench",
+        "title": "Seal：把画布、剪辑和 AI 助手放进一个工作台",
+        "url": "/blog/seal-ai-video-workbench/",
+        "language": "zh",
+        "excerpt": "Seal：把画布、剪辑和 AI 助手放进一个工作台 Seal 是本地优先的 AI 视频创作工作台，将画布、资产库、时间线剪辑、创作助手和 Skill Hub 连接起来。本文核对官方源码与 v1.7.8 Windows 发行包，区分本地素材存储与外部模型调用，说明 macOS 发行边界，并复跑技能选择和请求预算测试，给出适合创作者提交的改进建议及试用前检查要点。 Seal AI Video Video Editing Local First Agent Skills Seal 怎样把想法接到成片？ 创作助手和 Skill Hub 各自负责什么？ 本地优先，",
+        "score": 0.55940795
+      },
+      {
+        "article_id": "hi3d-v1-geometry-refinement",
+        "title": "Hi3D v1.0：开源了什么，怎样接入3D资产生产？",
+        "url": "/blog/hi3d-v1-geometry-refinement/",
+        "language": "zh",
+        "excerpt": "Hi3D v1.0：开源了什么，怎样接入3D资产生产？ Hi3D v1.0公开了基于Sparc3D的几何精修推理代码与权重，需要同一物体的粗网格和参考图。本文核对1536³稀疏分辨率、官方评测与生产验证说法，检查模型文件、Linux CUDA硬件要求、自定义商业许可，并给出从粗模到可验收资产的部署与测试路径。Mac用户应把它作为远程GPU工作流，而非已支持的本地模型。 Hi3D Sparc3D 3D生成 几何精修 CUDA 仓库究竟开放了什么？ 1536³意味着什么？ 官方横评应该怎样读？ 普通电脑、Mac和消费显卡能跑吗？ 怎样接入现有流水线？ 到“能",
+        "score": 0.5529843
+      }
+    ]
+  }
+}
