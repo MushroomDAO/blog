@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-31T10:59:50.945595+00:00",
+  "articles": [
+    {
+      "slug": "lgui-browser-game-ui-guide",
+      "url": "https://blog.mushroom.cv/blog/lgui-browser-game-ui-guide/",
+      "title": "LGUI：让Agent在浏览器做游戏UI，离开引擎的边界在哪？",
+      "listRank": 3,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/lgui-browser-game-ui-guide-banner.CKQip5eG.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94877
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/lgui-browser-game-ui-guide-banner.CKQip5eG_Z1Lu5Yu.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 42074
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/lgui-browser-game-ui-guide-fig-01.DBuAriAz_Z1JwcWN.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 46212
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/lgui-browser-game-ui-guide-fig-02.CmhsdmX0_ZF157u.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 36756
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/lgui-browser-game-ui-guide-fig-03.B6z2r3Oe_ZJqReK.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 38662
+        }
+      ]
+    }
+  ]
+}
