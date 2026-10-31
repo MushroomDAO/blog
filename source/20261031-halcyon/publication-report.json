@@ -1,0 +1,93 @@
+{
+  "slug": "halcyon-without-language-pretraining",
+  "blog": {
+    "checkedAt": "2026-10-31T16:59:57.394470+00:00",
+    "articles": [
+      {
+        "slug": "halcyon-without-language-pretraining",
+        "url": "https://blog.mushroom.cv/blog/halcyon-without-language-pretraining/",
+        "title": "Halcyon文生图研究：275倍训练算力差距，到底省在哪里？",
+        "listRank": 3,
+        "carouselRank": 1,
+        "images": [
+          {
+            "url": "https://blog.mushroom.cv/_astro/halcyon-without-language-pretraining-banner.DzUojdW5.jpg",
+            "status": 200,
+            "contentType": "image/jpeg",
+            "bytes": 94840
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/halcyon-without-language-pretraining-banner.DzUojdW5_2fos4e.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 56130
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/halcyon-without-language-pretraining-fig-01.BthESKDY_g2PBU.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 33296
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/halcyon-without-language-pretraining-fig-02.D5CnH5QX_qKUeJ.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 26032
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/halcyon-without-language-pretraining-fig-03.gl0iY3UG_Z2qitRG.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 28420
+          }
+        ]
+      }
+    ]
+  },
+  "wechat": {
+    "checkedAt": "2026-10-31T17:00:21.195Z",
+    "drafts": [
+      {
+        "slug": "halcyon-without-language-pretraining",
+        "mediaId": "prCUE631thH1cmNLi42prB9u_NEqFhN5ZvWuIkEi1shP6U2xY8HauBfB6awvK9vu",
+        "titleMatches": true,
+        "authorMatches": true,
+        "digestMatches": true,
+        "htmlExact": false,
+        "fullTextMatches": true,
+        "imageIdentitiesMatch": true,
+        "imageCount": 3,
+        "localTextHash": "99f881bf2e17d5e56563bb01a6dc58b41c349c7ce41f37e7fef46d25150728e4",
+        "remoteTextHash": "99f881bf2e17d5e56563bb01a6dc58b41c349c7ce41f37e7fef46d25150728e4",
+        "platformRewrites": [
+          "external anchor wrappers removed",
+          "numeric entity escaping",
+          "img src converted to data-src and CDN resolution 0 to640"
+        ],
+        "canonicalInBody": false,
+        "copyrightPresent": true,
+        "coverMatches": true,
+        "needOpenComment": 1,
+        "onlyFansComment": 0,
+        "contentSourceUrl": "https://blog.mushroom.cv/blog/halcyon-without-language-pretraining/",
+        "localContentHash": "c80867306847b01c43ca53267a8f8dd4c4724e4f5e63b983692497052d7e061b",
+        "remoteContentHash": "b53d114a3877508f8ff1056941cf469466174c0811b42918c0d05e3a13484690"
+      }
+    ]
+  },
+  "deployment": "https://4bea641f.blog-mushroom.pages.dev",
+  "semanticIndex": "Two language vectors upserted; manifest updated",
+  "sourceLimits": "No weight download or terms acceptance; no model inference/VRAM/latency/Mac port measured",
+  "newArticle": true,
+  "inputHashesUnchanged": true,
+  "semanticLiveScore": 0.8018829,
+  "kb": {
+    "checkedAt": "2026-10-31T17:01:09.121973+00:00",
+    "sourceFile": "/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory/project_halcyon-without-language-pretraining.md",
+    "rows": 6,
+    "currentMediaIdPresent": true,
+    "computeBoundaryPresent": true,
+    "noInferenceLimitPresent": true,
+    "semanticLiveScorePresent": true
+  }
+}

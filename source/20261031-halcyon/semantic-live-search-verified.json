@@ -1,0 +1,88 @@
+{
+  "query": "Halcyon文生图无需语言预训练，275倍总FLOPs比较分母与Mac端限制",
+  "response": {
+    "results": [
+      {
+        "article_id": "halcyon-without-language-pretraining",
+        "title": "Halcyon文生图研究：275倍训练算力差距，到底省在哪里？",
+        "url": "/blog/halcyon-without-language-pretraining/",
+        "language": "zh",
+        "excerpt": "Halcyon文生图研究：275倍训练算力差距，到底省在哪里？ Halcyon由斯坦福与Radical Numerics研究者提出，验证文生图可以不依赖文本大模型预训练。本文核对论文、官方推理代码和Hugging Face权重，拆解275倍总预训练算力比较的分母，说明图文联合学习、自回归生成、评测口径，以及CUDA环境、权重访问条件和Mac端部署的真实使用限制。 Halcyon 文生图 多模态 训练算力 开源模型 275倍的分母，为什么必须讲清楚？ 不用语言预训练，模型怎么理解提示词？ 画质和提示词遵循，到底测了什么？ 代码和权重开放到哪一步？ 普通开发",
+        "score": 0.8018829
+      },
+      {
+        "article_id": "deepseek-v41-flash-1017-uncensored-fp8-teardown",
+        "title": "DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛",
+        "url": "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+        "language": "zh",
+        "excerpt": "DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛 dealignai 发布的 DeepSeek-V4.1-Flash-1017 去审查 FP8 版（MIT，3808 下载、265 likes，2026-10-18 创建）自报 HarmBench-320 全部顺从、MMLU 抽样 87.63% 降到 83.77%。但模型卡不披露消融方法，基线来自另一套服务栈，磁盘 510GB、仅在 4×H200 上验证，Mac 跑不了这个版本。 DeepSeek 消融",
+        "score": 0.5852286
+      },
+      {
+        "article_id": "yandex-aliceai-foundation-80b-a3b-base-moe-teardown",
+        "title": "Yandex 开源 AliceAI-Foundation-80B-A3B 基座模型：Apache-2.0 属实，俄语强，中文分词比 Qwen 多耗 58%",
+        "url": "/blog/yandex-aliceai-foundation-80b-a3b-base-moe-teardown/",
+        "language": "zh",
+        "excerpt": "Yandex 开源 AliceAI-Foundation-80B-A3B 基座模型：Apache-2.0 属实，俄语强，中文分词比 Qwen 多耗 58% AliceAI-Foundation-80B-A3B-Base 是 Yandex 从零训练的 80B 总参、约 3B 激活的 MoE 基座模型，Apache-2.0（LICENSE 文件已核实），上下文 262,144。骨架几乎照搬 Qwen3-Next-80B-A3B，换成 Kimi Delta Attention、注意力残差和 sigmoid 路由；benchmark 全部自跑，20 行里 12 ",
+        "score": 0.56578916
+      },
+      {
+        "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+        "title": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+        "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+        "language": "en",
+        "excerpt": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision OrcaRouter's abliterated (refusal-removed) MLX quantization of Qwen3.8-27B — 672 likes, trending. Architecture: 64-layer hybrid (48 Gated DeltaNet linear attention + 1 full attention every 4 layers), native vision-langu",
+        "score": 0.55742925
+      },
+      {
+        "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+        "title": "ParallelHue: A Speculative-Decoding Visualizer That Refuses to Color What It Can't Prove",
+        "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+        "language": "en",
+        "excerpt": "ParallelHue: A Speculative-Decoding Visualizer That Refuses to Color What It Can't Prove hikarioyama/ParallelHue (MIT, 35 stars, zero runtime dependencies) renders concurrent local-LLM streams in the terminal and colors them by verified generation step only when scheduler and det",
+        "score": 0.5541923
+      },
+      {
+        "article_id": "nemotron-3-diarization-8-speaker-streaming-mac-test",
+        "title": "Nemotron 3 Diarization 实测：NVIDIA 1 亿参数说话人分离模型，最多 8 人、可商用，Mac 上要自己编译",
+        "url": "/blog/nemotron-3-diarization-8-speaker-streaming-mac-test/",
+        "language": "zh",
+        "excerpt": "Nemotron 3 Diarization 实测：NVIDIA 1 亿参数说话人分离模型，最多 8 人、可商用，Mac 上要自己编译 Nemotron 3 Diarization 是 NVIDIA 2026-09-23 发布的 1 亿参数说话人分离模型，最多 8 人、流式延迟可低至 0.32 秒、OpenMDW-1.1 许可可商用。模型卡自报 DIHARD III DER 从 19.09% 降到 12.73%。我们在 16GB M4 Mac mini 上实测：官方安装脚本装的 v0.1.0 运行时加载失败，需从源码编译；编译后 10 分钟音频 CPU ",
+        "score": 0.54997236
+      },
+      {
+        "article_id": "hemmingway-1-27b-writing-model-benchmark-claims-teardown",
+        "title": "Hemmingway-1：一个「写得像人」的 27B 模型，能力靠自建榜单证明，还是 Qwen3.8 的一次精调？",
+        "url": "/blog/hemmingway-1-27b-writing-model-benchmark-claims-teardown/",
+        "language": "zh",
+        "excerpt": "Hemmingway-1：一个「写得像人」的 27B 模型，能力靠自建榜单证明，还是 Qwen3.8 的一次精调？ Hemmingway-1 是初创 Altworld 发布的 27B 文本模型，底子是 Qwen3.8-27B 的文本塔微调；权重约 54.7GB，两天内拿到 2745 次下载和 457 个赞。它宣称打赢多个前沿模型，但三项核心榜单全是自己出题自己跑；GitHub「Code」入口点开只有说明文档，没有一行训练或推理代码。 Hemmingway-1 Qwen3.8 文本生成模型 开放权重 自曝Benchmark Apple Silicon 为什",
+        "score": 0.548463
+      },
+      {
+        "article_id": "hauhaucs-qwen3-8-27b-gguf-fastmtp-speculative-decoding-kp-quant",
+        "title": "同一个 27B，换条路跑：HauhauCS 的 GGUF 版用 FastMTP 投机解码把生成速度拉到 3 倍",
+        "url": "/blog/hauhaucs-qwen3-8-27b-gguf-fastmtp-speculative-decoding-kp-quant/",
+        "language": "zh",
+        "excerpt": "同一个 27B，换条路跑：HauhauCS 的 GGUF 版用 FastMTP 投机解码把生成速度拉到 3 倍 HauhauCS/Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF 是 Qwen3.8-27B 的 GGUF 量化发布，1048 likes、171 万次下载。两个技术点值得看：一是 K_P「完美」量化——按模型做针对性分析选择性保质，体积只多 5-15% 却相当于提升一到两个量化档；二是 FastMTP，一个 903MB 的 32K 草稿旁车，配合打过补丁的 llama.cpp，文档生成最高 3.02 倍、",
+        "score": 0.5456292
+      },
+      {
+        "article_id": "stoa-pluralis-research-mac-rl-fleet-distributed-training",
+        "title": "14 台 Mac 跨越四国做 RL 后训练：Pluralis Research 的 stoa 实验",
+        "url": "/blog/stoa-pluralis-research-mac-rl-fleet-distributed-training/",
+        "language": "zh",
+        "excerpt": "14 台 Mac 跨越四国做 RL 后训练：Pluralis Research 的 stoa 实验 Pluralis Research 开源 stoa：把 RL 后训练的 rollout 生成和梯度更新彻底解耦——巴黎/苏黎世/都柏林/多伦多的 14 台 Mac 用 MLX 生成经验，一张 B200 负责学习，双方只通过 Cloudflare R2 bucket 见面。8B MoE 模型在论文搜索问答任务上 pass@1 从 0.29 涨到 0.63。 分布式训练 RL后训练 Apple Silicon MLX MoE GRPO 去中心化AI Plura",
+        "score": 0.5450932
+      },
+      {
+        "article_id": "tencent-hunyuanmt-hy-mt15-translation-model",
+        "title": "王炸：440MB 翻译模型打赢 Qwen3-32B，腾讯 HunyuanMT 开源了",
+        "url": "/blog/tencent-hunyuanmt-hy-mt15-translation-model/",
+        "language": "zh",
+        "excerpt": "王炸：440MB 翻译模型打赢 Qwen3-32B，腾讯 HunyuanMT 开源了 腾讯开源 HunyuanMT（Hy-MT 1.5），通过 AngelSlim 压缩后仅 440MB，在 FLORES-200 XCOMET 翻译质量评测中超过 Qwen3-32B（65GB）。支持 33 种语言，可完全离线运行在手机上，专业翻译能力碾压通用大模型。 腾讯 HunyuanMT 翻译模型 开源 AngelSlim 多语言 本地部署 模型压缩 这件事有多炸 两件事，一起放出来 1. HunyuanMT（Hy-MT 1.5）— 翻译模型本体 2. AngelSl",
+        "score": 0.54416347
+      }
+    ]
+  },
+  "matched": true
+}
