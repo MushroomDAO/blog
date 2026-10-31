@@ -1,0 +1,13 @@
+{
+  "parsedFiles": [
+    "caption_images.py",
+    "cfg.py",
+    "common.py",
+    "generate_images.py",
+    "image_tokenizer.py",
+    "vocab.py"
+  ],
+  "helperChecks": 5,
+  "totalComputeRatio": 274.62686567164184,
+  "inferenceRun": false
+}
