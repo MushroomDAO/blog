@@ -1,0 +1,13 @@
+=== [adopt-banner] huashu-bird-sticker-guide ← 1 source image(s) → src/assets/images/huashu-bird-sticker-guide-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/previews/hero.webp
+=== [adopt-banner] done: src/assets/images/huashu-bird-sticker-guide-banner.jpg (1200x630, 95798B) ===
+=== [verify-banner] src/assets/images/huashu-bird-sticker-guide-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/previews/hero.webp
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 95798B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/huashu-bird-sticker-guide-banner.jpg ===
+PATH: src/assets/images/huashu-bird-sticker-guide-banner.jpg
