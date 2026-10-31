@@ -1,0 +1,74 @@
+{
+  "commit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+  "records": 11064,
+  "uniqueIds": 11064,
+  "stickerPathsMatched": 11064,
+  "orders": 44,
+  "families": 250,
+  "kinds": {
+    "ai-illustration": 11030,
+    "photo-cutout": 34
+  },
+  "qualityPass": 7676,
+  "qualityFail": 3388,
+  "names": {
+    "en": 11064,
+    "zhHans": 11041,
+    "languageColumns": 46
+  },
+  "aiScores": {
+    "below70": 109,
+    "70to79": 3273,
+    "atLeast80ButFailed": 6
+  },
+  "referencesByRecordedLicense": {
+    "Not recorded": 2017,
+    "CC BY-NC": 4078,
+    "CC BY": 777,
+    "Macaulay Library terms": 663,
+    "CC BY-SA": 338,
+    "CC BY-NC-ND": 679,
+    "None": 456,
+    "All rights reserved": 837,
+    "CC0 1.0": 192,
+    "CC BY-NC 4.0": 41,
+    "Public domain": 20,
+    "CC BY-SA 4.0": 239,
+    "CC BY-SA 3.0": 127,
+    "CC BY 4.0": 96,
+    "CC BY 2.0": 77,
+    "CC BY-SA 2.5": 25,
+    "CC BY-NC-SA": 229,
+    "CC BY-SA 2.0": 75,
+    "CC BY-ND": 27,
+    "CC BY-SA 1.0": 2,
+    "CC BY-NC-ND 4.0": 13,
+    "CC BY 3.0": 12,
+    "CC BY 2.1 JP": 1,
+    "CC SA 1.0": 1,
+    "CC BY 2.5": 1,
+    "Used with permission": 1,
+    "GFDL": 2,
+    "CC BY-NC 2.0": 3,
+    "CC BY-NC 3.0": 1
+  },
+  "hero": {
+    "count": 40,
+    "kinds": {
+      "ai-illustration": 40
+    },
+    "allMeetQualityBar": true
+  },
+  "methodLimits": [
+    "Checks metadata and Git tree paths, not all11064imagebytes",
+    "No independent ornithological or image-to-reference assessment",
+    "Author reviewScore/meetsQualityBar are recorded judgments, not calibrated accuracy probabilities"
+  ],
+  "sourceSha256": {
+    "data/species.json": "40bdfca3fb81382f8f936a9e0e865df7fdecb06d32110b9220ef873eac49be69",
+    "data/languages.json": "163afdcfb4a3d8d1946d8a5a912b0699eb91953e911e1394d1a890707e5af7e0",
+    "data/field-guide.zh-Hans.json": "3679cf8033dfc5e2adf54e195410a39710413df47a0da02933f122fbd5ae898e",
+    "LICENSE.md": "8d56a20e0ea951cbb5331a00f31c6edc78caea7c9b97afb194cabb8ea0bc7c44",
+    "NOTICE.md": "59caaef7ad98a53bb766f73566331657bdb1c6a308f5301fdd831f7db8832c42"
+  }
+}

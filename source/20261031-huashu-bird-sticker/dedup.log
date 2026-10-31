@@ -1,0 +1,21 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6ae57bf7-2cfe46f7-4a2773e4）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 931 篇 + 公众号草稿箱 4 条 + 本地发布记录 913 条 + MemPalace 3572 抽屉
+
+── 查：https://github.com/alchaincyf/huashu-bird-sticker
+   ❌ [知识库] # https://github.com/alchaincyf/  **Summary**: https://githu
+      一手源相同: alchaincyf/huashu-bird-sticker
+
+── 查：huashu-bird-sticker
+   ❌ [知识库] # https://github.com/alchaincyf/  **Summary**: https://githu
+      正文出现实体名「huashu-bird-sticker」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

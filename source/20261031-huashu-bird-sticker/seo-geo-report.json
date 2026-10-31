@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-31T05:32:49.920674+00:00",
+  "passed": true,
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "tags": true,
+    "dates": true,
+    "bilingual": true,
+    "copyright": true,
+    "thirdPartyExclusion": true,
+    "requiredNotice": true,
+    "figureAnchors": true,
+    "primaryEvidence": true,
+    "FAQ": true,
+    "sourcePin": true,
+    "internalLink": true
+  },
+  "evidenceLimits": [
+    "Metadata/pathchecks only; no independent species-identification evaluation",
+    "Layered licenses and source-photo uncertainty stated",
+    "Repositorycountversionbound,notuniversalcurrenttaxonomy"
+  ],
+  "manualImageReview": {
+    "cover": "Official40-birdhero,adopted95798B,1200x630,noOCRtext/faces,zeroerrors;source/license/requirednoticepreserved",
+    "figures": "3conceptualXiaoMillustrations15141/24119/21981B,1120x630;notdiagnosticbirdplates"
+  }
+}
