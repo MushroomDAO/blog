@@ -1,0 +1,242 @@
+{
+  "slug": "pixelfx-pixel-effects-guide",
+  "blog": {
+    "checkedAt": "2026-10-31T06:47:59.633231+00:00",
+    "articles": [
+      {
+        "slug": "pixelfx-pixel-effects-guide",
+        "url": "https://blog.mushroom.cv/blog/pixelfx-pixel-effects-guide/",
+        "title": "pixelfx：232款像素特效，用代码改、看着改、导出用",
+        "listRank": 3,
+        "carouselRank": 1,
+        "images": [
+          {
+            "url": "https://blog.mushroom.cv/_astro/pixelfx-pixel-effects-guide-banner.B3rFCUme.jpg",
+            "status": 200,
+            "contentType": "image/jpeg",
+            "bytes": 92270
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/pixelfx-pixel-effects-guide-banner.B3rFCUme_1Plf2B.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 30422
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/pixelfx-pixel-effects-guide-fig-01.V1Zdd4fU_ZmX5rs.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 44874
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/pixelfx-pixel-effects-guide-fig-02.BC_ktfVL_ZVV1vj.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 45448
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/pixelfx-pixel-effects-guide-fig-03.06NSOvoc_UvAD9.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 34016
+          }
+        ]
+      }
+    ]
+  },
+  "wechat": {
+    "checkedAt": "2026-10-31T06:48:46.093Z",
+    "drafts": [
+      {
+        "slug": "pixelfx-pixel-effects-guide",
+        "mediaId": "prCUE631thH1cmNLi42prNqe9l2deKH0J0qZvfUlmrJpqL3IQYlX2Lwnqs4NNQtE",
+        "titleMatches": true,
+        "authorMatches": true,
+        "digestMatches": true,
+        "htmlExact": false,
+        "fullTextMatches": true,
+        "imageIdentitiesMatch": true,
+        "imageCount": 3,
+        "localTextHash": "7aa83c8be353b9fa4551facef2f5e720dcd9a5a901a60327b087b39fba1a8a4e",
+        "remoteTextHash": "7aa83c8be353b9fa4551facef2f5e720dcd9a5a901a60327b087b39fba1a8a4e",
+        "platformRewrites": [
+          "external anchor wrappers removed",
+          "numeric entity escaping",
+          "img src converted to data-src and CDN resolution 0 to640"
+        ],
+        "canonicalInBody": false,
+        "copyrightPresent": true,
+        "coverMatches": true,
+        "needOpenComment": 1,
+        "onlyFansComment": 0,
+        "contentSourceUrl": "https://blog.mushroom.cv/blog/pixelfx-pixel-effects-guide/",
+        "localContentHash": "7a70effa7a321a23ba9be223c38d910ea4d2bedd528469ffeba88433a4e9354a",
+        "remoteContentHash": "0d679249b9490177982d4846ba46255a05114996c205dca9748ff39e781fe103"
+      }
+    ]
+  },
+  "semantic": {
+    "vectorsUpserted": 2,
+    "liveMatched": true,
+    "language": "zh",
+    "score": 0.7040516
+  },
+  "inventory": {
+    "commit": "fe7103c36d94e02f2d7df7d8f7a341e493837cde",
+    "effects": 232,
+    "categories": {
+      "arcane": 12,
+      "critters": 12,
+      "explosions": 12,
+      "fire": 12,
+      "holy": 10,
+      "ice": 10,
+      "impacts": 11,
+      "lightning": 11,
+      "melee": 12,
+      "nature": 13,
+      "pickups": 11,
+      "projectiles": 13,
+      "scifi": 12,
+      "shadow": 12,
+      "spawn": 10,
+      "status": 13,
+      "transitions": 10,
+      "ui": 12,
+      "water": 12,
+      "weather": 12
+    },
+    "palettes": [
+      "fire",
+      "ember",
+      "lava",
+      "smoke",
+      "dust",
+      "ice",
+      "water",
+      "electric",
+      "volt",
+      "poison",
+      "holy",
+      "heal",
+      "arcane",
+      "shadow",
+      "blood",
+      "earth",
+      "stone",
+      "gold",
+      "leaf",
+      "wood",
+      "metal",
+      "bone",
+      "neon",
+      "cyber",
+      "matrix",
+      "candy",
+      "night"
+    ],
+    "pure": 112,
+    "simulated": 120
+  },
+  "qualityCheck": {
+    "effects": 232,
+    "pass": 232,
+    "fail": 0,
+    "warnings": 4,
+    "performanceLimit": "Checker draw-time threshold only; not target game FPS or controlled benchmark"
+  },
+  "browser": {
+    "galleryLoaded": true,
+    "paletteOptions": 28,
+    "exportedImage": true,
+    "errors": [],
+    "exportPNGSize": [
+      1232,
+      1332
+    ],
+    "exportAlphaExtrema": [
+      0,
+      255
+    ],
+    "testedEffect": "fire/brazier",
+    "selectedPalette": "ice",
+    "browser": "Installed Chrome via Playwright; bundled Chromium missing on first attempt"
+  },
+  "exports": [
+    {
+      "id": "ice/frost-nova",
+      "frames": 103,
+      "pngSize": [
+        2592,
+        2304
+      ],
+      "frameSize": [
+        288,
+        192
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pivot": [
+        144,
+        150
+      ],
+      "fps": 30,
+      "pngSha256": "5d425c6139cfcc2c562729c5f68e9e93f38dc6e341207ce9c27688dc9e85409c"
+    },
+    {
+      "id": "melee/sword-slash",
+      "frames": 24,
+      "pngSize": [
+        680,
+        520
+      ],
+      "frameSize": [
+        136,
+        104
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pivot": [
+        44,
+        92
+      ],
+      "fps": 30,
+      "pngSha256": "b7314cda6e4e348ada31cb19fa2ae2b25bcdbbc1a6c26876bd6dd7ff6b1e49c6"
+    },
+    {
+      "id": "fire/torch",
+      "frames": 60,
+      "pngSize": [
+        720,
+        720
+      ],
+      "frameSize": [
+        72,
+        120
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "pivot": [
+        36,
+        94
+      ],
+      "fps": 30,
+      "pngSha256": "f1eb45380d35be7ccc494d9e0741a21961686dcd12bbb09a78c1ff17e93aaab3"
+    }
+  ],
+  "deployment": "https://b720c797.blog-mushroom.pages.dev",
+  "build": "passed; frozen article and four images unchanged",
+  "duplicatesCreated": false,
+  "limits": [
+    "No target game-engine import or concurrent effects benchmark",
+    "No new model-authored effect tested; Skill inspected",
+    "Gallery font is excluded from MIT",
+    "Published listing API48001 unavailable; no prior article,draft or receipt matched"
+  ]
+}

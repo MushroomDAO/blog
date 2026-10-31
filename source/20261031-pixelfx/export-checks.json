@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ice/frost-nova",
+    "frames": 103,
+    "pngSize": [
+      2592,
+      2304
+    ],
+    "frameSize": [
+      288,
+      192
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "pivot": [
+      144,
+      150
+    ],
+    "fps": 30,
+    "pngSha256": "5d425c6139cfcc2c562729c5f68e9e93f38dc6e341207ce9c27688dc9e85409c"
+  },
+  {
+    "id": "melee/sword-slash",
+    "frames": 24,
+    "pngSize": [
+      680,
+      520
+    ],
+    "frameSize": [
+      136,
+      104
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "pivot": [
+      44,
+      92
+    ],
+    "fps": 30,
+    "pngSha256": "b7314cda6e4e348ada31cb19fa2ae2b25bcdbbc1a6c26876bd6dd7ff6b1e49c6"
+  },
+  {
+    "id": "fire/torch",
+    "frames": 60,
+    "pngSize": [
+      720,
+      720
+    ],
+    "frameSize": [
+      72,
+      120
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "pivot": [
+      36,
+      94
+    ],
+    "fps": 30,
+    "pngSha256": "f1eb45380d35be7ccc494d9e0741a21961686dcd12bbb09a78c1ff17e93aaab3"
+  }
+]
