@@ -1,0 +1,15 @@
+{
+  "commit": "52931e3a2d34207f5f54da64a7d71c3e582ea966",
+  "sha256": {
+    "README.md": "8daafe7f3d60204fb610614014b31d978d718fd9c01a2f918ca55977de56edca",
+    "LICENSE": "d48cd25696931442df31640b0f1b4c631ceeb8e9170cb4f4b1bbfd739997d17a",
+    "environment.yml": "2449fe95572bde0b9be12181a61116d43f4453bce665ba7143d48d1fb49120e3",
+    "requirements.txt": "c055731eb35699108e34f7b29f7e9702f9bc05800bb84e3e99e3f676c5a18fae",
+    "vocab.py": "c99c3eb2b09a7cfe557b3acb8986906ce6c4dfe19edf8c86426e6ce7a9399c89",
+    "common.py": "4625612ba60a8213b0862bec9b852d9b57dac6cea2aef236955ec0ce8dfe4e3b",
+    "generate_images.py": "21272f947cfe61cba5052bedaf61018c8e1eddb39543f913f9809961667619da",
+    "caption_images.py": "4dc319b7f90efc12d5c17f96eb3e7a7714f683eb3d031bc95fedecfb80483db6",
+    "cfg.py": "9f40e98e612fae95308dd930d2440fb567a87880762f181ba2117aca1dda80a1",
+    "image_tokenizer.py": "b5f47a487832cee818b1f080446f4891837c4d4fe005ebfd8b80abb12aae34b7"
+  }
+}
