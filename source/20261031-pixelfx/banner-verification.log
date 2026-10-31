@@ -1,0 +1,13 @@
+=== [adopt-banner] pixelfx-pixel-effects-guide ← 1 source image(s) → src/assets/images/pixelfx-pixel-effects-guide-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /tmp/pixelfx-research/official-montage.png
+=== [adopt-banner] done: src/assets/images/pixelfx-pixel-effects-guide-banner.jpg (1200x630, 92270B) ===
+=== [verify-banner] src/assets/images/pixelfx-pixel-effects-guide-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/tmp/pixelfx-research/official-montage.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 92270B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/pixelfx-pixel-effects-guide-banner.jpg ===
+PATH: src/assets/images/pixelfx-pixel-effects-guide-banner.jpg

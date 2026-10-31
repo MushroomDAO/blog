@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-31T06:49:17.563989+00:00",
+  "query": "pixelfx 232款代码像素特效 27套色板 透明精灵图 字体许可",
+  "matched": false,
+  "hits": [],
+  "response": {
+    "results": [
+      {
+        "article_id": "pixel-perfect-ui-frontend-guide",
+        "title": "Pixel Perfect：585★ 的 React 组件库，让前端 UI 直接变好看",
+        "url": "/blog/pixel-perfect-ui-frontend-guide/",
+        "language": "zh",
+        "excerpt": "Pixel Perfect：585★ 的 React 组件库，让前端 UI 直接变好看 Pixel Perfect（585★）是一个精心设计的 React 组件库，330+ 组件全部可复制粘贴直接用。玻璃拟态按钮、3D 按钮、金属质感、鼠标轨迹特效……本文带你快速上手，用它优化你的网站前端 UI。 前端UI React 组件库 玻璃拟态 动画效果 shadcn GSAP 网站设计 为什么值得用 不是「基础功能」组件库 330+ 组件，覆盖主流效果类型 技术栈现代 快速上手 方法一：直接访问网站，复制组件代码 方法二：通过 shadcn registry ",
+        "score": 0.5870478
+      },
+      {
+        "article_id": "drawnix-open-source-whiteboard-mind-map-flowchart-plugin-architecture",
+        "title": "Drawnix：开源一体化白板，思维导图＋流程图＋自由画，Plait 插件架构，14K stars",
+        "url": "/blog/drawnix-open-source-whiteboard-mind-map-flowchart-plugin-architecture/",
+        "language": "zh",
+        "excerpt": "Drawnix：开源一体化白板，思维导图＋流程图＋自由画，Plait 插件架构，14K stars plait-board/drawnix 是 PingCode 开源的一体化白板工具，14580 stars，MIT 协议，TypeScript，基于自研 Plait 画图框架和插件架构。功能覆盖思维导图、流程图、自由画（含橡皮擦）、无限画布；支持 Markdown 转思维导图、mermaid 转流程图；导出 PNG/SVG/JSON，复制到剪贴板；多语言（中/英/俄/阿拉伯/越南）；移动端适配；Docker 部署；自动保存。v0.4.0 新增 SVG 导出",
+        "score": 0.5844637
+      },
+      {
+        "article_id": "video-shotcraft-claude-code-remotion-cinematic-product-videos",
+        "title": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片",
+        "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/",
+        "language": "zh",
+        "excerpt": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片 Vincentwei1021 开源的 Claude Code / Codex Agent 视频制作技能包，3832 stars。内置 104 张镜头配方卡、161 种运动风格预览、完整 Remotion 视频模板 Ink Press（36.2秒/1920×1080/30fps）、149 个音效（16个场景类别）、5套背景音乐。Agent 拿到产品截图后自动分镜、动画、配音设计，直出可发布的产品宣传片。 AI视频制作 Claude Code Remotion Agent技能 产",
+        "score": 0.5744443
+      },
+      {
+        "article_id": "awesome-gpt-image-2-prompt-engineering-industrial-templates",
+        "title": "awesome-gpt-image-2：33K stars，544 个逆向案例 + 20+ 工业级模板，Prompt as Code 出图引擎",
+        "url": "/blog/awesome-gpt-image-2-prompt-engineering-industrial-templates/",
+        "language": "zh",
+        "excerpt": "awesome-gpt-image-2：33K stars，544 个逆向案例 + 20+ 工业级模板，Prompt as Code 出图引擎 freestylefly/awesome-gpt-image-2，MIT，JavaScript，33,523 stars。GPT-Image-2/2.5 提示词工程库，544 个从真实生成结果逆向拆解的案例，12 大类别（UI/摄影/海报/信息图/插画/电商/品牌/角色/场景等），20+ 套工业级模板（含 JSON 结构化版本），配套 gpt-image-2-style-library npm Skill，同一份",
+        "score": 0.55842054
+      },
+      {
+        "article_id": "jakub-krehel-interface-skills",
+        "title": "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能",
+        "url": "/blog/jakub-krehel-interface-skills/",
+        "language": "zh",
+        "excerpt": "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能 jakubkrehel/skills 是一套 MIT 开源的界面设计工程技能，涵盖排版、颜色、布局、无障碍、文案、状态检查与技术插图。本文拆解 14 项技能如何协作、如何安装到 Codex 或 Claude Code，以及审阅、改代码和视觉验证的边界，并记录安装校验、随附脚本检查与 ESM 项目接入时遇到的兼容问题。 Agent Skills 界面设计 设计工程 无障碍 Codex Claude Code 这条命令究竟装了什么？ 14 项技能怎样分工？ 为什么它强调“证据",
+        "score": 0.5569663
+      },
+      {
+        "article_id": "qwen-image-2-1-dit-rgba-local-deploy-guide",
+        "title": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南",
+        "url": "/blog/qwen-image-2-1-dit-rgba-local-deploy-guide/",
+        "language": "zh",
+        "excerpt": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南 阿里千问 2026-09-20 开源。7.1B 参数 32 层 Block-Causal DiT + Qwen3-VL-8B 文本编码器 + 64 通道 RGBA VAE，合计约 15B。原生支持透明图层、多参考图（最多 10 张）、中英文文字渲染、最高 2K 分辨率、局部编辑。Diffusers/ComfyUI/SGLang/vLLM 当日支持。关键限制：H100 BF16 需 56.5GB 显存，无量化版本，许可证从 v1 的 Apache 2",
+        "score": 0.5490673
+      },
+      {
+        "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+        "title": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具",
+        "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+        "language": "zh",
+        "excerpt": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具 hikarioyama/ParallelHue（MIT，35 star，零运行时依赖）把本地大模型的多路并发流式输出画进终端，只有调度器和反分词器的遥测跟 SSE 逐字节对得上，才按验证步上色。真正的 exact 模式只支持 vLLM 0.26.x，靠 7 个内部方法挂钩实现，官方的有效证据只有一次 16 路 GLM 运行（16,384 个 token）。我们在 Mac mini 上跑通了 72 个测试，用模拟服务器确认了它在证据不足时会失败或降级，另外发现：只要模型名里带 qw",
+        "score": 0.5427464
+      },
+      {
+        "article_id": "microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact",
+        "title": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率",
+        "url": "/blog/microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact/",
+        "language": "zh",
+        "excerpt": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率 microsoft/TRELLIS.2 是 TRELLIS（CVPR'25 Spotlight）的续作，10745 stars，MIT，Python。核心创新：O-Voxel「无场」稀疏体素结构取代等值面场，天然支持开放表面（衣物/叶片）、非流形几何、内部封闭结构；4B 参数模型 512³ 分辨率 H100 上约 3 秒，1024³ 约 17 秒；完整 PBR 材质（Base Color/Roughness/Metallic/Opacity）；网",
+        "score": 0.5420786
+      },
+      {
+        "article_id": "html-video-nexu-usage-guide",
+        "title": "html-video: Paste a Link, Get an MP4 — No Video Editor Needed",
+        "url": "/blog/html-video-nexu-usage-guide/",
+        "language": "en",
+        "excerpt": "html-video: Paste a Link, Get an MP4 — No Video Editor Needed nexu-io/html-video (3.7k★, Apache-2.0) turns a URL or GitHub repo into a real MP4 — locally, no cloud fees, no video editor. AI agent fetches the content, builds a multi-scene storyboard, applies one of 21 license-clea",
+        "score": 0.5413194
+      },
+      {
+        "article_id": "ian-xiaohei-illustrations-beginner-guide",
+        "title": "Illustrate Your Articles Without Drawing: A Beginner's Guide to ian-xiaohei-illustrations",
+        "url": "/blog/ian-xiaohei-illustrations-beginner-guide/",
+        "language": "en",
+        "excerpt": "Illustrate Your Articles Without Drawing: A Beginner's Guide to ian-xiaohei-illustrations ian-xiaohei-illustrations is an Agent Skill for Codex / Claude Code that turns your Chinese articles into 16:9 white-background hand-drawn illustrations, starring a small black creature name",
+        "score": 0.53508615
+      }
+    ]
+  }
+}

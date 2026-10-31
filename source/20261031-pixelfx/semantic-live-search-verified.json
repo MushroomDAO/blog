@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-10-31T06:49:58.673942+00:00",
+  "query": "pixelfx 像素特效库 JavaScript Claude Code Skill 近战刀光 冰霜导出",
+  "matched": true,
+  "hits": [
+    {
+      "article_id": "pixelfx-pixel-effects-guide",
+      "title": "pixelfx：232款像素特效，用代码改、看着改、导出用",
+      "url": "/blog/pixelfx-pixel-effects-guide/",
+      "language": "zh",
+      "excerpt": "pixelfx：232款像素特效，用代码改、看着改、导出用 pixelfx把232款二维像素特效写成JavaScript，覆盖20个分类与27套色板，既能实时运行，也能导出透明PNG精灵图和帧元数据。本文核查原始仓库、画廊与Claude Code Skill，实际导出冰霜、刀光和火焰样例，解释制作流程、游戏引擎接入、Mac运行条件、辉光表现及字体授权与许可边界。 pixelfx Pixel Art Game Development Agent Skills JavaScript 232款特效，实际覆盖什么？ 画廊能直接导出什么？ 本地导出实际通过了吗？ ",
+      "score": 0.7040516
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "pixelfx-pixel-effects-guide",
+        "title": "pixelfx：232款像素特效，用代码改、看着改、导出用",
+        "url": "/blog/pixelfx-pixel-effects-guide/",
+        "language": "zh",
+        "excerpt": "pixelfx：232款像素特效，用代码改、看着改、导出用 pixelfx把232款二维像素特效写成JavaScript，覆盖20个分类与27套色板，既能实时运行，也能导出透明PNG精灵图和帧元数据。本文核查原始仓库、画廊与Claude Code Skill，实际导出冰霜、刀光和火焰样例，解释制作流程、游戏引擎接入、Mac运行条件、辉光表现及字体授权与许可边界。 pixelfx Pixel Art Game Development Agent Skills JavaScript 232款特效，实际覆盖什么？ 画廊能直接导出什么？ 本地导出实际通过了吗？ ",
+        "score": 0.7040516
+      },
+      {
+        "article_id": "video-shotcraft-claude-code-remotion-cinematic-product-videos",
+        "title": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片",
+        "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/",
+        "language": "zh",
+        "excerpt": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片 Vincentwei1021 开源的 Claude Code / Codex Agent 视频制作技能包，3832 stars。内置 104 张镜头配方卡、161 种运动风格预览、完整 Remotion 视频模板 Ink Press（36.2秒/1920×1080/30fps）、149 个音效（16个场景类别）、5套背景音乐。Agent 拿到产品截图后自动分镜、动画、配音设计，直出可发布的产品宣传片。 AI视频制作 Claude Code Remotion Agent技能 产",
+        "score": 0.6053818
+      },
+      {
+        "article_id": "video-use-ai-video-editor-claude-code",
+        "title": "video-use: Edit Videos with Claude Code — browser-use Team's Open Source AI Video Editor",
+        "url": "/blog/video-use-ai-video-editor-claude-code/",
+        "language": "en",
+        "excerpt": "video-use: Edit Videos with Claude Code — browser-use Team's Open Source AI Video Editor video-use (14,408 ⭐, Python, open source) is the browser-use team's AI video editing skill for Claude Code, Codex, Hermes, and other agents. Drop raw footage, describe the edit in natural lan",
+        "score": 0.59586024
+      },
+      {
+        "article_id": "jakub-krehel-interface-skills",
+        "title": "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能",
+        "url": "/blog/jakub-krehel-interface-skills/",
+        "language": "zh",
+        "excerpt": "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能 jakubkrehel/skills 是一套 MIT 开源的界面设计工程技能，涵盖排版、颜色、布局、无障碍、文案、状态检查与技术插图。本文拆解 14 项技能如何协作、如何安装到 Codex 或 Claude Code，以及审阅、改代码和视觉验证的边界，并记录安装校验、随附脚本检查与 ESM 项目接入时遇到的兼容问题。 Agent Skills 界面设计 设计工程 无障碍 Codex Claude Code 这条命令究竟装了什么？ 14 项技能怎样分工？ 为什么它强调“证据",
+        "score": 0.5947368
+      },
+      {
+        "article_id": "act-combat-design-ai-skill-guide",
+        "title": "act-combat-design：游戏战斗策划开源 AI Skill，46 元规则 + 70+ 游戏库，三端全兼容",
+        "url": "/blog/act-combat-design-ai-skill-guide/",
+        "language": "zh",
+        "excerpt": "act-combat-design：游戏战斗策划开源 AI Skill，46 元规则 + 70+ 游戏库，三端全兼容 资深游戏战斗策划 koisama0411 开源 act-combat-design，一套项目无关的 AI 战斗设计 Skill，覆盖角色/Boss 设计、招式集、数值验证到审阅级 HTML 文档产出。内置 46 条元规则、70+ 游戏借鉴库、两个虚构示例项目，Claude Code 安装后说'设计XXX角色'即自动触发。 游戏开发 战斗设计 AI Skill Claude Code 游戏策划 开源工具 ACT 二次元游戏 项目信息 这是什",
+        "score": 0.5847743
+      },
+      {
+        "article_id": "threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl",
+        "title": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节",
+        "url": "/blog/threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl/",
+        "language": "zh",
+        "excerpt": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节 achrefelouafi 开源的 Elemental Sandbox 用 Three.js + Vite + 手写 GLSL，在浏览器里程序化生成 10 种 3A 游戏级技能特效——冰霜迸裂、枝状闪电、陨石撞击、能量光束、虚空刀刃、凤凰……全部无贴图、无精灵表、无预烘焙网格。938 个参数配有实时滑块，按 P 暂停后仍可继续调整，成为研究游戏 VFX 系统的最佳交互式沙盒。MIT 许可，npm run dev 即跑。 Three.js WebGL G",
+        "score": 0.57999885
+      },
+      {
+        "article_id": "chatcut-ai-video-editor-codex-claude-code-plugin-tutorial",
+        "title": "ChatCut × Codex / Claude Code：用提示词剪视频的完整教程，五套原创模板",
+        "url": "/blog/chatcut-ai-video-editor-codex-claude-code-plugin-tutorial/",
+        "language": "zh",
+        "excerpt": "ChatCut × Codex / Claude Code：用提示词剪视频的完整教程，五套原创模板 ChatCut 是一个支持 Codex 和 Claude Code 插件的 AI 视频编辑器。本文从安装到实战，提供五套针对知识干货、产品评测、播客转视频、多镜头混剪、直播切片五个场景的原创提示词模板，开箱即用。 AI视频 ChatCut Codex Claude Code 提示词 视频剪辑 内容创作 教程 一、ChatCut 是什么 二、安装：Codex 还是 Claude Code？ Codex 安装（ChatGPT 桌面版） Claude Code ",
+        "score": 0.5793037
+      },
+      {
+        "article_id": "img2threejs-photo-to-threejs-code",
+        "title": "img2threejs：给AI一张图，拿回一个可动的Three.js 3D代码",
+        "url": "/blog/img2threejs-photo-to-threejs-code/",
+        "language": "zh",
+        "excerpt": "img2threejs：给AI一张图，拿回一个可动的Three.js 3D代码 16天 8591 星。img2threejs 给 Claude Code 加了一个 /img2threejs 技能：输入一张参考图，输出的不是 mesh 文件，而是纯 TypeScript 代码，从几何基元和程序化着色器重新建造这个物体，带运行时层级、可以直接动画。 Three.js 3D生成 WebGL Claude Code AI工具 程序化生成 generative Mycelium 核心区别：代码，不是网格 8 阶段流水线：细节驱动的雕刻 CS2 武器：极端质量测试 ",
+        "score": 0.57871336
+      },
+      {
+        "article_id": "nikola-hand-drawn-explainer-video-codex-skill",
+        "title": "Nikola：把话题变成手绘讲解视频的 Codex Skill",
+        "url": "/blog/nikola-hand-drawn-explainer-video-codex-skill/",
+        "language": "zh",
+        "excerpt": "Nikola：把话题变成手绘讲解视频的 Codex Skill 中文手绘知识讲解视频 Codex Skill，逐笔故事动画与程序动画双路径，VolcanoEngine TTS 配音，输出真实 MP4+字幕+时间轴，无需本地模型，Apache 2.0 开源。 手绘动画 Codex Skill AI视频 知识讲解 开源 TTS 两条生产路径 路径一：逐笔故事动画 路径二：程序动画 技术架构 触发词示例 已有示例 为什么值得关注",
+        "score": 0.5768353
+      },
+      {
+        "article_id": "lieflat-charts-agent-skill-data-visualization",
+        "title": "Lieflat Charts 实测：一套遵循 Agent Skills 格式的数据可视化 skill，但\"开源\"这个词用错了",
+        "url": "/blog/lieflat-charts-agent-skill-data-visualization/",
+        "language": "zh",
+        "excerpt": "Lieflat Charts 实测：一套遵循 Agent Skills 格式的数据可视化 skill，但\"开源\"这个词用错了 实测 Agent Skills 生态里的数据可视化 skill Lieflat Charts（moxt.ai 出品，兼容 Claude Code/Codex）：装上后用本站今天的真实采集数据（forage 雷达）跑出一张 Tick Rows 图，记录选型过程和产出。GitHub 4633 star，但作者在 X 上说\"我开源的\"其实不准确——License 是 PolyForm Noncommercial 1.0.0，只允许学习、",
+        "score": 0.57090175
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-10-31T06:48:32.095606+00:00",
+  "query": "pixelfx code drawn pixel effects palettes sprite sheet authoring skill",
+  "hits": [],
+  "response": {
+    "results": [
+      {
+        "article_id": "echo-slides-skill-extract-slides-from-video-claude-code-skill",
+        "title": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片",
+        "url": "/blog/echo-slides-skill-extract-slides-from-video-claude-code-skill/",
+        "language": "zh",
+        "excerpt": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片 xiangzhouEcho/Echo-Slides-Skill 开源 Claude Code Skill，npx skills add 一行装到全局，Claude Code/Codex/Cursor/OpenCode 通用，双签名去重（dHash+RGB网格），实测20分钟演讲39页零重复。 Claude Code skill video slides open source AI tools productivity agent 这个痛点存在了很久 核心洞察",
+        "score": 0.5766764
+      },
+      {
+        "article_id": "ian-xiaohei-illustrations-beginner-guide",
+        "title": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南",
+        "url": "/blog/ian-xiaohei-illustrations-beginner-guide/",
+        "language": "zh",
+        "excerpt": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南 ian-xiaohei-illustrations 是一个能装进 Codex / Claude Code 的 Agent Skill：把你的中文文章交给它，AI 自动生成 16:9 白底手绘配图，主角是一只叫「小黑」的黑色小怪物。一句话触发、最多 8 张、红橙蓝语义批注、8 种构图模式。本文从零基础角度讲清楚怎么装、怎么用，并重点讲它最有意思的扩展玩法——把「小黑」换成你自己的形象。 AgentSkill AI生图 内容创作 Codex Cla",
+        "score": 0.5704694
+      },
+      {
+        "article_id": "juju-content-illustrations-skill-ai-visual-content-guide",
+        "title": "juju-content-illustrations: An Agent Skill That Turns Articles into Juju-Style Hand-Drawn Illustrations",
+        "url": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
+        "language": "en",
+        "excerpt": "juju-content-illustrations: An Agent Skill That Turns Articles into Juju-Style Hand-Drawn Illustrations Juju Organizing Lab's content illustration skill. One trigger phrase, AI automatically converts articles, tutorials, and methodologies into white-background light-linework illu",
+        "score": 0.5555456
+      },
+      {
+        "article_id": "guizang-social-card-illustration-guide",
+        "title": "AI Illustrations for Your Articles: Complete Guizang Social Card Skill Guide",
+        "url": "/blog/guizang-social-card-illustration-guide/",
+        "language": "en",
+        "excerpt": "AI Illustrations for Your Articles: Complete Guizang Social Card Skill Guide Guizang Social Card Skill (4791★) is a Claude Code AI skill that converts articles into Xiaohongshu carousel images and WeChat cover pairs. This guide walks you through installation, visual modes, and ge",
+        "score": 0.55440056
+      },
+      {
+        "article_id": "drawnix-open-source-whiteboard-mind-map-flowchart-plugin-architecture",
+        "title": "Drawnix：开源一体化白板，思维导图＋流程图＋自由画，Plait 插件架构，14K stars",
+        "url": "/blog/drawnix-open-source-whiteboard-mind-map-flowchart-plugin-architecture/",
+        "language": "zh",
+        "excerpt": "Drawnix：开源一体化白板，思维导图＋流程图＋自由画，Plait 插件架构，14K stars plait-board/drawnix 是 PingCode 开源的一体化白板工具，14580 stars，MIT 协议，TypeScript，基于自研 Plait 画图框架和插件架构。功能覆盖思维导图、流程图、自由画（含橡皮擦）、无限画布；支持 Markdown 转思维导图、mermaid 转流程图；导出 PNG/SVG/JSON，复制到剪贴板；多语言（中/英/俄/阿拉伯/越南）；移动端适配；Docker 部署；自动保存。v0.4.0 新增 SVG 导出",
+        "score": 0.5537672
+      },
+      {
+        "article_id": "xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills",
+        "title": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过",
+        "url": "/blog/xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills/",
+        "language": "zh",
+        "excerpt": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过 B1lli/xhs-favorites-distiller，Apache 2.0，Python 3.10+，把小红书（或微信）收藏里的方法蒸馏成可安装的 Agent skill。核心机制：价值筛选 + 消融测试 + 自然触发验证，未经证实的候选不进入宿主发现目录。消融实验显示去掉「自然触发」要求后，3/3 案例出现提前激活；全流程测试 24/24 正确通过。 open-source agent-skills xiaohongshu ",
+        "score": 0.55179334
+      },
+      {
+        "article_id": "jakub-krehel-interface-skills",
+        "title": "Jakub Krehel Teardown: SVG Diagrams and 14 Interface Skills",
+        "url": "/blog/jakub-krehel-interface-skills/",
+        "language": "en",
+        "excerpt": "Jakub Krehel Teardown: SVG Diagrams and 14 Interface Skills Explore Jakub Krehel’s teardown skill and 14 interface skills, with an offline diagram demo, verified SVG and PNG exports, editable colors and explicit limits. Agent Skills 界面设计 设计工程 无障碍 Codex Claude Code What does the i",
+        "score": 0.5507571
+      },
+      {
+        "article_id": "nature-skills-yuan1z0825-academic-paper-skill-collection",
+        "title": "nature-skills: 18 AI Skills for the Whole Academic Paper Workflow, 34k Stars in Two Months",
+        "url": "/blog/nature-skills-yuan1z0825-academic-paper-skill-collection/",
+        "language": "en",
+        "excerpt": "nature-skills: 18 AI Skills for the Whole Academic Paper Workflow, 34k Stars in Two Months nature-skills is a community-built collection of 18 AI skills for the full academic paper workflow, started by Yuan Yizhe. Skills cover figures, polishing, writing, review response, citatio",
+        "score": 0.54517055
+      },
+      {
+        "article_id": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+        "title": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+        "url": "/blog/sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation/",
+        "language": "en",
+        "excerpt": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation Sprite Studio is an open-source (MIT) local-first AI 2D game art desktop workbench built with Tauri 2, Svelte, Rust, SQLite, and Codex CLI. Features chat-based sprite generation, sequential AI animation (identity + nei",
+        "score": 0.54347545
+      },
+      {
+        "article_id": "lieflat-charts-agent-skill-data-visualization",
+        "title": "Lieflat Charts, Tested: An Agent Skills-Format Data Viz Skill — But It Isn't Actually Open Source",
+        "url": "/blog/lieflat-charts-agent-skill-data-visualization/",
+        "language": "en",
+        "excerpt": "Lieflat Charts, Tested: An Agent Skills-Format Data Viz Skill — But It Isn't Actually Open Source A hands-on test of Lieflat Charts, an Agent Skills-format data visualization skill from moxt.ai compatible with Claude Code and Codex: installed it and rendered a real Tick Rows char",
+        "score": 0.5423967
+      }
+    ]
+  }
+}
