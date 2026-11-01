@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "stirling-pdf-local-toolbox-guide",
+    "query": "Stirling-PDF 本地许可 open-core PDF处理",
+    "hit": {
+      "article_id": "stirling-pdf-local-toolbox-guide",
+      "title": "Stirling-PDF：本地PDF工具箱怎么部署，隐私和许可怎么看？",
+      "url": "/blog/stirling-pdf-local-toolbox-guide/",
+      "language": "zh",
+      "excerpt": "Stirling-PDF：本地PDF工具箱怎么部署，隐私和许可怎么看？ Stirling-PDF：本地PDF工具箱怎么部署，隐私和许可怎么看？。本文核对官方仓库和一手资料，区分项目宣称、实际实现与本文分析，说明部署条件、功能边界、评测证据和适用场景；没有把未执行的运行测试或作者自报成绩写成独立实测。读者可以沿文末来源复查，并在自己的数据、权限和预算条件下逐步验证。选型应保留可复核证据。 Stirling-PDF 开源工具 工程实践 证据核查 它适合解决什么问题？ 为什么不能把整个仓库都叫MIT开源？ Docker怎样启动？ 本机使用，端口能否更明确？ 本",
+      "score": 0.70236814
+    }
+  },
+  {
+    "slug": "elephant-goldfish-spec-review-guide",
+    "query": "Elephant Goldfish 独立上下文规范审阅",
+    "hit": {
+      "article_id": "elephant-goldfish-spec-review-guide",
+      "title": "Elephant-Goldfish：让有上下文的Agent设计，让新视角审稿",
+      "url": "/blog/elephant-goldfish-spec-review-guide/",
+      "language": "zh",
+      "excerpt": "Elephant-Goldfish：让有上下文的Agent设计，让新视角审稿 Elephant-Goldfish：让有上下文的Agent设计，让新视角审稿。本文核对官方仓库和一手资料，区分项目宣称、实际实现与本文分析，说明部署条件、功能边界、评测证据和适用场景；没有把未执行的运行测试或作者自报成绩写成独立实测。读者可以沿文末来源复查，并在自己的数据、权限和预算条件下逐步验证。 elephant-goldfish-model 开源工具 工程实践 证据核查 它不是又一个模型权重 大象与金鱼分别负责什么？ 标准工作流怎样衔接？ 怎样理解安装与适配？ 怎样用在W",
+      "score": 0.6754341
+    }
+  },
+  {
+    "slug": "gvs5h-memdoor-small-model-coding-audit",
+    "query": "五个27B击败旗舰 核对GVS5H与Memdoor的证据和成本",
+    "hit": {
+      "article_id": "gvs5h-memdoor-small-model-coding-audit",
+      "title": "五个27B击败旗舰？核对GVS5H与Memdoor的证据和成本",
+      "url": "/blog/gvs5h-memdoor-small-model-coding-audit/",
+      "language": "zh",
+      "excerpt": "五个27B击败旗舰？核对GVS5H与Memdoor的证据和成本 五个27B击败旗舰？核对GVS5H与Memdoor的证据和成本。本文核对官方仓库和一手资料，区分项目宣称、实际实现与本文分析，说明部署条件、功能边界、评测证据和适用场景；没有把未执行的运行测试或作者自报成绩写成独立实测。读者可以沿文末来源复查，并在自己的数据、权限和预算条件下逐步验证。选型应保留可复核证据。 memdoor 开源工具 工程实践 证据核查 原始信息分别在哪里？ 92.4%究竟是什么成绩？ Memdoor复现是否验证了全部100题？ 到底是五个模型还是一份模型的多个角色？ 硬件和",
+      "score": 0.84640545
+    }
+  }
+]
