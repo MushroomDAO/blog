@@ -1,0 +1,89 @@
+{
+  "query": "MemT 1.0 原生记忆 MemOS Metis 代码许可 权重许可 SGLang会话",
+  "response": {
+    "results": [
+      {
+        "article_id": "memt-native-memory-memos-metis-guide",
+        "title": "从MemOS到MemT 1.0：模型原生记忆的机制、许可与落地边界",
+        "url": "/blog/memt-native-memory-memos-metis-guide/",
+        "language": "zh",
+        "excerpt": "从MemOS到MemT 1.0：模型原生记忆的机制、许可与落地边界 MemT 1.0把动态记忆状态放进模型计算，但固定容量不代表无限记忆。本文从截图追溯MemOS、Metis与MemT官方仓库，核对Nano和Flash权重、代码许可、SGLang会话接口与硬件要求，结合七项本地CPU启动校验，分析原生记忆如何与RAG、证据存储、用户隔离及快照恢复协作，并划清评测与商用边界。 MemT MemOS 模型记忆 Agent架构 RAG 图片里哪些信息可以保留，哪些不能直接引用？ MemOS、Metis与MemT分别解决什么？ 固定容量的记忆，怎样参与下一次回答",
+        "score": 0.7308859
+      },
+      {
+        "article_id": "gws-google-workspace-cli-discovery-dynamic-commands-agent-skills",
+        "title": "gws：命令面在运行时长出来的 CLI，以及它对本地优先意味着什么",
+        "url": "/blog/gws-google-workspace-cli-discovery-dynamic-commands-agent-skills/",
+        "language": "zh",
+        "excerpt": "gws：命令面在运行时长出来的 CLI，以及它对本地优先意味着什么 把整个 Google Workspace 收进一个命令行工具，Rust 写的，3 万 stars。工程上最值得看的是它不带静态命令列表：运行时读 Google 的 Discovery Service，用返回的文档动态构建 clap 命令树，Google 加了 API 方法它就自动支持。仓库还带 100 多个 SKILL.md，每个 API 一个，外加 50 个精选 recipe。需要澄清两件事：它挂在 googleworkspace 组织下，但 README 明写不是官方支持的 Goog",
+        "score": 0.56292355
+      },
+      {
+        "article_id": "ming-3-tts-small-model-evaluation",
+        "title": "Ming-3.0-TTS: Small Model, Strong Speech, Real Limits",
+        "url": "/blog/ming-3-tts-small-model-evaluation/",
+        "language": "en",
+        "excerpt": "Ming-3.0-TTS: Small Model, Strong Speech, Real Limits Review Ming-3.0-TTS: live English leaderboards, MIT weights, multilingual controls, checkpoint size, CUDA deployment and the limits of unverified Mac support. Ming-3.0-TTS 蚂蚁集团 语音合成 开源模型 本地AI Where are the original releases? W",
+        "score": 0.5620134
+      },
+      {
+        "article_id": "dense-mem-governed-ai-memory-mcp-evidence-provenance",
+        "title": "Dense-Mem 调研：AI 记忆不该是「想存就存」，而该有证据链和权限",
+        "url": "/blog/dense-mem-governed-ai-memory-mcp-evidence-provenance/",
+        "language": "zh",
+        "excerpt": "Dense-Mem 调研：AI 记忆不该是「想存就存」，而该有证据链和权限 调研自托管 MCP 记忆服务 Dense-Mem：核心理念是「受治理的 AI 记忆」，模型写入的是一份「提案」，真正能不能变成持久状态由服务端的确定性策略和封闭 schema 校验决定；证据精确、持久、只增不删，生命周期变更只改变有效状态，从不抹除溯源链；关系只有在证据支持「合格」时才成为活跃的图边，未决的候选和假设默认不会被召回。Go 1.26 + PostgreSQL/pgvector 做持久权威，Redis 只做协调。Apache-2.0，36 star，配套研究预印本。 ",
+        "score": 0.56085503
+      },
+      {
+        "article_id": "prime-agent-primeintellect-self-improving-rlm-coding-agent",
+        "title": "Prime Agent：PrimeIntellect 开源的自改进 RLM 编程 Agent",
+        "url": "/blog/prime-agent-primeintellect-self-improving-rlm-coding-agent/",
+        "language": "zh",
+        "excerpt": "Prime Agent：PrimeIntellect 开源的自改进 RLM 编程 Agent PrimeIntellect 开源的自改进 Agent，7.6k stars，MIT License。引入 RLM（递归语言模型）把 context 当变量、工具调用当函数，运行在持久 IPython REPL 中。通过 Continual Harness 把提示词/记忆/技能描述持久化为可精炼的 durable state，支持子 Agent 并行、后台 daemon 会话、Agent 间直接通信、/goal 跨轮次持久目标和 /autonomous 自主模式",
+        "score": 0.5606835
+      },
+      {
+        "article_id": "mempalace-ai-memory-palace",
+        "title": "MemPalace：重塑 AI 记忆的记忆宫殿",
+        "url": "/blog/mempalace-ai-memory-palace/",
+        "language": "zh",
+        "excerpt": "MemPalace：重塑 AI 记忆的记忆宫殿 MemPalace 是一个开源 AI 长期记忆系统，从古希腊记忆宫殿技术中汲取灵感，解决了当前 AI 助手会话后失忆的问题。 ai-memory open-source local-ai privacy milla-jovovich 1. 核心理念：古老的\"记忆宫殿\"技术 2. 技术亮点：极致的隐私与效率 🏠 本地优先，零成本 🗜️ AAAK 压缩协议 ⏰ 事实的时态性 3. 性能表现 总结",
+        "score": 0.5559244
+      },
+      {
+        "article_id": "irodori-tts-anime-japanese-local-tts",
+        "title": "一个日语动漫风 TTS 微调模型，附带五种量化版本——以及一句很诚实的免责声明",
+        "url": "/blog/irodori-tts-anime-japanese-local-tts/",
+        "language": "zh",
+        "excerpt": "一个日语动漫风 TTS 微调模型，附带五种量化版本——以及一句很诚实的免责声明 Irodori-TTS-v4.1-Anime 是基于 Irodori-TTS-v4.1-Small 用动漫风语音数据微调的日语 TTS 模型，MIT 协议，同时提供 int8/int4/float8 共五种量化变体。作者主动写明：基座模型的标注流程未公开，微调数据是独立标注的，所以 caption 条件控制和 emoji 控制的行为可能和基座不一样。 TTS 语音合成 本地推理 日语 量化 开源 微调 local-first 先说清楚这是什么 值得写的两个点 一、量化矩阵给得",
+        "score": 0.549126
+      },
+      {
+        "article_id": "hy-memory-sdk-memhub-memory-writer",
+        "title": "Hy Memory：SDK、MemHub与专用记忆模型",
+        "url": "/blog/hy-memory-sdk-memhub-memory-writer/",
+        "language": "zh",
+        "excerpt": "Hy Memory：SDK、MemHub与专用记忆模型 腾讯混元Hy Memory同时开放记忆SDK、MemHub与30B-A3B写入模型。本文核对三者分工、Chat与Coding管线、官方固定20%子集评测、约60.1GB权重及跨应用授权边界，并记录42项SDK定向测试，说明本地优先不等于数据不出机、3B激活不等于3B内存，以及公开安装入口仍需核验的情况。 Hy Memory MemHub Agent Memory 腾讯混元 开源模型 SDK、MemHub与30B模型，分别解决什么？ 为什么Chat、Working和Coding分成三条路径？ 专用wr",
+        "score": 0.54777455
+      },
+      {
+        "article_id": "gamescaling-game-agents-cpt",
+        "title": "GameScaling：游戏数据能把小模型训练成通用玩家吗？",
+        "url": "/blog/gamescaling-game-agents-cpt/",
+        "language": "zh",
+        "excerpt": "GameScaling：游戏数据能把小模型训练成通用玩家吗？ GameScaling用120组实验研究游戏Agent的持续预训练，开放0.8B到27B八个权重。本文拆解跨游戏泛化、实时评测、200ms动作协议和源码离线测试，区分推理开源与未公开训练数据。 GameScaling 游戏智能体 Qwen3.5 具身智能 持续预训练 它与本地编程模型 Flint 有什么关系？ 多玩游戏，真的会更通用吗？ 为什么必须同时看暂停与实时两种分数？ 开放了哪些模型，显存怎样估算？ 从截图到动作，工程接口有哪些坑？ 怎样先做一个可复核的最小验证？ 常见问题 它可以复现完",
+        "score": 0.54763573
+      },
+      {
+        "article_id": "miles-v0-1-production-rl-post-training-sglang",
+        "title": "Miles v0.1：SGLang 团队填平学术 RL 和生产系统之间的鸿沟",
+        "url": "/blog/miles-v0-1-production-rl-post-training-sglang/",
+        "language": "zh",
+        "excerpt": "Miles v0.1：SGLang 团队填平学术 RL 和生产系统之间的鸿沟 SGLang 团队发布 Miles v0.1，生产级 LLM/VLM RL 后训练框架。全异步 RL、P2P RDMA 权重同步（万亿参数秒级更新）、TITO 消除 token 往返损耗、R3 修复 MoE 路由不一致、自动容错恢复——每块都是工业级设计。 RL post-training SGLang LLM open-source LMSYS 学术 RL 代码进生产，会在哪里翻车 架构：三层解耦 五个关键技术点 1. 全异步 RL 2. P2P RDMA 权重更新 3. T",
+        "score": 0.54716414
+      }
+    ]
+  },
+  "matched": true,
+  "checkedAt": "2026-11-01T01:16:00.048603+00:00"
+}
