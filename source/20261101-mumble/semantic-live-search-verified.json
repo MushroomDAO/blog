@@ -1,0 +1,89 @@
+{
+  "query": "Mumble手机对讲服务端部署指南，Mumla和Mumblers源码核查",
+  "response": {
+    "results": [
+      {
+        "article_id": "mumble-phone-walkie-talkie-guide",
+        "title": "手机变网络对讲机：Mumble服务端、Mumla与iOS客户端搭建指南",
+        "url": "/blog/mumble-phone-walkie-talkie-guide/",
+        "language": "zh",
+        "excerpt": "手机变网络对讲机：Mumble服务端、Mumla与iOS客户端搭建指南 Mumble可以把Android与iPhone接入同一个自托管语音频道，实现按住说话的网络对讲。本文核对Mumble官方服务端、Docker镜像、Mumla、Mumblers与MumbleWay仓库及安装入口，提供双端口、独立密码和持久化配置，并解释后台保活、蓝牙耳机、运营商网络、证书信任与传输加密的实际边界。 Mumble 自托管 网络对讲 Mumla MumbleWay Mumble如何把手机接成对讲频道？ 相关应用，哪些确实有开源仓库？ Android：搜索Mumla，核对包名",
+        "score": 0.76215655
+      },
+      {
+        "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+        "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+        "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+        "language": "zh",
+        "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+        "score": 0.60614926
+      },
+      {
+        "article_id": "gemma-translator-google-offline-voice-raspberry-pi",
+        "title": "Gemma Translator：用树莓派 5 做一台完全离线的双向语音翻译机",
+        "url": "/blog/gemma-translator-google-offline-voice-raspberry-pi/",
+        "language": "zh",
+        "excerpt": "Gemma Translator：用树莓派 5 做一台完全离线的双向语音翻译机 Google Gemma 团队开源的全离线双向语音翻译项目，JavaScript/Python，Apache 2.0。以树莓派 5（8GB）为目标硬件，Gemma 4（gemma4-e2b）通过 LiteRT-LM 本地推理，Moonshine 负责语音识别和 TTS 合成。双通道设计：两个人面对面，各自说母语，实时互译。一键部署为永久 kiosk 服务。源码来自 Google Antigravity 实验。 Gemma 语音翻译 离线AI 树莓派 LiteRT 本地推理 M",
+        "score": 0.5930603
+      },
+      {
+        "article_id": "llm-dock-docker-compose-local-llm-dashboard",
+        "title": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板",
+        "url": "/blog/llm-dock-docker-compose-local-llm-dashboard/",
+        "language": "zh",
+        "excerpt": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板 LLM-Dock 是一个管理本地 LLM 推理服务的 Web 面板：自动扫描 HuggingFace 缓存发现模型，llama.cpp 跑 GGUF、vLLM 跑 safetensors，3300-3400 端口段自动分配，一键起停，自动注册进 Open WebUI，还能在面板里直接跑 llama-bench 并把结果存库对比。前提是 Linux + NVIDIA。 本地推理 Docker llama.cpp vLLM 运维 开源 Open Web",
+        "score": 0.5825331
+      },
+      {
+        "article_id": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota",
+        "title": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军",
+        "url": "/blog/moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota/",
+        "language": "zh",
+        "excerpt": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军 OpenMOSS 开源的 MOSS-Transcribe-Diarize 0.9B（1.5K stars），SOTA 端到端音频理解模型，一个模型同时完成长音频多说话人转写、说话人分离（diarization）、精确时间戳和声学事件标注。架构：Qwen3-0.6B 解码器 + Whisper-Medium 编码器 + 4x 时序合并 MLP 桥接。支持 50+ 语言。输出格式 [时间戳][S01]文本[时间戳]。",
+        "score": 0.5802096
+      },
+      {
+        "article_id": "video-expert-analyzer-mac-mlx-local-model-complete-guide",
+        "title": "Video Expert Analyzer 完全指南：Walter Murch 六法则 + Mac MLX 本地模型全路径",
+        "url": "/blog/video-expert-analyzer-mac-mlx-local-model-complete-guide/",
+        "language": "zh",
+        "excerpt": "Video Expert Analyzer 完全指南：Walter Murch 六法则 + Mac MLX 本地模型全路径 ALBEDO-TABAI/Video-expert-analyzer 深度调研：从场景检测到五维 AI 评分，完整讲透工具架构、云端 API 和 Mac 本地 MLX 模型（oMLX / Rapid-MLX + Qwen-VL / Gemma 4）两条路径的部署全过程。 Video Analysis AI Agent MLX Apple Silicon oMLX Rapid-MLX Walter Murch 开源工具 工具是什么 支",
+        "score": 0.5575261
+      },
+      {
+        "article_id": "dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile",
+        "title": "dsh-plugin-mobile-gateway：给 DeepSeek Harness 加上移动端，手机扫码就能用，Tailscale 一行命令搞定远程",
+        "url": "/blog/dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile/",
+        "language": "zh",
+        "excerpt": "dsh-plugin-mobile-gateway：给 DeepSeek Harness 加上移动端，手机扫码就能用，Tailscale 一行命令搞定远程 Clarklevis1995/dsh-plugin-mobile-gateway，MIT 开源，JavaScript 插件，给 DeepSeek Harness (DSH) 增加 WebSocket 移动网关。支持局域网直连、Linux 公网一键 TLS、Tailscale 远程接入三种部署方式。配套 iOS 17+ SwiftUI 原生客户端，双向同步会话、实时流、Human-in-the-loop",
+        "score": 0.5559719
+      },
+      {
+        "article_id": "pocketorca-35b-moe-phone-server",
+        "title": "PocketOrca：让手机流式运行35B MoE",
+        "url": "/blog/pocketorca-35b-moe-phone-server/",
+        "language": "zh",
+        "excerpt": "PocketOrca：让手机流式运行35B MoE PocketOrca-LLM v1.4.3把骁龙手机变成局域网模型服务器，新增35B MoE专家流式加载。本文核对S25的作者性能数据、NPU与MTP等路径、兼容API和远程模式边界，并静态检查发布APK，发现源码构建版本与制品资产不一致，说明12GB运行条件不等于全部权重常驻，也不代表已完成真机与安全验证。 PocketOrca MoE Android 本地推理 骁龙 12GB手机运行35B，靠的是什么？ NPU、GPU、CPU、MoE和MTP是什么关系？ 兼容接口，怎样接入现有客户端？ “数据永不出",
+        "score": 0.55544037
+      },
+      {
+        "article_id": "cf-workers-checkproxyip-single-file-worker-tcp-tls-probe",
+        "title": "一个 _worker.js 文件就是全部：CF-Workers-CheckProxyIP 在 Workers 上做 TCP/TLS 连通性体检",
+        "url": "/blog/cf-workers-checkproxyip-single-file-worker-tcp-tls-probe/",
+        "language": "zh",
+        "excerpt": "一个 _worker.js 文件就是全部：CF-Workers-CheckProxyIP 在 Workers 上做 TCP/TLS 连通性体检 cmliu/CF-Workers-CheckProxyIP 把页面、DNS 解析、TCP/TLS 探测全塞进一个 _worker.js，复制粘贴进 Cloudflare 控制台就能跑。技术看点是它用 cloudflare:sockets 在 Worker 里真的建 TCP 连接做 TLS 握手，再靠两个固定探针推断候选目标是 ipv4_only 还是双栈。免费套餐的子请求上限逼出了「每批最多 15 个域名、3 秒",
+        "score": 0.5532982
+      },
+      {
+        "article_id": "step5-preview-vllm-verl-deployment",
+        "title": "Step-5 Preview 部署指南：vLLM 专用镜像与 verl RL 边界",
+        "url": "/blog/step5-preview-vllm-verl-deployment/",
+        "language": "zh",
+        "excerpt": "Step-5 Preview 部署指南：vLLM 专用镜像与 verl RL 边界 Step-5 Preview 已提供 vLLM 专用镜像与部署配方，FP8 示例采用四张 B300 或八张 H200。本文核对模型页、镜像与 verl 强化学习 PR，解释 TP、EP、DP、长上下文与 NVFP4 的配置差异，给出接口验收步骤，并区分可下载权重、定制推理环境与仍处于草稿阶段的 LoRA 强化学习实现。 Step-5 Preview vLLM verl MoE 模型部署 强化学习 Step-5 Preview 是多大的模型？ 应该选择哪种硬件与并行方式？ ",
+        "score": 0.5498118
+      }
+    ]
+  },
+  "matched": true,
+  "checkedAt": "2026-11-01T00:44:10.330187+00:00"
+}
