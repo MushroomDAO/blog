@@ -1,0 +1,18 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6ae6feca-272c517d-3dc2bd08）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 940 篇 + 公众号草稿箱 8 条 + 本地发布记录 922 条 + MemPalace 3673 抽屉
+
+── 查：https://hamel.dev/blog/posts/evals/
+   ✅ 四本账都没查到
+
+── 查：Hamel Husain
+   ❌ [BLOG  ] 软件公司转型：如何开发 Agent？一线团队的 8 步流程与 6 条避坑建议
+      正文出现实体名「husain」
+   ❌ [知识库] # Your Al Product Needs Evals  **Summary**: Your Al Product
+      正文出现实体名「husain」
+
+Title-token check generated generic product/needs/evals matches; manually excluded. Exact source URL absent; author mentioned by an unrelated broader Agent-development article; current raw KB only.
+
+Manual URL audit: the broader how-to-build-agents-software-company-guide does contain the exact original URL as a citation in both language sections. Automated URL search missed that citation. It is not a dedicated analysis and has no matching article/draft to reuse for this requested topic.

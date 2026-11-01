@@ -1,0 +1,33 @@
+{
+  "checkedDate": "2026-11-01",
+  "original": {
+    "url": "https://hamel.dev/blog/posts/evals/",
+    "author": "Hamel Husain",
+    "published": "2024-03-29",
+    "htmlSha256": "75b992f62addbf4eb694283b9d8afba54e07add6796e88eecde798b8351a8630"
+  },
+  "subsequentSources": [
+    "https://hamel.dev/llm-judge/",
+    "https://hamel.dev/blog/posts/evals-faq/why-is-error-analysis-so-important-in-llm-evals-and-how-is-it-performed.html",
+    "https://hamel.dev/blog/posts/evals-faq/how-do-i-approach-evaluation-when-my-system-handles-diverse-user-queries.html"
+  ],
+  "errorAnalysisFAQ": {
+    "authors": [
+      "Hamel Husain",
+      "Shreya Shankar"
+    ],
+    "published": "2025-06-27",
+    "modified": "2026-09-01"
+  },
+  "ownProposals": [
+    "Fictional refund-agent workflow",
+    "trace schema suggestions",
+    "business-state and idempotency checks",
+    "100-record 90/10 arithmetic example",
+    "two-week adjustable plan"
+  ],
+  "actualModelTests": false,
+  "actualCustomerDeployment": false,
+  "originalArticleRAG": "points to external further reading; not a full RAG evaluation recipe",
+  "priorBlog": "how-to-build-agents-software-company-guide only cites original, not a dedicated analysis"
+}
