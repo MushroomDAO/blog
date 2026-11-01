@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-01T01:12:46.272473+00:00",
+  "passed": true,
+  "checks": {
+    "titles": true,
+    "descriptions": true,
+    "wechat": true,
+    "dates": true,
+    "category": true,
+    "tags": true,
+    "bilingual": true,
+    "copyright": true,
+    "FAQ": true,
+    "questionHeadings": true,
+    "sources": true,
+    "licenseSplit": true,
+    "runtimeLimits": true,
+    "dryRunLimits": true,
+    "ingestCaveat": true,
+    "sourcePin": true,
+    "internalLink": true,
+    "figures": true,
+    "hero": true
+  },
+  "lengths": {
+    "title": 33,
+    "titleEn": 51,
+    "description": 154,
+    "descriptionEn": 155,
+    "wechatTitle": 19,
+    "wechatDigest": 42
+  },
+  "manualReview": [
+    "BilingualBLUF/FAQ,primaryplainURLs,alttexts,relatedmemoryarticle",
+    "Screenshotdatedclaimsnotcurrentmodelbenchmarks",
+    "CodeNC/reportNC/weightApacheMITseparate;nofalseunrestrictedOSSclaim",
+    "Actual7CPUconfigurationchecksnotaccuracy/perf;MacclientnotlocalGPU",
+    "Ingest/save_statependinghistorycaveats;closeNOautosave;logsnotdeleted",
+    "ExistingAstrometadata/headinganchorsused;noextraSchema"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "slug": "memt-native-memory-memos-metis-guide",
+  "blog": {
+    "checkedAt": "2026-11-01T01:14:06.307398+00:00",
+    "articles": [
+      {
+        "slug": "memt-native-memory-memos-metis-guide",
+        "url": "https://blog.mushroom.cv/blog/memt-native-memory-memos-metis-guide/",
+        "title": "从MemOS到MemT 1.0：模型原生记忆的机制、许可与落地边界",
+        "listRank": 1,
+        "carouselRank": 1,
+        "images": [
+          {
+            "url": "https://blog.mushroom.cv/_astro/memt-native-memory-memos-metis-guide-banner.b_J0DaJR.jpg",
+            "status": 200,
+            "contentType": "image/jpeg",
+            "bytes": 92334
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/memt-native-memory-memos-metis-guide-banner.b_J0DaJR_Z2tLbzM.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 41464
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/memt-native-memory-memos-metis-guide-fig-01.C3RCrTm2_Z26PMgG.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 30636
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/memt-native-memory-memos-metis-guide-fig-02.DdXLG7lo_Z18bpQm.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 19772
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/memt-native-memory-memos-metis-guide-fig-03.mqmXjzkm_Z2djiHF.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 18816
+          }
+        ]
+      }
+    ]
+  },
+  "wechat": {
+    "checkedAt": "2026-11-01T01:15:02.053Z",
+    "drafts": [
+      {
+        "slug": "memt-native-memory-memos-metis-guide",
+        "mediaId": "prCUE631thH1cmNLi42prCJrGdKZVz1iR0511B8OEnNn6kbVqdcasDmQozdhR4IO",
+        "titleMatches": true,
+        "authorMatches": true,
+        "digestMatches": true,
+        "htmlExact": false,
+        "fullTextMatches": true,
+        "imageIdentitiesMatch": true,
+        "imageCount": 3,
+        "localTextHash": "774ab6520e767485b4d878ad84c2c105ae284dbbec0d1d3371dc0768d8e17bd9",
+        "remoteTextHash": "774ab6520e767485b4d878ad84c2c105ae284dbbec0d1d3371dc0768d8e17bd9",
+        "platformRewrites": [
+          "external anchor wrappers removed",
+          "numeric entity escaping",
+          "img src converted to data-src and CDN resolution 0 to640"
+        ],
+        "canonicalInBody": false,
+        "copyrightPresent": true,
+        "coverMatches": true,
+        "needOpenComment": 1,
+        "onlyFansComment": 0,
+        "contentSourceUrl": "https://blog.mushroom.cv/blog/memt-native-memory-memos-metis-guide/",
+        "localContentHash": "d5b7ed81ed9a6c882ebe2a42772156675c78d828e5be368061cb611527270df2",
+        "remoteContentHash": "df25a30f37b83307da9db5ab7c2831f39fee0e436b59db1fd73c5ae38add01ea"
+      }
+    ]
+  },
+  "deployment": "https://4bbd4256.blog-mushroom.pages.dev",
+  "semanticIndex": "Two language vectors upserted; manifest updated",
+  "newArticle": true,
+  "limits": [
+    "7CPUconfigurationchecks only;nomodel/recall/latency/VRAMbenchmark",
+    "OriginalcodePolyFormNC;Nano/FlashweightsApache2/MITseparately",
+    "Inputpathdedupfalsepositive;exactprimaryURL/entityclear",
+    "MageVLstatusdown;directimageview+nativeVisionOCRnotMageinference"
+  ],
+  "frozenInputsUnchanged": true,
+  "semanticLiveScore": 0.7308859,
+  "kb": {
+    "checkedAt": "2026-11-01T01:15:50.304827+00:00",
+    "sourceFile": "/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory/project_memt-native-memory-memos-metis-guide.md",
+    "rows": 12,
+    "currentMediaIdPresent": true,
+    "licenseSplitPresent": true,
+    "runtimeLimitsPresent": true,
+    "semanticLiveScorePresent": true
+  }
+}
