@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-11-01T07:01:54.099557+00:00",
+  "passed": true,
+  "checks": {
+    "titles": true,
+    "descriptions": true,
+    "wechat": true,
+    "dates": true,
+    "category": true,
+    "tags": true,
+    "bilingual": true,
+    "copyright": true,
+    "FAQ": true,
+    "questionHeadings": true,
+    "sourcePin": true,
+    "logsPending": true,
+    "integrationVsResults": true,
+    "realTestScope": true,
+    "negativeTransfer": true,
+    "relatedPost": true,
+    "figures": true,
+    "hero": true
+  },
+  "lengths": {
+    "title": 33,
+    "titleEn": 45,
+    "description": 153,
+    "descriptionEn": 151,
+    "wechatTitle": 24,
+    "wechatDigest": 43
+  },
+  "manualReview": [
+    "Bilingual BLUF/FAQ/plain primary URLs/alt texts/related post",
+    "Vendor scores not own benchmark; raw logs pending; demo curves schematic",
+    "Weight training not established; adapter parity and OS isolation separate",
+    "No full suite/paid API/Docker/model training or performance claims",
+    "Apache code not universal dataset/upstream rights; no invented arXiv ID"
+  ]
+}
