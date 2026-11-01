@@ -1,0 +1,15 @@
+{
+  "title": "FlashRSI：Agent自改进如何做可信实验",
+  "author": "Mycelium",
+  "digest": "统一算法、运行环境与评测，只是起点；原始日志、冻结测试和成本约束才决定自改进是否可信。",
+  "mediaId": "prCUE631thH1cmNLi42prGdQ71474aOwNfu063BqalVXwnk-qubvJrUdujzvGCva",
+  "blogUrl": "https://blog.mushroom.cv/blog/flashrsi-agent-self-improvement-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/flashrsi-agent-self-improvement-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/ruc-nlpir/flashrsi",
+    "huggingface.co/datasets/ruc-nlpir",
+    "github.com/ruc-nlpir/flashrsi.git"
+  ],
+  "publishedAt": "2026-11-01T07:23:52.752Z"
+}

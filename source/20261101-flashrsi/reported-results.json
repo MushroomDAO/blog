@@ -1,0 +1,41 @@
+{
+  "provenance": "Official README, not independently reproduced",
+  "sourceCommit": "98bebaf7f6d5f3f6f69ee22d87e02d0d8b89b591",
+  "unit": "percent score; deltas percentage points",
+  "rows": [
+    {
+      "harness": "Claude Code",
+      "method": "Meta-Harness",
+      "task": "SearchQA",
+      "initial": 73.93,
+      "final": 85.07,
+      "delta": 11.14
+    },
+    {
+      "harness": "Mini-Agent",
+      "method": "SkillOpt",
+      "task": "AppWorld",
+      "initial": 65.48,
+      "final": 91.67,
+      "delta": 26.19
+    },
+    {
+      "harness": "Claude Code",
+      "method": "SkillOpt",
+      "task": "HotpotQA to DeepSearchQA",
+      "initial": 66,
+      "final": 58,
+      "delta": -8
+    },
+    {
+      "harness": "Mini-Agent",
+      "method": "GEPA",
+      "task": "HotpotQA to DeepSearchQA",
+      "initial": 52,
+      "final": 34,
+      "delta": -18
+    }
+  ],
+  "rawLogs": "pending per official project page",
+  "demoCurves": "schematic"
+}
