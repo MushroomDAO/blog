@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-01T09:33:17.114Z",
+  "drafts": [
+    {
+      "slug": "hamel-domain-specific-agent-evals-guide",
+      "mediaId": "prCUE631thH1cmNLi42prPpb5JTTg72iac1pQ7XHQrtkImuqxzGvaiV4vxu_s_Zk",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "ad6cd0f636c3a8504e18547128d873ccc8f3dc3b89f24a8da8dcbd94c05ad333",
+      "remoteTextHash": "ad6cd0f636c3a8504e18547128d873ccc8f3dc3b89f24a8da8dcbd94c05ad333",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/hamel-domain-specific-agent-evals-guide/",
+      "localContentHash": "3fe2ad786b35b0a06b5bf4b110f56f78bdf1d0ca7c8681db34798fde69458171",
+      "remoteContentHash": "044bab005fde9062722aa82007b7a1768bca53d9aad4fe2ae490512354a3ee03"
+    }
+  ]
+}

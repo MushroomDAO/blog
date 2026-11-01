@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-01T09:34:15.807936+00:00",
+  "hit": {
+    "article_id": "hamel-domain-specific-agent-evals-guide",
+    "title": "系统读Hamel：把Agent评测变成产品改进的日常工作",
+    "url": "/blog/hamel-domain-specific-agent-evals-guide/",
+    "language": "zh",
+    "excerpt": "系统读Hamel：把Agent评测变成产品改进的日常工作 Hamel Husain的评测文章为什么值得Agent团队系统阅读？本文核对2024年原文及后续错误分析、模型裁判指南，区分代码断言、人工判断和线上实验，并以退款助手为自拟案例，给出轨迹字段、失败分类、裁判校准、工具副作用检查、数据隔离和两周起步方案，帮助中小团队把评测接入产品迭代，而非只追逐总分。 Hamel Husain Agent评测 LLM-as-a-Judge 错误分析 AI产品 怎样系统读Hamel，而不是只收藏这一篇？ 先定义业务结果，再写评分提示词 一条能用于评测的轨迹，至少要留下",
+    "score": 0.70250106
+  },
+  "fullResponseFile": "semantic-initial-query.json"
+}

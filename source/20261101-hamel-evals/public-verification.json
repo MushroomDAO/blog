@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-01T09:31:12.788798+00:00",
+  "articles": [
+    {
+      "slug": "hamel-domain-specific-agent-evals-guide",
+      "url": "https://blog.mushroom.cv/blog/hamel-domain-specific-agent-evals-guide/",
+      "title": "系统读Hamel：把Agent评测变成产品改进的日常工作",
+      "listRank": 2,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/hamel-domain-specific-agent-evals-guide-banner.D1jY3J_3.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 73826
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hamel-domain-specific-agent-evals-guide-banner.D1jY3J_3_Z1sA52W.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 15562
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hamel-domain-specific-agent-evals-guide-fig-01.BwiB9WZa_Z2gjp8n.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 35228
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hamel-domain-specific-agent-evals-guide-fig-02.KDyS0cSx_Z1WyXI.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 38732
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hamel-domain-specific-agent-evals-guide-fig-03.C6onNMJj_jUll2.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 28160
+        }
+      ]
+    }
+  ]
+}
