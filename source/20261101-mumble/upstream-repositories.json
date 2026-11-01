@@ -1,0 +1,37 @@
+[
+  {
+    "repo": "mumble-voip/mumble",
+    "branch": "master",
+    "commit": "1baeccd8b5beb7f0081d03439c5595eab0f61766",
+    "pushedAt": "2026-10-30T12:38:03Z",
+    "license": "NOASSERTION"
+  },
+  {
+    "repo": "mumble-voip/mumble-docker",
+    "branch": "master",
+    "commit": "196dddd096cc3856a169279531f1d836d1101ac9",
+    "pushedAt": "2026-10-30T19:37:08Z",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "repo": "quite/mumla",
+    "branch": "master",
+    "commit": "b352860188f2e0a7c0f2cc6d331c95aa782282cb",
+    "pushedAt": "2026-10-23T06:41:29Z",
+    "license": "GPL-3.0"
+  },
+  {
+    "repo": "mumble-voip/mumble-iphoneos",
+    "branch": "master",
+    "commit": "d390cf28b759bfb40ebf2ff0a40f2700e0f5bcb7",
+    "pushedAt": "2026-09-06T16:32:49Z",
+    "license": "NOASSERTION"
+  },
+  {
+    "repo": "zavitax/mumbleway",
+    "branch": "main",
+    "commit": "326f3cf13b2ce51ef1e4aceb45eb5b7d0e1bc1be",
+    "pushedAt": "2026-10-31T19:29:49Z",
+    "license": "GPL-3.0"
+  }
+]

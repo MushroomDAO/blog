@@ -1,0 +1,59 @@
+{
+  "sourcePins": [
+    {
+      "repo": "mumble-voip/mumble",
+      "branch": "master",
+      "commit": "1baeccd8b5beb7f0081d03439c5595eab0f61766",
+      "pushedAt": "2026-10-30T12:38:03Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "repo": "mumble-voip/mumble-docker",
+      "branch": "master",
+      "commit": "196dddd096cc3856a169279531f1d836d1101ac9",
+      "pushedAt": "2026-10-30T19:37:08Z",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "repo": "quite/mumla",
+      "branch": "master",
+      "commit": "b352860188f2e0a7c0f2cc6d331c95aa782282cb",
+      "pushedAt": "2026-10-23T06:41:29Z",
+      "license": "GPL-3.0"
+    },
+    {
+      "repo": "mumble-voip/mumble-iphoneos",
+      "branch": "master",
+      "commit": "d390cf28b759bfb40ebf2ff0a40f2700e0f5bcb7",
+      "pushedAt": "2026-09-06T16:32:49Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "repo": "zavitax/mumbleway",
+      "branch": "main",
+      "commit": "326f3cf13b2ce51ef1e4aceb45eb5b7d0e1bc1be",
+      "pushedAt": "2026-10-31T19:29:49Z",
+      "license": "GPL-3.0"
+    }
+  ],
+  "checks": {
+    "serverDecryption": "OfficialServer.cpp contains csCrypt->decrypt inbound and csCrypt->encrypt outbound per user;notE2E",
+    "mumblersSourceGap": "No source link on developer website; exact repo-name results not associated with iOS developer;related MumbleWay metadata excluded",
+    "mobileListings": "MumlaPlay+FDroid;MumblersAppStoreUS;MumbleWayprojectwebsite links mobile stores"
+  },
+  "artifactHashes": {
+    "Server.cpp": "1a247f143e4c84aa2bff87d0fee64ff45cc8793ba61268e9ba287acb7d17aae9",
+    "mumble-server.ini": "7eae5132c9ac96b2a7507842755ce3239356567f8dbd76a6d74d1da107842868",
+    "mumble-license": "b4648cb20ff93945b85c82f470050e2a67d2b2f6b2f8103cf72f0fa57a9bcad5",
+    "mumblers.html": "0ce5de6919502d1991249e3ef98832b4b2f776f6feaf2555e1707578f285ab99",
+    "mumblers-site.html": "8ef62bd30cdaa872714b5ff8bfa01788f43564457daec73984ee00ca4fc73c3a"
+  },
+  "sourceURLs": [
+    "https://github.com/mumble-voip/mumble/blob/master/src/murmur/Server.cpp",
+    "https://github.com/mumble-voip/mumble/blob/master/auxiliary_files/mumble-server.ini",
+    "https://apps.apple.com/us/app/mumblers/id6806896342",
+    "https://mumblers-ios.spires-viler5o.chatgpt.site/",
+    "https://f-droid.org/packages/se.lublin.mumla/",
+    "https://play.google.com/store/apps/details?id=se.lublin.mumla"
+  ]
+}
