@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-01T06:56:30.030920+00:00",
+  "repository": "https://github.com/RUC-NLPIR/FlashRSI",
+  "commit": "98bebaf7f6d5f3f6f69ee22d87e02d0d8b89b591",
+  "files": {
+    "README.md": "75af9f74b05faf9f24f93a343d6d00a53da1f49585871304bcc028450504fda4",
+    "LICENSE": "b21e25a4e1e45b450e86ca63cd7ea832cf9a97242db82f0333db84448734914b",
+    "docs/usage.md": "95a3c1640af1c811afd52d5780e4349f6ba1f6698c95e0c0dfb90319103bf76f",
+    "docs/codex.md": "78e14e1f9b96b17a9f4e59e2c578995aa87adc65d39902313952a33c2c63dd1e",
+    "docs/running-experiments.md": "093cd0142f7c96256eb78255bf44721b9c232757f6635e3030e5f2b53b341b74",
+    "flashrsi/core/snapshot.py": "6a671a12c5417924b0f3716f4017d27af85886487710c65cf95f665f7955cab9",
+    "flashrsi/core/algorithm.py": "4a923859ecdbc8f68963b2d199f953a687228234f847dd638f479ca99035f18d",
+    "tests/test_algorithm.py": "229eb6688c1ac66e60ffd1e6587b25a7842e5e4e46fd92d6cbb74aa52f5d39ee",
+    "examples/quickstart.yaml": "b8db466e3e084234e2288bed08046aec2c1784a198659accda19775753f4da3e",
+    "pyproject.toml": "2fd9c5b0b458cbfe347066a3725dc7997a5b70cf9a4a36ac0e3f961b6114de9c"
+  },
+  "hfDataset": "5fe97e32812504aa3ab38337b2d4a611155e04b6",
+  "projectPageRawLogsPending": true,
+  "methods": 13,
+  "publishedStudyMethods": 12,
+  "benchmarks": 30,
+  "realModelRun": false,
+  "allDependenciesInstalled": false
+}
