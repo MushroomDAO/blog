@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-11-01T00:40:06.162824+00:00",
+  "passed": true,
+  "checks": {
+    "titleLimits": true,
+    "descriptions": true,
+    "wechat": true,
+    "dates": true,
+    "category": true,
+    "tags": true,
+    "bilingual": true,
+    "copyright": true,
+    "FAQ": true,
+    "questionHeadings": true,
+    "primarySources": true,
+    "runtimeLimits": true,
+    "sourceGap": true,
+    "privacyBoundary": true,
+    "internalLink": true,
+    "figures": true,
+    "hero": true
+  },
+  "lengths": {
+    "title": 35,
+    "titleEn": 49,
+    "description": 156,
+    "descriptionEn": 155,
+    "wechatTitle": 21,
+    "wechatDigest": 35
+  },
+  "manualReview": [
+    "BilingualBLUF/FAQ,plainexternalURLs,alttexts",
+    "Mumblers sourceunverified distinctfromMumbleWay andlegacyiOS",
+    "Officialregistrytag+platform verified;no runningserver/phonebenchmark",
+    "Two requiredcredentialsandpersistence;no exposedICEadmin",
+    "ExistingAstrometadata/headinganchors used;no schemachanges"
+  ]
+}

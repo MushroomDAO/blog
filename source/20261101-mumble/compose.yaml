@@ -1,0 +1,15 @@
+services:
+  mumble:
+    image: ghcr.io/mumble-voip/mumble-server:v1.5.939
+    restart: unless-stopped
+    ports:
+      - "64738:64738/tcp"
+      - "64738:64738/udp"
+    environment:
+      MUMBLE_CONFIG_SERVER_PASSWORD: "${MUMBLE_JOIN_PASSWORD:?Set MUMBLE_JOIN_PASSWORD in .env}"
+      MUMBLE_SUPERUSER_PASSWORD: "${MUMBLE_ADMIN_PASSWORD:?Set MUMBLE_ADMIN_PASSWORD in .env}"
+      MUMBLE_CONFIG_USERS: "20"
+    volumes:
+      - mumble-data:/data
+volumes:
+  mumble-data:

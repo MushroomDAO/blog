@@ -1,0 +1,89 @@
+{
+  "query": "Mumble手机网络对讲 Mumla Mumblers MumbleWay Docker 两种密码 TCP UDP",
+  "response": {
+    "results": [
+      {
+        "article_id": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota",
+        "title": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军",
+        "url": "/blog/moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota/",
+        "language": "zh",
+        "excerpt": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军 OpenMOSS 开源的 MOSS-Transcribe-Diarize 0.9B（1.5K stars），SOTA 端到端音频理解模型，一个模型同时完成长音频多说话人转写、说话人分离（diarization）、精确时间戳和声学事件标注。架构：Qwen3-0.6B 解码器 + Whisper-Medium 编码器 + 4x 时序合并 MLP 桥接。支持 50+ 语言。输出格式 [时间戳][S01]文本[时间戳]。",
+        "score": 0.5648037
+      },
+      {
+        "article_id": "llm-dock-docker-compose-local-llm-dashboard",
+        "title": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板",
+        "url": "/blog/llm-dock-docker-compose-local-llm-dashboard/",
+        "language": "zh",
+        "excerpt": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板 LLM-Dock 是一个管理本地 LLM 推理服务的 Web 面板：自动扫描 HuggingFace 缓存发现模型，llama.cpp 跑 GGUF、vLLM 跑 safetensors，3300-3400 端口段自动分配，一键起停，自动注册进 Open WebUI，还能在面板里直接跑 llama-bench 并把结果存库对比。前提是 Linux + NVIDIA。 本地推理 Docker llama.cpp vLLM 运维 开源 Open Web",
+        "score": 0.56224746
+      },
+      {
+        "article_id": "gemma-translator-google-offline-voice-raspberry-pi",
+        "title": "Gemma Translator：用树莓派 5 做一台完全离线的双向语音翻译机",
+        "url": "/blog/gemma-translator-google-offline-voice-raspberry-pi/",
+        "language": "zh",
+        "excerpt": "Gemma Translator：用树莓派 5 做一台完全离线的双向语音翻译机 Google Gemma 团队开源的全离线双向语音翻译项目，JavaScript/Python，Apache 2.0。以树莓派 5（8GB）为目标硬件，Gemma 4（gemma4-e2b）通过 LiteRT-LM 本地推理，Moonshine 负责语音识别和 TTS 合成。双通道设计：两个人面对面，各自说母语，实时互译。一键部署为永久 kiosk 服务。源码来自 Google Antigravity 实验。 Gemma 语音翻译 离线AI 树莓派 LiteRT 本地推理 M",
+        "score": 0.56074196
+      },
+      {
+        "article_id": "murmur-radio-companion-ai-radio-voice-host-claude-agent",
+        "title": "Murmur：一个人的 AI 电台——主动播出、有声音、会记得你",
+        "url": "/blog/murmur-radio-companion-ai-radio-voice-host-claude-agent/",
+        "language": "zh",
+        "excerpt": "Murmur：一个人的 AI 电台——主动播出、有声音、会记得你 wine-fall/murmur 开源，TypeScript 实现的 AI 伴侣电台，Claude Agent 做大脑，自主选题播出+音乐穿插，你打字它用人声回应，有持久记忆和个性，仅需 Claude Code 订阅。 AI agent voice companion Claude open source TypeScript radio TTS 一个空缺：主动 + 情感陪伴 + 声音 核心体验：三件事缺一不可 技术架构：单 Node.js 进程 安装与运行 常用参数 主持人性格与记忆：完",
+        "score": 0.551653
+      },
+      {
+        "article_id": "cloudflare-mesh-tailscale-alternative-private-network-docker-k8s",
+        "title": "Cloudflare Mesh：赛博菩萨的 Tailscale 平替，免费 50 节点 + 容器化部署",
+        "url": "/blog/cloudflare-mesh-tailscale-alternative-private-network-docker-k8s/",
+        "language": "zh",
+        "excerpt": "Cloudflare Mesh：赛博菩萨的 Tailscale 平替，免费 50 节点 + 容器化部署 Cloudflare Mesh 是 Cloudflare One 旗下的私有网格网络服务，原名 WARP Connector，一句话定义：CF 版 Tailscale。手机、电脑、服务器、AI 机器人，只要安装 Cloudflare One Client 就能拉进同一个加密局域网，每台设备分配一个 Mesh IP（100.96.0.0/12 CGNAT），通过 Cloudflare 全球网络路由，自带后量子加密。免费额度：50 节点 + 50 用户。2",
+        "score": 0.5501757
+      },
+      {
+        "article_id": "opensquilla-multi-model-routing-guide",
+        "title": "OpenSquilla：用多模型路由挑战顶级大模型，花 1/9 的钱达到同等效果",
+        "url": "/blog/opensquilla-multi-model-routing-guide/",
+        "language": "zh",
+        "excerpt": "OpenSquilla：用多模型路由挑战顶级大模型，花 1/9 的钱达到同等效果 OpenSquilla（5600+ Star，Apache 2.0）是一个 token 高效的微内核 AI Agent，其核心 SquillaRouter 在本地设备上把每轮对话路由到最便宜且能胜任的模型。基准测试显示：多模型路由（$0.69）vs 单独使用 Claude Opus 4.7（$6.23），评分几乎相同，成本降低 9 倍。 OpenSquilla 多模型路由 SquillaRouter AI Agent Token效率 开源 LLM 成本优化 微内核 一个颠覆",
+        "score": 0.5456537
+      },
+      {
+        "article_id": "voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone",
+        "title": "用开源 Voicebox 给 AI Agent 装上嗓子 — MCP 语音层工程实践",
+        "url": "/blog/voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone/",
+        "language": "zh",
+        "excerpt": "用开源 Voicebox 给 AI Agent 装上嗓子 — MCP 语音层工程实践 jamiepine/voicebox，55K stars，MIT，Tauri+Python 桌面应用，内置 MCP server 直连 Claude Code/Cursor/Windsurf。7 款本地 TTS 引擎（Qwen3-TTS、Chatterbox、Kokoro 等）+ Whisper STT + 零样本声音克隆，全程本地推理，完全私有。一行命令让 Agent 开口说话。 voice-AI TTS MCP AI-Agent Voicebox local-AI ",
+        "score": 0.54209614
+      },
+      {
+        "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+        "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+        "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+        "language": "zh",
+        "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+        "score": 0.5408536
+      },
+      {
+        "article_id": "voicebox-local-ai-voice-studio-elevenlabs-alternative",
+        "title": "Voicebox：把 ElevenLabs 和 WisprFlow 装进一个本地运行的开源 App",
+        "url": "/blog/voicebox-local-ai-voice-studio-elevenlabs-alternative/",
+        "language": "zh",
+        "excerpt": "Voicebox：把 ElevenLabs 和 WisprFlow 装进一个本地运行的开源 App jamiepine/voicebox 是一个完全本地运行的 AI 语音工作室，集成 7 种 TTS 引擎（Qwen3-TTS、LuxTTS、Chatterbox、TADA、Kokoro）、Whisper 语音输入、MCP Server 和 Claude Code 集成，支持 Apple Silicon / CUDA / ROCm，MIT 开源。 AI 语音合成 TTS 本地AI 开源 MCP Tauri Whisper 它解决的具体问题 7 种 TTS 引",
+        "score": 0.53854144
+      },
+      {
+        "article_id": "huggingface-speech-to-speech-voice-agent-vad-stt-llm-tts-local",
+        "title": "huggingface/speech-to-speech：一行命令跑起本地语音 Agent 完整管道",
+        "url": "/blog/huggingface-speech-to-speech-voice-agent-vad-stt-llm-tts-local/",
+        "language": "zh",
+        "excerpt": "huggingface/speech-to-speech：一行命令跑起本地语音 Agent 完整管道 huggingface/speech-to-speech，12,080 stars，Apache-2.0，Python。低延迟、完全模块化的语音 Agent 管道：VAD → STT → LLM → TTS，通过 OpenAI Realtime 兼容的 WebSocket API 暴露。每个组件可独立替换，LLM 槽位支持 OpenAI 兼容协议——可以指向云端提供商、HF Inference Providers，或者本地 vLLM/llama.cpp，",
+        "score": 0.5326897
+      }
+    ]
+  },
+  "matched": false,
+  "checkedAt": "2026-11-01T00:42:21.234982+00:00"
+}

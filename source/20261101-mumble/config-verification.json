@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-01T00:37:20.188402+00:00",
+  "passed": true,
+  "checks": {
+    "fixedOfficialImage": true,
+    "tcpAndUdp": true,
+    "persistentNamedVolume": true,
+    "distinctRequiredSecrets": true,
+    "exampleLimit": true,
+    "adminNotPublished": true,
+    "articleMatchesBothLanguages": true,
+    "registryTagAndPlatforms": true
+  },
+  "composeSha256": "b67f9bb3b58e8511a5006c154d118dd7f1b5de402c90cf3644652a2159a9b8b3",
+  "runtimeStarted": false,
+  "limits": [
+    "NoDocker/Podmanlocally;notdockercomposeconfigorstart",
+    "NoTCP/UDPconnectionattempt",
+    "Nophone/Bluetooth/lockscreen/audio/latencytest"
+  ]
+}
