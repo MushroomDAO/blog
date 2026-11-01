@@ -1,0 +1,83 @@
+{
+  "checkedAt": "2026-11-01T10:35:00.274Z",
+  "drafts": [
+    {
+      "slug": "stirling-pdf-local-toolbox-guide",
+      "mediaId": "prCUE631thH1cmNLi42prFx-jxgM29bvT6fM_H_4gOMAC9ek35MvpOiOn9WqVKa3",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "90f6c6c0d3ef97b2ba2fce98a88a642d214f5c65d244bb1f4e93748062ad7a74",
+      "remoteTextHash": "90f6c6c0d3ef97b2ba2fce98a88a642d214f5c65d244bb1f4e93748062ad7a74",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/stirling-pdf-local-toolbox-guide/",
+      "localContentHash": "94ff11a4c62a23cfaeb54e200f4fc335679d335602780ce8ed88e0cae31ffdb8",
+      "remoteContentHash": "9a0c206be640e47a90421dc8332a6529102658aabd3338b51e8a564d2f2a1e26"
+    },
+    {
+      "slug": "elephant-goldfish-spec-review-guide",
+      "mediaId": "prCUE631thH1cmNLi42prGVBlVgaf23Ri9oL3UkUZYuF5_2T4wJ1nSDw8C-KLw9M",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "555df4fdcce43c229f62ba34fe7b781b67f20691b9dbd0122742bdd11b1cdd63",
+      "remoteTextHash": "555df4fdcce43c229f62ba34fe7b781b67f20691b9dbd0122742bdd11b1cdd63",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/elephant-goldfish-spec-review-guide/",
+      "localContentHash": "7a1c7905128d1e33c1c530a48bad7ee97c4cf81994ce274b956807c278437388",
+      "remoteContentHash": "9277d521176b35c3f43a8005561a29b7922fad5d8150738aaff7519fda902e1c"
+    },
+    {
+      "slug": "gvs5h-memdoor-small-model-coding-audit",
+      "mediaId": "prCUE631thH1cmNLi42prBDw86_aeO6XboLDR987Ay3A9WTz1oBojMALfzwSXwIX",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "5e2de9f3b9f7d3136323e5c9b8f81031dfdc22b6e5b9010dbb65997da33d987c",
+      "remoteTextHash": "5e2de9f3b9f7d3136323e5c9b8f81031dfdc22b6e5b9010dbb65997da33d987c",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/gvs5h-memdoor-small-model-coding-audit/",
+      "localContentHash": "2e64897adc29b2d5d8838c719ca6715ee72a480fba073832ff26c7aac6b48fef",
+      "remoteContentHash": "0e274bca235e1c7eb4f796d2b295e32e75cf6e82a37b4c3106e44746b25ba958"
+    }
+  ]
+}
