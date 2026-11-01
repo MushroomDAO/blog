@@ -1,0 +1,87 @@
+{
+  "query": "TokenEconomizer 微技能 默认关闭 工具裁剪 循环提醒",
+  "result": {
+    "results": [
+      {
+        "article_id": "tokeneconomizer-coding-agent-cost-guide",
+        "title": "TokenEconomizer：编码Agent省费两成，安装前要看哪些边界？",
+        "url": "/blog/tokeneconomizer-coding-agent-cost-guide/",
+        "language": "zh",
+        "excerpt": "TokenEconomizer：编码Agent省费两成，安装前要看哪些边界？ TokenEconomizer通过跨会话经验、工具裁剪和循环提醒，减少编码Agent在同一仓库中的重复消耗。本文核对微软与伯克利团队的官方仓库、论文和插件实现，解释18.4%至30.9%成本下降的评测口径、各客户端差异、默认关闭的微技能、本地状态与外部模型调用边界，并给出适合真实项目的安装、回滚和成本验收方法。 TokenEconomizer Coding Agent 成本优化 Claude Code 开源插件 TokenEconomizer到底优化什么？ 三个机制如何分工？ ",
+        "score": 0.6218671
+      },
+      {
+        "article_id": "tokentracker-local-first-token-cost-accounting-dedup",
+        "title": "TokenTracker：省 token 之前，先确认你手上的数字没多算 1.6 到 3.7 倍",
+        "url": "/blog/tokentracker-local-first-token-cost-accounting-dedup/",
+        "language": "zh",
+        "excerpt": "TokenTracker：省 token 之前，先确认你手上的数字没多算 1.6 到 3.7 倍 本地优先的 AI 编程工具 token 与成本统计，覆盖 36 个工具，1522 stars，MIT。真正的技术点在去重：基于 reqId 的去重（ccusage 那一类）对不返回 request ID 的 provider —— DeepSeek、Kimi、MiniMax、Claude 子 agent —— 会超算 1.6 到 3.7 倍；TokenTracker 改用复合键，总数能和各家账单对上。36 个集成里绝大多数是 passive reader，只",
+        "score": 0.57326347
+      },
+      {
+        "article_id": "tare-lossless-context-compression-cache-correct-output-aware",
+        "title": "tare：压缩输入而不是改输出的省 token 方案，无损为默认，还专门绕开前缀缓存",
+        "url": "/blog/tare-lossless-context-compression-cache-correct-output-aware/",
+        "language": "zh",
+        "excerpt": "tare：压缩输入而不是改输出的省 token 方案，无损为默认，还专门绕开前缀缓存 Rust 写的 LLM 上下文压缩工具，MIT，proxy / CLI / MCP / 库四种形态。三条别家没有的约束：无损为默认（有损手段必须显式开启）、cache-correct（识别前缀缓存断点，只压动态后缀，不让一个改动的字节作废 10 倍缓存折扣）、output-aware（压过头模型会用更啰嗦的输出补偿，它监测输出 token 尖峰并自动降低压缩力度）。实测 43.8–73.3%，语料和复现脚本都提交在仓库里。9 个 crates、228 个测试。 上下文压",
+        "score": 0.5671755
+      },
+      {
+        "article_id": "pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring",
+        "title": "Pulse：一排光环贴着屏幕边缘，告诉你 Claude Code 还剩多少",
+        "url": "/blog/pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring/",
+        "language": "zh",
+        "excerpt": "Pulse：一排光环贴着屏幕边缘，告诉你 Claude Code 还剩多少 qunqin24/Pulse 开源，macOS 浮动监控工具，三个彩环实时显示 Claude Code / Codex / Antigravity 用量，贴边停靠收缩为6pt细条，从提供商账户直读真实限额，自适应刷新，无后台零上传，Apache 2.0。 macOS Claude Code Codex AI tools open source Swift usage monitor productivity menu bar 那个永恒的问题 一排光环，贴着屏幕边缘 真实的限额，不",
+        "score": 0.52851975
+      },
+      {
+        "article_id": "gitlab-mcp-server-92-tools-27000-token-context-tax",
+        "title": "92 个 MCP 工具吃掉 27000 tokens：一个 0 star 项目量出了 MCP 的上下文税",
+        "url": "/blog/gitlab-mcp-server-92-tools-27000-token-context-tax/",
+        "language": "zh",
+        "excerpt": "92 个 MCP 工具吃掉 27000 tokens：一个 0 star 项目量出了 MCP 的上下文税 penaivanalejandro/gitlab-mcp-server 是个 0 star 的本地 MCP，但它的 README 干了一件几乎没人做的事：把 92 个工具定义的上下文开销逐组量化——全开 27340 tokens，只开 issues 组 3884 tokens，省 86%。平均每个工具定义约 297 tokens，你还没打字就已经花掉了。附 GITLAB_TOOL_GROUPS 分组加载、GITLAB_READ_ONLY 只读模式、以",
+        "score": 0.52074593
+      },
+      {
+        "article_id": "hermes-skill-factory-auto-skill-generator",
+        "title": "Hermes Agent 的「自动技能工厂」：让 AI 越用越聪明的元技能插件",
+        "url": "/blog/hermes-skill-factory-auto-skill-generator/",
+        "language": "zh",
+        "excerpt": "Hermes Agent 的「自动技能工厂」：让 AI 越用越聪明的元技能插件 hermes-skill-factory 是为 Hermes Agent 打造的元技能插件：被动观察你的工作流，自动生成可复用的 SKILL.md 和 plugin.py，让 AI 从「一次性工具」进化为「越用越懂你」的专属助手。 Hermes Agent Skill Factory AI Agent 元技能 自动化 Nous Research 开源 工作流 项目背景：AI 的\"记忆消散\"问题 核心功能与机制 总结",
+        "score": 0.5202182
+      },
+      {
+        "article_id": "echo-slides-skill-extract-slides-from-video-claude-code-skill",
+        "title": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片",
+        "url": "/blog/echo-slides-skill-extract-slides-from-video-claude-code-skill/",
+        "language": "zh",
+        "excerpt": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片 xiangzhouEcho/Echo-Slides-Skill 开源 Claude Code Skill，npx skills add 一行装到全局，Claude Code/Codex/Cursor/OpenCode 通用，双签名去重（dHash+RGB网格），实测20分钟演讲39页零重复。 Claude Code skill video slides open source AI tools productivity agent 这个痛点存在了很久 核心洞察",
+        "score": 0.50967765
+      },
+      {
+        "article_id": "humanizer-zh-chinese-writing-skill-fact-drift-test-labeling",
+        "title": "Humanizer-zh 拆解：中文「去 AI 味」Skill 今天整体重写，我用同一段文字跑了 12 次对照",
+        "url": "/blog/humanizer-zh-chinese-writing-skill-fact-drift-test-labeling/",
+        "language": "zh",
+        "excerpt": "Humanizer-zh 拆解：中文「去 AI 味」Skill 今天整体重写，我用同一段文字跑了 12 次对照 Humanizer-zh（18,101 star，MIT）是 blader/humanizer 的中文移植，8 个月无维护提交后于 2026-09-23 整体重写：24 条规则改为 31 个检查点，核心从「改到像人」转为「不改事实」。本机 4×3 次对照：新版 4/4 保住「可能」和第三人称，旧版 0/4 保住「可能」、4/4 把「作者」改成「我」。它不保证过检测，也不改变 AI 内容标识义务。 Humanizer-zh Claude Code",
+        "score": 0.5073789
+      },
+      {
+        "article_id": "code-review-graph-tirth8205-blast-radius-token-reduction",
+        "title": "code-review-graph：给 AI 编程助手建一张本地代码关系图，中位数减少 65 倍 token 用量",
+        "url": "/blog/code-review-graph-tirth8205-blast-radius-token-reduction/",
+        "language": "zh",
+        "excerpt": "code-review-graph：给 AI 编程助手建一张本地代码关系图，中位数减少 65 倍 token 用量 tirth8205 开源的本地代码智能图工具，29.5k stars，Python，MIT License。用 Tree-sitter 把代码库解析成函数/类/调用/测试的关系图，存储在 SQLite；代码审查时只把受影响的文件和调用链（Blast Radius）交给 AI，而不是整个代码库。六个真实仓库测试：中位数减少 65 倍 token 用量，最大 376 倍（fastapi）。支持 15+ AI 编程平台，30+ 编程语言，增量更新",
+        "score": 0.5043485
+      },
+      {
+        "article_id": "vitalik-paranoid-ai-zkapi-tor",
+        "title": "Vitalik 的 AI 偏执模式：zkAPI、Tor 与本地改写的隐私边界",
+        "url": "/blog/vitalik-paranoid-ai-zkapi-tor/",
+        "language": "zh",
+        "excerpt": "Vitalik 的 AI 偏执模式：zkAPI、Tor 与本地改写的隐私边界 追溯 Vitalik 的 AI 偏执模式原帖和 zkAPI 开发分支，拆解零知识支付、Tor 对话隔离、随机掩护流量、本地提示词改写与 Agent 沙箱。本文以固定源码审查和本地回归为依据，说明模型仍能看到什么、主动时序攻击为何难防，以及部署清单与生产证明密钥缺失时如何避免把实验误当成可直接使用的匿名产品。 Vitalik Buterin zkAPI Tor AI隐私 本地LLM Vitalik 到底开源了什么？ 为什么只开 Tor 或只用零知识支付还不够？ “每段对话一条 T",
+        "score": 0.49944922
+      }
+    ]
+  }
+}
