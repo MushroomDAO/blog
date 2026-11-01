@@ -1,0 +1,127 @@
+ss...................................................................... [ 16%]
+........................................................................ [ 33%]
+........................................................................ [ 50%]
+........................................................................ [ 66%]
+.........................s.............s................................ [ 83%]
+.................ss........F........FF.F...............................  [100%]
+=================================== FAILURES ===================================
+___________ test_the_launcher_runs_the_dispatcher_from_the_checkout ____________
+
+tmp_path = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-2/test_the_launcher_runs_the_dis0')
+
+    def test_the_launcher_runs_the_dispatcher_from_the_checkout(tmp_path):
+        work = tmp_path / "work"
+        work.mkdir()
+        code, out, _ = _run_hook(os.path.join(PLUGIN, "scripts", "te-hook"),
+                                 {"hook_event_name": "SessionStart", "session_id": "s",
+                                  "cwd": str(work), "source": "startup"}, _hook_env(tmp_path))
+        assert code == 0 and json.loads(out) == {}
+>       assert os.path.isdir(tmp_path / "home" / "repos")      # it ran, and recorded the session
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: assert False
+E        +  where False = <function isdir at 0x104520cc0>(((PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-2/test_the_launcher_runs_the_dis0') / 'home') / 'repos'))
+E        +    where <function isdir at 0x104520cc0> = <module 'posixpath' (frozen)>.isdir
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+tests/test_plugin_package.py:149: AssertionError
+_____ test_the_plugin_carries_the_core_as_symlinks_an_install_copy_follows _____
+
+tmp_path = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-2/test_the_plugin_carries_the_co0')
+
+    @pytest.mark.skipif(not os.path.islink(os.path.join(PLUGIN, "lib", "tokeneconomizer")),
+                        reason="checkout without symlinks (Windows): see the known_marketplaces test")
+    def test_the_plugin_carries_the_core_as_symlinks_an_install_copy_follows(tmp_path):
+        """Claude Code installs a COPY of plugin/ into its cache, even from a local checkout, so the
+        core must be reachable from inside plugin/."""
+        import shutil
+        assert os.listdir(os.path.join(PLUGIN, "lib")) == ["tokeneconomizer"]
+        link = os.path.join(PLUGIN, "lib", "tokeneconomizer")
+        assert os.path.islink(link)
+        # Windows reports the target with its own separator
+        assert os.readlink(link).replace(os.sep, "/") == "../../tokeneconomizer"
+        assert os.path.isfile(os.path.join(link, "plugin", "hook.py"))
+        # What an install does: copy the directory, following links. The copy runs on its own.
+        copy = str(tmp_path / "cache" / "tokeneconomizer" / "0.1.0")
+        shutil.copytree(PLUGIN, copy, symlinks=False,
+                        ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
+        out = subprocess.run(SH + [os.path.join(copy, "scripts", "te"), "doctor"], capture_output=True,
+                             text=True, env=dict(os.environ, TOKENECONOMIZER_HOME=str(tmp_path / "h")),
+                             timeout=60)
+>       assert out.returncode == 0 and "python" in out.stdout, out.stderr[-500:]
+E       AssertionError: TokenEconomizer needs Python >= 3.10 (this is 3.9.6); set TE_PYTHON
+E
+E       assert (1 == 0)
+E        +  where 1 = CompletedProcess(args=['/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-2/test_the_plu...e', 'doctor'], returncode=1, stdout='', stderr='TokenEconomizer needs Python >= 3.10 (this is 3.9.6); set TE_PYTHON\n').returncode
+
+tests/test_plugin_package.py:379: AssertionError
+___ test_a_codex_install_copy_finds_the_core_in_the_marketplace_it_came_from ___
+
+tmp_path = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-2/test_a_codex_install_copy_find0')
+
+    def test_a_codex_install_copy_finds_the_core_in_the_marketplace_it_came_from(tmp_path):
+        """Codex installs a COPY of plugin/ that drops the `lib` symlink (0.153.1), so the copy
+        finds the core through the marketplace's `source` in Codex's config.toml."""
+        import shutil
+        home = tmp_path / "codex"
+        copy = home / "plugins" / "cache" / "tokeneconomizer" / "tokeneconomizer" / "0.1.0"
+        shutil.copytree(PLUGIN, str(copy), symlinks=True,
+                        ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "lib"))
+        (copy / "lib").mkdir()
+
+        def te(source, literal=False):
+            # As Codex writes it: a TOML basic string (a JSON string is one), or on Windows, for a
+            # path with backslashes, a literal one (0.163.0).
+            value = f"'{source}'" if literal else json.dumps(source, ensure_ascii=False)
+            (home / "config.toml").write_text(
+                'check_for_update_on_startup = false\n\n[marketplaces.tokeneconomizer]\n'
+                f'source_type = "local"\nsource = {value}\n')
+            return subprocess.run(SH + [str(copy / "scripts" / "te"), "doctor"], capture_output=True,
+                                  text=True, timeout=60, cwd=str(tmp_path),
+                                  env=dict(os.environ, TOKENECONOMIZER_HOME=str(tmp_path / "h"),
+                                           TE_CORE_PATH="", PYTHONPATH=""))
+        out = te(REPO)
+>       assert out.returncode == 0 and "python" in out.stdout, out.stderr[-500:]
+E       AssertionError: TokenEconomizer needs Python >= 3.10 (this is 3.9.6); set TE_PYTHON
+E
+E       assert (1 == 0)
+E        +  where 1 = CompletedProcess(args=['/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-2/test_a_codex...e', 'doctor'], returncode=1, stdout='', stderr='TokenEconomizer needs Python >= 3.10 (this is 3.9.6); set TE_PYTHON\n').returncode
+
+tests/test_plugin_package.py:404: AssertionError
+_ test_a_claude_install_copy_without_symlinks_finds_the_core_in_its_marketplace _
+
+tmp_path = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-2/test_a_claude_install_copy_wit0')
+
+    def test_a_claude_install_copy_without_symlinks_finds_the_core_in_its_marketplace(tmp_path):
+        """On a checkout without symlinks (Windows), `lib/tokeneconomizer` is a file holding the
+        link's target, and Claude Code's install copy (`~/.claude/plugins/cache/...`) carries that
+        file, not the package. The copy finds the core through the marketplace Claude Code recorded
+        in `plugins/known_marketplaces.json`."""
+        home = tmp_path / "claude-home"
+        copy = home / "plugins" / "cache" / "tokeneconomizer" / "tokeneconomizer" / "0.1.0"
+        shutil.copytree(PLUGIN, str(copy), symlinks=True,
+                        ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "lib"))
+        (copy / "lib").mkdir()
+        (copy / "lib" / "tokeneconomizer").write_text("../../tokeneconomizer")
+
+        def te(path):
+            (home / "plugins" / "known_marketplaces.json").write_text(json.dumps(
+                {"tokeneconomizer": {"source": {"source": "directory", "path": path},
+                                     "installLocation": path}}))
+            return subprocess.run(SH + [str(copy / "scripts" / "te"), "doctor"], capture_output=True,
+                                  text=True, timeout=60, cwd=str(tmp_path),
+                                  env=dict(os.environ, TOKENECONOMIZER_HOME=str(tmp_path / "h"),
+                                           TE_CORE_PATH="", PYTHONPATH=""))
+        out = te(REPO)
+>       assert out.returncode == 0 and "python" in out.stdout, out.stderr[-500:]
+E       AssertionError: TokenEconomizer needs Python >= 3.10 (this is 3.9.6); set TE_PYTHON
+E
+E       assert (1 == 0)
+E        +  where 1 = CompletedProcess(args=['/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-2/test_a_claud...e', 'doctor'], returncode=1, stdout='', stderr='TokenEconomizer needs Python >= 3.10 (this is 3.9.6); set TE_PYTHON\n').returncode
+
+tests/test_plugin_package.py:468: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_plugin_package.py::test_the_launcher_runs_the_dispatcher_from_the_checkout
+FAILED tests/test_plugin_package.py::test_the_plugin_carries_the_core_as_symlinks_an_install_copy_follows
+FAILED tests/test_plugin_package.py::test_a_codex_install_copy_finds_the_core_in_the_marketplace_it_came_from
+FAILED tests/test_plugin_package.py::test_a_claude_install_copy_without_symlinks_finds_the_core_in_its_marketplace
+4 failed, 421 passed, 6 skipped in 164.12s (0:02:44)

@@ -1,0 +1,10 @@
+{
+  "repo": "https://github.com/microsoft/TokenEconomizer",
+  "stars": 3448,
+  "commit": "c53a4a6dcdebaeb9df6fcaa5c7026f0401cd8f23",
+  "license": "Apache-2.0",
+  "checkedAt": "2026-11-01",
+  "fetchBackend": "native git and official web; agent-reach unavailable",
+  "normalization": "Removed trailing .git and malformed Chinese suffix from bot-extracted URLs",
+  "dedup": "raw KB only; no article/local receipt/remote draft; published API 48001"
+}
