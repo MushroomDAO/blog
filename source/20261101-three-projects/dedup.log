@@ -1,0 +1,34 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6ae70aa1-4707e871-28ced7a2）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 941 篇 + 公众号草稿箱 9 条 + 本地发布记录 923 条 + MemPalace 3684 抽屉
+
+── 查：https://github.com/Stirling-Tools/Stirling-PDF
+   ✅ 四本账都没查到
+
+── 查：Stirling-PDF
+   ❌ [知识库] # 。  **Summary**: 。   Stirling-PDF就是冲着这点来的，GitHub上现在约9.5万星，最
+      正文出现实体名「stirling-pdf」
+
+── 查：https://github.com/google/elephant-goldfish-model
+   ✅ 四本账都没查到
+
+── 查：Elephant-Goldfish
+   ❌ [知识库] # 。  **Summary**: 。   Stirling-PDF就是冲着这点来的，GitHub上现在约9.5万星，最
+      正文出现实体名「elephant-goldfish」
+
+── 查：https://github.com/guregodevo/memdoor
+   ✅ 四本账都没查到
+
+── 查：Memdoor
+   ❌ [知识库] # 。  **Summary**: 。   Stirling-PDF就是冲着这点来的，GitHub上现在约9.5万星，最
+      正文出现实体名「memdoor」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

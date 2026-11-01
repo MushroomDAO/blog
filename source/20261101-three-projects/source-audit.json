@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-01",
+  "commits": {
+    "Stirling-Tools/Stirling-PDF": "65fbfd10cad4d47511bbfe98cee5e4a750aa33ac",
+    "google/elephant-goldfish-model": "403d8881d62022490637d740657b33f01e321ea8",
+    "guregodevo/memdoor": "597c2cf641aec10e7c4cbf0f28be5236ef3cc91d",
+    "slee-persis/GVS5H": "b4cc2f734a28fdab6c37af48e612c4d9e40a7a20"
+  },
+  "hashes": {
+    "GVS5H-README.md": "16eccc989d7efe2b087bd94f7fae25242a588b74e63877c950345d22a541694c",
+    "elephant-goldfish-model-LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "memdoor-examples-workflows-team-solve-NOTES.md": "a1e14aecfab29a6aa9050555c6193630ec44cabb63212939e2d3c0bca0f42b05",
+    "memdoor-examples-workflows-team-solve-README.md": "1ec2fca30cb69314c9072a4c2175f2fd82b23ea53cad5d5fea940d43d59c50e9",
+    "elephant-goldfish-model-README.md": "085d23cb5a89aa92946396a10241c24b2f53f2b97e7fd26b55853e879c667fd2",
+    "memdoor-LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "Stirling-PDF-README.md": "0539da44759af7d1c3da8d76b00b892d9ebda4c82f9e161f01658f188a66ed86",
+    "elephant-goldfish-model-docs-getting_started.md": "e45d171e4bc306fcb87a426f2608a9ed46a3ca329d67fd5c11a0d944865a57c7",
+    "Stirling-PDF-LICENSE": "e37c7ec776906aebe25e48288da4305afd45dee92f0231ddec68af59cbd7736b",
+    "memdoor-README.md": "20aef11a087c0e22fad07f4959417c31709cc86a4abdf5f668fa126acb3279aa"
+  },
+  "localhost": "connection refused; not a source site",
+  "agentReach": "not installed; primary raw repository fallback",
+  "independentRuntimeBenchmarks": false,
+  "sourceImages": "official screenshot and benchmark downloaded, text-dominated so conceptual covers used"
+}

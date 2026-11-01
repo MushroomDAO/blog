@@ -1,0 +1,32 @@
+=== [banner-creator] stirling-pdf-local-toolbox-guide → src/assets/images/stirling-pdf-local-toolbox-guide-banner.jpg (seed=8124, 1200x630, <98KB) ===
+
+  0%|          | 0/16 [00:00<?, ?it/s]
+  6%|▋         | 1/16 [00:13<03:23, 13.57s/it]
+ 12%|█▎        | 2/16 [00:20<02:14,  9.59s/it]
+ 19%|█▉        | 3/16 [00:27<01:48,  8.36s/it]
+ 25%|██▌       | 4/16 [00:34<01:32,  7.73s/it]
+ 31%|███▏      | 5/16 [00:40<01:21,  7.44s/it]
+ 38%|███▊      | 6/16 [00:47<01:12,  7.23s/it]
+ 44%|████▍     | 7/16 [00:54<01:04,  7.14s/it]
+ 50%|█████     | 8/16 [01:01<00:56,  7.04s/it]
+ 56%|█████▋    | 9/16 [01:08<00:48,  6.99s/it]
+ 62%|██████▎   | 10/16 [01:15<00:41,  6.97s/it]
+ 69%|██████▉   | 11/16 [01:22<00:34,  6.94s/it]
+ 75%|███████▌  | 12/16 [01:29<00:27,  6.89s/it]
+ 81%|████████▏ | 13/16 [01:36<00:20,  6.92s/it]
+ 88%|████████▊ | 14/16 [01:42<00:13,  6.85s/it]
+ 94%|█████████▍| 15/16 [01:49<00:06,  6.86s/it]
+100%|██████████| 16/16 [01:56<00:00,  6.83s/it]
+100%|██████████| 16/16 [01:56<00:00,  7.27s/it]
+Peak MLX memory: 7.96 GB
+=== [banner-creator] done: src/assets/images/stirling-pdf-local-toolbox-guide-banner.jpg (1200x630, 94398B) ===
+=== [verify-banner] src/assets/images/stirling-pdf-local-toolbox-guide-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=8124 steps=16
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 94398B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/stirling-pdf-local-toolbox-guide-banner.jpg ===
+PATH: src/assets/images/stirling-pdf-local-toolbox-guide-banner.jpg
