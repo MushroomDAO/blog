@@ -1,472 +1,179 @@
 {
-  "generatedAt": "2026-10-29T14:00:00Z",
+  "generatedAt": "2026-11-01T14:00:07Z",
   "period": {
-    "start": "2026-09-29",
-    "end": "2026-10-29"
+    "start": "2026-10-02",
+    "end": "2026-11-01"
   },
   "totals": {
-    "pageviews": 21300,
-    "visits": 20280,
+    "pageviews": 30000,
+    "visits": 30000,
     "bots": 20
   },
   "last7": {
-    "pv": 3900,
-    "visits": 3820
+    "pv": 30000,
+    "visits": 30000
   },
   "prior7": {
-    "pv": 4790,
-    "visits": 4600
+    "pv": 0,
+    "visits": 0
   },
   "daily": [
     {
-      "date": "09-29",
-      "pv": 230,
-      "visits": 190
-    },
-    {
-      "date": "09-30",
-      "pv": 530,
-      "visits": 530
-    },
-    {
-      "date": "10-01",
-      "pv": 930,
-      "visits": 800
-    },
-    {
-      "date": "10-02",
-      "pv": 860,
-      "visits": 800
-    },
-    {
-      "date": "10-03",
-      "pv": 550,
-      "visits": 490
-    },
-    {
-      "date": "10-04",
-      "pv": 1110,
-      "visits": 1000
-    },
-    {
       "date": "10-05",
-      "pv": 570,
-      "visits": 560
-    },
-    {
-      "date": "10-06",
-      "pv": 780,
-      "visits": 670
-    },
-    {
-      "date": "10-07",
-      "pv": 700,
-      "visits": 650
-    },
-    {
-      "date": "10-08",
-      "pv": 1090,
-      "visits": 1040
+      "pv": 10000,
+      "visits": 10000
     },
     {
       "date": "10-09",
-      "pv": 880,
-      "visits": 860
-    },
-    {
-      "date": "10-10",
-      "pv": 780,
-      "visits": 770
-    },
-    {
-      "date": "10-11",
-      "pv": 690,
-      "visits": 670
-    },
-    {
-      "date": "10-12",
-      "pv": 810,
-      "visits": 770
-    },
-    {
-      "date": "10-13",
-      "pv": 760,
-      "visits": 750
-    },
-    {
-      "date": "10-14",
-      "pv": 730,
-      "visits": 720
-    },
-    {
-      "date": "10-15",
-      "pv": 610,
-      "visits": 590
-    },
-    {
-      "date": "10-16",
-      "pv": 530,
-      "visits": 490
-    },
-    {
-      "date": "10-17",
-      "pv": 650,
-      "visits": 610
-    },
-    {
-      "date": "10-18",
-      "pv": 420,
-      "visits": 410
+      "pv": 10000,
+      "visits": 10000
     },
     {
       "date": "10-19",
-      "pv": 810,
-      "visits": 770
-    },
-    {
-      "date": "10-20",
-      "pv": 710,
-      "visits": 690
-    },
-    {
-      "date": "10-21",
-      "pv": 930,
-      "visits": 920
-    },
-    {
-      "date": "10-22",
-      "pv": 740,
-      "visits": 710
-    },
-    {
-      "date": "10-23",
-      "pv": 900,
-      "visits": 820
-    },
-    {
-      "date": "10-24",
-      "pv": 570,
-      "visits": 570
-    },
-    {
-      "date": "10-25",
-      "pv": 420,
-      "visits": 420
-    },
-    {
-      "date": "10-26",
-      "pv": 550,
-      "visits": 550
-    },
-    {
-      "date": "10-27",
-      "pv": 440,
-      "visits": 440
-    },
-    {
-      "date": "10-28",
-      "pv": 550,
-      "visits": 550
-    },
-    {
-      "date": "10-29",
-      "pv": 470,
-      "visits": 470
+      "pv": 10000,
+      "visits": 10000
     }
   ],
-  "countries": [
-    {
-      "code": "SG",
-      "flag": "🇸🇬",
-      "name": "新加坡",
-      "nameEn": "Singapore",
-      "pv": 10600,
-      "visits": 10590
-    },
-    {
-      "code": "CN",
-      "flag": "🇨🇳",
-      "name": "中国",
-      "nameEn": "China",
-      "pv": 4580,
-      "visits": 4100
-    },
-    {
-      "code": "US",
-      "flag": "🇺🇸",
-      "name": "美国",
-      "nameEn": "United States",
-      "pv": 2060,
-      "visits": 1910
-    },
-    {
-      "code": "HK",
-      "flag": "🇭🇰",
-      "name": "香港",
-      "nameEn": "Hong Kong",
-      "pv": 690,
-      "visits": 660
-    },
-    {
-      "code": "JP",
-      "flag": "🇯🇵",
-      "name": "日本",
-      "nameEn": "Japan",
-      "pv": 490,
-      "visits": 450
-    },
-    {
-      "code": "TW",
-      "flag": "🇹🇼",
-      "name": "台湾",
-      "nameEn": "Taiwan",
-      "pv": 360,
-      "visits": 350
-    },
-    {
-      "code": "NL",
-      "flag": "🇳🇱",
-      "name": "荷兰",
-      "nameEn": "Netherlands",
-      "pv": 310,
-      "visits": 310
-    },
-    {
-      "code": "CO",
-      "flag": "🇨🇴",
-      "name": "CO",
-      "nameEn": "CO",
-      "pv": 220,
-      "visits": 220
-    },
-    {
-      "code": "DE",
-      "flag": "🇩🇪",
-      "name": "德国",
-      "nameEn": "Germany",
-      "pv": 190,
-      "visits": 110
-    },
-    {
-      "code": "TH",
-      "flag": "🇹🇭",
-      "name": "泰国",
-      "nameEn": "Thailand",
-      "pv": 180,
-      "visits": 120
-    },
-    {
-      "code": "ID",
-      "flag": "🇮🇩",
-      "name": "印度尼西亚",
-      "nameEn": "Indonesia",
-      "pv": 170,
-      "visits": 170
-    },
-    {
-      "code": "AE",
-      "flag": "🇦🇪",
-      "name": "阿联酋",
-      "nameEn": "United Arab Emirates",
-      "pv": 160,
-      "visits": 160
-    }
-  ],
-  "countryTotal": 20940,
+  "countries": [],
+  "countryTotal": 0,
   "referers": {
-    "direct": 15960,
-    "search": 4170,
-    "ecosystem": 1020,
+    "direct": 15440,
+    "search": 4180,
+    "ecosystem": 850,
     "ai": 0,
-    "other": 150
+    "other": 140
   },
   "pages": [
+    {
+      "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
+      "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
+      "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
+      "pv": 1650,
+      "visits": 1430
+    },
     {
       "title": "首页",
       "titleEn": "Home",
       "path": "/",
-      "pv": 2000,
-      "visits": 1000
-    },
-    {
-      "title": "Murmur：一个人的 AI 电台——主动播出、有声音、会记得你",
-      "titleEn": "Murmur: A Whole Radio Station for an Audience of One — Proactive AI Companion Radio with a Human Voice",
-      "path": "/blog/murmur-radio-companion-ai-radio-voice-host-claude-agent/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "World Monitor：一个人几天做出 Palantir 战情室的开源平替，78K stars",
-      "titleEn": "World Monitor: One Person Built an Open-Source Palantir War Room in Days, 78K Stars",
-      "path": "/blog/worldmonitor-elie-habib-palantir-gotham-open-source-alternative-3d-globe/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "AgentSight：用 eBPF 从系统边界看 AI Agent 到底干了什么，不用装 SDK 也不用挂代理",
-      "titleEn": "AgentSight: eBPF Boundary Tracing for AI Agents — No SDK, No Proxy",
-      "path": "/blog/agentsight-ebpf-boundary-tracing-ai-agent-observability/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "M5Stack StopWatch 变成 Codex 物理控制器：BLE 麦克风 + 额度仪表盘 + 四向 Agent 触摸，vibe coding 专属硬件",
-      "titleEn": "codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos",
-      "path": "/blog/codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "光岛：一触即发的桌面工作岛，普通人和开发者都能用",
-      "titleEn": "Luma Island: One Touch, Work Starts — A Desktop Work Island for Everyone",
-      "path": "/blog/luma-island-desktop-work-island/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "'CMU 11-768 AI Agents：OpenHands 作者亲授，从零搭 Harness、建评测、用 RL 训 Agent，视频讲义全开放'",
-      "titleEn": "CMU 11-768 AI Agents: OpenHands Creator Teaches — Build a Harness From Scratch, Evaluate, Train With RL, All Materials Open",
-      "path": "/blog/cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course/",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 570,
+      "visits": 470
     },
     {
       "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
       "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
       "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 240,
+      "visits": 240
     },
     {
-      "title": "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27%",
-      "titleEn": "TMax: AllenAI's Strongest Open RL Recipe for Terminal Agents — 9B Hits 27% on Terminal-Bench 2.0",
-      "path": "/blog/tmax-allenai-open-rl-terminal-agent-training-recipe/",
-      "pv": 1000,
-      "visits": 1000
+      "title": "MacNativeGames：把《王国之泪》打包成Mac应用的技术拆解",
+      "titleEn": "MacNativeGames: Tears of the Kingdom on Apple Silicon",
+      "path": "/blog/macnativegames-totk-native-mac/",
+      "pv": 230,
+      "visits": 230
     },
     {
-      "title": "claude-mem：95K 星的 Agent 跨会话记忆插件，工程拆解",
-      "titleEn": "claude-mem: Engineering Teardown of the 95K-Star Agent Persistent Memory Plugin",
-      "path": "/blog/claude-mem-persistent-context-agent-session-memory-typescript/",
-      "pv": 1000,
-      "visits": 1000
+      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
+      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
+      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
+      "pv": 230,
+      "visits": 230
     },
     {
-      "title": "Omarchy：DHH 造的 AI 原生 Linux，9 个 Agent 开箱即用，Omacom 基金会 800 万美元背书",
-      "titleEn": "omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch",
-      "path": "/blog/omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
-      "titleEn": "M1 Max 64GB Local AI Complete Guide: Qwen3 Model Selection, Memory Management & Multi-Model Scheduling",
-      "path": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
-      "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
-      "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "title": "Superset：一个工作区跑 100 个 Agent，Claude Code、Codex、OpenCode 同时干活——普通人上手指南",
-      "titleEn": "superset-parallel-coding-agent-workspace-claude-codex-opencode",
-      "path": "/blog/superset-parallel-coding-agent-workspace-claude-codex-opencode/",
-      "pv": 1000,
-      "visits": 1000
+      "title": "MiniMax H3 本地视频生成完整工程指南：五条加速路径，从 RTX 4070 到多卡集群",
+      "titleEn": "MiniMax H3 Local Video Generation Engineering Guide: Five Acceleration Paths, from RTX 4070 to Multi-GPU Clusters",
+      "path": "/blog/minimax-h3-video-generation-local-acceleration-engineering-guide/",
+      "pv": 190,
+      "visits": 190
     },
     {
       "title": "PixOffice：给 AI 多智能体加一层 2D 办公室可视化，三种接入方式详解",
       "titleEn": "PixOffice: How to Integrate 2D Office Scene Visualization Into Your AI Agent System",
       "path": "/blog/pixoffice-2d-office-frontend-ai-agent-integration-guide/",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 180,
+      "visits": 150
+    },
+    {
+      "title": "JR-Strata：把 Strata MoE 推理引擎移植到 Intel Arc 和 Vulkan 的社区分叉",
+      "titleEn": "JR-Strata: Community Fork Porting the Strata MoE Inference Engine to Intel Arc and Vulkan",
+      "path": "/blog/jr-strata-vulkan-sycl-intel-arc-strata-fork-non-nvidia-llm-inference/",
+      "pv": 160,
+      "visits": 160
+    },
+    {
+      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
+      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
+      "pv": 150,
+      "visits": 140
+    },
+    {
+      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
+      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
+      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
+      "pv": 140,
+      "visits": 140
+    },
+    {
+      "title": "Strata：12GB 显卡跑 125B 模型，MoE 专家热缓存打破 VRAM 限制",
+      "titleEn": "Strata: Run a 125B Model on a 12 GB GPU with MoE Expert Hot Cache",
+      "path": "/blog/strata-qwen3-8-flash-next-125b-moe-12gb-gpu-inference-engine/",
+      "pv": 130,
+      "visits": 130
+    },
+    {
+      "title": "YuE2-3B：先写谱再唱歌的开源音乐模型，和 ACE-Step 1.5 差在哪",
+      "titleEn": "YuE2-3B: Open Song Generation That Writes an Editable Score First",
+      "path": "/blog/yue2-3b-open-source-song-generation-editable-score/",
+      "pv": 120,
+      "visits": 120
+    },
+    {
+      "title": "blog",
+      "titleEn": "blog",
+      "path": "/blog/",
+      "pv": 120,
+      "visits": 30
+    },
+    {
+      "title": "OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行",
+      "titleEn": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks",
+      "path": "/blog/openmuse-copilotkit-personal-ai-agent-browser-workspace/",
+      "pv": 120,
+      "visits": 120
+    },
+    {
+      "title": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照",
+      "titleEn": "Splash 1.4.0: Mac Inference and Six Specialized Engines",
+      "path": "/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
+      "pv": 110,
+      "visits": 110
     }
   ],
   "devices": [
     {
       "label": "desktop",
-      "count": 18000
+      "count": 19000
     },
     {
       "label": "mobile",
-      "count": 2000
+      "count": 1600
     }
   ],
   "os": [
     {
       "label": "Windows",
-      "count": 14480
-    },
-    {
-      "label": "MacOSX",
-      "count": 2400
-    },
-    {
-      "label": "Unknown",
-      "count": 2190
+      "count": 20000
     },
     {
       "label": "Linux",
-      "count": 1040
-    },
-    {
-      "label": "Android",
-      "count": 690
-    },
-    {
-      "label": "iOS",
-      "count": 490
-    },
-    {
-      "label": "ChromeOS",
-      "count": 10
+      "count": 10000
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 15680
-    },
-    {
-      "label": "Unknown",
-      "count": 2190
-    },
-    {
-      "label": "Edge",
-      "count": 1880
-    },
-    {
-      "label": "ChromeMobileWebview",
-      "count": 550
-    },
-    {
-      "label": "MobileSafari",
-      "count": 440
-    },
-    {
-      "label": "Safari",
-      "count": 210
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 140
-    },
-    {
-      "label": "Firefox",
-      "count": 110
-    },
-    {
-      "label": "ChromeDerivative",
-      "count": 80
-    },
-    {
-      "label": "ChromeHeadless",
-      "count": 20
+      "count": 30000
     }
   ]
 }

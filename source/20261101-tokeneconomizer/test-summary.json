@@ -1,0 +1,27 @@
+{
+  "commit": "c53a4a6dcdebaeb9df6fcaa5c7026f0401cd8f23",
+  "initial": {
+    "passed": 421,
+    "skipped": 6,
+    "failed": 4,
+    "seconds": 164.12,
+    "cause": "shell launchers selected macOS Python3.9.6 despite pytest Python3.12"
+  },
+  "recheck1": {
+    "passed": 3,
+    "failed": 1,
+    "seconds": 18.37,
+    "change": "TE_PYTHON set to Python3.12",
+    "remaining": "test fixture intentionally preserves PATH but drops TE_PYTHON"
+  },
+  "recheck2": {
+    "passed": 1,
+    "failed": 0,
+    "seconds": 1.97,
+    "change": "Python3.12 venv bin prepended to PATH"
+  },
+  "coverage": "425 distinct passing cases and 6 skipped across runs; not a single all-green invocation",
+  "paidCalls": false,
+  "pluginInstalledIntoUserAgents": false,
+  "benchmarkRerun": false
+}
