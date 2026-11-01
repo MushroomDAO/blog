@@ -1,0 +1,5 @@
+# Banner and body visual review
+Original source diagram-cover.png viewed directly: text-heavy hand-drawn flowchart on a large white canvas. Original article screenshots are dashboards/spreadsheets/trace viewers, not suitable primarily pictorial hero assets. Local FLUX scene chosen instead: quality inspection of blank sample tiles, accepted blue and rejected red examples, no real product/interface claim.
+All four final images directly viewed. Cover: blank tiles, blue/red sample fragments and magnifying glass, no lettering/faces; conceptual quality inspection, not a real product UI. Dimensions 1200x630, 73826B. Body: three white handdrawn red-cap 小M illustrations, readable Chinese labels, no smiles or empirical metric curves; 1120x630, 37514/41539/30336B. Fig1 compares refund claim against failed tool and unpaid state; Fig2 separate risk gate; Fig3 missed bad example among passed records. Worker exited zero before build.
+
+Banner machine verifier passed: zero failures, zero warnings; provenance FLUX seed 8123, no OCR text or human faces detected.

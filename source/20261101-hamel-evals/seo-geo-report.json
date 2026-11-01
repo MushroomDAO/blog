@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-01T09:09:00.506091+00:00",
+  "passed": true,
+  "checks": {
+    "titles": true,
+    "descriptions": true,
+    "wechat": true,
+    "dates": true,
+    "category": true,
+    "tags": true,
+    "bilingual": true,
+    "copyright": true,
+    "FAQ": true,
+    "questionHeadings": true,
+    "originalDate": true,
+    "laterRevisionDistinct": true,
+    "fictionalCase": true,
+    "noFalseEmpiricalClaims": true,
+    "independentPlan": true,
+    "ragScope": true,
+    "internalLink": true,
+    "figures": true,
+    "hero": true
+  },
+  "lengths": {
+    "title": 28,
+    "titleEn": 48,
+    "description": 150,
+    "descriptionEn": 160,
+    "wechatTitle": 21,
+    "wechatDigest": 41
+  },
+  "manualReview": [
+    "Bilingual BLUF/FAQ/plain source URLs/alt text/related post",
+    "Short attributed primary summaries; original refund-agent practice design",
+    "Original 2024 essay distinguished from later revised FAQ",
+    "No model/customer benchmark or deployed system; no tools need installing for this reading article",
+    "Invented 90/10 arithmetic and adjustable two-week plan labeled clearly",
+    "Risk gates not averaged with style; trace/side effects/state inspected; judge failure-positive convention explicit"
+  ]
+}
