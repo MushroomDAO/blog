@@ -1,0 +1,7 @@
+Observed upstream native-check output, commit ab0f225b78ec2622b2cbe64f8601136c66a4aa29. Six groups executed once, all exited0.
+PASS CRC, every single-bit corruption, pulse pairs, callsign, altitude, velocity and global CPR
+PASS decoder selftest; all 112 single-bit cases, all 6216 two-bit cases; observation isolation, clean counters, trust expiry, unknown addresses, assisted input and CPR plausibility
+PASS 10-minute deadline, round-up countdown, long uptime, connected/AP guards
+PASS Beast escaping/timestamps and browser-only trail compatibility
+PASS: 96 aircraft, empty table, stale/null fields, chunk boundaries, send failure
+PASS: transient failures, real outage, serialized polling, 2 Hz cadence, bounded retry backoff
