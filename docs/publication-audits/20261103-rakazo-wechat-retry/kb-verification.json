@@ -1,0 +1,44 @@
+[
+  {
+    "file": "project_rakazo.md",
+    "rows": 5,
+    "checks": {
+      "40007": true,
+      "48001": true,
+      "recorded": true,
+      "get_by_ids": true
+    }
+  },
+  {
+    "file": "project_archonos-local-agent-workbench.md",
+    "rows": 3,
+    "checks": {
+      "wechatStatus=draft": true,
+      "2026-11-03 公众号失败补偿已完成": true
+    }
+  },
+  {
+    "file": "project_aisafetyhot-ai-safety-news-guide.md",
+    "rows": 6,
+    "checks": {
+      "wechatStatus=draft": true,
+      "2026-11-03 公众号失败补偿已完成": true
+    }
+  },
+  {
+    "file": "project_lr2021-esp32-adsb-receiver-analysis.md",
+    "rows": 7,
+    "checks": {
+      "wechatStatus=draft": true,
+      "2026-11-03 公众号失败补偿已完成": true
+    }
+  },
+  {
+    "file": "project_weight-space-programming-knowledge-editing.md",
+    "rows": 5,
+    "checks": {
+      "wechatStatus=draft": true,
+      "2026-11-03 公众号失败补偿已完成": true
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-03T06:12:58.610Z",
+  "draftCount": 7,
+  "uniqueExpectedDrafts": {
+    "archonos-local-agent-workbench": 1,
+    "aisafetyhot-ai-safety-news-guide": 1,
+    "lr2021-esp32-adsb-receiver-analysis": 1,
+    "weight-space-programming-knowledge-editing": 1
+  },
+  "publishedApiErrors": [
+    {
+      "endpoint": "freepublish",
+      "code": 48001,
+      "message": "api unauthorized rid: 6ae97b6b-3c2fde16-4cce4162"
+    }
+  ]
+}

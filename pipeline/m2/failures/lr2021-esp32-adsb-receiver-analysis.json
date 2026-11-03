@@ -1,13 +1,17 @@
 {
   "slug": "lr2021-esp32-adsb-receiver-analysis",
   "blogUrl": "https://blog.mushroom.cv/blog/lr2021-esp32-adsb-receiver-analysis/",
-  "mediaId": "",
+  "mediaId": "prCUE631thH1cmNLi42prOP7JqgC7dy220PrbWZw3Xla6VGLEpC0IJ9DpZmyxOyn",
   "archivedMediaId": "",
-  "wechatStatus": "failed",
-  "wechatError": "公众号IP白名单拒绝（40164）：223.204.71.95不在白名单；实际M2创建失败，未获得media_id，已暂停自动重试。",
+  "wechatStatus": "draft",
+  "wechatError": "",
   "sourceArticle": "src/content/blog/lr2021-esp32-adsb-receiver-analysis.md",
   "theme": "blue",
-  "attempts": 1,
-  "retryPaused": true,
-  "checkedAt": "2026-11-03T05:23:41.012814+00:00"
+  "attempts": 2,
+  "retryPaused": false,
+  "checkedAt": "2026-11-03T05:23:41.012814+00:00",
+  "previousWechatError": "公众号IP白名单拒绝（40164）：223.204.71.95不在白名单；实际M2创建失败，未获得media_id，已暂停自动重试。",
+  "resolvedAt": "2026-11-03T06:10:59.804747+00:00",
+  "resolvedByJob": "dab8f8e1-5e63-44fd-8a83-bc53f4c0360e",
+  "remoteFullContentVerified": true
 }

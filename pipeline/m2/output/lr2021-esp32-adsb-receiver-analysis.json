@@ -1,0 +1,13 @@
+{
+  "title": "ESP32接收ADS-B：LoRa板的真实边界",
+  "author": "Mycelium",
+  "digest": "从芯片、滤波改造到解码与测试，拆解W12接收飞机广播的条件和限制。",
+  "mediaId": "prCUE631thH1cmNLi42prOP7JqgC7dy220PrbWZw3Xla6VGLEpC0IJ9DpZmyxOyn",
+  "blogUrl": "https://blog.mushroom.cv/blog/lr2021-esp32-adsb-receiver-analysis/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/lr2021-esp32-adsb-receiver-analysis/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/thefatmoop/esp32s3-lr2021-adsb-receiver"
+  ],
+  "publishedAt": "2026-11-03T06:09:38.318Z"
+}
