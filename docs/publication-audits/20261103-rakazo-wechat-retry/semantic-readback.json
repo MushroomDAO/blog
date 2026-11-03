@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "vectors": [
+    {
+      "id": "b81dc0e6a61f735d492d893bc083b256d97c17078f595307",
+      "metadata": {
+        "article_id": "rakazo-persistent-ai-teammate-sandbox-computer-use-teardown",
+        "content_hash": "57da92d704b75cdc",
+        "excerpt": "Rakazo：每个 Bot 有自己的电脑、记忆和调度，开源 Grok Bot 替代 elie222/rakazo，3094 星，Apache 2.0，TypeScript。Inbox Zero 作者新作，定位「开源 Grok Bot 替代」。每个持久 Bot 拥有独立会话、记忆、定时任务，以及一台沙箱电脑（浏览器/终端/桌面/文件），登录状态跨会话保留。Bot 间可互相委托子任务。沙箱后端支持 Docker、E2B、Daytona、CreateOS 和 Box，可完全本地运行。Web/Electron/Expo 三端，Beta 阶段。 AI同事 自托管 ",
+        "language": "zh",
+        "tags": [
+          "AI同事",
+          "自托管",
+          "多Agent",
+          "沙箱",
+          "开源拆解",
+          "TypeScript"
+        ],
+        "title": "Rakazo：每个 Bot 有自己的电脑、记忆和调度，开源 Grok Bot 替代",
+        "url": "/blog/rakazo-persistent-ai-teammate-sandbox-computer-use-teardown/"
+      }
+    },
+    {
+      "id": "6f0db98a44d9bb97b302eba45a2cb546842d4a1baa4b48ab",
+      "metadata": {
+        "article_id": "rakazo-persistent-ai-teammate-sandbox-computer-use-teardown",
+        "content_hash": "93cc9591b7b477ae",
+        "excerpt": "Rakazo: Each Bot Gets Its Own Computer, Memory and Schedule — Open-Source Grok Bot Alternative elie222/rakazo, 3094 stars, Apache 2.0, TypeScript. From the author of Inbox Zero — positioned as an open-source Grok Bot alternative. Each persistent Bot gets its own conversations, me",
+        "language": "en",
+        "tags": [
+          "AI同事",
+          "自托管",
+          "多Agent",
+          "沙箱",
+          "开源拆解",
+          "TypeScript"
+        ],
+        "title": "Rakazo: Each Bot Gets Its Own Computer, Memory and Schedule — Open-Source Grok Bot Alternative",
+        "url": "/blog/rakazo-persistent-ai-teammate-sandbox-computer-use-teardown/"
+      }
+    }
+  ]
+}

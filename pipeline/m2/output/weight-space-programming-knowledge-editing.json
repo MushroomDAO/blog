@@ -1,0 +1,21 @@
+{
+  "title": "知识编辑：小补丁能改变大模型什么",
+  "author": "Mycelium",
+  "digest": "核对权重空间编程的提分实验，梳理知识编辑路线、开源代码与工程验证边界。",
+  "mediaId": "prCUE631thH1cmNLi42prLEwc4VaG1KLFR5ngLQPk3rsTuxZlHO1tMHa0SxlZomr",
+  "blogUrl": "https://blog.mushroom.cv/blog/weight-space-programming-knowledge-editing/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/weight-space-programming-knowledge-editing/",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/rikiyat/qwen3.5-0.8b-weight-space-programming",
+    "huggingface.co/qwen/qwen3.5-0.8b",
+    "github.com/rikiyat/lm_understand-logs",
+    "github.com/kmeng01/rome",
+    "github.com/kmeng01/memit",
+    "github.com/jianghoucheng/alphaedit",
+    "github.com/zjunlp/easyedit",
+    "github.com/edenbiran/rippleedits",
+    "github.com/andyhuo520/vibe-knowledge"
+  ],
+  "publishedAt": "2026-11-03T06:09:45.899Z"
+}

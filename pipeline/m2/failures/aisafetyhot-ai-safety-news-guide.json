@@ -1,13 +1,17 @@
 {
   "slug": "aisafetyhot-ai-safety-news-guide",
   "blogUrl": "https://blog.mushroom.cv/blog/aisafetyhot-ai-safety-news-guide/",
-  "mediaId": "",
+  "mediaId": "prCUE631thH1cmNLi42prDdLO1DlteqUhwC8g-e9QxklVBO1bcHqpC1_XKY6LiUw",
   "archivedMediaId": "",
-  "wechatStatus": "failed",
-  "wechatError": "公众号 IP 白名单拒绝（40164）：223.204.71.95 不在白名单；本次 M2 创建失败，未获得草稿 media_id；已暂停自动重试。",
+  "wechatStatus": "draft",
+  "wechatError": "",
   "sourceArticle": "src/content/blog/aisafetyhot-ai-safety-news-guide.md",
   "theme": "blue",
-  "attempts": 1,
-  "retryPaused": true,
-  "checkedAt": "2026-11-03T01:58:30.620690+00:00"
+  "attempts": 2,
+  "retryPaused": false,
+  "checkedAt": "2026-11-03T01:58:30.620690+00:00",
+  "previousWechatError": "公众号 IP 白名单拒绝（40164）：223.204.71.95 不在白名单；本次 M2 创建失败，未获得草稿 media_id；已暂停自动重试。",
+  "resolvedAt": "2026-11-03T06:10:59.804747+00:00",
+  "resolvedByJob": "dab8f8e1-5e63-44fd-8a83-bc53f4c0360e",
+  "remoteFullContentVerified": true
 }
