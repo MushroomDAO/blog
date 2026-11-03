@@ -1,0 +1,87 @@
+{
+  "query": "HyperQwen Qwen3.8 24GB vLLM GPU Mac single-user throughput",
+  "result": {
+    "results": [
+      {
+        "article_id": "qwen38-27b-quasar-nvfp4-mac-mlx-install-guide",
+        "title": "Qwen3.8-27B QUASAR-NVFP4：最强 4-bit QAT 量化详解 + Mac M1 Max 64GB 完整安装指南",
+        "url": "/blog/qwen38-27b-quasar-nvfp4-mac-mlx-install-guide/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-27B QUASAR-NVFP4：最强 4-bit QAT 量化详解 + Mac M1 Max 64GB 完整安装指南 社区发布 QUASAR-QAT/Qwen3.8-27B-QUASAR-NVFP4（19.7GB，全层 W4A4）——最小、质量最高的 NVFP4 版本。但 NVFP4 需要 NVIDIA Blackwell GPU，Mac 无法直接运行。本文给出 Mac M1 Max 64GB 的最佳替代方案：MLX 8bit（推荐）和 GGUF/Ollama 完整安装步骤。 Qwen3.8-27B QUASAR-QAT NVFP4 M",
+        "score": 0.60946596
+      },
+      {
+        "article_id": "qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide",
+        "title": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上",
+        "url": "/blog/qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上 unsloth/Qwen3.8-Flash-Next-GGUF 是 Qwen4 架构预览版（125B 总参、6B 激活，外加 51B n-gram 嵌入）的 GGUF 量化，110 万次下载。我们逐个读了 10 个量化档的 GGUF 张量头：所谓 1-bit 只压了专家的 gate/up 投影，28.8GB 的 n-gram 表至少是 4-bit，所以最小档仍有 72.5GB。好在",
+        "score": 0.6067913
+      },
+      {
+        "article_id": "m1-max-64gb-local-ai-model-selection-memory-guide",
+        "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
+        "url": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
+        "language": "zh",
+        "excerpt": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度 持续更新：M1 Max 64GB MacBook 本地AI最佳组合方案。涵盖 Apple Intelligence 3B 复用、Qwen3-30B-A3B/27B/32B 全8bit部署、oMLX多模型调度、48GB可用内存边界测算与系统精简。 M1Max 本地模型 Qwen3 oMLX 内存管理 Apple Intelligence LLM 隐私AI 一、核心硬件与基础定位 二、Apple Intelligence 原生 3B 模型利用方案 三、Qwen3 三大主力模型差异",
+        "score": 0.6065717
+      },
+      {
+        "article_id": "qwen-image-2-1-unsloth-fp8-gguf-local-deploy",
+        "title": "Qwen-Image-2.1 Local Deploy: Unsloth FP8/GGUF, Runs on 6GB VRAM, Mac 16GB Unified Memory Too",
+        "url": "/blog/qwen-image-2-1-unsloth-fp8-gguf-local-deploy/",
+        "language": "en",
+        "excerpt": "Qwen-Image-2.1 Local Deploy: Unsloth FP8/GGUF, Runs on 6GB VRAM, Mac 16GB Unified Memory Too Unsloth has lowered the entry barrier for Qwen-Image-2.1 local deployment. FP8 + pinned RAM offloading: 6-8GB VRAM is sufficient, inference overhead <2x. GGUF quantization: works on Mac 1",
+        "score": 0.5985307
+      },
+      {
+        "article_id": "k2-horizon-mova-36b-a4b-mac-local-memory-guide",
+        "title": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？",
+        "url": "/blog/k2-horizon-mova-36b-a4b-mac-local-memory-guide/",
+        "language": "zh",
+        "excerpt": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？ K2-Horizon-MoVA-36B-A4B 是 MBZUAI 基础模型研究院（IFM）9 月初开源的 Apache-2.0 纯文本 MoE，37.44B 总参、按权重头部推算每 token 约 4.66B 激活，把注意力的 V 投影换成 64 选 4 的专家。自报 Terminal-Bench 2.1 为 58.6。它的 KV 缓存每 token 192KB，是 Qwen3.5 同档的约 10 倍。Mac 上 32GB",
+        "score": 0.59269947
+      },
+      {
+        "article_id": "airllm-70b-inference-4gb-gpu-layer-streaming",
+        "title": "AirLLM: Run a 70B Model on 4GB of VRAM, No Quantization Required",
+        "url": "/blog/airllm-70b-inference-4gb-gpu-layer-streaming/",
+        "language": "en",
+        "excerpt": "AirLLM: Run a 70B Model on 4GB of VRAM, No Quantization Required lyogavin's open-source extreme-inference toolkit, 30k stars, Apache 2.0. Layer-by-layer streaming loads 70B models on a single 4GB GPU — no quantization, distillation, or pruning. Kimi K3 (2.8T) in 3.72GB, DeepSeek-",
+        "score": 0.59099513
+      },
+      {
+        "article_id": "nex-n2-5-mini-agentic-moe-mac-local-memory-guide",
+        "title": "Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？",
+        "url": "/blog/nex-n2-5-mini-agentic-moe-mac-local-memory-guide/",
+        "language": "zh",
+        "excerpt": "Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？ Nex-N2.5-mini 是 Nex-AGI 9 月 8 日开源的 Agent 模型，Apache-2.0，35.1B 总参 MoE、按权重头部推算每 token 约 2.95B 激活，底座是 Qwen3.5-35B-A3B-Base。本文按社区量化体积推算 Mac 内存门槛：32GB 起步能跑 4-bit，48GB 才宽裕；并对照同底座 Qwen、云端价格和 Claude Code/OpenCode 接入方式。 Nex-N2.5 AI Ag",
+        "score": 0.58219576
+      },
+      {
+        "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+        "title": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行",
+        "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行 OrcaRouter 发布的 Qwen3.8-27B 消融对齐（abliterated）MLX 量化版本，672 likes，trending。基于 Qwen3.8-27B —— 一个 64 层混合架构模型（48 层 Gated DeltaNet 线性注意力 + 每 4 层一个全注意力层），原生视觉语言塔，262K 上下文，MTP 头。提供 2/4/6/8-bit 四个精度（affine 量化，grou",
+        "score": 0.5669922
+      },
+      {
+        "article_id": "comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy",
+        "title": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案",
+        "url": "/blog/comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy/",
+        "language": "zh",
+        "excerpt": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案 sepiablue-ai 开源，GPL-3.0，46 stars。两个 ComfyUI 节点把 MiniMax H3 视频生成塞进 12GB 消费级 GPU：W4A4 量化（FC1 层 ConvRot 预转换缓存）+ 流式 VSA 稀疏注意力（FastH3 官方 gate 文件）。RTX 4070 12GB 实测：832×1408×124帧约 3m29s，峰值 11.5GB 显存，比 INT8 基线快约 11%。需 Amp",
+        "score": 0.5629826
+      },
+      {
+        "article_id": "wevisone-vl-unified-vision",
+        "title": "WeVisOne-VL: Seven Vision Tasks, One Careful Audit",
+        "url": "/blog/wevisone-vl-unified-vision/",
+        "language": "en",
+        "excerpt": "WeVisOne-VL: Seven Vision Tasks, One Careful Audit Audit Tencent WeVisOne-VL: seven vision tasks, 2B/4B weights, a pixel decoder, reported benchmarks, deployment limits and unverified RTX 4090 speed claims. WeVisOne-VL 计算机视觉 OCR 图像分割 开源模型 Does one request produce all seven output",
+        "score": 0.55880433
+      }
+    ]
+  }
+}

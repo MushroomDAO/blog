@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-03T16:32:13.618Z",
+  "drafts": [
+    {
+      "slug": "hyperqwen-qwen-27b-24gb-vllm-guide",
+      "mediaId": "prCUE631thH1cmNLi42prLHy1NxS4RYX14XCWv8JLk7qLtR43REjO3BA3fgFOaDY",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "68e98d4aac25fb0dfe8f23da6e7acec3236bf9db37338ce47a631b5ae91e6b3c",
+      "remoteTextHash": "68e98d4aac25fb0dfe8f23da6e7acec3236bf9db37338ce47a631b5ae91e6b3c",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/hyperqwen-qwen-27b-24gb-vllm-guide/",
+      "localContentHash": "13921da9189f37ca98ea902db0a08c1a1f6535eedb22445fa5da6de8449b771a",
+      "remoteContentHash": "036085ebeb534586ce58a0a39151bc820f9730a4c71d6fdf93148c6fdd49bd7c"
+    }
+  ]
+}
