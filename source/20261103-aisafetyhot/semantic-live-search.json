@@ -1,0 +1,87 @@
+{
+  "query": "AI Safety HOT 网站 MCP 资料聚合 原文核验",
+  "result": {
+    "results": [
+      {
+        "article_id": "google-search-trends-mcp-guide",
+        "title": "Google Search Trends MCP 实战：让 AI 帮你在趋势爆发前抓住它",
+        "url": "/blog/google-search-trends-mcp-guide/",
+        "language": "zh",
+        "excerpt": "Google Search Trends MCP 实战：让 AI 帮你在趋势爆发前抓住它 一个 MCP，把 Google 搜索、YouTube、TikTok、Reddit、Amazon、npm、Steam 等 25+ 数据源的趋势喂给 AI，无需爬虫、无需 Google API Key。本文手把手教普通用户 5 分钟接入（Claude Desktop / Cursor / VS Code），并给出一套用 Trends 做内容选题、商机捕捉、灵感发现的完整方法论——包括如何在趋势曲线的『第一导数』阶段抢占先机。 MCP Google Trends AI A",
+        "score": 0.59174967
+      },
+      {
+        "article_id": "webclaw-rust-web-scraper-llm-guide",
+        "title": "Webclaw 开发者使用指南：用 Rust 爬虫给 AI 喂干净的 Markdown",
+        "url": "/blog/webclaw-rust-web-scraper-llm-guide/",
+        "language": "zh",
+        "excerpt": "Webclaw 开发者使用指南：用 Rust 爬虫给 AI 喂干净的 Markdown Webclaw 是一款 Rust 编写的本地优先网页内容提取工具，MCP 一键接入 Claude/Cursor，自动去噪输出 LLM 专用 Markdown，支持单页抓取、全站爬虫、批量爬取、页面对比、品牌元素提取，AGPL-3.0 开源，1500+ Stars。 网页抓取 MCP Claude Code Rust RAG LLM工具 开源工具 AI Agent 为什么网页内容对 LLM 来说这么\"脏\"？ 快速安装 方式一：MCP 客户端一键配置（推荐） 方式二：Ho",
+        "score": 0.58534884
+      },
+      {
+        "article_id": "tencent-ai-infra-guard-red-team-platform-mcp-skill-vulnerability-scan",
+        "title": "tencent-ai-infra-guard-red-team-platform-mcp-skill-vulnerability-scan",
+        "url": "/blog/tencent-ai-infra-guard-red-team-platform-mcp-skill-vulnerability-scan/",
+        "language": "en",
+        "excerpt": "tencent-ai-infra-guard-red-team-platform-mcp-skill-vulnerability-scan AI-Infra-Guard (A.I.G) is Tencent Zhuque Lab's open-source AI red teaming platform integrating AI infrastructure vulnerability scanning (2000+ CVE rules), MCP Server security detection, Agent Skill audit (Skill",
+        "score": 0.5833769
+      },
+      {
+        "article_id": "simon-willison-lethal-trifecta-ai-agent-security",
+        "title": "Lethal Trifecta：Simon Willison 的 AI Agent 安全三角，《经济学人》都引用了这个术语",
+        "url": "/blog/simon-willison-lethal-trifecta-ai-agent-security/",
+        "language": "zh",
+        "excerpt": "Lethal Trifecta：Simon Willison 的 AI Agent 安全三角，《经济学人》都引用了这个术语 Django 联合创始人 Simon Willison 在 2025 年 6 月提出「致命三要素」思维模型：AI Agent 同时满足接触不可信内容、能访问私有数据、可以对外通信，安全风险进入高危区间。本文深度分析原始文章、真实攻击案例（GitHub MCP、Supabase MCP、微软 365 Copilot）和有效防御路径。 AI Security Prompt Injection Lethal Trifecta Simon ",
+        "score": 0.579925
+      },
+      {
+        "article_id": "cove-book-forge-mcp-pdf-epub-agent-skill-obsidian-codex-claude",
+        "title": "cove-book-forge-mcp：把 PDF/EPUB 书籍锻造成 Agent Skill，一次分析，Codex/Claude Code 永久复用",
+        "url": "/blog/cove-book-forge-mcp-pdf-epub-agent-skill-obsidian-codex-claude/",
+        "language": "zh",
+        "excerpt": "cove-book-forge-mcp：把 PDF/EPUB 书籍锻造成 Agent Skill，一次分析，Codex/Claude Code 永久复用 moonlin1213/cove-book-forge-mcp 是一个本地优先的开源 MCP 服务器，把 PDF 或 EPUB 书籍转化为可复用的 AI 知识——稳定指纹缓存章节分析，同一份结果同时输出 Obsidian 笔记和可安装的 Agent Skill（兼容 Codex、Claude Code）。支持 OpenAI/DeepSeek/Anthropic 三类 Provider，完整书籍锻造作业可",
+        "score": 0.57177097
+      },
+      {
+        "article_id": "cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt",
+        "title": "cloudflare/security-audit-skill：20 个 Markdown 文件怎么成了 Cloudflare 内部漏洞扫描器",
+        "url": "/blog/cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt/",
+        "language": "zh",
+        "excerpt": "cloudflare/security-audit-skill：20 个 Markdown 文件怎么成了 Cloudflare 内部漏洞扫描器 Cloudflare 开源安全审计 Skill，MIT，22K 星。本质是 ~300KB 结构化提示词，六阶段对抗验证流程，发现者不验证自己的漏洞，覆盖 13 个攻击域含 AI/LLM 安全。内部 Project Glasswing：145 仓库，30K 行代码约 80 个 bug，14 小时完成。 安全 AI Agent Claude Code Cloudflare 漏洞扫描 开源拆解 项目背景 第一个反直觉结",
+        "score": 0.5697687
+      },
+      {
+        "article_id": "webmcp-chrome-browser-tools-api-guide",
+        "title": "WebMCP 实测：从猜按钮到调用工具，网页自动化怎么变了？",
+        "url": "/blog/webmcp-chrome-browser-tools-api-guide/",
+        "language": "zh",
+        "excerpt": "WebMCP 实测：从猜按钮到调用工具，网页自动化怎么变了？ WebMCP 将网页能力注册为结构化工具，减少 Agent 对界面含义的猜测。本文核对 Chrome Origin Trial、document.modelContext API 与社区草案，提供只读库存示例，实测默认和实验配置下的工具发现、调用及撤销，并说明它为何不能替代所有网页操作、权限校验或人工确认。 WebMCP Chrome 浏览器自动化 MCP Web API AI Agent 变化究竟发生在哪一层？ 它和服务端 MCP 是同一回事吗？ Chrome 当前开放到了哪一步？ 网站怎样",
+        "score": 0.56653845
+      },
+      {
+        "article_id": "awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt",
+        "title": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引",
+        "url": "/blog/awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt/",
+        "language": "zh",
+        "excerpt": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引 Agents 222 个、Instructions 193 个、Skills 416 个、Plugins 100 个——这套分类本身比清单更值得看：agent 是接 MCP 的专门角色，instruction 是按文件模式自动生效的编码规范，skill 是自包含带资源的文件夹，plugin 是打包好的组合。另一个值得抄的做法是 llms.txt：一份 941 行、308KB 的机器可读索引，专门给 AI agent 读，让它自己找该用哪个资源。",
+        "score": 0.56396645
+      },
+      {
+        "article_id": "free-google-trends-mcp-studio-guide",
+        "title": "免费 Google Trends MCP：小工作室的日常趋势雷达，和收费 MCP 这样搭配最省钱",
+        "url": "/blog/free-google-trends-mcp-studio-guide/",
+        "language": "zh",
+        "excerpt": "免费 Google Trends MCP：小工作室的日常趋势雷达，和收费 MCP 这样搭配最省钱 purahmanian/google-trends-mcp 是一个 MIT 开源、无需 API Key、纯 npx 一行装的 Google Trends MCP，直接吐官方 0–100 数据。它数据源只有 Google，但正因为『官方真值 + 免费无限量（悠着点用）+ 地域下钻』，恰好能当日常主力雷达，把收费的多源 MCP 省着用在关键验证上。本文给小工作室/小公司一套双 MCP 搭配的低成本趋势捕捉流水线，从发现到写分析文章到发布。 MCP Google ",
+        "score": 0.55532503
+      },
+      {
+        "article_id": "fastmcp-typescript-mcp-server-framework",
+        "title": "FastMCP：用几十行 TypeScript 搭 MCP 服务器，5 个月 3000+ star",
+        "url": "/blog/fastmcp-typescript-mcp-server-framework/",
+        "language": "zh",
+        "excerpt": "FastMCP：用几十行 TypeScript 搭 MCP 服务器，5 个月 3000+ star FastMCP 是 TypeScript 版 MCP 服务器框架，内置 Session 管理、OAuth 认证、Edge Runtime 支持和 CLI 调试工具，比官方 SDK 省去大量样板代码。5 个月获 3145 star，周均下载 46 万次。 MCP TypeScript 开源 FastMCP Cloudflare Workers AI工具 开发者工具 为什么需要 FastMCP？ 核心特性一览 Session 管理 零配置 OAuth Edge",
+        "score": 0.5552133
+      }
+    ]
+  }
+}
