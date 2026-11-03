@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "semantica-graph-native-ai-provenance-enterprise-knowledge-graph",
+      "title": "semantica-graph-native-ai-provenance-enterprise-knowledge-graph",
+      "url": "/blog/semantica-graph-native-ai-provenance-enterprise-knowledge-graph/",
+      "language": "en",
+      "excerpt": "semantica-graph-native-ai-provenance-enterprise-knowledge-graph Semantica (GitHub: semantica-agi/semantica, ⭐11,136, MIT, v0.6.7) is a graph-native AI infrastructure layer: auto-builds enterprise knowledge graphs from multi-source data, records every AI decision as a graph node w",
+      "score": 0.57748514
+    },
+    {
+      "article_id": "sensenova-vision-unified-cv-hardware-guide",
+      "title": "SenseNova-Vision: Unified Multimodal CV Model — Hardware Guide for Every Use Case",
+      "url": "/blog/sensenova-vision-unified-cv-hardware-guide/",
+      "language": "en",
+      "excerpt": "SenseNova-Vision: Unified Multimodal CV Model — Hardware Guide for Every Use Case SenseNova-Vision-7B-MoT unifies all CV tasks — detection, depth estimation, segmentation, 3D reconstruction — into a single generative model. The web demo needs one 80 GB GPU; full benchmarks need e",
+      "score": 0.5178298
+    },
+    {
+      "article_id": "mac-studio-vs-amd-vs-cloud-gpu-local-ai",
+      "title": "继续等Mac Studio还是投入AMD怀抱Or云GPU？",
+      "url": "/blog/mac-studio-vs-amd-vs-cloud-gpu-local-ai/",
+      "language": "zh",
+      "excerpt": "继续等Mac Studio还是投入AMD怀抱Or云GPU？ 2026年本地AI推理硬件选购完全指南：Mac Mini M4 Pro、Mac Studio M4 Max / M3 Ultra、AMD Minisforum MS-S1 MAX、云GPU（AutoDL/RunPod）四路横评，TTS/ASR/ImageGen/VideoGen/TxtGen/VibeCoding六大场景HuggingFace Top-3模型推荐与成本对比。 本地AI推理 Mac Studio Mac Mini AMD Minisforum 云GPU RunPod AutoDL ",
+      "score": 0.5119874
+    },
+    {
+      "article_id": "pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp",
+      "title": "pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp",
+      "url": "/blog/pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp/",
+      "language": "en",
+      "excerpt": "pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp pipeshub-ai/pipeshub-ai is an open-source Enterprise AI Context Layer that unifies enterprise knowledge connectivity, permission-aware access control, knowledge graph retrieval, 50+ source connectors, RAG Q&A, agent bui",
+      "score": 0.51172537
+    },
+    {
+      "article_id": "graphify-code-knowledge-graph",
+      "title": "Graphify：把整个代码仓库变成一张可查询的知识图谱，87k stars，YC S26",
+      "url": "/blog/graphify-code-knowledge-graph/",
+      "language": "zh",
+      "excerpt": "Graphify：把整个代码仓库变成一张可查询的知识图谱，87k stars，YC S26 Graphify 是一个 AI 编程助手 Skill，用一条命令把任意代码库（含文档、PDF、图片、视频）映射成知识图谱，让 AI 直接查询图谱关系而不是反复重读文件。tree-sitter 本地解析，零 API 调用，支持 Claude Code、Cursor、Codex、Gemini CLI 等 20+ 工具。YC S26 孵化，GitHub 87k stars。 知识图谱 AI编程 Claude Code Cursor 开源 YC 代码理解 tree-sit",
+      "score": 0.5095424
+    },
+    {
+      "article_id": "ai-knowledge-graph-robert-mcdermott-unstructured-text-to-interactive-graph",
+      "title": "AI Knowledge Graph：把任意文本扔进去，LLM 自动生成可交互知识图谱",
+      "url": "/blog/ai-knowledge-graph-robert-mcdermott-unstructured-text-to-interactive-graph/",
+      "language": "zh",
+      "excerpt": "AI Knowledge Graph：把任意文本扔进去，LLM 自动生成可交互知识图谱 robert-mcdermott/ai-knowledge-graph 用 LLM 把非结构化文本转换成主谓宾三元组，经过实体标准化和关系推断，生成带社区检测的可交互 HTML 知识图谱。支持 Ollama 本地跑，兼容任意 OpenAI 兼容端点，2.7K stars，Apache-2.0。 知识图谱 LLM 信息提取 可视化 Ollama Python 开源 Mycelium 它做的事 四阶段处理流程 Phase 1：三元组提取 Phase 2：实体标准化 Pha",
+      "score": 0.5085254
+    },
+    {
+      "article_id": "yc-2026-ten-startup-tracks-ai-native-services",
+      "title": "YC 2026 十大创业主赛道：从卖软件到直接干活，范式已经切换了",
+      "url": "/blog/yc-2026-ten-startup-tracks-ai-native-services/",
+      "language": "zh",
+      "excerpt": "YC 2026 十大创业主赛道：从卖软件到直接干活，范式已经切换了 YC 2026 点名十大创业方向：AI-Native服务公司、公司大脑、SaaS杀手、Software for Agents、AI个性化医疗……最核心的信号是：这一代创业公司不卖工具了，直接把活儿干了。 YC startup-trends AI-agent SaaS AI-native 2026 范式转移：三代创业公司的进化 赛道一：AI-Native 服务公司 赛道二：Company Brain（公司大脑） 赛道三：SaaS 杀手 赛道四：Software for Agents 赛道五",
+      "score": 0.5078196
+    },
+    {
+      "article_id": "gbrain-personal-ai-knowledge-brain-guide",
+      "title": "GBrain：Y Combinator CEO 开源的个人 AI 大脑——25000 星知识图谱系统完整介绍",
+      "url": "/blog/gbrain-personal-ai-knowledge-brain-guide/",
+      "language": "zh",
+      "excerpt": "GBrain：Y Combinator CEO 开源的个人 AI 大脑——25000 星知识图谱系统完整介绍 GBrain 是 Y Combinator 总裁 Garry Tan 开源的个人 AI 知识大脑系统，25417★，当前 GitHub Trending 榜单。不同于普通知识库，它有两个核心能力：合成层（给你答案而非返回页面列表）和自动接线知识图谱（无需 LLM 提取实体和关系）。支持本地 PGLite（2秒初始化）或 Postgres+pgvector，通过 MCP 接入 Claude Code / Codex / Cursor，43个内置 S",
+      "score": 0.50550926
+    },
+    {
+      "article_id": "persona-vrm-avatar-ai-voice-mcp",
+      "title": "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex",
+      "url": "/blog/persona-vrm-avatar-ai-voice-mcp/",
+      "language": "zh",
+      "excerpt": "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex xikhar 开源了 Persona，一个跨平台桌面 VRM 角色应用，监听 Codex/ChatGPT 的音频输出，实时驱动嘴型同步和肢体动画。通过 MCP 暴露动画控制接口，AI Agent 可以直接调用 play_animation 让角色表达情绪。3天 680 星，MIT，支持 Linux/Windows/macOS。 VRM AI语音 MCP 桌面应用 Electron Three.js Codex Mycelium 它做什么 隐私优先的音频捕获 MCP 接口：Agent",
+      "score": 0.5005422
+    },
+    {
+      "article_id": "nvidia-cursor-cto-async-coding-agents-self-driving-codebase",
+      "title": "Must Watch: Building Towards Self-Driving Codebases with Long-Running, Asynchronous Agents",
+      "url": "/blog/nvidia-cursor-cto-async-coding-agents-self-driving-codebase/",
+      "language": "en",
+      "excerpt": "Must Watch: Building Towards Self-Driving Codebases with Long-Running, Asynchronous Agents Cursor co-founder and CTO Aman Sanger at NVIDIA GTC 2026 breaks down the three eras of AI-assisted programming: autocomplete → sync agents → async cloud agents → self-driving codebases. 30%",
+      "score": 0.50031465
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-03T16:51:16.917Z",
+  "drafts": [
+    {
+      "slug": "nvidia-auto-ontology-agent-semantic-layer",
+      "mediaId": "prCUE631thH1cmNLi42prPLpahkADNQOBE7fjEwjNpauR2DRg24ERjrgYgnohR-l",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "8352bb3ae3378bba08e397ce6e29075993922e3d962c4b57c43d0daf42661bfe",
+      "remoteTextHash": "8352bb3ae3378bba08e397ce6e29075993922e3d962c4b57c43d0daf42661bfe",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/nvidia-auto-ontology-agent-semantic-layer/",
+      "localContentHash": "b89320eda9016a14104db2c6c3e33ede53095ec24a64b637d42105f638e6cd0a",
+      "remoteContentHash": "872474eb3244570ddf2768c250ca9c5692bd3233fc217cf62046f4e309670b7e"
+    }
+  ]
+}
