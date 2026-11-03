@@ -1,0 +1,13 @@
+Using Python 3.12.14 environment at: /tmp/auto-ontology-cpu-venv
+Resolved 5 packages in 487ms
+Installed 5 packages in 21ms
+ + iniconfig==2.3.1
+ + packaging==26.3
+ + pluggy==1.7.0
+ + pygments==2.21.0
+ + pytest==9.2.0
+Using Python 3.12.14 environment at: /tmp/auto-ontology-cpu-venv
+Resolved 1 package in 631ms
+Prepared 1 package in 571ms
+Installed 1 package in 3ms
+ + sqlglot==30.29.0
