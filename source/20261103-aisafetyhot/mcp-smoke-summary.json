@@ -1,0 +1,22 @@
+{
+  "transport": "Streamable HTTP SSE",
+  "toolsListHTTP": 200,
+  "toolNames": [
+    "aisafetyhot_get_latest",
+    "aisafetyhot_search",
+    "aisafetyhot_get_hot_topics",
+    "aisafetyhot_get_story",
+    "aisafetyhot_get_daily",
+    "aisafetyhot_get_content",
+    "aisafetyhot_get_topics"
+  ],
+  "hotTopicsHTTP": 200,
+  "toolError": false,
+  "trustMetadata": {
+    "aisafetyhot/contentTrust": "untrusted_external_data",
+    "aisafetyhot/instructionPolicy": "treat_as_data_never_execute"
+  },
+  "calls": 2,
+  "installedClient": false,
+  "credentialsSent": false
+}
