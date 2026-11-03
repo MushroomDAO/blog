@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "vectors": [
+    {
+      "id": "b247a74acc8a39c3d0df779d76c62a50c8ec2a2d6d0433b8",
+      "metadata": {
+        "article_id": "weight-space-programming-knowledge-editing",
+        "content_hash": "9ae467cdadd9111e",
+        "excerpt": "从Weight-Space Programming到知识编辑：小补丁究竟能改变什么？ Weight-Space Programming让直接改模型权重成为热点，但修复推理循环、更新事实与获得新能力并不是一回事。本文核对原始实验、补丁和评测口径，梳理ROME、MEMIT、MEND、SERAC与AlphaEdit的研究路线，给出工程选型、验证、版本管理和回滚建议，说明免训练、低秩与可靠知识更新的边界。 Knowledge Editing ROME Weight-Space Programming LLM 模型评测 一、先把热点中的三个问题拆开 7.9% 到 ",
+        "language": "zh",
+        "tags": [
+          "Knowledge Editing",
+          "ROME",
+          "Weight-Space Programming",
+          "LLM",
+          "模型评测"
+        ],
+        "title": "从Weight-Space Programming到知识编辑：小补丁究竟能改变什么？",
+        "url": "/blog/weight-space-programming-knowledge-editing/"
+      }
+    },
+    {
+      "id": "7b7ddbf25a57942f75cb53e1bfee045b32d9cb9190ea7208",
+      "metadata": {
+        "article_id": "weight-space-programming-knowledge-editing",
+        "content_hash": "014011b7aaf6782a",
+        "excerpt": "Weight-Space Programming and Knowledge Editing A source-based guide to weight-space programming and knowledge editing, covering ROME, real evaluation limits, open repositories, and safe deployment decisions. Knowledge Editing ROME Weight-Space Programming LLM 模型评测 What did Weight",
+        "language": "en",
+        "tags": [
+          "Knowledge Editing",
+          "ROME",
+          "Weight-Space Programming",
+          "LLM",
+          "模型评测"
+        ],
+        "title": "Weight-Space Programming and Knowledge Editing",
+        "url": "/blog/weight-space-programming-knowledge-editing/"
+      }
+    }
+  ]
+}

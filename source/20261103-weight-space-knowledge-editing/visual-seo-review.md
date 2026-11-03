@@ -1,0 +1,12 @@
+# Manual review — before deployment
+- Third person, bilingual standalone introduction, one H1 supplied by Astro; H2/H3 only.
+- Core entities in title, introduction and metadata; English keyword slug; dates ISO; category/tags/hero complete.
+- CN description157 and EN160 characters. WeChat title16 characters, digest valid; lint passed.
+- Answer-first definition, distinguishes sparse/lowrank, fact/behavior, nofulltraining/nogradients.
+- Primary-source URLs adjacent to claims, plain URLs survive WeChat; onlycopyright links use external Markdown.
+- 3FAQ each language, independently executed artifact reaggregation/algebra scope clearly identified.
+- Both CC attribution blocks. No unverified local-model benchmark claim, no secondary rumor conclusion.
+- Cover1200x63093824BprovenanceFLUXseed8132; machine0fail0warn and manualviewvalid.
+- Threeillustrations1120x63048colors26678/18921/39547B; each viewed including finalchangedquantization, clear Chinese labels and white background, nofaces/fakeperformance.
+- Workerfinishedexit0beforefrozen-inputs/build. Onlyownimageschanged.
+- No artificial internal cross-link inserted: main purpose is source-based knowledge-editing explanation; sitewide schema comes from Astro.
