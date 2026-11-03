@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-03",
+  "commit": "ab0f225b78ec2622b2cbe64f8601136c66a4aa29",
+  "repo": "https://github.com/thefatmoop/esp32s3-lr2021-adsb-receiver",
+  "license": "GPL-3.0-or-later",
+  "hackaday": {
+    "url": "https://hackaday.com/2026/11/01/building-an-ads-b-receiver-for-less-than-you-think/",
+    "author": "Zoe Skyforest",
+    "date": "2026-11-01",
+    "builder": "thefatmoop"
+  },
+  "manufacturer": "https://www.semtech.com/products/wireless-rf/lora-plus/lr2021",
+  "datasheetRead": "Semtech LR2021 v1.1 (2025-10-14), mirrored by Mouser; manufacturer currently linksv2.2 but download page was a Salesforce HTML wrapper; no claimv1.1 is newest",
+  "boardDocs": "https://wiki.meshnology.com/W12/W12_LR2021_Ultra_Long_Range_LoRa_Device/",
+  "verification": "six upstream native groups passed; no RF hardware, flashing, full firmware build, power/sensitivity/range measurement",
+  "photos": "project official hardware photo and illustrated filter bypass; former adopted as banner, latter not a solder-joint microscope image"
+}

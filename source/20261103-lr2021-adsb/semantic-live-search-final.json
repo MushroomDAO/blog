@@ -1,0 +1,87 @@
+{
+  "query": "LR2021 W12 U12 SAW 1090MHz Manchester ADS-B receiver experiment",
+  "result": {
+    "results": [
+      {
+        "article_id": "lr2021-esp32-adsb-receiver-analysis",
+        "title": "ESP32 LoRa板真能收飞机信号？拆解W12与LR2021的ADS-B实验",
+        "url": "/blog/lr2021-esp32-adsb-receiver-analysis/",
+        "language": "zh",
+        "excerpt": "ESP32 LoRa板真能收飞机信号？拆解W12与LR2021的ADS-B实验 thefatmoop用W12的ESP32-S3与LR2021实现本地1090MHz ADS-B接收，但它不是任意LoRa板刷固件就能复现。本文核对Hackaday、芯片资料和代码，解释带外接收、SAW滤波改造、Manchester解码、CRC与CPR、作者报告的150海里距离，并给出硬件选型、软件测试和对照验收方法。 ADS-B ESP32-S3 LR2021 LoRa 开源硬件 无线电 它是真接收，还是从航班网站拉数据？ 飞机并没有使用LoRa，为什么LoRa芯片能帮忙？ ",
+        "score": 0.6430573
+      },
+      {
+        "article_id": "meta-muse-voice-transcribe-realtime-asr-diarization-msl",
+        "title": "Meta Muse Voice Transcribe：MSL 首款实时音频感知模型，单模型做 ASR + 说话人分离 + 端点检测",
+        "url": "/blog/meta-muse-voice-transcribe-realtime-asr-diarization-msl/",
+        "language": "zh",
+        "excerpt": "Meta Muse Voice Transcribe：MSL 首款实时音频感知模型，单模型做 ASR + 说话人分离 + 端点检测 Meta Superintelligence Labs 发布 Muse Voice Transcribe，首款实时音频感知模型，单模型集成流式 ASR、20+ 说话人分离和端点检测，支持多语言无缝切换，通过 RL 训练的自适应延迟机制登顶 Artificial Analysis 流式语音识别和公开说话人分离排行榜。 AI ASR Meta 语音识别 说话人分离 实时 MSL 这个模型解决了什么问题 核心特性 关键技术：自适应",
+        "score": 0.5211378
+      },
+      {
+        "article_id": "tmax-allenai-open-rl-terminal-agent-training-recipe",
+        "title": "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27%",
+        "url": "/blog/tmax-allenai-open-rl-terminal-agent-training-recipe/",
+        "language": "zh",
+        "excerpt": "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27% AllenAI 开源 TMax，目前最强的终端 Agent RL 训练配方。9B 参数模型在 Terminal-Bench 2.0 达到 27%，超越更大规模的闭源竞品。数据集 15K 任务，比此前最大终端 Agent 数据集大 2.5 倍，配套 SFT + DPPO RL 训练流程全套开源。 Agent 终端Agent RL训练 AllenAI 开源 Terminal-Bench Qwen Mycelium 核心结果 四阶段配方",
+        "score": 0.49154377
+      },
+      {
+        "article_id": "minimind-o-multimodal-agent-eyes-ears-voice",
+        "title": "MiniMind-O: Can a 113M-Parameter Omni Model Serve as an Agent's Eyes, Ears, and Voice?",
+        "url": "/blog/minimind-o-multimodal-agent-eyes-ears-voice/",
+        "language": "en",
+        "excerpt": "MiniMind-O: Can a 113M-Parameter Omni Model Serve as an Agent's Eyes, Ears, and Voice? MiniMind-O is a 113M-parameter omni model supporting image input, audio input/output, and text — trainable on a single RTX 3090 and runnable on CPU. This article extracts core capabilities from",
+        "score": 0.48257312
+      },
+      {
+        "article_id": "longstraw-million-token-rl-training-gpu",
+        "title": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token",
+        "url": "/blog/longstraw-million-token-rl-training-gpu/",
+        "language": "zh",
+        "excerpt": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token 推理已经支持百万 token，但 RL 后训练卡在 256K 以下。LongStraw 用驻留状态 + 响应回放 + 分布式原生执行三项技术，在 8 张 H20 上完成 2M token 的精确 GRPO 训练。arXiv 2607.14952，已开源。 RL训练 长上下文 GRPO 大模型 AI Agent GPU 分布式训练 后训练 LLM 一、一个越来越大的差距 二、三项核心技术 1. Resident State（驻留状态） 2. Response Repla",
+        "score": 0.48171416
+      },
+      {
+        "article_id": "agent-lightning-microsoft-research-rl-framework-train-agents-real-harness",
+        "title": "Agent Lightning: Microsoft Research's 3,500-Line RL Framework for Training Any AI Agent in Real Environments",
+        "url": "/blog/agent-lightning-microsoft-research-rl-framework-train-agents-real-harness/",
+        "language": "en",
+        "excerpt": "Agent Lightning: Microsoft Research's 3,500-Line RL Framework for Training Any AI Agent in Real Environments microsoft/agent-lightning, MIT open source, Python, 18K stars. Three components (Trainer/API Gateway/Rollout Controller), zero agent code changes, trains with real tool ha",
+        "score": 0.4803164
+      },
+      {
+        "article_id": "ornith-1-coding-agent-model-mac-mini-local-inference",
+        "title": "Ornith-1.0：自改进 Coding Agent 模型，9B 打 35B，Mac mini 本地跑 60 t/s",
+        "url": "/blog/ornith-1-coding-agent-model-mac-mini-local-inference/",
+        "language": "zh",
+        "excerpt": "Ornith-1.0：自改进 Coding Agent 模型，9B 打 35B，Mac mini 本地跑 60 t/s deepreinforce-ai 开源 Ornith-1.0：RL 同时优化脚手架和解答，9B 在 Terminal-Bench 和 NL2Repo 上碾压 Qwen3.5-35B，35B MoE 超过 Qwen3.5-397B。APEX-I-Compact MTP GGUF + 16GB Mac mini 实测 60 t/s，总结/排版远超原版模型，无无限重复问题。 本地模型 Coding Agent Apple Silicon Ma",
+        "score": 0.47645897
+      },
+      {
+        "article_id": "stoa-pluralis-research-mac-rl-fleet-distributed-training",
+        "title": "14 台 Mac 跨越四国做 RL 后训练：Pluralis Research 的 stoa 实验",
+        "url": "/blog/stoa-pluralis-research-mac-rl-fleet-distributed-training/",
+        "language": "zh",
+        "excerpt": "14 台 Mac 跨越四国做 RL 后训练：Pluralis Research 的 stoa 实验 Pluralis Research 开源 stoa：把 RL 后训练的 rollout 生成和梯度更新彻底解耦——巴黎/苏黎世/都柏林/多伦多的 14 台 Mac 用 MLX 生成经验，一张 B200 负责学习，双方只通过 Cloudflare R2 bucket 见面。8B MoE 模型在论文搜索问答任务上 pass@1 从 0.29 涨到 0.63。 分布式训练 RL后训练 Apple Silicon MLX MoE GRPO 去中心化AI Plura",
+        "score": 0.47533387
+      },
+      {
+        "article_id": "infinitediffusion-terrain-generation-guide",
+        "title": "InfiniteDiffusion: One Developer, One Consumer GPU, One SIGGRAPH 2026 Paper",
+        "url": "/blog/infinitediffusion-terrain-generation-guide/",
+        "language": "en",
+        "excerpt": "InfiniteDiffusion: One Developer, One Consumer GPU, One SIGGRAPH 2026 Paper Alexander Goslin, an independent researcher and Walmart software engineer, published InfiniteDiffusion at SIGGRAPH 2026 using a single RTX 3090 Ti. The algorithm reformulates diffusion sampling as lazy an",
+        "score": 0.47341764
+      },
+      {
+        "article_id": "nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent",
+        "title": "NVIDIA VoiceChat 11B: The First Open-Source Full-Duplex Speech Agent with Tool Calling",
+        "url": "/blog/nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent/",
+        "language": "en",
+        "excerpt": "NVIDIA VoiceChat 11B: The First Open-Source Full-Duplex Speech Agent with Tool Calling NVIDIA NemotronLabs' open-source 11B end-to-end full-duplex speech model, released 2026-08-03, OpenMDW 1.1 research license. Unified architecture for simultaneous streaming speech understanding",
+        "score": 0.47220162
+      }
+    ]
+  }
+}
