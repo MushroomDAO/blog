@@ -29,5 +29,5 @@ Finalcoverseed8134passedmachineandmanualview; all3finalillustrationsmanuallyinsp
 
 ## Published verification
 Blog deployed282ac7be and canonical article200,carousel1/list2,5images200. M2draftcreated once and complete remote body/image/metadata/cover/sourceURL/comments verified; seewechat-verification.json. No massbroadcast.
-Both semantic records accepted by Vectorize(success=True), manifestupdated. Initial searchandget_by_idsstillnotvisible; indexinfo processingwatermark06:12:28Z is beforethis16:31write. This demonstrates pendingpropagation, NOT evidenceof10hourmutationdelay:therewere nootherwritesinthatinterval. Do notclaimsearchhitormetadataverificationuntilobserved. No duplicateupsert issued.
+Both semantic records accepted by Vectorize(success=True), manifestupdated. Initial searchandget_by_idsstillnotvisible; indexinfo processingwatermark06:12:28Z is beforethis16:31write. This demonstrates pendingpropagation, NOT evidenceof10hourmutationdelay:thewatermarkalonecannotestablishtheageofthismutation. Do notclaimsearchhitormetadataverificationuntilobserved. No duplicateupsert issued.
 KBsource/finalprojectminedandreadbackverified,includingactualmediaIDandCPU-onlyscope. Unrelateddirtyoutputs preserved.
