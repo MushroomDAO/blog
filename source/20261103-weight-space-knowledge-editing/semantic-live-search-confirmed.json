@@ -1,0 +1,87 @@
+{
+  "query": "Weight-Space Programming and Knowledge Editing ROME sparse patch",
+  "result": {
+    "results": [
+      {
+        "article_id": "weight-space-programming-knowledge-editing",
+        "title": "Weight-Space Programming and Knowledge Editing",
+        "url": "/blog/weight-space-programming-knowledge-editing/",
+        "language": "en",
+        "excerpt": "Weight-Space Programming and Knowledge Editing A source-based guide to weight-space programming and knowledge editing, covering ROME, real evaluation limits, open repositories, and safe deployment decisions. Knowledge Editing ROME Weight-Space Programming LLM 模型评测 What did Weight",
+        "score": 0.74309593
+      },
+      {
+        "article_id": "cordiverse-cordis-spatiotemporal-composability-plugin-paradigm-paper",
+        "title": "cordiverse-cordis-spatiotemporal-composability-plugin-paradigm-paper",
+        "url": "/blog/cordiverse-cordis-spatiotemporal-composability-plugin-paradigm-paper/",
+        "language": "en",
+        "excerpt": "cordiverse-cordis-spatiotemporal-composability-plugin-paradigm-paper cordiverse/paper is the academic preprint (2026-08-13) behind Cordis, the framework powering DeepSeek Harness. It proposes a 'Spatiotemporal Composability' programming paradigm: Temporal Composability ensures a ",
+        "score": 0.5007268
+      },
+      {
+        "article_id": "framepack-lllyasviel-long-video-diffusion-guide",
+        "title": "FramePack：ControlNet 作者开源，6G 显存生成 1 分钟视频，F1+P1 双版抗漂移",
+        "url": "/blog/framepack-lllyasviel-long-video-diffusion-guide/",
+        "language": "zh",
+        "excerpt": "FramePack：ControlNet 作者开源，6G 显存生成 1 分钟视频，F1+P1 双版抗漂移 ControlNet 作者 lllyasviel（张吕敏）开源 FramePack（17K⭐，Apache 2.0），独创帧上下文打包技术将历史帧压缩为恒定长度，算力开销不随视频变长增长，6GB 显存可跑 13B 大模型生成 60 秒 30fps 视频。F1 前向生成，P1 新增规划抗漂移+历史离散化，大幅抑制超长视频画面跑偏。Gradio GUI，Windows 一键整合包，RTX 4090 开启 TeaCache 可达 1.5 秒/帧。 视频生成",
+        "score": 0.49757737
+      },
+      {
+        "article_id": "cheese-paper-creative-writing-editor",
+        "title": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布",
+        "url": "/blog/cheese-paper-creative-writing-editor/",
+        "language": "zh",
+        "excerpt": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布 Cheese Paper 是一款专为小说创作设计的离线开源编辑器，场景管理、角色卡、世界观数据库三合一，文件格式采用 Markdown+TOML，兼容任意文本编辑器和同步工具。GPLv3，无订阅，无遥测。v1.0.0 于 2026-05-30 发布，已上架 Flathub。 创意写作 文本编辑器 小说 开源 离线优先 Markdown 写作工具 GPLv3 Cheese Paper 核心设计：笔记和稿件并排可见 文件格式：Markdown + TOML，不绑",
+        "score": 0.49284765
+      },
+      {
+        "article_id": "deepseek-v4-flash-vision-exp-multimodal-agent-dspark",
+        "title": "DeepSeek-V4-Flash-Vision-Exp: Bolting on Vision Without Losing Text Agent Ability",
+        "url": "/blog/deepseek-v4-flash-vision-exp-multimodal-agent-dspark/",
+        "language": "en",
+        "excerpt": "DeepSeek-V4-Flash-Vision-Exp: Bolting on Vision Without Losing Text Agent Ability The first experimental multimodal model in the DeepSeek-V4 family, published Aug 31 — 184k downloads and 651 likes in five days, MIT. Vision modules were added to the DeepSeek-V4-Flash architecture ",
+        "score": 0.49039683
+      },
+      {
+        "article_id": "agent-lightning-microsoft-research-rl-framework-train-agents-real-harness",
+        "title": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习",
+        "url": "/blog/agent-lightning-microsoft-research-rl-framework-train-agents-real-harness/",
+        "language": "zh",
+        "excerpt": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习 microsoft/agent-lightning，MIT 开源，Python，18K stars。三个组件（Trainer/API Gateway/Rollout Controller），Agent 代码零改动，用真实工具链训练。Qwen3.5-9B 只用 6K 样本，SWE-bench Verified 从 41.8% 涨到 56.4%（+14.6pp）。支持 AutoGen、LangChain、OpenAI Agents SDK 及任意",
+        "score": 0.48940694
+      },
+      {
+        "article_id": "program-as-weights-paw-fuzzy-functions-guide",
+        "title": "PAW：0.6B 跑出 32B 效果，用「编译」替代 API 调用的新范式",
+        "url": "/blog/program-as-weights-paw-fuzzy-functions-guide/",
+        "language": "zh",
+        "excerpt": "PAW：0.6B 跑出 32B 效果，用「编译」替代 API 调用的新范式 Program-as-Weights（PAW）提出「模糊函数编程」新范式：用 4B 编译器将自然语言描述编译成 LoRA 适配器，再用冻结的 0.6B 解释器本地运行。0.6B 解释器 + PAW 程序在 FuzzyBench 上超过 Qwen3-32B，内存只用 1/50，MacBook M3 跑 30 tokens/s。HuggingFace 今日论文第一。 PAW 模糊函数 LoRA 本地推理 小模型 Qwen3 编译器 神经程序 从一个真实的开发痛点开始 PAW 的核心思",
+        "score": 0.48892272
+      },
+      {
+        "article_id": "qwen38-27b-obliterated-v3-abliteration-blending-mmlu-tradeoff",
+        "title": "消融不是越彻底越好：Qwen3.8-27B-OBLITERATED 三代手术的取舍曲线",
+        "url": "/blog/qwen38-27b-obliterated-v3-abliteration-blending-mmlu-tradeoff/",
+        "language": "zh",
+        "excerpt": "消融不是越彻底越好：Qwen3.8-27B-OBLITERATED 三代手术的取舍曲线 同一个 Qwen3.8-27B 底座的另一条消融路线，96.9 万下载、1093 likes，Apache-2.0。真正值得看的是它把 V1/V2/V3 三代方法和代价全公开了：V1 单次激进 SVD，MMLU 掉 6.0pp；V2 把 SVD 和 LEACE 两种手术按 60/40 混合互相抵消弱点，只掉 0.28pp，但软性安全说教还在；V3 用迭代堆叠加定向语料把软回避也清了，代价回升到 2.12pp。也就是说 V2 和 V3 不是升级关系，是曲线上两个不同的取",
+        "score": 0.48878708
+      },
+      {
+        "article_id": "knowhere-2-document-parsing-agentic-rag",
+        "title": "Knowhere 2.0: Dual-Track Document Parsing + Hierarchy-Native Memory for Structure-Aware RAG",
+        "url": "/blog/knowhere-2-document-parsing-agentic-rag/",
+        "language": "en",
+        "excerpt": "Knowhere 2.0: Dual-Track Document Parsing + Hierarchy-Native Memory for Structure-Aware RAG Knowhere by Ontos-AI — 3.5k stars, open-sourced 2026-05-07. Version 2.0 (September 2026) introduces dual-track parsing: Vision Page + Text Track converge into a hierarchy-native memory sch",
+        "score": 0.48812386
+      },
+      {
+        "article_id": "learning-from-failure-inference-time-gui-agent-improvement-stanford",
+        "title": "Don't Waste Failures! Stanford Boosts GUI Agents 15% at Inference Time by Mining Failed Trajectories (ECCV 2026)",
+        "url": "/blog/learning-from-failure-inference-time-gui-agent-improvement-stanford/",
+        "language": "en",
+        "excerpt": "Don't Waste Failures! Stanford Boosts GUI Agents 15% at Inference Time by Mining Failed Trajectories (ECCV 2026) Stanford ECCV 2026 paper: Feed failed agent trajectories to Claude 4.5 for diagnosis, auto-generate code patches injected at inference time. OSWorld: 42.3%→48.9% (+15.",
+        "score": 0.48616183
+      }
+    ]
+  }
+}
