@@ -1,0 +1,15 @@
+
+==================================== ERRORS ====================================
+______ ERROR collecting auto_ontology/utils/tests/test_sql_identifiers.py ______
+ImportError while importing test module '/private/tmp/auto-ontology-research/auto_ontology/utils/tests/test_sql_identifiers.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+auto_ontology/utils/__init__.py:11: in <module>
+    from auto_ontology.utils.embedding import get_embed_params
+auto_ontology/utils/embedding.py:32: in <module>
+    import httpx
+E   ModuleNotFoundError: No module named 'httpx'
+=========================== short test summary info ============================
+ERROR auto_ontology/utils/tests/test_sql_identifiers.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.06s
