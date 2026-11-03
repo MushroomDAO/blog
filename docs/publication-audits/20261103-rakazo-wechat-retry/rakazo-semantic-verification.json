@@ -1,0 +1,87 @@
+{
+  "query": "Rakazo persistent AI teammates computer memory schedule",
+  "results": {
+    "results": [
+      {
+        "article_id": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
+        "title": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
+        "url": "/blog/ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust/",
+        "language": "en",
+        "excerpt": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust akitaonrails/ai-memory is a Rust-based long-term memory solution for AI coding agents — 3,953 stars, MIT license. Core capability: lifecycle hooks auto-capture the essence of each Claude Code/Codex/Cursor session;",
+        "score": 0.5678185
+      },
+      {
+        "article_id": "metapact-ai-girlfriend-setup-guide",
+        "title": "MetaPact：一键部署专属 AI 女友，她会记得你昨天几点到家",
+        "url": "/blog/metapact-ai-girlfriend-setup-guide/",
+        "language": "zh",
+        "excerpt": "MetaPact：一键部署专属 AI 女友，她会记得你昨天几点到家 开源的赛博伴侣养成计划（MIT），基于 OpenClaw/HermesAgent，AI 女友野木奈子 Nako 有长期记忆、情绪系统、语音/自拍能力，可接入微信/飞书/Telegram。本文是从零部署、定制专属 AI 伴侣的完整指南。 AI女友 赛博伴侣 开源 OpenClaw HermesAgent 长期记忆 Agent 情感计算 她会记得你 MetaPact 是什么？ 四种人格模板，选一个起点 可爱粘人型 · Cute 高冷克制型 · Cool 成熟理性型 · Mature 活泼调皮",
+        "score": 0.55273277
+      },
+      {
+        "article_id": "dense-mem-governed-ai-memory-mcp-evidence-provenance",
+        "title": "Dense-Mem 调研：AI 记忆不该是「想存就存」，而该有证据链和权限",
+        "url": "/blog/dense-mem-governed-ai-memory-mcp-evidence-provenance/",
+        "language": "zh",
+        "excerpt": "Dense-Mem 调研：AI 记忆不该是「想存就存」，而该有证据链和权限 调研自托管 MCP 记忆服务 Dense-Mem：核心理念是「受治理的 AI 记忆」，模型写入的是一份「提案」，真正能不能变成持久状态由服务端的确定性策略和封闭 schema 校验决定；证据精确、持久、只增不删，生命周期变更只改变有效状态，从不抹除溯源链；关系只有在证据支持「合格」时才成为活跃的图边，未决的候选和假设默认不会被召回。Go 1.26 + PostgreSQL/pgvector 做持久权威，Redis 只做协调。Apache-2.0，36 star，配套研究预印本。 ",
+        "score": 0.5438
+      },
+      {
+        "article_id": "langchain-wiki-memory-developer-analysis",
+        "title": "Wiki Memory: The Agent Memory Pattern LangChain CEO Predicts Will Win — Developer Deep Dive",
+        "url": "/blog/langchain-wiki-memory-developer-analysis/",
+        "language": "en",
+        "excerpt": "Wiki Memory: The Agent Memory Pattern LangChain CEO Predicts Will Win — Developer Deep Dive Harrison Chase (LangChain CEO) proposes wiki memory as the emerging standard for AI agent long-term memory — not RAG, not conversation history, but an agent-maintained compressed knowledge",
+        "score": 0.53980607
+      },
+      {
+        "article_id": "neural-imprint-atomgradient-continual-learning-device-ai",
+        "title": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始",
+        "url": "/blog/neural-imprint-atomgradient-continual-learning-device-ai/",
+        "language": "zh",
+        "excerpt": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始 质子梯度（AtomGradient）发布 Neural Imprint 白皮书 v2（2026-09-17），提出让已部署 AI 在持续使用中积累经验、更新模型状态，无需重新训练。三个 Gen-1 组件：RPP（激活空间用户建模）、DSR（稀疏注意力缓存管理）、FrogJump（层跳过加速）。实测：90B 模型在手机上跑 200 轮对话峰值 5.5GB，语音合成中位延迟 32.28ms。CC BY-NC-ND 4.0。 continual-learning on-d",
+        "score": 0.5316433
+      },
+      {
+        "article_id": "memory-harness-local-first-programmable-auditable-long-term-memory",
+        "title": "Memory Harness：本地优先、可编排、可审计的 AI 长期记忆工作台",
+        "url": "/blog/memory-harness-local-first-programmable-auditable-long-term-memory/",
+        "language": "zh",
+        "excerpt": "Memory Harness：本地优先、可编排、可审计的 AI 长期记忆工作台 luoyif/memory-harness 开源，六层可追溯记忆架构（Evidence→能力资产），本地混合 RAG，24 个 MCP 工具，多 AI 协作但草稿彼此隔离，完全本地无云依赖。 AI memory MCP local-first RAG agents open source long-term memory knowledge management AI 的记忆问题一直没有被认真解决 六层可追溯记忆架构 混合 RAG，完全本地无依赖 多 AI 协作，但草稿彼此隔",
+        "score": 0.5296631
+      },
+      {
+        "article_id": "exxperts-local-first-ai-agent-approval-gated-memory-teardown",
+        "title": "exxperts, Torn Down: A Local-First AI Colleague Whose Memory Needs Your Approval — and How Local \"Nothing Leaves Your Machine\" Really Is",
+        "url": "/blog/exxperts-local-first-ai-agent-approval-gated-memory-teardown/",
+        "language": "en",
+        "excerpt": "exxperts, Torn Down: A Local-First AI Colleague Whose Memory Needs Your Approval — and How Local \"Nothing Leaves Your Machine\" Really Is exxperts is an Apache-2.0 desktop AI assistant (357 stars) open-sourced by German consultancy EXXETA: memory lives in local Markdown files, eve",
+        "score": 0.5235668
+      },
+      {
+        "article_id": "mempalace-ai-memory-palace",
+        "title": "MemPalace：重塑 AI 记忆的记忆宫殿",
+        "url": "/blog/mempalace-ai-memory-palace/",
+        "language": "zh",
+        "excerpt": "MemPalace：重塑 AI 记忆的记忆宫殿 MemPalace 是一个开源 AI 长期记忆系统，从古希腊记忆宫殿技术中汲取灵感，解决了当前 AI 助手会话后失忆的问题。 ai-memory open-source local-ai privacy milla-jovovich 1. 核心理念：古老的\"记忆宫殿\"技术 2. 技术亮点：极致的隐私与效率 🏠 本地优先，零成本 🗜️ AAAK 压缩协议 ⏰ 事实的时态性 3. 性能表现 总结",
+        "score": 0.5175214
+      },
+      {
+        "article_id": "mimo-code-vibe-coding-era",
+        "title": "14天、5人，他们真的把AI编程助手整出来了",
+        "url": "/blog/mimo-code-vibe-coding-era/",
+        "language": "zh",
+        "excerpt": "14天、5人，他们真的把AI编程助手整出来了 罗福莉在推上官宣 MiMo Code 诞生——14天，5个人，一场 vibe-coding 之旅。加上 k佬 两天喝完一箱红牛重构 Kimi Code，2026年的AI编程工具战争，已经用「天」为单位在卷了。 AI编程 MiMo Code vibe-coding 终端助手 大模型 开源 一条推特，一个时代的缩影 就在这之前，k佬在汤泉喝了一箱红牛 MiMo Code 到底带来了什么？ 内置 MiMo-V2.5：性能直追 Claude Sonnet 4.6 的开源模型 三重持久记忆：告别\"从头来\" 三种工作模式",
+        "score": 0.51603734
+      },
+      {
+        "article_id": "tencentdb-agent-memory-team-level-symbolic-layered-memory",
+        "title": "TencentDB Agent Memory: Tencent Cloud's Open-Source Team-Level Agent Memory System",
+        "url": "/blog/tencentdb-agent-memory-team-level-symbolic-layered-memory/",
+        "language": "en",
+        "excerpt": "TencentDB Agent Memory: Tencent Cloud's Open-Source Team-Level Agent Memory System TencentCloud AI Agent team's open-source memory system, 17.9k stars, TypeScript. Core design: symbolic short-term memory (Mermaid state canvas replaces verbose tool logs, −61.38% token usage) + lay",
+        "score": 0.5159206
+      }
+    ]
+  }
+}
