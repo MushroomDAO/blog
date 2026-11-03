@@ -1,0 +1,17 @@
+❌ Failed to get access token: Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.71.95 ipv6 ::ffff:223.204.71.95, not in whitelist rid: 6ae93d68-287873b0-5f788bab"}
+⚠️  公众号账本没查成（Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.71.95 ipv6 ::ffff:223.204.71.95, not in whitelist rid: 6ae93d68-287873b0-5f788bab"}）
+   本次结果不完整，别当成完整查重。
+账本：blog 945 篇 + 公众号草稿箱 0 条 + 本地发布记录 927 条 + MemPalace 3709 抽屉
+
+── 查：https://aisafetyhot.com/
+   已读取的本地账本未命中；公众号远程账本不可用
+
+── 查：https://github.com/wuyoscar/AISafetyHot
+   已读取的本地账本未命中；公众号远程账本不可用
+
+── 查：AISafetyHot
+   已读取的本地账本未命中；公众号远程账本不可用
+
+```dedup-result
+{"duplicate":false,"localLedgersRead":true,"wechatError":"Token error: {\"errcode\":40164,\"errmsg\":\"invalid ip 223.204.71.95 ipv6 ::ffff:223.204.71.95, not in whitelist rid: 6ae93d68-287873b0-5f788bab\"}"}
+```

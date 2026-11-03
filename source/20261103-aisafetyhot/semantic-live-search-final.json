@@ -1,0 +1,87 @@
+{
+  "query": "AI Safety HOT网站介绍：追踪安全热点，也要核对原始证据",
+  "result": {
+    "results": [
+      {
+        "article_id": "aisafetyhot-ai-safety-news-guide",
+        "title": "AI Safety HOT网站介绍：追踪安全热点，也要核对原始证据",
+        "url": "/blog/aisafetyhot-ai-safety-news-guide/",
+        "language": "zh",
+        "excerpt": "AI Safety HOT网站介绍：追踪安全热点，也要核对原始证据 AI Safety HOT把AI安全新闻、论文、事件与日报放在一个入口，并通过只读MCP接入智能体。本文介绍网站的浏览路径、适合的用户和使用场景，核对公开归档、内容许可与匿名接口边界，并以一次原文抽查说明：热度、聚合摘要和真实事件不是同一回事。附无需安装的接口检查，以及把情报转成团队评测与行动清单的方法。 AI Safety HOT AI安全 MCP 研究工具 信息核验 AI Safety HOT可以用来做什么？ 哪些人值得收藏这个网站？ 热点排行是否等于风险严重程度？ 一次抽查发现了什",
+        "score": 0.7944335
+      },
+      {
+        "article_id": "shannon-keygraph-ai-pentester-web-api-autonomous-exploit",
+        "title": "Shannon：只报告能证明的漏洞——Keygraph 的 AI 渗透测试 Agent",
+        "url": "/blog/shannon-keygraph-ai-pentester-web-api-autonomous-exploit/",
+        "language": "zh",
+        "excerpt": "Shannon：只报告能证明的漏洞——Keygraph 的 AI 渗透测试 Agent KeygraphHQ/shannon，46,621 stars，AGPL-3.0，TypeScript，2025-09-27 开源。Keygraph 开发的自主 AI 渗透测试工具，专为 Web 应用和 API 白盒测试设计，核心主张是「证明式漏洞报告」——只报告能用 PoC 验证的真实漏洞，拒绝输出推测性告警。多 Agent 架构：源码分析→攻击面侦察→并行漏洞分析（Injection/XSS/SSRF/Auth）→真实 Exploit→报告。npx 一键启动，运行",
+        "score": 0.555161
+      },
+      {
+        "article_id": "postiz-agentic-social-media-scheduling-open-source",
+        "title": "Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？",
+        "url": "/blog/postiz-agentic-social-media-scheduling-open-source/",
+        "language": "zh",
+        "excerpt": "Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？ Postiz 官方 2024 年公告已公开源码地址。本文区分可核实的开源事实与未核实的解雇、营销策划传闻，介绍多平台排期、Agent 接入、自托管边界及可审计发布流程，并纠正旧文对 AGPL 和数据出网的过度概括。 Postiz 开源 社交媒体 AI Agent 自托管 “被炒后泄密”，哪些已经能核实？ 它的产品价值是什么？ Agent 应该如何进入发布流程？ 自托管真的意味着数据不出设备吗？ AGPL 能阻止别人做商业克隆吗？ 常见问题 能免费跑起来吗？ 有 3.9 万星就能证明成熟吗？",
+        "score": 0.546472
+      },
+      {
+        "article_id": "awesome-public-real-time-datasets-streaming-api-bytewax",
+        "title": "Awesome Public Real-Time Datasets: The Best Starting Point for a Streaming Data Project",
+        "url": "/blog/awesome-public-real-time-datasets-streaming-api-bytewax/",
+        "language": "en",
+        "excerpt": "Awesome Public Real-Time Datasets: The Best Starting Point for a Streaming Data Project The Best Starting Point for Real-Time Data Projects: Awesome Public Real-Time Datasets Finance & Crypto (Free) Transportation (Free) Weather, Environment & Earth Science (Free) Cybersecurity (",
+        "score": 0.5451691
+      },
+      {
+        "article_id": "anthropic-threat-intelligence-report-september-2026",
+        "title": "Anthropic 威胁情报报告（2026年9月）：AI 把攻防成本倒置了",
+        "url": "/blog/anthropic-threat-intelligence-report-september-2026/",
+        "language": "zh",
+        "excerpt": "Anthropic 威胁情报报告（2026年9月）：AI 把攻防成本倒置了 Anthropic 公开记录 2025.12-2026.8 间 Claude 被滥用的七大类真实案例：俄罗斯间谍、ShinyHunters 供应链攻击、中国高校漏洞研究、多大洲选举干预……关键结论：AI 正在压平国家级行为者与个人攻击者之间的能力鸿沟。 AI-security threat-intelligence Anthropic cyberattack influence-operations 2026 为什么这份报告值得认真读 网络行动：三个典型案例 GTG-20006（",
+        "score": 0.5449567
+      },
+      {
+        "article_id": "tencent-ai-infra-guard-red-team-platform-mcp-skill-vulnerability-scan",
+        "title": "AI-Infra-Guard：腾讯朱雀实验室的 AI 红队平台——MCP 扫描、Skill 审计、2000+ CVE 规则一体化",
+        "url": "/blog/tencent-ai-infra-guard-red-team-platform-mcp-skill-vulnerability-scan/",
+        "language": "zh",
+        "excerpt": "AI-Infra-Guard：腾讯朱雀实验室的 AI 红队平台——MCP 扫描、Skill 审计、2000+ CVE 规则一体化 腾讯朱雀实验室开源的 AI 红队平台 A.I.G（AI-Infra-Guard），整合 AI 基础设施漏洞扫描（2000+ CVE 规则）、MCP Server 安全检测、Agent Skill 审计（SkillTrustBench T01-T09 九类风险）、越狱评估五大能力。v4.5.2 新增 .pyc 字节码绕过检测和 SkillJack 研究，Black Hat EU 2025 Arsenal 展出。Docker Co",
+        "score": 0.5432063
+      },
+      {
+        "article_id": "neo-chat-local-first-encrypted-sync-mcp-rag-workspace",
+        "title": "Neo Chat：本地优先的 AI 聊天工作台，把「加密跨设备同步」这个硬骨头啃下来了",
+        "url": "/blog/neo-chat-local-first-encrypted-sync-mcp-rag-workspace/",
+        "language": "zh",
+        "excerpt": "Neo Chat：本地优先的 AI 聊天工作台，把「加密跨设备同步」这个硬骨头啃下来了 调研开源项目 Neo Chat：Next.js 16 + React 19 构建的本地优先 AI 聊天工作台，聊天记录/技能/插件配置/记忆/搜索索引/文件默认全部留在浏览器本地，服务端只做受控代理。v2.4.0 新增可选端到端加密的个人保险库，通过 WebDAV 或 S3/MinIO 做跨设备同步，恢复密钥、凭据、本地基线、搜索缓存、向量都不会进远程对象或 ZIP。同时支持多模型供应商、远程 MCP 服务器发现安装、本地 stdio 桥接、参数化 Skill、混合词",
+        "score": 0.54155064
+      },
+      {
+        "article_id": "indexnow-website-push-indexing-guide",
+        "title": "IndexNow 深入指南：普通网站怎样主动通知搜索引擎，又不误把提交当收录",
+        "url": "/blog/indexnow-website-push-indexing-guide/",
+        "language": "zh",
+        "excerpt": "IndexNow 深入指南：普通网站怎样主动通知搜索引擎，又不误把提交当收录 IndexNow 通过主动提交变更 URL，帮助参与服务更快发现网站新增、更新与删除。本文核对最新参与名单、Google 支持边界、验证文件、批量请求与错误码，面向 WordPress、Cloudflare 和静态站给出接入步骤、发布后队列与重试方案，解释通知、抓取、收录与排名的区别，指导站长用真实回执和日志验收效果。 IndexNow SEO 搜索引擎 网站工程 Bing 谁支持它，Google 呢？ 普通网站怎么选接入方式？ 手动接入：从一条 URL 开始 200、202 ",
+        "score": 0.5410928
+      },
+      {
+        "article_id": "anysearch-ai-agent-search-infrastructure",
+        "title": "AnySearch：专为 AI Agent 设计的搜索基础设施，打通金融、法律、学术认证数据源",
+        "url": "/blog/anysearch-ai-agent-search-infrastructure/",
+        "language": "zh",
+        "excerpt": "AnySearch：专为 AI Agent 设计的搜索基础设施，打通金融、法律、学术认证数据源 AnySearch 于 2026 年 5 月 11 日上线，定位 AI 时代搜索基础设施：单一 API 接入 22 个垂直领域、9 种内容类型，覆盖金融终端、法律数据库、学术期刊等需要认证的专业数据源。支持 MCP、Claude Code 集成，20 天内 GitHub 1.9k Star。 AI Agent 搜索基础设施 AnySearch MCP RAG 垂直数据源 Claude Code 企业搜索 AI Agent 搜索的结构性空白 产品架构：一个端点，",
+        "score": 0.5392376
+      },
+      {
+        "article_id": "cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt",
+        "title": "cloudflare/security-audit-skill：20 个 Markdown 文件怎么成了 Cloudflare 内部漏洞扫描器",
+        "url": "/blog/cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt/",
+        "language": "en",
+        "excerpt": "安全 AI Agent Claude Code Cloudflare 漏洞扫描 开源拆解 cloudflare/security-audit-skill: How 20 Markdown Files Became Cloudflare's Internal Vulnerability Scanner Project Background First Counterintuitive Finding: It's Not a Scanning Tool The Six-Phase Workflow: The Finder Never Validates It",
+        "score": 0.5389519
+      }
+    ]
+  }
+}
