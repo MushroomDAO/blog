@@ -1,0 +1,87 @@
+{
+  "query": "HyperQwen拆解：24GB显卡跑Qwen3.8-27B，快在哪里、Mac能不能用？",
+  "result": {
+    "results": [
+      {
+        "article_id": "qwen38-27b-quasar-nvfp4-mac-mlx-install-guide",
+        "title": "Qwen3.8-27B QUASAR-NVFP4：最强 4-bit QAT 量化详解 + Mac M1 Max 64GB 完整安装指南",
+        "url": "/blog/qwen38-27b-quasar-nvfp4-mac-mlx-install-guide/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-27B QUASAR-NVFP4：最强 4-bit QAT 量化详解 + Mac M1 Max 64GB 完整安装指南 社区发布 QUASAR-QAT/Qwen3.8-27B-QUASAR-NVFP4（19.7GB，全层 W4A4）——最小、质量最高的 NVFP4 版本。但 NVFP4 需要 NVIDIA Blackwell GPU，Mac 无法直接运行。本文给出 Mac M1 Max 64GB 的最佳替代方案：MLX 8bit（推荐）和 GGUF/Ollama 完整安装步骤。 Qwen3.8-27B QUASAR-QAT NVFP4 M",
+        "score": 0.6173331
+      },
+      {
+        "article_id": "qwen-image-2-1-unsloth-fp8-gguf-local-deploy",
+        "title": "Qwen-Image-2.1 本地部署：Unsloth FP8/GGUF，6GB 显存能跑，Mac 16GB 统一内存也行",
+        "url": "/blog/qwen-image-2-1-unsloth-fp8-gguf-local-deploy/",
+        "language": "zh",
+        "excerpt": "Qwen-Image-2.1 本地部署：Unsloth FP8/GGUF，6GB 显存能跑，Mac 16GB 统一内存也行 Qwen-Image-2.1 的本地部署门槛被 Unsloth 打下来了。FP8 + 钉住内存 offload：6-8GB 显存即可运行，推理速度<2倍损耗。GGUF 量化版：Mac 16GB 统一内存可用，llama.cpp/Unsloth Desktop 跑。注意：GGUF 只是 denoiser，还需配 VAE 和 Qwen3-VL 文本编码器。INT8 精度优于 FP8（LPIPS 更低），推荐默认 INT8。本文给出三种路",
+        "score": 0.6165077
+      },
+      {
+        "article_id": "airllm-70b-inference-4gb-gpu-layer-streaming",
+        "title": "AirLLM：4GB 显存跑 70B 大模型，无需量化",
+        "url": "/blog/airllm-70b-inference-4gb-gpu-layer-streaming/",
+        "language": "zh",
+        "excerpt": "AirLLM：4GB 显存跑 70B 大模型，无需量化 lyogavin 开源的大模型极限推理工具，30k stars，Apache 2.0。通过逐层流式加载，在单张 4GB 显卡上运行 70B 模型，无需量化/蒸馏/剪枝。Kimi K3（2.8T）3.72GB、DeepSeek-V3（671B）约 12GB、Qwen3-235B 约 3GB。v3.0 新增 FP8 支持。支持 CUDA、Apple Silicon（macOS），同一 AutoModel 接口覆盖所有主流模型。 本地推理 大模型 显存优化 AppleSilicon DeepSeek Qw",
+        "score": 0.60931915
+      },
+      {
+        "article_id": "edge0-35b-a3b-ssd-expert-offload-prerouter-mac",
+        "title": "Edge0-35B-A3B 拆解：35B MoE「3GB 内存跑 15 tok/s」，靠的是砍掉一半专家和预测路由",
+        "url": "/blog/edge0-35b-a3b-ssd-expert-offload-prerouter-mac/",
+        "language": "zh",
+        "excerpt": "Edge0-35B-A3B 拆解：35B MoE「3GB 内存跑 15 tok/s」，靠的是砍掉一半专家和预测路由 Edge0-35B-A3B 把 Qwen3.5-35B-A3B 做成 4-bit 专家放 SSD、按需读入：官方称峰值内存 2.9GiB、M4 Pro 24GB 上 14.9–17.7 tok/s、质量比 fp16 低 3.9 分。拆开看，它把每 token 激活专家从 8 个减到 4 个，并用 prerouter 预测结果直接替代原路由；3GB 只算 MLX 分配器峰值，不含页缓存。我们在 16GB M4 Mac mini 上实测 SSD",
+        "score": 0.60567486
+      },
+      {
+        "article_id": "hauhaucs-qwen3-8-27b-gguf-fastmtp-speculative-decoding-kp-quant",
+        "title": "同一个 27B，换条路跑：HauhauCS 的 GGUF 版用 FastMTP 投机解码把生成速度拉到 3 倍",
+        "url": "/blog/hauhaucs-qwen3-8-27b-gguf-fastmtp-speculative-decoding-kp-quant/",
+        "language": "zh",
+        "excerpt": "同一个 27B，换条路跑：HauhauCS 的 GGUF 版用 FastMTP 投机解码把生成速度拉到 3 倍 HauhauCS/Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF 是 Qwen3.8-27B 的 GGUF 量化发布，1048 likes、171 万次下载。两个技术点值得看：一是 K_P「完美」量化——按模型做针对性分析选择性保质，体积只多 5-15% 却相当于提升一到两个量化档；二是 FastMTP，一个 903MB 的 32K 草稿旁车，配合打过补丁的 llama.cpp，文档生成最高 3.02 倍、",
+        "score": 0.60447204
+      },
+      {
+        "article_id": "nex-n2-5-mini-agentic-moe-mac-local-memory-guide",
+        "title": "Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？",
+        "url": "/blog/nex-n2-5-mini-agentic-moe-mac-local-memory-guide/",
+        "language": "zh",
+        "excerpt": "Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？ Nex-N2.5-mini 是 Nex-AGI 9 月 8 日开源的 Agent 模型，Apache-2.0，35.1B 总参 MoE、按权重头部推算每 token 约 2.95B 激活，底座是 Qwen3.5-35B-A3B-Base。本文按社区量化体积推算 Mac 内存门槛：32GB 起步能跑 4-bit，48GB 才宽裕；并对照同底座 Qwen、云端价格和 Claude Code/OpenCode 接入方式。 Nex-N2.5 AI Ag",
+        "score": 0.60080713
+      },
+      {
+        "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+        "title": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行",
+        "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行 OrcaRouter 发布的 Qwen3.8-27B 消融对齐（abliterated）MLX 量化版本，672 likes，trending。基于 Qwen3.8-27B —— 一个 64 层混合架构模型（48 层 Gated DeltaNet 线性注意力 + 每 4 层一个全注意力层），原生视觉语言塔，262K 上下文，MTP 头。提供 2/4/6/8-bit 四个精度（affine 量化，grou",
+        "score": 0.59827113
+      },
+      {
+        "article_id": "k2-horizon-mova-36b-a4b-mac-local-memory-guide",
+        "title": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？",
+        "url": "/blog/k2-horizon-mova-36b-a4b-mac-local-memory-guide/",
+        "language": "zh",
+        "excerpt": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？ K2-Horizon-MoVA-36B-A4B 是 MBZUAI 基础模型研究院（IFM）9 月初开源的 Apache-2.0 纯文本 MoE，37.44B 总参、按权重头部推算每 token 约 4.66B 激活，把注意力的 V 投影换成 64 选 4 的专家。自报 Terminal-Bench 2.1 为 58.6。它的 KV 缓存每 token 192KB，是 Qwen3.5 同档的约 10 倍。Mac 上 32GB",
+        "score": 0.59806424
+      },
+      {
+        "article_id": "turbo-fieldfare-gemma4-26b-apple-silicon-2gb",
+        "title": "TurboFieldfare: Running Gemma 4 26B on an 8GB MacBook Using Only 2GB of Memory",
+        "url": "/blog/turbo-fieldfare-gemma4-26b-apple-silicon-2gb/",
+        "language": "en",
+        "excerpt": "TurboFieldfare: Running Gemma 4 26B on an 8GB MacBook Using Only 2GB of Memory An open-source Swift + Metal runtime that runs Gemma 4 26B-A4B on any Apple Silicon Mac, including 8 GB models. Core idea: keep only the 1.35 GB common weights resident, stream the 8 experts needed per",
+        "score": 0.5877789
+      },
+      {
+        "article_id": "qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide",
+        "title": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上",
+        "url": "/blog/qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上 unsloth/Qwen3.8-Flash-Next-GGUF 是 Qwen4 架构预览版（125B 总参、6B 激活，外加 51B n-gram 嵌入）的 GGUF 量化，110 万次下载。我们逐个读了 10 个量化档的 GGUF 张量头：所谓 1-bit 只压了专家的 gate/up 投影，28.8GB 的 n-gram 表至少是 4-bit，所以最小档仍有 72.5GB。好在",
+        "score": 0.58595026
+      }
+    ]
+  }
+}
