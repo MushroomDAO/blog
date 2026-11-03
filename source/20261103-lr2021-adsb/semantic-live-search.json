@@ -1,0 +1,87 @@
+{
+  "query": "ESP32 LoRa板真能收飞机信号？拆解W12与LR2021的ADS-B实验",
+  "result": {
+    "results": [
+      {
+        "article_id": "motonav-round-screen-navigation",
+        "title": "MotoNav：Android 手机配 ESP32-S3 圆屏，自己做一个导航副屏",
+        "url": "/blog/motonav-round-screen-navigation/",
+        "language": "zh",
+        "excerpt": "MotoNav：Android 手机配 ESP32-S3 圆屏，自己做一个导航副屏 MotoNav 将 Android 手机的定位、算路、地图与天气信息连接到 ESP32-S3 圆屏。本文核对支持板型、蓝牙分工、个人打包与签名、地图天气凭据、非商业许可及展示素材性质，并记录三组纯 Java 逻辑检查的实际结果，说明为什么源码可见不等于允许商用、桌面演示也不等于道路验证，帮助爱好者判断复现门槛。 MotoNav ESP32-S3 Android 嵌入式 导航 小圆屏自己导航，还是手机的副屏？ 支持什么硬件，有哪些可见功能？ 为什么打包之前，先理解包名和签名",
+        "score": 0.55891705
+      },
+      {
+        "article_id": "btl-3-lora-adapter-qwen-programming-agent-tool-calling-training",
+        "title": "934MB Adapter, 27B Base, 95% Code Pass Rate: How BTL-3's LoRA Was Trained",
+        "url": "/blog/btl-3-lora-adapter-qwen-programming-agent-tool-calling-training/",
+        "language": "en",
+        "excerpt": "934MB Adapter, 27B Base, 95% Code Pass Rate: How BTL-3's LoRA Was Trained LoRA PEFT Agent Tool Use Fine-tuning Qwen RL 934 MB Adapter, 27B Base, 95% Code Pass Rate — How BTL-3 Was Built with LoRA The Math Behind LoRA BTL-3's LoRA Configuration Reinforcement Learning Training: RL-",
+        "score": 0.53007716
+      },
+      {
+        "article_id": "ruview-wifi-densepose-esp32-through-wall-sensing-pose-breathing-heart-rate",
+        "title": "RuView：9.4 万星的 WiFi DensePose，不开摄像头隔墙感知呼吸和心率，姿态追踪数字请打折",
+        "url": "/blog/ruview-wifi-densepose-esp32-through-wall-sensing-pose-breathing-heart-rate/",
+        "language": "zh",
+        "excerpt": "RuView：9.4 万星的 WiFi DensePose，不开摄像头隔墙感知呼吸和心率，姿态追踪数字请打折 ruvnet/RuView，MIT，Rust，94K stars。ESP32-S3 读取 CSI 信号，实现隔墙人体感知：存在检测 82.3%、呼吸 6-30 BPM、心跳 40-120 BPM 均经验证；但宣传中的 17 关键点姿态追踪 PCK@20 实测仅 3%（目标 35%），92.9% 准确率数字已撤回。完整拆解学术源头、技术管道、硬件需求和隐私风险。 WiFi-sensing CSI ESP32 pose-estimation priv",
+        "score": 0.5237109
+      },
+      {
+        "article_id": "phonon-2-parakeet-2bit-qat-mac-asr-test",
+        "title": "Phonon-2 实测：164MB 的 2.1 比特 Parakeet，英文听写够用，中文完全用不了",
+        "url": "/blog/phonon-2-parakeet-2bit-qat-mac-asr-test/",
+        "language": "zh",
+        "excerpt": "Phonon-2 实测：164MB 的 2.1 比特 Parakeet，英文听写够用，中文完全用不了 Phonon-2 是 Fermion Research 把 NVIDIA Parakeet TDT 0.6B v3 量化感知训练到约 2.1 比特（五值）的英文 ASR，下载 164MB，官方自跑 Open ASR 七集平均 WER 5.21%（原版 4.96%）。我们在 16GB M4 Mac mini 上实测：解码约 100 倍实时，53 秒英文朗读归一化后 163 词错 1 个，但峰值内存 3.8GB 起步，中文输出成乱码拼音。 Phonon-2 ",
+        "score": 0.5218779
+      },
+      {
+        "article_id": "stoa-pluralis-research-mac-rl-fleet-distributed-training",
+        "title": "14 台 Mac 跨越四国做 RL 后训练：Pluralis Research 的 stoa 实验",
+        "url": "/blog/stoa-pluralis-research-mac-rl-fleet-distributed-training/",
+        "language": "zh",
+        "excerpt": "14 台 Mac 跨越四国做 RL 后训练：Pluralis Research 的 stoa 实验 Pluralis Research 开源 stoa：把 RL 后训练的 rollout 生成和梯度更新彻底解耦——巴黎/苏黎世/都柏林/多伦多的 14 台 Mac 用 MLX 生成经验，一张 B200 负责学习，双方只通过 Cloudflare R2 bucket 见面。8B MoE 模型在论文搜索问答任务上 pass@1 从 0.29 涨到 0.63。 分布式训练 RL后训练 Apple Silicon MLX MoE GRPO 去中心化AI Plura",
+        "score": 0.5206817
+      },
+      {
+        "article_id": "aether-small-model-cpu-ops-agent",
+        "title": "No GPU Needed? Small Models Run Fast on CPU: A Full Breakdown of the Aether Small-Model Ops Agent (Reposted)",
+        "url": "/blog/aether-small-model-cpu-ops-agent/",
+        "language": "en",
+        "excerpt": "No GPU Needed? Small Models Run Fast on CPU: A Full Breakdown of the Aether Small-Model Ops Agent (Reposted) Reposted from Alibaba Cloud Developer Community (author: tiger). The Aether project targets edge / no-GPU / private deployment: a ≤9B small model (qwen2.5:1.5b) + RAG (Chr",
+        "score": 0.50202703
+      },
+      {
+        "article_id": "opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx",
+        "title": "opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx",
+        "url": "/blog/opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx/",
+        "language": "en",
+        "excerpt": "opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx akdeb/OpenToys is the local-first version of ElatoAI: ESP32-S3 as the hardware terminal, Apple Silicon Mac handles all inference (Whisper Turbo ASR + Qwen3-TTS/Chatterbox + MLX LLMs) over WebSocket via the toy's own WiFi",
+        "score": 0.5019816
+      },
+      {
+        "article_id": "s1-deepresearch-long-horizon-research-agent",
+        "title": "32B 小模型逼近 GPT-5.2：S1-DeepResearch 如何用数据而非参数训练长程研究 Agent",
+        "url": "/blog/s1-deepresearch-long-horizon-research-agent/",
+        "language": "zh",
+        "excerpt": "32B 小模型逼近 GPT-5.2：S1-DeepResearch 如何用数据而非参数训练长程研究 Agent ScienceOne 开源 S1-DeepResearch-32B，能连续调用工具 150+ 轮、跨 20 个基准逼近 GPT-5.2/Claude-4.6/GLM-5，却只用 SFT、不用 RL。它的秘密是一套图谱驱动的轨迹构造范式：知识图谱出题、Agent 跑轨迹、五维验证过滤。本文拆解方法、跑分，并梳理业界对深度研究 Agent 的反思。 AI Agent Deep Research 深度研究 长程任务 轨迹数据 Qwen3 开源模型 S",
+        "score": 0.4970159
+      },
+      {
+        "article_id": "x2streaming-asr-append-only",
+        "title": "X2Streaming-ASR：不回退的流式识别，32ms该怎么看",
+        "url": "/blog/x2streaming-asr-append-only/",
+        "language": "zh",
+        "excerpt": "X2Streaming-ASR：不回退的流式识别，32ms该怎么看 X2Streaming-ASR 把流式识别拆成何时提交与提交什么，以可学习的等待策略输出不可回退的文字。本文核对官方仓库、模型卡与论文第四版，拆解80毫秒决策节拍、字符级强化学习、平均与尾延迟，说明32毫秒为何不是端到端速度，并提供部署起步、语言配置和关闭离线复核的方法，讨论语音Agent接入时的稳定性与执行边界。 X2Streaming-ASR 语音识别 流式ASR 语音Agent 开源模型 X2Streaming-ASR 改的是“何时交卷” 论文的三阶段训练，仓库只提供推理 32毫秒",
+        "score": 0.49393302
+      },
+      {
+        "article_id": "harborrl-agentic-rl-pipeline",
+        "title": "HarborRL: From Agent Traces to Reinforcement Learning",
+        "url": "/blog/harborrl-agentic-rl-pipeline/",
+        "language": "en",
+        "excerpt": "HarborRL: From Agent Traces to Reinforcement Learning Review HarborRL MATH, task verification and native Slime training: current GRPO/Claude Code limits, GPU topology and 89 CPU tests, without a live RL run. HarborRL Agentic RL GRPO Harbor Slime Where does it fit in the pipeline?",
+        "score": 0.49239144
+      }
+    ]
+  }
+}

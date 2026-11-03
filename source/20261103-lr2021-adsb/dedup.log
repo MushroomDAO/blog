@@ -1,0 +1,15 @@
+❌ Failed to get access token: Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.71.95 ipv6 ::ffff:223.204.71.95, not in whitelist rid: 6ae96cd3-71523713-10bf1dd3"}
+⚠️  公众号账本没查成（Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.71.95 ipv6 ::ffff:223.204.71.95, not in whitelist rid: 6ae96cd3-71523713-10bf1dd3"}）
+   本次结果不完整，别当成完整查重。
+账本：blog 946 篇 + 公众号草稿箱 0 条 + 本地发布记录 927 条 + MemPalace 3716 抽屉
+
+── 查：https://github.com/thefatmoop/esp32s3-lr2021-adsb-receiver
+   已读取的本地账本未命中；公众号远程账本不可用
+
+── 查：thefatmoop
+   ❌ [知识库] # 这是Hackaday 11月1日刚报道的玩法（作者 thef  **Summary**: 这是Hackaday 11
+      正文出现实体名「thefatmoop」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":"Token error: {\"errcode\":40164,\"errmsg\":\"invalid ip 223.204.71.95 ipv6 ::ffff:223.204.71.95, not in whitelist rid: 6ae96cd3-71523713-10bf1dd3\"}"}
+```
