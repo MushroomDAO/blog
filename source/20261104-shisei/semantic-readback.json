@@ -1,0 +1,38 @@
+[
+  {
+    "id": "4f45ae6a19a3154164791e8c92d28d0c991d24909e984a44",
+    "metadata": {
+      "article_id": "shisei-ai-pose-reference-library",
+      "content_hash": "30905296d96f490b",
+      "excerpt": "Shisei开源姿势图库：给AI绘图一张参考，比反复描述动作更直接 Shisei是面向AI绘图的开源人体姿势参考图库，提供多机位线稿、AI照片、白模及估计深度和法线图。本文核对官方仓库与目录数据，解释280套可用姿势、1212个线稿视角的真实口径，介绍浏览器选图、ComfyUI条件输入和Mac本地搭建方法，并分析视角缺失、角色一致性、质检与CC0和Apache许可边界。 Shisei AI绘图 姿势参考 ComfyUI 开源素材 Shisei解决了什么问题？ “280套、五个机位”应该怎样理解？ 五种图像格式，各有什么用途？ 从选图到出图，可以怎样操作？",
+      "language": "zh",
+      "tags": [
+        "Shisei",
+        "AI绘图",
+        "姿势参考",
+        "ComfyUI",
+        "开源素材"
+      ],
+      "title": "Shisei开源姿势图库：给AI绘图一张参考，比反复描述动作更直接",
+      "url": "/blog/shisei-ai-pose-reference-library/"
+    }
+  },
+  {
+    "id": "a2bd83fafa0d6f40529a8c53468a276c4046c34498b049f6",
+    "metadata": {
+      "article_id": "shisei-ai-pose-reference-library",
+      "content_hash": "c675da934e610d27",
+      "excerpt": "Shisei: An Open Pose Reference Library for AI Art Explore Shisei's pose references, verified asset counts, depth and normal maps, local Mac setup, and the practical limits of licensing and image conditioning. Shisei AI绘图 姿势参考 ComfyUI 开源素材 What does a pose library contribute? How ",
+      "language": "en",
+      "tags": [
+        "Shisei",
+        "AI绘图",
+        "姿势参考",
+        "ComfyUI",
+        "开源素材"
+      ],
+      "title": "Shisei: An Open Pose Reference Library for AI Art",
+      "url": "/blog/shisei-ai-pose-reference-library/"
+    }
+  }
+]

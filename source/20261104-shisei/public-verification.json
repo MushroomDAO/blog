@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-04T05:30:11.014168+00:00",
+  "articles": [
+    {
+      "slug": "shisei-ai-pose-reference-library",
+      "url": "https://blog.mushroom.cv/blog/shisei-ai-pose-reference-library/",
+      "title": "Shisei开源姿势图库：给AI绘图一张参考，比反复描述动作更直接",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/shisei-ai-pose-reference-library-banner.FFHuWQZ0.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 92041
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/shisei-ai-pose-reference-library-banner.FFHuWQZ0_Z23y7Ay.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 27344
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/shisei-ai-pose-reference-library-fig-01.nSAEqzSn_ZniCMy.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 27908
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/shisei-ai-pose-reference-library-fig-02.DymdHqs5_Z17LVWg.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 39632
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/shisei-ai-pose-reference-library-fig-03.B2xKIIy5_16RalM.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 30418
+        }
+      ]
+    }
+  ]
+}

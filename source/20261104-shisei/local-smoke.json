@@ -1,0 +1,54 @@
+{
+  "counts": {
+    "records": 288,
+    "usablePoses": 280,
+    "lineViews": 1212,
+    "photoViews": 89,
+    "mapSets": 944
+  },
+  "requests": [
+    {
+      "route": "/",
+      "status": 200,
+      "bytes": 253248,
+      "type": "text/html"
+    },
+    {
+      "route": "/en/",
+      "status": 200,
+      "bytes": 253991,
+      "type": "text/html"
+    },
+    {
+      "route": "/ja/",
+      "status": 200,
+      "bytes": 254616,
+      "type": "text/html"
+    },
+    {
+      "route": "/ko/",
+      "status": 200,
+      "bytes": 254620,
+      "type": "text/html"
+    },
+    {
+      "route": "/pose/P015/",
+      "status": 200,
+      "bytes": 24089,
+      "type": "text/html"
+    },
+    {
+      "route": "/images/line/w900/std_P015_front.webp",
+      "status": 200,
+      "bytes": 22782,
+      "type": "image/webp"
+    },
+    {
+      "route": "/images/depth/w900/std_P001_front.webp",
+      "status": 200,
+      "bytes": 6818,
+      "type": "image/webp"
+    }
+  ],
+  "scope": "Static preview and asset integrity only; no browser-interaction or image-generation test"
+}

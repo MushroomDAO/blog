@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "infinitediffusion-terrain-generation-guide",
+      "title": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文",
+      "url": "/blog/infinitediffusion-terrain-generation-guide/",
+      "language": "zh",
+      "excerpt": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文 Alexander Goslin 以独立研究者身份，用 RTX 3090 Ti 发表 SIGGRAPH 2026 论文 InfiniteDiffusion，将扩散模型改造为懒惰采样，实现无界、O(1) 随机访问、确定性的无限地形生成。本文整理复现路径与游戏/工程应用方向。 扩散模型 程序化生成 游戏开发 SIGGRAPH 地形生成 AI图形 独立研究 先说这件事本身有多不寻常 论文在解决什么问题？ 原始资源 30 分钟复现路径 Step 0：环境 St",
+      "score": 0.44605675
+    },
+    {
+      "article_id": "qwen-image-2-1-dit-rgba-local-deploy-guide",
+      "title": "Qwen-Image-2.1 Engineering Guide: 7B DiT with Native RGBA — Alibaba's Open Image Generation Model",
+      "url": "/blog/qwen-image-2-1-dit-rgba-local-deploy-guide/",
+      "language": "en",
+      "excerpt": "Qwen-Image-2.1 Engineering Guide: 7B DiT with Native RGBA — Alibaba's Open Image Generation Model Alibaba Qwen team open-sourced 2026-09-20. 7.1B 32-layer Block-Causal DiT + Qwen3-VL-8B text encoder + 64-channel RGBA VAE, ~15B total. Native transparency layers, multi-reference up",
+      "score": 0.42681038
+    },
+    {
+      "article_id": "ternary-bonsai-2-27b-prismml-qwen3-ternary-5gb-local-27b",
+      "title": "Ternary Bonsai 2-27B: 5.9 GB for a 27B Model, Ternary Quantization Retains 98.2% Performance and Beats Standard 2-bit by 12 Points",
+      "url": "/blog/ternary-bonsai-2-27b-prismml-qwen3-ternary-5gb-local-27b/",
+      "language": "en",
+      "excerpt": "Ternary Bonsai 2-27B: 5.9 GB for a 27B Model, Ternary Quantization Retains 98.2% Performance and Beats Standard 2-bit by 12 Points PrismML releases Ternary Bonsai 2-27B from Qwen3.8-27B, ternary quantization (1.72 bits/weight), 5.9 GB for 27B parameters, 47 tok/s on M5 Max, 130 t",
+      "score": 0.42553547
+    },
+    {
+      "article_id": "all-minilm-l6-v2-default-embedding-chinese-limits-alternatives",
+      "title": "Why Is all-MiniLM-L6-v2 Still Hugging Face's Most-Downloaded Model? A 2021 Default, Its Chinese Blind Spot, and What to Use in 2026",
+      "url": "/blog/all-minilm-l6-v2-default-embedding-chinese-limits-alternatives/",
+      "language": "en",
+      "excerpt": "Why Is all-MiniLM-L6-v2 Still Hugging Face's Most-Downloaded Model? A 2021 Default, Its Chinese Blind Spot, and What to Use in 2026 all-MiniLM-L6-v2 is a 22.7M-parameter English embedding model uploaded in August 2021. It logged 254M downloads in the last 30 days and 3.83B all-ti",
+      "score": 0.42409799
+    },
+    {
+      "article_id": "meta-muse-glimmer-30b-local-agent-dense-multimodal-apache",
+      "title": "meta-muse-glimmer-30b-local-agent-dense-multimodal-apache",
+      "url": "/blog/meta-muse-glimmer-30b-local-agent-dense-multimodal-apache/",
+      "language": "en",
+      "excerpt": "meta-muse-glimmer-30b-local-agent-dense-multimodal-apache Meta open-sources Muse Glimmer 30B: 29.6B parameters, Dense architecture, image+text input, 131K context, distilled from Muse Spark with focused training on Agent tasks, multi-step reasoning, Tool Use, Coding, and failure ",
+      "score": 0.42365196
+    },
+    {
+      "article_id": "glm-5-3-flash-ox-alpha-320b-native-multimodal-open-source",
+      "title": "GLM-5.3-Flash（Ox Alpha）开源：321B MoE 原生多模态，30T token 预训练，稀疏+线性注意力混合架构，MIT",
+      "url": "/blog/glm-5-3-flash-ox-alpha-320b-native-multimodal-open-source/",
+      "language": "zh",
+      "excerpt": "GLM-5.3-Flash（Ox Alpha）开源：321B MoE 原生多模态，30T token 预训练，稀疏+线性注意力混合架构，MIT 2026-08-26 晚，智谱 z.ai 开源 GLM-5.3-Flash（代号 Ox Alpha）。约 321B 参数、激活 18B 的 MoE 模型，GLM-5 系列首个原生多模态版本，原生支持文字、图片、视频处理，使用 30T 多模态 token 预训练。架构上首次引入稀疏注意力与线性注意力混合（DSA），并配套异步强化学习训练基础设施。权重已上传 HuggingFace（zai-org/GLM-5.3-F",
+      "score": 0.42356247
+    },
+    {
+      "article_id": "specialized-inference-engines-rise-hardware-specific-llm-optimization",
+      "title": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照",
+      "url": "/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
+      "language": "zh",
+      "excerpt": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照 Splash 1.4.0 为 Apple Silicon 增加 Qwen3.8-Flash-Next、专家与 PLE 的 SSD 流式加载及长上下文支持。本文复核官方同机 Q2_0 对照，区分解码、预填充、缓存首字延迟和并发总吞吐，核对120tok/s的来源，并说明量化精度、内存预算、磁盘读写及可重复性的代价。 推理引擎 LLM WASM 性能优化 Apple Silicon NVIDIA AMD 开源工具 Splash 1.4.0 的速度数字，到底测了什么？ 为什么要把专家、PLE 和 KV",
+      "score": 0.42348248
+    },
+    {
+      "article_id": "awesome-rsi-recursive-self-improvement-curated-survey-godel-agents-benchmarks",
+      "title": "awesome-rsi：AI 递归自我改进资源精选库——从哥德尔机到 2026 年自我修改 Agent 的完整图谱",
+      "url": "/blog/awesome-rsi-recursive-self-improvement-curated-survey-godel-agents-benchmarks/",
+      "language": "zh",
+      "excerpt": "awesome-rsi：AI 递归自我改进资源精选库——从哥德尔机到 2026 年自我修改 Agent 的完整图谱 pinkbubblebubble/awesome-rsi 是一个高信噪比的递归自我改进（RSI）资源精选库，覆盖理论基础、自我修改 Agent、评估基准和安全研究。关键洞察：RSI 比普通迭代更强——系统必须改进那个产生后续改进的机制本身，而不只是修改一次答案。2026 年已有 MOSS、Ouroboros、Red Queen Gödel Machine 等系统达到真正 RSI 级别。 RSI 递归自我改进 自我修改Agent 哥德尔机 A",
+      "score": 0.4224222
+    },
+    {
+      "article_id": "grpo-small-model-engineering-guide",
+      "title": "A GRPO Engineering Guide for Small Models: Eighty Dollars of Training to Beat o3",
+      "url": "/blog/grpo-small-model-engineering-guide/",
+      "language": "en",
+      "excerpt": "A GRPO Engineering Guide for Small Models: Eighty Dollars of Training to Beat o3 GRPO (Group Relative Policy Optimization) makes it practical for small specialist models to outperform frontier LLMs on narrow tasks. This guide integrates ART, ms-swift, OpenClaw-RL, and six real en",
+      "score": 0.4205037
+    },
+    {
+      "article_id": "ascii-portrait-browser-animation",
+      "title": "ASCII Portrait: Browser Animation Without Uploads",
+      "url": "/blog/ascii-portrait-browser-animation/",
+      "language": "en",
+      "excerpt": "ASCII Portrait: Browser Animation Without Uploads Explore ASCII Portrait: browser photo-to-ASCII animation, six-second WebM exports, local setup, CDN dependencies, privacy boundaries, and regression-test scope. 开源工具 浏览器 ASCII WebGL 隐私 How does a photo become moving character art?",
+      "score": 0.419659
+    }
+  ]
+}

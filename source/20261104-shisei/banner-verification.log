@@ -1,0 +1,15 @@
+=== [adopt-banner] shisei-ai-pose-reference-library ← 3 source image(s) → src/assets/images/shisei-ai-pose-reference-library-banner.jpg (1200x630) ===
+  tile 1: 400x630  ← /tmp/shisei-research/images/line/w900/std_P015_front.webp
+  tile 2: 400x630  ← /tmp/shisei-research/images/line/w900/std_P018_diag.webp
+  tile 3: 400x630  ← /tmp/shisei-research/images/line/w900/std_P030_front.webp
+=== [adopt-banner] done: src/assets/images/shisei-ai-pose-reference-library-banner.jpg (1200x630, 92041B) ===
+=== [verify-banner] src/assets/images/shisei-ai-pose-reference-library-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/tmp/shisei-research/images/line/w900/std_P015_front.webp,/tmp/shisei-research/images/line/w900/std_P018_diag.webp,/tmp/shisei-research/images/line/w900/std_P030_front.webp
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 92041B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/shisei-ai-pose-reference-library-banner.jpg ===
+PATH: src/assets/images/shisei-ai-pose-reference-library-banner.jpg
