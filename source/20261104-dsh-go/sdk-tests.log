@@ -1,0 +1,97 @@
+
+> @dsh-go/plugin-kit@0.1.0 test
+> node --test test/*.test.js
+
+✔ new SDK registrations and callback probes use shared validators (4.225708ms)
+✔ requires fails closed without feature; new declaration is retained (1.882458ms)
+✔ static/deferred, absolute URLs, foreign media and undeclared capability are rejected (0.397875ms)
+✔ new contribution ids share old uniqueness and reject missing features (0.520625ms)
+✔ non-object package JSON yields a readable report, including --json CLI (347.299209ms)
+✔ malformed panels preserve bridge diagnostics instead of throwing (2.181042ms)
+✔ checker does not parse a sibling-prefix path or a symlink rejected by the bridge (2.680125ms)
+✔ missing option values and prototype names produce argument diagnostics (665.96725ms)
+✔ argument failure with --json stays machine-readable (48.529875ms)
+✔ option terminator permits a filename beginning with -- (50.676875ms)
+✔ unreadable stdin reports exit 3 and continues to a later valid target (0.966458ms)
+✔ multiple targets and normal named options retain existing behavior (50.756625ms)
+✔ parity cases: the twin still says what test/parity/expected.json says (12.070208ms)
+✔ twin helpers match the app: numbers, JSON size, image headers (0.260958ms)
+✔ English wording comes from the app too (0.140625ms)
+✔ examples: clean, statically and with the host half loaded (38.286792ms)
+✔ a broken plugin: bridge issues, app issues, loading issues, view issues (1.338084ms)
+✔ view files: tool-card meta picks the tool-card budget and flags bindings and buttons (0.228084ms)
+✔ CLI: text, --json, stdin, exit codes (270.257667ms)
+✔ controls parity corpus stays reproducible (19.06725ms)
+✔ all control builders match the generated schema catalog (6.228ms)
+✔ v2 structure walks and falls back for missing or legacy caps (0.33775ms)
+✔ writable paths exclude arrays, prototype names and excessive depth (0.080917ms)
+✔ formulas are finite, bounded and match Dart modulo semantics (0.269792ms)
+✔ SDK reports exact input paths and keeps v1 grammar (0.123542ms)
+✔ gallery, emptyState, ring and trend: builders, schema, stand-ins for older apps (3.256167ms)
+✔ English text, child and byte limits render numeric messages, not ICU source (1.12725ms)
+✔ English donut singular follows the App catalogue, while inserted arguments remain literal (0.28075ms)
+✔ the shipped Chinese and English corpus covers ordinary and plural diagnostics (8.87675ms)
+✔ all shipped catalogue templates format exact one and other without reinterpreting values (3.397959ms)
+✔ file constructors and schema agree on callback and count, static/deferred stay closed (7.706167ms)
+✔ wire schemas preserve files negotiation and readonly callback metadata (0.341166ms)
+✔ SDK test-host runs the real negotiation and gesture validator (1.271708ms)
+✔ wire validator checks selected-file routes and rejects callback side effects (133.311334ms)
+✔ views: discriminated components, unevaluated properties, bindings (8.091625ms)
+✔ manifest, invoke, stream, contributions defs resolve across files (2.785666ms)
+✔ string length counts code points (0.62ms)
+✔ v1.2 schemas validate new envelopes but keep static and deferred closed (4.340458ms)
+✔ NJS1 micro rev has its own epoch and positive safe-integer sequence grammar (2.597875ms)
+✔ builders: plain JSON, undefined props dropped, both call styles (0.801416ms)
+✔ bind: data prefix added once; isBinding needs exactly one key (0.079208ms)
+✔ COMPONENTS matches the view schema catalog, in order (0.050208ms)
+✔ walkView visits every component, depth first (0.080375ms)
+✔ toolCard: never throws, lossless, capped at 8 KiB (0.28ms)
+✔ caps: lists when sent, the v1 catalog when not (0.132083ms)
+✔ localize: exact, language, en, zh, first (0.120916ms)
+✔ adaptView: newer components degrade for an app that lacks them (0.221416ms)
+✔ effects: constructors match the protocol shapes (0.114917ms)
+✔ checkEffects / checkPending: the bridge reading of a handler result (0.583917ms)
+  视图 /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/dsh-native-preview-pSPa6Z/view.json（面板）：整块无法显示：view.type：未知组件 "unknown"；可用：stack, row, text, metric, chart, compare, steps, callout, options, confirm, list, keyValue, progress, table, actions, image
+  视图 /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/dsh-native-preview-GIljt9/view.json（面板）：能显示
+  视图 /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/dsh-native-preview-4wUFdR/view.json（面板）：能显示
+  视图 /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/dsh-native-preview-4wUFdR/view.json（面板）：能显示
+Output directory already exists; choose a new one: /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/dsh-native-preview-GIljt9/new-output
+Flutter did not write light.png
+Flutter preview failed; partial output: /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/dsh-native-preview-4wUFdR/second-output
+✔ panel diagnostics and snapshot use the supplied data, width and text scale (2.244333ms)
+✔ wrapped tool cards do not acquire an unsupported data model (1.898292ms)
+✔ invalid JSON, excessive input and invalid rendering options fail before output (1.375875ms)
+✔ root errors return the checker failure without launching Flutter or writing output (1.050458ms)
+✔ existing output is not overwritten and never launches Flutter (0.730875ms)
+✔ a failed process or missing PNG cannot be reported as a rendered preview (3.509334ms)
+✔ app/assets/skills/dsh-go-plugin matches the kit (3.813584ms)
+✔ SKILL.md: front matter first, managed line inside it (1.7045ms)
+✔ installed layout: the checker runs and the template passes with --load (144.60875ms)
+✔ v2 schema accepts bounded typography, cards, binding values and spans (8.223417ms)
+✔ schema closes arbitrary geometry, external spans, bad alpha and missing fallback (1.207333ms)
+✔ malformed spacing is diagnosed without coercing JSON values to property keys (5.344375ms)
+✔ SDK corrections are quantised, stable when readable and above the exact bound (10.49475ms)
+✔ every semantic size/weight and named colour retains 4.5 in both themes (5.109583ms)
+✔ correction diagnostics contain the actual light/dark colours and ratio (0.320125ms)
+✔ privileged roles fail locally while ordinary new properties fail softly (0.507583ms)
+✔ rich spans have per-node, per-view and character budgets (0.715583ms)
+✔ chart categories are corrected against actual v2 container backgrounds (0.943125ms)
+✔ types are generated from the current schemas and public declaration template (62.327917ms)
+✔ lib/bridge/ is a byte copy of the bridge modules (0.672875ms)
+✔ types compile and reject what the schemas reject (458.287875ms)
+✔ ready flags and runtime issues follow registrations (4.537291ms)
+✔ invoke: shorthand expands, bad effects are dropped with an issue, errors carry status (1.914667ms)
+✔ a throwing handler is a 500 plugin-error and a violation (0.766958ms)
+✔ subscribe: strip values are cleaned like the bridge does (0.89425ms)
+✔ view: static object or function, with stats (0.873959ms)
+✔ deferred results: pending at once, done later, only the deferred whitelist (1.022458ms)
+✔ deferred results: timeout aborts the work; at most 2 pending (1003.468167ms)
+✔ strip and panel data functions get caps with the locale (0.500083ms)
+ℹ tests 78
+ℹ suites 0
+ℹ pass 78
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1281.300125

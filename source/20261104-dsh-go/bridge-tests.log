@@ -1,0 +1,35 @@
+✔ resolveText picks exact, language, en, zh, first (0.6035ms)
+✔ merge diff / apply round trip (3.082084ms)
+✔ viewStats counts typed nodes and depth (0.098083ms)
+✔ normalizeScope keeps known keys, rejects bad values (0.104875ms)
+✔ effectiveLimits only overrides the timing knobs (0.063209ms)
+✔ effects: shorthand, whitelist, limits (0.616708ms)
+✔ manifest: valid manifest renders with locale and ready flags (1.11225ms)
+✔ manifest: per-item validation, caps, truncation and issues (0.428084ms)
+✔ manifest: version, minApp, invalid and oversize (1.057125ms)
+✔ core: scan, cache invalidation by toggle and package.json edit (410.206125ms)
+✔ core: service attribution, registration lifecycle, undeclared (2.702125ms)
+✔ core: violations degrade after 5 in a row, success resets, reload clears (1.309417ms)
+✔ core: invoke token bucket and concurrency (0.265292ms)
+✔ core: feeds coalesce to 4 Hz, send patches, linger then cancel (1562.285708ms)
+✔ ws: masked text, fragments, ping, close, limits (3.88275ms)
+✔ checkManifest: SDK entry (assumed handlers, static view files) (5.275083ms)
+✔ core: feeds are per locale and data() gets caps (303.62975ms)
+✔ deferred: splitPending shapes, clamps and the deferred whitelist (1.156ms)
+✔ unknown paths are not handled (1.309833ms)
+✔ capability is false when the pinned seam is absent, and only GET is allowed (0.171083ms)
+✔ capability is true only when every patched seam and the schedule backend are usable (0.104959ms)
+✔ the mutation refuses non-JSON, malformed, oversized and extra-field bodies without deleting (0.40925ms)
+✔ an unavailable host answers 503 and never runs the destructive path (0.079458ms)
+✔ a confirmed deletion runs dispose, derived-state cleanup, and reports the exact id (0.199125ms)
+✔ active work and related reminders are refused with stable codes (0.124083ms)
+✔ engine refusals map to stable codes without leaking host details (0.869834ms)
+✔ the capability probe awaits the seam instead of reporting a pending promise (0.085709ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2373.463708

@@ -1,0 +1,14 @@
+❌ Failed to get access token: Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeb22e9-223352fa-2a89fd14"}
+⚠️  公众号账本没查成（Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeb22e9-223352fa-2a89fd14"}）
+   本次结果不完整，别当成完整查重。
+账本：blog 952 篇 + 公众号草稿箱 0 条 + 本地发布记录 933 条 + MemPalace 3782 抽屉
+
+── 查：https://github.com/ccch1mneyyy/dsh-go
+   已读取的本地账本未命中；公众号远程账本不可用
+
+── 查：dsh-Go
+   已读取的本地账本未命中；公众号远程账本不可用
+
+```dedup-result
+{"duplicate":false,"localLedgersRead":true,"wechatError":"Token error: {\"errcode\":40164,\"errmsg\":\"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeb22e9-223352fa-2a89fd14\"}"}
+```

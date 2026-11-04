@@ -1,0 +1,14 @@
+=== [adopt-banner] dsh-go-android-harness-phone-agent-review ← 1 source image(s) → src/assets/images/dsh-go-android-harness-phone-agent-review-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /tmp/dshgo-research/docs/assets/hero-zh-light.webp
+=== [adopt-banner] done: src/assets/images/dsh-go-android-harness-phone-agent-review-banner.jpg (1200x630, 82714B) ===
+=== [verify-banner] src/assets/images/dsh-go-android-harness-phone-agent-review-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/tmp/dshgo-research/docs/assets/hero-zh-light.webp
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 82714B (< 99000B)
+  WARN text: 18 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: dsh-go | JE DeepSeek Harness | 20:16 | 20:16 | • BRE • ЗаХДИВ • 1%N8 | #77. 10 A-HTET V6,842: | • # V3,200, & 46.8% | •#tX ·1,486. It9RS 12%
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/dsh-go-android-harness-phone-agent-review-banner.jpg ===
+PATH: src/assets/images/dsh-go-android-harness-phone-agent-review-banner.jpg
