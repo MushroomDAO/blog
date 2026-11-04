@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "shisei-ai-pose-reference-library",
+      "title": "Shisei开源姿势图库：给AI绘图一张参考，比反复描述动作更直接",
+      "url": "/blog/shisei-ai-pose-reference-library/",
+      "language": "zh",
+      "excerpt": "Shisei开源姿势图库：给AI绘图一张参考，比反复描述动作更直接 Shisei是面向AI绘图的开源人体姿势参考图库，提供多机位线稿、AI照片、白模及估计深度和法线图。本文核对官方仓库与目录数据，解释280套可用姿势、1212个线稿视角的真实口径，介绍浏览器选图、ComfyUI条件输入和Mac本地搭建方法，并分析视角缺失、角色一致性、质检与CC0和Apache许可边界。 Shisei AI绘图 姿势参考 ComfyUI 开源素材 Shisei解决了什么问题？ “280套、五个机位”应该怎样理解？ 五种图像格式，各有什么用途？ 从选图到出图，可以怎样操作？",
+      "score": 0.6168226
+    },
+    {
+      "article_id": "ruview-wifi-densepose-esp32-through-wall-sensing-pose-breathing-heart-rate",
+      "title": "RuView：9.4 万星的 WiFi DensePose，不开摄像头隔墙感知呼吸和心率，姿态追踪数字请打折",
+      "url": "/blog/ruview-wifi-densepose-esp32-through-wall-sensing-pose-breathing-heart-rate/",
+      "language": "zh",
+      "excerpt": "RuView：9.4 万星的 WiFi DensePose，不开摄像头隔墙感知呼吸和心率，姿态追踪数字请打折 ruvnet/RuView，MIT，Rust，94K stars。ESP32-S3 读取 CSI 信号，实现隔墙人体感知：存在检测 82.3%、呼吸 6-30 BPM、心跳 40-120 BPM 均经验证；但宣传中的 17 关键点姿态追踪 PCK@20 实测仅 3%（目标 35%），92.9% 准确率数字已撤回。完整拆解学术源头、技术管道、硬件需求和隐私风险。 WiFi-sensing CSI ESP32 pose-estimation priv",
+      "score": 0.45294654
+    },
+    {
+      "article_id": "good-gym-ai-fitness-rtmpose-exercise-counter",
+      "title": "Good-GYM：用摄像头当教练，开源 AI 实时计数你的每一个动作",
+      "url": "/blog/good-gym-ai-fitness-rtmpose-exercise-counter/",
+      "language": "zh",
+      "excerpt": "Good-GYM：用摄像头当教练，开源 AI 实时计数你的每一个动作 基于 RTMPose 的开源健身助手，标准摄像头实时识别人体姿态、自动计数、姿势反馈，支持深蹲/俯卧撑/引体向上等 11 种动作，配置文件就能添加新动作，附 iOS App。 AI 健身 RTMPose 姿态识别 开源 计算机视觉 PyQt5 仓库地址和基本情况 支持的 11 种动作 核心原理：角度阈值 + COCO 17 关键点 数据驱动：改 JSON 就能加新动作 本地跑起来 训练计划和历史记录 iOS App 和商业产品相比 已知限制和 Roadmap 一句话总结",
+      "score": 0.44784042
+    },
+    {
+      "article_id": "wan-dancer-14b-one-photo-dance-video-generation",
+      "title": "One Photo, 160 Seconds of Dance: Wan-Dancer-14B Open Source & Local Deployment Guide",
+      "url": "/blog/wan-dancer-14b-one-photo-dance-video-generation/",
+      "language": "en",
+      "excerpt": "One Photo, 160 Seconds of Dance: Wan-Dancer-14B Open Source & Local Deployment Guide Wan-Dancer-14B (arXiv:2607.09581) from the Wanxiang team is now open source. One portrait photo + music + dance style prompt → 15s to 3 minutes of 720p/30fps continuous dance video across five ge",
+      "score": 0.44355714
+    },
+    {
+      "article_id": "pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring",
+      "title": "Pulse: A Row of Rings at Your Screen Edge Tells You How Much Claude Code You Have Left",
+      "url": "/blog/pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring/",
+      "language": "en",
+      "excerpt": "Pulse: A Row of Rings at Your Screen Edge Tells You How Much Claude Code You Have Left qunqin24/Pulse is an open-source macOS floating monitor: three color rings display real-time Claude Code / Codex / Antigravity usage limits, docks to screen edge and collapses to a 6pt sliver, ",
+      "score": 0.43637535
+    },
+    {
+      "article_id": "nano-vllm-interactive-guide-scheduler-kvcache-cuda-graph-tutorial",
+      "title": "nano-vllm-interactive-guide-scheduler-kvcache-cuda-graph-tutorial",
+      "url": "/blog/nano-vllm-interactive-guide-scheduler-kvcache-cuda-graph-tutorial/",
+      "language": "en",
+      "excerpt": "nano-vllm-interactive-guide-scheduler-kvcache-cuda-graph-tutorial nano-vllm-interactive-guide is an interactive source-code learning project based on GeeeekExplorer/nano-vllm (~1200 lines Python). 13 Chinese tutorial chapters + 13 pure HTML browser experiments + per-chapter exerc",
+      "score": 0.4355616
+    },
+    {
+      "article_id": "ququ-wispr-flow-alternative-chinese-voice-input-local-asr",
+      "title": "蛐蛐 QuQu：本地中文语音输入法深度拆解，Wispr Flow 开源替代",
+      "url": "/blog/ququ-wispr-flow-alternative-chinese-voice-input-local-asr/",
+      "language": "en",
+      "excerpt": "语音输入 ASR 本地推理 FunASR 开源拆解 桌面工具 QuQu (蛐蛐): Local Chinese Voice Input Method — Deep Teardown Project Background Two-Stage Pipeline Architecture Two Critical Issues QuQu vs. Wispr Flow Verdict",
+      "score": 0.4326471
+    },
+    {
+      "article_id": "guizang-social-card-illustration-guide",
+      "title": "AI Illustrations for Your Articles: Complete Guizang Social Card Skill Guide",
+      "url": "/blog/guizang-social-card-illustration-guide/",
+      "language": "en",
+      "excerpt": "AI Illustrations for Your Articles: Complete Guizang Social Card Skill Guide Guizang Social Card Skill (4791★) is a Claude Code AI skill that converts articles into Xiaohongshu carousel images and WeChat cover pairs. This guide walks you through installation, visual modes, and ge",
+      "score": 0.43089914
+    },
+    {
+      "article_id": "nature-skills-yuan1z0825-academic-paper-skill-collection",
+      "title": "nature-skills: 18 AI Skills for the Whole Academic Paper Workflow, 34k Stars in Two Months",
+      "url": "/blog/nature-skills-yuan1z0825-academic-paper-skill-collection/",
+      "language": "en",
+      "excerpt": "nature-skills: 18 AI Skills for the Whole Academic Paper Workflow, 34k Stars in Two Months nature-skills is a community-built collection of 18 AI skills for the full academic paper workflow, started by Yuan Yizhe. Skills cover figures, polishing, writing, review response, citatio",
+      "score": 0.42910746
+    },
+    {
+      "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "title": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+      "language": "en",
+      "excerpt": "agentic-harness-engineering-observability-self-evolution-coding-agent Fudan+PKU+Qiji Zhifeng, arXiv:2604.25850, MIT, Python. AHE proposes a closed loop that evolves the harness — not the model weights — using three observability pillars (component / experience / decision) to let ",
+      "score": 0.42815828
+    }
+  ]
+}
