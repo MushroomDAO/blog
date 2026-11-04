@@ -1,0 +1,10 @@
+{
+  "rows": 3,
+  "checks": {
+    "https://blog.mushroom.cv/blog/shisei-ai-pose-reference-library/": true,
+    "wechatStatus=failed": true,
+    "223.204.87.188": true,
+    "7项本地HTTP200": true,
+    "propagation-pending": true
+  }
+}

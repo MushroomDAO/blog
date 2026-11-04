@@ -1,0 +1,20 @@
+share cards: 282 (282 rendered, 0 cached)
+Traceback (most recent call last):
+  File "/tmp/shisei-research/tools/build_site.py", line 574, in <module>
+    main()
+  File "/tmp/shisei-research/tools/build_site.py", line 525, in main
+    fresh = og_cards.render(jobs, chrome)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/shisei-research/tools/og_cards.py", line 165, in render
+    list(ex.map(lambda j: _shoot(chrome, *j), jobs))
+  File "/Users/jason/.pyenv/versions/3.12.14/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jason/.pyenv/versions/3.12.14/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jason/.pyenv/versions/3.12.14/lib/python3.12/concurrent/futures/_base.py", line 451, in result
+    self._condition.wait(timeout)
+  File "/Users/jason/.pyenv/versions/3.12.14/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+KeyboardInterrupt
