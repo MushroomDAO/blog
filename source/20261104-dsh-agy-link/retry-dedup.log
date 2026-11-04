@@ -1,0 +1,34 @@
+❌ Failed to get access token: Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeb456b-54032ead-22c9dd9d"}
+⚠️  公众号账本没查成（Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeb456b-54032ead-22c9dd9d"}）
+   本次结果不完整，别当成完整查重。
+账本：blog 954 篇 + 公众号草稿箱 0 条 + 本地发布记录 933 条 + MemPalace 3799 抽屉
+
+── 查：https://github.com/amlyczz/dsh-agy-link
+   ❌ [BLOG  ] dsh-agy-link调研：把Antigravity接入DSH，先看配额、工具与执行边界
+      一手源相同: amlyczz/dsh-agy-link
+   ❌ [知识库] --- name: dsh-agy-link Antigravity bridge research descripti
+      一手源相同: amlyczz/dsh-agy-link
+   ⚠️  [知识库] dsh-agy-link||2026-11-04:L1-L10|→drawer_blog_general_71bf8a2
+      标题相似度 30%
+
+── 查：dsh-agy-link
+   ❌ [BLOG  ] dsh-agy-link调研：把Antigravity接入DSH，先看配额、工具与执行边界
+      正文出现实体名「dsh-agy-link」
+   ❌ [知识库] # dsh-agy-link模型桥接与权限分析  **Summary**: dsh-agy-link是将Antigrav
+      正文出现实体名「dsh-agy-link」
+   ❌ [知识库] --- name: dsh-agy-link Antigravity bridge research descripti
+      正文出现实体名「dsh-agy-link」
+   ❌ [知识库] 安全审计。 精确仓库/包名查重仅原素材KB，无专门Blog/M2；机器人github泛词误命中不是重复。公众号40164
+      正文出现实体名「dsh-agy-link」
+   ❌ [知识库] dsh-agy-link||2026-11-04:L1-L10|→drawer_blog_general_71bf8a2
+      正文出现实体名「dsh-agy-link」
+   ❌ [知识库] # dsh-agy-link模型桥接与权限分析  **Summary**: dsh-agy-link是将Antigrav
+      正文出现实体名「dsh-agy-link」
+   ❌ [知识库] # 开源两个多月，目前 npm 累计下载 2.37 万次，Git  **Summary**: 开源两个多月，目前 npm
+      正文出现实体名「dsh-agy-link」
+   ❌ [知识库] 安全审计。 精确仓库/包名查重仅原素材KB，无专门Blog/M2；机器人github泛词误命中不是重复。公众号40164
+      正文出现实体名「dsh-agy-link」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":"Token error: {\"errcode\":40164,\"errmsg\":\"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeb456b-54032ead-22c9dd9d\"}"}
+```
