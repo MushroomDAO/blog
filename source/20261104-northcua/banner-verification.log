@@ -1,0 +1,14 @@
+=== [adopt-banner] northcua-pro-computer-use-harness-guide ← 1 source image(s) → src/assets/images/northcua-pro-computer-use-harness-guide-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /tmp/northcua-research/docs/assets/demos/ruby-heart.png
+=== [adopt-banner] done: src/assets/images/northcua-pro-computer-use-harness-guide-banner.jpg (1200x630, 84278B) ===
+=== [verify-banner] src/assets/images/northcua-pro-computer-use-harness-guide-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/tmp/northcua-research/docs/assets/demos/ruby-heart.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 84278B (< 99000B)
+  WARN text: 19 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: •org-geogebra-desktop-GeoGebra3D | Oct 14 08:04 | RubyHeart.ggb | Fie | Edit | View | Options | Tools
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/northcua-pro-computer-use-harness-guide-banner.jpg ===
+PATH: src/assets/images/northcua-pro-computer-use-harness-guide-banner.jpg

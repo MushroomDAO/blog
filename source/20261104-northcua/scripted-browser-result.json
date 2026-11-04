@@ -1,0 +1,633 @@
+{
+  "status": "success",
+  "terminal_status": "completed",
+  "session_id": "first-web",
+  "user_query": "Task ID: first-web. Activate the button and verify the receipt.",
+  "round_num": 1,
+  "evaluation_report": {
+    "overall_verdict": "success",
+    "process_rating": 5,
+    "outcome_label": "success",
+    "completion_rating": 5,
+    "confidence_rating": 5,
+    "controllability": "controllable",
+    "reason": "Inspected the live browser for the fixture receipt.",
+    "criteria": [],
+    "diagnoses": [],
+    "side_effects": [],
+    "safety": {
+      "risk_level": "none",
+      "findings": [],
+      "reason": "No safety issues observed.",
+      "evidence_refs": []
+    },
+    "efficiency": {
+      "rating": 5,
+      "unnecessary_step_count": 0,
+      "repeated_action_count": 0,
+      "detour_count": 0,
+      "direct_path_available": false,
+      "reason": "The agent used a direct enough path for the observed task.",
+      "evidence_refs": []
+    },
+    "first_divergence_step": null,
+    "first_divergence_reason": "",
+    "first_divergence_evidence_refs": [],
+    "needs_more_evidence": false,
+    "final_url": "http://127.0.0.1:8787/task/first-web",
+    "final_title": "NorthCUA local task",
+    "page_state_verified": true,
+    "dom_state_verified": true,
+    "visual_state_verified": false,
+    "web_blocker": "none",
+    "critical_web_evidence_refs": []
+  },
+  "evaluation_report_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/evaluations/web_round_evaluator/round_0001/final_report.json",
+  "evaluation_error": "",
+  "start_url": "http://127.0.0.1:8787/task/first-web",
+  "final_answer": "Activated the local form.",
+  "success": true,
+  "steps": [
+    {
+      "step_index": 1,
+      "session_id": "first-web",
+      "round_num": 1,
+      "session_step": 1,
+      "runtime_cursor": {
+        "session_id": "first-web",
+        "round_num": 1,
+        "round_step": 1,
+        "session_step": 1,
+        "phase": "main",
+        "phase_step": 1
+      },
+      "status": "ok",
+      "assistant_text": "",
+      "reasoning": "",
+      "assistant_tool_calls": [
+        {
+          "id": "demo-70e4864d115c",
+          "name": "web_note",
+          "arguments": "{\"key\": \"plan\", \"text\": \"Activate the local form; verify its receipt.\"}",
+          "type": "function"
+        }
+      ],
+      "tool_summary": "web_note",
+      "tools": [
+        {
+          "action": "note",
+          "tool_name": "web_note",
+          "tool_input": {
+            "key": "plan",
+            "text": "Activate the local form; verify its receipt."
+          },
+          "tool_output": {
+            "text": "[fact] Activate the local form; verify its receipt.",
+            "status": "recorded",
+            "action": "note",
+            "kind": "fact",
+            "note_text": "Activate the local form; verify its receipt.",
+            "reason": "",
+            "screenshot_policy": "none"
+          },
+          "is_error": false,
+          "tool_call_id": "demo-70e4864d115c"
+        }
+      ],
+      "url": "http://127.0.0.1:8787/task/first-web",
+      "observation": {
+        "url": "http://127.0.0.1:8787/task/first-web",
+        "title": "NorthCUA local task",
+        "origin": "http://127.0.0.1:8787",
+        "snapshot": "button \"Activate\" [ref=@e1]",
+        "elements": [
+          {
+            "ref_id": "e1",
+            "role": "button",
+            "name": "Activate",
+            "text": "Activate",
+            "tag": "button",
+            "attributes": {}
+          }
+        ],
+        "raw": {
+          "backend": "playwright",
+          "url": "http://127.0.0.1:8787/task/first-web",
+          "title": "NorthCUA local task",
+          "frame_count": 1,
+          "frame_errors": [],
+          "frame_meta": [
+            {
+              "frame_index": 0,
+              "url": "http://127.0.0.1:8787/task/first-web",
+              "ref_count": 1,
+              "visited": 5,
+              "truncated": false,
+              "fallback": ""
+            }
+          ],
+          "snapshot_eval_timeout_seconds": 8.0,
+          "snapshot_max_refs": null,
+          "snapshot_max_visited": null,
+          "snapshot_fallback_max_refs": 512,
+          "fallback_used": false,
+          "truncated": false,
+          "visible_text_frames": [
+            {
+              "frame_index": 0,
+              "url": "http://127.0.0.1:8787/task/first-web",
+              "text": "Activate",
+              "chars": 8,
+              "truncated": false
+            }
+          ],
+          "snapshot_visible_text_max_chars": 12000
+        }
+      },
+      "error_text": "",
+      "screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_001_raw.png",
+      "dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_001.txt",
+      "dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_001.json",
+      "observation_artifact": {
+        "role": "current",
+        "screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_001_raw.png",
+        "annotated_screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_001_annotated.png",
+        "dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_001.txt",
+        "dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_001.json",
+        "page_url": "http://127.0.0.1:8787/task/first-web",
+        "page_title": "NorthCUA local task",
+        "observation_id": "initial-first-web-1793777117894479000",
+        "settled": true,
+        "settle_reason": "captured",
+        "ref_count": 1,
+        "viewport": {},
+        "metadata": {
+          "source": "web_current_observation",
+          "has_clean_screenshot": true,
+          "has_annotated_screenshot": true,
+          "has_dom_text": true,
+          "has_dom_json": true
+        }
+      },
+      "tool_artifacts": [
+        {
+          "tool_name": "web_note",
+          "tool_call_id": "demo-70e4864d115c",
+          "action": "note",
+          "status": "recorded",
+          "is_error": false,
+          "text": "[fact] Activate the local form; verify its receipt.",
+          "selected_image_kind": "none",
+          "raw_image_path": "",
+          "action_overlay_image_path": "",
+          "som_image_path": "",
+          "selected_image_path": "",
+          "post_action_observation_summary": "",
+          "page_url": "",
+          "page_title": "",
+          "som_metadata": {},
+          "metadata": {
+            "source": "web_tool_result",
+            "image_count": 0,
+            "attribution_source": "none",
+            "observation_recovered": false,
+            "observation_recovery": {},
+            "answer": ""
+          }
+        }
+      ],
+      "observation_metadata": {
+        "web_current_observation_role": "current",
+        "web_current_screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_001_raw.png",
+        "web_current_dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_001.txt",
+        "web_current_dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_001.json",
+        "web_current_ref_count": 1,
+        "web_current_settled": true,
+        "web_current_settle_reason": "captured"
+      }
+    },
+    {
+      "step_index": 2,
+      "session_id": "first-web",
+      "round_num": 1,
+      "session_step": 2,
+      "runtime_cursor": {
+        "session_id": "first-web",
+        "round_num": 1,
+        "round_step": 2,
+        "session_step": 2,
+        "phase": "main",
+        "phase_step": 2
+      },
+      "status": "ok",
+      "assistant_text": "",
+      "reasoning": "",
+      "assistant_tool_calls": [
+        {
+          "id": "demo-b457225f75c2",
+          "name": "web_click_point",
+          "arguments": "{\"x\": 80, \"y\": 40}",
+          "type": "function"
+        }
+      ],
+      "tool_summary": "web_click_point",
+      "tools": [
+        {
+          "action": "click_point",
+          "tool_name": "web_click_point",
+          "tool_input": {
+            "x": 80,
+            "y": 40
+          },
+          "tool_output": {
+            "status": "ok",
+            "text": "Clicked viewport point (80.0, 40.0).",
+            "action": "click_point",
+            "params": {
+              "x": 80.0,
+              "y": 40.0,
+              "button": "left"
+            },
+            "result": {
+              "x": 80.0,
+              "y": 40.0,
+              "button": "left",
+              "click_count": 1
+            },
+            "observation": {
+              "observation_id": "post-click_point-1793777119645988000",
+              "settled": true,
+              "settle_reason": "stable_2_samples",
+              "page": {
+                "url": "http://127.0.0.1:8787/task/first-web",
+                "title": "NorthCUA local task"
+              },
+              "snapshot": {
+                "text": "1 button \"NORTHCUA_CONFIRMED_548747eb91/first-web\"",
+                "refs": [
+                  {
+                    "ref": "1",
+                    "role": "button",
+                    "label": "NORTHCUA_CONFIRMED_548747eb91/first-web"
+                  }
+                ],
+                "ref_count": 1
+              },
+              "screenshot": {
+                "kind": "set_of_mark",
+                "width": 1280,
+                "height": 720,
+                "image_attached": true,
+                "image_omitted_reason": "",
+                "annotation": {
+                  "kind": "set_of_mark",
+                  "coordinate_frame": "viewport_css",
+                  "image_coordinate_frame": "screenshot_pixels",
+                  "marks": [
+                    {
+                      "ref": "1",
+                      "label": "1",
+                      "role": "button",
+                      "name": "NORTHCUA_CONFIRMED_548747eb91/first-web",
+                      "bbox_css": {
+                        "x": 16.0,
+                        "y": 16.0,
+                        "width": 180.0,
+                        "height": 60.0
+                      },
+                      "bbox_image": {
+                        "x": 16.0,
+                        "y": 16.0,
+                        "width": 180.0,
+                        "height": 60.0
+                      },
+                      "visible": true,
+                      "enabled": true
+                    }
+                  ],
+                  "truncated": false,
+                  "omitted_count": 0,
+                  "omitted_reason_counts": {},
+                  "marked_count": 1,
+                  "visible_interactive_count": 1,
+                  "max_marks": 150,
+                  "max_box_lookup": 512
+                }
+              }
+            },
+            "screenshot_url": "[redacted data URL; see screenshot artifact path]",
+            "raw_image_url": "[redacted data URL; see screenshot artifact path]",
+            "action_overlay_image_url": "[redacted data URL; see screenshot artifact path]",
+            "som_image_url": "[redacted data URL; see screenshot artifact path]"
+          },
+          "is_error": false,
+          "tool_call_id": "demo-b457225f75c2"
+        }
+      ],
+      "url": "http://127.0.0.1:8787/task/first-web",
+      "observation": {
+        "url": "http://127.0.0.1:8787/task/first-web",
+        "title": "NorthCUA local task",
+        "origin": "http://127.0.0.1:8787",
+        "snapshot": "button \"Activate\" [ref=@e1]",
+        "elements": [
+          {
+            "ref_id": "e1",
+            "role": "button",
+            "name": "Activate",
+            "text": "Activate",
+            "tag": "button",
+            "attributes": {}
+          }
+        ],
+        "raw": {
+          "backend": "playwright",
+          "url": "http://127.0.0.1:8787/task/first-web",
+          "title": "NorthCUA local task",
+          "frame_count": 1,
+          "frame_errors": [],
+          "frame_meta": [
+            {
+              "frame_index": 0,
+              "url": "http://127.0.0.1:8787/task/first-web",
+              "ref_count": 1,
+              "visited": 5,
+              "truncated": false,
+              "fallback": ""
+            }
+          ],
+          "snapshot_eval_timeout_seconds": 8.0,
+          "snapshot_max_refs": null,
+          "snapshot_max_visited": null,
+          "snapshot_fallback_max_refs": 512,
+          "fallback_used": false,
+          "truncated": false,
+          "visible_text_frames": [
+            {
+              "frame_index": 0,
+              "url": "http://127.0.0.1:8787/task/first-web",
+              "text": "Activate",
+              "chars": 8,
+              "truncated": false
+            }
+          ],
+          "snapshot_visible_text_max_chars": 12000
+        }
+      },
+      "error_text": "",
+      "screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_002_raw.png",
+      "dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_002.txt",
+      "dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_002.json",
+      "observation_artifact": {
+        "role": "current",
+        "screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_002_raw.png",
+        "annotated_screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_002_annotated.png",
+        "dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_002.txt",
+        "dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_002.json",
+        "page_url": "http://127.0.0.1:8787/task/first-web",
+        "page_title": "NorthCUA local task",
+        "observation_id": "initial-first-web-1793777117894479000",
+        "settled": true,
+        "settle_reason": "captured",
+        "ref_count": 1,
+        "viewport": {},
+        "metadata": {
+          "source": "web_current_observation",
+          "has_clean_screenshot": true,
+          "has_annotated_screenshot": true,
+          "has_dom_text": true,
+          "has_dom_json": true
+        }
+      },
+      "tool_artifacts": [
+        {
+          "tool_name": "web_click_point",
+          "tool_call_id": "demo-b457225f75c2",
+          "action": "click_point",
+          "status": "ok",
+          "is_error": false,
+          "text": "Clicked viewport point (80.0, 40.0).",
+          "selected_image_kind": "raw",
+          "raw_image_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/tool_1793777119679055000.png",
+          "action_overlay_image_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/tool_1793777119293697000_action_overlay.png",
+          "som_image_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/tool_1793777119679643000_som.png",
+          "selected_image_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/tool_1793777119679055000.png",
+          "post_action_observation_summary": "NorthCUA local task - http://127.0.0.1:8787/task/first-web",
+          "page_url": "http://127.0.0.1:8787/task/first-web",
+          "page_title": "NorthCUA local task",
+          "som_metadata": {
+            "kind": "set_of_mark",
+            "coordinate_frame": "viewport_css",
+            "image_coordinate_frame": "screenshot_pixels",
+            "marks": [
+              {
+                "ref": "1",
+                "label": "1",
+                "role": "button",
+                "name": "NORTHCUA_CONFIRMED_548747eb91/first-web",
+                "bbox_css": {
+                  "x": 16.0,
+                  "y": 16.0,
+                  "width": 180.0,
+                  "height": 60.0
+                },
+                "bbox_image": {
+                  "x": 16.0,
+                  "y": 16.0,
+                  "width": 180.0,
+                  "height": 60.0
+                },
+                "visible": true,
+                "enabled": true
+              }
+            ],
+            "truncated": false,
+            "omitted_count": 0,
+            "omitted_reason_counts": {},
+            "marked_count": 1,
+            "visible_interactive_count": 1,
+            "max_marks": 150,
+            "max_box_lookup": 512
+          },
+          "metadata": {
+            "source": "web_tool_result",
+            "image_count": 3,
+            "attribution_source": "image_hash",
+            "observation_recovered": false,
+            "observation_recovery": {},
+            "event_count": 3,
+            "invocation_id": 1,
+            "invocation_sequence": 1,
+            "candidate_path_count": 3,
+            "answer": ""
+          }
+        }
+      ],
+      "observation_metadata": {
+        "web_current_observation_role": "current",
+        "web_current_screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_002_raw.png",
+        "web_current_dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_002.txt",
+        "web_current_dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_002.json",
+        "web_current_ref_count": 1,
+        "web_current_settled": true,
+        "web_current_settle_reason": "captured"
+      }
+    },
+    {
+      "step_index": 3,
+      "session_id": "first-web",
+      "round_num": 1,
+      "session_step": 3,
+      "runtime_cursor": {
+        "session_id": "first-web",
+        "round_num": 1,
+        "round_step": 3,
+        "session_step": 3,
+        "phase": "main",
+        "phase_step": 3
+      },
+      "status": "ok",
+      "assistant_text": "Activated the local form.",
+      "reasoning": "",
+      "assistant_tool_calls": [],
+      "tool_summary": "",
+      "tools": [],
+      "url": "http://127.0.0.1:8787/task/first-web",
+      "observation": {
+        "url": "http://127.0.0.1:8787/task/first-web",
+        "title": "NorthCUA local task",
+        "origin": "http://127.0.0.1:8787",
+        "snapshot": "button \"NORTHCUA_CONFIRMED_548747eb91/first-web\" [ref=@e1]",
+        "elements": [
+          {
+            "ref_id": "e1",
+            "role": "button",
+            "name": "NORTHCUA_CONFIRMED_548747eb91/first-web",
+            "text": "NORTHCUA_CONFIRMED_548747eb91/first-web",
+            "tag": "button",
+            "attributes": {}
+          }
+        ],
+        "raw": {
+          "backend": "playwright",
+          "url": "http://127.0.0.1:8787/task/first-web",
+          "title": "NorthCUA local task",
+          "frame_count": 1,
+          "frame_errors": [],
+          "frame_meta": [
+            {
+              "frame_index": 0,
+              "url": "http://127.0.0.1:8787/task/first-web",
+              "ref_count": 1,
+              "visited": 5,
+              "truncated": false,
+              "fallback": ""
+            }
+          ],
+          "snapshot_eval_timeout_seconds": 8.0,
+          "snapshot_max_refs": null,
+          "snapshot_max_visited": null,
+          "snapshot_fallback_max_refs": 512,
+          "fallback_used": false,
+          "truncated": false,
+          "visible_text_frames": [
+            {
+              "frame_index": 0,
+              "url": "http://127.0.0.1:8787/task/first-web",
+              "text": "NORTHCUA_CONFIRMED_548747eb91/first-web",
+              "chars": 39,
+              "truncated": false
+            }
+          ],
+          "snapshot_visible_text_max_chars": 12000
+        }
+      },
+      "error_text": "",
+      "screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_003_terminal_raw.png",
+      "dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003_terminal.txt",
+      "dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003_terminal.json",
+      "observation_artifact": {
+        "role": "round_end_verify",
+        "screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_003_terminal_raw.png",
+        "annotated_screenshot_path": "",
+        "dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003_terminal.txt",
+        "dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003_terminal.json",
+        "page_url": "http://127.0.0.1:8787/task/first-web",
+        "page_title": "NorthCUA local task",
+        "observation_id": "terminal-first-web-1793777119823473000",
+        "settled": true,
+        "settle_reason": "captured",
+        "ref_count": 1,
+        "viewport": {},
+        "metadata": {
+          "source": "web_current_observation",
+          "has_clean_screenshot": true,
+          "has_annotated_screenshot": false,
+          "has_dom_text": true,
+          "has_dom_json": true
+        }
+      },
+      "tool_artifacts": [],
+      "terminal_verification": {
+        "status": "captured",
+        "reason": "completed",
+        "source": "runtime_finalize",
+        "runtime_mode": "local",
+        "previous_screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_003_raw.png",
+        "screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_003_terminal_raw.png",
+        "previous_dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003.txt",
+        "dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003_terminal.txt",
+        "previous_dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003.json",
+        "dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003_terminal.json",
+        "page_url": "http://127.0.0.1:8787/task/first-web",
+        "page_title": "NorthCUA local task",
+        "error": "",
+        "metadata": {}
+      },
+      "observation_metadata": {
+        "web_current_observation_role": "round_end_verify",
+        "web_current_screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_003_terminal_raw.png",
+        "web_current_dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003_terminal.txt",
+        "web_current_dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003_terminal.json",
+        "web_current_ref_count": 1,
+        "web_current_settled": true,
+        "web_current_settle_reason": "captured",
+        "web_current_observation_id": "terminal-first-web-1793777119823473000",
+        "web_current_page_url": "http://127.0.0.1:8787/task/first-web",
+        "web_current_page_title": "NorthCUA local task",
+        "web_terminal_verification_status": "captured",
+        "web_terminal_verification_reason": "completed",
+        "web_terminal_verification_source": "runtime_finalize",
+        "web_terminal_previous_screenshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_003_raw.png",
+        "web_terminal_previous_dom_snapshot_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003.txt",
+        "web_terminal_previous_dom_snapshot_json_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/dom_snapshots/step_003.json"
+      }
+    }
+  ],
+  "trace_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/web_agent_trace.jsonl",
+  "result_path": "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/result.json",
+  "screenshots": [
+    "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_001_raw.png",
+    "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_001_annotated.png",
+    "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_002_raw.png",
+    "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_002_annotated.png",
+    "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/tool_1793777119293697000_action_overlay.png",
+    "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/tool_1793777119679055000.png",
+    "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/tool_1793777119679643000_som.png",
+    "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_003_raw.png",
+    "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_003_annotated.png",
+    "/private/tmp/northcua-research/logs/mycelium-first-web/artifacts/first-web/screenshots/step_003_terminal_raw.png"
+  ],
+  "tool_errors": [],
+  "cleanup_errors": [],
+  "terminal_metadata": {},
+  "terminal_decision": {
+    "action": "finish",
+    "reason": "completed",
+    "success": true,
+    "retryable": false,
+    "final_answer": "Activated the local form.",
+    "summary": "The web task completed.",
+    "metadata": {}
+  }
+}

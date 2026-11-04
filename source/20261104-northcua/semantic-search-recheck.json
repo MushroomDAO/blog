@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "northcua-pro-computer-use-harness-guide",
+      "title": "NorthCUA-Pro: Open Weights Meet a Computer-Use Harness",
+      "url": "/blog/northcua-pro-computer-use-harness-guide/",
+      "language": "en",
+      "excerpt": "NorthCUA-Pro: Open Weights Meet a Computer-Use Harness A source-based guide to NorthCUA-Pro: open weights, desktop and web execution, model-card score limits, deployment memory, Mac control and outcome verification. NorthCUA 电脑智能体 RPA GUI自动化 开放权重 What is being released? What does",
+      "score": 0.58598524
+    },
+    {
+      "article_id": "ternary-bonsai-2-27b-prismml-qwen3-ternary-5gb-local-27b",
+      "title": "Ternary Bonsai 2-27B: 5.9 GB for a 27B Model, Ternary Quantization Retains 98.2% Performance and Beats Standard 2-bit by 12 Points",
+      "url": "/blog/ternary-bonsai-2-27b-prismml-qwen3-ternary-5gb-local-27b/",
+      "language": "en",
+      "excerpt": "Ternary Bonsai 2-27B: 5.9 GB for a 27B Model, Ternary Quantization Retains 98.2% Performance and Beats Standard 2-bit by 12 Points PrismML releases Ternary Bonsai 2-27B from Qwen3.8-27B, ternary quantization (1.72 bits/weight), 5.9 GB for 27B parameters, 47 tok/s on M5 Max, 130 t",
+      "score": 0.505464
+    },
+    {
+      "article_id": "neohorse-1-recursive-self-improvement-agentic-post-training",
+      "title": "NeoHorse-1: The First Open-Source Small Model Seriously Prototyping Recursive Self-Improvement",
+      "url": "/blog/neohorse-1-recursive-self-improvement-agentic-post-training/",
+      "language": "en",
+      "excerpt": "NeoHorse-1: The First Open-Source Small Model Seriously Prototyping Recursive Self-Improvement TokenRhythm's Routing Harness lets 4B/9B models observe their own execution traces, estimate capability gaps, and inject feedback back into training — +5.93 average across ten benchmark",
+      "score": 0.4834181
+    },
+    {
+      "article_id": "gsq-rco-non-uniform-gguf-quantization",
+      "title": "27B 模型压到 11.8GB 还「任务无损」：奥地利 IST 用两篇论文的方法重做了 GGUF 量化",
+      "url": "/blog/gsq-rco-non-uniform-gguf-quantization/",
+      "language": "zh",
+      "excerpt": "27B 模型压到 11.8GB 还「任务无损」：奥地利 IST 用两篇论文的方法重做了 GGUF 量化 均匀量化对所有张量一视同仁，GSQ-RCO 不是——它用梯度搜索按每个张量的敏感度分配精度，在总大小预算内做非均匀分配。结果：Qwen3.8-27B 从 53.8GB 压到 11.8GB（4.6 倍），AIME25 和 LiveCodeBench 分数与 BF16 原模型完全一致。文件是标准 GGUF，llama.cpp、Ollama、LM Studio 直接跑。 量化 GGUF 本地推理 local-first Qwen 开源模型 llama.cpp",
+      "score": 0.48257732
+    },
+    {
+      "article_id": "btl-3-lora-adapter-qwen-programming-agent-tool-calling-training",
+      "title": "934MB 适配器，27B 基座，95% 代码通过率——BTL-3 的 LoRA 炼成路",
+      "url": "/blog/btl-3-lora-adapter-qwen-programming-agent-tool-calling-training/",
+      "language": "zh",
+      "excerpt": "934MB 适配器，27B 基座，95% 代码通过率——BTL-3 的 LoRA 炼成路 BTL-3 用 rank-32 LoRA 在 Qwen3.6-27B 上做强化学习后训练，用不到 1GB 的适配器权重，在编程智能体和结构化工具调用上打出 88.5% BFCL / 95% HumanEval 的成绩。本文深入 adapter_config.json 和训练设计，拆解 LoRA 怎么让一个 27B 模型变成专职 Agent。 LoRA PEFT Agent Tool Use Fine-tuning Qwen RL LoRA 的数学基础 BTL-3 的",
+      "score": 0.4662832
+    },
+    {
+      "article_id": "h2o-llmstudio-hardware-thailand-5090",
+      "title": "H2O LLM Studio 硬件选配：32GB 显存 GPU，从 7B 调到 34B 的完整方案",
+      "url": "/blog/h2o-llmstudio-hardware-thailand-5090/",
+      "language": "zh",
+      "excerpt": "H2O LLM Studio 硬件选配：32GB 显存 GPU，从 7B 调到 34B 的完整方案 大模型微调显存选配：从 7B 到 34B 的完整方案。 大模型微调 显存 GPU 先说结论 一、显存占用分析 7B 模型 13B 模型 34B 模型 配置方案 入门（微调 7B） 稳定版（微调 13B） 旗舰版（微调 34B） H2O LLM Studio 配置 7B 配置（1×32GB） 13B 配置（2×32GB） 34B 配置（4×32GB）",
+      "score": 0.46348324
+    },
+    {
+      "article_id": "edge0-35b-a3b-ssd-expert-offload-prerouter-mac",
+      "title": "Edge0-35B-A3B Teardown: How a 35B MoE Claims 15 tok/s in 3GB — Half the Experts, Predicted Routing",
+      "url": "/blog/edge0-35b-a3b-ssd-expert-offload-prerouter-mac/",
+      "language": "en",
+      "excerpt": "Edge0-35B-A3B Teardown: How a 35B MoE Claims 15 tok/s in 3GB — Half the Experts, Predicted Routing Edge0-35B-A3B turns Qwen3.5-35B-A3B into 4-bit experts streamed from SSD on demand. The card claims 2.9GiB peak memory, 14.9–17.7 tok/s on a 24GB M4 Pro, and a 3.9-point quality los",
+      "score": 0.45610628
+    },
+    {
+      "article_id": "deepseek-v41-flash-1017-uncensored-fp8-teardown",
+      "title": "Teardown of the Uncensored DeepSeek-V4.1-Flash-1017 FP8: 100% HarmBench Compliance, a 3.86pp MMLU Drop, and a 510GB Hardware Wall",
+      "url": "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+      "language": "en",
+      "excerpt": "Teardown of the Uncensored DeepSeek-V4.1-Flash-1017 FP8: 100% HarmBench Compliance, a 3.86pp MMLU Drop, and a 510GB Hardware Wall The uncensored FP8 release of DeepSeek-V4.1-Flash-1017 by dealignai (MIT, 3,808 downloads, 265 likes, created 2026-10-18) self-reports 320/320 HarmBen",
+      "score": 0.4560167
+    },
+    {
+      "article_id": "comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy",
+      "title": "ComfyUI-MiniMax-H3-W4A4-VSA: Running MiniMax H3 Video Generation on RTX 4070 12GB with W4A4 + Streaming VSA",
+      "url": "/blog/comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy/",
+      "language": "en",
+      "excerpt": "ComfyUI-MiniMax-H3-W4A4-VSA: Running MiniMax H3 Video Generation on RTX 4070 12GB with W4A4 + Streaming VSA sepiablue-ai, GPL-3.0, 46 stars. Two ComfyUI nodes bringing MiniMax H3 video generation to 12GB consumer GPUs: W4A4 quantization (FC1-only ConvRot preconverted cache) + str",
+      "score": 0.45572767
+    },
+    {
+      "article_id": "sensenova-vision-unified-cv-hardware-guide",
+      "title": "SenseNova-Vision：一个7B模型做完所有CV任务，需要什么硬件？",
+      "url": "/blog/sensenova-vision-unified-cv-hardware-guide/",
+      "language": "zh",
+      "excerpt": "SenseNova-Vision：一个7B模型做完所有CV任务，需要什么硬件？ SenseNova-Vision-7B-MoT 把目标检测、深度估计、分割、3D重建等所有CV任务统一成一个生成模型。Web Demo跑起来需要1张80GB显卡，完整benchmark需要8张80GB，训练至少2台8×80GB机器。详细硬件配置指南。 计算机视觉 多模态 AI模型 GPU 硬件 深度估计 目标检测 分割 开源 一、一个模型，所有计算机视觉任务 二、硬件需求：不同使用场景的配置要求 场景 1：单图推理（本地测试） 场景 2：Web Demo（Gradio 界面）",
+      "score": 0.45439044
+    }
+  ]
+}
