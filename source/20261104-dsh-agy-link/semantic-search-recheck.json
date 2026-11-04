@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "dsh-agy-link-antigravity-dsh-integration-review",
+      "title": "dsh-agy-link: Antigravity Models Inside DSH",
+      "url": "/blog/dsh-agy-link-antigravity-dsh-integration-review/",
+      "language": "en",
+      "excerpt": "dsh-agy-link: Antigravity Models Inside DSH Explore dsh-agy-link's Antigravity bridge for DSH: streaming, quotas, sessions, permissions, package provenance and what targeted offline tests actually prove. dsh-agy-link Antigravity DeepSeek Harness 模型集成 开源 Which version and adoption",
+      "score": 0.63236016
+    },
+    {
+      "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+      "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+      "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+      "language": "zh",
+      "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+      "score": 0.47529742
+    },
+    {
+      "article_id": "google-skills-137-agent-skills-negative-routing-vs-anthropic",
+      "title": "拆 google/skills：137 个 Agent Skill 里，86% 是 Google Cloud，67% 写了「别用我」",
+      "url": "/blog/google-skills-137-agent-skills-negative-routing-vs-anthropic/",
+      "language": "zh",
+      "excerpt": "拆 google/skills：137 个 Agent Skill 里，86% 是 Google Cloud，67% 写了「别用我」 Google 官方 Agent Skills 仓库 19583 星，实测统计：137 个 SKILL.md 里 cloud 占 118 个，index.json 收录 132 个，其中 88 个（67%）在 description 里显式写了「Don't use for X，改用 Y」的负向路由，平均 description 长达 437 字符。这个数字本身就是一条工程结论——当 skill 数量过百，路由歧义才是主要失败",
+      "score": 0.47130924
+    },
+    {
+      "article_id": "airllm-70b-inference-4gb-gpu-layer-streaming",
+      "title": "AirLLM: Run a 70B Model on 4GB of VRAM, No Quantization Required",
+      "url": "/blog/airllm-70b-inference-4gb-gpu-layer-streaming/",
+      "language": "en",
+      "excerpt": "AirLLM: Run a 70B Model on 4GB of VRAM, No Quantization Required lyogavin's open-source extreme-inference toolkit, 30k stars, Apache 2.0. Layer-by-layer streaming loads 70B models on a single 4GB GPU — no quantization, distillation, or pruning. Kimi K3 (2.8T) in 3.72GB, DeepSeek-",
+      "score": 0.46950704
+    },
+    {
+      "article_id": "nvidia-simready-assets-audit",
+      "title": "NVIDIA SimReady: Auditing 2,575 Simulation Assets",
+      "url": "/blog/nvidia-simready-assets-audit/",
+      "language": "en",
+      "excerpt": "NVIDIA SimReady: Auditing 2,575 Simulation Assets Audit NVIDIA SimReady's 2,575 asset packages through a complete box sample: OpenUSD fields, dependency checks, licenses and the limits of simulation claims. SimReady NVIDIA OpenUSD 物理AI 机器人仿真 What do 2,575 assets and 472GB count? ",
+      "score": 0.4633335
+    },
+    {
+      "article_id": "gradium-phonon-local-tts",
+      "title": "Gradium Phonon：64.5MB本地语音合成，7ms与商用许可怎么读？",
+      "url": "/blog/gradium-phonon-local-tts/",
+      "language": "zh",
+      "excerpt": "Gradium Phonon：64.5MB本地语音合成，7ms与商用许可怎么读？ 核查Gradium Phonon官方权重与Rust推理库，区分31M英文Apache-2.0与40M各版本非商用许可，拆解64.5MB下载、7ms首音和困难文本1.7%词错率的条件；记录M4、16GB机器在禁网沙箱内生成WAV的功能验证，并说明首次下载、音色制作、中文支持和最低内存等问题不能混为一谈。 Gradium Phonon 语音合成 本地AI Rust 开源模型 官方仓库与权重在哪里？ 31M、40M与64.5MB分别指什么？ 7ms首音，包含了哪些时间？ 1.7%",
+      "score": 0.4611157
+    },
+    {
+      "article_id": "harborrl-agentic-rl-pipeline",
+      "title": "HarborRL: From Agent Traces to Reinforcement Learning",
+      "url": "/blog/harborrl-agentic-rl-pipeline/",
+      "language": "en",
+      "excerpt": "HarborRL: From Agent Traces to Reinforcement Learning Review HarborRL MATH, task verification and native Slime training: current GRPO/Claude Code limits, GPU topology and 89 CPU tests, without a live RL run. HarborRL Agentic RL GRPO Harbor Slime Where does it fit in the pipeline?",
+      "score": 0.4581226
+    },
+    {
+      "article_id": "conversationalvoice-averalabs-full-duplex-training-data-pipeline",
+      "title": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线",
+      "url": "/blog/conversationalvoice-averalabs-full-duplex-training-data-pipeline/",
+      "language": "zh",
+      "excerpt": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线 avera-labs/ConversationalVoice，51 stars，BSL 1.1 许可证（非生产免费，生产环境商用需授权，4年后转 MIT）。AveraLabs 出品，配套 arXiv 2609.08147 论文。一条 9 阶段 Celery 流水线，将真实双人录音自动转成全双工语音模型训练数据，每段对话产出三类数据：分离 / 重建 / 扩写。内部使用 DialogueSidon（说话人分离）、Qwen3-ASR（转写）、Qwen3-TTS（语音合成）。",
+      "score": 0.45799288
+    },
+    {
+      "article_id": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+      "title": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+      "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/",
+      "language": "en",
+      "excerpt": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry KMnO4-zx/agentic-rl-lab, 147 stars, Apache 2.0, Python. GRPO post-training on Qwen3.5-4B for geometric visual QA (GeoQA) with PyTRIO remote compute — ¥5, 100 steps, accuracy from 71% to 87% (+16pp). The full series reprod",
+      "score": 0.45739928
+    },
+    {
+      "article_id": "jarvis-py-local-voice-assistant-privacy-teardown",
+      "title": "jarvis-py 拆解：标着「离线」的 Python 语音助手，联网时默认把录音明文发给 Google",
+      "url": "/blog/jarvis-py-local-voice-assistant-privacy-teardown/",
+      "language": "zh",
+      "excerpt": "jarvis-py 拆解：标着「离线」的 Python 语音助手，联网时默认把录音明文发给 Google Shaan-alpha/jarvis-py 是一个 6 star、MIT 协议的 Python 桌面语音助手：openWakeWord 唤醒、Ollama phi3、fastembed 记忆、三层路由。我们读完代码并在 Mac mini 上实测：269 个测试全过，但联网时语音默认经明文 HTTP 发给 Google，唤醒阈值 0.3 下 18 条近音干扰句有 11 条误唤醒，文档 RAG 的 0.6 阈值让 6 个真问题一个都没注入。 语音助手 本",
+      "score": 0.45633355
+    }
+  ]
+}
