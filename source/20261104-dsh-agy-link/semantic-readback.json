@@ -1,0 +1,38 @@
+[
+  {
+    "id": "bd8bba9e348606c31f301835f2f53f615cc0ac4f9e0f46c0",
+    "metadata": {
+      "article_id": "dsh-agy-link-antigravity-dsh-integration-review",
+      "content_hash": "bea8093f633a8c10",
+      "excerpt": "dsh-agy-link调研：把Antigravity接入DSH，先看配额、工具与执行边界 dsh-agy-link是将Antigravity的agy CLI接入DeepSeek Harness的MIT插件，支持模型路由、流式输出、工具卡片、账号与配额管理。本文核对npm版本和下载口径，拆解会话绑定、权限默认值与凭据边界，报告76项离线测试与发布包校验，并分析记录丢失时的诊断策略，区分连接便利与任务可靠性。 dsh-agy-link Antigravity DeepSeek Harness 模型集成 开源 先更新素材里的版本与数字 它连接的是模型，还是另",
+      "language": "zh",
+      "tags": [
+        "dsh-agy-link",
+        "Antigravity",
+        "DeepSeek Harness",
+        "模型集成",
+        "开源"
+      ],
+      "title": "dsh-agy-link调研：把Antigravity接入DSH，先看配额、工具与执行边界",
+      "url": "/blog/dsh-agy-link-antigravity-dsh-integration-review/"
+    }
+  },
+  {
+    "id": "1aaf8a91a9fb95b1bdd57e082caffe97665c690d32a31a5e",
+    "metadata": {
+      "article_id": "dsh-agy-link-antigravity-dsh-integration-review",
+      "content_hash": "2dfe78bced2a167b",
+      "excerpt": "dsh-agy-link: Antigravity Models Inside DSH Explore dsh-agy-link's Antigravity bridge for DSH: streaming, quotas, sessions, permissions, package provenance and what targeted offline tests actually prove. dsh-agy-link Antigravity DeepSeek Harness 模型集成 开源 Which version and adoption",
+      "language": "en",
+      "tags": [
+        "dsh-agy-link",
+        "Antigravity",
+        "DeepSeek Harness",
+        "模型集成",
+        "开源"
+      ],
+      "title": "dsh-agy-link: Antigravity Models Inside DSH",
+      "url": "/blog/dsh-agy-link-antigravity-dsh-integration-review/"
+    }
+  }
+]
