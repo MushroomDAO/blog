@@ -1,0 +1,7 @@
+{"time": 1793777119.1438432, "kind": "model_call", "tools": ["web_note"]}
+{"time": 1793777119.29234, "kind": "model_call", "tools": ["web_click_point"]}
+{"time": 1793777119.3079581, "kind": "web_action", "task": "first-web"}
+{"time": 1793777119.821439, "kind": "model_call", "tools": []}
+{"time": 1793777119.954051, "kind": "model_call", "tools": ["client_browser_snapshot"]}
+{"time": 1793777119.971483, "kind": "evaluation", "task": "first-web", "verified": true}
+{"time": 1793777119.9715462, "kind": "model_call", "tools": ["final_report"]}
