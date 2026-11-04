@@ -1,0 +1,15 @@
+{
+  "modelId": "beipo-ai/NorthCUA-Pro",
+  "revision": "b5d64ab98d811775cd5a297a5d14df0df35b39b9",
+  "publicUngated": true,
+  "bf16Parameters": 396802360816,
+  "indexTensorBytes": 793604721632,
+  "byteCountEqualsBF16ParametersTimesTwo": true,
+  "shards": 122,
+  "tensorKeys": 1371,
+  "configuredContext": 262144,
+  "architecture": [
+    "Qwen3_5MoeForConditionalGeneration"
+  ],
+  "scope": "Metadata/index consistency only, no complete weight download or inference"
+}

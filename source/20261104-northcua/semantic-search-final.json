@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "cua-computer-use-2-0-desktop-agent-benchmark-trajectory-cua-s1",
+      "title": "Cua：Computer-Use 2.0 开源基础设施，桌面操控降格为工具调用",
+      "url": "/blog/cua-computer-use-2-0-desktop-agent-benchmark-trajectory-cua-s1/",
+      "language": "zh",
+      "excerpt": "Cua：Computer-Use 2.0 开源基础设施，桌面操控降格为工具调用 MIT，24.7K stars，YC W25。五件套：跨平台桌面驱动、云桌面集群、本地 VM、确定性评测框架、CUA-S1 小模型。核心主张是把 GUI 操作降格为 Agent 的一个工具调用——不是独占前台的循环。CUA-S1-Forms 70 万参数 2.8MB，真实表单 100% 准确率。 computer-use desktop-agent benchmark trajectory local-ai open-source Computer-Use 2.0 是什么 五",
+      "score": 0.50871044
+    },
+    {
+      "article_id": "browser-use-macos-harness-mac-desktop-agent-six-primitives",
+      "title": "browser-use-macos-harness-mac-desktop-agent-six-primitives",
+      "url": "/blog/browser-use-macos-harness-mac-desktop-agent-six-primitives/",
+      "language": "en",
+      "excerpt": "browser-use-macos-harness-mac-desktop-agent-six-primitives macOS Harness is the thinnest Mac desktop agent harness from the Browser Use team (main repo 110k stars). Core design: no app-specific tools preloaded — the LLM gets six raw primitives (see/key/type/click/ax/script) and w",
+      "score": 0.49142814
+    },
+    {
+      "article_id": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+      "title": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+      "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/",
+      "language": "en",
+      "excerpt": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry KMnO4-zx/agentic-rl-lab, 147 stars, Apache 2.0, Python. GRPO post-training on Qwen3.5-4B for geometric visual QA (GeoQA) with PyTRIO remote compute — ¥5, 100 steps, accuracy from 71% to 87% (+16pp). The full series reprod",
+      "score": 0.48792472
+    },
+    {
+      "article_id": "peekaboo-macos-native-ui-agent",
+      "title": "Peekaboo：让 AI 看见并操作 Mac 原生界面",
+      "url": "/blog/peekaboo-macos-native-ui-agent/",
+      "language": "zh",
+      "excerpt": "Peekaboo：让 AI 看见并操作 Mac 原生界面 Peekaboo 是面向 Mac 的开源桌面自动化工具，把截图、辅助功能界面树与点击输入接进 CLI、菜单栏应用和 MCP。本文核对4.9.0、5282Star快照、窗口定位与后台规则，并记录本地版本检查、权限诊断及Agent预演结果，说明何时使用原生UI工具、何时优先API，以及如何避免把命令已发出误判为任务成功。 Peekaboo macOS MCP 桌面自动化 AI Agent Peekaboo 到底补上了哪一层？ 怎样安装和接入 MCP？ 为什么窗口和快照比点击坐标更重要？ 后台运行意味着",
+      "score": 0.48272163
+    },
+    {
+      "article_id": "btl-3-lora-adapter-qwen-programming-agent-tool-calling-training",
+      "title": "934MB 适配器，27B 基座，95% 代码通过率——BTL-3 的 LoRA 炼成路",
+      "url": "/blog/btl-3-lora-adapter-qwen-programming-agent-tool-calling-training/",
+      "language": "zh",
+      "excerpt": "934MB 适配器，27B 基座，95% 代码通过率——BTL-3 的 LoRA 炼成路 BTL-3 用 rank-32 LoRA 在 Qwen3.6-27B 上做强化学习后训练，用不到 1GB 的适配器权重，在编程智能体和结构化工具调用上打出 88.5% BFCL / 95% HumanEval 的成绩。本文深入 adapter_config.json 和训练设计，拆解 LoRA 怎么让一个 27B 模型变成专职 Agent。 LoRA PEFT Agent Tool Use Fine-tuning Qwen RL LoRA 的数学基础 BTL-3 的",
+      "score": 0.4820943
+    },
+    {
+      "article_id": "ornith-1-agentic-coding-self-scaffold-guide",
+      "title": "Ornith-1.0：自搭脚手架 AI，9B 打赢 Gemma4-31B，397B 超越 Claude Opus 4.7",
+      "url": "/blog/ornith-1-agentic-coding-self-scaffold-guide/",
+      "language": "zh",
+      "excerpt": "Ornith-1.0：自搭脚手架 AI，9B 打赢 Gemma4-31B，397B 超越 Claude Opus 4.7 DeepReinforce 开源 Ornith-1.0 系列：9B / 35B MoE / 397B MoE，专攻 Agentic Coding。核心创新是自搭脚手架 RL——让模型学会给自己写工作流，而不是人工设计固定 harness。397B 在 Terminal-Bench 2.1 和 SWE-Bench Verified 双超 Claude Opus 4.7，35B MoE 反超参数大 10 倍的 Qwen3.5-397B。 ",
+      "score": 0.4796881
+    },
+    {
+      "article_id": "sensenova-vision-unified-cv-hardware-guide",
+      "title": "SenseNova-Vision：一个7B模型做完所有CV任务，需要什么硬件？",
+      "url": "/blog/sensenova-vision-unified-cv-hardware-guide/",
+      "language": "zh",
+      "excerpt": "SenseNova-Vision：一个7B模型做完所有CV任务，需要什么硬件？ SenseNova-Vision-7B-MoT 把目标检测、深度估计、分割、3D重建等所有CV任务统一成一个生成模型。Web Demo跑起来需要1张80GB显卡，完整benchmark需要8张80GB，训练至少2台8×80GB机器。详细硬件配置指南。 计算机视觉 多模态 AI模型 GPU 硬件 深度估计 目标检测 分割 开源 一、一个模型，所有计算机视觉任务 二、硬件需求：不同使用场景的配置要求 场景 1：单图推理（本地测试） 场景 2：Web Demo（Gradio 界面）",
+      "score": 0.47820905
+    },
+    {
+      "article_id": "stoa-pluralis-research-mac-rl-fleet-distributed-training",
+      "title": "14 Macs Across Four Countries Do RL Post-Training: Pluralis Research's stoa Experiment",
+      "url": "/blog/stoa-pluralis-research-mac-rl-fleet-distributed-training/",
+      "language": "en",
+      "excerpt": "14 Macs Across Four Countries Do RL Post-Training: Pluralis Research's stoa Experiment Pluralis Research open-sources stoa: fully decoupled RL post-training with rollout generation and gradient updates separated — 14 Macs across Paris, Zürich, Dublin, and Toronto generate rollout",
+      "score": 0.47341144
+    },
+    {
+      "article_id": "nezha-agent-first-ide-ai-coding-guide",
+      "title": "Nezha: 7MB Agent-First Desktop IDE — Complete Guide to Solving AI Coding Attention Fragmentation",
+      "url": "/blog/nezha-agent-first-ide-ai-coding-guide/",
+      "language": "en",
+      "excerpt": "Nezha: 7MB Agent-First Desktop IDE — Complete Guide to Solving AI Coding Attention Fragmentation Nezha is a desktop app built for parallel AI coding (1.4k GitHub stars, 7MB). It unifies multi-project management, task tracking, terminal, code browsing, session playback, and Git wo",
+      "score": 0.47323155
+    },
+    {
+      "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+      "title": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+      "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+      "language": "en",
+      "excerpt": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision OrcaRouter's abliterated (refusal-removed) MLX quantization of Qwen3.8-27B — 672 likes, trending. Architecture: 64-layer hybrid (48 Gated DeltaNet linear attention + 1 full attention every 4 layers), native vision-langu",
+      "score": 0.4728044
+    }
+  ]
+}
