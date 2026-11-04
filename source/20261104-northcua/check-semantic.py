@@ -14,7 +14,7 @@ r=get(base+"/get_by_ids",{"ids":ids});assert r["success"]
 rows=[{"id":v["id"],"metadata":v.get("metadata",{})} for v in r["result"]]
 out.joinpath("semantic-readback.json").write_text(json.dumps(rows,ensure_ascii=False,indent=2))
 info=get(base+"/info");out.joinpath("semantic-index-info.json").write_text(json.dumps(info,indent=2))
-search=get("https://blog.mushroom.cv/api/search",{"query":"NorthCUA Pro beipo computer use harness 397B normalized coordinates desktop"},{"Content-Type":"application/json","User-Agent":"Mycelium-Publish-Verification"})
+search=get("https://blog.mushroom.cv/api/search",{"query":"NorthCUA-Pro beipo 397B 17B 793.6GB Harness normalized_1000"},{"Content-Type":"application/json","User-Agent":"Mycelium-Publish-Verification"})
 out.joinpath("semantic-search-final.json").write_text(json.dumps(search,ensure_ascii=False,indent=2))
 hit=slug in json.dumps(search)
 status={"recordsAccepted":2,"manifestUpdated":True,"readbackVerified":len(rows)==2,"publicSearchVerified":hit,"status":"verified" if len(rows)==2 and hit else "propagation-pending","checkedAt":datetime.datetime.now(datetime.timezone.utc).isoformat()}
