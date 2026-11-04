@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "dsh-web-deepseek-harness-web-plugin-sidebar-all-in-one",
+      "title": "dsh-web-deepseek-harness-web-plugin-sidebar-all-in-one",
+      "url": "/blog/dsh-web-deepseek-harness-web-plugin-sidebar-all-in-one/",
+      "language": "en",
+      "excerpt": "dsh-web-deepseek-harness-web-plugin-sidebar-all-in-one dsh-web is the plugin ecosystem bundle for DeepSeek Harness (DSH) Web GUI. One command installs: task board with cron scheduling, mobile remote control, SSH ops terminal, image understanding, skins, Git graph, LiangShen mode,",
+      "score": 0.5014333
+    },
+    {
+      "article_id": "dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile",
+      "title": "dsh-plugin-mobile-gateway: Add Mobile Access to DeepSeek Harness — QR Pairing, Tailscale One-liner for Remote",
+      "url": "/blog/dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile/",
+      "language": "en",
+      "excerpt": "dsh-plugin-mobile-gateway: Add Mobile Access to DeepSeek Harness — QR Pairing, Tailscale One-liner for Remote Clarklevis1995/dsh-plugin-mobile-gateway, MIT open source, JavaScript plugin that adds a WebSocket mobile gateway to DeepSeek Harness (DSH). Supports LAN direct connect, ",
+      "score": 0.49408916
+    },
+    {
+      "article_id": "omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch",
+      "title": "Omarchy：DHH 造的 AI 原生 Linux，9 个 Agent 开箱即用，Omacom 基金会 800 万美元背书",
+      "url": "/blog/omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch/",
+      "language": "zh",
+      "excerpt": "Omarchy：DHH 造的 AI 原生 Linux，9 个 Agent 开箱即用，Omacom 基金会 800 万美元背书 basecamp/omarchy 是 Rails 作者 DHH 打造的 AI 原生 Linux 发行版，基于 Arch + Hyprland + Quickshell，28,045 stars，MIT。核心定位：美观、现代、有主见——预装 9 个 AI 编程 Agent 惰性启动器（Claude Code/Codex/OpenCode/Copilot/Grok/Pi 等），顶栏 Agent 面板统一追踪订阅额度，systemd 崩",
+      "score": 0.49178126
+    },
+    {
+      "article_id": "glm-5-3-flash-ox-alpha-320b-native-multimodal-open-source",
+      "title": "GLM-5.3-Flash（Ox Alpha）开源：321B MoE 原生多模态，30T token 预训练，稀疏+线性注意力混合架构，MIT",
+      "url": "/blog/glm-5-3-flash-ox-alpha-320b-native-multimodal-open-source/",
+      "language": "zh",
+      "excerpt": "GLM-5.3-Flash（Ox Alpha）开源：321B MoE 原生多模态，30T token 预训练，稀疏+线性注意力混合架构，MIT 2026-08-26 晚，智谱 z.ai 开源 GLM-5.3-Flash（代号 Ox Alpha）。约 321B 参数、激活 18B 的 MoE 模型，GLM-5 系列首个原生多模态版本，原生支持文字、图片、视频处理，使用 30T 多模态 token 预训练。架构上首次引入稀疏注意力与线性注意力混合（DSA），并配套异步强化学习训练基础设施。权重已上传 HuggingFace（zai-org/GLM-5.3-F",
+      "score": 0.4861917
+    },
+    {
+      "article_id": "agent-lightning-microsoft-research-rl-framework-train-agents-real-harness",
+      "title": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习",
+      "url": "/blog/agent-lightning-microsoft-research-rl-framework-train-agents-real-harness/",
+      "language": "zh",
+      "excerpt": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习 microsoft/agent-lightning，MIT 开源，Python，18K stars。三个组件（Trainer/API Gateway/Rollout Controller），Agent 代码零改动，用真实工具链训练。Qwen3.5-9B 只用 6K 样本，SWE-bench Verified 从 41.8% 涨到 56.4%（+14.6pp）。支持 AutoGen、LangChain、OpenAI Agents SDK 及任意",
+      "score": 0.4771711
+    },
+    {
+      "article_id": "gh-copilot-code-review-cli",
+      "title": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review",
+      "url": "/blog/gh-copilot-code-review-cli/",
+      "language": "zh",
+      "excerpt": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review GitHub CLI v2.88.0 新功能实测：在终端直接邀请 Copilot 审查 PR，无需跳转浏览器，附隐私风险提示 github copilot cli code-review developer-tools 核心能力 如何使用 免费吗？ 隐私警告（必读） 能用其他 AI CLI 吗？ 额外优化：大型团队福音 总结",
+      "score": 0.47407383
+    },
+    {
+      "article_id": "dsh-qa-cross-platform-test-browser-computer-ios-android",
+      "title": "dsh-qa Full Suite Open Source: Browser, macOS Desktop, iOS, Android — Four Drivers for Real Cross-Platform AI QA",
+      "url": "/blog/dsh-qa-cross-platform-test-browser-computer-ios-android/",
+      "language": "en",
+      "excerpt": "dsh-qa Full Suite Open Source: Browser, macOS Desktop, iOS, Android — Four Drivers for Real Cross-Platform AI QA ZSeven-W's DSH cross-platform testing plugin suite is now complete: dsh-qa (orchestrator) + dsh-browser + dsh-computer + dsh-ios (300 stars) + dsh-android (158 stars).",
+      "score": 0.47281367
+    },
+    {
+      "article_id": "anysearch-ai-agent-search-infrastructure",
+      "title": "AnySearch：专为 AI Agent 设计的搜索基础设施，打通金融、法律、学术认证数据源",
+      "url": "/blog/anysearch-ai-agent-search-infrastructure/",
+      "language": "zh",
+      "excerpt": "AnySearch：专为 AI Agent 设计的搜索基础设施，打通金融、法律、学术认证数据源 AnySearch 于 2026 年 5 月 11 日上线，定位 AI 时代搜索基础设施：单一 API 接入 22 个垂直领域、9 种内容类型，覆盖金融终端、法律数据库、学术期刊等需要认证的专业数据源。支持 MCP、Claude Code 集成，20 天内 GitHub 1.9k Star。 AI Agent 搜索基础设施 AnySearch MCP RAG 垂直数据源 Claude Code 企业搜索 AI Agent 搜索的结构性空白 产品架构：一个端点，",
+      "score": 0.47099474
+    },
+    {
+      "article_id": "archestra-enterprise-ai-platform-mcp-gateway-guardrails-llm-proxy-k8s",
+      "title": "Archestra：企业级一体化 AI 平台，MCP 网关 + LLM 代理 + 双 LLM 护栏 + K8s 编排，AGPL 开源",
+      "url": "/blog/archestra-enterprise-ai-platform-mcp-gateway-guardrails-llm-proxy-k8s/",
+      "language": "zh",
+      "excerpt": "Archestra：企业级一体化 AI 平台，MCP 网关 + LLM 代理 + 双 LLM 护栏 + K8s 编排，AGPL 开源 archestra-ai/archestra 是一个企业级一体化 AI 平台，4201 stars，TypeScript，AGPL 3.0（30人以下团队免费）。一个 URL、一个 Token，涵盖：LLM 网关（Anthropic/OpenAI/Azure/Bedrock/DeepSeek，带费用限额和虚拟 API Key）、MCP 网关（OAuth + On-Behalf-Of，工具以用户身份运行）、A2A 网关、私有",
+      "score": 0.47017193
+    },
+    {
+      "article_id": "dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem",
+      "title": "dsh-tui-pi: The Community TUI Ecosystem for DeepSeek Harness — A Pi-Style Terminal for Your Coding Agent",
+      "url": "/blog/dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem/",
+      "language": "en",
+      "excerpt": "dsh-tui-pi: The Community TUI Ecosystem for DeepSeek Harness — A Pi-Style Terminal for Your Coding Agent DeepSeek Harness (dsh) is DeepSeek's coding agent runtime, analogous to Claude Code. dsh-tui-pi is a community-built pi-style TUI plugin suite offering real-time subagent moni",
+      "score": 0.46970427
+    }
+  ]
+}
