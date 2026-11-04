@@ -1,0 +1,27 @@
+{
+  "package": "dsh-agy-link",
+  "version": "0.5.2",
+  "license": "MIT",
+  "gitHead": "c30dbe8eb431aac677e2af60078792c289992c21",
+  "latestPublished": "2026-11-04T08:29:40.401Z",
+  "created": "2026-08-19T04:55:08.400Z",
+  "dist": {
+    "shasum": "e5c78c71f77b7c33f654f2f87ffc59f22d44b509",
+    "tarball": "https://registry.npmjs.org/dsh-agy-link/-/dsh-agy-link-0.5.2.tgz",
+    "fileCount": 37,
+    "integrity": "sha512-U90nI9BPIPtFwZ2ELI6Ml2n6JgaGcprO44ACAmNI/WjnAqB++vOPTYj/NFTSy9GdlxZM6EtVnUwmAdlEHJtvMQ==",
+    "signatures": [
+      {
+        "sig": "MEUCIQC00zGR3rfD7v24VQWDtxKFm3lvCAlSMvahKRPZzrpPfAIgCqOpsML6hnehY4bFcKxJbvxPos0ON5QIc0G6JBqY+Ow=",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      },
+      {
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+        "sig": "MEQCIG3ZzWet8XL6+N/sXBmtneHudWDzd8Exif1aEKeC3oypAiB/Vribkr89l+wjy9Yd6aiY6cBRICcS4+fy6TKKwOEIZA=="
+      }
+    ],
+    "unpackedSize": 13246813
+  },
+  "stars": 147,
+  "openIssuesIncludingPR": 0
+}
