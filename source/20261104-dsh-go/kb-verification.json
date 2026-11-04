@@ -1,0 +1,10 @@
+{
+  "rows": 5,
+  "checks": {
+    "https://blog.mushroom.cv/blog/dsh-go-android-harness-phone-agent-review/": true,
+    "wechatStatus=failed": true,
+    "223.204.87.188": true,
+    "105项通过": true,
+    "没有Flutter/Dart/ADB": true
+  }
+}

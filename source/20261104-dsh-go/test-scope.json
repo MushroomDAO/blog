@@ -1,0 +1,13 @@
+{
+  "node": "v26.10.0",
+  "bridgeTests": 27,
+  "sdkTests": 78,
+  "totalPassed": 105,
+  "realAndroidDeviceTested": false,
+  "apkBuilt": false,
+  "apkInstalled": false,
+  "phoneControlTested": false,
+  "prootRuntimeTested": false,
+  "macSshTested": false,
+  "scope": "Selected upstream JavaScript bridge/session-deletion and plugin SDK unit tests only"
+}
