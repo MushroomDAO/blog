@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "78851d314c0452161b0dd45ef1f390f0ba353eef1faeda0c",
+    "metadata": {
+      "article_id": "dsh-go-android-harness-phone-agent-review",
+      "content_hash": "aa3304d2cb792b52",
+      "excerpt": "DSH Go调研：把Harness装进Android，离“最强AI手机”还有哪些条件？ DSH Go是第三方Android智能体客户端，可在手机内运行DeepSeek Harness，也能连接电脑上的DSH。本文沿源码拆解本机、SSH和远程连接三条路径，分析手机操控、权限确认、插件与数据流，核对Android和Mac使用条件，并报告27项桥接测试与78项SDK测试，说明宣传演示与真实手机任务验收的差距。 DSH Go Android DeepSeek Harness 手机智能体 开源 “手机上运行”，到底运行了什么？ 本机、SSH与DSH Remote，",
+      "language": "zh",
+      "tags": [
+        "DSH Go",
+        "Android",
+        "DeepSeek Harness",
+        "手机智能体",
+        "开源"
+      ],
+      "title": "DSH Go调研：把Harness装进Android，离“最强AI手机”还有哪些条件？",
+      "url": "/blog/dsh-go-android-harness-phone-agent-review/"
+    }
+  },
+  {
+    "id": "f66381e49fe2cd7f247ffac134bd4f9f54a0c87a7ca48b03",
+    "metadata": {
+      "article_id": "dsh-go-android-harness-phone-agent-review",
+      "content_hash": "ee74a58eac41a9ad",
+      "excerpt": "DSH Go: Local and Remote Agents on Android DSH Go brings a local or remote agent runtime to Android. Explore its architecture, phone controls, permissions, deployment needs, tests and practical limits. DSH Go Android DeepSeek Harness 手机智能体 开源 What runs on the phone? Local executi",
+      "language": "en",
+      "tags": [
+        "DSH Go",
+        "Android",
+        "DeepSeek Harness",
+        "手机智能体",
+        "开源"
+      ],
+      "title": "DSH Go: Local and Remote Agents on Android",
+      "url": "/blog/dsh-go-android-harness-phone-agent-review/"
+    }
+  }
+]
