@@ -1,0 +1,36 @@
+{
+  "banner": {
+    "origin": "local FLUX.2 Klein4B",
+    "seed": 8191,
+    "bytes": 90653,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "verificationFailures": 0,
+    "verificationWarnings": 0,
+    "manualReview": "accepted as conceptual hardware illustration, not actual card evidence"
+  },
+  "savedOfficialImages": [
+    "/Users/jason/.heinu1-bot/media/qwen-qsa-official-architecture.png",
+    "/Users/jason/.heinu1-bot/media/qwen-qsa-official-throughput.png"
+  ],
+  "officialSources": [
+    "https://github.com/kuraneko1/Qwen3.8-27B-QSA-llama.cpp/blob/864934c78136ad75274f202b8eb1e7c751d81fb1/docs/assets/qsa-architecture-en.png",
+    "https://github.com/kuraneko1/Qwen3.8-27B-QSA-llama.cpp/blob/864934c78136ad75274f202b8eb1e7c751d81fb1/docs/assets/qsa-vs-dense.png"
+  ],
+  "bodyFigures": {
+    "origin": "image generation via LittleM skill",
+    "rawDirectory": "/Users/jason/.codex/generated_images/01a1ac0a-878b-7d63-9d3b-d0e5b761d439",
+    "dimensions": [
+      1120,
+      630
+    ],
+    "bytes": [
+      45358,
+      57209,
+      45302
+    ],
+    "workerExit": 0
+  }
+}

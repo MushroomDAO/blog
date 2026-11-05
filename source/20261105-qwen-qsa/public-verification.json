@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-05T14:14:41.100239+00:00",
+  "articles": [
+    {
+      "slug": "qwen3-8-27b-qsa-24gb-context-runtime-review",
+      "url": "https://blog.mushroom.cv/blog/qwen3-8-27b-qsa-24gb-context-runtime-review/",
+      "title": "Qwen3.8-27B QSA：24GB显卡跑262K视觉，要满足什么条件？",
+      "listRank": 5,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/qwen3-8-27b-qsa-24gb-context-runtime-review-banner.CKxteqjp.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 90653
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/qwen3-8-27b-qsa-24gb-context-runtime-review-banner.CKxteqjp_ZyUdob.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 36034
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/qwen3-8-27b-qsa-24gb-context-runtime-review-fig-01.C-PnrnQe_2munB7.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 37042
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/qwen3-8-27b-qsa-24gb-context-runtime-review-fig-02.e8RnFUSV_ZJXEGd.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 39780
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/qwen3-8-27b-qsa-24gb-context-runtime-review-fig-03.8C9FLrze_Z1F3NA0.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 36878
+        }
+      ]
+    }
+  ]
+}

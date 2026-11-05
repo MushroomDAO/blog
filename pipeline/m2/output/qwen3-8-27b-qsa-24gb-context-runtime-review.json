@@ -1,0 +1,17 @@
+{
+  "title": "Qwen QSA：24GB长上下文的条件",
+  "author": "Mycelium",
+  "digest": "核对权重、引擎与缓存设置，拆解24GB显卡运行262K视觉的条件和证据。",
+  "mediaId": "prCUE631thH1cmNLi42prB_jcgH1JPcaIiDaEjyuMopBlDThtW9nkUX8XUkUDyPh",
+  "blogUrl": "https://blog.mushroom.cv/blog/qwen3-8-27b-qsa-24gb-context-runtime-review/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/qwen3-8-27b-qsa-24gb-context-runtime-review/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/kuraneko1/qwen3.8-27b-qsa-llama.cpp",
+    "huggingface.co/higa2515/qwen3.8-27b-qsa-bf16",
+    "huggingface.co/higa2515/qwen3.8-27b-qsa-gguf",
+    "github.com/pentacoxian/qwen-qsa-llama.cpp",
+    "huggingface.co/pentacoxian-dev/qwen3.8-27b-qsa-gsq-rco-gguf"
+  ],
+  "publishedAt": "2026-11-05T14:15:03.331Z"
+}

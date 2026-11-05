@@ -1,0 +1,2 @@
+Cover manually viewed: original generated accelerator board, memory chips and translucent long-context ribbon metaphor; no faces/text, frame filled. Not a photograph of an actual RTX4090 or project hardware. Official teaser not reused because of inconsistent decorative QWEN4 text. Body figures pending final review.
+All three final1120x630 PNGs manually viewed after compression. Chinese labels readable; concepts correct, LittleM performs selection/allocation/verification. 45358/57209/45302bytes, <=48colors. Worker66562 exited0 before stamp/freeze/build.
