@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-05T04:04:42.133Z",
+  "drafts": [
+    {
+      "slug": "agent-workspace-jumper-crab-robot-review",
+      "mediaId": "prCUE631thH1cmNLi42prIfrQ7zBahxQobLhlRZ6BUc9SBJH4HAQ3G0dI8RE9QjJ",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "4f49b195d0d822329c9d77fae816a899d272ff2e9e83efec4340028a51ef8601",
+      "remoteTextHash": "4f49b195d0d822329c9d77fae816a899d272ff2e9e83efec4340028a51ef8601",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/agent-workspace-jumper-crab-robot-review/",
+      "localContentHash": "d5dbfbc65b457550deec1c9af96586611e750ecfcf7030bdad2c07cd16fa1873",
+      "remoteContentHash": "2a114c3b045b0da0dd78cc12b0a8617ba6dbe0692289a55e5cd8245c712d2e7f"
+    }
+  ]
+}
