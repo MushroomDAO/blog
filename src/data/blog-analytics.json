@@ -1,179 +1,76 @@
 {
-  "generatedAt": "2026-11-01T14:00:07Z",
+  "generatedAt": "2026-11-05T14:00:00Z",
   "period": {
-    "start": "2026-10-02",
-    "end": "2026-11-01"
+    "start": "2026-10-06",
+    "end": "2026-11-05"
   },
   "totals": {
-    "pageviews": 30000,
-    "visits": 30000,
-    "bots": 20
+    "pageviews": 0,
+    "visits": 0,
+    "bots": 10
   },
   "last7": {
-    "pv": 30000,
-    "visits": 30000
+    "pv": 0,
+    "visits": 0
   },
   "prior7": {
     "pv": 0,
     "visits": 0
   },
-  "daily": [
-    {
-      "date": "10-05",
-      "pv": 10000,
-      "visits": 10000
-    },
-    {
-      "date": "10-09",
-      "pv": 10000,
-      "visits": 10000
-    },
-    {
-      "date": "10-19",
-      "pv": 10000,
-      "visits": 10000
-    }
-  ],
+  "daily": [],
   "countries": [],
   "countryTotal": 0,
   "referers": {
-    "direct": 15440,
-    "search": 4180,
-    "ecosystem": 850,
+    "direct": 10000,
+    "search": 2000,
+    "ecosystem": 1000,
     "ai": 0,
-    "other": 140
+    "other": 0
   },
-  "pages": [
-    {
-      "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
-      "titleEn": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
-      "path": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
-      "pv": 1650,
-      "visits": 1430
-    },
-    {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 570,
-      "visits": 470
-    },
-    {
-      "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
-      "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
-      "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
-      "pv": 240,
-      "visits": 240
-    },
-    {
-      "title": "MacNativeGames：把《王国之泪》打包成Mac应用的技术拆解",
-      "titleEn": "MacNativeGames: Tears of the Kingdom on Apple Silicon",
-      "path": "/blog/macnativegames-totk-native-mac/",
-      "pv": 230,
-      "visits": 230
-    },
-    {
-      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
-      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
-      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 230,
-      "visits": 230
-    },
-    {
-      "title": "MiniMax H3 本地视频生成完整工程指南：五条加速路径，从 RTX 4070 到多卡集群",
-      "titleEn": "MiniMax H3 Local Video Generation Engineering Guide: Five Acceleration Paths, from RTX 4070 to Multi-GPU Clusters",
-      "path": "/blog/minimax-h3-video-generation-local-acceleration-engineering-guide/",
-      "pv": 190,
-      "visits": 190
-    },
-    {
-      "title": "PixOffice：给 AI 多智能体加一层 2D 办公室可视化，三种接入方式详解",
-      "titleEn": "PixOffice: How to Integrate 2D Office Scene Visualization Into Your AI Agent System",
-      "path": "/blog/pixoffice-2d-office-frontend-ai-agent-integration-guide/",
-      "pv": 180,
-      "visits": 150
-    },
-    {
-      "title": "JR-Strata：把 Strata MoE 推理引擎移植到 Intel Arc 和 Vulkan 的社区分叉",
-      "titleEn": "JR-Strata: Community Fork Porting the Strata MoE Inference Engine to Intel Arc and Vulkan",
-      "path": "/blog/jr-strata-vulkan-sycl-intel-arc-strata-fork-non-nvidia-llm-inference/",
-      "pv": 160,
-      "visits": 160
-    },
-    {
-      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
-      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
-      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 150,
-      "visits": 140
-    },
-    {
-      "title": "MiniMax H3 开源实测：ComfyUI 三分钟上手，工程部署完全指南",
-      "titleEn": "MiniMax H3 Hands-On: Three Minutes to ComfyUI, Plus a Complete Deployment Guide",
-      "path": "/blog/minimax-h3-comfyui-open-source-video-generation-engineering-guide/",
-      "pv": 140,
-      "visits": 140
-    },
-    {
-      "title": "Strata：12GB 显卡跑 125B 模型，MoE 专家热缓存打破 VRAM 限制",
-      "titleEn": "Strata: Run a 125B Model on a 12 GB GPU with MoE Expert Hot Cache",
-      "path": "/blog/strata-qwen3-8-flash-next-125b-moe-12gb-gpu-inference-engine/",
-      "pv": 130,
-      "visits": 130
-    },
-    {
-      "title": "YuE2-3B：先写谱再唱歌的开源音乐模型，和 ACE-Step 1.5 差在哪",
-      "titleEn": "YuE2-3B: Open Song Generation That Writes an Editable Score First",
-      "path": "/blog/yue2-3b-open-source-song-generation-editable-score/",
-      "pv": 120,
-      "visits": 120
-    },
-    {
-      "title": "blog",
-      "titleEn": "blog",
-      "path": "/blog/",
-      "pv": 120,
-      "visits": 30
-    },
-    {
-      "title": "OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行",
-      "titleEn": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks",
-      "path": "/blog/openmuse-copilotkit-personal-ai-agent-browser-workspace/",
-      "pv": 120,
-      "visits": 120
-    },
-    {
-      "title": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照",
-      "titleEn": "Splash 1.4.0: Mac Inference and Six Specialized Engines",
-      "path": "/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
-      "pv": 110,
-      "visits": 110
-    }
-  ],
+  "pages": [],
   "devices": [
     {
       "label": "desktop",
-      "count": 19000
-    },
-    {
-      "label": "mobile",
-      "count": 1600
+      "count": 18000
     }
   ],
-  "os": [
-    {
-      "label": "Windows",
-      "count": 20000
-    },
-    {
-      "label": "Linux",
-      "count": 10000
-    }
-  ],
+  "os": [],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 30000
+      "count": 15900
+    },
+    {
+      "label": "Edge",
+      "count": 3000
+    },
+    {
+      "label": "Unknown",
+      "count": 600
+    },
+    {
+      "label": "Safari",
+      "count": 400
+    },
+    {
+      "label": "ChromeMobile",
+      "count": 300
+    },
+    {
+      "label": "ChromeDerivative",
+      "count": 200
+    },
+    {
+      "label": "ChromeMobileWebview",
+      "count": 200
+    },
+    {
+      "label": "Firefox",
+      "count": 100
+    },
+    {
+      "label": "MobileSafari",
+      "count": 100
     }
   ]
 }

@@ -1,0 +1,149 @@
+[1/141] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.o
+[2/141] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml.cpp.o
+[3/141] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml.c.o
+/private/tmp/qwen-qsa-research/ggml/src/ggml.c:2759:45: warning: cast from 'const struct ggml_tensor *' to 'struct ggml_tensor *' drops const qualifier [-Wcast-qual]
+ 2759 |     result->src[8] = (struct ggml_tensor *) L->hc_norm;  // a weight of the layer: places the node on the layer's device
+      |                                             ^
+1 warning generated.
+[4/141] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-backend.cpp.o
+[5/141] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-threading.cpp.o
+[6/141] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-opt.cpp.o
+[7/141] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o
+[8/141] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-backend-meta.cpp.o
+[9/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o
+[10/141] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/gguf.cpp.o
+[11/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.o
+[12/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/iqp.cpp.o
+[13/141] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o
+[14/141] Linking CXX shared library bin/libggml-base.0.25.1.dylib
+[15/141] Creating library symlink bin/libggml-base.0.dylib bin/libggml-base.dylib
+[16/141] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.o
+[17/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.o
+[18/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o
+[19/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o
+[20/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.o
+[21/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.o
+[22/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.o
+[23/141] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/arm/quants.c.o
+[24/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.o
+[25/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/llamafile/sgemm.cpp.o
+[26/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/arm/repack.cpp.o
+[27/141] Building CXX object ggml/src/CMakeFiles/ggml.dir/ggml-backend-dl.cpp.o
+[28/141] Building CXX object ggml/src/ggml-blas/CMakeFiles/ggml-blas.dir/ggml-blas.cpp.o
+[29/141] Linking CXX shared library bin/libggml-blas.0.25.1.dylib
+[30/141] Creating library symlink bin/libggml-blas.0.dylib bin/libggml-blas.dylib
+[31/141] Building CXX object ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o
+[32/141] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_9_cxx.cxx.o
+[33/141] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_7_cxx.cxx.o
+[34/141] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_6_cxx.cxx.o
+[35/141] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_8_cxx.cxx.o
+[36/141] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.o
+[37/141] Linking CXX shared library bin/libggml-cpu.0.25.1.dylib
+[38/141] Creating library symlink bin/libggml-cpu.0.dylib bin/libggml-cpu.dylib
+[39/141] Linking CXX shared library bin/libggml.0.25.1.dylib
+[40/141] Creating library symlink bin/libggml.0.dylib bin/libggml.dylib
+[41/141] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_4_cxx.cxx.o
+[42/141] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_5_cxx.cxx.o
+[43/141] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_3_cxx.cxx.o
+[44/141] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_2_cxx.cxx.o
+[45/141] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_0_cxx.cxx.o
+[46/141] Building CXX object src/CMakeFiles/llama.dir/llama.cpp.o
+[47/141] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_1_cxx.cxx.o
+[48/141] Building CXX object src/CMakeFiles/llama.dir/llama-adapter.cpp.o
+[49/141] Building CXX object src/CMakeFiles/llama.dir/llama-arch.cpp.o
+[50/141] Building CXX object src/CMakeFiles/llama.dir/llama-cparams.cpp.o
+[51/141] Building CXX object src/CMakeFiles/llama.dir/llama-batch.cpp.o
+[52/141] Building CXX object src/CMakeFiles/llama.dir/llama-chat.cpp.o
+[53/141] Building CXX object src/CMakeFiles/llama.dir/llama-hparams.cpp.o
+[54/141] Building CXX object src/CMakeFiles/llama.dir/llama-impl.cpp.o
+[55/141] Building CXX object src/CMakeFiles/llama.dir/llama-io.cpp.o
+[56/141] Building CXX object src/CMakeFiles/llama.dir/llama-graph.cpp.o
+/private/tmp/qwen-qsa-research/src/llama-graph.cpp:1451:60: warning: expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+ 1451 |             LLAMA_LOG_DEBUG("%s: can_reuse = %d\n", typeid(*input).name(), cur);
+      |                                                            ^
+1 warning generated.
+[57/141] Building CXX object src/CMakeFiles/llama.dir/llama-grammar.cpp.o
+[58/141] Building CXX object src/CMakeFiles/llama.dir/llama-context.cpp.o
+[59/141] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-iswa.cpp.o
+[60/141] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsa.cpp.o
+[61/141] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsa-iswa.cpp.o
+[62/141] Building CXX object src/CMakeFiles/llama.dir/llama-memory.cpp.o
+[63/141] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-msa.cpp.o
+[64/141] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid.cpp.o
+[65/141] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid-iswa.cpp.o
+[66/141] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache.cpp.o
+[67/141] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsv4.cpp.o
+[68/141] Building CXX object src/CMakeFiles/llama.dir/llama-mmap.cpp.o
+[69/141] Building CXX object src/CMakeFiles/llama.dir/llama-memory-recurrent.cpp.o
+[70/141] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid-idx.cpp.o
+[71/141] Building CXX object src/CMakeFiles/llama.dir/llama-ft-moe.cpp.o
+[72/141] Building CXX object src/CMakeFiles/llama.dir/llama-moe-cache.cpp.o
+[73/141] Building CXX object src/CMakeFiles/llama.dir/llama-model-saver.cpp.o
+[74/141] Building CXX object src/CMakeFiles/llama.dir/llama-model-loader.cpp.o
+[75/141] Building CXX object src/CMakeFiles/llama.dir/llama-quant.cpp.o
+[76/141] Building CXX object src/CMakeFiles/llama.dir/llama-sampler.cpp.o
+[77/141] Building CXX object src/CMakeFiles/llama.dir/unicode-data.cpp.o
+[78/141] Building CXX object src/CMakeFiles/llama.dir/llama-model.cpp.o
+[79/141] Building CXX object common/CMakeFiles/llama-common-base.dir/build-info.cpp.o
+[80/141] Linking CXX static library common/libllama-common-base.a
+[81/141] Building CXX object src/CMakeFiles/llama.dir/llama-vocab.cpp.o
+[82/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/parsers.cpp.o
+[83/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/cohere2moe.cpp.o
+[84/141] Building CXX object src/CMakeFiles/llama.dir/unicode.cpp.o
+[85/141] Linking CXX shared library bin/libllama.0.5.0.dylib
+[86/141] Creating library symlink bin/libllama.0.dylib bin/libllama.dylib
+[87/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/deepseek.cpp.o
+[88/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/functionary-v3-2.cpp.o
+[89/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gemma4.cpp.o
+[90/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gigachat-v3.cpp.o
+[91/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gpt-oss.cpp.o
+[92/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/kimi-k2.cpp.o
+[93/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/kimi-k3.cpp.o
+[94/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/ling3.cpp.o
+[95/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/lfm2.cpp.o
+[96/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/minicpm5.cpp.o
+[97/141] Building CXX object vendor/cpp-httplib/CMakeFiles/cpp-httplib.dir/httplib.cpp.o
+[98/141] Linking CXX static library vendor/cpp-httplib/libcpp-httplib.a
+[99/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/minimax-m3.cpp.o
+[100/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/ministral3.cpp.o
+[101/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/muse-glimmer.cpp.o
+[102/141] Building CXX object common/CMakeFiles/llama-common.dir/parsers/qwen3-coder.cpp.o
+[103/141] Building CXX object common/CMakeFiles/llama-common.dir/chat-auto-parser-generator.cpp.o
+[104/141] Building CXX object common/CMakeFiles/llama-common.dir/chat-auto-parser-helpers.cpp.o
+[105/141] Building CXX object common/CMakeFiles/llama-common.dir/chat-peg-parser.cpp.o
+[106/141] Building CXX object common/CMakeFiles/llama-common.dir/chat-diff-analyzer.cpp.o
+[107/141] Building CXX object common/CMakeFiles/llama-common.dir/chat.cpp.o
+[108/141] Building CXX object common/CMakeFiles/llama-common.dir/console.cpp.o
+[109/141] Building CXX object common/CMakeFiles/llama-common.dir/arg.cpp.o
+[110/141] Building CXX object common/CMakeFiles/llama-common.dir/debug.cpp.o
+[111/141] Building CXX object common/CMakeFiles/llama-common.dir/common.cpp.o
+[112/141] Building CXX object common/CMakeFiles/llama-common.dir/imatrix-loader.cpp.o
+[113/141] Building CXX object common/CMakeFiles/llama-common.dir/fit.cpp.o
+[114/141] Building CXX object common/CMakeFiles/llama-common.dir/hf-cache.cpp.o
+[115/141] Building CXX object common/CMakeFiles/llama-common.dir/json-schema.cpp.o
+[116/141] Building CXX object common/CMakeFiles/llama-common.dir/download.cpp.o
+[117/141] Building CXX object common/CMakeFiles/llama-common.dir/llguidance.cpp.o
+[118/141] Building CXX object common/CMakeFiles/llama-common.dir/log.cpp.o
+[119/141] Building CXX object common/CMakeFiles/llama-common.dir/ngram-cache.cpp.o
+[120/141] Building CXX object common/CMakeFiles/llama-common.dir/json-schema-to-grammar.cpp.o
+[121/141] Building CXX object common/CMakeFiles/llama-common.dir/ngram-map.cpp.o
+[122/141] Building CXX object common/CMakeFiles/llama-common.dir/ngram-mod.cpp.o
+[123/141] Building CXX object common/CMakeFiles/llama-common.dir/json.cpp.o
+[124/141] Building CXX object common/CMakeFiles/llama-common.dir/reasoning-budget.cpp.o
+[125/141] Building CXX object common/CMakeFiles/llama-common.dir/sampling.cpp.o
+[126/141] Building CXX object common/CMakeFiles/llama-common.dir/preset.cpp.o
+[127/141] Building CXX object common/CMakeFiles/llama-common.dir/subproc.cpp.o
+[128/141] Building CXX object common/CMakeFiles/llama-common.dir/unicode.cpp.o
+[129/141] Building CXX object common/CMakeFiles/llama-common.dir/trie.cpp.o
+[130/141] Building CXX object common/CMakeFiles/llama-common.dir/peg-parser.cpp.o
+[131/141] Building CXX object common/CMakeFiles/llama-common.dir/speculative.cpp.o
+[132/141] Building CXX object common/CMakeFiles/llama-common.dir/jinja/lexer.cpp.o
+[133/141] Building CXX object common/CMakeFiles/llama-common.dir/jinja/string.cpp.o
+[134/141] Building CXX object common/CMakeFiles/llama-common.dir/jinja/parser.cpp.o
+[135/141] Building CXX object common/CMakeFiles/llama-common.dir/jinja/runtime.cpp.o
+[136/141] Building CXX object tests/CMakeFiles/test-gguf.dir/test-gguf.cpp.o
+[137/141] Building CXX object common/CMakeFiles/llama-common.dir/jinja/caps.cpp.o
+[138/141] Building CXX object common/CMakeFiles/llama-common.dir/jinja/value.cpp.o
+[139/141] Linking CXX shared library bin/libllama-common.0.5.0.dylib
+[140/141] Creating library symlink bin/libllama-common.0.dylib bin/libllama-common.dylib
+[141/141] Linking CXX executable bin/test-gguf

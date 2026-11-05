@@ -1,0 +1,87 @@
+{
+  "query": "Qwen3.8-27B QSA 24GB 环形缓冲 IQ3_S 255K 视觉",
+  "response": {
+    "results": [
+      {
+        "article_id": "qwen3-8-27b-qsa-24gb-context-runtime-review",
+        "title": "Qwen3.8-27B QSA：24GB显卡跑262K视觉，要满足什么条件？",
+        "url": "/blog/qwen3-8-27b-qsa-24gb-context-runtime-review/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-27B QSA：24GB显卡跑262K视觉，要满足什么条件？ 核对 Qwen3.8-27B QSA 社区权重、自定义 llama.cpp 与24GB量化分支，解释稀疏注意力、完整KV缓存、DFlash、视觉投影器和前缀复用的不同条件。审阅作者公布的262K容量、255K输入、速度与质量证据，并给出本机CPU构建及144项GGUF测试的真实边界，帮助开发者设计可复核的本地部署实验。 Qwen QSA llama.cpp 本地大模型 长上下文 先把三个项目的位置摆清楚 QSA 究竟省下了什么？ 24GB 与 262K，分别用了哪些条件？ 作者",
+        "score": 0.69474727
+      },
+      {
+        "article_id": "k2-horizon-mova-36b-a4b-mac-local-memory-guide",
+        "title": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？",
+        "url": "/blog/k2-horizon-mova-36b-a4b-mac-local-memory-guide/",
+        "language": "zh",
+        "excerpt": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？ K2-Horizon-MoVA-36B-A4B 是 MBZUAI 基础模型研究院（IFM）9 月初开源的 Apache-2.0 纯文本 MoE，37.44B 总参、按权重头部推算每 token 约 4.66B 激活，把注意力的 V 投影换成 64 选 4 的专家。自报 Terminal-Bench 2.1 为 58.6。它的 KV 缓存每 token 192KB，是 Qwen3.5 同档的约 10 倍。Mac 上 32GB",
+        "score": 0.60259074
+      },
+      {
+        "article_id": "m1-max-64gb-local-ai-model-selection-memory-guide",
+        "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
+        "url": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
+        "language": "zh",
+        "excerpt": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度 持续更新：M1 Max 64GB MacBook 本地AI最佳组合方案。涵盖 Apple Intelligence 3B 复用、Qwen3-30B-A3B/27B/32B 全8bit部署、oMLX多模型调度、48GB可用内存边界测算与系统精简。 M1Max 本地模型 Qwen3 oMLX 内存管理 Apple Intelligence LLM 隐私AI 一、核心硬件与基础定位 二、Apple Intelligence 原生 3B 模型利用方案 三、Qwen3 三大主力模型差异",
+        "score": 0.6003135
+      },
+      {
+        "article_id": "qwen-image-2-1-dit-rgba-local-deploy-guide",
+        "title": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南",
+        "url": "/blog/qwen-image-2-1-dit-rgba-local-deploy-guide/",
+        "language": "zh",
+        "excerpt": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南 阿里千问 2026-09-20 开源。7.1B 参数 32 层 Block-Causal DiT + Qwen3-VL-8B 文本编码器 + 64 通道 RGBA VAE，合计约 15B。原生支持透明图层、多参考图（最多 10 张）、中英文文字渲染、最高 2K 分辨率、局部编辑。Diffusers/ComfyUI/SGLang/vLLM 当日支持。关键限制：H100 BF16 需 56.5GB 显存，无量化版本，许可证从 v1 的 Apache 2",
+        "score": 0.59214956
+      },
+      {
+        "article_id": "nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit",
+        "title": "Nanbeige4.3-33B 拆解：Apache-2.0 的 33B 稠密「教师模型」，自报 Terminal-Bench 2.1 80.9，但 KV 缓存是 Qwen3.8-27B 的 3.25 倍",
+        "url": "/blog/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit/",
+        "language": "zh",
+        "excerpt": "Nanbeige4.3-33B 拆解：Apache-2.0 的 33B 稠密「教师模型」，自报 Terminal-Bench 2.1 80.9，但 KV 缓存是 Qwen3.8-27B 的 3.25 倍 Nanbeige4.3-33B 是 Kanzhun（看准）旗下南北阁团队 2026-10-24 开源的 33.1B 稠密 Llama 架构模型，Apache-2.0，512K 上下文。README 自报 Terminal-Bench 2.1 为 80.9、DeepSWE 65.5，但没有技术报告、没有第三方复现；本机 Mac 的真正门槛不是权重（Q4_K",
+        "score": 0.59179723
+      },
+      {
+        "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+        "title": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行",
+        "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行 OrcaRouter 发布的 Qwen3.8-27B 消融对齐（abliterated）MLX 量化版本，672 likes，trending。基于 Qwen3.8-27B —— 一个 64 层混合架构模型（48 层 Gated DeltaNet 线性注意力 + 每 4 层一个全注意力层），原生视觉语言塔，262K 上下文，MTP 头。提供 2/4/6/8-bit 四个精度（affine 量化，grou",
+        "score": 0.58963627
+      },
+      {
+        "article_id": "airllm-70b-inference-4gb-gpu-layer-streaming",
+        "title": "AirLLM：4GB 显存跑 70B 大模型，无需量化",
+        "url": "/blog/airllm-70b-inference-4gb-gpu-layer-streaming/",
+        "language": "zh",
+        "excerpt": "AirLLM：4GB 显存跑 70B 大模型，无需量化 lyogavin 开源的大模型极限推理工具，30k stars，Apache 2.0。通过逐层流式加载，在单张 4GB 显卡上运行 70B 模型，无需量化/蒸馏/剪枝。Kimi K3（2.8T）3.72GB、DeepSeek-V3（671B）约 12GB、Qwen3-235B 约 3GB。v3.0 新增 FP8 支持。支持 CUDA、Apple Silicon（macOS），同一 AutoModel 接口覆盖所有主流模型。 本地推理 大模型 显存优化 AppleSilicon DeepSeek Qw",
+        "score": 0.58447754
+      },
+      {
+        "article_id": "qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide",
+        "title": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上",
+        "url": "/blog/qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上 unsloth/Qwen3.8-Flash-Next-GGUF 是 Qwen4 架构预览版（125B 总参、6B 激活，外加 51B n-gram 嵌入）的 GGUF 量化，110 万次下载。我们逐个读了 10 个量化档的 GGUF 张量头：所谓 1-bit 只压了专家的 gate/up 投影，28.8GB 的 n-gram 表至少是 4-bit，所以最小档仍有 72.5GB。好在",
+        "score": 0.5832714
+      },
+      {
+        "article_id": "qwen38-27b-quasar-nvfp4-mac-mlx-install-guide",
+        "title": "Qwen3.8-27B QUASAR-NVFP4：最强 4-bit QAT 量化详解 + Mac M1 Max 64GB 完整安装指南",
+        "url": "/blog/qwen38-27b-quasar-nvfp4-mac-mlx-install-guide/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-27B QUASAR-NVFP4：最强 4-bit QAT 量化详解 + Mac M1 Max 64GB 完整安装指南 社区发布 QUASAR-QAT/Qwen3.8-27B-QUASAR-NVFP4（19.7GB，全层 W4A4）——最小、质量最高的 NVFP4 版本。但 NVFP4 需要 NVIDIA Blackwell GPU，Mac 无法直接运行。本文给出 Mac M1 Max 64GB 的最佳替代方案：MLX 8bit（推荐）和 GGUF/Ollama 完整安装步骤。 Qwen3.8-27B QUASAR-QAT NVFP4 M",
+        "score": 0.58056575
+      },
+      {
+        "article_id": "hyperqwen-qwen-27b-24gb-vllm-guide",
+        "title": "HyperQwen拆解：24GB显卡跑Qwen3.8-27B，快在哪里、Mac能不能用？",
+        "url": "/blog/hyperqwen-qwen-27b-24gb-vllm-guide/",
+        "language": "zh",
+        "excerpt": "HyperQwen拆解：24GB显卡跑Qwen3.8-27B，快在哪里、Mac能不能用？ HyperQwen不是新模型，而是围绕Qwen3.8-27B构建的vLLM推理补丁、量化预处理和服务配置。本文拆解单用户、批量并发、提示词复用与长上下文的速度差异，核对质量评测、版本固定和显存条件，并说明Linux、Windows与Mac各自能怎样使用，以及本次CPU检查能够证明什么、不能替代哪些真实GPU评测。 HyperQwen Qwen3.8 vLLM 本地大模型 推理优化 一、它不是新权重，解决的是推理系统的组合问题 二、127、381和1035 tok/s",
+        "score": 0.5796952
+      }
+    ]
+  }
+}
