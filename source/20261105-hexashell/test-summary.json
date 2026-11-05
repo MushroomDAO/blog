@@ -1,0 +1,24 @@
+{
+  "sourceRevision": "e0190ddb757955131578e9f9071f4ee8e7113f7a",
+  "platform": "macOS Apple Silicon",
+  "python": "3.12.14",
+  "requirementsUnmodified": true,
+  "selectedFiles": [
+    "test_motion.py",
+    "test_vision.py",
+    "test_llm.py",
+    "test_benches.py",
+    "test_real_urai_sim.py"
+  ],
+  "passed": 134,
+  "failed": 4,
+  "skipped": 1,
+  "failureInitial": "Missing API key before fake gateway creation",
+  "failureRecheck": "Fake placeholder permits setup; worker RLIMIT_AS ValueError, parent EOFError",
+  "recheckFailed": 4,
+  "skippedReason": "URAI service dependencies not installed",
+  "liveModelCalls": false,
+  "gpuSimulatorRun": false,
+  "physicalRobotRun": false,
+  "sourceModified": false
+}
