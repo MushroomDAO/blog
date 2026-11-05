@@ -1,0 +1,28 @@
+{
+  "sourceCommit": "151e46321bae4399f8568829f190c7bdec216b49",
+  "model": "robbyant/lingbot-vision-vit-small",
+  "modelRevision": "127cbcec380de0bcd55bdc1b1fad3819850a6514",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "torch": "2.14.0",
+  "device": "cpu",
+  "dtype": "float32",
+  "inputShape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "outputShape": [
+    1,
+    196,
+    384
+  ],
+  "patchGrid": [
+    14,
+    14
+  ],
+  "embedDim": 384,
+  "parameters": 21601152,
+  "finite": true,
+  "scope": "one real pretrained backbone forward, not depth/robot/world evaluation"
+}

@@ -1,0 +1,3 @@
+Cover8221 manually rejected for pseudo-brand labels despite automated OCRpass. Parent generated8222: smooth gripper fingertips,glass cube,optical lens,landscape background. Manualaccepted, no readable text/people; framefilled;conceptual not realLingBot hardware. Figurespending.
+Initial three figures viewed: 02closedloopand03testscopeaccepted. Figure01 blanket 尚未集成 label rejected, requested narroweditto 按任务对接 before freeze/build; components alreadyhavepartialintegration. Firstworker11000exit0.
+Editedfigure01viewedaccepted 按任务对接. Final3figs1120x630<=48colors,68955/59993/73522bytes, Chinese readable, correctscope. Bothworkers11000/88964exit0 before stamp/freeze/build. Parent typography/mirrorreference editscompletedbeforefreeze.
