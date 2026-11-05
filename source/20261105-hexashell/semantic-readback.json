@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "419de9a41aab66ff4c24768a07e4b080671eec5ad4ae7a85",
+    "metadata": {
+      "article_id": "hexashell-robot-coding-agent-harness",
+      "content_hash": "efa8af1342bd6f52",
+      "excerpt": "HexaShell开源调研：14个通用工具，如何让编程智能体控制机器人？ HexaShell把机器人控制组织成编程智能体可调用的通用工具，连接视觉分割、几何测量、运动规划与任务技能。本文基于官方源码与论文说明，拆解十四个工具、Python执行循环、Linux沙箱和跨仿真适配，核对自评协议、宏平均与真实机器人结果的区别，并给出部署路径和测试边界，帮助判断它适合研究复现还是生产接入。 HexaShell 机器人 Harness 具身智能 开源 HexaShell究竟开源了什么？ 14个基础工具如何形成闭环？ 跨机器人复用，复用的究竟是哪一层？ 技能为什么比大",
+      "language": "zh",
+      "tags": [
+        "HexaShell",
+        "机器人",
+        "Harness",
+        "具身智能",
+        "开源"
+      ],
+      "title": "HexaShell开源调研：14个通用工具，如何让编程智能体控制机器人？",
+      "url": "/blog/hexashell-robot-coding-agent-harness/"
+    }
+  },
+  {
+    "id": "e02593b8626f49536a4bbbc5a33774606b965357cb11b194",
+    "metadata": {
+      "article_id": "hexashell-robot-coding-agent-harness",
+      "content_hash": "108c018bc835233b",
+      "excerpt": "HexaShell: A Robot Harness Built Around 14 Tools Explore HexaShell robot agents: 14 tools, Python execution, SAM 3 perception, skills, Linux isolation, evaluation caveats and practical deployment boundaries. HexaShell 机器人 Harness 具身智能 开源 What does the harness expose? What actuall",
+      "language": "en",
+      "tags": [
+        "HexaShell",
+        "机器人",
+        "Harness",
+        "具身智能",
+        "开源"
+      ],
+      "title": "HexaShell: A Robot Harness Built Around 14 Tools",
+      "url": "/blog/hexashell-robot-coding-agent-harness/"
+    }
+  }
+]
