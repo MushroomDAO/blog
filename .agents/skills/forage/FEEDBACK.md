@@ -1214,3 +1214,5 @@ Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slu
 纠正断行及AI/Al混淆，确认Orkas-AI/Orkas，c7c0e21fad7ff55f5a72a575b7a464f3cf9bc3a1、MIT、package2026.11.4。精确URL/实体查重仅命中原始KB，线上检索无同项目文章；已发布列表48001不可读，无旧创建凭证。区分dispatch/hand_off/worker、范围记忆/Library/历史、源码/打包版和本地存储/远程推理；worker上下文隔离不等于OSsandbox。
 
 本机现有builtin manifest检查400文件一致，不是400功能测试；未安装完整Electron、启动GUI或执行Orkas模型/外部CLI任务。Jina抓取成功，官方截图已保存；主题FLUX8201封面和3张小M图人工检查通过，Blog轮播1/列表5/5图200，公众号全文/3图/封面/元数据/原文URL回读一致，未群发。KB和发布账本已更新；语义写入已接收，最新传播状态见source/20261105-orkas/semantic-status.json。
+
+Orkas最终核验：中英文2条索引回读及公开语义检索均已通过，状态verified；KB再次按实际记录回读确认URL、草稿ID及索引状态。
