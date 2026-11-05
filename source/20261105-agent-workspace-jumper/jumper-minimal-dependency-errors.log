@@ -1,0 +1,330 @@
+.....FFFFFFFFFF.....F................................................    [100%]
+=================================== FAILURES ===================================
+_________________________ test_the_schema_is_a_schema __________________________
+
+    def test_the_schema_is_a_schema() -> None:
+        """A malformed schema validates nothing, and says so to nobody."""
+>       import jsonschema
+E       ModuleNotFoundError: No module named 'jsonschema'
+
+tests/test_app_schema.py:106: ModuleNotFoundError
+__________________ test_a_bundle_the_schema_describes_passes ___________________
+
+out = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_a_bundle_the_schema_descr0/tiny')
+
+    def validate_app(out: Path) -> None:
+        """Hold a bundle to `deploy/app.schema`, or refuse it.
+
+        `bundle.json` against the schema, each manual against its `$defs/manual`,
+        and the directory against `x-files`: every file is one the schema knows,
+        every required one is there, and `bundle.json` lists exactly what is on
+        disk. A bundle that passes here is the bundle the schema describes -- which
+        is the only way a schema stays true, rather than being a description of
+        what the bundler did once.
+        """
+        try:
+>           import jsonschema
+E           ModuleNotFoundError: No module named 'jsonschema'
+
+scripts/deploy.py:2019: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+bundle = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_a_bundle_the_schema_descr0/tiny')
+
+    def test_a_bundle_the_schema_describes_passes(bundle: Path) -> None:
+        """The control group: every refusal below would pass against a check that
+        refuses everything."""
+>       deploy().validate_app(bundle)
+
+tests/test_app_schema.py:118:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+out = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_a_bundle_the_schema_descr0/tiny')
+
+    def validate_app(out: Path) -> None:
+        """Hold a bundle to `deploy/app.schema`, or refuse it.
+
+        `bundle.json` against the schema, each manual against its `$defs/manual`,
+        and the directory against `x-files`: every file is one the schema knows,
+        every required one is there, and `bundle.json` lists exactly what is on
+        disk. A bundle that passes here is the bundle the schema describes -- which
+        is the only way a schema stays true, rather than being a description of
+        what the bundler did once.
+        """
+        try:
+            import jsonschema
+        except ModuleNotFoundError:
+>           raise SystemExit("[deploy] jsonschema is not installed, and every bundle is checked "
+                             "against deploy/app.schema.\n           pip install -e .")
+E           SystemExit: [deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.
+E                      pip install -e .
+
+scripts/deploy.py:2021: SystemExit
+____ test_each_departure_from_the_schema_is_refused[a file no bundle holds] ____
+
+bundle = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_each_departure_from_the_s0/tiny')
+why = 'a file no bundle holds'
+mutate = <function _mutations.<locals>.stray at 0x10a37c360>
+message = 'no file of this name belongs'
+
+    @pytest.mark.parametrize("why,mutate,message", _mutations(), ids=[m[0] for m in _mutations()])
+    def test_each_departure_from_the_schema_is_refused(bundle: Path, why, mutate, message) -> None:
+        mutate(bundle)
+        with pytest.raises(SystemExit) as raised:
+            deploy().validate_app(bundle)
+>       assert message in str(raised.value), str(raised.value)
+E       AssertionError: [deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.
+E                    pip install -e .
+E       assert 'no file of this name belongs' in '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'
+E        +  where '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .' = str(SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'))
+E        +    where SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') = <ExceptionInfo SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') tblen=2>.value
+
+tests/test_app_schema.py:165: AssertionError
+__________ test_each_departure_from_the_schema_is_refused[no manual] ___________
+
+bundle = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_each_departure_from_the_s1/tiny')
+why = 'no manual'
+mutate = <function _mutations.<locals>.no_manual at 0x10a37c400>
+message = 'missing: a file matching ^manual'
+
+    @pytest.mark.parametrize("why,mutate,message", _mutations(), ids=[m[0] for m in _mutations()])
+    def test_each_departure_from_the_schema_is_refused(bundle: Path, why, mutate, message) -> None:
+        mutate(bundle)
+        with pytest.raises(SystemExit) as raised:
+            deploy().validate_app(bundle)
+>       assert message in str(raised.value), str(raised.value)
+E       AssertionError: [deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.
+E                    pip install -e .
+E       assert 'missing: a file matching ^manual' in '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'
+E        +  where '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .' = str(SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'))
+E        +    where SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') = <ExceptionInfo SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') tblen=2>.value
+
+tests/test_app_schema.py:165: AssertionError
+_________ test_each_departure_from_the_schema_is_refused[no runtimes] __________
+
+bundle = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_each_departure_from_the_s2/tiny')
+why = 'no runtimes'
+mutate = <function _mutations.<locals>.manifest.<locals>.apply at 0x10a37c680>
+message = "'runtimes' is a required"
+
+    @pytest.mark.parametrize("why,mutate,message", _mutations(), ids=[m[0] for m in _mutations()])
+    def test_each_departure_from_the_schema_is_refused(bundle: Path, why, mutate, message) -> None:
+        mutate(bundle)
+        with pytest.raises(SystemExit) as raised:
+            deploy().validate_app(bundle)
+>       assert message in str(raised.value), str(raised.value)
+E       AssertionError: [deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.
+E                    pip install -e .
+E       assert "'runtimes' is a required" in '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'
+E        +  where '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .' = str(SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'))
+E        +    where SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') = <ExceptionInfo SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') tblen=2>.value
+
+tests/test_app_schema.py:165: AssertionError
+____ test_each_departure_from_the_schema_is_refused[a mode with one model] _____
+
+bundle = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_each_departure_from_the_s3/tiny')
+why = 'a mode with one model'
+mutate = <function _mutations.<locals>.manifest.<locals>.apply at 0x10a37c7c0>
+message = "'models' is a required"
+
+    @pytest.mark.parametrize("why,mutate,message", _mutations(), ids=[m[0] for m in _mutations()])
+    def test_each_departure_from_the_schema_is_refused(bundle: Path, why, mutate, message) -> None:
+        mutate(bundle)
+        with pytest.raises(SystemExit) as raised:
+            deploy().validate_app(bundle)
+>       assert message in str(raised.value), str(raised.value)
+E       AssertionError: [deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.
+E                    pip install -e .
+E       assert "'models' is a required" in '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'
+E        +  where '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .' = str(SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'))
+E        +    where SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') = <ExceptionInfo SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') tblen=2>.value
+
+tests/test_app_schema.py:165: AssertionError
+_ test_each_departure_from_the_schema_is_refused[a listed file that is not there] _
+
+bundle = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_each_departure_from_the_s4/tiny')
+why = 'a listed file that is not there'
+mutate = <function _mutations.<locals>.manifest.<locals>.apply at 0x10a37c900>
+message = 'not on disk'
+
+    @pytest.mark.parametrize("why,mutate,message", _mutations(), ids=[m[0] for m in _mutations()])
+    def test_each_departure_from_the_schema_is_refused(bundle: Path, why, mutate, message) -> None:
+        mutate(bundle)
+        with pytest.raises(SystemExit) as raised:
+            deploy().validate_app(bundle)
+>       assert message in str(raised.value), str(raised.value)
+E       AssertionError: [deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.
+E                    pip install -e .
+E       assert 'not on disk' in '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'
+E        +  where '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .' = str(SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'))
+E        +    where SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') = <ExceptionInfo SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') tblen=2>.value
+
+tests/test_app_schema.py:165: AssertionError
+_ test_each_departure_from_the_schema_is_refused[a manual mode that says nothing of entering it] _
+
+bundle = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_each_departure_from_the_s5/tiny')
+why = 'a manual mode that says nothing of entering it'
+mutate = <function _mutations.<locals>.manual.<locals>.apply at 0x10a37ca40>
+message = "'enter' is a required"
+
+    @pytest.mark.parametrize("why,mutate,message", _mutations(), ids=[m[0] for m in _mutations()])
+    def test_each_departure_from_the_schema_is_refused(bundle: Path, why, mutate, message) -> None:
+        mutate(bundle)
+        with pytest.raises(SystemExit) as raised:
+            deploy().validate_app(bundle)
+>       assert message in str(raised.value), str(raised.value)
+E       AssertionError: [deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.
+E                    pip install -e .
+E       assert "'enter' is a required" in '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'
+E        +  where '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .' = str(SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'))
+E        +    where SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') = <ExceptionInfo SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') tblen=2>.value
+
+tests/test_app_schema.py:165: AssertionError
+_ test_each_departure_from_the_schema_is_refused[a target the host keys it by] _
+
+bundle = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_each_departure_from_the_s6/tiny')
+why = 'a target the host keys it by'
+mutate = <function _mutations.<locals>.manifest.<locals>.apply at 0x10a37cb80>
+message = 'Additional properties'
+
+    @pytest.mark.parametrize("why,mutate,message", _mutations(), ids=[m[0] for m in _mutations()])
+    def test_each_departure_from_the_schema_is_refused(bundle: Path, why, mutate, message) -> None:
+        mutate(bundle)
+        with pytest.raises(SystemExit) as raised:
+            deploy().validate_app(bundle)
+>       assert message in str(raised.value), str(raised.value)
+E       AssertionError: [deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.
+E                    pip install -e .
+E       assert 'Additional properties' in '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'
+E        +  where '[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .' = str(SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .'))
+E        +    where SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') = <ExceptionInfo SystemExit('[deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.\n           pip install -e .') tblen=2>.value
+
+tests/test_app_schema.py:165: AssertionError
+____________ test_a_translation_goes_in_and_the_app_is_packed_again ____________
+
+out = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_a_translation_goes_in_and0/tiny')
+
+    def validate_app(out: Path) -> None:
+        """Hold a bundle to `deploy/app.schema`, or refuse it.
+
+        `bundle.json` against the schema, each manual against its `$defs/manual`,
+        and the directory against `x-files`: every file is one the schema knows,
+        every required one is there, and `bundle.json` lists exactly what is on
+        disk. A bundle that passes here is the bundle the schema describes -- which
+        is the only way a schema stays true, rather than being a description of
+        what the bundler did once.
+        """
+        try:
+>           import jsonschema
+E           ModuleNotFoundError: No module named 'jsonschema'
+
+scripts/deploy.py:2019: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+bundle = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_a_translation_goes_in_and0/tiny')
+tmp_path = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_a_translation_goes_in_and0')
+
+    def test_a_translation_goes_in_and_the_app_is_packed_again(bundle: Path, tmp_path: Path) -> None:
+        source = tmp_path / "manual.zh.json"
+        source.write_text(json.dumps(chinese(), ensure_ascii=False), "utf-8")
+>       assert deploy().translate(bundle, "zh", source) == 0
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_app_schema.py:186:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts/deploy.py:1996: in translate
+    validate_app(bundle)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+out = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_a_translation_goes_in_and0/tiny')
+
+    def validate_app(out: Path) -> None:
+        """Hold a bundle to `deploy/app.schema`, or refuse it.
+
+        `bundle.json` against the schema, each manual against its `$defs/manual`,
+        and the directory against `x-files`: every file is one the schema knows,
+        every required one is there, and `bundle.json` lists exactly what is on
+        disk. A bundle that passes here is the bundle the schema describes -- which
+        is the only way a schema stays true, rather than being a description of
+        what the bundler did once.
+        """
+        try:
+            import jsonschema
+        except ModuleNotFoundError:
+>           raise SystemExit("[deploy] jsonschema is not installed, and every bundle is checked "
+                             "against deploy/app.schema.\n           pip install -e .")
+E           SystemExit: [deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.
+E                      pip install -e .
+
+scripts/deploy.py:2021: SystemExit
+________ test_the_newest_bundle_built_here_is_what_the_schema_describes ________
+
+out = PosixPath('/private/tmp/crab-workspace-1/out/bundle_example/jumper')
+
+    def validate_app(out: Path) -> None:
+        """Hold a bundle to `deploy/app.schema`, or refuse it.
+
+        `bundle.json` against the schema, each manual against its `$defs/manual`,
+        and the directory against `x-files`: every file is one the schema knows,
+        every required one is there, and `bundle.json` lists exactly what is on
+        disk. A bundle that passes here is the bundle the schema describes -- which
+        is the only way a schema stays true, rather than being a description of
+        what the bundler did once.
+        """
+        try:
+>           import jsonschema
+E           ModuleNotFoundError: No module named 'jsonschema'
+
+scripts/deploy.py:2019: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_the_newest_bundle_built_here_is_what_the_schema_describes() -> None:
+        """The real thing, when this machine has built one: what the hand-written
+        bundle above stands in for."""
+        built = sorted((p.parent for p in (REPO / "out").glob("bundle_*/*/bundle.json")
+                        if "runtimes" in json.loads(p.read_text("utf-8"))),
+                       key=lambda p: p.stat().st_mtime)
+        if not built:
+            pytest.skip("no bundle built here: python scripts/deploy.py --bundle --manifest jumper")
+>       deploy().validate_app(built[-1])
+
+tests/test_app_schema.py:227:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+out = PosixPath('/private/tmp/crab-workspace-1/out/bundle_example/jumper')
+
+    def validate_app(out: Path) -> None:
+        """Hold a bundle to `deploy/app.schema`, or refuse it.
+
+        `bundle.json` against the schema, each manual against its `$defs/manual`,
+        and the directory against `x-files`: every file is one the schema knows,
+        every required one is there, and `bundle.json` lists exactly what is on
+        disk. A bundle that passes here is the bundle the schema describes -- which
+        is the only way a schema stays true, rather than being a description of
+        what the bundler did once.
+        """
+        try:
+            import jsonschema
+        except ModuleNotFoundError:
+>           raise SystemExit("[deploy] jsonschema is not installed, and every bundle is checked "
+                             "against deploy/app.schema.\n           pip install -e .")
+E           SystemExit: [deploy] jsonschema is not installed, and every bundle is checked against deploy/app.schema.
+E                      pip install -e .
+
+scripts/deploy.py:2021: SystemExit
+=========================== short test summary info ============================
+FAILED tests/test_app_schema.py::test_the_schema_is_a_schema - ModuleNotFound...
+FAILED tests/test_app_schema.py::test_a_bundle_the_schema_describes_passes - ...
+FAILED tests/test_app_schema.py::test_each_departure_from_the_schema_is_refused[a file no bundle holds]
+FAILED tests/test_app_schema.py::test_each_departure_from_the_schema_is_refused[no manual]
+FAILED tests/test_app_schema.py::test_each_departure_from_the_schema_is_refused[no runtimes]
+FAILED tests/test_app_schema.py::test_each_departure_from_the_schema_is_refused[a mode with one model]
+FAILED tests/test_app_schema.py::test_each_departure_from_the_schema_is_refused[a listed file that is not there]
+FAILED tests/test_app_schema.py::test_each_departure_from_the_schema_is_refused[a manual mode that says nothing of entering it]
+FAILED tests/test_app_schema.py::test_each_departure_from_the_schema_is_refused[a target the host keys it by]
+FAILED tests/test_app_schema.py::test_a_translation_goes_in_and_the_app_is_packed_again
+FAILED tests/test_app_schema.py::test_the_newest_bundle_built_here_is_what_the_schema_describes
+11 failed, 58 passed in 0.18s
