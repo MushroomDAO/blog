@@ -1,0 +1,14 @@
+❌ Failed to get access token: Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aebda63-77c7b8ec-160b83f3"}
+⚠️  公众号账本没查成（Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aebda63-77c7b8ec-160b83f3"}）
+   本次结果不完整，别当成完整查重。
+账本：blog 955 篇 + 公众号草稿箱 0 条 + 本地发布记录 933 条 + MemPalace 3810 抽屉
+
+── 查：https://github.com/noi-liuchang/dont-storytell
+   已读取的本地账本未命中；公众号远程账本不可用
+
+── 查：dont-storytell
+   已读取的本地账本未命中；公众号远程账本不可用
+
+```dedup-result
+{"duplicate":false,"localLedgersRead":true,"wechatError":"Token error: {\"errcode\":40164,\"errmsg\":\"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aebda63-77c7b8ec-160b83f3\"}"}
+```
