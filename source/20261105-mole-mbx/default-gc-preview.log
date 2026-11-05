@@ -1,0 +1,6 @@
+16.3 GiB free on the disk holding /tmp/mole-mbx-smoke/proof-bt7r8wsn/cache, under the 20.0 GiB minimum; would collect private state and managed targets past their budgets, then shared cache objects if the cache disk is short
+a real run measures the disk again after each step, so it may remove fewer target directories
+would have evicted 0 objects and 0 action results (0 B logical); 936.3 KiB logical remain
+would remove 0 learned incremental units and 0 checkout directories (0 B logical); 2 units (184.6 KiB logical) remain
+kept 2 learned incremental units used by active builds (1 active checkouts)
+[WARN ] learned incremental state still holds 184.6 KiB after collection, over the 0 B budget; active units, untracked checkouts, and checkout bookkeeping are kept
