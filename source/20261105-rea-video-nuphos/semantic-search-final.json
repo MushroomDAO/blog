@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "video-shotcraft-claude-code-remotion-cinematic-product-videos",
+      "title": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片",
+      "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/",
+      "language": "zh",
+      "excerpt": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片 Vincentwei1021 开源的 Claude Code / Codex Agent 视频制作技能包，3832 stars。内置 104 张镜头配方卡、161 种运动风格预览、完整 Remotion 视频模板 Ink Press（36.2秒/1920×1080/30fps）、149 个音效（16个场景类别）、5套背景音乐。Agent 拿到产品截图后自动分镜、动画、配音设计，直出可发布的产品宣传片。 AI视频制作 Claude Code Remotion Agent技能 产",
+      "score": 0.56620777
+    },
+    {
+      "article_id": "html-video-nexu-usage-guide",
+      "title": "html-video：丢一个链接，本地生成 MP4，全程不碰剪辑软件",
+      "url": "/blog/html-video-nexu-usage-guide/",
+      "language": "zh",
+      "excerpt": "html-video：丢一个链接，本地生成 MP4，全程不碰剪辑软件 nexu-io/html-video 是一个本地视频生成工具，3744 Stars，Apache-2.0。丢入文章链接或 GitHub 仓库，AI 自动拆场景、套模板、渲染成 MP4。21 套商用 License 清理过的模板，底层用 HeyGen 开源的 HyperFrames 引擎，支持 Claude Code、Cursor、Codex 等 14 个 AI Agent。普通人快速上手指南。 视频生成 html-video HyperFrames 本地AI 开源工具 MP4 Clau",
+      "score": 0.5478639
+    },
+    {
+      "article_id": "avatar-forge-cine-sleuth-video-digital-human-agent-skill",
+      "title": "CineSleuth + Avatar Forge: From Film Analysis to Digital Human Video — Agent Skills for the Full Creator Pipeline",
+      "url": "/blog/avatar-forge-cine-sleuth-video-digital-human-agent-skill/",
+      "language": "en",
+      "excerpt": "CineSleuth + Avatar Forge: From Film Analysis to Digital Human Video — Agent Skills for the Full Creator Pipeline Two open-source Agent Skills from LycheeAILab: CineSleuth breaks down any video frame-by-frame, extracting transcripts, scenes, shots, and creative intent; Avatar For",
+      "score": 0.52854496
+    },
+    {
+      "article_id": "openpanels-local-ai-agent-visual-workspace",
+      "title": "OpenPanels: A Local Visual Workspace for AI Agents, Five Panels from Writing to Publishing",
+      "url": "/blog/openpanels-local-ai-agent-visual-workspace/",
+      "language": "en",
+      "excerpt": "OpenPanels: A Local Visual Workspace for AI Agents, Five Panels from Writing to Publishing mooqii open-sources OpenPanels, a local-first visual workspace for AI agents, written in Rust, MIT license. Five panels cover the full pipeline from knowledge management and document writin",
+      "score": 0.5250794
+    },
+    {
+      "article_id": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
+      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
+      "url": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
+      "language": "zh",
+      "excerpt": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺 Higgsfield 将旗下 K-pop 机甲 AI 短片系列《ZEPHYR: Special》的完整制作过程全部开源：所有提示词、角色资产、失败镜头、最终剪辑版本，共 197 个资产公开发布于平台上，任何人都可以直接进入 Cinema Studio 查看和复用。主创团队披露了两个「不可能镜头」的实现方法：倒置角色参考图技巧和锚点式最小提示词策略。底层模型是 Seedance 2.5，结合 Higgsfield Soul 2 进行角色和服装设计，再用",
+      "score": 0.5241929
+    },
+    {
+      "article_id": "seal-ai-video-workbench",
+      "title": "Seal: Canvas, Timeline and AI in One Video Workspace",
+      "url": "/blog/seal-ai-video-workbench/",
+      "language": "en",
+      "excerpt": "Seal: Canvas, Timeline and AI in One Video Workspace Explore Seal's local-first AI video workspace: canvas, timeline and skills, Windows release status, cloud-provider boundaries and scoped local test results. Seal AI Video Video Editing Local First Agent Skills How does Seal con",
+      "score": 0.5234021
+    },
+    {
+      "article_id": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+      "title": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+      "url": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
+      "language": "en",
+      "excerpt": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity OpenDCAI/GameFactory-3A is an open-source 3A game-generation skill and asset framework — Apache 2.0, Python, 256 stars. Core approach: connect coding agents (Claude Code, Codex, Gemini CLI) to a structured ",
+      "score": 0.5212211
+    },
+    {
+      "article_id": "storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard",
+      "title": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4",
+      "url": "/blog/storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard/",
+      "language": "zh",
+      "excerpt": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4 xiaozhang-art/storyflow-ai 开源，Multi-Agent 漫剧自动生成平台，7 步 Agent 流水线（剧本→角色→分镜→图片/配音并行→图生视频→合成），含 Director 决策引擎、断点续传、Montage 渲染引擎，Docker Compose 一键部署。 multi-agent video generation AI open source comic LLM FastAPI Docker 一段文字进去，一部漫剧出来 7 个 Age",
+      "score": 0.52019364
+    },
+    {
+      "article_id": "doop-open-source-multiplayer-ai-design-canvas",
+      "title": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计",
+      "url": "/blog/doop-open-source-multiplayer-ai-design-canvas/",
+      "language": "zh",
+      "excerpt": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计 kgoedecke/doop 开源仅两周：多人实时设计画布，Canvas+Frame 用 sandboxed iframe 渲染真实 HTML，AI agent 通过内置 MCP server（15 个工具）流式把设计画进画布，人在旁边实时围观甚至接管。bun run dev 零配置自托管，内置 Postgres。AGPL-3.0，564 star。 AI Agent MCP 开源 设计工具 多人协作 TypeScript Claude Code 自托管 AGPL",
+      "score": 0.5194141
+    },
+    {
+      "article_id": "video-production-buddy-zhiying-ai-pipeline-guide",
+      "title": "织影 Video Production Buddy：AI 视频制作，每个阶段都要人工审批",
+      "url": "/blog/video-production-buddy-zhiying-ai-pipeline-guide/",
+      "language": "zh",
+      "excerpt": "织影 Video Production Buddy：AI 视频制作，每个阶段都要人工审批 video-production-buddy/video-production-buddy（AGPLv3，Python）是一个强调人工管控的 AI 视频制作系统，中文名织影。和一键生成不同，它用 YAML 管线配置和 Markdown skills 把制作分成多个阶段（策划→脚本→素材→渲染→审查），每阶段都有审批门（Approval Gate）。Backlot 看板实时显示进度、花费和每个提供商决策，审批通过才能继续。适合对视频质量有要求、需要可溯源制作流程的用户",
+      "score": 0.5186361
+    }
+  ]
+}
