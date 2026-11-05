@@ -1,0 +1,87 @@
+{
+  "query": "Rust和苹果开发者如何优化自己的磁盘 Mole MBX 趋势 220GB",
+  "response": {
+    "results": [
+      {
+        "article_id": "rust-apple-mole-mbx-disk-optimization",
+        "title": "Rust和苹果开发者如何优化自己的磁盘",
+        "url": "/blog/rust-apple-mole-mbx-disk-optimization/",
+        "language": "zh",
+        "excerpt": "Rust和苹果开发者如何优化自己的磁盘 Rust和苹果开发者的磁盘优化，关键在于区分可重建产物、共享缓存、模型数据与发布归档。本文结合Mole开发分支指南和MBX源码，介绍占用分析、趋势基线、Cargo缓存复用、Xcode整理与模型去重，记录20项定向测试和隔离构建实验，解释磁盘不足触发缓存淘汰的现象，并给出先预览、再验证、最后回收的维护流程。 Rust macOS Mole MBX 磁盘管理 Xcode 先把磁盘里的东西分成四类 Mole怎样用：先分析，再看预览 趋势分析不是安装后就能回看过去 MBX怎样用：共享编译结果，管理target生命周期 一个",
+        "score": 0.79264
+      },
+      {
+        "article_id": "mr-boxington-rust-cargo-shared-cache",
+        "title": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存",
+        "url": "/blog/mr-boxington-rust-cargo-shared-cache/",
+        "language": "zh",
+        "excerpt": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存 mr boxington 的 mbx 为 Rust 项目复用 Cargo 编译产物，管理 target 目录并协调并行构建。本文核对安装与缓存原理，在 Mac 验证不同路径源码副本的命中、修改后的正确输出和清理预览，区分共享缓存、Cargo 新鲜度与私有增量状态，说明工作树、CI、磁盘预算及调试信息路径的使用边界。 Rust Cargo mr boxington 构建缓存 开发工具 mbx 怎样复用编译工作？ 共享缓存、增量状态与 target 是一回事吗？ 在 Mac 上怎样先试",
+        "score": 0.58584875
+      },
+      {
+        "article_id": "stoa-pluralis-research-mac-rl-fleet-distributed-training",
+        "title": "14 台 Mac 跨越四国做 RL 后训练：Pluralis Research 的 stoa 实验",
+        "url": "/blog/stoa-pluralis-research-mac-rl-fleet-distributed-training/",
+        "language": "zh",
+        "excerpt": "14 台 Mac 跨越四国做 RL 后训练：Pluralis Research 的 stoa 实验 Pluralis Research 开源 stoa：把 RL 后训练的 rollout 生成和梯度更新彻底解耦——巴黎/苏黎世/都柏林/多伦多的 14 台 Mac 用 MLX 生成经验，一张 B200 负责学习，双方只通过 Cloudflare R2 bucket 见面。8B MoE 模型在论文搜索问答任务上 pass@1 从 0.29 涨到 0.63。 分布式训练 RL后训练 Apple Silicon MLX MoE GRPO 去中心化AI Plura",
+        "score": 0.5623503
+      },
+      {
+        "article_id": "ondine-rust-mermaid-compiler",
+        "title": "Ondine：Rust 重写 Mermaid，速度之外先看布局与体积口径",
+        "url": "/blog/ondine-rust-mermaid-compiler/",
+        "language": "zh",
+        "excerpt": "Ondine：Rust 重写 Mermaid，速度之外先看布局与体积口径 Ondine 用 Rust 把 Mermaid 文本编译为 SVG，可在构建时替文档网站完成解析与布局。本文定位仓库，拆解极小挂载代码与 WASM 编译器的区别，核对 33 类图、612 个向量的官方性能报告，解释热调用、冷启动和布局质量的不同问题，并给出 Markdown、Vite 与 Node 接入及迁移验收方法。 Ondine Mermaid Rust SVG Developer Tools Rust 重写，究竟换掉哪一段？ 210 字节，为什么不是完整 Mermaid 的替",
+        "score": 0.55273175
+      },
+      {
+        "article_id": "ra-jit-blaze-rust-live-builds",
+        "title": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界",
+        "url": "/blog/ra-jit-blaze-rust-live-builds/",
+        "language": "zh",
+        "excerpt": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界 ra-jit 已更名为 blaze。本文核对官方暖构建基准、常驻编译架构、Apple Silicon 与 Linux 支持，以及 Rust 1.99.0、内存和借用检查限制，并在 M4 Mac 上验证函数修改与测试流程，解释为何局部补丁延迟不能等同于完整构建或画面更新速度，也不能承诺每个项目都快 92 倍。 Rust ra-jit blaze 编译器 热更新 开发工具 blaze 为什么能省掉修改后的大量等待？ “92 倍”和“10–24 倍”应该怎样看？ 毫秒构建与“不重启热更新",
+        "score": 0.54991883
+      },
+      {
+        "article_id": "leann-rag-97-percent-storage-savings-graph-recompute",
+        "title": "LEANN：省掉 97% 向量存储，让 RAG 跑在本地设备上",
+        "url": "/blog/leann-rag-97-percent-storage-savings-graph-recompute/",
+        "language": "zh",
+        "excerpt": "LEANN：省掉 97% 向量存储，让 RAG 跑在本地设备上 Berkeley 出品的 MLsys2026 最佳论文，用图结构+按需重计算替代全量向量存储，6GB 索引 6000 万文本块（传统方案需 201GB），支持 PDF/邮件/微信/浏览器历史/Claude 对话等全个人数据，零遥测本地运行，Stars 12913。 RAG 向量数据库 本地AI 隐私 开源 MLsys 核心技术：图结构 + 按需重计算 两种索引后端 数据源覆盖范围 Benchmark 数据 安装与使用 为什么这件事重要",
+        "score": 0.5442083
+      },
+      {
+        "article_id": "specialized-inference-engines-rise-hardware-specific-llm-optimization",
+        "title": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照",
+        "url": "/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
+        "language": "zh",
+        "excerpt": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照 Splash 1.4.0 为 Apple Silicon 增加 Qwen3.8-Flash-Next、专家与 PLE 的 SSD 流式加载及长上下文支持。本文复核官方同机 Q2_0 对照，区分解码、预填充、缓存首字延迟和并发总吞吐，核对120tok/s的来源，并说明量化精度、内存预算、磁盘读写及可重复性的代价。 推理引擎 LLM WASM 性能优化 Apple Silicon NVIDIA AMD 开源工具 Splash 1.4.0 的速度数字，到底测了什么？ 为什么要把专家、PLE 和 KV",
+        "score": 0.54403275
+      },
+      {
+        "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+        "title": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行",
+        "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行 OrcaRouter 发布的 Qwen3.8-27B 消融对齐（abliterated）MLX 量化版本，672 likes，trending。基于 Qwen3.8-27B —— 一个 64 层混合架构模型（48 层 Gated DeltaNet 线性注意力 + 每 4 层一个全注意力层），原生视觉语言塔，262K 上下文，MTP 头。提供 2/4/6/8-bit 四个精度（affine 量化，grou",
+        "score": 0.53808075
+      },
+      {
+        "article_id": "orion-core-rust-agent-harness-local-llm-teardown",
+        "title": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多",
+        "url": "/blog/orion-core-rust-agent-harness-local-llm-teardown/",
+        "language": "zh",
+        "excerpt": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多 orion-core 是从桌面应用 OrionPod 拆出的 Rust Agent harness（MIT，3 star，crates.io 下载 74 次）：提供工具调用循环、按整轮裁剪的上下文预算、10 种聊天模板和 15 种流式事件，但不带工具、沙箱、记忆和 MCP，现成后端只有一个 OpenAI 兼容 HTTP 客户端。我们在 M4 Mac mini 上接 mlx_lm.server + Qwen2.5-1.5B ",
+        "score": 0.5366677
+      },
+      {
+        "article_id": "mdya-rust-local-markdown-search-chinese-test-871-docs",
+        "title": "mdya 实测：871 篇中文笔记索引 8 分钟，但语义检索在中文上是失效的",
+        "url": "/blog/mdya-rust-local-markdown-search-chinese-test-871-docs/",
+        "language": "zh",
+        "excerpt": "mdya 实测：871 篇中文笔记索引 8 分钟，但语义检索在中文上是失效的 Rust 写的本地 Markdown 检索原语 mdya，BM25 + 端侧向量 + MCP，单二进制。我拿自己 871 篇笔记（10MB）实测：索引 8 分 01 秒，占 176MB，BM25 查询 30ms、向量 530ms。但对照实验揭穿了一个问题——字面命中的中文查询两条路都准，换成同义改写就全崩，因为默认模型 ruri-v3-30m 是日语的、FTS 分词用的是日语 ipadic 词典。多语言的 EmbeddingGemma 是 gated 模型，直接 401 拉不下",
+        "score": 0.53623116
+      }
+    ]
+  }
+}
