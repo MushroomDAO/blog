@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "orca-ade-parallel-ai-agent-orchestration",
+      "title": "Orca: 67K-Star Parallel Agent Orchestration IDE Turns 40+ CLI Agents into a Fleet",
+      "url": "/blog/orca-ade-parallel-ai-agent-orchestration/",
+      "language": "en",
+      "excerpt": "Orca: 67K-Star Parallel Agent Orchestration IDE Turns 40+ CLI Agents into a Fleet Open-source ADE from Stably AI (YC W22), MIT licensed. Fan one prompt across multiple agents each in an isolated worktree, Design Mode clicks UI straight into agent context, SSH remote machines, mob",
+      "score": 0.5718193
+    },
+    {
+      "article_id": "omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch",
+      "title": "Omarchy：DHH 造的 AI 原生 Linux，9 个 Agent 开箱即用，Omacom 基金会 800 万美元背书",
+      "url": "/blog/omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch/",
+      "language": "zh",
+      "excerpt": "Omarchy：DHH 造的 AI 原生 Linux，9 个 Agent 开箱即用，Omacom 基金会 800 万美元背书 basecamp/omarchy 是 Rails 作者 DHH 打造的 AI 原生 Linux 发行版，基于 Arch + Hyprland + Quickshell，28,045 stars，MIT。核心定位：美观、现代、有主见——预装 9 个 AI 编程 Agent 惰性启动器（Claude Code/Codex/OpenCode/Copilot/Grok/Pi 等），顶栏 Agent 面板统一追踪订阅额度，systemd 崩",
+      "score": 0.5672726
+    },
+    {
+      "article_id": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+      "title": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工",
+      "url": "/blog/munder-difflin-multi-agent-harness-claude-codex-local-first/",
+      "language": "zh",
+      "excerpt": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工 Munder Difflin（MIT，3888 stars，Electron+React+TypeScript）是一个本地多 Agent Harness 桌面应用，把 Claude Code、OpenAI Codex、xAI Grok、Kimi Code、Qwen、GitHub Copilot CLI 等 12 种 CLI 包成真实 PTY 进程，用像素风 The Office 场景可视化——每个 Agent ",
+      "score": 0.54609776
+    },
+    {
+      "article_id": "archonos-local-agent-workbench",
+      "title": "ArchonOS：把本地编程助手、MCP与任务产物放进一个工作台",
+      "url": "/blog/archonos-local-agent-workbench/",
+      "language": "zh",
+      "excerpt": "ArchonOS：把本地编程助手、MCP与任务产物放进一个工作台 ArchonOS是MIT许可的个人与小团队Agent工作台，整合参谋长路由、本地CLI、MCP授权、Canvas修订和技能改进。本文核对公开仓库，修正文档安装路径，报告14项模块测试，并区分本地部署、云同步和真实模型执行的边界。 ArchonOS AI Agent MCP 本地工具 开源 “智能操作系统”具体是什么？ 工具授权与执行隔离是一回事吗？ Canvas与技能改进如何落地？ 如何正确开始安装？ “本地运行”是否意味着完全离线？ 常见问题 可以把现有Claude或Codex会话无损搬",
+      "score": 0.53131676
+    },
+    {
+      "article_id": "agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management",
+      "title": "agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management",
+      "url": "/blog/agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management/",
+      "language": "en",
+      "excerpt": "agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management Agent Orchestrator (GitHub: Untrivial-ai/agent-orchestrator, ⭐10,439, Apache-2.0) is a local desktop IDE that manages Claude Code, Codex, Cursor, and 26 other coding agents in one unified Kanban workspace. Each ",
+      "score": 0.5254148
+    },
+    {
+      "article_id": "vicoa-ai-agent-orchestrator-desktop-mobile-worktree-claude-codex",
+      "title": "Vicoa：手机上发任务，电脑同时跑八个 Agent——ADE 全平台开源",
+      "url": "/blog/vicoa-ai-agent-orchestrator-desktop-mobile-worktree-claude-codex/",
+      "language": "zh",
+      "excerpt": "Vicoa：手机上发任务，电脑同时跑八个 Agent——ADE 全平台开源 vicoa-ai/vicoa 全平台开源 ADE（Agent 开发环境），支持 Claude Code/Codex/OpenCode/Gemini/Cursor/Copilot/Kimi/Hermes 八种 Agent，每个 Agent 独立 Worktree 并行，iOS/Android 原生 App，任务面板+定时任务，Docker 一键自部署。 agent ADE Claude Code Codex open source mobile worktree self-host",
+      "score": 0.515106
+    },
+    {
+      "article_id": "cua-lite-kvm-free-osworld-docker-computer-use-agent-berkeley-microsoft",
+      "title": "CUA-Lite：UC Berkeley + Microsoft 开源计算机操控 Agent 基础设施，无需 KVM，Docker 直跑 OSWorld，4.6× 并行",
+      "url": "/blog/cua-lite-kvm-free-osworld-docker-computer-use-agent-berkeley-microsoft/",
+      "language": "zh",
+      "excerpt": "CUA-Lite：UC Berkeley + Microsoft 开源计算机操控 Agent 基础设施，无需 KVM，Docker 直跑 OSWorld，4.6× 并行 CUA-Lite 是来自 UC Berkeley 和 Microsoft 的开源框架，将计算机操控 Agent（CUA）的训练和评测基础设施标准化。核心创新：用 Docker 容器替换 QEMU/KVM 虚拟机运行 OSWorld——内存从 4.1GB 降至 0.9GB，并行实例数提升 4.6 倍，冷启动从 29.9s 降至 23.8s，评测分数不变。统一 action/observat",
+      "score": 0.5145301
+    },
+    {
+      "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+      "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+      "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+      "language": "zh",
+      "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+      "score": 0.50891405
+    },
+    {
+      "article_id": "localdot-local-ai-computer",
+      "title": "localDot 开源仓库找到了：给 AI 一台本地电脑",
+      "url": "/blog/localdot-local-ai-computer/",
+      "language": "zh",
+      "excerpt": "localDot 开源仓库找到了：给 AI 一台本地电脑 localDot 的官方开源仓库是 Shadowhusky/localdot，采用 MIT 许可证。它在本机 Docker 中运行 Linux 桌面，让 AI 使用浏览器、终端和文件，并提供观看、接管、回放和模型选择。本文说明安装要求、源码结构、权限与数据边界，并记录安装脚本检查及出站策略测试，供读者选型。 localDot AI Agent Computer Use 本地部署 Docker 开源 它给 AI 的“电脑”到底是什么？ 开放的是哪些代码？ 普通用户怎么装？ 模型能换，但不等于任意模型",
+      "score": 0.5084693
+    },
+    {
+      "article_id": "openswarm-autonomous-ai-dev-team-claude-code-linear",
+      "title": "OpenSwarm: Assemble Claude Code + Codex into an Autonomous Dev Team, Linear Issue to PR Fully Automated",
+      "url": "/blog/openswarm-autonomous-ai-dev-team-claude-code-linear/",
+      "language": "en",
+      "excerpt": "OpenSwarm: Assemble Claude Code + Codex into an Autonomous Dev Team, Linear Issue to PR Fully Automated MIT-licensed AI dev team orchestrator: picks tasks from Linear, runs Worker/Reviewer pair pipelines, LanceDB per-repo cognitive memory, PR autopilot, CI merge gate, SWE-bench L",
+      "score": 0.5013223
+    }
+  ]
+}

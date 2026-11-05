@@ -1,0 +1,33 @@
+{
+  "banner": {
+    "origin": "local FLUX.2 Klein4B",
+    "seed": 8201,
+    "bytes": 94088,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "verificationFailures": 0,
+    "verificationWarnings": 0,
+    "manualReview": "coordination hub and task modules metaphor; not actual app screenshot"
+  },
+  "officialImage": {
+    "source": "https://github.com/Orkas-AI/Orkas/blob/c7c0e21fad7ff55f5a72a575b7a464f3cf9bc3a1/resources/app-ui/task-en.png",
+    "saved": "/Users/jason/.heinu1-bot/media/orkas-official-task-interface.png",
+    "coverRejected": "predominantly text interface"
+  },
+  "bodyFigures": {
+    "origin": "image generation using LittleM skill",
+    "rawDirectory": "/Users/jason/.codex/generated_images/01a1ac3c-95a9-73a0-981f-4d5fe8075049",
+    "dimensions": [
+      1120,
+      630
+    ],
+    "bytes": [
+      66177,
+      76193,
+      63718
+    ],
+    "workerExit": 0
+  }
+}
