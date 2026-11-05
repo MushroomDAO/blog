@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "514d1c7c3a5cf314c5cc7b4a39c3c961cf7e55b628fecb86",
+    "metadata": {
+      "article_id": "appllama-skills-openmausbot-mobile-design-agent-workflow",
+      "content_hash": "33c7733dda409564",
+      "excerpt": "Appllama Skills与OpenMausBot：设计约束与Agent工作台 Appllama Skills把商业App研究、原生交互与模拟器录像验收写进移动端开发方法，OpenMausBot则提供聊天式Agent执行工作台。本文核对两个仓库，区分开源Skill、商业MCP、Apache核心与企业目录授权，分析界面质量、电脑权限和执行环境，并报告28项本地窄范围测试的真实边界及可复核的工程流程。 Appllama OpenMausBot AI Agent 移动开发 开源工具 Appllama 开源的究竟是什么？ 为什么它强调研究流程，而不只是参考截",
+      "language": "zh",
+      "tags": [
+        "Appllama",
+        "OpenMausBot",
+        "AI Agent",
+        "移动开发",
+        "开源工具"
+      ],
+      "title": "Appllama Skills与OpenMausBot：设计约束与Agent工作台",
+      "url": "/blog/appllama-skills-openmausbot-mobile-design-agent-workflow/"
+    }
+  },
+  {
+    "id": "490cdaff2e2ab921f8d1096193d149b661abab642cf2dee9",
+    "metadata": {
+      "article_id": "appllama-skills-openmausbot-mobile-design-agent-workflow",
+      "content_hash": "c7fd3c5186d3a6a0",
+      "excerpt": "Appllama Skills and OpenMausBot: Design and Agent Workflows Review Appllama Skills and OpenMausBot: mobile design methods, simulator checks, agent workspaces, commercial MCP limits and licensing, with focused unit tests. Appllama OpenMausBot AI Agent 移动开发 开源工具 What does Appllama ",
+      "language": "en",
+      "tags": [
+        "Appllama",
+        "OpenMausBot",
+        "AI Agent",
+        "移动开发",
+        "开源工具"
+      ],
+      "title": "Appllama Skills and OpenMausBot: Design and Agent Workflows",
+      "url": "/blog/appllama-skills-openmausbot-mobile-design-agent-workflow/"
+    }
+  }
+]
