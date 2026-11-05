@@ -1172,3 +1172,7 @@ Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slu
 ## 2026-11-05 · HexaShell公众号补偿成功
 
 复用原双语文章、匹配封面和正文配图，Blog及5图重新核验200。公众号接入恢复后草稿箱未有本篇，本地只有旧失败记录；补建一次成功，远程回读正文、3图、封面、标题/作者/摘要、原文链接和评论设置一致。旧40164失败标记resolved，KB回读含当前media_id；未群发，未重复部署Blog或重做索引。证据见source/20261105-hexashell/wechat-verification.json。
+
+## 2026-11-05 · Don’t Storytell公众号补偿成功
+
+复用原双语文章、封面和正文配图，Blog及5图重新核验200。公众号接入恢复后草稿箱未有本篇，本地只有旧失败记录；补建一次成功，远程回读正文、3图、封面、标题/作者/摘要、原文链接与评论设置一致。旧40164失败已resolved，KB回读含当前media_id；未群发，未重复部署或索引。完整源noi-liuchang/dont-storytell；本次Jina403，官方GitHub正文抓取成功，复用先前保存的官方流程SVG。
