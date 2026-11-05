@@ -1,0 +1,40 @@
+[
+  {
+    "id": "920e25ddf7213d47189bbaf87a983449f55e5b27e60eb65d",
+    "metadata": {
+      "article_id": "rust-apple-mole-mbx-disk-optimization",
+      "content_hash": "0044bad30a161a8c",
+      "excerpt": "Rust和苹果开发者如何优化自己的磁盘 Rust和苹果开发者的磁盘优化，关键在于区分可重建产物、共享缓存、模型数据与发布归档。本文结合Mole开发分支指南和MBX源码，介绍占用分析、趋势基线、Cargo缓存复用、Xcode整理与模型去重，记录20项定向测试和隔离构建实验，解释磁盘不足触发缓存淘汰的现象，并给出先预览、再验证、最后回收的维护流程。 Rust macOS Mole MBX 磁盘管理 Xcode 先把磁盘里的东西分成四类 Mole怎样用：先分析，再看预览 趋势分析不是安装后就能回看过去 MBX怎样用：共享编译结果，管理target生命周期 一个",
+      "language": "zh",
+      "tags": [
+        "Rust",
+        "macOS",
+        "Mole",
+        "MBX",
+        "磁盘管理",
+        "Xcode"
+      ],
+      "title": "Rust和苹果开发者如何优化自己的磁盘",
+      "url": "/blog/rust-apple-mole-mbx-disk-optimization/"
+    }
+  },
+  {
+    "id": "de4fb517c91ca3f897af2699e8ab1505baf0f22af4745763",
+    "metadata": {
+      "article_id": "rust-apple-mole-mbx-disk-optimization",
+      "content_hash": "c58b5105b70be57e",
+      "excerpt": "Rust and Apple Developer Disk Optimization: Mole and MBX Optimize Rust and Apple development storage with Mole and MBX: cache reuse, Xcode archive boundaries, tests, model deduplication and disk-pressure lessons. Rust macOS Mole MBX 磁盘管理 Xcode What should be retained, shared or r",
+      "language": "en",
+      "tags": [
+        "Rust",
+        "macOS",
+        "Mole",
+        "MBX",
+        "磁盘管理",
+        "Xcode"
+      ],
+      "title": "Rust and Apple Developer Disk Optimization: Mole and MBX",
+      "url": "/blog/rust-apple-mole-mbx-disk-optimization/"
+    }
+  }
+]

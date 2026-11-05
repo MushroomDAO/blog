@@ -1,0 +1,21 @@
+{
+  "banner": {
+    "path": "src/assets/images/rust-apple-mole-mbx-disk-optimization-banner.jpg",
+    "method": "local FLUX.2 Klein",
+    "seed": 8171,
+    "verification": "0 failures, 0 warnings; manually viewed",
+    "representation": "illustrative storage-management desk, not a measured cleanup result"
+  },
+  "savedOfficialMedia": [
+    {
+      "path": "/Users/jason/.heinu1-bot/media/mole-official-cleanup-interface.png",
+      "source": "https://github.com/jhfnetboy/Mole/blob/jhfnetboy/dev-cache/docs/img/big-mole.png",
+      "use": "saved source illustration, not banner"
+    },
+    {
+      "path": "/Users/jason/.heinu1-bot/media/mbx-official-logo.svg",
+      "source": "https://github.com/jdx/mr-boxington/blob/main/docs/public/logo.svg",
+      "use": "saved source logo, not banner"
+    }
+  ]
+}

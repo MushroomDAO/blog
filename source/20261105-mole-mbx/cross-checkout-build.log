@@ -1,0 +1,8 @@
+   Compiling cache_probe v0.1.0 (/private/tmp/mole-mbx-smoke/proof-l4l99phz/checkout-b)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
+mbx[cache]: 2 hits, 0 misses, 0 prefetched; 0 B downloaded, 0 B uploaded, 0 B stored locally
+mbx[cache]: bypassed 5 compilations: 4 compiler-query, 1 standard-input
+mbx[cache]: compiler time: 102.4ms estimated avoided; 0s spent ()
+mbx[cache]: wrapper phases (cumulative, exclusive): blob_transfer 2.7ms, key 4.0ms, lookup 178µs, restore 1.7ms, startup 152µs, unattributed 59.7ms
+mbx[cache]: timing: 189.2ms session, 0s prefetch; cumulative 0s remote lookup, 0s blob transfer, 0s CAS write, 1.2ms materialization
+mbx[cache]: materialization: 3 outputs (467.8 KiB) reflinked, 0 outputs (0 B) hard linked, 2 outputs (549 B) copied, 0 outputs (0 B) already in place

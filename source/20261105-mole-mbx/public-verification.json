@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-05T04:51:03.046311+00:00",
+  "articles": [
+    {
+      "slug": "rust-apple-mole-mbx-disk-optimization",
+      "url": "https://blog.mushroom.cv/blog/rust-apple-mole-mbx-disk-optimization/",
+      "title": "Rust和苹果开发者如何优化自己的磁盘",
+      "listRank": 5,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/rust-apple-mole-mbx-disk-optimization-banner.BqlOhJZh.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 90870
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rust-apple-mole-mbx-disk-optimization-banner.BqlOhJZh_1HDEl.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 29494
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rust-apple-mole-mbx-disk-optimization-fig-01.Cz5T50Mr_1cSRen.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 42118
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rust-apple-mole-mbx-disk-optimization-fig-02.C51ZGxli_1zhaSi.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 29996
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rust-apple-mole-mbx-disk-optimization-fig-03.qOVTn8Lp_Z1KEKm2.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 42528
+        }
+      ]
+    }
+  ]
+}

@@ -1188,3 +1188,11 @@ Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slu
 ## 2026-11-05 · 补齐11月4—5日失败公众号
 
 按Asia/Bangkok两日窗口核对失败文件、任务记录、远程草稿和本地成功凭证，8条记录中4条先前已成功且远程ID仍在，复用；另4条Shisei、NorthCUA-Pro、DSH Go、dsh-agy-link本次各补建一次。4篇Blog和20个图片资源200；新稿全文、3图、封面、标题/作者/摘要、原文链接和评论设置逐篇回读通过。最终8/8目标media_id均在远程草稿箱，远程总数12。旧失败resolved，KB五个项目/管理记录回读，既有语义索引均verified，未部署新Blog、未重建图片、未群发。已发布列表仍48001无权限。初始宽松正文链接匹配误把相关文章当同篇，已改为原文URL或精确标题匹配后才决定创建；证据与可复核运行脚本见docs/publication-audits/20261105-wechat-two-day-retry/。
+
+## 2026-11-05 · Rust和苹果开发者的Mole＋MBX磁盘流程
+
+新增组合流程文章，链接复用已有MBX专文；不重复工具单篇。核对用户指南fork与主项目：趋势和dev-cache来自指定开发分支，不能由官方安装命令推定；220GB仅原文自报。纠正push后可删.git、所有模型格式等同重复，以及Docker卷语义；保留Xcode发布归档与dSYM。
+
+20项Go定向测试通过。MBX1.29.2发行包SHA256匹配；隔离构建第一轮默认磁盘压力GC淘汰8对象/1动作，0hit2miss；另一全新临时缓存仅进程内关闭min-free阈值后2hit0miss，程序42→源码修改43正确，gc预览通过。非速度或物理空间基准，未清理真实目录或做全局setup/adopt。
+
+双语Blog已上线，首页轮播第1、列表第5、5图片200，FLUX8171匹配封面和3张小M图人工检查；公众号草稿正文/3图/封面/元数据/原文URL/评论设置回读一致，未群发。KB已回读。中英语义索引状态以source/20261105-mole-mbx/semantic-status.json为准。Jina403，raw GitHub指南与源码抓取成功，agent-reach skill当前不可用。

@@ -1,0 +1,15 @@
+mbx[setup]: first build on this machine
+mbx[setup]:   cache is /tmp/mole-mbx-smoke/proof-bt7r8wsn/cache, shared by every checkout and worktree, pruned to 10.0 GiB
+mbx[setup]:   this filesystem supports reflinks, so target/ shares disk with the cache instead of copying
+mbx[setup]:   target/ is managed: deleted when its checkout is gone, unused for 30 days, over 20.0 GiB total, or the disk runs low
+mbx[setup]:   `mbx gc --dry-run` previews cleanup; `mbx settings ls gc` shows every limit
+   Compiling cache_probe v0.1.0 (/private/tmp/mole-mbx-smoke/proof-bt7r8wsn/checkout-a)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.57s
+mbx[cache]: 0 hits, 0 misses, 0 prefetched; 0 B downloaded, 0 B uploaded, 472.8 KiB stored locally
+mbx[cache]: could not look up 2 compilations: no usable dep-info from an earlier build and no prediction to derive an action key from
+mbx[cache]: bypassed 5 compilations: 4 compiler-query, 1 standard-input
+mbx[cache]: compiler time: 0s estimated avoided; 135.3ms spent (2 unconsulted in 135.3ms)
+mbx[cache]: slowest uncached crates: cache_probe 135.3ms
+mbx[cache]: wrapper phases (cumulative, exclusive): compiler 158.1ms, flight_wait 1.1ms, key 35.0ms, lookup 183µs, permit_wait 1.5ms, predict 2.3ms, startup 797µs, store 12.4ms, unattributed 135.8ms
+mbx[cache]: timing: 676.8ms session, 0s prefetch; cumulative 0s remote lookup, 0s blob transfer, 7.2ms CAS write, 0s materialization
+mbx[gc]: evicted 8 shared cache objects and 1 action results below gc.max_size because the disk was under gc.min_free_size (10.2 KiB logical freed)
