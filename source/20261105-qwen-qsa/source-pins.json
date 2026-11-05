@@ -1,0 +1,8 @@
+{
+  "baseEngine": "864934c78136ad75274f202b8eb1e7c751d81fb1",
+  "memoryFork": "fe08b167477a8eb651dc71ded753542d72c46cd0",
+  "bf16": "8316665d09bf3ddcf7b36673ef9d2590efe6d082",
+  "gguf": "e4c378e709c29a72997f56b5f97f9cd282fede83",
+  "localTest": "CPU build, 144/144 GGUF checks; no weight download/inference",
+  "forkWeights": "1215f1a010b878980f397aaf94b0495cd4c93c33"
+}

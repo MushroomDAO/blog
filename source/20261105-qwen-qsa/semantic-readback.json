@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ca30c47ece0206c3423847168ea3078d15dc383c8065dce1",
+    "metadata": {
+      "article_id": "qwen3-8-27b-qsa-24gb-context-runtime-review",
+      "content_hash": "a18de29e5f61e88c",
+      "excerpt": "Qwen3.8-27B QSA：24GB显卡跑262K视觉，要满足什么条件？ 核对 Qwen3.8-27B QSA 社区权重、自定义 llama.cpp 与24GB量化分支，解释稀疏注意力、完整KV缓存、DFlash、视觉投影器和前缀复用的不同条件。审阅作者公布的262K容量、255K输入、速度与质量证据，并给出本机CPU构建及144项GGUF测试的真实边界，帮助开发者设计可复核的本地部署实验。 Qwen QSA llama.cpp 本地大模型 长上下文 先把三个项目的位置摆清楚 QSA 究竟省下了什么？ 24GB 与 262K，分别用了哪些条件？ 作者",
+      "language": "zh",
+      "tags": [
+        "Qwen",
+        "QSA",
+        "llama.cpp",
+        "本地大模型",
+        "长上下文"
+      ],
+      "title": "Qwen3.8-27B QSA：24GB显卡跑262K视觉，要满足什么条件？",
+      "url": "/blog/qwen3-8-27b-qsa-24gb-context-runtime-review/"
+    }
+  },
+  {
+    "id": "75f6130b2a0f3f99811533b81add1e7d11ea0224b8ce735f",
+    "metadata": {
+      "article_id": "qwen3-8-27b-qsa-24gb-context-runtime-review",
+      "content_hash": "a9ebdfb2a0fa554e",
+      "excerpt": "Qwen3.8-27B QSA: What 24GB and 262K Really Require A source-based review of Qwen3.8-27B QSA: 24GB memory, 262K context, vision, draft models and cache tradeoffs, with CPU build checks and clear evidence limits. Qwen QSA llama.cpp 本地大模型 长上下文 What changes, and what stays allocated?",
+      "language": "en",
+      "tags": [
+        "Qwen",
+        "QSA",
+        "llama.cpp",
+        "本地大模型",
+        "长上下文"
+      ],
+      "title": "Qwen3.8-27B QSA: What 24GB and 262K Really Require",
+      "url": "/blog/qwen3-8-27b-qsa-24gb-context-runtime-review/"
+    }
+  }
+]

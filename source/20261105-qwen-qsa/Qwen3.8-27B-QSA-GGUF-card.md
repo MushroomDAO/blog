@@ -1,0 +1,119 @@
+---
+license: apache-2.0
+base_model:
+  - higa2515/Qwen3.8-27B-QSA-BF16
+  - unsloth/Qwen3.8-27B-GGUF
+library_name: gguf
+pipeline_tag: image-text-to-text
+tags:
+  - qsa
+  - multimodal
+  - llama-cpp
+  - q8_0
+  - q4_k_m
+  - q5_k_m
+  - q6_k
+  - unsloth
+---
+![Qwen3.8-27B + QSA teaser](https://huggingface.co/higa2515/Qwen3.8-27B-QSA-GGUF/resolve/main/assets/qsa-teaser.jpg)
+
+[QSA Paper](https://arxiv.org/abs/2608.30320) | [GitHub](https://github.com/kuraneko1/Qwen3.8-27B-QSA-llama.cpp) | [Engine + Build](https://github.com/kuraneko1/Qwen3.8-27B-QSA-llama.cpp#build-from-source) | [Runtime Guide](https://github.com/kuraneko1/Qwen3.8-27B-QSA-llama.cpp/blob/main/qsa27b/RUNTIME.md) | [Unsloth GGUF](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF) | [X](https://x.com/_ryu15_) | [License](https://huggingface.co/higa2515/Qwen3.8-27B-QSA-GGUF/blob/main/LICENSE)
+
+# Qwen3.8-27B QSA - GGUF model series
+
+This repository provides Q8_0 and Unsloth UD-Q4_K_M, UD-Q5_K_M, and UD-Q6_K models with the same FP32 QSA indexers. The inference engine is [Qwen3.8-27B QSA for llama.cpp](https://github.com/kuraneko1/Qwen3.8-27B-QSA-llama.cpp), with text, image, and video QSA, M-RoPE, MTP, and live prefix-cache reuse. The architecture reference is [*On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability*](https://arxiv.org/abs/2608.30320).
+
+## Model files
+
+| Model | Quantization and provenance | Size |
+| --- | --- | ---: |
+| `Qwen3.8-27B-QSA-Q8_0.gguf` | Q8_0 conversion from the QSA BF16 release | 29.26 GB |
+| `Qwen3.8-27B-QSA-Unsloth-UD-Q4_K_M.gguf` | Unsloth UD-Q4_K_M mixed-precision tensors | 16.67 GB |
+| `Qwen3.8-27B-QSA-Unsloth-UD-Q5_K_M.gguf` | Unsloth UD-Q5_K_M mixed-precision tensors | 19.98 GB |
+| `Qwen3.8-27B-QSA-Unsloth-UD-Q6_K.gguf` | Unsloth UD-Q6_K mixed-precision tensors | 22.19 GB |
+| `mmproj-Qwen3.8-27B-QSA-F16.gguf` | Shared unchanged vision/projector GGUF | 0.93 GB |
+| `qsa27b-linux-x86_64-sm70.tar.gz` | Captured engine, libraries, full source, launcher, and build instructions | 97.76 MB |
+
+UD denotes Unsloth's mixed-precision recipes; the tensor bit depths are not uniform. The Unsloth variants reuse all 866 original tensors, including 15 MTP tensors, from [unsloth/Qwen3.8-27B-GGUF at revision 4ca7207](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/tree/4ca720788d1e01f1bff70c033e0d0028fd02e502) byte-for-byte. The same 80 FP32 QSA indexer tensors were added without retraining or requantization, giving 946 tensors per model.
+
+The Q8_0 file is a separate conversion from the QSA BF16 release. Its 866 non-indexer tensors are identical to the prior Q8_0 conversion, not to the Unsloth artifacts or the unquantized BF16 bytes. All 80 indexer tensors in every variant match the published FP32 indexer export. [BF16 source weights and original-model restoration](https://huggingface.co/higa2515/Qwen3.8-27B-QSA-BF16) are available separately.
+
+## QSA in brief
+
+Qwen Sparse Attention (QSA) uses a learned, compressed indexer to select context in four-token blocks. The 16 full-attention layers in this 27B adaptation use fixed K=2,048 plus the current block. The other 48 Gated DeltaNet layers retain their architecture. All KV entries remain allocated: QSA reduces attention computation and KV reads, not KV-cache storage.
+
+![Architecture of the original Qwen3.8-27B and the QSA adaptation](https://huggingface.co/higa2515/Qwen3.8-27B-QSA-GGUF/resolve/main/assets/qsa-architecture-en.png)
+
+Original Qwen3.8-27B (left) and the QSA adaptation with 16 learned indexers (right).
+
+## Select and run a variant
+
+Stock llama.cpp does not implement this QSA path. Install the Hugging Face CLI and select one model file:
+
+```sh
+python3 -m pip install --user -U huggingface_hub
+QSA_VARIANT=Qwen3.8-27B-QSA-Q8_0.gguf
+hf download higa2515/Qwen3.8-27B-QSA-GGUF   "$QSA_VARIANT"   mmproj-Qwen3.8-27B-QSA-F16.gguf   qsa27b-linux-x86_64-sm70.tar.gz   SHA256SUMS release-manifest.json   --local-dir qsa27b
+cd qsa27b
+sha256sum -c SHA256SUMS --ignore-missing
+tar -xzf qsa27b-linux-x86_64-sm70.tar.gz
+QSA_MODEL="$QSA_VARIANT" QSA_MODEL_DIR="$PWD" ./qsa27b-runtime/launch.sh
+```
+
+For an Unsloth variant, set `QSA_VARIANT` to one of `Qwen3.8-27B-QSA-Unsloth-UD-Q4_K_M.gguf`, `Qwen3.8-27B-QSA-Unsloth-UD-Q5_K_M.gguf`, or `Qwen3.8-27B-QSA-Unsloth-UD-Q6_K.gguf` and download that file before launching.
+
+The captured binary targets Linux x86_64 and NVIDIA sm70. Its reference configuration uses Q8_0, two 32GB GPUs, CUDA 12.9, layer split 1:1, FP16 KV, context 262,144, batch 2,048, ubatch 512, and MTP max draft 2. Other models and hardware may need different memory sizing. The default address is 127.0.0.1:8091; set `QSA_HOST=0.0.0.0` if required. No service is installed automatically.
+
+Prefix reuse covers target KV, pooled indexer keys, and MTP carry in one live slot. It does not persist across server restarts. MTP lag/async are disabled in the captured launcher. In the BF16 Transformers reference, text uses masked SDPA QSA, while image and video conversations fall back to dense attention. MTP execution is not implemented in that reference.
+
+## Limited quality checks
+
+### BF16 reference
+
+These BF16 research-reference checks compare QSA with the original dense path. They are not Q8_0 native quality results.
+
+| Check | Original dense | QSA | Observed comparison |
+| --- | ---: | ---: | --- |
+| Text PPL on 32,766 tokens, lower is better | 7.072960 | 7.071384 | QSA/dense ratio 0.99978 |
+| Constructed 50-item four-choice DocVQA | 50/50 | 50/50 | 100% of the dense score on this probe |
+
+The DocVQA probe is not standard open-ended DocVQA scoring. These small checks do not establish a general performance-retention percentage or broad quality equivalence.
+
+### Unsloth Q4/Q5/Q6 text checks
+
+A teacher-forced evaluation used six fixed windows, up to 65,024 input tokens, FP16 KV, and MTP disabled. PPL differences are QSA relative to dense within each quantized model. These artifacts were evaluated with engine revision `70b4e14a830a4ec78d1ac97087cd9fac02429d37`.
+
+| Variant | Overall PPL difference | 64k capture | Same-budget oracle | 64k prose PPL difference |
+| --- | ---: | ---: | ---: | ---: |
+| UD-Q4_K_M | -1.41% | 73.82% | 82.93% | +2.44% |
+| UD-Q5_K_M | -0.47% | 73.76% | 82.91% | +1.97% |
+| UD-Q6_K | -0.35% | 73.89% | 83.04% | +1.76% |
+
+Capture measures attention mass, not task accuracy. The oracle maximizes that mass under the same budget. A negative overall PPL difference is not evidence of a general quality improvement. These text-only checks do not establish general quality equivalence, free-generation quality, or a comparison with BF16. See `unsloth-qsa/` for checksums and the complete numerical comparison.
+
+## Q8_0 throughput: QSA vs dense
+
+The following results apply only to Q8_0, not to the Unsloth variants. The same Q8_0 GGUF, FP16 KV, MTP draft2, engine, and two sm70 32GB GPUs were used for both paths. Dense restores the 16 original full-attention layers with `LLAMA_QSA_DENSE=1`; the 48 Gated DeltaNet layers stay unchanged. The text workload mixed two coding tasks and two free-prose tasks.
+
+| Input tokens | QSA cold prefill | Dense cold prefill | QSA decode | Dense decode |
+| ---: | ---: | ---: | ---: | ---: |
+| 0 | 660.75 | 658.87 | 49.28 | 49.87 |
+| 261,120 | 1071.53 | 366.84 | 41.07 | 22.91 |
+
+All values are token/s. At 261,120 input tokens, QSA was 1.793x faster in decode and 2.921x faster in cold prefill. From each path's re-measured 0k point, mixed decode declined 16.66% for QSA and 54.06% for dense. The 0k prompts still contain 490-563 tokens.
+
+![Measured QSA and Dense prefill and decode throughput](https://huggingface.co/higa2515/Qwen3.8-27B-QSA-GGUF/resolve/main/assets/qsa-vs-dense.png)
+
+QSA's nonzero-depth samples were retained from the earlier matched run; QSA and dense were measured in separate sessions, not interleaved A/B repeats. No confidence interval or general quality claim is made. See `benchmark/` for the full data and methodology.
+
+Native multimodal probes are limited to checks through 64k. Broad image/video quality, long-document quality, and 128k/262k multimodal quality remain unverified. The BF16 research checks do not establish quality equivalence for any quantized native variant.
+
+## Credits and licenses
+
+- [Qwen](https://huggingface.co/Qwen/Qwen3.8-27B): original model and the [QSA architecture paper](https://arxiv.org/abs/2608.30320).
+- [Unsloth](https://github.com/unslothai/unsloth) and the [Unsloth Qwen3.8-27B GGUF repository](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF): UD mixed-precision recipes and the 866 source tensors reused in the Q4/Q5/Q6 variants.
+- [pentaCoxian](https://github.com/pentaCoxian/Qwen-V100-llama.cpp): V100-oriented engine base at `6209237df53569f07429f3f79fc5354de5fe704f`.
+- [Warabii1248](https://github.com/Warabii1248) and [ggml-org contributors](https://github.com/ggml-org/llama.cpp): V100 patches and upstream llama.cpp.
+- [kuraneko1](https://github.com/kuraneko1): QSA 27B integration, multimodal runtime, and release engineering.
+
+Model files retain Apache-2.0 and their upstream notices. The engine archive contains MIT code and third-party notices. See the bundled licenses and provenance.

@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "qwen38-27b-quasar-nvfp4-mac-mlx-install-guide",
+      "title": "Qwen3.8-27B QUASAR-NVFP4: Best 4-bit QAT Quantization Deep Dive + Complete Mac M1 Max 64GB Install Guide",
+      "url": "/blog/qwen38-27b-quasar-nvfp4-mac-mlx-install-guide/",
+      "language": "en",
+      "excerpt": "Qwen3.8-27B QUASAR-NVFP4: Best 4-bit QAT Quantization Deep Dive + Complete Mac M1 Max 64GB Install Guide The community released QUASAR-QAT/Qwen3.8-27B-QUASAR-NVFP4 (19.7GB, full W4A4) — smallest and highest quality NVFP4 build. But NVFP4 requires NVIDIA Blackwell GPU. This guide ",
+      "score": 0.5529975
+    },
+    {
+      "article_id": "qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide",
+      "title": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上",
+      "url": "/blog/qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide/",
+      "language": "zh",
+      "excerpt": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上 unsloth/Qwen3.8-Flash-Next-GGUF 是 Qwen4 架构预览版（125B 总参、6B 激活，外加 51B n-gram 嵌入）的 GGUF 量化，110 万次下载。我们逐个读了 10 个量化档的 GGUF 张量头：所谓 1-bit 只压了专家的 gate/up 投影，28.8GB 的 n-gram 表至少是 4-bit，所以最小档仍有 72.5GB。好在",
+      "score": 0.55012506
+    },
+    {
+      "article_id": "qwen-image-2-1-dit-rgba-local-deploy-guide",
+      "title": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南",
+      "url": "/blog/qwen-image-2-1-dit-rgba-local-deploy-guide/",
+      "language": "zh",
+      "excerpt": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南 阿里千问 2026-09-20 开源。7.1B 参数 32 层 Block-Causal DiT + Qwen3-VL-8B 文本编码器 + 64 通道 RGBA VAE，合计约 15B。原生支持透明图层、多参考图（最多 10 张）、中英文文字渲染、最高 2K 分辨率、局部编辑。Diffusers/ComfyUI/SGLang/vLLM 当日支持。关键限制：H100 BF16 需 56.5GB 显存，无量化版本，许可证从 v1 的 Apache 2",
+      "score": 0.5498464
+    },
+    {
+      "article_id": "gsq-rco-non-uniform-gguf-quantization",
+      "title": "A 27B Model at 11.8GB, Task-Lossless: IST Austria Rebuilt GGUF Quantization With Two Papers' Worth of Method",
+      "url": "/blog/gsq-rco-non-uniform-gguf-quantization/",
+      "language": "en",
+      "excerpt": "A 27B Model at 11.8GB, Task-Lossless: IST Austria Rebuilt GGUF Quantization With Two Papers' Worth of Method Uniform quantization treats every tensor the same. GSQ-RCO doesn't — it uses gradient-based search to allocate precision by per-tensor sensitivity under a total size budge",
+      "score": 0.5470449
+    },
+    {
+      "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+      "title": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+      "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+      "language": "en",
+      "excerpt": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision OrcaRouter's abliterated (refusal-removed) MLX quantization of Qwen3.8-27B — 672 likes, trending. Architecture: 64-layer hybrid (48 Gated DeltaNet linear attention + 1 full attention every 4 layers), native vision-langu",
+      "score": 0.5309587
+    },
+    {
+      "article_id": "k2-horizon-mova-36b-a4b-mac-local-memory-guide",
+      "title": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？",
+      "url": "/blog/k2-horizon-mova-36b-a4b-mac-local-memory-guide/",
+      "language": "zh",
+      "excerpt": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？ K2-Horizon-MoVA-36B-A4B 是 MBZUAI 基础模型研究院（IFM）9 月初开源的 Apache-2.0 纯文本 MoE，37.44B 总参、按权重头部推算每 token 约 4.66B 激活，把注意力的 V 投影换成 64 选 4 的专家。自报 Terminal-Bench 2.1 为 58.6。它的 KV 缓存每 token 192KB，是 Qwen3.5 同档的约 10 倍。Mac 上 32GB",
+      "score": 0.5277345
+    },
+    {
+      "article_id": "hauhaucs-qwen3-8-27b-gguf-fastmtp-speculative-decoding-kp-quant",
+      "title": "The Same 27B, a Different Road: HauhauCS's GGUF Release Uses FastMTP Speculative Decoding for Up to 3x Generation Speed",
+      "url": "/blog/hauhaucs-qwen3-8-27b-gguf-fastmtp-speculative-decoding-kp-quant/",
+      "language": "en",
+      "excerpt": "The Same 27B, a Different Road: HauhauCS's GGUF Release Uses FastMTP Speculative Decoding for Up to 3x Generation Speed HauhauCS/Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF is a GGUF quantization release of Qwen3.8-27B with 1048 likes and 1.71M downloads. Two things stand out: K_P",
+      "score": 0.5272114
+    },
+    {
+      "article_id": "hyperqwen-qwen-27b-24gb-vllm-guide",
+      "title": "HyperQwen: Qwen 27B on 24GB GPUs, with Clear Limits",
+      "url": "/blog/hyperqwen-qwen-27b-24gb-vllm-guide/",
+      "language": "en",
+      "excerpt": "HyperQwen: Qwen 27B on 24GB GPUs, with Clear Limits HyperQwen optimizes Qwen 27B serving on 24GB NVIDIA GPUs. Learn its speed metrics, memory tradeoffs, quality evidence, setup paths, and limits for Mac users. HyperQwen Qwen3.8 vLLM 本地大模型 推理优化 What does the system optimize? Which",
+      "score": 0.5247688
+    },
+    {
+      "article_id": "ktransformers-v071-moe-lora-finetune-qwen-vlm-kimi-rawint4",
+      "title": "KTransformers v0.7.1: CPU+GPU Heterogeneous Fine-Tuning for Qwen VLM and Kimi Ultra-Large MoE",
+      "url": "/blog/ktransformers-v071-moe-lora-finetune-qwen-vlm-kimi-rawint4/",
+      "language": "en",
+      "excerpt": "KTransformers v0.7.1: CPU+GPU Heterogeneous Fine-Tuning for Qwen VLM and Kimi Ultra-Large MoE kvcache-ai/ktransformers v0.7.1 (Apache-2.0, 19.5K stars) adds two fine-tuning capabilities: Qwen3-VL-30B BF16 image-text LoRA (covering vision/language/routed-expert modules) and Kimi K",
+      "score": 0.5234517
+    },
+    {
+      "article_id": "ternary-bonsai-2-27b-prismml-qwen3-ternary-5gb-local-27b",
+      "title": "Ternary Bonsai 2-27B: 5.9 GB for a 27B Model, Ternary Quantization Retains 98.2% Performance and Beats Standard 2-bit by 12 Points",
+      "url": "/blog/ternary-bonsai-2-27b-prismml-qwen3-ternary-5gb-local-27b/",
+      "language": "en",
+      "excerpt": "Ternary Bonsai 2-27B: 5.9 GB for a 27B Model, Ternary Quantization Retains 98.2% Performance and Beats Standard 2-bit by 12 Points PrismML releases Ternary Bonsai 2-27B from Qwen3.8-27B, ternary quantization (1.72 bits/weight), 5.9 GB for 27B parameters, 47 tok/s on M5 Max, 130 t",
+      "score": 0.52334505
+    }
+  ]
+}

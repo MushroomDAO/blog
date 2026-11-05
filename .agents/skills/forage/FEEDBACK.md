@@ -1202,3 +1202,9 @@ Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slu
 补全storytold/craft-anything截断URL，精确源只命中本条原始KB；craft/anything拆词误中其他项目已排除。固定869eb8548ae3cf9162181659c3ab47441b9c300d、0.4.0、MIT OR Apache2、Rust>=1.97，earlyalpha。文中区分研究/构建/检查/交付，Clean room非OSsandbox，Claude聊天/构建与其他适配约束不同；Codex/ACP live验证程度按来源陈述。README320总工具/300engine与生成清单301engine存在计数同步差异，不把总数当全平台可用数。
 
 实际macOS ARM64 Rust1.98.1：evidence/formats606测试通过，Clean room另3测试通过、525过滤，源码锁文件未改；未运行GUI、CLI/MCP链路、真实编码Agent/付费API/设备/整站重建。JinaReader抓取成功，agent-reach skill不可用。双语Blog、FLUX8181封面、3张小M图已人工检查，轮播1/列表2/5图200；公众号全文/3图/封面/元数据/原文URL/评论设置回读一致，未群发。KB回读通过；语义状态见source/20261105-craft-anything/semantic-status.json。
+
+### 2026-11-05 Qwen3.8-27B QSA：社区改造与24GB条件
+
+精确一手源只命中原始KB素材，无旧文章/草稿凭证，未重复入原始素材。核对higa2515 BF16/GGUF、kuraneko1引擎和pentaCoxian分支，固定提交与权重版本。区分QSA选择读取与完整KV分配、262K配置容量与255K实际输入、基础双32GB测速与24GB IQ3_S+DFlash2配置，以及live会话、提示缓存与重启持久化。性能与质量均明确归于作者报告，不外推全部24GB显卡或Mac。
+
+实际本机仅CPU构建及现有GGUF144/144测试通过，无权重下载、GPU推理、视觉/吞吐/显存实测。Jina抓取成功；双语Blog、FLUX8191封面与3张小M图已核验，轮播1/列表5/5图200。公众号草稿全文、3图、封面及元数据回读一致，未群发。KB与语义证据见source/20261105-qwen-qsa。
