@@ -1,0 +1,87 @@
+{
+  "query": "Craft Anything 软件研究 重建 Clean room 606 3 Rust",
+  "response": {
+    "results": [
+      {
+        "article_id": "craft-anything-rust-software-rebuild-workbench",
+        "title": "Craft Anything：先研究软件，再让Agent重建",
+        "url": "/blog/craft-anything-rust-software-rebuild-workbench/",
+        "language": "zh",
+        "excerpt": "Craft Anything：先研究软件，再让Agent重建 Craft Anything把软件研究、Agent构建、结果对比与迭代修正放进同一套Rust工作台，并提供桌面界面、CLI和MCP。本文核对源码、许可证、Clean room与Deep模式、编码代理适配及实际验证范围，介绍从自有网页建立可检查的重建流程，区分截图相似度、功能正确性和部署完成度，说明早期版本值得试什么。 Craft Anything Rust Agent MCP 软件工程 从研究到交付，中间多了哪些环节？ Rust引擎怎样服务桌面、CLI和MCP？ Clean room到底限制了",
+        "score": 0.71763057
+      },
+      {
+        "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+        "title": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime",
+        "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+        "language": "en",
+        "excerpt": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime ADK-Rust v2.2.0 by zavora-ai — not a Google official project, but splits the agent runtime into 43 independently publishable crates. Type-safe, fully async, 568 μs agent loop overhead. Supports Gemini/OpenAI/Ant",
+        "score": 0.57288545
+      },
+      {
+        "article_id": "mr-boxington-rust-cargo-shared-cache",
+        "title": "mr boxington: A shared Cargo cache for Rust workspaces",
+        "url": "/blog/mr-boxington-rust-cargo-shared-cache/",
+        "language": "en",
+        "excerpt": "mr boxington: A shared Cargo cache for Rust workspaces Explore mr boxington's shared Cargo cache, target cleanup and build scheduling, with a Mac functional check and clear limits for incremental work and remote CI. Rust Cargo mr boxington 构建缓存 开发工具 How does compiler-output reuse",
+        "score": 0.56020695
+      },
+      {
+        "article_id": "zero-to-cad-multiview-reconstruction",
+        "title": "Autodesk Zero-to-CAD：2B模型从八视图重建可编辑零件",
+        "url": "/blog/zero-to-cad-multiview-reconstruction/",
+        "language": "zh",
+        "excerpt": "Autodesk Zero-to-CAD：2B模型从八视图重建可编辑零件 Autodesk 的 Zero-to-CAD 把八张规范渲染图转成可执行 CadQuery 代码。拆解 2B 模型、自合成数据和 GPT-5.2 对照，说明成功率与 IoU 的统计边界，并给出从输入准备、隔离执行到 STEP/STL 验收的路径，区分可编辑几何、真实尺寸恢复和可制造性，避免把研究演示当作工业反求承诺。 Autodesk Zero-to-CAD Qwen3-VL CadQuery 3D重建 它到底接收什么，生成什么？ 为什么只有2B，却能在自家测试集领先？ “跑赢GP",
+        "score": 0.5455926
+      },
+      {
+        "article_id": "grpo-small-model-engineering-guide",
+        "title": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径",
+        "url": "/blog/grpo-small-model-engineering-guide/",
+        "language": "zh",
+        "excerpt": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径 GRPO（Group Relative Policy Optimization）让小模型在垂直任务上碾压frontier大模型成为可能。本文整合 ART、ms-swift、OpenClaw-RL 等开源仓库，以及 ART·E（Qwen 2.5 14B超越o3，$80训练）、MCP·RL等6个真实工程案例，给出完整的工程路径：任务选择→数据构造→奖励函数设计→训练循环→监控与避坑。 GRPO 强化学习 小模型 Qwen 微调 LLM训练 AI工程 Mycelium 为什么 GRPO 适合小模型专",
+        "score": 0.5419286
+      },
+      {
+        "article_id": "pi-rust-agent-runtime",
+        "title": "pi-rust: A Rust Coding Agent You Can Embed and Test",
+        "url": "/blog/pi-rust-agent-runtime/",
+        "language": "en",
+        "excerpt": "pi-rust: A Rust Coding Agent You Can Embed and Test Review pi-rust v0.10.0: embeddable Rust agents, Mac installation, native plugins, durable sessions, remote mode, and a verified local tool-call smoke test. pi-rust Rust AI Agent 开发工具 本地测试 What makes the architecture useful? How ",
+        "score": 0.54015523
+      },
+      {
+        "article_id": "webclaw-rust-web-scraper-llm-guide",
+        "title": "Webclaw Developer Guide: Rust Web Scraper for LLM-Ready Markdown",
+        "url": "/blog/webclaw-rust-web-scraper-llm-guide/",
+        "language": "en",
+        "excerpt": "Webclaw Developer Guide: Rust Web Scraper for LLM-Ready Markdown Webclaw is a local-first Rust web extraction tool with MCP support for Claude/Cursor — auto-denoises pages and outputs LLM-ready markdown. Supports scraping, crawling, batch ops, diffs, and brand extraction. AGPL-3.",
+        "score": 0.53784895
+      },
+      {
+        "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+        "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+        "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+        "language": "zh",
+        "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+        "score": 0.5374661
+      },
+      {
+        "article_id": "rsi-anything-world-model-retention",
+        "title": "RSI-Anything：跨域自我改进，究竟改了什么？",
+        "url": "/blog/rsi-anything-world-model-retention/",
+        "language": "zh",
+        "excerpt": "RSI-Anything：跨域自我改进，究竟改了什么？ RSI-Anything 把世界模型放进候选选择、真实反馈和版本保留的循环，但并非一套权重通吃所有领域。本文核对 PhAI Labs 与 Gen-Verse 论文、仓库及发布资源，拆解代码修复、GUI、实验规划与化学优化的成绩口径，并报告 Mac 上工作流、浏览器及条件推荐器的有限验证，说明已展示的改进与待复现的能力。 RSI-Anything JEPA-Anything 世界模型 自我改进 AI Agent 开源 RSI-Anything 的循环为什么值得关注？ 五个领域的成绩分别证明了什么？ 化",
+        "score": 0.5337034
+      },
+      {
+        "article_id": "understand-anything-codebase-knowledge-graph",
+        "title": "57k Star 的代码解析神器：Understand Anything 完整实用指南",
+        "url": "/blog/understand-anything-codebase-knowledge-graph/",
+        "language": "zh",
+        "excerpt": "57k Star 的代码解析神器：Understand Anything 完整实用指南 Understand Anything 把任意代码库变成可交互的知识图谱，支持 Claude Code、Cursor、Gemini CLI 等全平台。本文是彻底读懂 README 后写出的实战指南：安装、工作流、5大核心场景、踩坑提醒，一篇搞定。 开源工具 AI编程 知识图谱 代码理解 Claude Code Cursor 开发者效率 为什么程序员都在转发这个工具？ 它的架构是怎么工作的？ 安装：5 种方式，选你的平台 Claude Code（最推荐） Cursor ",
+        "score": 0.5307959
+      }
+    ]
+  }
+}
