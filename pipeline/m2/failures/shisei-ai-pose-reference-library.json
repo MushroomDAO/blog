@@ -1,13 +1,16 @@
 {
   "slug": "shisei-ai-pose-reference-library",
   "blogUrl": "https://blog.mushroom.cv/blog/shisei-ai-pose-reference-library/",
-  "mediaId": "",
+  "mediaId": "prCUE631thH1cmNLi42prIyw-_TZ2JRNcLqzCxqBku-5at8zW-EwyvwUNA19VFOt",
   "archivedMediaId": "",
-  "wechatStatus": "failed",
-  "wechatError": "公众号 IP 白名单拒绝（40164）：223.204.87.188 不在白名单；本次M2创建失败，未获得草稿media_id，已暂停自动重试。",
+  "wechatStatus": "draft",
+  "wechatError": "",
   "sourceArticle": "src/content/blog/shisei-ai-pose-reference-library.md",
   "theme": "blue",
-  "attempts": 1,
-  "retryPaused": true,
-  "checkedAt": "2026-11-04T04:27:54.859584+00:00"
+  "attempts": 2,
+  "retryPaused": false,
+  "checkedAt": "2026-11-04T04:27:54.859584+00:00",
+  "resolved": true,
+  "resolvedAt": "2026-11-05T04:37:58.549907+00:00",
+  "previousError": "40164 IP223.204.87.188 not in whitelist"
 }
