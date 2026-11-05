@@ -1,0 +1,65 @@
+[
+  {
+    "name": "lingbot-depth",
+    "url": "https://github.com/Robbyant/lingbot-depth",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "description": "Masked Depth Modeling for Spatial Perception"
+  },
+  {
+    "name": "lingbot-vla",
+    "url": "https://github.com/Robbyant/lingbot-vla",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "description": "A Pragmatic VLA Foundation Model"
+  },
+  {
+    "name": "lingbot-world",
+    "url": "https://github.com/Robbyant/lingbot-world",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "description": "Advancing Open-source World Models"
+  },
+  {
+    "name": "lingbot-va",
+    "url": "https://github.com/Robbyant/lingbot-va",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "description": "[RSS 2026] Causal video-action world model for generalist robot control"
+  },
+  {
+    "name": "lingbot-map",
+    "url": "https://github.com/Robbyant/lingbot-map",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "description": "[ECCV 2026 Best Paper Award Candidate] LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction"
+  },
+  {
+    "name": "lingbot-vision",
+    "url": "https://github.com/Robbyant/lingbot-vision",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "description": "Self-supervised learning for spatial perception"
+  },
+  {
+    "name": "lingbot-vla-v2",
+    "url": "https://github.com/Robbyant/lingbot-vla-v2",
+    "branch": "main",
+    "license": "Apache-2.0",
+    "description": "From Foundation to Application"
+  },
+  {
+    "name": "lingbot-world-v2",
+    "url": "https://github.com/Robbyant/lingbot-world-v2",
+    "branch": "main",
+    "license": "NOASSERTION",
+    "description": "Infinite Worlds with Versatile Interactions"
+  },
+  {
+    "name": "lingbot-video",
+    "url": "https://github.com/Robbyant/lingbot-video",
+    "branch": "master",
+    "license": "Apache-2.0",
+    "description": "Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence"
+  }
+]

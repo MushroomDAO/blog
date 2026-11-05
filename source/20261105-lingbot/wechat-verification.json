@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-05T15:58:20.365Z",
+  "drafts": [
+    {
+      "slug": "lingbot-open-model-family-repositories-ecosystem-review",
+      "mediaId": "prCUE631thH1cmNLi42prEIwORG2lnlyqk0Q6IfaDuYDVNE2jx6d0aL4mO1_k-KG",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "c380d2ea1e558af60af5bdcb949ed3dbd9a1e85fe7623ac0063f871f19bdafd3",
+      "remoteTextHash": "c380d2ea1e558af60af5bdcb949ed3dbd9a1e85fe7623ac0063f871f19bdafd3",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/lingbot-open-model-family-repositories-ecosystem-review/",
+      "localContentHash": "55aa39fa811e201cd4949490f494568ccf0d75e42a31d3a4cd1b712d7c1ba1f8",
+      "remoteContentHash": "3bc7e00595be0b10b81de799bc8ea5fd140631c4cfcb08a44e84b2e05ec735cc"
+    }
+  ]
+}

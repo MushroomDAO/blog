@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "vocalcode-community-cpu-local-dictation-meeting-notes",
+      "title": "VocalCode Community：CPU 优先的本地听写与会议记录，不上云不激活",
+      "url": "/blog/vocalcode-community-cpu-local-dictation-meeting-notes/",
+      "language": "zh",
+      "excerpt": "VocalCode Community：CPU 优先的本地听写与会议记录，不上云不激活 VocalCode Community，AGPL-3.0，Rust + sherpa-onnx。本地优先的听写与会议记录工具，2026-09-22 开源。Parakeet TDT v3 + Paraformer 双模型，CPU 跑，Apple Silicon 和 Windows x64 双平台。社区版无需账号、无需激活码，所有语音处理本机完成，录音和转录不上传。作者 Daming Wu 用自己的工具给 Claude Code、Cursor 口述提示词，顺便做成了产品开",
+      "score": 0.5497114
+    },
+    {
+      "article_id": "lance-bytedance-3b-multimodal-unified",
+      "title": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜",
+      "url": "/blog/lance-bytedance-3b-multimodal-unified/",
+      "language": "zh",
+      "excerpt": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜 字节跳动智能创作实验室开源 Lance：3B 激活参数，统一支持图像理解/生成/编辑与视频理解/生成/编辑六项任务。GenEval 0.90 并列第一，VBench 85.11 登顶统一模型，Apache 2.0 开源。 多模态 字节跳动 Lance 图像生成 视频生成 开源 3B 统一模型 六项能力，一个模型 基准成绩 技术要点",
+      "score": 0.5462819
+    },
+    {
+      "article_id": "qwen-image-2-1-dit-rgba-local-deploy-guide",
+      "title": "Qwen-Image-2.1 Engineering Guide: 7B DiT with Native RGBA — Alibaba's Open Image Generation Model",
+      "url": "/blog/qwen-image-2-1-dit-rgba-local-deploy-guide/",
+      "language": "en",
+      "excerpt": "Qwen-Image-2.1 Engineering Guide: 7B DiT with Native RGBA — Alibaba's Open Image Generation Model Alibaba Qwen team open-sourced 2026-09-20. 7.1B 32-layer Block-Causal DiT + Qwen3-VL-8B text encoder + 64-channel RGBA VAE, ~15B total. Native transparency layers, multi-reference up",
+      "score": 0.5382224
+    },
+    {
+      "article_id": "sensenova-vision-unified-cv-hardware-guide",
+      "title": "SenseNova-Vision: Unified Multimodal CV Model — Hardware Guide for Every Use Case",
+      "url": "/blog/sensenova-vision-unified-cv-hardware-guide/",
+      "language": "en",
+      "excerpt": "SenseNova-Vision: Unified Multimodal CV Model — Hardware Guide for Every Use Case SenseNova-Vision-7B-MoT unifies all CV tasks — detection, depth estimation, segmentation, 3D reconstruction — into a single generative model. The web demo needs one 80 GB GPU; full benchmarks need e",
+      "score": 0.53534466
+    },
+    {
+      "article_id": "nemotron-35-super-vl-bolt-local-models",
+      "title": "英伟达 Nemotron 3.5：百万上下文 Super VL、24GB Bolt 与待发布 E4B",
+      "url": "/blog/nemotron-35-super-vl-bolt-local-models/",
+      "language": "zh",
+      "excerpt": "英伟达 Nemotron 3.5：百万上下文 Super VL、24GB Bolt 与待发布 E4B 英伟达发布 Nemotron 3.5 Super VL 与 Bolt 74B，另预告 E4B 小模型。本文核对百万上下文、24GB 部署目标、视觉输入、量化方法、公开评测和开源工具入口，区分已发布权重与十月二十三日上线计划，并说明显存预算、后端兼容和许可证条件，帮助本地 Agent 开发者按硬件与任务选型。 NVIDIA Nemotron 视觉模型 本地推理 Agent 三个名字，对应什么机器与任务？ 百万上下文的 Super VL，强在哪里？ Bolt",
+      "score": 0.53401357
+    },
+    {
+      "article_id": "microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork",
+      "title": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒",
+      "url": "/blog/microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork/",
+      "language": "zh",
+      "excerpt": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒 microsoft/VibeVoice，54K stars，MIT，Python。7.5Hz 连续语音 tokenizer + LLM + 扩散头，单次推理 90 分钟 TTS、60 分钟 ASR，4 路说话人。2025-09 官方因深度伪造顾虑主动下架，社区 fork vibevoice-community/VibeVoice 接棒维护，已加 LoRA 微调和 HF Transformers 集成。工程指导：模型选型、API 服务化、BitN",
+      "score": 0.5329983
+    },
+    {
+      "article_id": "llm-dock-docker-compose-local-llm-dashboard",
+      "title": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板",
+      "url": "/blog/llm-dock-docker-compose-local-llm-dashboard/",
+      "language": "zh",
+      "excerpt": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板 LLM-Dock 是一个管理本地 LLM 推理服务的 Web 面板：自动扫描 HuggingFace 缓存发现模型，llama.cpp 跑 GGUF、vLLM 跑 safetensors，3300-3400 端口段自动分配，一键起停，自动注册进 Open WebUI，还能在面板里直接跑 llama-bench 并把结果存库对比。前提是 Linux + NVIDIA。 本地推理 Docker llama.cpp vLLM 运维 开源 Open Web",
+      "score": 0.5262506
+    },
+    {
+      "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+      "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+      "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+      "language": "zh",
+      "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+      "score": 0.5240064
+    },
+    {
+      "article_id": "voicestudio-local-elevenlabs-alternative-646-languages-16-tts-11-asr",
+      "title": "VoiceStudio: Local-First ElevenLabs Alternative — 16 TTS Engines, 646 Languages",
+      "url": "/blog/voicestudio-local-elevenlabs-alternative-646-languages-16-tts-11-asr/",
+      "language": "en",
+      "excerpt": "VoiceStudio: Local-First ElevenLabs Alternative — 16 TTS Engines, 646 Languages debpalash/VoiceStudio ⭐12712 — open-source fully-local voice workstation: 16 TTS engines, 11 ASR engines, 646-language catalogue, covering voice cloning, voice design, video dubbing, dictation, storie",
+      "score": 0.5238784
+    },
+    {
+      "article_id": "liteparse-llamaindex-local-document-parser",
+      "title": "LiteParse：LlamaIndex 团队开源本地文档解析引擎，Rust 核心+四端绑定+精确边界框，8.3k Star",
+      "url": "/blog/liteparse-llamaindex-local-document-parser/",
+      "language": "zh",
+      "excerpt": "LiteParse：LlamaIndex 团队开源本地文档解析引擎，Rust 核心+四端绑定+精确边界框，8.3k Star run-llama/liteparse 是 LlamaIndex 团队推出的开源本地文档解析引擎：Rust 核心，原生支持 Node.js、Python、Browser WASM。基于 PDFium 的空间文本提取 + bounding box，双轨解析（native PDF + selective OCR），为 AI Agent 提供截图和布局信息，无云依赖，无隐私顾虑。v2.0.4，8.3k Stars。 LlamaIndex",
+      "score": 0.52203643
+    }
+  ]
+}

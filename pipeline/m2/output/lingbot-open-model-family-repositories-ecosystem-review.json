@@ -1,0 +1,31 @@
+{
+  "title": "LingBot开源地图：9个仓库如何选",
+  "author": "Mycelium",
+  "digest": "逐一梳理视觉、动作与世界模型，核对海外复用、许可证和本机CPU上手结果。",
+  "mediaId": "prCUE631thH1cmNLi42prEIwORG2lnlyqk0Q6IfaDuYDVNE2jx6d0aL4mO1_k-KG",
+  "blogUrl": "https://blog.mushroom.cv/blog/lingbot-open-model-family-repositories-ecosystem-review/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/lingbot-open-model-family-repositories-ecosystem-review/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/robbyant/lingbot-vision",
+    "huggingface.co/robbyant/lingbot-vision-vit-small",
+    "github.com/robbyant/lingbot-depth",
+    "huggingface.co/collections/robbyant",
+    "github.com/robbyant/lingbot-map",
+    "huggingface.co/robbyant/lingbot-map",
+    "github.com/robbyant/lingbot-vla",
+    "github.com/robbyant/lingbot-vla-v2",
+    "huggingface.co/robbyant/lingbot-vla-v2-6b",
+    "github.com/robbyant/lingbot-va",
+    "huggingface.co/robbyant/lingbot-va-base",
+    "github.com/robbyant/lingbot-world",
+    "github.com/robbyant/lingbot-world-v2",
+    "huggingface.co/robbyant/lingbot-world-v2-1.3b-causal-fast",
+    "github.com/robbyant/lingbot-video",
+    "huggingface.co/robbyant/lingbot-video-dense-1.3b",
+    "github.com/openwam/openwam",
+    "huggingface.co/docs/lerobot",
+    "github.com/huggingface/pytorch-image-models"
+  ],
+  "publishedAt": "2026-11-05T15:57:49.713Z"
+}
