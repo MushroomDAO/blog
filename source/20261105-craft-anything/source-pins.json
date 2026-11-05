@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/storytold/craft-anything",
+  "commit": "869eb8548ae3cf9162181659c3ab47441b9c300d",
+  "workspaceVersion": "0.4.0",
+  "license": "MIT OR Apache-2.0",
+  "minRust": "1.97",
+  "testRust": "1.98.1",
+  "testPlatform": "macOS ARM64"
+}
