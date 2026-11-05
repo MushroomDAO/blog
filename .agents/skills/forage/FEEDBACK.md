@@ -1196,3 +1196,9 @@ Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slu
 20项Go定向测试通过。MBX1.29.2发行包SHA256匹配；隔离构建第一轮默认磁盘压力GC淘汰8对象/1动作，0hit2miss；另一全新临时缓存仅进程内关闭min-free阈值后2hit0miss，程序42→源码修改43正确，gc预览通过。非速度或物理空间基准，未清理真实目录或做全局setup/adopt。
 
 双语Blog已上线，首页轮播第1、列表第5、5图片200，FLUX8171匹配封面和3张小M图人工检查；公众号草稿正文/3图/封面/元数据/原文URL/评论设置回读一致，未群发。KB已回读。中英语义索引状态以source/20261105-mole-mbx/semantic-status.json为准。Jina403，raw GitHub指南与源码抓取成功，agent-reach skill当前不可用。
+
+## 2026-11-05 · Craft Anything软件研究与重建工作台
+
+补全storytold/craft-anything截断URL，精确源只命中本条原始KB；craft/anything拆词误中其他项目已排除。固定869eb8548ae3cf9162181659c3ab47441b9c300d、0.4.0、MIT OR Apache2、Rust>=1.97，earlyalpha。文中区分研究/构建/检查/交付，Clean room非OSsandbox，Claude聊天/构建与其他适配约束不同；Codex/ACP live验证程度按来源陈述。README320总工具/300engine与生成清单301engine存在计数同步差异，不把总数当全平台可用数。
+
+实际macOS ARM64 Rust1.98.1：evidence/formats606测试通过，Clean room另3测试通过、525过滤，源码锁文件未改；未运行GUI、CLI/MCP链路、真实编码Agent/付费API/设备/整站重建。JinaReader抓取成功，agent-reach skill不可用。双语Blog、FLUX8181封面、3张小M图已人工检查，轮播1/列表2/5图200；公众号全文/3图/封面/元数据/原文URL/评论设置回读一致，未群发。KB回读通过；语义状态见source/20261105-craft-anything/semantic-status.json。

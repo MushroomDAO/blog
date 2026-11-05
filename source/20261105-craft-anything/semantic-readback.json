@@ -1,0 +1,38 @@
+[
+  {
+    "id": "08e2314da1a1e83e2509c33fcf69e34a0ec6b333d2d8c877",
+    "metadata": {
+      "article_id": "craft-anything-rust-software-rebuild-workbench",
+      "content_hash": "8fc8b7e3f224d3eb",
+      "excerpt": "Craft Anything：先研究软件，再让Agent重建 Craft Anything把软件研究、Agent构建、结果对比与迭代修正放进同一套Rust工作台，并提供桌面界面、CLI和MCP。本文核对源码、许可证、Clean room与Deep模式、编码代理适配及实际验证范围，介绍从自有网页建立可检查的重建流程，区分截图相似度、功能正确性和部署完成度，说明早期版本值得试什么。 Craft Anything Rust Agent MCP 软件工程 从研究到交付，中间多了哪些环节？ Rust引擎怎样服务桌面、CLI和MCP？ Clean room到底限制了",
+      "language": "zh",
+      "tags": [
+        "Craft Anything",
+        "Rust",
+        "Agent",
+        "MCP",
+        "软件工程"
+      ],
+      "title": "Craft Anything：先研究软件，再让Agent重建",
+      "url": "/blog/craft-anything-rust-software-rebuild-workbench/"
+    }
+  },
+  {
+    "id": "b3731f86779fa217551ac128c6ec2c8417b338625c4d94a6",
+    "metadata": {
+      "article_id": "craft-anything-rust-software-rebuild-workbench",
+      "content_hash": "06164df6484ee3b8",
+      "excerpt": "Craft Anything: Study Software Before Agents Rebuild It Explore Craft Anything's Rust study-build-check loop, desktop and MCP interfaces, clean-room limits, agent support, parser tests and practical evaluation plans. Craft Anything Rust Agent MCP 软件工程 What does the workflow retai",
+      "language": "en",
+      "tags": [
+        "Craft Anything",
+        "Rust",
+        "Agent",
+        "MCP",
+        "软件工程"
+      ],
+      "title": "Craft Anything: Study Software Before Agents Rebuild It",
+      "url": "/blog/craft-anything-rust-software-rebuild-workbench/"
+    }
+  }
+]

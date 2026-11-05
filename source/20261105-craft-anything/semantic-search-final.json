@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "mr-boxington-rust-cargo-shared-cache",
+      "title": "mr boxington: A shared Cargo cache for Rust workspaces",
+      "url": "/blog/mr-boxington-rust-cargo-shared-cache/",
+      "language": "en",
+      "excerpt": "mr boxington: A shared Cargo cache for Rust workspaces Explore mr boxington's shared Cargo cache, target cleanup and build scheduling, with a Mac functional check and clear limits for incremental work and remote CI. Rust Cargo mr boxington 构建缓存 开发工具 How does compiler-output reuse",
+      "score": 0.5502135
+    },
+    {
+      "article_id": "pagesift-rust-crawler",
+      "title": "PageSift: A Rust Crawler for AI, Beyond the Headlines",
+      "url": "/blog/pagesift-rust-crawler/",
+      "language": "en",
+      "excerpt": "PageSift: A Rust Crawler for AI, Beyond the Headlines PageSift offers Rust crawling and content extraction for AI. We audit benchmark denominators, SDK versions and deployment, with a Python smoke test on a Mac. PageSift Rust 爬虫 数据提取 RAG 开源工具 Where does PageSift fit? Why bounded ",
+      "score": 0.52463967
+    },
+    {
+      "article_id": "webclaw-rust-web-scraper-llm-guide",
+      "title": "Webclaw Developer Guide: Rust Web Scraper for LLM-Ready Markdown",
+      "url": "/blog/webclaw-rust-web-scraper-llm-guide/",
+      "language": "en",
+      "excerpt": "Webclaw Developer Guide: Rust Web Scraper for LLM-Ready Markdown Webclaw is a local-first Rust web extraction tool with MCP support for Claude/Cursor — auto-denoises pages and outputs LLM-ready markdown. Supports scraping, crawling, batch ops, diffs, and brand extraction. AGPL-3.",
+      "score": 0.5243083
+    },
+    {
+      "article_id": "ra-jit-blaze-rust-live-builds",
+      "title": "ra-jit Is Now blaze: Rust Builds and Live Patching",
+      "url": "/blog/ra-jit-blaze-rust-live-builds/",
+      "language": "en",
+      "excerpt": "ra-jit Is Now blaze: Rust Builds and Live Patching ra-jit is now blaze. We audit warm Rust build benchmarks, memory costs, live patching limits and platform support, with a functional smoke test on an M4 Mac. Rust ra-jit blaze 编译器 热更新 开发工具 How does blaze reduce edit time? What do",
+      "score": 0.51649207
+    },
+    {
+      "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+      "title": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime",
+      "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+      "language": "en",
+      "excerpt": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime ADK-Rust v2.2.0 by zavora-ai — not a Google official project, but splits the agent runtime into 43 independently publishable crates. Type-safe, fully async, 568 μs agent loop overhead. Supports Gemini/OpenAI/Ant",
+      "score": 0.5090093
+    },
+    {
+      "article_id": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+      "title": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+      "url": "/blog/sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation/",
+      "language": "en",
+      "excerpt": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation Sprite Studio is an open-source (MIT) local-first AI 2D game art desktop workbench built with Tauri 2, Svelte, Rust, SQLite, and Codex CLI. Features chat-based sprite generation, sequential AI animation (identity + nei",
+      "score": 0.5059532
+    },
+    {
+      "article_id": "pi-rust-agent-runtime",
+      "title": "pi-rust: A Rust Coding Agent You Can Embed and Test",
+      "url": "/blog/pi-rust-agent-runtime/",
+      "language": "en",
+      "excerpt": "pi-rust: A Rust Coding Agent You Can Embed and Test Review pi-rust v0.10.0: embeddable Rust agents, Mac installation, native plugins, durable sessions, remote mode, and a verified local tool-call smoke test. pi-rust Rust AI Agent 开发工具 本地测试 What makes the architecture useful? How ",
+      "score": 0.50483537
+    },
+    {
+      "article_id": "grpo-small-model-engineering-guide",
+      "title": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径",
+      "url": "/blog/grpo-small-model-engineering-guide/",
+      "language": "zh",
+      "excerpt": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径 GRPO（Group Relative Policy Optimization）让小模型在垂直任务上碾压frontier大模型成为可能。本文整合 ART、ms-swift、OpenClaw-RL 等开源仓库，以及 ART·E（Qwen 2.5 14B超越o3，$80训练）、MCP·RL等6个真实工程案例，给出完整的工程路径：任务选择→数据构造→奖励函数设计→训练循环→监控与避坑。 GRPO 强化学习 小模型 Qwen 微调 LLM训练 AI工程 Mycelium 为什么 GRPO 适合小模型专",
+      "score": 0.50432885
+    },
+    {
+      "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+      "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+      "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+      "language": "zh",
+      "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+      "score": 0.5030681
+    },
+    {
+      "article_id": "oriera-engine-v03-generative-assets",
+      "title": "OriEra v0.3.0: Generated Assets in the Engine Loop",
+      "url": "/blog/oriera-engine-v03-generative-assets/",
+      "language": "en",
+      "excerpt": "OriEra v0.3.0: Generated Assets in the Engine Loop OriEra Engine v0.3.0: generative asset interfaces, validation, hot swap, 11 workspace members, overlapping test counts, and a verified offline mock example. OriEra Rust 游戏引擎 生成式AI 开源项目 What problem does L8 address? Do 11 crates m",
+      "score": 0.5030238
+    }
+  ]
+}

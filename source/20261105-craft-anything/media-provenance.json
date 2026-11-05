@@ -1,0 +1,37 @@
+{
+  "banner": {
+    "path": "src/assets/images/craft-anything-rust-software-rebuild-workbench-banner.jpg",
+    "method": "local FLUX.2 Klein",
+    "seed": 8181,
+    "machineVerification": "0 failures,0 warnings",
+    "manualReview": "on-topic study/rebuild block structures, no face or rendered text; illustration rather than measured rebuild result"
+  },
+  "officialSavedImages": [
+    {
+      "path": "/Users/jason/.heinu1-bot/media/craft-anything-official-project-website.png",
+      "source": "https://github.com/storytold/craft-anything/blob/main/docs/images/project-website.png"
+    },
+    {
+      "path": "/Users/jason/.heinu1-bot/media/craft-anything-official-workbench.png",
+      "source": "https://github.com/storytold/craft-anything/blob/main/docs/images/workbench.png"
+    }
+  ],
+  "adoptionDecision": "official project/workbench screenshots are text-heavy; small app icon insufficient for a hero, generated original topical scene instead",
+  "bodyIllustrations": [
+    {
+      "path": "src/assets/images/craft-anything-rust-software-rebuild-workbench-fig-01.png",
+      "method": "Codex image generation using mycelium-mushroom-illustrations",
+      "manualReviewed": true
+    },
+    {
+      "path": "src/assets/images/craft-anything-rust-software-rebuild-workbench-fig-02.png",
+      "method": "Codex image generation using mycelium-mushroom-illustrations",
+      "manualReviewed": true
+    },
+    {
+      "path": "src/assets/images/craft-anything-rust-software-rebuild-workbench-fig-03.png",
+      "method": "Codex image generation using mycelium-mushroom-illustrations",
+      "manualReviewed": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-05T13:50:46.160Z",
+  "drafts": [
+    {
+      "slug": "craft-anything-rust-software-rebuild-workbench",
+      "mediaId": "prCUE631thH1cmNLi42prPuB9V_QuaM5ddW-2YTOQide5K0BuQdMzb2krd4QHwYr",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "9b4c8dea3a67c3f7b1d9d954f6e001481b25d07cb67ff132461f1efb0c674277",
+      "remoteTextHash": "9b4c8dea3a67c3f7b1d9d954f6e001481b25d07cb67ff132461f1efb0c674277",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/craft-anything-rust-software-rebuild-workbench/",
+      "localContentHash": "0706b9678c35b0311ec9c35133ef88b63ec01c27c8779ff112b42c740a10cada",
+      "remoteContentHash": "c87fecbd18b8dc1870aab4063be9e75802729c4c3d4142174da935980d8338f5"
+    }
+  ]
+}
