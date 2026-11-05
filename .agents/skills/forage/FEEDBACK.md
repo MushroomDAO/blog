@@ -1184,3 +1184,7 @@ Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slu
 ## 2026-11-05 · Agent Workspace/Jumper公众号补偿成功
 
 复用原双语文章、官方仿真渲染封面和3张小M正文图，Blog及5图重新核验200。公众号接入恢复后未查到本篇远程草稿，本地仅有旧失败记录；补建一次成功，远程回读正文、3图、封面、标题/作者/摘要、原文链接及评论设置一致。旧40164失败resolved，KB回读含当前media_id；未群发、未重复部署或语义upsert。文章继续区分两个项目，不把STL等同完整制造资料，不把模型加载或定向测试当真机验证。
+
+## 2026-11-05 · 补齐11月4—5日失败公众号
+
+按Asia/Bangkok两日窗口核对失败文件、任务记录、远程草稿和本地成功凭证，8条记录中4条先前已成功且远程ID仍在，复用；另4条Shisei、NorthCUA-Pro、DSH Go、dsh-agy-link本次各补建一次。4篇Blog和20个图片资源200；新稿全文、3图、封面、标题/作者/摘要、原文链接和评论设置逐篇回读通过。最终8/8目标media_id均在远程草稿箱，远程总数12。旧失败resolved，KB五个项目/管理记录回读，既有语义索引均verified，未部署新Blog、未重建图片、未群发。已发布列表仍48001无权限。初始宽松正文链接匹配误把相关文章当同篇，已改为原文URL或精确标题匹配后才决定创建；证据与可复核运行脚本见docs/publication-audits/20261105-wechat-two-day-retry/。
