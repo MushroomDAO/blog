@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "dont-storytell-narrative-strategy-skill",
+      "title": "Don’t Storytell调研：把商业材料变成一页可验证的叙事策略",
+      "url": "/blog/dont-storytell-narrative-strategy-skill/",
+      "language": "zh",
+      "excerpt": "Don’t Storytell调研：把商业材料变成一页可验证的叙事策略 Don’t Storytell是一份公开的叙事咨询Skill，帮助创始人、产品负责人和创作者从材料中识别事实、提出取舍，形成愿景、因果行动和首次履约计划。本文核对案例库规模、检索与HTML导出脚本，分析证据边界、用户场景、输入隐私和许可缺口，并用一个假设场景说明怎样把策略建议接回真实行动，而非把漂亮文案当成经营结果。 Don’t Storytell 叙事策略 AI Skill 创作者 商业决策 它是一份怎样的Skill？ 从资料到一页纸，中间发生什么？ 案例库到底有多大，能证明什么？",
+      "score": 0.6210658
+    },
+    {
+      "article_id": "nemotron-3-diarization-8-speaker-streaming-mac-test",
+      "title": "Nemotron 3 Diarization 实测：NVIDIA 1 亿参数说话人分离模型，最多 8 人、可商用，Mac 上要自己编译",
+      "url": "/blog/nemotron-3-diarization-8-speaker-streaming-mac-test/",
+      "language": "zh",
+      "excerpt": "Nemotron 3 Diarization 实测：NVIDIA 1 亿参数说话人分离模型，最多 8 人、可商用，Mac 上要自己编译 Nemotron 3 Diarization 是 NVIDIA 2026-09-23 发布的 1 亿参数说话人分离模型，最多 8 人、流式延迟可低至 0.32 秒、OpenMDW-1.1 许可可商用。模型卡自报 DIHARD III DER 从 19.09% 降到 12.73%。我们在 16GB M4 Mac mini 上实测：官方安装脚本装的 v0.1.0 运行时加载失败，需从源码编译；编译后 10 分钟音频 CPU ",
+      "score": 0.48050672
+    },
+    {
+      "article_id": "google-skills-137-agent-skills-negative-routing-vs-anthropic",
+      "title": "拆 google/skills：137 个 Agent Skill 里，86% 是 Google Cloud，67% 写了「别用我」",
+      "url": "/blog/google-skills-137-agent-skills-negative-routing-vs-anthropic/",
+      "language": "zh",
+      "excerpt": "拆 google/skills：137 个 Agent Skill 里，86% 是 Google Cloud，67% 写了「别用我」 Google 官方 Agent Skills 仓库 19583 星，实测统计：137 个 SKILL.md 里 cloud 占 118 个，index.json 收录 132 个，其中 88 个（67%）在 description 里显式写了「Don't use for X，改用 Y」的负向路由，平均 description 长达 437 字符。这个数字本身就是一条工程结论——当 skill 数量过百，路由歧义才是主要失败",
+      "score": 0.47430298
+    },
+    {
+      "article_id": "neural-imprint-atomgradient-continual-learning-device-ai",
+      "title": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始",
+      "url": "/blog/neural-imprint-atomgradient-continual-learning-device-ai/",
+      "language": "zh",
+      "excerpt": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始 质子梯度（AtomGradient）发布 Neural Imprint 白皮书 v2（2026-09-17），提出让已部署 AI 在持续使用中积累经验、更新模型状态，无需重新训练。三个 Gen-1 组件：RPP（激活空间用户建模）、DSR（稀疏注意力缓存管理）、FrogJump（层跳过加速）。实测：90B 模型在手机上跑 200 轮对话峰值 5.5GB，语音合成中位延迟 32.28ms。CC BY-NC-ND 4.0。 continual-learning on-d",
+      "score": 0.4679494
+    },
+    {
+      "article_id": "awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt",
+      "title": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引",
+      "url": "/blog/awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt/",
+      "language": "zh",
+      "excerpt": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引 Agents 222 个、Instructions 193 个、Skills 416 个、Plugins 100 个——这套分类本身比清单更值得看：agent 是接 MCP 的专门角色，instruction 是按文件模式自动生效的编码规范，skill 是自包含带资源的文件夹，plugin 是打包好的组合。另一个值得抄的做法是 llms.txt：一份 941 行、308KB 的机器可读索引，专门给 AI agent 读，让它自己找该用哪个资源。",
+      "score": 0.46327594
+    },
+    {
+      "article_id": "jev-awesome-list-gold-rush-fact-check",
+      "title": "TypeSafe AI 的 Jev 生态刷屏：所谓「一天冒出 800+」，我们扒开一个索引仓库和 74 份「awesome」清单核实了一遍",
+      "url": "/blog/jev-awesome-list-gold-rush-fact-check/",
+      "language": "zh",
+      "excerpt": "TypeSafe AI 的 Jev 生态刷屏：所谓「一天冒出 800+」，我们扒开一个索引仓库和 74 份「awesome」清单核实了一遍 TypeSafe AI 的决策模型 Jev 9 月 15 日拿 4000 万美元种子轮早期发布，一周内 GitHub 上至少冒出 74 个「awesome-jev」索引仓库，其中一个今天创建的仓库 12 小时内把收录数从 148 冲到 805。我们通读它的 commit 历史、抽样核对 evidence 字段，发现这不是 805 个项目一天内被写出来，而是一个人聚合并核验了 32 份「兄弟名单」——最受欢迎的同类清单",
+      "score": 0.4626861
+    },
+    {
+      "article_id": "dan-koe-reddit-seo-geo-ai-overviews-4-steps",
+      "title": "油管大神 Dan Koe：用 Reddit 做 SEO+GEO 的四步打法，恐怖在哪里",
+      "url": "/blog/dan-koe-reddit-seo-geo-ai-overviews-4-steps/",
+      "language": "zh",
+      "excerpt": "油管大神 Dan Koe：用 Reddit 做 SEO+GEO 的四步打法，恐怖在哪里 Reddit 已成 AI 引用第二高频来源。Dan Koe 的四步打法把 Google 索引逻辑与 AI 摘取逻辑同时喂饱：Gemini 双维筛词 → 双栖型回复 → 技术三层标记 → 双线验证。关键数据：44.2% 的 AI 引用来自内容前 30%；静态 HTML AI 爬取成功率 94%，纯 JS 渲染仅 23%。 SEO GEO Reddit AI Overviews Dan Koe 生成式引擎优化 内容营销 Gemini Ahrefs Schema 为什么 R",
+      "score": 0.45667967
+    },
+    {
+      "article_id": "maintain-repo-wiki-llm-engineering-wiki-skill-repo-self-evolution",
+      "title": "maintain-repo-wiki：让 LLM Agent 把工程事实而非总结写进 Wiki",
+      "url": "/blog/maintain-repo-wiki-llm-engineering-wiki-skill-repo-self-evolution/",
+      "language": "zh",
+      "excerpt": "maintain-repo-wiki：让 LLM Agent 把工程事实而非总结写进 Wiki dingrancho-alt/maintain-repo-wiki，13 stars，Python，2026-07-07。面向单仓库/多仓库的生产级工程 Wiki Skill：不把代码「总结成一篇文档」，而是把接口契约、字段传播、业务流程、排障路径这类可验证工程事实组织成能持续更新、审计、检索的知识系统。三种知识库拓扑（Repo/System/Knowledge Repo）、九类页面、Audit→Confirm→Apply 受控写入流程、可选 Capabili",
+      "score": 0.45581105
+    },
+    {
+      "article_id": "llmwiki-cli-karpathy-knowledge-pipeline",
+      "title": "From Script to CLI in 40 Hours: Karpathy's LLM Wiki Idea Hit 21M Views, Someone Built the Pipeline",
+      "url": "/blog/llmwiki-cli-karpathy-knowledge-pipeline/",
+      "language": "en",
+      "excerpt": "From Script to CLI in 40 Hours: Karpathy's LLM Wiki Idea Hit 21M Views, Someone Built the Pipeline Karpathy's LLM Wiki gist (5,000+ stars) described a new AI knowledge base paradigm: instead of RAG re-discovering on every query, let an LLM incrementally maintain a persistent wiki",
+      "score": 0.45354742
+    },
+    {
+      "article_id": "howtolive-better-evidence-based-chinese-life-guide-498-tips",
+      "title": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
+      "url": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
+      "language": "en",
+      "excerpt": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources eternity4719/HowToLiveBetter, Unlicense, live search UI, 498 cost-benefit-ranked Chinese life tips across 31 chapters: longevity, first aid, money, legal risks, r",
+      "score": 0.45335037
+    }
+  ]
+}
