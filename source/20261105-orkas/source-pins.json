@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/Orkas-AI/Orkas",
+  "commit": "c7c0e21fad7ff55f5a72a575b7a464f3cf9bc3a1",
+  "packageVersion": "2026.11.4",
+  "license": "MIT",
+  "jina": "success200,31427bytes",
+  "agentReach": "skill and command unavailable; JinaReader fallback",
+  "test": "existing builtin manifest check passed400files; not400functionaltests"
+}

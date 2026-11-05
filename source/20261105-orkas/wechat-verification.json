@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-05T15:09:58.028Z",
+  "drafts": [
+    {
+      "slug": "orkas-local-first-desktop-agent-team-review",
+      "mediaId": "prCUE631thH1cmNLi42prEZ4Mt_womxeN1m-3-M-Kvz-jsb4yBtlyUo7H-UUpNhX",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "1d22bbb3cd611022c8fbb6dd2de7ae3ec0b0ea640ca1238682b0043fb8553b96",
+      "remoteTextHash": "1d22bbb3cd611022c8fbb6dd2de7ae3ec0b0ea640ca1238682b0043fb8553b96",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/orkas-local-first-desktop-agent-team-review/",
+      "localContentHash": "2bd70d675a94e6344b0754871dc4bbafe00cf51ca3b4ca69c2284171d5e5c839",
+      "remoteContentHash": "6eacbaf3ec3ac287eb8033617e87202d64d49c9d1827216f03747426e75918bf"
+    }
+  ]
+}

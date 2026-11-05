@@ -1,0 +1,87 @@
+{
+  "query": "Orkas桌面工作台 Commander 16个Agent 400文件清单 MIT 本地优先",
+  "response": {
+    "results": [
+      {
+        "article_id": "orkas-local-first-desktop-agent-team-review",
+        "title": "Orkas：把专业Agent和编程助手放进桌面工作台",
+        "url": "/blog/orkas-local-first-desktop-agent-team-review/",
+        "language": "zh",
+        "excerpt": "Orkas：把专业Agent和编程助手放进桌面工作台 Orkas是MIT开源的桌面多智能体工作台，以Commander协调专业角色、编程CLI、项目待办和资料库。本文核对任务委派、范围记忆、上下文恢复与定时运行机制，区分源码版和官方打包版的账号、云同步及应用发布功能，并解释本地存储与云端推理的边界，给出源码启动条件、400文件资源清单核验结果及可操作的试用验收建议。 Orkas AI Agent 多智能体 本地优先 开源工具 Orkas 如何把目标变成协作？ 项目、记忆和资料库，分别保存什么？ 本地优先，为什么仍然可能联网？ 能把现有编程助手接进来吗？ ",
+        "score": 0.67240363
+      },
+      {
+        "article_id": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+        "title": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工",
+        "url": "/blog/munder-difflin-multi-agent-harness-claude-codex-local-first/",
+        "language": "zh",
+        "excerpt": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工 Munder Difflin（MIT，3888 stars，Electron+React+TypeScript）是一个本地多 Agent Harness 桌面应用，把 Claude Code、OpenAI Codex、xAI Grok、Kimi Code、Qwen、GitHub Copilot CLI 等 12 种 CLI 包成真实 PTY 进程，用像素风 The Office 场景可视化——每个 Agent ",
+        "score": 0.6418071
+      },
+      {
+        "article_id": "agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management",
+        "title": "Agent Orchestrator（AO）：26 个编程 Agent 统一管理，榨干 Claude Code/Codex/Cursor 的实战指南",
+        "url": "/blog/agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management/",
+        "language": "zh",
+        "excerpt": "Agent Orchestrator（AO）：26 个编程 Agent 统一管理，榨干 Claude Code/Codex/Cursor 的实战指南 Agent Orchestrator（GitHub: Untrivial-ai/agent-orchestrator，⭐10,439，Apache-2.0）是一个本地桌面 IDE，把 Claude Code、Codex、Cursor 等 26 个编程 Agent 统一放进一个 Kanban 看板管理。每个任务有独立 Worker（独立 branch + worktree）、项目级 Orchestrator ",
+        "score": 0.59658927
+      },
+      {
+        "article_id": "awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt",
+        "title": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引",
+        "url": "/blog/awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt/",
+        "language": "zh",
+        "excerpt": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引 Agents 222 个、Instructions 193 个、Skills 416 个、Plugins 100 个——这套分类本身比清单更值得看：agent 是接 MCP 的专门角色，instruction 是按文件模式自动生效的编码规范，skill 是自包含带资源的文件夹，plugin 是打包好的组合。另一个值得抄的做法是 llms.txt：一份 941 行、308KB 的机器可读索引，专门给 AI agent 读，让它自己找该用哪个资源。",
+        "score": 0.58853316
+      },
+      {
+        "article_id": "orca-ade-parallel-ai-agent-orchestration",
+        "title": "Orca：67K stars 的并行 Agent 编排台，把 40+ CLI Agent 变成一支舰队",
+        "url": "/blog/orca-ade-parallel-ai-agent-orchestration/",
+        "language": "zh",
+        "excerpt": "Orca：67K stars 的并行 Agent 编排台，把 40+ CLI Agent 变成一支舰队 Stably AI(YC W22) 出品的开源 ADE，MIT 协议。一个 prompt 扇出给多个 Agent，各跑独立 worktree，Design Mode 点 UI 元素直喂 Agent，SSH 远端机器、手机 App 随时调度——这是目前把「Agent 当舰队管」想得最透的工具。 AI-agent open-source developer-tools Claude-Code parallel-agents Orca 问题是什么 核心设计：",
+        "score": 0.5872086
+      },
+      {
+        "article_id": "multica-open-source-managed-agents-platform-design-patterns",
+        "title": "Multica：4.1 万 Star 的开源 Agent 团队基础设施，五个最值得借鉴的设计模式",
+        "url": "/blog/multica-open-source-managed-agents-platform-design-patterns/",
+        "language": "zh",
+        "excerpt": "Multica：4.1 万 Star 的开源 Agent 团队基础设施，五个最值得借鉴的设计模式 Multica 把编程 Agent 变成真正的队友：在看板上分配任务、自主接手执行、报告阻塞、积累可复用技能。4.1 万 Stars，Go + Next.js，支持 14 种 Agent CLI，可自托管。本文拆解五个最值得借鉴的架构设计——以及一个值得关注的本地优先替代思路。 Multi-Agent Agent团队协作 开源基础设施 Claude Code Codex Go 看板 任务编排 可复用技能 自托管 一句话理解 五个最值得借鉴的设计模式 模式一：",
+        "score": 0.56733125
+      },
+      {
+        "article_id": "moki-whiteboard-local-mcp",
+        "title": "MOKI 白板：让 Agent 通过 MCP 直接读写本地画布",
+        "url": "/blog/moki-whiteboard-local-mcp/",
+        "language": "zh",
+        "excerpt": "MOKI 白板：让 Agent 通过 MCP 直接读写本地画布 JKZeng-cell/moki-whiteboard是MIT开源的本地无限白板，结合React、Electron、SQLite和16个MCP工具。本文核对部署入口、版本冲突保护、数据边界，并实际验证存储、拒绝过期修改与持久化。 MOKI MCP 白板 本地优先 Agent工具 它是什么，解决什么问题？ MCP 如何接入现有画布？ 版本冲突保护是自动强制的吗？ 怎样运行并接到 Agent？ “本地优先”是否意味着内容绝不出电脑？ 我们会怎样把它用于一个真实项目？ 常见问题 它自带 AI 模型",
+        "score": 0.5635721
+      },
+      {
+        "article_id": "vicoa-ai-agent-orchestrator-desktop-mobile-worktree-claude-codex",
+        "title": "Vicoa：手机上发任务，电脑同时跑八个 Agent——ADE 全平台开源",
+        "url": "/blog/vicoa-ai-agent-orchestrator-desktop-mobile-worktree-claude-codex/",
+        "language": "zh",
+        "excerpt": "Vicoa：手机上发任务，电脑同时跑八个 Agent——ADE 全平台开源 vicoa-ai/vicoa 全平台开源 ADE（Agent 开发环境），支持 Claude Code/Codex/OpenCode/Gemini/Cursor/Copilot/Kimi/Hermes 八种 Agent，每个 Agent 独立 Worktree 并行，iOS/Android 原生 App，任务面板+定时任务，Docker 一键自部署。 agent ADE Claude Code Codex open source mobile worktree self-host",
+        "score": 0.5600643
+      },
+      {
+        "article_id": "agency-agents-opensource-multi-model",
+        "title": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构",
+        "url": "/blog/agency-agents-opensource-multi-model/",
+        "language": "zh",
+        "excerpt": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构 深度解析 msitarzewski/agency-agents：9个部门、50+专业AI角色，从前端巫师到安全审计员，直接集成 Claude Code、Cursor、Copilot，将AI从「通用助理」升级为「专业协作网」。 Agency Agents AI Agent 开源 Claude Code Cursor Copilot 提示词工程 多角色协作 GitHub 1. 核心理念：从「提示词」到「智能体」 2. 组织架构与规模 3. 深度集成与应用",
+        "score": 0.5597171
+      },
+      {
+        "article_id": "openpanels-local-ai-agent-visual-workspace",
+        "title": "OpenPanels：给AI Agent装上本地可视化工作台，5个面板从写作到发布",
+        "url": "/blog/openpanels-local-ai-agent-visual-workspace/",
+        "language": "zh",
+        "excerpt": "OpenPanels：给AI Agent装上本地可视化工作台，5个面板从写作到发布 mooqii 开源了 OpenPanels，一个本地优先的 AI Agent 可视化工作台，用 Rust 写成，MIT 授权。5个面板覆盖从知识管理、文档写作到排版发布的全流程，内置微信公众号草稿集成，以 agent skill URL 的方式接入任何 AI Agent。 AI Agent Rust 本地优先 MCP 知识库 微信公众号 开源工具 Mycelium 五个面板，覆盖从输入到输出 作为 Skill 接入 Agent 本地优先，凭据自己掌管 支持平台 为什么关注",
+        "score": 0.5596142
+      }
+    ]
+  }
+}
