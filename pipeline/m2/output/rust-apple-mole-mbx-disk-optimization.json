@@ -1,0 +1,15 @@
+{
+  "title": "Rust和苹果开发者如何优化自己的磁盘",
+  "author": "Mycelium",
+  "digest": "用Mole找增长，用MBX减少重复构建，分清缓存、模型、发布归档与清理边界。",
+  "mediaId": "prCUE631thH1cmNLi42prBds9MORvUh_iQ9gD83SlgK2iV_DwuftnpKqDcml8GS4",
+  "blogUrl": "https://blog.mushroom.cv/blog/rust-apple-mole-mbx-disk-optimization/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/rust-apple-mole-mbx-disk-optimization/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/jhfnetboy/mole",
+    "github.com/tw93/mole",
+    "github.com/jdx/mr-boxington"
+  ],
+  "publishedAt": "2026-11-05T04:51:13.852Z"
+}

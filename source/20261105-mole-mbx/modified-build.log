@@ -1,0 +1,10 @@
+   Compiling cache_probe v0.1.0 (/private/tmp/mole-mbx-smoke/proof-l4l99phz/checkout-b)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.26s
+mbx[cache]: 0 hits, 1 misses, 0 prefetched; 0 B downloaded, 0 B uploaded, 0 B stored locally
+mbx[cache]: could not look up 1 compilations: no usable dep-info from an earlier build and no prediction to derive an action key from
+mbx[cache]: bypassed 5 compilations: 4 compiler-query, 1 standard-input
+mbx[cache]: compiler time: 0s estimated avoided; 99.4ms spent (1 miss in 24.4ms, 1 unconsulted in 75.0ms)
+mbx[cache]: 2 compilations kept their own incremental state, so they were not stored
+mbx[cache]: slowest uncached crates: cache_probe 99.4ms
+mbx[cache]: wrapper phases (cumulative, exclusive): compiler 97.8ms, key 1.8ms, lookup 130µs, permit_wait 1.1ms, restore 624ns, startup 157µs, unattributed 67.7ms
+mbx[cache]: timing: 280.5ms session, 0s prefetch; cumulative 0s remote lookup, 0s blob transfer, 0s CAS write, 0s materialization

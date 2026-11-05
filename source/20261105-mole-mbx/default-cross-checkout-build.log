@@ -1,0 +1,8 @@
+   Compiling cache_probe v0.1.0 (/private/tmp/mole-mbx-smoke/proof-bt7r8wsn/checkout-b)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.31s
+mbx[cache]: 0 hits, 2 misses, 0 prefetched; 0 B downloaded, 0 B uploaded, 472.2 KiB stored locally
+mbx[cache]: bypassed 5 compilations: 4 compiler-query, 1 standard-input
+mbx[cache]: compiler time: 0s estimated avoided; 108.4ms spent (2 miss in 108.4ms)
+mbx[cache]: slowest uncached crates: cache_probe 108.4ms
+mbx[cache]: wrapper phases (cumulative, exclusive): compiler 107.4ms, flight_wait 881µs, key 4.8ms, lookup 177µs, permit_wait 1.1ms, predict 2.0ms, restore 8µs, startup 160µs, store 7.1ms, unattributed 79.4ms
+mbx[cache]: timing: 348.4ms session, 0s prefetch; cumulative 0s remote lookup, 0s blob transfer, 3.5ms CAS write, 0s materialization
