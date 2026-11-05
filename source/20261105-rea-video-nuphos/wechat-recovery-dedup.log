@@ -1,0 +1,49 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6aebfcf9-49a21bb9-1c21d3ed）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 958 篇 + 公众号草稿箱 6 条 + 本地发布记录 935 条 + MemPalace 3841 抽屉
+
+── 查：https://github.com/JuneYaooo/rea-video
+   ❌ [BLOG  ] rea-video与Nuphos：拆解视频和团队Agent协作，各自解决什么？
+      一手源相同: juneyaooo/rea-video
+   ❌ [知识库] # rea-video、Nuphos与Raven项目梳理  **Summary**: rea-video用于逐镜分析视频
+      一手源相同: juneyaooo/rea-video
+   ❌ [知识库] --- name: rea-video and Nuphos workflow review description:
+      一手源相同: juneyaooo/rea-video
+   ❌ [知识库] # rea-video、Nuphos与Raven项目梳理  **Summary**: rea-video用于逐镜分析视频
+      一手源相同: juneyaooo/rea-video
+   ❌ [知识库] # https://github.com/JuneYaooo/r  **Summary**: https://githu
+      一手源相同: juneyaooo/rea-video
+   ❌ [知识库] # rea-video与Nuphos工作流调研  **Summary**: rea-video拆解视频制作流程，Nuph
+      一手源相同: juneyaooo/rea-video
+
+── 查：https://github.com/nuphos/nuphos
+   ❌ [BLOG  ] rea-video与Nuphos：拆解视频和团队Agent协作，各自解决什么？
+      一手源相同: nuphos/nuphos
+   ❌ [知识库] --- name: rea-video and Nuphos workflow review description:
+      一手源相同: nuphos/nuphos
+   ❌ [知识库] # rea-video与Nuphos工作流调研  **Summary**: rea-video拆解视频制作流程，Nuph
+      一手源相同: nuphos/nuphos
+
+── 查：https://github.com/EverMind-AI/Raven
+   ❌ [BLOG  ] Raven 论文解读：让多个 Agent 协作，也让工作流程接受检验
+      一手源相同: evermind-ai/raven
+   ❌ [发过 2026-10-15] Raven：多Agent协作与自我改进的边界
+      一手源相同: evermind-ai/raven
+   ⚠️  [知识库] # Raven：多智能体编排与流程自我改进  **Summary**: Raven 是 EverMind 开源的多智能体
+      标题相似度 33%
+   ❌ [知识库] --- name: Raven multi-agent harness description: EverMind Ra
+      一手源相同: evermind-ai/raven
+   ⚠️  [知识库] # 项目GitHub地址：EverMind-AI/Raven  **Summary**: 项目GitHub地址：Ever
+      标题相似度 50%
+   ⚠️  [知识库] # Raven：多智能体编排与流程自我改进  **Summary**: Raven 是 EverMind 开源的多智能体
+      标题相似度 33%
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
