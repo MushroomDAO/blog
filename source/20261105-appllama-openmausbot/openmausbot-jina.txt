@@ -1,0 +1,309 @@
+Title: GitHub - milind-soni/OpenMausBot: Open-source Grok Bot alternative with a virtual machine that bots can use
+
+URL Source: https://github.com/milind-soni/OpenMausBot
+
+Markdown Content:
+**The open-source Grok Bot alternative: your own team of AI bots, in a chat app.**
+
+[**openmausbot.com**](https://www.openmausbot.com/)·[Download](https://www.openmausbot.com/download)·[Open source Grok Bot alternative, compared](https://www.openmausbot.com/blog/grok-bot-vs-openmausbot)
+
+OpenMausBot is an open-source Grok Bot alternative: an independent project inspired by **Grok Bot**, and the open-source alternative to **Meta Muse**, **OpenAI dots** and **Cue by Manus** — bring-your-own-agent, local-first, on the models you already have. Also known as **MausBot**; formerly **OpenGrokBot**. Not affiliated with xAI, Meta, OpenAI or Manus.
+
+Every bot in the sidebar is a real agent — Claude or Codex running locally under the hood — with its own personality, its own model, its own cloud computer, and its own connected apps. Talk to them like contacts. Watch them work. Approve what matters.
+
+[![Image 1: TypeScript](https://camo.githubusercontent.com/b5a6d8987c7b2df75e8f265cbd77573bdec14f2716c3abce3bcd345d35b5622c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547970655363726970742d7374726963742d3331373843363f6c6f676f3d74797065736372697074266c6f676f436f6c6f723d7768697465)](https://camo.githubusercontent.com/b5a6d8987c7b2df75e8f265cbd77573bdec14f2716c3abce3bcd345d35b5622c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547970655363726970742d7374726963742d3331373843363f6c6f676f3d74797065736372697074266c6f676f436f6c6f723d7768697465)[![Image 2: React](https://camo.githubusercontent.com/5db4de9dcd72e7b8e95fe25f33f5520c571e9c3f93522d691a10cff804fb795d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d31392d3631444146423f6c6f676f3d7265616374266c6f676f436f6c6f723d626c61636b)](https://camo.githubusercontent.com/5db4de9dcd72e7b8e95fe25f33f5520c571e9c3f93522d691a10cff804fb795d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d31392d3631444146423f6c6f676f3d7265616374266c6f676f436f6c6f723d626c61636b)[![Image 3: Electron](https://camo.githubusercontent.com/6e79fa38f4a7fdfd8c050bd0ee8938805b4bfae19c0c2a4a2c790c558a22bb57/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f456c656374726f6e2d6d61634f5325323025433225423725323057696e646f77732532302543322542372532305562756e74752d3242324533413f6c6f676f3d656c656374726f6e266c6f676f436f6c6f723d394645414639)](https://camo.githubusercontent.com/6e79fa38f4a7fdfd8c050bd0ee8938805b4bfae19c0c2a4a2c790c558a22bb57/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f456c656374726f6e2d6d61634f5325323025433225423725323057696e646f77732532302543322542372532305562756e74752d3242324533413f6c6f676f3d656c656374726f6e266c6f676f436f6c6f723d394645414639)[![Image 4: Agents](https://camo.githubusercontent.com/aae67b2f408f36f8ed3109be2c5574728d89abe389b4f0eeb9b4680189face5c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6167656e74732d436c61756465253230254332254237253230436f6465782d643937373537)](https://camo.githubusercontent.com/aae67b2f408f36f8ed3109be2c5574728d89abe389b4f0eeb9b4680189face5c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6167656e74732d436c61756465253230254332254237253230436f6465782d643937373537)[![Image 5: Release](https://camo.githubusercontent.com/7036d18babf667ea51cea5a9178484af5b0a0378ab98c045574fb1b02ac0db9f/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f6d696c696e642d736f6e692f4f70656e4d617573426f743f6c6162656c3d72656c6561736526636f6c6f723d3130383466652663616368655365636f6e64733d333030)](https://github.com/milind-soni/OpenMausBot/releases/latest)[![Image 6: PRs](https://camo.githubusercontent.com/38ca6ed47d9897fe61dac29febd9ed94f111e04e92c46c9e67c4781ae100f5f2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5052732d77656c636f6d652d333864353931)](https://camo.githubusercontent.com/38ca6ed47d9897fe61dac29febd9ed94f111e04e92c46c9e67c4781ae100f5f2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5052732d77656c636f6d652d333864353931)
+
+[![Image 7: Download the latest OpenMausBot for Mac with Apple silicon (.dmg)](https://camo.githubusercontent.com/35371268a16b8b4bf4648f12d1834d14a887294d832e2e8a187fc3ffc176cbc5/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f6d696c696e642d736f6e692f4f70656e4d617573426f743f7374796c653d666f722d7468652d6261646765266c6162656c3d254532254143253837254546254238253846253230253230446f776e6c6f6164253230666f722532304d61632532302532384170706c6525323073696c69636f6e253239266c6162656c436f6c6f723d30373037303726636f6c6f723d3130383466652663616368655365636f6e64733d333030)](https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot.dmg)[![Image 8: Download the latest OpenMausBot for Intel Macs (.dmg)](https://camo.githubusercontent.com/428b13a9019cf12aa6d6c270f311c6b0bd4f3cdc34a096ea6ec67b0aff2e2725/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f6d696c696e642d736f6e692f4f70656e4d617573426f743f7374796c653d666f722d7468652d6261646765266c6162656c3d254532254143253837254546254238253846253230253230446f776e6c6f6164253230666f722532304d6163253230253238496e74656c253239266c6162656c436f6c6f723d30373037303726636f6c6f723d3261396438662663616368655365636f6e64733d333030)](https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot-intel.dmg)[![Image 9: Download the latest OpenMausBot for Windows (.exe)](https://camo.githubusercontent.com/bb6837dcdf9e5ef24650d0732b8dbeec45272c42538c5a18d321abc9d69e80cd/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f6d696c696e642d736f6e692f4f70656e4d617573426f743f7374796c653d666f722d7468652d6261646765266c6162656c3d254532254143253837254546254238253846253230253230446f776e6c6f6164253230666f7225323057696e646f7773266c6162656c436f6c6f723d30373037303726636f6c6f723d3463633266662663616368655365636f6e64733d333030)](https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot-setup.exe)[![Image 10: Download the latest OpenMausBot for Ubuntu (.deb)](https://camo.githubusercontent.com/0576ba7b665a7c75e841ea01eee76faf3116f20efa6f6a23afde8c42806602b6/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f6d696c696e642d736f6e692f4f70656e4d617573426f743f7374796c653d666f722d7468652d6261646765266c6162656c3d254532254143253837254546254238253846253230253230446f776e6c6f6164253230666f722532305562756e7475266c6162656c436f6c6f723d30373037303726636f6c6f723d6539353432302663616368655365636f6e64733d333030)](https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot-amd64.deb)
+
+[latest release](https://github.com/milind-soni/OpenMausBot/releases/latest)· macOS: Apple silicon & Intel · signed & notarized .dmg · Windows: x64 installer · Ubuntu 24.04 x64: .deb or AppImage beta ·[all releases](https://github.com/milind-soni/OpenMausBot/releases)
+
+[![Image 11: Support OpenMausBot via GitHub Sponsors](https://camo.githubusercontent.com/b01bbc5c4692215e10fe975d01c9cd65fb6f7ea76f8819d04d79755d161bfaad/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f254532253944254134254546254238253846253230253230537570706f72742532304f70656e4d617573426f742d47697448756225323053706f6e736f72732d3338643539313f7374796c653d666f722d7468652d6261646765266c6162656c436f6c6f723d303730373037)](https://github.com/sponsors/milind-soni)
+
+Powered by [boat.dev](https://boat.dev/)
+[![Image 12: Boat (boat.dev)](https://github.com/milind-soni/OpenMausBot/raw/main/docs/assets/sponsors/boat-logo.svg)](https://boat.dev/)
+
+[![Image 13: OpenMausBot — a Telegram-style chat app where every chat is a real AI agent](https://github.com/milind-soni/OpenMausBot/raw/main/docs/screenshots/hero.png)](https://github.com/milind-soni/OpenMausBot/blob/main/docs/screenshots/hero.png)
+
+* * *
+
+> ⚠️**No affiliation with any cryptocurrency.** OpenMausBot has no token. Any coin using the OpenMausBot, Maus, or SupaMaus name is not created, endorsed, or affiliated with this project or its maintainer. I have received no tokens, payment, or allocation from anyone, and I will not be endorsing any token.
+
+## Why
+
+[](https://github.com/milind-soni/OpenMausBot#why)
+One assistant in one box is the wrong shape for agents. OpenMausBot is an independent, open-source project inspired by **Grok Bot** — it keeps the idea (AI as a _messaging app_: a roster of bots you chat with, each with its own personality, memory of its thread, model, computer, and apps) and rebuilds it open, local-first, and on the agents you already have:
+
+*   **Bring your own agents.** Bots run on the `claude`, `codex`, and `grok` CLIs installed on your own machine — your existing logins and subscriptions, no new accounts, no proxy in the middle. Point any engine at a custom CLI binary (a versioned build or wrapper) in **Settings → Engines**.
+*   **Local first.** One small harness server on `127.0.0.1` owns every agent process. Transcripts, keys, and events live in `~/.openmausbot`, not a cloud.
+*   **Agents with hands.** Each bot can use a cloud Linux desktop, an isolated Local VM, or—where the platform safety boundary is currently certified—your own computer, plus 500+ apps through Composio. Host control is available on macOS and Ubuntu Xorg after explicit opt-in. Ubuntu Wayland host control remains disabled while issue #345 is resolved.
+
+## The open-source alternative to Grok Bot, Muse, dots and Cue
+
+[](https://github.com/milind-soni/OpenMausBot#the-open-source-alternative-to-grok-bot-muse-dots-and-cue)
+Four closed personal-agent products shipped in seven weeks of 2026, and each one keeps the model, the computer and your data on its maker's side of the line. OpenMausBot is the open-source version of that shape: a team of agents in a chat app, each with its own model, its own computer and its own connected apps, running on your machine under Apache 2.0. If you searched for an _open Muse_, _open dots_, an _open-source Grok Bot_, an _open Instinct_ or an _open Cue_, this is the repository.
+
+| Looking for | What it is | How OpenMausBot differs | Read more |
+| --- | --- | --- | --- |
+| **Open source Grok Bot** | xAI's roster of bots on one shared cloud computer, Grok only, from a SuperGrok or Cursor plan | Same roster shape; any model per bot; your own machine; approval cards | [Grok Bot vs OpenMausBot](https://www.openmausbot.com/blog/grok-bot-vs-openmausbot) |
+| **Open Muse** | Meta's single personal agent in a Meta cloud VM, US and Canada only | A team instead of one agent; runs anywhere; data in `~/.openmausbot` | [Meta Muse alternative](https://www.openmausbot.com/blog/open-source-alternative-to-meta-muse) |
+| **Open dots** | OpenAI's always-on agent inside ChatGPT, GPT only, Pro and Business Premium plans | Several agents; your Claude, ChatGPT or Grok login; no plan required | [OpenAI dots alternative](https://www.openmausbot.com/blog/openai-dots-alternative) |
+| **Open Cue** | Manus's invite-only agents with their own phone, email and wallet | No invite; OAuth instead of passwords; open source | [Cue by Manus alternative](https://www.openmausbot.com/blog/open-source-alternative-to-cue-by-manus) |
+| **Open Instinct** | Spear Street's invite-only agent that holds your passwords on a cloud computer | Ask for approval when you want it; signs in over OAuth; your machine | [Instinct AI alternative](https://www.openmausbot.com/blog/instinct-ai-alternative) |
+
+All five side by side: [Muse vs Grok Bot vs Dots vs Cue](https://www.openmausbot.com/blog/muse-vs-grok-bot-vs-dots-vs-cue), and a decision guide in five questions: [Which AI agent should I use?](https://www.openmausbot.com/blog/which-ai-agent-should-i-use)
+
+## Features
+
+[](https://github.com/milind-soni/OpenMausBot#features)
+### 🧠 Pick a brain per bot
+
+[](https://github.com/milind-soni/OpenMausBot#-pick-a-brain-per-bot)
+A model picker with a provider rail — Claude and Codex models side by side, defaults marked, unavailable providers dimmed with the reason. Switch a bot's model mid-conversation.
+
+[![Image 14: Model picker with provider rail](https://github.com/milind-soni/OpenMausBot/raw/main/docs/screenshots/model-picker.png)](https://github.com/milind-soni/OpenMausBot/blob/main/docs/screenshots/model-picker.png)### 🖥️ Every bot gets a computer
+
+[](https://github.com/milind-soni/OpenMausBot#%EF%B8%8F-every-bot-gets-a-computer)
+Open the Computer panel and the bot's cloud desktop spins up on its own — live screen preview while it works, "Open desktop" to take over in your browser, or point the bot at _this Mac_ instead.
+
+[![Image 15: Computer panel with live screen preview](https://github.com/milind-soni/OpenMausBot/raw/main/docs/screenshots/computer-panel.png)](https://github.com/milind-soni/OpenMausBot/blob/main/docs/screenshots/computer-panel.png)
+### 🙋 Bots ask before they act
+
+[](https://github.com/milind-soni/OpenMausBot#-bots-ask-before-they-act)
+Shell commands, file edits, and questions surface as inline cards — Allow / Deny / answer in chat. A permission broker turns every risky action into a decision you make, for cloud and local computers alike.
+
+[![Image 16: Approval and question cards in chat](https://github.com/milind-soni/OpenMausBot/raw/main/docs/screenshots/approval-card.png)](https://github.com/milind-soni/OpenMausBot/blob/main/docs/screenshots/approval-card.png)### 🔌 Connected apps
+
+[](https://github.com/milind-soni/OpenMausBot#-connected-apps)
+A one-click marketplace over Composio Sessions: Gmail, Slack, GitHub, Notion, Linear and hundreds more. OAuth once, and every bot can use them as tools.
+
+[![Image 17: Connected apps marketplace](https://github.com/milind-soni/OpenMausBot/raw/main/docs/screenshots/marketplace.png)](https://github.com/milind-soni/OpenMausBot/blob/main/docs/screenshots/marketplace.png)
+### 🗂 Manage bots like chats
+
+[](https://github.com/milind-soni/OpenMausBot#-manage-bots-like-chats)
+Right-click any bot: pin, mark unread, edit profile, duplicate, copy conversation ID, hide, delete. It's a messaging app — your agents behave like contacts.
+
+[![Image 18: Bot context menu](https://github.com/milind-soni/OpenMausBot/raw/main/docs/screenshots/context-menu.png)](https://github.com/milind-soni/OpenMausBot/blob/main/docs/screenshots/context-menu.png)### 🔑 Keys once, everything lights up
+
+[](https://github.com/milind-soni/OpenMausBot#-keys-once-everything-lights-up)
+Paste credentials in App Settings — they persist locally and the provider fleet hot-reloads instantly. Secrets are write-only: the UI only ever sees "configured" flags.
+
+[![Image 19: App-level settings with API keys](https://github.com/milind-soni/OpenMausBot/raw/main/docs/screenshots/app-settings.png)](https://github.com/milind-soni/OpenMausBot/blob/main/docs/screenshots/app-settings.png)
+
+### #️⃣ Channels for every context
+
+[](https://github.com/milind-soni/OpenMausBot#%EF%B8%8F%E2%83%A3-channels-for-every-context)
+Keep Work, Personal, and each project in separate channels without cloning your bots. Every channel has its own transcript, shared instructions, working folder, responder rules, and editable bot roster. File a channel and its bots under a named context, then rename it or change its members whenever the team changes.
+
+### ⚡ Fast decisions with Jev
+
+[](https://github.com/milind-soni/OpenMausBot#-fast-decisions-with-jev)
+Add a TypeSafe Jev key, or an OpenRouter key and model, in **Settings → Decision model** and rooms set to **Auto** pick the bot that fits each un-mentioned message in a few hundred milliseconds, falling back to the room's lead whenever the decision model is off or unsure. See [docs/decision-model.md](https://github.com/milind-soni/OpenMausBot/blob/main/docs/decision-model.md).
+
+### 📦 Install a complete team from one Markdown file
+
+[](https://github.com/milind-soni/OpenMausBot#-install-a-complete-team-from-one-markdown-file)
+Browse outcome-driven teams on [BotMRR](https://botmrr.io/), then choose **Add to OpenMausBot**. The app opens a review screen before creating the bots, Chief of Staff, channels, playbooks, connector checklist, and suggested routines. You can also import the same `.md` file from disk or paste its public GitHub URL in **Teams → Import**.
+
+The format stays portable: OpenMausBot reads the structured YAML frontmatter for a reliable one-click install, while Grok, Claude, ChatGPT, and people can follow the ordinary Markdown playbook. Connections remain off until you approve them, routines arrive paused, and packages never carry credentials, conversations, permissions, memory, or computer access. Browse the [open-source playbook repository](https://github.com/milind-soni/openmausbot-teams) or read its [portable format](https://github.com/milind-soni/openmausbot-teams/blob/main/FORMAT.md).
+
+### 🤝 Share a whole department
+
+Right-click a department and choose **Share department…** (or use **Templates → Share**) to save the whole department as one file: its bots with their instructions, pictures and skills, group chats, routines, shared instructions, Chief of Staff, connection slots and each bot's starter notes (untick them to leave them out). The dialog shows exactly what the file holds before you save it. Chat history, keys and passwords, model choices and computers never go in, and anything that looks like a secret is removed from the text. Whoever imports it gets new bots on Ask, skills switched off and routines paused. See [docs/team-sharing.md](https://github.com/milind-soni/OpenMausBot/blob/main/docs/team-sharing.md). Desktops connected to an organization also get **Templates → From {Organization}**: the packages its Admin shares, added with one click, skills switched on. See [docs/org-library.md](https://github.com/milind-soni/OpenMausBot/blob/main/docs/org-library.md). Your New bot defaults can travel too, as a **preset bot** that appears in New bot (in a team file, or on their own with **Share as preset…**). See [docs/presets.md](https://github.com/milind-soni/OpenMausBot/blob/main/docs/presets.md).
+
+### 🎧 Bots that talk back
+
+[](https://github.com/milind-soni/OpenMausBot#-bots-that-talk-back)
+Press the speaker on any reply, or switch a bot to read its answers out as they land — so you can listen to what ran overnight while you make breakfast. Hit **call** and it's a conversation: it hears you, tells you what it's doing while it works, and asks for approvals out loud.
+
+Choose ElevenLabs, Fish Audio, Grok (xAI), built-in Mac voices, or a local Chatterbox server in an agent profile. Paste a cloud key once when needed, pick a voice, and every bot can talk. Give a bot its own voice and a channel stops sounding like one person.
+
+For Grok, save your xAI API key in **Settings → Connections**, then choose **Grok (xAI)** and a voice under the bot’s **Voice & alerts**. It reuses that host-side key and returns MP3 audio for spoken replies and calls. Language is detected automatically from the reply text; quality varies outside xAI’s [officially supported languages](https://docs.x.ai/developers/model-capabilities/audio/text-to-speech). This adds speech synthesis to the existing call flow; microphone transcription remains unchanged.
+
+**Also in the box:** streaming replies with tool-run activity chips · dictation from the composer mic (on-device Apple speech recognition on macOS, Fish Audio speech-to-text on Windows and Linux, in the desktop app) · SupaMaus cursor mascots with role-aware expressions · screenshots of the bot's work folded into the transcript.
+
+## Powered By
+
+[](https://github.com/milind-soni/OpenMausBot#powered-by)
+[![Image 20: Claude](https://camo.githubusercontent.com/b7a593d582b363a7bd1994e551f2b9bab1c12439e88323a5cac9d1f2e3f9b97b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f436c617564652d6439373735373f6c6f676f3d636c61756465266c6f676f436f6c6f723d7768697465)](https://camo.githubusercontent.com/b7a593d582b363a7bd1994e551f2b9bab1c12439e88323a5cac9d1f2e3f9b97b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f436c617564652d6439373735373f6c6f676f3d636c61756465266c6f676f436f6c6f723d7768697465)[![Image 21: Codex](https://camo.githubusercontent.com/02de625c1cfc1860fa0e884f8050e0911588e8d44e990cbb0d28a725b8320a75/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f436f6465782d303030303030)](https://camo.githubusercontent.com/02de625c1cfc1860fa0e884f8050e0911588e8d44e990cbb0d28a725b8320a75/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f436f6465782d303030303030)[![Image 22: Grok](https://camo.githubusercontent.com/1e9a391baeedcd12d19e689575932deb00871c5d8c293392f9aa20e8c62d85ef/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f47726f6b253230434c492d3030303030303f6c6f676f3d78266c6f676f436f6c6f723d7768697465)](https://camo.githubusercontent.com/1e9a391baeedcd12d19e689575932deb00871c5d8c293392f9aa20e8c62d85ef/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f47726f6b253230434c492d3030303030303f6c6f676f3d78266c6f676f436f6c6f723d7768697465)[![Image 23: Electron](https://camo.githubusercontent.com/10b5df1c8e24979a022bba1fd6ace8ca27a7c47958fc11b45856e50f3081a73e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f456c656374726f6e2d3242324533413f6c6f676f3d656c656374726f6e266c6f676f436f6c6f723d394645414639)](https://camo.githubusercontent.com/10b5df1c8e24979a022bba1fd6ace8ca27a7c47958fc11b45856e50f3081a73e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f456c656374726f6e2d3242324533413f6c6f676f3d656c656374726f6e266c6f676f436f6c6f723d394645414639)[![Image 24: React](https://camo.githubusercontent.com/965d1d21cb9b2d557c47dd9c30eb66afeab2346a231ad3e45500f649dc32eff2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3230323332413f6c6f676f3d7265616374266c6f676f436f6c6f723d363144414642)](https://camo.githubusercontent.com/965d1d21cb9b2d557c47dd9c30eb66afeab2346a231ad3e45500f649dc32eff2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3230323332413f6c6f676f3d7265616374266c6f676f436f6c6f723d363144414642)[![Image 25: Vite](https://camo.githubusercontent.com/4202ce31af4a7c544d8fcf0c320e4f20d7fab5dbd6c456ed869b305b2f25939f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f566974652d3634364346463f6c6f676f3d76697465266c6f676f436f6c6f723d7768697465)](https://camo.githubusercontent.com/4202ce31af4a7c544d8fcf0c320e4f20d7fab5dbd6c456ed869b305b2f25939f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f566974652d3634364346463f6c6f676f3d76697465266c6f676f436f6c6f723d7768697465)[![Image 26: Tailwind CSS](https://camo.githubusercontent.com/e41a956d2388835bbf33d89271052868456ef4d5b4b113bb17045d7385a3fc46/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5461696c77696e642532304353532d3046313732413f6c6f676f3d7461696c77696e64637373266c6f676f436f6c6f723d333842444638)](https://camo.githubusercontent.com/e41a956d2388835bbf33d89271052868456ef4d5b4b113bb17045d7385a3fc46/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5461696c77696e642532304353532d3046313732413f6c6f676f3d7461696c77696e64637373266c6f676f436f6c6f723d333842444638)[![Image 27: Composio](https://camo.githubusercontent.com/f2f3ce3cc76cf7d3358cad25734fba7869bc735e7c7f298b1121808d1cf9c847/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f436f6d706f73696f2d653634393361)](https://camo.githubusercontent.com/f2f3ce3cc76cf7d3358cad25734fba7869bc735e7c7f298b1121808d1cf9c847/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f436f6d706f73696f2d653634393361)[![Image 28: Boat](https://camo.githubusercontent.com/a3e6c6465d9b254c69b9bf9ad2ed3f3c75dbbe46f869a3da9994866c13933a2b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f426f61742d73706f6e736f722d313131313131)](https://camo.githubusercontent.com/a3e6c6465d9b254c69b9bf9ad2ed3f3c75dbbe46f869a3da9994866c13933a2b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f426f61742d73706f6e736f722d313131313131)[![Image 29: Cua](https://camo.githubusercontent.com/5f63954b2243100de9ae8ae0734b9deb9861dafa3ba2227ea9316409dbd9c651/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4375612532304472697665722d316632393337)](https://camo.githubusercontent.com/5f63954b2243100de9ae8ae0734b9deb9861dafa3ba2227ea9316409dbd9c651/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4375612532304472697665722d316632393337)[![Image 30: ElevenLabs](https://camo.githubusercontent.com/96585600e6a5e164e8e33d89feec836e68dc8803fc77ecb636e66fe72d7fd3ea/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f456c6576656e4c6162732d3030303030303f6c6f676f3d656c6576656e6c616273266c6f676f436f6c6f723d7768697465)](https://camo.githubusercontent.com/96585600e6a5e164e8e33d89feec836e68dc8803fc77ecb636e66fe72d7fd3ea/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f456c6576656e4c6162732d3030303030303f6c6f676f3d656c6576656e6c616273266c6f676f436f6c6f723d7768697465)[![Image 31: Fish Audio](https://camo.githubusercontent.com/703b5202010d45ae8bf9ad0bf3f59cf202a7c093ccc8cfc68e42245d642c8a35/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f46697368253230417564696f2d323536336562)](https://camo.githubusercontent.com/703b5202010d45ae8bf9ad0bf3f59cf202a7c093ccc8cfc68e42245d642c8a35/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f46697368253230417564696f2d323536336562)[![Image 32: GitHub Sponsors](https://camo.githubusercontent.com/5293e46907b8faffa8027d33f1bd488c4b4dffea6127e3eef8a8cd229ac6bc0c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f47697448756225323053706f6e736f72732d656134616161)](https://camo.githubusercontent.com/5293e46907b8faffa8027d33f1bd488c4b4dffea6127e3eef8a8cd229ac6bc0c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f47697448756225323053706f6e736f72732d656134616161)
+
+| Service | Purpose |
+| --- | --- |
+| **Claude · Codex · Grok** | The agents behind every bot, run through their local CLIs |
+| **Electron** | Desktop shells for macOS, Windows, and Ubuntu |
+| **React + Vite + Tailwind CSS** | The chat app UI and its build |
+| **Boat** ([boat.dev](https://boat.dev/)) | Each bot's cloud computer · our sponsor |
+| **Composio** | Connected apps — Gmail, Slack, GitHub, and more |
+| **Cua Driver** | Native computer use on your own machine |
+| **ElevenLabs · Fish Audio** | Hosted voices for bots that talk back |
+| **GitHub Sponsors** | One-time and monthly project support |
+
+## How it works
+
+[](https://github.com/milind-soni/OpenMausBot#how-it-works)
+Two processes. The app holds no transports of its own — it sends typed commands over HTTP and folds one SSE event stream into state. The harness server owns every agent process and normalizes each provider's native protocol into one canonical runtime event stream (logged per-thread as NDJSON).
+
+flowchart LR
+    subgraph app ["App — React + Tailwind (5199)"]
+        UI[Chat UI · model picker · computer panel]
+    end
+    subgraph server ["Harness server (127.0.0.1:8799)"]
+        REG[Driver registry] --> BUS[Event bus → SSE]
+        BROKER[Permission broker]
+    end
+    subgraph agents ["Agents on your computer"]
+        CL[claude CLI]
+        CX[codex CLI]
+        GR[grok CLI]
+    end
+    UI -- "HTTP commands" --> server
+    BUS -- "one SSE stream" --> UI
+    REG --> CL & CX & GR
+    CL & CX & GR -- "permission requests" --> BROKER
+    server -- "Boat API" --> BOAT[("Cloud computer<br/>boat.dev")]
+    server -- "Composio Session" --> APPS[("Gmail · Slack · GitHub · …")]
+
+| Layer | Where | What it does |
+| --- | --- | --- |
+| Drivers | `server/drivers/` | One per provider: Claude, Codex, and Grok Build over their local CLIs (stream-JSON / JSON-RPC / ACP), plus a cloud-computer agent. Unknown drivers degrade to "unavailable", never crash the fleet. |
+| Harness | `server/harness/` | Registry (configs → live instances) and the fan-in event bus every client folds. |
+| API | `server/index.ts` | Bots, turns, approvals, model catalog, computer lifecycle, connectors, config — HTTP + SSE. |
+| Voice | `server/tts/` | ElevenLabs, Fish Audio, Grok (xAI), built-in Mac voices, or local Chatterbox. Cloud keys stay on the harness; markdown is rewritten into something worth hearing before it is spoken. |
+| App | `src/` | The chat shell. Server-backed store, one reducer, zero client-side transports. |
+| Desktop | `electron/` | macOS, Windows, and Ubuntu shells with an embedded harness and platform capabilities; Apple speech stays macOS-only, Ubuntu Xorg has opt-in local control, and Wayland remains fail-closed. |
+
+### Orchestrate OpenMausBot over MCP
+
+[](https://github.com/milind-soni/OpenMausBot#orchestrate-openmausbot-over-mcp)
+OpenMausBot ships a stdio MCP server for external clients such as Claude Desktop and Cursor. It exposes a deliberately bounded team control plane: inspect bots and channels, read/search compact transcript pages, create and configure bots/channels/tasks, send work, wait for completion, switch models, and interrupt turns. It does **not** expose approval grants, deletion, arbitrary settings, credentials, or computer lifecycle.
+
+See [MCP server setup and tool reference](https://github.com/milind-soni/OpenMausBot/blob/main/docs/mcp-server.md).
+
+### Run it from scripts and CI
+
+[](https://github.com/milind-soni/OpenMausBot#run-it-from-scripts-and-ci)
+The `openmausbot` command drives a running workspace without a screen: set a team up from a file, give a bot one job, wait until it and every teammate it asked are done, and export what they made. One JSON document with `--json`, and exit codes a script can branch on.
+
+openmausbot team apply team.yaml
+openmausbot run "Room Lead" "Rehearse the launch of https://example.com" --export ./out
+
+See [Run OpenMausBot from scripts and CI](https://github.com/milind-soni/OpenMausBot/blob/main/docs/headless-cli.md).
+
+## Quick start
+
+[](https://github.com/milind-soni/OpenMausBot#quick-start)
+**Released builds ([latest release](https://github.com/milind-soni/OpenMausBot/releases/latest)):** the harness server is embedded, so no separate server setup is required.
+
+|  | Download | Install |
+| --- | --- | --- |
+| **macOS** (Apple silicon) | [OpenMausBot.dmg](https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot.dmg) | Drag it to Applications, open it. Signed & notarized. |
+| **macOS** (Intel) | [OpenMausBot-intel.dmg](https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot-intel.dmg) | Same app, built for Intel Macs. Signed & notarized. |
+| **Windows** (x64) | [OpenMausBot-setup.exe](https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot-setup.exe) | Run it — one-click, per-user, no admin rights. The installer isn't code-signed yet, so SmartScreen shows "unknown publisher": **More info → Run anyway**. |
+| **Ubuntu 24.04** (x64) | [OpenMausBot-amd64.deb](https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot-amd64.deb) · [OpenMausBot.AppImage](https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot.AppImage) | Install the `.deb` with APT (recommended), or make the AppImage executable and run it. Beta; GNOME is the supported desktop. |
+
+See the [Ubuntu Desktop guide](https://github.com/milind-soni/OpenMausBot/blob/main/docs/linux-desktop.md) for installation, capabilities, and troubleshooting. Any desktop build can also pair as a client to another Windows, macOS, or Ubuntu host over Tailscale; see [desktop-to-desktop companion mode](https://github.com/milind-soni/OpenMausBot/blob/main/docs/desktop-companion.md).
+
+**From source:**
+
+git clone https://github.com/milind-soni/OpenMausBot && cd OpenMausBot
+pnpm install
+
+pnpm dev:server    # harness server → 127.0.0.1:8799
+pnpm dev           # app → http://127.0.0.1:5199
+pnpm dev:desktop   # Electron shell; keep the two commands above running
+
+Requirements: **macOS, Windows, or Ubuntu 24.04 x64**, **Node 24+**, **pnpm**, and at least one agent CLI — [`claude`](https://claude.com/claude-code), [`codex`](https://github.com/openai/codex), or [`grok`](https://x.ai/cli) — installed and logged in. They appear in the model picker automatically.
+
+Package the desktop application:
+
+pnpm package:mac      # macOS: DMG + ZIP; requires Swift/Xcode tools
+pnpm package:win      # Windows: installer + ZIP
+pnpm package:linux    # Ubuntu x64: .deb + AppImage + verified CUA runtime
+
+### Desktop capability status
+
+[](https://github.com/milind-soni/OpenMausBot#desktop-capability-status)
+| Capability | macOS | Ubuntu 24.04 Xorg | Ubuntu 24.04 Wayland |
+| --- | --- | --- | --- |
+| Packaged app, embedded harness, local agent CLIs | Supported | Beta | Beta |
+| Composio and Boat/cloud computers | Supported | Beta | Beta |
+| Explicit preview-only local screen capture | Supported | Beta | Beta |
+| Bot control of this computer | Supported | Beta, explicit opt-in | Disabled: Wayland safety gate |
+| Native on-device dictation | Supported | Planned | Planned |
+| Dictation and Take turns calls through Fish Audio (needs a Fish Audio key) | Not used, on-device instead | Supported | Supported |
+
+The Linux preview is user-initiated and never enables local bot control or Auto routing. On Xorg, the reviewed Cua Driver 0.19.3 runtime starts only after explicit opt-in and without its full-screen cursor overlay. On Wayland the app never starts it and clears legacy opt-ins while that real-seat safety gate remains unresolved. Chat, preview, Cloud, and Local VM remain available on both sessions. See the [Ubuntu Desktop guide](https://github.com/milind-soni/OpenMausBot/blob/main/docs/linux-desktop.md) and tracking issues [#29](https://github.com/milind-soni/OpenMausBot/issues/29), [#345](https://github.com/milind-soni/OpenMausBot/issues/345), and [#113](https://github.com/milind-soni/OpenMausBot/issues/113).
+
+The Linux packager downloads only the tag-pinned upstream archive during the build, verifies its size, SHA-256, complete member allowlist, and inner executable hashes, then packages only the CLI and cursor-theme sidecar. The installed app never downloads or self-updates native automation code. Cua's MIT notice, Inter's SIL OFL, a generated third-party license report, and a CycloneDX inventory ship with the runtime. See [`third_party/cua-driver/`](https://github.com/milind-soni/OpenMausBot/blob/main/third_party/cua-driver) for the reviewed provenance record.
+
+These credentials are optional — local chat works without them. Paste a key once in **App Settings** (gear in the sidebar footer) when you want to enable its integration:
+
+| Credential | What it enables | Where to get it |
+| --- | --- | --- |
+| Composio project key (`ak_…`) | Connect Gmail, GitHub, Slack, Notion, and other apps to your bots | [OpenMausBot Composio setup](https://github.com/milind-soni/OpenMausBot/blob/main/docs/composio.md) |
+| Boat API key | Give bots an isolated remote Linux computer with a desktop and terminal | [Boat API key guide](https://docs.boat.dev/api-keys) |
+| ElevenLabs key | Read replies aloud, and call your bots | [ElevenLabs API keys](https://elevenlabs.io/app/settings/api-keys) |
+| Fish Audio key | Read replies aloud with Fish Audio voices, and call your bots | [Fish Audio API keys](https://fish.audio/app/api-keys/) |
+
+Composio and Boat are third-party services with their own accounts and terms. Boat is a paid service after its trial, and using a cloud computer may incur charges.
+
+pnpm typecheck     # app + server
+pnpm test          # unit, driver, API, and desktop capability tests
+pnpm build         # typecheck + production build
+pnpm check:electron # syntax-check Electron main/preload files
+pnpm package:win   # Windows installer + zip → release/
+pnpm package:linux # Ubuntu x64 .deb + AppImage → release/
+
+### Triggers: schedules and webhooks
+
+[](https://github.com/milind-soni/OpenMausBot#triggers-schedules-and-webhooks)
+A trigger is "when something happens, a bot does something". Tell a bot "every weekday at 9, send me a summary of my inbox" or "whenever our form calls, draft a reply" and it sets the trigger up in that turn with its `trigger` tool (no confirmation; the chat shows a live card with Edit, Pause and Undo). **Triggers**, first in the sidebar, lists every schedule and webhook, with a calendar and the run history. Bots manage them with `trigger_info` (list, app events), `trigger` (create, update, pause, resume, run now) and `delete_trigger`; a webhook a bot makes never shows the bot its secret: the person copies the link from the card or the Triggers page.
+
+Schedules (routines) can run once, on selected weekdays, or every 5–1,440 minutes, using either a bot's configured model/computer or the Cloud VM runner. Interval schedules stay aligned to their chosen start time and skip an occurrence when the previous run is still active, so slow work cannot build an unbounded queue. A separate optional Advanced run limit can safely stop stuck work; no timeout is imposed unless one is chosen. The existing duration field remains calendar/display metadata. Webhook triggers are independent from schedules but reuse the same queued task executor and calendar receipts.
+
+**App events** start a bot when something happens in a connected app ("whenever I get an email from Acme, draft a reply"). The bot finds the app's events with `trigger_info` (`action: "events"`) and calls `trigger` with `action: "create"` and `when: "app_event"`; the person can also choose **New → Set it up yourself → When something happens in an app**. Composio sends each event to OpenMausBot's connected-apps service, which queues it; the app collects the queue with a long poll, so a desktop needs no public address and events wait while it is closed. Gmail is checked every 15 minutes; Slack, GitHub and other push apps arrive at once. A desktop keeps up to 500 events a day and a paid Cloud 2,000; what is skipped shows on the automation. App events need the included connected apps: a server using its own Composio key cannot watch apps yet. Details: [docs/composio.md](https://github.com/milind-soni/OpenMausBot/blob/main/docs/composio.md#app-events).
+
+OpenMausBot starts a webhook-only receiver on `127.0.0.1:8800` by default (or one port above `OMB_PORT`). Set `OMB_WEBHOOK_PORT` to choose another port. A webhook secret is shown once when the trigger is created or rotated. Bearer authentication is recommended so the secret stays out of request URLs and most access logs; a single capability URL remains available for senders that cannot configure headers. The receiver exposes only `/health` and secret `/hooks/...` endpoints; it never exposes the app's broader API. OpenMausBot must remain running to accept a delivery. For public internet delivery, proxy only this dedicated receiver through a hosted relay or a tool such as Tailscale Funnel.
+
+## Status
+
+[](https://github.com/milind-soni/OpenMausBot#status)
+Early but real — the loop works end to end: message → agent → streamed reply → tools → approvals → computer use. macOS, Windows, and Ubuntu 24.04 x64 have released builds; Ubuntu remains a beta with the capability limits above. Rough edges to expect: hosted/mobile connectivity is still being built, and webhook triggers currently use the local receiver rather than an always-on hosted relay. Hosted voice needs an ElevenLabs, Fish Audio, or xAI key; built-in Mac and local Chatterbox voices need no cloud key. Take-turns calls and the composer mic listen on-device on macOS and through Fish Audio speech-to-text on Windows and Linux (the same Fish Audio key as voices). See [`docs/voice-mode.md`](https://github.com/milind-soni/OpenMausBot/blob/main/docs/voice-mode.md) for the design and the known gaps.
+
+Contributions welcome — the driver SPI in [`server/contracts.ts`](https://github.com/milind-soni/OpenMausBot/blob/main/server/contracts.ts) is deliberately small; adding a provider is one file in [`server/drivers/`](https://github.com/milind-soni/OpenMausBot/blob/main/server/drivers) plus a one-line registration. No code needed at all for your own engines: any ACP-speaking CLI or OpenAI-compatible endpoint plugs in through config — see [`docs/custom-engines.md`](https://github.com/milind-soni/OpenMausBot/blob/main/docs/custom-engines.md). Users can add their own MCP tool servers with zero code via [`docs/custom-mcp-servers.md`](https://github.com/milind-soni/OpenMausBot/blob/main/docs/custom-mcp-servers.md). To run bots on OpenRouter, Fireworks AI, DeepSeek, Cline or your own OpenAI- or Anthropic-compatible provider, see [Other model providers](https://github.com/milind-soni/OpenMausBot/blob/main/apps/docs/content/docs/providers/model-providers.mdx).
+
+## Privacy
+
+[](https://github.com/milind-soni/OpenMausBot#privacy)
+Usage analytics are optional and anonymous: product events and a once-a-day count of what is set up, never keys, names, addresses or conversations. Turn them off in Settings → General → Usage analytics; [`docs/analytics.md`](https://github.com/milind-soni/OpenMausBot/blob/main/docs/analytics.md) lists every event and property.
+
+## Support the project
+
+[](https://github.com/milind-soni/OpenMausBot#support-the-project)
+OpenMausBot is free and open source. If it does real work for you, you can [support its development through GitHub Sponsors](https://github.com/sponsors/milind-soni) with a one-time contribution or a monthly sponsorship. Your support helps fund ongoing development and maintenance; OpenMausBot remains free and open source.
+
+## Run from a terminal or on a server
+
+[](https://github.com/milind-soni/OpenMausBot#run-from-a-terminal-or-on-a-server)
+With Node 24 or newer, install once and run:
+
+npm install -g openmausbot
+openmausbot
+
+Or use `npx openmausbot` without a global install. First launch guides you with arrow-key choices: choose AI access, sign in or paste a hidden API key, choose a model, and optionally connect a phone. Next time, the same command reuses your saved setup and opens OpenMausBot on this computer. Keep the terminal open; Ctrl-C stops the server, not your saved work. Use `--no-open` to skip opening the browser.
+
+Phone access is optional and defaults to skipping. Choose an explicitly approved managed public HTTPS endpoint protected by pairing, an existing Tailscale connection, or your own HTTPS reverse proxy. Both native apps pair from this flow: the QR is an app link when you are connecting an Android phone, and the iOS app takes either that or the web link. A browser works on either phone. A phone cannot use a localhost link. `--local` ignores saved remote access for one launch; `--no-pair` suppresses phone prompts and invitations but does not disable a saved remote connection.
+
+The web UI can also be installed from Safari or Chrome as a standalone phone app. See [Install the phone web app](https://github.com/milind-soni/OpenMausBot/blob/main/docs/phone-web-app.md) for Home Screen installation and pairing.
+
+Run `openmausbot setup` to reconfigure without resetting bots or conversations; the saved model default applies only to new bots. Native setup confirms provider sign-in; API setup asks before a potentially billable test message. API keys are saved as plaintext, not encrypted, in private `config.json` (`0600` on Unix). See the [short setup guide](https://github.com/milind-soni/OpenMausBot/blob/main/docs/cli-onboarding.md) for account differences, phone choices, credential storage, and cancellation.
+
+For a background service on a VPS or an always-on computer, use `npx openmausbot serve` with explicit remote options: `--tunnel` after `npx openmausbot login` for a managed public address, `--tailscale` for your tailnet, or the Docker stack for your own domain. These are separate from AI-provider sign-in. Devices pair once with a short code. The deployment guide is [docs/deploy-vps.md](https://github.com/milind-soni/OpenMausBot/blob/main/docs/deploy-vps.md); the reference is [docs/self-hosting.md](https://github.com/milind-soni/OpenMausBot/blob/main/docs/self-hosting.md).
+
+## License
+
+[](https://github.com/milind-soni/OpenMausBot#license)
+[Apache License 2.0](https://github.com/milind-soni/OpenMausBot/blob/main/LICENSE) © 2026 Milind Soni and OpenMausBot contributors, except `enterprise/`, which is source-available under its [own license](https://github.com/milind-soni/OpenMausBot/blob/main/enterprise/LICENSE); delete that folder and what remains is the open-source edition. Details, including how contributions are signed off, are in [LICENSING.md](https://github.com/milind-soni/OpenMausBot/blob/main/LICENSING.md).
+
+Packaged Cua Driver components retain their upstream MIT, SIL OFL 1.1, MPL-2.0, and other dependency terms; the corresponding notices, license texts, source locations, and SBOM are in [`third_party/cua-driver/`](https://github.com/milind-soni/OpenMausBot/blob/main/third_party/cua-driver) and ship beside the native runtime.
+
+OpenMausBot is an independent, open-source project inspired by Grok Bot. It is not affiliated with, endorsed by, or associated with xAI; "Grok" is a trademark of its respective owner.
