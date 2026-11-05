@@ -1,0 +1,37 @@
+❌ Failed to get access token: Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aebdd22-0fd1922d-439b0702"}
+⚠️  公众号账本没查成（Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aebdd22-0fd1922d-439b0702"}）
+   本次结果不完整，别当成完整查重。
+账本：blog 956 篇 + 公众号草稿箱 0 条 + 本地发布记录 933 条 + MemPalace 3817 抽屉
+
+── 查：https://github.com/JuneYaooo/rea-video
+   ❌ [知识库] # https://github.com/JuneYaooo/r  **Summary**: https://githu
+      一手源相同: juneyaooo/rea-video
+
+── 查：https://github.com/EverMind-AI/raven
+   ❌ [BLOG  ] Raven 论文解读：让多个 Agent 协作，也让工作流程接受检验
+      一手源相同: evermind-ai/raven
+   ❌ [发过 2026-10-15] Raven：多Agent协作与自我改进的边界
+      一手源相同: evermind-ai/raven
+   ⚠️  [知识库] # Raven：多智能体编排与流程自我改进  **Summary**: Raven 是 EverMind 开源的多智能体
+      标题相似度 33%
+   ❌ [知识库] --- name: Raven multi-agent harness description: EverMind Ra
+      一手源相同: evermind-ai/raven
+   ⚠️  [知识库] # 项目GitHub地址：EverMind-AI/Raven  **Summary**: 项目GitHub地址：Ever
+      标题相似度 50%
+   ⚠️  [知识库] # Raven：多智能体编排与流程自我改进  **Summary**: Raven 是 EverMind 开源的多智能体
+      标题相似度 33%
+
+── 查：https://github.com/nuphos/nuphos
+   已读取的本地账本未命中；公众号远程账本不可用
+
+── 查：rea-video
+   ❌ [知识库] # https://github.com/JuneYaooo/r  **Summary**: https://githu
+      正文出现实体名「rea-video」
+
+── 查：nuphos
+   ❌ [知识库] # https://github.com/JuneYaooo/r  **Summary**: https://githu
+      正文出现实体名「nuphos」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":"Token error: {\"errcode\":40164,\"errmsg\":\"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aebdd22-0fd1922d-439b0702\"}"}
+```

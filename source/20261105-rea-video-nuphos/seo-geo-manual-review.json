@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-05",
+  "newTopicScope": "rea-video and Nuphos comparison; Raven existing article linked, not recreated",
+  "opening": "Defines distinct roles without claiming integration",
+  "sources": "Two pinned official repos plus compose/evaluation docs and verified Raven URL",
+  "independentEvidence": "24 synthetic-media/fake-VLM tests and17 independent local-config tests",
+  "boundaries": "No real accuracy benchmark, paid video generation, Docker/desktop/mobile/team migration or cross-project test",
+  "FAQ": "Three independent Q&A pairs in each language",
+  "images": "Matching generated studio banner and3 Little M body illustrations; source downloads retained separately",
+  "licensing": "Apache2 for main repos, media/model/account permissions separate",
+  "publication": "Final slug selected before deploy; external URLs plain for WeChat"
+}
