@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "e2538b4099fbe3e042c5e60a23c6ee3ccfc3b34950dd973f",
+    "metadata": {
+      "article_id": "lingbot-open-model-family-repositories-ecosystem-review",
+      "content_hash": "c168c05213365f26",
+      "excerpt": "LingBot开源模型地图：9个仓库、海外复用与上手路线 LingBot是灵波科技覆盖视觉、深度、三维重建、VLA、视频动作与世界生成的模型家族。本文逐一介绍9个仓库，核对斯坦福OpenWAM、FastOPD、LeRobot和timm的复用证据，澄清35.3%到51.2%的评测含义与World2.0非商业许可，并报告本机CPU加载VisionSmall权重的结果和部署边界。 LingBot 具身智能 机器人 世界模型 开源模型 先看完整地图：七类能力，九个仓库 视觉、深度与地图：先解决“看到了什么” VLA 与 VA：动作策略和未来预测有什么区别？ Wo",
+      "language": "zh",
+      "tags": [
+        "LingBot",
+        "具身智能",
+        "机器人",
+        "世界模型",
+        "开源模型"
+      ],
+      "title": "LingBot开源模型地图：9个仓库、海外复用与上手路线",
+      "url": "/blog/lingbot-open-model-family-repositories-ecosystem-review/"
+    }
+  },
+  {
+    "id": "a1c42d4cd9bf195028e92e2401994c561108e0500abcefcc",
+    "metadata": {
+      "article_id": "lingbot-open-model-family-repositories-ecosystem-review",
+      "content_hash": "ce8d27885b4d912c",
+      "excerpt": "LingBot Open Models: Repositories, Reuse and a CPU Check Explore nine LingBot repositories, Stanford reuse, FastOPD results, LeRobot and timm integration, World 2.0 licensing, and real CPU visual-backbone smoke test. LingBot 具身智能 机器人 世界模型 开源模型 A map of the repositories Perception",
+      "language": "en",
+      "tags": [
+        "LingBot",
+        "具身智能",
+        "机器人",
+        "世界模型",
+        "开源模型"
+      ],
+      "title": "LingBot Open Models: Repositories, Reuse and a CPU Check",
+      "url": "/blog/lingbot-open-model-family-repositories-ecosystem-review/"
+    }
+  }
+]
