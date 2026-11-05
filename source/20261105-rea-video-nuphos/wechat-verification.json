@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-05T03:51:08.185Z",
+  "drafts": [
+    {
+      "slug": "rea-video-nuphos-agent-workflow-review",
+      "mediaId": "prCUE631thH1cmNLi42prP_R4qBWni-ALWb7JNUK_iS7M6xyG19sZaw-m221LHLI",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "b85b2badff45559642aee8d8af2784129d89681ef5ef1327f9c9a5c0b5a29207",
+      "remoteTextHash": "b85b2badff45559642aee8d8af2784129d89681ef5ef1327f9c9a5c0b5a29207",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/rea-video-nuphos-agent-workflow-review/",
+      "localContentHash": "0519b21bceb782aab3971dce73880e187bd9bfc7329967f3ed97792bba5389c6",
+      "remoteContentHash": "4dd99084fcc83bf71ed8f7009e5ce821896e06d85d0871849d3606c86c3d3668"
+    }
+  ]
+}
