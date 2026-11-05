@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "orca-ade-parallel-ai-agent-orchestration",
+      "title": "Orca：67K stars 的并行 Agent 编排台，把 40+ CLI Agent 变成一支舰队",
+      "url": "/blog/orca-ade-parallel-ai-agent-orchestration/",
+      "language": "zh",
+      "excerpt": "Orca：67K stars 的并行 Agent 编排台，把 40+ CLI Agent 变成一支舰队 Stably AI(YC W22) 出品的开源 ADE，MIT 协议。一个 prompt 扇出给多个 Agent，各跑独立 worktree，Design Mode 点 UI 元素直喂 Agent，SSH 远端机器、手机 App 随时调度——这是目前把「Agent 当舰队管」想得最透的工具。 AI-agent open-source developer-tools Claude-Code parallel-agents Orca 问题是什么 核心设计：",
+      "score": 0.4979834
+    },
+    {
+      "article_id": "orion-core-rust-agent-harness-local-llm-teardown",
+      "title": "orion-core Tested: A 3-Star Rust Agent Harness for Local LLMs, Text-Based Tool Calls, and a Chinese Token Undercount",
+      "url": "/blog/orion-core-rust-agent-harness-local-llm-teardown/",
+      "language": "en",
+      "excerpt": "orion-core Tested: A 3-Star Rust Agent Harness for Local LLMs, Text-Based Tool Calls, and a Chinese Token Undercount orion-core is a Rust agent harness extracted from the OrionPod desktop app (MIT, 3 stars, 74 crates.io downloads). It provides a tool-call loop, whole-turn context",
+      "score": 0.440949
+    },
+    {
+      "article_id": "cindy-local-first-ai-agent-cross-harness-memory-electron-react-native",
+      "title": "Cindy: A Local-First Open-Source AI Agent with Cross-Harness Memory — Correct It Once, It Sticks Everywhere",
+      "url": "/blog/cindy-local-first-ai-agent-cross-harness-memory-electron-react-native/",
+      "language": "en",
+      "excerpt": "Cindy: A Local-First Open-Source AI Agent with Cross-Harness Memory — Correct It Once, It Sticks Everywhere Cindy: Local-First Open-Source AI Agent with Cross-Harness Persistent Memory What It Is Cross-Harness Persistent Memory Orca Multi-Agent Orchestration Technical Architectur",
+      "score": 0.43688035
+    },
+    {
+      "article_id": "omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch",
+      "title": "omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch",
+      "url": "/blog/omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch/",
+      "language": "en",
+      "excerpt": "omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch basecamp/omarchy is an AI-native Linux distribution by DHH (Rails author), built on Arch + Hyprland + Quickshell, 28,045 stars, MIT. Core positioning: beautiful, modern, opinionated — ships with 9 AI coding agent lazy",
+      "score": 0.43386802
+    },
+    {
+      "article_id": "osaurus-native-macos-ai-harness-swift-cryptographic-identity",
+      "title": "Osaurus：在你的 Mac 上拥有 AI——密码学身份、沙盒 VM、隐私过滤，纯 Swift 原生",
+      "url": "/blog/osaurus-native-macos-ai-harness-swift-cryptographic-identity/",
+      "language": "zh",
+      "excerpt": "Osaurus：在你的 Mac 上拥有 AI——密码学身份、沙盒 VM、隐私过滤，纯 Swift 原生 osaurus-ai/osaurus，7295 stars，MIT，纯 Swift 打造的 macOS 原生 AI 哈尼斯。secp256k1 密码学身份、Alpine Linux 沙盒 VM、三层记忆、发送云端前 PII 隐私过滤、Agent 间 E2E 加密通道。模型可换，哈尼斯是复利资产。 AI Agent 开源 macOS Swift 本地优先 隐私 密码学 MCP 一、核心命题 二、架构：六层哈尼斯 三、密码学身份：每个参与者都是密码学原语 ",
+      "score": 0.42509127
+    },
+    {
+      "article_id": "kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora",
+      "title": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题",
+      "url": "/blog/kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora/",
+      "language": "zh",
+      "excerpt": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题 Apache-2.0，LoRA + 块因果掩码，文档编码一次、多个问题并发出概率分布，不生成文字。4B 版 OOD 准确率 0.790，比 Jev 低 6~7 个点，上限 8192 token，本地 Mac 可跑。 decision-model local-ai qwen lora classification open-source 核心设计：一次编码，多路分支 三种问题类型 四个模型变体 训练细节 不足之处（文档已明写，不是挖出来的） 本地运行 横向对比 怎么看这件事",
+      "score": 0.41768938
+    },
+    {
+      "article_id": "ondine-rust-mermaid-compiler",
+      "title": "Ondine：Rust 重写 Mermaid，速度之外先看布局与体积口径",
+      "url": "/blog/ondine-rust-mermaid-compiler/",
+      "language": "zh",
+      "excerpt": "Ondine：Rust 重写 Mermaid，速度之外先看布局与体积口径 Ondine 用 Rust 把 Mermaid 文本编译为 SVG，可在构建时替文档网站完成解析与布局。本文定位仓库，拆解极小挂载代码与 WASM 编译器的区别，核对 33 类图、612 个向量的官方性能报告，解释热调用、冷启动和布局质量的不同问题，并给出 Markdown、Vite 与 Node 接入及迁移验收方法。 Ondine Mermaid Rust SVG Developer Tools Rust 重写，究竟换掉哪一段？ 210 字节，为什么不是完整 Mermaid 的替",
+      "score": 0.41636935
+    },
+    {
+      "article_id": "oh-my-mermaid-codebase-architecture-docs-ai",
+      "title": "oh-my-mermaid：让 AI 把你的代码库画成可导航的架构图",
+      "url": "/blog/oh-my-mermaid-codebase-architecture-docs-ai/",
+      "language": "zh",
+      "excerpt": "oh-my-mermaid：让 AI 把你的代码库画成可导航的架构图 oh-my-mermaid 是一个 Claude Code skill，一条命令让 AI 递归扫描代码库、生成多视角 Mermaid 架构图，文件系统本身就是架构树。1817 Star，MIT，支持 Claude/Codex/Cursor。 Claude Code Mermaid 架构图 代码可视化 Skill 文档工具 AI工具 TypeScript 开发者工具 一、问题 二、工作原理 三、快速上手 四、每个元素的 7 个字段 五、云端存储与共享 六、CLI 完整命令 七、Roadm",
+      "score": 0.41584277
+    },
+    {
+      "article_id": "microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact",
+      "title": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率",
+      "url": "/blog/microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact/",
+      "language": "zh",
+      "excerpt": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率 microsoft/TRELLIS.2 是 TRELLIS（CVPR'25 Spotlight）的续作，10745 stars，MIT，Python。核心创新：O-Voxel「无场」稀疏体素结构取代等值面场，天然支持开放表面（衣物/叶片）、非流形几何、内部封闭结构；4B 参数模型 512³ 分辨率 H100 上约 3 秒，1024³ 约 17 秒；完整 PBR 材质（Base Color/Roughness/Metallic/Opacity）；网",
+      "score": 0.41539055
+    },
+    {
+      "article_id": "jarvis-py-local-voice-assistant-privacy-teardown",
+      "title": "jarvis-py Teardown: An \"Offline\" Python Voice Assistant That Sends Your Voice to Google Over Plain HTTP When Online",
+      "url": "/blog/jarvis-py-local-voice-assistant-privacy-teardown/",
+      "language": "en",
+      "excerpt": "jarvis-py Teardown: An \"Offline\" Python Voice Assistant That Sends Your Voice to Google Over Plain HTTP When Online Shaan-alpha/jarvis-py is a 6-star, MIT-licensed Python desktop voice assistant: openWakeWord, Ollama phi3, fastembed memory, three-tier routing. We read the code an",
+      "score": 0.41514483
+    }
+  ]
+}

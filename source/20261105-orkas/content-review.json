@@ -1,0 +1,11 @@
+{
+  "sourceVsPackagedSeparated": true,
+  "localStorageVsRemoteInference": true,
+  "delegationSemantics": true,
+  "scopedMemoryVsLibraryVsHistory": true,
+  "automationWakeRequirement": true,
+  "manifestNotFunctionalTests": true,
+  "noGuiOrModelClaims": true,
+  "exactOnlineArticleMatches": 0,
+  "sourceCommit": "c7c0e21fad7ff55f5a72a575b7a464f3cf9bc3a1"
+}

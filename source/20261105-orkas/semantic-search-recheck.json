@@ -1,0 +1,87 @@
+{
+  "query": "Orkas 2026.11.4 Commander 源码版 共享项目 范围记忆",
+  "response": {
+    "results": [
+      {
+        "article_id": "automem-agent-memory-skill-training-framework-guide",
+        "title": "AutoMem：让 Agent 自动学会管理记忆，32B 追平 Claude Opus 4.5",
+        "url": "/blog/automem-agent-memory-skill-training-framework-guide/",
+        "language": "zh",
+        "excerpt": "AutoMem：让 Agent 自动学会管理记忆，32B 追平 Claude Opus 4.5 Stanford 团队（arXiv:2607.01224）提出 AutoMem 框架：把元记忆（metamemory）引入 LLM Agent，用两个循环自动优化记忆能力——外循环用强 LLM 审查轨迹修改 scaffold，内循环把 agent 自己的好记忆决策转成训练信号。只优化记忆不动任务动作，Qwen2.5-32B 在 Crafter/MiniHack/NetHack 上性能提升 2x-4x，追平 Claude Opus 4.5 和 Gemini 3.",
+        "score": 0.5322877
+      },
+      {
+        "article_id": "cindy-local-first-ai-agent-cross-harness-memory-electron-react-native",
+        "title": "Cindy：跨 Harness 持久记忆的本地优先开源 AI Agent，纠正一次、处处生效",
+        "url": "/blog/cindy-local-first-ai-agent-cross-harness-memory-electron-react-native/",
+        "language": "zh",
+        "excerpt": "Cindy：跨 Harness 持久记忆的本地优先开源 AI Agent，纠正一次、处处生效 Cindy 是一个 Electron + React Native 的本地优先 AI Agent，把 Claude Code、Codex 等多个 Harness 统一在一个客户端里，共享跨 Harness 的持久记忆、Skills 和 Orca 多 Agent 编排，Apache-2.0 开源，可用自己的 Claude Code/Codex 订阅直接接入。 一、它是什么 二、跨 Harness 持久记忆 三、Orca 多 Agent 编排 四、技术架构 仓库结构",
+        "score": 0.53138936
+      },
+      {
+        "article_id": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
+        "title": "ai-memory：让 AI 编程助手真正记住「上次做到哪了」，跨工具无缝交接，Rust 实现，Wiki 存 Git",
+        "url": "/blog/ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust/",
+        "language": "zh",
+        "excerpt": "ai-memory：让 AI 编程助手真正记住「上次做到哪了」，跨工具无缝交接，Rust 实现，Wiki 存 Git akitaonrails/ai-memory 是一个 Rust 实现的 AI 编程助手长期记忆方案，3953 stars，MIT 许可证。核心能力：用生命周期 Hook 自动捕获每次 Claude Code/Codex/Cursor 等会话的精华，会话结束时编译为结构化 Wiki 页面存入 Git 仓库（纯 Markdown，可 grep、可 Obsidian 同步）；下次无论用哪个工具打开同一目录，都能收到「上次做到哪里」的交接块。支持",
+        "score": 0.5262168
+      },
+      {
+        "article_id": "memory-harness-local-first-programmable-auditable-long-term-memory",
+        "title": "Memory Harness: Local-First, Programmable & Auditable Long-Term Memory for AI Agents",
+        "url": "/blog/memory-harness-local-first-programmable-auditable-long-term-memory/",
+        "language": "en",
+        "excerpt": "Memory Harness: Local-First, Programmable & Auditable Long-Term Memory for AI Agents luoyif/memory-harness open-sources a six-layer auditable memory workspace (Evidence → Agent Asset), local hybrid RAG, 24 MCP tools, multi-AI collaboration with isolated drafts — all fully local, ",
+        "score": 0.52217114
+      },
+      {
+        "article_id": "tencentdb-agent-memory-team-level-symbolic-layered-memory",
+        "title": "TencentDB Agent Memory: Tencent Cloud's Open-Source Team-Level Agent Memory System",
+        "url": "/blog/tencentdb-agent-memory-team-level-symbolic-layered-memory/",
+        "language": "en",
+        "excerpt": "TencentDB Agent Memory: Tencent Cloud's Open-Source Team-Level Agent Memory System TencentCloud AI Agent team's open-source memory system, 17.9k stars, TypeScript. Core design: symbolic short-term memory (Mermaid state canvas replaces verbose tool logs, −61.38% token usage) + lay",
+        "score": 0.5110205
+      },
+      {
+        "article_id": "lemmalog-datalog-engine-llm-agent-memory",
+        "title": "Lemmalog：把 Agent 记忆做成一个能演绎推理的数据库，而不是「记得更准的向量库」",
+        "url": "/blog/lemmalog-datalog-engine-llm-agent-memory/",
+        "language": "zh",
+        "excerpt": "Lemmalog：把 Agent 记忆做成一个能演绎推理的数据库，而不是「记得更准的向量库」 JordyZomer/lemmalog 开源仅一周：Rust 实现的 Datalog 引擎给 LLM agent 当长期记忆，LLM 只断言事实，闭包/时序/矛盾检测全由规则演绎。LongMemEval、MemEval、LoCoMo 三个标准基准实测，LoCoMo 排 10 个系统第 2，token 省 6-400 倍。MIT，带 Claude Code MCP server。 agent memory Datalog 知识图谱 MCP LLM 开源 Rust ",
+        "score": 0.50997543
+      },
+      {
+        "article_id": "kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora",
+        "title": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题",
+        "url": "/blog/kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora/",
+        "language": "zh",
+        "excerpt": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题 Apache-2.0，LoRA + 块因果掩码，文档编码一次、多个问题并发出概率分布，不生成文字。4B 版 OOD 准确率 0.790，比 Jev 低 6~7 个点，上限 8192 token，本地 Mac 可跑。 decision-model local-ai qwen lora classification open-source 核心设计：一次编码，多路分支 三种问题类型 四个模型变体 训练细节 不足之处（文档已明写，不是挖出来的） 本地运行 横向对比 怎么看这件事",
+        "score": 0.5083092
+      },
+      {
+        "article_id": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+        "title": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工",
+        "url": "/blog/munder-difflin-multi-agent-harness-claude-codex-local-first/",
+        "language": "zh",
+        "excerpt": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工 Munder Difflin（MIT，3888 stars，Electron+React+TypeScript）是一个本地多 Agent Harness 桌面应用，把 Claude Code、OpenAI Codex、xAI Grok、Kimi Code、Qwen、GitHub Copilot CLI 等 12 种 CLI 包成真实 PTY 进程，用像素风 The Office 场景可视化——每个 Agent ",
+        "score": 0.50715935
+      },
+      {
+        "article_id": "infinitediffusion-terrain-generation-guide",
+        "title": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文",
+        "url": "/blog/infinitediffusion-terrain-generation-guide/",
+        "language": "zh",
+        "excerpt": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文 Alexander Goslin 以独立研究者身份，用 RTX 3090 Ti 发表 SIGGRAPH 2026 论文 InfiniteDiffusion，将扩散模型改造为懒惰采样，实现无界、O(1) 随机访问、确定性的无限地形生成。本文整理复现路径与游戏/工程应用方向。 扩散模型 程序化生成 游戏开发 SIGGRAPH 地形生成 AI图形 独立研究 先说这件事本身有多不寻常 论文在解决什么问题？ 原始资源 30 分钟复现路径 Step 0：环境 St",
+        "score": 0.5042787
+      },
+      {
+        "article_id": "tencentdb-agent-memory-llm-wiki-knowledge-update-team-memory-hub",
+        "title": "LLM Wiki 的知识更新问题，Tencent 用 Agent Memory 这样解——TencentDB-Agent-Memory 拆解",
+        "url": "/blog/tencentdb-agent-memory-llm-wiki-knowledge-update-team-memory-hub/",
+        "language": "zh",
+        "excerpt": "LLM Wiki 的知识更新问题，Tencent 用 Agent Memory 这样解——TencentDB-Agent-Memory 拆解 TencentCloud/TencentDB-Agent-Memory，26.9K stars，TypeScript，团队级 Agent 记忆中枢。在 Karpathy LLM Wiki 模式上加了三件事：异步持续摄取解决知识失效、四种记忆资产（Chat Memory/Skill/LLM-Wiki/CodeGraph）解决单一知识库局限、per-agent 绑定+ACL 解决团队共享权限。PersonaMem 留存",
+        "score": 0.5020559
+      }
+    ]
+  }
+}

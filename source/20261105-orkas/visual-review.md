@@ -1,0 +1,2 @@
+Cover manually viewed: central coordination hub connected to task modules, blank paper artifacts and laptop; no people/text; frame filled. Illustrative workflow metaphor. Official interface screenshot is source-supplied example, not local test; not used as cover. Figures pending final review.
+Three final figures manually viewed after compression: labels readable, concepts match, LittleM performs coreactions.1120x630,48colors,66177/76193/63718bytes. Worker20655exit0 before final parent clarification,stamp,freeze,build.
