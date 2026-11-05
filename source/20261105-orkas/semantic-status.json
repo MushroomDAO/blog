@@ -2,7 +2,8 @@
   "recordsAccepted": 2,
   "manifestUpdated": true,
   "readbackVerified": true,
-  "publicSearchVerified": false,
-  "status": "propagation-pending",
-  "checkedAt": "2026-11-05T15:12:51.447821+00:00"
+  "publicSearchVerified": true,
+  "status": "verified",
+  "checkedAt": "2026-11-05T15:13:42.928562+00:00",
+  "publicSearchEvidence": "semantic-search-recheck.json"
 }
