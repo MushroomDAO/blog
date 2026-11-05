@@ -1224,3 +1224,9 @@ Orkas最终核验：中英文2条索引回读及公开语义检索均已通过�
 实际仅运行OpenMausBot现有三个Node测试文件，28通过0失败，范围为可信审批协调、frame导航边界、聊天深链；无GUI/真实模型/MCP/VM/手机App验证。Jina两源200，官方截图保存。8211封面人工拒绝伪文字，重新生成8212并人工核验；3张小M图核验通过。双语Blog轮播1/列表2/5图200；公众号正文、3图、封面、元数据和原文链接回读一致，未群发。KB/账本已更新，语义写入接收、传播状态见source/20261105-appllama-openmausbot/semantic-status.json。
 
 Appllama/OpenMausBot最终核验：中英文2条索引回读及公开语义检索均通过，状态verified；KB实际记录再次确认URL、草稿ID和索引状态。
+
+### 2026-11-05 LingBot：九仓库地图、复用核验与CPU实跑
+
+核对Robbyant九个LingBot仓库和全部README/提交；覆盖Vision、Depth、Map、VLA/VLA2、VA、World/World2、Video，区分Depth2/VA2官网论文与实际代码权重发布状态。World2明确CCBYNCSA4，不能沿用World1Apache。斯坦福OpenWAM/OpenWAM与同名OpenWAMOfficial分开，参考Transformer/textassets复用有代码证据。FastOPD2610.02832v1表2学生450/451MNFE1任务平均35.3->51.2（+15.9pp），教师4.2BNFE10为85.8；不是物理单步成功概率。LeRobotVA/VLA2策略和timmeva.py入口核实。AMD原始会场视频/配置未取到，官方作者贴文公开镜像指IFA，素材PyTorch场次不作已确认结论。比赛主办方Oct27披露1800+队13国，Nov14-16决赛尚未来临。
+
+实际VisionSmall CPUFP32 pretrained224x224->1x196x384全finite，21601152参数，188权重项0missing0unexpected。源码151e46321bae4399f8568829f190c7bdec216b49，HF127cbcec380de0bcd55bdc1b1fad3819850a6514；临时依赖隔离，Xet停滞后HTTP成功，无机器人/World/性能基准实测。封面8221人工拒伪文字改8222；3小M图核验，图1绝对“尚未集成”改“按任务对接”。Blog轮播1/列表6/5图200，公众号全文/3图/封面/元数据/原文链接回读一致，未群发；KB和账本已更新，语义传播见source/20261105-lingbot/semantic-status.json。

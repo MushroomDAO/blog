@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "lingchat-ai-galgame-emotion-desktop-pet-tauri",
+      "title": "LingChat：沉浸式 AI 恋爱游戏伴侣，18 类情绪识别 + 截屏感知 + Live2D，Tauri 2 + Vue 3",
+      "url": "/blog/lingchat-ai-galgame-emotion-desktop-pet-tauri/",
+      "language": "zh",
+      "excerpt": "LingChat：沉浸式 AI 恋爱游戏伴侣，18 类情绪识别 + 截屏感知 + Live2D，Tauri 2 + Vue 3 SlimeBoyOwO/LingChat，AGPL-3.0，Rust，2,255 stars。沉浸式 AI 恋爱游戏（Galgame）聊天软件：自训练 18 类情绪识别模型、截屏感知主动评论、Live2D 角色服装切换、VITS 语音合成（GPU 约 1 秒）、多角色剧情脚本 + 好感系统、番茄计时 / 日程管理。架构：Tauri 2 Rust 后端 + Vue 3 前端 + PixiJS Live2D 渲染。API 驱动，默认",
+      "score": 0.5428988
+    },
+    {
+      "article_id": "lilbot-agent-local-coding-trial",
+      "title": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱",
+      "url": "/blog/lilbot-agent-local-coding-trial/",
+      "language": "zh",
+      "excerpt": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱 LilBot-agent 是纯 Python 开源本地编码 Agent，Windows 优先，原生适配 DeepSeek 等 OpenAI 兼容模型，内置全屏 TUI 驾驶舱、多子代理/Team 协作、五层权限沙箱、持久化记忆、MCP 外部工具对接，153 Stars，本文从开发者试用视角逐层拆解。 本地Agent AI编程 DeepSeek MCP Python 多智能体 Windows 开源工具 为什么会有 LilBot-agent？ 快速安装与第一次启动（Win",
+      "score": 0.539831
+    },
+    {
+      "article_id": "ling-3-0-tiny-ant-7b-moe-edge-device-mla-kda",
+      "title": "ling-3-0-tiny-ant-7b-moe-edge-device-mla-kda",
+      "url": "/blog/ling-3-0-tiny-ant-7b-moe-edge-device-mla-kda/",
+      "language": "en",
+      "excerpt": "ling-3-0-tiny-ant-7b-moe-edge-device-mla-kda Ant BaiLing (Ling-Ant) open-sources Ling-3.0-Tiny, a lightweight hybrid-inference MoE model: 7.9B total parameters with only 1.3B active, KDA+MLA 3:1 alternating structure with 128-expert sparse MoE, available in BF16/FP8/INT4 precisio",
+      "score": 0.5090302
+    },
+    {
+      "article_id": "voicemem-streaming-dual-brain-voice-agent-memory",
+      "title": "VoiceMem: Streaming Dual-Brain Architecture for Real Voice Agent Memory",
+      "url": "/blog/voicemem-streaming-dual-brain-voice-agent-memory/",
+      "language": "en",
+      "excerpt": "VoiceMem: Streaming Dual-Brain Architecture for Real Voice Agent Memory Tsinghua's VoiceMem uses a left brain for facts and right brain for emotion, streaming speculative prefetch finishes retrieval before you stop talking — 91.2% on LoCoMo, 10x faster and 16x cheaper than Mem0, ",
+      "score": 0.5026613
+    },
+    {
+      "article_id": "rakazo-persistent-ai-teammate-sandbox-computer-use-teardown",
+      "title": "Rakazo: Each Bot Gets Its Own Computer, Memory and Schedule — Open-Source Grok Bot Alternative",
+      "url": "/blog/rakazo-persistent-ai-teammate-sandbox-computer-use-teardown/",
+      "language": "en",
+      "excerpt": "Rakazo: Each Bot Gets Its Own Computer, Memory and Schedule — Open-Source Grok Bot Alternative elie222/rakazo, 3094 stars, Apache 2.0, TypeScript. From the author of Inbox Zero — positioned as an open-source Grok Bot alternative. Each persistent Bot gets its own conversations, me",
+      "score": 0.4927373
+    },
+    {
+      "article_id": "bitterbot-desktop-local-ai-agent-dream-engine-p2p-economy",
+      "title": "Bitterbot Desktop 拆解：2459 star 的「会做梦」AI Agent，记忆本地存但推理默认走云端",
+      "url": "/blog/bitterbot-desktop-local-ai-agent-dream-engine-p2p-economy/",
+      "language": "zh",
+      "excerpt": "Bitterbot Desktop 拆解：2459 star 的「会做梦」AI Agent，记忆本地存但推理默认走云端 Bitterbot-AI/bitterbot-desktop 是 2459 star、MIT 协议的 TypeScript 项目：装在自己机器上的个人 AI，每 2 小时「做梦」整理记忆，把练成的技能通过 P2P 网络卖给其他 Agent 换 USDC。我们通读一手源发现：Mac Apple Silicon 有预编译 Rust 编排器二进制，装得上；但「local-first」指的是记忆存本地，默认推理仍是云端 Claude Opus ",
+      "score": 0.49170488
+    },
+    {
+      "article_id": "clawrouter-llm-router-agent-native-multi-model-cost-optimization",
+      "title": "ClawRouter：专为 AI Agent 设计的 LLM 路由框架，55+ 模型、92% 省钱、<1ms 本地决策",
+      "url": "/blog/clawrouter-llm-router-agent-native-multi-model-cost-optimization/",
+      "language": "zh",
+      "excerpt": "ClawRouter：专为 AI Agent 设计的 LLM 路由框架，55+ 模型、92% 省钱、<1ms 本地决策 BlockRunAI/ClawRouter，6673 stars，MIT，TypeScript。专为自主 AI Agent 构建的智能 LLM 路由器：钱包签名代替 API key，USDC 微支付代替信用卡，15维度本地评分在 <1ms 内选出最便宜的足够好的模型。8个永久免费模型，混合均价 $2.05/M（vs Claude Opus $25/M），节省92%。 AI Agent LLM路由 开源 成本优化 多模型 Web3 USD",
+      "score": 0.48461747
+    },
+    {
+      "article_id": "tradingagents-multi-agent-llm-financial-trading-framework",
+      "title": "TradingAgents：把交易公司搬进 AI——96k Stars 的多 Agent 金融交易框架",
+      "url": "/blog/tradingagents-multi-agent-llm-financial-trading-framework/",
+      "language": "zh",
+      "excerpt": "TradingAgents：把交易公司搬进 AI——96k Stars 的多 Agent 金融交易框架 TauricResearch 开源的多 Agent LLM 量化交易框架，96k+ stars，Apache 2.0。用 LangGraph 构建 7 种专职角色：基本面/情绪/新闻/技术分析师 + 多空研究员 + 交易员 + 风控/投资组合经理。支持 OpenAI/Claude/Gemini/DeepSeek/Kimi/Qwen/GLM/Ollama 等全系列 LLM，覆盖美股/港股/A股/加密货币，附 arXiv 论文 2412.20138。 多A",
+      "score": 0.48443523
+    },
+    {
+      "article_id": "ai-intel-workbench-daily-dashboard-guide",
+      "title": "我用 AI Agent 给自己搭了个每日情报看板，现在开源了",
+      "url": "/blog/ai-intel-workbench-daily-dashboard-guide/",
+      "language": "zh",
+      "excerpt": "我用 AI Agent 给自己搭了个每日情报看板，现在开源了 ai-intel-workbench 是一个本地优先的 AI 每日情报工作台：Agent 每天自动调研 5 个维度（大厂动态、KOL 观点、前沿论文、热门开源、AI×金融），沉淀成可视化 HTML 看板，可选推送到飞书/Lark 机器人，支持 Claude Code 和 Codex。本文手把手教普通人 10 分钟跑起来，以及如何越用越好用。 AI工具 开源 情报工作台 Claude Code 每日digest Agent自动化 飞书 看板 这是什么？用一句话说 为什么你需要它？ 五个维度，Ag",
+      "score": 0.4829222
+    },
+    {
+      "article_id": "lobsterai-guide-for-everyone",
+      "title": "LobsterAI 普通人使用指南：网易有道出品，桌面 AI Agent 一句话搞定办公",
+      "url": "/blog/lobsterai-guide-for-everyone/",
+      "language": "zh",
+      "excerpt": "LobsterAI 普通人使用指南：网易有道出品，桌面 AI Agent 一句话搞定办公 LobsterAI 是网易有道开源的桌面 AI Agent（MIT，5500+ Star），支持 macOS 和 Windows，内置 28 个技能——建本地系统、做数据分析、生成 PPT/视频、浏览器自动化、股票研究，还能从微信/飞书/钉钉远程控制。本文是零基础普通人入门指南。 LobsterAI AI Agent 网易有道 桌面助手 开源 自动化 Office 微信控制 普通人指南 LobsterAI 是什么 能做什么（28 个内置技能） 办公文档 数据分析 &",
+      "score": 0.47762275
+    }
+  ]
+}
