@@ -1,0 +1,45 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6aebf5f0-3df76c1c-0ab7da99）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 958 篇 + 公众号草稿箱 4 条 + 本地发布记录 933 条 + MemPalace 3832 抽屉
+
+── 查：https://github.com/HexaFuture/HexaShell
+   ❌ [BLOG  ] HexaShell开源调研：14个通用工具，如何让编程智能体控制机器人？
+      一手源相同: hexafuture/hexashell
+   ❌ [知识库] # HexaShell机器人智能体框架解析  **Summary**: HexaShell是开源机器人编程智能体框架，通
+      一手源相同: hexafuture/hexashell
+   ❌ [知识库] --- name: HexaShell robot coding-agent harness description:
+      一手源相同: hexafuture/hexashell
+   ❌ [知识库] # HexaShell机器人编程框架调研  **Summary**: HexaShell通过通用工具、Python执行循
+      一手源相同: hexafuture/hexashell
+   ❌ [知识库] # 代码已全面开源：https://github.com/Hex  **Summary**: 代码已全面开源：https
+      一手源相同: hexafuture/hexashell
+
+── 查：HexaShell
+   ❌ [BLOG  ] Agent Workspace与Jumper：AI编程工作台和螃蟹机器人，分别怎么玩？
+      正文出现实体名「hexashell」
+   ❌ [BLOG  ] HexaShell开源调研：14个通用工具，如何让编程智能体控制机器人？
+      正文出现实体名「hexashell」
+   ❌ [知识库] # HexaShell机器人智能体框架解析  **Summary**: HexaShell是开源机器人编程智能体框架，通
+      正文出现实体名「hexashell」
+   ❌ [知识库] --- name: HexaShell robot coding-agent harness description:
+      正文出现实体名「hexashell」
+   ❌ [知识库] 8阻塞远程草稿/已发布查询。Blog独立推进。 最终slug hexashell-robot-coding-agent-
+      正文出现实体名「hexashell」
+   ❌ [知识库] hexashell|HexaShell|2026-11-05:L1-L13|→drawer_blog_general_8
+      正文出现实体名「hexashell」
+   ❌ [知识库] # HexaShell机器人编程框架调研  **Summary**: HexaShell通过通用工具、Python执行循
+      正文出现实体名「hexashell」
+   ❌ [知识库] # 代码已全面开源：https://github.com/Hex  **Summary**: 代码已全面开源：https
+      正文出现实体名「hexashell」
+   ❌ [知识库] 8阻塞远程草稿/已发布查询。Blog独立推进。 最终slug hexashell-robot-coding-agent-
+      正文出现实体名「hexashell」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
