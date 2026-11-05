@@ -1216,3 +1216,9 @@ Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slu
 本机现有builtin manifest检查400文件一致，不是400功能测试；未安装完整Electron、启动GUI或执行Orkas模型/外部CLI任务。Jina抓取成功，官方截图已保存；主题FLUX8201封面和3张小M图人工检查通过，Blog轮播1/列表5/5图200，公众号全文/3图/封面/元数据/原文URL回读一致，未群发。KB和发布账本已更新；语义写入已接收，最新传播状态见source/20261105-orkas/semantic-status.json。
 
 Orkas最终核验：中英文2条索引回读及公开语义检索均已通过，状态verified；KB再次按实际记录回读确认URL、草稿ID及索引状态。
+
+### 2026-11-05 Appllama Skills与OpenMausBot：设计质量和执行环境
+
+核对Appllama/appllama-skills（dd5caaec3d5d50ad7fc0324da238119c6b7c3707，MIT，usage1.1.0/design1.3.0）与milind-soni/OpenMausBot（e7317a7fd23495ce6cb159279aa0ef9b8f086b06，package0.1.141）。两者独立，不宣称替代关系或已验证集成。强调开源Skill不包含商业MCP图库，HIG/60fps是要求而非认证/实测；OpenMausBot的enterprise目录为单独source-available授权，核心Apache2不能外推整个仓库。
+
+实际仅运行OpenMausBot现有三个Node测试文件，28通过0失败，范围为可信审批协调、frame导航边界、聊天深链；无GUI/真实模型/MCP/VM/手机App验证。Jina两源200，官方截图保存。8211封面人工拒绝伪文字，重新生成8212并人工核验；3张小M图核验通过。双语Blog轮播1/列表2/5图200；公众号正文、3图、封面、元数据和原文链接回读一致，未群发。KB/账本已更新，语义写入接收、传播状态见source/20261105-appllama-openmausbot/semantic-status.json。

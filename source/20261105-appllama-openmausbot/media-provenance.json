@@ -1,0 +1,35 @@
+{
+  "banner": {
+    "origin": "local FLUX.2 Klein4B",
+    "seed": 8212,
+    "bytes": 78476,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "verificationFailures": 0,
+    "verificationWarnings": 0,
+    "manualReview": "physical phone/interface tiles/coordination workbench metaphor, not actual product screenshot",
+    "rejectedAttempt": "seed8211 rejected manually for pseudo-brand/text despite OCR0fail"
+  },
+  "officialImage": {
+    "source": "https://github.com/milind-soni/OpenMausBot/blob/e7317a7fd23495ce6cb159279aa0ef9b8f086b06/docs/screenshots/hero.png",
+    "saved": "/Users/jason/.heinu1-bot/media/openmausbot-official-chat-interface.png",
+    "coverRejected": "mostly text"
+  },
+  "bodyFigures": {
+    "origin": "imagegen LittleM skill",
+    "rawDirectory": "/Users/jason/.codex/generated_images/01a1ac4b-c124-7552-8cf6-b7e3253554e2",
+    "dimensions": [
+      1120,
+      630
+    ],
+    "colors": 47,
+    "bytes": [
+      39530,
+      36040,
+      47652
+    ],
+    "workerExit": 0
+  }
+}
