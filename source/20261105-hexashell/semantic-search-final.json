@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "reverse-skill-ai-agent-cybersecurity-penetration-skill-router",
+      "title": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents",
+      "url": "/blog/reverse-skill-ai-agent-cybersecurity-penetration-skill-router/",
+      "language": "en",
+      "excerpt": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents zhaoxuya520's open-source AI agent cybersecurity skill router, 20.9k stars, MIT. Solves the core problem of agents not knowing which security tool to use — 41 routing rules auto-class",
+      "score": 0.5201205
+    },
+    {
+      "article_id": "grpo-small-model-engineering-guide",
+      "title": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径",
+      "url": "/blog/grpo-small-model-engineering-guide/",
+      "language": "zh",
+      "excerpt": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径 GRPO（Group Relative Policy Optimization）让小模型在垂直任务上碾压frontier大模型成为可能。本文整合 ART、ms-swift、OpenClaw-RL 等开源仓库，以及 ART·E（Qwen 2.5 14B超越o3，$80训练）、MCP·RL等6个真实工程案例，给出完整的工程路径：任务选择→数据构造→奖励函数设计→训练循环→监控与避坑。 GRPO 强化学习 小模型 Qwen 微调 LLM训练 AI工程 Mycelium 为什么 GRPO 适合小模型专",
+      "score": 0.51102656
+    },
+    {
+      "article_id": "skillflow-flow-driven-skill-evolution-agent",
+      "title": "SkillFlow: Flow-Driven Recursive Skill Evolution That Beats All Baselines on 14 Benchmarks",
+      "url": "/blog/skillflow-flow-driven-skill-evolution-agent/",
+      "language": "en",
+      "excerpt": "SkillFlow: Flow-Driven Recursive Skill Evolution That Beats All Baselines on 14 Benchmarks SkillFlow from CUHK-Shenzhen, NUS, and NTU uses flow-matching training signals instead of heuristic LLM judgments to autonomously manage agent skill libraries, achieving +41.2% average EM w",
+      "score": 0.5097375
+    },
+    {
+      "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+      "title": "\"Don't Submit Skills You Created Three Hours Ago\": A Cross-Vendor Curated List and Its Four Quality Criteria",
+      "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+      "language": "en",
+      "excerpt": "\"Don't Submit Skills You Created Three Hours Ago\": A Cross-Vendor Curated List and Its Four Quality Criteria A hand-curated list of 1,497 agent skills — 33.8k stars, MIT, explicitly billed as hand-picked, not AI-slop generated. Two things make it genuinely useful: a table of skil",
+      "score": 0.5081265
+    },
+    {
+      "article_id": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
+      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
+      "url": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
+      "language": "zh",
+      "excerpt": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺 Higgsfield 将旗下 K-pop 机甲 AI 短片系列《ZEPHYR: Special》的完整制作过程全部开源：所有提示词、角色资产、失败镜头、最终剪辑版本，共 197 个资产公开发布于平台上，任何人都可以直接进入 Cinema Studio 查看和复用。主创团队披露了两个「不可能镜头」的实现方法：倒置角色参考图技巧和锚点式最小提示词策略。底层模型是 Seedance 2.5，结合 Higgsfield Soul 2 进行角色和服装设计，再用",
+      "score": 0.5046881
+    },
+    {
+      "article_id": "easel-open-source-social-media-agent-workbench",
+      "title": "Easel: An Open-Source Social Media Agent Workbench, 112 Skills, Six-Platform Publishing",
+      "url": "/blog/easel-open-source-social-media-agent-workbench/",
+      "language": "en",
+      "excerpt": "Easel: An Open-Source Social Media Agent Workbench, 112 Skills, Six-Platform Publishing An open-source social-media creator Agent from Zhejiang University's REAL Lab and Peking University's OpenDCAI Lab: built on OpenClaw, 112 Skills across six layers (foundation/discover/plan/pr",
+      "score": 0.50447744
+    },
+    {
+      "article_id": "jakub-krehel-interface-skills",
+      "title": "Jakub Krehel Teardown: SVG Diagrams and 14 Interface Skills",
+      "url": "/blog/jakub-krehel-interface-skills/",
+      "language": "en",
+      "excerpt": "Jakub Krehel Teardown: SVG Diagrams and 14 Interface Skills Explore Jakub Krehel’s teardown skill and 14 interface skills, with an offline diagram demo, verified SVG and PNG exports, editable colors and explicit limits. Agent Skills 界面设计 设计工程 无障碍 Codex Claude Code What does the i",
+      "score": 0.5011595
+    },
+    {
+      "article_id": "google-skills-137-agent-skills-negative-routing-vs-anthropic",
+      "title": "Inside google/skills: 86% Is Google Cloud, and 67% Tell the Agent When Not to Use Them",
+      "url": "/blog/google-skills-137-agent-skills-negative-routing-vs-anthropic/",
+      "language": "en",
+      "excerpt": "Inside google/skills: 86% Is Google Cloud, and 67% Tell the Agent When Not to Use Them Google's official Agent Skills repo has 19,583 stars. Measured: 137 SKILL.md files, 118 of them under cloud; index.json lists 132, of which 88 (67%) carry explicit negative routing — 'Don't use",
+      "score": 0.49687383
+    },
+    {
+      "article_id": "addy-agent-skills-google-engineering-guide",
+      "title": "Agent Skills：Google 工程师 67K 星，24 Skill + 8 命令覆盖完整研发链路",
+      "url": "/blog/addy-agent-skills-google-engineering-guide/",
+      "language": "zh",
+      "excerpt": "Agent Skills：Google 工程师 67K 星，24 Skill + 8 命令覆盖完整研发链路 Google Chrome Engineering Manager Addy Osmani 开源 agent-skills（67K⭐），将谷歌软件工程规范（Hyrum定律、Beyonce规则、Chesterton栅栏等）封装为 24 个 Skill + 8 条命令，覆盖 DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP 完整开发链路，兼容 Claude Code / Cursor / Gemini CLI / Windsur",
+      "score": 0.4910691
+    },
+    {
+      "article_id": "marketingskills-ai-agent-cmo-skill-pack-open-source",
+      "title": "Give Your AI Agent a CMO Brain: marketingskills Open-Source Marketing Skill Pack",
+      "url": "/blog/marketingskills-ai-agent-cmo-skill-pack-open-source/",
+      "language": "en",
+      "excerpt": "Give Your AI Agent a CMO Brain: marketingskills Open-Source Marketing Skill Pack coreyhaines31/marketingskills gives Claude Code and other AI agents 32+ professional marketing skills: AI SEO/GEO optimization, CRO conversion funnels, high-converting copy frameworks, RevOps growth ",
+      "score": 0.49094793
+    }
+  ]
+}
