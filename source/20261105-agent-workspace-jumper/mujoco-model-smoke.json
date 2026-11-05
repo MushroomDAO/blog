@@ -1,0 +1,16 @@
+{
+  "mujocoVersion": "3.11.0",
+  "nq": 29,
+  "nv": 28,
+  "nu": 0,
+  "njnt": 23,
+  "scalarJoints": 22,
+  "steps": 100,
+  "simulationSeconds": 0.10000000000000007,
+  "finiteState": true,
+  "policyLoaded": false,
+  "rendered": false,
+  "physicalRobotUsed": false,
+  "scope": "Standalone robot asset parse and passive stepping, no scene floor or learned controller. nu is the raw asset actuator count, not robot DoF.",
+  "initialVerifierCorrection": "Initial own assertion incorrectly assumed22 actuators; changed to count scalar joints instead; no upstream edit."
+}

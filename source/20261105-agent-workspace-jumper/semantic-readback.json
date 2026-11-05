@@ -1,0 +1,38 @@
+[
+  {
+    "id": "28e86491c1838dfe5d0d91f625db6c582403bce50e04fa5b",
+    "metadata": {
+      "article_id": "agent-workspace-jumper-crab-robot-review",
+      "content_hash": "5b457ed7e4b4ce3e",
+      "excerpt": "Agent Workspace与Jumper：AI编程工作台和螃蟹机器人，分别怎么玩？ Agent Workspace提供语音定向、并行编码Agent和待办卡片，Jumper则公开螃蟹机器人的仿真、训练与动作部署工具。本文核对仓库，说明Claude Code、Codex和Cursor在其中的作用，检查模型、动作包和制造资料的边界，记录测试与MuJoCo加载结果，并给出从电脑实验到真机验证的入门路径。 Agent Workspace Jumper 机器人 AI编程 MuJoCo Agent Workspace：像开会一样管理编码Agent 语音并行编程，适",
+      "language": "zh",
+      "tags": [
+        "Agent Workspace",
+        "Jumper",
+        "机器人",
+        "AI编程",
+        "MuJoCo"
+      ],
+      "title": "Agent Workspace与Jumper：AI编程工作台和螃蟹机器人，分别怎么玩？",
+      "url": "/blog/agent-workspace-jumper-crab-robot-review/"
+    }
+  },
+  {
+    "id": "9105f293781b50f5c113bec0fef6d2216c713ae24252f204",
+    "metadata": {
+      "article_id": "agent-workspace-jumper-crab-robot-review",
+      "content_hash": "3040ce2b1334f15e",
+      "excerpt": "Agent Workspace and Jumper: Coding Meets Robotics Explore Agent Workspace voice coordination and Jumper crab robotics: source checks, scoped tests, model loading, hardware-file limits and deployment caveats. Agent Workspace Jumper 机器人 AI编程 MuJoCo What does Agent Workspace coordin",
+      "language": "en",
+      "tags": [
+        "Agent Workspace",
+        "Jumper",
+        "机器人",
+        "AI编程",
+        "MuJoCo"
+      ],
+      "title": "Agent Workspace and Jumper: Coding Meets Robotics",
+      "url": "/blog/agent-workspace-jumper-crab-robot-review/"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "revision": "198686eac0d188815d0943e9fee50de415edc80a",
+  "excludedDirectories": [
+    ".git",
+    "rl"
+  ],
+  "counts": {
+    ".stl": 85,
+    ".step": 0,
+    ".stp": 0,
+    ".iges": 0,
+    ".igs": 0,
+    ".kicad_pcb": 0,
+    ".kicad_sch": 0,
+    ".sch": 0,
+    ".brd": 0
+  },
+  "scope": "This checkout only; file formats do not establish manufacturing suitability or completeness of other repositories."
+}

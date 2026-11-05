@@ -1162,3 +1162,9 @@ Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slu
 复用原始KB，未找到旧文章或M2凭证；远程查重被40164阻止，保留缺口并继续Blog。dmquant/archonos-pub仅main，提交a4f4873a9037dc08374232b03a1f458cab3dee45，MIT，package0.1.004。14项模块测试通过，不声称全部107项、完整部署、真实模型调用或安全审计。修正文档cd目录与占位地址；提示postinstall会初始化发现配置。本地工作台不保证本地推理，R2同步不直接等于端到端加密，RSI技能流程不等于模型权重自进化。
 
 双语Blog、匹配封面、3张小M正文图已发布并核验，列表与轮播第1，语义2向量写入，KB项目记录回读通过。按用户授权实际运行一次M2，仍40164：223.206.46.98不在白名单；没有草稿或mediaId，保留failed状态，暂停重试，后续只补公众号。
+
+## 2026-11-05 · Agent Workspace与Jumper分层核验
+
+两个独立项目合并为比较与入门文章，未声称存在集成。Agent Workspace应用包0.7.0标MIT，23项定向测试通过；Jumper主代码Apache-2.0，69项轻量测试通过，MuJoCo原始模型被动100步验证通过。初次npm锁文件、最小环境依赖和自写nu检查假设错误均留存；没有运行真实语音、模型API、训练或实机。85个STL不证明完整制造图纸公开，官方deploy文档仍标真机总线/NPU待验证。
+
+双语Blog已部署，列表/轮播第1及5个图片资源200；采用官方仿真渲染封面与3张小M正文图。KB已入库回读。公众号实际M2一次失败40164/IP223.204.87.188，未获得media_id，暂停自动重试，修复后仅补微信。语义索引两语言已写入，最终状态见source/20261105-agent-workspace-jumper/semantic-status.json。

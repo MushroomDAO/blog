@@ -1,0 +1,87 @@
+{
+  "query": "Agent Workspace Jumper 22 joints 23 69 MuJoCo simulation",
+  "response": {
+    "results": [
+      {
+        "article_id": "agent-workspace-jumper-crab-robot-review",
+        "title": "Agent Workspace与Jumper：AI编程工作台和螃蟹机器人，分别怎么玩？",
+        "url": "/blog/agent-workspace-jumper-crab-robot-review/",
+        "language": "zh",
+        "excerpt": "Agent Workspace与Jumper：AI编程工作台和螃蟹机器人，分别怎么玩？ Agent Workspace提供语音定向、并行编码Agent和待办卡片，Jumper则公开螃蟹机器人的仿真、训练与动作部署工具。本文核对仓库，说明Claude Code、Codex和Cursor在其中的作用，检查模型、动作包和制造资料的边界，记录测试与MuJoCo加载结果，并给出从电脑实验到真机验证的入门路径。 Agent Workspace Jumper 机器人 AI编程 MuJoCo Agent Workspace：像开会一样管理编码Agent 语音并行编程，适",
+        "score": 0.5985918
+      },
+      {
+        "article_id": "awesome-agent-architecture-22-section-harness-engineering-guide",
+        "title": "22 Lessons to Understand How Agent Systems Are Built: The Harness Engineering Map of awesome-agent-architecture",
+        "url": "/blog/awesome-agent-architecture-22-section-harness-engineering-guide/",
+        "language": "en",
+        "excerpt": "22 Lessons to Understand How Agent Systems Are Built: The Harness Engineering Map of awesome-agent-architecture hardness1020's awesome-agent-architecture is a 22-lesson, 7-layer systematic teardown of agent harness engineering — using Claude Code v2.1.88 and Hermes Agent as study",
+        "score": 0.5368179
+      },
+      {
+        "article_id": "wwdc26-mlx-local-agentic-ai-mac-engineering-guide",
+        "title": "WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建",
+        "url": "/blog/wwdc26-mlx-local-agentic-ai-mac-engineering-guide/",
+        "language": "zh",
+        "excerpt": "WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建 Apple MLX 团队在 WWDC26 Session 232 中讲透了在 Mac 本地运行 AI Agent 的完整技术栈：MLX → MLX-LM → MLX-LM Server → Agent 框架，三步起服务，六个开源框架横向对比，支持多 Mac 分布式推理。本文对原始 session 做深度解析，附完整工程落地代码。 MLX Apple Silicon Agent Loop WWDC26 本地推理 开源 AI Engineering 工程实践 一、苹果官方",
+        "score": 0.5032226
+      },
+      {
+        "article_id": "simon-willison-lethal-trifecta-ai-agent-security",
+        "title": "Lethal Trifecta: Simon Willison's AI Agent Security Model That The Economist Cited",
+        "url": "/blog/simon-willison-lethal-trifecta-ai-agent-security/",
+        "language": "en",
+        "excerpt": "Lethal Trifecta: Simon Willison's AI Agent Security Model That The Economist Cited Django co-creator Simon Willison introduced the 'lethal trifecta' mental model in June 2025: an AI agent becomes high-risk when it simultaneously accesses untrusted content, holds private data, and",
+        "score": 0.49945372
+      },
+      {
+        "article_id": "mu-coding-agent-judgment-kernel-35-decision-points-hive",
+        "title": "mu (μ): A Coding Agent's Judgment Kernel — 35 Decision Points for a Small Model, Big Model Just Codes",
+        "url": "/blog/mu-coding-agent-judgment-kernel-35-decision-points-hive/",
+        "language": "en",
+        "excerpt": "mu (μ): A Coding Agent's Judgment Kernel — 35 Decision Points for a Small Model, Big Model Just Codes Qybaihe/mu, MIT, TypeScript, 116 stars (3 days). A coding agent turn has 35 decision points unrelated to coding: does this tool output chunk enter context? Is this command danger",
+        "score": 0.49816743
+      },
+      {
+        "article_id": "addy-osmani-agent-skills-idea-refine",
+        "title": "Addy Osmani 开源了 79K stars 的 agent-skills：idea-refine 把乔布斯产品思维包进 AI Agent 工作流",
+        "url": "/blog/addy-osmani-agent-skills-idea-refine/",
+        "language": "zh",
+        "excerpt": "Addy Osmani 开源了 79K stars 的 agent-skills：idea-refine 把乔布斯产品思维包进 AI Agent 工作流 addyosmani/agent-skills（79K stars）是一套给 AI 编程 Agent 补充「高级工程师的隐性工作」的 Skill 集合。其中的 idea-refine 最值得单独拆解：三相工作流（发散→收敛→落地）、SCAMPER+JTBD+预验尸等框架、强制输出「不做什么」清单——把 Addy 多年 Google 产品思维包装成 Agent 上下文注入。Agent 默认跳过所有不出现在",
+        "score": 0.4967783
+      },
+      {
+        "article_id": "agent-network-anet-multi-runtime-agent-hub-fake-success-trap",
+        "title": "Agent Network: Not Another Agent Platform — Just the Communication Layer Across Vendors",
+        "url": "/blog/agent-network-anet-multi-runtime-agent-hub-fake-success-trap/",
+        "language": "en",
+        "excerpt": "Agent Network: Not Another Agent Platform — Just the Communication Layer Across Vendors A deep dive into sleep2agi/agent-network: it wires Claude Code, Claude Agent SDK, Codex, and Grok Build into one network, where agents discover each other over MCP and get dispatched tasks in ",
+        "score": 0.49463978
+      },
+      {
+        "article_id": "agent-lightning-microsoft-research-rl-framework-train-agents-real-harness",
+        "title": "Agent Lightning: Microsoft Research's 3,500-Line RL Framework for Training Any AI Agent in Real Environments",
+        "url": "/blog/agent-lightning-microsoft-research-rl-framework-train-agents-real-harness/",
+        "language": "en",
+        "excerpt": "Agent Lightning: Microsoft Research's 3,500-Line RL Framework for Training Any AI Agent in Real Environments microsoft/agent-lightning, MIT open source, Python, 18K stars. Three components (Trainer/API Gateway/Rollout Controller), zero agent code changes, trains with real tool ha",
+        "score": 0.4942565
+      },
+      {
+        "article_id": "agents-a1-35b-moe-horizon-scaling-guide",
+        "title": "Agents-A1：35B 追平万亿参数，路走得更长，不是模型堆得更大",
+        "url": "/blog/agents-a1-35b-moe-horizon-scaling-guide/",
+        "language": "zh",
+        "excerpt": "Agents-A1：35B 追平万亿参数，路走得更长，不是模型堆得更大 上海人工智能实验室（InternLM 团队）发布 Agents-A1（arXiv:2606.30616）：一个 35B MoE 模型，在长程 Agent 基准上与 Kimi-K2.6、DeepSeek-V4-pro、GPT-5.5 等万亿参数模型持平或超越。核心不是堆参数，而是把知识-行动轨迹拉到 45K tokens 平均长度（KAG 图 + 自博弈扩展），再用三阶段训练蒸馏六个领域专家进一个模型。SEAL-0 56.4、FrontierScience-Research 40.0（",
+        "score": 0.49411643
+      },
+      {
+        "article_id": "virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac",
+        "title": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI",
+        "url": "/blog/virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac/",
+        "language": "zh",
+        "excerpt": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI hsj576/virtual-ai-infra-team 不是多 agent 角色扮演，而是一个给本地大模型做「自动测速、升级、回滚」的控制器：模型只提计划，确定性代码判决。README 的 18.14→37.52 tok/s（+106.84%）我们重算无误，但这个中位数来自代码题；按提示词拆开，散文题只快 50.6%，9 个样本的均值是 +89%。167 个测试本机全过，4 道质量门禁题被我们一句话骗过，候选库里只有 1",
+        "score": 0.49411595
+      }
+    ]
+  }
+}
