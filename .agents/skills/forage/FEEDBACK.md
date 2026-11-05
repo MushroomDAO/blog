@@ -1176,3 +1176,7 @@ Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slu
 ## 2026-11-05 · Don’t Storytell公众号补偿成功
 
 复用原双语文章、封面和正文配图，Blog及5图重新核验200。公众号接入恢复后草稿箱未有本篇，本地只有旧失败记录；补建一次成功，远程回读正文、3图、封面、标题/作者/摘要、原文链接与评论设置一致。旧40164失败已resolved，KB回读含当前media_id；未群发，未重复部署或索引。完整源noi-liuchang/dont-storytell；本次Jina403，官方GitHub正文抓取成功，复用先前保存的官方流程SVG。
+
+## 2026-11-05 · rea-video/Nuphos补公众号，Raven保留旧凭证
+
+复用原双语文章及配图，两个Blog及10图重新核验200。rea-video/Nuphos未有旧成功凭证和远程草稿，补建一次并远程核验正文、3图、封面、标题/作者/摘要、原文链接与评论设置一致；旧40164失败resolved，KB回读含新media_id，未群发。Raven旧media_id draft/get40007，已发布列表48001无权限，保留recorded，不重复建稿。未重复部署或语义upsert。Jina本次403，官方GitHub正文抓取成功，复用此前原图与资料。
