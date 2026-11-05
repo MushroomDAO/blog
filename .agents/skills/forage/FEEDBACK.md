@@ -1168,3 +1168,7 @@ Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slu
 两个独立项目合并为比较与入门文章，未声称存在集成。Agent Workspace应用包0.7.0标MIT，23项定向测试通过；Jumper主代码Apache-2.0，69项轻量测试通过，MuJoCo原始模型被动100步验证通过。初次npm锁文件、最小环境依赖和自写nu检查假设错误均留存；没有运行真实语音、模型API、训练或实机。85个STL不证明完整制造图纸公开，官方deploy文档仍标真机总线/NPU待验证。
 
 双语Blog已部署，列表/轮播第1及5个图片资源200；采用官方仿真渲染封面与3张小M正文图。KB已入库回读。公众号实际M2一次失败40164/IP223.204.87.188，未获得media_id，暂停自动重试，修复后仅补微信。语义索引两语言已写入，最终状态见source/20261105-agent-workspace-jumper/semantic-status.json。
+
+## 2026-11-05 · HexaShell公众号补偿成功
+
+复用原双语文章、匹配封面和正文配图，Blog及5图重新核验200。公众号接入恢复后草稿箱未有本篇，本地只有旧失败记录；补建一次成功，远程回读正文、3图、封面、标题/作者/摘要、原文链接和评论设置一致。旧40164失败标记resolved，KB回读含当前media_id；未群发，未重复部署Blog或重做索引。证据见source/20261105-hexashell/wechat-verification.json。
