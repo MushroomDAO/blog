@@ -1,0 +1,36 @@
+✔ an app frame may load its own document (0.32625ms)
+✔ an app frame may not navigate anywhere else (0.071833ms)
+✔ cancels, and never throws, when the frame can no longer be read (0.070334ms)
+✔ leaves main frames and frames with a real origin alone (0.372042ms)
+✔ all-thread grants wait for committed thread modes and compensate the same scope on failure (1.072041ms)
+✔ all-thread grants take every level but Custom, and reject mixed scopes (0.090791ms)
+✔ an all-thread Auto leaving Custom settles on its one reply, with no grant phases (0.339959ms)
+✔ scoped composer grants wait for the real commit and keep the bot default (0.122083ms)
+✔ an uncertain scoped commit compensates only its own thread (0.124417ms)
+✔ thread-only options reject missing or mixed scopes (0.070917ms)
+✔ permission refresh stays on one thread (0.070583ms)
+✔ confirmed model switches use only scoped Ask requests (0.087334ms)
+✔ a thread-only switch verifies the thread mode without changing the bot default (0.084041ms)
+✔ builds only bounded bot-scoped approval-mode requests (0.17775ms)
+✔ validates successful and failed trusted approval-mode results (0.375333ms)
+✔ carries the local Auto warning acknowledgement through the private channel (0.137416ms)
+✔ sends through one utility process and returns the matching server bot (0.142ms)
+✔ rejects a response for another trusted mode (0.084ms)
+✔ revokes an elevated grant before rejecting a malformed matching reply (0.071959ms)
+✔ another utility process cannot resolve a pending request (0.080459ms)
+✔ does not resolve an elevated selection when server confirmation is refused (0.10725ms)
+✔ rejects pending grants immediately when their utility process exits (0.092167ms)
+✔ times out only after an ambiguous elevated grant is revoked (112.385375ms)
+✔ safe Ask timeouts do not enqueue a redundant recovery (5.650959ms)
+✔ recognizes the links Copy link and a dashboard make (0.325625ms)
+✔ leaves every other link to its own handler (0.067458ms)
+✔ a published page's link opens in the browser, never as a chat (0.408125ms)
+✔ finds the link among a second launch's arguments (0.049292ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 176.384334

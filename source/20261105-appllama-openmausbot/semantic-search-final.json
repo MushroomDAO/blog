@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "proma-local-first-ai-desktop-agent-workspace",
+      "title": "Proma：把 Chat、Agent、Skills、MCP 和微信桥接做进一个本地优先桌面应用",
+      "url": "/blog/proma-local-first-ai-desktop-agent-workspace/",
+      "language": "zh",
+      "excerpt": "Proma：把 Chat、Agent、Skills、MCP 和微信桥接做进一个本地优先桌面应用 ErlichLiu 开源的 Proma 是一个本地优先 AI 桌面工作台：Claude Agent SDK + Pi Agent SDK 双运行时，每个工作区独立配置 Skills 和 MCP，飞书/微信/钉钉桥接让手机触发本机 Agent，AGPL-3.0 开源，1615 Stars。 本地AI 桌面应用 Agent工作台 Claude SDK MCP Skills 微信桥接 开源 Electron Pi Agent 一句话定位 两套 Agent 运行时，按",
+      "score": 0.57142085
+    },
+    {
+      "article_id": "luma-island-desktop-work-island",
+      "title": "Luma Island: One Touch, Work Starts — A Desktop Work Island for Everyone",
+      "url": "/blog/luma-island-desktop-work-island/",
+      "language": "en",
+      "excerpt": "Luma Island: One Touch, Work Starts — A Desktop Work Island for Everyone Luma Island (luma-island-builder) is a Codex Skill that guides you through building a small desktop edge launcher — open links, copy snippets, capture todos, run scripts — one touch, task starts. No prior de",
+      "score": 0.5649127
+    },
+    {
+      "article_id": "openmuse-copilotkit-personal-ai-agent-browser-workspace",
+      "title": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks",
+      "url": "/blog/openmuse-copilotkit-personal-ai-agent-browser-workspace/",
+      "language": "en",
+      "excerpt": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks OpenMuse by CopilotKit — MIT, open-sourced 2026-09-22. Personal AI agent template: persistent Chromium browser (profile retained across tasks), optional Linux works",
+      "score": 0.55634236
+    },
+    {
+      "article_id": "cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course",
+      "title": "CMU 11-768 AI Agents：OpenHands 作者亲授，从零搭 Harness、建评测、用 RL 训 Agent，视频讲义全开放",
+      "url": "/blog/cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course/",
+      "language": "zh",
+      "excerpt": "CMU 11-768 AI Agents：OpenHands 作者亲授，从零搭 Harness、建评测、用 RL 训 Agent，视频讲义全开放 CMU 语言技术研究所秋季新课，Graham Neubig（OpenHands 核心创始人）+ Daniel Fried 主讲。28 节课三阶段：搭 ReAct Harness→建 LLM-as-judge 评测→SFT+RL 训练 Agent。YouTube 播放列表已上传前 4 讲，3 次作业 starter code 已开放，GitHub 组织 cmu-agents。官网 cmu-agents.com。 ",
+      "score": 0.5466535
+    },
+    {
+      "article_id": "opensquilla-multi-model-routing-guide",
+      "title": "OpenSquilla：用多模型路由挑战顶级大模型，花 1/9 的钱达到同等效果",
+      "url": "/blog/opensquilla-multi-model-routing-guide/",
+      "language": "zh",
+      "excerpt": "OpenSquilla：用多模型路由挑战顶级大模型，花 1/9 的钱达到同等效果 OpenSquilla（5600+ Star，Apache 2.0）是一个 token 高效的微内核 AI Agent，其核心 SquillaRouter 在本地设备上把每轮对话路由到最便宜且能胜任的模型。基准测试显示：多模型路由（$0.69）vs 单独使用 Claude Opus 4.7（$6.23），评分几乎相同，成本降低 9 倍。 OpenSquilla 多模型路由 SquillaRouter AI Agent Token效率 开源 LLM 成本优化 微内核 一个颠覆",
+      "score": 0.5380672
+    },
+    {
+      "article_id": "openswarm-autonomous-ai-dev-team-claude-code-linear",
+      "title": "OpenSwarm：把 Claude Code + Codex 组成自主开发团队，从 Linear issue 到 PR 全自动",
+      "url": "/blog/openswarm-autonomous-ai-dev-team-claude-code-linear/",
+      "language": "zh",
+      "excerpt": "OpenSwarm：把 Claude Code + Codex 组成自主开发团队，从 Linear issue 到 PR 全自动 MIT 开源的 AI 开发团队编排器：从 Linear 拾取任务，Worker/Reviewer 对儿流水线，LanceDB 每仓库认知记忆，PR 自动驾驶，CI merge gate，SWE-bench Lite Hybrid 模式 3/3 解决。856 stars，TypeScript。 AI-agent open-source Claude-Code multi-agent developer-tools Linear ",
+      "score": 0.5331015
+    },
+    {
+      "article_id": "easel-open-source-social-media-agent-workbench",
+      "title": "Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布",
+      "url": "/blog/easel-open-source-social-media-agent-workbench/",
+      "language": "zh",
+      "excerpt": "Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布 浙大 REAL Lab + 北大 OpenDCAI Lab 开源的社媒创作 Agent：基于 OpenClaw，112 个 Skill 分六层（基础/发现/策划/创作/发布/归因），Python CLI + Web 工作台，支持小红书/抖音/快手/知乎/B站/视频号六平台登录发布。账号画像六维持久化，越用越懂账号。Apache-2.0，187 star，两周新。 AI Agent 开源 内容创作 自动化 小红书 OpenClaw Python 工作流 多平台 B",
+      "score": 0.5270884
+    },
+    {
+      "article_id": "openilink-hub-wechat-bot-platform-guide",
+      "title": "openilink-hub 搭建微信消息平台：开源自托管，20 款应用开箱即用",
+      "url": "/blog/openilink-hub-wechat-bot-platform-guide/",
+      "language": "zh",
+      "excerpt": "openilink-hub 搭建微信消息平台：开源自托管，20 款应用开箱即用 用 openilink-hub 把微信 Bot 变成完整平台：单文件部署，Slack、GitHub、飞书、AI Agent 全接入。 iLink 开源 AI Agent 一、背景 二、架构概览 三、5 分钟部署 最简单（单文件二进制） Docker（推荐） 生产环境（PostgreSQL + MinIO） 四、应用市场（20+） 平台互通 效率工具 零配置工具 五、接入 AI Agent 方式 1：AI Sink（最简单） 方式 2：WebSocket 实时推送 方式 3：W",
+      "score": 0.52664816
+    },
+    {
+      "article_id": "opengcua-generalist-computer-use-stack",
+      "title": "OpenGCUA: An Open Stack for Generalist Computer Use",
+      "url": "/blog/opengcua-generalist-computer-use-stack/",
+      "language": "en",
+      "excerpt": "OpenGCUA: An Open Stack for Generalist Computer Use OpenGCUA combines GUI, code and APIs for computer-use agents. Review its initial release, missing model weights, published results, Mac setup and test limits. OpenGCUA MAI-UI 电脑操作 Agent 开源 Why go beyond clicking a GUI? What is a",
+      "score": 0.52639484
+    },
+    {
+      "article_id": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+      "title": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+      "url": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
+      "language": "en",
+      "excerpt": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity OpenDCAI/GameFactory-3A is an open-source 3A game-generation skill and asset framework — Apache 2.0, Python, 256 stars. Core approach: connect coding agents (Claude Code, Codex, Gemini CLI) to a structured ",
+      "score": 0.52599066
+    }
+  ]
+}

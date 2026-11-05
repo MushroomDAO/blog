@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "openmuse-copilotkit-personal-ai-agent-browser-workspace",
+      "title": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks",
+      "url": "/blog/openmuse-copilotkit-personal-ai-agent-browser-workspace/",
+      "language": "en",
+      "excerpt": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks OpenMuse by CopilotKit — MIT, open-sourced 2026-09-22. Personal AI agent template: persistent Chromium browser (profile retained across tasks), optional Linux works",
+      "score": 0.6141536
+    },
+    {
+      "article_id": "omniroute-free-ai-gateway-290-providers-never-stop-coding",
+      "title": "OmniRoute：290 个 AI 提供商、一个端点、永不限流——免费 AI 网关的暴力美学",
+      "url": "/blog/omniroute-free-ai-gateway-290-providers-never-stop-coding/",
+      "language": "zh",
+      "excerpt": "OmniRoute：290 个 AI 提供商、一个端点、永不限流——免费 AI 网关的暴力美学 diegosouzapw/OmniRoute，27824 stars，MIT，5个月 500+ 贡献者。一个端点路由到 290+ AI 提供商（90+ 免费），4层自动 fallback 级联，19种路由策略，RTK+Caveman 压缩节省 15-95% tokens，MCP 104工具，~1.53B 免费 tokens/月。 AI网关 开源 Claude Code 免费AI 路由 MCP token压缩 开发工具 一、它解决什么问题 二、规模 三、4 层自",
+      "score": 0.5560427
+    },
+    {
+      "article_id": "open-connector-saas-auth-gateway-ai-agents",
+      "title": "OpenConnector: Connect AI Agents to 1,000+ SaaS Apps Without Touching OAuth",
+      "url": "/blog/open-connector-saas-auth-gateway-ai-agents/",
+      "language": "en",
+      "excerpt": "OpenConnector: Connect AI Agents to 1,000+ SaaS Apps Without Touching OAuth oomol-lab open-sources OpenConnector, an auth gateway for AI agents — an open-source alternative to Composio. 1000+ providers, 10000+ prebuilt Actions, credentials stay behind the gateway boundary. SDK, C",
+      "score": 0.5502113
+    },
+    {
+      "article_id": "andrew-ng-openworker-desktop-ai-coworker-local-aisuite",
+      "title": "OpenWorker：吴恩达开源的桌面 AI 协作者，本地运行 + 批准门 + 25+ 工具集成",
+      "url": "/blog/andrew-ng-openworker-desktop-ai-coworker-local-aisuite/",
+      "language": "zh",
+      "excerpt": "OpenWorker：吴恩达开源的桌面 AI 协作者，本地运行 + 批准门 + 25+ 工具集成 andrewyng/openworker，4天前刚开源。MIT，Python + TypeScript + Tauri + Rust，本地运行，BYOK（带自己的 key 或跑 Ollama），25+ 工具集成，批准门机制保留人类最终审批权。吴恩达 aisuite 的实战参考实现。 AI Agent 开源 桌面应用 本地优先 吴恩达 aisuite 工作流 自托管 一、它是什么 二、架构：三层 三、核心机制：批准门 四、支持什么 五、技术底层：aisuite",
+      "score": 0.54866105
+    },
+    {
+      "article_id": "opengcua-generalist-computer-use-stack",
+      "title": "OpenGCUA 首版开源：电脑 Agent 不只点鼠标，模型权重仍在路上",
+      "url": "/blog/opengcua-generalist-computer-use-stack/",
+      "language": "zh",
+      "excerpt": "OpenGCUA 首版开源：电脑 Agent 不只点鼠标，模型权重仍在路上 OpenGCUA 是阿里巴巴 MAI-UI 团队开放的通用电脑操作技术栈，组合视觉、代码、系统接口和跨设备工具。本文核对首版源码、Hugging Face 搜索结果、论文评测及 Mac 接入流程，解释为何当前没有自训模型权重，区分得分、步数、耗时与真实任务成功，并给出受控研究、权限配置和产物验收的工程建议。 OpenGCUA MAI-UI 电脑操作 Agent 开源 为什么电脑 Agent 要超出点鼠标？ 首版具体开放了什么？ 19.6 分提升和 53% 步数下降说明什么？ 想在",
+      "score": 0.54849344
+    },
+    {
+      "article_id": "openilink-hub-wechat-bot-platform-guide",
+      "title": "openilink-hub 搭建微信消息平台：开源自托管，20 款应用开箱即用",
+      "url": "/blog/openilink-hub-wechat-bot-platform-guide/",
+      "language": "zh",
+      "excerpt": "openilink-hub 搭建微信消息平台：开源自托管，20 款应用开箱即用 用 openilink-hub 把微信 Bot 变成完整平台：单文件部署，Slack、GitHub、飞书、AI Agent 全接入。 iLink 开源 AI Agent 一、背景 二、架构概览 三、5 分钟部署 最简单（单文件二进制） Docker（推荐） 生产环境（PostgreSQL + MinIO） 四、应用市场（20+） 平台互通 效率工具 零配置工具 五、接入 AI Agent 方式 1：AI Sink（最简单） 方式 2：WebSocket 实时推送 方式 3：W",
+      "score": 0.54587215
+    },
+    {
+      "article_id": "moss-tts-v15-multilingual-voice-clone",
+      "title": "MOSS-TTS v1.5: 31 Languages, Explicit Pause Control, Stabler Voice Cloning — Apache 2.0 Open Source",
+      "url": "/blog/moss-tts-v15-multilingual-voice-clone/",
+      "language": "en",
+      "excerpt": "MOSS-TTS v1.5: 31 Languages, Explicit Pause Control, Stabler Voice Cloning — Apache 2.0 Open Source OpenMOSS (Fudan NLP / Shanghai Innovation Institute / MOSI.AI) releases MOSS-TTS v1.5: 31 languages, [pause X.Ys] inline pause control, lower variance voice cloning, improved punct",
+      "score": 0.545281
+    },
+    {
+      "article_id": "sleepless-aboudjem-macbook-lid-closed-battery-pmset",
+      "title": "sleepless-aboudjem-macbook-lid-closed-battery-pmset",
+      "url": "/blog/sleepless-aboudjem-macbook-lid-closed-battery-pmset/",
+      "language": "en",
+      "excerpt": "sleepless-aboudjem-macbook-lid-closed-battery-pmset Aboudjem/Sleepless, Swift, MIT. Native macOS menu-bar app that uses pmset disablesleep to keep a MacBook awake with the lid closed — no external display, no power cable required. Battery floor and auto-off timer so it can't drai",
+      "score": 0.53470695
+    },
+    {
+      "article_id": "moss-tts-nano-ultralight-multilingual-tts-open-source",
+      "title": "0.1B Parameters, 20 Languages: MOSS-TTS-Nano Ultra-Lightweight TTS Is Open Source",
+      "url": "/blog/moss-tts-nano-ultralight-multilingual-tts-open-source/",
+      "language": "en",
+      "excerpt": "0.1B Parameters, 20 Languages: MOSS-TTS-Nano Ultra-Lightweight TTS Is Open Source OpenMOSS open-sources MOSS-TTS-Nano: 0.1B parameters, CPU-only, 48kHz stereo output, 20-language zero-shot voice cloning. Runs smoothly on a single CPU core (M4 MacBook Air), ONNX inference without ",
+      "score": 0.53247726
+    },
+    {
+      "article_id": "openworker-andrewyng-ai-coworker-25-integrations-local-first",
+      "title": "OpenWorker：吴恩达开源的 AI 协作者，交付成品而不是对话",
+      "url": "/blog/openworker-andrewyng-ai-coworker-25-integrations-local-first/",
+      "language": "zh",
+      "excerpt": "OpenWorker：吴恩达开源的 AI 协作者，交付成品而不是对话 andrewyng/openworker，13.8k stars，MIT，Python + Rust + React。吴恩达开源的桌面 AI 协作者，核心命题：给你交付完成品（文档、Slack 回复、更新后的日历），而不是下一步待办清单。25+ 应用集成，支持 OpenAI/Anthropic/Gemini/DeepSeek/Kimi/Ollama 等12个供应商，本地优先，写入/发送/运行命令前必须用户审批。基于 aisuite 构建。 AI助手 桌面应用 本地优先 吴恩达 aisu",
+      "score": 0.5322117
+    }
+  ]
+}
