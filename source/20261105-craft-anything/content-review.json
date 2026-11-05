@@ -1,0 +1,14 @@
+{
+  "lengths": {
+    "title": 30,
+    "titleEn": 55,
+    "description": 159,
+    "descriptionEn": 160,
+    "wechatTitle": 22,
+    "wechatDigest": 43
+  },
+  "sourceScope": "pinned commit, dual license, tool counts and adapter live limitations qualified",
+  "testScope": "606 formats/evidence +3 clean-room,525filtered; no e2e claim",
+  "bilingualImages": true,
+  "copyrightBlocks": 2
+}
