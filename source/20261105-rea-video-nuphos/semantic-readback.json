@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "1b77b6d57e81c430015c0b3d2ec8e8ca77331d0eca91b043",
+    "metadata": {
+      "article_id": "rea-video-nuphos-agent-workflow-review",
+      "content_hash": "7a12b3363716bc20",
+      "excerpt": "rea-video与Nuphos：拆解视频和团队Agent协作，各自解决什么？ rea-video把参考视频拆成镜头、制作方式、声音与复刻计划，Nuphos把编码智能体组织进多人共享、跨机器的工作区。本文依据官方仓库与定向测试，比较Skill、运行框架和协作入口的区别，核对自评准确率、模型费用、自托管条件与移动端限制，并复用Raven既有分析，说明三者能怎样分工以及哪些连接尚未实际验证。 rea-video Nuphos Raven AI视频 Agent工作流 rea-video：把“看着不错”变成制作清单 它是在识别制作方法，还是证明视频真伪？ 本机对",
+      "language": "zh",
+      "tags": [
+        "rea-video",
+        "Nuphos",
+        "Raven",
+        "AI视频",
+        "Agent工作流"
+      ],
+      "title": "rea-video与Nuphos：拆解视频和团队Agent协作，各自解决什么？",
+      "url": "/blog/rea-video-nuphos-agent-workflow-review/"
+    }
+  },
+  {
+    "id": "c36d9dfb0d7fcdf64302edd49aae3df588630cb5e6696db9",
+    "metadata": {
+      "article_id": "rea-video-nuphos-agent-workflow-review",
+      "content_hash": "5c36be0d88205f09",
+      "excerpt": "rea-video and Nuphos: Two Layers of Agent Workflows Compare rea-video production analysis with the Nuphos team agent workspace: targeted tests, accuracy caveats, runtime costs, self-hosting and mobile limits. rea-video Nuphos Raven AI视频 Agent工作流 What does rea-video produce? Does ",
+      "language": "en",
+      "tags": [
+        "rea-video",
+        "Nuphos",
+        "Raven",
+        "AI视频",
+        "Agent工作流"
+      ],
+      "title": "rea-video and Nuphos: Two Layers of Agent Workflows",
+      "url": "/blog/rea-video-nuphos-agent-workflow-review/"
+    }
+  }
+]
