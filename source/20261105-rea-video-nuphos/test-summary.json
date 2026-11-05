@@ -1,0 +1,40 @@
+{
+  "reaVideo": {
+    "revision": "d904b1e8328515dc95d9772cd2e65fb8acde996d",
+    "python": "3.12.14",
+    "files": [
+      "test_pipeline.py",
+      "test_review.py",
+      "test_fusion_groups.py",
+      "test_vlm_mock.py"
+    ],
+    "passed": 24,
+    "failed": 0,
+    "liveVLM": false,
+    "VLMPath": "localhost fake server",
+    "media": "ffmpeg-generated synthetic fixtures",
+    "ocr": false,
+    "stems": false,
+    "fullBenchmark": false,
+    "paidGeneration": false,
+    "ffmpeg": "9.0.2"
+  },
+  "nuphos": {
+    "revision": "40dba16a991fd603439aaf170f70bf6823c9c114",
+    "node": "26.10.0",
+    "files": [
+      "dev-options.test.ts",
+      "dev-backend-env.test.ts",
+      "dev-local-stack-env.test.ts",
+      "dev-managed-env.test.ts"
+    ],
+    "passed": 17,
+    "failed": 0,
+    "dockerStarted": false,
+    "desktopRun": false,
+    "mobileRun": false,
+    "cloudAccountConnected": false,
+    "teamSessionMigrationTested": false
+  },
+  "crossProjectIntegrationTested": false
+}

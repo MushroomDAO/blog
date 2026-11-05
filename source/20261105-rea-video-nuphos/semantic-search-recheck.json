@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "rea-video-nuphos-agent-workflow-review",
+      "title": "rea-video and Nuphos: Two Layers of Agent Workflows",
+      "url": "/blog/rea-video-nuphos-agent-workflow-review/",
+      "language": "en",
+      "excerpt": "rea-video and Nuphos: Two Layers of Agent Workflows Compare rea-video production analysis with the Nuphos team agent workspace: targeted tests, accuracy caveats, runtime costs, self-hosting and mobile limits. rea-video Nuphos Raven AI视频 Agent工作流 What does rea-video produce? Does ",
+      "score": 0.6615458
+    },
+    {
+      "article_id": "video-shotcraft-claude-code-remotion-cinematic-product-videos",
+      "title": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片",
+      "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/",
+      "language": "zh",
+      "excerpt": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片 Vincentwei1021 开源的 Claude Code / Codex Agent 视频制作技能包，3832 stars。内置 104 张镜头配方卡、161 种运动风格预览、完整 Remotion 视频模板 Ink Press（36.2秒/1920×1080/30fps）、149 个音效（16个场景类别）、5套背景音乐。Agent 拿到产品截图后自动分镜、动画、配音设计，直出可发布的产品宣传片。 AI视频制作 Claude Code Remotion Agent技能 产",
+      "score": 0.5478081
+    },
+    {
+      "article_id": "realtime-venus-fulldup-interactive-dual-loop-local-deploy",
+      "title": "Realtime-Venus: Full-Duplex Models and Async Agents",
+      "url": "/blog/realtime-venus-fulldup-interactive-dual-loop-local-deploy/",
+      "language": "en",
+      "excerpt": "Realtime-Venus: Full-Duplex Models and Async Agents A source audit of Realtime-Venus: two 9B full-duplex models, asynchronous agents, reported benchmarks, CUDA deployment, and practical limits for Mac users. Realtime-Venus full-duplex voice-ai agent CUDA open-source What does the",
+      "score": 0.532388
+    },
+    {
+      "article_id": "pi-workflow-openrath-personal-daily-workflow-guide",
+      "title": "pi-workflow v1.1.0: How Ordinary Individuals Build Reusable Automated Pipelines with Pi Agent",
+      "url": "/blog/pi-workflow-openrath-personal-daily-workflow-guide/",
+      "language": "en",
+      "excerpt": "pi-workflow v1.1.0: How Ordinary Individuals Build Reusable Automated Pipelines with Pi Agent pi-workflow is Pi Agent's sub-task orchestration extension — one install gives you four prebuilt pipelines (deep research, code review, spec comparison, change assessment) via natural la",
+      "score": 0.51850027
+    },
+    {
+      "article_id": "avatar-forge-cine-sleuth-video-digital-human-agent-skill",
+      "title": "CineSleuth + Avatar Forge: From Film Analysis to Digital Human Video — Agent Skills for the Full Creator Pipeline",
+      "url": "/blog/avatar-forge-cine-sleuth-video-digital-human-agent-skill/",
+      "language": "en",
+      "excerpt": "CineSleuth + Avatar Forge: From Film Analysis to Digital Human Video — Agent Skills for the Full Creator Pipeline Two open-source Agent Skills from LycheeAILab: CineSleuth breaks down any video frame-by-frame, extracting transcripts, scenes, shots, and creative intent; Avatar For",
+      "score": 0.51728046
+    },
+    {
+      "article_id": "pine-computer-agent-runtime-engineering",
+      "title": "Pine Computer: Agent Runtime Engineering Report",
+      "url": "/blog/pine-computer-agent-runtime-engineering/",
+      "language": "en",
+      "excerpt": "Pine Computer: Agent Runtime Engineering Report Explore Pine Computer’s agent runtime, event-driven perception, identity, recovery and costs, with an audit of public results and an integration review. Pine Computer AI Agent 云计算 Computer Use 工程架构 What is verified about the launch?",
+      "score": 0.5149086
+    },
+    {
+      "article_id": "openpanels-local-ai-agent-visual-workspace",
+      "title": "OpenPanels: A Local Visual Workspace for AI Agents, Five Panels from Writing to Publishing",
+      "url": "/blog/openpanels-local-ai-agent-visual-workspace/",
+      "language": "en",
+      "excerpt": "OpenPanels: A Local Visual Workspace for AI Agents, Five Panels from Writing to Publishing mooqii open-sources OpenPanels, a local-first visual workspace for AI agents, written in Rust, MIT license. Five panels cover the full pipeline from knowledge management and document writin",
+      "score": 0.5129906
+    },
+    {
+      "article_id": "reverse-skill-ai-agent-cybersecurity-penetration-skill-router",
+      "title": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents",
+      "url": "/blog/reverse-skill-ai-agent-cybersecurity-penetration-skill-router/",
+      "language": "en",
+      "excerpt": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents zhaoxuya520's open-source AI agent cybersecurity skill router, 20.9k stars, MIT. Solves the core problem of agents not knowing which security tool to use — 41 routing rules auto-class",
+      "score": 0.51295274
+    },
+    {
+      "article_id": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+      "title": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+      "url": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
+      "language": "en",
+      "excerpt": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity OpenDCAI/GameFactory-3A is an open-source 3A game-generation skill and asset framework — Apache 2.0, Python, 256 stars. Core approach: connect coding agents (Claude Code, Codex, Gemini CLI) to a structured ",
+      "score": 0.5109681
+    },
+    {
+      "article_id": "html-video-nexu-usage-guide",
+      "title": "html-video: Paste a Link, Get an MP4 — No Video Editor Needed",
+      "url": "/blog/html-video-nexu-usage-guide/",
+      "language": "en",
+      "excerpt": "html-video: Paste a Link, Get an MP4 — No Video Editor Needed nexu-io/html-video (3.7k★, Apache-2.0) turns a URL or GitHub repo into a real MP4 — locally, no cloud fees, no video editor. AI agent fetches the content, builds a multi-scene storyboard, applies one of 21 license-clea",
+      "score": 0.51066226
+    }
+  ]
+}
