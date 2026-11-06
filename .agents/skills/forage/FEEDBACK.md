@@ -1246,3 +1246,9 @@ NamiDSH最终核验：中英文2条向量回读成功，使用新查询公开语
 复用2026-10-18既有minicpm-v47-moe-vision-deployment双语稿和匹配封面，不重写不重部署。线上文章200、5个图像资源200、AgentFeed列出、公开语义检索命中；封面机器核验0failures。官方两个规模35B-A3B MoE与1B dense仍有入口，约3GB是特定LES端侧运行占用而非模型存储或普遍最低设备规格。
 
 旧草稿凭证prCUE631thH1cmNLi42prLCEA_EFiE7slyCPP-ee5PZ-saa4-YZ_FfT1sv70zyww查询返回40007，远程草稿箱14条全部读取无此文；已发布接口48001无权限。因此当前状态标记recorded，当前mediaId为空、旧创建凭证保留，未再创建可能已群发内容。KB实际7行读回最新状态，发布账本已更新。复核证据在source/20261018-minicpm-v47/recheck-20261106/。
+
+### 2026-11-06 WeVisOne-VL重复素材复核
+
+精确实体和Tencent/WeVisOne-VL补查找到10月26日既有wevisone-vl-unified-vision完整双语分析。复用原文、官方兔子alpha抠图匹配封面和3张小M图，不重写、不重部署；博客200、5图片资源200、AgentFeed列出、公开语义检索命中。封面0failures，官方配图Foreground文字为adopt允许警告。
+
+旧草稿prCUE631thH1cmNLi42prD5IKoEvZR_2YVOWOzqgUy4KG_qOPfTKsHAn35VnEO6j返回40007，14条远程草稿全读无此文，已发布接口48001。当前状态recorded，当前mediaId为空，保留旧创建凭证，未重建可能已经群发的内容。KB读回最新状态及URL、旧凭证，发布账本同步。证据source/20261026-wevisone-vl/recheck-20261106/。

@@ -1,0 +1,43 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6aedb0b8-537a8028-43cea8d7）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 965 篇 + 公众号草稿箱 14 条 + 本地发布记录 948 条 + MemPalace 3916 抽屉
+
+── 查：https://github.com/Tencent/WeVisOne-VL
+   ❌ [BLOG  ] WeVisOne-VL：七类视觉任务统一，48毫秒说法待核实
+      一手源相同: tencent/wevisone-vl
+   ❌ [发过 2026-10-26] WeVisOne-VL：统一视觉任务的能力与边界
+      一手源相同: tencent/wevisone-vl
+   ❌ [知识库] --- name: WeVisOne-VL unified visual perception description:
+      一手源相同: tencent/wevisone-vl
+
+── 查：WeVisOne-VL
+   ❌ [BLOG  ] NVIDIA SimReady：2575个资产之外，物理数据怎样落地？
+      正文出现实体名「wevisone-vl」
+   ❌ [BLOG  ] OvisOCR3：0.8B 统一文档解析、字段抽取与跨页表格
+      正文出现实体名「wevisone-vl」
+   ❌ [BLOG  ] WeVisOne-VL：七类视觉任务统一，48毫秒说法待核实
+      正文出现实体名「wevisone-vl」
+   ❌ [发过 2026-10-26] WeVisOne-VL：统一视觉任务的能力与边界
+      正文出现实体名「wevisone-vl」
+   ❌ [知识库] # WeVisOne-VL七任务视觉模型核查  **Summary**: 腾讯微信视觉团队开源WeVisOne-VL的2
+      正文出现实体名「wevisone-vl」
+   ❌ [知识库] --- name: WeVisOne-VL unified visual perception description:
+      正文出现实体名「wevisone-vl」
+   ❌ [知识库] GB latency-comparison evidence found in reviewed primary REA
+      正文出现实体名「wevisone-vl」
+   ❌ [知识库] # 腾讯开源4B视觉模型：从框到像素一把梭  **Summary**: 腾讯开源4B视觉模型：从框到像素一把梭 今天拆一
+      正文出现实体名「wevisone-vl」
+   ❌ [知识库] # 10 月 22 日，微信视觉团队在 arXiv 公开 WeV  **Summary**: 10 月 22 日，微信视
+      正文出现实体名「wevisone-vl」
+   ❌ [知识库] # WeVisOne-VL七任务视觉模型核查  **Summary**: 腾讯微信视觉团队开源WeVisOne-VL的2
+      正文出现实体名「wevisone-vl」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
