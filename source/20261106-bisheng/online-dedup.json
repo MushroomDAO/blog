@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "openviking-bytedance-context-database-for-ai-agents",
+      "title": "ByteDance Open-Sources OpenViking: A Self-Evolving Context Database for AI Agents",
+      "url": "/blog/openviking-bytedance-context-database-for-ai-agents/",
+      "language": "en",
+      "excerpt": "ByteDance Open-Sources OpenViking: A Self-Evolving Context Database for AI Agents volcengine/OpenViking (26k⭐) isn't another RAG framework — it's a context database for AI agents that unifies memory, knowledge, and skills under a filesystem paradigm. 26k stars in six months, back",
+      "score": 0.4907892
+    },
+    {
+      "article_id": "lance-bytedance-3b-multimodal-unified",
+      "title": "ByteDance Open-Sources Lance: 3B Parameters, Six Tasks, VBench Top Among Unified Models",
+      "url": "/blog/lance-bytedance-3b-multimodal-unified/",
+      "language": "en",
+      "excerpt": "ByteDance Open-Sources Lance: 3B Parameters, Six Tasks, VBench Top Among Unified Models ByteDance Intelligent Creation Lab open-sources Lance: 3B active parameters unifying image understanding/generation/editing and video understanding/generation/editing. GenEval 0.90 tied first,",
+      "score": 0.4812973
+    },
+    {
+      "article_id": "belief-context-graph-bcg-agent-memory-confidence-provenance-deterministic-reasoning",
+      "title": "Belief Context Graph: Upgrading Agent Memory from Retrieval to Confidence-Aware Belief Graph",
+      "url": "/blog/belief-context-graph-bcg-agent-memory-confidence-provenance-deterministic-reasoning/",
+      "language": "en",
+      "excerpt": "Belief Context Graph: Upgrading Agent Memory from Retrieval to Confidence-Aware Belief Graph bigai-nlco/belief-context-graph (BCG) upgrades agent memory from retrieval to a probabilistic, evidence-grounded belief graph with auditable deterministic confidence, evidence provenance,",
+      "score": 0.46113303
+    },
+    {
+      "article_id": "ling-3-0-tiny-ant-7b-moe-edge-device-mla-kda",
+      "title": "Ling-3.0-Tiny：7.9B 总参数激活仅 1.3B，蚂蚁百灵把混合推理 MoE 推进了端侧",
+      "url": "/blog/ling-3-0-tiny-ant-7b-moe-edge-device-mla-kda/",
+      "language": "zh",
+      "excerpt": "Ling-3.0-Tiny：7.9B 总参数激活仅 1.3B，蚂蚁百灵把混合推理 MoE 推进了端侧 蚂蚁百灵（Ling-Ant）开源轻量混合推理 MoE 模型 Ling-3.0-Tiny：总参数 7.9B、激活仅 1.3B，KDA 与 MLA 3:1 交替结构配合 128 专家稀疏 MoE，提供 BF16/FP8/INT4 三个精度版本。FP8 精度下 MacBook 上输出速度 86-90 tokens/s，8K 上下文峰值内存仅 8.34GiB。在智能指数评测获 25 分（比 Gemma-4-26B 低 1 分），Agent 得分超越 31B 级别",
+      "score": 0.46104115
+    },
+    {
+      "article_id": "wemm-embedding-tencent-multimodal-mrl",
+      "title": "WeMM-Embedding-9B: Tencent's Unified Multimodal Embedding Beats Qwen3-VL-Embedding at Every Size",
+      "url": "/blog/wemm-embedding-tencent-multimodal-mrl/",
+      "language": "en",
+      "excerpt": "WeMM-Embedding-9B: Tencent's Unified Multimodal Embedding Beats Qwen3-VL-Embedding at Every Size Tencent WeChat Vision Team's open-source multimodal embedding model, built on Qwen3.5-9B, maps text, images, video, and visual documents into one 4096-dim vector space with Matryoshka",
+      "score": 0.45928034
+    },
+    {
+      "article_id": "fliggy-bangbang-model-harness-memory-agent-architecture",
+      "title": "Reading Notes: What Fliggy Bangbang Teaches About Model + Harness + Memory — Plus a Buildable AI Architecture",
+      "url": "/blog/fliggy-bangbang-model-harness-memory-agent-architecture/",
+      "language": "en",
+      "excerpt": "Reading Notes: What Fliggy Bangbang Teaches About Model + Harness + Memory — Plus a Buildable AI Architecture An analysis extending Xiaohongshu blogger 小盖's reflection on Fliggy's AI product evolution from '问一问' (Ask) to '飞猪帮帮' (Bangbang). He argues all Agent products converge on",
+      "score": 0.45851856
+    },
+    {
+      "article_id": "deepseek-v4-flash-vision-exp-multimodal-agent-dspark",
+      "title": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了",
+      "url": "/blog/deepseek-v4-flash-vision-exp-multimodal-agent-dspark/",
+      "language": "zh",
+      "excerpt": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了 DeepSeek-V4 家族第一个实验性多模态模型，8 月 31 日上线，五天 18.4 万下载、651 likes，MIT。在 DeepSeek-V4-Flash 架构上加视觉模块并继续训练：多模态 agent 能力大幅提升，而七项文本 agent 基准里六项不降反升。三项超过 Opus-4.8（DeepSWE 59.3、Agents' Last Exam 27.3、ZeroBench 35.0）。DSpark 推测解码的 draft 权重和 targ",
+      "score": 0.4575535
+    },
+    {
+      "article_id": "bytedance-bernini-video-model-deployment-guide",
+      "title": "ByteDance Open-Sources Bernini: Unified Video Generation & Editing with MLLM Semantic Planning + DiT Rendering",
+      "url": "/blog/bytedance-bernini-video-model-deployment-guide/",
+      "language": "en",
+      "excerpt": "ByteDance Open-Sources Bernini: Unified Video Generation & Editing with MLLM Semantic Planning + DiT Rendering ByteDance open-sources Bernini, a unified video model framework pairing a Qwen2.5-VL semantic planner with a Wan2.2 DiT renderer — now in the top tier on video editing l",
+      "score": 0.45680514
+    },
+    {
+      "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "title": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时",
+      "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+      "language": "zh",
+      "excerpt": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时 复旦+北大+奇迹智风，arXiv:2604.25850，MIT，Python。AHE 提出一个闭环：不动模型权重，只进化 harness——通过三层可观测性（组件/经验/决策），让 Evolve Agent 自动分析 trace、提出修改、预测效果，下一轮自动验证。10次迭代把 GPT-5.4 在 Terminal-Bench 2 上从 69.7% 提升到 77.0%，超过手写 Codex-CLI（71.9%）。冻结后的 harness ",
+      "score": 0.45618528
+    },
+    {
+      "article_id": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+      "title": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+      "url": "/blog/penguin-harness-self-evolving-agent-builder-skills-benchmark/",
+      "language": "en",
+      "excerpt": "penguin-harness-self-evolving-agent-builder-skills-benchmark Prism-Shadow/penguin-harness, 1140 stars, Apache-2.0, TypeScript. A new project by LlamaFactory author Yaowei Zheng, open-sourced 2026-07-19. Automated agent builder platform: one sentence builds a complete agent app ($",
+      "score": 0.45605928
+    }
+  ]
+}
