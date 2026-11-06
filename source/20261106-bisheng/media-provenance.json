@@ -1,0 +1,31 @@
+{
+  "banner": {
+    "origin": "localFLUX2Klein4B",
+    "seed": 8241,
+    "bytes": 94510,
+    "machineFailures": 0,
+    "manualReview": "accepted fullframe documenttrays/cables/unmarkedserver/key metaphor,no text/faces;notactualhardwaredeployment"
+  },
+  "officialImages": [
+    {
+      "source": "https://github.com/dataelement/bisheng/blob/62f5893912a171265769f004fe79a96cfb009fee/docs/images/readme/bisheng-platform-overview.png",
+      "saved": "/Users/jason/.heinu1-bot/media/bisheng-official-platform-overview.png"
+    },
+    {
+      "source": "https://github.com/dataelement/bisheng/blob/62f5893912a171265769f004fe79a96cfb009fee/docs/images/readme/knowledge-space.png",
+      "saved": "/Users/jason/.heinu1-bot/media/bisheng-official-knowledge-space.png"
+    }
+  ],
+  "adoptionDecision": "officialscreenshots inspected,mostlyUItext and darkscreens;sourceevidence retained,generatedthemeappropriatecoverinstead",
+  "bodyFigures": {
+    "origin": "imagegeneration publisherStep3.5",
+    "workerExit": 0,
+    "raw": "generated_images/bisheng-20261106",
+    "manualReview": "all3accepted legiblelabels,activeLittleM,whitebackground",
+    "bytes": [
+      57621,
+      46794,
+      55349
+    ]
+  }
+}
