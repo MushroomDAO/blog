@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "bisheng-enterprise-agent-rag-workflow-deployment",
+      "title": "Bisheng：企业知识库、工作流与桌面Agent怎么连起来？",
+      "url": "/blog/bisheng-enterprise-agent-rag-workflow-deployment/",
+      "language": "zh",
+      "excerpt": "Bisheng：企业知识库、工作流与桌面Agent怎么连起来？ Bisheng把知识空间、任务Agent、工作流、桌面客户端和应用发布连接到企业模型与权限体系。本文核对官方仓库与部署配置，解释开源代码和商业能力的边界、8核32GB环境要求、ARM镜像与数据流向，并记录35项CLI测试的真实范围，给出适合小团队逐步验证的落地路线，避免把一条启动命令当作完整生产交付。 Bisheng Agent RAG 企业AI 工作流 开源 Bisheng解决的是什么问题？ 七块能力，应当怎样分工？ 工作流和任务Agent，应该先用哪个？ 企业知识库，不能只看“回答对不对",
+      "score": 0.58490115
+    },
+    {
+      "article_id": "apodex-1-1-mini-working-capability-local-agent-guide",
+      "title": "Apodex 1.1 Mini 调研：训「持续干活的能力」，不是训「聊得更像」，35B 本地可跑",
+      "url": "/blog/apodex-1-1-mini-working-capability-local-agent-guide/",
+      "language": "zh",
+      "excerpt": "Apodex 1.1 Mini 调研：训「持续干活的能力」，不是训「聊得更像」，35B 本地可跑 调研 Apodex/Apodex-1.1-mini：Qwen3.5-35B-A3B（256 专家/8 激活，约 3B 激活参数）的 Agent 微调版，Apache-2.0，图文输入文本输出，中英双语。配套论文 arXiv:2608.23283 提出「working capability」概念——不是比谁推理更强，而是比谁能在文件/搜索/代码环境里持续干活、失败后能恢复、最终交付可验证的结果。训练分两条线：Environment Scaling（扩展可验证的",
+      "score": 0.54712045
+    },
+    {
+      "article_id": "yuxi-self-hosted-knowledge-agent-rag-graph-multi-agent-mcp",
+      "title": "Yuxi 0.8 beta5：知识、协作与执行如何接成工作流？",
+      "url": "/blog/yuxi-self-hosted-knowledge-agent-rag-graph-multi-agent-mcp/",
+      "language": "zh",
+      "excerpt": "Yuxi 0.8 beta5：知识、协作与执行如何接成工作流？ Yuxi 0.8 beta5 把知识检索、多智能体协作、人工引导与文件交付接成企业工作流。本文沿用旧文章链接，核对官方预发布标签、Container 与 Cube 沙盒边界、知识 MCP 和公开 API，并记录新版 CLI 的15项源码测试及 npm 查询结果，说明 Mac 试用条件和旧版不可原地升级的限制。 Yuxi RAG 多智能体 MCP 自托管 Docker 它解决的是哪一类问题？ 0.8 最值得关注的变化是什么？ 团队权限与工具账号怎样管理？ 排队、引导和停止有何区别？ 知识 MC",
+      "score": 0.54274905
+    },
+    {
+      "article_id": "pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp",
+      "title": "pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp",
+      "url": "/blog/pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp/",
+      "language": "en",
+      "excerpt": "pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp pipeshub-ai/pipeshub-ai is an open-source Enterprise AI Context Layer that unifies enterprise knowledge connectivity, permission-aware access control, knowledge graph retrieval, 50+ source connectors, RAG Q&A, agent bui",
+      "score": 0.53745794
+    },
+    {
+      "article_id": "lance-bytedance-3b-multimodal-unified",
+      "title": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜",
+      "url": "/blog/lance-bytedance-3b-multimodal-unified/",
+      "language": "zh",
+      "excerpt": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜 字节跳动智能创作实验室开源 Lance：3B 激活参数，统一支持图像理解/生成/编辑与视频理解/生成/编辑六项任务。GenEval 0.90 并列第一，VBench 85.11 登顶统一模型，Apache 2.0 开源。 多模态 字节跳动 Lance 图像生成 视频生成 开源 3B 统一模型 六项能力，一个模型 基准成绩 技术要点",
+      "score": 0.5221219
+    },
+    {
+      "article_id": "llm-dock-docker-compose-local-llm-dashboard",
+      "title": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板",
+      "url": "/blog/llm-dock-docker-compose-local-llm-dashboard/",
+      "language": "zh",
+      "excerpt": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板 LLM-Dock 是一个管理本地 LLM 推理服务的 Web 面板：自动扫描 HuggingFace 缓存发现模型，llama.cpp 跑 GGUF、vLLM 跑 safetensors，3300-3400 端口段自动分配，一键起停，自动注册进 Open WebUI，还能在面板里直接跑 llama-bench 并把结果存库对比。前提是 Linux + NVIDIA。 本地推理 Docker llama.cpp vLLM 运维 开源 Open Web",
+      "score": 0.5220699
+    },
+    {
+      "article_id": "staffdeck-openbmb-enterprise-digital-employee-platform",
+      "title": "StaffDeck: ModelBest + Tsinghua THUNLP Open-Source Enterprise Digital Employee Platform with State-Machine SOPs",
+      "url": "/blog/staffdeck-openbmb-enterprise-digital-employee-platform/",
+      "language": "en",
+      "excerpt": "StaffDeck: ModelBest + Tsinghua THUNLP Open-Source Enterprise Digital Employee Platform with State-Machine SOPs ModelBest, Tsinghua THUNLP, and OpenBMB jointly open-source StaffDeck, converting employee expertise and business processes into runnable digital employees: state-machi",
+      "score": 0.52138096
+    },
+    {
+      "article_id": "cf-workers-checkproxyip-single-file-worker-tcp-tls-probe",
+      "title": "一个 _worker.js 文件就是全部：CF-Workers-CheckProxyIP 在 Workers 上做 TCP/TLS 连通性体检",
+      "url": "/blog/cf-workers-checkproxyip-single-file-worker-tcp-tls-probe/",
+      "language": "zh",
+      "excerpt": "一个 _worker.js 文件就是全部：CF-Workers-CheckProxyIP 在 Workers 上做 TCP/TLS 连通性体检 cmliu/CF-Workers-CheckProxyIP 把页面、DNS 解析、TCP/TLS 探测全塞进一个 _worker.js，复制粘贴进 Cloudflare 控制台就能跑。技术看点是它用 cloudflare:sockets 在 Worker 里真的建 TCP 连接做 TLS 握手，再靠两个固定探针推断候选目标是 ipv4_only 还是双栈。免费套餐的子请求上限逼出了「每批最多 15 个域名、3 秒",
+      "score": 0.5176162
+    },
+    {
+      "article_id": "stirling-pdf-local-toolbox-guide",
+      "title": "Stirling-PDF: Local Tools, Deployment and Privacy",
+      "url": "/blog/stirling-pdf-local-toolbox-guide/",
+      "language": "en",
+      "excerpt": "Stirling-PDF: Local Tools, Deployment and Privacy Explore Stirling-PDF through official sources, practical setup requirements, evidence limits, and independent analysis. Know what was checked before adoption. Stirling-PDF 开源工具 工程实践 证据核查 How should it be deployed? What does local ",
+      "score": 0.51621836
+    },
+    {
+      "article_id": "virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac",
+      "title": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI",
+      "url": "/blog/virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac/",
+      "language": "zh",
+      "excerpt": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI hsj576/virtual-ai-infra-team 不是多 agent 角色扮演，而是一个给本地大模型做「自动测速、升级、回滚」的控制器：模型只提计划，确定性代码判决。README 的 18.14→37.52 tok/s（+106.84%）我们重算无误，但这个中位数来自代码题；按提示词拆开，散文题只快 50.6%，9 个样本的均值是 +89%。167 个测试本机全过，4 道质量门禁题被我们一句话骗过，候选库里只有 1",
+      "score": 0.5153919
+    }
+  ]
+}

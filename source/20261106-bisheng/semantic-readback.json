@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "id": "acb6e02ab2c658d5475bc32f737db999cd8fa2f16f22a13f",
+    "metadata": {
+      "article_id": "bisheng-enterprise-agent-rag-workflow-deployment",
+      "content_hash": "62b1a99443fe3ca7",
+      "excerpt": "Bisheng：企业知识库、工作流与桌面Agent怎么连起来？ Bisheng把知识空间、任务Agent、工作流、桌面客户端和应用发布连接到企业模型与权限体系。本文核对官方仓库与部署配置，解释开源代码和商业能力的边界、8核32GB环境要求、ARM镜像与数据流向，并记录35项CLI测试的真实范围，给出适合小团队逐步验证的落地路线，避免把一条启动命令当作完整生产交付。 Bisheng Agent RAG 企业AI 工作流 开源 Bisheng解决的是什么问题？ 七块能力，应当怎样分工？ 工作流和任务Agent，应该先用哪个？ 企业知识库，不能只看“回答对不对",
+      "language": "zh",
+      "tags": [
+        "Bisheng",
+        "Agent",
+        "RAG",
+        "企业AI",
+        "工作流",
+        "开源"
+      ],
+      "title": "Bisheng：企业知识库、工作流与桌面Agent怎么连起来？",
+      "url": "/blog/bisheng-enterprise-agent-rag-workflow-deployment/"
+    }
+  },
+  {
+    "id": "da590cea7aeafc8f30034967707308e670aa50d0cbee7956",
+    "metadata": {
+      "article_id": "bisheng-enterprise-agent-rag-workflow-deployment",
+      "content_hash": "f078ea8be7d279e3",
+      "excerpt": "Bisheng: Enterprise Agents, RAG and Deployment Trade-offs Explore Bisheng's enterprise agents, RAG, workflows and desktop integration, with source checks, deployment caveats, licensing scope and 35 local CLI tests. Bisheng Agent RAG 企业AI 工作流 开源 What problem does Bisheng address? ",
+      "language": "en",
+      "tags": [
+        "Bisheng",
+        "Agent",
+        "RAG",
+        "企业AI",
+        "工作流",
+        "开源"
+      ],
+      "title": "Bisheng: Enterprise Agents, RAG and Deployment Trade-offs",
+      "url": "/blog/bisheng-enterprise-agent-rag-workflow-deployment/"
+    }
+  }
+]
