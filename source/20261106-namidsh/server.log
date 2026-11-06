@@ -1,0 +1,6 @@
+
+> nami-dsh@0.1.0 start
+> node apps/web/src/main.ts
+
+[W] web 没有设置 API_KEY，使用离线假模型
+[I] webserver 网页端已启动：http://localhost:13761

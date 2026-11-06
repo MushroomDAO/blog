@@ -1,0 +1,22 @@
+{
+  "node": "v26.10.0",
+  "homeStatus": 200,
+  "APIKeyAbsent": true,
+  "mockOnly": true,
+  "results": [
+    {
+      "message": "现在几点？",
+      "tool": "get_time",
+      "text": "工具返回了结果：\n\n2026/11/6 15:08:58\n\n（这是离线假模型的回答。设置环境变量 API_KEY 后会改用 DeepSeek。）",
+      "eventCount": 75,
+      "done": true
+    },
+    {
+      "message": "项目里有哪些文件",
+      "tool": "list_dir",
+      "text": "工具返回了结果：\n\nfixture.txt\n\n（这是离线假模型的回答。设置环境变量 API_KEY 后会改用 DeepSeek。）",
+      "eventCount": 68,
+      "done": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+--- /tmp/namidsh-mini-trace.txt	2026-11-06 15:09:43
++++ /tmp/namidsh-vendored-trace.txt	2026-11-06 15:10:20
+@@ -70,7 +70,7 @@
+   serial = second
+   parallel 完成
+   waterfall rm = blocked
+-  waterfall ls = RAN LS
++  waterfall ls = RAN UNDEFINED
+ === 10 卸载插件：监听自动取消
+   [status] l: PENDING -> LOADING
+   [status] l: LOADING -> ACTIVE
