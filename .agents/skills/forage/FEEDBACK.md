@@ -1258,3 +1258,5 @@ NamiDSH最终核验：中英文2条向量回读成功，使用新查询公开语
 dataelement/bisheng固定62f5893912a171265769f004fe79a96cfb009fee；初始重复仅原始KB，未有Blog/M2。agent-reach未安装，用户允许的JinaReader抓取成功，源码对照并保存2官方截图。当前README覆盖知识空间、任务Agent、工作流、桌面集成与应用工场；不把Apache2主仓授权扩大成所有商业服务免费，统计看板商业版、Gateway可选授权文件分别说明。顶层Compose快启与dockerREADME的env准备存在差异，说明安装脚本、ARM逐项镜像、后端beta6与v3.0镜像版本口径。8核32GB为官方前置条件，不是含本地模型的容量保证。
 
 独立venv执行现有CLI3文件35测试通过，bash-n安装脚本及helper通过；本机无Docker，未运行配置准备/整套服务，无模型/RAG质量/权限/桌面/并发实测。FLUX8241封面机器与人工核验通过，3小M图均核验，截图仅产品资料非本机运行。双语Blog轮播1/列表1/5图200；公众号全文、3图、封面、元数据和原文链接回读一致，未群发。KB/账本已写，语义2条接收后的传播状态见source/20261106-bisheng/semantic-status.json。
+
+Bisheng最终核验：中英文2条向量回读成功，新公开查询命中；KB实际3行确认BlogURL、草稿ID和verified状态，三件套完成。
