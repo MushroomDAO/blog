@@ -1,0 +1,30 @@
+{
+  "banner": {
+    "source": "local FLUX.2 Klein4B",
+    "seed": 8231,
+    "bytes": 92731,
+    "machineFailures": 0,
+    "manualReview": "accepted modular learning board metaphor, no text or faces; not a product photo"
+  },
+  "officialImage": {
+    "path": "/Users/jason/.heinu1-bot/media/namidsh-official-architecture.png",
+    "source": "https://github.com/aa1143/NamiDSH/blob/629e9efcb121b2805a2f3c48565144b732c0ff7f/assets/architecture.png",
+    "notUsedForCover": "text-heavy diagram"
+  },
+  "bodyFigures": {
+    "origin": "image generation tool via publisher Step3.5 worker",
+    "rawDirectory": "generated_images/namidsh-20261106",
+    "manualReview": "all3 accepted;red polka-dot mushroom actively swaps service/guides request/compares mock demonstration and production scaffolding",
+    "dimensions": [
+      1120,
+      630
+    ],
+    "palette": "<=48",
+    "bytes": [
+      26458,
+      47060,
+      42974
+    ],
+    "workerExitCode": 0
+  }
+}

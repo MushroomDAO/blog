@@ -1,0 +1,15 @@
+{
+  "title": "NamiDSH：读懂插件式Agent架构",
+  "author": "Mycelium",
+  "digest": "实跑迷你插件框架，解释依赖、生命周期与工具管线，也核对兼容性和离线运行的边界。",
+  "mediaId": "prCUE631thH1cmNLi42prObd8wZtKs6FMdUv00UPH5GJ2lVodzmS1d4-qLjdaX8n",
+  "blogUrl": "https://blog.mushroom.cv/blog/namidsh-cordis-plugin-agent-architecture-review/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/namidsh-cordis-plugin-agent-architecture-review/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/aa1143/namidsh",
+    "github.com/deepseek-ai/deepseek-harness",
+    "github.com/aa1143/namidsh.git"
+  ],
+  "publishedAt": "2026-11-06T08:20:16.012Z"
+}

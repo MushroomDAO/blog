@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-06T08:20:23.974Z",
+  "drafts": [
+    {
+      "slug": "namidsh-cordis-plugin-agent-architecture-review",
+      "mediaId": "prCUE631thH1cmNLi42prObd8wZtKs6FMdUv00UPH5GJ2lVodzmS1d4-qLjdaX8n",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "54f505f6c168f716afbb785675a2620f068474f6c5c4aadeae3477f2b8d1c3b4",
+      "remoteTextHash": "54f505f6c168f716afbb785675a2620f068474f6c5c4aadeae3477f2b8d1c3b4",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/namidsh-cordis-plugin-agent-architecture-review/",
+      "localContentHash": "749fb9e12de2819dce7b80d2c1abf6454c76dcf2c653f7a7025ca051246ec0e4",
+      "remoteContentHash": "ac0aa4dc31ae4fa01233e653bb13bf0f4f3b15f0b869ccc19c566e3eadfbce5a"
+    }
+  ]
+}

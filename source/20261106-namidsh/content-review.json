@@ -1,0 +1,14 @@
+{
+  "communityNotOfficial": true,
+  "lineCountScopeExplained": true,
+  "noFullCompatibilityClaim": true,
+  "originalTestsVsDiffSeparated": true,
+  "114TraceOneLineDifferenceTwoReferences": true,
+  "mockNotLanguageModel": true,
+  "HTTPNotBrowserTest": true,
+  "lexicalPathNotSandbox": true,
+  "fixtureNoPrivateFiles": true,
+  "memoryOnlySessions": true,
+  "noPaidInferenceOrLoadTest": true,
+  "evidencePinned": true
+}
