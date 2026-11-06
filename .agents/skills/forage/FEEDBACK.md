@@ -1238,3 +1238,5 @@ LingBot最终核验：中英文2条索引回读及公开语义检索通过，KB�
 原仓aa1143/NamiDSH固定629e9ef，社区MIT；物理行数含注释Cordis899、全部packages1549、入口34、原测试265，不能把680核心净行数当整个UI应用规模。原npm test和tsc通过，两条无Key离线HTTP工具请求完成；离线是规则mock，没有本地LLM推理。114行兼容性日志对npmCordis4.1.0和DSH fcc0ad4 vendored源码均有1行waterfall默认回调参数差异，不声称完整等价或推翻历史结果。临时夹具确认../被拦但符号链接可读边界外夹具；未读私人文件，不作为强沙箱。会话内存保存，生产需要持久化、权限、调度和限额。无付费模型/浏览器/压力测试。
 
 FLUX8231封面0failures，3小M图人工检查，公众号全文、3图、封面、元数据和原文链接回读一致，未群发。Blog轮播1/列表1/5图片200。KB和账本已写，语义2条接收后的传播状态见source/20261106-namidsh/semantic-status.json。
+
+NamiDSH最终核验：中英文2条向量回读成功，使用新查询公开语义搜索命中；KB实际3行确认URL、media_id与verified状态。

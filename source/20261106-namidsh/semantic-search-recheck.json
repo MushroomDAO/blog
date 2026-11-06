@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "article_id": "namidsh-cordis-plugin-agent-architecture-review",
+      "title": "NamiDSH实测：用迷你插件系统读懂Agent架构",
+      "url": "/blog/namidsh-cordis-plugin-agent-architecture-review/",
+      "language": "zh",
+      "excerpt": "NamiDSH实测：用迷你插件系统读懂Agent架构 NamiDSH用精简TypeScript展示DeepSeek Harness的插件、依赖注入与Agent循环。本文核对源码行数，运行兼容性脚本、类型检查和离线HTTP工具调用，并发现当前Cordis的waterfall输出差异，解释它适合教学的原因，以及文件访问、会话持久化、权限和生产部署仍需补齐的工程边界。 NamiDSH DeepSeek Harness Cordis Agent TypeScript “一千行”到底包括哪些代码？ Cordis 为什么像 Agent 的主板？ 一次提问怎样经过插件",
+      "score": 0.46562558
+    },
+    {
+      "article_id": "infinitediffusion-terrain-generation-guide",
+      "title": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文",
+      "url": "/blog/infinitediffusion-terrain-generation-guide/",
+      "language": "zh",
+      "excerpt": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文 Alexander Goslin 以独立研究者身份，用 RTX 3090 Ti 发表 SIGGRAPH 2026 论文 InfiniteDiffusion，将扩散模型改造为懒惰采样，实现无界、O(1) 随机访问、确定性的无限地形生成。本文整理复现路径与游戏/工程应用方向。 扩散模型 程序化生成 游戏开发 SIGGRAPH 地形生成 AI图形 独立研究 先说这件事本身有多不寻常 论文在解决什么问题？ 原始资源 30 分钟复现路径 Step 0：环境 St",
+      "score": 0.41400194
+    },
+    {
+      "article_id": "a16z-anish-acharya-ai-loops-moats-consumer",
+      "title": "a16z 合伙人 80 分钟 AI 深谈：护城河是被发现的，最大机会是让人更快乐",
+      "url": "/blog/a16z-anish-acharya-ai-loops-moats-consumer/",
+      "language": "zh",
+      "excerpt": "a16z 合伙人 80 分钟 AI 深谈：护城河是被发现的，最大机会是让人更快乐 Anish Acharya 在 Lenny 播客中提出了四个反直觉洞察：公司正在变成Loop、模型选择是门手艺、消费者真正需要的不是效率而是快乐、护城河从来不是设计出来的。这不是预测，是当下正在发生的重组逻辑。 a16z AI-strategy consumer-AI product Anish-Acharya moat 一、公司正在变成 Loop：人类守住分叉点就够了 二、Model Sommelier：会选模型，比用最贵的模型更重要 三、消费者最大机会：不是\"帮我省时间",
+      "score": 0.4132514
+    }
+  ]
+}
