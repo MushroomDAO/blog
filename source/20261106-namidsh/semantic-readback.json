@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "54049a61435295cb6f0e7f4c5588d4b1aa9efe7738aa146a",
+    "metadata": {
+      "article_id": "namidsh-cordis-plugin-agent-architecture-review",
+      "content_hash": "821cb318cd03176b",
+      "excerpt": "NamiDSH实测：用迷你插件系统读懂Agent架构 NamiDSH用精简TypeScript展示DeepSeek Harness的插件、依赖注入与Agent循环。本文核对源码行数，运行兼容性脚本、类型检查和离线HTTP工具调用，并发现当前Cordis的waterfall输出差异，解释它适合教学的原因，以及文件访问、会话持久化、权限和生产部署仍需补齐的工程边界。 NamiDSH DeepSeek Harness Cordis Agent TypeScript “一千行”到底包括哪些代码？ Cordis 为什么像 Agent 的主板？ 一次提问怎样经过插件",
+      "language": "zh",
+      "tags": [
+        "NamiDSH",
+        "DeepSeek Harness",
+        "Cordis",
+        "Agent",
+        "TypeScript"
+      ],
+      "title": "NamiDSH实测：用迷你插件系统读懂Agent架构",
+      "url": "/blog/namidsh-cordis-plugin-agent-architecture-review/"
+    }
+  },
+  {
+    "id": "d8648b1e34878fe398029eb4d71b5704628242ce87f0556b",
+    "metadata": {
+      "article_id": "namidsh-cordis-plugin-agent-architecture-review",
+      "content_hash": "daca44f66f4b7c06",
+      "excerpt": "NamiDSH: A Tested Guide to Plugin-Based Agent Architecture NamiDSH makes plugin-based agents readable. Local tests expose a Cordis trace difference and clarify offline mocks, file access, and production boundaries. NamiDSH DeepSeek Harness Cordis Agent TypeScript What does “about",
+      "language": "en",
+      "tags": [
+        "NamiDSH",
+        "DeepSeek Harness",
+        "Cordis",
+        "Agent",
+        "TypeScript"
+      ],
+      "title": "NamiDSH: A Tested Guide to Plugin-Based Agent Architecture",
+      "url": "/blog/namidsh-cordis-plugin-agent-architecture-review/"
+    }
+  }
+]
