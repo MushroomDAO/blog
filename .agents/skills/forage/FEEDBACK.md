@@ -1232,3 +1232,9 @@ Appllama/OpenMausBot最终核验：中英文2条索引回读及公开语义检�
 实际VisionSmall CPUFP32 pretrained224x224->1x196x384全finite，21601152参数，188权重项0missing0unexpected。源码151e46321bae4399f8568829f190c7bdec216b49，HF127cbcec380de0bcd55bdc1b1fad3819850a6514；临时依赖隔离，Xet停滞后HTTP成功，无机器人/World/性能基准实测。封面8221人工拒伪文字改8222；3小M图核验，图1绝对“尚未集成”改“按任务对接”。Blog轮播1/列表6/5图200，公众号全文/3图/封面/元数据/原文链接回读一致，未群发；KB和账本已更新，语义传播见source/20261105-lingbot/semantic-status.json。
 
 LingBot最终核验：中英文2条索引回读及公开语义检索通过，KB实际记录确认URL、草稿ID与索引状态；均为verified。
+
+### 2026-11-06 NamiDSH：教学架构与当前兼容性核验
+
+原仓aa1143/NamiDSH固定629e9ef，社区MIT；物理行数含注释Cordis899、全部packages1549、入口34、原测试265，不能把680核心净行数当整个UI应用规模。原npm test和tsc通过，两条无Key离线HTTP工具请求完成；离线是规则mock，没有本地LLM推理。114行兼容性日志对npmCordis4.1.0和DSH fcc0ad4 vendored源码均有1行waterfall默认回调参数差异，不声称完整等价或推翻历史结果。临时夹具确认../被拦但符号链接可读边界外夹具；未读私人文件，不作为强沙箱。会话内存保存，生产需要持久化、权限、调度和限额。无付费模型/浏览器/压力测试。
+
+FLUX8231封面0failures，3小M图人工检查，公众号全文、3图、封面、元数据和原文链接回读一致，未群发。Blog轮播1/列表1/5图片200。KB和账本已写，语义2条接收后的传播状态见source/20261106-namidsh/semantic-status.json。

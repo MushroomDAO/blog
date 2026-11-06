@@ -1,0 +1,3 @@
+Official architecture image inspected: readable technical diagram, text-heavy, retained as source media rather than cover.
+FLUX8231 cover accepted: modular electronics teaching metaphor, no people or text, fills frame; machine verification0failures. It is explicitly described as illustrative, not actual project hardware.
+All3 compressed figures manually inspected. Labels are legible, LittleM participates in the central action. Figure1 provider replacement and dependency recovery; figure2 approval/execution/results; figure3 offline demonstration vs unfinished production features. Pure white backgrounds and sparse labels. Raw originals preserved by the worker.

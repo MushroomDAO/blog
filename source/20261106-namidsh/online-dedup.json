@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "article_id": "nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent",
+      "title": "NVIDIA VoiceChat 11B: The First Open-Source Full-Duplex Speech Agent with Tool Calling",
+      "url": "/blog/nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent/",
+      "language": "en",
+      "excerpt": "NVIDIA VoiceChat 11B: The First Open-Source Full-Duplex Speech Agent with Tool Calling NVIDIA NemotronLabs' open-source 11B end-to-end full-duplex speech model, released 2026-08-03, OpenMDW 1.1 research license. Unified architecture for simultaneous streaming speech understanding",
+      "score": 0.4111188
+    },
+    {
+      "article_id": "dsh-agy-link-antigravity-dsh-integration-review",
+      "title": "dsh-agy-link调研：把Antigravity接入DSH，先看配额、工具与执行边界",
+      "url": "/blog/dsh-agy-link-antigravity-dsh-integration-review/",
+      "language": "zh",
+      "excerpt": "dsh-agy-link调研：把Antigravity接入DSH，先看配额、工具与执行边界 dsh-agy-link是将Antigravity的agy CLI接入DeepSeek Harness的MIT插件，支持模型路由、流式输出、工具卡片、账号与配额管理。本文核对npm版本和下载口径，拆解会话绑定、权限默认值与凭据边界，报告76项离线测试与发布包校验，并分析记录丢失时的诊断策略，区分连接便利与任务可靠性。 dsh-agy-link Antigravity DeepSeek Harness 模型集成 开源 先更新素材里的版本与数字 它连接的是模型，还是另",
+      "score": 0.40000883
+    }
+  ]
+}

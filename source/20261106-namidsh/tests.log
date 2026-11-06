@@ -1,0 +1,129 @@
+
+> nami-dsh@0.1.0 test
+> node tests/compat.ts && node tests/agent.ts
+
+[E] app service "db" has been registered at <a>
+[E] app boom
+[E] app invalid config:
+  - port is required
+=== 01 插件是异步加载的
+  [status] hello: PENDING -> LOADING
+  ctx.plugin() 已返回
+  apply 执行
+  [status] hello: LOADING -> ACTIVE
+=== 02 依赖等待：先挂消费者，后挂提供者
+  [status] provider: PENDING -> LOADING
+  [status] provider: LOADING -> ACTIVE
+  [status] consumer: PENDING -> LOADING
+  consumer 拿到 sqlite
+  [status] consumer: LOADING -> ACTIVE
+=== 03 拔掉提供者：消费者先清理（还能用服务），提供者后下线
+  [status] provider: PENDING -> LOADING
+  [status] provider: LOADING -> ACTIVE
+  [status] consumer: PENDING -> LOADING
+  [status] consumer: LOADING -> ACTIVE
+  [status] provider: ACTIVE -> UNLOADING
+  [status] consumer: ACTIVE -> UNLOADING
+  consumer 清理时还能用 sqlite
+  [status] consumer: UNLOADING -> PENDING
+  [status] provider: UNLOADING -> DISPOSED
+  根上还能取到 db 吗： 不能
+=== 04 同名服务冲突：后来的报错进入 FAILED，原来的不受影响
+  [status] a: PENDING -> LOADING
+  [status] a: LOADING -> ACTIVE
+  [status] b: PENDING -> LOADING
+  [status] b: LOADING -> UNLOADING
+  [status] b: UNLOADING -> FAILED
+  b: service "db" has been registered at <a>
+  db = A
+=== 05 更新配置：提供者重启，消费者跟着用新服务重启
+  [status] llm: PENDING -> LOADING
+  [status] llm: LOADING -> ACTIVE
+  [status] loop: PENDING -> LOADING
+  loop 使用 flash
+  [status] loop: LOADING -> ACTIVE
+  [status] llm: ACTIVE -> UNLOADING
+  [status] loop: ACTIVE -> UNLOADING
+  [status] loop: UNLOADING -> PENDING
+  [status] llm: UNLOADING -> LOADING
+  [status] llm: LOADING -> ACTIVE
+  [status] loop: PENDING -> LOADING
+  loop 使用 pro
+  [status] loop: LOADING -> ACTIVE
+=== 06 错误隔离：apply 抛错只影响自己
+  [status] bad: PENDING -> LOADING
+  [status] good: PENDING -> LOADING
+  good 正常运行
+  [status] good: LOADING -> ACTIVE
+  [status] bad: LOADING -> UNLOADING
+  [status] bad: UNLOADING -> FAILED
+  await 拿到错误: boom
+=== 07 配置校验失败
+  [status] cfg: PENDING -> LOADING
+  [status] cfg: LOADING -> UNLOADING
+  [status] cfg: UNLOADING -> FAILED
+   ValidationError |   - port is required
+=== 08 Service 类：static inject + Config + 异步 init
+  [status] Store: PENDING -> LOADING
+  [status] Store: LOADING -> ACTIVE
+  [status] Loop: PENDING -> LOADING
+  Loop init 完成, max = 3
+  [status] Loop: LOADING -> ACTIVE
+  root 取 loop.max = 3
+=== 09 事件：emit / serial / bail / parallel / waterfall
+  [status] listeners: PENDING -> LOADING
+  [status] listeners: LOADING -> ACTIVE
+  emit 收到 nami
+  bail = second
+  serial = second
+  parallel 完成
+  waterfall rm = blocked
+  waterfall ls = RAN LS
+=== 10 卸载插件：监听自动取消
+  [status] l: PENDING -> LOADING
+  [status] l: LOADING -> ACTIVE
+  pong
+  [status] l: ACTIVE -> UNLOADING
+  [status] l: UNLOADING -> DISPOSED
+  卸载后 emit：无输出
+=== 11 嵌套插件：父插件卸载，子插件一起卸载
+  [status] parent: PENDING -> LOADING
+  [status] child: PENDING -> LOADING
+  [status] parent: LOADING -> ACTIVE
+  [status] child: LOADING -> ACTIVE
+  [status] parent: ACTIVE -> UNLOADING
+  parent 清理
+  [status] child: ACTIVE -> UNLOADING
+  child 清理
+  [status] child: UNLOADING -> DISPOSED
+  [status] parent: UNLOADING -> DISPOSED
+=== 12 没 inject 的服务读不到
+  [status] p: PENDING -> LOADING
+  [status] p: LOADING -> ACTIVE
+  [status] q: PENDING -> LOADING
+  直接读: cannot get property "secret" without inject
+  ctx.get 可以: 42
+  [status] q: LOADING -> ACTIVE
+=== 13 ctx.inject：可选依赖，到了才执行
+  [status] main: PENDING -> LOADING
+  [status] main: LOADING -> ACTIVE
+  （cache 还没有）
+  [status] cache: PENDING -> LOADING
+  [status] cache: LOADING -> ACTIVE
+  [status] main: PENDING -> LOADING
+  cache 到了: redis
+  [status] main: LOADING -> ACTIVE
+=== 14 异步 effect
+  [status] conn: PENDING -> LOADING
+  [status] conn: LOADING -> ACTIVE
+  连接建立
+  [status] conn: ACTIVE -> UNLOADING
+  连接关闭
+  [status] conn: UNLOADING -> DISPOSED
+✓ 调用工具 get_time
+✓ 审批插件拦截了 get_time
+✓ 卸载审批插件后恢复
+✓ 拔掉 tool-time 后，工具表里没有 get_time 了
+✓ 拔掉 llm 服务后，agentLoop 自动停止
+
+Agent 测试全部通过
