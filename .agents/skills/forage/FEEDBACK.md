@@ -1240,3 +1240,9 @@ LingBot最终核验：中英文2条索引回读及公开语义检索通过，KB�
 FLUX8231封面0failures，3小M图人工检查，公众号全文、3图、封面、元数据和原文链接回读一致，未群发。Blog轮播1/列表1/5图片200。KB和账本已写，语义2条接收后的传播状态见source/20261106-namidsh/semantic-status.json。
 
 NamiDSH最终核验：中英文2条向量回读成功，使用新查询公开语义搜索命中；KB实际3行确认URL、media_id与verified状态。
+
+### 2026-11-06 MiniCPM-V4.7重复素材复核
+
+复用2026-10-18既有minicpm-v47-moe-vision-deployment双语稿和匹配封面，不重写不重部署。线上文章200、5个图像资源200、AgentFeed列出、公开语义检索命中；封面机器核验0failures。官方两个规模35B-A3B MoE与1B dense仍有入口，约3GB是特定LES端侧运行占用而非模型存储或普遍最低设备规格。
+
+旧草稿凭证prCUE631thH1cmNLi42prLCEA_EFiE7slyCPP-ee5PZ-saa4-YZ_FfT1sv70zyww查询返回40007，远程草稿箱14条全部读取无此文；已发布接口48001无权限。因此当前状态标记recorded，当前mediaId为空、旧创建凭证保留，未再创建可能已群发内容。KB实际7行读回最新状态，发布账本已更新。复核证据在source/20261018-minicpm-v47/recheck-20261106/。
