@@ -1,0 +1,6 @@
+[serve_cors] "GET /sample.txt HTTP/1.1" 200 -
+[serve_cors] "GET /sample.txt HTTP/1.1" 200 -
+[serve_cors] refused origin https://other.example.test
+[serve_cors] "GET /outside-link.txt HTTP/1.1" 404 -
+[serve_cors] "GET / HTTP/1.1" 404 -
+{"http": [{"path": "/sample.txt", "status": 200, "allowOriginPresent": true}, {"path": "/sample.txt", "status": 200, "allowOriginPresent": false}, {"path": "/outside-link.txt", "status": 404, "allowOriginPresent": true}, {"path": "/", "status": 404, "allowOriginPresent": true}], "unresolvedPlaceholderRejected": true, "filledTemplateRenderedWithEscaping": true, "syntheticEmailDetected": true, "allDataSelfOwnedSynthetic": true, "noUnityNoBrowserNoAccountsNoUpload": true, "CORSnote": "disallowedOriginStillReceivesHTTP200Body;browserCORSrestrictionIsNotAuthentication"}
