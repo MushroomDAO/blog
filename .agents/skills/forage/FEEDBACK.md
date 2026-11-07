@@ -1266,3 +1266,5 @@ Bisheng最终核验：中英文2条向量回读成功，新公开查询命中；
 BaronCyrus/ShipMyGame固定6b93a0ce97402c57d87750b2cc64d8a56ad6e38f，MIT/plugin0.1.0。原始KB以外无旧Blog/M2记录。介绍技能+文档+脚本而非引擎；当前作者GooglePlay正式版访问申请待结果、微信两类备案区分、Tap包体准入不等于正式上线，Steam仍草稿。STATE文件支持交接不等于事务防重；提审确认主要是Agent规则，不是强制安全隔离。未提供具体税务/收款建议。
 
 仅临时合成夹具检查HTTP服务4类请求（allowed200/CORS、不允许来源仍200无CORS、越界symlink404、目录404）、隐私HTML占位符拒绝/转义、合成邮箱扫描命中。无Unity构建、浏览器、账号、上传或提审。CORS明确不是认证。8251/8253人工拒伪文字，8252拒无关barcode背景，最终8254机器0fail及人工通过；3小M图核验。Blog轮播1/列表1/5图200，公众号正文/3图/封面/元数据/原文链接回读一致，未群发。KB及账本已写，语义2条接收后的传播状态见source/20261107-shipmygame/semantic-status.json。
+
+ShipMyGame最终核验：中英文2条向量回读成功，新的公开查询命中；KB实际3行再次确认URL、草稿ID和verified状态，三件套完成。
