@@ -1,0 +1,44 @@
+[
+  {
+    "id": "970789ceb533337fe93a3ad80d2a4c6941b5640e60036b1d",
+    "metadata": {
+      "article_id": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+      "content_hash": "3684be45112c3a13",
+      "excerpt": "agentic-rl-lab：从几何题入门Agent强化学习 agentic-rl-lab是Datawhale开源的Agent强化学习实验教程，使用PyTRIO远程训练服务拆解GRPO、蒸馏、搜索和工具调用。本篇核对源码，纠正约5元小规模会话与100步结果的混淆，解释固定100题测试、格式遵循和推理能力的区别，并给出奖励函数、采样到独立评测的学习路径，避免把作者记录当作独立复现。 AI GRPO 后训练 RL 开源 Python 视觉模型 Mycelium 2026年11月更新：应该怎样读这个仓库？ 71%到87%，具体改善了什么？ 从哪一章开始最有效？",
+      "language": "zh",
+      "tags": [
+        "AI",
+        "GRPO",
+        "后训练",
+        "RL",
+        "开源",
+        "Python",
+        "视觉模型",
+        "Mycelium"
+      ],
+      "title": "agentic-rl-lab：从几何题入门Agent强化学习",
+      "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/"
+    }
+  },
+  {
+    "id": "92cd467a246fde9d95a360fca59b5eeeaac203978a77aba4",
+    "metadata": {
+      "article_id": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+      "content_hash": "4644a2af8172e514",
+      "excerpt": "agentic-rl-lab: A Practical Guide to Agent RL Explore Datawhale\\u2019s agentic-rl-lab tutorials, PyTRIO training, GRPO rewards and evaluation limits, with corrected cost claims and a practical learning pathway. AI GRPO 后训练 RL 开源 Python 视觉模型 Mycelium November 7 update: how should ",
+      "language": "en",
+      "tags": [
+        "AI",
+        "GRPO",
+        "后训练",
+        "RL",
+        "开源",
+        "Python",
+        "视觉模型",
+        "Mycelium"
+      ],
+      "title": "agentic-rl-lab: A Practical Guide to Agent RL",
+      "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/"
+    }
+  }
+]

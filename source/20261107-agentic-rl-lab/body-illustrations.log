@@ -1,0 +1,1576 @@
+Reading additional input from stdin...
+2026-11-07T12:12:51.627719Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/network-switch/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-07T12:12:51.627751Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-cdp/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-07T12:12:51.627755Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-docker/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-07T12:12:51.627758Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-publisher/SKILL.md: missing YAML frontmatter delimited by ---
+OpenAI Codex v0.165.0
+--------
+workdir: /Users/jason/Dev/mycelium/blog
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a1b5ed-03f6-7360-8e13-67664cca3fc5
+--------
+user
+Use $mycelium-mushroom-illustrations. Read src/content/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry.md. Generate exactly 3 separate Little M white-background hand-drawn illustrations using image generation: 01 data reward rollout update loop; 02 separate 20-step small bill from 100-step 100-question evaluation, no promise of 5 yuan equals87%; 03 independent holdout evaluation and budget gates. Few Chinese labels, correct numbers if used. Save raw generated_images/agentic-rl-lab-20261107/. Copy final to src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-01.png through03.png, each1120x630 palette at most48colors and under90000bytes. Inspect each. Do not edit markdown or banner or other files. Complete copying and compression before returning.
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+codex
+我会按小M插图 skill 读取正文和风格要求，分别生成这 3 张图，再逐张检查、压缩并复制到指定路径。只处理这批插图，不修改文章或封面。
+
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md /Users/jason/.codex/skills/imagegen/SKILL.md' in /Users/jason/Dev/mycelium/blog
+ exited 1 in 0ms:
+---
+name: mycelium-mushroom-illustrations
+description: 生成 Mycelium「小M」蘑菇 IP 风格的中文正文配图。【科技类别】文章默认用此 skill。用于为中文文章、帖子、博客、Notion 文档、工作流、方法论、流程、结构、状态、隐喻或观点生成“怪诞”“蘑菇”“小M”“菌丝”“手绘”“正文配图”“文章插图”“配图建议”“shot list”“去标题/改图”等任务；视觉为纯白手绘、少量红橙蓝批注、简洁清爽但天马行空，主角是黑色小蘑菇「小M」。
+---
+
+# Mycelium 小M（蘑菇）怪诞正文配图
+
+> 用途分工：本 skill 用于**科技类别**文章。社会/创作思考类别用 `mycelium-avatar-illustrations`（卡通小人），科普类别用 `mycelium-baobao-cat-illustrations`（德文猫Baobao）。
+
+## 核心定位
+
+为中文文章设计和生成 16:9 横版正文配图。目标不是做商业插画、PPT 信息图或可爱卡通，而是把文章里的关键判断、流程、结构、状态或隐喻，变成一张清爽、怪诞、有创意、可读但不说明书的手绘解释图。
+
+默认视觉 IP 是“小M”：🍄 经典造型的小蘑菇怪物——**红色菌盖 + 白色圆点斑、米白菌柄 + 黑色手绘轮廓、黑点眼**、细腿、空表情，认真做一件荒诞但成立的事；脚下可伸出橙色菌丝线做连接/传输。不要画成黑色实心。小M必须参与画面的核心动作，不能只是站在旁边当装饰。完整形象见 `references/mushroom-ip.md`。
+
+## 先读这些参考
+
+按任务需要读取，不要一次塞满上下文：
+
+- `references/style-dna.md`：风格 DNA、颜色、文字、禁忌。
+- `references/mushroom-ip.md`：小M IP 的形象、性格、动作库和禁忌。
+- `references/composition-patterns.md`：结构类型、原创隐喻方法和反复刻规则。
+- `references/prompt-template.md`：单张生图提示词模板。
+- `references/qa-checklist.md`：生成后检查和迭代规则。
+- `assets/examples/`：只作低频视觉校准，不进入默认生成路径。不要照抄这些案例的构图、物件或标注。
+
+## 工作流
+
+### 1. 消化正文
+
+先读用户给的正文、链接、Notion 页面、Markdown 文件或截图内容。提炼：
+
+- 核心观点是什么
+- 哪些段落承担认知转折
+- 哪些内容适合用图解释
+- 哪些地方只适合文字，不需要图
+
+不要平均配图。优先选择“认知锚点”，例如：核心判断、两个断点、输入输出闭环、分流、前后对比、一鱼多吃、承接路径、常见坑、角色状态变化。
+
+### 2. 先出配图策略
+
+如果用户只是说“分析怎么配图 / 思考哪些地方需要配图”，先给 shot list。每张图写清楚：
+
+- 放在哪个段落后
+- 图的主题
+- 核心意思
+- 结构类型
+- 小M在图里做什么
+- 建议元素
+- 建议中文标注词
+
+默认 4-8 张。文章很短时 1-3 张；长文也不要轻易超过 9 张。够用就好，避免把正文做成画册。
+
+### 3. 单张生成
+
+如果用户明确要求“生成 / 输出 / 做图 / 帮我生成”，不要停下来等确认；用内置 `image_gen` 每张单独生成。不要把多张图拼在一张里。
+
+每张图只讲一个核心结构。提示词必须包含：
+
+- 16:9 横版中文正文配图
+- 纯白背景
+- 黑色手绘线稿
+- 少量红色/橙色/蓝色中文手写批注
+- 大量留白
+- 小M作为核心动作主体
+- 禁止 PPT、商业插画、幼稚可爱、复杂架构、左上角类型标题
+
+不要复刻过往案例。案例只提供风格密度和小M参与方式，不能直接复用“传送带断点 / 小M拉线 / 素材鱼 / 盖章工具箱 / 常见坑路径”等已有构图，除非用户明确要求复刻某张图。每次都要从当前文章重新发明一个奇怪但成立的隐喻。
+
+### 4. 检查与迭代
+
+生成后检查 `references/qa-checklist.md`。如果出现以下问题，优先重生成或局部编辑：
+
+- 小M只是装饰
+- 画面太满
+- 太像流程图/PPT
+- 中文太多或错字严重
+- 左上角出现“常见坑/流程图/系统架构图”等标题
+- 画风太可爱、幼稚、死板
+- 背景不是干净白底
+
+### 5. 保存交付
+
+如果用户在 workspace 内工作，把最终图复制到：
+
+```text
+assets/<article-slug>-illustrations/
+```
+
+按顺序命名：
+
+```text
+01-topic-name.png
+02-topic-name.png
+```
+
+保留原始生成文件，不要覆盖已有资产，除非用户明确要求替换。
+
+## 输出口径
+
+生成前的策略输出要短而准。生成后的交付要包含：
+
+- 生成了几张
+- 每张图的用途
+- 保存路径
+- 哪些图最稳，哪些图是可选
+
+不要长篇解释风格理论；让图自己说话。
+cat: /Users/jason/.codex/skills/imagegen/SKILL.md: No such file or directory
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat src/content/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+---
+title: "agentic-rl-lab：从几何题入门Agent强化学习"
+titleEn: "agentic-rl-lab: A Practical Guide to Agent RL"
+description: "agentic-rl-lab是Datawhale开源的Agent强化学习实验教程，使用PyTRIO远程训练服务拆解GRPO、蒸馏、搜索和工具调用。本篇核对源码，纠正约5元小规模会话与100步结果的混淆，解释固定100题测试、格式遵循和推理能力的区别，并给出奖励函数、采样到独立评测的学习路径，避免把作者记录当作独立复现。"
+descriptionEn: "Explore Datawhale\u2019s agentic-rl-lab tutorials, PyTRIO training, GRPO rewards and evaluation limits, with corrected cost claims and a practical learning pathway."
+wechatTitle: "agentic-rl-lab：低门槛学强化学习"
+wechatDigest: "核对训练代码与实验记录，分清小规模费用、格式改善与真实能力提升。"
+pubDate: "2026-08-10"
+updatedDate: "2026-11-07"
+category: "Research"
+tags: ["AI", "GRPO", "后训练", "RL", "开源", "Python", "视觉模型", "Mycelium"]
+heroImage: "../../assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-banner.jpg"
+author: "Mycelium Protocol"
+---
+
+agentic-rl-lab是一套把奖励、采样、训练和评测串起来的Agent强化学习实验教程，适合已经会写Python、希望理解后训练的人。它采用Apache-2.0协议，目前由Datawhale仓库维护；训练示例依赖PyTRIO远端服务，开源代码不等于免费算力。
+
+## 2026年11月更新：应该怎样读这个仓库？
+
+仓库现已把实验统一放到`experiments/`，包含GRPO、GSPO、DAPO、OPD、OPSD、Search-R1、ReTool、ALFWorld，以及TEMPO、AgentOPSD、Spec-o3等章节。它定位是实验记录和教程；README把更友好、轻量的训练框架列为未来方向，不能当作已交付的通用生产框架。
+
+![小M沿数据、奖励、采样和参数更新读懂强化学习闭环](../../assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-01.png)
+
+最值得学的是边界如何拆开：数据模块定义题目和答案，rollout生成多条轨迹，reward给轨迹打分，训练脚本构造优势并调用远端更新，eval再用固定数据验证。可验证答案任务容易写规则奖励；搜索、代码执行或长任务则还需要环境反馈、工具权限、超时和轨迹归因。不要把“接入工具”直接等同于“Agent已经学会可靠使用工具”。
+
+## 71%到87%，具体改善了什么？
+
+Vision GRPO记录的格式正确率同时从75%升到91%。在格式正确的回答内部，正确率分别为71/75≈94.7%与87/91≈95.6%。这说明总分增长与更稳定地遵循可解析输出格式紧密相关，不能仅凭总分就断言几何推理发生了同等幅度跃迁。两个checkpoint的格式正确样本集合不同，这个条件比值也不能单独证明因果。
+
+![小M分开小规模费用与100步评测，避免把两份记录合成一次实验](../../assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-02.png)
+
+独立评测应保留逐题输出、解析失败、正确选项、token数和耗时，扩大到完整测试集，并做多个seed与不参与调参的留出集。固定100题每题就是1个百分点；反复查看同一子集再选checkpoint，会增加选择偏差。项目中的`analysis.py`绘制预先写入的汇总数字，不会自动读取新评测JSON；运行绘图脚本不是复现实验结果。
+
+## 从哪一章开始最有效？
+
+先读Loss Function与文本GRPO，用几道人工检查过的样本走一遍奖励与组内优势：一组全对或全错时，相对奖励通常提供不了区分信号。随后看Vision GRPO，检查图片token对齐与答案解析；最后再进入Search-R1、ReTool或ALFWorld，处理多轮环境反馈。先明确预算、凭证与可停止条件，再启动会产生费用的远端训练；不要把README中的一次花销当作自己的费用上限。
+
+建议先冻结一份base评测，再做小规模训练与独立复测。自定义任务还应加入长度、工具调用次数和实际费用指标，防止模型通过冗长回答或无效调用“刷奖励”。业务任务应先明确什么叫成功，再选择RL，而非先训练再寻找目标。
+
+![小M在训练之外保留独立评测和预算检查](../../assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-03.png)
+
+## 常见问题
+
+### 普通电脑能本地训练这些模型吗？
+
+本地主要编排实验，重计算由PyTRIO服务承担。这降低本机显存门槛，但不意味着权重训练在普通电脑上完成，也不意味着没有网络与服务费用。
+
+### 约5元能保证获得87%准确率吗？
+
+不能。5.06元是作者20步会话截图；87%来自100步checkpoint的固定100题评测，两者不是同一次成本和效果的对应关系。
+
+### 这是可以直接上线的Agent平台吗？
+
+它首先是实验教程。生产系统仍需要独立评测、凭证保护、工具隔离、失败恢复和监控；本次核对没有运行远端训练，也没有测量新的准确率或费用。
+
+原始仓库：https://github.com/datawhalechina/agentic-rl-lab
+Vision实验与成本边界：https://github.com/datawhalechina/agentic-rl-lab/tree/main/experiments/vision-grpo
+在线手册：https://datawhalechina.github.io/agentic-rl-lab/
+
+以下保留早期实验的算法讲解；章节数量与历史star数不代表当前仓库规模。
+
+*by Mycelium Protocol*
+
+---
+
+训练大模型通常是这样一张清单：租一台 8 卡机器，搭 infra，接采样服务，写 trainer，调 LoRA，接 checkpoint，跑日志——然后才开始做你真正想做的事：验证某个 reward 函数行不行，某个 loss 有没有差别。
+
+KMnO4-zx 从另一个方向开始：**把 infra 交给远端，只写数据、reward 和 loss**。
+
+作者记录了两组不同信息：20步小规模会话花费约5.06元；100步 checkpoint 在固定100道题上的准确率从71%提高到87%。仓库没有给出100步正式实验的可核验总费用，不能把两者拼成“5元训练100步”。
+
+GitHub: https://github.com/datawhalechina/agentic-rl-lab | 2026-11-07 核对 | Apache 2.0 | Python
+
+---
+
+## 这个系列在做什么
+
+agentic-rl-lab 是一个「逐篇复现 RL 算法」的开源实验记录。目前完成了 10 章：
+
+| 章节 | 算法 | 任务 |
+|------|------|------|
+| 0 | Loss 函数基础 | importance sampling / PPO / CISPO |
+| 1 | GRPO | GSM8K 数学题（文本） |
+| 2 | OPD | 通用数学 + 医学推理 |
+| 3 | Search-R1 | 多轮搜索 RL（Qwen3.5-4B） |
+| 4 | OPSD | 步骤蒸馏 |
+| 5 | ReTool | 代码交错 agent RL |
+| 6 | DAPO | 4 项核心改进 |
+| 7 | GSPO | 序列级重要性比率 |
+| 8 | ALFWorld | 家庭任务 agent（文本 env） |
+| 9 | **Vision GRPO** | **GeoQA 几何图形问答** |
+
+前 8 章的输入都是文本。第 9 章第一次把整条 RL 链路推进到多模态：模型先看一张几何图，再读题，做 RL 更新。
+
+基础设施是 **PyTRIO**（远程训练平台）和 **SwanLab**（实验追踪）。本地只写实验逻辑，前向、反向、采样、checkpoint 都在远端跑。
+
+---
+
+## GRPO 是什么
+
+GRPO（Group Relative Policy Optimization）来自 DeepSeekMath 论文。它要解决的问题是：**PPO 好用，但太重**。
+
+PPO 需要一个 value model 来估计 baseline，而 value model 本身也是一个大模型，显存和计算都要上去。
+
+GRPO 的替换思路很直接：
+
+1. 对同一个问题，采样一组回答（group）
+2. 给每个回答打 reward
+3. 用这组回答的平均 reward 作为 baseline——不需要单独训练 value model
+4. 比组内平均分高的回答，advantage 为正；低的为负
+5. 用这个 advantage 更新 policy
+
+$$
+A_i = \frac{r_i - \mathrm{mean}(r_1, \ldots, r_G)}{\mathrm{std}(r_1, \ldots, r_G)}
+$$
+
+同一道题里，相对更好的答案被鼓励，相对更差的被压低。这就是整个 GRPO 的核心。
+
+第 1 章的文本 demo 跑 GSM8K 数学题，reward 是 0/1（答对或答错）。调试完整流程花了 55 元；如果只跑 10 步验证脚本能走通，成本可以低到 5 元。
+
+---
+
+## Vision GRPO：把图片送进训练循环
+
+第 9 章做的事情，是把上面这套机制接上图片输入。
+
+任务是 **GeoQA**——一个中文几何问答数据集。每条样本包含：几何图片、题目、四个候选项（A/B/C/D）、正确答案标签。共 5010 条，取 3503 条训练，固定 100 条测试。
+
+模型看到的输入只有图片、题目和选项，不看解析过程。Reward 是选项匹配：答对 1，答错 0。
+
+**实验结果**：
+
+| 模型 | Accuracy | Format rate |
+|------|---:|---:|
+| Qwen3.5-4B Base | 71.0% | 75.0% |
+| GRPO step 100 | 87.0% | 91.0% |
+| 提升 | **+16.0 pp** | **+16.0 pp** |
+
+这是作者在固定100题子集上的单次对照，提升16个百分点。仓库没有提交逐题评测JSON与远端checkpoint，本文也没有复跑训练。100步正式实验总费用未核验。
+
+---
+
+## 图片怎么进入 PyTRIO
+
+Vision GRPO 和纯文本版本差异最大的地方，是图片如何进入训练循环。
+
+训练脚本用模型自己的 chat template 格式化输入，同时放入文本和图片占位符：
+
+```python
+messages = [
+    {
+        "role": "user",
+        "content": [
+            {"type": "text", "text": format_question(subject, choices)},
+            {"type": "image", "image": "geoqa"},
+        ],
+    }
+]
+```
+
+渲染后的 prompt 沿 `<|image_pad|>` 拆成三个 chunk：文本 → 图片 → 文本。图片在送入服务前先合成白色背景（处理 RGBA），再用模型的 image processor 计算视觉 patch 数写入 `ImageChunk.expected_tokens`。
+
+采样完成后会检查：
+
+```python
+response.input_tokens == len(prompt)
+```
+
+本地视觉 token 估计和远端结果必须一致，否则训练立刻报错——因为后续的 `target_tokens`、old logprobs 和 advantages 依赖同一个位置坐标系。
+
+---
+
+## 训练配置
+
+| 项目 | 配置 |
+|------|------|
+| 基座模型 | Qwen/Qwen3.5-4B |
+| 训练方式 | LoRA，rank 32 |
+| 优化方法 | group-relative advantage + importance_sampling |
+| 训练步数 | 100 steps |
+| 每步题目数 | 8 |
+| 每题 rollout 数 | 8 |
+| 最大生成长度 | 1,024 tokens |
+| 学习率 | 4e-5 |
+
+整条数据流：
+
+```text
+GeoQA 图文题目
+  ↓ 当前 LoRA 权重生成 sampler
+  ↓ 同题并发采样 8 条 completion
+  ↓ 解析最后一个 \boxed{A-D}
+  ↓ 规则 reward：正确 1，其余 0
+  ↓ 组内计算 relative advantage
+  ↓ 构造多模态 Datum 并更新 LoRA
+```
+
+---
+
+## 为什么这件事值得关注
+
+大模型的后训练通常被认为是「大厂才能做的事」：需要大量 GPU、复杂 infra、专门的团队。
+
+agentic-rl-lab 证明的是另一件事：**如果你只需要验证某个 reward 函数、某个 loss 变体，或者某个任务领域的 RL 适配性，你不需要那些**。
+
+PyTRIO 把本地需要处理的东西压缩到最小：数据处理、reward 函数、loss 函数、实验循环。其他全部在远端。这让「做一个 RL 实验」的感觉更像做一个普通的数据分析——写逻辑，跑，看结果，改。
+
+Vision GRPO 这章是这套方法第一次接上图片输入。从 GSM8K 文字题到 GeoQA 几何图，RL 训练循环本身的结构没有改变——变化的只是图片怎么进入 prompt，和 reward 怎么从选项匹配算出来。
+
+这个扩展路径是清晰的。
+
+---
+
+## 快速上手
+
+```bash
+# 克隆仓库
+git clone https://github.com/datawhalechina/agentic-rl-lab
+cd agentic-rl-lab
+
+# 安装依赖（uv）
+uv sync
+
+# 登录 PyTRIO
+trio login
+
+# 跑 Vision GRPO（先下载数据集）
+cd experiments/vision-grpo
+# 参考 start.md
+```
+
+先跑 1-2 步验证脚本能走通，再开正式训练。成本是可控的。
+
+---
+
+*Mycelium Protocol — 追踪 AI 系统的底层演化*
+
+---
+
+> **关于 Mycelium**
+>
+> 菌丝协议。持续追踪 AI 工具、系统和实验的内容节点。
+
+---
+
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+
+<!--EN-->
+
+agentic-rl-lab is an educational collection that connects rewards, rollouts, parameter updates and evaluation for LLM agents. Datawhale maintains the Apache-2.0 repository. Its examples use remote PyTRIO training: open-source code does not make compute free.
+
+### November 7 update: how should this repository be used?
+
+Experiments now live under `experiments/`, covering GRPO, GSPO, DAPO, distillation, Search-R1, ReTool, ALFWorld and newer topics such as TEMPO, AgentOPSD and Spec-o3. The README describes a more friendly training framework as a possible future direction. The repository is primarily a tutorial and experiment log, rather than evidence of a completed production platform.
+
+![Little M follows the data, reward, rollout and update loop](../../assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-01.png)
+
+Read the boundaries between modules: data defines questions and answers; rollouts produce trajectories; rewards score them; training constructs advantages and requests remote updates; evaluation checks a fixed dataset. Search and tool-use tasks additionally need environment feedback, timeouts and attribution across turns. Exposing a tool is not evidence that an agent reliably learned to use it.
+
+### What does the 71% to 87% increase establish?
+
+The author also reports format compliance increasing from 75% to 91%. Conditional accuracy among parseable responses is 71/75, about 94.7%, versus 87/91, about 95.6%. The aggregate improvement is closely associated with more reliable answer formatting; it cannot establish an equally large gain in geometry reasoning. The two sets of parseable responses also differ, so these ratios alone do not establish causation.
+
+![Little M separates a small-session bill from the 100-step evaluation](../../assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-02.png)
+
+Retain individual outputs, parsing failures, labels, token counts and latency. Evaluate the full test split, multiple seeds and a holdout excluded from checkpoint selection. Each example in a 100-question subset contributes one percentage point. Repeatedly selecting checkpoints against the same subset risks selection bias. `analysis.py` plots hard-coded summary values rather than loading a newly generated evaluation file; drawing the chart is not reproduction.
+
+### Where should learners start?
+
+Start with loss functions and text GRPO. Manually verify a few rewards and group advantages: all-correct or all-incorrect groups generally provide no relative discrimination. Continue with image-token alignment and answer parsing in Vision GRPO, then tackle multi-turn feedback in Search-R1, ReTool or ALFWorld. Define a budget and stopping conditions before invoking paid remote services. A historical invoice does not cap a future bill.
+
+Freeze a base evaluation first, run a small experiment and then evaluate independently. Add output length, tool-call counts and real costs for custom tasks so reward improvement cannot hide wasteful behavior. Choose reinforcement learning only after defining success for the intended task.
+
+![Little M keeps independent evaluation and budget checks outside training](../../assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-03.png)
+
+### FAQ
+
+#### Does training happen on an ordinary laptop?
+
+The laptop orchestrates the experiment; PyTRIO performs expensive training remotely. This reduces local memory requirements but introduces network and paid-service dependencies.
+
+#### Does ¥5 guarantee an 87% score?
+
+No. ¥5.06 refers to a 20-step session, whereas 87% refers to the 100-step checkpoint on a fixed 100-question subset. These are different records.
+
+#### Is this a production agent framework?
+
+Its primary role is education. Deployment still requires evaluation, credential management, tool isolation, recovery and monitoring. This review did not run training or independently measure accuracy or cost.
+
+Repository: https://github.com/datawhalechina/agentic-rl-lab
+Vision experiment: https://github.com/datawhalechina/agentic-rl-lab/tree/main/experiments/vision-grpo
+Manual: https://datawhalechina.github.io/agentic-rl-lab/
+
+The following retains the earlier algorithm explanation; historical chapter counts do not describe the current repository.
+
+## agentic-rl-lab: Learning Agent Reinforcement Learning Through Experiments
+
+*by Mycelium Protocol*
+
+---
+
+Training a large model usually looks like this: rent an 8-GPU server, build infra, wire up a sampling service, write a trainer, tune LoRA, handle checkpointing, set up logging — and then finally start doing what you actually wanted to do: test whether a reward function works, whether one loss function beats another.
+
+KMnO4-zx started from the other direction: **hand the infra to a remote platform, write only the data, reward, and loss.**
+
+Two records must be separated: a 20-step session cost about ¥5.06, while the 100-step checkpoint scored 87% versus 71% on a fixed 100-question subset. The repository does not establish the total cost of the 100-step run. This article did not reproduce training.
+
+GitHub: https://github.com/datawhalechina/agentic-rl-lab | 2026-11-07 核对 | Apache 2.0 | Python
+
+---
+
+### What This Series Does
+
+agentic-rl-lab is an open-source "reproduce one RL paper at a time" experiment log. Ten chapters completed:
+
+| Chapter | Algorithm | Task |
+|---------|-----------|------|
+| 0 | Loss function basics | importance sampling / PPO / CISPO |
+| 1 | GRPO | GSM8K math (text) |
+| 2 | OPD | General math + medical reasoning |
+| 3 | Search-R1 | Multi-round search RL (Qwen3.5-4B) |
+| 4 | OPSD | Step distillation |
+| 5 | ReTool | Code-interleaved agentic RL |
+| 6 | DAPO | 4 core improvements |
+| 7 | GSPO | Sequence-level importance ratio |
+| 8 | ALFWorld | Household agent (text env) |
+| 9 | **Vision GRPO** | **GeoQA geometric visual QA** |
+
+Chapters 1–8 are text-only. Chapter 9 is the first to push the full RL loop into multimodal: the model sees a geometry image, reads the question, and gets RL updates based on whether it picks the right answer.
+
+Infrastructure is **PyTRIO** (remote training platform) and **SwanLab** (experiment tracking). Local code handles only the experiment logic; forward pass, backward pass, sampling, and checkpointing all run remotely.
+
+---
+
+### What GRPO Is
+
+GRPO (Group Relative Policy Optimization) comes from the DeepSeekMath paper. The problem it solves: **PPO works, but it's heavy**.
+
+PPO requires a separate value model to estimate the baseline — and for LLMs, that value model is itself a large model, adding both memory and compute. GRPO's substitution is direct:
+
+1. Sample a group of completions for the same question
+2. Score each completion with a reward
+3. Use the group's average reward as baseline — no value model needed
+4. Completions above average get positive advantage; below average get negative
+5. Update policy with this advantage
+
+Same question, same group — better answers are encouraged, worse ones are pushed down. That's the whole mechanism.
+
+Chapter 1's text demo runs on GSM8K with binary reward (0 if wrong, 1 if right). Debugging the full pipeline cost ¥55; running just 10 steps to check the script works can cost as little as ¥5.
+
+---
+
+### Vision GRPO: Getting Images into the Training Loop
+
+Chapter 9 extends this to image inputs.
+
+The task is **GeoQA** — a Chinese geometric QA dataset. Each sample has: a geometry image, a question, four candidate answers (A/B/C/D), and a correct label. 5,010 total samples; 3,503 for training, fixed 100 for evaluation. The model sees only the image, question, and choices — not the solution.
+
+**Results:**
+
+| Model | Accuracy | Format rate |
+|-------|---:|---:|
+| Qwen3.5-4B Base | 71.0% | 75.0% |
+| GRPO step 100 | 87.0% | 91.0% |
+| Gain | **+16.0 pp** | **+16.0 pp** |
+
+The author reports a 16 percentage-point increase on a fixed 100-question subset, not the complete test set. Per-example evaluation JSON and the remote checkpoint are not included. The total cost of the 100-step run is unverified.
+
+---
+
+### Training Config
+
+| Setting | Value |
+|---------|-------|
+| Base model | Qwen/Qwen3.5-4B |
+| Training | LoRA, rank 32 |
+| Optimization | group-relative advantage + importance_sampling |
+| Steps | 100 |
+| Topics per step | 8 |
+| Rollouts per topic | 8 |
+| Max generation length | 1,024 tokens |
+| Learning rate | 4e-5 |
+
+Full data flow:
+
+```text
+GeoQA image+text question
+  ↓ sampler from current LoRA weights
+  ↓ 8 concurrent completions per question
+  ↓ extract last \boxed{A-D}
+  ↓ rule reward: correct=1, else=0
+  ↓ group-relative advantage
+  ↓ multimodal Datum → LoRA update
+```
+
+---
+
+### Why This Is Worth Attention
+
+LLM post-training is commonly considered a large-lab problem: many GPUs, complex infra, dedicated teams.
+
+agentic-rl-lab demonstrates something different: **if your goal is to validate a reward function, a loss variant, or RL adaptation for a specific domain, you don't need any of that**.
+
+PyTRIO compresses what needs to be done locally to its minimum: data processing, reward function, loss function, experiment loop. Everything else runs remotely. "Running an RL experiment" starts to feel like running a data analysis script — write the logic, run it, read results, iterate.
+
+Vision GRPO is the first chapter in this series to handle image inputs. From GSM8K text to GeoQA geometry, the RL loop structure didn't change — only how images enter the prompt and how reward is computed from option matching.
+
+The extension path is clear.
+
+---
+
+### Quick Start
+
+```bash
+git clone https://github.com/datawhalechina/agentic-rl-lab
+cd agentic-rl-lab
+
+uv sync
+trio login
+
+# Vision chapter: see experiments/vision-grpo/start.md
+```
+
+Run 1–2 steps first to verify the script works, then scale up. Cost is controllable.
+
+---
+
+*Mycelium Protocol — tracking the deep evolution of AI systems*
+
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/style-dna.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/mushroom-ip.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/prompt-template.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/qa-checklist.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/composition-patterns.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+# 风格 DNA
+
+## 一句话
+
+纯白、极简、手绘、留白、克制、怪诞、产品草图感、中文手写感、结构清楚但不说明书。
+
+像一个长期做 AI、产品、设计、开发工具的人，在白纸上随手画出来的一张解释草图。
+
+## 必须
+
+- 16:9 横版正文配图。
+- 纯白背景：不要米色、暖灰、纸张纹理、渐变、阴影、噪点、复古纸感。
+- 黑色手绘线稿为主：细线、轻微抖动、不机械、不矢量、不厚重描边。
+- 大量留白：主体占画面约 40%-60%，至少 35% 空白，最好有一整块安静区域。
+- 少量中文手写批注：最多 5-8 处，每处尽量 2-8 个字。
+- 一张图只讲一个核心动作、结构、状态或隐喻。
+- 结构要自然表达，不要在图上写结构类型名称。
+
+## 颜色
+
+- 黑色：主体线稿、角色、框线、结构、主要文字、主体物件。
+- 红色：重点批注、问题、情绪点、关键提醒、结果。
+- 橙色：主流程、路径、箭头、自动化流向、从 A 到 B 的移动关系。
+- 蓝色：补充说明、脑内状态、系统状态、第二层解释、AI/assistant/自动化提示。
+
+蓝色不是每张都必须用。颜色要克制，宁可少不要多。
+
+## 绝对不要
+
+- 不要商业插画。
+- 不要 PPT 信息图。
+- 不要正式流程图。
+- 不要课程课件。
+- 不要可爱卡通海报。
+- 不要儿童插画。
+- 不要复杂架构图。
+- 不要精致扁平插画。
+- 不要科技感 UI。
+- 不要真实 App 截图。
+- 不要复杂背景、渐变、阴影、纹理。
+- 不要把每个节点都解释清楚。
+- 不要左上角写“Workflow 流程图 / 系统架构图 / 常见坑 / 路线图”等类型标题。
+
+## 审美方向
+
+要怪诞、创意、有意思、简洁清爽、天马行空。
+
+不要可爱、幼稚、很复杂、死板。
+# 小M IP
+
+## 角色定义
+
+小M是 Mycelium 中文正文配图的固定视觉 IP。
+
+默认每张图都要出现小M。小M不是吉祥物，不是贴纸，不是可爱装饰，而是正在认真参与系统运转的荒诞工作者——一只在白板草图里真的负责某项工作的小蘑菇。
+
+## 外形（🍄 经典蘑菇造型）
+
+- 手绘小蘑菇怪物，参照 🍄 emoji 的经典造型，不是黑色实心。
+- **菌盖：红色（正红 / 红橙）半圆顶，盖上点缀 3-5 颗白色圆点斑**（🍄 标志性白点）。菌盖边缘有手绘黑色轮廓线。
+- **菌柄/身体：米白色（奶白）填充 + 黑色手绘轮廓线**。
+- **黑色小圆点眼睛**，长在白色菌柄上（白柄上用黑点眼才清楚；不要用白点眼）。
+- 细腿，偶尔有细胳膊；表情空、呆、冷静、认真（deadpan，不卖萌）。
+- 身体（菌柄）可以变形：圆柱、漏斗、管道、洞口、奇怪工位等，但**红帽白点 + 白柄**这套识别特征要保留。
+- 轮廓略微不规则，有手绘感。不要画得太精致、太 3D、太写实。
+
+### 配色说明（重要）
+
+- 菌盖红是**角色自身的身份色**（填充块）；这与「红色批注」（细线/文字）在视觉上是分开的，不冲突。
+- 流动 / 传输 / 路径 / 菌丝仍用**橙色**；脑内状态 / 系统提示用蓝色。颜色整体仍要克制。
+
+## 菌丝特性（这是小M区别于普通角色的关键）
+
+- 小M脚下、身后或手里可以延伸出**细细的菌丝线**。
+- 菌丝用来：连接信息源、传输养分/内容、织成网络、把分散的节点接到一起。
+- 菌丝线用橙色表示「流动 / 传输 / 从 A 到 B」，和风格 DNA 的颜色语义一致。
+- 不要每张都堆满菌丝；只在「连接、传输、网络、汇聚」类主题里用 1-2 根，点到为止。
+
+## 性格
+
+- 很认真，但做的事有点荒诞。
+- 像一个低调的系统操作员 / 地下网络的运维工。
+- 冷幽默，不卖萌。
+- 有点笨拙，但不蠢。
+
+## 常见职责
+
+让小M承担核心动作：
+
+- 搬运素材、分解养分。
+- 用菌丝拉线、汇聚信息源、连接节点。
+- 卡在断点里。
+- 在机器里操作“判断”杆。
+- 变成筛选漏斗。
+- 切开“素材鱼”。
+- 盖章承接话术。
+- 牵着承接路径。
+- 举警告牌看坑。
+- 在地下网络里传输内容、把孢子撒出去（指数传播）。
+- 在旁边搬砖、搭桥、开门、分拣、记录。
+
+## 禁止
+
+- 不要把小M画成过度可爱的吉祥物、卡通蘑菇贴纸。
+- 不要画成儿童卡通角色。
+- 不要给小M复杂服装、表情包、闪亮眼睛、笑脸。
+- 不要画成写实蘑菇 / 3D 蘑菇 / 渐变质感（红帽白点是手绘平涂，不是写实）。
+- 不要把菌盖画成黑色实心（旧版已废弃）；也不要弄成多彩花哨。
+- 不要让小M只是站在角落里看。
+- 不要让小M或菌丝抢走结构表达，把画面塞满。
+
+## 判断标准
+
+如果去掉小M，图的核心隐喻还能完全成立，说明小M太装饰了；要重写提示词，让小M成为动作主体。菌丝同理：菌丝必须服务于「连接 / 传输」的核心意思，不是背景装饰。
+# 生图提示词模板
+
+每张图单独生成。根据正文内容替换变量，不要把多张图拼在一起。
+
+```text
+Generate one standalone 16:9 horizontal Chinese article illustration.
+
+Visual DNA:
+Pure white background. Minimalist black hand-drawn line art. Slightly wobbly pen lines. Lots of empty white space. Sparse red/orange/blue handwritten Chinese annotations. Clean absurd product-sketch feeling. No gradients, no shadows, no paper texture, no complex background, no commercial vector style, no PPT infographic look, no cute mascot poster, no children's illustration, no realistic UI.
+
+Recurring IP character required:
+小M (Xiao-M), a small hand-drawn MUSHROOM creature styled like the classic 🍄 emoji (NOT solid black): a rounded RED dome cap with 3-5 white polka dots and a black outline, a CREAM/off-white stem body with black hand-drawn outline, small BLACK dot eyes on the pale stem, tiny thin legs, blank deadpan serious expression, slightly uneven hand-drawn shape. Thin ORANGE mycelium threads may extend from its feet or hands to connect / carry / weave things together when the topic is about connection or flow. The red cap with white dots is flat hand-drawn (not 3D, not realistic). 小M must perform the core conceptual action, not decorate the scene. Keep it serious and slightly bizarre, not overly cute. Keep the signature: red dotted cap + pale stem.
+
+Theme:
+{正文配图主题}
+
+Structure type:
+{结构类型：Workflow / 系统局部 / 前后对比 / 角色状态 / 概念隐喻 / 方法分层 / 地图路线 / 小漫画分镜}
+
+Core idea:
+{这张图要表达的核心意思}
+
+Composition:
+{具体画面：小M在哪里、正在做什么、主要物件是什么、信息如何流动}
+
+Suggested elements:
+{元素1} / {元素2} / {元素3} / {元素4}
+
+Chinese handwritten labels:
+{标注词1} / {标注词2} / {标注词3} / {标注词4} / {可选标注词5}
+
+Color use:
+Black for main line art and 小M. Orange for main flow/path/arrows. Red only for key warnings/problems/results. Blue only for secondary notes or feedback/system state.
+
+Constraints:
+One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. Preserve at least 35% blank white space. Use at most 5-8 short handwritten Chinese labels. Do not write a title in the top-left corner. Do not write the structure type on the image. Do not make it a formal diagram, course slide, or dense explainer. Do not copy prior examples or reuse known case compositions unless explicitly requested; invent a fresh visual metaphor for this specific article. It should be clear but not instructional, interesting but not childish, strange but clean.
+```
+
+## 图像编辑提示
+
+去掉左上角标题：
+
+```text
+Edit the provided image. Remove only the handwritten title "{要删除的文字}" and its underline from the top-left corner. Fill that area with the same clean white background, matching the surrounding blank paper. Preserve everything else exactly: characters, labels, paths, line style, composition, aspect ratio, and image quality. Do not add any new text or objects.
+```
+
+增强怪诞感：
+
+```text
+Regenerate this illustration with the same core meaning and simple layout, but make 小M more central to the conceptual action. 小M should be doing the strange work that explains the idea, not standing beside the diagram. Keep it clean, sparse, hand-drawn, and not cute.
+```
+# QA Checklist
+
+## 必过项
+
+- 是 16:9 横版。
+- 背景是干净白底。
+- 有小M。
+- 小M承担核心动作，不只是装饰。
+- 没有复刻旧案例构图，而是为当前文章生成了新隐喻。
+- 画面怪诞、有创意、有意思。
+- 简洁清爽，主体不超过画面约 60%。
+- 一张图只讲一个核心结构。
+- 中文标注少、短、能读。
+- 橙色只用于主路径或箭头。
+- 红色只用于重点、问题、提醒或结果。
+- 蓝色只用于补充说明、反馈或系统状态。
+
+## 失败信号
+
+出现以下情况，重生成或局部编辑：
+
+- 左上角有“常见坑 / Workflow / 系统架构图 / 路线图”等标题。
+- 小M像吉祥物、表情包或可爱卡通。
+- 画面像 PPT、课程课件、正式流程图。
+- 元素太多、箭头太多、节点太多。
+- 文字变成大段解释。
+- 背景有纸纹、阴影、渐变、米色、噪点。
+- 真实 UI 截图或科技感界面。
+- 中文错字严重或标注不可读。
+- 画面太死板，没有荒诞隐喻。
+- 和 `assets/examples/` 里的旧案例构图过于相似。
+
+## 迭代方法
+
+- 太普通：让小M成为动作主体，加入一个奇怪但成立的隐喻。
+- 太复杂：删节点，只保留一个动作和 3-5 个短标注。
+- 太可爱：强调 deadpan、blank serious expression、not cute、not mascot。
+- 太 PPT：去掉标题、边框、整齐网格和过多箭头，改成手绘场景。
+- 太像旧案例：保留核心意思，换掉主物件和小M动作。
+- 文字错：优先局部编辑；错得多就重生成并减少标注数量。
+
+## 交付判断
+
+高质量图应该让读者先觉得“有点怪”，然后 1 秒内看懂结构。
+
+如果第一眼像教程页，而不是白纸上的怪诞产品草图，就不合格。
+# 构图模式与原创规则
+
+## 基础结构类型
+
+选择一种结构即可，不要混太多。
+
+### Workflow 流程
+
+适合：输入 -> 处理 -> 输出，内容生产，AI 工作流，自动化链路。
+
+画法：左侧输入，中间小M或怪机器处理，右侧输出，橙色箭头表达主流向。
+
+### 系统局部
+
+适合：信息来源、过滤器、数据库、渲染器、agent 系统局部。
+
+画法：只画 3-5 个核心模块，小M参与其中一个关键动作。
+
+### 前后对比
+
+适合：混乱/有序，手动/自动，分散/收拢，焦虑/稳定。
+
+画法：左混乱，右稳定，中间橙色箭头。角色可以更夸张。
+
+### 角色状态
+
+适合：用户痛点、创作者状态、工具太多、信息焦虑、卡住到跑起来。
+
+画法：2-4 个小状态，每个状态一个短标注。
+
+### 概念隐喻
+
+适合：内容工厂、信息仓库、脑内黑盒、工作流机器、自动日报。
+
+画法：一个大的怪物件或机器，少量输入，一个输出。要有记忆点。
+
+### 方法分层
+
+适合：方法论框架、系统层级、能力栈、内容系统分层。
+
+画法：一层层盒子，不要正式金字塔；小M在旁边搬砖或搭建。
+
+### 地图路线
+
+适合：从想法到上线、用户路径、内容承接路径、学习路线。
+
+画法：一条弯曲路径，少量节点，小M牵线或走路。
+
+### 小漫画分镜
+
+适合：失败到成功、真实过程、吐槽、使用前后变化。
+
+画法：2-4 个小场景，每格只表达一个动作。
+
+## 原创隐喻生成法
+
+每次都从当前文章重新发明隐喻，不能照搬旧图。
+
+### 三步
+
+1. 把抽象概念换成一个物理动作：卡住、漏掉、变重、分拣、沉淀、发酵、开门、折叠、拆包、回流。
+2. 把系统结构换成一个低科技物件：坏掉的机器、纸箱、抽屉、水管、邮筒、怪表盘、秤、井、梯子、奇怪工位。
+3. 让小M承担动作：不是站旁边，而是卡在机器里、拉错线、守门、搬运、修补、称重、扶梯子、记录、把东西塞进某个怪装置。
+
+### 可用物件池
+
+- 纸箱、抽屉、旧机器、漏斗、秤、邮筒、门、井、梯子、水管、线团、闸门、转盘、黑盒、打孔器、压面机、晾衣绳、怪工位。
+- 用时只选 1-2 个，不要堆满。
+
+### 小M动作池
+
+- 拉、扛、塞、捞、压、称、缝、剪、拧、守、推、接、拆、标记、回收。
+- 动作要服务核心意思，不要为了怪而怪。
+
+## 反复刻规则
+
+不要默认打开或复刻 `assets/examples/`。这些图片只用于风格校准，例如线条密度、留白、颜色克制、小M气质。
+
+除非用户明确说“照这张 / 复刻这个构图 / 用这个案例改”，否则不要直接复用这些旧构图：
+
+- 传送带两个断点
+- 小M在内容机器里拉判断杆
+- 小M变漏斗分拣流量/信任/转化
+- 小M切素材鱼
+- 小M牵承接路径
+- 小M拉三层信息源
+- 三个小M分别拿喇叭/搭桥/开门
+- 小M盖章话术工具箱
+- 小M举牌看常见坑路径
+
+同类主题也要换新隐喻。例如“承接路径”不一定画路线，可以画小M把内容尾巴接到门把手；“一鱼多吃”不一定画鱼，可以画小M把一个纸团压成几种形状。
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "sed -n '220,335p' src/content/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry.md" in /Users/jason/Dev/mycelium/blog
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/.system/imagegen/SKILL.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+
+# 安装依赖（uv）
+uv sync
+
+# 登录 PyTRIO
+trio login
+
+# 跑 Vision GRPO（先下载数据集）
+cd experiments/vision-grpo
+# 参考 start.md
+```
+
+先跑 1-2 步验证脚本能走通，再开正式训练。成本是可控的。
+
+---
+
+*Mycelium Protocol — 追踪 AI 系统的底层演化*
+
+---
+
+> **关于 Mycelium**
+>
+> 菌丝协议。持续追踪 AI 工具、系统和实验的内容节点。
+
+---
+
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+
+<!--EN-->
+
+agentic-rl-lab is an educational collection that connects rewards, rollouts, parameter updates and evaluation for LLM agents. Datawhale maintains the Apache-2.0 repository. Its examples use remote PyTRIO training: open-source code does not make compute free.
+
+### November 7 update: how should this repository be used?
+
+Experiments now live under `experiments/`, covering GRPO, GSPO, DAPO, distillation, Search-R1, ReTool, ALFWorld and newer topics such as TEMPO, AgentOPSD and Spec-o3. The README describes a more friendly training framework as a possible future direction. The repository is primarily a tutorial and experiment log, rather than evidence of a completed production platform.
+
+![Little M follows the data, reward, rollout and update loop](../../assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-01.png)
+
+Read the boundaries between modules: data defines questions and answers; rollouts produce trajectories; rewards score them; training constructs advantages and requests remote updates; evaluation checks a fixed dataset. Search and tool-use tasks additionally need environment feedback, timeouts and attribution across turns. Exposing a tool is not evidence that an agent reliably learned to use it.
+
+### What does the 71% to 87% increase establish?
+
+The author also reports format compliance increasing from 75% to 91%. Conditional accuracy among parseable responses is 71/75, about 94.7%, versus 87/91, about 95.6%. The aggregate improvement is closely associated with more reliable answer formatting; it cannot establish an equally large gain in geometry reasoning. The two sets of parseable responses also differ, so these ratios alone do not establish causation.
+
+![Little M separates a small-session bill from the 100-step evaluation](../../assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-02.png)
+
+Retain individual outputs, parsing failures, labels, token counts and latency. Evaluate the full test split, multiple seeds and a holdout excluded from checkpoint selection. Each example in a 100-question subset contributes one percentage point. Repeatedly selecting checkpoints against the same subset risks selection bias. `analysis.py` plots hard-coded summary values rather than loading a newly generated evaluation file; drawing the chart is not reproduction.
+
+### Where should learners start?
+
+Start with loss functions and text GRPO. Manually verify a few rewards and group advantages: all-correct or all-incorrect groups generally provide no relative discrimination. Continue with image-token alignment and answer parsing in Vision GRPO, then tackle multi-turn feedback in Search-R1, ReTool or ALFWorld. Define a budget and stopping conditions before invoking paid remote services. A historical invoice does not cap a future bill.
+
+Freeze a base evaluation first, run a small experiment and then evaluate independently. Add output length, tool-call counts and real costs for custom tasks so reward improvement cannot hide wasteful behavior. Choose reinforcement learning only after defining success for the intended task.
+
+![Little M keeps independent evaluation and budget checks outside training](../../assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-03.png)
+
+### FAQ
+
+#### Does training happen on an ordinary laptop?
+
+The laptop orchestrates the experiment; PyTRIO performs expensive training remotely. This reduces local memory requirements but introduces network and paid-service dependencies.
+
+#### Does ¥5 guarantee an 87% score?
+
+No. ¥5.06 refers to a 20-step session, whereas 87% refers to the 100-step checkpoint on a fixed 100-question subset. These are different records.
+
+#### Is this a production agent framework?
+
+Its primary role is education. Deployment still requires evaluation, credential management, tool isolation, recovery and monitoring. This review did not run training or independently measure accuracy or cost.
+
+Repository: https://github.com/datawhalechina/agentic-rl-lab
+Vision experiment: https://github.com/datawhalechina/agentic-rl-lab/tree/main/experiments/vision-grpo
+Manual: https://datawhalechina.github.io/agentic-rl-lab/
+
+The following retains the earlier algorithm explanation; historical chapter counts do not describe the current repository.
+
+## agentic-rl-lab: Learning Agent Reinforcement Learning Through Experiments
+
+*by Mycelium Protocol*
+
+---
+
+Training a large model usually looks like this: rent an 8-GPU server, build infra, wire up a sampling service, write a trainer, tune LoRA, handle checkpointing, set up logging — and then finally start doing what you actually wanted to do: test whether a reward function works, whether one loss function beats another.
+
+KMnO4-zx started from the other direction: **hand the infra to a remote platform, write only the data, reward, and loss.**
+
+Two records must be separated: a 20-step session cost about ¥5.06, while the 100-step checkpoint scored 87% versus 71% on a fixed 100-question subset. The repository does not establish the total cost of the 100-step run. This article did not reproduce training.
+
+GitHub: https://github.com/datawhalechina/agentic-rl-lab | 2026-11-07 核对 | Apache 2.0 | Python
+
+---
+
+### What This Series Does
+
+agentic-rl-lab is an open-source "reproduce one RL paper at a time" experiment log. Ten chapters completed:
+
+| Chapter | Algorithm | Task |
+|---------|-----------|------|
+| 0 | Loss function basics | importance sampling / PPO / CISPO |
+| 1 | GRPO | GSM8K math (text) |
+| 2 | OPD | General math + medical reasoning |
+| 3 | Search-R1 | Multi-round search RL (Qwen3.5-4B) |
+| 4 | OPSD | Step distillation |
+| 5 | ReTool | Code-interleaved agentic RL |
+| 6 | DAPO | 4 core improvements |
+| 7 | GSPO | Sequence-level importance ratio |
+| 8 | ALFWorld | Household agent (text env) |
+| 9 | **Vision GRPO** | **GeoQA geometric visual QA** |
+
+Chapters 1–8 are text-only. Chapter 9 is the first to push the full RL loop into multimodal: the model sees a geometry image, reads the question, and gets RL updates based on whether it picks the right answer.
+
+Infrastructure is **PyTRIO** (remote training platform) and **SwanLab** (experiment tracking). Local code handles only the experiment logic; forward pass, backward pass, sampling, and checkpointing all run remotely.
+
+---
+
+### What GRPO Is
+
+ succeeded in 0ms:
+---
+name: "imagegen"
+description: "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+---
+
+# Image Generation Skill
+
+Generates or edits images for the current project (for example website assets, game assets, UI mockups, product mockups, wireframes, logo design, photorealistic images, or infographics).
+
+## Top-level modes and rules
+
+This skill has exactly two top-level modes:
+
+- **Default built-in tool mode (preferred):** built-in `image_gen` tool for image generation, editing, and transparent-image requests. Does not require `OPENAI_API_KEY`.
+- **Fallback CLI mode:** `scripts/image_gen.py` CLI. Use when the user explicitly asks for or confirms the CLI/API/model path. Requires `OPENAI_API_KEY`.
+
+Within CLI fallback, the CLI exposes three subcommands:
+
+- `generate`
+- `edit`
+- `generate-batch`
+
+Rules:
+- Use the built-in `image_gen` tool by default for normal image generation and editing requests.
+- Do not switch to CLI fallback for ordinary quality, size, or file-path control.
+- For transparent images, ask built-in `image_gen` for a transparent background and preserve the generated alpha.
+- Never silently switch from built-in `image_gen` or CLI `gpt-image-2` to CLI `gpt-image-1.5`; ask the user first unless they explicitly requested `gpt-image-1.5`.
+- The word `batch` by itself does not mean CLI fallback. If the user asks for many assets or says to batch-generate assets without explicitly asking for CLI/API/model controls, stay on the built-in path and issue one built-in call per requested asset or variant.
+- If the built-in tool fails or is unavailable, tell the user the CLI fallback exists and that it requires `OPENAI_API_KEY`. Proceed only if the user explicitly asks for that fallback.
+- If the user explicitly asks for CLI mode, use the bundled `scripts/image_gen.py` workflow. Do not create one-off SDK runners.
+- Never modify `scripts/image_gen.py`. If something is missing, ask the user before doing anything else.
+
+Built-in save-path policy:
+- In built-in tool mode, Codex saves generated images under `$CODEX_HOME/*` by default.
+- Do not describe or rely on OS temp as the default built-in destination.
+- Do not describe or rely on a destination-path argument (if any) on the built-in `image_gen` tool. If a specific location is needed, generate first and then move or copy the selected output from `$CODEX_HOME/generated_images/...`.
+- Save-path precedence in built-in mode:
+  1. If the user names a destination, move or copy the selected output there.
+  2. If the image is meant for the current project, move or copy the final selected image into the workspace before finishing.
+  3. If the image is only for preview or brainstorming, render it inline; the underlying file can remain at the default `$CODEX_HOME/*` path.
+- Never leave a project-referenced asset only at the default `$CODEX_HOME/*` path.
+- Do not overwrite an existing asset unless the user explicitly asked for replacement; otherwise create a sibling versioned filename such as `hero-v2.png` or `item-icon-edited.png`.
+
+Shared prompt guidance for both modes lives in `references/prompting.md` and `references/sample-prompts.md`.
+
+Fallback-only docs/resources for CLI mode:
+- `references/cli.md`
+- `references/image-api.md`
+- `references/codex-network.md`
+- `scripts/image_gen.py`
+
+## When to use
+- Generate a new image (concept art, product shot, cover, website hero)
+- Generate a new image using one or more reference images for style, composition, or mood
+- Edit an existing image (inpainting, lighting or weather transformations, background replacement, object removal, compositing, transparent background)
+- Produce many assets or variants for one task
+
+## When not to use
+- Extending or matching an existing SVG/vector icon set, logo system, or illustration library inside the repo
+- Creating simple shapes, diagrams, wireframes, or icons that are better produced directly in SVG, HTML/CSS, or canvas
+- Making a small project-local asset edit when the source file already exists in an editable native format
+- Any task where the user clearly wants deterministic code-native output instead of a generated bitmap
+
+## Decision tree
+
+Think about two separate questions:
+
+1. **Intent:** is this a new image or an edit of an existing image?
+2. **Execution strategy:** is this one asset or many assets/variants?
+
+Intent:
+- If the user wants to modify an existing image while preserving parts of it, treat the request as **edit**.
+- If the user provides images only as references for style, composition, mood, or subject guidance, treat the request as **generate**.
+- If the user provides no images, treat the request as **generate**.
+
+Built-in edit semantics:
+- Built-in edit mode is for images already visible in the conversation context, such as attached images or images generated earlier in the thread.
+- If the user wants to edit a local image file with the built-in tool, first load it with built-in `view_image` tool so the image is visible in the conversation context, then proceed with the built-in edit flow.
+- Do not promise arbitrary filesystem-path editing through the built-in tool.
+- If a local file still needs direct file-path control, masks, or other explicit CLI-only parameters, use the explicit CLI fallback only when the user asks for it.
+- For edits, preserve invariants aggressively and save non-destructively by default.
+
+Execution strategy:
+- In the built-in default path, produce many assets or variants by issuing one `image_gen` call per requested asset or variant.
+- In the CLI fallback path, use the CLI `generate-batch` subcommand only when the user explicitly chose CLI mode and needs many prompts/assets.
+- For many distinct assets, do not use `n` as a substitute for separate prompts. `n` is for variants of one prompt; distinct assets need distinct built-in calls or distinct CLI `generate-batch` jobs.
+
+Assume the user wants a new image unless they clearly ask to change an existing one.
+
+## Workflow
+1. Decide the top-level mode: built-in by default, including transparent-output requests; fallback CLI only if explicitly requested or confirmed.
+2. Decide the intent: `generate` or `edit`.
+3. Decide whether the output is preview-only or meant to be consumed by the current project.
+4. Decide the execution strategy: single asset vs repeated built-in calls vs CLI `generate-batch`.
+5. Collect inputs up front: prompt(s), exact text (verbatim), constraints/avoid list, and any input images.
+6. For every input image, label its role explicitly:
+   - reference image
+   - edit target
+   - supporting insert/style/compositing input
+7. If the edit target is only on the local filesystem and you are staying on the built-in path, inspect it with `view_image` first so the image is available in conversation context.
+8. If the user asked for a photo, illustration, sprite, product image, banner, or other explicitly raster-style asset, use `image_gen` rather than substituting SVG/HTML/CSS placeholders. If the request is for an icon, logo, or UI graphic that should match existing repo-native SVG/vector/code assets, prefer editing those directly instead.
+9. Augment the prompt based on specificity:
+   - If the user's prompt is already specific and detailed, normalize it into a clear spec without adding creative requirements.
+   - If the user's prompt is generic, add tasteful augmentation only when it materially improves output quality.
+10. Use the built-in `image_gen` tool by default.
+11. For transparent-output requests, ask built-in `image_gen` for a transparent background and preserve the generated alpha channel.
+12. Inspect outputs and validate: subject, style, composition, text accuracy, and invariants/avoid items.
+13. Iterate with a single targeted change, then re-check.
+14. For preview-only work, render the image inline; the underlying file may remain at the default `$CODEX_HOME/generated_images/...` path.
+15. For project-bound work, move or copy the selected artifact into the workspace and update any consuming code or references. Never leave a project-referenced asset only at the default `$CODEX_HOME/generated_images/...` path.
+16. For batches or multi-asset requests, persist every requested deliverable final in the workspace unless the user explicitly asked to keep outputs preview-only. Discarded variants do not need to be kept unless requested.
+17. If the user explicitly chooses or confirms the CLI fallback, then use the fallback-only docs for model, quality, size, `input_fidelity`, masks, output format, output paths, and network setup.
+18. Always report the final saved path(s) for any workspace-bound asset(s), plus the final prompt or prompt set and whether the built-in tool or fallback CLI mode was used.
+
+## Transparent image requests
+
+Ask built-in `image_gen` for a genuinely transparent background and preserve its alpha.
+
+## Prompt augmentation
+
+Reformat user prompts into a structured, production-oriented spec. Make the user's goal clearer and more actionable, but do not blindly add detail.
+
+Treat this as prompt-shaping guidance, not a closed schema. Use only the lines that help, and add a short extra labeled line when it materially improves clarity.
+
+### Specificity policy
+
+Use the user's prompt specificity to decide how much augmentation is appropriate:
+
+- If the prompt is already specific and detailed, preserve that specificity and only normalize/structure it.
+- If the prompt is generic, you may add tasteful augmentation when it will materially improve the result.
+
+Allowed augmentations:
+- composition or framing hints
+- polish level or intended-use hints
+- practical layout guidance
+- reasonable scene concreteness that supports the stated request
+
+Not allowed augmentations:
+- extra characters or objects that are not implied by the request
+- brand names, slogans, palettes, or narrative beats that are not implied
+- arbitrary side-specific placement unless the surrounding layout supports it
+
+## Use-case taxonomy (exact slugs)
+
+Classify each request into one of these buckets and keep the slug consistent across prompts and references.
+
+Generate:
+- photorealistic-natural — candid/editorial lifestyle scenes with real texture and natural lighting.
+- product-mockup — product/packaging shots, catalog imagery, merch concepts.
+- ui-mockup — app/web interface mockups and wireframes; specify the desired fidelity.
+- infographic-diagram — diagrams/infographics with structured layout and text.
+- scientific-educational — classroom explainers, scientific diagrams, and learning visuals with required labels and accuracy constraints.
+- ads-marketing — campaign concepts and ad creatives with audience, brand position, scene, and exact tagline/copy.
+- productivity-visual — slide, chart, workflow, and data-heavy business visuals.
+- logo-brand — logo/mark exploration, vector-friendly.
+- illustration-story — comics, children’s book art, narrative scenes.
+- stylized-concept — style-driven concept art, 3D/stylized renders.
+- historical-scene — period-accurate/world-knowledge scenes.
+
+Edit:
+- text-localization — translate/replace in-image text, preserve layout.
+- identity-preserve — try-on, person-in-scene; lock face/body/pose.
+- precise-object-edit — remove/replace a specific element (including interior swaps).
+- lighting-weather — time-of-day/season/atmosphere changes only.
+- background-extraction — transparent background / clean cutout. Ask built-in `image_gen` for actual transparency.
+- style-transfer — apply reference style while changing subject/scene.
+- compositing — multi-image insert/merge with matched lighting/perspective.
+- sketch-to-render — drawing/line art to photoreal render.
+
+## Shared prompt schema
+
+Use the following labeled spec as shared prompt scaffolding for both top-level modes:
+
+```text
+Use case: <taxonomy slug>
+Asset type: <where the asset will be used>
+Primary request: <user's main prompt>
+Input images: <Image 1: role; Image 2: role> (optional)
+Scene/backdrop: <environment>
+Subject: <main subject>
+Style/medium: <photo/illustration/3D/etc>
+Composition/framing: <wide/close/top-down; placement>
+Lighting/mood: <lighting + mood>
+Color palette: <palette notes>
+Materials/textures: <surface details>
+Text (verbatim): "<exact text>"
+Constraints: <must keep/must avoid>
+Avoid: <negative constraints>
+```
+
+Notes:
+- `Asset type` and `Input images` are prompt scaffolding, not dedicated CLI flags.
+- `Scene/backdrop` refers to the visual setting. It is not the same as the fallback CLI `background` parameter, which controls output transparency behavior.
+- Fallback-only execution notes such as `Quality:`, `Input fidelity:`, masks, output format, and output paths belong in the CLI path only. Do not treat them as built-in `image_gen` tool arguments.
+
+Augmentation rules:
+- Keep it short.
+- Add only the details needed to improve the prompt materially.
+- For edits, explicitly list invariants (`change only X; keep Y unchanged`).
+- If any critical detail is missing and blocks success, ask a question; otherwise proceed.
+
+## Examples
+
+### Generation example (hero image)
+```text
+Use case: product-mockup
+Asset type: landing page hero
+Primary request: a minimal hero image of a ceramic coffee mug
+Style/medium: clean product photography
+Composition/framing: wide composition with usable negative space for page copy if needed
+Lighting/mood: soft studio lighting
+Constraints: no logos, no text, no watermark
+```
+
+### Edit example (invariants)
+```text
+Use case: precise-object-edit
+Asset type: product photo background replacement
+Primary request: replace only the background with a warm sunset gradient
+Constraints: change only the background; keep the product and its edges unchanged; no text; no watermark
+```
+
+## Prompting best practices
+- Structure prompt as scene/backdrop -> subject -> details -> constraints.
+- Include intended use (ad, UI mock, infographic) to set the mode and polish level.
+- Use camera/composition language for photorealism.
+- Only use SVG/vector stand-ins when the user explicitly asked for vector output or a non-image placeholder.
+- Quote exact text and specify typography + placement.
+- For tricky words, spell them letter-by-letter and require verbatim rendering.
+- For multi-image inputs, reference images by index and describe how they should be used.
+- For edits, repeat invariants every iteration to reduce drift.
+- Iterate with single-change follow-ups.
+- If the prompt is generic, add only the extra detail that will materially help.
+- If the prompt is already detailed, normalize it instead of expanding it.
+- For CLI fallback only, see `references/cli.md` and `references/image-api.md` for model, `quality`, `input_fidelity`, masks, output format, and output-path guidance.
+- For transparent images, ask built-in `image_gen` for actual transparency and preserve its alpha.
+
+More principles shared by both modes: `references/prompting.md`.
+Copy/paste specs shared by both modes: `references/sample-prompts.md`.
+
+## Guidance by asset type
+Asset-type templates (website assets, game assets, wireframes, logo) are consolidated in `references/sample-prompts.md`.
+
+## gpt-image-2 guidance for CLI fallback
+
+The fallback CLI defaults to `gpt-image-2`.
+
+- Use `gpt-image-2` for new CLI/API workflows unless the user confirms a different model.
+- CLI `gpt-image-2` does not support `background=transparent`; ask before using `gpt-image-1.5` unless the user explicitly requested that model.
+- `gpt-image-2` always uses high fidelity for image inputs; do not set `input_fidelity` with this model.
+- `gpt-image-2` supports `quality` values `low`, `medium`, `high`, and `auto`.
+- Use `quality low` for fast drafts, thumbnails, and quick iterations. Use `medium`, `high`, or `auto` for final assets, dense text, diagrams, identity-sensitive edits, or high-resolution outputs.
+- Square images are typically fastest to generate. Use `1024x1024` for fast square drafts.
+- If the user asks for 4K-style output, use `3840x2160` for landscape or `2160x3840` for portrait.
+- `gpt-image-2` size may be `auto` or `WIDTHxHEIGHT` if all constraints hold: max edge `<= 3840px`, both edges multiples of `16px`, long-to-short ratio `<= 3:1`, total pixels between `655,360` and `8,294,400`.
+
+Popular `gpt-image-2` sizes:
+- `1024x1024` square
+- `1536x1024` landscape
+- `1024x1536` portrait
+- `2048x2048` 2K square
+- `2048x1152` 2K landscape
+- `3840x2160` 4K landscape
+- `2160x3840` 4K portrait
+- `auto`
+
+## Fallback CLI mode only
+
+### Temp and output conventions
+These conventions apply only to the CLI fallback. They do not describe built-in `image_gen` output behavior.
+- Use `tmp/imagegen/` for intermediate files (for example JSONL batches); delete them when done.
+- Write final artifacts under `output/imagegen/`.
+- Use `--out` or `--out-dir` to control output paths; keep filenames stable and descriptive.
+
+### Dependencies
+Prefer `uv` for dependency management in this repo.
+
+Required Python package:
+```bash
+uv pip install openai
+```
+
+Optional for image inspection and downscaling:
+```bash
+uv pip install pillow
+```
+
+Portability note:
+- If you are using the installed skill outside this repo, install dependencies into that environment with its package manager.
+- In uv-managed environments, `uv pip install ...` remains the preferred path.
+
+### Environment
+- `OPENAI_API_KEY` must be set for live API calls.
+- Do not ask the user for `OPENAI_API_KEY` when using the built-in `image_gen` tool.
+- Never ask the user to paste the full key in chat. Ask them to set it locally and confirm when ready.
+
+If the key is missing, give the user these steps:
+1. Create an API key in the OpenAI platform UI: https://platform.openai.com/api-keys
+2. Set `OPENAI_API_KEY` as an environment variable in their system.
+3. Offer to guide them through setting the environment variable for their OS/shell if needed.
+
+If installation is not possible in this environment, tell the user which dependency is missing and how to install it into their active environment.
+
+### Script-mode notes
+- CLI commands + examples: `references/cli.md`
+- API parameter quick reference: `references/image-api.md`
+- Network approvals / sandbox settings for CLI mode: `references/codex-network.md`
+
+## Reference map
+- `references/prompting.md`: shared prompting principles for both modes.
+- `references/sample-prompts.md`: shared copy/paste prompt recipes for both modes.
+- `references/cli.md`: fallback-only CLI usage via `scripts/image_gen.py`.
+- `references/image-api.md`: fallback-only API/CLI parameter reference.
+- `references/codex-network.md`: fallback-only network/sandbox troubleshooting for CLI mode.
+- `scripts/image_gen.py`: fallback-only CLI implementation. Use only when the user explicitly chooses or confirms CLI mode.
+
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+exec
+/bin/zsh -lc "git status --short; ls -ld generated_images/agentic-rl-lab-20261107; ls -l src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-*.png; command -v magick; command -v pngquant; python3 -c 'import PIL; print(PIL.__version__)'" in /Users/jason/Dev/mycelium/blog
+ succeeded in 29ms:
+ M pipeline/m2/output/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry.json
+ M pipeline/m2/output/drafts-map.json
+ M source/20261105-craft-anything/semantic-index-info.json
+ M source/20261105-craft-anything/semantic-search-final.json
+ M src/content/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry.md
+?? generated_images/
+?? pipeline/m2/output/agentear-v0-28-1-settings-fix-local-voice-input.json
+?? pipeline/m2/output/cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor.json
+?? pipeline/m2/output/deepseek-v41-flash-1017-uncensored-fp8-teardown.json
+?? pipeline/m2/output/laya-aayushch-local-first-ai-notification-command-center.json
+?? pipeline/m2/output/meta-sam3-promptable-concept-segmentation-license-mac-guide.json
+?? pipeline/m2/output/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit.json
+?? pipeline/m2/output/superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx.json
+?? pipeline/m2/output/xllama-xbox-series-s-local-llm-inference-dev-mode.json
+ls: generated_images/agentic-rl-lab-20261107: No such file or directory
+zsh:1: no matches found: src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-*.png
+/opt/homebrew/bin/magick
+12.3.0
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+正文中的边界已确认：5.06 元对应 20 步会话；87% 对应 100 步 checkpoint 在固定 100 题上的评测。第二张会把两份记录明确分开；第一张表现训练闭环，第三张表现独立留出评测与预算停止条件。
+
+
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+3 张原图已生成，已检查主题、中文标注和数字：第二张清楚分开了 20 步账单与 100 步／100 题评测，第三张将留出集放在训练循环之外。接下来保存原图，并将最终文件处理为 1120×630、最多 48 色，再检查压缩后的效果和大小。
+
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from PIL import Image
+import shutil, hashlib
+
+root=Path('/Users/jason/Dev/mycelium/blog')
+rawdir=root/'generated_images/agentic-rl-lab-20261107'
+rawdir.mkdir(parents=True, exist_ok=True)
+gendir=Path('/Users/jason/.codex/generated_images/01a1b5ed-03f6-7360-8e13-67664cca3fc5')
+sources=['exec-a631051e-b406-489a-84b4-9bf705dd07b7.png','exec-cf39729a-9ea5-4ce0-bae0-c16f87b74da6.png','exec-37673acd-98ed-4a22-907e-122284bd8806.png']
+slug='agentic-rl-lab-grpo-vision-post-training-low-cost-geometry'
+for idx, name in enumerate(sources,1):
+    source=gendir/name
+    raw=rawdir/f'{idx:02d}-raw.png'
+    target=root/'src/assets/images'/f'{slug}-fig-{idx:02d}.png'
+    assert not raw.exists(),raw
+    assert not target.exists(),target
+    shutil.copy2(source,raw)
+    assert hashlib.sha256(raw.read_bytes()).digest()==hashlib.sha256(source.read_bytes()).digest()
+    with Image.open(raw) as img:
+        image=img.convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+        indexed=image.quantize(colors=48,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+        indexed.save(target,format='PNG',optimize=True,compress_level=9)
+    with Image.open(target) as final:
+        colors=len(final.getcolors(maxcolors=256))
+        assert final.size==(1120,630)
+        assert final.mode=='P'
+        assert colors<=48
+        assert target.stat().st_size<90000
+        print(f'{target.relative_to(root)} | {final.size} | {colors} colors | {target.stat().st_size} bytes | palette entries {len(final.getpalette())//3}')
+    print(f'raw: {raw.relative_to(root)} | {raw.stat().st_size} bytes | original verified')
+PY" in /Users/jason/Dev/mycelium/blog
+ exited 1 in 197ms:
+Traceback (most recent call last):
+  File "<stdin>", line 28, in <module>
+AssertionError
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image
+from pathlib import Path
+for p in Path('src/assets/images').glob('agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-*.png'):
+ with Image.open(p) as im:
+  print(p.name,im.size,im.mode,len(im.getcolors(256)),p.stat().st_size,len(im.getpalette())//3)
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 5ms:
+agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-01.png (1120, 630) P 48 249757 48
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image
+from pathlib import Path
+from io import BytesIO
+im=Image.open('generated_images/agentic-rl-lab-20261107/01-raw.png').convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+for threshold in [248,242,235]:
+ clean=im.copy()
+ clean.putdata([(255,255,255) if min(p)>=threshold else p for p in im.getdata()])
+ for colors in [48,32]:
+  q=clean.quantize(colors=colors,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+  b=BytesIO(); q.save(b,format='PNG',optimize=True,compress_level=9)
+  print(threshold,colors,len(b.getvalue()))
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 549ms:
+<stdin>:7: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+248 48 53612
+248 32 45691
+242 48 47697
+242 32 40338
+235 48 44196
+235 32 38423
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from PIL import Image
+import shutil, hashlib
+root=Path('/Users/jason/Dev/mycelium/blog')
+rawdir=root/'generated_images/agentic-rl-lab-20261107'
+gendir=Path('/Users/jason/.codex/generated_images/01a1b5ed-03f6-7360-8e13-67664cca3fc5')
+sources=['exec-a631051e-b406-489a-84b4-9bf705dd07b7.png','exec-cf39729a-9ea5-4ce0-bae0-c16f87b74da6.png','exec-37673acd-98ed-4a22-907e-122284bd8806.png']
+slug='agentic-rl-lab-grpo-vision-post-training-low-cost-geometry'
+for idx,name in enumerate(sources,1):
+ source=gendir/name
+ raw=rawdir/f'{idx:02d}-raw.png'
+ target=root/'src/assets/images'/f'{slug}-fig-{idx:02d}.png'
+ if raw.exists():
+  assert raw.read_bytes()==source.read_bytes()
+ else:
+  shutil.copy2(source,raw)
+ with Image.open(raw) as img:
+  image=img.convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+  image.putdata([(255,255,255) if min(p)>=248 else p for p in image.get_flattened_data()])
+  indexed=image.quantize(colors=48,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+  indexed.save(target,format='PNG',optimize=True,compress_level=9)
+ with Image.open(target) as final:
+  colors=len(final.getcolors(maxcolors=256))
+  palette_entries=len(final.getpalette())//3
+  assert final.size==(1120,630)
+  assert final.mode=='P'
+  assert colors<=48 and palette_entries<=48
+  assert target.stat().st_size<90000
+  assert final.convert('RGB').getpixel((0,0))==(255,255,255)
+  print(f'{target.relative_to(root)} | 1120x630 | {colors} colors | {target.stat().st_size} bytes | {palette_entries} palette entries')
+ assert raw.read_bytes()==source.read_bytes()
+ print(f'Raw preserved: {raw.relative_to(root)}')
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 585ms:
+src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-01.png | 1120x630 | 48 colors | 53612 bytes | 48 palette entries
+Raw preserved: generated_images/agentic-rl-lab-20261107/01-raw.png
+src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-02.png | 1120x630 | 48 colors | 47998 bytes | 48 palette entries
+Raw preserved: generated_images/agentic-rl-lab-20261107/02-raw.png
+src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-03.png | 1120x630 | 48 colors | 76719 bytes | 48 palette entries
+Raw preserved: generated_images/agentic-rl-lab-20261107/03-raw.png
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'git status --short' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+ M pipeline/m2/output/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry.json
+ M pipeline/m2/output/drafts-map.json
+ M source/20261105-craft-anything/semantic-index-info.json
+ M source/20261105-craft-anything/semantic-search-final.json
+ M src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-banner.jpg
+ M src/content/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry.md
+?? generated_images/
+?? pipeline/m2/output/agentear-v0-28-1-settings-fix-local-voice-input.json
+?? pipeline/m2/output/cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor.json
+?? pipeline/m2/output/deepseek-v41-flash-1017-uncensored-fp8-teardown.json
+?? pipeline/m2/output/laya-aayushch-local-first-ai-notification-command-center.json
+?? pipeline/m2/output/meta-sam3-promptable-concept-segmentation-license-mac-guide.json
+?? pipeline/m2/output/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit.json
+?? pipeline/m2/output/superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx.json
+?? pipeline/m2/output/xllama-xbox-series-s-local-llm-inference-dev-mode.json
+?? src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-01.png
+?? src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-02.png
+?? src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-03.png
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+Generated exactly 3 separate images with image generation, copied and inspected each:
+
+- [01 — Training loop](/Users/jason/Dev/mycelium/blog/src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-01.png): 53,612 bytes
+- [02 — Separate cost and evaluation records](/Users/jason/Dev/mycelium/blog/src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-02.png): 47,998 bytes
+- [03 — Holdout evaluation and budget gates](/Users/jason/Dev/mycelium/blog/src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-03.png): 76,719 bytes
+
+All are **1120×630, 48-color PNGs, under 90,000 bytes**. Originals preserved in [the requested raw directory](/Users/jason/Dev/mycelium/blog/generated_images/agentic-rl-lab-20261107/).
+
+This task did not edit Markdown, banner, or other files.
+hook: Stop
+hook: Stop Completed
+tokens used
+47,516
+Generated exactly 3 separate images with image generation, copied and inspected each:
+
+- [01 — Training loop](/Users/jason/Dev/mycelium/blog/src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-01.png): 53,612 bytes
+- [02 — Separate cost and evaluation records](/Users/jason/Dev/mycelium/blog/src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-02.png): 47,998 bytes
+- [03 — Holdout evaluation and budget gates](/Users/jason/Dev/mycelium/blog/src/assets/images/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry-fig-03.png): 76,719 bytes
+
+All are **1120×630, 48-color PNGs, under 90,000 bytes**. Originals preserved in [the requested raw directory](/Users/jason/Dev/mycelium/blog/generated_images/agentic-rl-lab-20261107/).
+
+This task did not edit Markdown, banner, or other files.

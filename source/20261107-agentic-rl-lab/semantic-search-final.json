@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+      "title": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+      "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/",
+      "language": "en",
+      "excerpt": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry KMnO4-zx/agentic-rl-lab, 147 stars, Apache 2.0, Python. GRPO post-training on Qwen3.5-4B for geometric visual QA (GeoQA) with PyTRIO remote compute — ¥5, 100 steps, accuracy from 71% to 87% (+16pp). The full series reprod",
+      "score": 0.5330396
+    },
+    {
+      "article_id": "areal-agent-self-evolution-developer-guide",
+      "title": "AReaL 2.0: An Engineering Guide to Self-Evolving Deployed Agents",
+      "url": "/blog/areal-agent-self-evolution-developer-guide/",
+      "language": "en",
+      "excerpt": "AReaL 2.0: An Engineering Guide to Self-Evolving Deployed Agents AReaL 2.0 (Ant Group + HKUST + Tsinghua) addresses why enterprise agents freeze after deployment. Three pillars: ATDP trajectory protocol, agentic data proxy, evolution control plane. Practical guide for integrating",
+      "score": 0.4875212
+    },
+    {
+      "article_id": "macaron-ai-mind-lab-lora-rl-agent-ecosystem",
+      "title": "Macaron AI's Open Source Ecosystem: Using LoRA-RL to Make Personal Agents Truly Learn Continuously",
+      "url": "/blog/macaron-ai-mind-lab-lora-rl-agent-ecosystem/",
+      "language": "en",
+      "excerpt": "Macaron AI's Open Source Ecosystem: Using LoRA-RL to Make Personal Agents Truly Learn Continuously Macaron AI's Mind Lab has open-sourced a complete ecosystem around LoRA-RL continuous learning for AI agents — from the MinT trillion-parameter RL platform to the MetaClaw self-evol",
+      "score": 0.47944796
+    },
+    {
+      "article_id": "tradingagents-multi-agent-llm-financial-trading-framework",
+      "title": "TradingAgents：把交易公司搬进 AI——96k Stars 的多 Agent 金融交易框架",
+      "url": "/blog/tradingagents-multi-agent-llm-financial-trading-framework/",
+      "language": "zh",
+      "excerpt": "TradingAgents：把交易公司搬进 AI——96k Stars 的多 Agent 金融交易框架 TauricResearch 开源的多 Agent LLM 量化交易框架，96k+ stars，Apache 2.0。用 LangGraph 构建 7 种专职角色：基本面/情绪/新闻/技术分析师 + 多空研究员 + 交易员 + 风控/投资组合经理。支持 OpenAI/Claude/Gemini/DeepSeek/Kimi/Qwen/GLM/Ollama 等全系列 LLM，覆盖美股/港股/A股/加密货币，附 arXiv 论文 2412.20138。 多A",
+      "score": 0.4652403
+    },
+    {
+      "article_id": "polaris-zju-real-end-to-end-ai-research-agent-voyage-pipeline",
+      "title": "polaris-zju-real-end-to-end-ai-research-agent-voyage-pipeline",
+      "url": "/blog/polaris-zju-real-end-to-end-ai-research-agent-voyage-pipeline/",
+      "language": "en",
+      "excerpt": "polaris-zju-real-end-to-end-ai-research-agent-voyage-pipeline ZJU-REAL/Polaris is an open-source end-to-end AI research platform by Zhejiang University's REAL Lab. Six-stage pipeline: literature research wiki → idea generation → Elo debate review → GPU experiment execution → LaTe",
+      "score": 0.4576184
+    },
+    {
+      "article_id": "tmax-allenai-open-rl-terminal-agent-training-recipe",
+      "title": "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27%",
+      "url": "/blog/tmax-allenai-open-rl-terminal-agent-training-recipe/",
+      "language": "zh",
+      "excerpt": "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27% AllenAI 开源 TMax，目前最强的终端 Agent RL 训练配方。9B 参数模型在 Terminal-Bench 2.0 达到 27%，超越更大规模的闭源竞品。数据集 15K 任务，比此前最大终端 Agent 数据集大 2.5 倍，配套 SFT + DPPO RL 训练流程全套开源。 Agent 终端Agent RL训练 AllenAI 开源 Terminal-Bench Qwen Mycelium 核心结果 四阶段配方",
+      "score": 0.4536696
+    },
+    {
+      "article_id": "adapta-self-hosted-local-knowledge-base-guide",
+      "title": "Building a Truly Private Local Knowledge Base with Adapta: An Honest Guide",
+      "url": "/blog/adapta-self-hosted-local-knowledge-base-guide/",
+      "language": "en",
+      "excerpt": "Building a Truly Private Local Knowledge Base with Adapta: An Honest Guide Adapta is a self-hosted private LLM platform combining RAG retrieval and LoRA fine-tuning behind one OpenAI-compatible endpoint. This guide walks an individual through a CPU-only local knowledge base from ",
+      "score": 0.45311403
+    },
+    {
+      "article_id": "beyond-static-skill-libraries--alibaba",
+      "title": "告别静态技能库！阿里发布 SkillClaw，开启 AI Agent「集体进化」时代",
+      "url": "/blog/beyond-static-skill-libraries--alibaba/",
+      "language": "zh",
+      "excerpt": "告别静态技能库！阿里发布 SkillClaw，开启 AI Agent「集体进化」时代 阿里 AMAP-ML 团队发布 SkillClaw 框架，通过 Agentic Evolver 自动聚合用户交互轨迹、更新共享技能库，让 AI Agent 实现集体进化。论文于 4 月登顶 HuggingFace 论文榜，6 轮进化后 Creative Synthesis 任务相对提升 88.41%。 SkillClaw AI Agent Alibaba AMAP-ML 技能进化 Skill Evolution Agentic Open Source 核心概述（30-5",
+      "score": 0.44781676
+    },
+    {
+      "article_id": "agent-lightning-microsoft-research-rl-framework-train-agents-real-harness",
+      "title": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习",
+      "url": "/blog/agent-lightning-microsoft-research-rl-framework-train-agents-real-harness/",
+      "language": "zh",
+      "excerpt": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习 microsoft/agent-lightning，MIT 开源，Python，18K stars。三个组件（Trainer/API Gateway/Rollout Controller），Agent 代码零改动，用真实工具链训练。Qwen3.5-9B 只用 6K 样本，SWE-bench Verified 从 41.8% 涨到 56.4%（+14.6pp）。支持 AutoGen、LangChain、OpenAI Agents SDK 及任意",
+      "score": 0.4459412
+    },
+    {
+      "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+      "title": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时",
+      "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+      "language": "zh",
+      "excerpt": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时 zavora-ai 社区维护的 ADK-Rust v2.2.0——不是 Google 官方项目，但把 Agent 运行时拆成 43 个可独立发布的 crate，按需引用。Type-safe、全异步、568 μs agent loop 开销，支持 Gemini/OpenAI/Anthropic/Ollama，含 graph 工作流、durable resume、realtime 语音、adk-skill 解析。本文做一次工程拆解。 rust agent-runtim",
+      "score": 0.4442511
+    }
+  ]
+}
