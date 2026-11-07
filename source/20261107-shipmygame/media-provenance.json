@@ -1,0 +1,31 @@
+{
+  "officialImages": "only donation/payment QRassets found; inappropriate as articlecover",
+  "banner": {
+    "rejectedSeed": 8251,
+    "rejectionReason": "manualinspectionfoundpseudo-brandtextongamecontrollerdespiteOCRpass",
+    "finalSeed": 8254,
+    "status": "verified",
+    "rejectedSecondSeed": 8252,
+    "secondRejectionReason": "manual composition review: unrelated barcode object at edge and ambiguous ceramic shape",
+    "rejectedThirdSeed": 8253,
+    "thirdRejectionReason": "tiny pseudo-lettering on side of carton, despite OCRpass",
+    "machineFailures": 0,
+    "bytes": 85997,
+    "manualReview": "accepted clean joystick/packingpaper/gametokens stilllife;noletters/faces,fullframe;illustrative notrealgameartifact"
+  },
+  "bodyFigures": {
+    "status": "verified",
+    "rawDirectory": "generated_images/shipmygame-20261107",
+    "workerExit": 0,
+    "manualReview": "all3accepted,stagefigureclearlynotpubliclyreleased,userconfirmationillustrative",
+    "dimensions": [
+      1120,
+      630
+    ],
+    "bytes": [
+      72428,
+      37146,
+      44485
+    ]
+  }
+}
