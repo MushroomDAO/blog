@@ -1,76 +1,419 @@
 {
-  "generatedAt": "2026-11-05T14:00:00Z",
+  "generatedAt": "2026-11-07T14:00:01Z",
   "period": {
-    "start": "2026-10-06",
-    "end": "2026-11-05"
+    "start": "2026-10-08",
+    "end": "2026-11-07"
   },
   "totals": {
-    "pageviews": 0,
-    "visits": 0,
-    "bots": 10
+    "pageviews": 20420,
+    "visits": 19800,
+    "bots": 0
   },
   "last7": {
-    "pv": 0,
-    "visits": 0
+    "pv": 5210,
+    "visits": 5010
   },
   "prior7": {
-    "pv": 0,
-    "visits": 0
+    "pv": 3510,
+    "visits": 3490
   },
-  "daily": [],
-  "countries": [],
-  "countryTotal": 0,
+  "daily": [
+    {
+      "date": "10-08",
+      "pv": 180,
+      "visits": 180
+    },
+    {
+      "date": "10-09",
+      "pv": 880,
+      "visits": 860
+    },
+    {
+      "date": "10-10",
+      "pv": 780,
+      "visits": 770
+    },
+    {
+      "date": "10-11",
+      "pv": 690,
+      "visits": 670
+    },
+    {
+      "date": "10-12",
+      "pv": 810,
+      "visits": 770
+    },
+    {
+      "date": "10-13",
+      "pv": 760,
+      "visits": 750
+    },
+    {
+      "date": "10-14",
+      "pv": 730,
+      "visits": 720
+    },
+    {
+      "date": "10-15",
+      "pv": 610,
+      "visits": 590
+    },
+    {
+      "date": "10-16",
+      "pv": 530,
+      "visits": 490
+    },
+    {
+      "date": "10-17",
+      "pv": 650,
+      "visits": 610
+    },
+    {
+      "date": "10-18",
+      "pv": 420,
+      "visits": 410
+    },
+    {
+      "date": "10-19",
+      "pv": 810,
+      "visits": 770
+    },
+    {
+      "date": "10-20",
+      "pv": 710,
+      "visits": 690
+    },
+    {
+      "date": "10-21",
+      "pv": 930,
+      "visits": 920
+    },
+    {
+      "date": "10-22",
+      "pv": 740,
+      "visits": 710
+    },
+    {
+      "date": "10-23",
+      "pv": 900,
+      "visits": 820
+    },
+    {
+      "date": "10-24",
+      "pv": 570,
+      "visits": 570
+    },
+    {
+      "date": "10-25",
+      "pv": 420,
+      "visits": 420
+    },
+    {
+      "date": "10-26",
+      "pv": 550,
+      "visits": 550
+    },
+    {
+      "date": "10-27",
+      "pv": 440,
+      "visits": 440
+    },
+    {
+      "date": "10-28",
+      "pv": 550,
+      "visits": 550
+    },
+    {
+      "date": "10-29",
+      "pv": 610,
+      "visits": 610
+    },
+    {
+      "date": "10-30",
+      "pv": 530,
+      "visits": 520
+    },
+    {
+      "date": "10-31",
+      "pv": 410,
+      "visits": 400
+    },
+    {
+      "date": "11-01",
+      "pv": 630,
+      "visits": 620
+    },
+    {
+      "date": "11-02",
+      "pv": 770,
+      "visits": 700
+    },
+    {
+      "date": "11-03",
+      "pv": 800,
+      "visits": 760
+    },
+    {
+      "date": "11-04",
+      "pv": 870,
+      "visits": 850
+    },
+    {
+      "date": "11-05",
+      "pv": 790,
+      "visits": 780
+    },
+    {
+      "date": "11-06",
+      "pv": 880,
+      "visits": 860
+    },
+    {
+      "date": "11-07",
+      "pv": 470,
+      "visits": 440
+    }
+  ],
+  "countries": [
+    {
+      "code": "SG",
+      "flag": "🇸🇬",
+      "name": "新加坡",
+      "nameEn": "Singapore",
+      "pv": 11700,
+      "visits": 11700
+    },
+    {
+      "code": "CN",
+      "flag": "🇨🇳",
+      "name": "中国",
+      "nameEn": "China",
+      "pv": 3400,
+      "visits": 3300
+    },
+    {
+      "code": "US",
+      "flag": "🇺🇸",
+      "name": "美国",
+      "nameEn": "United States",
+      "pv": 2600,
+      "visits": 2500
+    },
+    {
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "pv": 900,
+      "visits": 800
+    },
+    {
+      "code": "TW",
+      "flag": "🇹🇼",
+      "name": "台湾",
+      "nameEn": "Taiwan",
+      "pv": 400,
+      "visits": 400
+    },
+    {
+      "code": "CL",
+      "flag": "🇨🇱",
+      "name": "CL",
+      "nameEn": "CL",
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "code": "JP",
+      "flag": "🇯🇵",
+      "name": "日本",
+      "nameEn": "Japan",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "code": "NL",
+      "flag": "🇳🇱",
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "code": "ID",
+      "flag": "🇮🇩",
+      "name": "印度尼西亚",
+      "nameEn": "Indonesia",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "code": "IQ",
+      "flag": "🇮🇶",
+      "name": "IQ",
+      "nameEn": "IQ",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "code": "PL",
+      "flag": "🇵🇱",
+      "name": "PL",
+      "nameEn": "PL",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "code": "NG",
+      "flag": "🇳🇬",
+      "name": "NG",
+      "nameEn": "NG",
+      "pv": 100,
+      "visits": 100
+    }
+  ],
+  "countryTotal": 20800,
   "referers": {
-    "direct": 10000,
-    "search": 2000,
-    "ecosystem": 1000,
+    "direct": 14630,
+    "search": 5020,
+    "ecosystem": 620,
     "ai": 0,
-    "other": 0
+    "other": 150
   },
-  "pages": [],
+  "pages": [
+    {
+      "title": "Murmur：一个人的 AI 电台——主动播出、有声音、会记得你",
+      "titleEn": "Murmur: A Whole Radio Station for an Audience of One — Proactive AI Companion Radio with a Human Voice",
+      "path": "/blog/murmur-radio-companion-ai-radio-voice-host-claude-agent/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "World Monitor：一个人几天做出 Palantir 战情室的开源平替，78K stars",
+      "titleEn": "World Monitor: One Person Built an Open-Source Palantir War Room in Days, 78K Stars",
+      "path": "/blog/worldmonitor-elie-habib-palantir-gotham-open-source-alternative-3d-globe/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "AgentSight：用 eBPF 从系统边界看 AI Agent 到底干了什么，不用装 SDK 也不用挂代理",
+      "titleEn": "AgentSight: eBPF Boundary Tracing for AI Agents — No SDK, No Proxy",
+      "path": "/blog/agentsight-ebpf-boundary-tracing-ai-agent-observability/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "M5Stack StopWatch 变成 Codex 物理控制器：BLE 麦克风 + 额度仪表盘 + 四向 Agent 触摸，vibe coding 专属硬件",
+      "titleEn": "codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos",
+      "path": "/blog/codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "光岛：一触即发的桌面工作岛，普通人和开发者都能用",
+      "titleEn": "Luma Island: One Touch, Work Starts — A Desktop Work Island for Everyone",
+      "path": "/blog/luma-island-desktop-work-island/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27%",
+      "titleEn": "TMax: AllenAI's Strongest Open RL Recipe for Terminal Agents — 9B Hits 27% on Terminal-Bench 2.0",
+      "path": "/blog/tmax-allenai-open-rl-terminal-agent-training-recipe/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "claude-mem：95K 星的 Agent 跨会话记忆插件，工程拆解",
+      "titleEn": "claude-mem: Engineering Teardown of the 95K-Star Agent Persistent Memory Plugin",
+      "path": "/blog/claude-mem-persistent-context-agent-session-memory-typescript/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "Omarchy：DHH 造的 AI 原生 Linux，9 个 Agent 开箱即用，Omacom 基金会 800 万美元背书",
+      "titleEn": "omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch",
+      "path": "/blog/omarchy-dhh-linux-ai-native-os-hyprland-omacom-foundation-arch/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "PixOffice：给 AI 多智能体加一层 2D 办公室可视化，三种接入方式详解",
+      "titleEn": "PixOffice: How to Integrate 2D Office Scene Visualization Into Your AI Agent System",
+      "path": "/blog/pixoffice-2d-office-frontend-ai-agent-integration-guide/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI",
+      "titleEn": "Virtual AI Infra Team: A Local 27B That Picks Its Own Speedup (18 to 37 tok/s), With Only One AI on the Team",
+      "path": "/blog/virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "首页",
+      "titleEn": "Home",
+      "path": "/",
+      "pv": 1000,
+      "visits": 0
+    },
+    {
+      "title": "FramePack：ControlNet 作者开源，6G 显存生成 1 分钟视频，F1+P1 双版抗漂移",
+      "titleEn": "FramePack: ControlNet Author's Open-Source Long Video Diffusion — 6GB VRAM, 1-Minute 30fps, F1+P1 Anti-Drift Dual Versions",
+      "path": "/blog/framepack-lllyasviel-long-video-diffusion-guide/",
+      "pv": 1000,
+      "visits": 1000
+    }
+  ],
   "devices": [
     {
       "label": "desktop",
-      "count": 18000
-    }
-  ],
-  "os": [],
-  "browsers": [
-    {
-      "label": "Chrome",
-      "count": 15900
+      "count": 19370
     },
     {
-      "label": "Edge",
-      "count": 3000
+      "label": "mobile",
+      "count": 1020
+    },
+    {
+      "label": "tablet",
+      "count": 30
+    }
+  ],
+  "os": [
+    {
+      "label": "Windows",
+      "count": 14870
+    },
+    {
+      "label": "MacOSX",
+      "count": 2410
     },
     {
       "label": "Unknown",
-      "count": 600
+      "count": 1410
     },
     {
-      "label": "Safari",
-      "count": 400
+      "label": "Linux",
+      "count": 1050
     },
     {
-      "label": "ChromeMobile",
-      "count": 300
+      "label": "Android",
+      "count": 380
     },
     {
-      "label": "ChromeDerivative",
-      "count": 200
+      "label": "iOS",
+      "count": 290
     },
     {
-      "label": "ChromeMobileWebview",
-      "count": 200
-    },
+      "label": "ChromeOS",
+      "count": 10
+    }
+  ],
+  "browsers": [
     {
-      "label": "Firefox",
-      "count": 100
-    },
-    {
-      "label": "MobileSafari",
-      "count": 100
+      "label": "Chrome",
+      "count": 20000
     }
   ]
 }

@@ -1268,3 +1268,9 @@ BaronCyrus/ShipMyGame固定6b93a0ce97402c57d87750b2cc64d8a56ad6e38f，MIT/plugin
 仅临时合成夹具检查HTTP服务4类请求（allowed200/CORS、不允许来源仍200无CORS、越界symlink404、目录404）、隐私HTML占位符拒绝/转义、合成邮箱扫描命中。无Unity构建、浏览器、账号、上传或提审。CORS明确不是认证。8251/8253人工拒伪文字，8252拒无关barcode背景，最终8254机器0fail及人工通过；3小M图核验。Blog轮播1/列表1/5图200，公众号正文/3图/封面/元数据/原文链接回读一致，未群发。KB及账本已写，语义2条接收后的传播状态见source/20261107-shipmygame/semantic-status.json。
 
 ShipMyGame最终核验：中英文2条向量回读成功，新的公开查询命中；KB实际3行再次确认URL、草稿ID和verified状态，三件套完成。
+
+### 2026-11-07 agentic-rl-lab：复用旧文并纠正成本归因
+
+Datawhale当前仓库固定238bc688ca7d5c994c580f732ee9c2c92483bd20；复用2026-08-10原slug，不新建重复文章。旧文将20步5.06元账单与100步固定100题71→87%结果混成一次实验，已双语纠正；明确格式率75→91%、无逐题JSON/远端checkpoint、绘图使用常量，当前优势实际仅reward减组均值。只静态核对，未运行付费训练或独立测准确率/费用。保留原pubDate，更新updatedDate和轮播时间；替换旧示意封面并补3张小M图。
+
+旧公众号draft/get40007，完整11条远程草稿无匹配，已发布列表48001；保留旧创建凭证并标记recorded，未重复新建，也未声称本次修订已送达公众号。Blog原URL200、轮播1、5图片变体200。语义与KB最终回读见source/20261107-agentic-rl-lab/。
