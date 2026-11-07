@@ -1,0 +1,5 @@
+{
+  "code": 1,
+  "output": "✅ Access token obtained\nℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6aef1452-43d2626a-0dcda968）\n   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以\n   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。\n账本：blog 967 篇 + 公众号草稿箱 11 条 + 本地发布记录 950 条 + MemPalace 3935 抽屉\n\n── 查：开源地址：datawhalechina/agentic-rl-lab\n   ❌ [BLOG  ] 5块钱让大模型学会看图做几何题：GRPO 后训练的低成本实验\n      正文出现实体名「agentic-rl-lab」\n   ❌ [发过 2026-08-10] 5块钱让大模型学会看图做几何题：GRPO 后训练的低成本实验\n      正文出现实体名「agentic-rl-lab」\n   ❌ [知识库] **KMnO4-zx/agentic-rl-lab** — 低成本 LLM RL 后训练实验系列  GitHub: ht\n      正文出现实体名「agentic-rl-lab」\n   ❌ [知识库] **KMnO4-zx/agentic-rl-lab** — 低成本 LLM RL 后训练实验系列  GitHub: ht\n      正文出现实体名「agentic-rl-lab」\n\n```dedup-result\n{\"duplicate\":true,\"localLedgersRead\":true,\"wechatError\":\"\"}\n```\n查到重复或疑似重复 —— 先人工确认再决定写不写。\n注意：\n  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。\n  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。\n",
+  "checkedAt": "2026-11-07T12:06:42.335Z"
+}

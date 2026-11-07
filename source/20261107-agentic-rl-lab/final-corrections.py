@@ -1,0 +1,3 @@
+from pathlib import Path
+p=Path('src/content/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry.md');s=p.read_text();s=s.replace('## 训练配置','当前Vision训练代码使用`advantage = reward - mean_reward`，只做组内均值中心化；前面带标准差的公式是常见GRPO形式，不能直接当作这份代码的实际实现。训练配置还应与锁定的源码版本对应。\n\n## 训练配置',1);s=s.replace('### Training Config','The current Vision script uses `advantage = reward - mean_reward`, without standard-deviation normalization. The standardized GRPO formula describes a common variant, not the exact implementation here.\n\n### Training Config',1)
+s=s.replace('# 安装依赖（uv）','# 当前根项目要求Python >=3.13，按uv.lock解析依赖\n# 安装依赖（uv）',1).replace('uv sync\ntrio login','uv sync  # current project requires Python >=3.13\ntrio login',1);p.write_text(s)
