@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "anthropic-dreaming-dynamic-workflow-memory-review",
+      "title": "Anthropic Dreaming: Background Memory Maintenance",
+      "url": "/blog/anthropic-dreaming-dynamic-workflow-memory-review/",
+      "language": "en",
+      "excerpt": "Anthropic Dreaming: Background Memory Maintenance Review Anthropic’s dreaming workflow: transcript analysis, memory organization, read-only reuse, nine local checks, cursor gaps and safe production adaptation. Anthropic Agent 长期记忆 工作流 工程实践 What does “one session” actually mean? H",
+      "score": 0.69388
+    },
+    {
+      "article_id": "pi-workflow-openrath-personal-daily-workflow-guide",
+      "title": "pi-workflow v1.1.0: How Ordinary Individuals Build Reusable Automated Pipelines with Pi Agent",
+      "url": "/blog/pi-workflow-openrath-personal-daily-workflow-guide/",
+      "language": "en",
+      "excerpt": "pi-workflow v1.1.0: How Ordinary Individuals Build Reusable Automated Pipelines with Pi Agent pi-workflow is Pi Agent's sub-task orchestration extension — one install gives you four prebuilt pipelines (deep research, code review, spec comparison, change assessment) via natural la",
+      "score": 0.54600644
+    },
+    {
+      "article_id": "agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management",
+      "title": "agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management",
+      "url": "/blog/agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management/",
+      "language": "en",
+      "excerpt": "agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management Agent Orchestrator (GitHub: Untrivial-ai/agent-orchestrator, ⭐10,439, Apache-2.0) is a local desktop IDE that manages Claude Code, Codex, Cursor, and 26 other coding agents in one unified Kanban workspace. Each ",
+      "score": 0.5411936
+    },
+    {
+      "article_id": "ai-native-org-transformation-roadmap",
+      "title": "AI-Native Transformation Roadmap for Regular Organizations: A 6-Step Framework",
+      "url": "/blog/ai-native-org-transformation-roadmap/",
+      "language": "en",
+      "excerpt": "AI-Native Transformation Roadmap for Regular Organizations: A 6-Step Framework Drawing on Anthropic's AI-native organizational practices, this post distills a 6-step transformation roadmap for regular organizations: from value chain diagnosis and alignment mechanism rebuilding, t",
+      "score": 0.54094976
+    },
+    {
+      "article_id": "anthropic-agent-workshop-engineering-guide",
+      "title": "Anthropic Agent Workshops: A Practical Engineering Guide",
+      "url": "/blog/anthropic-agent-workshop-engineering-guide/",
+      "language": "en",
+      "excerpt": "Anthropic Agent Workshops: A Practical Engineering Guide Find Anthropic's official agent workshops and build a business workflow, separating free materials, API costs, mock tools and production engineering needs. Anthropic Claude Agent SDK 多智能体 业务自动化 工程实践 Where are the official s",
+      "score": 0.536825
+    },
+    {
+      "article_id": "animaworks-open-source-agent-memory-framework-guide",
+      "title": "AnimaWorks Deep Guide: Open-Source Python Agent Framework with 5-Layer Memory That Actually Remembers",
+      "url": "/blog/animaworks-open-source-agent-memory-framework-guide/",
+      "language": "en",
+      "excerpt": "AnimaWorks Deep Guide: Open-Source Python Agent Framework with 5-Layer Memory That Actually Remembers xuiltul/animaworks is an open-source Python framework using a neuroscience-inspired 5-layer memory system (episodic/semantic/procedural/working/interpersonal) instead of context ",
+      "score": 0.53551346
+    },
+    {
+      "article_id": "anthropic-employment-ai-expectations-reports",
+      "title": "Anthropic on Employment and AI Expectations: A Close Reading",
+      "url": "/blog/anthropic-employment-ai-expectations-reports/",
+      "language": "en",
+      "excerpt": "Anthropic on Employment and AI Expectations: A Close Reading Read Anthropic’s employment and AI expectations reports together: hiring shifts, agent hours, survey beliefs and what teams can responsibly learn from them. Anthropic Future of Work AI Agents Employment Research Which r",
+      "score": 0.5270853
+    },
+    {
+      "article_id": "humanizer-skill-ai-writing-patterns-wikipedia-cleanup",
+      "title": "Humanizer 调研：把维基百科「AI 写作特征」清单变成一个能装进任何 Agent 的 Skill",
+      "url": "/blog/humanizer-skill-ai-writing-patterns-wikipedia-cleanup/",
+      "language": "zh",
+      "excerpt": "Humanizer 调研：把维基百科「AI 写作特征」清单变成一个能装进任何 Agent 的 Skill 调研开源 Skill 项目 Humanizer：一份纯 Markdown 的技能文件，任何支持 Skill 的 Agent（Claude Code 等）都能装。不发明事实，只改文风——依据维基百科 WikiProject AI Cleanup 维护的「AI 写作特征」清单，覆盖 35 种模式（夸大重要性、堆砌形容词、强行三件套、破折号泛滥、加粗小标题、表情符号等），先起草改写、再检查残留AI腔和被篡改的事实、最后定稿。支持用一段你自己的文字样本做「语",
+      "score": 0.52544224
+    },
+    {
+      "article_id": "ai-collab-playbook-phd-workflow-skills-context-first",
+      "title": "AI 协作实战手册：一位在读博士的科研、写作、编码工作流——人是主变量",
+      "url": "/blog/ai-collab-playbook-phd-workflow-skills-context-first/",
+      "language": "zh",
+      "excerpt": "AI 协作实战手册：一位在读博士的科研、写作、编码工作流——人是主变量 cnfjlhj/ai-collab-playbook 是一位 AI 方向在读博士积累的 AI 协作实战手册，433 stars。核心观点：把 AI 当同事不当工具，但人始终是主变量。涵盖科研文献四阶段工作流（调研→筛选→精读→整合）、低摩擦入口策略、Code Agent 使用心得、上下文税与心流状态、技能沉淀到 Skill/AGENTS.md 的闭环，以及对「效率幻觉」的警惕。附 10 个独立 Skill 仓库。 AI协作 科研工作流 Code Agent Skills 效率 开源 ",
+      "score": 0.5248662
+    },
+    {
+      "article_id": "automem-agent-memory-skill-training-framework-guide",
+      "title": "AutoMem：让 Agent 自动学会管理记忆，32B 追平 Claude Opus 4.5",
+      "url": "/blog/automem-agent-memory-skill-training-framework-guide/",
+      "language": "zh",
+      "excerpt": "AutoMem：让 Agent 自动学会管理记忆，32B 追平 Claude Opus 4.5 Stanford 团队（arXiv:2607.01224）提出 AutoMem 框架：把元记忆（metamemory）引入 LLM Agent，用两个循环自动优化记忆能力——外循环用强 LLM 审查轨迹修改 scaffold，内循环把 agent 自己的好记忆决策转成训练信号。只优化记忆不动任务动作，Qwen2.5-32B 在 Crafter/MiniHack/NetHack 上性能提升 2x-4x，追平 Claude Opus 4.5 和 Gemini 3.",
+      "score": 0.52057743
+    }
+  ]
+}
