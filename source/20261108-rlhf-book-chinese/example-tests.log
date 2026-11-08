@@ -1,0 +1,13 @@
+test_aggregation_independent_gradients (__main__.BookExamples.test_aggregation_independent_gradients) ... ok
+test_chat_roles (__main__.BookExamples.test_chat_roles) ... ok
+test_dpo_gradient_and_reference_detached (__main__.BookExamples.test_dpo_gradient_and_reference_detached) ... ok
+test_grpo_equal_rewards_and_learning_direction (__main__.BookExamples.test_grpo_equal_rewards_and_learning_direction) ... ok
+test_kl_direction_and_mask (__main__.BookExamples.test_kl_direction_and_mask) ... ok
+test_ppo_shapes_returns_and_padding (__main__.BookExamples.test_ppo_shapes_returns_and_padding) ... ok
+test_rejection_sampling_indices (__main__.BookExamples.test_rejection_sampling_indices) ... ok
+test_rloo_group_layout (__main__.BookExamples.test_rloo_group_layout) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.390s
+
+OK

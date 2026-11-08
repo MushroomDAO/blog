@@ -1,0 +1,40 @@
+[
+  {
+    "id": "2841f47b6280876c1df4491d70735020fdc56af9153bb660",
+    "metadata": {
+      "article_id": "rlhf-book-chinese-post-training-learning-guide",
+      "content_hash": "0d9c794e15a7afe2",
+      "excerpt": "RLHF中文手册：读懂SFT、奖励模型与偏好优化 RLHF中文手册把SFT、偏好数据、奖励建模、PPO、DPO与评测连接成19章学习路线。本文核对Nathan Lambert原著与Junwei He维护的中文版，说明版本、内容和代码的授权差异，运行八项教学数值检查及三项构建辅助测试，并给出从阅读到小实验的实践路径，帮助开发者区分局部验证、完整训练和真实业务效果。 RLHF 后训练 强化学习 SFT DPO 开源教材 这份中文手册究竟提供什么？ 19章应该按什么顺序读？ PPO、DPO、GRPO，最容易混淆在哪里？ 本次实际运行了哪些检查？ 怎样把阅读变成",
+      "language": "zh",
+      "tags": [
+        "RLHF",
+        "后训练",
+        "强化学习",
+        "SFT",
+        "DPO",
+        "开源教材"
+      ],
+      "title": "RLHF中文手册：读懂SFT、奖励模型与偏好优化",
+      "url": "/blog/rlhf-book-chinese-post-training-learning-guide/"
+    }
+  },
+  {
+    "id": "625325da1479bce4ff72457f7597678838468bddbf078928",
+    "metadata": {
+      "article_id": "rlhf-book-chinese-post-training-learning-guide",
+      "content_hash": "2a879dbcd6fabb74",
+      "excerpt": "RLHF Book Chinese: A Guide to Post-Training Review RLHF Book Chinese: nineteen chapters, edition limits, separate content and code licenses, eleven verified checks and a useful post-training study path. RLHF 后训练 强化学习 SFT DPO 开源教材 What does this repository provide? In what order s",
+      "language": "en",
+      "tags": [
+        "RLHF",
+        "后训练",
+        "强化学习",
+        "SFT",
+        "DPO",
+        "开源教材"
+      ],
+      "title": "RLHF Book Chinese: A Guide to Post-Training",
+      "url": "/blog/rlhf-book-chinese-post-training-learning-guide/"
+    }
+  }
+]

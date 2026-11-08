@@ -1,0 +1,18 @@
+{
+  "source": "https://github.com/jweihe/RLHF-book-Chinese",
+  "commit": "af321f73f469019b9d481a4fd96403c9b6a871f1",
+  "agentReach": "skill and command unavailable",
+  "jinaReader": "403",
+  "contentFetched": "git clone succeeded",
+  "numericTests": 8,
+  "buildHelperTests": 3,
+  "fullBuild": false,
+  "reason": "Pandoc and pandoc-crossref unavailable",
+  "dedup": "Only raw bot KB hit; no existing article or local/remote WeChat match",
+  "saved_files": [
+    "/Users/jason/.heinu1-bot/media/rlhf-book-chinese-reading-preview.png",
+    "/Users/jason/.heinu1-bot/media/rlhf-book-chinese-workflow.png",
+    "/Users/jason/.heinu1-bot/media/rlhf-book-chinese-formulas.png",
+    "/Users/jason/.heinu1-bot/media/rlhf-book-chinese-code.png"
+  ]
+}

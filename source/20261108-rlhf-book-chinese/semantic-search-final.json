@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "rlhf-book-chinese-post-training-learning-guide",
+      "title": "RLHF中文手册：读懂SFT、奖励模型与偏好优化",
+      "url": "/blog/rlhf-book-chinese-post-training-learning-guide/",
+      "language": "zh",
+      "excerpt": "RLHF中文手册：读懂SFT、奖励模型与偏好优化 RLHF中文手册把SFT、偏好数据、奖励建模、PPO、DPO与评测连接成19章学习路线。本文核对Nathan Lambert原著与Junwei He维护的中文版，说明版本、内容和代码的授权差异，运行八项教学数值检查及三项构建辅助测试，并给出从阅读到小实验的实践路径，帮助开发者区分局部验证、完整训练和真实业务效果。 RLHF 后训练 强化学习 SFT DPO 开源教材 这份中文手册究竟提供什么？ 19章应该按什么顺序读？ PPO、DPO、GRPO，最容易混淆在哪里？ 本次实际运行了哪些检查？ 怎样把阅读变成",
+      "score": 0.5759465
+    },
+    {
+      "article_id": "humanizer-zh-chinese-writing-skill-fact-drift-test-labeling",
+      "title": "Humanizer-zh Teardown: The Chinese 'De-AI-Flavor' Skill Was Rewritten Today — 12 Side-by-Side Runs on the Same Paragraph",
+      "url": "/blog/humanizer-zh-chinese-writing-skill-fact-drift-test-labeling/",
+      "language": "en",
+      "excerpt": "Humanizer-zh Teardown: The Chinese 'De-AI-Flavor' Skill Was Rewritten Today — 12 Side-by-Side Runs on the Same Paragraph Humanizer-zh (18,101 stars, MIT) is the Chinese port of blader/humanizer. After eight months with no maintainer commits it was rewritten on 2026-09-23: 24 rule",
+      "score": 0.47745857
+    },
+    {
+      "article_id": "howtolive-better-evidence-based-chinese-life-guide-498-tips",
+      "title": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources",
+      "url": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
+      "language": "en",
+      "excerpt": "HowToLiveBetter: 498 Evidence-Based Life Tips — Cost, Benefit, and Evidence Grade for Each, Optimizing Four Resources eternity4719/HowToLiveBetter, Unlicense, live search UI, 498 cost-benefit-ranked Chinese life tips across 31 chapters: longevity, first aid, money, legal risks, r",
+      "score": 0.4604959
+    },
+    {
+      "article_id": "hamel-domain-specific-agent-evals-guide",
+      "title": "Hamel's Evals: A Practical Guide for Agent Teams",
+      "url": "/blog/hamel-domain-specific-agent-evals-guide/",
+      "language": "en",
+      "excerpt": "Hamel's Evals: A Practical Guide for Agent Teams Read Hamel Husain's eval essays and build a domain-specific agent evaluation loop with traces, human labels, calibrated judges, state checks, and rollout gates. Hamel Husain Agent评测 LLM-as-a-Judge 错误分析 AI产品 How should a team read H",
+      "score": 0.46034065
+    },
+    {
+      "article_id": "hauhaucs-qwen3-8-27b-gguf-fastmtp-speculative-decoding-kp-quant",
+      "title": "The Same 27B, a Different Road: HauhauCS's GGUF Release Uses FastMTP Speculative Decoding for Up to 3x Generation Speed",
+      "url": "/blog/hauhaucs-qwen3-8-27b-gguf-fastmtp-speculative-decoding-kp-quant/",
+      "language": "en",
+      "excerpt": "The Same 27B, a Different Road: HauhauCS's GGUF Release Uses FastMTP Speculative Decoding for Up to 3x Generation Speed HauhauCS/Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF is a GGUF quantization release of Qwen3.8-27B with 1048 likes and 1.71M downloads. Two things stand out: K_P",
+      "score": 0.4541014
+    },
+    {
+      "article_id": "eccv-2026-best-paper-heat-kernel-textures-uv-free",
+      "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
+      "url": "/blog/eccv-2026-best-paper-heat-kernel-textures-uv-free/",
+      "language": "zh",
+      "excerpt": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖 ECCV 2026 最佳论文颁给帝国理工的 HKTex：用约 4.8k 个贴在网格表面的各向异性热核取代 UV 贴图，313 个 Objaverse 模型上平均 96.6KB、LPIPS 优于所有对比方法，代码 MIT 开源但只支持 Linux + NVIDIA。时间检验奖授予 2016 年的感知损失、SSD 和 Learning without Forgetting。我们在 Mac 上复现了它的数学底座并指出三个落地障碍。 ECCV 2",
+      "score": 0.45080897
+    },
+    {
+      "article_id": "china-departure-flight-price-monitor-ctrip-fliggy-qunar-southeast-asia-lcc",
+      "title": "Monitoring Cheap Flights Out of China: From OTA Reverse Engineering to Direct Low-Cost Carrier Access",
+      "url": "/blog/china-departure-flight-price-monitor-ctrip-fliggy-qunar-southeast-asia-lcc/",
+      "language": "en",
+      "excerpt": "Monitoring Cheap Flights Out of China: From OTA Reverse Engineering to Direct Low-Cost Carrier Access Complete Flight Price Monitoring for China-Departing Travelers: From OTA Reverse Engineering to LCC Direct Access The Three Data Scenarios The Key Open Source Tool: JiPiao Critic",
+      "score": 0.44950265
+    },
+    {
+      "article_id": "gsq-rco-non-uniform-gguf-quantization",
+      "title": "27B 模型压到 11.8GB 还「任务无损」：奥地利 IST 用两篇论文的方法重做了 GGUF 量化",
+      "url": "/blog/gsq-rco-non-uniform-gguf-quantization/",
+      "language": "zh",
+      "excerpt": "27B 模型压到 11.8GB 还「任务无损」：奥地利 IST 用两篇论文的方法重做了 GGUF 量化 均匀量化对所有张量一视同仁，GSQ-RCO 不是——它用梯度搜索按每个张量的敏感度分配精度，在总大小预算内做非均匀分配。结果：Qwen3.8-27B 从 53.8GB 压到 11.8GB（4.6 倍），AIME25 和 LiveCodeBench 分数与 BF16 原模型完全一致。文件是标准 GGUF，llama.cpp、Ollama、LM Studio 直接跑。 量化 GGUF 本地推理 local-first Qwen 开源模型 llama.cpp",
+      "score": 0.4485216
+    },
+    {
+      "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "title": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+      "language": "en",
+      "excerpt": "agentic-harness-engineering-observability-self-evolution-coding-agent Fudan+PKU+Qiji Zhifeng, arXiv:2604.25850, MIT, Python. AHE proposes a closed loop that evolves the harness — not the model weights — using three observability pillars (component / experience / decision) to let ",
+      "score": 0.44612646
+    },
+    {
+      "article_id": "harvey-ai-vertical-llm-training-moneyball-legal-ai",
+      "title": "harvey-ai-vertical-llm-training-moneyball-legal-ai",
+      "url": "/blog/harvey-ai-vertical-llm-training-moneyball-legal-ai/",
+      "language": "en",
+      "excerpt": "harvey-ai-vertical-llm-training-moneyball-legal-ai Harvey AI built a full vertical-domain model training playbook using legal AI as the proving ground: build the benchmark first, pick open-weight bases, then post-train with async RL. This piece covers Harvey Tenet (Kimi K3 + Fire",
+      "score": 0.44050264
+    }
+  ]
+}
