@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-08T02:08:32.384Z",
+  "drafts": [
+    {
+      "slug": "rlhf-book-chinese-post-training-learning-guide",
+      "mediaId": "prCUE631thH1cmNLi42prEEEQCeJ0s-eL1K0vrAYO4K5OtzgTfCy9io6CIjota0z",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "d481a95ad54e3c222fad25336feb0898b108a8dad79e2ec79a5e48fba285783b",
+      "remoteTextHash": "d481a95ad54e3c222fad25336feb0898b108a8dad79e2ec79a5e48fba285783b",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/rlhf-book-chinese-post-training-learning-guide/",
+      "localContentHash": "963abff142b10de156117c1750ea6d10d3d6448a56d60ff4a56e9f5586390e7e",
+      "remoteContentHash": "647f1896dce3986892dff30e5ae23d630c13aa066f6e08cd8f1e88ddf0ba34cf"
+    }
+  ]
+}

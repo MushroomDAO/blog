@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-08T02:08:11.041528+00:00",
+  "articles": [
+    {
+      "slug": "rlhf-book-chinese-post-training-learning-guide",
+      "url": "https://blog.mushroom.cv/blog/rlhf-book-chinese-post-training-learning-guide/",
+      "title": "RLHF中文手册：读懂SFT、奖励模型与偏好优化",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/rlhf-book-chinese-post-training-learning-guide-banner.DSo6qV6T.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 91238
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rlhf-book-chinese-post-training-learning-guide-banner.DSo6qV6T_Z3RmyS.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 31116
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rlhf-book-chinese-post-training-learning-guide-fig-01.B3-eju27_ZcWTEq.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 42182
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rlhf-book-chinese-post-training-learning-guide-fig-02.BwGbEAFv_1TjfF0.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 49048
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rlhf-book-chinese-post-training-learning-guide-fig-03.JW6n3_33_Z2gV00K.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 42100
+        }
+      ]
+    }
+  ]
+}

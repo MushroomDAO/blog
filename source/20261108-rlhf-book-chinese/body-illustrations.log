@@ -1,0 +1,1135 @@
+Reading additional input from stdin...
+2026-11-08T02:04:21.241618Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/network-switch/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T02:04:21.241648Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-cdp/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T02:04:21.241652Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-docker/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T02:04:21.241656Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-publisher/SKILL.md: missing YAML frontmatter delimited by ---
+OpenAI Codex v0.165.0
+--------
+workdir: /Users/jason/Dev/mycelium/blog
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a1b8e6-4506-7ca0-b30a-36d77bf05fa3
+--------
+user
+Use $mycelium-mushroom-illustrations. Read src/content/blog/rlhf-book-chinese-post-training-learning-guide.md. Generate exactly3 separate Little M white background hand-drawn figures with few correct Chinese labels: 01 examples preferences rewards optimization learning map; 02 separate rejection filtering policy optimization and preference training; 03 evidence ladder numerical snippet checks vs whole book build vs real training (do not imply all three verified). Use image generation tool. Save raw generated_images/rlhf-book-chinese-20261108/. Copy final to src/assets/images/rlhf-book-chinese-post-training-learning-guide-fig-01.png through03.png. Each1120x630 at most48palette colors and under90000bytes, no dithering, inspect final. Do not modify article or banner or other files. Finish copying and compression before returning.
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+codex
+我会按「小M」插图 skill 逐张生成这 3 张图，再压缩到指定尺寸、调色板和文件大小，检查最终 PNG。只写入你指定的原图目录和 3 个正文配图文件。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+---
+name: mycelium-mushroom-illustrations
+description: 生成 Mycelium「小M」蘑菇 IP 风格的中文正文配图。【科技类别】文章默认用此 skill。用于为中文文章、帖子、博客、Notion 文档、工作流、方法论、流程、结构、状态、隐喻或观点生成“怪诞”“蘑菇”“小M”“菌丝”“手绘”“正文配图”“文章插图”“配图建议”“shot list”“去标题/改图”等任务；视觉为纯白手绘、少量红橙蓝批注、简洁清爽但天马行空，主角是黑色小蘑菇「小M」。
+---
+
+# Mycelium 小M（蘑菇）怪诞正文配图
+
+> 用途分工：本 skill 用于**科技类别**文章。社会/创作思考类别用 `mycelium-avatar-illustrations`（卡通小人），科普类别用 `mycelium-baobao-cat-illustrations`（德文猫Baobao）。
+
+## 核心定位
+
+为中文文章设计和生成 16:9 横版正文配图。目标不是做商业插画、PPT 信息图或可爱卡通，而是把文章里的关键判断、流程、结构、状态或隐喻，变成一张清爽、怪诞、有创意、可读但不说明书的手绘解释图。
+
+默认视觉 IP 是“小M”：🍄 经典造型的小蘑菇怪物——**红色菌盖 + 白色圆点斑、米白菌柄 + 黑色手绘轮廓、黑点眼**、细腿、空表情，认真做一件荒诞但成立的事；脚下可伸出橙色菌丝线做连接/传输。不要画成黑色实心。小M必须参与画面的核心动作，不能只是站在旁边当装饰。完整形象见 `references/mushroom-ip.md`。
+
+## 先读这些参考
+
+按任务需要读取，不要一次塞满上下文：
+
+- `references/style-dna.md`：风格 DNA、颜色、文字、禁忌。
+- `references/mushroom-ip.md`：小M IP 的形象、性格、动作库和禁忌。
+- `references/composition-patterns.md`：结构类型、原创隐喻方法和反复刻规则。
+- `references/prompt-template.md`：单张生图提示词模板。
+- `references/qa-checklist.md`：生成后检查和迭代规则。
+- `assets/examples/`：只作低频视觉校准，不进入默认生成路径。不要照抄这些案例的构图、物件或标注。
+
+## 工作流
+
+### 1. 消化正文
+
+先读用户给的正文、链接、Notion 页面、Markdown 文件或截图内容。提炼：
+
+- 核心观点是什么
+- 哪些段落承担认知转折
+- 哪些内容适合用图解释
+- 哪些地方只适合文字，不需要图
+
+不要平均配图。优先选择“认知锚点”，例如：核心判断、两个断点、输入输出闭环、分流、前后对比、一鱼多吃、承接路径、常见坑、角色状态变化。
+
+### 2. 先出配图策略
+
+如果用户只是说“分析怎么配图 / 思考哪些地方需要配图”，先给 shot list。每张图写清楚：
+
+- 放在哪个段落后
+- 图的主题
+- 核心意思
+- 结构类型
+- 小M在图里做什么
+- 建议元素
+- 建议中文标注词
+
+默认 4-8 张。文章很短时 1-3 张；长文也不要轻易超过 9 张。够用就好，避免把正文做成画册。
+
+### 3. 单张生成
+
+如果用户明确要求“生成 / 输出 / 做图 / 帮我生成”，不要停下来等确认；用内置 `image_gen` 每张单独生成。不要把多张图拼在一张里。
+
+每张图只讲一个核心结构。提示词必须包含：
+
+- 16:9 横版中文正文配图
+- 纯白背景
+- 黑色手绘线稿
+- 少量红色/橙色/蓝色中文手写批注
+- 大量留白
+- 小M作为核心动作主体
+- 禁止 PPT、商业插画、幼稚可爱、复杂架构、左上角类型标题
+
+不要复刻过往案例。案例只提供风格密度和小M参与方式，不能直接复用“传送带断点 / 小M拉线 / 素材鱼 / 盖章工具箱 / 常见坑路径”等已有构图，除非用户明确要求复刻某张图。每次都要从当前文章重新发明一个奇怪但成立的隐喻。
+
+### 4. 检查与迭代
+
+生成后检查 `references/qa-checklist.md`。如果出现以下问题，优先重生成或局部编辑：
+
+- 小M只是装饰
+- 画面太满
+- 太像流程图/PPT
+- 中文太多或错字严重
+- 左上角出现“常见坑/流程图/系统架构图”等标题
+- 画风太可爱、幼稚、死板
+- 背景不是干净白底
+
+### 5. 保存交付
+
+如果用户在 workspace 内工作，把最终图复制到：
+
+```text
+assets/<article-slug>-illustrations/
+```
+
+按顺序命名：
+
+```text
+01-topic-name.png
+02-topic-name.png
+```
+
+保留原始生成文件，不要覆盖已有资产，除非用户明确要求替换。
+
+## 输出口径
+
+生成前的策略输出要短而准。生成后的交付要包含：
+
+- 生成了几张
+- 每张图的用途
+- 保存路径
+- 哪些图最稳，哪些图是可选
+
+不要长篇解释风格理论；让图自己说话。
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat src/content/blog/rlhf-book-chinese-post-training-learning-guide.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+---
+title: "RLHF中文手册：读懂SFT、奖励模型与偏好优化"
+titleEn: "RLHF Book Chinese: A Guide to Post-Training"
+description: "RLHF中文手册把SFT、偏好数据、奖励建模、PPO、DPO与评测连接成19章学习路线。本文核对Nathan Lambert原著与Junwei He维护的中文版，说明版本、内容和代码的授权差异，运行八项教学数值检查及三项构建辅助测试，并给出从阅读到小实验的实践路径，帮助开发者区分局部验证、完整训练和真实业务效果。"
+descriptionEn: "Review RLHF Book Chinese: nineteen chapters, edition limits, separate content and code licenses, eleven verified checks and a practical post-training study path."
+wechatTitle: "RLHF中文手册：读懂模型后训练"
+wechatDigest: "19章串起模型后训练，并核验教学代码、版本边界与学习路径。"
+pubDate: "2026-11-08"
+updatedDate: "2026-11-08"
+category: "Tech-Experiment"
+tags: ["RLHF", "后训练", "强化学习", "SFT", "DPO", "开源教材"]
+heroImage: "../../assets/images/rlhf-book-chinese-post-training-learning-guide-banner.jpg"
+---
+
+RLHF 中文手册把大模型后训练里的数据、奖励、优化和评测连成一条学习路径，适合已经会用模型、希望弄清训练原理的读者。它是 Nathan Lambert 原著的中文翻译项目，由 Junwei He 维护，仓库包含19章以及可验证的教学代码。
+
+## 这份中文手册究竟提供什么？
+
+它的价值首先是解释概念之间的关系：SFT教模型模仿示例，偏好数据表达回答之间的取舍，奖励模型学习评分，策略优化再利用反馈改变生成分布。只背PPO、DPO、GRPO缩写，很容易忽略这些方法在数据来源、训练信号和计算结构上的区别。
+
+项目提供在线全书、分章网页、PDF、Markdown源码及构建脚本。HTML、EPUB、PDF、DOCX都有本地构建入口，但“可以构建”与“已有可下载的最新产物”应分开看。README建议优先使用当前修订版阅读入口，历史Release v1.0保留的是旧版PDF。
+
+![小M沿示例、偏好、奖励和优化连接后训练知识](../../assets/images/rlhf-book-chinese-post-training-learning-guide-fig-01.png)
+
+内容许可标为CC BY-NC-SA 4.0，代码许可标为MIT；不能只看到GitHub识别出的MIT标签，就把书中文字和配图也统称为MIT。本文提供独立的阅读评介与验证记录，原著、译文和原始插图仍保留各自的署名与许可。
+
+核对版本为`af321f73f469019b9d481a4fd96403c9b6a871f1`。仓库说明2026年9月修订了概念、公式、示例与排版，但尚未完成与英文出版版的逐句对照；原译稿约2025年4月的行业语境仍需注意。学习数学定义可以借助此书，判断今天的模型和训练框架则应再查当前论文与官方代码。
+
+## 19章应该按什么顺序读？
+
+按需求组织会比逐页读更容易形成完整认识。下面的顺序以README推荐路径为基础，再加上独立的工程阅读建议。
+
+| 阶段 | 章节 | 阅读时应回答的问题 |
+| --- | --- | --- |
+| 建立全局 | 1、3、4 | 后训练在优化什么，状态、动作和奖励分别指什么？ |
+| 理解信号 | 9、6、7、8 | 示例从哪里来，偏好怎样变成分数，为什么限制策略偏移？ |
+| 比较算法 | 10、11、12 | 筛选、在线策略梯度和直接偏好优化各自改变什么？ |
+| 检查目标 | 13–17 | AI反馈、推理、合成数据和评测可能引入哪些偏差？ |
+| 连接产品 | 18、19 | 回答风格、信息质量和用户体验怎样影响目标设计？ |
+
+这里不必先读完所有算法再开始实践。更有效的方式是：先选一个小任务，明确什么叫好回答，再回到相关章节解释自己的数据和评测。若数据本身无法稳定区分优劣，切换优化器通常不能修复这个根本问题。
+
+## PPO、DPO、GRPO，最容易混淆在哪里？
+
+PPO属于策略梯度方法，训练时需要把新旧策略的概率比、优势、有效token和价值目标对应起来。裁剪代理目标不等于给实际KL散度设置了必然满足的硬上限。实现是否屏蔽padding、是否正确处理终止和截断，往往比缩写本身更影响结果。
+
+DPO用偏好对构造训练目标，避免经典管线中显式奖励模型训练和在线RL循环的组合，但它仍然会更新策略参数。它不是“无需训练就让模型对齐”，调一个β也不等于直接指定最终实际KL。
+
+GRPO借助同题多条回答的组内比较构造优势。如果一组奖励完全相同，就没有相对区分信号；全对或全错不意味着优势更大。组内标准差、稳定项、分组顺序和token聚合的约定都值得核对，不能只抄一行公式。
+
+![小M分开筛选、在线优化和偏好训练三种学习动作](../../assets/images/rlhf-book-chinese-post-training-learning-guide-fig-02.png)
+
+这些正是中文版勘误记录重点解释的内容。它让读者看见修改依据，也提醒读者：教材代码可以帮助理解局部运算，完整训练系统还需要数据加载、采样服务、检查点、分布式执行和独立评测。
+
+## 本次实际运行了哪些检查？
+
+在临时克隆的固定版本上，运行了仓库自带的两组检查，未修改上游源代码：
+
+```bash
+# 在已具备torch、numpy、jinja2的Python环境中运行
+python scripts/check_examples.py
+python3 -m unittest discover -s tests -v
+```
+
+第一组8项数值测试全部通过。它直接从章节Markdown提取实际代码块，检查KL方向和掩码、PPO张量形状及回报目标、GRPO等值奖励与学习方向、RLOO分组、DPO梯度与参考模型detach、独立梯度聚合、Top-K索引以及聊天角色。
+
+第二组3项构建辅助测试全部通过，覆盖章节合并时移除导航元数据、转换书内链接、拒绝缺失结束标记的frontmatter，以及发现缺图和空正文的检查器。这里验证的是辅助函数的行为，不是全书已经成功重建。
+
+当前环境没有Pandoc与pandoc-crossref，因此没有执行完整HTML、EPUB、PDF或DOCX构建，也没有运行`make check`对完整构建站点的检查。没有进行模型训练、论文分数复现或逐句翻译准确率评测。8项数值检查与3项辅助检查通过，能证明局部样例符合所测试的约定，不能证明全书无误。
+
+![小M把局部数值检查、全书构建和真实训练分成三层证据](../../assets/images/rlhf-book-chinese-post-training-learning-guide-fig-03.png)
+
+这个区别适合带入日常AI开发：张量形状正确，不代表奖励定义合理；训练loss下降，不代表独立测试变好；偏好模型得分提高，也可能是更会利用代理指标。第16章评测和第17章过度优化，应与算法章节一起读。
+
+## 怎样把阅读变成一个小实验？
+
+可以用客服回答排序作为练习：固定一批问题，给每题准备两个候选回答，并写清排序理由，例如事实正确、解决问题、语气适当。先人工复查标注分歧，再决定需要SFT示例、偏好训练，还是仅需修正提示词或检索资料。
+
+随后冻结一份不参与调参的留出集，同时记录事实错误、格式失败、输出长度和调用费用。若试验偏好优化，除了观察偏好胜率，还要检查是否牺牲了正确性或泛化。以上是本文建议的练习流程，不是仓库附带的客服训练成品，也不是本次已运行的实验。
+
+已经在看训练代码的读者，可以将此书与Datawhale的agentic-rl-lab配合使用：一本帮助解释训练目标，一套实验帮助追踪数据、reward、rollout和更新。这是学习上的互补建议，不代表两个项目已经集成。相关实验边界评介：https://blog.mushroom.cv/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/
+
+## 怎样开始阅读或在本地生成？
+
+最快方式是直接打开中文阅读站，不需要GPU。需要修改内容时，再克隆仓库，按照`docs/BUILDING.md`准备Python 3、Make、Pandoc与兼容的pandoc-crossref。PDF还需要额外的TeX工具链与字体，不能把HTML依赖齐全等同于PDF环境也齐全。
+
+```bash
+git clone https://github.com/jweihe/RLHF-book-Chinese.git
+cd RLHF-book-Chinese
+make html
+make check
+```
+
+`make check`应在生成HTML之后运行。HTML公式默认依赖网络加载MathJax；想离线阅读时，优先选择PDF，或自行处理网页公式资源。仓库里的历史`.deb`不应当作通用安装入口，具体依赖按系统架构和构建指南选择。
+
+## 常见问题
+
+### 它适合完全没有机器学习基础的人吗？
+
+更适合已有概率、梯度优化和Transformer基础的读者。初学者可先看第1、3、4章建立词汇，再补基础；直接从策略梯度推导开始，容易把符号背下来而没有理解数据流。
+
+### 这是英文原著最新出版版的完整同步翻译吗？
+
+不能这样认定。维护者明确表示尚未完成逐句对照；2026年9月的中文修订不等于所有行业讨论都已更新到当前时间。
+
+### 跑通教学检查就能训练生产模型吗？
+
+不能。测试覆盖局部实现，完整训练与上线还需要算力、数据治理、评测和运行工程。它更适合作为读懂训练代码的教材，而非开箱即用的生产训练框架。
+
+## 原始资料
+
+中文仓库：https://github.com/jweihe/RLHF-book-Chinese
+中文阅读站：https://jweihe.github.io/RLHF-book-Chinese/
+英文原著仓库：https://github.com/natolambert/rlhf-book
+中文版勘误：https://github.com/jweihe/RLHF-book-Chinese/blob/main/docs/ERRATA.md
+构建与验证：https://github.com/jweihe/RLHF-book-Chinese/blob/main/docs/BUILDING.md
+
+---
+
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+
+<!--EN-->
+
+RLHF Book Chinese connects the data, rewards, optimization and evaluation behind language-model post-training. It is a nineteen-chapter Chinese translation of Nathan Lambert’s book, maintained by Junwei He, with teaching snippets and tools for publishing the book in several formats.
+
+## What does this repository provide?
+
+Its main contribution is a structured explanation of how the pieces fit together. Supervised fine-tuning teaches imitation of examples. Preference data records choices between responses. A reward model learns a scoring signal, and policy optimization uses feedback to change the generation distribution. Memorizing PPO, DPO and GRPO is much less useful without understanding these different data and computation paths.
+
+The project offers a combined reading site, separate chapter pages, a PDF, Markdown sources and build scripts. HTML, EPUB, PDF and DOCX have local build targets. A build target is different from a verified, currently downloadable artifact. The README recommends the revised reading entry points and identifies Release v1.0 as a historical PDF.
+
+![Little M connects examples, preferences, rewards and optimization](../../assets/images/rlhf-book-chinese-post-training-learning-guide-fig-01.png)
+
+Content is labeled CC BY-NC-SA 4.0, while code is labeled MIT. The MIT badge does not describe all prose and illustrations. This article is an independent review and verification report; the original book, translation and source artwork retain their own attribution and licenses.
+
+This review pins commit `af321f73f469019b9d481a4fd96403c9b6a871f1`. The maintainers describe September 2026 corrections to concepts, formulas, examples and layout, but explicitly say that sentence-by-sentence alignment with the English publication edition is unfinished. Historical industry discussion around April 2025 should not be treated as a current survey. Use the book for foundations, then consult current papers and official implementations for present-day systems.
+
+## In what order should the nineteen chapters be read?
+
+A question-driven route makes the subject easier to navigate. The following builds on the README’s reading suggestions, with additional engineering advice.
+
+| Stage | Chapters | Questions to answer |
+| --- | --- | --- |
+| Establish the map | 1, 3, 4 | What objective is optimized, and what are states, actions and rewards? |
+| Understand feedback | 9, 6, 7, 8 | Where do examples come from, how are preferences scored, and why limit drift? |
+| Compare algorithms | 10, 11, 12 | How do filtering, policy gradients and direct preference optimization differ? |
+| Check the objective | 13–17 | What biases enter through AI feedback, reasoning, synthesis and evaluation? |
+| Connect to products | 18, 19 | How do style, information quality and user experience shape the goal? |
+
+Readers need not finish every algorithm before trying a small task. Define what a good answer means, inspect the data, and use the relevant chapters to explain the experiment. If annotation cannot consistently distinguish better responses, changing optimizers is unlikely to repair the central problem.
+
+## Where do PPO, DPO and GRPO get confused?
+
+PPO requires consistent conventions for new-to-old policy probability ratios, advantages, valid tokens and value targets. Its clipped surrogate objective does not guarantee a hard bound on actual KL divergence. Padding masks, terminal states and truncation handling can matter more than the algorithm’s name.
+
+DPO constructs an objective from preference pairs, avoiding the classic combination of explicit reward-model fitting and an online RL loop. It still trains the policy parameters. It is not alignment without parameter updates, and its beta coefficient does not directly specify the realized KL divergence.
+
+GRPO derives a relative signal from multiple responses to the same prompt. When all rewards within a group are identical, the group offers no relative discrimination. An all-correct or all-incorrect group does not create a larger advantage. Standard-deviation conventions, stabilizing terms, group layout and token aggregation must match the intended implementation.
+
+![Little M separates filtering, online optimization and preference training](../../assets/images/rlhf-book-chinese-post-training-learning-guide-fig-02.png)
+
+These issues feature prominently in the Chinese edition’s errata. Public correction records make changes easier to inspect. They also help separate a small teaching calculation from a complete system, which still needs data handling, sampling, checkpoints, distributed execution and independent evaluation.
+
+## What was actually verified?
+
+Two existing upstream test groups were run on the pinned temporary clone, without changing its source:
+
+```bash
+# Use a Python environment containing torch, numpy and jinja2.
+python scripts/check_examples.py
+python3 -m unittest discover -s tests -v
+```
+
+All eight numerical tests passed. They extract real code blocks from chapter Markdown rather than testing a separately rewritten explanation. Coverage includes KL direction and masks; PPO shapes and return targets; equal-reward GRPO groups and learning direction; RLOO grouping; DPO gradients and reference detachment; independent gradient aggregation; Top-K indices; and chat-role validation.
+
+All three build-helper tests also passed. They check removal of navigation metadata during chapter merging, rewriting book links, rejecting unterminated frontmatter, and detection of missing assets and empty content. These are tests of helper behavior, not evidence that every book format was rebuilt successfully.
+
+Pandoc and pandoc-crossref were unavailable in this environment. No complete HTML, EPUB, PDF or DOCX build was performed, and `make check` was not run against a generated full site. No model training, paper benchmark reproduction or sentence-level translation-accuracy evaluation was attempted. Eight numerical checks and three helper checks provide useful local evidence; they do not establish that the entire book is error-free.
+
+![Little M separates numerical checks, whole-book builds and real training](../../assets/images/rlhf-book-chinese-post-training-learning-guide-fig-03.png)
+
+The same distinction matters in everyday AI engineering. Correct tensor shapes do not make a reward sensible. Falling training loss does not establish a holdout improvement. A higher reward-model score can reflect exploitation of the proxy. Evaluation and over-optimization chapters should therefore accompany algorithm study.
+
+## How can reading become a small experiment?
+
+Consider ranking customer-support responses. Freeze a set of questions, prepare two candidate answers per question, and record why one is preferred: factual correctness, problem resolution or suitable tone. Review annotation disagreement before deciding whether the task needs supervised examples, preference optimization, better prompting or improved retrieval.
+
+Keep an independent holdout excluded from tuning, and track factual errors, format failures, response length and actual cost. If preference training improves win rate, check whether correctness or generalization deteriorated. This is a suggested learning exercise, not a customer-support trainer supplied by the repository or an experiment completed during this review.
+
+For readers already inspecting training code, the book can complement Datawhale’s agentic-rl-lab: one explains objectives, while the other makes data, rewards, rollouts and updates easier to trace. This is a proposed learning combination, not an existing integration. Related experiment review: https://blog.mushroom.cv/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/
+
+## How should readers start or build locally?
+
+Open the Chinese reading site first; no GPU is required to read it. For editing, clone the repository and follow `docs/BUILDING.md` to install Python 3, Make, Pandoc and a compatible pandoc-crossref. PDF generation additionally needs a TeX toolchain and fonts. Having HTML dependencies does not establish that PDF compilation is ready.
+
+```bash
+git clone https://github.com/jweihe/RLHF-book-Chinese.git
+cd RLHF-book-Chinese
+make html
+make check
+```
+
+Run `make check` after generating HTML. Web formulas use MathJax with a network dependency by default. For offline reading, choose the PDF or arrange local formula resources. The historical Debian package in the repository is not a universal installer; choose dependencies for the target architecture using the build guide.
+
+## FAQ
+
+### Is it suitable for someone with no machine-learning background?
+
+It is best suited to readers familiar with probability, gradient optimization and Transformers. Start with chapters 1, 3 and 4 to establish terminology, then fill foundational gaps before tackling policy-gradient derivations.
+
+### Is it fully synchronized with the latest English publication edition?
+
+That has not been established. The maintainers explicitly state that line-by-line comparison is unfinished. September 2026 maintenance does not make every historical industry claim current.
+
+### Do passing the snippets make this a production trainer?
+
+No. The checks cover local implementation conventions. Training and deployment still require compute, governed data, evaluation and operational engineering. Treat it as a textbook for understanding training code.
+
+## Primary sources
+
+Chinese repository: https://github.com/jweihe/RLHF-book-Chinese
+Chinese reading site: https://jweihe.github.io/RLHF-book-Chinese/
+English source repository: https://github.com/natolambert/rlhf-book
+Errata: https://github.com/jweihe/RLHF-book-Chinese/blob/main/docs/ERRATA.md
+Build and verification guide: https://github.com/jweihe/RLHF-book-Chinese/blob/main/docs/BUILDING.md
+
+---
+
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/style-dna.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/mushroom-ip.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/composition-patterns.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/prompt-template.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/qa-checklist.md /Users/jason/.codex/skills/.system/imagegen/SKILL.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+# 风格 DNA
+
+## 一句话
+
+纯白、极简、手绘、留白、克制、怪诞、产品草图感、中文手写感、结构清楚但不说明书。
+
+像一个长期做 AI、产品、设计、开发工具的人，在白纸上随手画出来的一张解释草图。
+
+## 必须
+
+- 16:9 横版正文配图。
+- 纯白背景：不要米色、暖灰、纸张纹理、渐变、阴影、噪点、复古纸感。
+- 黑色手绘线稿为主：细线、轻微抖动、不机械、不矢量、不厚重描边。
+- 大量留白：主体占画面约 40%-60%，至少 35% 空白，最好有一整块安静区域。
+- 少量中文手写批注：最多 5-8 处，每处尽量 2-8 个字。
+- 一张图只讲一个核心动作、结构、状态或隐喻。
+- 结构要自然表达，不要在图上写结构类型名称。
+
+## 颜色
+
+- 黑色：主体线稿、角色、框线、结构、主要文字、主体物件。
+- 红色：重点批注、问题、情绪点、关键提醒、结果。
+- 橙色：主流程、路径、箭头、自动化流向、从 A 到 B 的移动关系。
+- 蓝色：补充说明、脑内状态、系统状态、第二层解释、AI/assistant/自动化提示。
+
+蓝色不是每张都必须用。颜色要克制，宁可少不要多。
+
+## 绝对不要
+
+- 不要商业插画。
+- 不要 PPT 信息图。
+- 不要正式流程图。
+- 不要课程课件。
+- 不要可爱卡通海报。
+- 不要儿童插画。
+- 不要复杂架构图。
+- 不要精致扁平插画。
+- 不要科技感 UI。
+- 不要真实 App 截图。
+- 不要复杂背景、渐变、阴影、纹理。
+- 不要把每个节点都解释清楚。
+- 不要左上角写“Workflow 流程图 / 系统架构图 / 常见坑 / 路线图”等类型标题。
+
+## 审美方向
+
+要怪诞、创意、有意思、简洁清爽、天马行空。
+
+不要可爱、幼稚、很复杂、死板。
+# 小M IP
+
+## 角色定义
+
+小M是 Mycelium 中文正文配图的固定视觉 IP。
+
+默认每张图都要出现小M。小M不是吉祥物，不是贴纸，不是可爱装饰，而是正在认真参与系统运转的荒诞工作者——一只在白板草图里真的负责某项工作的小蘑菇。
+
+## 外形（🍄 经典蘑菇造型）
+
+- 手绘小蘑菇怪物，参照 🍄 emoji 的经典造型，不是黑色实心。
+- **菌盖：红色（正红 / 红橙）半圆顶，盖上点缀 3-5 颗白色圆点斑**（🍄 标志性白点）。菌盖边缘有手绘黑色轮廓线。
+- **菌柄/身体：米白色（奶白）填充 + 黑色手绘轮廓线**。
+- **黑色小圆点眼睛**，长在白色菌柄上（白柄上用黑点眼才清楚；不要用白点眼）。
+- 细腿，偶尔有细胳膊；表情空、呆、冷静、认真（deadpan，不卖萌）。
+- 身体（菌柄）可以变形：圆柱、漏斗、管道、洞口、奇怪工位等，但**红帽白点 + 白柄**这套识别特征要保留。
+- 轮廓略微不规则，有手绘感。不要画得太精致、太 3D、太写实。
+
+### 配色说明（重要）
+
+- 菌盖红是**角色自身的身份色**（填充块）；这与「红色批注」（细线/文字）在视觉上是分开的，不冲突。
+- 流动 / 传输 / 路径 / 菌丝仍用**橙色**；脑内状态 / 系统提示用蓝色。颜色整体仍要克制。
+
+## 菌丝特性（这是小M区别于普通角色的关键）
+
+- 小M脚下、身后或手里可以延伸出**细细的菌丝线**。
+- 菌丝用来：连接信息源、传输养分/内容、织成网络、把分散的节点接到一起。
+- 菌丝线用橙色表示「流动 / 传输 / 从 A 到 B」，和风格 DNA 的颜色语义一致。
+- 不要每张都堆满菌丝；只在「连接、传输、网络、汇聚」类主题里用 1-2 根，点到为止。
+
+## 性格
+
+- 很认真，但做的事有点荒诞。
+- 像一个低调的系统操作员 / 地下网络的运维工。
+- 冷幽默，不卖萌。
+- 有点笨拙，但不蠢。
+
+## 常见职责
+
+让小M承担核心动作：
+
+- 搬运素材、分解养分。
+- 用菌丝拉线、汇聚信息源、连接节点。
+- 卡在断点里。
+- 在机器里操作“判断”杆。
+- 变成筛选漏斗。
+- 切开“素材鱼”。
+- 盖章承接话术。
+- 牵着承接路径。
+- 举警告牌看坑。
+- 在地下网络里传输内容、把孢子撒出去（指数传播）。
+- 在旁边搬砖、搭桥、开门、分拣、记录。
+
+## 禁止
+
+- 不要把小M画成过度可爱的吉祥物、卡通蘑菇贴纸。
+- 不要画成儿童卡通角色。
+- 不要给小M复杂服装、表情包、闪亮眼睛、笑脸。
+- 不要画成写实蘑菇 / 3D 蘑菇 / 渐变质感（红帽白点是手绘平涂，不是写实）。
+- 不要把菌盖画成黑色实心（旧版已废弃）；也不要弄成多彩花哨。
+- 不要让小M只是站在角落里看。
+- 不要让小M或菌丝抢走结构表达，把画面塞满。
+
+## 判断标准
+
+如果去掉小M，图的核心隐喻还能完全成立，说明小M太装饰了；要重写提示词，让小M成为动作主体。菌丝同理：菌丝必须服务于「连接 / 传输」的核心意思，不是背景装饰。
+# 构图模式与原创规则
+
+## 基础结构类型
+
+选择一种结构即可，不要混太多。
+
+### Workflow 流程
+
+适合：输入 -> 处理 -> 输出，内容生产，AI 工作流，自动化链路。
+
+画法：左侧输入，中间小M或怪机器处理，右侧输出，橙色箭头表达主流向。
+
+### 系统局部
+
+适合：信息来源、过滤器、数据库、渲染器、agent 系统局部。
+
+画法：只画 3-5 个核心模块，小M参与其中一个关键动作。
+
+### 前后对比
+
+适合：混乱/有序，手动/自动，分散/收拢，焦虑/稳定。
+
+画法：左混乱，右稳定，中间橙色箭头。角色可以更夸张。
+
+### 角色状态
+
+适合：用户痛点、创作者状态、工具太多、信息焦虑、卡住到跑起来。
+
+画法：2-4 个小状态，每个状态一个短标注。
+
+### 概念隐喻
+
+适合：内容工厂、信息仓库、脑内黑盒、工作流机器、自动日报。
+
+画法：一个大的怪物件或机器，少量输入，一个输出。要有记忆点。
+
+### 方法分层
+
+适合：方法论框架、系统层级、能力栈、内容系统分层。
+
+画法：一层层盒子，不要正式金字塔；小M在旁边搬砖或搭建。
+
+### 地图路线
+
+适合：从想法到上线、用户路径、内容承接路径、学习路线。
+
+画法：一条弯曲路径，少量节点，小M牵线或走路。
+
+### 小漫画分镜
+
+适合：失败到成功、真实过程、吐槽、使用前后变化。
+
+画法：2-4 个小场景，每格只表达一个动作。
+
+## 原创隐喻生成法
+
+每次都从当前文章重新发明隐喻，不能照搬旧图。
+
+### 三步
+
+1. 把抽象概念换成一个物理动作：卡住、漏掉、变重、分拣、沉淀、发酵、开门、折叠、拆包、回流。
+2. 把系统结构换成一个低科技物件：坏掉的机器、纸箱、抽屉、水管、邮筒、怪表盘、秤、井、梯子、奇怪工位。
+3. 让小M承担动作：不是站旁边，而是卡在机器里、拉错线、守门、搬运、修补、称重、扶梯子、记录、把东西塞进某个怪装置。
+
+### 可用物件池
+
+- 纸箱、抽屉、旧机器、漏斗、秤、邮筒、门、井、梯子、水管、线团、闸门、转盘、黑盒、打孔器、压面机、晾衣绳、怪工位。
+- 用时只选 1-2 个，不要堆满。
+
+### 小M动作池
+
+- 拉、扛、塞、捞、压、称、缝、剪、拧、守、推、接、拆、标记、回收。
+- 动作要服务核心意思，不要为了怪而怪。
+
+## 反复刻规则
+
+不要默认打开或复刻 `assets/examples/`。这些图片只用于风格校准，例如线条密度、留白、颜色克制、小M气质。
+
+除非用户明确说“照这张 / 复刻这个构图 / 用这个案例改”，否则不要直接复用这些旧构图：
+
+- 传送带两个断点
+- 小M在内容机器里拉判断杆
+- 小M变漏斗分拣流量/信任/转化
+- 小M切素材鱼
+- 小M牵承接路径
+- 小M拉三层信息源
+- 三个小M分别拿喇叭/搭桥/开门
+- 小M盖章话术工具箱
+- 小M举牌看常见坑路径
+
+同类主题也要换新隐喻。例如“承接路径”不一定画路线，可以画小M把内容尾巴接到门把手；“一鱼多吃”不一定画鱼，可以画小M把一个纸团压成几种形状。
+# 生图提示词模板
+
+每张图单独生成。根据正文内容替换变量，不要把多张图拼在一起。
+
+```text
+Generate one standalone 16:9 horizontal Chinese article illustration.
+
+Visual DNA:
+Pure white background. Minimalist black hand-drawn line art. Slightly wobbly pen lines. Lots of empty white space. Sparse red/orange/blue handwritten Chinese annotations. Clean absurd product-sketch feeling. No gradients, no shadows, no paper texture, no complex background, no commercial vector style, no PPT infographic look, no cute mascot poster, no children's illustration, no realistic UI.
+
+Recurring IP character required:
+小M (Xiao-M), a small hand-drawn MUSHROOM creature styled like the classic 🍄 emoji (NOT solid black): a rounded RED dome cap with 3-5 white polka dots and a black outline, a CREAM/off-white stem body with black hand-drawn outline, small BLACK dot eyes on the pale stem, tiny thin legs, blank deadpan serious expression, slightly uneven hand-drawn shape. Thin ORANGE mycelium threads may extend from its feet or hands to connect / carry / weave things together when the topic is about connection or flow. The red cap with white dots is flat hand-drawn (not 3D, not realistic). 小M must perform the core conceptual action, not decorate the scene. Keep it serious and slightly bizarre, not overly cute. Keep the signature: red dotted cap + pale stem.
+
+Theme:
+{正文配图主题}
+
+Structure type:
+{结构类型：Workflow / 系统局部 / 前后对比 / 角色状态 / 概念隐喻 / 方法分层 / 地图路线 / 小漫画分镜}
+
+Core idea:
+{这张图要表达的核心意思}
+
+Composition:
+{具体画面：小M在哪里、正在做什么、主要物件是什么、信息如何流动}
+
+Suggested elements:
+{元素1} / {元素2} / {元素3} / {元素4}
+
+Chinese handwritten labels:
+{标注词1} / {标注词2} / {标注词3} / {标注词4} / {可选标注词5}
+
+Color use:
+Black for main line art and 小M. Orange for main flow/path/arrows. Red only for key warnings/problems/results. Blue only for secondary notes or feedback/system state.
+
+Constraints:
+One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. Preserve at least 35% blank white space. Use at most 5-8 short handwritten Chinese labels. Do not write a title in the top-left corner. Do not write the structure type on the image. Do not make it a formal diagram, course slide, or dense explainer. Do not copy prior examples or reuse known case compositions unless explicitly requested; invent a fresh visual metaphor for this specific article. It should be clear but not instructional, interesting but not childish, strange but clean.
+```
+
+## 图像编辑提示
+
+去掉左上角标题：
+
+```text
+Edit the provided image. Remove only the handwritten title "{要删除的文字}" and its underline from the top-left corner. Fill that area with the same clean white background, matching the surrounding blank paper. Preserve everything else exactly: characters, labels, paths, line style, composition, aspect ratio, and image quality. Do not add any new text or objects.
+```
+
+增强怪诞感：
+
+```text
+Regenerate this illustration with the same core meaning and simple layout, but make 小M more central to the conceptual action. 小M should be doing the strange work that explains the idea, not standing beside the diagram. Keep it clean, sparse, hand-drawn, and not cute.
+```
+# QA Checklist
+
+## 必过项
+
+- 是 16:9 横版。
+- 背景是干净白底。
+- 有小M。
+- 小M承担核心动作，不只是装饰。
+- 没有复刻旧案例构图，而是为当前文章生成了新隐喻。
+- 画面怪诞、有创意、有意思。
+- 简洁清爽，主体不超过画面约 60%。
+- 一张图只讲一个核心结构。
+- 中文标注少、短、能读。
+- 橙色只用于主路径或箭头。
+- 红色只用于重点、问题、提醒或结果。
+- 蓝色只用于补充说明、反馈或系统状态。
+
+## 失败信号
+
+出现以下情况，重生成或局部编辑：
+
+- 左上角有“常见坑 / Workflow / 系统架构图 / 路线图”等标题。
+- 小M像吉祥物、表情包或可爱卡通。
+- 画面像 PPT、课程课件、正式流程图。
+- 元素太多、箭头太多、节点太多。
+- 文字变成大段解释。
+- 背景有纸纹、阴影、渐变、米色、噪点。
+- 真实 UI 截图或科技感界面。
+- 中文错字严重或标注不可读。
+- 画面太死板，没有荒诞隐喻。
+- 和 `assets/examples/` 里的旧案例构图过于相似。
+
+## 迭代方法
+
+- 太普通：让小M成为动作主体，加入一个奇怪但成立的隐喻。
+- 太复杂：删节点，只保留一个动作和 3-5 个短标注。
+- 太可爱：强调 deadpan、blank serious expression、not cute、not mascot。
+- 太 PPT：去掉标题、边框、整齐网格和过多箭头，改成手绘场景。
+- 太像旧案例：保留核心意思，换掉主物件和小M动作。
+- 文字错：优先局部编辑；错得多就重生成并减少标注数量。
+
+## 交付判断
+
+高质量图应该让读者先觉得“有点怪”，然后 1 秒内看懂结构。
+
+如果第一眼像教程页，而不是白纸上的怪诞产品草图，就不合格。
+---
+name: "imagegen"
+description: "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+---
+
+# Image Generation Skill
+
+Generates or edits images for the current project (for example website assets, game assets, UI mockups, product mockups, wireframes, logo design, photorealistic images, or infographics).
+
+## Top-level modes and rules
+
+This skill has exactly two top-level modes:
+
+- **Default built-in tool mode (preferred):** built-in `image_gen` tool for image generation, editing, and transparent-image requests. Does not require `OPENAI_API_KEY`.
+- **Fallback CLI mode:** `scripts/image_gen.py` CLI. Use when the user explicitly asks for or confirms the CLI/API/model path. Requires `OPENAI_API_KEY`.
+
+Within CLI fallback, the CLI exposes three subcommands:
+
+- `generate`
+- `edit`
+- `generate-batch`
+
+Rules:
+- Use the built-in `image_gen` tool by default for normal image generation and editing requests.
+- Do not switch to CLI fallback for ordinary quality, size, or file-path control.
+- For transparent images, ask built-in `image_gen` for a transparent background and preserve the generated alpha.
+- Never silently switch from built-in `image_gen` or CLI `gpt-image-2` to CLI `gpt-image-1.5`; ask the user first unless they explicitly requested `gpt-image-1.5`.
+- The word `batch` by itself does not mean CLI fallback. If the user asks for many assets or says to batch-generate assets without explicitly asking for CLI/API/model controls, stay on the built-in path and issue one built-in call per requested asset or variant.
+- If the built-in tool fails or is unavailable, tell the user the CLI fallback exists and that it requires `OPENAI_API_KEY`. Proceed only if the user explicitly asks for that fallback.
+- If the user explicitly asks for CLI mode, use the bundled `scripts/image_gen.py` workflow. Do not create one-off SDK runners.
+- Never modify `scripts/image_gen.py`. If something is missing, ask the user before doing anything else.
+
+Built-in save-path policy:
+- In built-in tool mode, Codex saves generated images under `$CODEX_HOME/*` by default.
+- Do not describe or rely on OS temp as the default built-in destination.
+- Do not describe or rely on a destination-path argument (if any) on the built-in `image_gen` tool. If a specific location is needed, generate first and then move or copy the selected output from `$CODEX_HOME/generated_images/...`.
+- Save-path precedence in built-in mode:
+  1. If the user names a destination, move or copy the selected output there.
+  2. If the image is meant for the current project, move or copy the final selected image into the workspace before finishing.
+  3. If the image is only for preview or brainstorming, render it inline; the underlying file can remain at the default `$CODEX_HOME/*` path.
+- Never leave a project-referenced asset only at the default `$CODEX_HOME/*` path.
+- Do not overwrite an existing asset unless the user explicitly asked for replacement; otherwise create a sibling versioned filename such as `hero-v2.png` or `item-icon-edited.png`.
+
+Shared prompt guidance for both modes lives in `references/prompting.md` and `references/sample-prompts.md`.
+
+Fallback-only docs/resources for CLI mode:
+- `references/cli.md`
+- `references/image-api.md`
+- `references/codex-network.md`
+- `scripts/image_gen.py`
+
+## When to use
+- Generate a new image (concept art, product shot, cover, website hero)
+- Generate a new image using one or more reference images for style, composition, or mood
+- Edit an existing image (inpainting, lighting or weather transformations, background replacement, object removal, compositing, transparent background)
+- Produce many assets or variants for one task
+
+## When not to use
+- Extending or matching an existing SVG/vector icon set, logo system, or illustration library inside the repo
+- Creating simple shapes, diagrams, wireframes, or icons that are better produced directly in SVG, HTML/CSS, or canvas
+- Making a small project-local asset edit when the source file already exists in an editable native format
+- Any task where the user clearly wants deterministic code-native output instead of a generated bitmap
+
+## Decision tree
+
+Think about two separate questions:
+
+1. **Intent:** is this a new image or an edit of an existing image?
+2. **Execution strategy:** is this one asset or many assets/variants?
+
+Intent:
+- If the user wants to modify an existing image while preserving parts of it, treat the request as **edit**.
+- If the user provides images only as references for style, composition, mood, or subject guidance, treat the request as **generate**.
+- If the user provides no images, treat the request as **generate**.
+
+Built-in edit semantics:
+- Built-in edit mode is for images already visible in the conversation context, such as attached images or images generated earlier in the thread.
+- If the user wants to edit a local image file with the built-in tool, first load it with built-in `view_image` tool so the image is visible in the conversation context, then proceed with the built-in edit flow.
+- Do not promise arbitrary filesystem-path editing through the built-in tool.
+- If a local file still needs direct file-path control, masks, or other explicit CLI-only parameters, use the explicit CLI fallback only when the user asks for it.
+- For edits, preserve invariants aggressively and save non-destructively by default.
+
+Execution strategy:
+- In the built-in default path, produce many assets or variants by issuing one `image_gen` call per requested asset or variant.
+- In the CLI fallback path, use the CLI `generate-batch` subcommand only when the user explicitly chose CLI mode and needs many prompts/assets.
+- For many distinct assets, do not use `n` as a substitute for separate prompts. `n` is for variants of one prompt; distinct assets need distinct built-in calls or distinct CLI `generate-batch` jobs.
+
+Assume the user wants a new image unless they clearly ask to change an existing one.
+
+## Workflow
+1. Decide the top-level mode: built-in by default, including transparent-output requests; fallback CLI only if explicitly requested or confirmed.
+2. Decide the intent: `generate` or `edit`.
+3. Decide whether the output is preview-only or meant to be consumed by the current project.
+4. Decide the execution strategy: single asset vs repeated built-in calls vs CLI `generate-batch`.
+5. Collect inputs up front: prompt(s), exact text (verbatim), constraints/avoid list, and any input images.
+6. For every input image, label its role explicitly:
+   - reference image
+   - edit target
+   - supporting insert/style/compositing input
+7. If the edit target is only on the local filesystem and you are staying on the built-in path, inspect it with `view_image` first so the image is available in conversation context.
+8. If the user asked for a photo, illustration, sprite, product image, banner, or other explicitly raster-style asset, use `image_gen` rather than substituting SVG/HTML/CSS placeholders. If the request is for an icon, logo, or UI graphic that should match existing repo-native SVG/vector/code assets, prefer editing those directly instead.
+9. Augment the prompt based on specificity:
+   - If the user's prompt is already specific and detailed, normalize it into a clear spec without adding creative requirements.
+   - If the user's prompt is generic, add tasteful augmentation only when it materially improves output quality.
+10. Use the built-in `image_gen` tool by default.
+11. For transparent-output requests, ask built-in `image_gen` for a transparent background and preserve the generated alpha channel.
+12. Inspect outputs and validate: subject, style, composition, text accuracy, and invariants/avoid items.
+13. Iterate with a single targeted change, then re-check.
+14. For preview-only work, render the image inline; the underlying file may remain at the default `$CODEX_HOME/generated_images/...` path.
+15. For project-bound work, move or copy the selected artifact into the workspace and update any consuming code or references. Never leave a project-referenced asset only at the default `$CODEX_HOME/generated_images/...` path.
+16. For batches or multi-asset requests, persist every requested deliverable final in the workspace unless the user explicitly asked to keep outputs preview-only. Discarded variants do not need to be kept unless requested.
+17. If the user explicitly chooses or confirms the CLI fallback, then use the fallback-only docs for model, quality, size, `input_fidelity`, masks, output format, output paths, and network setup.
+18. Always report the final saved path(s) for any workspace-bound asset(s), plus the final prompt or prompt set and whether the built-in tool or fallback CLI mode was used.
+
+## Transparent image requests
+
+Ask built-in `image_gen` for a genuinely transparent background and preserve its alpha.
+
+## Prompt augmentation
+
+Reformat user prompts into a structured, production-oriented spec. Make the user's goal clearer and more actionable, but do not blindly add detail.
+
+Treat this as prompt-shaping guidance, not a closed schema. Use only the lines that help, and add a short extra labeled line when it materially improves clarity.
+
+### Specificity policy
+
+Use the user's prompt specificity to decide how much augmentation is appropriate:
+
+- If the prompt is already specific and detailed, preserve that specificity and only normalize/structure it.
+- If the prompt is generic, you may add tasteful augmentation when it will materially improve the result.
+
+Allowed augmentations:
+- composition or framing hints
+- polish level or intended-use hints
+- practical layout guidance
+- reasonable scene concreteness that supports the stated request
+
+Not allowed augmentations:
+- extra characters or objects that are not implied by the request
+- brand names, slogans, palettes, or narrative beats that are not implied
+- arbitrary side-specific placement unless the surrounding layout supports it
+
+## Use-case taxonomy (exact slugs)
+
+Classify each request into one of these buckets and keep the slug consistent across prompts and references.
+
+Generate:
+- photorealistic-natural — candid/editorial lifestyle scenes with real texture and natural lighting.
+- product-mockup — product/packaging shots, catalog imagery, merch concepts.
+- ui-mockup — app/web interface mockups and wireframes; specify the desired fidelity.
+- infographic-diagram — diagrams/infographics with structured layout and text.
+- scientific-educational — classroom explainers, scientific diagrams, and learning visuals with required labels and accuracy constraints.
+- ads-marketing — campaign concepts and ad creatives with audience, brand position, scene, and exact tagline/copy.
+- productivity-visual — slide, chart, workflow, and data-heavy business visuals.
+- logo-brand — logo/mark exploration, vector-friendly.
+- illustration-story — comics, children’s book art, narrative scenes.
+- stylized-concept — style-driven concept art, 3D/stylized renders.
+- historical-scene — period-accurate/world-knowledge scenes.
+
+Edit:
+- text-localization — translate/replace in-image text, preserve layout.
+- identity-preserve — try-on, person-in-scene; lock face/body/pose.
+- precise-object-edit — remove/replace a specific element (including interior swaps).
+- lighting-weather — time-of-day/season/atmosphere changes only.
+- background-extraction — transparent background / clean cutout. Ask built-in `image_gen` for actual transparency.
+- style-transfer — apply reference style while changing subject/scene.
+- compositing — multi-image insert/merge with matched lighting/perspective.
+- sketch-to-render — drawing/line art to photoreal render.
+
+## Shared prompt schema
+
+Use the following labeled spec as shared prompt scaffolding for both top-level modes:
+
+```text
+Use case: <taxonomy slug>
+Asset type: <where the asset will be used>
+Primary request: <user's main prompt>
+Input images: <Image 1: role; Image 2: role> (optional)
+Scene/backdrop: <environment>
+Subject: <main subject>
+Style/medium: <photo/illustration/3D/etc>
+Composition/framing: <wide/close/top-down; placement>
+Lighting/mood: <lighting + mood>
+Color palette: <palette notes>
+Materials/textures: <surface details>
+Text (verbatim): "<exact text>"
+Constraints: <must keep/must avoid>
+Avoid: <negative constraints>
+```
+
+Notes:
+- `Asset type` and `Input images` are prompt scaffolding, not dedicated CLI flags.
+- `Scene/backdrop` refers to the visual setting. It is not the same as the fallback CLI `background` parameter, which controls output transparency behavior.
+- Fallback-only execution notes such as `Quality:`, `Input fidelity:`, masks, output format, and output paths belong in the CLI path only. Do not treat them as built-in `image_gen` tool arguments.
+
+Augmentation rules:
+- Keep it short.
+- Add only the details needed to improve the prompt materially.
+- For edits, explicitly list invariants (`change only X; keep Y unchanged`).
+- If any critical detail is missing and blocks success, ask a question; otherwise proceed.
+
+## Examples
+
+### Generation example (hero image)
+```text
+Use case: product-mockup
+Asset type: landing page hero
+Primary request: a minimal hero image of a ceramic coffee mug
+Style/medium: clean product photography
+Composition/framing: wide composition with usable negative space for page copy if needed
+Lighting/mood: soft studio lighting
+Constraints: no logos, no text, no watermark
+```
+
+### Edit example (invariants)
+```text
+Use case: precise-object-edit
+Asset type: product photo background replacement
+Primary request: replace only the background with a warm sunset gradient
+Constraints: change only the background; keep the product and its edges unchanged; no text; no watermark
+```
+
+## Prompting best practices
+- Structure prompt as scene/backdrop -> subject -> details -> constraints.
+- Include intended use (ad, UI mock, infographic) to set the mode and polish level.
+- Use camera/composition language for photorealism.
+- Only use SVG/vector stand-ins when the user explicitly asked for vector output or a non-image placeholder.
+- Quote exact text and specify typography + placement.
+- For tricky words, spell them letter-by-letter and require verbatim rendering.
+- For multi-image inputs, reference images by index and describe how they should be used.
+- For edits, repeat invariants every iteration to reduce drift.
+- Iterate with single-change follow-ups.
+- If the prompt is generic, add only the extra detail that will materially help.
+- If the prompt is already detailed, normalize it instead of expanding it.
+- For CLI fallback only, see `references/cli.md` and `references/image-api.md` for model, `quality`, `input_fidelity`, masks, output format, and output-path guidance.
+- For transparent images, ask built-in `image_gen` for actual transparency and preserve its alpha.
+
+More principles shared by both modes: `references/prompting.md`.
+Copy/paste specs shared by both modes: `references/sample-prompts.md`.
+
+## Guidance by asset type
+Asset-type templates (website assets, game assets, wireframes, logo) are consolidated in `references/sample-prompts.md`.
+
+## gpt-image-2 guidance for CLI fallback
+
+The fallback CLI defaults to `gpt-image-2`.
+
+- Use `gpt-image-2` for new CLI/API workflows unless the user confirms a different model.
+- CLI `gpt-image-2` does not support `background=transparent`; ask before using `gpt-image-1.5` unless the user explicitly requested that model.
+- `gpt-image-2` always uses high fidelity for image inputs; do not set `input_fidelity` with this model.
+- `gpt-image-2` supports `quality` values `low`, `medium`, `high`, and `auto`.
+- Use `quality low` for fast drafts, thumbnails, and quick iterations. Use `medium`, `high`, or `auto` for final assets, dense text, diagrams, identity-sensitive edits, or high-resolution outputs.
+- Square images are typically fastest to generate. Use `1024x1024` for fast square drafts.
+- If the user asks for 4K-style output, use `3840x2160` for landscape or `2160x3840` for portrait.
+- `gpt-image-2` size may be `auto` or `WIDTHxHEIGHT` if all constraints hold: max edge `<= 3840px`, both edges multiples of `16px`, long-to-short ratio `<= 3:1`, total pixels between `655,360` and `8,294,400`.
+
+Popular `gpt-image-2` sizes:
+- `1024x1024` square
+- `1536x1024` landscape
+- `1024x1536` portrait
+- `2048x2048` 2K square
+- `2048x1152` 2K landscape
+- `3840x2160` 4K landscape
+- `2160x3840` 4K portrait
+- `auto`
+
+## Fallback CLI mode only
+
+### Temp and output conventions
+These conventions apply only to the CLI fallback. They do not describe built-in `image_gen` output behavior.
+- Use `tmp/imagegen/` for intermediate files (for example JSONL batches); delete them when done.
+- Write final artifacts under `output/imagegen/`.
+- Use `--out` or `--out-dir` to control output paths; keep filenames stable and descriptive.
+
+### Dependencies
+Prefer `uv` for dependency management in this repo.
+
+Required Python package:
+```bash
+uv pip install openai
+```
+
+Optional for image inspection and downscaling:
+```bash
+uv pip install pillow
+```
+
+Portability note:
+- If you are using the installed skill outside this repo, install dependencies into that environment with its package manager.
+- In uv-managed environments, `uv pip install ...` remains the preferred path.
+
+### Environment
+- `OPENAI_API_KEY` must be set for live API calls.
+- Do not ask the user for `OPENAI_API_KEY` when using the built-in `image_gen` tool.
+- Never ask the user to paste the full key in chat. Ask them to set it locally and confirm when ready.
+
+If the key is missing, give the user these steps:
+1. Create an API key in the OpenAI platform UI: https://platform.openai.com/api-keys
+2. Set `OPENAI_API_KEY` as an environment variable in their system.
+3. Offer to guide them through setting the environment variable for their OS/shell if needed.
+
+If installation is not possible in this environment, tell the user which dependency is missing and how to install it into their active environment.
+
+### Script-mode notes
+- CLI commands + examples: `references/cli.md`
+- API parameter quick reference: `references/image-api.md`
+- Network approvals / sandbox settings for CLI mode: `references/codex-network.md`
+
+## Reference map
+- `references/prompting.md`: shared prompting principles for both modes.
+- `references/sample-prompts.md`: shared copy/paste prompt recipes for both modes.
+- `references/cli.md`: fallback-only CLI usage via `scripts/image_gen.py`.
+- `references/image-api.md`: fallback-only API/CLI parameter reference.
+- `references/codex-network.md`: fallback-only network/sandbox troubleshooting for CLI mode.
+- `scripts/image_gen.py`: fallback-only CLI implementation. Use only when the user explicitly chooses or confirms CLI mode.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'git status --short' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+ M pipeline/m2/output/drafts-map.json
+ M source/20261105-craft-anything/semantic-index-info.json
+ M source/20261105-craft-anything/semantic-search-final.json
+?? generated_images/
+?? pipeline/m2/output/agentear-v0-28-1-settings-fix-local-voice-input.json
+?? pipeline/m2/output/cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor.json
+?? pipeline/m2/output/deepseek-v41-flash-1017-uncensored-fp8-teardown.json
+?? pipeline/m2/output/laya-aayushch-local-first-ai-notification-command-center.json
+?? pipeline/m2/output/meta-sam3-promptable-concept-segmentation-license-mac-guide.json
+?? pipeline/m2/output/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit.json
+?? pipeline/m2/output/superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx.json
+?? pipeline/m2/output/xllama-xbox-series-s-local-llm-inference-dev-mode.json
+?? src/assets/images/rlhf-book-chinese-post-training-learning-guide-banner.jpg
+?? src/content/blog/rlhf-book-chinese-post-training-learning-guide.md
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+已读完正文。三张图分别画学习地图、三种训练动作的区别，以及证据阶梯；第三张只在“数值片段检查”标通过，“全书构建”和“真实训练”均明确标“未运行”。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from PIL import Image
+import shutil
+p=Path('generated_images/rlhf-book-chinese-20261108')
+p.mkdir(parents=True,exist_ok=True)
+src=Path('/Users/jason/.codex/generated_images/01a1b8e6-4506-7ca0-b30a-36d77bf05fa3/exec-1ca0b4e9-7887-4c8b-b32c-4d9e2634a854.png')
+shutil.copy2(src,p/'fig-01-raw.png')
+print('Raw 01 saved',Image.open(src).size)
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 142ms:
+Raw 01 saved (1672, 941)
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+前两张已生成，中文标注正确；第二张将筛选、PPO/GRPO 策略更新和 DPO 偏好训练画成三个独立动作。接着生成证据阶梯，再统一压缩并检查最终文件。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from PIL import Image
+import hashlib, shutil
+raw=Path('generated_images/rlhf-book-chinese-20261108')
+sources={2:'/Users/jason/.codex/generated_images/01a1b8e6-4506-7ca0-b30a-36d77bf05fa3/exec-d24850db-ab62-430c-a5fd-647bb1bacb0a.png',3:'/Users/jason/.codex/generated_images/01a1b8e6-4506-7ca0-b30a-36d77bf05fa3/exec-3d080d4c-4a7a-49b2-a7ee-c0f93dab1b11.png'}
+for n,src in sources.items():
+    shutil.copy2(src,raw/f'fig-{n:02d}-raw.png')
+for n in range(1,4):
+    src=raw/f'fig-{n:02d}-raw.png'
+    image=Image.open(src).convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+    image=image.point(lambda x:255 if x>=246 else x)
+    target=Path('src/assets/images')/f'rlhf-book-chinese-post-training-learning-guide-fig-{n:02d}.png'
+    indexed=image.quantize(colors=48,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+    indexed.save(target,optimize=True,compress_level=9)
+    check=Image.open(target)
+    colors=len(check.getcolors(maxcolors=256))
+    size=target.stat().st_size
+    assert check.size==(1120,630)
+    assert check.mode=='P'
+    assert colors<=48
+    assert size<90000,(target,size)
+    assert check.convert('RGB').getpixel((0,0))==(255,255,255)
+    print(f'{target}: {check.size}, {colors} colors, {size} bytes, no dithering')
+for p in [Path('src/content/blog/rlhf-book-chinese-post-training-learning-guide.md'),Path('src/assets/images/rlhf-book-chinese-post-training-learning-guide-banner.jpg')]:
+    print('Unmodified by this task:',p,'SHA256',hashlib.sha256(p.read_bytes()).hexdigest())
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 388ms:
+src/assets/images/rlhf-book-chinese-post-training-learning-guide-fig-01.png: (1120, 630), 48 colors, 52464 bytes, no dithering
+src/assets/images/rlhf-book-chinese-post-training-learning-guide-fig-02.png: (1120, 630), 48 colors, 62883 bytes, no dithering
+src/assets/images/rlhf-book-chinese-post-training-learning-guide-fig-03.png: (1120, 630), 47 colors, 52462 bytes, no dithering
+Unmodified by this task: src/content/blog/rlhf-book-chinese-post-training-learning-guide.md SHA256 f430225d666803f478722391cfaf46867df2f65f7ac62acaaf58cfa833a850ab
+Unmodified by this task: src/assets/images/rlhf-book-chinese-post-training-learning-guide-banner.jpg SHA256 5ce9708af9c24428b732082689d69a27dfaf9b0274cb90450a9a93e2446a8047
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+codex
+Generated exactly 3 images with the image generation tool, saved and visually inspected:
+
+- [01 Learning map](/Users/jason/Dev/mycelium/blog/src/assets/images/rlhf-book-chinese-post-training-learning-guide-fig-01.png) — 52,464 bytes, 48 colors
+- [02 Three distinct methods](/Users/jason/Dev/mycelium/blog/src/assets/images/rlhf-book-chinese-post-training-learning-guide-fig-02.png) — 62,883 bytes, 48 colors
+- [03 Evidence ladder](/Users/jason/Dev/mycelium/blog/src/assets/images/rlhf-book-chinese-post-training-learning-guide-fig-03.png) — 52,462 bytes, 47 colors
+
+All are **1120×630**, white background, no dithering. Figure 03 explicitly marks whole-book build and real training as **未运行**.
+
+Raw files preserved in `generated_images/rlhf-book-chinese-20261108/`. Article, banner, and other files unchanged.
+hook: Stop
+hook: Stop Completed
+tokens used
+48,217
+Generated exactly 3 images with the image generation tool, saved and visually inspected:
+
+- [01 Learning map](/Users/jason/Dev/mycelium/blog/src/assets/images/rlhf-book-chinese-post-training-learning-guide-fig-01.png) — 52,464 bytes, 48 colors
+- [02 Three distinct methods](/Users/jason/Dev/mycelium/blog/src/assets/images/rlhf-book-chinese-post-training-learning-guide-fig-02.png) — 62,883 bytes, 48 colors
+- [03 Evidence ladder](/Users/jason/Dev/mycelium/blog/src/assets/images/rlhf-book-chinese-post-training-learning-guide-fig-03.png) — 52,462 bytes, 47 colors
+
+All are **1120×630**, white background, no dithering. Figure 03 explicitly marks whole-book build and real training as **未运行**.
+
+Raw files preserved in `generated_images/rlhf-book-chinese-20261108/`. Article, banner, and other files unchanged.
