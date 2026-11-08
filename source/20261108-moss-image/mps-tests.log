@@ -1,0 +1,32 @@
+W1108 23:38:42.100000 10333 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+test_cuda_routing_retains_existing_loader_and_configuration (test_mps_runtime.IntegrationTests.test_cuda_routing_retains_existing_loader_and_configuration) ... ok
+test_gradio_ui_builds_for_mac_without_loading_weights (test_mps_runtime.IntegrationTests.test_gradio_ui_builds_for_mac_without_loading_weights) ... /opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:730: ResourceWarning: unclosed event loop <_UnixSelectorEventLoop running=False closed=False debug=False>
+  _warn(f"unclosed event loop {self!r}", ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:730: ResourceWarning: unclosed event loop <_UnixSelectorEventLoop running=False closed=False debug=False>
+  _warn(f"unclosed event loop {self!r}", ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:730: ResourceWarning: unclosed event loop <_UnixSelectorEventLoop running=False closed=False debug=False>
+  _warn(f"unclosed event loop {self!r}", ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:730: ResourceWarning: unclosed event loop <_UnixSelectorEventLoop running=False closed=False debug=False>
+  _warn(f"unclosed event loop {self!r}", ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_mac_routing_and_unsupported_compile (test_mps_runtime.IntegrationTests.test_mac_routing_and_unsupported_compile) ... ok
+test_failed_prompt_stage_releases_pipeline_and_reloads_it (test_mps_runtime.RunnerTests.test_failed_prompt_stage_releases_pipeline_and_reloads_it) ... /opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:730: ResourceWarning: unclosed event loop <_UnixSelectorEventLoop running=False closed=False debug=False>
+  _warn(f"unclosed event loop {self!r}", ResourceWarning, source=self)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_mps_provenance_hashes_bundle_pipeline_and_wrapper (test_mps_runtime.RunnerTests.test_mps_provenance_hashes_bundle_pipeline_and_wrapper) ... ok
+test_both_prompts_encoded_before_sampling_and_cached (test_mps_runtime.StagingTests.test_both_prompts_encoded_before_sampling_and_cached) ... ok
+test_cached_embeddings_hold_no_autograd_graph (test_mps_runtime.StagingTests.test_cached_embeddings_hold_no_autograd_graph) ... ok
+test_load_pipeline_records_the_bundle_pipeline_it_executes (test_mps_runtime.StagingTests.test_load_pipeline_records_the_bundle_pipeline_it_executes) ... ok
+test_prompt_cache_evicts_least_recently_used (test_mps_runtime.StagingTests.test_prompt_cache_evicts_least_recently_used) ... ok
+test_changed_upstream_source_fails_explicitly (test_mps_runtime.TimestepTests.test_changed_upstream_source_fails_explicitly) ... ok
+test_cpu_patch_preserves_upstream_float64_math (test_mps_runtime.TimestepTests.test_cpu_patch_preserves_upstream_float64_math) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 10.463s
+
+OK

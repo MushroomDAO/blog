@@ -1,0 +1,13 @@
+=== [adopt-banner] moss-image-openmoss-layout-generation-review ← 1 source image(s) → src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← https://raw.githubusercontent.com/OpenMOSS/MOSS-Image/6be4453024c5acae9dcd0a191e26ee524e743310/assets/showcase/shanghai-panorama.webp
+=== [adopt-banner] done: src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg (1200x630, 93559B) ===
+=== [verify-banner] src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=https://raw.githubusercontent.com/OpenMOSS/MOSS-Image/6be4453024c5acae9dcd0a191e26ee524e743310/assets/showcase/shanghai-panorama.webp
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 93559B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg ===
+PATH: src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg

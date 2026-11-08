@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT/resolve/f972bd4b4b9e3852133cc5da954d87bc32cd8fb9/model_index.json",
+    "matchesInitialMainRead": true,
+    "sha256": "ca80b1f562a506e0eb24afb1acb464fb583163e3c240c04e4bc69fea090db173"
+  },
+  {
+    "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT/resolve/f972bd4b4b9e3852133cc5da954d87bc32cd8fb9/transformer/config.json",
+    "matchesInitialMainRead": true,
+    "sha256": "3291c3a1c7adc22b8182a0de25ca8ec97474d72715ce84adbab09cc0be24f666"
+  },
+  {
+    "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT/resolve/f972bd4b4b9e3852133cc5da954d87bc32cd8fb9/text_encoder/config.json",
+    "matchesInitialMainRead": true,
+    "sha256": "b31ee18a242bcfcccbe740f825f6b1d3ae231b0655eeecb5de3e98d504b7d68c"
+  }
+]

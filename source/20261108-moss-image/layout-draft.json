@@ -1,0 +1,33 @@
+{
+  "width": 1024,
+  "height": 1024,
+  "bbox_coord_space": "abs",
+  "bbox_format": "xyxy",
+  "summary": {
+    "canvas": "single",
+    "caption": "A clean poster with a short Chinese title and a blue mountain below."
+  },
+  "items": [
+    {
+      "label": "text",
+      "caption": "Large blue title.",
+      "text": "看见山川",
+      "bbox": [
+        128,
+        96,
+        896,
+        224
+      ]
+    },
+    {
+      "label": "object",
+      "caption": "A blue mountain.",
+      "bbox": [
+        128,
+        320,
+        896,
+        928
+      ]
+    }
+  ]
+}

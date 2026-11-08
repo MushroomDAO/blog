@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-08T16:52:05.182207+00:00",
+  "articles": [
+    {
+      "slug": "moss-image-openmoss-layout-generation-review",
+      "url": "https://blog.mushroom.cv/blog/moss-image-openmoss-layout-generation-review/",
+      "title": "MOSS-Image：OpenMOSS的文字生图、布局控制与部署边界",
+      "listRank": 5,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/moss-image-openmoss-layout-generation-review-banner.BxKGsMo4.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 93559
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/moss-image-openmoss-layout-generation-review-banner.BxKGsMo4_22bvXN.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 47844
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/moss-image-openmoss-layout-generation-review-fig-01.DF6fnfP4_ZzgQqT.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 48278
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/moss-image-openmoss-layout-generation-review-fig-02.NrSoHbWd_9QWvu.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 50188
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/moss-image-openmoss-layout-generation-review-fig-03.mAEnaLxY_21apYt.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 40544
+        }
+      ]
+    }
+  ]
+}

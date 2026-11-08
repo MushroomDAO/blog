@@ -1,0 +1,2279 @@
+Reading additional input from stdin...
+2026-11-08T16:43:32.564823Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/network-switch/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T16:43:32.564850Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-cdp/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T16:43:32.564854Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-docker/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T16:43:32.564857Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-publisher/SKILL.md: missing YAML frontmatter delimited by ---
+OpenAI Codex v0.165.0
+--------
+workdir: /Users/jason/Dev/mycelium/blog
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a1bc0b-3139-7991-9ae2-21b75438bf73
+--------
+user
+Use $mycelium-mushroom-illustrations. Read src/content/blog/moss-image-openmoss-layout-generation-review.md. Generate exactly3 separate16:9 whitebackground LittleM handdrawn bodyillustrations with image generation, notcode drawing. Anchor1: prompt→textencoder→5B DiT→VAE→image, threecomponentresources staging, no claim5Bwholepipeline. Anchor2: top-leftabsxyxy draft → compiler → centeredabsyxyx prompt → generation samecanvassize; fewChinese labels, titleboxexample optional ifnotclutter. Anchor3: helperlogic/layoutcompiler已验证19项 vs realweights image/OCR/peakmemory待验证, no impliedactualgeneration. RespectskillLittleMredcapwhitepolkadots. Save raw generated_images/moss-image-20261108/. Copycompress finals exactly src/assets/images/moss-image-openmoss-layout-generation-review-fig-01.png -02.png -03.png,1120x630,at most48palettecolors,no dither,each<90000bytes. Inspect readableChinese andlogic. Do NOT edit Markdown, existingadoptedbanner or otherfiles. Finishfinalcopyverification.
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+codex
+我会按小M插图 skill 分别生成这三张图，逐张检查中文和技术逻辑，再压缩到指定路径；只写入原图和这三张成品。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "pwd && rg --files -g 'AGENTS.md' -g 'SKILL.md' .agents /Users/jason/.codex/skills/mycelium-mushroom-illustrations /Users/jason/.codex/skills/.system/imagegen | head -50" in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+/Users/jason/Dev/mycelium/blog
+/Users/jason/.codex/skills/.system/imagegen/SKILL.md
+/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md
+.agents/skills/network-switch/SKILL.md
+.agents/skills/daily-video-planner/SKILL.md
+.agents/skills/mage-vl/SKILL.md
+.agents/skills/xhs-mcp-docker/SKILL.md
+.agents/skills/blog-publisher/SKILL.md
+.agents/skills/source-scanner/SKILL.md
+.agents/skills/xhs-publisher/SKILL.md
+.agents/skills/mushroom/SKILL.md
+.agents/skills/seo-geo/SKILL.md
+.agents/skills/xhs-mcp-cdp/SKILL.md
+.agents/skills/forage/SKILL.md
+.agents/skills/llm-wiki/SKILL.md
+.agents/skills/banner-creator/SKILL.md
+.agents/codex-skills/mycelium-mushroom-illustrations/SKILL.md
+.agents/codex-skills/mycelium-baobao-cat-illustrations/SKILL.md
+.agents/codex-skills/mycelium-avatar-illustrations/SKILL.md
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "cat 'src/content/blog/moss-image-openmoss-layout-generation-review.md'" in /Users/jason/Dev/mycelium/blog
+exec
+/bin/zsh -lc "cat '/Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/mushroom-ip.md'" in /Users/jason/Dev/mycelium/blog
+exec
+/bin/zsh -lc "cat '/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md'" in /Users/jason/Dev/mycelium/blog
+exec
+/bin/zsh -lc "cat '/Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/style-dna.md'" in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+# 小M IP
+
+## 角色定义
+
+小M是 Mycelium 中文正文配图的固定视觉 IP。
+
+默认每张图都要出现小M。小M不是吉祥物，不是贴纸，不是可爱装饰，而是正在认真参与系统运转的荒诞工作者——一只在白板草图里真的负责某项工作的小蘑菇。
+
+## 外形（🍄 经典蘑菇造型）
+
+- 手绘小蘑菇怪物，参照 🍄 emoji 的经典造型，不是黑色实心。
+- **菌盖：红色（正红 / 红橙）半圆顶，盖上点缀 3-5 颗白色圆点斑**（🍄 标志性白点）。菌盖边缘有手绘黑色轮廓线。
+- **菌柄/身体：米白色（奶白）填充 + 黑色手绘轮廓线**。
+- **黑色小圆点眼睛**，长在白色菌柄上（白柄上用黑点眼才清楚；不要用白点眼）。
+- 细腿，偶尔有细胳膊；表情空、呆、冷静、认真（deadpan，不卖萌）。
+- 身体（菌柄）可以变形：圆柱、漏斗、管道、洞口、奇怪工位等，但**红帽白点 + 白柄**这套识别特征要保留。
+- 轮廓略微不规则，有手绘感。不要画得太精致、太 3D、太写实。
+
+### 配色说明（重要）
+
+- 菌盖红是**角色自身的身份色**（填充块）；这与「红色批注」（细线/文字）在视觉上是分开的，不冲突。
+- 流动 / 传输 / 路径 / 菌丝仍用**橙色**；脑内状态 / 系统提示用蓝色。颜色整体仍要克制。
+
+## 菌丝特性（这是小M区别于普通角色的关键）
+
+- 小M脚下、身后或手里可以延伸出**细细的菌丝线**。
+- 菌丝用来：连接信息源、传输养分/内容、织成网络、把分散的节点接到一起。
+- 菌丝线用橙色表示「流动 / 传输 / 从 A 到 B」，和风格 DNA 的颜色语义一致。
+- 不要每张都堆满菌丝；只在「连接、传输、网络、汇聚」类主题里用 1-2 根，点到为止。
+
+## 性格
+
+- 很认真，但做的事有点荒诞。
+- 像一个低调的系统操作员 / 地下网络的运维工。
+- 冷幽默，不卖萌。
+- 有点笨拙，但不蠢。
+
+## 常见职责
+
+让小M承担核心动作：
+
+- 搬运素材、分解养分。
+- 用菌丝拉线、汇聚信息源、连接节点。
+- 卡在断点里。
+- 在机器里操作“判断”杆。
+- 变成筛选漏斗。
+- 切开“素材鱼”。
+- 盖章承接话术。
+- 牵着承接路径。
+- 举警告牌看坑。
+- 在地下网络里传输内容、把孢子撒出去（指数传播）。
+- 在旁边搬砖、搭桥、开门、分拣、记录。
+
+## 禁止
+
+- 不要把小M画成过度可爱的吉祥物、卡通蘑菇贴纸。
+- 不要画成儿童卡通角色。
+- 不要给小M复杂服装、表情包、闪亮眼睛、笑脸。
+- 不要画成写实蘑菇 / 3D 蘑菇 / 渐变质感（红帽白点是手绘平涂，不是写实）。
+- 不要把菌盖画成黑色实心（旧版已废弃）；也不要弄成多彩花哨。
+- 不要让小M只是站在角落里看。
+- 不要让小M或菌丝抢走结构表达，把画面塞满。
+
+## 判断标准
+
+如果去掉小M，图的核心隐喻还能完全成立，说明小M太装饰了；要重写提示词，让小M成为动作主体。菌丝同理：菌丝必须服务于「连接 / 传输」的核心意思，不是背景装饰。
+
+ succeeded in 0ms:
+---
+title: "MOSS-Image：OpenMOSS的文字生图、布局控制与部署边界"
+titleEn: "MOSS-Image: OpenMOSS Layout Generation and Deployment"
+description: "MOSS-Image是OpenMOSS开源图像模型，提供Base与SFT权重，支持中英文字和JSON布局。本文核对5B骨干、文本编码器与VAE，解释两种坐标格式、提示词增强、ComfyUI及Mac路线，通过19项辅助检查和实际布局编译，区分官方画质报告、内存记录与本次未测能力，帮助建立从结构化输入到结果校对的流程。"
+descriptionEn: "Review MOSS-Image Base and SFT, layout coordinates, ComfyUI and Mac deployment, with 19 helper checks and clear limits on text scores, memory and image quality."
+wechatTitle: "MOSS-Image：文字生图与布局控制"
+wechatDigest: "找到OpenMOSS官方模型，拆解布局坐标、完整资源需求与本地辅助验证。"
+pubDate: "2026-11-08"
+updatedDate: "2026-11-08"
+category: "Tech-Experiment"
+tags: ["MOSS-Image", "OpenMOSS", "图像生成", "布局控制", "ComfyUI", "本地部署"]
+heroImage: "../../assets/images/moss-image-openmoss-layout-generation-review-banner.jpg"
+---
+
+MOSS-Image 是 OpenMOSS 的开源图像生成模型家族，重点是把中英文字和复杂版式一起画进图片。它既接受自然语言提示词，也能用 JSON 指定文字、物体及其位置，适合研究海报、信息图和其他需要组织内容的视觉任务。
+
+官方仓库是 `OpenMOSS/MOSS-Image`，已发布 Base 与 SFT 两套权重。模型卡标注 Apache-2.0，仓库的独立推理代码也采用 Apache-2.0；使用第三方转换、组件或社区模型时仍应查看各自说明。本次固定仓库提交 `6be4453024c5acae9dcd0a191e26ee524e743310`，核对权重配置，并完成不下载完整权重的本地辅助验证。
+
+封面采用官方 README 展示的上海全景样例，经裁剪制作，用于说明项目的公开成果，不是本次运行 MOSS-Image 得到的图片。
+
+## Base、SFT和社区版本，应该怎样区分？
+
+| 入口 | 角色 | 使用时关注什么 |
+|---|---|---|
+| MOSS-Image-Base | 基础文生图模型 | 采样参数、提示词和后续适配 |
+| MOSS-Image-SFT | 在 Base 上用筛选数据监督微调 | 与 Base 相同的架构和推理管线，比较具体任务表现 |
+| Comfy-Org/MOSS-Image | ComfyUI 格式的模型组件与工作流 | 加载器、组件文件放置及原生支持版本 |
+| 社区 LoRA、蒸馏、量化或编辑分支 | 各自修改、适配或扩展 | 来源、基础模型、参数和兼容性需要分别核对 |
+
+SFT 不是“少步版”的同义词，Base/SFT 的区别也不等于是否支持 Layout。两者都支持自然语言、标签序列和布局输入。官方示例中 SFT 的文字分组和白板组织更清楚，但示例不能替代对自己任务的对照测试。
+
+对初次使用者，先在固定提示词、尺寸、种子和采样参数下比较 Base 与 SFT，更容易理解差异。先不要把多个社区加速、去条纹、精度转换 LoRA 一起叠加，否则很难定位效果变化来自哪一层。
+
+## 5B背后是一条怎样的生成链路？
+
+“5B”指图像生成的 DiT 骨干，不能直接用作整套系统的参数量或内存估算。本次读取的 SFT 配置确认了 42 层图像 Transformer、Qwen3.5 系列文本编码器，以及 `AutoencoderKLFlux2`；项目文档将文本编码器描述为 Qwen3.5-9B。
+
+简化的链路是：文本编码器理解提示词 → DiT 在潜空间逐步生成 → VAE 解码成像素。布局规划或提示词增强还可以发生在前面。不同阶段的权重、激活和中间结果都会影响资源占用。
+
+项目的标准推荐包括 Flow-matching Euler、50 步、CFG 3、Shift 5，以及负分支跳过第 22 层的设置。用户指南还建议手动输入的宽高使用正的 16 倍数；不要把任意尺寸字符串都当成有效输入。
+
+这组参数是起点，不是跨平台画质一致性保证。换调度器、精度、工作流或社区适配器后，应保留参数记录再比较。文档提到的长提示词上限为 4096 tokens，不能把文本编码器配置中的更大上下文能力，直接当成图像管线实际接受的长度。
+
+![小M依次调度文本编码器、图像DiT和VAE，说明完整生成链路与分阶段资源占用](../../assets/images/moss-image-openmoss-layout-generation-review-fig-01.png)
+
+## Layout的价值是什么？
+
+单纯说“把标题放在上面，主体放在下面”，会给模型留下大量解释空间。Layout 让用户直接写出需要画出的文字、元素说明和边界框，适合让内容组织成为生成输入的一部分。
+
+这仍然是条件生成：模型需要按布局画出图片，框并不自动变成排版软件的确定性约束。输出也不是自动附带可编辑字体图层的 SVG 或 PSD。最终海报的错别字、标点、溢出和视觉层级仍要检查。
+
+项目提供的 Prompt Enhancer skill 可以协助 Agent 扩写内容或规划布局。其中的 `compile_prompt.py` 做格式校验和坐标转换，不会调用图像生成服务；运行编译器成功，不代表已经生成图片。
+
+### 两种坐标格式为什么容易混淆？
+
+| 格式 | 原点 | 坐标顺序 | 画布尺寸 |
+|---|---|---|---|
+| 可编辑布局草稿 | 左上角 | `xyxy`：x1、y1、x2、y2 | 包含 width、height |
+| 送给模型的提示 JSON | 画布中心 | `yxyx`：y1、x1、y2、x2 | 编译结果不包含宽高，生成时另行设置 |
+
+这些是绝对像素坐标，不是归一化的 0–1 坐标。以 1024×1024 画布为例，草稿标题框 `[128,96,896,224]`，转换后是 `[-416,-384,-288,384]`：先调整顺序，再按相应轴减去画布中心。
+
+本次实际编译的两元素草稿如下，可以保存为 `draft.json`：
+
+```json
+{
+  "width": 1024,
+  "height": 1024,
+  "bbox_coord_space": "abs",
+  "bbox_format": "xyxy",
+  "summary": {
+    "canvas": "single",
+    "caption": "A clean poster with a short Chinese title and a blue mountain below."
+  },
+  "items": [
+    {"label":"text","caption":"Large blue title.","text":"看见山川","bbox":[128,96,896,224]},
+    {"label":"object","caption":"A blue mountain.","bbox":[128,320,896,928]}
+  ]
+}
+```
+
+从项目根目录运行：
+
+```bash
+python3 skills/moss-image-prompt-enhancer/scripts/compile_prompt.py draft.json --output prompt.txt
+```
+
+编译结果的标题框与上文一致，物体框为 `[-192,-384,416,384]`，并带有 `bbox_coord_space: "abs_centralized"` 与 `bbox_format: "yxyx"`。实际生成时仍应选择 1024×1024；只修改画布尺寸，不会替你等比例重算原来的元素框。
+
+![小M把左上角xyxy草稿转换为中心原点yxyx，携带相同画布尺寸进入生成](../../assets/images/moss-image-openmoss-layout-generation-review-fig-02.png)
+
+## 论文中的文字成绩应该怎样理解？
+
+技术报告提出 LongLongTextBench（LLTB）和 RealLayoutArena（RLA），分别观察长文本渲染与版式丰富的生成任务。作者报告 LLTB 平均文字覆盖率约 96.3%；这不是本次复测结果。
+
+这个覆盖指标使用 OCR 识别后的英文词或中文字符多重集合召回，按语言与长度组汇总。论文明确说明，它不检查顺序，也不直接惩罚多出的 OCR 单元，标点也不在对应匹配白名单中。因此，96.3% 不能翻译成“整页逐字逐句正确率96.3%”。
+
+RLA 的整套系统比较包含提示词增强，另有共享增强提示词的生成器比较。评价“模型骨干”和评价“规划器加生成器”是不同问题，不能抽取不同设置里的排名，拼成统一的全面领先结论。
+
+实际验收可保留三项：逐字核对指定文字，检查元素是否落在预期区域，再请人评估层级和阅读顺序。对于日期、价格、公式等信息，即使图像视觉效果很好，也应单独核对。
+
+## 如何选择ComfyUI或Python入口？
+
+ComfyUI 用户可以先走原生支持路径：选用包含 MOSS-Image 支持的版本，安装对应依赖，并使用 Comfy-Org 提供的组件和原生工作流。扩散模型、文本编码器和 VAE 分别放到对应目录，CLIP Loader 类型使用 `moss_image`。
+
+仓库内的 HF 目录加载插件是另一条路径，适合读取本地 Diffusers 模型目录或继续使用旧插件工作流。切换原生路线时应换成对应工作流，不能只替换一个加载节点；文档特别说明，两条路线的时间步倍率和采样节点不能机械混用。
+
+Python 用户应注意，仓库提供 UI、内存管理等运行代码，独立模型管线还会从 Hugging Face 模型包加载自定义实现。复现时同时记录仓库提交和模型 revision；只固定 GitHub 提交，不足以固定所有执行代码与权重。
+
+本次读取的 SFT 模型 revision 为 `f972bd4b4b9e3852133cc5da954d87bc32cd8fb9`。这个记录用于定位所查配置，不表示已下载或运行该版本的完整模型。
+
+## 显存与Mac部署有哪些实际边界？
+
+先区分 GPU 常驻、组件卸载、逐层卸载和低内存模式。把权重转移到 CPU 或按需从磁盘读取，会改变显存压力，也会增加传输、加载和等待，不能只比较一个显存数字。
+
+项目 README 记录过低内存路径生成一张 1024×1024、50 步图片的峰值：PyTorch GPU 已分配约 3.65 GiB、已保留约 3.85 GiB，任务系统 RAM 含文件缓存约 14 GiB。这些是项目给出的特定运行记录，不是所有硬件、尺寸和配置的最低要求，也不是本次测量。
+
+Mac 文档另列出实验性的 PyTorch MPS 路线，公开的真权重验证针对 M1 Max、32GB 统一内存及 SFT。它分阶段加载约 17GB 文本编码器和约 10GB DiT，并对 MPS 不支持的 FP64 时间步运算做 CPU 处理；不是把 CUDA 示例的设备字符串改为 `mps` 就完成全部适配。
+
+文档建议为一套模型、环境和下载文件预留约 40GB 磁盘，记录的出图调用为数分钟级。其他芯片、较小内存、Base 模型及不同版本仍应分别验证。社区训练器所称“6GB LoRA训练”也不能直接变成官方完整推理链路的显存需求。
+
+## 本次在本机验证到了哪一层？
+
+Mycelium Protocol 执行了两组上游检查：布局编译器 8 项测试，以及 MPS 运行辅助逻辑的 11 项回归检查，共 19 项通过。检查覆盖草稿校验与坐标编译、加载阶段顺序、提示缓存、时间步 CPU 运算、上游源码变动时明确失败及相关 UI 构造等路径。
+
+MPS 回归大量使用替身对象和模拟加载器，不能据此宣称真实权重已经在本机完成生成。另实际运行了上面的布局编译示例，核对两组边界框与输出字段；全程没有下载完整模型权重，也没有评测画质、OCR准确率、出图速度或峰值内存。
+
+测试环境为 Python 3.12.15、PyTorch 2.15.0、Diffusers 0.41.0、Transformers 5.20.1、Accelerate 1.15.0 和 Gradio 6.30.0。它与文档的真权重验证环境不完全相同，保留版本记录是为了避免把辅助逻辑通过说成整套环境等价。
+
+![小M把布局编译与运行辅助检查放在已验证区，真实出图、OCR和峰值内存留待验证](../../assets/images/moss-image-openmoss-layout-generation-review-fig-03.png)
+
+## 值得怎样开始使用？
+
+先选一个可核对的任务：一句短标题、两三个明确元素、固定画布。记录原始草稿、编译后的提示词、模型版本、参数和种子；生成后保留原图，再做文字与布局验收。
+
+等这一轮能够复现，再逐步增加文本长度、布局密度和风格约束。修改时尽量一次只动一类变量，例如仅换 Base/SFT、仅变步数或仅调整布局，避免把提示词、模型、精度和社区插件同时更换。
+
+MOSS-Image 的吸引力在于把内容组织引入开源图像生成流程。它可以成为设计探索和视觉工作流的一部分；走向可靠交付，还需要把结构化输入、实际生成和结果校对接成闭环。
+
+## 常见问题
+
+### MOSS-Image就是一个5B模型文件吗？
+
+不是。5B描述图像DiT骨干，实际管线还使用文本编码器和VAE。下载体积、系统内存和显存还受精度、卸载、尺寸与运行环境影响。
+
+### Prompt Enhancer skill会自己生成图片吗？
+
+其编译脚本不会调用生成服务。它把内容或布局草稿整理成模型提示词，之后仍需使用MOSS-Image管线或相应工作流出图。
+
+### 本次已经证明中文海报不会出错了吗？
+
+没有。19项辅助检查和坐标编译示例不能替代真实出图、OCR与人工校对。论文覆盖率也不是逐字顺序、标点和整页排版的完全正确率。
+
+## 来源与进一步阅读
+
+官方仓库：https://github.com/OpenMOSS/MOSS-Image
+
+Base权重：https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base
+
+SFT权重：https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT
+
+中文指南：https://github.com/OpenMOSS/MOSS-Image/blob/main/USERGUIDE_ZH.md
+
+ComfyUI与格式转换模型：https://huggingface.co/Comfy-Org/MOSS-Image
+
+Mac实验路线：https://github.com/OpenMOSS/MOSS-Image/blob/main/docs/macos.md
+
+技术报告及指标定义：https://arxiv.org/html/2610.23374v1
+
+相关阅读，AI基础设施中的部署与验收：https://blog.mushroom.cv/blog/ai-infrastructure-engineer-learning-path-review/
+
+---
+
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+
+<!--EN-->
+
+MOSS-Image is OpenMOSS's open image-generation family, emphasizing bilingual text rendering and layout-rich images. It accepts natural-language prompts and JSON specifications for text, objects and their positions, making it interesting for posters, infographics and other content-heavy visual tasks.
+
+The official repository is `OpenMOSS/MOSS-Image`, with Base and SFT checkpoints. Model cards identify Apache-2.0, and the standalone pipeline code is Apache-2.0; check separate components and community derivatives on their own terms. This review pins repository commit `6be4453024c5acae9dcd0a191e26ee524e743310`, reads model configurations and performs bounded helper checks without downloading full weights.
+
+The cover is cropped from the official README's Shanghai panorama example. It illustrates a published project result, not an image generated by this review.
+
+## Base, SFT and community derivatives
+
+| Entry | Role | What to check |
+|---|---|---|
+| MOSS-Image-Base | Base text-to-image model | Sampling, prompts and adaptation |
+| MOSS-Image-SFT | Curated-data supervised fine-tuning | Same architecture/pipeline, task-specific comparison |
+| Comfy-Org/MOSS-Image | ComfyUI components and workflows | Loaders, file placement and native support |
+| Community adapters, distillations, quantizations or editing branches | Independent changes/extensions | Provenance, base model, settings and compatibility |
+
+SFT does not mean a few-step distillation. Both official checkpoints support prose, tag sequences and Layout. The project's comparison example shows clearer grouping after SFT, but examples do not replace tests on a particular task.
+
+For an initial comparison, keep prompt, dimensions, seed and sampling settings fixed. Avoid adding several community speed, precision and banding adapters at once; it becomes difficult to attribute a change.
+
+## What sits around the five-billion-parameter backbone?
+
+The 5B figure describes the image DiT, not the whole pipeline's parameter count or memory footprint. The inspected SFT configuration has 42 transformer layers, a Qwen3.5-family text encoder and `AutoencoderKLFlux2`. Project documentation identifies the text encoder as Qwen3.5-9B.
+
+The simplified chain is text encoding → iterative latent generation by the DiT → VAE decoding. Prompt planning can occur beforehand. Weights, activations and intermediate results at each stage affect resource requirements.
+
+Recommended defaults include flow-matching Euler, 50 steps, CFG 3, shift 5 and negative-branch skipping at layer 22. Positive dimensions must be multiples of 16. These settings are a starting point, not a cross-platform image-equivalence guarantee. The documented prompt cap is 4096 tokens; a larger context length in the underlying text model's config does not establish a larger pipeline input limit.
+
+![LittleM coordinates text encoding, image DiT sampling and VAE decoding as separate resource stages](../../assets/images/moss-image-openmoss-layout-generation-review-fig-01.png)
+
+## What does Layout add?
+
+Layout makes literal text, element descriptions and bounding boxes part of the input. It can reduce ambiguity in instructions such as placing a title above an illustration. It remains generative conditioning rather than a deterministic typesetting constraint. Output is a raster image, not automatically an editable SVG or layered PSD.
+
+The Prompt Enhancer skill can help an agent expand content or plan positions. Its `compile_prompt.py` validates and converts a draft; it does not call an image service. A successfully compiled prompt is not a successfully generated image.
+
+### Why are the coordinate conventions easy to confuse?
+
+| Format | Origin | Order | Dimensions |
+|---|---|---|---|
+| Editable draft | Top-left | `xyxy` | Contains width/height |
+| Model-facing prompt | Canvas center | `yxyx` | Generation dimensions are supplied separately |
+
+These are absolute pixels. On a 1024×1024 canvas, draft title box `[128,96,896,224]` becomes `[-416,-384,-288,384]` after coordinate reordering and centering.
+
+The following two-element draft was compiled during this review:
+
+```json
+{
+  "width": 1024,
+  "height": 1024,
+  "bbox_coord_space": "abs",
+  "bbox_format": "xyxy",
+  "summary": {
+    "canvas": "single",
+    "caption": "A clean poster with a short Chinese title and a blue mountain below."
+  },
+  "items": [
+    {"label":"text","caption":"Large blue title.","text":"看见山川","bbox":[128,96,896,224]},
+    {"label":"object","caption":"A blue mountain.","bbox":[128,320,896,928]}
+  ]
+}
+```
+
+From the repository root:
+
+```bash
+python3 skills/moss-image-prompt-enhancer/scripts/compile_prompt.py draft.json --output prompt.txt
+```
+
+The second box becomes `[-192,-384,416,384]`. The output declares `abs_centralized` and `yxyx`, omitting width/height. Use 1024×1024 when generating. Changing canvas dimensions alone does not rescale the draft's boxes.
+
+![LittleM converts top-left xyxy into centered yxyx and keeps the intended generation size](../../assets/images/moss-image-openmoss-layout-generation-review-fig-02.png)
+
+## How should the reported text score be read?
+
+The report introduces LLTB for long-text rendering and RLA for layout-rich generation. Its approximately 96.3% LLTB coverage is author-reported, not reproduced here. Coverage uses OCR word/character multiset recall; it does not check order or directly penalize extra OCR units, and the matching whitelist excludes punctuation. It is not exact-string accuracy.
+
+RLA also distinguishes complete prompt-enhancement systems from generators sharing enhanced prompts. Rankings from those different setups cannot be combined into one universal superiority claim.
+
+For a real deliverable, check literal text, element placement and human-readable hierarchy separately. Dates, prices and formulas deserve explicit review even when the image looks polished.
+
+## ComfyUI or Python?
+
+ComfyUI users can choose a version containing native MOSS-Image support, install its matching dependencies, and use Comfy-Org's native components/workflow. Diffusion model, text encoder and VAE go into their respective directories; the CLIP Loader type is `moss_image`.
+
+The repository's local-HF-directory plugin is a separate path for Diffusers directories and existing plugin workflows. When switching paths, import the matching workflow rather than replacing one loader. The documentation specifically distinguishes timestep multipliers and sampling nodes.
+
+Python loading can execute a custom pipeline supplied in the Hugging Face model bundle, while the Git repository supplies runtime/UI components. Record both the Git commit and model revision. A repository pin alone does not fix all weights and executing code.
+
+The inspected SFT model revision was `f972bd4b4b9e3852133cc5da954d87bc32cd8fb9`. This identifies the checked configuration, not a completed full-weight inference run.
+
+## Memory and Apple silicon limits
+
+GPU-resident, component, sequential and low-memory modes make different tradeoffs. Moving weights through CPU RAM or disk can lower GPU usage while adding transfers and loading time.
+
+For one 1024×1024, 50-step image, the project records approximately 3.65 GiB allocated and 3.85 GiB reserved GPU memory, plus 14 GiB task RAM including file cache on its low-memory path. These are particular recorded peaks, not universal minimum requirements or measurements from this review.
+
+The experimental MPS route separately documents SFT validation on an M1 Max with 32 GB unified memory. It stages an approximately 17 GB text encoder and 10 GB DiT and handles an MPS-unsupported FP64 timestep operation on CPU. A simple CUDA-to-MPS device-string edit does not reproduce that adaptation.
+
+The guide suggests roughly 40 GB disk space for a model bundle, environment and download files, with recorded generation calls taking minutes. Other chips, smaller memory configurations, Base and different dependencies need separate validation. A community trainer's 6 GB adapter-training example is not an inference-memory requirement for the complete official pipeline.
+
+## What was tested locally?
+
+Mycelium Protocol ran eight upstream layout-compiler tests and eleven MPS-runtime helper regression checks: 19 passed. They cover draft validation/conversion, staged loading, prompt caching, CPU timestep arithmetic, explicit failure on upstream source changes and related UI construction.
+
+The MPS tests extensively use fake objects and mocked loaders; they do not establish real-weight image generation. The two-element draft above was also compiled and its output boxes/fields checked. No full model weights were downloaded, and no image-quality, OCR, generation-speed or peak-memory benchmark was run.
+
+The helper environment used Python 3.12.15, PyTorch 2.15.0, Diffusers 0.41.0, Transformers 5.20.1, Accelerate 1.15.0 and Gradio 6.30.0. It is not identical to the documented real-weight validation environment. Keeping those distinctions prevents helper success from becoming a claim of full-stack equivalence.
+
+![LittleM separates verified compiler/runtime helpers from image, OCR and memory checks still pending](../../assets/images/moss-image-openmoss-layout-generation-review-fig-03.png)
+
+## A useful first workflow
+
+Start with one short title, a few elements and a fixed canvas. Save the editable draft, compiled prompt, checkpoint revision, sampling settings and seed. Retain the original generated image, then check text and placement.
+
+Increase text length, layout density and style constraints gradually. Change one category of variable at a time, such as checkpoint, step count or layout, before introducing more community components.
+
+MOSS-Image's useful contribution is bringing content organization into an open image-generation workflow. Reliable delivery still requires connecting structured input, actual generation and output review.
+
+## FAQ
+
+### Is MOSS-Image a single 5B file?
+
+No. The figure describes the image backbone. Text encoding and VAE decoding also require resources, and precision/offloading/dimensions affect total needs.
+
+### Does the Prompt Enhancer skill generate images?
+
+Its compiler does not call an image API. It prepares prompt/layout input for MOSS-Image or a compatible workflow to generate later.
+
+### Were error-free Chinese posters demonstrated here?
+
+No. Nineteen helper checks and coordinate compilation do not replace real generation, OCR and manual review. Reported coverage is not full-page exactness.
+
+## Sources and further reading
+
+Official repository: https://github.com/OpenMOSS/MOSS-Image
+
+Base weights: https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base
+
+SFT weights: https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT
+
+User guide: https://github.com/OpenMOSS/MOSS-Image/blob/main/USERGUIDE.md
+
+ComfyUI models: https://huggingface.co/Comfy-Org/MOSS-Image
+
+Experimental Mac route: https://github.com/OpenMOSS/MOSS-Image/blob/main/docs/macos.md
+
+Technical report and metric definitions: https://arxiv.org/html/2610.23374v1
+
+Related infrastructure review: https://blog.mushroom.cv/blog/ai-infrastructure-engineer-learning-path-review/
+
+---
+
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
+
+ succeeded in 0ms:
+---
+name: mycelium-mushroom-illustrations
+description: 生成 Mycelium「小M」蘑菇 IP 风格的中文正文配图。【科技类别】文章默认用此 skill。用于为中文文章、帖子、博客、Notion 文档、工作流、方法论、流程、结构、状态、隐喻或观点生成“怪诞”“蘑菇”“小M”“菌丝”“手绘”“正文配图”“文章插图”“配图建议”“shot list”“去标题/改图”等任务；视觉为纯白手绘、少量红橙蓝批注、简洁清爽但天马行空，主角是黑色小蘑菇「小M」。
+---
+
+# Mycelium 小M（蘑菇）怪诞正文配图
+
+> 用途分工：本 skill 用于**科技类别**文章。社会/创作思考类别用 `mycelium-avatar-illustrations`（卡通小人），科普类别用 `mycelium-baobao-cat-illustrations`（德文猫Baobao）。
+
+## 核心定位
+
+为中文文章设计和生成 16:9 横版正文配图。目标不是做商业插画、PPT 信息图或可爱卡通，而是把文章里的关键判断、流程、结构、状态或隐喻，变成一张清爽、怪诞、有创意、可读但不说明书的手绘解释图。
+
+默认视觉 IP 是“小M”：🍄 经典造型的小蘑菇怪物——**红色菌盖 + 白色圆点斑、米白菌柄 + 黑色手绘轮廓、黑点眼**、细腿、空表情，认真做一件荒诞但成立的事；脚下可伸出橙色菌丝线做连接/传输。不要画成黑色实心。小M必须参与画面的核心动作，不能只是站在旁边当装饰。完整形象见 `references/mushroom-ip.md`。
+
+## 先读这些参考
+
+按任务需要读取，不要一次塞满上下文：
+
+- `references/style-dna.md`：风格 DNA、颜色、文字、禁忌。
+- `references/mushroom-ip.md`：小M IP 的形象、性格、动作库和禁忌。
+- `references/composition-patterns.md`：结构类型、原创隐喻方法和反复刻规则。
+- `references/prompt-template.md`：单张生图提示词模板。
+- `references/qa-checklist.md`：生成后检查和迭代规则。
+- `assets/examples/`：只作低频视觉校准，不进入默认生成路径。不要照抄这些案例的构图、物件或标注。
+
+## 工作流
+
+### 1. 消化正文
+
+先读用户给的正文、链接、Notion 页面、Markdown 文件或截图内容。提炼：
+
+- 核心观点是什么
+- 哪些段落承担认知转折
+- 哪些内容适合用图解释
+- 哪些地方只适合文字，不需要图
+
+不要平均配图。优先选择“认知锚点”，例如：核心判断、两个断点、输入输出闭环、分流、前后对比、一鱼多吃、承接路径、常见坑、角色状态变化。
+
+### 2. 先出配图策略
+
+如果用户只是说“分析怎么配图 / 思考哪些地方需要配图”，先给 shot list。每张图写清楚：
+
+- 放在哪个段落后
+- 图的主题
+- 核心意思
+- 结构类型
+- 小M在图里做什么
+- 建议元素
+- 建议中文标注词
+
+默认 4-8 张。文章很短时 1-3 张；长文也不要轻易超过 9 张。够用就好，避免把正文做成画册。
+
+### 3. 单张生成
+
+如果用户明确要求“生成 / 输出 / 做图 / 帮我生成”，不要停下来等确认；用内置 `image_gen` 每张单独生成。不要把多张图拼在一张里。
+
+每张图只讲一个核心结构。提示词必须包含：
+
+- 16:9 横版中文正文配图
+- 纯白背景
+- 黑色手绘线稿
+- 少量红色/橙色/蓝色中文手写批注
+- 大量留白
+- 小M作为核心动作主体
+- 禁止 PPT、商业插画、幼稚可爱、复杂架构、左上角类型标题
+
+不要复刻过往案例。案例只提供风格密度和小M参与方式，不能直接复用“传送带断点 / 小M拉线 / 素材鱼 / 盖章工具箱 / 常见坑路径”等已有构图，除非用户明确要求复刻某张图。每次都要从当前文章重新发明一个奇怪但成立的隐喻。
+
+### 4. 检查与迭代
+
+生成后检查 `references/qa-checklist.md`。如果出现以下问题，优先重生成或局部编辑：
+
+- 小M只是装饰
+- 画面太满
+- 太像流程图/PPT
+- 中文太多或错字严重
+- 左上角出现“常见坑/流程图/系统架构图”等标题
+- 画风太可爱、幼稚、死板
+- 背景不是干净白底
+
+### 5. 保存交付
+
+如果用户在 workspace 内工作，把最终图复制到：
+
+```text
+assets/<article-slug>-illustrations/
+```
+
+按顺序命名：
+
+```text
+01-topic-name.png
+02-topic-name.png
+```
+
+保留原始生成文件，不要覆盖已有资产，除非用户明确要求替换。
+
+## 输出口径
+
+生成前的策略输出要短而准。生成后的交付要包含：
+
+- 生成了几张
+- 每张图的用途
+- 保存路径
+- 哪些图最稳，哪些图是可选
+
+不要长篇解释风格理论；让图自己说话。
+
+ succeeded in 0ms:
+# 风格 DNA
+
+## 一句话
+
+纯白、极简、手绘、留白、克制、怪诞、产品草图感、中文手写感、结构清楚但不说明书。
+
+像一个长期做 AI、产品、设计、开发工具的人，在白纸上随手画出来的一张解释草图。
+
+## 必须
+
+- 16:9 横版正文配图。
+- 纯白背景：不要米色、暖灰、纸张纹理、渐变、阴影、噪点、复古纸感。
+- 黑色手绘线稿为主：细线、轻微抖动、不机械、不矢量、不厚重描边。
+- 大量留白：主体占画面约 40%-60%，至少 35% 空白，最好有一整块安静区域。
+- 少量中文手写批注：最多 5-8 处，每处尽量 2-8 个字。
+- 一张图只讲一个核心动作、结构、状态或隐喻。
+- 结构要自然表达，不要在图上写结构类型名称。
+
+## 颜色
+
+- 黑色：主体线稿、角色、框线、结构、主要文字、主体物件。
+- 红色：重点批注、问题、情绪点、关键提醒、结果。
+- 橙色：主流程、路径、箭头、自动化流向、从 A 到 B 的移动关系。
+- 蓝色：补充说明、脑内状态、系统状态、第二层解释、AI/assistant/自动化提示。
+
+蓝色不是每张都必须用。颜色要克制，宁可少不要多。
+
+## 绝对不要
+
+- 不要商业插画。
+- 不要 PPT 信息图。
+- 不要正式流程图。
+- 不要课程课件。
+- 不要可爱卡通海报。
+- 不要儿童插画。
+- 不要复杂架构图。
+- 不要精致扁平插画。
+- 不要科技感 UI。
+- 不要真实 App 截图。
+- 不要复杂背景、渐变、阴影、纹理。
+- 不要把每个节点都解释清楚。
+- 不要左上角写“Workflow 流程图 / 系统架构图 / 常见坑 / 路线图”等类型标题。
+
+## 审美方向
+
+要怪诞、创意、有意思、简洁清爽、天马行空。
+
+不要可爱、幼稚、很复杂、死板。
+
+exec
+/bin/zsh -lc "cat '/Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/qa-checklist.md'" in /Users/jason/Dev/mycelium/blog
+exec
+/bin/zsh -lc "cat '/Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/composition-patterns.md'" in /Users/jason/Dev/mycelium/blog
+exec
+/bin/zsh -lc "cat '/Users/jason/.codex/skills/.system/imagegen/SKILL.md'" in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+# QA Checklist
+
+## 必过项
+
+- 是 16:9 横版。
+- 背景是干净白底。
+- 有小M。
+- 小M承担核心动作，不只是装饰。
+- 没有复刻旧案例构图，而是为当前文章生成了新隐喻。
+- 画面怪诞、有创意、有意思。
+- 简洁清爽，主体不超过画面约 60%。
+- 一张图只讲一个核心结构。
+- 中文标注少、短、能读。
+- 橙色只用于主路径或箭头。
+- 红色只用于重点、问题、提醒或结果。
+- 蓝色只用于补充说明、反馈或系统状态。
+
+## 失败信号
+
+出现以下情况，重生成或局部编辑：
+
+- 左上角有“常见坑 / Workflow / 系统架构图 / 路线图”等标题。
+- 小M像吉祥物、表情包或可爱卡通。
+- 画面像 PPT、课程课件、正式流程图。
+- 元素太多、箭头太多、节点太多。
+- 文字变成大段解释。
+- 背景有纸纹、阴影、渐变、米色、噪点。
+- 真实 UI 截图或科技感界面。
+- 中文错字严重或标注不可读。
+- 画面太死板，没有荒诞隐喻。
+- 和 `assets/examples/` 里的旧案例构图过于相似。
+
+## 迭代方法
+
+- 太普通：让小M成为动作主体，加入一个奇怪但成立的隐喻。
+- 太复杂：删节点，只保留一个动作和 3-5 个短标注。
+- 太可爱：强调 deadpan、blank serious expression、not cute、not mascot。
+- 太 PPT：去掉标题、边框、整齐网格和过多箭头，改成手绘场景。
+- 太像旧案例：保留核心意思，换掉主物件和小M动作。
+- 文字错：优先局部编辑；错得多就重生成并减少标注数量。
+
+## 交付判断
+
+高质量图应该让读者先觉得“有点怪”，然后 1 秒内看懂结构。
+
+如果第一眼像教程页，而不是白纸上的怪诞产品草图，就不合格。
+
+ succeeded in 0ms:
+# 构图模式与原创规则
+
+## 基础结构类型
+
+选择一种结构即可，不要混太多。
+
+### Workflow 流程
+
+适合：输入 -> 处理 -> 输出，内容生产，AI 工作流，自动化链路。
+
+画法：左侧输入，中间小M或怪机器处理，右侧输出，橙色箭头表达主流向。
+
+### 系统局部
+
+适合：信息来源、过滤器、数据库、渲染器、agent 系统局部。
+
+画法：只画 3-5 个核心模块，小M参与其中一个关键动作。
+
+### 前后对比
+
+适合：混乱/有序，手动/自动，分散/收拢，焦虑/稳定。
+
+画法：左混乱，右稳定，中间橙色箭头。角色可以更夸张。
+
+### 角色状态
+
+适合：用户痛点、创作者状态、工具太多、信息焦虑、卡住到跑起来。
+
+画法：2-4 个小状态，每个状态一个短标注。
+
+### 概念隐喻
+
+适合：内容工厂、信息仓库、脑内黑盒、工作流机器、自动日报。
+
+画法：一个大的怪物件或机器，少量输入，一个输出。要有记忆点。
+
+### 方法分层
+
+适合：方法论框架、系统层级、能力栈、内容系统分层。
+
+画法：一层层盒子，不要正式金字塔；小M在旁边搬砖或搭建。
+
+### 地图路线
+
+适合：从想法到上线、用户路径、内容承接路径、学习路线。
+
+画法：一条弯曲路径，少量节点，小M牵线或走路。
+
+### 小漫画分镜
+
+适合：失败到成功、真实过程、吐槽、使用前后变化。
+
+画法：2-4 个小场景，每格只表达一个动作。
+
+## 原创隐喻生成法
+
+每次都从当前文章重新发明隐喻，不能照搬旧图。
+
+### 三步
+
+1. 把抽象概念换成一个物理动作：卡住、漏掉、变重、分拣、沉淀、发酵、开门、折叠、拆包、回流。
+2. 把系统结构换成一个低科技物件：坏掉的机器、纸箱、抽屉、水管、邮筒、怪表盘、秤、井、梯子、奇怪工位。
+3. 让小M承担动作：不是站旁边，而是卡在机器里、拉错线、守门、搬运、修补、称重、扶梯子、记录、把东西塞进某个怪装置。
+
+### 可用物件池
+
+- 纸箱、抽屉、旧机器、漏斗、秤、邮筒、门、井、梯子、水管、线团、闸门、转盘、黑盒、打孔器、压面机、晾衣绳、怪工位。
+- 用时只选 1-2 个，不要堆满。
+
+### 小M动作池
+
+- 拉、扛、塞、捞、压、称、缝、剪、拧、守、推、接、拆、标记、回收。
+- 动作要服务核心意思，不要为了怪而怪。
+
+## 反复刻规则
+
+不要默认打开或复刻 `assets/examples/`。这些图片只用于风格校准，例如线条密度、留白、颜色克制、小M气质。
+
+除非用户明确说“照这张 / 复刻这个构图 / 用这个案例改”，否则不要直接复用这些旧构图：
+
+- 传送带两个断点
+- 小M在内容机器里拉判断杆
+- 小M变漏斗分拣流量/信任/转化
+- 小M切素材鱼
+- 小M牵承接路径
+- 小M拉三层信息源
+- 三个小M分别拿喇叭/搭桥/开门
+- 小M盖章话术工具箱
+- 小M举牌看常见坑路径
+
+同类主题也要换新隐喻。例如“承接路径”不一定画路线，可以画小M把内容尾巴接到门把手；“一鱼多吃”不一定画鱼，可以画小M把一个纸团压成几种形状。
+
+ succeeded in 0ms:
+---
+name: "imagegen"
+description: "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+---
+
+# Image Generation Skill
+
+Generates or edits images for the current project (for example website assets, game assets, UI mockups, product mockups, wireframes, logo design, photorealistic images, or infographics).
+
+## Top-level modes and rules
+
+This skill has exactly two top-level modes:
+
+- **Default built-in tool mode (preferred):** built-in `image_gen` tool for image generation, editing, and transparent-image requests. Does not require `OPENAI_API_KEY`.
+- **Fallback CLI mode:** `scripts/image_gen.py` CLI. Use when the user explicitly asks for or confirms the CLI/API/model path. Requires `OPENAI_API_KEY`.
+
+Within CLI fallback, the CLI exposes three subcommands:
+
+- `generate`
+- `edit`
+- `generate-batch`
+
+Rules:
+- Use the built-in `image_gen` tool by default for normal image generation and editing requests.
+- Do not switch to CLI fallback for ordinary quality, size, or file-path control.
+- For transparent images, ask built-in `image_gen` for a transparent background and preserve the generated alpha.
+- Never silently switch from built-in `image_gen` or CLI `gpt-image-2` to CLI `gpt-image-1.5`; ask the user first unless they explicitly requested `gpt-image-1.5`.
+- The word `batch` by itself does not mean CLI fallback. If the user asks for many assets or says to batch-generate assets without explicitly asking for CLI/API/model controls, stay on the built-in path and issue one built-in call per requested asset or variant.
+- If the built-in tool fails or is unavailable, tell the user the CLI fallback exists and that it requires `OPENAI_API_KEY`. Proceed only if the user explicitly asks for that fallback.
+- If the user explicitly asks for CLI mode, use the bundled `scripts/image_gen.py` workflow. Do not create one-off SDK runners.
+- Never modify `scripts/image_gen.py`. If something is missing, ask the user before doing anything else.
+
+Built-in save-path policy:
+- In built-in tool mode, Codex saves generated images under `$CODEX_HOME/*` by default.
+- Do not describe or rely on OS temp as the default built-in destination.
+- Do not describe or rely on a destination-path argument (if any) on the built-in `image_gen` tool. If a specific location is needed, generate first and then move or copy the selected output from `$CODEX_HOME/generated_images/...`.
+- Save-path precedence in built-in mode:
+  1. If the user names a destination, move or copy the selected output there.
+  2. If the image is meant for the current project, move or copy the final selected image into the workspace before finishing.
+  3. If the image is only for preview or brainstorming, render it inline; the underlying file can remain at the default `$CODEX_HOME/*` path.
+- Never leave a project-referenced asset only at the default `$CODEX_HOME/*` path.
+- Do not overwrite an existing asset unless the user explicitly asked for replacement; otherwise create a sibling versioned filename such as `hero-v2.png` or `item-icon-edited.png`.
+
+Shared prompt guidance for both modes lives in `references/prompting.md` and `references/sample-prompts.md`.
+
+Fallback-only docs/resources for CLI mode:
+- `references/cli.md`
+- `references/image-api.md`
+- `references/codex-network.md`
+- `scripts/image_gen.py`
+
+## When to use
+- Generate a new image (concept art, product shot, cover, website hero)
+- Generate a new image using one or more reference images for style, composition, or mood
+- Edit an existing image (inpainting, lighting or weather transformations, background replacement, object removal, compositing, transparent background)
+- Produce many assets or variants for one task
+
+## When not to use
+- Extending or matching an existing SVG/vector icon set, logo system, or illustration library inside the repo
+- Creating simple shapes, diagrams, wireframes, or icons that are better produced directly in SVG, HTML/CSS, or canvas
+- Making a small project-local asset edit when the source file already exists in an editable native format
+- Any task where the user clearly wants deterministic code-native output instead of a generated bitmap
+
+## Decision tree
+
+Think about two separate questions:
+
+1. **Intent:** is this a new image or an edit of an existing image?
+2. **Execution strategy:** is this one asset or many assets/variants?
+
+Intent:
+- If the user wants to modify an existing image while preserving parts of it, treat the request as **edit**.
+- If the user provides images only as references for style, composition, mood, or subject guidance, treat the request as **generate**.
+- If the user provides no images, treat the request as **generate**.
+
+Built-in edit semantics:
+- Built-in edit mode is for images already visible in the conversation context, such as attached images or images generated earlier in the thread.
+- If the user wants to edit a local image file with the built-in tool, first load it with built-in `view_image` tool so the image is visible in the conversation context, then proceed with the built-in edit flow.
+- Do not promise arbitrary filesystem-path editing through the built-in tool.
+- If a local file still needs direct file-path control, masks, or other explicit CLI-only parameters, use the explicit CLI fallback only when the user asks for it.
+- For edits, preserve invariants aggressively and save non-destructively by default.
+
+Execution strategy:
+- In the built-in default path, produce many assets or variants by issuing one `image_gen` call per requested asset or variant.
+- In the CLI fallback path, use the CLI `generate-batch` subcommand only when the user explicitly chose CLI mode and needs many prompts/assets.
+- For many distinct assets, do not use `n` as a substitute for separate prompts. `n` is for variants of one prompt; distinct assets need distinct built-in calls or distinct CLI `generate-batch` jobs.
+
+Assume the user wants a new image unless they clearly ask to change an existing one.
+
+## Workflow
+1. Decide the top-level mode: built-in by default, including transparent-output requests; fallback CLI only if explicitly requested or confirmed.
+2. Decide the intent: `generate` or `edit`.
+3. Decide whether the output is preview-only or meant to be consumed by the current project.
+4. Decide the execution strategy: single asset vs repeated built-in calls vs CLI `generate-batch`.
+5. Collect inputs up front: prompt(s), exact text (verbatim), constraints/avoid list, and any input images.
+6. For every input image, label its role explicitly:
+   - reference image
+   - edit target
+   - supporting insert/style/compositing input
+7. If the edit target is only on the local filesystem and you are staying on the built-in path, inspect it with `view_image` first so the image is available in conversation context.
+8. If the user asked for a photo, illustration, sprite, product image, banner, or other explicitly raster-style asset, use `image_gen` rather than substituting SVG/HTML/CSS placeholders. If the request is for an icon, logo, or UI graphic that should match existing repo-native SVG/vector/code assets, prefer editing those directly instead.
+9. Augment the prompt based on specificity:
+   - If the user's prompt is already specific and detailed, normalize it into a clear spec without adding creative requirements.
+   - If the user's prompt is generic, add tasteful augmentation only when it materially improves output quality.
+10. Use the built-in `image_gen` tool by default.
+11. For transparent-output requests, ask built-in `image_gen` for a transparent background and preserve the generated alpha channel.
+12. Inspect outputs and validate: subject, style, composition, text accuracy, and invariants/avoid items.
+13. Iterate with a single targeted change, then re-check.
+14. For preview-only work, render the image inline; the underlying file may remain at the default `$CODEX_HOME/generated_images/...` path.
+15. For project-bound work, move or copy the selected artifact into the workspace and update any consuming code or references. Never leave a project-referenced asset only at the default `$CODEX_HOME/generated_images/...` path.
+16. For batches or multi-asset requests, persist every requested deliverable final in the workspace unless the user explicitly asked to keep outputs preview-only. Discarded variants do not need to be kept unless requested.
+17. If the user explicitly chooses or confirms the CLI fallback, then use the fallback-only docs for model, quality, size, `input_fidelity`, masks, output format, output paths, and network setup.
+18. Always report the final saved path(s) for any workspace-bound asset(s), plus the final prompt or prompt set and whether the built-in tool or fallback CLI mode was used.
+
+## Transparent image requests
+
+Ask built-in `image_gen` for a genuinely transparent background and preserve its alpha.
+
+## Prompt augmentation
+
+Reformat user prompts into a structured, production-oriented spec. Make the user's goal clearer and more actionable, but do not blindly add detail.
+
+Treat this as prompt-shaping guidance, not a closed schema. Use only the lines that help, and add a short extra labeled line when it materially improves clarity.
+
+### Specificity policy
+
+Use the user's prompt specificity to decide how much augmentation is appropriate:
+
+- If the prompt is already specific and detailed, preserve that specificity and only normalize/structure it.
+- If the prompt is generic, you may add tasteful augmentation when it will materially improve the result.
+
+Allowed augmentations:
+- composition or framing hints
+- polish level or intended-use hints
+- practical layout guidance
+- reasonable scene concreteness that supports the stated request
+
+Not allowed augmentations:
+- extra characters or objects that are not implied by the request
+- brand names, slogans, palettes, or narrative beats that are not implied
+- arbitrary side-specific placement unless the surrounding layout supports it
+
+## Use-case taxonomy (exact slugs)
+
+Classify each request into one of these buckets and keep the slug consistent across prompts and references.
+
+Generate:
+- photorealistic-natural — candid/editorial lifestyle scenes with real texture and natural lighting.
+- product-mockup — product/packaging shots, catalog imagery, merch concepts.
+- ui-mockup — app/web interface mockups and wireframes; specify the desired fidelity.
+- infographic-diagram — diagrams/infographics with structured layout and text.
+- scientific-educational — classroom explainers, scientific diagrams, and learning visuals with required labels and accuracy constraints.
+- ads-marketing — campaign concepts and ad creatives with audience, brand position, scene, and exact tagline/copy.
+- productivity-visual — slide, chart, workflow, and data-heavy business visuals.
+- logo-brand — logo/mark exploration, vector-friendly.
+- illustration-story — comics, children’s book art, narrative scenes.
+- stylized-concept — style-driven concept art, 3D/stylized renders.
+- historical-scene — period-accurate/world-knowledge scenes.
+
+Edit:
+- text-localization — translate/replace in-image text, preserve layout.
+- identity-preserve — try-on, person-in-scene; lock face/body/pose.
+- precise-object-edit — remove/replace a specific element (including interior swaps).
+- lighting-weather — time-of-day/season/atmosphere changes only.
+- background-extraction — transparent background / clean cutout. Ask built-in `image_gen` for actual transparency.
+- style-transfer — apply reference style while changing subject/scene.
+- compositing — multi-image insert/merge with matched lighting/perspective.
+- sketch-to-render — drawing/line art to photoreal render.
+
+## Shared prompt schema
+
+Use the following labeled spec as shared prompt scaffolding for both top-level modes:
+
+```text
+Use case: <taxonomy slug>
+Asset type: <where the asset will be used>
+Primary request: <user's main prompt>
+Input images: <Image 1: role; Image 2: role> (optional)
+Scene/backdrop: <environment>
+Subject: <main subject>
+Style/medium: <photo/illustration/3D/etc>
+Composition/framing: <wide/close/top-down; placement>
+Lighting/mood: <lighting + mood>
+Color palette: <palette notes>
+Materials/textures: <surface details>
+Text (verbatim): "<exact text>"
+Constraints: <must keep/must avoid>
+Avoid: <negative constraints>
+```
+
+Notes:
+- `Asset type` and `Input images` are prompt scaffolding, not dedicated CLI flags.
+- `Scene/backdrop` refers to the visual setting. It is not the same as the fallback CLI `background` parameter, which controls output transparency behavior.
+- Fallback-only execution notes such as `Quality:`, `Input fidelity:`, masks, output format, and output paths belong in the CLI path only. Do not treat them as built-in `image_gen` tool arguments.
+
+Augmentation rules:
+- Keep it short.
+- Add only the details needed to improve the prompt materially.
+- For edits, explicitly list invariants (`change only X; keep Y unchanged`).
+- If any critical detail is missing and blocks success, ask a question; otherwise proceed.
+
+## Examples
+
+### Generation example (hero image)
+```text
+Use case: product-mockup
+Asset type: landing page hero
+Primary request: a minimal hero image of a ceramic coffee mug
+Style/medium: clean product photography
+Composition/framing: wide composition with usable negative space for page copy if needed
+Lighting/mood: soft studio lighting
+Constraints: no logos, no text, no watermark
+```
+
+### Edit example (invariants)
+```text
+Use case: precise-object-edit
+Asset type: product photo background replacement
+Primary request: replace only the background with a warm sunset gradient
+Constraints: change only the background; keep the product and its edges unchanged; no text; no watermark
+```
+
+## Prompting best practices
+- Structure prompt as scene/backdrop -> subject -> details -> constraints.
+- Include intended use (ad, UI mock, infographic) to set the mode and polish level.
+- Use camera/composition language for photorealism.
+- Only use SVG/vector stand-ins when the user explicitly asked for vector output or a non-image placeholder.
+- Quote exact text and specify typography + placement.
+- For tricky words, spell them letter-by-letter and require verbatim rendering.
+- For multi-image inputs, reference images by index and describe how they should be used.
+- For edits, repeat invariants every iteration to reduce drift.
+- Iterate with single-change follow-ups.
+- If the prompt is generic, add only the extra detail that will materially help.
+- If the prompt is already detailed, normalize it instead of expanding it.
+- For CLI fallback only, see `references/cli.md` and `references/image-api.md` for model, `quality`, `input_fidelity`, masks, output format, and output-path guidance.
+- For transparent images, ask built-in `image_gen` for actual transparency and preserve its alpha.
+
+More principles shared by both modes: `references/prompting.md`.
+Copy/paste specs shared by both modes: `references/sample-prompts.md`.
+
+## Guidance by asset type
+Asset-type templates (website assets, game assets, wireframes, logo) are consolidated in `references/sample-prompts.md`.
+
+## gpt-image-2 guidance for CLI fallback
+
+The fallback CLI defaults to `gpt-image-2`.
+
+- Use `gpt-image-2` for new CLI/API workflows unless the user confirms a different model.
+- CLI `gpt-image-2` does not support `background=transparent`; ask before using `gpt-image-1.5` unless the user explicitly requested that model.
+- `gpt-image-2` always uses high fidelity for image inputs; do not set `input_fidelity` with this model.
+- `gpt-image-2` supports `quality` values `low`, `medium`, `high`, and `auto`.
+- Use `quality low` for fast drafts, thumbnails, and quick iterations. Use `medium`, `high`, or `auto` for final assets, dense text, diagrams, identity-sensitive edits, or high-resolution outputs.
+- Square images are typically fastest to generate. Use `1024x1024` for fast square drafts.
+- If the user asks for 4K-style output, use `3840x2160` for landscape or `2160x3840` for portrait.
+- `gpt-image-2` size may be `auto` or `WIDTHxHEIGHT` if all constraints hold: max edge `<= 3840px`, both edges multiples of `16px`, long-to-short ratio `<= 3:1`, total pixels between `655,360` and `8,294,400`.
+
+Popular `gpt-image-2` sizes:
+- `1024x1024` square
+- `1536x1024` landscape
+- `1024x1536` portrait
+- `2048x2048` 2K square
+- `2048x1152` 2K landscape
+- `3840x2160` 4K landscape
+- `2160x3840` 4K portrait
+- `auto`
+
+## Fallback CLI mode only
+
+### Temp and output conventions
+These conventions apply only to the CLI fallback. They do not describe built-in `image_gen` output behavior.
+- Use `tmp/imagegen/` for intermediate files (for example JSONL batches); delete them when done.
+- Write final artifacts under `output/imagegen/`.
+- Use `--out` or `--out-dir` to control output paths; keep filenames stable and descriptive.
+
+### Dependencies
+Prefer `uv` for dependency management in this repo.
+
+Required Python package:
+```bash
+uv pip install openai
+```
+
+Optional for image inspection and downscaling:
+```bash
+uv pip install pillow
+```
+
+Portability note:
+- If you are using the installed skill outside this repo, install dependencies into that environment with its package manager.
+- In uv-managed environments, `uv pip install ...` remains the preferred path.
+
+### Environment
+- `OPENAI_API_KEY` must be set for live API calls.
+- Do not ask the user for `OPENAI_API_KEY` when using the built-in `image_gen` tool.
+- Never ask the user to paste the full key in chat. Ask them to set it locally and confirm when ready.
+
+If the key is missing, give the user these steps:
+1. Create an API key in the OpenAI platform UI: https://platform.openai.com/api-keys
+2. Set `OPENAI_API_KEY` as an environment variable in their system.
+3. Offer to guide them through setting the environment variable for their OS/shell if needed.
+
+If installation is not possible in this environment, tell the user which dependency is missing and how to install it into their active environment.
+
+### Script-mode notes
+- CLI commands + examples: `references/cli.md`
+- API parameter quick reference: `references/image-api.md`
+- Network approvals / sandbox settings for CLI mode: `references/codex-network.md`
+
+## Reference map
+- `references/prompting.md`: shared prompting principles for both modes.
+- `references/sample-prompts.md`: shared copy/paste prompt recipes for both modes.
+- `references/cli.md`: fallback-only CLI usage via `scripts/image_gen.py`.
+- `references/image-api.md`: fallback-only API/CLI parameter reference.
+- `references/codex-network.md`: fallback-only network/sandbox troubleshooting for CLI mode.
+- `scripts/image_gen.py`: fallback-only CLI implementation. Use only when the user explicitly chooses or confirms CLI mode.
+
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+exec
+/bin/zsh -lc "cat '/Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/prompt-template.md'" in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+# 生图提示词模板
+
+每张图单独生成。根据正文内容替换变量，不要把多张图拼在一起。
+
+```text
+Generate one standalone 16:9 horizontal Chinese article illustration.
+
+Visual DNA:
+Pure white background. Minimalist black hand-drawn line art. Slightly wobbly pen lines. Lots of empty white space. Sparse red/orange/blue handwritten Chinese annotations. Clean absurd product-sketch feeling. No gradients, no shadows, no paper texture, no complex background, no commercial vector style, no PPT infographic look, no cute mascot poster, no children's illustration, no realistic UI.
+
+Recurring IP character required:
+小M (Xiao-M), a small hand-drawn MUSHROOM creature styled like the classic 🍄 emoji (NOT solid black): a rounded RED dome cap with 3-5 white polka dots and a black outline, a CREAM/off-white stem body with black hand-drawn outline, small BLACK dot eyes on the pale stem, tiny thin legs, blank deadpan serious expression, slightly uneven hand-drawn shape. Thin ORANGE mycelium threads may extend from its feet or hands to connect / carry / weave things together when the topic is about connection or flow. The red cap with white dots is flat hand-drawn (not 3D, not realistic). 小M must perform the core conceptual action, not decorate the scene. Keep it serious and slightly bizarre, not overly cute. Keep the signature: red dotted cap + pale stem.
+
+Theme:
+{正文配图主题}
+
+Structure type:
+{结构类型：Workflow / 系统局部 / 前后对比 / 角色状态 / 概念隐喻 / 方法分层 / 地图路线 / 小漫画分镜}
+
+Core idea:
+{这张图要表达的核心意思}
+
+Composition:
+{具体画面：小M在哪里、正在做什么、主要物件是什么、信息如何流动}
+
+Suggested elements:
+{元素1} / {元素2} / {元素3} / {元素4}
+
+Chinese handwritten labels:
+{标注词1} / {标注词2} / {标注词3} / {标注词4} / {可选标注词5}
+
+Color use:
+Black for main line art and 小M. Orange for main flow/path/arrows. Red only for key warnings/problems/results. Blue only for secondary notes or feedback/system state.
+
+Constraints:
+One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. Preserve at least 35% blank white space. Use at most 5-8 short handwritten Chinese labels. Do not write a title in the top-left corner. Do not write the structure type on the image. Do not make it a formal diagram, course slide, or dense explainer. Do not copy prior examples or reuse known case compositions unless explicitly requested; invent a fresh visual metaphor for this specific article. It should be clear but not instructional, interesting but not childish, strange but clean.
+```
+
+## 图像编辑提示
+
+去掉左上角标题：
+
+```text
+Edit the provided image. Remove only the handwritten title "{要删除的文字}" and its underline from the top-left corner. Fill that area with the same clean white background, matching the surrounding blank paper. Preserve everything else exactly: characters, labels, paths, line style, composition, aspect ratio, and image quality. Do not add any new text or objects.
+```
+
+增强怪诞感：
+
+```text
+Regenerate this illustration with the same core meaning and simple layout, but make 小M more central to the conceptual action. 小M should be doing the strange work that explains the idea, not standing beside the diagram. Keep it clean, sparse, hand-drawn, and not cute.
+```
+
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'git status --short && ls -ld generated_images/moss-image-20261108 src/assets/images/moss-image-openmoss-layout-generation-review-fig-* 2>/dev/null' in /Users/jason/Dev/mycelium/blog
+ exited 1 in 0ms:
+ M pipeline/m2/output/drafts-map.json
+ M source/20261105-craft-anything/semantic-index-info.json
+ M source/20261105-craft-anything/semantic-search-final.json
+?? generated_images/
+?? pipeline/m2/output/agentear-v0-28-1-settings-fix-local-voice-input.json
+?? pipeline/m2/output/cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor.json
+?? pipeline/m2/output/deepseek-v41-flash-1017-uncensored-fp8-teardown.json
+?? pipeline/m2/output/laya-aayushch-local-first-ai-notification-command-center.json
+?? pipeline/m2/output/meta-sam3-promptable-concept-segmentation-license-mac-guide.json
+?? pipeline/m2/output/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit.json
+?? pipeline/m2/output/superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx.json
+?? pipeline/m2/output/xllama-xbox-series-s-local-llm-inference-dev-mode.json
+?? src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg
+?? src/content/blog/moss-image-openmoss-layout-generation-review.md
+zsh:1: no matches found: src/assets/images/moss-image-openmoss-layout-generation-review-fig-*
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "sed -n '135,320p' src/content/blog/moss-image-openmoss-layout-generation-review.md" in /Users/jason/Dev/mycelium/blog
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/qa-checklist.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+
+等这一轮能够复现，再逐步增加文本长度、布局密度和风格约束。修改时尽量一次只动一类变量，例如仅换 Base/SFT、仅变步数或仅调整布局，避免把提示词、模型、精度和社区插件同时更换。
+
+MOSS-Image 的吸引力在于把内容组织引入开源图像生成流程。它可以成为设计探索和视觉工作流的一部分；走向可靠交付，还需要把结构化输入、实际生成和结果校对接成闭环。
+
+## 常见问题
+
+### MOSS-Image就是一个5B模型文件吗？
+
+不是。5B描述图像DiT骨干，实际管线还使用文本编码器和VAE。下载体积、系统内存和显存还受精度、卸载、尺寸与运行环境影响。
+
+### Prompt Enhancer skill会自己生成图片吗？
+
+其编译脚本不会调用生成服务。它把内容或布局草稿整理成模型提示词，之后仍需使用MOSS-Image管线或相应工作流出图。
+
+### 本次已经证明中文海报不会出错了吗？
+
+没有。19项辅助检查和坐标编译示例不能替代真实出图、OCR与人工校对。论文覆盖率也不是逐字顺序、标点和整页排版的完全正确率。
+
+## 来源与进一步阅读
+
+官方仓库：https://github.com/OpenMOSS/MOSS-Image
+
+Base权重：https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base
+
+SFT权重：https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT
+
+中文指南：https://github.com/OpenMOSS/MOSS-Image/blob/main/USERGUIDE_ZH.md
+
+ComfyUI与格式转换模型：https://huggingface.co/Comfy-Org/MOSS-Image
+
+Mac实验路线：https://github.com/OpenMOSS/MOSS-Image/blob/main/docs/macos.md
+
+技术报告及指标定义：https://arxiv.org/html/2610.23374v1
+
+相关阅读，AI基础设施中的部署与验收：https://blog.mushroom.cv/blog/ai-infrastructure-engineer-learning-path-review/
+
+---
+
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+
+<!--EN-->
+
+MOSS-Image is OpenMOSS's open image-generation family, emphasizing bilingual text rendering and layout-rich images. It accepts natural-language prompts and JSON specifications for text, objects and their positions, making it interesting for posters, infographics and other content-heavy visual tasks.
+
+The official repository is `OpenMOSS/MOSS-Image`, with Base and SFT checkpoints. Model cards identify Apache-2.0, and the standalone pipeline code is Apache-2.0; check separate components and community derivatives on their own terms. This review pins repository commit `6be4453024c5acae9dcd0a191e26ee524e743310`, reads model configurations and performs bounded helper checks without downloading full weights.
+
+The cover is cropped from the official README's Shanghai panorama example. It illustrates a published project result, not an image generated by this review.
+
+## Base, SFT and community derivatives
+
+| Entry | Role | What to check |
+|---|---|---|
+| MOSS-Image-Base | Base text-to-image model | Sampling, prompts and adaptation |
+| MOSS-Image-SFT | Curated-data supervised fine-tuning | Same architecture/pipeline, task-specific comparison |
+| Comfy-Org/MOSS-Image | ComfyUI components and workflows | Loaders, file placement and native support |
+| Community adapters, distillations, quantizations or editing branches | Independent changes/extensions | Provenance, base model, settings and compatibility |
+
+SFT does not mean a few-step distillation. Both official checkpoints support prose, tag sequences and Layout. The project's comparison example shows clearer grouping after SFT, but examples do not replace tests on a particular task.
+
+For an initial comparison, keep prompt, dimensions, seed and sampling settings fixed. Avoid adding several community speed, precision and banding adapters at once; it becomes difficult to attribute a change.
+
+## What sits around the five-billion-parameter backbone?
+
+The 5B figure describes the image DiT, not the whole pipeline's parameter count or memory footprint. The inspected SFT configuration has 42 transformer layers, a Qwen3.5-family text encoder and `AutoencoderKLFlux2`. Project documentation identifies the text encoder as Qwen3.5-9B.
+
+The simplified chain is text encoding → iterative latent generation by the DiT → VAE decoding. Prompt planning can occur beforehand. Weights, activations and intermediate results at each stage affect resource requirements.
+
+Recommended defaults include flow-matching Euler, 50 steps, CFG 3, shift 5 and negative-branch skipping at layer 22. Positive dimensions must be multiples of 16. These settings are a starting point, not a cross-platform image-equivalence guarantee. The documented prompt cap is 4096 tokens; a larger context length in the underlying text model's config does not establish a larger pipeline input limit.
+
+![LittleM coordinates text encoding, image DiT sampling and VAE decoding as separate resource stages](../../assets/images/moss-image-openmoss-layout-generation-review-fig-01.png)
+
+## What does Layout add?
+
+Layout makes literal text, element descriptions and bounding boxes part of the input. It can reduce ambiguity in instructions such as placing a title above an illustration. It remains generative conditioning rather than a deterministic typesetting constraint. Output is a raster image, not automatically an editable SVG or layered PSD.
+
+The Prompt Enhancer skill can help an agent expand content or plan positions. Its `compile_prompt.py` validates and converts a draft; it does not call an image service. A successfully compiled prompt is not a successfully generated image.
+
+### Why are the coordinate conventions easy to confuse?
+
+| Format | Origin | Order | Dimensions |
+|---|---|---|---|
+| Editable draft | Top-left | `xyxy` | Contains width/height |
+| Model-facing prompt | Canvas center | `yxyx` | Generation dimensions are supplied separately |
+
+These are absolute pixels. On a 1024×1024 canvas, draft title box `[128,96,896,224]` becomes `[-416,-384,-288,384]` after coordinate reordering and centering.
+
+The following two-element draft was compiled during this review:
+
+```json
+{
+  "width": 1024,
+  "height": 1024,
+  "bbox_coord_space": "abs",
+  "bbox_format": "xyxy",
+  "summary": {
+    "canvas": "single",
+    "caption": "A clean poster with a short Chinese title and a blue mountain below."
+  },
+  "items": [
+    {"label":"text","caption":"Large blue title.","text":"看见山川","bbox":[128,96,896,224]},
+    {"label":"object","caption":"A blue mountain.","bbox":[128,320,896,928]}
+  ]
+}
+```
+
+From the repository root:
+
+```bash
+python3 skills/moss-image-prompt-enhancer/scripts/compile_prompt.py draft.json --output prompt.txt
+```
+
+The second box becomes `[-192,-384,416,384]`. The output declares `abs_centralized` and `yxyx`, omitting width/height. Use 1024×1024 when generating. Changing canvas dimensions alone does not rescale the draft's boxes.
+
+![LittleM converts top-left xyxy into centered yxyx and keeps the intended generation size](../../assets/images/moss-image-openmoss-layout-generation-review-fig-02.png)
+
+## How should the reported text score be read?
+
+The report introduces LLTB for long-text rendering and RLA for layout-rich generation. Its approximately 96.3% LLTB coverage is author-reported, not reproduced here. Coverage uses OCR word/character multiset recall; it does not check order or directly penalize extra OCR units, and the matching whitelist excludes punctuation. It is not exact-string accuracy.
+
+RLA also distinguishes complete prompt-enhancement systems from generators sharing enhanced prompts. Rankings from those different setups cannot be combined into one universal superiority claim.
+
+For a real deliverable, check literal text, element placement and human-readable hierarchy separately. Dates, prices and formulas deserve explicit review even when the image looks polished.
+
+## ComfyUI or Python?
+
+ComfyUI users can choose a version containing native MOSS-Image support, install its matching dependencies, and use Comfy-Org's native components/workflow. Diffusion model, text encoder and VAE go into their respective directories; the CLIP Loader type is `moss_image`.
+
+The repository's local-HF-directory plugin is a separate path for Diffusers directories and existing plugin workflows. When switching paths, import the matching workflow rather than replacing one loader. The documentation specifically distinguishes timestep multipliers and sampling nodes.
+
+Python loading can execute a custom pipeline supplied in the Hugging Face model bundle, while the Git repository supplies runtime/UI components. Record both the Git commit and model revision. A repository pin alone does not fix all weights and executing code.
+
+The inspected SFT model revision was `f972bd4b4b9e3852133cc5da954d87bc32cd8fb9`. This identifies the checked configuration, not a completed full-weight inference run.
+
+## Memory and Apple silicon limits
+
+GPU-resident, component, sequential and low-memory modes make different tradeoffs. Moving weights through CPU RAM or disk can lower GPU usage while adding transfers and loading time.
+
+For one 1024×1024, 50-step image, the project records approximately 3.65 GiB allocated and 3.85 GiB reserved GPU memory, plus 14 GiB task RAM including file cache on its low-memory path. These are particular recorded peaks, not universal minimum requirements or measurements from this review.
+
+The experimental MPS route separately documents SFT validation on an M1 Max with 32 GB unified memory. It stages an approximately 17 GB text encoder and 10 GB DiT and handles an MPS-unsupported FP64 timestep operation on CPU. A simple CUDA-to-MPS device-string edit does not reproduce that adaptation.
+
+The guide suggests roughly 40 GB disk space for a model bundle, environment and download files, with recorded generation calls taking minutes. Other chips, smaller memory configurations, Base and different dependencies need separate validation. A community trainer's 6 GB adapter-training example is not an inference-memory requirement for the complete official pipeline.
+
+## What was tested locally?
+
+Mycelium Protocol ran eight upstream layout-compiler tests and eleven MPS-runtime helper regression checks: 19 passed. They cover draft validation/conversion, staged loading, prompt caching, CPU timestep arithmetic, explicit failure on upstream source changes and related UI construction.
+
+The MPS tests extensively use fake objects and mocked loaders; they do not establish real-weight image generation. The two-element draft above was also compiled and its output boxes/fields checked. No full model weights were downloaded, and no image-quality, OCR, generation-speed or peak-memory benchmark was run.
+
+The helper environment used Python 3.12.15, PyTorch 2.15.0, Diffusers 0.41.0, Transformers 5.20.1, Accelerate 1.15.0 and Gradio 6.30.0. It is not identical to the documented real-weight validation environment. Keeping those distinctions prevents helper success from becoming a claim of full-stack equivalence.
+
+![LittleM separates verified compiler/runtime helpers from image, OCR and memory checks still pending](../../assets/images/moss-image-openmoss-layout-generation-review-fig-03.png)
+
+## A useful first workflow
+
+Start with one short title, a few elements and a fixed canvas. Save the editable draft, compiled prompt, checkpoint revision, sampling settings and seed. Retain the original generated image, then check text and placement.
+
+Increase text length, layout density and style constraints gradually. Change one category of variable at a time, such as checkpoint, step count or layout, before introducing more community components.
+
+MOSS-Image's useful contribution is bringing content organization into an open image-generation workflow. Reliable delivery still requires connecting structured input, actual generation and output review.
+
+## FAQ
+
+### Is MOSS-Image a single 5B file?
+
+No. The figure describes the image backbone. Text encoding and VAE decoding also require resources, and precision/offloading/dimensions affect total needs.
+
+### Does the Prompt Enhancer skill generate images?
+
+Its compiler does not call an image API. It prepares prompt/layout input for MOSS-Image or a compatible workflow to generate later.
+
+### Were error-free Chinese posters demonstrated here?
+
+No. Nineteen helper checks and coordinate compilation do not replace real generation, OCR and manual review. Reported coverage is not full-page exactness.
+
+## Sources and further reading
+
+Official repository: https://github.com/OpenMOSS/MOSS-Image
+
+Base weights: https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base
+
+SFT weights: https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT
+
+User guide: https://github.com/OpenMOSS/MOSS-Image/blob/main/USERGUIDE.md
+
+
+ succeeded in 0ms:
+# QA Checklist
+
+## 必过项
+
+- 是 16:9 横版。
+- 背景是干净白底。
+- 有小M。
+- 小M承担核心动作，不只是装饰。
+- 没有复刻旧案例构图，而是为当前文章生成了新隐喻。
+- 画面怪诞、有创意、有意思。
+- 简洁清爽，主体不超过画面约 60%。
+- 一张图只讲一个核心结构。
+- 中文标注少、短、能读。
+- 橙色只用于主路径或箭头。
+- 红色只用于重点、问题、提醒或结果。
+- 蓝色只用于补充说明、反馈或系统状态。
+
+## 失败信号
+
+出现以下情况，重生成或局部编辑：
+
+- 左上角有“常见坑 / Workflow / 系统架构图 / 路线图”等标题。
+- 小M像吉祥物、表情包或可爱卡通。
+- 画面像 PPT、课程课件、正式流程图。
+- 元素太多、箭头太多、节点太多。
+- 文字变成大段解释。
+- 背景有纸纹、阴影、渐变、米色、噪点。
+- 真实 UI 截图或科技感界面。
+- 中文错字严重或标注不可读。
+- 画面太死板，没有荒诞隐喻。
+- 和 `assets/examples/` 里的旧案例构图过于相似。
+
+## 迭代方法
+
+- 太普通：让小M成为动作主体，加入一个奇怪但成立的隐喻。
+- 太复杂：删节点，只保留一个动作和 3-5 个短标注。
+- 太可爱：强调 deadpan、blank serious expression、not cute、not mascot。
+- 太 PPT：去掉标题、边框、整齐网格和过多箭头，改成手绘场景。
+- 太像旧案例：保留核心意思，换掉主物件和小M动作。
+- 文字错：优先局部编辑；错得多就重生成并减少标注数量。
+
+## 交付判断
+
+高质量图应该让读者先觉得“有点怪”，然后 1 秒内看懂结构。
+
+如果第一眼像教程页，而不是白纸上的怪诞产品草图，就不合格。
+
+hook: PostToolUse
+hook: PostToolUse
+exec
+/bin/zsh -lc "sed -n '1,90p' /Users/jason/.codex/skills/.system/imagegen/SKILL.md" in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+---
+name: "imagegen"
+description: "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+---
+
+# Image Generation Skill
+
+Generates or edits images for the current project (for example website assets, game assets, UI mockups, product mockups, wireframes, logo design, photorealistic images, or infographics).
+
+## Top-level modes and rules
+
+This skill has exactly two top-level modes:
+
+- **Default built-in tool mode (preferred):** built-in `image_gen` tool for image generation, editing, and transparent-image requests. Does not require `OPENAI_API_KEY`.
+- **Fallback CLI mode:** `scripts/image_gen.py` CLI. Use when the user explicitly asks for or confirms the CLI/API/model path. Requires `OPENAI_API_KEY`.
+
+Within CLI fallback, the CLI exposes three subcommands:
+
+- `generate`
+- `edit`
+- `generate-batch`
+
+Rules:
+- Use the built-in `image_gen` tool by default for normal image generation and editing requests.
+- Do not switch to CLI fallback for ordinary quality, size, or file-path control.
+- For transparent images, ask built-in `image_gen` for a transparent background and preserve the generated alpha.
+- Never silently switch from built-in `image_gen` or CLI `gpt-image-2` to CLI `gpt-image-1.5`; ask the user first unless they explicitly requested `gpt-image-1.5`.
+- The word `batch` by itself does not mean CLI fallback. If the user asks for many assets or says to batch-generate assets without explicitly asking for CLI/API/model controls, stay on the built-in path and issue one built-in call per requested asset or variant.
+- If the built-in tool fails or is unavailable, tell the user the CLI fallback exists and that it requires `OPENAI_API_KEY`. Proceed only if the user explicitly asks for that fallback.
+- If the user explicitly asks for CLI mode, use the bundled `scripts/image_gen.py` workflow. Do not create one-off SDK runners.
+- Never modify `scripts/image_gen.py`. If something is missing, ask the user before doing anything else.
+
+Built-in save-path policy:
+- In built-in tool mode, Codex saves generated images under `$CODEX_HOME/*` by default.
+- Do not describe or rely on OS temp as the default built-in destination.
+- Do not describe or rely on a destination-path argument (if any) on the built-in `image_gen` tool. If a specific location is needed, generate first and then move or copy the selected output from `$CODEX_HOME/generated_images/...`.
+- Save-path precedence in built-in mode:
+  1. If the user names a destination, move or copy the selected output there.
+  2. If the image is meant for the current project, move or copy the final selected image into the workspace before finishing.
+  3. If the image is only for preview or brainstorming, render it inline; the underlying file can remain at the default `$CODEX_HOME/*` path.
+- Never leave a project-referenced asset only at the default `$CODEX_HOME/*` path.
+- Do not overwrite an existing asset unless the user explicitly asked for replacement; otherwise create a sibling versioned filename such as `hero-v2.png` or `item-icon-edited.png`.
+
+Shared prompt guidance for both modes lives in `references/prompting.md` and `references/sample-prompts.md`.
+
+Fallback-only docs/resources for CLI mode:
+- `references/cli.md`
+- `references/image-api.md`
+- `references/codex-network.md`
+- `scripts/image_gen.py`
+
+## When to use
+- Generate a new image (concept art, product shot, cover, website hero)
+- Generate a new image using one or more reference images for style, composition, or mood
+- Edit an existing image (inpainting, lighting or weather transformations, background replacement, object removal, compositing, transparent background)
+- Produce many assets or variants for one task
+
+## When not to use
+- Extending or matching an existing SVG/vector icon set, logo system, or illustration library inside the repo
+- Creating simple shapes, diagrams, wireframes, or icons that are better produced directly in SVG, HTML/CSS, or canvas
+- Making a small project-local asset edit when the source file already exists in an editable native format
+- Any task where the user clearly wants deterministic code-native output instead of a generated bitmap
+
+## Decision tree
+
+Think about two separate questions:
+
+1. **Intent:** is this a new image or an edit of an existing image?
+2. **Execution strategy:** is this one asset or many assets/variants?
+
+Intent:
+- If the user wants to modify an existing image while preserving parts of it, treat the request as **edit**.
+- If the user provides images only as references for style, composition, mood, or subject guidance, treat the request as **generate**.
+- If the user provides no images, treat the request as **generate**.
+
+Built-in edit semantics:
+- Built-in edit mode is for images already visible in the conversation context, such as attached images or images generated earlier in the thread.
+- If the user wants to edit a local image file with the built-in tool, first load it with built-in `view_image` tool so the image is visible in the conversation context, then proceed with the built-in edit flow.
+- Do not promise arbitrary filesystem-path editing through the built-in tool.
+- If a local file still needs direct file-path control, masks, or other explicit CLI-only parameters, use the explicit CLI fallback only when the user asks for it.
+- For edits, preserve invariants aggressively and save non-destructively by default.
+
+Execution strategy:
+- In the built-in default path, produce many assets or variants by issuing one `image_gen` call per requested asset or variant.
+- In the CLI fallback path, use the CLI `generate-batch` subcommand only when the user explicitly chose CLI mode and needs many prompts/assets.
+- For many distinct assets, do not use `n` as a substitute for separate prompts. `n` is for variants of one prompt; distinct assets need distinct built-in calls or distinct CLI `generate-batch` jobs.
+
+Assume the user wants a new image unless they clearly ask to change an existing one.
+
+## Workflow
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+exec
+/bin/zsh -lc "rg --files -g 'AGENTS.md' -g '*moss-image*' generated_images src/assets/images /Users/jason/Dev/mycelium | head -60" in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg
+/Users/jason/Dev/mycelium/CometENS/AGENTS.md
+/Users/jason/Dev/mycelium/blog/AGENTS.md
+/Users/jason/Dev/mycelium/blog/src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg
+/Users/jason/Dev/mycelium/blog/src/content/blog/moss-image-openmoss-layout-generation-review.md
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+正文中的三个边界已核对：5B 只指 DiT 骨干；编译器负责坐标转换，生成尺寸需另行保持一致；19 项通过的是辅助逻辑检查，未验证真实权重出图。我会将它们分别画成组件调度、坐标翻译和验证分界三幅小M手绘图，并使用内置 imagegen 生图。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "cat AGENTS.md && python3 - <<'PY'
+from pathlib import Path
+import hashlib,json
+paths=['src/content/blog/moss-image-openmoss-layout-generation-review.md','src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg']
+state={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+Path('/tmp/moss-image-illustration-baseline.json').write_text(json.dumps(state))
+print('Protected file hashes recorded:', state)
+from PIL import Image
+print('Pillow available')
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 38ms:
+# Project Memory
+
+## AI 核心使命（最高优先级）
+
+这个仓库的核心用途是维护并发布 **Mycelium Research Blog**：
+
+- Astro 静态博客，站点用于 `blog.mushroom.cv`
+- 内容以 Markdown/MDX 为主，支持中英双语文章
+- 发布链路覆盖 Blog、微信公众号草稿，并可扩展到小红书
+- 所有发布、优化、分发任务都应优先服从本仓库的 skills 工作流
+
+**最高优先级任务是帮助用户完成 `blog-publisher` skill。**
+
+这意味着：
+- 当用户说“发布”“发布文章”“发布blog”“发布公众号”时，必须立即激活 `.agents/skills/blog-publisher/SKILL.md`
+- 必须先读取 skill 文档，再执行任何发布操作
+- 必须按照 skill 定义的标准流程执行，不能凭记忆操作
+- 必须从 skill 文档里的规则和错误案例中学习，避免重复犯错
+
+---
+
+## 仓库核心技能与用途
+
+### 1. Blog 发布：`blog-publisher`
+
+**位置：** `.agents/skills/blog-publisher/SKILL.md`
+
+**用途：**
+- 发布新博客文章到 Astro 博客
+- 创建或整理 `src/content/blog/` 下的 Markdown
+- 处理封面图与文章图片
+- 执行 M1 Blog 构建部署
+- 执行 M2 微信公众号草稿生成
+- 验证文章 URL、列表排序和发布结果
+
+**触发词：**
+- `发布`
+- `发布文章`
+- `发布blog`
+- `发布公众号`
+- `发布：文件路径.md`
+
+**标准流程：**
+1. 读取 `.agents/skills/blog-publisher/SKILL.md`
+2. 读取相关错误案例和关键规则
+3. 处理图片到 `src/assets/images/`
+4. 创建或更新 `src/content/blog/SLUG.md`
+5. 发布前调用 `seo-geo` 做 SEO/GEO 检查
+6. 运行 M1 Blog 发布：`pipeline/m1/publisher.py`
+7. 运行 M2 微信草稿：`pipeline/m2/index.js`
+8. 验证文章 URL 可访问，并确认新文章在列表顶部
+9. 返回 Blog 链接和微信草稿状态
+
+### 2. SEO/GEO 优化：`seo-geo`
+
+**位置：** `.agents/skills/seo-geo/SKILL.md`
+
+**用途：**
+- 优化文章的搜索引擎收录质量
+- 提升文章被 AI 引擎引用的概率
+- 检查 frontmatter、描述、标签、结构、外链、FAQ、BLUF 和品牌提及
+- 作为 `blog-publisher` 发布前的必经检查
+
+**触发词：**
+- `seo优化`
+- `geo优化`
+- `优化文章`
+- `让AI引用我`
+
+### 3. 小红书发布：`xhs-publisher`
+
+**位置：** `.agents/skills/xhs-publisher/SKILL.md`
+
+**用途：**
+- 将内容发布到小红书
+- 自动压缩图片到小红书适合的 3:4 比例和约 200KB 大小
+- 通过 MCP 服务完成发布
+- 如果内容对应博客文章，发布后同步更新文章 `updatedDate`
+
+**触发词：**
+- `发布到小红书`
+- `小红书：主题`
+
+### 4. 小红书 MCP 服务：`xhs-mcp-cdp` / `xhs-mcp-docker`
+
+**位置：**
+- `.agents/skills/xhs-mcp-cdp/SKILL.md`
+- `.agents/skills/xhs-mcp-docker/SKILL.md`
+
+**用途：**
+- `xhs-mcp-cdp`：复用已登录 Chrome/CDP 会话，适合 Mac Mini 24h 服务或本地临时模式
+- `xhs-mcp-docker`：容器化 Chromium + 扫码登录，适合新机器部署或容器环境
+
+**触发词：**
+- `xhs cdp 模式`
+- `xhs 本地模式`
+- `调试 xhs cdp`
+- `xhs docker 模式`
+- `xhs 容器模式`
+- `调试 xhs docker`
+
+### 5. 网络代理切换：`network-switch`
+
+**位置：** `.agents/skills/network-switch/SKILL.md`
+
+**用途：**
+- 在需要访问 GitHub、Google、外部 API 或下载依赖时临时开启代理
+- 完成外网任务后关闭代理，避免影响本地服务
+
+**常用命令：**
+```bash
+source ~/.zshrc_proxy
+proxy_on
+proxy_status
+proxy_off
+```
+
+---
+
+## 文件命名规范
+
+- **禁止使用中文文件名**
+- 所有文章文件必须使用英文 slug
+- slug 使用小写英文和短横线连接
+- 示例：`vitalik-ai-survival-guide-cn.md` 正确
+- 示例：`vitalik-的-ai-文章.md` 错误
+
+---
+
+## 文章 Frontmatter 规范
+
+所有文章 frontmatter 必须包含：
+
+```yaml
+---
+title: "中文标题"
+titleEn: "English Title"
+description: "中文描述"
+descriptionEn: "English description"
+pubDate: "2026-04-04"
+updatedDate: "2026-04-04"
+category: "Tech-News"
+tags: ["tag1", "tag2", "tag3"]
+heroImage: "../../assets/images/example.jpg"
+---
+```
+
+关键规则：
+- `category` 必填
+- 日期格式统一使用 ISO 格式：`YYYY-MM-DD`
+- 默认分类为 `Tech-News`
+- 可选分类以 skill 文档和站点 schema 为准
+- 新文章默认按 `pubDate` 日期排序置顶
+- 每次实质更新或跨平台发布后，应更新 `updatedDate`
+
+---
+
+## 发布文章强制规则
+
+每次发布文章时必须检查：
+
+1. 文件名是英文 slug，不能含中文
+2. frontmatter 包含 `category`
+3. `pubDate` 和 `updatedDate` 使用 ISO 日期
+4. `description` 和 `descriptionEn` 存在
+5. `tags` 至少 3 个
+6. 有 `heroImage`
+7. 中文内容末尾和英文内容末尾包含 `blog-publisher` 要求的版权声明
+8. 发布前执行 `seo-geo` 检查
+9. 发布后验证文章 URL 可访问
+10. 发布后验证文章在博客列表排序正确
+
+---
+
+## Skill 发现机制
+
+如果用户触发了某个 workflow，但 agent 没有立即激活对应 skill，应立刻检查当前仓库的 skills：
+
+```bash
+ls /Users/jason/Dev/mycelium/blog/.agents/skills/
+```
+
+发布文章时必须读取：
+
+```bash
+cat /Users/jason/Dev/mycelium/blog/.agents/skills/blog-publisher/SKILL.md
+```
+
+SEO/GEO 优化时必须读取：
+
+```bash
+cat /Users/jason/Dev/mycelium/blog/.agents/skills/seo-geo/SKILL.md
+```
+
+**不要凭记忆操作。不要跳过读取 skill 文档。**
+
+---
+
+## 协作原则
+
+- 用户要求“发布”时，不要只给建议，必须按 `blog-publisher` 流程推进
+- 用户要求“优化文章”时，优先使用 `seo-geo`
+- 用户要求“小红书”时，先判断是发布内容还是调试 MCP，再选择 `xhs-publisher`、`xhs-mcp-cdp` 或 `xhs-mcp-docker`
+- 对仓库内已有改动保持谨慎，不要回滚用户未要求回滚的文件
+- 修改文章、脚本或配置后，尽量运行对应构建、发布或检查命令验证结果
+
+## 已确认的选题到发布工作流（2026-10-11）
+
+- 用户说 “forge” 获取选题时，指本仓库的 `forage` skill；先读取 `.agents/skills/forage/SKILL.md`，按指定方向筛选并去重，优先拉 Hugging Face 模型卡、官方仓库和论文等一手资料。
+- 用户已确认的日常偏好是“写了就默认发”。请求选题并代写文章时，接着执行 `blog-publisher` 完成双语博客和微信公众号草稿；用户明确要求仅草稿时遵循该要求。
+- 每篇文章给出独立分析，区分官方宣称与实际测得结果；小模型选题尽量做本地 smoke test，保存可复核的测试证据，不能把未验证能力写成实测。
+- 按发布 skill 完成封面、科技类小M正文配图、SEO/GEO、M1 Blog、M2 微信草稿，并验证公开文章 URL、图片和新文章列表排序；批量发布后同步语义索引及相关发布记录。
+- 每批结果记录到 forage 的反馈和发布账本，持久化项目记忆；外部记忆库写入失败时明确记录失败，不声称入库成功。Codex 和微信机器人在此工作区执行时均遵循这些规则。
+- 2026-10-23：用户确认会适度降低发布频率，但不接受固定压到每天 1–2 篇；按选题质量和精力灵活调整，不设硬性日更上限，也不把降频视为流量下滑的既定解法。
+
+## 收到素材后的默认三件套与补偿（2026-10-11 用户再次确认）
+
+- 所有收到的内容消息默认执行三件套：原始素材进入 KB；写双语文章并创建公众号草稿；发布 Blog。公众号按既有流程创建草稿，不擅自群发。控制命令、日常状态问答及用户明确要求不发布时，遵循具体请求。
+- 写作前必须按 `blog-publisher` Step 0 查重：一手源 URL + 精确实体名，对照 Blog、公众号草稿箱、本地 M2 记录、MemPalace 与仓库账本。KB 收到素材不等于文章已经发布。
+- 每篇文章必须按内容生成或采用匹配的合格 banner，Blog 和公众号使用同一篇最终稿及对应封面。补发旧稿时复用已经匹配且合格的 banner，不套无关封面。
+- 历史失败要主动补做：先确认哪些步骤已完成，只补缺失的 KB、Blog、公众号或索引环节，复用最终 slug 与既有 media ID，避免重写文章或重复创建草稿。失败原因和可重试素材必须持久化。
+- Heinu1 默认自动选择模型：日常 Luna Medium；复杂研究和完整发布流程在启动前使用 Sol Medium，结束后日常仍用 Luna。Codex 与 Claude 的后端切换仍为显式操作。
+- 公众号 API 的 `40164` 是出口 IP 白名单问题，不能通过重复发布或重新登录 Codex 修复。必须保留真实错误、先存 KB、暂停自动重试；在公众号后台修复白名单后才恢复待补任务。检查历史消息、补失败任务是管理指令，不能把该指令本身写成新文章。
+- 2026-10-13 用户再次要求：公众号失败不能阻止 Blog。完成可用的本地 Blog、M2 持久记录和 KB 账本查重后，远程公众号账本若因 40164 无法读取，明确记录该缺口，先完成 KB 和 Blog，再实际尝试一次缺失的公众号草稿。已存在的文章和草稿复用；分别汇报状态，不能隐藏已上线链接、把部分完成说成全部失败，或把请求检查历史的指令写成文章。微信回执首句必须回答“是不是发布了博客？”，成功给完整链接，失败明确说明尚未核验成功。
+- 复用前先核对是否已经发布：线上 Blog、公众号已发布记录、远程草稿箱和本地凭证分别核对。草稿创建记录不能证明当前草稿仍存在；已发布接口返回 48001 且旧草稿不在草稿箱时，保留旧凭证并标记“当前状态未核验”，不能重新创建可能已经发布的文章。汇总必须区分新发布与复用旧结果。
+- 微信 draft/add 连接中断可能发生在服务器已创建草稿之后。必须先读服务器草稿箱，匹配完整正文、标题、作者、摘要、原文链接、封面和评论设置；唯一一致才恢复同一个 media_id。字段缺失、未能核验或有多个一致结果时保留不确定，不盲目再次创建。2026-10-13 Mellum 实测发生此情况，服务器仅有一份草稿，已找回原 ID。
+Protected file hashes recorded: {'src/content/blog/moss-image-openmoss-layout-generation-review.md': 'a99962fec1eff1f5cb12b034a153841b804979e7fbb0923cfdea9ce499ef2759', 'src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg': '58070a8c56231ab5a0ec78b858d1d8398f492a9cad46c09e38b9cd5b309a11c6'}
+Pillow available
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'mkdir -p generated_images/moss-image-20261108 && cp /Users/jason/.codex/generated_images/01a1bc0b-3139-7991-9ae2-21b75438bf73/exec-9602bcd2-52d3-45f3-8cee-64f885823511.png generated_images/moss-image-20261108/fig-01-raw.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+前两张的中文和逻辑已检查：第一张将“5B”限定在 DiT，并画出三个组件各自的装卸资源；第二张区分左上角与中心原点，并将同尺寸配置单独送到生成端。接下来生成第三张“已验证／待验证”分界图。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cp /Users/jason/.codex/generated_images/01a1bc0b-3139-7991-9ae2-21b75438bf73/exec-b6df51f6-d658-4dee-914a-a19e327f690c.png generated_images/moss-image-20261108/fig-02-raw.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "cp /Users/jason/.codex/generated_images/01a1bc0b-3139-7991-9ae2-21b75438bf73/exec-71dfce05-2f01-4d1f-a014-25b3c7ac4c9a.png generated_images/moss-image-20261108/fig-03-raw.png && python3 - <<'PY'
+from pathlib import Path
+from PIL import Image
+import hashlib,json
+raw=Path('generated_images/moss-image-20261108')
+assets=Path('src/assets/images')
+for i in range(1,4):
+    src=raw/f'fig-{i:02d}-raw.png'
+    out=assets/f'moss-image-openmoss-layout-generation-review-fig-{i:02d}.png'
+    assert not out.exists(),f'Unexpected existing target: {out}'
+    with Image.open(src) as im:
+        rgb=im.convert('RGB')
+        resized=rgb.resize((1120,630),Image.Resampling.LANCZOS)
+        indexed=resized.quantize(colors=48,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+        indexed.save(out,format='PNG',optimize=True,compress_level=9)
+    with Image.open(out) as final:
+        final.load()
+        count=len(final.getcolors(maxcolors=256))
+        assert final.size==(1120,630)
+        assert final.mode=='P'
+        assert count<=48
+        assert out.stat().st_size<90000
+        print(json.dumps({'file':str(out),'bytes':out.stat().st_size,'dimensions':final.size,'mode':final.mode,'used_colors':count,'corner_pixels':[final.convert('RGB').getpixel(p) for p in [(0,0),(1119,0),(0,629),(1119,629)]],'sha256':hashlib.sha256(out.read_bytes()).hexdigest()}))
+PY" in /Users/jason/Dev/mycelium/blog
+ exited 1 in 168ms:
+Traceback (most recent call last):
+  File "<stdin>", line 21, in <module>
+AssertionError
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from PIL import Image
+p=Path('src/assets/images/moss-image-openmoss-layout-generation-review-fig-01.png')
+im=Image.open(p)
+print(p.stat().st_size, im.size, im.mode, len(im.getcolors(256)))
+print('raw files:',[(p.name,p.stat().st_size) for p in Path('generated_images/moss-image-20261108').glob('*.png')])
+for c in [48,40,32,24,16]:
+    im=Image.open('generated_images/moss-image-20261108/fig-01-raw.png').convert('RGB').resize((1120,630),Image.Resampling.LANCZOS).quantize(colors=c,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+    import io
+    b=io.BytesIO(); im.save(b,format='PNG',optimize=True,compress_level=9)
+    print(c,len(b.getvalue()))
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 610ms:
+258827 (1120, 630) P 48
+raw files: [('fig-02-raw.png', 1290515), ('fig-03-raw.png', 1267834), ('fig-01-raw.png', 1360356)]
+48 258827
+40 252061
+32 245143
+24 227471
+16 263650
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image
+from collections import Counter
+im=Image.open('src/assets/images/moss-image-openmoss-layout-generation-review-fig-01.png')
+pal=im.getpalette()
+print([(n,tuple(pal[3*c:3*c+3])) for n,c in sorted(im.getcolors(256),reverse=True)[:30]])
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 2ms:
+[(274638, (254, 254, 254)), (91590, (255, 255, 255)), (68623, (253, 253, 253)), (32583, (254, 253, 254)), (30185, (255, 254, 255)), (15678, (255, 254, 254)), (13592, (254, 253, 253)), (11297, (0, 0, 0)), (9162, (254, 255, 254)), (8964, (253, 254, 253)), (8743, (33, 33, 33)), (8527, (252, 252, 252)), (8509, (86, 112, 142)), (8342, (8, 8, 8)), (7839, (244, 244, 244)), (7348, (193, 196, 200)), (7273, (251, 251, 251)), (7072, (246, 247, 247)), (6320, (254, 255, 255)), (6255, (249, 249, 249)), (6159, (250, 250, 250)), (5642, (153, 69, 61)), (5548, (254, 254, 255)), (5010, (231, 232, 234)), (5005, (4, 4, 4)), (4823, (249, 248, 247)), (4749, (253, 254, 254)), (4602, (255, 253, 254)), (4594, (189, 140, 117)), (4118, (253, 253, 254))]
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+三张原图已生成，第三张清楚区分了“已验证 19 项”和真实权重出图、OCR、峰值内存“待验证”。原图白底有细微色阶噪声，直接降到 48 色仍超过体积限制；我正在合并接近白色的背景色阶并做无抖动压缩，随后检查最终副本。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image
+import numpy as np,io
+for i in range(1,4):
+    im=Image.open(f'generated_images/moss-image-20261108/fig-{i:02d}-raw.png').convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+    ar=np.array(im)
+    for t in [248,242,235]:
+        a=ar.copy(); a[(a.min(axis=2)>=t) & (a.max(axis=2).astype(int)-a.min(axis=2).astype(int)<=12)]=255
+        clean=Image.fromarray(a)
+        for method in [Image.Quantize.MEDIANCUT,Image.Quantize.FASTOCTREE]:
+            q=clean.quantize(colors=48,method=method,dither=Image.Dither.NONE)
+            b=io.BytesIO();q.save(b,format='PNG',optimize=True,compress_level=9)
+            print(i,t,method.name,len(b.getvalue()))
+PY" in /Users/jason/Dev/mycelium/blog
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ModuleNotFoundError: No module named 'numpy'
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image,ImageChops
+import io
+for i in range(1,4):
+    im=Image.open(f'generated_images/moss-image-20261108/fig-{i:02d}-raw.png').convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+    r,g,b=im.split(); low=ImageChops.darker(ImageChops.darker(r,g),b); high=ImageChops.lighter(ImageChops.lighter(r,g),b)
+    neutral=ImageChops.subtract(high,low).point(lambda x:255 if x<=12 else 0)
+    for t in [248,242,235]:
+        mask=ImageChops.multiply(low.point(lambda x:255 if x>=t else 0),neutral)
+        clean=Image.composite(Image.new('RGB',im.size,'white'),im,mask)
+        for method in [Image.Quantize.MEDIANCUT,Image.Quantize.FASTOCTREE]:
+            q=clean.quantize(colors=48,method=method,dither=Image.Dither.NONE)
+            out=io.BytesIO();q.save(out,format='PNG',optimize=True,compress_level=9)
+            print(i,t,method.name,len(out.getvalue()))
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 511ms:
+1 248 MEDIANCUT 65633
+1 248 FASTOCTREE 38742
+1 242 MEDIANCUT 55232
+1 242 FASTOCTREE 38742
+1 235 MEDIANCUT 52410
+1 235 FASTOCTREE 37984
+2 248 MEDIANCUT 73406
+2 248 FASTOCTREE 42359
+2 242 MEDIANCUT 68228
+2 242 FASTOCTREE 42359
+2 235 MEDIANCUT 63895
+2 235 FASTOCTREE 42071
+3 248 MEDIANCUT 53425
+3 248 FASTOCTREE 32537
+3 242 MEDIANCUT 46283
+3 242 FASTOCTREE 32537
+3 235 MEDIANCUT 45981
+3 235 FASTOCTREE 31999
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from PIL import Image,ImageChops
+import hashlib,json,io
+root=Path('src/assets/images')
+for i in range(1,4):
+    src=Path('generated_images/moss-image-20261108')/f'fig-{i:02d}-raw.png'
+    out=root/f'moss-image-openmoss-layout-generation-review-fig-{i:02d}.png'
+    with Image.open(src) as raw:
+        rgb=raw.convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+    r,g,b=rgb.split()
+    lo=ImageChops.darker(ImageChops.darker(r,g),b)
+    hi=ImageChops.lighter(ImageChops.lighter(r,g),b)
+    neutral=ImageChops.subtract(hi,lo).point(lambda v:255 if v<=12 else 0)
+    nearwhite=lo.point(lambda v:255 if v>=248 else 0)
+    mask=ImageChops.multiply(neutral,nearwhite)
+    clean=Image.composite(Image.new('RGB',rgb.size,'white'),rgb,mask)
+    q=clean.quantize(colors=48,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+    q.save(out,format='PNG',compress_level=9,optimize=True)
+    with Image.open(out) as im:
+        im.load()
+        assert im.size==(1120,630)
+        assert im.mode=='P'
+        assert len(im.getcolors(256))<=48
+        assert out.stat().st_size<90000
+        assert im.tobytes()==q.tobytes(), 'Final copy changed palette indices'
+        assert im.getpalette()==q.getpalette(), 'Final copy changed palette'
+        assert all(im.convert('RGB').getpixel(p)==(255,255,255) for p in [(0,0),(1119,0),(0,629),(1119,629)])
+        print(json.dumps({'file':str(out),'bytes':out.stat().st_size,'size':im.size,'colors':len(im.getcolors(256)),'palette_entries':len(im.getpalette())//3,'dither':'NONE','white_corners':True,'sha256':hashlib.sha256(out.read_bytes()).hexdigest()}))
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 231ms:
+{"file": "src/assets/images/moss-image-openmoss-layout-generation-review-fig-01.png", "bytes": 65633, "size": [1120, 630], "colors": 48, "palette_entries": 48, "dither": "NONE", "white_corners": true, "sha256": "b8ab27da6830d30bcdfa5d02d3c43e10fd79577a10235029a0ce1886637e4d85"}
+{"file": "src/assets/images/moss-image-openmoss-layout-generation-review-fig-02.png", "bytes": 73406, "size": [1120, 630], "colors": 48, "palette_entries": 48, "dither": "NONE", "white_corners": true, "sha256": "a22d5e393f5992621a60a803390f012747ca8783effb6cd5211eaef2ae248e59"}
+{"file": "src/assets/images/moss-image-openmoss-layout-generation-review-fig-03.png", "bytes": 53425, "size": [1120, 630], "colors": 48, "palette_entries": 48, "dither": "NONE", "white_corners": true, "sha256": "6fe234f75e68f621e7dbb946335e1a3862c5eb57b7e900a658ea46d8b8cde9a6"}
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+import hashlib,json
+state=json.loads(Path('/tmp/moss-image-illustration-baseline.json').read_text())
+for p,expected in state.items():
+    actual=hashlib.sha256(Path(p).read_bytes()).hexdigest()
+    assert actual==expected,f'Protected file modified: {p}'
+    print('UNCHANGED',p)
+raw=Path('generated_images/moss-image-20261108')
+assert sorted(p.name for p in raw.iterdir())==['fig-01-raw.png','fig-02-raw.png','fig-03-raw.png']
+print('Raw image count: 3; final image count:',len(list(Path('src/assets/images').glob('moss-image-openmoss-layout-generation-review-fig-*.png'))))
+PY
+ git status --short" in /Users/jason/Dev/mycelium/blog
+ succeeded in 16ms:
+UNCHANGED src/content/blog/moss-image-openmoss-layout-generation-review.md
+UNCHANGED src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg
+Raw image count: 3; final image count: 3
+ M pipeline/m2/output/drafts-map.json
+ M source/20261105-craft-anything/semantic-index-info.json
+ M source/20261105-craft-anything/semantic-search-final.json
+?? generated_images/
+?? pipeline/m2/output/agentear-v0-28-1-settings-fix-local-voice-input.json
+?? pipeline/m2/output/cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor.json
+?? pipeline/m2/output/deepseek-v41-flash-1017-uncensored-fp8-teardown.json
+?? pipeline/m2/output/laya-aayushch-local-first-ai-notification-command-center.json
+?? pipeline/m2/output/meta-sam3-promptable-concept-segmentation-license-mac-guide.json
+?? pipeline/m2/output/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit.json
+?? pipeline/m2/output/superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx.json
+?? pipeline/m2/output/xllama-xbox-series-s-local-llm-inference-dev-mode.json
+?? src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg
+?? src/assets/images/moss-image-openmoss-layout-generation-review-fig-01.png
+?? src/assets/images/moss-image-openmoss-layout-generation-review-fig-02.png
+?? src/assets/images/moss-image-openmoss-layout-generation-review-fig-03.png
+?? src/content/blog/moss-image-openmoss-layout-generation-review.md
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image,ImageChops
+from collections import Counter
+for i in range(1,4):
+ im=Image.open(f'generated_images/moss-image-20261108/fig-{i:02d}-raw.png').convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+ r,g,b=im.split();lo=ImageChops.darker(ImageChops.darker(r,g),b);hi=ImageChops.lighter(ImageChops.lighter(r,g),b)
+ mask=ImageChops.multiply(lo.point(lambda v:255 if v>=248 else 0),ImageChops.subtract(hi,lo).point(lambda v:255 if v<=12 else 0))
+ clean=Image.composite(Image.new('RGB',im.size,'white'),im,mask)
+ for method in [Image.Quantize.MEDIANCUT,Image.Quantize.FASTOCTREE]:
+  q=clean.quantize(colors=48,method=method,dither=Image.Dither.NONE).convert('RGB')
+  print(i,method.name,'saturated palette:',[(c,n) for c,n in Counter(q.getdata()).most_common() if max(c)-min(c)>100][:12])
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 478ms:
+<stdin>:10: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+1 MEDIANCUT saturated palette: [((253, 81, 61), 4577), ((46, 113, 191), 1760), ((235, 31, 25), 1405), ((225, 130, 75), 763), ((253, 41, 32), 295)]
+1 FASTOCTREE saturated palette: [((251, 88, 42), 4038), ((250, 14, 12), 1706), ((7, 114, 242), 1281), ((251, 93, 81), 713), ((95, 166, 242), 349), ((39, 136, 242), 307), ((252, 157, 93), 277), ((252, 136, 45), 173), ((158, 48, 37), 65), ((250, 61, 65), 9), ((251, 125, 131), 8), ((182, 64, 50), 6)]
+2 MEDIANCUT saturated palette: [((7, 110, 251), 7763), ((253, 52, 51), 4092), ((254, 58, 55), 2995), ((252, 122, 8), 2439), ((42, 131, 251), 1725), ((17, 103, 228), 244)]
+2 FASTOCTREE saturated palette: [((252, 54, 53), 6168), ((3, 104, 250), 5531), ((12, 110, 249), 2823), ((252, 121, 3), 1960), ((95, 162, 251), 1140), ((48, 136, 251), 501), ((244, 45, 44), 498), ((248, 81, 42), 337), ((140, 185, 247), 336), ((253, 132, 21), 303), ((251, 81, 78), 212), ((252, 170, 98), 124)]
+3 MEDIANCUT saturated palette: [((243, 58, 51), 3081), ((13, 97, 234), 2697), ((234, 44, 39), 2606), ((240, 55, 49), 2477), ((244, 62, 54), 2302), ((237, 61, 53), 1678), ((42, 108, 215), 672)]
+3 FASTOCTREE saturated palette: [((242, 57, 51), 5423), ((231, 47, 42), 4645), ((16, 98, 233), 2981), ((239, 67, 56), 1294), ((236, 95, 88), 769), ((95, 150, 237), 490), ((162, 38, 33), 211), ((250, 139, 27), 190), ((243, 144, 114), 83), ((59, 130, 237), 43), ((67, 125, 232), 11), ((238, 125, 129), 3)]
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from PIL import Image,ImageChops
+import hashlib,json
+for i in range(1,4):
+    src=Path('generated_images/moss-image-20261108')/f'fig-{i:02d}-raw.png'
+    out=Path('src/assets/images')/f'moss-image-openmoss-layout-generation-review-fig-{i:02d}.png'
+    with Image.open(src) as im:
+        rgb=im.convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+    r,g,b=rgb.split();lo=ImageChops.darker(ImageChops.darker(r,g),b);hi=ImageChops.lighter(ImageChops.lighter(r,g),b)
+    mask=ImageChops.multiply(lo.point(lambda v:255 if v>=248 else 0),ImageChops.subtract(hi,lo).point(lambda v:255 if v<=12 else 0))
+    clean=Image.composite(Image.new('RGB',rgb.size,'white'),rgb,mask)
+    adaptive=clean.quantize(colors=48,method=Image.Quantize.FASTOCTREE,dither=Image.Dither.NONE)
+    learned=adaptive.getpalette()
+    frequent=sorted(adaptive.getcolors(256),reverse=True)[:43]
+    colors=[tuple(learned[3*idx:3*idx+3]) for _,idx in frequent]
+    colors += [(255,128,0),(0,110,255),(240,40,35),(255,248,225),(255,255,255)]
+    assert len(colors)==48
+    palette=Image.new('P',(1,1));palette.putpalette([v for color in colors for v in color])
+    final=clean.quantize(palette=palette,dither=Image.Dither.NONE)
+    final.save(out,format='PNG',optimize=True,compress_level=9)
+    with Image.open(out) as check:
+        check.load()
+        assert check.size==(1120,630) and check.mode=='P'
+        assert len(check.getpalette())//3<=48
+        assert len(check.getcolors(256))<=48 and out.stat().st_size<90000
+        assert check.tobytes()==final.tobytes() and check.getpalette()==final.getpalette()
+        print(json.dumps({'file':str(out),'bytes':out.stat().st_size,'colors':len(check.getcolors(256)),'palette_entries':len(check.getpalette())//3,'dimensions':check.size,'dither':'NONE','sha256':hashlib.sha256(out.read_bytes()).hexdigest()}))
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 155ms:
+{"file": "src/assets/images/moss-image-openmoss-layout-generation-review-fig-01.png", "bytes": 43194, "colors": 47, "palette_entries": 48, "dimensions": [1120, 630], "dither": "NONE", "sha256": "29a578577c436eccc299f180aba087a849b8ca9c855b345bc073597ac6349cb4"}
+{"file": "src/assets/images/moss-image-openmoss-layout-generation-review-fig-02.png", "bytes": 49714, "colors": 47, "palette_entries": 48, "dimensions": [1120, 630], "dither": "NONE", "sha256": "6b69ef7fe112669b56c99ca2810b3ce931740561013fae25b359066b3ab4f585"}
+{"file": "src/assets/images/moss-image-openmoss-layout-generation-review-fig-03.png", "bytes": 35764, "colors": 47, "palette_entries": 48, "dimensions": [1120, 630], "dither": "NONE", "sha256": "b3e99ec4f084566e66c6dbf1752a3b79e34ee98e23147a801a83ed36f03ccff0"}
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from PIL import Image
+import hashlib,json,struct
+state=json.loads(Path('/tmp/moss-image-illustration-baseline.json').read_text())
+for p,h in state.items():
+    assert hashlib.sha256(Path(p).read_bytes()).hexdigest()==h
+    print('UNCHANGED:',p)
+for i in range(1,4):
+    p=Path(f'src/assets/images/moss-image-openmoss-layout-generation-review-fig-{i:02d}.png')
+    data=p.read_bytes(); assert data[:8]==b'\\x89PNG\\r\\n\\x1a\\n'
+    with Image.open(p) as im:
+        im.verify()
+    with Image.open(p) as im:
+        assert im.size==(1120,630) and im.mode=='P'
+        assert len(im.getcolors(256))<=48
+        assert len(im.getpalette())//3<=48
+        assert len(data)<90000
+        rgb=im.convert('RGB');assert all(rgb.getpixel(pt)==(255,255,255) for pt in [(0,0),(1119,0),(0,629),(1119,629)])
+        print('FINAL COPY VERIFIED:',p.name,len(data),'bytes',len(im.getcolors(256)),'used colors')
+raw=Path('generated_images/moss-image-20261108')
+assert len(list(raw.glob('*.png')))==3
+print('Raw images preserved: exactly 3')
+PY" in /Users/jason/Dev/mycelium/blog
+ exited 1 in 4ms:
+Traceback (most recent call last):
+  File "<stdin>", line 18, in <module>
+UNCHANGED: src/content/blog/moss-image-openmoss-layout-generation-review.md
+UNCHANGED: src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg
+AssertionError
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image
+for i in range(1,4):
+ im=Image.open(f'src/assets/images/moss-image-openmoss-layout-generation-review-fig-{i:02d}.png')
+ print(i,[im.convert('RGB').getpixel(p) for p in [(0,0),(1119,0),(0,629),(1119,629)]])
+ print('white candidates',[(j,tuple(im.getpalette()[j*3:j*3+3])) for j in range(48) if min(im.getpalette()[j*3:j*3+3])>245])
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 7ms:
+1 [(254, 254, 254), (254, 254, 254), (254, 254, 254), (254, 254, 254)]
+white candidates [(0, (254, 254, 254)), (47, (255, 255, 255))]
+2 [(254, 254, 254), (254, 254, 254), (254, 254, 254), (254, 254, 254)]
+white candidates [(0, (254, 254, 254)), (47, (255, 255, 255))]
+3 [(254, 254, 254), (254, 254, 254), (254, 254, 254), (254, 254, 254)]
+white candidates [(0, (254, 254, 254)), (47, (255, 255, 255))]
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from PIL import Image
+import hashlib,json
+for i in range(1,4):
+    p=Path(f'src/assets/images/moss-image-openmoss-layout-generation-review-fig-{i:02d}.png')
+    with Image.open(p) as source:
+        im=source.copy()
+    pal=im.getpalette()
+    for j in range(len(pal)//3):
+        c=pal[3*j:3*j+3]
+        if min(c)>=248 and max(c)-min(c)<=12:
+            pal[3*j:3*j+3]=[255,255,255]
+    im.putpalette(pal)
+    im.save(p,format='PNG',optimize=True,compress_level=9)
+    with Image.open(p) as check:
+        check.load()
+        assert check.size==(1120,630) and check.mode=='P'
+        assert len(check.getpalette())//3<=48 and len(check.getcolors(256))<=48
+        assert p.stat().st_size<90000
+        assert check.tobytes()==im.tobytes() and check.getpalette()==im.getpalette()
+        rgb=check.convert('RGB')
+        assert all(rgb.getpixel(pt)==(255,255,255) for pt in [(0,0),(1119,0),(0,629),(1119,629)])
+        print('VERIFIED',p.name,p.stat().st_size,'bytes; 1120x630;',len(check.getpalette())//3,'palette entries; no dither; pure white corners;',hashlib.sha256(p.read_bytes()).hexdigest())
+state=json.loads(Path('/tmp/moss-image-illustration-baseline.json').read_text())
+for p,h in state.items():
+    assert hashlib.sha256(Path(p).read_bytes()).hexdigest()==h
+    print('UNCHANGED:',p)
+assert len(list(Path('generated_images/moss-image-20261108').glob('*.png')))==3
+assert len(list(Path('src/assets/images').glob('moss-image-openmoss-layout-generation-review-fig-*.png')))==3
+print('Exactly 3 raw images and 3 final copies.')
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 57ms:
+VERIFIED moss-image-openmoss-layout-generation-review-fig-01.png 43194 bytes; 1120x630; 48 palette entries; no dither; pure white corners; b6a4fd569755a4780a2c833d7f25d6757baeb424a18190ddace284d769e36562
+VERIFIED moss-image-openmoss-layout-generation-review-fig-02.png 49714 bytes; 1120x630; 48 palette entries; no dither; pure white corners; 1e55ca49fd07875f1bb26a8b12a0f9d84b806e19cbfe18853afd95af0e411026
+VERIFIED moss-image-openmoss-layout-generation-review-fig-03.png 35764 bytes; 1120x630; 48 palette entries; no dither; pure white corners; afd31d5b2d9c88ea6483038c92b840d0ab229f5d9d60a13ac7f18f35d2fa07a0
+UNCHANGED: src/content/blog/moss-image-openmoss-layout-generation-review.md
+UNCHANGED: src/assets/images/moss-image-openmoss-layout-generation-review-banner.jpg
+Exactly 3 raw images and 3 final copies.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+已用内置 imagegen 分别生成三张小M插图，并检查最终副本的中文与逻辑：
+
+- [fig-01：生成链路与组件装卸](/Users/jason/Dev/mycelium/blog/src/assets/images/moss-image-openmoss-layout-generation-review-fig-01.png)：43,194 bytes
+- [fig-02：坐标编译与同尺寸生成](/Users/jason/Dev/mycelium/blog/src/assets/images/moss-image-openmoss-layout-generation-review-fig-02.png)：49,714 bytes
+- [fig-03：已验证与待验证边界](/Users/jason/Dev/mycelium/blog/src/assets/images/moss-image-openmoss-layout-generation-review-fig-03.png)：35,764 bytes
+
+全部为 **1120×630、白底、48 色调色板、无抖动、低于 90,000 bytes**。
+
+原图保存在 [generated_images/moss-image-20261108/](/Users/jason/Dev/mycelium/blog/generated_images/moss-image-20261108/)。Markdown、现有 banner 及其他文件未修改。
+hook: Stop
+hook: Stop Completed
+tokens used
+81,286
+已用内置 imagegen 分别生成三张小M插图，并检查最终副本的中文与逻辑：
+
+- [fig-01：生成链路与组件装卸](/Users/jason/Dev/mycelium/blog/src/assets/images/moss-image-openmoss-layout-generation-review-fig-01.png)：43,194 bytes
+- [fig-02：坐标编译与同尺寸生成](/Users/jason/Dev/mycelium/blog/src/assets/images/moss-image-openmoss-layout-generation-review-fig-02.png)：49,714 bytes
+- [fig-03：已验证与待验证边界](/Users/jason/Dev/mycelium/blog/src/assets/images/moss-image-openmoss-layout-generation-review-fig-03.png)：35,764 bytes
+
+全部为 **1120×630、白底、48 色调色板、无抖动、低于 90,000 bytes**。
+
+原图保存在 [generated_images/moss-image-20261108/](/Users/jason/Dev/mycelium/blog/generated_images/moss-image-20261108/)。Markdown、现有 banner 及其他文件未修改。
