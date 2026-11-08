@@ -1,0 +1,38 @@
+[
+  {
+    "id": "383d9dc2b46123f107dbc21d269267265978954676123759",
+    "metadata": {
+      "article_id": "anthropic-dreaming-dynamic-workflow-memory-review",
+      "content_hash": "9bf487fe14c09744",
+      "excerpt": "Anthropic Dreaming：让Agent在后台复盘并整理长期记忆 Anthropic的Dreaming动态工作流让Agent在后台核对历史会话、整理小文件与索引，再供下一次会话只读使用。本文拆解主Agent、analyzer和organizer的职责，区分记忆更新与模型训练，并用九项本地合成检查分析权限、游标和失败重试，指出原地写入、并发冲突与长任务遗漏的边界，给出工程改造建议。 Anthropic Agent 长期记忆 工作流 工程实践 “One session”到底意味着什么？ 代码怎样把历史记录变成记忆？ 只读挂载和提示词规则分别能保证什",
+      "language": "zh",
+      "tags": [
+        "Anthropic",
+        "Agent",
+        "长期记忆",
+        "工作流",
+        "工程实践"
+      ],
+      "title": "Anthropic Dreaming：让Agent在后台复盘并整理长期记忆",
+      "url": "/blog/anthropic-dreaming-dynamic-workflow-memory-review/"
+    }
+  },
+  {
+    "id": "19b4d6cd1783da9d5592daeb56c4d42b5241e9bb7ec4d02a",
+    "metadata": {
+      "article_id": "anthropic-dreaming-dynamic-workflow-memory-review",
+      "content_hash": "765200db93e809d1",
+      "excerpt": "Anthropic Dreaming: Background Memory Maintenance Review Anthropic’s dreaming workflow: transcript analysis, memory organization, read-only reuse, nine local checks, cursor gaps and safe production adaptation. Anthropic Agent 长期记忆 工作流 工程实践 What does “one session” actually mean? H",
+      "language": "en",
+      "tags": [
+        "Anthropic",
+        "Agent",
+        "长期记忆",
+        "工作流",
+        "工程实践"
+      ],
+      "title": "Anthropic Dreaming: Background Memory Maintenance",
+      "url": "/blog/anthropic-dreaming-dynamic-workflow-memory-review/"
+    }
+  }
+]

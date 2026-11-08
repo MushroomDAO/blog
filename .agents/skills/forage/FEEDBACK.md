@@ -1280,3 +1280,11 @@ Datawhale当前仓库固定238bc688ca7d5c994c580f732ee9c2c92483bd20；复用2026
 jweihe/RLHF-book-Chinese固定af321f73f469019b9d481a4fd96403c9b6a871f1。精确查重只有原始机器人KB，没有旧文章/M2。19章中文教材，Nathan Lambert原著、Junwei He翻译维护；内容CC BY-NC-SA4.0与代码MIT分开说明。2026-09勘误不等于完整同步英文出版版，历史行业语境约2025-04。agent-reach缺失/Jina403后Git抓取成功；保存4张README阅读配图到media，不将原书页面当封面。
 
 实际运行原仓库8项章节代码数值测试和3项构建辅助测试全部通过。未安装Pandoc/crossref，未完整构建电子书或跑完整make check，未训练模型或测论文分数。8271封面机器通过但人工发现书脊伪文字而拒绝，8272空白笔记本摄影隐喻通过机器与人工核验；3小M图明确真实训练/全书构建未运行。Blog轮播1/列表1/5图片变体200，远程公众号正文、3图、封面、元数据、原文链接及评论设置回读一致，未群发；语义与KB最终证据见source/20261108-rlhf-book-chinese/。
+
+### 2026-11-08 Anthropic Dreaming：父会话、原地记忆与增量边界
+
+官方11月2日Cookbook固定ce8b2629efe8b24048b127b4c79af1e9cbab93d4，MIT。宽泛dreaming/dynamic/workflow命中Bitterbot等无关主题；精确Notebook/标题无旧文章/M2，远程草稿查询成功、已发接口48001。原始全量查重输出留私人job目录，公开审计只保留汇总，避免夹带无关KB摘录。
+
+文章区分一个父session中的lead/analyzer/organizer多线程与单个模型调用；Cookbook原地更新store不同于Dreams研究预览输出新store。readonly业务挂载不等于本地离线；单条memory不可变版本审计不等于跨文件事务。创建时间过滤+跳过运行中会话存在游标遗漏；失败重试窗口不等于回滚或exactly-once。候选delta/单写入合并/待完成ID是建议改造，不冒称上游现成功能。
+
+实际9项本地合成夹具检查上游helper与nightly main，NotebookClient替身，零模型调用/云资源/真实用户日志；未测语义记忆质量/成本/速度。8281封面及3小M图人工、机器核验通过。Blog轮播1/列表1/5图片200；远程公众号全文、3图顺序、封面、元数据、原文链接、评论设置一致，未群发。语义中英2条回读与公开查询命中、KB实际回读均通过。

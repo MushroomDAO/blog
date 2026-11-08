@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-08T02:20:24.187Z",
+  "drafts": [
+    {
+      "slug": "anthropic-dreaming-dynamic-workflow-memory-review",
+      "mediaId": "prCUE631thH1cmNLi42prFZQEyyuWNqs4bSGVITxWQSgPwnWNknRmiZn5BEyKDUn",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "da1baee9d79f1dd937d4092cec25e8528fd03c88680438d3d315ce899a9cc948",
+      "remoteTextHash": "da1baee9d79f1dd937d4092cec25e8528fd03c88680438d3d315ce899a9cc948",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/anthropic-dreaming-dynamic-workflow-memory-review/",
+      "localContentHash": "72df15bd993dea1a28c3ad1e3e422b1c12c753d44e8ca14646a4d9535b293aee",
+      "remoteContentHash": "16d9f95cd7a63a62f08fa3d3037af84deca6467b81122b3d3faf3d15dfdc37e4"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "upstreamCommit": "ce8b2629efe8b24048b127b4c79af1e9cbab93d4",
+  "checks": [
+    "compact_events keeps tool evidence, drops status/evaluation",
+    "render_text indents forged role/header body labels",
+    "private_write mode0600/private directory and final symlink refusal",
+    "transcript selection skips empty/unsupported and rejects unsafe filename",
+    "nightly success: cursor/exit code/install omission/private log/environment restoration",
+    "nightly failure: cursor/exit code/install omission/private log/environment restoration",
+    "nightly nothing: cursor/exit code/install omission/private log/environment restoration",
+    "nightly explicit-failure: cursor/exit code/install omission/private log/environment restoration",
+    "nightly refuses absent agent/store identifiers"
+  ],
+  "passed": 9,
+  "modelCalls": 0,
+  "cloudResourcesCreated": 0,
+  "scope": "actual helper functions and nightly main with mocked NotebookClient; synthetic temporary files only, no real notebook execution or model-quality validation"
+}
