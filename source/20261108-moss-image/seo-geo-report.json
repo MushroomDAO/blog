@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "moss-image-openmoss-layout-generation-review",
+    "checks": {
+      "fields": true,
+      "title": true,
+      "description": true,
+      "wechat": true,
+      "tags": true,
+      "bilingual": true,
+      "FAQ": true,
+      "sources": true,
+      "copyright": true,
+      "images": true,
+      "banner": true
+    },
+    "passed": true
+  }
+]
