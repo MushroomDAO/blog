@@ -1288,3 +1288,11 @@ jweihe/RLHF-book-Chinese固定af321f73f469019b9d481a4fd96403c9b6a871f1。精确�
 文章区分一个父session中的lead/analyzer/organizer多线程与单个模型调用；Cookbook原地更新store不同于Dreams研究预览输出新store。readonly业务挂载不等于本地离线；单条memory不可变版本审计不等于跨文件事务。创建时间过滤+跳过运行中会话存在游标遗漏；失败重试窗口不等于回滚或exactly-once。候选delta/单写入合并/待完成ID是建议改造，不冒称上游现成功能。
 
 实际9项本地合成夹具检查上游helper与nightly main，NotebookClient替身，零模型调用/云资源/真实用户日志；未测语义记忆质量/成本/速度。8281封面及3小M图人工、机器核验通过。Blog轮播1/列表1/5图片200；远程公众号全文、3图顺序、封面、元数据、原文链接、评论设置一致，未群发。语义中英2条回读与公开查询命中、KB实际回读均通过。
+
+### 2026-11-08 Designing AI Systems：官方配套代码与参考实现边界
+
+Manning产品页直接链接designing-ai-systems/designing_ai_systems_repo，固定94dd7ecdd02de7c1289bb81765deeaaa23dffcee。未找到整本书正文/PDF/EPUB或明确LICENSE/projectlicense；GitHub license=null。只称公开配套代码，不擅自标MIT/Apache或宣传全书开源。出版社页面全部章节可读与MEAP/预计11月出版标签并存，不写死发售日期/页数。
+
+根README第9章planned滞后，claw/已提供第9章参考助手；日历/工单实际为模拟分派，不能把状态表当缺代码，也不能把mock当企业集成。实跑核心6测试文件69项及Claw18项，共87项通过，实际uv选择Python3.14.7而项目要求>=3.12。两项合成夹具验证默认DataService1536维零向量，以及requires_confirmation元数据不自动拦住直接ExecuteTool入口；HTTP仅MockTransport，无模型/真实工具调用。未测全套/DB/Docker/K8s/负载/RAG质量或完整安全审计。
+
+8291模块化平台封面和3小M图机器/人工核验通过。Blog轮播1/列表2/5图变体200；公众号全文、3图顺序、封面、元数据、原文链接与评论设置回读匹配，未群发。中英2条语义回读及公开查询命中，KB实际回读验证。上游未明确许可，公开审计保留源码哈希/链接和自写夹具，不搬运整份上游源码或书籍。
