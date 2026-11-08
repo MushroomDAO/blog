@@ -1,0 +1,3 @@
+# Exact-source duplicate check
+
+The bot's very broad title query matched generic words such as GitHub and learning across many unrelated articles. The full report remains private in job8601e251-42c1-42b0-8b7b-551b05d53d99 because it contains unrelated KB excerpts. Follow-up exact URL and owner/repo check found no matching Blog, current WeChat drafts, local M2 credential or project KB record. Raw user material remains already ingested by the bot; that does not imply a published article. Remote draft count10 was queried successfully. A fresh original article may proceed without duplicating an old publication.

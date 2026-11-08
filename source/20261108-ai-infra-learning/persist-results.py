@@ -1,0 +1,10 @@
+from pathlib import Path
+import json,datetime
+s='ai-infrastructure-engineer-learning-path-review';o=Path('source/20261108-ai-infra-learning');j=Path('/Users/jason/.heinu1-bot/jobs/8601e251-42c1-42b0-8b7b-551b05d53d99');kb=Path('/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory')
+r=json.loads(Path('pipeline/m2/output',s+'.json').read_text());v=json.loads((o/'wechat-verification.json').read_text());assert v['drafts'][0]['mediaId']==r['mediaId'];pub=json.loads((o/'public-verification.json').read_text());assert pub['articles'][0]['slug']==s
+result={'slug':s,'blogUrl':'https://blog.mushroom.cv/blog/'+s+'/','mediaId':r['mediaId'],'archivedMediaId':'','wechatStatus':'draft','wechatError':''}
+for p in [o/'publication-result.json',j/'publication-result.json']:p.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+(o/'.published').write_text(result['blogUrl']+'\n');semantic=json.loads((o/'semantic-status.json').read_text())if(o/'semantic-status.json').exists()else{'status':'pending'}
+progress={**result,'blogVerified':True,'wechatVerified':True,'kbSaved':True,'semantic':semantic,'completed':semantic.get('status')=='verified','updatedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'nextAction':'语义索引待验证。'if semantic.get('status')!='verified'else'三件套和语义索引已验证，公众号草稿未群发。'}
+(j/'publication-progress.json').write_text(json.dumps(progress,ensure_ascii=False,indent=2)+'\n')
+f=kb/f'project_{s}.md';t=f.read_text().split('\nBlog and WeChat:')[0];f.write_text(t+'\nBlog and WeChat: verified.\nBlog: '+result['blogUrl']+'\nWeChat remote draft verified: '+r['mediaId']+'\nSemantic: '+semantic['status']+'\nFLUX8312 cover and3LittleM figures machine/manualverified. Actual10modules/62labfiles/119exerciseentries;44PythonASTparse2errors;project10145and10329emptytestfunctions. Fiveunmodifiedproject101TestClientrequests root200, health200{}, metricsplaceholder200, predict501, missingfile422. No modelfullbuild/inference/GPU/Docker/K8s/cloud/performancebenchmark. No emptytestsreportedpassed. Proposed4weekserviceloop is ownlearningadvice, not wholecoursecompletion.\n')

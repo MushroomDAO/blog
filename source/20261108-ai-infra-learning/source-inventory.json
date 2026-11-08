@@ -1,0 +1,56 @@
+{
+  "repository": "https://github.com/ai-infra-curriculum/ai-infra-engineer-learning",
+  "commit": "0d1b6558dc68c042a3dad54095b707cd92fc0529",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "67475eade1ef3ba7d4cf225e8d51d82f9e9dea16ec557e17fa18950571e90772",
+      "bytes": 1081
+    },
+    {
+      "path": "README.md",
+      "sha256": "c8e6edc5e1b331c427330092b958b558615356ed684ae3282b305e81194806cb",
+      "bytes": 20407
+    },
+    {
+      "path": "PREREQUISITES.md",
+      "sha256": "b6225635de6dcd003816b7b7e62aa0ae642e45f33873d506dfbaf0a2f1e9da94",
+      "bytes": 21661
+    },
+    {
+      "path": "CURRICULUM.md",
+      "sha256": "b4149f50edf8357c0e08a67cd73b2e075f5c41049bf3803d21e9dbe556604825",
+      "bytes": 58922
+    },
+    {
+      "path": "Makefile",
+      "sha256": "587b17529bd5fd631af2f7b332655bf3d24e6bcb16325f35cec8133f9cbba65d",
+      "bytes": 2717
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "d2d49967738e8b330ec85795746876d50a2605dd5747292de7d44d5ad74157a5",
+      "bytes": 1377
+    },
+    {
+      "path": "projects/project-101-basic-model-serving/src/api.py",
+      "sha256": "0fac24f77a89f16614dcda0287f29f6696503da5dc2752fcdb7c5491bc76bea2",
+      "bytes": 16202
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/api/streaming.py",
+      "sha256": "fe43650387106324fb70a45bc0c16244bd3875513472d0b6880553dbaadf350e",
+      "bytes": 16309
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/monitoring/metrics.py",
+      "sha256": "ee0e64ef9b460b0e6a93add7e637867b5eec5e16e27e459b59dbd9693990543a",
+      "bytes": 18025
+    },
+    {
+      "path": "lessons/mod-110-llm-infrastructure/labs/lab-01-vllm-deployment.md",
+      "sha256": "8eb6f459b967059a0c22b65d9ed946b57d21ae3af6727f1ee7242dacbb6c31f8",
+      "bytes": 2999
+    }
+  ]
+}

@@ -1,0 +1,688 @@
+{
+  "repository": "https://github.com/ai-infra-curriculum/ai-infra-engineer-learning",
+  "commit": "0d1b6558dc68c042a3dad54095b707cd92fc0529",
+  "modules": [
+    {
+      "module": "mod-101-foundations",
+      "labs": 5,
+      "exerciseDirectories": 7,
+      "flatExerciseFiles": 3
+    },
+    {
+      "module": "mod-102-cloud-computing",
+      "labs": 4,
+      "exerciseDirectories": 8,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-103-containerization",
+      "labs": 6,
+      "exerciseDirectories": 9,
+      "flatExerciseFiles": 3
+    },
+    {
+      "module": "mod-104-kubernetes",
+      "labs": 8,
+      "exerciseDirectories": 15,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-105-data-pipelines",
+      "labs": 6,
+      "exerciseDirectories": 12,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-106-mlops",
+      "labs": 7,
+      "exerciseDirectories": 14,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-107-gpu-computing",
+      "labs": 6,
+      "exerciseDirectories": 11,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-108-monitoring-observability",
+      "labs": 5,
+      "exerciseDirectories": 10,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-109-infrastructure-as-code",
+      "labs": 7,
+      "exerciseDirectories": 13,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-110-llm-infrastructure",
+      "labs": 8,
+      "exerciseDirectories": 14,
+      "flatExerciseFiles": 0
+    }
+  ],
+  "labFiles": 62,
+  "exerciseEntries": 119,
+  "projects": [
+    {
+      "project": "project-101-basic-model-serving",
+      "tests": [
+        {
+          "file": "projects/project-101-basic-model-serving/tests/test_api.py",
+          "functions": [
+            {
+              "name": "test_settings",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_root_endpoint",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_health_check",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_health_check_response_format",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_with_valid_image",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_with_invalid_image",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_with_wrong_content_type",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_without_file",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_with_top_k_parameter",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_response_includes_metadata",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_with_large_file",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_with_invalid_top_k",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_404_for_nonexistent_endpoint",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_method_not_allowed",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_metrics_endpoint",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_metrics_after_prediction",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_openapi_schema",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_docs_endpoint",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_prediction_latency",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_concurrent_predictions",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_full_prediction_pipeline",
+              "docstringAndPassOnly": true
+            }
+          ]
+        },
+        {
+          "file": "projects/project-101-basic-model-serving/tests/test_model.py",
+          "functions": [
+            {
+              "name": "test_model_init",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_model_init_with_invalid_name",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_model_init_with_cuda_device",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_load_model",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_load_model_twice",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_preprocess_image",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_preprocess_with_invalid_input",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_preprocess_with_different_sizes",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_with_tensor_input",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_without_loading_model",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_with_different_top_k",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_predict_with_threshold",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_postprocess_output",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_batch_inference",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_batch_inference_performance",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_warmup",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_first_inference_without_warmup",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_handle_corrupted_image",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_handle_wrong_image_mode",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_memory_cleanup_after_inference",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_prediction_consistency",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_known_image_prediction",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_switch_models",
+              "docstringAndPassOnly": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "project-102-mlops-pipeline",
+      "tests": [
+        {
+          "file": "projects/project-102-mlops-pipeline/tests/test_data.py",
+          "functions": [
+            {
+              "name": "test_csv_data_source_fetch",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_database_source_with_mock",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_ingestion_pipeline",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_schema_validation_valid",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_completeness_validation",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_range_validation",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_missing_value_imputation",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_categorical_encoding",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_feature_scaling",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_preprocessing_pipeline",
+              "docstringAndPassOnly": false
+            }
+          ]
+        },
+        {
+          "file": "projects/project-102-mlops-pipeline/tests/test_deployment.py",
+          "functions": [
+            {
+              "name": "test_pull_model_from_registry",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_docker_build",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_kubernetes_deployment",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_health_check",
+              "docstringAndPassOnly": false
+            }
+          ]
+        },
+        {
+          "file": "projects/project-102-mlops-pipeline/tests/test_training.py",
+          "functions": [
+            {
+              "name": "test_model_creation",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_model_training",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_mlflow_logging",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_classification_evaluation",
+              "docstringAndPassOnly": false
+            },
+            {
+              "name": "test_regression_evaluation",
+              "docstringAndPassOnly": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "project-103-llm-deployment",
+      "tests": [
+        {
+          "file": "projects/project-103-llm-deployment/tests/test_api.py",
+          "functions": [
+            {
+              "name": "test_generate_success",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_generate_streaming",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_invalid_request",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_rag_generation",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_rate_limiting",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_authentication",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_health_check",
+              "docstringAndPassOnly": true
+            }
+          ]
+        },
+        {
+          "file": "projects/project-103-llm-deployment/tests/test_ingestion.py",
+          "functions": [
+            {
+              "name": "test_text_loader",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_pdf_loader",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_web_loader",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_directory_loader",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_text_cleaning",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_document_filtering",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_metadata_enrichment",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_batch_indexing",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_deduplication",
+              "docstringAndPassOnly": true
+            }
+          ]
+        },
+        {
+          "file": "projects/project-103-llm-deployment/tests/test_llm.py",
+          "functions": [
+            {
+              "name": "test_model_loading",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_generate_text",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_streaming_generation",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_batch_generation",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_quantization",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_continuous_batching",
+              "docstringAndPassOnly": true
+            }
+          ]
+        },
+        {
+          "file": "projects/project-103-llm-deployment/tests/test_rag.py",
+          "functions": [
+            {
+              "name": "test_fixed_size_chunking",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_recursive_chunking",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_single_embedding",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_batch_embeddings",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_similarity_search",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_metadata_filtering",
+              "docstringAndPassOnly": true
+            },
+            {
+              "name": "test_rag_generation",
+              "docstringAndPassOnly": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "projectMakefiles": [
+    "projects/project-103-llm-deployment/Makefile",
+    "projects/project-102-mlops-pipeline/Makefile"
+  ],
+  "parserPythonVersion": "3.12.14 (main, Sep 20 2026, 08:31:10) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "pythonSyntax": [
+    {
+      "path": "setup.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/tests/conftest.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/tests/test_llm.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/tests/test_ingestion.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/tests/test_api.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/tests/test_rag.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/notebooks/utils.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/ingestion/processor.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/ingestion/loader.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/ingestion/indexer.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/llm/server.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/llm/config.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/llm/optimization.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/rag/chunking.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/rag/retriever.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/rag/embeddings.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/rag/pipeline.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/api/models.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/api/streaming.py",
+      "parses": false,
+      "error": "expected an indented block after 'try' statement on line 246 (<unknown>, line 299)"
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/api/main.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/api/middleware.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/monitoring/metrics.py",
+      "parses": false,
+      "error": "expected an indented block after 'except' statement on line 392 (<unknown>, line 400)"
+    },
+    {
+      "path": "projects/project-103-llm-deployment/src/monitoring/cost_tracker.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/dags/data_pipeline.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/dags/deployment_pipeline.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/dags/training_pipeline.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/tests/test_training.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/tests/test_data.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/tests/test_deployment.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/src/training/train.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/src/training/evaluate.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/src/deployment/deploy.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/src/monitoring/metrics.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/src/monitoring/health.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/src/monitoring/__init__.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/src/data/ingestion.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/src/data/preprocessing.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-102-mlops-pipeline/src/data/validation.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-101-basic-model-serving/tests/test_model.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-101-basic-model-serving/tests/test_api.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-101-basic-model-serving/src/config.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-101-basic-model-serving/src/model.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-101-basic-model-serving/src/api.py",
+      "parses": true
+    },
+    {
+      "path": "projects/project-101-basic-model-serving/src/utils.py",
+      "parses": true
+    }
+  ],
+  "scope": "File inventory and Python AST inspection only; presence is not completeness or runtime correctness. Docstring/pass-only detection is structural, not a complete test-quality analysis."
+}
