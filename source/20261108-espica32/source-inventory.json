@@ -1,0 +1,225 @@
+{
+  "sourceUrl": "https://www.todo-sdr.com/wp-content/uploads/2026/11/kiwi-radio-mini.rar",
+  "archiveSha256": "ff6035c799d0c7bdaae0c673df50544c2d790f98673586fe07becac21e3efd72",
+  "archiveBytes": 59215,
+  "files": [
+    {
+      "path": "kiwi.h",
+      "bytes": 328,
+      "sha256": "451097235fa08e9a899c1ccbf6f7a5d3ade68730e0fa1d5405ba036d26e56465"
+    },
+    {
+      "path": "kiwi-radio-mini.ino",
+      "bytes": 5016,
+      "sha256": "476f61013d737d3390d8ef7b08f453ee5869b02efb3cf04e86b87f848a090649"
+    },
+    {
+      "path": "debug.h",
+      "bytes": 1362,
+      "sha256": "85450d89140c8cd4aa8408ac16631871fd72150cab76e11e32d774cdf1931046"
+    },
+    {
+      "path": "kiwi.cpp",
+      "bytes": 7591,
+      "sha256": "047da73b1f568ab3153fc1e5d43dadd4ba4fc3219e1c4e9071d0be3ede47424a"
+    },
+    {
+      "path": "config.h",
+      "bytes": 1784,
+      "sha256": "75ce52af506e78bd73aa8d84233e15673a5dc886ff7c77e6454e04afad0dce93"
+    },
+    {
+      "path": "settings.h",
+      "bytes": 1088,
+      "sha256": "20bf33aac2c2c7836b4c4e0412d2393b8a48b8410779a25c25ae662b2018d851"
+    },
+    {
+      "path": "audiobuf.h",
+      "bytes": 2046,
+      "sha256": "a6a942624f4ab6baf5b73522265ddb6605f16c2932824ff00bcc078eb54b8525"
+    },
+    {
+      "path": "state.cpp",
+      "bytes": 782,
+      "sha256": "9b71b36481cc1fe7ec358c8468c19b7997d3e2b8da414db7f9653a60cbaf4f8e"
+    },
+    {
+      "path": "audio.cpp",
+      "bytes": 5442,
+      "sha256": "66b7b655b31d259701a2ddb49e11a138da9d8e49787504ef5a617a6cac431a02"
+    },
+    {
+      "path": "audio.h",
+      "bytes": 260,
+      "sha256": "0892c60e8abe62792ed4bd43b648e610a107a13047b1f8f0ed1b0bc9fab21398"
+    },
+    {
+      "path": "web.cpp",
+      "bytes": 11362,
+      "sha256": "4dc130f19c4c302ca34dd6872e9e36cbd4f537a6874c266fd7a697fe514f27d5"
+    },
+    {
+      "path": "display.cpp",
+      "bytes": 4832,
+      "sha256": "ba5983b701e798426c6d1ab451aab30218326d19864b3d99d722fe6a217a3054"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8832,
+      "sha256": "498b90f1507aa51c8b961b3babec1fe9f50f6a643ec96b858138a8d9f1a8f001"
+    },
+    {
+      "path": "display.h",
+      "bytes": 74,
+      "sha256": "51a877ac39b93978b34f680b0596da6ec4fd9e2e66be42a5ac22f0c0d73c8079"
+    },
+    {
+      "path": "kiwiadpcm.h",
+      "bytes": 1717,
+      "sha256": "1d6886e4c994730c9115bcb6197be56ca7128e2e411f211b7d0fb4dbce13b0e1"
+    },
+    {
+      "path": "encoder.h",
+      "bytes": 287,
+      "sha256": "f3abfc5ef28d38aeb70cdda1b85163deaee70fe534a9a8a445babb8cdabed1b3"
+    },
+    {
+      "path": "debug.cpp",
+      "bytes": 9130,
+      "sha256": "f6b612aa92a775e8ca719baae9fb47b0b2a61ac954e2093326e669a1400dacb6"
+    },
+    {
+      "path": "webui.h",
+      "bytes": 4286,
+      "sha256": "38078ed4da8b93fdcab0feb121e0a5c4629d419b6fdd77f8d152720fbdad36e2"
+    },
+    {
+      "path": "state.h",
+      "bytes": 2204,
+      "sha256": "0bfbf09e226a5a878831ed248a33c99c96c15e482cd00c0423c3233b75db4c0d"
+    },
+    {
+      "path": "encoder.cpp",
+      "bytes": 1728,
+      "sha256": "98e4a2c5556b351be449b20bc4b270c0caa770f6459b794dc79ccb063f1e22eb"
+    },
+    {
+      "path": "kiwiws.cpp",
+      "bytes": 8493,
+      "sha256": "4136f8994f726a92dc5a8f386f8bd80d9c99abca23a9c97b035f319d43159741"
+    },
+    {
+      "path": "settings.cpp",
+      "bytes": 3394,
+      "sha256": "22e3e7ddd0f7cc3850676f51a12a363a7392a9b7ef608950e024516c3ac8af62"
+    },
+    {
+      "path": "web.h",
+      "bytes": 265,
+      "sha256": "ce1a636ccfdf3ddd3b5d907602ad5b14c74fd87627e10500daee33c99a0d21a8"
+    },
+    {
+      "path": "kiwiws.h",
+      "bytes": 895,
+      "sha256": "7adc9ca82ba3fc6f07f732369a3f1c35c4fbfc5e0014935d90ce7d42fd0ce212"
+    },
+    {
+      "path": "kiwi-radio-mini/kiwi.h",
+      "bytes": 328,
+      "sha256": "451097235fa08e9a899c1ccbf6f7a5d3ade68730e0fa1d5405ba036d26e56465"
+    },
+    {
+      "path": "kiwi-radio-mini/kiwi-radio-mini.ino",
+      "bytes": 4075,
+      "sha256": "4d8ebec14c89b414287a58070a8fc4255b345c49d21d7097265cbb12c6f61527"
+    },
+    {
+      "path": "kiwi-radio-mini/kiwi.cpp",
+      "bytes": 5898,
+      "sha256": "93bf1bbe591cd80ee9385063ef59ee2b0f00e92f034ecaf1915abea3b1c03825"
+    },
+    {
+      "path": "kiwi-radio-mini/config.h",
+      "bytes": 1694,
+      "sha256": "8ae71b0a83c7926ecadcb411d5c167956b6735bfb2ea88688b1431fdb46744b3"
+    },
+    {
+      "path": "kiwi-radio-mini/settings.h",
+      "bytes": 1088,
+      "sha256": "20bf33aac2c2c7836b4c4e0412d2393b8a48b8410779a25c25ae662b2018d851"
+    },
+    {
+      "path": "kiwi-radio-mini/state.cpp",
+      "bytes": 306,
+      "sha256": "5df20330bf1ee106968206e636432fc6526cd6aacbda302d624bc33a0576e17e"
+    },
+    {
+      "path": "kiwi-radio-mini/audio.cpp",
+      "bytes": 3741,
+      "sha256": "28ea6ea225e402f798782eb413948b78f56da7c53e4a2cd0d4b9e59675349aa7"
+    },
+    {
+      "path": "kiwi-radio-mini/audio.h",
+      "bytes": 260,
+      "sha256": "0892c60e8abe62792ed4bd43b648e610a107a13047b1f8f0ed1b0bc9fab21398"
+    },
+    {
+      "path": "kiwi-radio-mini/web.cpp",
+      "bytes": 8213,
+      "sha256": "60873a75b1a80ac0fade99f839fc1eb8baaeb031561a64a1ba32f32acabf88f2"
+    },
+    {
+      "path": "kiwi-radio-mini/display.cpp",
+      "bytes": 4607,
+      "sha256": "b07f0edf65ad4d72819cf10dad829d8ca521f9ae9b2a23506b44d0ff2fc22627"
+    },
+    {
+      "path": "kiwi-radio-mini/README.md",
+      "bytes": 5735,
+      "sha256": "8dc0240f747cb5ae01c49d35b9e2fb2d194ca23a24f64719622f8d9e6258b373"
+    },
+    {
+      "path": "kiwi-radio-mini/display.h",
+      "bytes": 74,
+      "sha256": "51a877ac39b93978b34f680b0596da6ec4fd9e2e66be42a5ac22f0c0d73c8079"
+    },
+    {
+      "path": "kiwi-radio-mini/encoder.h",
+      "bytes": 287,
+      "sha256": "f3abfc5ef28d38aeb70cdda1b85163deaee70fe534a9a8a445babb8cdabed1b3"
+    },
+    {
+      "path": "kiwi-radio-mini/state.h",
+      "bytes": 1115,
+      "sha256": "9c103dc582ff23a5813f720301ee880b836bb6329b731e39c251cc87793dc26b"
+    },
+    {
+      "path": "kiwi-radio-mini/encoder.cpp",
+      "bytes": 1728,
+      "sha256": "98e4a2c5556b351be449b20bc4b270c0caa770f6459b794dc79ccb063f1e22eb"
+    },
+    {
+      "path": "kiwi-radio-mini/kiwiws.cpp",
+      "bytes": 8306,
+      "sha256": "6ef7c6e24d535c701f5f2aa93f98702fae06104802f1d49e701a59fd307b4424"
+    },
+    {
+      "path": "kiwi-radio-mini/settings.cpp",
+      "bytes": 3027,
+      "sha256": "1c35d0068e145d2d430ee51e05c703ca88f36df1f66937a1c65d85c782a7cfdb"
+    },
+    {
+      "path": "kiwi-radio-mini/web.h",
+      "bytes": 265,
+      "sha256": "ce1a636ccfdf3ddd3b5d907602ad5b14c74fd87627e10500daee33c99a0d21a8"
+    },
+    {
+      "path": "kiwi-radio-mini/kiwiws.h",
+      "bytes": 796,
+      "sha256": "482d705dcd8cb7726d69efa03e1d568c7832bd9ce15f31e0bea86a1530296b35"
+    }
+  ],
+  "selectedVersion": "outer kiwi-radio-mini directory containing kiwiadpcm.h, audiobuf.h and debug.cpp",
+  "licenseFiles": [],
+  "redistribution": "Source bundle not committed; no explicit license found; only inventory and independently authored checks are archived."
+}

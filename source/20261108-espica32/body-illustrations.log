@@ -1,0 +1,1107 @@
+Reading additional input from stdin...
+2026-11-08T04:08:11.130532Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/network-switch/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T04:08:11.130566Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-cdp/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T04:08:11.130570Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-docker/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T04:08:11.130573Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-publisher/SKILL.md: missing YAML frontmatter delimited by ---
+OpenAI Codex v0.165.0
+--------
+workdir: /Users/jason/Dev/mycelium/blog
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a1b957-a44b-75e2-baef-e11282cf4a1e
+--------
+user
+Use $mycelium-mushroom-illustrations. Read src/content/blog/espica32-kiwisdr-wifi-radio-build-review.md. Generate exactly3 separate16:9 whitebackground LittleM handdrawn body illustrations using image generation, not code drawing. Anchor1: local knob ESP32 → WiFi Internet → remoteKiwiSDR antenna, audio back speaker; clearly remoteRF notESP32RF, fewChinese labels. Anchor2: ADPCM compressed transfer then decodedPCMbuffer and speaker; buffer trades jitter forlatency, no false4xbufferRAMclaim. Anchor3: sourceversion→wiring→setup→audio acceptance; hostalgorithmchecks已验证, realESP32实板待验证. Follow skill visualidentity. Save raw generated_images/espica32-20261108/. Copy/compress final3 individually to src/assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-01.png -02.png -03.png,1120x630,at most48palettecolors,no dither,each<90000bytes. Inspect readableChinese/correctarrows thenfinish. DO NOT edit markdown, banner or any unrelatedfiles. Must complete finalcp and verification before returning.
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+codex
+我会按小M配图 skill 读取正文和视觉规范，逐张生成这三个认知锚点，再检查中文与箭头，压缩并验证最终文件；只写入指定的原图目录和三张正文配图。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "pwd && rg --files -g AGENTS.md -g 'SKILL.md' .agents /Users/jason/.codex/skills/mycelium-mushroom-illustrations /Users/jason/.codex/skills/.system/imagegen" in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+/Users/jason/Dev/mycelium/blog
+/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md
+/Users/jason/.codex/skills/.system/imagegen/SKILL.md
+.agents/skills/xhs-publisher/SKILL.md
+.agents/skills/banner-creator/SKILL.md
+.agents/skills/llm-wiki/SKILL.md
+.agents/skills/mage-vl/SKILL.md
+.agents/skills/source-scanner/SKILL.md
+.agents/skills/seo-geo/SKILL.md
+.agents/skills/xhs-mcp-cdp/SKILL.md
+.agents/skills/network-switch/SKILL.md
+.agents/skills/daily-video-planner/SKILL.md
+.agents/skills/xhs-mcp-docker/SKILL.md
+.agents/skills/blog-publisher/SKILL.md
+.agents/skills/mushroom/SKILL.md
+.agents/skills/forage/SKILL.md
+.agents/codex-skills/mycelium-mushroom-illustrations/SKILL.md
+.agents/codex-skills/mycelium-avatar-illustrations/SKILL.md
+.agents/codex-skills/mycelium-baobao-cat-illustrations/SKILL.md
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md && cat src/content/blog/espica32-kiwisdr-wifi-radio-build-review.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+---
+name: mycelium-mushroom-illustrations
+description: 生成 Mycelium「小M」蘑菇 IP 风格的中文正文配图。【科技类别】文章默认用此 skill。用于为中文文章、帖子、博客、Notion 文档、工作流、方法论、流程、结构、状态、隐喻或观点生成“怪诞”“蘑菇”“小M”“菌丝”“手绘”“正文配图”“文章插图”“配图建议”“shot list”“去标题/改图”等任务；视觉为纯白手绘、少量红橙蓝批注、简洁清爽但天马行空，主角是黑色小蘑菇「小M」。
+---
+
+# Mycelium 小M（蘑菇）怪诞正文配图
+
+> 用途分工：本 skill 用于**科技类别**文章。社会/创作思考类别用 `mycelium-avatar-illustrations`（卡通小人），科普类别用 `mycelium-baobao-cat-illustrations`（德文猫Baobao）。
+
+## 核心定位
+
+为中文文章设计和生成 16:9 横版正文配图。目标不是做商业插画、PPT 信息图或可爱卡通，而是把文章里的关键判断、流程、结构、状态或隐喻，变成一张清爽、怪诞、有创意、可读但不说明书的手绘解释图。
+
+默认视觉 IP 是“小M”：🍄 经典造型的小蘑菇怪物——**红色菌盖 + 白色圆点斑、米白菌柄 + 黑色手绘轮廓、黑点眼**、细腿、空表情，认真做一件荒诞但成立的事；脚下可伸出橙色菌丝线做连接/传输。不要画成黑色实心。小M必须参与画面的核心动作，不能只是站在旁边当装饰。完整形象见 `references/mushroom-ip.md`。
+
+## 先读这些参考
+
+按任务需要读取，不要一次塞满上下文：
+
+- `references/style-dna.md`：风格 DNA、颜色、文字、禁忌。
+- `references/mushroom-ip.md`：小M IP 的形象、性格、动作库和禁忌。
+- `references/composition-patterns.md`：结构类型、原创隐喻方法和反复刻规则。
+- `references/prompt-template.md`：单张生图提示词模板。
+- `references/qa-checklist.md`：生成后检查和迭代规则。
+- `assets/examples/`：只作低频视觉校准，不进入默认生成路径。不要照抄这些案例的构图、物件或标注。
+
+## 工作流
+
+### 1. 消化正文
+
+先读用户给的正文、链接、Notion 页面、Markdown 文件或截图内容。提炼：
+
+- 核心观点是什么
+- 哪些段落承担认知转折
+- 哪些内容适合用图解释
+- 哪些地方只适合文字，不需要图
+
+不要平均配图。优先选择“认知锚点”，例如：核心判断、两个断点、输入输出闭环、分流、前后对比、一鱼多吃、承接路径、常见坑、角色状态变化。
+
+### 2. 先出配图策略
+
+如果用户只是说“分析怎么配图 / 思考哪些地方需要配图”，先给 shot list。每张图写清楚：
+
+- 放在哪个段落后
+- 图的主题
+- 核心意思
+- 结构类型
+- 小M在图里做什么
+- 建议元素
+- 建议中文标注词
+
+默认 4-8 张。文章很短时 1-3 张；长文也不要轻易超过 9 张。够用就好，避免把正文做成画册。
+
+### 3. 单张生成
+
+如果用户明确要求“生成 / 输出 / 做图 / 帮我生成”，不要停下来等确认；用内置 `image_gen` 每张单独生成。不要把多张图拼在一张里。
+
+每张图只讲一个核心结构。提示词必须包含：
+
+- 16:9 横版中文正文配图
+- 纯白背景
+- 黑色手绘线稿
+- 少量红色/橙色/蓝色中文手写批注
+- 大量留白
+- 小M作为核心动作主体
+- 禁止 PPT、商业插画、幼稚可爱、复杂架构、左上角类型标题
+
+不要复刻过往案例。案例只提供风格密度和小M参与方式，不能直接复用“传送带断点 / 小M拉线 / 素材鱼 / 盖章工具箱 / 常见坑路径”等已有构图，除非用户明确要求复刻某张图。每次都要从当前文章重新发明一个奇怪但成立的隐喻。
+
+### 4. 检查与迭代
+
+生成后检查 `references/qa-checklist.md`。如果出现以下问题，优先重生成或局部编辑：
+
+- 小M只是装饰
+- 画面太满
+- 太像流程图/PPT
+- 中文太多或错字严重
+- 左上角出现“常见坑/流程图/系统架构图”等标题
+- 画风太可爱、幼稚、死板
+- 背景不是干净白底
+
+### 5. 保存交付
+
+如果用户在 workspace 内工作，把最终图复制到：
+
+```text
+assets/<article-slug>-illustrations/
+```
+
+按顺序命名：
+
+```text
+01-topic-name.png
+02-topic-name.png
+```
+
+保留原始生成文件，不要覆盖已有资产，除非用户明确要求替换。
+
+## 输出口径
+
+生成前的策略输出要短而准。生成后的交付要包含：
+
+- 生成了几张
+- 每张图的用途
+- 保存路径
+- 哪些图最稳，哪些图是可选
+
+不要长篇解释风格理论；让图自己说话。
+---
+title: "ESPica32：把远方KiwiSDR装进ESP32旋钮收音机"
+titleEn: "ESPica32: A Knob-Controlled KiwiSDR Wi-Fi Radio"
+description: "ESPica32让ESP32通过Wi-Fi控制远方KiwiSDR并播放音频。本文核对作者源码包、OLED与功放接线、Arduino版本和ADPCM缓冲设计，解释四块模块之外的采购需求、嵌套旧代码和首次配网步骤，记录8192样本解码比较与缓冲断言结果，并区分作者跨国收听报告、本机辅助验证与仍待实板确认的能力。"
+descriptionEn: "Review ESPica32 hardware, source archive, ADPCM and buffering, with host decoder checks and clear limits on remote reception, setup and firmware validation."
+wechatTitle: "ESPica32：ESP32旋钮收音机"
+wechatDigest: "通过Wi-Fi收听远方KiwiSDR，拆解接线、源码与ADPCM音频方案。"
+pubDate: "2026-11-08"
+updatedDate: "2026-11-08"
+category: "Tech-Experiment"
+tags: ["ESPica32", "ESP32", "KiwiSDR", "DIY硬件", "网络收音机"]
+heroImage: "../../assets/images/espica32-kiwisdr-wifi-radio-build-review-banner.jpg"
+---
+
+ESPica32 是一台把远程 KiwiSDR 接收机装进实体旋钮操作体验里的 Wi-Fi 收音终端。日常收听可以脱离手机和电脑，但它仍需要网络，以及远方愿意共享接收通道的 KiwiSDR；真正接收无线电的天线和射频硬件在远端。
+
+作者 Ivan（呼号 LU8MIL）在 Todo-SDR 分享了 Arduino 源码包、接线图和操作说明。本次查到的是作者网站的 RAR 下载，尚未找到可确认归属的 ESPica32 GitHub 仓库，也未在下载包里找到明确许可证。因此，准确的介绍是“源码可下载的 DIY 项目”，不能自行替它补上 MIT、GPL 或商业再分发授权。
+
+作者页面标注 2026 年 11 月 1 日，RTL-SDR.com 报道日期是 11 月 5 日；媒体报道时间不等于代码首次公开时间。以下结合实际下载包阅读与本机辅助测试，拆开它的能力、材料清单和复现门槛。
+
+## ESP32 究竟接收什么，为什么能听远方？
+
+链路是：远方天线与 KiwiSDR 接收机 → 网络音频及控制协议 → 家中的 ESP32 → I2S 功放与扬声器。旋钮改变频率和模式时，ESP32 向服务器发调谐命令；服务器完成接收与解调，再把音频送回来。
+
+这和播放一个固定互联网电台 URL 有区别：听众可以调频率、切换解调方式，探索远端天线所在地点能接收到的信号。也正因为如此，“全球”指可选择不同地区的接收站，并不表示每个台、每个时段都能听到；远端天线、传播条件、可用通道和站主访问限制都会影响结果。
+
+源码 `state.cpp` 的模式表将屏幕上的 FM 映射为 `nbfm`，即窄带 FM。它不能据此被宣传成能直接收本地 88–108 MHz 宽带调频广播的 ESP32 射频收音机。换到远端站点，也不会改变本地板子的射频能力。
+
+![小M用实体旋钮控制远方接收机，网络把音频送回扬声器](../../assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-01.png)
+
+## 四块模块够吗？完整材料与接线
+
+四块主要模块是 ESP32-WROOM-32 开发板、OLED 显示屏、带按键的编码器、MAX98357A I2S 功放。此外还需要一个扬声器、USB 供电及连线；面包板或焊接固定结构也应提前准备。“四样东西”适合作为主要模块概括，不是完整采购单。
+
+| 模块 | 本次下载包中的配置与用途 |
+|---|---|
+| ESP32-WROOM-32 DevKit | 网络连接、协议处理、解码与控制 |
+| SH1106 1.3 英寸 OLED | I2C 地址通常为 0x3C；外层代码默认屏型宏仍是 SSD1306，使用 SH1106 要改配置 |
+| EC11 / KY-040 编码器 | A/B 两路旋转输入加按键，合用一个旋钮完成多个动作 |
+| MAX98357A | 接收 I2S 音频并驱动扬声器 |
+| 4–8 Ω 扬声器 | 单独的一件输出器件，不能漏买 |
+| USB 电源、线材、安装材料 | 让整机获得稳定供电并可靠连接 |
+
+外层 `config.h` 的信号脚为：OLED SDA→GPIO21、SCL→GPIO22；编码器 A→GPIO32、B→GPIO33、SW→GPIO27；I2S BCLK→GPIO18、LRC→GPIO19、DIN→GPIO23，共八个信号 GPIO。
+
+供电按作者接线图分别处理：屏幕接 3V3，功放使用开发板 USB 供电对应的 VIN/5V，GND 共地。不同开发板对 VIN 的定义可能不同，接线前核对板卡丝印和说明；扬声器接功放的差分输出两端，不把其中一端当作 GND。
+
+单旋钮是多功能操作器：旋转调整当前焦点，短按切换频率、音量和模式，双击跳到下一预设波段，长按切调谐步进，更长按显示 Web 地址。这里的“换台”主要是调频率或波段；服务器列表由 Web 面板选择，并不是无限电台目录已自动装进旋钮。
+
+## 下载包里为什么有两套项目？如何开始复现？
+
+本次 RAR 解压后，外层 `kiwi-radio-mini/` 里面还嵌套了一个同名目录。两套代码存在差异，外层有 `kiwiadpcm.h`、`audiobuf.h`、`debug.cpp` 等文件，内层缺少这些增强模块。复现时应认准这一层，先把外层项目单独复制到干净目录，避免误开旧版本。
+
+作者 README 指定 Espressif Arduino ESP32 板卡包 2.0.17，并提示 3.x 不兼容；还需安装 U8g2，选择 ESP32 Dev Module 和 No OTA（2MB APP / 2MB SPIFFS）分区。这是作者给出的构建配方，本次没有实际编译完整固件，不能保证所有新旧板卡环境都能直接通过。
+
+建议按以下顺序做：
+
+1. 下载文末作者源码包，选对外层目录，确认 `.ino` 与项目目录同名。
+2. 修改 OLED 类型、GPIO 与音频输出配置，核对接线。
+3. 清空或替换 `DEFAULT_WIFI_SSID`、`DEFAULT_WIFI_PASS`。本次源码仍带开发者默认 Wi-Fi 配置，不能原样烧录后误以为必然直接进入配网热点，也不要把原值传播到自己的仓库。
+4. 按 README 的板卡包和分区方案编译上传，串口监视器设为 115200。
+5. 启动时按住编码器可进入配网；连接设备热点后，用浏览器打开 192.168.4.1，配置家庭 Wi-Fi 与可访问的 Kiwi 服务器。
+6. 连通后再用屏幕、旋钮与扬声器独立操作；需要选服务器、诊断或改配置时，再打开 Web 面板。
+
+所以“不用手机、不用电脑”说的是配置完成后的日常操作。下载、编译、烧录及首次浏览器配网仍需要相应设备，不能省略。
+
+## ADPCM 为什么比一味扩大缓冲更关键？
+
+外层代码把 Kiwi 音频采样率设为 12 kHz，PCM 为每样本 16 bit。理论音频净荷为 12,000×2=24,000 字节/秒；4 bit IMA ADPCM 则为 12,000÷2=6,000 字节/秒。这个四倍差别来自格式计算，未计入网络报头、重传和控制消息，也不是本次实测网速。
+
+作者报告自己在德国连接阿根廷接收机时，约 260 ms 网络延迟下未压缩音频出现断续，改用 ADPCM 后改善。这个案例能说明压缩的工程价值，但不能推出所有 ESP32 或所有网络都存在同一个延迟门槛；实际瓶颈还与 TCP 窗口、接收循环和网络突发有关。
+
+判断方法是区分平均到达速率不足与短时抖动。如果长期收进来的音频少于播放消耗，扩大缓冲只能延后断音，不能修复吞吐缺口。若平均速率足够、只是短暂卡顿，抖动缓冲才更有效。
+
+代码的缓冲控制器提供 100–2000 ms 最低目标，断音后自动增加 300 ms，上限 2000 ms；稳定一段时间后逐步回落。另一个控制器通过偶尔重复或丢弃一个样本补偿两端时钟漂移。大缓冲换来稳定，也带来旋钮动作到声音变化的额外等待。
+
+ADPCM 解码后仍回到 16 bit PCM 环形缓冲，所以“传输少四倍”不等于“本地音频缓冲占用也少四倍”。同样，输出侧 48 kHz 线性插值不会凭空恢复原来 12 kHz 音频没有的高频细节。
+
+![小M先检查传输速率，再调节抖动缓冲，区分压缩与延迟的作用](../../assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-02.png)
+
+## 本次实际验证了什么？
+
+Mycelium Protocol 下载并记录了源码包哈希，读取外层实现，在 macOS 上用 Apple clang 编译其实际 ADPCM 与缓冲头文件，进行了两类主机辅助检查：
+
+- 解码 4096 字节的固定随机输入，共 8192 个样本；调整输入半字节顺序后，与 Python 3.12 `audioop.adpcm2lin` 的结果逐样本一致。分块解码与一次性解码一致，重置后也能复现相同输出。
+- 对缓冲初始目标、断音递增、2 秒封顶、关闭自动模式、稳定后回落，以及低水位重复/高水位丢弃样本等路径执行了 10 个断言，全部通过。
+
+这些证据支持算法片段按预期工作，尚不能证明真实电路音质、供电稳定性、全部服务器协议兼容性或长时间无断音。本次没有 ESP32 实板、没有固件完整构建、没有连接公共 Kiwi 占用通道，也没有测量真实网络音频延迟。
+
+源码包 SHA-256：`ff6035c799d0c7bdaae0c673df50544c2d790f98673586fe07becac21e3efd72`。网站文件可能更新；复现时保留自己的下载版本与哈希。
+
+## 它离一台省心的成品还有哪些距离？
+
+协议上，这版使用普通 `WiFiClient`，README 明确只支持 `ws://`；需要 TLS 的 `wss://` 端点不能默认可用。服务器满员、密码不对、连接被站主限制，都是正常可能遇到的情况，先用浏览器确认站点，再排查板端，通常更有效。
+
+管理上，所读 `web.cpp` 的控制与配置路由未看到登录鉴权检查。使用家庭可信网络，不为这个面板做公网端口映射；默认配网密码也应改成自己的值。这是从具体代码得到的部署建议，不是对项目做过完整安全审计的结论。
+
+功能上，作者页面把彩屏瀑布图、外壳和频率收藏列为后续方向，不能宣传成当前固件已完备支持。它真正有吸引力的地方是：把网络 SDR 的可调谐能力变成一个可摸到的旋钮，同时用压缩、缓冲和诊断应对微控制器的资源限制。
+
+![小M按源码版本、接线、配网、声音的顺序验收，区分已测试与待实板验证](../../assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-03.png)
+
+想把它当成一个周末学习项目，很合适；想要断网可用的应急短波机，或本地宽频射频接收器，就需要不同的接收硬件和设计。验收时先保证“声音稳定、控制有效、重启保留配置”，再考虑外壳与更多功能。
+
+## 常见问题
+
+### 必须有自己的 KiwiSDR 吗？
+
+不一定，可以连接允许访问的公共服务器；接收范围与通道可用性由远端站点决定。自建接收机能增加控制权，但不是这个客户端的必需硬件。
+
+### 有官方 GitHub 仓库吗？
+
+本次从作者原文和 GitHub 精确项目名检索，找到的是作者网站的源码压缩包，未确认官方 ESPica32 GitHub 仓库。相关 `jks-prv/kiwiclient` 是 KiwiSDR Python 客户端及协议参考，不应冒充 ESPica32 自己的仓库。
+
+### 能说已经实测“全球流畅收听”吗？
+
+不能。本次只做源码核对、8192 样本参考解码比较和缓冲控制断言。跨国收听效果来自作者报告，实板、实际站点与长时间稳定性仍需复现者验证。
+
+## 来源与进一步阅读
+
+作者项目与下载入口：https://www.todo-sdr.com/espica32-cliente-kiwisdr/
+
+作者源码包：https://www.todo-sdr.com/wp-content/uploads/2026/11/kiwi-radio-mini.rar
+
+媒体报道：https://www.rtl-sdr.com/espica32-a-standalone-esp32-radio-for-tuning-any-kiwisdr-with-no-pc-or-phone/
+
+相关协议与工具参考（不是 ESPica32 仓库）：https://github.com/jks-prv/kiwiclient
+
+公共接收站目录：https://kiwisdr.com/public/
+
+相关阅读：用 ESP32 LoRa 板接收 ADS-B 的条件与边界：https://blog.mushroom.cv/blog/esp32-adsb-receiver-analysis/
+
+---
+
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+
+<!--EN-->
+
+ESPica32 is a Wi-Fi audio and tuning terminal for remote KiwiSDR receivers, with a physical knob, OLED and speaker. Once configured, it can operate without a phone or PC at hand. It still depends on networking and a remote receiver: the antenna and RF reception happen at the KiwiSDR site.
+
+Ivan, callsign LU8MIL, publishes the project on Todo-SDR. The primary page is dated November 1, 2026, while RTL-SDR.com covered it on November 5. Neither date alone establishes the first public code release. The verified distribution is a downloadable RAR source archive; this review did not locate an attributable official ESPica32 GitHub repository or an explicit license inside the archive. Downloadable source should not be assigned an invented MIT or GPL license.
+
+## What does the ESP32 actually receive?
+
+The chain is remote antenna and KiwiSDR → network audio/control → ESP32 → I2S amplifier and speaker. Turning the knob sends tuning commands to the receiver. That is more interactive than playing a fixed internet-radio URL, but coverage depends on the selected remote station, propagation, antenna and available receiver channels.
+
+In the downloaded `state.cpp`, the displayed FM mode maps to `nbfm`, narrowband FM. It does not establish local reception of the 88–108 MHz wideband FM broadcast band. Selecting another server changes where reception occurs, not the ESP32 board's RF capabilities.
+
+![LittleM controls a remote receiver with a local knob while audio travels back through the network](../../assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-01.png)
+
+## Hardware and wiring: four modules are not the whole bill
+
+The main modules are an ESP32-WROOM-32 DevKit, OLED, push-button rotary encoder and MAX98357A I2S amplifier. A separate speaker, USB power, wires and a mounting method are also needed.
+
+| Part | Configuration in the downloaded outer project |
+|---|---|
+| ESP32-WROOM-32 DevKit | Networking, decoding, audio output and user controls |
+| SH1106 1.3-inch OLED | Usually I2C 0x3C; change the OLED macro because the outer config defaults to SSD1306 |
+| EC11 / KY-040 encoder | Two rotary inputs and a button |
+| MAX98357A | I2S input and speaker amplification |
+| 4–8 ohm speaker | A separate component beyond the four principal modules |
+| USB supply and wiring | Required for a reliable physical build |
+
+The outer configuration uses GPIO21/22 for OLED SDA/SCL, GPIO32/33 for encoder A/B, GPIO27 for its button, and GPIO18/19/23 for I2S BCLK/LRC/DIN. That is eight signal GPIOs.
+
+The author's diagram powers the OLED from 3V3 and the amplifier from the USB-derived VIN/5V rail, with common ground. Verify the particular DevKit's VIN labeling before wiring. Connect the speaker across the amplifier's two differential output terminals; neither is a ground connection.
+
+Rotating changes the focused control. A short click cycles frequency, volume and mode; double-click advances a band preset; longer presses change tuning steps or display the web address. Server selection lives in the web interface, rather than an automatically populated global-station directory on the knob.
+
+## Which source directory should be built?
+
+The RAR contains an outer `kiwi-radio-mini/` and a nested directory with the same name. They differ. The outer directory includes `kiwiadpcm.h`, `audiobuf.h` and diagnostics files missing from the nested version. Copy the outer project into a clean directory to avoid opening the older implementation accidentally.
+
+Its README specifies Espressif's Arduino ESP32 package 2.0.17, warns about 3.x compatibility, and requires U8g2. It selects ESP32 Dev Module and the No OTA partition scheme with 2 MB application and 2 MB SPIFFS. This is an upstream build recipe, not a firmware build verified in this review.
+
+Before flashing, set the OLED/audio/GPIO options and clear or replace `DEFAULT_WIFI_SSID` and `DEFAULT_WIFI_PASS`: the downloaded configuration contains developer fallback Wi-Fi settings. Do not republish their values. Those defaults also mean first boot need not immediately enter the setup hotspot as an oversimplified guide might suggest.
+
+Hold the encoder during startup to enter setup, then use a browser at 192.168.4.1 to enter your network and Kiwi server. After configuration, listening uses the physical controls; the web panel remains useful for configuration and diagnostics. Initial downloading, flashing and browser setup still require appropriate external devices.
+
+## Why does ADPCM matter more than a larger buffer?
+
+The configuration uses a 12 kHz source rate. At 16-bit mono, PCM audio payload is 24,000 bytes/s; at four bits per sample, IMA ADPCM payload is 6,000 bytes/s. These are format calculations, excluding packet overhead and retransmissions, not measured network throughput.
+
+The author reports improved Germany-to-Argentina listening after enabling ADPCM on a connection with roughly 260 ms delay. That is a reported example, not a universal ESP32 latency threshold. TCP windowing, receive-loop servicing and burst delivery also matter.
+
+A jitter buffer helps when average delivery is adequate but packets arrive unevenly. If average delivery remains below playback consumption, a larger buffer merely postpones failure. The outer controller sets a 100–2000 ms minimum target, adds 300 ms after an underrun up to 2000 ms, then decreases gradually after stability. A separate controller occasionally repeats or removes one sample to counter clock drift.
+
+Compression reduces transport payload, but the audio is decoded back into 16-bit PCM before entering the ring buffer. It therefore does not reduce that buffer's memory consumption fourfold. Likewise, 48 kHz output through linear interpolation does not recreate information missing from the original 12 kHz signal.
+
+![LittleM checks sustained delivery before adjusting jitter buffering and its latency tradeoff](../../assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-02.png)
+
+## What was actually tested?
+
+Mycelium Protocol downloaded and hashed the archive, reviewed the outer implementation, and compiled its actual ADPCM and buffer headers on a macOS host with Apple clang.
+
+For decoding, 4096 deterministic random input bytes produced 8192 samples. After adapting nibble order for Python 3.12's `audioop.adpcm2lin`, all samples matched the reference. Chunked and single-pass decoding matched, and resetting the decoder reproduced the output.
+
+Ten assertions also passed for initial buffer targets, underrun increments, the two-second cap, manual mode, gradual decay, and low/high/middle buffer-level drift decisions. These checks establish behavior of selected algorithmic components. They do not establish circuit reliability, audio quality, full protocol compatibility or uninterrupted overseas playback.
+
+No ESP32 board, full firmware build, live public receiver, RF listening session or end-to-end latency measurement was used. Archive SHA-256: `ff6035c799d0c7bdaae0c673df50544c2d790f98673586fe07becac21e3efd72`. Retain your own download hash because the website file may change.
+
+## Practical limits and a useful acceptance order
+
+This version uses plain `WiFiClient`; its README limits connections to `ws://`. Do not assume `wss://` endpoints work. Full channels, station passwords and operator restrictions can also prevent connections. First establish access in a browser, then diagnose the board.
+
+The reviewed `web.cpp` registers control and configuration routes without an observed login check. Keep the panel on a trusted network, avoid public port forwarding, and replace the default setup password. This is a concrete deployment observation, not a comprehensive security audit.
+
+The author's page lists a color waterfall, enclosure and frequency favorites as future directions. They should not be advertised as already delivered. The useful engineering lesson is combining a tactile interface with compression, buffering and diagnostics on a small device.
+
+![LittleM checks source version, wiring, setup and audio, marking physical validation as still pending](../../assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-03.png)
+
+A sensible acceptance sequence is stable sound, effective controls and configuration persistence across reboot, followed by enclosure work. For an offline emergency receiver or local wideband RF instrument, choose hardware designed for that purpose. ESPica32 is an interesting network-SDR learning build with different requirements.
+
+## FAQ
+
+### Is owning a KiwiSDR necessary?
+
+No. Accessible public receivers can be used, subject to the operator's rules and free channels. Their location and antenna determine reception. A privately operated Kiwi gives more control but is not a required component of the client.
+
+### Where is the official GitHub repository?
+
+This review verified the author's website archive, not an official ESPica32 GitHub repository. The related `jks-prv/kiwiclient` repository provides Python clients and protocol reference material; it is a different project.
+
+### Was worldwide smooth listening demonstrated here?
+
+No. The evidence here is source inspection, an 8192-sample decoder comparison and buffer-control assertions. Cross-country listening comes from the author's report; physical hardware, actual server access and long-running stability need separate validation.
+
+## Sources and related reading
+
+Author and download entry: https://www.todo-sdr.com/espica32-cliente-kiwisdr/
+
+Author's source archive: https://www.todo-sdr.com/wp-content/uploads/2026/11/kiwi-radio-mini.rar
+
+Media report: https://www.rtl-sdr.com/espica32-a-standalone-esp32-radio-for-tuning-any-kiwisdr-with-no-pc-or-phone/
+
+Related protocol/tools reference, not the ESPica32 repository: https://github.com/jks-prv/kiwiclient
+
+Public receiver directory: https://kiwisdr.com/public/
+
+Related ESP32 ADS-B analysis: https://blog.mushroom.cv/blog/esp32-adsb-receiver-analysis/
+
+---
+
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/style-dna.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/mushroom-ip.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/composition-patterns.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/prompt-template.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/qa-checklist.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+# 风格 DNA
+
+## 一句话
+
+纯白、极简、手绘、留白、克制、怪诞、产品草图感、中文手写感、结构清楚但不说明书。
+
+像一个长期做 AI、产品、设计、开发工具的人，在白纸上随手画出来的一张解释草图。
+
+## 必须
+
+- 16:9 横版正文配图。
+- 纯白背景：不要米色、暖灰、纸张纹理、渐变、阴影、噪点、复古纸感。
+- 黑色手绘线稿为主：细线、轻微抖动、不机械、不矢量、不厚重描边。
+- 大量留白：主体占画面约 40%-60%，至少 35% 空白，最好有一整块安静区域。
+- 少量中文手写批注：最多 5-8 处，每处尽量 2-8 个字。
+- 一张图只讲一个核心动作、结构、状态或隐喻。
+- 结构要自然表达，不要在图上写结构类型名称。
+
+## 颜色
+
+- 黑色：主体线稿、角色、框线、结构、主要文字、主体物件。
+- 红色：重点批注、问题、情绪点、关键提醒、结果。
+- 橙色：主流程、路径、箭头、自动化流向、从 A 到 B 的移动关系。
+- 蓝色：补充说明、脑内状态、系统状态、第二层解释、AI/assistant/自动化提示。
+
+蓝色不是每张都必须用。颜色要克制，宁可少不要多。
+
+## 绝对不要
+
+- 不要商业插画。
+- 不要 PPT 信息图。
+- 不要正式流程图。
+- 不要课程课件。
+- 不要可爱卡通海报。
+- 不要儿童插画。
+- 不要复杂架构图。
+- 不要精致扁平插画。
+- 不要科技感 UI。
+- 不要真实 App 截图。
+- 不要复杂背景、渐变、阴影、纹理。
+- 不要把每个节点都解释清楚。
+- 不要左上角写“Workflow 流程图 / 系统架构图 / 常见坑 / 路线图”等类型标题。
+
+## 审美方向
+
+要怪诞、创意、有意思、简洁清爽、天马行空。
+
+不要可爱、幼稚、很复杂、死板。
+# 小M IP
+
+## 角色定义
+
+小M是 Mycelium 中文正文配图的固定视觉 IP。
+
+默认每张图都要出现小M。小M不是吉祥物，不是贴纸，不是可爱装饰，而是正在认真参与系统运转的荒诞工作者——一只在白板草图里真的负责某项工作的小蘑菇。
+
+## 外形（🍄 经典蘑菇造型）
+
+- 手绘小蘑菇怪物，参照 🍄 emoji 的经典造型，不是黑色实心。
+- **菌盖：红色（正红 / 红橙）半圆顶，盖上点缀 3-5 颗白色圆点斑**（🍄 标志性白点）。菌盖边缘有手绘黑色轮廓线。
+- **菌柄/身体：米白色（奶白）填充 + 黑色手绘轮廓线**。
+- **黑色小圆点眼睛**，长在白色菌柄上（白柄上用黑点眼才清楚；不要用白点眼）。
+- 细腿，偶尔有细胳膊；表情空、呆、冷静、认真（deadpan，不卖萌）。
+- 身体（菌柄）可以变形：圆柱、漏斗、管道、洞口、奇怪工位等，但**红帽白点 + 白柄**这套识别特征要保留。
+- 轮廓略微不规则，有手绘感。不要画得太精致、太 3D、太写实。
+
+### 配色说明（重要）
+
+- 菌盖红是**角色自身的身份色**（填充块）；这与「红色批注」（细线/文字）在视觉上是分开的，不冲突。
+- 流动 / 传输 / 路径 / 菌丝仍用**橙色**；脑内状态 / 系统提示用蓝色。颜色整体仍要克制。
+
+## 菌丝特性（这是小M区别于普通角色的关键）
+
+- 小M脚下、身后或手里可以延伸出**细细的菌丝线**。
+- 菌丝用来：连接信息源、传输养分/内容、织成网络、把分散的节点接到一起。
+- 菌丝线用橙色表示「流动 / 传输 / 从 A 到 B」，和风格 DNA 的颜色语义一致。
+- 不要每张都堆满菌丝；只在「连接、传输、网络、汇聚」类主题里用 1-2 根，点到为止。
+
+## 性格
+
+- 很认真，但做的事有点荒诞。
+- 像一个低调的系统操作员 / 地下网络的运维工。
+- 冷幽默，不卖萌。
+- 有点笨拙，但不蠢。
+
+## 常见职责
+
+让小M承担核心动作：
+
+- 搬运素材、分解养分。
+- 用菌丝拉线、汇聚信息源、连接节点。
+- 卡在断点里。
+- 在机器里操作“判断”杆。
+- 变成筛选漏斗。
+- 切开“素材鱼”。
+- 盖章承接话术。
+- 牵着承接路径。
+- 举警告牌看坑。
+- 在地下网络里传输内容、把孢子撒出去（指数传播）。
+- 在旁边搬砖、搭桥、开门、分拣、记录。
+
+## 禁止
+
+- 不要把小M画成过度可爱的吉祥物、卡通蘑菇贴纸。
+- 不要画成儿童卡通角色。
+- 不要给小M复杂服装、表情包、闪亮眼睛、笑脸。
+- 不要画成写实蘑菇 / 3D 蘑菇 / 渐变质感（红帽白点是手绘平涂，不是写实）。
+- 不要把菌盖画成黑色实心（旧版已废弃）；也不要弄成多彩花哨。
+- 不要让小M只是站在角落里看。
+- 不要让小M或菌丝抢走结构表达，把画面塞满。
+
+## 判断标准
+
+如果去掉小M，图的核心隐喻还能完全成立，说明小M太装饰了；要重写提示词，让小M成为动作主体。菌丝同理：菌丝必须服务于「连接 / 传输」的核心意思，不是背景装饰。
+# 构图模式与原创规则
+
+## 基础结构类型
+
+选择一种结构即可，不要混太多。
+
+### Workflow 流程
+
+适合：输入 -> 处理 -> 输出，内容生产，AI 工作流，自动化链路。
+
+画法：左侧输入，中间小M或怪机器处理，右侧输出，橙色箭头表达主流向。
+
+### 系统局部
+
+适合：信息来源、过滤器、数据库、渲染器、agent 系统局部。
+
+画法：只画 3-5 个核心模块，小M参与其中一个关键动作。
+
+### 前后对比
+
+适合：混乱/有序，手动/自动，分散/收拢，焦虑/稳定。
+
+画法：左混乱，右稳定，中间橙色箭头。角色可以更夸张。
+
+### 角色状态
+
+适合：用户痛点、创作者状态、工具太多、信息焦虑、卡住到跑起来。
+
+画法：2-4 个小状态，每个状态一个短标注。
+
+### 概念隐喻
+
+适合：内容工厂、信息仓库、脑内黑盒、工作流机器、自动日报。
+
+画法：一个大的怪物件或机器，少量输入，一个输出。要有记忆点。
+
+### 方法分层
+
+适合：方法论框架、系统层级、能力栈、内容系统分层。
+
+画法：一层层盒子，不要正式金字塔；小M在旁边搬砖或搭建。
+
+### 地图路线
+
+适合：从想法到上线、用户路径、内容承接路径、学习路线。
+
+画法：一条弯曲路径，少量节点，小M牵线或走路。
+
+### 小漫画分镜
+
+适合：失败到成功、真实过程、吐槽、使用前后变化。
+
+画法：2-4 个小场景，每格只表达一个动作。
+
+## 原创隐喻生成法
+
+每次都从当前文章重新发明隐喻，不能照搬旧图。
+
+### 三步
+
+1. 把抽象概念换成一个物理动作：卡住、漏掉、变重、分拣、沉淀、发酵、开门、折叠、拆包、回流。
+2. 把系统结构换成一个低科技物件：坏掉的机器、纸箱、抽屉、水管、邮筒、怪表盘、秤、井、梯子、奇怪工位。
+3. 让小M承担动作：不是站旁边，而是卡在机器里、拉错线、守门、搬运、修补、称重、扶梯子、记录、把东西塞进某个怪装置。
+
+### 可用物件池
+
+- 纸箱、抽屉、旧机器、漏斗、秤、邮筒、门、井、梯子、水管、线团、闸门、转盘、黑盒、打孔器、压面机、晾衣绳、怪工位。
+- 用时只选 1-2 个，不要堆满。
+
+### 小M动作池
+
+- 拉、扛、塞、捞、压、称、缝、剪、拧、守、推、接、拆、标记、回收。
+- 动作要服务核心意思，不要为了怪而怪。
+
+## 反复刻规则
+
+不要默认打开或复刻 `assets/examples/`。这些图片只用于风格校准，例如线条密度、留白、颜色克制、小M气质。
+
+除非用户明确说“照这张 / 复刻这个构图 / 用这个案例改”，否则不要直接复用这些旧构图：
+
+- 传送带两个断点
+- 小M在内容机器里拉判断杆
+- 小M变漏斗分拣流量/信任/转化
+- 小M切素材鱼
+- 小M牵承接路径
+- 小M拉三层信息源
+- 三个小M分别拿喇叭/搭桥/开门
+- 小M盖章话术工具箱
+- 小M举牌看常见坑路径
+
+同类主题也要换新隐喻。例如“承接路径”不一定画路线，可以画小M把内容尾巴接到门把手；“一鱼多吃”不一定画鱼，可以画小M把一个纸团压成几种形状。
+# 生图提示词模板
+
+每张图单独生成。根据正文内容替换变量，不要把多张图拼在一起。
+
+```text
+Generate one standalone 16:9 horizontal Chinese article illustration.
+
+Visual DNA:
+Pure white background. Minimalist black hand-drawn line art. Slightly wobbly pen lines. Lots of empty white space. Sparse red/orange/blue handwritten Chinese annotations. Clean absurd product-sketch feeling. No gradients, no shadows, no paper texture, no complex background, no commercial vector style, no PPT infographic look, no cute mascot poster, no children's illustration, no realistic UI.
+
+Recurring IP character required:
+小M (Xiao-M), a small hand-drawn MUSHROOM creature styled like the classic 🍄 emoji (NOT solid black): a rounded RED dome cap with 3-5 white polka dots and a black outline, a CREAM/off-white stem body with black hand-drawn outline, small BLACK dot eyes on the pale stem, tiny thin legs, blank deadpan serious expression, slightly uneven hand-drawn shape. Thin ORANGE mycelium threads may extend from its feet or hands to connect / carry / weave things together when the topic is about connection or flow. The red cap with white dots is flat hand-drawn (not 3D, not realistic). 小M must perform the core conceptual action, not decorate the scene. Keep it serious and slightly bizarre, not overly cute. Keep the signature: red dotted cap + pale stem.
+
+Theme:
+{正文配图主题}
+
+Structure type:
+{结构类型：Workflow / 系统局部 / 前后对比 / 角色状态 / 概念隐喻 / 方法分层 / 地图路线 / 小漫画分镜}
+
+Core idea:
+{这张图要表达的核心意思}
+
+Composition:
+{具体画面：小M在哪里、正在做什么、主要物件是什么、信息如何流动}
+
+Suggested elements:
+{元素1} / {元素2} / {元素3} / {元素4}
+
+Chinese handwritten labels:
+{标注词1} / {标注词2} / {标注词3} / {标注词4} / {可选标注词5}
+
+Color use:
+Black for main line art and 小M. Orange for main flow/path/arrows. Red only for key warnings/problems/results. Blue only for secondary notes or feedback/system state.
+
+Constraints:
+One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. Preserve at least 35% blank white space. Use at most 5-8 short handwritten Chinese labels. Do not write a title in the top-left corner. Do not write the structure type on the image. Do not make it a formal diagram, course slide, or dense explainer. Do not copy prior examples or reuse known case compositions unless explicitly requested; invent a fresh visual metaphor for this specific article. It should be clear but not instructional, interesting but not childish, strange but clean.
+```
+
+## 图像编辑提示
+
+去掉左上角标题：
+
+```text
+Edit the provided image. Remove only the handwritten title "{要删除的文字}" and its underline from the top-left corner. Fill that area with the same clean white background, matching the surrounding blank paper. Preserve everything else exactly: characters, labels, paths, line style, composition, aspect ratio, and image quality. Do not add any new text or objects.
+```
+
+增强怪诞感：
+
+```text
+Regenerate this illustration with the same core meaning and simple layout, but make 小M more central to the conceptual action. 小M should be doing the strange work that explains the idea, not standing beside the diagram. Keep it clean, sparse, hand-drawn, and not cute.
+```
+# QA Checklist
+
+## 必过项
+
+- 是 16:9 横版。
+- 背景是干净白底。
+- 有小M。
+- 小M承担核心动作，不只是装饰。
+- 没有复刻旧案例构图，而是为当前文章生成了新隐喻。
+- 画面怪诞、有创意、有意思。
+- 简洁清爽，主体不超过画面约 60%。
+- 一张图只讲一个核心结构。
+- 中文标注少、短、能读。
+- 橙色只用于主路径或箭头。
+- 红色只用于重点、问题、提醒或结果。
+- 蓝色只用于补充说明、反馈或系统状态。
+
+## 失败信号
+
+出现以下情况，重生成或局部编辑：
+
+- 左上角有“常见坑 / Workflow / 系统架构图 / 路线图”等标题。
+- 小M像吉祥物、表情包或可爱卡通。
+- 画面像 PPT、课程课件、正式流程图。
+- 元素太多、箭头太多、节点太多。
+- 文字变成大段解释。
+- 背景有纸纹、阴影、渐变、米色、噪点。
+- 真实 UI 截图或科技感界面。
+- 中文错字严重或标注不可读。
+- 画面太死板，没有荒诞隐喻。
+- 和 `assets/examples/` 里的旧案例构图过于相似。
+
+## 迭代方法
+
+- 太普通：让小M成为动作主体，加入一个奇怪但成立的隐喻。
+- 太复杂：删节点，只保留一个动作和 3-5 个短标注。
+- 太可爱：强调 deadpan、blank serious expression、not cute、not mascot。
+- 太 PPT：去掉标题、边框、整齐网格和过多箭头，改成手绘场景。
+- 太像旧案例：保留核心意思，换掉主物件和小M动作。
+- 文字错：优先局部编辑；错得多就重生成并减少标注数量。
+
+## 交付判断
+
+高质量图应该让读者先觉得“有点怪”，然后 1 秒内看懂结构。
+
+如果第一眼像教程页，而不是白纸上的怪诞产品草图，就不合格。
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+正文中的三个边界已确认：射频接收发生在远端；ADPCM 解码后进入 PCM 缓冲；主机算法检查通过，ESP32 实板仍待验证。我会分别画成旋钮遥控回路、音频解码缓冲装置和分阶段验收场景，保持白底、红帽白点小M和少量中文标注。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+import hashlib
+from PIL import Image
+for name in ['src/content/blog/espica32-kiwisdr-wifi-radio-build-review.md','src/assets/images/espica32-kiwisdr-wifi-radio-build-review-banner.jpg']:
+ p=Path(name)
+ print(name, hashlib.sha256(p.read_bytes()).hexdigest())
+p=Path('generated_images/espica32-20261108')
+p.mkdir(parents=True,exist_ok=True)
+print('Existing requested raw files:', [x.name for x in p.iterdir()])
+print('Pillow ready')
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 42ms:
+src/content/blog/espica32-kiwisdr-wifi-radio-build-review.md f2c046afb56a1053b4e29289ca99b74696945a051702641ad50f7c4471c43391
+src/assets/images/espica32-kiwisdr-wifi-radio-build-review-banner.jpg 9a53755a6533a7c25f9685a2e5c5de02a38e41e549251ff37ed1e570c793c18e
+Existing requested raw files: []
+Pillow ready
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cp /Users/jason/.codex/generated_images/01a1b957-a44b-75e2-baef-e11282cf4a1e/exec-ff8f0177-0ea2-4eff-86d0-8f9111eb4504.png generated_images/espica32-20261108/01-remote-kiwisdr-raw.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+前两张的中文和技术含义清楚：第一张的调谐与音频回传箭头方向正确，第二张也区分了解码和 PCM 缓冲。第二张还缺一段“解码→缓冲”的箭头，我会补齐，再完成第三张和最终压缩检查。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cp /Users/jason/.codex/generated_images/01a1b957-a44b-75e2-baef-e11282cf4a1e/exec-67962290-22e6-4746-a782-f497c9626c7f.png generated_images/espica32-20261108/02-adpcm-buffer-original-raw.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cp /Users/jason/.codex/generated_images/01a1b957-a44b-75e2-baef-e11282cf4a1e/exec-65c9565c-a70d-4d5b-a636-878702b52245.png generated_images/espica32-20261108/03-build-acceptance-raw.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cp /Users/jason/.codex/generated_images/01a1b957-a44b-75e2-baef-e11282cf4a1e/exec-da597803-cd92-45bc-bf07-df18b39cdb70.png generated_images/espica32-20261108/02-adpcm-buffer-raw.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+apply patch
+patch: completed
+/Users/jason/Dev/mycelium/blog/generated_images/espica32-20261108/prompts.txt
+diff --git a/generated_images/espica32-20261108/prompts.txt b/generated_images/espica32-20261108/prompts.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..cb0c057439dc2ab094a3f3b1ecb9088541610ee5
+--- /dev/null
++++ b/generated_images/espica32-20261108/prompts.txt
+@@ -0,0 +1,33 @@
++IMAGE 01
++Generate exactly ONE standalone 16:9 horizontal Chinese body illustration for a technical blog, not a banner, not a collage. Pure #FFFFFF white background, minimalist fine black hand-drawn slightly wobbly ink lines, flat colors only, no texture, no shading, no gradients, at least 40% empty white space with roomy margins. Sparse legible handwritten Chinese labels, large enough to read at 1120x630. No heading in top left, no frame, no grids, no PPT boxes, no commercial vector infographic, no children's cartoon. Serious, slightly absurd product sketch.
++Required LittleM 小M: classic mushroom creature, rounded RED dome cap with 3–5 white polka dots, black outline, CREAM stem body, two small BLACK dot eyes, thin stick limbs, blank deadpan face, never solid black, never smiling or sparkly. LittleM must perform the central action. Black objects and lettering, orange main transport arrows, blue secondary notes, restrained red emphasis. Fresh specific metaphor, not generic mascot decoration.
++Content: A local ESP32 rotary knob remotely tunes a KiwiSDR over Wi-Fi / Internet, and decoded audio returns for local speaker playback. RF reception belongs ONLY to the distant KiwiSDR antenna, never to the local ESP32.
++Composition: On the left, LittleM physically turns a hilariously oversized rotary knob attached to a small ESP32 console. Small speaker beside console, connected by short local wire. Middle a small irregular Internet cloud, with tiny Wi-Fi arcs pointing into it from console. On the right far away, KiwiSDR receiver with a simple tall outdoor antenna attached by a wire; incoming radio wave arcs appear ONLY at that antenna.
++Control path: one orange hand-drawn arrow from ESP32 left through the cloud toward KiwiSDR right, arrowhead at right, label 调谐 above. Audio path: separate blue returning curved arrow from KiwiSDR right through lower part of cloud toward the local console/speaker left, arrowhead pointing LEFT, label 音频回传. Keep paths distinct with no ambiguous arrowheads. The local speaker emits small sound marks. The antenna receives RF, not the ESP32; do not draw an antenna on ESP32.
++Exact text ONLY, 7 label groups: "ESP32", "Wi-Fi / 互联网", "KiwiSDR", "远端射频", "调谐", "音频回传", "扬声器". Put 远端射频 directly beside the remote antenna. No additional captions or numeric claims. No local RF input arrows. One readable sparse scene, not a dense schematic.
++
++IMAGE 02
++Generate exactly ONE standalone 16:9 horizontal Chinese body illustration for a technical blog, not a banner, not a collage. Pure #FFFFFF white background, minimalist fine black hand-drawn slightly wobbly ink lines, flat colors only, no texture, no shading, no gradients, at least 40% empty white space with roomy margins. Sparse legible handwritten Chinese labels, large enough to read at 1120x630. No heading in top left, no frame, no grids, no PPT boxes, no commercial vector infographic, no children's cartoon. Serious, slightly absurd product sketch.
++Required LittleM 小M: classic mushroom creature, rounded RED dome cap with 3–5 white polka dots, black outline, CREAM stem body, two small BLACK dot eyes, thin stick limbs, blank deadpan face, never solid black, never smiling or sparkly. LittleM must perform the central action. Black objects and lettering, orange main transport arrows, blue secondary notes, restrained red emphasis. Fresh specific metaphor, not generic mascot decoration.
++Content: ADPCM is compressed during NETWORK TRANSFER, then decoded into 16-bit PCM for the audio buffer and speaker. Buffering can absorb short arrival jitter at the cost of extra latency. Network compression does NOT imply 4x less PCM buffer RAM. Do not put any "4x" or RAM-saving claim anywhere.
++Scene: One sparse, left-to-right hand-built audio contraption on white. At left a small narrow network pipe sends an irregular sequence of compact folded sound slips, labelled "ADPCM传输". Center-left LittleM is the mechanism: actively hand-cranking a tiny unfolding device that opens compact slips into wide normal PCM waveform strips. Label this action "解码". An orange arrow clearly runs from left compact ADPCM into this unfolding mechanism, and a second orange arrow runs OUT of it to the right into a small accordion-like storage drawer labelled "PCM缓冲". The PCM waveform strips wait inside this adjustable drawer, annotated "16 bit PCM". From drawer another orange arrow goes right into an ordinary speaker, labelled "扬声器". Exactly this order: ADPCM network → decoder → PCM buffer → speaker. No arrow bypasses decoder or buffer.
++LittleM also holds the extensible drawer handle: extending the drawer gives more room for arriving bursts but the speaker waits longer. A tiny blue irregular incoming pulse doodle and small clock below the drawer reinforce this tradeoff, connected to the buffer with a light bracket. Below the buffer put exact succinct annotation "缓冲增大" and two short consequences "更抗抖动" and "等待更久", the latter red. This is a qualitative tradeoff, not guaranteed perfect output. No ratios, no compression storage comparison, no RAM chips.
++Text ONLY these 8 label groups, clean handwritten Chinese and readable technical Latin: "ADPCM传输", "解码", "PCM缓冲", "16 bit PCM", "扬声器", "缓冲增大", "更抗抖动", "等待更久". No titles. Quiet expansive white space above and around apparatus. Avoid an instruction manual layout; draw a slightly absurd physical unfolding-and-waiting sketch with LittleM doing real work.
++
++IMAGE 03
++Generate exactly ONE standalone 16:9 horizontal Chinese body illustration for a technical blog, not a banner, not a collage. Pure #FFFFFF white background, minimalist fine black hand-drawn slightly wobbly ink lines, flat colors only, no texture, no shading, no gradients, at least 40% empty white space with roomy margins. Sparse legible handwritten Chinese labels, large enough to read at 1120x630. No heading in top left, no frame, no grids, no PPT boxes, no commercial vector infographic, no children's cartoon. Serious, slightly absurd product sketch.
++Required LittleM 小M: classic mushroom creature, rounded RED dome cap with 3–5 white polka dots, black outline, CREAM stem body, two small BLACK dot eyes, thin stick limbs, blank deadpan face, never solid black, never smiling or sparkly. LittleM must perform the central action. Black objects and lettering, orange main transport arrows, blue secondary notes, restrained red emphasis. Fresh specific metaphor, not generic mascot decoration.
++Content: A reproducible ESPica32 build acceptance sequence and an honest evidence boundary. Sequence left to right: select source version → check wiring → first-time setup → audio acceptance. Host algorithm checks have passed; a real ESP32 hardware build has NOT been validated.
++One loose hand-drawn workbench scene, four separated small physical objects along an irregular gently curving orange arrow chain. No boxes around stages, no slide headings.
++Stage 1 far left: an open source archive folder with two nested pages, only the OUTER page selected by a black pointing clip. Label "源码版本".
++Stage 2 middle-left: an unpowered little ESP32 board with few loose jumper wires and plug ends, label "接线".
++Stage 3 middle-right: a small browser setup card with simple Wi-Fi symbol, no UI details or fake text, label "配网".
++Stage 4 far right: a speaker and small rotary knob, label "声音验收". Do NOT draw music, sound waves, success checks, or energized LEDs on hardware because this step awaits a real hardware test.
++Make clear orange arrows from source folder TO wiring, wiring TO setup, setup TO speaker. Small LittleM seriously acts as the acceptance technician: using an absurd long stethoscope with its chestpiece placed against the speaker, one hand holding a blank inspection slip. Character is centrally involved in actual listening/checking, not a spectator. No smiling.
++Below the main scene create two sparse handwritten evidence annotations without a panel: on lower left a tiny laptop with a small blue check mark, label exactly "主机算法：已验证". On lower right next to ESP32 board icon a red open circle/question mark and label exactly "ESP32实板：待验证". The blue check belongs ONLY to the laptop algorithms. No checkmarks on the main hardware route, source, wiring, setup or speaker; hardware route is a proposed verification sequence, not a report of completion. No firmware-build success claim.
++Text ONLY six label groups: "源码版本", "接线", "配网", "声音验收", "主机算法：已验证", "ESP32实板：待验证". Generous clean white space above, labels must be legible and accurate simplified Chinese. Restrained hand-drawn technical humor, not a rigid flowchart.
++
++TARGETED IMAGE 02 ARROW EDIT
++Edit this existing LittleM hand-drawn white-background illustration with ONE targeted change only: add a small orange rightward arrow in the empty gap between the right end of the expanded PCM waveform strip coming OUT of the decoder machine and the LEFT edge of the PCM buffer drawer. Position it around the horizontal center, below LittleM's long curved arm, at the same height as the orange flow arrows on either end. Arrow must point RIGHT, clearly connecting decoded waveform output to PCM buffer input. Make it the same orange hand-drawn weight as the existing arrows.
++Preserve everything else exactly: 16:9 framing, white background, LittleM red cap with white dots, all eight existing legible labels and their spelling (ADPCM传输 / 解码 / PCM缓冲 / 16 bit PCM / 扬声器 / 缓冲增大 / 更抗抖动 / 等待更久), all objects, positions, line style, PCM waveform sheets, clock, blue annotations, left input arrow and right speaker arrow. No new text, no ratios or RAM claims. Do not add sound output anywhere except the speaker. The complete chain should now be unmistakably ADPCM → decoding → PCM buffer → speaker.
++
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image
+from pathlib import Path
+import shutil, json, hashlib
+raw_dir=Path('generated_images/espica32-20261108')
+slug='espica32-kiwisdr-wifi-radio-build-review'
+raw_names=['01-remote-kiwisdr-raw.png','02-adpcm-buffer-raw.png','03-build-acceptance-raw.png']
+report=[]
+for index,raw_name in enumerate(raw_names,1):
+ raw=raw_dir/raw_name
+ with Image.open(raw) as image:
+  image.load()
+  original_size=image.size
+  rgb=image.convert('RGB').resize((1120,630), Image.Resampling.LANCZOS)
+ stage=raw_dir/f'fig-{index:02d}-compressed.png'
+ for colors in [48,40,32,24,16]:
+  palette=rgb.quantize(colors=colors,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+  palette.save(stage,format='PNG',optimize=True,compress_level=9)
+  if stage.stat().st_size < 90000:
+   break
+ else:
+  raise RuntimeError('Size limit not met')
+ final=Path('src/assets/images')/f'{slug}-fig-{index:02d}.png'
+ shutil.copyfile(stage,final)
+ with Image.open(final) as check:
+  check.load()
+  used_colors=len(check.getcolors(maxcolors=256))
+  assert check.format=='PNG' and check.mode=='P'
+  assert check.size==(1120,630)
+  assert used_colors<=48
+  assert final.stat().st_size<90000
+  corners=[check.convert('RGB').getpixel(p) for p in [(0,0),(1119,0),(0,629),(1119,629)]]
+  assert all(c==(255,255,255) for c in corners), corners
+ report.append({'raw':str(raw),'raw_size':original_size,'final':str(final),'size':[1120,630],'mode':'P','palette_colors':used_colors,'dither':'NONE','bytes':final.stat().st_size,'white_corners':True,'sha256':hashlib.sha256(final.read_bytes()).hexdigest()})
+expected={
+'src/content/blog/espica32-kiwisdr-wifi-radio-build-review.md':'f2c046afb56a1053b4e29289ca99b74696945a051702641ad50f7c4471c43391',
+'src/assets/images/espica32-kiwisdr-wifi-radio-build-review-banner.jpg':'9a53755a6533a7c25f9685a2e5c5de02a38e41e549251ff37ed1e570c793c18e'}
+for name,digest in expected.items():
+ assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==digest, f'Unexpected modification: {name}'
+(raw_dir/'verification.json').write_text(json.dumps({'images':report,'markdown_and_banner_unchanged':True},ensure_ascii=False,indent=2)+'\\n')
+print(json.dumps(report,ensure_ascii=False,indent=2))
+print('Markdown and banner SHA-256 unchanged')
+PY" in /Users/jason/Dev/mycelium/blog
+ exited 1 in 527ms:
+Traceback (most recent call last):
+  File "<stdin>", line 21, in <module>
+RuntimeError: Size limit not met
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+三张图的中文、箭头和验证边界已检查，第二张的缺失箭头也已补齐。常规调色板压缩还没达到每张 90,000 字节以内，我正在调整压缩方式，之后会直接检查指定路径下的成品。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "command -v pngquant oxipng optipng magick; python3 - <<'PY'
+from pathlib import Path
+from PIL import Image
+p=Path('generated_images/espica32-20261108/fig-01-compressed.png')
+print('Current bytes:',p.stat().st_size)
+im=Image.open('generated_images/espica32-20261108/01-remote-kiwisdr-raw.png').convert('RGB')
+print('Corner pixels:', [im.getpixel(p) for p in [(0,0),(im.width-1,0),(0,im.height-1),(im.width-1,im.height-1)]])
+print('Raw dimensions:', im.size)
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 28ms:
+/opt/homebrew/bin/magick
+Current bytes: 262153
+Corner pixels: [(254, 253, 254), (254, 255, 254), (254, 253, 253), (254, 253, 254)]
+Raw dimensions: (1672, 941)
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from PIL import Image
+p=Path('generated_images/espica32-20261108')
+colors=[(255,255,255),(0,0,0),(25,25,25),(50,50,50),(80,80,80),(110,110,110),(140,140,140),(170,170,170),(195,195,195),(220,220,220),(240,35,30),(220,30,25),(185,25,20),(245,70,45),(245,105,90),(255,135,15),(245,115,10),(255,160,55),(255,195,120),(0,105,235),(0,85,205),(30,125,250),(80,150,245),(145,190,245),(255,245,215),(250,235,195),(245,225,170),(250,215,100),(245,195,55),(225,175,25),(65,190,25),(25,140,15)]
+pal=Image.new('P',(1,1))
+flat=[v for c in colors for v in c]
+pal.putpalette(flat+[255]*(768-len(flat)))
+for i,name in enumerate(['01-remote-kiwisdr-raw.png','02-adpcm-buffer-raw.png','03-build-acceptance-raw.png'],1):
+ im=Image.open(p/name).convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+ q=im.quantize(palette=pal,dither=Image.Dither.NONE)
+ out=p/f'fig-{i:02d}-compressed.png'
+ q.save(out,optimize=True,compress_level=9,bits=8)
+ print(out.name,out.stat().st_size,len(q.getcolors(256)))
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 118ms:
+fig-01-compressed.png 28666 29
+fig-02-compressed.png 36140 26
+fig-03-compressed.png 37822 30
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image
+from pathlib import Path
+import shutil,json,hashlib
+base=Path('generated_images/espica32-20261108')
+report=[]
+for i in range(1,4):
+ source=base/f'fig-{i:02d}-compressed.png'
+ target=Path('src/assets/images')/f'espica32-kiwisdr-wifi-radio-build-review-fig-{i:02d}.png'
+ shutil.copyfile(source,target)
+ with Image.open(target) as im:
+  im.load()
+  count=len(im.getcolors(256))
+  palette_count=len(set(tuple(im.getpalette()[j:j+3]) for j in range(0,len(im.getpalette()),3)))
+  assert im.format=='PNG' and im.mode=='P' and im.size==(1120,630)
+  assert count<=48 and palette_count<=48 and target.stat().st_size<90000
+  rgb=im.convert('RGB')
+  assert all(rgb.getpixel(x)==(255,255,255) for x in [(0,0),(1119,0),(0,629),(1119,629)])
+  report.append({'final':str(target),'dimensions':[1120,630],'bytes':target.stat().st_size,'used_colors':count,'palette_unique_colors':palette_count,'dither':'NONE','white_background_corners':True,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
+expected={'src/content/blog/espica32-kiwisdr-wifi-radio-build-review.md':'f2c046afb56a1053b4e29289ca99b74696945a051702641ad50f7c4471c43391','src/assets/images/espica32-kiwisdr-wifi-radio-build-review-banner.jpg':'9a53755a6533a7c25f9685a2e5c5de02a38e41e549251ff37ed1e570c793c18e'}
+for name,digest in expected.items():
+ assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==digest,name
+(base/'verification.json').write_text(json.dumps({'images':report,'method':'fixed 32-color palette, no dithering, Lanczos resize, optimized PNG, copied to requested assets','markdown_and_banner_unchanged':True},ensure_ascii=False,indent=2)+'\\n')
+print(json.dumps(report,indent=2))
+print('Final copies verified; markdown and banner unchanged.')
+PY" in /Users/jason/Dev/mycelium/blog
+ exited 1 in 16ms:
+Traceback (most recent call last):
+  File "<stdin>", line 21, in <module>
+AssertionError: src/assets/images/espica32-kiwisdr-wifi-radio-build-review-banner.jpg
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from PIL import Image
+import hashlib,json,datetime
+base=Path('generated_images/espica32-20261108')
+report=[]
+for i in range(1,4):
+ p=Path('src/assets/images')/f'espica32-kiwisdr-wifi-radio-build-review-fig-{i:02d}.png'
+ with Image.open(p) as im:
+  im.load()
+  count=len(im.getcolors(256))
+  pal=im.getpalette()
+  unique=len({tuple(pal[j:j+3]) for j in range(0,len(pal),3)})
+  assert im.format=='PNG' and im.mode=='P' and im.size==(1120,630)
+  assert count<=48 and unique<=48 and p.stat().st_size<90000
+  rgb=im.convert('RGB')
+  assert all(rgb.getpixel(x)==(255,255,255) for x in [(0,0),(1119,0),(0,629),(1119,629)])
+  assert hashlib.sha256(p.read_bytes()).digest()==hashlib.sha256((base/f'fig-{i:02d}-compressed.png').read_bytes()).digest()
+  report.append({'final':str(p),'dimensions':[1120,630],'bytes':p.stat().st_size,'used_colors':count,'palette_unique_colors':unique,'dither':'NONE','white_background_corners':True,'final_copy_matches':True,'visual_qa':'Chinese labels legible, arrows correct, technical claims within article evidence','sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+md=Path('src/content/blog/espica32-kiwisdr-wifi-radio-build-review.md')
+assert hashlib.sha256(md.read_bytes()).hexdigest()=='f2c046afb56a1053b4e29289ca99b74696945a051702641ad50f7c4471c43391'
+banner=Path('src/assets/images/espica32-kiwisdr-wifi-radio-build-review-banner.jpg')
+current_banner=hashlib.sha256(banner.read_bytes()).hexdigest()
+notes={'markdown_unchanged':True,'banner_not_written_by_this_task':True,'banner_initial_sha256':'9a53755a6533a7c25f9685a2e5c5de02a38e41e549251ff37ed1e570c793c18e','banner_current_sha256':current_banner,'banner_current_mtime':datetime.datetime.fromtimestamp(banner.stat().st_mtime).isoformat()}
+(base/'verification.json').write_text(json.dumps({'images':report,'method':'fixed 32-color palette, no dithering, Lanczos resize, optimized PNG, copied to requested assets','scope':notes},ensure_ascii=False,indent=2)+'\\n')
+print(json.dumps({'images':report,'scope':notes},ensure_ascii=False,indent=2))
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 14ms:
+{
+  "images": [
+    {
+      "final": "src/assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-01.png",
+      "dimensions": [
+        1120,
+        630
+      ],
+      "bytes": 28666,
+      "used_colors": 29,
+      "palette_unique_colors": 32,
+      "dither": "NONE",
+      "white_background_corners": true,
+      "final_copy_matches": true,
+      "visual_qa": "Chinese labels legible, arrows correct, technical claims within article evidence",
+      "sha256": "0723ee12b13cd033e2a40bde3f409a14aa5a2558c8370170560f2513d18fac91"
+    },
+    {
+      "final": "src/assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-02.png",
+      "dimensions": [
+        1120,
+        630
+      ],
+      "bytes": 36140,
+      "used_colors": 26,
+      "palette_unique_colors": 32,
+      "dither": "NONE",
+      "white_background_corners": true,
+      "final_copy_matches": true,
+      "visual_qa": "Chinese labels legible, arrows correct, technical claims within article evidence",
+      "sha256": "74fff3c0892e25e19d5dcc42192052a546631ccbd3c19d3212ae81f2a823d95d"
+    },
+    {
+      "final": "src/assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-03.png",
+      "dimensions": [
+        1120,
+        630
+      ],
+      "bytes": 37822,
+      "used_colors": 30,
+      "palette_unique_colors": 32,
+      "dither": "NONE",
+      "white_background_corners": true,
+      "final_copy_matches": true,
+      "visual_qa": "Chinese labels legible, arrows correct, technical claims within article evidence",
+      "sha256": "1992019b5584aa6c2dffebb44a70695c3f280e41e211640bbc94664d2e3c37ad"
+    }
+  ],
+  "scope": {
+    "markdown_unchanged": true,
+    "banner_not_written_by_this_task": true,
+    "banner_initial_sha256": "9a53755a6533a7c25f9685a2e5c5de02a38e41e549251ff37ed1e570c793c18e",
+    "banner_current_sha256": "8879f09041a7389911dc71f19cdab72347b124b6f7d684c66f9013bde8fbd0dc",
+    "banner_current_mtime": "2026-11-08T11:10:24.783642"
+  }
+}
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+Completed and verified all 3 illustrations:
+
+- [01 · Remote KiwiSDR](/Users/jason/Dev/mycelium/blog/src/assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-01.png) — 28,666 bytes
+- [02 · ADPCM and PCM buffering](/Users/jason/Dev/mycelium/blog/src/assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-02.png) — 36,140 bytes
+- [03 · Build acceptance and validation limits](/Users/jason/Dev/mycelium/blog/src/assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-03.png) — 37,822 bytes
+
+Each is **1120×630, white background, 32-color palette, no dithering**. Inspected final copies for readable Chinese and correct arrows.
+
+Raw generations and prompts are saved in `generated_images/espica32-20261108/`. I did not edit the Markdown, banner, or unrelated files.
+hook: Stop
+hook: Stop Completed
+tokens used
+54,045
+Completed and verified all 3 illustrations:
+
+- [01 · Remote KiwiSDR](/Users/jason/Dev/mycelium/blog/src/assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-01.png) — 28,666 bytes
+- [02 · ADPCM and PCM buffering](/Users/jason/Dev/mycelium/blog/src/assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-02.png) — 36,140 bytes
+- [03 · Build acceptance and validation limits](/Users/jason/Dev/mycelium/blog/src/assets/images/espica32-kiwisdr-wifi-radio-build-review-fig-03.png) — 37,822 bytes
+
+Each is **1120×630, white background, 32-color palette, no dithering**. Inspected final copies for readable Chinese and correct arrows.
+
+Raw generations and prompts are saved in `generated_images/espica32-20261108/`. I did not edit the Markdown, banner, or unrelated files.

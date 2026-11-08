@@ -1,0 +1,12 @@
+{
+  "decodedSamples": 8192,
+  "segmentedMatches": true,
+  "resetMatches": true,
+  "bufferAndDriftAssertions": 10,
+  "python": "3.12.14 (main, Sep 20 2026, 08:31:10) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "reference": "CPython audioop.adpcm2lin, nibble-swapped input, initial state (0,0)",
+  "referenceMatches": true,
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+  "inputSha256": "b35445fe9f894bcfb53e5e5085fa800fee199b00c471fd7b7403624da3281d13",
+  "scope": "Actual outer-directory ADPCM and buffer headers compiled on macOS host; no Arduino firmware build, ESP32 hardware, network receiver or listening test."
+}

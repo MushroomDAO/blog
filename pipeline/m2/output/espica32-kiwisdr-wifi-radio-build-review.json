@@ -1,0 +1,14 @@
+{
+  "title": "ESPica32：ESP32旋钮收音机",
+  "author": "Mycelium",
+  "digest": "通过Wi-Fi收听远方KiwiSDR，拆解接线、源码与ADPCM音频方案。",
+  "mediaId": "prCUE631thH1cmNLi42prOX9zJsE7deMUqT8TqV8kYer7UxMIDMBxK7kDhWbTwcH",
+  "blogUrl": "https://blog.mushroom.cv/blog/espica32-kiwisdr-wifi-radio-build-review/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/espica32-kiwisdr-wifi-radio-build-review/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/rbnpou/espica32",
+    "github.com/jks-prv/kiwiclient"
+  ],
+  "publishedAt": "2026-11-08T04:14:55.556Z"
+}

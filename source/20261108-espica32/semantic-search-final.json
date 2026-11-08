@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "espica32-kiwisdr-wifi-radio-build-review",
+      "title": "ESPica32：把远方KiwiSDR装进ESP32旋钮收音机",
+      "url": "/blog/espica32-kiwisdr-wifi-radio-build-review/",
+      "language": "zh",
+      "excerpt": "ESPica32：把远方KiwiSDR装进ESP32旋钮收音机 ESPica32让ESP32通过Wi-Fi控制远方KiwiSDR并播放音频。本文核对作者源码包、OLED与功放接线、Arduino版本和ADPCM缓冲设计，解释四块模块之外的采购需求、嵌套旧代码和首次配网步骤，记录8192样本解码比较与缓冲断言结果，并区分作者跨国收听报告、本机辅助验证与仍待实板确认的能力。 ESPica32 ESP32 KiwiSDR DIY硬件 网络收音机 ESP32 究竟接收什么，为什么能听远方？ 四块模块够吗？完整材料与接线 下载包里为什么有两套项目？如何开始复现？ ",
+      "score": 0.56125087
+    },
+    {
+      "article_id": "lr2021-esp32-adsb-receiver-analysis",
+      "title": "ESP32 LoRa板真能收飞机信号？拆解W12与LR2021的ADS-B实验",
+      "url": "/blog/lr2021-esp32-adsb-receiver-analysis/",
+      "language": "zh",
+      "excerpt": "ESP32 LoRa板真能收飞机信号？拆解W12与LR2021的ADS-B实验 thefatmoop用W12的ESP32-S3与LR2021实现本地1090MHz ADS-B接收，但它不是任意LoRa板刷固件就能复现。本文核对Hackaday、芯片资料和代码，解释带外接收、SAW滤波改造、Manchester解码、CRC与CPR、作者报告的150海里距离，并给出硬件选型、软件测试和对照验收方法。 ADS-B ESP32-S3 LR2021 LoRa 开源硬件 无线电 它是真接收，还是从航班网站拉数据？ 飞机并没有使用LoRa，为什么LoRa芯片能帮忙？ ",
+      "score": 0.5289982
+    },
+    {
+      "article_id": "ruview-wifi-densepose-esp32-through-wall-sensing-pose-breathing-heart-rate",
+      "title": "RuView：9.4 万星的 WiFi DensePose，不开摄像头隔墙感知呼吸和心率，姿态追踪数字请打折",
+      "url": "/blog/ruview-wifi-densepose-esp32-through-wall-sensing-pose-breathing-heart-rate/",
+      "language": "zh",
+      "excerpt": "RuView：9.4 万星的 WiFi DensePose，不开摄像头隔墙感知呼吸和心率，姿态追踪数字请打折 ruvnet/RuView，MIT，Rust，94K stars。ESP32-S3 读取 CSI 信号，实现隔墙人体感知：存在检测 82.3%、呼吸 6-30 BPM、心跳 40-120 BPM 均经验证；但宣传中的 17 关键点姿态追踪 PCK@20 实测仅 3%（目标 35%），92.9% 准确率数字已撤回。完整拆解学术源头、技术管道、硬件需求和隐私风险。 WiFi-sensing CSI ESP32 pose-estimation priv",
+      "score": 0.51571965
+    },
+    {
+      "article_id": "voicestudio-local-elevenlabs-alternative-646-languages-16-tts-11-asr",
+      "title": "VoiceStudio: Local-First ElevenLabs Alternative — 16 TTS Engines, 646 Languages",
+      "url": "/blog/voicestudio-local-elevenlabs-alternative-646-languages-16-tts-11-asr/",
+      "language": "en",
+      "excerpt": "VoiceStudio: Local-First ElevenLabs Alternative — 16 TTS Engines, 646 Languages debpalash/VoiceStudio ⭐12712 — open-source fully-local voice workstation: 16 TTS engines, 11 ASR engines, 646-language catalogue, covering voice cloning, voice design, video dubbing, dictation, storie",
+      "score": 0.4545714
+    },
+    {
+      "article_id": "omniroute-free-ai-gateway-290-providers-never-stop-coding",
+      "title": "OmniRoute: 290 AI Providers, One Endpoint, Never Hit Limits — The Free AI Gateway",
+      "url": "/blog/omniroute-free-ai-gateway-290-providers-never-stop-coding/",
+      "language": "en",
+      "excerpt": "OmniRoute: 290 AI Providers, One Endpoint, Never Hit Limits — The Free AI Gateway diegosouzapw/OmniRoute, 27,824 stars, MIT, 5 months, 500+ contributors. One endpoint routing to 290+ AI providers (90+ free), 4-tier auto-fallback cascade, 19 routing strategies, RTK+Caveman compres",
+      "score": 0.45218298
+    },
+    {
+      "article_id": "confucius4-r2t2-true-streaming-asr-lsp-netease-youdao",
+      "title": "Confucius4-R2T2: NetEase Youdao's True-Streaming ASR — LSP Eliminates Text Flicker Completely",
+      "url": "/blog/confucius4-r2t2-true-streaming-asr-lsp-netease-youdao/",
+      "language": "en",
+      "excerpt": "Confucius4-R2T2: NetEase Youdao's True-Streaming ASR — LSP Eliminates Text Flicker Completely netease-youdao/Confucius4-R2T2 — 306 stars, Apache 2.0 code / separate NetEase model weight license. A 2B-parameter true-streaming ASR model based on Qwen3-ASR-1.7B. Core innovation: Lon",
+      "score": 0.44515145
+    },
+    {
+      "article_id": "opensquilla-multi-model-routing-guide",
+      "title": "OpenSquilla: Multi-Model Routing That Matches Top LLMs at 1/9th the Cost",
+      "url": "/blog/opensquilla-multi-model-routing-guide/",
+      "language": "en",
+      "excerpt": "OpenSquilla: Multi-Model Routing That Matches Top LLMs at 1/9th the Cost OpenSquilla (5600+ stars, Apache 2.0) is a token-efficient microkernel AI agent whose SquillaRouter locally routes each turn to the cheapest capable model. Benchmarks show: multi-model routing ($0.69) vs Cla",
+      "score": 0.43977824
+    },
+    {
+      "article_id": "paperpi-ai-stable-diffusion-raspberry-pi-zero-e-ink-art-frame-local",
+      "title": "Local Stable Diffusion on a Raspberry Pi Zero 2, 30 Minutes Per AI Painting — PaperPiAI Teardown",
+      "url": "/blog/paperpi-ai-stable-diffusion-raspberry-pi-zero-e-ink-art-frame-local/",
+      "language": "en",
+      "excerpt": "Local Stable Diffusion on a Raspberry Pi Zero 2, 30 Minutes Per AI Painting — PaperPiAI Teardown dylski/PaperPiAI, 340 stars, MIT, Python. A Raspberry Pi Zero 2 (~$15) plus a 7-color e-ink display runs OnnxStream Stable Diffusion locally, generating one AI image every ~30 minutes",
+      "score": 0.43659133
+    },
+    {
+      "article_id": "audio8-asr-01b-on-device-speech-recognition",
+      "title": "Audio8-ASR-0.1B: 0.1B Parameters, 2.70 WER on LibriSpeech, 200 MB on-device iPhone Inference",
+      "url": "/blog/audio8-asr-01b-on-device-speech-recognition/",
+      "language": "en",
+      "excerpt": "Audio8-ASR-0.1B: 0.1B Parameters, 2.70 WER on LibriSpeech, 200 MB on-device iPhone Inference Audio8-ASR-0.1B is an autoregressive ASR model with 0.324B end-to-end parameters (0.1B LM core), achieving 2.70% WER on LibriSpeech test-clean and 7.03% average WER across the Open ASR Le",
+      "score": 0.42883858
+    },
+    {
+      "article_id": "northcua-pro-computer-use-harness-guide",
+      "title": "NorthCUA-Pro: Open Weights Meet a Computer-Use Harness",
+      "url": "/blog/northcua-pro-computer-use-harness-guide/",
+      "language": "en",
+      "excerpt": "NorthCUA-Pro: Open Weights Meet a Computer-Use Harness A source-based guide to NorthCUA-Pro: open weights, desktop and web execution, model-card score limits, deployment memory, Mac control and outcome verification. NorthCUA 电脑智能体 RPA GUI自动化 开放权重 What is being released? What does",
+      "score": 0.42601398
+    }
+  ]
+}

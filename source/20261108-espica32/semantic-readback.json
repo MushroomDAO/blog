@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cf7e2bb9d305931d329628e0c73a63e9e64867bc6548970f",
+    "metadata": {
+      "article_id": "espica32-kiwisdr-wifi-radio-build-review",
+      "content_hash": "9c0d81824ae8a533",
+      "excerpt": "ESPica32：把远方KiwiSDR装进ESP32旋钮收音机 ESPica32让ESP32通过Wi-Fi控制远方KiwiSDR并播放音频。本文核对作者源码包、OLED与功放接线、Arduino版本和ADPCM缓冲设计，解释四块模块之外的采购需求、嵌套旧代码和首次配网步骤，记录8192样本解码比较与缓冲断言结果，并区分作者跨国收听报告、本机辅助验证与仍待实板确认的能力。 ESPica32 ESP32 KiwiSDR DIY硬件 网络收音机 ESP32 究竟接收什么，为什么能听远方？ 四块模块够吗？完整材料与接线 下载包里为什么有两套项目？如何开始复现？ ",
+      "language": "zh",
+      "tags": [
+        "ESPica32",
+        "ESP32",
+        "KiwiSDR",
+        "DIY硬件",
+        "网络收音机"
+      ],
+      "title": "ESPica32：把远方KiwiSDR装进ESP32旋钮收音机",
+      "url": "/blog/espica32-kiwisdr-wifi-radio-build-review/"
+    }
+  },
+  {
+    "id": "9074230442344c16c7978e6a1874f7731229e068b3c8b7c5",
+    "metadata": {
+      "article_id": "espica32-kiwisdr-wifi-radio-build-review",
+      "content_hash": "00908d73eb534329",
+      "excerpt": "ESPica32: A Knob-Controlled KiwiSDR Wi-Fi Radio Review ESPica32 hardware, source archive, ADPCM and buffering, with host decoder checks and clear limits on remote reception, setup and firmware validation. ESPica32 ESP32 KiwiSDR DIY硬件 网络收音机 What does the ESP32 actually receive? Ha",
+      "language": "en",
+      "tags": [
+        "ESPica32",
+        "ESP32",
+        "KiwiSDR",
+        "DIY硬件",
+        "网络收音机"
+      ],
+      "title": "ESPica32: A Knob-Controlled KiwiSDR Wi-Fi Radio",
+      "url": "/blog/espica32-kiwisdr-wifi-radio-build-review/"
+    }
+  }
+]
