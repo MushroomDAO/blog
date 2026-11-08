@@ -1,0 +1,38 @@
+[
+  {
+    "id": "51661e2c6846176701671f77f221e74499d82380b0080c35",
+    "metadata": {
+      "article_id": "designing-ai-systems-book-platform-code-review",
+      "content_hash": "025fc17559c5222d",
+      "excerpt": "Designing AI Systems：从模型调用走向共享AI平台 Designing AI Systems的Manning官方配套仓库把模型、会话、企业知识、工具、安全规则、观测与工作流做成平台。本文核对代码来源和授权信息，介绍Claw参考助手，运行87项上游测试与两项合成检查，说明占位向量、确认标记和模拟工具的边界，并给出从源码阅读到真实集成验收的学习路线，帮助开发者理解参考实现。 AI工程 Manning 平台架构 Agent Python 找到的是全书，还是配套代码？ 这本书最值得学的架构是什么？ 第9章助手到底有没有代码？ 本地检查发现了哪些",
+      "language": "zh",
+      "tags": [
+        "AI工程",
+        "Manning",
+        "平台架构",
+        "Agent",
+        "Python"
+      ],
+      "title": "Designing AI Systems：从模型调用走向共享AI平台",
+      "url": "/blog/designing-ai-systems-book-platform-code-review/"
+    }
+  },
+  {
+    "id": "24a21c6f774d8b4898736111a20c73ca23efac35daf74afa",
+    "metadata": {
+      "article_id": "designing-ai-systems-book-platform-code-review",
+      "content_hash": "be0c3e055ebbee57",
+      "excerpt": "Designing AI Systems: Book and Companion Code Review Explore Designing AI Systems’ official companion code, shared services, Claw assistant, 87 passing tests and two checks of embeddings and approval boundaries. AI工程 Manning 平台架构 Agent Python Is this the full book or companion co",
+      "language": "en",
+      "tags": [
+        "AI工程",
+        "Manning",
+        "平台架构",
+        "Agent",
+        "Python"
+      ],
+      "title": "Designing AI Systems: Book and Companion Code Review",
+      "url": "/blog/designing-ai-systems-book-platform-code-review/"
+    }
+  }
+]

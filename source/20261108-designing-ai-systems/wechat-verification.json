@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-08T02:33:56.999Z",
+  "drafts": [
+    {
+      "slug": "designing-ai-systems-book-platform-code-review",
+      "mediaId": "prCUE631thH1cmNLi42prJXQSuMS7ekIFfJiMOBF8R4d0Y6qr39uV_4nvWen32EE",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "383705c18e55ff4156ecc5577571390f74927487445c87b26b44db60ed98a43b",
+      "remoteTextHash": "383705c18e55ff4156ecc5577571390f74927487445c87b26b44db60ed98a43b",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/designing-ai-systems-book-platform-code-review/",
+      "localContentHash": "d10b87cf7e1ba2df6fe692b37b0c690b86e7e47bf462feb6d5a82c12375d4b80",
+      "remoteContentHash": "4bf75421fd0bb585aaed32cc9160f05c922479e21bbf7a86e1dcec730c8bf0d2"
+    }
+  ]
+}

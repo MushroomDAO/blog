@@ -1,0 +1,1757 @@
+Reading additional input from stdin...
+2026-11-08T02:28:34.862403Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/network-switch/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T02:28:34.862441Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-cdp/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T02:28:34.862445Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-docker/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-08T02:28:34.862448Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-publisher/SKILL.md: missing YAML frontmatter delimited by ---
+OpenAI Codex v0.165.0
+--------
+workdir: /Users/jason/Dev/mycelium/blog
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a1b8fc-737f-72d1-a7d3-cfd41170ce85
+--------
+user
+Use $mycelium-mushroom-illustrations. Read src/content/blog/designing-ai-systems-book-platform-code-review.md. Generate3 separate Little M white-background hand-drawn illustrations, few correct Chinese labels: 01 multiple applications sharing model/session/knowledge/tool platform services; 02 distinguish placeholder zero embeddings and requires_confirmation flag from real semantic retrieval and an enforced approval gate (label 待接入/待核验, not exploit scene); 03 Claw reference application calendar/ticket mock outputs -> real integration -> acceptance testing, clearly label 模拟 at start. Use image generation. Save raw generated_images/designing-ai-systems-20261108/. Copy final src/assets/images/designing-ai-systems-book-platform-code-review-fig-01.png through03.png. Each1120x630 max48palettecolors under90000bytes no dithering; inspect final. Do not modify article/banner/other files. Finish copying before returning.
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+codex
+我会按「小M」插图技能阅读正文并分别生成三张图，再压缩为指定尺寸和调色板，检查后复制到目标路径；只写入这次指定的图片文件。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/style-dna.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/mushroom-ip.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/composition-patterns.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/prompt-template.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/qa-checklist.md /Users/jason/.codex/skills/.system/imagegen/SKILL.md src/content/blog/designing-ai-systems-book-platform-code-review.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+---
+name: mycelium-mushroom-illustrations
+description: 生成 Mycelium「小M」蘑菇 IP 风格的中文正文配图。【科技类别】文章默认用此 skill。用于为中文文章、帖子、博客、Notion 文档、工作流、方法论、流程、结构、状态、隐喻或观点生成“怪诞”“蘑菇”“小M”“菌丝”“手绘”“正文配图”“文章插图”“配图建议”“shot list”“去标题/改图”等任务；视觉为纯白手绘、少量红橙蓝批注、简洁清爽但天马行空，主角是黑色小蘑菇「小M」。
+---
+
+# Mycelium 小M（蘑菇）怪诞正文配图
+
+> 用途分工：本 skill 用于**科技类别**文章。社会/创作思考类别用 `mycelium-avatar-illustrations`（卡通小人），科普类别用 `mycelium-baobao-cat-illustrations`（德文猫Baobao）。
+
+## 核心定位
+
+为中文文章设计和生成 16:9 横版正文配图。目标不是做商业插画、PPT 信息图或可爱卡通，而是把文章里的关键判断、流程、结构、状态或隐喻，变成一张清爽、怪诞、有创意、可读但不说明书的手绘解释图。
+
+默认视觉 IP 是“小M”：🍄 经典造型的小蘑菇怪物——**红色菌盖 + 白色圆点斑、米白菌柄 + 黑色手绘轮廓、黑点眼**、细腿、空表情，认真做一件荒诞但成立的事；脚下可伸出橙色菌丝线做连接/传输。不要画成黑色实心。小M必须参与画面的核心动作，不能只是站在旁边当装饰。完整形象见 `references/mushroom-ip.md`。
+
+## 先读这些参考
+
+按任务需要读取，不要一次塞满上下文：
+
+- `references/style-dna.md`：风格 DNA、颜色、文字、禁忌。
+- `references/mushroom-ip.md`：小M IP 的形象、性格、动作库和禁忌。
+- `references/composition-patterns.md`：结构类型、原创隐喻方法和反复刻规则。
+- `references/prompt-template.md`：单张生图提示词模板。
+- `references/qa-checklist.md`：生成后检查和迭代规则。
+- `assets/examples/`：只作低频视觉校准，不进入默认生成路径。不要照抄这些案例的构图、物件或标注。
+
+## 工作流
+
+### 1. 消化正文
+
+先读用户给的正文、链接、Notion 页面、Markdown 文件或截图内容。提炼：
+
+- 核心观点是什么
+- 哪些段落承担认知转折
+- 哪些内容适合用图解释
+- 哪些地方只适合文字，不需要图
+
+不要平均配图。优先选择“认知锚点”，例如：核心判断、两个断点、输入输出闭环、分流、前后对比、一鱼多吃、承接路径、常见坑、角色状态变化。
+
+### 2. 先出配图策略
+
+如果用户只是说“分析怎么配图 / 思考哪些地方需要配图”，先给 shot list。每张图写清楚：
+
+- 放在哪个段落后
+- 图的主题
+- 核心意思
+- 结构类型
+- 小M在图里做什么
+- 建议元素
+- 建议中文标注词
+
+默认 4-8 张。文章很短时 1-3 张；长文也不要轻易超过 9 张。够用就好，避免把正文做成画册。
+
+### 3. 单张生成
+
+如果用户明确要求“生成 / 输出 / 做图 / 帮我生成”，不要停下来等确认；用内置 `image_gen` 每张单独生成。不要把多张图拼在一张里。
+
+每张图只讲一个核心结构。提示词必须包含：
+
+- 16:9 横版中文正文配图
+- 纯白背景
+- 黑色手绘线稿
+- 少量红色/橙色/蓝色中文手写批注
+- 大量留白
+- 小M作为核心动作主体
+- 禁止 PPT、商业插画、幼稚可爱、复杂架构、左上角类型标题
+
+不要复刻过往案例。案例只提供风格密度和小M参与方式，不能直接复用“传送带断点 / 小M拉线 / 素材鱼 / 盖章工具箱 / 常见坑路径”等已有构图，除非用户明确要求复刻某张图。每次都要从当前文章重新发明一个奇怪但成立的隐喻。
+
+### 4. 检查与迭代
+
+生成后检查 `references/qa-checklist.md`。如果出现以下问题，优先重生成或局部编辑：
+
+- 小M只是装饰
+- 画面太满
+- 太像流程图/PPT
+- 中文太多或错字严重
+- 左上角出现“常见坑/流程图/系统架构图”等标题
+- 画风太可爱、幼稚、死板
+- 背景不是干净白底
+
+### 5. 保存交付
+
+如果用户在 workspace 内工作，把最终图复制到：
+
+```text
+assets/<article-slug>-illustrations/
+```
+
+按顺序命名：
+
+```text
+01-topic-name.png
+02-topic-name.png
+```
+
+保留原始生成文件，不要覆盖已有资产，除非用户明确要求替换。
+
+## 输出口径
+
+生成前的策略输出要短而准。生成后的交付要包含：
+
+- 生成了几张
+- 每张图的用途
+- 保存路径
+- 哪些图最稳，哪些图是可选
+
+不要长篇解释风格理论；让图自己说话。
+# 风格 DNA
+
+## 一句话
+
+纯白、极简、手绘、留白、克制、怪诞、产品草图感、中文手写感、结构清楚但不说明书。
+
+像一个长期做 AI、产品、设计、开发工具的人，在白纸上随手画出来的一张解释草图。
+
+## 必须
+
+- 16:9 横版正文配图。
+- 纯白背景：不要米色、暖灰、纸张纹理、渐变、阴影、噪点、复古纸感。
+- 黑色手绘线稿为主：细线、轻微抖动、不机械、不矢量、不厚重描边。
+- 大量留白：主体占画面约 40%-60%，至少 35% 空白，最好有一整块安静区域。
+- 少量中文手写批注：最多 5-8 处，每处尽量 2-8 个字。
+- 一张图只讲一个核心动作、结构、状态或隐喻。
+- 结构要自然表达，不要在图上写结构类型名称。
+
+## 颜色
+
+- 黑色：主体线稿、角色、框线、结构、主要文字、主体物件。
+- 红色：重点批注、问题、情绪点、关键提醒、结果。
+- 橙色：主流程、路径、箭头、自动化流向、从 A 到 B 的移动关系。
+- 蓝色：补充说明、脑内状态、系统状态、第二层解释、AI/assistant/自动化提示。
+
+蓝色不是每张都必须用。颜色要克制，宁可少不要多。
+
+## 绝对不要
+
+- 不要商业插画。
+- 不要 PPT 信息图。
+- 不要正式流程图。
+- 不要课程课件。
+- 不要可爱卡通海报。
+- 不要儿童插画。
+- 不要复杂架构图。
+- 不要精致扁平插画。
+- 不要科技感 UI。
+- 不要真实 App 截图。
+- 不要复杂背景、渐变、阴影、纹理。
+- 不要把每个节点都解释清楚。
+- 不要左上角写“Workflow 流程图 / 系统架构图 / 常见坑 / 路线图”等类型标题。
+
+## 审美方向
+
+要怪诞、创意、有意思、简洁清爽、天马行空。
+
+不要可爱、幼稚、很复杂、死板。
+# 小M IP
+
+## 角色定义
+
+小M是 Mycelium 中文正文配图的固定视觉 IP。
+
+默认每张图都要出现小M。小M不是吉祥物，不是贴纸，不是可爱装饰，而是正在认真参与系统运转的荒诞工作者——一只在白板草图里真的负责某项工作的小蘑菇。
+
+## 外形（🍄 经典蘑菇造型）
+
+- 手绘小蘑菇怪物，参照 🍄 emoji 的经典造型，不是黑色实心。
+- **菌盖：红色（正红 / 红橙）半圆顶，盖上点缀 3-5 颗白色圆点斑**（🍄 标志性白点）。菌盖边缘有手绘黑色轮廓线。
+- **菌柄/身体：米白色（奶白）填充 + 黑色手绘轮廓线**。
+- **黑色小圆点眼睛**，长在白色菌柄上（白柄上用黑点眼才清楚；不要用白点眼）。
+- 细腿，偶尔有细胳膊；表情空、呆、冷静、认真（deadpan，不卖萌）。
+- 身体（菌柄）可以变形：圆柱、漏斗、管道、洞口、奇怪工位等，但**红帽白点 + 白柄**这套识别特征要保留。
+- 轮廓略微不规则，有手绘感。不要画得太精致、太 3D、太写实。
+
+### 配色说明（重要）
+
+- 菌盖红是**角色自身的身份色**（填充块）；这与「红色批注」（细线/文字）在视觉上是分开的，不冲突。
+- 流动 / 传输 / 路径 / 菌丝仍用**橙色**；脑内状态 / 系统提示用蓝色。颜色整体仍要克制。
+
+## 菌丝特性（这是小M区别于普通角色的关键）
+
+- 小M脚下、身后或手里可以延伸出**细细的菌丝线**。
+- 菌丝用来：连接信息源、传输养分/内容、织成网络、把分散的节点接到一起。
+- 菌丝线用橙色表示「流动 / 传输 / 从 A 到 B」，和风格 DNA 的颜色语义一致。
+- 不要每张都堆满菌丝；只在「连接、传输、网络、汇聚」类主题里用 1-2 根，点到为止。
+
+## 性格
+
+- 很认真，但做的事有点荒诞。
+- 像一个低调的系统操作员 / 地下网络的运维工。
+- 冷幽默，不卖萌。
+- 有点笨拙，但不蠢。
+
+## 常见职责
+
+让小M承担核心动作：
+
+- 搬运素材、分解养分。
+- 用菌丝拉线、汇聚信息源、连接节点。
+- 卡在断点里。
+- 在机器里操作“判断”杆。
+- 变成筛选漏斗。
+- 切开“素材鱼”。
+- 盖章承接话术。
+- 牵着承接路径。
+- 举警告牌看坑。
+- 在地下网络里传输内容、把孢子撒出去（指数传播）。
+- 在旁边搬砖、搭桥、开门、分拣、记录。
+
+## 禁止
+
+- 不要把小M画成过度可爱的吉祥物、卡通蘑菇贴纸。
+- 不要画成儿童卡通角色。
+- 不要给小M复杂服装、表情包、闪亮眼睛、笑脸。
+- 不要画成写实蘑菇 / 3D 蘑菇 / 渐变质感（红帽白点是手绘平涂，不是写实）。
+- 不要把菌盖画成黑色实心（旧版已废弃）；也不要弄成多彩花哨。
+- 不要让小M只是站在角落里看。
+- 不要让小M或菌丝抢走结构表达，把画面塞满。
+
+## 判断标准
+
+如果去掉小M，图的核心隐喻还能完全成立，说明小M太装饰了；要重写提示词，让小M成为动作主体。菌丝同理：菌丝必须服务于「连接 / 传输」的核心意思，不是背景装饰。
+# 构图模式与原创规则
+
+## 基础结构类型
+
+选择一种结构即可，不要混太多。
+
+### Workflow 流程
+
+适合：输入 -> 处理 -> 输出，内容生产，AI 工作流，自动化链路。
+
+画法：左侧输入，中间小M或怪机器处理，右侧输出，橙色箭头表达主流向。
+
+### 系统局部
+
+适合：信息来源、过滤器、数据库、渲染器、agent 系统局部。
+
+画法：只画 3-5 个核心模块，小M参与其中一个关键动作。
+
+### 前后对比
+
+适合：混乱/有序，手动/自动，分散/收拢，焦虑/稳定。
+
+画法：左混乱，右稳定，中间橙色箭头。角色可以更夸张。
+
+### 角色状态
+
+适合：用户痛点、创作者状态、工具太多、信息焦虑、卡住到跑起来。
+
+画法：2-4 个小状态，每个状态一个短标注。
+
+### 概念隐喻
+
+适合：内容工厂、信息仓库、脑内黑盒、工作流机器、自动日报。
+
+画法：一个大的怪物件或机器，少量输入，一个输出。要有记忆点。
+
+### 方法分层
+
+适合：方法论框架、系统层级、能力栈、内容系统分层。
+
+画法：一层层盒子，不要正式金字塔；小M在旁边搬砖或搭建。
+
+### 地图路线
+
+适合：从想法到上线、用户路径、内容承接路径、学习路线。
+
+画法：一条弯曲路径，少量节点，小M牵线或走路。
+
+### 小漫画分镜
+
+适合：失败到成功、真实过程、吐槽、使用前后变化。
+
+画法：2-4 个小场景，每格只表达一个动作。
+
+## 原创隐喻生成法
+
+每次都从当前文章重新发明隐喻，不能照搬旧图。
+
+### 三步
+
+1. 把抽象概念换成一个物理动作：卡住、漏掉、变重、分拣、沉淀、发酵、开门、折叠、拆包、回流。
+2. 把系统结构换成一个低科技物件：坏掉的机器、纸箱、抽屉、水管、邮筒、怪表盘、秤、井、梯子、奇怪工位。
+3. 让小M承担动作：不是站旁边，而是卡在机器里、拉错线、守门、搬运、修补、称重、扶梯子、记录、把东西塞进某个怪装置。
+
+### 可用物件池
+
+- 纸箱、抽屉、旧机器、漏斗、秤、邮筒、门、井、梯子、水管、线团、闸门、转盘、黑盒、打孔器、压面机、晾衣绳、怪工位。
+- 用时只选 1-2 个，不要堆满。
+
+### 小M动作池
+
+- 拉、扛、塞、捞、压、称、缝、剪、拧、守、推、接、拆、标记、回收。
+- 动作要服务核心意思，不要为了怪而怪。
+
+## 反复刻规则
+
+不要默认打开或复刻 `assets/examples/`。这些图片只用于风格校准，例如线条密度、留白、颜色克制、小M气质。
+
+除非用户明确说“照这张 / 复刻这个构图 / 用这个案例改”，否则不要直接复用这些旧构图：
+
+- 传送带两个断点
+- 小M在内容机器里拉判断杆
+- 小M变漏斗分拣流量/信任/转化
+- 小M切素材鱼
+- 小M牵承接路径
+- 小M拉三层信息源
+- 三个小M分别拿喇叭/搭桥/开门
+- 小M盖章话术工具箱
+- 小M举牌看常见坑路径
+
+同类主题也要换新隐喻。例如“承接路径”不一定画路线，可以画小M把内容尾巴接到门把手；“一鱼多吃”不一定画鱼，可以画小M把一个纸团压成几种形状。
+# 生图提示词模板
+
+每张图单独生成。根据正文内容替换变量，不要把多张图拼在一起。
+
+```text
+Generate one standalone 16:9 horizontal Chinese article illustration.
+
+Visual DNA:
+Pure white background. Minimalist black hand-drawn line art. Slightly wobbly pen lines. Lots of empty white space. Sparse red/orange/blue handwritten Chinese annotations. Clean absurd product-sketch feeling. No gradients, no shadows, no paper texture, no complex background, no commercial vector style, no PPT infographic look, no cute mascot poster, no children's illustration, no realistic UI.
+
+Recurring IP character required:
+小M (Xiao-M), a small hand-drawn MUSHROOM creature styled like the classic 🍄 emoji (NOT solid black): a rounded RED dome cap with 3-5 white polka dots and a black outline, a CREAM/off-white stem body with black hand-drawn outline, small BLACK dot eyes on the pale stem, tiny thin legs, blank deadpan serious expression, slightly uneven hand-drawn shape. Thin ORANGE mycelium threads may extend from its feet or hands to connect / carry / weave things together when the topic is about connection or flow. The red cap with white dots is flat hand-drawn (not 3D, not realistic). 小M must perform the core conceptual action, not decorate the scene. Keep it serious and slightly bizarre, not overly cute. Keep the signature: red dotted cap + pale stem.
+
+Theme:
+{正文配图主题}
+
+Structure type:
+{结构类型：Workflow / 系统局部 / 前后对比 / 角色状态 / 概念隐喻 / 方法分层 / 地图路线 / 小漫画分镜}
+
+Core idea:
+{这张图要表达的核心意思}
+
+Composition:
+{具体画面：小M在哪里、正在做什么、主要物件是什么、信息如何流动}
+
+Suggested elements:
+{元素1} / {元素2} / {元素3} / {元素4}
+
+Chinese handwritten labels:
+{标注词1} / {标注词2} / {标注词3} / {标注词4} / {可选标注词5}
+
+Color use:
+Black for main line art and 小M. Orange for main flow/path/arrows. Red only for key warnings/problems/results. Blue only for secondary notes or feedback/system state.
+
+Constraints:
+One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. Preserve at least 35% blank white space. Use at most 5-8 short handwritten Chinese labels. Do not write a title in the top-left corner. Do not write the structure type on the image. Do not make it a formal diagram, course slide, or dense explainer. Do not copy prior examples or reuse known case compositions unless explicitly requested; invent a fresh visual metaphor for this specific article. It should be clear but not instructional, interesting but not childish, strange but clean.
+```
+
+## 图像编辑提示
+
+去掉左上角标题：
+
+```text
+Edit the provided image. Remove only the handwritten title "{要删除的文字}" and its underline from the top-left corner. Fill that area with the same clean white background, matching the surrounding blank paper. Preserve everything else exactly: characters, labels, paths, line style, composition, aspect ratio, and image quality. Do not add any new text or objects.
+```
+
+增强怪诞感：
+
+```text
+Regenerate this illustration with the same core meaning and simple layout, but make 小M more central to the conceptual action. 小M should be doing the strange work that explains the idea, not standing beside the diagram. Keep it clean, sparse, hand-drawn, and not cute.
+```
+# QA Checklist
+
+## 必过项
+
+- 是 16:9 横版。
+- 背景是干净白底。
+- 有小M。
+- 小M承担核心动作，不只是装饰。
+- 没有复刻旧案例构图，而是为当前文章生成了新隐喻。
+- 画面怪诞、有创意、有意思。
+- 简洁清爽，主体不超过画面约 60%。
+- 一张图只讲一个核心结构。
+- 中文标注少、短、能读。
+- 橙色只用于主路径或箭头。
+- 红色只用于重点、问题、提醒或结果。
+- 蓝色只用于补充说明、反馈或系统状态。
+
+## 失败信号
+
+出现以下情况，重生成或局部编辑：
+
+- 左上角有“常见坑 / Workflow / 系统架构图 / 路线图”等标题。
+- 小M像吉祥物、表情包或可爱卡通。
+- 画面像 PPT、课程课件、正式流程图。
+- 元素太多、箭头太多、节点太多。
+- 文字变成大段解释。
+- 背景有纸纹、阴影、渐变、米色、噪点。
+- 真实 UI 截图或科技感界面。
+- 中文错字严重或标注不可读。
+- 画面太死板，没有荒诞隐喻。
+- 和 `assets/examples/` 里的旧案例构图过于相似。
+
+## 迭代方法
+
+- 太普通：让小M成为动作主体，加入一个奇怪但成立的隐喻。
+- 太复杂：删节点，只保留一个动作和 3-5 个短标注。
+- 太可爱：强调 deadpan、blank serious expression、not cute、not mascot。
+- 太 PPT：去掉标题、边框、整齐网格和过多箭头，改成手绘场景。
+- 太像旧案例：保留核心意思，换掉主物件和小M动作。
+- 文字错：优先局部编辑；错得多就重生成并减少标注数量。
+
+## 交付判断
+
+高质量图应该让读者先觉得“有点怪”，然后 1 秒内看懂结构。
+
+如果第一眼像教程页，而不是白纸上的怪诞产品草图，就不合格。
+---
+name: "imagegen"
+description: "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+---
+
+# Image Generation Skill
+
+Generates or edits images for the current project (for example website assets, game assets, UI mockups, product mockups, wireframes, logo design, photorealistic images, or infographics).
+
+## Top-level modes and rules
+
+This skill has exactly two top-level modes:
+
+- **Default built-in tool mode (preferred):** built-in `image_gen` tool for image generation, editing, and transparent-image requests. Does not require `OPENAI_API_KEY`.
+- **Fallback CLI mode:** `scripts/image_gen.py` CLI. Use when the user explicitly asks for or confirms the CLI/API/model path. Requires `OPENAI_API_KEY`.
+
+Within CLI fallback, the CLI exposes three subcommands:
+
+- `generate`
+- `edit`
+- `generate-batch`
+
+Rules:
+- Use the built-in `image_gen` tool by default for normal image generation and editing requests.
+- Do not switch to CLI fallback for ordinary quality, size, or file-path control.
+- For transparent images, ask built-in `image_gen` for a transparent background and preserve the generated alpha.
+- Never silently switch from built-in `image_gen` or CLI `gpt-image-2` to CLI `gpt-image-1.5`; ask the user first unless they explicitly requested `gpt-image-1.5`.
+- The word `batch` by itself does not mean CLI fallback. If the user asks for many assets or says to batch-generate assets without explicitly asking for CLI/API/model controls, stay on the built-in path and issue one built-in call per requested asset or variant.
+- If the built-in tool fails or is unavailable, tell the user the CLI fallback exists and that it requires `OPENAI_API_KEY`. Proceed only if the user explicitly asks for that fallback.
+- If the user explicitly asks for CLI mode, use the bundled `scripts/image_gen.py` workflow. Do not create one-off SDK runners.
+- Never modify `scripts/image_gen.py`. If something is missing, ask the user before doing anything else.
+
+Built-in save-path policy:
+- In built-in tool mode, Codex saves generated images under `$CODEX_HOME/*` by default.
+- Do not describe or rely on OS temp as the default built-in destination.
+- Do not describe or rely on a destination-path argument (if any) on the built-in `image_gen` tool. If a specific location is needed, generate first and then move or copy the selected output from `$CODEX_HOME/generated_images/...`.
+- Save-path precedence in built-in mode:
+  1. If the user names a destination, move or copy the selected output there.
+  2. If the image is meant for the current project, move or copy the final selected image into the workspace before finishing.
+  3. If the image is only for preview or brainstorming, render it inline; the underlying file can remain at the default `$CODEX_HOME/*` path.
+- Never leave a project-referenced asset only at the default `$CODEX_HOME/*` path.
+- Do not overwrite an existing asset unless the user explicitly asked for replacement; otherwise create a sibling versioned filename such as `hero-v2.png` or `item-icon-edited.png`.
+
+Shared prompt guidance for both modes lives in `references/prompting.md` and `references/sample-prompts.md`.
+
+Fallback-only docs/resources for CLI mode:
+- `references/cli.md`
+- `references/image-api.md`
+- `references/codex-network.md`
+- `scripts/image_gen.py`
+
+## When to use
+- Generate a new image (concept art, product shot, cover, website hero)
+- Generate a new image using one or more reference images for style, composition, or mood
+- Edit an existing image (inpainting, lighting or weather transformations, background replacement, object removal, compositing, transparent background)
+- Produce many assets or variants for one task
+
+## When not to use
+- Extending or matching an existing SVG/vector icon set, logo system, or illustration library inside the repo
+- Creating simple shapes, diagrams, wireframes, or icons that are better produced directly in SVG, HTML/CSS, or canvas
+- Making a small project-local asset edit when the source file already exists in an editable native format
+- Any task where the user clearly wants deterministic code-native output instead of a generated bitmap
+
+## Decision tree
+
+Think about two separate questions:
+
+1. **Intent:** is this a new image or an edit of an existing image?
+2. **Execution strategy:** is this one asset or many assets/variants?
+
+Intent:
+- If the user wants to modify an existing image while preserving parts of it, treat the request as **edit**.
+- If the user provides images only as references for style, composition, mood, or subject guidance, treat the request as **generate**.
+- If the user provides no images, treat the request as **generate**.
+
+Built-in edit semantics:
+- Built-in edit mode is for images already visible in the conversation context, such as attached images or images generated earlier in the thread.
+- If the user wants to edit a local image file with the built-in tool, first load it with built-in `view_image` tool so the image is visible in the conversation context, then proceed with the built-in edit flow.
+- Do not promise arbitrary filesystem-path editing through the built-in tool.
+- If a local file still needs direct file-path control, masks, or other explicit CLI-only parameters, use the explicit CLI fallback only when the user asks for it.
+- For edits, preserve invariants aggressively and save non-destructively by default.
+
+Execution strategy:
+- In the built-in default path, produce many assets or variants by issuing one `image_gen` call per requested asset or variant.
+- In the CLI fallback path, use the CLI `generate-batch` subcommand only when the user explicitly chose CLI mode and needs many prompts/assets.
+- For many distinct assets, do not use `n` as a substitute for separate prompts. `n` is for variants of one prompt; distinct assets need distinct built-in calls or distinct CLI `generate-batch` jobs.
+
+Assume the user wants a new image unless they clearly ask to change an existing one.
+
+## Workflow
+1. Decide the top-level mode: built-in by default, including transparent-output requests; fallback CLI only if explicitly requested or confirmed.
+2. Decide the intent: `generate` or `edit`.
+3. Decide whether the output is preview-only or meant to be consumed by the current project.
+4. Decide the execution strategy: single asset vs repeated built-in calls vs CLI `generate-batch`.
+5. Collect inputs up front: prompt(s), exact text (verbatim), constraints/avoid list, and any input images.
+6. For every input image, label its role explicitly:
+   - reference image
+   - edit target
+   - supporting insert/style/compositing input
+7. If the edit target is only on the local filesystem and you are staying on the built-in path, inspect it with `view_image` first so the image is available in conversation context.
+8. If the user asked for a photo, illustration, sprite, product image, banner, or other explicitly raster-style asset, use `image_gen` rather than substituting SVG/HTML/CSS placeholders. If the request is for an icon, logo, or UI graphic that should match existing repo-native SVG/vector/code assets, prefer editing those directly instead.
+9. Augment the prompt based on specificity:
+   - If the user's prompt is already specific and detailed, normalize it into a clear spec without adding creative requirements.
+   - If the user's prompt is generic, add tasteful augmentation only when it materially improves output quality.
+10. Use the built-in `image_gen` tool by default.
+11. For transparent-output requests, ask built-in `image_gen` for a transparent background and preserve the generated alpha channel.
+12. Inspect outputs and validate: subject, style, composition, text accuracy, and invariants/avoid items.
+13. Iterate with a single targeted change, then re-check.
+14. For preview-only work, render the image inline; the underlying file may remain at the default `$CODEX_HOME/generated_images/...` path.
+15. For project-bound work, move or copy the selected artifact into the workspace and update any consuming code or references. Never leave a project-referenced asset only at the default `$CODEX_HOME/generated_images/...` path.
+16. For batches or multi-asset requests, persist every requested deliverable final in the workspace unless the user explicitly asked to keep outputs preview-only. Discarded variants do not need to be kept unless requested.
+17. If the user explicitly chooses or confirms the CLI fallback, then use the fallback-only docs for model, quality, size, `input_fidelity`, masks, output format, output paths, and network setup.
+18. Always report the final saved path(s) for any workspace-bound asset(s), plus the final prompt or prompt set and whether the built-in tool or fallback CLI mode was used.
+
+## Transparent image requests
+
+Ask built-in `image_gen` for a genuinely transparent background and preserve its alpha.
+
+## Prompt augmentation
+
+Reformat user prompts into a structured, production-oriented spec. Make the user's goal clearer and more actionable, but do not blindly add detail.
+
+Treat this as prompt-shaping guidance, not a closed schema. Use only the lines that help, and add a short extra labeled line when it materially improves clarity.
+
+### Specificity policy
+
+Use the user's prompt specificity to decide how much augmentation is appropriate:
+
+- If the prompt is already specific and detailed, preserve that specificity and only normalize/structure it.
+- If the prompt is generic, you may add tasteful augmentation when it will materially improve the result.
+
+Allowed augmentations:
+- composition or framing hints
+- polish level or intended-use hints
+- practical layout guidance
+- reasonable scene concreteness that supports the stated request
+
+Not allowed augmentations:
+- extra characters or objects that are not implied by the request
+- brand names, slogans, palettes, or narrative beats that are not implied
+- arbitrary side-specific placement unless the surrounding layout supports it
+
+## Use-case taxonomy (exact slugs)
+
+Classify each request into one of these buckets and keep the slug consistent across prompts and references.
+
+Generate:
+- photorealistic-natural — candid/editorial lifestyle scenes with real texture and natural lighting.
+- product-mockup — product/packaging shots, catalog imagery, merch concepts.
+- ui-mockup — app/web interface mockups and wireframes; specify the desired fidelity.
+- infographic-diagram — diagrams/infographics with structured layout and text.
+- scientific-educational — classroom explainers, scientific diagrams, and learning visuals with required labels and accuracy constraints.
+- ads-marketing — campaign concepts and ad creatives with audience, brand position, scene, and exact tagline/copy.
+- productivity-visual — slide, chart, workflow, and data-heavy business visuals.
+- logo-brand — logo/mark exploration, vector-friendly.
+- illustration-story — comics, children’s book art, narrative scenes.
+- stylized-concept — style-driven concept art, 3D/stylized renders.
+- historical-scene — period-accurate/world-knowledge scenes.
+
+Edit:
+- text-localization — translate/replace in-image text, preserve layout.
+- identity-preserve — try-on, person-in-scene; lock face/body/pose.
+- precise-object-edit — remove/replace a specific element (including interior swaps).
+- lighting-weather — time-of-day/season/atmosphere changes only.
+- background-extraction — transparent background / clean cutout. Ask built-in `image_gen` for actual transparency.
+- style-transfer — apply reference style while changing subject/scene.
+- compositing — multi-image insert/merge with matched lighting/perspective.
+- sketch-to-render — drawing/line art to photoreal render.
+
+## Shared prompt schema
+
+Use the following labeled spec as shared prompt scaffolding for both top-level modes:
+
+```text
+Use case: <taxonomy slug>
+Asset type: <where the asset will be used>
+Primary request: <user's main prompt>
+Input images: <Image 1: role; Image 2: role> (optional)
+Scene/backdrop: <environment>
+Subject: <main subject>
+Style/medium: <photo/illustration/3D/etc>
+Composition/framing: <wide/close/top-down; placement>
+Lighting/mood: <lighting + mood>
+Color palette: <palette notes>
+Materials/textures: <surface details>
+Text (verbatim): "<exact text>"
+Constraints: <must keep/must avoid>
+Avoid: <negative constraints>
+```
+
+Notes:
+- `Asset type` and `Input images` are prompt scaffolding, not dedicated CLI flags.
+- `Scene/backdrop` refers to the visual setting. It is not the same as the fallback CLI `background` parameter, which controls output transparency behavior.
+- Fallback-only execution notes such as `Quality:`, `Input fidelity:`, masks, output format, and output paths belong in the CLI path only. Do not treat them as built-in `image_gen` tool arguments.
+
+Augmentation rules:
+- Keep it short.
+- Add only the details needed to improve the prompt materially.
+- For edits, explicitly list invariants (`change only X; keep Y unchanged`).
+- If any critical detail is missing and blocks success, ask a question; otherwise proceed.
+
+## Examples
+
+### Generation example (hero image)
+```text
+Use case: product-mockup
+Asset type: landing page hero
+Primary request: a minimal hero image of a ceramic coffee mug
+Style/medium: clean product photography
+Composition/framing: wide composition with usable negative space for page copy if needed
+Lighting/mood: soft studio lighting
+Constraints: no logos, no text, no watermark
+```
+
+### Edit example (invariants)
+```text
+Use case: precise-object-edit
+Asset type: product photo background replacement
+Primary request: replace only the background with a warm sunset gradient
+Constraints: change only the background; keep the product and its edges unchanged; no text; no watermark
+```
+
+## Prompting best practices
+- Structure prompt as scene/backdrop -> subject -> details -> constraints.
+- Include intended use (ad, UI mock, infographic) to set the mode and polish level.
+- Use camera/composition language for photorealism.
+- Only use SVG/vector stand-ins when the user explicitly asked for vector output or a non-image placeholder.
+- Quote exact text and specify typography + placement.
+- For tricky words, spell them letter-by-letter and require verbatim rendering.
+- For multi-image inputs, reference images by index and describe how they should be used.
+- For edits, repeat invariants every iteration to reduce drift.
+- Iterate with single-change follow-ups.
+- If the prompt is generic, add only the extra detail that will materially help.
+- If the prompt is already detailed, normalize it instead of expanding it.
+- For CLI fallback only, see `references/cli.md` and `references/image-api.md` for model, `quality`, `input_fidelity`, masks, output format, and output-path guidance.
+- For transparent images, ask built-in `image_gen` for actual transparency and preserve its alpha.
+
+More principles shared by both modes: `references/prompting.md`.
+Copy/paste specs shared by both modes: `references/sample-prompts.md`.
+
+## Guidance by asset type
+Asset-type templates (website assets, game assets, wireframes, logo) are consolidated in `references/sample-prompts.md`.
+
+## gpt-image-2 guidance for CLI fallback
+
+The fallback CLI defaults to `gpt-image-2`.
+
+- Use `gpt-image-2` for new CLI/API workflows unless the user confirms a different model.
+- CLI `gpt-image-2` does not support `background=transparent`; ask before using `gpt-image-1.5` unless the user explicitly requested that model.
+- `gpt-image-2` always uses high fidelity for image inputs; do not set `input_fidelity` with this model.
+- `gpt-image-2` supports `quality` values `low`, `medium`, `high`, and `auto`.
+- Use `quality low` for fast drafts, thumbnails, and quick iterations. Use `medium`, `high`, or `auto` for final assets, dense text, diagrams, identity-sensitive edits, or high-resolution outputs.
+- Square images are typically fastest to generate. Use `1024x1024` for fast square drafts.
+- If the user asks for 4K-style output, use `3840x2160` for landscape or `2160x3840` for portrait.
+- `gpt-image-2` size may be `auto` or `WIDTHxHEIGHT` if all constraints hold: max edge `<= 3840px`, both edges multiples of `16px`, long-to-short ratio `<= 3:1`, total pixels between `655,360` and `8,294,400`.
+
+Popular `gpt-image-2` sizes:
+- `1024x1024` square
+- `1536x1024` landscape
+- `1024x1536` portrait
+- `2048x2048` 2K square
+- `2048x1152` 2K landscape
+- `3840x2160` 4K landscape
+- `2160x3840` 4K portrait
+- `auto`
+
+## Fallback CLI mode only
+
+### Temp and output conventions
+These conventions apply only to the CLI fallback. They do not describe built-in `image_gen` output behavior.
+- Use `tmp/imagegen/` for intermediate files (for example JSONL batches); delete them when done.
+- Write final artifacts under `output/imagegen/`.
+- Use `--out` or `--out-dir` to control output paths; keep filenames stable and descriptive.
+
+### Dependencies
+Prefer `uv` for dependency management in this repo.
+
+Required Python package:
+```bash
+uv pip install openai
+```
+
+Optional for image inspection and downscaling:
+```bash
+uv pip install pillow
+```
+
+Portability note:
+- If you are using the installed skill outside this repo, install dependencies into that environment with its package manager.
+- In uv-managed environments, `uv pip install ...` remains the preferred path.
+
+### Environment
+- `OPENAI_API_KEY` must be set for live API calls.
+- Do not ask the user for `OPENAI_API_KEY` when using the built-in `image_gen` tool.
+- Never ask the user to paste the full key in chat. Ask them to set it locally and confirm when ready.
+
+If the key is missing, give the user these steps:
+1. Create an API key in the OpenAI platform UI: https://platform.openai.com/api-keys
+2. Set `OPENAI_API_KEY` as an environment variable in their system.
+3. Offer to guide them through setting the environment variable for their OS/shell if needed.
+
+If installation is not possible in this environment, tell the user which dependency is missing and how to install it into their active environment.
+
+### Script-mode notes
+- CLI commands + examples: `references/cli.md`
+- API parameter quick reference: `references/image-api.md`
+- Network approvals / sandbox settings for CLI mode: `references/codex-network.md`
+
+## Reference map
+- `references/prompting.md`: shared prompting principles for both modes.
+- `references/sample-prompts.md`: shared copy/paste prompt recipes for both modes.
+- `references/cli.md`: fallback-only CLI usage via `scripts/image_gen.py`.
+- `references/image-api.md`: fallback-only API/CLI parameter reference.
+- `references/codex-network.md`: fallback-only network/sandbox troubleshooting for CLI mode.
+- `scripts/image_gen.py`: fallback-only CLI implementation. Use only when the user explicitly chooses or confirms CLI mode.
+---
+title: "Designing AI Systems：从模型调用走向共享AI平台"
+titleEn: "Designing AI Systems: Book and Companion Code Review"
+description: "Designing AI Systems的Manning官方配套仓库把模型、会话、企业知识、工具、安全规则、观测与工作流做成平台。本文核对代码来源和授权信息，介绍Claw参考助手，运行87项上游测试与两项合成检查，说明占位向量、确认标记和模拟工具的边界，并给出从源码阅读到真实集成验收的学习路线，帮助开发者理解参考实现。"
+descriptionEn: "Explore Designing AI Systems’ official companion code, shared services, Claw assistant, 87 passing tests and two checks of embeddings and approval boundaries."
+wechatTitle: "AI平台怎么建？找到这本书的配套代码"
+wechatDigest: "核对官方仓库，实测87项测试与两项边界检查，分清参考实现和生产验收。"
+pubDate: "2026-11-08"
+updatedDate: "2026-11-08"
+category: "Tech-Experiment"
+tags: ["AI工程", "Manning", "平台架构", "Agent", "Python"]
+heroImage: "../../assets/images/designing-ai-systems-book-platform-code-review-banner.jpg"
+---
+
+《Designing AI Systems》讲的是如何把模型调用背后的通用能力做成共享平台，让业务应用复用会话、知识、工具、评测和运行服务。已找到Manning官方链接的GitHub仓库：`designing-ai-systems/designing_ai_systems_repo`，适合结合书籍理解AI工程如何分层。
+
+## 找到的是全书，还是配套代码？
+
+直接入口：https://github.com/designing-ai-systems/designing_ai_systems_repo
+出版社页面：https://www.manning.com/books/designing-ai-systems
+
+Manning产品页的“Source code on Github”直接指向这个仓库，仓库也链接回同一本书，来源关系可以核实。完整书名为《Designing AI Systems: A guide to production-ready platforms》，作者是Suhas Suresha与Dewang Sultania；出版社介绍分别将两人与Adobe、Netflix的机器学习工程经历联系起来。
+
+公开仓库主要包含Python平台代码、协议、示例、测试、容器配置与README，没有找到全书正文、PDF或EPUB。核验时也未找到明确的LICENSE文件或项目license声明，GitHub返回的license字段为空。因此本文称它为公开配套代码，不擅自标成MIT或Apache，更不把它介绍为整本书的免费开源版本。
+
+出版社页面在本次核验时显示全部章节可读，同时保留MEAP和预计2026年11月出版的标记。阅读与购买入口应以出版社当前页面为准；仓库存在，不代表书籍文本采用了相同授权或可以任意转载。
+
+## 这本书最值得学的架构是什么？
+
+关键是把应用逻辑与可复用基础能力分开。一个应用可能处理内部知识问答，另一个负责多步任务，但它们通常都会遇到模型接入、会话状态、凭证、检索、质量评估和成本归因。共享平台的目标，是让这些能力有统一接口和运维方式。
+
+![小M让多个业务应用复用模型、会话、知识和工具等平台服务](../../assets/images/designing-ai-systems-book-platform-code-review-fig-01.png)
+
+代码采用Python领域对象与gRPC边界分离的方式：业务调用者主要接触dataclass，服务端再完成协议消息转换。阅读时应跟踪一个请求如何穿过SDK、gateway、服务和存储，而不只记住文件夹数量。
+
+| 能力 | 仓库入口 | 阅读重点 |
+| --- | --- | --- |
+| 模型与提示词 | `services/models/` | 供应商适配、模型发现、流式响应、提示词注册 |
+| 会话与记忆 | `services/sessions/` | 用户与会话的区别、历史分页、记忆读写和持久化 |
+| 企业知识 | `services/data/` | 解析、切块、embedding、向量与混合检索 |
+| 工具与规则 | `services/tools/`、`services/guardrails/` | 凭证引用、调用限制、熔断与策略检查 |
+| 观测与改进 | `services/observability/`、`services/experiments/` | trace、token和成本、离线评测、实验与人工标注 |
+| 应用运行 | `services/workflow/`、`services/gateway/` | 同步、SSE、异步任务、工作流组合和部署 |
+
+仓库的Compose配置组织九个平台服务与PostgreSQL，业务工作流则可以独立部署。这体现的是共享服务与每个应用执行单元的区别。对于小团队，也可以先保留模块接口、减少进程数量，再根据隔离、吞吐和团队分工拆分；这是本文的实施建议，不是要求所有项目一开始就运维整套微服务。
+
+## 第9章助手到底有没有代码？
+
+有。根README的状态表仍把AI Assistant写成planned，但`claw/README.md`明确介绍第9章参考应用，`claw/claw.py`也包含上下文组装、记忆、检索、工具分派、模型循环和观测评分。判断覆盖范围应结合实际目录，不能只看一个滞后的状态条目。
+
+Claw很适合用来理解平台服务如何被业务应用组合。它先做输入检查，再组装提示词、用户记忆、检索资料和历史消息，进入有限轮次的模型循环，最后过滤输出、保存对话并记录评分。
+
+但“看见某个工具返回成功”仍需要核对实现。当前Claw对日历和工单动作返回确定性的模拟结构，不会因此真的在企业日历建会或在工单系统开单；MCP工具走的是另一条平台分派路径。本文没有接入真实账户或验证这些外部集成。
+
+## 本地检查发现了哪些值得注意的边界？
+
+本次固定源码为`94dd7ecdd02de7c1289bb81765deeaaa23dffcee`，按`uv.lock`安装依赖后，在本地选跑87项上游测试：会话存储、凭证、规则存储、切块、工作流装饰器、熔断器69项，加上Claw的18项。全部通过。项目要求Python至少3.12，本次`uv`实际选择的是Python 3.14.7，不能把它说成已验证所有受支持版本。
+
+另外运行了两项自建合成夹具，检查的都是实际服务对象，没有启动公开端点，也没有访问外部模型。
+
+第一项检查默认Data Service的embedding。入口`services/data/main.py`直接构造`DataService()`；未注入embedding函数时，构造器使用占位实现。对两个不同问题调用实际生成器，都得到相同的1536维全零向量。这能帮助确认对象和管线接通，却不能证明检索获得了语义能力。部署时应把真实embedding服务接入，并验证索引与查询侧的模型、维度和实际召回质量。
+
+第二项注册了一个标为`requires_confirmation=True`的工具，再直接调用`ExecuteTool`。底层HTTP使用`MockTransport`，结果是模拟端点仍被调用。这个结果只证明直接执行入口没有因为该元数据而自动要求审批凭证，不排除调用方另行检查。真实业务需要明确审批由谁发起、审批结果绑定什么参数，以及在哪个入口强制核验，不能把一个布尔字段当成完整审批机制。
+
+![小M检查占位向量和确认标记，区分接口接通与真实能力](../../assets/images/designing-ai-systems-book-platform-code-review-fig-02.png)
+
+源码里的`_execute_sandboxed`主要负责HTTP或MCP分派，以及超时和响应大小限制；代码注释把CPU、内存等资源约束留给部署层。因此名称中的sandbox不能独立证明存在完整的操作系统隔离。动态注册解析器会加载代码，工作流服务还挂载Docker socket，这些控制接口需要明确的管理权限与信任范围。
+
+以上是局部代码核对与合成测试，不是全平台安全审计。没有运行完整测试集、PostgreSQL集成、Docker或Kubernetes部署，没有调用付费模型、真实MCP服务器或企业工具，也没有做负载与RAG质量评测。
+
+## 怎样把它当作学习项目使用？
+
+先从第3、4章对应的模型与会话能力入手，理解一次模型调用如何携带上下文、生成响应并保存历史。默认内存存储适合开发，但进程重启后的长期记忆需要明确持久化后端，不能仅凭接口名称判断数据会一直存在。
+
+第二步阅读第5、6章对应的数据、工具和规则实现。用受控小文档集合检查切块和检索，把工具指向自己控制的模拟端点，验证允许、拒绝、失败、超时与重试路径。先证明链路里的每个信号都是真实的，再接企业数据与凭证。
+
+第三步读第7、8章的观测、实验和工作流，再用Claw看各模块如何合起来。对真实应用而言，HTTP返回200不够：还要观察答案是否有依据、动作有没有重复、成本是否可归因、失败能否恢复。观察指标和独立评测，应该与功能开发一起设计。
+
+![小M把参考应用中的模拟动作替换为经过验证的真实集成，再进入运行验收](../../assets/images/designing-ai-systems-book-platform-code-review-fig-03.png)
+
+最小的源码学习入口如下。先检查当前版本和本地依赖，再选择测试；下面不包含任何账户配置或真实工具执行：
+
+```bash
+git clone https://github.com/designing-ai-systems/designing_ai_systems_repo.git
+cd designing_ai_systems_repo
+uv sync --frozen
+uv run pytest tests/test_session_storage.py tests/test_credential_store.py -q
+```
+
+真实模型调用需要API凭证，工作流容器示例需要Docker，PostgreSQL与pgvector属于进一步的存储配置。README所谓“uv是唯一前置条件”，应理解为基础Python环境入口，不能替代这些场景各自的依赖。
+
+## 常见问题
+
+### 能从GitHub下载这本书的完整免费正文吗？
+
+本次找到的是出版社认可的配套代码仓库，没有找到全书正文或电子书文件。书籍请使用Manning提供的阅读入口，公开代码与全书授权应分别确认。
+
+### 它已经可以不改代码直接承接生产业务吗？
+
+它提供了相当完整的参考结构，但当前默认与模拟路径仍需核对。持久化、真实embedding、审批执行和外部工具集成，都应该在自己的环境里完成验收。
+
+### 适合谁读？
+
+适合掌握Python和基本软件架构、准备从模型调用走向平台建设的开发者。想学习单个提示词或快速聊天页面的人，可以先选择其中一个模块，不必一次启动所有服务。
+
+## 一手资料
+
+配套GitHub：https://github.com/designing-ai-systems/designing_ai_systems_repo
+Manning书籍页：https://www.manning.com/books/designing-ai-systems
+Claw参考应用：https://github.com/designing-ai-systems/designing_ai_systems_repo/tree/main/claw
+Data Service：https://github.com/designing-ai-systems/designing_ai_systems_repo/blob/main/services/data/service.py
+Tool Service：https://github.com/designing-ai-systems/designing_ai_systems_repo/blob/main/services/tools/service.py
+
+本文授权适用于原创评介与插图；书籍与外部代码的权利说明以各自来源为准。
+
+---
+
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+
+<!--EN-->
+
+Designing AI Systems explains how to turn the capabilities surrounding model calls into a shared platform: conversations, knowledge, tools, evaluation and operations. Manning directly links the public companion repository, `designing-ai-systems/designing_ai_systems_repo`, which is useful for studying how these responsibilities fit together.
+
+## Is this the full book or companion code?
+
+Repository: https://github.com/designing-ai-systems/designing_ai_systems_repo
+Publisher: https://www.manning.com/books/designing-ai-systems
+
+The publisher’s GitHub resource points to this repository, which links back to the same title. The book is Designing AI Systems: A guide to production-ready platforms, by Suhas Suresha and Dewang Sultania. Manning’s biographies associate their engineering experience with Adobe and Netflix respectively.
+
+The repository contains Python services, protocols, examples, tests and deployment configuration. No full book text, PDF or EPUB was found. At the reviewed commit, no explicit LICENSE file or project license declaration was found either; GitHub’s license metadata is null. This review therefore describes public companion code, without assigning MIT or Apache licensing or claiming a freely open-sourced complete book.
+
+The publisher page observed during this review shows all chapters available while retaining MEAP and estimated November 2026 publication labels. Use its current reading and purchase options. Public source availability does not establish identical reuse terms for the book’s prose.
+
+## What architecture is worth learning?
+
+The central separation is between application logic and reusable capabilities. An internal knowledge assistant and a multi-step task application often share needs for model access, state, credentials, retrieval, evaluation and cost attribution. A platform gives these common responsibilities consistent interfaces and operating practices.
+
+![Little M connects multiple applications to shared platform capabilities](../../assets/images/designing-ai-systems-book-platform-code-review-fig-01.png)
+
+The implementation separates Python domain objects from gRPC messages. Application code primarily works with dataclasses; service boundaries translate protocol messages. Follow a request through the SDK, gateway, service and storage to understand the design, rather than memorizing a folder list.
+
+| Capability | Repository entry | Questions to inspect |
+| --- | --- | --- |
+| Models and prompts | `services/models/` | Provider adapters, discovery, streaming and prompt registration |
+| Conversations and memory | `services/sessions/` | User versus session scope, pagination and persistence |
+| Enterprise knowledge | `services/data/` | Parsing, chunking, embeddings and hybrid retrieval |
+| Tools and rules | `services/tools/`, `services/guardrails/` | Credentials, execution limits, circuit breaking and policy checks |
+| Observation and improvement | `services/observability/`, `services/experiments/` | Traces, cost, offline evaluation, experiments and annotation |
+| Application execution | `services/workflow/`, `services/gateway/` | Sync, SSE, asynchronous jobs, composition and deployment |
+
+Compose organizes nine platform services plus PostgreSQL, while application workflows can be deployed separately. This illustrates shared services versus per-application execution units. A small team could preserve module boundaries while initially running fewer processes, splitting them as isolation, throughput and ownership require. That is an adoption suggestion, not a requirement that every project start with all these microservices.
+
+## Is the chapter-nine assistant implemented?
+
+Yes. The root README still labels AI Assistant as planned, but `claw/README.md` describes the chapter-nine reference application, and `claw/claw.py` includes context assembly, memory, retrieval, tool dispatch, a model loop and observation scoring. The directory is stronger evidence than a stale status row.
+
+Claw shows how an application composes the platform. It validates input, assembles the prompt, user memory, retrieved documents and conversation history, runs a bounded model loop, then filters output, stores messages and records a score.
+
+Successful-looking tool results require implementation checks. Calendar and ticket actions currently return deterministic mock structures; they do not establish that a real company calendar or ticketing system was updated. MCP tools use a separate platform dispatch path. No real accounts or external integrations were exercised in this review.
+
+## What did local verification establish?
+
+The reviewed commit is `94dd7ecdd02de7c1289bb81765deeaaa23dffcee`. After installing from `uv.lock`, 87 selected upstream tests passed: 69 across session storage, credentials, policy storage, chunking, workflow decorators and circuit breaking, plus 18 for Claw. The project requires Python 3.12 or newer; this local uv run selected Python 3.14.7. These results do not verify every supported interpreter.
+
+Two additional synthetic fixtures exercised actual service objects without exposing a server or calling an external model.
+
+The first inspected default Data Service embeddings. Its main entry point constructs `DataService()` without injecting an embedding function. The fallback produces placeholder vectors: two different synthetic queries returned identical, all-zero vectors of 1,536 dimensions. This can support wiring exercises but establishes no semantic retrieval capability. An adopter must connect real embeddings and check consistent models, dimensions and measured retrieval quality across indexing and querying.
+
+The second registered a tool with `requires_confirmation=True` and called `ExecuteTool` directly. An HTTP MockTransport endpoint was still reached. This establishes that the metadata alone does not force an approval artifact at that direct entry point; a caller may separately enforce approval. A real application must specify who approves, which parameters approval covers, and where it is checked.
+
+![Little M checks placeholder vectors and confirmation metadata against real execution requirements](../../assets/images/designing-ai-systems-book-platform-code-review-fig-02.png)
+
+The method named `_execute_sandboxed` primarily dispatches HTTP or MCP calls and enforces timeout and response-size limits. Its comments leave CPU and memory constraints to deployment. The name alone is not evidence of complete operating-system isolation. Dynamic parser registration loads source code, and workflow containers use a mounted Docker socket; these administrative surfaces need explicit trust and access boundaries.
+
+This was a local review and synthetic verification, not a platform security audit. The full test suite, PostgreSQL integration, Docker and Kubernetes deployment were not run. No paid models, real MCP servers or enterprise tools were called, and no load or RAG-quality benchmark was measured.
+
+## How should this be used as a learning project?
+
+Begin with the model and session components associated with chapters three and four. Trace how a request obtains context, receives a response and saves history. Default in-memory storage supports development, but durable memory across process restarts needs a persistent backend. An interface name cannot establish retention behavior.
+
+Next, inspect the chapter-five and chapter-six data, tool and policy components. Use a controlled document collection to evaluate chunking and retrieval. Point tools at a mock endpoint under your control and exercise allow, deny, failure, timeout and retry paths. Establish that each signal is meaningful before connecting company documents and credentials.
+
+Then study observation, experimentation and workflows, and use Claw to see their composition. An HTTP 200 response is insufficient for a real application: answers need evidence, actions must avoid unintended repetition, costs need attribution and failures need recovery. Instrumentation and independent evaluation belong alongside feature development.
+
+![Little M replaces simulated reference actions with verified integrations before deployment acceptance](../../assets/images/designing-ai-systems-book-platform-code-review-fig-03.png)
+
+A minimal source-study entry point is:
+
+```bash
+git clone https://github.com/designing-ai-systems/designing_ai_systems_repo.git
+cd designing_ai_systems_repo
+uv sync --frozen
+uv run pytest tests/test_session_storage.py tests/test_credential_store.py -q
+```
+
+Check the current revision and dependency requirements first. This snippet does not configure accounts or execute real tools. Actual model calls require credentials, workflow-container examples require Docker, and PostgreSQL with pgvector is an additional storage setup. Treat uv as the entry to the Python environment, rather than a replacement for every scenario’s dependencies.
+
+## FAQ
+
+### Can the complete book be downloaded freely from this repository?
+
+No complete book text or electronic-book files were found. The confirmed repository is the publisher-linked companion implementation. Use Manning’s reading options and confirm book and code terms separately.
+
+### Can it take production traffic without adaptation?
+
+It provides a substantial reference structure, but defaults and mock paths require inspection. Persistence, real embeddings, enforced approval and external integrations need acceptance checks in the target environment.
+
+### Who should study it?
+
+Python developers and architects moving from individual model calls to platform engineering. Readers wanting only a simple chat interface can start with one component rather than operating every service at once.
+
+## Primary sources
+
+Companion repository: https://github.com/designing-ai-systems/designing_ai_systems_repo
+Manning title: https://www.manning.com/books/designing-ai-systems
+Claw reference application: https://github.com/designing-ai-systems/designing_ai_systems_repo/tree/main/claw
+Data Service: https://github.com/designing-ai-systems/designing_ai_systems_repo/blob/main/services/data/service.py
+Tool Service: https://github.com/designing-ai-systems/designing_ai_systems_repo/blob/main/services/tools/service.py
+
+This article’s license covers the original review and illustrations. The book and external code retain their own rights and terms.
+
+---
+
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/.system/imagegen/SKILL.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+---
+name: "imagegen"
+description: "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+---
+
+# Image Generation Skill
+
+Generates or edits images for the current project (for example website assets, game assets, UI mockups, product mockups, wireframes, logo design, photorealistic images, or infographics).
+
+## Top-level modes and rules
+
+This skill has exactly two top-level modes:
+
+- **Default built-in tool mode (preferred):** built-in `image_gen` tool for image generation, editing, and transparent-image requests. Does not require `OPENAI_API_KEY`.
+- **Fallback CLI mode:** `scripts/image_gen.py` CLI. Use when the user explicitly asks for or confirms the CLI/API/model path. Requires `OPENAI_API_KEY`.
+
+Within CLI fallback, the CLI exposes three subcommands:
+
+- `generate`
+- `edit`
+- `generate-batch`
+
+Rules:
+- Use the built-in `image_gen` tool by default for normal image generation and editing requests.
+- Do not switch to CLI fallback for ordinary quality, size, or file-path control.
+- For transparent images, ask built-in `image_gen` for a transparent background and preserve the generated alpha.
+- Never silently switch from built-in `image_gen` or CLI `gpt-image-2` to CLI `gpt-image-1.5`; ask the user first unless they explicitly requested `gpt-image-1.5`.
+- The word `batch` by itself does not mean CLI fallback. If the user asks for many assets or says to batch-generate assets without explicitly asking for CLI/API/model controls, stay on the built-in path and issue one built-in call per requested asset or variant.
+- If the built-in tool fails or is unavailable, tell the user the CLI fallback exists and that it requires `OPENAI_API_KEY`. Proceed only if the user explicitly asks for that fallback.
+- If the user explicitly asks for CLI mode, use the bundled `scripts/image_gen.py` workflow. Do not create one-off SDK runners.
+- Never modify `scripts/image_gen.py`. If something is missing, ask the user before doing anything else.
+
+Built-in save-path policy:
+- In built-in tool mode, Codex saves generated images under `$CODEX_HOME/*` by default.
+- Do not describe or rely on OS temp as the default built-in destination.
+- Do not describe or rely on a destination-path argument (if any) on the built-in `image_gen` tool. If a specific location is needed, generate first and then move or copy the selected output from `$CODEX_HOME/generated_images/...`.
+- Save-path precedence in built-in mode:
+  1. If the user names a destination, move or copy the selected output there.
+  2. If the image is meant for the current project, move or copy the final selected image into the workspace before finishing.
+  3. If the image is only for preview or brainstorming, render it inline; the underlying file can remain at the default `$CODEX_HOME/*` path.
+- Never leave a project-referenced asset only at the default `$CODEX_HOME/*` path.
+- Do not overwrite an existing asset unless the user explicitly asked for replacement; otherwise create a sibling versioned filename such as `hero-v2.png` or `item-icon-edited.png`.
+
+Shared prompt guidance for both modes lives in `references/prompting.md` and `references/sample-prompts.md`.
+
+Fallback-only docs/resources for CLI mode:
+- `references/cli.md`
+- `references/image-api.md`
+- `references/codex-network.md`
+- `scripts/image_gen.py`
+
+## When to use
+- Generate a new image (concept art, product shot, cover, website hero)
+- Generate a new image using one or more reference images for style, composition, or mood
+- Edit an existing image (inpainting, lighting or weather transformations, background replacement, object removal, compositing, transparent background)
+- Produce many assets or variants for one task
+
+## When not to use
+- Extending or matching an existing SVG/vector icon set, logo system, or illustration library inside the repo
+- Creating simple shapes, diagrams, wireframes, or icons that are better produced directly in SVG, HTML/CSS, or canvas
+- Making a small project-local asset edit when the source file already exists in an editable native format
+- Any task where the user clearly wants deterministic code-native output instead of a generated bitmap
+
+## Decision tree
+
+Think about two separate questions:
+
+1. **Intent:** is this a new image or an edit of an existing image?
+2. **Execution strategy:** is this one asset or many assets/variants?
+
+Intent:
+- If the user wants to modify an existing image while preserving parts of it, treat the request as **edit**.
+- If the user provides images only as references for style, composition, mood, or subject guidance, treat the request as **generate**.
+- If the user provides no images, treat the request as **generate**.
+
+Built-in edit semantics:
+- Built-in edit mode is for images already visible in the conversation context, such as attached images or images generated earlier in the thread.
+- If the user wants to edit a local image file with the built-in tool, first load it with built-in `view_image` tool so the image is visible in the conversation context, then proceed with the built-in edit flow.
+- Do not promise arbitrary filesystem-path editing through the built-in tool.
+- If a local file still needs direct file-path control, masks, or other explicit CLI-only parameters, use the explicit CLI fallback only when the user asks for it.
+- For edits, preserve invariants aggressively and save non-destructively by default.
+
+Execution strategy:
+- In the built-in default path, produce many assets or variants by issuing one `image_gen` call per requested asset or variant.
+- In the CLI fallback path, use the CLI `generate-batch` subcommand only when the user explicitly chose CLI mode and needs many prompts/assets.
+- For many distinct assets, do not use `n` as a substitute for separate prompts. `n` is for variants of one prompt; distinct assets need distinct built-in calls or distinct CLI `generate-batch` jobs.
+
+Assume the user wants a new image unless they clearly ask to change an existing one.
+
+## Workflow
+1. Decide the top-level mode: built-in by default, including transparent-output requests; fallback CLI only if explicitly requested or confirmed.
+2. Decide the intent: `generate` or `edit`.
+3. Decide whether the output is preview-only or meant to be consumed by the current project.
+4. Decide the execution strategy: single asset vs repeated built-in calls vs CLI `generate-batch`.
+5. Collect inputs up front: prompt(s), exact text (verbatim), constraints/avoid list, and any input images.
+6. For every input image, label its role explicitly:
+   - reference image
+   - edit target
+   - supporting insert/style/compositing input
+7. If the edit target is only on the local filesystem and you are staying on the built-in path, inspect it with `view_image` first so the image is available in conversation context.
+8. If the user asked for a photo, illustration, sprite, product image, banner, or other explicitly raster-style asset, use `image_gen` rather than substituting SVG/HTML/CSS placeholders. If the request is for an icon, logo, or UI graphic that should match existing repo-native SVG/vector/code assets, prefer editing those directly instead.
+9. Augment the prompt based on specificity:
+   - If the user's prompt is already specific and detailed, normalize it into a clear spec without adding creative requirements.
+   - If the user's prompt is generic, add tasteful augmentation only when it materially improves output quality.
+10. Use the built-in `image_gen` tool by default.
+11. For transparent-output requests, ask built-in `image_gen` for a transparent background and preserve the generated alpha channel.
+12. Inspect outputs and validate: subject, style, composition, text accuracy, and invariants/avoid items.
+13. Iterate with a single targeted change, then re-check.
+14. For preview-only work, render the image inline; the underlying file may remain at the default `$CODEX_HOME/generated_images/...` path.
+15. For project-bound work, move or copy the selected artifact into the workspace and update any consuming code or references. Never leave a project-referenced asset only at the default `$CODEX_HOME/generated_images/...` path.
+16. For batches or multi-asset requests, persist every requested deliverable final in the workspace unless the user explicitly asked to keep outputs preview-only. Discarded variants do not need to be kept unless requested.
+17. If the user explicitly chooses or confirms the CLI fallback, then use the fallback-only docs for model, quality, size, `input_fidelity`, masks, output format, output paths, and network setup.
+18. Always report the final saved path(s) for any workspace-bound asset(s), plus the final prompt or prompt set and whether the built-in tool or fallback CLI mode was used.
+
+## Transparent image requests
+
+Ask built-in `image_gen` for a genuinely transparent background and preserve its alpha.
+
+## Prompt augmentation
+
+Reformat user prompts into a structured, production-oriented spec. Make the user's goal clearer and more actionable, but do not blindly add detail.
+
+Treat this as prompt-shaping guidance, not a closed schema. Use only the lines that help, and add a short extra labeled line when it materially improves clarity.
+
+### Specificity policy
+
+Use the user's prompt specificity to decide how much augmentation is appropriate:
+
+- If the prompt is already specific and detailed, preserve that specificity and only normalize/structure it.
+- If the prompt is generic, you may add tasteful augmentation when it will materially improve the result.
+
+Allowed augmentations:
+- composition or framing hints
+- polish level or intended-use hints
+- practical layout guidance
+- reasonable scene concreteness that supports the stated request
+
+Not allowed augmentations:
+- extra characters or objects that are not implied by the request
+- brand names, slogans, palettes, or narrative beats that are not implied
+- arbitrary side-specific placement unless the surrounding layout supports it
+
+## Use-case taxonomy (exact slugs)
+
+Classify each request into one of these buckets and keep the slug consistent across prompts and references.
+
+Generate:
+- photorealistic-natural — candid/editorial lifestyle scenes with real texture and natural lighting.
+- product-mockup — product/packaging shots, catalog imagery, merch concepts.
+- ui-mockup — app/web interface mockups and wireframes; specify the desired fidelity.
+- infographic-diagram — diagrams/infographics with structured layout and text.
+- scientific-educational — classroom explainers, scientific diagrams, and learning visuals with required labels and accuracy constraints.
+- ads-marketing — campaign concepts and ad creatives with audience, brand position, scene, and exact tagline/copy.
+- productivity-visual — slide, chart, workflow, and data-heavy business visuals.
+- logo-brand — logo/mark exploration, vector-friendly.
+- illustration-story — comics, children’s book art, narrative scenes.
+- stylized-concept — style-driven concept art, 3D/stylized renders.
+- historical-scene — period-accurate/world-knowledge scenes.
+
+Edit:
+- text-localization — translate/replace in-image text, preserve layout.
+- identity-preserve — try-on, person-in-scene; lock face/body/pose.
+- precise-object-edit — remove/replace a specific element (including interior swaps).
+- lighting-weather — time-of-day/season/atmosphere changes only.
+- background-extraction — transparent background / clean cutout. Ask built-in `image_gen` for actual transparency.
+- style-transfer — apply reference style while changing subject/scene.
+- compositing — multi-image insert/merge with matched lighting/perspective.
+- sketch-to-render — drawing/line art to photoreal render.
+
+## Shared prompt schema
+
+Use the following labeled spec as shared prompt scaffolding for both top-level modes:
+
+```text
+Use case: <taxonomy slug>
+Asset type: <where the asset will be used>
+Primary request: <user's main prompt>
+Input images: <Image 1: role; Image 2: role> (optional)
+Scene/backdrop: <environment>
+Subject: <main subject>
+Style/medium: <photo/illustration/3D/etc>
+Composition/framing: <wide/close/top-down; placement>
+Lighting/mood: <lighting + mood>
+Color palette: <palette notes>
+Materials/textures: <surface details>
+Text (verbatim): "<exact text>"
+Constraints: <must keep/must avoid>
+Avoid: <negative constraints>
+```
+
+Notes:
+- `Asset type` and `Input images` are prompt scaffolding, not dedicated CLI flags.
+- `Scene/backdrop` refers to the visual setting. It is not the same as the fallback CLI `background` parameter, which controls output transparency behavior.
+- Fallback-only execution notes such as `Quality:`, `Input fidelity:`, masks, output format, and output paths belong in the CLI path only. Do not treat them as built-in `image_gen` tool arguments.
+
+Augmentation rules:
+- Keep it short.
+- Add only the details needed to improve the prompt materially.
+- For edits, explicitly list invariants (`change only X; keep Y unchanged`).
+- If any critical detail is missing and blocks success, ask a question; otherwise proceed.
+
+## Examples
+
+### Generation example (hero image)
+```text
+Use case: product-mockup
+Asset type: landing page hero
+Primary request: a minimal hero image of a ceramic coffee mug
+Style/medium: clean product photography
+Composition/framing: wide composition with usable negative space for page copy if needed
+Lighting/mood: soft studio lighting
+Constraints: no logos, no text, no watermark
+```
+
+### Edit example (invariants)
+```text
+Use case: precise-object-edit
+Asset type: product photo background replacement
+Primary request: replace only the background with a warm sunset gradient
+Constraints: change only the background; keep the product and its edges unchanged; no text; no watermark
+```
+
+## Prompting best practices
+- Structure prompt as scene/backdrop -> subject -> details -> constraints.
+- Include intended use (ad, UI mock, infographic) to set the mode and polish level.
+- Use camera/composition language for photorealism.
+- Only use SVG/vector stand-ins when the user explicitly asked for vector output or a non-image placeholder.
+- Quote exact text and specify typography + placement.
+- For tricky words, spell them letter-by-letter and require verbatim rendering.
+- For multi-image inputs, reference images by index and describe how they should be used.
+- For edits, repeat invariants every iteration to reduce drift.
+- Iterate with single-change follow-ups.
+- If the prompt is generic, add only the extra detail that will materially help.
+- If the prompt is already detailed, normalize it instead of expanding it.
+- For CLI fallback only, see `references/cli.md` and `references/image-api.md` for model, `quality`, `input_fidelity`, masks, output format, and output-path guidance.
+- For transparent images, ask built-in `image_gen` for actual transparency and preserve its alpha.
+
+More principles shared by both modes: `references/prompting.md`.
+Copy/paste specs shared by both modes: `references/sample-prompts.md`.
+
+## Guidance by asset type
+Asset-type templates (website assets, game assets, wireframes, logo) are consolidated in `references/sample-prompts.md`.
+
+## gpt-image-2 guidance for CLI fallback
+
+The fallback CLI defaults to `gpt-image-2`.
+
+- Use `gpt-image-2` for new CLI/API workflows unless the user confirms a different model.
+- CLI `gpt-image-2` does not support `background=transparent`; ask before using `gpt-image-1.5` unless the user explicitly requested that model.
+- `gpt-image-2` always uses high fidelity for image inputs; do not set `input_fidelity` with this model.
+- `gpt-image-2` supports `quality` values `low`, `medium`, `high`, and `auto`.
+- Use `quality low` for fast drafts, thumbnails, and quick iterations. Use `medium`, `high`, or `auto` for final assets, dense text, diagrams, identity-sensitive edits, or high-resolution outputs.
+- Square images are typically fastest to generate. Use `1024x1024` for fast square drafts.
+- If the user asks for 4K-style output, use `3840x2160` for landscape or `2160x3840` for portrait.
+- `gpt-image-2` size may be `auto` or `WIDTHxHEIGHT` if all constraints hold: max edge `<= 3840px`, both edges multiples of `16px`, long-to-short ratio `<= 3:1`, total pixels between `655,360` and `8,294,400`.
+
+Popular `gpt-image-2` sizes:
+- `1024x1024` square
+- `1536x1024` landscape
+- `1024x1536` portrait
+- `2048x2048` 2K square
+- `2048x1152` 2K landscape
+- `3840x2160` 4K landscape
+- `2160x3840` 4K portrait
+- `auto`
+
+## Fallback CLI mode only
+
+### Temp and output conventions
+These conventions apply only to the CLI fallback. They do not describe built-in `image_gen` output behavior.
+- Use `tmp/imagegen/` for intermediate files (for example JSONL batches); delete them when done.
+- Write final artifacts under `output/imagegen/`.
+- Use `--out` or `--out-dir` to control output paths; keep filenames stable and descriptive.
+
+### Dependencies
+Prefer `uv` for dependency management in this repo.
+
+Required Python package:
+```bash
+uv pip install openai
+```
+
+Optional for image inspection and downscaling:
+```bash
+uv pip install pillow
+```
+
+Portability note:
+- If you are using the installed skill outside this repo, install dependencies into that environment with its package manager.
+- In uv-managed environments, `uv pip install ...` remains the preferred path.
+
+### Environment
+- `OPENAI_API_KEY` must be set for live API calls.
+- Do not ask the user for `OPENAI_API_KEY` when using the built-in `image_gen` tool.
+- Never ask the user to paste the full key in chat. Ask them to set it locally and confirm when ready.
+
+If the key is missing, give the user these steps:
+1. Create an API key in the OpenAI platform UI: https://platform.openai.com/api-keys
+2. Set `OPENAI_API_KEY` as an environment variable in their system.
+3. Offer to guide them through setting the environment variable for their OS/shell if needed.
+
+If installation is not possible in this environment, tell the user which dependency is missing and how to install it into their active environment.
+
+### Script-mode notes
+- CLI commands + examples: `references/cli.md`
+- API parameter quick reference: `references/image-api.md`
+- Network approvals / sandbox settings for CLI mode: `references/codex-network.md`
+
+## Reference map
+- `references/prompting.md`: shared prompting principles for both modes.
+- `references/sample-prompts.md`: shared copy/paste prompt recipes for both modes.
+- `references/cli.md`: fallback-only CLI usage via `scripts/image_gen.py`.
+- `references/image-api.md`: fallback-only API/CLI parameter reference.
+- `references/codex-network.md`: fallback-only network/sandbox troubleshooting for CLI mode.
+- `scripts/image_gen.py`: fallback-only CLI implementation. Use only when the user explicitly chooses or confirms CLI mode.
+
+exec
+/bin/zsh -lc 'cat src/content/blog/designing-ai-systems-book-platform-code-review.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+---
+title: "Designing AI Systems：从模型调用走向共享AI平台"
+titleEn: "Designing AI Systems: Book and Companion Code Review"
+description: "Designing AI Systems的Manning官方配套仓库把模型、会话、企业知识、工具、安全规则、观测与工作流做成平台。本文核对代码来源和授权信息，介绍Claw参考助手，运行87项上游测试与两项合成检查，说明占位向量、确认标记和模拟工具的边界，并给出从源码阅读到真实集成验收的学习路线，帮助开发者理解参考实现。"
+descriptionEn: "Explore Designing AI Systems’ official companion code, shared services, Claw assistant, 87 passing tests and two checks of embeddings and approval boundaries."
+wechatTitle: "AI平台怎么建？找到这本书的配套代码"
+wechatDigest: "核对官方仓库，实测87项测试与两项边界检查，分清参考实现和生产验收。"
+pubDate: "2026-11-08"
+updatedDate: "2026-11-08"
+category: "Tech-Experiment"
+tags: ["AI工程", "Manning", "平台架构", "Agent", "Python"]
+heroImage: "../../assets/images/designing-ai-systems-book-platform-code-review-banner.jpg"
+---
+
+《Designing AI Systems》讲的是如何把模型调用背后的通用能力做成共享平台，让业务应用复用会话、知识、工具、评测和运行服务。已找到Manning官方链接的GitHub仓库：`designing-ai-systems/designing_ai_systems_repo`，适合结合书籍理解AI工程如何分层。
+
+## 找到的是全书，还是配套代码？
+
+直接入口：https://github.com/designing-ai-systems/designing_ai_systems_repo
+出版社页面：https://www.manning.com/books/designing-ai-systems
+
+Manning产品页的“Source code on Github”直接指向这个仓库，仓库也链接回同一本书，来源关系可以核实。完整书名为《Designing AI Systems: A guide to production-ready platforms》，作者是Suhas Suresha与Dewang Sultania；出版社介绍分别将两人与Adobe、Netflix的机器学习工程经历联系起来。
+
+公开仓库主要包含Python平台代码、协议、示例、测试、容器配置与README，没有找到全书正文、PDF或EPUB。核验时也未找到明确的LICENSE文件或项目license声明，GitHub返回的license字段为空。因此本文称它为公开配套代码，不擅自标成MIT或Apache，更不把它介绍为整本书的免费开源版本。
+
+出版社页面在本次核验时显示全部章节可读，同时保留MEAP和预计2026年11月出版的标记。阅读与购买入口应以出版社当前页面为准；仓库存在，不代表书籍文本采用了相同授权或可以任意转载。
+
+## 这本书最值得学的架构是什么？
+
+关键是把应用逻辑与可复用基础能力分开。一个应用可能处理内部知识问答，另一个负责多步任务，但它们通常都会遇到模型接入、会话状态、凭证、检索、质量评估和成本归因。共享平台的目标，是让这些能力有统一接口和运维方式。
+
+![小M让多个业务应用复用模型、会话、知识和工具等平台服务](../../assets/images/designing-ai-systems-book-platform-code-review-fig-01.png)
+
+代码采用Python领域对象与gRPC边界分离的方式：业务调用者主要接触dataclass，服务端再完成协议消息转换。阅读时应跟踪一个请求如何穿过SDK、gateway、服务和存储，而不只记住文件夹数量。
+
+| 能力 | 仓库入口 | 阅读重点 |
+| --- | --- | --- |
+| 模型与提示词 | `services/models/` | 供应商适配、模型发现、流式响应、提示词注册 |
+| 会话与记忆 | `services/sessions/` | 用户与会话的区别、历史分页、记忆读写和持久化 |
+| 企业知识 | `services/data/` | 解析、切块、embedding、向量与混合检索 |
+| 工具与规则 | `services/tools/`、`services/guardrails/` | 凭证引用、调用限制、熔断与策略检查 |
+| 观测与改进 | `services/observability/`、`services/experiments/` | trace、token和成本、离线评测、实验与人工标注 |
+| 应用运行 | `services/workflow/`、`services/gateway/` | 同步、SSE、异步任务、工作流组合和部署 |
+
+仓库的Compose配置组织九个平台服务与PostgreSQL，业务工作流则可以独立部署。这体现的是共享服务与每个应用执行单元的区别。对于小团队，也可以先保留模块接口、减少进程数量，再根据隔离、吞吐和团队分工拆分；这是本文的实施建议，不是要求所有项目一开始就运维整套微服务。
+
+## 第9章助手到底有没有代码？
+
+有。根README的状态表仍把AI Assistant写成planned，但`claw/README.md`明确介绍第9章参考应用，`claw/claw.py`也包含上下文组装、记忆、检索、工具分派、模型循环和观测评分。判断覆盖范围应结合实际目录，不能只看一个滞后的状态条目。
+
+Claw很适合用来理解平台服务如何被业务应用组合。它先做输入检查，再组装提示词、用户记忆、检索资料和历史消息，进入有限轮次的模型循环，最后过滤输出、保存对话并记录评分。
+
+但“看见某个工具返回成功”仍需要核对实现。当前Claw对日历和工单动作返回确定性的模拟结构，不会因此真的在企业日历建会或在工单系统开单；MCP工具走的是另一条平台分派路径。本文没有接入真实账户或验证这些外部集成。
+
+## 本地检查发现了哪些值得注意的边界？
+
+本次固定源码为`94dd7ecdd02de7c1289bb81765deeaaa23dffcee`，按`uv.lock`安装依赖后，在本地选跑87项上游测试：会话存储、凭证、规则存储、切块、工作流装饰器、熔断器69项，加上Claw的18项。全部通过。项目要求Python至少3.12，本次`uv`实际选择的是Python 3.14.7，不能把它说成已验证所有受支持版本。
+
+另外运行了两项自建合成夹具，检查的都是实际服务对象，没有启动公开端点，也没有访问外部模型。
+
+第一项检查默认Data Service的embedding。入口`services/data/main.py`直接构造`DataService()`；未注入embedding函数时，构造器使用占位实现。对两个不同问题调用实际生成器，都得到相同的1536维全零向量。这能帮助确认对象和管线接通，却不能证明检索获得了语义能力。部署时应把真实embedding服务接入，并验证索引与查询侧的模型、维度和实际召回质量。
+
+第二项注册了一个标为`requires_confirmation=True`的工具，再直接调用`ExecuteTool`。底层HTTP使用`MockTransport`，结果是模拟端点仍被调用。这个结果只证明直接执行入口没有因为该元数据而自动要求审批凭证，不排除调用方另行检查。真实业务需要明确审批由谁发起、审批结果绑定什么参数，以及在哪个入口强制核验，不能把一个布尔字段当成完整审批机制。
+
+![小M检查占位向量和确认标记，区分接口接通与真实能力](../../assets/images/designing-ai-systems-book-platform-code-review-fig-02.png)
+
+源码里的`_execute_sandboxed`主要负责HTTP或MCP分派，以及超时和响应大小限制；代码注释把CPU、内存等资源约束留给部署层。因此名称中的sandbox不能独立证明存在完整的操作系统隔离。动态注册解析器会加载代码，工作流服务还挂载Docker socket，这些控制接口需要明确的管理权限与信任范围。
+
+以上是局部代码核对与合成测试，不是全平台安全审计。没有运行完整测试集、PostgreSQL集成、Docker或Kubernetes部署，没有调用付费模型、真实MCP服务器或企业工具，也没有做负载与RAG质量评测。
+
+## 怎样把它当作学习项目使用？
+
+先从第3、4章对应的模型与会话能力入手，理解一次模型调用如何携带上下文、生成响应并保存历史。默认内存存储适合开发，但进程重启后的长期记忆需要明确持久化后端，不能仅凭接口名称判断数据会一直存在。
+
+第二步阅读第5、6章对应的数据、工具和规则实现。用受控小文档集合检查切块和检索，把工具指向自己控制的模拟端点，验证允许、拒绝、失败、超时与重试路径。先证明链路里的每个信号都是真实的，再接企业数据与凭证。
+
+第三步读第7、8章的观测、实验和工作流，再用Claw看各模块如何合起来。对真实应用而言，HTTP返回200不够：还要观察答案是否有依据、动作有没有重复、成本是否可归因、失败能否恢复。观察指标和独立评测，应该与功能开发一起设计。
+
+![小M把参考应用中的模拟动作替换为经过验证的真实集成，再进入运行验收](../../assets/images/designing-ai-systems-book-platform-code-review-fig-03.png)
+
+最小的源码学习入口如下。先检查当前版本和本地依赖，再选择测试；下面不包含任何账户配置或真实工具执行：
+
+```bash
+git clone https://github.com/designing-ai-systems/designing_ai_systems_repo.git
+cd designing_ai_systems_repo
+uv sync --frozen
+uv run pytest tests/test_session_storage.py tests/test_credential_store.py -q
+```
+
+真实模型调用需要API凭证，工作流容器示例需要Docker，PostgreSQL与pgvector属于进一步的存储配置。README所谓“uv是唯一前置条件”，应理解为基础Python环境入口，不能替代这些场景各自的依赖。
+
+## 常见问题
+
+### 能从GitHub下载这本书的完整免费正文吗？
+
+本次找到的是出版社认可的配套代码仓库，没有找到全书正文或电子书文件。书籍请使用Manning提供的阅读入口，公开代码与全书授权应分别确认。
+
+### 它已经可以不改代码直接承接生产业务吗？
+
+它提供了相当完整的参考结构，但当前默认与模拟路径仍需核对。持久化、真实embedding、审批执行和外部工具集成，都应该在自己的环境里完成验收。
+
+### 适合谁读？
+
+适合掌握Python和基本软件架构、准备从模型调用走向平台建设的开发者。想学习单个提示词或快速聊天页面的人，可以先选择其中一个模块，不必一次启动所有服务。
+
+## 一手资料
+
+配套GitHub：https://github.com/designing-ai-systems/designing_ai_systems_repo
+Manning书籍页：https://www.manning.com/books/designing-ai-systems
+Claw参考应用：https://github.com/designing-ai-systems/designing_ai_systems_repo/tree/main/claw
+Data Service：https://github.com/designing-ai-systems/designing_ai_systems_repo/blob/main/services/data/service.py
+Tool Service：https://github.com/designing-ai-systems/designing_ai_systems_repo/blob/main/services/tools/service.py
+
+本文授权适用于原创评介与插图；书籍与外部代码的权利说明以各自来源为准。
+
+---
+
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+
+<!--EN-->
+
+Designing AI Systems explains how to turn the capabilities surrounding model calls into a shared platform: conversations, knowledge, tools, evaluation and operations. Manning directly links the public companion repository, `designing-ai-systems/designing_ai_systems_repo`, which is useful for studying how these responsibilities fit together.
+
+## Is this the full book or companion code?
+
+Repository: https://github.com/designing-ai-systems/designing_ai_systems_repo
+Publisher: https://www.manning.com/books/designing-ai-systems
+
+The publisher’s GitHub resource points to this repository, which links back to the same title. The book is Designing AI Systems: A guide to production-ready platforms, by Suhas Suresha and Dewang Sultania. Manning’s biographies associate their engineering experience with Adobe and Netflix respectively.
+
+The repository contains Python services, protocols, examples, tests and deployment configuration. No full book text, PDF or EPUB was found. At the reviewed commit, no explicit LICENSE file or project license declaration was found either; GitHub’s license metadata is null. This review therefore describes public companion code, without assigning MIT or Apache licensing or claiming a freely open-sourced complete book.
+
+The publisher page observed during this review shows all chapters available while retaining MEAP and estimated November 2026 publication labels. Use its current reading and purchase options. Public source availability does not establish identical reuse terms for the book’s prose.
+
+## What architecture is worth learning?
+
+The central separation is between application logic and reusable capabilities. An internal knowledge assistant and a multi-step task application often share needs for model access, state, credentials, retrieval, evaluation and cost attribution. A platform gives these common responsibilities consistent interfaces and operating practices.
+
+![Little M connects multiple applications to shared platform capabilities](../../assets/images/designing-ai-systems-book-platform-code-review-fig-01.png)
+
+The implementation separates Python domain objects from gRPC messages. Application code primarily works with dataclasses; service boundaries translate protocol messages. Follow a request through the SDK, gateway, service and storage to understand the design, rather than memorizing a folder list.
+
+| Capability | Repository entry | Questions to inspect |
+| --- | --- | --- |
+| Models and prompts | `services/models/` | Provider adapters, discovery, streaming and prompt registration |
+| Conversations and memory | `services/sessions/` | User versus session scope, pagination and persistence |
+| Enterprise knowledge | `services/data/` | Parsing, chunking, embeddings and hybrid retrieval |
+| Tools and rules | `services/tools/`, `services/guardrails/` | Credentials, execution limits, circuit breaking and policy checks |
+| Observation and improvement | `services/observability/`, `services/experiments/` | Traces, cost, offline evaluation, experiments and annotation |
+| Application execution | `services/workflow/`, `services/gateway/` | Sync, SSE, asynchronous jobs, composition and deployment |
+
+Compose organizes nine platform services plus PostgreSQL, while application workflows can be deployed separately. This illustrates shared services versus per-application execution units. A small team could preserve module boundaries while initially running fewer processes, splitting them as isolation, throughput and ownership require. That is an adoption suggestion, not a requirement that every project start with all these microservices.
+
+## Is the chapter-nine assistant implemented?
+
+Yes. The root README still labels AI Assistant as planned, but `claw/README.md` describes the chapter-nine reference application, and `claw/claw.py` includes context assembly, memory, retrieval, tool dispatch, a model loop and observation scoring. The directory is stronger evidence than a stale status row.
+
+Claw shows how an application composes the platform. It validates input, assembles the prompt, user memory, retrieved documents and conversation history, runs a bounded model loop, then filters output, stores messages and records a score.
+
+Successful-looking tool results require implementation checks. Calendar and ticket actions currently return deterministic mock structures; they do not establish that a real company calendar or ticketing system was updated. MCP tools use a separate platform dispatch path. No real accounts or external integrations were exercised in this review.
+
+## What did local verification establish?
+
+The reviewed commit is `94dd7ecdd02de7c1289bb81765deeaaa23dffcee`. After installing from `uv.lock`, 87 selected upstream tests passed: 69 across session storage, credentials, policy storage, chunking, workflow decorators and circuit breaking, plus 18 for Claw. The project requires Python 3.12 or newer; this local uv run selected Python 3.14.7. These results do not verify every supported interpreter.
+
+Two additional synthetic fixtures exercised actual service objects without exposing a server or calling an external model.
+
+The first inspected default Data Service embeddings. Its main entry point constructs `DataService()` without injecting an embedding function. The fallback produces placeholder vectors: two different synthetic queries returned identical, all-zero vectors of 1,536 dimensions. This can support wiring exercises but establishes no semantic retrieval capability. An adopter must connect real embeddings and check consistent models, dimensions and measured retrieval quality across indexing and querying.
+
+The second registered a tool with `requires_confirmation=True` and called `ExecuteTool` directly. An HTTP MockTransport endpoint was still reached. This establishes that the metadata alone does not force an approval artifact at that direct entry point; a caller may separately enforce approval. A real application must specify who approves, which parameters approval covers, and where it is checked.
+
+![Little M checks placeholder vectors and confirmation metadata against real execution requirements](../../assets/images/designing-ai-systems-book-platform-code-review-fig-02.png)
+
+The method named `_execute_sandboxed` primarily dispatches HTTP or MCP calls and enforces timeout and response-size limits. Its comments leave CPU and memory constraints to deployment. The name alone is not evidence of complete operating-system isolation. Dynamic parser registration loads source code, and workflow containers use a mounted Docker socket; these administrative surfaces need explicit trust and access boundaries.
+
+This was a local review and synthetic verification, not a platform security audit. The full test suite, PostgreSQL integration, Docker and Kubernetes deployment were not run. No paid models, real MCP servers or enterprise tools were called, and no load or RAG-quality benchmark was measured.
+
+## How should this be used as a learning project?
+
+Begin with the model and session components associated with chapters three and four. Trace how a request obtains context, receives a response and saves history. Default in-memory storage supports development, but durable memory across process restarts needs a persistent backend. An interface name cannot establish retention behavior.
+
+Next, inspect the chapter-five and chapter-six data, tool and policy components. Use a controlled document collection to evaluate chunking and retrieval. Point tools at a mock endpoint under your control and exercise allow, deny, failure, timeout and retry paths. Establish that each signal is meaningful before connecting company documents and credentials.
+
+Then study observation, experimentation and workflows, and use Claw to see their composition. An HTTP 200 response is insufficient for a real application: answers need evidence, actions must avoid unintended repetition, costs need attribution and failures need recovery. Instrumentation and independent evaluation belong alongside feature development.
+
+![Little M replaces simulated reference actions with verified integrations before deployment acceptance](../../assets/images/designing-ai-systems-book-platform-code-review-fig-03.png)
+
+A minimal source-study entry point is:
+
+```bash
+git clone https://github.com/designing-ai-systems/designing_ai_systems_repo.git
+cd designing_ai_systems_repo
+uv sync --frozen
+uv run pytest tests/test_session_storage.py tests/test_credential_store.py -q
+```
+
+Check the current revision and dependency requirements first. This snippet does not configure accounts or execute real tools. Actual model calls require credentials, workflow-container examples require Docker, and PostgreSQL with pgvector is an additional storage setup. Treat uv as the entry to the Python environment, rather than a replacement for every scenario’s dependencies.
+
+## FAQ
+
+### Can the complete book be downloaded freely from this repository?
+
+No complete book text or electronic-book files were found. The confirmed repository is the publisher-linked companion implementation. Use Manning’s reading options and confirm book and code terms separately.
+
+### Can it take production traffic without adaptation?
+
+It provides a substantial reference structure, but defaults and mock paths require inspection. Persistence, real embeddings, enforced approval and external integrations need acceptance checks in the target environment.
+
+### Who should study it?
+
+Python developers and architects moving from individual model calls to platform engineering. Readers wanting only a simple chat interface can start with one component rather than operating every service at once.
+
+## Primary sources
+
+Companion repository: https://github.com/designing-ai-systems/designing_ai_systems_repo
+Manning title: https://www.manning.com/books/designing-ai-systems
+Claw reference application: https://github.com/designing-ai-systems/designing_ai_systems_repo/tree/main/claw
+Data Service: https://github.com/designing-ai-systems/designing_ai_systems_repo/blob/main/services/data/service.py
+Tool Service: https://github.com/designing-ai-systems/designing_ai_systems_repo/blob/main/services/tools/service.py
+
+This article’s license covers the original review and illustrations. The book and external code retain their own rights and terms.
+
+---
+
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
+
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+exec
+/bin/zsh -lc 'git status --short; ls -ld generated_images/designing-ai-systems-20261108; ls src/assets/images/designing-ai-systems-book-platform-code-review-fig-*.png' in /Users/jason/Dev/mycelium/blog
+ exited 1 in 0ms:
+ M pipeline/m2/output/drafts-map.json
+ M source/20261105-craft-anything/semantic-index-info.json
+ M source/20261105-craft-anything/semantic-search-final.json
+?? generated_images/
+?? pipeline/m2/output/agentear-v0-28-1-settings-fix-local-voice-input.json
+?? pipeline/m2/output/cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor.json
+?? pipeline/m2/output/deepseek-v41-flash-1017-uncensored-fp8-teardown.json
+?? pipeline/m2/output/laya-aayushch-local-first-ai-notification-command-center.json
+?? pipeline/m2/output/meta-sam3-promptable-concept-segmentation-license-mac-guide.json
+?? pipeline/m2/output/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit.json
+?? pipeline/m2/output/superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx.json
+?? pipeline/m2/output/xllama-xbox-series-s-local-llm-inference-dev-mode.json
+?? src/assets/images/designing-ai-systems-book-platform-code-review-banner.jpg
+?? src/content/blog/designing-ai-systems-book-platform-code-review.md
+ls: generated_images/designing-ai-systems-20261108: No such file or directory
+zsh:1: no matches found: src/assets/images/designing-ai-systems-book-platform-code-review-fig-*.png
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+三张图将分别呈现共享平台、占位实现与真实能力的差别，以及 Claw 从“模拟”走向真实接入和验收的过程。第二张会明确标注“待接入／待核验”，避免画成漏洞利用场景。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+三张原图已生成，中文标注正确：第二张有“待接入／待核验”，第三张起点有醒目的“模拟”。现在会保留原图，将最终 PNG 转为 1120×630、最多 48 色、无抖动，并检查压缩后的画面和文件大小。
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image
+from pathlib import Path
+import shutil, tempfile, hashlib
+root=Path('/Users/jason/Dev/mycelium/blog')
+rawdir=root/'generated_images/designing-ai-systems-20261108'
+rawdir.mkdir(parents=True,exist_ok=True)
+source_dir=Path('/Users/jason/.codex/generated_images/01a1b8fc-737f-72d1-a7d3-cfd41170ce85')
+names=['exec-55543300-aa8f-4f3f-b441-b36bce535b89.png','exec-0066b398-aea3-4b2a-be5e-fafdf18d1cfa.png','exec-3dfeb23b-aafc-42e3-9c77-b009487eb8f5.png']
+protected=[root/'src/content/blog/designing-ai-systems-book-platform-code-review.md',root/'src/assets/images/designing-ai-systems-book-platform-code-review-banner.jpg']
+hashes={p:hashlib.sha256(p.read_bytes()).hexdigest() for p in protected}
+with tempfile.TemporaryDirectory(prefix='designing-ai-illustrations-',dir='/private/tmp') as temp:
+    for i,name in enumerate(names,1):
+        raw=rawdir/f'raw-{i:02d}.png'
+        assert not raw.exists(),raw
+        shutil.copy2(source_dir/name,raw)
+        im=Image.open(raw).convert('RGB')
+        im=im.resize((1120,630),Image.Resampling.LANCZOS)
+        final=im.quantize(colors=48,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+        staged=Path(temp)/f'fig-{i:02d}.png'
+        final.save(staged,format='PNG',optimize=True,compress_level=9)
+        with Image.open(staged) as check:
+            colors=len(check.getcolors(maxcolors=256))
+            assert check.size==(1120,630)
+            assert check.mode=='P'
+            assert colors<=48
+        assert staged.stat().st_size<90000,(i,staged.stat().st_size)
+        dest=root/f'src/assets/images/designing-ai-systems-book-platform-code-review-fig-{i:02d}.png'
+        assert not dest.exists(),dest
+        shutil.copy2(staged,dest)
+        assert dest.read_bytes()==staged.read_bytes()
+        print(f'{dest.relative_to(root)} | 1120x630 | {colors} colors | {dest.stat().st_size} bytes | no dithering')
+for p,h in hashes.items():
+    assert hashlib.sha256(p.read_bytes()).hexdigest()==h
+print('Article and banner unchanged; all three raw originals preserved and final copies verified.')
+PY" in /Users/jason/Dev/mycelium/blog
+ exited 1 in 192ms:
+Traceback (most recent call last):
+  File "<stdin>", line 26, in <module>
+AssertionError: (1, 241848)
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image, ImageChops
+from pathlib import Path
+import shutil,io
+root=Path('/Users/jason/Dev/mycelium/blog')
+rawdir=root/'generated_images/designing-ai-systems-20261108'
+source=Path('/Users/jason/.codex/generated_images/01a1b8fc-737f-72d1-a7d3-cfd41170ce85')
+names=['exec-55543300-aa8f-4f3f-b441-b36bce535b89.png','exec-0066b398-aea3-4b2a-be5e-fafdf18d1cfa.png','exec-3dfeb23b-aafc-42e3-9c77-b009487eb8f5.png']
+for i,name in enumerate(names,1):
+    raw=rawdir/f'raw-{i:02d}.png'
+    if not raw.exists(): shutil.copy2(source/name,raw)
+    assert raw.read_bytes()==(source/name).read_bytes()
+    im=Image.open(raw).convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+    for cutoff in [245,235]:
+        channels=im.split()
+        mask=ImageChops.darker(ImageChops.darker(channels[0],channels[1]),channels[2]).point(lambda x:255 if x>=cutoff else 0)
+        clean=im.copy()
+        clean.paste((255,255,255),(0,0),mask)
+        for n in [48,32,24,16]:
+            q=clean.quantize(colors=n,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+            b=io.BytesIO();q.save(b,format='PNG',optimize=True,compress_level=9)
+            print(i,cutoff,n,len(b.getvalue()))
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 970ms:
+1 245 48 41499
+1 245 32 36105
+1 245 24 32946
+1 245 16 28976
+1 235 48 38948
+1 235 32 33354
+1 235 24 30995
+1 235 16 27013
+2 245 48 50811
+2 245 32 42516
+2 245 24 37391
+2 245 16 35016
+2 235 48 46803
+2 235 32 41321
+2 235 24 35247
+2 235 16 32597
+3 245 48 48994
+3 245 32 41821
+3 245 24 39383
+3 245 16 35781
+3 235 48 45703
+3 235 32 38998
+3 235 24 35302
+3 235 16 31758
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from PIL import Image,ImageChops
+from pathlib import Path
+import shutil,tempfile,hashlib
+root=Path('/Users/jason/Dev/mycelium/blog')
+protected=[root/'src/content/blog/designing-ai-systems-book-platform-code-review.md',root/'src/assets/images/designing-ai-systems-book-platform-code-review-banner.jpg']
+hashes={p:hashlib.sha256(p.read_bytes()).hexdigest() for p in protected}
+with tempfile.TemporaryDirectory(prefix='designing-ai-final-',dir='/private/tmp') as temp:
+    for i in range(1,4):
+        raw=root/f'generated_images/designing-ai-systems-20261108/raw-{i:02d}.png'
+        im=Image.open(raw).convert('RGB').resize((1120,630),Image.Resampling.LANCZOS)
+        red,green,blue=im.split()
+        mask=ImageChops.darker(ImageChops.darker(red,green),blue).point(lambda x:255 if x>=245 else 0)
+        im.paste((255,255,255),(0,0),mask)
+        final=im.quantize(colors=48,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+        staged=Path(temp)/f'fig-{i:02d}.png'
+        final.save(staged,format='PNG',optimize=True,compress_level=9)
+        with Image.open(staged) as check:
+            colors=len(check.getcolors(maxcolors=256))
+            assert check.size==(1120,630) and check.mode=='P' and colors<=48
+            assert check.convert('RGB').getpixel((0,0))==(255,255,255)
+        assert staged.stat().st_size<90000
+        dest=root/f'src/assets/images/designing-ai-systems-book-platform-code-review-fig-{i:02d}.png'
+        assert not dest.exists(),dest
+        shutil.copy2(staged,dest)
+        assert dest.read_bytes()==staged.read_bytes()
+        print(f'{dest.name}: 1120x630, {colors} colors, {dest.stat().st_size} bytes, no dithering')
+for p,h in hashes.items(): assert hashlib.sha256(p.read_bytes()).hexdigest()==h
+print('Final files copied; article and banner unchanged.')
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 216ms:
+designing-ai-systems-book-platform-code-review-fig-01.png: 1120x630, 48 colors, 41499 bytes, no dithering
+designing-ai-systems-book-platform-code-review-fig-02.png: 1120x630, 48 colors, 50811 bytes, no dithering
+designing-ai-systems-book-platform-code-review-fig-03.png: 1120x630, 48 colors, 48994 bytes, no dithering
+Final files copied; article and banner unchanged.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+codex
+Generated, copied, and visually inspected all three:
+
+- [01 Shared platform](/Users/jason/Dev/mycelium/blog/src/assets/images/designing-ai-systems-book-platform-code-review-fig-01.png) — 41,499 bytes
+- [02 Placeholders and approval gate](/Users/jason/Dev/mycelium/blog/src/assets/images/designing-ai-systems-book-platform-code-review-fig-02.png) — 50,811 bytes
+- [03 模拟 → integration → acceptance](/Users/jason/Dev/mycelium/blog/src/assets/images/designing-ai-systems-book-platform-code-review-fig-03.png) — 48,994 bytes
+
+Each is **1120×630, 48 palette colors, no dithering**. Raw originals saved in `generated_images/designing-ai-systems-20261108/`.
+
+Article, banner, and other files unchanged.
+hook: Stop
+hook: Stop Completed
+tokens used
+48,312
+Generated, copied, and visually inspected all three:
+
+- [01 Shared platform](/Users/jason/Dev/mycelium/blog/src/assets/images/designing-ai-systems-book-platform-code-review-fig-01.png) — 41,499 bytes
+- [02 Placeholders and approval gate](/Users/jason/Dev/mycelium/blog/src/assets/images/designing-ai-systems-book-platform-code-review-fig-02.png) — 50,811 bytes
+- [03 模拟 → integration → acceptance](/Users/jason/Dev/mycelium/blog/src/assets/images/designing-ai-systems-book-platform-code-review-fig-03.png) — 48,994 bytes
+
+Each is **1120×630, 48 palette colors, no dithering**. Raw originals saved in `generated_images/designing-ai-systems-20261108/`.
+
+Article, banner, and other files unchanged.

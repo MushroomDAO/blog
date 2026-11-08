@@ -1,0 +1,22 @@
+{
+  "commit": "94dd7ecdd02de7c1289bb81765deeaaa23dffcee",
+  "syntheticChecksPassed": 2,
+  "directToolExecution": {
+    "requiresConfirmationMetadata": true,
+    "mockEndpointReachedWithoutApprovalArtifact": true,
+    "requests": [
+      {
+        "url": "https://fixture.invalid/action",
+        "method": "POST"
+      }
+    ]
+  },
+  "defaultDataServiceEmbedding": {
+    "dimensions": 1536,
+    "allZero": true,
+    "differentQueriesEqual": true
+  },
+  "modelCalls": 0,
+  "externalHTTPRequests": 0,
+  "scope": "MockTransport only; isolated service objects. Not a full security audit or deployed-stack test. Approval may be enforced by separate callers; this verifies the direct ExecuteTool path only."
+}

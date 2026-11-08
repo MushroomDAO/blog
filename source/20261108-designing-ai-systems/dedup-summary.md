@@ -1,0 +1,1 @@
+Publisher sourceURL and exact repository name searched across Blog, liveWeChat drafts, localM2 andKB. PublishedAPI48001; remote draft lookup succeeded. Generic designing/systems/Manning matches unrelated topics; manual fulltitle/authors/repository scan found no priorarticleorreceipt. RaworiginalmaterialKB alreadyexists. Full unrelatedKB excerpts kept only in privatejobfolder.

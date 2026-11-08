@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "designing-ai-systems-book-platform-code-review",
+      "title": "Designing AI Systems：从模型调用走向共享AI平台",
+      "url": "/blog/designing-ai-systems-book-platform-code-review/",
+      "language": "zh",
+      "excerpt": "Designing AI Systems：从模型调用走向共享AI平台 Designing AI Systems的Manning官方配套仓库把模型、会话、企业知识、工具、安全规则、观测与工作流做成平台。本文核对代码来源和授权信息，介绍Claw参考助手，运行87项上游测试与两项合成检查，说明占位向量、确认标记和模拟工具的边界，并给出从源码阅读到真实集成验收的学习路线，帮助开发者理解参考实现。 AI工程 Manning 平台架构 Agent Python 找到的是全书，还是配套代码？ 这本书最值得学的架构是什么？ 第9章助手到底有没有代码？ 本地检查发现了哪些",
+      "score": 0.60040605
+    },
+    {
+      "article_id": "beyond-static-skill-libraries--alibaba",
+      "title": "告别静态技能库！阿里发布 SkillClaw，开启 AI Agent「集体进化」时代",
+      "url": "/blog/beyond-static-skill-libraries--alibaba/",
+      "language": "zh",
+      "excerpt": "告别静态技能库！阿里发布 SkillClaw，开启 AI Agent「集体进化」时代 阿里 AMAP-ML 团队发布 SkillClaw 框架，通过 Agentic Evolver 自动聚合用户交互轨迹、更新共享技能库，让 AI Agent 实现集体进化。论文于 4 月登顶 HuggingFace 论文榜，6 轮进化后 Creative Synthesis 任务相对提升 88.41%。 SkillClaw AI Agent Alibaba AMAP-ML 技能进化 Skill Evolution Agentic Open Source 核心概述（30-5",
+      "score": 0.51546705
+    },
+    {
+      "article_id": "a16z-anish-acharya-ai-loops-moats-consumer",
+      "title": "a16z Partner's 80-Minute AI Deep Dive: Moats Are Discovered, the Biggest Opportunity Is Human Flourishing",
+      "url": "/blog/a16z-anish-acharya-ai-loops-moats-consumer/",
+      "language": "en",
+      "excerpt": "a16z Partner's 80-Minute AI Deep Dive: Moats Are Discovered, the Biggest Opportunity Is Human Flourishing Anish Acharya on Lenny's podcast: four counterintuitive insights — companies are becoming loops, model selection is a craft, consumers don't need efficiency they need happine",
+      "score": 0.50877035
+    },
+    {
+      "article_id": "aris--auto-research-in-sleep-with-claude-code",
+      "title": "ARIS: 让 AI 在你睡觉时做科研",
+      "url": "/blog/aris--auto-research-in-sleep-with-claude-code/",
+      "language": "zh",
+      "excerpt": "ARIS: 让 AI 在你睡觉时做科研 一个基于双模型协作的自主 ML 科研系统，让 Claude Code 执行，GPT 审稿，实现全自动研究流水线 claude-code ai-research multi-agent ml-pipeline automation 科研自动化的痛点 双模型协作机制 为什么不用单模型自我博弈？ 实际能做什么？ 1. 全自动研究流水线 2. 基于现有工作的改进 3. Rebuttal 辅助 轻量到离谱的架构 实际落地效果 一点思考",
+      "score": 0.5066012
+    },
+    {
+      "article_id": "stanford-cs329a-self-improving-ai-agents-course-open-materials",
+      "title": "Stanford CS329A：《自我改进 AI Agent》，斯坦福研究生研讨课，9 集视频全公开",
+      "url": "/blog/stanford-cs329a-self-improving-ai-agents-course-open-materials/",
+      "language": "zh",
+      "excerpt": "Stanford CS329A：《自我改进 AI Agent》，斯坦福研究生研讨课，9 集视频全公开 斯坦福 2025 秋季研究生研讨课，Azalia Mirhoseini 和 Aakanksha Chowdhery 联合授课。核心论点：推理时算力制造下一个模型的训练数据。覆盖 Constitutional AI、STaR、DAPO、Search-o1、ReAct、MemGPT 等自我改进技术。9 集视频 2026 年 8 月全公开，GitHub 作业仓库开源。 Stanford AI-agents self-improvement course ope",
+      "score": 0.50274295
+    },
+    {
+      "article_id": "applied-compute-specific-intelligence-enterprise-ai-workflow-training",
+      "title": "applied-compute-specific-intelligence-enterprise-ai-workflow-training",
+      "url": "/blog/applied-compute-specific-intelligence-enterprise-ai-workflow-training/",
+      "language": "en",
+      "excerpt": "applied-compute-specific-intelligence-enterprise-ai-workflow-training Applied Compute's founding team came from OpenAI Codex and o1. CEO Yash Patil's thesis: as frontier models commoditize, the competitive layer moves to post-training. Their product Specific Intelligence uses rei",
+      "score": 0.4932603
+    },
+    {
+      "article_id": "meta-harness-end-to-end-harness-optimization",
+      "title": "别再手搓 Agent 脚手架了：Stanford Meta-Harness 让 AI 自己搜索最优 harness",
+      "url": "/blog/meta-harness-end-to-end-harness-optimization/",
+      "language": "zh",
+      "excerpt": "别再手搓 Agent 脚手架了：Stanford Meta-Harness 让 AI 自己搜索最优 harness Stanford IRIS Lab 的 Meta-Harness（arXiv:2603.28052，Chelsea Finn、Omar Khattab 等）把决定「给模型存什么、取什么、喂什么」的 harness 代码本身变成可自动优化的对象：用一个能读源码、分数和执行轨迹的 agentic proposer 做外层搜索。文本分类 +7.7 分且省 75% token，IMO 级数学 +4.7 分，TerminalBench-2 上自动发现",
+      "score": 0.49259406
+    },
+    {
+      "article_id": "ai-collab-playbook-phd-workflow-skills-context-first",
+      "title": "AI 协作实战手册：一位在读博士的科研、写作、编码工作流——人是主变量",
+      "url": "/blog/ai-collab-playbook-phd-workflow-skills-context-first/",
+      "language": "zh",
+      "excerpt": "AI 协作实战手册：一位在读博士的科研、写作、编码工作流——人是主变量 cnfjlhj/ai-collab-playbook 是一位 AI 方向在读博士积累的 AI 协作实战手册，433 stars。核心观点：把 AI 当同事不当工具，但人始终是主变量。涵盖科研文献四阶段工作流（调研→筛选→精读→整合）、低摩擦入口策略、Code Agent 使用心得、上下文税与心流状态、技能沉淀到 Skill/AGENTS.md 的闭环，以及对「效率幻觉」的警惕。附 10 个独立 Skill 仓库。 AI协作 科研工作流 Code Agent Skills 效率 开源 ",
+      "score": 0.48968673
+    },
+    {
+      "article_id": "domain-specific-small-language-models-manning-guide",
+      "title": "领域专用小模型：Manning 新书《Domain-Specific SLMs》完整阅读指南",
+      "url": "/blog/domain-specific-small-language-models-manning-guide/",
+      "language": "zh",
+      "excerpt": "领域专用小模型：Manning 新书《Domain-Specific SLMs》完整阅读指南 Guglielmo Iozzia 的《Domain-Specific Small Language Models》（Manning, 2026, 376 页）完整导读：15 章覆盖 FAISS 向量检索、ONNX 量化、ProtGPT2 蛋白质生成、vLLM 离线推理、Graph RAG、AutoThink 等核心技术。作者来自 Merck & Co.，专攻生物医药 AI。附学习路径建议。 SLM 小模型 Manning ONNX RAG 量化 本地部署 生物医",
+      "score": 0.48892692
+    },
+    {
+      "article_id": "mit-mas-s60-6s985-multimodal-ai-spring-2026-open-lectures-paul-liang",
+      "title": "MIT MAS.S60 多模态 AI：Paul Liang 主讲，15 周从融合对齐到推理智能体，YouTube 全集公开",
+      "url": "/blog/mit-mas-s60-6s985-multimodal-ai-spring-2026-open-lectures-paul-liang/",
+      "language": "zh",
+      "excerpt": "MIT MAS.S60 多模态 AI：Paul Liang 主讲，15 周从融合对齐到推理智能体，YouTube 全集公开 MIT Media Lab + EECS 双授课号（MAS.S60 / 6.S985），Paul Liang 主讲，Spring 2026。15 周系统覆盖多模态融合、对齐、大模型、生成、推理、交互、智能体到自进化 AI。各讲 YouTube 视频逐一公开，官方课程页提供日程和材料，GitHub 组织 MIT-MI 托管代码与前序课程资料。 MIT multimodal course open-source AI-agents VL",
+      "score": 0.4881532
+    }
+  ]
+}
