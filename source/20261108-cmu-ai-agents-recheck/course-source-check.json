@@ -1,0 +1,26 @@
+{
+  "url": "https://www.cmu-agents.com/",
+  "checkedAt": "2026-11-08T04:01:16.080Z",
+  "htmlSha256": "905be76e4150d738043c062128e0dc9f8b97b7098c54cc4b2d4aff7760814421",
+  "bundleUrl": "https://www.cmu-agents.com/assets/index-BoEP-SNx.js",
+  "bundleSha256": "15934bab647184610a472664b3e748f86e9a4bc17416fdbd064c07ebd58ef2fa",
+  "instructors": [
+    "Daniel Fried",
+    "Graham Neubig"
+  ],
+  "assignments": [
+    "https://github.com/cmu-agents/assignment-1",
+    "https://github.com/cmu-agents/assignment-2",
+    "https://github.com/cmu-agents/assignment-3"
+  ],
+  "currentDeadlines": [
+    "2026-09-14",
+    "2026-10-01",
+    "2026-10-29"
+  ],
+  "posters": [
+    "2026-12-01",
+    "2026-12-03"
+  ],
+  "scope": "Existing September article reused as dated snapshot; current schedule differs. Course hardware/model performance or assignments were not executed."
+}

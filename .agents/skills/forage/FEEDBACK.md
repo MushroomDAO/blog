@@ -1296,3 +1296,5 @@ Manning产品页直接链接designing-ai-systems/designing_ai_systems_repo，固
 根README第9章planned滞后，claw/已提供第9章参考助手；日历/工单实际为模拟分派，不能把状态表当缺代码，也不能把mock当企业集成。实跑核心6测试文件69项及Claw18项，共87项通过，实际uv选择Python3.14.7而项目要求>=3.12。两项合成夹具验证默认DataService1536维零向量，以及requires_confirmation元数据不自动拦住直接ExecuteTool入口；HTTP仅MockTransport，无模型/真实工具调用。未测全套/DB/Docker/K8s/负载/RAG质量或完整安全审计。
 
 8291模块化平台封面和3小M图机器/人工核验通过。Blog轮播1/列表2/5图变体200；公众号全文、3图顺序、封面、元数据、原文链接与评论设置回读匹配，未群发。中英2条语义回读及公开查询命中，KB实际回读验证。上游未明确许可，公开审计保留源码哈希/链接和自写夹具，不搬运整份上游源码或书籍。
+
+- 2026-11-08 CMU 11-768 AI Agents recheck: exact URL/entity matched September 16 article; reused its original slug and verified Blog 200, banner provenance/framing/text/faces and live semantic search. No article/deploy/draft recreated. Old draft/get 40007; complete remote box 9/9 lacks course; published API48001: recorded, currentmedia empty, prior receipt retained. KB updated and SQLite readback verified. Official course dates changed; September article is a historical snapshot, current deadlines belong to official site. Audit: source/20261108-cmu-ai-agents-recheck/.
