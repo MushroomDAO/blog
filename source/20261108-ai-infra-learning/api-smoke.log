@@ -1,0 +1,82 @@
+INFO:curriculum_api:Starting ML Model Serving API...
+INFO:curriculum_api:GET / - 200 - 0.000s
+INFO:httpx:HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+INFO:curriculum_api:GET /health - 200 - 0.000s
+INFO:httpx:HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+INFO:curriculum_api:GET /metrics - 200 - 0.000s
+INFO:httpx:HTTP Request: GET http://testserver/metrics "HTTP/1.1 200 OK"
+INFO:curriculum_api:POST /predict - 501 - 0.000s
+INFO:httpx:HTTP Request: POST http://testserver/predict "HTTP/1.1 501 Not Implemented"
+INFO:curriculum_api:POST /predict - 422 - 0.000s
+INFO:httpx:HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+INFO:curriculum_api:Shutting down ML Model Serving API...
+{
+  "python": "3.12.14",
+  "packages": {
+    "fastapi": "0.104.1",
+    "pydantic": "2.5.3",
+    "httpx": "0.25.2",
+    "python-multipart": "0.0.6",
+    "starlette": "0.27.0"
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "body": {
+        "message": "ML Model Serving API",
+        "status": "running",
+        "docs": "/docs"
+      },
+      "contentType": "application/json"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": {},
+      "contentType": "application/json"
+    },
+    {
+      "method": "GET",
+      "path": "/metrics",
+      "status": 200,
+      "body": {
+        "message": "Metrics endpoint not implemented"
+      },
+      "contentType": "application/json"
+    },
+    {
+      "method": "POST",
+      "path": "/predict",
+      "status": 501,
+      "body": {
+        "detail": "Prediction endpoint not implemented yet"
+      },
+      "contentType": "application/json"
+    },
+    {
+      "method": "POST",
+      "path": "/predict",
+      "status": 422,
+      "body": {
+        "detail": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "file"
+            ],
+            "msg": "Field required",
+            "input": null,
+            "url": "https://errors.pydantic.dev/2.5/v/missing"
+          }
+        ]
+      },
+      "contentType": "application/json"
+    }
+  ],
+  "modelAttributeInitialized": false,
+  "scope": "Five requests through TestClient against unmodified upstream project101 API with startup/shutdown; synthetic upload only, no socket server, model weights, Docker, Kubernetes, cloud, GPU, load benchmark or full dependency environment."
+}

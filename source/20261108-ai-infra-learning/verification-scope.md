@@ -1,0 +1,13 @@
+# Scope and reproducibility
+
+Repository pinned at0d1b6558dc68c042a3dad54095b707cd92fc0529, MIT verified. Own read-only inventory/AST script accepts checkout path. Entry counts include exercise-directoryREADME and flatfileforms; do not implycontentcompleteness. 62labfiles and119exerciseentries differ fromstaleprogress32/119. 44PythonfilesASTparsed;2project103files syntaxerrorsfromunfinishedblocks. 45project101 and29project103testfunctions haveonlydocstrings/pass; theywereNOTexecutedasmeaningfulpassingtests. Project10219functions notcategorizedempty, no fullcoverageclaim.
+
+Own TestClient script accepts checkout path, runs actualunchangedAPIstartup/shutdownand5requests inisolatedPython3.12.14/minimaldeps; rootsuccess,health200{},metricsplaceholderJSON,predict501,missingfile422. No modelweights, modelcall, fullrequirementsinstallation, cloudresources, Docker/K8s/GPUorperformancebenchmark. Testenvfreeze retained. User-specific or real customerdata notused.
+
+Junior/solutions repo existence/README verified; notfullcurriculatest/completenessclaim. Engineer500+hours isauthor estimate. Own4week4–8h/weekfirstserviceloop isoptionalproposal, notcourseduration/jobguarantee. vLLMexampleconcurrentserver vsserialHF confoundsreportedmultiplier; noourspeedclaim. 7B×2bytes14GBdecimal arithmetic excludesKV/runtime.
+
+Source imageryonlyREADMEbadges, notsuitablephotograph. FLUX8312 photorealistic sceneillustrateslearninginfrastructure; notphysicaltestsetup orofficialbrandasset. Bodyfigsillustrate concepts. Historicalconstruction script shouldnotrerunoverfinalfrozenarticle.
+
+Banner8311 passedmachineOCR but was manuallyrejected forpseudotext onenclosure; replaced8312 accepted:92876bytes, machine0fail andmanualvisualcheck.
+
+RootmakevisitsonlyprojectswithMakefile, project101missing andskipped; project102and103haveMakefiles. StatementbasedonstaticMakefileandfileexistence, notfullmaketestrun.
