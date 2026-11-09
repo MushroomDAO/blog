@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-09T03:08:55.942Z",
+  "drafts": [
+    {
+      "slug": "higgs-audio-v2-engineering-deployment-guide",
+      "mediaId": "prCUE631thH1cmNLi42prLu8Zg0gX7HtvD-XzicilwjEI_Pj0E-MUchCHkdDHEeY",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "8c833a44ba926cb93435dc35e9488dcc243fbf10e9237d8b80877266914d1bb3",
+      "remoteTextHash": "8c833a44ba926cb93435dc35e9488dcc243fbf10e9237d8b80877266914d1bb3",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/higgs-audio-v2-engineering-deployment-guide/",
+      "localContentHash": "728af8ae573d903a998d5896c00657c3e83d48f70fc197a550c8b4470296bac4",
+      "remoteContentHash": "f35943977ea6e3b3a36784d3242c03c92850b7d1dec3f79b898db17b4cbdac59"
+    }
+  ]
+}

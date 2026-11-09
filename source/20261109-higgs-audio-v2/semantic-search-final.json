@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "higgs-audio-v2-engineering-deployment-guide",
+      "title": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入",
+      "url": "/blog/higgs-audio-v2-engineering-deployment-guide/",
+      "language": "zh",
+      "excerpt": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入 Higgs Audio v2 是 Boson AI 可下载权重的语音生成模型，适合旁白、声音克隆和多人对白。本文核对推理代码、模型社区许可、24GB 显存建议、参考音频与转写配对、长文本分块及 vLLM 服务，给出安装命令与生产接入方案，并明确区分源码检查、官方性能报告和未经本地复现的音质指标，帮助团队先跑通小样。 Higgs Audio v2 Boson AI TTS Voice Cloning Self Hosting 先下载哪两个东西？ 是不是开源？商业使用需要检查什么？ 先解决一个",
+      "score": 0.57862943
+    },
+    {
+      "article_id": "awesome-gpt-image-2-prompt-engineering-industrial-templates",
+      "title": "awesome-gpt-image-2：33K stars，544 个逆向案例 + 20+ 工业级模板，Prompt as Code 出图引擎",
+      "url": "/blog/awesome-gpt-image-2-prompt-engineering-industrial-templates/",
+      "language": "zh",
+      "excerpt": "awesome-gpt-image-2：33K stars，544 个逆向案例 + 20+ 工业级模板，Prompt as Code 出图引擎 freestylefly/awesome-gpt-image-2，MIT，JavaScript，33,523 stars。GPT-Image-2/2.5 提示词工程库，544 个从真实生成结果逆向拆解的案例，12 大类别（UI/摄影/海报/信息图/插画/电商/品牌/角色/场景等），20+ 套工业级模板（含 JSON 结构化版本），配套 gpt-image-2-style-library npm Skill，同一份",
+      "score": 0.4779602
+    },
+    {
+      "article_id": "microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact",
+      "title": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率",
+      "url": "/blog/microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact/",
+      "language": "zh",
+      "excerpt": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率 microsoft/TRELLIS.2 是 TRELLIS（CVPR'25 Spotlight）的续作，10745 stars，MIT，Python。核心创新：O-Voxel「无场」稀疏体素结构取代等值面场，天然支持开放表面（衣物/叶片）、非流形几何、内部封闭结构；4B 参数模型 512³ 分辨率 H100 上约 3 秒，1024³ 约 17 秒；完整 PBR 材质（Base Color/Roughness/Metallic/Opacity）；网",
+      "score": 0.4736516
+    },
+    {
+      "article_id": "audio8-tts-preview-0.6b-multilingual-zero-shot-voice-cloning-dualAR",
+      "title": "Audio8 TTS Preview 0.6B: A 0.6B Model That Beats 4.6B TTS — Zero-Shot Voice Cloning in 11 Languages",
+      "url": "/blog/audio8-tts-preview-0.6b-multilingual-zero-shot-voice-cloning-dualAR/",
+      "language": "en",
+      "excerpt": "Audio8 TTS Preview 0.6B: A 0.6B Model That Beats 4.6B TTS — Zero-Shot Voice Cloning in 11 Languages Audio8 TTS Preview 0.6B: A 0.6B Model That Beats 4.6B TTS Systems — 11-Language Zero-Shot Voice Cloning Model Overview DualAR Architecture Benchmarks Zero-Shot Voice Cloning Why Ca",
+      "score": 0.46701384
+    },
+    {
+      "article_id": "higgs-realtime-duplex-open-weights-pricing-engineering",
+      "title": "Higgs Realtime Duplex: Weights, Pricing, and Engineering",
+      "url": "/blog/higgs-realtime-duplex-open-weights-pricing-engineering/",
+      "language": "en",
+      "excerpt": "Higgs Realtime Duplex: Weights, Pricing, and Engineering Investigate Higgs Realtime Duplex weights, API access and pricing, with implementation paths, speech components, Mika, WorldForge, and local code checks. Higgs 全双工 语音Agent Boson AI Mika WorldForge Is this Mu Li’s model? Whi",
+      "score": 0.46657234
+    },
+    {
+      "article_id": "stable-audio-3-ai-music-generation-local",
+      "title": "Stable Audio 3.0：6分20秒完整歌曲，四模型开源，本地 MacBook 就能跑",
+      "url": "/blog/stable-audio-3-ai-music-generation-local/",
+      "language": "zh",
+      "excerpt": "Stable Audio 3.0：6分20秒完整歌曲，四模型开源，本地 MacBook 就能跑 Stability AI 于 2026 年 5 月 20 日发布 Stable Audio 3.0，最长生成 6 分 20 秒音乐，推出 Small/SFX/Medium/Large 四档模型，中小模型完全开源，支持音频修复续写，训练数据 100% 授权，与华纳、环球音乐集团达成合作。 AI-Music Stable-Audio Stability-AI Open-Source Audio-Generation Local-AI 以前 AI 作曲是\"听个响\"，",
+      "score": 0.45256954
+    },
+    {
+      "article_id": "gvs5h-memdoor-small-model-coding-audit",
+      "title": "GVS5H and Memdoor: Small-Model Coding Claims Audited",
+      "url": "/blog/gvs5h-memdoor-small-model-coding-audit/",
+      "language": "en",
+      "excerpt": "GVS5H and Memdoor: Small-Model Coding Claims Audited Explore GVS5H and Memdoor through official sources, practical setup requirements, evidence limits, and independent analysis. Know what was checked before use. memdoor 开源工具 工程实践 证据核查 What was reported? What did the replication c",
+      "score": 0.4520238
+    },
+    {
+      "article_id": "luxtts-voice-clone-podcast-guide",
+      "title": "Make Podcasts in Your Own Voice: LuxTTS Zero-Cost Voice Cloning Guide",
+      "url": "/blog/luxtts-voice-clone-podcast-guide/",
+      "language": "en",
+      "excerpt": "Make Podcasts in Your Own Voice: LuxTTS Zero-Cost Voice Cloning Guide LuxTTS is an open-source TTS model built on ZipVoice architecture — 1GB VRAM, 3-second reference audio, 48kHz output, 150x+ real-time speed. This guide is for creators: HuggingFace Spaces for instant trial, Goo",
+      "score": 0.45110458
+    },
+    {
+      "article_id": "knowhere-2-document-parsing-agentic-rag",
+      "title": "Knowhere 2.0: Dual-Track Document Parsing + Hierarchy-Native Memory for Structure-Aware RAG",
+      "url": "/blog/knowhere-2-document-parsing-agentic-rag/",
+      "language": "en",
+      "excerpt": "Knowhere 2.0: Dual-Track Document Parsing + Hierarchy-Native Memory for Structure-Aware RAG Knowhere by Ontos-AI — 3.5k stars, open-sourced 2026-05-07. Version 2.0 (September 2026) introduces dual-track parsing: Vision Page + Text Track converge into a hierarchy-native memory sch",
+      "score": 0.45018497
+    },
+    {
+      "article_id": "vpipe-minimax-h3-apple-silicon-video-audio-local-metal-cpp-pipeline",
+      "title": "M5 Air 16GB 本地跑 33B 视频模型：vpipe 实测，15 分钟生成 3.75 秒有声视频",
+      "url": "/blog/vpipe-minimax-h3-apple-silicon-video-audio-local-metal-cpp-pipeline/",
+      "language": "zh",
+      "excerpt": "M5 Air 16GB 本地跑 33B 视频模型：vpipe 实测，15 分钟生成 3.75 秒有声视频 tgo-app-dev/vpipe 是一个 C++ 编写的苹果芯片多模态 AI 运行时，整个 build 产物不到 25MB。它把 MiniMax H3（33B）跑在 16GB M5 MacBook Air 上——视频和音轨由同一个去噪循环生成，不是事后配音。实测 960×544 / 24fps / 3.75s / 8-step DiT，约 15 分钟。项目完成度极高：pipeline JSON 规范、浏览器 Web UI、手机扫码接入、本地 MCP",
+      "score": 0.44398516
+    }
+  ]
+}

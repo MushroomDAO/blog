@@ -1,0 +1,51 @@
+{
+  "codeRepository": "https://github.com/boson-ai/higgs-audio",
+  "codeCommit": "05a145bb490501b534563bf51bf2f7aa2326b271",
+  "sourceFiles": [
+    "README_V2.md",
+    "examples/generation.py",
+    "examples/vllm/README.md",
+    "tech_blogs/TOKENIZER_BLOG.md",
+    "tech_blogs/ARCHITECTURE_BLOG.md",
+    "requirements.txt",
+    "LICENSE"
+  ],
+  "fetched": {
+    "model-config.json": {
+      "bytes": 1096,
+      "sha256": "6fdc349a035995e338a29350a367e27d131bf2995206f1e7879c687106aae187"
+    },
+    "model.txt": {
+      "bytes": 5527,
+      "sha256": "e79239b601cb6e648108febdf13d6a3757193cad3b4388fcc81589ba7566ef0a"
+    },
+    "tokenizer-license.txt": {
+      "bytes": 9172,
+      "sha256": "8b2e018eeb3967a4636ccc57528440b33c14dd6e02ad67571fc7759489dde9a0"
+    },
+    "card.txt": {
+      "bytes": 25825,
+      "sha256": "2512230c742f614e715d36cd461807c5af09dd5234752bc5d223027f55db4fc9"
+    },
+    "legacy-config.json": {
+      "bytes": 6264,
+      "sha256": "d9fba363d906384f54b229096f6d913eb118c6d57bd7159fd5f6aaa1224cbcbe"
+    },
+    "license.txt": {
+      "bytes": 9172,
+      "sha256": "8b2e018eeb3967a4636ccc57528440b33c14dd6e02ad67571fc7759489dde9a0"
+    },
+    "tokenizer-config.json": {
+      "bytes": 2531,
+      "sha256": "eefb20806f7104e77c9a5277c9df0f9bb8826b08eb1d4e8ab2b9829b6ef9fac1"
+    },
+    "tokenizer.txt": {
+      "bytes": 1865,
+      "sha256": "ea49a9ed3ef2a8d9692af7b7fe72576b6e9e9c93ebb682070648dbecabc54b87"
+    },
+    "legacy-tokenizer-config.json": {
+      "bytes": 226,
+      "sha256": "70d56b57f26d8de9058582a7f6179504936dd950eceb4076f6ea0e866fa72382"
+    }
+  }
+}

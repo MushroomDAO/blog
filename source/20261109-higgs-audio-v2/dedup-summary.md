@@ -1,0 +1,1 @@
+Exact model URL and full model ID: no matches across 976 blog posts, 15 remote drafts, 959 local publication receipts and 4019 KB drawers. Existing TTS3 and native Duplex posts are different topics. Published-list API returned 48001; recorded permission gap. No previous v2 publication receipt to reuse. Incoming raw KB reused.

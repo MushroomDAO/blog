@@ -1,0 +1,13 @@
+{
+  "codeCommit": "05a145bb490501b534563bf51bf2f7aa2326b271",
+  "checks": {
+    "unchanged_input": true,
+    "speaker_continuation": true,
+    "group_two_turns": true,
+    "special_tags": true,
+    "invalid_method": true,
+    "chinese_punctuation": true
+  },
+  "passed": 6,
+  "scope": "actual AST-extracted upstream pure functions; no model inference, audio, GPU, word-mode dependencies or API execution"
+}
