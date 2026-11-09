@@ -1,0 +1,1 @@
+Exact repository URL and Axion-1.0 checked before writing. Blog 973 entries, remote drafts 12, local M2 records 956 and KB 3996 drawers queried. Only incoming raw KB material matched; no existing article or M2 creation receipt. Raw cross-topic logs remain in private job directory. Agent-reach skill/executable unavailable; official direct sources used.

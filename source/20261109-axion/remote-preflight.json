@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-11-09T02:11:04.944Z",
+  "publishedQuery": {
+    "errcode": 48001,
+    "errmsg": "api unauthorized rid: 6af12bb8-77858ef3-2f80f90e"
+  },
+  "priorLocalAxionReceipt": false,
+  "decision": "Exact dedup found incoming rawKB only; no prior publication receipt. Remote drafts already queried; no Axion match. Published-list permission gap recorded; no ambiguous prior draft to recreate."
+}

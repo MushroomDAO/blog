@@ -1,0 +1,81 @@
+Nested illustration worker completed with exit 0. Final report and copy verification:
+]==b'PLTE': palette_entries=length//3
+        offset+=12+length
+    assert im.size==(1120,630) and im.mode=='P'
+    assert len(im.getcolors())<=48 and palette_entries<=48
+    assert final.stat().st_size<90000
+    rgb=im.convert('RGB'); assert all(rgb.getpixel(p)==(255,255,255) for p in [(0,0),(1119,0),(0,629),(1119,629)])
+    print(json.dumps({'file':str(final),'size':im.size,'bytes':final.stat().st_size,'used_colors':len(im.getcolors()),'palette_entries':palette_entries,'dithering':'None','raw_copy_identical':True}))
+expected={'src/content/blog/axion-agent-training-data-cost-review.md':'39c4ef92e13739900b955fa4f4a12044c2df151f71012d3747b27c1c270f64fb','src/assets/images/axion-agent-training-data-cost-review-banner.jpg':'fc350347341b0356d6a0437e2a6ab25147b2f309d6a6d733c1083291fc62b5a8'}
+for path,digest in expected.items():
+    assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==digest
+print('Article and banner hashes unchanged; all image checks passed.')
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 420ms:
+{"file": "src/assets/images/axion-agent-training-data-cost-review-fig-01.png", "size": [1120, 630], "bytes": 35582, "used_colors": 47, "palette_entries": 47, "dithering": "None", "raw_copy_identical": true}
+{"file": "src/assets/images/axion-agent-training-data-cost-review-fig-02.png", "size": [1120, 630], "bytes": 43567, "used_colors": 47, "palette_entries": 47, "dithering": "None", "raw_copy_identical": true}
+{"file": "src/assets/images/axion-agent-training-data-cost-review-fig-03.png", "size": [1120, 630], "bytes": 42301, "used_colors": 47, "palette_entries": 47, "dithering": "None", "raw_copy_identical": true}
+Article and banner hashes unchanged; all image checks passed.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'git status --short' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+ M pipeline/m2/output/drafts-map.json
+ M source/20261105-craft-anything/semantic-index-info.json
+ M source/20261105-craft-anything/semantic-search-final.json
+?? generated_images/
+?? pipeline/m2/output/agentear-v0-28-1-settings-fix-local-voice-input.json
+?? pipeline/m2/output/cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor.json
+?? pipeline/m2/output/deepseek-v41-flash-1017-uncensored-fp8-teardown.json
+?? pipeline/m2/output/laya-aayushch-local-first-ai-notification-command-center.json
+?? pipeline/m2/output/meta-sam3-promptable-concept-segmentation-license-mac-guide.json
+?? pipeline/m2/output/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit.json
+?? pipeline/m2/output/superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx.json
+?? pipeline/m2/output/xllama-xbox-series-s-local-llm-inference-dev-mode.json
+?? src/assets/images/axion-agent-training-data-cost-review-banner.jpg
+?? src/assets/images/axion-agent-training-data-cost-review-fig-01.png
+?? src/assets/images/axion-agent-training-data-cost-review-fig-02.png
+?? src/assets/images/axion-agent-training-data-cost-review-fig-03.png
+?? src/content/blog/axion-agent-training-data-cost-review.md
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+已用 imagegen 按三个锚点依次生成，并逐张目视检查：
+
+- [图 01：答案先行](/Users/jason/Dev/mycelium/blog/src/assets/images/axion-agent-training-data-cost-review-fig-01.png)：35,582 bytes
+- [图 02：成本边界](/Users/jason/Dev/mycelium/blog/src/assets/images/axion-agent-training-data-cost-review-fig-02.png)：43,567 bytes
+- [图 03：训练评测闭环](/Users/jason/Dev/mycelium/blog/src/assets/images/axion-agent-training-data-cost-review-fig-03.png)：42,301 bytes
+
+全部为 **1120×630、白底 PNG、47 色、无抖动**，均小于 90,000 bytes。原图保存在 `generated_images/axion-20261109/`。
+
+文章、banner 及其他文件未修改。
+hook: Stop
+hook: Stop Completed
+tokens used
+46,778
+已用 imagegen 按三个锚点依次生成，并逐张目视检查：
+
+- [图 01：答案先行](/Users/jason/Dev/mycelium/blog/src/assets/images/axion-agent-training-data-cost-review-fig-01.png)：35,582 bytes
+- [图 02：成本边界](/Users/jason/Dev/mycelium/blog/src/assets/images/axion-agent-training-data-cost-review-fig-02.png)：43,567 bytes
+- [图 03：训练评测闭环](/Users/jason/Dev/mycelium/blog/src/assets/images/axion-agent-training-data-cost-review-fig-03.png)：42,301 bytes
+
+全部为 **1120×630、白底 PNG、47 色、无抖动**，均小于 90,000 bytes。原图保存在 `generated_images/axion-20261109/`。
+
+文章、banner 及其他文件未修改。

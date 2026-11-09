@@ -1,0 +1,15 @@
+{
+  "title": "Axion 1.0：Agent训练贵在哪里",
+  "author": "Mycelium",
+  "digest": "拆解可验证数据、三阶段训练与HLE成绩，厘清1K GPU小时的成本口径。",
+  "mediaId": "prCUE631thH1cmNLi42prBylRTPhyRJGosJQUt85h5g_K-SfLhECfXsBcuLu7XDa",
+  "blogUrl": "https://blog.mushroom.cv/blog/axion-agent-training-data-cost-review/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/axion-agent-training-data-cost-review/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/bytedance/axion1_0",
+    "huggingface.co/datasets/axion1-0",
+    "huggingface.co/axion1-0/axion-1.0-35b"
+  ],
+  "publishedAt": "2026-11-09T02:14:06.402Z"
+}

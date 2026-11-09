@@ -1,0 +1,40 @@
+[
+  {
+    "id": "9338f1a6d1438ca3ec24e8c26dfe3995ab30100a58a5b43f",
+    "metadata": {
+      "article_id": "axion-agent-training-data-cost-review",
+      "content_hash": "d1b4bd338c542618",
+      "excerpt": "Axion 1.0：数据构造、Agent训练与低成本叙事的边界 Axion 1.0用可验证任务构造、两阶段SFT和异步GRPO训练科学推理与工具型Agent。本文核对论文、开源代码、数据与35B社区复现模型，拆解约1K GPU-hours的成本边界、HLE完整集和130题子集的差别，以及多次取最好成绩的评测条件，并给出数据闭环实践建议，区分作者报告、代码检查与尚未复现的能力。 Axion Agent SFT GRPO 开源模型 数据构造 Axion 1.0 是什么，开源到哪一步了？ 高质量数据如何被“构造”出来？ 第一阶段：让题目针对底座的能力变难 第二",
+      "language": "zh",
+      "tags": [
+        "Axion",
+        "Agent",
+        "SFT",
+        "GRPO",
+        "开源模型",
+        "数据构造"
+      ],
+      "title": "Axion 1.0：数据构造、Agent训练与低成本叙事的边界",
+      "url": "/blog/axion-agent-training-data-cost-review/"
+    }
+  },
+  {
+    "id": "8f9182de1e9fa72563f84177f7621ea15dd2f51f97291cbd",
+    "metadata": {
+      "article_id": "axion-agent-training-data-cost-review",
+      "content_hash": "f191f2dc429dc34b",
+      "excerpt": "Axion 1.0: Agent Data, Training, and Cost Boundaries Review Axion 1.0 data construction, SFT and RL, separating reported HLE results, training cost, community weights, and our selected local CPU code checks. Axion Agent SFT GRPO 开源模型 数据构造 What is available, and which model can yo",
+      "language": "en",
+      "tags": [
+        "Axion",
+        "Agent",
+        "SFT",
+        "GRPO",
+        "开源模型",
+        "数据构造"
+      ],
+      "title": "Axion 1.0: Agent Data, Training, and Cost Boundaries",
+      "url": "/blog/axion-agent-training-data-cost-review/"
+    }
+  }
+]

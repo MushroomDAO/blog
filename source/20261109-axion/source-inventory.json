@@ -1,0 +1,52 @@
+{
+  "gitRevision": "66cab5555ca25d3a5460ca6a6eff07f3a6bcabbc",
+  "hfRevisions": {
+    "model": "d4fdb2d6d284ecc24359bfa161a58b835a63c754",
+    "data": "668831c96e7c3d974bc5c414329d508277f23663"
+  },
+  "retrievedAt": "2026-11-09T02:05:37.967296+00:00",
+  "fetchBackend": "agent-reach not found in available skills/files or executable; direct git, official HTML/PDF and HF raw cards used; Jina Reader also fetched",
+  "files": {
+    "dataset-metadata.json": "163af57c2be3e74e952df900048929bfa19a6d5c92096629a4ccd3ba314ac001",
+    "paper.pdf": "6704b2420537cb11740c748ef7f4cd1f89b789c38eb5c614d8e7f8605587f98c",
+    "model-metadata.json": "91b7939e4bc6a08d9d753b02afd06b223f52e8e7ecceea5d9295d6498b71dea9",
+    "model-card.md": "4ee68908b6e5e7a4c3eba7b939f8998c7bde53f8fa65fda12579ffdd45ee181b",
+    "paper.txt": "82c71772a32f99f72b4704667dc4d9b5a13c567e0d84d1696f1b10b086d31194",
+    "paper.html": "4aae7a5c8534677a046a0676e1e9c3a8220a6ef511025d33bbdb4646d26dc0c4",
+    "dataset-card.md": "5321a7cd7934a09afd8974d74274234752a1c1510a1e601b54f9badc9560f949",
+    "project.html": "3335d16eaa93c3de812409b0f8ace3697d79a690c361d4042354fba6f1a0faa2",
+    "paper-v1.html": "bd29e2ee8035026f1d95e83af2811b1ed21eb097b0f2918e8bb578d93d04564c"
+  },
+  "pinnedCardsMatch": true,
+  "publicEvidenceFiles": {
+    "dataset-metadata.json": "163af57c2be3e74e952df900048929bfa19a6d5c92096629a4ccd3ba314ac001",
+    "model-config.json": "52088a9c5766997b2b963c58bce9b79924b7cd8a6e4122acd3048e6f166c5cb5",
+    "mine-kb.py": "45345ff637c80bf40164787207655582c37c035d4b48eaf9135ac20b057d4184",
+    "model-metadata.json": "91b7939e4bc6a08d9d753b02afd06b223f52e8e7ecceea5d9295d6498b71dea9",
+    "model-card.md": "4ee68908b6e5e7a4c3eba7b939f8998c7bde53f8fa65fda12579ffdd45ee181b",
+    "check.py": "a59421b4ed7e74d3430f7a184e6287434d28fac472dfa57fa2cb67806eddc53d",
+    "check-semantic.py": "462c75dc4fa875c94b7473271d9a01c983c7a29fba33996f03cc88800f84b79e",
+    "tests-initial.log": "e53b8020132bbfaac52a210a93904eea7b5998614f1e7ae83609b5b4617cffb1",
+    "wechat-content-canonical.py": "03ff18251b6ef756b501b21755f03b581659b75f04d3d48c68c9e757758f9d3e",
+    "verify-wechat.cjs": "cded53cf54de01cd2cb115a56609f0e13ac6b0f539401725f4d4c33ed6e84304",
+    "verify-kb.py": "ac562ea978b9f1247c81c5adb9b54f28e937a96e1bc58235444028732bd1b288",
+    "publisher-provenance.json": "bd4153b150d5e3e69fc39a833ce37155221f447b4f1f92899699245cf8fe06a9",
+    "tests-final.log": "d538599b0fdcc988270e604570cd63f03c67f83e1f22fd7546bf3691023705ca",
+    "dataset-card.md": "5321a7cd7934a09afd8974d74274234752a1c1510a1e601b54f9badc9560f949",
+    "upstream-sft-provenance.json": "04e74bdf6e21c03ba0a2789c2720318711fe4156a94ca09626f829f393889be3",
+    "article-construction.py": "a59adb0a68eecbe2c7cf241b70d2607cf9f4ee6975dc90b52a7e10ebe4948b55",
+    "verify-public.py": "7048d5e784dfaefd1442a509e9162eb66dab71e4f80479e33e21b79a81a38abd",
+    "verification-scope.md": "d6f07b29d8b48c1c634181f5a6d07c2347cb6bd82ccf7203f06025e81a7251e2",
+    "dataset-size.json": "bd73a61d5dfa586e221a86dca0c8d3e2e65d2a6c2a0099145597bbd2018f4682",
+    "upstream-rl-provenance.json": "d916aa5b0d09deeac6b45605e923c030aac31631ddeec68f269f528db96c5b29",
+    "dedup-summary.md": "6fce4d33f86e2d397d46e05f9d7471118d22a6688da05c6537d47bd0946d6e57"
+  },
+  "fetchUrls": [
+    "https://arxiv.org/pdf/2611.03233",
+    "https://github.com/bytedance/axion1_0",
+    "https://huggingface.co/datasets/Axion1-0/axion-training-data",
+    "https://huggingface.co/Axion1-0/Axion-1.0-35B"
+  ],
+  "downloadedSourceImage": "/Users/jason/.heinu1-bot/media/axion-1-0-benchmark-results.png",
+  "rawPaperAndSiteLocation": "Private job fetched-sources directory; hashes retained above"
+}
