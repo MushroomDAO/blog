@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-09T02:13:44.398623+00:00",
+  "articles": [
+    {
+      "slug": "axion-agent-training-data-cost-review",
+      "url": "https://blog.mushroom.cv/blog/axion-agent-training-data-cost-review/",
+      "title": "Axion 1.0：数据构造、Agent训练与低成本叙事的边界",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/axion-agent-training-data-cost-review-banner.lhOLKyvN.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 92181
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/axion-agent-training-data-cost-review-banner.lhOLKyvN_Z1yIhtP.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 35572
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/axion-agent-training-data-cost-review-fig-01.DOOEPtr9_Zgv5s8.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 34366
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/axion-agent-training-data-cost-review-fig-02.DO4uqg4H_p3plN.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 39912
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/axion-agent-training-data-cost-review-fig-03.BR4PDSbz_1w1u5u.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 46210
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "topic": "Axion1.0",
+  "date": "2026-11-09",
+  "rawKbReused": true,
+  "repository": "https://github.com/bytedance/axion1_0",
+  "commit": "66cab5555ca25d3a5460ca6a6eff07f3a6bcabbc",
+  "testResult": {
+    "passed": 104,
+    "deselected": 2,
+    "passingSubtests": 18
+  },
+  "fullTrainingOrScoresReproduced": false,
+  "banner": {
+    "origin": "localFLUX2Klein",
+    "seed": 8321,
+    "bytes": 92181,
+    "manuallyInspected": true
+  },
+  "bodyImages": {
+    "count": 3,
+    "files": [
+      {
+        "file": "axion-agent-training-data-cost-review-fig-01.png",
+        "bytes": 35582,
+        "manualInspection": true
+      },
+      {
+        "file": "axion-agent-training-data-cost-review-fig-02.png",
+        "bytes": 43567,
+        "manualInspection": true
+      },
+      {
+        "file": "axion-agent-training-data-cost-review-fig-03.png",
+        "bytes": 42301,
+        "manualInspection": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,301 @@
+........................................................................ [ 67%]
+.FFFFFF..F.......F................                     [100%]
+=================================== FAILURES ===================================
+____ test_formal_reward_entry_uses_full_messages_and_ignores_legacy_shaping ____
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1098a9b20>
+
+    def test_formal_reward_entry_uses_full_messages_and_ignores_legacy_shaping(monkeypatch):
+        sys.path.insert(0, str(ROOT))
+>       from axion.training.rl import reward
+
+/tmp/axion-research/tests/test_rl_reward_paper.py:236:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    # Axion: paper Eq4/Eq5 reward, submitted answers, explicit targets and judge-failure exclusion.
+    # Copyright 2025 DeepResearch authors
+    #
+    # Licensed under the Apache License, Version 2.0 (the "License");
+    # you may not use this file except in compliance with the License.
+    # You may obtain a copy of the License at
+    #
+    #     http://www.apache.org/licenses/LICENSE-2.0
+    #
+    # Unless required by applicable law or agreed to in writing, software
+    # distributed under the License is distributed on an "AS IS" BASIS,
+    # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    # See the License for the specific language governing permissions and
+    # limitations under the License.
+    #
+    # Modified by the Axion authors for package paths, deployment settings and runtime fixes.
+    #
+    """
+    Reward function for DeepResearch RL training.
+    Supports dynamic eval scripts per task with async API calls.
+    """
+
+    import asyncio
+    import base64
+    import csv
+    import hashlib
+    import importlib.util
+    import inspect
+    import io
+    import json
+    import logging
+    import os
+    import re
+    import string
+    import sys
+    import threading
+    from typing import Any, Callable, Dict, List, Optional
+    from pathlib import Path
+    from typing import Union  # noqa: F811  (also imported below; kept for locality)
+    from urllib.request import Request, urlopen
+
+>   import aiohttp
+E   ModuleNotFoundError: No module named 'aiohttp'
+
+/private/tmp/axion-research/axion/training/rl/reward.py:42: ModuleNotFoundError
+____ test_formal_entry_fails_closed_when_original_message_roles_are_missing ____
+
+    def test_formal_entry_fails_closed_when_original_message_roles_are_missing():
+        sys.path.insert(0, str(ROOT))
+>       from axion.training.rl import reward
+
+/tmp/axion-research/tests/test_rl_reward_paper.py:249:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    # Axion: paper Eq4/Eq5 reward, submitted answers, explicit targets and judge-failure exclusion.
+    # Copyright 2025 DeepResearch authors
+    #
+    # Licensed under the Apache License, Version 2.0 (the "License");
+    # you may not use this file except in compliance with the License.
+    # You may obtain a copy of the License at
+    #
+    #     http://www.apache.org/licenses/LICENSE-2.0
+    #
+    # Unless required by applicable law or agreed to in writing, software
+    # distributed under the License is distributed on an "AS IS" BASIS,
+    # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    # See the License for the specific language governing permissions and
+    # limitations under the License.
+    #
+    # Modified by the Axion authors for package paths, deployment settings and runtime fixes.
+    #
+    """
+    Reward function for DeepResearch RL training.
+    Supports dynamic eval scripts per task with async API calls.
+    """
+
+    import asyncio
+    import base64
+    import csv
+    import hashlib
+    import importlib.util
+    import inspect
+    import io
+    import json
+    import logging
+    import os
+    import re
+    import string
+    import sys
+    import threading
+    from typing import Any, Callable, Dict, List, Optional
+    from pathlib import Path
+    from typing import Union  # noqa: F811  (also imported below; kept for locality)
+    from urllib.request import Request, urlopen
+
+>   import aiohttp
+E   ModuleNotFoundError: No module named 'aiohttp'
+
+/private/tmp/axion-research/axion/training/rl/reward.py:42: ModuleNotFoundError
+_________ test_formal_entry_uses_the_deployed_paper_judge_environment __________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x109b9ecc0>
+
+    def test_formal_entry_uses_the_deployed_paper_judge_environment(monkeypatch):
+        sys.path.insert(0, str(ROOT))
+>       from axion.training.rl import reward
+
+/tmp/axion-research/tests/test_rl_reward_paper.py:259:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    # Axion: paper Eq4/Eq5 reward, submitted answers, explicit targets and judge-failure exclusion.
+    # Copyright 2025 DeepResearch authors
+    #
+    # Licensed under the Apache License, Version 2.0 (the "License");
+    # you may not use this file except in compliance with the License.
+    # You may obtain a copy of the License at
+    #
+    #     http://www.apache.org/licenses/LICENSE-2.0
+    #
+    # Unless required by applicable law or agreed to in writing, software
+    # distributed under the License is distributed on an "AS IS" BASIS,
+    # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    # See the License for the specific language governing permissions and
+    # limitations under the License.
+    #
+    # Modified by the Axion authors for package paths, deployment settings and runtime fixes.
+    #
+    """
+    Reward function for DeepResearch RL training.
+    Supports dynamic eval scripts per task with async API calls.
+    """
+
+    import asyncio
+    import base64
+    import csv
+    import hashlib
+    import importlib.util
+    import inspect
+    import io
+    import json
+    import logging
+    import os
+    import re
+    import string
+    import sys
+    import threading
+    from typing import Any, Callable, Dict, List, Optional
+    from pathlib import Path
+    from typing import Union  # noqa: F811  (also imported below; kept for locality)
+    from urllib.request import Request, urlopen
+
+>   import aiohttp
+E   ModuleNotFoundError: No module named 'aiohttp'
+
+/private/tmp/axion-research/axion/training/rl/reward.py:42: ModuleNotFoundError
+______ test_launcher_worker_environment_reaches_actual_judge_http_request ______
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10993b110>
+
+    def test_launcher_worker_environment_reaches_actual_judge_http_request(monkeypatch):
+        sys.path.insert(0, str(ROOT))
+>       from axion.training.rl import reward
+
+/tmp/axion-research/tests/test_rl_reward_paper.py:277:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    # Axion: paper Eq4/Eq5 reward, submitted answers, explicit targets and judge-failure exclusion.
+    # Copyright 2025 DeepResearch authors
+    #
+    # Licensed under the Apache License, Version 2.0 (the "License");
+    # you may not use this file except in compliance with the License.
+    # You may obtain a copy of the License at
+    #
+    #     http://www.apache.org/licenses/LICENSE-2.0
+    #
+    # Unless required by applicable law or agreed to in writing, software
+    # distributed under the License is distributed on an "AS IS" BASIS,
+    # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    # See the License for the specific language governing permissions and
+    # limitations under the License.
+    #
+    # Modified by the Axion authors for package paths, deployment settings and runtime fixes.
+    #
+    """
+    Reward function for DeepResearch RL training.
+    Supports dynamic eval scripts per task with async API calls.
+    """
+
+    import asyncio
+    import base64
+    import csv
+    import hashlib
+    import importlib.util
+    import inspect
+    import io
+    import json
+    import logging
+    import os
+    import re
+    import string
+    import sys
+    import threading
+    from typing import Any, Callable, Dict, List, Optional
+    from pathlib import Path
+    from typing import Union  # noqa: F811  (also imported below; kept for locality)
+    from urllib.request import Request, urlopen
+
+>   import aiohttp
+E   ModuleNotFoundError: No module named 'aiohttp'
+
+/private/tmp/axion-research/axion/training/rl/reward.py:42: ModuleNotFoundError
+__ test_real_modern_reward_manager_loads_formal_function_and_preserves_roles ___
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1098aa3f0>
+
+    def test_real_modern_reward_manager_loads_formal_function_and_preserves_roles(monkeypatch):
+        sys.path[:0] = [str(ROOT), str(ROOT / "third_party/verl")]
+>       import numpy as np
+E       ModuleNotFoundError: No module named 'numpy'
+
+/tmp/axion-research/tests/test_rl_reward_paper.py:322: ModuleNotFoundError
+__________ test_reward_timeout_is_an_invalid_sample_not_a_valid_zero ___________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1098ab5c0>
+
+    def test_reward_timeout_is_an_invalid_sample_not_a_valid_zero(monkeypatch):
+        sys.path[:0] = [str(ROOT), str(ROOT / "third_party/verl")]
+>       import numpy as np
+E       ModuleNotFoundError: No module named 'numpy'
+
+/tmp/axion-research/tests/test_rl_reward_paper.py:364: ModuleNotFoundError
+_ LaunchTests.test_export_uses_direct_single_process_path_outside_training_directory _
+
+self = <test_sft_recipe.LaunchTests testMethod=test_export_uses_direct_single_process_path_outside_training_directory>
+
+    def test_export_uses_direct_single_process_path_outside_training_directory(self):
+        command = ['bash', str(ROOT / 'train.sh'), 'export', '--model', str(self.model),
+                   '--mcore-model', str(self.checkpoint), '--output', str(self.base / 'export-inside-training'),
+                   '--dry-run']
+        invalid = subprocess.run(command, text=True, capture_output=True)
+        self.assertNotEqual(invalid.returncode, 0)
+        with tempfile.TemporaryDirectory(prefix='axion-export-test-') as directory:
+            command[command.index('--output') + 1] = str(Path(directory) / 'hf')
+            inherited = {**os.environ, 'BASE_MODEL': '/unavailable/old-model'}
+            result = subprocess.run(command, text=True, capture_output=True, env=inherited)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            plan = json.loads(result.stdout)
+            self.assertEqual(plan['world_size'], 1)
+            self.assertEqual(plan['environment']['MS_SWIFT_EXPORT_NO_FSDP'], '1')
+            self.assertEqual(plan['environment']['NPROC_PER_NODE'], '1')
+            self.assertEqual(plan['environment']['NNODES'], '1')
+            self.assertTrue(plan['config']['to_hf'])
+>           self.assertEqual(plan['environment']['BASE_MODEL'], str(self.model))
+E           AssertionError: '/private/var/folders/4d/yrsdwdm10h784v_m6f[40 chars]odel' != '/var/folders/4d/yrsdwdm10h784v_m6fwm125400[32 chars]odel'
+E           - /private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/axion-sft-test-7ffemggw/model
+E           ? --------
+E           + /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/axion-sft-test-7ffemggw/model
+
+/tmp/axion-research/tests/test_sft_recipe.py:231: AssertionError
+_ LaunchTests.test_stage2_requires_native_checkpoint_and_never_resumes_optimizer _
+
+self = <test_sft_recipe.LaunchTests testMethod=test_stage2_requires_native_checkpoint_and_never_resumes_optimizer>
+
+    def test_stage2_requires_native_checkpoint_and_never_resumes_optimizer(self):
+        missing = self.run_launch('stage2')
+        self.assertNotEqual(missing.returncode, 0)
+        hf_only = self.run_launch('stage2', ('--mcore-model', str(self.model)))
+        self.assertNotEqual(hf_only.returncode, 0)
+        self.assertIn('native', hf_only.stderr.lower())
+        plan = self.plan('stage2', ('--mcore-model', str(self.checkpoint)))
+>       self.assertEqual(plan['config']['mcore_model'], str(self.checkpoint))
+E       AssertionError: '/private/var/folders/4d/yrsdwdm10h784v_m6f[49 chars]-795' != '/var/folders/4d/yrsdwdm10h784v_m6fwm125400[41 chars]-795'
+E       - /private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/axion-sft-test-x8h4cewx/checkpoint-795
+E       ? --------
+E       + /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/axion-sft-test-x8h4cewx/checkpoint-795
+
+/tmp/axion-research/tests/test_sft_recipe.py:96: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../tmp/axion-research/tests/test_rl_reward_paper.py::test_formal_reward_entry_uses_full_messages_and_ignores_legacy_shaping
+FAILED ../../../../../tmp/axion-research/tests/test_rl_reward_paper.py::test_formal_entry_fails_closed_when_original_message_roles_are_missing
+FAILED ../../../../../tmp/axion-research/tests/test_rl_reward_paper.py::test_formal_entry_uses_the_deployed_paper_judge_environment
+FAILED ../../../../../tmp/axion-research/tests/test_rl_reward_paper.py::test_launcher_worker_environment_reaches_actual_judge_http_request
+FAILED ../../../../../tmp/axion-research/tests/test_rl_reward_paper.py::test_real_modern_reward_manager_loads_formal_function_and_preserves_roles
+FAILED ../../../../../tmp/axion-research/tests/test_rl_reward_paper.py::test_reward_timeout_is_an_invalid_sample_not_a_valid_zero
+FAILED ../../../../../tmp/axion-research/tests/test_sft_recipe.py::LaunchTests::test_export_uses_direct_single_process_path_outside_training_directory
+FAILED ../../../../../tmp/axion-research/tests/test_sft_recipe.py::LaunchTests::test_stage2_requires_native_checkpoint_and_never_resumes_optimizer
+8 failed, 98 passed, 18 subtests passed in 15.54s
