@@ -1,0 +1,1 @@
+Official repoURL no matches; LivLiv exactentity only incoming raw KB. 977 Blog/16 remote drafts/960 M2 receipts/4028 KB drawers checked. Published-list48001 permission gap recorded. No previous article/draft creation receipt to reuse. Raw botKB reused.

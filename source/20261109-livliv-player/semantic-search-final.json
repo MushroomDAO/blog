@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "livliv-player-browser-vtuber-webgl2-guide",
+      "title": "LivLiv Player: A Practical Browser Avatar Guide",
+      "url": "/blog/livliv-player-browser-vtuber-webgl2-guide/",
+      "language": "en",
+      "excerpt": "LivLiv Player: A Practical Browser Avatar Guide Explore LivLiv Player: its WebGL2 core size, avatar licenses, lip sync, face tracking and practical browser setup, with clear dependency and streaming limits. LivLiv Player WebGL2 VTuber Browser Open Source What does “about 30KB” in",
+      "score": 0.69667554
+    },
+    {
+      "article_id": "microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact",
+      "title": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率",
+      "url": "/blog/microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact/",
+      "language": "zh",
+      "excerpt": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率 microsoft/TRELLIS.2 是 TRELLIS（CVPR'25 Spotlight）的续作，10745 stars，MIT，Python。核心创新：O-Voxel「无场」稀疏体素结构取代等值面场，天然支持开放表面（衣物/叶片）、非流形几何、内部封闭结构；4B 参数模型 512³ 分辨率 H100 上约 3 秒，1024³ 约 17 秒；完整 PBR 材质（Base Color/Roughness/Metallic/Opacity）；网",
+      "score": 0.5147383
+    },
+    {
+      "article_id": "vibegame-prompt-to-game-ai-native-engine-adversarial-agent-team",
+      "title": "VibeGame: Natural Language → Playable 2D Game, Built by 8 Specialized Agents",
+      "url": "/blog/vibegame-prompt-to-game-ai-native-engine-adversarial-agent-team/",
+      "language": "en",
+      "excerpt": "VibeGame: Natural Language → Playable 2D Game, Built by 8 Specialized Agents Nanjing University + NTU release VibeGame — an AI-native game engine + adversarial agent team framework that generates and continuously edits complete 2D web games from natural language prompts and refer",
+      "score": 0.51380134
+    },
+    {
+      "article_id": "webclaw-rust-web-scraper-llm-guide",
+      "title": "Webclaw 开发者使用指南：用 Rust 爬虫给 AI 喂干净的 Markdown",
+      "url": "/blog/webclaw-rust-web-scraper-llm-guide/",
+      "language": "zh",
+      "excerpt": "Webclaw 开发者使用指南：用 Rust 爬虫给 AI 喂干净的 Markdown Webclaw 是一款 Rust 编写的本地优先网页内容提取工具，MCP 一键接入 Claude/Cursor，自动去噪输出 LLM 专用 Markdown，支持单页抓取、全站爬虫、批量爬取、页面对比、品牌元素提取，AGPL-3.0 开源，1500+ Stars。 网页抓取 MCP Claude Code Rust RAG LLM工具 开源工具 AI Agent 为什么网页内容对 LLM 来说这么\"脏\"？ 快速安装 方式一：MCP 客户端一键配置（推荐） 方式二：Ho",
+      "score": 0.5117177
+    },
+    {
+      "article_id": "cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice",
+      "title": "ClipTalk: Edit Video by Talking — VLM + 24 Skills Driving an Agentic Video Pipeline",
+      "url": "/blog/cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice/",
+      "language": "en",
+      "excerpt": "ClipTalk: Edit Video by Talking — VLM + 24 Skills Driving an Agentic Video Pipeline Custom non-commercial license, 126 stars. Three-tier: Python FastAPI + Node Pi Agent + browser. 24 SKILL.md skills, VLM for scene understanding, local SenseVoice/TalkNet/SFace/YOLOX for face/voice",
+      "score": 0.5064304
+    },
+    {
+      "article_id": "confucius4-r2t2-true-streaming-asr-lsp-netease-youdao",
+      "title": "Confucius4-R2T2：网易有道的真流式 ASR——用 LSP 彻底消除文字抖动",
+      "url": "/blog/confucius4-r2t2-true-streaming-asr-lsp-netease-youdao/",
+      "language": "zh",
+      "excerpt": "Confucius4-R2T2：网易有道的真流式 ASR——用 LSP 彻底消除文字抖动 netease-youdao/Confucius4-R2T2，306 stars，代码 Apache 2.0 / 模型权重单独 NetEase 许可证。2B 参数真流式 ASR，基于 Qwen3-ASR-1.7B，核心创新是最长稳定前缀（LSP）训练范式——输出只追加、绝不修改，从根本上解决假流式 ASR 的文字抖动问题。LibriSpeech-clean WER 2.13% vs Qwen3-ASR 流式模式 22.30%，160ms 默认分块，需 CUDA GP",
+      "score": 0.49957934
+    },
+    {
+      "article_id": "freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference",
+      "title": "FreeToken：游戏 PC 本地跑 290B+ MoE 大模型，q* 自适应执行引擎，开源 Apache 2.0",
+      "url": "/blog/freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference/",
+      "language": "zh",
+      "excerpt": "FreeToken：游戏 PC 本地跑 290B+ MoE 大模型，q* 自适应执行引擎，开源 Apache 2.0 FlashML-org/FreeToken 是一个边缘原生 MoE 推理引擎，Apache 2.0，Python，2105 stars。核心：在消费级 GPU（RTX 30/40/50）上本地运行 290B+ MoE 模型（DeepSeek-V4-Flash、Qwen3.6-35B、GLM-5.2），通过 q* 带宽自适应 CPU-GPU 协同执行、双缓冲预填充流、全局 LRU Expert 缓存、语义感知 KV 缓存实现交互级速度。兼容",
+      "score": 0.49608406
+    },
+    {
+      "article_id": "avatar-vrm-threejs-pixiv-three-vrm-mtoon-webgpu",
+      "title": "pixiv/three-vrm: Turning Avatars Into a Standard Web Component",
+      "url": "/blog/avatar-vrm-threejs-pixiv-three-vrm-mtoon-webgpu/",
+      "language": "en",
+      "excerpt": "pixiv/three-vrm: Turning Avatars Into a Standard Web Component A deep dive into pixiv's open-source three-vrm — the library that brings the VRM humanoid avatar format to three.js. MIT licensed, 2103 stars, 79,477 weekly npm downloads, latest v3.5.5. We break down its 16-package m",
+      "score": 0.49392503
+    },
+    {
+      "article_id": "lgui-browser-game-ui-guide",
+      "title": "LGUI: Browser-First Game UI for Agents, with Limits",
+      "url": "/blog/lgui-browser-game-ui-guide/",
+      "language": "en",
+      "excerpt": "LGUI: Browser-First Game UI for Agents, with Limits Explore LGUI's browser-first game UI workflow, local inventory tests, Unity integration limits, Mac requirements and its source-available licensing terms. LGUI LumioGames Game UI Agent Skills FairyGUI What actually moves outside",
+      "score": 0.49364904
+    },
+    {
+      "article_id": "jev-browser-use-jev-clicks-codex-thinks-browser-automation-skill",
+      "title": "Jev Browser Use：Jev 负责点击导航，Codex 负责思考验收，浏览器自动化快 5-10 倍",
+      "url": "/blog/jev-browser-use-jev-clicks-codex-thinks-browser-automation-skill/",
+      "language": "zh",
+      "excerpt": "Jev Browser Use：Jev 负责点击导航，Codex 负责思考验收，浏览器自动化快 5-10 倍 wy-coliney/jev-browser-use，MIT，JavaScript，Codex/Claude Code Skill。把浏览器操作分工：Jev（TypeSafe 决策模型）负责点击/滚动/跳转/切换，Codex 负责输入文字/读页面/判断/验收。动作循环不增加额外模型轮次，实测 EZCollegeApp 工作流快 5-10 倍，100K token 成本 $0.0042 vs GPT-6 Astra $1.00。 browser-a",
+      "score": 0.49268574
+    }
+  ]
+}
