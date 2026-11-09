@@ -1,0 +1,29 @@
+{
+  "topic": "Awesome Opus5.5 videos",
+  "date": "2026-11-09",
+  "rawKbReused": true,
+  "auditScope": "703metadata entries and matchingpromptfiles; notmodel/video reproduction",
+  "banner": {
+    "origin": "adoptedREADME mosaic",
+    "bytes": 95684,
+    "manuallyInspected": true,
+    "source": "https://media.skillry.dev/opus-5-5/_readme/mosaic.fc36404ce3.webp"
+  },
+  "bodyImages": [
+    {
+      "file": "awesome-opus-videos-code-animation-guide-fig-01.png",
+      "bytes": 37134,
+      "manuallyInspected": true
+    },
+    {
+      "file": "awesome-opus-videos-code-animation-guide-fig-02.png",
+      "bytes": 38031,
+      "manuallyInspected": true
+    },
+    {
+      "file": "awesome-opus-videos-code-animation-guide-fig-03.png",
+      "bytes": 47413,
+      "manuallyInspected": true
+    }
+  ]
+}

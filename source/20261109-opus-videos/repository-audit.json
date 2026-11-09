@@ -1,0 +1,42 @@
+{
+  "revision": "92aee2f586ac0715cb3cbcb6384834f98a33383d",
+  "rows": 703,
+  "promptFiles": 703,
+  "categories": {
+    "explainer": 116,
+    "motion": 369,
+    "interactive": 101,
+    "3d": 117
+  },
+  "hasRemake": 418,
+  "partialMarked": 207,
+  "notPartialMarked": 496,
+  "uniqueSlugs": 703,
+  "missingFiles": [],
+  "missingPromptBlocks": [],
+  "invalidHttpsMetadata": [],
+  "promptJsonMarkdownMismatchesAfterNewlineNormalization": [],
+  "latestAdded": "2026-10-12",
+  "suffixCounts": {
+    "(none)": 2,
+    ".md": 704,
+    ".json": 1
+  },
+  "techTagsOverlapping": {
+    "canvas": 267,
+    "svg": 183,
+    "ai-image": 6,
+    "gsap": 86,
+    "css": 57,
+    "threejs": 131,
+    "shader": 92,
+    "audio": 39,
+    "particles": 17,
+    "playable": 22,
+    "pixel": 15,
+    "webgl": 9,
+    "physics": 9
+  },
+  "dataSha256": "1c307487eca4e56957f4f7de4c72efcd482017f54d77495e3a88ddbcc9b4f30d",
+  "scope": "Read-only metadata and prompt-file structure audit; not visual review, model attribution, link liveness, generation success, or rights verification."
+}

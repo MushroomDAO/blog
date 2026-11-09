@@ -1,0 +1,14 @@
+=== [adopt-banner] awesome-opus-videos-code-animation-guide ← 1 source image(s) → src/assets/images/awesome-opus-videos-code-animation-guide-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← https://media.skillry.dev/opus-5-5/_readme/mosaic.fc36404ce3.webp
+=== [adopt-banner] done: src/assets/images/awesome-opus-videos-code-animation-guide-banner.jpg (1200x630, 95684B) ===
+=== [verify-banner] src/assets/images/awesome-opus-videos-code-animation-guide-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=https://media.skillry.dev/opus-5-5/_readme/mosaic.fc36404ce3.webp
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 95684B (< 99000B)
+  WARN text: 6 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: SKILLS | PLANET ZOGI | Лoon'й mube | TERMINAL | Brown. | P HER ENYING
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/awesome-opus-videos-code-animation-guide-banner.jpg ===
+PATH: src/assets/images/awesome-opus-videos-code-animation-guide-banner.jpg
