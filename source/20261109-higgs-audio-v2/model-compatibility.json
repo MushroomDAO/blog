@@ -1,0 +1,17 @@
+{
+  "currentRevision": "d80c511612b3040ff2877ce3d408747df1739f11",
+  "currentModelType": "higgs_audio_v2",
+  "legacyRevision": "10840182ca4ad5d9d9113b60b9bb3c1ef1ba3f84",
+  "legacyModelType": "higgs_audio",
+  "legacyWeightFiles": [
+    "model-00001-of-00003.safetensors",
+    "model-00002-of-00003.safetensors",
+    "model-00003-of-00003.safetensors",
+    "model.safetensors.index.json"
+  ],
+  "sourceRegisteredType": "higgs_audio",
+  "fullWeightLoadTested": false,
+  "legacyTokenizerRevision": "9d4988fbd4ad07b4cac3a5fa462741a41810dbec",
+  "legacyTokenizerModelPthPresent": true,
+  "currentTokenizerModelPthDeleted": true
+}

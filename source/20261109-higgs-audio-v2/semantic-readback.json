@@ -1,0 +1,38 @@
+[
+  {
+    "id": "d8f0f5ba0376c22f93062690dc7e92d0c7e769b1db2a4636",
+    "metadata": {
+      "article_id": "higgs-audio-v2-engineering-deployment-guide",
+      "content_hash": "ba231b8e0a3ea631",
+      "excerpt": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入 Higgs Audio v2 是 Boson AI 可下载权重的语音生成模型，适合旁白、声音克隆和多人对白。本文核对推理代码、模型社区许可、24GB 显存建议、参考音频与转写配对、长文本分块及 vLLM 服务，给出安装命令与生产接入方案，并明确区分源码检查、官方性能报告和未经本地复现的音质指标，帮助团队先跑通小样。 Higgs Audio v2 Boson AI TTS Voice Cloning Self Hosting 先下载哪两个东西？ 是不是开源？商业使用需要检查什么？ 先解决一个",
+      "language": "zh",
+      "tags": [
+        "Higgs Audio v2",
+        "Boson AI",
+        "TTS",
+        "Voice Cloning",
+        "Self Hosting"
+      ],
+      "title": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入",
+      "url": "/blog/higgs-audio-v2-engineering-deployment-guide/"
+    }
+  },
+  {
+    "id": "952fb1d8ca792df6909001e84ae72ec1d298be8db6bef1f3",
+    "metadata": {
+      "article_id": "higgs-audio-v2-engineering-deployment-guide",
+      "content_hash": "85e099d20d10ad97",
+      "excerpt": "Higgs Audio v2: A Practical Deployment Guide Deploy Boson AI Higgs Audio v2 with CUDA, paired voice references, long-text chunks and vLLM, with practical guidance on licensing, memory and production checks Higgs Audio v2 Boson AI TTS Voice Cloning Self Hosting Which artifacts do ",
+      "language": "en",
+      "tags": [
+        "Higgs Audio v2",
+        "Boson AI",
+        "TTS",
+        "Voice Cloning",
+        "Self Hosting"
+      ],
+      "title": "Higgs Audio v2: A Practical Deployment Guide",
+      "url": "/blog/higgs-audio-v2-engineering-deployment-guide/"
+    }
+  }
+]
