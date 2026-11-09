@@ -1,0 +1,50 @@
+{
+  "repository": "https://github.com/livliv-dev/player",
+  "commit": "011b1f54d62c189cee49f29d3427c6d22fafdffd",
+  "files": {
+    "README.md": {
+      "bytes": 8717,
+      "sha256": "4abb7aa9be9b69e976d1a14ef9973a27929c386c0dd7d0ccf04f944a872492d2"
+    },
+    "README.zh-CN.md": {
+      "bytes": 8209,
+      "sha256": "5ebc9f1acde8ecd5238f8cdbf8eba35594dbd418f4ff72916fedb68bac3bfdcc"
+    },
+    "API.md": {
+      "bytes": 29332,
+      "sha256": "ef062dd85cc5e1c4773ff49295e30a9e310f24baf24a25b0d48c73af3a277540"
+    },
+    "FORMAT.md": {
+      "bytes": 18363,
+      "sha256": "a69ab285b76e3aa0f70a7a08e4dea70bbff7c43bb48856d86051200c9e24c6f5"
+    },
+    "characters/LICENSE.md": {
+      "bytes": 4509,
+      "sha256": "26e67ac4384c644d208abf08f97cf13b274cc5fd2ac3d135e50b3f50d23901ba"
+    },
+    "characters/CREDITS.md": {
+      "bytes": 2436,
+      "sha256": "2eb73e2228959cc073f67e678cd7dd732a498101db18b63b9656c553f2e7b049"
+    },
+    "src/index.ts": {
+      "bytes": 14601,
+      "sha256": "6c52b3c9690ce5b2329a7a0b77d0bace320b5ec38e508d09f31da9b6ab53cc5f"
+    },
+    "src/tracking.ts": {
+      "bytes": 5182,
+      "sha256": "77585afe481626420e5723db33780106a063d0cfb550861379851ab04fb870c3"
+    },
+    "src/voice.ts": {
+      "bytes": 4048,
+      "sha256": "ed9cf4efb795f25e00d6375f8d3e7f51b5531372abf0bc7bee93f523f9b4bf70"
+    },
+    "vite.config.ts": {
+      "bytes": 1114,
+      "sha256": "d4d6a3b36a787c18e17063a25b74a27e2a0135e67a441bc866ccb367a7f7218e"
+    },
+    "package.json": {
+      "bytes": 2823,
+      "sha256": "d619f35351b94ada03dcf13e6aea4ff959b179c0bf5ae8469f4c62e943e0ad60"
+    }
+  }
+}

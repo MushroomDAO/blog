@@ -1,0 +1,22 @@
+
+> @livliv-dev/player@0.3.0 build
+> rm -rf dist && vite build && tsc -p tsconfig.build.json && node scripts/dts-extensions.mjs && node scripts/pack-characters.mjs
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 26 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/chunks/errors-ohqiRK3N.js   0.20 kB │ gzip:  0.15 kB
+dist/chunks/params-BCSFSCtz.js   0.48 kB │ gzip:  0.26 kB
+dist/png.js                      1.94 kB │ gzip:  1.09 kB
+dist/body.js                     3.14 kB │ gzip:  1.56 kB
+dist/vrm.js                     10.21 kB │ gzip:  4.70 kB
+dist/tracking.js                14.31 kB │ gzip:  6.14 kB
+dist/voice.js                   14.48 kB │ gzip:  5.94 kB
+dist/chunks/base-p0Sx5Qp5.js    25.91 kB │ gzip: 10.60 kB
+dist/index.js                   58.21 kB │ gzip: 23.08 kB
+
+✓ built in 24ms
+declarations: 29 relative imports now say .js
+characters: 21 packages, 12.9 MB

@@ -1,0 +1,59 @@
+{
+  "browser": "headless Chromium with SwiftShader",
+  "status": "Sena · livliv-model 4 · mark: LivLiv · LicenseRef-LivLiv-Samples",
+  "playing": true,
+  "expressions": [
+    {
+      "id": "smile",
+      "label": "Smile",
+      "labels": {
+        "zh": "笑",
+        "zh-Hant": "笑",
+        "en": "Smile",
+        "ja": "笑顔"
+      }
+    },
+    {
+      "id": "shy",
+      "label": "Shy",
+      "labels": {
+        "zh": "害羞",
+        "zh-Hant": "害羞",
+        "en": "Shy",
+        "ja": "照れ"
+      }
+    },
+    {
+      "id": "angry",
+      "label": "Angry",
+      "labels": {
+        "zh": "生气",
+        "zh-Hant": "生氣",
+        "en": "Angry",
+        "ja": "怒り"
+      }
+    },
+    {
+      "id": "sad",
+      "label": "Sad",
+      "labels": {
+        "zh": "难过",
+        "zh-Hant": "難過",
+        "en": "Sad",
+        "ja": "悲しい"
+      }
+    }
+  ],
+  "actions": {
+    "expression": "smile",
+    "accepted": true,
+    "mouthOpen": 0.6,
+    "snapshot": true
+  },
+  "externalRequests": [],
+  "pageErrors": [],
+  "requests": 90,
+  "realCamera": false,
+  "realMicrophone": false,
+  "scope": "one actual demo page, local character, parameter/expression/action path and PNG snapshot; no performance or sensor benchmark"
+}

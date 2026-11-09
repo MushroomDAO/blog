@@ -1,0 +1,32 @@
+layer-browser-vtuber-webgl2-guide-fig-02.png src/assets/images/livliv-player-browser-vtuber-webgl2-guide-fig-03.png generated_images/livliv-20261109' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+?? generated_images/livliv-20261109/
+?? src/assets/images/livliv-player-browser-vtuber-webgl2-guide-fig-01.png
+?? src/assets/images/livliv-player-browser-vtuber-webgl2-guide-fig-02.png
+?? src/assets/images/livliv-player-browser-vtuber-webgl2-guide-fig-03.png
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+Generated and inspected exactly 3 separate images using imagegen:
+
+- [Fig 01 — core, assets, optional tracking](/Users/jason/Dev/mycelium/blog/src/assets/images/livliv-player-browser-vtuber-webgl2-guide-fig-01.png): 55,456 bytes
+- [Fig 02 — dialogue/TTS versus playback/lip sync](/Users/jason/Dev/mycelium/blog/src/assets/images/livliv-player-browser-vtuber-webgl2-guide-fig-02.png): 47,718 bytes
+- [Fig 03 — rendering versus broadcast delivery](/Users/jason/Dev/mycelium/blog/src/assets/images/livliv-player-browser-vtuber-webgl2-guide-fig-03.png): 44,344 bytes
+
+All are **1120×630, 48-color palettes, no dithering**, with pure-white backgrounds. Raw outputs preserved in `generated_images/livliv-20261109/`.
+
+Markdown, banner, and all other files remain unchanged.
+hook: Stop
+hook: Stop Completed
+tokens used
+46,540
+Generated and inspected exactly 3 separate images using imagegen:
+
+- [Fig 01 — core, assets, optional tracking](/Users/jason/Dev/mycelium/blog/src/assets/images/livliv-player-browser-vtuber-webgl2-guide-fig-01.png): 55,456 bytes
+- [Fig 02 — dialogue/TTS versus playback/lip sync](/Users/jason/Dev/mycelium/blog/src/assets/images/livliv-player-browser-vtuber-webgl2-guide-fig-02.png): 47,718 bytes
+- [Fig 03 — rendering versus broadcast delivery](/Users/jason/Dev/mycelium/blog/src/assets/images/livliv-player-browser-vtuber-webgl2-guide-fig-03.png): 44,344 bytes
+
+All are **1120×630, 48-color palettes, no dithering**, with pure-white backgrounds. Raw outputs preserved in `generated_images/livliv-20261109/`.
+
+Markdown, banner, and all other files remain unchanged.

@@ -1,0 +1,133 @@
+
+> @livliv-dev/player@0.3.0 test
+> node --disable-warning=ExperimentalWarning --import ./test/ts.mjs --test "test/*.test.ts"
+
+▶ featured characters
+  ✔ come with their licence, and a list of them all (2.040209ms)
+  ✔ char06 (1.616375ms)
+  ✔ char07 (0.862458ms)
+  ✔ d01 (0.794833ms)
+  ✔ d02 (1.00775ms)
+  ✔ d03 (0.947875ms)
+  ✔ d03ft (1.938ms)
+  ✔ k01 (3.069334ms)
+  ✔ k02 (1.29ms)
+  ✔ p01 (1.300375ms)
+  ✔ p02 (1.067541ms)
+  ✔ p03 (0.745417ms)
+  ✔ q02 (1.002208ms)
+  ✔ q03 (0.764ms)
+  ✔ s01 (0.806958ms)
+  ✔ v01 (0.831125ms)
+  ✔ v03 (0.830458ms)
+  ✔ v04 (0.745208ms)
+  ✔ v05 (0.818709ms)
+  ✔ v06 (0.759167ms)
+  ✔ v07 (1.335ms)
+  ✔ w01 (1.046ms)
+✔ featured characters (26.534625ms)
+✔ the constants (2.018416ms)
+✔ v3 is read as it is: the same object, untouched (4.454875ms)
+✔ refusals (1.6635ms)
+✔ v4 lowered to the runtime's shape (0.530417ms)
+✔ v4 fields that move (0.4755ms)
+✔ labels by language (0.129291ms)
+✔ langOf (0.08275ms)
+▶ fuzz: model.json
+  ✔ v4: 2000 mutated files are read soundly or refused with an Error (190.6555ms)
+  ✔ v3: 2000 mutated files are read soundly or refused with an Error (108.007584ms)
+✔ fuzz: model.json (299.203875ms)
+▶ fuzz: .livliv
+  ✔ 600 damaged packages are read within the limits or refused with an Error, none hangs (79.431459ms)
+  ✔ a bomb: 64 MB of zeros saying it is 1 KB stops at 1 KB (118.3895ms)
+  ✔ a bomb that says how big it is is refused before inflating (0.172292ms)
+  ✔ paths out of the package, too many entries, ZIP64 and encryption are refused (3.133417ms)
+✔ fuzz: .livliv (201.379375ms)
+▶ what a mesh would cost
+  ✔ counts vertices from the boxes (1.058334ms)
+  ✔ counts vertices bent by chains, and refuses a chain named twice (0.506125ms)
+  ✔ counts what brows layers read back (0.140917ms)
+✔ what a mesh would cost (1.828708ms)
+▶ what the rig computes with
+  ✔ refuses a chain with no id (0.220083ms)
+  ✔ refuses an empty chain (0.100375ms)
+  ✔ refuses a chain with one point (0.095958ms)
+  ✔ refuses a chain with no k (0.092875ms)
+  ✔ refuses a brow line with no bottom (0.090917ms)
+  ✔ refuses rig.roll as text (0.081166ms)
+  ✔ refuses rig.body.roll past any sense (0.077916ms)
+  ✔ refuses a spring chain of the wrong length (0.08025ms)
+  ✔ refuses tuning as text (0.093833ms)
+  ✔ refuses a role that is no text (0.094792ms)
+  ✔ refuses an unknown group (0.086333ms)
+  ✔ refuses a pivot of one number (0.093459ms)
+  ✔ refuses a blush weight as text (0.106542ms)
+  ✔ refuses an empty eye box (0.071416ms)
+  ✔ takes what is simply missing, and null where a build wrote None (0.192583ms)
+✔ what the rig computes with (1.712917ms)
+▶ params
+  ✔ has a range for every param, and the defaults lie in them (1.058625ms)
+  ✔ gives a fresh object each time (0.084375ms)
+✔ params (2.141625ms)
+▶ format check
+  ✔ refuses a newer format version, asking for a newer player (1.09975ms)
+  ✔ refuses another format (0.251708ms)
+  ✔ reads a model from before v4 (no version) as it is (1.187166ms)
+✔ format check (2.847458ms)
+✔ VERSION matches package.json (0.420208ms)
+▶ actions
+  ✔ nod moves, then ends with nothing left (0.709041ms)
+  ✔ shake moves, then ends with nothing left (0.189917ms)
+  ✔ tilt moves, then ends with nothing left (0.701292ms)
+  ✔ hop moves, then ends with nothing left (0.268417ms)
+  ✔ shy moves, then ends with nothing left (0.511291ms)
+  ✔ away eases in, and out when pressed again (0.125292ms)
+✔ actions (3.209375ms)
+▶ idle motion
+  ✔ blinks, turns toward the pointer and stays in range (5.066875ms)
+✔ idle motion (5.135791ms)
+▶ the players' idle (attend: follows the pointer with the eyes and the face)
+  ✔ a pointer moving on the right: the eyes lead there, the head turns at most ~13° (3.701125ms)
+  ✔ a pointer moving on the left: the eyes lead there, the head turns at most ~13° (1.199417ms)
+  ✔ a pointer at rest lets go after a while: the character looks back (2.634625ms)
+  ✔ lookAt holds the attention, whatever the pointer does; null lets go (2.932209ms)
+✔ the players' idle (attend: follows the pointer with the eyes and the face) (10.63575ms)
+▶ talking
+  ✔ stays still in silence (0.386833ms)
+  ✔ nods on syllables (0.218875ms)
+✔ talking (0.654584ms)
+▶ lip-sync envelope
+  ✔ is closed for silence (0.878542ms)
+  ✔ opens while the voice sounds and closes after it (1.912083ms)
+  ✔ the vowel cue stays 0 in silence (0.076333ms)
+✔ lip-sync envelope (2.919042ms)
+▶ filters and traces
+  ✔ One Euro leaves a constant alone and follows a step (0.091708ms)
+  ✔ the synthetic face trace: 24 s at 30 fps, the same each time, no face at 10-12 s (4.966083ms)
+✔ filters and traces (5.099792ms)
+▶ the mark
+  ✔ blinks once every 5.5 s (0.083792ms)
+  ✔ sits in the bottom-right corner (0.050375ms)
+✔ the mark (0.169167ms)
+▶ camera roll mapping
+  ✔ mirror=true, rotation sign -1: roll has the screen-coordinate sign; yaw is preserved (1.72825ms)
+  ✔ mirror=true, rotation sign 1: roll has the screen-coordinate sign; yaw is preserved (0.162375ms)
+  ✔ mirror=true: a nonzero calibrated pose remains centered, then tracks relative roll and yaw (0.890167ms)
+  ✔ mirror=true: toggling mirror keeps the calibrated center and reverses relative roll and yaw (0.705958ms)
+  ✔ mirror=false, rotation sign -1: roll has the screen-coordinate sign; yaw is preserved (0.143083ms)
+  ✔ mirror=false, rotation sign 1: roll has the screen-coordinate sign; yaw is preserved (0.113209ms)
+  ✔ mirror=false: a nonzero calibrated pose remains centered, then tracks relative roll and yaw (0.372583ms)
+  ✔ mirror=false: toggling mirror keeps the calibrated center and reverses relative roll and yaw (3.669958ms)
+✔ camera roll mapping (8.9545ms)
+✔ a package as LivLiv writes it: stored images and model.json, deflated keyforms (33.359125ms)
+✔ a hand-made one: inside one folder, with Finder litter, deflated everywhere (4.048375ms)
+✔ refusals (14.4645ms)
+✔ Finder's compress (ditto): the folder inside, __MACOSX beside it (15.000834ms)
+ℹ tests 91
+ℹ suites 15
+ℹ pass 91
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5757.569
