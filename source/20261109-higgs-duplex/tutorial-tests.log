@@ -1,0 +1,15 @@
+
+> higgs-realtime-tutorial@0.0.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /private/tmp/higgs-tutorial-research
+
+ ✓ test/resample.test.ts (8 tests) 5ms
+ ✓ test/tools.test.ts (12 tests) 2ms
+ ✓ test/transcriptStore.test.ts (11 tests) 11ms
+
+ Test Files  3 passed (3)
+      Tests  31 passed (31)
+   Start at  09:34:00
+   Duration  242ms (transform 76ms, setup 0ms, collect 100ms, tests 18ms, environment 0ms, prepare 77ms)

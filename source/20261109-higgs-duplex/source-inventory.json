@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-11-09T02:41:02.561866+00:00",
+  "files": {
+    "higgs-duplex.html": {
+      "bytes": 522454,
+      "sha256": "93a6c0d2bd9bcea76f99a001a0111e87cae2c8d32d6813faa75a098317cea8eb"
+    },
+    "higgs-duplex.txt": {
+      "bytes": 19839,
+      "sha256": "12862c35ccd525eb3a3a7ad3f78e70b89204939ff414bc829ba7f730b59de137"
+    },
+    "higgs-pricing.html": {
+      "bytes": 83545,
+      "sha256": "fd8ddfbc39380d169c86263b0d85217244a4e828c74d4b84dd2e6412503931e5"
+    },
+    "higgs-pricing.txt": {
+      "bytes": 2219,
+      "sha256": "5a57430a4aef1454950009cfbe52ecb779a42bc2a8d6428e277b8184abf6e311"
+    },
+    "higgs-realtime.html": {
+      "bytes": 215601,
+      "sha256": "cf4d9a4680693f6eacf829de771dbb60c377440a1fb7f32fde2146b7b8441b45"
+    },
+    "higgs-realtime.txt": {
+      "bytes": 6830,
+      "sha256": "2955480969f065b58bfc5a2964e04837bf45e402f1a89bdb01257dd0d8afb29c"
+    },
+    "boson-team.html": {
+      "bytes": 80128,
+      "sha256": "eb9fea873caed1f4587c604f56fde80cab7267e9545cc10e5769e46bb1de99cd"
+    },
+    "boson-llms.txt": {
+      "bytes": 9360,
+      "sha256": "cae308bd45384a38a47a1256d83cb150d4850b6f4bb73f8c84a0a58ba405bd6b"
+    },
+    "boson-avatar-sessions.md": {
+      "bytes": 26956,
+      "sha256": "5a7d1f2fdd01a5809d7d270fde6258a19e62d4bd534ecab5695f8cb1084cab54"
+    },
+    "boson-tool-calling.md": {
+      "bytes": 12334,
+      "sha256": "cff9fd27d6e1f5c7ba9556fa9ed441c1dda8a8ec06d6f53b53a0ff6c3eee7c4f"
+    },
+    "boson-migrate.md": {
+      "bytes": 11576,
+      "sha256": "abb20de23c4430194fa117328483f05b55379f5ca5bde85283ea04c2b631407c"
+    },
+    "boson-interruptions.md": {
+      "bytes": 3258,
+      "sha256": "f42f528ef202681b07e746140214f917b8a8601ced969362e3a6fff4eb656354"
+    },
+    "boson-docs-pricing.md": {
+      "bytes": 1835,
+      "sha256": "59366b6448ce0d34e21ee5baf47606c86f2012615fc507e0badfc2d2220e359d"
+    },
+    "higgs-tts3-card.md": {
+      "bytes": 46257,
+      "sha256": "021ff7995151f791efb7cd9f19f2b2dd599d20211db1689fc2c763e096b5c6fd"
+    },
+    "higgs-tts3-license.txt": {
+      "bytes": 32184,
+      "sha256": "0382189330b87c38517530e4e5bf0c9dfeb6c7bfbe62812577ddcb73e09a60c5"
+    },
+    "higgs-stt-card.md": {
+      "bytes": 6022,
+      "sha256": "8f5eddec2afd097c3a3b7d98b9e1f8e9911ed036fe550c43c1cd6e5a495e2a51"
+    },
+    "higgs-tts2-card.md": {
+      "bytes": 25825,
+      "sha256": "2512230c742f614e715d36cd461807c5af09dd5234752bc5d223027f55db4fc9"
+    }
+  },
+  "pins": {
+    "tutorial": "87f1ae81434d8a65126503ceef36871e0b529f5c",
+    "higgsAudio": "05a145bb490501b534563bf51bf2f7aa2326b271",
+    "Mika": "8d61573eaed7d36fa37093bab233c94a5e79dd4d",
+    "WorldForge": "60a5323c3952e1ccad31dfc45d4aec4e13d9da4b"
+  },
+  "video": "https://www.youtube.com/watch?v=pU556FTWRkE",
+  "fullVideoViewed": false,
+  "videoFetch": "web cache miss; no transcript or fullvideo fetched",
+  "fetchNotes": "Initial urllib documentation MD requests403; curl retrieved current pricing,avatar,tool,migration andinterruptions MD; no fullpage copy republished",
+  "tutorialPackageLockSha256": "902ec6251a764567220deba2f2e2903e2d1563d06585e2b6449c7486a74281fe"
+}

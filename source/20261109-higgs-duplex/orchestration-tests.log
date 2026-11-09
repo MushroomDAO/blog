@@ -1,0 +1,10 @@
+test_barge_in_flushes_playback_and_rejects_old_generation (__main__.OrchestrationChecks.test_barge_in_flushes_playback_and_rejects_old_generation) ... ok
+test_barge_in_keeps_background_job_and_does_not_auto_speak_it (__main__.OrchestrationChecks.test_barge_in_keeps_background_job_and_does_not_auto_speak_it) ... ok
+test_explicit_job_cancellation_is_separate_from_speech (__main__.OrchestrationChecks.test_explicit_job_cancellation_is_separate_from_speech) ... ok
+test_pending_tool_does_not_block_new_audio_events (__main__.OrchestrationChecks.test_pending_tool_does_not_block_new_audio_events) ... ok
+test_repeated_call_id_reuses_one_job_in_this_process (__main__.OrchestrationChecks.test_repeated_call_id_reuses_one_job_in_this_process) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.007s
+
+OK
