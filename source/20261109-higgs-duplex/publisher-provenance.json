@@ -1,0 +1,34 @@
+{
+  "topic": "HiggsRealtimeDuplex",
+  "date": "2026-11-09",
+  "rawKbReused": true,
+  "checks": {
+    "officialTutorial": 31,
+    "typecheck": true,
+    "ownOrchestration": 5
+  },
+  "nativeModelOrPaidApiTested": false,
+  "banner": {
+    "origin": "localFLUX2Klein",
+    "seed": 8331,
+    "bytes": 86427,
+    "manuallyInspected": true
+  },
+  "bodyImages": [
+    {
+      "file": "higgs-realtime-duplex-open-weights-pricing-engineering-fig-01.png",
+      "bytes": 64128,
+      "manuallyInspected": true
+    },
+    {
+      "file": "higgs-realtime-duplex-open-weights-pricing-engineering-fig-02.png",
+      "bytes": 53985,
+      "manuallyInspected": true
+    },
+    {
+      "file": "higgs-realtime-duplex-open-weights-pricing-engineering-fig-03.png",
+      "bytes": 60958,
+      "manuallyInspected": true
+    }
+  ]
+}

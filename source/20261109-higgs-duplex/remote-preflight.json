@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-11-09T02:41:03.828Z",
+  "publishedQuery": {
+    "errcode": 48001,
+    "errmsg": "api unauthorized rid: 6af132bf-5b20ad1d-43a521c2"
+  },
+  "priorLocalHiggsDuplexReceipt": false,
+  "decision": "Exact dedup found incoming rawKB only; no prior publication receipt. Remote drafts already queried; no HiggsDuplex match. Published-list permission gap recorded; no ambiguous prior draft to recreate."
+}

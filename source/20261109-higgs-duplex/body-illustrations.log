@@ -1,0 +1,63 @@
+Nestedillustrationworker exit0; allthree manuallyinspected.
+in protected}
+print('PASS: all original copies match source; dimensions, PNG mode, palette <=48, no dithering, white corners and size <90000 bytes; article and banner hashes unchanged.')
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 936ms:
+<stdin>:23: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+{"image": 1, "raw": "generated_images/higgs-duplex-20261109/01-raw.png", "final": "src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-01.png", "size": [1120, 630], "mode": "P", "used_colors": 48, "palette_entries": 48, "dither": "NONE", "bytes": 64128, "raw_sha256": "bef9fa6fa2bc5846dcff77d30e8a5007477915ad47dc02f68feff00049dbfec9", "final_sha256": "47086a46d9026dfdd3e77cc9e6bae265805143e017df90dc535b09768bf20add"}
+{"image": 2, "raw": "generated_images/higgs-duplex-20261109/02-raw.png", "final": "src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-02.png", "size": [1120, 630], "mode": "P", "used_colors": 48, "palette_entries": 48, "dither": "NONE", "bytes": 53985, "raw_sha256": "ca8829b082172d7f1539192d512b31a85b448a29b4723a4a74a8d8d42685afa2", "final_sha256": "73a8b1c71ea16219b6fb0eb2dd6ae7228d9a3990e397b4533ae6c944da1e29cc"}
+{"image": 3, "raw": "generated_images/higgs-duplex-20261109/03-raw.png", "final": "src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-03.png", "size": [1120, 630], "mode": "P", "used_colors": 48, "palette_entries": 48, "dither": "NONE", "bytes": 60958, "raw_sha256": "6065808d9d8a40a4556a1e65e05f549dd79ebca65814b00bce138aa904e1a9c9", "final_sha256": "65f539d5940a360c701c5e029c3eac86a44423674469ab43d801586c49d75c52"}
+PASS: all original copies match source; dimensions, PNG mode, palette <=48, no dithering, white corners and size <90000 bytes; article and banner hashes unchanged.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'git status --short -- src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-01.png src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-02.png src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-03.png generated_images/higgs-duplex-20261109; git diff --name-only' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+?? generated_images/higgs-duplex-20261109/
+?? src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-01.png
+?? src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-02.png
+?? src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-03.png
+pipeline/m2/output/drafts-map.json
+source/20261105-craft-anything/semantic-index-info.json
+source/20261105-craft-anything/semantic-search-final.json
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+已用 imagegen 分别生成并检查三张：
+
+- [01 产品与权重边界](/Users/jason/Dev/mycelium/blog/src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-01.png)：64,128 字节
+- [02 连续分块与并行处理](/Users/jason/Dev/mycelium/blog/src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-02.png)：53,985 字节
+- [03 打断播放与后台任务](/Users/jason/Dev/mycelium/blog/src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-03.png)：60,958 字节
+
+全部为 **1120×630、48 色、无抖动 PNG**，白底，中文标注已检查。原图保存在 [generated_images/higgs-duplex-20261109/](/Users/jason/Dev/mycelium/blog/generated_images/higgs-duplex-20261109/)。
+
+未修改 Markdown、banner 或其他文件。
+hook: Stop
+hook: Stop Completed
+tokens used
+46,786
+已用 imagegen 分别生成并检查三张：
+
+- [01 产品与权重边界](/Users/jason/Dev/mycelium/blog/src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-01.png)：64,128 字节
+- [02 连续分块与并行处理](/Users/jason/Dev/mycelium/blog/src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-02.png)：53,985 字节
+- [03 打断播放与后台任务](/Users/jason/Dev/mycelium/blog/src/assets/images/higgs-realtime-duplex-open-weights-pricing-engineering-fig-03.png)：60,958 字节
+
+全部为 **1120×630、48 色、无抖动 PNG**，白底，中文标注已检查。原图保存在 [generated_images/higgs-duplex-20261109/](/Users/jason/Dev/mycelium/blog/generated_images/higgs-duplex-20261109/)。
+
+未修改 Markdown、banner 或其他文件。

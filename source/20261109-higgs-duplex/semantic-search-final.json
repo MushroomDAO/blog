@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "higgs-realtime-duplex-open-weights-pricing-engineering",
+      "title": "Higgs Realtime Duplex: Weights, Pricing, and Engineering",
+      "url": "/blog/higgs-realtime-duplex-open-weights-pricing-engineering/",
+      "language": "en",
+      "excerpt": "Higgs Realtime Duplex: Weights, Pricing, and Engineering Investigate Higgs Realtime Duplex weights, API access and pricing, with implementation paths, speech components, Mika, WorldForge, and local code checks. Higgs 全双工 语音Agent Boson AI Mika WorldForge Is this Mu Li’s model? Whi",
+      "score": 0.6568121
+    },
+    {
+      "article_id": "moshi-mini-omni-free-realtime-voice-vs-openai",
+      "title": "OpenAI Realtime Voice Costs $18/Hour — Two Open-Source Models Let You Run It Free",
+      "url": "/blog/moshi-mini-omni-free-realtime-voice-vs-openai/",
+      "language": "en",
+      "excerpt": "OpenAI Realtime Voice Costs $18/Hour — Two Open-Source Models Let You Run It Free OpenAI's three realtime voice models can cost up to $18/hour — more expensive than many tutors. Moshi by Kyutai and Mini-Omni by gpt-omni are two fully open-source end-to-end realtime voice alternat",
+      "score": 0.4869582
+    },
+    {
+      "article_id": "nvidia-simready-assets-audit",
+      "title": "NVIDIA SimReady：2575个资产之外，物理数据怎样落地？",
+      "url": "/blog/nvidia-simready-assets-audit/",
+      "language": "zh",
+      "excerpt": "NVIDIA SimReady：2575个资产之外，物理数据怎样落地？ NVIDIA SimReady Assets在Hugging Face公开2575个资产包，页面显示约472GB。本文实际枚举目录、下载58.3MB纸箱样本并检查OpenUSD、物理字段、37项BOM哈希和许可，解释仿真资产与普通模型的区别，以及包校验、运行验证和真实物理之间的边界。 SimReady NVIDIA OpenUSD 物理AI 机器人仿真 2575个、472GB，到底在数什么？ 为什么普通3D模型还不够？ 我们下载了什么，实际验证到了哪一步？ 纸箱里真的有质量、重心和摩",
+      "score": 0.4842807
+    },
+    {
+      "article_id": "krea-2-turbo-open-weight-text-to-image-license-hardware",
+      "title": "Krea 2 Turbo 值不值得本地跑？12.8B 开放权重文生图：8 步出图、年收入百万美元以下可商用",
+      "url": "/blog/krea-2-turbo-open-weight-text-to-image-license-hardware/",
+      "language": "zh",
+      "excerpt": "Krea 2 Turbo 值不值得本地跑？12.8B 开放权重文生图：8 步出图、年收入百万美元以下可商用 Krea 2 Turbo 是 Krea 从零训练的 12.8B 参数文生图 DiT，用 TDM 蒸馏到 8 步、关闭 CFG，支持 1K–2K 分辨率。本文从个人开发者本地出图的角度拆它：官方全套 bf16 权重约 35.7GB，社区 Q4 GGUF 主干 7.49GB；许可证允许年收入低于 100 万美元的主体商用，但要求内容过滤、衍生模型名须以 Krea 开头，且 Krea 可提前 30 天通知终止授权。并和 FLUX.2 klein 4B/9",
+      "score": 0.4779968
+    },
+    {
+      "article_id": "ultramarine-1-flash-knowledge-work",
+      "title": "Ultramarine 1 Flash: What $300K Post-Training Buys",
+      "url": "/blog/ultramarine-1-flash-knowledge-work/",
+      "language": "en",
+      "excerpt": "Ultramarine 1 Flash: What $300K Post-Training Buys Review Ultramarine 1 Flash: $300K post-training claims, knowledge-work scores, API costs, open-code versus pending weights, and 48 verified harness tests. Ultramarine Paper Instruments 强化学习 知识工作 开源Agent 模型评测 What the $300,000 cla",
+      "score": 0.47206646
+    },
+    {
+      "article_id": "microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork",
+      "title": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒",
+      "url": "/blog/microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork/",
+      "language": "zh",
+      "excerpt": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒 microsoft/VibeVoice，54K stars，MIT，Python。7.5Hz 连续语音 tokenizer + LLM + 扩散头，单次推理 90 分钟 TTS、60 分钟 ASR，4 路说话人。2025-09 官方因深度伪造顾虑主动下架，社区 fork vibevoice-community/VibeVoice 接棒维护，已加 LoRA 微调和 HF Transformers 集成。工程指导：模型选型、API 服务化、BitN",
+      "score": 0.47066164
+    },
+    {
+      "article_id": "eccv-2026-best-paper-heat-kernel-textures-uv-free",
+      "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
+      "url": "/blog/eccv-2026-best-paper-heat-kernel-textures-uv-free/",
+      "language": "zh",
+      "excerpt": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖 ECCV 2026 最佳论文颁给帝国理工的 HKTex：用约 4.8k 个贴在网格表面的各向异性热核取代 UV 贴图，313 个 Objaverse 模型上平均 96.6KB、LPIPS 优于所有对比方法，代码 MIT 开源但只支持 Linux + NVIDIA。时间检验奖授予 2016 年的感知损失、SSD 和 Learning without Forgetting。我们在 Mac 上复现了它的数学底座并指出三个落地障碍。 ECCV 2",
+      "score": 0.47050342
+    },
+    {
+      "article_id": "worldmonitor-elie-habib-palantir-gotham-open-source-alternative-3d-globe",
+      "title": "World Monitor：一个人几天做出 Palantir 战情室的开源平替，78K stars",
+      "url": "/blog/worldmonitor-elie-habib-palantir-gotham-open-source-alternative-3d-globe/",
+      "language": "zh",
+      "excerpt": "World Monitor：一个人几天做出 Palantir 战情室的开源平替，78K stars Elie Habib 独自开源了 World Monitor（koala73/worldmonitor），一个对标 Palantir Gotham 政府级战情室的实时全球情报仪表盘。3D 地球仪、500+ 新闻源、15 类 AI 摘要、本地 Ollama 无 API Key，AGPL-3.0。78K stars，Tauri 桌面应用，6 个主题变体。 情报仪表盘 开源 Palantir平替 3D地球 AI摘要 Ollama Tauri Mycelium 核",
+      "score": 0.46962517
+    },
+    {
+      "article_id": "strix-halo-halogen-gufo-prefill",
+      "title": "395 不外接显卡，Prefill 接近 2000？拆解 Halogen 与 Gufo",
+      "url": "/blog/strix-halo-halogen-gufo-prefill/",
+      "language": "zh",
+      "excerpt": "395 不外接显卡，Prefill 接近 2000？拆解 Halogen 与 Gufo Ryzen AI Max+ 395 用内置 Radeon 8060S，也能在特定模型上达到接近每秒两千 token 的输入处理速度。本文调研 Halogen 与 Gufo，核对官方基准、模型量化、缓存口径与许可差异，解释为什么 prefill 不等于输出速度，并给出部署与复测路径，区分公开测量和本次资料核验。 Strix Halo Halogen Gufo 本地推理 AMD Prefill “不需要外加显卡”究竟意味着什么？ 接近 2000 的数字，具体对应什么？ G",
+      "score": 0.46432316
+    },
+    {
+      "article_id": "minicpmo-booking-desk-realtime-voice-appointment-agent",
+      "title": "MiniCPM-o Booking Desk：全双工语音预约台，状态机控 DB 写入，Judge LLM 防幻觉确认",
+      "url": "/blog/minicpmo-booking-desk-realtime-voice-appointment-agent/",
+      "language": "zh",
+      "excerpt": "MiniCPM-o Booking Desk：全双工语音预约台，状态机控 DB 写入，Judge LLM 防幻觉确认 AlessandroBonomo28/Minicpm-o-booking-desk，Python，MiniCPM-o 4.5 驱动的实时语音预约台 Demo。三通道架构：音频（VAD+Whisper）+ 视觉（每秒刷新的操作员屏幕帧）+ 控制 token（force_speak/force_listen）。状态机全权控制 DB 写入，模型输出不直接碰数据库；Judge LLM 核查模型口播内容防幻觉确认。实测 4 分 13 秒，2 次预约",
+      "score": 0.464053
+    }
+  ]
+}
