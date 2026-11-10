@@ -1,0 +1,15 @@
+{
+  "title": "OpenArch：企业AI的数据与权限层",
+  "author": "Mycelium",
+  "digest": "拆解Hyland开源OpenArch的检索架构、Docker部署和权限同步边界。",
+  "mediaId": "prCUE631thH1cmNLi42prNcLAN9z2L1MMhMO5djr64QREfKqlG1M22wO8jwQs_cn",
+  "blogUrl": "https://blog.mushroom.cv/blog/openarch-enterprise-ai-data-permissions-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/openarch-enterprise-ai-data-permissions-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/hyland/openarch.git",
+    "github.com/hyland/openarch",
+    "github.com/aborroy/content-lake-app-deployment"
+  ],
+  "publishedAt": "2026-11-10T16:20:23.193Z"
+}

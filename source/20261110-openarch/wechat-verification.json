@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-10T16:20:29.246Z",
+  "drafts": [
+    {
+      "slug": "openarch-enterprise-ai-data-permissions-guide",
+      "mediaId": "prCUE631thH1cmNLi42prNcLAN9z2L1MMhMO5djr64QREfKqlG1M22wO8jwQs_cn",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "59470781438d1b4c8030cb0bd37ed464118d24b734865cf2c82657d9f18edc5c",
+      "remoteTextHash": "59470781438d1b4c8030cb0bd37ed464118d24b734865cf2c82657d9f18edc5c",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/openarch-enterprise-ai-data-permissions-guide/",
+      "localContentHash": "8ba6110acea418c05bf380f4d2ea487cb61a710975c6039024d3add622705771",
+      "remoteContentHash": "ad8db670c7669c018587f0bfda50a010f9fc1c811d84ace791897d95e12dd3eb"
+    }
+  ]
+}

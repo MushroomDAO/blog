@@ -1,0 +1,8 @@
+{
+  "dockerExecutable": false,
+  "javaRuntime": false,
+  "upstreamRuntimeTestsExecuted": false,
+  "staticAssertions": 14,
+  "performanceMeasured": false,
+  "scope": "Source/config consistency only; no security guarantee or deployment validation"
+}

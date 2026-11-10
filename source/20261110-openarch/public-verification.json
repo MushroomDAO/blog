@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-10T16:20:05.503249+00:00",
+  "articles": [
+    {
+      "slug": "openarch-enterprise-ai-data-permissions-guide",
+      "url": "https://blog.mushroom.cv/blog/openarch-enterprise-ai-data-permissions-guide/",
+      "title": "OpenArch：给企业AI接上数据，也把权限带过去",
+      "listRank": 5,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/openarch-enterprise-ai-data-permissions-guide-banner.BDw-CnME.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 88606
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/openarch-enterprise-ai-data-permissions-guide-banner.BDw-CnME_2oSI06.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 25892
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/openarch-enterprise-ai-data-permissions-guide-fig-01.V5ciyD8f_trdNW.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 36518
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/openarch-enterprise-ai-data-permissions-guide-fig-02.DUISibWg_jMd6R.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 25836
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/openarch-enterprise-ai-data-permissions-guide-fig-03.DDfRIAxS_22oucP.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 35280
+        }
+      ]
+    }
+  ]
+}

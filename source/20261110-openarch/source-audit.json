@@ -1,0 +1,22 @@
+{
+  "commit": "2b007aef651d67bdf6d84646cc4d7e4e9e36e108",
+  "scope": "Static source/config assertions only; no Docker executable, no runtime/security/performance validation",
+  "checks": {
+    "apache2_declared": true,
+    "compose_include": true,
+    "mongo_replica_set": true,
+    "mongo_tmpfs": true,
+    "opensearch_security_disabled": true,
+    "opensearch_no_data_mount": true,
+    "debug_port_exposed": true,
+    "default_password_documented": true,
+    "java25": true,
+    "embedding_vector_required": true,
+    "hybrid_chunkfts": true,
+    "security_policy_in_query": true,
+    "vector_endpoint": true,
+    "repository_sync_route": true
+  },
+  "passed": 14,
+  "total": 14
+}
