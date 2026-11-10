@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-10T01:54:21.266Z",
+  "drafts": [
+    {
+      "slug": "grok-bot-open-source-alternatives-comparison",
+      "mediaId": "prCUE631thH1cmNLi42prJ1kaO2UQJgVQ0K6dm7AyAdf18rYCuoMTzZh1-8AXryl",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "15a798748d5047276ea94f9a868c6ffaae56460c5fa755dc30838879a46cc6f2",
+      "remoteTextHash": "15a798748d5047276ea94f9a868c6ffaae56460c5fa755dc30838879a46cc6f2",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/grok-bot-open-source-alternatives-comparison/",
+      "localContentHash": "bc09bdf51465d54d25e42c6e7ebd40bdb296e9a66a354122bae2f71cd0b7dfb5",
+      "remoteContentHash": "ac813f81610010fbb47a276dc4f3f8242b61faa5b2974028916637822ac8cd44"
+    }
+  ]
+}

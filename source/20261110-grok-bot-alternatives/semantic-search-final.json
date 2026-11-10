@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "grok-bot-open-source-alternatives-comparison",
+      "title": "Grok Bot平替怎么选：五款开源候选的工程对比",
+      "url": "/blog/grok-bot-open-source-alternatives-comparison/",
+      "language": "zh",
+      "excerpt": "Grok Bot平替怎么选：五款开源候选的工程对比 对比 OpenMausBot、Rakazo、CopilotKit OpenBot、Suparagent 和 OpenTeam 五款开源候选，并仔细辨析同名项目的许可。结合固定源码、局部审批测试与公开问题，分析技术栈、持久记忆、电脑隔离、后台任务及实际部署成本，帮助个人与团队选择可自托管的 AI 队友。 AI Agents Grok Bot Open Source Self Hosting Computer Use 先辨清：你说的 OpenBot 是哪一个？ 对标 Grok Bot，究竟在对标什么？ 五个",
+      "score": 0.81212986
+    },
+    {
+      "article_id": "rakazo-persistent-ai-teammate-sandbox-computer-use-teardown",
+      "title": "Rakazo：每个 Bot 有自己的电脑、记忆和调度，开源 Grok Bot 替代",
+      "url": "/blog/rakazo-persistent-ai-teammate-sandbox-computer-use-teardown/",
+      "language": "zh",
+      "excerpt": "Rakazo：每个 Bot 有自己的电脑、记忆和调度，开源 Grok Bot 替代 elie222/rakazo，3094 星，Apache 2.0，TypeScript。Inbox Zero 作者新作，定位「开源 Grok Bot 替代」。每个持久 Bot 拥有独立会话、记忆、定时任务，以及一台沙箱电脑（浏览器/终端/桌面/文件），登录状态跨会话保留。Bot 间可互相委托子任务。沙箱后端支持 Docker、E2B、Daytona、CreateOS 和 Box，可完全本地运行。Web/Electron/Expo 三端，Beta 阶段。 AI同事 自托管 ",
+      "score": 0.6416254
+    },
+    {
+      "article_id": "ratatui-rust-tui-terminal-ui-guide",
+      "title": "Ratatui：Codex、grok-build、CodeWhale 都选了它——Rust 终端 UI 的事实标准，21k stars",
+      "url": "/blog/ratatui-rust-tui-terminal-ui-guide/",
+      "language": "zh",
+      "excerpt": "Ratatui：Codex、grok-build、CodeWhale 都选了它——Rust 终端 UI 的事实标准，21k stars Ratatui 是 Rust 终端 UI 的事实标准。Codex 锁了定制 revision，grok-build 自建 inline+textarea，CodeWhale 跟进上游 0.30——三者实现不同，但渲染层的选择是一致的。sub-millisecond 即时渲染、约束式布局、15+ 内置 Widget、纯 Rust 零 C 依赖，生态已扩展到 WebAssembly / UEFI / 嵌入式设备。 Rust ",
+      "score": 0.5928592
+    },
+    {
+      "article_id": "grpo-small-model-engineering-guide",
+      "title": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径",
+      "url": "/blog/grpo-small-model-engineering-guide/",
+      "language": "zh",
+      "excerpt": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径 GRPO（Group Relative Policy Optimization）让小模型在垂直任务上碾压frontier大模型成为可能。本文整合 ART、ms-swift、OpenClaw-RL 等开源仓库，以及 ART·E（Qwen 2.5 14B超越o3，$80训练）、MCP·RL等6个真实工程案例，给出完整的工程路径：任务选择→数据构造→奖励函数设计→训练循环→监控与避坑。 GRPO 强化学习 小模型 Qwen 微调 LLM训练 AI工程 Mycelium 为什么 GRPO 适合小模型专",
+      "score": 0.5908309
+    },
+    {
+      "article_id": "aegra-self-hosted-langsmith-deployments-alternative",
+      "title": "Aegra：LangSmith Deployments 的自托管平替，SDK 不用换，代码不用改",
+      "url": "/blog/aegra-self-hosted-langsmith-deployments-alternative/",
+      "language": "zh",
+      "excerpt": "Aegra：LangSmith Deployments 的自托管平替，SDK 不用换，代码不用改 调研 Aegra：LangChain LangSmith Deployments（原 LangGraph Platform）的开源自托管平替。同一套 LangGraph SDK、同一套 API，换成自己的基础设施和 Postgres。核心是 Redis 任务队列的 Worker 架构（单实例 30 并发、租约式崩溃恢复、水平扩展）、Postgres 持久化 checkpoint、Agent Protocol v2 流式传输、pgvector 语义存储。Lan",
+      "score": 0.58678424
+    },
+    {
+      "article_id": "grok-build-xai-coding-agent-rust-tui-fullscreen-acp",
+      "title": "Grok Build：xAI 开源 Rust 编码 Agent，全屏 TUI + ACP 协议",
+      "url": "/blog/grok-build-xai-coding-agent-rust-tui-fullscreen-acp/",
+      "language": "zh",
+      "excerpt": "Grok Build：xAI 开源 Rust 编码 Agent，全屏 TUI + ACP 协议 xai-org/grok-build ⭐26283，SpaceXAI（xAI）开源的终端编码 Agent，Rust 实现，全屏鼠标交互 TUI，支持文件编辑/命令执行/网页搜索/长任务，交互/无头/编辑器嵌入三种模式，ACP 协议，MCP/Skills/插件/沙盒，Apache 2.0。 AI coding agent Rust TUI xAI open source MCP ACP terminal coding tools xAI 把自己的编码 Agent",
+      "score": 0.5792482
+    },
+    {
+      "article_id": "doop-open-source-multiplayer-ai-design-canvas",
+      "title": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计",
+      "url": "/blog/doop-open-source-multiplayer-ai-design-canvas/",
+      "language": "zh",
+      "excerpt": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计 kgoedecke/doop 开源仅两周：多人实时设计画布，Canvas+Frame 用 sandboxed iframe 渲染真实 HTML，AI agent 通过内置 MCP server（15 个工具）流式把设计画进画布，人在旁边实时围观甚至接管。bun run dev 零配置自托管，内置 Postgres。AGPL-3.0，564 star。 AI Agent MCP 开源 设计工具 多人协作 TypeScript Claude Code 自托管 AGPL",
+      "score": 0.56676984
+    },
+    {
+      "article_id": "finceptterminal--open-source-bloomberg-terminal-alternative",
+      "title": "Bloomberg终端免费平替——FinceptTerminal",
+      "url": "/blog/finceptterminal--open-source-bloomberg-terminal-alternative/",
+      "language": "zh",
+      "excerpt": "Bloomberg终端免费平替——FinceptTerminal FinceptTerminal 是一款由 C++20 驱动的开源专业级金融分析平台，GitHub 6.5k Stars，集成 QuantLib、37 个 AI 投资 Agent 和 100+ 数据源，被公认为彭博终端的免费平替。 金融科技 开源 C++ 量化分析 Bloomberg FinTech AI投资 FinceptTerminal：由 C++20 驱动的开源专业级金融分析平台 核心技术与极致性能 全方位的量化分析 AI 投资助手与生态接入 为什么值得关注",
+      "score": 0.56626827
+    },
+    {
+      "article_id": "microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork",
+      "title": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒",
+      "url": "/blog/microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork/",
+      "language": "zh",
+      "excerpt": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒 microsoft/VibeVoice，54K stars，MIT，Python。7.5Hz 连续语音 tokenizer + LLM + 扩散头，单次推理 90 分钟 TTS、60 分钟 ASR，4 路说话人。2025-09 官方因深度伪造顾虑主动下架，社区 fork vibevoice-community/VibeVoice 接棒维护，已加 LoRA 微调和 HF Transformers 集成。工程指导：模型选型、API 服务化、BitN",
+      "score": 0.55291784
+    },
+    {
+      "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+      "title": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时",
+      "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+      "language": "zh",
+      "excerpt": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时 zavora-ai 社区维护的 ADK-Rust v2.2.0——不是 Google 官方项目，但把 Agent 运行时拆成 43 个可独立发布的 crate，按需引用。Type-safe、全异步、568 μs agent loop 开销，支持 Gemini/OpenAI/Anthropic/Ollama，含 graph 工作流、durable resume、realtime 语音、adk-skill 解析。本文做一次工程拆解。 rust agent-runtim",
+      "score": 0.5478705
+    }
+  ]
+}
