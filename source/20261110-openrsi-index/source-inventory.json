@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-10",
+  "repo": "https://github.com/OpenRSI-Foundation/OpenRSI-Index",
+  "commit": "8d170deed4591fc7e4306f2d86ff4d9bcffd1288",
+  "stars": 323,
+  "license": "Apache-2.0",
+  "logs": "https://huggingface.co/datasets/OpenRSI-Foundation/OpenRSI-Index-Logs",
+  "reviewed": [
+    "README.md",
+    "RSI-Harness/README.md",
+    "assets/docs/quick-start.md",
+    "RSI-Harness/docs/macos-docker-desktop.md",
+    "rsi-tasks/gemm-h100-refined/README.md",
+    "rsi-tasks/signature-tasks/pre-training-optimizer-update-geometry/README.md",
+    "rsi-tasks/signature-tasks/gpic_generation/README.md",
+    "rsi-tasks/signature-tasks/post-training-qwen-122B-rl/README.md"
+  ],
+  "banner": "Official available artwork is typography-heavy header, architecture diagrams and community QR image; generated photorealistic measurement concept with local FLUX seed8381 instead."
+}

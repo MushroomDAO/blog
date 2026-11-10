@@ -1,0 +1,1 @@
+Exact URL/entity checked across980Blog/4remoteDraft/963localM2/4050KB. Only KB row4787 has incoming job idempotency_key22c882a4-7a52-42f8-84d1-f80407d85c3c, rawsourceonly. No priorarticle/draft/receipt. Publishedlist48001permissiongap recorded privately. Proceed with original writing flow.
