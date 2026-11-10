@@ -1,0 +1,30 @@
+[
+  {
+    "full_name": "Anil-matcha/suparagent",
+    "stargazers_count": 6941,
+    "default_branch": "main",
+    "pushed_at": "2026-11-09T17:53:19Z",
+    "description": "Open-source, self-hosted alternative to Grok Bot, Claude Duet, OpenAI Dots, Meta Muse, Instinct, Manus Cue: AI coworkers (named agents) with instructions, memory, routines, their own isolated computer, and your approval before they act.",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    }
+  },
+  {
+    "full_name": "raghavpillai/openteam",
+    "stargazers_count": 30,
+    "default_branch": "main",
+    "pushed_at": "2026-11-09T01:49:31Z",
+    "description": "Self-hosted AI agents with persistent memory, browser and computer access, and scheduled workflows.",
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "spdx_id": "GPL-3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0",
+      "node_id": "MDc6TGljZW5zZTk="
+    }
+  }
+]

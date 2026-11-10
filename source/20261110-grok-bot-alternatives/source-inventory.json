@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-11-10",
+  "repositories": [
+    {
+      "key": "maus",
+      "repo": "milind-soni/OpenMausBot",
+      "commit": "542f8e55f3f9c5be5550aac0e99fcec050308d69",
+      "url": "https://github.com/milind-soni/OpenMausBot/tree/542f8e55f3f9c5be5550aac0e99fcec050308d69"
+    },
+    {
+      "key": "rakazo",
+      "repo": "elie222/rakazo",
+      "commit": "c76070c83a40f655fef2e298c43941f249407512",
+      "url": "https://github.com/elie222/rakazo/tree/c76070c83a40f655fef2e298c43941f249407512"
+    },
+    {
+      "key": "nightly",
+      "repo": "nightly-labs/openbot",
+      "commit": "22cd028e7c99c41e49bbab434dbda63ff9e56304",
+      "url": "https://github.com/nightly-labs/openbot/tree/22cd028e7c99c41e49bbab434dbda63ff9e56304"
+    },
+    {
+      "key": "copilot",
+      "repo": "CopilotKit/OpenBot",
+      "commit": "d3b3ae83fe9068127c389aa2e557e2fe8fc558ac",
+      "url": "https://github.com/CopilotKit/OpenBot/tree/d3b3ae83fe9068127c389aa2e557e2fe8fc558ac"
+    },
+    {
+      "key": "suparagent",
+      "repo": "Anil-matcha/suparagent",
+      "commit": "32dd0edbc1f074e68727c82b39b77db1b4200eb9",
+      "url": "https://github.com/Anil-matcha/suparagent/tree/32dd0edbc1f074e68727c82b39b77db1b4200eb9"
+    },
+    {
+      "key": "openteam",
+      "repo": "raghavpillai/openteam",
+      "commit": "be68ae0efbb28cd3742715622e99c664e1d0da95",
+      "url": "https://github.com/raghavpillai/openteam/tree/be68ae0efbb28cd3742715622e99c664e1d0da95"
+    }
+  ],
+  "method": "Pinned shallow clones, GitHub API metadata and purposive issue sampling. No unified end-to-end model benchmark.",
+  "banner": "Source candidates were text/UI/logo-heavy; local FLUX concept used, seed 8371; automated and manual verification passed."
+}
