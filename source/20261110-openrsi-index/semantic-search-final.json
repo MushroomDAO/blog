@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "openrsi-index-research-agent-benchmark-guide",
+      "title": "OpenRSI Index：如何评测AI是否真的改进了科研方法",
+      "url": "/blog/openrsi-index-research-agent-benchmark-guide/",
+      "language": "zh",
+      "excerpt": "OpenRSI Index：如何评测AI是否真的改进了科研方法 OpenRSI Index 是面向科研智能体的开放评测项目，用固定任务、预算和裁判检查算法与工程改进。本文核对 RSI Harness 源码、公开日志及任务包，拆解持续工作区、快照提交和评分机制，解释 Qwen 数据包装器、Marin 集群依赖与 GPIC 筛选协议的复现边界，并给出安装、局部验证和选择实验的工程建议。 OpenRSI Index AI Agents Evaluation Recursive Self Improvement Open Source 它到底在测什么，为什么不只",
+      "score": 0.7720269
+    },
+    {
+      "article_id": "openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle",
+      "title": "OpenRSI：让「AI 改进 AI」变成可执行、可测量的工程问题",
+      "url": "/blog/openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle/",
+      "language": "zh",
+      "excerpt": "OpenRSI：让「AI 改进 AI」变成可执行、可测量的工程问题 FrontisAI/OpenRSI，arXiv:2607.28568，CC BY-NC 4.0，Python。把递归自改进（RSI）从哲学概念变成工程实验的开源全栈系统。核心：以机器学习工程（MLE）为首个可执行领域，训练 Frontis-MA1（35B）作为元演化 Agent，用四个原子算子（Draft/Improve/Debug/Crossover）统一后训练和推理。MLE-Bench Lite 上，单张 RTX 4090，Medal Average 从 39.39% 升到 71.2",
+      "score": 0.67152745
+    },
+    {
+      "article_id": "awesome-rsi-recursive-self-improvement-curated-survey-godel-agents-benchmarks",
+      "title": "awesome-rsi-recursive-self-improvement-curated-survey-godel-agents-benchmarks",
+      "url": "/blog/awesome-rsi-recursive-self-improvement-curated-survey-godel-agents-benchmarks/",
+      "language": "en",
+      "excerpt": "awesome-rsi-recursive-self-improvement-curated-survey-godel-agents-benchmarks pinkbubblebubble/awesome-rsi is a high-signal curated index of recursive self-improvement (RSI) in AI, covering theoretical foundations, self-modifying agents, evaluation benchmarks, and safety research",
+      "score": 0.65280473
+    },
+    {
+      "article_id": "last-ai-built-by-humans-recursive-self-improvement-hci",
+      "title": "人类造的最后一个 AI：递归自我改进的五个自主等级与 HCI 能力轨迹指标",
+      "url": "/blog/last-ai-built-by-humans-recursive-self-improvement-hci/",
+      "language": "zh",
+      "excerpt": "人类造的最后一个 AI：递归自我改进的五个自主等级与 HCI 能力轨迹指标 33 位作者联合提出 HCI（Headroom-Closed Index）和五级递归自我改进框架：数学能力 HCI 86.4，工具 Agent 从 8.2 跳升至 39.9，L5 级 AI 将自主修改控制自身改进过程的机制。arXiv 2609.11873，CC BY-NC-ND 4.0。 recursive-self-improvement AI-autonomy HCI agent benchmark self-evolution frontier-AI 一、HCI：一把能跨",
+      "score": 0.6348415
+    },
+    {
+      "article_id": "rsi-anything-world-model-retention",
+      "title": "RSI-Anything：跨域自我改进，究竟改了什么？",
+      "url": "/blog/rsi-anything-world-model-retention/",
+      "language": "zh",
+      "excerpt": "RSI-Anything：跨域自我改进，究竟改了什么？ RSI-Anything 把世界模型放进候选选择、真实反馈和版本保留的循环，但并非一套权重通吃所有领域。本文核对 PhAI Labs 与 Gen-Verse 论文、仓库及发布资源，拆解代码修复、GUI、实验规划与化学优化的成绩口径，并报告 Mac 上工作流、浏览器及条件推荐器的有限验证，说明已展示的改进与待复现的能力。 RSI-Anything JEPA-Anything 世界模型 自我改进 AI Agent 开源 RSI-Anything 的循环为什么值得关注？ 五个领域的成绩分别证明了什么？ 化",
+      "score": 0.63187563
+    },
+    {
+      "article_id": "ai-collab-playbook-phd-workflow-skills-context-first",
+      "title": "AI 协作实战手册：一位在读博士的科研、写作、编码工作流——人是主变量",
+      "url": "/blog/ai-collab-playbook-phd-workflow-skills-context-first/",
+      "language": "zh",
+      "excerpt": "AI 协作实战手册：一位在读博士的科研、写作、编码工作流——人是主变量 cnfjlhj/ai-collab-playbook 是一位 AI 方向在读博士积累的 AI 协作实战手册，433 stars。核心观点：把 AI 当同事不当工具，但人始终是主变量。涵盖科研文献四阶段工作流（调研→筛选→精读→整合）、低摩擦入口策略、Code Agent 使用心得、上下文税与心流状态、技能沉淀到 Skill/AGENTS.md 的闭环，以及对「效率幻觉」的警惕。附 10 个独立 Skill 仓库。 AI协作 科研工作流 Code Agent Skills 效率 开源 ",
+      "score": 0.6053756
+    },
+    {
+      "article_id": "frontis-ma1-openrsi-ai4ai-recursive-self-improvement-mle",
+      "title": "Frontis-MA1：清华 + Horizon Research 开源 AI 改进 AI 的全套配方，35B 单卡超 GPT-5.5",
+      "url": "/blog/frontis-ma1-openrsi-ai4ai-recursive-self-improvement-mle/",
+      "language": "zh",
+      "excerpt": "Frontis-MA1：清华 + Horizon Research 开源 AI 改进 AI 的全套配方，35B 单卡超 GPT-5.5 FrontisAI/OpenRSI 是 Frontis.AI + 清华大学的 AI4AI 开源框架。核心是 Frontis-MA1（35B/30B），通过四个可训练原子算子（Draft/Improve/Debug/Crossover）+ OpenMLE 全栈，在 MLE-Bench Lite 单卡 12h 达到 71.21% Medal Average，超越 GPT-5.5 + Codex。CC BY-NC 4.0，模型",
+      "score": 0.60337394
+    },
+    {
+      "article_id": "flashrsi-agent-self-improvement-guide",
+      "title": "FlashRSI解析：让Agent自改进实验可追踪、可比较、可复现",
+      "url": "/blog/flashrsi-agent-self-improvement-guide/",
+      "language": "zh",
+      "excerpt": "FlashRSI解析：让Agent自改进实验可追踪、可比较、可复现 FlashRSI把自改进算法、Agent运行环境和评测任务放进统一实验流程。本文核对人大RUC-NLPIR官方仓库、13种算法与30套基准的支持边界，解释Target、Worker、不可变Snapshot和冻结迁移评测，分析公开成绩中的提升与退步、原始日志待公开的问题，并结合本地离线检查给出团队落地路线。 FlashRSI Agent 递归自我改进 Harness 评测复现 FlashRSI究竟让什么东西“进化”？ 13种算法、30套基准，是否都已经有成绩？ Snapshot怎样提高实验",
+      "score": 0.6009279
+    },
+    {
+      "article_id": "aris--auto-research-in-sleep-with-claude-code",
+      "title": "ARIS: 让 AI 在你睡觉时做科研",
+      "url": "/blog/aris--auto-research-in-sleep-with-claude-code/",
+      "language": "zh",
+      "excerpt": "ARIS: 让 AI 在你睡觉时做科研 一个基于双模型协作的自主 ML 科研系统，让 Claude Code 执行，GPT 审稿，实现全自动研究流水线 claude-code ai-research multi-agent ml-pipeline automation 科研自动化的痛点 双模型协作机制 为什么不用单模型自我博弈？ 实际能做什么？ 1. 全自动研究流水线 2. 基于现有工作的改进 3. Rebuttal 辅助 轻量到离谱的架构 实际落地效果 一点思考",
+      "score": 0.5941582
+    },
+    {
+      "article_id": "polaris-zju-real-end-to-end-ai-research-agent-voyage-pipeline",
+      "title": "Polaris：浙大 REAL 实验室开源端到端 AI 科研智能体——从文献调研到论文投稿六阶段全自动",
+      "url": "/blog/polaris-zju-real-end-to-end-ai-research-agent-voyage-pipeline/",
+      "language": "zh",
+      "excerpt": "Polaris：浙大 REAL 实验室开源端到端 AI 科研智能体——从文献调研到论文投稿六阶段全自动 ZJU-REAL/Polaris 是浙江大学 REAL 实验室开源的端到端 AI 科研平台，六阶段流水线：文献调研 Wiki → 想法生成 → Elo 辩论评审 → GPU 实验执行 → LaTeX 论文写作 → 引用核验。核心设计是确定性代码做繁重工作、LLM 只做判断，Voyage 任务可跨天持久化续跑并设人工审批门禁，Navigator/Helm/Sextant 三引擎驱动，MCP 工具层对外开放，Docker Compose 部署。 AI科研 ",
+      "score": 0.588724
+    }
+  ]
+}
