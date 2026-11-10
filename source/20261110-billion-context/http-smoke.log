@@ -1,0 +1,11 @@
+2026-11-10T08:17:28.092 [info] [v=0.1.213] log retention: incomplete window — measures 0m of history (target 2d), 61 B of 256 MiB; history may be younger, or the byte budget 256 MiB may have cut it; raise the budget only if it caused the shortfall; continuity unknown: generation files carry no lineage evidence, so this is a measured span, not an unbroken history
+2026-11-10T08:17:28.093 [info] [v=0.1.213] log retention: incomplete window — measures 0m of history (target 2d), 61 B of 256 MiB; history may be younger, or the byte budget 256 MiB may have cut it; raise the budget only if it caused the shortfall; continuity unknown: generation files carry no lineage evidence, so this is a measured span, not an unbroken history
+✔ e2e proxy smoke: compress tool-call -> re-request -> round-2 streams in real-time (3338.840333ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3981.667875

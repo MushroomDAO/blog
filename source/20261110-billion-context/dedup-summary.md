@@ -1,0 +1,1 @@
+Exact officialrepoURL and owner/repo: incomingrawKBonly, no oldarticle orM2receipt. 978Blogposts/2remotedrafts/961localreceipts/4035KBdrawers checked. PublishedAPI48001permissiongap recorded; no ambiguousoldcreationreceipt. RawbotKBreused.
