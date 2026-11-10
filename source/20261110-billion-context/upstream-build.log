@@ -1,0 +1,99 @@
+
+> billion-context@0.1.213 build
+> npm --prefix kernel run build && npm --prefix pi-subagents run build && tsup && node scripts/write-build-info.mjs && node scripts/check-dist-import-annotations.mjs && node scripts/check-dist-external.mjs
+
+
+> acp-kernel@0.0.191 build
+> npm run clean && tsup && tsc --emitDeclarationOnly
+
+
+> acp-kernel@0.0.191 clean
+> node -e "require('fs').rmSync('dist',{recursive:true,force:true})"
+
+CLI Building entry: src/index.ts, src/panel/index.ts, src/persist/index.ts, src/wire/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.5.1
+CLI Using tsup config: /private/tmp/billion-context-research/kernel/tsup.config.ts
+CLI Target: es2022
+ESM Build start
+ESM dist/chunk-6ECDTFU5.js     2.02 KB
+ESM dist/chunk-5NN4XL6Q.js     29.12 KB
+ESM dist/chunk-M4F7HU2H.js     33.53 KB
+ESM dist/index.js              354.15 KB
+ESM dist/panel/index.js        6.96 KB
+ESM dist/wire/index.js         78.55 KB
+ESM dist/persist/index.js      19.83 KB
+ESM dist/chunk-6ECDTFU5.js.map 4.38 KB
+ESM dist/chunk-M4F7HU2H.js.map 67.00 KB
+ESM dist/chunk-5NN4XL6Q.js.map 92.87 KB
+ESM dist/panel/index.js.map    17.58 KB
+ESM dist/wire/index.js.map     218.34 KB
+ESM dist/persist/index.js.map  46.16 KB
+ESM dist/index.js.map          859.68 KB
+ESM ⚡️ Build success in 37ms
+
+> billion-context-pi-subagents@0.2.3 build
+> tsup && tsc --emitDeclarationOnly
+
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.5.1
+CLI Using tsup config: /private/tmp/billion-context-research/pi-subagents/tsup.config.ts
+CLI Target: es2022
+CLI Cleaning output folder
+ESM Build start
+ESM dist/index.js     465.56 KB
+ESM dist/index.js.map 1.32 MB
+ESM ⚡️ Build success in 65ms
+CLI Building entry: {"agent/dsh-native-client":"src/agent/dsh-native-client.ts"}
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.5.1
+CLI Using tsup config: /private/tmp/billion-context-research/tsup.config.ts
+CLI Building entry: src/claude-mcp-entry.ts, src/claude-native-bootstrap.ts, src/claude-subagent-hook.ts, src/index.ts, src/mcp.ts, src/agent/dsh-acp.ts, src/agent/dsh-compaction-gate.ts, src/agent/dsh-native.ts, src/agent/omp-native.ts, src/agent/omp.ts, src/agent/opencode-native.ts, src/agent/opencode.ts, src/agent/pi-native.ts, src/agent/pi.ts, src/kimi/bootstrap-hook.ts, src/kimi/native-mcp.ts, src/zcode/bootstrap-hook.ts, src/zcode/mcp-entry.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.5.1
+CLI Using tsup config: /private/tmp/billion-context-research/tsup.config.ts
+CLI Target: es2020
+CLI Target: node20
+CJS Build start
+CLI Cleaning output folder
+ESM Build start
+CJS dist/agent/dsh-native-client.js 33.27 KB
+CJS ⚡️ Build success in 17ms
+
+ WARN  [33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mIgnoring this import because "kernel/dist/chunk-6ECDTFU5.js" was marked as having no side effects[0m [ignored-bare-import]
+
+    kernel/dist/wire/index.js:5:7:
+[37m      5 │ import [32m"../chunk-6ECDTFU5.js"[37m;
+        ╵        [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  "sideEffects" is false in the enclosing "package.json" file:
+
+    kernel/package.json:53:2:
+[37m      53 │   [32m"sideEffects"[37m: false,
+         ╵   [32m~~~~~~~~~~~~~[0m
+
+
+
+ESM dist/agent/dsh-acp.js             5.84 KB
+ESM dist/claude-subagent-hook.js      840.00 B
+ESM dist/agent/dsh-compaction-gate.js 2.53 KB
+ESM dist/mcp.js                       1.64 MB
+ESM dist/claude-mcp-entry.js          2.21 MB
+ESM dist/kimi/bootstrap-hook.js       2.14 MB
+ESM dist/claude-native-bootstrap.js   2.20 MB
+ESM dist/agent/pi.js                  2.33 MB
+ESM dist/agent/opencode.js            2.38 MB
+ESM dist/agent/dsh-native.js          2.37 MB
+ESM dist/agent/omp.js                 2.33 MB
+ESM dist/zcode/mcp-entry.js           2.23 MB
+ESM dist/zcode/bootstrap-hook.js      2.15 MB
+ESM dist/kimi/native-mcp.js           2.20 MB
+ESM dist/agent/omp-native.js          2.81 MB
+ESM dist/agent/opencode-native.js     5.54 MB
+ESM dist/agent/pi-native.js           6.01 MB
+ESM dist/index.js                     5.84 MB
+ESM ⚡️ Build success in 537ms
+build-info: commit=25b167187
+dist-import-annotations: OK
+dist-external: OK

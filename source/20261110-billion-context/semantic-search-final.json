@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "billion-context-agent-compression-proxy-review",
+      "title": "billion-context：让Agent长会话可持续的压缩代理",
+      "url": "/blog/billion-context-agent-compression-proxy-review/",
+      "language": "zh",
+      "excerpt": "billion-context：让Agent长会话可持续的压缩代理 billion-context 是编码智能体的上下文压缩代理，通过分层摘要、历史恢复和协议适配管理长期会话。核对官方源码、许可证附加署名要求与实验报告，解释十亿 token 的累计口径，分析缓存计费、精确召回和部署状态的边界，并给出安装、健康检查及小规模验收方法，帮助团队判断它是否适合自己的长期编码任务和模型供应商。 billion-context AI Agents Context Engineering Compression Open Source 它怎样接到Agent与模型之间？",
+      "score": 0.61598545
+    },
+    {
+      "article_id": "tare-lossless-context-compression-cache-correct-output-aware",
+      "title": "tare: Lossless-by-Default Context Compression That Keeps the Prefix Cache Warm",
+      "url": "/blog/tare-lossless-context-compression-cache-correct-output-aware/",
+      "language": "en",
+      "excerpt": "tare: Lossless-by-Default Context Compression That Keeps the Prefix Cache Warm A Rust context-compression tool for LLM coding agents — MIT, shipping as proxy, CLI, MCP server, and libraries. Three constraints nobody else combines: lossless by default (lossy transforms are opt-in)",
+      "score": 0.5604389
+    },
+    {
+      "article_id": "automem-agent-memory-skill-training-framework-guide",
+      "title": "AutoMem：让 Agent 自动学会管理记忆，32B 追平 Claude Opus 4.5",
+      "url": "/blog/automem-agent-memory-skill-training-framework-guide/",
+      "language": "zh",
+      "excerpt": "AutoMem：让 Agent 自动学会管理记忆，32B 追平 Claude Opus 4.5 Stanford 团队（arXiv:2607.01224）提出 AutoMem 框架：把元记忆（metamemory）引入 LLM Agent，用两个循环自动优化记忆能力——外循环用强 LLM 审查轨迹修改 scaffold，内循环把 agent 自己的好记忆决策转成训练信号。只优化记忆不动任务动作，Qwen2.5-32B 在 Crafter/MiniHack/NetHack 上性能提升 2x-4x，追平 Claude Opus 4.5 和 Gemini 3.",
+      "score": 0.5209402
+    },
+    {
+      "article_id": "belief-context-graph-bcg-agent-memory-confidence-provenance-deterministic-reasoning",
+      "title": "Belief Context Graph：把 Agent 记忆从「检索」升级为「置信度感知的信念图」",
+      "url": "/blog/belief-context-graph-bcg-agent-memory-confidence-provenance-deterministic-reasoning/",
+      "language": "zh",
+      "excerpt": "Belief Context Graph：把 Agent 记忆从「检索」升级为「置信度感知的信念图」 bigai-nlco/belief-context-graph 开源，BCG 用可审计的置信度、证据溯源、冲突检测把 Agent 记忆升级为信念图，解决长程推理中「该不该相信这个事实」的核心问题，MIT 许可，⭐59。 agent memory knowledge graph LLM reasoning open source confidence provenance BIGAI 现有 Agent 记忆的盲区 BCG 的核心：四个能力 1. 信念提取（",
+      "score": 0.5102784
+    },
+    {
+      "article_id": "lemmalog-datalog-engine-llm-agent-memory",
+      "title": "Lemmalog：把 Agent 记忆做成一个能演绎推理的数据库，而不是「记得更准的向量库」",
+      "url": "/blog/lemmalog-datalog-engine-llm-agent-memory/",
+      "language": "zh",
+      "excerpt": "Lemmalog：把 Agent 记忆做成一个能演绎推理的数据库，而不是「记得更准的向量库」 JordyZomer/lemmalog 开源仅一周：Rust 实现的 Datalog 引擎给 LLM agent 当长期记忆，LLM 只断言事实，闭包/时序/矛盾检测全由规则演绎。LongMemEval、MemEval、LoCoMo 三个标准基准实测，LoCoMo 排 10 个系统第 2，token 省 6-400 倍。MIT，带 Claude Code MCP server。 agent memory Datalog 知识图谱 MCP LLM 开源 Rust ",
+      "score": 0.507959
+    },
+    {
+      "article_id": "tencentdb-agent-memory-team-level-symbolic-layered-memory",
+      "title": "TencentDB Agent Memory: Tencent Cloud's Open-Source Team-Level Agent Memory System",
+      "url": "/blog/tencentdb-agent-memory-team-level-symbolic-layered-memory/",
+      "language": "en",
+      "excerpt": "TencentDB Agent Memory: Tencent Cloud's Open-Source Team-Level Agent Memory System TencentCloud AI Agent team's open-source memory system, 17.9k stars, TypeScript. Core design: symbolic short-term memory (Mermaid state canvas replaces verbose tool logs, −61.38% token usage) + lay",
+      "score": 0.5066313
+    },
+    {
+      "article_id": "dense-mem-governed-ai-memory-mcp-evidence-provenance",
+      "title": "Dense-Mem 调研：AI 记忆不该是「想存就存」，而该有证据链和权限",
+      "url": "/blog/dense-mem-governed-ai-memory-mcp-evidence-provenance/",
+      "language": "zh",
+      "excerpt": "Dense-Mem 调研：AI 记忆不该是「想存就存」，而该有证据链和权限 调研自托管 MCP 记忆服务 Dense-Mem：核心理念是「受治理的 AI 记忆」，模型写入的是一份「提案」，真正能不能变成持久状态由服务端的确定性策略和封闭 schema 校验决定；证据精确、持久、只增不删，生命周期变更只改变有效状态，从不抹除溯源链；关系只有在证据支持「合格」时才成为活跃的图边，未决的候选和假设默认不会被召回。Go 1.26 + PostgreSQL/pgvector 做持久权威，Redis 只做协调。Apache-2.0，36 star，配套研究预印本。 ",
+      "score": 0.50210375
+    },
+    {
+      "article_id": "tmem-parametric-memory-agent-guide",
+      "title": "TMEM：给 Agent 装上「可学习的参数记忆」——阿里通义论文工程解析",
+      "url": "/blog/tmem-parametric-memory-agent-guide/",
+      "language": "zh",
+      "excerpt": "TMEM：给 Agent 装上「可学习的参数记忆」——阿里通义论文工程解析 阿里巴巴通义 Qwen 团队提出 TMEM，让 Agent 在单次会话内通过 Fast LoRA 直接把经验写进模型参数，不再只是「查」历史——而是真正「学会」了。本文拆解论文原理，并给出工程落地的实现思路。 Agent 参数记忆 Fast LoRA 阿里通义 自进化 LLM 强化学习 Qwen 长上下文 一句话讲清楚 TMEM 做了什么 为什么 prompt 记忆有根本性局限？ TMEM 的核心机制 三层记忆架构 记忆写入流程 SVD 初始化——让少步更新有效的关键 实验结果 ",
+      "score": 0.5018162
+    },
+    {
+      "article_id": "agentjev-0-6b-system-one-decision-model-qwen3",
+      "title": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92%",
+      "url": "/blog/agentjev-0-6b-system-one-decision-model-qwen3/",
+      "language": "zh",
+      "excerpt": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92% AgentJev-0.6B，Qwen3-0.6B底座+置换等变决策头，System-1 AI Agent 决策模型。Typed Decisions 2000题 79.25%（1585/2000）超 Laya 77.00%（+2.25pt）。零输出 token 解码，约 50ms 一次前向。Shared Prefix KV Cache 在 64 候选时骨干 token 从 33,547 降至 2",
+      "score": 0.49586317
+    },
+    {
+      "article_id": "cindy-local-first-ai-agent-cross-harness-memory-electron-react-native",
+      "title": "Cindy：跨 Harness 持久记忆的本地优先开源 AI Agent，纠正一次、处处生效",
+      "url": "/blog/cindy-local-first-ai-agent-cross-harness-memory-electron-react-native/",
+      "language": "zh",
+      "excerpt": "Cindy：跨 Harness 持久记忆的本地优先开源 AI Agent，纠正一次、处处生效 Cindy 是一个 Electron + React Native 的本地优先 AI Agent，把 Claude Code、Codex 等多个 Harness 统一在一个客户端里，共享跨 Harness 的持久记忆、Skills 和 Orca 多 Agent 编排，Apache-2.0 开源，可用自己的 Claude Code/Codex 订阅直接接入。 一、它是什么 二、跨 Harness 持久记忆 三、Orca 多 Agent 编排 四、技术架构 仓库结构",
+      "score": 0.4948771
+    }
+  ]
+}

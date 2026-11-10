@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-10T01:27:54.632Z",
+  "drafts": [
+    {
+      "slug": "billion-context-agent-compression-proxy-review",
+      "mediaId": "prCUE631thH1cmNLi42prPFrp35WzHDcqP8Jeqe5L0uyiGTrgAsawu93JNxxbpQa",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "d9d33578682cdf56a3bcc2450520621618367ece4c4b26ef44e63fae59cd9f0a",
+      "remoteTextHash": "d9d33578682cdf56a3bcc2450520621618367ece4c4b26ef44e63fae59cd9f0a",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/billion-context-agent-compression-proxy-review/",
+      "localContentHash": "328b4fdd99d0c824e21f0ae7386e833d05f3e127ccb9169f7e472b28b7d69248",
+      "remoteContentHash": "9576b54a53d99fb0231ac7b31c3919b902be8da4e27e436485d0ca08775e8e8f"
+    }
+  ]
+}

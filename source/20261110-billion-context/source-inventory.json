@@ -1,0 +1,47 @@
+{
+  "repository": "https://github.com/ranxianglei/billion-context",
+  "commit": "25b167187ac188e3eb67b18976570943bf98d3f5",
+  "version": "0.1.213",
+  "files": {
+    "README.md": {
+      "bytes": 80232,
+      "sha256": "e5792a6ddd3336add4dbde74354aab07233cb99e44e8a2b61c6db01899fe16b8"
+    },
+    "LICENSE": {
+      "bytes": 2652,
+      "sha256": "f27574cd3f4b0b4877da2869953945d66d76a665e7ebb9320a5e87aa76f7ab58"
+    },
+    "package.json": {
+      "bytes": 4287,
+      "sha256": "7cb29718e5963502847def13816a5e64c645b7ad9b40c0345258d6351f63eead"
+    },
+    "kernel/README.md": {
+      "bytes": 25853,
+      "sha256": "7e81d8d0b6013892e1a75d31cd3214846e9ed146714a2120e1c5c53fce3475bb"
+    },
+    "kernel/src/compress.ts": {
+      "bytes": 112607,
+      "sha256": "0bcb51b928fc4646d60a3607069db3161dd1bd23ddeaef84b44fcbc3464b8f65"
+    },
+    "kernel/src/compress-tools.ts": {
+      "bytes": 33311,
+      "sha256": "087cc95f1d40ca3dc898f803d4d795fca830b7d2c709baa5ffc43aff5cd8851f"
+    },
+    "docs/clients.md": {
+      "bytes": 80952,
+      "sha256": "7b378c8d04d45548d96ec15e4f65fa704fe3160864e19637122dd41733821b7d"
+    },
+    "docs/configuration.md": {
+      "bytes": 412668,
+      "sha256": "c3977dd1a4e60fc365ed9317c82782bc85f8c59df324746bb9ac7c931814834f"
+    },
+    "benchmarks/third-party-1500/README.md": {
+      "bytes": 8965,
+      "sha256": "04b1b8d9ec608a4f1788da97546e81909a9413c466e765b7e165ebc39f7cfda6"
+    },
+    "paper/model-driven-incremental-hierarchical-compression-training-free-multi-generational-context-management-for-long-lived-coding-agents.md": {
+      "bytes": 95725,
+      "sha256": "75969855e6f2afd70acd1fe2b2d7d46e2bd9091c1ddedf22cb8d0b8d5f1ef87c"
+    }
+  }
+}
