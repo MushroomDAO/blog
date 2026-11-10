@@ -1,0 +1,38 @@
+[
+  {
+    "id": "3635f256ec811a391b136f47327d1c4bb1d1f2fa5dff4b26",
+    "metadata": {
+      "article_id": "openarch-enterprise-ai-data-permissions-guide",
+      "content_hash": "c456bea9f5efa0f0",
+      "excerpt": "OpenArch：给企业AI接上数据，也把权限带过去 OpenArch是Hyland开源的企业AI数据访问层，采用Apache2.0，将文档元数据、分块、向量与权限连接到API。本文从源码拆解Java、MongoDB和OpenSearch架构，介绍Docker Compose启动方法，并核对默认账号、tmpfs存储、数据库端口和权限同步边界，帮助团队规划企业RAG试点。 OpenArch Hyland RAG OpenSearch 企业AI OpenArch 到底解决哪一层问题？ 技术栈如何把文档和向量接起来？ 权限控制为什么比多接一个模型更难？ 怎样用",
+      "language": "zh",
+      "tags": [
+        "OpenArch",
+        "Hyland",
+        "RAG",
+        "OpenSearch",
+        "企业AI"
+      ],
+      "title": "OpenArch：给企业AI接上数据，也把权限带过去",
+      "url": "/blog/openarch-enterprise-ai-data-permissions-guide/"
+    }
+  },
+  {
+    "id": "9708aa9a59d3d169e0bb3e941fd884052e19cd2a3505cb3c",
+    "metadata": {
+      "article_id": "openarch-enterprise-ai-data-permissions-guide",
+      "content_hash": "91e86a69da74b14e",
+      "excerpt": "OpenArch: Enterprise AI Data and Permissions Guide Inspect Hyland OpenArch architecture, permission-aware retrieval and Docker Compose defaults, with practical guidance for a focused enterprise AI deployment. OpenArch Hyland RAG OpenSearch 企业AI Where does OpenArch fit? How does t",
+      "language": "en",
+      "tags": [
+        "OpenArch",
+        "Hyland",
+        "RAG",
+        "OpenSearch",
+        "企业AI"
+      ],
+      "title": "OpenArch: Enterprise AI Data and Permissions Guide",
+      "url": "/blog/openarch-enterprise-ai-data-permissions-guide/"
+    }
+  }
+]

@@ -1,0 +1,9 @@
+from pathlib import Path
+import json,datetime
+slug='openarch-enterprise-ai-data-permissions-guide';o=Path(__file__).parent
+job=Path('/Users/jason/.heinu1-bot/jobs/74eda40f-e5fd-447a-bc80-f62a1ad069be')
+r=json.loads(Path('pipeline/m2/output',slug+'.json').read_text());v=json.loads((o/'wechat-verification.json').read_text());assert v['drafts'][0]['mediaId']==r['mediaId'];assert json.loads((o/'public-verification.json').read_text())['articles'][0]['slug']==slug
+sem=json.loads((o/'semantic-status.json').read_text());result={'slug':slug,'blogUrl':f'https://blog.mushroom.cv/blog/{slug}/','mediaId':r['mediaId'],'archivedMediaId':'','wechatStatus':'draft','wechatError':''}
+for p in [o/'publication-result.json',job/'publication-result.json']:p.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+(o/'.published').write_text(result['blogUrl']+'\n');(job/'publication-progress.json').write_text(json.dumps({**result,'blogVerified':True,'wechatVerified':True,'semantic':sem,'completed':sem['status']=='verified' and (o/'kb-readback.json').exists(),'updatedAt':datetime.datetime.now(datetime.timezone.utc).isoformat()},indent=2)+'\n')
+p=Path('/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory')/f'project_{slug}.md';t=p.read_text().split('\nFinal channels:')[0].replace('Blog/WeChat: pending.','Channel status below.');p.write_text(t+'\nFinal channels:\nBlog: '+result['blogUrl']+'\nWeChat remote draft verified: '+r['mediaId']+'\nSemantic: '+sem['status']+'\n14 static source assertions passed; no Docker or Java runtime, no container startup, integration/security/performance test. Compose tmpfs Mongo1GB, no explicit OpenSearch data mount, security disabled and exposed infrastructure/debug ports. Article distinguishes federation from zero replicas, API from complete RAG app, documented live source permissions from observed query policy/ACL evidence. Topic FLUX8401 cover and three LittleM figures verified. No masssend.\n')
