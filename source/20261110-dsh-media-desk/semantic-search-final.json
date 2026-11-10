@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "dsh-media-desk-creator-workbench-guide",
+      "title": "DSH自媒体工作台：从灵感成稿到复盘，代码怎样串起来？",
+      "url": "/blog/dsh-media-desk-creator-workbench-guide/",
+      "language": "zh",
+      "excerpt": "DSH自媒体工作台：从灵感成稿到复盘，代码怎样串起来？ dsh-media-desk 是 DeepSeek Harness 的社区自媒体工作台插件，将灵感、脚本、封面、分镜、排期和复盘串成一套流程。本文核对源码与 npm 版本，解释宿主与界面分工、生图两种接入方式、Monid 导入及数据边界，以构建和87项测试核对代码，给出安装、费用控制和试用建议，明确它不会直接发布内容。 DeepSeek Harness dsh-media-desk Content Creation Open Source Workflow 为什么要给创作流程单独做一个工作台？ 技术",
+      "score": 0.7518843
+    },
+    {
+      "article_id": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
+      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
+      "url": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
+      "language": "zh",
+      "excerpt": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺 Higgsfield 将旗下 K-pop 机甲 AI 短片系列《ZEPHYR: Special》的完整制作过程全部开源：所有提示词、角色资产、失败镜头、最终剪辑版本，共 197 个资产公开发布于平台上，任何人都可以直接进入 Cinema Studio 查看和复用。主创团队披露了两个「不可能镜头」的实现方法：倒置角色参考图技巧和锚点式最小提示词策略。底层模型是 Seedance 2.5，结合 Higgsfield Soul 2 进行角色和服装设计，再用",
+      "score": 0.54364216
+    },
+    {
+      "article_id": "dsh-web-deepseek-harness-web-plugin-sidebar-all-in-one",
+      "title": "dsh-web-deepseek-harness-web-plugin-sidebar-all-in-one",
+      "url": "/blog/dsh-web-deepseek-harness-web-plugin-sidebar-all-in-one/",
+      "language": "en",
+      "excerpt": "dsh-web-deepseek-harness-web-plugin-sidebar-all-in-one dsh-web is the plugin ecosystem bundle for DeepSeek Harness (DSH) Web GUI. One command installs: task board with cron scheduling, mobile remote control, SSH ops terminal, image understanding, skins, Git graph, LiangShen mode,",
+      "score": 0.52855164
+    },
+    {
+      "article_id": "cheese-paper-creative-writing-editor",
+      "title": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布",
+      "url": "/blog/cheese-paper-creative-writing-editor/",
+      "language": "zh",
+      "excerpt": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布 Cheese Paper 是一款专为小说创作设计的离线开源编辑器，场景管理、角色卡、世界观数据库三合一，文件格式采用 Markdown+TOML，兼容任意文本编辑器和同步工具。GPLv3，无订阅，无遥测。v1.0.0 于 2026-05-30 发布，已上架 Flathub。 创意写作 文本编辑器 小说 开源 离线优先 Markdown 写作工具 GPLv3 Cheese Paper 核心设计：笔记和稿件并排可见 文件格式：Markdown + TOML，不绑",
+      "score": 0.5255816
+    },
+    {
+      "article_id": "xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills",
+      "title": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过",
+      "url": "/blog/xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills/",
+      "language": "zh",
+      "excerpt": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过 B1lli/xhs-favorites-distiller，Apache 2.0，Python 3.10+，把小红书（或微信）收藏里的方法蒸馏成可安装的 Agent skill。核心机制：价值筛选 + 消融测试 + 自然触发验证，未经证实的候选不进入宿主发现目录。消融实验显示去掉「自然触发」要求后，3/3 案例出现提前激活；全流程测试 24/24 正确通过。 open-source agent-skills xiaohongshu ",
+      "score": 0.51971406
+    },
+    {
+      "article_id": "dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem",
+      "title": "dsh-tui-pi：DeepSeek Harness 的社区 TUI 生态，把编码 Agent 终端做成了 pi 风格",
+      "url": "/blog/dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem/",
+      "language": "zh",
+      "excerpt": "dsh-tui-pi：DeepSeek Harness 的社区 TUI 生态，把编码 Agent 终端做成了 pi 风格 DeepSeek Harness (dsh) 是 DeepSeek 的编码 Agent 运行时，类比 Claude Code。dsh-tui-pi 是社区构建的 pi 风格 TUI 插件套件，提供实时子 Agent 监控、历史回溯与分叉、飞书手机遥控、动态上下文裁剪、MCP 适配器等 15+ 功能，以及 8 个配套插件。 AI DeepSeek TUI Terminal Agent 编码Agent 插件 开源 dsh MCP 先说 d",
+      "score": 0.5184589
+    },
+    {
+      "article_id": "nature-skills-yuan1z0825-academic-paper-skill-collection",
+      "title": "nature-skills：学术论文全流程 18 个 AI Skill，两个月 3.4 万星",
+      "url": "/blog/nature-skills-yuan1z0825-academic-paper-skill-collection/",
+      "language": "zh",
+      "excerpt": "nature-skills：学术论文全流程 18 个 AI Skill，两个月 3.4 万星 袁一哲（Yuan1z0825）发起、开源社区共同维护的 Nature 级学术论文 AI Skill 合集，18 个技能覆盖图表、润色、写作、投稿、审稿回复、引用核验、数据管理、PPT、专利转化、文献检索全链路，Apache 2.0，发布两个月 GitHub 3.4 万星。npx skills add Yuan1z0825/nature-skills 一键安装，支持 Claude Code / Codex / OpenClaw / OpenCode / Herme",
+      "score": 0.51442504
+    },
+    {
+      "article_id": "easel-open-source-social-media-agent-workbench",
+      "title": "Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布",
+      "url": "/blog/easel-open-source-social-media-agent-workbench/",
+      "language": "zh",
+      "excerpt": "Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布 浙大 REAL Lab + 北大 OpenDCAI Lab 开源的社媒创作 Agent：基于 OpenClaw，112 个 Skill 分六层（基础/发现/策划/创作/发布/归因），Python CLI + Web 工作台，支持小红书/抖音/快手/知乎/B站/视频号六平台登录发布。账号画像六维持久化，越用越懂账号。Apache-2.0，187 star，两周新。 AI Agent 开源 内容创作 自动化 小红书 OpenClaw Python 工作流 多平台 B",
+      "score": 0.5132536
+    },
+    {
+      "article_id": "awesome-short-drama-skills-guide",
+      "title": "Awesome Short Drama Skills：83 个短剧技能项目怎么选？",
+      "url": "/blog/awesome-short-drama-skills-guide/",
+      "language": "zh",
+      "excerpt": "Awesome Short Drama Skills：83 个短剧技能项目怎么选？ Awesome Short Drama Skills 按创作阶段、视频模型和智能体整理短剧工具，附带选型助手与公开盲评。本文核查其83个技能项目、16个平台和CC0许可范围，复核两轮评测的文件指纹与提示词记录，说明如何从改编、剧本、分镜走到视频生成，以及安装范围、商用授权、成本和评测结论的实际边界。 Agent Skills AI Video Short Drama Open Source Creative Workflow 83 个项目，究竟收录了什么？ 一条安装命令，",
+      "score": 0.50836825
+    },
+    {
+      "article_id": "storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard",
+      "title": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4",
+      "url": "/blog/storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard/",
+      "language": "zh",
+      "excerpt": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4 xiaozhang-art/storyflow-ai 开源，Multi-Agent 漫剧自动生成平台，7 步 Agent 流水线（剧本→角色→分镜→图片/配音并行→图生视频→合成），含 Director 决策引擎、断点续传、Montage 渲染引擎，Docker Compose 一键部署。 multi-agent video generation AI open source comic LLM FastAPI Docker 一段文字进去，一部漫剧出来 7 个 Age",
+      "score": 0.5055881
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-10T15:52:59.510156+00:00",
+  "articles": [
+    {
+      "slug": "dsh-media-desk-creator-workbench-guide",
+      "url": "https://blog.mushroom.cv/blog/dsh-media-desk-creator-workbench-guide/",
+      "title": "DSH自媒体工作台：从灵感成稿到复盘，代码怎样串起来？",
+      "listRank": 2,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/dsh-media-desk-creator-workbench-guide-banner.CgKTpvav.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 80414
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/dsh-media-desk-creator-workbench-guide-banner.CgKTpvav_D8YJT.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 16198
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/dsh-media-desk-creator-workbench-guide-fig-01.B0Tlkk8y_1fMAhi.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 40624
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/dsh-media-desk-creator-workbench-guide-fig-02.DdCIZ9cs_ZnQ8o3.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 41408
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/dsh-media-desk-creator-workbench-guide-fig-03.DNuSF66S_Z7gtDS.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 37444
+        }
+      ]
+    }
+  ]
+}

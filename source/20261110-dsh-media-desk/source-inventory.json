@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-10",
+  "repo": "https://github.com/woniuniuniu/dsh-media-desk",
+  "commit": "fc237f3388d048f51c3145cfd411dbb80ba2b388",
+  "license": "MIT",
+  "starsSnapshot": 891,
+  "sourceVersion": "2.6.2",
+  "npmVersion": "2.6.2",
+  "npmIntegrity": "sha512-r+1GPY1CQaG1zd92ayZNZH4Xsfl4l6U0cMhmIlUpqbQXhNNxQtr/1/5XyHDoAdjKclfn+qcB17e7UGpIMWPVZw==",
+  "hostRange": ">=0.2.1-rc.5 <0.3.0",
+  "authorReportedHostTest": "0.2.2-rc.1 desktop and web; not reproduced here",
+  "reviewed": [
+    "README.md",
+    "package.json",
+    "cordis.patch.yml",
+    "src/host.js",
+    "src/store.js",
+    "src/settings.js",
+    "src/produce.js",
+    "src/images.js",
+    "src/image-tool.js",
+    "src/learn.js",
+    "client/related.js"
+  ],
+  "banner": "Official typography/UI and bundled artwork considered; FLUX8391 rejected manually for tiny pseudoletters despite OCR pass. Final FLUX8392 blank storyboard cards/microphone cover passed machine and manual inspection."
+}
