@@ -1,0 +1,35 @@
+{
+  "agentReach": "Skill and executable not found at available skill locations; used user-permitted Jina Reader fallback.",
+  "sourcePages": {
+    "blog": "direct200 and Jina200",
+    "product": "direct200 and Jina200"
+  },
+  "imageCdnAttempts": "4 URLs returned403; downloaded pinned repository original PNG counterparts through clone instead. Official blog header also downloaded successfully.",
+  "savedImages": [
+    {
+      "path": "/Users/jason/.heinu1-bot/media/nod-hero-20261110.png",
+      "source": "https://github.com/n8n-io/nod/blob/e91aea2b9bc5c3e78640f87064f44a1b907859ec/docs/src/assets/landing/hero-collage.png",
+      "bytes": 1604045
+    },
+    {
+      "path": "/Users/jason/.heinu1-bot/media/nod-brief-20261110.png",
+      "source": "https://github.com/n8n-io/nod/blob/e91aea2b9bc5c3e78640f87064f44a1b907859ec/docs/src/assets/landing/brief-collage.png",
+      "bytes": 1508593
+    },
+    {
+      "path": "/Users/jason/.heinu1-bot/media/nod-reply-20261110.png",
+      "source": "https://github.com/n8n-io/nod/blob/e91aea2b9bc5c3e78640f87064f44a1b907859ec/docs/src/assets/landing/reply-collage.png",
+      "bytes": 1753277
+    },
+    {
+      "path": "/Users/jason/.heinu1-bot/media/nod-watch-20261110.png",
+      "source": "https://github.com/n8n-io/nod/blob/e91aea2b9bc5c3e78640f87064f44a1b907859ec/docs/src/assets/landing/watch-collage.png",
+      "bytes": 1742420
+    },
+    {
+      "path": "/Users/jason/.heinu1-bot/media/nod-official-header-20261110.png",
+      "source": "https://storage.ghost.io/c/0d/78/0d78b34c-0c5f-4975-900e-61d00ccb1c2d/content/images/size/w1200/2026/11/nod-header-2x-1.png",
+      "bytes": 106849
+    }
+  ]
+}

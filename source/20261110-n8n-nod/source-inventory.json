@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-10",
+  "repository": "https://github.com/n8n-io/nod",
+  "commit": "e91aea2b9bc5c3e78640f87064f44a1b907859ec",
+  "license": "Apache-2.0",
+  "starsSnapshot": 13,
+  "rootPackageVersion": "0.1.0",
+  "desktopPackageVersion": "0.6.1",
+  "sources": [
+    "https://blog.n8n.io/meet-nod/",
+    "https://nod.n8n.io/",
+    "https://nod.n8n.io/docs/how-it-works/architecture/",
+    "https://nod.n8n.io/docs/trust/privacy/",
+    "https://nod.n8n.io/docs/use/spending/",
+    "https://nod.n8n.io/docs/connect/local-models/"
+  ],
+  "banner": "Adopted official landing hero paper-collage photograph from pinned repository, downloaded to media; typography-only official blog header rejected as cover. Machine and manual verification."
+}

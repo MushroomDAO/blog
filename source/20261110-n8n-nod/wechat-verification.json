@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-10T15:12:51.117Z",
+  "drafts": [
+    {
+      "slug": "n8n-nod-local-personal-agent-engineering-guide",
+      "mediaId": "prCUE631thH1cmNLi42prKUHQGElZB63AU4TZVvXCZ4dZ7eVTizB-oC91dw_ILcd",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "a248e62f87a02a01acb7684be776fe596caeae617aed9c6edfdb722ec300dd39",
+      "remoteTextHash": "a248e62f87a02a01acb7684be776fe596caeae617aed9c6edfdb722ec300dd39",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/n8n-nod-local-personal-agent-engineering-guide/",
+      "localContentHash": "83ed2bc65afc2477c699545c51d17a9199fcfea5bd09e77c93fb9816955911ce",
+      "remoteContentHash": "a1abba8f6e6706ef266323f78be6d630f1c13f2879605bccd5415d7f443ab26f"
+    }
+  ]
+}
