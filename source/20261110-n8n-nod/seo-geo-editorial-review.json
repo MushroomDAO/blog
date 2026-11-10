@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-10",
+  "SEO": {
+    "englishSlug": true,
+    "bilingualMetadata": true,
+    "descriptions150to160": true,
+    "titleUnder60": true,
+    "ISOdates": true,
+    "categoryTags": true,
+    "templateH1Only": true,
+    "questionsAndFAQ": true,
+    "officialSources": true,
+    "relatedInternalArticle": true,
+    "bilingualAltText": true,
+    "WeChatTitleDigest": true
+  },
+  "GEO": {
+    "BLUF": true,
+    "namedEntities": true,
+    "pinnedSource": true,
+    "datedPreview": true,
+    "architectureAndComparisonTables": true,
+    "firstPartyBenchmarksLabelled": true,
+    "simulationAndMemoryScoresSeparated": true,
+    "ownOfflineChecksScoped": true,
+    "setupCommandsNotExecutedLabelled": true,
+    "privacyAndSpendDefaultsExplicit": true
+  },
+  "imageVerification": "Adopted official banner and three Little M images manually and mechanically verified."
+}

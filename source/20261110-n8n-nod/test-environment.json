@@ -1,0 +1,8 @@
+{
+  "node": "26.10.0",
+  "zod": "4.6.7",
+  "typescript": "6.0.3",
+  "method": "Native Node strip-types for upstream trust-jev.test.ts with only declared zod linked in temporary checkout; TypeScript6.0.3 added for upstream architecture checker. No complete dependency install or application start.",
+  "result": "16 pass,0fail,0skip plus architecture pass",
+  "scope": "Mock provider responses; no live model, connected app, real recipient, DB, browser, VM or Docker operation. Initial architecture check lacked TypeScript; dependency added before successful rerun."
+}

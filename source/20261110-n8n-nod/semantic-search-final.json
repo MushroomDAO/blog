@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "n8n-nod-local-personal-agent-engineering-guide",
+      "title": "n8n Nod：开源个人Agent的架构、记忆与使用指南",
+      "url": "/blog/n8n-nod-local-personal-agent-engineering-guide/",
+      "language": "zh",
+      "excerpt": "n8n Nod：开源个人Agent的架构、记忆与使用指南 Nod 是 n8n Labs 开源的独立个人智能体，在本机工作区和浏览器中执行任务。本文核对官方源码、安装文档与评测口径，介绍 Pi、PostgreSQL、任务调度、授权检查和长期记忆，解释本地存储与外部模型、连接服务及遥测的区别，并给出桌面与源码安装步骤、费用边界和低风险试用方法，帮助判断它是否适合个人日常工作。 Nod n8n AI Agents Self Hosting Computer Use Open Source 它和 n8n、普通聊天助手有什么区别？ “运行在电脑上”，到底有哪些组件",
+      "score": 0.7912316
+    },
+    {
+      "article_id": "agent-customer-service-architecture-teardown-review",
+      "title": "Dissecting a Deployed Customer-Service Agent Project: Concept Map, Logic Chain, and Engineering Judgment",
+      "url": "/blog/agent-customer-service-architecture-teardown-review/",
+      "language": "en",
+      "excerpt": "Dissecting a Deployed Customer-Service Agent Project: Concept Map, Logic Chain, and Engineering Judgment Reading notes on a desensitized customer-service Agent teardown from a WeChat post — concept map, control-flow synthesis, and engineering judgment: how to build this loop in n",
+      "score": 0.6561501
+    },
+    {
+      "article_id": "pi-agent-extension-design",
+      "title": "这个开源 Agent 框架的核心设计，可能是目前最「聪明」的取舍",
+      "url": "/blog/pi-agent-extension-design/",
+      "language": "zh",
+      "excerpt": "这个开源 Agent 框架的核心设计，可能是目前最「聪明」的取舍 Pi Agent（badlogic/pi-mono）的扩展系统从架构第一天起就作为一等公民存在：核心只做最必要的事，剩下的全部交给扩展。转载自潘智祥。 AI Agent 开源框架 Pi Agent 架构设计 TypeScript 扩展系统 一、一个极度克制的核心 二、扩展的两种「能力形态」 三、用具体场景感受一下 四、和别的框架比，区别在哪 五、适合谁，可能不适合谁 六、一句话总结",
+      "score": 0.65191185
+    },
+    {
+      "article_id": "nerve-clickhouse-self-hosted-claude-agent-sdk-runtime",
+      "title": "ClickHouse 官方出品 Nerve：基于 Claude Agent SDK 的自托管 Agent 运行时",
+      "url": "/blog/nerve-clickhouse-self-hosted-claude-agent-sdk-runtime/",
+      "language": "zh",
+      "excerpt": "ClickHouse 官方出品 Nerve：基于 Claude Agent SDK 的自托管 Agent 运行时 调研 ClickHouse 官方开源的 Nerve：基于 Claude Agent SDK 的自托管 Agent 运行时，单进程零运维（能跑在树莓派上），双层记忆（热记忆+语义深记忆），Skill 自我提炼与修订，Gmail/GitHub/Telegram 统一收件箱。个人模式（Personal）养成有个性的生活助手，Worker 模式给一句英文任务描述就自配置成专职工作 Agent。可直接用 Claude Max/Pro 订阅，不需要额外 ",
+      "score": 0.6421793
+    },
+    {
+      "article_id": "agency-agents-opensource-multi-model",
+      "title": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构",
+      "url": "/blog/agency-agents-opensource-multi-model/",
+      "language": "zh",
+      "excerpt": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构 深度解析 msitarzewski/agency-agents：9个部门、50+专业AI角色，从前端巫师到安全审计员，直接集成 Claude Code、Cursor、Copilot，将AI从「通用助理」升级为「专业协作网」。 Agency Agents AI Agent 开源 Claude Code Cursor Copilot 提示词工程 多角色协作 GitHub 1. 核心理念：从「提示词」到「智能体」 2. 组织架构与规模 3. 深度集成与应用",
+      "score": 0.6415605
+    },
+    {
+      "article_id": "omni-open-source-company-ai-agent-permission-aware",
+      "title": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么",
+      "url": "/blog/omni-open-source-company-ai-agent-permission-aware/",
+      "language": "zh",
+      "excerpt": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么 调研自托管开源公司级 AI Agent Omni：接入 Google Drive、Gmail、Slack、Confluence、Jira、HubSpot 等企业常用工具，核心设计是「权限感知的公司上下文」——索引信息的可见范围严格继承自源系统的权限，不会因为被索引过就绕开原本的访问控制。混合检索（BM25全文+pgvector语义）全部收在一个 Postgres 里，不需要额外的 Elasticsearch 或专用向量库。沙箱代码执行走隔离 Docker 网络+只读根文件系统",
+      "score": 0.6319402
+    },
+    {
+      "article_id": "agent-network-anet-multi-runtime-agent-hub-fake-success-trap",
+      "title": "Agent Network 调研：不做又一个 Agent 平台，只做跨厂商 Agent 的通信层",
+      "url": "/blog/agent-network-anet-multi-runtime-agent-hub-fake-success-trap/",
+      "language": "zh",
+      "excerpt": "Agent Network 调研：不做又一个 Agent 平台，只做跨厂商 Agent 的通信层 调研 sleep2agi/agent-network：把 Claude Code、Claude Agent SDK、Codex、Grok Build 接进同一张网络，靠 MCP 互相发现、靠 SSE 实时派活。跟本站已写过的 Multica（看板+技能复利）、Omni（企业知识权限）、Nerve（Claude Agent SDK 运行时）不是同类——它不提供看板、不提供知识库，只做薄薄一层跨厂商通信协议。文章重点拆了一个真实的生产陷阱：`anet node ",
+      "score": 0.62707335
+    },
+    {
+      "article_id": "treg-openrouter-agent-tools-unified-api-credential-proxy",
+      "title": "treg：Agent 工具的 OpenRouter，一个入口调用 2850+ 个真实世界 API",
+      "url": "/blog/treg-openrouter-agent-tools-unified-api-credential-proxy/",
+      "language": "zh",
+      "excerpt": "treg：Agent 工具的 OpenRouter，一个入口调用 2850+ 个真实世界 API Superdesign 团队开源 treg——「OpenRouter for Agent Tools」。一个 token、一个入口，访问约 57 家数据服务商的 2850+ 个接口，覆盖 SEO 外链、社交趋势、人员/公司信息、广告、抓取等。按次计费（最低几分钱），无需注册供应商账号。同时支持团队自有 API Key 共享，让所有人的 Agent 都能使用同一套已有能力，而无需把密钥交出去。Apache 2.0，可自托管。 开源 Agent工具 API代理 ",
+      "score": 0.6263117
+    },
+    {
+      "article_id": "anthropic-commerce-agents-shopping-merchant-business-blueprint",
+      "title": "Anthropic 开源商业 Agent 蓝图：用 Claude 为你的业务场景构建自己的 Agent",
+      "url": "/blog/anthropic-commerce-agents-shopping-merchant-business-blueprint/",
+      "language": "zh",
+      "excerpt": "Anthropic 开源商业 Agent 蓝图：用 Claude 为你的业务场景构建自己的 Agent anthropics/commerce-agents 是 Anthropic 发布的商业 Agent 参考架构，定义了购物 Agent 和商户 Agent 两个角色、三种运行路径（Messages API / Agent SDK / Managed Agents）、四个行业示例。本文拆解其核心设计，并提供从零开始构建自己业务场景 Agent 的实操指南。 AI Agent Claude Anthropic 商业Agent 电商 开源 Blueprint",
+      "score": 0.6254479
+    },
+    {
+      "article_id": "multica-open-source-managed-agents-platform-design-patterns",
+      "title": "Multica：4.1 万 Star 的开源 Agent 团队基础设施，五个最值得借鉴的设计模式",
+      "url": "/blog/multica-open-source-managed-agents-platform-design-patterns/",
+      "language": "zh",
+      "excerpt": "Multica：4.1 万 Star 的开源 Agent 团队基础设施，五个最值得借鉴的设计模式 Multica 把编程 Agent 变成真正的队友：在看板上分配任务、自主接手执行、报告阻塞、积累可复用技能。4.1 万 Stars，Go + Next.js，支持 14 种 Agent CLI，可自托管。本文拆解五个最值得借鉴的架构设计——以及一个值得关注的本地优先替代思路。 Multi-Agent Agent团队协作 开源基础设施 Claude Code Codex Go 看板 任务编排 可复用技能 自托管 一句话理解 五个最值得借鉴的设计模式 模式一：",
+      "score": 0.6254454
+    }
+  ]
+}
