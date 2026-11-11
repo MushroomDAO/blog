@@ -1332,3 +1332,11 @@ Manning产品页直接链接designing-ai-systems/designing_ai_systems_repo，固
 - Distinguish product source-time permission claim from inspected local policy/ACL code; connector, identity mapping and revocation behavior require actual acceptance tests.
 - Blog https://blog.mushroom.cv/blog/openarch-enterprise-ai-data-permissions-guide/ 200, list5/carousel1, five image variants200. Final matching FLUX8401 cover and3LittleMfigs verified.
 - Remote WeChat draft prCUE631thH1cmNLi42prNcLAN9z2L1MMhMO5djr64QREfKqlG1M22wO8jwQs_cn full text/3images/cover/metadata verified; no masssend. Semantic2readback+publicquery verified after propagation; KB3rows URL/media/semantic verified. Original incoming KBrow4802 is material, not a duplicate publication. Published API48001 remains a read gap.
+
+## 2026-11-11 Jane Street agent_skills — published and verified
+
+- Pinned janestreet/agent_skills 7c6715c29548a3b39d4a9545c698ee4fd17a7213. MIT; one skill socratic-tutor,102lines/5243bytes. Not trading strategies, app, model weights or training framework.
+- Distinct editorial value: activation guard,3-5diagnosticquestions,4-10subskills0-5, independent evidence and recall before promotion, default4/fullmastery5, final mixed assessment, manualsave/resume. Distinguish model-dependent prompts from enforced runtime, timed reviews and persistence.
+- Original execution: SQLite author-designed NOTIN/NULL vs NOTEXISTS/nullfilteredNOTIN example; results empty vs2/3 vs2/3 for the supplied nonnullcustomerIDs. No LLM tutoring session/efficacy benchmark or skill installation/configuration change.
+- Blog https://blog.mushroom.cv/blog/jane-street-socratic-tutor-agent-skills-guide/ 200/list1/carousel1,5imagevariants200. FLUX8411 cover and3LittleMfigs verified; SEO/GEO,lint,build passed.
+- Remote WeChat prCUE631thH1cmNLi42prIkkFIsqUEBzngxQcfbXdH2Fcq0X0ZIKtX3I6uTFW2Xj fulltext/3images/cover/metadata verified. Semantic2records readback and publicquery verified after propagation; KB4rows URL/media/semantic verified. IncomingKBrow4806 belongs to this job, not prior publication. PublishedAPI48001 read gap documented. No masssend.

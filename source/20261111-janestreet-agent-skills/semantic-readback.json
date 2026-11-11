@@ -1,0 +1,38 @@
+[
+  {
+    "id": "6e8b43d2ddef09b89d657c89d3c2ce399bf5074b9d9e96cd",
+    "metadata": {
+      "article_id": "jane-street-socratic-tutor-agent-skills-guide",
+      "content_hash": "0a98b1e04d8a0774",
+      "excerpt": "Jane Street的Agent Skills：让AI提问，检验你是否真懂 Jane Street开源的agent_skills目前包含一个苏格拉底教学技能，以诊断、技能地图、独立回忆和综合考核来组织AI辅导。本文拆解102行指令中的升级标准、错误回退、复习和状态交接，并用实际执行的SQL反连接案例说明如何核验理解，同时区分提示词约束、自动记忆与真正的学习效果，为开发者提供可操作的使用建议。 Jane Street Agent Skills 苏格拉底教学 AI学习 开源 这一个 Skill，怎样改变聊天方式？ 教学流程有哪些具体约束？ 0—5级，究竟在",
+      "language": "zh",
+      "tags": [
+        "Jane Street",
+        "Agent Skills",
+        "苏格拉底教学",
+        "AI学习",
+        "开源"
+      ],
+      "title": "Jane Street的Agent Skills：让AI提问，检验你是否真懂",
+      "url": "/blog/jane-street-socratic-tutor-agent-skills-guide/"
+    }
+  },
+  {
+    "id": "3f477c87fb2c8f54ddf58f1fca89e6d38ed876e6093d3da3",
+    "metadata": {
+      "article_id": "jane-street-socratic-tutor-agent-skills-guide",
+      "content_hash": "07b59a41411183c4",
+      "excerpt": "Jane Street Agent Skills: A Strict Socratic Tutor Explore Jane Street agent_skills and its Socratic tutor: diagnosis, recall checks, skill maps, manual state transfer, and a reproducible SQL learning example. Jane Street Agent Skills 苏格拉底教学 AI学习 开源 What does this Skill change? Wh",
+      "language": "en",
+      "tags": [
+        "Jane Street",
+        "Agent Skills",
+        "苏格拉底教学",
+        "AI学习",
+        "开源"
+      ],
+      "title": "Jane Street Agent Skills: A Strict Socratic Tutor",
+      "url": "/blog/jane-street-socratic-tutor-agent-skills-guide/"
+    }
+  }
+]

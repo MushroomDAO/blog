@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-11T05:02:20.687Z",
+  "drafts": [
+    {
+      "slug": "jane-street-socratic-tutor-agent-skills-guide",
+      "mediaId": "prCUE631thH1cmNLi42prIkkFIsqUEBzngxQcfbXdH2Fcq0X0ZIKtX3I6uTFW2Xj",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "551e05ffbd9bddce9177aede20c4a38abaf2a80a7f70387cd96da822c5643f65",
+      "remoteTextHash": "551e05ffbd9bddce9177aede20c4a38abaf2a80a7f70387cd96da822c5643f65",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/jane-street-socratic-tutor-agent-skills-guide/",
+      "localContentHash": "9ffe79c0362d113a3ce6df09c62a9d0875207eb96ac46f5f3db9c51b8465f6cc",
+      "remoteContentHash": "e49fa6a82191ebfd76634dc872ce49bb503aacda387669c2aaad1e3979f8c349"
+    }
+  ]
+}
