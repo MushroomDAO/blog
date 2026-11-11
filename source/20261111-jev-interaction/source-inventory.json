@@ -1,0 +1,19 @@
+{
+  "source": "https://github.com/native-bond-lab/Jev-Interaction",
+  "inputOrganizationUrl": "https://github.com/native-bond-lab",
+  "commit": "a86adc321ffb1d8248a412875769439e08a3f079",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "saved_files": [
+    "/Users/jason/.heinu1-bot/media/jev-interaction-architecture-20261111.svg",
+    "/Users/jason/.heinu1-bot/media/jev-interaction-interruptions-20261111.png"
+  ],
+  "agentReachSkill": "Local saved skill read; native public-web first per its routing rule; CLI unavailable, doctor not executable",
+  "tests": "10 passed, fake Judge/ASR/LLM/VAD, no live voice providers or benchmarks rerun",
+  "checkedAt": "2026-11-11T16:34:33.081591+00:00",
+  "readerResults": {
+    "organizationReaderBytes": 8711,
+    "repositoryReaderBytes": 36944,
+    "backend": "Jina Reader"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-11T16:41:06.420Z",
+  "drafts": [
+    {
+      "slug": "jev-interaction-full-duplex-voice-decisions",
+      "mediaId": "prCUE631thH1cmNLi42prD11YLp3_8ZqdN97G_SJhUTlSmom3QigpcpZiqNGVIxn",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "d96896a4e902d31323f0a7a39b7f5346541ec9235d6e8296db13c278f3ee2142",
+      "remoteTextHash": "d96896a4e902d31323f0a7a39b7f5346541ec9235d6e8296db13c278f3ee2142",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/jev-interaction-full-duplex-voice-decisions/",
+      "localContentHash": "31b108d383bbd40464dab2aafd713988b23dd95f10e925c11410a9fc8073852e",
+      "remoteContentHash": "fa2249d60bdef9ead5284ece6d1c7b9dbc00dd42a5d4189fa2a9fab86c391711"
+    }
+  ]
+}

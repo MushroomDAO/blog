@@ -1,0 +1,11 @@
+=== [banner-creator] done: src/assets/images/jev-interaction-full-duplex-voice-decisions-banner.jpg (1200x630, 93482B) ===
+=== [verify-banner] src/assets/images/jev-interaction-full-duplex-voice-decisions-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=8512 steps=16
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 93482B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/jev-interaction-full-duplex-voice-decisions-banner.jpg ===
+PATH: src/assets/images/jev-interaction-full-duplex-voice-decisions-banner.jpg

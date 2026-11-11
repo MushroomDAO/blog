@@ -543,3 +543,5 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - SEO/GEO、最终FLUX89合格音频/鼠标工作台封面+3小M图、Blog200列表首页第9/4图200、M2draft/get标题封面3图正文一致、zh/en索引upsertTrue/freshquery第1分0.7883247、项目记忆与MemPalaceSQLite0→2核验全部完成。首seed87视觉品牌形状不合格已弃用，最终89无文字/人脸且视觉验收；只用ImageMagick压图。证据source/20261011-vorssaint-utils/。
 
 - 2026-11-11 write: Sherlock / sherlock-username-search-evidence-guide. Nine synthetic local HTTP checks passed: generic login can be a false positive, unrecognized 403/429 can look absent. No real social account scanning or accuracy/performance benchmark. Incoming daily star gain and trending rank not independently verifiable. Official repository stars approximately 109.8K; MIT.
+
+- 2026-11-11 write: Jev-Interaction / jev-interaction-full-duplex-voice-decisions. Apache-2.0 Alpha controller; default external Jev/ASR/LLM/TTS distinguished from bundled weights or offline stack. Ten upstream fake-adapter tests passed, no live call or latency/benchmark reproduction. Harness-only benchmark knobs distinguished from deployed engine. Organization and repo text fetched through Jina Reader; two official images saved to bot media.

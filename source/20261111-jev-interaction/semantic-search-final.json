@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "jev-interaction-full-duplex-voice-decisions",
+      "title": "Jev-Interaction：把全双工语音的接话与让话写成决策",
+      "url": "/blog/jev-interaction-full-duplex-voice-decisions/",
+      "language": "zh",
+      "excerpt": "Jev-Interaction：把全双工语音的接话与让话写成决策 Jev-Interaction 把语音助手何时接话、等待、应声和让话拆成可修改的自然语言决策，再以概率和策略驱动交互。本文核对 Apache-2.0 开源框架、外部 Jev 与语音服务依赖、任务配置和事件链路，实跑十项模拟测试，并解释作者基准、评测脚本调参与实际引擎之间的边界，给出从本地演示到产品验证的工程使用路线。 Jev-Interaction 语音智能体 全双工 开源框架 工程实践 Jev-Interaction 解决了什么问题？ 五类决策怎样变成对话动作？ 从麦克风到播放，实际依赖",
+      "score": 0.8151126
+    },
+    {
+      "article_id": "conversationalvoice-averalabs-full-duplex-training-data-pipeline",
+      "title": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线",
+      "url": "/blog/conversationalvoice-averalabs-full-duplex-training-data-pipeline/",
+      "language": "zh",
+      "excerpt": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线 avera-labs/ConversationalVoice，51 stars，BSL 1.1 许可证（非生产免费，生产环境商用需授权，4年后转 MIT）。AveraLabs 出品，配套 arXiv 2609.08147 论文。一条 9 阶段 Celery 流水线，将真实双人录音自动转成全双工语音模型训练数据，每段对话产出三类数据：分离 / 重建 / 扩写。内部使用 DialogueSidon（说话人分离）、Qwen3-ASR（转写）、Qwen3-TTS（语音合成）。",
+      "score": 0.60423756
+    },
+    {
+      "article_id": "nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent",
+      "title": "NVIDIA VoiceChat 11B：第一个支持工具调用的开源全双工语音 Agent",
+      "url": "/blog/nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent/",
+      "language": "zh",
+      "excerpt": "NVIDIA VoiceChat 11B：第一个支持工具调用的开源全双工语音 Agent NVIDIA NemotronLabs 开源的 11B 端到端全双工语音模型，2026-08-03 发布，OpenMDW 1.1 研究许可。统一架构同时完成流式语音理解和语音生成，转轮延迟约 450ms，VoiceBench #2（开源全双工），史上第一个支持工具调用的开源全双工模型——边说话边触发工具，工具执行期间模型自动播放占位语音保持对话流畅。 语音AI 全双工 工具调用 NVIDIA VoiceAgent 实时语音 Mycelium 核心指标 架构：四个模块",
+      "score": 0.59866923
+    },
+    {
+      "article_id": "ai-speech-six-frontiers-open-source",
+      "title": "语音 AI 六大方向：开源模型、工程方案与可复现课题地图",
+      "url": "/blog/ai-speech-six-frontiers-open-source/",
+      "language": "zh",
+      "excerpt": "语音 AI 六大方向：开源模型、工程方案与可复现课题地图 梳理语音AI六大方向：全双工对话、语音大模型、直接语音理解、实时端侧推理、情感合成与音色克隆、多语种噪声鲁棒性。依据官方模型卡与仓库，比较Moshi、PersonaPlex、Qwen、SenseVoice等模型与LiveKit、Pipecat、Sherpa-ONNX等工程方案，给出许可边界、硬件选择、评测指标与课题。 语音AI 全双工 开源模型 流式推理 情感语音 多语种 六个方向先看哪些开源起点？ 一、全双工：能边听边说，是否一定要端到端？ 二、语音大模型：token 化之后，还有哪些问题？ 三",
+      "score": 0.5982238
+    },
+    {
+      "article_id": "jevembed-embedding-decision-framework-choice-score-noul",
+      "title": "JevEmbed：用 Embedding 做决策——Choice / Score / Noul 三合一框架，支持 LoRA 微调",
+      "url": "/blog/jevembed-embedding-decision-framework-choice-score-noul/",
+      "language": "zh",
+      "excerpt": "JevEmbed：用 Embedding 做决策——Choice / Score / Noul 三合一框架，支持 LoRA 微调 JevEmbed，HITsz-TMG 出品，Python。用 Embedding 模型做三类决策：Choice（选择）、Score（评分）、Noul（判断），同一套框架，兼容 KaLM、Qwen3-Embedding、E5 等模型。支持超 255 个候选项，提供 Python API + CLI + HTTP 服务。支持 LoRA 微调：KaLM 微调后准确率 30%→77%，Qwen3-0.6B 微调后 31%→84%。独立",
+      "score": 0.5959958
+    },
+    {
+      "article_id": "jev-chat-jarvis-android-chat-copilot-accessibility",
+      "title": "jev-chat-JARVIS：Android 聊天副驾驶，无障碍服务读屏 + Jev 判断模型分析意图",
+      "url": "/blog/jev-chat-jarvis-android-chat-copilot-accessibility/",
+      "language": "zh",
+      "excerpt": "jev-chat-JARVIS：Android 聊天副驾驶，无障碍服务读屏 + Jev 判断模型分析意图 jev-chat/jev-chat-jarvis，MIT，Kotlin，6,614 stars，5天内从零冲到 v1.4。通过 Android 无障碍服务读取屏幕聊天内容，调用 Jev 判断模型评估危险等级（1–9）和真实意图，生成 3 条候选回复，悬浮窗展示，一键填入输入框（绝不自动发送）。适配 QQ / X（Twitter）/ 飞书（ML Kit OCR 兜底）。最大隐藏限制：微信 Android 版已明确下架，无法突破截屏限制。 open-so",
+      "score": 0.5926878
+    },
+    {
+      "article_id": "mu-coding-agent-judgment-kernel-35-decision-points-hive",
+      "title": "mu（μ）：编程 Agent 的判断核，35 个决策点交给小模型，大模型只管写代码",
+      "url": "/blog/mu-coding-agent-judgment-kernel-35-decision-points-hive/",
+      "language": "zh",
+      "excerpt": "mu（μ）：编程 Agent 的判断核，35 个决策点交给小模型，大模型只管写代码 Qybaihe/mu，MIT，TypeScript，116 stars（3天）。编程 Agent 每轮有 35 个决策点，和编码无关：这段工具输出要不要进 context？这条命令危不危险？工作跑偏了吗？任务完成了吗？mu 把这些交给一个小、快的判断模型（Jev 或 322M 本地 Laya），大模型只处理实际编码。工具输出逐块判断进入 context，51% 的测试日志重复行无损折叠。Hive 多 Agent 系统里，judge 是发现共享的闸门。构建于 earendi",
+      "score": 0.5874432
+    },
+    {
+      "article_id": "jev-skill-agent-decision-9-skills-90-scenarios-openrouter",
+      "title": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查",
+      "url": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
+      "language": "zh",
+      "excerpt": "jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查 MIT，34 stars，今天刚开源。SKILL.md 格式，9 个专域 Skill 覆盖 90 个标注场景：分诊、文档证据、UI 操控、工具路由、代码审查等。需 OpenRouter API key 调 TypeSafe Jev，无本地权重。显式禁止无 key 时静默降级，只能做 agent simulation 且必须标注。 agent-skills jev decision-model routing claude-code open-s",
+      "score": 0.58643335
+    },
+    {
+      "article_id": "gpt-live-duplex-voice-customer-service-build-guide",
+      "title": "用 GPT-Live 构建全双工 AI 语音客服系统：从架构理解到落地实践",
+      "url": "/blog/gpt-live-duplex-voice-customer-service-build-guide/",
+      "language": "zh",
+      "excerpt": "用 GPT-Live 构建全双工 AI 语音客服系统：从架构理解到落地实践 解析 GPT-Live 全双工语音架构的核心创新——解耦「说话」与「思考」、WebRTC 传输、Go 异步引擎——并提供一套从技术选型到 System Prompt 设计的完整落地指南，帮你构建自己的 AI 语音客服或自动应答系统。 GPT-Live OpenAI Realtime API voice AI duplex AI客服 WebRTC 全双工 语音系统 build guide 先解决一个认知问题：为什么传统语音 AI 总感觉\"不自然\" GPT-Live 架构的三个核心创",
+      "score": 0.5841024
+    },
+    {
+      "article_id": "nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling",
+      "title": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出",
+      "url": "/blog/nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling/",
+      "language": "zh",
+      "excerpt": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出 NVIDIA NemotronLabs VoiceChat 11B（HF: nvidia/NVIDIA-NemotronLabs-VoiceChat-11B，442 likes，OpenMDW-1.1）是首个开源、全双工、支持工具调用的端到端语音对话模型。不是 ASR→LLM→TTS 的串联流水线，而是单一模型以 12.5 Hz（80ms/帧）同时输出文本、工具调用标记、声学编码三个通道。基于 Nemotron-",
+      "score": 0.5747801
+    }
+  ]
+}

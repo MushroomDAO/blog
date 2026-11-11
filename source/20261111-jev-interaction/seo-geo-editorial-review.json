@@ -1,0 +1,11 @@
+{
+  "BLUF": true,
+  "questionHeadings": true,
+  "FAQBothLanguages": true,
+  "verification": "10 upstream fake-adapter tests passed",
+  "modelWeights": "not bundled; external default services separated",
+  "benchmarks": "author-reported, harness-only knobs distinguished",
+  "costs": "author LM cost not whole call price",
+  "externalURLs": "plain text for WeChat",
+  "bannerVisualReview": "headphones, cable, amber stones represent conversation and pauses, no people or text"
+}

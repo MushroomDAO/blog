@@ -1,0 +1,1 @@
+Exact primary source and entity checked. Only current incoming KB material matched. No prior Blog, M2 receipt or remote draft. Published-list endpoint unavailable (48001); draft box readable. Proceeded with new original article flow.
