@@ -1,0 +1,21 @@
+{
+  "commit": "555801f15bd6db7878ab1ee81f0869cb7855b8e7",
+  "files": {
+    "README.md": "04d38fb670e20763b107c2363bc1c67664a8d48cf5c0e8fa7db242cbeb4cade6",
+    "pyproject.toml": "38635dfaf9bd539bb228976e81a77bb2ab9df811e66090c188e5b67be34aeb26",
+    "src/tokin/gateway.py": "5e75445dd8d768e5fa1aa528fca6375127271ffba5a36fd9a342d9ffba9a8a4b",
+    "src/tokin/session.py": "152689ecf91589dd934e6c7e084dd1fc16753a9c0d20971b7647b388b0dea161",
+    "src/tokin/rollout.py": "54f99c03863b9ff360773284077c024c36ee4b3e7252fb7ebdfd193884e489e6",
+    "src/tokin/server.py": "e571cae87d8372fe78a1a3f2eecba92f6e6c5fa9c514b60eea10ac2f4a714042",
+    "src/tokin/cli.py": "0b8894495a9febf6b96111d894833d28c51c2e609981392eec1e4bad0d147b6e",
+    "src/tokin/harness_apis/openai_chat.py": "793b838f0b52f5a896e94862fa4c6422495948dfb0505f1aaaac5e03e6ec24ca",
+    "src/tokin/inference_engines/sglang.py": "00f670bb9be9a1443b5cee2576ae5002df824baf887c375e6a78bb2c930f49a2",
+    "examples/pi_mimo_rl/generate.py": "294ae4c122cf4d2f376db683591a4ddb0c4d4d8d40b2b6bf52fea59e35078f24",
+    "examples/pi_mimo_rl/README.md": "35a1152632af140303e697f5c72c2cd365a329fc9dc8a8860ea5174424738688"
+  },
+  "license": "Apache-2.0",
+  "python": ">=3.12",
+  "PyPI": "0.1.0",
+  "blogFetchedHTTP": 200,
+  "runtimeScope": "mock engine actual HTTP, no real inference/training"
+}

@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "tokin-token-native-agent-rl-gateway-guide",
+      "title": "tokin：让Agent保留原始token轨迹，接入强化学习训练",
+      "url": "/blog/tokin-token-native-agent-rl-gateway-guide/",
+      "language": "zh",
+      "excerpt": "tokin：让Agent保留原始token轨迹，接入强化学习训练 tokin是连接Agent运行框架和SGLang的开源网关，保留多轮交互真实采样的token ID，导出可供强化学习使用的轨迹。本文核对v0.1.0发布包与源码，拆解TITO、会话树、loss mask和采集清理语义，结合真实tokenizer及HTTP测试说明接入边界，并区分作者训练成绩与网关自身的评估效果。 tokin Agent RL SGLang 强化学习 Token-In-Token-Out 为什么文字相同，训练用的 token 还会不同？ tokin 在架构中做什么？ 为什么会",
+      "score": 0.80250037
+    },
+    {
+      "article_id": "tmem-parametric-memory-agent-guide",
+      "title": "TMEM：给 Agent 装上「可学习的参数记忆」——阿里通义论文工程解析",
+      "url": "/blog/tmem-parametric-memory-agent-guide/",
+      "language": "zh",
+      "excerpt": "TMEM：给 Agent 装上「可学习的参数记忆」——阿里通义论文工程解析 阿里巴巴通义 Qwen 团队提出 TMEM，让 Agent 在单次会话内通过 Fast LoRA 直接把经验写进模型参数，不再只是「查」历史——而是真正「学会」了。本文拆解论文原理，并给出工程落地的实现思路。 Agent 参数记忆 Fast LoRA 阿里通义 自进化 LLM 强化学习 Qwen 长上下文 一句话讲清楚 TMEM 做了什么 为什么 prompt 记忆有根本性局限？ TMEM 的核心机制 三层记忆架构 记忆写入流程 SVD 初始化——让少步更新有效的关键 实验结果 ",
+      "score": 0.62867385
+    },
+    {
+      "article_id": "agent-lightning-microsoft-research-rl-framework-train-agents-real-harness",
+      "title": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习",
+      "url": "/blog/agent-lightning-microsoft-research-rl-framework-train-agents-real-harness/",
+      "language": "zh",
+      "excerpt": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习 microsoft/agent-lightning，MIT 开源，Python，18K stars。三个组件（Trainer/API Gateway/Rollout Controller），Agent 代码零改动，用真实工具链训练。Qwen3.5-9B 只用 6K 样本，SWE-bench Verified 从 41.8% 涨到 56.4%（+14.6pp）。支持 AutoGen、LangChain、OpenAI Agents SDK 及任意",
+      "score": 0.6220828
+    },
+    {
+      "article_id": "agent-recursive-self-learning-agentoptimizer-prorl",
+      "title": "How Agents Learn to Learn Recursively: AgentOptimizer + ProRL's Complete Stack",
+      "url": "/blog/agent-recursive-self-learning-agentoptimizer-prorl/",
+      "language": "en",
+      "excerpt": "How Agents Learn to Learn Recursively: AgentOptimizer + ProRL's Complete Stack NVIDIA Research's Shaokun Zhang presented at BAAI Conference: AgentOptimizer treats functions as learnable weights; ProRL Agent turns rollout into a decoupled API service. Together they form a complete",
+      "score": 0.6208542
+    },
+    {
+      "article_id": "automem-agent-memory-skill-training-framework-guide",
+      "title": "AutoMem：让 Agent 自动学会管理记忆，32B 追平 Claude Opus 4.5",
+      "url": "/blog/automem-agent-memory-skill-training-framework-guide/",
+      "language": "zh",
+      "excerpt": "AutoMem：让 Agent 自动学会管理记忆，32B 追平 Claude Opus 4.5 Stanford 团队（arXiv:2607.01224）提出 AutoMem 框架：把元记忆（metamemory）引入 LLM Agent，用两个循环自动优化记忆能力——外循环用强 LLM 审查轨迹修改 scaffold，内循环把 agent 自己的好记忆决策转成训练信号。只优化记忆不动任务动作，Qwen2.5-32B 在 Crafter/MiniHack/NetHack 上性能提升 2x-4x，追平 Claude Opus 4.5 和 Gemini 3.",
+      "score": 0.619395
+    },
+    {
+      "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "title": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时",
+      "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+      "language": "zh",
+      "excerpt": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时 复旦+北大+奇迹智风，arXiv:2604.25850，MIT，Python。AHE 提出一个闭环：不动模型权重，只进化 harness——通过三层可观测性（组件/经验/决策），让 Evolve Agent 自动分析 trace、提出修改、预测效果，下一轮自动验证。10次迭代把 GPT-5.4 在 Terminal-Bench 2 上从 69.7% 提升到 77.0%，超过手写 Codex-CLI（71.9%）。冻结后的 harness ",
+      "score": 0.6175632
+    },
+    {
+      "article_id": "neohorse-1-recursive-self-improvement-agentic-post-training",
+      "title": "NeoHorse-1：第一个认真搭递归自我改进原型的开源小模型",
+      "url": "/blog/neohorse-1-recursive-self-improvement-agentic-post-training/",
+      "language": "zh",
+      "excerpt": "NeoHorse-1：第一个认真搭递归自我改进原型的开源小模型 TokenRhythm 用 Routing Harness 让 4B/9B 模型自己观察执行轨迹、估算能力缺口、把反馈注回训练混合——十项基准平均 +5.93 vs Qwen3.5-4B。这不只是一次后训练，是一个闭环的雏形。 LLM post-training recursive-self-improvement agent open-source Qwen3.5 递归自我改进：为什么这个方向重要 Routing Harness：核心机制 训练方法：两个核心组件 测评结果 4B 档（对比 ",
+      "score": 0.612875
+    },
+    {
+      "article_id": "tmax-allenai-open-rl-terminal-agent-training-recipe",
+      "title": "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27%",
+      "url": "/blog/tmax-allenai-open-rl-terminal-agent-training-recipe/",
+      "language": "zh",
+      "excerpt": "TMax：AllenAI 最强开源终端 Agent RL 配方，9B 参数 Terminal-Bench 2.0 达 27% AllenAI 开源 TMax，目前最强的终端 Agent RL 训练配方。9B 参数模型在 Terminal-Bench 2.0 达到 27%，超越更大规模的闭源竞品。数据集 15K 任务，比此前最大终端 Agent 数据集大 2.5 倍，配套 SFT + DPPO RL 训练流程全套开源。 Agent 终端Agent RL训练 AllenAI 开源 Terminal-Bench Qwen Mycelium 核心结果 四阶段配方",
+      "score": 0.60635805
+    },
+    {
+      "article_id": "macaron-ai-mind-lab-lora-rl-agent-ecosystem",
+      "title": "Macaron AI 的开源版图：用 LoRA-RL 让 Personal Agent 真正「持续学习」",
+      "url": "/blog/macaron-ai-mind-lab-lora-rl-agent-ecosystem/",
+      "language": "zh",
+      "excerpt": "Macaron AI 的开源版图：用 LoRA-RL 让 Personal Agent 真正「持续学习」 Macaron AI 旗下的 Mind Lab 开源了一整套围绕 LoRA-RL 持续学习的 Agent 基础设施——从万亿参数 RL 训练平台 MinT，到自我进化框架 MetaClaw，再到终身记忆系统 SimpleMem，构成了目前最完整的 Personal Agent 持续学习技术栈。GitHub 组织 aiming-lab，总 Star 超 22k。 Macaron AI Mind Lab LoRA-RL 持续学习 Personal Age",
+      "score": 0.604043
+    },
+    {
+      "article_id": "agents-a1-35b-moe-horizon-scaling-guide",
+      "title": "Agents-A1：35B 追平万亿参数，路走得更长，不是模型堆得更大",
+      "url": "/blog/agents-a1-35b-moe-horizon-scaling-guide/",
+      "language": "zh",
+      "excerpt": "Agents-A1：35B 追平万亿参数，路走得更长，不是模型堆得更大 上海人工智能实验室（InternLM 团队）发布 Agents-A1（arXiv:2606.30616）：一个 35B MoE 模型，在长程 Agent 基准上与 Kimi-K2.6、DeepSeek-V4-pro、GPT-5.5 等万亿参数模型持平或超越。核心不是堆参数，而是把知识-行动轨迹拉到 45K tokens 平均长度（KAG 图 + 自博弈扩展），再用三阶段训练蒸馏六个领域专家进一个模型。SEAL-0 56.4、FrontierScience-Research 40.0（",
+      "score": 0.6022636
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "initialPublicCheck": "HTTP page title assertion failed; the actual first title was not captured",
+  "diagnostic": "Subsequent custom domain and exact deployment host both HTTP200 with expected title",
+  "cause": "unknown; no claim about cache or edge propagation root cause",
+  "action": "Repeat full public verification on same deployment; no rebuild/redeploy"
+}

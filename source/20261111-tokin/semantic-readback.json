@@ -1,0 +1,38 @@
+[
+  {
+    "id": "99532de6b0fe44a96541de8c866ced283e760fad3f121292",
+    "metadata": {
+      "article_id": "tokin-token-native-agent-rl-gateway-guide",
+      "content_hash": "b15d9839b8858b94",
+      "excerpt": "tokin：让Agent保留原始token轨迹，接入强化学习训练 tokin是连接Agent运行框架和SGLang的开源网关，保留多轮交互真实采样的token ID，导出可供强化学习使用的轨迹。本文核对v0.1.0发布包与源码，拆解TITO、会话树、loss mask和采集清理语义，结合真实tokenizer及HTTP测试说明接入边界，并区分作者训练成绩与网关自身的评估效果。 tokin Agent RL SGLang 强化学习 Token-In-Token-Out 为什么文字相同，训练用的 token 还会不同？ tokin 在架构中做什么？ 为什么会",
+      "language": "zh",
+      "tags": [
+        "tokin",
+        "Agent RL",
+        "SGLang",
+        "强化学习",
+        "Token-In-Token-Out"
+      ],
+      "title": "tokin：让Agent保留原始token轨迹，接入强化学习训练",
+      "url": "/blog/tokin-token-native-agent-rl-gateway-guide/"
+    }
+  },
+  {
+    "id": "f615803c0af4c7ad600f7d87dfe8125f99cd143d2c4f4324",
+    "metadata": {
+      "article_id": "tokin-token-native-agent-rl-gateway-guide",
+      "content_hash": "ea12b502ce3253d1",
+      "excerpt": "tokin: A Token-Native Gateway for Agent RL Understand tokin v0.1.0: token-preserving agent rollouts, session trees, SGLang setup, collection risks, local checks and what reported RL gains actually mean. tokin Agent RL SGLang 强化学习 Token-In-Token-Out Why can identical text produce ",
+      "language": "en",
+      "tags": [
+        "tokin",
+        "Agent RL",
+        "SGLang",
+        "强化学习",
+        "Token-In-Token-Out"
+      ],
+      "title": "tokin: A Token-Native Gateway for Agent RL",
+      "url": "/blog/tokin-token-native-agent-rl-gateway-guide/"
+    }
+  }
+]

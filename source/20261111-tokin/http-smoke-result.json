@@ -1,0 +1,12 @@
+{
+  "scope": "Actual localhost HTTP/FastAPI/uvicorn pipeline; fake tokenizer and engine; no model inference",
+  "httpTurns": 3,
+  "assistantNullToolCallsRejected400": true,
+  "unusedNullFieldsRemovedForSuccessfulContinuation": true,
+  "rolloutLeaves": 2,
+  "nonRoundtripSampledIDPreserved": true,
+  "branchPrefixPreserved": true,
+  "tokenMaskLogprobAligned": true,
+  "collectedSessionDeleted": true,
+  "trainingOrPerformanceMeasured": false
+}
