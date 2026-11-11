@@ -1,0 +1,20 @@
+{
+  "scope": "SQLite engine verification of an author-designed example, not a skill/LLM efficacy test",
+  "sqliteVersion": "3.51.0",
+  "results": {
+    "not_in": [],
+    "not_exists": [
+      2,
+      3
+    ],
+    "filtered_not_in": [
+      2,
+      3
+    ]
+  },
+  "queries": {
+    "not_in": "SELECT id FROM customers WHERE id NOT IN (SELECT customer_id FROM orders) ORDER BY id",
+    "not_exists": "SELECT id FROM customers AS c WHERE NOT EXISTS (SELECT 1 FROM orders AS o WHERE o.customer_id=c.id) ORDER BY id",
+    "filtered_not_in": "SELECT id FROM customers WHERE id NOT IN (SELECT customer_id FROM orders WHERE customer_id IS NOT NULL) ORDER BY id"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "jane-street-socratic-tutor-agent-skills-guide",
+      "title": "Jane Street Agent Skills: A Strict Socratic Tutor",
+      "url": "/blog/jane-street-socratic-tutor-agent-skills-guide/",
+      "language": "en",
+      "excerpt": "Jane Street Agent Skills: A Strict Socratic Tutor Explore Jane Street agent_skills and its Socratic tutor: diagnosis, recall checks, skill maps, manual state transfer, and a reproducible SQL learning example. Jane Street Agent Skills 苏格拉底教学 AI学习 开源 What does this Skill change? Wh",
+      "score": 0.66546226
+    },
+    {
+      "article_id": "openthoughts-agent-sft-data-recipe-agentic-models",
+      "title": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解",
+      "url": "/blog/openthoughts-agent-sft-data-recipe-agentic-models/",
+      "language": "zh",
+      "excerpt": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解 UC Berkeley、Stanford、Bespoke Labs 等多机构合作的 OpenThoughts-Agent 论文（arXiv:2606.24855）做了迄今最系统的 Agent SFT 数据配方研究：6 阶段流水线、100+ 消融实验、100K 数据集，微调 Qwen3-32B 达 7 基准均值 44.8%，超越 Nemotron 3.9pp。最有价值的不是模型权重，而是那套可复用的数据选取逻辑。 AI Agent SFT 数据配方 开源 这",
+      "score": 0.5110049
+    },
+    {
+      "article_id": "learning-from-failure-inference-time-gui-agent-improvement-stanford",
+      "title": "别浪费失败！斯坦福用「失败轨迹」让 GUI Agent 无需训练提升 15%（ECCV 2026）",
+      "url": "/blog/learning-from-failure-inference-time-gui-agent-improvement-stanford/",
+      "language": "zh",
+      "excerpt": "别浪费失败！斯坦福用「失败轨迹」让 GUI Agent 无需训练提升 15%（ECCV 2026） 斯坦福 ECCV 2026 论文：把 AI Agent 执行失败的轨迹喂给 Claude 4.5 做诊断，自动生成「代码补丁」注入推理过程。OSWorld 基准 42.3%→48.9%（+15.6% 相对提升），零训练成本，仅增加 8% 推理开销，步数反降 15%。四大失败模式逐一击破：定位错误、能力缺口、知识不足、死循环。 GUI Agent 失败驱动学习 Computer Use OSWorld 推理时优化 斯坦福 自进化Agent ECCV2026 ",
+      "score": 0.5092621
+    },
+    {
+      "article_id": "stanford-cs329a-self-improving-ai-agents-course-open-materials",
+      "title": "Stanford CS329A：《自我改进 AI Agent》，斯坦福研究生研讨课，9 集视频全公开",
+      "url": "/blog/stanford-cs329a-self-improving-ai-agents-course-open-materials/",
+      "language": "zh",
+      "excerpt": "Stanford CS329A：《自我改进 AI Agent》，斯坦福研究生研讨课，9 集视频全公开 斯坦福 2025 秋季研究生研讨课，Azalia Mirhoseini 和 Aakanksha Chowdhery 联合授课。核心论点：推理时算力制造下一个模型的训练数据。覆盖 Constitutional AI、STaR、DAPO、Search-o1、ReAct、MemGPT 等自我改进技术。9 集视频 2026 年 8 月全公开，GitHub 作业仓库开源。 Stanford AI-agents self-improvement course ope",
+      "score": 0.5024301
+    },
+    {
+      "article_id": "deeptutor-lifelong-personalized-ai-tutoring-rag-skills-memory-docker",
+      "title": "DeepTutor：终身个性化 AI 家教，真正记住你学到哪了，多 RAG 引擎+长期记忆+Skills 生态，Docker 自托管",
+      "url": "/blog/deeptutor-lifelong-personalized-ai-tutoring-rag-skills-memory-docker/",
+      "language": "zh",
+      "excerpt": "DeepTutor：终身个性化 AI 家教，真正记住你学到哪了，多 RAG 引擎+长期记忆+Skills 生态，Docker 自托管 HKUDS/DeepTutor 是香港大学数据科学团队开源的终身个性化 AI 学习工作台，36949 stars，Apache 2.0，Python + Next.js。核心差异：三层长期记忆（L1 轨迹/L2 摘要/L3 综合）真正追踪每个学习者的进度；Chat/Quiz/Research/Visualize/Solve/Mastery Path/沉浸阅读七种模式共用同一个 Agent 循环；多引擎知识库（LlamaIn",
+      "score": 0.49536476
+    },
+    {
+      "article_id": "harness2-recursive-agent-improvement",
+      "title": "Google Harness²：模型不变，让Agent改进自己的工作方法",
+      "url": "/blog/harness2-recursive-agent-improvement/",
+      "language": "zh",
+      "excerpt": "Google Harness²：模型不变，让Agent改进自己的工作方法 Google Research 的 Harness² 保持模型权重不变，通过修改提示词、工具、Skills 和脚本改进任务执行。本文拆解两层递归与 Propose–Probe–Compose，核查三类基准的公开成绩，并给出无需模型凭证的离线起步路径，说明真实模型运行的成本、网络泄漏、独立判分与经验库污染边界。 Harness2 Google Research Agent Harness Engineering 递归自我改进 模型不训练，究竟改什么？ 第一层递归：当前任务怎么改？ 第",
+      "score": 0.48194277
+    },
+    {
+      "article_id": "nerve-clickhouse-self-hosted-claude-agent-sdk-runtime",
+      "title": "ClickHouse 官方出品 Nerve：基于 Claude Agent SDK 的自托管 Agent 运行时",
+      "url": "/blog/nerve-clickhouse-self-hosted-claude-agent-sdk-runtime/",
+      "language": "zh",
+      "excerpt": "ClickHouse 官方出品 Nerve：基于 Claude Agent SDK 的自托管 Agent 运行时 调研 ClickHouse 官方开源的 Nerve：基于 Claude Agent SDK 的自托管 Agent 运行时，单进程零运维（能跑在树莓派上），双层记忆（热记忆+语义深记忆），Skill 自我提炼与修订，Gmail/GitHub/Telegram 统一收件箱。个人模式（Personal）养成有个性的生活助手，Worker 模式给一句英文任务描述就自配置成专职工作 Agent。可直接用 Claude Max/Pro 订阅，不需要额外 ",
+      "score": 0.4818679
+    },
+    {
+      "article_id": "dense-mem-governed-ai-memory-mcp-evidence-provenance",
+      "title": "Dense-Mem 调研：AI 记忆不该是「想存就存」，而该有证据链和权限",
+      "url": "/blog/dense-mem-governed-ai-memory-mcp-evidence-provenance/",
+      "language": "zh",
+      "excerpt": "Dense-Mem 调研：AI 记忆不该是「想存就存」，而该有证据链和权限 调研自托管 MCP 记忆服务 Dense-Mem：核心理念是「受治理的 AI 记忆」，模型写入的是一份「提案」，真正能不能变成持久状态由服务端的确定性策略和封闭 schema 校验决定；证据精确、持久、只增不删，生命周期变更只改变有效状态，从不抹除溯源链；关系只有在证据支持「合格」时才成为活跃的图边，未决的候选和假设默认不会被召回。Go 1.26 + PostgreSQL/pgvector 做持久权威，Redis 只做协调。Apache-2.0，36 star，配套研究预印本。 ",
+      "score": 0.4769573
+    },
+    {
+      "article_id": "stock-sdk-personal-stock-feed-guide",
+      "title": "Build Your Own Stock Data Feed with Stock SDK: From CLI to AI-Powered Dashboard",
+      "url": "/blog/stock-sdk-personal-stock-feed-guide/",
+      "language": "en",
+      "excerpt": "Build Your Own Stock Data Feed with Stock SDK: From CLI to AI-Powered Dashboard Stock SDK (1649★, ISC) is a zero-dependency JavaScript/TypeScript stock data library. No Python, no backend server — pull A-share, HK, US stocks, and mutual fund data directly in browser or Node.js. T",
+      "score": 0.47386307
+    },
+    {
+      "article_id": "anthropic-agent-workshop-engineering-guide",
+      "title": "Anthropic 官方 Agent 工作坊：从免费教材到业务流程落地",
+      "url": "/blog/anthropic-agent-workshop-engineering-guide/",
+      "language": "zh",
+      "excerpt": "Anthropic 官方 Agent 工作坊：从免费教材到业务流程落地 Anthropic 的官方 Agent 工作坊提供工具、子代理协作、记忆与业务案例。本文给出公告、活动和源码入口，区分免费教材与付费模型调用，核对模拟数据和样例维护状态，并以客服流程说明环境准备、角色拆分、真实系统接入、权限审批、幂等执行、预算和评测的方法，帮助把教学练习转化为可检查的业务试点，而非承诺免费无人公司。 Anthropic Claude Agent SDK 多智能体 业务自动化 工程实践 官方出处在哪里？ 教材里的“协作”是怎么发生的？ 第一步：先跑固定版本的业务练习 ",
+      "score": 0.46208075
+    }
+  ]
+}
