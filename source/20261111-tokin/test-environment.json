@@ -1,0 +1,18 @@
+{
+  "python": "3.12",
+  "isolatedVenv": "/tmp/tokin-research/.venv",
+  "fastTests": {
+    "passed": 204,
+    "deselected": 1705
+  },
+  "selectedRealTokenizer": {
+    "model": "Qwen/Qwen3.5-0.8B",
+    "passed": 29,
+    "skipped": 5,
+    "deselected": 1671
+  },
+  "actualHTTP": "3 successful turns/2leaves with mock engine and nonroundtriptokenizer; nullfield400negativeprobe",
+  "realGPUInference": false,
+  "training": false,
+  "performanceBenchmark": false
+}
