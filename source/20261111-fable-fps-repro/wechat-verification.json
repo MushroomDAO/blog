@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-11T12:15:36.636Z",
+  "drafts": [
+    {
+      "slug": "fable52-fps-repro-procedural-game-cost-audit",
+      "mediaId": "prCUE631thH1cmNLi42prAK8Z03XW33xkRwv-PxD508wLfMs8pbyvn3V_0rNFoGJ",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "f5df8fb79aa9003e12483a1fcba503923118de4dc40e83505daca07cd5fa7829",
+      "remoteTextHash": "f5df8fb79aa9003e12483a1fcba503923118de4dc40e83505daca07cd5fa7829",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/fable52-fps-repro-procedural-game-cost-audit/",
+      "localContentHash": "03e5da22253f8309f55d827062e337076dad4ae7d1536042c06447f549abf704",
+      "remoteContentHash": "61bdaad4d2c503723f45fac6e66e54228a618e9c0a28e3b1beb12a95b887b575"
+    }
+  ]
+}

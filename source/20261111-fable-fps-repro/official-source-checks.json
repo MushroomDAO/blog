@@ -1,0 +1,16 @@
+{
+  "checkedDate": "2026-11-11",
+  "pricingURL": "https://platform.claude.com/docs/en/about-claude/pricing",
+  "model": "Claude Fable 5.2",
+  "usdPerMillion": {
+    "input": 8,
+    "cacheWrite5m": 10,
+    "cacheWrite1h": 16,
+    "cacheRead": 0.2,
+    "output": 40
+  },
+  "accessURL": "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan",
+  "minimumClaudeCode": "2.1.321",
+  "subscriptionRule": "Included quotas versus usage credits vary by plan; no universal free-use claim",
+  "cliReference": "https://code.claude.com/docs/en/cli-reference"
+}
