@@ -153,6 +153,16 @@ if [ "$_cf_placeholder_detected" = true ]; then
   exit 1
 fi
 
+# Guard: ensure required Pages Functions routes exist before deployment so we never
+# wipe out edge proxy routes (e.g. /ethereum, /agent) when deploying from an un-synced branch.
+for required_fn in ethereum agent; do
+  if [ ! -d "$REPO_ROOT/functions/$required_fn" ]; then
+    echo "❌ 缺少关键 Functions 目录: functions/$required_fn" >&2
+    echo "   部署已被中止以防止抹除生产代理！请先执行: git pull --rebase origin main" >&2
+    exit 1
+  fi
+done
+
 # ---- 3. deploy ----
 # Prefer a real CA bundle over the insecure TLS bypass. Set CF_CA_CERT (or
 # NODE_EXTRA_CA_CERTS) to your proxy's CA .pem to drop the workaround entirely.

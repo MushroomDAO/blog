@@ -17,6 +17,7 @@ description: |
   - default category is Tech-News
   - run SEO/GEO checks before deploy
   - finalize the slug before Blog deploy and before WeChat draft creation
+  - sync with main (git pull --rebase origin main) before build & deploy to prevent wiping Cloudflare Functions
 ---
 
 # Blog Publisher Skill
@@ -423,7 +424,10 @@ Minimum checks:
 
 ### 5. Build Once
 
+Always pull latest main first so your local workspace includes all existing Cloudflare Pages Functions (`functions/ethereum`, `functions/agent`):
+
 ```bash
+git pull --rebase origin main
 pnpm build
 ```
 
