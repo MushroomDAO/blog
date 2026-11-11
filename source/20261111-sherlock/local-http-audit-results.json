@@ -1,0 +1,17 @@
+{
+  "scope": "Synthetic loopback fixtures; no real social account enumeration; not a performance or accuracy benchmark",
+  "checks": 9,
+  "results": {
+    "status_ok": "Claimed",
+    "status_404": "Available",
+    "message_soft404": "Available",
+    "unrecognized_login": "Claimed",
+    "redirect_302": "Available",
+    "known_waf": "WAF",
+    "generic_403": "Available",
+    "generic_429": "Available",
+    "illegal_username": "Illegal"
+  },
+  "false_positive_demonstration": "Generic login page without configured error text becomes Claimed",
+  "false_negative_demonstration": "Unrecognized HTTP 403 or 429 status_code fixture becomes Available; this does not prove absence"
+}

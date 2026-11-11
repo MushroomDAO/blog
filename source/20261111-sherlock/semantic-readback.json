@@ -1,0 +1,38 @@
+[
+  {
+    "id": "27ef24b5255364310904ef2b1fbeed6eb6c102cdf996ead2",
+    "metadata": {
+      "article_id": "sherlock-username-search-evidence-guide",
+      "content_hash": "a66927d92ab11480",
+      "excerpt": "Sherlock：跨站用户名搜索怎么用，哪些结果不能直接信 Sherlock 是按用户名检查公开网站账号线索的 Python 工具。本文从站点规则、并发请求、状态码、错误文案和重定向讲清原理，介绍安装、选站与导出，并用九个本地 HTTP 场景验证软错误页、登录页、WAF 与限流如何导致误报或漏报。榜单热度只是选题线索，结果仍需人工复核，适合自有账号盘点和经授权的公开资料研究。 Sherlock OSINT Python 开源工具 工程实践 Sherlock 到底在搜索什么？ 为什么状态码和错误文案会决定结果？ 我们实际验证了哪些情况？ 如何安装并做一次可",
+      "language": "zh",
+      "tags": [
+        "Sherlock",
+        "OSINT",
+        "Python",
+        "开源工具",
+        "工程实践"
+      ],
+      "title": "Sherlock：跨站用户名搜索怎么用，哪些结果不能直接信",
+      "url": "/blog/sherlock-username-search-evidence-guide/"
+    }
+  },
+  {
+    "id": "a9981ad5b18ca0cbd2c73a99edb2c57738e9c777d0352442",
+    "metadata": {
+      "article_id": "sherlock-username-search-evidence-guide",
+      "content_hash": "417959733397d453",
+      "excerpt": "Sherlock: Username Search and Its Evidence Limits A practical Sherlock guide covering installation, site rules, exports, and nine local HTTP fixtures that expose false positives, blocking, and evidence limits. Sherlock OSINT Python 开源工具 工程实践 What does Sherlock actually search? Ho",
+      "language": "en",
+      "tags": [
+        "Sherlock",
+        "OSINT",
+        "Python",
+        "开源工具",
+        "工程实践"
+      ],
+      "title": "Sherlock: Username Search and Its Evidence Limits",
+      "url": "/blog/sherlock-username-search-evidence-guide/"
+    }
+  }
+]

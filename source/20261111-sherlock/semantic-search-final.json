@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "sherlock-username-search-evidence-guide",
+      "title": "Sherlock：跨站用户名搜索怎么用，哪些结果不能直接信",
+      "url": "/blog/sherlock-username-search-evidence-guide/",
+      "language": "zh",
+      "excerpt": "Sherlock：跨站用户名搜索怎么用，哪些结果不能直接信 Sherlock 是按用户名检查公开网站账号线索的 Python 工具。本文从站点规则、并发请求、状态码、错误文案和重定向讲清原理，介绍安装、选站与导出，并用九个本地 HTTP 场景验证软错误页、登录页、WAF 与限流如何导致误报或漏报。榜单热度只是选题线索，结果仍需人工复核，适合自有账号盘点和经授权的公开资料研究。 Sherlock OSINT Python 开源工具 工程实践 Sherlock 到底在搜索什么？ 为什么状态码和错误文案会决定结果？ 我们实际验证了哪些情况？ 如何安装并做一次可",
+      "score": 0.5748976
+    },
+    {
+      "article_id": "osaurus-native-macos-ai-harness-swift-cryptographic-identity",
+      "title": "Osaurus：在你的 Mac 上拥有 AI——密码学身份、沙盒 VM、隐私过滤，纯 Swift 原生",
+      "url": "/blog/osaurus-native-macos-ai-harness-swift-cryptographic-identity/",
+      "language": "zh",
+      "excerpt": "Osaurus：在你的 Mac 上拥有 AI——密码学身份、沙盒 VM、隐私过滤，纯 Swift 原生 osaurus-ai/osaurus，7295 stars，MIT，纯 Swift 打造的 macOS 原生 AI 哈尼斯。secp256k1 密码学身份、Alpine Linux 沙盒 VM、三层记忆、发送云端前 PII 隐私过滤、Agent 间 E2E 加密通道。模型可换，哈尼斯是复利资产。 AI Agent 开源 macOS Swift 本地优先 隐私 密码学 MCP 一、核心命题 二、架构：六层哈尼斯 三、密码学身份：每个参与者都是密码学原语 ",
+      "score": 0.46910337
+    },
+    {
+      "article_id": "orion-core-rust-agent-harness-local-llm-teardown",
+      "title": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多",
+      "url": "/blog/orion-core-rust-agent-harness-local-llm-teardown/",
+      "language": "zh",
+      "excerpt": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多 orion-core 是从桌面应用 OrionPod 拆出的 Rust Agent harness（MIT，3 star，crates.io 下载 74 次）：提供工具调用循环、按整轮裁剪的上下文预算、10 种聊天模板和 15 种流式事件，但不带工具、沙箱、记忆和 MCP，现成后端只有一个 OpenAI 兼容 HTTP 客户端。我们在 M4 Mac mini 上接 mlx_lm.server + Qwen2.5-1.5B ",
+      "score": 0.4538584
+    },
+    {
+      "article_id": "authentik-2026-8-oidc-certified-rust-rewrite-pam",
+      "title": "authentik 2026.8: OpenID Certification, a Rust Rewrite and PAM — a Milestone for Self-Hosted IdPs",
+      "url": "/blog/authentik-2026-8-oidc-certified-rust-rewrite-pam/",
+      "language": "en",
+      "excerpt": "authentik 2026.8: OpenID Certification, a Rust Rewrite and PAM — a Milestone for Self-Hosted IdPs goauthentik/authentik — open-source Identity Provider, 24k stars, Python, self-hosted alternative to Okta/Auth0/Entra ID. v2026.8 highlights: OpenID Foundation official certification",
+      "score": 0.45167428
+    },
+    {
+      "article_id": "learning-from-failure-inference-time-gui-agent-improvement-stanford",
+      "title": "Don't Waste Failures! Stanford Boosts GUI Agents 15% at Inference Time by Mining Failed Trajectories (ECCV 2026)",
+      "url": "/blog/learning-from-failure-inference-time-gui-agent-improvement-stanford/",
+      "language": "en",
+      "excerpt": "Don't Waste Failures! Stanford Boosts GUI Agents 15% at Inference Time by Mining Failed Trajectories (ECCV 2026) Stanford ECCV 2026 paper: Feed failed agent trajectories to Claude 4.5 for diagnosis, auto-generate code patches injected at inference time. OSWorld: 42.3%→48.9% (+15.",
+      "score": 0.4467645
+    },
+    {
+      "article_id": "pentest-harness-deepseek-harness-rebrand-authorization-teardown",
+      "title": "Pentest Harness 拆穿：给 DeepSeek Harness 换皮，再把授权边界删掉",
+      "url": "/blog/pentest-harness-deepseek-harness-rebrand-authorization-teardown/",
+      "language": "zh",
+      "excerpt": "Pentest Harness 拆穿：给 DeepSeek Harness 换皮，再把授权边界删掉 S1N6H/pentest-harness（356 star，MIT）自称面向授权渗透的自托管 AI agent harness。逐 diff 核实：它是 deepseek-ai/deepseek-harness 的换皮——LICENSE 版权人仍是 DeepSeek、命令行仍叫 dsh、包名仍是 @deepseek-ai/dsh、中文 README 还写着『由 DeepSeek AI 开发』。改动主要是品牌替换加一个 pentest 预设；同时删掉了上游",
+      "score": 0.44586527
+    },
+    {
+      "article_id": "aibuildai-llm-posttrain-agent-autonomous-meta-search-posttrainbench",
+      "title": "后训练自动化：AIBuildAI 用元搜索在 PostTrainBench 拿第一，46.6 分超过所有 Agent",
+      "url": "/blog/aibuildai-llm-posttrain-agent-autonomous-meta-search-posttrainbench/",
+      "language": "zh",
+      "excerpt": "后训练自动化：AIBuildAI 用元搜索在 PostTrainBench 拿第一，46.6 分超过所有 Agent AIBuildAI LLM-Post-Train Agent，Apache 2.0 开源，7 stars，Python。核心是「元搜索」：元 Agent 读取任务后自己写搜索程序，而不是走固定拓扑。四个知识库（104 种后训练方法、215 个数据集、108 个框架、34 张工作流卡）通过 MCP 接口查询。在 PostTrainBench 七个任务+四个基座模型上得分 46.6，超过 Locus(45.6)、Claude Code Fab",
+      "score": 0.43880412
+    },
+    {
+      "article_id": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+      "title": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+      "url": "/blog/penguin-harness-self-evolving-agent-builder-skills-benchmark/",
+      "language": "en",
+      "excerpt": "penguin-harness-self-evolving-agent-builder-skills-benchmark Prism-Shadow/penguin-harness, 1140 stars, Apache-2.0, TypeScript. A new project by LlamaFactory author Yaowei Zheng, open-sourced 2026-07-19. Automated agent builder platform: one sentence builds a complete agent app ($",
+      "score": 0.4380015
+    },
+    {
+      "article_id": "dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem",
+      "title": "dsh-tui-pi: The Community TUI Ecosystem for DeepSeek Harness — A Pi-Style Terminal for Your Coding Agent",
+      "url": "/blog/dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem/",
+      "language": "en",
+      "excerpt": "dsh-tui-pi: The Community TUI Ecosystem for DeepSeek Harness — A Pi-Style Terminal for Your Coding Agent DeepSeek Harness (dsh) is DeepSeek's coding agent runtime, analogous to Claude Code. dsh-tui-pi is a community-built pi-style TUI plugin suite offering real-time subagent moni",
+      "score": 0.43661064
+    },
+    {
+      "article_id": "stanford-cs329a-self-improving-ai-agents-course-open-materials",
+      "title": "Stanford CS329A：《自我改进 AI Agent》，斯坦福研究生研讨课，9 集视频全公开",
+      "url": "/blog/stanford-cs329a-self-improving-ai-agents-course-open-materials/",
+      "language": "zh",
+      "excerpt": "Stanford CS329A：《自我改进 AI Agent》，斯坦福研究生研讨课，9 集视频全公开 斯坦福 2025 秋季研究生研讨课，Azalia Mirhoseini 和 Aakanksha Chowdhery 联合授课。核心论点：推理时算力制造下一个模型的训练数据。覆盖 Constitutional AI、STaR、DAPO、Search-o1、ReAct、MemGPT 等自我改进技术。9 集视频 2026 年 8 月全公开，GitHub 作业仓库开源。 Stanford AI-agents self-improvement course ope",
+      "score": 0.43434438
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-11T15:40:55.393Z",
+  "drafts": [
+    {
+      "slug": "sherlock-username-search-evidence-guide",
+      "mediaId": "prCUE631thH1cmNLi42prNk-KMHr5OPqaYkWWecaGPclHB1p7eyqvMUNS4gXdCer",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "25d0b028bbbf1cef64c97e84ced1e1d7d6ae62fbf6ee6cc47cf1e0e4135585cc",
+      "remoteTextHash": "25d0b028bbbf1cef64c97e84ced1e1d7d6ae62fbf6ee6cc47cf1e0e4135585cc",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/sherlock-username-search-evidence-guide/",
+      "localContentHash": "34b7e10857d0cfe25d746c720d00a4b7fce57777c917266b5a5aa1db566b5c45",
+      "remoteContentHash": "5c8bb031885b75c893e7f97dcb56bc98f29e31bc905bf1118f87ad64c3976a36"
+    }
+  ]
+}
