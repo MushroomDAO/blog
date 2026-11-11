@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "fable52-fps-repro-procedural-game-cost-audit",
+      "title": "Fable5.2做浏览器FPS：程序化资产、73轮迭代与缓存账单",
+      "url": "/blog/fable52-fps-repro-procedural-game-cost-audit/",
+      "language": "zh",
+      "excerpt": "Fable5.2做浏览器FPS：程序化资产、73轮迭代与缓存账单 fable52-fps-repro公开四类浏览器游戏生成实验、五个HTML成品、提示词与缓存成本汇总。本文实际运行网页，检查Apple M4渲染、离线音频与调试辅助游戏状态，重算五行账单，说明73轮迭代和单文件背后的CDN依赖，并核对模型版本要求、订阅计费差异与脚本覆盖数据的细节，帮助读者先试玩再决定是否付费复现。 Fable 5.2 AI编程 Three.js Web Audio 提示词缓存 “一句话做游戏”，实际上发生了什么？ 四类实验分别能学到什么？ 为什么小场景也能显得很有质感？ ",
+      "score": 0.75513583
+    },
+    {
+      "article_id": "threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl",
+      "title": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节",
+      "url": "/blog/threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl/",
+      "language": "zh",
+      "excerpt": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节 achrefelouafi 开源的 Elemental Sandbox 用 Three.js + Vite + 手写 GLSL，在浏览器里程序化生成 10 种 3A 游戏级技能特效——冰霜迸裂、枝状闪电、陨石撞击、能量光束、虚空刀刃、凤凰……全部无贴图、无精灵表、无预烘焙网格。938 个参数配有实时滑块，按 P 暂停后仍可继续调整，成为研究游戏 VFX 系统的最佳交互式沙盒。MIT 许可，npm run dev 即跑。 Three.js WebGL G",
+      "score": 0.5102744
+    },
+    {
+      "article_id": "scroll-world-skill-claude-code-codex-3d-landing-page",
+      "title": "按头安利：scroll-world —— 一句话让 Fable 5 / GPT-5.6 替你造一个滚动飞进去的 3D 落地页",
+      "url": "/blog/scroll-world-skill-claude-code-codex-3d-landing-page/",
+      "language": "zh",
+      "excerpt": "按头安利：scroll-world —— 一句话让 Fable 5 / GPT-5.6 替你造一个滚动飞进去的 3D 落地页 scroll-world 是一个开源 Agent Skill（1600+ ⭐），在 Claude Code（Fable 5）或 Codex（GPT-5.6 sol）里一句话调用：Agent 负责采访你、调 Higgsfield 生成等距 3D 场景图和无缝摄像机飞越视频、再组装成一套「滚动驱动时间」的落地页——同款 Apple 滚动体验，适配任何品牌或行业。 Claude Code Codex 3D落地页 开源工具 它做出来的东西",
+      "score": 0.5032772
+    },
+    {
+      "article_id": "deepseek-v41-flash-1017-uncensored-fp8-teardown",
+      "title": "DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛",
+      "url": "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+      "language": "zh",
+      "excerpt": "DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛 dealignai 发布的 DeepSeek-V4.1-Flash-1017 去审查 FP8 版（MIT，3808 下载、265 likes，2026-10-18 创建）自报 HarmBench-320 全部顺从、MMLU 抽样 87.63% 降到 83.77%。但模型卡不披露消融方法，基线来自另一套服务栈，磁盘 510GB、仅在 4×H200 上验证，Mac 跑不了这个版本。 DeepSeek 消融",
+      "score": 0.4971819
+    },
+    {
+      "article_id": "glimpse-visual-reasoning-game-bug-review",
+      "title": "Glimpse：让视频验收回到具体画面",
+      "url": "/blog/glimpse-visual-reasoning-game-bug-review/",
+      "language": "zh",
+      "excerpt": "Glimpse：让视频验收回到具体画面 Glimpse 是 Elorian 发布的视觉推理研究预览，可回看视频并定位疑点。本文核实官方入口、公开评测和开源状态，区分游戏验收案例与可复现基准，提供录像分段、规则输入、时间戳证据、人工复核及缺陷回归的工程方案。视觉定位不等于源码定位，模型信心也不是经过校准的正确率，所有流程建议与未验证范围均有明确说明。 Vision Language Model Video Understanding Game QA AI Agent Glimpse 开源了吗，应该去哪里找？ 公开结果能证明它最擅长找游戏 Bug 吗？ 怎样",
+      "score": 0.49682528
+    },
+    {
+      "article_id": "browser-use-jev-ultrafast-dom-web-agent",
+      "title": "jev-ultrafast：browser-use × TypeSafe Jev，DOM 结构化状态代替截图，Google Flights 7.1 秒",
+      "url": "/blog/browser-use-jev-ultrafast-dom-web-agent/",
+      "language": "zh",
+      "excerpt": "jev-ultrafast：browser-use × TypeSafe Jev，DOM 结构化状态代替截图，Google Flights 7.1 秒 browser-use/jev-ultrafast，19K+ stars，Python，browser-use 官方出品。核心思路：把浏览器状态变成编号元素表格，用 TypeSafe Jev 一次请求同时决策「操作类型 + 目标元素」，只有需要输入文字时才调小 LLM。默认 Agent 循环零截图，browser protocol 调用从 1092 次降到 101 次，任务时间中位数从 9.45s 降到 ",
+      "score": 0.49455065
+    },
+    {
+      "article_id": "pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring",
+      "title": "Pulse：一排光环贴着屏幕边缘，告诉你 Claude Code 还剩多少",
+      "url": "/blog/pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring/",
+      "language": "zh",
+      "excerpt": "Pulse：一排光环贴着屏幕边缘，告诉你 Claude Code 还剩多少 qunqin24/Pulse 开源，macOS 浮动监控工具，三个彩环实时显示 Claude Code / Codex / Antigravity 用量，贴边停靠收缩为6pt细条，从提供商账户直读真实限额，自适应刷新，无后台零上传，Apache 2.0。 macOS Claude Code Codex AI tools open source Swift usage monitor productivity menu bar 那个永恒的问题 一排光环，贴着屏幕边缘 真实的限额，不",
+      "score": 0.49288484
+    },
+    {
+      "article_id": "cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune",
+      "title": "Cloudflare Open-Sources Clef Decision Models: Jev-API Compatible, the 9B Runs on a Mac, and the Top Score Is Self-Reported",
+      "url": "/blog/cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune/",
+      "language": "en",
+      "excerpt": "Cloudflare Open-Sources Clef Decision Models: Jev-API Compatible, the 9B Runs on a Mac, and the Top Score Is Self-Reported On 2026-10-01 Cloudflare released Clef (Qwen3.8-27B base, 27.36B params) and Clef-flash (Qwen3.5-9B, 9.41B params) under Apache-2.0: one forward pass, a prob",
+      "score": 0.49264714
+    },
+    {
+      "article_id": "deepseek-reasonix-terminal-coding-agent-prefix-cache",
+      "title": "DeepSeek-Reasonix：围绕前缀缓存稳定性设计的终端编程 Agent",
+      "url": "/blog/deepseek-reasonix-terminal-coding-agent-prefix-cache/",
+      "language": "zh",
+      "excerpt": "DeepSeek-Reasonix：围绕前缀缓存稳定性设计的终端编程 Agent esengine 开源的 DeepSeek 原生终端编程 Agent，33k stars，MIT License，Go 重写版。架构核心是前缀缓存稳定性——真实用户单日 435M 输入 token，99.82% 缓存命中，实际费用 ~$12 而非 ~$61。支持长时运行、QQ 频道远程接入、Tauri 桌面客户端，npm install -g reasonix 一键安装。 编程Agent DeepSeek 前缀缓存 终端工具 长任务Agent 成本优化 Mycelium 前",
+      "score": 0.49176612
+    },
+    {
+      "article_id": "freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference",
+      "title": "FreeToken：游戏 PC 本地跑 290B+ MoE 大模型，q* 自适应执行引擎，开源 Apache 2.0",
+      "url": "/blog/freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference/",
+      "language": "zh",
+      "excerpt": "FreeToken：游戏 PC 本地跑 290B+ MoE 大模型，q* 自适应执行引擎，开源 Apache 2.0 FlashML-org/FreeToken 是一个边缘原生 MoE 推理引擎，Apache 2.0，Python，2105 stars。核心：在消费级 GPU（RTX 30/40/50）上本地运行 290B+ MoE 模型（DeepSeek-V4-Flash、Qwen3.6-35B、GLM-5.2），通过 q* 带宽自适应 CPU-GPU 协同执行、双缓冲预填充流、全局 LRU Expert 缓存、语义感知 KV 缓存实现交互级速度。兼容",
+      "score": 0.4897347
+    }
+  ]
+}

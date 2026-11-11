@@ -1,0 +1,59 @@
+{
+  "scope": "Arithmetic check of published aggregates using stated per-million prices8/10/16/.2/40; not actual invoices or a generation benchmark",
+  "rows": [
+    {
+      "run": "01-audio-1h",
+      "cost": "6.97",
+      "uncachedCounterfactual": "13.98",
+      "inputTotal": 1293993,
+      "cacheHitPercent": 78.6,
+      "turns": 16,
+      "sec": 1130
+    },
+    {
+      "run": "01-audio-5m",
+      "cost": "4.66",
+      "uncachedCounterfactual": "12.47",
+      "inputTotal": 1167473,
+      "cacheHitPercent": 88.6,
+      "turns": 16,
+      "sec": 995
+    },
+    {
+      "run": "02-materials",
+      "cost": "8.56",
+      "uncachedCounterfactual": "24.24",
+      "inputTotal": 2461367,
+      "cacheHitPercent": 83.8,
+      "turns": 25,
+      "sec": 1431
+    },
+    {
+      "run": "03-models",
+      "cost": "10.38",
+      "uncachedCounterfactual": "21.96",
+      "inputTotal": 2047239,
+      "cacheHitPercent": 76.1,
+      "turns": 19,
+      "sec": 1723
+    },
+    {
+      "run": "04-fps",
+      "cost": "15.96",
+      "uncachedCounterfactual": "60.57",
+      "inputTotal": 6606366,
+      "cacheHitPercent": 90.9,
+      "turns": 73,
+      "sec": 2446
+    }
+  ],
+  "rawRunJSONPublished": false,
+  "metricsEmptyInputOverwritesWithHeader": true,
+  "sourceTSVUnmodified": true,
+  "wrapperProbe": {
+    "scope": "Fake claude executable in isolated temp PATH; no model call",
+    "wrapperExitCode": 0,
+    "syntheticModelExitCode": 7,
+    "wallLogRecordsFailure": true
+  }
+}

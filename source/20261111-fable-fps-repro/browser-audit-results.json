@@ -1,0 +1,1535 @@
+{
+  "scope": "Existing shipped artifacts only; debug-assisted functional checks, offline audio; no generation, FPS benchmark or human listening",
+  "browserVersion": "157.0.8103.39",
+  "viewport": [
+    960,
+    540
+  ],
+  "results": [
+    {
+      "name": "01-audio",
+      "title": "SALTLINE · 音效台",
+      "errors": [],
+      "externalRequests": [],
+      "audio": {
+        "rifle_out": {
+          "peakDb": [
+            -3.8,
+            -3,
+            -2.3
+          ],
+          "rmsDb": [
+            -20.8,
+            -19.8,
+            -18.7
+          ],
+          "end": [
+            2.5,
+            2.51,
+            2.51
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.002,
+            0.004,
+            0.004
+          ],
+          "variantDiff": 1.05
+        },
+        "rifle_in": {
+          "peakDb": [
+            -2.1,
+            -1.7,
+            -1.6
+          ],
+          "rmsDb": [
+            -18.6,
+            -18,
+            -17.4
+          ],
+          "end": [
+            1.11,
+            1.09,
+            1.12
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.003,
+            0.001,
+            0.001
+          ],
+          "variantDiff": 1.07
+        },
+        "shell": {
+          "peakDb": [
+            -10.4,
+            -9.9,
+            -11.5
+          ],
+          "rmsDb": [
+            -31,
+            -30,
+            -30.4
+          ],
+          "end": [
+            0.89,
+            0.88,
+            0.87
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.001,
+            0,
+            0
+          ],
+          "variantDiff": 0.99
+        },
+        "mag_out": {
+          "peakDb": [
+            -5.8,
+            -5.2,
+            -5.9
+          ],
+          "rmsDb": [
+            -25.7,
+            -25.6,
+            -27.2
+          ],
+          "end": [
+            0.41,
+            0.39,
+            0.39
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.001,
+            0.001,
+            0.001
+          ],
+          "variantDiff": 1.02
+        },
+        "mag_in": {
+          "peakDb": [
+            -3.6,
+            -3.8,
+            -4.1
+          ],
+          "rmsDb": [
+            -23.1,
+            -23,
+            -24.7
+          ],
+          "end": [
+            0.34,
+            0.33,
+            0.34
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.001,
+            0,
+            0.001
+          ],
+          "variantDiff": 0.7
+        },
+        "bolt": {
+          "peakDb": [
+            -3.1,
+            -3.9,
+            -2.7
+          ],
+          "rmsDb": [
+            -24.5,
+            -24.5,
+            -26.5
+          ],
+          "end": [
+            0.56,
+            0.6,
+            0.61
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.001,
+            0.001,
+            0
+          ],
+          "variantDiff": 0.98
+        },
+        "step_concrete": {
+          "peakDb": [
+            -10.6,
+            -6.6,
+            -11.5
+          ],
+          "rmsDb": [
+            -29.2,
+            -27.5,
+            -32.2
+          ],
+          "end": [
+            0.78,
+            0.72,
+            0.78
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.003,
+            0.002,
+            0.002
+          ],
+          "variantDiff": 1.04
+        },
+        "step_metal": {
+          "peakDb": [
+            -8.1,
+            -9.3,
+            -6.9
+          ],
+          "rmsDb": [
+            -27.9,
+            -27.7,
+            -29.9
+          ],
+          "end": [
+            1.02,
+            1.09,
+            0.95
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.001,
+            0.001,
+            0.001
+          ],
+          "variantDiff": 0.96
+        },
+        "step_water": {
+          "peakDb": [
+            -7.1,
+            -7,
+            -9.1
+          ],
+          "rmsDb": [
+            -28.7,
+            -29.4,
+            -31.2
+          ],
+          "end": [
+            1.08,
+            1.05,
+            1.08
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.001,
+            0.001,
+            0.001
+          ],
+          "variantDiff": 0.93
+        },
+        "whiz": {
+          "peakDb": [
+            -2.3,
+            -2.4,
+            -2.4
+          ],
+          "rmsDb": [
+            -29.7,
+            -29.2,
+            -25.2
+          ],
+          "end": [
+            1.69,
+            1.69,
+            1.64
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.002,
+            0.001,
+            0.001
+          ],
+          "variantDiff": 0.99
+        },
+        "ricochet": {
+          "peakDb": [
+            -5.8,
+            -6.7,
+            -6.6
+          ],
+          "rmsDb": [
+            -29.8,
+            -28.8,
+            -35.9
+          ],
+          "end": [
+            1.7,
+            1.66,
+            1.68
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.003,
+            0.001,
+            0.001
+          ],
+          "variantDiff": 0.94
+        },
+        "rain": {
+          "peakDb": [
+            -7.4,
+            -7.9,
+            -7.4
+          ],
+          "rmsDb": [
+            -28.9,
+            -29,
+            -28.2
+          ],
+          "end": [
+            8,
+            8,
+            8
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.003,
+            0.002,
+            0.001
+          ],
+          "variantDiff": 0.99
+        },
+        "thunder": {
+          "peakDb": [
+            -4.9,
+            -4.7,
+            -4.9
+          ],
+          "rmsDb": [
+            -20.5,
+            -19.8,
+            -19.1
+          ],
+          "end": [
+            14.31,
+            12.94,
+            15.49
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.013,
+            0.01,
+            0.003
+          ],
+          "variantDiff": 0.99
+        },
+        "music": {
+          "peakDb": [
+            -2,
+            -2.2,
+            -2.3
+          ],
+          "rmsDb": [
+            -20.6,
+            -20.3,
+            -20
+          ],
+          "end": [
+            34.48,
+            34.92,
+            34.09
+          ],
+          "clip": [
+            0,
+            0,
+            0
+          ],
+          "nan": [
+            0,
+            0,
+            0
+          ],
+          "maxGap": [
+            0.002,
+            0.002,
+            0.002
+          ],
+          "variantDiff": 0.68
+        }
+      },
+      "mix": {
+        "peak": 0.975,
+        "peakDb": -0.2,
+        "rmsDb": -14.1,
+        "clip": 0,
+        "nan": 0,
+        "start": 0.02,
+        "end": 8,
+        "maxGap": 0
+      },
+      "soundCount": 14
+    },
+    {
+      "name": "01-audio-1h",
+      "title": "SALTLINE · 程序化 FPS 音效台",
+      "errors": [],
+      "externalRequests": [],
+      "audio": {
+        "shot_out": {
+          "vars": [
+            {
+              "peak": 0.71,
+              "peakDb": -2.9749,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -18.1437,
+              "lead": 0.0297,
+              "dur": 3.529,
+              "maxGap": 0.1141,
+              "decay40": 3.12,
+              "dc": 0.0006,
+              "stereo": 0.7264
+            },
+            {
+              "peak": 0.831,
+              "peakDb": -1.6083,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -16.8753,
+              "lead": 0.0295,
+              "dur": 3.6244,
+              "maxGap": 0.1013,
+              "decay40": 3.13,
+              "dc": 0.0007,
+              "stereo": 0.7301
+            },
+            {
+              "peak": 0.7091,
+              "peakDb": -2.9856,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -19.6478,
+              "lead": 0.0291,
+              "dur": 3.6213,
+              "maxGap": 0.0219,
+              "decay40": 3.48,
+              "dc": 0,
+              "stereo": 0.7912
+            }
+          ],
+          "diffAB": 0.705,
+          "diffAC": 0.808,
+          "diffBC": 0.796,
+          "sameVarNewSeed": 1.016
+        },
+        "shot_in": {
+          "vars": [
+            {
+              "peak": 0.8379,
+              "peakDb": -1.5357,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -17.8181,
+              "lead": 0.0288,
+              "dur": 1.1933,
+              "maxGap": 0.0167,
+              "decay40": 0.79,
+              "dc": 0,
+              "stereo": 0.3546
+            },
+            {
+              "peak": 0.8555,
+              "peakDb": -1.3558,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -16.3387,
+              "lead": 0.0288,
+              "dur": 1.2433,
+              "maxGap": 0.0212,
+              "decay40": 0.87,
+              "dc": -0.0001,
+              "stereo": 0.3413
+            },
+            {
+              "peak": 0.8192,
+              "peakDb": -1.7325,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -19.2812,
+              "lead": 0.0288,
+              "dur": 1.1762,
+              "maxGap": 0.0133,
+              "decay40": 0.75,
+              "dc": -0.0001,
+              "stereo": 0.3771
+            }
+          ],
+          "diffAB": 0.564,
+          "diffAC": 0.708,
+          "diffBC": 0.774,
+          "sameVarNewSeed": 0.902
+        },
+        "mag_out": {
+          "vars": [
+            {
+              "peak": 0.7025,
+              "peakDb": -3.0666,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -26.6653,
+              "lead": 0.0287,
+              "dur": 0.3347,
+              "maxGap": 0.0055,
+              "decay40": 0.08,
+              "dc": 0.0002,
+              "stereo": 0.0191
+            },
+            {
+              "peak": 0.6425,
+              "peakDb": -3.843,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -25.6693,
+              "lead": 0.0287,
+              "dur": 0.2885,
+              "maxGap": 0.0042,
+              "decay40": 0.1,
+              "dc": 0.0003,
+              "stereo": 0.0347
+            },
+            {
+              "peak": 0.6667,
+              "peakDb": -3.5219,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -27.2537,
+              "lead": 0.0287,
+              "dur": 0.4544,
+              "maxGap": 0.0255,
+              "decay40": 0.17,
+              "dc": 0.0003,
+              "stereo": 0.0235
+            }
+          ],
+          "diffAB": 0.978,
+          "diffAC": 1,
+          "diffBC": 1,
+          "sameVarNewSeed": 0.726
+        },
+        "mag_in": {
+          "vars": [
+            {
+              "peak": 0.8051,
+              "peakDb": -1.8828,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -25.5115,
+              "lead": 0.0287,
+              "dur": 0.3231,
+              "maxGap": 0.0093,
+              "decay40": 0.09,
+              "dc": 0.0004,
+              "stereo": 0.0229
+            },
+            {
+              "peak": 0.7851,
+              "peakDb": -2.1018,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -24.6327,
+              "lead": 0.0287,
+              "dur": 0.5327,
+              "maxGap": 0.0147,
+              "decay40": 0.1,
+              "dc": 0.0007,
+              "stereo": 0.042
+            },
+            {
+              "peak": 0.8013,
+              "peakDb": -1.9236,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -25.4442,
+              "lead": 0.0287,
+              "dur": 0.3151,
+              "maxGap": 0.0108,
+              "decay40": 0.1,
+              "dc": 0.0004,
+              "stereo": 0.017
+            }
+          ],
+          "diffAB": 0.987,
+          "diffAC": 1.101,
+          "diffBC": 1.011,
+          "sameVarNewSeed": 0.513
+        },
+        "bolt": {
+          "vars": [
+            {
+              "peak": 0.8119,
+              "peakDb": -1.8101,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -24.2776,
+              "lead": 0.0287,
+              "dur": 0.4757,
+              "maxGap": 0.0043,
+              "decay40": 0.1,
+              "dc": 0.0005,
+              "stereo": 0.0261
+            },
+            {
+              "peak": 0.8163,
+              "peakDb": -1.7634,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -25.0187,
+              "lead": 0.0287,
+              "dur": 0.5529,
+              "maxGap": 0.0041,
+              "decay40": 0.1,
+              "dc": 0.0005,
+              "stereo": 0.0454
+            },
+            {
+              "peak": 0.8077,
+              "peakDb": -1.8553,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -23.8838,
+              "lead": 0.0287,
+              "dur": 0.4321,
+              "maxGap": 0.0054,
+              "decay40": 0.1,
+              "dc": 0.0006,
+              "stereo": 0.0258
+            }
+          ],
+          "diffAB": 1.016,
+          "diffAC": 1.014,
+          "diffBC": 0.992,
+          "sameVarNewSeed": 0.801
+        },
+        "shell": {
+          "vars": [
+            {
+              "peak": 0.5413,
+              "peakDb": -5.3311,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -31.7463,
+              "lead": 0.0286,
+              "dur": 0.65,
+              "maxGap": 0.0692,
+              "decay40": 0.43,
+              "dc": 0,
+              "stereo": 0.1055
+            },
+            {
+              "peak": 0.6378,
+              "peakDb": -3.9062,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -28.8898,
+              "lead": 0.0281,
+              "dur": 0.8804,
+              "maxGap": 0.0769,
+              "decay40": 0.58,
+              "dc": 0,
+              "stereo": 0.1673
+            },
+            {
+              "peak": 0.5672,
+              "peakDb": -4.9257,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -30.6353,
+              "lead": 0.0281,
+              "dur": 0.3196,
+              "maxGap": 0.0124,
+              "decay40": 0.16,
+              "dc": 0,
+              "stereo": 0.0445
+            }
+          ],
+          "diffAB": 1.006,
+          "diffAC": 1.004,
+          "diffBC": 1,
+          "sameVarNewSeed": 1.003
+        },
+        "step_con": {
+          "vars": [
+            {
+              "peak": 0.4824,
+              "peakDb": -6.3313,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -23.257,
+              "lead": 0.0287,
+              "dur": 0.2313,
+              "maxGap": 0.0049,
+              "decay40": 0.17,
+              "dc": 0.0003,
+              "stereo": 0.033
+            },
+            {
+              "peak": 0.7361,
+              "peakDb": -2.6612,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -22.2374,
+              "lead": 0.031,
+              "dur": 0.2246,
+              "maxGap": 0.0045,
+              "decay40": 0.14,
+              "dc": -0.0001,
+              "stereo": 0.0602
+            },
+            {
+              "peak": 0.796,
+              "peakDb": -1.9819,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -19.5718,
+              "lead": 0.0287,
+              "dur": 0.2019,
+              "maxGap": 0.0051,
+              "decay40": 0.15,
+              "dc": 0.0015,
+              "stereo": 0.0268
+            }
+          ],
+          "diffAB": 1.006,
+          "diffAC": 0.672,
+          "diffBC": 1.007,
+          "sameVarNewSeed": 0.66
+        },
+        "step_met": {
+          "vars": [
+            {
+              "peak": 0.5352,
+              "peakDb": -5.4299,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -29.1782,
+              "lead": 0.0287,
+              "dur": 0.9161,
+              "maxGap": 0.0375,
+              "decay40": 0.65,
+              "dc": 0,
+              "stereo": 0.1987
+            },
+            {
+              "peak": 0.5996,
+              "peakDb": -4.4424,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -28.7243,
+              "lead": 0.0287,
+              "dur": 0.91,
+              "maxGap": 0.0169,
+              "decay40": 0.65,
+              "dc": -0.0002,
+              "stereo": 0.2627
+            },
+            {
+              "peak": 0.7246,
+              "peakDb": -2.7978,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -23.1217,
+              "lead": 0.0287,
+              "dur": 1.0018,
+              "maxGap": 0.0224,
+              "decay40": 0.67,
+              "dc": 0,
+              "stereo": 0.345
+            }
+          ],
+          "diffAB": 0.505,
+          "diffAC": 0.825,
+          "diffBC": 0.637,
+          "sameVarNewSeed": 0.463
+        },
+        "step_wat": {
+          "vars": [
+            {
+              "peak": 0.437,
+              "peakDb": -7.1895,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -25.8854,
+              "lead": 0.0288,
+              "dur": 0.6324,
+              "maxGap": 0.1869,
+              "decay40": 0.55,
+              "dc": 0.0003,
+              "stereo": 0.6577
+            },
+            {
+              "peak": 0.4553,
+              "peakDb": -6.8343,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -24.6763,
+              "lead": 0.0288,
+              "dur": 0.53,
+              "maxGap": 0.0049,
+              "decay40": 0.49,
+              "dc": 0,
+              "stereo": 0.4916
+            },
+            {
+              "peak": 0.5021,
+              "peakDb": -5.984,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -25.4043,
+              "lead": 0.0289,
+              "dur": 0.5861,
+              "maxGap": 0.102,
+              "decay40": 0.44,
+              "dc": 0.0001,
+              "stereo": 0.6366
+            }
+          ],
+          "diffAB": 0.921,
+          "diffAC": 0.938,
+          "diffBC": 0.924,
+          "sameVarNewSeed": 0.964
+        },
+        "whiz": {
+          "vars": [
+            {
+              "peak": 0.8553,
+              "peakDb": -1.358,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -24.4075,
+              "lead": 0.045,
+              "dur": 2.0533,
+              "maxGap": 0.0024,
+              "decay40": 1.79,
+              "dc": 0,
+              "stereo": 0.6272
+            },
+            {
+              "peak": 0.8658,
+              "peakDb": -1.2521,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -19.3028,
+              "lead": 0.0897,
+              "dur": 2.0103,
+              "maxGap": 0.0017,
+              "decay40": 1.73,
+              "dc": 0.0012,
+              "stereo": 0.5443
+            },
+            {
+              "peak": 0.8218,
+              "peakDb": -1.7048,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -25.9508,
+              "lead": 0.0456,
+              "dur": 1.9487,
+              "maxGap": 0.0097,
+              "decay40": 1.76,
+              "dc": 0,
+              "stereo": 0.6816
+            }
+          ],
+          "diffAB": 1,
+          "diffAC": 1.018,
+          "diffBC": 1,
+          "sameVarNewSeed": 1.018
+        },
+        "rico": {
+          "vars": [
+            {
+              "peak": 0.7313,
+              "peakDb": -2.7187,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -28.3602,
+              "lead": 0.028,
+              "dur": 2.6719,
+              "maxGap": 0.0133,
+              "decay40": 2.61,
+              "dc": 0,
+              "stereo": 0.3583
+            },
+            {
+              "peak": 0.78,
+              "peakDb": -2.1586,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -26.8786,
+              "lead": 0.0279,
+              "dur": 2.6721,
+              "maxGap": 0.0034,
+              "decay40": 2.55,
+              "dc": 0,
+              "stereo": 0.3371
+            },
+            {
+              "peak": 0.675,
+              "peakDb": -3.4137,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -30.5599,
+              "lead": 0.028,
+              "dur": 2.6633,
+              "maxGap": 0.0454,
+              "decay40": 2.55,
+              "dc": 0,
+              "stereo": 0.5408
+            }
+          ],
+          "diffAB": 0.951,
+          "diffAC": 0.971,
+          "diffBC": 1.035,
+          "sameVarNewSeed": 1.01
+        },
+        "rain": {
+          "vars": [
+            {
+              "peak": 0.5384,
+              "peakDb": -5.3781,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -20.4578,
+              "lead": 0.0394,
+              "dur": 10.0606,
+              "maxGap": 0.0015,
+              "decay40": 1.92,
+              "dc": 0.0003,
+              "stereo": 0.9892
+            },
+            {
+              "peak": 0.668,
+              "peakDb": -3.5048,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -16.9386,
+              "lead": 0.0357,
+              "dur": 10.0643,
+              "maxGap": 0.0017,
+              "decay40": 6.84,
+              "dc": 0.0009,
+              "stereo": 0.9933
+            },
+            {
+              "peak": 0.7527,
+              "peakDb": -2.4677,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -15.2498,
+              "lead": 0.0339,
+              "dur": 10.0661,
+              "maxGap": 0.0008,
+              "decay40": 6.47,
+              "dc": 0.0011,
+              "stereo": 0.9921
+            }
+          ],
+          "diffAB": 1.001,
+          "diffAC": 1.03,
+          "diffBC": 0.979,
+          "sameVarNewSeed": 0.985
+        },
+        "thunder": {
+          "vars": [
+            {
+              "peak": 0.8333,
+              "peakDb": -1.5844,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -13.5123,
+              "lead": 0.6028,
+              "dur": 9.0058,
+              "maxGap": 0.0418,
+              "decay40": 5.68,
+              "dc": 0,
+              "stereo": 0.9231
+            },
+            {
+              "peak": 0.8729,
+              "peakDb": -1.1807,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -12.7784,
+              "lead": 0.0289,
+              "dur": 7.4236,
+              "maxGap": 0.0525,
+              "decay40": 5.36,
+              "dc": -0.0003,
+              "stereo": 0.648
+            },
+            {
+              "peak": 0.7732,
+              "peakDb": -2.2338,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -13.3371,
+              "lead": 0.2382,
+              "dur": 10.7854,
+              "maxGap": 0.0873,
+              "decay40": 4.35,
+              "dc": -0.0002,
+              "stereo": 0.8741
+            }
+          ],
+          "diffAB": 0.984,
+          "diffAC": 0.969,
+          "diffBC": 0.979,
+          "sameVarNewSeed": 0.984
+        },
+        "music": {
+          "vars": [
+            {
+              "peak": 0.8943,
+              "peakDb": -0.9701,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -13.3026,
+              "lead": 0.0287,
+              "dur": 32.5449,
+              "maxGap": 0.0267,
+              "decay40": 7.81,
+              "dc": 0.0016,
+              "stereo": 0.1125
+            },
+            {
+              "peak": 0.9065,
+              "peakDb": -0.8523,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -13.2276,
+              "lead": 0.0287,
+              "dur": 33.9155,
+              "maxGap": 0.0239,
+              "decay40": 2.57,
+              "dc": 0.0019,
+              "stereo": 0.1506
+            },
+            {
+              "peak": 0.8749,
+              "peakDb": -1.161,
+              "clip": 0,
+              "nan": 0,
+              "rmsDb": -13.5648,
+              "lead": 0.0287,
+              "dur": 31.5537,
+              "maxGap": 0.0286,
+              "decay40": 21.09,
+              "dc": 0.0017,
+              "stereo": 0.1585
+            }
+          ],
+          "diffAB": 0.984,
+          "diffAC": 0.997,
+          "diffBC": 0.985,
+          "sameVarNewSeed": 0.151
+        }
+      },
+      "soundCount": 14,
+      "selftestError": null
+    },
+    {
+      "name": "02-materials",
+      "title": "雨夜码头 · 程序化材质",
+      "errors": [],
+      "externalRequests": [
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.core.js",
+          "type": "script"
+        }
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "buttons": 7
+    },
+    {
+      "name": "03-models",
+      "title": "SALTLINE · 模型查看器",
+      "errors": [],
+      "externalRequests": [
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "type": "script"
+        }
+      ],
+      "viewer": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "models": [
+          "crane",
+          "ship",
+          "rifle",
+          "port"
+        ]
+      }
+    },
+    {
+      "name": "04-fps",
+      "title": "SUBLEVEL 07",
+      "errors": [],
+      "externalRequests": [
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/EffectComposer.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/UnrealBloomPass.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/GTAOPass.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/OutputPass.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/ShaderPass.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/Pass.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/geometries/RoundedBoxGeometry.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/utils/BufferGeometryUtils.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/CopyShader.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/MaskPass.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/LuminosityHighPassShader.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/OutputShader.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/GTAOShader.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/PoissonDenoiseShader.js",
+          "type": "script"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/math/SimplexNoise.js",
+          "type": "script"
+        }
+      ],
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+      "softwareRenderer": false,
+      "functional": {
+        "start": {
+          "state": "playing",
+          "hp": 100,
+          "ammo": 30,
+          "res": 180,
+          "wave": 0,
+          "drones": 0,
+          "bolts": 0,
+          "kills": 0,
+          "pos": [
+            -9.5,
+            0,
+            5.6
+          ],
+          "time": 0
+        },
+        "moved": {
+          "state": "playing",
+          "hp": 100,
+          "ammo": 30,
+          "res": 180,
+          "wave": 0,
+          "drones": 0,
+          "bolts": 0,
+          "kills": 0,
+          "pos": [
+            -5.59,
+            0,
+            7.03
+          ],
+          "time": 1
+        },
+        "fired": {
+          "state": "playing",
+          "hp": 100,
+          "ammo": 29,
+          "res": 180,
+          "wave": 0,
+          "drones": 0,
+          "bolts": 0,
+          "kills": 0,
+          "pos": [
+            -5.59,
+            0,
+            7.03
+          ],
+          "time": 1
+        },
+        "reloaded": {
+          "state": "playing",
+          "hp": 100,
+          "ammo": 30,
+          "res": 179,
+          "wave": 1,
+          "drones": 2,
+          "bolts": 0,
+          "kills": 0,
+          "pos": [
+            -5.27,
+            0,
+            7.14
+          ],
+          "time": 4
+        },
+        "debugCleared": {
+          "state": "win",
+          "hp": 100,
+          "ammo": 30,
+          "res": 300,
+          "wave": 3,
+          "drones": 0,
+          "bolts": 0,
+          "kills": 0,
+          "pos": [
+            -5.27,
+            0,
+            7.14
+          ],
+          "time": 32.3
+        },
+        "waves": [
+          1,
+          2,
+          3
+        ]
+      },
+      "death": {
+        "state": "over",
+        "hp": -900,
+        "ammo": 30,
+        "res": 180,
+        "wave": 0,
+        "drones": 0,
+        "bolts": 0,
+        "kills": 0,
+        "pos": [
+          -9.5,
+          0,
+          5.6
+        ],
+        "time": 0
+      },
+      "audio": {
+        "shot": {
+          "peak": 0.685,
+          "clipped": 0,
+          "rms": 0.0215,
+          "onsetMs": 26,
+          "tailMs": 1611,
+          "maxInnerGapMs": 31
+        },
+        "dry": {
+          "peak": 0.228,
+          "clipped": 0,
+          "rms": 0.0045,
+          "onsetMs": 26,
+          "tailMs": 1167,
+          "maxInnerGapMs": 47
+        },
+        "magout": {
+          "peak": 0.231,
+          "clipped": 0,
+          "rms": 0.0077,
+          "onsetMs": 26.1,
+          "tailMs": 1359,
+          "maxInnerGapMs": 62
+        },
+        "magin": {
+          "peak": 0.343,
+          "clipped": 0,
+          "rms": 0.0107,
+          "onsetMs": 26.1,
+          "tailMs": 1363,
+          "maxInnerGapMs": 36
+        },
+        "bolt": {
+          "peak": 0.587,
+          "clipped": 0,
+          "rms": 0.0109,
+          "onsetMs": 26.1,
+          "tailMs": 1302,
+          "maxInnerGapMs": 22
+        },
+        "shell": {
+          "peak": 0.1,
+          "clipped": 0,
+          "rms": 0.0043,
+          "onsetMs": 26.2,
+          "tailMs": 892,
+          "maxInnerGapMs": 122
+        },
+        "step": {
+          "peak": 0.202,
+          "clipped": 0,
+          "rms": 0.0091,
+          "onsetMs": 26.1,
+          "tailMs": 1297,
+          "maxInnerGapMs": 26
+        },
+        "land": {
+          "peak": 0.33,
+          "clipped": 0,
+          "rms": 0.0217,
+          "onsetMs": 26.1,
+          "tailMs": 1601,
+          "maxInnerGapMs": 129
+        },
+        "hit": {
+          "peak": 0.238,
+          "clipped": 0,
+          "rms": 0.0057,
+          "onsetMs": 26.1,
+          "tailMs": 1251,
+          "maxInnerGapMs": 53
+        },
+        "kill": {
+          "peak": 0.38,
+          "clipped": 0,
+          "rms": 0.0154,
+          "onsetMs": 26.1,
+          "tailMs": 1378,
+          "maxInnerGapMs": 94
+        },
+        "impact": {
+          "peak": 0.269,
+          "clipped": 0,
+          "rms": 0.007,
+          "onsetMs": 26.1,
+          "tailMs": 1383,
+          "maxInnerGapMs": 58
+        },
+        "clang": {
+          "peak": 0.302,
+          "clipped": 0,
+          "rms": 0.0109,
+          "onsetMs": 26.1,
+          "tailMs": 1409,
+          "maxInnerGapMs": 41
+        },
+        "charge": {
+          "peak": 0.263,
+          "clipped": 0,
+          "rms": 0.0313,
+          "onsetMs": 36.9,
+          "tailMs": 1903,
+          "maxInnerGapMs": 28
+        },
+        "plasma": {
+          "peak": 0.311,
+          "clipped": 0,
+          "rms": 0.017,
+          "onsetMs": 26.1,
+          "tailMs": 1517,
+          "maxInnerGapMs": 51
+        },
+        "explode": {
+          "peak": 0.689,
+          "clipped": 0,
+          "rms": 0.0722,
+          "onsetMs": 26.1,
+          "tailMs": 1796,
+          "maxInnerGapMs": 79
+        },
+        "hurt": {
+          "peak": 0.26,
+          "clipped": 0,
+          "rms": 0.0151,
+          "onsetMs": 26.1,
+          "tailMs": 1479,
+          "maxInnerGapMs": 35
+        },
+        "alarm": {
+          "peak": 0.216,
+          "clipped": 0,
+          "rms": 0.0303,
+          "onsetMs": 26.4,
+          "tailMs": 2003,
+          "maxInnerGapMs": 26
+        },
+        "clear": {
+          "peak": 0.389,
+          "clipped": 0,
+          "rms": 0.0387,
+          "onsetMs": 26.3,
+          "tailMs": 1787,
+          "maxInnerGapMs": 45
+        },
+        "MIX_burst+explosion+amb": {
+          "peak": 0.825,
+          "clipped": 0,
+          "rms": 0.1269,
+          "onsetMs": 26,
+          "tailMs": 2000,
+          "maxInnerGapMs": 0
+        },
+        "ambience": {
+          "peak": 0.15,
+          "clipped": 0,
+          "rms": 0.0471,
+          "onsetMs": 39.9,
+          "tailMs": 4000,
+          "maxInnerGapMs": 2
+        }
+      },
+      "audioCases": 20
+    }
+  ]
+}

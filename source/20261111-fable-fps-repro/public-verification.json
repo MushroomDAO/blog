@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-11T12:14:03.559083+00:00",
+  "articles": [
+    {
+      "slug": "fable52-fps-repro-procedural-game-cost-audit",
+      "url": "https://blog.mushroom.cv/blog/fable52-fps-repro-procedural-game-cost-audit/",
+      "title": "Fable5.2做浏览器FPS：程序化资产、73轮迭代与缓存账单",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/fable52-fps-repro-procedural-game-cost-audit-banner.CA7ibzDd.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 93366
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/fable52-fps-repro-procedural-game-cost-audit-banner.CA7ibzDd_Z171Ym9.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 45312
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/fable52-fps-repro-procedural-game-cost-audit-fig-01.hKKp8OFf_ZHkIb6.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 38032
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/fable52-fps-repro-procedural-game-cost-audit-fig-02.CxH-Coah_mrlqT.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 41612
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/fable52-fps-repro-procedural-game-cost-audit-fig-03.CoooBgyD_Z14TntL.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 45788
+        }
+      ]
+    }
+  ]
+}

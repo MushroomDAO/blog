@@ -1,0 +1,38 @@
+[
+  {
+    "id": "17ae4ccf45db6e44a971ee863f0b879fd1f6c01e83045200",
+    "metadata": {
+      "article_id": "fable52-fps-repro-procedural-game-cost-audit",
+      "content_hash": "0f049b7d963bda4d",
+      "excerpt": "Fable5.2做浏览器FPS：程序化资产、73轮迭代与缓存账单 fable52-fps-repro公开四类浏览器游戏生成实验、五个HTML成品、提示词与缓存成本汇总。本文实际运行网页，检查Apple M4渲染、离线音频与调试辅助游戏状态，重算五行账单，说明73轮迭代和单文件背后的CDN依赖，并核对模型版本要求、订阅计费差异与脚本覆盖数据的细节，帮助读者先试玩再决定是否付费复现。 Fable 5.2 AI编程 Three.js Web Audio 提示词缓存 “一句话做游戏”，实际上发生了什么？ 四类实验分别能学到什么？ 为什么小场景也能显得很有质感？ ",
+      "language": "zh",
+      "tags": [
+        "Fable 5.2",
+        "AI编程",
+        "Three.js",
+        "Web Audio",
+        "提示词缓存"
+      ],
+      "title": "Fable5.2做浏览器FPS：程序化资产、73轮迭代与缓存账单",
+      "url": "/blog/fable52-fps-repro-procedural-game-cost-audit/"
+    }
+  },
+  {
+    "id": "196faa4b768a25c1044671c56e76481697e4f14bf39d13cf",
+    "metadata": {
+      "article_id": "fable52-fps-repro-procedural-game-cost-audit",
+      "content_hash": "ecf70ddc9c41c7ca",
+      "excerpt": "Fable 5.2 FPS Repro: Procedural Assets and Cost Audit Audit Fable 5.2 browser FPS artifacts, procedural assets and cached costs, with local Chrome checks, audio validation and practical reproduction limitations. Fable 5.2 AI编程 Three.js Web Audio 提示词缓存 What does “one prompt” mean ",
+      "language": "en",
+      "tags": [
+        "Fable 5.2",
+        "AI编程",
+        "Three.js",
+        "Web Audio",
+        "提示词缓存"
+      ],
+      "title": "Fable 5.2 FPS Repro: Procedural Assets and Cost Audit",
+      "url": "/blog/fable52-fps-repro-procedural-game-cost-audit/"
+    }
+  }
+]

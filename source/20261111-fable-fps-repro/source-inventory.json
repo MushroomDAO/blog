@@ -1,0 +1,58 @@
+{
+  "commit": "a7e1df3ce32eb2bb05e23ae457fe5fe2bffab961",
+  "license": "MIT",
+  "files": {
+    "README.md": {
+      "bytes": 13330,
+      "sha256": "913759363e0d90d86ea0e32cce29870d6e21caa24540ca2a7c36f244184988e1"
+    },
+    "data/metrics.tsv": {
+      "bytes": 644,
+      "sha256": "b340b90065cc13b5d6a94835b8b5173fbee505d2d43322ac0d18bb695e73a5f6"
+    },
+    "scripts/run.sh": {
+      "bytes": 708,
+      "sha256": "69201c8e7f31140c33078f64351f99d310389101d2e4ecae1bdbc0599711e04e"
+    },
+    "scripts/metrics.py": {
+      "bytes": 1214,
+      "sha256": "90b4d40f3d904fd7a406b60467ed2ceba2de316ead84b46858ef7be1de2bc6cc"
+    },
+    "scripts/rec/auto04.js": {
+      "bytes": 1356,
+      "sha256": "f190f2cf718536cb864294557d227bb28c81a03f0628ede4bdcaddaf5cf01706"
+    },
+    "prompts/04-fps.md": {
+      "bytes": 378,
+      "sha256": "e7a51d8324e35bd0eee7b76ff63986f772b91ddf32b90d74346286e2faf35613"
+    },
+    "prompts/builder_system_04.md": {
+      "bytes": 777,
+      "sha256": "a2bdd1e42943bb43e7467d5e88fd70cb806a3df0201c1d7db9a82e8247bb4d41"
+    },
+    "demos/03-models/index.html": {
+      "bytes": 68963,
+      "sha256": "ec903d4e0f4bd9cf5c0f545e5054ee0eedd4d59a4c420dd4282deb208ab26992"
+    },
+    "demos/04-fps/index.html": {
+      "bytes": 130777,
+      "sha256": "155918cef3cfb1860c441725b35d90893822d1e20c75cd4c79f06f3251b8f0de"
+    },
+    "demos/02-materials/index.html": {
+      "bytes": 55388,
+      "sha256": "b4e99f82d7816b7786ba1e91ac2e7b9df3a98ec65e870db4163648a8a0753a20"
+    },
+    "demos/01-audio-1h/index.html": {
+      "bytes": 65771,
+      "sha256": "0c97e506afa42ab2c3c49425491c6f454e966d7ac8a6be00e63dff5af0cc1f06"
+    },
+    "demos/01-audio/index.html": {
+      "bytes": 56347,
+      "sha256": "4e5bd0dbf33ee6f1fb06c6ef180732677c9b71dfd438ea5d870441b96573990e"
+    }
+  },
+  "AGENTS": "none in inspected tree",
+  "rawRuns": "excluded by .gitignore and not published",
+  "officialPricingVerified": "https://platform.claude.com/docs/en/about-claude/pricing",
+  "officialMinVersion": "2.1.321 vsREADME2.1.242"
+}

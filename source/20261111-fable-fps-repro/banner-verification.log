@@ -1,0 +1,14 @@
+=== [adopt-banner] fable52-fps-repro-procedural-game-cost-audit ← 1 source image(s) → src/assets/images/fable52-fps-repro-procedural-game-cost-audit-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← https://raw.githubusercontent.com/wquguru/fable52-fps-repro/a7e1df3ce32eb2bb05e23ae457fe5fe2bffab961/docs/screens/04-fps-560.jpg
+=== [adopt-banner] done: src/assets/images/fable52-fps-repro-procedural-game-cost-audit-banner.jpg (1200x630, 93366B) ===
+=== [verify-banner] src/assets/images/fable52-fps-repro-procedural-game-cost-audit-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=https://raw.githubusercontent.com/wquguru/fable52-fps-repro/a7e1df3ce32eb2bb05e23ae457fe5fe2bffab961/docs/screens/04-fps-560.jpg
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 93366B (< 99000B)
+  WARN text: 8 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: GFX | WAVE 2 1 3 0000 | B2J SUBSTAnON 07 | 100 | VITALS | 270 | RES | VK-9 CARBINE
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/fable52-fps-repro-procedural-game-cost-audit-banner.jpg ===
+PATH: src/assets/images/fable52-fps-repro-procedural-game-cost-audit-banner.jpg
