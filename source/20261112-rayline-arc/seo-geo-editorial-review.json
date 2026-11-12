@@ -1,0 +1,13 @@
+{
+  "BLUF": true,
+  "FAQBothLanguages": true,
+  "questionHeadings": true,
+  "externalURLs": "plain text",
+  "independentEvidence": [
+    "five CPU plugin stand-in tests",
+    "displayed ratio arithmetic audit"
+  ],
+  "benchmarkHeadline": "not independently reproduced; discrepancy explicitly retained",
+  "openRelease": "weights and code vs proprietary training corpus/system distinguished",
+  "serving": "WIP missing API and stock vLLM unsupported distinguished"
+}

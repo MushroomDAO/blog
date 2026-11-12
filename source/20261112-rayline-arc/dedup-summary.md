@@ -1,0 +1,1 @@
+Only incoming raw KB material matched. No local Blog/M2/ledger match. Remote WeChat blocked by 40164 for 223.204.85.239; proceeding within explicit authorization; one missing M2 attempt planned after verified Blog.

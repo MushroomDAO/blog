@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "rayline-arc-open-routing-model-cost-audit",
+      "title": "Rayline ARC 开源路由模型：成本数字、权重与部署边界",
+      "url": "/blog/rayline-arc-open-routing-model-cost-audit/",
+      "language": "zh",
+      "excerpt": "Rayline ARC 开源路由模型：成本数字、权重与部署边界 Rayline ARC 用小模型预测候选模型的任务成功率、Token 用量和思考深度，再结合价格与策略决定下一步路由。本文找到官方权重、vLLM 插件和 Raydock 仓库，核对混合部署的质量与成本口径，指出当前表格与标题数字的算术差异，并跑五项插件测试，解释权重开放、训练资料与完整自托管的边界与接入验证方法。 Rayline ARC 模型路由 开源模型 成本优化 原始权重和代码在哪里？ 为什么把预测和路由策略拆开？ “97.5% 性能、十分之一成本”究竟指什么？ 我们重算后发现了什么？ ",
+      "score": 0.52594817
+    },
+    {
+      "article_id": "hermes-local-rig-accounting-real-cost-per-token",
+      "title": "本地跑大模型真的更便宜吗？这个插件把每 100 万 token 的成本算到了 0.62 美元",
+      "url": "/blog/hermes-local-rig-accounting-real-cost-per-token/",
+      "language": "zh",
+      "excerpt": "本地跑大模型真的更便宜吗？这个插件把每 100 万 token 的成本算到了 0.62 美元 本地推理不是免费的——电费、硬件折旧、机会成本都是真金白银。hermes-local-rig-accounting 是一个 Hermes Agent 插件，用一套可审计的公式把这些隐性成本折算成「每百万 token 多少钱」，并直接和云 API 报价放在一起对比。示例配置下算出 0.62 美元/M tokens，全部数据留在本地，无遥测。 本地推理 成本核算 local-first 开源 Hermes Agent LLM 电费 硬件折旧 一句话结论 为什么这件事",
+      "score": 0.51330924
+    },
+    {
+      "article_id": "ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda",
+      "title": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA",
+      "url": "/blog/ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda/",
+      "language": "en",
+      "excerpt": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA sizzlecar/ferrum-infer-rs is a pure-Rust local inference engine: one binary, no Python runtime, with Apple Silicon Metal and NVIDIA CUDA served by the same runtime behind OpenAI-compatible ",
+      "score": 0.5009815
+    },
+    {
+      "article_id": "ornith-1-coding-agent-model-mac-mini-local-inference",
+      "title": "Ornith-1.0: Self-Improving Coding Agent Model — 9B Beats 35B, 60 t/s on Mac mini",
+      "url": "/blog/ornith-1-coding-agent-model-mac-mini-local-inference/",
+      "language": "en",
+      "excerpt": "Ornith-1.0: Self-Improving Coding Agent Model — 9B Beats 35B, 60 t/s on Mac mini deepreinforce-ai open-sources Ornith-1.0: RL jointly optimizes scaffold and answer — the 9B outperforms Qwen3.5-35B on Terminal-Bench and NL2Repo; the 35B MoE surpasses Qwen3.5-397B. APEX-I-Compact M",
+      "score": 0.499434
+    },
+    {
+      "article_id": "audio8-asr-01b-on-device-speech-recognition",
+      "title": "Audio8-ASR-0.1B：0.1B 参数，LibriSpeech 2.70 WER，iPhone 本地跑只占 200MB",
+      "url": "/blog/audio8-asr-01b-on-device-speech-recognition/",
+      "language": "zh",
+      "excerpt": "Audio8-ASR-0.1B：0.1B 参数，LibriSpeech 2.70 WER，iPhone 本地跑只占 200MB Audio8-ASR-0.1B 是一个端到端参数量 0.324B、语言模型核心仅 0.1B 的自回归 ASR 模型，LibriSpeech test-clean WER 2.70%，Open ASR Leaderboard 七集平均 WER 7.03%。三条部署路径：Transformers（Python 服务端）、ONNX Runtime（跨平台 HTTP API）、iOS ANE（iPhone 本地，峰值内存约 200MB）",
+      "score": 0.49663872
+    },
+    {
+      "article_id": "arle-local-llm-distillation-guide",
+      "title": "arle Practical Guide: Run Local LLMs on Any Laptop, Then Distill a 4B Model to Match a 35B",
+      "url": "/blog/arle-local-llm-distillation-guide/",
+      "language": "en",
+      "excerpt": "arle Practical Guide: Run Local LLMs on Any Laptop, Then Distill a 4B Model to Match a 35B arle is a pure-Rust local LLM runtime — one binary for OpenAI-compatible serving, local agents, and on-policy distillation training. A 35B MoE hits 85 tok/s on an M4 Pro MacBook. OPD distil",
+      "score": 0.49651948
+    },
+    {
+      "article_id": "underdog-bark-3-local-asr",
+      "title": "Bark 3.0: Small ASR, Clean Transcripts and Memory Costs",
+      "url": "/blog/underdog-bark-3-local-asr/",
+      "language": "en",
+      "excerpt": "Bark 3.0: Small ASR, Clean Transcripts and Memory Costs Review Underdog Bark 3.0 and Clean: reported English WER, native-app versus MLX speed claims, compact downloads, long-audio memory and local setup on a Mac. Bark 3.0 Underdog 语音识别 本地AI MLX 开源模型 What is publicly available? Wh",
+      "score": 0.49330667
+    },
+    {
+      "article_id": "tokentracker-local-first-token-cost-accounting-dedup",
+      "title": "TokenTracker：省 token 之前，先确认你手上的数字没多算 1.6 到 3.7 倍",
+      "url": "/blog/tokentracker-local-first-token-cost-accounting-dedup/",
+      "language": "zh",
+      "excerpt": "TokenTracker：省 token 之前，先确认你手上的数字没多算 1.6 到 3.7 倍 本地优先的 AI 编程工具 token 与成本统计，覆盖 36 个工具，1522 stars，MIT。真正的技术点在去重：基于 reqId 的去重（ccusage 那一类）对不返回 request ID 的 provider —— DeepSeek、Kimi、MiniMax、Claude 子 agent —— 会超算 1.6 到 3.7 倍；TokenTracker 改用复合键，总数能和各家账单对上。36 个集成里绝大多数是 passive reader，只",
+      "score": 0.4918018
+    },
+    {
+      "article_id": "decision2-kai-06b-local-classification-gguf",
+      "title": "Decision 2.0 Kai: 0.6B Decisions in a 400MB GGUF",
+      "url": "/blog/decision2-kai-06b-local-classification-gguf/",
+      "language": "en",
+      "excerpt": "Decision 2.0 Kai: 0.6B Decisions in a 400MB GGUF Decision 2.0 Kai makes typed decisions with 0.6B parameters. We audit its 400.9MB GGUF, required runtime and quantization drift; local inference is untested. Decision 2.0 小模型 Hugging Face 本地 AI GGUF 语义路由 Qwen3 Why would a local wor",
+      "score": 0.48893142
+    },
+    {
+      "article_id": "clawrouter-llm-router-agent-native-multi-model-cost-optimization",
+      "title": "ClawRouter: Agent-Native LLM Router — 55+ Models, 92% Cost Savings, <1ms Local Routing",
+      "url": "/blog/clawrouter-llm-router-agent-native-multi-model-cost-optimization/",
+      "language": "en",
+      "excerpt": "ClawRouter: Agent-Native LLM Router — 55+ Models, 92% Cost Savings, <1ms Local Routing BlockRunAI/ClawRouter, 6,673 stars, MIT, TypeScript. An intelligent LLM router built for autonomous AI agents: wallet signatures instead of API keys, USDC micropayments instead of credit cards,",
+      "score": 0.48737928
+    }
+  ]
+}

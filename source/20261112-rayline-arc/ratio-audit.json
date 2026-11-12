@@ -1,0 +1,57 @@
+{
+  "source": "HF model card, revision 9dd93e765b09440804908b2af302d3db9677fb39, prefer-local table",
+  "rows": [
+    {
+      "benchmark": "DeepSWE",
+      "baseline": 69.9,
+      "routed": 72.3,
+      "relativeQualityPercent": 103.43347639484978,
+      "costRatioPercent": 1.1
+    },
+    {
+      "benchmark": "Terminal-Bench 2.1",
+      "baseline": 90.7,
+      "routed": 90.5,
+      "relativeQualityPercent": 99.77949283351708,
+      "costRatioPercent": 75.7
+    },
+    {
+      "benchmark": "SWE-Atlas QA",
+      "baseline": 61.6,
+      "routed": 62.6,
+      "relativeQualityPercent": 101.62337662337661,
+      "costRatioPercent": 1.6
+    },
+    {
+      "benchmark": "Tau3 Banking",
+      "baseline": 42.8,
+      "routed": 35.3,
+      "relativeQualityPercent": 82.47663551401868,
+      "costRatioPercent": 17.3
+    },
+    {
+      "benchmark": "GPQA Diamond",
+      "baseline": 89.5,
+      "routed": 92.5,
+      "relativeQualityPercent": 103.35195530726257,
+      "costRatioPercent": 12.3
+    },
+    {
+      "benchmark": "MMMU-Pro Vision",
+      "baseline": 82.2,
+      "routed": 82.7,
+      "relativeQualityPercent": 100.60827250608273,
+      "costRatioPercent": 40.9
+    }
+  ],
+  "macroRelativeQualityPercent": 98.54553486318457,
+  "headlineQualityPercent": 97.5,
+  "headlineMatchesDisplayedMacro": false,
+  "naiveMacroCostRatioPercent": 24.816666666666666,
+  "reportedPooledCostRatioPercent": 7.1,
+  "caveats": [
+    "Displayed macro quality ratios produce 98.55%, not 97.5%; underlying aggregate reconciliation unavailable.",
+    "Pooled cost cannot be reconstructed from six ratios without absolute spend and matched task counts.",
+    "Inference cost is not independently verified total ownership or energy consumption."
+  ]
+}

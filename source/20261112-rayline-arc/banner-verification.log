@@ -1,0 +1,11 @@
+=== [banner-creator] done: src/assets/images/rayline-arc-open-routing-model-cost-audit-banner.jpg (1200x630, 90920B) ===
+=== [verify-banner] src/assets/images/rayline-arc-open-routing-model-cost-audit-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=8521 steps=16
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 90920B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/rayline-arc-open-routing-model-cost-audit-banner.jpg ===
+PATH: src/assets/images/rayline-arc-open-routing-model-cost-audit-banner.jpg

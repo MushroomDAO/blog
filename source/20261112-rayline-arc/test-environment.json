@@ -1,0 +1,8 @@
+{
+  "python": "3.12.15",
+  "torch": "2.14.0",
+  "pytest": "9.2.0",
+  "device": "CPU",
+  "vllm": "stand-in modules from upstream tests, no actual vLLM runtime",
+  "modelWeightsLoaded": false
+}

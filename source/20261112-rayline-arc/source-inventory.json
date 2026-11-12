@@ -1,0 +1,17 @@
+{
+  "model": "https://huggingface.co/rayline-ai/ARC-1.0",
+  "modelRevision": "9dd93e765b09440804908b2af302d3db9677fb39",
+  "plugin": "https://github.com/rayline-ai/vllm-arc",
+  "pluginCommit": "4ee6a9f6f62df25c0ef048d34823588fc6455742",
+  "gateway": "https://github.com/rayline-ai/raydock",
+  "gatewayCommit": "45e4a51354be88cd18208688d027266b59d758be",
+  "license": "Apache-2.0, with upstream notices including CC-BY-4.0 Nemotron-PII attribution",
+  "tests": "5 upstream CPU tests passed using stand-in vLLM; no real ARC weight inference, GPU, paid calls or benchmark rerun",
+  "checkedAt": "2026-11-12T01:32:34.828999+00:00",
+  "technicalReport": {
+    "url": "https://static.rayline.ai/rayline/reports/arc/latest",
+    "sha256": "54961c68fe43c88b5570530474f57079ce09eb1b58b12e91f77b6bf556bd81b6",
+    "pages": 23
+  },
+  "modelCardSha256": "5fea8c128fe9f247841a83c39d3f345a6a52cac31d76ee6f43d2e304aa267d31"
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "d7a45e353168822051fcdf72fedc185d355338aa64efa6f8",
+    "metadata": {
+      "article_id": "rayline-arc-open-routing-model-cost-audit",
+      "content_hash": "ebb9cb010ac0faf3",
+      "excerpt": "Rayline ARC 开源路由模型：成本数字、权重与部署边界 Rayline ARC 用小模型预测候选模型的任务成功率、Token 用量和思考深度，再结合价格与策略决定下一步路由。本文找到官方权重、vLLM 插件和 Raydock 仓库，核对混合部署的质量与成本口径，指出当前表格与标题数字的算术差异，并跑五项插件测试，解释权重开放、训练资料与完整自托管的边界与接入验证方法。 Rayline ARC 模型路由 开源模型 成本优化 原始权重和代码在哪里？ 为什么把预测和路由策略拆开？ “97.5% 性能、十分之一成本”究竟指什么？ 我们重算后发现了什么？ ",
+      "language": "zh",
+      "tags": [
+        "Rayline",
+        "ARC",
+        "模型路由",
+        "开源模型",
+        "成本优化"
+      ],
+      "title": "Rayline ARC 开源路由模型：成本数字、权重与部署边界",
+      "url": "/blog/rayline-arc-open-routing-model-cost-audit/"
+    }
+  },
+  {
+    "id": "66a141f256e81f26bc8eeb1879780b615b8a07dbfa6d050d",
+    "metadata": {
+      "article_id": "rayline-arc-open-routing-model-cost-audit",
+      "content_hash": "629e14ce9da366fd",
+      "excerpt": "Rayline ARC: Open Routing Weights and a Cost Audit Find ARC's official weights and code, audit hybrid benchmark arithmetic, and examine serving gaps, cache-aware routing, and five CPU tests with a vLLM stand-in. Rayline ARC 模型路由 开源模型 成本优化 Where are the official releases? Why sepa",
+      "language": "en",
+      "tags": [
+        "Rayline",
+        "ARC",
+        "模型路由",
+        "开源模型",
+        "成本优化"
+      ],
+      "title": "Rayline ARC: Open Routing Weights and a Cost Audit",
+      "url": "/blog/rayline-arc-open-routing-model-cost-audit/"
+    }
+  }
+]
