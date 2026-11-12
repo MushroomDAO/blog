@@ -1,0 +1,11 @@
+{
+  "banner": {
+    "passed": true,
+    "provenance": "local FLUX 8581",
+    "notes": "Photo-style edge board/cable/notebook matches local tool-calling theme, no text or faces."
+  },
+  "figures": {
+    "passed": true,
+    "notes": "Directly viewed all three final PNGs: white 16:9, Little M active, labels legible. Distinct benchmark measures; thinking/parser interface; executor result feedback. Each <90000 bytes."
+  }
+}

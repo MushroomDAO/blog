@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "botpsy-08b-local-tool-calling-engineering",
+      "title": "BotPsy 0.8B：把工具调用放到端侧，工程上还差哪些环节？",
+      "url": "/blog/botpsy-08b-local-tool-calling-engineering/",
+      "language": "zh",
+      "excerpt": "BotPsy 0.8B：把工具调用放到端侧，工程上还差哪些环节？ Tether AI Research 发布 BotPsy 0.8B，以 Qwen3.5 为底座强化函数调用和多轮工具流程。本文核对官方权重、量化版本、六项基准及训练方法，介绍 thinking 模板、工具解析、执行回传和部署验收，并通过本地小样本检查说明实际能力与限制，帮助工程师区分开放权重、完整智能体和端侧运行成本。 BotPsy 端侧AI 函数调用 QVAC Agent工程 六项领先，究竟比较了什么？ 为什么小模型的工具能力会提高？ 下载哪一版，大小代表什么？ 接入时最容易遗漏哪两个开",
+      "score": 0.7115026
+    },
+    {
+      "article_id": "voicebox-local-ai-voice-studio-elevenlabs-alternative",
+      "title": "Voicebox：把 ElevenLabs 和 WisprFlow 装进一个本地运行的开源 App",
+      "url": "/blog/voicebox-local-ai-voice-studio-elevenlabs-alternative/",
+      "language": "zh",
+      "excerpt": "Voicebox：把 ElevenLabs 和 WisprFlow 装进一个本地运行的开源 App jamiepine/voicebox 是一个完全本地运行的 AI 语音工作室，集成 7 种 TTS 引擎（Qwen3-TTS、LuxTTS、Chatterbox、TADA、Kokoro）、Whisper 语音输入、MCP Server 和 Claude Code 集成，支持 Apple Silicon / CUDA / ROCm，MIT 开源。 AI 语音合成 TTS 本地AI 开源 MCP Tauri Whisper 它解决的具体问题 7 种 TTS 引",
+      "score": 0.5695634
+    },
+    {
+      "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+      "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+      "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+      "language": "zh",
+      "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+      "score": 0.56798774
+    },
+    {
+      "article_id": "valtz-local-ai-creative-studio",
+      "title": "Valtz: Local AI Creation and Composition on Mac",
+      "url": "/blog/valtz-local-ai-creative-studio/",
+      "language": "en",
+      "excerpt": "Valtz: Local AI Creation and Composition on Mac Explore Valtz, a native Mac AI workspace powered by Vpipe: asset recipes, timelines, agent backends, setup requirements and local no-engine validation. Valtz Vpipe macOS 本地AI 视频生成 What does Valtz add to Vpipe? Three workflows in the",
+      "score": 0.56683946
+    },
+    {
+      "article_id": "apodex-1-1-mini-working-capability-local-agent-guide",
+      "title": "Apodex 1.1 Mini 调研：训「持续干活的能力」，不是训「聊得更像」，35B 本地可跑",
+      "url": "/blog/apodex-1-1-mini-working-capability-local-agent-guide/",
+      "language": "zh",
+      "excerpt": "Apodex 1.1 Mini 调研：训「持续干活的能力」，不是训「聊得更像」，35B 本地可跑 调研 Apodex/Apodex-1.1-mini：Qwen3.5-35B-A3B（256 专家/8 激活，约 3B 激活参数）的 Agent 微调版，Apache-2.0，图文输入文本输出，中英双语。配套论文 arXiv:2608.23283 提出「working capability」概念——不是比谁推理更强，而是比谁能在文件/搜索/代码环境里持续干活、失败后能恢复、最终交付可验证的结果。训练分两条线：Environment Scaling（扩展可验证的",
+      "score": 0.56610745
+    },
+    {
+      "article_id": "voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone",
+      "title": "用开源 Voicebox 给 AI Agent 装上嗓子 — MCP 语音层工程实践",
+      "url": "/blog/voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone/",
+      "language": "zh",
+      "excerpt": "用开源 Voicebox 给 AI Agent 装上嗓子 — MCP 语音层工程实践 jamiepine/voicebox，55K stars，MIT，Tauri+Python 桌面应用，内置 MCP server 直连 Claude Code/Cursor/Windsurf。7 款本地 TTS 引擎（Qwen3-TTS、Chatterbox、Kokoro 等）+ Whisper STT + 零样本声音克隆，全程本地推理，完全私有。一行命令让 Agent 开口说话。 voice-AI TTS MCP AI-Agent Voicebox local-AI ",
+      "score": 0.5655015
+    },
+    {
+      "article_id": "lilbot-agent-local-coding-trial",
+      "title": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱",
+      "url": "/blog/lilbot-agent-local-coding-trial/",
+      "language": "zh",
+      "excerpt": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱 LilBot-agent 是纯 Python 开源本地编码 Agent，Windows 优先，原生适配 DeepSeek 等 OpenAI 兼容模型，内置全屏 TUI 驾驶舱、多子代理/Team 协作、五层权限沙箱、持久化记忆、MCP 外部工具对接，153 Stars，本文从开发者试用视角逐层拆解。 本地Agent AI编程 DeepSeek MCP Python 多智能体 Windows 开源工具 为什么会有 LilBot-agent？ 快速安装与第一次启动（Win",
+      "score": 0.56008625
+    },
+    {
+      "article_id": "qwen-image-2-1-unsloth-fp8-gguf-local-deploy",
+      "title": "Qwen-Image-2.1 本地部署：Unsloth FP8/GGUF，6GB 显存能跑，Mac 16GB 统一内存也行",
+      "url": "/blog/qwen-image-2-1-unsloth-fp8-gguf-local-deploy/",
+      "language": "zh",
+      "excerpt": "Qwen-Image-2.1 本地部署：Unsloth FP8/GGUF，6GB 显存能跑，Mac 16GB 统一内存也行 Qwen-Image-2.1 的本地部署门槛被 Unsloth 打下来了。FP8 + 钉住内存 offload：6-8GB 显存即可运行，推理速度<2倍损耗。GGUF 量化版：Mac 16GB 统一内存可用，llama.cpp/Unsloth Desktop 跑。注意：GGUF 只是 denoiser，还需配 VAE 和 Qwen3-VL 文本编码器。INT8 精度优于 FP8（LPIPS 更低），推荐默认 INT8。本文给出三种路",
+      "score": 0.55880886
+    },
+    {
+      "article_id": "decision2-kai-06b-local-classification-gguf",
+      "title": "Decision 2.0 Kai：0.6B 小模型做本地判断，400MB GGUF 的部署边界",
+      "url": "/blog/decision2-kai-06b-local-classification-gguf/",
+      "language": "zh",
+      "excerpt": "Decision 2.0 Kai：0.6B 小模型做本地判断，400MB GGUF 的部署边界 Decision 2.0 Kai 用 0.6B 参数和一次前向计算完成分类、是非判断与评分，Q4 GGUF 文件为 400.9MB。本文核对 8192 token 输入预算、专用 llama.cpp 分支及 System One 接口，并从官方小样本验证解释量化后的概率漂移为何可能改变复核路径；本文未运行本机推理。 Decision 2.0 小模型 Hugging Face 本地 AI GGUF 语义路由 Qwen3 为什么本地工作流需要一个只做判断的小模型？",
+      "score": 0.55291784
+    },
+    {
+      "article_id": "orkas-local-first-desktop-agent-team-review",
+      "title": "Orkas：把专业Agent和编程助手放进桌面工作台",
+      "url": "/blog/orkas-local-first-desktop-agent-team-review/",
+      "language": "zh",
+      "excerpt": "Orkas：把专业Agent和编程助手放进桌面工作台 Orkas是MIT开源的桌面多智能体工作台，以Commander协调专业角色、编程CLI、项目待办和资料库。本文核对任务委派、范围记忆、上下文恢复与定时运行机制，区分源码版和官方打包版的账号、云同步及应用发布功能，并解释本地存储与云端推理的边界，给出源码启动条件、400文件资源清单核验结果及可操作的试用验收建议。 Orkas AI Agent 多智能体 本地优先 开源工具 Orkas 如何把目标变成协作？ 项目、记忆和资料库，分别保存什么？ 本地优先，为什么仍然可能联网？ 能把现有编程助手接进来吗？ ",
+      "score": 0.55205375
+    }
+  ]
+}

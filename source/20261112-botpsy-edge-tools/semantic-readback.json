@@ -1,0 +1,38 @@
+[
+  {
+    "id": "3018972c538953f585aace6715360b53c6096a9385435400",
+    "metadata": {
+      "article_id": "botpsy-08b-local-tool-calling-engineering",
+      "content_hash": "970b79ebe50faf9e",
+      "excerpt": "BotPsy 0.8B：把工具调用放到端侧，工程上还差哪些环节？ Tether AI Research 发布 BotPsy 0.8B，以 Qwen3.5 为底座强化函数调用和多轮工具流程。本文核对官方权重、量化版本、六项基准及训练方法，介绍 thinking 模板、工具解析、执行回传和部署验收，并通过本地小样本检查说明实际能力与限制，帮助工程师区分开放权重、完整智能体和端侧运行成本。 BotPsy 端侧AI 函数调用 QVAC Agent工程 六项领先，究竟比较了什么？ 为什么小模型的工具能力会提高？ 下载哪一版，大小代表什么？ 接入时最容易遗漏哪两个开",
+      "language": "zh",
+      "tags": [
+        "BotPsy",
+        "端侧AI",
+        "函数调用",
+        "QVAC",
+        "Agent工程"
+      ],
+      "title": "BotPsy 0.8B：把工具调用放到端侧，工程上还差哪些环节？",
+      "url": "/blog/botpsy-08b-local-tool-calling-engineering/"
+    }
+  },
+  {
+    "id": "d8adeff4eb9bc44dbc197f7ec6aba4c3bad9e1f1c6184407",
+    "metadata": {
+      "article_id": "botpsy-08b-local-tool-calling-engineering",
+      "content_hash": "9c22d06a83a973c3",
+      "excerpt": "BotPsy 0.8B: Local Tool Calling Beyond the Benchmark Deploy BotPsy 0.8B for local tool calling: inspect official benchmarks, quantized weights, thinking templates, execution loops and bounded smoke-test evidence. BotPsy 端侧AI 函数调用 QVAC Agent工程 What does “leading six benchmarks” me",
+      "language": "en",
+      "tags": [
+        "BotPsy",
+        "端侧AI",
+        "函数调用",
+        "QVAC",
+        "Agent工程"
+      ],
+      "title": "BotPsy 0.8B: Local Tool Calling Beyond the Benchmark",
+      "url": "/blog/botpsy-08b-local-tool-calling-engineering/"
+    }
+  }
+]

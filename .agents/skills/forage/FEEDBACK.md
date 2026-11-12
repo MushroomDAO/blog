@@ -1379,3 +1379,12 @@ Manning产品页直接链接designing-ai-systems/designing_ai_systems_repo，固
 - 固定 fcc70284932276d085f01ef9f83edde90b1258cb：84 份设计文档、0 份打包预览 HTML，与 README 预览列表存在差异；品牌子目录 README 指向在线预览。
 - 原创检查仅限文件清点及文档色值对比度计算，不宣称运行了智能体生成页面或通过全站无障碍测试。
 - 已发布 voltagent-design-md-ai-ui-workflow；专属封面与三张小M图、双语 SEO/GEO 均检查。公众号实际一次 M2 失败 40164，出口 IP 223.204.85.239；禁止自动重试，后续只补公众号。
+
+
+## 2026-11-12 · BotPsy 0.8B 端侧工具调用
+
+- 精确模型 URL/BotPsy 查重仅发现原始素材 KB，没有旧文章或成功本地 M2 凭证；宽泛 Research/Hugging 词命中不能当同题文章。
+- BF16/GGUF 官方修订固定；Apache2 开放权重不等于训练代码和数据全部发布。六项成绩是官方共享 harness 中测试的 <=1.2B 模型比较，BrowseComp4.5 绝对值仍低。
+- 官方 GGUF 用 H100/CUDA b12169，未测 ToolSandbox；外部 API 日期及引擎不同，文件大小不等于运行内存，不能当手机实测。
+- Apple M4/16GB、Transformers5.19/PyTorch2.13 MPS float32 贪心真实权重生成：三条英文构造输入正确调用55、缺值追问、无天气工具时拒绝编造；无真实工具执行、无多轮闭环或官方基准复现。原始输入/最终输出/环境已留证。
+- 发布 botpsy-08b-local-tool-calling-engineering，专属照片封面及三张小M图通过检查；公众号40164失败时仅保留待补草稿，不重做Blog或KB。

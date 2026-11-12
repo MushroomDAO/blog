@@ -1,0 +1,13 @@
+{
+  "model": "https://huggingface.co/qvac/BotPsy-0.8B",
+  "revision": "24561e9681643eaf807fc28b0875210cb17f89c1",
+  "gguf": "https://huggingface.co/qvac/BotPsy-0.8B-GGUFs",
+  "ggufRevision": "17bb36aa29c58fcde8e321aaaad3f2f7372aa655",
+  "blog": "https://huggingface.co/blog/qvac/botpsy",
+  "license": "Apache-2.0 weights; training code and training data are not part of release",
+  "dedup": "Only original KB material; no exact model URL/topic Blog or successful local M2 match. Remote draft/published account queries denied during token acquisition by 40164. Proceed Blog independently as authorized.",
+  "modelCreatedAt": "2026-11-10T03:10:21.000Z",
+  "modelLastModified": "2026-11-11T06:25:11.000Z",
+  "banner": "Original local FLUX 8581; machine verification passed and direct visual review: unmarked edge board, cables, notebook, no text/faces",
+  "smokeScope": "Three synthetic English real-weight MPS float32 greedy generation checks only; no actual tools, full loop, phone or benchmark runs"
+}

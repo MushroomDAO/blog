@@ -1,0 +1,72 @@
+{
+  "modelRevision": "24561e9681643eaf807fc28b0875210cb17f89c1",
+  "device": "mps",
+  "dtype": "float32",
+  "torch": "2.13.0",
+  "transformers": "5.19.0",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.12.14 (main, Sep 20 2026, 08:31:10) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 1024,
+    "enable_thinking": true,
+    "use_cache": true
+  },
+  "scope": "Three synthetic English prompts; no real device, network tool or payment executed; not benchmark, latency comparison, quantized or phone test.",
+  "results": [
+    {
+      "id": "explicit-argument",
+      "prompt": "Set the simulated desk light brightness to 55 percent.",
+      "expected": "call",
+      "inputTokens": 346,
+      "outputTokens": 101,
+      "seconds": 6.060939292074181,
+      "final": "\n\n<tool_call>\n<function=set_brightness>\n<parameter=level>\n55\n</parameter>\n</function>\n</tool_call><|im_end|>",
+      "toolNames": [
+        "set_brightness"
+      ],
+      "argumentValues": [
+        "55"
+      ],
+      "completedWithinBudget": true,
+      "automatedStructuralCheck": true
+    },
+    {
+      "id": "missing-argument",
+      "prompt": "Change the simulated desk light brightness.",
+      "expected": "clarify",
+      "inputTokens": 341,
+      "outputTokens": 115,
+      "seconds": 5.425132375094108,
+      "final": "\n\nI need to know the specific brightness level you want to set. The simulated desk light brightness requires a specific level between 0 and 100. Could you please specify which brightness level you'd like to set?<|im_end|>",
+      "toolNames": [],
+      "argumentValues": [],
+      "completedWithinBudget": true,
+      "automatedStructuralCheck": true
+    },
+    {
+      "id": "unavailable-tool",
+      "prompt": "What is the current weather in Bangkok?",
+      "expected": "no-call",
+      "inputTokens": 342,
+      "outputTokens": 132,
+      "seconds": 5.85575487499591,
+      "final": "\n\nI don't have access to a tool that can retrieve weather information. The tools I have available are only for setting the brightness of a simulated desk light. To get the current weather in Bangkok, you would need to access a weather service or API that provides weather data.<|im_end|>",
+      "toolNames": [],
+      "argumentValues": [],
+      "completedWithinBudget": true,
+      "automatedStructuralCheck": true
+    }
+  ],
+  "loadSeconds": 2.2017316250130534,
+  "hardware": {
+    "chip": "Apple M4",
+    "physicalMemoryBytes": 17179869184
+  },
+  "manualReview": {
+    "explicit": "Correct set_brightness function and 55 argument",
+    "missing": "Asks for brightness 0–100 instead of inventing argument",
+    "unavailable": "Explains no weather tool, no fabricated weather or tool call",
+    "passed": true
+  }
+}

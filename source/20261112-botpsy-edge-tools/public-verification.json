@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-12T08:35:18.224548+00:00",
+  "articles": [
+    {
+      "slug": "botpsy-08b-local-tool-calling-engineering",
+      "url": "https://blog.mushroom.cv/blog/botpsy-08b-local-tool-calling-engineering/",
+      "title": "BotPsy 0.8B：把工具调用放到端侧，工程上还差哪些环节？",
+      "listRank": 2,
+      "carouselRank": 2,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/botpsy-08b-local-tool-calling-engineering-banner.C3b2WIuA.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 92422
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/botpsy-08b-local-tool-calling-engineering-banner.C3b2WIuA_28EVYC.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 41022
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/botpsy-08b-local-tool-calling-engineering-fig-01.BbysPcqH_ZVqvd9.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 35256
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/botpsy-08b-local-tool-calling-engineering-fig-02.Bj_04kOY_YoteU.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 29338
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/botpsy-08b-local-tool-calling-engineering-fig-03.C2PmA36s_b14PY.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 30400
+        }
+      ]
+    }
+  ]
+}
