@@ -1,0 +1,29 @@
+{
+  "modelRevision": "7a153712e5b50fac7e4a9d42ccf9ec41fb4202f0",
+  "device": "mps",
+  "dtype": "float32",
+  "torch": "2.13.0",
+  "system": "macOS-26.6.2-arm64-arm-64bit",
+  "pageCount": 1,
+  "fixture": "self-authored synthetic Thai/English purchase summary with rowspan/colspan",
+  "fixtureSHA256": "107e901bd12f0d7ec321997034fb381fa5522dd024d12970f8624adf5a864d68",
+  "generationTemperature": 0,
+  "maxTokens": 4096,
+  "loadSeconds": 3.5607502500060946,
+  "singleParseSeconds": 23.015662499936298,
+  "errors": 0,
+  "markdownCharacters": 564,
+  "checks": {
+    "thaiTitle": true,
+    "englishTitle": true,
+    "paperRow": true,
+    "penRow": true,
+    "total": true,
+    "table": true,
+    "rowspan": true,
+    "colspan": true
+  },
+  "scope": "Single synthetic page on local MPS, not a speed benchmark, CER estimate, real scanned-document evaluation or reproduction of H100 results. Model loading excluded from singleParseSeconds; first parse includes warmup.",
+  "hardware": "Apple M4, 16GB unified memory",
+  "unicodeObservation": "Some Thai sara-am sequences were decomposed; key checks are not codepoint-perfect transcription or CER."
+}

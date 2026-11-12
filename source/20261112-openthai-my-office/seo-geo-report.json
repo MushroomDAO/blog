@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "openthai-ocr-markdown-thai-document-engineering",
+    "checks": {
+      "fields": true,
+      "title": true,
+      "description": true,
+      "wechat": true,
+      "tags": true,
+      "bilingual": true,
+      "FAQ": true,
+      "sources": true,
+      "copyright": true,
+      "images": true,
+      "banner": true
+    },
+    "passed": true
+  },
+  {
+    "slug": "my-office-claude-code-session-dashboard-guide",
+    "checks": {
+      "fields": true,
+      "title": true,
+      "description": true,
+      "wechat": true,
+      "tags": true,
+      "bilingual": true,
+      "FAQ": true,
+      "sources": true,
+      "copyright": true,
+      "images": true,
+      "banner": true
+    },
+    "passed": true
+  }
+]

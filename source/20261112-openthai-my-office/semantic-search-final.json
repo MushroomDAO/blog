@@ -1,0 +1,180 @@
+[
+  {
+    "slug": "openthai-ocr-markdown-thai-document-engineering",
+    "query": "OpenThai OCR Markdown 泰文 表格 文档 MPS 本地部署",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "openthai-ocr-markdown-thai-document-engineering",
+          "title": "OpenThai 2.0 OCR Markdown：从泰文文档到可追溯的结构化内容",
+          "url": "/blog/openthai-ocr-markdown-thai-document-engineering/",
+          "language": "zh",
+          "excerpt": "OpenThai 2.0 OCR Markdown：从泰文文档到可追溯的结构化内容 OpenThai 2.0 OCR Markdown 是面向泰英印刷文档的零点六三B开放权重模型，输出文本、HTML表格和版面坐标。本文找到官方权重与代码入口，核对 OpenMDW 许可、H100单页速度和不同评测口径，介绍 NVIDIA 服务端与苹果本地部署路径，并用后处理测试和合成样页验证工程接入边界。 OpenThai 泰文OCR 文档解析 开放权重 本地部署 它输出的为什么不只是文字？ 0.63B 模型由什么组成？ “1.6秒”和“95.2分”应该怎样理解？ Lin",
+          "score": 0.7258823
+        },
+        {
+          "article_id": "ovisocr3-unified-document-model",
+          "title": "OvisOCR3：0.8B 统一文档解析、字段抽取与跨页表格",
+          "url": "/blog/ovisocr3-unified-document-model/",
+          "language": "zh",
+          "excerpt": "OvisOCR3：0.8B 统一文档解析、字段抽取与跨页表格 OvisOCR3 是阿里巴巴 ATH-MaaS 开源的 0.8B 文档理解模型，统一解析、通用 OCR、关键信息抽取、图片描述与跨页表格重建。本文核对模型卡、在线体验源码和提示词，解释评测成绩、JSON 模板与严格 Schema 的区别、两阶段递归拼表、演示缓存、部署条件及 Mac 本地测试边界，并给出票据和金融文档的接入流程。 OvisOCR3 OCR Document AI KIE Local AI Open Source 五类能力分别解决什么问题？ 官方成绩该怎样读，哪些不是第一？ KI",
+          "score": 0.5561227
+        },
+        {
+          "article_id": "orkas-local-first-desktop-agent-team-review",
+          "title": "Orkas：把专业Agent和编程助手放进桌面工作台",
+          "url": "/blog/orkas-local-first-desktop-agent-team-review/",
+          "language": "zh",
+          "excerpt": "Orkas：把专业Agent和编程助手放进桌面工作台 Orkas是MIT开源的桌面多智能体工作台，以Commander协调专业角色、编程CLI、项目待办和资料库。本文核对任务委派、范围记忆、上下文恢复与定时运行机制，区分源码版和官方打包版的账号、云同步及应用发布功能，并解释本地存储与云端推理的边界，给出源码启动条件、400文件资源清单核验结果及可操作的试用验收建议。 Orkas AI Agent 多智能体 本地优先 开源工具 Orkas 如何把目标变成协作？ 项目、记忆和资料库，分别保存什么？ 本地优先，为什么仍然可能联网？ 能把现有编程助手接进来吗？ ",
+          "score": 0.54646504
+        },
+        {
+          "article_id": "openpanels-local-ai-agent-visual-workspace",
+          "title": "OpenPanels: A Local Visual Workspace for AI Agents, Five Panels from Writing to Publishing",
+          "url": "/blog/openpanels-local-ai-agent-visual-workspace/",
+          "language": "en",
+          "excerpt": "OpenPanels: A Local Visual Workspace for AI Agents, Five Panels from Writing to Publishing mooqii open-sources OpenPanels, a local-first visual workspace for AI agents, written in Rust, MIT license. Five panels cover the full pipeline from knowledge management and document writin",
+          "score": 0.5451237
+        },
+        {
+          "article_id": "stirling-pdf-local-toolbox-guide",
+          "title": "Stirling-PDF：本地PDF工具箱怎么部署，隐私和许可怎么看？",
+          "url": "/blog/stirling-pdf-local-toolbox-guide/",
+          "language": "zh",
+          "excerpt": "Stirling-PDF：本地PDF工具箱怎么部署，隐私和许可怎么看？ Stirling-PDF：本地PDF工具箱怎么部署，隐私和许可怎么看？。本文核对官方仓库和一手资料，区分项目宣称、实际实现与本文分析，说明部署条件、功能边界、评测证据和适用场景；没有把未执行的运行测试或作者自报成绩写成独立实测。读者可以沿文末来源复查，并在自己的数据、权限和预算条件下逐步验证。选型应保留可复核证据。 Stirling-PDF 开源工具 工程实践 证据核查 它适合解决什么问题？ 为什么不能把整个仓库都叫MIT开源？ Docker怎样启动？ 本机使用，端口能否更明确？ 本",
+          "score": 0.54141635
+        },
+        {
+          "article_id": "openmaple-local-managed-agent-platform-guide",
+          "title": "本地就能跑的 Agent 平台：OpenMaple 自托管 managed-agent 控制面入门",
+          "url": "/blog/openmaple-local-managed-agent-platform-guide/",
+          "language": "zh",
+          "excerpt": "本地就能跑的 Agent 平台：OpenMaple 自托管 managed-agent 控制面入门 OpenMaple（Apache-2.0 开源）是一个能在本地一键跑起来的 managed-agent 控制面：它把内部 Agent 平台常见的能力拆成一套资源模型——Agent、Environment、Session、Vault、Runtime Pool、Sandbox Pool、Event Log，外加 SDK / CLI / REST API。一条 setup-local-docker.sh 起 Web(8080)、API(27951)、MySQL、",
+          "score": 0.5402259
+        },
+        {
+          "article_id": "mcp-dev-runtime-openai-tunnel-local-dev-mcp-server",
+          "title": "mcp-dev-runtime：一条命令把本地开发机暴露给 ChatGPT——OpenAI Tunnel + 6 个 MCP 工具的打包方案",
+          "url": "/blog/mcp-dev-runtime-openai-tunnel-local-dev-mcp-server/",
+          "language": "zh",
+          "excerpt": "mcp-dev-runtime：一条命令把本地开发机暴露给 ChatGPT——OpenAI Tunnel + 6 个 MCP 工具的打包方案 dolibali/mcp-dev-runtime，3 stars，Apache-2.0，TypeScript。把 OpenAI 官方 Tunnel 客户端和 6 个本地开发 MCP 工具（shell 执行/PTY 交互/代码 patch/图片查看/进程管理）打包成跨平台运行时，内置 Node.js 24.21.0。一条 mdr start 同时启动 MCP 服务和 Tunnel，对接的是 ChatGPT（非 cla",
+          "score": 0.53694403
+        },
+        {
+          "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+          "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+          "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+          "language": "zh",
+          "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+          "score": 0.53446156
+        },
+        {
+          "article_id": "archonos-local-agent-workbench",
+          "title": "ArchonOS: A Local Workbench for Agents, MCP and Artifacts",
+          "url": "/blog/archonos-local-agent-workbench/",
+          "language": "en",
+          "excerpt": "ArchonOS: A Local Workbench for Agents, MCP and Artifacts Review of ArchonOS public edition: task routing, local CLI engines, MCP grants, artifact revisions, setup corrections and14 module checks, with deployment boundaries. ArchonOS AI Agent MCP 本地工具 开源 What does its “operating ",
+          "score": 0.5327181
+        },
+        {
+          "article_id": "andrew-ng-openworker-desktop-ai-coworker-local-aisuite",
+          "title": "OpenWorker：吴恩达开源的桌面 AI 协作者，本地运行 + 批准门 + 25+ 工具集成",
+          "url": "/blog/andrew-ng-openworker-desktop-ai-coworker-local-aisuite/",
+          "language": "zh",
+          "excerpt": "OpenWorker：吴恩达开源的桌面 AI 协作者，本地运行 + 批准门 + 25+ 工具集成 andrewyng/openworker，4天前刚开源。MIT，Python + TypeScript + Tauri + Rust，本地运行，BYOK（带自己的 key 或跑 Ollama），25+ 工具集成，批准门机制保留人类最终审批权。吴恩达 aisuite 的实战参考实现。 AI Agent 开源 桌面应用 本地优先 吴恩达 aisuite 工作流 自托管 一、它是什么 二、架构：三层 三、核心机制：批准门 四、支持什么 五、技术底层：aisuite",
+          "score": 0.52866775
+        }
+      ]
+    }
+  },
+  {
+    "slug": "my-office-claude-code-session-dashboard-guide",
+    "query": "My Office Claude Code 会话 看板 hooks 三维办公室",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "my-office-claude-code-session-dashboard-guide",
+          "title": "My Office：把 Claude Code 会话放进一间可观察的办公室",
+          "url": "/blog/my-office-claude-code-session-dashboard-guide/",
+          "language": "zh",
+          "excerpt": "My Office：把 Claude Code 会话放进一间可观察的办公室 My Office 把 Claude Code 会话变成办公室里的角色，展示文件读取、编辑、执行命令和审批状态。本文找到 MIT 仓库，拆解 Node、Next.js、Three.js 与 hooks 事件链路，说明二维视图、回放和手机访问用途，核对安装配置变化，并用上游测试检查基础行为，区分可观察看板与模型能力提升。 My Office Claude Code 开发者工具 可观察性 开源 一间虚拟办公室解决什么问题？ hooks 怎样变成画面？ 如何试用，安装会改变什么？ 审批",
+          "score": 0.7605996
+        },
+        {
+          "article_id": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+          "title": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+          "url": "/blog/munder-difflin-multi-agent-harness-claude-codex-local-first/",
+          "language": "en",
+          "excerpt": "munder-difflin-multi-agent-harness-claude-codex-local-first Munder Difflin (MIT, 3888 stars, Electron+React+TypeScript) is a local-first multi-agent harness desktop app. It wraps Claude Code, OpenAI Codex, xAI Grok, Kimi Code, Qwen, GitHub Copilot CLI, and 9 other CLIs as real PT",
+          "score": 0.60071707
+        },
+        {
+          "article_id": "echo-slides-skill-extract-slides-from-video-claude-code-skill",
+          "title": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片",
+          "url": "/blog/echo-slides-skill-extract-slides-from-video-claude-code-skill/",
+          "language": "zh",
+          "excerpt": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片 xiangzhouEcho/Echo-Slides-Skill 开源 Claude Code Skill，npx skills add 一行装到全局，Claude Code/Codex/Cursor/OpenCode 通用，双签名去重（dHash+RGB网格），实测20分钟演讲39页零重复。 Claude Code skill video slides open source AI tools productivity agent 这个痛点存在了很久 核心洞察",
+          "score": 0.59352815
+        },
+        {
+          "article_id": "scroll-world-skill-claude-code-codex-3d-landing-page",
+          "title": "Must Have: scroll-world — One Prompt to a Scroll-Cinematic 3D Landing Page in Claude Code or Codex",
+          "url": "/blog/scroll-world-skill-claude-code-codex-3d-landing-page/",
+          "language": "en",
+          "excerpt": "Must Have: scroll-world — One Prompt to a Scroll-Cinematic 3D Landing Page in Claude Code or Codex scroll-world is an open-source Agent Skill (1600+ ⭐) for Claude Code (Fable 5) or Codex (GPT-5.6 sol): the agent interviews you, calls Higgsfield to generate cohesive isometric 3D d",
+          "score": 0.5803284
+        },
+        {
+          "article_id": "anthropic-agent-three-layer-architecture",
+          "title": "Anthropic 的三层 Agent 架构：从一个 Claude 到一支 Agent 团队",
+          "url": "/blog/anthropic-agent-three-layer-architecture/",
+          "language": "zh",
+          "excerpt": "Anthropic 的三层 Agent 架构：从一个 Claude 到一支 Agent 团队 Sequoia Podcast 访谈 Anthropic 平台负责人揭示了其内部 Agent 架构的三层设计：知识层、执行层、协同层。很多人还在研究怎么写 Prompt，Anthropic 已经在研究如何让 Agent 团队协同工作，本文结合官方文档拆解每一层的构件和实现方式。 AI Agent Anthropic 多智能体 MCP Claude Code 架构设计 Token Jobs 一句话击中要害 三层架构全景 第一层：知识层（Knowledge Laye",
+          "score": 0.57918805
+        },
+        {
+          "article_id": "claude-code-game-studios-open-source-framework",
+          "title": "Claude Code Game Studios：把 AI 对话窗口变成游戏工作室",
+          "url": "/blog/claude-code-game-studios-open-source-framework/",
+          "language": "zh",
+          "excerpt": "Claude Code Game Studios：把 AI 对话窗口变成游戏工作室 CCGS 是一个开源框架，用 48 个专业 Agent、72 种工作流指令和分层协作架构，把 Claude Code 从单一对话工具变成具备专业级协作能力的虚拟游戏工作室，支持 Godot 4、Unity 和 UE5。 Claude Code Game Dev AI Agent 开源 Godot Unity 工作流 这是什么项目？ 核心构成：三套系统 1. 48 个专业 AI Agent（分层架构） 2. 72 种斜杠指令（工作流 Skills） 3. CLAUDE.md",
+          "score": 0.57487327
+        },
+        {
+          "article_id": "the-startup-rsmdt-claude-code-spec-driven-multi-agent",
+          "title": "The Agentic Startup：给 Claude Code 装一套创业团队工作流",
+          "url": "/blog/the-startup-rsmdt-claude-code-spec-driven-multi-agent/",
+          "language": "zh",
+          "excerpt": "The Agentic Startup：给 Claude Code 装一套创业团队工作流 rsmdt 开源的 Claude Code 多智能体框架，367 stars，MIT License，Shell。核心思路：先写规格再写代码（spec-driven development）。10 个 slash command 覆盖从需求到交付的全流程，三级复杂度自动分发（Direct/Incremental/Factory），v3 新增实验性 Agent Teams 多智能体协作。两个 Marketplace 插件，一行安装。 ClaudeCode 多智能体 规",
+          "score": 0.57411563
+        },
+        {
+          "article_id": "grill-with-docs-domain-modeling-grilling-skills-requirement-workflow",
+          "title": "需求整理三连击：grilling + domain-modeling + grill-with-docs，把模糊需求变成可执行文档",
+          "url": "/blog/grill-with-docs-domain-modeling-grilling-skills-requirement-workflow/",
+          "language": "zh",
+          "excerpt": "需求整理三连击：grilling + domain-modeling + grill-with-docs，把模糊需求变成可执行文档 Matt Pocock 在 skills.sh 发布的三个 Claude Code Skill：grilling 负责连续追问、domain-modeling 统一项目语言、grill-with-docs 整合两者并沉淀文档。特别适合客户项目、复杂产品需求和多人协作开发。本文介绍三个 skill 的工作原理和安装方式。 Claude Code Skill 需求整理 领域建模 AI工程 开发工作流 Matt Pocock 一、",
+          "score": 0.5729981
+        },
+        {
+          "article_id": "claude-for-small-business-43-workflows-27-integrations-cowork-2026",
+          "title": "Claude for Small Business：43 个工作流、27 个集成，从聊天变成\"跑整周流程\"",
+          "url": "/blog/claude-for-small-business-43-workflows-27-integrations-cowork-2026/",
+          "language": "zh",
+          "excerpt": "Claude for Small Business：43 个工作流、27 个集成，从聊天变成\"跑整周流程\" Anthropic 2026-09-15 扩容 Claude for Small Business，新增 43 个工作流、27 个集成，接入 Shopify、Salesforce、TikTok、Stripe、Xero、QuickBooks、Zapier 等工具。核心变化是从「回答问题」变成「围绕一个结果持续跑流程」：周一经营简报、线索自动跟进、语音备忘录变提案、每月对账关账。运行在 Claude Cowork 桌面应用，默认需批准后才真正执行动作。",
+          "score": 0.5728836
+        },
+        {
+          "article_id": "awesome-opus-videos-code-animation-guide",
+          "title": "Awesome Opus视频合集：从703个案例学代码动画",
+          "url": "/blog/awesome-opus-videos-code-animation-guide/",
+          "language": "zh",
+          "excerpt": "Awesome Opus视频合集：从703个案例学代码动画 awesome-opus5-5-videos收集用Claude Opus 5.5制作的代码动画案例。本文纠正仓库地址，核对703个条目、207条部分提示词与418个复刻标记，解释HTML、Canvas、SVG和Three.js出片方式，给出分镜、关键帧检查与导出流程，并区分源码、模型归因、更新时间和素材授权的边界。 AI视频 Claude 代码动画 Canvas Three.js 开源项目 这是视频生成模型，还是编程案例库？ 703、418、100，分别在数什么？ 为什么“用代码做视频”值得学？",
+          "score": 0.56794405
+        }
+      ]
+    }
+  }
+]

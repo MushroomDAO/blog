@@ -1,0 +1,17 @@
+
+Loading weights:   0%|          | 0/510 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 510/510 [00:00<00:00, 7635.29it/s]
+/tmp/openthai-runtime-venv/lib/python3.12/site-packages/torchvision/transforms/functional.py:154: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:219.)
+  img = torch.from_numpy(pic.transpose((2, 0, 1))).contiguous()
+[transformers] Passing `generation_config` together with generation-related arguments=({'return_dict_in_generate'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+{"modelRevision": "7a153712e5b50fac7e4a9d42ccf9ec41fb4202f0", "device": "mps", "dtype": "float32", "torch": "2.13.0", "system": "macOS-26.6.2-arm64-arm-64bit", "pageCount": 1, "fixture": "self-authored synthetic Thai/English purchase summary with rowspan/colspan", "fixtureSHA256": "107e901bd12f0d7ec321997034fb381fa5522dd024d12970f8624adf5a864d68", "generationTemperature": 0, "maxTokens": 4096, "loadSeconds": 3.5607502500060946, "singleParseSeconds": 23.015662499936298, "errors": 0, "markdownCharacters": 564, "checks": {"thaiTitle": true, "englishTitle": true, "paperRow": true, "penRow": true, "total": true, "table": true, "rowspan": true, "colspan": true}, "scope": "Single synthetic page on local MPS, not a speed benchmark, CER estimate, real scanned-document evaluation or reproduction of H100 results. Model loading excluded from singleParseSeconds; first parse includes warmup."}
+# รายงานการจัดซื้อ
+
+Purchase summary — 12 November 2026
+
+เอกสารตัวอย่างสําหรับทดสอบระบบอ่านข้อความ
+
+<table><tr><th colspan="1" rowspan="2">รายการ</th><th colspan="2" rowspan="1">จํานวน</th></tr><tr><th colspan="1" rowspan="1">หน่วย</th><th colspan="1" rowspan="1">ราคา</th></tr><tr><td colspan="1" rowspan="1">กระดาษ</td><td colspan="1" rowspan="1">10</td><td colspan="1" rowspan="1">250</td></tr><tr><td colspan="1" rowspan="1">ปากกา</td><td colspan="1" rowspan="1">20</td><td colspan="1" rowspan="1">300</td></tr></table>
+
+ยอดรวม 550 บาท
+ใช้เพื่อการทดสอบเท่านั้น

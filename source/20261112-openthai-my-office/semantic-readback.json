@@ -1,0 +1,74 @@
+[
+  {
+    "id": "93cc7576de68befde3937fb7279707241d644f6a96a24cd0",
+    "metadata": {
+      "article_id": "openthai-ocr-markdown-thai-document-engineering",
+      "content_hash": "33e0f247c26eb36f",
+      "excerpt": "OpenThai 2.0 OCR Markdown：从泰文文档到可追溯的结构化内容 OpenThai 2.0 OCR Markdown 是面向泰英印刷文档的零点六三B开放权重模型，输出文本、HTML表格和版面坐标。本文找到官方权重与代码入口，核对 OpenMDW 许可、H100单页速度和不同评测口径，介绍 NVIDIA 服务端与苹果本地部署路径，并用后处理测试和合成样页验证工程接入边界。 OpenThai 泰文OCR 文档解析 开放权重 本地部署 它输出的为什么不只是文字？ 0.63B 模型由什么组成？ “1.6秒”和“95.2分”应该怎样理解？ Lin",
+      "language": "zh",
+      "tags": [
+        "OpenThai",
+        "泰文OCR",
+        "文档解析",
+        "开放权重",
+        "本地部署"
+      ],
+      "title": "OpenThai 2.0 OCR Markdown：从泰文文档到可追溯的结构化内容",
+      "url": "/blog/openthai-ocr-markdown-thai-document-engineering/"
+    }
+  },
+  {
+    "id": "0b21bb193f81ab4cad2eacf8865c42bd1647fb5f30422acf",
+    "metadata": {
+      "article_id": "openthai-ocr-markdown-thai-document-engineering",
+      "content_hash": "8ca6d345021ef82d",
+      "excerpt": "OpenThai OCR Markdown: Thai Documents into Structured Data Find OpenThai OCR Markdown's official weights and code, examine H100 benchmark limits, and build Thai document workflows with layout, tables, and local checks. OpenThai 泰文OCR 文档解析 开放权重 本地部署 What does it preserve? What doe",
+      "language": "en",
+      "tags": [
+        "OpenThai",
+        "泰文OCR",
+        "文档解析",
+        "开放权重",
+        "本地部署"
+      ],
+      "title": "OpenThai OCR Markdown: Thai Documents into Structured Data",
+      "url": "/blog/openthai-ocr-markdown-thai-document-engineering/"
+    }
+  },
+  {
+    "id": "5baffee6d0f466f9e0807e641be68e4946a451e95573e6ad",
+    "metadata": {
+      "article_id": "my-office-claude-code-session-dashboard-guide",
+      "content_hash": "ea084aaed5d2814a",
+      "excerpt": "My Office：把 Claude Code 会话放进一间可观察的办公室 My Office 把 Claude Code 会话变成办公室里的角色，展示文件读取、编辑、执行命令和审批状态。本文找到 MIT 仓库，拆解 Node、Next.js、Three.js 与 hooks 事件链路，说明二维视图、回放和手机访问用途，核对安装配置变化，并用上游测试检查基础行为，区分可观察看板与模型能力提升。 My Office Claude Code 开发者工具 可观察性 开源 一间虚拟办公室解决什么问题？ hooks 怎样变成画面？ 如何试用，安装会改变什么？ 审批",
+      "language": "zh",
+      "tags": [
+        "My Office",
+        "Claude Code",
+        "开发者工具",
+        "可观察性",
+        "开源"
+      ],
+      "title": "My Office：把 Claude Code 会话放进一间可观察的办公室",
+      "url": "/blog/my-office-claude-code-session-dashboard-guide/"
+    }
+  },
+  {
+    "id": "313964b5177e63a1ab6cd6bb5b6f69fc9b35a863345aebc9",
+    "metadata": {
+      "article_id": "my-office-claude-code-session-dashboard-guide",
+      "content_hash": "41cadc326773af72",
+      "excerpt": "My Office: A Local Dashboard for Claude Code Sessions Explore My Office's Claude Code hooks, local event server, 3D and 2D dashboards, approval boundaries, installation changes, and results from 168 upstream tests. My Office Claude Code 开发者工具 可观察性 开源 What does the office add? How",
+      "language": "en",
+      "tags": [
+        "My Office",
+        "Claude Code",
+        "开发者工具",
+        "可观察性",
+        "开源"
+      ],
+      "title": "My Office: A Local Dashboard for Claude Code Sessions",
+      "url": "/blog/my-office-claude-code-session-dashboard-guide/"
+    }
+  }
+]

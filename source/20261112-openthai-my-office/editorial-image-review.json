@@ -1,0 +1,23 @@
+{
+  "banners": {
+    "method": "local FLUX.2 Klein thematic still lives; machine verifier required",
+    "ocrInitialSeed": 8551,
+    "ocrInitialRejected": "Manual visual review found faint unintended lettering on page edge despite automated pass; regenerate with seed 8552 and unmarked stationery scene.",
+    "officeSeed": 8561,
+    "officeManualReview": "passed; no lettering or faces; miniature workspace matches session-visualization topic",
+    "ocrFinalSeed": 8552,
+    "ocrFinalManualReview": "Passed: unmarked archival paper, geometric layout and inspection lens; no lettering or faces. Machine verifier passed."
+  },
+  "illustrations": {
+    "count": 6,
+    "method": "publisher-skill authorized imagegen workers; three per article",
+    "officeReview": "All three viewed: clear, legible, topic-matched",
+    "ocrReview": "All three final figures viewed: topic matched, clear labels, official benchmark conditions explicit; no smoke-test accuracy implied."
+  },
+  "benchmarkScope": {
+    "official": "H100 and Typhoon results attributed to publisher with exact conditions and significance caveats",
+    "local": "One synthetic page MPS smoke, no comparative speed or accuracy benchmark; excluded model load and counted output checks/errors",
+    "hardware": "Apple M4, 16GB; no concurrent local banner generation during smoke"
+  },
+  "seo": "Bilingual BLUF, source URLs, question headings, FAQ, copyright, English slugs and complete frontmatter; automated checks in check.py"
+}

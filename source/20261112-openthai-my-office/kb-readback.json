@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "openthai-ocr-markdown-thai-document-engineering",
+    "rows": 5,
+    "checks": {
+      "url": true,
+      "wechatStatus": true,
+      "semantic": true,
+      "error": true
+    }
+  },
+  {
+    "slug": "my-office-claude-code-session-dashboard-guide",
+    "rows": 3,
+    "checks": {
+      "url": true,
+      "wechatStatus": true,
+      "semantic": true,
+      "error": true
+    }
+  }
+]

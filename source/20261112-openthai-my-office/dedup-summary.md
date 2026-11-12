@@ -1,0 +1,1 @@
+Exact OpenThai model URL/name and khanh020905/my-office URL/entity absent from local publication ledgers. Generic My Office token search matches unrelated office articles; exact repo URL check clean. No old slug or successful M2 receipt to reuse. Remote WeChat ledger blocked by 40164; explicit user authorization permits Blog and KB plus one M2 attempt.

@@ -1,0 +1,18 @@
+{
+  "ocr": {
+    "url": "https://huggingface.co/iapp/OpenThai2.0-OCR-Markdown",
+    "commit": "7a153712e5b50fac7e4a9d42ccf9ec41fb4202f0",
+    "license": "OpenMDW-1.1; tokenizer MIT",
+    "github": "Official release bundles source on Hugging Face; no separate iApp GitHub repo established",
+    "guide": "https://iapp.co.th/en/blog/openthai2p0-ocr-how-to-run",
+    "launch": "https://iapp.co.th/blog/openthai2p0-ocr-markdown-launch"
+  },
+  "office": {
+    "url": "https://github.com/khanh020905/my-office",
+    "commit": "84997664e6ae636efc92c16445dd9161225786a1",
+    "license": "MIT",
+    "versionFile": "0.5.0"
+  },
+  "dedup": "Exact source URLs and entities absent from Blog/local M2/ledger; generic office keyword false positives are unrelated. Remote WeChat 40164, authorized Blog/KB proceed and one M2 attempt per missing article.",
+  "sourceFreshness": "Search index snippets showed older 93.6/96.7 values. Live official launch, product and API HTML fetched this run all contain current 95.2/98.7 and no 93.6/96.7. Article uses pinned live HF card, not stale snippets."
+}
