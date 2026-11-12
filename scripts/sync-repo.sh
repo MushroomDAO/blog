@@ -56,6 +56,13 @@ if [ -n "$(git status --porcelain --untracked-files=no)" ]; then
   exit 0
 fi
 
+# 确保在 main 分支上同步
+BRANCH=$(git branch --show-current 2>/dev/null || echo "")
+if [ "$BRANCH" != "main" ]; then
+  log "当前不在 main 分支 ($BRANCH)，尝试切回 main..."
+  git checkout main || { log "切回 main 失败，跳过对齐"; exit 1; }
+fi
+
 # ---- 2. 对齐 --------------------------------------------------------------
 git fetch -q origin 2>/dev/null || { log "fetch 失败（网络？），退出"; exit 0; }
 BEHIND=$(git rev-list --count HEAD..origin/main 2>/dev/null || echo 0)

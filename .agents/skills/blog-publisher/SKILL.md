@@ -424,9 +424,10 @@ Minimum checks:
 
 ### 5. Build Once
 
-Always pull latest main first so your local workspace includes all existing Cloudflare Pages Functions (`functions/ethereum`, `functions/agent`):
+**必须在 main 分支**，且必须先同步远程最新代码以包含全量历史文章与 Cloudflare Pages Functions (`functions/ethereum`, `functions/agent`)：
 
 ```bash
+git checkout main
 git pull --rebase origin main
 pnpm build
 ```
@@ -457,7 +458,7 @@ Expected:
 - new article appears at or near the top
 - no duplicate route exists for the old slug
 
-### 7.5. Commit Published Article
+### 7.5. Commit & Push Published Article (硬性要求：必须推送到远程 main)
 
 After the deploy validates successfully:
 
@@ -468,6 +469,7 @@ git commit -m "$(cat <<'EOF'
 feat(blog): publish SLUG
 EOF
 )"
+git push origin main
 ```
 
 If the source came from a `source/DIRNAME/` directory, also commit the `.published` marker:
@@ -475,9 +477,10 @@ If the source came from a `source/DIRNAME/` directory, also commit the `.publish
 ```bash
 git add source/DIRNAME/.published
 git commit --amend --no-edit 2>/dev/null || git commit -m "feat(blog): publish SLUG [source: DIRNAME]"
+git push origin main
 ```
 
-Skip the commit if nothing is staged (no error).
+Skip the commit if nothing is staged (no error). **严禁只 commit 不 push，否则会导致分支断裂和文章丢失！**
 
 ### 7.6. Update Semantic Search Index (不可跳过)
 

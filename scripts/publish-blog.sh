@@ -44,6 +44,22 @@ if [ -z "$MD_FILE" ] || [ ! -f "$MD_FILE" ]; then
   exit 1
 fi
 
+# ---- Git Branch & Sync Guard ----
+CURRENT_BRANCH=$(git branch --show-current 2>/dev/null || echo "")
+if [ "$CURRENT_BRANCH" != "main" ]; then
+  echo "❌ 必须在 main 分支执行发布！当前处于分支: '$CURRENT_BRANCH'" >&2
+  echo "   请先切换到 main 分支并拉取最新代码: git checkout main && git pull --rebase origin main" >&2
+  exit 1
+fi
+
+if [ "$DO_DEPLOY" = true ]; then
+  echo "🔄 检查并同步远程主干 (git pull --rebase origin main)..."
+  if ! git pull --rebase origin main; then
+    echo "❌ git pull 失败，可能存在未解决的冲突，已终止发布" >&2
+    exit 1
+  fi
+fi
+
 BLOG_USER="${BLOG_USER:-mushroom}"
 [ -f .env ] && export $(grep -v '^#' .env | grep -E '^[A-Za-z_]+=' | xargs) || true
 
@@ -206,25 +222,13 @@ else
   echo "  ✓ committed"
 fi
 
-# ---- 4.6. git push (critical) ----
-# 以前这里只打印一句「记得 push」，然后指望人看见。那行提示夹在几十行发布
-# 输出中间，每次都滚过去——结果攒了 66 个未推送的提交，远端停在一周前。
-# 后果不只是 CI/CD 重建会丢文章，还有 newsletter：GitHub Actions 从 GitHub
-# 检出代码，看不到没推上去的文章，于是连续四次「没有新文章」空转，
-# 订阅者五天没收到邮件。
-# 创建提交的这一步有责任把它完成，不能把最后一环留给人的记性。
-AHEAD=$(git rev-list --count @{u}..HEAD 2>/dev/null || echo 0)
-if [ "$AHEAD" -gt 0 ]; then
-  echo "  本地领先远端 ${AHEAD} 个提交，推送中…"
-  if git push 2>&1 | tail -2; then
-    echo "  ✓ pushed — 远端与 Cloudflare CI/CD、newsletter 已同步"
-  else
-    echo "  ⚠️ push 失败。文章已上线（wrangler 直传），但远端未同步——"
-    echo "     newsletter 看不到这篇，且下次 CI/CD 重建会从首页漏掉它。"
-    echo "     请手动 git push。"
-  fi
+# ---- 4.6. git push (critical: push to origin main) ----
+echo "  推送提交到远程 main 分支 (git push origin main)..."
+if git push origin main 2>&1 | tail -3; then
+  echo "  ✓ pushed — 远端与 Cloudflare CI/CD、newsletter 已同步"
 else
-  echo "  ✓ 远端已同步"
+  echo "❌ git push origin main 失败！必须保持主干同步！" >&2
+  exit 1
 fi
 
 # ---- 4.7. incremental search index (T1.4.1) ----
