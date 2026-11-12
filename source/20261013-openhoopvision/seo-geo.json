@@ -1,0 +1,22 @@
+{
+  "title": 29,
+  "titleEn": 53,
+  "description": 152,
+  "descriptionEn": 156,
+  "wechatTitle": 22,
+  "wechatDigest": 41,
+  "bilingual": true,
+  "copyrights": true,
+  "FAQ": true,
+  "ownVerification": "11 synthetic checks; no model/video test",
+  "metricsAttributed": true,
+  "courtAndFallbackBoundaries": true,
+  "relatedArticle": "Seal",
+  "images": {
+    "count": 3,
+    "bilingualInsertions": 6,
+    "dimensions": "1280x720",
+    "maxBytes": 64806,
+    "visualQA": "passed"
+  }
+}

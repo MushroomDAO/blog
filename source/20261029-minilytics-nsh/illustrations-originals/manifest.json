@@ -1,0 +1,62 @@
+[
+  {
+    "image": 1,
+    "original": "/Users/jason/.codex/generated_images/01a186ff-516b-73f1-ab80-a2569ce2af3a/exec-5b23e519-b243-489d-a896-9f26371cfe71.png",
+    "original_size": [
+      1672,
+      941
+    ],
+    "original_sha256": "aba503ff42cda4d12982aecd8790f61a722786da58621fc83d4c3af165a32c0a",
+    "final": "src/assets/images/minilytics-cloudflare-revenue-attribution-fig-01.png",
+    "dimensions": [
+      1120,
+      630
+    ],
+    "bytes": 25747,
+    "mode": "P",
+    "quantize_colors": 48,
+    "actual_colors": 48,
+    "pure_white_percent": 93.94,
+    "sha256": "f96f831aca89f045fa953150d79d58c992fb6880ba3fc0eae129a2d8df600531"
+  },
+  {
+    "image": 2,
+    "original": "/Users/jason/.codex/generated_images/01a186ff-516b-73f1-ab80-a2569ce2af3a/exec-d75790f7-8306-4624-a19a-8e4a8ba5fe31.png",
+    "original_size": [
+      1672,
+      941
+    ],
+    "original_sha256": "dc9cfadd0235fb6a5abc6dc3b3565e4cfa86de3d0b497305ca5473398ee10ef9",
+    "final": "src/assets/images/minilytics-cloudflare-revenue-attribution-fig-02.png",
+    "dimensions": [
+      1120,
+      630
+    ],
+    "bytes": 20609,
+    "mode": "P",
+    "quantize_colors": 48,
+    "actual_colors": 48,
+    "pure_white_percent": 95.21,
+    "sha256": "54c38e473a70c3179a1080a3b8bd929db1092946107759db236b9d5d0c5362fc"
+  },
+  {
+    "image": 3,
+    "original": "/Users/jason/.codex/generated_images/01a186ff-516b-73f1-ab80-a2569ce2af3a/exec-61a17b02-2a3b-4668-be57-7b8a8baf6da0.png",
+    "original_size": [
+      1672,
+      941
+    ],
+    "original_sha256": "b6d32a6d93cd2e752328b1628300ab205100ba45f61b9e9725fe891ec22a046b",
+    "final": "src/assets/images/minilytics-cloudflare-revenue-attribution-fig-03.png",
+    "dimensions": [
+      1120,
+      630
+    ],
+    "bytes": 24745,
+    "mode": "P",
+    "quantize_colors": 48,
+    "actual_colors": 48,
+    "pure_white_percent": 94.02,
+    "sha256": "5ec8ba2007aa5c686ddff6914642951d50fff4d68effc0c25285c3dbb5c69605"
+  }
+]

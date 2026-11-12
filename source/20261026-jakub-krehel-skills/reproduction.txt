@@ -1,0 +1,7 @@
+Source pin592aedc44d7d5b3e29740984252902f3e5402a1c atgithub.com/jakubkrehel/skills.
+CLI discovery only: npx --yes skills add jakubkrehel/skills --list, Found14skills; no full CLI add performed to avoid a second copy inside the blog.
+Installation: python3 /Users/jason/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo jakubkrehel/skills --ref 592aedc44d7d5b3e29740984252902f3e5402a1c --path skills/better-accessibility skills/better-colors skills/better-interface skills/better-layout skills/better-typography skills/better-ui skills/better-writing skills/break skills/build-design skills/explain-interface skills/interface-review skills/state-machine skills/teardown skills/variant
+All target directories were absent before install. Never overwrite an existing skill silently.
+Compare all installed files byte-for-byte with pinned rawsources. See local-verification.json for14items/counts/policies and source-hashes.json forrawfiledigests.
+From ~/.codex/skills/teardown run node scripts/test-flipbook.cjs, node scripts/test-geometry.cjs, node scripts/test-render-queue.cjs, node scripts/test-theme.cjs, node scripts/test-viewer-builder.cjs. All5passed,geometry28checks,Nodev26.10.0.
+Running same tests on identicalrawfiles located within this blog's source directory instead inherits package type=module; geometryfailsG.unitnotafunction. This failure retained as embeddedInBlogTests, not converted to a pass. No helper modifications, no Figma access, no AIgeneratedUIquality claim, no browserexport trial.

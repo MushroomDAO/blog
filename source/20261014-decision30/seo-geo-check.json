@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-14",
+  "fields": {
+    "title": 30,
+    "titleEn": 48,
+    "description": 158,
+    "descriptionEn": 157,
+    "wechatTitle": 23,
+    "wechatDigest": 33
+  },
+  "blufBoth": true,
+  "faqPairsEach": 3,
+  "questionHeadingsBoth": true,
+  "primarySourcesPinned": true,
+  "officialBenchVsLocalSmokeSeparated": true,
+  "oldNewVersionSeparated": true,
+  "copyrightCount": 2,
+  "illustrations": {
+    "count": 3,
+    "bilingualImageLines": 6,
+    "dimensions": "1280x720",
+    "bytes": [
+      63815,
+      87788,
+      83926
+    ],
+    "rootVisualCheck": "pass"
+  },
+  "localSmoke": "actualCPUthreeCalls/sixQuestions; sixcontracts; no benchmark"
+}

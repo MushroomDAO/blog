@@ -1,0 +1,90 @@
+{
+  "codeCommit": "3d773aeedc5d79d1d0a2a04007a9075cd71a59f4",
+  "modelRevision": "ed345c7f158eddbc7dee0c6a7269afb75a94f7e8",
+  "packageVersion": "0.3.2",
+  "provider": "CPUExecutionProvider",
+  "threads": 2,
+  "hardware": "M4 16GB",
+  "cases": [
+    {
+      "file": "controlled-invoice.pdf",
+      "mode": "auto",
+      "source": "text",
+      "lines": 12,
+      "blocks": 12,
+      "text": "Invoice INV-2026-1015\nCustomer: Example Research Team\nDescription: CPU OCR smoke test\nQuantity: 5\nUnit price: USD 25.10\nTotal: USD 125.50\nPayment due: 2026-10-31\nKeep this document for internal verification.\nPrinted text only. No handwriting or complex tables.\nReference: SAMPLE-0007\nContact: sample@example.invalid\nEnd of controlled test document.",
+      "boxesFiniteOrdered": true,
+      "markdownPresent": true
+    },
+    {
+      "file": "controlled-invoice.pdf",
+      "mode": "ocr",
+      "source": "ocr",
+      "lines": 12,
+      "blocks": 12,
+      "text": "Invoice INV-2026-1015\nCustomer: Example Research Team\nDescription: CPU OCR smoke test\nQuantity: 5\nUnit price: USD 25.10\nTotal: USD 125.50\nPayment due: 2026-10-31\nKeep this document for internal verification.\nPrinted text only. No handwriting or complex tables.\nReference: SAMPLE-0007\nContact: sample@example.invalid\nEnd of controlled test document.",
+      "boxesFiniteOrdered": true,
+      "markdownPresent": true
+    },
+    {
+      "file": "controlled-chinese.png",
+      "mode": "ocr",
+      "source": "ocr",
+      "lines": 5,
+      "blocks": 4,
+      "text": "文档识别测试\nt\n发票号码：20261015\n合计金额：125.50元\n这是清晰印刷体测试页面。",
+      "boxesFiniteOrdered": true,
+      "markdownPresent": true
+    }
+  ],
+  "models": [
+    {
+      "file": "det.onnx",
+      "bytes": 389948,
+      "initializerElements": 90568
+    },
+    {
+      "file": "order.onnx",
+      "bytes": 2973138,
+      "initializerElements": 731658
+    },
+    {
+      "file": "orient.onnx",
+      "bytes": 371414,
+      "initializerElements": 89492
+    },
+    {
+      "file": "rec.onnx",
+      "bytes": 4977797,
+      "initializerElements": 1236366
+    },
+    {
+      "file": "rec_cjk.onnx",
+      "bytes": 9255441,
+      "initializerElements": 2305776
+    },
+    {
+      "file": "script.onnx",
+      "bytes": 191005,
+      "initializerElements": 46449
+    }
+  ],
+  "scope": "Two original controlled fixtures, English PDF auto and forcedOCR plus Chinese rasterOCR. No throughput/latency/ranking benchmark, no complex table/math/handwriting coverage.",
+  "englishPathsSameText": true,
+  "chineseSpuriousLine": true,
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "versions": {
+      "indra-ocr": "0.3.2",
+      "onnxruntime": "1.31.0",
+      "onnx": "1.23.2",
+      "numpy": "2.5.4",
+      "opencv-python-headless": "5.0.0.93",
+      "pypdfium2": "5.14.0",
+      "pillow": "12.3.0",
+      "reportlab": "5.0.1",
+      "huggingface-hub": "2.2.0"
+    }
+  }
+}

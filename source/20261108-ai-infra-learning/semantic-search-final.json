@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "ai-infrastructure-engineer-learning-path-review",
+      "title": "AI基础设施工程师学习路线：从入门准备到可验收项目",
+      "url": "/blog/ai-infrastructure-engineer-learning-path-review/",
+      "language": "zh",
+      "excerpt": "AI基础设施工程师学习路线：从入门准备到可验收项目 AI Infrastructure Engineer Learning Path涵盖十个模块、模型服务、MLOps与LLM部署。本文定位MIT仓库，区分Junior与Engineer先修要求，核对62个实验文件和119个练习入口，通过接口检查解释TODO脚手架、空测试、健康探针与GPU实验的边界，给出四周服务实践建议。 AI基础设施 学习路线 MLOps Kubernetes 模型部署 AI Infrastructure Engineer 学的究竟是什么？ 十个模块如何连成一条学习路径？ “材料齐全”和",
+      "score": 0.6976959
+    },
+    {
+      "article_id": "meta-harness-end-to-end-harness-optimization",
+      "title": "别再手搓 Agent 脚手架了：Stanford Meta-Harness 让 AI 自己搜索最优 harness",
+      "url": "/blog/meta-harness-end-to-end-harness-optimization/",
+      "language": "zh",
+      "excerpt": "别再手搓 Agent 脚手架了：Stanford Meta-Harness 让 AI 自己搜索最优 harness Stanford IRIS Lab 的 Meta-Harness（arXiv:2603.28052，Chelsea Finn、Omar Khattab 等）把决定「给模型存什么、取什么、喂什么」的 harness 代码本身变成可自动优化的对象：用一个能读源码、分数和执行轨迹的 agentic proposer 做外层搜索。文本分类 +7.7 分且省 75% token，IMO 级数学 +4.7 分，TerminalBench-2 上自动发现",
+      "score": 0.579501
+    },
+    {
+      "article_id": "designing-ai-systems-book-platform-code-review",
+      "title": "Designing AI Systems：从模型调用走向共享AI平台",
+      "url": "/blog/designing-ai-systems-book-platform-code-review/",
+      "language": "zh",
+      "excerpt": "Designing AI Systems：从模型调用走向共享AI平台 Designing AI Systems的Manning官方配套仓库把模型、会话、企业知识、工具、安全规则、观测与工作流做成平台。本文核对代码来源和授权信息，介绍Claw参考助手，运行87项上游测试与两项合成检查，说明占位向量、确认标记和模拟工具的边界，并给出从源码阅读到真实集成验收的学习路线，帮助开发者理解参考实现。 AI工程 Manning 平台架构 Agent Python 找到的是全书，还是配套代码？ 这本书最值得学的架构是什么？ 第9章助手到底有没有代码？ 本地检查发现了哪些",
+      "score": 0.5558836
+    },
+    {
+      "article_id": "long-term-agent-six-modules-engineering-guide",
+      "title": "Agent的天花板在工程：长程Agent六大模块开发指南",
+      "url": "/blog/long-term-agent-six-modules-engineering-guide/",
+      "language": "zh",
+      "excerpt": "Agent的天花板在工程：长程Agent六大模块开发指南 一位做内容社区AI运营Agent的工程师，把20-30分钟长链路的踩坑经验拆成了六大模块：Context+Memory / Tools+MCP / Loop+Workflow / Hooks+Middleware / Orchestration / Verification。成功率从60%拉到85%背后的工程真相——长程智能体不是模型问题，是Runtime Harness问题。 AI Agent 长程Agent 工程化 Runtime Harness Memory MCP 工作流 Orchestr",
+      "score": 0.5424788
+    },
+    {
+      "article_id": "pstack-engineering-workflow",
+      "title": "pstack 实践指南：Lauren Tan 如何让 AI 先调查、再构建和验证",
+      "url": "/blog/pstack-engineering-workflow/",
+      "language": "zh",
+      "excerpt": "pstack 实践指南：Lauren Tan 如何让 AI 先调查、再构建和验证 解析 Lauren Tan 开源的 pstack 工程工作流，核对 58 项技能、24 条原则与 23 个任务剧本，给出 Cursor、Claude Code 的接入方式和小团队采用路线。 pstack Lauren Tan AI Agent 工程工作流 Cursor 先校正：54 项技能还是 58 项？ pstack 的核心不是技能菜单，而是任务剧本 普通团队如何开始用？ Claude Code、Grok Bot 和 Pi 能直接照抄吗？ 为什么要先深入，再并行？ 24 ",
+      "score": 0.5414714
+    },
+    {
+      "article_id": "addy-agent-skills-google-engineering-guide",
+      "title": "Agent Skills：Google 工程师 67K 星，24 Skill + 8 命令覆盖完整研发链路",
+      "url": "/blog/addy-agent-skills-google-engineering-guide/",
+      "language": "zh",
+      "excerpt": "Agent Skills：Google 工程师 67K 星，24 Skill + 8 命令覆盖完整研发链路 Google Chrome Engineering Manager Addy Osmani 开源 agent-skills（67K⭐），将谷歌软件工程规范（Hyrum定律、Beyonce规则、Chesterton栅栏等）封装为 24 个 Skill + 8 条命令，覆盖 DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP 完整开发链路，兼容 Claude Code / Cursor / Gemini CLI / Windsur",
+      "score": 0.53172433
+    },
+    {
+      "article_id": "reverse-skill-ai-agent-cybersecurity-penetration-skill-router",
+      "title": "reverse-skill：给 AI Agent 装上逆向工程与渗透测试的神经系统",
+      "url": "/blog/reverse-skill-ai-agent-cybersecurity-penetration-skill-router/",
+      "language": "zh",
+      "excerpt": "reverse-skill：给 AI Agent 装上逆向工程与渗透测试的神经系统 zhaoxuya520 开源的 AI Agent 安全技能路由包，20.9k stars，MIT License。解决 AI Agent 做安全分析时不知道用哪个工具的核心痛点——41条路由规则自动识别任务类型（APK/ELF/JS/PCAP/CTF），按需自举 jadx/Frida/Ghidra/BurpSuite 等工具链，自动沉淀经验到知识库。支持 Claude Code、Codex、Cursor、Kiro、Cline。 安全技能 AI渗透测试 逆向工程 Claud",
+      "score": 0.530825
+    },
+    {
+      "article_id": "cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course",
+      "title": "CMU 11-768 AI Agents：OpenHands 作者亲授，从零搭 Harness、建评测、用 RL 训 Agent，视频讲义全开放",
+      "url": "/blog/cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course/",
+      "language": "zh",
+      "excerpt": "CMU 11-768 AI Agents：OpenHands 作者亲授，从零搭 Harness、建评测、用 RL 训 Agent，视频讲义全开放 CMU 语言技术研究所秋季新课，Graham Neubig（OpenHands 核心创始人）+ Daniel Fried 主讲。28 节课三阶段：搭 ReAct Harness→建 LLM-as-judge 评测→SFT+RL 训练 Agent。YouTube 播放列表已上传前 4 讲，3 次作业 starter code 已开放，GitHub 组织 cmu-agents。官网 cmu-agents.com。 ",
+      "score": 0.53041404
+    },
+    {
+      "article_id": "pi-workflow-openrath-personal-daily-workflow-guide",
+      "title": "pi-workflow v1.1.0: How Ordinary Individuals Build Reusable Automated Pipelines with Pi Agent",
+      "url": "/blog/pi-workflow-openrath-personal-daily-workflow-guide/",
+      "language": "en",
+      "excerpt": "pi-workflow v1.1.0: How Ordinary Individuals Build Reusable Automated Pipelines with Pi Agent pi-workflow is Pi Agent's sub-task orchestration extension — one install gives you four prebuilt pipelines (deep research, code review, spec comparison, change assessment) via natural la",
+      "score": 0.52557284
+    },
+    {
+      "article_id": "awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt",
+      "title": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引",
+      "url": "/blog/awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt/",
+      "language": "zh",
+      "excerpt": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引 Agents 222 个、Instructions 193 个、Skills 416 个、Plugins 100 个——这套分类本身比清单更值得看：agent 是接 MCP 的专门角色，instruction 是按文件模式自动生效的编码规范，skill 是自包含带资源的文件夹，plugin 是打包好的组合。另一个值得抄的做法是 llms.txt：一份 941 行、308KB 的机器可读索引，专门给 AI agent 读，让它自己找该用哪个资源。",
+      "score": 0.524871
+    }
+  ]
+}

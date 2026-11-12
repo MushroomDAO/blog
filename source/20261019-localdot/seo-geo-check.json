@@ -1,0 +1,54 @@
+{
+  "slug": "localdot-local-ai-computer",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/localdot-local-ai-computer-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 92581
+    },
+    {
+      "path": "src/assets/images/localdot-local-ai-computer-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 85245
+    },
+    {
+      "path": "src/assets/images/localdot-local-ai-computer-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 58265
+    },
+    {
+      "path": "src/assets/images/localdot-local-ai-computer-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 65670
+    }
+  ]
+}

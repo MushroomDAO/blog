@@ -1,0 +1,16 @@
+{
+  "title": "MOSS-Image：文字生图与布局控制",
+  "author": "Mycelium",
+  "digest": "找到OpenMOSS官方模型，拆解布局坐标、完整资源需求与本地辅助验证。",
+  "mediaId": "prCUE631thH1cmNLi42prHMfyN3i1xB8DCOYdDLkqLyxHXELr-iQ9aZ4GEcqlVu7",
+  "blogUrl": "https://blog.mushroom.cv/blog/moss-image-openmoss-layout-generation-review/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/moss-image-openmoss-layout-generation-review/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/openmoss/moss-image",
+    "huggingface.co/openmoss-team/moss-image-base",
+    "huggingface.co/openmoss-team/moss-image-sft",
+    "huggingface.co/comfy-org/moss-image"
+  ],
+  "publishedAt": "2026-11-08T16:52:44.575Z"
+}

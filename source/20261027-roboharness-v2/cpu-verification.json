@@ -1,0 +1,14 @@
+{
+  "commit": "a0936867e0db7d0ef3eabe10688468edaea190d8",
+  "host": "Apple M4 16GB macOS26.6.2",
+  "python": "3.12.14 private venv",
+  "pytest": "9.1.1",
+  "passed": 16,
+  "suites": {
+    "test_protocol.py": 4,
+    "test_receipt.py": 3,
+    "test_gpu_assignment.py": 9
+  },
+  "scope": "unmodified upstream CPU boundary tests; no simulator, GPU, model, robot or task/performance measurements",
+  "commands": "reproduce-cpu-checks.sh PINNED_REPO /tmp/roboharness-cpu-audit/bin/python"
+}

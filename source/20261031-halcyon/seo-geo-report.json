@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-31T16:58:34.673674+00:00",
+  "passed": true,
+  "checks": {
+    "titleLimits": true,
+    "descriptions": true,
+    "wechat": true,
+    "tags": true,
+    "dates": true,
+    "category": true,
+    "bilingual": true,
+    "copyright": true,
+    "questions": true,
+    "FAQ": true,
+    "sources": true,
+    "computeBoundary": true,
+    "runtimeLimits": true,
+    "accessLimits": true,
+    "sourcePin": true,
+    "internalLinks": true,
+    "figures": true,
+    "hero": true
+  },
+  "lengths": {
+    "title": 31,
+    "titleEn": 51,
+    "description": 150,
+    "descriptionEn": 152,
+    "wechatTitle": 21,
+    "wechatDigest": 37
+  },
+  "manualReview": [
+    "BLUF in both languages; external URLs remain plain text",
+    "Claims distinguish author results, source audits and no local inference",
+    "Official promotional artwork identified; not a locally tested sample",
+    "Training stack not claimed public; code MIT not extrapolated to weight terms",
+    "Existing Astro metadata/heading anchors reused; no new structured-data implementation"
+  ]
+}

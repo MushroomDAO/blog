@@ -1,0 +1,34 @@
+{
+  "workerExit": 0,
+  "manuallyInspected": 3,
+  "dither": false,
+  "files": [
+    {
+      "file": "n8n-nod-local-personal-agent-engineering-guide-fig-01.png",
+      "bytes": 34010,
+      "size": [
+        1120,
+        630
+      ],
+      "colors": 48
+    },
+    {
+      "file": "n8n-nod-local-personal-agent-engineering-guide-fig-02.png",
+      "bytes": 34112,
+      "size": [
+        1120,
+        630
+      ],
+      "colors": 48
+    },
+    {
+      "file": "n8n-nod-local-personal-agent-engineering-guide-fig-03.png",
+      "bytes": 32528,
+      "size": [
+        1120,
+        630
+      ],
+      "colors": 47
+    }
+  ]
+}

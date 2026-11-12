@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-05T04:37:30.480Z",
+  "drafts": [
+    {
+      "slug": "shisei-ai-pose-reference-library",
+      "mediaId": "prCUE631thH1cmNLi42prIyw-_TZ2JRNcLqzCxqBku-5at8zW-EwyvwUNA19VFOt",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "793d514799a6461b53a724286003f51fe65369267bfc8579399c1415cf9db4b3",
+      "remoteTextHash": "793d514799a6461b53a724286003f51fe65369267bfc8579399c1415cf9db4b3",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/shisei-ai-pose-reference-library/",
+      "localContentHash": "3152701e11ae2dadb884b57ef520658983a5cf557558f146a0d54b81d92c07dc",
+      "remoteContentHash": "f7d6127bc35331e60a455160bbb68e2a11b7b1c712c298fee3857d14c0af167b"
+    }
+  ]
+}

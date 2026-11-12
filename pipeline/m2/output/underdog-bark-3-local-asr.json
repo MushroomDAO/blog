@@ -1,0 +1,14 @@
+{
+  "title": "Bark 3.0：163MB语音模型要分清哪些版本",
+  "author": "Mycelium",
+  "digest": "核查标准版与Clean版，拆开官方词错率、测速条件和下载体积背后的运行内存。",
+  "mediaId": "prCUE631thH1cmNLi42prHYUDktP-sE3_0LG_XONo63_FrXd34NRBfgXMMw_BsQA",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/conwayresearch/underdog-bark-3.0",
+    "huggingface.co/conwayresearch/underdog-bark-3.0-plus",
+    "huggingface.co/conwayresearch/underdog-bark-3.0-clean",
+    "huggingface.co/conwayresearch/underdog-bark-3.0-pro"
+  ],
+  "publishedAt": "2026-10-24T02:31:45.801Z"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Autodesk开源2B模型：八视图转CAD",
+  "author": "Mycelium",
+  "digest": "八张渲染图变建模代码：拆解公开成绩、可编辑性与真实零件反求之间的距离。",
+  "mediaId": "prCUE631thH1cmNLi42prDxa5EPKSOe4hZznLuUYUaKIFzOfyAbBqIcruyqxhonv",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/adskailab/zero-to-cad-qwen3-vl-2b",
+    "huggingface.co/datasets/adskailab",
+    "huggingface.co/collections/adskailab",
+    "github.com/cadquery/cadquery"
+  ],
+  "publishedAt": "2026-10-18T03:03:05.495Z"
+}

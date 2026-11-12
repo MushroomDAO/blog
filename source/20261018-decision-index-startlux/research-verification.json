@@ -1,0 +1,37 @@
+{
+  "checkedDate": "2026-10-18",
+  "slug": "startlux-decision-typed-decision-model-jev-compatible-games-demo",
+  "action": "update-existing-article-preserve-pubDate",
+  "sourceRevision": "83fe6c7d61a687a6e17f118b4f7d8f429f5d3a01",
+  "publicKitRevision": "f5a6e4fd85fed05e77878dfc4966d0568bfb45ec",
+  "boardVersion": "0.3.2",
+  "boardGeneratedAt": "2026-10-16T19:00:10Z",
+  "records": 174,
+  "tests": {
+    "upstreamOfflineTests": 15,
+    "fullBenchmarkRun": false,
+    "modelInference": false,
+    "latencyTest": false
+  },
+  "weightsLicense": "CC-BY-NC-4.0 (8 checked model cards)",
+  "codeLicense": "Apache-2.0",
+  "oldWeChat": {
+    "draftGetError": 40007,
+    "publishedListError": 48001,
+    "action": "preserve-receipt-no-duplicate-create",
+    "status": "recorded"
+  },
+  "banner": "reuse-existing-qualified-FLUX99",
+  "sources": [
+    "https://huggingface.co/spaces/multimodalart/jev-decision-index",
+    "https://github.com/StartLuxLabs/StartLux-Decision",
+    "https://github.com/apolinario/decision-index",
+    "https://arxiv.org/abs/2610.17309"
+  ],
+  "evidenceSha256": {
+    "board-v03.json": "7b5a4586e1260d58dd534721d5f7ce278718effe469d3912747cff48cc7b8a51",
+    "board-index.json": "23496572ce8da74277208b5796060331b366b015a800f281e7df21960a9ef609",
+    "model-identities.json": "71bf4d4f91ae36487aced5dc0d98ee2431061b7006b3f3ae9b63fb97ce2deb03",
+    "board-recomputed.json": "c2cf8d4b8dc2a9800f50bc547f670da598d2b1804182f4271cc161c32a2c5a86"
+  }
+}

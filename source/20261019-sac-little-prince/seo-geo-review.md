@@ -1,0 +1,3 @@
+# SEO/GEO review
+
+154/152-character bilingual descriptions, keyword title and English slug, current ISO dates, five tags, bilingual BLUF, question headings, three FAQs each language, official sources and internal link. Original tutorial versus own implementation guidance and actual checks clearly separated. Model names attributed,16days and300wviews not reproduced, no official game repository invented. Commands checked against current Unity docs; old embedded MCP deprecated, CLI MCP supported. No end-to-end game, asset generation, rigging or performance claim. Cover reference-art credit present both languages.

@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "requiredFields": true,
+    "titleLength": true,
+    "threeTags": true,
+    "threeFiguresBoth": true,
+    "copyrightBoth": true,
+    "canonicalBoth": true,
+    "faqBoth": true,
+    "internalLinksBoth": true,
+    "assets": true,
+    "noPlaceholder": true
+  },
+  "review": "BLUF, bilingual primary plain URLs, FAQ, dated evidence, explicit installation not tested. Magpie defaults and boundaries verified in official docs; Postiz employment and coordinated intent not established; commercial-use and data-locality overclaims removed."
+}

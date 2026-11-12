@@ -1,0 +1,93 @@
+{
+  "query": "localDot Shadowhusky keyd Linux desktop repository approvals replay",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.61203855,
+    "article_id": "localdot-local-ai-computer"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "localdot-local-ai-computer",
+        "title": "localDot 开源仓库找到了：给 AI 一台本地电脑",
+        "url": "/blog/localdot-local-ai-computer/",
+        "language": "zh",
+        "excerpt": "localDot 开源仓库找到了：给 AI 一台本地电脑 localDot 的官方开源仓库是 Shadowhusky/localdot，采用 MIT 许可证。它在本机 Docker 中运行 Linux 桌面，让 AI 使用浏览器、终端和文件，并提供观看、接管、回放和模型选择。本文说明安装要求、源码结构、权限与数据边界，并记录安装脚本检查及出站策略测试，供读者选型。 localDot AI Agent Computer Use 本地部署 Docker 开源 它给 AI 的“电脑”到底是什么？ 开放的是哪些代码？ 普通用户怎么装？ 模型能换，但不等于任意模型",
+        "score": 0.61203855
+      },
+      {
+        "article_id": "localagi-local-ai-agent-platform-localai-mac",
+        "title": "LocalAGI Teardown: The Local Agent Platform Now Lives Inside LocalAI. Which One Should Mac Users Run?",
+        "url": "/blog/localagi-local-ai-agent-platform-localai-mac/",
+        "language": "en",
+        "excerpt": "LocalAGI Teardown: The Local Agent Platform Now Lives Inside LocalAI. Which One Should Mac Users Run? mudler/LocalAGI (1,972 stars, MIT, Go) calls itself a complete drop-in replacement for OpenAI's Responses API with no cloud. We read the README, compose files and code: seven req",
+        "score": 0.5155003
+      },
+      {
+        "article_id": "tinyauth-smallest-openid-certified-auth-server-self-hosted",
+        "title": "8K星 · 最小的 OpenID Certified™ 认证服务器：Tinyauth 全解析",
+        "url": "/blog/tinyauth-smallest-openid-certified-auth-server-self-hosted/",
+        "language": "zh",
+        "excerpt": "8K星 · 最小的 OpenID Certified™ 认证服务器：Tinyauth 全解析 tinyauthapp/tinyauth 是目前最小的 OpenID Certified™ 认证与授权服务器，Go 编写，AGPL-3.0。支持 OAuth/LDAP/访问控制，与 Traefik、Nginx、Caddy 无缝集成，Docker 一行启动。v5.1.0 于 2026 年 6 月通过 OpenID Basic OP 官方认证，8000+ GitHub stars。 认证 OpenID 自托管 Traefik OAuth Go homelab Myc",
+        "score": 0.50573623
+      },
+      {
+        "article_id": "andrew-ng-openworker-desktop-ai-coworker-local-aisuite",
+        "title": "OpenWorker：吴恩达开源的桌面 AI 协作者，本地运行 + 批准门 + 25+ 工具集成",
+        "url": "/blog/andrew-ng-openworker-desktop-ai-coworker-local-aisuite/",
+        "language": "zh",
+        "excerpt": "OpenWorker：吴恩达开源的桌面 AI 协作者，本地运行 + 批准门 + 25+ 工具集成 andrewyng/openworker，4天前刚开源。MIT，Python + TypeScript + Tauri + Rust，本地运行，BYOK（带自己的 key 或跑 Ollama），25+ 工具集成，批准门机制保留人类最终审批权。吴恩达 aisuite 的实战参考实现。 AI Agent 开源 桌面应用 本地优先 吴恩达 aisuite 工作流 自托管 一、它是什么 二、架构：三层 三、核心机制：批准门 四、支持什么 五、技术底层：aisuite",
+        "score": 0.49897498
+      },
+      {
+        "article_id": "unsloth-desktop-local-run-train-ai-claude-code-mcp-finetuning",
+        "title": "unsloth-desktop-local-run-train-ai-claude-code-mcp-finetuning",
+        "url": "/blog/unsloth-desktop-local-run-train-ai-claude-code-mcp-finetuning/",
+        "language": "en",
+        "excerpt": "unsloth-desktop-local-run-train-ai-claude-code-mcp-finetuning unslothai/unsloth ships its first desktop app (v0.1.801-beta), 74K stars. One app covers: local model inference (LLM/diffusion/audio/embedding), finetuning (LoRA/QLoRA/GRPO/DPO, 2x faster, 70% less VRAM), Claude Code/C",
+        "score": 0.49872994
+      },
+      {
+        "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+        "title": "ParallelHue: A Speculative-Decoding Visualizer That Refuses to Color What It Can't Prove",
+        "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+        "language": "en",
+        "excerpt": "ParallelHue: A Speculative-Decoding Visualizer That Refuses to Color What It Can't Prove hikarioyama/ParallelHue (MIT, 35 stars, zero runtime dependencies) renders concurrent local-LLM streams in the terminal and colors them by verified generation step only when scheduler and det",
+        "score": 0.49854553
+      },
+      {
+        "article_id": "gh-copilot-code-review-cli",
+        "title": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review",
+        "url": "/blog/gh-copilot-code-review-cli/",
+        "language": "zh",
+        "excerpt": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review GitHub CLI v2.88.0 新功能实测：在终端直接邀请 Copilot 审查 PR，无需跳转浏览器，附隐私风险提示 github copilot cli code-review developer-tools 核心能力 如何使用 免费吗？ 隐私警告（必读） 能用其他 AI CLI 吗？ 额外优化：大型团队福音 总结",
+        "score": 0.4928122
+      },
+      {
+        "article_id": "codexboard-mac-codex-task-board-mobile-lark",
+        "title": "CodexBoard：Apple Silicon Mac 上把 Codex CLI 接上任务看板，飞书/Web 手机端远程监控执行过程",
+        "url": "/blog/codexboard-mac-codex-task-board-mobile-lark/",
+        "language": "zh",
+        "excerpt": "CodexBoard：Apple Silicon Mac 上把 Codex CLI 接上任务看板，飞书/Web 手机端远程监控执行过程 RocYan98/CodexBoard，115 stars，TypeScript，无开源许可证。运行在 Apple Silicon Mac（macOS 13+）上的本地任务看板，把 Codex CLI 执行过程绑定到 Kanban 看板，支持通过飞书（Lark）或 Web 浏览器在手机端实时监控进度、审批变更、查看代码 Diff。需要公网 frp 服务器作为内网穿透，一周内迭代 10 个版本，目前仍为 0.1.x pre",
+        "score": 0.49228573
+      },
+      {
+        "article_id": "deeptutor-lifelong-personalized-ai-tutoring-rag-skills-memory-docker",
+        "title": "deeptutor-lifelong-personalized-ai-tutoring-rag-skills-memory-docker",
+        "url": "/blog/deeptutor-lifelong-personalized-ai-tutoring-rag-skills-memory-docker/",
+        "language": "en",
+        "excerpt": "deeptutor-lifelong-personalized-ai-tutoring-rag-skills-memory-docker HKUDS/DeepTutor is an open-source lifelong personalized AI learning workspace from Hong Kong University — 36,949 stars, Apache 2.0, Python + Next.js. Key differentiator: three-layer persistent memory (L1 traces ",
+        "score": 0.49202648
+      },
+      {
+        "article_id": "freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference",
+        "title": "FreeToken：游戏 PC 本地跑 290B+ MoE 大模型，q* 自适应执行引擎，开源 Apache 2.0",
+        "url": "/blog/freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference/",
+        "language": "zh",
+        "excerpt": "FreeToken：游戏 PC 本地跑 290B+ MoE 大模型，q* 自适应执行引擎，开源 Apache 2.0 FlashML-org/FreeToken 是一个边缘原生 MoE 推理引擎，Apache 2.0，Python，2105 stars。核心：在消费级 GPU（RTX 30/40/50）上本地运行 290B+ MoE 模型（DeepSeek-V4-Flash、Qwen3.6-35B、GLM-5.2），通过 q* 带宽自适应 CPU-GPU 协同执行、双缓冲预填充流、全局 LRU Expert 缓存、语义感知 KV 缓存实现交互级速度。兼容",
+        "score": 0.49179628
+      }
+    ]
+  }
+}

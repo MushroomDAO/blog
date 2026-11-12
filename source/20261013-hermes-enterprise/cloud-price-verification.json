@@ -1,0 +1,9 @@
+{
+  "status": 200,
+  "standardName": true,
+  "standardPrice051": true,
+  "proPrice099": true,
+  "olderMediumName": false,
+  "authenticated": false,
+  "scope": "public quoted price only, not account checkout or actual charged invoice"
+}

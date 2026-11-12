@@ -1,0 +1,86 @@
+{
+  "checkedAt": "2026-10-29T08:03:19.382199+00:00",
+  "query": "Agent Relay AgentWorkforce Relaycast Relayfile Flows 共享历史与团队协作",
+  "results": [
+    {
+      "article_id": "agent-relay-coding-agent-collaboration",
+      "title": "Agent Relay: Messaging, Shared History, and Team Workflows",
+      "url": "/blog/agent-relay-coding-agent-collaboration/",
+      "language": "en",
+      "excerpt": "Agent Relay: Messaging, Shared History, and Team Workflows Explore Agent Relay messaging, shared sessions, Relayfile and Flows, with a local SQLite smoke test and clear limits for self-hosting, permissions and approval. Agent Relay 多智能体 开发工具 开源 工作流 Which component provides each c",
+      "score": 0.7393805
+    },
+    {
+      "article_id": "layerfs-v1-recursive-agent-filesystem",
+      "title": "LayerFS：共享工作区、worktree对比与1.1升级边界",
+      "url": "/blog/layerfs-v1-recursive-agent-filesystem/",
+      "language": "zh",
+      "excerpt": "LayerFS：共享工作区、worktree对比与1.1升级边界 LayerFS 用共享历史和独立可写工作区支持并行 Agent。本文比较 Git worktree 的共享与检出成本，补充1.1.0的SDK破坏性变更、Mac与Windows接入，核对1.0官方去重与性能测试，并说明自动提交和持久性边界。 LayerFS AI Agent Filesystem FUSE Open Source LayerFS是否应该直接替代worktree？ 10月26日更新：1.1.0改变了什么？ “递归文件系统”究竟递归在哪里？ Store、Branch、Commit",
+      "score": 0.58620244
+    },
+    {
+      "article_id": "retrace-ai-agent-debug-observability-tool",
+      "title": "Retrace: Replay and Fork AI Agent Runs — Debug Without Guesswork",
+      "url": "/blog/retrace-ai-agent-debug-observability-tool/",
+      "language": "en",
+      "excerpt": "Retrace: Replay and Fork AI Agent Runs — Debug Without Guesswork Retrace is an AI agent observability and debugging tool: records every LLM call, tool invocation, and error. Replay past runs, fork them to try alternative paths, and share traces with teammates. Free for 1,000 trac",
+      "score": 0.57938737
+    },
+    {
+      "article_id": "eigenflux-agent-social-network",
+      "title": "The Social Network for AI Agents: EigenFlux Builds a Broadcast Network Where Agents Talk to Each Other",
+      "url": "/blog/eigenflux-agent-social-network/",
+      "language": "en",
+      "excerpt": "The Social Network for AI Agents: EigenFlux Builds a Broadcast Network Where Agents Talk to Each Other EigenFlux is a broadcast network for AI agents. Agents broadcast what they know, need, or offer. They subscribe to signals that match their interests. And they DM each other dir",
+      "score": 0.57704985
+    },
+    {
+      "article_id": "memory-harness-local-first-programmable-auditable-long-term-memory",
+      "title": "Memory Harness: Local-First, Programmable & Auditable Long-Term Memory for AI Agents",
+      "url": "/blog/memory-harness-local-first-programmable-auditable-long-term-memory/",
+      "language": "en",
+      "excerpt": "Memory Harness: Local-First, Programmable & Auditable Long-Term Memory for AI Agents luoyif/memory-harness open-sources a six-layer auditable memory workspace (Evidence → Agent Asset), local hybrid RAG, 24 MCP tools, multi-AI collaboration with isolated drafts — all fully local, ",
+      "score": 0.5679865
+    },
+    {
+      "article_id": "magpie-multi-agent-model-gateway",
+      "title": "Magpie: A Local Gateway for Agents, Models and Resources",
+      "url": "/blog/magpie-multi-agent-model-gateway/",
+      "language": "en",
+      "excerpt": "Magpie: A Local Gateway for Agents, Models and Resources A source-based review of yetone/magpie: model routing, subscription bridges, sessions, MCP and skill distribution, privacy defaults, and a staged adoption plan. Magpie AI Agent 模型网关 MCP 本地工具 What does the gateway centralize",
+      "score": 0.56276786
+    },
+    {
+      "article_id": "cloudflare-computer-agent-runtime-isolate-container",
+      "title": "@cloudflare/computer: Give Every Agent a Computer of Its Own",
+      "url": "/blog/cloudflare-computer-agent-runtime-isolate-container/",
+      "language": "en",
+      "excerpt": "@cloudflare/computer: Give Every Agent a Computer of Its Own @cloudflare/computer gives every AI agent its own virtual filesystem backed by SQLite and dynamically routes execution between cheap Isolates (Workers) and full Linux Containers — solving the fundamental scale problem o",
+      "score": 0.55933064
+    },
+    {
+      "article_id": "storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard",
+      "title": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4",
+      "url": "/blog/storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard/",
+      "language": "zh",
+      "excerpt": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4 xiaozhang-art/storyflow-ai 开源，Multi-Agent 漫剧自动生成平台，7 步 Agent 流水线（剧本→角色→分镜→图片/配音并行→图生视频→合成），含 Director 决策引擎、断点续传、Montage 渲染引擎，Docker Compose 一键部署。 multi-agent video generation AI open source comic LLM FastAPI Docker 一段文字进去，一部漫剧出来 7 个 Age",
+      "score": 0.5583459
+    },
+    {
+      "article_id": "ai-collab-playbook-phd-workflow-skills-context-first",
+      "title": "AI 协作实战手册：一位在读博士的科研、写作、编码工作流——人是主变量",
+      "url": "/blog/ai-collab-playbook-phd-workflow-skills-context-first/",
+      "language": "zh",
+      "excerpt": "AI 协作实战手册：一位在读博士的科研、写作、编码工作流——人是主变量 cnfjlhj/ai-collab-playbook 是一位 AI 方向在读博士积累的 AI 协作实战手册，433 stars。核心观点：把 AI 当同事不当工具，但人始终是主变量。涵盖科研文献四阶段工作流（调研→筛选→精读→整合）、低摩擦入口策略、Code Agent 使用心得、上下文税与心流状态、技能沉淀到 Skill/AGENTS.md 的闭环，以及对「效率幻觉」的警惕。附 10 个独立 Skill 仓库。 AI协作 科研工作流 Code Agent Skills 效率 开源 ",
+      "score": 0.55775374
+    },
+    {
+      "article_id": "pine-computer-agent-runtime-engineering",
+      "title": "Pine Computer: Agent Runtime Engineering Report",
+      "url": "/blog/pine-computer-agent-runtime-engineering/",
+      "language": "en",
+      "excerpt": "Pine Computer: Agent Runtime Engineering Report Explore Pine Computer’s agent runtime, event-driven perception, identity, recovery and costs, with an audit of public results and an integration review. Pine Computer AI Agent 云计算 Computer Use 工程架构 What is verified about the launch?",
+      "score": 0.55132645
+    }
+  ]
+}

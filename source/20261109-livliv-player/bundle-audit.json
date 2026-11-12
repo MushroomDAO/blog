@@ -1,0 +1,116 @@
+{
+  "codeCommit": "011b1f54d62c189cee49f29d3427c6d22fafdffd",
+  "coreStaticClosure": [
+    {
+      "file": "chunks/base-p0Sx5Qp5.js",
+      "bytes": 25913,
+      "gzip9Bytes": 10437
+    },
+    {
+      "file": "chunks/errors-ohqiRK3N.js",
+      "bytes": 204,
+      "gzip9Bytes": 160
+    },
+    {
+      "file": "chunks/params-BCSFSCtz.js",
+      "bytes": 480,
+      "gzip9Bytes": 262
+    },
+    {
+      "file": "index.js",
+      "bytes": 58213,
+      "gzip9Bytes": 22737
+    }
+  ],
+  "externalCoreImports": [],
+  "coreGzip9SumBytes": 33596,
+  "characterPackageCount": 21,
+  "characterPackages": [
+    {
+      "file": "char06.livliv",
+      "bytes": 369432
+    },
+    {
+      "file": "char07.livliv",
+      "bytes": 378407
+    },
+    {
+      "file": "d01.livliv",
+      "bytes": 425052
+    },
+    {
+      "file": "d02.livliv",
+      "bytes": 374011
+    },
+    {
+      "file": "d03.livliv",
+      "bytes": 570943
+    },
+    {
+      "file": "d03ft.livliv",
+      "bytes": 1883819
+    },
+    {
+      "file": "k01.livliv",
+      "bytes": 717989
+    },
+    {
+      "file": "k02.livliv",
+      "bytes": 462274
+    },
+    {
+      "file": "p01.livliv",
+      "bytes": 643037
+    },
+    {
+      "file": "p02.livliv",
+      "bytes": 818362
+    },
+    {
+      "file": "p03.livliv",
+      "bytes": 476851
+    },
+    {
+      "file": "q02.livliv",
+      "bytes": 486556
+    },
+    {
+      "file": "q03.livliv",
+      "bytes": 528198
+    },
+    {
+      "file": "s01.livliv",
+      "bytes": 691550
+    },
+    {
+      "file": "v01.livliv",
+      "bytes": 609833
+    },
+    {
+      "file": "v03.livliv",
+      "bytes": 623404
+    },
+    {
+      "file": "v04.livliv",
+      "bytes": 416674
+    },
+    {
+      "file": "v05.livliv",
+      "bytes": 616027
+    },
+    {
+      "file": "v06.livliv",
+      "bytes": 524803
+    },
+    {
+      "file": "v07.livliv",
+      "bytes": 785993
+    },
+    {
+      "file": "w01.livliv",
+      "bytes": 465274
+    }
+  ],
+  "characterPackageTotalBytes": 12868489,
+  "method": "gzip9 each required static JS module separately, mtime0; sum; excludes optional modules, models, images, face runtime and network headers; no FPS or memory benchmark"
+}

@@ -1,0 +1,88 @@
+{
+  "existingIndexReused": true,
+  "publicSearchVerified": true,
+  "results": {
+    "results": [
+      {
+        "article_id": "cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course",
+        "title": "CMU 11-768 AI Agents: OpenHands Creator Teaches — Build a Harness From Scratch, Evaluate, Train With RL, All Materials Open",
+        "url": "/blog/cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course/",
+        "language": "en",
+        "excerpt": "CMU 11-768 AI Agents: OpenHands Creator Teaches — Build a Harness From Scratch, Evaluate, Train With RL, All Materials Open CMU Language Technologies Institute fall course taught by Graham Neubig (OpenHands co-founder) and Daniel Fried. 28 lectures in three phases: build a ReAct ",
+        "score": 0.56402063
+      },
+      {
+        "article_id": "anthropic-threat-intelligence-report-september-2026",
+        "title": "Anthropic 威胁情报报告（2026年9月）：AI 把攻防成本倒置了",
+        "url": "/blog/anthropic-threat-intelligence-report-september-2026/",
+        "language": "zh",
+        "excerpt": "Anthropic 威胁情报报告（2026年9月）：AI 把攻防成本倒置了 Anthropic 公开记录 2025.12-2026.8 间 Claude 被滥用的七大类真实案例：俄罗斯间谍、ShinyHunters 供应链攻击、中国高校漏洞研究、多大洲选举干预……关键结论：AI 正在压平国家级行为者与个人攻击者之间的能力鸿沟。 AI-security threat-intelligence Anthropic cyberattack influence-operations 2026 为什么这份报告值得认真读 网络行动：三个典型案例 GTG-20006（",
+        "score": 0.4752219
+      },
+      {
+        "article_id": "stanford-cs329z-ai-agent-engineering-course-curriculum-analysis",
+        "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
+        "url": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
+        "language": "zh",
+        "excerpt": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容 斯坦福 2026 年秋季新增 CS329Z《AI Agent 工程》课程，由 Diyi Yang、Michael Ryan 和 John Yang 主讲。本文完整拆解 11 周 22 讲的课程结构、必读论文清单和两份作业，分析它对 Agent 工程师的实用价值。 AI Agent 斯坦福 课程 RAG 评测 DSPy MCP 教育 工程 课程定位：从单一模型到复合 AI 系统 11 周 22 讲：完整课程结构 第 1 周：基础层 第 2 周：核心构件 第 3 周：框架与",
+        "score": 0.4687437
+      },
+      {
+        "article_id": "marketingskills-ai-agent-cmo-skill-pack-open-source",
+        "title": "给 AI Agent 装一个 CMO 大脑：marketingskills 开源营销技能包",
+        "url": "/blog/marketingskills-ai-agent-cmo-skill-pack-open-source/",
+        "language": "zh",
+        "excerpt": "给 AI Agent 装一个 CMO 大脑：marketingskills 开源营销技能包 coreyhaines31/marketingskills 为 Claude Code 等 AI Agent 提供 32+ 专业营销技能，涵盖 AI SEO/GEO 优化、CRO 转化漏斗、高转化文案框架、RevOps 增长工程，含 51 个零依赖 CLI 工具，可直连 Ahrefs、Google Ads、Mailchimp API。 AI Agent Claude Code 营销 SEO GEO CRO 开源 技能包 它解决了什么问题 核心功能模块 1. AI ",
+        "score": 0.46126142
+      },
+      {
+        "article_id": "addy-agent-skills-google-engineering-guide",
+        "title": "Agent Skills：Google 工程师 67K 星，24 Skill + 8 命令覆盖完整研发链路",
+        "url": "/blog/addy-agent-skills-google-engineering-guide/",
+        "language": "zh",
+        "excerpt": "Agent Skills：Google 工程师 67K 星，24 Skill + 8 命令覆盖完整研发链路 Google Chrome Engineering Manager Addy Osmani 开源 agent-skills（67K⭐），将谷歌软件工程规范（Hyrum定律、Beyonce规则、Chesterton栅栏等）封装为 24 个 Skill + 8 条命令，覆盖 DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP 完整开发链路，兼容 Claude Code / Cursor / Gemini CLI / Windsur",
+        "score": 0.45567334
+      },
+      {
+        "article_id": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+        "title": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+        "url": "/blog/munder-difflin-multi-agent-harness-claude-codex-local-first/",
+        "language": "en",
+        "excerpt": "munder-difflin-multi-agent-harness-claude-codex-local-first Munder Difflin (MIT, 3888 stars, Electron+React+TypeScript) is a local-first multi-agent harness desktop app. It wraps Claude Code, OpenAI Codex, xAI Grok, Kimi Code, Qwen, GitHub Copilot CLI, and 9 other CLIs as real PT",
+        "score": 0.4543782
+      },
+      {
+        "article_id": "reverse-skill-ai-agent-cybersecurity-penetration-skill-router",
+        "title": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents",
+        "url": "/blog/reverse-skill-ai-agent-cybersecurity-penetration-skill-router/",
+        "language": "en",
+        "excerpt": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents zhaoxuya520's open-source AI agent cybersecurity skill router, 20.9k stars, MIT. Solves the core problem of agents not knowing which security tool to use — 41 routing rules auto-class",
+        "score": 0.45429322
+      },
+      {
+        "article_id": "claude-code-game-studios-open-source-framework",
+        "title": "Claude Code Game Studios：把 AI 对话窗口变成游戏工作室",
+        "url": "/blog/claude-code-game-studios-open-source-framework/",
+        "language": "zh",
+        "excerpt": "Claude Code Game Studios：把 AI 对话窗口变成游戏工作室 CCGS 是一个开源框架，用 48 个专业 Agent、72 种工作流指令和分层协作架构，把 Claude Code 从单一对话工具变成具备专业级协作能力的虚拟游戏工作室，支持 Godot 4、Unity 和 UE5。 Claude Code Game Dev AI Agent 开源 Godot Unity 工作流 这是什么项目？ 核心构成：三套系统 1. 48 个专业 AI Agent（分层架构） 2. 72 种斜杠指令（工作流 Skills） 3. CLAUDE.md",
+        "score": 0.4493612
+      },
+      {
+        "article_id": "ai-marketing-claude-code-skill-suite",
+        "title": "ai-marketing-claude：给 Claude Code 装 15 个营销技能，一条命令审计任意网站",
+        "url": "/blog/ai-marketing-claude-code-skill-suite/",
+        "language": "zh",
+        "excerpt": "ai-marketing-claude：给 Claude Code 装 15 个营销技能，一条命令审计任意网站 ai-marketing-claude 是一套 Claude Code Skill 系统，提供 15 个 /market 命令，用 5 个并行 Subagent 对任意网站做六维营销审计并打分，生成文案/邮件序列/30天内容日历/竞品情报/客户 PDF 报告，一条命令安装，MIT 开源。 Claude Code AI营销 Skill Subagent 开源 营销自动化 Agent 一句话说清楚它是什么 15 个 `/market` 命令 核心能",
+        "score": 0.44503963
+      },
+      {
+        "article_id": "ai-berkshire-value-investing-guide",
+        "title": "How Ordinary Investors Can Do Professional-Grade Research with AI Berkshire — Analyzing Tencent as a Case Study",
+        "url": "/blog/ai-berkshire-value-investing-guide/",
+        "language": "en",
+        "excerpt": "How Ordinary Investors Can Do Professional-Grade Research with AI Berkshire — Analyzing Tencent as a Case Study AI Berkshire (11,772★) is a Claude Code / Codex skill collection that systematizes the methodologies of Buffett, Munger, Duan Yongping, and Li Lu, producing professiona",
+        "score": 0.44485265
+      }
+    ]
+  }
+}

@@ -6,7 +6,7 @@ descriptionEn: "Verify onetake and EnvManage repositories, motion-film and nativ
 wechatTitle: "onetake与EnvManage：来源与使用边界"
 wechatDigest: "核对两款工具的真实仓库、许可与本地检查，避免把公开源码误当免费商用。"
 pubDate: "2026-10-11"
-updatedDate: "2026-10-11"
+updatedDate: "2026-10-22"
 category: "Tech-News"
 tags: ["onetake", "EnvManage", "Agent Skills", "SwiftUI", "macOS", "动效制作"]
 heroImage: "../../assets/images/onetake-envmanage-source-check-banner.jpg"
@@ -112,6 +112,16 @@ EnvManage 成功生成 `.app` 与 DMG，自检通过 14 项、失败 0 项。本
 如果你要选工具，可以先确定目的：做连贯动效，试 onetake 的非商业案例和动作库；整理 Mac 环境，先在 EnvManage 里只读查看来源与 PATH。两者都应从范围小、容易验证的任务开始。
 
 相关交互解释图工具：https://blog.mushroom.cv/blog/anatomy-claude-interactive-isometric-figures/
+
+## 10 月 22 日补充：Clawd 当鼠标的案例公开了什么？
+
+本次新线索已匹配到官方 `cases/clawd-desktop-19s/`。固定提交 `013a61ac8d98883c73733f59c06e49e9ba444f14` 的案例说明确认：Blender 制作角色，three.js 在时间函数驱动的合成里呈现玻璃桌面；Clawd 的身体落地代表点击、沿输入行跳跃代表打字、举起文件代表拖拽。
+
+这是一段预先编排的 19 秒动画，不是 Clawd 真的接管操作系统。案例采用 126 BPM、40 拍的节奏表，说明了镜头弹簧、累积景深与逐帧运动模糊等做法。文档还保留了概念切换、音乐筛选与 v1–v3 修改过程，不能理解为一句提示零修改完成。
+
+公开目录只提供成片，不含合成 HTML、Blender 模型、配乐与声音源文件。原音乐由 Artlist 授权，公开 MP4 仅含拟音；角色与应用图标也有各自权利。至于“约 20 元 API 成本”，官方案例未给出可核对的计费明细，因此不是我们的实测或可保证预算。
+
+案例原文：https://github.com/feitangyuan/onetake/blob/013a61ac8d98883c73733f59c06e49e9ba444f14/cases/clawd-desktop-19s/README.md
 
 ## 常见问题
 
@@ -239,6 +249,16 @@ Component checks do not prove complete commercial film delivery or validate GUI 
 Start with a small, observable task: examine noncommercial onetake examples and motion math, or inspect EnvManage's source and PATH information before editing. They solve different problems and should be evaluated separately.
 
 Related interactive explainer tools: https://blog.mushroom.cv/blog/anatomy-claude-interactive-isometric-figures/
+
+## October 22 update: what is public about the Clawd-pointer film?
+
+The new description matches the official `cases/clawd-desktop-19s/` case at commit `013a61ac8d98883c73733f59c06e49e9ba444f14`. Blender supplies the character, while three.js stages a glass desktop in a time-driven composition. Landing, hopping and carrying a file visually stand for clicking, typing and dragging.
+
+It is a scripted 19-second animation, not a demonstration of operating-system control. The case documents 126 BPM across 40 beats, spring camera motion, accumulated depth of field, shutter motion blur and multiple rounds of concept, music and animation revision.
+
+Only the film is public. The composition HTML, Blender model, score and sound sources are excluded. Artlist music is licensed rather than distributed, and the public MP4 has foley only. The roughly RMB20 API-cost claim has no itemized receipt in the case notes; it is not our measurement or a guaranteed budget. Existing noncommercial licensing limits still apply.
+
+Case notes: https://github.com/feitangyuan/onetake/blob/013a61ac8d98883c73733f59c06e49e9ba444f14/cases/clawd-desktop-19s/README.md
 
 ## Frequently asked questions
 

@@ -1,0 +1,127 @@
+{
+  "checkedAt": "2026-10-29T09:49:14.361227+00:00",
+  "purpose": "short text functional smoke only; three manually selected synthetic prompts; not a benchmark",
+  "contextConfigured": 4096,
+  "parallel": 1,
+  "results": [
+    {
+      "case": {
+        "id": "arithmetic",
+        "system": "Return only the final answer.",
+        "prompt": "What is 17 + 25? Reply with just the integer.",
+        "expected": "42"
+      },
+      "request": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Return only the final answer."
+          },
+          {
+            "role": "user",
+            "content": "What is 17 + 25? Reply with just the integer."
+          }
+        ],
+        "temperature": 0.0,
+        "top_k": 50,
+        "repeat_penalty": 1.1,
+        "max_tokens": 96,
+        "seed": 42,
+        "stream": false
+      },
+      "output": "42",
+      "observed": "42",
+      "matched": true,
+      "usage": {
+        "completion_tokens": 57,
+        "prompt_tokens": 36,
+        "total_tokens": 93,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finishReason": "stop"
+    },
+    {
+      "case": {
+        "id": "chinese-routing",
+        "system": "你只做分类。只输出 billing、shipping 或 technical 中的一个词。billing指扣费和退款，shipping指配送，technical指软件故障。",
+        "prompt": "这笔订单被重复扣款，请退还多收的钱。",
+        "expected": "billing"
+      },
+      "request": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "你只做分类。只输出 billing、shipping 或 technical 中的一个词。billing指扣费和退款，shipping指配送，technical指软件故障。"
+          },
+          {
+            "role": "user",
+            "content": "这笔订单被重复扣款，请退还多收的钱。"
+          }
+        ],
+        "temperature": 0.0,
+        "top_k": 50,
+        "repeat_penalty": 1.1,
+        "max_tokens": 96,
+        "seed": 42,
+        "stream": false
+      },
+      "output": "billing",
+      "observed": "billing",
+      "matched": true,
+      "usage": {
+        "completion_tokens": 94,
+        "prompt_tokens": 71,
+        "total_tokens": 165,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finishReason": "stop"
+    },
+    {
+      "case": {
+        "id": "structured-extraction",
+        "system": "Return only a JSON object with keys name and quantity. Do not add explanations.",
+        "prompt": "Order: 3 notebooks. Extract name as notebooks and quantity as integer.",
+        "expected": {
+          "name": "notebooks",
+          "quantity": 3
+        }
+      },
+      "request": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Return only a JSON object with keys name and quantity. Do not add explanations."
+          },
+          {
+            "role": "user",
+            "content": "Order: 3 notebooks. Extract name as notebooks and quantity as integer."
+          }
+        ],
+        "temperature": 0.0,
+        "top_k": 50,
+        "repeat_penalty": 1.1,
+        "max_tokens": 96,
+        "seed": 42,
+        "stream": false
+      },
+      "output": "",
+      "observed": "",
+      "matched": false,
+      "usage": {
+        "completion_tokens": 96,
+        "prompt_tokens": 48,
+        "total_tokens": 144,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finishReason": "length"
+    }
+  ],
+  "matched": 2,
+  "total": 3
+}

@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-25",
+  "slug": "airsup-machine-skill",
+  "frontmatterRequired": true,
+  "bilingual": true,
+  "BLUF": true,
+  "questionHeadings": true,
+  "FAQ": true,
+  "copyrightBoth": true,
+  "primarySources": 4,
+  "visibleCanonicalBoth": true,
+  "independentAnalysis": "BMEP assumption controls piston power; single HTML has external runtime assets",
+  "testScope": "Browser functional only; no performance/physical validity claim",
+  "banner": "Official source adopted and verified; OCR warning expected for own project UI",
+  "limitations": [
+    "No verified source for supplied 249cc power example",
+    "No universal GPU/RAM floor established",
+    "Video recording not exercised"
+  ]
+}

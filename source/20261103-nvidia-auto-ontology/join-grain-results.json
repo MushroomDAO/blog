@@ -1,0 +1,15 @@
+{
+  "results": {
+    "correct_order_grain": 180,
+    "incorrect_fanout": 260,
+    "gross_correct": 200,
+    "gross_sum_distinct_wrong": 100
+  },
+  "queries": {
+    "correct_order_grain": "SELECT SUM(gross-refund) FROM orders",
+    "incorrect_fanout": "SELECT SUM(o.gross-o.refund) FROM orders o JOIN items i ON i.order_id=o.id",
+    "gross_correct": "SELECT SUM(gross) FROM orders",
+    "gross_sum_distinct_wrong": "SELECT SUM(DISTINCT gross) FROM orders"
+  },
+  "scope": "SyntheticSQLiteexample; no product query generation, model call, enterprise data or benchmark score"
+}

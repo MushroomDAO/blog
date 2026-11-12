@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-24T02:31:55.330Z",
+  "drafts": [
+    {
+      "slug": "underdog-bark-3-local-asr",
+      "mediaId": "prCUE631thH1cmNLi42prHYUDktP-sE3_0LG_XONo63_FrXd34NRBfgXMMw_BsQA",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "f55f134f5620983442e5ff9d34454c64e00720fc242a090ce52b4700f3ee67e6",
+      "remoteTextHash": "f55f134f5620983442e5ff9d34454c64e00720fc242a090ce52b4700f3ee67e6",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "3c64ceaa62eae5eef22ad03fdbba509dccf2491f540eca735642affc1d213518",
+      "remoteContentHash": "dfc0658b84d70a07e5a80c6867740862cfb06d15a654369ad21d3d89b61ffb1f"
+    }
+  ]
+}

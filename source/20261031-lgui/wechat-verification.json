@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-31T11:00:51.454Z",
+  "drafts": [
+    {
+      "slug": "lgui-browser-game-ui-guide",
+      "mediaId": "prCUE631thH1cmNLi42prPhimodkaHwodQO_VE8JmL2S9TNx05flDk312RGEEaih",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "443e1ae9fcc85639145d51eda36978c00025eddb1d0adaf0f2c9e59d4625ac7c",
+      "remoteTextHash": "443e1ae9fcc85639145d51eda36978c00025eddb1d0adaf0f2c9e59d4625ac7c",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "requiredNoticePresent": true,
+      "shieldLicenseUrlPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/lgui-browser-game-ui-guide/",
+      "localContentHash": "832089bc7dc4c315e18134222441204f15ccac006544d6f38cc523881ad7fa14",
+      "remoteContentHash": "d6e82752e6204310853d5cd7f38aba53e956add901c8066016c3ab281f755fad"
+    }
+  ]
+}

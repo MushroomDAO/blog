@@ -1,0 +1,18 @@
+{
+  "title": "NVIDIA OpenShell智能体权限运行时",
+  "summary": "NVIDIA OpenShell采用Apache-2.0开源，通过沙箱、独立Supervisor和策略引擎约束AI Agent的文件、网络及凭证访问。独立策略验证器可检查候选权限是否越过预设边界，但其形式化保证仅适用于已建模的策略语义。本地运行v0.1.5验证器得到通过、越界和无法验证三类结果，未运行完整沙箱或Agent任务。",
+  "tags": [
+    "NVIDIA",
+    "AI Agent",
+    "沙箱",
+    "权限管理",
+    "开源工具"
+  ],
+  "entities": [
+    "NVIDIA",
+    "OpenShell",
+    "OpenCode",
+    "OpenRouter"
+  ],
+  "content_type": "text"
+}

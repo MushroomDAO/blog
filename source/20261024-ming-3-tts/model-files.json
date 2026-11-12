@@ -1,0 +1,77 @@
+{
+  "revision": "8d66b70a00f05ad183fa8a863b4ce609fc83cbc0",
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 1697
+    },
+    {
+      "name": "Ming-3.0-tts-0.5B-TDS2026.pdf",
+      "bytes": 390569
+    },
+    {
+      "name": "README.md",
+      "bytes": 54491
+    },
+    {
+      "name": "added_tokens.json",
+      "bytes": 1785
+    },
+    {
+      "name": "campplus.onnx",
+      "bytes": 28303423
+    },
+    {
+      "name": "config.json",
+      "bytes": 4754
+    },
+    {
+      "name": "configuration.json",
+      "bytes": 51
+    },
+    {
+      "name": "figures/ant-bailing.png",
+      "bytes": 58712
+    },
+    {
+      "name": "figures/icons/github-color.svg",
+      "bytes": 837
+    },
+    {
+      "name": "figures/icons/modelscope-color.svg",
+      "bytes": 423
+    },
+    {
+      "name": "figures/icons/technical-report.svg",
+      "bytes": 414
+    },
+    {
+      "name": "figures/ming_3.0_tts.png",
+      "bytes": 629806
+    },
+    {
+      "name": "merges.txt",
+      "bytes": 1671853
+    },
+    {
+      "name": "model.safetensors",
+      "bytes": 2959055504
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 2726
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 11431389
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 16260
+    },
+    {
+      "name": "vocab.json",
+      "bytes": 2776833
+    }
+  ]
+}

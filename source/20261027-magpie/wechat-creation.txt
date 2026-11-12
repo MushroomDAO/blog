@@ -1,0 +1,34 @@
+🚀 M2 WeChat Publisher
+======================
+
+[1/5] Loading config...
+[2/5] Rendering markdown...
+Using theme: 蓝色专业 (blue)
+   Found 3 image(s) to process...
+   Uploading local image: magpie-multi-agent-model-gateway-fig-01.png...
+✅ Access token obtained
+✅ Image uploaded: magpie-multi-agent-model-gateway-fig-01.png
+   ✅ Local image processed
+   Uploading local image: magpie-multi-agent-model-gateway-fig-02.png...
+✅ Image uploaded: magpie-multi-agent-model-gateway-fig-02.png
+   ✅ Local image processed
+   Uploading local image: magpie-multi-agent-model-gateway-fig-03.png...
+✅ Image uploaded: magpie-multi-agent-model-gateway-fig-03.png
+   ✅ Local image processed
+   Title: Magpie：统一多Agent的模型与配置
+   Theme: 蓝色专业 (blue)
+[3/5] Processing cover image...
+✅ Cover uploaded: media_id=prCUE631thH1cmNLi42prDndVLEW8_KrtlIIMourfqOSN_yNKffFkwbBa2W2BuFZ
+[4/5] Creating draft...
+✅ Draft created: media_id=prCUE631thH1cmNLi42prJwPHH7pz1FFH0wXBO8KnSXN8bRvId1UUFhyZ5Ya1PhR
+[5/5] Saving output...
+
+✅ Publish successful!
+
+📋 Draft Info:
+   Title: Magpie：统一多Agent的模型与配置
+   Theme: 蓝色专业 (blue)
+   Media ID: prCUE631thH1cmNLi42prJwPHH7pz1FFH0wXBO8KnSXN8bRvId1UUFhyZ5Ya1PhR
+   Preview: https://mp.weixin.qq.com
+
+📁 Output: pipeline/m2/output/magpie-multi-agent-model-gateway.html

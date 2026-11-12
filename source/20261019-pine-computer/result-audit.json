@@ -1,0 +1,69 @@
+{
+  "dataset": "pine-ai/pine-computer-saasbench-results",
+  "revision": "bd9df2a8a140f30bf67e4c4409e9323b579d2577",
+  "publishedFilesSHA256Matched": {
+    "releases/2026-09-18-saas-bench-1.1/results.jsonl": "971b08e0452699e121012bcd2e025904bbda21d093640c0068a4c0f9c54a67f7",
+    "releases/2026-09-18-saas-bench-1.1/summary.json": "838a2f32e0c003887e1b8b5544902a663696bc9bac9114b643e5f8d82f1952c3",
+    "releases/2026-09-18-saas-bench-1.1/methodology.md": "af87bd383d3286b9226e74449b91249eafb6e0024756e913f5b4b0669d0b50e7",
+    "releases/2026-09-18-saas-bench-1.1/evidence-index.jsonl": "06223df257e8b513207bd737c0c9f5d71cc2cdf89575a26094fa767d0d5b6ddf"
+  },
+  "acceptedRecords": 106,
+  "uniqueTasks": 106,
+  "checksPassed": 1077,
+  "checksTotal": 1375,
+  "checkpointPercent": 78.32727272727273,
+  "resolvedTasks": 29,
+  "resolvedPercent": 27.358490566037734,
+  "acceptedAttemptNumbers": {
+    "1": 87,
+    "2": 19
+  },
+  "terminalReasons": {
+    "completed": 98,
+    "timeout": 8
+  },
+  "meanWeightedScorePercent": 76.10283018867923,
+  "domains": {
+    "agriculture": {
+      "tasks": 12,
+      "checks_passed": 33,
+      "checks_total": 43,
+      "resolved": 8
+    },
+    "business": {
+      "tasks": 15,
+      "checks_passed": 198,
+      "checks_total": 235,
+      "resolved": 3
+    },
+    "healthcare": {
+      "tasks": 16,
+      "checks_passed": 169,
+      "checks_total": 245,
+      "resolved": 1
+    },
+    "media": {
+      "tasks": 20,
+      "checks_passed": 190,
+      "checks_total": 235,
+      "resolved": 8
+    },
+    "software": {
+      "tasks": 31,
+      "checks_passed": 336,
+      "checks_total": 443,
+      "resolved": 8
+    },
+    "teamwork": {
+      "tasks": 12,
+      "checks_passed": 151,
+      "checks_total": 174,
+      "resolved": 1
+    }
+  },
+  "publicEvidenceIndexRecords": 106,
+  "privateRawEvidenceVerified": false,
+  "tasksReexecuted": false,
+  "hostedAPIInvoked": false,
+  "costIndependentlyRecomputed": false
+}

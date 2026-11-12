@@ -1,0 +1,13 @@
+eval none: repeat 1/1 on 2 test tasks
+{
+ "adapter": "none",
+ "commit": null,
+ "tasks": 2,
+ "repeats": 1,
+ "mean_score": 0.0,
+ "solved_once": 0.0,
+ "cost_usd": 0.0,
+ "unknown_cost_tasks": 0,
+ "errors": 0,
+ "wall_s": 0.0
+}

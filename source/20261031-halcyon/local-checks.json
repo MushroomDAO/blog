@@ -1,0 +1,151 @@
+{
+  "checkedAt": "2026-10-31T16:55:13.935579+00:00",
+  "codeCommit": "52931e3a2d34207f5f54da64a7d71c3e582ea966",
+  "checksPassed": [
+    "AST caption_images.py",
+    "AST cfg.py",
+    "AST common.py",
+    "AST generate_images.py",
+    "AST image_tokenizer.py",
+    "AST vocab.py",
+    "joint vocabulary80640/image tokens1024",
+    "image token range excludes special tokens",
+    "baseline/main CFG defaults5.0/5.2"
+  ],
+  "totalComputeRatio": 274.62686567164184,
+  "models": [
+    {
+      "id": "radicalnumerics/Halcyon-0.1B",
+      "sha": "5fb2051f0b3af8801562d4f27c3d2bb16342af08",
+      "private": false,
+      "gated": "auto",
+      "cardData": {
+        "library_name": "transformers",
+        "tags": [
+          "halcyon",
+          "radical-numerics",
+          "text-to-image",
+          "autoregressive",
+          "qwen3"
+        ]
+      },
+      "safetensors": {
+        "parameters": {
+          "BF16": 96356352
+        },
+        "total": 96356352
+      }
+    },
+    {
+      "id": "radicalnumerics/Halcyon-0.25B",
+      "sha": "0431ad5dff77a46a6b232dcc6f6aad1a39e0d827",
+      "private": false,
+      "gated": "auto",
+      "cardData": {
+        "library_name": "transformers",
+        "tags": [
+          "halcyon",
+          "radical-numerics",
+          "text-to-image",
+          "autoregressive",
+          "qwen3"
+        ]
+      },
+      "safetensors": {
+        "parameters": {
+          "BF16": 247764480
+        },
+        "total": 247764480
+      }
+    },
+    {
+      "id": "radicalnumerics/Halcyon-0.52B",
+      "sha": "b861dd657cd8f7db01667094583f6e12800b4521",
+      "private": false,
+      "gated": "auto",
+      "cardData": {
+        "library_name": "transformers",
+        "tags": [
+          "halcyon",
+          "radical-numerics",
+          "text-to-image",
+          "autoregressive",
+          "qwen3"
+        ]
+      },
+      "safetensors": {
+        "parameters": {
+          "BF16": 523042816
+        },
+        "total": 523042816
+      }
+    },
+    {
+      "id": "radicalnumerics/Halcyon-1.6B",
+      "sha": "9e682e02ef7a62de1df7fd5d41a6a183dfe32c07",
+      "private": false,
+      "gated": "auto",
+      "cardData": {
+        "library_name": "transformers",
+        "tags": [
+          "halcyon",
+          "radical-numerics",
+          "text-to-image",
+          "autoregressive",
+          "qwen3"
+        ]
+      },
+      "safetensors": {
+        "parameters": {
+          "BF16": 1574560768
+        },
+        "total": 1574560768
+      }
+    },
+    {
+      "id": "radicalnumerics/Halcyon-4B",
+      "sha": "7cdca67e8b3184b654b7457e9f47cd56d467305d",
+      "private": false,
+      "gated": "auto",
+      "cardData": {
+        "library_name": "transformers",
+        "tags": [
+          "halcyon",
+          "radical-numerics",
+          "text-to-image",
+          "autoregressive",
+          "qwen3"
+        ]
+      },
+      "safetensors": {
+        "parameters": {
+          "BF16": 3839950336
+        },
+        "total": 3839950336
+      }
+    },
+    {
+      "id": "radicalnumerics/Halcyon-Tokenizers",
+      "sha": "997bfd574d21a871e7672558c42019e92f6a457f",
+      "private": false,
+      "gated": "auto",
+      "cardData": {
+        "library_name": "transformers",
+        "tags": [
+          "halcyon",
+          "radical-numerics",
+          "tokenizer",
+          "text-to-image",
+          "fsq"
+        ]
+      },
+      "safetensors": null
+    }
+  ],
+  "gatedRefsProbe": "anonymous refs endpoint401; not retried or bypassed",
+  "limitations": [
+    "No model inference/weight download/access acceptance",
+    "NoGPUlatency/memorybenchmark",
+    "Pure helper invariants andsyntax only"
+  ]
+}

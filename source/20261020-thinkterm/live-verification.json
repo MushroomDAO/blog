@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "thinkterm-multi-agent-terminal",
+      "url": "https://blog.mushroom.cv/blog/thinkterm-multi-agent-terminal/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/thinkterm-multi-agent-terminal-banner.C0UyaVPy_Z1L3y13.webp",
+          "status": 200,
+          "bytes": 45656
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/thinkterm-multi-agent-terminal-fig-01.CaqZ7HT-_ZYnEzO.webp",
+          "status": 200,
+          "bytes": 44506
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/thinkterm-multi-agent-terminal-fig-02.BzoHXyyV_ZMFQj5.webp",
+          "status": 200,
+          "bytes": 53814
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/thinkterm-multi-agent-terminal-fig-03.C7wFgJ-x_Z1daghB.webp",
+          "status": 200,
+          "bytes": 46996
+        }
+      ],
+      "listPosition": 5,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}

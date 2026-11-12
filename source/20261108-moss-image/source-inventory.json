@@ -1,0 +1,53 @@
+{
+  "repository": "https://github.com/OpenMOSS/MOSS-Image",
+  "commit": "6be4453024c5acae9dcd0a191e26ee524e743310",
+  "sftRevision": "f972bd4b4b9e3852133cc5da954d87bc32cd8fb9",
+  "sftCardLicense": "apache-2.0",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "bafd46a22b6812f6b19b30767580d0c6c013bccb4da2586d99e04b5a3c3e86dc",
+      "bytes": 17403
+    },
+    {
+      "path": "USERGUIDE.md",
+      "sha256": "a03845c2cb582ea448e407ac7c81e7437daec1642509529461471fd82eda4976",
+      "bytes": 10183
+    },
+    {
+      "path": "docs/macos.md",
+      "sha256": "bc41ad5b8033ac0c4bcb2e4e077bb9937db2c00b33a33b8a1829d3a90b386bcc",
+      "bytes": 4192
+    },
+    {
+      "path": "comfyui/README.md",
+      "sha256": "ffaa2cf39259228e67d26ac1e3828ea5194d757aa21de74d139158d77435730a",
+      "bytes": 4941
+    },
+    {
+      "path": "mps_runtime.py",
+      "sha256": "30f01b265982be3b86c3328bcec1723bc4f7d24051886b862929dead1751960a",
+      "bytes": 7352
+    },
+    {
+      "path": "skills/moss-image-prompt-enhancer/scripts/compile_prompt.py",
+      "sha256": "1d75780cf9f22f9ebed1a33d8100158f8d73ebfe59a5d435c1cc8c8e1374a8a3",
+      "bytes": 5779
+    },
+    {
+      "path": "tests/test_mps_runtime.py",
+      "sha256": "a99717740b52ca85abc214113ae2980844c3802f526ce02dd3dc3f20a43ab447",
+      "bytes": 10178
+    },
+    {
+      "path": "skills/moss-image-prompt-enhancer/scripts/test_compile_prompt.py",
+      "sha256": "2ef6ec435575bfaa9797008a2ffd30790b291eefbc190de00274a74b0de34d5c",
+      "bytes": 6172
+    },
+    {
+      "path": "assets/showcase/shanghai-panorama.webp",
+      "sha256": "3951370982df67cdb871c9e3622ba339442e1a926a545bc4869479187ab7a664",
+      "bytes": 319316
+    }
+  ]
+}

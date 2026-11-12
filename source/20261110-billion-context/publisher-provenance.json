@@ -1,0 +1,13 @@
+{
+  "job": "3b52d2bd-cc27-46d7-90fe-40d7770c1bd7",
+  "slug": "billion-context-agent-compression-proxy-review",
+  "rawKB": "incoming bot source reused",
+  "newArticle": true,
+  "tests": {
+    "targeted": 140,
+    "httpMock": 1,
+    "fullSuite": false,
+    "paidModel": false
+  },
+  "bannerSeed": 8361
+}

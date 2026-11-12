@@ -1,0 +1,10 @@
+   Compiling cache_probe v0.1.0 (/private/tmp/boxington-smoke/proof-qv8cgmx2/checkout-b)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.42s
+mbx[cache]: 0 hits, 1 misses, 0 prefetched; 0 B downloaded, 0 B uploaded, 0 B stored locally
+mbx[cache]: could not look up 1 compilations: no usable dep-info from an earlier build and no prediction to derive an action key from
+mbx[cache]: bypassed 5 compilations: 4 compiler-query, 1 standard-input
+mbx[cache]: compiler time: 0s estimated avoided; 158.9ms spent (1 miss in 40.0ms, 1 unconsulted in 118.9ms)
+mbx[cache]: 2 compilations kept their own incremental state, so they were not stored
+mbx[cache]: slowest uncached crates: cache_probe 158.9ms
+mbx[cache]: wrapper phases (cumulative, exclusive): compiler 154.9ms, key 3.4ms, lookup 194µs, permit_wait 1.4ms, restore 916ns, startup 192µs, unattributed 103.8ms
+mbx[cache]: timing: 451.4ms session, 0s prefetch; cumulative 0s remote lookup, 0s blob transfer, 0s CAS write, 0s materialization

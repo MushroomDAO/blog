@@ -1,0 +1,13 @@
+=== [adopt-banner] d2r-mobile-build-ios-macos ← 1 source image(s) → src/assets/images/d2r-mobile-build-ios-macos-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /tmp/d2r-banner-phone-crop.jpg
+=== [adopt-banner] done: src/assets/images/d2r-mobile-build-ios-macos-banner.jpg (1200x630, 92816B) ===
+=== [verify-banner] src/assets/images/d2r-mobile-build-ios-macos-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/tmp/d2r-banner-phone-crop.jpg
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 92816B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/d2r-mobile-build-ios-macos-banner.jpg ===
+PATH: src/assets/images/d2r-mobile-build-ios-macos-banner.jpg

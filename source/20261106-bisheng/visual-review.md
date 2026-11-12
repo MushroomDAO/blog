@@ -1,0 +1,1 @@
+Officialplatform/knowledge screenshots manually inspected; UI/textheavy so retained as source media,notcover. FLUX8241documenttray/cable/key scene accepted,nofaces/text,noactualdeploymentclaim. All3finalLittleMfigures inspected: permissiongate;draftcheckhumanapproval;separatecostbaskets. Workerexit0,raworiginalspreserved,each1120x630<=48colors<90KB.

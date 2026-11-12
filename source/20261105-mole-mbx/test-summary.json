@@ -1,0 +1,33 @@
+{
+  "moleForkCommit": "25ef07a70e287136d476689997d9cfd4ed46f750",
+  "goVersion": "1.27.1",
+  "trendTestsPassed": 6,
+  "devcacheTestsPassed": 14,
+  "testsFailed": 0,
+  "mbxVersion": "1.29.2",
+  "defaultGC": {
+    "hits": 0,
+    "misses": 2,
+    "evictedObjects": 8,
+    "evictedActions": 1
+  },
+  "isolatedOverride": {
+    "environment": "MBX_GC_MIN_FREE_SIZE=none",
+    "scope": "fresh temporary cache, subprocess only",
+    "hits": 2,
+    "misses": 0
+  },
+  "outputs": {
+    "unchanged": "42",
+    "edited": "43"
+  },
+  "notRun": [
+    "global mbx setup",
+    "real project adoption",
+    "home cleanup",
+    "Xcode deletion",
+    "model deletion",
+    "container pruning",
+    "performance benchmark"
+  ]
+}

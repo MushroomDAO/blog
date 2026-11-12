@@ -1,0 +1,19 @@
+{
+  "CFBundleName": "AgentEar",
+  "CFBundleDisplayName": "AgentEar",
+  "CFBundleIdentifier": "ai.idoris.agentear",
+  "CFBundleVersion": "0.27.0",
+  "CFBundleShortVersionString": "0.27.0",
+  "CFBundleExecutable": "AgentEar",
+  "CFBundlePackageType": "APPL",
+  "LSMinimumSystemVersion": "26.0",
+  "LSUIElement": true,
+  "NSMicrophoneUsageDescription": "AgentEar needs microphone access to record your voice and transcribe it locally. Recording and transcription happen entirely on this Mac; nothing is uploaded to any server.",
+  "CFBundleDevelopmentRegion": "en",
+  "CFBundleLocalizations": [
+    "en",
+    "zh-Hans",
+    "th"
+  ],
+  "CFBundleIconFile": "AgentEar"
+}

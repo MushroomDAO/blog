@@ -1,0 +1,17 @@
+.....................................................................    [100%]
+=============================== warnings summary ===============================
+tests/test_session_storage.py: 11 warnings
+  /private/tmp/designing-ai-systems-research/services/sessions/store.py:102: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_session_storage.py: 12 warnings
+  <string>:7: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+
+tests/test_session_storage.py::TestMessages::test_add_and_get_messages
+tests/test_session_storage.py::TestMessages::test_get_messages_with_limit
+tests/test_session_storage.py::TestMessages::test_get_messages_with_offset
+  /private/tmp/designing-ai-systems-research/services/sessions/store.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    self._sessions[session_id].updated_at = datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+69 passed, 26 warnings in 1.04s

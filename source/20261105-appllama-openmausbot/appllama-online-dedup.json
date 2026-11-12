@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "proma-local-first-ai-desktop-agent-workspace",
+      "title": "Proma：把 Chat、Agent、Skills、MCP 和微信桥接做进一个本地优先桌面应用",
+      "url": "/blog/proma-local-first-ai-desktop-agent-workspace/",
+      "language": "zh",
+      "excerpt": "Proma：把 Chat、Agent、Skills、MCP 和微信桥接做进一个本地优先桌面应用 ErlichLiu 开源的 Proma 是一个本地优先 AI 桌面工作台：Claude Agent SDK + Pi Agent SDK 双运行时，每个工作区独立配置 Skills 和 MCP，飞书/微信/钉钉桥接让手机触发本机 Agent，AGPL-3.0 开源，1615 Stars。 本地AI 桌面应用 Agent工作台 Claude SDK MCP Skills 微信桥接 开源 Electron Pi Agent 一句话定位 两套 Agent 运行时，按",
+      "score": 0.54868144
+    },
+    {
+      "article_id": "xllama-xbox-series-s-local-llm-inference-dev-mode",
+      "title": "xllama 拆解：把 Xbox Series S 变成局域网 LLM 端点，350M 模型约 101 tok/s，但只能开发者模式、无鉴权",
+      "url": "/blog/xllama-xbox-series-s-local-llm-inference-dev-mode/",
+      "language": "zh",
+      "excerpt": "xllama 拆解：把 Xbox Series S 变成局域网 LLM 端点，350M 模型约 101 tok/s，但只能开发者模式、无鉴权 gianlucamazza/xllama（MIT，73 star，2026-05 创建）在开发者模式的 Xbox Series S 上跑 llama.cpp 与 ONNX Runtime GenAI，并提供 OpenAI 兼容局域网接口。自报 350M 约 101.6 tok/s、2.6B 约 17.9 tok/s；Series X 未测、接口默认关闭且无鉴权。对 Mac 用户它是好奇心项目，不是替代品。 Xbox",
+      "score": 0.5204424
+    },
+    {
+      "article_id": "apfel-apple-silicon-local-ai",
+      "title": "apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence",
+      "url": "/blog/apfel-apple-silicon-local-ai/",
+      "language": "zh",
+      "excerpt": "apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence apfel 是一款开源 CLI 工具，让开发者在 Apple Silicon Mac 上直接调用 Apple Foundation Model，无需 API Key、完全本地化运行。 apple-intelligence macOS CLI local-LLM MCP 什么是 apfel？ 核心价值 主要功能 🖥️ 多样化交互方式 🔧 UNIX 集成 🌐 OpenAI 兼容服务器 🛠️ MCP 工具支持 💬 上下文管理 技术要求与限制 环境要求 ",
+      "score": 0.50531614
+    },
+    {
+      "article_id": "mumble-phone-walkie-talkie-guide",
+      "title": "手机变网络对讲机：Mumble服务端、Mumla与iOS客户端搭建指南",
+      "url": "/blog/mumble-phone-walkie-talkie-guide/",
+      "language": "zh",
+      "excerpt": "手机变网络对讲机：Mumble服务端、Mumla与iOS客户端搭建指南 Mumble可以把Android与iPhone接入同一个自托管语音频道，实现按住说话的网络对讲。本文核对Mumble官方服务端、Docker镜像、Mumla、Mumblers与MumbleWay仓库及安装入口，提供双端口、独立密码和持久化配置，并解释后台保活、蓝牙耳机、运营商网络、证书信任与传输加密的实际边界。 Mumble 自托管 网络对讲 Mumla MumbleWay Mumble如何把手机接成对讲频道？ 相关应用，哪些确实有开源仓库？ Android：搜索Mumla，核对包名",
+      "score": 0.5032875
+    },
+    {
+      "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+      "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+      "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+      "language": "zh",
+      "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+      "score": 0.5007731
+    },
+    {
+      "article_id": "pipecat-phonellm-alpha-1-voice-agent-model",
+      "title": "PhoneLLM Alpha 1：Pipecat 罕见自研模型，专攻电话语音 Agent 的工具调用",
+      "url": "/blog/pipecat-phonellm-alpha-1-voice-agent-model/",
+      "language": "zh",
+      "excerpt": "PhoneLLM Alpha 1：Pipecat 罕见自研模型，专攻电话语音 Agent 的工具调用 开源语音 AI 框架 Pipecat（15k⭐，本来接 50+ 家 LLM 服务不做自有模型）罕见发布首个自研模型 PhoneLLM Alpha 1：基于 NVIDIA Nemotron 3 Nano 30B-A3B 全参数微调，PhoneBench v1 上性能对齐 GPT-4 Turbo，成本低 94%，P95 首字延迟快 1300ms。 Pipecat PhoneLLM 语音Agent Nemotron 工具调用 开源 一个中立框架为什么要自己做模",
+      "score": 0.4900957
+    },
+    {
+      "article_id": "archestra-enterprise-ai-platform-mcp-gateway-guardrails-llm-proxy-k8s",
+      "title": "Archestra：企业级一体化 AI 平台，MCP 网关 + LLM 代理 + 双 LLM 护栏 + K8s 编排，AGPL 开源",
+      "url": "/blog/archestra-enterprise-ai-platform-mcp-gateway-guardrails-llm-proxy-k8s/",
+      "language": "zh",
+      "excerpt": "Archestra：企业级一体化 AI 平台，MCP 网关 + LLM 代理 + 双 LLM 护栏 + K8s 编排，AGPL 开源 archestra-ai/archestra 是一个企业级一体化 AI 平台，4201 stars，TypeScript，AGPL 3.0（30人以下团队免费）。一个 URL、一个 Token，涵盖：LLM 网关（Anthropic/OpenAI/Azure/Bedrock/DeepSeek，带费用限额和虚拟 API Key）、MCP 网关（OAuth + On-Behalf-Of，工具以用户身份运行）、A2A 网关、私有",
+      "score": 0.48910537
+    },
+    {
+      "article_id": "krill-mac-mlx-llm-runtime-coding-agent",
+      "title": "Krill Teardown: One Swift Binary That Is Both a Mac LLM Engine and a Coding Agent. How Much of \"1.57x Faster Than Ollama\" Holds Up?",
+      "url": "/blog/krill-mac-mlx-llm-runtime-coding-agent/",
+      "language": "en",
+      "excerpt": "Krill Teardown: One Swift Binary That Is Both a Mac LLM Engine and a Coding Agent. How Much of \"1.57x Faster Than Ollama\" Holds Up? srvsngh99/Krill is an MIT-licensed, pure Swift + MLX local LLM runtime for the Mac that also runs a coding agent in the same process and speaks the ",
+      "score": 0.4888175
+    },
+    {
+      "article_id": "laya-aayushch-local-first-ai-notification-command-center",
+      "title": "Laya by aayushch: A Local-First AI Notification Command Center — Where the Privacy Boundary Really Is",
+      "url": "/blog/laya-aayushch-local-first-ai-notification-command-center/",
+      "language": "en",
+      "excerpt": "Laya by aayushch: A Local-First AI Notification Command Center — Where the Privacy Boundary Really Is aayushch/laya: 745 stars, Apache-2.0, a Tauri + Python + n8n desktop app that routes Slack/Gmail/GitHub/Jira notifications through an LLM and stages approve-or-dismiss Action Car",
+      "score": 0.4881696
+    },
+    {
+      "article_id": "opensquilla-token-efficient-ai-agent-squilla-router",
+      "title": "OpenSquilla 0.5.2：同等预算，9× token 成本降低，靠的是本地 Agent 路由器",
+      "url": "/blog/opensquilla-token-efficient-ai-agent-squilla-router/",
+      "language": "zh",
+      "excerpt": "OpenSquilla 0.5.2：同等预算，9× token 成本降低，靠的是本地 Agent 路由器 OpenSquilla 把「这一步用哪个模型」的决策内化到 Agent 本身：SquillaRouter 是一个在设备上运行的 LightGBM+ONNX 分类器，每个 turn 评估复杂度后路由到最便宜的胜任模型，prompt 从不离开本机做这个决策。PinchBench 结果：分数持平（0.9251 vs 0.9255），成本从 $6.23 降到 $0.69，减少 89%。6535 stars，Apache 2.0，v0.5.2 稳定版。 AI ",
+      "score": 0.48513284
+    }
+  ]
+}

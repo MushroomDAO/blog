@@ -1,0 +1,266 @@
+{
+  "d2r-mobile-build-ios-macos": {
+    "query": "d2r-mobile-build",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "d2r-mobile-build-ios-macos",
+          "title": "d2r-mobile-build：自己构建苹果端游戏",
+          "url": "/blog/d2r-mobile-build-ios-macos/",
+          "language": "zh",
+          "excerpt": "d2r-mobile-build：自己构建苹果端游戏 jiayx/d2r-mobile-build 将苹果端游戏源码编译、打包和发布整理为 GitHub Actions 模板。本文核查预处理输入、上游版本、iOS 与 macOS 产物和设备要求，并在 Python 3.12 运行上游工具测试。工作流 MIT 许可、游戏资源权利和实机运行表现分别讨论，提供构建验收路径。 GitHub Actions iOS macOS Game Development d2r-mobile-build 到底做了哪一段？ 怎样按可复现方式开始？ iPhone、iPad 与 ",
+          "score": 0.686127
+        },
+        {
+          "article_id": "docker-android-containerized-emulator-ci-guide",
+          "title": "把安卓模拟器装进 Docker：docker-android 容器化模拟器入门与 CI 自动化测试指南",
+          "url": "/blog/docker-android-containerized-emulator-ci-guide/",
+          "language": "zh",
+          "excerpt": "把安卓模拟器装进 Docker：docker-android 容器化模拟器入门与 CI 自动化测试指南 docker-android（6.3k★，MIT）把安卓模拟器打包成一个基于 Alpine 的轻量容器服务：支持 KVM/GPU 硬件加速、可自定义 Android API 版本与镜像类型（含 Play 商店）、无头后台运行、内置 ADB 5555 端口转发、配合 scrcpy 远程投屏；重启默认清空数据，也可挂载 /data 持久化，docker-compose 一键编排。本文从零基础角度讲清楚它是什么、怎么跑、怎么接入 CI 做批量兼容性测试。 d",
+          "score": 0.4912058
+        },
+        {
+          "article_id": "dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile",
+          "title": "dsh-plugin-mobile-gateway：给 DeepSeek Harness 加上移动端，手机扫码就能用，Tailscale 一行命令搞定远程",
+          "url": "/blog/dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile/",
+          "language": "zh",
+          "excerpt": "dsh-plugin-mobile-gateway：给 DeepSeek Harness 加上移动端，手机扫码就能用，Tailscale 一行命令搞定远程 Clarklevis1995/dsh-plugin-mobile-gateway，MIT 开源，JavaScript 插件，给 DeepSeek Harness (DSH) 增加 WebSocket 移动网关。支持局域网直连、Linux 公网一键 TLS、Tailscale 远程接入三种部署方式。配套 iOS 17+ SwiftUI 原生客户端，双向同步会话、实时流、Human-in-the-loop",
+          "score": 0.48339322
+        },
+        {
+          "article_id": "krea-2-turbo-open-weight-text-to-image-license-hardware",
+          "title": "Should You Run Krea 2 Turbo Locally? A 12.8B Open-Weight Image Model, 8 Steps, Commercial Use Under $1M Revenue",
+          "url": "/blog/krea-2-turbo-open-weight-text-to-image-license-hardware/",
+          "language": "en",
+          "excerpt": "Should You Run Krea 2 Turbo Locally? A 12.8B Open-Weight Image Model, 8 Steps, Commercial Use Under $1M Revenue Krea 2 Turbo is a 12.8B text-to-image DiT trained from scratch by Krea, distilled with TDM to 8 steps with CFG off, at 1K-2K resolution. We look at it from a solo devel",
+          "score": 0.48122734
+        },
+        {
+          "article_id": "standrig-ai-2d-rigging-mcp-psd-cubism",
+          "title": "StandRig：AI 直接当 rigger，MCP 原生的 2D 角色建模系统",
+          "url": "/blog/standrig-ai-2d-rigging-mcp-psd-cubism/",
+          "language": "zh",
+          "excerpt": "StandRig：AI 直接当 rigger，MCP 原生的 2D 角色建模系统 开发者预览版开源工具：把分层 PSD 喂给本地服务，Claude Code 等 AI 通过 MCP 直接编辑 Mesh、Deformer 和参数，配套 cubism-api-bridge 打通 Live2D Cubism Editor。AI 不再是辅助，而是替代了传统 rigging 的手工部分。 AI-agent MCP Live2D VTuber 2D-rigging open-source Rigging 的时间消耗去哪了 StandRig 的做法 快速上手 cubi",
+          "score": 0.4752195
+        },
+        {
+          "article_id": "idoris-project-launch--how-an-independent-researcher-builds-",
+          "title": "iDoris 立项思考：一个普通研究者如何构建可持续进化的本地 AI 模型",
+          "url": "/blog/idoris-project-launch--how-an-independent-researcher-builds-/",
+          "language": "zh",
+          "excerpt": "iDoris 立项思考：一个普通研究者如何构建可持续进化的本地 AI 模型 iDoris 是面向「个人→社区→城市」三层场景的本地 AI 模型项目。本文从约束推导出「必须分层+必须联邦」的结论；选定 Qwen3.5/3.6 同基座+分层 LoRA 架构；以 DP-SGD+算法可审计实现「权重可上传+原始数据不出本机」。我们不回避不确定性。 iDoris 本地AI Local AI Federated LoRA Mycelium Aura AI Qwen3 Progress-Report 摘要 §1 起点：一个真实但被忽略的问题 §2 约束：先把限制条件摆",
+          "score": 0.47362065
+        },
+        {
+          "article_id": "ltx-2-lightricks-audio-video-22b-dit-open-source",
+          "title": "LTX-2：Lightricks 开源 22B 音视频 DiT，开源视频生成进入三强时代",
+          "url": "/blog/ltx-2-lightricks-audio-video-22b-dit-open-source/",
+          "language": "zh",
+          "excerpt": "LTX-2：Lightricks 开源 22B 音视频 DiT，开源视频生成进入三强时代 Lightricks 开源 LTX-2（内部版本 LTX-2.3），22B 参数，首个基于 DiT 的音视频联合基础模型。一次推理同步生成画面与声音，原生 4K，最高 50fps，单次最长 10 秒。Gemma-3 12B 作为文本编码器，提供 11 条专用 Pipeline（T2V/I2V/A2V/关键帧插值/视频延伸/Dub-It 配音/HDR 等），IC-LoRA 精准控制（深度/姿态/Canny/运动轨迹），支持 ComfyUI 与 LoRA 训练。开源视频",
+          "score": 0.4734487
+        },
+        {
+          "article_id": "magi-2-preview-sand-ai-114b-moe-video-generation-analysis",
+          "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
+          "url": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
+          "language": "zh",
+          "excerpt": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南 Sand.ai 开源 MAGI-2 Preview：全球首个千亿级 MoE 视频生成模型，114B 总参数，单 token 激活仅 6B，统一音视频生成，Apache 2.0。文章深度拆解 MagiMoE 架构、数据管道哲学与成本逻辑，并给出完整自部署方案：硬件选型、权重下载、环境搭建、推理命令、成本估算全覆盖。 MAGI-2 Sand.ai 视频生成 MoE 开源模型 AI基础设施 自部署 Mycelium Sand.ai 是谁 架构：为什么 114B",
+          "score": 0.47094816
+        },
+        {
+          "article_id": "gemini-3d-interactive-science-apps-react-three-fiber-tutorial",
+          "title": "用 Gemini + React Three Fiber 造 3D 互动科学应用：完整拆解与上手指南",
+          "url": "/blog/gemini-3d-interactive-science-apps-react-three-fiber-tutorial/",
+          "language": "zh",
+          "excerpt": "用 Gemini + React Three Fiber 造 3D 互动科学应用：完整拆解与上手指南 Dilum Sanjaya 用 Gemini 3 Pro 做了 3D 昆虫机器人模拟器、3D 智能家居、AI 对话造物等一系列互动科学应用。本文完整拆解技术栈，手把手带你从零搭一个 AI 驱动的 3D 互动场景。 Gemini React Three Fiber 3D AI应用开发 先看 Dilum 做了什么 技术栈全景 前端渲染层 AI 接入层 完整 package.json 示例 核心原理拆解：AI 怎么「造」3D 物体 思路：让 AI 说 JSON",
+          "score": 0.4696323
+        },
+        {
+          "article_id": "zhai-nan-home-lab-tiny-world-project-nomad",
+          "title": "Homebody God Mode: Build a Tiny World + Set Up an Offline Survival Knowledge Base",
+          "url": "/blog/zhai-nan-home-lab-tiny-world-project-nomad/",
+          "language": "en",
+          "excerpt": "Homebody God Mode: Build a Tiny World + Set Up an Offline Survival Knowledge Base Two open-source projects for the indoor generation: tiny-world-builder lets you sculpt a 3D voxel world in your browser, while Project N.O.M.A.D gives you AI, Wikipedia, and offline maps when the in",
+          "score": 0.46763644
+        }
+      ]
+    }
+  },
+  "kinex-coding-agents-robot-harness": {
+    "query": "Kinex 机器人 Pi 设备工具技能 132 仿真",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "kinex-coding-agents-robot-harness",
+          "title": "Kinex：让编程 Agent 接入机器人",
+          "url": "/blog/kinex-coding-agents-robot-harness/",
+          "language": "zh",
+          "excerpt": "Kinex：让编程 Agent 接入机器人 Kinex 用设备、工具与技能三层，把编程 Agent 连接到机器人、仿真器和模型服务。本文核查 Apache 2.0 仓库、Pi 基础与插件边界，重算官方 396 条仿真记录，并运行设备驱动契约测试。文章解释成功率与成本估计的适用条件，给出模拟环境起步、硬件标定及故障退出的验收路径，不把公开演示当作实机保证。 Robotics AI Agent Open Source Simulation Kinex 如何把文字任务接到物理设备？ 官方 78% 成功率是怎么来的？ 普通开发者怎样跑第一条闭环？ 我们本机验证了",
+          "score": 0.62982833
+        },
+        {
+          "article_id": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+          "title": "5块钱让大模型学会看图做几何题：GRPO 后训练的低成本实验",
+          "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/",
+          "language": "zh",
+          "excerpt": "5块钱让大模型学会看图做几何题：GRPO 后训练的低成本实验 KMnO4-zx/agentic-rl-lab，147 stars，Apache 2.0，Python。用 PyTRIO 远程训练平台 + GRPO 算法，5元在 Qwen3.5-4B 上做几何图形问答（GeoQA）的 Vision RL 后训练，准确率从 71% 升到 87%（+16pp）。全系列复现了 10 篇 RL 算法论文（GRPO/DAPO/GSPO/Search-R1/ReTool 等），核心主题：只写数据、reward 和 loss——把 infra 交给远端，让 RL 后训练的",
+          "score": 0.5141571
+        },
+        {
+          "article_id": "pi-muselinn-harness-kimi-code-subagents-goal-plan-tui",
+          "title": "Whatever the Pi Coding Agent Lacks, pi-muselinn-harness Supplies",
+          "url": "/blog/pi-muselinn-harness-kimi-code-subagents-goal-plan-tui/",
+          "language": "en",
+          "excerpt": "Whatever the Pi Coding Agent Lacks, pi-muselinn-harness Supplies pi-muselinn-harness is a TypeScript extension package that ports Kimi Code's core subsystems — Swarm parallel subagents, Goal lifecycle, Plan mode, 18-level permission chain, Hooks engine, 7-scope Skills — into the ",
+          "score": 0.5087242
+        },
+        {
+          "article_id": "tokentracker-local-first-token-cost-accounting-dedup",
+          "title": "TokenTracker: Before Saving Tokens, Check Your Numbers Aren't 1.6-3.7x Too High",
+          "url": "/blog/tokentracker-local-first-token-cost-accounting-dedup/",
+          "language": "en",
+          "excerpt": "TokenTracker: Before Saving Tokens, Check Your Numbers Aren't 1.6-3.7x Too High A local-first token and cost tracker for AI coding tools, covering 36 of them — 1,522 stars, MIT. The real technical point is deduplication: reqId-based dedup (the ccusage approach) over-counts provid",
+          "score": 0.5076156
+        },
+        {
+          "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+          "title": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具",
+          "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+          "language": "zh",
+          "excerpt": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具 hikarioyama/ParallelHue（MIT，35 star，零运行时依赖）把本地大模型的多路并发流式输出画进终端，只有调度器和反分词器的遥测跟 SSE 逐字节对得上，才按验证步上色。真正的 exact 模式只支持 vLLM 0.26.x，靠 7 个内部方法挂钩实现，官方的有效证据只有一次 16 路 GLM 运行（16,384 个 token）。我们在 Mac mini 上跑通了 72 个测试，用模拟服务器确认了它在证据不足时会失败或降级，另外发现：只要模型名里带 qw",
+          "score": 0.5001809
+        },
+        {
+          "article_id": "grpo-small-model-engineering-guide",
+          "title": "A GRPO Engineering Guide for Small Models: Eighty Dollars of Training to Beat o3",
+          "url": "/blog/grpo-small-model-engineering-guide/",
+          "language": "en",
+          "excerpt": "A GRPO Engineering Guide for Small Models: Eighty Dollars of Training to Beat o3 GRPO (Group Relative Policy Optimization) makes it practical for small specialist models to outperform frontier LLMs on narrow tasks. This guide integrates ART, ms-swift, OpenClaw-RL, and six real en",
+          "score": 0.49931622
+        },
+        {
+          "article_id": "earendil-what-is-a-harness-pi-minimal-agent-four-primitives",
+          "title": "读《What is a Harness?》：Model 负责聪明，Harness 负责让这份聪明变成「能干活」",
+          "url": "/blog/earendil-what-is-a-harness-pi-minimal-agent-four-primitives/",
+          "language": "zh",
+          "excerpt": "读《What is a Harness?》：Model 负责聪明，Harness 负责让这份聪明变成「能干活」 Earendil 团队写了一篇极简博客《What is a Harness?》，用攀岩 Harness 的比喻把 Agent Harness 压缩成四件事：System Prompt（工作说明）、Tools（手和脚）、Agentic Loop（根据上一步结果决定下一步的能力）、Translation Layer（换模型不换工作流）。这篇文章是读后感，试图把这个比喻推到底，然后说说为什么 Pi 把「极简」当成第一原则，而不是功能完备。 Agent",
+          "score": 0.49915704
+        },
+        {
+          "article_id": "pixel-perfect-ui-frontend-guide",
+          "title": "Pixel Perfect: 585★ React Component Library That Makes Your Frontend Actually Look Good",
+          "url": "/blog/pixel-perfect-ui-frontend-guide/",
+          "language": "en",
+          "excerpt": "Pixel Perfect: 585★ React Component Library That Makes Your Frontend Actually Look Good Pixel Perfect (585★) is a precision-crafted React component library with 330+ copy-paste components: glass morphism buttons, 3D push buttons, metal effects, mouse followers, and text animation",
+          "score": 0.4959999
+        },
+        {
+          "article_id": "easel-open-source-social-media-agent-workbench",
+          "title": "Easel: An Open-Source Social Media Agent Workbench, 112 Skills, Six-Platform Publishing",
+          "url": "/blog/easel-open-source-social-media-agent-workbench/",
+          "language": "en",
+          "excerpt": "Easel: An Open-Source Social Media Agent Workbench, 112 Skills, Six-Platform Publishing An open-source social-media creator Agent from Zhejiang University's REAL Lab and Peking University's OpenDCAI Lab: built on OpenClaw, 112 Skills across six layers (foundation/discover/plan/pr",
+          "score": 0.4956171
+        },
+        {
+          "article_id": "peekaboo-macos-native-ui-agent",
+          "title": "Peekaboo：让 AI 看见并操作 Mac 原生界面",
+          "url": "/blog/peekaboo-macos-native-ui-agent/",
+          "language": "zh",
+          "excerpt": "Peekaboo：让 AI 看见并操作 Mac 原生界面 Peekaboo 是面向 Mac 的开源桌面自动化工具，把截图、辅助功能界面树与点击输入接进 CLI、菜单栏应用和 MCP。本文核对4.9.0、5282Star快照、窗口定位与后台规则，并记录本地版本检查、权限诊断及Agent预演结果，说明何时使用原生UI工具、何时优先API，以及如何避免把命令已发出误判为任务成功。 Peekaboo macOS MCP 桌面自动化 AI Agent Peekaboo 到底补上了哪一层？ 怎样安装和接入 MCP？ 为什么窗口和快照比点击坐标更重要？ 后台运行意味着",
+          "score": 0.4942858
+        }
+      ]
+    }
+  },
+  "glimpse-visual-reasoning-game-bug-review": {
+    "query": "Elorian Glimpse 视觉推理 录屏 时间戳",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "glimpse-visual-reasoning-game-bug-review",
+          "title": "Glimpse：让视频验收回到具体画面",
+          "url": "/blog/glimpse-visual-reasoning-game-bug-review/",
+          "language": "zh",
+          "excerpt": "Glimpse：让视频验收回到具体画面 Glimpse 是 Elorian 发布的视觉推理研究预览，可回看视频并定位疑点。本文核实官方入口、公开评测和开源状态，区分游戏验收案例与可复现基准，提供录像分段、规则输入、时间戳证据、人工复核及缺陷回归的工程方案。视觉定位不等于源码定位，模型信心也不是经过校准的正确率，所有流程建议与未验证范围均有明确说明。 Vision Language Model Video Understanding Game QA AI Agent Glimpse 开源了吗，应该去哪里找？ 公开结果能证明它最擅长找游戏 Bug 吗？ 怎样",
+          "score": 0.6882153
+        },
+        {
+          "article_id": "openhoopvision-basketball-video-analysis",
+          "title": "OpenHoopVision：把篮球录像变成轨迹和事件数据",
+          "url": "/blog/openhoopvision-basketball-video-analysis/",
+          "language": "zh",
+          "excerpt": "OpenHoopVision：把篮球录像变成轨迹和事件数据 OpenHoopVision 面向业余和青少年篮球录像，将检测、跟踪、球员身份、球场映射和事件推断连接起来，输出标注视频与JSONL。本文核对官方源码与作者报告的投篮指标，完成11项合成计分检查，说明两分兜底、固定球场几何、Git LFS权重及CPU路径的使用边界，并给教练与开发者提供可复核的试用流程。 OpenHoopVision Computer Vision Basketball Video Analysis Tracking Open Source 从一段录像，能得到什么？ 作者的指标，",
+          "score": 0.5321082
+        },
+        {
+          "article_id": "minicpmo-booking-desk-realtime-voice-appointment-agent",
+          "title": "MiniCPM-o Booking Desk：全双工语音预约台，状态机控 DB 写入，Judge LLM 防幻觉确认",
+          "url": "/blog/minicpmo-booking-desk-realtime-voice-appointment-agent/",
+          "language": "zh",
+          "excerpt": "MiniCPM-o Booking Desk：全双工语音预约台，状态机控 DB 写入，Judge LLM 防幻觉确认 AlessandroBonomo28/Minicpm-o-booking-desk，Python，MiniCPM-o 4.5 驱动的实时语音预约台 Demo。三通道架构：音频（VAD+Whisper）+ 视觉（每秒刷新的操作员屏幕帧）+ 控制 token（force_speak/force_listen）。状态机全权控制 DB 写入，模型输出不直接碰数据库；Judge LLM 核查模型口播内容防幻觉确认。实测 4 分 13 秒，2 次预约",
+          "score": 0.4944423
+        },
+        {
+          "article_id": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+          "title": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+          "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/",
+          "language": "en",
+          "excerpt": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry KMnO4-zx/agentic-rl-lab, 147 stars, Apache 2.0, Python. GRPO post-training on Qwen3.5-4B for geometric visual QA (GeoQA) with PyTRIO remote compute — ¥5, 100 steps, accuracy from 71% to 87% (+16pp). The full series reprod",
+          "score": 0.49428973
+        },
+        {
+          "article_id": "cli-zoo-otter-wren-tmux-ai-coding-workflow-shell-tools",
+          "title": "cli-zoo：otter 一条命令拉起 tmux 工位，wren 两行实时显示 token 消耗",
+          "url": "/blog/cli-zoo-otter-wren-tmux-ai-coding-workflow-shell-tools/",
+          "language": "zh",
+          "excerpt": "cli-zoo：otter 一条命令拉起 tmux 工位，wren 两行实时显示 token 消耗 模型大家都在用同一批，差距在工位上。Spoon94 的 cli-zoo 收了两只小动物：otter 用一条命令把 Claude Code / tmux / yazi / nvim / lazygit 拼成整洁的开发会话，wren 在状态栏实时显示 token 用量、缓存命中率、上下文占用。 shell tmux developer-tools claude-code open-source workflow otter：一条命令拉起整个 AI 开发会话 w",
+          "score": 0.48267114
+        },
+        {
+          "article_id": "openscreen-free-screen-recorder",
+          "title": "OpenScreen：免费开源的 Screen Studio 替代品",
+          "url": "/blog/openscreen-free-screen-recorder/",
+          "language": "zh",
+          "excerpt": "OpenScreen：免费开源的 Screen Studio 替代品 无需39美元每月，立刻获得智能缩放、鼠标跟随等专业录屏功能！OpenScreen是一个完全免费、跨平台的屏幕演示视频制作工具，被视为商业软件 Screen Studio 的开源替代方案。 screen-recorder open-source Screen-Studio video-production 1. 项目定位与核心价值 2. 核心功能特性 智能缩放与跟随 丰富的视觉定制 运动模糊（Motion Blur） 后期标注与编辑 灵活导出 3. 技术栈与社区活跃度 4. 适用场景 总",
+          "score": 0.48161507
+        },
+        {
+          "article_id": "decision30-multimodal-system-one",
+          "title": "Decision 3.0：让文字、图片和视频直接进入决策接口",
+          "url": "/blog/decision30-multimodal-system-one/",
+          "language": "zh",
+          "excerpt": "Decision 3.0：让文字、图片和视频直接进入决策接口 Decision 3.0 将文本、JSON、图片和视频接入 System One 决策接口，返回选项概率而不生成长回答。本文核对六个规格的官方模型卡与推理代码，区分请求与前向计算，更新 Jev 0.3.2 评测与 MI325X 延迟，并分析小模型的泛化边界、视频采样限制、服务吞吐和内存代价，给出业务验证的接入路径。 Decision 3.0 vLLM Semantic Router System One 多模态 决策模型 开源 不生成回答，具体怎样得到决策？ 六个规格怎样比较？ 文字、图片、视",
+          "score": 0.48054025
+        },
+        {
+          "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+          "title": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具",
+          "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+          "language": "zh",
+          "excerpt": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具 hikarioyama/ParallelHue（MIT，35 star，零运行时依赖）把本地大模型的多路并发流式输出画进终端，只有调度器和反分词器的遥测跟 SSE 逐字节对得上，才按验证步上色。真正的 exact 模式只支持 vLLM 0.26.x，靠 7 个内部方法挂钩实现，官方的有效证据只有一次 16 路 GLM 运行（16,384 个 token）。我们在 Mac mini 上跑通了 72 个测试，用模拟服务器确认了它在证据不足时会失败或降级，另外发现：只要模型名里带 qw",
+          "score": 0.47973633
+        },
+        {
+          "article_id": "call-md-videodb-ai-meeting-real-time-mcp-agent-loop",
+          "title": "Call.md: An AI Meeting Assistant That Turns a Call into a Real-Time Agent Loop",
+          "url": "/blog/call-md-videodb-ai-meeting-real-time-mcp-agent-loop/",
+          "language": "en",
+          "excerpt": "Call.md: An AI Meeting Assistant That Turns a Call into a Real-Time Agent Loop VideoDB's open-source Electron desktop AI meeting assistant. Dual-channel real-time transcription (you vs them), live AI suggestions + MCP auto-triggering during calls, structured summaries + action it",
+          "score": 0.47914627
+        },
+        {
+          "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+          "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+          "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+          "language": "zh",
+          "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+          "score": 0.476985
+        }
+      ]
+    }
+  }
+}

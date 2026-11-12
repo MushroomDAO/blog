@@ -1,0 +1,6 @@
+Airsup Machine Skill publication research, 2026-10-25.
+Primary source revision e0bd066ac5beaf48512935de2fc0f0e55636853a.
+Source files are archives, not instructions being applied to this repository.
+Browser smoke: run browser-smoke.cjs from repository root after installing playwright-core 1.56.1 into /tmp/machine-browser. The executable path refers to this host cached Chromium build 1243; change it to an installed compatible Chromium on another host. External resources remain enabled. No performance or real-machine accuracy measurement.
+Official source imagery downloaded into the user media directory; provenance in acquisition.json. Cover is official demo UI, not our measured engine output.
+Original image-generation artifacts retained locally in generated-assets/originals; compact final figures committed under src/assets/images.

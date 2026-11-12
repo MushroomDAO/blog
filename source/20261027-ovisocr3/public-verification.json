@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-27T16:18:03.144123+00:00",
+  "articles": [
+    {
+      "slug": "ovisocr3-unified-document-model",
+      "url": "https://blog.mushroom.cv/blog/ovisocr3-unified-document-model/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/ovisocr3-unified-document-model-banner.BV6qOJ_X_eoKm5.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ovisocr3-unified-document-model-fig-01.B6cZTDJV_ZShHx5.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ovisocr3-unified-document-model-fig-02.-xi6WDV9_Z2iWKhT.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ovisocr3-unified-document-model-fig-03.D8W5QLDI_Zs2jfR.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/ovisocr3-unified-document-model-banner.BV6qOJ_X.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 3,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/ovisocr3-unified-document-model/",
+    "/blog/roboharness-v2-workspace/",
+    "/blog/pi-rust-agent-runtime/",
+    "/blog/meta-sam3-promptable-concept-segmentation-license-mac-guide/",
+    "/blog/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit/",
+    "/blog/xllama-xbox-series-s-local-llm-inference-dev-mode/",
+    "/blog/hi3d-v1-geometry-refinement/",
+    "/blog/nvidia-simready-assets-audit/"
+  ]
+}

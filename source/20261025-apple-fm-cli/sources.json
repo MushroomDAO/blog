@@ -1,0 +1,51 @@
+[
+  {
+    "id": "wwdc334",
+    "url": "https://developer.apple.com/videos/play/wwdc2026/334/",
+    "sha256": "16cb103bcfccd5f1243eb789726b194d254f5c173a4c9e13d0c56b10fd96a988",
+    "bytes": 160730,
+    "stored_normalized_sha256": "3972c5d2e3344dee080c7aaa35bdbbf213f942aebfe5254a8f9b3aa07b83f4c7"
+  },
+  {
+    "id": "apple-support",
+    "url": "https://support.apple.com/en-us/121115",
+    "sha256": "79f7fc6d1c32d1238e17e36a58b0645e9c3b62c01f32dadd3d42c56587787f7a",
+    "bytes": 176306,
+    "stored_normalized_sha256": "be80f8367191b5fb71df86d064606ae9aab8d3ee613443dbe70576417e08ec39"
+  },
+  {
+    "id": "framework",
+    "url": "https://developer.apple.com/foundation-models-framework/",
+    "sha256": "429d2cd54c16def4aaa777547ca00c4ff8173077ae84f3bc1f2553a7e0aefe0c",
+    "bytes": 125579,
+    "stored_normalized_sha256": "1ec296d05c78d5335b01561901cdabe4a005ab84eef88f631ee113e28b2bfc7f"
+  },
+  {
+    "id": "wwdc319",
+    "url": "https://developer.apple.com/videos/play/wwdc2026/319/",
+    "sha256": "d8981c6163b00c4548400329e85084fbc47a44d14e5e1e6a9aecc3771f36a9d0",
+    "bytes": 146485,
+    "stored_normalized_sha256": "4df1e30013cde68c223c34b4e8a5965476dbdef1a7b1daa493be571541d3298c"
+  },
+  {
+    "id": "sdk-meta",
+    "url": "https://api.github.com/repos/apple/python-apple-fm-sdk/commits/main",
+    "sha256": "631e5951e1a6fc4a1ffed9a98e95136937b7aa966e424149497908ca22e75095",
+    "bytes": 19876,
+    "stored_normalized_sha256": "6bb7f8fe21ba7e94ecea56e0f53e842806241c651e0fa3d7d6f8059305121bc6"
+  },
+  {
+    "id": "sdk-readme",
+    "url": "https://raw.githubusercontent.com/apple/python-apple-fm-sdk/main/README.md",
+    "sha256": "3cc40c5a31a46a1f6b288437b29f15c02565e43b36fe4fd748d15e69284ca90a",
+    "bytes": 4217,
+    "stored_normalized_sha256": "3cc40c5a31a46a1f6b288437b29f15c02565e43b36fe4fd748d15e69284ca90a"
+  },
+  {
+    "id": "sdk-license",
+    "url": "https://raw.githubusercontent.com/apple/python-apple-fm-sdk/main/LICENSE.md",
+    "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+    "bytes": 11357,
+    "stored_normalized_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  }
+]

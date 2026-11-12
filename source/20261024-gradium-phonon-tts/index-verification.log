@@ -1,0 +1,11 @@
+checking 1 article(s) (gradium-phonon-local-tts)
+diff: 2 changed/new, 0 unchanged (wrote /Users/jason/Dev/mycelium/blog/semantic-search/eval/incremental-index-plan.json)
+  + gradium-phonon-local-tts [zh]
+  + gradium-phonon-local-tts [en]
+embedding 2 changed record(s) (calls Workers AI)...
+  verifying batch order on 2 samples...
+  batch order verified OK
+  embedding incremental 1-2/2...
+TARGET: account=7bf23342f21baa5ebfc7bc7b74f5a1f2 index=blog-search-v1 vectors=2
+  upserted 1-2/2: True
+updated manifest for 1 article(s)

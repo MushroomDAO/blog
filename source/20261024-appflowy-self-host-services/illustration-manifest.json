@@ -1,0 +1,105 @@
+{
+  "article": "src/content/blog/appflowy-self-host-services.md",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in, three separate single-image calls",
+  "prompts": "prompts.json",
+  "figures": [
+    {
+      "figure": 1,
+      "generated_tool_path": "/Users/jason/.codex/generated_images/01a16df0-8e32-7813-bc50-ed4540408ea9/exec-3354d9f1-1706-4f8b-b91c-29c3af8504c0.png",
+      "original": "fig-01-original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1304947,
+      "original_sha256": "c4ccc680fad702c8995cdd7901f6b67a18b1d3d49c14f38dd9712562622dffc8",
+      "archived_final": "fig-01-final.png",
+      "destination": "src/assets/images/appflowy-self-host-services-fig-01.png",
+      "final_dimensions": [
+        1536,
+        864
+      ],
+      "final_bytes": 64953,
+      "final_sha256": "849c3ec7623a039816192fe94d614c5065ef624ba7e273c208426ca037c4000e",
+      "palette_colors": 45,
+      "accent_pixel_counts": {
+        "orange": 5454,
+        "red": 4609,
+        "blue": 5887
+      },
+      "exact_16_9": true,
+      "strictly_under_90000_bytes": true
+    },
+    {
+      "figure": 2,
+      "generated_tool_path": "/Users/jason/.codex/generated_images/01a16df0-8e32-7813-bc50-ed4540408ea9/exec-17dd67cf-6ef8-4ccc-975b-d62f1ce9447b.png",
+      "original": "fig-02-original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1205492,
+      "original_sha256": "e3e41fb74073b4ef05ec6f8e854bfd7073d9084143096aabe24e598ef29dd0df",
+      "archived_final": "fig-02-final.png",
+      "destination": "src/assets/images/appflowy-self-host-services-fig-02.png",
+      "final_dimensions": [
+        1536,
+        864
+      ],
+      "final_bytes": 49706,
+      "final_sha256": "15297b6ca4fcb9c69d7ea5bae9bbac22319ee91bead9eb4bcb7fc6ace8b71999",
+      "palette_colors": 45,
+      "accent_pixel_counts": {
+        "orange": 8282,
+        "red": 4192,
+        "blue": 5519
+      },
+      "exact_16_9": true,
+      "strictly_under_90000_bytes": true
+    },
+    {
+      "figure": 3,
+      "generated_tool_path": "/Users/jason/.codex/generated_images/01a16df0-8e32-7813-bc50-ed4540408ea9/exec-56969bee-8a7e-4da6-a839-b0942949d6af.png",
+      "original": "fig-03-original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1351376,
+      "original_sha256": "038e69de1325635bd6d2a9849c3d89fdcc00caefc40be9b1391cc96c82d09f66",
+      "archived_final": "fig-03-final.png",
+      "destination": "src/assets/images/appflowy-self-host-services-fig-03.png",
+      "final_dimensions": [
+        1536,
+        864
+      ],
+      "final_bytes": 71219,
+      "final_sha256": "ed833d216fd74ebebab138fe71fa251b90db55cbe6f59d2e40dad973e1c0cd4e",
+      "palette_colors": 45,
+      "accent_pixel_counts": {
+        "orange": 4296,
+        "red": 3223,
+        "blue": 21441
+      },
+      "exact_16_9": true,
+      "strictly_under_90000_bytes": true
+    }
+  ],
+  "processing": "Aspect-preserving white padding to 1536x864; fixed 45-color palette without dithering, reserving red/orange/blue families, grayscale and original cardboard tones; PNG level 9.",
+  "user_character_override": "Black mushroom cap with pale stem, overriding skill default red cap.",
+  "protected_files_verified_unchanged": {
+    "src/content/blog/appflowy-self-host-services.md": "c68bdfe4aec8cbce2f54cf738f3087e409dd3e1a6cdf9852402ac64e12e0adc7",
+    "src/assets/images/appflowy-self-host-services-banner.jpg": "a6ccc75b598e8c801d6a1c9b267f620e8f192674c25a41e25b31302bfe0a3437"
+  },
+  "original_visual_inspection": "All three originals opened with view_image; labels, black XiaoM participation and semantic constraints inspected.",
+  "final_visual_inspection": "Passed: all three final destination PNGs opened with view_image after final accent-preserving quantization; white backgrounds, black XiaoM, readable labels, red/orange/blue accents, complete content and semantic constraints checked.",
+  "semantic_qa": [
+    "Figure 1: three separate labeled boxes; open client, archived legacy server, commercial self-host package; current server explicitly closed source.",
+    "Figure 2: document through identity to self-host storage; outgoing backup destination and conditional external AI route; boundary explicitly does not equal certification.",
+    "Figure 3: migration document/attachment comparison, permission/revocation records, isolated restore evidence; software license and implementation bills separate; no amounts or profit promises."
+  ],
+  "publishing_performed": false,
+  "git_commands_used": false,
+  "generation_count": 3
+}

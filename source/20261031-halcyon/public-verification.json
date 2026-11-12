@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-31T16:59:57.394470+00:00",
+  "articles": [
+    {
+      "slug": "halcyon-without-language-pretraining",
+      "url": "https://blog.mushroom.cv/blog/halcyon-without-language-pretraining/",
+      "title": "Halcyon文生图研究：275倍训练算力差距，到底省在哪里？",
+      "listRank": 3,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/halcyon-without-language-pretraining-banner.DzUojdW5.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94840
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/halcyon-without-language-pretraining-banner.DzUojdW5_2fos4e.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 56130
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/halcyon-without-language-pretraining-fig-01.BthESKDY_g2PBU.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 33296
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/halcyon-without-language-pretraining-fig-02.D5CnH5QX_qKUeJ.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 26032
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/halcyon-without-language-pretraining-fig-03.gl0iY3UG_Z2qitRG.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 28420
+        }
+      ]
+    }
+  ]
+}

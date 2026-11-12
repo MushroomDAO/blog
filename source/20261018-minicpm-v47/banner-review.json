@@ -1,0 +1,12 @@
+{
+  "generator": "FLUX.2 Klein 4B local MLX",
+  "seed": 144,
+  "steps": 16,
+  "machineVerification": "passed, no text, no faces, no black edges",
+  "rootVisualReview": "accepted, conceptual local vision scene, not an actual inference photograph",
+  "bytes": 86205,
+  "dimensions": [
+    1200,
+    630
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "full_name": "milind-soni/OpenMausBot",
+    "stargazers_count": 19716,
+    "default_branch": "main",
+    "pushed_at": "2026-11-10T01:33:54Z",
+    "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    }
+  },
+  {
+    "full_name": "elie222/rakazo",
+    "stargazers_count": 7705,
+    "default_branch": "main",
+    "pushed_at": "2026-11-09T22:16:13Z",
+    "description": "Open-source Grok Bot alternative. Choose your own model and sandbox.",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    }
+  },
+  {
+    "full_name": "CopilotKit/OpenBot",
+    "stargazers_count": 10573,
+    "default_branch": "main",
+    "pushed_at": "2026-11-10T01:34:25Z",
+    "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  {
+    "full_name": "nightly-labs/openbot",
+    "stargazers_count": 6714,
+    "default_branch": "main",
+    "pushed_at": "2026-11-10T01:33:49Z",
+    "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  {
+    "full_name": "regnull/openbot",
+    "stargazers_count": 42,
+    "default_branch": "main",
+    "pushed_at": "2026-11-03T20:25:36Z",
+    "description": "Open-source, self-hosted platform for running a team of AI bots that use tools, keep long-term memory, and hand work to each other.",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  }
+]

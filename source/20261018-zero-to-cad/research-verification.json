@@ -1,0 +1,45 @@
+{
+  "task": "7f030e5f-bd68-4ba8-9a16-16bb9ee97e5d",
+  "checkedDate": "2026-10-18",
+  "paper": "https://arxiv.org/abs/2604.24479v1",
+  "paperFirstPublished": "2026-04-27",
+  "model": "ADSKAILab/Zero-To-CAD-Qwen3-VL-2B",
+  "modelRevision": "8cf9260904aa6eb29f0826e3585f25b7df61ff89",
+  "dataset": "ADSKAILab/Zero-To-CAD-1m",
+  "datasetRevision": "09dbd1805a5e73a2757f380b93042b8089cd4f3f",
+  "modelLicense": "apache-2.0",
+  "datasetLicense": "apache-2.0",
+  "officialCompleteGithubRepositoryVerified": false,
+  "evaluation": {
+    "source": "author-reported paper/model-card",
+    "qwenSyntheticTestN": 10000,
+    "gptSyntheticTestN": 1000,
+    "abcN": 1000,
+    "abcFaceFilter": [
+      7,
+      100
+    ],
+    "geometricMetricDenominator": "successful outputs only",
+    "voxelResolution": [
+      64,
+      64,
+      64
+    ],
+    "alignment": "maximum IoU over45-degree rotation increments"
+  },
+  "localScope": {
+    "modelWeightsDownloaded": false,
+    "modelInference": false,
+    "benchmarkReproduction": false,
+    "officialGroundTruthReplay": "separate sample-replay.json"
+  },
+  "dedup": "exact URLs/entities raw botKB only; no old article or M2receipt; draftbox read, publishedAPI48001 unavailable",
+  "sha256": {
+    "model-card.md": "39126c79b67a7c132523f86a83b87a40716a654e87ede435e27a540505a678e1",
+    "dataset-card.md": "1f6e08439a6573067d34dbe339929ac22731588052dba178fe6afd990f938bab",
+    "model-config.json": "efd019f78c0dd7a9667d69401ee7c1b0bb5d65d492a584f838c6982435d1bd5e",
+    "test-row.json": "16d3cf83c767fc68020ee274eb47f9b521d19e40c49ff9767526cf6b136fe86b",
+    "official-test-sample.py": "9686c1142aa1f0ce97f248239a520b2c66e032bde894fd62420186838290ce4c",
+    "source-samples.png": "52ce179d8ff9f120a1366c1df8475da8b61408abc004770173513a5a607e1b33"
+  }
+}

@@ -1,0 +1,21 @@
+Using CPython 3.12.14 interpreter at: /Users/jason/.pyenv/versions/3.12.14/bin/python3.12
+Creating virtual environment at: /tmp/harborrl-cpu-venv
+Activate with: source /tmp/harborrl-cpu-venv/bin/activate
+Using Python 3.12.14 environment at: /tmp/harborrl-cpu-venv
+Resolved 10 packages in 355ms
+   Building harborrl @ file:///tmp/harborrl-20261016
+Downloading ruff (9.3MiB)
+      Built harborrl @ file:///tmp/harborrl-20261016
+ Downloaded ruff
+Prepared 2 packages in 911ms
+Installed 10 packages in 26ms
+ + harborrl==0.1.0 (from file:///tmp/harborrl-20261016)
+ + iniconfig==2.3.0
+ + packaging==26.3
+ + pluggy==1.6.0
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + pytest-asyncio==1.4.0
+ + pyyaml==6.0.3
+ + ruff==0.16.10
+ + typing-extensions==4.16.0

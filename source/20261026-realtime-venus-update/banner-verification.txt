@@ -1,0 +1,9 @@
+=== [verify-banner] src/assets/images/realtime-venus-fulldup-interactive-dual-loop-local-deploy-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=43 steps=16
+  WARN framing: near-black edge(s): bottom — check for padding or a dead half
+  ok   dimensions: 1200x630
+  ok   size: 92851B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/realtime-venus-fulldup-interactive-dual-loop-local-deploy-banner.jpg ===

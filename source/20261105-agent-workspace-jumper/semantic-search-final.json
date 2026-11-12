@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone",
+      "title": "用开源 Voicebox 给 AI Agent 装上嗓子 — MCP 语音层工程实践",
+      "url": "/blog/voicebox-open-source-ai-voice-studio-mcp-agent-tts-stt-clone/",
+      "language": "zh",
+      "excerpt": "用开源 Voicebox 给 AI Agent 装上嗓子 — MCP 语音层工程实践 jamiepine/voicebox，55K stars，MIT，Tauri+Python 桌面应用，内置 MCP server 直连 Claude Code/Cursor/Windsurf。7 款本地 TTS 引擎（Qwen3-TTS、Chatterbox、Kokoro 等）+ Whisper STT + 零样本声音克隆，全程本地推理，完全私有。一行命令让 Agent 开口说话。 voice-AI TTS MCP AI-Agent Voicebox local-AI ",
+      "score": 0.5422501
+    },
+    {
+      "article_id": "kiro-crew-persistent-agent-workspace-sessions-memory-schedule",
+      "title": "Kiro Crew：开发 Agent 之上的持续工作层，会话/记忆/定时/审批/多 Agent 一体",
+      "url": "/blog/kiro-crew-persistent-agent-workspace-sessions-memory-schedule/",
+      "language": "zh",
+      "excerpt": "Kiro Crew：开发 Agent 之上的持续工作层，会话/记忆/定时/审批/多 Agent 一体 Kiro Crew 是运行在 Kiro（AWS 的 Agentic IDE）之上的开源持续工作层：Gateway 进程常驻本地或远程机器，跨 session 保存上下文和教训，支持定时任务/心跳监控/审批/并行子 Agent，通过 Slack/Telegram/WeCom/微信等渠道随时继续同一个工作。起源于 Amazon 内部项目 MeshClaw，6 个月内积累 39000 开发者，今日正式开源。 AI Agent 开发工具 持续工作 多Agent ",
+      "score": 0.52272093
+    },
+    {
+      "article_id": "block-buzz-nostr-human-agent-workspace",
+      "title": "Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上",
+      "url": "/blog/block-buzz-nostr-human-agent-workspace/",
+      "language": "zh",
+      "excerpt": "Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上 Block（Jack Dorsey 旗下公司）2026年3月开源的 Buzz：人类和 AI Agent 在同一个 Nostr relay 上协作，每个操作都是加密签名的事件。7374 stars，Rust + Tauri + React，支持 Claude Code / Codex / Goose 直接接入。自托管，数据主权在你手里。 Nostr AI Agent 开源 自托管 协作工具 Rust Claude Code Block 一、它是什么 二、为什么是 Nost",
+      "score": 0.514042
+    },
+    {
+      "article_id": "agency-agents-opensource-multi-model",
+      "title": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构",
+      "url": "/blog/agency-agents-opensource-multi-model/",
+      "language": "zh",
+      "excerpt": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构 深度解析 msitarzewski/agency-agents：9个部门、50+专业AI角色，从前端巫师到安全审计员，直接集成 Claude Code、Cursor、Copilot，将AI从「通用助理」升级为「专业协作网」。 Agency Agents AI Agent 开源 Claude Code Cursor Copilot 提示词工程 多角色协作 GitHub 1. 核心理念：从「提示词」到「智能体」 2. 组织架构与规模 3. 深度集成与应用",
+      "score": 0.5111935
+    },
+    {
+      "article_id": "anthropic-agent-three-layer-architecture",
+      "title": "Anthropic 的三层 Agent 架构：从一个 Claude 到一支 Agent 团队",
+      "url": "/blog/anthropic-agent-three-layer-architecture/",
+      "language": "zh",
+      "excerpt": "Anthropic 的三层 Agent 架构：从一个 Claude 到一支 Agent 团队 Sequoia Podcast 访谈 Anthropic 平台负责人揭示了其内部 Agent 架构的三层设计：知识层、执行层、协同层。很多人还在研究怎么写 Prompt，Anthropic 已经在研究如何让 Agent 团队协同工作，本文结合官方文档拆解每一层的构件和实现方式。 AI Agent Anthropic 多智能体 MCP Claude Code 架构设计 Token Jobs 一句话击中要害 三层架构全景 第一层：知识层（Knowledge Laye",
+      "score": 0.5066582
+    },
+    {
+      "article_id": "persona-vrm-avatar-ai-voice-mcp",
+      "title": "Persona: Give Your AI Voice Assistant a Moving Face, Wired to Codex over MCP",
+      "url": "/blog/persona-vrm-avatar-ai-voice-mcp/",
+      "language": "en",
+      "excerpt": "Persona: Give Your AI Voice Assistant a Moving Face, Wired to Codex over MCP xikhar open-sources Persona, a cross-platform desktop VRM character that listens to Codex/ChatGPT audio output and drives real-time lip sync and body animation. MCP server at port 47831 lets AI agents tr",
+      "score": 0.5060684
+    },
+    {
+      "article_id": "huggingface-speech-to-speech-local-voice-agent-robot-pipeline",
+      "title": "HuggingFace Speech-to-Speech：一行安装本地语音助手，延迟低到像真人，驱动数千台机器人",
+      "url": "/blog/huggingface-speech-to-speech-local-voice-agent-robot-pipeline/",
+      "language": "zh",
+      "excerpt": "HuggingFace Speech-to-Speech：一行安装本地语音助手，延迟低到像真人，驱动数千台机器人 huggingface/speech-to-speech 是一个低延迟、全模块化的本地语音 Agent 流水线（VAD → STT → LLM → TTS），兼容 OpenAI Realtime API。10.6K stars，Apache 2.0，`pip install speech-to-speech` 一行启动。已在数千台 Reachy Mini 机器人的对话后端中跑生产。每个组件均可替换，Apple Silicon 原生支持。 语音",
+      "score": 0.5023352
+    },
+    {
+      "article_id": "cove-book-forge-mcp-pdf-epub-agent-skill-obsidian-codex-claude",
+      "title": "cove-book-forge-mcp：把 PDF/EPUB 书籍锻造成 Agent Skill，一次分析，Codex/Claude Code 永久复用",
+      "url": "/blog/cove-book-forge-mcp-pdf-epub-agent-skill-obsidian-codex-claude/",
+      "language": "zh",
+      "excerpt": "cove-book-forge-mcp：把 PDF/EPUB 书籍锻造成 Agent Skill，一次分析，Codex/Claude Code 永久复用 moonlin1213/cove-book-forge-mcp 是一个本地优先的开源 MCP 服务器，把 PDF 或 EPUB 书籍转化为可复用的 AI 知识——稳定指纹缓存章节分析，同一份结果同时输出 Obsidian 笔记和可安装的 Agent Skill（兼容 Codex、Claude Code）。支持 OpenAI/DeepSeek/Anthropic 三类 Provider，完整书籍锻造作业可",
+      "score": 0.50201005
+    },
+    {
+      "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+      "title": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime",
+      "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+      "language": "en",
+      "excerpt": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime ADK-Rust v2.2.0 by zavora-ai — not a Google official project, but splits the agent runtime into 43 independently publishable crates. Type-safe, fully async, 568 μs agent loop overhead. Supports Gemini/OpenAI/Ant",
+      "score": 0.50199157
+    },
+    {
+      "article_id": "lobsterai-guide-for-everyone",
+      "title": "LobsterAI for Everyone: NetEase Youdao's Desktop AI Agent — Real Work Done with One Prompt",
+      "url": "/blog/lobsterai-guide-for-everyone/",
+      "language": "en",
+      "excerpt": "LobsterAI for Everyone: NetEase Youdao's Desktop AI Agent — Real Work Done with One Prompt LobsterAI is NetEase Youdao's open-source desktop AI Agent (MIT, 5500+ stars) for macOS and Windows. 28 built-in skills cover local system building, data analysis, PPT/video generation, bro",
+      "score": 0.5010298
+    }
+  ]
+}

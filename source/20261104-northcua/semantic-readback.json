@@ -1,0 +1,38 @@
+[
+  {
+    "id": "620e830df50ef91994a160f879a0b35a2380fd1ec1a95539",
+    "metadata": {
+      "article_id": "northcua-pro-computer-use-harness-guide",
+      "content_hash": "0801f7f9d0dc41b5",
+      "excerpt": "NorthCUA-Pro拆解：397B电脑智能体，开源权重之后还需要什么？ NorthCUA-Pro是基于Qwen3.5的电脑使用模型，提供397B总参数、17B激活参数的开放权重。本文核对Hugging Face配置和权重索引，解析截图、工具执行、记忆、结果验证与批任务恢复的框架流程，说明论文成绩与发布权重的差别，并分析约794GB权重的部署负担、Mac作为控制端的条件和自动化落地边界。 NorthCUA 电脑智能体 RPA GUI自动化 开放权重 NorthCUA-Pro究竟是什么？ 它与传统RPA的区别在哪里？ 从“看见按钮”到“工作完成”，框架做",
+      "language": "zh",
+      "tags": [
+        "NorthCUA",
+        "电脑智能体",
+        "RPA",
+        "GUI自动化",
+        "开放权重"
+      ],
+      "title": "NorthCUA-Pro拆解：397B电脑智能体，开源权重之后还需要什么？",
+      "url": "/blog/northcua-pro-computer-use-harness-guide/"
+    }
+  },
+  {
+    "id": "6076876f87f65049a9bdfe2209c661f8b32c3a8e3e6a8033",
+    "metadata": {
+      "article_id": "northcua-pro-computer-use-harness-guide",
+      "content_hash": "e25608064a18646f",
+      "excerpt": "NorthCUA-Pro: Open Weights Meet a Computer-Use Harness A source-based guide to NorthCUA-Pro: open weights, desktop and web execution, model-card score limits, deployment memory, Mac control and outcome verification. NorthCUA 电脑智能体 RPA GUI自动化 开放权重 What is being released? What does",
+      "language": "en",
+      "tags": [
+        "NorthCUA",
+        "电脑智能体",
+        "RPA",
+        "GUI自动化",
+        "开放权重"
+      ],
+      "title": "NorthCUA-Pro: Open Weights Meet a Computer-Use Harness",
+      "url": "/blog/northcua-pro-computer-use-harness-guide/"
+    }
+  }
+]

@@ -1,0 +1,4703 @@
+
+
+
+ FastOPD: On-Policy Distillation for Lightweight VLA Deployment
+
+
+
+
+
+  // Restore the saved color scheme preference, or
+  // enact the browser preference if "automatic",
+  // without expecting DOM load to have completed.
+  //
+  // Also restore any saved readingmode and ToC display preferences.
+  function initializeReadingPreferences() {
+    let saved_theme = localStorage.getItem("ar5iv_theme") || "automatic";
+    if (saved_theme === "automatic") {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        saved_theme = "dark";
+      }
+    }
+    if (saved_theme == "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+
+    const tocDisplay = localStorage.getItem('arxiv_html_paper_toc_display');
+    if (tocDisplay) {
+      document.documentElement.setAttribute("data-toc-display", tocDisplay);
+    }
+    const readingMode = localStorage.getItem('arxiv_html_paper_reading_mode');
+    if (readingMode) {
+      document.documentElement.setAttribute("data-reading-mode", readingMode);
+    }
+  }
+  // Run as soon as JS starts, to minimize repainting
+  initializeReadingPreferences();
+
+
+
+
+
+
+
+
+  /* Reading mode hides the chrome and the empty .arxiv-html-header marker: the pinned JS reads
+     the marker's display to know which way to toggle. The marker draws no box. */
+  .arxiv-html-header { display: contents; }
+  html[data-reading-mode="enabled"] :is(.arxiv-html-site-chrome, .arxiv-html-header, .ds-site-footer) { display: none; }
+  /* The paper controls' icons are blocks, so they sit centred (the pinned JS shows the theme
+     icon by making its span a block). */
+  .arxiv-html-site-chrome .ds-site-header-tools svg { display: block; width: 18px; height: 18px; flex-shrink: 0; fill: currentColor; }
+  /* ar5iv dims every image in dark mode and puts it on a white wash, for paper figures;
+     arXiv's own render as they are (the logo on the bar, the funder logos on their white
+     chips). Important: ar5iv's dark rules are unlayered, as specific as
+     :root:not([data-theme]) img:not(.ltx_no_dark_filter). */
+  :is(.ds-site-header, .ds-site-footer) img { filter: none !important; }
+  .ds-site-header img { background-color: transparent !important; }
+
+  /* Wide (the theme's 1280px): the theme lays the body out as a grid whose full-width top rows
+     were the band's and its sticky reader bar's. The band takes the first and scrolls away; the
+     header, the paper's bar (no site navigation, the paper's controls), takes the second and
+     stays in view, the one sticky bar, with the anchor clearance that requires (DESIGN-POLICIES).
+     The controls show their names. */
+  @media (min-width: 1280px) {
+    html { scroll-padding-top: 80px; }
+    .arxiv-html-site-chrome { display: contents; }
+    .arxiv-html-site-chrome > #ds-announcement { grid-area: announce; }
+    .arxiv-html-site-chrome > .ds-site-header { grid-area: header; position: sticky; top: 0; z-index: 3; }
+    .arxiv-html-site-chrome .tool-icon { display: none; }
+  }
+  /* Narrow: the header scrolls away, and the controls show icons (names kept for screen
+     readers; Why HTML? goes). The theme's contents panel is fixed below where its old sticky
+     bar was, and hidden only once the reader has closed it, so until then it is an invisible box
+     over the header and the paper: it shows only while open, under the chrome, in its place in
+     the page. The paper's footer (build logs, reporting instructions) keeps the text's side
+     inset; the theme gives it none, so it met the screen edges. */
+  @media (max-width: 1279px) {
+    .arxiv-html-site-chrome .tool-wide { display: none; }
+    .arxiv-html-site-chrome .tool-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    html:not([data-toc-display="block"]) .ltx_page_navbar { display: none; }
+    .ltx_page_navbar { position: absolute; top: auto; }
+    .arxiv-html-footer { padding-inline: 1rem; }
+  }
+
+
+ Skip to main content
+
+
+
+       Report GitHub Issue
+       ×
+
+
+
+       Title:
+
+
+       Content selection saved. Describe the issue below:
+
+       Description:
+
+
+
+
+       Submit without GitHub
+       Submit in GitHub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Why HTML?
+
+       Report Issue
+
+       Back to Abstract
+
+
+       Download PDF
+
+       Contents
+
+
+       Reading mode
+
+
+       Colour theme
+
+
+
+
+
+ Abstract
+ 1  Introduction
+ 2  Background
+ 3  FastOPD: Fast On-Policy Distillation
+ 4  Experiments
+
+ 4.1  Simulation Experiments
+ 4.2  Real-World Experiments
+ 4.3  Ablation Study
+
+ 5  Conclusion
+ References
+ A  Proofs
+ B  Experimental Details
+
+ B.1  Implementation Details.
+ B.2  Configuration Details.
+ B.3  Computational Resources
+ B.4  Simulation Experimental Details.
+ B.5  Real-world Experimental Details
+
+ C  Additional Experiments
+ D  Few-step Distillation algorithms
+
+ D.1  Distribution Matching Distillation
+ D.2  Consistency Trajectory Model
+ D.3  improved MeanFlow
+
+ E  Detailed Results in Simulation Environments
+ F  Qualitative Results
+
+
+
+
+
+    License: CC BY 4.0
+
+
+arXiv:2610.02832v1 [cs.RO] 02 Oct 2026
+
+
+ FastOPD: On-Policy Distillation for
+ Lightweight VLA Deployment
+
+
+ Yoojin Oh
+
+
+ Jeongsol Kim
+
+
+ Yeonwoo Seo
+
+ Affiliation:  KAIST
+
+
+ Jangho Park
+
+ Affiliation:  KAIST
+
+
+ Seonghyun Jin
+
+ Affiliation:  KAIST
+
+
+ Sunwoo Park
+
+ Affiliation:  KAIST
+
+
+ Youngmin Kim
+
+ Affiliation:  KAIST
+
+
+ Youngjun Jun
+
+ Affiliation:  KAIST
+
+
+ Kyumin Choi
+
+ Affiliation:  Sungkyunkwan University
+
+
+ Jong Chul Ye
+
+ Affiliation:  KAIST
+
+
+ Abstract
+
+ Vision-Language-Action (VLA) foundation models have scaled rapidly to enhance manipulation performance and generalizability, but this scaling incurs high computational costs that render real-world deployment increasingly challenging.
+Existing approaches typically mitigate this issue by designing smaller architectures or reducing the iterative denoising steps in flow-based policies.
+In this work, we propose  FastOPD , a foundation-to-lightweight VLA framework that enables the practical deployment of large-scale VLAs through efficient on-policy distillation.
+Specifically, FastOPD adapts a flow map for single-state teacher supervision and combines it with a self-consistency objective to construct a compact student that learns the teacher dynamics.
+Furthermore, we theoretically demonstrate that minimizing this objective allows the distilled student to recover a distribution on par with that induced by an ideal few-step teacher model.
+We evaluate FastOPD across diverse foundation policies in simulation and real-world experiments.
+On LIBERO, FastOPD retains 84% of the performance of  π 0.5 \pi_{0.5}  with only two inference steps, reducing inference latency by 78.1% while outperforming existing few-step distillation baselines in average success rate. With LingBot-VLA as the teacher, FastOPD improves the single-step success rate over the base student by 15.9 percentage points on RoboTwin 2.0. We further demonstrate its applicability to a World Action Model (WAM) and deploy a compact student distilled from MolmoAct2 on a real robot.
+
+
+
+
+
+
+
+ * * footnotetext:  Equal contribution. Project page is available  here .
+
+ Figure 1:
+ Foundation-to-lightweight VLA policy distillation with FastOPD.  (Left) Our method enables a small VLA to inherit large-scale VLA knowledge. (Right) FastOPD reaches comparable performance to conventional on-policy distillation  ( Li et al., 2026a )  5.7 × \times  faster.
+
+
+
+ 1  Introduction
+
+
+ Recent progress in robot learning has moved toward large-scale foundation policies, ranging from Vision-Language-Action (VLA) models  ( Collaboration, 2024 ;  Black et al., 2025b ;  Black et al., 2025a ;  Bjorck et al., 2025 ;  Wu et al., 2026 ;  Fang et al., 2026a )  to emerging World Action Models (WAMs)  ( Kim et al., 2026 ;  Ye et al., 2026 ;  Yuan et al., 2026 ) . In particular, recent methods such as DreamZero  ( Ye et al., 2026 )  and Cosmos Policy  ( Kim et al., 2026 )  leverage pretrained video generation models to capture rich visual dynamics and achieve strong generalization and manipulation performance.
+However, these powerful foundation priors also lead to increasingly large policy backbones and high computational cost, creating a tension between model capability and deployment efficiency on physical robots.
+Lightweight VLA models such as SmolVLA  ( Shukor et al., 2025 )  address the efficiency side of this trade-off by directly designing smaller policies with less than 0.5B parameters.
+
+
+ A complementary direction is to transfer the capability of a powerful foundation policy into a compact student through knowledge distillation.
+Knowledge Distillation (KD)  ( Hinton et al., 2015 ;  Mansourian et al., 2025 )  has been widely studied for transferring the capability of a large teacher model into a smaller student. Specifically, On-Policy Distillation (OPD)  ( Agarwal et al., 2024 )  supervises the student using teacher predictions on its own generated trajectories, reducing distribution mismatch and compounding errors from offline distillation. OPD also provides dense supervision along the student trajectory, in contrast to the sparse rewards commonly used in reinforcement learning. While OPD has been actively explored in LLM post-training, recent works have extended it to diffusion and flow models  ( Li et al., 2026a ;  Fang et al., 2026b ) .
+However, directly applying OPD to flow-based policies is computationally inefficient. It requires rolling out the student’s denoising trajectory and repeatedly evaluating the teacher at the visited timesteps, resulting in high training cost for large foundation teachers.
+
+
+ In this work, we revisit few-step flow-map models through the lens of
+on-policy distillation (OPD) and introduce  FastOPD , a
+foundation-to-lightweight VLA framework for efficient policy distillation.
+Our goal is to transfer the capabilities of a large-scale VLA into a
+compact student while substantially reducing both training and inference
+costs, without sacrificing policy performance
+(see Fig.  1 ).
+To reduce the training cost of conventional OPD, FastOPD combines
+on-policy teacher supervision of the student’s velocity field with a
+self-consistency objective  ( Frans et al., 2025 ) .
+Rather than querying teacher supervision throughout an entire
+generation trajectory, the self-consistency objective propagates local
+velocity supervision to finite-interval shortcut transitions, as
+illustrated in Fig.  2 .
+This allows the student to approximate the teacher dynamics without
+explicitly constructing or evaluating a teacher flow map over each
+shortcut transition.
+We further show theoretically that FastOPD implicitly recovers the
+distribution induced by the teacher’s ideal shortcut model, providing a
+distributional justification for few-step distillation.
+
+
+
+
+
+ (a)  DiffusionOPD
+
+
+ (b)  FastOPD (Ours)
+
+ Figure 2:  Comparison between DiffusionOPD and FastOPD.
+(a) DiffusionOPD evaluates teacher at every denoising step.
+(b) FastOPD evaluates teacher at a single sampled state reached by a flow-map jump from noise.
+Blue arrows denote student transitions; red arrows denote teacher velocities.
+
+
+ Importantly, the same self-consistency formulation naturally induces an
+any-step flow map  ( Boffi et al., 2024 ;  Song et al., 2023 ;  Kim et al., 2024 ;  Geng et al., 2025 ;  Sabour et al., 2025 ) ,
+allowing the distilled student to operate with substantially fewer
+sampling steps at inference.
+FastOPD therefore compresses the foundation VLA along two complementary
+dimensions: model capacity and sampling complexity, enabling deployment
+on resource-constrained, consumer-grade hardware.
+The proposed formulation also enables stable training in the challenging
+few-step regime without adversarial objectives or costly higher-order
+derivative computations.
+A concurrent work, VLA-OPD  ( Zhong et al., 2026 ) , also studies on-policy
+distillation for VLA models, but primarily uses expert supervision to
+improve policy performance.
+In contrast, FastOPD focuses on transferring a foundation policy into a
+lightweight few-step student.
+
+
+ We evaluate FastOPD on two simulation benchmarks and one real-world
+manipulation task, using diverse foundation teachers with 3B–6B
+parameters  ( Black et al., 2025a ;  Yuan et al., 2026 ;  Fang et al., 2026a ) .
+To maximize both architectural and inference efficiency, we adopt
+SmolVLA as the lightweight student policy.
+We compare against representative few-step distillation methods,
+including CTM, DMD, and iMF.
+Across these settings, FastOPD enables the compact student to recover up
+to 84% of the performance of teacher models that are more than
+ 7.3 × 7.3\times  larger, using only one or two sampling steps.
+This substantially reduces inference cost while retaining a large
+fraction of the foundation policy’s performance.
+To the best of our knowledge, FastOPD is the first OPD framework for
+VLAs that jointly reduces both model size and the number of sampling
+steps while retaining the capabilities of a large-scale foundation
+policy.
+
+
+
+ 2  Background
+
+
+ Flow-based Models.  Diffusion and flow-based models  ( Song et al., 2021 ;  Ho et al., 2020 ;  Esser et al., 2024 ;  Lipman et al., 2023 )  generate high-quality samples through iterative denoising. Let  p 1 = 𝒩 ⁡ ( 𝟎 , 𝐈 ) p_{1}=\mathcal{N}(\mathbf{0},\mathbf{I})  be a Gaussian prior and  p 0 p_{0}  the context-conditioned data distribution over actions.
+Flow matching  ( Lipman et al., 2023 ;  Esser et al., 2024 )  defines a stochastic interpolant  𝒙 t = ( 1 − t ) ​ 𝒙 0 + t ​ 𝒙 1 {\bm{x}}_{t}=(1-t){\bm{x}}_{0}+t{\bm{x}}_{1} , with  𝒙 0 ∼ p 0 {\bm{x}}_{0}\sim p_{0} ,  𝒙 1 ∼ p 1 , t ∈ [ 0 , 1 ] {\bm{x}}_{1}\sim p_{1},\ t\in[0,1] , and learns the marginal velocity field  𝒗 ⁡ ( 𝒙 , t ) := 𝔼 ⁡ [ 𝒙 1 − 𝒙 0 ∣ 𝒙 t = 𝒙 ] {\bm{v}}({\bm{x}},t):=\mathbb{E}[{\bm{x}}_{1}-{\bm{x}}_{0}\mid{\bm{x}}_{t}={\bm{x}}]  via
+
+
+
+
+ 𝔼 t , 𝒙 0 , 𝒙 1 ​ [ ‖ 𝒗 θ ​ ( 𝒙 t , t ) − ( 𝒙 1 − 𝒙 0 ) ‖ 2 2 ] . \mathbb{E}_{t,{\bm{x}}_{0},{\bm{x}}_{1}}\big[\|{\bm{v}}_{\theta}({\bm{x}}_{t},t)-({\bm{x}}_{1}-{\bm{x}}_{0})\|_{2}^{2}\big].
+
+ (1)
+
+ Sampling integrates the probability-flow ODE  𝒙 ˙ t = 𝒗 ⁡ ( 𝒙 t , t ) \dot{{\bm{x}}}_{t}={\bm{v}}({\bm{x}}_{t},t)  from  t = 1 t=1  to  t = 0 t=0  , for example, with Euler steps,  𝒙 t i = 𝒙 t i − 1 + 𝒗 ⁡ ( 𝒙 t i − 1 , t i − 1 ) ​ Δ ​ t {\bm{x}}_{t_{i}}={\bm{x}}_{t_{i-1}}+{\bm{v}}({\bm{x}}_{t_{i-1}},t_{i-1})\,\Delta t  where  Δ ​ t := t i − t i − 1 \Delta t:=t_{i}-t_{i-1} .
+While these models capture high-quality multimodal action distributions, accurate integration typically requires many denoising steps, motivating few-step distillation for faster inference.
+
+
+ Vision-Language-Action Models.
+Vision-Language-Action (VLA) models  ( Collaboration, 2024 ;  Black et al., 2025b ;  Black et al., 2025a ;  Bjorck et al., 2025 ;  Wu et al., 2026 ;  Liu et al., 2024 ;  Octo Model Team et al., 2024 )  couple a pretrained vision-language backbone with an action decoding head to map an observation and a language instruction to a distribution over robot actions, most commonly via a flow or diffusion action expert  ( Chi et al., 2023 ;  Black et al., 2025b )  trained with flow matching loss. Recent foundation VLA models illustrate the scale required for strong multi-task generalization, typically exceeding 2B parameters and trained on over 10,000 hours of multimodal robot data spanning multiple embodiments  ( Black et al., 2025b ;  Black et al., 2025a ;  Wu et al., 2026 ) , but remain expensive to deploy.
+Several works  ( Octo Model Team et al., 2024 ;  Shukor et al., 2025 ;  Wen et al., 2025 ;  Reuss et al., 2025 )  instead train smaller VLAs; SmolVLA  ( Shukor et al., 2025 ) , for example, reduces model size to 450 million parameters by using a small VLM and layer skipping.
+However, it still requires  N = 10 N{=}10  denoising steps per action chunk and does not benefit from the capabilities of larger foundation policies.
+
+
+ Flow Map Models.
+A wide range of few-step generative methods aim to reduce iterative sampling cost.
+Distillation-based approaches  ( Sabour et al., 2025 ;  Boffi et al., 2024 ) , including Consistency Models (CM)  ( Song et al., 2023 ) , and Consistency Trajectory Models (CTM)  ( Kim et al., 2024 ) , distill a pre-trained multi-step teacher into a few-step student, while score-distillation methods directly match teacher and student distributions  ( Yin et al., 2024b ;  Yin et al., 2024a ) .
+Distillation-free approaches, such as MeanFlow (MF)  ( Geng et al., 2025 )  and Shortcut Models  ( Frans et al., 2025 ) , instead train from scratch using self-consistency constraints. A flow map model  𝒇 θ ​ ( 𝒙 , s , t ) {\bm{f}}_{\theta}({\bm{x}},s,t)  parameterizes the state-to-state transition over an arbitrary interval  [ s , t ] ⊂ [ 0 , 1 ] [s,t]\subset[0,1] , so that a single jump  𝒇 θ ​ ( 𝒙 s , s , t ) = 𝒙 s + ( t − s ) ​ 𝒖 θ ​ ( 𝒙 s , s , t ) {\bm{f}}_{\theta}({\bm{x}}_{s},s,t)={\bm{x}}_{s}+(t-s){\bm{u}}_{\theta}({\bm{x}}_{s},s,t)  at the interpolant  𝒙 s = ( 1 − s ) ​ 𝒙 0 + s ​ 𝒙 1 {\bm{x}}_{s}=(1-s){\bm{x}}_{0}+s{\bm{x}}_{1}  replaces an entire sequence of Euler substeps. For example,  Frans et al. (2025)  combines flow matching loss with the self-consistency constraint at the midpoint time  m = ( s + t ) / 2 m=({s+t})/{2} :
+
+
+
+
+ ℒ ⁡ ( θ ) = 𝔼 s , t , 𝒙 1 , 𝒙 0 ​ [ ‖ 𝒗 θ ​ ( 𝒙 s , s ) − ( 𝒙 1 − 𝒙 0 ) ‖ 2 2 + ‖ 𝒇 θ ​ ( 𝒙 s , s , t ) − 𝒇 θ − ​ ( 𝒇 θ − ​ ( 𝒙 s , s , m ) , m , t ) ‖ 2 2 ] \mathcal{L}(\theta)=\mathbb{E}_{s,t,{\bm{x}}_{1},{\bm{x}}_{0}}\left[||{\bm{v}}_{\theta}({\bm{x}}_{s},s)-({\bm{x}}_{1}-{\bm{x}}_{0})||_{2}^{2}+||{\bm{f}}_{\theta}({\bm{x}}_{s},s,t)-{\bm{f}}_{\theta^{-}}({\bm{f}}_{\theta^{-}}({\bm{x}}_{s},s,m),m,t)||_{2}^{2}\right]
+
+ (2)
+
+ The first term enforces standard flow matching, while the second encourages the direct transition from  s s  to  t t  to agree with two shorter transitions composed through  m m .
+In robot manipulation, these ideas have been adapted to accelerate diffusion- and flow-based policies such as Diffusion Policy  ( Chi et al., 2023 ) . Consistency Policy (CP)  ( Prasad et al., 2024 )  adapts CTM  ( Kim et al., 2024 ) ; OneDP  ( Wang et al., 2025 )  and SDM Policy  ( Jia et al., 2024 )  use distribution matching for one-step action generation; and recent methods learn average velocity fields  ( Geng et al., 2025 ;  Geng et al., 2026 ;  Sheng et al., 2026 ;  Guo et al., 2026 )  or shortcut objectives  ( Frans et al., 2025 ;  Luan et al., 2026 ;  Yan et al., 2025 ;  Li et al., 2026b )  regularized by flow matching.
+For instance, SnapFlow  ( Luan et al., 2026 )  constructs its target from two Euler steps but trains only on fixed endpoints, while OFP  ( Li et al., 2026b )  derives its target from nested sub-intervals with a self-guided regularizer.
+Despite these advances, few-step policies often suffer from training instability and degraded quality as the number of denoising steps decreases. This trade-off is particularly critical in robot manipulation, where low latency must be achieved without sacrificing the precision and stability required for physical execution, and still remains insufficiently addressed  ( Shukor et al., 2025 ) .
+
+
+ On-policy Distillation.
+Given a pretrained teacher diffusion model, on-policy distillation (OPD) supervises the student to match the teacher’s one-step transition kernel  p T ( ⋅ ∣ 𝒙 t i ) p_{T}(\cdot\mid{\bm{x}}_{t_{i}})  along the student’s own rollout  𝒙 0 : N ∼ p S , θ {\bm{x}}_{0:N}\sim p_{S,\theta} , by minimizing the reverse KL objective  ( Li et al., 2026a ) . Since the student and teacher share the same diffusion coefficient, resulting in identical covariance, its per-step KL reduces to a closed-form squared distance between the means,  KL ( p S ∥ p T ) ∝ ∥ μ S ( 𝒙 t i ; θ ) − μ T ( 𝒙 t i ) ∥ 2 2 \mathrm{KL}(p_{S}\|p_{T})\propto\|\mu_{S}({\bm{x}}_{t_{i}};\theta)-\mu_{T}({\bm{x}}_{t_{i}})\|_{2}^{2} . Despite providing dense supervision, this objective necessitates evaluating the teacher at every single denoising step, resulting in computational inefficiency. FastOPD circumvents this training bottleneck by supervising the student at a single on-policy state per trajectory.
+Formulated within a few-step flow map regime, the distilled policy is naturally equipped for real-time robot control.
+
+
+
+ 3  FastOPD: Fast On-Policy Distillation
+
+
+ Figure 3:
+ Overview of FastOPD.
+(a) Flow Map Architecture: a frozen vision-language backbone with a lightweight action expert. A time projection layer  ψ ⁡ ( ⋅ ) \psi(\cdot)  fuses  ( s , t ) (s,t)  to condition the action expert on the two-time velocity  𝒖 θ ​ ( 𝒙 s , s , t ) {\bm{u}}_{\theta}({\bm{x}}_{s},s,t) .
+(b) On-Policy Flow Map Distillation Loss: at a single on-policy jump  𝒙 ~ t = 𝒇 θ ​ ( 𝒙 1 , 1 , t ) \tilde{{\bm{x}}}_{t}={\bm{f}}_{\theta}({\bm{x}}_{1},1,t) , the student’s diagonal velocity is matched to the teacher’s.
+(c) Self-Consistency Loss: a direct transition  𝒖 θ ​ ( 𝒙 s , s , t ) {\bm{u}}_{\theta}({\bm{x}}_{s},s,t)  is trained to agree with two steps through the midpoint  m m .
+
+
+
+ Overview.
+Our goal is to efficiently distill a large pretrained teacher  𝒗 ϕ {\bm{v}}_{\phi}  into a compact flow map student  𝒖 θ {\bm{u}}_{\theta} , while achieving performance on par with the teacher. Specifically, we parameterize the flow map as  𝒇 θ ​ ( 𝒙 , s , t ) = 𝒙 + ( t − s ) ​ 𝒖 θ ​ ( 𝒙 , s , t ) {\bm{f}}_{\theta}({\bm{x}},s,t)={\bm{x}}+(t-s){\bm{u}}_{\theta}({\bm{x}},s,t) , which satisfies the boundary condition  𝒇 θ ​ ( 𝒙 , s , s ) = 𝒙 {\bm{f}}_{\theta}({\bm{x}},s,s)={\bm{x}} . We denote its diagonal by  𝒗 θ ​ ( 𝒙 , t ) := 𝒖 θ ​ ( 𝒙 , t , t ) {\bm{v}}_{\theta}({\bm{x}},t):={\bm{u}}_{\theta}({\bm{x}},t,t) , which corresponds to the instantaneous velocity. As illustrated in Fig.  3 , we embed  s s  and  t t  independently via sinusoidal positional encoding and fuse them through an additional projection layer  ψ ⁡ ( ⋅ ) \psi(\cdot) . Here, we omit the condition  c c  for brevity.
+
+
+ The key idea of FastOPD is to match the teacher only at sampled on-policy states and propagate this local velocity supervision to finite-step flow maps through self-consistency.
+Accordingly, FastOPD jointly optimizes on-policy velocity matching and finite-interval self-consistency:
+
+
+
+
+ ℒ ⁡ ( θ ) = 𝔼 ⁡ [ ‖ 𝒖 θ ​ ( 𝒙 s , s , t ) − 1 2 ​ ( sg ⁡ [ 𝒗 θ ​ ( 𝒙 s , s ) ] + sg ⁡ [ 𝒗 θ ​ ( 𝒙 ^ m , m ) ] ) ‖ 2 ] ⏟ finite-interval self-consistency + λ ​ 𝔼 ⁡ [ ‖ 𝒗 θ ​ ( 𝒙 ~ t , t ) − 𝒗 ϕ ​ ( 𝒙 ~ t , t ) ‖ 2 ] ⏟ on-policy flow map distillation . \displaystyle\mathcal{L}(\theta)=\underbrace{\mathbb{E}\Big[\big\|{\bm{u}}_{\theta}({\bm{x}}_{s},s,t)-\tfrac{1}{2}\big(\mathrm{sg}[{\bm{v}}_{\theta}({\bm{x}}_{s},s)]+\mathrm{sg}[{\bm{v}}_{\theta}(\hat{{\bm{x}}}_{m},m)]\big)\big\|^{2}\Big]}_{\text{finite-interval self-consistency}}+\lambda\underbrace{\mathbb{E}\Big[\big\|{\bm{v}}_{\theta}(\tilde{{\bm{x}}}_{t},t)-{\bm{v}}_{\phi}(\tilde{{\bm{x}}}_{t},t)\big\|^{2}\Big]}_{\text{on-policy flow map distillation}}.
+
+ (3)
+
+ Here,  sg ⁡ [ ⋅ ] \mathrm{sg}[\cdot]  denotes the stop-gradient operator, and  𝒙 ~ t \tilde{{\bm{x}}}_{t}  denotes a sampled on-policy state, while  𝒙 ^ m \hat{{\bm{x}}}_{m}  denotes the midpoint state induced by the student. We next describe how the two terms implement local teacher matching and its propagation to finite-step flow maps.
+
+
+ On-policy Flow Map Distillation.
+We first consider how to efficiently transfer the teacher dynamics to the student. Conventional flow-based OPD evaluates the teacher at every denoising step along the student trajectory, resulting in substantial computational overhead. Instead, we supervise the student at a single sampled on-policy state per trajectory (see Fig.  3 (b)).
+Specifically, we obtain the state with a single flow-map transition from noise,  𝒙 ~ t = sg ⁡ [ 𝒇 θ ​ ( 𝒙 1 , 1 , t ) ] \tilde{{\bm{x}}}_{t}=\mathrm{sg}\big[{\bm{f}}_{\theta}({\bm{x}}_{1},1,t)\big] , which induces the on-policy marginal  𝒙 ~ t ∼ p θ \tilde{{\bm{x}}}_{t}\sim p_{\theta} . We then match the teacher and student transitions only at this sampled timestep  t t .
+Let  p θ ( ⋅ ∣ 𝒙 ~ t ) p_{\theta}(\cdot\mid\tilde{{\bm{x}}}_{t})  and  p ϕ ( ⋅ ∣ 𝒙 ~ t ) p_{\phi}(\cdot\mid\tilde{{\bm{x}}}_{t})  denote the corresponding one-step transition kernels of the student and teacher, respectively. We formulate the  single-state transition matching  objective as
+
+
+
+
+ 𝔼 t ∼ p ⁡ ( t ) 𝔼 𝒙 ~ t ∼ p θ [ KL ( p θ ( ⋅ ∣ 𝒙 ~ t ) ∥ p ϕ ( ⋅ ∣ 𝒙 ~ t ) ) ] . \mathbb{E}_{t\sim p(t)}\mathbb{E}_{\tilde{{\bm{x}}}_{t}\sim p_{\theta}}\left[\text{KL}\left(p_{\theta}(\cdot\mid\tilde{{\bm{x}}}_{t})\|p_{\phi}(\cdot\mid\tilde{{\bm{x}}}_{t})\right)\right].
+
+ (4)
+
+ For a flow map, the instantaneous velocity on the diagonal coincides with the underlying velocity field under the tangent condition  ( Boffi et al., 2025 )   1 1
+             1
+
+
+
+           lim s → t ∂ t 𝒇 θ ​ ( 𝒙 , s , t ) = 𝒖 θ ​ ( 𝒙 , t , t ) = 𝒗 θ ​ ( 𝒙 , t ) \lim_{s\to t}\partial_{t}{\bm{f}}_{\theta}({\bm{x}},s,t)={\bm{u}}_{\theta}({\bm{x}},t,t)={\bm{v}}_{\theta}({\bm{x}},t) . Using this identity, the reverse KL in Eq. ( 4 ) can be expressed directly in terms of the student and teacher velocity fields, as shown in the following proposition.
+
+
+ Proposition 1   (On-policy Flow Map Distillation) .
+
+ Let  σ t > 0 \sigma_{t}>0  be a diffusion coefficient.
+For any  t ∈ ( 0 , 1 ) t\in(0,1)  and step  Δ ​ t < 0 \Delta t<0 , the
+Euler–Maruyama kernels induced by
+ 𝐮 θ ​ ( ⋅ , t , t ) {\bm{u}}_{\theta}(\cdot,t,t)  and  𝐯 ϕ ​ ( ⋅ , t ) {\bm{v}}_{\phi}(\cdot,t)  satisfy
+
+
+
+
+ D KL ( p θ ( ⋅ ∣ 𝒙 ~ t ) ∥ p ϕ ( ⋅ ∣ 𝒙 ~ t ) ) = w σ ( t , Δ t ) ‖ 𝒖 θ ( 𝒙 ~ t , t , t ) − 𝒗 ϕ ( 𝒙 ~ t , t ) ‖ 2 2 , D_{\mathrm{KL}}\left(p_{\theta}(\cdot\mid\tilde{{\bm{x}}}_{t})\,\middle\|\,p_{\phi}(\cdot\mid\tilde{{\bm{x}}}_{t})\right)=w_{\sigma}(t,\Delta t)\left\|{\bm{u}}_{\theta}(\tilde{{\bm{x}}}_{t},t,t)-{\bm{v}}_{\phi}(\tilde{{\bm{x}}}_{t},t)\right\|_{2}^{2},
+
+ (5)
+
+ where  w σ ​ ( t , Δ ​ t ) = | Δ ​ t | 2 ​ σ t 2 ​ ( 1 + σ t 2 ​ ( 1 − t ) 2 ​ t ) 2 w_{\sigma}(t,\Delta t)=\frac{|\Delta t|}{2\sigma_{t}^{2}}\left(1+\frac{\sigma_{t}^{2}(1-t)}{2t}\right)^{2} .
+
+
+
+ Proposition  1  reduces the single-state transition matching objective to a weighted velocity regression. We therefore define the practical on-policy flow map distillation (OPFD) objective as
+
+
+
+
+ ℒ OPFD ​ ( θ ) = 𝔼 c , t ∼ p ⁡ ( t ) ​ [ 𝔼 𝒙 ~ t ∼ p θ ​ [ ‖ 𝒗 θ ​ ( 𝒙 ~ t , t ) − 𝒗 ϕ ​ ( 𝒙 ~ t , t ) ‖ 2 2 ] ] . \mathcal{L}_{\text{OPFD}}(\theta)=\mathbb{E}_{c,t\sim p(t)}\left[\mathbb{E}_{\tilde{{\bm{x}}}_{t}\sim p_{\theta}}\left[\|{\bm{v}}_{\theta}(\tilde{{\bm{x}}}_{t},t)-{\bm{v}}_{\phi}(\tilde{{\bm{x}}}_{t},t)\|^{2}_{2}\right]\right].
+
+ (6)
+
+ Eq. ( 6 ) can be viewed as the pointwise version of the original distribution matching in Eq. ( 4 ), since it is characterized by a deterministic flow ODE. We set the weighting function  w σ ​ ( t , Δ ​ t ) w_{\sigma}(t,\Delta t)  to 1 in practice, following  Li et al. (2026a) . Full derivation is provided in Appendix  A .
+
+
+ Self-consistency Property.
+OPFD transfers the teacher velocity to the student’s
+diagonal flow map  𝒖 θ ​ ( 𝒙 , t , t ) {\bm{u}}_{\theta}({\bm{x}},t,t) , but our goal is to learn a flow map over arbitrary finite interval  ( s , t ) (s,t)  at the same time.
+We therefore propagate this local teacher supervision to finite-step transitions through self-consistency (see Fig.  3 (c)).
+Following Shortcut Models  ( Frans et al., 2025 ) , a direct transition from  s s  to  t t  should agree with two consecutive shorter transitions through the midpoint  m = ( s + t ) / 2 m=(s+t)/2 .
+Unlike the original shortcut formulation, we construct the target using the  instantaneous  velocities at the diagonals of the two sub-intervals,  𝒗 θ ​ ( 𝒙 s , s ) {\bm{v}}_{\theta}({\bm{x}}_{s},s)  and  v θ ​ ( 𝒙 ^ m , m ) v_{\theta}(\hat{{\bm{x}}}_{m},m) , as follows:
+
+
+
+
+ ℒ SC ​ ( θ ) = 𝔼 c , s , t , 𝒙 ​ [ ‖ 𝒖 θ ​ ( 𝒙 s , s , t ) − 1 2 ​ [ sg ⁡ [ 𝒗 θ ​ ( 𝒙 s , s ) ] + sg ⁡ [ 𝒗 θ ​ ( 𝒙 ^ m , m ) ] ] ‖ 2 ] \mathcal{L}_{\text{SC}}(\theta)=\mathbb{E}_{c,s,t,{\bm{x}}}\left[\left\|{\bm{u}}_{\theta}({\bm{x}}_{s},s,t)-\frac{1}{2}\left[\mathrm{sg}\big[{\bm{v}}_{\theta}({\bm{x}}_{s},s)\big]+\mathrm{sg}\big[{\bm{v}}_{\theta}(\hat{{\bm{x}}}_{m},m)\big]\right]\right\|^{2}\right]
+
+ (7)
+
+ where  𝒙 ^ m := 𝒙 s + ( m − s ) ​ 𝒗 θ ​ ( 𝒙 s , s ) \hat{{\bm{x}}}_{m}:={\bm{x}}_{s}+(m-s){\bm{v}}_{\theta}({\bm{x}}_{s},s) .
+
+
+ The resulting target is anchored to teacher-supervised quantities at every interval.
+Note that the diagonal terms coincide with the quantities directly supervised by OPFD.
+Accordingly, we define the training objective as
+
+
+
+
+ ℒ FastOPD = ℒ SC + λ ​ ℒ OPFD . \mathcal{L}_{\text{FastOPD}}=\mathcal{L}_{\text{SC}}+\lambda\mathcal{L}_{\text{OPFD}}.
+
+ (8)
+
+ In the following theorem, we demonstrate that the student implicitly recovers the teacher-induced flow map.
+Let  𝒗 ϕ ​ ( 𝒙 , t ) {\bm{v}}_{\phi}({\bm{x}},t)  be the teacher velocity field, and we define the teacher-induced ideal shortcut as
+
+
+
+
+ 𝒖 ϕ ​ ( 𝒙 , s , t ) = 1 2 ​ [ 𝒗 ϕ ​ ( 𝒙 , s ) + 𝒗 ϕ ​ ( 𝒙 ¯ m , m ) ] , 𝒙 ¯ m = 𝒙 + ( m − s ) ​ 𝒗 ϕ ​ ( 𝒙 , s ) , {{\bm{u}}_{\phi}}({\bm{x}},s,t)=\tfrac{1}{2}\big[{\bm{v}}_{\phi}({\bm{x}},s)+{\bm{v}}_{\phi}({\bar{{\bm{x}}}}_{m},m)\big],\quad\bar{{\bm{x}}}_{m}={\bm{x}}+(m-s)\,{\bm{v}}_{\phi}({\bm{x}},s),
+
+ (9)
+
+ with  𝒖 ϕ ​ ( 𝒙 , t , t ) = 𝒗 ϕ ​ ( 𝒙 , t ) {{\bm{u}}}_{\phi}({\bm{x}},t,t)={\bm{v}}_{\phi}({\bm{x}},t) . We then define the corresponding ideal flow map as  𝒇 ϕ ​ ( 𝒙 , s , t ) = 𝒙 + ( t − s ) ​ 𝒖 ϕ ​ ( 𝒙 , s , t ) {\bm{f}}_{\phi}({\bm{x}},s,t)={\bm{x}}+(t-s){\bm{u}}_{\phi}({\bm{x}},s,t) .
+
+
+ Proposition 2 .
+
+ Let  q θ q_{\theta}  and  ρ θ \rho_{\theta}  be the sampling distributions of  ℒ SC \mathcal{L}_{\text{SC}}  and  ℒ OPFD \mathcal{L}_{\text{OPFD}} . Assume that  𝐯 ϕ ​ ( ⋅ , t ) {\bm{v}}_{\phi}(\cdot,t)  is  L L -Lipschitz and that  ( s , 𝐱 s ) (s,{\bm{x}}_{s})  and  ( m , 𝐱 ^ m ) (m,\hat{{\bm{x}}}_{m})  under  q θ q_{\theta}
+have density ratio at most  κ \kappa  with respect to  ρ θ \rho_{\theta} . Then,
+
+
+
+
+ D q θ ​ ( 𝒖 θ , 𝒖 ϕ ) ≤ C λ ​ ℒ FastOPD , D_{q_{\theta}}({\bm{u}}_{\theta},{\bm{u}}_{\phi})\leq C_{\lambda}\mathcal{L}_{\text{FastOPD}},
+
+ (10)
+
+ where  D q θ ​ ( 𝐮 θ , 𝐮 ϕ ) := 𝔼 ( s , t , 𝐱 ) ∼ q θ ​ ‖ 𝐮 θ ​ ( 𝐱 , s , t ) − 𝐮 ϕ ​ ( 𝐱 , s , t ) ‖ 2 2 D_{q_{\theta}}({\bm{u}}_{\theta},{\bm{u}}_{\phi}):=\mathbb{E}_{(s,t,{\bm{x}})\sim q_{\theta}}\|{\bm{u}}_{\theta}({\bm{x}},s,t)-{\bm{u}}_{\phi}({\bm{x}},s,t)\|_{2}^{2}  and  C λ = max ⁡ { 4 , κ ⁡ ( 2 + L 2 / 4 ) λ } C_{\lambda}=\max\Big\{4,\ \frac{\kappa(2+L^{2}/4)}{\lambda}\Big\} .
+
+
+
+ Thus, OPFD transfers the teacher’s instantaneous velocity to the student, while self-consistency propagates this agreement from the diagonal velocity to finite-step shortcut maps.
+
+
+ Theorem 1 .
+
+ Let  p θ p_{\theta}  and  p ϕ p_{\phi}  denote the terminal distributions induced by sampling with  𝐟 θ {\bm{f}}_{\theta}  and  𝐟 ϕ {\bm{f}}_{\phi} , respectively, from the same initial noise on a fixed sampling schedule  1 = t 0 > t 1 > ⋯ > t K = 0 1=t_{0}>t_{1}>\cdots>t_{K}=0 , and let  𝐱 t k θ {\bm{x}}^{\theta}_{t_{k}}  denote the intermediate states of the student. Suppose that the assumptions of Proposition  2  hold and there exists finite  κ roll > 0 \kappa_{\mathrm{roll}}>0  such that, for every  k k ,
+
+
+
+
+ D k := 𝔼 ​ ‖ 𝒖 θ ​ ( 𝒙 t k θ , t k , t k + 1 ) − 𝒖 ϕ ​ ( 𝒙 t k θ , t k , t k + 1 ) ‖ 2 2 ≤ κ roll ​ D q θ ​ ( 𝒖 θ , 𝒖 ϕ ) . D_{k}:=\mathbb{E}\big\|{\bm{u}}_{\theta}({\bm{x}}^{\theta}_{t_{k}},t_{k},t_{k+1})-{\bm{u}}_{\phi}({\bm{x}}^{\theta}_{t_{k}},t_{k},t_{k+1})\big\|_{2}^{2}\leq\kappa_{\mathrm{roll}}\,D_{q_{\theta}}({\bm{u}}_{\theta},{\bm{u}}_{\phi}).
+
+ (11)
+
+ Then,
+
+
+
+
+ W 2 ​ ( p θ , p ϕ ) ≤ C ​ ℒ FastOPD , W_{2}(p_{\theta},p_{\phi})\leq C\sqrt{\mathcal{L}_{\text{FastOPD}}},
+
+ (12)
+
+ where  C > 0 C>0  depends only on  L L ,  κ \kappa ,  κ roll \kappa_{\mathrm{roll}} ,  λ \lambda , and the sampling schedule.
+
+
+
+ Consequently,  W 2 ​ ( p θ , p ϕ ) → 0 W_{2}(p_{\theta},p_{\phi})\to 0  as  ℒ FastOPD → 0 \mathcal{L}_{\text{FastOPD}}\to 0 .
+Since  𝒖 ϕ {\bm{u}}_{\phi}  is built entirely from the pretrained teacher’s velocity field,  p ϕ p_{\phi}  is the few-step distribution induced by the teacher-induced flow map on the same sampling schedule. The theorem therefore shows that FastOPD allows the compact student to implicitly recover this distribution without explicitly constructing a shortcut teacher.
+The detailed algorithm for FastOPD is presented in Algorithm  1 .
+
+
+ Algorithm 1    Training Algorithm for FastOPD
+
+
+             1:
+
+
+          Dataset  𝒟 \mathcal{D} ; Pretrained teacher  𝒗 ϕ {\bm{v}}_{\phi} ; student flow map  𝒖 θ {\bm{u}}_{\theta}  with time embedding layer  ψ ⁡ ( ⋅ ) \psi(\cdot) ; OPFD weight  λ \lambda ; Sampling time distribution  p p
+
+
+
+             2:
+
+
+           for  each training iteration  do
+
+
+
+             3:
+
+
+             𝒙 1 ∼ 𝒩 ⁡ ( 𝟎 , 𝐈 ) , τ ∼ p , ( 𝒙 0 , c ) ∼ 𝒟 {\bm{x}}_{1}\sim\mathcal{N}(\mathbf{0},\mathbf{I}),\ \tau\sim p,\ ({\bm{x}}_{0},c)\sim\mathcal{D}
+
+
+
+             4:
+
+
+             𝒙 ~ τ ← sg ⁡ [ 𝒇 θ ​ ( 𝒙 1 , 1 , τ ) ] \tilde{{\bm{x}}}_{\tau}\leftarrow\mathrm{sg}\big[{\bm{f}}_{\theta}({\bm{x}}_{1},1,\tau)\big]
+
+
+
+             5:
+
+
+             ℒ OPFD ← ‖ 𝒗 θ ​ ( 𝒙 ~ τ , τ ∣ c ) − 𝒗 ϕ ​ ( 𝒙 ~ τ , τ ∣ c ) ‖ 2 2 \mathcal{L}_{\text{OPFD}}\leftarrow\|{\bm{v}}_{\theta}(\tilde{{\bm{x}}}_{\tau},\tau\mid c)-{\bm{v}}_{\phi}(\tilde{{\bm{x}}}_{\tau},\tau\mid c)\|_{2}^{2}   ⊳ \triangleright   single on-policy state supervision
+
+
+
+             6:
+
+
+             s , t ∼ p s,t\sim p  with  s > t s>t
+
+
+
+             7:
+
+
+             m ← ( s + t ) / 2 m\leftarrow(s+t)/2 ,  𝒙 s ← ( 1 − s ) ​ 𝒙 0 + s ​ 𝒙 1 {\bm{x}}_{s}\leftarrow(1-s){\bm{x}}_{0}+s{\bm{x}}_{1}
+
+
+
+             8:
+
+
+             𝒙 ^ m ← 𝒙 s + ( m − s ) ​ sg ​ [ 𝒗 θ ​ ( 𝒙 s , s ∣ c ) ] \hat{{\bm{x}}}_{m}\leftarrow{\bm{x}}_{s}+(m-s)\,\mathrm{sg}\big[{\bm{v}}_{\theta}({\bm{x}}_{s},s\mid c)\big]
+
+
+
+             9:
+
+
+             ℒ SC ← ‖ 𝒖 θ ​ ( 𝒙 s , s , t ∣ c ) − 1 2 ​ [ sg ⁡ [ 𝒗 θ ​ ( 𝒙 s , s ∣ c ) ] + sg ⁡ [ 𝒗 θ ​ ( 𝒙 ^ m , m ∣ c ) ] ] ‖ 2 2 \mathcal{L}_{\text{SC}}\leftarrow\big\|{\bm{u}}_{\theta}({\bm{x}}_{s},s,t\mid c)-\tfrac{1}{2}\big[\mathrm{sg}[{\bm{v}}_{\theta}({\bm{x}}_{s},s\mid c)]+\mathrm{sg}[{\bm{v}}_{\theta}(\hat{{\bm{x}}}_{m},m\mid c)]\big]\big\|_{2}^{2}
+
+
+
+             10:
+
+
+             ℒ FastOPD ← ℒ SC + λ ​ ℒ OPFD \mathcal{L}_{\text{FastOPD}}\leftarrow\mathcal{L}_{\text{SC}}+\lambda\,\mathcal{L}_{\text{OPFD}}
+
+
+
+             11:
+
+
+             θ ← θ − η ​ ∇ θ ℒ FastOPD \theta\leftarrow\theta-\eta\,\nabla_{\theta}\mathcal{L}_{\text{FastOPD}}
+
+
+
+             12:
+
+
+           end   for
+
+
+
+
+
+ 4  Experiments
+
+
+ Our experiments span two multitask simulation benchmarks (Sec.  4.1 ) and one real-robot task (Sec.  4.2 ).
+We freeze the vision–language backbone and fine-tune only the action expert and projections with the additional time projection layer described in Sec.  3 .
+We evaluate each method using 1, 2, 4, and 10 denoising steps and compare it against the teacher and the initial student with 50 trials per task.
+Full experimental details are provided in Appendix  B .
+
+
+ 4.1  Simulation Experiments
+
+
+ Benchmarks.
+We evaluate FastOPD on LIBERO  ( Liu et al., 2023 )  and RoboTwin 2.0  ( Chen et al., 2025 ) .
+LIBERO evaluates single-arm manipulation across four standard evaluation suites—Spatial, Object, Goal, and Long—comprising 40 tasks in total.
+RoboTwin 2.0  ( Chen et al., 2025 )  comprises 50 challenging bimanual manipulation tasks, with 2,500 demonstrations collected in clean scenes and 25,000 demonstrations collected under heavy scene randomization.
+We report results in both clean and randomized settings on unseen environments.
+
+
+ Baselines.
+For simulation experiments, we compare our method with three representative approaches to few-step generation: Consistency Trajectory Model (CTM)  ( Kim et al., 2024 ) ,
+Distribution Matching Distillation (DMD)  ( Yin et al., 2024b ;  Yin et al., 2024a ) ,
+and improved Mean Flow (iMF)  ( Geng et al., 2026 ) .
+Since iMF was originally formulated for training from scratch, we adapt it to
+the distillation setting by replacing its self-referential instantaneous
+velocity target with the teacher velocity.
+Except for DMD, a one-step generator, all baselines are designed as the flow-map architecture.
+
+
+ Teacher and Student Models.
+We use SmolVLA  ( Shukor et al., 2025 )  as the student model on both benchmarks,
+paired with  π 0.5 \pi_{0.5}   ( Black et al., 2025a )  on LIBERO, LingBot-VLA  ( Wu et al., 2026 )  and Fast-WAM  ( Yuan et al., 2026 )  on RoboTwin 2.0.
+All models are initialized from public benchmark-specific checkpoints.
+
+
+
+
+
+ Table 1:
+Success rates (%) on LIBERO across spatial, object, goal,
+and long-horizon tasks.  † \dagger : Results reported in the original papers.
+
+
+
+ Method
+ Param.
+ NFE
+ Spat.
+ Obj.
+ Goal
+ Long
+ Avg.
+
+ Diffusion/Flow-based Policies
+
+ DP †
+ –
+ 100
+ 78.3
+ 92.5
+ 68.3
+ 50.5
+ 72.4
+
+ Octo-Base †
+ 93M
+ 10
+ 78.9
+ 85.7
+ 84.6
+ 51.1
+ 75.1
+
+ π 0 \pi_{0} †
+ 3.3B
+ 10
+ 97.4
+ 98.4
+ 97.6
+ 93.0
+ 96.6
+
+ Teacher & Base Student Models
+
+ π 0.5 \pi_{0.5}
+ 3.3B
+ 10
+ 98.2
+ 99.4
+ 97.4
+ 94.8
+ 97.5
+
+ SmolVLA
+ 450M
+ 1
+ 74.6
+ 73.2
+ 77.4
+ 51.2
+ 69.1
+
+ 2
+ 76.8
+ 74.4
+ 79.8
+ 54.4
+ 71.4
+
+ 4
+ 79.0
+ 74.8
+ 79.2
+ 58.0
+ 72.8
+
+ 10
+ 77.2
+ 75.0
+ 79.4
+ 54.6
+ 71.6
+
+ Few-step Distillation
+
+ DMD
+ 450M
+ 1
+ 82.4
+ 87.2
+ 75.6
+ 47.2
+ 73.1
+
+ CTM
+ 451M
+ 1
+ 78.0
+ 86.6
+ 70.8
+ 41.4
+ 69.2
+
+ 2
+ 75.4
+ 84.2
+ 70.4
+ 43.4
+ 68.4
+
+ 4
+ 68.4
+ 77.0
+ 71.2
+ 45.0
+ 65.4
+
+ 10
+ 72.0
+ 81.6
+ 72.4
+ 44.4
+ 67.6
+
+ iMF
+ 451M
+ 1
+ 70.8
+ 78.6
+ 75.6
+ 30.6
+ 63.9
+
+ 2
+ 76.0
+ 90.6
+ 75.6
+ 46.4
+ 72.2
+
+ 4
+ 68.2
+ 84.8
+ 67.0
+ 38.0
+ 64.5
+
+ 10
+ 65.2
+ 83.6
+ 66.6
+ 35.2
+ 62.7
+
+ Ours
+ 451M
+ 1
+ 84.2
+ 94.2
+ 82.6
+ 48.2
+ 77.3
+
+ 2
+ 83.6
+ 96.8
+ 87.2
+ 59.6
+ 81.8
+
+ 4
+ 83.0
+ 95.0
+ 85.6
+ 57.4
+ 80.3
+
+ 10
+ 80.4
+ 94.0
+ 84.4
+ 57.2
+ 79.0
+
+
+
+ Table 2:
+Success rates (%) on RoboTwin 2.0 under unseen clean
+and randomized settings.  † \dagger : Results reported in the original papers.
+
+
+
+ Method
+ Param.
+ NFE
+ Clean
+ Rand.
+ Avg.
+
+ Diffusion/Flow-based Policies
+
+ DP †
+ 0.46B
+ 10
+ 28.0
+ 0.6
+ 14.3
+
+ RDT †
+ 1.2B
+ 10
+ 34.5
+ 13.7
+ 24.1
+
+ π 0 \pi_{0} †
+ 3.3B
+ 10
+ 46.4
+ 16.3
+ 31.4
+
+ π 0.5 \pi_{0.5}
+ 3.3B
+ 10
+ 70.7
+ 46.0
+ 58.4
+
+ Teacher & Base Student Models
+
+ LingBot-VLA
+ 4.2B
+ 10
+ 86.8
+ 84.9
+ 85.8
+
+ Fast-WAM
+ 6B
+ 10
+ 91.9
+ 91.8
+ 91.9
+
+ SmolVLA
+ 450M
+ 1
+ 35.2
+ 35.4
+ 35.3
+
+ 2
+ 55.0
+ 56.1
+ 55.6
+
+ 4
+ 59.8
+ 61.0
+ 60.4
+
+ 10
+ 59.4
+ 61.3
+ 60.4
+
+ Few-step Distillation
+
+ DMD
+ 450M
+ 1
+ 32.5
+ 32.1
+ 32.3
+
+ CTM
+ 451M
+ 1
+ 15.5
+ 15.6
+ 15.6
+
+ 2
+ 4.8
+ 15.8
+ 10.3
+
+ 4
+ 18.7
+ 16.0
+ 17.3
+
+ 10
+ 36.1
+ 34.5
+ 35.3
+
+ iMF
+ 451M
+ 1
+ 43.2
+ 42.4
+ 42.8
+
+ 2
+ 51.6
+ 51.1
+ 51.4
+
+ 4
+ 50.8
+ 51.0
+ 50.9
+
+ 10
+ 50.6
+ 51.4
+ 51.0
+
+ Ours (LingBot-VLA)
+ 451M
+ 1
+ 51.5
+ 50.9
+ 51.2
+
+ 2
+ 57.1
+ 58.3
+ 57.7
+
+ 4
+ 58.6
+ 61.2
+ 59.9
+
+ 10
+ 56.9
+ 59.6
+ 58.2
+
+ Ours (Fast-WAM)
+ 451M
+ 1
+ 51.1
+ 49.8
+ 50.5
+
+ 2
+ 55.5
+ 57.2
+ 56.3
+
+ 4
+ 58.5
+ 59.2
+ 58.8
+
+ 10
+ 58.3
+ 59.6
+ 58.9
+
+
+ Table 3:  End-to-end inference latency (ms) on LIBERO and RoboTwin 2.0.
+
+
+
+ LIBERO
+ RoboTwin 2.0
+
+ Model
+ NFE=1
+ 2
+ 4
+ 10
+ Model
+ NFE=1
+ 2
+ 4
+ 10
+
+ π 0.5 \pi_{0.5}  (teacher)
+ 155
+ 171
+ 203
+ 301
+ LingBot-VLA (teacher)
+ 151
+ 197
+ 291
+ 571
+
+
+
+
+
+
+ Fast-WAM (teacher)
+ 147
+ 186
+ 264
+ 503
+
+ SmolVLA
+ 49
+ 65
+ 97
+ 193
+ SmolVLA
+ 56
+ 72
+ 103
+ 199
+
+ Ours
+ 50
+ 66
+ 98
+ 193
+ Ours
+ 57
+ 74
+ 106
+ 202
+
+
+
+ Figure 4:  Success rate (%) on LIBERO during training: (a) FastOPD at different sampling steps, (b) comparison with baselines at 1 step.
+
+
+ LIBERO.  In Tab.  3  and Tab.  3 , we report the average success rates and inference latency on the LIBERO benchmark.
+Our method outperforms all few-step baselines and the initial student model at every denoising step in average success rate.
+As shown in Fig.  4 , we observe a consistent performance improvement
+across all denoising steps, including at 10 steps.
+FastOPD further achieves the best success rates of 81.8% with only 2 sampling steps.
+In particular, our method shows better performance than the 10-step SmolVLA baseline with only a single step, while reducing inference latency from 193 ms to 50 ms.
+Together, the results demonstrate that FastOPD substantially improves the accuracy–latency trade-off of the compact student.
+We examine the contributions of each loss component to these accuracy gains in Sec.  4.3 .
+
+
+ RoboTwin 2.0.
+Tab.  3  and Tab.  3  summarize the results. Notably, our method consistently achieves performance gains in the few-step regime, improving the single-step success rate of the base student from 35.3% to 51.2%, and outperforms all few-step distillation baselines at every sampling step.
+It does so at a latency comparable to SmolVLA, while being  10.0 × 10.0\times  faster than the LingBot-VLA teacher.
+At 4 and 10 steps, FastOPD performs slightly below the base student, indicating that its benefit lies mainly in
+the few-step regime where the base student degrades.
+
+
+ Distilling a World Action Model.
+Recent World Action Models (WAMs) build on pretrained video generation models and have emerged as an alternative to foundation VLAs  ( Kim et al., 2026 ;  Ye et al., 2026 ;  Yuan et al., 2026 ) . To examine whether FastOPD extends beyond VLA teachers, we distill Fast-WAM  ( Yuan et al., 2026 ) , a 6B-parameter video-based teacher, into the same 451M SmolVLA student with an identical training recipe.
+As shown in Tab.  3 , the student distilled from Fast-WAM achieves a 50.5% average success rate at a single denoising step, 15.2 percentage points over the initial SmolVLA baseline (35.3%). Furthermore, it reaches 56.3% at two steps, successfully transferring knowledge despite the substantial differences in architecture and pretraining between the teacher and the student.
+This demonstrates that FastOPD is a versatile approach that applies not only to VLAs but also to WAMs, since it only requires the teacher’s velocity field on the student’s own action trajectories, regardless of how the teacher is built.
+
+
+
+
+ Figure 5:  Real-world results on the  pnp-plate  task. (a) Success rate (%). (b) Task completion time (s), averaged over successful episodes.
+
+ Figure 6:  FastOPD on  pnp-plate : (a) start, (b) transport, and
+(c) placement. Each panel shows the top view with the wrist view inset (lower left).
+
+
+
+ 4.2  Real-World Experiments
+
+
+ To validate its real-world applicability, we further design a real-world robot scenario,  pnp-plate , in which the robot picks up the ball and places it on the plate.
+Experiments use the right arm of a bimanual YAM robot with a parallel-jaw
+gripper and top-view and wrist-mounted cameras that provide RGB observations.
+We train MolmoAct2  ( Fang et al., 2026a ) , an action reasoning model that is suitable for real-world deployment, on our collected demonstrations for 14,000 iterations and use the resulting policy as the teacher.
+We initialize the student from SmolVLA, warm it up on the collected demonstrations with
+the standard flow matching objective (i.e., behavior cloning) for 10,000 iterations,
+and subsequently distill the teacher into the student using FastOPD. Full experimental details
+are provided in Appendix  B.5 .
+
+
+ Fig.  6  and Fig.  6  summarize the results.
+With four denoising steps, FastOPD achieves a 50% success rate, improving by 8 percentage points over
+the 42% of the base SmolVLA at the same number of steps.
+Notably, FastOPD shows faster and more accurate performance than the 10-step base student, improving the success rate from 44% to 50% while cutting the execution time from 19.32 s to 17.38 s.
+These results demonstrate that FastOPD can transfer the capability of a larger teacher to a
+compact student deployed on a physical robot with few steps.
+
+
+
+ 4.3  Ablation Study
+
+
+ Training efficiency.
+FastOPD reduces training overhead by supervising the student at a single sampled on-policy state rather than across all denoising steps.
+As illustrated in Fig.  1 , standard OPD  ( Li et al., 2026a )  takes 9.51 hours per 1,000 training iterations while FastOPD requires only 1.43 hours, achieving a  5.7 × 5.7\times  speedup.
+This translates directly into accelerated convergence (Fig.  1 ). FastOPD achieves a 78.2% 1-step success rate in just 10 hours, whereas conventional OPD requires roughly 57 hours to reach a similar level (79.1%). Consequently, FastOPD matches the performance of conventional OPD at a fraction of the computational cost.
+
+
+ Student Initialization.
+
+We study whether FastOPD can also start from a student that is initialized
+in a fully on-policy manner. To do so, we initialize the student using 5,000 iterations of conventional per-step OPD  ( Li et al., 2026a )  instead of flow-matching behavior cloning.
+As shown in Tab.  4 , the OPD-initialized student degrades severely at 4 steps (44.2%), likely due to the fixed 10-step discretization in OPD, whereas FastOPD recovers this case and improves all denoising steps.
+This indicates that OPD is a viable alternative to
+flow-matching-based behavior cloning for the initialization, although it incurs a substantially higher
+training cost, as discussed above (Fig.  1 ). It also shows that FastOPD is not tied to a specific initialization
+and can be applied on top of students distilled by other methods.
+
+
+
+
+
+
+
+
+
+ Method
+ 1
+ 2
+ 4
+ 10
+
+ FM init.
+ 69.1
+ 71.4
+ 72.8
+ 71.6
+
+ + FastOPD
+ 77.3
+ 81.8
+ 80.3
+ 79.0
+
+ OPD init.
+ 72.7
+ 78.2
+ 44.2
+ 78.6
+
+ + FastOPD
+ 80.5
+ 83.0
+ 82.2
+ 81.7
+
+
+ Table 4:  Student initialization.
+
+
+
+
+
+
+ Method
+ 1
+ 2
+ 4
+ 10
+
+ Base
+ 69.1
+ 71.4
+ 72.8
+ 71.6
+
+ SC only
+ 14.5
+ 15.7
+ 17.8
+ 16.8
+
+ OPFD only
+ 25.0
+ 52.6
+ 64.0
+ 74.7
+
+ FastOPD
+ 77.3
+ 81.8
+ 80.3
+ 79.0
+
+
+ Table 5:  Loss components.
+
+
+
+
+
+
+ λ \lambda
+ 1
+ 2
+ 4
+ 10
+
+ 1
+ 77.9
+ 82.0
+ 83.6
+ 82.1
+
+ 0.5
+ 79.3
+ 82.9
+ 84.2
+ 84.1
+
+ 0.1
+ 80.5
+ 83.0
+ 82.2
+ 81.7
+
+ 0.01
+ 53.0
+ 52.6
+ 52.9
+ 52.0
+
+
+ Table 6:  Effect of  λ \lambda .
+
+
+
+ Loss components.
+Tab.  5  shows that the two objectives are complementary.
+Without teacher anchoring, SC alone collapses below 18% and OPFD alone fails to capture off-diagonal flow dynamics, degrading few-step generation.
+Their combination reaches 81.8% with two steps.
+While  Luan et al. (2026)  also anchors a fixed two-step Euler target with flow matching, FastOPD anchors to the teacher via OPFD and enforces consistency over arbitrary intervals, yielding an any-step flow map that inherits the teacher’s dynamics (see Appendix  C ).
+
+
+ Figure 7:  Ablation on action execution steps on LIBERO (NFE = = 2 for Ours and NFE = = 10 for  π 0.5 \pi_{0.5} ).
+
+
+ Hyperparameters.
+The proposed method introduces a single
+hyperparameter  λ \lambda , which controls the strength of the OPFD
+term. To study its effect, we sweep the OPFD weight  λ ∈ { 1 , 0.5 , 0.1 , 0.01 } \lambda\in\{1,0.5,0.1,0.01\}  on the OPD-initialized student (Tab.  6 ).
+Performance collapses at  λ = 0.01 \lambda=0.01 , indicating that sufficient OPFD supervision is needed to anchor the self-consistency term, and remains stable within  [ 0.1 , 0.5 ] [0.1,0.5]  with a mild trade-off between few- and multi-step performance.
+
+
+ Action execution steps.  The policy executes the first  K K  actions of each predicted chunk before replanning, trading responsiveness for inference overhead. Short execution horizons
+improve responsiveness through more frequent replanning, while longer horizons reduce inference overhead at the cost of extended open-loop execution. As shown in Fig.  7 , we observe that both the teacher  π 0.5 \pi_{0.5}  and the student perform best at  K = 10 K=10 , suggesting that the student inherits the teacher’s preferred replanning frequency.
+
+
+
+
+ 5  Conclusion
+
+
+ In this paper, we present FastOPD, an efficient on-policy distillation framework that transfers large-scale VLAs into lightweight student models to maximize computational efficiency without compromising performance.
+Specifically, FastOPD streamlines the iterative denoising process by anchoring a single on-policy state to the teacher, coupled with a self-consistency objective for finite-interval transitions.
+In simulation and real-robot experiments across diverse VLA and WAM teachers, FastOPD improves over the base student in the few-step regime and outperforms existing few-step distillation methods, while substantially reducing training and inference cost. We hope this framework facilitates scalable, real-time deployment of foundation policies on physical robots.
+
+
+
+ References
+
+
+ Agarwal  et al.  (2024)
+ R. Agarwal, N. Vieillard, Y. Zhou, P. Stanczyk, S. Ramos Garea, M. Geist, and O. Bachem
+
+ On-policy distillation of language models: learning from self-generated mistakes .
+
+ In  International Conference on Learning Representations ,
+
+ Cited by:  §1 .
+
+ Bjorck  et al.  (2025)
+ J. Bjorck, F. Castañeda, N. Cherniadev, X. Da, R. Ding, L. Fan, Y. Fang, D. Fox, F. Hu, S. Huang,  et al.
+
+ GR00T N1: an open foundation model for generalist humanoid robots .
+
+ arXiv preprint arXiv:2503.14734 .
+
+ Cited by:  §1 ,
+ §2 .
+
+ Black  et al.  (2025a)
+ K. Black, N. Brown, J. Darpinian, K. Dhabalia, D. Driess, A. Esmail, M. R. Equi, C. Finn, N. Fusai,  et al.
+
+ π 0.5 \pi_{0.5} : a vision-language-action model with open-world generalization .
+
+ In  Proceedings of the 9th Conference on Robot Learning ,
+
+ Proceedings of Machine Learning Research , Vol.  305 ,  pp. 17–40 .
+
+ Cited by:  §1 ,
+ §1 ,
+ §2 ,
+ §4.1 .
+
+ Black  et al.  (2025b)
+ K. Black, N. Brown, D. Driess, A. Esmail, M. R. Equi, C. Finn, N. Fusai, L. Groom, K. Hausman, B. Ichter,  et al.
+
+ π 0 \pi_{0} : a vision-language-action flow model for general robot control .
+
+ In  Robotics: Science and Systems ,
+
+ Cited by:  §1 ,
+ §2 .
+
+ Boffi  et al.  (2025)
+ N. Boffi, M. Albergo, and E. Vanden-Eijnden
+
+ How to build a consistency model: learning flow maps via self-distillation .
+
+ Advances in Neural Information Processing Systems   38 ,  pp. 37559–37595 .
+
+ Cited by:  §3 .
+
+ Boffi  et al.  (2024)
+ N. M. Boffi, M. S. Albergo, and E. Vanden-Eijnden
+
+ Flow map matching with stochastic interpolants: a mathematical framework for consistency models .
+
+ arXiv preprint arXiv:2406.07507 .
+
+ Cited by:  §1 ,
+ §2 .
+
+ Cadene  et al.  (2024)
+ R. Cadene, S. Alibert, A. Soare, Q. Gallouedec, A. Zouitine, S. Palma, P. Kooijmans, M. Aractingi, M. Shukor, D. Aubakirova, M. Russi, F. Capuano, C. Pascal, J. Choghari, K. Meftah, M. Ellerbach, J. Moss, and T. Wolf
+
+ LeRobot: state-of-the-art machine learning for real-world robotics in Pytorch .
+
+ Note:  https://github.com/huggingface/lerobot
+
+ Cited by:  §B.1 .
+
+ Chen  et al.  (2025)
+ T. Chen, Z. Chen, B. Chen, Z. Cai, Y. Liu, Z. Li, Q. Liang, X. Lin, Y. Ge, Z. Gu,  et al.
+
+ RoboTwin 2.0: a scalable data generator and benchmark with strong domain randomization for robust bimanual robotic manipulation .
+
+ arXiv preprint arXiv:2506.18088 .
+
+ Cited by:  §4.1 .
+
+ Chi  et al.  (2023)
+ C. Chi, S. Feng, Y. Du, Z. Xu, E. Cousineau, B. Burchfiel, and S. Song
+
+ Diffusion policy: visuomotor policy learning via action diffusion .
+
+ In  Robotics: Science and Systems ,
+
+ Cited by:  §2 ,
+ §2 .
+
+ Collaboration (2024)
+ O. X. Collaboration
+
+ Open X-Embodiment: robotic learning datasets and RT-X models .
+
+ In  International Conference on Robotics and Automation (ICRA) ,
+
+ Cited by:  §1 ,
+ §2 .
+
+ Esser  et al.  (2024)
+ P. Esser, S. Kulal, A. Blattmann, R. Entezari, J. Müller, H. Saini, Y. Levi, D. Lorenz, A. Sauer, F. Boesel, D. Podell, T. Dockhorn, Z. English, and R. Rombach
+
+ Scaling rectified flow transformers for high-resolution image synthesis .
+
+ In  Proceedings of the 41st International Conference on Machine Learning ,
+
+ Proceedings of Machine Learning Research , Vol.  235 ,  pp. 12606–12633 .
+
+ Cited by:  §2 .
+
+ Fang  et al.  (2026a)
+ H. Fang, J. Duan, D. Clay, S. Wang, S. Liu, W. Huang, X. Fan, W. Tsai, S. Chen, Y. R. Wang, S. Xing, J. Cho, J. S. Park, A. Eftekhar, P. Sushko, K. Farley, A. Wadhwa, C. Harrison, W. Han, Y. Lee, E. VanderBilt, R. Hendrix, S. Ellawela, L. Ngoo, J. Chai, Z. Ren, A. Farhadi, D. Fox, and R. Krishna
+
+ MolmoAct2: action reasoning models for real-world deployment .
+
+ arXiv preprint arXiv:2605.02881 .
+
+ Cited by:  §B.5 ,
+ §1 ,
+ §1 ,
+ §4.2 .
+
+ Fang  et al.  (2026b)
+ Z. Fang, W. Huang, Y. Zeng, Y. Zhao, S. Chen, K. Feng, Y. Lin, L. Chen, Z. Chen, S. Cao,  et al.
+
+ Flow-OPD: on-policy distillation for flow matching models .
+
+ arXiv preprint arXiv:2605.08063 .
+
+ Cited by:  §1 .
+
+ Frans  et al.  (2025)
+ K. Frans, D. Hafner, S. Levine, and P. Abbeel
+
+ One step diffusion via shortcut models .
+
+ In  International Conference on Learning Representations ,
+
+ Cited by:  §1 ,
+ §2 ,
+ §2 ,
+ §3 .
+
+ Geng  et al.  (2025)
+ Z. Geng, M. Deng, X. Bai, J. Z. Kolter, and K. He
+
+ Mean flows for one-step generative modeling .
+
+ In  Advances in Neural Information Processing Systems ,
+
+ Vol.  38 .
+
+ Cited by:  §D.3 ,
+ §1 ,
+ §2 ,
+ §2 .
+
+ Geng  et al.  (2026)
+ Z. Geng, Y. Lu, Z. Wu, E. Shechtman, J. Z. Kolter, and K. He
+
+ Improved mean flows: on the challenges of fastforward generative models .
+
+ In  Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition ,
+
+ pp. 30467–30476 .
+
+ Cited by:  §D.3 ,
+ §2 ,
+ §4.1 .
+
+ Guo  et al.  (2026)
+ Y. Guo, W. Chen, and J. Zhang
+
+ ReactVLA: fast and lightweight reactive robot manipulation via improved mean flow action generation .
+
+ arXiv preprint arXiv:2606.14255 .
+
+ Cited by:  §2 .
+
+ Hinton  et al.  (2015)
+ G. Hinton, O. Vinyals, and J. Dean
+
+ Distilling the knowledge in a neural network .
+
+ arXiv preprint arXiv:1503.02531 .
+
+ Cited by:  §1 .
+
+ Ho  et al.  (2020)
+ J. Ho, A. Jain, and P. Abbeel
+
+ Denoising diffusion probabilistic models .
+
+ In  Advances in Neural Information Processing Systems ,
+
+ Vol.  33 ,  pp. 6840–6851 .
+
+ Cited by:  §2 .
+
+ Jia  et al.  (2024)
+ B. Jia, P. Ding, C. Cui, M. Sun, P. Qian, S. Huang, Z. Fan, and D. Wang
+
+ Score and distribution matching policy: advanced accelerated visuomotor policies via matched distillation .
+
+ arXiv preprint arXiv:2412.09265 .
+
+ Cited by:  §2 .
+
+ Kim  et al.  (2024)
+ D. Kim, C. Lai, W. Liao, N. Murata, Y. Takida, T. Uesaka, Y. He, Y. Mitsufuji, and S. Ermon
+
+ Consistency trajectory models: learning probability flow ODE trajectory of diffusion .
+
+ In  International Conference on Learning Representations ,
+
+ Cited by:  §D.2 ,
+ §1 ,
+ §2 ,
+ §2 ,
+ §4.1 ,
+ footnote 4 .
+
+ Kim  et al.  (2026)
+ M. J. Kim, Y. Gao, T. Lin, Y. Lin, Y. Ge, G. Lam, P. Liang, S. Song, M. Liu, C. Finn,  et al.
+
+ Cosmos Policy: fine-tuning video models for visuomotor control and planning .
+
+ arXiv preprint arXiv:2601.16163 .
+
+ Cited by:  §1 ,
+ §4.1 .
+
+ Li  et al.  (2026a)
+ Q. Li, J. Yu, K. Jiang, Y. Wei, Z. Xing, P. Li, R. Chu, S. Zhang, Y. Liu, and Z. Wu
+
+ DiffusionOPD: a unified perspective of on-policy distillation in diffusion models .
+
+ In  SIGGRAPH Asia 2026 Conference Papers ,
+
+ Cited by:  Figure 1 ,
+ §1 ,
+ §2 ,
+ §3 ,
+ §4.3 ,
+ §4.3 .
+
+ Li  et al.  (2026b)
+ S. Li, L. Sun, and Y. Chen
+
+ One-step flow policy: self-distillation for fast visuomotor policies .
+
+ arXiv preprint arXiv:2603.12480 .
+
+ Cited by:  §2 .
+
+ Lipman  et al.  (2023)
+ Y. Lipman, R. T. Q. Chen, H. Ben-Hamu, M. Nickel, and M. Le
+
+ Flow matching for generative modeling .
+
+ In  The Eleventh International Conference on Learning Representations ,
+
+ External Links:  Link
+
+ Cited by:  §2 .
+
+ Liu  et al.  (2023)
+ B. Liu, Y. Zhu, C. Gao, Y. Feng, Q. Liu, Y. Zhu, and P. Stone
+
+ LIBERO: benchmarking knowledge transfer for lifelong robot learning .
+
+ Advances in Neural Information Processing Systems   36 ,  pp. 44776–44791 .
+
+ Cited by:  §4.1 .
+
+ Liu  et al.  (2025)
+ J. Liu, G. Liu, J. Liang, Y. Li, J. Liu, X. Wang, P. Wan, D. Zhang, and W. Ouyang
+
+ Flow-GRPO: training flow matching models via online RL .
+
+ In  Advances in Neural Information Processing Systems ,
+
+ Vol.  38 .
+
+ Cited by:  Appendix A .
+
+ Liu  et al.  (2024)
+ S. Liu, L. Wu, B. Li, H. Tan, H. Chen, Z. Wang, K. Xu, H. Su, and J. Zhu
+
+ RDT-1B: a diffusion foundation model for bimanual manipulation .
+
+ arXiv preprint arXiv:2410.07864 .
+
+ Cited by:  §2 .
+
+ Luan  et al.  (2026)
+ W. Luan, J. Li, W. Zhao, W. Zhang, T. Wu, and R. Ma
+
+ SnapFlow: one-step action generation for flow-matching VLAs via progressive self-distillation .
+
+ arXiv preprint arXiv:2604.05656 .
+
+ Cited by:  §B.4 ,
+ Appendix C ,
+ §2 ,
+ §4.3 .
+
+ Mansourian  et al.  (2025)
+ A. M. Mansourian, R. Ahmadi, M. Ghafouri, A. M. Babaei, E. B. Golezani, Z. Y. Ghamchi, V. Ramezanian, A. Taherian, K. Dinashi, A. Miri,  et al.
+
+ A comprehensive survey on knowledge distillation .
+
+ arXiv preprint arXiv:2503.12067 .
+
+ Cited by:  §1 .
+
+ Octo Model Team  et al.  (2024)
+ Octo Model Team, D. Ghosh, H. Walke, K. Pertsch, K. Black, O. Mees, S. Dasari, J. Hejna, C. Xu, J. Luo, T. Kreiman, Y. L. Tan, L. Y. Chen, P. Sanketi, Q. Vuong, T. Xiao, D. Sadigh, C. Finn, and S. Levine
+
+ Octo: an open-source generalist robot policy .
+
+ In  Proceedings of Robotics: Science and Systems ,
+
+ Delft, Netherlands .
+
+ Cited by:  §2 .
+
+ Prasad  et al.  (2024)
+ A. Prasad, K. Lin, J. Wu, L. Zhou, and J. Bohg
+
+ Consistency policy: accelerated visuomotor policies via consistency distillation .
+
+ In  Robotics: Science and Systems ,
+
+ Cited by:  §2 .
+
+ Reuss  et al.  (2025)
+ M. Reuss, H. Zhou, M. Rühle, Ö. E. Yağmurlu, F. Otto, and R. Lioutikov
+
+ FLOWER: democratizing generalist robot policies with efficient vision-language-flow models .
+
+ In  Conference on Robot Learning ,
+
+ Cited by:  §2 .
+
+ Sabour  et al.  (2025)
+ A. Sabour, S. Fidler, and K. Kreis
+
+ Align your flow: scaling continuous-time flow map distillation .
+
+ In  Advances in Neural Information Processing Systems ,
+
+ Vol.  38 .
+
+ Cited by:  §1 ,
+ §2 .
+
+ Sheng  et al.  (2026)
+ J. Sheng, Z. Wang, P. Li, and M. Liu
+
+ MP1: MeanFlow tames policy learning in 1-step for robotic manipulation .
+
+ In  Proceedings of the AAAI Conference on Artificial Intelligence ,
+
+ Vol.  40 ,  pp. 18532–18539 .
+
+ Cited by:  §2 .
+
+ Shukor  et al.  (2025)
+ M. Shukor, D. Aubakirova, F. Capuano, P. Kooijmans, S. Palma, A. Zouitine, M. Aractingi, C. Pascal, M. Russi, A. Marafioti, S. Alibert, M. Cord, T. Wolf, and R. Cadene
+
+ SmolVLA: a vision-language-action model for affordable and efficient robotics .
+
+ arXiv preprint arXiv:2506.01844 .
+
+ Cited by:  §1 ,
+ §2 ,
+ §2 ,
+ §4.1 .
+
+ Song  et al.  (2023)
+ Y. Song, P. Dhariwal, M. Chen, and I. Sutskever
+
+ Consistency models .
+
+ In  International Conference on Machine Learning ,
+
+ pp. 32211–32252 .
+
+ Cited by:  §D.2 ,
+ §1 ,
+ §2 .
+
+ Song  et al.  (2021)
+ Y. Song, J. Sohl-Dickstein, D. P. Kingma, A. Kumar, S. Ermon, and B. Poole
+
+ Score-based generative modeling through stochastic differential equations .
+
+ In  International Conference on Learning Representations ,
+
+ External Links:  Link
+
+ Cited by:  §2 .
+
+ Wang  et al.  (2025)
+ Z. Wang, Z. Li, A. Mandlekar, Z. Xu, J. Fan, Y. Narang, L. Fan, Y. Zhu, Y. Balaji, M. Zhou, M. Liu, and Y. Zeng
+
+ One-step diffusion policy: fast visuomotor policies via diffusion distillation .
+
+ In  International Conference on Machine Learning ,
+
+ Cited by:  §B.5 ,
+ §D.1 ,
+ §2 .
+
+ Wen  et al.  (2025)
+ J. Wen, Y. Zhu, J. Li, M. Zhu, K. Wu, Z. Xu, R. Cheng, C. Shen, Y. Peng, F. Feng,  et al.
+
+ TinyVLA: towards fast, data-efficient vision-language-action models for robotic manipulation .
+
+ IEEE Robotics and Automation Letters .
+
+ Cited by:  §2 .
+
+ Wu  et al.  (2026)
+ W. Wu, F. Lu, Y. Wang, S. Yang, S. Liu, F. Wang, S. Ma, H. Sun, Y. Wang, Z. Qiu, H. Xiong, Z. Wang, S. Zhou, Y. Ren, K. Zhang, H. Yu, J. Zhao, Q. Zhu, R. Cheng, Y. Li, Y. Huang, X. Zhu, Y. Shen, and K. Zheng
+
+ A pragmatic vla foundation model .
+
+ arXiv preprint arXiv:2601.18692v1 .
+
+ Cited by:  §1 ,
+ §2 ,
+ §4.1 .
+
+ Yan  et al.  (2025)
+ G. Yan, J. Zhu, Y. Deng, S. Yang, R. Qiu, X. Cheng, M. Memmel, R. Krishna, A. Goyal, X. Wang, and D. Fox
+
+ ManiFlow: a general robot manipulation policy via consistency flow training .
+
+ In  Conference on Robot Learning (CoRL) ,
+
+ Cited by:  §2 .
+
+ Ye  et al.  (2026)
+ S. Ye, Y. Ge, K. Zheng, S. Gao, S. Yu, G. Kurian, S. Indupuru, Y. L. Tan, C. Zhu, J. Xiang,  et al.
+
+ World action models are zero-shot policies .
+
+ arXiv preprint arXiv:2602.15922 .
+
+ Cited by:  §1 ,
+ §4.1 .
+
+ Yin  et al.  (2024a)
+ T. Yin, M. Gharbi, T. Park, R. Zhang, E. Shechtman, F. Durand, and W. T. Freeman
+
+ Improved distribution matching distillation for fast image synthesis .
+
+ Advances in neural information processing systems   37 ,  pp. 47455–47487 .
+
+ Cited by:  §2 ,
+ §4.1 .
+
+ Yin  et al.  (2024b)
+ T. Yin, M. Gharbi, R. Zhang, E. Shechtman, F. Durand, W. T. Freeman, and T. Park
+
+ One-step diffusion with distribution matching distillation .
+
+ In  2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) ,
+
+ pp. 6613–6623 .
+
+ Cited by:  §2 ,
+ §4.1 .
+
+ Yuan  et al.  (2026)
+ T. Yuan, Z. Dong, Y. Liu, and H. Zhao
+
+ Fast-WAM: do world action models need test-time future imagination? .
+
+ arXiv preprint arXiv:2603.16666 .
+
+ Cited by:  §1 ,
+ §1 ,
+ §4.1 ,
+ §4.1 ,
+ footnote 2 .
+
+ Zhong  et al.  (2026)
+ Z. Zhong, H. Yan, J. Li, J. He, T. Zhang, and H. Li
+
+ VLA-OPD: bridging offline SFT and online RL for vision-language-action models via on-policy distillation .
+
+ arXiv preprint arXiv:2603.26666 .
+
+ Cited by:  §1 .
+
+
+
+
+ Appendix A  Proofs
+
+
+ See  1
+
+
+ Proof.
+
+ For the linear interpolant
+
+
+
+
+ 𝒙 t = ( 1 − t ) ​ 𝒙 0 + t ​ 𝒙 1 , 𝒙 0 ∼ 𝒟 , 𝒙 1 ∼ 𝒩 ⁡ ( 𝟎 , 𝐈 ) , {\bm{x}}_{t}=(1-t){\bm{x}}_{0}+t{\bm{x}}_{1},\qquad{\bm{x}}_{0}\sim\mathcal{D},\qquad{\bm{x}}_{1}\sim\mathcal{N}(\mathbf{0},\mathbf{I}),
+
+
+ the score and the corresponding instantaneous velocity field satisfy
+
+
+
+
+ ∇ 𝒙 ​ log ​ p t ​ ( 𝒙 ) = − 1 t ​ ( 𝒙 + ( 1 − t ) ​ 𝒗 ​ ( 𝒙 , t ) ) . \nabla_{{\bm{x}}}\log p_{t}({\bm{x}})=-\frac{1}{t}\left({\bm{x}}+(1-t){\bm{v}}({\bm{x}},t)\right).
+
+ (13)
+
+ Following the flow-to-SDE conversion of  Liu et al. (2025) , for any diffusion coefficient  σ t > 0 \sigma_{t}>0 , the
+reverse-time SDE that shares the same marginal  p t p_{t}  of PF-ODE is defined as
+
+
+
+
+ d ​ 𝒙 t = ( 𝒗 ⁡ ( 𝒙 t , t ) − σ t 2 2 ​ ∇ 𝒙 ​ log ⁡ p t ​ ( 𝒙 t ) ) ​ d ​ t + σ t ​ d ​ 𝐰 ¯ t . d{\bm{x}}_{t}=\left({\bm{v}}({\bm{x}}_{t},t)-\frac{\sigma_{t}^{2}}{2}\nabla_{{\bm{x}}}\log p_{t}({\bm{x}}_{t})\right)dt+\sigma_{t}\,d\bar{\mathbf{w}}_{t}.
+
+ (14)
+
+ Substituting Eq. ( 13 ) into
+Eq. ( 14 ) gives
+
+
+
+
+ d ​ 𝒙 t = [ ( 1 + σ t 2 ​ ( 1 − t ) 2 ​ t ) ​ 𝒗 ​ ( 𝒙 t , t ) + σ t 2 2 ​ t ​ 𝒙 t ] ​ d ​ t + σ t ​ d ​ 𝐰 ¯ t . d{\bm{x}}_{t}=\left[\left(1+\frac{\sigma_{t}^{2}(1-t)}{2t}\right){\bm{v}}({\bm{x}}_{t},t)+\frac{\sigma_{t}^{2}}{2t}{\bm{x}}_{t}\right]dt+\sigma_{t}\,d\bar{\mathbf{w}}_{t}.
+
+ (15)
+
+
+
+ A single Euler–Maruyama step of size  Δ ​ t \Delta t  from
+ 𝒙 ~ t \tilde{{\bm{x}}}_{t}  therefore defines the Gaussian transition kernel
+
+
+
+
+ p 𝒗 ​ ( 𝒙 t + Δ ​ t ∣ 𝒙 ~ t ) = 𝒩 ⁡ ( μ 𝒗 , σ t 2 ​ | Δ ​ t | ​ 𝐈 d ) , p_{{\bm{v}}}({\bm{x}}_{t+\Delta t}\mid\tilde{{\bm{x}}}_{t})=\mathcal{N}\left(\mu_{{\bm{v}}},\sigma_{t}^{2}|\Delta t|\,\mathbf{I}_{d}\right),
+
+ (16)
+
+ where
+
+
+
+
+ μ 𝒗 = ( 1 + σ t 2 2 ​ t ​ Δ ​ t ) ​ 𝒙 ~ t + ( 1 + σ t 2 ​ ( 1 − t ) 2 ​ t ) ​ 𝒗 ​ ( 𝒙 ~ t , t ) ​ Δ ​ t . \mu_{{\bm{v}}}=\left(1+\frac{\sigma_{t}^{2}}{2t}\Delta t\right)\tilde{{\bm{x}}}_{t}+\left(1+\frac{\sigma_{t}^{2}(1-t)}{2t}\right){\bm{v}}(\tilde{{\bm{x}}}_{t},t)\Delta t.
+
+ (17)
+
+
+
+ For the flow-map parameterization  𝒇 θ ​ ( 𝒙 , s , t ) = 𝒙 + ( t − s ) ​ 𝒖 θ ​ ( 𝒙 , s , t ) {\bm{f}}_{\theta}({\bm{x}},s,t)={\bm{x}}+(t-s){\bm{u}}_{\theta}({\bm{x}},s,t) ,
+its tangent velocity is
+
+
+
+
+ ∂ τ 𝒇 θ ​ ( 𝒙 , t , τ ) | τ = t = 𝒖 θ ​ ( 𝒙 , t , t ) . \left.\partial_{\tau}{\bm{f}}_{\theta}({\bm{x}},t,\tau)\right|_{\tau=t}={\bm{u}}_{\theta}({\bm{x}},t,t).
+
+ (18)
+
+ We consequently define the student and teacher velocities at
+ 𝒙 ~ t \tilde{{\bm{x}}}_{t}  by
+
+
+
+
+ 𝒗 S := 𝒖 θ ​ ( 𝒙 ~ t , t , t ) , 𝒗 T := 𝒗 ϕ ​ ( 𝒙 ~ t , t ) . {\bm{v}}_{S}:={\bm{u}}_{\theta}(\tilde{{\bm{x}}}_{t},t,t),\qquad{\bm{v}}_{T}:={\bm{v}}_{\phi}(\tilde{{\bm{x}}}_{t},t).
+
+
+ Applying Eq. ( 16 ) to these two velocities gives
+
+
+
+
+ p θ ( ⋅ ∣ 𝒙 ~ t ) = 𝒩 ( μ S , σ t 2 | Δ t | 𝐈 d ) , p ϕ ( ⋅ ∣ 𝒙 ~ t ) = 𝒩 ( μ T , σ t 2 | Δ t | 𝐈 d ) . p_{\theta}(\cdot\mid\tilde{{\bm{x}}}_{t})=\mathcal{N}\left(\mu_{S},\sigma_{t}^{2}|\Delta t|\,\mathbf{I}_{d}\right),\qquad p_{\phi}(\cdot\mid\tilde{{\bm{x}}}_{t})=\mathcal{N}\left(\mu_{T},\sigma_{t}^{2}|\Delta t|\,\mathbf{I}_{d}\right).
+
+
+ Their covariances are identical, and the common
+ 𝒙 ~ t \tilde{{\bm{x}}}_{t} -dependent term cancels from the difference of their
+means. Hence,
+
+
+
+
+ μ S − μ T = ( 1 + σ t 2 ​ ( 1 − t ) 2 ​ t ) ​ Δ ​ t ​ ( 𝒗 S − 𝒗 T ) . \mu_{S}-\mu_{T}=\left(1+\frac{\sigma_{t}^{2}(1-t)}{2t}\right)\Delta t\,({\bm{v}}_{S}-{\bm{v}}_{T}).
+
+ (19)
+
+
+
+ Using the KL divergence between Gaussians with common covariance,
+we obtain
+
+
+
+
+ D KL ( p θ ( ⋅ ∣ 𝒙 ~ t ) ∥ p ϕ ( ⋅ ∣ 𝒙 ~ t ) ) \displaystyle D_{\mathrm{KL}}\left(p_{\theta}(\cdot\mid\tilde{{\bm{x}}}_{t})\,\middle\|\,p_{\phi}(\cdot\mid\tilde{{\bm{x}}}_{t})\right)
+ = ‖ μ S − μ T ‖ 2 2 2 ​ σ t 2 ​ | Δ ​ t | \displaystyle=\frac{\|\mu_{S}-\mu_{T}\|_{2}^{2}}{2\sigma_{t}^{2}|\Delta t|}
+
+ (20)
+
+
+
+ = | Δ ​ t | 2 ​ σ t 2 ​ ( 1 + σ t 2 ​ ( 1 − t ) 2 ​ t ) 2 ​ ‖ 𝒗 S − 𝒗 T ‖ 2 2 \displaystyle=\frac{|\Delta t|}{2\sigma_{t}^{2}}\left(1+\frac{\sigma_{t}^{2}(1-t)}{2t}\right)^{2}\|{\bm{v}}_{S}-{\bm{v}}_{T}\|_{2}^{2}
+
+ (21)
+
+
+
+ = w σ ​ ( t , Δ ​ t ) ​ ‖ 𝒖 θ ​ ( 𝒙 ~ t , t , t ) − 𝒗 ϕ ​ ( 𝒙 ~ t , t ) ‖ 2 2 , \displaystyle=w_{\sigma}(t,\Delta t)\left\|{\bm{u}}_{\theta}(\tilde{{\bm{x}}}_{t},t,t)-{\bm{v}}_{\phi}(\tilde{{\bm{x}}}_{t},t)\right\|_{2}^{2},
+
+ (22)
+
+ where
+
+
+
+
+ w σ ​ ( t , Δ ​ t ) := | Δ ​ t | 2 ​ σ t 2 ​ ( 1 + σ t 2 ​ ( 1 − t ) 2 ​ t ) 2 . w_{\sigma}(t,\Delta t):=\frac{|\Delta t|}{2\sigma_{t}^{2}}\left(1+\frac{\sigma_{t}^{2}(1-t)}{2t}\right)^{2}.
+
+ (23)
+
+ ∎
+
+
+
+ See  2
+
+
+ Proof.
+
+ Let  ( s , t , 𝒙 ) ∼ q θ (s,t,{\bm{x}})\sim q_{\theta}  with  𝒙 = 𝒙 s = ( 1 − s ) ​ 𝒙 0 + s ​ 𝒙 1 {\bm{x}}={\bm{x}}_{s}=(1-s){\bm{x}}_{0}+s{\bm{x}}_{1}  and  m = ( s + t ) / 2 m=(s+t)/2 . Since  s > t s>t , we have  | m − s | = ( s − t ) / 2 ≤ 1 / 2 |m-s|=(s-t)/2\leq 1/2 .
+
+
+ We define the self-consistency target of the student as
+
+
+
+
+ T θ ​ ( 𝒙 , s , t ) = 1 2 ​ [ 𝒗 θ ​ ( 𝒙 , s ) + 𝒗 θ ​ ( 𝒙 ^ m , m ) ] , T_{\theta}({\bm{x}},s,t)=\frac{1}{2}\big[{\bm{v}}_{\theta}({\bm{x}},s)+{\bm{v}}_{\theta}(\hat{{\bm{x}}}_{m},m)\big],
+
+ (24)
+
+ where  𝒙 ^ m = 𝒙 + ( m − s ) ​ 𝒗 θ ​ ( 𝒙 , s ) \hat{{\bm{x}}}_{m}={\bm{x}}+(m-s)\,{\bm{v}}_{\theta}({\bm{x}},s) , and denote the velocity errors at  s s  and  m m  by
+
+
+
+
+ e s := ‖ 𝒗 θ ​ ( 𝒙 , s ) − 𝒗 ϕ ​ ( 𝒙 , s ) ‖ 2 , e m := ‖ 𝒗 θ ​ ( 𝒙 ^ m , m ) − 𝒗 ϕ ​ ( 𝒙 ^ m , m ) ‖ 2 . e_{s}:=\|{\bm{v}}_{\theta}({\bm{x}},s)-{\bm{v}}_{\phi}({\bm{x}},s)\|_{2},\qquad e_{m}:=\|{\bm{v}}_{\theta}(\hat{{\bm{x}}}_{m},m)-{\bm{v}}_{\phi}(\hat{{\bm{x}}}_{m},m)\|_{2}.
+
+ (25)
+
+
+
+ Using the definition of  𝒖 ϕ {\bm{u}}_{\phi} , we decompose the difference between the student map and the ideal shortcut as
+
+
+
+
+ 𝒖 θ ​ ( 𝒙 , s , t ) − 𝒖 ϕ ​ ( 𝒙 , s , t ) \displaystyle{\bm{u}}_{\theta}({\bm{x}},s,t)-{\bm{u}}_{\phi}({\bm{x}},s,t)
+ = ( 𝒖 θ ​ ( 𝒙 , s , t ) − T θ ) + ( T θ − 𝒖 ϕ ​ ( 𝒙 , s , t ) ) \displaystyle=\big({\bm{u}}_{\theta}({\bm{x}},s,t)-T_{\theta}\big)+\big(T_{\theta}-{\bm{u}}_{\phi}({\bm{x}},s,t)\big)
+
+
+
+
+ = ( 𝒖 θ ​ ( 𝒙 , s , t ) − T θ ) + 1 2 ​ [ 𝒗 θ ​ ( 𝒙 , s ) − 𝒗 ϕ ​ ( 𝒙 , s ) ] \displaystyle=\big({\bm{u}}_{\theta}({\bm{x}},s,t)-T_{\theta}\big)+\tfrac{1}{2}\big[{\bm{v}}_{\theta}({\bm{x}},s)-{\bm{v}}_{\phi}({\bm{x}},s)\big]
+
+
+
+
+ + 1 2 ​ [ 𝒗 θ ​ ( 𝒙 ^ m , m ) − 𝒗 ϕ ​ ( 𝒙 ^ m , m ) ] + 1 2 ​ [ 𝒗 ϕ ​ ( 𝒙 ^ m , m ) − 𝒗 ϕ ​ ( 𝒙 ¯ m , m ) ] , \displaystyle\quad+\tfrac{1}{2}\big[{\bm{v}}_{\theta}(\hat{{\bm{x}}}_{m},m)-{\bm{v}}_{\phi}(\hat{{\bm{x}}}_{m},m)\big]+\tfrac{1}{2}\big[{\bm{v}}_{\phi}(\hat{{\bm{x}}}_{m},m)-{\bm{v}}_{\phi}(\bar{\bm{x}}_{m},m)\big],
+
+ (26)
+
+ where the first term is the self-consistency error, the second and third terms are the velocity errors at  s s  and  m m , respectively, and the last term is the propagated state error induced by the mismatch between the student midpoint  𝒙 ^ m \hat{{\bm{x}}}_{m}  and the ideal midpoint  𝒙 ¯ m \bar{{\bm{x}}}_{m} .
+
+
+ By the  L L -Lipschitzness of the teacher,
+
+
+
+
+ ‖ 𝒗 ϕ ​ ( 𝒙 ^ m , m ) − 𝒗 ϕ ​ ( 𝒙 ¯ m , m ) ‖ 2 ≤ L ​ ‖ 𝒙 ^ m − 𝒙 ¯ m ‖ 2 = L ​ | m − s | ​ e s . \|{\bm{v}}_{\phi}(\hat{{\bm{x}}}_{m},m)-{\bm{v}}_{\phi}(\bar{\bm{x}}_{m},m)\|_{2}\leq L\|\hat{{\bm{x}}}_{m}-\bar{\bm{x}}_{m}\|_{2}=L\,|m-s|\,e_{s}.
+
+ (27)
+
+
+
+ Therefore,
+
+
+
+
+ ‖ 𝒖 θ ​ ( 𝒙 , s , t ) − 𝒖 ϕ ​ ( 𝒙 , s , t ) ‖ 2 2 \displaystyle\|{\bm{u}}_{\theta}({\bm{x}},s,t)-{\bm{u}}_{\phi}({\bm{x}},s,t)\|_{2}^{2}
+ ≤ 4 ​ ‖ 𝒖 θ ​ ( 𝒙 , s , t ) − T θ ‖ 2 2 + e s 2 + e m 2 + L 2 ​ ( m − s ) 2 ​ e s 2 \displaystyle\leq 4\|{\bm{u}}_{\theta}({\bm{x}},s,t)-T_{\theta}\|_{2}^{2}+e_{s}^{2}+e_{m}^{2}+L^{2}(m-s)^{2}e_{s}^{2}
+
+
+
+
+ ≤ 4 ​ ‖ 𝒖 θ ​ ( 𝒙 , s , t ) − T θ ‖ 2 2 + ( 1 + L 2 4 ) ​ e s 2 + e m 2 , \displaystyle\leq 4\|{\bm{u}}_{\theta}({\bm{x}},s,t)-T_{\theta}\|_{2}^{2}+\Big(1+\frac{L^{2}}{4}\Big)e_{s}^{2}+e_{m}^{2},
+
+ (28)
+
+ where the last inequality uses  | m − s | ≤ 1 / 2 |m-s|\leq 1/2 .
+
+
+ By taking the expectation of Eq. ( 28 ) over  q θ q_{\theta} , the left-hand side becomes  D q θ ​ ( 𝒖 θ , 𝒖 ϕ ) D_{q_{\theta}}({\bm{u}}_{\theta},{\bm{u}}_{\phi})  and the first term on the right-hand side becomes  4 ​ ℒ SC 4\mathcal{L}_{\text{SC}} .
+The remaining two terms are velocity errors evaluated at  ( s , 𝒙 s ) (s,{\bm{x}}_{s})  and  ( m , 𝒙 ^ m ) (m,\hat{{\bm{x}}}_{m}) , whereas  ℒ OPFD \mathcal{L}_{\text{OPFD}}  averages the same error over  ( t , 𝒙 ~ t ) ∼ ρ θ (t,\tilde{{\bm{x}}}_{t})\sim\rho_{\theta} .
+
+
+ Let  g ⁡ ( t , 𝒙 ) := ‖ 𝒗 θ ​ ( 𝒙 , t ) − 𝒗 ϕ ​ ( 𝒙 , t ) ‖ 2 2 ≥ 0 g(t,{\bm{x}}):=\|{\bm{v}}_{\theta}({\bm{x}},t)-{\bm{v}}_{\phi}({\bm{x}},t)\|_{2}^{2}\geq 0 , so that  ℒ OPFD = 𝔼 ρ θ ​ [ g ] \mathcal{L}_{\text{OPFD}}=\mathbb{E}_{\rho_{\theta}}[g] .
+
+
+ Then, for any distribution  ν \nu  whose density ratio with respect to  ρ θ \rho_{\theta}  is at most  κ \kappa ,
+
+
+
+
+ 𝔼 ν ​ [ g ] = 𝔼 ρ θ ​ [ g ​ d ​ ν d ​ ρ θ ] ≤ κ ​ 𝔼 ρ θ ​ [ g ] = κ ​ ℒ OPFD . \mathbb{E}_{\nu}[g]=\mathbb{E}_{\rho_{\theta}}\Big[g\,\frac{d\nu}{d\rho_{\theta}}\Big]\leq\kappa\,\mathbb{E}_{\rho_{\theta}}[g]=\kappa\,\mathcal{L}_{\text{OPFD}}.
+
+ (29)
+
+ Applying this with  ν \nu  the distributions of  ( s , 𝒙 s ) (s,{\bm{x}}_{s})  and  ( m , 𝒙 ^ m ) (m,\hat{{\bm{x}}}_{m}) , which satisfy this condition by the density-ratio assumption, gives  𝔼 q θ ​ [ e s 2 ] ≤ κ ​ ℒ OPFD \mathbb{E}_{q_{\theta}}[e_{s}^{2}]\leq\kappa\mathcal{L}_{\text{OPFD}}  and  𝔼 q θ ​ [ e m 2 ] ≤ κ ​ ℒ OPFD \mathbb{E}_{q_{\theta}}[e_{m}^{2}]\leq\kappa\mathcal{L}_{\text{OPFD}} .
+
+
+ Therefore,
+
+
+
+
+ D q θ ​ ( 𝒖 θ , 𝒖 ϕ ) \displaystyle D_{q_{\theta}}({\bm{u}}_{\theta},{\bm{u}}_{\phi})
+ ≤ 4 ​ ℒ SC + κ ⁡ ( 1 + L 2 4 ) ​ ℒ OPFD + κ ​ ℒ OPFD \displaystyle\leq 4\,\mathcal{L}_{\text{SC}}+\kappa\Big(1+\frac{L^{2}}{4}\Big)\mathcal{L}_{\text{OPFD}}+\kappa\,\mathcal{L}_{\text{OPFD}}
+
+ (30)
+
+
+
+ = 4 ​ ℒ SC + κ ⁡ ( 2 + L 2 4 ) ​ ℒ OPFD \displaystyle=4\,\mathcal{L}_{\text{SC}}+\kappa\Big(2+\frac{L^{2}}{4}\Big)\mathcal{L}_{\text{OPFD}}
+
+
+
+
+ ≤ max ⁡ { 4 , κ ⁡ ( 2 + L 2 / 4 ) λ } ​ ℒ FastOPD \displaystyle\leq\max\Big\{4,\,\frac{\kappa(2+L^{2}/4)}{\lambda}\Big\}\,\mathcal{L}_{\text{FastOPD}}
+
+
+
+
+ = C λ ​ ℒ FastOPD . \displaystyle=C_{\lambda}\,\mathcal{L}_{\text{FastOPD}}.
+
+
+
+
+ Here,  C λ C_{\lambda}  grows as  λ → 0 \lambda\to 0 , reflecting that the self-consistency term alone cannot anchor the student to the teacher.
+
+
+ ∎
+
+
+
+ See  1
+
+
+ Proof.
+
+ Let the student and the teacher-induced shortcut model start from the same initial noise sample,  𝒙 t 0 θ = 𝒙 ¯ t 0 ∼ 𝒩 ⁡ ( 𝟎 , 𝐈 ) {\bm{x}}_{t_{0}}^{\theta}=\bar{\bm{x}}_{t_{0}}\sim\mathcal{N}(\mathbf{0},\mathbf{I}) , and follow the same sampling schedule
+
+
+
+
+ 1 = t 0 > t 1 > ⋯ > t K = 0 1=t_{0}>t_{1}>\cdots>t_{K}=0
+
+ (31)
+
+ with step sizes  h k := t k − t k + 1 > 0 h_{k}:=t_{k}-t_{k+1}>0 .
+
+
+ Their rollout states are defined by
+
+
+
+
+ 𝒙 t k + 1 θ = 𝒇 θ ​ ( 𝒙 t k θ , t k , t k + 1 ) and 𝒙 ¯ t k + 1 = 𝒇 ϕ ​ ( 𝒙 ¯ t k , t k , t k + 1 ) , {\bm{x}}_{t_{k+1}}^{\theta}={\bm{f}}_{\theta}({\bm{x}}_{t_{k}}^{\theta},t_{k},t_{k+1})\quad\text{and}\quad\bar{\bm{x}}_{t_{k+1}}={\bm{f}}_{\phi}(\bar{\bm{x}}_{t_{k}},t_{k},t_{k+1}),
+
+ (32)
+
+ respectively.
+
+
+ By the definition of  𝒖 ϕ {\bm{u}}_{\phi}  and  m k = ( t k + t k + 1 ) / 2 m_{k}=(t_{k}+t_{k+1})/2 ,
+
+
+
+
+ 𝒇 ϕ ​ ( 𝒙 , t k , t k + 1 ) = 𝒙 − h k ​ 𝒖 ϕ ​ ( 𝒙 , t k , t k + 1 ) = 𝒙 ¯ m k − h k 2 ​ 𝒗 ϕ ​ ( 𝒙 ¯ m k , m k ) , {\bm{f}}_{\phi}({\bm{x}},t_{k},t_{k+1})={\bm{x}}-h_{k}{\bm{u}}_{\phi}({\bm{x}},t_{k},t_{k+1})=\bar{\bm{x}}_{m_{k}}-\tfrac{h_{k}}{2}\,{\bm{v}}_{\phi}(\bar{\bm{x}}_{m_{k}},m_{k}),
+
+ (33)
+
+ where  𝒙 ¯ m k = 𝒙 − h k 2 ​ 𝒗 ϕ ​ ( 𝒙 , t k ) \bar{\bm{x}}_{m_{k}}={\bm{x}}-\tfrac{h_{k}}{2}\,{\bm{v}}_{\phi}({\bm{x}},t_{k}) .
+
+
+ Thus,  𝒇 ϕ ​ ( ⋅ , t k , t k + 1 ) {\bm{f}}_{\phi}(\cdot,t_{k},t_{k+1})  is the composition of two Euler steps of size  h k / 2 h_{k}/2 .
+Since  𝒗 ϕ ​ ( ⋅ , t ) {\bm{v}}_{\phi}(\cdot,t)  is  L L -Lipschitz, each Euler step is  ( 1 + h k ​ L / 2 ) (1+h_{k}L/2) -Lipschitz, and hence  𝒇 ϕ ​ ( ⋅ , t k , t k + 1 ) {\bm{f}}_{\phi}(\cdot,t_{k},t_{k+1})  is  L F , k L_{F,k} -Lipschitz with
+
+
+
+
+
+
+ L F , k := ( 1 + h k ​ L 2 ) 2 . L_{F,k}:=\Big(1+\frac{h_{k}L}{2}\Big)^{2}.
+
+ (34)
+
+
+
+ Then,
+
+
+
+
+ ‖ 𝒙 t k + 1 θ − 𝒙 ¯ t k + 1 ‖ 2 \displaystyle\|{\bm{x}}_{t_{k+1}}^{\theta}-\bar{\bm{x}}_{t_{k+1}}\|_{2}
+ = ‖ 𝒇 θ ​ ( 𝒙 t k θ , t k , t k + 1 ) − 𝒇 ϕ ​ ( 𝒙 ¯ t k , t k , t k + 1 ) ‖ 2 \displaystyle=\|{\bm{f}}_{\theta}({\bm{x}}_{t_{k}}^{\theta},t_{k},t_{k+1})-{\bm{f}}_{\phi}(\bar{{\bm{x}}}_{t_{k}},t_{k},t_{k+1})\|_{2}
+
+
+
+
+ ≤ ‖ 𝒇 θ ​ ( 𝒙 t k θ , t k , t k + 1 ) − 𝒇 ϕ ​ ( 𝒙 t k θ , t k , t k + 1 ) ‖ 2 \displaystyle\leq\|{\bm{f}}_{\theta}({\bm{x}}_{t_{k}}^{\theta},t_{k},t_{k+1})-{\bm{f}}_{\phi}({\bm{x}}_{t_{k}}^{\theta},t_{k},t_{k+1})\|_{2}
+
+
+
+
+ + ‖ 𝒇 ϕ ​ ( 𝒙 t k θ , t k , t k + 1 ) − 𝒇 ϕ ​ ( 𝒙 ¯ t k , t k , t k + 1 ) ‖ 2 \displaystyle\quad+\|{\bm{f}}_{\phi}({\bm{x}}_{t_{k}}^{\theta},t_{k},t_{k+1})-{\bm{f}}_{\phi}(\bar{\bm{x}}_{t_{k}},t_{k},t_{k+1})\|_{2}
+
+
+
+
+ ≤ h k ​ ‖ 𝒖 θ ​ ( 𝒙 t k θ , t k , t k + 1 ) − 𝒖 ϕ ​ ( 𝒙 t k θ , t k , t k + 1 ) ‖ 2 + L F , k ​ ‖ 𝒙 t k θ − 𝒙 ¯ t k ‖ 2 . \displaystyle\leq h_{k}\|{\bm{u}}_{\theta}({\bm{x}}_{t_{k}}^{\theta},t_{k},t_{k+1})-{\bm{u}}_{\phi}({\bm{x}}_{t_{k}}^{\theta},t_{k},t_{k+1})\|_{2}+L_{F,k}\|{\bm{x}}_{t_{k}}^{\theta}-\bar{\bm{x}}_{t_{k}}\|_{2}.
+
+ (35)
+
+
+
+ Denote  E k := 𝔼 ⁡ [ ‖ 𝒙 t k θ − 𝒙 ¯ t k ‖ 2 2 ] E_{k}:=\mathbb{E}\big[\|{\bm{x}}_{t_{k}}^{\theta}-\bar{\bm{x}}_{t_{k}}\|_{2}^{2}\big]  and  D k D_{k}  as in Theorem  1 .
+Then we obtain
+
+
+
+
+ E k + 1 ≤ 2 ​ h k 2 ​ D k + 2 ​ L F , k 2 ​ E k . E_{k+1}\leq 2h_{k}^{2}D_{k}+2L_{F,k}^{2}E_{k}.
+
+ (36)
+
+
+
+ Since the two trajectories start from the same noise sample,  E 0 = 0 E_{0}=0 . Unrolling Eq. ( 36 ) gives
+
+
+
+
+ E K ≤ ∑ k = 0 K − 1 a k ​ D k , a k := 2 ​ h k 2 ​ ∏ j = k + 1 K − 1 2 ​ L F , j 2 . E_{K}\leq\sum_{k=0}^{K-1}a_{k}D_{k},\qquad a_{k}:=2h_{k}^{2}\prod_{j=k+1}^{K-1}2L_{F,j}^{2}.
+
+ (37)
+
+ By the assumption of  κ roll \kappa_{\mathrm{roll}}  and Proposition  2 ,
+
+
+
+
+ E K ≤ κ roll ​ ( ∑ k = 0 K − 1 a k ) ​ D q θ ​ ( 𝒖 θ , 𝒖 ϕ ) ≤ κ roll ​ ( ∑ k = 0 K − 1 a k ) ​ C λ ​ ℒ FastOPD . E_{K}\leq\kappa_{\mathrm{roll}}\Big(\sum_{k=0}^{K-1}a_{k}\Big)D_{q_{\theta}}({\bm{u}}_{\theta},{\bm{u}}_{\phi})\leq\kappa_{\mathrm{roll}}\Big(\sum_{k=0}^{K-1}a_{k}\Big)C_{\lambda}\,\mathcal{L}_{\text{FastOPD}}.
+
+ (38)
+
+
+
+ The pair  ( 𝒙 t K θ , 𝒙 ¯ t K ) ({\bm{x}}_{t_{K}}^{\theta},\bar{\bm{x}}_{t_{K}})  constructed from the same initial noise is a valid coupling of  p θ p_{\theta}  and  p ϕ p_{\phi} . Therefore,
+
+
+
+
+ W 2 2 ​ ( p θ , p ϕ ) ≤ 𝔼 ⁡ [ ‖ 𝒙 t K θ − 𝒙 ¯ t K ‖ 2 2 ] = E K ≤ C 2 ​ ℒ FastOPD , C 2 := κ roll ​ C λ ​ ∑ k = 0 K − 1 a k . W_{2}^{2}(p_{\theta},p_{\phi})\leq\mathbb{E}\big[\|{\bm{x}}_{t_{K}}^{\theta}-\bar{\bm{x}}_{t_{K}}\|^{2}_{2}\big]=E_{K}\leq C^{2}\,\mathcal{L}_{\text{FastOPD}},\qquad C^{2}:=\kappa_{\mathrm{roll}}\,C_{\lambda}\sum_{k=0}^{K-1}a_{k}.
+
+ (39)
+
+ Taking square roots on both sides yields
+
+
+
+
+ W 2 ​ ( p θ , p ϕ ) ≤ C ​ ℒ FastOPD , W_{2}(p_{\theta},p_{\phi})\leq C\sqrt{\mathcal{L}_{\text{FastOPD}}},
+
+ (40)
+
+ hence  ℒ FastOPD → 0 \mathcal{L}_{\text{FastOPD}}\to 0  implies  W 2 ​ ( p θ , p ϕ ) → 0 W_{2}(p_{\theta},p_{\phi})\to 0 .
+∎
+
+
+
+
+ Appendix B  Experimental Details
+
+
+ B.1  Implementation Details.
+
+
+ All experiments are implemented within the LeRobot framework  ( Cadene et al., 2024 ) .
+We report the public checkpoints used for teacher and student initialization in Tab.  7 . For two-time projection, the source and target timesteps are embedded using fixed sinusoidal positional encodings, and the remaining weights of the time projection layer  ψ ⁡ ( ⋅ ) \psi(\cdot)  are randomly initialized.
+
+
+ Table 7:
+Model checkpoints used in the experiments.
+
+
+
+ Benchmark
+ Model
+
+
+ Checkpoint
+
+
+ LIBERO
+ π 0.5 \pi_{0.5}
+
+
+ lerobot/pi05_libero_finetuned_v044
+
+
+ SmolVLA
+
+
+ HuggingFaceVLA/smolvla_libero
+
+
+ SmolVLA (OPD Init)
+
+
+ lerobot/smolvla_base
+
+
+ RoboTwin 2.0
+ LingBot-VLA
+
+
+ robbyant/lingbot-vla-4b-posttrain-robotwin
+
+
+ Fast-WAM
+
+
+ lerobot/fastwam_robotwin_uncond_3cam_384
+
+
+ SmolVLA
+
+
+ lerobot/smolvla_robotwin
+
+
+ Real-world
+ MolmoAct2
+
+
+ allenai/MolmoAct2-BimanualYAM
+
+
+
+ SmolVLA
+
+
+ lerobot/smolvla_base
+
+
+
+
+
+ B.2  Configuration Details.
+
+
+ In Tab.  8 , we report training and evaluation configurations for full reproducibility.
+
+
+ Table 8:
+Training and evaluation configurations for FastOPD.
+
+
+
+
+
+ LIBERO
+ RoboTwin 2.0
+ Real-world
+
+ Model
+
+ Teacher (Params)
+ π 0.5 \pi_{0.5}  (3.3B)
+ LingBot-VLA (4.2B)
+ Fast-WAM (6B)
+ MolmoAct2 (5B)
+
+ Student (Params)
+ SmolVLA +  ψ \psi  (451M)
+ SmolVLA +  ψ \psi  (451M)
+ SmolVLA +  ψ \psi  (451M)
+ SmolVLA +  ψ \psi  (451M)
+
+ Optimization
+
+ Optimizer
+ AdamW
+ AdamW
+ AdamW
+ AdamW
+
+ Adam  ( β 1 , β 2 ) (\beta_{1},\beta_{2})
+ ( 0.9 , 0.95 ) (0.9,0.95)
+ ( 0.9 , 0.95 ) (0.9,0.95)
+ ( 0.9 , 0.95 ) (0.9,0.95)
+ ( 0.9 , 0.95 ) (0.9,0.95)
+
+ Adam  ϵ \epsilon
+ 10 − 8 10^{-8}
+ 10 − 8 10^{-8}
+ 10 − 8 10^{-8}
+ 10 − 8 10^{-8}
+
+ Adam weight decay
+ 10 − 10 10^{-10}
+ 10 − 10 10^{-10}
+ 10 − 10 10^{-10}
+ 10 − 10 10^{-10}
+
+ Gradient clipping
+ 10.0
+ 10.0
+ 10.0
+ 10.0
+
+ Scheduler
+ Cosine
+ Cosine
+ Cosine
+ Cosine
+
+ Learning rate
+ 1 × 10 − 4 1\times 10^{-4}
+ 1 × 10 − 4 1\times 10^{-4}
+ 1 × 10 − 4 1\times 10^{-4}
+ 2 × 10 − 5 2\times 10^{-5}
+
+ FastOPD training
+
+ Training iterations
+ 10K
+ 50K
+ 50K
+ 20K
+
+ Batch size
+ 64
+ 128
+ 128
+ 64
+
+ λ \lambda
+ 0.1
+ 0.1
+ 0.1
+ 1.0
+
+ Time sampling distribution  p p
+ Beta(1.5,1)
+ Beta(1.5,1)
+ Shifted uniform ( s = 5 s=5 ) 2 2
+                     2
+
+
+
+                  We sample  u ∼ 𝒰 ⁡ ( 0 , 1 ) u\sim\mathcal{U}(0,1)  and apply the flow-shift transformation
+ t = s ​ u 1 + ( s − 1 ) ​ u t=\frac{su}{1+(s-1)u}  with  s = 5 s=5 , following Fast-WAM  ( Yuan et al., 2026 )  implementation.
+
+ Beta(1.5,1)
+
+ Evaluation
+
+ Time discretization
+ Uniform
+ Uniform
+ Uniform
+ Uniform
+
+ Action execution steps  K K
+ 10
+ 50
+ 24
+ 30
+
+
+
+
+
+ B.3  Computational Resources
+
+
+ For full reproducibility, we report the computational resources used in our experiments in Tab.  9 .
+Latency is measured on a single RTX 3090
+(App.  B ), and real-world policies are deployed on a single RTX 4090
+(App.  B.5 ).
+
+
+ Table 9:  Hardware used for training.
+
+
+ Experiment
+ Hardware
+
+ LIBERO (main)
+ 1 × 1\times  NVIDIA RTX 4090 (24 GB)
+
+ LIBERO (ablations)
+ 1 × 1\times  NVIDIA RTX 4090 or RTX 3090 (24 GB each)
+
+ RoboTwin 2.0 (LingBot-VLA)
+ 2 × 2\times  NVIDIA RTX 4090 (24 GB each)
+
+ RoboTwin 2.0 (Fast-WAM)
+ 1 × 1\times  NVIDIA H200 (141 GB)
+
+ Real-world
+ 1 × 1\times  NVIDIA B200 (180 GB)
+
+
+
+
+ B.4  Simulation Experimental Details.
+
+
+ Evaluation uses 50 episodes per task (2,000 episodes on LIBERO; 2,500 per setting on RoboTwin 2.0), and all results are from a single training run (seed 100000).
+Following the latency details of  Luan et al. (2026) , we measure end-to-end inference latency on a single NVIDIA RTX 3090 (CUDA 12.8, PyTorch 2.11) in bfloat16 with batch size 1, excluding pre- and post-processing, and report the median of 100 runs after 10 warm-up runs. 3 3
+               3
+
+
+
+            Fast-WAM does not fit in 24 GB memory with its text encoder, so we time the encoder separately and add it.
+
+
+
+ B.5  Real-world Experimental Details
+
+
+ Robot setup.
+We follow the real-robot setup of MolmoAct2  ( Fang et al., 2026a ) . Specifically, we use the right arm of a bimanual YAM robot with six joints and a parallel-jaw
+gripper, controlled by absolute joint-position commands (7-dimensional action space), with the
+joint velocity capped at 0.75 rad/s (Fig.  8 ).
+The policy observes two RGB views (top and right wrist;  480 × 640 480\times 640 , 30 fps; current frame
+only) together with the 7-dimensional proprioceptive state (six joints and gripper), and receives
+the language instruction.
+Actions and states are normalized with quantile normalization for all models (the gripper is not normalized for MolmoAct2). All policies are run on a single NVIDIA RTX 4090, with SmolVLA-based
+models in float32.
+
+
+ Figure 8:  Robot setting.
+(a) Teleoperation setup for data collection, with lead arms, the follower YAM arm, and top-view and wrist cameras.
+(b) Close-up view of the evaluation setup.
+(c) Object-position initialization: the current top-camera frame is compared against a reference frame, and their pixel-wise difference is used to place objects at the same initial positions across trials.
+
+
+ Dataset.
+We collect teleoperated demonstrations of multiple tasks on the YAM arm and train all policies
+on the same dataset (Tab.  10 ). The evaluation is performed on  pnp-plate . The teacher MolmoAct2 is fine-tuned on this dataset for 14,000 iterations.
+The student is initialized from SmolVLA, warmed up with flow-matching-based behavior cloning for
+10,000 iterations, and then trained with FastOPD for 20,000 iterations.
+At inference, the type of target objects including a ball and a plate are fixed and the language instruction is fixed as “Pick up the ball and place it on the plate”.
+
+
+ Table 10:  Real-world dataset statistics. Average episode length is computed at 30 fps.
+
+
+ Task
+
+
+ Language instruction
+
+ Episodes
+ Frames
+ Avg. Length (s)
+
+ pnp-plate
+
+
+ “Pick up the ball and place it on the plate.”
+
+ 106
+ 47,002
+ 14.8
+
+ pnp-box
+
+
+ “Pick up the basketball and place it in the box.”
+
+ 108
+ 47,616
+ 14.7
+
+ open-close
+
+
+ “Open the box, put the ball inside, and close it.”
+
+ 53
+ 44,780
+ 28.2
+
+
+
+ “Open the box, put the basketball inside, and close it.”
+
+ 55
+ 46,834
+ 28.4
+
+ open-place
+
+
+ “Open the box, take the ball out, and place it in the pot.”
+
+ 52
+ 41,637
+ 26.7
+
+
+
+ “Open the box, take the ball out, and place it on the tray.”
+
+ 50
+ 40,676
+ 27.1
+
+ Overall
+
+ 424
+ 268,545
+ 21.1
+
+
+
+ Figure 9:  Real-world manipulation task setups on the YAM robot arm. Left two columns show the initial scene and the right show the robot during execution.
+
+
+ Policy execution.  Tab.  11  summarizes the execution settings. All
+policies predict 30-step action chunks (1.0 s) and send commands at 30 Hz. The SmolVLA (warm-up) and our policy share the same synchronous execution scheme. MolmoAct2 is run with its default asynchronous execution, replanning every 0.5 s,
+skipping the actions already covered by the inference delay, and linearly blending consecutive
+chunks over 2–10 steps. No real-time chunking or gripper post-processing is applied to any model.
+
+
+ Table 11:  Real-world policy execution settings. All policies predict 30-step action chunks (1.0 s)
+and send commands at 30 Hz. For SmolVLA, values are reported for 4 and 10 denoising steps.
+Inference latency is measured on the robot side, including HTTP communication.
+
+
+
+ MolmoAct2
+ SmolVLA (warm-up)
+ Ours
+
+ Execution
+ async (re-plan every 0.5 s)
+ sync
+ sync
+
+ Sampler
+ Euler, 10 steps
+ Euler, 4 / 10 steps
+ flow map, 4 steps
+
+ Actions executed per chunk
+ ∼ \sim 15
+ 30
+ 30
+
+ Chunk blending
+ linear (2–10 steps)
+ none
+ none
+
+ Inference latency
+ 300–450 ms
+ 118 / 178 ms
+ 120 ms
+
+ Re-planning rate
+ 1.8–1.9 Hz
+ 0.89 / 0.86 Hz
+ 0.87 Hz
+
+
+
+ Evaluation details.  Each policy is evaluated over 50 episodes with a time limit of 30 s. An episode is counted as successful once the ball has been placed entirely within the
+plate and the gripper has opened. We report the
+success rate and the task completion time, the latter averaged over successful episodes only, following the  Wang et al. (2025)  evaluation protocol.
+To ensure a fair comparison, the initial scene of every episode is matched to the corresponding episode of a reference evaluation session by aligning the current top-camera frame with the
+reference image (Fig.  8 (c)), so that all policies start from identical
+object configurations.
+
+
+
+
+ Appendix C  Additional Experiments
+
+
+ Connection with previous works.
+Although SnapFlow  ( Luan et al., 2026 )  adopts a two-step consistency target similar to ours, the two objectives differ in both their anchor and their scope.
+SnapFlow is a self-distillation method that combines flow matching on ground-truth actions with a shortcut loss defined only on the fixed interval from  t = 1 t=1  to  t = 0 t=0 :
+
+
+
+
+ ℒ SnapFlow = λ 1 ​ ℒ FM + ( 1 − λ 1 ) ​ λ 2 ​ ℒ shortcut , ℒ shortcut = ‖ 𝒖 θ ​ ( 𝒙 1 , 1 , 0 ∣ c ) − 𝒗 tgt ‖ 2 2 , \mathcal{L}_{\text{SnapFlow}}=\lambda_{1}\,\mathcal{L}_{\text{FM}}+(1-\lambda_{1})\lambda_{2}\,\mathcal{L}_{\text{shortcut}},\qquad\mathcal{L}_{\text{shortcut}}=\big\|{\bm{u}}_{\theta}({\bm{x}}_{1},1,0\mid c)-{\bm{v}}_{\text{tgt}}\big\|_{2}^{2},
+
+ (41)
+
+ where  𝒗 tgt = 1 2 ​ [ sg ⁡ [ 𝒗 θ ​ ( 𝒙 1 , 1 ∣ c ) ] + sg ⁡ [ 𝒗 θ ​ ( 𝒙 ^ 0.5 , 0.5 ∣ c ) ] ] {\bm{v}}_{\text{tgt}}=\tfrac{1}{2}\big[\mathrm{sg}[{\bm{v}}_{\theta}({\bm{x}}_{1},1\mid c)]+\mathrm{sg}[{\bm{v}}_{\theta}(\hat{{\bm{x}}}_{0.5},0.5\mid c)]\big]  and  𝒙 ^ 0.5 = 𝒙 1 − 0.5 ​ sg ​ [ 𝒗 θ ​ ( 𝒙 1 , 1 ∣ c ) ] \hat{{\bm{x}}}_{0.5}={\bm{x}}_{1}-0.5\,\mathrm{sg}[{\bm{v}}_{\theta}({\bm{x}}_{1},1\mid c)] .
+In contrast, FastOPD enforces self-consistency over arbitrary intervals  ( s , t ) (s,t) , yielding a flow map that supports any number of sampling steps, and anchors the target to the teacher through OPFD rather than to the data through flow matching.
+SnapFlow can thus be viewed as a teacher-free counterpart of our objective restricted to a single interval, which allows us to isolate the contribution of teacher supervision.
+
+
+ Student initialization.
+
+In Sec.  4.3 , we studied on-policy distillation (OPD) as an alternative initialization strategy for the flow map.
+Specifically, we first train the SmolVLA base model with OPD for 5,000 iterations (Stage 1), and then fine-tune it into a flow map with the FastOPD objective for 10,000 iterations (Stage 2).
+Tab.  12  reports the per-suite results, and Fig.  10  shows the success rate over training iterations.
+As in Fig.  4 , FastOPD consistently improves performance over the course of training under this OPD-based initialization as well.
+
+
+ Table 12:  Per-suite results of OPD-based initialization. Success rates (%) on LIBERO.
+
+
+ Method
+ NFE
+ Spatial
+ Object
+ Goal
+ Long
+ Avg.
+
+ OPD init.
+ 1
+ 78.0
+ 94.2
+ 78.2
+ 40.2
+ 72.7
+
+ 2
+ 84.4
+ 95.4
+ 87.8
+ 45.0
+ 78.2
+
+ 4
+ 58.0
+ 59.8
+ 53.8
+ 5.0
+ 44.2
+
+ 10
+ 82.6
+ 94.6
+ 89.0
+ 48.2
+ 78.6
+
+  + FastOPD
+ 1
+ 84.2
+ 92.8
+ 90.8
+ 54.0
+ 80.5
+
+ 2
+ 84.6
+ 95.2
+ 94.2
+ 57.8
+ 83.0
+
+ 4
+ 83.6
+ 97.2
+ 91.4
+ 56.4
+ 82.2
+
+ 10
+ 80.4
+ 92.8
+ 93.4
+ 60.2
+ 81.7
+
+
+
+ Figure 10:  Success rate (%) on LIBERO over training iterations with OPD-based initialization.
+
+
+
+ Appendix D  Few-step Distillation algorithms
+
+
+ In this section, we provide detailed descriptions of the few-step distillation algorithms leveraged in our experiments as baselines.
+
+
+ D.1  Distribution Matching Distillation
+
+
+ Referring to OneDP  ( Wang et al., 2025 ) , we design DMD as a one-step generator, and jointly train it with a fake-score critic  𝒗 ψ ​ ( 𝒙 , t ) {\bm{v}}_{\psi}({\bm{x}},t)
+of the same architecture, initialized from the same checkpoint as
+ 𝒗 θ {\bm{v}}_{\theta} . Here, generator and critic are updated alternately at every step.
+
+
+ Generator.  A sample is produced with a single Euler step of the
+student’s own PF-ODE from pure noise  𝒙 1 ∼ 𝒩 ⁡ ( 𝟎 , 𝐈 ) {\bm{x}}_{1}\sim\mathcal{N}(\mathbf{0},\mathbf{I}) ,
+
+
+
+
+ 𝒙 ^ 0 = 𝒙 1 − 𝒗 θ ​ ( 𝒙 1 , 1 ) . \hat{{\bm{x}}}_{0}={\bm{x}}_{1}-{\bm{v}}_{\theta}({\bm{x}}_{1},1).
+
+ (42)
+
+
+
+ From the re-noised sample  𝒙 t {\bm{x}}_{t}  from  𝒙 ^ 0 \hat{{\bm{x}}}_{0} , the teacher and critic denoised estimates are formed as
+
+
+
+
+ 𝒙 ^ 0 real = 𝒙 t − t ​ 𝒗 ϕ ​ ( 𝒙 t , t ) , 𝒙 ^ 0 fake = 𝒙 t − t ​ 𝒗 ψ ​ ( 𝒙 t , t ) . \hat{{\bm{x}}}_{0}^{\mathrm{real}}={\bm{x}}_{t}-t\,{\bm{v}}_{\phi}({\bm{x}}_{t},t),\qquad\hat{{\bm{x}}}_{0}^{\mathrm{fake}}={\bm{x}}_{t}-t\,{\bm{v}}_{\psi}({\bm{x}}_{t},t).
+
+ (43)
+
+ The distribution-matching direction is then defined as  𝐠 0 = 𝒙 ^ 0 fake − 𝒙 ^ 0 real \mathbf{g}_{0}=\hat{{\bm{x}}}_{0}^{\mathrm{fake}}-\hat{{\bm{x}}}_{0}^{\mathrm{real}} . Here, we normalize it per sample by the mean absolute magnitude of the teacher’s own correction,
+
+
+
+
+ 𝐠 = 𝐠 0 mean ⁡ ( | 𝒙 ^ 0 real − sg ⁡ [ 𝒙 ^ 0 ] | ) + ϵ , \mathbf{g}=\frac{\mathbf{g}_{0}}{\mathrm{mean}\big(\big|\hat{{\bm{x}}}_{0}^{\mathrm{real}}-\mathrm{sg}[\hat{{\bm{x}}}_{0}]\big|\big)+\epsilon},
+
+ (44)
+
+ where  mean ⁡ ( ⋅ ) \mathrm{mean}(\cdot)  averages over the action-chunk and
+action-dimension axes, for training stability.
+The
+generator is trained with the surrogate loss whose gradient with respect
+to  𝒙 ^ 0 \hat{{\bm{x}}}_{0}  equals  𝐠 \mathbf{g} :
+
+
+
+
+ ℒ gen ​ ( θ ) = 1 2 ​ ‖ 𝒙 ^ 0 − sg ⁡ [ 𝒙 ^ 0 − 𝐠 ] ‖ 2 2 . \mathcal{L}_{\mathrm{gen}}(\theta)=\tfrac{1}{2}\big\|\hat{{\bm{x}}}_{0}-\mathrm{sg}[\hat{{\bm{x}}}_{0}-\mathbf{g}]\big\|_{2}^{2}.
+
+ (45)
+
+
+
+ Critic.  The fake-score network  𝒗 ψ {\bm{v}}_{\psi}  is trained with
+ordinary denoising score matching on the generator’s output:
+
+
+
+
+ ℒ crit ​ ( ψ ) = 𝔼 t ′ , ϵ ​ [ ‖ 𝒗 ψ ​ ( 𝒙 t ′ , t ′ ) − ( ϵ − sg ⁡ [ 𝒙 ^ 0 ] ) ‖ 2 2 ] , \mathcal{L}_{\mathrm{crit}}(\psi)=\mathbb{E}_{t^{\prime},\bm{\epsilon}}\Big[\big\|{\bm{v}}_{\psi}\big({\bm{x}}_{t^{\prime}},t^{\prime}\big)-\big(\bm{\epsilon}-\mathrm{sg}[\hat{{\bm{x}}}_{0}]\big)\big\|_{2}^{2}\Big],
+
+ (46)
+
+ where  𝒙 t ′ = ( 1 − t ′ ) ​ sg ​ [ 𝒙 ^ 0 ] + t ′ ​ ϵ {\bm{x}}_{t^{\prime}}=(1-t^{\prime})\,\mathrm{sg}[\hat{{\bm{x}}}_{0}]+t^{\prime}\bm{\epsilon} .
+
+
+ Algorithm 2    Training Algorithm for DMD
+
+
+               1:
+
+
+            Dataset  𝒟 \mathcal{D} ; teacher  𝒗 ϕ {\bm{v}}_{\phi} ; generator  𝒗 θ {\bm{v}}_{\theta} ; critic  𝒗 ψ {\bm{v}}_{\psi}
+
+
+
+               2:
+
+
+             for  each training iteration  do
+
+
+
+               3:
+
+
+               ( 𝒙 0 , c ) ∼ 𝒟 ({\bm{x}}_{0},c)\sim\mathcal{D} ,  𝒙 1 ∼ 𝒩 ⁡ ( 𝟎 , 𝐈 ) {\bm{x}}_{1}\sim\mathcal{N}(\mathbf{0},\mathbf{I})
+
+
+
+               4:
+
+
+               𝒙 ^ 0 ← 𝒙 1 − 𝒗 θ ​ ( 𝒙 1 , 1 ∣ c ) \hat{{\bm{x}}}_{0}\leftarrow{\bm{x}}_{1}-{\bm{v}}_{\theta}({\bm{x}}_{1},1\mid c)   ⊳ \triangleright   one-step generation
+
+
+
+               5:
+
+
+               t ∼ p ⁡ ( t ) t\sim p(t) ,  𝒙 1 ′ ∼ 𝒩 ⁡ ( 𝟎 , 𝐈 ) {\bm{x}}_{1}^{\prime}\sim\mathcal{N}(\mathbf{0},\mathbf{I}) ;   𝒙 t ← ( 1 − t ) ​ sg ​ [ 𝒙 ^ 0 ] + t ​ 𝒙 1 ′ {\bm{x}}_{t}\leftarrow(1-t)\,\mathrm{sg}[\hat{{\bm{x}}}_{0}]+t\,{\bm{x}}_{1}^{\prime}
+
+
+
+               6:
+
+
+               𝒙 ^ 0 real ← 𝒙 t − t ​ 𝒗 ϕ ​ ( 𝒙 t , t ∣ c ) \hat{{\bm{x}}}_{0}^{\mathrm{real}}\leftarrow{\bm{x}}_{t}-t\,{\bm{v}}_{\phi}({\bm{x}}_{t},t\mid c) ,   𝒙 ^ 0 fake ← 𝒙 t − t ​ 𝒗 ψ ​ ( 𝒙 t , t ∣ c ) \hat{{\bm{x}}}_{0}^{\mathrm{fake}}\leftarrow{\bm{x}}_{t}-t\,{\bm{v}}_{\psi}({\bm{x}}_{t},t\mid c)
+
+
+
+               7:
+
+
+               𝐠 ← ( 𝒙 ^ 0 fake − 𝒙 ^ 0 real ) / ( mean ⁡ ( | 𝒙 ^ 0 real − sg ⁡ [ 𝒙 ^ 0 ] | ) + ϵ ) \mathbf{g}\leftarrow\big(\hat{{\bm{x}}}_{0}^{\mathrm{fake}}-\hat{{\bm{x}}}_{0}^{\mathrm{real}}\big)\big/\big(\mathrm{mean}(|\hat{{\bm{x}}}_{0}^{\mathrm{real}}-\mathrm{sg}[\hat{{\bm{x}}}_{0}]|)+\epsilon\big)
+
+
+
+               8:
+
+
+               ℒ gen ← 1 2 ​ ‖ 𝒙 ^ 0 − sg ⁡ [ 𝒙 ^ 0 − 𝐠 ] ‖ 2 2 \mathcal{L}_{\mathrm{gen}}\leftarrow\tfrac{1}{2}\|\hat{{\bm{x}}}_{0}-\mathrm{sg}[\hat{{\bm{x}}}_{0}-\mathbf{g}]\|_{2}^{2}
+
+
+
+               9:
+
+
+               θ ← θ − η ​ ∇ θ ℒ gen \theta\leftarrow\theta-\eta\nabla_{\theta}\mathcal{L}_{\mathrm{gen}}
+ ⊳ \triangleright   update generator
+
+
+
+               10:
+
+
+               t ′ ∼ p ⁡ ( t ) t^{\prime}\sim p(t) ,  ϵ ∼ 𝒩 ⁡ ( 𝟎 , 𝐈 ) \bm{\epsilon}\sim\mathcal{N}(\mathbf{0},\mathbf{I})
+ 𝒙 t ′ ← ( 1 − t ′ ) ​ sg ​ [ 𝒙 ^ 0 ] + t ′ ​ ϵ {\bm{x}}_{t^{\prime}}\leftarrow(1-t^{\prime})\,\mathrm{sg}[\hat{{\bm{x}}}_{0}]+t^{\prime}\bm{\epsilon}
+
+
+
+               11:
+
+
+               ℒ crit ← ‖ 𝒗 ψ ​ ( 𝒙 t ′ , t ′ ∣ c ) − ( ϵ − sg ⁡ [ 𝒙 ^ 0 ] ) ‖ 2 2 \mathcal{L}_{\mathrm{crit}}\leftarrow\|{\bm{v}}_{\psi}({\bm{x}}_{t^{\prime}},t^{\prime}\mid c)-(\bm{\epsilon}-\mathrm{sg}[\hat{{\bm{x}}}_{0}])\|_{2}^{2}
+
+
+
+               12:
+
+
+               ψ ← ψ − η ψ ​ ∇ ψ ℒ crit \psi\leftarrow\psi-\eta_{\psi}\nabla_{\psi}\mathcal{L}_{\mathrm{crit}}
+ ⊳ \triangleright   update critic
+
+
+
+               13:
+
+
+             end   for
+
+
+
+
+
+ D.2  Consistency Trajectory Model
+
+
+ We follow the Consistency Trajectory Model (CTM) formulation of  ( Kim et al., 2024 ) , which
+generalizes the original Consistency Distillation  ( Song et al., 2023 )  by allowing anytime-to-anytime jump with a denoising score-matching (DSM) regularizer.
+We train the two-time flow map
+ 𝒇 θ ​ ( 𝒙 , s , t ) = 𝒙 + ( t − s ) ​ 𝒖 θ ​ ( 𝒙 , s , t ) {\bm{f}}_{\theta}({\bm{x}},s,t)={\bm{x}}+(t-s){\bm{u}}_{\theta}({\bm{x}},s,t)  together with an EMA target network  θ − \theta^{-} ,
+updated as  θ − ← μ ​ θ − + ( 1 − μ ) ​ θ \theta^{-}\leftarrow\mu\theta^{-}+(1-\mu)\theta .
+
+
+ For sampled timesteps  1 ≥ s ≥ r ≥ 0 1\geq s\geq r\geq 0  and an intermediate solver time  u ∼ Unif ⁡ [ r , s ] u\sim\mathrm{Unif}[r,s] ,
+with  𝒙 1 ∼ 𝒩 ⁡ ( 𝟎 , 𝐈 ) {\bm{x}}_{1}\sim\mathcal{N}(\mathbf{0},\mathbf{I}) ,  𝒙 0 ∼ p 0 {\bm{x}}_{0}\sim p_{0} , and
+ 𝒙 s = ( 1 − s ) ​ 𝒙 0 + s ​ 𝒙 1 {\bm{x}}_{s}=(1-s){\bm{x}}_{0}+s{\bm{x}}_{1} , the student first jumps from  s s  to  r r ,
+
+
+
+
+ 𝒙 ^ r θ = 𝒇 θ ​ ( 𝒙 s , s , r ) , \hat{{\bm{x}}}_{r}^{\theta}={\bm{f}}_{\theta}({\bm{x}}_{s},s,r),
+
+ (47)
+
+ while the target integrates the teacher’s PF-ODE from  s s  to  u u  with a 1-step Heun solver,
+ 𝒙 u = ODE ϕ ​ ( 𝒙 s , s , u ) {\bm{x}}_{u}=\mathrm{ODE}_{\phi}({\bm{x}}_{s};s,u) , and then estimates from time  u u  to  r r  with the EMA network,
+
+
+
+
+ 𝒙 r − = 𝒇 θ − ​ ( 𝒙 u , u , r ) . {\bm{x}}_{r}^{-}={\bm{f}}_{\theta^{-}}({\bm{x}}_{u},u,r).
+
+ (48)
+
+ Both are then projected to the clean timestep  t = 0 t=0  through a stop-gradient student  G sg ​ ( ⋅ , r , 0 ) := 𝒇 sg ⁡ [ θ ] ​ ( ⋅ , r , 0 ) G_{\mathrm{sg}}(\cdot,r,0):={\bm{f}}_{\mathrm{sg}[\theta]}(\cdot,r,0) , giving
+ 𝒙 ^ 0 θ = G sg ​ ( 𝒙 ^ r θ , r , 0 ) \hat{{\bm{x}}}_{0}^{\theta}=G_{\mathrm{sg}}(\hat{{\bm{x}}}_{r}^{\theta},r,0)  and
+ 𝒙 0 − = G sg ​ ( 𝒙 r − , r , 0 ) {\bm{x}}_{0}^{-}=G_{\mathrm{sg}}({\bm{x}}_{r}^{-},r,0) .
+Thus, the CTM loss is defined as
+
+
+
+
+ ℒ CTM ​ ( θ ) = 𝔼 ​ ‖ 𝒙 ^ 0 θ − sg ⁡ [ 𝒙 0 − ] ‖ 2 2 , \mathcal{L}_{\mathrm{CTM}}(\theta)=\mathbb{E}\big\|\hat{{\bm{x}}}_{0}^{\theta}-\mathrm{sg}[{\bm{x}}_{0}^{-}]\big\|_{2}^{2},
+
+ (49)
+
+ and we add a DSM regularizer anchoring the student’s instantaneous velocity  𝒗 θ ​ ( 𝒙 s , s ) {\bm{v}}_{\theta}({\bm{x}}_{s},s)
+to the teacher’s, 4 4
+               4
+
+
+
+            The regularizer can instead target the ground-truth flow velocity
+ 𝒙 1 − 𝒙 0 {\bm{x}}_{1}-{\bm{x}}_{0}  (dataset-supervised DSM, as in  ( Kim et al., 2024 ) ); we use the
+teacher-supervised variant.
+
+
+
+
+ ℒ DSM ​ ( θ ) = 𝔼 ​ ‖ 𝒗 θ ​ ( 𝒙 s , s ) − sg ⁡ [ 𝒗 ϕ ​ ( 𝒙 s , s ) ] ‖ 2 2 , \mathcal{L}_{\mathrm{DSM}}(\theta)=\mathbb{E}\big\|{\bm{v}}_{\theta}({\bm{x}}_{s},s)-\mathrm{sg}[{\bm{v}}_{\phi}({\bm{x}}_{s},s)]\big\|_{2}^{2},
+
+ (50)
+
+ so the total loss is
+ ℒ ​ ( θ ) = ℒ CTM ​ ( θ ) + w dsm ​ ℒ DSM ​ ( θ ) \mathcal{L}_{\mathrm{}}(\theta)=\mathcal{L}_{\mathrm{CTM}}(\theta)+w_{\mathrm{dsm}}\,\mathcal{L}_{\mathrm{DSM}}(\theta) .
+
+
+ Algorithm 3    Training Algorithm for CTM
+
+
+               1:
+
+
+            Dataset  𝒟 \mathcal{D} ; teacher  𝒗 ϕ {\bm{v}}_{\phi} ; student flow map  𝒖 θ {\bm{u}}_{\theta} ; EMA target  θ − \theta^{-} ; decay  μ \mu ; DSM weight  w dsm w_{\mathrm{dsm}}
+
+
+
+               2:
+
+
+             for  each training iteration  do
+
+
+
+               3:
+
+
+               ( 𝒙 0 , c ) ∼ 𝒟 ({\bm{x}}_{0},c)\sim\mathcal{D} ,  𝒙 1 ∼ 𝒩 ⁡ ( 𝟎 , 𝐈 ) {\bm{x}}_{1}\sim\mathcal{N}(\mathbf{0},\mathbf{I}) , sample  1 ≥ s ≥ r ≥ 0 1\geq s\geq r\geq 0 ,  u ∼ Unif ⁡ [ r , s ] u\sim\mathrm{Unif}[r,s]
+
+
+
+               4:
+
+
+               𝒙 s ← ( 1 − s ) ​ 𝒙 0 + s ​ 𝒙 1 {\bm{x}}_{s}\leftarrow(1-s){\bm{x}}_{0}+s{\bm{x}}_{1}
+
+
+
+               5:
+
+
+               𝒙 ^ r θ ← 𝒇 θ ​ ( 𝒙 s , s , r ∣ c ) \hat{{\bm{x}}}_{r}^{\theta}\leftarrow{\bm{f}}_{\theta}({\bm{x}}_{s},s,r\mid c)
+
+
+
+               6:
+
+
+               𝒙 u ← ODE ϕ ​ ( 𝒙 s ; s , u ∣ c ) {\bm{x}}_{u}\leftarrow\mathrm{ODE}_{\phi}({\bm{x}}_{s};s,u\mid c)
+
+
+
+               7:
+
+
+               𝒙 r − ← 𝒇 θ − ​ ( 𝒙 u , u , r ∣ c ) {\bm{x}}_{r}^{-}\leftarrow{\bm{f}}_{\theta^{-}}({\bm{x}}_{u},u,r\mid c)
+
+
+
+               8:
+
+
+               𝒙 ^ 0 θ ← 𝒇 sg ⁡ [ θ ] ​ ( 𝒙 ^ r θ , r , 0 ∣ c ) \hat{{\bm{x}}}_{0}^{\theta}\leftarrow{\bm{f}}_{\mathrm{sg}[\theta]}(\hat{{\bm{x}}}_{r}^{\theta},r,0\mid c) ;
+ 𝒙 0 − ← 𝒇 sg ⁡ [ θ ] ​ ( 𝒙 r − , r , 0 ∣ c ) {\bm{x}}_{0}^{-}\leftarrow{\bm{f}}_{\mathrm{sg}[\theta]}({\bm{x}}_{r}^{-},r,0\mid c)
+
+
+
+               9:
+
+
+               ℒ CTM ← ‖ 𝒙 ^ 0 θ − sg ⁡ [ 𝒙 0 − ] ‖ 2 2 \mathcal{L}_{\mathrm{CTM}}\leftarrow\|\hat{{\bm{x}}}_{0}^{\theta}-\mathrm{sg}[{\bm{x}}_{0}^{-}]\|_{2}^{2}
+
+
+
+               10:
+
+
+               ℒ DSM ← ‖ 𝒖 θ ​ ( 𝒙 s , s , s ∣ c ) − sg ⁡ [ 𝒗 ϕ ​ ( 𝒙 s , s ∣ c ) ] ‖ 2 2 \mathcal{L}_{\mathrm{DSM}}\leftarrow\|{\bm{u}}_{\theta}({\bm{x}}_{s},s,s\mid c)-\mathrm{sg}[{\bm{v}}_{\phi}({\bm{x}}_{s},s\mid c)]\|_{2}^{2}
+
+
+
+               11:
+
+
+               θ ← θ − η ​ ∇ θ ( ℒ CTM + w dsm ​ ℒ DSM ) \theta\leftarrow\theta-\eta\nabla_{\theta}\big(\mathcal{L}_{\mathrm{CTM}}+w_{\mathrm{dsm}}\mathcal{L}_{\mathrm{DSM}}\big)
+
+
+
+               12:
+
+
+               θ − ← μ ​ θ − + ( 1 − μ ) ​ θ \theta^{-}\leftarrow\mu\theta^{-}+(1-\mu)\theta
+
+
+
+               13:
+
+
+             end   for
+
+
+
+
+
+ D.3  improved MeanFlow
+
+
+ MeanFlow  ( Geng et al., 2025 )  parameterizes the average velocity
+ 𝒖 ⁡ ( 𝒙 , s , t ) := 1 s − t ​ ∫ t s 𝒗 ⁡ ( 𝒙 τ , τ ) ​ 𝑑 τ {\bm{u}}({\bm{x}},s,t):=\frac{1}{s-t}\int_{t}^{s}{\bm{v}}({\bm{x}}_{\tau},\tau)\,d\tau  and train it
+through the identity obtained by differentiating the definition along  s s ,
+
+
+
+
+ 𝒖 ⁡ ( 𝒙 s , s , t ) = 𝒗 ⁡ ( 𝒙 s , s ) − ( s − t ) ​ d d ​ s ​ 𝒖 ​ ( 𝒙 s , s , t ) , d d ​ s ​ 𝒖 = ∂ 𝒙 𝒖 ⋅ 𝒗 ⁡ ( 𝒙 s , s ) + ∂ s 𝒖 . {\bm{u}}({\bm{x}}_{s},s,t)={\bm{v}}({\bm{x}}_{s},s)-(s-t)\,\frac{d}{ds}{\bm{u}}({\bm{x}}_{s},s,t),\qquad\frac{d}{ds}{\bm{u}}=\partial_{\bm{x}}{\bm{u}}\cdot{\bm{v}}({\bm{x}}_{s},s)+\partial_{s}{\bm{u}}.
+
+ (51)
+
+ In the original formulation,  𝒗 ⁡ ( 𝒙 s , s ) {\bm{v}}({\bm{x}}_{s},s)  in
+Eq. ( 51 ) is taken to be the student’s own
+instantaneous velocity  𝒗 θ ​ ( 𝒙 s , s ) := 𝒖 θ ​ ( 𝒙 s , s , s ) {\bm{v}}_{\theta}({\bm{x}}_{s},s):={\bm{u}}_{\theta}({\bm{x}}_{s},s,s) , so
+the regression target is itself computed by the network being
+optimized.
+Improved MeanFlow (iMF)  ( Geng et al., 2026 )  addresses this issue by
+reformulating the identity to remove this self-reference.
+
+
+ We follow this reformulation and further adapt it to distillation by replacing the self-referential term with the frozen teacher velocity,
+ 𝒗 ϕ ​ ( 𝒙 s , s ) {\bm{v}}_{\phi}({\bm{x}}_{s},s) , used both as the target and
+the tangent direction of the total derivative.
+
+
+ Given
+ 𝒙 1 ∼ 𝒩 ⁡ ( 𝟎 , 𝐈 ) {\bm{x}}_{1}\sim\mathcal{N}(\mathbf{0},\mathbf{I}) ,  𝒙 0 ∼ p 0 {\bm{x}}_{0}\sim p_{0} , and interpolant
+ 𝒙 s {\bm{x}}_{s} , the total derivative is computed by a
+Jacobian–Vector Product (JVP) of  𝒖 θ {\bm{u}}_{\theta}  at  ( 𝒙 s , s , t ) ({\bm{x}}_{s},s,t)  along the
+tangent  ( 𝒗 ϕ , 1 , 0 ) ({\bm{v}}_{\phi},1,0) :
+
+
+
+
+ 𝒖 ˙ θ := JVP ⁡ ( 𝒖 θ , ( 𝒙 s , s , t ) , ( 𝒗 ϕ , 1 , 0 ) ) , \dot{{\bm{u}}}_{\theta}:=\mathrm{JVP}\big({\bm{u}}_{\theta};\,({\bm{x}}_{s},s,t),\,({\bm{v}}_{\phi},1,0)\big),
+
+ (52)
+
+ The model then predicts one-step velocity as follow:
+
+
+
+
+ 𝒗 ^ θ = 𝒖 θ ​ ( 𝒙 s , s , t ) + ( s − t ) ​ sg ​ [ 𝒖 ˙ θ ] . \hat{{\bm{v}}}_{\theta}={\bm{u}}_{\theta}({\bm{x}}_{s},s,t)+(s-t)\,\mathrm{sg}[\dot{{\bm{u}}}_{\theta}].
+
+ (53)
+
+ Note that MF loss reduces to standard flow matching when  t = s t=s .
+The loss regresses  𝒗 ^ θ \hat{{\bm{v}}}_{\theta}  onto the teacher target with an
+elementwise Pseudo-Huber loss,
+
+
+
+
+ ℒ iMF ​ ( θ ) = 𝔼 ⁡ [ ρ δ ​ ( 𝒗 ^ θ − 𝒗 ϕ ) ] , ρ δ ​ ( e ) = δ 2 ​ ( 1 + e 2 / δ 2 − 1 ) , \mathcal{L}_{\mathrm{iMF}}(\theta)=\mathbb{E}\big[\rho_{\delta}(\hat{{\bm{v}}}_{\theta}-{\bm{v}}_{\phi})\big],\qquad\rho_{\delta}(e)=\delta^{2}\Big(\sqrt{1+e^{2}/\delta^{2}}-1\Big),
+
+ (54)
+
+ applied element-wise and averaged over the action dimensions.
+
+
+ Algorithm 4    Training Algorithm for iMF
+
+
+               1:
+
+
+            Dataset  𝒟 \mathcal{D} ; teacher  𝒗 ϕ {\bm{v}}_{\phi} ; student flow map  𝒖 θ {\bm{u}}_{\theta} ; FM prob.  p t = s p_{t=s} ; Huber scale  δ \delta
+
+
+
+               2:
+
+
+             for  each training iteration  do
+
+
+
+               3:
+
+
+               ( 𝒙 0 , c ) ∼ 𝒟 ({\bm{x}}_{0},c)\sim\mathcal{D} ,  𝒙 1 ∼ 𝒩 ⁡ ( 𝟎 , 𝐈 ) {\bm{x}}_{1}\sim\mathcal{N}(\mathbf{0},\mathbf{I}) , sample  1 ≥ s ≥ t ≥ 0 1\geq s\geq t\geq 0
+
+
+
+               4:
+
+
+              With prob.  p t = s p_{t=s} :  t ← s t\leftarrow s
+
+
+               5:
+
+
+               𝒙 s ← ( 1 − s ) ​ 𝒙 0 + s ​ 𝒙 1 {\bm{x}}_{s}\leftarrow(1-s){\bm{x}}_{0}+s{\bm{x}}_{1}
+
+
+
+               6:
+
+
+               𝒖 θ ( 𝒙 s , s , t ∣ c ) , 𝒖 ˙ θ ← sg [ JVP ( 𝒖 θ ( ⋅ , ⋅ , t ∣ c ) ; ( 𝒙 s , s ) , ( 𝒗 ϕ , 1 ) ) ] {\bm{u}}_{\theta}({\bm{x}}_{s},s,t\mid c),\ \dot{{\bm{u}}}_{\theta}\leftarrow\mathrm{sg}\left[\mathrm{JVP}\big({\bm{u}}_{\theta}(\cdot,\cdot,t\mid c);\,({\bm{x}}_{s},s),\,({\bm{v}}_{\phi},1)\big)\right]
+
+
+
+               7:
+
+
+               𝒗 ^ θ ← 𝒖 θ ​ ( 𝒙 s , s , t ∣ c ) + ( s − t ) ​ 𝒖 ˙ θ \hat{{\bm{v}}}_{\theta}\leftarrow{\bm{u}}_{\theta}({\bm{x}}_{s},s,t\mid c)+(s-t)\,\dot{{\bm{u}}}_{\theta}
+
+
+
+               8:
+
+
+               ℒ iMF ← ρ δ ​ ( 𝒗 ^ θ − 𝒗 ϕ ) \mathcal{L}_{\mathrm{iMF}}\leftarrow\rho_{\delta}(\hat{{\bm{v}}}_{\theta}-{\bm{v}}_{\phi})
+
+
+
+               9:
+
+
+               θ ← θ − η ​ ∇ θ ℒ iMF \theta\leftarrow\theta-\eta\nabla_{\theta}\mathcal{L}_{\mathrm{iMF}}
+
+
+
+               10:
+
+
+             end   for
+
+
+
+
+
+
+
+ Appendix E  Detailed Results in Simulation Environments
+
+
+ Table 13:
+Per-task success rates (%) on RoboTwin 2.0 at 10 denoising steps, under clean and randomized settings. Ours (X) denotes our method trained with X as the teacher.
+
+
+
+
+ Task
+ LingBot-VLA
+ Fast-WAM
+ SmolVLA
+ Ours (LingBot-VLA)
+ Ours (Fast-WAM)
+
+ Clean
+ Random
+ Clean
+ Random
+ Clean
+ Random
+ Clean
+ Random
+ Clean
+ Random
+
+ adjust_bottle
+ 98
+ 90
+ 100
+ 100
+ 100
+ 98
+ 100
+ 98
+ 100
+ 98
+
+ beat_block_hammer
+ 78
+ 78
+ 100
+ 96
+ 66
+ 66
+ 56
+ 40
+ 76
+ 78
+
+ blocks_ranking_rgb
+ 96
+ 92
+ 100
+ 100
+ 50
+ 46
+ 50
+ 58
+ 30
+ 30
+
+ blocks_ranking_size
+ 74
+ 66
+ 88
+ 96
+ 20
+ 22
+ 28
+ 26
+ 20
+ 10
+
+ click_alarmclock
+ 70
+ 42
+ 100
+ 100
+ 90
+ 94
+ 34
+ 50
+ 92
+ 96
+
+ click_bell
+ 62
+ 78
+ 100
+ 100
+ 96
+ 92
+ 62
+ 54
+ 96
+ 86
+
+ dump_bin_bigbin
+ 92
+ 98
+ 100
+ 96
+ 96
+ 70
+ 92
+ 84
+ 90
+ 82
+
+ grab_roller
+ 100
+ 98
+ 100
+ 100
+ 96
+ 96
+ 100
+ 100
+ 100
+ 100
+
+ handover_block
+ 88
+ 82
+ 96
+ 90
+ 28
+ 22
+ 18
+ 32
+ 28
+ 28
+
+ handover_mic
+ 100
+ 88
+ 100
+ 98
+ 80
+ 74
+ 76
+ 82
+ 84
+ 88
+
+ hanging_mug
+ 48
+ 50
+ 64
+ 56
+ 10
+ 16
+ 4
+ 12
+ 6
+ 8
+
+ lift_pot
+ 100
+ 100
+ 100
+ 100
+ 84
+ 72
+ 62
+ 68
+ 80
+ 80
+
+ move_can_pot
+ 66
+ 86
+ 88
+ 98
+ 22
+ 44
+ 18
+ 44
+ 10
+ 32
+
+ move_pillbottle_pad
+ 98
+ 94
+ 96
+ 100
+ 54
+ 54
+ 50
+ 56
+ 52
+ 56
+
+ move_playingcard_away
+ 100
+ 100
+ 98
+ 98
+ 78
+ 84
+ 88
+ 88
+ 68
+ 80
+
+ move_stapler_pad
+ 56
+ 66
+ 74
+ 66
+ 24
+ 14
+ 30
+ 22
+ 26
+ 18
+
+ open_laptop
+ 96
+ 94
+ 94
+ 100
+ 88
+ 86
+ 78
+ 78
+ 72
+ 88
+
+ open_microwave
+ 58
+ 38
+ 48
+ 46
+ 18
+ 36
+ 20
+ 54
+ 22
+ 30
+
+ pick_diverse_bottles
+ 82
+ 76
+ 82
+ 90
+ 42
+ 32
+ 60
+ 44
+ 50
+ 40
+
+ pick_dual_bottles
+ 94
+ 88
+ 100
+ 100
+ 50
+ 42
+ 50
+ 42
+ 64
+ 64
+
+ place_a2b_left
+ 84
+ 80
+ 100
+ 98
+ 38
+ 48
+ 46
+ 42
+ 40
+ 42
+
+ place_a2b_right
+ 76
+ 82
+ 94
+ 98
+ 40
+ 36
+ 38
+ 46
+ 38
+ 44
+
+ place_bread_basket
+ 84
+ 90
+ 94
+ 90
+ 68
+ 68
+ 66
+ 56
+ 60
+ 60
+
+ place_bread_skillet
+ 92
+ 70
+ 92
+ 92
+ 62
+ 54
+ 66
+ 62
+ 68
+ 70
+
+ place_burger_fries
+ 94
+ 94
+ 94
+ 100
+ 96
+ 84
+ 96
+ 92
+ 98
+ 90
+
+ place_can_basket
+ 82
+ 72
+ 76
+ 68
+ 62
+ 44
+ 30
+ 24
+ 32
+ 8
+
+ place_cans_plasticbox
+ 100
+ 100
+ 100
+ 100
+ 82
+ 84
+ 58
+ 52
+ 88
+ 82
+
+ place_container_plate
+ 98
+ 96
+ 100
+ 96
+ 90
+ 94
+ 98
+ 96
+ 90
+ 88
+
+ place_dual_shoes
+ 80
+ 84
+ 94
+ 88
+ 50
+ 62
+ 58
+ 76
+ 42
+ 50
+
+ place_empty_cup
+ 100
+ 98
+ 100
+ 100
+ 96
+ 98
+ 98
+ 98
+ 86
+ 84
+
+ place_fan
+ 88
+ 80
+ 98
+ 96
+ 38
+ 50
+ 38
+ 44
+ 42
+ 56
+
+ place_mouse_pad
+ 86
+ 90
+ 82
+ 84
+ 26
+ 42
+ 34
+ 42
+ 30
+ 36
+
+ place_object_basket
+ 92
+ 84
+ 88
+ 82
+ 68
+ 62
+ 82
+ 80
+ 70
+ 48
+
+ place_object_scale
+ 82
+ 82
+ 100
+ 94
+ 46
+ 38
+ 50
+ 58
+ 36
+ 52
+
+ place_object_stand
+ 92
+ 96
+ 98
+ 98
+ 60
+ 82
+ 62
+ 82
+ 70
+ 86
+
+ place_phone_stand
+ 80
+ 96
+ 92
+ 96
+ 48
+ 74
+ 46
+ 76
+ 60
+ 70
+
+ place_shoe
+ 96
+ 96
+ 88
+ 92
+ 86
+ 88
+ 90
+ 88
+ 76
+ 78
+
+ press_stapler
+ 94
+ 96
+ 90
+ 98
+ 78
+ 74
+ 66
+ 64
+ 64
+ 72
+
+ put_bottles_dustbin
+ 90
+ 84
+ 90
+ 92
+ 36
+ 42
+ 34
+ 44
+ 30
+ 38
+
+ put_object_cabinet
+ 90
+ 78
+ 88
+ 90
+ 60
+ 60
+ 60
+ 54
+ 72
+ 64
+
+ rotate_qrcode
+ 88
+ 88
+ 94
+ 82
+ 64
+ 64
+ 64
+ 68
+ 56
+ 52
+
+ scan_object
+ 96
+ 94
+ 90
+ 94
+ 60
+ 70
+ 46
+ 48
+ 54
+ 54
+
+ shake_bottle
+ 100
+ 100
+ 100
+ 100
+ 100
+ 98
+ 98
+ 98
+ 100
+ 96
+
+ shake_bottle_horizontally
+ 100
+ 98
+ 100
+ 100
+ 98
+ 98
+ 98
+ 98
+ 96
+ 98
+
+ stack_blocks_three
+ 92
+ 94
+ 94
+ 100
+ 4
+ 20
+ 4
+ 6
+ 8
+ 16
+
+ stack_blocks_two
+ 100
+ 100
+ 100
+ 100
+ 40
+ 50
+ 64
+ 66
+ 42
+ 58
+
+ stack_bowls_three
+ 86
+ 72
+ 82
+ 76
+ 48
+ 56
+ 36
+ 46
+ 52
+ 50
+
+ stack_bowls_two
+ 96
+ 98
+ 92
+ 98
+ 70
+ 84
+ 72
+ 74
+ 80
+ 74
+
+ stamp_seal
+ 88
+ 92
+ 90
+ 92
+ 26
+ 34
+ 40
+ 30
+ 18
+ 32
+
+ turn_switch
+ 56
+ 56
+ 68
+ 68
+ 40
+ 48
+ 32
+ 36
+ 50
+ 38
+
+ Average
+ 86.76
+ 84.88
+ 91.92
+ 91.84
+ 59.44
+ 61.32
+ 56.92
+ 59.56
+ 58.28
+ 59.56
+
+
+
+
+ Table 14:
+Per-task success rates (%) of our method with LingBot-VLA and Fast-WAM as teachers on RoboTwin 2.0 at 1, 2, and 4 denoising steps, under clean and randomized settings. Ours (X) denotes our method trained with X as the teacher.
+
+
+
+
+ Task
+ Ours (LingBot-VLA)
+ Ours (Fast-WAM)
+
+ 1-step
+ 2-step
+ 4-step
+ 1-step
+ 2-step
+ 4-step
+
+ Clean
+ Random
+ Clean
+ Random
+ Clean
+ Random
+ Clean
+ Random
+ Clean
+ Random
+ Clean
+ Random
+
+ adjust_bottle
+ 94
+ 96
+ 100
+ 98
+ 100
+ 98
+ 94
+ 98
+ 100
+ 96
+ 100
+ 98
+
+ beat_block_hammer
+ 72
+ 58
+ 84
+ 68
+ 66
+ 66
+ 56
+ 50
+ 76
+ 68
+ 80
+ 74
+
+ blocks_ranking_rgb
+ 34
+ 32
+ 38
+ 44
+ 52
+ 56
+ 34
+ 32
+ 44
+ 32
+ 32
+ 32
+
+ blocks_ranking_size
+ 6
+ 6
+ 20
+ 18
+ 28
+ 16
+ 12
+ 8
+ 12
+ 10
+ 20
+ 14
+
+ click_alarmclock
+ 24
+ 46
+ 22
+ 38
+ 36
+ 54
+ 90
+ 82
+ 82
+ 92
+ 90
+ 90
+
+ click_bell
+ 94
+ 92
+ 82
+ 88
+ 66
+ 74
+ 100
+ 100
+ 98
+ 94
+ 98
+ 92
+
+ dump_bin_bigbin
+ 60
+ 56
+ 76
+ 72
+ 84
+ 78
+ 76
+ 76
+ 70
+ 68
+ 76
+ 86
+
+ grab_roller
+ 96
+ 98
+ 96
+ 98
+ 98
+ 96
+ 100
+ 98
+ 100
+ 100
+ 100
+ 98
+
+ handover_block
+ 12
+ 12
+ 14
+ 16
+ 26
+ 22
+ 20
+ 12
+ 22
+ 24
+ 30
+ 20
+
+ handover_mic
+ 58
+ 66
+ 70
+ 64
+ 72
+ 70
+ 58
+ 68
+ 72
+ 74
+ 86
+ 92
+
+ hanging_mug
+ 6
+ 6
+ 10
+ 12
+ 6
+ 18
+ 2
+ 4
+ 4
+ 2
+ 6
+ 10
+
+ lift_pot
+ 78
+ 80
+ 92
+ 86
+ 84
+ 86
+ 70
+ 74
+ 74
+ 74
+ 82
+ 76
+
+ move_can_pot
+ 38
+ 32
+ 22
+ 46
+ 32
+ 46
+ 22
+ 26
+ 26
+ 40
+ 22
+ 20
+
+ move_pillbottle_pad
+ 50
+ 40
+ 70
+ 70
+ 72
+ 68
+ 44
+ 52
+ 60
+ 62
+ 60
+ 56
+
+ move_playingcard_away
+ 70
+ 82
+ 86
+ 84
+ 86
+ 86
+ 68
+ 78
+ 72
+ 78
+ 76
+ 84
+
+ move_stapler_pad
+ 20
+ 22
+ 20
+ 20
+ 24
+ 20
+ 14
+ 16
+ 16
+ 22
+ 16
+ 32
+
+ open_laptop
+ 92
+ 94
+ 88
+ 90
+ 82
+ 84
+ 78
+ 86
+ 76
+ 90
+ 76
+ 92
+
+ open_microwave
+ 6
+ 12
+ 10
+ 12
+ 12
+ 26
+ 10
+ 4
+ 14
+ 20
+ 14
+ 26
+
+ pick_diverse_bottles
+ 56
+ 36
+ 66
+ 44
+ 58
+ 44
+ 48
+ 40
+ 48
+ 36
+ 50
+ 42
+
+ pick_dual_bottles
+ 74
+ 58
+ 60
+ 62
+ 58
+ 52
+ 52
+ 64
+ 70
+ 58
+ 68
+ 68
+
+ place_a2b_left
+ 38
+ 42
+ 30
+ 44
+ 38
+ 44
+ 32
+ 40
+ 34
+ 42
+ 40
+ 42
+
+ place_a2b_right
+ 28
+ 34
+ 36
+ 38
+ 38
+ 38
+ 28
+ 38
+ 46
+ 44
+ 40
+ 50
+
+ place_bread_basket
+ 52
+ 52
+ 58
+ 56
+ 64
+ 60
+ 64
+ 56
+ 70
+ 64
+ 70
+ 64
+
+ place_bread_skillet
+ 80
+ 64
+ 70
+ 58
+ 76
+ 68
+ 70
+ 52
+ 76
+ 62
+ 68
+ 68
+
+ place_burger_fries
+ 96
+ 90
+ 92
+ 92
+ 98
+ 94
+ 90
+ 90
+ 98
+ 96
+ 98
+ 96
+
+ place_can_basket
+ 40
+ 38
+ 58
+ 40
+ 44
+ 36
+ 42
+ 24
+ 34
+ 22
+ 26
+ 16
+
+ place_cans_plasticbox
+ 58
+ 60
+ 82
+ 78
+ 80
+ 76
+ 52
+ 44
+ 72
+ 78
+ 84
+ 78
+
+ place_container_plate
+ 84
+ 90
+ 96
+ 88
+ 90
+ 94
+ 88
+ 92
+ 76
+ 82
+ 92
+ 92
+
+ place_dual_shoes
+ 52
+ 52
+ 48
+ 70
+ 56
+ 68
+ 50
+ 54
+ 56
+ 62
+ 58
+ 56
+
+ place_empty_cup
+ 78
+ 84
+ 94
+ 96
+ 90
+ 98
+ 72
+ 56
+ 70
+ 68
+ 86
+ 76
+
+ place_fan
+ 16
+ 16
+ 40
+ 48
+ 48
+ 44
+ 24
+ 14
+ 38
+ 52
+ 44
+ 44
+
+ place_mouse_pad
+ 28
+ 24
+ 26
+ 46
+ 28
+ 50
+ 20
+ 28
+ 30
+ 36
+ 38
+ 26
+
+ place_object_basket
+ 66
+ 58
+ 80
+ 72
+ 70
+ 74
+ 44
+ 30
+ 56
+ 32
+ 66
+ 56
+
+ place_object_scale
+ 40
+ 46
+ 52
+ 60
+ 54
+ 56
+ 32
+ 34
+ 38
+ 58
+ 44
+ 50
+
+ place_object_stand
+ 66
+ 80
+ 66
+ 82
+ 70
+ 86
+ 70
+ 64
+ 70
+ 88
+ 74
+ 90
+
+ place_phone_stand
+ 26
+ 52
+ 44
+ 58
+ 54
+ 72
+ 40
+ 48
+ 40
+ 58
+ 48
+ 62
+
+ place_shoe
+ 82
+ 84
+ 84
+ 86
+ 84
+ 90
+ 66
+ 80
+ 74
+ 82
+ 68
+ 80
+
+ press_stapler
+ 86
+ 78
+ 74
+ 74
+ 72
+ 74
+ 80
+ 84
+ 74
+ 72
+ 74
+ 70
+
+ put_bottles_dustbin
+ 8
+ 10
+ 20
+ 10
+ 18
+ 34
+ 6
+ 4
+ 14
+ 22
+ 34
+ 38
+
+ put_object_cabinet
+ 40
+ 28
+ 52
+ 46
+ 56
+ 54
+ 52
+ 46
+ 68
+ 62
+ 58
+ 52
+
+ rotate_qrcode
+ 66
+ 54
+ 60
+ 64
+ 60
+ 72
+ 58
+ 52
+ 64
+ 54
+ 52
+ 58
+
+ scan_object
+ 58
+ 48
+ 58
+ 64
+ 52
+ 64
+ 64
+ 50
+ 54
+ 54
+ 50
+ 62
+
+ shake_bottle
+ 98
+ 98
+ 100
+ 100
+ 96
+ 96
+ 98
+ 96
+ 96
+ 98
+ 98
+ 96
+
+ shake_bottle_horizontally
+ 96
+ 94
+ 98
+ 98
+ 100
+ 98
+ 96
+ 94
+ 100
+ 98
+ 94
+ 94
+
+ stack_blocks_three
+ 6
+ 2
+ 2
+ 4
+ 10
+ 14
+ 10
+ 0
+ 8
+ 12
+ 6
+ 10
+
+ stack_blocks_two
+ 20
+ 16
+ 32
+ 36
+ 46
+ 56
+ 30
+ 36
+ 42
+ 50
+ 56
+ 58
+
+ stack_bowls_three
+ 6
+ 12
+ 36
+ 30
+ 50
+ 34
+ 16
+ 14
+ 28
+ 24
+ 42
+ 40
+
+ stack_bowls_two
+ 68
+ 46
+ 74
+ 70
+ 76
+ 86
+ 62
+ 48
+ 58
+ 70
+ 84
+ 68
+
+ stamp_seal
+ 12
+ 20
+ 20
+ 38
+ 30
+ 46
+ 14
+ 18
+ 16
+ 36
+ 10
+ 28
+
+ turn_switch
+ 40
+ 48
+ 46
+ 38
+ 40
+ 26
+ 38
+ 36
+ 40
+ 40
+ 40
+ 38
+
+ Average
+ 51.48
+ 50.88
+ 57.08
+ 58.28
+ 58.60
+ 61.24
+ 51.12
+ 49.80
+ 55.52
+ 57.16
+ 58.48
+ 59.20
+
+
+
+
+
+
+ Appendix F  Qualitative Results
+
+
+ We provide qualitative results in simulation (Fig.  11 ) and on the real-robot (Fig.  12 ) experiments.
+
+
+ Figure 11:  Qualitative results on RoboTwin 2.0.  FastOPD distilled from LingBot-VLA (NFE=1) executing four tasks under the clean (top) and randomized (bottom) settings, where the randomized setting introduces cluttered distractors, textured tabletops, and varied backgrounds.
+
+
+ Figure 12:  Qualitative results on the real-world task.  Rollouts of the MolmoAct2 teacher and the student after Stage 1 (initialization) and Stage 2 (FastOPD) on the YAM robot arm, in which the robot picks up a ball and places it on a plate. Time progresses from left to right; insets show the wrist-camera view.
+
+
+
+
+
+
+
+    Experimental support, please
+     view the build logs
+    for errors. Generated by
+
+
+        L
+         A
+        T
+         E
+
+       xml
+
+     .
+
+
+     Instructions for reporting errors
+     We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below:
+
+       Click the "Report Issue"  (
+
+           )  button, located in the page header.
+
+     Tip:  You can select the relevant text first, to include it in your report.
+     Our team has already identified  the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all.
+     Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a  list of packages that need conversion , and welcome  developer contributions .
+
+
+
+
+
+        We gratefully acknowledge support from our  major funders ,
+         member institutions ,  ,
+        and all contributors.
+
+
+         About   ·
+         Help   ·
+         Contact   ·
+         Subscribe   ·
+         Copyright   ·
+         Privacy   ·
+         Accessibility   ·
+         Operational Status  (opens in new tab)

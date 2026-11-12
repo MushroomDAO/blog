@@ -1,0 +1,32 @@
+[
+  {
+    "file": "release.json",
+    "url": "https://api.github.com/repos/iDoris-ai/AgentEar/releases/tags/v0.27.0-preview.20261015.1",
+    "status": 200,
+    "bytes": 7566
+  },
+  {
+    "file": "head.json",
+    "url": "https://api.github.com/repos/iDoris-ai/AgentEar/commits/main",
+    "status": 200,
+    "bytes": 79842
+  },
+  {
+    "file": "readme-main.md",
+    "url": "https://raw.githubusercontent.com/iDoris-ai/AgentEar/main/README.md",
+    "status": 200,
+    "bytes": 37190
+  },
+  {
+    "file": "readme-tag.md",
+    "url": "https://raw.githubusercontent.com/iDoris-ai/AgentEar/v0.27.0-preview.20261015.1/README.md",
+    "status": 200,
+    "bytes": 37190
+  },
+  {
+    "file": "release-jina.md",
+    "url": "https://r.jina.ai/https://github.com/iDoris-ai/AgentEar/releases/tag/v0.27.0-preview.20261015.1",
+    "status": 200,
+    "bytes": 16918
+  }
+]

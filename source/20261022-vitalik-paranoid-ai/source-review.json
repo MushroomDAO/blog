@@ -1,0 +1,62 @@
+{
+  "retrieved": "2026-10-22",
+  "commit": "0fb263b0da04986cfe5c63b12340c1581018ae9b",
+  "post": "https://x.com/VitalikButerin/status/2111046730959433793",
+  "postDirectFetch": 403,
+  "postCrossCheck": "public embeds plus resolved original shortlink https://t.co/MepCFCrLv1 to vbuterin branch",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "9323a566689b6b8e697dba2d982b84099d462a73ba05ba7a083050fe5c0c8faf"
+    },
+    {
+      "path": "zkapi-clientd/README.md",
+      "sha256": "14ea80278153e508553e6dd43054b22688c7944e0a28c52bd61561527d31d494"
+    },
+    {
+      "path": "zkapi-clientd/LICENSE",
+      "sha256": "93f998678a6b27b6d536cdcfdce49c5839b9f8f157d2245359fc98b69fade90c"
+    },
+    {
+      "path": "zkapi-clientd/go.mod",
+      "sha256": "c5e7700e929c2997be02af828d3844e1dec55a310edf97435ade7849a9583af3"
+    },
+    {
+      "path": "zkapi-clientd/docs/DEVELOPMENT.md",
+      "sha256": "c4ed562dc074fb085e0302ceb18dc5a6bc7cd7c751681a989c97e77860d94b4a"
+    },
+    {
+      "path": "zkapi-clientd/docs/PRIVACY.md",
+      "sha256": "1a3db0838cdbe3fb0dcfed782d3665d7175ae6d9c04e241939d1fcb01c4c6d05"
+    },
+    {
+      "path": "zkapi-clientd/docs/REWRITER.md",
+      "sha256": "052bb922292603dc4638a3b3d76d1e74252a6ae4d0aa8fe587c8544440d8d9af"
+    },
+    {
+      "path": "zkapi-clientd/docs/REWRITER_EVALUATION.md",
+      "sha256": "3c522b758645d6ca0519f2599c3520b50102f40df5264d873b3b15364e83a1dd"
+    },
+    {
+      "path": "zkapi-clientd/docs/COVER_TRAFFIC.md",
+      "sha256": "84915647869d1ef8c9619872af8cb7d422f3b9e10bd84198dbbdb4fb96e1bc58"
+    },
+    {
+      "path": "sdk/assets/config/mainnet.json",
+      "sha256": "f3d220ead5696b282c84217435fa2c98d5ea071c171264009ae45a5dc28a906e"
+    },
+    {
+      "path": "sdk/assets/config/sepolia.json",
+      "sha256": "5fc67d5d29c819e4e5a7c4a955673754d254a77e8dae068882db9dd09f9cbc41"
+    },
+    {
+      "path": "zkapi-clientd/internal/rewriter/rewriter.go",
+      "sha256": "ad5609c25a483adc19db15391df2b019cc20110796fe12e0d97d0a73df8b7067"
+    },
+    {
+      "path": "zkapi-clientd/internal/relay/tor.go",
+      "sha256": "faeaf2bc75e035e8ee1d7e9a71941e5b3154e79d13b90246e5edede22555ba16"
+    }
+  ],
+  "coverSourceReview": "No suitable nonportrait/text-light officialhero found. FLUX163 discarded afterroot tinydeviceengraving;FLUX164final88973B1200x630 rootviewed: no text/faces, naturaldarkdeskedge not padding/deadhalf. Bannerverifier0failure1edgewarning acknowledged."
+}

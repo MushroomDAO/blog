@@ -1,0 +1,13 @@
+=== [adopt-banner] n8n-nod-local-personal-agent-engineering-guide ← 1 source image(s) → src/assets/images/n8n-nod-local-personal-agent-engineering-guide-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /Users/jason/.heinu1-bot/media/nod-hero-20261110.png
+=== [adopt-banner] done: src/assets/images/n8n-nod-local-personal-agent-engineering-guide-banner.jpg (1200x630, 92423B) ===
+=== [verify-banner] src/assets/images/n8n-nod-local-personal-agent-engineering-guide-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/Users/jason/.heinu1-bot/media/nod-hero-20261110.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 92423B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/n8n-nod-local-personal-agent-engineering-guide-banner.jpg ===
+PATH: src/assets/images/n8n-nod-local-personal-agent-engineering-guide-banner.jpg

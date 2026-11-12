@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "axion-agent-training-data-cost-review",
+      "title": "Axion 1.0：数据构造、Agent训练与低成本叙事的边界",
+      "url": "/blog/axion-agent-training-data-cost-review/",
+      "language": "zh",
+      "excerpt": "Axion 1.0：数据构造、Agent训练与低成本叙事的边界 Axion 1.0用可验证任务构造、两阶段SFT和异步GRPO训练科学推理与工具型Agent。本文核对论文、开源代码、数据与35B社区复现模型，拆解约1K GPU-hours的成本边界、HLE完整集和130题子集的差别，以及多次取最好成绩的评测条件，并给出数据闭环实践建议，区分作者报告、代码检查与尚未复现的能力。 Axion Agent SFT GRPO 开源模型 数据构造 Axion 1.0 是什么，开源到哪一步了？ 高质量数据如何被“构造”出来？ 第一阶段：让题目针对底座的能力变难 第二",
+      "score": 0.7099781
+    },
+    {
+      "article_id": "strix-halo-halogen-gufo-prefill",
+      "title": "Halogen vs Gufo: Strix Halo Prefill Near 2,000 tok/s",
+      "url": "/blog/strix-halo-halogen-gufo-prefill/",
+      "language": "en",
+      "excerpt": "Halogen vs Gufo: Strix Halo Prefill Near 2,000 tok/s Ryzen AI Max+ 395 prefill near 2,000 tok/s without a discrete GPU: review Halogen and Gufo, models, quantization, cache, decode and deployment requirements. Strix Halo Halogen Gufo 本地推理 AMD Prefill What Does “No External GPU” M",
+      "score": 0.5667351
+    },
+    {
+      "article_id": "longstraw-million-token-rl-training-gpu",
+      "title": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token",
+      "url": "/blog/longstraw-million-token-rl-training-gpu/",
+      "language": "zh",
+      "excerpt": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token 推理已经支持百万 token，但 RL 后训练卡在 256K 以下。LongStraw 用驻留状态 + 响应回放 + 分布式原生执行三项技术，在 8 张 H20 上完成 2M token 的精确 GRPO 训练。arXiv 2607.14952，已开源。 RL训练 长上下文 GRPO 大模型 AI Agent GPU 分布式训练 后训练 LLM 一、一个越来越大的差距 二、三项核心技术 1. Resident State（驻留状态） 2. Response Repla",
+      "score": 0.54433185
+    },
+    {
+      "article_id": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+      "title": "agentic-rl-lab：从几何题入门Agent强化学习",
+      "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/",
+      "language": "zh",
+      "excerpt": "agentic-rl-lab：从几何题入门Agent强化学习 agentic-rl-lab是Datawhale开源的Agent强化学习实验教程，使用PyTRIO远程训练服务拆解GRPO、蒸馏、搜索和工具调用。本篇核对源码，纠正约5元小规模会话与100步结果的混淆，解释固定100题测试、格式遵循和推理能力的区别，并给出奖励函数、采样到独立评测的学习路径，避免把作者记录当作独立复现。 AI GRPO 后训练 RL 开源 Python 视觉模型 Mycelium 2026年11月更新：应该怎样读这个仓库？ 71%到87%，具体改善了什么？ 从哪一章开始最有效？",
+      "score": 0.54021555
+    },
+    {
+      "article_id": "openthoughts-agent-sft-data-recipe-agentic-models",
+      "title": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解",
+      "url": "/blog/openthoughts-agent-sft-data-recipe-agentic-models/",
+      "language": "zh",
+      "excerpt": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解 UC Berkeley、Stanford、Bespoke Labs 等多机构合作的 OpenThoughts-Agent 论文（arXiv:2606.24855）做了迄今最系统的 Agent SFT 数据配方研究：6 阶段流水线、100+ 消融实验、100K 数据集，微调 Qwen3-32B 达 7 基准均值 44.8%，超越 Nemotron 3.9pp。最有价值的不是模型权重，而是那套可复用的数据选取逻辑。 AI Agent SFT 数据配方 开源 这",
+      "score": 0.53962183
+    },
+    {
+      "article_id": "virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac",
+      "title": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI",
+      "url": "/blog/virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac/",
+      "language": "zh",
+      "excerpt": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI hsj576/virtual-ai-infra-team 不是多 agent 角色扮演，而是一个给本地大模型做「自动测速、升级、回滚」的控制器：模型只提计划，确定性代码判决。README 的 18.14→37.52 tok/s（+106.84%）我们重算无误，但这个中位数来自代码题；按提示词拆开，散文题只快 50.6%，9 个样本的均值是 +89%。167 个测试本机全过，4 道质量门禁题被我们一句话骗过，候选库里只有 1",
+      "score": 0.52914673
+    },
+    {
+      "article_id": "s1-deepresearch-long-horizon-research-agent",
+      "title": "32B 小模型逼近 GPT-5.2：S1-DeepResearch 如何用数据而非参数训练长程研究 Agent",
+      "url": "/blog/s1-deepresearch-long-horizon-research-agent/",
+      "language": "zh",
+      "excerpt": "32B 小模型逼近 GPT-5.2：S1-DeepResearch 如何用数据而非参数训练长程研究 Agent ScienceOne 开源 S1-DeepResearch-32B，能连续调用工具 150+ 轮、跨 20 个基准逼近 GPT-5.2/Claude-4.6/GLM-5，却只用 SFT、不用 RL。它的秘密是一套图谱驱动的轨迹构造范式：知识图谱出题、Agent 跑轨迹、五维验证过滤。本文拆解方法、跑分，并梳理业界对深度研究 Agent 的反思。 AI Agent Deep Research 深度研究 长程任务 轨迹数据 Qwen3 开源模型 S",
+      "score": 0.5250015
+    },
+    {
+      "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+      "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+      "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+      "language": "zh",
+      "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+      "score": 0.5245868
+    },
+    {
+      "article_id": "wake-gpui-coding-agent-session-browser-claude-codex-macos-native",
+      "title": "wake-gpui-coding-agent-session-browser-claude-codex-macos-native",
+      "url": "/blog/wake-gpui-coding-agent-session-browser-claude-codex-macos-native/",
+      "language": "en",
+      "excerpt": "wake-gpui-coding-agent-session-browser-claude-codex-macos-native iAmCorey/Wake is a native macOS coding-agent session browser — 387 stars, MIT, Rust + GPUI (gpui 0.2 + gpui-component 0.5), released 2026-08-18. Reads local session data from 13 agents (Claude Code, Codex CLI, OpenC",
+      "score": 0.5192305
+    },
+    {
+      "article_id": "tencent-ai-infra-guard-red-team-platform-mcp-skill-vulnerability-scan",
+      "title": "tencent-ai-infra-guard-red-team-platform-mcp-skill-vulnerability-scan",
+      "url": "/blog/tencent-ai-infra-guard-red-team-platform-mcp-skill-vulnerability-scan/",
+      "language": "en",
+      "excerpt": "tencent-ai-infra-guard-red-team-platform-mcp-skill-vulnerability-scan AI-Infra-Guard (A.I.G) is Tencent Zhuque Lab's open-source AI red teaming platform integrating AI infrastructure vulnerability scanning (2000+ CVE rules), MCP Server security detection, Agent Skill audit (Skill",
+      "score": 0.5178338
+    }
+  ]
+}

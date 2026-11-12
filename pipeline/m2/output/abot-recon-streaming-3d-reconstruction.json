@@ -1,0 +1,14 @@
+{
+  "title": "ABot-Recon：12帧窗口持续重建3D",
+  "author": "Mycelium",
+  "digest": "普通摄像头可以流式建图，但固定窗口不等于零漂移，代码和权重的许可也不同。",
+  "mediaId": "prCUE631thH1cmNLi42prHnFcMoR-_c2tsSM_X1Gjk0QcWlflBkFdBUMuUWKwjuT",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/amap-cvlab/abot-recon.git",
+    "github.com/amap-cvlab/abot-recon",
+    "huggingface.co/acvlab/abot-recon",
+    "github.com/axera-tech/abot-recon-axera"
+  ],
+  "publishedAt": "2026-10-20T00:36:26.127Z"
+}

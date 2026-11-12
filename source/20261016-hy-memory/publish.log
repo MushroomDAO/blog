@@ -1,0 +1,50 @@
+🍄 publish-blog | user=mushroom project=blog-mushroom slug=hy-memory-sdk-memhub-memory-writer
+[1/5] validating frontmatter & SEO…
+  ✓ 公众号标题「Hy Memory：让Agent记住什么」(20 字)
+  ✓ frontmatter OK (tags=5, bilingual, banner present)
+[2/5] building…
+└─────────────────────────────────────────────────────────────────────────┘
+
+Finished in 3.045 seconds
+  ✓ route built: /blog/hy-memory-sdk-memhub-memory-writer/
+[3/5] deploying to Cloudflare Pages (blog-mushroom)…
+  ⚠️ no CA bundle set (CF_CA_CERT/NODE_EXTRA_CA_CERTS) — falling back to TLS bypass.
+     To fix the root cause, point CF_CA_CERT at your proxy CA .pem.
+✨ Uploading _redirects
+✨ Uploading Functions bundle
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://837a7126.blog-mushroom.pages.dev
+[4/5] validating live URL…
+  https://blog.mushroom.cv/blog/hy-memory-sdk-memhub-memory-writer/ → 200
+[4.5] committing article to git…
+[pre-commit] 发布账本有更新，已一并加入本次提交
+[publish/hy-memory-sdk-memhub c3eb93b] feat(blog): publish hy-memory-sdk-memhub-memory-writer
+ 6 files changed, 298 insertions(+)
+ create mode 100644 src/assets/images/hy-memory-sdk-memhub-memory-writer-banner.jpg
+ create mode 100644 src/assets/images/hy-memory-sdk-memhub-memory-writer-fig-01.png
+ create mode 100644 src/assets/images/hy-memory-sdk-memhub-memory-writer-fig-02.png
+ create mode 100644 src/assets/images/hy-memory-sdk-memhub-memory-writer-fig-03.png
+ create mode 100644 src/content/blog/hy-memory-sdk-memhub-memory-writer.md
+  ✓ committed
+  ✓ 远端已同步
+[4.7] updating semantic search index for hy-memory-sdk-memhub-memory-writer…
+checking 1 article(s) (hy-memory-sdk-memhub-memory-writer)
+diff: 2 changed/new, 0 unchanged (wrote /Users/jason/Dev/mycelium/blog/semantic-search/eval/incremental-index-plan.json)
+  + hy-memory-sdk-memhub-memory-writer [zh]
+  + hy-memory-sdk-memhub-memory-writer [en]
+embedding 2 changed record(s) (calls Workers AI)...
+  verifying batch order on 2 samples...
+  batch order verified OK
+  embedding incremental 1-2/2...
+TARGET: account=7bf23342f21baa5ebfc7bc7b74f5a1f2 index=blog-search-v1 vectors=2
+  upserted 1-2/2: True
+updated manifest for 1 article(s)
+  ✓ search index updated
+[5/5] creating WeChat draft… (egress IP: 223.206.43.10 — must be in the WeChat IP allowlist; 40164 = not whitelisted)
+   Title: Hy Memory：让Agent记住什么
+✅ Draft created: media_id=prCUE631thH1cmNLi42prJYw5XVfNHS-hyEESCb4u_MCokeqIZqG3jaAUbSadNsO
+   Title: Hy Memory：让Agent记住什么
+  ✓ recorded mapping: hy-memory-sdk-memhub-memory-writer → prCUE631thH1cmNL…
+[5.8] refreshing local knowledge base…
+  ⏭  ~/mycelium-kb/kb-refresh.sh 不存在,跳过
+✅ done → https://blog.mushroom.cv/blog/hy-memory-sdk-memhub-memory-writer/

@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "hexashell-robot-coding-agent-harness",
+      "title": "HexaShell: A Robot Harness Built Around 14 Tools",
+      "url": "/blog/hexashell-robot-coding-agent-harness/",
+      "language": "en",
+      "excerpt": "HexaShell: A Robot Harness Built Around 14 Tools Explore HexaShell robot agents: 14 tools, Python execution, SAM 3 perception, skills, Linux isolation, evaluation caveats and practical deployment boundaries. HexaShell 机器人 Harness 具身智能 开源 What does the harness expose? What actuall",
+      "score": 0.6205967
+    },
+    {
+      "article_id": "harborrl-agentic-rl-pipeline",
+      "title": "HarborRL: From Agent Traces to Reinforcement Learning",
+      "url": "/blog/harborrl-agentic-rl-pipeline/",
+      "language": "en",
+      "excerpt": "HarborRL: From Agent Traces to Reinforcement Learning Review HarborRL MATH, task verification and native Slime training: current GRPO/Claude Code limits, GPU topology and 89 CPU tests, without a live RL run. HarborRL Agentic RL GRPO Harbor Slime Where does it fit in the pipeline?",
+      "score": 0.5245675
+    },
+    {
+      "article_id": "roboharness-v2-workspace",
+      "title": "RoboHarness V2: The Robot Workspace Is the Harness",
+      "url": "/blog/roboharness-v2-workspace/",
+      "language": "en",
+      "excerpt": "RoboHarness V2: The Robot Workspace Is the Harness Explore RoboHarness V2's editable robot workspaces, joint-control contracts, perception files, deployment requirements, CPU checks, and evaluation limits. RoboHarness Robotics Coding Agent Embodied AI Open Source What changes whe",
+      "score": 0.52288103
+    },
+    {
+      "article_id": "eccv-2026-best-paper-heat-kernel-textures-uv-free",
+      "title": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖",
+      "url": "/blog/eccv-2026-best-paper-heat-kernel-textures-uv-free/",
+      "language": "zh",
+      "excerpt": "ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖 ECCV 2026 最佳论文颁给帝国理工的 HKTex：用约 4.8k 个贴在网格表面的各向异性热核取代 UV 贴图，313 个 Objaverse 模型上平均 96.6KB、LPIPS 优于所有对比方法，代码 MIT 开源但只支持 Linux + NVIDIA。时间检验奖授予 2016 年的感知损失、SSD 和 Learning without Forgetting。我们在 Mac 上复现了它的数学底座并指出三个落地障碍。 ECCV 2",
+      "score": 0.50616497
+    },
+    {
+      "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "title": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+      "language": "en",
+      "excerpt": "agentic-harness-engineering-observability-self-evolution-coding-agent Fudan+PKU+Qiji Zhifeng, arXiv:2604.25850, MIT, Python. AHE proposes a closed loop that evolves the harness — not the model weights — using three observability pillars (component / experience / decision) to let ",
+      "score": 0.5052261
+    },
+    {
+      "article_id": "last-ai-built-by-humans-recursive-self-improvement-hci",
+      "title": "The Last AI Built by Humans: Five RSI Autonomy Levels and the HCI Capability Trajectory Index",
+      "url": "/blog/last-ai-built-by-humans-recursive-self-improvement-hci/",
+      "language": "en",
+      "excerpt": "The Last AI Built by Humans: Five RSI Autonomy Levels and the HCI Capability Trajectory Index 33 authors propose HCI (Headroom-Closed Index) and a five-level RSI autonomy framework: math capability HCI 86.4, tool agents surged from 8.2 to 39.9, L5 AI autonomously revises the mech",
+      "score": 0.50269485
+    },
+    {
+      "article_id": "kinex-coding-agents-robot-harness",
+      "title": "Kinex: A Robotics Harness for Coding Agents",
+      "url": "/blog/kinex-coding-agents-robot-harness/",
+      "language": "en",
+      "excerpt": "Kinex: A Robotics Harness for Coding Agents Kinex connects coding agents to robots through devices, tools and skills. Review its public simulation records, local contract tests and deployment boundaries. Robotics AI Agent Open Source Simulation How does an agent reach a robot? Wh",
+      "score": 0.5007061
+    },
+    {
+      "article_id": "meta-harness-end-to-end-harness-optimization",
+      "title": "Stop Hand-Crafting Agent Scaffolds: Stanford's Meta-Harness Searches for the Optimal Harness Automatically",
+      "url": "/blog/meta-harness-end-to-end-harness-optimization/",
+      "language": "en",
+      "excerpt": "Stop Hand-Crafting Agent Scaffolds: Stanford's Meta-Harness Searches for the Optimal Harness Automatically Stanford IRIS Lab's Meta-Harness (arXiv:2603.28052; Chelsea Finn, Omar Khattab, et al.) makes the harness code — what to store, retrieve, and present to the model — an autom",
+      "score": 0.49993217
+    },
+    {
+      "article_id": "neohorse-1-recursive-self-improvement-agentic-post-training",
+      "title": "NeoHorse-1：第一个认真搭递归自我改进原型的开源小模型",
+      "url": "/blog/neohorse-1-recursive-self-improvement-agentic-post-training/",
+      "language": "zh",
+      "excerpt": "NeoHorse-1：第一个认真搭递归自我改进原型的开源小模型 TokenRhythm 用 Routing Harness 让 4B/9B 模型自己观察执行轨迹、估算能力缺口、把反馈注回训练混合——十项基准平均 +5.93 vs Qwen3.5-4B。这不只是一次后训练，是一个闭环的雏形。 LLM post-training recursive-self-improvement agent open-source Qwen3.5 递归自我改进：为什么这个方向重要 Routing Harness：核心机制 训练方法：两个核心组件 测评结果 4B 档（对比 ",
+      "score": 0.49533048
+    },
+    {
+      "article_id": "reverse-skill-ai-agent-cybersecurity-penetration-skill-router",
+      "title": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents",
+      "url": "/blog/reverse-skill-ai-agent-cybersecurity-penetration-skill-router/",
+      "language": "en",
+      "excerpt": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents zhaoxuya520's open-source AI agent cybersecurity skill router, 20.9k stars, MIT. Solves the core problem of agents not knowing which security tool to use — 41 routing rules auto-class",
+      "score": 0.4916943
+    }
+  ]
+}

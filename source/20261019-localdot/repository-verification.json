@@ -1,0 +1,18 @@
+{
+  "websiteURL": "https://localdot.dev/",
+  "websiteLinksToRepository": true,
+  "repositoryURL": "https://github.com/Shadowhusky/localdot",
+  "repositoryHomepage": "https://localdot.dev/",
+  "private": false,
+  "visibility": "public",
+  "license": "MIT",
+  "sourceRevision": "e5054494125d09c6db86aba322be5e46cb8618ca",
+  "expectedSourcePaths": {
+    "apps/web": true,
+    "apps/daemon": true,
+    "apps/site": true,
+    "packages/protocol": true,
+    "keyd": true,
+    "cells": true
+  }
+}

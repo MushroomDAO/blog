@@ -743,5 +743,319 @@
     "mediaId": "prCUE631thH1cmNLi42prPs_MtbcQrXqgP_RIHvoYN2rl4rXhudCJtMeD-MMyvdj",
     "title": "Vorssaint：Mac菜单栏工具箱",
     "publishedAt": "2026-10-11T16:37:17.495Z"
+  },
+  "seal-ai-video-workbench": {
+    "mediaId": "prCUE631thH1cmNLi42prE7SoaGS4y9IKr17KrrUTNDRlw5HH3iBhGbkslIBi_4i",
+    "title": "Seal：画布、剪辑与AI助手合一",
+    "publishedAt": "2026-10-13T01:35:44.239Z"
+  },
+  "e2e-natural-language-testing": {
+    "mediaId": "prCUE631thH1cmNLi42prF4pmWT65bgDfIC6Ad2upu_usegt-TWwXX77jMxZpCAi",
+    "title": "tester-army/e2e：用大白话测App",
+    "publishedAt": "2026-10-13T01:52:07.827Z"
+  },
+  "spun-hidden-infrastructure": {
+    "mediaId": "prCUE631thH1cmNLi42prOS16vBUmmbj7zB2yfPMlSSn3y_osOJeGX3QK1BgQoG-",
+    "title": "SPUN地下菌网地图：看见脚下的生命",
+    "publishedAt": "2026-10-13T02:08:22.174Z"
+  },
+  "openhoopvision-basketball-video-analysis": {
+    "mediaId": "prCUE631thH1cmNLi42prPZWsAJBC_a8OjglxrvwtFisJohcfbzzroMqEc4jDWi4",
+    "title": "OpenHoopVision：篮球录像变数据",
+    "publishedAt": "2026-10-13T02:26:12.675Z"
+  },
+  "mellum21-thinking-coding-agent": {
+    "mediaId": "prCUE631thH1cmNLi42prLsTP17uU60DB4vh3tMwp2cwNPOcLMknGvEi1MltGxXC",
+    "title": "Mellum2.1：小模型开始进仓库干活",
+    "publishedAt": "2026-10-13T02:49:37.000Z"
+  },
+  "hermes-enterprise-open-source-business-model": {
+    "mediaId": "prCUE631thH1cmNLi42prM0s1VIWGtCRz_3M42Krxlj_VfE5Axa-NR5OMF4I3uev",
+    "title": "Hermes开源免费，企业为什么付钱？",
+    "publishedAt": "2026-10-13T03:16:46.939Z"
+  },
+  "rapid-mlx-apple-silicon-local-ai-inference": {
+    "mediaId": "",
+    "archivedMediaId": "prCUE631thH1cmNLi42prIAytTSqNQsgMufnWJf3-PfoBwdm_pwud6Ccf9_nwmUJ",
+    "wechatStatus": "recorded",
+    "title": "Rapid-MLX：Apple Silicon 最快本地 AI 推理，比 Ollama 快 4.2x，100% 工具调用",
+    "publishedAt": "2026-06-02T05:30:13.656Z",
+    "verifiedAt": "2026-10-13T03:35:49.596Z",
+    "wechatError": "远程草稿无匹配，旧ID返回40007；已发布列表返回48001无权限，当前状态未核验。"
+  },
+  "rsi-anything-world-model-retention": {
+    "mediaId": "prCUE631thH1cmNLi42prIBDJ4ftvV-y8e2iTMJR2gFNAPq3o8Cgha-Qjc9AIBhj",
+    "title": "RSI-Anything：自我改进改了什么",
+    "publishedAt": "2026-10-13T05:22:24.750Z"
+  },
+  "map3d-openstreetmap-glb": {
+    "mediaId": "prCUE631thH1cmNLi42prG8SdUq3Q-qMxJtVRkkJ8QAwTFULaiusWPjpor9REcCZ",
+    "title": "Map3d：开放地图变城市三维底图",
+    "publishedAt": "2026-10-14T02:48:22.898Z"
+  },
+  "decision30-multimodal-system-one": {
+    "mediaId": "prCUE631thH1cmNLi42prMFHq3m_aKg2inNGKSSxX7PevpAjea9GTN44sMQfS-rM",
+    "title": "Decision 3.0：多模态输入直接做判断",
+    "publishedAt": "2026-10-14T08:29:10.101Z"
+  },
+  "drama3-breeze2-fish-s2-comparison": {
+    "mediaId": "prCUE631thH1cmNLi42prOQNdDawCvY-BcphicV8wJEV4NQSTR2ggUvD-x7bM131",
+    "title": "本地TTS怎么选：三款模型公开评测对比",
+    "publishedAt": "2026-10-14T15:30:55.593Z"
+  },
+  "genoffice-ai-office-suite": {
+    "mediaId": "prCUE631thH1cmNLi42prFRaVbHIRd6L6-DFQOEdpe9h6fyYZdQxHU0uNKIheylt",
+    "title": "GenOffice：AI直接修改办公文件",
+    "publishedAt": "2026-10-14T16:36:55.631Z"
+  },
+  "raven-multi-agent-harness": {
+    "mediaId": "prCUE631thH1cmNLi42prOI6dQjVDW1hf46t9Y47qlw3c614EuRFROo328kxw1Dq",
+    "title": "Raven：多Agent协作与自我改进的边界",
+    "publishedAt": "2026-10-15T00:27:50.198Z"
+  },
+  "anthropic-agent-workshop-engineering-guide": {
+    "mediaId": "prCUE631thH1cmNLi42prJ4Ln7AdTzhFrd5nTcB-UZBhdEKsNINP_sNvNGu4Ek3x",
+    "title": "Anthropic官方工作坊：Agent怎么落地",
+    "publishedAt": "2026-10-15T00:40:13.626Z"
+  },
+  "helix-foundry-company-ontology": {
+    "mediaId": "prCUE631thH1cmNLi42prJ3I9UAhSeiPmaSDMw0Y5VKKJ1ubi-ooBws7dH4gaF0O",
+    "title": "Helix Foundry：把公司数据连起来",
+    "publishedAt": "2026-10-15T01:56:58.452Z"
+  },
+  "step5-preview-vllm-verl-deployment": {
+    "mediaId": "prCUE631thH1cmNLi42prJNAVeHeHdirwsEcztc_mkTnXgENDSAd1M3sR8LIdYs6",
+    "title": "Step-5 Preview：部署与RL进展",
+    "publishedAt": "2026-10-15T04:27:57.869Z"
+  },
+  "zixi-51m-mac-local-tts": {
+    "mediaId": "prCUE631thH1cmNLi42prEeAte3M2aw3WmX5Pe2SqdxFzKDWZ-D2nY97RLUbwN9z",
+    "title": "zixi-51M：M4本地语音跑通了",
+    "publishedAt": "2026-10-15T07:15:39.152Z"
+  },
+  "sweety-handdraw-video-pipeline": {
+    "mediaId": "prCUE631thH1cmNLi42prHnGbXc8a2yu9vTLLzRsvPvarjO0hEHXiq7gX_PdzmUU",
+    "title": "Sweety：长文变手绘讲解视频",
+    "publishedAt": "2026-10-15T12:47:41.091Z",
+    "wechatStatus": "recorded",
+    "currentVerifiedMediaId": "",
+    "archivedMediaId": "prCUE631thH1cmNLi42prHnGbXc8a2yu9vTLLzRsvPvarjO0hEHXiq7gX_PdzmUU",
+    "verifiedAt": "2026-10-16T03:09:26.981Z",
+    "wechatError": "旧创建凭证对应的 draft/get 返回40007，当前远程草稿箱无匹配；已发布列表接口返回48001无权限，当前状态未核验。保留旧凭证，未重复创建。"
+  },
+  "x2streaming-asr-append-only": {
+    "mediaId": "prCUE631thH1cmNLi42prNKsH3d63-QLj_qwUv5Cb0NEkw6eIrqdTDUqXxcH1Edm",
+    "title": "X2Streaming-ASR：不回退的语音识别",
+    "publishedAt": "2026-10-15T13:26:43.392Z"
+  },
+  "ultramarine-1-flash-knowledge-work": {
+    "mediaId": "prCUE631thH1cmNLi42prI33-TmM8EHKRbf9Cavvy7yXYV7wIfyfSmDMm-pKqCYC",
+    "title": "Ultramarine：30万美元后训练的边界",
+    "publishedAt": "2026-10-15T14:46:54.494Z"
+  },
+  "ai-native-callcenter-self-hosted": {
+    "mediaId": "prCUE631thH1cmNLi42prHQ9buR_Koks5k8rzQ1NETSU0h0iOyjjgUZMGEZ5e8M2",
+    "title": "一行安装AI呼叫中心，之后呢？",
+    "publishedAt": "2026-10-15T15:14:50.027Z"
+  },
+  "indra-ocr-cpu-document-parsing": {
+    "mediaId": "prCUE631thH1cmNLi42prNKjJFuz6hapBmZTuAw58DJd2TbnpuX_HouMMScEUvHM",
+    "title": "Indra OCR：49页每秒要看哪些条件",
+    "publishedAt": "2026-10-15T15:35:40.012Z"
+  },
+  "open-tts-leaderboard-october-2026": {
+    "mediaId": "prCUE631thH1cmNLi42prFC7d6M5-kq4ib0fGJ1fyQSeiCMbAz-9JcDGYEwbNpu_",
+    "title": "开源TTS十强：10月英语榜与中文对照",
+    "publishedAt": "2026-10-16T03:21:23.576Z"
+  },
+  "valtz-local-ai-creative-studio": {
+    "mediaId": "prCUE631thH1cmNLi42prO4k3Oq4f2ujz7ye_-Lw5rfh6ECcCU6z17knpi6slH-N",
+    "title": "Valtz：Mac本地AI创作工作台",
+    "publishedAt": "2026-10-16T07:37:19.719Z"
+  },
+  "usechat-wechat-agent-runtime": {
+    "mediaId": "prCUE631thH1cmNLi42prAstar_FkxVGmUVha5dukh8caIbeMoxMu3Gh9LH4Lo1J",
+    "title": "UseChat：把微信窗口接入Agent",
+    "publishedAt": "2026-10-16T07:58:37.710Z"
+  },
+  "h3c-minimax-h3-metal-inference": {
+    "mediaId": "prCUE631thH1cmNLi42prDqaVW2Wlhq34htEGWKPu5J5obJtwYh9LsggIX-DgOJ_",
+    "title": "h3.c：Mac原生音视频推理引擎",
+    "publishedAt": "2026-10-16T07:58:59.249Z"
+  },
+  "toonflow-short-drama-workflow": {
+    "mediaId": "prCUE631thH1cmNLi42prMiDtsKL3rWN9N5w-9usT5v_ljANewL_l7XfC2934my2",
+    "title": "Toonflow：130元短剧案例怎么读",
+    "publishedAt": "2026-10-16T08:09:39.880Z"
+  },
+  "hy-memory-sdk-memhub-memory-writer": {
+    "mediaId": "prCUE631thH1cmNLi42prJYw5XVfNHS-hyEESCb4u_MCokeqIZqG3jaAUbSadNsO",
+    "title": "Hy Memory：让Agent记住什么",
+    "publishedAt": "2026-10-16T12:11:56.291Z"
+  },
+  "pocketorca-35b-moe-phone-server": {
+    "mediaId": "prCUE631thH1cmNLi42prPOyKGf6tm5sc7ZKnPezGpsQtRJ2Mo9lVEbFx40kkI_Y",
+    "title": "PocketOrca：手机如何运行35B",
+    "publishedAt": "2026-10-16T12:35:45.414Z"
+  },
+  "harborrl-agentic-rl-pipeline": {
+    "mediaId": "prCUE631thH1cmNLi42prEOP7GQyo311-LS4g3BIuEC4cLnpqYG5S4_45P7O5SFq",
+    "title": "HarborRL：Agent强化学习怎么接",
+    "publishedAt": "2026-10-16T14:47:57.742Z"
+  },
+  "opentiny-tinyrobot-agent-ui": {
+    "mediaId": "prCUE631thH1cmNLi42prP18SnV_WDguf9krLolluqMvOFR_qvOCwt6d9n7oA9fu",
+    "title": "OpenTiny：给 Agent 搭一张能用的脸",
+    "publishedAt": "2026-10-17T01:08:53.629Z"
+  },
+  "nemotron-35-super-vl-bolt-local-models": {
+    "mediaId": "prCUE631thH1cmNLi42prHbOojWbrN716rDikQAmkZWRX9_pWWyHWlkg_Rja4dil",
+    "title": "Nemotron 3.5：百万上下文与24GB",
+    "publishedAt": "2026-10-17T01:23:52.607Z"
+  },
+  "motonav-round-screen-navigation": {
+    "mediaId": "prCUE631thH1cmNLi42prBa9OjLSmP4KUm7ZUppK6CMlu8EfDBSibIgv9remGJCM",
+    "title": "MotoNav：给摩托车加一块导航圆屏",
+    "publishedAt": "2026-10-17T01:37:29.710Z"
+  },
+  "d2r-mobile-build-ios-macos": {
+    "mediaId": "prCUE631thH1cmNLi42prKFyDCdFPYY_UxWzlxb0qAojfHZEbOC_kESAMl8K9UV-",
+    "title": "d2r-mobile-build：自己构建苹果端游戏",
+    "publishedAt": "2026-10-17T01:54:03.558Z"
+  },
+  "scenario-blender-generation-mcp": {
+    "mediaId": "prCUE631thH1cmNLi42prEB1NM4AJ2_1uPku6xpjZ7dGltLMynJD0BM8fwUYUni4",
+    "title": "Scenario：把AI生成接入Blender",
+    "publishedAt": "2026-10-17T02:03:33.073Z"
+  },
+  "zero-to-cad-multiview-reconstruction": {
+    "mediaId": "prCUE631thH1cmNLi42prDxa5EPKSOe4hZznLuUYUaKIFzOfyAbBqIcruyqxhonv",
+    "title": "Autodesk开源2B模型：八视图转CAD",
+    "publishedAt": "2026-10-18T03:03:05.495Z"
+  },
+  "macnativegames-totk-native-mac": {
+    "mediaId": "prCUE631thH1cmNLi42prMjStlFZJf4fmddo8PKTHe1oMZxm1MqAeeErYmFyDaZS",
+    "title": "MacNativeGames：王国之泪原生Mac方案",
+    "publishedAt": "2026-10-18T04:37:41.355Z"
+  },
+  "harness2-recursive-agent-improvement": {
+    "mediaId": "prCUE631thH1cmNLi42prHkYI_ue8fhACKp5D3V2NWGSVrk0WORst-vh1BvCbPV2",
+    "title": "Google Harness²：Agent改进工作方法",
+    "publishedAt": "2026-10-18T05:08:20.559Z"
+  },
+  "minicpm-v47-moe-vision-deployment": {
+    "mediaId": "prCUE631thH1cmNLi42prLCEA_EFiE7slyCPP-ee5PZ-saa4-YZ_FfT1sv70zyww",
+    "title": "MiniCPM-V 4.7：35B视觉模型上端侧",
+    "publishedAt": "2026-10-18T05:21:25.688Z"
+  },
+  "sac-little-prince-ai-game-workflow": {
+    "mediaId": "prCUE631thH1cmNLi42prJEzmchpiFbRLTqmCYCxXqa8DC7-06E2Y1lequAMeZgL",
+    "title": "Sac小王子：AI做3D游戏的完整流程",
+    "publishedAt": "2026-10-19T01:50:47.475Z"
+  },
+  "pine-computer-agent-runtime-engineering": {
+    "mediaId": "prCUE631thH1cmNLi42prHBMoeKUcfQwcSzU6A4kWr8E8RmrrPXvUsQAiT7qTBg_",
+    "title": "Pine Computer：给AI重做电脑",
+    "publishedAt": "2026-10-19T04:44:07.101Z"
+  },
+  "agentear-local-voice-input-preview": {
+    "mediaId": "prCUE631thH1cmNLi42prFwuuwj0E3ddyHJ4EH74voEJCC5hMWuMhp8iOE95CIhl",
+    "title": "AgentEar：本地语音输入与知识库",
+    "publishedAt": "2026-10-19T11:16:42.922Z"
+  },
+  "localdot-local-ai-computer": {
+    "mediaId": "prCUE631thH1cmNLi42prD19UXR4KxmehVGYpIaRGIB09-1kfScbRRqkahK9K1ia",
+    "title": "localDot：给AI一台本地电脑",
+    "publishedAt": "2026-10-19T13:44:24.345Z"
+  },
+  "strix-halo-halogen-gufo-prefill": {
+    "mediaId": "prCUE631thH1cmNLi42prPW8RqGUqEW6Ua79Wqvo-YNJ2THoDF0CscH6WN5P8Wbu",
+    "title": "395跑大模型：Halogen与Gufo",
+    "publishedAt": "2026-10-20T00:22:21.054Z"
+  },
+  "abot-recon-streaming-3d-reconstruction": {
+    "mediaId": "prCUE631thH1cmNLi42prHnFcMoR-_c2tsSM_X1Gjk0QcWlflBkFdBUMuUWKwjuT",
+    "title": "ABot-Recon：12帧窗口持续重建3D",
+    "publishedAt": "2026-10-20T00:36:26.127Z"
+  },
+  "openui-1-generative-ui-engineering": {
+    "mediaId": "prCUE631thH1cmNLi42prGOxoE4E6ZM-aY8zaT3ZNvJmiGEDr0CA4NeiUmsCqWUM",
+    "title": "OpenUI 1.0：让Agent用你的组件",
+    "publishedAt": "2026-10-20T00:37:14.185Z"
+  },
+  "lemo-opuscar-code-video-skill": {
+    "mediaId": "prCUE631thH1cmNLi42prE-Eof8c4N3-Uv6Fqiv0i_6LpOfkWJGwVIi-j4sS8OBD",
+    "title": "Lemo Opuscar：用代码拍51种风格短片",
+    "publishedAt": "2026-10-20T00:48:42.402Z"
+  },
+  "thinkterm-multi-agent-terminal": {
+    "mediaId": "prCUE631thH1cmNLi42prC4RqYnjJkUNjmraWHfP-3RC5ukBfWUEGLY6oxJ3GpDv",
+    "title": "ThinkTerm：多 Agent 编码终端工作台",
+    "publishedAt": "2026-10-20T02:10:47.607Z"
+  },
+  "ascii-portrait-browser-animation": {
+    "mediaId": "prCUE631thH1cmNLi42prGRSvIZ3yeNiVOu3s7PWaBq67yqtWi_rD97_z-ZK1KtB",
+    "title": "ASCII Portrait：照片变动态字符画",
+    "publishedAt": "2026-10-20T02:22:52.092Z"
+  },
+  "everything-open-source-app-suite": {
+    "mediaId": "prCUE631thH1cmNLi42prEGli3byKPndw7O4Ulq8qdeNcikx4XorOcPti1MygT1x",
+    "title": "Everything：开源应用合集的使用边界",
+    "publishedAt": "2026-10-20T02:23:36.933Z"
+  },
+  "oriera-engine-v03-generative-assets": {
+    "mediaId": "prCUE631thH1cmNLi42prEggGOIGIZCHHV3fsV5VLbmKdvNDfWo7iCNLzCrf-UwD",
+    "title": "OriEra v0.3：AI生成资产接入引擎",
+    "publishedAt": "2026-10-20T15:41:45.176Z"
+  },
+  "deepinfer-deepseek-inference-framework": {
+    "mediaId": "prCUE631thH1cmNLi42prEgYPX2Pwg4cly-6b2x7fY3JoXpAGUBx-iXgNwG6f7sc",
+    "title": "DeepInfer：DeepSeek开源推理核心",
+    "publishedAt": "2026-10-20T15:54:58.268Z"
+  },
+  "mouthpad-tongue-control-fact-check": {
+    "mediaId": "prCUE631thH1cmNLi42prCbd3zuIna4-ycYJUjs6732hYuEyjJRKRtLwVX9159Eo",
+    "title": "舌控牙套核查：真实产品与开源边界",
+    "publishedAt": "2026-10-20T16:12:15.604Z"
+  },
+  "plausible-analytics-consulting-white-label": {
+    "mediaId": "prCUE631thH1cmNLi42prDYRUZu9tQ8IGJkvE7qFyTY0ghSFgZECEPqjEbCm797H",
+    "title": "Plausible：把网站分析做成月费服务",
+    "publishedAt": "2026-10-20T16:24:03.988Z"
+  },
+  "anthropic-employment-ai-expectations-reports": {
+    "mediaId": "prCUE631thH1cmNLi42prFRV4KHSL_s-wLghCVe_2k-GRHB5EtNVhHdPkmrnsXwl",
+    "title": "Anthropic两份报告：AI怎样改变工作",
+    "publishedAt": "2026-10-20T16:37:08.484Z"
+  },
+  "layerfs-v1-recursive-agent-filesystem": {
+    "mediaId": "prCUE631thH1cmNLi42prNAqjTxBxCcQryG-mPZMUBMyNxcC2_cvrYR4rLbiScXi",
+    "title": "LayerFS：给 AI Agent 分支文件系统",
+    "publishedAt": "2026-10-22T00:22:35.595Z"
+  },
+  "ondine-rust-mermaid-compiler": {
+    "mediaId": "prCUE631thH1cmNLi42prIweBABJLfqwo_JFAoYAAFQQLnzmoks_qDmTvOX0fRlB",
+    "title": "Ondine：Rust画图，先看布局与口径",
+    "publishedAt": "2026-10-22T00:36:58.524Z"
+  },
+  "live-panel-skill-animated-architecture": {
+    "mediaId": "prCUE631thH1cmNLi42prOC_sSbwpzHhIu0KiU7smp9Pt0D39WKp_tmOiAJ61TDq",
+    "title": "live-panel：一份JSON做动态架构图",
+    "publishedAt": "2026-10-22T00:37:29.981Z"
+  },
+  "animation-datasets-motion-viewer": {
+    "mediaId": "prCUE631thH1cmNLi42prE-OFK0Ei4lRbPy6EtmMOGdhZVTTEp1J4YUt5_wWA-Zh",
+    "title": "动作数据集：先预览，再查质量与许可",
+    "publishedAt": "2026-10-22T00:37:37.149Z"
+  },
+  "pr-agency-founder-communications-playbook": {
+    "mediaId": "prCUE631thH1cmNLi42prGRxbLdRlzdFO9RdfenivGt2RSI4oq7Ez32rQhObqDwN",
+    "title": "Lulu：公关能外包，故事主导权别交出去",
+    "publishedAt": "2026-10-22T00:52:26.711Z"
+  },
+  "vitalik-paranoid-ai-zkapi-tor": {
+    "mediaId": "prCUE631thH1cmNLi42prJK6U16H6hRthkmk9K5f_5HS11jQVk9ULdBBlTrPRUtp",
+    "title": "Vitalik的AI偏执模式保护了什么",
+    "publishedAt": "2026-10-22T11:27:26.287Z"
   }
 }

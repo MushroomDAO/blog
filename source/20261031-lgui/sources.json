@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-31T10:55:22.746574+00:00",
+  "repository": "https://github.com/LumioGames/LGUI",
+  "commit": "6b448511409861bdea68c5958e09b220a8d8ccfa",
+  "pluginVersion": "0.3.0",
+  "versionStatus": "unreleased in CHANGELOG; GitHub releases empty atcheck",
+  "primarySources": [
+    "https://lumiogames.github.io/LGUI/",
+    "https://lumio.games/",
+    "https://github.com/LumioGames/LGUI/blob/main/LICENSE",
+    "https://github.com/LumioGames/LGUI/blob/main/CHANGELOG.md",
+    "https://github.com/LumioGames/LGUI/blob/main/plugin/references/unity.md",
+    "https://github.com/LumioGames/LGUI/blob/main/examples/inventory/README.md"
+  ],
+  "browserDemoHTTP": 200,
+  "banner": ".github/readme/showcase.zh-CN.jpg adopted official product image; machinepass0fail/1OCRwarning; manualpass",
+  "limits": [
+    "No realUnityEditor/IL2CPP/WindowsPlayer run",
+    "No mobiledevice test,DSserver,8player or SDK verification",
+    "500selected tests notfullsuite; oneWindows samplingtestskipped onMac",
+    "No productivitybenchmark reproduced",
+    "Current license noncompete restrictions material"
+  ]
+}

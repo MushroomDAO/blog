@@ -1,0 +1,677 @@
+Build with the new Apple Foundation Model on Private Cloud Compute - WWDC26 - Videos - Apple Developer
+View in English
+Apple Developer
+Get Started
+Explore Get Started
+Overview
+Learn
+Apple Developer Program
+Stay Updated
+Latest News
+Hello Developer
+Platforms
+Explore Platforms
+Apple Platforms
+iOS
+iPadOS
+macOS
+tvOS
+visionOS
+watchOS
+App Store
+Featured
+Design
+Distribution
+Games
+Accessories
+Web
+Home
+CarPlay
+Technologies
+Explore Technologies
+Overview
+Xcode
+Swift
+SwiftUI
+Featured
+Accessibility
+AI & Machine Learning
+App Intents
+Apple Intelligence
+Games
+Security
+Xcode Cloud
+Community
+Explore Community
+Overview
+Meet with Apple events
+Community events
+Developer Forums
+Open Source
+Featured
+WWDC
+Swift Student Challenge
+Developer Stories
+App Store Awards
+Apple Design Awards
+Apple Developer Centers
+Documentation
+Explore Documentation
+Documentation Library
+Technology Overviews
+Sample Code
+Human Interface Guidelines
+Videos
+Release Notes
+Featured Updates
+iOS
+iPadOS
+macOS
+watchOS
+visionOS
+tvOS
+Xcode
+Downloads
+Explore Downloads
+All Downloads
+Operating Systems
+Applications
+Design Resources
+Featured
+Xcode
+TestFlight
+Fonts
+SF Symbols
+Icon Composer
+Support
+Explore Support
+Overview
+Help Guides
+Developer Forums
+Feedback Assistant
+Contact Us
+Featured
+Account Help
+App Review Guidelines
+App Review Help
+App Store Connect Help
+Upcoming Requirements
+Agreements and Guidelines
+System Status
+Quick Links
+Events
+News
+Forums
+Sample Code
+Videos
+Videos
+Open Menu
+Close Menu
+Collections
+All Videos
+About
+More Videos
+About
+Summary
+Transcript
+Code
+Build with the new Apple Foundation Model on Private Cloud Compute
+Private Cloud Compute lets you access powerful, frontier-class models while protecting user privacy. Explore how it works and how to access it using the Foundation Models framework. Discover best practices for checking availability and handling graceful fallbacks in your apps.
+Chapters
+0:00 -
+Introduction
+1:23 -
+What is Private Cloud Compute
+2:43 -
+Integrating PCC with Foundation Models
+4:00 -
+Deciding between on-device and PCC
+4:32 -
+Reasoning levels and context size
+6:15 -
+Evaluating and combining models
+7:10 -
+Handling usage limits
+10:15 -
+Next steps
+Resources
+Adding server-side intelligence with Private Cloud Compute
+HD Video
+SD Video
+Search this video…
+Hi, I'm Louis.
+In this video, I'll show you how you can access a powerful new server LLM
+in your apps, using Private Cloud Compute.
+Last year, we gave you access to a powerful on-device LLM
+with the new Foundation Models framework.
+And this year, we've made the on-device LLM even better.
+It now has support for image input,
+it's better at instruction following
+and calling your custom tools.
+But we know there are more complex use cases that require
+an even more powerful model.
+So this year we're also giving you access to a new server model
+running on Private Cloud Compute.
+With this model, you can build complex AI features in your apps.
+Like assistants that reason over large user input
+or features that rely on making lots of tool calls,
+with large outputs,
+And you can even call Private Cloud Compute from watchOS.
+In this video, we'll go over what Private Cloud Compute is.
+I'll show you how you can access it from your apps
+with the Foundation Models framework,
+and how to handle usage limits.
+Private Cloud Compute powers our system features,
+to send complex tasks to Apple's servers.
+And you now get access to this in your apps as well.
+That means you can access a powerful server LLM,
+without compromising on privacy.
+Private Cloud Compute is designed with end-to-end privacy in mind,
+ensuring that user data is never stored.
+The data is only used for requests.
+And all of this has been independently verified by researchers.
+But it gets even better.
+Private Cloud Compute is integrated in the OS, together with iCloud.
+So you don't have to worry about authentication or API keys,
+like you typically do with server models.
+Your users just need a device that supports Apple Intelligence.
+With no account setup, no authentication and no API keys,
+this is really the easiest server LLM you'll ever use.
+And even better, there are no token costs to you, the developer.
+Each user gets a daily limit.
+And users can upgrade to iCloud+ to get higher limits.
+This model is available for apps with less than 2M downloads.
+And you can apply on the developer website today.
+So let's take a look at how you can integrate this in your apps,
+with the Foundation Models framework.
+If you already have an app using Foundation Models,
+you know that it takes just 3 lines of code to prompt the on-device LLM.
+You create a session and then ask it to respond to your prompt.
+And now by changing just 1 line of code,
+you can switch to the new server model on PCC.
+With just that line, you're now talking to a much larger model,
+with larger context and more complex reasoning capabilities.
+The Foundation Models framework offers a unified Swift API,
+regardless of which model you're talking to.
+Getting structured output with Generable,
+or calling Tools, works just the same with the PCC model,
+as it does with the on-device model.
+This easily lets you switch between models,
+without having to rewrite your code.
+Keep in mind,
+just like with the on-device model,
+PCC is only available on Apple Intelligence devices.
+It's important to check the availability API,
+and gracefully handle when Apple Intelligence
+is not available on a user's device.
+When writing a feature using Foundation Models,
+deciding which model to use is an important decision.
+So let's take a look at the differences
+between the on-device System model and the PCC model.
+They both offer privacy.
+But the on-device model works offline, while PCC requires an internet connection.
+The on-device model has no request limits,
+while PCC offers a daily limit per user.
+Context size is another important factor for some features.
+The on-device model offers 4k, and with PCC you get 32K.
+And the PCC model supports reasoning.
+But what is reasoning?
+When an LLM responds to your prompt,
+it typically just reads the prompt and generates a response.
+With reasoning, the model thinks before it generates the response.
+This literally happens by letting the model generate extra text,
+in a separate segment of the transcript.
+The PCC model offers 3 levels of reasoning.
+Light lets the model gather some extra context.
+Moderate lets the model reason a little deeper.
+And with Deep, the text for the reasoning segment
+may be even longer than the actual response.
+You can set the reasoning level when calling respond on your session.
+The transcript of your session includes the reasoning segment.
+You can observe the transcript to show progress,
+which is especially useful with the Deep reasoning level,
+which may take some time.
+But keep in mind,
+reasoning is extra text that the model generates.
+So it uses tokens.
+This counts towards your context size limit.
+Speaking of context size,
+we also added a convenient API
+to let you programmatically get the context size for a model.
+Just access the contextSize property
+on either SystemLanguageModel
+or PrivateCloudComputeLanguageModel.
+When deciding between the on-device and PCC model,
+or deciding the reasoning level to use,
+it's good to make that decision based on data,
+not just vibes.
+Evaluating let's you understand the quality of your specific feature.
+You may be surprised how well the on-device model performs
+at certain tasks,
+especially with the updated model this year.
+But the only way to know is by evaluating.
+That's why we created the brand new Evaluations framework.
+It's a new Swift framework that helps you evaluate
+your Foundation Models features.
+It's integrated right in Xcode, and it's easy to get started.
+You can check out "Meet the Evaluations framework" to learn more.
+And you can even use the on-device and server model together!
+Check out "Build agentic app experiences with Foundation Models"
+to learn more about that.
+When using the PCC model in your app,
+it's important to handle usage limits well.
+Requests are counted with your user's iCloud account.
+And you can optimize your app for the case where a user hits a limit.
+So, let's take a look at how to do that.
+Here I have an app that summarizes an article using the PCC model.
+I can select a markdown file,
+and we take the text and images,
+feed that into a LanguageModelSession, and generate a summary.
+This works great with the large context size that PCC offers.
+But when a user hits a limit, the request throws an error.
+If that error is just shown in the UI,
+that's not a great user experience,
+because it's not very actionable.
+To handle this better,
+you can check for isLimitReached on the quotaUsage of the model.
+And handle that with custom UI in your app.
+Here I'm using a label to go under my button.
+And when the user's limit is exceeded,
+you can show a button to let the user manage their limit.
+For example,
+a user could upgrade their account to get a higher limit,
+which would let them make more requests.
+You should integrate this with your existing UI.
+Avoid showing an alert for the usage limit.
+Because this UI should persist, and not be dismissed.
+Instead, you can update the state of your UI,
+like disabling the button that makes a request.
+And under that button I'm showing a subtle label,
+with the button for letting the user get a higher limit, if they want.
+You can also detect the case where a user is approaching their limit.
+This can be good to indicate to your users that they are close to their daily limit,
+so they can make an informed decision for which requests they want to make.
+In Xcode, we have a convenient debug option
+to simulate the usage limit status.
+In your scheme,
+select Debug
+and then Options.
+Here we have the Simulate Apple Foundation Models Availability option.
+We can select Quota Usage Limit Reached,
+to simulate the case we just handled in our UI.
+And we can also select Nearing Usage Limit,
+to simulate the case where the user is close to reaching their daily limit.
+We already handled the isLimitReached case
+in the code before.
+We can now also test the belowLimit case.
+Just like with isLimitReached,
+we can show a simple label.
+In the app, this now shows a label under the button to make a request.
+Again, this contains the actionable button.
+Now the user can control their limits, even when they're not yet at the maximum.
+And all this took just a few lines of code.
+So that was a quick overview of integrating
+Private Cloud Compute in your apps.
+If you would like to use this new server model in your app,
+you can apply on the Developer website today.
+We have a ton of other content
+to tell you all about what's new with Foundation Models and related frameworks.
+You can start with "What's new in the Foundation Models framework",
+for a great overview.
+And to better understand what happens with the models at runtime,
+you can check out "Debug and profile agentic app experiences with Instruments".
+Thanks for watching!
+Where is that book? I need to bring it out to the library.
+No, really, where is that book?
+Copy Code
+2:49 -
+Prompt the on-device model
+import
+FoundationModels
+let
+session
+=
+LanguageModelSession
+()
+let
+response
+=
+try
+await
+session.respond(to:
+"Summarize this article:
+\(article)
+"
+)
+Copy Code
+3:02 -
+Switch to the PCC server model (one-line change)
+import
+FoundationModels
+let
+session
+=
+LanguageModelSession
+(
+      model:
+PrivateCloudComputeLanguageModel
+()
+  )
+let
+response
+=
+try
+await
+session.respond(to:
+"Summarize this article:
+\(article)
+"
+)
+Copy Code
+3:25 -
+Structured output and tools work the same
+import
+FoundationModels
+@Generable
+struct
+ArticleSummary
+{
+let
+oneLineSummary:
+String
+let
+keyPoints: [
+String
+]
+  }
+struct
+FindRelatedArticlesTool
+:
+Tool
+{
+
+  }
+let
+session
+=
+LanguageModelSession
+(
+      model:
+PrivateCloudComputeLanguageModel
+(),
+      tools: [
+FindRelatedArticlesTool
+.
+self
+]
+  )
+let
+response
+=
+try
+await
+session.respond(
+      to:
+"Summarize this article:
+\(article)
+"
+,
+      generating:
+ArticleSummary
+.
+self
+)
+Copy Code
+3:51 -
+Check availability
+import
+FoundationModels
+struct
+ArticleSummarizationView
+:
+View
+{
+private
+var
+model
+=
+PrivateCloudComputeLanguageModel
+()
+var
+body:
+some
+View
+{
+if
+model.isAvailable {
+// Show UI for making request
+}
+else
+{
+// Fall back
+}
+      }
+  }
+Copy Code
+5:26 -
+Set a reasoning level
+let
+response
+=
+try
+await
+session.respond(
+      to: prompt,
+      contextOptions:
+ContextOptions
+(reasoningLevel: .light)
+  )
+// Reasoning levels: .light, .moderate, .deep
+Copy Code
+5:58 -
+Read the context size
+SystemLanguageModel
+().contextSize
+// 4096 on 26.0
+// 8192 on 27.0 (newer devices)
+PrivateCloudComputeLanguageModel
+().contextSize
+// 32768
+Copy Code
+9:41 -
+Handle usage limits
+struct
+ArticleSummarizationView
+:
+View
+{
+private
+var
+model
+=
+PrivateCloudComputeLanguageModel
+()
+var
+body:
+some
+View
+{
+if
+case
+.belowLimit(
+let
+info)
+=
+model.quotaUsage.status {
+if
+info.isApproachingLimit {
+Text
+(
+"Nearing usage limit."
+)
+                      .foregroundStyle(
+Color
+.orange)
+              }
+          }
+if
+model.quotaUsage.isLimitReached {
+Text
+(
+"Usage limit exceeded."
+)
+                  .foregroundStyle(
+Color
+.red)
+          }
+if
+let
+suggestion
+=
+model.quotaUsage.limitIncreaseSuggestion {
+Button
+(
+"Show options"
+) {
+                  suggestion.show()
+              }
+          }
+      }
+  }
+0:00 -
+Introduction
+Access to a new server LLM via Private Cloud Compute. The on-device model also improves this year (image input, better instruction following and tool calling), but PCC enables more complex features: reasoning over large input, many tool calls with large outputs, even from watchOS.
+1:23 -
+What is Private Cloud Compute
+PCC delivers a powerful server model without compromising privacy: data is never stored, used only for the request, and independently verified. It's integrated with the OS and iCloud, so there's no authentication or API keys, no token cost to developers, a daily per-user limit (higher with iCloud+), and eligibility for apps under 2M downloads.
+2:43 -
+Integrating PCC with Foundation Models
+Prompting the on-device model takes three lines; switching to the PCC server model changes just one. The unified Swift API means Generable structured output and tool calling work identically, so you can switch models without rewriting code, and should check the availability API for non-Apple Intelligence devices.
+4:00 -
+Deciding between on-device and PCC
+Both offer privacy, but the on-device model works offline with no request limits and a 4K context, while PCC needs a connection, has a daily limit, offers a 32K context, and supports reasoning.
+4:32 -
+Reasoning levels and context size
+Reasoning lets the model think before responding by generating extra transcript text, at three levels (light, moderate, deep). Set it on respond, observe the transcript to show progress, and remember reasoning consumes tokens against the context limit, now readable via the contextSize property.
+6:15 -
+Evaluating and combining models
+Choose models and reasoning levels based on data, not vibes; the updated on-device model may surprise you. Use the new Evaluations framework (see "Meet the Evaluations framework") and combine on-device and server models together (see "Build agentic app experiences with Foundation Models").
+7:10 -
+Handling usage limits
+Handle the per-user iCloud quota gracefully: check isLimitReached on the model's quotaUsage and show persistent, actionable UI (such as a disabled button with an upgrade option) rather than an alert. Detect the approaching-limit case too, and use Xcode's Simulate Apple Foundation Models Availability debug option to test both states.
+10:15 -
+Next steps
+Apply for the server model on the developer website, and explore related content: "What's new in the Foundation Models framework" for an overview and "Debug and profile agentic app experiences with Instruments" for runtime behavior.
+Developer Footer
+Videos
+WWDC26
+Build with the new Apple Foundation Model on Private Cloud Compute
+Platforms
+Open Menu
+Close Menu
+iOS
+iPadOS
+macOS
+tvOS
+visionOS
+watchOS
+App Store
+Tools
+Open Menu
+Close Menu
+Swift
+SwiftUI
+Swift Playground
+TestFlight
+Xcode
+Xcode Cloud
+Icon Composer
+SF Symbols
+Technologies
+Open Menu
+Close Menu
+Accessibility
+Accessories
+AI & Machine Learning
+Apple In-App Purchase
+Apple Intelligence
+Audio & Video
+Augmented Reality
+Business
+Design
+Distribution
+Education
+Games
+Health & Fitness
+Localization
+Maps & Location
+Security
+Safari & Web
+Resources
+Open Menu
+Close Menu
+Documentation
+Downloads
+Sample Code
+Videos
+Documentation Archive
+Support
+Open Menu
+Close Menu
+Help Guides & Articles
+Contact Us
+Forums
+Feedback & Bug Reporting
+System Status
+Account
+Open Menu
+Close Menu
+Apple Developer
+App Store Connect
+Certificates, IDs, & Profiles
+Feedback Assistant
+Programs
+Open Menu
+Close Menu
+Apple Developer Program
+Apple Developer Enterprise Program
+App Store Small Business Program
+MFi Program
+Mini Apps Partner Program
+News Partner Program
+Video Partner Program
+Security Bounty Program
+Security Research Device Program
+Events
+Open Menu
+Close Menu
+Meet with Apple
+Apple Developer Centers
+App Store Awards
+Apple Design Awards
+Apple Developer Academies
+WWDC
+Read the
+latest news
+.
+Get the
+Apple Developer app
+.
+Follow us on
+bilibili
+,
+LinkedIn
+,
+WeChat
+, and
+YouTube
+.
+Light
+Dark
+Auto
+Copyright ©  2026
+Apple Inc.
+All rights reserved.
+Terms of Use
+Privacy Policy
+Agreements and Guidelines

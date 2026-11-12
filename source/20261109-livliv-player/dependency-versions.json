@@ -1,0 +1,14 @@
+{
+  "node": "v26.10.0",
+  "packageVersion": "0.3.0",
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.1.1",
+    "@pixiv/three-vrm": "3.5.5",
+    "@types/three": "0.186.0",
+    "playwright-core": "1.65.0",
+    "three": "0.186.0",
+    "typescript": "6.0.3",
+    "vite": "8.3.6"
+  },
+  "lockSha256": "2b966e1ebd4943c4c9d2251327d6414f828c9c35fba992ebb06d63ef2bce8d08"
+}

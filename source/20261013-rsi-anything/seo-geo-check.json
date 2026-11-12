@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-13",
+  "frontmatter": {
+    "title": 27,
+    "titleEn": 52,
+    "description": 160,
+    "descriptionEn": 156,
+    "wechatTitle": 21,
+    "wechatDigest": 29
+  },
+  "englishSeparatorCount": 1,
+  "faqPairsPerLanguage": 3,
+  "blufBoth": true,
+  "questionHeadingsBoth": true,
+  "primarySourcesAndPinnedCommit": true,
+  "sourceVsOwnTestsSeparated": true,
+  "copyrightBlocks": 2,
+  "heroVerified": true,
+  "illustrations": {
+    "count": 3,
+    "bilingualInsertions": 6,
+    "dimensions": "1280x720",
+    "bytes": [
+      31477,
+      29482,
+      22833
+    ],
+    "rootVisualCheck": "pass"
+  },
+  "schemaNote": "Astro handles article metadata; no unsupported FAQ schema promise"
+}

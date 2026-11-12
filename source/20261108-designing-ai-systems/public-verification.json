@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-08T02:33:20.915743+00:00",
+  "articles": [
+    {
+      "slug": "designing-ai-systems-book-platform-code-review",
+      "url": "https://blog.mushroom.cv/blog/designing-ai-systems-book-platform-code-review/",
+      "title": "Designing AI Systems：从模型调用走向共享AI平台",
+      "listRank": 2,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/designing-ai-systems-book-platform-code-review-banner.3PWi1NkP.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 93175
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/designing-ai-systems-book-platform-code-review-banner.3PWi1NkP_Zy5trm.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 30312
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/designing-ai-systems-book-platform-code-review-fig-01.FAp6H8Yz_G4yfG.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 33044
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/designing-ai-systems-book-platform-code-review-fig-02.BztKJs-K_2omI8S.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 39044
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/designing-ai-systems-book-platform-code-review-fig-03.HGsJdG9x_ZYruYW.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 46550
+        }
+      ]
+    }
+  ]
+}

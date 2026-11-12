@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/ly05010419/MacNativeGames",
+  "commit": "b75994fb305d883004361e277f555596f286331e",
+  "sha256": {
+    "build_app.py": "ba0d090bd2dd9a6f62ad3560bc24b72431e46f1d9738db772cbe3c8f21b4b2d6",
+    "games/totk/scripts/extract_exefs.py": "a090b80b75b43348a26782b1a1e87f8ea983b00edaffba7e41233f83dae7b5ec",
+    "games/totk/scripts/extract_update_romfs.py": "5fe2fe0b13f51b9a74e8695464de9e1664b003c0ba98b329d0c8067365ead1cb",
+    "docs/how-it-works.md": "39633b955e26d32c02e476754b95c39465f7e07010d2847411c92baf0e1f4120",
+    "README.md": "b5dfd7ecd2e14838bf9426d9e05387fd031d09ac4169d4002f59fcffbe21ee00"
+  }
+}

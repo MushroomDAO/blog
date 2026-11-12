@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-03T16:31:22.401996+00:00",
+  "articles": [
+    {
+      "slug": "hyperqwen-qwen-27b-24gb-vllm-guide",
+      "url": "https://blog.mushroom.cv/blog/hyperqwen-qwen-27b-24gb-vllm-guide/",
+      "title": "HyperQwen拆解：24GB显卡跑Qwen3.8-27B，快在哪里、Mac能不能用？",
+      "listRank": 2,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/hyperqwen-qwen-27b-24gb-vllm-guide-banner.5A30M_p7.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 93536
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hyperqwen-qwen-27b-24gb-vllm-guide-banner.5A30M_p7_VirUv.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 33468
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hyperqwen-qwen-27b-24gb-vllm-guide-fig-01.C8t_gFCT_Z17k1un.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 40938
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hyperqwen-qwen-27b-24gb-vllm-guide-fig-02.C-E02vnS_r0FSH.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 29154
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hyperqwen-qwen-27b-24gb-vllm-guide-fig-03.C8bMNioQ_8YDM4.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 33092
+        }
+      ]
+    }
+  ]
+}

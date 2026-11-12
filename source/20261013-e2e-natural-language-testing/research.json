@@ -1,0 +1,41 @@
+{
+  "source": "https://github.com/tester-army/e2e",
+  "commit": "fc9064415d427060fad1d406c4c491dda248ad4f",
+  "date": "2026-10-13",
+  "sourceSdkVersion": "0.20.0",
+  "sourceWebVersion": "0.14.0",
+  "starsSnapshot": 9590,
+  "weeklyGrowthClaim": "unverified user material; excluded as verified statistic",
+  "license": "Apache-2.0",
+  "tests": {
+    "files": 3,
+    "passed": 99,
+    "failed": 0,
+    "durationSeconds": 93.52,
+    "fixtureFlows": 9,
+    "engine": "real headless Chromium",
+    "model": "upstream scripted model, no external inference",
+    "replaySecondRunModelCalls": 0,
+    "scope": "cache mechanism and browser fixture; no natural-language model effectiveness, mobile or performance comparison"
+  },
+  "commands": [
+    "E2E_TELEMETRY_DISABLED=1 pnpm install --frozen-lockfile --ignore-scripts --filter e2e... --filter @e2e-dev/web...",
+    "pnpm --filter e2e build",
+    "pnpm --filter @e2e-dev/web build",
+    "E2E_TELEMETRY_DISABLED=1 pnpm --filter e2e exec vitest run tests/unit/trace-replay.test.ts tests/unit/trace-cache.test.ts tests/integration/trace-cache-replay.test.ts"
+  ],
+  "testSourceSHA256": {
+    "tests/unit/trace-replay.test.ts": "c9543bc36df7801638d0f8cf66381a8f9d1848a8ec64e03d3e93f68507f5b3e3",
+    "tests/unit/trace-cache.test.ts": "61bbf985e2c2b4fe09fa769a40f73316003ff2411aee73e98efbf702fdf76007",
+    "tests/integration/trace-cache-replay.test.ts": "1f3ae48f15df95ab9c15da6fb128d908619dd0c7a06a7695f6ee9a377301a76e"
+  },
+  "banner": {
+    "method": "local FLUX.2 Klein 4B",
+    "seed": 96,
+    "dimensions": "1200x630",
+    "bytes": 91402,
+    "machineQA": "passed",
+    "visualQA": "passed",
+    "sourceImageReview": "README hero mostly text, unsuitable for cover; generated matching web/mobile testing scene"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-10-28T05:57:40.757844+00:00",
+  "carouselSlides": [
+    "/blog/archonos-local-agent-workbench/",
+    "/blog/postiz-agentic-social-media-scheduling-open-source/",
+    "/blog/magpie-multi-agent-model-gateway/",
+    "/blog/ovisocr3-unified-document-model/",
+    "/blog/roboharness-v2-workspace/",
+    "/blog/pi-rust-agent-runtime/",
+    "/blog/meta-sam3-promptable-concept-segmentation-license-mac-guide/",
+    "/blog/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit/"
+  ],
+  "articles": [
+    {
+      "slug": "archonos-local-agent-workbench",
+      "url": "https://blog.mushroom.cv/blog/archonos-local-agent-workbench/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/archonos-local-agent-workbench-banner.CV2Ko6wf_q8lIb.webp",
+          "HTTP": 200,
+          "contentType": "image/webp"
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/archonos-local-agent-workbench-fig-01.vcSsTpnP_3030k.webp",
+          "HTTP": 200,
+          "contentType": "image/webp"
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/archonos-local-agent-workbench-fig-02.n6aruJif_ZiWHe.webp",
+          "HTTP": 200,
+          "contentType": "image/webp"
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/archonos-local-agent-workbench-fig-03.B5LCqHDI_Z1sAS0E.webp",
+          "HTTP": 200,
+          "contentType": "image/webp"
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/archonos-local-agent-workbench-banner.CV2Ko6wf.jpg",
+          "HTTP": 200,
+          "contentType": "image/jpeg"
+        }
+      ],
+      "blogListRank": 1,
+      "carouselRank": 1
+    }
+  ]
+}

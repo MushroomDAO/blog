@@ -1,0 +1,16 @@
+{
+  "title": "X2Streaming-ASR：不回退的语音识别",
+  "author": "Mycelium",
+  "digest": "核对32毫秒延迟的含义，拆解自适应提交，并给出语音Agent接入边界。",
+  "mediaId": "prCUE631thH1cmNLi42prNKsH3d63-QLj_qwUv5Cb0NEkw6eIrqdTDUqXxcH1Edm",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/x-square-robot/x2streaming-asr",
+    "huggingface.co/x-square-robot/x2streaming-asr-4b-1009",
+    "arxiv.org/abs/2609.08672"
+  ],
+  "publishedAt": "2026-10-15T13:26:43.392Z",
+  "wechatStatus": "draft",
+  "currentVerifiedMediaId": "prCUE631thH1cmNLi42prNKsH3d63-QLj_qwUv5Cb0NEkw6eIrqdTDUqXxcH1Edm",
+  "verifiedAt": "2026-10-15T13:27:46.569002+00:00"
+}

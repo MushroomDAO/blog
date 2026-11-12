@@ -557,3 +557,817 @@ worktree 已 remove。建议 BRIEF 里直接让子 agent 写 `$CLAUDE_JOB_DIR/tm
 - 2026-11-12 write: OpenThai OCR Markdown / openthai-ocr-markdown-thai-document-engineering. Official HF weights and code pinned; OpenMDW-1.1, separate MIT tokenizer, no separate official iApp GitHub repo established. 86 upstream CPU/interface/postprocessing tests passed. Actual Apple M4 16GB MPS float32 one-page synthetic table smoke passed eight key checks including rowspan/colspan; ~23s first parse excludes load, not a repeatable benchmark or CER result. Thai decomposed-codepoint observation retained. Official H100/Typhoon conditions, confidence intervals, Gazette format familiarity and missing-cell failures distinguished.
 
 - 2026-11-12 write: My Office / my-office-claude-code-session-dashboard-guide. Independent MIT session dashboard, pinned package 0.5.0. 168 upstream Node tests passed after dependencies installed; no real Claude hooks/settings/service modified, no phone/tunnel/cleanup/usage/runtime-performance validation. Local-first not network-free; observing/approval/assignment distinct. Both Blogs publicly verified; one M2 invocation each failed 40164 for 223.204.85.239, paused for WeChat-only compensation.
+## 2026-10-13 — Seal AI video workbench
+- Source: https://github.com/wenlei-xu/Seal ; pinned 643b6367a37a3c6d16fb54fd92378aadbe4303ec.
+- Dedup found only bot raw KB; completed first bilingual publication at https://blog.mushroom.cv/blog/seal-ai-video-workbench/ .
+- Windows v1.7.8 complete ZIP exists; runtime-v1 is dependency, macOS full editing/ASR distribution not accepted. MIT plus third-party notices, local storage with external provider inputs and charges.
+- Local Bun tests: 12 pass, 0 fail, 204 expectations (skill selection/request budget only; no GUI, provider, render or video quality test).
+- Topic-matched FLUX seed95 cover and 3 current Xiao-M figures passed visual review. Blog/list/4 images and live WeChat draft/get verified. zh/en index upserted.
+- WeChat media ID: prCUE631thH1cmNLi42prE7SoaGS4y9IKr17KrrUTNDRlw5HH3iBhGbkslIBi_4i
+- Task: b5975d0f-1e94-436e-bd65-1335e99ab62a.
+
+## 2026-10-13 — tester-army/e2e
+- Source: https://github.com/tester-army/e2e ; pinned fc9064415d427060fad1d406c4c491dda248ad4f (SDK 0.20.0, web 0.14.0).
+- Exact URL/entity dedup raw KB only; completed initial bilingual article https://blog.mushroom.cv/blog/e2e-natural-language-testing/ .
+- Natural-language actions plus concrete assertions. Only verified act replays; agent assertions/waits/extract live, strict cache has live exceptions, CI defaults read-only and init ignores recordings. Weekly +6440 unverified; current snapshot 9590 not reliability evidence.
+- Local Chromium fixture and upstream scripted model: 3 files / 99 pass, 0 fail; nine flows record then replay with zero scripted-model calls. Not a real-model success-rate, mobile or performance benchmark.
+- FLUX seed96 cover and 3 Xiao-M figures checked; Blog/list/4 images and live draft/get verified; zh/en index upserted; fresh query returns article first, score 0.6836482.
+- WeChat media_id: prCUE631thH1cmNLi42prF4pmWT65bgDfIC6Ad2upu_usegt-TWwXX77jMxZpCAi
+- Task: 9f69e871-833f-46cc-a8a7-fb8e716540e3.
+
+## 2026-10-13 — SPUN A Hidden Infrastructure
+- Source: https://a-hidden-infrastructure.spun.earth/ ; Science DOI 10.1126/science.adu4373, SPUN-linked author archive read. Exact URL/domain dedup raw KB only; generic hidden/infrastructure false positives resolved.
+- Published bilingual https://blog.mushroom.cv/blog/spun-hidden-infrastructure/ ; 322 studies/>16000 cores, global live AM hyphal density predictions; not all fungi or literal connectivity. Carbon biomass ~300±60 Mt C, not wet weight or annual permanent removal. Disclosed About10cm vs author archive15cm scope mismatch.
+- Jina fallback (agent-reach unavailable), official OG/cube and map screenshot saved. Local Chromium map200, visible canvas/legend, no page JS errors; no global-model or field-data reproduction claimed.
+- FLUX97 explanatory cover + official map + three Baobao figures verified; Blog/list(position3)/five images200; draft/get four body images and cover verified. zh/en semantic upsert true; fresh query first, score0.69592214.
+- WeChat media_id: prCUE631thH1cmNLi42prOS16vBUmmbj7zB2yfPMlSSn3y_osOJeGX3QK1BgQoG-
+- Task: a66031bc-2f8d-46c1-a641-08df3026e272.
+
+## 2026-10-13 — OpenHoopVision
+- Source https://github.com/feifeifei85/OpenHoopVision ; pinned9c000659a7d34ded894db90161c27cc0b55bb745, package0.1.0. Recovery reference list read; other topics untouched. Exact URL clear and name raw KB only; completed first publication.
+- https://blog.mushroom.cv/blog/openhoopvision-basketball-video-analysis/ ; annotated recorded video + basketball_frame_v2 JSONL. Author shot F1 84.29% on71 shots/7 videos, not independently rerun.
+- Eleven synthetic court/scoring checks passed, no model/real footage inference. NBA-named fixed geometry, two_point_fallback, unknown-team queue and CPU route documented. LFS pointers not weights; declared checkpoint bytes290170744. README Apache2 declaration, no standalone LICENSE in pinned tree; third-party licenses separate.
+- FLUX98 cover and3 Xiao-M figures checked. Blog/list2/four images200; draft/get cover+3 figures verified. zh/en index upserted and query first0.7301959.
+- WeChat media_id: prCUE631thH1cmNLi42prPZWsAJBC_a8OjglxrvwtFisJohcfbzzroMqEc4jDWi4
+- Task56989df2-6756-4645-9d1e-7b9824290013. Previous SPUN live and draft verified, user status question excluded from article.
+
+## 2026-10-13 — JetBrains Mellum2.1 Thinking
+- Sources ModelScope primaryAPI200; officialHFmodel92ddae9fc7665e9f801d141d2e5a6b2caf2460c4 andGGUF20b439426f1e997ba575eaccaf4856ac0f76f5d5; JetBrainsOctoberannouncement andspeedchart. Exactdedup rawKB only; genericdomain/brand falsepositives resolved. Otherrecoverytopics untouched.
+- Published bilingual https://blog.mushroom.cv/blog/mellum21-thinking-coding-agent/ ; repositoryRL executionability, officialscores selfreported, WorkBench regression/Qwenremaininglead disclosed. Totalvsactiveparameter memory distinct. ActualGGUFfiles exist despiteoldcomingsoon; Q4_K_M8.071GB/MXFP4_MOE7.030GB. Wikitexttokenagreement notcodingretention. FP8H2002304/256 speednotMacpromise.
+- Own boundedartifactcheck HTTP206 first64bytes GGUFv3 and sixofficialchat-template serializationchecks passed. Diskheadroom ~8GiB; nofullweightdownload/hash/inference, tool execution, speedorbenchmarkreproduction.
+- FLUX100 cover +threeXiao-Mfigures, publicBlog/list2/fourimages200. zh/enindexupsert andsearchfirst0.6708925. WeChatdraft/getcover+3imagesverified. Initial draft/add socket hangup aftersuccess; unique remote draft reconciled, receipt recovered, no repeatcreate.
+- WeChat media_id: prCUE631thH1cmNLi42prLsTP17uU60DB4vh3tMwp2cwNPOcLMknGvEi1MltGxXC
+- Task: c3b312e0-799c-4944-9c01-04a66625ca4e.
+
+## 2026-10-13 — Hermes enterprise business
+- New angle: Nousfundraising/currentBusinessEnterprise ratherthan repeating olderHermesruntime article. ExactfundraiseURLclear, rawKB reused; olderrepomatches inspected andlinked. Recoveryprimaryreferencesread, othertopicsnotprocessed.
+- https://blog.mushroom.cv/blog/hermes-enterprise-open-source-business-model/ ; MIT core/BYOproviders remainsfree. Paidresourcebilling/managedhosting/teamoperations/customdelivery; company90M vsWSJ1.5Bvaluation, clone24M/token2.5%internalestimates notpayingusers, annualizedforecastnotauditedprofit orEnterprisesegmentincome.
+- BusinessNoushostedteamtenant/centralcredits/membercaps/rolekeyadmin/skilllibrary; Enterprisecustomerinfra/customdeploySSO/SLA/onboardingcontactsales. No unverifiedcompleteaudit/certificationclaim. PrivacyModeNouspayloadlimits/exceptions/metadata/thirdpartyterms; onpremexecution canstillcallcloudservices, genericpolicy notEnterpriseDPA.
+- PublicChromiumBusiness200/5FAQ/noJSerrors; CloudcurrentHTML+ChromiumStandard0.51/day vsoldindexedMedium0.56,30day15.30excludesinference/tools. Repo427d605d4985c2d49a795493ef6c5d66413057d1 license/Security/PortalDocs read. No paidtenant, SSO, isolation/loadtest, invoice orprofitabilitymeasurement.
+- FLUX101 cover+3Xiao-Mfigs verified; Blog/list2/fourimages200; draft/getcover+3bodyimages/correctedprice/pinnedsource verified. zh/enupsert, semanticqueryfirst0.742426.
+- WeChat media_id: prCUE631thH1cmNLi42prM0s1VIWGtCRz_3M42Krxlj_VfE5Axa-NR5OMF4I3uev
+- Task076af8c6-583e-46df-9ac5-98a8ac644dd7. Retained sharedworkspaceM2recoveryfix; targetedtransporttests recorded separately.
+
+## 2026-10-13 — Rapid-MLX existing-post correction
+- Reused June2 slug https://blog.mushroom.cv/blog/rapid-mlx-apple-silicon-local-ai-inference/ , preservedpubDate/updatedOct13, notnewarticle/newthisweek. Exactrepo/nameledgerdedup oldBlog+M2; botrawKB reused.
+- Repo8f076c1971ac9a645c3a2ef13365cf32ae037a58 README/ClaudeCodeguide checked. Correctedunsupportedfastest/100percent/localmeasurementclaims, stalefixedcounts, ClaudeOPENAI_BASE_URL error ->Anthropicbarehost/ANTHROPIC_BASE_URL+key. No modelinference/agentE2E orspeedbench claimed.
+- QualifiedFLUX102cover+3Xiao-Mfigs replaceunverifiedlegacyphoto; all4images/Blog200/bothlanguagecolumns, list719 retainsoldJune2sort. zh/enindexupsert andstale2cleanup, directnewmetadataread, freshqueryfirst0.6754743; removedonly3 ownstaleverificationquerycaches.
+- WeChat recorded only: June2creationcredential preserved prCUE631thH1cmNLi42prIAytTSqNQsgMufnWJf3-PfoBwdm_pwud6Ccf9_nwmUJ; remote8draftsnomatch/oldget40007/publishedAPI48001 unauthorized. Currentstatusunverified, mediaIdempty/archiveIDold. No newdraft/update/delete, archivedcontent maydifferfromcorrectedBlog.
+- Taska1f146cc-f91e-4528-b13a-ae1869bb0da0. SharedworkspaceM2metadatarecoveryfixpreserved,15targetedtestspass; no unrelatedcodeedits byarticleworkflow.
+
+## 2026-10-13 — RSI-Anything
+- New topic, exactURL/entity dedup rawbotKB only; currentdraft/localreceipt/Blog no prior match. PublishedAPI48001 gap recorded. Repo2582a0f11495af595d41bab3babec57d2c3fb80e, paper2610.13912v1 reviewed.
+- https://blog.mushroom.cv/blog/rsi-anything-world-model-retention/ ; shared protocol notuniversalweights. AuthorCodeContests26.3→29.2→31.2 fixedcoder, GUIselectedalpha0 controller99 vs pureworld98, OSWorldrelativegain notpoints, LabHorizonplanningscore notwetlab, Suzuki321pool offlineyieldreplay/frozenpredictor noonlineparameterupdate, immunehypothesisnottherapeuticefficacy.
+- Own workflow22tests+reaction9tests pass; packagedprior321checksumverified, syntheticCLIcandidate46; Chromium140.0.7339.16 fourruleepisodes seeds190000–190003/actions3,3,1,1 pass. No modelbenchmark, training or physicalexperiment reproduction.
+- FLUX103cover+threeXiao-Mfigures verified; Blog/bilingual/list5/fourimages200. zh/enupserttrue,freshqueryfirst0.66472584. Draft/get currentcover+3figures+sourcepin/testscope verified.
+- Media_id: prCUE631thH1cmNLi42prIBDJ4ftvV-y8e2iTMJR2gFNAPq3o8Cgha-Qjc9AIBhj
+- Memoryproject+indexsaved, MemPalacemine2drawers/exactslug2, ledgerexport3. Taskf3521f95-fff4-4b97-a616-7dcfe8d9509f.
+
+## 2026-10-14 — Map3d
+- Explicit cartesiancs/map3d city-map candidate after repeatedbare project request; no invented confirmation. Pin2c5d732477ba7c55995572aae926bf80303c00b9. Genericgithubdedupfalsepositivesexcluded, exactURLclear/entityrawKBonly; publishedAPI48001gap recorded.
+- https://blog.mushroom.cv/blog/map3d-openstreetmap-glb/ ; MITsource vsOSMdataODbL separate. Footprintextrusion/GLB, heightdefault10 andlevels*2.2 overridingheight; constant51000localprojection notsurveyguarantee. Complexrelationswithouttopgeometryskipped, externaltile/Overpass/HDR dependencies.
+- Own originaltsc/Vitebuildpassed; actualChromium unchangedfrontend, synthetic2buildings/1road download6344B glTFv2/3meshes/depth11and10/nopageerrors. Initialrapidpointertiming correctednormaldwell, notappsource. No realcityaccuracy/FPS/Blenderimporttest claimed.
+- OfficialREADMEsceneadoptedqualifiedcover+threeXiao-Mfigures; Blog/list1/bilingual/fourimages200, remotecurrentdraft/get0cover+3bodyimages/pin/scopeverified. zh/enupsert,publicqueryfirst0.68656856.
+- WeChat media_id: prCUE631thH1cmNLi42prG8SdUq3Q-qMxJtVRkkJ8QAwTFULaiusWPjpor9REcCZ
+- RawKBreused,projectfile/indexsaved,MemPalacemine3drawers/exactslug1/ledgerexport4. Taskdcfcbca7-2258-4f71-bd4e-8fcda3acc8c5.
+
+## 2026-10-14 — Decision 3.0
+- ExactModelScope/HFedgeURLclear, d3-edge entityrawKBonly, genericDecision falsepositivesexcluded. PublishedAPI48001gap retained. SixofficialpinnedHFmodelcards/code reviewed; d3fc2d74bd48ec29ae42d4330a543913f7858e3f40, edgefe71f8e1dad1d0198386de78345b13f25c319b36.
+- https://blog.mushroom.cv/blog/decision30-multimodal-system-one/ ; currentJev0.3.2scores/Oct13performance keptseparatefromuserold0.3.1numbers. Realparamcountsincludevision;255code readout/no generatedtext, eachquestioncomputesequence, multiquestionnotfree; confidenceentropy notcalibratedcorrectness. Video2fps/max32 frames/0.2MP, MI325Xwarm latency notMacpromise; batchingthroughput/memory/near-tiedecisionchanges disclosed.
+- ActualunchangededgeBF16CPU fullpackageverification, isolatedtorch2.14/transformers5.17/torchvision.29deps. Sixsyntheticcontracts pass;3realcalls/sixquestions output0eachrequest. Textreturns.9985/receipt.9996 buturgencyexpected.754/Routinehighest/Today.2038; receiptcard.9751 matchesvisibleimage; official4s32frames8fps blueleft→greenright, modeldirection.7748/colorchange.7617. No fullbenchmark, latency/CoreML/ANEmeasurement. Modelcache~/.cache/mycelium-models/d3-edge-fe71f8e1.
+- FLUX105qualifiedcover(first104visualrejectedlabels)+3Xiao-Mfigs. Blog/list1/bilingual/fourimages200; currentdraft/get0cover+3images/pin/localurgencycaseverified. zh/enindexupsert/queryfirst0.6689012.
+- Media_id prCUE631thH1cmNLi42prMFHq3m_aKg2inNGKSSxX7PevpAjea9GTN44sMQfS-rM ; MemPalacemine3/exactslug1/export4. Task8fdbce9f-2256-4b8b-8784-685309caf965.
+
+## 2026-10-14 — Drama 3 / Breeze TTS 2 / Fish S2 Pro
+
+- Public-only comparison requested; no downloaded weights, inference, listening or speed benchmark. Official HF snapshots and repositories checked, not treated as reproduced capability.
+- https://blog.mushroom.cv/blog/drama3-breeze2-fish-s2-comparison/ ; AA provider-voice Preview 1243/1221/1118 and controlled-voice1058/1017/1001 separate Elo scales/English coverage. Vendor Seed-TTS WER and model-judged VoiceDesign/Step-Audio-Edit kept distinct. Drama final emotion58.2 trails cited comparator69.3, style81.8 leads.
+- RTX5090 user observations S2 3.6s/Breeze6.8s for10s audio are unattributed; arithmetic RTF0.36/0.68 only. DGXSpark/H100/H200 settings not speed-ranked. Drama total35B/active3B does not imply3B memory; Breeze eager7.7GiB/fast14.4GiB. Weight commercial permissions checked separately from code license.
+- Matched FLUX107 verified microphone cover +3 Xiao-M figs; bilingual/list2/fourimages200. Current remote draft/get0 verifies cover/threeimages/pin/public-only; media_id prCUE631thH1cmNLi42prOQNdDawCvY-BcphicV8wJEV4NQSTR2ggUvD-x7bM131. MemPalace mine4/exactslug2/export5. Task bec2f477-96d0-4b56-a31b-209c59ba4b09.
+- zh/en semantic upsert verified; public query first hit0.72855765. Feature article+records pushed, PR91 https://github.com/MushroomDAO/blog/pull/91 pending normal review; Blog remains live independently.
+
+## 2026-10-14 — GenOffice
+
+- https://blog.mushroom.cv/blog/genoffice-ai-office-suite/ ; source genspark-ai/genoffice pinned5eab98adc8d0ebf6ecea687e42400a791ef58d64. Exactdedup only rawbotKB hit; genericoffice hits unrelated. Agent-reach missing, user-permittedJinaReader succeeded with rawREADME crosscheck; hero and Sheets screenshots downloaded to botmedia.
+- Six native-document editors and reviewable/undoable AI operations, third-party/local endpoints, CLI/skill/MCP scopes; documentation/source/testdefinitions reviewed, no desktop runtime or compatibility test. Unsupported local FILTER/SORT/UNIQUE/LET written uncached forExcel-onopen; bytepreserving code/test paths not universalcompatibilityproof. Cloudcontext/Jevtop20excerpts/officialanalytics separate fromlocalfileediting; Apache2core excludesee enterprise directory.
+- OfficialSheetsUI adopted/verified95787B cover plus3 Xiao-M figs, fictionalfactchangingedit explicitly calledanerror. Bilingual/list3/fourimages200; current remote draft/get0 verifies cover/threeimages/pin/scope. Media_id prCUE631thH1cmNLi42prFRaVbHIRd6L6-DFQOEdpe9h6fyYZdQxHU0uNKIheylt. zh/enupsert/publicqueryfirst0.7924487; MemPalacemine4/exactslug3/export5. Taska9edcd70-128b-4e9b-8761-251eca3f3340.
+- Article and ledger proofs pushed; PR92 https://github.com/MushroomDAO/blog/pull/92 pending normal review/merge, stacked on TTS comparison. Blog verified live independently.
+
+## 2026-10-15 — Raven
+
+- https://blog.mushroom.cv/blog/raven-multi-agent-harness/ ; EverMind-AI/Raven pinned6b938a4267cb1f3bf1453a39ccc7d580e0eea9fd, paper2609.33439v1Sep27. Exactdedup rawbotKB plus substringRavenna falsepositive; nooldBlog/localM2/currentdraft. Publishedlist48001 gaprecorded.
+- Hostmodels+harness specialists, DAG+EverOS/SkillForge; prealpha. Evolver standalone/sourceonly/plannedretirementpending signoff/AppWorldonlylauncher, Curator experimentalsource/notwheel. HostDAG notdurabledistributedservice; thirdpartyACPmaynotinterpretcharter.
+- MAOB140tasks scorescapturedgraphs/noexecutedworkers: Qwen3.8EM.711 vs.607 notprojectsuccess. ReusedHarnessBankv2 frozenQwen3.6/Opus4.8evolver/K3/heldoutAppWorld41.3→56.7; SWE26tasksubsetnotpassespairedcriterion/notfull500.
+- Originaltests gate/scoring37passed in temporaryvenv, noLLM/endtoendbench. asyncio_modewarning becauseasyncpluginabsent; selectedtests synchronous. Gate-b noinstrumentationfailsopen; sealeddata/pathguardnotphysicalsandbox. MatchedFLUX108coastalravenphoto+3Xiao-Mfigs; bilingual/list1/fourimages200/currentdraft/get0cover+3images/pin/scope verified.
+- Media_id prCUE631thH1cmNLi42prOI6dQjVDW1hf46t9Y47qlw3c614EuRFROo328kxw1Dq ; zh/enupsert/publicqueryfirst0.7210805, MemPalacemine4/exactslug3/export5. Task7b045942-fa92-439d-9e0b-8b78c9b09eff.
+- Article and proof records pushed; PR93 https://github.com/MushroomDAO/blog/pull/93 pending normal review/merge stacked on GenOffice. Blog verified live independently.
+
+## 2026-10-15 — Anthropic official workshops engineering guide
+
+- https://blog.mushroom.cv/blog/anthropic-agent-workshop-engineering-guide/ ; officialSDKworkshop a273fbe2b3776d84cf29f025927d71dcc0982c9f andCWC068b84bb03d2ae87c51edb2837dda25c84c1d686. OfficialCodewithClaudeMarch18announcement andMay6MichaelCohensessionfound; exactsocial freeautomatedcompanyannouncementnotidentified, nofabricatedmappingornewreleasedate. Freeevent/materialsnotAPIchargesfree.
+- Workshopmockbusinessdata, fourstages/tools/subagents/memory, paidmodelcredentials; CWCnotmaintained. SDKvsManagedAgentsdistinct. Demo bypassPermissions identified; realconnectors/auth/approvedversionboundsideeffects/idempotencereceipts/costcaps/eval asourrecommendations, notbuiltinclaims. OnlyoriginalofflineCLIlist6verified, noSDKmodel/liveCRM/emailtests.
+- Useralsoincluded unrelatedBetterRemoteDisplay; optionalscopequestionoffered, noanswer, statedassumptionKBonly. JinaReader+rawREADMEfetch succeeded, noimagesfound; macOS14+HiDPI/privateCGVirtualDisplay/sourcebuildvsMASlimitscaptured. RawbotKB reused; fullsourcebody+summaryadded withoutsecondarticle.
+- FLUX109linkedfolderscover+3Xiao-Mfigs; bilingual/list1/fourimages200/currentdraft/get0cover+3images/pin/scope. Media_id prCUE631thH1cmNLi42prJ4Ln7AdTzhFrd5nTcB-UZBhdEKsNINP_sNvNGu4Ek3x ; zh/enupsert/publicqueryfirst0.8114744; MemPalacemine3files14drawers/exactslug2/Bettermentions13/export18. Task54b73c78-57dc-4f1c-8192-37a6009bdf9b.
+- Article and proof records pushed; PR94 https://github.com/MushroomDAO/blog/pull/94 pending normal review/merge stacked on Raven. Blog verified live independently.
+
+## 2026-10-15 — Helix Foundry
+
+- https://blog.mushroom.cv/blog/helix-foundry-company-ontology/ ; official HelixDB/helix-foundry, Apache-2.0, pinned00d7927d7c08e16c58316e006959f052427e7fa1. Exact URL/slug absent, original KB only; generic Foundry token false positives reviewed. Remote published-list48001 gap, draftbox empty before creation.
+- HelixDB ontology/control state, local Parquet snapshots, DuckDB isolated SQL; S3 is import source. Deterministic initial ontology with AI descriptions, subsequent reviewed proposals. Single-user/no-login/loopback only; local inference default, explicit hosted providers send bounded context. Executed SQL is traceable but does not establish business semantics; object overlays do not write back source records.
+- Two unmodified upstream suites39passed; real DuckDB, MemoryStore and mocked provider/transport, no live SaaS, inference or HelixDB persistence test. Official graph UI adopted cover87001bytes+3 Xiao-M figures43163/52998/43232bytes, bilingual references. Blog list2/fourimages200; current draft/get verified cover+3images.
+- Media_id prCUE631thH1cmNLi42prJ3I9UAhSeiPmaSDMw0Y5VKKJ1ubi-ooBws7dH4gaF0O; semantic query first score0.6283455; MemPalace mine1file2drawers/exactslug1, ledgerexport3. Task8ed8bf8a-2da2-46f1-af9e-3d522324310c.
+- Article and verification records pushed; PR95 https://github.com/MushroomDAO/blog/pull/95 pending normal review/merge stacked on Anthropic workshop. Direct Blog deployment is verified live.
+
+## 2026-10-15 — Step-5 Preview deployment
+
+- https://blog.mushroom.cv/blog/step5-preview-vllm-verl-deployment/ ; normalized Recipes and verlPR8246 deep links captured viaJina with original provider/org roots. Agent-reach unavailable. Exactdedup onlyrawbotKB, noarticle/localM2/currentdraftduplicate; publishedlist48001 gap retained. HF364b3b03fed2477aa0953fe855a2c4c8c48ee3cc/Recipes2f6a61c1d2d7f25e4224d3e0b8dd5c1478e7b556/PR136e22c7d02683d90c48a8ff76d1292de43ff394.
+- DedicatedvLLMimage FP8 4B300/8H200; total600B/recipe604B vs27Bactive distinctmemory; 1Mcombinedcontext/KVconcurrency; NVFP4example320000. TP/TEP/DEP and BlackwellMegaMoE distinctions. Loopback18000/step5alias matched; shellsyntax and17argumentsstaticchecked, noGPU/inference/RLrun. Model customStepFunModelLicense1.0 notApache.
+- verlDraft/open/unmerged, requires separatelyupstreamed Step5vLLM LoRA/indexer/hostbackup changes; servingtag notproofRLcompatible. TextFSDP2LoRA/GRPO/R3, notfullparameterorvisualRL. Author16GB300194steps AIMEmean8 .375→.658 under4096budget, finished.40→.75, conditionalaccuracydifferentcompletion subsets; 131tests5skipped authoronly/notincluded.
+- Officialchart/logo downloaded botmedia; matchedFLUX111cover93449bytes(noequipmentlabelartifacts)+3Xiao-Mfigs50428/46447/42886bytes, bilingualrefs6. Publicfourimages200,list4,bilingual,currentdraft/get0cover+3images/pin/scopeverified. Media_id prCUE631thH1cmNLi42prJNAVeHeHdirwsEcztc_mkTnXgENDSAd1M3sR8LIdYs6. Semanticqueryfirst0.7012348; MemPalacemine1file3drawers/exactslug1/ledgerexport4. Task93a86704-6ae9-408f-8347-1793d1588eee.
+- Article and evidence pushed; PR96 https://github.com/MushroomDAO/blog/pull/96 pending normal review/merge stacked on Helix Foundry. Direct Blog deployment is verified live.
+
+## 2026-10-15 — zixi-51M Mac inference
+
+- https://blog.mushroom.cv/blog/zixi-51m-mac-local-tts/ ; GitHublizixi-0x2F/zixi-51M pin2cfebd74b6b84db2f83a40604e3a11fcbb750cee/HFNoesisLab/zixi-51m revision3f66b777ff7d498310215939f98dd29598945d28. MITcode/modelcard,51.43M/noBERT/Chinese-only/singlevoice/privatecorpus. Exactdedup originalbotKBonly, remote published48001gap, nooldarticle/draftreceipt. Jinafulltext+source/modelcrosscheck, agent-reach unavailable.
+- ActualM4/16GB/macOS26.6.2/Python3.12.15/Torch2.14.1 CPUandMPS each2texts; all4files44100monoPCM16finite/nonsilent. MediumMPS6.102s/CPU6.126s OUTPUTduration, notlatency. NoMOS/listening/ASR/RTF/qualityranking/trainingorofflineisolationclaim. Strictcheckpointload1046entrieszeroMissing/Unexpected; originalfrontend9passed7warnings.
+- Real dependencygap: huggingface-hub notdeclared butdownloadexampleusesit; train--help initialmissingloguru, locallyinstalledthenhelpworks. preprocesshelpworks. Trainertorchrun/gloo anddevicebranches do notprovetrainingsuccess. Metadatawav|speaker|ZH|text,44100mono; finetuningnotreferencezero-shot, data/privateweightsrelease distinction. Temporaryvenv sitepackagesoverlay, sharedMLenvuntouched.
+- PublicsyntheticneutralMPSdemo /audio/zixi-51m-mps-smoke.wav538272B verifiedRIFFandlocalSHA256identical; sourceposterdownloadedbotmedia. FLUX112cover74425B+3XiaoMfigs45601/35587/48505B, pairedrefs6. Bloglist5/fourimages200/bilingual/currentdraft/get0cover+3images/pin/scopeverified. Media_id prCUE631thH1cmNLi42prEeAte3M2aw3WmX5Pe2SqdxFzKDWZ-D2nY97RLUbwN9z.
+- Semanticzh/enupsert/publicqueryfirst0.6388193 afterpropagation; MemPalacemine1file3drawers/exactslug2/ledgerexport4. Task6405ca50-0d22-4b28-b97f-44980ef13beb. Article8f6f6b8 pushed; PR97 https://github.com/MushroomDAO/blog/pull/97 pending normalreview stackedonStep5, directBloglive.
+
+## 2026-10-15 — Sweety handdraw video
+
+- https://blog.mushroom.cv/blog/sweety-handdraw-video-pipeline/ ; officialthreerocks/sweety-handdraw-video pin5206ec0d17f9b353e400b64b9c51ad69e721e02a, package1.2.3/MIT. ExactURLnohit/entityoriginalbotKBonly; no oldBlog/localM2/currentdraft, remote published48001gap retained.
+- Agentstory/script/art plus localPython/Pillow/SciPy/FFmpeg renderer; notexternalimage-to-video model. Completecheckednarrationmaster andactualtimestamps precedevisualtiming; semanticbodyparts/outlineplan vs mere imagequality. VoiceStudio service vs VoxCPM2/Qwen3TTSmodel vs referencevoice distinguished; threevoicepaths incl existingnarration. AuthorM3Max36GB/3.23GBweights notminimum16GBproof;21styles notall equallyvideotested.
+- Actually ran59upstreamregressions, allpassed; originalsmoke fixture doctor/build/render/verify, shapes/text/sinetones960x54024fps/H264AAC13.43sec609258B; fixturefinalizerejected/stalemanifestcheckrejected. No newproductionstory, realTTS, video AIart orperceptualacceptance. ExifToolnotonPATH; fixturedoesnotprovecompleteprivacychain. Testclipnotdistributedasstory.
+- MatchedFLUX114brush/colorwash/microphonecover82709B (seed113discarded tiny pencilmarks),3XiaoMfigs40604/42713/55429B,6refs. Rootvisualinspection, public4images200/list5/bilingual,currentremote draft/get0cover+3images/pin/scopeverified. Media_id prCUE631thH1cmNLi42prHnGbXc8a2yu9vTLLzRsvPvarjO0hEHXiq7gX_PdzmUU. Semanticzh/enupsert/publicqueryrank1score0.6389611; MemPalacemine1file3drawers/exactslug2/ledgerexport4. Task19f3d791-0c0c-418f-9ad1-27133b934689.
+- Article64472f2 pushed; PR98 https://github.com/MushroomDAO/blog/pull/98 pending normalreview stackedonzixi, directBloglive independently.
+
+## 2026-10-15 — Hypit existing publication audit
+
+- Reused https://blog.mushroom.cv/blog/hypit-ai-agent-video-workflow-svml-claude-code-codex/ original2026-09-16. Exactsource/entity match Blog/localM2/KB; no second article, slug, banner, deployment or draft. Public200/bilingual/existinglist182/cover200, signedFLUX43cover91977B machine/rootchecked, unchanged. Existingsemanticqueryfirst0.635394 reused,noembedding.
+- Source https://github.com/hypit-ai/hypit verified APIcreated2026-07-29,currentlatestRelease/packagev0.3.1 releasedOct9, user0.1.8 historical; script surface no timecodes, fullruntime stillrealalignment/timing. No videoclone/render/paidmodelrun; oldarticle remainshistorical.
+- Old draft creation credential prCUE631thH1cmNLi42prFY7i4oh00LfW2rr38F8K9iksZEdeM8mLNzyeUE8MUfS retained. Currentdraftbox lacksit, draft/get40007invalidmedia_id; freepublish48001unauthorized, cannot verify whethermasspublished. wechatStatusrecorded/currentmediaIdempty/archivedMediaIdold, no duplicate draft. OldM2record preserved with currentverification fields.
+- RawbotKB reused, project_hypit/currentreview mine1file3drawers/exactslug2, ledgerexport6. Task33991263-9caa-4832-b67b-4ec9f05de995. Current WeChat status gap explicitly reported, not all-three-success claim.
+- Auditd7c3319 pushed; PR99 https://github.com/MushroomDAO/blog/pull/99 pending normalreview/merge stackedonSweety. ExistingBlogunchanged; WeChat recorded/currentstatusunverified.
+
+## 2026-10-15 — X2Streaming-ASR append-only recognition
+
+- https://blog.mushroom.cv/blog/x2streaming-asr-append-only/ ; X-Square-Robot/X2Streaming-ASR pin0aca80597bb1399c0be4002de5bc62c0a779c542, HF4B-1009 revision4c8df16b8d7f8b50c95590c4d7907436ebe4aa08, paper2609.08672v4Oct12, Apache2code/model. ExactURL/entity found only originalbotKB; no existingBlog/localM2/currentdraft, published48001gap retained. JinaReader fallback plus directsource/PDF checks becauseagent-reach unavailable.
+- Learned LISTEN/DECODE80ms audioticks; commitdelay relativeforcedalignedendpoints not fullmic/display wallclock. Mean32–109zh/12–85en, P95240–480; LSOtherP95worse thanR2T2speed. Paper401ms forcedt_end+640 vs README396; reference-boundary diagnostic not genericfixedchunk or compute speedup. Paper10sets vsREADME12rows AISHELL2split. Inference-only, trainingnotreleased. Default Demo offlinepass can replacefinal_text; ENABLE_OFFLINE=0/liveevents separatearchival lane. Append-only stabletext not correctness/completeintent, toolsrequirepolicy (our recommendation).
+- Own M4/16GB CLIhelp exit0/source/config/event/table inspection only, no4Bweights/ASR/benchmark. Officialbeaver cover73754B verified/rootview;3XiaoM37990/39563/67109B,6refs; bilingualSEOchecked/public4images200/list6/currentdraft/get0cover+3images/sourcepin/scope. Media_id prCUE631thH1cmNLi42prNKsH3d63-QLj_qwUv5Cb0NEkw6eIrqdTDUqXxcH1Edm.
+- Semanticzh/enupsert succeeded; publicEnglishquery rank1score0.777135 after propagation. MemPalacemine1file6drawers/exactslug3/export7. Taskcc0412a5-6276-42e0-b8ff-1b39eb9ebd66. Articledd55c24 pushed; PR100 https://github.com/MushroomDAO/blog/pull/100 normalreview stackedonHypitaudit; directBloglive independently.
+
+## 2026-10-15 — Ultramarine 1 Flash knowledge-work specialization
+
+- https://blog.mushroom.cv/blog/ultramarine-1-flash-knowledge-work/ ; official https://www.paperinstruments.com/blog/ultramarine and modelpage; CEOX https://x.com/bertgodel/status/2110400987622265232 Jina source read (direct403). Fivepeople/~300k all-in POSTtraining selfreport on pretrainedGLM5.3Flash, no independent expenseaudit. Modelpage stillweightscomingsoonOct15, APIavailable, noverifiedreleasedHFweights/license. Do notstatealreadydownloadablemodel or fromscratchbudget.
+- MIT https://github.com/paper-instruments/feather-train pind8649447cf58dc75eafe0b30b2d40dbe56470f34, Harness/Eval/TrainTinkerreference; datasets/E2Bsnapshots/credentials stillrequired. ExactsourceURLclear, broadFlash/Paperfalsepositives manuallyexcluded; literalentity no localBlog/M2, originalbotKB only, published48001gap.
+- PIinternal59.3vsFable57.8/base52, .13vs8.19roundedratio63 atAPIprices, not universalworkinvoice or runtime. Sixknowledgebenchbaseimproved butDiligence/APEXbelowFable, Terminal83.2/DeepSWE61.5belowbase84.3/63.4; mixedharness/judge/publicbaselineprovenance, notuniformindependentrerun. Internalrubricmean notwhole-taskpassrate, noCI/significanceinference. Acceptancecost includes humanwork/tools/retries (our analysis).
+- Actuallyminimaluvlockedharnessinstall/CLIhelp +48upstreamtest_file_mutation/test_read passed4.25s; requirecurrentread/stalefilerevision/ambiguousreplace/readcontracts. PublicpricingGET .15input/.03cached/.50outputper1M. No paidgeneration/modelbenchmark/RL/E2B/fullOfficeacceptance. OfficialOGcover70838B, brandingOCRwarningapproved/rootview;3XiaoM40442/69332/71180B/sixrefs/SEOpassed. PublicBlog200/bilingual/pin/scope/fourassets200/list6; currentdraft/get0title/cover/3images/pin/scopeverified media_id prCUE631thH1cmNLi42prI33-TmM8EHKRbf9Cavvy7yXYV7wIfyfSmDMm-pKqCYC.
+- Semanticzh/enupsert accepted, manifest2unchanged; publicqueryrank1score0.7216039. MemPalacemine1file4drawers/exactslug3/export5. Task8b9cea09-a3fb-45c0-85fb-41946450b157. Articleee22787 pushed; PR101 https://github.com/MushroomDAO/blog/pull/101 normalreview stackedonX2; directBloglive independently.
+
+## 2026-10-15 — AI Native Call Center deployment review
+
+- https://blog.mushroom.cv/blog/ai-native-callcenter-self-hosted/ ; official https://github.com/rasonyang/ai-native-callcenter pinb4a1ceb4abdd7ab183df576e65f7a5e013f7e23e Apache2, latestReleasev0.4.0Oct10. Releaseinstallerscript --check/--provider none separatelyverified; main/releaseprovidermatrixcanchange. ExactrepoURLclear, originalbotKBonly, unrelatedAI-native33percenttitlesexcluded, published48001gap retained.
+- BinaryembedsREST/SSE/WebUI, notFreeSWITCH/Postgres. InstallerCompose+platformoverlay, macOSDocker/ColimaUDPmediarequirements. Humanbrowsercontrols require separateweb-sip-phoneextensionforaudio. CallerFS→appSIP/RTP→provider, cloudreceivesaudio, selfhostednotdataresidency; privategatewayprotocolsupportnotproofendtoendoffline. Startupselectedprovider notlanguage, noembeddedASRLLMTTScascade. Singletenant/scopedAPI notmultitenantSaaS. Queuebusinessrefusals/callIdcontinuity architecture notownseamlesscallproof; no universalweekend/ROI/capacitypromise.
+- OwnM4/16GBGo1.27.1 -race flow/flowsim pass109toptests/231eventswithsubtests,1skipTestLiveSeedScenarios. Installer121fixturechecks0fail, tempdirfunctions only. Nohostinstaller/fullstack/realcalls/paidproviders/humanmediatransfer/loadtest. SourceGIFprototype inspectedtextheavy; finalFLUX116headsetcover83588B, seed115rejecttinytextdespiteOCRpass. ThreeXiaoM36447/39823/52999B/rootview,6refs/SEOchecked. PublicBlog200/list1/bilingual/sourcepin/scope/all4assets200; currentdraft/get0title/cover3images/pin/scope verified media_id prCUE631thH1cmNLi42prHQ9buR_Koks5k8rzQ1NETSU0h0iOyjjgUZMGEZ5e8M2.
+- Semanticzh/enupsert and manifest2unchanged verified; publicqueryrank1score0.6552681. MemPalacemine1file4drawers/exactslug4/export5. Task11b1f817-901b-4670-8b8f-0b8462003b5d. Article35cb239 pushed; PR102 https://github.com/MushroomDAO/blog/pull/102 normalreview stackedonUltramarine; directBloglive independently.
+
+## 2026-10-15 — Indra OCR CPU parsing and benchmark scope
+
+- https://blog.mushroom.cv/blog/indra-ocr-cpu-document-parsing/ ; https://github.com/datalab-to/indra pin3d773aeedc5d79d1d0a2a04007a9075cd71a59f4 package0.3.2; HFdatalab-to/indra-ocr revisioned345c7f158eddbc7dee0c6a7269afb75a94f7e8 defaulttagv3.1.1; officialblogOct13. ExactsourceURLclear/entityonlyoriginalbotKB; broadpriorPaddleOCR/Datalabfalsepositivesexcluded, published48001gap.
+- 1M-levelmainrec recognizer nottotalbundle; sixdefaultONNX18158743B, noTorch. Author49.4pps32coreEPYC/same300pages/OCR/singlethreadworkerpercore/Indra3runsothersonce/excludesload+warmup; includedstartup37.7; singlepage228msauto4vCPU/303OCR notinversebatchthroughput. OPB16288passfailchecks2937pages developerbenchmark, auto41.3 vsOCR33.5/PPv6text35.8/PPStructurefull55.6; fullpipeline19pagesomitted. math57.5textbuttable54.8<56.4default,separatetimingrun. Chinese136checks64.7vsPPv5mobile65.4 notPPv6. No universalaccuracyclaim.
+- CodeApache2/weightsmodifiedOpenRAIL-M. Priorrevenue>20M orcumulativeequity/debt>20M clauses havepersonal/researchexceptions; separatelylistedcompetitionrestrictionnotautomaticallyexcepted. NotunrestrictedApacheweights.
+- ActuallyisolatedM4/16GB/Python3.12.14/ONNXRuntime1.31.0 CPUExecutionProviderthreads2 pinmodels. OriginalEnglish12lineinvoicePDFauto/text andforcedOCR/ocr produceidenticaltext,12lines12blocks; Chinese4inputlines→5lines4blocks withspurious t, IDs/amounts recovered. Nonerror/nonemptyMarkdown+blocks/finiteorderedlineboxes checked; notCER/WER/IoU. 27unmodifiedtests pass23.56s. No OPB/math/complex-table/handwriting/speedcomparison. Smoke.py/result/runtime evidence committed, fulloutputs/tmp/indra-ocr-smoke-20261015.
+- FLUX119glasslens+blankpapercover67973B/rootmachinepass;117/118discardedhardwaregibberishdespiteOCRpass. 3XiaoM53004/64742/59330B,sixrefs/SEO; componentscaption explicitlynotexecutionorder, actualorientationbefore detection. PublicBlog200/list4/bilingual/pin/scope/fourassets200, currentdraft/get0title/cover3images/pin/scope verified media_id prCUE631thH1cmNLi42prNKjJFuz6hapBmZTuAw58DJd2TbnpuX_HouMMScEUvHM.
+- Semanticzh/enupsert and manifest2unchanged verified; publicqueryrank1score0.73748094. MemPalacemine1file5drawers/exactslug3/export6. Task1e875eb7-832d-4404-8b6c-624e2a8578eb. Articlee8a6c5c pushed; PR103 https://github.com/MushroomDAO/blog/pull/103 normalreviewstackedoncallcenter; directBloglive independently.
+
+## 2026-10-16 — Sweety publication reuse audit
+
+- Task101c6828-7ed8-42db-bc4f-ac5db026f8e5 exactrepo/entity duplicates existing sweety-handdraw-video-pipeline. Blog200/bilingual/list7/four images200; sourcepin and limited test scope retained. Existing banner machine+visual pass; semanticrank1 score0.77835125 reused. No rewrite, deployment, reembedding or new draft.
+- Historical media creation retained; draft/get40007, remote box3/no matches, published API48001. Mark recorded/current ID empty; publication state unknown, do not recreate. Raw KB reused, project memory audit appended.
+
+## 2026-10-16 — Open TTS October snapshot review
+
+- https://blog.mushroom.cv/blog/open-tts-leaderboard-october-2026/ ; public Space exactURL clear, broad leaderboard token matches excluded; rawKB reused, published48001gap. Dated09-10-2026 revdd84b35e719440b53c06a9cef8e178e2c6950731; Space27639f0ab3cc57aaa194770fe5dc9a0b5595fd52/source3filesmatch, code2b2cd31257d22e00af4af585a1f447351c0e713c. PublicAPI5selections retrieved; no model inference or listening/rebenchmark. English Top10 includesParadee2/Supertonic3/Fish4; Chinese separate10, cloningWER/SIM andstreamingp95 separated.
+- BatchH20032wherepossible/1others vsA10080GB/CPU8vCPU32GB497timed+3warmups; oldH200stream47onlyp50paused. PocketCPUaudio.cppmedianbetter/p95worse; GGUFQwenBF16/chunk12 notlowbit. Cosymetadata0.11B/CCBY conflictslinked0.5B/Apachecard; variant retained. Pocketcard401/correctpubliccodekyutai-labs; truncatediPhoneMirror404/Jina403/agentreachabsent, officialraw/API fallback.12officiallaunchimagesarchived; notOctoberrankingdata.
+- FLUX120glasscover66312B/rootmachinepass;3XiaoM33770/59062/42883B,6refs,40rankingrowscheckedacrossbilingualtables,SEOpassed. PublicBlog200/list1/bilingual/pin/scope/all4images200; draft/get0cover3images/pin/scopeverified media_id prCUE631thH1cmNLi42prFC7d6M5-kq4ib0fGJ1fyQSeiCMbAz-9JcDGYEwbNpu_. Semanticzh/enupsertaccepted/manifest2unchanged; publicqueryrank1score0.6207844. MemPalacemine1file4drawers/exactslug1; ledgerexport5. Taskf42755b8-fbc2-40a0-8b97-e3c1474d22a0. Article5749dce.
+
+## 2026-10-16 — Valtz local creative workspace
+
+- https://blog.mushroom.cv/blog/valtz-local-ai-creative-studio/ ; official https://github.com/tgo-app-dev/valtz pincc02e25140571a18fad103f9cd6cf0190c5e97c1. User shorthand resolved viaofficialVpipe. Exactdedup onlyrawbotKB/30percentVpipeKBfalsepositive, priorVpipearticlecontextnotduplicate; published48001gap retained. Latestv0.1.0.10Oct15/mac26.2+/47.4MBinstaller notweights; AppMPL2/VpipeApache2/SDKApachefuture/exampleApache/modeltermsseparate.
+- Asset/Version/Recipecontenthash provenance notbitidenticalguarantee; savedCBOR+blobs vsactiveLMDB; externalfilelinks portability. Local/fleet/cloudagent withnonreadreviewandapproveall; wholeFleetjobs notpooledGPUmemory. No universal16GBmodelpromise; officialpreviewadopted notownoutput.
+- ActuallyM4/16GB/mac26.6.2 AppleClang21, isolatedCMake4.4.4/Ninja; noengine/nogui buildoriginalsource.210ran192passed1failed17skipped; upscaleri8_gemmassertions5966/5997failure reproducedsinglefilteredrun, no rootcause/productionimpactclaim. CLInew/importcopy/reopen64x64originalPNGonev1asset/CBORblobs/savedbytesequal. NoSwiftUIlaunch/Vpipeinference/models/paidcloud/liveFleet orquality/speedbenchmark.
+- Adoptedauthorpreviewcropcover81651B root+machinepass;3XiaoM55851/42164/42467B,6refs/SEOchecked. PublicBlog200/list2/bilingual/sourcepin/scope/all4images200; draft/get0cover3images/sourcepin/scope verified media_id prCUE631thH1cmNLi42prO4k3Oq4f2ujz7ye_-Lw5rfh6ECcCU6z17knpi6slH-N. Semanticzh/enupsertaccepted/manifest2unchanged; publicqueryrank1score0.6352638. Projectmemorymined1file4drawers/exactslug2; ledgerexported. Task36004f9f-25d9-409a-a538-5e1809ec1aa7. Articleee52977/evidenced7417a8 pushed; PR106 normalreview stackedonOpenTTS.
+
+
+## 2026-10-16 — UseChat and h3.c, separate source reviews
+
+- UseChat: https://blog.mushroom.cv/blog/usechat-wechat-agent-runtime/ ; CosmosShadow/usechat pin485c8080a0594d1fda5194556ac6da73a5e209a0 and author's Oct14 introduction. MIT visible-window screenshot/OCR/vision connector; watch charges each recognition before dedup; submitted is not delivered; customstdio not nativeMCP. Build/typecheck pass,132tests129pass3CLI-dryrun failures; isolatedmanifest_missing reproduction. No realchat/helper/paidvision.
+- h3.c: https://blog.mushroom.cv/blog/h3c-minimax-h3-metal-inference/ ; antirez/h3.c pin8974cc055ea9c02fcd14cc27dfda3e1027c05153. NativeC/Metal MiniMax-H3 engine, MITcode separateweightterms. Steps/layers/reuse changework; SSD streaming trackedDiTstorage nottotalRAM andauthorspeedtradeoff notownM4benchmark. Originalbuildpass,1768hostchecks/audioMetalprimitives/syntheticAVmuxpass,11fixturebranchesskip; noH3weights/generation.
+- Two separate bilingual articles, matching localFLUX121/122covers and3XiaoMfigureseach, SEO/rootvisualpass. Live200/bilingual/list3and1/all4imageseach; remote draft/get0cover3images/sourcepin/scope verified forboth. RawKBreused; mined2researchfiles/exactslug2each/export6; zh/enindexupsertsaccepted,manifest2unchangedeach. Taskf12e2847-75e8-4c33-ae44-c9704f0e9c03. Articlec82e76b. PublishedAPI48001gap retained; current draftsverified so noduplicate.
+- Final semantic retrieval: UseChat rank1 score0.7079384; h3.c rank1 score0.80259645. PR107 pending normalreview, stacked on Valtz. Both currentdrafts verified, no duplicate creation.
+
+
+## 2026-10-16 — Toonflow short-drama workflow
+
+- https://blog.mushroom.cv/blog/toonflow-short-drama-workflow/ ; original https://github.com/HBAI-Ltd/Toonflow-app pind2e94aca7b59659ff6b4ca15f03cf134ec7f0e1d. Exactsourceclear, entityonlycurrentrawbotKB; rawmaterialreused, publishedAPI48001gap. CurrentmainlineMIT unlikehistoricalAGPL/Apacheterms/forks.
+- Authorcase~2hours/~2min/~130yuan modelcalls,video120/language10/image<1,Seedance2/GPTImage2/Opus4.6; compressed480pdemo; noitemizedretryledger/independentrepro/fullcostguarantee. Currentcanvasworkflowassetorganization notautomaticfinishedfilmdelivery. Acceptedshotcostincludesallattempts; creatorconfirmationrecommendednotdefaultmandate. Dockerloopback3000/namedvolume; businessUI/APIloginabsent vsseparateMCPauthorize; localprojectnotfree/privatecloudinference.
+- ActuallyM4/16GB/mac26.6.2/Bun1.4.2(upstreamDocker1.3.14). Frozeninstall902packages/serverbuildpass; buildchmodstdioonlynocodecontentchanges. SourcecreateAppwithbuiltweb/plugins/isodata/loopbackephemeral:4HTTP200,originaltextPUT/GETequal. No productionentry/fullMCPruntime/browser/native/Android/Docker/paidmodels/film/costreproduction/fullrepotests.
+- FLUX123cover81174B root/machinepass;3XiaoM43631/74493/70739B,6refs,SEOchecked. Live200/bilingual/list3/all4images/sourcepin/scopeverified. Currentdraft/get0cover3images/sourcepin/scopeverified media_id prCUE631thH1cmNLi42prMiDtsKL3rWN9N5w-9usT5v_ljANewL_l7XfC2934my2. Projectmemorymined1file/exactslugverified; ledgerexport; semanticzh/enupsertaccepted/manifest2unchanged. Article041a6a5. Task2aecc942-7100-44a7-83fe-5d7bd1e54ea0.
+- Finalsemanticqueryrank1score0.72399765; KBexactslug1/export4; PR108 normalreview stackedonUseChat/h3.c.
+
+
+## 2026-10-16 — Hy Memory SDK, MemHub and writer
+
+- https://blog.mushroom.cv/blog/hy-memory-sdk-memhub-memory-writer/ ; officialrepo https://github.com/Tencent-Hunyuan/Hy-Memory pinfba347ad8d04eefbc51a466fa4cbd7d4e1936109; HF https://huggingface.co/tencent/Hy-Memory-30B-A3B pin64a460a94d5498b7316fb02395c72d01c47a7347. LinebrokenURLscorrected/Jina+officialrawfetchsuccess,agentreachunavailable;5sourceimagesdownloaded. ExactdeduponlycurrentrawbotKB, reused; published48001gap. Apache2code/card.
+- SDK2.0.1 three scenes/chatL4L5reserved; Workingfact/experience,Codingdiffchaindecorator; liteembeddingsnotLLM,proextractreconcile,ultraevolvegraph; routingzerocallnotprozerocost. MemHubsharedruntime/singlewriter/separate3grants; thirdpartymodelsgetauthorizedcontent,debugcanlogpromptresponse. Runtimeclose/uninstall/delete distinct.
+- Writer30Btotal/~3Bactive;60129463808weightbytes/~60.1GB notruntimeRAM. Authorfixed20percent/sixmetric/fourharness/writeronly55.49vs54.62; .02/.01 frameworkgapsnocitedCI, heldoutEverMemOSnotuniversalwin. Publicnpm memhub-cli/latest404; v1.0.0Macarm64DMG+LinuxZIPs, no standalone releasemanifestattachment; noallartifactsbrokenclaim.
+- ActualM4/16GB/mac26.6.2/Python3.12isolatedsourceSDKdevinstall;42selectedupstreamtestspass(data/lite/sourcefilter/Chromalimit/evolutionchainexclusion),fixed8dimembeddings/mocksnotsemanticquality. No fullsuite/30B/paidmodel/MemHubGUI/runtime/crossappimport.
+- FLUX124rootrejectedtinytextdespitemachinepass;125glassbeadscover90102Brootmachinepass.3XiaoM52146/56377/67085B,6refs/SEOchecked. Public200/bilingual/list2/all4images/sourcepin/scopeverified. Currentdraft/get0cover3images/pin/scopeverified media_id prCUE631thH1cmNLi42prJYw5XVfNHS-hyEESCb4u_MCokeqIZqG3jaAUbSadNsO. Projectmemorymined1file/exactslugverified; ledgerexported; semanticzh/enupsertaccepted/manifest2unchanged. Articlec3eb93b. Task2aba3080-5fdc-4def-8c23-f8b9fe20c58b.
+- Final semanticretrieval rank1score0.78147256; KBexactslug1/export5; PR109 normalreview stackedonToonflow.
+
+
+## 2026-10-16 — PocketOrca 35B phone server
+
+- https://blog.mushroom.cv/blog/pocketorca-35b-moe-phone-server/ ; https://github.com/PocketOrca/PocketOrca-LLM pin/tagv1.4.3c44f529a21158e57d2344a3da5af0939b17bd6cb,Oct14release. ExactURLclear,entityonlycurrentbotrawKB,reused; publishedAPI48001gap.
+- AuthorS25/8Elite/12GB/Qwen3.6-35B-A3B-Q4_K_M~5-6t/s/~3sTTFT/byteidentical notours. MoEexpertstorage/cache4000MBnotwholeRAM/35BNPUresidency; MTPspecificmodelnotallGGUF. Localinference/LANtraffic/optionalremoteAPIseparate; remoteKeystorekeynotinboundauthproof. MITownapp/llama,MoEApacheperrelease,Qualcommprebuiltsownhardware/modeltermsseparate.
+- PublictagbuildVN1.3.5/VC61/threeprofiles/hardcoded0.0.0.0 vsreleaseAPK1.4.3/build117/fiveprofiles/bmoecli+http. SourcecannotcertifyreleaseLAN/auth/matchingrebuild, notAPKfailureclaim. APK80831356B sha256cbc508fc8e6bce9ca8707bab1469ca9a94c03eed6f2f79ff56753a9335cadbd1 matchesGitHubdigest; CRCpass/Manifestmin29vsreleaseAndroid12 notreal10compatibilityproof. ActualM4staticAPK/Manifest/assets,source+APKJSnode--check,twoBash-n only. NoJavaRuntime/AndroidSDK,JVMtestsnotrun; nobuildexecution/sign/install/native/model/device/perf/authenforcement.
+- FLUX126rootrejectedroutertextdespitemachinepass;127phoneglassspherescover73488Broot/machinepass;3XiaoM60557/51904/47985B,6refs/SEOchecked. Live200/bilingual/list4/all4images/sourcepin/scopeverified; currentdraft/get0cover3images/pin/scope media_id prCUE631thH1cmNLi42prPOyKGf6tm5sc7ZKnPezGpsQtRJ2Mo9lVEbFx40kkI_Y. Projectmemorymined1file/exactslugverified/ledgerexported; semanticzh/enupsertaccepted/manifest2unchanged. Articlec23e96a. Task4c8444de-4659-49ea-898c-8ce20f8f9e55.
+- Finalsemanticqueryrank1score0.6974259; KBexactslug1/ledgerexported; PR110 normalreview stackedonHyMemory.
+
+
+## 2026-10-16 — HarborRL agentic RL pipeline
+
+- https://blog.mushroom.cv/blog/harborrl-agentic-rl-pipeline/ ; https://github.com/datamllab/HarborRL pin128d4d67916340db01e3a8ea828451e805ea154b,v0.1.0/MIT. ExactdeduponlybotrawKB,reused; publishedAPI48001gap. Agentreachunavailable/Jina403/officialraw+clonefetchsuccess; sourcehero downloaded.
+- README MATH scope vs nativeCLIonlyGRPO/configrequiresharbor_job,claude_code,Harbor0.23.0; dryrunDAPO/Codexexit2rejected. ClaudeCodeshell/ownpolicygatewaynotclosedweights. Trace/reward/policy/task/harness/samplingdigests,originaltokens/logprobs/masks/tokenweightscontracts; notbitidenticalreproguarantee. Slime/Megatron/SGLangpins; sample8GPU4actor4rolloutnotuniversalminimum.
+- AuthorSep18snapshot303datasets/183staticdatasets/50dynamicdatasets/210pairs/203uniquedigests; dynamicmaterialization/rewardnotRLtraining/modelscoregain. Twoinconsistentbigstaticcountsnotusedinarticle. hello_worldinspectNEEDS_PROBE/evaluablefalse/trainablefalse; nottaskfailure.
+- ActualM4/16GB/mac26.6.2. uvlockcheckpass/syncdryrunresolved/originalsyncfailedmirrorDNS. Unchangedsource+lock;isolatedPython3.12publicPyPIinstallconstrainedtolockversions. CLIhelp/89upstreamCPUtestspass; synthetic0/1rewardsmoke/oppositeadvantages/unitweight,mocksnotgradients. No GPU/Docker/nativeHarbor/modelgateway/checkpoints/backendinstall/crossmachinereadiness/realverifier/RLconvergence. CPUdevelopmentcheckswithalternateinstallation only.
+- FLUX128copperloopmodularcover85648Broot/machinepass;3XiaoM45710/82283/32288B,6refs/SEOchecked. Live200/bilingual/list2/all4images/pin/scopeverified; currentdraft/get0cover3images/pin/scope media_id prCUE631thH1cmNLi42prEOP7GQyo311-LS4g3BIuEC4cLnpqYG5S4_45P7O5SFq. Researchmemorymined1file/exactslugverified/ledgerexported; semanticzh/enupsertaccepted/manifest2unchanged. Article8da845f. Taskf093c958-c3d9-47b5-b0d1-df492ab6e7b1.
+- Finalsemanticqueryrank1score0.6575235; KBexactslug1/export5; PR111 normalreview stackedonPocketOrca.
+
+
+## 2026-10-17 — OpenTiny TinyRobot Agent UI
+
+- https://blog.mushroom.cv/blog/opentiny-tinyrobot-agent-ui/ ; official repo https://github.com/opentiny/tiny-robot pin7a5b22ccaa9cafd0a2ad14dce526d79c03e90070. Exact source/TinyRobot clear; OpenTiny only original raw bot KB reused. Published WeChat listing48001 unavailable.
+- OpenTiny ecosystem vs TinyRobot Vue3 UI/Kit/Chat assembly; MIT explicitly Huawei Cloud copyright. Source manifests0.5.1 vs npm latest core/kit0.5.1,Chat0.4.1; all rc1.0.0-rc.1. Source docs newer than README; Chat Vue>=3.3.11; old AIClient deprecated. Server proxy holds keys; beforeSend not backend authorization; browser storage not centralized governance; related GenUI/WebMCP separate integration.
+- Actual M4 isolated clone unchanged; no committed lock; initial frozen install failed; unlocked ignore-scripts install plus resolved-lock retained. Kit191pass/1skip after official pinned fixture pretest (initial4missing-fixture failures resolved),Chat18pass,release13pass; Kit/SVG/components/Chat buildpass. No browser UI acceptance/real model/real MCP/production authorization/performance.
+- FLUX129 glass interface cover83780B root/machinepass;3XiaoM69912/38215/60537B,6refs/SEOchecked. Live200/list1/bilingual/all4images/pin/scope. Current remote draft/get0 cover3images/pin/scope media_id prCUE631thH1cmNLi42prP18SnV_WDguf9krLolluqMvOFR_qvOCwt6d9n7oA9fu. Raw KB reused; projectmemory1file/2drawers/exactslug1; ledgerexport5; semanticzh/enupsert accepted/manifest2unchanged. Article14076db pushed. Task2730765d-614f-42a0-b248-77d46859acc4.
+- Final public semantic query rank1 score0.70306927; PR112 normal review stacked on HarborRL.
+
+
+## 2026-10-17 — Nemotron / OpenGCUA / Atticus / IndexNow research batch
+
+- Task6eb9b02c-7891-4efb-97d1-ca9bb880f386: primary/exact entity dedup clear except raw bot KB; broad Nemotron hits are prior ASR. Published WeChat API48001 unavailable; no old articles/drafts/receipts for these topics. Raw material reused; four project files mined8drawers, exactslugs verified, ledgerexport14.
+- NVIDIA officialOct15 SuperVL120B-A12B1M and Bolt74B-A9B24GB256K released; E4B4GBscheduledOct23 notyet model/audioIOverified. OpenMDW1.1 inspectedcards, nativeIQ2QAT architecturesearch24GBbatch1/128K target vs256Klimit; no arbitrary24GBMac/CUDA/fullcontext/concurrency guarantee. Card benchmark claims not ours; no weights/inference. Superpin59b8721646c38111a242da18218859fb2b454322,Boltpinc6cc2e8ffa353403213d6b9b18aaf8eb684d705a. Official art adopted/rootpass.
+- OpenGCUA pin625b1cebde1f772328a238881121b76691b8895b Apache2: first release no trained weights; HFmodels/datasets/spacessearch empty, orgintro notcheckpoint. Codeexec/GUI/AX/API,harness-to-model; authors8modelspartial45.3→64.9/+19.6points/53%stepsnotwallclock; fourmacOS19.4xreasoningtokenssmallcase notgeneralranking. ActualPy3.12 14mocktransport/statustestspass; initial3.9/dependencyfailuresresolved; no driver/device/model/OSWorld. FLUX130rootrejectwrenchmarks→133pass.
+- Atticus pin0f4d8d79e3db4e9447a80deab847369423b295ad MIT/mac26; localASR/instant/replay vsClaudeCodecloud/customserver; freeappnotfreeplan/audio-localnotall-local; meetingAIrecap/telemetry documented. Actual26focusedtests+nativecompile/selftestpass; module-name mismatch due temporary output fixed with explicitmoduleAtticus no source edit; broad suite interruptednotfullpass; noinstaller/realvoice/paidmodel/dailytaskacceptance. FLUX131pass.
+- IndexNow currentofficialregistry includesBing/Yandex/Seznam/Naver/Yep/InternetArchive/Amazonbot notGoogle. GoogleAPIrestrictedjobs/livevideo. 200submitted/202keyvalidationpending notcrawl/index/rank. Rootkeyhostproof; batch10000; changedURLs/afterdeploy/queue/backoff/idempotence; CMS/Cloudflare/CIseparate. Offlinepayloadhelper13boundary/CLIchecks,noHTTPsubmissions/siteconfigchanges/indexingtimings. Public /downloads/indexnow-payload.py verified200/sourcebyteequal. FLUX132pass.
+- New Blog https://blog.mushroom.cv/blog/nemotron-35-super-vl-bolt-local-models/ ; current remotely verified draft prCUE631thH1cmNLi42prHbOojWbrN716rDikQAmkZWRX9_pWWyHWlkg_Rja4dil . Three XiaoM figures each bilingual, SEO/GEO pass, all images200; zh/en semantic upserts accepted.
+- New Blog https://blog.mushroom.cv/blog/opengcua-generalist-computer-use-stack/ ; current remotely verified draft prCUE631thH1cmNLi42prOIV7vkJPlq_5Bj6RljNkse47fI_wjGrv_NAEhb9kfGx . Three XiaoM figures each bilingual, SEO/GEO pass, all images200; zh/en semantic upserts accepted.
+- New Blog https://blog.mushroom.cv/blog/atticus-mac-voice-assistant/ ; current remotely verified draft prCUE631thH1cmNLi42prF40aH5JucJ_Q0QZqXOwZ5QUGfV7BTJONpP1pm38CnRc . Three XiaoM figures each bilingual, SEO/GEO pass, all images200; zh/en semantic upserts accepted.
+- New Blog https://blog.mushroom.cv/blog/indexnow-website-push-indexing-guide/ ; current remotely verified draft prCUE631thH1cmNLi42prMenpquSsH4jC8bV0mjfT5VsCuFKAEYZJb8-dhihdLHr . Three XiaoM figures each bilingual, SEO/GEO pass, all images200; zh/en semantic upserts accepted.
+- Final public semantic queries: all four rank1; nemotron-35-super-vl-bolt-local-models=0.66051203, opengcua-generalist-computer-use-stack=0.619988, atticus-mac-voice-assistant=0.6164824, indexnow-website-push-indexing-guide=0.69309694. Manifest8unchanged. PR113 normal review https://github.com/MushroomDAO/blog/pull/113 .
+
+
+## 2026-10-17 — MotoNav Android / ESP32-S3 round display
+
+- https://blog.mushroom.cv/blog/motonav-round-screen-navigation/ ; source https://github.com/zyn950929/MotoNav pin3b93facfd244b0477950189b6e26aa913b2ded78. RawbotKB-only exactdedup hit reused; no oldBlog/currentdraft/localM2. PublishedAPI48001gap retained. Agentreachskill/command absent; allowedJinaReader200 fullREADME andclone success.14sourceimages/GIFs archivedwithprovenance/localpaths, notrepublished as unrestricted images.
+- App8.3.19/firmware7.8.11; onlystatedboardWaveshareESP32-S3-Touch-AMOLED-1.75/466x466. Phone location/routing/maps/services→BLE display/control; notstandaloneGPS/offlineproof/runtimeLLM. HighDe keyactualapplicationId+signingSHA1,Tiandituoptional,QWeatherownHost/key. Preserve personal.properties+wholekeystore forupdates. SDK35/min26/arm64v8abuilddeclarationsnotcompatproof; Windowsbuildscriptdownloadstoolchains,notbundledAPK.
+- OwnLICENSEcustomnoncommercial, unauthorizedcommercial/resale/paidcompile/paidflashing/hardwarebundlingrestricted; notMIT/Apache. Thirdpartylibraries/fonts/maps/weather ownterms. MEDIA distinguishesparkedinstall/desktoprealdevice/AIprivacyedits/3generatedmockups; notindependentroadtests. Originalconceptcover/bodyart labels retained, no blanketlicensegrant tosourceassets.
+- ActualM4: portableJDK17.0.20.1 archive185851019B SHA256196d13ba5f10414bef7f6a05a9b3f00edacb18ebacef2b99485db9e2ee18f0e8 matchesofficialAPI, no globalinstall/sourceedits.3upstreamJava suitespass:12cruisescenarios,12styles+capture/invalidIDs,17areacases. NoAndroidApp/firmwarebuild,KotlinweatherJSONtests,hardware/BLE/GPS/liveAPI/road/performance.
+- FLUX134 conceptualcover93443B machine/rootpass;3XiaoM bodyfigures+6refs/SEOchecked. NewBlog200/bilingual/list3/all4images/pin/scope; currentremote draft/get0 cover3images/pin/scope media_id prCUE631thH1cmNLi42prBa9OjLSmP4KUm7ZUppK6CMlu8EfDBSibIgv9remGJCM. Projectmemorymined/exactslug1; rawmaterialreused; ledgerexport6. Semanticzh/enupsertaccepted/manifest2unchanged. Article1588f51pushed. Task50885262-fb9f-4461-8f73-8c5e7d994963.
+- Final public semantic retrieval rank1 score0.7340865; PR114 normal review https://github.com/MushroomDAO/blog/pull/114 .
+
+
+## 2026-10-17 — D2R build / Kinex / Glimpse
+
+- Task01aab571-1dee-4913-ad9b-440e40fb50ae. Three separate primary-source subjects; exact URL/entity dedup only raw bot KB, reused. Published WeChat API48001 unavailable; permanent local receipts and current draft box checked.
+- D2R MIT workflow pin e92853236714bbf96642faadd781dccf29da9c9c. Python3.12 35 upstream tool tests pass after old system interpreter strict-zip error. No game resources/build/install/gameplay.
+- Kinex Apache2 pin15207927c6669fe98f1213a3fd05148e0fe938d3.9upstream driver-contract tests pass; independently recomputed396 official episodes, Kinex103/132 $1.888 vs native-control96/132 $3.306. EstimatedAPIcost notbills; no simulator/model/robot run.
+- Glimpse officialElorian launchOct16 API/chat preview; no verified official downloadable weights, not same-name benchmark/app. Gamecase originalcompleteevidenceunavailable, not independenttest. QAintegrationproposal separates observation/time/localization/source-diagnosis/humanconfirmation. No paidAPI/bench.
+- Three originalconceptcovers and9XiaoMfigures, bilingual6refs each. Finalmanualcrop removed fakeglyphs missedbyOCR fromD2R/Glimpsecovers; Glimpse timeaxis regenerated/corrected. SEO/GEO/metadata/dimensions/bytes pass. All3live200/bilingual/12assets200/listpositions2,5,3.
+- New Blog https://blog.mushroom.cv/blog/d2r-mobile-build-ios-macos/ ; current remotely verified WeChat draft prCUE631thH1cmNLi42prKFyDCdFPYY_UxWzlxb0qAojfHZEbOC_kESAMl8K9UV- . Cover,3bodyimages,pinnedsource,scope verified.
+- New Blog https://blog.mushroom.cv/blog/kinex-coding-agents-robot-harness/ ; current remotely verified WeChat draft prCUE631thH1cmNLi42prPih_cY818Dv7v2h2y581o8mQv5pARJ0J5kUWGNlEzv7 . Cover,3bodyimages,pinnedsource,scope verified.
+- New Blog https://blog.mushroom.cv/blog/glimpse-visual-reasoning-game-bug-review/ ; current remotely verified WeChat draft prCUE631thH1cmNLi42prJE7nr3cK-l2facHZQzXdUrUrCFW8BId5ggToszPoPtg . Cover,3bodyimages,pinnedsource,scope verified.
+- Project memory and semantic index updated; exact KB/manifest/public-query verification recorded separately. Normal stacked PR base publish/motonav-round-screen-navigation.
+- Final public semantic retrieval: d2r-mobile-build-ios-macos rank1 score0.686127, kinex-coding-agents-robot-harness rank1 score0.62982833, glimpse-visual-reasoning-game-bug-review rank1 score0.6882153; manifest6unchanged. PR115 normal review https://github.com/MushroomDAO/blog/pull/115 .
+
+
+## 2026-10-17 — Scenario for Blender cloud generation and local MCP
+
+- https://blog.mushroom.cv/blog/scenario-blender-generation-mcp/ ; officialrepo scenario-labs/blender-plugin pin ca4fcf397e2e3e88ee1899964cf14600c7499ddd, manifest/release0.11.0 Oct14, GPL3orLaterfirstparty. ExactdeduprawbotKBonly; broad Scenario Blender genericword falsepositives manually resolved. PublishedAPI48001 unavailable; permanentrecords/currentdraftschecked.
+- Blender>=5.0,localMCP sceneconnection vscloudgeneration/CU spending; quotesmaytransmitpromptbeforeGenerate, separateuploads; arbitraryPythonoptinoff; credentialsBlenderprefsnotOSkeychain. Uncertainpaidjobs reconciliationnotblindresubmit; imageautoimport notalllanes.
+- Actual100upstreamoffline tests protocol/rejection/exportpolicy pass in existingisolatedPython3.12.14; pinneduv0.9.26unavailable(default and explicitPyPI), notlockedenv/fullsuite. NoBlenderinstall/account/upload/paidgeneration/quality/perf/multiOSacceptance. Sourceunchanged.
+- OriginalFLUX139cover90372B root/machinepass,3XiaoMfigures bothlanguages,SEO/GEOcheck. Currentremote draft/get verifiedcover3images/source/scope media_id prCUE631thH1cmNLi42prEB1NM4AJ2_1uPku6xpjZ7dGltLMynJD0BM8fwUYUni4.4publicimages200/listposition recorded. RawbotKB reused; projectmemoryandindex ledger synchronized separately. Task9213aac1-bd22-436b-b6b6-27fa3a9c1cc4.
+- Final public semantic retrieval rank1 score0.7214374; manifest2unchanged. OfficialZIP18894810B checksummatchesextensionindex,255members CRCpass,notinstalled/executed. PR116 normal review https://github.com/MushroomDAO/blog/pull/116 .
+
+
+## 2026-10-18 — Decision Index 0.3.2 and StartLux existing article update
+
+- Updated existing https://blog.mushroom.cv/blog/startlux-decision-typed-decision-model-jev-compatible-games-demo/ ; preserve original2026-10-03 pubDate, updatedDate2026-10-18, no duplicate article. Board snapshot generated2026-10-16,174configurations, exactTop10 densegroups. PaperAutoThink73.37 public notofficialInstantFull69.12.
+- Full20/50/30 requires privateequating; arithmetic all174 maximumdifference0.011923 fromroundeddata.15officialindex03offline tests pass. No model/fullbenchmark/privatequestions/performance claims. Instantbidirectional vsAutoThinkgate; paper0.9 vsdefault0.6; authorheldoutPivotpairaccuracy distinction.
+- CodeApache2 doesnotauthorize commercialweights:8checkedv1.1cards CC-BY-NC4.0. ExistingqualifiedFLUX99cover reused,3newXiaoMfigures, bilingualSEO. CurrentremoteoldID40007 and publishedAPI48001; preservedreceipt prCUE631thH1cmNLi42prEkI4L5q27TY-LAHrnEQjQjBB4kYEoV81J9LoLeZJEFM ; currentmediaIdempty,wechatStatusrecorded, didnotcreateanotherpossiblypublishedarticle. RawbotKB reused; finalmemory/indexledgerproofs recorded. Taskab55420e-c1b1-4f3d-8bda-c6db52e8e139.
+
+
+## 2026-10-18 — Autodesk Zero-to-CAD multiview reconstruction
+
+- https://blog.mushroom.cv/blog/zero-to-cad-multiview-reconstruction/ ; exactprimaryURL/entity dedup rawbotKBonly, broad PT-5.2 falsepositives resolved. No oldarticle/M2receipt; remote draftbox checked, publishedAPI48001unavailable.
+- OfficialHFmodel8cf9260904aa6eb29f0826e3585f25b7df61ff89, paper2604.24479v1 Apr27 notnewOctrelease.8clean256renders notphonephotos; generatedCadQuery notnativeDWG/historyrecovery. Datasynthesisgptoss120b separatefromfine-tuned2B.
+- AuthortestQwen10000vsGPT1000subset; IoU/CDsuccessfuloutputsonly,normalized64cubed,best45degrotation. ABC2B61%/.377vsGPT5.2High66.2%/.344. Do notclaimuniversalwin/manufacturingacceptance.
+- Actualsingleofficialgroundtruthtestcode replay withCadQuery2.6.1/isolatedPython3.12,validsolid/STEP-STL/STEProundtrip. No modelweightsdownload/inference/benchmark/perftest. CardsApache2, noverifiedofficialfullGitHubpipeline.
+- Adoptedofficialsamplegallerycover root/machinepass,3XiaoMfigures,bilingualSEO,4images200/listverified. Currentremote draft/get verifiedmediaId prCUE631thH1cmNLi42prDxa5EPKSOe4hZznLuUYUaKIFzOfyAbBqIcruyqxhonv. RawbotKB reused, projectmemorymined/indexledgersynchronized. Task7f030e5f-bd68-4ba8-9a16-16bb9ee97e5d.
+
+
+## 2026-10-18 — MacNativeGames native TOTK on Apple silicon
+
+- https://blog.mushroom.cv/blog/macnativegames-totk-native-mac/ ; source https://github.com/ly05010419/MacNativeGames pinb75994fb305d883004361e277f555596f286331e. Exactdedup rawbotKBonly,nooldarticle/M2receipt; currentdraftboxchecked,publishedAPI48001unavailable. Agent-reachnotinstalledskill/command; JinaReaderfallbacksucceeded, crosscheckedpinnedsource. No sourcebodyimages.
+- CPUARM64mostlydirect/limitedrewrites,Horizonserviceshost,NVNMetal4/RyujinxSPIRV/SPIRVCrossMSLtranslation; notuniversalSwitchsupport. MacSilicon/macOS26+,TOTK1.0base+1.1.2NSPupdate,1.4.3notruntimesupported,noiOS. README NSZclaim conflictsCLI/source/docs; nocompressedupdatepromise.
+- Actual16upstreamsyntheticcontainer/updatetests passed Python3.14.8 pinnedrequirements. Prebuilt5120728B SHAmatches, notexecuted/attested. No games/realkeys/nativefullbuild/GPU/gameplay/FPSbenchmark. AuthorwarmcacheM4~90/menu120 notours,settings/framegeneration/coldvswarm/p99/fullmaplimits explained.
+- FLUX140rootrejected badge/PCtower;141qualifiedcover,3XiaoMfigures,bilingualSEO.4publicimages200/listmembershipchecked. Currentremote draft/getverifiedcover3images/source/scope; mediaId prCUE631thH1cmNLi42prMjStlFZJf4fmddo8PKTHe1oMZxm1MqAeeErYmFyDaZS. KB/indexledger synchronized with proofs. Task4250f407-e9ba-4079-8125-8a0292caecc7.
+
+
+## 2026-10-18 — Google Harness2 recursive agent improvement
+
+- https://blog.mushroom.cv/blog/harness2-recursive-agent-improvement/ ; screenshotrecognizedHarness², google-research/harness2 pin1cfe254e8d25b15f37048c3730134686abe60335, paper2610.14224v1. Exactdedupclear exceptrawimageKB; imagepath/harnessnormalizationgenericfalsepositivesresolved. Remote3draftschecked,noM2old,publishedAPI48001unavailable.
+- Frozenweights,task-levelPPCandpersistentperdomainimprovementlibrary; parallelwidth/sequentialdepth. PapereditorOpus4.8 separateexecutorcost. Authorup-toWB11.5/JB4.5points andLABPartial11.8percentagepoints notuniversalallbaselinewins. ActualreleasewarnsJobBenchrubricaccess,unrestrictednetwork/Codexsandboxdisabled,unscoredfailures; max-tasksperdomainnotglobal.
+- ActualPython3.12.14/macOS credentialfreedemo2tasksbothmodes,k2,28executions32deterministiceditorcalls. Resume2skipped0newcalls;5upstreamworkflowtests passed. No live model/Vertex/fullbench/scoreorcostreproduction,notfullMacbenchmarkacceptance.
+- FLUX142rootrejectedtext/corebeingedited;143qualifiedtopiccover,3XiaoMfigures,bilingualSEO.4images200/listmembershipchecked. Currentremote draft/getverifiedcover3images/source/scope mediaId prCUE631thH1cmNLi42prHkYI_ue8fhACKp5D3V2NWGSVrk0WORst-vh1BvCbPV2. RawimageKB reused;memory,indexledgerupdated. Taske2fc8e82-ae22-4820-bce1-111f77e0d86c.
+
+
+## 2026-10-18 — MiniCPM-V 4.7 MoE vision deployment
+
+- https://blog.mushroom.cv/blog/minicpm-v47-moe-vision-deployment/ ; task2702336e-aeab-431b-acb8-91c51e5285b8. Exact source/model dedup: raw KB only, no previous Blog/M2; remote four drafts checked; published API48001 unavailable.
+- Global HF Trending snapshot2026-10-18T05:11UTC rank4 confirmed via API and rendered page; historical top3 unverified. Popularity is not capability.
+- Official35B/A3B/phone RAM separated; LES prefetch preserves actual routing, misses still fetched; DSpark and quantization distinct. Author iPhone and iPad decode results not our measurements. Vision4x/16x CharXiv75.60/69.20, not universally negligible loss.
+- Actual65536byte GGUF prefix audit, config40layers/256experts/8selected matches partial header; standard tensor bytes70.43GB, mixed GGUF15.50GB plus matching vision module. No full weight integrity, model inference, mobile installation or performance test.
+- FLUX144 topic cover and3 XiaoM body figures verified; bilingual SEO/GEO, public article/four images/list and current draft/get verified. mediaId prCUE631thH1cmNLi42prLCEA_EFiE7slyCPP-ee5PZ-saa4-YZ_FfT1sv70zyww. KB, semantic index and ledger updated.
+
+
+## 2026-10-19 — Sac Little Prince AI3D production tutorial
+
+- https://blog.mushroom.cv/blog/sac-little-prince-ai-game-workflow/ ; task5ad09468-1658-402b-9fbe-99ca809de988. Original @Saccc_c launch2109962425512734739/tutorial share2110694725640474759/actual article2110601994578866176,Oct15created/Oct17modified. Full text via FxTwitter proxy; direct X403. ExactsourceID/handle/home dedupclear,current5drafts checked,publishedAPI48001 unavailable. Broad common-word falsepositives resolved.
+- Source promises next-week full GitHub code; matching official game repository not located in source/home/candidate Sac-Y8publicrepos/search. Do not invent repo or treat community collection as source.16days/300wviews authorclaims. Original model labels not verified API IDs.
+- Tutorial adds vertical-slice acceptance, asset budgets/provenance, ARPskin/export, Mixamo mapping, IKpropownership and runtime/offline distinction, browser deployment. Official Unity CLI+Pipeline supported; old assistantembeddedMCP deprecated,CLI MCP not deprecated.
+- Actual home200+4buildHEAD200; no full data/gameplay,Blender/Unity build,assetgeneration or benchmark. Author scene reference cover crop qualified,3XiaoMfigures,bilingualSEO. Article+4images200/list,remote draft/get cover3images/source/scope mediaId prCUE631thH1cmNLi42prJEzmchpiFbRLTqmCYCxXqa8DC7-06E2Y1lequAMeZgL. KB/index/ledger refreshed.
+
+
+## 2026-10-19 — Pine Computer agent runtime engineering
+
+- https://blog.mushroom.cv/blog/pine-computer-agent-runtime-engineering/ ; taskb0e5f827-7f7c-4722-aed5-08e957f3614c. ExactURL+pinecomputer+StanleyWei4748 dedupclear,current1draftchecked,publishedAPI48001 unavailable. Broadcomputerfalsepositives resolved by exactphrase localrg. BlogOct5byDylanWang/companyreleaseOct9;video1:43verified,initial1200followers/exact24.3mviews no historicalproof. AISCcreatornetworkparticipation disclosed,notwholetrafficattribution.
+- Cloudbrowser/shell/harness/runtime,gVisorcontainer vendor disclosure,notnewhardware. Eventperceptionepoll analogy notinternalcodeproof or sameasSDK UIevents. Computer sharedidentity,Sessionseparateworkspacesnottenants;Turn protocol updated,runidempotency notexactlyoncewebsiteactions. ExportownartifactsbeforeStop;checkpointnotfullfiles;SOC2auditongoing,USstoragevsselectedegress.
+- Actual publicCCBY4datasetrevisionbd9df2a8a140f30bf67e4c4409e9323b579d2577:4SHA256matches,106rows/1077of1375checks78.3273%,29resolved27.3585%,98completed8timeout,87first19second accepted.125attempts19excluded,16healthcarerepairs;noimmutableComputerimagepin. Meanscore76.1028%notCS. Rawprivateevidencehashesnotindependentoutcomeproof. $1.02tokens/$3.60consumerprice/runtimeandproxybilling separate;nohostedtask/speed/cost/securitytest.
+- Privatebeta,completepublicruntime notconfirmed; donotconfuse unrelatedPineGitHub projects or futureopensourceplan. FLUX145qualifiedconceptcover+3XiaoMfigures,bilingualSEO. Blog+4images200/list checked;currentremote draft/getverifiedmediaId prCUE631thH1cmNLi42prHBMoeKUcfQwcSzU6A4kWr8E8RmrrPXvUsQAiT7qTBg_. KB/indexledgerupdated.
+
+
+## 2026-10-19 — PraisonAI existing publication repair
+
+- https://blog.mushroom.cv/blog/praisonai-five-layer-agent-stack-managed-agents/ ; task9c8f1cfd-41a6-40d5-a283-d6b6b78d0832. ExactrepoURL+PraisonAI matched Sep7 bilingual Blog/M2 plus rawKB; reused original slug/pubDate, no duplicate article.
+- Current remote2drafts checked, old receipt draft/get40007 and freepublish48001. Preserve archived mediaId prCUE631thH1cmNLi42prLZMNAVgiV9D1MyIKob4QR-VdJts8JH2vxO0BPF-3yOw; recorded only, currentmediaId empty, no duplicate creation or WeChat mutation.
+- Pinnedofficial README d27f03229bff65796419a4e26de114f41763eb67. Five-line quickstart singleAgent; explicit Agents/AgentFlow and tools required; 24/7marketing notsoaktest. BudgetExceededError may map genericerror. Localorchestration notofflineinference; customtoolbackendboundary separatelyverified. Schedulingtrigger notcrashrecovery/exactlyonce.
+- Oldmatchingcoverunsignedfailedprovenance; regeneratedFLUX146qualified+3XiaoMfigures, SEOmeta/updateddate/source-scopefixes. Historicalstars/issues datequalified. TenPythoncodeblocksASTpassed, no model/sandbox/performance/24h execution. Publicarticle+4images200/listmembershipchecked,indexKBledgerupdated.
+
+
+## 2026-10-19 — AgentEar local voice input preview
+
+- https://blog.mushroom.cv/blog/agentear-local-voice-input-preview/ ; task22024452-d700-4d65-aee2-0fbd57c4c2c9. Correct malformed releaseURL by removingcomma+Chineseinstruction. ExactrepoURL+AgentEar hitsrawKBonly; oldiDoristitle33%falsepositive resolvedwithlocalexactrg. Current2draftschecked,publishedAPI48001 unavailable,noexistingM2. Agent-reachskill/commandnotlocated;actualJinaReader200+GitHubAPI+fixedREADME fetched.
+- Source5ac61569dcc551d7e0a4ee90538251f25a36d319. Requested0.27previewpublishedOct19despiteOct15tag. READMEhistoricalcompletepipeline vs thiscorepreviewARM64macOS26+,signednotarizedDMG,noincludedweights/voices. Maintainerdownload/installpersistenceacceptance notrealWhisper/microphonequality. General0.27Qwen3memorynotesnotuniformpreviewbenchmark.
+- Actual readonly packageaudit:6345251B SHA256matches,arm64,codesigndeepstrict0,DMGspctlacceptedNotarizedDeveloperID,app+DMGstapler0;imageunmounted.Noappinstallorlaunch,microphone,modeldownload,ASRaccuracy/speedtest,noreproduciblebuildclaim. Sourceiconarchivedmedia.
+- Clipboard+CmdV/noautomaticEnter,routesauthority/Markdownrender/rebuildableindex;replaynotreclassification. OptionalLLM/localASR privacy doesnotcoverremoteendpoint,search,webhookor thirdpartynotessync. Halfduplexnotfull,and13MBidle/.26sASRhistoricalnotourpreviewperformance.
+- FLUX147cover+3XiaoMfigures,bilingualSEO. Blog+4images200/listchecked,currentremote draft/getverifiedmediaId prCUE631thH1cmNLi42prFwuuwj0E3ddyHJ4EH74voEJCC5hMWuMhp8iOE95CIhl. KB/index/ledgerupdated.
+
+
+## 2026-10-19 — localDot official repository and local AI computer
+
+- https://blog.mushroom.cv/blog/localdot-local-ai-computer/ ; task887fa09a-c53c-4195-89c7-5d3b5f4ac07a. Officialwebsite localdot.dev footer→Shadowhusky/localdot→website verified. PublicMITactualsource pinned e5054494125d09c6db86aba322be5e46cb8618ca. Exactsite/repoURL+localDot deduprawKBonly,current3draftschecked,publishedAPI48001 unavailable.
+- DockerLinuxdesktop/browser/brain/gateway+daemonReactUI+GoKeyd,notnewphysicalcomputer. API/plan/localendpointrequiresvision+tools;notanytextmodel,nofreeAPIcreditclaim. MacAppleSilicon/Linuxx64Docker28+,WindowsWSL2alpha;IntelMac/LinuxARM64packagesabsentcurrently. GitHubreleases/latest404notlackofsource;ownpublicdownloadchannel.
+- Realcurl200installer76952B/bashedsyntaxonly,publicvsfixedsource2channelvaluesdifferent. ActualGo1.27.1upstreampolicy22testfunctionspass,0failed;notnetguard/DNS/fullsecurityaudit. Noinstaller/image/wholeapp/model/UI/performancetest.
+- Hostedmodelsseescreenshots/context,defaultlocalrecordingnotoffline;optionalrelayoff,trafficthroughrelay/Cloudflare. Keydstandins+approvalrulesdocumentednotourwhole-systemproof. Replaynotexternalundo,hidden-tabcontinuationnotcrashrecoveryguarantee.
+- SourceUIperson+textnotbanner;FLUX148conceptcover+3XiaoMfigures,bilingualSEO. Publicarticle+4images200/listchecked,currentremote draft/getverifiedmediaId prCUE631thH1cmNLi42prD19UXR4KxmehVGYpIaRGIB09-1kfScbRRqkahK9K1ia. KB/index/ledgerupdated.
+
+
+## 2026-10-20 —395 Halogen and Gufo prefill scope
+
+- https://blog.mushroom.cv/blog/strix-halo-halogen-gufo-prefill/ ; task39df2739-d064-480d-a224-10e5079c42a0. ExactGufo/HalogenURLs+entitydeduprawKBonly,4draftschecked,publishedAPI48001 unavailable. PinGufo877518953c153b2aac57f7b77fc904e8540b1fde/Halogen002589b11480cf3422f209b336c19dcc208fc69f.
+- 395=RyzenAIMax+395StrixHalo/Radeon8060Sgfx1151,integratedGPUnotCPU/NPUonly. GufoMITvsHalogenEULAcompiledcore;donotlabelbothopensource. Modellicensesseparate. Public1801/1836PPconditional,notdecodeorallmodels.
+- GufoOct18FlashNextQ4ARtable:nominalpp2048afterdepthcache,d0actual2040cache0/1801.01PP,d128kactual130932cache+2047new/1557.18PP. Dense27BQ4d0PP648.89differentmodel. AR28.29,MTPmixed35.79,repetition116.93;8user245.81sumindividualratesnotcommonwallclock. Historicalreferencebaselinesnotfreshuniversalwinner.
+- Halogen0.18.11v2cacheoff8k1836/32k1785,10promptdraftmean64.2tg;85Wpackage128GB,notwallpower. README1821/1.6s/21solder0.18.0separate:syntheticsweepvsrealtext,cacheagentturnvsfresh34k. Earlycacheoncalibrationreusefixed,donotcrosscompareversions. Native~111GiBdownload,notsmallinstaller;BIOSUMAsettingsengine-specific,PodmangroupsnotDocker.
+- Actual8rowJSON/md/countauditonly,rawtimingsnotpublicJSON,noperformance/qualityreproductionor395test. CommunitySep28configs153prompt/3slotsnotbulkPPor3fullcontexts,hardwareflagsnotuniversalrecipe. FLUX149OCRrejected,150qualified+3XiaoMfigures,bilingualSEO. Publicarticle4images/listverified,currentremote draft/getmediaId prCUE631thH1cmNLi42prPW8RqGUqEW6Ua79Wqvo-YNJ2THoDF0CscH6WN5P8Wbu. KB/indexledgerupdated.
+
+
+## 2026-10-20 — ABot-Recon and OpenUI source corrections
+
+- https://blog.mushroom.cv/blog/abot-recon-streaming-3d-reconstruction/ Source6e3b2e1257464a74dfceff22eb33190bd228276e/HFc69c26ca1853afc9c9212014459e729d7339ecdf. HFapache2tag conflicts with GitHubMODEL_LICENSE CC BY-NC4.0; report conflict, no commercialpermissionclaim. Wangjing27min not40; previous11+current1; H1006.71GiB24.45FPSexcludesinputstorage notsameaspaperlongdemo. CPUisolatedgeometry andsyntheticdenseindexchecks only; no checkpoint/GPU/video/SLAMspeed orqualityrun. Dense-stride5 exportrequiresmetadataindices;defaultmaxframes22000/loopclosureon. Officialteaserqualifiedadoptedcover+3reviewedXiaoMfigs. Currentremote draft/getverified. ExactURL/entities deduprawKBonly,newarticlesnotduplicates.
+- https://blog.mushroom.cv/blog/openui-1-generative-ui-engineering/ Source9823ec05d4b29bc78d101676dc16b44fe17f1830 MIT. Reactnew1.0features;Vue0.4.2core^0.4.1,others0.4;notallsame1.0. Functionsclientpresentation/actionshostintent/backendauthorization;propactionunioncurrentlyschema/promptonly. Actualpublishedcore1.0.1+Zod4 sixchecksparse/message/schema/localfunction only, no model/DOM/browserclick/backend/quality/performance. Sevenfixedscenariotokenreportedtotal4800vs10180/9948,~52.8/51.7%not67%universal.6000000downloadsunverifiedaggregate. Gatewayloginvsownbackend,installtelemetrydefaulton/runtimeoptin. FLUX151qualifiedconceptcover+3reviewedXiaoMfigs. Currentremote draft/getverified. ExactURL/entities deduprawKBonly,newarticlesnotduplicates.
+
+
+## 2026-10-20 — Lemo Opuscar code-rendered film skill
+
+- https://blog.mushroom.cv/blog/lemo-opuscar-code-video-skill/ Pinnedb5e8ef93930b6d828f352055a689320f138237b1;51formalstyles(excludes_template),3783starssnapshot. Canvas/WebGL deterministicpicture+browser+ffmpeg,notvideomodel. TunedOpus5.5,othermodelsnotguaranteed. DefaultChineseedgeonline/EnglishKokorolocalafterdownload;KokoroPython3.11-3.13. Author30-60minute+tokensnotourspeed/zerocost. Code/docsMIT,demosCCBY4LemoLab,thirdpartyassetsownterms,newfilmscreator. Customstyle15-30secpreviewseparatestorage;EvidenceFilmsnotfactverification;OPUSCAR98notmain51count. Actualunmodifiedrenderer+Chrome+FFmpegoriginal2sec640x36024fps48frameH264silentvideo;repeat0.5secstillbyteidentical,differenttimestilldifferent. NoOpus/fullskill/stylegallery/3D/voice/music/quality/speedtest. FLUX152qualifiedconceptcover+3rootreviewedXiaoMfigs. BothlanguagesSEO;publicarticle4images200/listverified,currentremote draft/getcover3images/source/scopeverified;semanticsearchrankverified,KB/ledgerupdated. ExactrepoURL+entitiesdeduprawbotKBonly;oldbroadSkillmatchnotexistingarticle. task0575013c-4bf9-40ed-a5d8-026ecda9a7c7.
+
+- Lemo publication read-back caught inline code `<style>` parsed as HTML in M2. Renderer now escapes inline/fenced code; two regression cases failed before the fix and default M2 test runs all17 cases. Original draft updated in place and full text/three image asset IDs matched after read-back.
+
+
+## 2026-10-20 — ThinkTerm multi-agent terminal workspace
+
+- https://blog.mushroom.cv/blog/thinkterm-multi-agent-terminal/ Pinned109de1d1690f6e3658e58725bf510f06af40ebfe;release0.2.9,139stars snapshot. Rust native GPU terminal workspace based onWezTerm,not fullIDE. Server owns processes,detach not paneclose/reboot recovery. SpaceProjectThread;statusnotcorrectness. Native collaboration protocol exploratory notadopted,existingCLI terminalinput/output not reliabletaskbus. Claude current screenrules,nohookclaim. Webtoken privileged,loopbackTLSrule,no localterminal=allagentdataoffline. Mobiledeveloping.GPL3main MITWezTerm Apache2herdrmanifests. Actual10 unmodified upstream proc_match Rusttests pass;noGUI/appinstall/liveagent/remote/accuracy/performance tests. Officialscreenshotsconsidered mostlytext;FLUX153conceptcover and3XiaoMfigsrootreviewed. BilingualSEO/public4images200/list and currentdraft/getcover3images/source/scope verified. SemanticsearchKBledgerverified. ExactrepoURL+entitiesdeduprawbotKBonly;oldbroadSkillmatchnotexistingarticle. task8c8273a9-70bd-4f6a-86d1-9ec8423b7ded.
+
+
+## 2026-10-20 — ASCII Portrait and Everything browser tools
+
+- https://blog.mushroom.cv/blog/ascii-portrait-browser-animation/ Pinned3499a60c6fc67ff8b7d86e4c41e7b7607b850b39;19stars. Browser2DASCII/photo processing not3D/modelvideo.6sec24fps144frames. SegmentationCDN/localbrowserpersistentphoto distinctions. Existingunmodifiedtests52motion43runtime30select plusHTTPserver11pass0fail;firstmissingfixtureassetsfetched andrerun,notproductbug. Syntheticcodecs/browser,realWebMparser and realHTTP,notrealbrowser/segmentation/realcodec/quality/speed. Source syntheticmecha coveradopted94483B,edgewarningartisticdarkness rootvisualapproved,noticeandprovenancepreserved.
+- https://blog.mushroom.cv/blog/everything-open-source-app-suite/ Pinned0fc4d361c1653bd29dcf96ff7e71eb8d9bab47a1;2452stars51appPackagecount9READMEcategories. PerappNode22.12devnotwholesuiteinstall. SpreadsheetPuter.jscloudbackend/analyticsPlausible sourceconfirmed,notallappsblanketcloudclaim. RootMITvsSpreadsheetAGPL3packageandLICENSEconflictunresolvedexplicit. Noallappinstall/runtime/compatibility/perftest. FLUX154conceptcover91968Bqualified.
+- ExactURL/entitydeduprawbotKBonly,originalmaterialreused;publishedAPI48001unavailable,noexistingdraftcredentials. JinaReaderfetchedboth,agentreachskill/commandnotavailable. Taskee292e84-93bb-470b-8c2b-8260c7aee63c.
+
+
+## 2026-10-20 — OriEra Engine v0.3.0 generation boundary
+
+- https://blog.mushroom.cv/blog/oriera-engine-v03-generative-assets/ Pinnedv0.3.0 14b4e42d4972239eb86adfdc036ed78508d7ec30,October16release,Apache2.11workspace members10libraries+PCnot11fullyimplementedlayers. L8task/poll/validate/event/namedhotswap,separateL7inference. ProtocolprovidersTripo3D/Seedancevideo optionaldefaultoffnoHTTPclienttransportinjected. Actual115default(112unit3docs)+37providers=152passes26rerun126uniqueidentifierchecks;allzero failures,actualMockhotswap2submitted2success0failed168bytes24to84byteGLBstubnotreal3Dmodel. No paidservices/GPU/GUI/mobileARBCI/performance/fullfmtclippyCItest. Official560pxheroinspecteddisqualified;FLUX155miniaturecafeconceptcover93089B+3rootreviewedXiaoMfigs. BothlanguagesSEO/publicarticle4images200/listverified,currentdraft/getcover3bodyimages/source/scopeverified,semanticsearchfound,KBledgerupdated. ExactURL/entitydeduprawKBonly,genericversionmatchesunrelated. Taskfce860c6-508f-49ff-abfd-9a362db5b6f0.
+
+
+## 2026-10-20 — DeepInfer offline inference and benchmark accounting
+
+- https://blog.mushroom.cv/blog/deepinfer-deepseek-inference-framework/ Pinned774ce244b87cc0eb8d4b94ab9f5de2ab22049f01,Apache2,9616starssnapshot. DeepInfercapitalIcorrectedfromDeeplnfer. OfflinecoreDeepSeekV4.1Flashdefault1017,notfullproductionservice;productionKVstorage/disaggregation/DPLBnotfullyreleased,notnointernalKV. LinuxGCC13Py3.12SM100CUDA13/Ascend950CANN9.2notMacsupport. EP/EPLB DP/CP capabilityvsproductionnoTP/CP;DSparkconfidencevarlen;SWA boundedreplay140configvs128windowdistinct,notallcontextconstantwork. DeterministicNVIDIAflagsbatchinvariant+varlenoff+fixedseqseed. Structuredformatnotsemantictruth. Official4SM100prefill64decodeonedomaingraphs,noncachedsuffixnotcoldallcontext;SPSnotTPS,fullacceptancevsactuala,VARLENguard.6actualunmodifiedplothelpercheckswithsyntheticrecords,noengineinstall/modelweights/GPU/NPU/tokeninference/quality/speed/hardwarecompatibilitytest. Officialarchitecture/chartsconsideredtextdiagramsnotcover;FLUX156cablesconceptcover95823Brootreviewed+3XiaoMfigs. BilingualSEO/public4images200/listverified,currentdraft/getcover3images/source/scopeverified,semanticsearchfound,KBledgerupdated. ExactURL/entitydeduprawKBonly,genericversionmatchesunrelated. Taskc3948368-c519-45ea-9e6e-373424e8b527.
+
+
+## 2026-10-20 — Tongue-controlled retainer source investigation
+
+- https://blog.mushroom.cv/blog/mouthpad-tongue-control-fact-check/ Viral unnamed26yo180printer8.4mApple47hardwarecost uncorroborated; differsfrom6亿47retail. RealAugmentalMouthPad1400plus50to150scan vendorprices6monthfulfilmentnotourtest. MITAarhusMouthIO independentUIST2024project notsameinvention. PublicMITbridge mouthpadrelayandmouthpadusb pin e18eae46ac0249bf7c80d788a4e86273e88e2c8e bothsamecommit, BLEHIDNUS toUSBHIDCDC nRF52840 ESP32S3, notentirewearableopenhardware. Sourceauditonly nohardwaremanufacturing/wearing/flashing/performance/clinicaltest. Officialproductcoveradoptedwithcredit,3XiaoMfigures. BilingualSEO/public4assets200/currentdraftgetcover3scopepin/semanticKBledgerverified. Prewritingdedupclear;secondarycheckselfarticleandnewmemoryonly. Task5b3f11d1-8826-4e1a-b003-d34bb16af48c.
+
+
+## 2026-10-20 — Plausible consulting and white-label delivery
+
+- https://blog.mushroom.cv/blog/plausible-analytics-consulting-white-label/ Plausible Analytics core376e91e9ffc30e2d6b909744eb1ab0672b0d28fc and CEcomposeec6c4da776547516d8f48159ce1a704df4f475ad/v3.2.1 reviewed. CoreAGPL3orlater vs trackerMIT vs deploymentMIT vs enterpriseusage/trademarkrules. Chargingnotblanketbanned;modifiednetworkcorrespondingsourceAGPL13. Officialcloudwhite-labelBusinessembeddingStatsAPI;EnterpriseSitesAPI/proxy/>10sites;vendorasksconfirmaccessresale. ClientownedCloud,officialwhite-label,selfhostCEservicepaths. PGClickHouseApp3servicesvolumeshealthmigrations;2GBentrynotcapacityguarantee. PrivacydailynotpersistentIDs,eventsessionsstored,rawIPUAnotstorednotnoprocessing. Hypothetical2000-100-900-150=850notactualprofit. NoDockerCLI/runtime/visitortraffic/performance/customerincome test. Officialdashboardgraphcoveradopted84511B refinedcrop;3XiaoMfigsrootreviewed. BilingualSEO/public4assets200/list/currentdraftgetsourcecover3scope/semanticKBledgerverified. DedupsourcehitrawbotKBonly;genericplausibleanalyticsbodyhitsunrelated;noexistingpublication. Task54159ac5-9109-40aa-b924-7d83345a65d5.
+
+
+## 2026-10-20 — Anthropic employment and expectations reports
+
+- https://blog.mushroom.cv/blog/anthropic-employment-ai-expectations-reports/ OfficialOct16pairEmploymentatAnthropic and AIExpectationsGap confirmedjointannouncement,not2025engineersurvey. Employmentjuniorhire27to9share notabsoluteheadcount/causaldisplacement;6to1agentactivepooledruntime/assumed40hhumanweeknotagentcount/productivityequivalence.17interviewstriangulateinternalrecords;nonrandomadoptionandcodequalityproxieslimited. Surveyfull10980USweightedonlineoptin vs1334staffunweighted,Figure5effective2278USemployed/1147staffvisuallycheckedandusedinarticle;average2030currentworkshare75vs28beliefnotcapability/officialplan,USemployedsubset,differentanswerformats. GDPmodelscenariosnotforecast. PDF20/16pagesdownloadednativePDFKitrender/readfiguresandmethods;nointernaldataorstatisticalreestimation. Ownanalysisjuniortraining/verificationbottlenecks/workflowpilotclearlylabeled. Officialartcover+3XiaoJfigsrootreviewed,bilingualResearchSEO/live4assets200/currentdraftgetcover3source/scope/semanticKBledgerverified. Exact2sourceURLsnoexistingpublication;genericreporttitlewordhitsunrelated;rawbotKBreused. Task416e1276-5951-4c32-af71-0ab2ea98a94a.
+
+
+## 2026-10-22 — LayerFS v1 recursive agent filesystem
+
+- https://blog.mushroom.cv/blog/layerfs-v1-recursive-agent-filesystem/ Pinned v1.0.0 2aaf2552ce21154928b9f9c83582e41a637f5910 MIT source-only. Recursive branches not self-improvement; filesystem history not process snapshot/security sandbox. Disposable has no crash/powerloss durability. Linux ext4/xfs/btrfs; Mac DSH web uses Linux Docker, desktop untested/Pi planned. Explicit workspace commit; complete-tree import includes ignored files. Official earlier e5c7aaae05 single sample fsbench1.71x/dedup19.9x scoped, fio seqwrite0.31x passthrough and fsync6.9x lacks durability flush. POSIX707 differential assertions include cascades, not full conformance. No Docker/runtime/perf/recovery test. Themed FLUX157 cover plus3XiaoM figures visually checked. Bilingual public4assets200/currentdraftget/semantic/KB verified. Exact source URL no publication; entity hit only raw bot material;rawbotKBreused. Taskce42e364-bf7c-4575-9582-0d37b382d5c4.
+
+
+## 2026-10-22 — Ondine, live-panel, motion datasets and onetake update
+
+- https://blog.mushroom.cv/blog/ondine-rust-mermaid-compiler/ Blog new, WeChat draft.
+- https://blog.mushroom.cv/blog/live-panel-skill-animated-architecture/ Blog new, WeChat draft.
+- https://blog.mushroom.cv/blog/animation-datasets-motion-viewer/ Blog new, WeChat draft.
+- https://blog.mushroom.cv/blog/onetake-envmanage-source-check/ Blog updated, WeChat recorded.
+
+Primary pins/source-review and receipts: source/20261022-creative-tools. Ondine mount-only bytes/benchmark lanes kept separate; no speed/layout rerun. live-panel original 3 browser tests pass,124points0problems,2second H26424frames smoke; moving counters not live telemetry. Motion45qualityJSONentries9thresholds, not metrics reproduction; tool/list/data licenses separate. onetake official19secondClawd case film-only, no20yuan receipt; old draft40007/absentbox plus48001 means recorded, not recreated. Task e6d6d22c-7207-4fa9-86c8-17a1a5b901d0.
+
+
+## 2026-10-22 — Lulu PR agency founder communications playbook
+
+- https://blog.mushroom.cv/blog/pr-agency-founder-communications-playbook/ Primary Flack agency essay2025-03-14 confirmed full public text; manifesto2024-03-19 and official KnowledgeProject246 publicshownotes, not membership transcript/fullpodcastlistening. Narrative retained; execution outsourced selectively; mediaoutreach not paidplacement. HistoricalUSDmonthly20to35KUSDtech,60to100Kspecialized not2026Chinaquotes. Own18personfictionalcompany/worksheets/30000RMBcashcap excludesinternal labor/90daypilot untested, not Lulu words/case/marketprice/guarantee. AMEC outcomes and contribution not causalROI; zeroopportunities denominator handled. Short attributed synthesis plus original application, no long quotes or fulltranslation. FLUX162 themed cover and3XiaoJfigures root reviewed, bilingualResearchSEO,live4images200,currentdraftget and semanticKBverified. Exact Meservey no prior publication; sourceURLhitrawKBsimilarityonly; Chengnoisematchesunrelated;rawbotKBreused. Task5976a322-17ea-440d-84fc-ad6dca81b4a0.
+
+
+## 2026-10-22 — Vitalik paranoid AI privacy stack
+
+- https://blog.mushroom.cv/blog/vitalik-paranoid-ai-zkapi-tor/ Pinned vbuterin/zkapi0fb263b0da04986cfe5c63b12340c1581018ae9b; originalOct16status2111046730959433793 direct403 embedchecked and t.coresolved. MITclientonly. Devbranch not production: concession manifests not_deployed and productionkeysabsent;oldv0.1.6missingprivacy. ConversationprefixSOCKSidentitiesnotguaranteedexits;60secondkeyreuse;rewriterusertextonly anddirectlocalendpointrequired;attachments/system/toolsunchanged;coveroptinboundedGETnotconstantpadding;gasroadmapnotconfirmed. Upstream12to16caseeditorevalnotrerun. Actual3Gopackages32testsubtestpasses6skipsno failures;fakeSOCKSTLSnotTororLLMprivacyvalidation;nochaintransaction. FLUX164coverand3XiaoMfiguresrootreviewed,bilingualSEO,live4assets,draftandsemanticKBverified. ExactsourceURL absent and zkAPIrawmaterialKBonly; no priorarticleorreceipt;rawbotKBreused. Taskc5e63f39-e4a3-4689-94f6-b29d0541af1b.
+
+
+## 2026-10-22 — Splash 1.4.0 source update, existing article reused
+
+- https://blog.mushroom.cv/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/ Splash1.4 tag1482f6b pinned. Official95tok/s not unverified120;1312prefill32K,171mscachedTTFTall16hit,171aggregate4requests. SameQ2_0GGUFMac20GPU64GBStrata scope; rounded1.3x not blanket30percent. No inference performance reproduced. Local service test import blocked Python3.9match syntax and Python3.12missingllguidance, no assertions passed. ReplacementFLUX165cover and3XiaoMimages rootreviewed. PreservedpubDateOct5; otherfiveengines historical only. WeChat recorded only; preserve archived receipt and do not recreate while published status is unverified. Task462f0d88-deb5-4fe3-abe6-1d3778ff76ad.
+
+
+## 2026-10-23 — 评审台「开始写」4 条
+
+- 标「写」4 条，实发 4 篇：superfluid-local-llm-serving-daemon-mac-llama-cpp-mlx、cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor、laya-aayushch-local-first-ai-notification-command-center、deepseek-v41-flash-1017-uncensored-fp8-teardown；无跳过。博客与公众号草稿均已建。
+- 查重：aayushch/laya 与已发「Laya ANE」重名但是完全不同的项目；DeepSeek 去审查版与旧 V4-Flash 部署文非同一主题。两条都不是真重复。
+- 采集侧问题：store.py sync 的 published_match 按标题实体匹配 slug，owner/repo 与 slug 不一致的条目（laya、DeepSeek 微调版）不会被自动转 published，本次手动更新。
+- 子 agent 未带 wechatTitle/wechatDigest（BRIEF.md 未要求），其中 3 篇由主会话补；建议 BRIEF 把这两个字段列为必填。
+- 本次当前分支为 publish/nvidia-flare-local-inference，发布提交推到该分支而非 main；figs.sh 并行需用 nohup（macOS 无 setsid）。
+
+## 2026-10-24 — NVIDIA OpenShell agent runtime
+
+- https://blog.mushroom.cv/blog/nvidia-openshell-agent-runtime/ Apache2.0; official stablev0.1.5 downloaded and SHA256verified. Three actual standalone policy checks: within_boundary0, exceeds_boundary1 with /tmp write counterexample, unresolved nested path unsupported3. Not live sandbox enforcement or escape/security audit. Official main source pinned. Generated topic cover plus3XiaoM figures, bilingualSEO. Public route/assets/carousel, remote draft fulltext/images/metadata/cover/comments and semanticsearch verified; rawKBreused, exactsource/entity dedupno oldpublication. Task29868b1d-03d9-4c13-a81b-da33c734f5a8.
+
+## 2026-10-24 — Underdog Bark 3.0 source check and local smoke
+
+- https://blog.mushroom.cv/blog/underdog-bark-3-local-asr/ Standard163MB/Clean180MBbasedonPlus separated;EnglishWERnotCER; AMI7.82 versus seven-set4.94 maker-run, not submittedleaderboard.4.937/4.941 Parakeetmean almosttie. OfficialM5Maxapp595x versusstockM2MLX41x not samebenchmark; no ownspeedtest. ExactstandardHFpin85db2ad18ab41e534a222ee253c29191d77ed919, publicFP16MLX real3.24sec AppleSamantha synthetic English -> expected wordsequence, casing/punctuation omitted. OfflineHubmode, model163398645bytes versus~1.26GBexpandedweightdiskfile, notpeakRAM. NoClean/meeting/longaudioeval. Topiccover+3XiaoM, bilingualSEO, publicassets/list/carousel,currentdraft fulltext/images/cover/comments and semanticKBverified. Task9b3755d4-af7b-40ae-aed1-8d29a0b97303.
+
+## 2026-10-24 — Flint Mac hardware clarification (existing article)
+
+- Reused /blog/flint-local-coding-rec-engine/ after exact HF/repo dedup. Added bilingual official-rec hardware matrix: M4 Pro/M5 Pro/M5 Max,48GB unified memory,~30GB disk; pi Node22.16/24/32GB belowminimum; other chips not listed rather than proven impossible with all runtimes. Corrected English /v1 API typo. Reused verified cover/3figures. Build/publicHTTP200/list5/images checked; semantic2vectorsupserted. No inference on M4/16GiB. Old draft absent from remote3, draft/get40007, publishedAPI48001: preserved archived credential, recorded only, no draft/add. Task e4fe5c3d-fe6e-4eda-9e85-e6e53ab6cf69.
+
+## 2026-10-24 — Ming-3.0-TTS source and deployment review
+
+- https://blog.mushroom.cv/blog/ming-3-tts-small-model-evaluation/ MITcode/weights,0.5Bdense versus7.9Btiny distinguished. LiveAAcontrolled1071rank14/provider1191rank19 versusREADME1069rank13/1188rank17; English preference not universal quality. Pronunciation93.2 attributed to project quotingAA; methodology page accessible but individualresult notreadable. MainHFweight2.96GB plusCAM++28.3MB. CUDAdefault/BF16/autocast, no Maccompatibility or speeds claimed.8actualupstreamtaskinputchecks, noaudioinference. Cover+3figs, bilingualSEO, publicURL/list/carousel/images,currentremoteWeChatfullbody/images/cover/comments and KBledger verified. Task 46f25b6d-8622-454e-937d-2c0ff4ec9ef0.
+
+## 2026-10-24 — AppFlowy self-host implementation services
+
+- https://blog.mushroom.cv/blog/appflowy-self-host-services/ ClientAGPL, archivedCloud and currentcommercialserver separated. Currentselfhost publicCompose notfullserversource; internalbusiness/perserver license, resell/customclient restrictions; free1seat+3pageguests. User5000-20000 range unsourced/currencyunspecified, no marketprice/profitclaim. CNYcostexample invented and excludesmargin/tax/license. Customerlicense+implementation scope subjectlicensorconfirmation.12Compose service definitions parsed, backupoptional, noDockerstart/restore/complianceaudit. Topicbanner+3figs, bilingualSEO, publicURL/list/carousel/images, currentdraft fulltext/images/cover/comments, KB and semanticindex verified. Task b3976848-6071-4b1f-93d7-cd628bce5479.
+
+## 2026-10-24 — Gradium Phonon on-device TTS
+
+- https://blog.mushroom.cv/blog/gradium-phonon-local-tts/ Distinct fromPhonon2ASR.31MenApache2, all40mmono/multiCCBYNC;noChinese;31Mcount excludescodec,64.5MBq8 notRAM.7ms warmedM5CPU backend/threaddependent/excludesvoiceconditioning,1.70%makerEnglishhard500LLMWER notourbenchmark. ActualM4/16GiB ptts0.4.1digestverified CPU1threadq8seed123, pinnedmodel/localvoice, sandbox-exec deny network*,4sec24kHzmonoPCM16WAV validnonzero. Noformalquality/speed/RAMbenchmark. Initialdiskfull repairedbydeleting ownrebuildabletmpBarkweightcache. Topiccover+3figs, bilingualSEO, publiclist/carousel/assets,currentdraftbody/images/cover/comments,semantic andKBverified. Task a0d98835-f681-4c21-bc5d-c25280147876.
+
+## 2026-10-24 — Baseten / H2O / Jev decision-model comparison
+
+- https://blog.mushroom.cv/blog/decision-models-comparison/ Exactdedup foundrawKBonly, no priorarticle/draft. Baseten0.4release71.24/62.65 separated from0.4.1snapshot68.44/60.26, Jev60.24/H2O31B66.58;4BJevBench73.82 not mixed. H2O31Bnoncommercialnonproduction vs4BApache2;560/1120softtokensnotpixels;whole-recordprofileconditional;Jevexperimentalimages nottextonly;1.13injectioncaveat not1.14test. No inference or localbenchmark. Topiccover+3figs,bilingualSEO,publicURL/assets/list/carousel,semanticquery,currentdraft fulltext/images/cover/comments verified. CanonicalURL repaired by updating same draftID, no duplicate. Task56f5d554-20bb-45cf-981b-853954bb8ab3.
+
+## 2026-10-25 — Apple fm CLI and on-device Foundation Models
+
+- https://blog.mushroom.cv/blog/apple-foundation-models-fm-cli/ AppleofficialWWDC334 confirms27preinstalledfm;26framework/officialPythonSDK distinct. CurrentM1baseline,8/14GBdisk vsRAM,regions,localdefault vsoptionalnetworkedPCC separated;SDKApache2 notopenweights. ActualM4/16GiB26.6.2 nofm,Swiftavailabilityavailable andoneChinesegeneration succeeded. NoOSupgrade/sudotermsacceptance/CLItest/SDKinstall/speedqualitynetworkaudit. ReferenceCLIcommands labellednotexecuted;contextdynamic notuniversal4k/8k. Topiccover+3XiaoM,bilingualSEO,publicURL/5assets/list1carousel1/currentdraftfullbody/images/metadata/cover/comments/canonical verified;semantic2upserted. RawKBreused;exactsource/entitydedup genericfalsepositives excluded. Taskaf89fe38-cedc-421a-b001-ce9b901dca3a.
+
+## 2026-10-25 — AWS Infinity suspend/resume agent runtime
+
+- https://blog.mushroom.cv/blog/aws-infinity-agent-runtime/ OfficialrepoHydroApache2;75kPi8GBextrapolation from80kEPYCsinglethreadsimulatedmodel/inmemorystores, notPi/realinference. agent_scaletoolfixedstringnotbuild. Fouractualpinnedupstreammocktests pass:dedup,step,rebuildstrandedcall,localpendingtool. Embeddeddriverstillalive vssteprelease;rebuildstoreobjects notmachinerecovery;noAWSresources/modelbills/perfbenchmark. AdoptedAWSofficialFigure3coverperuser,originalsource/hash/rightscredit,rootreviewedwholelabels;3XiaoM,bilingualSEO,publicURL/assets/list/carousel/currentdraftbody/cover/images/comments/canonical andKBverified;semantic2upserted. SuppliedPytro001/airsup-Lab404,notinstalled/notmergedintostory. Taskf3708dde-1fd8-435f-9018-90be578e8a24.
+
+## 2026-10-25 — Airsup Machine Skill
+
+- Published https://blog.mushroom.cv/blog/airsup-machine-skill/ after exact repository/entity dedup; generic Cursor matches were unrelated.
+- Found official MIT repository AirsupHQ/machine-skill. Analyzed simplified solvers and BMEP assumptions; the supplied 249cc power example remains unverified.
+- M4/16GiB Chromium functional smoke passed: WebGL2, throttle output changes, cutaway and explode controls. No performance, recording or physical accuracy claim.
+- Official turbofan cover adopted and verified; three XiaoM figures, bilingual SEO, live URL/images/list/carousel and remote draft full text/images/cover/comments/canonical checked. KB and semantic index updated. Task f0fa217e-75b8-4592-84f8-ad3420cbcc7e.
+
+## 2026-10-25 — Lauren Tan pstack engineering workflow
+
+- Published https://blog.mushroom.cv/blog/pstack-engineering-workflow/ after resolving incidental Unlazy references and raw KB matches. No prior dedicated article or draft.
+- Pinned official cursor/plugins version 0.15.32: 58 skills including 24 principles, 2 agents, 23 playbooks. Corrected ketchup/catchup and teach versus reflect; current author profile @xai-org.
+- Static source audit only: no plugin installation, Grok Bot execution, coding-quality trial or speed/token benchmark. Explained Cursor and Claude Code adapter differences and single-agent acceptance before isolated parallelism.
+- Bilingual article, verified local FLUX cover and 3 XiaoM figures. Live URL/images/carousel and remote draft text/images/cover/comments/canonical verified; semantic vectors upserted and KB persisted. Task 621c6c14-0f43-4368-ab69-8a56fd084e42.
+
+## 2026-10-25 — Town and Townie public product research
+
+- Published https://blog.mushroom.cv/blog/town-townie-research/ after exact URL/entity dedup found raw KB only. Company is Town.com, not Val Town.
+- Covered company history, official financing, product modules, authorized handoffs, shared workflows, users, annual pricing and credits. Reviewed 44 direct full-text sources plus 1Password and official web/podcast sources; investor accounts labeled interested, growth self-reported.
+- Critical documented limits: shared connecting-account access; removing a member does not stop personal routines; 1Password still coming soon; copies versus shared instances; approval overrides; no-training default does not mean no cloud processing or stored context. No paid/private trial or security/ROI benchmark.
+- Adopted official Bo/Claus artwork with rights credit; 3 XiaoM figures. Bilingual SEO, public article/images/carousel and remote draft full text/images/cover/comments/canonical verified. Semantic index and KB updated. Task fe905b52-d459-4920-89d8-ab154dae83c3.
+
+## 2026-10-25 — ra-jit renamed blaze, Rust warm-build audit
+
+- Published https://blog.mushroom.cv/blog/ra-jit-blaze-rust-live-builds/ after old/new repository and exact-entity dedup found raw KB only. Rename on2026-10-24 and dualMIT/Apache2.0 verified at988efedad0331e57d4d0184abbd225d2223e7051.
+- No universal92x claim: official platform geometric means10x/24x/11x concern mixed edits; Linuxx86 nushell function5.3x and biome0.9x; ARMbevy widely-usedfunction~91x specific case. Separate cold/warm/liveapply/visiblefeedback; 128GiB upstreamMac not our16GiB.
+- OwnM4 functional smoke: checkedofficialnightlyhash,41to42 behaviorchange,dev/testdaemon builds,1testpassed,independentRust1.99check. No ownspeedup or live-state test. Runtimeintegration/platform/release distinction,memory cost,incompleteborrowcheckerexplicit.
+- BilingualSEO,FLUX205cover,3XiaoM figures; public article/images/carousel and remoteWeChat fulltext/images/cover/comments/canonical verified. KB and semanticindex persisted; live semanticquery matched after eventualconsistency. Task202d35fc-39b4-48fd-a293-f17365fc7b81.
+
+## 2026-10-26 — Jakub Krehel interface design skills
+
+- Published https://blog.mushroom.cv/blog/jakub-krehel-interface-skills/ after exactURL/author dedup found rawKBonly; botgeneric skills falsepositive dismissed. Pin592aedc44d7d5b3e29740984252902f3e5402a1c,14skills,MIT,interfacesplugin1.17.0.
+- Installed14skills intoCodexpersonalroot withofficialskill-installerhelper,allfilebytesmatch. Nooverwrites/blogdependencychanges; nextturnavailability. Existing5teardownNodechecks passed inglobalskillroot,geometry28checks. SamebytesinsideblogESMscopefailgeometryrequire; retainedascompatibilityfinding,notpatchedaway. NoAIquality/browserexport/Figma trial.
+- Evidence-first/read-onlyreview,7better-* vs7procedures,5manualinvocationpolicies,temporaryharness/state/variantdistinctions andtechnicalillustrationnotmanufacturingCAD explained. OfficialInterfacescoverwithrightscredit+3XiaoMfigures. BilingualSEO/build,publicURL/5images/list1carousel1,remoteWeChatfulltext/3images/cover/metadata/comments/canonical verified. Semantic2vectorsupserted/livequerymatched. Task69f514c7-05b4-4682-88fd-6c288d039ba4.
+
+## 2026-10-26 — PageSift Rust crawler and unavailable podcast source
+
+- Published https://blog.mushroom.cv/blog/pagesift-rust-crawler/ after exactrepo/entitydeduprawKBonly. CorrectcrawlerYOLOW92/pagesift,notGojoeychilson/pagesift. Pine6dca8e476bf69ef8d6e7d238874a136966b4cd5,repo0.70/Python0.20,AGPL3/commercial.
+- M4/Python3.12privatevenv functionalverification:offlineconvert retainsarticlemarker/title,removesscriptmarker;publicpagestatus200enginehttp. No ownperformance ormemory/PDF/browser/container/MCPtest. ActualSDKformatsmetadataunsupported,metadataisdict,timeoutms.
+- Benchmarkdenominators audited:0.70syntheticsaturation≠0.60publictasks;authors100Mtasks314170HTTP200199422richdocs2373.9s implies132HTTP200/s84docs/s,notindependentreproduced;fulltaskaccountingnotprovided. No universalwinner/zeroOOMclaim.
+- Officiallogo cover+3XiaoMfigures;bilingualSEO/build,publicURL/5images/list2carousel1,remoteWeChatfulltext/images/cover/metadata/comments/canonical verified. Semantic2vectorsupserted/livequerymatched;KBpersisted.
+- SeparateXHShttps://xhslink.cn/o/1Fn5G8uKa9b failed:public/Jinaloginpage,xhsstatusTIMEOUTstoppedownprocess,AgentReachofficialskillreadbutbinary/doctorunavailable,noinstall/login/update. No podcastimages/body/confirmedepisode, no inventedarticle/draft. Failurearchivedoutsideinputscannerunderjobfailed-sources. Task2d056360-ba0e-4d5f-b29c-c47b4595257f.
+
+## 2026-10-26 — Realtime-Venus existing-article source audit
+
+- Reused https://blog.mushroom.cv/blog/realtime-venus-fulldup-interactive-dual-loop-local-deploy/ after exact-source/entity dedup confirmed Blog, local M2 and original KB records. Preserved September 20 pubDate; updated bilingual article in place, reused verified FLUX cover and added three XiaoM figures.
+- Pinned repo e53ae8d5bde92b30364b26f2e4c13c9db7a8ffea / HF 007097ab5d304ff1fff154bedf415b088717ec8d / paper2609.13814v3. Corrected unsupported A100-only/Mac-MPS claims, dual-loop versus two alternative checkpoints, BF16 file-size arithmetic and current script paths; surfaced root/component README mismatch. All benchmark results labeled official self-report; source/Hub metadata audit on M4 16GB, no inference/performance experiment.
+- Deploy b51a9a19; article and five image variants HTTP200, old-date list rank232, refreshed carousel rank1; semantic two vectors upserted and live search matched updated English title.
+- WeChat old creation credential preserved unchanged. Current draft/get40007, remote five drafts no match, freepublish/batchget48001 unauthorized. recorded/current status unverified; no duplicate draft creation. Updated original KB source in place using miner files=[original_path], retaining original source identity and refreshing its stale chunks. Task8ad8a758-2e93-461f-884c-cd2430d72247.
+
+## 2026-10-26 — LayerFS worktree comparison and v1.1 update
+
+- Reused existing https://blog.mushroom.cv/blog/layerfs-v1-recursive-agent-filesystem/ after exactrepo/entity dedup found October22 article/M2/KB. Preserved original route/date/verified cover/three matching figures. Added bilingual Git worktree object-sharing comparison and October24 v1.1 breakingAPI/worker/CLI update; retained v1.0 examples explicitly historical. No FUSE/runtime/performance reproduction.
+- Official157snapshots100MB19.9x andfsbench1.71x remain scoped v1.0 single-sample claims. Automatic checkpoints require integration; Disposable still lacks crash/powerloss durability. Highlighted release verification gaps rather than inventing Linux/runtime coverage.
+- Deploy2e59de6f; page/fiveimagevariants200,list25,carousel1; two semantic vectors upserted,old2deleted,livequerymatched updated Chinese title. Original KB source refreshed in place.
+- Old WeChat creation credential retained unchanged; currentdraft/get40007,remote5draftsnomatch,publishedAPI48001. recorded/currentstatusunverified; no duplicate draft/add. Task9cffcb0b-0e14-4598-b68b-c7da89f07dee.
+
+## 2026-10-26 — WeVisOne-VL unified perception audit
+
+- Published https://blog.mushroom.cv/blog/wevisone-vl-unified-vision/ after exactTencent repo/entity/HF/arxiv dedup found rawKBonly; botgenericapache/arxiv duplicate rejected. Pin9a6bcd85404505df0d05cfb5d97512ccacf35dee,paper2610.31329v1. Seven tasks/Qwen3VL/9.6Mpixeldecoderverified; no support found in reviewed primarysources for circulated4090 152->48ms/10.8->6GB comparison, keptunverified.
+- M4lightverification ran two upstream parsertests plusNoneempty check, no modelinference/quality/performance claims. Header-only2B F16/4B F32storageaudit distinguished from runtimeVRAM; auto device lacksMPS andCPUforcesFP32. F1Mean/IoU/MAD/rejection scopes explained.
+- Officialrabbitmattingcoverwithcredit/provenance+3XiaoMfigures;SEO/build/deployac8738f2,page/fiveimages200,list3carousel1. Semantic2vectors/liveENquerymatched. RemoteWeChatfulltext/ordered3images/cover/metadata/commentscanonical verified. Missingcanonicalfoundatverification fixed on SAMEverifieddraftID with draft/update, reused3imageURLs/cover, no duplicateadd. Taskc0d99021-2ec9-4469-a25a-ec9639139019.
+
+## 2026-10-26 — NVIDIA SimReady asset package audit
+
+- Published https://blog.mushroom.cv/blog/nvidia-simready-assets-audit/ after exactHFdataset/SimReady dedup rawKBonly; genericassets falsepositive rejected. Pin524747d9b5e1f21b5b18b56041788c01d745f1a1,three rootpages2575directories.472GB isHFUI total;100000siblingscap and222viewertexturesrows distinguished.
+- M4/Python3.12/usd-core26.11 actualcompletebox43files58.3MB,37BOMsize/SHA256allpass,15layers8assetsnounresolvedUSDdependency,eachruntimevariantreadindependently. No physicsengine/render/robottraining/sim-to-real/full-libraryvalidation. Mass/COM/inertia/material/semanticsreadback notreal-objectmeasurement. Packagecheck versus dated nonblocking/optional profile evidence explained.
+- CC-BY4.0 checked boxmanifest/licenseandenginecoverlicense;officialtwoassetthumbnailcovercredited/cropped+3XiaoMfigures. BilingualSEO/build/deployd4099248,page/fiveimages200,list2carousel1,semantic2vectors/liveZHmatch. RemoteWeChatfullbody/ordered3images/cover/metadata/comments/canonicalbodyURLverified. M2sourceUrls savedasfullHFdataset/spacepaths. KBsourcepersisted. Taskd254dd11-da48-487a-aef4-1c92cc08876a.
+
+- 2026-10-26 Hi3D v1.0: published https://blog.mushroom.cv/blog/hi3d-v1-geometry-refinement/; source/weight-header audit, no CUDA inference. Coarse mesh + image required; custom commercial terms; reported benchmarks distinguished. Remote draft prCUE631thH1cmNLi42prLujCCdw_-ZYSyrOLNwl1Gz-bhTRrWLJvAfB5IYV9D9g verified; raw KB only before writing, no duplicate.
+
+## 2026-10-27 评审台「开始写」
+- 用户标「写」3 条：xllama、Nanbeige4.3-33B、facebook/sam3，均无批注；查重均通过，3 条全发（blog+公众号草稿）。
+- 无跳过。
+- 流程问题：新文章必填 wechatTitle(≤30)/wechatDigest(≤54)，子 agent 的 BRIEF.md 未要求，首次发布被 lint 拦下，需手补；建议在 BRIEF.md frontmatter 模板里加这两个字段。
+- 采集侧：无新发现。
+
+- 2026-10-27 pi-rust rpi0.10.0: published https://blog.mushroom.cv/blog/pi-rust-agent-runtime/; MIT, Rust1.88, embedded agent runtime. AppleSilicon release checksum and local deterministic realwrite toolloop verified, no realLLM/performance/crash test. Draft prCUE631thH1cmNLi42prNh0DzuJ5sn7pbKfu2PzKWr00ejG8ybDN6qo57Nx-px0 remotely verified; source dedup rawKBonly.
+
+- 2026-10-27 RoboHarness V2 / roboharness-v2-workspace：用户素材补完整链接后，精确 URL/实体查重仅原始 KB，未发现旧 Blog、M2 凭证或远程草稿；已发布列表 48001 无权限已记录。固定 a0936867e0db7d0ef3eabe10688468edaea190d8，V2 设计页明确结果另发，未套用 V1 成绩。M4 16GB 独立环境 16 项上游 CPU 边界测试通过，无模型/仿真/真机或性能实测。生成主题封面与三张小M图。Blog 及五个图片资源200，列表第4、轮播第1；公众号 draft/get 全文/3图/元数据/封面/原文/评论核验一致。双语语义写入成功，实时英文检索0.7228268；原路径 MemPalace 定向写入并回读4条。https://blog.mushroom.cv/blog/roboharness-v2-workspace/
+
+- 2026-10-27 OvisOCR3 / ovisocr3-unified-document-model：模型与Space精确查重仅原始KB，线上MCP无同题文章；无旧M2凭证/远程草稿，已发布列表48001缺口记录。固定模型4833d5d2afa6e769ee933f024504d67ace80a24c、Space72851f1a4d49e480527a2dc05c920356c9e3d581。纠正Schema为输出模板、跨页两阶段递归/默认单表绑定、Space示例Stage1缓存；官方成绩非各列第一，内部评测口径明确。M4/16GB真实离线Transformers/MPS+CPU fallback，KIE字段及缺失空值正确；首轮OCR漏金额原样保留，300秒软时限补验完整四行并EOS，不报吞吐或最低内存。发布脚本5项后处理契约检查通过，未做视觉跨页评测。封面与三张小M图已核验。Blog及5图片200，列表第3、轮播第1；公众号draft/get全文/3图/元数据/封面/原文/评论匹配。双语向量写入，中文实时检索0.7265044；MemPalace原路径写入并回读6条。https://blog.mushroom.cv/blog/ovisocr3-unified-document-model/
+
+
+## 2026-10-28 · Magpie 与 Postiz：新稿与旧稿分别处理
+
+Magpie 对应 yetone/magpie（MIT），以原生配置适配和本地模型网关为主；隐私脱敏默认关闭，发行版有可关闭统计，会话管理不等于跨 Agent 状态无损交接。新双语文章 magpie-multi-agent-model-gateway 已上线，公众号全文/三图/封面/元数据/评论设置回读匹配。
+
+Postiz 已有 postiz-agentic-social-media-scheduling-open-source，复用原 slug 更新，保留首次发布日期。官方2024-10-26公告已指向源码，解雇关系与联合营销意图未获独立核验；修正旧文 AGPL 禁止商业克隆、内部使用一律豁免、自托管零出网等过度表述。旧 media_id 不在草稿箱，draft/get40007、已发布接口48001，标记 recorded，不重复创建。
+
+两篇合并一次构建和生产部署；936页、图片与首页轮播已核验。语义索引4向量写入、删除旧稿2条向量，新查询已命中当前标题。KB保留原始素材与历史导入，只增量写入两个发布项目记录并回读通过。Magpie封面初版文字被拒，改用同一本地生成图的明确记录裁切并重新通过检查；Postiz使用匹配本地生成封面。没有实测安装、模型供应商接入或社媒账号发布。
+
+耗时复盘：本机负载约45，其他仓库长期PR标签脚本占用CPU；单次Astro700.26秒、Pagefind145.422秒。今后同批内容准备齐再合并构建，先报真实已完成链接；不能把已成功内容盲目重建。
+
+
+## 2026-10-28 · ArchonOS公开工作台
+
+复用原始KB，未找到旧文章或M2凭证；远程查重被40164阻止，保留缺口并继续Blog。dmquant/archonos-pub仅main，提交a4f4873a9037dc08374232b03a1f458cab3dee45，MIT，package0.1.004。14项模块测试通过，不声称全部107项、完整部署、真实模型调用或安全审计。修正文档cd目录与占位地址；提示postinstall会初始化发现配置。本地工作台不保证本地推理，R2同步不直接等于端到端加密，RSI技能流程不等于模型权重自进化。
+
+双语Blog、匹配封面、3张小M正文图已发布并核验，列表与轮播第1，语义2向量写入，KB项目记录回读通过。按用户授权实际运行一次M2，仍40164：223.206.46.98不在白名单；没有草稿或mediaId，保留failed状态，暂停重试，后续只补公众号。
+
+## 2026-11-05 · Agent Workspace与Jumper分层核验
+
+两个独立项目合并为比较与入门文章，未声称存在集成。Agent Workspace应用包0.7.0标MIT，23项定向测试通过；Jumper主代码Apache-2.0，69项轻量测试通过，MuJoCo原始模型被动100步验证通过。初次npm锁文件、最小环境依赖和自写nu检查假设错误均留存；没有运行真实语音、模型API、训练或实机。85个STL不证明完整制造图纸公开，官方deploy文档仍标真机总线/NPU待验证。
+
+双语Blog已部署，列表/轮播第1及5个图片资源200；采用官方仿真渲染封面与3张小M正文图。KB已入库回读。公众号实际M2一次失败40164/IP223.204.87.188，未获得media_id，暂停自动重试，修复后仅补微信。语义索引两语言已写入，最终状态见source/20261105-agent-workspace-jumper/semantic-status.json。
+
+## 2026-11-05 · HexaShell公众号补偿成功
+
+复用原双语文章、匹配封面和正文配图，Blog及5图重新核验200。公众号接入恢复后草稿箱未有本篇，本地只有旧失败记录；补建一次成功，远程回读正文、3图、封面、标题/作者/摘要、原文链接和评论设置一致。旧40164失败标记resolved，KB回读含当前media_id；未群发，未重复部署Blog或重做索引。证据见source/20261105-hexashell/wechat-verification.json。
+
+## 2026-11-05 · Don’t Storytell公众号补偿成功
+
+复用原双语文章、封面和正文配图，Blog及5图重新核验200。公众号接入恢复后草稿箱未有本篇，本地只有旧失败记录；补建一次成功，远程回读正文、3图、封面、标题/作者/摘要、原文链接与评论设置一致。旧40164失败已resolved，KB回读含当前media_id；未群发，未重复部署或索引。完整源noi-liuchang/dont-storytell；本次Jina403，官方GitHub正文抓取成功，复用先前保存的官方流程SVG。
+
+## 2026-11-05 · rea-video/Nuphos补公众号，Raven保留旧凭证
+
+复用原双语文章及配图，两个Blog及10图重新核验200。rea-video/Nuphos未有旧成功凭证和远程草稿，补建一次并远程核验正文、3图、封面、标题/作者/摘要、原文链接与评论设置一致；旧40164失败resolved，KB回读含新media_id，未群发。Raven旧media_id draft/get40007，已发布列表48001无权限，保留recorded，不重复建稿。未重复部署或语义upsert。Jina本次403，官方GitHub正文抓取成功，复用此前原图与资料。
+
+## 2026-11-05 · Agent Workspace/Jumper公众号补偿成功
+
+复用原双语文章、官方仿真渲染封面和3张小M正文图，Blog及5图重新核验200。公众号接入恢复后未查到本篇远程草稿，本地仅有旧失败记录；补建一次成功，远程回读正文、3图、封面、标题/作者/摘要、原文链接及评论设置一致。旧40164失败resolved，KB回读含当前media_id；未群发、未重复部署或语义upsert。文章继续区分两个项目，不把STL等同完整制造资料，不把模型加载或定向测试当真机验证。
+
+## 2026-11-05 · 补齐11月4—5日失败公众号
+
+按Asia/Bangkok两日窗口核对失败文件、任务记录、远程草稿和本地成功凭证，8条记录中4条先前已成功且远程ID仍在，复用；另4条Shisei、NorthCUA-Pro、DSH Go、dsh-agy-link本次各补建一次。4篇Blog和20个图片资源200；新稿全文、3图、封面、标题/作者/摘要、原文链接和评论设置逐篇回读通过。最终8/8目标media_id均在远程草稿箱，远程总数12。旧失败resolved，KB五个项目/管理记录回读，既有语义索引均verified，未部署新Blog、未重建图片、未群发。已发布列表仍48001无权限。初始宽松正文链接匹配误把相关文章当同篇，已改为原文URL或精确标题匹配后才决定创建；证据与可复核运行脚本见docs/publication-audits/20261105-wechat-two-day-retry/。
+
+## 2026-11-05 · Rust和苹果开发者的Mole＋MBX磁盘流程
+
+新增组合流程文章，链接复用已有MBX专文；不重复工具单篇。核对用户指南fork与主项目：趋势和dev-cache来自指定开发分支，不能由官方安装命令推定；220GB仅原文自报。纠正push后可删.git、所有模型格式等同重复，以及Docker卷语义；保留Xcode发布归档与dSYM。
+
+20项Go定向测试通过。MBX1.29.2发行包SHA256匹配；隔离构建第一轮默认磁盘压力GC淘汰8对象/1动作，0hit2miss；另一全新临时缓存仅进程内关闭min-free阈值后2hit0miss，程序42→源码修改43正确，gc预览通过。非速度或物理空间基准，未清理真实目录或做全局setup/adopt。
+
+双语Blog已上线，首页轮播第1、列表第5、5图片200，FLUX8171匹配封面和3张小M图人工检查；公众号草稿正文/3图/封面/元数据/原文URL/评论设置回读一致，未群发。KB已回读。中英语义索引状态以source/20261105-mole-mbx/semantic-status.json为准。Jina403，raw GitHub指南与源码抓取成功，agent-reach skill当前不可用。
+
+## 2026-11-05 · Craft Anything软件研究与重建工作台
+
+补全storytold/craft-anything截断URL，精确源只命中本条原始KB；craft/anything拆词误中其他项目已排除。固定869eb8548ae3cf9162181659c3ab47441b9c300d、0.4.0、MIT OR Apache2、Rust>=1.97，earlyalpha。文中区分研究/构建/检查/交付，Clean room非OSsandbox，Claude聊天/构建与其他适配约束不同；Codex/ACP live验证程度按来源陈述。README320总工具/300engine与生成清单301engine存在计数同步差异，不把总数当全平台可用数。
+
+实际macOS ARM64 Rust1.98.1：evidence/formats606测试通过，Clean room另3测试通过、525过滤，源码锁文件未改；未运行GUI、CLI/MCP链路、真实编码Agent/付费API/设备/整站重建。JinaReader抓取成功，agent-reach skill不可用。双语Blog、FLUX8181封面、3张小M图已人工检查，轮播1/列表2/5图200；公众号全文/3图/封面/元数据/原文URL/评论设置回读一致，未群发。KB回读通过；语义状态见source/20261105-craft-anything/semantic-status.json。
+
+### 2026-11-05 Qwen3.8-27B QSA：社区改造与24GB条件
+
+精确一手源只命中原始KB素材，无旧文章/草稿凭证，未重复入原始素材。核对higa2515 BF16/GGUF、kuraneko1引擎和pentaCoxian分支，固定提交与权重版本。区分QSA选择读取与完整KV分配、262K配置容量与255K实际输入、基础双32GB测速与24GB IQ3_S+DFlash2配置，以及live会话、提示缓存与重启持久化。性能与质量均明确归于作者报告，不外推全部24GB显卡或Mac。
+
+实际本机仅CPU构建及现有GGUF144/144测试通过，无权重下载、GPU推理、视觉/吞吐/显存实测。Jina抓取成功；双语Blog、FLUX8191封面与3张小M图已核验，轮播1/列表5/5图200。公众号草稿全文、3图、封面及元数据回读一致，未群发。KB与语义证据见source/20261105-qwen-qsa。
+
+### 2026-11-05 Orkas：桌面Agent团队与源码版边界
+
+纠正断行及AI/Al混淆，确认Orkas-AI/Orkas，c7c0e21fad7ff55f5a72a575b7a464f3cf9bc3a1、MIT、package2026.11.4。精确URL/实体查重仅命中原始KB，线上检索无同项目文章；已发布列表48001不可读，无旧创建凭证。区分dispatch/hand_off/worker、范围记忆/Library/历史、源码/打包版和本地存储/远程推理；worker上下文隔离不等于OSsandbox。
+
+本机现有builtin manifest检查400文件一致，不是400功能测试；未安装完整Electron、启动GUI或执行Orkas模型/外部CLI任务。Jina抓取成功，官方截图已保存；主题FLUX8201封面和3张小M图人工检查通过，Blog轮播1/列表5/5图200，公众号全文/3图/封面/元数据/原文URL回读一致，未群发。KB和发布账本已更新；语义写入已接收，最新传播状态见source/20261105-orkas/semantic-status.json。
+
+Orkas最终核验：中英文2条索引回读及公开语义检索均已通过，状态verified；KB再次按实际记录回读确认URL、草稿ID及索引状态。
+
+### 2026-11-05 Appllama Skills与OpenMausBot：设计质量和执行环境
+
+核对Appllama/appllama-skills（dd5caaec3d5d50ad7fc0324da238119c6b7c3707，MIT，usage1.1.0/design1.3.0）与milind-soni/OpenMausBot（e7317a7fd23495ce6cb159279aa0ef9b8f086b06，package0.1.141）。两者独立，不宣称替代关系或已验证集成。强调开源Skill不包含商业MCP图库，HIG/60fps是要求而非认证/实测；OpenMausBot的enterprise目录为单独source-available授权，核心Apache2不能外推整个仓库。
+
+实际仅运行OpenMausBot现有三个Node测试文件，28通过0失败，范围为可信审批协调、frame导航边界、聊天深链；无GUI/真实模型/MCP/VM/手机App验证。Jina两源200，官方截图保存。8211封面人工拒绝伪文字，重新生成8212并人工核验；3张小M图核验通过。双语Blog轮播1/列表2/5图200；公众号正文、3图、封面、元数据和原文链接回读一致，未群发。KB/账本已更新，语义写入接收、传播状态见source/20261105-appllama-openmausbot/semantic-status.json。
+
+Appllama/OpenMausBot最终核验：中英文2条索引回读及公开语义检索均通过，状态verified；KB实际记录再次确认URL、草稿ID和索引状态。
+
+### 2026-11-05 LingBot：九仓库地图、复用核验与CPU实跑
+
+核对Robbyant九个LingBot仓库和全部README/提交；覆盖Vision、Depth、Map、VLA/VLA2、VA、World/World2、Video，区分Depth2/VA2官网论文与实际代码权重发布状态。World2明确CCBYNCSA4，不能沿用World1Apache。斯坦福OpenWAM/OpenWAM与同名OpenWAMOfficial分开，参考Transformer/textassets复用有代码证据。FastOPD2610.02832v1表2学生450/451MNFE1任务平均35.3->51.2（+15.9pp），教师4.2BNFE10为85.8；不是物理单步成功概率。LeRobotVA/VLA2策略和timmeva.py入口核实。AMD原始会场视频/配置未取到，官方作者贴文公开镜像指IFA，素材PyTorch场次不作已确认结论。比赛主办方Oct27披露1800+队13国，Nov14-16决赛尚未来临。
+
+实际VisionSmall CPUFP32 pretrained224x224->1x196x384全finite，21601152参数，188权重项0missing0unexpected。源码151e46321bae4399f8568829f190c7bdec216b49，HF127cbcec380de0bcd55bdc1b1fad3819850a6514；临时依赖隔离，Xet停滞后HTTP成功，无机器人/World/性能基准实测。封面8221人工拒伪文字改8222；3小M图核验，图1绝对“尚未集成”改“按任务对接”。Blog轮播1/列表6/5图200，公众号全文/3图/封面/元数据/原文链接回读一致，未群发；KB和账本已更新，语义传播见source/20261105-lingbot/semantic-status.json。
+
+LingBot最终核验：中英文2条索引回读及公开语义检索通过，KB实际记录确认URL、草稿ID与索引状态；均为verified。
+
+### 2026-11-06 NamiDSH：教学架构与当前兼容性核验
+
+原仓aa1143/NamiDSH固定629e9ef，社区MIT；物理行数含注释Cordis899、全部packages1549、入口34、原测试265，不能把680核心净行数当整个UI应用规模。原npm test和tsc通过，两条无Key离线HTTP工具请求完成；离线是规则mock，没有本地LLM推理。114行兼容性日志对npmCordis4.1.0和DSH fcc0ad4 vendored源码均有1行waterfall默认回调参数差异，不声称完整等价或推翻历史结果。临时夹具确认../被拦但符号链接可读边界外夹具；未读私人文件，不作为强沙箱。会话内存保存，生产需要持久化、权限、调度和限额。无付费模型/浏览器/压力测试。
+
+FLUX8231封面0failures，3小M图人工检查，公众号全文、3图、封面、元数据和原文链接回读一致，未群发。Blog轮播1/列表1/5图片200。KB和账本已写，语义2条接收后的传播状态见source/20261106-namidsh/semantic-status.json。
+
+NamiDSH最终核验：中英文2条向量回读成功，使用新查询公开语义搜索命中；KB实际3行确认URL、media_id与verified状态。
+
+### 2026-11-06 MiniCPM-V4.7重复素材复核
+
+复用2026-10-18既有minicpm-v47-moe-vision-deployment双语稿和匹配封面，不重写不重部署。线上文章200、5个图像资源200、AgentFeed列出、公开语义检索命中；封面机器核验0failures。官方两个规模35B-A3B MoE与1B dense仍有入口，约3GB是特定LES端侧运行占用而非模型存储或普遍最低设备规格。
+
+旧草稿凭证prCUE631thH1cmNLi42prLCEA_EFiE7slyCPP-ee5PZ-saa4-YZ_FfT1sv70zyww查询返回40007，远程草稿箱14条全部读取无此文；已发布接口48001无权限。因此当前状态标记recorded，当前mediaId为空、旧创建凭证保留，未再创建可能已群发内容。KB实际7行读回最新状态，发布账本已更新。复核证据在source/20261018-minicpm-v47/recheck-20261106/。
+
+### 2026-11-06 WeVisOne-VL重复素材复核
+
+精确实体和Tencent/WeVisOne-VL补查找到10月26日既有wevisone-vl-unified-vision完整双语分析。复用原文、官方兔子alpha抠图匹配封面和3张小M图，不重写、不重部署；博客200、5图片资源200、AgentFeed列出、公开语义检索命中。封面0failures，官方配图Foreground文字为adopt允许警告。
+
+旧草稿prCUE631thH1cmNLi42prD5IKoEvZR_2YVOWOzqgUy4KG_qOPfTKsHAn35VnEO6j返回40007，14条远程草稿全读无此文，已发布接口48001。当前状态recorded，当前mediaId为空，保留旧创建凭证，未重建可能已经群发的内容。KB读回最新状态及URL、旧凭证，发布账本同步。证据source/20261026-wevisone-vl/recheck-20261106/。
+
+### 2026-11-06 Bisheng：企业Agent平台源码与部署核对
+
+dataelement/bisheng固定62f5893912a171265769f004fe79a96cfb009fee；初始重复仅原始KB，未有Blog/M2。agent-reach未安装，用户允许的JinaReader抓取成功，源码对照并保存2官方截图。当前README覆盖知识空间、任务Agent、工作流、桌面集成与应用工场；不把Apache2主仓授权扩大成所有商业服务免费，统计看板商业版、Gateway可选授权文件分别说明。顶层Compose快启与dockerREADME的env准备存在差异，说明安装脚本、ARM逐项镜像、后端beta6与v3.0镜像版本口径。8核32GB为官方前置条件，不是含本地模型的容量保证。
+
+独立venv执行现有CLI3文件35测试通过，bash-n安装脚本及helper通过；本机无Docker，未运行配置准备/整套服务，无模型/RAG质量/权限/桌面/并发实测。FLUX8241封面机器与人工核验通过，3小M图均核验，截图仅产品资料非本机运行。双语Blog轮播1/列表1/5图200；公众号全文、3图、封面、元数据和原文链接回读一致，未群发。KB/账本已写，语义2条接收后的传播状态见source/20261106-bisheng/semantic-status.json。
+
+Bisheng最终核验：中英文2条向量回读成功，新公开查询命中；KB实际3行确认BlogURL、草稿ID和verified状态，三件套完成。
+
+### 2026-11-07 ShipMyGame：Unity游戏发布技能与阶段边界
+
+BaronCyrus/ShipMyGame固定6b93a0ce97402c57d87750b2cc64d8a56ad6e38f，MIT/plugin0.1.0。原始KB以外无旧Blog/M2记录。介绍技能+文档+脚本而非引擎；当前作者GooglePlay正式版访问申请待结果、微信两类备案区分、Tap包体准入不等于正式上线，Steam仍草稿。STATE文件支持交接不等于事务防重；提审确认主要是Agent规则，不是强制安全隔离。未提供具体税务/收款建议。
+
+仅临时合成夹具检查HTTP服务4类请求（allowed200/CORS、不允许来源仍200无CORS、越界symlink404、目录404）、隐私HTML占位符拒绝/转义、合成邮箱扫描命中。无Unity构建、浏览器、账号、上传或提审。CORS明确不是认证。8251/8253人工拒伪文字，8252拒无关barcode背景，最终8254机器0fail及人工通过；3小M图核验。Blog轮播1/列表1/5图200，公众号正文/3图/封面/元数据/原文链接回读一致，未群发。KB及账本已写，语义2条接收后的传播状态见source/20261107-shipmygame/semantic-status.json。
+
+ShipMyGame最终核验：中英文2条向量回读成功，新的公开查询命中；KB实际3行再次确认URL、草稿ID和verified状态，三件套完成。
+
+### 2026-11-07 agentic-rl-lab：复用旧文并纠正成本归因
+
+Datawhale当前仓库固定238bc688ca7d5c994c580f732ee9c2c92483bd20；复用2026-08-10原slug，不新建重复文章。旧文将20步5.06元账单与100步固定100题71→87%结果混成一次实验，已双语纠正；明确格式率75→91%、无逐题JSON/远端checkpoint、绘图使用常量，当前优势实际仅reward减组均值。只静态核对，未运行付费训练或独立测准确率/费用。保留原pubDate，更新updatedDate和轮播时间；替换旧示意封面并补3张小M图。
+
+旧公众号draft/get40007，完整11条远程草稿无匹配，已发布列表48001；保留旧创建凭证并标记recorded，未重复新建，也未声称本次修订已送达公众号。Blog原URL200、轮播1、5图片变体200。语义与KB最终回读见source/20261107-agentic-rl-lab/。
+
+### 2026-11-08 RLHF Book Chinese：教材、版本与验证边界
+
+jweihe/RLHF-book-Chinese固定af321f73f469019b9d481a4fd96403c9b6a871f1。精确查重只有原始机器人KB，没有旧文章/M2。19章中文教材，Nathan Lambert原著、Junwei He翻译维护；内容CC BY-NC-SA4.0与代码MIT分开说明。2026-09勘误不等于完整同步英文出版版，历史行业语境约2025-04。agent-reach缺失/Jina403后Git抓取成功；保存4张README阅读配图到media，不将原书页面当封面。
+
+实际运行原仓库8项章节代码数值测试和3项构建辅助测试全部通过。未安装Pandoc/crossref，未完整构建电子书或跑完整make check，未训练模型或测论文分数。8271封面机器通过但人工发现书脊伪文字而拒绝，8272空白笔记本摄影隐喻通过机器与人工核验；3小M图明确真实训练/全书构建未运行。Blog轮播1/列表1/5图片变体200，远程公众号正文、3图、封面、元数据、原文链接及评论设置回读一致，未群发；语义与KB最终证据见source/20261108-rlhf-book-chinese/。
+
+### 2026-11-08 Anthropic Dreaming：父会话、原地记忆与增量边界
+
+官方11月2日Cookbook固定ce8b2629efe8b24048b127b4c79af1e9cbab93d4，MIT。宽泛dreaming/dynamic/workflow命中Bitterbot等无关主题；精确Notebook/标题无旧文章/M2，远程草稿查询成功、已发接口48001。原始全量查重输出留私人job目录，公开审计只保留汇总，避免夹带无关KB摘录。
+
+文章区分一个父session中的lead/analyzer/organizer多线程与单个模型调用；Cookbook原地更新store不同于Dreams研究预览输出新store。readonly业务挂载不等于本地离线；单条memory不可变版本审计不等于跨文件事务。创建时间过滤+跳过运行中会话存在游标遗漏；失败重试窗口不等于回滚或exactly-once。候选delta/单写入合并/待完成ID是建议改造，不冒称上游现成功能。
+
+实际9项本地合成夹具检查上游helper与nightly main，NotebookClient替身，零模型调用/云资源/真实用户日志；未测语义记忆质量/成本/速度。8281封面及3小M图人工、机器核验通过。Blog轮播1/列表1/5图片200；远程公众号全文、3图顺序、封面、元数据、原文链接、评论设置一致，未群发。语义中英2条回读与公开查询命中、KB实际回读均通过。
+
+### 2026-11-08 Designing AI Systems：官方配套代码与参考实现边界
+
+Manning产品页直接链接designing-ai-systems/designing_ai_systems_repo，固定94dd7ecdd02de7c1289bb81765deeaaa23dffcee。未找到整本书正文/PDF/EPUB或明确LICENSE/projectlicense；GitHub license=null。只称公开配套代码，不擅自标MIT/Apache或宣传全书开源。出版社页面全部章节可读与MEAP/预计11月出版标签并存，不写死发售日期/页数。
+
+根README第9章planned滞后，claw/已提供第9章参考助手；日历/工单实际为模拟分派，不能把状态表当缺代码，也不能把mock当企业集成。实跑核心6测试文件69项及Claw18项，共87项通过，实际uv选择Python3.14.7而项目要求>=3.12。两项合成夹具验证默认DataService1536维零向量，以及requires_confirmation元数据不自动拦住直接ExecuteTool入口；HTTP仅MockTransport，无模型/真实工具调用。未测全套/DB/Docker/K8s/负载/RAG质量或完整安全审计。
+
+8291模块化平台封面和3小M图机器/人工核验通过。Blog轮播1/列表2/5图变体200；公众号全文、3图顺序、封面、元数据、原文链接与评论设置回读匹配，未群发。中英2条语义回读及公开查询命中，KB实际回读验证。上游未明确许可，公开审计保留源码哈希/链接和自写夹具，不搬运整份上游源码或书籍。
+
+- 2026-11-08 CMU 11-768 AI Agents recheck: exact URL/entity matched September 16 article; reused its original slug and verified Blog 200, banner provenance/framing/text/faces and live semantic search. No article/deploy/draft recreated. Old draft/get 40007; complete remote box 9/9 lacks course; published API48001: recorded, currentmedia empty, prior receipt retained. KB updated and SQLite readback verified. Official course dates changed; September article is a historical snapshot, current deadlines belong to official site. Audit: source/20261108-cmu-ai-agents-recheck/.
+
+- 2026-11-08 ESPica32: generic ESP32 dedup false positives cleared with exact authorURL/entity; only bot rawmaterial existed. Published original bilingual review at espica32-kiwisdr-wifi-radio-build-review. Identified community rbnpou/ESPica32 MIT repo (maintainer-stated Ivan LU8MIL approval); all23 codefiles match author archive outerversion, nested older project distinguished. Actual host8192ADPCMsamples match reference plus10buffer/driftassertions; noESP32/fullfirmware/liveKiwi/RF/performance/securityaudit. Highlighted WiFi remoteRF, speaker/power extras, NBFM≠broadcastFM, initialbrowser setup, developerdefaultWiFi clearing without repeating values. FLUX8302 accepted89773B after8301 manualpseudotext rejection;3LittleM figures verified. Blog200 carousel1/list3 and5assets200, remoteWeChat fulltext/ordered3images/cover/metadata verified, semantic2readback/publicquery and KB SQLite verified. No masssend. Source source/20261108-espica32/.
+
+- 2026-11-08 AI Infrastructure Engineer Learning Path: generic botqueryfalsepositives cleared with exact ai-infra-curriculum/ai-infra-engineer-learning URL/ownerrepo; no oldarticle orM2receipt. Published bilingual review at ai-infrastructure-engineer-learning-path-review, MIT commit0d1b6558dc68c042a3dad54095b707cd92fc0529. Explained prerequisites/Juniorroute, ownfourweekserviceloop, inventory10modules/62labfiles/119exerciseentries notexecutionproof. Actual44PythonASTparse2unfinishedsyntaxerrors,45project101and29project103emptytestbodies;5TestClientrequests root200,health200{},metricsplaceholder200,predict501,missingfile422. NoGPU/model/cloud/K8s/fullstacktest and noemptytestsreportedpassed. FLUX8312 accepted92876B after8311manualpseudotextrejection;3LittleM figsverified. Blog200,list1/carousel1,5images200;remoteWeChat fulltext/ordered3images/cover/metadata verified;semantic2readback/publicquery andKB5SQLite rowsverified. No masssend. Source source/20261108-ai-infra-learning/.
+
+- 2026-11-08 MOSS-Image/OpenMOSS: exact image-family dedup cleared owner-name TTS/transcription falsepositives; rawKB only, no priorarticle/M2receipt. Published bilingual moss-image-openmoss-layout-generation-review fromGit6be4453024c5acae9dcd0a191e26ee524e743310, pinnedSFTconfigrevisionf972bd4b4b9e3852133cc5da954d87bc32cd8fb9. Explained5BDiT vsfulltextencoder/VAEchain,Base/SFTvscommunity,xyxydraft→centeredyxyx,ComfyUIpaths,authorlowmemory/MPSrecords andLLTBcoveragevs exacttext. Actual8compiler+11mock/CPUruntimechecks pass andworkedlayoutcompiled; no fullweights/imagegeneration/OCRquality/latency/peakRAMbenchmark. AdoptedofficialShanghai panoramacover93559B withprovenance/machine/manualchecks,notourMOSSoutput;3LittleMfigsverified. Blog200 carousel1/list5,5assets200,remoteWeChat fulltext/ordered3images/cover/metadata verified;semantic2readback+publicquery andKB6SQLite rowsverified. No masssend. Source source/20261108-moss-image/.
+
+- 2026-11-09 Axion1.0: exact repoURL/entity dedup found incoming rawKB only, remote12drafts no match and no priorM2receipt; published API48001 gap recorded. Published bilingual axion-agent-training-data-cost-review fromGit66cab5555ca25d3a5460ca6a6eff07f3a6bcabbc andpinnedHFcards. Distinguished projectapprox1K GPU-hours frompaper240SFT GPU-hours andincompleteRLduration/fullcostledger; fullHLE59.0 vsHLE13074.6, bestof3or5 andcross-sourceprotocols; HF35B communityreproduction52.8 notpaper122B checkpoint. Fulltrajectory18363SFT+484RLtasks, StageIpublic10819vsrecorded122Binput9840 andtemplatefiltering noted. Actual104selectedCPUtests+18subtests pass,2fullerTorch/verltests excluded; initialdependency/pathaliasfailures fixedviaenv only. NoGPU/weights/training/scores/performance replication. Datasetcountsverified, StageIIsampleAPI502 documented. Agent-reach unavailable; directofficialGit/HTML/PDF/HF+Jina used, paperrawprivate. Officialchartdownloadedmedia; FLUX8321 cover92181B and3LittleMfigs machine/manualverified. Blog200,list1/carousel1,5images200; remoteWeChat fulltext/ordered3imgs/cover/meta/source/comments verified, no masssend. Semantic2readback/publicquery andKB4SQLite rows verified. Source source/20261109-axion/.
+
+- 2026-11-09 Awesome Opus videos: corrected userowner yihiu-dev404 to verifiedyihui-dev/awesome-opus5-5-videos, Git92aee2f586ac0715cb3cbcb6384834f98a33383d. Botbroadstars falsepositives cleared; exactURL/name onlyincomingrawKB,no oldarticle/M2receipt. Remote13drafts queried;published48001 gap recorded. Read-only703records/703files audit,418remakeflags,207partial/496notpartialmarked,unique slugs andJSON/Markdown textmatches afternewline/outerfence normalization. InitialauditoroptionalURL/nestedfencemistakes correctedwithoutupstreamedits; no artificialtestcount. Fourcategories369motion/116explainer/1173d/101interactive distinguishedfrom100READMEfeatured. API14384stars,lastpushOct13vsREADMEOct12 capturedNov9; no claimofrecentcontinuousupdates. No standaloneHTMLJSfiles,noOpuscall/video generation/visualbenchmark/allURLliveness/modelattribution verification. MITrepo vscreatorassetrights distinguished. AdoptedREADME mosaic95684B, machine0fail/acceptedtextwarning/manualpass;3LittleMfigs37134/38031/47413B verified. Blog200 list1/carousel1/5images200;remoteWeChat fulltext/ordered3imgs/cover/meta/source/comments verified,nomasssend. Semantic2readback/publicquery andKBactualSQLite verified. Source source/20261109-opus-videos/.
+
+- 2026-11-09 Higgs Realtime Duplex: exactannouncementURL/hyphenatedentity no priorpublication; broadrealtime/duplex falsepositives cleared, Mika/WorldForge exactURLsclear;14remotedraftsqueried,published48001 recorded. BosonteamMuLi attributionverified, notsoloauthor.16officialpublicrepos/12HFmodel inventory noDuplexweights/lite; Nov5announcementAPIcomingsoonwaitlist. ExistingRealtime0.75USD/Minput,0.25cached,4.50output andminuteestimates0.0023/0.014 NOTDuplexquote. Avataroutputprice/separateLiveKitCloudroute/notselfhostCloud requirement distinguished. TTS3weightsresearchnoncommerciallicenseexplicitnotopensource withcreatorgrant; STTApache2 separatecomponentsnotDuplexLite. Native45B/160mschunk≠end-to-endlatency; cameraevery6chunks,compression/MOPD/RSIauthorclaimsnotours. Officialtutorial87f1ae81434d8a65126503ceef36871e0b529f5c31unitchecks+typecheckpass;own5asyncorchestrationchecks pass, noAPI/realvoice/avatar/phone/GPU/modelbenchmark/billingtest. MikaGit8d6157 inventory24apps/18sites,BYOmodels notofflineguarantee;WorldForgeGit60a532MITGPUstudio,notBosonruntime,noperfclaimsrepeated. Integrationproposalnotofficialplugin. Full44minvideo notfetched; officialtechnicaltextused. FLUX8331banner86427B and3LittleM64128/53985/60958B machine/manualverified. Blog200 carousel1/list3,5images200;remoteWeChat fulltext/ordered3images/cover/meta/source/comments verified,nomasssend. Semantic2readback/publicquery andKBSQLite verified. Source source/20261109-higgs-duplex/.
+
+- 2026-11-09 Higgs Audio v2: exact modelURL/entity dedup no priorarticle/receipt; 15remote drafts queried, published48001 gap recorded, incoming rawKB reused. Published bilingual engineering guide higgs-audio-v2-engineering-deployment-guide. SourceGit05a145bb490501b534563bf51bf2f7aa2326b271. Critical actual compatibility finding: current checkpoints converted to native Transformers, archived code needs legacy higgs_audio config and tokenizer model.pth. Commands pin generation10840182ca4ad5d9d9113b60b9bb3c1ef1ba3f84 and tokenizer9d4988fbd4ad07b4cac3a5fa462741a41810dbec; file/config compatibility only, no weight loading. CodeApache2 vsCommunityweightlicense,24GBofficialrecommendation, pairedWAV/TXT, speaker/wordchunking, customvLLM and boundedworker proposal explained. Six actual upstream pure helper checks passed; no fullweights/GPU/audio/vLLM/quality/latency/VRAM tests. FLUX8341 manualpseudotextreject despiteOCRpass;8342accepted91724B,3LittleMfigs40653/43483/40077B verified. Blog200/listnearTop/carousel/5images200;remoteWeChat fulltext/3orderedimages/cover/meta/source/comments verified. OneCNlicenseword corrected in place same mediaID and redeployed, no duplicatedraft. Semantic2readback/publicquery andKBSQLite verified. No masssend. Source source/20261109-higgs-audio-v2/.
+
+- 2026-11-09 LivLiv Player: exact repoURL/entity dedup onlyincomingrawKB, no priorarticle/M2receipt. Remote16drafts queried, published48001 permissiongap recorded. Published bilingual livliv-player-browser-vtuber-webgl2-guide atsource011b1f54d62c189cee49f29d3427c6d22fafdffd/npm0.3.0. Typecheck/build and91Nodeunit-fuzz tests pass; officialheadlessChromiumSwiftShader smoke all21featuredcharacters andinvalid/load/statechecks pass, fake mediaused. OwnactualdemoSena expression/action/mouth.6/PNGsnapshot verified, noexternalrequests on plainplayback path only; screenshotprivate toavoidassetredistribution. Measuredcorestaticclosure including3sharedJSmodules gzip9 sum33596B, notentryonly/notfullpage/RAM/FPS; k01pack717989B,d03ft1883819B,21packtotal12868489B;npmpackexcludescharacters. OptionalMediaPipe/VRMdeps anddocumentedstatsnetwork separatedfromlocalcamera processing. Apache2codevscharacterterms, individualcreatorincomeexception, p01/p02NClicense andPenrightsnotgranted explained. No realcamera/mic/phones/streaming/perf test, no completefreeAIauthoringclaim. FLUX8351layeredfoxconceptcover91569B and3LittleM55456/47718/44344B manuallyverified. Blog200,listnearTop/carousel,5images200;remoteWeChatfulltext/ordered3images/cover/meta/source/comments verified,nomasssend. Semantic2readback/publicquery andKBactualSQLite verified. Source source/20261109-livliv-player/.
+
+- 2026-11-10 billion-context: exactrepoURL/name dedup onlyincomingrawKB; 978Blog/2remoteDraft/961localM2/4035KB checked,published48001 permissiongap recorded,no priorreceipt. Published bilingual billion-context-agent-compression-proxy-review atGit25b167187ac188e3eb67b18976570943bf98d3f5/version0.1.213/kernel0.0.191. Build+6targetedfiles140checks and1actualHTTPmock-model compress/re-request/stream testcase pass (141total); repohermeticpreloader isolatesBILI/XDG roots, no globalplugininstall/userconfig/paidmodelcalls/fullsuiteverdict. CLIversion/help checked; rejectedport0probe wasinvalidargumentnotdefect. Explainedcumulative18.76B including17.01Bcache notnativebillionwindow, generationalfold/restorationrequiresretainedstate, no universal5xcostclaim. Repositoryself-describedthirdparty0.1.202benchmark notindependentlyreplicated; LME79.2vs83.2full and62.6RAG difference16.6pp, actualcachedfull0.42 vsindependentattributed7.97/BC2.30 baseline; AR27vs69 andTTLsurvivalnotaccuracy. Paperdoctrine+tagcontrolrefetch62vs63 percent caveat included. LICENSEMITplusvisibleproductattributionterm. FLUX8361glasslayerconceptcover93632B and3LittleM55007/67997/65199B manuallyverified. Blog200/listnearTop/carousel/5images200;remoteWeChatfulltext/ordered3images/cover/meta/source/comments verified, no masssend. Semantic2readback/publicquery andKBSQLite verified. Source source/20261110-billion-context/.
+
+- 2026-11-10 Grok Bot alternatives: published bilingual grok-bot-open-source-alternatives-comparison after exact URL/topic dedup; existing Rakazo and Appllama/OpenMausBot articles kept as related background. Six pinned repos; main OSS applications Maus/Rakazo/CopilotKit/Suparagent/OpenTeam, Nightly separated as PolyForm Noncommercial reference. Copilot required Intelligence separately licensed but self-hostable; Maus enterprise separate license; OpenTeam workspace/sign-ins/accounts shared despite separate screens. Scoped checks Maus31, Supar13, Copilot6 custom pure policy probes, OpenTeam4 passed; Rakazo source only. No unified model/task/hardware performance ranking or full application security audit. Public issues sampled purposively with user/maintainer/bot/historical provenance, not defect rates. FLUX8371 cover91822B and three Little M images53712/39644/53113B manually verified. Blog200/list2/carousel1/five image resources200; remote WeChat draft fulltext/ordered3images/cover/meta/source/comments verified, no masssend. Semantic two vectors and fresh public title query verified; KB four SQLite rows verified. Source source/20261110-grok-bot-alternatives/.
+
+- 2026-11-10 OpenRSI Index: exactURL/entity check across980Blog/4remoteDraft/963M2/4050KB matched only incomingrawKB job22c882a4; no priorarticle/receipt, publishedAPI48001 gap preserved. Published bilingual openrsi-index-research-agent-benchmark-guide pinned8d170deed4591fc7e4306f2d86ff4d9bcffd1288, Apache2repo/upstreamdata licenses separate. Actual183checks in4reward/digest/compiler/submissionservice files pass,3actualtaskcompilers GEMM1GPU/sparse1/Qwenwrapper0 and2JSONLs2560each bytes/hash verified. NoDocker/firewall/model/GPUtraining/fullsuite/scientificscore reproduction. 26taskmanifests not26portableexperiments. Qwenwrapper data-only not122Btraining, historical71.7089/71.9123 recipe mismatch. Marin sanitizednonHarbor environment externalclusterassets. GPIC10Mcontinuationlogs vs100Mlegacyruntime, screeningFD1286.4504/1043.3926/729.3343 differentcaptionprotocols notmatchedagentrank orsealed50kfinal. ExperimentalMacCPUscope clarified. FLUX8381cover92341B and3LittleM42401/46622/33157B manuallyverified. Blog200/list3/carousel1/5images200;WeChatfulltext/ordered3imgs/cover/meta/source/comments remoteverified, no masssend. Semantic2vectors/readback/freshpublictitlequery andKB4SQLite rowsverified. Source source/20261110-openrsi-index/.
+
+- 2026-11-10 n8n Nod: exactofficialrepo n8n-io/nod clear; blog/productURL hits onlyincomingrawKB job9a6dc6ac. Botbroadtitle genericwordfalsepositives rejected;981Blog/5remoteDraft/964M2/4056KB checked,published48001gap recorded. Published bilingual n8n-nod-local-personal-agent-engineering-guide pinned e91aea2b9bc5c3e78640f87064f44a1b907859ec Apache2standaloneoneowner. Pi/Fastify/React/Electron/PostgreSQL/pg-boss,workspace/browsercontainers. Upstreamtrust-jev16checks pass withmockproviders/zod4.6.7,architecturecheckpassafterTS6.0.3dependency supplied. No fullapp/DB/browser/VM/liveaccounts/realmodel/payments/securityaudit orbenchmarkreplication. Firstparty98percent678simulatedruns226errands/3repeats vs93.2percent466/500LongMemEvalS separated,418authorheldoutclaim andbounded0/216/240cases preserved. Privacyanalyticsdefaulton/tracesoff/externalmodel+connectionservice, budgetpricedAPI-only/inflightexceptions/5dollarcheckin, desktopvsDocker/source/64Ktoolcontext andsleep limits explained. Agent-reach absent, directHTML+Jina200;4CDN403fallback pinnedrepoPNG+blogheader saved5mediafiles. Adoptedofficialpaperdotcollagecover92423B and3LittleMfigs machine/manualverified. Blog200/list3/carousel1/5imagevariants200;remoteWeChatfulltext/ordered3images/cover/meta/source/comments verified. Canonicalstdinhelperstalled, switchedprivatefile+timeout andverifiedsame draft, no draft recreation. Semantic2readback+freshpublicquery andKB4SQLite rowsverified. No masssend. Source source/20261110-n8n-nod/.
+
+- 2026-11-10 DSH Media Desk: exactrepo/entity check matched onlyincomingrawKB joba954f8d2; no priorarticle/draft/localreceipt,publishedAPI48001gap preserved. Published bilingual dsh-media-desk-creator-workbench-guide pinnedfc237f3388d048f51c3145cfd411dbb80ba2b388, source/npm2.6.2MITcommunitynotofficialDeepSeek. npmciignore-scripts+build+all6Nodefiles87tests pass0skip, isolatedDSH_HOME/TZAsiaShanghai. No nativeDSH/UI/liveproviders/paidimages/Monid/performance/growth replication. HostJS+ReactclientCordispatch,JSONstate/undo notteamtransactionservice; default9images/concurrency3not3xspeed;fallbackvsrealgeneration, pageclosevsHostrestart distinct. HTTPimagevsDSHsubscriptiontool/executor/accountfallback/rules/PTClimits explained. Monidoptional3rdpartyownpublicaccounts,engagementnotviews,YouTube/WeChatimportunsupported despiteplanningtargetsupport. No directsocialposting/finishedvideo. Reviewrules+Skillnotfinetuningorcausalgrowthproof. FLUX8391manualpseudoletterreject,8392final80414B verified;3LittleM44179/48888/50245B verified. Firstpublictitleassertfailed,causeunestablished; same deployment laterfullverify200/list2/carousel1/5images200,no redeploy. RemoteWeChatfulltext/ordered3images/cover/meta/source/comments verified,one draftcreation,no masssend. Semantic2readback/publicquery andKB4SQLite rowsverified. Source source/20261110-dsh-media-desk/.
+
+## 2026-11-10 OpenArch — published and verified
+
+- Source Hyland/OpenArch pinned 2b007aef651d67bdf6d84646cc4d7e4e9e36e108; Apache2, Java25/SpringBoot, MongoDB/OpenSearch document/vector/policy APIs.
+- Original contribution: 14 reproducible static assertions, clearly separate from runtime/security/performance tests. Docker/Java unavailable; no deployment claim. Development Compose uses MongoDB1GBtmpfs, no explicit OpenSearch data volume, disabled security/default credentials and exposed database/debug ports.
+- Distinguish product source-time permission claim from inspected local policy/ACL code; connector, identity mapping and revocation behavior require actual acceptance tests.
+- Blog https://blog.mushroom.cv/blog/openarch-enterprise-ai-data-permissions-guide/ 200, list5/carousel1, five image variants200. Final matching FLUX8401 cover and3LittleMfigs verified.
+- Remote WeChat draft prCUE631thH1cmNLi42prNcLAN9z2L1MMhMO5djr64QREfKqlG1M22wO8jwQs_cn full text/3images/cover/metadata verified; no masssend. Semantic2readback+publicquery verified after propagation; KB3rows URL/media/semantic verified. Original incoming KBrow4802 is material, not a duplicate publication. Published API48001 remains a read gap.
+
+## 2026-11-11 Jane Street agent_skills — published and verified
+
+- Pinned janestreet/agent_skills 7c6715c29548a3b39d4a9545c698ee4fd17a7213. MIT; one skill socratic-tutor,102lines/5243bytes. Not trading strategies, app, model weights or training framework.
+- Distinct editorial value: activation guard,3-5diagnosticquestions,4-10subskills0-5, independent evidence and recall before promotion, default4/fullmastery5, final mixed assessment, manualsave/resume. Distinguish model-dependent prompts from enforced runtime, timed reviews and persistence.
+- Original execution: SQLite author-designed NOTIN/NULL vs NOTEXISTS/nullfilteredNOTIN example; results empty vs2/3 vs2/3 for the supplied nonnullcustomerIDs. No LLM tutoring session/efficacy benchmark or skill installation/configuration change.
+- Blog https://blog.mushroom.cv/blog/jane-street-socratic-tutor-agent-skills-guide/ 200/list1/carousel1,5imagevariants200. FLUX8411 cover and3LittleMfigs verified; SEO/GEO,lint,build passed.
+- Remote WeChat prCUE631thH1cmNLi42prIkkFIsqUEBzngxQcfbXdH2Fcq0X0ZIKtX3I6uTFW2Xj fulltext/3images/cover/metadata verified. Semantic2records readback and publicquery verified after propagation; KB4rows URL/media/semantic verified. IncomingKBrow4806 belongs to this job, not prior publication. PublishedAPI48001 read gap documented. No masssend.
+
+## 2026-11-11 tokin — published and verified
+
+- open-rollout/tokin pinned555801f15bd6db7878ab1ee81f0869cb7855b8e7, Apache2/Python>=3.12/PyPI0.1.0beta. All26wheelPythonfiles byte-identical to source, SHA256 verified. Primary author YuanHe blog fetched HTTP200 when web tool failed; archived privately.
+- Original verification:204fasttests pass1705deselected;actualQwen3.5-0.8Btokenizer29pass5conditionalskip1671deselected. ActuallocalhostHTTP+fakeengine/nonroundtriptokenizer3successfulgenerations2leaves, originalID900001preserved, alignedmask/logprob, collect404afterdelete. Negativeprobe nulltoolcalls400; omittedunusednullfields thencontinued. No upstream patches, GPUs, modelweights, realSGLang, paidcalls, RL orperfbenchmark.
+- Engineering conclusions:TITO preserves sampledIDs nottokencompression;sessiontrees/compactionnewroot; sharedprefix dedupinpi recipe notgeneralCLI; in-memorysessions andcollectfinallydeleteevenread/unpackerror,backupfirst; bufferedSSE notmodeltokenstream; textChatCompletions+SGLang/declaredfamilies, Responses/Messagesfuture. Author48H200fullRLgains separated from frozenpolicy2568paired +0.1ppCI[-1.5,+1.7] nomeasurableevalchange.
+- Blog https://blog.mushroom.cv/blog/tokin-token-native-agent-rl-gateway-guide/ HTTP200/list2/carousel1,5imagevariants200;FLUX8421cover+3LittleMfigs verified;lint/SEO/buildpassed. Firsttitleassertionfailed actualvalueuncaptured,causeunknown;bothcustomdomain/deployhostcorrectonsubsequentread andfullrecheckpassed withoutredeploy. Ownverifiernowrecordsactual/expectedonassertion.
+- RemoteWeChat prCUE631thH1cmNLi42prMKUbv61X36MS3pXKjphFN5PxdK8LvZXc37MPHoBWLcw fulltext/3images/cover/metadata verified. Semantic2recordsreadback+publicqueryverified afterpropagation;KB5rows URL/media/semantic verified. IncomingKBrow4811notpriorpublication;botgenericv0.1matchesirrelevant; publishedAPI48001gapdocumented. No masssend.
+
+## 2026-11-11 Fable5.2 FPS reproduction — published and verified
+
+- wquguru/fable52-fps-repro pinned a7e1df3ce32eb2bb05e23ae457fe5fe2bffab961, MIT,4experimentcategories5HTMLartifacts inclaudioTTLcontrol. OriginalFPSHTML130777bytes excludesThreeCDNmodules. Oncehumanrequest+systeminstructions+73agentturns, notoneAPIresponse.
+- All5existingartifacts ranChrome157,960x540;3DAppleM4Metal,JSuncaughtexceptions0, manual screenshots reviewed. 04manual/q2/pr1 DEBUGmovement/fire30to29/reload30res179,wave1/2/3debugkillHP100win,hurtover: NOTnormalcombat13droneplaythrough. NoFPS/VRAM/latencybenchmark, modelregeneration orhumanlistening. Stations14soundseach,01mix,FPS20offlinecases noclip;stationNaN0.
+- 5TSVcostrows recomputedat8/10/16/.2/40 currentofficialrates; FPS15.96APIequivalentnotactualsubscriptioninvoice,60.57same-observed-token nocachecounterfactualnotanotherexperiment. RawrunsJSONunpublished,eachauthorconditiononce. OfficialCLImin321vsREADME242,author322valid;planinclusionvaries. TEMPcopy metricsnoruns overwriteswithheader;fakeclaudeexit7wrapper0walllog7provenwithoutpaidcalls.
+- Blog https://blog.mushroom.cv/blog/fable52-fps-repro-procedural-game-cost-audit/ HTTP200/list1/carousel1/5imagevariants200. TopicMITsourceFPS560screenshot banner93366Badopted/UItextwarningexpected/no faces;upstreamlicensecopied;3LittleMfigs verified,SEO/lint/buildpass. AuthorgalleryandliveFPSalsoHTTP200.
+- RemoteWeChat prCUE631thH1cmNLi42prAK8Z03XW33xkRwv-PxD508wLfMs8pbyvn3V_0rNFoGJ fulltext/3orderedimages/cover/metadata verified. Semantic2records+publicqueryverified;KB4rows URL/media/semanticverified. IncomingKBrow4817notpriorpublication;publishedAPI48001gap documented. No masssend.

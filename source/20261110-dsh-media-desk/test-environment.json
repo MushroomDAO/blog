@@ -1,0 +1,13 @@
+{
+  "node": "26.10.0",
+  "install": "npm ci --ignore-scripts",
+  "build": "npm run build",
+  "test": "npm test",
+  "files": 6,
+  "passed": 87,
+  "failed": 0,
+  "skipped": 0,
+  "DSH_HOME": "isolated mktemp directory",
+  "TZ": "Asia/Shanghai",
+  "scope": "Existing entire unit-test command with fake model/images/Monid inputs; no native DSH install, live account, paid model/import/image call, publishing, browser interaction, UI performance or audience-growth measurement."
+}

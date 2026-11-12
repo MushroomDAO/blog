@@ -1,0 +1,157 @@
+{
+  "outputs": [
+    {
+      "number": 1,
+      "source": "/Users/jason/.codex/generated_images/01a151cd-a5cf-7722-834b-ca28c5cb4635/exec-bc9e7120-bf31-4c24-a9cc-f7c6e6774aed.png",
+      "preserved_original": "/tmp/sac-little-prince-illustrations/original-01.png",
+      "final": "/Users/jason/Dev/mycelium/blog/src/assets/images/sac-little-prince-ai-game-workflow-fig-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 87825,
+      "sha256": "32d01d41a54669c7a82164f79fdffce6811a073aca5b2d33f199f2259455cf38",
+      "pure_white_fraction": 0.7699,
+      "border_all_pure_white": true,
+      "encoding_attempts": [
+        {
+          "colors": "RGB",
+          "bytes": 426270,
+          "dither": false
+        },
+        {
+          "colors": 128,
+          "bytes": 126117,
+          "dither": "4x4 ordered before quantization; neutral amplitude +/-3.75; preserve white"
+        },
+        {
+          "colors": 96,
+          "bytes": 117853,
+          "dither": "4x4 ordered before quantization; neutral amplitude +/-3.75; preserve white"
+        },
+        {
+          "colors": 80,
+          "bytes": 114683,
+          "dither": "4x4 ordered before quantization; neutral amplitude +/-3.75; preserve white"
+        },
+        {
+          "colors": 64,
+          "bytes": 111104,
+          "dither": "4x4 ordered before quantization; neutral amplitude +/-3.75; preserve white"
+        },
+        {
+          "colors": 48,
+          "bytes": 102188,
+          "dither": "4x4 ordered before quantization; neutral amplitude +/-3.75; preserve white"
+        },
+        {
+          "colors": 40,
+          "bytes": 97493,
+          "dither": "4x4 ordered before quantization; neutral amplitude +/-3.75; preserve white"
+        },
+        {
+          "colors": 32,
+          "bytes": 94394,
+          "dither": "4x4 ordered before quantization; neutral amplitude +/-3.75; preserve white"
+        },
+        {
+          "colors": 28,
+          "bytes": 87825,
+          "dither": "4x4 ordered before quantization; neutral amplitude +/-3.75; preserve white"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "source": "/Users/jason/.codex/generated_images/01a151cd-a5cf-7722-834b-ca28c5cb4635/exec-21f6ad9f-2c3c-46cc-803f-4aff608da33a.png",
+      "preserved_original": "/tmp/sac-little-prince-illustrations/original-02.png",
+      "final": "/Users/jason/Dev/mycelium/blog/src/assets/images/sac-little-prince-ai-game-workflow-fig-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 58042,
+      "sha256": "c099eb721bbc611d41d190ef5640197afacb755ff9296c9496dc2908c1c59685",
+      "pure_white_fraction": 0.9328,
+      "border_all_pure_white": true,
+      "encoding_attempts": [
+        {
+          "colors": "RGB",
+          "bytes": 192588,
+          "dither": false
+        },
+        {
+          "colors": 128,
+          "bytes": 58042,
+          "dither": "4x4 ordered before quantization; neutral amplitude +/-3.75; preserve white"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "source": "/Users/jason/.codex/generated_images/01a151cd-a5cf-7722-834b-ca28c5cb4635/exec-11391191-a182-43e4-9e20-abfc1fd8644d.png",
+      "preserved_original": "/tmp/sac-little-prince-illustrations/original-03.png",
+      "final": "/Users/jason/Dev/mycelium/blog/src/assets/images/sac-little-prince-ai-game-workflow-fig-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "bytes": 60434,
+      "sha256": "5a5a976a2398f56e9149d5103817b3123383e6d5b977e47bc366752adecd9113",
+      "pure_white_fraction": 0.8941,
+      "border_all_pure_white": true,
+      "encoding_attempts": [
+        {
+          "colors": "RGB",
+          "bytes": 202147,
+          "dither": false
+        },
+        {
+          "colors": 128,
+          "bytes": 60434,
+          "dither": "4x4 ordered before quantization; neutral amplitude +/-3.75; preserve white"
+        }
+      ]
+    }
+  ],
+  "article_banner_unchanged": {
+    "src/content/blog/sac-little-prince-ai-game-workflow.md": true,
+    "src/assets/images/sac-little-prince-ai-game-workflow-banner.jpg": true
+  },
+  "method": "Pillow near-white cleanup, restrained 4x4 ordered dither before palette quantization if needed",
+  "visual_review": {
+    "fig_01": {
+      "pass": true,
+      "observed": "Cube/cuboid courtyard ground, capsule placeholder, pickup watering can and flower goal precede matching art; same route and blue interaction anchors persist. XiaoM physically lowers art surface. Short labels readable."
+    },
+    "fig_02": {
+      "pass": true,
+      "observed": "XiaoM edits scene with tool, fixed tripod camera and paired same-angle snapshots review appearance; separate controller/play path supplies collision feedback. No screenshot collision-success claim."
+    },
+    "fig_03": {
+      "pass": true,
+      "observed": "Exactly two arms. Holding-hand fingers wrap over can handle and support lifted can; other arm is down. Grip/single control, IK wrist/elbow pose markers, and offline baked fixed-motion export have distinct labels. No feedback from exported file to IK, no runtime adaptive claim."
+    },
+    "all": {
+      "pass": true,
+      "observed": "Each final PNG inspected at 1280x720; pure white margins, sparse hand-drawn objects and readable minimal Chinese labels. No dense UI or top-left title. All three are requested deliverables."
+    }
+  },
+  "only_added_repository_paths": [
+    "?? src/assets/images/sac-little-prince-ai-game-workflow-fig-01.png",
+    "?? src/assets/images/sac-little-prince-ai-game-workflow-fig-02.png",
+    "?? src/assets/images/sac-little-prince-ai-game-workflow-fig-03.png"
+  ],
+  "generation": {
+    "tool": "built-in image_gen",
+    "separate_calls": 3,
+    "final_image_count": 3,
+    "prompts": "/tmp/sac-little-prince-illustrations/prompts.json"
+  },
+  "scope": {
+    "article_modified": false,
+    "banner_modified": false,
+    "published": false,
+    "committed": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "mediaId": "prCUE631thH1cmNLi42prE-Eof8c4N3-Uv6Fqiv0i_6LpOfkWJGwVIi-j4sS8OBD",
+  "operation": "draft/update",
+  "updateErrcode": 0,
+  "createdNewDraft": false,
+  "coverPreserved": true,
+  "beforeContentLength": 2808,
+  "afterContentLength": 23998,
+  "bodyImageCount": 3,
+  "readBackAllNormalizedTextMatches": true,
+  "allThreeImageAssetIdsAndAltsMatch": true,
+  "normalizedTextCharacters": 5560,
+  "normalization": "HTMLParser entity decoding, whitespace ignored for text; src/data-src normalized; WeChat CDN http-to-https and size0-to640 mapped by the identical CDN asset ID."
+}

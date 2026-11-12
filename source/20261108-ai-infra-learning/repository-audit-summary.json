@@ -1,0 +1,86 @@
+{
+  "commit": "0d1b6558dc68c042a3dad54095b707cd92fc0529",
+  "modules": [
+    {
+      "module": "mod-101-foundations",
+      "labs": 5,
+      "exerciseDirectories": 7,
+      "flatExerciseFiles": 3
+    },
+    {
+      "module": "mod-102-cloud-computing",
+      "labs": 4,
+      "exerciseDirectories": 8,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-103-containerization",
+      "labs": 6,
+      "exerciseDirectories": 9,
+      "flatExerciseFiles": 3
+    },
+    {
+      "module": "mod-104-kubernetes",
+      "labs": 8,
+      "exerciseDirectories": 15,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-105-data-pipelines",
+      "labs": 6,
+      "exerciseDirectories": 12,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-106-mlops",
+      "labs": 7,
+      "exerciseDirectories": 14,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-107-gpu-computing",
+      "labs": 6,
+      "exerciseDirectories": 11,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-108-monitoring-observability",
+      "labs": 5,
+      "exerciseDirectories": 10,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-109-infrastructure-as-code",
+      "labs": 7,
+      "exerciseDirectories": 13,
+      "flatExerciseFiles": 0
+    },
+    {
+      "module": "mod-110-llm-infrastructure",
+      "labs": 8,
+      "exerciseDirectories": 14,
+      "flatExerciseFiles": 0
+    }
+  ],
+  "totalLabs": 62,
+  "exerciseEntries": 119,
+  "projectTestFunctions": [
+    {
+      "project": "project-101-basic-model-serving",
+      "functions": 45,
+      "empty": 45
+    },
+    {
+      "project": "project-102-mlops-pipeline",
+      "functions": 19,
+      "empty": 0
+    },
+    {
+      "project": "project-103-llm-deployment",
+      "functions": 29,
+      "empty": 29
+    }
+  ],
+  "pythonFiles": 44,
+  "syntaxErrors": 2
+}

@@ -1,0 +1,87 @@
+{
+  "query": "HyperQwen 24GB NVIDIA Qwen vLLM DFlash2 MTP Mac",
+  "result": {
+    "results": [
+      {
+        "article_id": "qwen38-27b-quasar-nvfp4-mac-mlx-install-guide",
+        "title": "Qwen3.8-27B QUASAR-NVFP4: Best 4-bit QAT Quantization Deep Dive + Complete Mac M1 Max 64GB Install Guide",
+        "url": "/blog/qwen38-27b-quasar-nvfp4-mac-mlx-install-guide/",
+        "language": "en",
+        "excerpt": "Qwen3.8-27B QUASAR-NVFP4: Best 4-bit QAT Quantization Deep Dive + Complete Mac M1 Max 64GB Install Guide The community released QUASAR-QAT/Qwen3.8-27B-QUASAR-NVFP4 (19.7GB, full W4A4) — smallest and highest quality NVFP4 build. But NVFP4 requires NVIDIA Blackwell GPU. This guide ",
+        "score": 0.643568
+      },
+      {
+        "article_id": "qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide",
+        "title": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上",
+        "url": "/blog/qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上 unsloth/Qwen3.8-Flash-Next-GGUF 是 Qwen4 架构预览版（125B 总参、6B 激活，外加 51B n-gram 嵌入）的 GGUF 量化，110 万次下载。我们逐个读了 10 个量化档的 GGUF 张量头：所谓 1-bit 只压了专家的 gate/up 投影，28.8GB 的 n-gram 表至少是 4-bit，所以最小档仍有 72.5GB。好在",
+        "score": 0.62573725
+      },
+      {
+        "article_id": "airllm-70b-inference-4gb-gpu-layer-streaming",
+        "title": "AirLLM：4GB 显存跑 70B 大模型，无需量化",
+        "url": "/blog/airllm-70b-inference-4gb-gpu-layer-streaming/",
+        "language": "zh",
+        "excerpt": "AirLLM：4GB 显存跑 70B 大模型，无需量化 lyogavin 开源的大模型极限推理工具，30k stars，Apache 2.0。通过逐层流式加载，在单张 4GB 显卡上运行 70B 模型，无需量化/蒸馏/剪枝。Kimi K3（2.8T）3.72GB、DeepSeek-V3（671B）约 12GB、Qwen3-235B 约 3GB。v3.0 新增 FP8 支持。支持 CUDA、Apple Silicon（macOS），同一 AutoModel 接口覆盖所有主流模型。 本地推理 大模型 显存优化 AppleSilicon DeepSeek Qw",
+        "score": 0.6002836
+      },
+      {
+        "article_id": "k2-horizon-mova-36b-a4b-mac-local-memory-guide",
+        "title": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？",
+        "url": "/blog/k2-horizon-mova-36b-a4b-mac-local-memory-guide/",
+        "language": "zh",
+        "excerpt": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？ K2-Horizon-MoVA-36B-A4B 是 MBZUAI 基础模型研究院（IFM）9 月初开源的 Apache-2.0 纯文本 MoE，37.44B 总参、按权重头部推算每 token 约 4.66B 激活，把注意力的 V 投影换成 64 选 4 的专家。自报 Terminal-Bench 2.1 为 58.6。它的 KV 缓存每 token 192KB，是 Qwen3.5 同档的约 10 倍。Mac 上 32GB",
+        "score": 0.59356683
+      },
+      {
+        "article_id": "comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy",
+        "title": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案",
+        "url": "/blog/comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy/",
+        "language": "zh",
+        "excerpt": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案 sepiablue-ai 开源，GPL-3.0，46 stars。两个 ComfyUI 节点把 MiniMax H3 视频生成塞进 12GB 消费级 GPU：W4A4 量化（FC1 层 ConvRot 预转换缓存）+ 流式 VSA 稀疏注意力（FastH3 官方 gate 文件）。RTX 4070 12GB 实测：832×1408×124帧约 3m29s，峰值 11.5GB 显存，比 INT8 基线快约 11%。需 Amp",
+        "score": 0.5866
+      },
+      {
+        "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+        "title": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行",
+        "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行 OrcaRouter 发布的 Qwen3.8-27B 消融对齐（abliterated）MLX 量化版本，672 likes，trending。基于 Qwen3.8-27B —— 一个 64 层混合架构模型（48 层 Gated DeltaNet 线性注意力 + 每 4 层一个全注意力层），原生视觉语言塔，262K 上下文，MTP 头。提供 2/4/6/8-bit 四个精度（affine 量化，grou",
+        "score": 0.58370095
+      },
+      {
+        "article_id": "nemotron-35-super-vl-bolt-local-models",
+        "title": "Nemotron 3.5: Super VL, 24GB Bolt and Upcoming E4B",
+        "url": "/blog/nemotron-35-super-vl-bolt-local-models/",
+        "language": "en",
+        "excerpt": "Nemotron 3.5: Super VL, 24GB Bolt and Upcoming E4B Compare NVIDIA Nemotron 3.5 Super VL and 24GB Bolt: context limits, quantization, published evaluations, deployment requirements, and the upcoming E4B model. NVIDIA Nemotron 视觉模型 本地推理 Agent Which model fits which workload? What m",
+        "score": 0.5776737
+      },
+      {
+        "article_id": "deepseek-v41-flash-1017-uncensored-fp8-teardown",
+        "title": "Teardown of the Uncensored DeepSeek-V4.1-Flash-1017 FP8: 100% HarmBench Compliance, a 3.86pp MMLU Drop, and a 510GB Hardware Wall",
+        "url": "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+        "language": "en",
+        "excerpt": "Teardown of the Uncensored DeepSeek-V4.1-Flash-1017 FP8: 100% HarmBench Compliance, a 3.86pp MMLU Drop, and a 510GB Hardware Wall The uncensored FP8 release of DeepSeek-V4.1-Flash-1017 by dealignai (MIT, 3,808 downloads, 265 likes, created 2026-10-18) self-reports 320/320 HarmBen",
+        "score": 0.5763792
+      },
+      {
+        "article_id": "m1-max-64gb-local-ai-model-selection-memory-guide",
+        "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
+        "url": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
+        "language": "zh",
+        "excerpt": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度 持续更新：M1 Max 64GB MacBook 本地AI最佳组合方案。涵盖 Apple Intelligence 3B 复用、Qwen3-30B-A3B/27B/32B 全8bit部署、oMLX多模型调度、48GB可用内存边界测算与系统精简。 M1Max 本地模型 Qwen3 oMLX 内存管理 Apple Intelligence LLM 隐私AI 一、核心硬件与基础定位 二、Apple Intelligence 原生 3B 模型利用方案 三、Qwen3 三大主力模型差异",
+        "score": 0.574988
+      },
+      {
+        "article_id": "deepseek-v4-flash-local-inference-guide",
+        "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+        "url": "/blog/deepseek-v4-flash-local-inference-guide/",
+        "language": "zh",
+        "excerpt": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册 DeepSeek V4-Flash 284B MoE 模型本地推理完全指南：为什么「13B 激活参数」不等于 13B 内存需求，四档硬件方案对比，以及 Mac M4 Ultra、多卡 GPU、vLLM 的实操步骤。 DeepSeek V4 本地推理 MoE vLLM Mac M4 Ultra GPU推理 量化 llama.cpp AI部署 一、先搞清楚：MoE 的内存陷阱 \"激活参数\" ≠ \"推理内存\" V4-Flash 的实际内存占用 额外内存开销 二、四档硬件方案 方案 A：Mac A",
+        "score": 0.56968933
+      }
+    ]
+  }
+}

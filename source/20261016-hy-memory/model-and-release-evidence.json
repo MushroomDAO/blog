@@ -1,0 +1,27 @@
+{
+  "repo": "https://github.com/Tencent-Hunyuan/Hy-Memory",
+  "repoPin": "fba347ad8d04eefbc51a466fa4cbd7d4e1936109",
+  "model": "https://huggingface.co/tencent/Hy-Memory-30B-A3B",
+  "modelPin": "64a460a94d5498b7316fb02395c72d01c47a7347",
+  "parameters": {
+    "parameters": {
+      "BF16": 30064719872,
+      "F32": 6016
+    },
+    "total": 30064725888
+  },
+  "weightsTotalBytes": 60129463808,
+  "weightsIndexSha256": "b5d3d09f494368a71210291f1e40a625963c0c794324b3a536f22a929a091e41",
+  "npmMemhubCliLatestStatus": 404,
+  "npmResponse": "Not Found",
+  "releaseAssets": [
+    {
+      "tag": "v1.0.0",
+      "assets": [
+        "MemHub-1.0.0-macos-arm64.dmg",
+        "memhub-runtime-linux-arm64.zip",
+        "memhub-runtime-linux-x64.zip"
+      ]
+    }
+  ]
+}

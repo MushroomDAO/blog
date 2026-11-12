@@ -1,0 +1,12 @@
+{
+  "exitCode": 0,
+  "actorStatus": "success",
+  "verdict": "success",
+  "pageStateVerified": true,
+  "domStateVerified": true,
+  "visualStateVerified": false,
+  "steps": 3,
+  "taskReceiptVerified": true,
+  "model": "scripted loopback fixture, not NorthCUA-Pro",
+  "scope": "One real-browser task; no native desktop, batch, hosted model or benchmark test"
+}

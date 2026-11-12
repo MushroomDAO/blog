@@ -1,0 +1,17 @@
+{
+  "pin": "3499a60c6fc67ff8b7d86e4c41e7b7607b850b39",
+  "tests": [
+    "motion-export.mjs",
+    "runtime-regressions.mjs",
+    "select-regressions.mjs",
+    "server-regressions.mjs"
+  ],
+  "motionSyntheticScenarios": 52,
+  "runtimeSyntheticScenarios": 43,
+  "selectGroup": "passed, see log",
+  "serverTestRunnerPass": 11,
+  "serverTestRunnerFail": 0,
+  "incompleteFixtureFailure": "Initial source subset omitted images/linked video. Fetched matching official static resources and reran successfully;unmodified upstream tests.",
+  "scope": "Synthetic browser/codecs plus real WebM parser;real localhostHTTPserver boundary/resource checks. No real browser segmentation, real WebCodecs export, image quality or speed test. Not the full npm test release check.",
+  "selectSyntheticScenarios": 30
+}

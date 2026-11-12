@@ -1,0 +1,161 @@
+[
+  {
+    "slug": "d2r-mobile-build-ios-macos",
+    "checks": {
+      "description": true,
+      "descriptionEn": true,
+      "titleEn": true,
+      "wechatTitle": true,
+      "wechatDigest": true,
+      "bilingual": true,
+      "copyright": true,
+      "faq": true,
+      "question_heading": true,
+      "source": true,
+      "date": true,
+      "category": true,
+      "figures_twice": true,
+      "no_placeholder": true
+    },
+    "images": [
+      {
+        "path": "src/assets/images/d2r-mobile-build-ios-macos-banner.jpg",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 92816
+      },
+      {
+        "path": "src/assets/images/d2r-mobile-build-ios-macos-fig-01.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 81496
+      },
+      {
+        "path": "src/assets/images/d2r-mobile-build-ios-macos-fig-02.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 89240
+      },
+      {
+        "path": "src/assets/images/d2r-mobile-build-ios-macos-fig-03.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 56923
+      }
+    ]
+  },
+  {
+    "slug": "kinex-coding-agents-robot-harness",
+    "checks": {
+      "description": true,
+      "descriptionEn": true,
+      "titleEn": true,
+      "wechatTitle": true,
+      "wechatDigest": true,
+      "bilingual": true,
+      "copyright": true,
+      "faq": true,
+      "question_heading": true,
+      "source": true,
+      "date": true,
+      "category": true,
+      "figures_twice": true,
+      "no_placeholder": true
+    },
+    "images": [
+      {
+        "path": "src/assets/images/kinex-coding-agents-robot-harness-banner.jpg",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 90317
+      },
+      {
+        "path": "src/assets/images/kinex-coding-agents-robot-harness-fig-01.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 63967
+      },
+      {
+        "path": "src/assets/images/kinex-coding-agents-robot-harness-fig-02.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 84163
+      },
+      {
+        "path": "src/assets/images/kinex-coding-agents-robot-harness-fig-03.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 63190
+      }
+    ]
+  },
+  {
+    "slug": "glimpse-visual-reasoning-game-bug-review",
+    "checks": {
+      "description": true,
+      "descriptionEn": true,
+      "titleEn": true,
+      "wechatTitle": true,
+      "wechatDigest": true,
+      "bilingual": true,
+      "copyright": true,
+      "faq": true,
+      "question_heading": true,
+      "source": true,
+      "date": true,
+      "category": true,
+      "figures_twice": true,
+      "no_placeholder": true
+    },
+    "images": [
+      {
+        "path": "src/assets/images/glimpse-visual-reasoning-game-bug-review-banner.jpg",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 75194
+      },
+      {
+        "path": "src/assets/images/glimpse-visual-reasoning-game-bug-review-fig-01.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 57504
+      },
+      {
+        "path": "src/assets/images/glimpse-visual-reasoning-game-bug-review-fig-02.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 57094
+      },
+      {
+        "path": "src/assets/images/glimpse-visual-reasoning-game-bug-review-fig-03.png",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "bytes": 73974
+      }
+    ]
+  }
+]

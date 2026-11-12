@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "jev-skill-agent-decision-9-skills-90-scenarios-openrouter",
+      "title": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios",
+      "url": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
+      "language": "en",
+      "excerpt": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios MIT, 34 stars, open-sourced today. SKILL.md format, 9 domain-specific skills covering 90 labeled scenarios: triage, document evidence, UI actions, tool routing, code review, and more. R",
+      "score": 0.5240902
+    },
+    {
+      "article_id": "blcaptain-meta-skill-agent-skill-creation-methodology",
+      "title": "BLCaptain Meta Skill：把你反复讲给 AI 的那套经验，封装成一次安装、永久复用的 Agent Skill",
+      "url": "/blog/blcaptain-meta-skill-agent-skill-creation-methodology/",
+      "language": "zh",
+      "excerpt": "BLCaptain Meta Skill：把你反复讲给 AI 的那套经验，封装成一次安装、永久复用的 Agent Skill 你有没有这种经历：每次打开新对话，都要重新把同一套 SOP、提示词、专家判断讲给 AI 听？BLCaptain Meta Skill 是一个开源方法论包，专门解决这个问题——帮你把重复工作流产品化为可安装、可验证、可迭代的 Agent Skill。它是 Codex 与 Claude Code 7 轮协同迭代的结果。 AgentSkill ClaudeCode Codex MetaSkill AI工具 工作流 开源 提示词工程 SO",
+      "score": 0.5123917
+    },
+    {
+      "article_id": "maintain-repo-wiki-llm-engineering-wiki-skill-repo-self-evolution",
+      "title": "maintain-repo-wiki：让 LLM Agent 把工程事实而非总结写进 Wiki",
+      "url": "/blog/maintain-repo-wiki-llm-engineering-wiki-skill-repo-self-evolution/",
+      "language": "zh",
+      "excerpt": "maintain-repo-wiki：让 LLM Agent 把工程事实而非总结写进 Wiki dingrancho-alt/maintain-repo-wiki，13 stars，Python，2026-07-07。面向单仓库/多仓库的生产级工程 Wiki Skill：不把代码「总结成一篇文档」，而是把接口契约、字段传播、业务流程、排障路径这类可验证工程事实组织成能持续更新、审计、检索的知识系统。三种知识库拓扑（Repo/System/Knowledge Repo）、九类页面、Audit→Confirm→Apply 受控写入流程、可选 Capabili",
+      "score": 0.50950277
+    },
+    {
+      "article_id": "strategy-gene-gep-experience-reuse-llm-agent-test-time-evolution",
+      "title": "Strategy Gene: AI Experience as Tradeable Assets — Only If Encoded Correctly (Paper Analysis + Engineering Guide)",
+      "url": "/blog/strategy-gene-gep-experience-reuse-llm-agent-test-time-evolution/",
+      "language": "en",
+      "excerpt": "Strategy Gene: AI Experience as Tradeable Assets — Only If Encoded Correctly (Paper Analysis + Engineering Guide) arXiv:2604.15097, Tsinghua + EvoMap. Core finding: experience representation is a first-order factor — documentation-oriented Skill (2500 tokens) hurts by -1.1pp, com",
+      "score": 0.5030893
+    },
+    {
+      "article_id": "google-skills-137-agent-skills-negative-routing-vs-anthropic",
+      "title": "拆 google/skills：137 个 Agent Skill 里，86% 是 Google Cloud，67% 写了「别用我」",
+      "url": "/blog/google-skills-137-agent-skills-negative-routing-vs-anthropic/",
+      "language": "zh",
+      "excerpt": "拆 google/skills：137 个 Agent Skill 里，86% 是 Google Cloud，67% 写了「别用我」 Google 官方 Agent Skills 仓库 19583 星，实测统计：137 个 SKILL.md 里 cloud 占 118 个，index.json 收录 132 个，其中 88 个（67%）在 description 里显式写了「Don't use for X，改用 Y」的负向路由，平均 description 长达 437 字符。这个数字本身就是一条工程结论——当 skill 数量过百，路由歧义才是主要失败",
+      "score": 0.49777174
+    },
+    {
+      "article_id": "agent-speaker-progress-report-155926",
+      "title": "Agent Speaker 进度汇报：用 Nostr 构建个体+AI 的自组织协作网络",
+      "url": "/blog/agent-speaker-progress-report-155926/",
+      "language": "zh",
+      "excerpt": "Agent Speaker 进度汇报：用 Nostr 构建个体+AI 的自组织协作网络 Agent Speaker + Relay：基于 Nostr 协议和 Mycelium，为每一个个体和 AI Agent 提供去中心化的发现、通信与协作能力。无平台垄断，自发自组织，跨越物理边界。Phase 1 已完成，Phase 2 进行中。 Agent Speaker Nostr Mycelium Aura AI 去中心化 AI协作 开源 Progress 我们在做什么 为什么是 Nostr？为什么不用微信群、Slack、Discord？ 两个核心组件 Agent",
+      "score": 0.4969186
+    },
+    {
+      "article_id": "reverse-skill-ai-agent-cybersecurity-penetration-skill-router",
+      "title": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents",
+      "url": "/blog/reverse-skill-ai-agent-cybersecurity-penetration-skill-router/",
+      "language": "en",
+      "excerpt": "reverse-skill: A Nervous System for Reverse Engineering and Penetration Testing Inside AI Agents zhaoxuya520's open-source AI agent cybersecurity skill router, 20.9k stars, MIT. Solves the core problem of agents not knowing which security tool to use — 41 routing rules auto-class",
+      "score": 0.49520296
+    },
+    {
+      "article_id": "easel-open-source-social-media-agent-workbench",
+      "title": "Easel: An Open-Source Social Media Agent Workbench, 112 Skills, Six-Platform Publishing",
+      "url": "/blog/easel-open-source-social-media-agent-workbench/",
+      "language": "en",
+      "excerpt": "Easel: An Open-Source Social Media Agent Workbench, 112 Skills, Six-Platform Publishing An open-source social-media creator Agent from Zhejiang University's REAL Lab and Peking University's OpenDCAI Lab: built on OpenClaw, 112 Skills across six layers (foundation/discover/plan/pr",
+      "score": 0.4944014
+    },
+    {
+      "article_id": "echo-slides-skill-extract-slides-from-video-claude-code-skill",
+      "title": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片",
+      "url": "/blog/echo-slides-skill-extract-slides-from-video-claude-code-skill/",
+      "language": "zh",
+      "excerpt": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片 xiangzhouEcho/Echo-Slides-Skill 开源 Claude Code Skill，npx skills add 一行装到全局，Claude Code/Codex/Cursor/OpenCode 通用，双签名去重（dHash+RGB网格），实测20分钟演讲39页零重复。 Claude Code skill video slides open source AI tools productivity agent 这个痛点存在了很久 核心洞察",
+      "score": 0.49312136
+    },
+    {
+      "article_id": "ian-xiaohei-illustrations-beginner-guide",
+      "title": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南",
+      "url": "/blog/ian-xiaohei-illustrations-beginner-guide/",
+      "language": "zh",
+      "excerpt": "不会画画也能给文章配图：ian-xiaohei-illustrations 小黑手绘配图 Skill 入门指南 ian-xiaohei-illustrations 是一个能装进 Codex / Claude Code 的 Agent Skill：把你的中文文章交给它，AI 自动生成 16:9 白底手绘配图，主角是一只叫「小黑」的黑色小怪物。一句话触发、最多 8 张、红橙蓝语义批注、8 种构图模式。本文从零基础角度讲清楚怎么装、怎么用，并重点讲它最有意思的扩展玩法——把「小黑」换成你自己的形象。 AgentSkill AI生图 内容创作 Codex Cla",
+      "score": 0.49265814
+    }
+  ]
+}

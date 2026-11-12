@@ -1,0 +1,25 @@
+(node:10723) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///private/tmp/grok-alt-suparagent/frontend/lib/api.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /private/tmp/grok-alt-suparagent/frontend/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ decision text says what happened and who decided (0.53675ms)
+✔ event labels fall back to the raw name (0.08625ms)
+✔ rule words (0.082208ms)
+✔ only a shell command with text can be always allowed (0.080459ms)
+✔ csv file names and issue labels (0.718916ms)
+✔ decision queries leave out what is not set (0.115417ms)
+✔ remember is sent only when asked for, and the answer names the rule (10.530209ms)
+✔ rules: list per folder, add, and delete with the conversation (0.366375ms)
+✔ a bad rule is an ApiError with the reason (0.268583ms)
+✔ decisions page and csv export use the filters (0.375541ms)
+✔ health scan asks for the window (0.139541ms)
+✔ an approval a saved rule answered says so (0.300333ms)
+✔ a person's answer has no resolver (0.042583ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 112.213959

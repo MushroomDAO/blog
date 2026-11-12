@@ -1,0 +1,84 @@
+{
+  "article_slug": "wevisone-vl-unified-vision",
+  "tool": "image_gen.imagegen",
+  "skill": "mycelium-mushroom-illustrations",
+  "output_count": 3,
+  "dimensions": "16:9",
+  "max_bytes_exclusive": 90000,
+  "original_policy": "Retain original image_gen output in cache; copy/compress only to final workspace paths.",
+  "images": [
+    {
+      "figure": 1,
+      "prompt": "Generate exactly ONE standalone 16:9 horizontal Chinese article BODY illustration, ideally 1536x864. Use case: illustration-story / editorial concept sketch, NOT a banner. PURE WHITE #FFFFFF background, sparse thin BLACK slightly irregular hand-drawn pen linework, restrained small orange/blue/red handwritten annotations. At least 40% empty white space with generous white margins; modest scene spread horizontally across the middle. Clear adult editorial sketch with deadpan absurdity. No paper texture, no background tint, no shadows, no decorative gradients, no commercial vector illustration, no PPT infographic, no formal flowchart, no UI, no cute children's art, no title or heading anywhere, especially not upper left.\nMandatory central actor: Xiao-M 小M, the NEW mushroom identity: flattened rounded RED cap with 3-5 WHITE round spots, thin uneven black contour; CREAM/off-white stem body; two small BLACK dot eyes, blank serious expression, thin stick arms and legs, no clothing. Never a solid black mushroom. Xiao-M must physically carry out the conceptual work. Red cap is a flat identity color; all other color tiny accents. Orange only for action or short direction arrows; blue for secondary notes; red for uncertainty/warnings. Use minimal readable handwritten Chinese, never paragraphs. Do not add any text beyond the explicitly listed labels. This is an independent finished image, not a collage, contact sheet, triptych, or set of panels.\nCore idea: WeVisOne-VL provides a UNIFIED TASK INTERFACE that can be asked for DIFFERENT outputs AS NEEDED; this DOES NOT mean every output is emitted simultaneously.\nScene: Xiao-M faces one small furry object on a bare observation stand, operating ONE strange handheld visual multi-tool. It has a single socket and a deliberately large ONE-AT-A-TIME selector. Xiao-M is fitting just the rectangular bounding-box attachment onto the tool to frame the object. Nearby on a small curved rack, the unused alternatives hang quietly as four compact visual attachments: a point-dot tip, a tiny text label tag, a solid silhouette mask stencil, and a delicate feathery transparent edge membrane. Thus all five task forms are present but ONLY the box is active. The unused attachments have no beams or output arrows; they remain obviously parked. Small orange hand/action stroke at the active socket. One little blue handwritten note next to the selector. A tiny red correction note below the tool explains the distinction.\nExact text only: \"按需\" (blue, at selector), \"非同时\" (red, near parked alternatives). Do not label all five attachments, their forms explain them. No sparkles, no simultaneous beams, no five-way output tree. Keep the thin fur sketch simple and the tool readable, not a complicated machine.",
+      "output": "src/assets/images/wevisone-vl-unified-vision-fig-01.png",
+      "status": "saved-and-verified",
+      "original_cache_path": "/Users/jason/.codex/generated_images/01a17848-cb51-75f0-9823-d1864b6ffbad/exec-f55c6db9-4ccf-4c86-aa13-3c1c1b9d8749.png",
+      "original_sha256": "9483238750d73c64cc8e6942991d4c32ebf769a26d65997fcfe4810011462016",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 83642,
+      "palette_colors": 128,
+      "sha256": "85f2da39a12ce71bf9f69f97844bded704c456da0280b9a551faea02ab393f90",
+      "visual_qa": "Visual inspection: new red/white/cream Xiao-M actively selects one box attachment; point/text/mask/feathery-edge attachments parked; 按需 and 非同时 readable; white background, ample whitespace."
+    },
+    {
+      "figure": 2,
+      "prompt": "Generate exactly ONE standalone 16:9 horizontal Chinese article BODY illustration, ideally 1536x864. Use case: illustration-story / editorial concept sketch, NOT a banner. PURE WHITE #FFFFFF background, sparse thin BLACK slightly irregular hand-drawn pen linework, restrained small orange/blue/red handwritten annotations. At least 40% empty white space with generous white margins; modest scene spread horizontally across the middle. Clear adult editorial sketch with deadpan absurdity. No paper texture, no background tint, no shadows, no decorative gradients, no commercial vector illustration, no PPT infographic, no formal flowchart, no UI, no cute children's art, no title or heading anywhere, especially not upper left.\nMandatory central actor: Xiao-M 小M, the NEW mushroom identity: flattened rounded RED cap with 3-5 WHITE round spots, thin uneven black contour; CREAM/off-white stem body; two small BLACK dot eyes, blank serious expression, thin stick arms and legs, no clothing. Never a solid black mushroom. Xiao-M must physically carry out the conceptual work. Red cap is a flat identity color; all other color tiny accents. Orange only for action or short direction arrows; blue for secondary notes; red for uncertainty/warnings. Use minimal readable handwritten Chinese, never paragraphs. Do not add any text beyond the explicitly listed labels. This is an independent finished image, not a collage, contact sheet, triptych, or set of panels.\nCore idea: First localize a furry object using a box, then a small mask/matting decoder handles the edge; a BINARY mask and GRADUAL ALPHA are different representations.\nOne continuous little workbench scene: a furry tuft or plush-like rabbit shape sits inside a lightly drawn bounding box, marked with a tiny orange first-step tick. Xiao-M leans INTO the action, one hand holding the loose bounding frame steady and the other hand carefully using a comically SMALL precise paintbrush on the furry object's edge. An orange short curved gesture links localization to that brush. The brush represents a compact decoder, not a gigantic generative painting engine. Beside the brushing hand lie two small sample scraps torn from the SAME fur shape: one is an absolutely solid black hard-edged silhouette on white, the other is a soft feathery edge transparency sample with sparse individual hairs and black-to-gray-to-white opacity at its fringe. Use a small blue bracket near these samples to differentiate them. No checkerboard background; page remains pure white. The only local tonal ramp allowed is the tiny alpha-edge demonstration itself, needed for scientific accuracy; no other gradients anywhere.\nExact handwritten labels only: \"先定位\" (orange near bounding box), \"轻解码\" (blue beside tiny paintbrush), \"二值\" (beneath solid sample), \"α\" (beneath feathered sample). Clearly hard 0/1 silhouette vs continuous transparency, not merely two identical outline drawings. Do not include numeric performance claims.",
+      "output": "src/assets/images/wevisone-vl-unified-vision-fig-02.png",
+      "status": "saved-and-verified",
+      "original_cache_path": "/Users/jason/.codex/generated_images/01a17848-cb51-75f0-9823-d1864b6ffbad/exec-578c575b-6713-4465-a441-84859705940c.png",
+      "original_sha256": "04a32e2516430bd0bac14cd248d2598271401653060cd16b17de41194618b005",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 70853,
+      "palette_colors": 128,
+      "sha256": "9e4829d726d32820fb29d500b86761d61a3a3cfae00ced4634b400f1e7c6199c",
+      "visual_qa": "Visual inspection: Xiao-M holds localization box and operates small brush; binary hard silhouette differs visibly from continuous alpha fringe; sparse readable labels; white background. Alpha sample alone uses local tonal ramp."
+    },
+    {
+      "figure": 3,
+      "prompt": "Generate exactly ONE standalone 16:9 horizontal Chinese article BODY illustration, ideally 1536x864. Use case: illustration-story / editorial concept sketch, NOT a banner. PURE WHITE #FFFFFF background, sparse thin BLACK slightly irregular hand-drawn pen linework, restrained small orange/blue/red handwritten annotations. At least 40% empty white space with generous white margins; modest scene spread horizontally across the middle. Clear adult editorial sketch with deadpan absurdity. No paper texture, no background tint, no shadows, no decorative gradients, no commercial vector illustration, no PPT infographic, no formal flowchart, no UI, no cute children's art, no title or heading anywhere, especially not upper left.\nMandatory central actor: Xiao-M 小M, the NEW mushroom identity: flattened rounded RED cap with 3-5 WHITE round spots, thin uneven black contour; CREAM/off-white stem body; two small BLACK dot eyes, blank serious expression, thin stick arms and legs, no clothing. Never a solid black mushroom. Xiao-M must physically carry out the conceptual work. Red cap is a flat identity color; all other color tiny accents. Orange only for action or short direction arrows; blue for secondary notes; red for uncertainty/warnings. Use minimal readable handwritten Chinese, never paragraphs. Do not add any text beyond the explicitly listed labels. This is an independent finished image, not a collage, contact sheet, triptych, or set of panels.\nCore idea: Audit a performance bill. The claimed 48ms and 6GB are UNVERIFIED, so keep them in a QUESTION area. Confirmed architecture and actual test evidence belong in the clear RECORD area. Do not claim any new benchmark numbers.\nScene: Xiao-M is a serious little auditor, bending over a short unruled receipt with a large hand-held magnifying glass. Its other hand actively places a paper slip onto an open slim notebook. At the left is a loose question-mark-shaped bent wire holding TWO small unverified sticky notes, reading \"48ms?\" and \"6GB?\" with tiny red question marks; these are physically parked away from the notebook. The center magnifying glass and Xiao-M are the main action. At the right, the open notebook contains just TWO clear simple hand sketches: a tiny architecture block-and-brush icon with a check, and an actual run-log slip icon with a check, each with one short blue label. The notebook is a record of evidence, NOT a spreadsheet, no table, no charts, no invented numeric results. One restrained orange sorting gesture goes from the magnifying glass toward the notebook; no arrow connects unverified notes into confirmed records.\nExact text only: \"48ms?\", \"6GB?\", \"?\" (over uncertain wire), \"结构\" and \"实测\" (two short notebook labels), \"记录\" (tiny blue note by notebook). The quoted performance numbers must remain ONLY in the red uncertain/question area, never in a verified/check area. Ample blank white space; no big ledger, no dense technical diagram.",
+      "output": "src/assets/images/wevisone-vl-unified-vision-fig-03.png",
+      "status": "saved-and-verified",
+      "original_cache_path": "/Users/jason/.codex/generated_images/01a17848-cb51-75f0-9823-d1864b6ffbad/exec-90f4a91f-a317-468d-9da8-497cdc8bdfef.png",
+      "original_sha256": "95b57cd95cbd1ac321ad2f65afbc72eba3575a8b477fa3a8df17b7751f3f8d29",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 69894,
+      "palette_colors": 128,
+      "sha256": "96bfcd5f80eaec434fb983981776bcca1fb875e5c7a682cd34bd0374b8a17f3b",
+      "visual_qa": "Visual inspection: Xiao-M audits receipt with magnifier and files evidence; 48ms? and 6GB? stay only in question area; separate clear architecture/test record icons, no numeric test claims, no table."
+    }
+  ],
+  "processing": {
+    "method": "Copy derivative only; white-pad full original to exact 16:9; Lanczos downsample to 1280x720; normalize near-white pixels (all RGB channels >=247) to pure white; nondithered indexed PNG palette optimization.",
+    "originals_retained": true,
+    "generation_calls": 3,
+    "article_or_banner_modified": false,
+    "git_publish": false,
+    "subagents": false
+  },
+  "rootVisualReview": {
+    "pass": true,
+    "figures": 3,
+    "notes": "Reviewed all final images; correct XiaoM IP, clear task selection and alpha distinction; performance notes explicitly questioned; actual tests refer to parser smoke only."
+  }
+}

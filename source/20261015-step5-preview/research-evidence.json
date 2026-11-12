@@ -1,0 +1,49 @@
+{
+  "asOf": "2026-10-15",
+  "normalizedURLs": [
+    "https://recipes.vllm.ai/stepfun-ai/Step-5-Preview",
+    "https://github.com/verl-project/verl/pull/8246"
+  ],
+  "originalURLCapture": "Both organization/provider roots fetched through Jina; full deep links reconstructed from adjacent broken lines and fetched successfully.",
+  "captureBackend": "agent-reach skill/command absent after local/tool discovery; user-permitted Jina Reader and direct official source/API cross-checks",
+  "dedup": "Exact source and entity search found only original bot KB material, no Blog/local M2/current draft match. Published-list unavailable48001; one unrelated Helix draft.",
+  "pins": {
+    "recipes": "2f6a61c1d2d7f25e4224d3e0b8dd5c1478e7b556",
+    "model": "364b3b03fed2477aa0953fe855a2c4c8c48ee3cc",
+    "verlPR": "136e22c7d02683d90c48a8ff76d1292de43ff394",
+    "docker": "sha256:8bc189bb3f57183bcaf4f01405b29d4d92d782a182b384aac79b4b2885fb1fda"
+  },
+  "model": "Official600B total/27Bactive; recipe604B counted tensors. Context1048576 combined input/output. Model custom StepFun Model License1.0, notframeworkApache.",
+  "serving": "Dedicated Step5 image; officialFP8 4B300/8H200, NVFP4 4B300 context320000. Loopback18000/step5 alias intentionally consistent. TP/TEP/DEP distinct layouts.",
+  "rl": {
+    "status": "open/draft/unmerged",
+    "dependencies": "Separately upstreamed customStep5 vLLM LoRA serving, sparse/indexer projections and hostbackup patches; serving tag alone does not establish RL dependency completeness.",
+    "scope": "FP8 checkpoint to textFSDP2 LoRA GRPO; adapter-only sync; R3 routing replay; no visualRL/fullparametertraining claim",
+    "reportedRun": "author16GB300194steps2resumptions, step0→190 AIMEmean8 .375→.658 under4096tokenbudget; finished fraction .40→.75. Conditional correct .94→.88 on different finished subsets, not directly comparable.",
+    "reportedTests": "131passed5skipped, testsnotincluded in PR, not independently rerun"
+  },
+  "ourVerification": "Source/API/17launchargs checked, shellsyntax only; no GPU container/model inference/training run.",
+  "savedFiles": [
+    "/Users/jason/.heinu1-bot/media/step5-preview-official-benchmarks-20261015.png",
+    "/Users/jason/.heinu1-bot/media/step5-preview-logo-20261015.png"
+  ],
+  "sourceImageDecision": "Official logo and benchmark chart downloaded; unsuitable cover because logo/mostly text, generated a hardware-themed cover instead.",
+  "banner": {
+    "origin": "localFLUX2Klein seed111",
+    "bytes": 93449,
+    "dimensions": "1200x630",
+    "sha256": "fa396f90efc7f5e3dfa47cadab3e761b02c0404c88fde7d2d76aceed72c20485",
+    "verified": "Machine checks provenance/framing/OCR/faces passed; root visually inspected unmarked heatsinks and blue fibers. Seed110 discarded due small equipment labels."
+  },
+  "bodyImages": {
+    "count": 3,
+    "bytes": [
+      50428,
+      46447,
+      42886
+    ],
+    "dimensions": "1280x720",
+    "pairedReferences": 6,
+    "manualInspection": "Weights vs activation and KVspace; correct18000/step5 mapping; equal4096tokenbudgets and draftstatus, schematic completion marks not measured counts."
+  }
+}

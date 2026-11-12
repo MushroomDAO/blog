@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "mr-boxington-rust-cargo-shared-cache",
+      "title": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存",
+      "url": "/blog/mr-boxington-rust-cargo-shared-cache/",
+      "language": "zh",
+      "excerpt": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存 mr boxington 的 mbx 为 Rust 项目复用 Cargo 编译产物，管理 target 目录并协调并行构建。本文核对安装与缓存原理，在 Mac 验证不同路径源码副本的命中、修改后的正确输出和清理预览，区分共享缓存、Cargo 新鲜度与私有增量状态，说明工作树、CI、磁盘预算及调试信息路径的使用边界。 Rust Cargo mr boxington 构建缓存 开发工具 mbx 怎样复用编译工作？ 共享缓存、增量状态与 target 是一回事吗？ 在 Mac 上怎样先试",
+      "score": 0.6200046
+    },
+    {
+      "article_id": "m1-max-64gb-local-ai-model-selection-memory-guide",
+      "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
+      "url": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/",
+      "language": "zh",
+      "excerpt": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度 持续更新：M1 Max 64GB MacBook 本地AI最佳组合方案。涵盖 Apple Intelligence 3B 复用、Qwen3-30B-A3B/27B/32B 全8bit部署、oMLX多模型调度、48GB可用内存边界测算与系统精简。 M1Max 本地模型 Qwen3 oMLX 内存管理 Apple Intelligence LLM 隐私AI 一、核心硬件与基础定位 二、Apple Intelligence 原生 3B 模型利用方案 三、Qwen3 三大主力模型差异",
+      "score": 0.568258
+    },
+    {
+      "article_id": "k2-horizon-mova-36b-a4b-mac-local-memory-guide",
+      "title": "K2 Horizon MoVA 36B-A4B: MBZUAI Puts Mixture-of-Experts Inside Attention Values. How Much Mac Memory Does It Need?",
+      "url": "/blog/k2-horizon-mova-36b-a4b-mac-local-memory-guide/",
+      "language": "en",
+      "excerpt": "K2 Horizon MoVA 36B-A4B: MBZUAI Puts Mixture-of-Experts Inside Attention Values. How Much Mac Memory Does It Need? K2-Horizon-MoVA-36B-A4B is an Apache-2.0, text-only MoE released in early September by MBZUAI's Institute of Foundation Models (IFM): 37.44B total parameters, ~4.66B",
+      "score": 0.56122476
+    },
+    {
+      "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+      "title": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行",
+      "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+      "language": "zh",
+      "excerpt": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行 OrcaRouter 发布的 Qwen3.8-27B 消融对齐（abliterated）MLX 量化版本，672 likes，trending。基于 Qwen3.8-27B —— 一个 64 层混合架构模型（48 层 Gated DeltaNet 线性注意力 + 每 4 层一个全注意力层），原生视觉语言塔，262K 上下文，MTP 头。提供 2/4/6/8-bit 四个精度（affine 量化，grou",
+      "score": 0.5610075
+    },
+    {
+      "article_id": "qwen38-27b-quasar-nvfp4-mac-mlx-install-guide",
+      "title": "Qwen3.8-27B QUASAR-NVFP4：最强 4-bit QAT 量化详解 + Mac M1 Max 64GB 完整安装指南",
+      "url": "/blog/qwen38-27b-quasar-nvfp4-mac-mlx-install-guide/",
+      "language": "zh",
+      "excerpt": "Qwen3.8-27B QUASAR-NVFP4：最强 4-bit QAT 量化详解 + Mac M1 Max 64GB 完整安装指南 社区发布 QUASAR-QAT/Qwen3.8-27B-QUASAR-NVFP4（19.7GB，全层 W4A4）——最小、质量最高的 NVFP4 版本。但 NVFP4 需要 NVIDIA Blackwell GPU，Mac 无法直接运行。本文给出 Mac M1 Max 64GB 的最佳替代方案：MLX 8bit（推荐）和 GGUF/Ollama 完整安装步骤。 Qwen3.8-27B QUASAR-QAT NVFP4 M",
+      "score": 0.55569917
+    },
+    {
+      "article_id": "antirez-ds4-deepseek-v4-flash-mac-metal-inference",
+      "title": "Token Freedom Accelerating: Redis Creator Runs DeepSeek V4 Flash Natively on Mac",
+      "url": "/blog/antirez-ds4-deepseek-v4-flash-mac-metal-inference/",
+      "language": "en",
+      "excerpt": "Token Freedom Accelerating: Redis Creator Runs DeepSeek V4 Flash Natively on Mac Redis creator antirez open-sources ds4 — a Mac-native Metal inference engine purpose-built for DeepSeek V4 Flash. 40,000 lines of C + 17 Metal shaders, 2-bit asymmetric quantization, disk-persistent ",
+      "score": 0.55318105
+    },
+    {
+      "article_id": "arle-local-llm-distillation-guide",
+      "title": "arle Practical Guide: Run Local LLMs on Any Laptop, Then Distill a 4B Model to Match a 35B",
+      "url": "/blog/arle-local-llm-distillation-guide/",
+      "language": "en",
+      "excerpt": "arle Practical Guide: Run Local LLMs on Any Laptop, Then Distill a 4B Model to Match a 35B arle is a pure-Rust local LLM runtime — one binary for OpenAI-compatible serving, local agents, and on-policy distillation training. A 35B MoE hits 85 tok/s on an M4 Pro MacBook. OPD distil",
+      "score": 0.5470232
+    },
+    {
+      "article_id": "ornith-1-coding-agent-model-mac-mini-local-inference",
+      "title": "Ornith-1.0: Self-Improving Coding Agent Model — 9B Beats 35B, 60 t/s on Mac mini",
+      "url": "/blog/ornith-1-coding-agent-model-mac-mini-local-inference/",
+      "language": "en",
+      "excerpt": "Ornith-1.0: Self-Improving Coding Agent Model — 9B Beats 35B, 60 t/s on Mac mini deepreinforce-ai open-sources Ornith-1.0: RL jointly optimizes scaffold and answer — the 9B outperforms Qwen3.5-35B on Terminal-Bench and NL2Repo; the 35B MoE surpasses Qwen3.5-397B. APEX-I-Compact M",
+      "score": 0.54524434
+    },
+    {
+      "article_id": "nex-n2-5-mini-agentic-moe-mac-local-memory-guide",
+      "title": "Nex-N2.5-mini: A 35B/~3B-Active Open Agentic Model — How Much Mac Memory Do You Need?",
+      "url": "/blog/nex-n2-5-mini-agentic-moe-mac-local-memory-guide/",
+      "language": "en",
+      "excerpt": "Nex-N2.5-mini: A 35B/~3B-Active Open Agentic Model — How Much Mac Memory Do You Need? Nex-N2.5-mini is Nex-AGI's Apache-2.0 agentic model released Sept 8: 35.1B-total MoE, ~2.95B active per token by our tensor count, built on Qwen3.5-35B-A3B-Base. We derive Mac memory tiers from ",
+      "score": 0.54241407
+    },
+    {
+      "article_id": "mcp-rag-server-local-rag-claude-code-blueprint",
+      "title": "mcp-rag-server: A Minimal MCP + Local RAG Blueprint for Claude Code",
+      "url": "/blog/mcp-rag-server-local-rag-claude-code-blueprint/",
+      "language": "en",
+      "excerpt": "mcp-rag-server: A Minimal MCP + Local RAG Blueprint for Claude Code MMC1410001/mcp-rag-server is a 0-star, MIT-licensed minimal MCP + RAG server: local all-MiniLM-L6-v2 embeddings, persistent ChromaDB, five MCP tools. We read all of the code and ran it on a Mac mini: 39/39 tests ",
+      "score": 0.54048735
+    }
+  ]
+}

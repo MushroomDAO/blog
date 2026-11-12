@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "agent-skills-open-standard-progressive-disclosure-anthropic",
+      "title": "Agent Skills 标准调研：今天写的好几个项目背后，都是同一份规范",
+      "url": "/blog/agent-skills-open-standard-progressive-disclosure-anthropic/",
+      "language": "zh",
+      "excerpt": "Agent Skills 标准调研：今天写的好几个项目背后，都是同一份规范 调研 Agent Skills 开放标准：一个 SKILL.md 文件（含 name/description 元数据+指令）加可选的脚本/参考文档/模板，就是一个可移植、可跨产品复用的技能包。核心机制是三阶段渐进式披露——发现阶段只加载名字和描述、激活阶段任务匹配才读全文、执行阶段才按需跑脚本或加载引用文件，让 Agent 能同时挂载大量技能而不撑爆上下文。由 Anthropic 原创发布为开放标准，本文同一批写的 Hermes Agent、Nerve、Humanizer 都兼容",
+      "score": 0.58158994
+    },
+    {
+      "article_id": "openmaple-local-managed-agent-platform-guide",
+      "title": "本地就能跑的 Agent 平台：OpenMaple 自托管 managed-agent 控制面入门",
+      "url": "/blog/openmaple-local-managed-agent-platform-guide/",
+      "language": "zh",
+      "excerpt": "本地就能跑的 Agent 平台：OpenMaple 自托管 managed-agent 控制面入门 OpenMaple（Apache-2.0 开源）是一个能在本地一键跑起来的 managed-agent 控制面：它把内部 Agent 平台常见的能力拆成一套资源模型——Agent、Environment、Session、Vault、Runtime Pool、Sandbox Pool、Event Log，外加 SDK / CLI / REST API。一条 setup-local-docker.sh 起 Web(8080)、API(27951)、MySQL、",
+      "score": 0.5789024
+    },
+    {
+      "article_id": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+      "title": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工",
+      "url": "/blog/munder-difflin-multi-agent-harness-claude-codex-local-first/",
+      "language": "zh",
+      "excerpt": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工 Munder Difflin（MIT，3888 stars，Electron+React+TypeScript）是一个本地多 Agent Harness 桌面应用，把 Claude Code、OpenAI Codex、xAI Grok、Kimi Code、Qwen、GitHub Copilot CLI 等 12 种 CLI 包成真实 PTY 进程，用像素风 The Office 场景可视化——每个 Agent ",
+      "score": 0.5650264
+    },
+    {
+      "article_id": "onecli-ai-agent-credential-gateway-secret-vault-rust",
+      "title": "OneCLI：让 AI Agent 永远看不到真实密钥的开源凭证网关",
+      "url": "/blog/onecli-ai-agent-credential-gateway-secret-vault-rust/",
+      "language": "zh",
+      "excerpt": "OneCLI：让 AI Agent 永远看不到真实密钥的开源凭证网关 onecli/onecli，2746 stars，Apache-2.0，Rust + TypeScript。在 agent 和 API 之间插一个 MITM 网关，agent 只持有占位符，网关透明注入真实凭证。HN 两次上榜，NanoClaw 和 Bitwarden 均已集成。一行命令本地跑起来。 AI安全 AI Agent 开源 Rust 密钥管理 安全工具 网关 MCP 一、问题：每个 agent 都拿着真实密钥 二、解法：不交给 agent，替它注入 三、架构：Rust 网关 ",
+      "score": 0.55397916
+    },
+    {
+      "article_id": "vitalik-paranoid-ai-zkapi-tor",
+      "title": "Vitalik 的 AI 偏执模式：zkAPI、Tor 与本地改写的隐私边界",
+      "url": "/blog/vitalik-paranoid-ai-zkapi-tor/",
+      "language": "zh",
+      "excerpt": "Vitalik 的 AI 偏执模式：zkAPI、Tor 与本地改写的隐私边界 追溯 Vitalik 的 AI 偏执模式原帖和 zkAPI 开发分支，拆解零知识支付、Tor 对话隔离、随机掩护流量、本地提示词改写与 Agent 沙箱。本文以固定源码审查和本地回归为依据，说明模型仍能看到什么、主动时序攻击为何难防，以及部署清单与生产证明密钥缺失时如何避免把实验误当成可直接使用的匿名产品。 Vitalik Buterin zkAPI Tor AI隐私 本地LLM Vitalik 到底开源了什么？ 为什么只开 Tor 或只用零知识支付还不够？ “每段对话一条 T",
+      "score": 0.5506354
+    },
+    {
+      "article_id": "open-connector-saas-auth-gateway-ai-agents",
+      "title": "OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth",
+      "url": "/blog/open-connector-saas-auth-gateway-ai-agents/",
+      "language": "zh",
+      "excerpt": "OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth oomol-lab 开源了 OpenConnector，一个 AI Agent 专用的认证网关，Composio 的开源替代。接 1000+ SaaS 提供者、10000+ 预制 Action，凭据永远留在网关边界内，Agent 只能拿到执行结果。支持 SDK/CLI/MCP/HTTP 多接入方式，可部署到 Docker、Cloudflare Workers 或 Fly.io。 AI Agent OAuth SaaS集成 MCP Cloudflare 开源工具",
+      "score": 0.5471682
+    },
+    {
+      "article_id": "proma-local-first-ai-desktop-agent-workspace",
+      "title": "Proma：把 Chat、Agent、Skills、MCP 和微信桥接做进一个本地优先桌面应用",
+      "url": "/blog/proma-local-first-ai-desktop-agent-workspace/",
+      "language": "zh",
+      "excerpt": "Proma：把 Chat、Agent、Skills、MCP 和微信桥接做进一个本地优先桌面应用 ErlichLiu 开源的 Proma 是一个本地优先 AI 桌面工作台：Claude Agent SDK + Pi Agent SDK 双运行时，每个工作区独立配置 Skills 和 MCP，飞书/微信/钉钉桥接让手机触发本机 Agent，AGPL-3.0 开源，1615 Stars。 本地AI 桌面应用 Agent工作台 Claude SDK MCP Skills 微信桥接 开源 Electron Pi Agent 一句话定位 两套 Agent 运行时，按",
+      "score": 0.54713297
+    },
+    {
+      "article_id": "anthropic-launch-your-agent-managed-agents-skill-teardown",
+      "title": "Anthropic 官方 launch-your-agent 拆解：不是模板也不是 CLI，是一个带你把 Agent 部署到 Claude Managed Agents 的 Claude Code Skill",
+      "url": "/blog/anthropic-launch-your-agent-managed-agents-skill-teardown/",
+      "language": "zh",
+      "excerpt": "Anthropic 官方 launch-your-agent 拆解：不是模板也不是 CLI，是一个带你把 Agent 部署到 Claude Managed Agents 的 Claude Code Skill anthropics/launch-your-agent（1,007 星、Apache-2.0、2026-06-16 创建）只有 2 个 Claude Code Skill 和一堆参考文档，没有可运行的示例代码：它靠访谈生成配置，再用 curl 在你自己的账号里创建 Agent、环境、会话和定时部署。我们通读全部指令与说明文件并在 Mac 上验证了",
+      "score": 0.5468977
+    },
+    {
+      "article_id": "neo-chat-local-first-encrypted-sync-mcp-rag-workspace",
+      "title": "Neo Chat：本地优先的 AI 聊天工作台，把「加密跨设备同步」这个硬骨头啃下来了",
+      "url": "/blog/neo-chat-local-first-encrypted-sync-mcp-rag-workspace/",
+      "language": "zh",
+      "excerpt": "Neo Chat：本地优先的 AI 聊天工作台，把「加密跨设备同步」这个硬骨头啃下来了 调研开源项目 Neo Chat：Next.js 16 + React 19 构建的本地优先 AI 聊天工作台，聊天记录/技能/插件配置/记忆/搜索索引/文件默认全部留在浏览器本地，服务端只做受控代理。v2.4.0 新增可选端到端加密的个人保险库，通过 WebDAV 或 S3/MinIO 做跨设备同步，恢复密钥、凭据、本地基线、搜索缓存、向量都不会进远程对象或 ZIP。同时支持多模型供应商、远程 MCP 服务器发现安装、本地 stdio 桥接、参数化 Skill、混合词",
+      "score": 0.5466527
+    },
+    {
+      "article_id": "osaurus-native-macos-ai-harness-swift-cryptographic-identity",
+      "title": "Osaurus：在你的 Mac 上拥有 AI——密码学身份、沙盒 VM、隐私过滤，纯 Swift 原生",
+      "url": "/blog/osaurus-native-macos-ai-harness-swift-cryptographic-identity/",
+      "language": "zh",
+      "excerpt": "Osaurus：在你的 Mac 上拥有 AI——密码学身份、沙盒 VM、隐私过滤，纯 Swift 原生 osaurus-ai/osaurus，7295 stars，MIT，纯 Swift 打造的 macOS 原生 AI 哈尼斯。secp256k1 密码学身份、Alpine Linux 沙盒 VM、三层记忆、发送云端前 PII 隐私过滤、Agent 间 E2E 加密通道。模型可换，哈尼斯是复利资产。 AI Agent 开源 macOS Swift 本地优先 隐私 密码学 MCP 一、核心命题 二、架构：六层哈尼斯 三、密码学身份：每个参与者都是密码学原语 ",
+      "score": 0.546495
+    }
+  ]
+}

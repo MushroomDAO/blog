@@ -1,0 +1,28 @@
+❌ Failed to get access token: Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeac2e2-17942598-0bd77083"}
+⚠️  公众号账本没查成（Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeac2e2-17942598-0bd77083"}）
+   本次结果不完整，别当成完整查重。
+账本：blog 951 篇 + 公众号草稿箱 0 条 + 本地发布记录 933 条 + MemPalace 3767 抽屉
+
+── 查：https://github.com/wquguru/shisei
+   ❌ [BLOG  ] Shisei开源姿势图库：给AI绘图一张参考，比反复描述动作更直接
+      一手源相同: wquguru/shisei
+   ❌ [知识库] --- name: Shisei AI pose reference library description: Offi
+      一手源相同: wquguru/shisei
+
+── 查：Shisei
+   ❌ [BLOG  ] Shisei开源姿势图库：给AI绘图一张参考，比反复描述动作更直接
+      正文出现实体名「shisei」
+   ❌ [知识库] # Shisei开源AI绘图姿势图库  **Summary**: Shisei提供多机位人体姿势参考，当前288条记录中
+      正文出现实体名「shisei」
+   ❌ [知识库] --- name: Shisei AI pose reference library description: Offi
+      正文出现实体名「shisei」
+   ❌ [知识库] 89/944；默认分享卡构建主动中断，--link-images --no-og预览构建退出0；本地四语言首页、姿势页、
+      正文出现实体名「shisei」
+   ❌ [知识库] shisei 姿勢|Shisei|2026-11-04:L1-L12|→drawer_blog_general_1886
+      正文出现实体名「shisei」
+   ❌ [知识库] # 。  **Summary**: 。   项目名：wquguru/shisei **Type**: text **Wo
+      正文出现实体名「shisei」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":"Token error: {\"errcode\":40164,\"errmsg\":\"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeac2e2-17942598-0bd77083\"}"}
+```

@@ -1,0 +1,14 @@
+{
+  "title": "Phonon本地语音：先看许可，再看7ms",
+  "author": "Mycelium",
+  "digest": "31M英文可按Apache许可使用，40M版本受非商用限制；本机已完成禁网合成验证。",
+  "mediaId": "prCUE631thH1cmNLi42prDAAiGUrwV9XLqebpJI66jbvfyZ5NLNTg94XLttBcXyU",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/gradium-ai/xn-ptts",
+    "huggingface.co/gradium/phonon-31m-en",
+    "huggingface.co/gradium/phonon-40m-multilingual",
+    "huggingface.co/datasets/gradium"
+  ],
+  "publishedAt": "2026-10-24T13:20:16.653Z"
+}

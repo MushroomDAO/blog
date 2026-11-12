@@ -1,0 +1,59 @@
+{
+  "sourceRevision": "d4840723dac3234e901aed94192b43f98b4c40eb",
+  "caseCount": 112,
+  "uniqueIDs": 112,
+  "subjects": 61,
+  "signCounts": {
+    "正例": 70,
+    "混合": 15,
+    "反例": 27
+  },
+  "checks": [
+    "112 unique case IDs and source/limitation fields present",
+    {
+      "cliArgs": [
+        "--tag",
+        "治理",
+        "--sign",
+        "反例",
+        "--limit",
+        "3"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "cliArgs": [
+        "--id",
+        "E001"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "cliArgs": [
+        "--limit",
+        "0"
+      ],
+      "expectedExit": 2,
+      "actualExit": 2
+    },
+    {
+      "cliArgs": [
+        "--id",
+        "NO-SUCH-CASE"
+      ],
+      "expectedExit": 2,
+      "actualExit": 2
+    },
+    "Official schema-3 example renders with fiction label and print CSS",
+    "Synthetic title HTML escaped",
+    "Synthetic javascript source URL rejected",
+    "Unknown renderer schema rejected"
+  ],
+  "checkGroups": 9,
+  "modelCalled": false,
+  "browserRenderingTested": false,
+  "consultingQualityTested": false,
+  "outputSha256": "3a10dc86f9cb9bb1c2367e1d60d915bab965e58c0ece68e7912831169613e0ff"
+}

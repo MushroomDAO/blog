@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-31T17:00:21.195Z",
+  "drafts": [
+    {
+      "slug": "halcyon-without-language-pretraining",
+      "mediaId": "prCUE631thH1cmNLi42prB9u_NEqFhN5ZvWuIkEi1shP6U2xY8HauBfB6awvK9vu",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "99f881bf2e17d5e56563bb01a6dc58b41c349c7ce41f37e7fef46d25150728e4",
+      "remoteTextHash": "99f881bf2e17d5e56563bb01a6dc58b41c349c7ce41f37e7fef46d25150728e4",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/halcyon-without-language-pretraining/",
+      "localContentHash": "c80867306847b01c43ca53267a8f8dd4c4724e4f5e63b983692497052d7e061b",
+      "remoteContentHash": "b53d114a3877508f8ff1056941cf469466174c0811b42918c0d05e3a13484690"
+    }
+  ]
+}

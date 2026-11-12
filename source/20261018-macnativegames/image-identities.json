@@ -1,0 +1,42 @@
+[
+  {
+    "file": "src/assets/images/macnativegames-totk-native-mac-banner.jpg",
+    "bytes": 90821,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "sha256": "5065d1ed48ad2c607610f4061fc2d96c9957119970af86b59ca48ac9bec4ddc7",
+    "rootVisualReview": "pass; matching concept, readable labels, no benchmark claims"
+  },
+  {
+    "file": "src/assets/images/macnativegames-totk-native-mac-fig-01.png",
+    "bytes": 69815,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "sha256": "d22cd9f5f30f3fb1e9de1cab6342f6c05ae188f195f00f4fd0e7e3d7eb7bd617",
+    "rootVisualReview": "pass; matching concept, readable labels, no benchmark claims"
+  },
+  {
+    "file": "src/assets/images/macnativegames-totk-native-mac-fig-02.png",
+    "bytes": 65989,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "sha256": "6f9570581794c8f0fa73d1700815c8a362845d58cf2cfc6c327b05d6a59d5c13",
+    "rootVisualReview": "pass; matching concept, readable labels, no benchmark claims"
+  },
+  {
+    "file": "src/assets/images/macnativegames-totk-native-mac-fig-03.png",
+    "bytes": 64996,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "sha256": "a39c151bb7c774498c55f500ee1decb9327def8b04500230e4ed2309b114e1a6",
+    "rootVisualReview": "pass; matching concept, readable labels, no benchmark claims"
+  }
+]

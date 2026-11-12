@@ -1,0 +1,19 @@
+{
+  "job": "676b2b45-71fd-4e24-80c0-1c103e618b15",
+  "previous": {
+    "status": "failed",
+    "error": "缺少可核验的三件套发布结果",
+    "attempts": 3
+  },
+  "changedRows": 1,
+  "statusAfter": "complete",
+  "backupCreated": true,
+  "backupFile": "/Users/jason/.heinu1-bot/backups/sessions-before-maintenance-reconcile-20261023T005207Z.db",
+  "verifiedHomepageHTTP": 200,
+  "newArticleCreated": false,
+  "newDraftCreated": false,
+  "jobStatusCountsAfter": {
+    "complete": 74,
+    "running": 1
+  }
+}

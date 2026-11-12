@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-24T12:52:11.718948+00:00",
+  "articles": [
+    {
+      "slug": "appflowy-self-host-services",
+      "url": "https://blog.mushroom.cv/blog/appflowy-self-host-services/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/appflowy-self-host-services-banner.CZKtrTcn_ZOmEPw.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/appflowy-self-host-services-fig-01.DNG_x6gI_1UXean.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/appflowy-self-host-services-fig-02.qurKTvbC_1rGuJl.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/appflowy-self-host-services-fig-03.DWUmrjZh_Z15j4fi.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/appflowy-self-host-services-banner.CZKtrTcn.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 1,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/appflowy-self-host-services/",
+    "/blog/ming-3-tts-small-model-evaluation/",
+    "/blog/underdog-bark-3-local-asr/",
+    "/blog/nvidia-openshell-agent-runtime/",
+    "/blog/flint-local-coding-rec-engine/",
+    "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+    "/blog/laya-aayushch-local-first-ai-notification-command-center/",
+    "/blog/cortex-hub-self-hosted-mcp-agent-memory-code-intelligence-conductor/"
+  ]
+}

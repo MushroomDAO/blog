@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "block": 1,
+      "syntax": "pass",
+      "executed": false
+    },
+    {
+      "block": 2,
+      "syntax": "pass",
+      "executed": false
+    },
+    {
+      "block": 3,
+      "syntax": "pass",
+      "executed": false
+    },
+    {
+      "block": 4,
+      "syntax": "pass",
+      "executed": false
+    },
+    {
+      "block": 5,
+      "syntax": "pass",
+      "executed": false
+    },
+    {
+      "block": 8,
+      "syntax": "pass",
+      "executed": false
+    },
+    {
+      "block": 9,
+      "syntax": "pass",
+      "executed": false
+    },
+    {
+      "block": 10,
+      "syntax": "pass",
+      "executed": false
+    },
+    {
+      "block": 11,
+      "syntax": "pass",
+      "executed": false
+    },
+    {
+      "block": 12,
+      "syntax": "pass",
+      "executed": false
+    }
+  ],
+  "scope": "Python syntax only. No import execution, model calls, sandbox workloads, or uptime test."
+}

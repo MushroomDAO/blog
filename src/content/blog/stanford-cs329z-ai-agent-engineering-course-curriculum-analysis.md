@@ -4,7 +4,7 @@ titleEn: "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum
 description: "斯坦福 2026 年秋季新增 CS329Z《AI Agent 工程》课程，由 Diyi Yang、Michael Ryan 和 John Yang 主讲。本文完整拆解 11 周 22 讲的课程结构、必读论文清单和两份作业，分析它对 Agent 工程师的实用价值。"
 descriptionEn: "Stanford added CS329Z 'Engineering AI Agents' to its Fall 2026 curriculum, taught by Diyi Yang, Michael Ryan, and John Yang. This article breaks down all 11 weeks and 22 lectures, required reading list, and two assignments — and what the curriculum tells us about the state of AI agent engineering as a discipline."
 pubDate: 2026-09-06
-updatedDate: 2026-09-06
+updatedDate: 2026-10-23
 category: Research
 tags: ["AI", "Agent", "斯坦福", "课程", "RAG", "评测", "DSPy", "MCP", "教育", "工程"]
 heroImage: "../../assets/images/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis-banner.jpg"
@@ -229,6 +229,8 @@ MCP（Model Context Protocol）出现在第 4 讲的必读清单里。这个协�
 
 主讲教师：Diyi Yang（Stanford NLP）、Michael Ryan、John Yang（SWE-agent 团队成员之一）
 
+相关延伸：课程里的 Agent 记忆与系统设计，可以结合本站的 [Google Harness²：让 Agent 改进自己的工作方法](/blog/harness2-recursive-agent-improvement/) 和 [LayerFS：Agent 分支文件系统与持久性边界](/blog/layerfs-v1-recursive-agent-filesystem/) 一起看。
+
 <!--EN-->
 
 When AI agents move from a research topic to an engineering discipline, one signal stands out: universities start teaching it.
@@ -398,3 +400,5 @@ Evaluation is often underestimated in AI engineering. CS329Z allocating a full w
 Course website: [cs329z.stanford.edu](https://cs329z.stanford.edu/)
 
 Instructors: Diyi Yang (Stanford NLP), Michael Ryan, John Yang (SWE-agent team)
+
+Related reading: For the course’s treatment of agent memory and system design, see our [Google Harness² analysis](/blog/harness2-recursive-agent-improvement/) and [LayerFS review of agent filesystem persistence](/blog/layerfs-v1-recursive-agent-filesystem/).

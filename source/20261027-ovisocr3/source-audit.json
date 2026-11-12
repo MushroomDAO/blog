@@ -1,0 +1,54 @@
+{
+  "modelRevision": "4833d5d2afa6e769ee933f024504d67ace80a24c",
+  "spaceRevision": "72851f1a4d49e480527a2dc05c920356c9e3d581",
+  "retrieval": "agent-reach skill public-native route; CLI unavailable, no doctor run; full HF raw model/Space README plus Space app/inference read successfully",
+  "sources": [
+    "https://huggingface.co/ATH-MaaS/OvisOCR3",
+    "https://huggingface.co/spaces/ATH-MaaS/OvisOCR3",
+    "https://arxiv.org/abs/2610.33066"
+  ],
+  "dedup": "Exact source/entity raw KB only; no local article, M2 receipt or remote draft; published API48001 unavailable.",
+  "criticalDistinctions": [
+    "JSON template is not formal JSON Schema or constrained decoding",
+    "Two-stage crosspage, recursive adjacent-pair reconstruction",
+    "Demo example Stage1 can be cached, Stage2 live",
+    "Official self-reported scores, not best every column",
+    "Public demo upload is not local/private processing",
+    "GitHub project README covers Ovis2.5; OCR3 prompt/scripts live on HF"
+  ],
+  "savedFiles": [
+    "/Users/jason/.heinu1-bot/media/ovisocr3-crosspage_recursive.png",
+    "/Users/jason/.heinu1-bot/media/ovisocr3-ovisocr3_performance_overview.png"
+  ],
+  "onlinePrepublishSearch": "Live /api/mcp search_posts OvisOCR3 returned an empty result before deploy; response saved.",
+  "archiveWhitespaceNormalization": {
+    "description": "Only Git-flagged source archive files normalized for line endings, trailing whitespace and redundant EOF blank lines; source content retained. Original bytes preserved in private job verification, original upstream sources remain at pinned URLs. Article and image assets unchanged.",
+    "files": [
+      {
+        "file": "source/20261027-ovisocr3/fig-01-prompt.txt",
+        "originalSha256": "0c95326520f7acca1a99ea0c1a1624c1a678de731224e094b6df9c47c50cae56",
+        "normalizedSha256": "b9a1cb9bf5bbf02593768fac74ef5097cc248f887d6c5eab615645896227f0ad"
+      },
+      {
+        "file": "source/20261027-ovisocr3/fig-02-prompt.txt",
+        "originalSha256": "bcdf0a6b5681b9cc2a25f302b474a6de294d6eedc1d0a42d3f88f98aad22c655",
+        "normalizedSha256": "4f4aefa29ccbecbbe00bb165fd47703e30eab97b5cf4935b5ad9fb9379564e3a"
+      },
+      {
+        "file": "source/20261027-ovisocr3/fig-03-prompt.txt",
+        "originalSha256": "88f69778a6ee93e7282cab46ffb005fae614771727d6340667145ee5848ebd00",
+        "normalizedSha256": "9a733e708c66fafc6d2a52c9935bf508e434e58e739f88e160d5ac077a6029cf"
+      },
+      {
+        "file": "source/20261027-ovisocr3/upstream-github-readme.md",
+        "originalSha256": "4d54a4eb1cf4d55e572587340b831a76e8cf4b7b7ecc6cb47bb2f23f099fe31d",
+        "normalizedSha256": "d6b086729a2d6be2b73ca4b42deeb39a45e3f872a373127bec9184d75079bafc"
+      },
+      {
+        "file": "source/20261027-ovisocr3/upstream-license.txt",
+        "originalSha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+        "normalizedSha256": "689f0c220c9b4e857f35ca7d0dca51397e5a545dc4ad3987438c023e24ff0ab6"
+      }
+    ]
+  }
+}

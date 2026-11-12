@@ -1,0 +1,24 @@
+{
+  "runtime": "ptts0.4.1 official macOS arm64 binary",
+  "hostChip": "Apple M4",
+  "hostMemoryBytes": 17179869184,
+  "model": "gradium/phonon-31m-en",
+  "revision": "92741c5b07d085ff840e26fea8ce43110b87852f",
+  "device": "cpu",
+  "threads": 1,
+  "weightFormat": "q8",
+  "seed": 123,
+  "referenceText": "The meeting starts at nine. Please send the report tomorrow.",
+  "network": "macOS sandbox-exec deny network* during synthesis process; local model and voice paths",
+  "exitCode": 0,
+  "wav": {
+    "sampleRate": 24000,
+    "channels": 1,
+    "frames": 96000,
+    "sampleWidthBytes": 2,
+    "audioDurationSeconds": 4.0,
+    "rmsPcm16": 2300.1215680779787,
+    "sha256": "366dffa13f88bba1f094b764fcc829bba82d19ff72572f4b98d2a7a5ccb6e5fa"
+  },
+  "scope": "one short functional WAV validation; no human listening study, benchmark WER, speed or peak-RAM conclusion; CLI timing/RSS logged but not treated as benchmark"
+}

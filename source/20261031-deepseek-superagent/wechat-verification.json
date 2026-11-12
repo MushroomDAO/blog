@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-31T16:31:37.859Z",
+  "drafts": [
+    {
+      "slug": "deepseek-superagent-engineering-guide",
+      "mediaId": "prCUE631thH1cmNLi42prCgLqDyCs16oqWTnam7f9vKnQYNQxddNcRAwV4uunl8F",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "5f611fbd6977b4037f06a694c40e64158718fca37ec837c63a1647f16499afca",
+      "remoteTextHash": "5f611fbd6977b4037f06a694c40e64158718fca37ec837c63a1647f16499afca",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/deepseek-superagent-engineering-guide/",
+      "localContentHash": "873fc222458396a5cfacffa0a0bf9d042f7e4998d1b2a4db4fe9f033d33c1755",
+      "remoteContentHash": "2dc6850dfc2b06659d89c84c610775fbade42960fdeb0f9b99e156b8f806785a"
+    }
+  ]
+}

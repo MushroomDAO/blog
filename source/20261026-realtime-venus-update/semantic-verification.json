@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-26T01:17:40.343520+00:00",
+  "query": "Realtime-Venus full-duplex asynchronous delegation Mac CUDA checkpoint hardware audit",
+  "matched": [
+    {
+      "article_id": "realtime-venus-fulldup-interactive-dual-loop-local-deploy",
+      "title": "Realtime-Venus: Full-Duplex Models and Async Agents",
+      "url": "/blog/realtime-venus-fulldup-interactive-dual-loop-local-deploy/",
+      "language": "en",
+      "excerpt": "Realtime-Venus: Full-Duplex Models and Async Agents A source audit of Realtime-Venus: two 9B full-duplex models, asynchronous agents, reported benchmarks, CUDA deployment, and practical limits for Mac users. Realtime-Venus full-duplex voice-ai agent CUDA open-source What does the",
+      "score": 0.7069386
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "realtime-venus-fulldup-interactive-dual-loop-local-deploy",
+        "title": "Realtime-Venus: Full-Duplex Models and Async Agents",
+        "url": "/blog/realtime-venus-fulldup-interactive-dual-loop-local-deploy/",
+        "language": "en",
+        "excerpt": "Realtime-Venus: Full-Duplex Models and Async Agents A source audit of Realtime-Venus: two 9B full-duplex models, asynchronous agents, reported benchmarks, CUDA deployment, and practical limits for Mac users. Realtime-Venus full-duplex voice-ai agent CUDA open-source What does the",
+        "score": 0.7069386
+      },
+      {
+        "article_id": "sensenova-vision-unified-cv-hardware-guide",
+        "title": "SenseNova-Vision: Unified Multimodal CV Model — Hardware Guide for Every Use Case",
+        "url": "/blog/sensenova-vision-unified-cv-hardware-guide/",
+        "language": "en",
+        "excerpt": "SenseNova-Vision: Unified Multimodal CV Model — Hardware Guide for Every Use Case SenseNova-Vision-7B-MoT unifies all CV tasks — detection, depth estimation, segmentation, 3D reconstruction — into a single generative model. The web demo needs one 80 GB GPU; full benchmarks need e",
+        "score": 0.53065497
+      },
+      {
+        "article_id": "deepseek-v41-flash-1017-uncensored-fp8-teardown",
+        "title": "DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛",
+        "url": "/blog/deepseek-v41-flash-1017-uncensored-fp8-teardown/",
+        "language": "zh",
+        "excerpt": "DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛 dealignai 发布的 DeepSeek-V4.1-Flash-1017 去审查 FP8 版（MIT，3808 下载、265 likes，2026-10-18 创建）自报 HarmBench-320 全部顺从、MMLU 抽样 87.63% 降到 83.77%。但模型卡不披露消融方法，基线来自另一套服务栈，磁盘 510GB、仅在 4×H200 上验证，Mac 跑不了这个版本。 DeepSeek 消融",
+        "score": 0.52948284
+      },
+      {
+        "article_id": "ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda",
+        "title": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA",
+        "url": "/blog/ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda/",
+        "language": "en",
+        "excerpt": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA sizzlecar/ferrum-infer-rs is a pure-Rust local inference engine: one binary, no Python runtime, with Apple Silicon Metal and NVIDIA CUDA served by the same runtime behind OpenAI-compatible ",
+        "score": 0.5149958
+      },
+      {
+        "article_id": "maka-agent-runtime-host-event-log-desktop-tui-eval",
+        "title": "Maka: Making the Event Log the One Source of Truth for an Agent Runtime",
+        "url": "/blog/maka-agent-runtime-host-event-log-desktop-tui-eval/",
+        "language": "en",
+        "excerpt": "Maka: Making the Event Log the One Source of Truth for an Agent Runtime A deep dive into Maka, a local-first agent workspace whose core design is 'Log is the Runtime' — model messages, tool calls, tool results, and termination facts all enter a Runtime Event Log, and sessions, UI",
+        "score": 0.51311034
+      },
+      {
+        "article_id": "cua-computer-use-2-0-desktop-agent-benchmark-trajectory-cua-s1",
+        "title": "Cua：Computer-Use 2.0 开源基础设施，桌面操控降格为工具调用",
+        "url": "/blog/cua-computer-use-2-0-desktop-agent-benchmark-trajectory-cua-s1/",
+        "language": "zh",
+        "excerpt": "Cua：Computer-Use 2.0 开源基础设施，桌面操控降格为工具调用 MIT，24.7K stars，YC W25。五件套：跨平台桌面驱动、云桌面集群、本地 VM、确定性评测框架、CUA-S1 小模型。核心主张是把 GUI 操作降格为 Agent 的一个工具调用——不是独占前台的循环。CUA-S1-Forms 70 万参数 2.8MB，真实表单 100% 准确率。 computer-use desktop-agent benchmark trajectory local-ai open-source Computer-Use 2.0 是什么 五",
+        "score": 0.50627965
+      },
+      {
+        "article_id": "dsh-qa-cross-platform-test-browser-computer-ios-android",
+        "title": "dsh-qa Full Suite Open Source: Browser, macOS Desktop, iOS, Android — Four Drivers for Real Cross-Platform AI QA",
+        "url": "/blog/dsh-qa-cross-platform-test-browser-computer-ios-android/",
+        "language": "en",
+        "excerpt": "dsh-qa Full Suite Open Source: Browser, macOS Desktop, iOS, Android — Four Drivers for Real Cross-Platform AI QA ZSeven-W's DSH cross-platform testing plugin suite is now complete: dsh-qa (orchestrator) + dsh-browser + dsh-computer + dsh-ios (300 stars) + dsh-android (158 stars).",
+        "score": 0.5055985
+      },
+      {
+        "article_id": "wwdc26-mlx-local-agentic-ai-mac-engineering-guide",
+        "title": "WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建",
+        "url": "/blog/wwdc26-mlx-local-agentic-ai-mac-engineering-guide/",
+        "language": "zh",
+        "excerpt": "WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建 Apple MLX 团队在 WWDC26 Session 232 中讲透了在 Mac 本地运行 AI Agent 的完整技术栈：MLX → MLX-LM → MLX-LM Server → Agent 框架，三步起服务，六个开源框架横向对比，支持多 Mac 分布式推理。本文对原始 session 做深度解析，附完整工程落地代码。 MLX Apple Silicon Agent Loop WWDC26 本地推理 开源 AI Engineering 工程实践 一、苹果官方",
+        "score": 0.50173277
+      },
+      {
+        "article_id": "minicpmo-booking-desk-realtime-voice-appointment-agent",
+        "title": "MiniCPM-o Booking Desk：全双工语音预约台，状态机控 DB 写入，Judge LLM 防幻觉确认",
+        "url": "/blog/minicpmo-booking-desk-realtime-voice-appointment-agent/",
+        "language": "zh",
+        "excerpt": "MiniCPM-o Booking Desk：全双工语音预约台，状态机控 DB 写入，Judge LLM 防幻觉确认 AlessandroBonomo28/Minicpm-o-booking-desk，Python，MiniCPM-o 4.5 驱动的实时语音预约台 Demo。三通道架构：音频（VAD+Whisper）+ 视觉（每秒刷新的操作员屏幕帧）+ 控制 token（force_speak/force_listen）。状态机全权控制 DB 写入，模型输出不直接碰数据库；Judge LLM 核查模型口播内容防幻觉确认。实测 4 分 13 秒，2 次预约",
+        "score": 0.5016273
+      },
+      {
+        "article_id": "deepseek-mac-studio-dwarfstar-ds4-local-inference-guide",
+        "title": "DwarfStar (ds4): Run DeepSeek V4 Flash/PRO Locally on Mac Studio — Install, SSD Streaming, Distributed Inference",
+        "url": "/blog/deepseek-mac-studio-dwarfstar-ds4-local-inference-guide/",
+        "language": "en",
+        "excerpt": "DwarfStar (ds4): Run DeepSeek V4 Flash/PRO Locally on Mac Studio — Install, SSD Streaming, Distributed Inference antirez built DwarfStar (ds4), a pure-C local inference engine for DeepSeek V4 Flash/PRO, optimized for Apple Silicon Metal, CUDA, and ROCm. This guide covers hardware",
+        "score": 0.50159925
+      }
+    ]
+  }
+}

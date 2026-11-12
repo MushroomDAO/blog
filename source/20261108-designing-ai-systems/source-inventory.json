@@ -1,0 +1,29 @@
+{
+  "repository": "https://github.com/designing-ai-systems/designing_ai_systems_repo",
+  "commit": "94dd7ecdd02de7c1289bb81765deeaaa23dffcee",
+  "licenseFiles": [],
+  "bookFiles": [],
+  "selectedSourceHashes": {
+    "README.md": "06a16036d3ab7041ab8f383ef2e5fd171782605dd195d0a11f79cd5a322ac359",
+    "pyproject.toml": "85359bf7e65435d7520a33eb92725a120d83af82b4c9bac6d3b98a05d13bd270",
+    "services/data/service.py": "667aaf862578fac2a96225f2e335b8e0ebb0bf4c4865b3283127a6249fc8916a",
+    "services/data/main.py": "c4e24ec2ac8d20ea1b84343a6614314e18283637185bd0cb817c3d87a91b2696",
+    "services/tools/service.py": "ea526f3c77ac324a84b272976f6c411c51723f93a6373b9f1babc53a72f46548",
+    "docker-compose.yml": "d46a0634cceadecf8f123f28ce11a0515b67233ffe17bdfec5be95d8820cabe9",
+    "claw/README.md": "48b493707152f2813d30e36ae9630d8326fa9c81175af333385135fc91c4e2fc",
+    "claw/claw.py": "19423bd38d6c1edf67ff6f72b9b7b7db4bb1c3381b8d9891156158b799ca4e6c",
+    "tests/test_claw.py": "a0054be5daf64722d3e332b518bf3c8df4ca688be88a9190775f1419026da509"
+  },
+  "fullSourceRepublished": false,
+  "trackedMarkdownFiles": [
+    "README.md",
+    "claw/README.md",
+    "claw/knowledge_base/company-handbook.md",
+    "claw/knowledge_base/engineering-runbook.md",
+    "services/gateway/README.md",
+    "services/models/ARCHITECTURE.md",
+    "services/models/README.md",
+    "services/sessions/README.md",
+    "services/shared/README.md"
+  ]
+}

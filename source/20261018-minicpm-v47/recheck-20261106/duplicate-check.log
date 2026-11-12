@@ -1,0 +1,51 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6aedad4f-5c3d81f2-30f1f2fd）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 965 篇 + 公众号草稿箱 14 条 + 本地发布记录 948 条 + MemPalace 3910 抽屉
+
+── 查：https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B
+   ❌ [BLOG  ] MiniCPM-V 4.7：35B-A3B视觉模型与端侧部署解析
+      一手源相同: openbmb/minicpm-v-4.7-35b-a3b
+   ❌ [发过 2026-10-18] MiniCPM-V 4.7：35B视觉模型上端侧
+      一手源相同: openbmb/minicpm-v-4.7-35b-a3b
+   ❌ [知识库] s. No historic top3proof; don'tdenypossibleearlierrank orcla
+      一手源相同: openbmb/minicpm-v-4.7-35b-a3b
+   ⚠️  [知识库] # MiniCPM-V 4.7 35B-A3B 登上 Huggi  **Summary**: MiniCPM-V 4.7
+      标题相似度 43%
+
+── 查：MiniCPM-V 4.7
+   ❌ [BLOG  ] MiniCPM-V 4.7：35B-A3B视觉模型与端侧部署解析
+      正文出现实体名「minicpm-v」
+   ❌ [发过 2026-10-18] MiniCPM-V 4.7：35B视觉模型上端侧
+      正文出现实体名「minicpm-v」
+   ❌ [知识库] # MiniCPM-V4.7视觉能力与端侧部署  **Summary**: MiniCPM-V4.7 35B-A3B支持
+      正文出现实体名「minicpm-v」
+   ❌ [知识库] --- name: MiniCPM-V4.7 MoE vision and edge deployment descri
+      正文出现实体名「minicpm-v」
+   ❌ [知识库] s. No historic top3proof; don'tdenypossibleearlierrank orcla
+      正文出现实体名「minicpm-v」
+   ❌ [知识库] ty/fullweights/modelruntime/phone/benchmark/energyorquantacc
+      正文出现实体名「minicpm-v」
+   ❌ [知识库] blog/general/project_minicpm-v47-moe-vision-deploymen|Blog|2
+      正文出现实体名「minicpm-v」
+   ❌ [知识库] ped-decision-model-jev-compatible-games-demo.md) — October18
+      正文出现实体名「minicpm-v」
+   ❌ [知识库] blog/general/project_minicpm-v47-moe-vision-deploymen|Blog|2
+      正文出现实体名「minicpm-v」
+   ❌ [知识库] # MiniCPM-V 4.7 正式发布并开源 🎉  **Summary**: MiniCPM-V 4.7 正式发布并
+      正文出现实体名「minicpm-v」
+   ❌ [知识库] t(Qwen3.8ScreenSpot93.31). 16xnotuniversalnegligibleloss;nom
+      正文出现实体名「minicpm-v」
+   ❌ [知识库] # MiniCPM-V 4.7 35B-A3B 登上 Huggi  **Summary**: MiniCPM-V 4.7
+      正文出现实体名「minicpm-v」
+   ❌ [知识库] # MiniCPM-V4.7视觉能力与端侧部署  **Summary**: MiniCPM-V4.7 35B-A3B支持
+      正文出现实体名「minicpm-v」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

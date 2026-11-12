@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-10-31T05:39:47.463463+00:00",
+  "query": "花叔 鸟类贴纸 11064 质量标记 鸣迹 PolyForm Shield 许可与数据",
+  "matched": true,
+  "hits": [
+    {
+      "article_id": "huashu-bird-sticker-guide",
+      "title": "花叔鸟类贴纸库：11064张图片怎么用，许可有哪些限制？",
+      "url": "/blog/huashu-bird-sticker-guide/",
+      "language": "zh",
+      "excerpt": "花叔鸟类贴纸库：11064张图片怎么用，许可有哪些限制？ 花叔的鸟类贴纸库将11064张白边图片与物种名称、分类、形态和来源数据关联，适合设计、教学与资料整理。本文核查记录与文件路径、作者质量标记和多语言覆盖，介绍轻量下载、筛选与维护方法，并区分贴纸的PolyForm Shield、整理数据的MIT及第三方条款，说明竞品限制、参考照片与野外识别的实际边界。 Birds AI Illustration Open Data Design Assets Licensing 它交付的是图片，还是物种数据库？ “43种语言”是否意味着每只鸟都有43个名字？ 好看的",
+      "score": 0.71777683
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "huashu-bird-sticker-guide",
+        "title": "花叔鸟类贴纸库：11064张图片怎么用，许可有哪些限制？",
+        "url": "/blog/huashu-bird-sticker-guide/",
+        "language": "zh",
+        "excerpt": "花叔鸟类贴纸库：11064张图片怎么用，许可有哪些限制？ 花叔的鸟类贴纸库将11064张白边图片与物种名称、分类、形态和来源数据关联，适合设计、教学与资料整理。本文核查记录与文件路径、作者质量标记和多语言覆盖，介绍轻量下载、筛选与维护方法，并区分贴纸的PolyForm Shield、整理数据的MIT及第三方条款，说明竞品限制、参考照片与野外识别的实际边界。 Birds AI Illustration Open Data Design Assets Licensing 它交付的是图片，还是物种数据库？ “43种语言”是否意味着每只鸟都有43个名字？ 好看的",
+        "score": 0.71777683
+      },
+      {
+        "article_id": "awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt",
+        "title": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引",
+        "url": "/blog/awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt/",
+        "language": "zh",
+        "excerpt": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引 Agents 222 个、Instructions 193 个、Skills 416 个、Plugins 100 个——这套分类本身比清单更值得看：agent 是接 MCP 的专门角色，instruction 是按文件模式自动生效的编码规范，skill 是自包含带资源的文件夹，plugin 是打包好的组合。另一个值得抄的做法是 llms.txt：一份 941 行、308KB 的机器可读索引，专门给 AI agent 读，让它自己找该用哪个资源。",
+        "score": 0.47348237
+      },
+      {
+        "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+        "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+        "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+        "language": "zh",
+        "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+        "score": 0.4726191
+      },
+      {
+        "article_id": "pentest-harness-deepseek-harness-rebrand-authorization-teardown",
+        "title": "Pentest Harness, Taken Apart: A DeepSeek Harness Reskin That Deletes the Authorization Guardrails",
+        "url": "/blog/pentest-harness-deepseek-harness-rebrand-authorization-teardown/",
+        "language": "en",
+        "excerpt": "Pentest Harness, Taken Apart: A DeepSeek Harness Reskin That Deletes the Authorization Guardrails S1N6H/pentest-harness (356 stars, MIT) bills itself as a self-hosted AI agent harness for authorized pentests. A diff-level check shows it is a reskin of deepseek-ai/deepseek-harness",
+        "score": 0.47139454
+      },
+      {
+        "article_id": "echo-slides-skill-extract-slides-from-video-claude-code-skill",
+        "title": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片",
+        "url": "/blog/echo-slides-skill-extract-slides-from-video-claude-code-skill/",
+        "language": "zh",
+        "excerpt": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片 xiangzhouEcho/Echo-Slides-Skill 开源 Claude Code Skill，npx skills add 一行装到全局，Claude Code/Codex/Cursor/OpenCode 通用，双签名去重（dHash+RGB网格），实测20分钟演讲39页零重复。 Claude Code skill video slides open source AI tools productivity agent 这个痛点存在了很久 核心洞察",
+        "score": 0.46859476
+      },
+      {
+        "article_id": "nature-skills-yuan1z0825-academic-paper-skill-collection",
+        "title": "nature-skills：学术论文全流程 18 个 AI Skill，两个月 3.4 万星",
+        "url": "/blog/nature-skills-yuan1z0825-academic-paper-skill-collection/",
+        "language": "zh",
+        "excerpt": "nature-skills：学术论文全流程 18 个 AI Skill，两个月 3.4 万星 袁一哲（Yuan1z0825）发起、开源社区共同维护的 Nature 级学术论文 AI Skill 合集，18 个技能覆盖图表、润色、写作、投稿、审稿回复、引用核验、数据管理、PPT、专利转化、文献检索全链路，Apache 2.0，发布两个月 GitHub 3.4 万星。npx skills add Yuan1z0825/nature-skills 一键安装，支持 Claude Code / Codex / OpenClaw / OpenCode / Herme",
+        "score": 0.4616401
+      },
+      {
+        "article_id": "code-review-graph-tirth8205-blast-radius-token-reduction",
+        "title": "code-review-graph: A Local Code Graph for AI Assistants That Cuts Token Use 65x at the Median",
+        "url": "/blog/code-review-graph-tirth8205-blast-radius-token-reduction/",
+        "language": "en",
+        "excerpt": "code-review-graph: A Local Code Graph for AI Assistants That Cuts Token Use 65x at the Median tirth8205's local code intelligence graph, 29.5k stars, Python, MIT License. Tree-sitter parses your codebase into a function/class/call/test graph stored in SQLite. At review time, only",
+        "score": 0.45995167
+      },
+      {
+        "article_id": "pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring",
+        "title": "Pulse：一排光环贴着屏幕边缘，告诉你 Claude Code 还剩多少",
+        "url": "/blog/pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring/",
+        "language": "zh",
+        "excerpt": "Pulse：一排光环贴着屏幕边缘，告诉你 Claude Code 还剩多少 qunqin24/Pulse 开源，macOS 浮动监控工具，三个彩环实时显示 Claude Code / Codex / Antigravity 用量，贴边停靠收缩为6pt细条，从提供商账户直读真实限额，自适应刷新，无后台零上传，Apache 2.0。 macOS Claude Code Codex AI tools open source Swift usage monitor productivity menu bar 那个永恒的问题 一排光环，贴着屏幕边缘 真实的限额，不",
+        "score": 0.45633027
+      },
+      {
+        "article_id": "lieflat-charts-agent-skill-data-visualization",
+        "title": "Lieflat Charts 实测：一套遵循 Agent Skills 格式的数据可视化 skill，但\"开源\"这个词用错了",
+        "url": "/blog/lieflat-charts-agent-skill-data-visualization/",
+        "language": "zh",
+        "excerpt": "Lieflat Charts 实测：一套遵循 Agent Skills 格式的数据可视化 skill，但\"开源\"这个词用错了 实测 Agent Skills 生态里的数据可视化 skill Lieflat Charts（moxt.ai 出品，兼容 Claude Code/Codex）：装上后用本站今天的真实采集数据（forage 雷达）跑出一张 Tick Rows 图，记录选型过程和产出。GitHub 4633 star，但作者在 X 上说\"我开源的\"其实不准确——License 是 PolyForm Noncommercial 1.0.0，只允许学习、",
+        "score": 0.45531797
+      },
+      {
+        "article_id": "juju-content-illustrations-skill-ai-visual-content-guide",
+        "title": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画",
+        "url": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
+        "language": "zh",
+        "excerpt": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画 卷卷整理研究所 × 内容插画 Skill。一句话触发，AI 自动把文章、教程、方法论转成白底轻线稿的手绘卡片——主角是白色比熊卷卷，最多生成 10 张，支持 6 种比例，颜色有语义，场景有隐喻。60 stars，MIT 开源，可装进 Claude Code 或 Codex 直接用。 AgentSkill AI生图 内容创作 ClaudeCode 插画 手绘风格 创作者工具 开源 Skill 卷卷是谁 它能做什么 支持的 6 种比例 视觉语",
+        "score": 0.4533267
+      }
+    ]
+  }
+}

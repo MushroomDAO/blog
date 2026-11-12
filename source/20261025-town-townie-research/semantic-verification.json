@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-25T05:10:16.485348+00:00",
+  "query": "Town Townie 企业团队助手 共享连接 离职流程 价格",
+  "matched": [
+    {
+      "article_id": "town-townie-research",
+      "title": "Town 与 Townie 调研：企业 AI 助手怎样跨团队协作？",
+      "url": "/blog/town-townie-research/",
+      "language": "zh",
+      "excerpt": "Town 与 Townie 调研：企业 AI 助手怎样跨团队协作？ 基于Town官网、产品文档、融资公告、投资人文章与新闻，梳理Townie的核心价值、工作流程、用户场景、定价、共享权限、数据处理和员工离职风险，提供企业试点验收方案。 Town Townie 企业AI 多智能体 产品调研 工作流 一、先认清公司：从税务自动化到工作助手 二、核心价值：个人上下文如何变成团队协作？ 三、产品地图：它已经不只是邮箱机器人 四、一次跨部门销售任务，可能怎样完成？ 五、团队共享有三种形式，不能混为一谈 六、谁会先感受到价值？ 七、连接器、MCP 与浏览器操作的边界",
+      "score": 0.7556885
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "town-townie-research",
+        "title": "Town 与 Townie 调研：企业 AI 助手怎样跨团队协作？",
+        "url": "/blog/town-townie-research/",
+        "language": "zh",
+        "excerpt": "Town 与 Townie 调研：企业 AI 助手怎样跨团队协作？ 基于Town官网、产品文档、融资公告、投资人文章与新闻，梳理Townie的核心价值、工作流程、用户场景、定价、共享权限、数据处理和员工离职风险，提供企业试点验收方案。 Town Townie 企业AI 多智能体 产品调研 工作流 一、先认清公司：从税务自动化到工作助手 二、核心价值：个人上下文如何变成团队协作？ 三、产品地图：它已经不只是邮箱机器人 四、一次跨部门销售任务，可能怎样完成？ 五、团队共享有三种形式，不能混为一谈 六、谁会先感受到价值？ 七、连接器、MCP 与浏览器操作的边界",
+        "score": 0.7556885
+      },
+      {
+        "article_id": "ai-native-company-200-dollar-logistics-local-privacy-qwen3-analysis",
+        "title": "读「$200/月 AI 干掉后勤部」：模式可行，但有三个洞他没填",
+        "url": "/blog/ai-native-company-200-dollar-logistics-local-privacy-qwen3-analysis/",
+        "language": "zh",
+        "excerpt": "读「$200/月 AI 干掉后勤部」：模式可行，但有三个洞他没填 读后感：小红书博主健康长寿的DanDanDan转述 CodeWall 创始人的 AI 原生公司实践——$200/月订阅替代 CRM、数据室、会议工具和 EA 人力。核心流程拆解后，我们补充了三个原文未涉及的方向：隐私分层架构（公有云 API 换本地 Qwen3-8B）、本地部署真实成本（已有 M 系 Mac 的情况下接近零）、「公司大脑」通用产品化路径（Docker 一键启动 + 开源核心 + 托管云版）。 AI原生 一人公司 本地AI 隐私 Qwen3 公司大脑 读后感 原文核心：一个 ",
+        "score": 0.57994306
+      },
+      {
+        "article_id": "toonflow-short-drama-workflow",
+        "title": "Toonflow：两小时130元短剧案例背后",
+        "url": "/blog/toonflow-short-drama-workflow/",
+        "language": "zh",
+        "excerpt": "Toonflow：两小时130元短剧案例背后 Toonflow将剧本、分镜、角色资产与图片视频生成整合到无限画布。本文核对官方两小时、约130元制作两分钟短片的案例条件，拆解模型费用、镜头返工、部署与备份路径，以及Agent和MCP的边界，区分当前MIT主线与旧版许可，并说明为何本地部署不等于免费模型推理，也不代表任意小说能够无人值守生成可交付作品。 Toonflow AI短剧 视频生成 开源工具 工作流 两小时、130元，到底买到了什么？ 一站式，指的是怎样的工作流？ 免费开源，为什么还要花模型费？ 怎样部署，先验证什么？ Agent、MCP与插件能替",
+        "score": 0.56131345
+      },
+      {
+        "article_id": "staffdeck-openbmb-enterprise-digital-employee-platform",
+        "title": "StaffDeck：面壁智能 + 清华 THUNLP 开源的企业数字员工平台，状态机 SOP + 多层级知识检索",
+        "url": "/blog/staffdeck-openbmb-enterprise-digital-employee-platform/",
+        "language": "zh",
+        "excerpt": "StaffDeck：面壁智能 + 清华 THUNLP 开源的企业数字员工平台，状态机 SOP + 多层级知识检索 面壁智能联合清华THUNLP、OpenBMB 开源 StaffDeck，把员工经验和业务流程沉淀成可运行的数字员工：状态机驱动的 SOP、文档结构感知的知识检索、完整 Trace 闭环改进，桌面安装包 + 源码双通道，633 Stars，开源 6 天。 企业Agent 数字员工 状态机 SOP RAG 面壁智能 清华THUNLP OpenBMB 开源 AgentOS 问题定义：AI 工具 vs 组织资产 四个核心能力 1. 数字员工生命周期管",
+        "score": 0.56004614
+      },
+      {
+        "article_id": "cloudflare-workers-ai-glm-kimi-deepseek-minimax",
+        "title": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token",
+        "url": "/blog/cloudflare-workers-ai-glm-kimi-deepseek-minimax/",
+        "language": "zh",
+        "excerpt": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token Cloudflare Workers AI 已上线 GLM-5.2、Kimi K2.7 Code、1M 上下文的 Kimi K3、DeepSeek V4 Pro、MiniMax M3，同一个 token、同一行代码即可调用，还理清了自托管与第三方托管的价格和数据边界。 Cloudflare Workers AI GLM-5.2 Kimi K3 DeepSeek V4 MiniMax 边缘推理 起因 结论：你想要的基本都有 但有一条分界",
+        "score": 0.554377
+      },
+      {
+        "article_id": "anthropic-agent-workshop-engineering-guide",
+        "title": "Anthropic 官方 Agent 工作坊：从免费教材到业务流程落地",
+        "url": "/blog/anthropic-agent-workshop-engineering-guide/",
+        "language": "zh",
+        "excerpt": "Anthropic 官方 Agent 工作坊：从免费教材到业务流程落地 Anthropic 的官方 Agent 工作坊提供工具、子代理协作、记忆与业务案例。本文给出公告、活动和源码入口，区分免费教材与付费模型调用，核对模拟数据和样例维护状态，并以客服流程说明环境准备、角色拆分、真实系统接入、权限审批、幂等执行、预算和评测的方法，帮助把教学练习转化为可检查的业务试点，而非承诺免费无人公司。 Anthropic Claude Agent SDK 多智能体 业务自动化 工程实践 官方出处在哪里？ 教材里的“协作”是怎么发生的？ 第一步：先跑固定版本的业务练习 ",
+        "score": 0.549553
+      },
+      {
+        "article_id": "hermes-local-rig-accounting-real-cost-per-token",
+        "title": "本地跑大模型真的更便宜吗？这个插件把每 100 万 token 的成本算到了 0.62 美元",
+        "url": "/blog/hermes-local-rig-accounting-real-cost-per-token/",
+        "language": "zh",
+        "excerpt": "本地跑大模型真的更便宜吗？这个插件把每 100 万 token 的成本算到了 0.62 美元 本地推理不是免费的——电费、硬件折旧、机会成本都是真金白银。hermes-local-rig-accounting 是一个 Hermes Agent 插件，用一套可审计的公式把这些隐性成本折算成「每百万 token 多少钱」，并直接和云 API 报价放在一起对比。示例配置下算出 0.62 美元/M tokens，全部数据留在本地，无遥测。 本地推理 成本核算 local-first 开源 Hermes Agent LLM 电费 硬件折旧 一句话结论 为什么这件事",
+        "score": 0.5482125
+      },
+      {
+        "article_id": "community-ai-empowered-organization",
+        "title": "社区：AI赋能的新型组织形式",
+        "url": "/blog/community-ai-empowered-organization/",
+        "language": "zh",
+        "excerpt": "社区：AI赋能的新型组织形式 当AI系统性地替代传统雇佣劳动，松散社区与极致个体将取代公司成为未来最重要的组织形态 community ai organization dao meaning-economy 全景逻辑图 摘要 一、公司的危机：资本驱动组织的结构性危机 二、人类不会消失：三种涌现身份 三、社区：意义经济的天然栖居地 3.1 为什么是社区而非公司 3.2 松散社区的生物学隐喻：菌丝网络 四、去中心化治理：DAO的启示与局限 五、平台合作主义：从剥削到共建的替代路径 六、AI赋能：社区的基础设施革命 6.1 解放个体的创造性时间 6.2 降低社",
+        "score": 0.5439349
+      },
+      {
+        "article_id": "newsletter-subscription-system-listmonk-flyio-ses",
+        "title": "Two Days, One Person: Self-Hosting an Email Newsletter — Under $2/Month, No Platform Tax, Your Readers Stay Yours",
+        "url": "/blog/newsletter-subscription-system-listmonk-flyio-ses/",
+        "language": "en",
+        "excerpt": "Two Days, One Person: Self-Hosting an Email Newsletter — Under $2/Month, No Platform Tax, Your Readers Stay Yours Self-hosted a full, open-source email newsletter for this blog (blog.mushroom.cv itself runs on it) with listmonk + Fly.io + AWS SES + GitHub Actions — real monthly b",
+        "score": 0.54282445
+      },
+      {
+        "article_id": "tokentracker-local-first-token-cost-accounting-dedup",
+        "title": "TokenTracker：省 token 之前，先确认你手上的数字没多算 1.6 到 3.7 倍",
+        "url": "/blog/tokentracker-local-first-token-cost-accounting-dedup/",
+        "language": "zh",
+        "excerpt": "TokenTracker：省 token 之前，先确认你手上的数字没多算 1.6 到 3.7 倍 本地优先的 AI 编程工具 token 与成本统计，覆盖 36 个工具，1522 stars，MIT。真正的技术点在去重：基于 reqId 的去重（ccusage 那一类）对不返回 request ID 的 provider —— DeepSeek、Kimi、MiniMax、Claude 子 agent —— 会超算 1.6 到 3.7 倍；TokenTracker 改用复合键，总数能和各家账单对上。36 个集成里绝大多数是 passive reader，只",
+        "score": 0.54115635
+      }
+    ]
+  }
+}

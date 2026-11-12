@@ -1,0 +1,123 @@
+ok   engine 24.0.7 >= 24
+ok   engine 24 >= 24.0.0
+ok   engine 23.0.6 < 24
+ok   engine 29.8.0 >= 24
+ok   compose 2.24.3 < 2.24.4
+ok   compose 2.24.4 >= 2.24.4
+ok   compose v2.29.1 >= 2.24.4
+ok   compose 5.1.4 >= 2.24.4
+ok   compose v5.5.1 >= 2.24.4
+ok   compose 2.3.10 < 2.24.4 (numeric, not lexical)
+ok   colima 0.10.3 >= 0.9.0 (numeric, not lexical)
+ok   colima 0.8.4 < 0.9.0
+ok   tag v0.2.0 >= v0.1.1
+ok   tag v0.1.0 < v0.1.1 (downgrade)
+ok   prerelease suffix ignored
+ok   version_norm strips v and suffix
+ok   linux: VM default route
+ok   linux: TUN default routes skipped
+ok   linux: no src, device address
+ok   linux: lowest metric
+ok   linux: nothing usable
+ok   macos: utun default falls back to hardware ports
+ok   macos: a hardware default goes first, once
+ok   excluded: TUN 198.18.0.1
+ok   excluded: 198.19.255.1
+ok   excluded: loopback
+ok   excluded: link-local
+ok   kept: 198.20.0.1
+ok   kept: 192.168.31.111
+ok   ipv4 ok
+ok   ipv4 octet > 255
+ok   ipv4 hostname
+ok   secret is 32 characters
+ok   secret charset is [A-Za-z0-9]
+ok   two secrets differ
+ok   value_ok plain key
+ok   value_ok space
+ok   value_ok dollar
+ok   value_ok quote
+ok   value_ok hash
+ok   value_ok empty
+ok   colima.yaml forwarder ssh (quoted, commented)
+ok   colima.yaml cpu
+ok   colima.yaml nested key is not top level
+ok   colima.yaml forwarder grpc
+ok   colima.yaml missing file
+ok   colima status cpu
+ok   colima status memory
+ok   colima status no address
+ok   colima status address
+ok   ports in use
+ok   ports free
+ok   fresh .env mode 0600
+ok   fresh .env has COMPOSE_FILE once
+ok   fresh .env has FS_EXTERNAL_IP once
+ok   fresh .env has FS_LOCAL_IP once
+ok   fresh .env has POSTGRES_PASSWORD once
+ok   fresh .env has ESL_PASSWORD once
+ok   fresh .env has LUA_PASSWORD once
+ok   fresh .env has AICC_SEED_PASSWORD once
+ok   fresh .env has AICC_SEED once
+ok   fresh .env has RTP_START once
+ok   fresh .env has RTP_END once
+ok   fresh .env has PG_HOST_PORT once
+ok   fresh .env has AICC_PROVIDER once
+ok   fresh .env has ALIYUN_API_KEY once
+ok   fresh .env seed password is 32 characters
+ok   fresh .env never ClueCon
+ok   fresh .env no transcription line
+ok   fresh .env no bot switch for a provider
+ok   rerun leaves .env byte-identical
+ok   plain rerun keeps the address
+ok   existing secret kept
+ok   operator line kept
+ok   operator comment kept
+ok   missing secret added
+ok   empty provider key filled
+ok   empty AICC_SEED (no demo) kept
+ok   explicit address rewrites FS_EXTERNAL_IP
+ok   explicit address rewrites FS_LOCAL_IP
+ok   explicit address: only the address lines changed
+ok   explicit address keeps the secret
+ok   .env stays 0600 after a rewrite
+ok   none: bot disabled
+ok   none: no AICC_PROVIDER line
+ok   macos: no FS_LOCAL_IP
+ok   macos: no PG_HOST_PORT
+ok   gateway: endpoint
+ok   gateway: key
+ok   env_set keeps the value verbatim
+ok   parse_args: --provider=
+ok   parse_args: --provider doubao
+ok   parse_args: --provider grok
+ok   provider_key_var: grok
+ok   provider_key_var: doubao
+ok   parse_args: the removed provider is not a choice
+ok   provider_key_var: the removed provider has none
+ok   kept .env naming the removed provider: the rerun stops
+ok   kept .env naming the removed provider: names the accepted values
+ok   parse_args: bad provider
+ok   parse_args: bad address
+ok   parse_args: --purge alone
+ok   final_output: no demo names the first-admin command
+ok   final_output: no demo prints no seeded password
+ok   final_output: no demo drops the demo dial line
+ok   final_output: no demo rerun keeps the hint
+ok   final_output: macOS first-admin command has no sudo
+ok   final_output: demo prints the admin password
+ok   final_output: demo keeps the dial line
+ok   final_output: linux demo first-install=1 prints the read command
+ok   final_output: linux demo first-install=1 runs no command without sudo
+ok   final_output: linux demo first-install=0 prints the read command
+ok   final_output: linux demo first-install=0 runs no command without sudo
+ok   final_output: linux no-demo first-install=1 runs no command without sudo
+ok   final_output: linux no-demo first-install=0 runs no command without sudo
+ok   final_output: macos demo first-install=1 prints the read command
+ok   final_output: macos demo first-install=1 prints no sudo
+ok   final_output: macos demo first-install=0 prints the read command
+ok   final_output: macos demo first-install=0 prints no sudo
+ok   final_output: macos no-demo first-install=1 prints no sudo
+ok   final_output: macos no-demo first-install=0 prints no sudo
+
+121 tests, 0 failed

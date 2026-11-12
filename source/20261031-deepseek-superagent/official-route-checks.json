@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/news/super-agent/",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "/news/superagent/",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "/harness/super-agent/",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "/harness/superagent/",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "/harness/blog/super-agent/",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "/en/harness/super-agent/",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

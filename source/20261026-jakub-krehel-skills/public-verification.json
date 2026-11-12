@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-26T00:38:36.661548+00:00",
+  "articles": [
+    {
+      "slug": "jakub-krehel-interface-skills",
+      "url": "https://blog.mushroom.cv/blog/jakub-krehel-interface-skills/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/jakub-krehel-interface-skills-banner.BgGJxTRP_ZqEsm9.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/jakub-krehel-interface-skills-fig-01.BBMILL6h_DRJgL.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/jakub-krehel-interface-skills-fig-02.CFYEu3WY_2ROH8.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/jakub-krehel-interface-skills-fig-03.DHb7YdYb_1fIwdS.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/jakub-krehel-interface-skills-banner.BgGJxTRP.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 1,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/jakub-krehel-interface-skills/",
+    "/blog/ra-jit-blaze-rust-live-builds/",
+    "/blog/town-townie-research/",
+    "/blog/pstack-engineering-workflow/",
+    "/blog/airsup-machine-skill/",
+    "/blog/aws-infinity-agent-runtime/",
+    "/blog/apple-foundation-models-fm-cli/",
+    "/blog/decision-models-comparison/"
+  ]
+}

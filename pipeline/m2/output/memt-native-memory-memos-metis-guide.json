@@ -1,0 +1,19 @@
+{
+  "title": "MemT原生记忆：机制、许可与工程边界",
+  "author": "Mycelium",
+  "digest": "固定容量记忆不是无限记忆，权重许可也不等于推理代码许可；文章逐项核对并给出落地思路。",
+  "mediaId": "prCUE631thH1cmNLi42prCJrGdKZVz1iR0511B8OEnNn6kbVqdcasDmQozdhR4IO",
+  "blogUrl": "https://blog.mushroom.cv/blog/memt-native-memory-memos-metis-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/memt-native-memory-memos-metis-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/memtensor/memt-1.0",
+    "huggingface.co/collections/memtensor",
+    "github.com/memtensor/memos",
+    "github.com/memtensor/metis",
+    "huggingface.co/memtensor/memt-1.0-nano",
+    "huggingface.co/memtensor/memt-1.0-flash",
+    "github.com/memtensor/memt-1.0.git"
+  ],
+  "publishedAt": "2026-11-01T01:14:35.899Z"
+}

@@ -1,0 +1,2 @@
+Initial8211 cover rejected manually for generated pseudo-brand/text despite automated OCRpass. Parent regenerated8212 before freeze/build: manually accepted blank phone, geometric component tiles and copper coordination hub, no people/readable text, frame filled; conceptual illustration, not actual screenshot. Body figures pending.
+All three final figures manually viewed: labels readable, independent topics preserved, approval dependingonpath, enterprise carveout explicit. Worker88736 exited0 before stamp/freeze/build. Cover8212 was parent regeneration, not worker mutation.

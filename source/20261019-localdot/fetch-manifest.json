@@ -1,0 +1,28 @@
+[
+  {
+    "file": "head.json",
+    "url": "https://api.github.com/repos/Shadowhusky/localdot/commits/main",
+    "status": 200,
+    "bytes": 396697,
+    "sha256": "05e4a230e58da953719ffbda95d00ecc914241feec207538341f2ba8559be865"
+  },
+  {
+    "file": "repo.json",
+    "url": "https://api.github.com/repos/Shadowhusky/localdot",
+    "status": 200,
+    "bytes": 5477,
+    "sha256": "0d52ffd5bb6f55f2ba965b40c21f223ce2dc8280910146913c1a200fd67b1fd2"
+  },
+  {
+    "file": "website.html",
+    "url": "https://localdot.dev/",
+    "status": 200,
+    "bytes": 15098,
+    "sha256": "48be6343ec6b94b4242d8842fef62e565e446ddef6b30d3ee2c2491a1f916edd"
+  },
+  {
+    "file": "release-latest.json",
+    "url": "https://api.github.com/repos/Shadowhusky/localdot/releases/latest",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-06T08:19:53.645779+00:00",
+  "articles": [
+    {
+      "slug": "namidsh-cordis-plugin-agent-architecture-review",
+      "url": "https://blog.mushroom.cv/blog/namidsh-cordis-plugin-agent-architecture-review/",
+      "title": "NamiDSH实测：用迷你插件系统读懂Agent架构",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/namidsh-cordis-plugin-agent-architecture-review-banner.DCUyZPNU.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 92731
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/namidsh-cordis-plugin-agent-architecture-review-banner.DCUyZPNU_Z21TbSg.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 34766
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/namidsh-cordis-plugin-agent-architecture-review-fig-01.BIiSdJRH_Q6Csh.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 21668
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/namidsh-cordis-plugin-agent-architecture-review-fig-02.LoRLQhwr_aMI11.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 26224
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/namidsh-cordis-plugin-agent-architecture-review-fig-03._sDpRXql_11JxLo.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 31882
+        }
+      ]
+    }
+  ]
+}

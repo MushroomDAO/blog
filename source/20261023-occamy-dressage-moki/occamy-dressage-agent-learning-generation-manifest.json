@@ -1,0 +1,145 @@
+{
+  "article": "src/content/blog/occamy-dressage-agent-learning.md",
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "generation_tool": "built-in image_gen.imagegen",
+  "requested_count": 3,
+  "status": "complete",
+  "constraints": {
+    "aspect_ratio": "16:9",
+    "background": "white",
+    "max_bytes_exclusive": 90000
+  },
+  "images": [
+    {
+      "figure": 1,
+      "topic": "memory versus weight learning",
+      "prompt": "Use case: illustration-story. Generate exactly ONE standalone 16:9 horizontal Chinese article interior illustration, 1536x864 composition. Pure #FFFFFF background, minimalist thin slightly wobbly BLACK hand-drawn pen lines, generous white space (at least 40%), sparse red/orange/blue handwritten Chinese annotations. Clean absurd technical notebook sketch, serious deadpan humor. Flat RED dome mushroom cap with 3-5 WHITE polka dots, CREAM stem body with BLACK outline and two tiny BLACK dot eyes, thin arms and legs: this is XiaoM (小M), never a solid black mushroom. XiaoM must perform the concept's central physical action. One or two thin ORANGE mycelium filaments from feet carry information meaningfully. Red cap and cream body are flat color, no shading. No paper grain, no off-white background, no gradients, no shadows, no commercial illustration, no vector polish, no cute mascot/children's cartoon, no PPT, no title, no top-left heading, no panel borders, no dense architecture, no screenshots. Only the specified sparse text, legible handwritten Chinese.\nTheme: memory versus weight learning; storing an experience is different from changing model parameters. A single wide scene with two small related actions, freely drawn on white space, no split-panel grid. At left XiaoM actively slips a loose experience slip into an external notebook next to a small simple mechanical model head: the model head's internal three adjustment screws stay untouched. At right another instance of the same XiaoM has opened a similar mechanical model head and is actually turning one internal screw with a tiny wrench, with a small training sheet at its feet. Orange mycelium connects the loose slip to the external notebook on the left, and the training sheet to the adjustment tool on the right; never imply that putting a slip in the notebook turns the internal screws. Heads are low-tech sketches, no robots or computer UI. The protagonists do the work, not watch. Keep total drawing concentrated in middle 50% of the canvas. Text verbatim, only these four short labels positioned beside the relevant objects: \"记忆\", \"外部记录\", \"训练\", \"更新权重\". No English text or equations.",
+      "final_path": "src/assets/images/occamy-dressage-agent-learning-fig-01.png",
+      "status": "complete",
+      "source_path": "/Users/jason/.codex/generated_images/01a1665c-6925-7d72-92de-c8ee6a1bc8cd/exec-a412d637-a8b3-4a6f-95ec-793406788154.png",
+      "original_path": "source/20261023-occamy-dressage-moki/generated-assets/occamy-dressage-agent-learning-illustrations/originals/occamy-dressage-agent-learning-fig-01-original.png",
+      "original_bytes": 1236459,
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "004b5fe3530cca78c3eb3232234ec3e21af0bc01540e0f7d916ffe1f23dd8d63",
+      "final_bytes": 49181,
+      "final_dimensions": [
+        1280,
+        720
+      ],
+      "final_sha256": "1d580d247a98dfff5bbb353db995a5f59e4f3e6e83aa947c94900213b355f5fa",
+      "copied_at": "2026-10-23T01:27:22.012353+00:00",
+      "compression": {
+        "method": "Pillow LANCZOS containment on 16:9 white canvas; indexed PNG FASTOCTREE, no dithering, optimized DEFLATE",
+        "palette_colors": 256,
+        "max_bytes_exclusive": 90000,
+        "white_palette_normalization": "Near-white palette entries with all channels >=250 mapped to #FFFFFF; originals preserved."
+      },
+      "visual_qa": {
+        "result": "pass",
+        "reviewed": "Original and compressed final inspected",
+        "checks": [
+          "readable sparse Chinese labels",
+          "XiaoM performs core action",
+          "red cap, white dots, cream stem, black contours, orange mycelium",
+          "one concept, generous white space, no title or panel borders"
+        ]
+      }
+    },
+    {
+      "figure": 2,
+      "topic": "real task, verified trajectory, training, held-out evaluation loop",
+      "prompt": "Use case: illustration-story. Generate exactly ONE standalone 16:9 horizontal Chinese article interior illustration, 1536x864 composition. Pure #FFFFFF background, minimalist thin slightly wobbly BLACK hand-drawn pen lines, generous white space (at least 40%), sparse red/orange/blue handwritten Chinese annotations. Clean absurd technical notebook sketch, serious deadpan humor. Flat RED dome mushroom cap with 3-5 WHITE polka dots, CREAM stem body with BLACK outline and two tiny BLACK dot eyes, thin arms and legs: this is XiaoM (小M), never a solid black mushroom. XiaoM must perform the concept's central physical action. One or two thin ORANGE mycelium filaments from feet carry information meaningfully. Red cap and cream body are flat color, no shading. No paper grain, no off-white background, no gradients, no shadows, no commercial illustration, no vector polish, no cute mascot/children's cartoon, no PPT, no title, no top-left heading, no panel borders, no dense architecture, no screenshots. Only the specified sparse text, legible handwritten Chinese.\nTheme: a deliberately operated learning loop: real task -> verified trajectory -> training -> held-out evaluation -> a next version can attempt tasks again. Invent a sparse hand-cranked circular experiment rig on a white page, not a formal flowchart. Four tiny loose physical stations in a gently oval arrangement: a real task sheet with a tangible repaired object; a long thin accordion trace strip inspected under a magnifier; a modest hand-cranked parameter-adjustment drum taking only the inspected trace; a separate closed envelope containing unseen test tasks on a little test bench. XiaoM at the heart of the scene actively uses one hand to inspect the trace with the magnifier and the other to turn the training crank. A restrained orange mycelium path connects the stations in that order and returns from evaluation toward a fresh task; small arrowheads make the order clear. The sealed held-out test envelope is visually separate from the training drum, with no feed into training. Evaluation is measurement, no trophy or guaranteed improvement. Only five short labels, verbatim: \"真实任务\", \"验收轨迹\", \"训练\", \"留出评测\", \"下一轮\". No other text, numbers or English. Large quiet white margins. Make the objects irregular and lightly hand-drawn rather than boxed nodes; protagonist operating the whole experiment is essential.",
+      "final_path": "src/assets/images/occamy-dressage-agent-learning-fig-02.png",
+      "status": "complete",
+      "source_path": "/Users/jason/.codex/generated_images/01a1665c-6925-7d72-92de-c8ee6a1bc8cd/exec-051ea201-1197-482a-aec7-75f59dea41e3.png",
+      "original_path": "source/20261023-occamy-dressage-moki/generated-assets/occamy-dressage-agent-learning-illustrations/originals/occamy-dressage-agent-learning-fig-02-original.png",
+      "original_bytes": 1362347,
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "51d2322a820fa825db63131678651c2182064076652e464b47d6283e21477900",
+      "final_bytes": 70987,
+      "final_dimensions": [
+        1280,
+        720
+      ],
+      "final_sha256": "cdafe62b67beb607dc3bb70fa7f313ba5c02173082a2c4c3a5a425689cf09a19",
+      "copied_at": "2026-10-23T01:27:59.562198+00:00",
+      "compression": {
+        "method": "Pillow LANCZOS containment on 16:9 white canvas; indexed PNG FASTOCTREE, no dithering, optimized DEFLATE",
+        "palette_colors": 256,
+        "max_bytes_exclusive": 90000,
+        "white_palette_normalization": "Near-white palette entries with all channels >=250 mapped to #FFFFFF; originals preserved."
+      },
+      "visual_qa": {
+        "result": "pass",
+        "reviewed": "Original and compressed final inspected",
+        "checks": [
+          "readable sparse Chinese labels",
+          "XiaoM performs core action",
+          "red cap, white dots, cream stem, black contours, orange mycelium",
+          "one concept, generous white space, no title or panel borders"
+        ]
+      }
+    },
+    {
+      "figure": 3,
+      "topic": "open model and RL framework are distinct components, not automatic self-evolution",
+      "prompt": "Use case: illustration-story. Generate exactly ONE standalone 16:9 horizontal Chinese article interior illustration, 1536x864 composition. Pure #FFFFFF background, minimalist thin slightly wobbly BLACK hand-drawn pen lines, generous white space (at least 40%), sparse red/orange/blue handwritten Chinese annotations. Clean absurd technical notebook sketch, serious deadpan humor. Flat RED dome mushroom cap with 3-5 WHITE polka dots, CREAM stem body with BLACK outline and two tiny BLACK dot eyes, thin arms and legs: this is XiaoM (小M), never a solid black mushroom. XiaoM must perform the concept's central physical action. One or two thin ORANGE mycelium filaments from feet carry information meaningfully. Red cap and cream body are flat color, no shading. No paper grain, no off-white background, no gradients, no shadows, no commercial illustration, no vector polish, no cute mascot/children's cartoon, no PPT, no title, no top-left heading, no panel borders, no dense architecture, no screenshots. Only the specified sparse text, legible handwritten Chinese.\nTheme: Occamy open model and Dressage RL framework are distinct components. Having these available does not mean a deployed automatic self-evolving agent exists. One sparse low-tech assembly scene: XiaoM is actively fitting a removable parameter-bearing model cartridge into a separate open mechanical training jig, visibly two different components, one a small solid cartridge and the other an empty supporting frame with a hand crank. XiaoM is holding the cartridge with one hand while physically bolting the frame with the other, making deliberate engineering work central. The cartridge has the small printed name \"Occamy\"; the frame has the small printed name \"Dressage\". Adjacent small Chinese handwritten labels are \"开放模型\" and \"训练框架\". A short orange mycelium filament leads from the working XiaoM to the manual hand crank, indicating operated process. Nearby a tiny autonomous circular-arrow symbol is crossed out with one sparse red stroke, accompanied only by the exact Chinese note \"不等于自动进化\". Do not cross out the model or framework. Do not show a finished deployed robot, automatic upgrade button, infinite growth, magic sparks or self-assembling machine. White space dominates. No additional objects, titles, labels or text.",
+      "final_path": "src/assets/images/occamy-dressage-agent-learning-fig-03.png",
+      "status": "complete",
+      "source_path": "/Users/jason/.codex/generated_images/01a1665c-6925-7d72-92de-c8ee6a1bc8cd/exec-a26ac4eb-a99a-4f7e-b2f1-be09bb2ccfb5.png",
+      "original_path": "source/20261023-occamy-dressage-moki/generated-assets/occamy-dressage-agent-learning-illustrations/originals/occamy-dressage-agent-learning-fig-03-original.png",
+      "original_bytes": 1129171,
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "0a2caa9769410da0f5b7e2b525d4cb3a2bdbda4bcfb47ac46f4e5100b6de2caa",
+      "final_bytes": 38405,
+      "final_dimensions": [
+        1280,
+        720
+      ],
+      "final_sha256": "b951290089f2146773dc0da5fddb91e2ee9bed4c42dfa272f012f0422660b319",
+      "copied_at": "2026-10-23T01:28:33.450839+00:00",
+      "compression": {
+        "method": "Pillow LANCZOS containment on 16:9 white canvas; indexed PNG FASTOCTREE, no dithering, optimized DEFLATE",
+        "palette_colors": 256,
+        "max_bytes_exclusive": 90000,
+        "white_palette_normalization": "Near-white palette entries with all channels >=250 mapped to #FFFFFF; originals preserved."
+      },
+      "visual_qa": {
+        "result": "pass",
+        "reviewed": "Original and compressed final inspected",
+        "checks": [
+          "readable sparse Chinese labels",
+          "XiaoM performs core action",
+          "red cap, white dots, cream stem, black contours, orange mycelium",
+          "one concept, generous white space, no title or panel borders"
+        ]
+      }
+    }
+  ],
+  "created_at": "2026-10-23T01:25:56.136724+00:00",
+  "article_sha256_before": "62be2f10d5fff7824ee12cfcd593f70b1c6beeb0d55dd7e1772267fc27677e27",
+  "article_sha256_after": "ca736b1b220fd5acbec7b15d0a1170e003393ff7f67554aed3ea16f38da4bde0",
+  "article_observation": "This task performed no article writes. The article changed concurrently after the initial read (image references were added); the external changes were preserved.",
+  "completed_at": "2026-10-23T01:29:33.207204+00:00",
+  "actual_generation_calls": 3,
+  "validation": {
+    "exactly_three_final_images": true,
+    "all_png": true,
+    "all_16_by_9": true,
+    "all_under_90000_bytes": true,
+    "all_originals_preserved_byte_identically": true,
+    "white_background_palette": true,
+    "article_writes_by_this_task": false,
+    "article_changed_concurrently": true
+  },
+  "compression_note": "Initial MEDIANCUT compression exceeded the size limit; FASTOCTREE quantization met it at 1280x720. Exactly three image generation calls; no regenerations."
+}

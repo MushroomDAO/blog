@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-13T03:35:49.596Z",
+  "archivedMediaId": "prCUE631thH1cmNLi42prIAytTSqNQsgMufnWJf3-PfoBwdm_pwud6Ccf9_nwmUJ",
+  "oldCreatedAt": "2026-06-02T05:30:13.656Z",
+  "publishedApi": {
+    "errcode": 48001,
+    "errmsg": "api unauthorized rid: 6acda714-07303d02-45535e66"
+  },
+  "draftList": {
+    "total": 8,
+    "matches": []
+  },
+  "archivedDraftGet": {
+    "errcode": 40007,
+    "errmsg": "invalid media_id hint: [KqTk7a054973-3] rid: 6acda715-00c05ab0-6e33eed3",
+    "exists": false
+  },
+  "scope": "read only; no draft creation or update"
+}

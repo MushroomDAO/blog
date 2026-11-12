@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-26T13:05:42.922Z",
+  "drafts": [
+    {
+      "slug": "wevisone-vl-unified-vision",
+      "mediaId": "prCUE631thH1cmNLi42prD5IKoEvZR_2YVOWOzqgUy4KG_qOPfTKsHAn35VnEO6j",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "1fc2693b4126e07944690740fb6524b8e1fee658d3603735ba7a1fb284f9300c",
+      "remoteTextHash": "1fc2693b4126e07944690740fb6524b8e1fee658d3603735ba7a1fb284f9300c",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/wevisone-vl-unified-vision/",
+      "localContentHash": "9aeabddfa3829d132d4b17cc5f91a0b2aab4389fd2a9a03be6191cd2b79faa9a",
+      "remoteContentHash": "9db428a79aaf3da960d494e8a392c1339e8912624f5ecf5165a89cca9a6863a5"
+    }
+  ]
+}

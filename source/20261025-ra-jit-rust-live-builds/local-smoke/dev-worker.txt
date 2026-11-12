@@ -1,0 +1,20 @@
+spare: 21 crates in 2.8s
+symbols: 2055 in 21.5ms
+spare: workspace added in 350.1ms
+load workspace: 354.0ms
+resolve: 21 crates in 47.4ms
+store: 0 functions found, 4 compiled and added
+entries: 0 found, 3 added, 0 as stored, 0 not as stored, 0 instances and 0 requests without a stable name
+not found: [("no entry", 3)]
+cold: compiled 1 of 1 fns (+3 instances) in 25.0ms (+301.4µs emit)
+stats: 4 of 4 functions compiled, 0 reused
+phases: compile 4.7ms, resolve 222.9µs, define 60.7µs, fallback 11.1µs, object 45.8µs, 1 rounds
+link: 48.5ms (exit status: 0; not spliced: no executable to add to)
+watching 4 files
+change: 1 files
+edit (apply 888.9µs): compiled 1 of 1 fns (+3 instances) in 8.5ms (+291.8µs emit)
+stats: 1 of 4 functions compiled, 3 reused
+patch: 1 functions
+phases: compile 8.8µs, resolve 8.9µs, define 4.5µs, fallback 0.0ns, object 42.8µs, 1 rounds
+link: 1.2ms (spliced: 1 functions redirected, 208208 bytes)
+edit-to-binary: 11.3ms

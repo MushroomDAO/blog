@@ -1,0 +1,36 @@
+{
+  "datasetSHA256": "74eba953f23ddc5fb81de80f32774d80105a86bcf78562450aca5bfb1c97530c",
+  "episodes": 396,
+  "groups": {
+    "astra-kinex": {
+      "n": 132,
+      "success": 103,
+      "meanCostUSD": 1.8884114393939393,
+      "environments": {
+        "libero": 40,
+        "robotwin": 50,
+        "robodojo": 42
+      }
+    },
+    "astra-device": {
+      "n": 132,
+      "success": 96,
+      "meanCostUSD": 2.1613887272727275,
+      "environments": {
+        "libero": 40,
+        "robotwin": 50,
+        "robodojo": 42
+      }
+    },
+    "astra-control": {
+      "n": 132,
+      "success": 96,
+      "meanCostUSD": 3.305684696969697,
+      "environments": {
+        "robodojo": 42,
+        "libero": 40,
+        "robotwin": 50
+      }
+    }
+  }
+}

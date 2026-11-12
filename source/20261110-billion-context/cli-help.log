@@ -1,0 +1,149 @@
+bili 0.1.213 — billion-context proxy
+
+Usage:
+  bili [start] [options]           start the proxy (default: reads /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/bili-test-oB7kzW/config/billion-context/billion-context.json)
+  bili pi [opts --] [args]         start a proxy + launch pi against it (cert-MITM)
+  bili pi-test [opts --] [args]    like bili pi but injects --no-extensions (clean test)
+  bili pi-inline [opts --] [args]  launch pi on the in-process engine — no proxy at all (BILI_PI_INLINE)
+  bili opencode-inline [opts --] [args]  launch opencode on the in-process engine — no proxy at all (BILI_OPENCODE_INLINE)
+  bili codex [opts --] [args]      start a proxy + launch codex against it (cert-MITM)
+  bili claude [opts --] [args]     start a proxy + launch claude against it (cert-MITM)
+  bili omp [opts --] [args]        start a proxy + launch omp against it (cert-MITM)
+  bili opencode [opts --] [args]   start a proxy + launch opencode against it (cert-MITM)
+  bili hermes [opts --] [args]     start a proxy + launch hermes-agent against it (/bili/ rewrite)
+  bili dsh [opts --] [args]        start a proxy + launch deepseek-harness against it (/bili/ rewrite)
+  bili codebuddy [opts --] [args]  start a proxy + launch codebuddy against it (/bili/ rewrite)
+  bili qoder [opts --] [args]      start a proxy + launch qoder against it (cert-MITM)
+  bili trae [opts --] [args]       start a proxy + launch Trae CLI against it (cert-MITM)
+  bili jcode [opts --] [args]      start a proxy + launch jcode against it (cert-MITM)
+  bili kimi [opts --] [args]       start a proxy + launch Kimi Code against it (cert-MITM)
+  bili gemini [opts --] [args]     start a proxy + launch Gemini CLI against it (GOOGLE_GEMINI_BASE_URL /bili/ rewrite)
+  bili iflow [opts --] [args]      start a proxy + launch iFlow CLI against it (IFLOW_BASE_URL /bili/ rewrite)
+  bili qwen [opts --] [args]       start a proxy + launch Qwen Code against it (cert-MITM)
+  bili antigravity [opts --] [args] start a proxy + launch Antigravity CLI (agy) against it (CLOUD_CODE_URL /bili/ rewrite)
+  bili mcode [opts --] [args]      start a proxy + launch MiniMax Code against it (cert-MITM)
+  bili aider [opts --] [args]      start a proxy + launch aider against it (cert-MITM)
+  bili copilot [opts --] [args]    start a proxy + launch Copilot CLI against it (cert-MITM)
+  bili kiro [opts --] [args]       start a proxy + launch Kiro CLI (kiro-cli) against it (cert-MITM)
+  bili amp [opts --] [args]        start a proxy + launch Amp against it (cert-MITM)
+  bili crush [opts --] [args]      start a proxy + launch Crush against it (cert-MITM)
+  bili zed [opts --] [args]        start a proxy + launch the Zed editor against it (cert-MITM)
+  bili goose [opts --] [args]      start a proxy + launch Goose against it (base-URL redirect)
+  bili test pi                     non-polluting pi smoke test through the proxy
+  bili export [session] [--full]   list sessions / export one as a Markdown handoff
+                                    (--full includes original messages; --output FILE;
+                                    --jsonl renders a deterministic JSONL dump from the
+                                    unified tables, falling back to the legacy tail)
+  bili sessions ls                  list persisted sessions: id, label, size (decoded
+                                    bytes), last-updated, storage status (active/archived)
+  bili sessions rm <id>             delete one session outright — files + index.db rows,
+                                    shared-content refs released; VACUUMs afterwards
+                                    (--no-vacuum skips the shrink)
+  bili sessions archive <id>        move one session out of index.db into the single
+                                    append-only archive log (rows swept, restorable)
+   bili sessions restore <id>        bring an archived session back into index.db
+   bili sessions foreign-blocks      list fold blocks whose covered messages never
+                                     belonged to their session's transcript (dry-run;
+                                     --apply reversibly archives them, --restore
+                                     <sid>:<bid> brings one back). Catches legacy
+                                     cross-session fold blocks that linger after upgrade
+   bili storage gc                   run the storage sweep now (#3911): archive sessions
+                                    older than storage.archiveAfterDays (default 365),
+                                    release unreferenced content, shrink index.db
+                                    (--days N overrides the age; --vacuum full|incremental;
+                                    prints the sweep plan first, --dry-run stops there)
+  bili pack install <npm-spec>     npm-install a custom compress prompt pack
+  bili pack list / remove <name>   list resolvable packs / delete a local pack file
+                                   (--project targets ./.billion-context/packs/ instead;
+                                    install also accepts --force to replace an existing pack)
+  bili acp-cache diff <dir>        offline prefix-diff attribution over ACP_DUMP_BODY
+                                   dumps: pairs adjacent requests per session and classifies
+                                   each (pure-append / mid-stream-rewrite / prefix-stable-miss);
+                                   --json machine output, --log FILE correlates [acp-usage]
+                                   lines (default <dir>/bili.log), --no-log skips, --session SID filters
+  bili update                      check for & install a newer version now
+  bili doctor                      audit every install lane: versions, owners,
+                                    freshness vs registry, running proxy processes
+                                    (read-only; --json for machine-readable output);
+                                    --fix converges drifted dsh-profile ledgers
+                                    (manifest/lockfile/copy) to the on-disk copy
+                                    and prints every change it makes
+  bili plugin install <agent>      install the thin plugin into a host (pi/omp/
+                                    claude/codex/opencode/dsh/kimi; original backed up once)
+                                    --with-mcp (opencode only) also adds the mcp.bili
+                                    MCP face; default is the native plugin tools only
+  bili plugin remove <agent>       remove it again
+  bili plugin update [agent]      update each lane's bili presence through its
+                                    own owner (#991): reference lanes follow the
+                                    global install, dsh bundles refresh through
+                                    dsh's channel, host-owned copies are pointed
+                                    at their host's updater — never overwritten
+  bili plugin list                 show install status + installed (on-disk) version for every host
+  bili mcp                         run the bili MCP server standalone (stdio)
+  bili plugin-register <id>        pre-bind a conversation to the plugin mode
+                                    (--origin URL, --agent name)
+  bili --version                   print version
+  bili --help                      show this help
+
+Launcher (bili pi / bili codex / bili claude / bili omp / bili opencode / bili hermes / bili dsh / bili codebuddy / bili qoder / bili trae / bili jcode / bili kimi / bili gemini / bili iflow / bili qwen / bili antigravity / bili mcode / bili aider / bili copilot / bili amp / bili crush / bili zed / bili goose / bili kiro):
+  Brings up a proxy on an independent port (a fresh instance every launch), then runs the client pointed at it via HTTPS_PROXY + the proxy's
+  MITM CA — no config-file edits. Discovered HTTPS upstream domains are
+  auto-whitelisted for MITM so the proxy TLS-terminates exactly the hosts the
+  client uses; HTTP / localhost providers go direct. pi/claude/qoder trust the CA
+  via NODE_EXTRA_CA_CERTS, codex/trae/jcode/aider/copilot/amp/crush/zed via SSL_CERT_FILE, kiro via both
+  (aider also REQUESTS_CA_BUNDLE). Goose trusts neither (rustls), so it is redirected per-endpoint instead. Proxy killed on client exit.
+  bili flags (-F, --mitm-domain, --port, ...) must precede the client name;
+  everything after the client name is passed through to the client.
+    bili pi                               # launch pi through the proxy
+    bili pi -- print "hi"                 # args after the client are passed through
+    bili pi-test                          # pi through the proxy with extensions off (proxy owns compression)
+    bili pi-inline                        # pi with the in-process engine — no proxy, no MITM certs
+    bili opencode-inline                  # opencode with the in-process engine — no proxy, no MITM certs
+    bili codex                            # launch codex through the proxy
+    bili claude                           # launch claude through the proxy
+    bili omp                              # launch omp through the proxy (pi-based; /bili/ rewrite)
+    bili hermes                           # launch hermes-agent through the proxy (/bili/ rewrite of ~/.hermes/config.yaml)
+    bili dsh --profile web "task"         # launch deepseek-harness through the proxy (/bili/ rewrite of ~/.dsh/settings.yaml)
+    bili codebuddy                        # launch codebuddy through the proxy (CODEBUDDY_BASE_URL /bili/ rewrite)
+    bili qoder                            # launch qoder through the proxy (cert-MITM; model endpoint is hardcoded https, so no /bili/ rewrite)
+    bili trae                             # launch Trae CLI through the proxy (cert-MITM; model host via TRAE_CLI_API_HOST or --mitm-domain)
+    bili jcode                            # launch jcode through the proxy (cert-MITM; zai leg whitelisted by default)
+    bili kimi                             # launch Kimi Code through the proxy (cert-MITM; provider/model hosts from ~/.kimi-code/config.toml or the managed OAuth endpoints)
+    bili gemini                           # launch Gemini CLI through the proxy (GOOGLE_GEMINI_BASE_URL /bili/ rewrite; API-key & gateway auth)
+    bili iflow                            # launch iFlow CLI through the proxy (IFLOW_BASE_URL /bili/ rewrite of apis.iflow.cn/v1)
+    bili qwen                             # launch Qwen Code through the proxy (cert-MITM; DashScope/Qwen gateways whitelisted by default, custom relays via --mitm-domain)
+    bili antigravity                      # launch Antigravity CLI (agy) through the proxy (CLOUD_CODE_URL /bili/ rewrite of daily-cloudcode-pa.googleapis.com — real default upstream, #3129)
+    bili mcode                            # launch MiniMax Code through the proxy (cert-MITM; provider hosts from ~/.minimax*/config.yaml or the official agent.minimax.* endpoints)
+    bili aider                            # launch aider through the proxy (cert-MITM; endpoint from OPENAI_API_BASE/--openai-api-base/.aider.conf.yml or api.openai.com+api.anthropic.com by default)
+    bili copilot                          # launch Copilot CLI through the proxy (cert-MITM; api.githubcopilot.com + plan subdomains whitelisted by default)
+    bili kiro                             # launch Kiro CLI through the proxy (cert-MITM; runtime.<region>.kiro.dev model gateways whitelisted; developer/system roles re-voiced as user)
+    bili amp                              # launch Amp through the proxy (cert-MITM; ampcode.com whitelisted by default)
+    bili crush                            # launch Crush through the proxy (cert-MITM; api.anthropic.com/api.openai.com/openrouter.ai + crush.json base_urls whitelisted)
+    bili zed                              # launch the Zed editor through the proxy (cert-MITM; built-in provider hosts + settings.json api_urls whitelisted; Linux TLS env)
+    bili goose                            # launch Goose through the proxy (openai/anthropic legs via *_HOST envs, custom providers via a regenerated config overlay — real config untouched)
+    bili test pi                          # quick end-to-end check of the pi path
+    bili --mitm-domain api.foo.com pi     # add a domain to the MITM whitelist (flags precede the client)
+    bili -F http://127.0.0.1:7897 codex   # route bili's upstream through a proxy (gost-style -F)
+
+Options (override config file / env):
+  -i, --inline                     run the client's compression IN-PROCESS (pi/opencode;
+                                   same as "bili pi-inline"; must precede the client name)
+  -s, --server                     force the proxy posture — spawn/attach, never inline
+                                   (pi/opencode; overrides an inherited BILI_PI_INLINE=1)
+  -F <url>                         upstream proxy to forward through (gost-style;
+                                   http://host:port; must precede the client name)
+  --port <N>                       listen port (start: 8787; launcher default: random free port)
+  --host <ADDR>                    listen host (default 127.0.0.1)
+  --mitm-domain <domain>           extra MITM domain (repeatable; launcher only)
+  --config <FILE>                  path to config JSON (default: XDG location)
+  --debug                          verbose logging
+  --passthrough                    forward without compression
+  --no-passthrough                 force compression on (overrides config)
+  --no-auto-update                 disable background self-update this run
+  --auto-restart-on-update         self-restart when a newer version is already installed on disk (default off)
+
+Config: /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/bili-test-oB7kzW/config/billion-context/billion-context.json
+  Set port/host/debug/providers/compress/autoUpdate there. See README §Configuration.
+  Env vars (ACP_*, BILI_*) also work and override the file; CLI flags win.
+
+Docs: https://github.com/ranxianglei/billion-context

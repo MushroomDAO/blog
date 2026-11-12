@@ -1,0 +1,25 @@
+{
+  "rawBotMaterialReused": true,
+  "initialMine": {
+    "files": 3,
+    "drawers": 3
+  },
+  "finalMine": {
+    "files": 3,
+    "drawers": 9
+  },
+  "entries": {
+    "d2r-mobile-build-ios-macos": {
+      "exactSlugDrawers": 2,
+      "memoryFile": "/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory/project_d2r-mobile-build-ios-macos.md"
+    },
+    "kinex-coding-agents-robot-harness": {
+      "exactSlugDrawers": 2,
+      "memoryFile": "/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory/project_kinex-coding-agents-robot-harness.md"
+    },
+    "glimpse-visual-reasoning-game-bug-review": {
+      "exactSlugDrawers": 2,
+      "memoryFile": "/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory/project_glimpse-visual-reasoning-game-bug-review.md"
+    }
+  }
+}

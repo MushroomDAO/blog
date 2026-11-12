@@ -1,0 +1,24 @@
+F...                                                                     [100%]
+=================================== FAILURES ===================================
+___________ test_the_launcher_runs_the_dispatcher_from_the_checkout ____________
+
+tmp_path = PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_the_launcher_runs_the_dis0')
+
+    def test_the_launcher_runs_the_dispatcher_from_the_checkout(tmp_path):
+        work = tmp_path / "work"
+        work.mkdir()
+        code, out, _ = _run_hook(os.path.join(PLUGIN, "scripts", "te-hook"),
+                                 {"hook_event_name": "SessionStart", "session_id": "s",
+                                  "cwd": str(work), "source": "startup"}, _hook_env(tmp_path))
+        assert code == 0 and json.loads(out) == {}
+>       assert os.path.isdir(tmp_path / "home" / "repos")      # it ran, and recorded the session
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: assert False
+E        +  where False = <function isdir at 0x1053ece00>(((PosixPath('/private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/pytest-of-jason/pytest-3/test_the_launcher_runs_the_dis0') / 'home') / 'repos'))
+E        +    where <function isdir at 0x1053ece00> = <module 'posixpath' (frozen)>.isdir
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+tests/test_plugin_package.py:149: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_plugin_package.py::test_the_launcher_runs_the_dispatcher_from_the_checkout
+1 failed, 3 passed in 18.37s

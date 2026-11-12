@@ -1,0 +1,40 @@
+{
+  "asOf": "2026-10-15",
+  "mainTopic": "Verified Anthropic workshops introduction and engineering guide",
+  "separateSource": {
+    "url": "https://github.com/JamesQiu2005/BetterRemoteDisplay",
+    "fetch": "JinaReader succeeded, rawREADME crosscheck",
+    "summary": "macOS14+menuBarvirtualdisplay/logicalresolution/HiDPI; notAnthropicworkshop; AppStoreeditiondifferentlimits/privateCGVirtualDisplay compatibilityboundary",
+    "images": []
+  },
+  "officialSources": {
+    "announcement": "https://claude.com/resources/articles/code-with-claude-san-francisco-london-tokyo",
+    "freeEventFAQ": "https://claude.com/code-with-claude",
+    "session": "https://claude.com/code-with-claude/session/sf-build-a-production-ready-agent-with-claude-managed-agents",
+    "sdkWorkshop": "https://github.com/anthropics/agent-sdk-workshop",
+    "cwcWorkshops": "https://github.com/anthropics/cwc-workshops"
+  },
+  "pins": {
+    "agent-sdk-workshop": "a273fbe2b3776d84cf29f025927d71dcc0982c9f",
+    "cwc-workshops": "068b84bb03d2ae87c51edb2837dda25c84c1d686"
+  },
+  "boundaries": [
+    "Exact free automatedcompany announcement notidentified; no guessedrelease date or literalpromise",
+    "Event+materialsfree notpaidinferencefree; SDKFAQdescribesAPIcharges",
+    "Toolsusemockdata notliveenterpriseintegrations",
+    "CWCnotmaintained, notproductionsupportcommitment",
+    "SDKandManagedAgents distinctdeploymentAPIs",
+    "Demo bypassPermissions notrecommendation forrealcredentials",
+    "Our rollout/RBAC/idempotence/evaluation table is engineeringadvice, notbuiltinfeatures"
+  ],
+  "localVerification": "Unmodified python workshop breakout lists6scenarios; no liveClaude/CRM/email calls",
+  "banner": {
+    "source": "LocalFLUX2Klein seed109; unmarked linked folders as workflow coordination; noadoptablesourceimages",
+    "dimensions": "1200x630",
+    "bytes": 93309,
+    "sha256": "b1df05df9b474b816e2b73d78b8e141f1b750f5b48a2c5cc0075d5f778b0337c",
+    "manualInspection": "blankfolders/cords, matchedworkflowtheme, notext/faces, fullyframed"
+  },
+  "bodyImages": "3Xiao-M figs1280x720/37740,36545,46126bytes, originals preserved generated_images/01a13cfc-1a41-7f30-9eda-fbe9cc4a1c90",
+  "scopeDecision": "Optionalclarification offered; noanswer received, proceeded under stated assumption: publishmainworkshop guide, BetterRemoteDisplaycaptureKBonly, notasecondarticle."
+}

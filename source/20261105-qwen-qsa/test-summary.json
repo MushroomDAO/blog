@@ -1,0 +1,22 @@
+{
+  "passed": 144,
+  "failed": 0,
+  "suite": "existing llama.cpp test-gguf",
+  "platform": "macOS ARM64, Apple Clang21",
+  "cmakeFlags": [
+    "GGML_CUDA=OFF",
+    "GGML_METAL=OFF",
+    "GGML_ACCELERATE=OFF",
+    "LLAMA_BUILD_TESTS=ON"
+  ],
+  "tooling": "isolated /tmp/qsa-tools-venv; first attempt missing CMake/Ninja, corrected",
+  "notTested": [
+    "model inference",
+    "QSA CUDA kernels",
+    "MTP/DFlash acceptance",
+    "vision",
+    "24GB memory",
+    "262K input",
+    "throughput"
+  ]
+}

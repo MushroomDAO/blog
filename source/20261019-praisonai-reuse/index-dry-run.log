@@ -1,0 +1,3 @@
+checking 1 article(s) (praisonai-five-layer-agent-stack-managed-agents)
+diff: 0 changed/new, 2 unchanged (wrote /Users/jason/Dev/mycelium/blog/semantic-search/eval/incremental-index-plan.json)
+dry-run only (no --upsert passed) — no embedding, no Vectorize/KV writes

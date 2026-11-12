@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-29T04:15:20.563Z",
+  "archivedMediaId": "prCUE631thH1cmNLi42prHpTfF3XZbyFrXGlpIO5f5TmYuXCq4mcaFYb59V5fMMg",
+  "matches": [],
+  "direct": {
+    "errcode": 40007,
+    "errmsg": "invalid media_id hint: [baX8dA032080-0] rid: 6ae2c858-41506d94-57422086"
+  },
+  "published": {
+    "errcode": 48001,
+    "errmsg": "api unauthorized rid: 6ae2c858-35c3561c-5f41119d"
+  }
+}

@@ -1,0 +1,18 @@
+from pathlib import Path
+import json,shutil,hashlib
+root=Path('/Users/jason/Dev/mycelium/blog');b=Path(__file__).resolve().parent;topics=json.loads((b/'topics.json').read_text());progress=json.loads((b/'platform-progress.json').read_text());live=json.loads((b/'live-verification.json').read_text());assert len(live['articles'])==3
+m=Path('/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory');tmp=Path('/tmp/d2r-kinex-glimpse-kb');pubs=[]
+for t in topics:
+ slug=t['slug'];v=json.loads((b/f'{slug}-draft-verification.json').read_text());assert all(v[k] for k in ['coverPresent','documentedScope','pinnedSourceInContent']) and v['errcode']==0 and v['bodyImageCount']==3
+ assert progress[slug]['mediaId']==v['mediaId']
+ pub={'slug':slug,'blogUrl':'https://blog.mushroom.cv/blog/'+slug+'/','mediaId':v['mediaId'],'wechatStatus':'draft'};pubs.append(pub)
+ p=m/f'project_{slug}.md';s=p.read_text().replace('Blog: pending. WeChat: pending.',f"Blog: published and live200, bilingual, all4images200. URL: {pub['blogUrl']}\nWeChat: draft created and current remote draft/get verified, media_id: {pub['mediaId']}. Cover and3bodyimages/source/scope verified.\nSemantic: zh/en vectors upserted; public retrieval verification saved separately.")
+ s+='\nFinal: raw bot material reused; three separate bilingual articles with matched covers and figures, local tests/recomputation limits preserved. Evidence ledger: source/20261017-d2r-kinex-glimpse.\n';p.write_text(s);shutil.copyfile(p,tmp/p.name)
+res=dict(pubs[0]);res['publications']=pubs;(b/'publication-result.json').write_text(json.dumps(res,indent=2,ensure_ascii=False));(b/'.published').write_text('2026-10-17\n'+'\n'.join(p['blogUrl'] for p in pubs)+'\n')
+job=Path('/Users/jason/.heinu1-bot/jobs/01aab571-1dee-4913-ad9b-440e40fb50ae');assert job.is_dir();(job/'publication-result.json').write_text(json.dumps(res,indent=2,ensure_ascii=False))
+f=root/'.agents/skills/forage/FEEDBACK.md';s=f.read_text();heading='## 2026-10-17 — D2R build / Kinex / Glimpse'
+if heading not in s:
+ s+='\n\n'+heading+'\n\n- Task01aab571-1dee-4913-ad9b-440e40fb50ae. Three separate primary-source subjects; exact URL/entity dedup only raw bot KB, reused. Published WeChat API48001 unavailable; permanent local receipts and current draft box checked.\n- D2R MIT workflow pin e92853236714bbf96642faadd781dccf29da9c9c. Python3.12 35 upstream tool tests pass after old system interpreter strict-zip error. No game resources/build/install/gameplay.\n- Kinex Apache2 pin15207927c6669fe98f1213a3fd05148e0fe938d3.9upstream driver-contract tests pass; independently recomputed396 official episodes, Kinex103/132 $1.888 vs native-control96/132 $3.306. EstimatedAPIcost notbills; no simulator/model/robot run.\n- Glimpse officialElorian launchOct16 API/chat preview; no verified official downloadable weights, not same-name benchmark/app. Gamecase originalcompleteevidenceunavailable, not independenttest. QAintegrationproposal separates observation/time/localization/source-diagnosis/humanconfirmation. No paidAPI/bench.\n- Three originalconceptcovers and9XiaoMfigures, bilingual6refs each. Finalmanualcrop removed fakeglyphs missedbyOCR fromD2R/Glimpsecovers; Glimpse timeaxis regenerated/corrected. SEO/GEO/metadata/dimensions/bytes pass. All3live200/bilingual/12assets200/listpositions2,5,3.\n'
+ for p in pubs:s+=f"- New Blog {p['blogUrl']} ; current remotely verified WeChat draft {p['mediaId']} . Cover,3bodyimages,pinnedsource,scope verified.\n"
+ s+='- Project memory and semantic index updated; exact KB/manifest/public-query verification recorded separately. Normal stacked PR base publish/motonav-round-screen-navigation.\n';f.write_text(s)
+print(json.dumps(res,indent=2))

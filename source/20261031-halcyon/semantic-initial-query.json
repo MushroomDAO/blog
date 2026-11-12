@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "hauhaucs-qwen3-8-27b-gguf-fastmtp-speculative-decoding-kp-quant",
+      "title": "同一个 27B，换条路跑：HauhauCS 的 GGUF 版用 FastMTP 投机解码把生成速度拉到 3 倍",
+      "url": "/blog/hauhaucs-qwen3-8-27b-gguf-fastmtp-speculative-decoding-kp-quant/",
+      "language": "zh",
+      "excerpt": "同一个 27B，换条路跑：HauhauCS 的 GGUF 版用 FastMTP 投机解码把生成速度拉到 3 倍 HauhauCS/Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF 是 Qwen3.8-27B 的 GGUF 量化发布，1048 likes、171 万次下载。两个技术点值得看：一是 K_P「完美」量化——按模型做针对性分析选择性保质，体积只多 5-15% 却相当于提升一到两个量化档；二是 FastMTP，一个 903MB 的 32K 草稿旁车，配合打过补丁的 llama.cpp，文档生成最高 3.02 倍、",
+      "score": 0.53385484
+    },
+    {
+      "article_id": "btl-3-lora-adapter-qwen-programming-agent-tool-calling-training",
+      "title": "934MB 适配器，27B 基座，95% 代码通过率——BTL-3 的 LoRA 炼成路",
+      "url": "/blog/btl-3-lora-adapter-qwen-programming-agent-tool-calling-training/",
+      "language": "zh",
+      "excerpt": "934MB 适配器，27B 基座，95% 代码通过率——BTL-3 的 LoRA 炼成路 BTL-3 用 rank-32 LoRA 在 Qwen3.6-27B 上做强化学习后训练，用不到 1GB 的适配器权重，在编程智能体和结构化工具调用上打出 88.5% BFCL / 95% HumanEval 的成绩。本文深入 adapter_config.json 和训练设计，拆解 LoRA 怎么让一个 27B 模型变成专职 Agent。 LoRA PEFT Agent Tool Use Fine-tuning Qwen RL LoRA 的数学基础 BTL-3 的",
+      "score": 0.533177
+    },
+    {
+      "article_id": "strix-halo-halogen-gufo-prefill",
+      "title": "395 不外接显卡，Prefill 接近 2000？拆解 Halogen 与 Gufo",
+      "url": "/blog/strix-halo-halogen-gufo-prefill/",
+      "language": "zh",
+      "excerpt": "395 不外接显卡，Prefill 接近 2000？拆解 Halogen 与 Gufo Ryzen AI Max+ 395 用内置 Radeon 8060S，也能在特定模型上达到接近每秒两千 token 的输入处理速度。本文调研 Halogen 与 Gufo，核对官方基准、模型量化、缓存口径与许可差异，解释为什么 prefill 不等于输出速度，并给出部署与复测路径，区分公开测量和本次资料核验。 Strix Halo Halogen Gufo 本地推理 AMD Prefill “不需要外加显卡”究竟意味着什么？ 接近 2000 的数字，具体对应什么？ G",
+      "score": 0.53243643
+    },
+    {
+      "article_id": "longstraw-million-token-rl-training-gpu",
+      "title": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token",
+      "url": "/blog/longstraw-million-token-rl-training-gpu/",
+      "language": "zh",
+      "excerpt": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token 推理已经支持百万 token，但 RL 后训练卡在 256K 以下。LongStraw 用驻留状态 + 响应回放 + 分布式原生执行三项技术，在 8 张 H20 上完成 2M token 的精确 GRPO 训练。arXiv 2607.14952，已开源。 RL训练 长上下文 GRPO 大模型 AI Agent GPU 分布式训练 后训练 LLM 一、一个越来越大的差距 二、三项核心技术 1. Resident State（驻留状态） 2. Response Repla",
+      "score": 0.5284999
+    },
+    {
+      "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+      "title": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+      "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+      "language": "en",
+      "excerpt": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision OrcaRouter's abliterated (refusal-removed) MLX quantization of Qwen3.8-27B — 672 likes, trending. Architecture: 64-layer hybrid (48 Gated DeltaNet linear attention + 1 full attention every 4 layers), native vision-langu",
+      "score": 0.5247145
+    },
+    {
+      "article_id": "virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac",
+      "title": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI",
+      "url": "/blog/virtual-ai-infra-team-local-llm-self-upgrade-dflash2-mac/",
+      "language": "zh",
+      "excerpt": "Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI hsj576/virtual-ai-infra-team 不是多 agent 角色扮演，而是一个给本地大模型做「自动测速、升级、回滚」的控制器：模型只提计划，确定性代码判决。README 的 18.14→37.52 tok/s（+106.84%）我们重算无误，但这个中位数来自代码题；按提示词拆开，散文题只快 50.6%，9 个样本的均值是 +89%。167 个测试本机全过，4 道质量门禁题被我们一句话骗过，候选库里只有 1",
+      "score": 0.5192641
+    },
+    {
+      "article_id": "hemmingway-1-27b-writing-model-benchmark-claims-teardown",
+      "title": "Hemmingway-1：一个「写得像人」的 27B 模型，能力靠自建榜单证明，还是 Qwen3.8 的一次精调？",
+      "url": "/blog/hemmingway-1-27b-writing-model-benchmark-claims-teardown/",
+      "language": "zh",
+      "excerpt": "Hemmingway-1：一个「写得像人」的 27B 模型，能力靠自建榜单证明，还是 Qwen3.8 的一次精调？ Hemmingway-1 是初创 Altworld 发布的 27B 文本模型，底子是 Qwen3.8-27B 的文本塔微调；权重约 54.7GB，两天内拿到 2745 次下载和 457 个赞。它宣称打赢多个前沿模型，但三项核心榜单全是自己出题自己跑；GitHub「Code」入口点开只有说明文档，没有一行训练或推理代码。 Hemmingway-1 Qwen3.8 文本生成模型 开放权重 自曝Benchmark Apple Silicon 为什",
+      "score": 0.5185166
+    },
+    {
+      "article_id": "opengcua-generalist-computer-use-stack",
+      "title": "OpenGCUA 首版开源：电脑 Agent 不只点鼠标，模型权重仍在路上",
+      "url": "/blog/opengcua-generalist-computer-use-stack/",
+      "language": "zh",
+      "excerpt": "OpenGCUA 首版开源：电脑 Agent 不只点鼠标，模型权重仍在路上 OpenGCUA 是阿里巴巴 MAI-UI 团队开放的通用电脑操作技术栈，组合视觉、代码、系统接口和跨设备工具。本文核对首版源码、Hugging Face 搜索结果、论文评测及 Mac 接入流程，解释为何当前没有自训模型权重，区分得分、步数、耗时与真实任务成功，并给出受控研究、权限配置和产物验收的工程建议。 OpenGCUA MAI-UI 电脑操作 Agent 开源 为什么电脑 Agent 要超出点鼠标？ 首版具体开放了什么？ 19.6 分提升和 53% 步数下降说明什么？ 想在",
+      "score": 0.51739997
+    },
+    {
+      "article_id": "gamescaling-game-agents-cpt",
+      "title": "GameScaling：游戏数据能把小模型训练成通用玩家吗？",
+      "url": "/blog/gamescaling-game-agents-cpt/",
+      "language": "zh",
+      "excerpt": "GameScaling：游戏数据能把小模型训练成通用玩家吗？ GameScaling用120组实验研究游戏Agent的持续预训练，开放0.8B到27B八个权重。本文拆解跨游戏泛化、实时评测、200ms动作协议和源码离线测试，区分推理开源与未公开训练数据。 GameScaling 游戏智能体 Qwen3.5 具身智能 持续预训练 它与本地编程模型 Flint 有什么关系？ 多玩游戏，真的会更通用吗？ 为什么必须同时看暂停与实时两种分数？ 开放了哪些模型，显存怎样估算？ 从截图到动作，工程接口有哪些坑？ 怎样先做一个可复核的最小验证？ 常见问题 它可以复现完",
+      "score": 0.5079931
+    },
+    {
+      "article_id": "qwen-rlcd-huggingface-model-name-mismatch",
+      "title": "HuggingFace 上的 Qwen-2.5-1B-RLCD：不是 1B、没有 RLCD、也没有模型权重",
+      "url": "/blog/qwen-rlcd-huggingface-model-name-mismatch/",
+      "language": "zh",
+      "excerpt": "HuggingFace 上的 Qwen-2.5-1B-RLCD：不是 1B、没有 RLCD、也没有模型权重 harshatheg/Qwen-2.5-1B-RLCD 挂在 HuggingFace 模型区、创建仅一天就有 221 赞、0 下载。我们通读了它的 README 和 MODEL_CARD：仓库里没有 RLCD（强化学习对比蒸馏），没有 1B 参数模型，也没有任何权重文件——它是一套调用现成 mlx-community/Qwen2.5-1.5B-Instruct-4bit 的并行约束解码推理代码，跟 RLCD 毫无关系。 HuggingFace 模型",
+      "score": 0.49749458
+    }
+  ]
+}

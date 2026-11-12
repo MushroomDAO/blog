@@ -1,0 +1,38 @@
+[
+  {
+    "id": "edfd5822aa35e6f756a097186995483d6e17ed9aa7b7e56c",
+    "metadata": {
+      "article_id": "billion-context-agent-compression-proxy-review",
+      "content_hash": "3a7aaa81c510fff4",
+      "excerpt": "billion-context：让Agent长会话可持续的压缩代理 billion-context 是编码智能体的上下文压缩代理，通过分层摘要、历史恢复和协议适配管理长期会话。核对官方源码、许可证附加署名要求与实验报告，解释十亿 token 的累计口径，分析缓存计费、精确召回和部署状态的边界，并给出安装、健康检查及小规模验收方法，帮助团队判断它是否适合自己的长期编码任务和模型供应商。 billion-context AI Agents Context Engineering Compression Open Source 它怎样接到Agent与模型之间？",
+      "language": "zh",
+      "tags": [
+        "billion-context",
+        "AI Agents",
+        "Context Engineering",
+        "Compression",
+        "Open Source"
+      ],
+      "title": "billion-context：让Agent长会话可持续的压缩代理",
+      "url": "/blog/billion-context-agent-compression-proxy-review/"
+    }
+  },
+  {
+    "id": "414774b514a573bea5b6a201f58d4dfc9bc6d01525254d4d",
+    "metadata": {
+      "article_id": "billion-context-agent-compression-proxy-review",
+      "content_hash": "e6050c7ce4b0bb13",
+      "excerpt": "billion-context: Agent Compression in Practice Review billion-context: hierarchical agent context compression, restoration, cache economics and benchmark limits, with setup steps and isolated mock tests. billion-context AI Agents Context Engineering Compression Open Source Where ",
+      "language": "en",
+      "tags": [
+        "billion-context",
+        "AI Agents",
+        "Context Engineering",
+        "Compression",
+        "Open Source"
+      ],
+      "title": "billion-context: Agent Compression in Practice",
+      "url": "/blog/billion-context-agent-compression-proxy-review/"
+    }
+  }
+]

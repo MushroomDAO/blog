@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "englishSlug": true,
+    "bilingual": true,
+    "descriptionLength": true,
+    "descriptionEnLength": true,
+    "titleEnLength": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "tags": true,
+    "dates": true,
+    "questionHeadings": true,
+    "copyrights": true,
+    "externalPrimaryURLs": true,
+    "internalLink": true,
+    "illustrationAnchors": true,
+    "methodLimits": true,
+    "lossLimits": true,
+    "noHardwareRanking": true
+  },
+  "passed": true,
+  "limitations": [
+    "No independent hardware security tests; no comparable failure-rate denominator or audited total losses",
+    "SEO/GEO checks do not guarantee indexing or citations"
+  ],
+  "manualImageReview": {
+    "cover": "Official Trezor Safe7 product render; expected producttextwarning; no face; not attack evidence",
+    "body": "3 independent XiaoM conceptual figures,1120x630,under90000bytes,legible labels,thirdparty claims not represented as physical tests"
+  },
+  "build": "Final pnpm build passed after illustration compression finalized"
+}

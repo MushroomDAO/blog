@@ -1,0 +1,54 @@
+{
+  "slug": "animation-datasets-motion-viewer",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/animation-datasets-motion-viewer-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 84713
+    },
+    {
+      "path": "src/assets/images/animation-datasets-motion-viewer-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 61086
+    },
+    {
+      "path": "src/assets/images/animation-datasets-motion-viewer-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 63525
+    },
+    {
+      "path": "src/assets/images/animation-datasets-motion-viewer-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 65281
+    }
+  ]
+}

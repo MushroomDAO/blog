@@ -1,0 +1,13 @@
+{
+  "slug": "apple-foundation-models-fm-cli",
+  "review": "Passed bilingual metadata, ISO dates, tags, English slug, BLUF, question headings, FAQ, authoritative URLs, alt text and bilingual copyright. CLI reference examples distinguished from real Swift test. No performance or offline audit claim.",
+  "visual_review": "Root inspected topic cover and all three figures; no cover text/faces, figure semantics match article.",
+  "primary_corrections": [
+    "macOS27 CLI distinct from26 framework",
+    "M1 eligibility not identical features/performance",
+    "8GB/14GB storage not RAM",
+    "On-device path distinct from optional cloud routes",
+    "Open SDK license not model weights license"
+  ],
+  "local_smoke": "M4 16GiB macOS26.6.2 SystemLanguageModel.default available and one Chinese response; no fm CLI installed"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "本地TTS怎么选：三款模型公开评测对比",
+  "author": "Mycelium",
+  "digest": "对照公开听感评测、语音控制、部署成本和授权，比较三款本地语音模型。",
+  "mediaId": "prCUE631thH1cmNLi42prOQNdDawCvY-BcphicV8wJEV4NQSTR2ggUvD-x7bM131",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/breezeblue-ai/breeze-tts",
+    "github.com/breezeblue-ai/tts-latency-benchmark",
+    "github.com/breezeblue-ai/tts-voice-design-benchmark",
+    "github.com/breezeblue-ai/tts-voice-direction-benchmark",
+    "github.com/fishaudio/fish-speech",
+    "github.com/sgl-project/sglang-omni",
+    "https://github.com/breezeblue-ai/breeze-tts",
+    "https://github.com/fishaudio/fish-speech",
+    "https://huggingface.co/BreezeBlue/Breeze-TTS-2",
+    "https://huggingface.co/fishaudio/drama-3",
+    "https://huggingface.co/fishaudio/s2-pro",
+    "huggingface.co/breezeblue/breeze-tts-2",
+    "huggingface.co/fishaudio/drama-3",
+    "huggingface.co/fishaudio/s2-pro"
+  ],
+  "publishedAt": "2026-10-14T15:30:55.593Z",
+  "wechatStatus": "draft",
+  "currentVerifiedMediaId": "prCUE631thH1cmNLi42prOQNdDawCvY-BcphicV8wJEV4NQSTR2ggUvD-x7bM131"
+}

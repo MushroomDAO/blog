@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-11-10",
+  "sampling": "50 recent updated issue/PR entries per repository, PRs excluded before purposive selection; not representative. No raw bodies, personal contacts or unverified fix claims.",
+  "reports": [
+    {
+      "url": "https://github.com/milind-soni/OpenMausBot/issues/5161",
+      "sourceType": "user report",
+      "topic": "Chinese memory matching",
+      "stateAtResearch": "open",
+      "reproduced": false
+    },
+    {
+      "url": "https://github.com/milind-soni/OpenMausBot/issues/5165",
+      "sourceType": "contributor report",
+      "topic": "MCP failure propagation",
+      "stateAtResearch": "open",
+      "reproduced": false
+    },
+    {
+      "url": "https://github.com/elie222/rakazo/issues/3683",
+      "sourceType": "user report",
+      "topic": "Remembering prior computer actions",
+      "stateAtResearch": "closed",
+      "reproduced": false
+    },
+    {
+      "url": "https://github.com/elie222/rakazo/issues/4052",
+      "sourceType": "user report",
+      "topic": "Misplaced payment approval stalls",
+      "stateAtResearch": "open",
+      "reproduced": false
+    },
+    {
+      "url": "https://github.com/CopilotKit/OpenBot/issues/1387",
+      "sourceType": "user report",
+      "topic": "Setup diagnostics",
+      "stateAtResearch": "open",
+      "reproduced": false
+    },
+    {
+      "url": "https://github.com/Anil-matcha/suparagent/issues/206",
+      "sourceType": "historical OpenDuet user report",
+      "topic": "Background persistence concern; not current-version reproduction",
+      "stateAtResearch": "open",
+      "reproduced": false
+    },
+    {
+      "url": "https://github.com/raghavpillai/openteam/issues/239",
+      "sourceType": "maintainer task",
+      "topic": "Idle UI memory optimization; not independent user review or proven leak",
+      "stateAtResearch": "open",
+      "reproduced": false
+    },
+    {
+      "url": "https://github.com/nightly-labs/openbot/issues/6326",
+      "sourceType": "application feedback bot",
+      "topic": "Approval card visibility",
+      "stateAtResearch": "open",
+      "reproduced": false
+    }
+  ]
+}

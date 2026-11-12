@@ -1,0 +1,44 @@
+[
+  {
+    "figure": 1,
+    "original": "/Users/jason/.codex/generated_images/01a18702-0cd1-70b3-9340-62d15c218355/exec-e757e12f-0dcb-445a-80de-6dec8877303c.png",
+    "original_sha256": "1d2a84fd549b532dff26fc73af069e8ff0afeee2f88f217bac599f7ff61a06da",
+    "final": "src/assets/images/nsh-native-shell-cross-platform-ui-fig-01.png",
+    "final_sha256": "54b5418e79eeabf64fd6abd3c51a431da262c27dd6006613847d055f55fbb84d",
+    "width": 1120,
+    "height": 630,
+    "bytes": 31547,
+    "quantization_colors": 48,
+    "distinct_rgb_colors": 48,
+    "white_corners": true,
+    "exact_white_fraction": 0.9104889455782313
+  },
+  {
+    "figure": 2,
+    "original": "/Users/jason/.codex/generated_images/01a18702-0cd1-70b3-9340-62d15c218355/exec-663d39d6-7d07-49ed-9356-bebd9cb45ffe.png",
+    "original_sha256": "84245fb4a4181d7afea1ee60823ee90e79c322351e5e6db9978aea9a1d5bf78c",
+    "final": "src/assets/images/nsh-native-shell-cross-platform-ui-fig-02.png",
+    "final_sha256": "60a3f6720a01e266b1b71d08b03803f7e747a1ae526de933f03897f2c13cd68d",
+    "width": 1120,
+    "height": 630,
+    "bytes": 26638,
+    "quantization_colors": 48,
+    "distinct_rgb_colors": 48,
+    "white_corners": true,
+    "exact_white_fraction": 0.9345096371882086
+  },
+  {
+    "figure": 3,
+    "original": "/Users/jason/.codex/generated_images/01a18702-0cd1-70b3-9340-62d15c218355/exec-d616c458-f61d-489d-8c01-c7b55702606f.png",
+    "original_sha256": "6f54a310497b1c5ddbe1803fe082b275cd85c25b733cd45fbbc9a2aa75b2140d",
+    "final": "src/assets/images/nsh-native-shell-cross-platform-ui-fig-03.png",
+    "final_sha256": "26974b0047adcae0fc58c50db3617364b0f150aa5dc13b2891e1acdbf1379513",
+    "width": 1120,
+    "height": 630,
+    "bytes": 25672,
+    "quantization_colors": 48,
+    "distinct_rgb_colors": 48,
+    "white_corners": true,
+    "exact_white_fraction": 0.9491680839002268
+  }
+]

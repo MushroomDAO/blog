@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "specialized-inference-engines-rise-hardware-specific-llm-optimization",
+      "title": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照",
+      "url": "/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
+      "language": "zh",
+      "excerpt": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照 Splash 1.4.0 为 Apple Silicon 增加 Qwen3.8-Flash-Next、专家与 PLE 的 SSD 流式加载及长上下文支持。本文复核官方同机 Q2_0 对照，区分解码、预填充、缓存首字延迟和并发总吞吐，核对120tok/s的来源，并说明量化精度、内存预算、磁盘读写及可重复性的代价。 推理引擎 LLM WASM 性能优化 Apple Silicon NVIDIA AMD 开源工具 Splash 1.4.0 的速度数字，到底测了什么？ 为什么要把专家、PLE 和 KV",
+      "score": 0.45471334
+    },
+    {
+      "article_id": "oh-my-mermaid-codebase-architecture-docs-ai",
+      "title": "oh-my-mermaid：让 AI 把你的代码库画成可导航的架构图",
+      "url": "/blog/oh-my-mermaid-codebase-architecture-docs-ai/",
+      "language": "zh",
+      "excerpt": "oh-my-mermaid：让 AI 把你的代码库画成可导航的架构图 oh-my-mermaid 是一个 Claude Code skill，一条命令让 AI 递归扫描代码库、生成多视角 Mermaid 架构图，文件系统本身就是架构树。1817 Star，MIT，支持 Claude/Codex/Cursor。 Claude Code Mermaid 架构图 代码可视化 Skill 文档工具 AI工具 TypeScript 开发者工具 一、问题 二、工作原理 三、快速上手 四、每个元素的 7 个字段 五、云端存储与共享 六、CLI 完整命令 七、Roadm",
+      "score": 0.4319689
+    },
+    {
+      "article_id": "openflowkit-diagram-mcp-local-first-teardown",
+      "title": "OpenFlowKit 拆解：一个真在维护的开源画图 SPA，能被 Claude 直接调用",
+      "url": "/blog/openflowkit-diagram-mcp-local-first-teardown/",
+      "language": "zh",
+      "excerpt": "OpenFlowKit 拆解：一个真在维护的开源画图 SPA，能被 Claude 直接调用 Vrun-design/openflowkit 是 795 星、MIT 协议的纯前端画图工具：Mermaid 粘贴自动配 1600+ 图标、双向 DSL 编辑器、10 家 AI 供应商（含本地 Ollama）、WebCodecs 硬编码 MP4 导出，还发布了一个真实可用的 MCP 服务。我们在 Mac mini 上克隆、装依赖、跑单测、跑生产构建全部实测通过，同时也挖出了它没在 README 里明说的坑。 OpenFlowKit MCP Mermaid 流程图 ",
+      "score": 0.4297719
+    },
+    {
+      "article_id": "mcp-rag-server-local-rag-claude-code-blueprint",
+      "title": "mcp-rag-server: A Minimal MCP + Local RAG Blueprint for Claude Code",
+      "url": "/blog/mcp-rag-server-local-rag-claude-code-blueprint/",
+      "language": "en",
+      "excerpt": "mcp-rag-server: A Minimal MCP + Local RAG Blueprint for Claude Code MMC1410001/mcp-rag-server is a 0-star, MIT-licensed minimal MCP + RAG server: local all-MiniLM-L6-v2 embeddings, persistent ChromaDB, five MCP tools. We read all of the code and ran it on a Mac mini: 39/39 tests ",
+      "score": 0.41938224
+    },
+    {
+      "article_id": "dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile",
+      "title": "dsh-plugin-mobile-gateway: Add Mobile Access to DeepSeek Harness — QR Pairing, Tailscale One-liner for Remote",
+      "url": "/blog/dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile/",
+      "language": "en",
+      "excerpt": "dsh-plugin-mobile-gateway: Add Mobile Access to DeepSeek Harness — QR Pairing, Tailscale One-liner for Remote Clarklevis1995/dsh-plugin-mobile-gateway, MIT open source, JavaScript plugin that adds a WebSocket mobile gateway to DeepSeek Harness (DSH). Supports LAN direct connect, ",
+      "score": 0.41846055
+    },
+    {
+      "article_id": "moss-tts-nano-ultralight-multilingual-tts-open-source",
+      "title": "0.1B Parameters, 20 Languages: MOSS-TTS-Nano Ultra-Lightweight TTS Is Open Source",
+      "url": "/blog/moss-tts-nano-ultralight-multilingual-tts-open-source/",
+      "language": "en",
+      "excerpt": "0.1B Parameters, 20 Languages: MOSS-TTS-Nano Ultra-Lightweight TTS Is Open Source OpenMOSS open-sources MOSS-TTS-Nano: 0.1B parameters, CPU-only, 48kHz stereo output, 20-language zero-shot voice cloning. Runs smoothly on a single CPU core (M4 MacBook Air), ONNX inference without ",
+      "score": 0.41802382
+    },
+    {
+      "article_id": "flowix-markdown-notebook-agent-memory-mcp-claude-code-codex",
+      "title": "flowix-markdown-notebook-agent-memory-mcp-claude-code-codex",
+      "url": "/blog/flowix-markdown-notebook-agent-memory-mcp-claude-code-codex/",
+      "language": "en",
+      "excerpt": "flowix-markdown-notebook-agent-memory-mcp-claude-code-codex Flowix is an open-source (MIT) local-first desktop Markdown notebook (329 stars) built with Tauri 2 + TypeScript + Rust. Core concept: turn your notes into durable context for AI agents. Ships a bundled flowix-cli MCP se",
+      "score": 0.41700906
+    },
+    {
+      "article_id": "a16z-anish-acharya-ai-loops-moats-consumer",
+      "title": "a16z 合伙人 80 分钟 AI 深谈：护城河是被发现的，最大机会是让人更快乐",
+      "url": "/blog/a16z-anish-acharya-ai-loops-moats-consumer/",
+      "language": "zh",
+      "excerpt": "a16z 合伙人 80 分钟 AI 深谈：护城河是被发现的，最大机会是让人更快乐 Anish Acharya 在 Lenny 播客中提出了四个反直觉洞察：公司正在变成Loop、模型选择是门手艺、消费者真正需要的不是效率而是快乐、护城河从来不是设计出来的。这不是预测，是当下正在发生的重组逻辑。 a16z AI-strategy consumer-AI product Anish-Acharya moat 一、公司正在变成 Loop：人类守住分叉点就够了 二、Model Sommelier：会选模型，比用最贵的模型更重要 三、消费者最大机会：不是\"帮我省时间",
+      "score": 0.41666162
+    },
+    {
+      "article_id": "zhai-nan-home-lab-tiny-world-project-nomad",
+      "title": "Homebody God Mode: Build a Tiny World + Set Up an Offline Survival Knowledge Base",
+      "url": "/blog/zhai-nan-home-lab-tiny-world-project-nomad/",
+      "language": "en",
+      "excerpt": "Homebody God Mode: Build a Tiny World + Set Up an Offline Survival Knowledge Base Two open-source projects for the indoor generation: tiny-world-builder lets you sculpt a 3D voxel world in your browser, while Project N.O.M.A.D gives you AI, Wikipedia, and offline maps when the in",
+      "score": 0.41455075
+    },
+    {
+      "article_id": "nano-vllm-interactive-guide-scheduler-kvcache-cuda-graph-tutorial",
+      "title": "nano-vllm-interactive-guide-scheduler-kvcache-cuda-graph-tutorial",
+      "url": "/blog/nano-vllm-interactive-guide-scheduler-kvcache-cuda-graph-tutorial/",
+      "language": "en",
+      "excerpt": "nano-vllm-interactive-guide-scheduler-kvcache-cuda-graph-tutorial nano-vllm-interactive-guide is an interactive source-code learning project based on GeeeekExplorer/nano-vllm (~1200 lines Python). 13 Chinese tutorial chapters + 13 pure HTML browser experiments + per-chapter exerc",
+      "score": 0.41441807
+    }
+  ]
+}

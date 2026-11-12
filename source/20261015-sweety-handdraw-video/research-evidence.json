@@ -1,0 +1,70 @@
+{
+  "asOf": "2026-10-15",
+  "repository": "https://github.com/threerocks/sweety-handdraw-video",
+  "commit": "5206ec0d17f9b353e400b64b9c51ad69e721e02a",
+  "packageVersion": "1.2.3",
+  "license": "MITcode/docs, vendorednoticesmaintained; model/service/font terms separate",
+  "dedup": "Exact URL absent; entity onlyrawbotmaterial. No oldBlog/localM2/currentdraft. Publishedlist48001 readgap retained.",
+  "sources": [
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "skills/sweety-handdraw-video/references/continuous-narration.md",
+    "skills/sweety-handdraw-video/references/style-and-drawing.md",
+    "skills/sweety-handdraw-video/references/quality-gates.md"
+  ],
+  "architecture": "Agentplans/scripts/art; Python/Pillow/SciPy/FFmpeg local pathreveal/fill/handwriting; noexternalimage-to-video model. Continuouscheckednarrationmaster+timestamps precedevisuals.",
+  "voice": "VoxCPM2MLX/localcompatibleVoiceStudio HTTP/existingnarration. No weightsbundled, authorM3Max36GB, no claimedM4TTS/minimum16GBvalidation.",
+  "actualTests": {
+    "command": "python -m unittest discover -s skills/sweety-handdraw-video/scripts -p test_*.py",
+    "passed": 59,
+    "fixture": "Originalsmoke_test.py, generatedshapes/text/sinetones, doctor/build/render/verify, blockedfinalizefixture, stalejobverificationrejected",
+    "media": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 960,
+          "height": 540,
+          "r_frame_rate": "24/1"
+        },
+        {
+          "codec_name": "aac",
+          "sample_rate": "48000",
+          "channels": 2,
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "13.430000",
+        "size": "609258"
+      }
+    },
+    "fullProduction": false,
+    "limitations": [
+      "No freshTTS or AIillustrations for video pipeline",
+      "No subjectivewatch/listen acceptance of officialexamples or newproductionstory",
+      "ExifTool notonPATH, fullimageprivacychain unverified",
+      "No speedbenchmark; testduration is notrenderlatency"
+    ]
+  },
+  "sourceImages": "Twoofficialcover/final candidates inspected; mostlytext/storyframesunsuitablecover. Originalhardware-independentdrawingdeskcover generated.",
+  "banner": {
+    "origin": "localFLUX2Klein seed114",
+    "bytes": 82709,
+    "dimensions": "1200x630",
+    "sha256": "6e474774e789fa5f25c301b65f5b4c7b440a1f2b5c3eaf924f782f1e4c712e60",
+    "machineVerified": "provenance/framing/OCR/faces pass",
+    "rootInspection": "unmarkedbrushbristles+watercolorwash+microphonemesh, matched drawing+narration; seed113discarded due tiny pencilmarkings"
+  },
+  "bodyImages": {
+    "count": 3,
+    "dimensions": "1280x720",
+    "bytes": [
+      40604,
+      42713,
+      55429
+    ],
+    "inspection": "connected productionparts (notstrictchronology), immutablevoice/visualadjustment, fixture engineeringcheck separate from uncheckedstory/visual/listening review"
+  }
+}

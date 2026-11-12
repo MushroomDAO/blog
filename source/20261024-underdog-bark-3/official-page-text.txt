@@ -1,0 +1,181 @@
+Underdog
+Models
+Scores
+Hugging Face
+Get Underdog
+Bark 3.0
+in 163 MB.
+Beats NVIDIA’s Parakeet on meetings,
+15x smaller
+Beats OpenAI’s Whisper,
+57x smaller
+Our models
+Meet Underdog Bark 3.0
+The Underdog team
+15 October 2026
+Bark is the speech model in Underdog. When you hold fn and talk, or record a meeting, Bark turns your voice into text on your Mac. Nothing is sent anywhere. Bark 3.0 is a 163 MB download, and it’s as accurate as
+NVIDIA’s Parakeet
+, which is fifteen times bigger. It beats Whisper large-v3, which is 57 times bigger.
+Download
+163 MB
+Word errors
+4.94%
+Runs on
+your Mac
+Language
+English
+Bark 3.0 is open source
+under CC-BY 4.0. You’re welcome to use it.
+Download it on Hugging Face
+and
+tell us what you think
+.
+In
+Underdog
+it runs natively, with nothing to install. Update Underdog and Speak and meeting notes use it.
+Bark 3.0 Clean writes what you meant
+People don’t talk the way they write. Bark 3.0 Clean leaves out “um” and “uh”, filler like “you know” and “I mean”, false starts and repeated words. So “Um, I don-, I can’t think off my head” comes out as “I can’t think off my head.”
+It’s the version Underdog uses by default, for dictation and for meeting notes. If you want every word, pick Bark 3.0 or Bark 3.0 Plus in Speak.
+The Bark 3.0 family
+Model
+Download
+Word errors
+average %
+In Underdog
+Bark 3.0 Clean
+Writes what you meant: no um, no false starts
+180 MB
+5.83*
+Default for Speak and meeting notes
+Bark 3.0
+Every word, in the smallest file
+163 MB
+4.94
+In Speak
+Bark 3.0 Plus
+Every word, with fewer mistakes
+180 MB
+4.76
+In Speak
+Bark 3.0 Pro
+Full precision, the most accurate
+1.25 GB
+4.29
+Hugging Face only
+* Clean leaves fillers out on purpose. These tests keep every “um” in their answers, so each one Clean drops counts as an error.
+How accurate is it?
+We scored Bark on the
+Open ASR Leaderboard
+’s seven English test sets: audiobooks, meetings, earnings calls, podcasts, finance calls and parliament speeches. The number is the share of words the model gets wrong, so lower is better. Bark 3.0 is the smallest download here. Bark 3.0 Plus, at 180 MB, makes fewer mistakes than every other model under 4.6 GB except Bark 3.0 Pro.
+Word error rate against download size. Every model below the line is bigger and less accurate than a Bark.
+Model
+Download
+Meetings
+AMI, % errors
+All seven
+average % errors
+Bark 3.0 Pro
+1,254 MB
+7.16
+4.29
+Bark 3.0 Plus
+180 MB
+7.76
+4.76
+Bark 3.0
+163 MB
+7.82
+4.94
+Hojo-ASR-V1
+11,957 MB
+7.54
+4.29
+Qwen3-ASR-1.7B
+4,699 MB
+8.31
+4.43
+higgs-audio-v3-stt
+5,351 MB
+7.19
+4.45
+Canary-Qwen 2.5B
+5,119 MB
+7.91
+4.55
+Granite Speech 4.1 2B
+4,832 MB
+7.06
+4.69
+Cohere Transcribe
+4,132 MB
+7.02
+4.85
+Granite Speech 5.0 470M (non-commercial)
+946 MB
+7.31
+4.92
+NVIDIA Parakeet TDT 0.6B v3
+2,508 MB
+9.42
+4.94
+Granite Speech 5.0 470M
+946 MB
+7.71
+5.07
+Qwen3-ASR-0.6B
+1,876 MB
+9.33
+5.16
+Phonon-2
+164 MB
+9.32
+5.21
+Whisper large-v3
+9,261 MB
+13.63
+6.04
+Whisper large-v3-turbo
+1,618 MB
+13.88
+6.58
+Bark rows use the leaderboard’s scoring code. The other rows are the leaderboard’s published numbers, as of 9 October 2026.
+Meetings are where it shows most. Bark 3.0 gets 7.82% of meeting words wrong. Parakeet gets 9.42%, and Whisper large-v3 gets 13.63%.
+Cleaning up, measured
+DisfluencySpeech is 250 clips of people talking off the cuff, full of “um”, restarts and repeats. A cleanup model should score low against the cleaned transcripts. A model that writes every word should score low against the word-for-word ones.
+Model
+Download
+Against cleaned
+% errors
+Against word for word
+% errors
+Bark 3.0 Clean
+180 MB
+4.08
+13.85
+Bark 3.0
+163 MB
+16.53
+3.15
+Good to know
+English only.
+For other languages, Underdog still offers Whisper Large v3 Turbo in Speak.
+Fast.
+In Underdog on an M5 Max MacBook Pro, Bark 3.0 transcribes 5 minutes of audio in half a second, 595 times faster than real time.
+No word timings or speaker names yet.
+Meeting notes label you and the call, not each person.
+Your words list
+(names and terms you add in Settings) works with the earlier Bark 1.0, not with Bark 3.0 yet.
+Bark 3.0 is built on
+parakeet-tdt-0.6b-v3
+by NVIDIA and
+parakeet-ultra
+by Moondream, both CC-BY 4.0. Thank you to both teams.
+Get Underdog
+Download on Hugging Face
+Meet Saluki 27B
+Underdog
+Manifesto
+Security
+Privacy
+Terms
+Underdog Bark 3.0 — Underdog

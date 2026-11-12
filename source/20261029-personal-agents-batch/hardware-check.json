@@ -1,0 +1,6 @@
+{
+  "cpu": "Apple M4",
+  "memoryBytes": 17179869184,
+  "modelInferenceAttempted": false,
+  "reason": "Official Q4 GGUF21713463136B exceeds17179869184B hostphysicalmemory; no swap-based inference claim"
+}

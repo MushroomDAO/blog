@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-31T06:44:10.812328+00:00",
+  "passed": true,
+  "checks": {
+    "englishSlug": true,
+    "titles": true,
+    "description": true,
+    "descriptionEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "tags": true,
+    "category": true,
+    "dates": true,
+    "bilingual": true,
+    "copyright": true,
+    "questions": true,
+    "FAQ": true,
+    "bodyAnchors": true,
+    "sourcePin": true,
+    "testLimits": true,
+    "licenseException": true,
+    "BLUF": true,
+    "internalLink": true
+  },
+  "lengths": {
+    "title": 29,
+    "titleEn": 60,
+    "description": 152,
+    "descriptionEn": 156,
+    "wechatTitle": 20,
+    "wechatDigest": 40
+  },
+  "manualReview": [
+    "Equivalent bilingual conclusions,FAQ,provenance and limits",
+    "External sources and license URLs plain for WeChat",
+    "No claim of game-engine import, model iteration or controlled perf measurement",
+    "Astro manages page title, meta and heading anchors; no custom FAQ schema added"
+  ]
+}

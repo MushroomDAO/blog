@@ -1,0 +1,24 @@
+{
+  "slug": "pstack-engineering-workflow",
+  "bilingual": true,
+  "requiredFrontmatter": true,
+  "BLUF": true,
+  "questionHeadings": true,
+  "FAQ": true,
+  "primaryLinks": true,
+  "copyrightAndCanonicalBoth": true,
+  "originalAnalysis": "Single-agent acceptance before parallel delegation; instructions versus enforced constraints",
+  "sourceInventory": {
+    "skills": 58,
+    "principles": 24,
+    "playbooks": 23,
+    "agents": 2
+  },
+  "notMeasured": [
+    "agent quality",
+    "token savings",
+    "development speed"
+  ],
+  "dedupResolution": "Only raw KB and incidental Unlazy references; no dedicated article or M2 receipt",
+  "banner": "Official asset only anime portrait logo, generated relevant photoreal workbench instead; verified no text/faces"
+}

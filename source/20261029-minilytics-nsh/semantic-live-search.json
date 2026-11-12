@@ -1,0 +1,179 @@
+{
+  "checkedAt": "2026-10-29T09:41:17.567877+00:00",
+  "queries": [
+    {
+      "query": "Minilytics 网站流量收入归因 Cloudflare",
+      "response": {
+        "results": [
+          {
+            "article_id": "machine-web-paradigm-57-percent-machines-internet-shift",
+            "title": "57.5%：互联网的主角换了，只是大多数人还没发现",
+            "url": "/blog/machine-web-paradigm-57-percent-machines-internet-shift/",
+            "language": "zh",
+            "excerpt": "57.5%：互联网的主角换了，只是大多数人还没发现 Cloudflare CEO Matthew Prince 2026年6月推文：全球HTML页面HTTP请求里，机器人占57.5%，人类只剩42.5%。这不是流量波动，是互联网三十年来第一次主角替换。梳理数据背后的结构、逻辑与每个人必须面对的现实。 AI Agent Web范式 机器流量 互联网 Cloudflare pay-to-crawl AEO 内容创作 一、数字本身 二、三股驱动力，不是一个来源 三、旧的交换逻辑断了 四、为什么是Cloudflare先喊出来 五、37%是恶意的，指标已经失真 六",
+            "score": 0.56953466
+          },
+          {
+            "article_id": "cloudflare-drop-instant-deploy-guide",
+            "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+            "url": "/blog/cloudflare-drop-instant-deploy-guide/",
+            "language": "zh",
+            "excerpt": "Cloudflare Drop：拖一下文件夹，网站就上线了 Cloudflare 刚上线了 Drop（cloudflare.com/drop）——无需注册账号、无需任何配置，把 HTML/CSS/JS 文件夹或 ZIP 拖进去，网站立刻部署到 Cloudflare 全球网络。普通人用它上线网站的完整指南。 Cloudflare 部署 静态网站 免费工具 前端 零配置 CDN 它是什么 上手只需 30 秒 第一步：准备你的文件 第二步：打开 cloudflare.com/drop 第三步：拖进去，等几秒，就好了 它能做什么 / 不能做什么 ✅ 能做的 ❌ ",
+            "score": 0.54245824
+          },
+          {
+            "article_id": "cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate",
+            "title": "Cloudflare 把浏览器也 Serverless 了：Kitesurf 调研",
+            "url": "/blog/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate/",
+            "language": "zh",
+            "excerpt": "Cloudflare 把浏览器也 Serverless 了：Kitesurf 调研 Cloudflare 开源了 Kitesurf，一个专为 AI Agent 构建的浏览器，完全跑在 Cloudflare Workers 上。没有 Chrome 进程，Rust+WASM 做引擎，页面 JS 直接跑在 V8 isolate 里。CPU 消耗比 Chromium 低 3-4x，内存低 5-7x。本文深度分析架构、性能数据、工程接入方式，以及这件事对 AI Agent 基础设施的意义。 Cloudflare 浏览器引擎 AI Agent WebAssembly",
+            "score": 0.5250065
+          },
+          {
+            "article_id": "hybrid-search-pagefind-vectorize-workers-ai-guide",
+            "title": "给静态博客装一套「关键词 + 语义」混合搜索：从 Pagefind 到 Cloudflare Vectorize 的完整实战记录（附复刻指南）",
+            "url": "/blog/hybrid-search-pagefind-vectorize-workers-ai-guide/",
+            "language": "zh",
+            "excerpt": "给静态博客装一套「关键词 + 语义」混合搜索：从 Pagefind 到 Cloudflare Vectorize 的完整实战记录（附复刻指南） 记录给 blog.mushroom.cv 加一套关键词+语义混合搜索的完整过程：先上零成本的 Pagefind 基线，用真实数据决定值不值得上向量检索，再用 Cloudflare Workers AI（bge-m3）+ Vectorize 上线。踩过的平台坑、真实修过的 bug、密码墙加了又拆的完整决策链，以及普通人如何克隆仓库复刻同一套技术栈。 Cloudflare Workers AI Vectorize P",
+            "score": 0.5245653
+          },
+          {
+            "article_id": "cloudflare-workers-ai-glm-kimi-deepseek-minimax",
+            "title": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token",
+            "url": "/blog/cloudflare-workers-ai-glm-kimi-deepseek-minimax/",
+            "language": "zh",
+            "excerpt": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token Cloudflare Workers AI 已上线 GLM-5.2、Kimi K2.7 Code、1M 上下文的 Kimi K3、DeepSeek V4 Pro、MiniMax M3，同一个 token、同一行代码即可调用，还理清了自托管与第三方托管的价格和数据边界。 Cloudflare Workers AI GLM-5.2 Kimi K3 DeepSeek V4 MiniMax 边缘推理 起因 结论：你想要的基本都有 但有一条分界",
+            "score": 0.5194861
+          },
+          {
+            "article_id": "cf-workers-checkproxyip-single-file-worker-tcp-tls-probe",
+            "title": "一个 _worker.js 文件就是全部：CF-Workers-CheckProxyIP 在 Workers 上做 TCP/TLS 连通性体检",
+            "url": "/blog/cf-workers-checkproxyip-single-file-worker-tcp-tls-probe/",
+            "language": "zh",
+            "excerpt": "一个 _worker.js 文件就是全部：CF-Workers-CheckProxyIP 在 Workers 上做 TCP/TLS 连通性体检 cmliu/CF-Workers-CheckProxyIP 把页面、DNS 解析、TCP/TLS 探测全塞进一个 _worker.js，复制粘贴进 Cloudflare 控制台就能跑。技术看点是它用 cloudflare:sockets 在 Worker 里真的建 TCP 连接做 TLS 握手，再靠两个固定探针推断候选目标是 ipv4_only 还是双栈。免费套餐的子请求上限逼出了「每批最多 15 个域名、3 秒",
+            "score": 0.51915103
+          },
+          {
+            "article_id": "cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune",
+            "title": "Cloudflare 开源 Clef 决策模型：兼容 Jev API、9B 版 Mac 可跑，榜首成绩是自报的",
+            "url": "/blog/cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune/",
+            "language": "zh",
+            "excerpt": "Cloudflare 开源 Clef 决策模型：兼容 Jev API、9B 版 Mac 可跑，榜首成绩是自报的 Cloudflare 2026-10-01 以 Apache-2.0 开源 Clef（Qwen3.8-27B 底座，273.6 亿参数）和 Clef-flash（Qwen3.5-9B，94.1 亿参数），一次前向给每个选项出概率、零输出 token，兼容 Jev /v1/systemone。Decision Index 上 Clef 61.21 高于 Jev 57.91，但这是 Cloudflare 自己跑的、上游榜单未复现，社区 MLX 抽样",
+            "score": 0.51459074
+          },
+          {
+            "article_id": "cloudflare-mesh-tailscale-alternative-private-network-docker-k8s",
+            "title": "Cloudflare Mesh：赛博菩萨的 Tailscale 平替，免费 50 节点 + 容器化部署",
+            "url": "/blog/cloudflare-mesh-tailscale-alternative-private-network-docker-k8s/",
+            "language": "zh",
+            "excerpt": "Cloudflare Mesh：赛博菩萨的 Tailscale 平替，免费 50 节点 + 容器化部署 Cloudflare Mesh 是 Cloudflare One 旗下的私有网格网络服务，原名 WARP Connector，一句话定义：CF 版 Tailscale。手机、电脑、服务器、AI 机器人，只要安装 Cloudflare One Client 就能拉进同一个加密局域网，每台设备分配一个 Mesh IP（100.96.0.0/12 CGNAT），通过 Cloudflare 全球网络路由，自带后量子加密。免费额度：50 节点 + 50 用户。2",
+            "score": 0.5122729
+          },
+          {
+            "article_id": "ploy-ai-webflow-founder-website-growth-engine-27m",
+            "title": "Ploy：Webflow 联合创始人的第三次创业——用 AI Agent 把网站变成增长引擎",
+            "url": "/blog/ploy-ai-webflow-founder-website-growth-engine-27m/",
+            "language": "zh",
+            "excerpt": "Ploy：Webflow 联合创始人的第三次创业——用 AI Agent 把网站变成增长引擎 Bryant Chou（Webflow 联合创始人兼前 CTO，任职 12 年）创立的 AI 营销平台 Ploy，2026 年 6 月以 2700 万美元种子轮融资从 YC S26 出发。核心命题：网站不应该是静态手册，而是始终运转的增长引擎。三个 Agent 模块（Ploy Web 建站优化、Ploy Grow 访客识别外联、Ploy Ads 广告投放归因）持续运转，13% 的 YC P26 公司已在使用。 AI营销 网站优化 增长工具 YC AEO ABM ",
+            "score": 0.50246966
+          },
+          {
+            "article_id": "pinme-ipfs-deploy-cli-mac-review",
+            "title": "PinMe Hands-On: One Command to IPFS, but the Full-Stack Template Lands on Cloudflare Workers",
+            "url": "/blog/pinme-ipfs-deploy-cli-mac-review/",
+            "language": "en",
+            "excerpt": "PinMe Hands-On: One Command to IPFS, but the Full-Stack Template Lands on Cloudflare Workers PinMe is glitternetwork's zero-config deploy CLI: 3,742 GitHub stars, MIT license, last commit 2026-09-12. We verified locally via npx: `pinme --version` returns 2.0.12, and `pinme upload",
+            "score": 0.49158904
+          }
+        ]
+      }
+    },
+    {
+      "query": "长桥 NSH Rust TSX 原生界面",
+      "response": {
+        "results": [
+          {
+            "article_id": "ratatui-rust-tui-terminal-ui-guide",
+            "title": "Ratatui：Codex、grok-build、CodeWhale 都选了它——Rust 终端 UI 的事实标准，21k stars",
+            "url": "/blog/ratatui-rust-tui-terminal-ui-guide/",
+            "language": "zh",
+            "excerpt": "Ratatui：Codex、grok-build、CodeWhale 都选了它——Rust 终端 UI 的事实标准，21k stars Ratatui 是 Rust 终端 UI 的事实标准。Codex 锁了定制 revision，grok-build 自建 inline+textarea，CodeWhale 跟进上游 0.30——三者实现不同，但渲染层的选择是一致的。sub-millisecond 即时渲染、约束式布局、15+ 内置 Widget、纯 Rust 零 C 依赖，生态已扩展到 WebAssembly / UEFI / 嵌入式设备。 Rust ",
+            "score": 0.5270221
+          },
+          {
+            "article_id": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+            "title": "Sprite Studio：本地优先 AI 2D 游戏美术工作台，Rust 骨骼引擎确定性渲染 + Codex 驱动逐帧动画",
+            "url": "/blog/sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation/",
+            "language": "zh",
+            "excerpt": "Sprite Studio：本地优先 AI 2D 游戏美术工作台，Rust 骨骼引擎确定性渲染 + Codex 驱动逐帧动画 Sprite Studio 是一个开源（MIT）的本地优先 AI 2D 游戏美术桌面工作台，基于 Tauri 2 + Svelte + Rust + SQLite + Codex CLI。支持聊天生成精灵、AI 逐帧动画（身份参考 + 邻帧参考保证风格连贯）、原生 Rust 骨骼绑定引擎（关节点 + 胶囊骨骼 + IK + 确定性像素渲染，无需图像生成）、以及 PNG 精灵表导出。覆盖 macOS、Windows、Linux，内置",
+            "score": 0.5262378
+          },
+          {
+            "article_id": "lingchat-ai-galgame-emotion-desktop-pet-tauri",
+            "title": "LingChat: Immersive AI Galgame Companion — 18-Class Emotion Recognition, Screen Perception, Live2D, Built on Tauri 2 + Vue 3",
+            "url": "/blog/lingchat-ai-galgame-emotion-desktop-pet-tauri/",
+            "language": "en",
+            "excerpt": "LingChat: Immersive AI Galgame Companion — 18-Class Emotion Recognition, Screen Perception, Live2D, Built on Tauri 2 + Vue 3 SlimeBoyOwO/LingChat, AGPL-3.0, Rust, 2,255 stars. Immersive AI Galgame companion chat: self-trained 18-class emotion recognition, desktop screenshot perce",
+            "score": 0.51416904
+          },
+          {
+            "article_id": "grok-build-xai-coding-agent-rust-tui-fullscreen-acp",
+            "title": "Grok Build：xAI 开源 Rust 编码 Agent，全屏 TUI + ACP 协议",
+            "url": "/blog/grok-build-xai-coding-agent-rust-tui-fullscreen-acp/",
+            "language": "zh",
+            "excerpt": "Grok Build：xAI 开源 Rust 编码 Agent，全屏 TUI + ACP 协议 xai-org/grok-build ⭐26283，SpaceXAI（xAI）开源的终端编码 Agent，Rust 实现，全屏鼠标交互 TUI，支持文件编辑/命令执行/网页搜索/长任务，交互/无头/编辑器嵌入三种模式，ACP 协议，MCP/Skills/插件/沙盒，Apache 2.0。 AI coding agent Rust TUI xAI open source MCP ACP terminal coding tools xAI 把自己的编码 Agent",
+            "score": 0.50137573
+          },
+          {
+            "article_id": "nvidia-flare-local-inference",
+            "title": "NVIDIA Flare 开源：Rust 推理运行时，怎样服务 DeepSeek 与本地 Agent？",
+            "url": "/blog/nvidia-flare-local-inference/",
+            "language": "zh",
+            "excerpt": "NVIDIA Flare 开源：Rust 推理运行时，怎样服务 DeepSeek 与本地 Agent？ 核查NVIDIA Flare官方仓库，拆解Python Ignition准备模型、Rust Helios在线服务、预捕获CUDA Graph和FP8缓存设计，并整理DeepSeek V4.1 Flash单机TP4、四台DGX Spark部署与接口兼容限制。 NVIDIA Flare Rust DGX Spark 本地推理 DeepSeek “纯 Rust”究竟省掉了哪一段？ 为什么长对话和 Agent 值得单独优化？ DeepSeek V4.1 Fla",
+            "score": 0.4967079
+          },
+          {
+            "article_id": "oxideterm-ai-native-terminal-rust-gpui",
+            "title": "终端界的 Zed：OxideTerm 用 GPUI + 纯 Rust SSH 把 iTerm2、Termius 和 VSCode Remote 做成了一个",
+            "url": "/blog/oxideterm-ai-native-terminal-rust-gpui/",
+            "language": "zh",
+            "excerpt": "终端界的 Zed：OxideTerm 用 GPUI + 纯 Rust SSH 把 iTerm2、Termius 和 VSCode Remote 做成了一个 OxideTerm（958 stars）是一个 AI-native 远程工作台：GPUI 原生渲染（零 Electron）、纯 Rust SSH（零 OpenSSL、零 C 依赖）、内置 SFTP 文件管理器、轻量 IDE、端口转发，外加 BYOK-first 的 OxideSens AI。50~70MB 包体，把过去要靠三四个工具才能完成的远程工作，压进了一个本地优先的桌面应用。 终端工具 Rust",
+            "score": 0.49507403
+          },
+          {
+            "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+            "title": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时",
+            "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+            "language": "zh",
+            "excerpt": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时 zavora-ai 社区维护的 ADK-Rust v2.2.0——不是 Google 官方项目，但把 Agent 运行时拆成 43 个可独立发布的 crate，按需引用。Type-safe、全异步、568 μs agent loop 开销，支持 Gemini/OpenAI/Anthropic/Ollama，含 graph 工作流、durable resume、realtime 语音、adk-skill 解析。本文做一次工程拆解。 rust agent-runtim",
+            "score": 0.49111903
+          },
+          {
+            "article_id": "dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem",
+            "title": "dsh-tui-pi：DeepSeek Harness 的社区 TUI 生态，把编码 Agent 终端做成了 pi 风格",
+            "url": "/blog/dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem/",
+            "language": "zh",
+            "excerpt": "dsh-tui-pi：DeepSeek Harness 的社区 TUI 生态，把编码 Agent 终端做成了 pi 风格 DeepSeek Harness (dsh) 是 DeepSeek 的编码 Agent 运行时，类比 Claude Code。dsh-tui-pi 是社区构建的 pi 风格 TUI 插件套件，提供实时子 Agent 监控、历史回溯与分叉、飞书手机遥控、动态上下文裁剪、MCP 适配器等 15+ 功能，以及 8 个配套插件。 AI DeepSeek TUI Terminal Agent 编码Agent 插件 开源 dsh MCP 先说 d",
+            "score": 0.4865823
+          },
+          {
+            "article_id": "dots-tts-2b-continuous-autoregressive-meanflow-voice-clone-zero-shot",
+            "title": "dots.tts：2B 全连续自回归 TTS——为什么不用离散 Token，以及这个科研底座能赋能哪些新应用",
+            "url": "/blog/dots-tts-2b-continuous-autoregressive-meanflow-voice-clone-zero-shot/",
+            "language": "zh",
+            "excerpt": "dots.tts：2B 全连续自回归 TTS——为什么不用离散 Token，以及这个科研底座能赋能哪些新应用 dots.tts 是 dots 团队联合上交大 X-LANCE 实验室开源的全连续端到端自回归 TTS 基座模型（2B 参数）。区别于 VALL-E 等离散 Token 路线，dots.tts 直接在 AudioVAE 压缩的连续隐空间逐块生成波形，语言模型骨干为 Qwen2.5-1.5B-Base，配 AR 流匹配头（MeanFlow）。在 Seed-TTS-Eval 上达到 SOTA。开放 7 个 checkpoint、支持 SGLang O",
+            "score": 0.48312286
+          },
+          {
+            "article_id": "standrig-ai-2d-rigging-mcp-psd-cubism",
+            "title": "StandRig：AI 直接当 rigger，MCP 原生的 2D 角色建模系统",
+            "url": "/blog/standrig-ai-2d-rigging-mcp-psd-cubism/",
+            "language": "zh",
+            "excerpt": "StandRig：AI 直接当 rigger，MCP 原生的 2D 角色建模系统 开发者预览版开源工具：把分层 PSD 喂给本地服务，Claude Code 等 AI 通过 MCP 直接编辑 Mesh、Deformer 和参数，配套 cubism-api-bridge 打通 Live2D Cubism Editor。AI 不再是辅助，而是替代了传统 rigging 的手工部分。 AI-agent MCP Live2D VTuber 2D-rigging open-source Rigging 的时间消耗去哪了 StandRig 的做法 快速上手 cubi",
+            "score": 0.48207662
+          }
+        ]
+      }
+    }
+  ]
+}

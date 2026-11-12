@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-10-29T10:08:06.412849+00:00",
+  "queriedVectorId": "8d5e9c15fd5bd3626e32625f203d441802f7afb2ece3ac59",
+  "success": true,
+  "result": {
+    "count": 3,
+    "matches": [
+      {
+        "id": "8d5e9c15fd5bd3626e32625f203d441802f7afb2ece3ac59",
+        "score": 0.9999989,
+        "metadata": {
+          "article_id": "lfm3-liquid-ai-local-multimodal-models",
+          "content_hash": "0f764520f740e22a",
+          "excerpt": "Liquid AI LFM3：六款端侧模型怎么选，Mac 上能跑到哪一步？ Liquid AI 发布 LFM3 开放权重家族，六款约20亿参数模型共享一个底座，覆盖文本、视觉、音频、全模态与决策。本文逐项核对模型卡、上下文、语音范围和商业许可，解释三混合架构及 Mac 部署的版本要求，并保留本地文本测试中输出预算不足的失败记录，区分权重可下载、工具已支持与真实任务能力这三件不同的事。 Liquid AI LFM3 Local AI Multimodal Decision Models 六款 LFM3 分别解决什么问题？ 三混合架构为什么值得看？ 视频、1",
+          "language": "zh",
+          "tags": [
+            "Liquid AI",
+            "LFM3",
+            "Local AI",
+            "Multimodal",
+            "Decision Models"
+          ],
+          "title": "Liquid AI LFM3：六款端侧模型怎么选，Mac 上能跑到哪一步？",
+          "url": "/blog/lfm3-liquid-ai-local-multimodal-models/"
+        }
+      },
+      {
+        "id": "21f39c1a8fc52566bdd0dacd18ebf962f92bdc96914eba16",
+        "score": 0.8591189,
+        "metadata": {
+          "article_id": "lfm3-liquid-ai-local-multimodal-models",
+          "content_hash": "440ee0e2e21398ba",
+          "excerpt": "Liquid AI LFM3: Six local models and a Mac smoke test Compare Liquid AI's six LFM3 models: modalities, context limits, license and Mac runtime support, with a local text test that exposes an output-budget pitfall. Liquid AI LFM3 Local AI Multimodal Decision Models Which LFM3 mode",
+          "language": "en",
+          "tags": [
+            "Liquid AI",
+            "LFM3",
+            "Local AI",
+            "Multimodal",
+            "Decision Models"
+          ],
+          "title": "Liquid AI LFM3: Six local models and a Mac smoke test",
+          "url": "/blog/lfm3-liquid-ai-local-multimodal-models/"
+        }
+      },
+      {
+        "id": "4b62f0ba666bed6235d904b25ebd5e9d4f354faf8226b8f7",
+        "score": 0.70059186,
+        "metadata": {
+          "article_id": "m1-max-64gb-local-ai-model-selection-memory-guide",
+          "content_hash": "3818d1f412602280",
+          "excerpt": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度 持续更新：M1 Max 64GB MacBook 本地AI最佳组合方案。涵盖 Apple Intelligence 3B 复用、Qwen3-30B-A3B/27B/32B 全8bit部署、oMLX多模型调度、48GB可用内存边界测算与系统精简。 M1Max 本地模型 Qwen3 oMLX 内存管理 Apple Intelligence LLM 隐私AI 一、核心硬件与基础定位 二、Apple Intelligence 原生 3B 模型利用方案 三、Qwen3 三大主力模型差异",
+          "language": "zh",
+          "tags": [
+            "M1Max",
+            "本地模型",
+            "Qwen3",
+            "oMLX",
+            "内存管理",
+            "Apple Intelligence",
+            "LLM",
+            "隐私AI"
+          ],
+          "title": "M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度",
+          "url": "/blog/m1-max-64gb-local-ai-model-selection-memory-guide/"
+        }
+      }
+    ]
+  }
+}

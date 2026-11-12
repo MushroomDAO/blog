@@ -1,0 +1,14 @@
+cache explanation: last recorded build
+  command: cargo build --offline --target-dir /tmp/mole-mbx-smoke/proof-bt7r8wsn/target-b
+  results: 4 compiler-query, 2 miss, 1 standard-input
+
+missed crates
+
+cache_probe
+  the action key did not change; its cached result was unavailable, evicted, or absent from the configured remote
+
+cache_probe
+  nothing in this compilation changed; it missed because the artifact of cache_probe differs, so explain that crate first
+  inputs changed since the last recording:
+    - input ${target}/debug/deps/libcache_probe-b9a22b2c8fb46e5f.rlib (artifact of cache_probe)
+  hint: if that crate is a workspace member whose source did not change, it may record its checkout path; `MBX_SHARE_WORKSPACE_ROOT=1` (or `share_workspace_root = true`) can make both checkouts produce the same bytes. If its source did change, inspect that crate's inputs instead

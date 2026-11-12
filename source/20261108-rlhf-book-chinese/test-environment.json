@@ -1,0 +1,7 @@
+{
+  "python": "3.12.15 (main, Sep 30 2026, 22:04:19) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "torch": "2.14.0",
+  "numpy": "2.5.3",
+  "jinja2": "3.1.6",
+  "device": "CPU; fixture tensors only"
+}

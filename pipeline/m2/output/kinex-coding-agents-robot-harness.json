@@ -1,0 +1,14 @@
+{
+  "title": "Kinex：让编程 Agent 接入机器人",
+  "author": "Mycelium",
+  "digest": "它把编程 Agent 接到机器人上，仿真成绩与真实硬件能力需要分别验收。",
+  "mediaId": "prCUE631thH1cmNLi42prPih_cY818Dv7v2h2y581o8mQv5pARJ0J5kUWGNlEzv7",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/stacx-lab/kinex",
+    "github.com/stacx-lab/kinex-plugins",
+    "huggingface.co/datasets/stacx-lab",
+    "github.com/stacx-lab/roboenv"
+  ],
+  "publishedAt": "2026-10-17T01:54:32.945Z"
+}

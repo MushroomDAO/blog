@@ -1,0 +1,24 @@
+{
+  "repository": "https://github.com/hypit-ai/hypit",
+  "checkedAt": "2026-10-15",
+  "sourceCommit": "dc2b7a8f31b1ef1443a79ca448548d69e3ceb6a0",
+  "createdAt": "2026-07-29T18:49:19Z",
+  "starsAtCheck": 22397,
+  "latestRelease": {
+    "tag": "v0.3.1",
+    "publishedAt": "2026-10-09T10:24:35Z"
+  },
+  "packageVersion": "0.3.1",
+  "materialVersion": "User0.1.8 is historical, currentofficialrelease/package0.3.1. Growthnumbersnotrepeatedascurrent.",
+  "coreBoundary": "Script surface contains no timecodes, but full author/run graph still requires real audio/alignment/narrative timing and rendering; changingtext requires affected downstream work. No video clone/generation benchmark executed.",
+  "reuse": "Existing9-16bilingualarticle+matchingverifiedFLUX43cover91977B preserved; noarticle rewrite, newslug, newbanner, deployment or newdraft. Existingindexqueryfirst0.635394 reused.",
+  "wechat": {
+    "slug": "hypit-ai-agent-video-workflow-svml-claude-code-codex",
+    "blogUrl": "https://blog.mushroom.cv/blog/hypit-ai-agent-video-workflow-svml-claude-code-codex/",
+    "mediaId": "",
+    "archivedMediaId": "prCUE631thH1cmNLi42prFY7i4oh00LfW2rr38F8K9iksZEdeM8mLNzyeUE8MUfS",
+    "wechatStatus": "recorded",
+    "wechatError": "旧创建凭证对应的media_id当前draft/get返回40007，且不在远程草稿箱；已发布列表接口返回48001无权限，当前状态未核验。保留旧凭证，未重复创建。"
+  },
+  "gaps": "CurrentWeChatpublicationstatusunverifiable (draftget40007 + publishedlist48001). Legacyarticleis historical, notnew0.3.1deploymentvalidation."
+}

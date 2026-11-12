@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "checks": {
+    "title": true,
+    "titleEn": true,
+    "description": true,
+    "descriptionEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "pubDate": true,
+    "updatedDate": true,
+    "category": true,
+    "tags": true,
+    "heroImage": true,
+    "bilingual": true,
+    "originalDatePreserved": true,
+    "threeFiguresBoth": true,
+    "copyrightBoth": true,
+    "questionHeadingsBoth": true,
+    "worktreeSourceBoth": true,
+    "breakingVersionAndHistoricalBenchmarkExplicit": true
+  },
+  "scope": "In-place update; reuse original banner and three theme-matched figures"
+}

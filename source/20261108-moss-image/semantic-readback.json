@@ -1,0 +1,40 @@
+[
+  {
+    "id": "35f76547414479a3b4db57f386a4d662d2f3c37b441c156a",
+    "metadata": {
+      "article_id": "moss-image-openmoss-layout-generation-review",
+      "content_hash": "3dc069db995a1471",
+      "excerpt": "MOSS-Image：OpenMOSS的文字生图、布局控制与部署边界 MOSS-Image是OpenMOSS开源图像模型，提供Base与SFT权重，支持中英文字和JSON布局。本文核对5B骨干、文本编码器与VAE，解释两种坐标格式、提示词增强、ComfyUI及Mac路线，通过19项辅助检查和实际布局编译，区分官方画质报告、内存记录与本次未测能力，帮助建立从结构化输入到结果校对的流程。 MOSS-Image OpenMOSS 图像生成 布局控制 ComfyUI 本地部署 Base、SFT和社区版本，应该怎样区分？ 5B背后是一条怎样的生成链路？ Layou",
+      "language": "zh",
+      "tags": [
+        "MOSS-Image",
+        "OpenMOSS",
+        "图像生成",
+        "布局控制",
+        "ComfyUI",
+        "本地部署"
+      ],
+      "title": "MOSS-Image：OpenMOSS的文字生图、布局控制与部署边界",
+      "url": "/blog/moss-image-openmoss-layout-generation-review/"
+    }
+  },
+  {
+    "id": "79385275a9703c0ed960b3eb1dfe61a436ce2155a584dbe4",
+    "metadata": {
+      "article_id": "moss-image-openmoss-layout-generation-review",
+      "content_hash": "2d7e8978faee6d93",
+      "excerpt": "MOSS-Image: OpenMOSS Layout Generation and Deployment Review MOSS-Image Base and SFT, layout coordinates, ComfyUI and Mac deployment, with 19 helper checks and clear limits on text scores, memory and image quality. MOSS-Image OpenMOSS 图像生成 布局控制 ComfyUI 本地部署 Base, SFT and communit",
+      "language": "en",
+      "tags": [
+        "MOSS-Image",
+        "OpenMOSS",
+        "图像生成",
+        "布局控制",
+        "ComfyUI",
+        "本地部署"
+      ],
+      "title": "MOSS-Image: OpenMOSS Layout Generation and Deployment",
+      "url": "/blog/moss-image-openmoss-layout-generation-review/"
+    }
+  }
+]

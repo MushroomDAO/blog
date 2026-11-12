@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-23T01:14:29.094Z",
+  "drafts": [
+    {
+      "slug": "flint-local-coding-rec-engine",
+      "mediaId": "prCUE631thH1cmNLi42prPUb_ISSVbKRPZ_L4EGEFnZXFu1ReVeJ4UAl33TdNM_X",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "315b086428beae2b0ec59b6d962f832a283ad4a89602cbcf31551341b01c9595",
+      "remoteTextHash": "315b086428beae2b0ec59b6d962f832a283ad4a89602cbcf31551341b01c9595",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "9c9b22e479917a232dce87f3dcda9cb5a759c6b82fde3b731a40c61ca08c8b80",
+      "remoteContentHash": "1c2f8e3eabea6876e85658570f5e1ab7301242e7bd4df1bb7091858c4a847841"
+    },
+    {
+      "slug": "gamescaling-game-agents-cpt",
+      "mediaId": "prCUE631thH1cmNLi42prKhj86Z-1-pNW8GDktzLxKsFBq7Kl7oBMCWTFppxQfCw",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "6b47e12533d606c89ef77505ebd4b6513b0e3b2588fa3e9789d3e39ad5d2e1f1",
+      "remoteTextHash": "6b47e12533d606c89ef77505ebd4b6513b0e3b2588fa3e9789d3e39ad5d2e1f1",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "4f99b7abdc9c5ba4fbef675e4aa0a13cc14c928d0fcbaad40b7525a23da11149",
+      "remoteContentHash": "ca512b9b7eaaea5766463b153a2b321536a48a4a5f8fc492848a2c078e2d4fc1"
+    }
+  ]
+}

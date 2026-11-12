@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/private/tmp/hexashell-research/hexashell/kernel/worker.py", line 257, in main
+    resource.setrlimit(resource.RLIMIT_AS, (MEMORY_CAP, MEMORY_CAP))
+ValueError: current limit exceeds maximum limit

@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-27T08:41:47.170141+00:00",
+  "articles": [
+    {
+      "slug": "pi-rust-agent-runtime",
+      "url": "https://blog.mushroom.cv/blog/pi-rust-agent-runtime/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/pi-rust-agent-runtime-banner.BDMFxH6D_Z2as1Oe.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pi-rust-agent-runtime-fig-01.n5sDVTQu_Goca3.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pi-rust-agent-runtime-fig-02.BV2lK_oL_11I9Es.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pi-rust-agent-runtime-fig-03.DAvEUTbI_4i2yP.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/pi-rust-agent-runtime-banner.BDMFxH6D.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 3,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/pi-rust-agent-runtime/",
+    "/blog/meta-sam3-promptable-concept-segmentation-license-mac-guide/",
+    "/blog/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit/",
+    "/blog/xllama-xbox-series-s-local-llm-inference-dev-mode/",
+    "/blog/hi3d-v1-geometry-refinement/",
+    "/blog/nvidia-simready-assets-audit/",
+    "/blog/wevisone-vl-unified-vision/",
+    "/blog/layerfs-v1-recursive-agent-filesystem/"
+  ]
+}

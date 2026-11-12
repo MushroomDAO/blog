@@ -1,0 +1,33 @@
+{
+  "sourceRevision": "e5054494125d09c6db86aba322be5e46cb8618ca",
+  "toolchain": "go1.27.1 darwin/arm64",
+  "command": "go test -json -count=1 ./internal/policy",
+  "testFunctionsPassed": [
+    "TestEveryNumericSpellingIsRefusedNeverAllowed",
+    "TestASpellingOfABoundOrDeniedHostIsDecidedAsTheHostItself",
+    "TestTheDenyListMatchesWholeLabels",
+    "TestCONNECTIsFor443AndPlainHTTPFor80Only",
+    "TestMalformedAndOutOfRangePortsAreRefused",
+    "TestValidBindingHostAcceptsOnlyANormalisedPublicName",
+    "TestDecisionsCheckThePortThenTheBindingThenTheRole",
+    "TestReasonsAndRolesKeepTheirWireNames",
+    "TestForRoleRefusesEveryOtherRoleWithNoEgress",
+    "TestABareDenyEntryIsDeniedLikeItsSubdomains",
+    "TestAHostOnTheWireIsASCII",
+    "TestAPortIsWrittenOnlyOneWay",
+    "TestBracketsHoldAnAddressOrNothing",
+    "TestParseHostPortNormalisesNames",
+    "TestParseHostPortRefusesWhatPolicyCannotName",
+    "TestDenyList",
+    "TestRoles",
+    "TestConnectDecisions",
+    "TestPlainHTTPDecisions",
+    "TestValidBindingHost",
+    "TestOtherDecisions",
+    "TestParseAddress"
+  ],
+  "failures": [],
+  "packagePass": true,
+  "scope": "Upstream policy unit tests only. No Docker stack, real providers, UI task, relay, netguard DNS tests or whole-system security audit.",
+  "testFunctionCount": 22
+}

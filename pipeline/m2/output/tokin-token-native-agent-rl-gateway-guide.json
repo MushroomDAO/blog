@@ -1,0 +1,13 @@
+{
+  "title": "tokin：把Agent接入原始token训练",
+  "author": "Mycelium",
+  "digest": "拆解token保真、会话树与训练导出，并核对beta支持边界和本地测试结果。",
+  "mediaId": "prCUE631thH1cmNLi42prMKUbv61X36MS3pXKjphFN5PxdK8LvZXc37MPHoBWLcw",
+  "blogUrl": "https://blog.mushroom.cv/blog/tokin-token-native-agent-rl-gateway-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/tokin-token-native-agent-rl-gateway-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/open-rollout/tokin"
+  ],
+  "publishedAt": "2026-11-11T10:35:58.123Z"
+}

@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-08T02:19:38.427224+00:00",
+  "articles": [
+    {
+      "slug": "anthropic-dreaming-dynamic-workflow-memory-review",
+      "url": "https://blog.mushroom.cv/blog/anthropic-dreaming-dynamic-workflow-memory-review/",
+      "title": "Anthropic Dreaming：让Agent在后台复盘并整理长期记忆",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/anthropic-dreaming-dynamic-workflow-memory-review-banner.DbAcwdzS.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94688
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/anthropic-dreaming-dynamic-workflow-memory-review-banner.DbAcwdzS_ZHzbj0.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 30416
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/anthropic-dreaming-dynamic-workflow-memory-review-fig-01.DXaL2D8Z_146WDs.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 52512
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/anthropic-dreaming-dynamic-workflow-memory-review-fig-02.BmGgVC_6_HMQuw.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 42576
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/anthropic-dreaming-dynamic-workflow-memory-review-fig-03.D9q3hbB2_2pjz1W.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 25760
+        }
+      ]
+    }
+  ]
+}

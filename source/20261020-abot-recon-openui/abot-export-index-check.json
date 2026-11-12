@@ -1,0 +1,9 @@
+{
+  "sourceRevision": "6e3b2e1257464a74dfceff22eb33190bd228276e",
+  "passed": true,
+  "checks": [
+    "metadata maps3denseframes to trajectory indices0,5,10",
+    "without metadata3denseframes vs15poses raises explanatory error"
+  ],
+  "scope": "Export index helper with synthetic metadata, not model inference or real video export."
+}

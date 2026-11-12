@@ -1,0 +1,11 @@
+{
+  "modelFile": {
+    "error": "HTTP Error 404: Not Found"
+  },
+  "latestRelease": {
+    "html_url": "https://github.com/ml-explore/mlx-lm/releases/tag/v0.32.2",
+    "tag_name": "v0.32.2",
+    "published_at": "2026-10-16T02:49:02Z",
+    "body": "## What's Changed\r\n* Fix attention value scaling in MiMo-V2-Flash by @ricky-chaoju in https://github.com/ml-explore/mlx-lm/pull/1971\r\n* Fix mask in SMM by @michalk8 in https://github.com/ml-explore/mlx-lm/pull/1979\r\n* Muse spark hf names by @nastya236 in https://github.com/ml-explore/mlx-lm/pull/1981\r\n\r\n## New Contributors\r\n* @ricky-chaoju made their first contribution in https://github.com/ml-explore/mlx-lm/pull/1971\r\n\r\n**Full Changelog**: https://github.com/ml-explore/mlx-lm/compare/v0.32.1...v0.32.2"
+  }
+}

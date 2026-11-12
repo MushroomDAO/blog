@@ -1,0 +1,31 @@
+run:
+  output_dir: /private/tmp/flashrsi-research/prepared
+  mode: run
+benchmark:
+  name: searchqa
+  split:
+    train: 0.5
+    dev: 0.25
+    test: 0.25
+  data_path: ./examples/data/quickstart.jsonl
+  seed: 42
+agent:
+  name: miniagent
+  llm:
+    model_name: gpt-5-mini
+    api_key: null
+    base_url: null
+  max_turns: 6
+algorithm:
+  name: skillopt
+  worker:
+    type: llm
+    llm:
+      model_name: gpt-5-mini
+      api_key: null
+      base_url: null
+  num_epochs: 1
+  max_steps: 1
+  batch_size: 2
+  reflection_minibatch_size: 2
+  edit_budget: 1

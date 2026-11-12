@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-29T08:01:48.771Z",
+  "drafts": [
+    {
+      "slug": "agent-relay-coding-agent-collaboration",
+      "mediaId": "prCUE631thH1cmNLi42prHI8Ibpl2-CTlAJkVv4VgVXrFGx1lwwK33VHvfpoTdux",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "9a3f0dcee4e8a52e2a7d45607b7584580c5dedba09522853b44453ccb3c8d7ff",
+      "remoteTextHash": "9a3f0dcee4e8a52e2a7d45607b7584580c5dedba09522853b44453ccb3c8d7ff",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/agent-relay-coding-agent-collaboration/",
+      "localContentHash": "85e9fad6a14570b0df6fe19cb48fb69d1b40a02707240e395c5fd458f2123eb1",
+      "remoteContentHash": "db9b45c45f5dde4ae945afdeb188379ba5dfb0180373da85a816a13d6193c4ea"
+    }
+  ]
+}

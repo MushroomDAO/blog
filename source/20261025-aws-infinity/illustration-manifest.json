@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-25",
+  "generator": "built-in image_gen.imagegen",
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "final_count": 3,
+  "processing": "Lanczos aspect fit; near-white RGB channels >=245 normalized to #FFFFFF; palette PNG without dithering; no labels or semantic content added in postprocessing.",
+  "visual_review": "Reviewed generated originals for Chinese text, XiaoM participation, technical meaning and restricted palette; compressed copies reviewed separately.",
+  "figures": [
+    {
+      "figure": 1,
+      "original": "fig-01.original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "88f2c8d90d8da57fe852af6de181953bf5cfa5debef1578d37821130647e9e4b",
+      "generation_source": "/Users/jason/.codex/generated_images/01a170c3-7257-75a0-b18a-56d598325974/exec-1c049483-7c5a-48cf-9b8f-4f54f6cf8e76.png",
+      "prompts": [
+        "fig-01.prompt.txt"
+      ],
+      "final_archive": "aws-infinity-agent-runtime-fig-01.png",
+      "final_destination": "src/assets/images/aws-infinity-agent-runtime-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "aspect_ratio": "16:9",
+      "format": "PNG",
+      "palette_colors": 192,
+      "bytes": 85064,
+      "sha256": "f962c20aeaf091759e7924c8af4df20dee8c1acc741ba6ac6c1c7fe1df7a1823",
+      "pure_white_fraction": 0.8797,
+      "expected_labels": [
+        "存状态",
+        "等结果",
+        "再唤醒",
+        "工具运行中"
+      ],
+      "semantic_visual_review": "Conversation archived; execution chair empty while external tool continues; incoming message starts a fresh execution."
+    },
+    {
+      "figure": 2,
+      "original": "fig-02.original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "2a95bc60d8d38e0adf36e014070f8b3b21d74f269c70a5d08489e4df54dc8d2d",
+      "generation_source": "/Users/jason/.codex/generated_images/01a170c3-7257-75a0-b18a-56d598325974/exec-4870e89f-f3f0-48f2-9b4e-cdeb5e2ad873.png",
+      "prompts": [
+        "fig-02.prompt.txt",
+        "fig-02.refine.prompt.txt"
+      ],
+      "final_archive": "aws-infinity-agent-runtime-fig-02.png",
+      "final_destination": "src/assets/images/aws-infinity-agent-runtime-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "aspect_ratio": "16:9",
+      "format": "PNG",
+      "palette_colors": 256,
+      "bytes": 82144,
+      "sha256": "b2607864c7ffe4b4c4c3825c36735e8a4cd99fcd6d17edc4263876ddc68508ef",
+      "pure_white_fraction": 0.9078,
+      "expected_labels": [
+        "模拟模型",
+        "服务器",
+        "换算",
+        "树莓派8GB",
+        "非模型实测"
+      ],
+      "semantic_visual_review": "Simulated model and server separated from Raspberry Pi 8GB; dashed conversion arrow; explicitly not a real model benchmark; no throughput figures."
+    },
+    {
+      "figure": 3,
+      "original": "fig-03.original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_sha256": "481296f41d3ca8ef75dedca5c1f8fc679624a351ffdcd23b6993e5b1f3c94de6",
+      "generation_source": "/Users/jason/.codex/generated_images/01a170c3-7257-75a0-b18a-56d598325974/exec-457e29fe-f22d-4ecd-85ca-c3f2f3476a6c.png",
+      "prompts": [
+        "fig-03.prompt.txt",
+        "fig-03.refine.prompt.txt"
+      ],
+      "final_archive": "aws-infinity-agent-runtime-fig-03.png",
+      "final_destination": "src/assets/images/aws-infinity-agent-runtime-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "aspect_ratio": "16:9",
+      "format": "PNG",
+      "palette_colors": 128,
+      "bytes": 88240,
+      "sha256": "7967680905dcaf118df6a384b4b743b1c866006d57c49b026cb07c0a2ff6fb70",
+      "pure_white_fraction": 0.8842,
+      "expected_labels": [
+        "队列",
+        "历史",
+        "模型",
+        "工具",
+        "计算",
+        "其他成本"
+      ],
+      "semantic_visual_review": "Incoming resume request enters queue, then history, model, tool; coins remain at queue/history/model/tool; compute down arrow never implies zero total cost."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-27T09:49:26.168007+00:00",
+  "articles": [
+    {
+      "slug": "roboharness-v2-workspace",
+      "url": "https://blog.mushroom.cv/blog/roboharness-v2-workspace/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/roboharness-v2-workspace-banner.BDbdDwHq_Yvmmz.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/roboharness-v2-workspace-fig-01.Dbkt5bRn_Z1vXFj8.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/roboharness-v2-workspace-fig-02.DIRGYFVw_d532X.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/roboharness-v2-workspace-fig-03.DI1Uogoj_61vJU.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/roboharness-v2-workspace-banner.BDbdDwHq.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 4,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    }
+  ],
+  "carouselSlides": [
+    "/blog/roboharness-v2-workspace/",
+    "/blog/pi-rust-agent-runtime/",
+    "/blog/meta-sam3-promptable-concept-segmentation-license-mac-guide/",
+    "/blog/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit/",
+    "/blog/xllama-xbox-series-s-local-llm-inference-dev-mode/",
+    "/blog/hi3d-v1-geometry-refinement/",
+    "/blog/nvidia-simready-assets-audit/",
+    "/blog/wevisone-vl-unified-vision/"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "zipCrc": "passed",
+  "shellSyntax": "build.sh/build-verify.sh passed bash-n only",
+  "jsSyntax": "source and APK app.js passed node--check",
+  "apkInstalled": false,
+  "deviceInference": false,
+  "nativeExecuted": false,
+  "jvmTests": "notrun: noJavaRuntime/AndroidSDK onhost",
+  "sourceTag": "c44f529a21158e57d2344a3da5af0939b17bd6cb",
+  "sourceBuildVersion": "1.3.5",
+  "sourceProfiles": [
+    "htp",
+    "ocl",
+    "cpu"
+  ],
+  "apkVersion": "1.4.3",
+  "apkProfiles": [
+    "htp",
+    "ocl",
+    "cpu",
+    "bmoe",
+    "mtp"
+  ],
+  "manifestMinSdk": 29,
+  "releaseRequires": "Android12arm64; manifestmin29notrealcompatibilityproof"
+}

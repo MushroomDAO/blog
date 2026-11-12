@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-23T01:31:37.729813+00:00",
+  "articles": [
+    {
+      "slug": "occamy-dressage-agent-learning",
+      "url": "https://blog.mushroom.cv/blog/occamy-dressage-agent-learning/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/occamy-dressage-agent-learning-banner.BPmJ6llz_1cqKuv.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/occamy-dressage-agent-learning-fig-01.pZar0MAf_1lFN9y.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/occamy-dressage-agent-learning-fig-02.Cj9sq8cE_1S6eIU.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/occamy-dressage-agent-learning-fig-03.DJ_zKKVn_UTmgA.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/occamy-dressage-agent-learning-banner.BPmJ6llz.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 4,
+      "homepageContainsArticle": true,
+      "carouselRank": 1
+    },
+    {
+      "slug": "moki-whiteboard-local-mcp",
+      "url": "https://blog.mushroom.cv/blog/moki-whiteboard-local-mcp/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/moki-whiteboard-local-mcp-banner.BZHQ75Se_Z20hNXI.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/moki-whiteboard-local-mcp-fig-01.BKXX5u1g_tj4v3.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/moki-whiteboard-local-mcp-fig-02.cmUa-9vy_Z1ncf57.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/moki-whiteboard-local-mcp-fig-03.yUPmlzaw_ZibWOF.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/moki-whiteboard-local-mcp-banner.BZHQ75Se.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 3,
+      "homepageContainsArticle": true,
+      "carouselRank": 2
+    }
+  ],
+  "carouselSlides": [
+    "/blog/occamy-dressage-agent-learning/",
+    "/blog/moki-whiteboard-local-mcp/",
+    "/blog/flint-local-coding-rec-engine/",
+    "/blog/gamescaling-game-agents-cpt/",
+    "/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
+    "/blog/animation-datasets-motion-viewer/",
+    "/blog/layerfs-v1-recursive-agent-filesystem/",
+    "/blog/live-panel-skill-animated-architecture/"
+  ]
+}

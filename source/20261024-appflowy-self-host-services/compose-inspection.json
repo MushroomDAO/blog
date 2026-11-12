@@ -1,0 +1,82 @@
+{
+  "scope": "YAML parse only; no Docker installation, image pull, deployment or restore",
+  "services": [
+    {
+      "name": "nginx",
+      "image": "nginx",
+      "ports": [
+        "${NGINX_PORT:-80}:80",
+        "${NGINX_TLS_PORT:-443}:443"
+      ],
+      "profiles": []
+    },
+    {
+      "name": "minio",
+      "image": "appflowyinc/minio:RELEASE.2025-09-07T16-13-09Z",
+      "ports": [],
+      "profiles": []
+    },
+    {
+      "name": "postgres",
+      "image": "pgvector/pgvector:pg16",
+      "ports": [],
+      "profiles": []
+    },
+    {
+      "name": "redis",
+      "image": "redis",
+      "ports": [],
+      "profiles": []
+    },
+    {
+      "name": "gotrue",
+      "image": "appflowyinc/gotrue:${GOTRUE_VERSION:-latest}",
+      "ports": [],
+      "profiles": []
+    },
+    {
+      "name": "appflowy_cloud",
+      "image": "appflowyinc/appflowy_cloud:${APPFLOWY_CLOUD_VERSION:-latest}",
+      "ports": [],
+      "profiles": []
+    },
+    {
+      "name": "admin_frontend",
+      "image": "appflowyinc/admin_frontend:${APPFLOWY_ADMIN_FRONTEND_VERSION:-latest}",
+      "ports": [],
+      "profiles": []
+    },
+    {
+      "name": "ai",
+      "image": "appflowyinc/appflowy_ai:${APPFLOWY_AI_VERSION:-latest}",
+      "ports": [],
+      "profiles": []
+    },
+    {
+      "name": "appflowy_worker",
+      "image": "appflowyinc/appflowy_worker:${APPFLOWY_WORKER_VERSION:-latest}",
+      "ports": [],
+      "profiles": []
+    },
+    {
+      "name": "appflowy_search",
+      "image": "appflowyinc/appflowy_search:${APPFLOWY_SEARCH_VERSION:-latest}",
+      "ports": [],
+      "profiles": []
+    },
+    {
+      "name": "appflowy_backup",
+      "image": "appflowyinc/appflowy_backup:${APPFLOWY_BACKUP_VERSION:-latest}",
+      "ports": [],
+      "profiles": [
+        "backup"
+      ]
+    },
+    {
+      "name": "appflowy_web",
+      "image": "appflowyinc/appflowy_web:${APPFLOWY_WEB_VERSION:-latest}",
+      "ports": [],
+      "profiles": []
+    }
+  ]
+}

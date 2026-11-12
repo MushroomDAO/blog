@@ -1,0 +1,38 @@
+[
+  {
+    "id": "337ab88ba2682093354782ae4a4a7613719a813e575d3833",
+    "metadata": {
+      "article_id": "livliv-player-browser-vtuber-webgl2-guide",
+      "content_hash": "a8468917d2e7b387",
+      "excerpt": "LivLiv Player：约30KB的网页虚拟角色，怎样真正用起来？ LivLiv Player 是开源浏览器虚拟角色播放器，用 WebGL2 实现分层角色、口型和动作。本文核对官方仓库与角色许可，实测核心及共享模块的 gzip 体积，介绍 LivLiv、PNGTuber、VRM 的依赖差异，以及语音和摄像头接入方法，说明角色素材、面捕模型、直播推流与在线制作服务的边界，帮助开发者落地。 LivLiv Player WebGL2 VTuber Browser Open Source “约30KB”到底包括什么？ 它是怎样让2D角色产生立体感的？ 怎样先",
+      "language": "zh",
+      "tags": [
+        "LivLiv Player",
+        "WebGL2",
+        "VTuber",
+        "Browser",
+        "Open Source"
+      ],
+      "title": "LivLiv Player：约30KB的网页虚拟角色，怎样真正用起来？",
+      "url": "/blog/livliv-player-browser-vtuber-webgl2-guide/"
+    }
+  },
+  {
+    "id": "47affc20365d7f0b28b8db3c82df7184ccf9768e71679b25",
+    "metadata": {
+      "article_id": "livliv-player-browser-vtuber-webgl2-guide",
+      "content_hash": "a6fa716ceba3e7d3",
+      "excerpt": "LivLiv Player: A Practical Browser Avatar Guide Explore LivLiv Player: its WebGL2 core size, avatar licenses, lip sync, face tracking and practical browser setup, with clear dependency and streaming limits. LivLiv Player WebGL2 VTuber Browser Open Source What does “about 30KB” in",
+      "language": "en",
+      "tags": [
+        "LivLiv Player",
+        "WebGL2",
+        "VTuber",
+        "Browser",
+        "Open Source"
+      ],
+      "title": "LivLiv Player: A Practical Browser Avatar Guide",
+      "url": "/blog/livliv-player-browser-vtuber-webgl2-guide/"
+    }
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-31T10:55:43.017562+00:00",
+  "passed": true,
+  "checks": {
+    "englishSlug": true,
+    "titleLengths": true,
+    "descriptions": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "tags": true,
+    "dates": true,
+    "category": true,
+    "bilingual": true,
+    "copyright": true,
+    "figures": true,
+    "questions": true,
+    "FAQ": true,
+    "sourcePin": true,
+    "versionLimit": true,
+    "licenseNotices": true,
+    "testLimits": true,
+    "internalLinks": true,
+    "BLUF": true
+  },
+  "lengths": {
+    "title": 31,
+    "titleEn": 51,
+    "description": 150,
+    "descriptionEn": 154,
+    "wechatTitle": 19,
+    "wechatDigest": 36
+  },
+  "manualReview": [
+    "Equivalent bilingual workflows, limits and FAQ",
+    "PrimarysourceURLsplainforWeChat",
+    "FrameworkdevelopmentversusUnityshippingexplicit",
+    "LicenseRestrictedandunreleasedcurrentheadexplicit",
+    "Astrometa/headingshandledbyexistingtemplate;noFAQJSONLDadded"
+  ]
+}

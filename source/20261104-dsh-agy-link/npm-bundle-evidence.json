@@ -1,0 +1,10 @@
+{
+  "version": "0.5.2",
+  "gitHead": "c30dbe8eb431aac677e2af60078792c289992c21",
+  "tarballIntegrityVerified": true,
+  "integrity": "sha512-U90nI9BPIPtFwZ2ELI6Ml2n6JgaGcprO44ACAmNI/WjnAqB++vOPTYj/NFTSy9GdlxZM6EtVnUwmAdlEHJtvMQ==",
+  "bundleSha256": "e94101b7080c07d75946cd44e1e6000ad982de74a707f91d53dfc58ed23de25d",
+  "diagnosticInstructionPresent": true,
+  "excerpt": "n the bridge (\" + (reason !== void 0 && reason !== \"\" ? reason : \"the step ran for a long time and the in-memory recording was recycled\") + \"). Nothing is wrong with the tool or the workspace, and there is nothing to debug here — do NOT investigate the bridge, its logs or this message; continue the user's task. If the output is needed, re-run the same operation as a new step. Step #\" + step + (label !== \"\" ? \": \" + label : \"\");\n}\nfunction defineA",
+  "scope": "Static published-bundle verification; no package entrypoint, OAuth login or live provider execution"
+}

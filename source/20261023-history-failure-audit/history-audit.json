@@ -1,0 +1,1307 @@
+{
+  "summary": {
+    "workspaceJobs": 75,
+    "jobStatusCounts": {
+      "complete": 73,
+      "failed": 1,
+      "running": 1
+    },
+    "articles": 71,
+    "online200": 71,
+    "localReceiptMatches": 71,
+    "unresolvedJobs": [
+      {
+        "id": "676b2b45-71fd-4e24-80c0-1c103e618b15",
+        "status": "failed",
+        "attempts": 3,
+        "error": "缺少可核验的三件套发布结果",
+        "kb_confirmed": 1
+      }
+    ],
+    "currentDrafts": 2,
+    "recordedUnverified": 69,
+    "newDeployments": 0,
+    "newDrafts": 0
+  },
+  "articles": [
+    {
+      "slug": "anatomy-claude-interactive-isometric-figures",
+      "url": "https://blog.mushroom.cv/blog/anatomy-claude-interactive-isometric-figures/",
+      "jobs": [
+        "history-20261011-anatomy"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prLH1Z1si3ChHe4BRWohQDVW3PSey7HeyEIoHs2KGcXnp"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prLH1Z1si3ChHe4BRWohQDVW3PSey7HeyEIoHs2KGcXnp",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "sac-little-prince-ai-game-workflow",
+      "url": "https://blog.mushroom.cv/blog/sac-little-prince-ai-game-workflow/",
+      "jobs": [
+        "5ad09468-1658-402b-9fbe-99ca809de988"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prJEzmchpiFbRLTqmCYCxXqa8DC7-06E2Y1lequAMeZgL"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prJEzmchpiFbRLTqmCYCxXqa8DC7-06E2Y1lequAMeZgL",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "harborrl-agentic-rl-pipeline",
+      "url": "https://blog.mushroom.cv/blog/harborrl-agentic-rl-pipeline/",
+      "jobs": [
+        "f093c958-c3d9-47b5-b0d1-df492ab6e7b1"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prEOP7GQyo311-LS4g3BIuEC4cLnpqYG5S4_45P7O5SFq"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prEOP7GQyo311-LS4g3BIuEC4cLnpqYG5S4_45P7O5SFq",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "vorssaint-utils-macos-menu-bar-toolkit",
+      "url": "https://blog.mushroom.cv/blog/vorssaint-utils-macos-menu-bar-toolkit/",
+      "jobs": [
+        "f914638b-f8e9-45ff-8b66-06422df2fe61"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prPs_MtbcQrXqgP_RIHvoYN2rl4rXhudCJtMeD-MMyvdj"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prPs_MtbcQrXqgP_RIHvoYN2rl4rXhudCJtMeD-MMyvdj",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "map3d-openstreetmap-glb",
+      "url": "https://blog.mushroom.cv/blog/map3d-openstreetmap-glb/",
+      "jobs": [
+        "dcfcbca7-2258-4f71-bd4e-8fcda3acc8c5"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prG8SdUq3Q-qMxJtVRkkJ8QAwTFULaiusWPjpor9REcCZ"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prG8SdUq3Q-qMxJtVRkkJ8QAwTFULaiusWPjpor9REcCZ",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "hy-memory-sdk-memhub-memory-writer",
+      "url": "https://blog.mushroom.cv/blog/hy-memory-sdk-memhub-memory-writer/",
+      "jobs": [
+        "2aba3080-5fdc-4def-8c23-f8b9fe20c58b"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prJYw5XVfNHS-hyEESCb4u_MCokeqIZqG3jaAUbSadNsO"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prJYw5XVfNHS-hyEESCb4u_MCokeqIZqG3jaAUbSadNsO",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "strix-halo-halogen-gufo-prefill",
+      "url": "https://blog.mushroom.cv/blog/strix-halo-halogen-gufo-prefill/",
+      "jobs": [
+        "39df2739-d064-480d-a224-10e5079c42a0"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prPW8RqGUqEW6Ua79Wqvo-YNJ2THoDF0CscH6WN5P8Wbu"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prPW8RqGUqEW6Ua79Wqvo-YNJ2THoDF0CscH6WN5P8Wbu",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "decision30-multimodal-system-one",
+      "url": "https://blog.mushroom.cv/blog/decision30-multimodal-system-one/",
+      "jobs": [
+        "8fdbce9f-2256-4b8b-8784-685309caf965"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prMFHq3m_aKg2inNGKSSxX7PevpAjea9GTN44sMQfS-rM"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prMFHq3m_aKg2inNGKSSxX7PevpAjea9GTN44sMQfS-rM",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "ai-speech-six-frontiers-open-source",
+      "url": "https://blog.mushroom.cv/blog/ai-speech-six-frontiers-open-source/",
+      "jobs": [
+        "ce06020a-150b-449d-a0e9-6981b278c3ba"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prB5INJdXzqJJOZtmz_laMthk8EiO20MFvJq_JLbUiIgQ"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prB5INJdXzqJJOZtmz_laMthk8EiO20MFvJq_JLbUiIgQ",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "zero-to-cad-multiview-reconstruction",
+      "url": "https://blog.mushroom.cv/blog/zero-to-cad-multiview-reconstruction/",
+      "jobs": [
+        "7f030e5f-bd68-4ba8-9a16-16bb9ee97e5d"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prDxa5EPKSOe4hZznLuUYUaKIFzOfyAbBqIcruyqxhonv"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prDxa5EPKSOe4hZznLuUYUaKIFzOfyAbBqIcruyqxhonv",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "deepinfer-deepseek-inference-framework",
+      "url": "https://blog.mushroom.cv/blog/deepinfer-deepseek-inference-framework/",
+      "jobs": [
+        "c3948368-c519-45ea-9e6e-373424e8b527"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prEgYPX2Pwg4cly-6b2x7fY3JoXpAGUBx-iXgNwG6f7sc"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prEgYPX2Pwg4cly-6b2x7fY3JoXpAGUBx-iXgNwG6f7sc",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "minicpm-v47-moe-vision-deployment",
+      "url": "https://blog.mushroom.cv/blog/minicpm-v47-moe-vision-deployment/",
+      "jobs": [
+        "2702336e-aeab-431b-acb8-91c51e5285b8"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prLCEA_EFiE7slyCPP-ee5PZ-saa4-YZ_FfT1sv70zyww"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prLCEA_EFiE7slyCPP-ee5PZ-saa4-YZ_FfT1sv70zyww",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "ultramarine-1-flash-knowledge-work",
+      "url": "https://blog.mushroom.cv/blog/ultramarine-1-flash-knowledge-work/",
+      "jobs": [
+        "8b9cea09-a3fb-45c0-85fb-41946450b157"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prI33-TmM8EHKRbf9Cavvy7yXYV7wIfyfSmDMm-pKqCYC"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prI33-TmM8EHKRbf9Cavvy7yXYV7wIfyfSmDMm-pKqCYC",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "raven-multi-agent-harness",
+      "url": "https://blog.mushroom.cv/blog/raven-multi-agent-harness/",
+      "jobs": [
+        "7b045942-fa92-439d-9e0b-8b78c9b09eff"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prOI6dQjVDW1hf46t9Y47qlw3c614EuRFROo328kxw1Dq"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prOI6dQjVDW1hf46t9Y47qlw3c614EuRFROo328kxw1Dq",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "anthropic-employment-ai-expectations-reports",
+      "url": "https://blog.mushroom.cv/blog/anthropic-employment-ai-expectations-reports/",
+      "jobs": [
+        "416e1276-5951-4c32-af71-0ab2ea98a94a"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prFRV4KHSL_s-wLghCVe_2k-GRHB5EtNVhHdPkmrnsXwl"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prFRV4KHSL_s-wLghCVe_2k-GRHB5EtNVhHdPkmrnsXwl",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "openhoopvision-basketball-video-analysis",
+      "url": "https://blog.mushroom.cv/blog/openhoopvision-basketball-video-analysis/",
+      "jobs": [
+        "56989df2-6756-4645-9d1e-7b9824290013"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prPZWsAJBC_a8OjglxrvwtFisJohcfbzzroMqEc4jDWi4"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prPZWsAJBC_a8OjglxrvwtFisJohcfbzzroMqEc4jDWi4",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "e2e-natural-language-testing",
+      "url": "https://blog.mushroom.cv/blog/e2e-natural-language-testing/",
+      "jobs": [
+        "9f69e871-833f-46cc-a8a7-fb8e716540e3"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prF4pmWT65bgDfIC6Ad2upu_usegt-TWwXX77jMxZpCAi"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prF4pmWT65bgDfIC6Ad2upu_usegt-TWwXX77jMxZpCAi",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "d2r-mobile-build-ios-macos",
+      "url": "https://blog.mushroom.cv/blog/d2r-mobile-build-ios-macos/",
+      "jobs": [
+        "01aab571-1dee-4913-ad9b-440e40fb50ae"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prKFyDCdFPYY_UxWzlxb0qAojfHZEbOC_kESAMl8K9UV-"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prKFyDCdFPYY_UxWzlxb0qAojfHZEbOC_kESAMl8K9UV-",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "step5-preview-vllm-verl-deployment",
+      "url": "https://blog.mushroom.cv/blog/step5-preview-vllm-verl-deployment/",
+      "jobs": [
+        "93a86704-6ae9-408f-8347-1793d1588eee"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prJNAVeHeHdirwsEcztc_mkTnXgENDSAd1M3sR8LIdYs6"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prJNAVeHeHdirwsEcztc_mkTnXgENDSAd1M3sR8LIdYs6",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "ai-native-callcenter-self-hosted",
+      "url": "https://blog.mushroom.cv/blog/ai-native-callcenter-self-hosted/",
+      "jobs": [
+        "11b1f817-901b-4670-8b8f-0b8462003b5d"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prHQ9buR_Koks5k8rzQ1NETSU0h0iOyjjgUZMGEZ5e8M2"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prHQ9buR_Koks5k8rzQ1NETSU0h0iOyjjgUZMGEZ5e8M2",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "scenario-blender-generation-mcp",
+      "url": "https://blog.mushroom.cv/blog/scenario-blender-generation-mcp/",
+      "jobs": [
+        "9213aac1-bd22-436b-b6b6-27fa3a9c1cc4"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prEB1NM4AJ2_1uPku6xpjZ7dGltLMynJD0BM8fwUYUni4"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prEB1NM4AJ2_1uPku6xpjZ7dGltLMynJD0BM8fwUYUni4",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "helix-foundry-company-ontology",
+      "url": "https://blog.mushroom.cv/blog/helix-foundry-company-ontology/",
+      "jobs": [
+        "8ed8bf8a-2da2-46f1-af9e-3d522324310c"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prJ3I9UAhSeiPmaSDMw0Y5VKKJ1ubi-ooBws7dH4gaF0O"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prJ3I9UAhSeiPmaSDMw0Y5VKKJ1ubi-ooBws7dH4gaF0O",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "pr-agency-founder-communications-playbook",
+      "url": "https://blog.mushroom.cv/blog/pr-agency-founder-communications-playbook/",
+      "jobs": [
+        "5976a322-17ea-440d-84fc-ad6dca81b4a0"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prGRxbLdRlzdFO9RdfenivGt2RSI4oq7Ez32rQhObqDwN"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prGRxbLdRlzdFO9RdfenivGt2RSI4oq7Ez32rQhObqDwN",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "draft",
+      "wechatCurrentStateVerified": true,
+      "wechatError": ""
+    },
+    {
+      "slug": "anthropic-agent-workshop-engineering-guide",
+      "url": "https://blog.mushroom.cv/blog/anthropic-agent-workshop-engineering-guide/",
+      "jobs": [
+        "54b73c78-57dc-4f1c-8192-37a6009bdf9b"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prJ4Ln7AdTzhFrd5nTcB-UZBhdEKsNINP_sNvNGu4Ek3x"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prJ4Ln7AdTzhFrd5nTcB-UZBhdEKsNINP_sNvNGu4Ek3x",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "motonav-round-screen-navigation",
+      "url": "https://blog.mushroom.cv/blog/motonav-round-screen-navigation/",
+      "jobs": [
+        "50885262-fb9f-4461-8f73-8c5e7d994963"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prBa9OjLSmP4KUm7ZUppK6CMlu8EfDBSibIgv9remGJCM"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prBa9OjLSmP4KUm7ZUppK6CMlu8EfDBSibIgv9remGJCM",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "nemotron-35-super-vl-bolt-local-models",
+      "url": "https://blog.mushroom.cv/blog/nemotron-35-super-vl-bolt-local-models/",
+      "jobs": [
+        "6eb9b02c-7891-4efb-97d1-ca9bb880f386"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prHbOojWbrN716rDikQAmkZWRX9_pWWyHWlkg_Rja4dil"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prHbOojWbrN716rDikQAmkZWRX9_pWWyHWlkg_Rja4dil",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "seal-ai-video-workbench",
+      "url": "https://blog.mushroom.cv/blog/seal-ai-video-workbench/",
+      "jobs": [
+        "b5975d0f-1e94-436e-bd65-1335e99ab62a"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prE7SoaGS4y9IKr17KrrUTNDRlw5HH3iBhGbkslIBi_4i"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prE7SoaGS4y9IKr17KrrUTNDRlw5HH3iBhGbkslIBi_4i",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "onetake-envmanage-source-check",
+      "url": "https://blog.mushroom.cv/blog/onetake-envmanage-source-check/",
+      "jobs": [
+        "c02d3d80-6879-4871-9dd1-f40098a86266",
+        "e6d6d22c-7207-4fa9-86c8-17a1a5b901d0"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prB81I_QX111P68iAGiab2gPZjG1mI6hhS7VmuQjgHLTx"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prB81I_QX111P68iAGiab2gPZjG1mI6hhS7VmuQjgHLTx",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "peekaboo-macos-native-ui-agent",
+      "url": "https://blog.mushroom.cv/blog/peekaboo-macos-native-ui-agent/",
+      "jobs": [
+        "ca6de80c-c9ea-4d9b-b86a-a684ce70f3f4"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prHBlnsta95mqUPnrsV9S0KZB3sU2ve9eH1r1lOrNUcVS"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prHBlnsta95mqUPnrsV9S0KZB3sU2ve9eH1r1lOrNUcVS",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "praisonai-five-layer-agent-stack-managed-agents",
+      "url": "https://blog.mushroom.cv/blog/praisonai-five-layer-agent-stack-managed-agents/",
+      "jobs": [
+        "9c8f1cfd-41a6-40d5-a283-d6b6b78d0832"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prLZMNAVgiV9D1MyIKob4QR-VdJts8JH2vxO0BPF-3yOw"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prLZMNAVgiV9D1MyIKob4QR-VdJts8JH2vxO0BPF-3yOw",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "zixi-51m-mac-local-tts",
+      "url": "https://blog.mushroom.cv/blog/zixi-51m-mac-local-tts/",
+      "jobs": [
+        "6405ca50-0d22-4b28-b97f-44980ef13beb"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prEeAte3M2aw3WmX5Pe2SqdxFzKDWZ-D2nY97RLUbwN9z"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prEeAte3M2aw3WmX5Pe2SqdxFzKDWZ-D2nY97RLUbwN9z",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "saluki-27b-gguf-tools-bonsai2",
+      "url": "https://blog.mushroom.cv/blog/saluki-27b-gguf-tools-bonsai2/",
+      "jobs": [
+        "history-20261011-saluki"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prJPJuuRX8aHKiHPwnNXDCYD-CTuY1j_4RRM6QA4T3w9P"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prJPJuuRX8aHKiHPwnNXDCYD-CTuY1j_4RRM6QA4T3w9P",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "rsi-anything-world-model-retention",
+      "url": "https://blog.mushroom.cv/blog/rsi-anything-world-model-retention/",
+      "jobs": [
+        "f3521f95-fff4-4b97-a616-7dcfe8d9509f"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prIBDJ4ftvV-y8e2iTMJR2gFNAPq3o8Cgha-Qjc9AIBhj"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prIBDJ4ftvV-y8e2iTMJR2gFNAPq3o8Cgha-Qjc9AIBhj",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "mellum21-thinking-coding-agent",
+      "url": "https://blog.mushroom.cv/blog/mellum21-thinking-coding-agent/",
+      "jobs": [
+        "c3b312e0-799c-4944-9c01-04a66625ca4e"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prLsTP17uU60DB4vh3tMwp2cwNPOcLMknGvEi1MltGxXC"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prLsTP17uU60DB4vh3tMwp2cwNPOcLMknGvEi1MltGxXC",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "hermes-enterprise-open-source-business-model",
+      "url": "https://blog.mushroom.cv/blog/hermes-enterprise-open-source-business-model/",
+      "jobs": [
+        "076af8c6-583e-46df-9ac5-98a8ac644dd7"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prM0s1VIWGtCRz_3M42Krxlj_VfE5Axa-NR5OMF4I3uev"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prM0s1VIWGtCRz_3M42Krxlj_VfE5Axa-NR5OMF4I3uev",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "toonflow-short-drama-workflow",
+      "url": "https://blog.mushroom.cv/blog/toonflow-short-drama-workflow/",
+      "jobs": [
+        "2aecc942-7100-44a7-83fe-5d7bd1e54ea0"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prMiDtsKL3rWN9N5w-9usT5v_ljANewL_l7XfC2934my2"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prMiDtsKL3rWN9N5w-9usT5v_ljANewL_l7XfC2934my2",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "agentear-local-voice-input-preview",
+      "url": "https://blog.mushroom.cv/blog/agentear-local-voice-input-preview/",
+      "jobs": [
+        "22024452-d700-4d65-aee2-0fbd57c4c2c9"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prFwuuwj0E3ddyHJ4EH74voEJCC5hMWuMhp8iOE95CIhl"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prFwuuwj0E3ddyHJ4EH74voEJCC5hMWuMhp8iOE95CIhl",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "abot-recon-streaming-3d-reconstruction",
+      "url": "https://blog.mushroom.cv/blog/abot-recon-streaming-3d-reconstruction/",
+      "jobs": [
+        "53dd7c90-61d4-4acd-965d-3456910c3fc9"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prHnFcMoR-_c2tsSM_X1Gjk0QcWlflBkFdBUMuUWKwjuT"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prHnFcMoR-_c2tsSM_X1Gjk0QcWlflBkFdBUMuUWKwjuT",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "cua-computer-use-2-0-desktop-agent-benchmark-trajectory-cua-s1",
+      "url": "https://blog.mushroom.cv/blog/cua-computer-use-2-0-desktop-agent-benchmark-trajectory-cua-s1/",
+      "jobs": [
+        "f8d4f0f7-fbb5-4370-93d4-50c574f2b213"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prGbLSv877O8U0ff1OQyc07RmEimHdMFasIdA1t1rVAjb"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prGbLSv877O8U0ff1OQyc07RmEimHdMFasIdA1t1rVAjb",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "spun-hidden-infrastructure",
+      "url": "https://blog.mushroom.cv/blog/spun-hidden-infrastructure/",
+      "jobs": [
+        "a66031bc-2f8d-46c1-a641-08df3026e272"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prOS16vBUmmbj7zB2yfPMlSSn3y_osOJeGX3QK1BgQoG-"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prOS16vBUmmbj7zB2yfPMlSSn3y_osOJeGX3QK1BgQoG-",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "startlux-decision-typed-decision-model-jev-compatible-games-demo",
+      "url": "https://blog.mushroom.cv/blog/startlux-decision-typed-decision-model-jev-compatible-games-demo/",
+      "jobs": [
+        "ab55420e-c1b1-4f3d-8bda-c6db52e8e139"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prEkI4L5q27TY-LAHrnEQjQjBB4kYEoV81J9LoLeZJEFM"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prEkI4L5q27TY-LAHrnEQjQjBB4kYEoV81J9LoLeZJEFM",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "opentiny-tinyrobot-agent-ui",
+      "url": "https://blog.mushroom.cv/blog/opentiny-tinyrobot-agent-ui/",
+      "jobs": [
+        "2730765d-614f-42a0-b248-77d46859acc4"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prP18SnV_WDguf9krLolluqMvOFR_qvOCwt6d9n7oA9fu"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prP18SnV_WDguf9krLolluqMvOFR_qvOCwt6d9n7oA9fu",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "plausible-analytics-consulting-white-label",
+      "url": "https://blog.mushroom.cv/blog/plausible-analytics-consulting-white-label/",
+      "jobs": [
+        "54159ac5-9109-40aa-b924-7d83345a65d5"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prDYRUZu9tQ8IGJkvE7qFyTY0ghSFgZECEPqjEbCm797H"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prDYRUZu9tQ8IGJkvE7qFyTY0ghSFgZECEPqjEbCm797H",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "lemo-opuscar-code-video-skill",
+      "url": "https://blog.mushroom.cv/blog/lemo-opuscar-code-video-skill/",
+      "jobs": [
+        "0575013c-4bf9-40ed-a5d8-026ecda9a7c7"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prE-Eof8c4N3-Uv6Fqiv0i_6LpOfkWJGwVIi-j4sS8OBD"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prE-Eof8c4N3-Uv6Fqiv0i_6LpOfkWJGwVIi-j4sS8OBD",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "genoffice-ai-office-suite",
+      "url": "https://blog.mushroom.cv/blog/genoffice-ai-office-suite/",
+      "jobs": [
+        "a9edcd70-128b-4e9b-8761-251eca3f3340"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prFRaVbHIRd6L6-DFQOEdpe9h6fyYZdQxHU0uNKIheylt"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prFRaVbHIRd6L6-DFQOEdpe9h6fyYZdQxHU0uNKIheylt",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "hypit-ai-agent-video-workflow-svml-claude-code-codex",
+      "url": "https://blog.mushroom.cv/blog/hypit-ai-agent-video-workflow-svml-claude-code-codex/",
+      "jobs": [
+        "33991263-9caa-4832-b67b-4ec9f05de995"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prFY7i4oh00LfW2rr38F8K9iksZEdeM8mLNzyeUE8MUfS"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prFY7i4oh00LfW2rr38F8K9iksZEdeM8mLNzyeUE8MUfS",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "mouthpad-tongue-control-fact-check",
+      "url": "https://blog.mushroom.cv/blog/mouthpad-tongue-control-fact-check/",
+      "jobs": [
+        "5b3f11d1-8826-4e1a-b003-d34bb16af48c"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prCbd3zuIna4-ycYJUjs6732hYuEyjJRKRtLwVX9159Eo"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prCbd3zuIna4-ycYJUjs6732hYuEyjJRKRtLwVX9159Eo",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "oriera-engine-v03-generative-assets",
+      "url": "https://blog.mushroom.cv/blog/oriera-engine-v03-generative-assets/",
+      "jobs": [
+        "fce860c6-508f-49ff-abfd-9a362db5b6f0"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prEggGOIGIZCHHV3fsV5VLbmKdvNDfWo7iCNLzCrf-UwD"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prEggGOIGIZCHHV3fsV5VLbmKdvNDfWo7iCNLzCrf-UwD",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "loopera-factor-research-evidence-gates",
+      "url": "https://blog.mushroom.cv/blog/loopera-factor-research-evidence-gates/",
+      "jobs": [
+        "history-20261011-loopera"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prKL_xi9wpSJa5AlFqTwwNtz6ZxhYUSAmMVYbRXCJZNZd"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prKL_xi9wpSJa5AlFqTwwNtz6ZxhYUSAmMVYbRXCJZNZd",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "layerfs-v1-recursive-agent-filesystem",
+      "url": "https://blog.mushroom.cv/blog/layerfs-v1-recursive-agent-filesystem/",
+      "jobs": [
+        "ce42e364-bf7c-4575-9582-0d37b382d5c4"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prNAqjTxBxCcQryG-mPZMUBMyNxcC2_cvrYR4rLbiScXi"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prNAqjTxBxCcQryG-mPZMUBMyNxcC2_cvrYR4rLbiScXi",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "x2streaming-asr-append-only",
+      "url": "https://blog.mushroom.cv/blog/x2streaming-asr-append-only/",
+      "jobs": [
+        "cc0412a5-6276-42e0-b8ff-1b39eb9ebd66"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prNKsH3d63-QLj_qwUv5Cb0NEkw6eIrqdTDUqXxcH1Edm"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prNKsH3d63-QLj_qwUv5Cb0NEkw6eIrqdTDUqXxcH1Edm",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "ascii-portrait-browser-animation",
+      "url": "https://blog.mushroom.cv/blog/ascii-portrait-browser-animation/",
+      "jobs": [
+        "ee292e84-93bb-470b-8c2b-8260c7aee63c"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prGRSvIZ3yeNiVOu3s7PWaBq67yqtWi_rD97_z-ZK1KtB"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prGRSvIZ3yeNiVOu3s7PWaBq67yqtWi_rD97_z-ZK1KtB",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "everything-open-source-app-suite",
+      "url": "https://blog.mushroom.cv/blog/everything-open-source-app-suite/",
+      "jobs": [
+        "ee292e84-93bb-470b-8c2b-8260c7aee63c"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prEGli3byKPndw7O4Ulq8qdeNcikx4XorOcPti1MygT1x"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prEGli3byKPndw7O4Ulq8qdeNcikx4XorOcPti1MygT1x",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "thinkterm-multi-agent-terminal",
+      "url": "https://blog.mushroom.cv/blog/thinkterm-multi-agent-terminal/",
+      "jobs": [
+        "8c8273a9-70bd-4f6a-86d1-9ec8423b7ded"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prC4RqYnjJkUNjmraWHfP-3RC5ukBfWUEGLY6oxJ3GpDv"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prC4RqYnjJkUNjmraWHfP-3RC5ukBfWUEGLY6oxJ3GpDv",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "indra-ocr-cpu-document-parsing",
+      "url": "https://blog.mushroom.cv/blog/indra-ocr-cpu-document-parsing/",
+      "jobs": [
+        "1e875eb7-832d-4404-8b6c-624e2a8578eb"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prNKjJFuz6hapBmZTuAw58DJd2TbnpuX_HouMMScEUvHM"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prNKjJFuz6hapBmZTuAw58DJd2TbnpuX_HouMMScEUvHM",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "localdot-local-ai-computer",
+      "url": "https://blog.mushroom.cv/blog/localdot-local-ai-computer/",
+      "jobs": [
+        "887fa09a-c53c-4195-89c7-5d3b5f4ac07a"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prD19UXR4KxmehVGYpIaRGIB09-1kfScbRRqkahK9K1ia"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prD19UXR4KxmehVGYpIaRGIB09-1kfScbRRqkahK9K1ia",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "pine-computer-agent-runtime-engineering",
+      "url": "https://blog.mushroom.cv/blog/pine-computer-agent-runtime-engineering/",
+      "jobs": [
+        "b0e5f827-7f7c-4722-aed5-08e957f3614c"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prHBMoeKUcfQwcSzU6A4kWr8E8RmrrPXvUsQAiT7qTBg_"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prHBMoeKUcfQwcSzU6A4kWr8E8RmrrPXvUsQAiT7qTBg_",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "macnativegames-totk-native-mac",
+      "url": "https://blog.mushroom.cv/blog/macnativegames-totk-native-mac/",
+      "jobs": [
+        "4250f407-e9ba-4079-8125-8a0292caecc7"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prMjStlFZJf4fmddo8PKTHe1oMZxm1MqAeeErYmFyDaZS"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prMjStlFZJf4fmddo8PKTHe1oMZxm1MqAeeErYmFyDaZS",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "usechat-wechat-agent-runtime",
+      "url": "https://blog.mushroom.cv/blog/usechat-wechat-agent-runtime/",
+      "jobs": [
+        "f12e2847-75e8-4c33-ae44-c9704f0e9c03"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prAstar_FkxVGmUVha5dukh8caIbeMoxMu3Gh9LH4Lo1J"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prAstar_FkxVGmUVha5dukh8caIbeMoxMu3Gh9LH4Lo1J",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "drama3-breeze2-fish-s2-comparison",
+      "url": "https://blog.mushroom.cv/blog/drama3-breeze2-fish-s2-comparison/",
+      "jobs": [
+        "bec2f477-96d0-4b56-a31b-209c59ba4b09"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prOQNdDawCvY-BcphicV8wJEV4NQSTR2ggUvD-x7bM131"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prOQNdDawCvY-BcphicV8wJEV4NQSTR2ggUvD-x7bM131",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "pocketorca-35b-moe-phone-server",
+      "url": "https://blog.mushroom.cv/blog/pocketorca-35b-moe-phone-server/",
+      "jobs": [
+        "4c8444de-4659-49ea-898c-8ce20f8f9e55"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prPOyKGf6tm5sc7ZKnPezGpsQtRJ2Mo9lVEbFx40kkI_Y"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prPOyKGf6tm5sc7ZKnPezGpsQtRJ2Mo9lVEbFx40kkI_Y",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "open-tts-leaderboard-october-2026",
+      "url": "https://blog.mushroom.cv/blog/open-tts-leaderboard-october-2026/",
+      "jobs": [
+        "f42755b8-fbc2-40a0-8b97-e3c1474d22a0"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prFC7d6M5-kq4ib0fGJ1fyQSeiCMbAz-9JcDGYEwbNpu_"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prFC7d6M5-kq4ib0fGJ1fyQSeiCMbAz-9JcDGYEwbNpu_",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "rapid-mlx-apple-silicon-local-ai-inference",
+      "url": "https://blog.mushroom.cv/blog/rapid-mlx-apple-silicon-local-ai-inference/",
+      "jobs": [
+        "a1f146cc-f91e-4528-b13a-ae1869bb0da0"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prIAytTSqNQsgMufnWJf3-PfoBwdm_pwud6Ccf9_nwmUJ"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prIAytTSqNQsgMufnWJf3-PfoBwdm_pwud6Ccf9_nwmUJ",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "sweety-handdraw-video-pipeline",
+      "url": "https://blog.mushroom.cv/blog/sweety-handdraw-video-pipeline/",
+      "jobs": [
+        "19f3d791-0c0c-418f-9ad1-27133b934689"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prHnGbXc8a2yu9vTLLzRsvPvarjO0hEHXiq7gX_PdzmUU"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prHnGbXc8a2yu9vTLLzRsvPvarjO0hEHXiq7gX_PdzmUU",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "harness2-recursive-agent-improvement",
+      "url": "https://blog.mushroom.cv/blog/harness2-recursive-agent-improvement/",
+      "jobs": [
+        "e2fc8e82-ae22-4820-bce1-111f77e0d86c"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prHkYI_ue8fhACKp5D3V2NWGSVrk0WORst-vh1BvCbPV2"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prHkYI_ue8fhACKp5D3V2NWGSVrk0WORst-vh1BvCbPV2",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "ondine-rust-mermaid-compiler",
+      "url": "https://blog.mushroom.cv/blog/ondine-rust-mermaid-compiler/",
+      "jobs": [
+        "e6d6d22c-7207-4fa9-86c8-17a1a5b901d0"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prIweBABJLfqwo_JFAoYAAFQQLnzmoks_qDmTvOX0fRlB"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prIweBABJLfqwo_JFAoYAAFQQLnzmoks_qDmTvOX0fRlB",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "live-panel-skill-animated-architecture",
+      "url": "https://blog.mushroom.cv/blog/live-panel-skill-animated-architecture/",
+      "jobs": [
+        "e6d6d22c-7207-4fa9-86c8-17a1a5b901d0"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prOC_sSbwpzHhIu0KiU7smp9Pt0D39WKp_tmOiAJ61TDq"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prOC_sSbwpzHhIu0KiU7smp9Pt0D39WKp_tmOiAJ61TDq",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "animation-datasets-motion-viewer",
+      "url": "https://blog.mushroom.cv/blog/animation-datasets-motion-viewer/",
+      "jobs": [
+        "e6d6d22c-7207-4fa9-86c8-17a1a5b901d0"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prE-OFK0Ei4lRbPy6EtmMOGdhZVTTEp1J4YUt5_wWA-Zh"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prE-OFK0Ei4lRbPy6EtmMOGdhZVTTEp1J4YUt5_wWA-Zh",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "specialized-inference-engines-rise-hardware-specific-llm-optimization",
+      "url": "https://blog.mushroom.cv/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
+      "jobs": [
+        "462f0d88-deb5-4fe3-abe6-1d3778ff76ad"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prD-hi2B6H2HEziNcxxkNymhwD0euduqDmuyjs3FW4Ogw"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prD-hi2B6H2HEziNcxxkNymhwD0euduqDmuyjs3FW4Ogw",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    },
+    {
+      "slug": "vitalik-paranoid-ai-zkapi-tor",
+      "url": "https://blog.mushroom.cv/blog/vitalik-paranoid-ai-zkapi-tor/",
+      "jobs": [
+        "c5e63f39-e4a3-4689-94f6-b29d0541af1b"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prJK6U16H6hRthkmk9K5f_5HS11jQVk9ULdBBlTrPRUtp"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prJK6U16H6hRthkmk9K5f_5HS11jQVk9ULdBBlTrPRUtp",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "draft",
+      "wechatCurrentStateVerified": true,
+      "wechatError": ""
+    },
+    {
+      "slug": "valtz-local-ai-creative-studio",
+      "url": "https://blog.mushroom.cv/blog/valtz-local-ai-creative-studio/",
+      "jobs": [
+        "36004f9f-25d9-409a-a538-5e1809ec1aa7"
+      ],
+      "receiptIds": [
+        "prCUE631thH1cmNLi42prO4k3Oq4f2ujz7ye_-Lw5rfh6ECcCU6z17knpi6slH-N"
+      ],
+      "localArticleExists": true,
+      "localReceiptExists": true,
+      "localReceiptId": "prCUE631thH1cmNLi42prO4k3Oq4f2ujz7ye_-Lw5rfh6ECcCU6z17knpi6slH-N",
+      "receiptMatchesRecorded": true,
+      "blogHTTP": 200,
+      "wechatStatus": "recorded",
+      "wechatCurrentStateVerified": false,
+      "wechatError": "旧凭证不在远程草稿箱；已发布列表接口48001，当前状态未核验，不重新创建。"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "https://github.com/hi3d-official/Hi3Dv1.0",
+  "entity": "Hi3D",
+  "botRawKBOnly": true,
+  "articleMatch": false,
+  "draftMatch": false,
+  "localM2Match": false,
+  "publishedListError": "48001 api unauthorized",
+  "decision": "Continue original writing workflow; raw material KB is not publication."
+}

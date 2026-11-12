@@ -1,0 +1,33 @@
+{
+  "platform": "macOS ARM64",
+  "rustVersion": "1.98.1",
+  "commit": "869eb8548ae3cf9162181659c3ab47441b9c300d",
+  "formatsEvidence": {
+    "crates": [
+      "craft-anything-evidence",
+      "craft-anything-formats"
+    ],
+    "passed": 606,
+    "failed": 0,
+    "ignored": 0,
+    "resultGroups": 46
+  },
+  "engineCleanRoom": {
+    "passed": 3,
+    "failed": 0,
+    "filtered": 525,
+    "scope": "allowlist validity/uniqueness, Deep gate, per-run mode persistence"
+  },
+  "notRun": [
+    "full workspace tests",
+    "desktop GUI",
+    "CLI/MCP transport",
+    "live coding agents",
+    "paid model calls",
+    "Ghidra",
+    "Frida",
+    "Android device",
+    "end-to-end rebuild"
+  ],
+  "sourceAndLockUnmodified": true
+}

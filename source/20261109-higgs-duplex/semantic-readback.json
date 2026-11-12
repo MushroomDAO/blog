@@ -1,0 +1,40 @@
+[
+  {
+    "id": "ec45e30f3c92a99a00c12cbfee4e968de6da1d159943dc43",
+    "metadata": {
+      "article_id": "higgs-realtime-duplex-open-weights-pricing-engineering",
+      "content_hash": "8d4bb36d74488ef1",
+      "excerpt": "Higgs Realtime Duplex：开源、收费与工程实现核查 Higgs Realtime Duplex是李沐所在Boson AI团队的45B全双工模型。本文核对官方权重与候补API状态，区分现售Realtime费率、TTS和STT组件，解析160毫秒分块、后台工具、数字人和自托管路线，并介绍Mika、WorldForge的独立定位，给出经过本地检查的编排示例与工程接入边界。 Higgs 全双工 语音Agent Boson AI Mika WorldForge 这是不是李沐开发的模型？ 到底哪些开源，哪些只是可以调用？ 如果不开源，现在如何收费？",
+      "language": "zh",
+      "tags": [
+        "Higgs",
+        "全双工",
+        "语音Agent",
+        "Boson AI",
+        "Mika",
+        "WorldForge"
+      ],
+      "title": "Higgs Realtime Duplex：开源、收费与工程实现核查",
+      "url": "/blog/higgs-realtime-duplex-open-weights-pricing-engineering/"
+    }
+  },
+  {
+    "id": "0bafa295532f612c45149eb8324342ca542af3e6e55bd34b",
+    "metadata": {
+      "article_id": "higgs-realtime-duplex-open-weights-pricing-engineering",
+      "content_hash": "a1b15fa4c86e1b57",
+      "excerpt": "Higgs Realtime Duplex: Weights, Pricing, and Engineering Investigate Higgs Realtime Duplex weights, API access and pricing, with implementation paths, speech components, Mika, WorldForge, and local code checks. Higgs 全双工 语音Agent Boson AI Mika WorldForge Is this Mu Li’s model? Whi",
+      "language": "en",
+      "tags": [
+        "Higgs",
+        "全双工",
+        "语音Agent",
+        "Boson AI",
+        "Mika",
+        "WorldForge"
+      ],
+      "title": "Higgs Realtime Duplex: Weights, Pricing, and Engineering",
+      "url": "/blog/higgs-realtime-duplex-open-weights-pricing-engineering/"
+    }
+  }
+]

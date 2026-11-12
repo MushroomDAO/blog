@@ -1,0 +1,13 @@
+{
+  "sourceTests": {
+    "nodeTests": 4,
+    "pythonTests": 2,
+    "failed": 0
+  },
+  "shellSyntax": "passed",
+  "astroBuild": "passed",
+  "browser": "Headless Chrome fresh isolated profile; carousel original slide0 points to Splash; screenshot visually reviewed",
+  "homepage": "https://blog.mushroom.cv/",
+  "wechatChanged": false,
+  "newArticleCreated": false
+}

@@ -1,0 +1,25 @@
+▶ Jev keeps action data out of the owner proof and blocks failures without an LLM
+  ✔ openrouter (63.399708ms)
+  ✔ typesafe (33.703833ms)
+✔ Jev keeps action data out of the owner proof and blocks failures without an LLM (97.553167ms)
+✔ Jev checks elapsed time, local clocks and weekdays before it permits an action (2.286333ms)
+✔ a nested effect can refuse the private-read path even when the first Jev check calls it a read (8.951083ms)
+✔ scheduled message dates preserve the owner local day without parsing page text (0.253375ms)
+✔ decision evidence keeps the selected message when owner replies repeat (0.069959ms)
+✔ date checks include calendar dates, implicit years, clock suffixes and uncertain absence (3.159583ms)
+✔ date and amount facts preserve zone aliases and complete grouped amounts (1.9225ms)
+✔ strict Jev reads need a separate effect check and never treat a private draft as a read (3.004542ms)
+✔ a browser uncertainty score cannot change the permission question for Nod settings (1.700834ms)
+✔ a selected owner rule and an unknown app effect cannot pass the Jev classifier (0.16975ms)
+✔ verified relative dates can correct a time score only when every required time check passes (12.424042ms)
+✔ relative days use the configured zone and refuse a missing or unlisted zone (7.102792ms)
+✔ an uncertain effect needs a strong separate check before it can become private work (0.673542ms)
+✔ every checker must quote owner words for Nod settings, sign-in and uploads (0.105709ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 325.243875

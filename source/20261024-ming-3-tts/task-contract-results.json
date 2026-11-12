@@ -1,0 +1,84 @@
+{
+  "scope": "8 upstream task-input checks, no model loading/audio generation/benchmark",
+  "results": [
+    {
+      "case": "plain",
+      "accepted": true,
+      "fields": [
+        "prompt",
+        "text",
+        "use_spk_emb",
+        "use_zero_spk_emb",
+        "instruction",
+        "prompt_wav_path",
+        "prompt_text",
+        "cfg",
+        "sigma",
+        "temperature",
+        "taskname",
+        "text_language"
+      ]
+    },
+    {
+      "case": "freeform",
+      "accepted": true,
+      "fields": [
+        "prompt",
+        "text",
+        "use_spk_emb",
+        "use_zero_spk_emb",
+        "instruction",
+        "prompt_wav_path",
+        "prompt_text",
+        "cfg",
+        "sigma",
+        "temperature",
+        "taskname",
+        "text_language"
+      ]
+    },
+    {
+      "case": "japanese",
+      "accepted": true,
+      "fields": [
+        "prompt",
+        "text",
+        "use_spk_emb",
+        "use_zero_spk_emb",
+        "instruction",
+        "prompt_wav_path",
+        "prompt_text",
+        "cfg",
+        "sigma",
+        "temperature",
+        "taskname",
+        "text_language"
+      ]
+    },
+    {
+      "case": "missing-language",
+      "rejected": true,
+      "reason": "MULTILINGUAL requires language_id"
+    },
+    {
+      "case": "mixed-freeform",
+      "rejected": true,
+      "reason": "FREEFORM uses instruction, not controls"
+    },
+    {
+      "case": "conflicting-speaker-mode",
+      "rejected": true,
+      "reason": "use_spk_emb and use_zero_spk_emb cannot both be true"
+    },
+    {
+      "case": "missing-reference",
+      "rejected": true,
+      "reason": "use_spk_emb requires a prompt wav or a speaker embedding"
+    },
+    {
+      "case": "empty-text",
+      "rejected": true,
+      "reason": "text must not be empty"
+    }
+  ]
+}

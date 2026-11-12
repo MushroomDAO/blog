@@ -1,0 +1,36 @@
+{
+  "banner": {
+    "origin": "local FLUX.2 Klein4B",
+    "seed": 8222,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "bytes": 87242,
+    "verificationFailures": 0,
+    "verificationWarnings": 0,
+    "manualReview": "accepted macro gripper/glass/lens, no labels/people, full frame; illustrative hardware scene",
+    "rejectedAttempt": "8221 rejected manually for pseudo-brand text despite OCRpass"
+  },
+  "officialImage": {
+    "source": "https://github.com/Robbyant/lingbot-vision/blob/151e46321bae4399f8568829f190c7bdec216b49/assets/teaser_crop.png",
+    "saved": "/Users/jason/.heinu1-bot/media/lingbot-vision-official-feature-panel.png",
+    "coverRejected": "diagnosticmulti-panel"
+  },
+  "bodyFigures": {
+    "origin": "imagegen LittleM skill",
+    "rawDirectory": "/Users/jason/Dev/mycelium/blog/generated_images/lingbot-fig-01-label-edit-20261105",
+    "dimensions": [
+      1120,
+      630
+    ],
+    "colors": 48,
+    "bytes": [
+      68955,
+      59993,
+      73522
+    ],
+    "workerExit": 0,
+    "edit": "figure01label narrowed to \u6309\u4efb\u52a1\u5bf9\u63a5; image editing tool used"
+  }
+}

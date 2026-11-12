@@ -1,0 +1,54 @@
+{
+  "slug": "pr-agency-founder-communications-playbook",
+  "checks": {
+    "description": true,
+    "descriptionEn": true,
+    "titleEn": true,
+    "wechatTitle": true,
+    "wechatDigest": true,
+    "bilingual": true,
+    "copyright": true,
+    "faq": true,
+    "question_heading": true,
+    "source": true,
+    "date": true,
+    "category": true,
+    "figures_twice": true,
+    "no_placeholder": true,
+    "bluf": true
+  },
+  "images": [
+    {
+      "path": "src/assets/images/pr-agency-founder-communications-playbook-banner.jpg",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 87713
+    },
+    {
+      "path": "src/assets/images/pr-agency-founder-communications-playbook-fig-01.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 58268
+    },
+    {
+      "path": "src/assets/images/pr-agency-founder-communications-playbook-fig-02.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 79708
+    },
+    {
+      "path": "src/assets/images/pr-agency-founder-communications-playbook-fig-03.png",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 85790
+    }
+  ]
+}

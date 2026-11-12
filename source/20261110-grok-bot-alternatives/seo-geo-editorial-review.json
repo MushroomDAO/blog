@@ -1,0 +1,41 @@
+{
+  "reviewDate": "2026-11-10",
+  "SEO": {
+    "englishSlug": true,
+    "bilingualMetadata": true,
+    "descriptions150to160": true,
+    "titleUnder60": true,
+    "isoDates": true,
+    "categoryAndTags": true,
+    "singleTemplateH1": true,
+    "headingHierarchy": true,
+    "descriptiveImageNames": true,
+    "bilingualAltText": true,
+    "canonicalRouteFinal": true,
+    "internalLinks": true,
+    "primarySources": true,
+    "noKeywordStuffing": true
+  },
+  "GEO": {
+    "earlyAnswerBothLanguages": true,
+    "namedEntities": true,
+    "questionHeadings": true,
+    "comparisonTables": true,
+    "datedStarSnapshot": true,
+    "sourceCommitProvenance": true,
+    "originalScopedVerification": true,
+    "FAQBothLanguages": true,
+    "officialClaimsSeparatedFromTests": true,
+    "feedbackSamplingLimits": true
+  },
+  "editorial": {
+    "noUnifiedPerformanceRankClaim": true,
+    "noncommercialNightlySeparated": true,
+    "CopilotRuntimeLicenseExplicit": true,
+    "sharedAccountBoundaryExplicit": true,
+    "olderIssueVersionExplicit": true,
+    "noMassSend": true,
+    "maxOneBoldPerH2": true
+  },
+  "imageVerification": "Banner and three separate Little M illustrations manually inspected; all dimensions, palette and size checks passed."
+}

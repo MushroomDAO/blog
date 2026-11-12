@@ -1,0 +1,39 @@
+✔ trusted refusals translate only canonical whitelisted errors from the matching process (11.433416ms)
+✔ all-thread grants wait for committed thread modes and compensate the same scope on failure (0.281709ms)
+✔ all-thread grants take every level but Custom, and reject mixed scopes (0.091041ms)
+✔ an all-thread Auto leaving Custom settles on its one reply, with no grant phases (0.256084ms)
+✔ scoped composer grants wait for the real commit and keep the bot default (0.108458ms)
+✔ an uncertain scoped commit compensates only its own thread (0.0955ms)
+✔ thread-only options reject missing or mixed scopes (0.063167ms)
+✔ permission refresh stays on one thread (0.069083ms)
+✔ confirmed model switches use only scoped Ask requests (0.094166ms)
+✔ a thread-only switch verifies the thread mode without changing the bot default (0.1065ms)
+✔ builds only bounded bot-scoped approval-mode requests (0.139583ms)
+✔ validates successful and failed trusted approval-mode results (0.062708ms)
+✔ carries the local Auto warning acknowledgement through the private channel (0.055917ms)
+✔ sends through one utility process and returns the matching server bot (0.097458ms)
+✔ rejects a response for another trusted mode (0.058916ms)
+✔ revokes an elevated grant before rejecting a malformed matching reply (0.051834ms)
+✔ another utility process cannot resolve a pending request (0.047792ms)
+✔ does not resolve an elevated selection when server confirmation is refused (0.057875ms)
+✔ rejects pending grants immediately when their utility process exits (0.055125ms)
+✔ times out only after an ambiguous elevated grant is revoked (111.787833ms)
+✔ safe Ask timeouts do not enqueue a redundant recovery (6.514125ms)
+✔ the local page keeps clipboard read and write (0.549334ms)
+✔ the active paired server may write the clipboard, on request and on check (0.143916ms)
+✔ a remote page can never read the clipboard or gain another permission (0.179291ms)
+✔ only the exact active origin writes: another server, port, scheme, host, blank or unknown origin is denied (0.483875ms)
+✔ a child frame never inherits the trust, even on the active origin (0.100417ms)
+✔ only the main application window is trusted (0.075417ms)
+✔ the main-window guard is explicit: no main contents, missing or foreign contents all deny (0.410208ms)
+✔ switching or forgetting the server withdraws the old origin at once (0.1165ms)
+✔ the Cloud keeps its microphone and writes the clipboard by the same rule, and the server gets no microphone (0.178125ms)
+✔ main installs the active environment's origin into the shared handlers, with no second handler registration (0.320125ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 187.516875

@@ -1,0 +1,101 @@
+{
+  "sha": "e5ef8251dd7ddfc84271de98ea0bc9ce716768ce",
+  "node_id": "C_kwDOCg-tJtoAKGU1ZWY4MjUxZGQ3ZGRmYzg0MjcxZGU5OGVhMGJjOWNlNzE2NzY4Y2U",
+  "commit": {
+    "author": {
+      "name": "belfner",
+      "email": "belfner@belfner.com",
+      "date": "2026-07-30T01:25:28Z"
+    },
+    "committer": {
+      "name": "belfner",
+      "email": "belfner@belfner.com",
+      "date": "2026-07-30T01:25:28Z"
+    },
+    "message": "Add LingBot-Vision model entrypoints and pretrained cfgs\n\nAdd vit_{small,base,large,giant}_patch16_lingbot factories and .robbyant\npretrained cfgs to eva.py, reusing the existing Eva/DINOv3 RoPE support.\nWeights and code from https://github.com/robbyant/lingbot-vision are\nApache-2.0 (arXiv:2607.05247). Converted weights are hosted at\nbelfner/<arch>.robbyant.",
+    "tree": {
+      "sha": "9558c52a44e3c117cfc0e0ca5b101f9890901773",
+      "url": "https://api.github.com/repos/huggingface/pytorch-image-models/git/trees/9558c52a44e3c117cfc0e0ca5b101f9890901773"
+    },
+    "url": "https://api.github.com/repos/huggingface/pytorch-image-models/git/commits/e5ef8251dd7ddfc84271de98ea0bc9ce716768ce",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/huggingface/pytorch-image-models/commits/e5ef8251dd7ddfc84271de98ea0bc9ce716768ce",
+  "html_url": "https://github.com/huggingface/pytorch-image-models/commit/e5ef8251dd7ddfc84271de98ea0bc9ce716768ce",
+  "comments_url": "https://api.github.com/repos/huggingface/pytorch-image-models/commits/e5ef8251dd7ddfc84271de98ea0bc9ce716768ce/comments",
+  "author": {
+    "login": "belfner",
+    "id": 20782745,
+    "node_id": "MDQ6VXNlcjIwNzgyNzQ1",
+    "avatar_url": "https://avatars.githubusercontent.com/u/20782745?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/belfner",
+    "html_url": "https://github.com/belfner",
+    "followers_url": "https://api.github.com/users/belfner/followers",
+    "following_url": "https://api.github.com/users/belfner/following{/other_user}",
+    "gists_url": "https://api.github.com/users/belfner/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/belfner/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/belfner/subscriptions",
+    "organizations_url": "https://api.github.com/users/belfner/orgs",
+    "repos_url": "https://api.github.com/users/belfner/repos",
+    "events_url": "https://api.github.com/users/belfner/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/belfner/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "belfner",
+    "id": 20782745,
+    "node_id": "MDQ6VXNlcjIwNzgyNzQ1",
+    "avatar_url": "https://avatars.githubusercontent.com/u/20782745?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/belfner",
+    "html_url": "https://github.com/belfner",
+    "followers_url": "https://api.github.com/users/belfner/followers",
+    "following_url": "https://api.github.com/users/belfner/following{/other_user}",
+    "gists_url": "https://api.github.com/users/belfner/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/belfner/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/belfner/subscriptions",
+    "organizations_url": "https://api.github.com/users/belfner/orgs",
+    "repos_url": "https://api.github.com/users/belfner/repos",
+    "events_url": "https://api.github.com/users/belfner/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/belfner/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "e98c05a5a15e81188ec62dd5380b8f5c3251075a",
+      "url": "https://api.github.com/repos/huggingface/pytorch-image-models/commits/e98c05a5a15e81188ec62dd5380b8f5c3251075a",
+      "html_url": "https://github.com/huggingface/pytorch-image-models/commit/e98c05a5a15e81188ec62dd5380b8f5c3251075a"
+    }
+  ],
+  "stats": {
+    "total": 168,
+    "additions": 168,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "039039787e699e8091a4402223fb39d57fb65564",
+      "filename": "timm/models/eva.py",
+      "status": "modified",
+      "additions": 168,
+      "deletions": 0,
+      "changes": 168,
+      "blob_url": "https://github.com/huggingface/pytorch-image-models/blob/e5ef8251dd7ddfc84271de98ea0bc9ce716768ce/timm%2Fmodels%2Feva.py",
+      "raw_url": "https://github.com/huggingface/pytorch-image-models/raw/e5ef8251dd7ddfc84271de98ea0bc9ce716768ce/timm%2Fmodels%2Feva.py",
+      "contents_url": "https://api.github.com/repos/huggingface/pytorch-image-models/contents/timm%2Fmodels%2Feva.py?ref=e5ef8251dd7ddfc84271de98ea0bc9ce716768ce",
+      "patch": "@@ -8,6 +8,7 @@\n  * Perception Encoder (PE) ViT from Meta (https://arxiv.org/abs/2504.13181)\n  * ROPE-ViT from Naver AI (https://arxiv.org/abs/2403.13298)\n  * DINOv3 from META AI Research (https://arxiv.org/abs/2508.10104)\n+ * LingBot-Vision from Robbyant (https://arxiv.org/abs/2607.05247)\n \n @article{EVA,\n   title={EVA: Exploring the Limits of Masked Visual Representation Learning at Scale},\n@@ -55,8 +56,17 @@\n   url={https://arxiv.org/abs/2508.10104},\n }\n \n+@article{lingbot-vision2026,\n+  title={Vision Pretraining for Dense Spatial Perception},\n+  author={Fu, Zelin and Tan, Bin and Sun, Changjiang and Liu, Shaohui and Zheng, Kecheng and Xu, Yinghao\n+    and Zhu, Xing and Shen, Yujun and Xue, Nan},\n+  journal={arXiv preprint arXiv:2607.05247},\n+  year={2026}\n+}\n+\n DINOv3 code was a modification of existing EVA model and support modules, so licensed under Apache-2.0 like timm.\n Weights from META remain under DINOv3 License (https://ai.meta.com/resources/models-and-libraries/dinov3-license/).\n+LingBot-Vision code and weights are released under Apache-2.0 (https://github.com/robbyant/lingbot-vision).\n \n Modifications by / Copyright 2023 Ross Wightman, original copyrights below\n \"\"\"\n@@ -1398,6 +1408,31 @@ def _eupe_cfg(url: str = '', **kwargs) -> Dict[str, Any]:\n         'license': 'fair-noncommercial-research-license', **kwargs\n     }\n \n+\n+def _lingbot_cfg(url: str = '', **kwargs) -> Dict[str, Any]:\n+    \"\"\"Generate default configuration for LingBot-Vision models.\n+\n+    Note: Original LingBot-Vision uses CLS-token pooling for representations. timm defaults to avg\n+    pooling for the Eva architecture. Pass global_pool='token' at model creation to match\n+    upstream behavior, which may be preferred for tasks like retrieval and few-shot classification.\n+\n+    Args:\n+        url: Model weights URL.\n+        **kwargs: Additional configuration parameters.\n+\n+    Returns:\n+        Model configuration dictionary.\n+    \"\"\"\n+    return {\n+        'url': url,\n+        'num_classes': 0, 'input_size': (3, 512, 512), 'pool_size': None,\n+        'crop_pct': 1.0, 'crop_mode': 'squash', 'interpolation': 'bilinear', 'fixed_input_size': True,\n+        'mean': IMAGENET_DEFAULT_MEAN, 'std': IMAGENET_DEFAULT_STD,\n+        'first_conv': 'patch_embed.proj', 'classifier': 'head',\n+        'license': 'apache-2.0', 'origin_url': 'https://github.com/robbyant/lingbot-vision',\n+        'paper_ids': 'arXiv:2607.05247', **kwargs\n+    }\n+\n default_cfgs = generate_default_cfgs({\n \n     # EVA 01 CLIP fine-tuned on imagenet-1k\n@@ -1809,6 +1844,23 @@ def _eupe_cfg(url: str = '', **kwargs) -> Dict[str, Any]:\n         mean=(0.430, 0.411, 0.296), std=(0.213, 0.156, 0.143),\n     ),\n \n+    # LingBot-Vision weights are released under Apache-2.0, please see\n+    # https://github.com/robbyant/lingbot-vision/blob/main/LICENSE\n+    # NOTE: Original LingBot-Vision uses CLS-token pooling (global_pool='token') which may be better\n+    # for some tasks. Default here is avg pooling inherited from the Eva base class.\n+    'vit_small_patch16_lingbot.robbyant': _lingbot_cfg(\n+        hf_hub_id='belfner/vit_small_patch16_lingbot.robbyant',\n+    ),\n+    'vit_base_patch16_lingbot.robbyant': _lingbot_cfg(\n+        hf_hub_id='belfner/vit_base_patch16_lingbot.robbyant',\n+    ),\n+    'vit_large_patch16_lingbot.robbyant': _lingbot_cfg(\n+        hf_hub_id='belfner/vit_large_patch16_lingbot.robbyant',\n+    ),\n+    'vit_giant_patch16_lingbot.robbyant': _lingbot_cfg(\n+        hf_hub_id='belfner/vit_giant_patch16_lingbot.robbyant',\n+    ),\n+\n })\n \n \n@@ -3094,3 +3146,119 @@ def vit_7b_patch16_dinov3(pretrained: bool = False, **kwargs) -> Eva:\n \n     model = _create_eva('vit_7b_patch16_dinov3', pretrained=pretrained, **dict(model_args, **kwargs))\n     return model\n+\n+\n+@register_model\n+def vit_small_patch16_lingbot(pretrained: bool = False, **kwargs) -> Eva:\n+    \"\"\"LingBot-Vision S/16 https://arxiv.org/abs/2607.05247\n+    NOTE: Pass global_pool='token' to use CLS-token pooling (matches upstream LingBot-Vision).\n+    \"\"\"\n+    model_args = dict(\n+        patch_size=16,\n+        dynamic_img_size=True,\n+        embed_dim=384,\n+        depth=12,\n+        num_heads=6,\n+        qkv_bias=True,\n+        # global_pool='token',  # upstream uses CLS token; default here is 'avg', pass via kwargs or --gp\n+        init_values=1.0e-05, # layer-scale\n+        rope_type='dinov3',\n+        rope_temperature=100,\n+        #rope_rescale_coords=2,  # haven't added to interface\n+        rope_rotate_half=True,\n+        use_rot_pos_emb=True,\n+        use_abs_pos_emb=False,\n+        num_reg_tokens=4,\n+        use_fc_norm=False,\n+        norm_layer=partial(LayerNorm, eps=1e-5),\n+    )\n+    model = _create_eva('vit_small_patch16_lingbot', pretrained=pretrained, **dict(model_args, **kwargs))\n+    return model\n+\n+\n+@register_model\n+def vit_base_patch16_lingbot(pretrained: bool = False, **kwargs) -> Eva:\n+    \"\"\"LingBot-Vision B/16 https://arxiv.org/abs/2607.05247\n+    NOTE: Pass global_pool='token' to use CLS-token pooling (matches upstream LingBot-Vision).\n+    \"\"\"\n+    model_args = dict(\n+        patch_size=16,\n+        dynamic_img_size=True,\n+        embed_dim=768,\n+        depth=12,\n+        num_heads=12,\n+        qkv_bias=True,\n+        # global_pool='token',  # upstream uses CLS token; default here is 'avg', pass via kwargs or --gp\n+        init_values=1.0e-05, # layer-scale\n+        rope_type='dinov3',\n+        rope_temperature=100,\n+        #rope_rescale_coords=2,  # haven't added to interface\n+        rope_rotate_half=True,\n+        use_rot_pos_emb=True,\n+        use_abs_pos_emb=False,\n+        num_reg_tokens=4,\n+        use_fc_norm=False,\n+        norm_layer=partial(LayerNorm, eps=1e-5),\n+    )\n+    model = _create_eva('vit_base_patch16_lingbot', pretrained=pretrained, **dict(model_args, **kwargs))\n+    return model\n+\n+\n+@register_model\n+def vit_large_patch16_lingbot(pretrained: bool = False, **kwargs) -> Eva:\n+    \"\"\"LingBot-Vision L/16 https://arxiv.org/abs/2607.05247\n+    NOTE: Pass global_pool='token' to use CLS-token pooling (matches upstream LingBot-Vision).\n+    \"\"\"\n+    model_args = dict(\n+        patch_size=16,\n+        dynamic_img_size=True,\n+        embed_dim=1024,\n+        depth=24,\n+        num_heads=16,\n+        qkv_bias=True,\n+        # global_pool='token',  # upstream uses CLS token; default here is 'avg', pass via kwargs or --gp\n+        init_values=1.0e-05, # layer-scale\n+        rope_type='dinov3',\n+        rope_temperature=100,\n+        #rope_rescale_coords=2,  # haven't added to interface\n+        rope_rotate_half=True,\n+        use_rot_pos_emb=True,\n+        use_abs_pos_emb=False,\n+        num_reg_tokens=4,\n+        use_fc_norm=False,\n+        norm_layer=partial(LayerNorm, eps=1e-5),\n+    )\n+    model = _create_eva('vit_large_patch16_lingbot', pretrained=pretrained, **dict(model_args, **kwargs))\n+    return model\n+\n+\n+@register_model\n+def vit_giant_patch16_lingbot(pretrained: bool = False, **kwargs) -> Eva:\n+    \"\"\"LingBot-Vision G/16 https://arxiv.org/abs/2607.05247\n+    NOTE: Pass global_pool='token' to use CLS-token pooling (matches upstream LingBot-Vision).\n+    \"\"\"\n+    model_args = dict(\n+        patch_size=16,\n+        dynamic_img_size=True,\n+        embed_dim=1536,\n+        depth=40,\n+        num_heads=24,\n+        qkv_bias=False,\n+        # global_pool='token',  # upstream uses CLS token; default here is 'avg', pass via kwargs or --gp\n+        mlp_ratio=4 * 2 / 3,\n+        init_values=1.0e-5, # layer-scale\n+        rope_type='dinov3',\n+        rope_temperature=100,\n+        use_rot_pos_emb=True,\n+        use_abs_pos_emb=False,\n+        rope_rotate_half=True,\n+        swiglu_mlp=True,\n+        swiglu_align_to=8,\n+        #rope_rescale_coords=2,  # haven't added to interface\n+        num_reg_tokens=4,\n+        use_fc_norm=False,\n+        norm_layer=partial(LayerNorm, eps=1e-5),\n+    )\n+\n+    model = _create_eva('vit_giant_patch16_lingbot', pretrained=pretrained, **dict(model_args, **kwargs))\n+    return model"
+    }
+  ]
+}

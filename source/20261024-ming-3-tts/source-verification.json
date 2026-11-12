@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-24",
+  "repoCommit": "028c1eace193e7acdb256453da89b6e9207e052b",
+  "modelRevision": "8d66b70a00f05ad183fa8a863b4ce609fc83cbc0",
+  "inferenceRun": false,
+  "modelDownloaded": false,
+  "audioGenerated": false,
+  "localScope": "8 actual upstream task-builder cases, source device inspection only",
+  "deviceScope": "CUDA default, BF16 and explicit CUDA autocast; no validated MPS pathway",
+  "bannerVisualReview": "passed by root: microphone and laptop, no faces/text",
+  "dedup": "only raw intake KB, no previous article/M2 receipt"
+}

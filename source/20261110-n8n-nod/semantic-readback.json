@@ -1,0 +1,40 @@
+[
+  {
+    "id": "c0f82fe66337a1e07352e62ff78955f8701ef898682a160e",
+    "metadata": {
+      "article_id": "n8n-nod-local-personal-agent-engineering-guide",
+      "content_hash": "a870e2a881c5fbf5",
+      "excerpt": "n8n Nod：开源个人Agent的架构、记忆与使用指南 Nod 是 n8n Labs 开源的独立个人智能体，在本机工作区和浏览器中执行任务。本文核对官方源码、安装文档与评测口径，介绍 Pi、PostgreSQL、任务调度、授权检查和长期记忆，解释本地存储与外部模型、连接服务及遥测的区别，并给出桌面与源码安装步骤、费用边界和低风险试用方法，帮助判断它是否适合个人日常工作。 Nod n8n AI Agents Self Hosting Computer Use Open Source 它和 n8n、普通聊天助手有什么区别？ “运行在电脑上”，到底有哪些组件",
+      "language": "zh",
+      "tags": [
+        "Nod",
+        "n8n",
+        "AI Agents",
+        "Self Hosting",
+        "Computer Use",
+        "Open Source"
+      ],
+      "title": "n8n Nod：开源个人Agent的架构、记忆与使用指南",
+      "url": "/blog/n8n-nod-local-personal-agent-engineering-guide/"
+    }
+  },
+  {
+    "id": "3745b6d5cf6654be5809d1a7e645f76b6ad8346ac1772012",
+    "metadata": {
+      "article_id": "n8n-nod-local-personal-agent-engineering-guide",
+      "content_hash": "52ec4b8ffc1beb2c",
+      "excerpt": "n8n Nod: A Local Personal Agent Engineering Guide Review Nod from n8n Labs: local agent architecture, permissions, memory, model costs and installation, with benchmark limits and scoped offline verification. Nod n8n AI Agents Self Hosting Computer Use Open Source How does Nod dif",
+      "language": "en",
+      "tags": [
+        "Nod",
+        "n8n",
+        "AI Agents",
+        "Self Hosting",
+        "Computer Use",
+        "Open Source"
+      ],
+      "title": "n8n Nod: A Local Personal Agent Engineering Guide",
+      "url": "/blog/n8n-nod-local-personal-agent-engineering-guide/"
+    }
+  }
+]

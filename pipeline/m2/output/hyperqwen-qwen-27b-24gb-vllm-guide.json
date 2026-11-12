@@ -1,0 +1,13 @@
+{
+  "title": "HyperQwen：24GB显卡跑27B的边界",
+  "author": "Mycelium",
+  "digest": "拆开单用户速度与并发吞吐，说明量化、投机解码、长上下文和Mac适用条件。",
+  "mediaId": "prCUE631thH1cmNLi42prLHy1NxS4RYX14XCWv8JLk7qLtR43REjO3BA3fgFOaDY",
+  "blogUrl": "https://blog.mushroom.cv/blog/hyperqwen-qwen-27b-24gb-vllm-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/hyperqwen-qwen-27b-24gb-vllm-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/syv-ai/hyperqwen"
+  ],
+  "publishedAt": "2026-11-03T16:32:00.919Z"
+}

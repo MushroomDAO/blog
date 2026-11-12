@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-10",
+  "SEO": {
+    "englishSlug": true,
+    "bilingualMetadata": true,
+    "descriptions150to160": true,
+    "titleUnder60": true,
+    "ISOdates": true,
+    "categoryTags": true,
+    "singleTemplateH1": true,
+    "questionHeadings": true,
+    "FAQBothLanguages": true,
+    "primaryRepoAndNpm": true,
+    "internalRelatedLink": true,
+    "altTextBothLanguages": true
+  },
+  "GEO": {
+    "BLUF": true,
+    "pinnedSourceAndVersion": true,
+    "platformImportPublishSeparated": true,
+    "HTTPvsToolExplained": true,
+    "literalDefaultsNotPerformanceClaim": true,
+    "fallbackNotFullModelGeneration": true,
+    "ownBuildAnd87Tests": true,
+    "nativeHostNotVerifiedExplicit": true,
+    "localStorageNotOffline": true,
+    "rulesNotFineTuning": true
+  },
+  "imageVerification": "Final banner8392 and three Little M illustrations passed machine and manual inspection."
+}

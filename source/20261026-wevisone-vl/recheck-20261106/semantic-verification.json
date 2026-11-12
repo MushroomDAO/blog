@@ -1,0 +1,88 @@
+{
+  "existingIndexReused": true,
+  "publicSearchVerified": true,
+  "results": {
+    "results": [
+      {
+        "article_id": "wemm-embedding-tencent-multimodal-mrl",
+        "title": "WeMM-Embedding-9B: Tencent's Unified Multimodal Embedding Beats Qwen3-VL-Embedding at Every Size",
+        "url": "/blog/wemm-embedding-tencent-multimodal-mrl/",
+        "language": "en",
+        "excerpt": "WeMM-Embedding-9B: Tencent's Unified Multimodal Embedding Beats Qwen3-VL-Embedding at Every Size Tencent WeChat Vision Team's open-source multimodal embedding model, built on Qwen3.5-9B, maps text, images, video, and visual documents into one 4096-dim vector space with Matryoshka",
+        "score": 0.56549066
+      },
+      {
+        "article_id": "wevisone-vl-unified-vision",
+        "title": "WeVisOne-VL: Seven Vision Tasks, One Careful Audit",
+        "url": "/blog/wevisone-vl-unified-vision/",
+        "language": "en",
+        "excerpt": "WeVisOne-VL: Seven Vision Tasks, One Careful Audit Audit Tencent WeVisOne-VL: seven vision tasks, 2B/4B weights, a pixel decoder, reported benchmarks, deployment limits and unverified RTX 4090 speed claims. WeVisOne-VL 计算机视觉 OCR 图像分割 开源模型 Does one request produce all seven output",
+        "score": 0.563448
+      },
+      {
+        "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+        "title": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行",
+        "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+        "language": "zh",
+        "excerpt": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行 OrcaRouter 发布的 Qwen3.8-27B 消融对齐（abliterated）MLX 量化版本，672 likes，trending。基于 Qwen3.8-27B —— 一个 64 层混合架构模型（48 层 Gated DeltaNet 线性注意力 + 每 4 层一个全注意力层），原生视觉语言塔，262K 上下文，MTP 头。提供 2/4/6/8-bit 四个精度（affine 量化，grou",
+        "score": 0.5004537
+      },
+      {
+        "article_id": "mage-vl-microsoft-codec-native-streaming-video-understanding-model",
+        "title": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B",
+        "url": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
+        "language": "zh",
+        "excerpt": "Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B 微软 7 月 29 日发布 Mage-VL，一个用编解码器（Codec）逻辑重新设计视觉编码器的 4B 多模态模型。核心创新 Mage-ViT 不对视频帧均匀采样，而是保留 I 帧所有 patch、只保留 P 帧运动显著 patch，将视觉 token 减少超过 75%，推理速度最高提升 3.5×。同等参数下视频理解全面超越 Qwen3-VL-4B，还具备主动流式感知能力——只在发生重要事件时才开口。Apache 2.0，HuggingFace ",
+        "score": 0.4873499
+      },
+      {
+        "article_id": "step5-preview-vllm-verl-deployment",
+        "title": "Step-5 Preview 部署指南：vLLM 专用镜像与 verl RL 边界",
+        "url": "/blog/step5-preview-vllm-verl-deployment/",
+        "language": "zh",
+        "excerpt": "Step-5 Preview 部署指南：vLLM 专用镜像与 verl RL 边界 Step-5 Preview 已提供 vLLM 专用镜像与部署配方，FP8 示例采用四张 B300 或八张 H200。本文核对模型页、镜像与 verl 强化学习 PR，解释 TP、EP、DP、长上下文与 NVFP4 的配置差异，给出接口验收步骤，并区分可下载权重、定制推理环境与仍处于草稿阶段的 LoRA 强化学习实现。 Step-5 Preview vLLM verl MoE 模型部署 强化学习 Step-5 Preview 是多大的模型？ 应该选择哪种硬件与并行方式？ ",
+        "score": 0.47493228
+      },
+      {
+        "article_id": "vibethinker-small-model-training-guide",
+        "title": "VibeThinker Decoded: How Weibo AI Beat DeepSeek R1 for $7,800 — and What You Can Replicate",
+        "url": "/blog/vibethinker-small-model-training-guide/",
+        "language": "en",
+        "excerpt": "VibeThinker Decoded: How Weibo AI Beat DeepSeek R1 for $7,800 — and What You Can Replicate Weibo AI's VibeThinker series uses the Spectrum-to-Signal Principle to train a 1.5B model that beats DeepSeek R1 on math benchmarks at a total cost of $7,800. This article deconstructs the ",
+        "score": 0.4631849
+      },
+      {
+        "article_id": "tencent-weknora-rag-agent-wiki-knowledge-platform",
+        "title": "WeKnora: Tencent's Open-Source Knowledge Platform — RAG + Agent + Wiki Tri-Mode, Go + pgvector Self-Hosted",
+        "url": "/blog/tencent-weknora-rag-agent-wiki-knowledge-platform/",
+        "language": "en",
+        "excerpt": "WeKnora: Tencent's Open-Source Knowledge Platform — RAG + Agent + Wiki Tri-Mode, Go + pgvector Self-Hosted Tencent/WeKnora, MIT, Go, 29,900+ stars. LLM knowledge platform open-sourced by Tencent's WeChat team in July 2025. Three modes: RAG semantic retrieval Q&A, ReAct autonomous",
+        "score": 0.4587296
+      },
+      {
+        "article_id": "sensenova-vision-unified-cv-hardware-guide",
+        "title": "SenseNova-Vision: Unified Multimodal CV Model — Hardware Guide for Every Use Case",
+        "url": "/blog/sensenova-vision-unified-cv-hardware-guide/",
+        "language": "en",
+        "excerpt": "SenseNova-Vision: Unified Multimodal CV Model — Hardware Guide for Every Use Case SenseNova-Vision-7B-MoT unifies all CV tasks — detection, depth estimation, segmentation, 3D reconstruction — into a single generative model. The web demo needs one 80 GB GPU; full benchmarks need e",
+        "score": 0.45861593
+      },
+      {
+        "article_id": "sensenova-u15-unified-image-understand-generate-edit-mot",
+        "title": "sensenova-u15-unified-image-understand-generate-edit-mot",
+        "url": "/blog/sensenova-u15-unified-image-understand-generate-edit-mot/",
+        "language": "en",
+        "excerpt": "sensenova-u15-unified-image-understand-generate-edit-mot SenseNova-U1.5-8B-MoT from SenseTime unifies image understanding, generation, and editing in a single 8B-parameter model via NEO-unify architecture and MoT (Mixture of Tokens). Native 4K output, Apache 2.0, 5.4k GitHub star",
+        "score": 0.45723248
+      },
+      {
+        "article_id": "jevembed-embedding-decision-framework-choice-score-noul",
+        "title": "JevEmbed: Embedding-Based Decisions — Choice, Score, and Noul in One Framework with LoRA Fine-tuning",
+        "url": "/blog/jevembed-embedding-decision-framework-choice-score-noul/",
+        "language": "en",
+        "excerpt": "JevEmbed: Embedding-Based Decisions — Choice, Score, and Noul in One Framework with LoRA Fine-tuning JevEmbed by HITsz-TMG — Python framework for embedding-based Choice, Score, and Noul decisions. Single framework compatible with KaLM, Qwen3-Embedding, E5 models. Supports >255 ca",
+        "score": 0.45676455
+      }
+    ]
+  }
+}

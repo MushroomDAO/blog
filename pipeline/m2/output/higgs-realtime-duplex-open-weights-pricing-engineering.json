@@ -1,0 +1,18 @@
+{
+  "title": "Higgs全双工：开源了吗，怎么接入",
+  "author": "Mycelium",
+  "digest": "核对Duplex候补、现售API费用和语音权重，拆解异步工具与数字人链路。",
+  "mediaId": "prCUE631thH1cmNLi42prF8FcSsgjTi1VESuRJoOoSKjOkrdTgm2X_knw_jGPJM7",
+  "blogUrl": "https://blog.mushroom.cv/blog/higgs-realtime-duplex-open-weights-pricing-engineering/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/higgs-realtime-duplex-open-weights-pricing-engineering/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/boson-ai/higgs-realtime-tutorial",
+    "github.com/mushroomdao/blog",
+    "huggingface.co/bosonai/higgs-tts-3-4b",
+    "huggingface.co/bosonai/higgs-audio-v3-stt",
+    "github.com/wangzan101/mika",
+    "github.com/shengzing/worldforge"
+  ],
+  "publishedAt": "2026-11-09T02:46:54.002Z"
+}

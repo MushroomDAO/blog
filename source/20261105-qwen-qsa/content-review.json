@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-05T14:09:53.011067+00:00",
+  "checks": {
+    "communityNotOfficial": true,
+    "qsaNotKvCompression": true,
+    "branchesSeparated": true,
+    "capacityVsActualInput": true,
+    "downloadVsVram": true,
+    "authorVsLocalResults": true,
+    "qualityScope": true,
+    "cacheTradeoffs": true,
+    "licenseScopes": true,
+    "noWeightDownload": true,
+    "noGpuInferenceClaim": true,
+    "noFirstPerson": true
+  },
+  "localTests": {
+    "existingSuite": "test-gguf",
+    "passed": 144,
+    "failed": 0,
+    "scope": "CPU build and GGUF primitives only"
+  },
+  "dedupDecision": "Only raw source KB matched exact URLs; no prior article or receipt; proceed without duplicating raw KB."
+}

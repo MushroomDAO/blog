@@ -1,0 +1,24 @@
+usage: feather [-h] [--config CONFIG] [--model MODEL] [--base-url BASE_URL]
+               [--workdir WORKSPACE] [--max-turns MAX_TURNS] [--python PYTHON]
+               [--profile {train,prod}]
+               prompt
+
+Run Feather on one task in a local workspace.
+
+positional arguments:
+  prompt                Task instructions; use '-' to read them from stdin.
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG       JSON configuration file.
+  --model MODEL         Model identifier at the Chat Completions endpoint.
+  --base-url BASE_URL   OpenAI-compatible API base URL, including /v1 when
+                        needed.
+  --workdir WORKSPACE   Existing workspace directory (default: current
+                        directory).
+  --max-turns MAX_TURNS
+                        Maximum agent turns (default: 100).
+  --python PYTHON       Python executable for task shell commands; Feather
+                        keeps its own runtime.
+  --profile {train,prod}
+                        Startup profile (default: prod).

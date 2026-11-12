@@ -1,0 +1,12 @@
+{
+  "title": "ra-jit更名blaze：Rust热编译实测",
+  "author": "Mycelium",
+  "digest": "本机验证函数修改可由常驻编译器处理，拆解加速数据、内存成本与热更新限制。",
+  "mediaId": "prCUE631thH1cmNLi42prJtnpW5NmisNef9fJaeyrI_8tAo7vF9J4A5TyVfYYOWh",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/indexable-inc/blaze",
+    "github.com/indexable-inc/ra-jit"
+  ],
+  "publishedAt": "2026-10-25T13:56:11.247Z"
+}

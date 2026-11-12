@@ -1,0 +1,93 @@
+{
+  "query": "Zero-to-CAD-Qwen3-VL-2B CadQuery official Autodesk model",
+  "found": true,
+  "match": {
+    "rank": 1,
+    "score": 0.714099,
+    "article_id": "zero-to-cad-multiview-reconstruction"
+  },
+  "response": {
+    "results": [
+      {
+        "article_id": "zero-to-cad-multiview-reconstruction",
+        "title": "Autodesk Zero-to-CAD：2B模型从八视图重建可编辑零件",
+        "url": "/blog/zero-to-cad-multiview-reconstruction/",
+        "language": "zh",
+        "excerpt": "Autodesk Zero-to-CAD：2B模型从八视图重建可编辑零件 Autodesk 的 Zero-to-CAD 把八张规范渲染图转成可执行 CadQuery 代码。拆解 2B 模型、自合成数据和 GPT-5.2 对照，说明成功率与 IoU 的统计边界，并给出从输入准备、隔离执行到 STEP/STL 验收的路径，区分可编辑几何、真实尺寸恢复和可制造性，避免把研究演示当作工业反求承诺。 Autodesk Zero-to-CAD Qwen3-VL CadQuery 3D重建 它到底接收什么，生成什么？ 为什么只有2B，却能在自家测试集领先？ “跑赢GP",
+        "score": 0.714099
+      },
+      {
+        "article_id": "agentjev-0-6b-system-one-decision-model-qwen3",
+        "title": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92%",
+        "url": "/blog/agentjev-0-6b-system-one-decision-model-qwen3/",
+        "language": "zh",
+        "excerpt": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92% AgentJev-0.6B，Qwen3-0.6B底座+置换等变决策头，System-1 AI Agent 决策模型。Typed Decisions 2000题 79.25%（1585/2000）超 Laya 77.00%（+2.25pt）。零输出 token 解码，约 50ms 一次前向。Shared Prefix KV Cache 在 64 候选时骨干 token 从 33,547 降至 2",
+        "score": 0.53967285
+      },
+      {
+        "article_id": "wemm-embedding-tencent-multimodal-mrl",
+        "title": "WeMM-Embedding-9B：腾讯统一多模态嵌入模型，同尺寸全面超越 Qwen3-VL-Embedding",
+        "url": "/blog/wemm-embedding-tencent-multimodal-mrl/",
+        "language": "zh",
+        "excerpt": "WeMM-Embedding-9B：腾讯统一多模态嵌入模型，同尺寸全面超越 Qwen3-VL-Embedding 腾讯微信视觉团队开源的多模态嵌入模型，基于 Qwen3.5-9B，把文本、图像、视频、视觉文档统一映射到同一个 4096 维向量空间，支持 MRL 弹性降维（可截断到 256 维甚至更小而不用重新计算）。2B 和 9B 两个尺寸在 MMEB-v2 上都超过同尺寸的 Qwen3-VL-Embedding，Apache 2.0 协议。 多模态 Embedding 腾讯 MRL 开源 语义检索 一句话定位 为什么不用分开的图文 embedding ",
+        "score": 0.51237035
+      },
+      {
+        "article_id": "airllm-70b-inference-4gb-gpu-layer-streaming",
+        "title": "AirLLM: Run a 70B Model on 4GB of VRAM, No Quantization Required",
+        "url": "/blog/airllm-70b-inference-4gb-gpu-layer-streaming/",
+        "language": "en",
+        "excerpt": "AirLLM: Run a 70B Model on 4GB of VRAM, No Quantization Required lyogavin's open-source extreme-inference toolkit, 30k stars, Apache 2.0. Layer-by-layer streaming loads 70B models on a single 4GB GPU — no quantization, distillation, or pruning. Kimi K3 (2.8T) in 3.72GB, DeepSeek-",
+        "score": 0.5049889
+      },
+      {
+        "article_id": "microsoft-trellis2-native-3d-generation-o-voxel-pbr",
+        "title": "TRELLIS.2: Microsoft's 4B Image-to-3D Model Introduces a Native O-Voxel Representation",
+        "url": "/blog/microsoft-trellis2-native-3d-generation-o-voxel-pbr/",
+        "language": "en",
+        "excerpt": "TRELLIS.2: Microsoft's 4B Image-to-3D Model Introduces a Native O-Voxel Representation Microsoft's open-source 4B-parameter image-to-3D generation model. Introduces O-Voxel (field-free sparse voxels) to handle arbitrary topology including open surfaces, non-manifold geometry, and",
+        "score": 0.49641535
+      },
+      {
+        "article_id": "qwen-image-2-1-dit-rgba-local-deploy-guide",
+        "title": "Qwen-Image-2.1 Engineering Guide: 7B DiT with Native RGBA — Alibaba's Open Image Generation Model",
+        "url": "/blog/qwen-image-2-1-dit-rgba-local-deploy-guide/",
+        "language": "en",
+        "excerpt": "Qwen-Image-2.1 Engineering Guide: 7B DiT with Native RGBA — Alibaba's Open Image Generation Model Alibaba Qwen team open-sourced 2026-09-20. 7.1B 32-layer Block-Causal DiT + Qwen3-VL-8B text encoder + 64-channel RGBA VAE, ~15B total. Native transparency layers, multi-reference up",
+        "score": 0.49352708
+      },
+      {
+        "article_id": "apodex-1-1-mini-working-capability-local-agent-guide",
+        "title": "Apodex 1.1 Mini: Training 'Working Capability,' Not Chattiness — a 35B Model You Can Run Locally",
+        "url": "/blog/apodex-1-1-mini-working-capability-local-agent-guide/",
+        "language": "en",
+        "excerpt": "Apodex 1.1 Mini: Training 'Working Capability,' Not Chattiness — a 35B Model You Can Run Locally A deep dive into Apodex/Apodex-1.1-mini: an agentic finetune of Qwen3.5-35B-A3B (256 experts, 8 active per token, ~3B active parameters), Apache-2.0, image-text-to-text, bilingual en/",
+        "score": 0.4910675
+      },
+      {
+        "article_id": "kimi-agentenv-firecracker-sandbox-rl-training-infrastructure-kimi-k3",
+        "title": "Kimi AgentENV：驱动 Kimi K3 RL 训练的 Firecracker 沙箱基础设施深度拆解",
+        "url": "/blog/kimi-agentenv-firecracker-sandbox-rl-training-infrastructure-kimi-k3/",
+        "language": "zh",
+        "excerpt": "Kimi AgentENV：驱动 Kimi K3 RL 训练的 Firecracker 沙箱基础设施深度拆解 kvcache-ai 开源的 AgentENV（AENV）是 Kimi K3 Agentic RL 训练的底层沙箱平台，基于 Firecracker microVM + overlaybd + ublk，实现 50ms 启动/恢复、100ms 快照和运行时 Fork，并提供 E2B 兼容 API。MIT 开源，Rust 实现，可自托管替代 E2B。 一、AgentENV 解决的问题 二、技术架构：四层设计 1. Firecracker micro",
+        "score": 0.4820442
+      },
+      {
+        "article_id": "online3dviewer-browser-3d-18-formats-step-ifc-embed-library-mit",
+        "title": "浏览器里的全格式 3D 查看器：kovacsv/Online3DViewer，18 种格式，文件从不离开你的设备",
+        "url": "/blog/online3dviewer-browser-3d-18-formats-step-ifc-embed-library-mit/",
+        "language": "zh",
+        "excerpt": "浏览器里的全格式 3D 查看器：kovacsv/Online3DViewer，18 种格式，文件从不离开你的设备 kovacsv/Online3DViewer（3dviewer.net）是一个运行十年的开源浏览器 3D 查看器，MIT 许可，同时也是一个 npm 库（online-3d-viewer，月下载 6 万次）。支持 18 种格式导入（含 STEP/IGES/IFC/FreeCAD/Rhino）、7 种格式导出，工程 CAD 格式依靠 WASM 版 OpenCASCADE（occt-import-js）驱动。所有处理在浏览器内完成，文件永不上传。",
+        "score": 0.4811261
+      },
+      {
+        "article_id": "qwen-rlcd-huggingface-model-name-mismatch",
+        "title": "Qwen-2.5-1B-RLCD on HuggingFace: Not 1B, No RLCD, No Model Weights",
+        "url": "/blog/qwen-rlcd-huggingface-model-name-mismatch/",
+        "language": "en",
+        "excerpt": "Qwen-2.5-1B-RLCD on HuggingFace: Not 1B, No RLCD, No Model Weights harshatheg/Qwen-2.5-1B-RLCD sits in HuggingFace's model section with 221 likes and 0 downloads after one day. We read the full README and MODEL_CARD: there is no RLCD (Reinforcement Learning from Contrastive Disti",
+        "score": 0.478005
+      }
+    ]
+  }
+}

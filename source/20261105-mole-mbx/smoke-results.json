@@ -1,0 +1,118 @@
+{
+  "root": "/tmp/mole-mbx-smoke/proof-l4l99phz",
+  "conditions": {
+    "cargoIncrementalSetting": "CARGO_INCREMENTAL=0; mbx learned_incremental left at its default, observed private state after edit",
+    "targets": "three distinct fresh explicit dirs",
+    "globalSetup": "not run",
+    "cache": "/tmp/mole-mbx-smoke/proof-l4l99phz/cache",
+    "benchmark": "not a timing or performance comparison"
+  },
+  "steps": [
+    {
+      "label": "toolchain",
+      "args": [
+        "rustc",
+        "--version"
+      ],
+      "cwd": "/tmp/mole-mbx-smoke/proof-l4l99phz/checkout-a",
+      "exitCode": 0
+    },
+    {
+      "label": "lockfile",
+      "args": [
+        "cargo",
+        "generate-lockfile",
+        "--offline"
+      ],
+      "cwd": "/tmp/mole-mbx-smoke/proof-l4l99phz/checkout-a",
+      "exitCode": 0
+    },
+    {
+      "label": "cold-build",
+      "args": [
+        "/tmp/mole-mbx-bin/mbx",
+        "build",
+        "--offline",
+        "--target-dir",
+        "/tmp/mole-mbx-smoke/proof-l4l99phz/target-a"
+      ],
+      "cwd": "/tmp/mole-mbx-smoke/proof-l4l99phz/checkout-a",
+      "exitCode": 0
+    },
+    {
+      "label": "cross-checkout-build",
+      "args": [
+        "/tmp/mole-mbx-bin/mbx",
+        "build",
+        "--offline",
+        "--target-dir",
+        "/tmp/mole-mbx-smoke/proof-l4l99phz/target-b"
+      ],
+      "cwd": "/tmp/mole-mbx-smoke/proof-l4l99phz/checkout-b",
+      "exitCode": 0
+    },
+    {
+      "label": "restored-program",
+      "output": "42",
+      "exitCode": 0
+    },
+    {
+      "label": "explain-restored",
+      "args": [
+        "/tmp/mole-mbx-bin/mbx",
+        "explain",
+        "--last"
+      ],
+      "cwd": "/tmp/mole-mbx-smoke/proof-l4l99phz/checkout-b",
+      "exitCode": 0
+    },
+    {
+      "label": "modified-build",
+      "args": [
+        "/tmp/mole-mbx-bin/mbx",
+        "build",
+        "--offline",
+        "--target-dir",
+        "/tmp/mole-mbx-smoke/proof-l4l99phz/target-c"
+      ],
+      "cwd": "/tmp/mole-mbx-smoke/proof-l4l99phz/checkout-b",
+      "exitCode": 0
+    },
+    {
+      "label": "modified-program",
+      "output": "43",
+      "exitCode": 0
+    },
+    {
+      "label": "explain-modified",
+      "args": [
+        "/tmp/mole-mbx-bin/mbx",
+        "explain",
+        "--last"
+      ],
+      "cwd": "/tmp/mole-mbx-smoke/proof-l4l99phz/checkout-b",
+      "exitCode": 0
+    },
+    {
+      "label": "cache-stats",
+      "args": [
+        "/tmp/mole-mbx-bin/mbx",
+        "cache",
+        "stats",
+        "--json"
+      ],
+      "cwd": "/tmp/mole-mbx-smoke/proof-l4l99phz/checkout-b",
+      "exitCode": 0
+    },
+    {
+      "label": "gc-preview",
+      "args": [
+        "/tmp/mole-mbx-bin/mbx",
+        "gc",
+        "--dry-run"
+      ],
+      "cwd": "/tmp/mole-mbx-smoke/proof-l4l99phz/checkout-b",
+      "exitCode": 0
+    }
+  ]
+}

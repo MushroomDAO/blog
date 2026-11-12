@@ -1,0 +1,35 @@
+{
+  "articles": [
+    {
+      "slug": "agentear-local-voice-input-preview",
+      "url": "https://blog.mushroom.cv/blog/agentear-local-voice-input-preview/",
+      "status": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/agentear-local-voice-input-preview-banner.CwXpQkBl_Z1pWOct.webp",
+          "status": 200,
+          "bytes": 46138
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/agentear-local-voice-input-preview-fig-01.Cc1yXvKV_ZnWcXx.webp",
+          "status": 200,
+          "bytes": 57926
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/agentear-local-voice-input-preview-fig-02.BU6R9WPR_2oaCJb.webp",
+          "status": 200,
+          "bytes": 76652
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/agentear-local-voice-input-preview-fig-03.DwWBBmOZ_Z2nxn0h.webp",
+          "status": 200,
+          "bytes": 61780
+        }
+      ],
+      "listPosition": 1,
+      "englishColumn": true,
+      "documentedScope": true,
+      "pinnedSourceInArticle": true
+    }
+  ]
+}

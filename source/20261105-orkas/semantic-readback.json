@@ -1,0 +1,38 @@
+[
+  {
+    "id": "36d025d9e614399e51f72994f70ab36a08c88bba87475eb0",
+    "metadata": {
+      "article_id": "orkas-local-first-desktop-agent-team-review",
+      "content_hash": "bda162280cf63c7b",
+      "excerpt": "Orkas：把专业Agent和编程助手放进桌面工作台 Orkas是MIT开源的桌面多智能体工作台，以Commander协调专业角色、编程CLI、项目待办和资料库。本文核对任务委派、范围记忆、上下文恢复与定时运行机制，区分源码版和官方打包版的账号、云同步及应用发布功能，并解释本地存储与云端推理的边界，给出源码启动条件、400文件资源清单核验结果及可操作的试用验收建议。 Orkas AI Agent 多智能体 本地优先 开源工具 Orkas 如何把目标变成协作？ 项目、记忆和资料库，分别保存什么？ 本地优先，为什么仍然可能联网？ 能把现有编程助手接进来吗？ ",
+      "language": "zh",
+      "tags": [
+        "Orkas",
+        "AI Agent",
+        "多智能体",
+        "本地优先",
+        "开源工具"
+      ],
+      "title": "Orkas：把专业Agent和编程助手放进桌面工作台",
+      "url": "/blog/orkas-local-first-desktop-agent-team-review/"
+    }
+  },
+  {
+    "id": "9091f13e45dd28f46633e75c6b73cdae49153feddfb2d2a4",
+    "metadata": {
+      "article_id": "orkas-local-first-desktop-agent-team-review",
+      "content_hash": "6512491f24465530",
+      "excerpt": "Orkas: A Local-First Desktop Team of AI Agents Review Orkas desktop agents: Commander routing, scoped memory, local document search, CLI integration and source-edition limits, with a resource manifest check. Orkas AI Agent 多智能体 本地优先 开源工具 How does delegation work? Projects, memory",
+      "language": "en",
+      "tags": [
+        "Orkas",
+        "AI Agent",
+        "多智能体",
+        "本地优先",
+        "开源工具"
+      ],
+      "title": "Orkas: A Local-First Desktop Team of AI Agents",
+      "url": "/blog/orkas-local-first-desktop-agent-team-review/"
+    }
+  }
+]

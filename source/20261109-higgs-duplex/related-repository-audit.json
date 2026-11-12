@@ -1,0 +1,18 @@
+{
+  "mika": {
+    "revision": "8d61573eaed7d36fa37093bab233c94a5e79dd4d",
+    "appKnowledgeFiles": 24,
+    "siteKnowledgeFiles": 18,
+    "byoModelDocument": "docs/models.md"
+  },
+  "worldforge": {
+    "revision": "60a5323c3952e1ccad31dfc45d4aec4e13d9da4b",
+    "sourcePathsExist": {
+      "forge.py": true,
+      "macos_app": true,
+      "remote/forge_server.py": true,
+      "forge_local/postproc.py": true
+    }
+  },
+  "scope": "File inventory only; no functional Android/GPU or model capability test."
+}

@@ -1,0 +1,17 @@
+{
+  "problem": "Unescaped inline-code <style> became a real style element; WeChat truncated the draft body after styles/.",
+  "fix": "Escape &, < and > in inline and fenced code text; include renderer regression tests in default M2 npm test.",
+  "before": "Both newly added public-render regression cases failed against the old renderer.",
+  "after": {
+    "command": "npm --prefix pipeline/m2 test",
+    "tests": 17,
+    "passed": 17,
+    "failed": 0
+  },
+  "remoteRepair": "Updated the existing draft media_id; no second draft/add. Remote normalized full text and all three CDN image asset IDs/alts match the final render.",
+  "bodyLengths": {
+    "before": 2808,
+    "after": 23998
+  },
+  "blog": "Unchanged final Markdown; public Astro page was unaffected."
+}

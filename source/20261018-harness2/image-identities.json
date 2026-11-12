@@ -1,0 +1,42 @@
+[
+  {
+    "file": "src/assets/images/harness2-recursive-agent-improvement-banner.jpg",
+    "bytes": 80847,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "sha256": "5951846e6e45f7ed040cba6028579b5076ee785495400c60ca7d6cdb1e72603b",
+    "rootVisualReview": "pass; matched conceptual logic, readable minimal labels"
+  },
+  {
+    "file": "src/assets/images/harness2-recursive-agent-improvement-fig-01.png",
+    "bytes": 66800,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "sha256": "6df4ee6f7fbbee031a317998ae12dbfb49479eeb1d9ee9ad9681b96bd2ffaacb",
+    "rootVisualReview": "pass; matched conceptual logic, readable minimal labels"
+  },
+  {
+    "file": "src/assets/images/harness2-recursive-agent-improvement-fig-02.png",
+    "bytes": 85535,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "sha256": "8310db05db10dab8f59aead44a2d9b920018be0289f799186be794ecfa950963",
+    "rootVisualReview": "pass; matched conceptual logic, readable minimal labels"
+  },
+  {
+    "file": "src/assets/images/harness2-recursive-agent-improvement-fig-03.png",
+    "bytes": 86992,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "sha256": "45378d00d41e84d4b0000414ad12edd6fca1adb2216d1039db46592d71907ef4",
+    "rootVisualReview": "pass; matched conceptual logic, readable minimal labels"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "bilingual": true,
+  "requiredFrontmatter": true,
+  "copyrightBoth": true,
+  "canonicalBoth": true,
+  "threeImagesBoth": true,
+  "questionHeadingsBoth": true,
+  "sourceFactsVsOwnTest": true,
+  "BLUFBoth": true,
+  "primarySources": true,
+  "no92xGuarantee": true,
+  "noOwnPerformanceClaim": true,
+  "ownFunctionalEvidence": "local-smoke/verification.json",
+  "bannerReviewed": true,
+  "figuresReviewed": true,
+  "borrowCheckerVersionMismatchExplicit": true,
+  "descriptionEnLength": 157,
+  "descriptionCnLength": 154,
+  "relatedInternalLinks": "Canonical self-link; no irrelevant related-topic link added",
+  "schema": "Astro auto heading anchors; no unsupported FAQ schema injected",
+  "mainVsRelease": true
+}

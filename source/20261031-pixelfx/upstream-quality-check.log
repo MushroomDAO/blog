@@ -1,0 +1,10 @@
+warn  weather/falling-leaves
+      slow: 4.2 ms a frame
+warn  weather/god-rays
+      slow: 4.7 ms a frame
+warn  weather/snow
+      slow: 4.2 ms a frame
+warn  weather/storm
+      slow: 5.0 ms a frame
+
+232 effects: 232 pass, 0 fail, 4 with warnings

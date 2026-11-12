@@ -1,0 +1,8 @@
+# Visual/source review
+Official Stirling dashboard screenshot viewed: mostly empty UI and text; source benchmark chart viewed: text/metrics, not used as cover. Official images downloaded to media and saved-files.json. Concept covers are local FLUX, not actual installations or measured hardware.
+Stirling cover viewed: blank paper/workbench, blue/amber local-processing modules and inspection lens, no text/faces. EGM cover viewed: wooden elephant, goldfish bowl, blank design sketchbook, no human face/text.
+Nine final handdrawn 小M body images viewed together in diagnostic contact sheet. All correspond to article sections: licensing/ports/redaction; context/review/evidence; budget/shared-model/VRAM. Short labels coherent, no benchmark plots represented as measured results. Diagnostic montage warned about font but produced a readable contact sheet; original delivery PNGs unaffected.
+Body worker exited zero; all nine files 1120x630, at most48colors, below90KB. GVS seed8127 directly viewed and accepted: five blank glass spheres around a larger amber sphere, no lettering/faces. Final JPEG92810B. Seed8126 rejected and replaced.
+GVS cover seed8126 directly viewed and rejected for invented lettering on electronic components. It is not approved for publication, regardless of machine OCR outcome. Regenerating seed8127 with blank glass spheres instead of electronics. Freeze/check report must be regenerated after replacement and publication timestamps.
+
+Finalization: seed8127 regeneration completed, all three final banner machine checks passed with zero failures/warnings; all fifteen inputs unchanged after the successful build.

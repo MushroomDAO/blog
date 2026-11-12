@@ -1,0 +1,12 @@
+bun test v1.4.2 (744846f84)
+
+apps/computer/test/graphical-shell-policy.test.ts:
+(pass) graphical Shell capability boundary > blocks ordinary agents from selecting displays or injecting input [2.86ms]
+(pass) graphical Shell capability boundary > blocks raw CDP discovery and attachment outside computerUse [1.28ms]
+(pass) graphical Shell capability boundary > preserves ordinary terminal work and computerUse recovery access [0.01ms]
+(pass) graphical Shell capability boundary > reserved port failures explain local HTTP server recovery without relaxing CDP restrictions [0.27ms]
+
+ 4 pass
+ 0 fail
+ 33 expect() calls
+Ran 4 tests across 1 file. [17.00ms]

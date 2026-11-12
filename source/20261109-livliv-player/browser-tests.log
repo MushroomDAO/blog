@@ -1,0 +1,80 @@
+
+> @livliv-dev/player@0.3.0 test:browser
+> node test/smoke.mjs
+
+ok   what a load rejects with says what went wrong: http, not-a-model, not-a-model, not-a-model, newer-format, missing-feature, missing-file, missing-file, invalid, too-large
+ok   a VRM handed to a Player: LivLiv: this is a VRM or glTF file, and a Player plays LivLiv models: use a BodyPlayer with VrmBody (@livliv-dev/player/vrm)
+ok   char06 Aoi (livliv-model 4), Smile / Shy / Angry / Sad, covers 41.7 %, mark LivLiv on 0.68 % (outside the corner 0.00 %, noise 0.00 %), 745 ms
+ok   char07 Sora (livliv-model 4), Smile / Shy / Angry / Sad, covers 46.6 %, mark LivLiv on 0.59 % (outside the corner 0.00 %, noise 0.00 %), 116 ms
+ok   d01    Yui (livliv-model 4), Smile / Shy / Angry / Sad, covers 54.9 %, mark LivLiv on 0.68 % (outside the corner 0.00 %, noise 0.00 %), 113 ms
+ok   d02    Leo (livliv-model 4), Smile / Shy / Angry / Sad, covers 57.0 %, mark LivLiv on 0.60 % (outside the corner 0.00 %, noise 0.00 %), 117 ms
+ok   d03    Nana (livliv-model 4), Smile / Shy / Angry / Sad, covers 62.6 %, mark LivLiv on 0.67 % (outside the corner 0.00 %, noise 0.00 %), 137 ms
+ok   d03ft  Nana (livliv-model 4), Smile / Shy / Angry / Sad, covers 62.6 %, mark LivLiv on 0.67 % (outside the corner 0.00 %, noise 0.00 %), 211 ms
+ok   k01    Sena (livliv-model 4), Smile / Shy / Angry / Sad, covers 65.5 %, mark LivLiv on 0.62 % (outside the corner 0.00 %, noise 0.00 %), 176 ms
+ok   k02    Elio (livliv-model 4), Smile / Shy / Angry / Sad, covers 62.9 %, mark LivLiv on 0.49 % (outside the corner 0.00 %, noise 0.00 %), 161 ms
+ok   p01    Kujira (livliv-model 4), Smile / Shy / Angry / Sad, covers 59.1 %, mark LivLiv on 0.63 % (outside the corner 0.00 %, noise 0.00 %), 150 ms
+ok   p02    Kujira Q (livliv-model 4), Smile / Shy / Angry / Sad, covers 61.5 %, mark LivLiv on 0.66 % (outside the corner 0.00 %, noise 0.00 %), 196 ms
+ok   p03    Pen (livliv-model 4), Smile / Shy / Angry / Sad, covers 49.3 %, mark LivLiv on 0.68 % (outside the corner 0.00 %, noise 0.00 %), 151 ms
+ok   q02    Mochi (livliv-model 4), Smile / Shy / Angry / Sad, covers 40.0 %, mark LivLiv on 0.68 % (outside the corner 0.00 %, noise 0.00 %), 143 ms
+ok   q03    Kotaro (livliv-model 4), Smile / Shy / Angry / Sad, covers 38.4 %, mark LivLiv on 0.68 % (outside the corner 0.00 %, noise 0.00 %), 195 ms
+ok   s01    Hana (livliv-model 4), Smile / Shy / Angry / Sad, covers 50.8 %, mark LivLiv on 0.68 % (outside the corner 0.00 %, noise 0.00 %), 149 ms
+ok   v01    Aster (livliv-model 4), Smile / Shy / Angry / Sad, covers 62.3 %, mark LivLiv on 0.67 % (outside the corner 0.00 %, noise 0.00 %), 155 ms
+ok   v03    Mira (livliv-model 4), Smile / Shy / Angry / Sad, covers 62.7 %, mark LivLiv on 0.69 % (outside the corner 0.00 %, noise 0.00 %), 151 ms
+ok   v04    Kai (livliv-model 4), Smile / Shy / Angry / Sad, covers 59.8 %, mark LivLiv on 0.53 % (outside the corner 0.00 %, noise 0.00 %), 129 ms
+ok   v05    Lilith (livliv-model 4), Smile / Shy / Angry / Sad, covers 64.7 %, mark LivLiv on 0.56 % (outside the corner 0.00 %, noise 0.00 %), 145 ms
+ok   v06    Usa (livliv-model 4), Smile / Shy / Angry / Sad, covers 61.0 %, mark LivLiv on 0.58 % (outside the corner 0.00 %, noise 0.00 %), 174 ms
+ok   v07    Stella (livliv-model 4), Smile / Shy / Angry / Sad, covers 70.5 %, mark LivLiv on 0.67 % (outside the corner 0.00 %, noise 0.00 %), 194 ms
+ok   w01    Max (livliv-model 4), Smile / Shy / Angry / Sad, covers 52.1 %, mark LivLiv on 0.66 % (outside the corner 0.00 %, noise 0.00 %), 144 ms
+ok   from files: Aoi, covers 41.7 %
+ok   char06.livliv from a URL: 0.03 % of the pixels differ from its folder, keyforms 0 / 0
+ok   d03ft.livliv from a URL: 0.00 % of the pixels differ from its folder, keyforms 4 / 4
+ok   v3 package: livemaker-puppet 3, 0.00 % of the pixels differ from its v4
+ok   newer format refused: LivLiv: this model is format version 5; this player reads up to 4: update the player (kept: Aoi)
+ok   refuses bomb: LivLiv: this model's images are too large (9000 x 9000: 8192 px a side and 67108864 pixels in all at most) (kept: Aoi)
+ok   refuses path: LivLiv: layer back_hair: "textures/../../package.json" is not an image path of the package (kept: Aoi)
+ok   refuses canvas: LivLiv: this model's canvas 100000 x 100 is out of range (kept: Aoi)
+ok   refuses box: LivLiv: this model is not valid: layer back_hair's box is out of range (kept: Aoi)
+ok   refuses json: LivLiv: char06/model.json is not a model.json (Expected double-quoted property name in JSON at position 28 (li (kept: Aoi)
+ok   refuses layers: LivLiv: this model has 600 layers, more than 512 (kept: Aoi)
+ok   refuses mesh: LivLiv: this model is not valid: its layers' meshes would have 2483250 vertices, more than 2097152 (kept: Aoi)
+ok   refuses chain: LivLiv: this model is not valid: a chain has no id (kept: Aoi)
+ok   refuses browLine: LivLiv: this model is not valid: a brow line is not a list of 2 to 2 numbers (kept: Aoi)
+ok   refuses rig: LivLiv: this model is not valid: rig.roll is not a number in range (kept: Aoi)
+ok   broken keyforms: Nana plays on the rig alone
+ok   a model breaks while it is built (d03ft over k02): chain: 0 values differ; layer: 0 values differ; upload: 0 values differ; physics: 0 values differ; keyforms: 0 values differ; memory: 0 values differ
+ok   150 changed models: 111 refused, 39 loaded, of them 0 blank
+ok   a package's connection drops: once "played Aoi" (2 requests), always "LivLiv: could not load http://127.0.0.1:60355/__dropped/alwa…" (2), a 404 "LivLiv: could not load http://127.0.0.1:60355/__dr…" (1)
+ok   several loads, called off: 5 downloads stopped of 8; 27 steps from a package
+ok   poster: shown until the first frame, the canvas's own background after
+ok   the context lost and given up: told once, frames idle, loads say so; 40 players came and went beside one that stayed
+ok   dispose while running: load "AbortError: LivLiv: the player was disposed", 0 textures made, 1 freed, drawn 0, GL error 0, driver disposed 1, a new player Aoi, microphone ended, left on the GPU after 3 loads and dispose {"texture":-1,"buffer":-1,"vertexArray":-1}
+ok   PNGTuber: pictures 255,0,0 / 0,255,0 / 0,0,255 / 255,255,0, face tracked true (turn 0.58°), speech opens the mouth to 0.92
+ok   speech keeps a WAV's own rate: bad rate [{"frames":100,"rate":24000,"seconds":0.004166666666666667}] (idle fired true), 16 kHz [{"frames":16000,"rate":16000,"seconds":1}], 24 kHz [{"frames":24000,"rate":24000,"seconds":1}], decoded whole [{"frames":24000,"rate":24000,"seconds":1}]
+ok   VRM: Tiny, Smile / Happy / Sad / Surprised / Wink, covers 52.6 %, face tracked true
+ok   VRM 1.0 stands and moves: hand -0.43 below the shoulder, turn 0.34, nod 0.34, roll 0.34, gaze up 0.17 down 0.00 right 0.28; terms LivLiv Player tests, personal non-profit
+ok   VRM 0.x stands and moves: hand -0.43 below the shoulder, turn 0.34, nod 0.34, roll 0.34, gaze up 0.17 down 0.00 right 0.28; terms LivLiv Player tests, allow
+ok   VRM files refused, the character before kept (Tiny), outside requests 0: has a skeleton but no mesh, so the | is compressed with Draco, and this | has pictures too large for this pl | names a file outside itself (http: | is not a VRM: it should begin as a
+ok   VRM in units of 100: covers 46.9 % of the canvas
+ok   VRM in units of 0.1: covers 46.9 % of the canvas
+ok   PNGTuber, a failed load: LivLiv: a PNGTuber needs at least the closed and the open picture (kept First, pixel 255,0,0); on a WebGL canvas: LivLiv: this canvas already draws with WebGL (a Player or a VRM): a PNGTuber needs a canvas of its own
+ok   VRM, loaded again on a wide canvas: aspect 2, 2; a failed load kept Tiny, covers 17.6 %; on a 2D canvas: LivLiv: a VRM needs WebGL2: this browser has none, or this canvas already draws in 2D (a PNGTuber)
+ok   BodyPlayer, several loads: the last plays; one already inside the Body finishes first
+ok   the context on a BodyPlayer: a VRM is told and released like a Player; a PNGTuber has none to lose
+ok   contract, player: the same on both
+ok   contract, png: the same on both
+ok   camera refused (NotAllowedError): the face model asked 1 time(s), finished 0
+ok   camera refused after a preload: the download goes on (finished 1)
+ok   example/index.html: cover first true, then the character true
+ok   example/demo.html: cover first true, then the character true
+ok   example/gallery.html: cover first true, then the character true
+ok   example/demo.html: the context lost, the page says so
+ok   example/demo.html: a camera start that hangs says so: "Taking long: a slow connection, or the camera is not answering. Reload the page to try again."
+ok   example/react.html under StrictMode: "Sena · livliv-model 4", then "Nana · livliv-model 4"; the context kept while mounted true, given up on unmount true
+ok   example/demo.html: ?model= on another site: 5/5 said no, 0 requests left this site
+ok   example/vrm.html: ?model= on another site: 5/5 said no, 0 requests left this site
+ok   example/demo.html: ?model= on this site opens
+ok   no WebGL: example/index.html says so
+ok   no WebGL: example/demo.html says so
+ok   no WebGL: example/gallery.html says so
+ok   no WebGL: isSupported false, new Player() says "LivLiv: could not start WebGL2 on this canvas: it is turned off in this browser, or the canvas already draws in 2D"
+smoke: all 21 characters ok

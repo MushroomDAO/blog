@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "full_attention": 6,
+    "sliding_attention": 5,
+    "conv": 13
+  },
+  "slidingWindow": 256,
+  "convKernel": 7,
+  "maxContextConfig": 262144,
+  "globalKVBytesPerTokenAt2ByteElements": 12288,
+  "globalKVBytesAtFullContext": 3221225472,
+  "globalKVGiB": 3,
+  "nature": "configuration-based estimate, not measured runtime or peak RAM; ignores other allocations and cache quantization"
+}

@@ -1,0 +1,27 @@
+test_app_change_keeps_romfs_and_ignores_app_folder_time (test_pack_ipa.PackIpa.test_app_change_keeps_romfs_and_ignores_app_folder_time) ... ok
+test_caller_order_and_parents_once_before_children (test_pack_ipa.PackIpa.test_caller_order_and_parents_once_before_children) ... ok
+test_change_in_first_mapping (test_pack_ipa.PackIpa.test_change_in_first_mapping) ... ok
+test_changed_added_removed_and_same_size_rewrite (test_pack_ipa.PackIpa.test_changed_added_removed_and_same_size_rewrite) ... ok
+test_clone_failure_copies_compressed (test_pack_ipa.PackIpa.test_clone_failure_copies_compressed) ... ok
+test_clone_uses_checked_inode_after_path_replaced (test_pack_ipa.PackIpa.test_clone_uses_checked_inode_after_path_replaced) ... ok
+test_failure_preserves_old_ipa_and_index (test_pack_ipa.PackIpa.test_failure_preserves_old_ipa_and_index) ... ok
+test_local_header_mismatch_recompresses (test_pack_ipa.PackIpa.test_local_header_mismatch_recompresses) ... ok
+test_nested_mapping_before_parent (test_pack_ipa.PackIpa.test_nested_mapping_before_parent) ... ok
+test_non_apfs_mapping_never_reuses_files (test_pack_ipa.PackIpa.test_non_apfs_mapping_never_reuses_files) ... ok
+test_pool_size_change_preserves_old_ipa_and_index (test_pack_ipa.PackIpa.test_pool_size_change_preserves_old_ipa_and_index) ... ok
+test_progress_excludes_kept_bytes (test_pack_ipa.PackIpa.test_progress_excludes_kept_bytes) ... ok
+test_stale_replaced_and_malformed_index (test_pack_ipa.PackIpa.test_stale_replaced_and_malformed_index) ... ok
+test_stat_before_publish_and_stale_partial_cleanup (test_pack_ipa.PackIpa.test_stat_before_publish_and_stale_partial_cleanup) ... ok
+test_store_flag_change (test_pack_ipa.PackIpa.test_store_flag_change) ... ok
+test_stream_drains_pool_before_later_jobs (test_pack_ipa.PackIpa.test_stream_drains_pool_before_later_jobs) ... ok
+test_stream_size_change_preserves_old_ipa_and_index (test_pack_ipa.PackIpa.test_stream_size_change_preserves_old_ipa_and_index) ... ok
+test_streamed_reuse_and_fallback_to_stored (test_pack_ipa.PackIpa.test_streamed_reuse_and_fallback_to_stored) ... ok
+test_symlink_and_folder_headers (test_pack_ipa.PackIpa.test_symlink_and_folder_headers) ... ok
+test_unchanged_clone (test_pack_ipa.PackIpa.test_unchanged_clone) ... ok
+test_zip64_local_headers (test_pack_ipa.PackIpa.test_zip64_local_headers) ... ok
+test_zlib_version_mismatch_forces_full_pack (test_pack_ipa.PackIpa.test_zlib_version_mismatch_forces_full_pack) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.319s
+
+OK

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "f3463c05bd5905d38baf94242c4c44ac1bb0a4ff5f61f620",
+    "metadata": {
+      "article_id": "openrsi-index-research-agent-benchmark-guide",
+      "content_hash": "9b6e70d42911476c",
+      "excerpt": "OpenRSI Index：如何评测AI是否真的改进了科研方法 OpenRSI Index 是面向科研智能体的开放评测项目，用固定任务、预算和裁判检查算法与工程改进。本文核对 RSI Harness 源码、公开日志及任务包，拆解持续工作区、快照提交和评分机制，解释 Qwen 数据包装器、Marin 集群依赖与 GPIC 筛选协议的复现边界，并给出安装、局部验证和选择实验的工程建议。 OpenRSI Index AI Agents Evaluation Recursive Self Improvement Open Source 它到底在测什么，为什么不只",
+      "language": "zh",
+      "tags": [
+        "OpenRSI Index",
+        "AI Agents",
+        "Evaluation",
+        "Recursive Self Improvement",
+        "Open Source"
+      ],
+      "title": "OpenRSI Index：如何评测AI是否真的改进了科研方法",
+      "url": "/blog/openrsi-index-research-agent-benchmark-guide/"
+    }
+  },
+  {
+    "id": "bc95652f48139723265193c5b635f0147b1efc4012729127",
+    "metadata": {
+      "article_id": "openrsi-index-research-agent-benchmark-guide",
+      "content_hash": "b229c6689b2ac448",
+      "excerpt": "OpenRSI Index: Evaluating AI Research Improvement Explore OpenRSI Index and RSI Harness: research tasks, isolated judging, compute budgets, reproducibility gaps and practical setup, with scoped CPU tests. OpenRSI Index AI Agents Evaluation Recursive Self Improvement Open Source W",
+      "language": "en",
+      "tags": [
+        "OpenRSI Index",
+        "AI Agents",
+        "Evaluation",
+        "Recursive Self Improvement",
+        "Open Source"
+      ],
+      "title": "OpenRSI Index: Evaluating AI Research Improvement",
+      "url": "/blog/openrsi-index-research-agent-benchmark-guide/"
+    }
+  }
+]

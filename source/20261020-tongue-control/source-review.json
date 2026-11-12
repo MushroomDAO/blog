@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-20",
+  "scope": "Source review only; no device, build, flash, performance or clinical test.",
+  "reviewedFiles": [
+    {
+      "file": "mouthpad-relay-README.md",
+      "sha256": "ed30c6d3312b1196be6a2ca0d02ec35885e17b7133a50900721dfcec6aad6950"
+    },
+    {
+      "file": "mouthpad-relay-LICENSE",
+      "sha256": "fd361ad639bcc6133bf215fce1447effa3707ac6baabc8e7ad5f0961c701b0fe"
+    },
+    {
+      "file": "mouthpad-usb-README.md",
+      "sha256": "ed30c6d3312b1196be6a2ca0d02ec35885e17b7133a50900721dfcec6aad6950"
+    },
+    {
+      "file": "mouthpad-usb-LICENSE",
+      "sha256": "fd361ad639bcc6133bf215fce1447effa3707ac6baabc8e7ad5f0961c701b0fe"
+    }
+  ],
+  "bothHeadsEqual": true,
+  "sameReadme": true,
+  "boundary": "Existing MouthPad BLE HID and NUS bridge to USB HID and CDC; not evidence of complete oral device source."
+}

@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-24T15:28:06.849Z",
+  "drafts": [
+    {
+      "slug": "decision-models-comparison",
+      "mediaId": "prCUE631thH1cmNLi42prDCVb5S8vDXZb4LBr8gKvLcVchiaKQoQIyTSMsqQ9N6j",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "133df1989aaac460593b2965b993caad34eb0086ba7566204633223d2b226044",
+      "remoteTextHash": "133df1989aaac460593b2965b993caad34eb0086ba7566204633223d2b226044",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/decision-models-comparison/",
+      "localContentHash": "3ffaa7994c46099dc9704e36b420500b508aee90c1f650ee07045e05e5334f70",
+      "remoteContentHash": "d69c20f51355987eafe5566f1e9942f7dc943d76fdf1ecd552ef317945a5c18d"
+    }
+  ]
+}

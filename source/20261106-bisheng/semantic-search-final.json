@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp",
+      "title": "pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp",
+      "url": "/blog/pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp/",
+      "language": "en",
+      "excerpt": "pipeshub-ai-enterprise-context-layer-knowledge-graph-rag-mcp pipeshub-ai/pipeshub-ai is an open-source Enterprise AI Context Layer that unifies enterprise knowledge connectivity, permission-aware access control, knowledge graph retrieval, 50+ source connectors, RAG Q&A, agent bui",
+      "score": 0.5339185
+    },
+    {
+      "article_id": "pi-workflow-openrath-personal-daily-workflow-guide",
+      "title": "pi-workflow v1.1.0: How Ordinary Individuals Build Reusable Automated Pipelines with Pi Agent",
+      "url": "/blog/pi-workflow-openrath-personal-daily-workflow-guide/",
+      "language": "en",
+      "excerpt": "pi-workflow v1.1.0: How Ordinary Individuals Build Reusable Automated Pipelines with Pi Agent pi-workflow is Pi Agent's sub-task orchestration extension — one install gives you four prebuilt pipelines (deep research, code review, spec comparison, change assessment) via natural la",
+      "score": 0.526681
+    },
+    {
+      "article_id": "miles-v0-1-production-rl-post-training-sglang",
+      "title": "Miles v0.1：SGLang 团队填平学术 RL 和生产系统之间的鸿沟",
+      "url": "/blog/miles-v0-1-production-rl-post-training-sglang/",
+      "language": "zh",
+      "excerpt": "Miles v0.1：SGLang 团队填平学术 RL 和生产系统之间的鸿沟 SGLang 团队发布 Miles v0.1，生产级 LLM/VLM RL 后训练框架。全异步 RL、P2P RDMA 权重同步（万亿参数秒级更新）、TITO 消除 token 往返损耗、R3 修复 MoE 路由不一致、自动容错恢复——每块都是工业级设计。 RL post-training SGLang LLM open-source LMSYS 学术 RL 代码进生产，会在哪里翻车 架构：三层解耦 五个关键技术点 1. 全异步 RL 2. P2P RDMA 权重更新 3. T",
+      "score": 0.5005475
+    },
+    {
+      "article_id": "staffdeck-openbmb-enterprise-digital-employee-platform",
+      "title": "StaffDeck: ModelBest + Tsinghua THUNLP Open-Source Enterprise Digital Employee Platform with State-Machine SOPs",
+      "url": "/blog/staffdeck-openbmb-enterprise-digital-employee-platform/",
+      "language": "en",
+      "excerpt": "StaffDeck: ModelBest + Tsinghua THUNLP Open-Source Enterprise Digital Employee Platform with State-Machine SOPs ModelBest, Tsinghua THUNLP, and OpenBMB jointly open-source StaffDeck, converting employee expertise and business processes into runnable digital employees: state-machi",
+      "score": 0.4915683
+    },
+    {
+      "article_id": "areal-agent-self-evolution-developer-guide",
+      "title": "AReaL 2.0: An Engineering Guide to Self-Evolving Deployed Agents",
+      "url": "/blog/areal-agent-self-evolution-developer-guide/",
+      "language": "en",
+      "excerpt": "AReaL 2.0: An Engineering Guide to Self-Evolving Deployed Agents AReaL 2.0 (Ant Group + HKUST + Tsinghua) addresses why enterprise agents freeze after deployment. Three pillars: ATDP trajectory protocol, agentic data proxy, evolution control plane. Practical guide for integrating",
+      "score": 0.48811892
+    },
+    {
+      "article_id": "mcp-rag-server-local-rag-claude-code-blueprint",
+      "title": "mcp-rag-server: A Minimal MCP + Local RAG Blueprint for Claude Code",
+      "url": "/blog/mcp-rag-server-local-rag-claude-code-blueprint/",
+      "language": "en",
+      "excerpt": "mcp-rag-server: A Minimal MCP + Local RAG Blueprint for Claude Code MMC1410001/mcp-rag-server is a 0-star, MIT-licensed minimal MCP + RAG server: local all-MiniLM-L6-v2 embeddings, persistent ChromaDB, five MCP tools. We read all of the code and ran it on a Mac mini: 39/39 tests ",
+      "score": 0.48809505
+    },
+    {
+      "article_id": "yuxi-self-hosted-knowledge-agent-rag-graph-multi-agent-mcp",
+      "title": "Yuxi 0.8 beta5：知识、协作与执行如何接成工作流？",
+      "url": "/blog/yuxi-self-hosted-knowledge-agent-rag-graph-multi-agent-mcp/",
+      "language": "zh",
+      "excerpt": "Yuxi 0.8 beta5：知识、协作与执行如何接成工作流？ Yuxi 0.8 beta5 把知识检索、多智能体协作、人工引导与文件交付接成企业工作流。本文沿用旧文章链接，核对官方预发布标签、Container 与 Cube 沙盒边界、知识 MCP 和公开 API，并记录新版 CLI 的15项源码测试及 npm 查询结果，说明 Mac 试用条件和旧版不可原地升级的限制。 Yuxi RAG 多智能体 MCP 自托管 Docker 它解决的是哪一类问题？ 0.8 最值得关注的变化是什么？ 团队权限与工具账号怎样管理？ 排队、引导和停止有何区别？ 知识 MC",
+      "score": 0.48507795
+    },
+    {
+      "article_id": "mr-boxington-rust-cargo-shared-cache",
+      "title": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存",
+      "url": "/blog/mr-boxington-rust-cargo-shared-cache/",
+      "language": "zh",
+      "excerpt": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存 mr boxington 的 mbx 为 Rust 项目复用 Cargo 编译产物，管理 target 目录并协调并行构建。本文核对安装与缓存原理，在 Mac 验证不同路径源码副本的命中、修改后的正确输出和清理预览，区分共享缓存、Cargo 新鲜度与私有增量状态，说明工作树、CI、磁盘预算及调试信息路径的使用边界。 Rust Cargo mr boxington 构建缓存 开发工具 mbx 怎样复用编译工作？ 共享缓存、增量状态与 target 是一回事吗？ 在 Mac 上怎样先试",
+      "score": 0.48506722
+    },
+    {
+      "article_id": "easel-open-source-social-media-agent-workbench",
+      "title": "Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布",
+      "url": "/blog/easel-open-source-social-media-agent-workbench/",
+      "language": "zh",
+      "excerpt": "Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布 浙大 REAL Lab + 北大 OpenDCAI Lab 开源的社媒创作 Agent：基于 OpenClaw，112 个 Skill 分六层（基础/发现/策划/创作/发布/归因），Python CLI + Web 工作台，支持小红书/抖音/快手/知乎/B站/视频号六平台登录发布。账号画像六维持久化，越用越懂账号。Apache-2.0，187 star，两周新。 AI Agent 开源 内容创作 自动化 小红书 OpenClaw Python 工作流 多平台 B",
+      "score": 0.48418117
+    },
+    {
+      "article_id": "llmwiki-cli-karpathy-knowledge-pipeline",
+      "title": "手搓脚本产品化成 CLI：Karpathy 的 LLM Wiki 想法值 2100 万浏览，有人 40 小时把它变成了流水线",
+      "url": "/blog/llmwiki-cli-karpathy-knowledge-pipeline/",
+      "language": "zh",
+      "excerpt": "手搓脚本产品化成 CLI：Karpathy 的 LLM Wiki 想法值 2100 万浏览，有人 40 小时把它变成了流水线 Karpathy 的 LLM Wiki gist（5000+ stars）描述了一种 AI 知识库范式：不是 RAG 每次从头查，而是让 LLM 增量维护一个持久 wiki——每加一份文档，自动更新摘要页、概念页、实体页、索引和日志，一份文档平均触及 10~15 个页面。doum1004 把这个想法产品化成 llmwiki-cli，一个可以安装在任何机器上的 npm CLI。知识是往墙上砌砖，不是堆在角落里吃灰。 知识库 LLM ",
+      "score": 0.48161903
+    }
+  ]
+}

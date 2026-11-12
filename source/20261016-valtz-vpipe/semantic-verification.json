@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "valtz-local-ai-creative-studio",
+      "title": "Valtz：Mac本地AI创作的素材与时间线",
+      "url": "/blog/valtz-local-ai-creative-studio/",
+      "language": "zh",
+      "excerpt": "Valtz：Mac本地AI创作的素材与时间线 Valtz是一款由Vpipe驱动的原生Mac生成式创作应用，把提示词、参考素材、生成版本、配方和时间线放进同一个工程。本文核对官方源码与最新安装包，解释项目保存、Agent后端和局域网任务分工，提供构建入口，并报告M4上无引擎核心构建、素材导入与测试结果，保留一项可复现失败，区分基础验证和完整模型生成能力。 Valtz Vpipe macOS 本地AI 视频生成 Valtz 和 Vpipe 分别做什么？ 作者演示的三条创作路径 为什么素材关系比多一个生成按钮更重要？ 保存的工程是什么：LMDB 还是文件包？ ",
+      "score": 0.6352638
+    },
+    {
+      "article_id": "index-tts-25-production-tts-voice-clone-emotion-multilingual",
+      "title": "IndexTTS-2.5：生产级零样本 TTS，一段参考音频克隆音色 + 细粒度情感与语速控制",
+      "url": "/blog/index-tts-25-production-tts-voice-clone-emotion-multilingual/",
+      "language": "zh",
+      "excerpt": "IndexTTS-2.5：生产级零样本 TTS，一段参考音频克隆音色 + 细粒度情感与语速控制 index-tts/index-tts，⭐22,615，Python，2026-08-10 发布 IndexTTS-2.5。零样本文本转语音系统，一段参考音频即可克隆音色。支持中文、英文、日语、西班牙语、阿拉伯语五种语言，跨语言音色保持。8维情感向量（愉快/愤怒/悲伤/恐惧/厌恶/忧郁/惊讶/平静），支持情感参考音频、文本情感自动转换、显式情感描述四种控制方式；duration_factor 语速控制（0.5×–2.0×）；拼音/CMU音素/日语假名发音精确控",
+      "score": 0.5353931
+    },
+    {
+      "article_id": "cheese-paper-creative-writing-editor",
+      "title": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布",
+      "url": "/blog/cheese-paper-creative-writing-editor/",
+      "language": "zh",
+      "excerpt": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布 Cheese Paper 是一款专为小说创作设计的离线开源编辑器，场景管理、角色卡、世界观数据库三合一，文件格式采用 Markdown+TOML，兼容任意文本编辑器和同步工具。GPLv3，无订阅，无遥测。v1.0.0 于 2026-05-30 发布，已上架 Flathub。 创意写作 文本编辑器 小说 开源 离线优先 Markdown 写作工具 GPLv3 Cheese Paper 核心设计：笔记和稿件并排可见 文件格式：Markdown + TOML，不绑",
+      "score": 0.525484
+    },
+    {
+      "article_id": "threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl",
+      "title": "threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl",
+      "url": "/blog/threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl/",
+      "language": "en",
+      "excerpt": "threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl achrefelouafi's Elemental Sandbox uses Three.js + Vite + hand-written GLSL to procedurally generate 10 game-quality skill VFX in the browser — frost, lightning, meteors, energy beams, void blades, phoenixes — all wit",
+      "score": 0.52540874
+    },
+    {
+      "article_id": "microsoft-trellis2-native-3d-generation-o-voxel-pbr",
+      "title": "TRELLIS.2：微软 4B 参数图像转 3D 生成模型，引入原生 O-Voxel 表示",
+      "url": "/blog/microsoft-trellis2-native-3d-generation-o-voxel-pbr/",
+      "language": "zh",
+      "excerpt": "TRELLIS.2：微软 4B 参数图像转 3D 生成模型，引入原生 O-Voxel 表示 微软开源的 4B 参数 3D 生成模型。引入 O-Voxel（无等值面约束的稀疏体素）解决复杂拓扑问题，支持开放曲面、非流形几何和内部封闭结构。H100 上 512³ 约 3 秒，1024³ 约 17 秒。支持完整 PBR 材质（颜色/粗糙度/金属度/透明度），MIT License，arXiv 2512.14692，当前 10.4k stars。 3D生成 微软 O-Voxel PBR材质 图像转3D 生成模型 Mycelium 核心创新：O-Voxel 表示 ",
+      "score": 0.52374876
+    },
+    {
+      "article_id": "unlazy-depth-tree-anti-laziness-gate-contract-claude-code",
+      "title": "Unlazy：用 Depth Tree + 可运行验证门，卡住 AI 代理「谎报完成」",
+      "url": "/blog/unlazy-depth-tree-anti-laziness-gate-contract-claude-code/",
+      "language": "zh",
+      "excerpt": "Unlazy：用 Depth Tree + 可运行验证门，卡住 AI 代理「谎报完成」 Unlazy 是一个 Claude Code / Codex 技能包，用 Depth Tree 方法将任务拆成 N 层，每个叶节点都获得整个任务的完整时间预算——努力程度随深度倍增。核心是可运行验证门（GATES.md），只有所有 CHECK 通过、EVIDENCE 记录在案，才允许报告完成。2,300+ Star，创建于 2026-08-09。 开源 Claude Code Agent技能 防偷懒 Depth Tree 验证门 Unlazy AI代理 问题是什么 D",
+      "score": 0.52018297
+    },
+    {
+      "article_id": "conversationalvoice-averalabs-full-duplex-training-data-pipeline",
+      "title": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线",
+      "url": "/blog/conversationalvoice-averalabs-full-duplex-training-data-pipeline/",
+      "language": "zh",
+      "excerpt": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线 avera-labs/ConversationalVoice，51 stars，BSL 1.1 许可证（非生产免费，生产环境商用需授权，4年后转 MIT）。AveraLabs 出品，配套 arXiv 2609.08147 论文。一条 9 阶段 Celery 流水线，将真实双人录音自动转成全双工语音模型训练数据，每段对话产出三类数据：分离 / 重建 / 扩写。内部使用 DialogueSidon（说话人分离）、Qwen3-ASR（转写）、Qwen3-TTS（语音合成）。",
+      "score": 0.5144358
+    },
+    {
+      "article_id": "ratatui-rust-tui-terminal-ui-guide",
+      "title": "Ratatui：Codex、grok-build、CodeWhale 都选了它——Rust 终端 UI 的事实标准，21k stars",
+      "url": "/blog/ratatui-rust-tui-terminal-ui-guide/",
+      "language": "zh",
+      "excerpt": "Ratatui：Codex、grok-build、CodeWhale 都选了它——Rust 终端 UI 的事实标准，21k stars Ratatui 是 Rust 终端 UI 的事实标准。Codex 锁了定制 revision，grok-build 自建 inline+textarea，CodeWhale 跟进上游 0.30——三者实现不同，但渲染层的选择是一致的。sub-millisecond 即时渲染、约束式布局、15+ 内置 Widget、纯 Rust 零 C 依赖，生态已扩展到 WebAssembly / UEFI / 嵌入式设备。 Rust ",
+      "score": 0.5132844
+    },
+    {
+      "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+      "title": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具",
+      "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+      "language": "zh",
+      "excerpt": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具 hikarioyama/ParallelHue（MIT，35 star，零运行时依赖）把本地大模型的多路并发流式输出画进终端，只有调度器和反分词器的遥测跟 SSE 逐字节对得上，才按验证步上色。真正的 exact 模式只支持 vLLM 0.26.x，靠 7 个内部方法挂钩实现，官方的有效证据只有一次 16 路 GLM 运行（16,384 个 token）。我们在 Mac mini 上跑通了 72 个测试，用模拟服务器确认了它在证据不足时会失败或降级，另外发现：只要模型名里带 qw",
+      "score": 0.5123125
+    },
+    {
+      "article_id": "pixel2motion-ai-logo-animation-pipeline",
+      "title": "从像素到动效:Pixel2SVG-HTML + Pixel2Motion 如何把一张 Logo 截图变成可审查的品牌动画",
+      "url": "/blog/pixel2motion-ai-logo-animation-pipeline/",
+      "language": "zh",
+      "excerpt": "从像素到动效:Pixel2SVG-HTML + Pixel2Motion 如何把一张 Logo 截图变成可审查的品牌动画 nolangz 的两个开源 Codex/Claude skill 组成一条完整流水线:Pixel2SVG-HTML 把位图 logo 拟合成最低复杂度的语义 SVG,Pixel2Motion 在这份'终帧契约'上编排动画。本文深度分析它的核心理念——以矢量工艺取代盲目描摹、IoU 只做诊断不做闸门、每一步都留 QA 证据。 AI Logo Animation SVG Pixel2Motion Codex Skill Motion De",
+      "score": 0.5116691
+    }
+  ]
+}

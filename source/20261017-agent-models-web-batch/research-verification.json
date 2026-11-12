@@ -1,0 +1,23 @@
+{
+  "task": "6eb9b02c-7891-4efb-97d1-ca9bb880f386",
+  "dedup": "Primary URLs and exact model names clear; broad Nemotron hits are earlier ASR topics; original bot KB material reused. Published WeChat API48001 permission unavailable.",
+  "sources": {
+    "OpenGCUA": "625b1cebde1f772328a238881121b76691b8895b",
+    "Atticus": "0f4d8d79e3db4e9447a80deab847369423b295ad",
+    "SuperVL": "59b8721646c38111a242da18218859fb2b454322",
+    "Bolt": "c6cc2e8ffa353403213d6b9b18aaf8eb684d705a"
+  },
+  "checks": {
+    "OpenGCUA": "Python3.12 14mockedtransport/statuspass; initial3.9/dependencycollectionfailed; no driver/device/model/OSWorld",
+    "Atticus": "26focusedunitpass; explicitSwiftmoduleAtticuscompilepass/nativeselftestpass; earlieroutputname/modulemismatch resolved; broadunittestinterruptednotfullpass; no installer/realvoice/paidmodel/daily taskacceptance",
+    "IndexNow": "13offlinepayload/CLIchecks; public downloadable helper; noHTTPsubmission/siteconfiguration/indexingtiming",
+    "NVIDIA": "Primarynews/modelcardreviewonly; noweights/inference/performance"
+  },
+  "images": {
+    "NVIDIA": "adopt officialhero, https://blogs.nvidia.com/wp-content/uploads/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765.jpeg rootvisualpass",
+    "OpenGCUA": "FLUX130 rejected by root for wrench marks; FLUX133 regenerated, machine/root visual pass",
+    "Atticus": "FLUX131 rootvisualpass",
+    "IndexNow": "FLUX132 rootvisualpass"
+  },
+  "publicArtifactSha256": "a99e4f8b19eb06fe97eb4650cf50561dfb73955947e7f5e07fc42b74aecd898e"
+}

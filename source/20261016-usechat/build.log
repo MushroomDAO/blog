@@ -1,0 +1,9 @@
+Scope: 4 of 5 workspace projects
+packages/core build$ tsc -p tsconfig.json
+packages/model-provider build$ tsc -p tsconfig.json
+packages/model-provider build: Done
+packages/core build: Done
+packages/cli build$ tsc -p tsconfig.json && node scripts/fix-bin-mode.mjs
+packages/sdk build$ tsc -p tsconfig.json
+packages/sdk build: Done
+packages/cli build: Done

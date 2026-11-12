@@ -1,0 +1,14 @@
+=== [adopt-banner] lr2021-esp32-adsb-receiver-analysis ← 1 source image(s) → src/assets/images/lr2021-esp32-adsb-receiver-analysis-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /tmp/lr2021-adsb-research/docs/images/hardware.png
+=== [adopt-banner] done: src/assets/images/lr2021-esp32-adsb-receiver-analysis-banner.jpg (1200x630, 93535B) ===
+=== [verify-banner] src/assets/images/lr2021-esp32-adsb-receiver-analysis-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/tmp/lr2021-adsb-research/docs/images/hardware.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 93535B (< 99000B)
+  WARN text: 3 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: ADSB 1090Mhz | 29.4 | HIT/S
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/lr2021-esp32-adsb-receiver-analysis-banner.jpg ===
+PATH: src/assets/images/lr2021-esp32-adsb-receiver-analysis-banner.jpg

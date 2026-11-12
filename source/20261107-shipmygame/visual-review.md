@@ -1,0 +1,2 @@
+Repository media consists of donation/paymentQRassets, excluded from cover selection. Manualrejections:8251pseudo-brandcontrollertext;8252unrelatedbarcodeobjectandambiguousceramicshape;8253carton-sidepseudoletters. Final8254accepted:unbrandedjoystick/blankpackingpaper/woodengametokens,fullframe,nofaces/text,0machinefailures. Illustrative scene only,notrealgameorlaunch evidence.
+All3finalLittleMfigures manually accepted:publishingpreparation;distinctincompletestages;userconfirmationandkeysoutsideproject.1120x630<=48colors<90KB,raworiginalspreserved,workerexit0.

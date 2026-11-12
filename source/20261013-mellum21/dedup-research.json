@@ -1,0 +1,15 @@
+{
+  "taskId":"c3b312e0-799c-4944-9c01-04a66625ca4e",
+  "date":"2026-10-13",
+  "slug":"mellum21-thinking-coding-agent",
+  "sourceUrl":"https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking",
+  "exactEntity":"Mellum2.1-12B-A2.5B-Thinking",
+  "ledgerCounts":{"blog":821,"remoteDrafts":6,"localM2":804,"mempalaceDrawers":1597},
+  "sourceUrlMatches":[],
+  "exactEntityMatches":"two raw material KB matches only, no Blog/M2 article",
+  "resolution":"raw ingestion is not publication; proceed with first article, do not duplicate raw KB",
+  "remotePublishedApiGap":"48001 api unauthorized; local M2, Blog, MemPalace ledgers checked",
+  "primarySources":["https://modelscope.cn/models/JetBrains/Mellum2.1-12B-A2.5B-Thinking","https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking","https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF/tree/main","https://blog.jetbrains.com/ai/2026/10/mellum2-1-gets-to-work-a-fast-open-model-for-coding-agents/"],
+  "bannerSourceReview":"Official hero predominantly text on black; official benchmark/speed graphics text-heavy. Inspected and rejected for cover, generate matched local photographic image.",
+  "scope":"Mellum2.1 only; other recovery topics excluded"
+}

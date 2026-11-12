@@ -1,0 +1,54 @@
+[
+  {
+    "id": "MemTensor/MemT-1.0-Nano",
+    "sha": "30fe0b22422c4cc4c87475f98db5c8baa5c1a902",
+    "gated": false,
+    "cardData": {
+      "library_name": "transformers",
+      "pipeline_tag": "text-generation",
+      "tags": [
+        "custom_code",
+        "memt",
+        "text-generation"
+      ],
+      "base_model": "Qwen/Qwen3.6-35B-A3B",
+      "license": "apache-2.0"
+    },
+    "safetensors": {
+      "parameters": {
+        "BF16": 35111542048
+      },
+      "total": 35111542048
+    },
+    "weightBytes": 70223084096,
+    "configSHA256": "e426893d98fa69b46466b310b8f1c683c81939a01e18e7e2d51ee92782b4efef",
+    "modelCardSHA256": "b72df84b5c281b1b9cd629ec745c275df09a980f838a8eefe74a1e7252d63d05"
+  },
+  {
+    "id": "MemTensor/MemT-1.0-Flash",
+    "sha": "a707cf84ebbaf2151a005001f9dfed9ee97f60c8",
+    "gated": false,
+    "cardData": {
+      "library_name": "transformers",
+      "pipeline_tag": "text-generation",
+      "tags": [
+        "custom_code",
+        "memt",
+        "text-generation"
+      ],
+      "base_model": "deepseek-ai/DeepSeek-V4-Flash",
+      "license": "mit"
+    },
+    "safetensors": {
+      "parameters": {
+        "BF16": 287905532800,
+        "F32": 35315671,
+        "I32": 2327040
+      },
+      "total": 287943175511
+    },
+    "weightBytes": 575961636444,
+    "configSHA256": "0e827e2ac33081eb32063bb6e65670942c23730ad4949d953b7f9ee453be6d76",
+    "modelCardSHA256": "94d631a3212d6f2c57fdc5243d681a8a877078fb423f312781323027e2f822fd"
+  }
+]

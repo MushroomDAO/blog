@@ -1,0 +1,50 @@
+🍄 publish-blog | user=mushroom project=blog-mushroom slug=pine-computer-agent-runtime-engineering
+[1/5] validating frontmatter & SEO…
+  ✓ 公众号标题「Pine Computer：给AI重做电脑」(21 字)
+  ✓ frontmatter OK (tags=5, bilingual, banner present)
+[2/5] building…
+└─────────────────────────────────────────────────────────────────────────┘
+
+Finished in 2.629 seconds
+  ✓ route built: /blog/pine-computer-agent-runtime-engineering/
+[3/5] deploying to Cloudflare Pages (blog-mushroom)…
+  ⚠️ no CA bundle set (CF_CA_CERT/NODE_EXTRA_CA_CERTS) — falling back to TLS bypass.
+     To fix the root cause, point CF_CA_CERT at your proxy CA .pem.
+✨ Uploading _redirects
+✨ Uploading Functions bundle
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://8d0e004f.blog-mushroom.pages.dev
+[4/5] validating live URL…
+  https://blog.mushroom.cv/blog/pine-computer-agent-runtime-engineering/ → 200
+[4.5] committing article to git…
+[pre-commit] 发布账本有更新，已一并加入本次提交
+[publish/pine-computer-agent-runtime-engineering 279c092] feat(blog): publish pine-computer-agent-runtime-engineering
+ 6 files changed, 486 insertions(+)
+ create mode 100644 src/assets/images/pine-computer-agent-runtime-engineering-banner.jpg
+ create mode 100644 src/assets/images/pine-computer-agent-runtime-engineering-fig-01.png
+ create mode 100644 src/assets/images/pine-computer-agent-runtime-engineering-fig-02.png
+ create mode 100644 src/assets/images/pine-computer-agent-runtime-engineering-fig-03.png
+ create mode 100644 src/content/blog/pine-computer-agent-runtime-engineering.md
+  ✓ committed
+  ✓ 远端已同步
+[4.7] updating semantic search index for pine-computer-agent-runtime-engineering…
+checking 1 article(s) (pine-computer-agent-runtime-engineering)
+diff: 2 changed/new, 0 unchanged (wrote /Users/jason/Dev/mycelium/blog/semantic-search/eval/incremental-index-plan.json)
+  + pine-computer-agent-runtime-engineering [zh]
+  + pine-computer-agent-runtime-engineering [en]
+embedding 2 changed record(s) (calls Workers AI)...
+  verifying batch order on 2 samples...
+  batch order verified OK
+  embedding incremental 1-2/2...
+TARGET: account=7bf23342f21baa5ebfc7bc7b74f5a1f2 index=blog-search-v1 vectors=2
+  upserted 1-2/2: True
+updated manifest for 1 article(s)
+  ✓ search index updated
+[5/5] creating WeChat draft… (egress IP: 223.206.43.10 — must be in the WeChat IP allowlist; 40164 = not whitelisted)
+   Title: Pine Computer：给AI重做电脑
+✅ Draft created: media_id=prCUE631thH1cmNLi42prHBMoeKUcfQwcSzU6A4kWr8E8RmrrPXvUsQAiT7qTBg_
+   Title: Pine Computer：给AI重做电脑
+  ✓ recorded mapping: pine-computer-agent-runtime-engineering → prCUE631thH1cmNL…
+[5.8] refreshing local knowledge base…
+  ⏭  ~/mycelium-kb/kb-refresh.sh 不存在,跳过
+✅ done → https://blog.mushroom.cv/blog/pine-computer-agent-runtime-engineering/

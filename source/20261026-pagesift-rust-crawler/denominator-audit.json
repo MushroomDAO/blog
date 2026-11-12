@@ -1,0 +1,13 @@
+{
+  "source": "docs/benchmarks/0.60_p4_wild_x_2_showdown.md",
+  "reportedTasks": 100000000,
+  "reportedHTTP200": 314170,
+  "reportedRichMarkdown": 199422,
+  "reportedWallSeconds": 2373.9,
+  "derivedHTTP200PerSecond": 132.34340115421878,
+  "derivedRichDocsPerSecond": 84.00606596739543,
+  "derivedUsefulDocsPerReportedTask": 0.00199422,
+  "derivedUsefulDocsPerHTTP200": 0.6347582519018365,
+  "independentlyReproduced": false,
+  "warning": "Arithmetic on authors report only; categories do not explain all100M tasks.0.70synthetic saturation and0.60public run are separate workloads."
+}

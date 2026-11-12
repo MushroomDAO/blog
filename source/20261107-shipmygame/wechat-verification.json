@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-07T12:03:29.115Z",
+  "drafts": [
+    {
+      "slug": "shipmygame-unity-publishing-agent-skills-review",
+      "mediaId": "prCUE631thH1cmNLi42prAMlj82szzJZPwBgpwcyWOusQfEqQfKXLmUmXkQxFxGt",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "9d03f9fc449633f3da04eb76e150c232ffda21825f5c71d9b672f02d78085411",
+      "remoteTextHash": "9d03f9fc449633f3da04eb76e150c232ffda21825f5c71d9b672f02d78085411",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/shipmygame-unity-publishing-agent-skills-review/",
+      "localContentHash": "6ba40905abeade13752e2ae915add83e69925f8fe18052ec81096aa77ed98084",
+      "remoteContentHash": "10911072a6504d5227c23b67c73b7de125616ccf498c8438672c0d03d477554f"
+    }
+  ]
+}

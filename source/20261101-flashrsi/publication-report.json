@@ -1,0 +1,48 @@
+{
+  "slug": "flashrsi-agent-self-improvement-guide",
+  "status": "verified",
+  "localTests": {
+    "algorithmInterfaceTests": 20,
+    "passed": 20,
+    "prepareOnly": "passed",
+    "modelCalls": 0,
+    "fullSuite": false
+  },
+  "sourceCommit": "98bebaf7f6d5f3f6f69ee22d87e02d0d8b89b591",
+  "blogUrl": "https://blog.mushroom.cv/blog/flashrsi-agent-self-improvement-guide/",
+  "banner": {
+    "origin": "local FLUX.2 Klein",
+    "seed": 8122,
+    "bytes": 94474,
+    "dimensions": "1200x630",
+    "machineVerified": true,
+    "manualReviewed": true,
+    "officialCandidateRejected": "text-dominated wordmark/diagram/table"
+  },
+  "figures": {
+    "count": 3,
+    "bytes": [
+      68063,
+      47280,
+      47059
+    ],
+    "dimensions": "1120x630",
+    "workerExitedBeforeFreeze": true,
+    "manualReviewed": true
+  },
+  "seoGeo": "18 checks passed",
+  "sourceArchive": "source/20261101-flashrsi",
+  "wechatStatus": "draft",
+  "kbStatus": "final source mined and read back",
+  "semanticStatus": "two vectors upserted; live hit",
+  "deployment": "https://cbe08eb9.blog-mushroom.pages.dev",
+  "mediaId": "prCUE631thH1cmNLi42prGdQ71474aOwNfu063BqalVXwnk-qubvJrUdujzvGCva",
+  "wechatError": "",
+  "blogVerified": true,
+  "listRank": 1,
+  "carouselRank": 1,
+  "imagesVerified": 5,
+  "semanticScore": 0.665479,
+  "kbRows": 7,
+  "completed": true
+}

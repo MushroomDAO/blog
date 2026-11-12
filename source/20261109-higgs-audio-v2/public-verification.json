@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-09T03:09:29.844978+00:00",
+  "articles": [
+    {
+      "slug": "higgs-audio-v2-engineering-deployment-guide",
+      "url": "https://blog.mushroom.cv/blog/higgs-audio-v2-engineering-deployment-guide/",
+      "title": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入",
+      "listRank": 3,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/higgs-audio-v2-engineering-deployment-guide-banner.DaKfEZv6.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 91724
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/higgs-audio-v2-engineering-deployment-guide-banner.DaKfEZv6_Cz0Bz.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 29640
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/higgs-audio-v2-engineering-deployment-guide-fig-01.DfJazHNI_QmwKt.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 36172
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/higgs-audio-v2-engineering-deployment-guide-fig-02.C5_c_vvr_ZlVXUA.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 31878
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/higgs-audio-v2-engineering-deployment-guide-fig-03.CouGwoYl_Z1n2v3A.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 31914
+        }
+      ]
+    }
+  ]
+}

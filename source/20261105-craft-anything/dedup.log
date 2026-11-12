@@ -1,0 +1,401 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6aec86fb-50cd050f-15898705）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 959 篇 + 公众号草稿箱 8 条 + 本地发布记录 942 条 + MemPalace 3865 抽屉
+
+── 查：https://github.com/storytold/craft-anything
+   ❌ [知识库] # 。  **Summary**: 。   GitHub：http://github.com/storytold/cra
+      一手源相同: storytold/craft-anything
+
+── 查：Craft Anything
+   ❌ [BLOG  ] a16z-anish-acharya-ai-loops-moats-consumer.md
+      正文出现实体名「craft」
+   ❌ [BLOG  ] 用 Adapta 搭一个完全属于自己的本地知识库：一个诚实的上手指南
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Addy Osmani 开源了 79K stars 的 agent-skills：idea-refine 把乔布斯产品思维包进 AI Agent 工作流
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 精准定阶：当前全域 Agent 生态 = 早期智人初创阶段
+      正文出现实体名「craft」
+   ❌ [BLOG  ] agent-from-efficiency-to-org-transformation.md
+      正文出现实体名「craft」
+   ❌ [BLOG  ] Agent Network 调研：不做又一个 Agent 平台，只做跨厂商 Agent 的通信层
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时
+      正文出现实体名「anything」
+   ❌ [BLOG  ] ai-job-search：35k Star，一位地球物理学家用 Claude Code 把求职工程化，69 投 20 面 1 offer
+      正文出现实体名「anything」
+   ❌ [BLOG  ] AI Must Embrace Specialization: Why AGI Is the Wrong Goal
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 读「$200/月 AI 干掉后勤部」：模式可行，但有三个洞他没填
+      正文出现实体名「anything」
+   ❌ [BLOG  ] all-MiniLM-L6-v2 凭什么五年后还是 HF 下载第一？一个 2021 年的默认嵌入模型、它的中文盲区和 2026 年的替换清单
+      正文出现实体名「anything」
+   ❌ [BLOG  ] OpenWorker：吴恩达开源的桌面 AI 协作者，本地运行 + 批准门 + 25+ 工具集成
+      正文出现实体名「anything」
+   ❌ [BLOG  ] AnimaWorks 深度指南：开源 Python 智能体框架，五层记忆体系让 AI 真正「记住」你
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Anthropic 开源商业 Agent 蓝图：用 Claude 为你的业务场景构建自己的 Agent
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Anthropic 的 AI 创业手册：四个阶段、十二个陷阱、如何用它自检你的 idea
+      正文出现实体名「anything」
+   ❌ [BLOG  ] ArtCraft：用 Claude Opus 5.5 并行开发的七套 Rust 原生 Adobe 替代工具
+      正文出现实体名「craft」
+   ❌ [BLOG  ] auraai.mushroom.cv 上线：四大本地 AI 研究栏目，每周更新
+      正文出现实体名「anything」
+   ❌ [BLOG  ] AutoMem：让 Agent 自动学会管理记忆，32B 追平 Claude Opus 4.5
+      正文出现实体名「craft」
+   ❌ [BLOG  ] pixiv/three-vrm 调研：把「虚拟形象」这件事做成 Web 标准件
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 构建实时数据流项目的最佳起点：Awesome Public Real-Time Datasets 完整导读
+      正文出现实体名「craft」
+   ❌ [BLOG  ] Awesome Short Drama Skills：83 个短剧技能项目怎么选？
+      正文出现实体名「craft」
+   ❌ [BLOG  ] Block 开源桌面 Agent 工作台 Berd：不造新 Agent，把你手里所有 Agent 收编进同一个桌面
+      正文出现实体名「anything」
+   ❌ [BLOG  ] BLCaptain Meta Skill：把你反复讲给 AI 的那套经验，封装成一次安装、永久复用的 Agent Skill
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 从0到1构建AI Agent：六步实战指南
+      正文出现实体名「anything」
+   ❌ [BLOG  ] CareerForge：一行命令搞定 AI 求职全流程，从搜岗到拿 Offer 的完整指南
+      正文出现实体名「craft」
+   ❌ [BLOG  ] 一个 _worker.js 文件就是全部：CF-Workers-CheckProxyIP 在 Workers 上做 TCP/TLS 连通性体检
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Claude for Financial Advisors 拆解：垂直 AI 正在变成「连接器+技能+审批+审计」的打包件
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Cloudflare Drop：拖一下文件夹，网站就上线了
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Crona：给住在终端里的开发者的本地优先工作追踪器
+      正文出现实体名「anything」
+   ❌ [BLOG  ] CUA-Lite：UC Berkeley + Microsoft 开源计算机操控 Agent 基础设施，无需 KVM，Docker 直跑 OSWorld，4.6× 并行
+      正文出现实体名「craft」
+   ❌ [BLOG  ] LifeOS：从「怎么说」到「要什么」——Daniel Miessler 的 AI 生活操作系统
+      正文出现实体名「anything」
+   ❌ [BLOG  ] DeepSeek Harness 装进安卓手机的四条路线：只有一条真能操作手机
+      正文出现实体名「anything」
+   ❌ [BLOG  ] depth-anything.cpp：LocalAI 团队把 Depth Anything 3 移植到 C++，CPU 速度超 PyTorch 30%
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计
+      正文出现实体名「anything」
+   ❌ [BLOG  ] dsh-remote-deepseek-harness-mobile-tailscale-pwa-mac.md
+      正文出现实体名「anything」
+   ❌ [BLOG  ] dunhuang-aura-skill-ai-commercial-visual-codex-claude-code.md
+      正文出现实体名「anything」
+   ❌ [BLOG  ] exxperts 拆解：记忆要你批准才写入的本地 AI 同事，「数据不出本机」要打几折？
+      正文出现实体名「anything」
+   ❌ [BLOG  ] FanBox 深度拆解：AI 时代的 Coding 驾驶舱，786 Stars 背后的设计哲学
+      正文出现实体名「anything」
+   ❌ [BLOG  ] FDE 怎么炼成：审计先行 + 30 天拆流程，读「一页 Digest」的方法论笔记
+      正文出现实体名「anything」
+   ❌ [BLOG  ] GameScaling：游戏数据能把小模型训练成通用玩家吗？
+      正文出现实体名「craft」
+   ❌ [BLOG  ] 92 个 MCP 工具吃掉 27000 tokens：一个 0 star 项目量出了 MCP 的上下文税
+      正文出现实体名「anything」
+   ❌ [BLOG  ] God's Eye View：浏览器里的卫星侦察视角，数据全是真实的，MIT 开源，35K Stars
+      正文出现实体名「craft」
+   ❌ [BLOG  ] 整个大模型装进一个文件：goinfer 用纯 Go 跑推理，没有 Python、没有 llama.cpp、没有 CUDA 工具链
+      正文出现实体名「anything」
+   ❌ [BLOG  ] GPT-6 Astra 究竟带来了什么：不是更聪明，是第一次能真正帮你干活
+      正文出现实体名「anything」
+   ❌ [BLOG  ] gws：命令面在运行时长出来的 CLI，以及它对本地优先意味着什么
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 同一个 27B，换条路跑：HauhauCS 的 GGUF 版用 FastMTP 投机解码把生成速度拉到 3 倍
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Hemmingway-1：一个「写得像人」的 27B 模型，能力靠自建榜单证明，还是 Qwen3.8 的一次精调？
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Herdr：用牧羊人的方式管理你的 AI Agent 群
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺
+      正文出现实体名「craft」
+   ❌ [BLOG  ] 如何真正做好研究：Anthropic 研究员 Vivek 的 7 条核心原则
+      正文出现实体名「anything」
+   ❌ [BLOG  ] HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Humanizer 调研：把维基百科「AI 写作特征」清单变成一个能装进任何 Agent 的 Skill
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Humanizer-zh 拆解：中文「去 AI 味」Skill 今天整体重写，我用同一段文字跑了 12 次对照
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Impeccable：76K 星的 AI 前端设计技能包，让 Claude Code 做出好设计
+      正文出现实体名「craft」
+   ❌ [BLOG  ] InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文
+      正文出现实体名「craft」
+   ❌ [BLOG  ] kimi-bridge：用微信/飞书/QQ 控制本地 Kimi Code Agent
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Krea 2 Turbo 值不值得本地跑？12.8B 开放权重文生图：8 步出图、年收入百万美元以下可商用
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Krill 拆解：一个 Swift 二进制同时当本地推理引擎和编程 Agent，「比 Ollama 快 1.57 倍」要打几折？
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Wiki Memory：LangChain CEO 预言的 Agent 记忆新范式，开发者深度解读
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Laya（aayushch）拆解：把 Slack/Gmail/GitHub/Jira 通知变成「待批准卡片」的本地优先指挥中心，隐私边界在哪
+      正文出现实体名「anything」
+   ❌ [BLOG  ] LDtk：一人公司的七年，把工作方法装进免费工具
+      正文出现实体名「craft」
+   ❌ [BLOG  ] lil agents：住在 Mac Dock 上的 AI 桌面伴侣
+      正文出现实体名「anything」
+   ❌ [BLOG  ] little-city：把每座城市做成浏览器里的小星球
+      正文出现实体名「craft」
+   ❌ [BLOG  ] LocalAGI 拆解：这个本地 Agent 平台已被 LocalAI 收进核心，Mac 用户该装哪一个？
+      正文出现实体名「anything」
+   ❌ [BLOG  ] ESP32 LoRa板真能收飞机信号？拆解W12与LR2021的ADS-B实验
+      正文出现实体名「craft」
+   ❌ [BLOG  ] M3E Canvas：先画 UI 再让 AI 写代码，把设计导出成一份 6 段规格书
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Magnitude（YC S25）：在你的机器上编译内核，Metal decode 比 llama.cpp 快 92%
+      正文出现实体名「anything」
+   ❌ [BLOG  ] maintain-repo-wiki：让 LLM Agent 把工程事实而非总结写进 Wiki
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 果蝇大脑被网友塞进《我的世界》和驾校：16.6 万神经元的连接组，离「上传意识」还差多远？
+      正文出现实体名「craft」
+   ❌ [BLOG  ] mcp-rag-server 拆解：830 行 Python 把文档库做成 Claude Code 能调用的检索工具
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 美团图灵 Agent 评测两年实践：当 Agent 评测从打分动作变成工程基础设施
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 别再手搓 Agent 脚手架了：Stanford Meta-Harness 让 AI 自己搜索最优 harness
+      正文出现实体名「craft」
+   ❌ [BLOG  ] Meta SAM 3 值不值得用？848M 参数、文字提示分割全部实例，但要过 gated、SAM License 和 CUDA 三道关
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 2B 打赢 4B：面壁 MiniCPM5-2B 拿下同级开源 SOTA，还把训练数据全开源了
+      正文出现实体名「anything」
+   ❌ [BLOG  ] mu（μ）：编程 Agent 的判断核，35 个决策点交给小模型，大模型只管写代码
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Multica：4.1 万 Star 的开源 Agent 团队基础设施，五个最值得借鉴的设计模式
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Nanbeige4.3-33B 拆解：Apache-2.0 的 33B 稠密「教师模型」，自报 Terminal-Bench 2.1 80.9，但 KV 缓存是 Qwen3.8-27B 的 3.25 倍
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Needle 3 实测：121M 小模型，79 毫秒拆出两个工具调用
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 红杉的终局判断：AI 应用公司的终点是每家都变成 Neo-Lab
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南
+      正文出现实体名「craft」
+   ❌ [BLOG  ] openswarm-autonomous-ai-dev-team-claude-code-linear.md
+      正文出现实体名「anything」
+   ❌ [BLOG  ] OpenWorker：吴恩达开源的 AI 协作者，交付成品而不是对话
+      正文出现实体名「anything」
+   ❌ [BLOG  ] orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Osaurus：在你的 Mac 上拥有 AI——密码学身份、沙盒 VM、隐私过滤，纯 Swift 原生
+      正文出现实体名「anything」
+   ❌ [BLOG  ] P2WLAN 自托管部署工程指南：Control + Relay 全栈搭建，从零到联机
+      正文出现实体名「craft」
+   ❌ [BLOG  ] paper2anything：丢一个 PDF，AI 帮你出五种学术宣传物料
+      正文出现实体名「anything」
+   ❌ [BLOG  ] ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Pi 编程 Agent 缺什么，pi-muselinn-harness 就补什么
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Pilot Protocol 拆解：MCP 给 Agent 工具，它想给 Agent 同伴——但 435 个「专家」都跑在同一台机器上
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Pixel Perfect：585★ 的 React 组件库，让前端 UI 直接变好看
+      正文出现实体名「craft」
+   ❌ [BLOG  ] 从像素到动效:Pixel2SVG-HTML + Pixel2Motion 如何把一张 Logo 截图变成可审查的品牌动画
+      正文出现实体名「craft」
+   ❌ [BLOG  ] Ploy：Webflow 联合创始人的第三次创业——用 AI Agent 把网站变成增长引擎
+      正文出现实体名「craft」
+   ❌ [BLOG  ] HuggingFace 上的 Qwen-2.5-1B-RLCD：不是 1B、没有 RLCD、也没有模型权重
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Raven 论文解读：让多个 Agent 协作，也让工作流程接受检验
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 2026 年实时强化学习 Agent 全景：从 OpenClaw-RL 到 Cursor Composer 2.5，模型开始在使用中自我进化
+      正文出现实体名「anything」
+   ❌ [BLOG  ] RepoCourier：7个频道、24个信息源，一条命令跑出你的每日技术情报
+      正文出现实体名「anything」
+   ❌ [BLOG  ] RSI-Anything：跨域自我改进，究竟改了什么？
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 32B 小模型逼近 GPT-5.2：S1-DeepResearch 如何用数据而非参数训练长程研究 Agent
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 按头安利：scroll-world —— 一句话让 Fable 5 / GPT-5.6 替你造一个滚动飞进去的 3D 落地页
+      正文出现实体名「anything」
+   ❌ [BLOG  ] sealref 拆解：让编程 Agent 只拿到 sealref:// 引用，我们用假密钥测出 10 种绕过脱敏的输出
+      正文出现实体名「anything」
+   ❌ [BLOG  ] SenseNova-Vision：一个7B模型做完所有CV任务，需要什么硬件？
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 我们给发布流程加了一个 SEO/GEO 优化步骤——让 AI 引擎也能找到你的文章
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Shisei开源姿势图库：给AI绘图一张参考，比反复描述动作更直接
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Lethal Trifecta：Simon Willison 的 AI Agent 安全三角，《经济学人》都引用了这个术语
+      正文出现实体名「anything」
+   ❌ [BLOG  ] SkillOpt：微软联合上交复旦同济，让 AI Agent 的 Skill 像神经网络一样被训练
+      正文出现实体名「craft」
+   ❌ [BLOG  ] SkillPyramid：给 Agent 搭技能树，比 ReAct 多 38% 奖励少 28% 步骤
+      正文出现实体名「craft」
+   ❌ [BLOG  ] 软件层的退场与重构：AI-Native 时代，你的产品下一个用户是另一个 Agent
+      正文出现实体名「craft」
+   ❌ [BLOG  ] standrig-ai-2d-rigging-mcp-psd-cubism.md
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 用 Stock SDK 建立自己的股票信息源：从命令行到 AI 看盘
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Superset：一个工作区跑 100 个 Agent，Claude Code、Codex、OpenCode 同时干活——普通人上手指南
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 腾讯开源 AuK：1.5B 语音生成+编辑大一统模型，Mac 能跑到多小内存？
+      正文出现实体名「anything」
+   ❌ [BLOG  ] TokenTracker：省 token 之前，先确认你手上的数字没多算 1.6 到 3.7 倍
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Trinity：每个 Agent 一个 Docker 容器，把「Claude Code 写的 Agent」搬进有审计的生产环境
+      正文出现实体名「anything」
+   ❌ [BLOG  ] TvT.js：把 Three.js + Vue 3 变成数字孪生快速交付框架
+      正文出现实体名「craft」
+   ❌ [BLOG  ] 57k Star 的代码解析神器：Understand Anything 完整实用指南
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Unlazy：用 Depth Tree + 可运行验证门，卡住 AI 代理「谎报完成」
+      正文出现实体名「anything」
+   ❌ [BLOG  ] video-shotcraft：让 AI Agent 直接制作院线级产品宣传片
+      正文出现实体名「craft」
+   ❌ [BLOG  ] Viktor：10 周 $20M ARR，Slack 里的 AI 员工如何做到的
+      正文出现实体名「anything」
+   ❌ [BLOG  ] AI 水印是怎么打进文字的，又是怎么被去掉的：watermarks-remover 三层解剖
+      正文出现实体名「anything」
+   ❌ [BLOG  ] WeMM-Embedding-9B：腾讯统一多模态嵌入模型，同尺寸全面超越 Qwen3-VL-Embedding
+      正文出现实体名「anything」
+   ❌ [BLOG  ] Wemux：把 AI Agent 的活儿放回你自己的机器上跑，控制面不碰你的代码
+      正文出现实体名「anything」
+   ❌ [BLOG  ] 把一张画变成「有人正在画」：whiteboard-animator 用纯 CPU 做手绘揭示动画
+      正文出现实体名「craft」
+   ❌ [BLOG  ] WikiSkill：Google Research 提出把 Agent 经验编译成永久知识，Skill 进化终于有了「记忆」
+      正文出现实体名「craft」
+   ❌ [BLOG  ] 小红书运营能工作流化吗？6 个 Codex Skills 给出一个答案
+      正文出现实体名「craft」
+   ❌ [BLOG  ] Yandex 开源 AliceAI-Foundation-80B-A3B 基座模型：Apache-2.0 属实，俄语强，中文分词比 Qwen 多耗 58%
+      正文出现实体名「anything」
+   ❌ [BLOG  ] YC 内部 AI 系统的真相:数据集中 → 工具注册表 → 技能自我进化
+      正文出现实体名「anything」
+   ❌ [发过 2026-10-08] ArtCraft：AI并行开发的七套Adobe替代工具
+      正文出现实体名「craft」
+   ❌ [发过 2026-07-17] depth-anything.cpp：LocalAI 团队把 Depth Anything 3 移植到 C++，CPU 速度超 PyTorch 30%
+      正文出现实体名「anything」
+   ❌ [发过 2026-09-11] 果蝇大脑被网友塞进《我的世界》和驾校：16.6 万神经元的连接组，离「上传意识」还差多远？
+      正文出现实体名「craft」
+   ❌ [发过 2026-07-05] paper2anything：丢一个 PDF，AI 帮你出五种学术宣传物料
+      正文出现实体名「anything」
+   ❌ [发过 2026-10-13] RSI-Anything：自我改进改了什么
+      正文出现实体名「anything」
+   ❌ [发过 2026-06-12] 57k Star 的代码解析神器：Understand Anything 完整实用指南
+      正文出现实体名「anything」
+   ❌ [发过 2026-08-07] video-shotcraft：让 AI Agent 直接制作院线级产品宣传片
+      正文出现实体名「craft」
+   ❌ [发过 2026-07-23] little-city：把每座城市做成浏览器里的小星球
+      正文出现实体名「craft」
+   ❌ [知识库] # little-city：把每座城市做成浏览器里的小星球  **Summary**: craftmygame/litt
+      正文出现实体名「craft」
+   ❌ [知识库] # depth-anything.cpp — C++17/ggml port of Depth Anything 3 (
+      正文出现实体名「anything」
+   ❌ [知识库] ## depth-anything.cpp — C++17/ggml port of Depth Anything 3
+      正文出现实体名「anything」
+   ❌ [知识库] 12 ms | 346.4 ms | 614 MB | 1.20x | | C++/ggml | q8_0 | 142
+      正文出现实体名「anything」
+   ❌ [知识库] ). Also Depth Anything V2 (relative + metric, indoor/outdoor
+      正文出现实体名「anything」
+   ❌ [知识库] # paper2anything：一个PDF出五种学术宣传物料  **Summary**: AI4GC Lab（浙大）开
+      正文出现实体名「anything」
+   ❌ [知识库] kb/raw/2026-07-05/4f946e01-paper2anything-marquee.webp, /Use
+      正文出现实体名「anything」
+   ❌ [知识库] g/projects/paper2anything，你调研一下这个仓库，然后写一个这个研究者如何使用的介绍了教程同时附上
+      正文出现实体名「anything」
+   ❌ [知识库] ## whiteboard-animator (masihsultani) — 纯 CPU 手绘揭示动画渲染引擎（本站已
+      正文出现实体名「craft」
+   ❌ [知识库] ## little-city — 把每座城市做成浏览器里可探索的小星球  **GitHub**: craftmygame
+      正文出现实体名「craft」
+   ❌ [知识库] ## 实时强化学习 Agent 2026 综述  **研究主题**: Real-time Recursive Learn
+      正文出现实体名「anything」
+   ❌ [知识库] video-shotcraft — Claude Code / Codex AI 视频制作技能包  GitHub: ht
+      正文出现实体名「craft」
+   ❌ [知识库] product"  技术：Remotion（React → 视频帧，确定性渲染）  无头服务器注意： - 并发上限：--
+      正文出现实体名「craft」
+   ❌ [知识库] "Use video-shotcraft to create a promo for my product"|Claud
+      正文出现实体名「craft」
+   ❌ [知识库] --- name: malecns-fruit-fly-connectome-games-minecraft-dri d
+      正文出现实体名「craft」
+   ❌ [知识库] # Impeccable：76K星AI前端设计技能包，24命令+61规则  **Summary**: pbakaus/i
+      正文出现实体名「craft」
+   ❌ [知识库] # P2WLAN：开源跨平台P2P虚拟局域网工具自托管部署指南  **Summary**: yhan-sun/p2wla
+      正文出现实体名「craft」
+   ❌ [知识库] # RSI-Anything：跨域自我改进框架  **Summary**: RSI-Anything 基于 JEPA-A
+      正文出现实体名「anything」
+   ❌ [知识库] --- name: RSI-Anything world-model retention description: Cr
+      正文出现实体名「anything」
+   ❌ [知识库] y/frozen prediction table; lab planning not wet-lab executio
+      正文出现实体名「anything」
+   ❌ [知识库] rsi-anything|WeChat;Raw;Blog|2026-10-13:L1-L13|→drawer_blog_
+      正文出现实体名「anything」
+   ❌ [知识库] --- name: GameScaling embodied game agent continued pretrain
+      正文出现实体名「craft」
+   ❌ [知识库] --- name: GameScaling embodied game agent continued pretrain
+      正文出现实体名「craft」
+   ❌ [知识库] not the process on the other side of the pipe — a classic sh
+      正文出现实体名「anything」
+   ❌ [知识库] --- name: project_impeccable description: Impeccable — Apach
+      正文出现实体名「craft」
+   ❌ [知识库] --- name: project_artcraft description: ArtCraft Crafting Ap
+      正文出现实体名「craft」
+   ❌ [知识库] r）：~2,200 stars，开发中 - EffectCraft（After Effects）：826 stars，开
+      正文出现实体名「craft」
+   ❌ [知识库] blog/general/project_artcraft|PhotoCraft;Claude Opus;ArtCraf
+      正文出现实体名「craft」
+   ❌ [知识库] y/frozen prediction table; lab planning not wet-lab executio
+      正文出现实体名「anything」
+   ❌ [知识库] rsi-anything|WeChat;Raw;Blog|2026-10-13:L1-L13|→drawer_blog_
+      正文出现实体名「anything」
+   ❌ [知识库] --- name: project_video_shotcraft description: "video-shotcr
+      正文出现实体名「craft」
+   ❌ [知识库] raft **协议**：Apache-2.0 | **Stars**：9,569（2026-09-26 trending
+      正文出现实体名「craft」
+   ❌ [知识库] --concurrency=1  **三种运营模式**：模板复用 / Agent 全自主 / 5 个检查点协作模式  *
+      正文出现实体名「craft」
+   ❌ [知识库] blog/general/project_video_shotcraft|Remotion;Ink;Apache;Typ
+      正文出现实体名「craft」
+   ❌ [知识库] 2_5_mini.md) — 35B MoE 约2.95B激活，去掉MTP层，16GB Mac跑不动 - [YuE2-3
+      正文出现实体名「craft」
+   ❌ [知识库] — 8步蒸馏，许可证年收入<100万美元才可商用 - [Pilot Protocol 审计](project_pilot
+      正文出现实体名「craft」
+   ❌ [知识库] MiniCPM-o Booking Desk](project_minicpmo_booking_desk.md) —
+      正文出现实体名「craft」
+   ❌ [知识库] 7 - [Naive-N0.5-Flash](project_naive_n05_flash.md) — MIT；309
+      正文出现实体名「craft」
+   ❌ [知识库] --- name: project_rea_mcp description: morluto/rea — MIT 26.
+      正文出现实体名「anything」
+   ❌ [知识库] --- name: LR2021 ESP32 ADS-B receiver analysis description:
+      正文出现实体名「craft」
+   ❌ [知识库] rmware GPL-3.0-or-later, release docs v1.0.1, upstream credi
+      正文出现实体名「craft」
+   ❌ [知识库] # 。  **Summary**: 。   GitHub：http://github.com/storytold/cra
+      正文出现实体名「anything」
+   ❌ [知识库] # P2WLAN：开源跨平台P2P虚拟局域网工具自托管部署指南  **Summary**: yhan-sun/p2wla
+      正文出现实体名「craft」
+   ❌ [知识库] # paper2anything：一个PDF出五种学术宣传物料  **Summary**: AI4GC Lab（浙大）开
+      正文出现实体名「anything」
+   ❌ [知识库] ## little-city — 把每座城市做成浏览器里可探索的小星球  **GitHub**: craftmygame
+      正文出现实体名「craft」
+   ❌ [知识库] # RSI-Anything：跨域自我改进框架  **Summary**: RSI-Anything 基于 JEPA-A
+      正文出现实体名「anything」
+   ❌ [知识库] ## depth-anything.cpp — C++17/ggml port of Depth Anything 3
+      正文出现实体名「anything」
+   ❌ [知识库] # 万物皆可自我进化了！刚开源的 RSI-Anything 真的  **Summary**: 万物皆可自我进化了！刚开源
+      正文出现实体名「anything」
+   ❌ [知识库] # P2WLAN：开源跨平台P2P虚拟局域网工具自托管部署指南  **Summary**: yhan-sun/p2wla
+      正文出现实体名「craft」
+   ❌ [知识库] video-shotcraft — Claude Code / Codex AI 视频制作技能包  GitHub: ht
+      正文出现实体名「craft」
+   ❌ [知识库] # little-city：把每座城市做成浏览器里的小星球  **Summary**: craftmygame/litt
+      正文出现实体名「craft」
+   ❌ [知识库] ## 实时强化学习 Agent 2026 综述  **研究主题**: Real-time Recursive Learn
+      正文出现实体名「anything」
+   ❌ [知识库] # Impeccable：76K星AI前端设计技能包，24命令+61规则  **Summary**: pbakaus/i
+      正文出现实体名「craft」
+   ❌ [知识库] # Impeccable：76K星AI前端设计技能包，24命令+61规则  **Summary**: pbakaus/i
+      正文出现实体名「craft」
+   ❌ [知识库] ## whiteboard-animator (masihsultani) — 纯 CPU 手绘揭示动画渲染引擎（本站已
+      正文出现实体名「craft」
+   ❌ [知识库] # depth-anything.cpp — C++17/ggml port of Depth Anything 3 (
+      正文出现实体名「anything」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

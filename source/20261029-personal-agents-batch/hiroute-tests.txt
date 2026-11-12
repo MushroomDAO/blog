@@ -1,0 +1,49 @@
+test_020_compatibility_never_enumerates_unbounded_lineage_and_survives_restart (test_hermes_lineage.LineageTests.test_020_compatibility_never_enumerates_unbounded_lineage_and_survives_restart) ... ok
+test_020_ordinary_children_forks_and_ambiguous_compression_never_join_main (test_hermes_lineage.LineageTests.test_020_ordinary_children_forks_and_ambiguous_compression_never_join_main) ... ok
+test_180_depth_is_bounded_and_suffix_is_incomplete (test_hermes_lineage.LineageTests.test_180_depth_is_bounded_and_suffix_is_incomplete) ... ok
+test_ambiguous_live_child_is_a_gap (test_hermes_lineage.LineageTests.test_ambiguous_live_child_is_a_gap) ... ok
+test_an_idle_profile_worker_can_be_retired (test_hermes_lineage.LineageTests.test_an_idle_profile_worker_can_be_retired) ... ok
+test_blocked_ancestor_keeps_fifty_ms_wait_and_recovers_after_release (test_hermes_lineage.LineageTests.test_blocked_ancestor_keeps_fifty_ms_wait_and_recovers_after_release) ... FAIL
+test_creation_time_comes_from_the_fresh_native_row_not_the_proof_stamp (test_hermes_lineage.LineageTests.test_creation_time_comes_from_the_fresh_native_row_not_the_proof_stamp) ... ok
+test_cyclic_or_replaced_state_cannot_reuse_a_cached_compression_root (test_hermes_lineage.LineageTests.test_cyclic_or_replaced_state_cannot_reuse_a_cached_compression_root) ... ok
+test_first_lookup_waits_for_fast_ancestor_proof_within_existing_deadline (test_hermes_lineage.LineageTests.test_first_lookup_waits_for_fast_ancestor_proof_within_existing_deadline) ... ok
+test_fork_does_not_withdraw_confirmed_ancestor_prefix (test_hermes_lineage.LineageTests.test_fork_does_not_withdraw_confirmed_ancestor_prefix) ... ok
+test_four_busy_profile_workers_refuse_extra_work_then_recover_after_idle_retirement (test_hermes_lineage.LineageTests.test_four_busy_profile_workers_refuse_extra_work_then_recover_after_idle_retirement) ... ok
+test_missing_native_schema_does_not_invent_an_open_root (test_hermes_lineage.LineageTests.test_missing_native_schema_does_not_invent_an_open_root) ... ok
+test_observed_withdrawal_survives_generation_without_refreshing_its_stamp (test_hermes_lineage.LineageTests.test_observed_withdrawal_survives_generation_without_refreshing_its_stamp) ... ok
+test_pending_and_cache_capacity_recover_without_unbounded_wait_or_spawn (test_hermes_lineage.LineageTests.test_pending_and_cache_capacity_recover_without_unbounded_wait_or_spawn) ... ok
+test_warm_ancestor_proof_survives_normal_generation_interval (test_hermes_lineage.LineageTests.test_warm_ancestor_proof_survives_normal_generation_interval) ... FAIL
+test_clean_continue_never_selects_an_old_occurrence_or_changes_final_native_content (test_hermes_observed_input.ObservedInputTests.test_clean_continue_never_selects_an_old_occurrence_or_changes_final_native_content) ... ok
+test_concurrent_windows_and_retries_preserve_actual_per_call_ids_without_shared_input_cache (test_hermes_observed_input.ObservedInputTests.test_concurrent_windows_and_retries_preserve_actual_per_call_ids_without_shared_input_cache) ... ok
+test_minimal_context_survives_missing_or_throwing_optional_lineage (test_hermes_observed_input.ObservedInputTests.test_minimal_context_survives_missing_or_throwing_optional_lineage) ... ok
+test_optional_hook_apis_are_unused_on_older_and_throwing_sdks (test_hermes_observed_input.ObservedInputTests.test_optional_hook_apis_are_unused_on_older_and_throwing_sdks) ... ok
+test_optional_ids_never_promote_task_or_callback_text_to_per_call_identity (test_hermes_observed_input.ObservedInputTests.test_optional_ids_never_promote_task_or_callback_text_to_per_call_identity) ... ok
+test_each_foreign_route_dimension_is_unchanged (test_hermes_plugin.HermesAdapterTests.test_each_foreign_route_dimension_is_unchanged) ... ok
+test_inconsistent_or_foreign_configuration_cannot_register_authorization (test_hermes_plugin.HermesAdapterTests.test_inconsistent_or_foreign_configuration_cannot_register_authorization) ... ok
+test_missing_invalid_or_over_bound_identity_never_removes_route_authorization (test_hermes_plugin.HermesAdapterTests.test_missing_invalid_or_over_bound_identity_never_removes_route_authorization) ... ok
+test_native_envelope_preserves_stream_tools_and_existing_headers_for_all_modes (test_hermes_plugin.HermesAdapterTests.test_native_envelope_preserves_stream_tools_and_existing_headers_for_all_modes) ... ok
+test_all_transports_keep_auth_body_tools_and_stream_without_origin_reads (test_hermes_turn_input.TurnInputTests.test_all_transports_keep_auth_body_tools_and_stream_without_origin_reads) ... ok
+test_concurrent_native_branches_preserve_identity_without_new_user_claims (test_hermes_turn_input.TurnInputTests.test_concurrent_native_branches_preserve_identity_without_new_user_claims) ... ok
+test_older_sdk_without_whole_turn_hooks_remains_connectable (test_hermes_turn_input.TurnInputTests.test_older_sdk_without_whole_turn_hooks_remains_connectable) ... ok
+test_public_hook_availability_never_bootstraps_a_real_or_synthetic_user (test_hermes_turn_input.TurnInputTests.test_public_hook_availability_never_bootstraps_a_real_or_synthetic_user) ... ok
+
+======================================================================
+FAIL: test_blocked_ancestor_keeps_fifty_ms_wait_and_recovers_after_release (test_hermes_lineage.LineageTests.test_blocked_ancestor_keeps_fifty_ms_wait_and_recovers_after_release)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/hiroute-research/scripts/tests/test_hermes_lineage.py", line 196, in test_blocked_ancestor_keeps_fifty_ms_wait_and_recovers_after_release
+    self.assertLess(elapsed, .15)
+AssertionError: 0.1828478340030415 not less than 0.15
+
+======================================================================
+FAIL: test_warm_ancestor_proof_survives_normal_generation_interval (test_hermes_lineage.LineageTests.test_warm_ancestor_proof_survives_normal_generation_interval)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/hiroute-research/scripts/tests/test_hermes_lineage.py", line 225, in test_warm_ancestor_proof_survives_normal_generation_interval
+    self.assertLess(elapsed, .15)
+AssertionError: 0.2001600000075996 not less than 0.15
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.819s
+
+FAILED (failures=2)

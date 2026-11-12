@@ -1,0 +1,55 @@
+{
+  "completed": true,
+  "deployment": "https://0e3f6432.blog-mushroom.pages.dev",
+  "publications": [
+    {
+      "slug": "stirling-pdf-local-toolbox-guide",
+      "blogUrl": "https://blog.mushroom.cv/blog/stirling-pdf-local-toolbox-guide/",
+      "mediaId": "prCUE631thH1cmNLi42prFx-jxgM29bvT6fM_H_4gOMAC9ek35MvpOiOn9WqVKa3",
+      "archivedMediaId": "",
+      "wechatStatus": "draft",
+      "wechatError": ""
+    },
+    {
+      "slug": "elephant-goldfish-spec-review-guide",
+      "blogUrl": "https://blog.mushroom.cv/blog/elephant-goldfish-spec-review-guide/",
+      "mediaId": "prCUE631thH1cmNLi42prGVBlVgaf23Ri9oL3UkUZYuF5_2T4wJ1nSDw8C-KLw9M",
+      "archivedMediaId": "",
+      "wechatStatus": "draft",
+      "wechatError": ""
+    },
+    {
+      "slug": "gvs5h-memdoor-small-model-coding-audit",
+      "blogUrl": "https://blog.mushroom.cv/blog/gvs5h-memdoor-small-model-coding-audit/",
+      "mediaId": "prCUE631thH1cmNLi42prBDw86_aeO6XboLDR987Ay3A9WTz1oBojMALfzwSXwIX",
+      "archivedMediaId": "",
+      "wechatStatus": "draft",
+      "wechatError": ""
+    }
+  ],
+  "publicPagesVerified": 3,
+  "imageURLsVerified": 15,
+  "remoteDraftsVerified": 3,
+  "semanticVectorsUpserted": 6,
+  "liveQueriesMatched": 3,
+  "kbReadback": [
+    {
+      "slug": "stirling-pdf-local-toolbox-guide",
+      "rows": 4,
+      "currentMediaAndUrlAndSemanticReadBack": true
+    },
+    {
+      "slug": "elephant-goldfish-spec-review-guide",
+      "rows": 4,
+      "currentMediaAndUrlAndSemanticReadBack": true
+    },
+    {
+      "slug": "gvs5h-memdoor-small-model-coding-audit",
+      "rows": 5,
+      "currentMediaAndUrlAndSemanticReadBack": true
+    }
+  ],
+  "localhostError": "http://localhost:8080 connection refused; no local service falsely reported",
+  "agentReach": "skill unavailable; primary-source fallback disclosed",
+  "independentRuntimeBenchmark": false
+}

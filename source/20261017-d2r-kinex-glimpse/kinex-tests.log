@@ -1,0 +1,14 @@
+test_failed_feedback_cancels_retained_position (driver_contract.BufferTests.test_failed_feedback_cancels_retained_position) ... ok
+test_late_failure_does_not_cancel_replacement (driver_contract.BufferTests.test_late_failure_does_not_cancel_replacement) ... ok
+test_native_error_latches_and_halts (driver_contract.BufferTests.test_native_error_latches_and_halts) ... ok
+test_replacement_and_expiry_preserve_position_target (driver_contract.BufferTests.test_replacement_and_expiry_preserve_position_target) ... ok
+test_submission_returns_before_velocity_expiry (driver_contract.BufferTests.test_submission_returns_before_velocity_expiry) ... ok
+test_cleanup_failure_is_structured_and_blocks_future_submission (driver_contract.DriverCleanupTests.test_cleanup_failure_is_structured_and_blocks_future_submission) ... ok
+test_drivers_stop_accepted_write_before_reporting_bad_feedback (driver_contract.DriverCleanupTests.test_drivers_stop_accepted_write_before_reporting_bad_feedback) ... ok
+test_rejected_submission_does_not_change_stop_target (driver_contract.DriverCleanupTests.test_rejected_submission_does_not_change_stop_target) ... ok
+test_flat_sequences_validate_all_values_and_apply_profile_semantics (driver_contract.ScalarTests.test_flat_sequences_validate_all_values_and_apply_profile_semantics) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.208s
+
+OK

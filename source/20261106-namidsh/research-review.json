@@ -1,0 +1,12 @@
+{
+  "nami": "629e9efcb121b2805a2f3c48565144b732c0ff7f",
+  "dsh": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "npmCordis": "4.1.0",
+  "node": "26.10.0",
+  "tests": "original npm test and tsc pass",
+  "comparison": "one of114lines differs for both npm and vendored source",
+  "boundary": "self-owned fixture only lexical traversal blocked symlink readable",
+  "referenceCosmokit": "npm dependency resolved by separate prefix; lock archived",
+  "vendoredBuild": "esbuild bundle --platform=node --format=esm --packages=external; no DSH source edits",
+  "testCaveat": "Reference source parameter properties require transpilation; direct Node strip-only failed before esbuild; this was a tooling limitation, not a Cordis failure."
+}

@@ -1,0 +1,11 @@
+{
+  "dataset": "nvidia/simready-assets",
+  "revision": "524747d9b5e1f21b5b18b56041788c01d745f1a1",
+  "asset": "box_corrugated_brown_b08",
+  "localPackage": "/Users/jason/.heinu1-bot/jobs/d254dd11-da48-487a-aef4-1c92cc08876a/verification/sample-package/box_corrugated_brown_b08",
+  "reproduction": "audit-sample.py <package-dir> <output.json> with usd-core==26.11",
+  "files": 43,
+  "bytes": 58282879,
+  "BOMitems": 37,
+  "scope": "No full-library download or physics-engine run"
+}

@@ -1,0 +1,30 @@
+❌ Failed to get access token: Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeaedc8-4add3aeb-5818e281"}
+⚠️  公众号账本没查成（Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeaedc8-4add3aeb-5818e281"}）
+   本次结果不完整，别当成完整查重。
+账本：blog 952 篇 + 公众号草稿箱 0 条 + 本地发布记录 933 条 + MemPalace 3778 抽屉
+
+── 查：https://huggingface.co/beipo-ai/NorthCUA-Pro
+   ❌ [BLOG  ] NorthCUA-Pro拆解：397B电脑智能体，开源权重之后还需要什么？
+      一手源相同: beipo-ai/northcua-pro
+   ❌ [知识库] --- name: NorthCUA-Pro computer-use model and Harness descri
+      一手源相同: beipo-ai/northcua-pro
+
+── 查：NorthCUA-Pro
+   ❌ [BLOG  ] NorthCUA-Pro拆解：397B电脑智能体，开源权重之后还需要什么？
+      正文出现实体名「northcua-pro」
+   ❌ [知识库] # NorthCUA-Pro电脑智能体解析  **Summary**: 已核实NorthCUA-Pro公开权重和相关Ha
+      正文出现实体名「northcua-pro」
+   ❌ [知识库] --- name: NorthCUA-Pro computer-use model and Harness descri
+      正文出现实体名「northcua-pro」
+   ❌ [知识库] 2，NexAU公共固定版本。模型卡旧china-qijizhifeng链接需要核对重定向；代码docs/models有旧
+      正文出现实体名「northcua-pro」
+   ❌ [知识库] 最终slug northcua-pro-computer-use-harness-guide，文章/Blog已发布核验，
+      正文出现实体名「northcua-pro」
+   ❌ [知识库] northcua-pro|NorthCUA;Pro|2026-11-04:L1-L9|→drawer_blog_gene
+      正文出现实体名「northcua-pro」
+   ❌ [知识库] # 谁该关注：RPA/自动化开发者、想自建电脑智能体的团队、开源  **Summary**: 谁该关注：RPA/自动化开
+      正文出现实体名「northcua-pro」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":"Token error: {\"errcode\":40164,\"errmsg\":\"invalid ip 223.204.87.188 ipv6 ::ffff:223.204.87.188, not in whitelist rid: 6aeaedc8-4add3aeb-5818e281\"}"}
+```

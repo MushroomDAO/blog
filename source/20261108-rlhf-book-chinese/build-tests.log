@@ -1,0 +1,8 @@
+test_checker_detects_original_empty_index_and_broken_assets (test_build.BookBuildTests) ... ok
+test_missing_front_matter_terminator_fails (test_build.BookBuildTests) ... ok
+test_navigation_metadata_removed_and_book_links_resolved (test_build.BookBuildTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK

@@ -1,0 +1,34 @@
+🚀 M2 WeChat Publisher
+======================
+
+[1/5] Loading config...
+[2/5] Rendering markdown...
+Using theme: 蓝色专业 (blue)
+   Found 3 image(s) to process...
+   Uploading local image: billion-context-agent-compression-proxy-review-fig-01.png...
+✅ Access token obtained
+✅ Image uploaded: billion-context-agent-compression-proxy-review-fig-01.png
+   ✅ Local image processed
+   Uploading local image: billion-context-agent-compression-proxy-review-fig-02.png...
+✅ Image uploaded: billion-context-agent-compression-proxy-review-fig-02.png
+   ✅ Local image processed
+   Uploading local image: billion-context-agent-compression-proxy-review-fig-03.png...
+✅ Image uploaded: billion-context-agent-compression-proxy-review-fig-03.png
+   ✅ Local image processed
+   Title: billion-context：长会话怎么压缩
+   Theme: 蓝色专业 (blue)
+[3/5] Processing cover image...
+✅ Cover uploaded: media_id=prCUE631thH1cmNLi42prP-KVnO7aIRt9EMLoJYS7I4wyWd1l__ced9Bw7c9AMQw
+[4/5] Creating draft...
+✅ Draft created: media_id=prCUE631thH1cmNLi42prPFrp35WzHDcqP8Jeqe5L0uyiGTrgAsawu93JNxxbpQa
+[5/5] Saving output...
+
+✅ Publish successful!
+
+📋 Draft Info:
+   Title: billion-context：长会话怎么压缩
+   Theme: 蓝色专业 (blue)
+   Media ID: prCUE631thH1cmNLi42prPFrp35WzHDcqP8Jeqe5L0uyiGTrgAsawu93JNxxbpQa
+   Preview: https://mp.weixin.qq.com
+
+📁 Output: pipeline/m2/output/billion-context-agent-compression-proxy-review.html

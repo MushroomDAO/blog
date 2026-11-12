@@ -1,0 +1,50 @@
+{
+  "files": [
+    {
+      "file": "client-readme.md",
+      "repo": "AppFlowy",
+      "revision": "5cf3a365dec0d59f64bad1ee4bb1050471a39b93",
+      "sha256": "f59d3e49037d392f36d7ea13d25485c5d54317f9aee7c61c4c2a47f067aa996d",
+      "originalMatchesPinnedSource": true,
+      "storedSha256": "f59d3e49037d392f36d7ea13d25485c5d54317f9aee7c61c4c2a47f067aa996d",
+      "storedFormat": "trailing whitespace and final newline normalized"
+    },
+    {
+      "file": "legacy-cloud-readme.md",
+      "repo": "AppFlowy-Cloud",
+      "revision": "c5bcfd33edd46ced4a9b4fdb7ddb3bbf8c0326da",
+      "sha256": "02d892ef6d1be0c211a806d7fb02cc0ac07213c6de49f6e9adb64c7e660e226f",
+      "originalMatchesPinnedSource": true,
+      "storedSha256": "546f1825273f10b96bd5b95ac0d19b28c4d771c6a903e576b1fc44d1736b43c2",
+      "storedFormat": "trailing whitespace and final newline normalized"
+    },
+    {
+      "file": "selfhost-readme.md",
+      "repo": "AppFlowy-SelfHost-Commercial",
+      "revision": "511fa3222f217bf1c2b6d1d183d3f2ecc30065a9",
+      "sha256": "7d5df1c1d99b8b2f4d5fd81598865e28b287b365148ac7a8f282c403c97f8471",
+      "originalMatchesPinnedSource": true,
+      "storedSha256": "7d5df1c1d99b8b2f4d5fd81598865e28b287b365148ac7a8f282c403c97f8471",
+      "storedFormat": "trailing whitespace and final newline normalized"
+    },
+    {
+      "file": "docker-compose.yml",
+      "repo": "AppFlowy-SelfHost-Commercial",
+      "revision": "511fa3222f217bf1c2b6d1d183d3f2ecc30065a9",
+      "sha256": "3dec0fba134203fc045f552c0deafc960ac5741c425cef70cb8943d6b696971f",
+      "originalMatchesPinnedSource": true,
+      "storedSha256": "3dec0fba134203fc045f552c0deafc960ac5741c425cef70cb8943d6b696971f",
+      "storedFormat": "trailing whitespace and final newline normalized"
+    },
+    {
+      "file": "commercial-license.md",
+      "repo": "AppFlowy-SelfHost-Commercial",
+      "revision": "511fa3222f217bf1c2b6d1d183d3f2ecc30065a9",
+      "sha256": "93b40d19b515a084a21ac4d6caf9ab65738481c9d5e135bf9fe2dc22c4a1dd0b",
+      "originalMatchesPinnedSource": true,
+      "storedSha256": "fd7485ed0edcbcccd2e2f8ce7b25ecce6f8089f72e4c4f43ab82193db43964c1",
+      "storedFormat": "trailing whitespace and final newline normalized"
+    }
+  ],
+  "yamlParser": "6.0.3"
+}

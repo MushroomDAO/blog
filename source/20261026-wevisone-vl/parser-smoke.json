@@ -1,0 +1,24 @@
+{
+  "upstreamTests": {
+    "test_parser_scales_bins_and_drops_degenerate_boxes": "pass",
+    "test_parser_reads_points_and_truncated_answers": "pass"
+  },
+  "absentStringParsesToEmpty": "pass",
+  "input": "synthetic structured token strings, no model inference",
+  "observedScaling": {
+    "cup": [
+      [
+        100.0,
+        100.0,
+        300.0,
+        200.0
+      ]
+    ]
+  },
+  "limitations": [
+    "Does not test recognition, rejection accuracy, pixel decoder, latency or VRAM",
+    "No model weights loaded",
+    "No RTX 4090 measurement"
+  ],
+  "sourceSha256": "6a3391a433845ab6bce74306386616a44f0a28cc7dc30f99e9efe0b6aa24ac31"
+}

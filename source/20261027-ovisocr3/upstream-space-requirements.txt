@@ -1,0 +1,13 @@
+gradio==6.26.0
+spaces==0.51.3
+transformers==5.14.1
+flash-linear-attention==0.5.2
+https://github.com/Dao-AILab/causal-conv1d/releases/download/v1.6.2.post1/causal_conv1d-1.6.2.post1%2Bcu12torch2.10cxx11abiTRUE-cp312-cp312-linux_x86_64.whl#sha256=c16c1c48d4fa63415cc797e02d69f97248c57c04627d99e394d5bb0ef266e288
+accelerate==1.15.0
+torch==2.10.0
+torchvision==0.25.0
+Pillow>=10.0.0
+pypdfium2==5.10.1
+beautifulsoup4>=4.12,<5
+bleach>=6.2,<7
+markdown-it-py>=3,<5

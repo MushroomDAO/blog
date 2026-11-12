@@ -1,0 +1,13 @@
+{
+  "title": "Agent后台复盘：拆解Dreaming工作流",
+  "author": "Mycelium",
+  "digest": "九项本地检查拆解后台记忆维护，讲清单会话、并发写入与增量遗漏。",
+  "mediaId": "prCUE631thH1cmNLi42prFZQEyyuWNqs4bSGVITxWQSgPwnWNknRmiZn5BEyKDUn",
+  "blogUrl": "https://blog.mushroom.cv/blog/anthropic-dreaming-dynamic-workflow-memory-review/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/anthropic-dreaming-dynamic-workflow-memory-review/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/anthropics/claude-cookbooks"
+  ],
+  "publishedAt": "2026-11-08T02:19:50.128Z"
+}

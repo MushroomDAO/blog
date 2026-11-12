@@ -1,0 +1,47 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6ad19565-23f04f29-7c7a2771）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 838 篇 + 公众号草稿箱 3 条 + 本地发布记录 821 条 + MemPalace 1758 抽屉
+
+── 查：https://github.com/threerocks/sweety-handdraw-video
+   ❌ [BLOG  ] sweety-handdraw-video：把长文做成边画边讲的视频
+      一手源相同: threerocks/sweety-handdraw-video
+   ❌ [发过 2026-10-15] Sweety：长文变手绘讲解视频
+      一手源相同: threerocks/sweety-handdraw-video
+   ⚠️  [知识库] # Sweety：文章变有声手绘视频  **Summary**: sweety-handdraw-video 是 MIT
+      标题相似度 43%
+   ❌ [知识库] --- name: sweety-handdraw-video pipeline description: Offici
+      一手源相同: threerocks/sweety-handdraw-video
+   ⚠️  [知识库] # 项目名：threerocks/sweety-handdraw  **Summary**: 项目名：threerock
+      标题相似度 43%
+   ⚠️  [知识库] # Sweety：文章变有声手绘视频  **Summary**: sweety-handdraw-video 是 MIT
+      标题相似度 43%
+
+── 查：sweety-handdraw-video
+   ❌ [BLOG  ] sweety-handdraw-video：把长文做成边画边讲的视频
+      正文出现实体名「sweety-handdraw-video」
+   ❌ [发过 2026-10-15] Sweety：长文变手绘讲解视频
+      正文出现实体名「sweety-handdraw-video」
+   ❌ [知识库] # Sweety：文章变有声手绘视频  **Summary**: sweety-handdraw-video 是 MIT
+      正文出现实体名「sweety-handdraw-video」
+   ❌ [知识库] --- name: sweety-handdraw-video pipeline description: Offici
+      正文出现实体名「sweety-handdraw-video」
+   ❌ [知识库] narration; no weightsbundled. Fivevendoredmethod/code snapsh
+      正文出现实体名「sweety-handdraw-video」
+   ❌ [知识库] blog/general/project_sweety-handdraw-video-pipeline|ExifTool
+      正文出现实体名「sweety-handdraw-video」
+   ❌ [知识库] # 项目名：threerocks/sweety-handdraw  **Summary**: 项目名：threerock
+      正文出现实体名「sweety-handdraw-video」
+   ❌ [知识库] # Sweety：文章变有声手绘视频  **Summary**: sweety-handdraw-video 是 MIT
+      正文出现实体名「sweety-handdraw-video」
+   ❌ [知识库] # 又一个技能被AI实现，手绘讲解视频神器！  **Summary**: 又一个技能被AI实现，手绘讲解视频神器！ 刷到
+      正文出现实体名「sweety-handdraw-video」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

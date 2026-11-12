@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-10-27T17:29:32.159902+00:00",
+  "carouselSlides": [
+    "/blog/postiz-agentic-social-media-scheduling-open-source/",
+    "/blog/magpie-multi-agent-model-gateway/",
+    "/blog/ovisocr3-unified-document-model/",
+    "/blog/roboharness-v2-workspace/",
+    "/blog/pi-rust-agent-runtime/",
+    "/blog/meta-sam3-promptable-concept-segmentation-license-mac-guide/",
+    "/blog/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit/",
+    "/blog/xllama-xbox-series-s-local-llm-inference-dev-mode/"
+  ],
+  "articles": [
+    {
+      "slug": "magpie-multi-agent-model-gateway",
+      "url": "https://blog.mushroom.cv/blog/magpie-multi-agent-model-gateway/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/magpie-multi-agent-model-gateway-banner.BGZnIbEf_Z2hvEVD.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/magpie-multi-agent-model-gateway-fig-01.BOCZqn09_Z1Gz8qA.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/magpie-multi-agent-model-gateway-fig-02.B7JPD4qG_Z2jTJlQ.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/magpie-multi-agent-model-gateway-fig-03.dsabPXit_Z1hIdKC.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/magpie-multi-agent-model-gateway-banner.BGZnIbEf.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 1,
+      "carouselRank": 2
+    },
+    {
+      "slug": "postiz-agentic-social-media-scheduling-open-source",
+      "url": "https://blog.mushroom.cv/blog/postiz-agentic-social-media-scheduling-open-source/",
+      "HTTP": 200,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/postiz-agentic-social-media-scheduling-open-source-banner.BTOgB30k_PDLpd.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/postiz-agentic-social-media-scheduling-open-source-fig-01.nZVn7Srw_Z2p4F3Q.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/postiz-agentic-social-media-scheduling-open-source-fig-02.CSdseTEV_Z1fjUAl.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/postiz-agentic-social-media-scheduling-open-source-fig-03.Dowdn5aJ_8t4pq.webp",
+          "HTTP": 200
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/postiz-agentic-social-media-scheduling-open-source-banner.BTOgB30k.jpg",
+          "HTTP": 200
+        }
+      ],
+      "blogListRank": 617,
+      "carouselRank": 1
+    }
+  ]
+}

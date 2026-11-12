@@ -1,0 +1,22 @@
+{
+  "primarySources": [
+    "https://github.com/AirsupHQ/machine-skill",
+    "https://www.airsup.ai/lab/skill"
+  ],
+  "agentReach": "Skill and executable unavailable after local search; used user-permitted Jina Reader plus GitHub official API/raw sources",
+  "jinaWebsite": "success",
+  "jinaGithub": "403 for repo and https://github.com ; recovered repo body through official API/raw and web browser reader",
+  "revision": "e0bd066ac5beaf48512935de2fc0f0e55636853a",
+  "images": [
+    {
+      "url": "https://raw.githubusercontent.com/AirsupHQ/machine-skill/e0bd066ac5beaf48512935de2fc0f0e55636853a/.github/assets/turbofan.jpg",
+      "path": "/Users/jason/.heinu1-bot/media/airsup-machine-turbofan.jpg",
+      "sha256": "a5409da9037c408aeee6acfca0544e88447cd026c5426902ee4244ccab6d056e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/AirsupHQ/machine-skill/e0bd066ac5beaf48512935de2fc0f0e55636853a/.github/assets/rocket-engine.jpg",
+      "path": "/Users/jason/.heinu1-bot/media/airsup-machine-rocket-engine.jpg",
+      "sha256": "cf1bf6df94af84ded6503dd8b51b6b06a987e9ccf9a7a3f66c9e7af724e1c3e8"
+    }
+  ]
+}

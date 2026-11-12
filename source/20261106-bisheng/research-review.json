@@ -1,0 +1,28 @@
+{
+  "commit": "62f5893912a171265769f004fe79a96cfb009fee",
+  "source": "https://github.com/dataelement/bisheng",
+  "JinaFetched": true,
+  "agentReachUnavailable": true,
+  "sourceScope": "root Apache2;commercialdashboardandlicensedoptionalGatewaydistinct",
+  "tests": {
+    "existingCLISelected": 35,
+    "passed": 35,
+    "files": [
+      "test_ignore.py",
+      "test_project.py",
+      "test_secret_warnings.py"
+    ],
+    "bashSyntax": true
+  },
+  "noDockerAvailable": true,
+  "noPlatformDeployment": true,
+  "noModelInference": true,
+  "noPermissionOrRagBenchmark": true,
+  "READMEvsDockerGuideDrift": true,
+  "backendVersion": "3.0.0-beta6",
+  "composeMainImageTag": "v3.0.0",
+  "screenshots": [
+    "/Users/jason/.heinu1-bot/media/bisheng-official-platform-overview.png",
+    "/Users/jason/.heinu1-bot/media/bisheng-official-knowledge-space.png"
+  ]
+}

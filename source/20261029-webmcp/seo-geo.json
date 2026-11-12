@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "frontmatter": true,
+    "first_person_absent": true,
+    "copyright_bilingual": true,
+    "questions_faq": true,
+    "primary_spec_pin": true,
+    "experimental_status_explicit": true,
+    "benchmark_scope_explicit": true,
+    "bilingual_images": true,
+    "images_exist": true,
+    "images_under90kb": true,
+    "internal_link_exists": true,
+    "live_demo_present": true,
+    "description_length": 154,
+    "descriptionEn_length": 160
+  },
+  "review": "BLUF, original browser observations versus draft/Chrome claims, explicit experimental/version/API limits, questions/FAQ, bilingual alt/copyrights, internal links and scoped read-only example. No universal reliability/speedup or token-cost claim."
+}

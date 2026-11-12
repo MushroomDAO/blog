@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-13",
+  "status": "pass",
+  "descriptionChars": 157,
+  "descriptionEnChars": 157,
+  "SEO": "Required bilingual metadata/dates/category/tags,English keyword slug,alt text,1200x630 verified cover,three compressed illustrations,primary source URLs,related internal link,readable heading hierarchy,no duplicate H1,CC attribution both languages.",
+  "GEO": "BLUF both languages,question headings and three FAQ pairs in each,source-attributed numbers,pinned source revisions,six own deterministic template checks plus ranged GGUF header verification,explicit no inference/benchmark/throughput claims,vendor-vs-own distinction,hardware and context deployment conditions; no FAQ schema or guaranteed search traffic claim.",
+  "sourceCorrections": [
+    "stale GGUF comingsoon replaced by official file-tree evidence",
+    "top-token agreement is not coding retention",
+    "H200 FP8 speed not Mac GGUF claim",
+    "total vs active parameters distinguished",
+    "official scores self-reported and same-harness limitations noted"
+  ]
+}

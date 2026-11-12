@@ -1,0 +1,53 @@
+{
+  "task": "f12e2847-75e8-4c33-ae44-c9704f0e9c03",
+  "checkedAt": "2026-10-16",
+  "host": "Apple M4, 16GB, macOS 26.6.2",
+  "agentReach": "Unavailable in installed tools and local skill locations; Jina Reader and official source fetch used instead",
+  "publishedApiGap": "48001; no permission to read published list",
+  "rawKB": "Bot already ingested raw material; reused, not duplicated",
+  "slug": "usechat-wechat-agent-runtime",
+  "sources": [
+    "https://github.com/CosmosShadow/usechat",
+    "https://shennian.net/blog/usechat",
+    "https://help.aliyun.com/zh/model-studio/model-pricing"
+  ],
+  "pin": "485c8080a0594d1fda5194556ac6da73a5e209a0",
+  "fetch": "Both supplied links retrieved through Jina and official originals",
+  "dedup": "Only original bot material and unrelated React useChat hook; no same-topic Blog/local M2/current remote draft",
+  "validation": {
+    "build": "passed via pnpm -r build; root wrapper initially failed missing corepack",
+    "typecheck": "passed",
+    "tests": 132,
+    "passed": 129,
+    "failed": 3,
+    "failure": "CLI dry-run without Helper fails manifest_missing; reproduced with isolated config",
+    "notTested": [
+      "real chat capture",
+      "real read/write",
+      "native Helper",
+      "paid vision endpoint"
+    ]
+  },
+  "saved_files": [
+    "/Users/jason/.heinu1-bot/media/usechat-author-architecture.png",
+    "/Users/jason/.heinu1-bot/media/usechat-official-architecture.svg",
+    "/Users/jason/.heinu1-bot/media/usechat-official-contact-qr.jpg"
+  ],
+  "banner": {
+    "method": "local FLUX",
+    "seed": 121,
+    "rootVisual": "passed: two glass speech shapes linked by green thread; no text/faces"
+  },
+  "pricing": {
+    "region": "Beijing",
+    "model": "qwen3.5-flash",
+    "inputBracket": "<=128K",
+    "yuanPerMillionInput": 0.2,
+    "yuanPerMillionOutput": 2,
+    "assumedInput": 5000,
+    "assumedOutput": 1000,
+    "calculatedYuan": 0.003,
+    "measuredBill": false
+  },
+  "illustrations": "Three independent generated XiaoM diagrams, root visual pass; 1280x720, under90000B; six bilingual refs"
+}

@@ -1,0 +1,17 @@
+
+> @opentiny/tiny-robot-chat@0.5.1 test /private/tmp/tiny-robot-20261017/packages/chat
+> vitest run
+
+
+ RUN  v1.6.1 /private/tmp/tiny-robot-20261017/packages/chat
+
+ ✓ src/ui/layout/chatMcpManager.test.ts  (3 tests) 2ms
+ ✓ src/composables/useChatRuntimeAdapter.test.ts  (4 tests) 3ms
+ ✓ src/runtime/plugins/errorStatePlugin.test.ts  (9 tests) 5ms
+ ✓ src/runtime/useChatRuntime.test.ts  (2 tests) 5ms
+
+ Test Files  4 passed (4)
+      Tests  18 passed (18)
+   Start at  08:03:55
+   Duration  266ms (transform 127ms, setup 0ms, collect 310ms, tests 15ms, environment 0ms, prepare 137ms)
+

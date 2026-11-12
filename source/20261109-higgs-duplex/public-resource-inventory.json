@@ -1,0 +1,504 @@
+{
+  "checkedAt": "2026-11-09T02:41:02.561506+00:00",
+  "githubRepositories": [
+    {
+      "name": "boson-ai/RPBench-Auto",
+      "url": "https://github.com/boson-ai/RPBench-Auto",
+      "pushedAt": "2024-09-14T22:13:33Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "name": "boson-ai/rpgbench-public",
+      "url": "https://github.com/boson-ai/rpgbench-public",
+      "pushedAt": "2025-05-15T20:20:54Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "name": "boson-ai/EmergentTTS-Eval-public",
+      "url": "https://github.com/boson-ai/EmergentTTS-Eval-public",
+      "pushedAt": "2025-12-09T18:43:57Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "name": "boson-ai/higgs-audio",
+      "url": "https://github.com/boson-ai/higgs-audio",
+      "pushedAt": "2026-06-05T04:01:06Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "name": "boson-ai/higgs-audio-vllm",
+      "url": "https://github.com/boson-ai/higgs-audio-vllm",
+      "pushedAt": "2025-10-27T21:11:25Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "name": "boson-ai/hackathon-msac-public",
+      "url": "https://github.com/boson-ai/hackathon-msac-public",
+      "pushedAt": "2025-10-25T16:27:24Z",
+      "license": null
+    },
+    {
+      "name": "boson-ai/hackathon-m3-api-card-public",
+      "url": "https://github.com/boson-ai/hackathon-m3-api-card-public",
+      "pushedAt": "2026-03-20T21:40:45Z",
+      "license": null
+    },
+    {
+      "name": "boson-ai/WildASR-public",
+      "url": "https://github.com/boson-ai/WildASR-public",
+      "pushedAt": "2026-04-13T20:08:00Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "name": "boson-ai/ProactBench",
+      "url": "https://github.com/boson-ai/ProactBench",
+      "pushedAt": "2026-10-20T18:12:42Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "name": "boson-ai/MSI-Bench",
+      "url": "https://github.com/boson-ai/MSI-Bench",
+      "pushedAt": "2026-11-07T03:52:56Z",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "name": "boson-ai/ihbench",
+      "url": "https://github.com/boson-ai/ihbench",
+      "pushedAt": "2026-07-08T14:16:19Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "name": "boson-ai/pipecat-boson",
+      "url": "https://github.com/boson-ai/pipecat-boson",
+      "pushedAt": "2026-11-04T21:05:27Z",
+      "license": {
+        "key": "bsd-2-clause",
+        "name": "BSD 2-Clause \"Simplified\" License",
+        "spdx_id": "BSD-2-Clause",
+        "url": "https://api.github.com/licenses/bsd-2-clause",
+        "node_id": "MDc6TGljZW5zZTQ="
+      }
+    },
+    {
+      "name": "boson-ai/Higgs-Realtime-Tutorial",
+      "url": "https://github.com/boson-ai/Higgs-Realtime-Tutorial",
+      "pushedAt": "2026-10-23T21:03:41Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "name": "boson-ai/higgs-voiceover",
+      "url": "https://github.com/boson-ai/higgs-voiceover",
+      "pushedAt": "2026-10-06T23:13:51Z",
+      "license": null
+    },
+    {
+      "name": "boson-ai/boson-plugins",
+      "url": "https://github.com/boson-ai/boson-plugins",
+      "pushedAt": "2026-09-29T21:24:35Z",
+      "license": null
+    },
+    {
+      "name": "boson-ai/Boson-Feedback-Collection",
+      "url": "https://github.com/boson-ai/Boson-Feedback-Collection",
+      "pushedAt": "2026-10-23T15:42:29Z",
+      "license": null
+    }
+  ],
+  "huggingFaceModels": [
+    {
+      "id": "bosonai/higgs-tts-3-4b",
+      "sha": null,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "higgs_multimodal_qwen3",
+        "text-generation",
+        "text-to-speech",
+        "speech-generation",
+        "voice-agent",
+        "expressive-speech",
+        "controllable-tts",
+        "multilingual-tts",
+        "af",
+        "ar",
+        "as",
+        "ast",
+        "az",
+        "ba",
+        "be",
+        "bg",
+        "bn",
+        "bs",
+        "ca",
+        "ceb",
+        "ckb",
+        "cs",
+        "cy",
+        "da",
+        "de",
+        "el",
+        "en",
+        "eo",
+        "es",
+        "et",
+        "eu",
+        "fa",
+        "fi",
+        "fr",
+        "ga",
+        "gl",
+        "gu",
+        "ha",
+        "he",
+        "hi",
+        "hr",
+        "ht",
+        "hu",
+        "hy",
+        "id",
+        "is",
+        "it",
+        "jv",
+        "ka",
+        "kab",
+        "kam",
+        "kea",
+        "kk",
+        "kn",
+        "ko",
+        "ky",
+        "la",
+        "lb",
+        "lg",
+        "ln",
+        "lt",
+        "luo",
+        "lv",
+        "mhr",
+        "mi",
+        "mk",
+        "ml",
+        "mn",
+        "mr",
+        "ms",
+        "mt",
+        "ne",
+        "nl",
+        "no",
+        "nso",
+        "ny",
+        "oc",
+        "om",
+        "pa",
+        "pl",
+        "ps",
+        "pt",
+        "ro",
+        "ru",
+        "rw",
+        "sd",
+        "sk",
+        "sl",
+        "sn",
+        "so",
+        "sq",
+        "sr",
+        "sv",
+        "sw",
+        "ta",
+        "te",
+        "tg",
+        "tl",
+        "tr",
+        "ug",
+        "uk",
+        "umb",
+        "ur",
+        "uz",
+        "vi",
+        "xh",
+        "zh",
+        "zu",
+        "license:other",
+        "endpoints_compatible",
+        "region:us"
+      ]
+    },
+    {
+      "id": "bosonai/Higgs-Llama-3-70B",
+      "sha": null,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "llama",
+        "text-generation",
+        "conversational",
+        "base_model:meta-llama/Meta-Llama-3-70B",
+        "base_model:finetune:meta-llama/Meta-Llama-3-70B",
+        "license:other",
+        "eval-results",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "deploy:azure",
+        "region:us"
+      ]
+    },
+    {
+      "id": "bosonai/higgs-audio-v2-tokenizer",
+      "sha": null,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "higgs_audio_v2_tokenizer",
+        "feature-extraction",
+        "arxiv:2406.02430",
+        "arxiv:2408.17175",
+        "arxiv:2210.13438",
+        "arxiv:2410.00037",
+        "arxiv:2410.14411",
+        "arxiv:2408.16532",
+        "arxiv:2502.05139",
+        "arxiv:2502.04128",
+        "arxiv:2506.23325",
+        "arxiv:2409.13216",
+        "arxiv:2503.01485",
+        "arxiv:2412.10117",
+        "arxiv:2308.16692",
+        "license:other",
+        "endpoints_compatible",
+        "region:us"
+      ]
+    },
+    {
+      "id": "bosonai/higgs-tts-2-3b-base",
+      "sha": null,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "higgs_audio_v2",
+        "text-to-audio",
+        "text-to-speech",
+        "en",
+        "zh",
+        "de",
+        "ko",
+        "arxiv:2505.23009",
+        "license:other",
+        "endpoints_compatible",
+        "region:us"
+      ]
+    },
+    {
+      "id": "bosonai/hubert_base",
+      "sha": null,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "hubert",
+        "feature-extraction",
+        "speech",
+        "audio",
+        "higgs-audio",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ]
+    },
+    {
+      "id": "bosonai/higgs-audio-v3-stt",
+      "sha": null,
+      "tags": [
+        "safetensors",
+        "higgs_audio_3",
+        "automatic-speech-recognition",
+        "hf-asr-leaderboard",
+        "whisper",
+        "qwen",
+        "custom_code",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ]
+    },
+    {
+      "id": "bosonai/higgs-audio-v3-8b-stt",
+      "sha": null,
+      "tags": [
+        "safetensors",
+        "higgs_audio_3",
+        "automatic-speech-recognition",
+        "hf-asr-leaderboard",
+        "whisper",
+        "qwen",
+        "custom_code",
+        "en",
+        "license:apache-2.0",
+        "model-index",
+        "region:us"
+      ]
+    },
+    {
+      "id": "bosonai/higgs-audio-v3-stt-v2",
+      "sha": null,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "higgs_audio_3",
+        "feature-extraction",
+        "audio",
+        "automatic-speech-recognition",
+        "asr",
+        "higgs-audio",
+        "open-asr-leaderboard",
+        "custom_code",
+        "en",
+        "base_model:bosonai/higgs-audio-v3-stt",
+        "base_model:finetune:bosonai/higgs-audio-v3-stt",
+        "license:apache-2.0",
+        "region:us"
+      ]
+    },
+    {
+      "id": "bosonai/higgs-audio-v3-8b-stt-v2",
+      "sha": null,
+      "tags": [
+        "safetensors",
+        "higgs_audio_3",
+        "automatic-speech-recognition",
+        "hf-asr-leaderboard",
+        "whisper",
+        "qwen",
+        "custom_code",
+        "en",
+        "license:apache-2.0",
+        "model-index",
+        "region:us"
+      ]
+    },
+    {
+      "id": "bosonai/Qwen3-ASR-1.7B-hf-beam4",
+      "sha": null,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3_asr",
+        "automatic-speech-recognition",
+        "asr",
+        "qwen3-asr",
+        "open-asr-leaderboard",
+        "en",
+        "base_model:Qwen/Qwen3-ASR-1.7B-hf",
+        "base_model:finetune:Qwen/Qwen3-ASR-1.7B-hf",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ]
+    },
+    {
+      "id": "bosonai/Qwen3-ASR-1.7B-hf-orze",
+      "sha": null,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3_asr",
+        "automatic-speech-recognition",
+        "audio",
+        "asr",
+        "qwen3-asr",
+        "orze",
+        "en",
+        "dataset:edinburghcstr/ami",
+        "dataset:librispeech_asr",
+        "dataset:fixie-ai/gigaspeech",
+        "dataset:kensho/spgispeech",
+        "dataset:facebook/voxpopuli",
+        "dataset:sanchit-gandhi/earnings22_split",
+        "dataset:hhoangphuoc/switchboard",
+        "dataset:sanchit-gandhi/tedlium-data",
+        "base_model:Qwen/Qwen3-ASR-1.7B-hf",
+        "base_model:finetune:Qwen/Qwen3-ASR-1.7B-hf",
+        "license:apache-2.0",
+        "eval-results",
+        "endpoints_compatible",
+        "region:us"
+      ]
+    },
+    {
+      "id": "bosonai/Orze-ASR-3Way",
+      "sha": null,
+      "tags": [
+        "audio",
+        "asr",
+        "ensemble",
+        "consensus",
+        "orze",
+        "automatic-speech-recognition",
+        "en",
+        "license:apache-2.0",
+        "region:us"
+      ]
+    }
+  ],
+  "duplexNamedModelFound": false,
+  "scope": "Public account inventories only; no claim about private artifacts or future releases"
+}

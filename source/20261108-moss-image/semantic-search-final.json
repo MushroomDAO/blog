@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "moss-image-openmoss-layout-generation-review",
+      "title": "MOSS-Image：OpenMOSS的文字生图、布局控制与部署边界",
+      "url": "/blog/moss-image-openmoss-layout-generation-review/",
+      "language": "zh",
+      "excerpt": "MOSS-Image：OpenMOSS的文字生图、布局控制与部署边界 MOSS-Image是OpenMOSS开源图像模型，提供Base与SFT权重，支持中英文字和JSON布局。本文核对5B骨干、文本编码器与VAE，解释两种坐标格式、提示词增强、ComfyUI及Mac路线，通过19项辅助检查和实际布局编译，区分官方画质报告、内存记录与本次未测能力，帮助建立从结构化输入到结果校对的流程。 MOSS-Image OpenMOSS 图像生成 布局控制 ComfyUI 本地部署 Base、SFT和社区版本，应该怎样区分？ 5B背后是一条怎样的生成链路？ Layou",
+      "score": 0.6222692
+    },
+    {
+      "article_id": "openmuse-copilotkit-personal-ai-agent-browser-workspace",
+      "title": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks",
+      "url": "/blog/openmuse-copilotkit-personal-ai-agent-browser-workspace/",
+      "language": "en",
+      "excerpt": "OpenMuse: CopilotKit's Open-Source Personal AI Agent with Browser, Terminal, Files, and Persistent Background Tasks OpenMuse by CopilotKit — MIT, open-sourced 2026-09-22. Personal AI agent template: persistent Chromium browser (profile retained across tasks), optional Linux works",
+      "score": 0.48492074
+    },
+    {
+      "article_id": "microsoft-lens-text-to-image-model",
+      "title": "Microsoft Open-Sources Lens: 3.8B Text-to-Image Model at 20% the Training Cost",
+      "url": "/blog/microsoft-lens-text-to-image-model/",
+      "language": "en",
+      "excerpt": "Microsoft Open-Sources Lens: 3.8B Text-to-Image Model at 20% the Training Cost Microsoft releases Lens, an open-source 3.8B parameter text-to-image model that outperforms Stable Diffusion 3 and Flux on multiple benchmarks while costing only 20% as much to train. AI 文生图 微软 开源 Lens",
+      "score": 0.47232425
+    },
+    {
+      "article_id": "shisei-ai-pose-reference-library",
+      "title": "Shisei: An Open Pose Reference Library for AI Art",
+      "url": "/blog/shisei-ai-pose-reference-library/",
+      "language": "en",
+      "excerpt": "Shisei: An Open Pose Reference Library for AI Art Explore Shisei's pose references, verified asset counts, depth and normal maps, local Mac setup, and the practical limits of licensing and image conditioning. Shisei AI绘图 姿势参考 ComfyUI 开源素材 What does a pose library contribute? How ",
+      "score": 0.47004446
+    },
+    {
+      "article_id": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota",
+      "title": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军",
+      "url": "/blog/moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota/",
+      "language": "zh",
+      "excerpt": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军 OpenMOSS 开源的 MOSS-Transcribe-Diarize 0.9B（1.5K stars），SOTA 端到端音频理解模型，一个模型同时完成长音频多说话人转写、说话人分离（diarization）、精确时间戳和声学事件标注。架构：Qwen3-0.6B 解码器 + Whisper-Medium 编码器 + 4x 时序合并 MLP 桥接。支持 50+ 语言。输出格式 [时间戳][S01]文本[时间戳]。",
+      "score": 0.4661989
+    },
+    {
+      "article_id": "glm-5-3-flash-ox-alpha-320b-native-multimodal-open-source",
+      "title": "GLM-5.3-Flash（Ox Alpha）开源：321B MoE 原生多模态，30T token 预训练，稀疏+线性注意力混合架构，MIT",
+      "url": "/blog/glm-5-3-flash-ox-alpha-320b-native-multimodal-open-source/",
+      "language": "zh",
+      "excerpt": "GLM-5.3-Flash（Ox Alpha）开源：321B MoE 原生多模态，30T token 预训练，稀疏+线性注意力混合架构，MIT 2026-08-26 晚，智谱 z.ai 开源 GLM-5.3-Flash（代号 Ox Alpha）。约 321B 参数、激活 18B 的 MoE 模型，GLM-5 系列首个原生多模态版本，原生支持文字、图片、视频处理，使用 30T 多模态 token 预训练。架构上首次引入稀疏注意力与线性注意力混合（DSA），并配套异步强化学习训练基础设施。权重已上传 HuggingFace（zai-org/GLM-5.3-F",
+      "score": 0.46305358
+    },
+    {
+      "article_id": "moss-tts-v15-multilingual-voice-clone",
+      "title": "MOSS-TTS v1.5: 31 Languages, Explicit Pause Control, Stabler Voice Cloning — Apache 2.0 Open Source",
+      "url": "/blog/moss-tts-v15-multilingual-voice-clone/",
+      "language": "en",
+      "excerpt": "MOSS-TTS v1.5: 31 Languages, Explicit Pause Control, Stabler Voice Cloning — Apache 2.0 Open Source OpenMOSS (Fudan NLP / Shanghai Innovation Institute / MOSI.AI) releases MOSS-TTS v1.5: 31 languages, [pause X.Ys] inline pause control, lower variance voice cloning, improved punct",
+      "score": 0.45814437
+    },
+    {
+      "article_id": "moss-tts-nano-ultralight-multilingual-tts-open-source",
+      "title": "0.1B Parameters, 20 Languages: MOSS-TTS-Nano Ultra-Lightweight TTS Is Open Source",
+      "url": "/blog/moss-tts-nano-ultralight-multilingual-tts-open-source/",
+      "language": "en",
+      "excerpt": "0.1B Parameters, 20 Languages: MOSS-TTS-Nano Ultra-Lightweight TTS Is Open Source OpenMOSS open-sources MOSS-TTS-Nano: 0.1B parameters, CPU-only, 48kHz stereo output, 20-language zero-shot voice cloning. Runs smoothly on a single CPU core (M4 MacBook Air), ONNX inference without ",
+      "score": 0.45621043
+    },
+    {
+      "article_id": "openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle",
+      "title": "OpenRSI：让「AI 改进 AI」变成可执行、可测量的工程问题",
+      "url": "/blog/openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle/",
+      "language": "zh",
+      "excerpt": "OpenRSI：让「AI 改进 AI」变成可执行、可测量的工程问题 FrontisAI/OpenRSI，arXiv:2607.28568，CC BY-NC 4.0，Python。把递归自改进（RSI）从哲学概念变成工程实验的开源全栈系统。核心：以机器学习工程（MLE）为首个可执行领域，训练 Frontis-MA1（35B）作为元演化 Agent，用四个原子算子（Draft/Improve/Debug/Crossover）统一后训练和推理。MLE-Bench Lite 上，单张 RTX 4090，Medal Average 从 39.39% 升到 71.2",
+      "score": 0.4552601
+    },
+    {
+      "article_id": "microsoft-trellis2-native-3d-generation-o-voxel-pbr",
+      "title": "TRELLIS.2: Microsoft's 4B Image-to-3D Model Introduces a Native O-Voxel Representation",
+      "url": "/blog/microsoft-trellis2-native-3d-generation-o-voxel-pbr/",
+      "language": "en",
+      "excerpt": "TRELLIS.2: Microsoft's 4B Image-to-3D Model Introduces a Native O-Voxel Representation Microsoft's open-source 4B-parameter image-to-3D generation model. Introduces O-Voxel (field-free sparse voxels) to handle arbitrary topology including open surfaces, non-manifold geometry, and",
+      "score": 0.44541553
+    }
+  ]
+}

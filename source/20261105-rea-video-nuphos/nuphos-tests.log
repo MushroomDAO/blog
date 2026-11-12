@@ -1,0 +1,45 @@
+(node:37825) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///private/tmp/three-repos-2/scripts/dev-backend-env.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /private/tmp/three-repos-2/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37829) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///private/tmp/three-repos-2/scripts/dev-backend-env.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /private/tmp/three-repos-2/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ backend local overrides beat shared images and are reread on restart (92.623083ms)
+(node:37826) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///private/tmp/three-repos-2/scripts/dev-local-stack-env.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /private/tmp/three-repos-2/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ reads the compose .env, defaulting the ports it leaves out (0.622625ms)
+✔ a compose .env missing a generated secret is not usable (0.071125ms)
+✔ the backend env points every datastore at the local stack and turns cluster access off (0.116875ms)
+✔ the local launcher overrides inherited TLS and the secondary HTTP listener (0.247291ms)
+✔ the local signing key is required and overrides any inherited backend key (0.176042ms)
+(node:37827) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///private/tmp/three-repos-2/scripts/dev-managed-env.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /private/tmp/three-repos-2/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ only local cluster context names are accepted (0.458625ms)
+✔ a local context is accepted only while its server is this machine (0.479583ms)
+✔ a cloud context is refused before its kubeconfig is even read (0.048958ms)
+✔ a kubeconfig carrying more than the one context is refused (0.056208ms)
+✔ OrbStack problems name the command that fixes them (0.0975ms)
+✔ managed mode turns the provisioner on against the confined kubeconfig and local namespace (0.095042ms)
+✔ stop scales managed agents to zero, a wipe deletes their namespace (0.068ms)
+✔ the dashboard lists each managed agent pod with its state (0.14075ms)
+(node:37828) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///private/tmp/three-repos-2/scripts/dev-options.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /private/tmp/three-repos-2/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ reset and managed default off (0.563917ms)
+✔ --reset wipes the stack first (0.06125ms)
+✔ --managed runs managed agents on OrbStack unless it names another context (0.056584ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 187.01675

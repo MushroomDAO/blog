@@ -1,0 +1,43 @@
+{
+  "commit": "8d170deed4591fc7e4306f2d86ff4d9bcffd1288",
+  "taskManifestCount": 26,
+  "manifestCountIsNotPortableTaskCount": true,
+  "compiledOnlyNoContainers": [
+    {
+      "path": "gemm-h100-refined",
+      "taskId": "gemm-h100-refined",
+      "workdir": "/app/workdir/gemm_lab",
+      "gpus": 1,
+      "taskDigest": "dd4978694b177e6eb51abdb519c4b5b31a19af69f303297ebe63be00883c1c8a"
+    },
+    {
+      "path": "minference-sparse-prefill",
+      "taskId": "minference-sparse-prefill",
+      "workdir": "/workspace",
+      "gpus": 1,
+      "taskDigest": "cfa11014bb2cea209572e2f80323f7c6bd530cc13e9ad385319fdef2cebd99f3"
+    },
+    {
+      "path": "signature-tasks/post-training-qwen-122B-rl",
+      "taskId": "post-training-qwen-122B-rl",
+      "workdir": "/workspace",
+      "gpus": 0,
+      "taskDigest": "b2c02cafb5f69562041d3d4bef0656960b63077bdc8d8a4acbf3f6451c06c8c6"
+    }
+  ],
+  "qwenDataFiles": [
+    {
+      "file": "shared_base.jsonl",
+      "rows": 2560,
+      "bytes": 29406658,
+      "sha256": "ca6df1b9b9791e8509c87da0314350a05867e5fd647fddc4ccb3813494134990"
+    },
+    {
+      "file": "anchor_intervention.jsonl",
+      "rows": 2560,
+      "bytes": 28972820,
+      "sha256": "946affd59232b7d6bcf7db55965e580c0b2561234c1f36b8c85b434345a90467"
+    }
+  ],
+  "scope": "Read-only TOML/JSONL/hash audit plus actual HarborTaskCompiler; no Docker/GPU/model/network or full Judge execution."
+}

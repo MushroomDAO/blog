@@ -1,0 +1,11 @@
+Mac M4 16GB, macOS26.6.2. Existing read-only ML environment: Python3.12.15 torch2.14.0 transformers5.16.1 Pillow12.3.0.
+Attempt1: AutoProcessor required torchvision, missing in existing environment; no inference ran.
+Created private uv venv with --system-site-packages and installed only torchvision==0.29.1 --no-deps. PyPI metadata requires torch>=2.14.0. Existing ML environment was not modified.
+Attempt2: private interpreter did not inherit the parent venv's Pillow package, so exited before inference.
+Attempt3: use existing ML interpreter with PYTHONPATH=/tmp/ovisocr3-smoke-env/lib/python3.12/site-packages to add only the private torchvision overlay; HF_HUB_OFFLINE=1, PYTORCH_ENABLE_MPS_FALLBACK=1, TOKENIZERS_PARALLELISM=false. Synthetic image, float32, at most128 generated tokens/case and max_time120. This is not an official optimized Mac deployment or benchmark.
+
+Attempt3 completed two real MPS-routed generations. Initial plain OCR omitted Total under the 120s soft limit; KIE returned the exact expected JSON including the empty missing Purchase Order field. Initial run did not record EOS, so termination cause is not asserted. Attempt4 repeats plain OCR only with a300s soft limit and records last-token/EOS status; original attempt3 output is retained. No throughput benchmark is performed.
+
+Attempt4 completed all four OCR lines and ended with EOS. Original initial incomplete output retained. Host had high concurrent load during this investigation; stored wall times are diagnostic records, not a throughput/latency benchmark. No fresh-machine install or minimum RAM claim.
+
+Final archived smoke script returns a nonzero exit status on inference errors or failed expected-content checks; earlier runs were assessed from JSON records, not their process exit codes.

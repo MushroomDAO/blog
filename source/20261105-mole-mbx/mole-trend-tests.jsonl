@@ -1,0 +1,59 @@
+{"Time":"2026-11-05T11:41:28.194254+07:00","Action":"start","Package":"github.com/tw93/mole/cmd/analyze"}
+{"Time":"2026-11-05T11:41:28.776641+07:00","Action":"run","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestTrendSnapshotSaveAndLoad"}
+{"Time":"2026-11-05T11:41:28.776716+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestTrendSnapshotSaveAndLoad","Output":"=== RUN   TestTrendSnapshotSaveAndLoad\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.777858+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestTrendSnapshotSaveAndLoad","Output":"--- PASS: TestTrendSnapshotSaveAndLoad (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.777903+07:00","Action":"pass","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestTrendSnapshotSaveAndLoad","Elapsed":0}
+{"Time":"2026-11-05T11:41:28.777917+07:00","Action":"run","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestFindBestBaselineSnapshot"}
+{"Time":"2026-11-05T11:41:28.777926+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestFindBestBaselineSnapshot","Output":"=== RUN   TestFindBestBaselineSnapshot\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.777934+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestFindBestBaselineSnapshot","Output":"--- PASS: TestFindBestBaselineSnapshot (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.777938+07:00","Action":"pass","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestFindBestBaselineSnapshot","Elapsed":0}
+{"Time":"2026-11-05T11:41:28.777943+07:00","Action":"run","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestAnalyzeDirectory"}
+{"Time":"2026-11-05T11:41:28.777946+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestAnalyzeDirectory","Output":"=== RUN   TestAnalyzeDirectory\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.777961+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestAnalyzeDirectory","Output":"--- PASS: TestAnalyzeDirectory (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.777971+07:00","Action":"pass","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestAnalyzeDirectory","Elapsed":0}
+{"Time":"2026-11-05T11:41:28.777975+07:00","Action":"run","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff"}
+{"Time":"2026-11-05T11:41:28.777977+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"=== RUN   TestPrintTrendReportInitialAndDiff\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.77798+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"\n"}
+{"Time":"2026-11-05T11:41:28.777982+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"📊 磁盘空间使用趋势与目录增长监测\n"}
+{"Time":"2026-11-05T11:41:28.777989+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"─────────────────────────────────────────────────────────────────\n"}
+{"Time":"2026-11-05T11:41:28.777995+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"💡 [初始快照已建立]\n"}
+{"Time":"2026-11-05T11:41:28.778+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"   已成功采集并记录当前 2 个主要目录的空间大小基线。\n"}
+{"Time":"2026-11-05T11:41:28.778003+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"   后续再次运行 `mo analyze --trend` 时，将自动计算增量变化与激增研判。\n"}
+{"Time":"2026-11-05T11:41:28.778007+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"\n"}
+{"Time":"2026-11-05T11:41:28.778014+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"当前主要目录空间占用情况：\n"}
+{"Time":"2026-11-05T11:41:28.778017+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"目录名称                             当前大小   属性类型\n"}
+{"Time":"2026-11-05T11:41:28.778019+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"─────────────────────────────────────────────────────────────────\n"}
+{"Time":"2026-11-05T11:41:28.778051+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"Applications                  21.5 GB   [常规数据目录]\n"}
+{"Time":"2026-11-05T11:41:28.778058+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"Xcode DerivedData             10.7 GB   [开发构建派生]\n"}
+{"Time":"2026-11-05T11:41:28.77806+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"─────────────────────────────────────────────────────────────────\n"}
+{"Time":"2026-11-05T11:41:28.778063+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"\n"}
+{"Time":"2026-11-05T11:41:28.778065+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"📊 磁盘空间使用趋势与目录增长监测\n"}
+{"Time":"2026-11-05T11:41:28.778067+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"─────────────────────────────────────────────────────────────────\n"}
+{"Time":"2026-11-05T11:41:28.778069+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"📅 对比基准: 2026-10-29 11:41 (约 7.0 天前)  vs  当前\n"}
+{"Time":"2026-11-05T11:41:28.778072+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"📈 整体变化: +5.4 GB (当前扫描总计: 37.6 GB)\n"}
+{"Time":"2026-11-05T11:41:28.778074+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"\n"}
+{"Time":"2026-11-05T11:41:28.778079+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"目录                         当前占用      变化量 (Δ)      增长率   类型\n"}
+{"Time":"2026-11-05T11:41:28.778082+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"─────────────────────────────────────────────────────────────────\n"}
+{"Time":"2026-11-05T11:41:28.778084+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"Xcode DerivedData       16.1 GB      +5.4 GB   +50.0%   开发构建派生\n"}
+{"Time":"2026-11-05T11:41:28.778086+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"Applications            21.5 GB           持平     0.0%   常规数据目录\n"}
+{"Time":"2026-11-05T11:41:28.778093+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"─────────────────────────────────────────────────────────────────\n"}
+{"Time":"2026-11-05T11:41:28.778095+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"\n"}
+{"Time":"2026-11-05T11:41:28.778097+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"🔍 重点激增目录深度分析与清理建议：\n"}
+{"Time":"2026-11-05T11:41:28.778099+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"\n"}
+{"Time":"2026-11-05T11:41:28.778101+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"1. /Users/test/Library/Developer/Xcode/DerivedData (16.1 GB, 增加 +5.4 GB)\n"}
+{"Time":"2026-11-05T11:41:28.778109+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"   • 性质分析: Xcode 编译产物\n"}
+{"Time":"2026-11-05T11:41:28.778111+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"   • 处理建议: 可运行 mo clean 清理\n"}
+{"Time":"2026-11-05T11:41:28.778113+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"\n"}
+{"Time":"2026-11-05T11:41:28.778115+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Output":"--- PASS: TestPrintTrendReportInitialAndDiff (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.778117+07:00","Action":"pass","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestPrintTrendReportInitialAndDiff","Elapsed":0}
+{"Time":"2026-11-05T11:41:28.778124+07:00","Action":"run","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestParseArgsTrendFlag"}
+{"Time":"2026-11-05T11:41:28.778125+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestParseArgsTrendFlag","Output":"=== RUN   TestParseArgsTrendFlag\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.77813+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestParseArgsTrendFlag","Output":"--- PASS: TestParseArgsTrendFlag (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.778132+07:00","Action":"pass","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestParseArgsTrendFlag","Elapsed":0}
+{"Time":"2026-11-05T11:41:28.778134+07:00","Action":"run","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestParseArgsHelpIncludesTrend"}
+{"Time":"2026-11-05T11:41:28.778135+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestParseArgsHelpIncludesTrend","Output":"=== RUN   TestParseArgsHelpIncludesTrend\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.778137+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestParseArgsHelpIncludesTrend","Output":"--- PASS: TestParseArgsHelpIncludesTrend (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.778139+07:00","Action":"pass","Package":"github.com/tw93/mole/cmd/analyze","Test":"TestParseArgsHelpIncludesTrend","Elapsed":0}
+{"Time":"2026-11-05T11:41:28.778142+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-05T11:41:28.778651+07:00","Action":"output","Package":"github.com/tw93/mole/cmd/analyze","Output":"ok  \tgithub.com/tw93/mole/cmd/analyze\t0.584s\n"}
+{"Time":"2026-11-05T11:41:28.778663+07:00","Action":"pass","Package":"github.com/tw93/mole/cmd/analyze","Elapsed":0.584}

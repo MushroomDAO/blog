@@ -1,0 +1,33 @@
+{
+  "retrievedAt": "2026-10-16",
+  "task": "f42755b8-fbc2-40a0-8b97-e3c1474d22a0",
+  "snapshot": "09-10-2026",
+  "resultRevision": "dd84b35e719440b53c06a9cef8e178e2c6950731",
+  "spaceRevision": "27639f0ab3cc57aaa194770fe5dc9a0b5595fd52",
+  "codeRevision": "2b2cd31257d22e00af4af585a1f447351c0e713c",
+  "primarySources": [
+    "https://huggingface.co/spaces/hf-audio/open_tts_leaderboard",
+    "https://huggingface.co/blog/open-tts-leaderboard",
+    "https://github.com/huggingface/open-tts-leaderboard"
+  ],
+  "dedup": "Exact source URL clear across Blog/current drafts/local M2/KB; phrase search tokenized into broad leaderboard false positives; literal phrase absent from existing article/M2 files, only bot raw material matches. Published API48001 gap retained. No old article or old creation credential found for this topic.",
+  "fetching": "agent-reach unavailable after searching skill locations; Jina403 anonymous domain block; retrieved official blog Markdown from huggingface/blog, Space source and normal public Gradio endpoints. Truncated literal iPhoneMirror… HTTP404; no inferred project content.",
+  "scope": "Public result retrieval, code/card review only; no model download, synthesis, benchmark rerun or listening test.",
+  "ranking": "English/Chinese nonclone both Seed-TTS+CV3; English clone; A100/CPU streaming. Main tables WER/CER sort, streaming p95, no composite score.",
+  "caveats": [
+    "H200 main throughput batch32 where supported else1, not single-request latency",
+    "A100/CPU497timed after3warmup, English/no clone; H200 paused47samplep50 not comparable",
+    "CosyVoice metadata0.11B/CC BY4 differs from linked0.5B/Apache card; RLvariant retained",
+    "SIM table scale retained, not listener identification percentage",
+    "Kokoro vsParadee gap0.01pp no significance inference",
+    "Pocket HF card401; official code kyutai-labs corrected and fetched",
+    "Results CSV private; public Space legitimate access only"
+  ],
+  "fileHashes": {
+    "constants.py": "3c81adf11a691567dcd8bd469a9354143ed168261d2b993a311ba42b75bf3d62",
+    "leaderboard_views.py": "480e177c8bbfa79f2792f8234f28845559031f0034dc25326984299e9dba063e",
+    "app.py": "6d136ccce50f4580e04168b7dcfe71409abecca568b18fabd91bae7f47bb59cc",
+    "fetch-public-results.py": "3842e0b362796a9b962c00219d62ab2810def7224ab349d6e61c1d79cb871e6d",
+    "leaderboard_data.py": "046e0d4c7af95922537522578ee41018f7f763b5d022a22cd9a59b6b03b8b56b"
+  }
+}

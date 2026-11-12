@@ -1,0 +1,16 @@
+{
+  "title": "Mellum2.1：小模型开始进仓库干活",
+  "author": "Mycelium",
+  "digest": "JetBrains 用真实仓库强化学习提升小模型执行力，本文核对跑分、量化文件与部署边界。",
+  "mediaId": "prCUE631thH1cmNLi42prLsTP17uU60DB4vh3tMwp2cwNPOcLMknGvEi1MltGxXC",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/jetbrains/mellum2.1-12b-a2.5b-thinking",
+    "huggingface.co/jetbrains/mellum2.1-12b-a2.5b-thinking-gguf",
+    "modelscope.cn/models/jetbrains/mellum2.1-12b-a2.5b-thinking",
+    "blog.jetbrains.com/ai/2026/10/mellum2-1-gets-to-work-a-fast-open-model-for-coding-agents"
+  ],
+  "publishedAt": "2026-10-13T02:49:37.000Z",
+  "recoveredAt": "2026-10-13T02:51:36.621Z",
+  "recovery": "draft/add socket hang up after server accepted; exact remote draft reconciled and reused, no second draft/add"
+}

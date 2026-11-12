@@ -1,0 +1,30 @@
+[
+  {
+    "case": "dapo",
+    "command": [
+      "/tmp/harborrl-cpu-venv/bin/harborrl",
+      "train",
+      "--config",
+      "/tmp/harborrl-20261016/examples/native/train_qwen_native.yaml",
+      "-alg",
+      "dapo",
+      "--dry-run"
+    ],
+    "exit": 2,
+    "output": "usage: harborrl [-h] [-model MODEL] [-harness HARNESS] [-task TASK] [-alg ALG]\n                [--config CONFIG_OPTION] [--set SET] [--dry-run]\n                {train,doctor} [config_path]\nharborrl: error: unsupported algorithm: dapo; supported algorithms: grpo\n"
+  },
+  {
+    "case": "codex",
+    "command": [
+      "/tmp/harborrl-cpu-venv/bin/harborrl",
+      "train",
+      "--config",
+      "/tmp/harborrl-20261016/examples/native/train_qwen_native.yaml",
+      "-harness",
+      "codex",
+      "--dry-run"
+    ],
+    "exit": 2,
+    "output": "usage: harborrl [-h] [-model MODEL] [-harness HARNESS] [-task TASK] [-alg ALG]\n                [--config CONFIG_OPTION] [--set SET] [--dry-run]\n                {train,doctor} [config_path]\nharborrl: error: native requires harbor_job / claude_code / Harbor 0.23.0\n"
+  }
+]

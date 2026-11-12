@@ -1,0 +1,20 @@
+{
+  "upstreamSuite": "dev.tests.server.test_memory_release",
+  "attempts": [
+    {
+      "interpreter": "system Python3.9",
+      "stage": "import",
+      "error": "SyntaxError: match syntax unsupported",
+      "suiteAssertionsExecuted": false
+    },
+    {
+      "interpreter": "existing ml venv Python3.12",
+      "stage": "import",
+      "error": "ModuleNotFoundError: llguidance",
+      "suiteAssertionsExecuted": false
+    }
+  ],
+  "modelDownloaded": false,
+  "inferenceRun": false,
+  "performanceReproduced": false
+}

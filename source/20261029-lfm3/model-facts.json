@@ -1,0 +1,351 @@
+[
+  {
+    "model": "LiquidAI/LFM3-Audio-2B",
+    "revision": "cddb56b5ec9b4703f9b3b2d0500143d1fff2fee0",
+    "tableFacts": [
+      [
+        "Property",
+        "Specification"
+      ],
+      [
+        "Parameters",
+        "2B total"
+      ],
+      [
+        "Architecture",
+        "LFM3 backbone, causal audio encoder, and LiquidCodec audio tokenizer"
+      ],
+      [
+        "Input",
+        "Text or audio; audio encoder operates at 16 kHz"
+      ],
+      [
+        "Output",
+        "Text, 24 kHz speech, or interleaved text and speech"
+      ],
+      [
+        "Context length",
+        "32K tokens (input + output)"
+      ],
+      [
+        "Streaming",
+        "Causal audio encoding, incremental prefill, and streaming speech generation"
+      ],
+      [
+        "Speech languages / locales",
+        "Arabic, Danish, German, Greek, British English, American English, Finnish, French, Hebrew, Italian, Japanese, Korean, Dutch, Polish, Portuguese, Spanish, Swedish, Turkish, Chinese"
+      ],
+      [
+        "License",
+        "LFM Open License v1.0"
+      ]
+    ],
+    "cardSha256": "e1d47ba3543f1eb1fb85f058a48755c7b767b142b408d9c55f56723c656e93a5"
+  },
+  {
+    "model": "LiquidAI/LFM3-1.7B-MLX-4bit",
+    "revision": "d0ca73dcfa70ce18733754a492cdc1fb0123262d",
+    "tableFacts": [],
+    "cardSha256": "325f583d0cd77a28c172a62b9b6fc72ebb918c01d874b515c0431985ab80bbfe"
+  },
+  {
+    "model": "LiquidAI/LFM3-1.7B-Base",
+    "revision": "545fc8f4c7b5fa9f405105274cd29c4f8f44b526",
+    "tableFacts": [
+      [
+        "Property",
+        "Specification"
+      ],
+      [
+        "Checkpoint",
+        "Pre-trained, text-only base model"
+      ],
+      [
+        "Parameters",
+        "1.73B"
+      ],
+      [
+        "Architecture",
+        "24 layers: 13 gated short convolutions, 5 sliding-window attention, 6 global attention"
+      ],
+      [
+        "Context length",
+        "256K tokens (input + output)"
+      ],
+      [
+        "Vocabulary",
+        "128,000 tokens"
+      ],
+      [
+        "Languages",
+        "English, Arabic, Chinese, French, German, Italian, Japanese, Korean, Portuguese, Spanish, Vietnamese, Thai, Indonesian, Hindi, Russian, Polish"
+      ],
+      [
+        "License",
+        "LFM Open License v1.0"
+      ]
+    ],
+    "cardSha256": "b135e4bc5150269fe1028021dadcec8f3478f5e4ff46bcd91e34bf9ea51cf8f0"
+  },
+  {
+    "model": "LiquidAI/LFM3-1.7B",
+    "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+    "tableFacts": [
+      [
+        "Property",
+        "Specification"
+      ],
+      [
+        "Checkpoint",
+        "Post-trained, text-only language model"
+      ],
+      [
+        "Parameters",
+        "1.73B"
+      ],
+      [
+        "Architecture",
+        "24 layers: 13 gated short convolutions, 5 sliding-window attention, 6 global attention"
+      ],
+      [
+        "Context length",
+        "256K tokens (input + output)"
+      ],
+      [
+        "Vocabulary",
+        "128,000 tokens"
+      ],
+      [
+        "Languages",
+        "English, Arabic, Chinese, French, German, Italian, Japanese, Korean, Portuguese, Spanish, Vietnamese, Thai, Indonesian, Hindi, Russian, Polish"
+      ],
+      [
+        "License",
+        "LFM Open License v1.0"
+      ]
+    ],
+    "cardSha256": "ca4ea3e8ddda8690b0479d0bbcdd4539f92d42e0092aa396a2bd29a75b6d59d8"
+  },
+  {
+    "model": "LiquidAI/d1-Omni-2B",
+    "revision": "c8d48c08dada0191c6b362820f055cfb49c99426",
+    "tableFacts": [
+      [
+        "Property",
+        "Specification"
+      ],
+      [
+        "Checkpoint",
+        "Post-trained decision model, built on LFM3-Omni-2B"
+      ],
+      [
+        "Parameters",
+        "2.17B"
+      ],
+      [
+        "Architecture",
+        "LFM3 backbone, 24 layers: 13 gated short convolutions, 5 sliding-window attention, 6 global attention"
+      ],
+      [
+        "Context length",
+        "128K tokens"
+      ],
+      [
+        "Vocabulary",
+        "128,000 tokens"
+      ],
+      [
+        "Input",
+        "A state (text or JSON), pictures, a video, audio clips, and any number of named questions, written or spoken"
+      ],
+      [
+        "Output",
+        "Typed answers with their probabilities, with no generated tokens or speech"
+      ],
+      [
+        "Languages",
+        "English, Arabic, Chinese, French, German, Italian, Japanese, Korean, Portuguese, Spanish, Vietnamese, Thai, Indonesian, Hindi, Russian, Polish. Speech covers the same languages except Hindi, Thai, Vietnamese, and Indonesian."
+      ],
+      [
+        "License",
+        "LFM Open License v1.0"
+      ],
+      [
+        "Call",
+        "What it does"
+      ],
+      [
+        "system_one(state, questions, media=None)",
+        "Named questions over one state, in one pass. media lists audio clips ({&quot;type&quot;: &quot;audio&quot;, &quot;path&quot;: ...}, or a waveform under &quot;audio&quot; with its &quot;sampling_rate&quot;), pictures (PIL images or {&quot;type&quot;: &quot;image&quot;, &quot;path&quot;: ...}) and videos as their frames ({&quot;type&quot;: &quot;video&quot;, &quot;video&quot;: [PIL images], &quot;fps&quot;: 24})."
+      ],
+      [
+        "system_one_batch([(state, questions[, media]), ...])",
+        "Many requests in one call, batched."
+      ]
+    ],
+    "cardSha256": "71eb818049c1cd964565473cad13ec931d5c4d47e6ef3e57697c1ec20bfde67d"
+  },
+  {
+    "model": "LiquidAI/d1-2B",
+    "revision": "cfe5760ff5d5998f91d9ac56bd4b2dbd96996d41",
+    "tableFacts": [
+      [
+        "Property",
+        "Specification"
+      ],
+      [
+        "Checkpoint",
+        "Post-trained decision model, built on LFM3-VL-2B"
+      ],
+      [
+        "Parameters",
+        "1.92B"
+      ],
+      [
+        "Architecture",
+        "LFM3 backbone, 24 layers: 13 gated short convolutions, 5 sliding-window attention, 6 global attention"
+      ],
+      [
+        "Context length",
+        "128K tokens"
+      ],
+      [
+        "Vocabulary",
+        "128,000 tokens"
+      ],
+      [
+        "Input",
+        "A state (text or JSON), pictures or a video, and any number of named questions"
+      ],
+      [
+        "Output",
+        "Typed answers with their probabilities, with no generated tokens"
+      ],
+      [
+        "Languages",
+        "English, Arabic, Chinese, French, German, Italian, Japanese, Korean, Portuguese, Spanish, Vietnamese, Thai, Indonesian, Hindi, Russian, Polish"
+      ],
+      [
+        "License",
+        "LFM Open License v1.0"
+      ],
+      [
+        "Call",
+        "What it does"
+      ],
+      [
+        "system_one(state, questions, media=None)",
+        "Named questions over one state, in one pass. media lists pictures (PIL images or {&quot;type&quot;: &quot;image&quot;, &quot;path&quot;: ...}) and videos as their frames ({&quot;type&quot;: &quot;video&quot;, &quot;video&quot;: [PIL images], &quot;fps&quot;: 24})."
+      ],
+      [
+        "system_one_batch([(state, questions[, media]), ...])",
+        "Many requests in one call, batched."
+      ]
+    ],
+    "cardSha256": "3383a3e3ab868117b7c3b7e58ca7eb7c402560b6a3a98c08fefd57a0e3c98a71"
+  },
+  {
+    "model": "LiquidAI/LFM3-VL-2B",
+    "revision": "ba44bd51db20a2753f28c273a1571ccaa210d954",
+    "tableFacts": [
+      [
+        "Property",
+        "Specification"
+      ],
+      [
+        "Checkpoint",
+        "Post-trained vision-language model"
+      ],
+      [
+        "Parameters",
+        "1.92B: 1.73B language model, 164M vision encoder, 25M projector"
+      ],
+      [
+        "Language model",
+        "LFM3, 24 layers: 13 gated short convolutions, 5 sliding-window attention, 6 global attention"
+      ],
+      [
+        "Vision encoder",
+        "14 layers: 8 gated depthwise 2D convolutions, 6 bidirectional attention, 16×16 patches with 2D rotary embeddings"
+      ],
+      [
+        "Inputs",
+        "Text, images, and video at native resolution. Each 2×2 block of patches becomes one language token. Video is sampled at 2 fps, with 4 to 768 frames by default."
+      ],
+      [
+        "Context length",
+        "128K tokens (input + output)"
+      ],
+      [
+        "Vocabulary",
+        "128,000 tokens"
+      ],
+      [
+        "Languages",
+        "English, Arabic, Chinese, French, German, Italian, Japanese, Korean, Portuguese, Spanish, Vietnamese, Thai, Indonesian, Hindi, Russian, Polish"
+      ],
+      [
+        "License",
+        "LFM Open License v1.0"
+      ]
+    ],
+    "cardSha256": "5bf94c37626a07e676e7d97d3b0bcdb56946b64a1099c89b8324fd05bd5b5da2"
+  },
+  {
+    "model": "LiquidAI/LFM3-Omni-2B",
+    "revision": "5797d07c125503bd4f4c0e7f915ae2d3d703e8de",
+    "tableFacts": [
+      [
+        "Property",
+        "Specification"
+      ],
+      [
+        "Checkpoint",
+        "Post-trained omni-modal model"
+      ],
+      [
+        "Parameters",
+        "2.17B total"
+      ],
+      [
+        "Architecture",
+        "LFM3 backbone, LFM3 vision encoder, LFM3 causal audio encoder, LiquidCodec audio tokenizer."
+      ],
+      [
+        "Inputs",
+        "Text, images, video with or without its soundtrack, and 16 kHz audio. Images and video are processed at native resolution; each 2×2 block of patches becomes one language token. Video is sampled at 2 fps, with 4 to 384 frames by default."
+      ],
+      [
+        "Outputs",
+        "Text, 24 kHz speech, or interleaved text and speech"
+      ],
+      [
+        "Context length",
+        "32K tokens (input + output)"
+      ],
+      [
+        "Vocabulary",
+        "128,000 text tokens"
+      ],
+      [
+        "Text languages",
+        "English, Arabic, Chinese, French, German, Italian, Japanese, Korean, Portuguese, Spanish, Vietnamese, Thai, Indonesian, Hindi, Russian, Polish"
+      ],
+      [
+        "Speech languages and locales",
+        "Arabic, Danish, German, Greek, British English, American English, Finnish, French, Hebrew, Italian, Japanese, Korean, Dutch, Polish, Portuguese, Spanish, Swedish, Turkish, Chinese"
+      ],
+      [
+        "License",
+        "LFM Open License v1.0"
+      ]
+    ],
+    "cardSha256": "2574663e12ee8b2780a67fe0435d10a5f545c21e40ee5c8cc68024ca1ed50df6"
+  },
+  {
+    "model": "LiquidAI/LFM3-1.7B-GGUF",
+    "revision": "bad5729bba61d076fff20d2548e62526665af215",
+    "tableFacts": [],
+    "cardSha256": "a0191ac69eb03db8fc53646bae1a69c392dff2db0003eed843f3a0c692dfb350"
+  }
+]

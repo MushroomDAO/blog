@@ -1,0 +1,98 @@
+{
+  "slug": "mumble-phone-walkie-talkie-guide",
+  "blog": {
+    "checkedAt": "2026-11-01T00:41:28.010107+00:00",
+    "articles": [
+      {
+        "slug": "mumble-phone-walkie-talkie-guide",
+        "url": "https://blog.mushroom.cv/blog/mumble-phone-walkie-talkie-guide/",
+        "title": "手机变网络对讲机：Mumble服务端、Mumla与iOS客户端搭建指南",
+        "listRank": 1,
+        "carouselRank": 1,
+        "images": [
+          {
+            "url": "https://blog.mushroom.cv/_astro/mumble-phone-walkie-talkie-guide-banner.D21r8L8X.jpg",
+            "status": 200,
+            "contentType": "image/jpeg",
+            "bytes": 91764
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/mumble-phone-walkie-talkie-guide-banner.D21r8L8X_vHAr4.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 40238
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/mumble-phone-walkie-talkie-guide-fig-01.D3F1Ud4B_Z29JK1l.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 18332
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/mumble-phone-walkie-talkie-guide-fig-02.O_c1Dr_5_Zmezdu.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 29342
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/mumble-phone-walkie-talkie-guide-fig-03.-lxeEmyI_1h2a12.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 34712
+          }
+        ]
+      }
+    ]
+  },
+  "wechat": {
+    "checkedAt": "2026-11-01T00:41:57.641Z",
+    "drafts": [
+      {
+        "slug": "mumble-phone-walkie-talkie-guide",
+        "mediaId": "prCUE631thH1cmNLi42prHwoEyfScxCEGS1YmlEVLYyeP39LiRvL77FRCebURyv-",
+        "titleMatches": true,
+        "authorMatches": true,
+        "digestMatches": true,
+        "htmlExact": false,
+        "fullTextMatches": true,
+        "imageIdentitiesMatch": true,
+        "imageCount": 3,
+        "localTextHash": "d3443128a52569c6f242f9acfc3c285058fbd120a8c8c96dab7f6b1d809f0ca5",
+        "remoteTextHash": "d3443128a52569c6f242f9acfc3c285058fbd120a8c8c96dab7f6b1d809f0ca5",
+        "platformRewrites": [
+          "external anchor wrappers removed",
+          "numeric entity escaping",
+          "img src converted to data-src and CDN resolution 0 to640"
+        ],
+        "canonicalInBody": false,
+        "copyrightPresent": true,
+        "coverMatches": true,
+        "needOpenComment": 1,
+        "onlyFansComment": 0,
+        "contentSourceUrl": "https://blog.mushroom.cv/blog/mumble-phone-walkie-talkie-guide/",
+        "localContentHash": "9fd7abaa0e61494d2467a3058f8c2cef7467a14f81004f44680489a5660983f3",
+        "remoteContentHash": "6e8b6bb174100cf0318027f68a524f0c498f5e82998fedb51d7534062d9b8008"
+      }
+    ]
+  },
+  "deployment": "https://55687b46.blog-mushroom.pages.dev",
+  "semanticIndex": "Two language vectors upserted; manifest updated",
+  "newArticle": true,
+  "frozenInputsUnchanged": true,
+  "limitations": [
+    "Mumblersmatchingpublicsource/licenseunverified",
+    "No runningcontainer or phone/lockscreen/Bluetooth/audio/latencytest",
+    "Mumlamaintenanceriskexplicit",
+    "Client-serverencryptionnotserverblindE2E"
+  ],
+  "semanticLiveScore": 0.76215655,
+  "kb": {
+    "checkedAt": "2026-11-01T00:42:20.249662+00:00",
+    "sourceFile": "/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory/project_mumble-phone-walkie-talkie-guide.md",
+    "rows": 9,
+    "currentMediaIdPresent": true,
+    "runtimeLimitsPresent": true,
+    "MumblersSourceGapPresent": true,
+    "semanticLiveScorePresent": true
+  }
+}

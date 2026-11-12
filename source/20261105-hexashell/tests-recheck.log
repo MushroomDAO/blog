@@ -1,0 +1,201 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+__________________________ test_scripted_casa_episode __________________________
+
+    def test_scripted_casa_episode():
+        import fakes
+        import fakes_casa as F
+        from hexashell.runtime import episode
+
+        out = Path(tempfile.mkdtemp(prefix="hexashell-robocasa-run-"))
+        script = [
+            [fakes.python_call("print(robot.task)\nprint(robot.state())\nrobot.look('all', tile=True)\n"
+                               "t = robot.measure('red box')\nprint(t)")],
+            [fakes.python_call("m = robot.goto((t.center[0], t.center[1], t.top + 0.08), pitch=90, yaw=t.grip_yaw, "
+                               "grip='open')\nprint(m)\nt = robot.measure(t)\nprint(t)\n"
+                               "print(robot.goto((t.center[0], t.center[1], t.top - 0.03)))\n"
+                               "g = robot.gripper('close')\nprint(g)\nassert g.holding")],
+            [fakes.python_call("try:\n    robot.goto((3, 3, 3))\nexcept NotExecuted as e:\n    print('caught', e)\n"
+                               "print(robot.drive(turn=0.0))\nprint(robot.goto(by=(0, 0, 0.15)))\nprint('not reached')")],
+        ]
+        saved = dict(os.environ)
+        for key in [k for k in os.environ if k.startswith("HEXASHELL_")]:
+            os.environ.pop(key)
+        real = episode.Gateway
+        fakes.ScriptedGateway.script = script
+        fakes.ScriptedGateway.seen = []
+        episode.Gateway = fakes.ScriptedGateway
+        try:
+            session = F.FakeCasaSession(kitchen=F.FakeKitchen(size=256))
+            settings = Settings(sam3_url="fake", ladder=False, max_turns=10, budget_s=600, cell_cpu_s=20, cell_idle_s=30)
+            ep = episode.Episode(session, settings, out)
+            ep.run()
+        finally:
+            episode.Gateway = real
+            os.environ.clear()
+            os.environ.update(saved)
+        folder = ep.rec.dir
+        result = json.loads((folder / "result.json").read_text())
+>       assert result["bench"] == "robocasa" and result["success"] is True, result
+E       AssertionError: {'bench': 'robocasa', 'task': 'PickPlaceCounterToCabinet', 'seed': 0, 'split': 'pretrain50', ...}
+E       assert ('robocasa' == 'robocasa'
+E
+E           robocasa and False is True)
+
+tests/test_benches.py:1412: AssertionError
+_________________________ test_scripted_libero_episode _________________________
+
+    def test_scripted_libero_episode():
+        import fakes
+        import fakes_libero as L
+        from hexashell.runtime import episode
+
+        out = Path(tempfile.mkdtemp(prefix="hexashell-libero-run-"))
+        script = [
+            [fakes.python_call("print(robot.task)\nprint(robot.state())\nrobot.look('all', tile=True)\n"
+                               "t = robot.measure('red box')\nprint(t)")],
+            [fakes.python_call("m = robot.goto((t.center[0], t.center[1], t.top + 0.08), pitch=90, yaw=t.grip_yaw, "
+                               "grip='open')\nprint(m)\nt = robot.measure(t)\nprint(t)\n"
+                               "print(robot.goto((t.center[0], t.center[1], t.top - 0.03)))\n"
+                               "g = robot.gripper('close')\nprint(g)\nassert g.holding\n"
+                               "print(robot.goto(by=(0, 0, 0.15)))\nprint('not reached')")],
+        ]
+        saved = dict(os.environ)
+        for key in [k for k in os.environ if k.startswith("HEXASHELL_")]:
+            os.environ.pop(key)
+        real = episode.Gateway
+        fakes.ScriptedGateway.script = script
+        fakes.ScriptedGateway.seen = []
+        episode.Gateway = fakes.ScriptedGateway
+        try:
+            session = L.FakeLiberoSession(table=L.FakeTable(size=256))
+            settings = Settings(sam3_url="fake", ladder=False, max_turns=10, budget_s=600, cell_cpu_s=20, cell_idle_s=30)
+            ep = episode.Episode(session, settings, out)
+            ep.run()
+        finally:
+            episode.Gateway = real
+            os.environ.clear()
+            os.environ.update(saved)
+        folder = ep.rec.dir
+        result = json.loads((folder / "result.json").read_text())
+>       assert result["bench"] == "libero" and result["success"] is True, result
+E       AssertionError: {'bench': 'libero', 'task': 'libero_object_swap_t0', 'seed': 0, 'suite': 'libero_object_swap', ...}
+E       assert ('libero' == 'libero'
+E
+E           libero and False is True)
+
+tests/test_benches.py:1587: AssertionError
+________________________ test_scripted_robotwin_episode ________________________
+
+    def test_scripted_robotwin_episode():
+>       system, card_text = _scripted_twin(depth=True)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_benches.py:2228:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+depth = True
+
+    def _scripted_twin(depth: bool) -> tuple[str, str]:
+        """A scripted episode on the fake table (with depth pictures or without): (system prompt, task card)."""
+        import fakes
+        import fakes_twin as T
+        from hexashell.runtime import episode
+
+        out = Path(tempfile.mkdtemp(prefix="hexashell-twin-run-"))
+        script = [
+            [fakes.python_call("print(robot.task)\nprint(robot.state())\nrobot.look('all', tile=True)\n"
+                               "t = robot.measure('red box')\nprint(t)")],
+            [fakes.python_call("m = robot.goto('left', (t.center[0], t.center[1], t.top + 0.08), pitch=90, "
+                               "yaw=t.grip_yaw, grip='open')\nprint(m)\nt = robot.measure(t)\nprint(t)\n"
+                               "print(robot.goto('left', (t.center[0], t.center[1], t.top - 0.03)))\n"
+                               "g = robot.gripper('left', 'close')\nprint(g)\nassert g.holding\n"
+                               "try:\n    robot.goto('right', (3, 3, 3))\nexcept NotExecuted as e:\n    print('caught')\n"
+                               "print(robot.goto('left', by=(0, 0, 0.15)))\nprint('not reached')")],
+        ]
+        saved = dict(os.environ)
+        for key in [k for k in os.environ if k.startswith("HEXASHELL_")]:
+            os.environ.pop(key)
+        real = episode.Gateway
+        fakes.ScriptedGateway.script = script
+        fakes.ScriptedGateway.seen = []
+        episode.Gateway = fakes.ScriptedGateway
+        try:
+            session = T.FakeTwinSession(twin=T.FakeTwin())
+            settings = Settings(sam3_url="fake", ladder=False, max_turns=10, budget_s=600, cell_cpu_s=20, cell_idle_s=30,
+                                depth=depth)
+            ep = episode.Episode(session, settings, out)
+            ep.run()
+        finally:
+            episode.Gateway = real
+            os.environ.clear()
+            os.environ.update(saved)
+        folder = ep.rec.dir
+        result = json.loads((folder / "result.json").read_text())
+>       assert result["bench"] == "robotwin" and result["success"] is True, result
+E       AssertionError: {'bench': 'robotwin', 'task': 'adjust_bottle', 'seed': 7, 'instruction': 'pick up the red box', ...}
+E       assert ('robotwin' == 'robotwin'
+E
+E           robotwin and False is True)
+
+tests/test_benches.py:2275: AssertionError
+_________________ test_scripted_robotwin_episode_without_depth _________________
+
+    def test_scripted_robotwin_episode_without_depth():
+>       system, card_text = _scripted_twin(depth=False)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_benches.py:2234:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+depth = False
+
+    def _scripted_twin(depth: bool) -> tuple[str, str]:
+        """A scripted episode on the fake table (with depth pictures or without): (system prompt, task card)."""
+        import fakes
+        import fakes_twin as T
+        from hexashell.runtime import episode
+
+        out = Path(tempfile.mkdtemp(prefix="hexashell-twin-run-"))
+        script = [
+            [fakes.python_call("print(robot.task)\nprint(robot.state())\nrobot.look('all', tile=True)\n"
+                               "t = robot.measure('red box')\nprint(t)")],
+            [fakes.python_call("m = robot.goto('left', (t.center[0], t.center[1], t.top + 0.08), pitch=90, "
+                               "yaw=t.grip_yaw, grip='open')\nprint(m)\nt = robot.measure(t)\nprint(t)\n"
+                               "print(robot.goto('left', (t.center[0], t.center[1], t.top - 0.03)))\n"
+                               "g = robot.gripper('left', 'close')\nprint(g)\nassert g.holding\n"
+                               "try:\n    robot.goto('right', (3, 3, 3))\nexcept NotExecuted as e:\n    print('caught')\n"
+                               "print(robot.goto('left', by=(0, 0, 0.15)))\nprint('not reached')")],
+        ]
+        saved = dict(os.environ)
+        for key in [k for k in os.environ if k.startswith("HEXASHELL_")]:
+            os.environ.pop(key)
+        real = episode.Gateway
+        fakes.ScriptedGateway.script = script
+        fakes.ScriptedGateway.seen = []
+        episode.Gateway = fakes.ScriptedGateway
+        try:
+            session = T.FakeTwinSession(twin=T.FakeTwin())
+            settings = Settings(sam3_url="fake", ladder=False, max_turns=10, budget_s=600, cell_cpu_s=20, cell_idle_s=30,
+                                depth=depth)
+            ep = episode.Episode(session, settings, out)
+            ep.run()
+        finally:
+            episode.Gateway = real
+            os.environ.clear()
+            os.environ.update(saved)
+        folder = ep.rec.dir
+        result = json.loads((folder / "result.json").read_text())
+>       assert result["bench"] == "robotwin" and result["success"] is True, result
+E       AssertionError: {'bench': 'robotwin', 'task': 'adjust_bottle', 'seed': 7, 'instruction': 'pick up the red box', ...}
+E       assert ('robotwin' == 'robotwin'
+E
+E           robotwin and False is True)
+
+tests/test_benches.py:2275: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_benches.py::test_scripted_casa_episode - AssertionError: {'...
+FAILED tests/test_benches.py::test_scripted_libero_episode - AssertionError: ...
+FAILED tests/test_benches.py::test_scripted_robotwin_episode - AssertionError...
+FAILED tests/test_benches.py::test_scripted_robotwin_episode_without_depth - ...
+4 failed, 63 deselected in 5.21s

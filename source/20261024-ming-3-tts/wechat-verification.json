@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-24T08:46:34.016Z",
+  "drafts": [
+    {
+      "slug": "ming-3-tts-small-model-evaluation",
+      "mediaId": "prCUE631thH1cmNLi42prCPgmCb7suVKVtsTnLPkE0U7-ZGTBM7AgXHNzytDLsTk",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "59d35bbc0bfdef1e4dcb306221b73fc3e7a9451ba93cfd7656a84f87bd8536fb",
+      "remoteTextHash": "59d35bbc0bfdef1e4dcb306221b73fc3e7a9451ba93cfd7656a84f87bd8536fb",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": true,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "",
+      "localContentHash": "686e487e0986cd62683dc7676fc19a62a5adff9587547ad948ac88dc39f72c59",
+      "remoteContentHash": "3ce08b7edb93aa3ce9e079c2b7fcd0dc9f831bfdb445824e50825c558caa856f"
+    }
+  ]
+}

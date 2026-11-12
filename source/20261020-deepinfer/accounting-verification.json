@@ -1,0 +1,15 @@
+{
+  "pin": "774ce244b87cc0eb8d4b94ab9f5de2ab22049f01",
+  "source": "examples/sweep/plot_pareto.py",
+  "sha256": "13249bd8fd328ea6d59436e8a54360f53fbfcee6ec60a32f2ffb64e881ff6c56",
+  "checksPassed": 6,
+  "checks": [
+    "Full acceptance tau=6 for nextn5",
+    "Synthetic10steps/s,64requests,cp1,a0.75 ->47.5tokens/s/user,3040tokens/s/GPU;not measured",
+    "VARLEN records reject a second acceptance multiplier",
+    "Repeated sweep parameter keeps latest record",
+    "Mixed context lengths are rejected from one sweep curve",
+    "Prefill latency uses actual window seconds/steps, not full-batch inference"
+  ],
+  "scope": "Unmodified plotting helper functions on synthetic records only. No GPU/NPU, model download, token generation, hardware throughput or latency measurement."
+}

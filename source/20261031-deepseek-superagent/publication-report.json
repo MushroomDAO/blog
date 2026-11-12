@@ -1,0 +1,128 @@
+{
+  "slug": "deepseek-superagent-engineering-guide",
+  "blog": {
+    "checkedAt": "2026-10-31T16:30:02.343513+00:00",
+    "articles": [
+      {
+        "slug": "deepseek-superagent-engineering-guide",
+        "url": "https://blog.mushroom.cv/blog/deepseek-superagent-engineering-guide/",
+        "title": "DeepSeek Super-agent工程实践：从事件接入到可靠交付",
+        "listRank": 2,
+        "carouselRank": 1,
+        "images": [
+          {
+            "url": "https://blog.mushroom.cv/_astro/deepseek-superagent-engineering-guide-banner.DMe9fMYF.jpg",
+            "status": 200,
+            "contentType": "image/jpeg",
+            "bytes": 91636
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/deepseek-superagent-engineering-guide-banner.DMe9fMYF_btzXQ.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 38240
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/deepseek-superagent-engineering-guide-fig-01.8wLPNyNK_Z2vlHlV.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 33282
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/deepseek-superagent-engineering-guide-fig-02.17_DfJuL_1G5QGN.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 31656
+          },
+          {
+            "url": "https://blog.mushroom.cv/_astro/deepseek-superagent-engineering-guide-fig-03.B6qcMr12_8DGQF.webp",
+            "status": 200,
+            "contentType": "image/webp",
+            "bytes": 49758
+          }
+        ]
+      }
+    ]
+  },
+  "download": {
+    "checkedAt": "2026-10-31T16:30:06.608777+00:00",
+    "url": "https://blog.mushroom.cv/downloads/deepseek-superagent-engineering-lab.zip",
+    "status": 200,
+    "bytes": 6571,
+    "sha256": "112cd8ff06eaf017fc06147039fdf1280d1e79f670e4249328ff08599dfff11d",
+    "allFilesMatch": true
+  },
+  "wechat": {
+    "checkedAt": "2026-10-31T16:31:37.859Z",
+    "drafts": [
+      {
+        "slug": "deepseek-superagent-engineering-guide",
+        "mediaId": "prCUE631thH1cmNLi42prCgLqDyCs16oqWTnam7f9vKnQYNQxddNcRAwV4uunl8F",
+        "titleMatches": true,
+        "authorMatches": true,
+        "digestMatches": true,
+        "htmlExact": false,
+        "fullTextMatches": true,
+        "imageIdentitiesMatch": true,
+        "imageCount": 3,
+        "localTextHash": "5f611fbd6977b4037f06a694c40e64158718fca37ec837c63a1647f16499afca",
+        "remoteTextHash": "5f611fbd6977b4037f06a694c40e64158718fca37ec837c63a1647f16499afca",
+        "platformRewrites": [
+          "external anchor wrappers removed",
+          "numeric entity escaping",
+          "img src converted to data-src and CDN resolution 0 to640"
+        ],
+        "canonicalInBody": false,
+        "copyrightPresent": true,
+        "coverMatches": true,
+        "needOpenComment": 1,
+        "onlyFansComment": 0,
+        "contentSourceUrl": "https://blog.mushroom.cv/blog/deepseek-superagent-engineering-guide/",
+        "localContentHash": "873fc222458396a5cfacffa0a0bf9d042f7e4998d1b2a4db4fe9f033d33c1755",
+        "remoteContentHash": "2dc6850dfc2b06659d89c84c610775fbade42960fdeb0f9b99e156b8f806785a"
+      }
+    ]
+  },
+  "semantic": {
+    "vectorsUpserted": 2,
+    "liveMatched": true,
+    "language": "zh",
+    "score": 0.7565742
+  },
+  "sourceCommit": "6337fc823ce20251c8de8085948165c81aaa701e",
+  "sourceGap": "Official-sitefulltextnotfound;originalWeChatbodyblockedbyCAPTCHA;creditedfullreprintcrosscheckedagainstofficialprototype",
+  "localChecks": {
+    "upstreamBaseline": {
+      "testFiles": 59,
+      "tests": 1197,
+      "typecheck": true,
+      "build": true
+    },
+    "ownedExercise": {
+      "testFiles": 1,
+      "tests": 7,
+      "typecheck": true,
+      "realComponents": [
+        "Engine",
+        "SQLite Store",
+        "Effects",
+        "HealthBoard"
+      ],
+      "doubles": [
+        "Assessment",
+        "Worker",
+        "Destination"
+      ],
+      "liveAccounts": false
+    }
+  },
+  "deployment": "https://ea83aa3d.blog-mushroom.pages.dev",
+  "build": "finalpassed;sixfrozeninputsunchanged;earlierbuildnotdeployedafteraddingverifiedfoundationlinks",
+  "duplicatesCreated": false,
+  "limits": [
+    "Researchprototypenotformalproductorcompletearticledesign",
+    "No liveLLM/networkingworkflow,productioncredentials,processkill,powerloss,HA,OSsandboxorsemanticWatchdogverified",
+    "Fakeidempotentdestinationdoesnotproveexternalexactlyonce",
+    "PublishedlistingAPI48001unavailable;no exactpriorarticle/draft/receiptmatch"
+  ]
+}

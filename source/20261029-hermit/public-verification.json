@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-29T08:42:42.168012+00:00",
+  "articles": [
+    {
+      "slug": "hermit-harness-adapter-evolution",
+      "url": "https://blog.mushroom.cv/blog/hermit-harness-adapter-evolution/",
+      "title": "Hermit：不改模型，让 Agent 的外部适配器持续演化",
+      "listRank": 4,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/hermit-harness-adapter-evolution-banner.CkHYNCty.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 91094
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hermit-harness-adapter-evolution-banner.CkHYNCty_ZFtrb4.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 34686
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hermit-harness-adapter-evolution-fig-01.itJHD6JE_1sOWzc.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 15740
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hermit-harness-adapter-evolution-fig-02.DTaDA8x1_Z2fUzYA.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 15784
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/hermit-harness-adapter-evolution-fig-03.BACn1hA4_Z1DJxBJ.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 13738
+        }
+      ]
+    }
+  ]
+}

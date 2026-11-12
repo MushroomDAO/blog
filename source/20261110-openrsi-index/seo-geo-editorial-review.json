@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-10",
+  "SEO": {
+    "englishSlug": true,
+    "bilingualMetadata": true,
+    "descriptions150to160": true,
+    "titleUnder60": true,
+    "isoDates": true,
+    "categoryAndTags": true,
+    "templateH1Only": true,
+    "questionHeadings": true,
+    "primaryExternalSources": true,
+    "internalRelatedArticle": true,
+    "bilingualAlt": true,
+    "finalCanonicalSlug": true
+  },
+  "GEO": {
+    "BLUF": true,
+    "FAQBothLanguages": true,
+    "explicitEntities": true,
+    "pinnedSource": true,
+    "datedCounts": true,
+    "realScopedVerification": true,
+    "numericProtocolBoundaries": true,
+    "unexecutedCommandsLabelled": true,
+    "noScientificReproductionClaim": true,
+    "noAgentRankingFromDifferentProtocols": true
+  },
+  "imageVerification": "Banner and three separate illustrations passed machine and manual inspection."
+}

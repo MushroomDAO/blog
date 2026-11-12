@@ -1,0 +1,13 @@
+{
+  "query": "NX2Apple nxnative Mac iPhone 图形构建 游戏资源打包",
+  "matches": [
+    {
+      "article_id": "nx2apple-switch-apple-builder",
+      "title": "NX2Apple：把 Switch 到苹果设备的构建流程做成启动器",
+      "url": "/blog/nx2apple-switch-apple-builder/",
+      "language": "zh",
+      "excerpt": "NX2Apple：把 Switch 到苹果设备的构建流程做成启动器 NX2Apple 是基于 nxnative 的社区图形化构建工具，将自备 Switch 游戏的代码重写、着色器转换、资源打包和设备安装整合起来。本文核对 v0.6.0 更新、Apple Silicon 与 Xcode 要求、94 个游戏配置的兼容性边界、RomFS 打包演进和 MIT 许可，并用 22 项打包测试说明验证范围。 NX2Apple nxnative Apple-Silicon iOS game-development open-source NX2Apple 与 nxnat",
+      "score": 0.76235765
+    }
+  ]
+}

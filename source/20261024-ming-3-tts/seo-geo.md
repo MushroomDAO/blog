@@ -1,0 +1,1 @@
+Bilingual BLUF; keyword slug; dates/category/tags and bilingual meta; three matching body figures planned with bilingual alt; FAQ and Mycelium CC in both languages; official repo/HF and independent AA boards linked; live scores distinguished from README snapshot and pronunciation score attributed; code-check results clearly not synthesis or speed. WeChat lint passed.

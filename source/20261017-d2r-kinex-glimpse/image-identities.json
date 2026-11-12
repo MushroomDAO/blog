@@ -1,0 +1,122 @@
+[
+  {
+    "path": "src/assets/images/d2r-mobile-build-ios-macos-banner.jpg",
+    "dimensions": [
+      1200,
+      630
+    ],
+    "bytes": 92816,
+    "sha256": "73cbbf9533fe9f9c05a825d359c58b41ecbfcb3597b76c76177a12926bef3696",
+    "jpegComment": "banner-creator/adopted src=/tmp/d2r-banner-phone-crop.jpg"
+  },
+  {
+    "path": "src/assets/images/d2r-mobile-build-ios-macos-fig-01.png",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 81496,
+    "sha256": "8ca4995cb647ade2f6ced7e2f062b0ac037f6dfaa086b97b17a72b5414f88138",
+    "jpegComment": null
+  },
+  {
+    "path": "src/assets/images/d2r-mobile-build-ios-macos-fig-02.png",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 89240,
+    "sha256": "94a358be8f376312c45787b0eee9e5f791b491d485501c53d015101b18941222",
+    "jpegComment": null
+  },
+  {
+    "path": "src/assets/images/d2r-mobile-build-ios-macos-fig-03.png",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 56923,
+    "sha256": "432f0387f91d44831f1369a759f8b09f321fd450f1f81e603005965f69809e4c",
+    "jpegComment": null
+  },
+  {
+    "path": "src/assets/images/kinex-coding-agents-robot-harness-banner.jpg",
+    "dimensions": [
+      1200,
+      630
+    ],
+    "bytes": 90317,
+    "sha256": "dddd3bdec4daba066f4c91696657ee66d485a60fe5a9e3458f9720a6800408e0",
+    "jpegComment": "banner-creator/flux2-klein-4b seed=136 steps=16"
+  },
+  {
+    "path": "src/assets/images/kinex-coding-agents-robot-harness-fig-01.png",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 63967,
+    "sha256": "7f31e95eaea88b0fc3c11fe96b6c6e2fa44497daa4de9b188ae6bc87dbaeef78",
+    "jpegComment": null
+  },
+  {
+    "path": "src/assets/images/kinex-coding-agents-robot-harness-fig-02.png",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 84163,
+    "sha256": "15bff0d31920e9f0e38cb5c05a40bb710c0101a540b0e60e9655376e7b9aab13",
+    "jpegComment": null
+  },
+  {
+    "path": "src/assets/images/kinex-coding-agents-robot-harness-fig-03.png",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 63190,
+    "sha256": "967cc3037674bbb6c0a9516306fb562252178cb48f151d8de57968efb3a76c9e",
+    "jpegComment": null
+  },
+  {
+    "path": "src/assets/images/glimpse-visual-reasoning-game-bug-review-banner.jpg",
+    "dimensions": [
+      1200,
+      630
+    ],
+    "bytes": 75194,
+    "sha256": "5eccea7802d83176bc94b8316c7b000ac507eff908fe8c5db232b0919bdab4da",
+    "jpegComment": "banner-creator/adopted src=/tmp/glimpse-prism-banner-crop.jpg"
+  },
+  {
+    "path": "src/assets/images/glimpse-visual-reasoning-game-bug-review-fig-01.png",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 57504,
+    "sha256": "98e38e751aa2728464ac50136c2ba33844a02f6a26154b10bc9af596a8c952f0",
+    "jpegComment": null
+  },
+  {
+    "path": "src/assets/images/glimpse-visual-reasoning-game-bug-review-fig-02.png",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 57094,
+    "sha256": "e026702861829e8249176776f33ee0ddd4d7b26d030fba94e0df3f40bf07c7ed",
+    "jpegComment": null
+  },
+  {
+    "path": "src/assets/images/glimpse-visual-reasoning-game-bug-review-fig-03.png",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 73974,
+    "sha256": "2747255ed425bf627435a231260b3d2f8233bba8b44e29c35bf83f4d22cdfd0b",
+    "jpegComment": null
+  }
+]

@@ -1,0 +1,99 @@
+Illustration worker exit0; three final assets visually inspected.
+a 256 -c /private/tmp/opus-videos-20261109-protected.sha256" in /Users/jason/Dev/mycelium/blog
+ succeeded in 716ms:
+awesome-opus-videos-code-animation-guide-fig-01.png 1120x630 47 colors 37134B
+awesome-opus-videos-code-animation-guide-fig-02.png 1120x630 47 colors 38031B
+awesome-opus-videos-code-animation-guide-fig-03.png 1120x630 46 colors 47413B
+src/content/blog/awesome-opus-videos-code-animation-guide.md: OK
+src/assets/images/awesome-opus-videos-code-animation-guide-banner.jpg: OK
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+import struct, subprocess
+for number in ('01', '02', '03'):
+    p = Path(f'src/assets/images/awesome-opus-videos-code-animation-guide-fig-{number}.png')
+    data = p.read_bytes()
+    assert data[:8] == b'\\x89PNG\\r\\n\\x1a\\n'
+    pos = 8
+    palette_colors = None
+    while pos < len(data):
+        size = struct.unpack('>I', data[pos:pos+4])[0]
+        kind = data[pos+4:pos+8]
+        payload = data[pos+8:pos+8+size]
+        if kind == b'IHDR':
+            width, height, depth, color_type = struct.unpack('>IIBB', payload[:10])
+            assert (width, height) == (1120, 630)
+            assert color_type == 3
+        if kind == b'PLTE':
+            palette_colors = size // 3
+        pos += 12 + size
+    assert palette_colors is not None and palette_colors <= 48
+    assert len(data) < 90000
+    corners = subprocess.check_output(['magick', str(p), '-format', '%[pixel:p{0,0}]|%[pixel:p{1119,0}]|%[pixel:p{0,629}]|%[pixel:p{1119,629}]', 'info:'], text=True).strip()
+    assert corners == '|'.join(['srgb(255,255,255)'] * 4), corners
+    print(f'{number}: PASS; 1120x630; indexed palette {palette_colors}; {len(data)} bytes; corners pure white; quantized with +dither')
+before = Path('/private/tmp/opus-videos-20261109-status-before.txt').read_text().splitlines()
+after = subprocess.check_output(['git', 'status', '--porcelain=v1'], text=True).splitlines()
+added = sorted(set(after) - set(before))
+removed = sorted(set(before) - set(after))
+expected = {f'?? src/assets/images/awesome-opus-videos-code-animation-guide-fig-{n}.png' for n in ('01', '02', '03')}
+assert set(added) == expected, added
+assert not removed, removed
+print('Git status delta: exactly the three final PNG assets; existing changes preserved.')
+raws = sorted(Path('generated_images/opus-videos-20261109').glob('*'))
+assert len(raws) == 3 and all(p.suffix == '.png' for p in raws)
+print('Raw originals: exactly three PNGs retained in requested directory.')
+PY" in /Users/jason/Dev/mycelium/blog
+ succeeded in 33ms:
+01: PASS; 1120x630; indexed palette 47; 37134 bytes; corners pure white; quantized with +dither
+02: PASS; 1120x630; indexed palette 47; 38031 bytes; corners pure white; quantized with +dither
+03: PASS; 1120x630; indexed palette 46; 47413 bytes; corners pure white; quantized with +dither
+Git status delta: exactly the three final PNG assets; existing changes preserved.
+Raw originals: exactly three PNGs retained in requested directory.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+已用 imagegen 生成并逐张检查三张独立配图：
+
+| 文件 | 主题 | 颜色数 | 大小 |
+|---|---|---:|---:|
+| [01](src/assets/images/awesome-opus-videos-code-animation-guide-fig-01.png) | 收录条目、部分提示词与外部复刻 | 47 | 37,134 B |
+| [02](src/assets/images/awesome-opus-videos-code-animation-guide-fig-02.png) | seek(t) 定时抽查后编码 | 47 | 38,031 B |
+| [03](src/assets/images/awesome-opus-videos-code-animation-guide-fig-03.png) | 分镜到成片验收 | 46 | 47,413 B |
+
+全部为 **1120×630、白底、索引 PNG、无抖动、低于 90,000 字节**。原图保存在 [指定目录](generated_images/opus-videos-20261109/)。
+
+文章、banner 和其他已有文件未改动。
+hook: Stop
+hook: Stop Completed
+tokens used
+61,480
+已用 imagegen 生成并逐张检查三张独立配图：
+
+| 文件 | 主题 | 颜色数 | 大小 |
+|---|---|---:|---:|
+| [01](src/assets/images/awesome-opus-videos-code-animation-guide-fig-01.png) | 收录条目、部分提示词与外部复刻 | 47 | 37,134 B |
+| [02](src/assets/images/awesome-opus-videos-code-animation-guide-fig-02.png) | seek(t) 定时抽查后编码 | 47 | 38,031 B |
+| [03](src/assets/images/awesome-opus-videos-code-animation-guide-fig-03.png) | 分镜到成片验收 | 46 | 47,413 B |
+
+全部为 **1120×630、白底、索引 PNG、无抖动、低于 90,000 字节**。原图保存在 [指定目录](generated_images/opus-videos-20261109/)。
+
+文章、banner 和其他已有文件未改动。

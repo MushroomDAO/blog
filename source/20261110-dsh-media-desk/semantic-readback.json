@@ -1,0 +1,38 @@
+[
+  {
+    "id": "89d3e6b8ae028fd8c1998ff64f2df51092450897a899c496",
+    "metadata": {
+      "article_id": "dsh-media-desk-creator-workbench-guide",
+      "content_hash": "5e1b0f3d19226e30",
+      "excerpt": "DSH自媒体工作台：从灵感成稿到复盘，代码怎样串起来？ dsh-media-desk 是 DeepSeek Harness 的社区自媒体工作台插件，将灵感、脚本、封面、分镜、排期和复盘串成一套流程。本文核对源码与 npm 版本，解释宿主与界面分工、生图两种接入方式、Monid 导入及数据边界，以构建和87项测试核对代码，给出安装、费用控制和试用建议，明确它不会直接发布内容。 DeepSeek Harness dsh-media-desk Content Creation Open Source Workflow 为什么要给创作流程单独做一个工作台？ 技术",
+      "language": "zh",
+      "tags": [
+        "DeepSeek Harness",
+        "dsh-media-desk",
+        "Content Creation",
+        "Open Source",
+        "Workflow"
+      ],
+      "title": "DSH自媒体工作台：从灵感成稿到复盘，代码怎样串起来？",
+      "url": "/blog/dsh-media-desk-creator-workbench-guide/"
+    }
+  },
+  {
+    "id": "fd3ea70cfd685cee33d503b7a3e7bc95e9c5ed8df83a8c7a",
+    "metadata": {
+      "article_id": "dsh-media-desk-creator-workbench-guide",
+      "content_hash": "5fba0c583735b56b",
+      "excerpt": "DSH Media Desk: A Creator Workbench Engineering Guide Explore dsh-media-desk: a DeepSeek Harness creator workbench for ideas, drafts, images and review, with setup, cost boundaries, build and 87 offline tests. DeepSeek Harness dsh-media-desk Content Creation Open Source Workflow ",
+      "language": "en",
+      "tags": [
+        "DeepSeek Harness",
+        "dsh-media-desk",
+        "Content Creation",
+        "Open Source",
+        "Workflow"
+      ],
+      "title": "DSH Media Desk: A Creator Workbench Engineering Guide",
+      "url": "/blog/dsh-media-desk-creator-workbench-guide/"
+    }
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "sourceReviewOnly": true,
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/feitangyuan/onetake/013a61ac8d98883c73733f59c06e49e9ba444f14/cases/clawd-desktop-19s/README.md",
+      "sha256": "822d4957a921930d3bc222211b9ba6f70d1f21b1a142dbadc49caa510e3928e3",
+      "checked": [
+        "film only",
+        "not",
+        "126 BPM",
+        "571 frames"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wevm/ondine/0b589ec34481856b4153526f10a0a35558a201a8/README.md",
+      "sha256": "ce0ba4ee82f328478b34b14eb0690232b38f6b06beee4b346cfba1bd33e85aeb",
+      "checked": [
+        "210-byte",
+        "MIT"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wevm/ondine/0b589ec34481856b4153526f10a0a35558a201a8/bench/comparison.md",
+      "sha256": "67181b36cd937d5551cee007d3b477e17d711d4e51c39ef4cb5d589298c68b88",
+      "checked": [
+        "127",
+        "612 vectors",
+        "327.86",
+        "562.99",
+        "14 small types"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ythx-101/live-panel-skill/439c9addce7e7ac2b4e384aa847a351926c8f945/README.md",
+      "sha256": "3d713362484da34bf0bf8eed1b61a14f8c999a81c557949d73512036773c3364",
+      "checked": [
+        "illustrative",
+        "not covered by the MIT grant",
+        "window.seek(t)"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shimingyi/awesome-animation-datasets/4d4abf35b33f2b5a429671b668d83d9973da1750/README.md",
+      "sha256": "605afb0e1d08c4a6d7e6c7936a471d7d9021aebf5b5918eb565d2bf9d405846d",
+      "checked": [
+        "44 datasets",
+        "2,355 hours",
+        "45 human datasets",
+        "CC BY 4.0"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shimingyi/awesome-animation-datasets/4d4abf35b33f2b5a429671b668d83d9973da1750/docs/assets/quality.json",
+      "sha256": "8a045adfc492fdb9fc4e92f305f83ab1e07bb6714d8b2c46cf7dd9304d14130a",
+      "checked": []
+    }
+  ]
+}

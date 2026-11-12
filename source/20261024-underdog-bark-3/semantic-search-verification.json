@@ -1,0 +1,13 @@
+{
+  "query": "Underdog Bark 3.0：163MB 英文语音识别，怎样看懂速度、Clean 版与内存代价？",
+  "matches": [
+    {
+      "article_id": "underdog-bark-3-local-asr",
+      "title": "Bark 3.0：163MB 英文语音识别，怎样看懂速度、Clean 版与内存代价？",
+      "url": "/blog/underdog-bark-3-local-asr/",
+      "language": "zh",
+      "excerpt": "Bark 3.0：163MB 英文语音识别，怎样看懂速度、Clean 版与内存代价？ 核查Underdog Bark 3.0的官方模型与测试：163MB标准版、180MB Clean版、AMI 7.82% WER及七集平均结果各指什么，区分M5 Max应用测速与MLX脚本路径，并解释解包缓存、长录音内存和Mac本地部署的限制，提供可复核的短音频运行记录，不把团队公布的数据误写为我们的实测。 Bark 3.0 Underdog 语音识别 本地AI MLX 开源模型 到底开源了什么，入口在哪里？ 7.82%到底是哪一种错误率？ Clean版为什么会有更高的逐",
+      "score": 0.8293011
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "python": "3.12.15 (main, Sep 30 2026, 22:04:19) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "packages": {
+    "rsi-harness": "0.1.0",
+    "harbor": "0.21.0",
+    "pytest": "9.2.0",
+    "pytest-asyncio": "1.4.1.post1",
+    "pydantic": "2.14.3",
+    "fastapi": "0.162.3",
+    "docker": "7.2.0"
+  }
+}

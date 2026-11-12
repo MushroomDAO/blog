@@ -1,0 +1,140 @@
+[
+  {
+    "figure": 1,
+    "original": "source/20261029-nx2apple/illustrations/originals/nx2apple-switch-apple-builder-fig-01.png",
+    "original_sha256": "4ebe75a022d291858caa94cbe4deea914e2870952c3c7c1d07c7857c3917cf4f",
+    "output": "src/assets/images/nx2apple-switch-apple-builder-fig-01.png",
+    "output_sha256": "3072cf54d2de162a04339e712de49f7f5c7525ce0d78395f61dfa6d34c9f3d4d",
+    "width": 1200,
+    "height": 675,
+    "bit_depth": 8,
+    "png_color_type": 3,
+    "bytes": 58823,
+    "white_threshold": "93%",
+    "dither": false,
+    "palette_limit": 256,
+    "attempts": [
+      {
+        "palette_limit": 256,
+        "bytes": 58823
+      }
+    ],
+    "command": [
+      "magick",
+      "/Users/jason/Dev/mycelium/blog/source/20261029-nx2apple/illustrations/originals/nx2apple-switch-apple-builder-fig-01.png",
+      "-background",
+      "white",
+      "-alpha",
+      "remove",
+      "-alpha",
+      "off",
+      "-colorspace",
+      "sRGB",
+      "-resize",
+      "1200x675!",
+      "-white-threshold",
+      "93%",
+      "+dither",
+      "-colors",
+      "256",
+      "-strip",
+      "-define",
+      "png:compression-level=9",
+      "PNG8:/Users/jason/Dev/mycelium/blog/src/assets/images/nx2apple-switch-apple-builder-fig-01.png"
+    ],
+    "inspection": "256 colors",
+    "pure_white_pixel_fraction": 0.9219876543209876
+  },
+  {
+    "figure": 2,
+    "original": "source/20261029-nx2apple/illustrations/originals/nx2apple-switch-apple-builder-fig-02.png",
+    "original_sha256": "e9afc65c7d22a492ceca192a60c89d83072665f78cfe60e00b7a05becb78403c",
+    "output": "src/assets/images/nx2apple-switch-apple-builder-fig-02.png",
+    "output_sha256": "0526788471d6d756900bd8b66332f19e4bb8b32ac055c757dced6bbcfc6e0ce2",
+    "width": 1200,
+    "height": 675,
+    "bit_depth": 8,
+    "png_color_type": 3,
+    "bytes": 51390,
+    "white_threshold": "93%",
+    "dither": false,
+    "palette_limit": 256,
+    "attempts": [
+      {
+        "palette_limit": 256,
+        "bytes": 51390
+      }
+    ],
+    "command": [
+      "magick",
+      "/Users/jason/Dev/mycelium/blog/source/20261029-nx2apple/illustrations/originals/nx2apple-switch-apple-builder-fig-02.png",
+      "-background",
+      "white",
+      "-alpha",
+      "remove",
+      "-alpha",
+      "off",
+      "-colorspace",
+      "sRGB",
+      "-resize",
+      "1200x675!",
+      "-white-threshold",
+      "93%",
+      "+dither",
+      "-colors",
+      "256",
+      "-strip",
+      "-define",
+      "png:compression-level=9",
+      "PNG8:/Users/jason/Dev/mycelium/blog/src/assets/images/nx2apple-switch-apple-builder-fig-02.png"
+    ],
+    "inspection": "253 colors",
+    "pure_white_pixel_fraction": 0.9299506172839506
+  },
+  {
+    "figure": 3,
+    "original": "source/20261029-nx2apple/illustrations/originals/nx2apple-switch-apple-builder-fig-03.png",
+    "original_sha256": "7feeb3356ff04c0f6a66cc685d49287f4bfb151e4cf4cdcbc2a41851644b1ee2",
+    "output": "src/assets/images/nx2apple-switch-apple-builder-fig-03.png",
+    "output_sha256": "03ecbcad96dee67b4d7468896c681c4967b2b3ef565c3d66ade5d770be93fe6d",
+    "width": 1200,
+    "height": 675,
+    "bit_depth": 8,
+    "png_color_type": 3,
+    "bytes": 67368,
+    "white_threshold": "93%",
+    "dither": false,
+    "palette_limit": 256,
+    "attempts": [
+      {
+        "palette_limit": 256,
+        "bytes": 67368
+      }
+    ],
+    "command": [
+      "magick",
+      "/Users/jason/Dev/mycelium/blog/source/20261029-nx2apple/illustrations/originals/nx2apple-switch-apple-builder-fig-03.png",
+      "-background",
+      "white",
+      "-alpha",
+      "remove",
+      "-alpha",
+      "off",
+      "-colorspace",
+      "sRGB",
+      "-resize",
+      "1200x675!",
+      "-white-threshold",
+      "93%",
+      "+dither",
+      "-colors",
+      "256",
+      "-strip",
+      "-define",
+      "png:compression-level=9",
+      "PNG8:/Users/jason/Dev/mycelium/blog/src/assets/images/nx2apple-switch-apple-builder-fig-03.png"
+    ],
+    "inspection": "256 colors",
+    "pure_white_pixel_fraction": 0.9202876543209877
+  }
+]

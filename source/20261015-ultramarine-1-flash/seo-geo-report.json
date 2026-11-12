@@ -1,0 +1,34 @@
+{
+  "titleLength": 39,
+  "titleEnLength": 50,
+  "descriptionLength": 160,
+  "descriptionEnLength": 154,
+  "wechatTitleLength": 23,
+  "wechatDigestLength": 31,
+  "bilingual": true,
+  "BLUF": true,
+  "FAQ": true,
+  "bodyImageReferences": 6,
+  "images": [
+    {
+      "file": "ultramarine-1-flash-knowledge-work-fig-01.png",
+      "size": 40442,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "ultramarine-1-flash-knowledge-work-fig-02.png",
+      "size": 69332,
+      "dimensions": "1280x720"
+    },
+    {
+      "file": "ultramarine-1-flash-knowledge-work-fig-03.png",
+      "size": 71180,
+      "dimensions": "1280x720"
+    }
+  ],
+  "copyright": true,
+  "sourcePinned": true,
+  "internalLink": true,
+  "independentAnalysis": "Post-training versus inherited foundation cost; internal mean versus general capability and human acceptance; API task cost versus accepted-deliverable cost; MIT framework versus pending weights.",
+  "scope": "CLI help,48 upstream file-tool tests and public pricing GET; no model inference,paidgeneration,RL,E2B or fullOfficeacceptance."
+}

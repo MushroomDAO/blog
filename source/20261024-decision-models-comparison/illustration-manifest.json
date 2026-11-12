@@ -1,0 +1,133 @@
+{
+  "created_utc": "2026-10-24T15:23:18.097210+00:00",
+  "status": "complete",
+  "generator": "built-in image_gen.imagegen",
+  "generation_calls": 3,
+  "separate_illustrations": 3,
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "context_only": {
+    "path": "source/20261024-decision-models-comparison/comparison-snapshot.json",
+    "sha256": "94cc9688d1557df119034ead9719f0d092e0c8f016ae331346a40d13d4751657",
+    "used_as": "Context only; no article or other source document read or edited."
+  },
+  "processing": {
+    "tool": "ImageMagick",
+    "description": "Fit inside 1600x900 with centered white canvas, normalize near-white pixels to pure white, quantize without dithering, compress indexed PNG. Originals preserved byte-for-byte.",
+    "command_template": "magick {original} -resize 1600x900 -background white -gravity center -extent 1600x900 -fuzz 5% -fill white -opaque white -alpha off +dither -colors 48 -depth 8 -strip -define png:compression-level=9 -define png:compression-filter=5 PNG8:{final}"
+  },
+  "scope": "Only generated-assets contents and the three named final PNGs written. No article, banner, git, or publishing actions.",
+  "figures": [
+    {
+      "id": "fig-01",
+      "theme": "Same models, different scoring rulers; never compare across versions.",
+      "prompt": "source/20261024-decision-models-comparison/generated-assets/fig-01.prompt.txt",
+      "prompt_sha256": "d1fb8726410582ebb6e55daa46469ab3737d4143bda437e64526d7e1188cd039",
+      "original": "source/20261024-decision-models-comparison/generated-assets/fig-01.original.png",
+      "original_sha256": "5e252671f67777d06e14a47e1ecb9e70713d23940691dd1738a976bc4170ceed",
+      "generation_source": "/Users/jason/.codex/generated_images/01a16e7f-4c91-7e83-94d2-2a1c31938cac/exec-e036bf2e-8ae2-4364-b145-73fb9e824c15.png",
+      "final": "source/20261024-decision-models-comparison/generated-assets/fig-01.final.png",
+      "copied_to": "src/assets/images/decision-models-comparison-fig-01.png",
+      "final_sha256": "d9d87b444855bb8810b66788fbc3dd97cfedb65514993247a0714570209629fd",
+      "width": 1600,
+      "height": 900,
+      "aspect_ratio": "16:9",
+      "format": "PNG",
+      "bytes": 46737,
+      "exact_white_pixel_fraction": 0.932708,
+      "verified_labels": [
+        "0.4",
+        "0.4.1",
+        "同一批模型",
+        "跨版勿比"
+      ],
+      "visual_qa": {
+        "passed": true,
+        "inspected_original_and_compressed_final": true,
+        "legible_chinese": true,
+        "black_xiao_m_active_in_core_action": true,
+        "orange_mycelium": true,
+        "sparse_accents": true,
+        "pure_white_background": true,
+        "no_numeric_scores_or_dense_tables": true,
+        "semantic_constraints_satisfied": true
+      }
+    },
+    {
+      "id": "fig-02",
+      "theme": "Available weights do not equal commercial permission; open business route for 4B Apache2 and Baseten MIT, restricted H2O31B gate.",
+      "prompt": "source/20261024-decision-models-comparison/generated-assets/fig-02.prompt.txt",
+      "prompt_sha256": "bed1e6e1728367fc2efed3911cf0cad2068b92d0d024285a78a3c812762f351d",
+      "original": "source/20261024-decision-models-comparison/generated-assets/fig-02.original.png",
+      "original_sha256": "d21928f255f0af702e69e820fc2a0772e2e99e3ccf3fa80cf70d04a146b891e9",
+      "generation_source": "/Users/jason/.codex/generated_images/01a16e7f-4c91-7e83-94d2-2a1c31938cac/exec-48efeb12-ea6f-4a91-8f13-a29a8bee4478.png",
+      "final": "source/20261024-decision-models-comparison/generated-assets/fig-02.final.png",
+      "copied_to": "src/assets/images/decision-models-comparison-fig-02.png",
+      "final_sha256": "eebbf8449956d26a0fa04c2c32c950a77c900da1c14ca16a02d76a84c302c338",
+      "width": 1600,
+      "height": 900,
+      "aspect_ratio": "16:9",
+      "format": "PNG",
+      "bytes": 68186,
+      "exact_white_pixel_fraction": 0.903294,
+      "verified_labels": [
+        "4B Apache2",
+        "Baseten MIT",
+        "H2O31B",
+        "商用",
+        "非商业",
+        "非生产",
+        "权重可得 ≠ 商用许可"
+      ],
+      "visual_qa": {
+        "passed": true,
+        "inspected_original_and_compressed_final": true,
+        "legible_chinese": true,
+        "black_xiao_m_active_in_core_action": true,
+        "orange_mycelium": true,
+        "sparse_accents": true,
+        "pure_white_background": true,
+        "no_numeric_scores_or_dense_tables": true,
+        "semantic_constraints_satisfied": true
+      }
+    },
+    {
+      "id": "fig-03",
+      "theme": "Document to probabilities to threshold fork: automatic route or human review; probabilities are not a security boundary.",
+      "prompt": "source/20261024-decision-models-comparison/generated-assets/fig-03.prompt.txt",
+      "prompt_sha256": "162fd14d2700405d194f311ae81dd26d97d605ec27aaea5dad7f2fa50fb887d4",
+      "original": "source/20261024-decision-models-comparison/generated-assets/fig-03.original.png",
+      "original_sha256": "e18a93963506a07e471bfd847c7473e2a6fef129121736ab8d7893c8947555c8",
+      "generation_source": "/Users/jason/.codex/generated_images/01a16e7f-4c91-7e83-94d2-2a1c31938cac/exec-539ff09a-c15f-4130-b564-af951ad7e5d0.png",
+      "final": "source/20261024-decision-models-comparison/generated-assets/fig-03.final.png",
+      "copied_to": "src/assets/images/decision-models-comparison-fig-03.png",
+      "final_sha256": "9ba7f75b6157addbe0229e7ba2e7d7a64ff2d6078231eb5736fc9b5d6804cd9e",
+      "width": 1600,
+      "height": 900,
+      "aspect_ratio": "16:9",
+      "format": "PNG",
+      "bytes": 41491,
+      "exact_white_pixel_fraction": 0.947198,
+      "verified_labels": [
+        "概率",
+        "阈值",
+        "自动",
+        "人工复核",
+        "概率 ≠ 安全边界"
+      ],
+      "visual_qa": {
+        "passed": true,
+        "inspected_original_and_compressed_final": true,
+        "legible_chinese": true,
+        "black_xiao_m_active_in_core_action": true,
+        "orange_mycelium": true,
+        "sparse_accents": true,
+        "pure_white_background": true,
+        "no_numeric_scores_or_dense_tables": true,
+        "semantic_constraints_satisfied": true
+      }
+    }
+  ],
+  "task_constraints": [
+    "Task requested black mushroom cap and explicit output paths; these are execution constraints, not a claim of direct user wording."
+  ]
+}

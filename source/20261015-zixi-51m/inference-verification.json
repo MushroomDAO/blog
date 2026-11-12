@@ -1,0 +1,106 @@
+{
+  "sourceCommit": "2cfebd74b6b84db2f83a40604e3a11fcbb750cee",
+  "modelRevision": "3f66b777ff7d498310215939f98dd29598945d28",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.12.15",
+  "torch": "2.14.1",
+  "mpsAvailable": true,
+  "checkpointBytes": 206099369,
+  "checkpointSHA256": "c7f2bc2b76db9cb290631292a5518f058dcfa36d94078c2cacaea68669ff6fee",
+  "scope": "Actual local inference only, no training or listening/MOS/ASR quality evaluation; no speed benchmark.",
+  "runs": [
+    {
+      "device": "mps",
+      "samples": [
+        {
+          "text": "你好，世界。",
+          "file": "mps-sample-1.wav",
+          "sampleRate": 44100,
+          "channels": 1,
+          "subtype": "PCM_16",
+          "frames": 62621,
+          "durationSeconds": 1.4199773242630385,
+          "finite": true,
+          "nonSilent": true,
+          "peak": 0.397918701171875,
+          "bytes": 125286
+        },
+        {
+          "text": "这是一段本地语音合成测试。今天我们检查模型能否正常生成声音。",
+          "file": "mps-sample-2.wav",
+          "sampleRate": 44100,
+          "channels": 1,
+          "subtype": "PCM_16",
+          "frames": 269114,
+          "durationSeconds": 6.102358276643991,
+          "finite": true,
+          "nonSilent": true,
+          "peak": 0.47528076171875,
+          "bytes": 538272
+        }
+      ],
+      "parameters": 51433265,
+      "ok": true
+    },
+    {
+      "device": "cpu",
+      "samples": [
+        {
+          "text": "你好，世界。",
+          "file": "cpu-sample-1.wav",
+          "sampleRate": 44100,
+          "channels": 1,
+          "subtype": "PCM_16",
+          "frames": 62621,
+          "durationSeconds": 1.4199773242630385,
+          "finite": true,
+          "nonSilent": true,
+          "peak": 0.38104248046875,
+          "bytes": 125286
+        },
+        {
+          "text": "这是一段本地语音合成测试。今天我们检查模型能否正常生成声音。",
+          "file": "cpu-sample-2.wav",
+          "sampleRate": 44100,
+          "channels": 1,
+          "subtype": "PCM_16",
+          "frames": 270138,
+          "durationSeconds": 6.125578231292517,
+          "finite": true,
+          "nonSilent": true,
+          "peak": 0.447723388671875,
+          "bytes": 540320
+        }
+      ],
+      "parameters": 51433265,
+      "ok": true
+    }
+  ],
+  "hardware": {
+    "chip": "Apple M4",
+    "unifiedMemoryBytes": 17179869184
+  },
+  "dependencies": {
+    "torch": "2.14.1",
+    "torchaudio": "2.11.0",
+    "numpy": "2.5.4",
+    "soundfile": "0.14.0",
+    "numba": "0.68.0",
+    "pypinyin": "0.55.0",
+    "jieba": "0.42.1",
+    "huggingface-hub": "2.2.0",
+    "loguru": "0.7.3"
+  },
+  "mpsFallbackEnvironment": "unset",
+  "frontendTests": {
+    "passed": 9,
+    "warnings": 7,
+    "scope": "Upstream original text frontend tests; no voice quality assertions"
+  },
+  "cliHelp": {
+    "preprocess": "passed",
+    "trainInitial": "ModuleNotFoundError: loguru",
+    "trainAfterLocalLoguruInstall": "passed",
+    "trainingStepsRun": 0
+  }
+}

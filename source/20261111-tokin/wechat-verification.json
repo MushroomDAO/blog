@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-11T10:36:25.092Z",
+  "drafts": [
+    {
+      "slug": "tokin-token-native-agent-rl-gateway-guide",
+      "mediaId": "prCUE631thH1cmNLi42prMKUbv61X36MS3pXKjphFN5PxdK8LvZXc37MPHoBWLcw",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "2d8f595a47cec059215484b213c5ea018218204b97d8e38641706d62fd78061a",
+      "remoteTextHash": "2d8f595a47cec059215484b213c5ea018218204b97d8e38641706d62fd78061a",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/tokin-token-native-agent-rl-gateway-guide/",
+      "localContentHash": "0a660c039fb8d2baa102e6fe74ce7fb51f487eb1dd4b445b4e842d539a217b06",
+      "remoteContentHash": "8b926fb715533d992b074bee38ac0378ef726db4bbcd4e6a09f7422a7a2e54dc"
+    }
+  ]
+}

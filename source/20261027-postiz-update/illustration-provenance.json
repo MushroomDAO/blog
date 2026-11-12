@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "model": "Not exposed by tool",
+    "transparent_background": false
+  },
+  "skill": "/Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md",
+  "brief_source": "Blog-publisher delegated illustration brief for user-requested Postiz article update, 2026-10-27",
+  "external_visual_references": [],
+  "originals_preserved": true,
+  "assets": [
+    {
+      "id": "01",
+      "topic": "Postiz evidence timeline: a public open-source repository ALREADY existed in 2024, versus a later leaked-source rumor. A single long sparse horizontal orange timeline across middle. Left anchored marker labeled \"2024\" under a clearly OPEN repository archive box labeled \"公开开源\". Right later marker labeled \"后来\" under a tiny loose, tentative speech-paper slip bearing \"“源码泄露”传闻\" in blue, with a red small annotation \"待核实\". The verified 2024 repository archive is earlier on same line; later rumor must not visually turn the repository from closed to open. XiaoM (the mushroom, NOT a human) is actively unrolling an archive scroll out of the left box along the timeline, revealing its earlier timestamp, making chronology the core action. No humans, human portraits, silhouettes, villains, conspiracies, theft scenes, spies, accusation, proven-rumor checkmarks or specific later year. No headline. Only these five labels; preserve proper quotation marks around 源码泄露.",
+      "prompt_file": "source/20261027-postiz-update/illustration-prompts/fig-01.txt",
+      "original_file": "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-7107f366-6eee-481f-8628-b6cc2892d3fb.png",
+      "output_file": "src/assets/images/postiz-agentic-social-media-scheduling-open-source-fig-01.png",
+      "visual_review": {
+        "raw": "pass",
+        "final": "pass",
+        "method": "Direct visual inspection of each final compressed PNG with view_image",
+        "checked": [
+          "Chinese label spelling and readability",
+          "Current red cap white dots and pale stem XiaoM",
+          "XiaoM performs central action",
+          "White background and sparse annotations",
+          "Requested conceptual boundaries"
+        ],
+        "semantic_notes": "2024 public open-source archive precedes a later source-leak rumor marked 待核实; no humans or conspiracy claim.",
+        "reviewed_asset_sha256": "23e8f98d01dcbc14ae418bf777096e18e09466167cf0476fee3ee140812359de",
+        "reviewed_at_utc": "2026-10-27T16:56:19.297404+00:00"
+      },
+      "original_sha256": "2125d509bd94aa47edfba826d0627044285b28acfc982244da0023f742972f59",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "23e8f98d01dcbc14ae418bf777096e18e09466167cf0476fee3ee140812359de",
+      "bytes": 58564,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "aspect_ratio": "16:9",
+      "palette_colors_limit": 64,
+      "compression_command": [
+        "magick",
+        "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-7107f366-6eee-481f-8628-b6cc2892d3fb.png",
+        "-resize",
+        "1536x864",
+        "-background",
+        "white",
+        "-gravity",
+        "center",
+        "-extent",
+        "1536x864",
+        "-channel",
+        "RGB",
+        "-white-threshold",
+        "97%",
+        "+channel",
+        "-dither",
+        "None",
+        "-colors",
+        "64",
+        "-strip",
+        "-define",
+        "png:compression-level=9",
+        "PNG8:src/assets/images/postiz-agentic-social-media-scheduling-open-source-fig-01.compressing.png"
+      ],
+      "compression_note": "Lossy palette quantization and resize; near-white RGB channels normalized independently to retain pale stem color. Metadata stripped from delivery PNG. Original generated PNG retained.",
+      "prompt_sha256": "1da78dc9493164ba49202567239817da44637913aae21c862af7ce268d88ec0f",
+      "corner_pixels": "srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)",
+      "automated_checks": "pass"
+    },
+    {
+      "id": "02",
+      "topic": "Postiz content workflow with draft, explicit approval queue, platform-specific distribution, visible receipts and safe retry. A whimsical paper dispatch desk with XiaoM physically operating a manual approval gate. On left two draft slips labeled \"草稿\" stand in a short queue marked \"待审批\". XiaoM holds the gate at center; after it a small opening marked \"通过后\" leads to three differently shaped output cards (vertical post, square post, horizontal short text) grouped under label \"按平台分发\". To right of those three cards, each has its own attached tiny receipt, not detached decoration: two receipts have black check marks and one red failure cross, grouped under blue label \"逐条回执\". A small return tray connects ONLY the failed receipt/card back to XiaoM with one short orange return arrow. Near that tray legible two short caution labels \"先查回执\" in blue and \"仅补失败\" in red. Successful cards never re-enter retry, no blanket retry loops. No claim that retry is automatic or universally guaranteed. Make clearly understandable but sparse, no formal boxes or UI screenshot. Exactly seven labels specified; no platform logos or English platform names.",
+      "prompt_file": "source/20261027-postiz-update/illustration-prompts/fig-02.txt",
+      "original_file": "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-35402904-4451-4d9d-a3e9-ccd9f05f56d5.png",
+      "output_file": "src/assets/images/postiz-agentic-social-media-scheduling-open-source-fig-02.png",
+      "visual_review": {
+        "raw": "pass",
+        "final": "pass",
+        "method": "Direct visual inspection of each final compressed PNG with view_image",
+        "checked": [
+          "Chinese label spelling and readability",
+          "Current red cap white dots and pale stem XiaoM",
+          "XiaoM performs central action",
+          "White background and sparse annotations",
+          "Requested conceptual boundaries"
+        ],
+        "semantic_notes": "Drafts queue before approval; platform-specific outputs have individual receipts. Retry loop connects only the failed platform and its receipt, preserving successful outputs.",
+        "reviewed_asset_sha256": "24a3a36f207dc628b1c8723e69942517efa9598de616b1f5233ce3bb19800fd3",
+        "reviewed_at_utc": "2026-10-27T16:56:19.297652+00:00"
+      },
+      "edit_prompt_file": "source/20261027-postiz-update/illustration-prompts/fig-02-edit.txt",
+      "generation_history": [
+        {
+          "step": "initial_generation",
+          "file": "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-938f51a2-0b5e-4241-9f3d-67510cd3d6d4.png",
+          "sha256": "ae605548251c6f9d07b8fa114c4a9312ea69232e30fbd5dc1682300702028b1e"
+        },
+        {
+          "step": "targeted_edit",
+          "file": "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-35402904-4451-4d9d-a3e9-ccd9f05f56d5.png",
+          "reason": "Restrict retry loop to failed platform; keep successes out of retry.",
+          "sha256": "dcaee729886616e5e5830513867e027e9f99016f321814488f56dc98c0eb0358"
+        }
+      ],
+      "original_sha256": "dcaee729886616e5e5830513867e027e9f99016f321814488f56dc98c0eb0358",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "24a3a36f207dc628b1c8723e69942517efa9598de616b1f5233ce3bb19800fd3",
+      "bytes": 62766,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "aspect_ratio": "16:9",
+      "palette_colors_limit": 64,
+      "compression_command": [
+        "magick",
+        "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-35402904-4451-4d9d-a3e9-ccd9f05f56d5.png",
+        "-resize",
+        "1536x864",
+        "-background",
+        "white",
+        "-gravity",
+        "center",
+        "-extent",
+        "1536x864",
+        "-channel",
+        "RGB",
+        "-white-threshold",
+        "97%",
+        "+channel",
+        "-dither",
+        "None",
+        "-colors",
+        "64",
+        "-strip",
+        "-define",
+        "png:compression-level=9",
+        "PNG8:src/assets/images/postiz-agentic-social-media-scheduling-open-source-fig-02.compressing.png"
+      ],
+      "compression_note": "Lossy palette quantization and resize; near-white RGB channels normalized independently to retain pale stem color. Metadata stripped from delivery PNG. Original generated PNG retained.",
+      "prompt_sha256": "bed621d5261df006be39f436bb77a5d47de5b9a845edd129b104abe31531a3fd",
+      "corner_pixels": "srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)",
+      "automated_checks": "pass",
+      "edit_prompt_sha256": "80588a9517c68649c03e5c70e6cbc46814973111889cbe952f06ff708565b788"
+    },
+    {
+      "id": "03",
+      "topic": "Postiz self-hosting boundary still connects to external social APIs and optional AI providers. A single loose hand-drawn boundary enclosure at left/center, label \"自托管\" on its rim. Inside XiaoM actively winds a little scheduling spool, feeding a draft card into it; a small label \"内容与排程\" sits by spool. XiaoM must manipulate core spool. Two thin orange strands visibly cross the right boundary through clearly open holes. Main strand reaches three tiny external posting receptacles grouped at far right under \"社交平台 API\". Second strand branches upward to one spare external model vessel, labeled \"AI 服务（可选）\", with a small dashed optional segment (thin orange). One blue annotation \"外部服务\" between the external groups; tiny red circle marks a crossing point (no prohibition X), emphasizing actual boundary crossing. External items are visibly OUTSIDE the enclosure; AI is visibly optional; social API necessary for posting. Do not depict an air gap, all-local operation, locks, guaranteed privacy, no-network symbol, firewall security guarantee or all platforms working. Exactly five labels specified. Sparse absurd little scene, much open white space, not a dense network diagram.",
+      "prompt_file": "source/20261027-postiz-update/illustration-prompts/fig-03.txt",
+      "original_file": "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-b8b5f1da-c9ab-42d4-b894-2f9c7fbe34c6.png",
+      "output_file": "src/assets/images/postiz-agentic-social-media-scheduling-open-source-fig-03.png",
+      "visual_review": {
+        "raw": "pass",
+        "final": "pass",
+        "method": "Direct visual inspection of each final compressed PNG with view_image",
+        "checked": [
+          "Chinese label spelling and readability",
+          "Current red cap white dots and pale stem XiaoM",
+          "XiaoM performs central action",
+          "White background and sparse annotations",
+          "Requested conceptual boundaries"
+        ],
+        "semantic_notes": "Self-hosting enclosure contains scheduling work; social APIs remain external and the external AI branch is marked optional.",
+        "reviewed_asset_sha256": "0a7c21dd0c84dcec0963f4dbfbb5e3dc07e5608103b97e5f379cbe08bcc68b46",
+        "reviewed_at_utc": "2026-10-27T16:56:19.298456+00:00"
+      },
+      "edit_prompt_file": "source/20261027-postiz-update/illustration-prompts/fig-03-edit.txt",
+      "generation_history": [
+        {
+          "step": "initial_generation",
+          "file": "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-3526982c-cdfa-4c66-bf95-33c4dc193077.png",
+          "sha256": "c53b35c897a4d53b72d05fbd8b791000c12568790731b15ab327e0e5d53d7774"
+        },
+        {
+          "step": "targeted_edit",
+          "file": "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-b8b5f1da-c9ab-42d4-b894-2f9c7fbe34c6.png",
+          "reason": "Use generic external social receptacles and remove mascot drop shadow.",
+          "sha256": "f1b3758a0d462f92390a096a8a4a8e7799a9214f9c33c2ebdae14e3a83b7b7cc"
+        }
+      ],
+      "original_sha256": "f1b3758a0d462f92390a096a8a4a8e7799a9214f9c33c2ebdae14e3a83b7b7cc",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "0a7c21dd0c84dcec0963f4dbfbb5e3dc07e5608103b97e5f379cbe08bcc68b46",
+      "bytes": 66338,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "aspect_ratio": "16:9",
+      "palette_colors_limit": 64,
+      "compression_command": [
+        "magick",
+        "/Users/jason/.codex/generated_images/01a17e3e-ef08-75e3-a9c8-d6bafacdee98/exec-b8b5f1da-c9ab-42d4-b894-2f9c7fbe34c6.png",
+        "-resize",
+        "1536x864",
+        "-background",
+        "white",
+        "-gravity",
+        "center",
+        "-extent",
+        "1536x864",
+        "-channel",
+        "RGB",
+        "-white-threshold",
+        "97%",
+        "+channel",
+        "-dither",
+        "None",
+        "-colors",
+        "64",
+        "-strip",
+        "-define",
+        "png:compression-level=9",
+        "PNG8:src/assets/images/postiz-agentic-social-media-scheduling-open-source-fig-03.compressing.png"
+      ],
+      "compression_note": "Lossy palette quantization and resize; near-white RGB channels normalized independently to retain pale stem color. Metadata stripped from delivery PNG. Original generated PNG retained.",
+      "prompt_sha256": "9b6c4cbc8a75ca7eb5390967f7079ffeffdb0add0345a0c4be550cd8080c59af",
+      "corner_pixels": "srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)|srgb(255,255,255)",
+      "automated_checks": "pass",
+      "edit_prompt_sha256": "548a826e0e340b475372f2bd2f7bbfb6c8da9e15a3e69812135fd4d0ee0fa86f"
+    }
+  ],
+  "prepared_at_utc": "2026-10-27T16:55:24.759753+00:00",
+  "status": "complete; all three delivery assets visually inspected and validated"
+}

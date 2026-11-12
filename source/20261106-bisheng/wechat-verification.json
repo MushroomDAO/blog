@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-06T12:19:45.936Z",
+  "drafts": [
+    {
+      "slug": "bisheng-enterprise-agent-rag-workflow-deployment",
+      "mediaId": "prCUE631thH1cmNLi42prLdJb4W-8ajDV_HCRGWCZF1ldJKJMcNXRv45m9LxtDaT",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "5228dcdecef760f4a18265584aea8c0e4f4d3cf1214ea9cd12b2d75bc153be15",
+      "remoteTextHash": "5228dcdecef760f4a18265584aea8c0e4f4d3cf1214ea9cd12b2d75bc153be15",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/bisheng-enterprise-agent-rag-workflow-deployment/",
+      "localContentHash": "f33880b65916c2377e2e40f743f66ff2d17aab490fc184b77dec77566e400954",
+      "remoteContentHash": "e92d012537d1a906f28ce6cb00724048d1c98982d3fbd00e825c8bc828abdaf3"
+    }
+  ]
+}

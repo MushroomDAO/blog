@@ -1,0 +1,17 @@
+{
+  "title": "Halcyon文生图：275倍到底省在哪里",
+  "author": "Mycelium",
+  "digest": "论文证明文生图可跳过文本大模型预训练，但275倍不等于出图加速或显存降幅。",
+  "mediaId": "prCUE631thH1cmNLi42prB9u_NEqFhN5ZvWuIkEi1shP6U2xY8HauBfB6awvK9vu",
+  "blogUrl": "https://blog.mushroom.cv/blog/halcyon-without-language-pretraining/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/halcyon-without-language-pretraining/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/keshik6/halcyon",
+    "huggingface.co/collections/radicalnumerics",
+    "huggingface.co/radicalnumerics/halcyon-0.1b",
+    "huggingface.co/radicalnumerics/halcyon-tokenizers",
+    "github.com/keshik6/halcyon.git"
+  ],
+  "publishedAt": "2026-10-31T17:00:14.411Z"
+}

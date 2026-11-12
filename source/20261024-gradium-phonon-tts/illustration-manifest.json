@@ -1,0 +1,173 @@
+{
+  "article": "src/content/blog/gradium-phonon-local-tts.md",
+  "generation_tool": "built-in image_gen.imagegen",
+  "figure_count": 3,
+  "style_override": "User requested black XiaoM; overrides default red-cap skill reference.",
+  "processing": "Pillow white contain-fit (no cropping), near-white cleanup, palette quantization with reserved red/orange/blue colors; no dithering.",
+  "pillow_version": "12.3.0",
+  "reserved_palette_entries": {
+    "white": [
+      255,
+      255,
+      255
+    ],
+    "black": [
+      0,
+      0,
+      0
+    ],
+    "red": [
+      217,
+      72,
+      65
+    ],
+    "orange": [
+      237,
+      138,
+      35
+    ],
+    "blue": [
+      57,
+      123,
+      184
+    ]
+  },
+  "unchanged_files_sha256": {
+    "src/content/blog/gradium-phonon-local-tts.md": "dde2f19eed064c19cf8d4de8e7ed143d58662099f1bb4b707ada60401c52d446",
+    "src/assets/images/gradium-phonon-local-tts-banner.jpg": "077a797721f6775a199696dfc1286103ce7ad2dee7a4425721547ecf8bb06a40"
+  },
+  "figures": [
+    {
+      "figure": 1,
+      "original": "source/20261024-gradium-phonon-tts/generated-assets/fig-01-original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1271620,
+      "original_sha256": "a99ca0f78a2c614fcb3b47cb739dce793da69ba11781c0d38ae01676a4a39059",
+      "prompt": "source/20261024-gradium-phonon-tts/generated-assets/fig-01-prompt.txt",
+      "prompt_sha256": "818206c0871202200adb2ca5f77b3f9ee85e68e12e59de5f83d6ea567700c916",
+      "final": "src/assets/images/gradium-phonon-local-tts-fig-01.png",
+      "archived_final": "source/20261024-gradium-phonon-tts/generated-assets/fig-01-final.png",
+      "final_sha256": "72b90d316cfc66c51bc4a25aca420406637328269b3b6fdcfae6c0df9a825582",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 72644,
+      "mode": "P",
+      "used_palette_colors": 103,
+      "accent_pixel_counts": {
+        "red": 1201,
+        "orange": 1784,
+        "blue": 530
+      },
+      "compression_candidates": [
+        {
+          "width": 1280,
+          "height": 720,
+          "palette_budget": 128,
+          "bytes": 72644
+        }
+      ],
+      "original_visually_inspected": true,
+      "final_visually_inspected": true,
+      "visual_qa": "Read both originals and final: 31M English has its own Apache-2.0 tag; all 40M language-specific and multilingual weights share a CC BY-NC 4.0 noncommercial tag. No runtime-license override is suggested.",
+      "verified_white_background_rgb": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "figure": 2,
+      "original": "source/20261024-gradium-phonon-tts/generated-assets/fig-02-original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1168874,
+      "original_sha256": "474f8bcd2c4c1fcd619ee20b426c25f0182d32ac24539a7f07f416097f797b0d",
+      "prompt": "source/20261024-gradium-phonon-tts/generated-assets/fig-02-prompt.txt",
+      "prompt_sha256": "3dc5298ffd9718d47ac177ce4fd282128b6ff446cb3172b510b120737552d22d",
+      "final": "src/assets/images/gradium-phonon-local-tts-fig-02.png",
+      "archived_final": "source/20261024-gradium-phonon-tts/generated-assets/fig-02-final.png",
+      "final_sha256": "964b76a3660809f395fc3033ef70e6ee736726190c1b903f1e2192a2ee65585b",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 61787,
+      "mode": "P",
+      "used_palette_colors": 112,
+      "accent_pixel_counts": {
+        "red": 5,
+        "orange": 2357,
+        "blue": 1934
+      },
+      "compression_candidates": [
+        {
+          "width": 1280,
+          "height": 720,
+          "palette_budget": 128,
+          "bytes": 61787
+        }
+      ],
+      "original_visually_inspected": true,
+      "final_visually_inspected": true,
+      "visual_qa": "Read both originals and final: loading and voice preparation precede first-audio timing; first audio precedes playback buffering and playback. No numeric latency or speed claims.",
+      "verified_white_background_rgb": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "figure": 3,
+      "original": "source/20261024-gradium-phonon-tts/generated-assets/fig-03-original.png",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "original_bytes": 1169488,
+      "original_sha256": "3acf24d7ae193fa8bb3e9cf0ce951e9668f9cb6ac3c2b52ab2a37642786105ce",
+      "prompt": "source/20261024-gradium-phonon-tts/generated-assets/fig-03-prompt.txt",
+      "prompt_sha256": "c545f41f01e0459404f22b1e53b33402589dd5ef6897577170a29a83e11e70cd",
+      "final": "src/assets/images/gradium-phonon-local-tts-fig-03.png",
+      "archived_final": "source/20261024-gradium-phonon-tts/generated-assets/fig-03-final.png",
+      "final_sha256": "9d09da3cbb7e0dd02665fbf1d326cf44bfa9e2bba7e748a4f33819c2ab69eb60",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 60989,
+      "mode": "P",
+      "used_palette_colors": 106,
+      "accent_pixel_counts": {
+        "red": 2317,
+        "orange": 2376,
+        "blue": 1905
+      },
+      "compression_candidates": [
+        {
+          "width": 1280,
+          "height": 720,
+          "palette_budget": 128,
+          "bytes": 60989
+        }
+      ],
+      "original_visually_inspected": true,
+      "final_visually_inspected": true,
+      "visual_qa": "Read both originals and final: online voice creation/download ends at a prior-preparation handoff; networking is denied at the separate synthesis barrier, with local model, tokenizer, voice files and WAV all inside.",
+      "verified_white_background_rgb": [
+        255,
+        255,
+        255
+      ]
+    }
+  ],
+  "generation_calls": 3,
+  "generation_provenance": "source/20261024-gradium-phonon-tts/generated-assets/generation-provenance.json",
+  "qa_status": "All three originals and all three final images visually inspected. Exact 16:9, byte limits, reserved palette colors, white background, file copies and protected-file hashes verified."
+}

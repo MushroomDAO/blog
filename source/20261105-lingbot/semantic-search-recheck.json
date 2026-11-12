@@ -1,0 +1,87 @@
+{
+  "query": "LingBot Vision Small 21,601,152 CPU 9仓库 World2 非商业许可",
+  "response": {
+    "results": [
+      {
+        "article_id": "lingbot-open-model-family-repositories-ecosystem-review",
+        "title": "LingBot开源模型地图：9个仓库、海外复用与上手路线",
+        "url": "/blog/lingbot-open-model-family-repositories-ecosystem-review/",
+        "language": "zh",
+        "excerpt": "LingBot开源模型地图：9个仓库、海外复用与上手路线 LingBot是灵波科技覆盖视觉、深度、三维重建、VLA、视频动作与世界生成的模型家族。本文逐一介绍9个仓库，核对斯坦福OpenWAM、FastOPD、LeRobot和timm的复用证据，澄清35.3%到51.2%的评测含义与World2.0非商业许可，并报告本机CPU加载VisionSmall权重的结果和部署边界。 LingBot 具身智能 机器人 世界模型 开源模型 先看完整地图：七类能力，九个仓库 视觉、深度与地图：先解决“看到了什么” VLA 与 VA：动作策略和未来预测有什么区别？ Wo",
+        "score": 0.670846
+      },
+      {
+        "article_id": "qwen-image-2-1-dit-rgba-local-deploy-guide",
+        "title": "Qwen-Image-2.1 Engineering Guide: 7B DiT with Native RGBA — Alibaba's Open Image Generation Model",
+        "url": "/blog/qwen-image-2-1-dit-rgba-local-deploy-guide/",
+        "language": "en",
+        "excerpt": "Qwen-Image-2.1 Engineering Guide: 7B DiT with Native RGBA — Alibaba's Open Image Generation Model Alibaba Qwen team open-sourced 2026-09-20. 7.1B 32-layer Block-Causal DiT + Qwen3-VL-8B text encoder + 64-channel RGBA VAE, ~15B total. Native transparency layers, multi-reference up",
+        "score": 0.5992054
+      },
+      {
+        "article_id": "mellum21-thinking-coding-agent",
+        "title": "Mellum2.1：把小模型训练成仓库里的执行者",
+        "url": "/blog/mellum21-thinking-coding-agent/",
+        "language": "zh",
+        "excerpt": "Mellum2.1：把小模型训练成仓库里的执行者 JetBrains Mellum2.1 Thinking 是总参数 12B、激活参数 2.5B 的代码模型。复核 ModelScope、官方模型卡和 GGUF 文件，分析仓库强化学习、工具调用成绩及部署路线，区分 H200 速度与本地运行条件，说明激活参数与内存需求的区别，以及先验证工具协议再尝试仓库修复的方法。 JetBrains Mellum Coding-Agent MoE GGUF Local-AI Mellum2.1 改变了什么？ 官方成绩说明了什么，也留下了什么？ 2.5B 激活参数，为什么文",
+        "score": 0.58106756
+      },
+      {
+        "article_id": "vocalcode-community-cpu-local-dictation-meeting-notes",
+        "title": "VocalCode Community：CPU 优先的本地听写与会议记录，不上云不激活",
+        "url": "/blog/vocalcode-community-cpu-local-dictation-meeting-notes/",
+        "language": "zh",
+        "excerpt": "VocalCode Community：CPU 优先的本地听写与会议记录，不上云不激活 VocalCode Community，AGPL-3.0，Rust + sherpa-onnx。本地优先的听写与会议记录工具，2026-09-22 开源。Parakeet TDT v3 + Paraformer 双模型，CPU 跑，Apple Silicon 和 Windows x64 双平台。社区版无需账号、无需激活码，所有语音处理本机完成，录音和转录不上传。作者 Daming Wu 用自己的工具给 Claude Code、Cursor 口述提示词，顺便做成了产品开",
+        "score": 0.5577392
+      },
+      {
+        "article_id": "airllm-70b-inference-4gb-gpu-layer-streaming",
+        "title": "AirLLM：4GB 显存跑 70B 大模型，无需量化",
+        "url": "/blog/airllm-70b-inference-4gb-gpu-layer-streaming/",
+        "language": "zh",
+        "excerpt": "AirLLM：4GB 显存跑 70B 大模型，无需量化 lyogavin 开源的大模型极限推理工具，30k stars，Apache 2.0。通过逐层流式加载，在单张 4GB 显卡上运行 70B 模型，无需量化/蒸馏/剪枝。Kimi K3（2.8T）3.72GB、DeepSeek-V3（671B）约 12GB、Qwen3-235B 约 3GB。v3.0 新增 FP8 支持。支持 CUDA、Apple Silicon（macOS），同一 AutoModel 接口覆盖所有主流模型。 本地推理 大模型 显存优化 AppleSilicon DeepSeek Qw",
+        "score": 0.5566907
+      },
+      {
+        "article_id": "voicestudio-local-elevenlabs-alternative-tts",
+        "title": "VoiceStudio: 24.8K-Star Local ElevenLabs Alternative Running 16 TTS Engines on Your Machine",
+        "url": "/blog/voicestudio-local-elevenlabs-alternative-tts/",
+        "language": "en",
+        "excerpt": "VoiceStudio: 24.8K-Star Local ElevenLabs Alternative Running 16 TTS Engines on Your Machine AGPL-3.0, no account no subscription no metering, 646 languages, voice cloning from 3 seconds, video dubbing, audiobooks, MCP Server all included — one of the most complete local voice AI ",
+        "score": 0.556285
+      },
+      {
+        "article_id": "gemma4-12b-encoder-free-multimodal-audio-video-understanding",
+        "title": "Gemma 4 12B：无编码器多模态，原生音视频理解，16GB 笔记本可跑",
+        "url": "/blog/gemma4-12b-encoder-free-multimodal-audio-video-understanding/",
+        "language": "zh",
+        "excerpt": "Gemma 4 12B：无编码器多模态，原生音视频理解，16GB 笔记本可跑 Google DeepMind 发布 Gemma 4 12B Unified——首个中等规模无编码器多模态开源模型，原生支持文本、图像、音频、视频四模态输入，256K 上下文，GPQA Diamond 78.8%，16GB 显存即可本地运行，Apache 2.0 开源。 Gemma Google DeepMind 多模态 音频理解 视频理解 开源模型 本地部署 LLM 第一个原生四模态中等规模开源模型 核心架构：为什么去掉编码器 音频理解能力 视频理解能力 主要基准评测 模型系",
+        "score": 0.5545968
+      },
+      {
+        "article_id": "wemm-embedding-tencent-multimodal-mrl",
+        "title": "WeMM-Embedding-9B: Tencent's Unified Multimodal Embedding Beats Qwen3-VL-Embedding at Every Size",
+        "url": "/blog/wemm-embedding-tencent-multimodal-mrl/",
+        "language": "en",
+        "excerpt": "WeMM-Embedding-9B: Tencent's Unified Multimodal Embedding Beats Qwen3-VL-Embedding at Every Size Tencent WeChat Vision Team's open-source multimodal embedding model, built on Qwen3.5-9B, maps text, images, video, and visual documents into one 4096-dim vector space with Matryoshka",
+        "score": 0.5505686
+      },
+      {
+        "article_id": "lfm2-5-230m-small-model-developer",
+        "title": "LFM2.5-230M 开发者探索指南：213 tok/s 的小模型，普通人能做什么？",
+        "url": "/blog/lfm2-5-230m-small-model-developer/",
+        "language": "zh",
+        "excerpt": "LFM2.5-230M 开发者探索指南：213 tok/s 的小模型，普通人能做什么？ Liquid AI 开源的 LFM2.5-230M 在手机 CPU 上跑出 213 tok/s，Raspberry Pi 上 42 tok/s，支持 32K 上下文和 Tool Use。本文从 6 个方向拆解普通开发者可以用它做什么：端侧 Agent、浏览器推理、Android App、低成本微调、IoT 部署和多 Agent 协作。 小模型 边缘AI LFM2.5 Liquid AI 端侧推理 开发者指南 一、先搞清楚：这个小模型为什么值得关注？ 为什么 Liqui",
+        "score": 0.5502742
+      },
+      {
+        "article_id": "sensenova-vision-unified-cv-hardware-guide",
+        "title": "SenseNova-Vision：一个7B模型做完所有CV任务，需要什么硬件？",
+        "url": "/blog/sensenova-vision-unified-cv-hardware-guide/",
+        "language": "zh",
+        "excerpt": "SenseNova-Vision：一个7B模型做完所有CV任务，需要什么硬件？ SenseNova-Vision-7B-MoT 把目标检测、深度估计、分割、3D重建等所有CV任务统一成一个生成模型。Web Demo跑起来需要1张80GB显卡，完整benchmark需要8张80GB，训练至少2台8×80GB机器。详细硬件配置指南。 计算机视觉 多模态 AI模型 GPU 硬件 深度估计 目标检测 分割 开源 一、一个模型，所有计算机视觉任务 二、硬件需求：不同使用场景的配置要求 场景 1：单图推理（本地测试） 场景 2：Web Demo（Gradio 界面）",
+        "score": 0.54997975
+      }
+    ]
+  }
+}

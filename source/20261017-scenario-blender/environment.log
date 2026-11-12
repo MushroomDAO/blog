@@ -1,0 +1,2 @@
+error: No solution found when resolving tool dependencies
+  cause: Because uv was not found in the package registry and you require uv==0.9.26, we can conclude that your requirements are unsatisfiable.

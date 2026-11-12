@@ -1,0 +1,65 @@
+{
+  "task": "f093c958-c3d9-47b5-b0d1-df492ab6e7b1",
+  "checkedAt": "2026-10-16",
+  "slug": "harborrl-agentic-rl-pipeline",
+  "source": "https://github.com/datamllab/HarborRL",
+  "pin": "128d4d67916340db01e3a8ea828451e805ea154b",
+  "dedup": "Only currentbotrawmaterialexactURL/entity; no sameBlog/localM2/currentdraft. RawKBreused",
+  "publishedApiGap": "48001 unauthorized",
+  "fetch": "agentreachunavailable; Jina403; officialraw and gitclone successful",
+  "version": "0.1.0/MIT",
+  "nativeBoundary": {
+    "algorithmMap": [
+      "grpo"
+    ],
+    "configRequires": [
+      "harbor_job",
+      "claude_code",
+      "Harbor0.23.0"
+    ],
+    "cliProbes": "dapo/codex dryrun both rejected exit2",
+    "models": "Slime args preset andactor/reference, Qwen3-8Bsample; no full modelmatrixproof"
+  },
+  "authorSnapshotCounts": {
+    "datasets_scanned": 303,
+    "static_compatible_datasets": 183,
+    "dynamic_verified_datasets": 50,
+    "static_only_representatives": 133,
+    "static_compatible_task_memberships": 524391,
+    "static_compatible_unique_content_digests": 524416,
+    "dynamic_verified_dataset_task_pairs": 210,
+    "dynamic_verified_unique_content_digests": 203
+  },
+  "snapshotScope": "2026-09-18; staticformat vs dynamicmaterialization/reward notRLtraining. Staticmembership524391 vsuniquedigest524416notusedinarticle, countsemanticsneedclarification",
+  "validation": {
+    "host": "M4/16GB/macOS26.6.2/Python3.12 alternatevenv",
+    "originalLockCheck": "passed",
+    "originalSyncDryRun": "resolved",
+    "originalSync": "failedDNS mirrorhost",
+    "resolution": "PublicPyPIinstalledversionsconstrainedtounmodifieduvlock; no sourcechanges",
+    "upstreamTests": 89,
+    "passed": 89,
+    "offlineSmoke": "syntheticreward0/1; oppositegroupadvantages/unitbatchweight; mocksnotgradients",
+    "taskInspect": "hello_world NEEDS_PROBE,evaluablefalse/trainablefalse",
+    "acceptanceScope": "CPUdevelopmentcheckswithalternateinstallation; notdeploymentpreflight/training",
+    "notTested": [
+      "Docker/nativeHarborexecution",
+      "modelgateway",
+      "Slime/Megatron/SGLanginstallation",
+      "GPUtraining",
+      "crossmachinereadiness",
+      "realverifierreward",
+      "convergence"
+    ]
+  },
+  "saved_files": [
+    "/Users/jason/.heinu1-bot/media/harborrl-official-title.jpg"
+  ],
+  "banner": {
+    "sourceRejected": "Officialhero dominatedbylogo/text",
+    "method": "localFLUX128",
+    "rootVisual": "passed,unmarkedmodularmetalpieces/copperloop/gear,no text/faces",
+    "bytes": 85648
+  },
+  "illustrations": "3independentXiaoM,rootvisualpassed,1280x720/45710,82283,32288B;6bilingualrefs"
+}

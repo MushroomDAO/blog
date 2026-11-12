@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-22",
+  "pins": {
+    "onetake": {
+      "repo": "feitangyuan/onetake",
+      "pin": "013a61ac8d98883c73733f59c06e49e9ba444f14",
+      "defaultBranch": "main",
+      "stars": 2847,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "homepage": "https://onetakemotion.com"
+    },
+    "ondine": {
+      "repo": "wevm/ondine",
+      "pin": "0b589ec34481856b4153526f10a0a35558a201a8",
+      "defaultBranch": "main",
+      "stars": 354,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "homepage": "https://ondine.sh"
+    },
+    "live-panel-skill": {
+      "repo": "ythx-101/live-panel-skill",
+      "pin": "439c9addce7e7ac2b4e384aa847a351926c8f945",
+      "defaultBranch": "main",
+      "stars": 791,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "homepage": null
+    },
+    "awesome-animation-datasets": {
+      "repo": "Shimingyi/awesome-animation-datasets",
+      "pin": "4d4abf35b33f2b5a429671b668d83d9973da1750",
+      "defaultBranch": "main",
+      "stars": 36,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "homepage": "https://huggingface.co/spaces/myshi/motion-viewer"
+    }
+  },
+  "sourceHashes": {
+    "ondine-Cargo.toml": "e929592068b08c32e5230679d3116e3ddbc4118f35fe813aa73ea6d511a24401",
+    "awesome-animation-datasets-README.md": "605afb0e1d08c4a6d7e6c7936a471d7d9021aebf5b5918eb565d2bf9d405846d",
+    "ondine-bench-comparison.md": "67181b36cd937d5551cee007d3b477e17d711d4e51c39ef4cb5d589298c68b88",
+    "awesome-animation-datasets-docs-assets-quality.json": "8a045adfc492fdb9fc4e92f305f83ab1e07bb6714d8b2c46cf7dd9304d14130a",
+    "onetake-cases-clawd-desktop-19s-README.md": "822d4957a921930d3bc222211b9ba6f70d1f21b1a142dbadc49caa510e3928e3",
+    "ondine-README.md": "ce0ba4ee82f328478b34b14eb0690232b38f6b06beee4b346cfba1bd33e85aeb",
+    "awesome-animation-datasets-data-SCHEMA.md": "81022a99abe21fd8b16305cd772d4671210fdce85620005182c9a6925c331bb3",
+    "awesome-animation-datasets-LICENSE": "211781080f81bf52dc969e23f0637c3de81a20fd2ca0a879ab0f978310ac49a3",
+    "live-panel-skill-scripts-render.py": "541f4be98df54db61522f017128613be50bbbc15c340f75f3d358ac77dc62737",
+    "live-panel-skill-LICENSE": "d9a271454ec62391b2b304fba4c45068887fd7ef1a872dca544c6938ef7fef2b",
+    "onetake-README.md": "15cd01ca661f7a680536997c9fa6340f74287f5917a9e7c2e16de9c5fafe36cf",
+    "live-panel-skill-tests-test_cycle_replay.py": "ba87e82757ce097c3b99f0ffe99931531174924410e5b2842325784f6f232498",
+    "live-panel-skill-README.md": "3d713362484da34bf0bf8eed1b61a14f8c999a81c557949d73512036773c3364",
+    "onetake-LICENSE": "1f7a4f2449fb543769568a4f0e6e2c622bf28e841fde09a4b6819dcaa4567412"
+  },
+  "verificationScope": {
+    "onetake": "official19secondcase reviewed; composition/model/sound source excluded; no20yuan cost receipt; prior test58notrerun",
+    "ondine": "docs and detailed benchmark source review; no performance or visual-comparison reproduction; README210B vsreport127B mounting-artifact discrepancy kept explicit",
+    "live-panel": "Pinned original three browser regressions PASS; minimal configuration 124 time points zero problems; four replay comparisons zero pixels; two-second12fps600x750H26424frameAAC short render; root visually reviewed smoke frame. No performance or all-example claim.",
+    "motion": "publishedqualityJSON45datasets9thresholds; staticappHTTP200controls; no playbackallassets or metrics recomputation"
+  },
+  "fetchFallback": {
+    "agentReach": "Not installed after searching skill roots and CLI",
+    "jinaGitHub": "403; pinned GitHub raw/API successful",
+    "jinaHF": "Space shell only; directstaticappfetched200"
+  },
+  "bannerDecision": "officialdiagram/textheavyheroes not adopted; newFLUX158/159/160 concepts, originalonetake matched banner reused",
+  "motionQualityCounts": {
+    "datasets": 45,
+    "thresholds": 9,
+    "windows": 100,
+    "share": 0.25
+  },
+  "rootVisualReview": {
+    "covers": 4,
+    "newBodyFigures": 9,
+    "reusedBodyFigures": 3,
+    "smokeFrame": true
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "attempts": [
+    {
+      "checkedAt": "2026-10-26T00:54:16.926716+00:00",
+      "query": "PageSift Rust crawler bounded frontier useful Markdown benchmark",
+      "matched": [
+        {
+          "article_id": "pagesift-rust-crawler",
+          "title": "PageSift: A Rust Crawler for AI, Beyond the Headlines",
+          "url": "/blog/pagesift-rust-crawler/",
+          "language": "en",
+          "excerpt": "PageSift: A Rust Crawler for AI, Beyond the Headlines PageSift offers Rust crawling and content extraction for AI. We audit benchmark denominators, SDK versions and deployment, with a Python smoke test on a Mac. PageSift Rust 爬虫 数据提取 RAG 开源工具 Where does PageSift fit? Why bounded ",
+          "score": 0.614026
+        }
+      ]
+    }
+  ],
+  "matched": [
+    {
+      "article_id": "pagesift-rust-crawler",
+      "title": "PageSift: A Rust Crawler for AI, Beyond the Headlines",
+      "url": "/blog/pagesift-rust-crawler/",
+      "language": "en",
+      "excerpt": "PageSift: A Rust Crawler for AI, Beyond the Headlines PageSift offers Rust crawling and content extraction for AI. We audit benchmark denominators, SDK versions and deployment, with a Python smoke test on a Mac. PageSift Rust 爬虫 数据提取 RAG 开源工具 Where does PageSift fit? Why bounded ",
+      "score": 0.614026
+    }
+  ],
+  "response": {
+    "results": [
+      {
+        "article_id": "pagesift-rust-crawler",
+        "title": "PageSift: A Rust Crawler for AI, Beyond the Headlines",
+        "url": "/blog/pagesift-rust-crawler/",
+        "language": "en",
+        "excerpt": "PageSift: A Rust Crawler for AI, Beyond the Headlines PageSift offers Rust crawling and content extraction for AI. We audit benchmark denominators, SDK versions and deployment, with a Python smoke test on a Mac. PageSift Rust 爬虫 数据提取 RAG 开源工具 Where does PageSift fit? Why bounded ",
+        "score": 0.614026
+      },
+      {
+        "article_id": "webclaw-rust-web-scraper-llm-guide",
+        "title": "Webclaw 开发者使用指南：用 Rust 爬虫给 AI 喂干净的 Markdown",
+        "url": "/blog/webclaw-rust-web-scraper-llm-guide/",
+        "language": "zh",
+        "excerpt": "Webclaw 开发者使用指南：用 Rust 爬虫给 AI 喂干净的 Markdown Webclaw 是一款 Rust 编写的本地优先网页内容提取工具，MCP 一键接入 Claude/Cursor，自动去噪输出 LLM 专用 Markdown，支持单页抓取、全站爬虫、批量爬取、页面对比、品牌元素提取，AGPL-3.0 开源，1500+ Stars。 网页抓取 MCP Claude Code Rust RAG LLM工具 开源工具 AI Agent 为什么网页内容对 LLM 来说这么\"脏\"？ 快速安装 方式一：MCP 客户端一键配置（推荐） 方式二：Ho",
+        "score": 0.53784895
+      },
+      {
+        "article_id": "agentsight-ebpf-boundary-tracing-ai-agent-observability",
+        "title": "AgentSight：用 eBPF 从系统边界看 AI Agent 到底干了什么，不用装 SDK 也不用挂代理",
+        "url": "/blog/agentsight-ebpf-boundary-tracing-ai-agent-observability/",
+        "language": "zh",
+        "excerpt": "AgentSight：用 eBPF 从系统边界看 AI Agent 到底干了什么，不用装 SDK 也不用挂代理 eunomia-bpf 开源的 AI Agent 系统级可观测性工具，669 stars，MIT，Rust + C。核心是「边界追踪」（boundary tracing）：在 SSL/TLS 调用处截获 LLM 明文流量拿到语义意图，同时用 eBPF 抓内核事件看真实副作用，再把两条流按因果关联起来。不需要 SDK、不需要网关代理、闭源 CLI 也能观测，论文实测开销低于 3%。已发表于 arXiv:2508.02736 并有 ACM DOI。",
+        "score": 0.5374491
+      },
+      {
+        "article_id": "frontis-ma1-openrsi-ai4ai-recursive-self-improvement-mle",
+        "title": "Frontis-MA1：清华 + Horizon Research 开源 AI 改进 AI 的全套配方，35B 单卡超 GPT-5.5",
+        "url": "/blog/frontis-ma1-openrsi-ai4ai-recursive-self-improvement-mle/",
+        "language": "zh",
+        "excerpt": "Frontis-MA1：清华 + Horizon Research 开源 AI 改进 AI 的全套配方，35B 单卡超 GPT-5.5 FrontisAI/OpenRSI 是 Frontis.AI + 清华大学的 AI4AI 开源框架。核心是 Frontis-MA1（35B/30B），通过四个可训练原子算子（Draft/Improve/Debug/Crossover）+ OpenMLE 全栈，在 MLE-Bench Lite 单卡 12h 达到 71.21% Medal Average，超越 GPT-5.5 + Codex。CC BY-NC 4.0，模型",
+        "score": 0.50987786
+      },
+      {
+        "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+        "title": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime",
+        "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+        "language": "en",
+        "excerpt": "ADK-Rust: 43 Composable Crates, a Community-Built Rust Agent Runtime ADK-Rust v2.2.0 by zavora-ai — not a Google official project, but splits the agent runtime into 43 independently publishable crates. Type-safe, fully async, 568 μs agent loop overhead. Supports Gemini/OpenAI/Ant",
+        "score": 0.50658745
+      },
+      {
+        "article_id": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+        "title": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+        "url": "/blog/penguin-harness-self-evolving-agent-builder-skills-benchmark/",
+        "language": "en",
+        "excerpt": "penguin-harness-self-evolving-agent-builder-skills-benchmark Prism-Shadow/penguin-harness, 1140 stars, Apache-2.0, TypeScript. A new project by LlamaFactory author Yaowei Zheng, open-sourced 2026-07-19. Automated agent builder platform: one sentence builds a complete agent app ($",
+        "score": 0.5022612
+      },
+      {
+        "article_id": "crawl4ai-open-source-llm-web-crawler-scraper-guide",
+        "title": "crawl4ai-open-source-llm-web-crawler-scraper-guide",
+        "url": "/blog/crawl4ai-open-source-llm-web-crawler-scraper-guide/",
+        "language": "en",
+        "excerpt": "crawl4ai-open-source-llm-web-crawler-scraper-guide unclecode/crawl4ai, 77.6k stars, Apache 2.0, Python, GitHub's #1 open-source crawler. Designed for LLMs and AI agents: outputs clean Markdown directly, supports JS-rendered pages, deep crawl (BFS/DFS), session reuse, proxies, CSS",
+        "score": 0.49869734
+      },
+      {
+        "article_id": "cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt",
+        "title": "cloudflare/security-audit-skill：20 个 Markdown 文件怎么成了 Cloudflare 内部漏洞扫描器",
+        "url": "/blog/cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt/",
+        "language": "zh",
+        "excerpt": "cloudflare/security-audit-skill：20 个 Markdown 文件怎么成了 Cloudflare 内部漏洞扫描器 Cloudflare 开源安全审计 Skill，MIT，22K 星。本质是 ~300KB 结构化提示词，六阶段对抗验证流程，发现者不验证自己的漏洞，覆盖 13 个攻击域含 AI/LLM 安全。内部 Project Glasswing：145 仓库，30K 行代码约 80 个 bug，14 小时完成。 安全 AI Agent Claude Code Cloudflare 漏洞扫描 开源拆解 项目背景 第一个反直觉结",
+        "score": 0.4986787
+      },
+      {
+        "article_id": "pageindex-vectorless-reasoning-rag",
+        "title": "PageIndex：不用向量库的 RAG，3.5 万星背后是真突破还是换了个地方花钱",
+        "url": "/blog/pageindex-vectorless-reasoning-rag/",
+        "language": "zh",
+        "excerpt": "PageIndex：不用向量库的 RAG，3.5 万星背后是真突破还是换了个地方花钱 调研 PageIndex（VectifyAI）：用文档结构生成的树索引替代向量库，靠 LLM 在树上推理检索，而不是靠向量相似度匹配。核心主张是「相似度不等于相关性」，在 FinanceBench 上跑出 98.7% 准确率（自家基准，vs 向量 RAG 约 50%）。项目 35354 星、3115 fork、MIT 协议，一年内从 Show HN 冷启动到现在还在周更。但去年那条 HN 讨论（192 赞）里技术圈的质疑也很实在：树结构规模上不去、检索延迟从毫秒级变成秒",
+        "score": 0.49544147
+      },
+      {
+        "article_id": "spun-hidden-infrastructure",
+        "title": "SPUN 地下菌网地图：看见菌丝，也看清估算边界",
+        "url": "/blog/spun-hidden-infrastructure/",
+        "language": "zh",
+        "excerpt": "SPUN 地下菌网地图：看见菌丝，也看清估算边界 SPUN 的 A Hidden Infrastructure 将地下丛枝菌根真菌的菌丝密度绘成全球交互地图。本文结合网站叙事、作者公开存档稿与浏览器核验，解释超过1.6万份土芯、显微成像和机器学习如何形成预测，核对约11亿亿公里菌丝与3亿吨碳生物量的口径，并指出土层深度差异、采样不确定性及保护草地的启示。 SPUN Mycorrhizal Fungi Soil Carbon Cycle Data Visualization Machine Learning 地图究竟画了什么？ 1.6 万份样本如何变成全球",
+        "score": 0.49350613
+      }
+    ]
+  }
+}

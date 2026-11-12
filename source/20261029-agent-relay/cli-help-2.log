@@ -1,0 +1,7 @@
+Usage: agent-relay mcp [options]
+
+Run the Agent Relay MCP stdio server
+
+Options:
+  --sessions-only  Expose only Cloud shared-session tools
+  -h, --help       display help for command
