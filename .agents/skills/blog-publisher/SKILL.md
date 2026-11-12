@@ -424,7 +424,7 @@ Minimum checks:
 
 ### 5. Build Once
 
-**必须在 main 分支**，且必须先同步远程最新代码以包含全量历史文章与 Cloudflare Pages Functions (`functions/ethereum`, `functions/agent`)：
+**必须在 main 分支**，且必须先同步远程最新代码以包含全量历史文章与 Cloudflare Pages Functions (`functions/ethereum`, `functions/agent`, `functions/jidan`)：
 
 ```bash
 git checkout main
