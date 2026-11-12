@@ -1,0 +1,14 @@
+=== [banner-creator] voltagent-design-md-ai-ui-workflow → src/assets/images/voltagent-design-md-ai-ui-workflow-banner.jpg (seed=8571, 1200x630, <98KB) ===
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:07<01:57,  7.86s/it] 12%|█▎        | 2/16 [00:14<01:39,  7.09s/it] 19%|█▉        | 3/16 [00:20<01:28,  6.77s/it] 25%|██▌       | 4/16 [00:27<01:19,  6.58s/it] 31%|███▏      | 5/16 [00:33<01:11,  6.48s/it] 38%|███▊      | 6/16 [00:39<01:04,  6.41s/it] 44%|████▍     | 7/16 [00:45<00:57,  6.37s/it] 50%|█████     | 8/16 [00:52<00:51,  6.40s/it] 56%|█████▋    | 9/16 [00:58<00:45,  6.45s/it] 62%|██████▎   | 10/16 [01:05<00:38,  6.48s/it] 69%|██████▉   | 11/16 [01:12<00:32,  6.52s/it] 75%|███████▌  | 12/16 [01:18<00:26,  6.58s/it] 81%|████████▏ | 13/16 [01:25<00:19,  6.62s/it] 88%|████████▊ | 14/16 [01:32<00:13,  6.67s/it] 94%|█████████▍| 15/16 [01:39<00:06,  6.72s/it]100%|██████████| 16/16 [01:46<00:00,  6.82s/it]100%|██████████| 16/16 [01:46<00:00,  6.64s/it]
+Peak MLX memory: 7.96 GB
+=== [banner-creator] done: src/assets/images/voltagent-design-md-ai-ui-workflow-banner.jpg (1200x630, 93828B) ===
+=== [verify-banner] src/assets/images/voltagent-design-md-ai-ui-workflow-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=8571 steps=16
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 93828B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/voltagent-design-md-ai-ui-workflow-banner.jpg ===
+PATH: src/assets/images/voltagent-design-md-ai-ui-workflow-banner.jpg

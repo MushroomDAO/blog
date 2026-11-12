@@ -1371,3 +1371,11 @@ Manning产品页直接链接designing-ai-systems/designing_ai_systems_repo，固
 - 5TSVcostrows recomputedat8/10/16/.2/40 currentofficialrates; FPS15.96APIequivalentnotactualsubscriptioninvoice,60.57same-observed-token nocachecounterfactualnotanotherexperiment. RawrunsJSONunpublished,eachauthorconditiononce. OfficialCLImin321vsREADME242,author322valid;planinclusionvaries. TEMPcopy metricsnoruns overwriteswithheader;fakeclaudeexit7wrapper0walllog7provenwithoutpaidcalls.
 - Blog https://blog.mushroom.cv/blog/fable52-fps-repro-procedural-game-cost-audit/ HTTP200/list1/carousel1/5imagevariants200. TopicMITsourceFPS560screenshot banner93366Badopted/UItextwarningexpected/no faces;upstreamlicensecopied;3LittleMfigs verified,SEO/lint/buildpass. AuthorgalleryandliveFPSalsoHTTP200.
 - RemoteWeChat prCUE631thH1cmNLi42prAK8Z03XW33xkRwv-PxD508wLfMs8pbyvn3V_0rNFoGJ fulltext/3orderedimages/cover/metadata verified. Semantic2records+publicqueryverified;KB4rows URL/media/semanticverified. IncomingKBrow4817notpriorpublication;publishedAPI48001gap documented. No masssend.
+
+
+## 2026-11-12 · VoltAgent 设计文档库
+
+- 用户线索“Voltagent，开源的设计仓库”定位到 awesome-design-md，非同组织 TypeScript Agent 框架；精确源 URL 与实体名在本地账本未命中，宽泛组织名只命中旧技能清单。
+- 固定 fcc70284932276d085f01ef9f83edde90b1258cb：84 份设计文档、0 份打包预览 HTML，与 README 预览列表存在差异；品牌子目录 README 指向在线预览。
+- 原创检查仅限文件清点及文档色值对比度计算，不宣称运行了智能体生成页面或通过全站无障碍测试。
+- 已发布 voltagent-design-md-ai-ui-workflow；专属封面与三张小M图、双语 SEO/GEO 均检查。公众号实际一次 M2 失败 40164，出口 IP 223.204.85.239；禁止自动重试，后续只补公众号。

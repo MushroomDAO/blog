@@ -1,0 +1,14 @@
+❌ Failed to get access token: Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.85.239 ipv6 ::ffff:223.204.85.239, not in whitelist rid: 6af55bbf-4bd42cdc-3acf37a6"}
+⚠️  公众号账本没查成（Token error: {"errcode":40164,"errmsg":"invalid ip 223.204.85.239 ipv6 ::ffff:223.204.85.239, not in whitelist rid: 6af55bbf-4bd42cdc-3acf37a6"}）
+   本次结果不完整，别当成完整查重。
+账本：blog 994 篇 + 公众号草稿箱 0 条 + 本地发布记录 972 条 + MemPalace 4141 抽屉
+
+── 查：https://github.com/VoltAgent/awesome-design-md
+   已读取的本地账本未命中；公众号远程账本不可用
+
+── 查：awesome-design-md
+   已读取的本地账本未命中；公众号远程账本不可用
+
+```dedup-result
+{"duplicate":false,"localLedgersRead":true,"wechatError":"Token error: {\"errcode\":40164,\"errmsg\":\"invalid ip 223.204.85.239 ipv6 ::ffff:223.204.85.239, not in whitelist rid: 6af55bbf-4bd42cdc-3acf37a6\"}"}
+```

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "dad54c20846b7723cd6759c650ac07c97e7b6e03f9333e27",
+    "metadata": {
+      "article_id": "voltagent-design-md-ai-ui-workflow",
+      "content_hash": "143771a2224cf8b0",
+      "excerpt": "VoltAgent 设计仓库：把 DESIGN.md 变成可执行的界面约束 VoltAgent 的 awesome-design-md 把品牌网站的颜色、字体、组件和布局整理为 AI 可读的设计文档。本文核对真实仓库，介绍选型、固定版本、接入编码智能体、转换语义令牌与验收的方法，并说明文档库和组件库的区别、预览文件缺口，以及品牌字体和可访问性仍需工程师逐项自行验证的实际边界。 VoltAgent DESIGN.md 设计系统 AI编程 前端工程 它到底提供什么？ 文档库和组件库有什么区别？ 工程上怎样接入？ 我们实际验证到了哪一步？ 适合谁，怎样开始？ ",
+      "language": "zh",
+      "tags": [
+        "VoltAgent",
+        "DESIGN.md",
+        "设计系统",
+        "AI编程",
+        "前端工程"
+      ],
+      "title": "VoltAgent 设计仓库：把 DESIGN.md 变成可执行的界面约束",
+      "url": "/blog/voltagent-design-md-ai-ui-workflow/"
+    }
+  },
+  {
+    "id": "8e03c0d54b58d997b1893425f2c096a6e07683488f0ec24f",
+    "metadata": {
+      "article_id": "voltagent-design-md-ai-ui-workflow",
+      "content_hash": "bcb433160e689fbb",
+      "excerpt": "VoltAgent DESIGN.md: From Reference to Working UI Use VoltAgent's DESIGN.md library as coding-agent context, with pinned sources, semantic tokens, responsive checks and clear limits on brand fidelity and reuse. VoltAgent DESIGN.md 设计系统 AI编程 前端工程 What does the library contain? Is ",
+      "language": "en",
+      "tags": [
+        "VoltAgent",
+        "DESIGN.md",
+        "设计系统",
+        "AI编程",
+        "前端工程"
+      ],
+      "title": "VoltAgent DESIGN.md: From Reference to Working UI",
+      "url": "/blog/voltagent-design-md-ai-ui-workflow/"
+    }
+  }
+]

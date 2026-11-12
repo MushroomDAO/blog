@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "voltagent-design-md-ai-ui-workflow",
+      "title": "VoltAgent 设计仓库：把 DESIGN.md 变成可执行的界面约束",
+      "url": "/blog/voltagent-design-md-ai-ui-workflow/",
+      "language": "zh",
+      "excerpt": "VoltAgent 设计仓库：把 DESIGN.md 变成可执行的界面约束 VoltAgent 的 awesome-design-md 把品牌网站的颜色、字体、组件和布局整理为 AI 可读的设计文档。本文核对真实仓库，介绍选型、固定版本、接入编码智能体、转换语义令牌与验收的方法，并说明文档库和组件库的区别、预览文件缺口，以及品牌字体和可访问性仍需工程师逐项自行验证的实际边界。 VoltAgent DESIGN.md 设计系统 AI编程 前端工程 它到底提供什么？ 文档库和组件库有什么区别？ 工程上怎样接入？ 我们实际验证到了哪一步？ 适合谁，怎样开始？ ",
+      "score": 0.668721
+    },
+    {
+      "article_id": "video-shotcraft-claude-code-remotion-cinematic-product-videos",
+      "title": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片",
+      "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/",
+      "language": "zh",
+      "excerpt": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片 Vincentwei1021 开源的 Claude Code / Codex Agent 视频制作技能包，3832 stars。内置 104 张镜头配方卡、161 种运动风格预览、完整 Remotion 视频模板 Ink Press（36.2秒/1920×1080/30fps）、149 个音效（16个场景类别）、5套背景音乐。Agent 拿到产品截图后自动分镜、动画、配音设计，直出可发布的产品宣传片。 AI视频制作 Claude Code Remotion Agent技能 产",
+      "score": 0.5589429
+    },
+    {
+      "article_id": "pixel-perfect-ui-frontend-guide",
+      "title": "Pixel Perfect: 585★ React Component Library That Makes Your Frontend Actually Look Good",
+      "url": "/blog/pixel-perfect-ui-frontend-guide/",
+      "language": "en",
+      "excerpt": "Pixel Perfect: 585★ React Component Library That Makes Your Frontend Actually Look Good Pixel Perfect (585★) is a precision-crafted React component library with 330+ copy-paste components: glass morphism buttons, 3D push buttons, metal effects, mouse followers, and text animation",
+      "score": 0.54941446
+    },
+    {
+      "article_id": "deepseek-v4-flash-vision-exp-multimodal-agent-dspark",
+      "title": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了",
+      "url": "/blog/deepseek-v4-flash-vision-exp-multimodal-agent-dspark/",
+      "language": "zh",
+      "excerpt": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了 DeepSeek-V4 家族第一个实验性多模态模型，8 月 31 日上线，五天 18.4 万下载、651 likes，MIT。在 DeepSeek-V4-Flash 架构上加视觉模块并继续训练：多模态 agent 能力大幅提升，而七项文本 agent 基准里六项不降反升。三项超过 Opus-4.8（DeepSWE 59.3、Agents' Last Exam 27.3、ZeroBench 35.0）。DSpark 推测解码的 draft 权重和 targ",
+      "score": 0.54237795
+    },
+    {
+      "article_id": "the-startup-rsmdt-claude-code-spec-driven-multi-agent",
+      "title": "The Agentic Startup：给 Claude Code 装一套创业团队工作流",
+      "url": "/blog/the-startup-rsmdt-claude-code-spec-driven-multi-agent/",
+      "language": "zh",
+      "excerpt": "The Agentic Startup：给 Claude Code 装一套创业团队工作流 rsmdt 开源的 Claude Code 多智能体框架，367 stars，MIT License，Shell。核心思路：先写规格再写代码（spec-driven development）。10 个 slash command 覆盖从需求到交付的全流程，三级复杂度自动分发（Direct/Incremental/Factory），v3 新增实验性 Agent Teams 多智能体协作。两个 Marketplace 插件，一行安装。 ClaudeCode 多智能体 规",
+      "score": 0.5250677
+    },
+    {
+      "article_id": "archify-tech-diagram-skill-guide",
+      "title": "Archify: Describe Your System in Plain English, Get a Shareable Interactive Architecture Diagram",
+      "url": "/blog/archify-tech-diagram-skill-guide/",
+      "language": "en",
+      "excerpt": "Archify: Describe Your System in Plain English, Get a Shareable Interactive Architecture Diagram tt-a1i/archify (2.5k★, MIT) is an AI agent skill for Claude Code, Codex CLI, and opencode. Describe your system in plain English → get a self-contained HTML file with dark/light theme",
+      "score": 0.522149
+    },
+    {
+      "article_id": "act-combat-design-ai-skill-guide",
+      "title": "act-combat-design：游戏战斗策划开源 AI Skill，46 元规则 + 70+ 游戏库，三端全兼容",
+      "url": "/blog/act-combat-design-ai-skill-guide/",
+      "language": "zh",
+      "excerpt": "act-combat-design：游戏战斗策划开源 AI Skill，46 元规则 + 70+ 游戏库，三端全兼容 资深游戏战斗策划 koisama0411 开源 act-combat-design，一套项目无关的 AI 战斗设计 Skill，覆盖角色/Boss 设计、招式集、数值验证到审阅级 HTML 文档产出。内置 46 条元规则、70+ 游戏借鉴库、两个虚构示例项目，Claude Code 安装后说'设计XXX角色'即自动触发。 游戏开发 战斗设计 AI Skill Claude Code 游戏策划 开源工具 ACT 二次元游戏 项目信息 这是什",
+      "score": 0.5153646
+    },
+    {
+      "article_id": "awesome-agent-architecture-22-section-harness-engineering-guide",
+      "title": "22 节课读懂 Agent 系统怎么建：awesome-agent-architecture 的 Harness 工程地图",
+      "url": "/blog/awesome-agent-architecture-22-section-harness-engineering-guide/",
+      "language": "zh",
+      "excerpt": "22 节课读懂 Agent 系统怎么建：awesome-agent-architecture 的 Harness 工程地图 hardness1020 开源的 awesome-agent-architecture 用 22 节课、7 个层次，系统拆解 Agent 系统的 Harness 工程——以 Claude Code v2.1.88 和 Hermes Agent 为研究对象，每节包含原理、机制、真实实现和失败模式，附可运行代码。 Agent架构 Harness工程 Claude Code Hermes Agent 开源课程 Agent学习 多Agent",
+      "score": 0.5144038
+    },
+    {
+      "article_id": "nemotron-35-super-vl-bolt-local-models",
+      "title": "英伟达 Nemotron 3.5：百万上下文 Super VL、24GB Bolt 与待发布 E4B",
+      "url": "/blog/nemotron-35-super-vl-bolt-local-models/",
+      "language": "zh",
+      "excerpt": "英伟达 Nemotron 3.5：百万上下文 Super VL、24GB Bolt 与待发布 E4B 英伟达发布 Nemotron 3.5 Super VL 与 Bolt 74B，另预告 E4B 小模型。本文核对百万上下文、24GB 部署目标、视觉输入、量化方法、公开评测和开源工具入口，区分已发布权重与十月二十三日上线计划，并说明显存预算、后端兼容和许可证条件，帮助本地 Agent 开发者按硬件与任务选型。 NVIDIA Nemotron 视觉模型 本地推理 Agent 三个名字，对应什么机器与任务？ 百万上下文的 Super VL，强在哪里？ Bolt",
+      "score": 0.513987
+    },
+    {
+      "article_id": "vibe-coding-prompt-template-khazp-agents-md-prd-mvp-workflow-guide",
+      "title": "Vibe Coding 的正确打开方式：KhazP 的 5 步结构化工作流——从想法到 MVP 不迷路",
+      "url": "/blog/vibe-coding-prompt-template-khazp-agents-md-prd-mvp-workflow-guide/",
+      "language": "zh",
+      "excerpt": "Vibe Coding 的正确打开方式：KhazP 的 5 步结构化工作流——从想法到 MVP 不迷路 GitHub 2700+ Star 的 vibe-coding-prompt-template 不是一套 prompt，而是一套完整的 AI 编程方法论：先在 Chat 里完成市场调研、PRD、技术设计，再进 IDE 生成 AGENTS.md 让 Agent 拥有完整上下文，最后 Plan→Execute→Verify 循环推进到 MVP。支持 Claude Code、Cursor、Codex、Gemini CLI。 一、为什么 vibe coding",
+      "score": 0.5115659
+    }
+  ]
+}
