@@ -1,0 +1,20 @@
+{
+  "praxis": {
+    "url": "https://github.com/runwayml/praxis-1-oss",
+    "commit": "68f4d7a254b4bf41951d2e97f44b07f6cac2bf69",
+    "license": "Apache-2.0",
+    "verification": "21 upstream CPU geometry, rig-frame and sampler tests passed; no weights, GPU, simulation policy or robot run"
+  },
+  "beeftv": {
+    "url": "https://github.com/glanderness/BeefTV",
+    "commit": "ddefe9432820ca632be31519cac0ca572b42ce9b",
+    "versionFile": "v2.2.1",
+    "license": "Source Available License 1.0 for eligible new contributions; historical MIT preserved",
+    "verification": "structure and deadcode budget checks passed; no application runtime/build/media-generation test"
+  },
+  "notrat": {
+    "officialDocs": "https://notra.cn/docs",
+    "decision": "Main program explicitly closed/obfuscated per official docs; no standalone open-source article under user condition"
+  },
+  "dedup": "Only raw material/Seal KB entries; no matching published Blog or local M2 receipt. Remote WeChat blocked 40164; explicit authorization to proceed with Blog/KB and one M2 invocation per new article."
+}

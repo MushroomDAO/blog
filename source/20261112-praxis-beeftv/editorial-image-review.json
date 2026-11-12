@@ -1,0 +1,18 @@
+{
+  "banners": {
+    "method": "local FLUX.2 Klein; machine verifier passed; both manually viewed",
+    "size": "1200x630 JPEG, below 99KB",
+    "provenance": "generated thematic still life, not product screenshot"
+  },
+  "illustrations": {
+    "method": "imagegen via skill-authorized Codex workers; all six manually viewed",
+    "count": 6,
+    "size": "1120x630 PNG, below 90KB",
+    "assessment": "topic-matched, legible labels, no factual capability added"
+  },
+  "editorial": {
+    "sources": "official repositories and publisher docs pinned in source-inventory.json",
+    "scope": "bilingual evidence and limitations; no GPU/robot/app runtime claims",
+    "notrat": "closed-source main app; article skipped per condition"
+  }
+}

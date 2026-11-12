@@ -1,0 +1,1 @@
+Exact Praxis and BeefTV URLs/entities checked. Only raw incoming material and Seal KB material matched, with no published Blog/M2/source receipts for these repos. Remote WeChat blocked 40164. No old article slug/media ID to reuse. Notrat main application closed per official docs, skipped under user condition.

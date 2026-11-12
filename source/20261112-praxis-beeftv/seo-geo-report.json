@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "praxis-1-open-world-action-model-engineering",
+    "checks": {
+      "fields": true,
+      "title": true,
+      "description": true,
+      "wechat": true,
+      "tags": true,
+      "bilingual": true,
+      "FAQ": true,
+      "sources": true,
+      "copyright": true,
+      "images": true,
+      "banner": true
+    },
+    "passed": true
+  },
+  {
+    "slug": "beeftv-local-creative-workbench-license-guide",
+    "checks": {
+      "fields": true,
+      "title": true,
+      "description": true,
+      "wechat": true,
+      "tags": true,
+      "bilingual": true,
+      "FAQ": true,
+      "sources": true,
+      "copyright": true,
+      "images": true,
+      "banner": true
+    },
+    "passed": true
+  }
+]

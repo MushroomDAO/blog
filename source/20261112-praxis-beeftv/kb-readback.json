@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "praxis-1-open-world-action-model-engineering",
+    "rows": 2,
+    "checks": {
+      "url": true,
+      "wechatStatus": true,
+      "semantic": true,
+      "error": true
+    }
+  },
+  {
+    "slug": "beeftv-local-creative-workbench-license-guide",
+    "rows": 2,
+    "checks": {
+      "url": true,
+      "wechatStatus": true,
+      "semantic": true,
+      "error": true
+    }
+  },
+  {
+    "project": "Notrat",
+    "rows": 2,
+    "closedSourceDecisionVerified": true
+  }
+]

@@ -1,0 +1,6 @@
+变好了 backend/internal/app 非测试代码行数：9455 → 9453
+变好了 读源码文字断言的测试文件数：139 → 137
+变好了 超大文件 web/src/pages/canvas/project.tsx：1985 → 1983
+变好了 超大文件 plugin-packages/beeftv-plugin-ysdui/client/index.js：1414 行 → 已不超过 1000 行
+可以运行 node scripts/structure-budget.mjs --update 收紧基线。
+结构预算通过。

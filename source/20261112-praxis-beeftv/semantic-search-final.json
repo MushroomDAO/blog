@@ -1,0 +1,180 @@
+[
+  {
+    "slug": "praxis-1-open-world-action-model-engineering",
+    "query": "Praxis-1 开放权重 视频动作联合训练 SM120 机器人设备适配",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "praxis-1-open-world-action-model-engineering",
+          "title": "Praxis-1 开放意味着什么：视频预训练、机器人数据与部署门槛",
+          "url": "/blog/praxis-1-open-world-action-model-engineering/",
+          "language": "zh",
+          "excerpt": "Praxis-1 开放意味着什么：视频预训练、机器人数据与部署门槛 Runway 已开放 Praxis-1 的代码与权重，支持世界动作模型推理、模拟评估及微调。本文找到官方仓库和模型入口，区分网络视频预训练与带动作标签的机器人适配，核对二十七B参数、消费卡量化与显存边界，跑二十一项CPU测试，介绍如何从数据契约、离线回放、模拟闭环和小规模适配中借鉴，而不把宣传中的可能性当成已复现结论。 Praxis-1 世界动作模型 机器人 开源模型 数据工程 开放的到底是什么？ 网络视频能替代遥操作数据吗？ 数据工程师具体能贡献什么？ 27B 模型如何输出动作？ “单",
+          "score": 0.6529314
+        },
+        {
+          "article_id": "good-gym-ai-fitness-rtmpose-exercise-counter",
+          "title": "Good-GYM：用摄像头当教练，开源 AI 实时计数你的每一个动作",
+          "url": "/blog/good-gym-ai-fitness-rtmpose-exercise-counter/",
+          "language": "zh",
+          "excerpt": "Good-GYM：用摄像头当教练，开源 AI 实时计数你的每一个动作 基于 RTMPose 的开源健身助手，标准摄像头实时识别人体姿态、自动计数、姿势反馈，支持深蹲/俯卧撑/引体向上等 11 种动作，配置文件就能添加新动作，附 iOS App。 AI 健身 RTMPose 姿态识别 开源 计算机视觉 PyQt5 仓库地址和基本情况 支持的 11 种动作 核心原理：角度阈值 + COCO 17 关键点 数据驱动：改 JSON 就能加新动作 本地跑起来 训练计划和历史记录 iOS App 和商业产品相比 已知限制和 Roadmap 一句话总结",
+          "score": 0.56349957
+        },
+        {
+          "article_id": "lance-bytedance-3b-multimodal-unified",
+          "title": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜",
+          "url": "/blog/lance-bytedance-3b-multimodal-unified/",
+          "language": "zh",
+          "excerpt": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜 字节跳动智能创作实验室开源 Lance：3B 激活参数，统一支持图像理解/生成/编辑与视频理解/生成/编辑六项任务。GenEval 0.90 并列第一，VBench 85.11 登顶统一模型，Apache 2.0 开源。 多模态 字节跳动 Lance 图像生成 视频生成 开源 3B 统一模型 六项能力，一个模型 基准成绩 技术要点",
+          "score": 0.52973545
+        },
+        {
+          "article_id": "hexashell-robot-coding-agent-harness",
+          "title": "HexaShell开源调研：14个通用工具，如何让编程智能体控制机器人？",
+          "url": "/blog/hexashell-robot-coding-agent-harness/",
+          "language": "zh",
+          "excerpt": "HexaShell开源调研：14个通用工具，如何让编程智能体控制机器人？ HexaShell把机器人控制组织成编程智能体可调用的通用工具，连接视觉分割、几何测量、运动规划与任务技能。本文基于官方源码与论文说明，拆解十四个工具、Python执行循环、Linux沙箱和跨仿真适配，核对自评协议、宏平均与真实机器人结果的区别，并给出部署路径和测试边界，帮助判断它适合研究复现还是生产接入。 HexaShell 机器人 Harness 具身智能 开源 HexaShell究竟开源了什么？ 14个基础工具如何形成闭环？ 跨机器人复用，复用的究竟是哪一层？ 技能为什么比大",
+          "score": 0.5217435
+        },
+        {
+          "article_id": "openscreen-free-screen-recorder",
+          "title": "OpenScreen：免费开源的 Screen Studio 替代品",
+          "url": "/blog/openscreen-free-screen-recorder/",
+          "language": "zh",
+          "excerpt": "OpenScreen：免费开源的 Screen Studio 替代品 无需39美元每月，立刻获得智能缩放、鼠标跟随等专业录屏功能！OpenScreen是一个完全免费、跨平台的屏幕演示视频制作工具，被视为商业软件 Screen Studio 的开源替代方案。 screen-recorder open-source Screen-Studio video-production 1. 项目定位与核心价值 2. 核心功能特性 智能缩放与跟随 丰富的视觉定制 运动模糊（Motion Blur） 后期标注与编辑 灵活导出 3. 技术栈与社区活跃度 4. 适用场景 总",
+          "score": 0.5119863
+        },
+        {
+          "article_id": "flux3-black-forest-labs-multimodal-video-audio-action-local-deployment-guide",
+          "title": "FLUX.3 深度解析：图像+视频+音频+机器人动作，一个模型，本地部署完整指南与硬件成本评估",
+          "url": "/blog/flux3-black-forest-labs-multimodal-video-audio-action-local-deployment-guide/",
+          "language": "zh",
+          "excerpt": "FLUX.3 深度解析：图像+视频+音频+机器人动作，一个模型，本地部署完整指南与硬件成本评估 Black Forest Labs 于2026-07-23发布FLUX.3，单一多模态基础模型联合学习图像/视频/音频/动作，Early Access API已上线。本文深度解析FLUX.3架构、能力、评测数据，以及现有FLUX.1/2系列全套本地部署方案：mflux（Apple Silicon）、ComfyUI（NVIDIA）、硬件选配建议和成本对比。 FLUX 图像生成 视频生成 多模态 Black Forest Labs 本地部署 Apple Silic",
+          "score": 0.50834364
+        },
+        {
+          "article_id": "airsup-machine-skill",
+          "title": "Machine Skill: Interactive Mechanics, With Limits",
+          "url": "/blog/airsup-machine-skill/",
+          "language": "en",
+          "excerpt": "Machine Skill: Interactive Mechanics, With Limits A source-based review of Airsup Machine Skill: interactive Three.js machinery, simplified physics, installation, browser requirements and video recording limits. Machine Skill Three.js Claude Code 机械仿真 开源 What does the skill actua",
+          "score": 0.5077806
+        },
+        {
+          "article_id": "roboharness-v2-workspace",
+          "title": "RoboHarness V2：让机器人工作空间成为 Agent 的控制台",
+          "url": "/blog/roboharness-v2-workspace/",
+          "language": "zh",
+          "excerpt": "RoboHarness V2：让机器人工作空间成为 Agent 的控制台 RoboHarness V2 将机器人构型、关节手册、实时感知、Python 动作工具和任务技能放进同一个工作目录，让 coding agent 读代码、改工具并根据新观测纠错。本文结合官方设计说明与固定版本源码，解析 R1 Pro、ARX X5 的控制契约、仿真部署路径、本机边界测试及真机迁移限制，并区分 V1 论文成绩与 V2 尚待公开的结果。 RoboHarness Robotics Coding Agent Embodied AI Open Source RoboHarne",
+          "score": 0.5063615
+        },
+        {
+          "article_id": "openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle",
+          "title": "openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle",
+          "url": "/blog/openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle/",
+          "language": "en",
+          "excerpt": "openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle FrontisAI/OpenRSI, arXiv:2607.28568, CC BY-NC 4.0, Python. An open full-stack system that turns recursive self-improvement (RSI) from a philosophical concept into an executable engineering problem. Core: uses machine learni",
+          "score": 0.5056532
+        },
+        {
+          "article_id": "mit-mas-s60-6s985-multimodal-ai-spring-2026-open-lectures-paul-liang",
+          "title": "MIT MAS.S60 多模态 AI：Paul Liang 主讲，15 周从融合对齐到推理智能体，YouTube 全集公开",
+          "url": "/blog/mit-mas-s60-6s985-multimodal-ai-spring-2026-open-lectures-paul-liang/",
+          "language": "zh",
+          "excerpt": "MIT MAS.S60 多模态 AI：Paul Liang 主讲，15 周从融合对齐到推理智能体，YouTube 全集公开 MIT Media Lab + EECS 双授课号（MAS.S60 / 6.S985），Paul Liang 主讲，Spring 2026。15 周系统覆盖多模态融合、对齐、大模型、生成、推理、交互、智能体到自进化 AI。各讲 YouTube 视频逐一公开，官方课程页提供日程和材料，GitHub 组织 MIT-MI 托管代码与前序课程资料。 MIT multimodal course open-source AI-agents VL",
+          "score": 0.505088
+        }
+      ]
+    }
+  },
+  {
+    "slug": "beeftv-local-creative-workbench-license-guide",
+    "query": "BeefTV 创意工作台 历史MIT 新增代码许可 持久任务恢复",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "beeftv-local-creative-workbench-license-guide",
+          "title": "BeefTV：本地创意工作台能借鉴什么，源码许可要分开看",
+          "url": "/blog/beeftv-local-creative-workbench-license-guide/",
+          "language": "zh",
+          "excerpt": "BeefTV：本地创意工作台能借鉴什么，源码许可要分开看 BeefTV 把画布、素材、媒体处理、Agent 和可复用工作流组织成创意工程。本文找到官方仓库，核对 React、Go、SQLite 与本地存储边界，并区分历史 MIT 内容和新增代码的源码可见许可。通过仓库结构检查说明可借鉴的任务持久化、协议适配和编辑体验，同时明确没有实跑桌面应用、视频生成、性能或完整安全测试。 BeefTV AI创作 本地优先 工作流 源码可见 它和一次性生成页面有什么区别？ “本地优先”具体指哪些部分？ 当前许可到底允许什么？ 工程师最值得借鉴哪些设计？ 我们实际核对到什",
+          "score": 0.6663868
+        },
+        {
+          "article_id": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
+          "title": "ai-memory：让 AI 编程助手真正记住「上次做到哪了」，跨工具无缝交接，Rust 实现，Wiki 存 Git",
+          "url": "/blog/ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust/",
+          "language": "zh",
+          "excerpt": "ai-memory：让 AI 编程助手真正记住「上次做到哪了」，跨工具无缝交接，Rust 实现，Wiki 存 Git akitaonrails/ai-memory 是一个 Rust 实现的 AI 编程助手长期记忆方案，3953 stars，MIT 许可证。核心能力：用生命周期 Hook 自动捕获每次 Claude Code/Codex/Cursor 等会话的精华，会话结束时编译为结构化 Wiki 页面存入 Git 仓库（纯 Markdown，可 grep、可 Obsidian 同步）；下次无论用哪个工具打开同一目录，都能收到「上次做到哪里」的交接块。支持",
+          "score": 0.54985523
+        },
+        {
+          "article_id": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
+          "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
+          "url": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
+          "language": "zh",
+          "excerpt": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺 Higgsfield 将旗下 K-pop 机甲 AI 短片系列《ZEPHYR: Special》的完整制作过程全部开源：所有提示词、角色资产、失败镜头、最终剪辑版本，共 197 个资产公开发布于平台上，任何人都可以直接进入 Cinema Studio 查看和复用。主创团队披露了两个「不可能镜头」的实现方法：倒置角色参考图技巧和锚点式最小提示词策略。底层模型是 Seedance 2.5，结合 Higgsfield Soul 2 进行角色和服装设计，再用",
+          "score": 0.53592074
+        },
+        {
+          "article_id": "anthropic-dreaming-dynamic-workflow-memory-review",
+          "title": "Anthropic Dreaming：让Agent在后台复盘并整理长期记忆",
+          "url": "/blog/anthropic-dreaming-dynamic-workflow-memory-review/",
+          "language": "zh",
+          "excerpt": "Anthropic Dreaming：让Agent在后台复盘并整理长期记忆 Anthropic的Dreaming动态工作流让Agent在后台核对历史会话、整理小文件与索引，再供下一次会话只读使用。本文拆解主Agent、analyzer和organizer的职责，区分记忆更新与模型训练，并用九项本地合成检查分析权限、游标和失败重试，指出原地写入、并发冲突与长任务遗漏的边界，给出工程改造建议。 Anthropic Agent 长期记忆 工作流 工程实践 “One session”到底意味着什么？ 代码怎样把历史记录变成记忆？ 只读挂载和提示词规则分别能保证什",
+          "score": 0.53253734
+        },
+        {
+          "article_id": "kiro-crew-persistent-agent-workspace-sessions-memory-schedule",
+          "title": "Kiro Crew：开发 Agent 之上的持续工作层，会话/记忆/定时/审批/多 Agent 一体",
+          "url": "/blog/kiro-crew-persistent-agent-workspace-sessions-memory-schedule/",
+          "language": "zh",
+          "excerpt": "Kiro Crew：开发 Agent 之上的持续工作层，会话/记忆/定时/审批/多 Agent 一体 Kiro Crew 是运行在 Kiro（AWS 的 Agentic IDE）之上的开源持续工作层：Gateway 进程常驻本地或远程机器，跨 session 保存上下文和教训，支持定时任务/心跳监控/审批/并行子 Agent，通过 Slack/Telegram/WeCom/微信等渠道随时继续同一个工作。起源于 Amazon 内部项目 MeshClaw，6 个月内积累 39000 开发者，今日正式开源。 AI Agent 开发工具 持续工作 多Agent ",
+          "score": 0.5318819
+        },
+        {
+          "article_id": "mimo-code-vibe-coding-era",
+          "title": "14天、5人，他们真的把AI编程助手整出来了",
+          "url": "/blog/mimo-code-vibe-coding-era/",
+          "language": "zh",
+          "excerpt": "14天、5人，他们真的把AI编程助手整出来了 罗福莉在推上官宣 MiMo Code 诞生——14天，5个人，一场 vibe-coding 之旅。加上 k佬 两天喝完一箱红牛重构 Kimi Code，2026年的AI编程工具战争，已经用「天」为单位在卷了。 AI编程 MiMo Code vibe-coding 终端助手 大模型 开源 一条推特，一个时代的缩影 就在这之前，k佬在汤泉喝了一箱红牛 MiMo Code 到底带来了什么？ 内置 MiMo-V2.5：性能直追 Claude Sonnet 4.6 的开源模型 三重持久记忆：告别\"从头来\" 三种工作模式",
+          "score": 0.5292303
+        },
+        {
+          "article_id": "jit-agent-dynamic-harness-generation-just-in-time-self-evolving",
+          "title": "JIT-Agent：不再套固定 Prompt，给每个任务动态生成专属 Harness",
+          "url": "/blog/jit-agent-dynamic-harness-generation-just-in-time-self-evolving/",
+          "language": "zh",
+          "excerpt": "JIT-Agent：不再套固定 Prompt，给每个任务动态生成专属 Harness bingreeky/JIT 开源项目：给定任务、工具、Skills 和历史 Harness，Agent 即时生成 Memory、Planning、Action、Capability 四模块专属框架，执行过程中 Trace 和反馈可反过来修正 Harness。模型不变，工作方法持续进化。 AI Agent JIT Harness 自进化 动态生成 Prompt 开源 架构 核心机制：四模块即时组装 Memory — 这个任务需要记住什么 Planning — 这个任务应该",
+          "score": 0.5265623
+        },
+        {
+          "article_id": "firered-openstoryline-ai-video-editing-agent-claude-code",
+          "title": "FireRed-OpenStoryline：用对话剪视频，把剪辑工作流存成可复用的 Skill",
+          "url": "/blog/firered-openstoryline-ai-video-editing-agent-claude-code/",
+          "language": "zh",
+          "excerpt": "FireRed-OpenStoryline：用对话剪视频，把剪辑工作流存成可复用的 Skill FireRedTeam 开源的 AI 视频剪辑 Agent，自然语言驱动从素材搜集到成片全流程。核心亮点：编辑工作流可存为 Skill 复用，支持 Claude Code /openstoryline-use 直接调用。3141 stars，Apache 2.0。 AI视频 视频剪辑 Agent Claude Code LangChain MCP 开源 内容创作 一、做什么 二、五个核心能力 1. 智能媒体搜索与组织 2. 脚本生成 + Few-shot 风格",
+          "score": 0.5207348
+        },
+        {
+          "article_id": "blcaptain-meta-skill-agent-skill-creation-methodology",
+          "title": "BLCaptain Meta Skill：把你反复讲给 AI 的那套经验，封装成一次安装、永久复用的 Agent Skill",
+          "url": "/blog/blcaptain-meta-skill-agent-skill-creation-methodology/",
+          "language": "zh",
+          "excerpt": "BLCaptain Meta Skill：把你反复讲给 AI 的那套经验，封装成一次安装、永久复用的 Agent Skill 你有没有这种经历：每次打开新对话，都要重新把同一套 SOP、提示词、专家判断讲给 AI 听？BLCaptain Meta Skill 是一个开源方法论包，专门解决这个问题——帮你把重复工作流产品化为可安装、可验证、可迭代的 Agent Skill。它是 Codex 与 Claude Code 7 轮协同迭代的结果。 AgentSkill ClaudeCode Codex MetaSkill AI工具 工作流 开源 提示词工程 SO",
+          "score": 0.51652014
+        },
+        {
+          "article_id": "mr-boxington-rust-cargo-shared-cache",
+          "title": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存",
+          "url": "/blog/mr-boxington-rust-cargo-shared-cache/",
+          "language": "zh",
+          "excerpt": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存 mr boxington 的 mbx 为 Rust 项目复用 Cargo 编译产物，管理 target 目录并协调并行构建。本文核对安装与缓存原理，在 Mac 验证不同路径源码副本的命中、修改后的正确输出和清理预览，区分共享缓存、Cargo 新鲜度与私有增量状态，说明工作树、CI、磁盘预算及调试信息路径的使用边界。 Rust Cargo mr boxington 构建缓存 开发工具 mbx 怎样复用编译工作？ 共享缓存、增量状态与 target 是一回事吗？ 在 Mac 上怎样先试",
+          "score": 0.5164057
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "9b7f91e5eb724636f25d6949d06922bb4c4391babe5c1ad4",
+    "metadata": {
+      "article_id": "praxis-1-open-world-action-model-engineering",
+      "content_hash": "2671f5c16097916d",
+      "excerpt": "Praxis-1 开放意味着什么：视频预训练、机器人数据与部署门槛 Runway 已开放 Praxis-1 的代码与权重，支持世界动作模型推理、模拟评估及微调。本文找到官方仓库和模型入口，区分网络视频预训练与带动作标签的机器人适配，核对二十七B参数、消费卡量化与显存边界，跑二十一项CPU测试，介绍如何从数据契约、离线回放、模拟闭环和小规模适配中借鉴，而不把宣传中的可能性当成已复现结论。 Praxis-1 世界动作模型 机器人 开源模型 数据工程 开放的到底是什么？ 网络视频能替代遥操作数据吗？ 数据工程师具体能贡献什么？ 27B 模型如何输出动作？ “单",
+      "language": "zh",
+      "tags": [
+        "Praxis-1",
+        "世界动作模型",
+        "机器人",
+        "开源模型",
+        "数据工程"
+      ],
+      "title": "Praxis-1 开放意味着什么：视频预训练、机器人数据与部署门槛",
+      "url": "/blog/praxis-1-open-world-action-model-engineering/"
+    }
+  },
+  {
+    "id": "aacc86f91158971b646c04c71746ee07c1cbd07a040fdbb6",
+    "metadata": {
+      "article_id": "praxis-1-open-world-action-model-engineering",
+      "content_hash": "1c415f0afd4a3c65",
+      "excerpt": "Praxis-1: Open Robot Policies and the Video Data Boundary Examine Praxis-1's open weights, video pretraining, action supervision, consumer-GPU caveats, and a practical engineering path supported by 21 CPU-only tests. Praxis-1 世界动作模型 机器人 开源模型 数据工程 What does the release make possib",
+      "language": "en",
+      "tags": [
+        "Praxis-1",
+        "世界动作模型",
+        "机器人",
+        "开源模型",
+        "数据工程"
+      ],
+      "title": "Praxis-1: Open Robot Policies and the Video Data Boundary",
+      "url": "/blog/praxis-1-open-world-action-model-engineering/"
+    }
+  },
+  {
+    "id": "58dc98308377cb33656908dad3057d5ad5a2beba5ed0a20c",
+    "metadata": {
+      "article_id": "beeftv-local-creative-workbench-license-guide",
+      "content_hash": "985e113f861b27a4",
+      "excerpt": "BeefTV：本地创意工作台能借鉴什么，源码许可要分开看 BeefTV 把画布、素材、媒体处理、Agent 和可复用工作流组织成创意工程。本文找到官方仓库，核对 React、Go、SQLite 与本地存储边界，并区分历史 MIT 内容和新增代码的源码可见许可。通过仓库结构检查说明可借鉴的任务持久化、协议适配和编辑体验，同时明确没有实跑桌面应用、视频生成、性能或完整安全测试。 BeefTV AI创作 本地优先 工作流 源码可见 它和一次性生成页面有什么区别？ “本地优先”具体指哪些部分？ 当前许可到底允许什么？ 工程师最值得借鉴哪些设计？ 我们实际核对到什",
+      "language": "zh",
+      "tags": [
+        "BeefTV",
+        "AI创作",
+        "本地优先",
+        "工作流",
+        "源码可见"
+      ],
+      "title": "BeefTV：本地创意工作台能借鉴什么，源码许可要分开看",
+      "url": "/blog/beeftv-local-creative-workbench-license-guide/"
+    }
+  },
+  {
+    "id": "991dd17f3b9d06f6a1cd4f76191ec5f47510ff54e5072356",
+    "metadata": {
+      "article_id": "beeftv-local-creative-workbench-license-guide",
+      "content_hash": "3c8ecfc26a5780e7",
+      "excerpt": "BeefTV: Local Creative Workflows and License Boundaries Explore BeefTV's local creative canvas, durable tasks, provider adapters, and distinctions between historical MIT code and its current source-available terms. BeefTV AI创作 本地优先 工作流 源码可见 What is worth studying? Which parts are",
+      "language": "en",
+      "tags": [
+        "BeefTV",
+        "AI创作",
+        "本地优先",
+        "工作流",
+        "源码可见"
+      ],
+      "title": "BeefTV: Local Creative Workflows and License Boundaries",
+      "url": "/blog/beeftv-local-creative-workbench-license-guide/"
+    }
+  }
+]

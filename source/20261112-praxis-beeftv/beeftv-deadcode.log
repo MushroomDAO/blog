@@ -1,0 +1,10 @@
+go: downloading golang.org/x/tools v0.52.0
+go: downloading golang.org/x/telemetry v0.0.0-20261009151841-97e8ea77aa2a
+go: downloading golang.org/x/sync v0.24.0
+go: downloading golang.org/x/mod v0.42.0
+各平台死代码数：linux 651 / darwin 650 / windows 649；三平台交集 647 项。
+变好了：基线里有 2 项已经不存在：
+  internal/app.taskFailureErrorCode
+  internal/generation.TaskFailureErrorCode
+运行 node scripts/deadcode-budget.mjs --update 收紧基线。
+死代码检查通过：当前 647 项，基线 649 项。

@@ -1,0 +1,83 @@
+{
+  "checkedAt": "2026-11-12T02:01:32.735373+00:00",
+  "articles": [
+    {
+      "slug": "praxis-1-open-world-action-model-engineering",
+      "url": "https://blog.mushroom.cv/blog/praxis-1-open-world-action-model-engineering/",
+      "title": "Praxis-1 开放意味着什么：视频预训练、机器人数据与部署门槛",
+      "listRank": 2,
+      "carouselRank": 2,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/praxis-1-open-world-action-model-engineering-banner.C4l7AjVf.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 89409
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/praxis-1-open-world-action-model-engineering-banner.C4l7AjVf_Zf3afx.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 26094
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/praxis-1-open-world-action-model-engineering-fig-01.Y26MXo5J_ZzuQX4.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 40852
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/praxis-1-open-world-action-model-engineering-fig-02.B6RI6q4L_ZdrWID.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 48476
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/praxis-1-open-world-action-model-engineering-fig-03.LJ1_Zpvu_Zlc6Gq.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 43706
+        }
+      ]
+    },
+    {
+      "slug": "beeftv-local-creative-workbench-license-guide",
+      "url": "https://blog.mushroom.cv/blog/beeftv-local-creative-workbench-license-guide/",
+      "title": "BeefTV：本地创意工作台能借鉴什么，源码许可要分开看",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/beeftv-local-creative-workbench-license-guide-banner.UTjcF_n0.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94220
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/beeftv-local-creative-workbench-license-guide-banner.UTjcF_n0_Z2gdtVo.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 44430
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/beeftv-local-creative-workbench-license-guide-fig-01.VgE5n9Gi_1bWIX4.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 51608
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/beeftv-local-creative-workbench-license-guide-fig-02.DsURmJfU_1csjAs.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 45142
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/beeftv-local-creative-workbench-license-guide-fig-03.l7FwnrDR_Z1wbx1H.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 48042
+        }
+      ]
+    }
+  ]
+}
