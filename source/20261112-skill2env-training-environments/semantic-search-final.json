@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "skill2env-agent-training-environment-blueprints",
+      "title": "Skill2Env：把技能说明书变成可执行、可验收的训练任务",
+      "url": "/blog/skill2env-agent-training-environment-blueprints/",
+      "language": "zh",
+      "excerpt": "Skill2Env：把技能说明书变成可执行、可验收的训练任务 Skill2Env 从可复用技能出发，用能力难度模式和任务蓝图共同生成工作区、工具与验收规则，再根据求解轨迹迭代加难。本文核对 AllSpark 论文、公开模型和20个示例任务，解释固定求解器与离线训练的区别，实查混合评估依赖，并澄清同名 NVIDIA 仓库，给出工程团队构建小规模训练场的方法与边界。 Skill2Env Agent训练 技能 环境生成 评估 为什么给一份 Skill 还不够？ 三个阶段怎样连起来？ “升级”的到底是什么？ 仓库现在实际公开了什么？ 我们实际跑了哪一个检查？ 小",
+      "score": 0.6830117
+    },
+    {
+      "article_id": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+      "title": "PenguinHarness：用 4 个 Skill 把 Agent 调优变成有版本、有固定考题、有分数记录的实验闭环",
+      "url": "/blog/penguin-harness-self-evolving-agent-builder-skills-benchmark/",
+      "language": "zh",
+      "excerpt": "PenguinHarness：用 4 个 Skill 把 Agent 调优变成有版本、有固定考题、有分数记录的实验闭环 Prism-Shadow/penguin-harness，1140 stars，Apache-2.0，TypeScript。LlamaFactory 作者 Yaowei Zheng 的新项目，2026-07-19 开源。全自动 Agent 构建平台：一句话让 Agent 构建 Agent 应用（DeepSeek V4 Pro 跑一个 RAG 应用花费 $0.02），数据分析准确率最高、成本是 Claude Code 的 1/70。核心亮",
+      "score": 0.5915327
+    },
+    {
+      "article_id": "skillpyramid-hierarchical-skill-consolidation-self-evolving-agents",
+      "title": "SkillPyramid：给 Agent 搭技能树，比 ReAct 多 38% 奖励少 28% 步骤",
+      "url": "/blog/skillpyramid-hierarchical-skill-consolidation-self-evolving-agents/",
+      "language": "zh",
+      "excerpt": "SkillPyramid：给 Agent 搭技能树，比 ReAct 多 38% 奖励少 28% 步骤 中科院自动化所、国科大、上海人工智能实验室和北京智源研究院联合提出 SkillPyramid：将 Agent 的任务经验整理成三层技能金字塔（原子 → 功能 → 抽象），在 ALFWorld/WebShop/ScienceWorld 上平均奖励提升 38%，交互步骤减少 27.7%。 Agent 技能系统 中科院 智源研究院 强化学习 LLM Agent 自进化 论文 问题：Agent 每次都在重新发明轮子 SkillPyramid 的核心架构 四个核心",
+      "score": 0.5858477
+    },
+    {
+      "article_id": "alibaba-skill-up-agent-skill-eval-evolution",
+      "title": "alibaba/skill-up：Agent Skill 的评估与自动进化闭环——Eval + 自修复一键跑通",
+      "url": "/blog/alibaba-skill-up-agent-skill-eval-evolution/",
+      "language": "zh",
+      "excerpt": "alibaba/skill-up：Agent Skill 的评估与自动进化闭环——Eval + 自修复一键跑通 alibaba/skill-up，1,031 stars，Apache-2.0，Go。阿里巴巴出品的 Agent Skill 评估与进化工具，4 个月 1000+ stars。声明式 YAML 测试用例 + rule/script/agent 三种 judge 策略 + skill-upper 自动读取失败报告修复 Skill，形成 Eval → 失败分析 → 自动修复 → 再 Eval 的闭环。支持 Claude Code、Codex、Qwe",
+      "score": 0.58258283
+    },
+    {
+      "article_id": "skillopt-microsoft-self-evolving-agent-skills-optimization",
+      "title": "SkillOpt：微软联合上交复旦同济，让 AI Agent 的 Skill 像神经网络一样被训练",
+      "url": "/blog/skillopt-microsoft-self-evolving-agent-skills-optimization/",
+      "language": "zh",
+      "excerpt": "SkillOpt：微软联合上交复旦同济，让 AI Agent 的 Skill 像神经网络一样被训练 微软研究院联合上海交通大学、复旦大学、同济大学发布 SkillOpt——首个对 AI Agent Skill 文档进行系统化优化的框架，在 52 个评测单元全部获胜，让普通开发者无需训练模型就能持续提升 Agent 能力。 AI Agent SkillOpt Microsoft Research Skill Optimization Open Source Self-Evolving Agents 问题：Skill 的三条死路 核心思路：文本空间的深度学习",
+      "score": 0.5735041
+    },
+    {
+      "article_id": "beyond-static-skill-libraries--alibaba",
+      "title": "告别静态技能库！阿里发布 SkillClaw，开启 AI Agent「集体进化」时代",
+      "url": "/blog/beyond-static-skill-libraries--alibaba/",
+      "language": "zh",
+      "excerpt": "告别静态技能库！阿里发布 SkillClaw，开启 AI Agent「集体进化」时代 阿里 AMAP-ML 团队发布 SkillClaw 框架，通过 Agentic Evolver 自动聚合用户交互轨迹、更新共享技能库，让 AI Agent 实现集体进化。论文于 4 月登顶 HuggingFace 论文榜，6 轮进化后 Creative Synthesis 任务相对提升 88.41%。 SkillClaw AI Agent Alibaba AMAP-ML 技能进化 Skill Evolution Agentic Open Source 核心概述（30-5",
+      "score": 0.5702169
+    },
+    {
+      "article_id": "scenario-blender-generation-mcp",
+      "title": "Scenario for Blender：云端生成与本地 Agent 接入",
+      "url": "/blog/scenario-blender-generation-mcp/",
+      "language": "zh",
+      "excerpt": "Scenario for Blender：云端生成与本地 Agent 接入 Scenario for Blender 把云端图片、视频、3D、材质和音频生成接入 Blender，并通过本地 MCP 接口连接 Agent。本文核查 0.11.0 版本、安装更新、账号额度、数据流向和任务恢复，运行上游离线测试，区分 GPL 插件代码、云端模型服务与未验证效果，给出从单张图片到场景资产的起步路径。 Blender Generative AI MCP 3D Scenario for Blender 能做哪些工作？ 如何安装，为什么需要独立扩展源？ 插件开源，为什",
+      "score": 0.5663651
+    },
+    {
+      "article_id": "agent-skills-open-standard-progressive-disclosure-anthropic",
+      "title": "Agent Skills: The Open Standard Quietly Tying Together Several Projects We Covered Today",
+      "url": "/blog/agent-skills-open-standard-progressive-disclosure-anthropic/",
+      "language": "en",
+      "excerpt": "Agent Skills: The Open Standard Quietly Tying Together Several Projects We Covered Today A deep dive into Agent Skills, an open standard: a SKILL.md file (name/description metadata plus instructions) with optional scripts, reference docs, and templates makes a portable skill pack",
+      "score": 0.5631759
+    },
+    {
+      "article_id": "juju-content-illustrations-skill-ai-visual-content-guide",
+      "title": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画",
+      "url": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
+      "language": "zh",
+      "excerpt": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画 卷卷整理研究所 × 内容插画 Skill。一句话触发，AI 自动把文章、教程、方法论转成白底轻线稿的手绘卡片——主角是白色比熊卷卷，最多生成 10 张，支持 6 种比例，颜色有语义，场景有隐喻。60 stars，MIT 开源，可装进 Claude Code 或 Codex 直接用。 AgentSkill AI生图 内容创作 ClaudeCode 插画 手绘风格 创作者工具 开源 Skill 卷卷是谁 它能做什么 支持的 6 种比例 视觉语",
+      "score": 0.5624043
+    },
+    {
+      "article_id": "lance-bytedance-3b-multimodal-unified",
+      "title": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜",
+      "url": "/blog/lance-bytedance-3b-multimodal-unified/",
+      "language": "zh",
+      "excerpt": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜 字节跳动智能创作实验室开源 Lance：3B 激活参数，统一支持图像理解/生成/编辑与视频理解/生成/编辑六项任务。GenEval 0.90 并列第一，VBench 85.11 登顶统一模型，Apache 2.0 开源。 多模态 字节跳动 Lance 图像生成 视频生成 开源 3B 统一模型 六项能力，一个模型 基准成绩 技术要点",
+      "score": 0.56103444
+    }
+  ]
+}

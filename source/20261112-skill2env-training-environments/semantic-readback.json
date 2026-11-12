@@ -1,0 +1,38 @@
+[
+  {
+    "id": "b6531fb460500439f02e957996651514536592543f6311e3",
+    "metadata": {
+      "article_id": "skill2env-agent-training-environment-blueprints",
+      "content_hash": "d5f76450f58eb291",
+      "excerpt": "Skill2Env：把技能说明书变成可执行、可验收的训练任务 Skill2Env 从可复用技能出发，用能力难度模式和任务蓝图共同生成工作区、工具与验收规则，再根据求解轨迹迭代加难。本文核对 AllSpark 论文、公开模型和20个示例任务，解释固定求解器与离线训练的区别，实查混合评估依赖，并澄清同名 NVIDIA 仓库，给出工程团队构建小规模训练场的方法与边界。 Skill2Env Agent训练 技能 环境生成 评估 为什么给一份 Skill 还不够？ 三个阶段怎样连起来？ “升级”的到底是什么？ 仓库现在实际公开了什么？ 我们实际跑了哪一个检查？ 小",
+      "language": "zh",
+      "tags": [
+        "Skill2Env",
+        "Agent训练",
+        "技能",
+        "环境生成",
+        "评估"
+      ],
+      "title": "Skill2Env：把技能说明书变成可执行、可验收的训练任务",
+      "url": "/blog/skill2env-agent-training-environment-blueprints/"
+    }
+  },
+  {
+    "id": "1e27db17f87533c213157aedc8f4e1d9315d19719217d4f6",
+    "metadata": {
+      "article_id": "skill2env-agent-training-environment-blueprints",
+      "content_hash": "0eccc3488667352a",
+      "excerpt": "Skill2Env: From Skills to Verifiable Agent Training Understand AllSpark Skill2Env through task blueprints, iterative hardening, 20 released examples and an evaluator smoke check, with research and code limits. Skill2Env Agent训练 技能 环境生成 评估 Why is a Skill not enough? How do the thr",
+      "language": "en",
+      "tags": [
+        "Skill2Env",
+        "Agent训练",
+        "技能",
+        "环境生成",
+        "评估"
+      ],
+      "title": "Skill2Env: From Skills to Verifiable Agent Training",
+      "url": "/blog/skill2env-agent-training-environment-blueprints/"
+    }
+  }
+]

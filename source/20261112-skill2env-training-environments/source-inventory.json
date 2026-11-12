@@ -1,0 +1,16 @@
+{
+  "source": "https://github.com/AllSpark-Research/AgentEnv",
+  "revision": "1deac75488f1f9ce1caf19b47e216ebc59810be8",
+  "paper": "https://arxiv.org/abs/2609.33772",
+  "model": "https://huggingface.co/AllSpark-Research/Skill2Env",
+  "namesake": {
+    "source": "https://github.com/NVlabs/Skill2Env",
+    "revision": "860c6c770572c7dfa853aa5b1823751ddf38e327",
+    "title": "Reinforcing Agents with Collective Skills",
+    "notSameWork": true
+  },
+  "licenseScope": "HF model card declares Apache2; no unified LICENSE observed at AllSpark repository root; do not import NVlabs license claims. Paper HTML CC BY4.0.",
+  "dedup": "Only raw KB material; exact source and paper ID not in local Blog/M2; WeChat remote40164 denied, proceed Blog independently as authorized.",
+  "bannerRejectedSeed": 8591,
+  "bannerRejectionReason": "Manual review found pseudo lettering on toy vehicle despite machine OCR pass; regenerate without vehicles."
+}

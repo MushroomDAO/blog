@@ -1388,3 +1388,12 @@ Manning产品页直接链接designing-ai-systems/designing_ai_systems_repo，固
 - 官方 GGUF 用 H100/CUDA b12169，未测 ToolSandbox；外部 API 日期及引擎不同，文件大小不等于运行内存，不能当手机实测。
 - Apple M4/16GB、Transformers5.19/PyTorch2.13 MPS float32 贪心真实权重生成：三条英文构造输入正确调用55、缺值追问、无天气工具时拒绝编造；无真实工具执行、无多轮闭环或官方基准复现。原始输入/最终输出/环境已留证。
 - 发布 botpsy-08b-local-tool-calling-engineering，专属照片封面及三张小M图通过检查；公众号40164失败时仅保留待补草稿，不重做Blog或KB。
+
+
+## 2026-11-12 · Skill2Env 任务蓝图与训练环境
+
+- 用户“能力模式/任务蓝图/迭代加难”明确对应 AllSpark-Research/AgentEnv 和 arXiv2609.33772。NVlabs/Skill2Env 引用另一标题与作者，不能借用其命令、许可证和数字。
+- 固定 AllSpark1deac754：公开20任务，不是论文全部2963。16混合评估/4确定性，20份任务核心文件齐全且rubric权重各合计1。HF模型15权重分片合计71.9GB，仅核对清单未下载。
+- 实际在临时副本调用 context-slimming 验收入口：缺JUDGE_BASE_URL时exit1且不写reward.txt；评审基础设施故障不能算模型低分。未跑Docker任务、求解器、付费评审、生成或训练。
+- 固定求解器用于课程加难，后续另行生成高分轨迹并SFT，不能写成运行中自动更新模型权重。论文8.4点平均增益是官方结果。
+- 发布 skill2env-agent-training-environment-blueprints。封面8591虽过OCR仍因微小伪文字被人工拒绝，8592木迷宫/钢球通过；三张小M图经检查。公众号若40164失败只补待创建草稿，不重发Blog或KB。

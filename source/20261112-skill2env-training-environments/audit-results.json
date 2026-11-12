@@ -1,0 +1,159 @@
+{
+  "sourceRevision": "1deac75488f1f9ce1caf19b47e216ebc59810be8",
+  "tasks": [
+    {
+      "task": "archive-extractor",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "compress-file-sorter",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "context-slimming",
+      "rubricItems": 6,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "csv-cleanroom",
+      "rubricItems": 4,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "database-schema-differ",
+      "rubricItems": 6,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "docx-trackchanges-and-comments",
+      "rubricItems": 6,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "dxf-to-image",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "execlpngimport",
+      "rubricItems": 4,
+      "weightSum": 1.0,
+      "judgeRequired": false,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "github-actions-oidc-hardening-audit",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "icalendar-events-parser",
+      "rubricItems": 4,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "image-convert-skill",
+      "rubricItems": 4,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "log-analyzer",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "log-parser",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "logfile-analyzer",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "markdown-linter",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "openclaw-skill-local-file-processor",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": false,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "pymupdf",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "pypdf",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": true,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "safe-terminal-runner",
+      "rubricItems": 4,
+      "weightSum": 1.0,
+      "judgeRequired": false,
+      "requiredArtifactsPresent": true
+    },
+    {
+      "task": "weiqi-sgf",
+      "rubricItems": 5,
+      "weightSum": 1.0,
+      "judgeRequired": false,
+      "requiredArtifactsPresent": true
+    }
+  ],
+  "totals": {
+    "tasks": 20,
+    "hybrid": 16,
+    "deterministic": 4
+  },
+  "missingJudgeSmoke": {
+    "exitCode": 1,
+    "stderr": "VERIFIER ERROR: JUDGE_BASE_URL is required for this task; configure verifier.env",
+    "error": {
+      "error": "JUDGE_BASE_URL is required for this task; configure verifier.env"
+    },
+    "rewardFileExists": false
+  },
+  "scope": "Actual released verifier entry point on copied initial workspace with judge configuration intentionally absent. No solver, judge API, Docker environment, task generation, training or benchmark executed."
+}
