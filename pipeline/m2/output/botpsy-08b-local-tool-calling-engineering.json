@@ -1,0 +1,15 @@
+{
+  "title": "BotPsy 0.8B：端侧工具调用怎么落地",
+  "author": "Mycelium",
+  "digest": "核对官方成绩与量化版本，讲清thinking、工具执行回路及本地测试的边界。",
+  "mediaId": "prCUE631thH1cmNLi42prFJ8AACdu4gBXVdiTupErqKeiUnXtzFBhryPvCOKfQb6",
+  "blogUrl": "https://blog.mushroom.cv/blog/botpsy-08b-local-tool-calling-engineering/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/botpsy-08b-local-tool-calling-engineering/",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/qvac/botpsy-0.8b",
+    "huggingface.co/qvac/botpsy-0.8b-ggufs",
+    "huggingface.co/blog/qvac"
+  ],
+  "publishedAt": "2026-11-13T05:43:58.192Z"
+}

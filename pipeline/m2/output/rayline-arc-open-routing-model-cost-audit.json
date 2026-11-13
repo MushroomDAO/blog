@@ -1,0 +1,15 @@
+{
+  "title": "Rayline ARC：开源路由与成本数字核查",
+  "author": "Mycelium",
+  "digest": "找到官方权重与仓库，核对混合部署指标、插件能力和完整自托管的距离。",
+  "mediaId": "prCUE631thH1cmNLi42prA3UkSW5b8szokpKx4XuZihE5MsL0pJXV5QP0-l7a8iQ",
+  "blogUrl": "https://blog.mushroom.cv/blog/rayline-arc-open-routing-model-cost-audit/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/rayline-arc-open-routing-model-cost-audit/",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/rayline-ai/arc-1.0",
+    "github.com/rayline-ai/vllm-arc",
+    "github.com/rayline-ai/raydock"
+  ],
+  "publishedAt": "2026-11-13T05:44:06.083Z"
+}

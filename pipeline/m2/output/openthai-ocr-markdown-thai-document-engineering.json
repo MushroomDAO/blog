@@ -1,0 +1,14 @@
+{
+  "title": "OpenThai OCR：泰文表格怎样可靠入库",
+  "author": "Mycelium",
+  "digest": "0.63B模型可保留表格和版面，但一页1.6秒有硬件条件，识别结果仍需结构与业务校验。",
+  "mediaId": "prCUE631thH1cmNLi42prKrB6fFpLhrRHsfkccPOm0WWDrFi3-FtFRhgvpChJrAq",
+  "blogUrl": "https://blog.mushroom.cv/blog/openthai-ocr-markdown-thai-document-engineering/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/openthai-ocr-markdown-thai-document-engineering/",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/iapp/openthai2.0-ocr-markdown",
+    "huggingface.co/nvidia/nemotron-3.5-parse"
+  ],
+  "publishedAt": "2026-11-13T05:44:14.563Z"
+}
