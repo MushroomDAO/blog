@@ -174,8 +174,8 @@ if [ "$_cf_placeholder_detected" = true ]; then
 fi
 
 # Guard: ensure required Pages Functions routes exist before deployment so we never
-# wipe out edge proxy routes (e.g. /ethereum, /agent, /jidan) when deploying from an un-synced branch.
-for required_fn in ethereum agent jidan; do
+# wipe out edge proxy routes (e.g. /ethereum, /agent, /jidan, /topic) when deploying from an un-synced branch.
+for required_fn in ethereum agent jidan topic; do
   if [ ! -d "$REPO_ROOT/functions/$required_fn" ]; then
     echo "❌ 缺少关键 Functions 目录: functions/$required_fn" >&2
     echo "   部署已被中止以防止抹除生产代理！请先执行: git pull --rebase origin main" >&2
