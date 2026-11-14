@@ -1,0 +1,6 @@
+relax check: 0 of 2 bodies replayed from stored verdicts
+relax check: items resolved in a body: 2 (2 declarations)
+relax check: 1 crates type- and borrow-checked in 0.0 s
+relax check: 2 body owners of the checked crates, 0 compiled in all, 0 errors
+relax check: cpu typeck 0 ms, lower 0 ms, opt 0 ms, codegen 0 ms; 0 RIR insts, 0 KB code
+relax check: constant initializers: 0 evaluated to data, 0 compiled and run; evaluation cpu 0.0 ms

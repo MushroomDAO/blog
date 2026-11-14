@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "makepad-relax-rust-jit-live-compilation",
+    "checks": {
+      "fields": true,
+      "title": true,
+      "description": true,
+      "wechat": true,
+      "tags": true,
+      "bilingual": true,
+      "FAQ": true,
+      "sources": true,
+      "copyright": true,
+      "images": true,
+      "banner": true
+    },
+    "passed": true
+  }
+]

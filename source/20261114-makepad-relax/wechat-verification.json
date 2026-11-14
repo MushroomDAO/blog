@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-14T08:12:45.591Z",
+  "drafts": [
+    {
+      "slug": "makepad-relax-rust-jit-live-compilation",
+      "mediaId": "prCUE631thH1cmNLi42prDCgvuP-zkLGpi-XEvTKeUDJ_lxfmaIBToerxNn_xF9X",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "174dc1896262c1efa6c0edd61d128e8c7588490c16b4224232458cba0f0740ad",
+      "remoteTextHash": "174dc1896262c1efa6c0edd61d128e8c7588490c16b4224232458cba0f0740ad",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/makepad-relax-rust-jit-live-compilation/",
+      "localContentHash": "5e0c60c828fcc267259ced1d325c44f264dd8a8ae25c45ba71152256f9104a87",
+      "remoteContentHash": "3a2a4ff97615d476c96502fe5b0f8701fb0d6561c656cf9a0940b7c773127213"
+    }
+  ]
+}

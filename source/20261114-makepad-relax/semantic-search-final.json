@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "makepad-relax-rust-jit-live-compilation",
+      "title": "Makepad Relax：把 Rust 编译等待拆进运行过程",
+      "url": "/blog/makepad-relax-rust-jit-live-compilation/",
+      "language": "zh",
+      "excerpt": "Makepad Relax：把 Rust 编译等待拆进运行过程 Makepad Relax 是实验性的 Rust 实时编译器和 JIT，将按需编译、后台优化与热更新放进同一运行过程。本文核验独立前端和机器码后端、首次自举与零外部依赖的含义，区分启动时间和稳态性能，并介绍借用检查时机、不能直接热换的结构变更、官方入门命令及本机小样例验证，帮助工程师判断它适合开发迭代还是发布构建。 Rust Makepad JIT Compiler Hot Reload “把 rustc 和 LLVM 换掉”指哪一层？ 为什么能边运行，边继续编译？ 运行更早，不等于所有检查",
+      "score": 0.7641571
+    },
+    {
+      "article_id": "ra-jit-blaze-rust-live-builds",
+      "title": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界",
+      "url": "/blog/ra-jit-blaze-rust-live-builds/",
+      "language": "zh",
+      "excerpt": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界 ra-jit 已更名为 blaze。本文核对官方暖构建基准、常驻编译架构、Apple Silicon 与 Linux 支持，以及 Rust 1.99.0、内存和借用检查限制，并在 M4 Mac 上验证函数修改与测试流程，解释为何局部补丁延迟不能等同于完整构建或画面更新速度，也不能承诺每个项目都快 92 倍。 Rust ra-jit blaze 编译器 热更新 开发工具 blaze 为什么能省掉修改后的大量等待？ “92 倍”和“10–24 倍”应该怎样看？ 毫秒构建与“不重启热更新",
+      "score": 0.66983783
+    },
+    {
+      "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+      "title": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时",
+      "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+      "language": "zh",
+      "excerpt": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时 zavora-ai 社区维护的 ADK-Rust v2.2.0——不是 Google 官方项目，但把 Agent 运行时拆成 43 个可独立发布的 crate，按需引用。Type-safe、全异步、568 μs agent loop 开销，支持 Gemini/OpenAI/Anthropic/Ollama，含 graph 工作流、durable resume、realtime 语音、adk-skill 解析。本文做一次工程拆解。 rust agent-runtim",
+      "score": 0.5878684
+    },
+    {
+      "article_id": "pagesift-rust-crawler",
+      "title": "PageSift：Rust 爬虫如何服务 AI，性能数字又该怎样读？",
+      "url": "/blog/pagesift-rust-crawler/",
+      "language": "zh",
+      "excerpt": "PageSift：Rust 爬虫如何服务 AI，性能数字又该怎样读？ PageSift 是面向 AI 数据流水线的 Rust 爬虫与内容提取工具，提供 Markdown、SDK 和兼容接口。本文找到官方仓库，拆解有界队列、选择性渲染与部署路径，区分任务吞吐、成功网页和有效文档，并在 Mac 上验证 Python 包的离线转换和公开页面抓取，说明版本、参数、许可证与真实运行边界。 PageSift Rust 爬虫 数据提取 RAG 开源工具 PageSift 解决数据链路的哪一段？ 为什么强调有界队列和选择性渲染？ “百万页每秒”是在测什么？ 内容提取质量",
+      "score": 0.5839139
+    },
+    {
+      "article_id": "gh-copilot-code-review-cli",
+      "title": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review",
+      "url": "/blog/gh-copilot-code-review-cli/",
+      "language": "zh",
+      "excerpt": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review GitHub CLI v2.88.0 新功能实测：在终端直接邀请 Copilot 审查 PR，无需跳转浏览器，附隐私风险提示 github copilot cli code-review developer-tools 核心能力 如何使用 免费吗？ 隐私警告（必读） 能用其他 AI CLI 吗？ 额外优化：大型团队福音 总结",
+      "score": 0.5693439
+    },
+    {
+      "article_id": "pi-rust-agent-runtime",
+      "title": "pi-rust: A Rust Coding Agent You Can Embed and Test",
+      "url": "/blog/pi-rust-agent-runtime/",
+      "language": "en",
+      "excerpt": "pi-rust: A Rust Coding Agent You Can Embed and Test Review pi-rust v0.10.0: embeddable Rust agents, Mac installation, native plugins, durable sessions, remote mode, and a verified local tool-call smoke test. pi-rust Rust AI Agent 开发工具 本地测试 What makes the architecture useful? How ",
+      "score": 0.56196296
+    },
+    {
+      "article_id": "mdya-rust-local-markdown-search-chinese-test-871-docs",
+      "title": "mdya 实测：871 篇中文笔记索引 8 分钟，但语义检索在中文上是失效的",
+      "url": "/blog/mdya-rust-local-markdown-search-chinese-test-871-docs/",
+      "language": "zh",
+      "excerpt": "mdya 实测：871 篇中文笔记索引 8 分钟，但语义检索在中文上是失效的 Rust 写的本地 Markdown 检索原语 mdya，BM25 + 端侧向量 + MCP，单二进制。我拿自己 871 篇笔记（10MB）实测：索引 8 分 01 秒，占 176MB，BM25 查询 30ms、向量 530ms。但对照实验揭穿了一个问题——字面命中的中文查询两条路都准，换成同义改写就全崩，因为默认模型 ruri-v3-30m 是日语的、FTS 分词用的是日语 ipadic 词典。多语言的 EmbeddingGemma 是 gated 模型，直接 401 拉不下",
+      "score": 0.56093085
+    },
+    {
+      "article_id": "browser-use-jev-ultrafast-dom-web-agent",
+      "title": "jev-ultrafast：browser-use × TypeSafe Jev，DOM 结构化状态代替截图，Google Flights 7.1 秒",
+      "url": "/blog/browser-use-jev-ultrafast-dom-web-agent/",
+      "language": "zh",
+      "excerpt": "jev-ultrafast：browser-use × TypeSafe Jev，DOM 结构化状态代替截图，Google Flights 7.1 秒 browser-use/jev-ultrafast，19K+ stars，Python，browser-use 官方出品。核心思路：把浏览器状态变成编号元素表格，用 TypeSafe Jev 一次请求同时决策「操作类型 + 目标元素」，只有需要输入文字时才调小 LLM。默认 Agent 循环零截图，browser protocol 调用从 1092 次降到 101 次，任务时间中位数从 9.45s 降到 ",
+      "score": 0.5602574
+    },
+    {
+      "article_id": "yuxi-self-hosted-knowledge-agent-rag-graph-multi-agent-mcp",
+      "title": "Yuxi 0.8 beta5：知识、协作与执行如何接成工作流？",
+      "url": "/blog/yuxi-self-hosted-knowledge-agent-rag-graph-multi-agent-mcp/",
+      "language": "zh",
+      "excerpt": "Yuxi 0.8 beta5：知识、协作与执行如何接成工作流？ Yuxi 0.8 beta5 把知识检索、多智能体协作、人工引导与文件交付接成企业工作流。本文沿用旧文章链接，核对官方预发布标签、Container 与 Cube 沙盒边界、知识 MCP 和公开 API，并记录新版 CLI 的15项源码测试及 npm 查询结果，说明 Mac 试用条件和旧版不可原地升级的限制。 Yuxi RAG 多智能体 MCP 自托管 Docker 它解决的是哪一类问题？ 0.8 最值得关注的变化是什么？ 团队权限与工具账号怎样管理？ 排队、引导和停止有何区别？ 知识 MC",
+      "score": 0.5587624
+    },
+    {
+      "article_id": "mr-boxington-rust-cargo-shared-cache",
+      "title": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存",
+      "url": "/blog/mr-boxington-rust-cargo-shared-cache/",
+      "language": "zh",
+      "excerpt": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存 mr boxington 的 mbx 为 Rust 项目复用 Cargo 编译产物，管理 target 目录并协调并行构建。本文核对安装与缓存原理，在 Mac 验证不同路径源码副本的命中、修改后的正确输出和清理预览，区分共享缓存、Cargo 新鲜度与私有增量状态，说明工作树、CI、磁盘预算及调试信息路径的使用边界。 Rust Cargo mr boxington 构建缓存 开发工具 mbx 怎样复用编译工作？ 共享缓存、增量状态与 target 是一回事吗？ 在 Mac 上怎样先试",
+      "score": 0.55744886
+    }
+  ]
+}

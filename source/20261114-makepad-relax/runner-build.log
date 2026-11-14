@@ -1,0 +1,52 @@
+     Locking 1 package to latest compatible version
+   Compiling makepad-micro-proc-macro v1.0.0 (/tmp/makepad-relax-20261114/libs/micro_proc_macro)
+   Compiling relax-api-phase v1.0.0 (/tmp/makepad-relax-20261114/libs/relax_api/phase)
+   Compiling relax-lex v0.1.0 (/tmp/makepad-relax-20261114/libs/relax/lex)
+   Compiling relax-api-macro-impl v1.0.0 (/tmp/makepad-relax-20261114/libs/relax_api/macro_impl)
+   Compiling relax-api-macro v1.0.0 (/tmp/makepad-relax-20261114/libs/relax_api/macro)
+   Compiling relax-api v1.0.0 (/tmp/makepad-relax-20261114/libs/relax_api)
+   Compiling relax-session v0.1.0 (/tmp/makepad-relax-20261114/libs/relax/session)
+   Compiling makepad-live-id-macros-impl v1.0.0 (/tmp/makepad-relax-20261114/libs/live_id/id_macros_impl)
+   Compiling makepad-live-id-macros v1.0.0 (/tmp/makepad-relax-20261114/libs/live_id/id_macros)
+   Compiling makepad-micro-serde-derive-impl v1.0.0 (/tmp/makepad-relax-20261114/libs/micro_serde/derive_impl)
+   Compiling relax-base v0.1.0 (/tmp/makepad-relax-20261114/libs/relax/base)
+   Compiling makepad-micro-serde-derive v1.0.0 (/tmp/makepad-relax-20261114/libs/micro_serde/derive)
+   Compiling makepad-live-id v1.0.0 (/tmp/makepad-relax-20261114/libs/live_id)
+   Compiling makepad-cpu-budget v1.0.0 (/tmp/makepad-relax-20261114/libs/cpu_budget)
+   Compiling relax-backend v0.1.0 (/tmp/makepad-relax-20261114/libs/relax/backend)
+   Compiling makepad-micro-serde v1.0.0 (/tmp/makepad-relax-20261114/libs/micro_serde)
+   Compiling makepad-core-util v0.1.0 (/tmp/makepad-relax-20261114/libs/core_util)
+   Compiling relax-codegen v0.1.0 (/tmp/makepad-relax-20261114/libs/relax/codegen)
+   Compiling makepad-objc-sys v1.0.0 (/tmp/makepad-relax-20261114/libs/objc-sys)
+   Compiling relax-front v0.1.0 (/tmp/makepad-relax-20261114/libs/relax/front)
+   Compiling makepad-apple-sys v1.0.0 (/tmp/makepad-relax-20261114/libs/apple_sys)
+   Compiling makepad-error-log v1.0.0 (/tmp/makepad-relax-20261114/libs/error_log)
+mbx[progress]: 15s elapsed; 0 hits, 1 misses, 0 bypassed, 34 not looked up; ~0s compiler work saved
+   Compiling relax-native-macros v0.1.0 (/tmp/makepad-relax-20261114/libs/relax/native_macros)
+   Compiling relax-types v0.1.0 (/tmp/makepad-relax-20261114/libs/relax/types)
+   Compiling makepad-strict-json v0.1.0 (/tmp/makepad-relax-20261114/libs/strict_json)
+mbx[progress]: 30s elapsed; 0 hits, 1 misses, 0 bypassed, 40 not looked up; ~0s compiler work saved
+   Compiling makepad-network v1.0.0 (/tmp/makepad-relax-20261114/platform/network)
+   Compiling relax-compiler v0.1.0 (/tmp/makepad-relax-20261114/libs/relax/compiler)
+mbx[progress]: 45s elapsed; 0 hits, 1 misses, 0 bypassed, 46 not looked up; ~0s compiler work saved
+   Compiling makepad-base64 v1.0.0 (/tmp/makepad-relax-20261114/libs/base64)
+   Compiling makepad-gpu-trace v1.0.0 (/tmp/makepad-relax-20261114/libs/gpu_trace)
+   Compiling makepad-toml-parser v1.0.0 (/tmp/makepad-relax-20261114/libs/toml_parser)
+   Compiling makepad-remote v0.1.0 (/tmp/makepad-relax-20261114/libs/remote)
+mbx[progress]: 1m elapsed; 0 hits, 1 misses, 0 bypassed, 51 not looked up; ~0s compiler work saved
+mbx[progress]: 1m 16s elapsed; 0 hits, 1 misses, 0 bypassed, 51 not looked up; ~0s compiler work saved
+mbx[progress]: 1m 31s elapsed; 0 hits, 1 misses, 0 bypassed, 51 not looked up; ~0s compiler work saved
+   Compiling makepad-prof-stream v1.0.0 (/tmp/makepad-relax-20261114/libs/prof_stream)
+mbx[progress]: 1m 46s elapsed; 0 hits, 1 misses, 0 bypassed, 52 not looked up; ~0s compiler work saved
+   Compiling relax-light-http v0.1.0 (/tmp/makepad-relax-20261114/tools/run/light_http)
+   Compiling relax-runner v0.1.0 (/tmp/makepad-relax-20261114/tools/run/runner)
+mbx[progress]: 2m 1s elapsed; 0 hits, 1 misses, 0 bypassed, 58 not looked up; ~0s compiler work saved
+mbx[progress]: 3m 1s elapsed; 0 hits, 1 misses, 0 bypassed, 59 not looked up; ~0s compiler work saved
+    Finished `release` profile [optimized] target(s) in 3m 05s
+mbx[cache]: 0 hits, 1 misses, 60 not looked up; 0 B downloaded, 0 B uploaded, 280.1 MiB stored locally
+mbx[gc]: 16.1 GiB free on the disk holding /Users/jason/Library/Caches/mbx, under the 20.0 GiB minimum; collecting private state and managed targets past their budgets, then shared cache objects if the cache disk is short
+mbx[gc]: kept 1 target directories in use by running commands
+mbx[gc]: evicted 0 objects and 0 action results (11.6 MiB logical); 5.4 GiB logical remain
+mbx[gc]: kept 1 target directories in use by running commands
+mbx[gc]: evicted 3556 shared cache objects and 1098 action results below gc.max_size because the disk was under gc.min_free_size (2.8 GiB logical freed)
+mbx[savings]: 26.0 GiB logical tidied away. you may continue not thinking about it.

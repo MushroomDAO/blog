@@ -1413,3 +1413,11 @@ Manning产品页直接链接designing-ai-systems/designing_ai_systems_repo，固
 - 精确仓库和实体查重仅命中原始KB素材，非已发布文章。固定cac56e1，MIT/1.0.0；技能文本可移植不等于任意宿主都具备子代理、模型选择和隔离worktree。当前执行文档默认sonnet。
 - 两组临时Git实际检查证明：提交范围diff漏未提交改动；执行器提交后默认diff漏已提交的越界文件。需显式基线比较并检查工作区，不能把这些命令检查扩张成完整模型审计、安全认证或节费实测。
 - 双语介绍保留安装/quick/选计划/execute/reconcile路径；本文未安装或运行此技能审计博客。专属照片封面和三张小M图通过检查，公众号复核最终稿和封面。
+
+
+## 2026-11-14 · Makepad Relax Rust 实时编译
+
+- 固定4368689；新README与搜索缓存不同，默认后台借用检查/--check-first区别和当前21负载表都以固定源码为准。独立Relax运行器不等于Makepad UI/devhub集成，bootstrap仍需Cargo/rustc。
+- 实际AppleM4/Rust1.98.1/2Cargojobs构建成功；offline metadata35本地包/0外部registry。MBX自动包装器参与，未把构建耗时当比较基准。
+- 离线临时小包有效检查通过、2JIT单测通过、借用冲突E0502被拒绝。函数返回1改2后在counter7观察到新值，计数单调0..31、进程正常退出，验证小范围状态保留。未跑完整上游套件、UI、游戏、devhub或吞吐比较。
+- 官方11秒/1.15秒首帧和时间倍率均明确归因，nativeCPU基线不同，不能当加速倍数。代码量和借用检查实现不等于通用Rust兼容认证；发布继续用正式工具链。专属照片banner与三张小M图检查通过。

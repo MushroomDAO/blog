@@ -1,0 +1,13 @@
+{
+  "title": "Makepad Relax：Rust边编译边运行",
+  "author": "Mycelium",
+  "digest": "按需编译与热更新缩短开发等待，但借用检查时机、兼容性和稳态性能要分别看。",
+  "mediaId": "prCUE631thH1cmNLi42prDCgvuP-zkLGpi-XEvTKeUDJ_lxfmaIBToerxNn_xF9X",
+  "blogUrl": "https://blog.mushroom.cv/blog/makepad-relax-rust-jit-live-compilation/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/makepad-relax-rust-jit-live-compilation/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/makepad/relax"
+  ],
+  "publishedAt": "2026-11-14T08:12:12.803Z"
+}

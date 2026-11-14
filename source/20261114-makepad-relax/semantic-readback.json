@@ -1,0 +1,38 @@
+[
+  {
+    "id": "9b5c83c19fbdd0da22d393d9bffc9974ccb32c7b474b67a3",
+    "metadata": {
+      "article_id": "makepad-relax-rust-jit-live-compilation",
+      "content_hash": "541003cf188dc678",
+      "excerpt": "Makepad Relax：把 Rust 编译等待拆进运行过程 Makepad Relax 是实验性的 Rust 实时编译器和 JIT，将按需编译、后台优化与热更新放进同一运行过程。本文核验独立前端和机器码后端、首次自举与零外部依赖的含义，区分启动时间和稳态性能，并介绍借用检查时机、不能直接热换的结构变更、官方入门命令及本机小样例验证，帮助工程师判断它适合开发迭代还是发布构建。 Rust Makepad JIT Compiler Hot Reload “把 rustc 和 LLVM 换掉”指哪一层？ 为什么能边运行，边继续编译？ 运行更早，不等于所有检查",
+      "language": "zh",
+      "tags": [
+        "Rust",
+        "Makepad",
+        "JIT",
+        "Compiler",
+        "Hot Reload"
+      ],
+      "title": "Makepad Relax：把 Rust 编译等待拆进运行过程",
+      "url": "/blog/makepad-relax-rust-jit-live-compilation/"
+    }
+  },
+  {
+    "id": "09bca6c78f1ee6f48b8c0c7925c51ca16dd00afbfcf719d3",
+    "metadata": {
+      "article_id": "makepad-relax-rust-jit-live-compilation",
+      "content_hash": "63fd9f4bb203de7e",
+      "excerpt": "Makepad Relax: Rust JIT, Live Patches and Real Limits Inspect Makepad Relax's Rust JIT, lazy compilation, hot patches, borrow-check timing and bootstrap requirements, with a local fixture and benchmark limits. Rust Makepad JIT Compiler Hot Reload Which part of the toolchain does ",
+      "language": "en",
+      "tags": [
+        "Rust",
+        "Makepad",
+        "JIT",
+        "Compiler",
+        "Hot Reload"
+      ],
+      "title": "Makepad Relax: Rust JIT, Live Patches and Real Limits",
+      "url": "/blog/makepad-relax-rust-jit-live-compilation/"
+    }
+  }
+]

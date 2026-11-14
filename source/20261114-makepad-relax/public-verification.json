@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-14T08:11:42.625423+00:00",
+  "articles": [
+    {
+      "slug": "makepad-relax-rust-jit-live-compilation",
+      "url": "https://blog.mushroom.cv/blog/makepad-relax-rust-jit-live-compilation/",
+      "title": "Makepad Relax：把 Rust 编译等待拆进运行过程",
+      "listRank": 2,
+      "carouselRank": 2,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/makepad-relax-rust-jit-live-compilation-banner.BEZnHKEF.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 95056
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/makepad-relax-rust-jit-live-compilation-banner.BEZnHKEF_ZvBiem.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 47864
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/makepad-relax-rust-jit-live-compilation-fig-01.kv_6cpzz_ZhvAQ1.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 25480
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/makepad-relax-rust-jit-live-compilation-fig-02.BedjtIjB_Z21kPRM.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 31786
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/makepad-relax-rust-jit-live-compilation-fig-03.Do80Zw82_AW1Xk.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 25464
+        }
+      ]
+    }
+  ]
+}

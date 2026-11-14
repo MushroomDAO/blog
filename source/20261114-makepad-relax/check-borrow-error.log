@@ -1,0 +1,16 @@
+relax check: 0 of 1 bodies replayed from stored verdicts
+relax check: items resolved in a body: 1 (1 declarations)
+relax check: 1 crates type- and borrow-checked in 0.0 s
+error[E0502]: cannot borrow `v` as mutable because it is also borrowed as immutable
+  --> /private/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/relax-smoke-hjeqlv51/relax_smoke/src/main.rs:1:46
+  |
+1 |  println!("{:?}", r); }
+  |                         - immutable borrow later used here
+  |                                          -- immutable borrow occurs here
+  |                                              ^^^^^^^^^ mutable borrow occurs here
+  |
+  = note: field views: `push` uses mutably `v.len`, `v.cap`, `v.ptr`
+
+relax check: 1 body owners of the checked crates, 0 compiled in all, 1 errors
+relax check: cpu typeck 0 ms, lower 0 ms, opt 0 ms, codegen 0 ms; 0 RIR insts, 0 KB code
+relax check: constant initializers: 0 evaluated to data, 0 compiled and run; evaluation cpu 0.0 ms
