@@ -1,0 +1,14 @@
+{
+  "title": "Haru 4B：全双工语音怎样落地",
+  "author": "Mycelium",
+  "digest": "边听边说的语音基座已开源，接入时要分清音频分帧、硬件延迟和助手能力。",
+  "mediaId": "prCUE631thH1cmNLi42prDOTiSzywQcFJYrZNEKr4u8FNnwI2B3a3jjUUC8Ce3Lf",
+  "blogUrl": "https://blog.mushroom.cv/blog/haru-4b-full-duplex-voice-engineering/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/haru-4b-full-duplex-voice-engineering/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/higurashi-ai/haru",
+    "huggingface.co/higurashi-ai/haru-4b"
+  ],
+  "publishedAt": "2026-11-14T06:27:58.266Z"
+}

@@ -1,0 +1,11 @@
+{
+  "review": "Source claims separated from own tests; no unrun latency, weight inference or voice-quality claims.",
+  "BLUF": true,
+  "bilingual": true,
+  "faqPairsPerLanguage": 3,
+  "sourceAttribution": "Official repository, model card, technical blog, native client documentation",
+  "copyrightBothLanguages": true,
+  "internalLink": "jev-interaction-full-duplex-voice-decisions",
+  "testEvidence": "42 passed,2 skipped,11 checkpoint tests deselected; no full weights or microphone run",
+  "license": "Apache2 code and weights with third-party notices; no unrestricted voice-rights claim"
+}

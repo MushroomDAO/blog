@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haru-4B: A Low-Latency and Multilingual Full-Duplex Continuous Spoken Dialogue Foundation Model | higurashi Tech Blog</title>
+  <meta name="description" content="Scaling real-world speech pretraining for low-latency, multilingual, full-duplex interaction.">
+
+  <link rel="canonical" href="https://blog.higurashi.ai/melte/haru4b/">
+
+
+  <link rel="icon" type="image/svg+xml" href="/brand/favicon.cac4bd22f99790b4fe0d7a221219efc9edadad49ee1392d774c28f3ec5d14518.svg">
+
+  <link rel="stylesheet" href="/css/style.66fd022ad18b20de7e265c109054d890725951ce63635999bf1f77c445d4eb97.css">
+
+
+
+
+
+  <meta property="og:title" content="Haru-4B: A Low-Latency and Multilingual Full-Duplex Continuous Spoken Dialogue Foundation Model">
+  <meta property="og:site_name" content="higurashi Tech Blog">
+  <meta property="og:description" content="Scaling real-world speech pretraining for low-latency, multilingual, full-duplex interaction.">
+  <meta property="og:url" content="https://blog.higurashi.ai/melte/haru4b/">
+  <meta property="og:type" content="article"><meta property="og:image" content="https://blog.higurashi.ai/ogp/melte-haru4b.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+
+<script>
+  (() => {
+    if (window.location.origin !== "https://blog.higurashi.ai") return;
+
+    const measurementId = "G-5DCSYNDX5L";
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", measurementId);
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + measurementId;
+    document.head.appendChild(script);
+  })();
+</script>
+
+
+
+</head>
+<body>
+  <div class="page-wrapper page-wrapper--wide">
+    <header class="site-header">
+
+  <a href="/" class="site-title" aria-label="higurashi Tech Blog">
+    <img src="/brand/wordmark.bffd9a94ffb7eaf8382c5f17c0a326bdb66d3efcce76d7fead2ecffe3419cc41.svg" width="140" height="33" alt="higurashi">
+    <span>Tech Blog</span>
+  </a>
+  <nav aria-label="Site navigation">
+    <a href="https://www.higurashi.ai" class="company-link">Company website</a>
+  </nav>
+</header><script>(() => {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+
+  const updateHeaderHeight = () => {
+    document.documentElement.style.setProperty(
+      '--site-header-height',
+      `${header.getBoundingClientRect().height}px`,
+    );
+  };
+  updateHeaderHeight();
+  new ResizeObserver(updateHeaderHeight).observe(header);
+
+  // Expanding needs a longer upward move so small wheel or trackpad
+  // reversals do not make the bar bounce.
+  const COMPACT_AFTER = 24;
+  const EXPAND_AFTER = 64;
+  const TOP_ZONE = 80;
+  const desktop = window.matchMedia('(min-width: 901px)');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const position = () => Math.max(0, Math.min(
+    window.scrollY, document.documentElement.scrollHeight - window.innerHeight,
+  ));
+  let previousY = position();
+  let distance = 0;
+  let frame = 0;
+
+  const setCompact = (compact) => {
+    header.toggleAttribute('data-header-compact', compact);
+    distance = 0;
+  };
+
+  const reset = () => {
+    previousY = position();
+    setCompact(false);
+  };
+
+  const update = () => {
+    frame = 0;
+    const y = position();
+    const delta = y - previousY;
+    previousY = y;
+    if (!desktop.matches || reducedMotion.matches || y <= TOP_ZONE || header.contains(document.activeElement)) {
+      setCompact(false);
+      return;
+    }
+    if (!delta) return;
+    if (Math.sign(delta) !== Math.sign(distance)) distance = 0;
+    distance += delta;
+    const compact = header.hasAttribute('data-header-compact');
+    if (!compact && distance >= COMPACT_AFTER) setCompact(true);
+    else if (compact && distance <= -EXPAND_AFTER) setCompact(false);
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!frame) frame = requestAnimationFrame(update);
+  }, { passive: true });
+  desktop.addEventListener('change', reset);
+  reducedMotion.addEventListener('change', reset);
+  window.addEventListener('pageshow', reset);
+  header.addEventListener('focusin', reset);
+})();
+</script>
+
+    <main>
+
+<div class="post-wrapper">
+  <article class="post">
+    <header class="post-header">
+      <h1>Haru-4B: A Low-Latency and Multilingual Full-Duplex Continuous Spoken Dialogue Foundation Model</h1>
+      <time datetime="2026-11-13T00:00:00Z">2026.11.13</time>
+
+      <p class="post-authors">Rikuto Kotoge</p>
+
+
+
+
+    <nav class="article-language" aria-label="Article language">
+      <a href="https://blog.higurashi.ai/melte/haru4b-ja/" lang="ja" hreflang="ja">日本語で見る</a>
+    </nav>
+
+
+
+      <section class="article-share" aria-labelledby="article-share-title" data-article-share data-copied="Link copied." data-manual="Select and copy the link below.">
+  <div class="article-share-row">
+    <h2 id="article-share-title">Share this article</h2>
+    <div class="article-share-actions">
+      <a class="share-button" href="https://x.com/intent/tweet?text=Haru-4B%3A&#43;A&#43;Low-Latency&#43;and&#43;Multilingual&#43;Full-Duplex&#43;Continuous&#43;Spoken&#43;Dialogue&#43;Foundation&#43;Model&amp;url=https%3A%2F%2Fblog.higurashi.ai%2Fmelte%2Fharu4b%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on X (opens in a new tab)">
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.9-9.1L1.8 2h6.5l4.5 6.7L18.9 2Zm-1.1 18h1.7L7.4 3.9H5.6L17.8 20Z"/></svg>
+      </a>
+      <a class="share-button" href="https://www.linkedin.com/shareArticle?title=Haru-4B%3A&#43;A&#43;Low-Latency&#43;and&#43;Multilingual&#43;Full-Duplex&#43;Continuous&#43;Spoken&#43;Dialogue&#43;Foundation&#43;Model&amp;url=https%3A%2F%2Fblog.higurashi.ai%2Fmelte%2Fharu4b%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn (opens in a new tab)">
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.54 2.8-1.54 2.99 0 3.57 1.97 3.57 4.53v5.26Z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <button class="share-button" type="button" data-copy-link data-url="https://blog.higurashi.ai/melte/haru4b/" hidden>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m10 13 4-4m-6 7-1 1a4.24 4.24 0 0 1-6-6l4-4a4.24 4.24 0 0 1 6 0m2 1 1-1a4.24 4.24 0 0 1 6 6l-4 4a4.24 4.24 0 0 1-6 0" transform="translate(1 1)"/></svg>
+        <span>Copy link</span>
+      </button>
+    </div>
+  </div>
+  <p class="share-status" data-share-status role="status"></p>
+  <div class="share-manual" data-share-manual hidden>
+    <input class="share-url" type="text" value="https://blog.higurashi.ai/melte/haru4b/" readonly aria-label="Article link">
+  </div>
+  <noscript>
+    <label class="share-manual">Select and copy the link below.
+      <input class="share-url" type="text" value="https://blog.higurashi.ai/melte/haru4b/" readonly>
+    </label>
+  </noscript>
+</section><script>(() => {
+  const share = document.querySelector('[data-article-share]');
+  if (!share) return;
+
+  const button = share.querySelector('[data-copy-link]');
+  const status = share.querySelector('[data-share-status]');
+  const manual = share.querySelector('[data-share-manual]');
+  const input = manual.querySelector('input');
+
+  // The LAN preview uses HTTP, where the Clipboard API may be unavailable.
+  function copyWithSelection(url) {
+    const field = document.createElement('textarea');
+    field.value = url;
+    field.readOnly = true;
+    field.style.cssText = 'position:fixed;top:0;left:0;opacity:0;font-size:16px';
+    field.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(field);
+    try {
+      field.select();
+      return document.execCommand('copy');
+    } catch {
+      return false;
+    } finally {
+      field.remove();
+      button.focus({ preventScroll: true });
+    }
+  }
+
+  button.addEventListener('click', async () => {
+    status.textContent = '';
+    manual.hidden = true;
+    const url = button.dataset.url;
+    let copied = false;
+    try {
+      await navigator.clipboard.writeText(url);
+      copied = true;
+    } catch {
+      copied = copyWithSelection(url);
+    }
+
+    status.textContent = copied ? share.dataset.copied : share.dataset.manual;
+    if (!copied) {
+      manual.hidden = false;
+      input.focus({ preventScroll: true });
+      input.select();
+    }
+  });
+  button.hidden = false;
+})();
+</script>
+
+    </header>
+
+
+
+    <div class="post-content">
+      <p>We introduce Haru-4B, a full-duplex continuous spoken dialogue foundation model capable of listening and speaking simultaneously.</p>
+<p>Haru-4B focuses on natural human-AI interaction, learning conversational behaviors such as backchannels, interruptions, and turn-taking from large-scale real-world speech, rather than relying on synthetic conversations or explicitly scripted turn-taking behavior. Our goal is to make interacting with AI feel more like a natural human conversation, unlike interacting with agentic assistants.</p>
+<p><strong>We are releasing Haru-4B as a pretrained base model</strong>, providing a foundation for further fine-tuning and research on real-time spoken interaction. The model weights are available on <a href="https://huggingface.co/higurashi-ai/Haru-4B">Hugging Face</a>, and the code is available on <a href="https://github.com/higurashi-ai/Haru">GitHub</a>.</p>
+<h2 id="haru-4b-at-a-glance">Haru-4B at a Glance</h2>
+<ul>
+<li><strong>Ultra-Low-Latency Interaction:</strong> About 65 ms end-to-end latency on a MacBook.</li>
+<li><strong>7.5 Hz Native Full-Duplex Speech-to-Speech:</strong> Simultaneous processing of incoming and outgoing speech every 133 ms through synchronized audio-text streams.</li>
+<li><strong>Single-Step Continuous Audio Generation:</strong> A lightweight MLP head with one-step MeanFlow sampling, eliminating the need for an additional acoustic Transformer.</li>
+<li><strong>40 Million Hours of Real Speech:</strong> Large-scale multilingual pretraining without incorporating LLM- or TTS-generated turn-based synthetic dialogues.</li>
+<li><strong>Multilingual Speech Capabilities:</strong> Training data spanning over 160 languages, with a primary focus on nine languages: English, Spanish, Portuguese, German, French, Chinese, Japanese, Russian, and Korean.</li>
+<li><strong>Long-Form Full-Duplex Training:</strong> Trained on full-duplex conversations up to 60 minutes long, enabling the model to learn extended conversational dynamics and long-range interaction patterns.</li>
+<li><strong>Controllable Character and Voice:</strong> Supports character customization through text prompts and reference audio, enabling control over persona, speaking style, and voice characteristics.</li>
+<li><strong>Open Pretrained Base Model:</strong> We are releasing model weights (<a href="https://huggingface.co/higurashi-ai/Haru-4B">Hugging Face</a>), code (<a href="https://github.com/higurashi-ai/Haru">GitHub</a>), and demos to support further research.</li>
+</ul>
+<h2 id="1-architecture-native-full-duplex-at-75-hz">1. Architecture: Native Full-Duplex at 7.5 Hz</h2>
+<p>Haru-4B is built on Qwen3.5-4B <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and designed to process incoming and outgoing speech simultaneously within a unified language model. Its architecture combines low-rate continuous audio representations, synchronized multi-stream processing, and efficient single-step generation.</p>
+<figure><a href="/images/haru4b/multi-stream-modeling.svg"><img src="/images/haru4b/multi-stream-modeling.svg"
+			alt="Cascaded, turn-based, interleaved, and multi-stream modeling of spoken dialogue" width="720" height="1220" loading="lazy"></a>
+</figure>
+
+<p><strong>Native full-duplex multi-stream modeling.</strong> Haru processes three synchronized streams: incoming user audio, outgoing model audio, and model text <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>. Their embeddings are combined through element-wise addition and processed by a shared language model. This enables simultaneous listening and speaking <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> without interleaving the three streams token by token <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>. Compared with interleaving, this reduces the context length to one third while keeping the text stream uninterrupted.</p>
+<figure><a href="/images/haru4b/speech-generation.svg"><img src="/images/haru4b/speech-generation.svg"
+			alt="Discrete, iterative-flow, and single-step continuous speech generation" width="720" height="656" loading="lazy"></a>
+</figure>
+
+<p><strong>Continuous speech tokens at 7.5 Hz.</strong> Most spoken language models rely on discrete audio tokens, often produced through Residual Vector Quantization (RVQ) <sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> <sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>, where each audio frame is represented by multiple discrete codebook indices. In contrast, Haru uses 64-dimensional continuous acoustic latents at just 7.5 Hz <sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>, representing approximately 133 ms of speech per token. By avoiding discrete codebooks and operating at a low token rate, Haru reduces the number of sequential LLM modeling steps required for training and inference.</p>
+<p><strong>Single-step continuous speech generation.</strong> Haru generates continuous acoustic tokens directly from language-model hidden states using a lightweight Multi-Layer Perceptron (MLP) within a next-latent diffusion framework <sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup> <sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup> <sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>. We primarily train the generation head with Flow Matching <sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup>, followed by MeanFlow distillation <sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">14</a></sup> <sup id="fnref:15"><a href="#fn:15" class="footnote-ref" role="doc-noteref">15</a></sup> for training and inference efficiency. At inference time, each acoustic token is generated in a single sampling step, without iterative flow sampling or an additional acoustic Transformer.</p>
+<figure><a href="/images/haru4b/chunk-level-alignment.svg"><img src="/images/haru4b/chunk-level-alignment.svg"
+			alt="Token-level and chunk-level text alignment" width="720" height="466" loading="lazy"></a>
+</figure>
+
+<p><strong>Chunk-level text alignment.</strong> Instead of aligning text and audio at the individual token level, Haru represents text in chunks <sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, followed by padding positions and a dedicated end-of-padding token for predicting speech initiation. This accommodates the different temporal resolutions of text and audio while maintaining synchronization across streams and mitigating catastrophic forgetting of pretrained language-model knowledge.</p>
+<p>Together, these design choices enable efficient large-scale speech pretraining while reducing inference to just 7.5 autoregressive audio steps per second, making low-latency real-time full-duplex interaction practical even on local hardware.</p>
+<h2 id="2-scaling-pretraining-with-40-million-hours-of-real-speech">2. Scaling Pretraining with 40 Million Hours of Real Speech</h2>
+<p>We believe large-scale real-world speech is essential for learning the dynamics of natural interaction.
+Unlike synthetic conversations, real recordings contain spontaneous interruptions, hesitations, backchannels, overlapping speech, and irregular turn boundaries.</p>
+<p>Haru-4B is pretrained using <strong>over 40 million hours of speech</strong>, covering more than 160 languages, with nine primary languages.
+To learn natural human conversational patterns, we intentionally exclude LLM-generated dialogues and TTS-synthesized speech from our training mixture.</p>
+<p>Our pretraining follows two stages.</p>
+<h3 id="stage-1-single-channel-speech-pretraining">Stage 1: Single-Channel Speech Pretraining</h3>
+<p>We first adapt Qwen3.5-4B to speech using a mixture of:</p>
+<ul>
+<li><strong>Automatic speech recognition</strong>, connecting speech and linguistic representations.</li>
+<li><strong>Speech and text continuation</strong>, learning to model and generate continuous speech.</li>
+<li><strong>Text-only rehearsal</strong>, mitigating catastrophic forgetting of pretrained language-model knowledge <sup id="fnref:16"><a href="#fn:16" class="footnote-ref" role="doc-noteref">16</a></sup>.</li>
+</ul>
+<p><strong>Speech restoration with Sidon.</strong> We process most of our speech data using Sidon <sup id="fnref:17"><a href="#fn:17" class="footnote-ref" role="doc-noteref">17</a></sup> to restore clean audio for pretraining. We have also open-sourced optimized Triton kernels for Sidon to accelerate large-scale speech preprocessing: <a href="https://github.com/higurashi-ai/Sidon-Triton">Sidon-Triton</a>.</p>
+<h3 id="stage-2-full-duplex-pretraining">Stage 2: Full-Duplex Pretraining</h3>
+<p><strong>Full-duplex data reconstruction.</strong> Large-scale full-duplex training requires synchronized speech streams, but most real-world conversational recordings are available only as single-channel mixtures. To address this, we developed <strong>FastDialogueSidon</strong>, a fast joint speech separation and restoration model that converts mixed conversational recordings into temporally aligned full-duplex streams. The FastDialogueSidon model and implementation are also publicly available: <a href="https://github.com/higurashi-ai/FastDialogueSidon">FastDialogueSidon</a>.</p>
+<p><strong>Large-scale long-form full-duplex training.</strong> We use <strong>over 13 million hours of separated full-duplex dialogue data</strong>. Training samples include conversations up to <strong>60 minutes long</strong>, allowing the model to learn long-range conversational dynamics, including extended turn-taking and overlapping speech.</p>
+<p><strong>Character and voice conditioning.</strong> We generate a character prompt for each training sample and use reference audio from the same speaker to condition speech generation. This enables Haru to control character personality and voice characteristics through text prompts and audio references.</p>
+<h2 id="3-efficient-large-scale-pretraining-and-real-time-inference">3. Efficient Large-Scale Pretraining and Real-Time Inference</h2>
+<h3 id="31-preprocessing-and-training-optimization">3.1. Preprocessing and Training Optimization</h3>
+<p><strong>Accelerated speech preprocessing.</strong> Processing speech at this scale requires substantial computational resources. We optimize preprocessing models, including the neural audio codec, Sidon, and FastDialogueSidon, using custom Triton kernels <sup id="fnref:18"><a href="#fn:18" class="footnote-ref" role="doc-noteref">18</a></sup> to accelerate large-scale data preparation.</p>
+<p><strong>Large-scale distributed training.</strong> Haru-4B was pretrained using <strong>256 NVIDIA B200 GPUs over approximately 8 days</strong>. Our training infrastructure is built on Megatron-LM <sup id="fnref:19"><a href="#fn:19" class="footnote-ref" role="doc-noteref">19</a></sup>, with optimizations for efficient large-scale speech pretraining.</p>
+<h3 id="32-real-time-inference-optimization">3.2. Real-Time Inference Optimization</h3>
+<p><strong>Ultra-low-latency inference on Apple Silicon.</strong> On a MacBook with Apple M1 Max, our native Swift app with optimized custom Metal kernels achieves an end-to-end latency of approximately <strong>65 ms</strong>, including acoustic encoding, language-model inference, audio decoding, and wired microphone and headphone I/O, excluding audio framing. With a 7.5 Hz token rate, audio framing introduces up to 133 ms of additional algorithmic latency.</p>
+<p>The breakdown below is for int8 weights.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Stage</th>
+					<th>Latency (int8)</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Input (microphone → app)</td>
+					<td>5.3 ± 0.0 ms</td>
+			</tr>
+			<tr>
+					<td>One model step</td>
+					<td>34.2 ± 0.5 ms</td>
+			</tr>
+			<tr>
+					<td>Socket and handoff</td>
+					<td>4.1 ± 0.3 ms</td>
+			</tr>
+			<tr>
+					<td>Output wait (15 ms margin and slack)</td>
+					<td>13.3 ± 1.5 ms</td>
+			</tr>
+			<tr>
+					<td>Output (app → headphones)</td>
+					<td>8.1 ± 0.2 ms</td>
+			</tr>
+			<tr>
+					<td><strong>Total (p50)</strong></td>
+					<td><strong>65.2 ± 1.5 ms</strong></td>
+			</tr>
+	</tbody>
+</table>
+<p><strong>High-performance GPU serving.</strong> We also support GPU deployment through <strong>vLLM-Omni</strong> <sup id="fnref:20"><a href="#fn:20" class="footnote-ref" role="doc-noteref">20</a></sup> <sup id="fnref:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">21</a></sup>. On an NVIDIA B300 GPU, audio encoding and decoding together with one language-model step take about <strong>15 ms</strong>.</p>
+<p>Together, these optimizations enable efficient large-scale pretraining and low-latency real-time full-duplex interaction on both Apple Silicon and GPU servers.</p>
+<h2 id="4-demo">4. Demo</h2>
+<p>Without training on any natively recorded two-channel conversations, our model pretrained only on separated speech achieves natural conversation, including backchannels and overlapping speech.</p>
+<p><strong>Investment advice (EN).</strong> A conversation with a financial advisor about investing. Haru understands the content and intent of the user&rsquo;s remarks and offers logical, balanced advice. It maintains a natural conversational pace while providing consistent, context-aware responses.</p>
+<figure class="video-player">
+  <video controls preload="none" playsinline poster="https://www.higurashi.ai/haru4b/investment-caption-en-poster.png" width="1280" height="720" aria-label="Haru-4B demo: investment advice conversation in English">
+    <source src="https://www.higurashi.ai/haru4b/investment-caption-en.mp4" type="video/mp4">
+    <a href="https://www.higurashi.ai/haru4b/investment-caption-en.mp4">Download the video</a>
+  </video>
+</figure>
+
+<h2 id="5-future-work">5. Future Work</h2>
+<p>We are releasing Haru-4B as a large-scale pretrained foundation model. Going forward, we are exploring several directions to further improve its conversational abilities and extend real-time interaction beyond speech.</p>
+<p><strong>Beyond separated speech.</strong> Separated speech makes full-duplex dialogue pretraining scalable, but separation errors and noise can remain, especially in overlapping speech. To further improve natural full-duplex interaction, we are fine-tuning Haru on native full-duplex two-channel conversational recordings. We are also developing full-duplex dialogue and speech generation models to create natural synthetic full-duplex data that enhances response quality, conversational diversity, and character-specific dialogue capabilities.</p>
+<p><strong>Scaling up to 100B+ parameters.</strong> Although Haru-4B demonstrates efficient full-duplex speech modeling, its relatively small language-model backbone limits its response quality. We are already pretraining larger full-duplex models with over 100 billion parameters, aiming to combine natural conversational timing with stronger language understanding and knowledge.</p>
+<p><strong>Toward omni-modal full-duplex interaction.</strong> Human interaction involves more than speech. Visual context, facial expressions, and nonverbal cues all contribute to natural conversation. We are extending our architecture to take real-time video input, moving toward omni-modal full-duplex dialogue models that can see, listen, and speak continuously.</p>
+<p><strong>Open foundations for future research.</strong> We plan to release a more detailed technical report and training code.</p>
+<p>We believe native full-duplex interaction is an important step toward more natural human-AI communication. <strong>If you&rsquo;re interested in building the next generation of full-duplex models with us, we&rsquo;d love to hear from you:</strong> <a href="mailto:contact@higurashi.ai">contact@higurashi.ai</a></p>
+<h2 id="6-acknowledgments">6. Acknowledgments</h2>
+<p>The development of Haru-4B was supported by <strong>Amazon Web Services (AWS)</strong> and by the <strong>Generative AI Accelerator Challenge (GENIAC)</strong>, a project led by Japan&rsquo;s Ministry of Economy, Trade and Industry (METI) and the New Energy and Industrial Technology Development Organization (NEDO).</p>
+<h2 id="references">References</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Qwen Team, “Qwen3.5-4B,” model card, Hugging Face, 2026. [Online]. Available: <a href="https://huggingface.co/Qwen/Qwen3.5-4B">https://huggingface.co/Qwen/Qwen3.5-4B</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>A. Défossez et al., “Moshi: A speech-text foundation model for real-time dialogue,” <em>arXiv preprint arXiv:2410.00037</em>, 2024.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Y. Yao et al., “FLM-Audio: Natural monologues improves native full-duplex chatbots via dual training,” <em>arXiv preprint arXiv:2509.02521</em>, 2025.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>T. A. Nguyen et al., “Generative spoken dialogue language modeling,” <em>Transactions of the Association for Computational Linguistics</em>, vol. 11, 2023.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>B. Veluri, B. N. Peloquin, B. Yu, H. Gong, and S. Gollakota, “Beyond turn-based interfaces: Synchronous LLMs as full-duplex dialogue agents,” in <em>Proc. Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 2024.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>Q. Zhang et al., “OmniFlatten: An end-to-end GPT model for seamless voice conversation,” in <em>Proc. Annual Meeting of the Association for Computational Linguistics (ACL)</em>, 2025.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>N. Zeghidour, A. Luebs, A. Omran, J. Skoglund, and M. Tagliasacchi, “SoundStream: An end-to-end neural audio codec,” <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em>, vol. 30, 2022.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8">
+<p>A. Défossez, J. Copet, G. Synnaeve, and Y. Adi, “High fidelity neural audio compression,” <em>Transactions on Machine Learning Research</em>, 2023.&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9">
+<p>Z. Peng et al., “VibeVoice: Expressive podcast generation with next-token diffusion,” in <em>Proc. International Conference on Learning Representations (ICLR)</em>, 2026.&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10">
+<p>T. Li, Y. Tian, H. Li, M. Deng, and K. He, “Autoregressive image generation without vector quantization,” in <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2024.&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11">
+<p>Y. Sun et al., “Multimodal latent language modeling with next-token diffusion,” <em>arXiv preprint arXiv:2412.08635</em>, 2024.&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12">
+<p>S. Rouard, M. Orsini, A. Roebel, N. Zeghidour, and A. Défossez, “Continuous audio language models,” in <em>Proc. International Conference on Learning Representations (ICLR)</em>, 2026.&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:13">
+<p>Y. Lipman, R. T. Q. Chen, H. Ben-Hamu, M. Nickel, and M. Le, “Flow matching for generative modeling,” in <em>Proc. International Conference on Learning Representations (ICLR)</em>, 2023.&#160;<a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:14">
+<p>Z. Geng, M. Deng, X. Bai, J. Z. Kolter, and K. He, “Mean flows for one-step generative modeling,” in <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2025.&#160;<a href="#fnref:14" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:15">
+<p>Z. Geng, Y. Lu, Z. Wu, E. Shechtman, J. Z. Kolter, and K. He, “Improved mean flows: On the challenges of fastforward generative models,” in <em>Proc. IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2026.&#160;<a href="#fnref:15" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:16">
+<p>A. Ibrahim et al., “Simple and scalable strategies to continually pre-train large language models,” <em>Transactions on Machine Learning Research</em>, 2024.&#160;<a href="#fnref:16" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:17">
+<p>W. Nakata, Y. Saito, Y. Ueda, and H. Saruwatari, “Sidon: Fast and robust open-source multilingual speech restoration for large-scale dataset cleansing,” in <em>Proc. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 2026.&#160;<a href="#fnref:17" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:18">
+<p>P. Tillet, H. T. Kung, and D. Cox, “Triton: An intermediate language and compiler for tiled neural network computations,” in <em>Proc. ACM SIGPLAN International Workshop on Machine Learning and Programming Languages (MAPL)</em>, 2019.&#160;<a href="#fnref:18" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:19">
+<p>M. Shoeybi, M. Patwary, R. Puri, P. LeGresley, J. Casper, and B. Catanzaro, “Megatron-LM: Training multi-billion parameter language models using model parallelism,” <em>arXiv preprint arXiv:1909.08053</em>, 2019.&#160;<a href="#fnref:19" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:20">
+<p>W. Kwon et al., “Efficient memory management for large language model serving with PagedAttention,” in <em>Proc. ACM Symposium on Operating Systems Principles (SOSP)</em>, 2023.&#160;<a href="#fnref:20" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:21">
+<p>vLLM-Omni Team, “vLLM-Omni technical report: A unified serving runtime for omni-modality generation,” <em>arXiv preprint arXiv:2610.09307</em>, 2026.&#160;<a href="#fnref:21" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </div>
+    <nav class="post-navigation" aria-label="Article navigation">
+      <a href="/">All articles</a>
+    </nav>
+  </article>
+
+  <aside class="toc" id="toc">
+    <nav>
+      <p class="toc-title">Contents</p>
+      <ol id="toc-list"></ol>
+    </nav>
+  </aside>
+</div>
+
+<script>
+(function() {
+  var headings = document.querySelectorAll('.post-content h2, .post-content h3');
+  var list = document.getElementById('toc-list');
+  if (headings.length === 0) {
+    document.getElementById('toc').style.display = 'none';
+    return;
+  }
+  headings.forEach(function(h, i) {
+    if (!h.id) h.id = 'section-' + i;
+    var li = document.createElement('li');
+    if (h.tagName === 'H3') li.className = 'toc-h3';
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+  var links = list.querySelectorAll('a');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        links.forEach(function(l) { l.classList.remove('active'); });
+        var active = list.querySelector('a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '0px 0px -80% 0px', threshold: 0 });
+  headings.forEach(function(h) { observer.observe(h); });
+})();
+</script>
+
+    </main>
+    <footer>
+      <p>&copy; 2026 higurashi株式会社</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "f695f0d668f9769aadde2fe16b73edc6697410c668c02d60",
+    "metadata": {
+      "article_id": "haru-4b-full-duplex-voice-engineering",
+      "content_hash": "3635151973b8aba6",
+      "excerpt": "Haru 4B：全双工语音开源了，怎样接进真实对话？ Haru 4B 是 higurashi 开源的全双工语音基座模型，支持边听边说。本文核验 Apache 2.0 代码与权重、四千万小时训练数据声明及七点五赫兹连续音频架构，拆解官方六十五毫秒延迟的测量边界，给出 Mac 与 NVIDIA 部署入口、参考音色和音频队列的接入要点，并区分本地测试与尚未复现的真实通话表现。 Haru Full-Duplex Speech AI MLX Open Source 全双工到底改变了什么？ 65 毫秒，为什么不能直接当用户等待时间？ Mac 与 NVIDIA 各从哪",
+      "language": "zh",
+      "tags": [
+        "Haru",
+        "Full-Duplex",
+        "Speech AI",
+        "MLX",
+        "Open Source"
+      ],
+      "title": "Haru 4B：全双工语音开源了，怎样接进真实对话？",
+      "url": "/blog/haru-4b-full-duplex-voice-engineering/"
+    }
+  },
+  {
+    "id": "55a23254b37b392f02836da6a103a9ff9dc172229cd73843",
+    "metadata": {
+      "article_id": "haru-4b-full-duplex-voice-engineering",
+      "content_hash": "66969da0f2658966",
+      "excerpt": "Haru 4B: Engineering Open Full-Duplex Voice Audit Haru 4B's open full-duplex voice stack, latency framing, Mac and GPU setup, reference voices, and the limits of our local code checks before deployment. Haru Full-Duplex Speech AI MLX Open Source How does the full-duplex loop work",
+      "language": "en",
+      "tags": [
+        "Haru",
+        "Full-Duplex",
+        "Speech AI",
+        "MLX",
+        "Open Source"
+      ],
+      "title": "Haru 4B: Engineering Open Full-Duplex Voice",
+      "url": "/blog/haru-4b-full-duplex-voice-engineering/"
+    }
+  }
+]

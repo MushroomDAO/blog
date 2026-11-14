@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-14T06:27:38.737733+00:00",
+  "articles": [
+    {
+      "slug": "haru-4b-full-duplex-voice-engineering",
+      "url": "https://blog.mushroom.cv/blog/haru-4b-full-duplex-voice-engineering/",
+      "title": "Haru 4B：全双工语音开源了，怎样接进真实对话？",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/haru-4b-full-duplex-voice-engineering-banner.CKS683fF.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 91706
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/haru-4b-full-duplex-voice-engineering-banner.CKS683fF_Z2pITO6.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 41666
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/haru-4b-full-duplex-voice-engineering-fig-01.6_GYvfsV_1rmv2E.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 28504
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/haru-4b-full-duplex-voice-engineering-fig-02.DcIU5Q_C_ZWSlOe.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 28800
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/haru-4b-full-duplex-voice-engineering-fig-03.B8ttEpBE_Z99zjd.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 24512
+        }
+      ]
+    }
+  ]
+}

@@ -1397,3 +1397,11 @@ Manning产品页直接链接designing-ai-systems/designing_ai_systems_repo，固
 - 实际在临时副本调用 context-slimming 验收入口：缺JUDGE_BASE_URL时exit1且不写reward.txt；评审基础设施故障不能算模型低分。未跑Docker任务、求解器、付费评审、生成或训练。
 - 固定求解器用于课程加难，后续另行生成高分轨迹并SFT，不能写成运行中自动更新模型权重。论文8.4点平均增益是官方结果。
 - 发布 skill2env-agent-training-environment-blueprints。封面8591虽过OCR仍因微小伪文字被人工拒绝，8592木迷宫/钢球通过；三张小M图经检查。公众号若40164失败只补待创建草稿，不重发Blog或KB。
+
+
+## 2026-11-14 · Haru 4B 全双工语音工程核查
+
+- 原始机器查重因Apache泛词误报，精确higurashi-ai/Haru和Haru-4B查重明确无旧稿，不能把已入KB当成文章已发布。
+- 官方代码、权重Apache2；40M小时和65ms是官方披露。65ms使用M1Max/int8/Swift/有线IO且排除最多133ms分帧，不得写成开口到回答总延迟。
+- 实际本机无检查点上游测试42通过2跳过11排除，覆盖音频/提示词/采样/缓冲与替身服务；没有下载全部10.54GB权重或测听感、中文、延迟。
+- 专属有线耳机照片封面8601和三张红帽小M正文图均通过检查；双语文章、公众号最终稿一致，完整回读正文、图片、封面和原文链接。

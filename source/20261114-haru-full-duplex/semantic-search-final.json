@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "haru-4b-full-duplex-voice-engineering",
+      "title": "Haru 4B：全双工语音开源了，怎样接进真实对话？",
+      "url": "/blog/haru-4b-full-duplex-voice-engineering/",
+      "language": "zh",
+      "excerpt": "Haru 4B：全双工语音开源了，怎样接进真实对话？ Haru 4B 是 higurashi 开源的全双工语音基座模型，支持边听边说。本文核验 Apache 2.0 代码与权重、四千万小时训练数据声明及七点五赫兹连续音频架构，拆解官方六十五毫秒延迟的测量边界，给出 Mac 与 NVIDIA 部署入口、参考音色和音频队列的接入要点，并区分本地测试与尚未复现的真实通话表现。 Haru Full-Duplex Speech AI MLX Open Source 全双工到底改变了什么？ 65 毫秒，为什么不能直接当用户等待时间？ Mac 与 NVIDIA 各从哪",
+      "score": 0.668707
+    },
+    {
+      "article_id": "whistle-17mb-local-speech-to-tool-calls",
+      "title": "Whistle: 16.9MB Speech-to-Tool Calls Tested on an M4 Mac",
+      "url": "/blog/whistle-17mb-local-speech-to-tool-calls/",
+      "language": "en",
+      "excerpt": "Whistle: 16.9MB Speech-to-Tool Calls Tested on an M4 Mac Whistle is a 16.9MB speech model for seven languages. An M4 test generated a light-control call in 96 ms. We inspect sizes, benchmarks and telemetry limits. Whistle Hugging Face 小模型 语音识别 端侧 AI Needle 工具调用 Apple Silicon Why ",
+      "score": 0.5290573
+    },
+    {
+      "article_id": "microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork",
+      "title": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒",
+      "url": "/blog/microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork/",
+      "language": "zh",
+      "excerpt": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒 microsoft/VibeVoice，54K stars，MIT，Python。7.5Hz 连续语音 tokenizer + LLM + 扩散头，单次推理 90 分钟 TTS、60 分钟 ASR，4 路说话人。2025-09 官方因深度伪造顾虑主动下架，社区 fork vibevoice-community/VibeVoice 接棒维护，已加 LoRA 微调和 HF Transformers 集成。工程指导：模型选型、API 服务化、BitN",
+      "score": 0.52605456
+    },
+    {
+      "article_id": "codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos",
+      "title": "M5Stack StopWatch 变成 Codex 物理控制器：BLE 麦克风 + 额度仪表盘 + 四向 Agent 触摸，vibe coding 专属硬件",
+      "url": "/blog/codex-micro-stopwatch-m5stack-ble-hid-quota-dashboard-macos/",
+      "language": "zh",
+      "excerpt": "M5Stack StopWatch 变成 Codex 物理控制器：BLE 麦克风 + 额度仪表盘 + 四向 Agent 触摸，vibe coding 专属硬件 liptoxli/M5stopwatch-vibecoding 把 M5Stack StopWatch（ESP32-S3）改造成 Codex 专属物理控制器，MIT，C 语言固件。固件 v0.10.1 / macOS Bridge v1.3.1。核心能力：16 kHz IMA-ADPCM 实时 BLE 音频流变成 macOS 虚拟麦克风 M5 StopWatch Mic（不生成 WAV 文件）；B",
+      "score": 0.5201079
+    },
+    {
+      "article_id": "nemotron-3-diarization-8-speaker-streaming-mac-test",
+      "title": "Nemotron 3 Diarization Tested: NVIDIA's 100M Speaker Diarization Model, Up to 8 Speakers, Commercial-Friendly, Self-Build on Mac",
+      "url": "/blog/nemotron-3-diarization-8-speaker-streaming-mac-test/",
+      "language": "en",
+      "excerpt": "Nemotron 3 Diarization Tested: NVIDIA's 100M Speaker Diarization Model, Up to 8 Speakers, Commercial-Friendly, Self-Build on Mac Nemotron 3 Diarization is a 100M-parameter speaker diarization model NVIDIA released on 2026-09-23: up to 8 speakers, streaming latency down to 0.32 s,",
+      "score": 0.5091941
+    },
+    {
+      "article_id": "audio8-asr-01b-on-device-speech-recognition",
+      "title": "Audio8-ASR-0.1B：0.1B 参数，LibriSpeech 2.70 WER，iPhone 本地跑只占 200MB",
+      "url": "/blog/audio8-asr-01b-on-device-speech-recognition/",
+      "language": "zh",
+      "excerpt": "Audio8-ASR-0.1B：0.1B 参数，LibriSpeech 2.70 WER，iPhone 本地跑只占 200MB Audio8-ASR-0.1B 是一个端到端参数量 0.324B、语言模型核心仅 0.1B 的自回归 ASR 模型，LibriSpeech test-clean WER 2.70%，Open ASR Leaderboard 七集平均 WER 7.03%。三条部署路径：Transformers（Python 服务端）、ONNX Runtime（跨平台 HTTP API）、iOS ANE（iPhone 本地，峰值内存约 200MB）",
+      "score": 0.50469387
+    },
+    {
+      "article_id": "nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling",
+      "title": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出",
+      "url": "/blog/nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling/",
+      "language": "zh",
+      "excerpt": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出 NVIDIA NemotronLabs VoiceChat 11B（HF: nvidia/NVIDIA-NemotronLabs-VoiceChat-11B，442 likes，OpenMDW-1.1）是首个开源、全双工、支持工具调用的端到端语音对话模型。不是 ASR→LLM→TTS 的串联流水线，而是单一模型以 12.5 Hz（80ms/帧）同时输出文本、工具调用标记、声学编码三个通道。基于 Nemotron-",
+      "score": 0.504
+    },
+    {
+      "article_id": "ming-3-tts-small-model-evaluation",
+      "title": "Ming-3.0-TTS：0.5B 语音模型，哪些成绩值得信？",
+      "url": "/blog/ming-3-tts-small-model-evaluation/",
+      "language": "zh",
+      "excerpt": "Ming-3.0-TTS：0.5B 语音模型，哪些成绩值得信？ 核查蚂蚁Ming-3.0-TTS的MIT代码与0.5B权重，拆开发音正确率、声音克隆听感与原生音色排名，比较官方Seed-TTS成绩，并解释近3GB权重文件、CUDA参考环境、Mac兼容性缺口及任务控制限制，提供八项输入协议检查证据，帮助判断小模型能否接入配音、语音助手与本地创作流程，讲清部署取舍与验证范围。 Ming-3.0-TTS 蚂蚁集团 语音合成 开源模型 本地AI 原始仓库和模型权重在哪里？ “顶级”是哪张榜、什么口径？ 官方客观评测有没有短板？ 小模型能控制哪些声音？ Mac能直",
+      "score": 0.50395656
+    },
+    {
+      "article_id": "vibevoice-microsoft-frontier-voice-ai-asr-tts-streaming-bitnet-cpu",
+      "title": "VibeVoice：微软开源的前沿语音 AI 家族，ASR 一次跑60分钟，CPU 也能实时推理",
+      "url": "/blog/vibevoice-microsoft-frontier-voice-ai-asr-tts-streaming-bitnet-cpu/",
+      "language": "zh",
+      "excerpt": "VibeVoice：微软开源的前沿语音 AI 家族，ASR 一次跑60分钟，CPU 也能实时推理 microsoft/VibeVoice ⭐53474，开源前沿语音 AI 模型家族，ASR 单次处理60分钟音频输出「谁/什么时候/说了什么」，Realtime-0.5B 流式 TTS 首字延迟300ms，ASR-BitNet 无需GPU三线程实时推理，MIT 许可。 speech AI ASR TTS Microsoft open source voice BitNet streaming LLM ICLR 三个模型，覆盖语音 AI 的三个核心场景 最新：",
+      "score": 0.5031875
+    },
+    {
+      "article_id": "underdog-bark-3-local-asr",
+      "title": "Bark 3.0：163MB 英文语音识别，怎样看懂速度、Clean 版与内存代价？",
+      "url": "/blog/underdog-bark-3-local-asr/",
+      "language": "zh",
+      "excerpt": "Bark 3.0：163MB 英文语音识别，怎样看懂速度、Clean 版与内存代价？ 核查Underdog Bark 3.0的官方模型与测试：163MB标准版、180MB Clean版、AMI 7.82% WER及七集平均结果各指什么，区分M5 Max应用测速与MLX脚本路径，并解释解包缓存、长录音内存和Mac本地部署的限制，提供可复核的短音频运行记录，不把团队公布的数据误写为我们的实测。 Bark 3.0 Underdog 语音识别 本地AI MLX 开源模型 到底开源了什么，入口在哪里？ 7.82%到底是哪一种错误率？ Clean版为什么会有更高的逐",
+      "score": 0.5020187
+    }
+  ]
+}
