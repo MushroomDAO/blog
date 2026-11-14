@@ -1,57 +1,177 @@
 {
-  "generatedAt": "2026-11-10T14:00:00Z",
+  "generatedAt": "2026-11-14T14:00:00Z",
   "period": {
-    "start": "2026-10-11",
-    "end": "2026-11-10"
+    "start": "2026-10-15",
+    "end": "2026-11-14"
   },
   "totals": {
-    "pageviews": 11000,
-    "visits": 10000,
+    "pageviews": 19840,
+    "visits": 19120,
     "bots": 0
   },
   "last7": {
-    "pv": 11000,
-    "visits": 10000
+    "pv": 4550,
+    "visits": 4320
   },
   "prior7": {
-    "pv": 0,
-    "visits": 0
+    "pv": 5370,
+    "visits": 5170
   },
   "daily": [
     {
       "date": "10-15",
-      "pv": 1000,
-      "visits": 0
+      "pv": 150,
+      "visits": 150
+    },
+    {
+      "date": "10-16",
+      "pv": 530,
+      "visits": 490
+    },
+    {
+      "date": "10-17",
+      "pv": 650,
+      "visits": 610
+    },
+    {
+      "date": "10-18",
+      "pv": 420,
+      "visits": 410
     },
     {
       "date": "10-19",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 810,
+      "visits": 770
+    },
+    {
+      "date": "10-20",
+      "pv": 710,
+      "visits": 690
+    },
+    {
+      "date": "10-21",
+      "pv": 930,
+      "visits": 920
+    },
+    {
+      "date": "10-22",
+      "pv": 740,
+      "visits": 710
     },
     {
       "date": "10-23",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 900,
+      "visits": 820
     },
     {
       "date": "10-24",
-      "pv": 3000,
-      "visits": 3000
+      "pv": 570,
+      "visits": 570
+    },
+    {
+      "date": "10-25",
+      "pv": 420,
+      "visits": 420
     },
     {
       "date": "10-26",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 550,
+      "visits": 550
     },
     {
       "date": "10-27",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 440,
+      "visits": 440
+    },
+    {
+      "date": "10-28",
+      "pv": 550,
+      "visits": 550
+    },
+    {
+      "date": "10-29",
+      "pv": 610,
+      "visits": 610
+    },
+    {
+      "date": "10-30",
+      "pv": 530,
+      "visits": 520
+    },
+    {
+      "date": "10-31",
+      "pv": 410,
+      "visits": 400
+    },
+    {
+      "date": "11-01",
+      "pv": 630,
+      "visits": 620
+    },
+    {
+      "date": "11-02",
+      "pv": 770,
+      "visits": 700
+    },
+    {
+      "date": "11-03",
+      "pv": 800,
+      "visits": 760
+    },
+    {
+      "date": "11-04",
+      "pv": 870,
+      "visits": 850
+    },
+    {
+      "date": "11-05",
+      "pv": 790,
+      "visits": 780
+    },
+    {
+      "date": "11-06",
+      "pv": 880,
+      "visits": 860
+    },
+    {
+      "date": "11-07",
+      "pv": 630,
+      "visits": 600
     },
     {
       "date": "11-08",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 630,
+      "visits": 610
+    },
+    {
+      "date": "11-09",
+      "pv": 1010,
+      "visits": 970
+    },
+    {
+      "date": "11-10",
+      "pv": 670,
+      "visits": 630
+    },
+    {
+      "date": "11-11",
+      "pv": 680,
+      "visits": 680
+    },
+    {
+      "date": "11-12",
+      "pv": 680,
+      "visits": 640
+    },
+    {
+      "date": "11-13",
+      "pv": 580,
+      "visits": 490
+    },
+    {
+      "date": "11-14",
+      "pv": 300,
+      "visits": 300
     }
   ],
   "countries": [
@@ -60,49 +180,105 @@
       "flag": "🇸🇬",
       "name": "新加坡",
       "nameEn": "Singapore",
-      "pv": 7000,
-      "visits": 7000
-    },
-    {
-      "code": "KE",
-      "flag": "🇰🇪",
-      "name": "KE",
-      "nameEn": "KE",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "code": "US",
-      "flag": "🇺🇸",
-      "name": "美国",
-      "nameEn": "United States",
-      "pv": 1000,
-      "visits": 1000
-    },
-    {
-      "code": "GB",
-      "flag": "🇬🇧",
-      "name": "英国",
-      "nameEn": "United Kingdom",
-      "pv": 1000,
-      "visits": 0
+      "pv": 10450,
+      "visits": 10400
     },
     {
       "code": "CN",
       "flag": "🇨🇳",
       "name": "中国",
       "nameEn": "China",
-      "pv": 1000,
-      "visits": 1000
+      "pv": 3630,
+      "visits": 3410
+    },
+    {
+      "code": "US",
+      "flag": "🇺🇸",
+      "name": "美国",
+      "nameEn": "United States",
+      "pv": 2130,
+      "visits": 2010
+    },
+    {
+      "code": "HK",
+      "flag": "🇭🇰",
+      "name": "香港",
+      "nameEn": "Hong Kong",
+      "pv": 930,
+      "visits": 840
+    },
+    {
+      "code": "JP",
+      "flag": "🇯🇵",
+      "name": "日本",
+      "nameEn": "Japan",
+      "pv": 680,
+      "visits": 600
+    },
+    {
+      "code": "TW",
+      "flag": "🇹🇼",
+      "name": "台湾",
+      "nameEn": "Taiwan",
+      "pv": 430,
+      "visits": 410
+    },
+    {
+      "code": "CO",
+      "flag": "🇨🇴",
+      "name": "CO",
+      "nameEn": "CO",
+      "pv": 130,
+      "visits": 130
+    },
+    {
+      "code": "DE",
+      "flag": "🇩🇪",
+      "name": "德国",
+      "nameEn": "Germany",
+      "pv": 120,
+      "visits": 110
+    },
+    {
+      "code": "TH",
+      "flag": "🇹🇭",
+      "name": "泰国",
+      "nameEn": "Thailand",
+      "pv": 110,
+      "visits": 60
+    },
+    {
+      "code": "NL",
+      "flag": "🇳🇱",
+      "name": "荷兰",
+      "nameEn": "Netherlands",
+      "pv": 110,
+      "visits": 110
+    },
+    {
+      "code": "GB",
+      "flag": "🇬🇧",
+      "name": "英国",
+      "nameEn": "United Kingdom",
+      "pv": 90,
+      "visits": 90
+    },
+    {
+      "code": "ID",
+      "flag": "🇮🇩",
+      "name": "印度尼西亚",
+      "nameEn": "Indonesia",
+      "pv": 90,
+      "visits": 90
     }
   ],
-  "countryTotal": 11000,
+  "countryTotal": 19540,
   "referers": {
-    "direct": 14430,
-    "search": 5250,
-    "ecosystem": 670,
+    "direct": 13820,
+    "search": 5180,
+    "ecosystem": 720,
     "ai": 0,
-    "other": 130
+    "other": 120
   },
   "pages": [
     {
@@ -141,6 +317,13 @@
       "visits": 1000
     },
     {
+      "title": "'用「编译」替代反复调大模型：Compile by Training 如何把 NLP 任务固化成本地神经函数'",
+      "titleEn": "Compile by Training: Distill Repeated LLM Calls into a Reusable Local Neural Function",
+      "path": "/blog/compile-by-training-local-neural-functions/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
       "title": "光岛：一触即发的桌面工作岛，普通人和开发者都能用",
       "titleEn": "Luma Island: One Touch, Work Starts — A Desktop Work Island for Everyone",
       "path": "/blog/luma-island-desktop-work-island/",
@@ -162,16 +345,16 @@
       "visits": 1000
     },
     {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 1000,
-      "visits": 0
-    },
-    {
       "title": "FramePack：ControlNet 作者开源，6G 显存生成 1 分钟视频，F1+P1 双版抗漂移",
       "titleEn": "FramePack: ControlNet Author's Open-Source Long Video Diffusion — 6GB VRAM, 1-Minute 30fps, F1+P1 Anti-Drift Dual Versions",
       "path": "/blog/framepack-lllyasviel-long-video-diffusion-guide/",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "title": "Hemmingway-1：一个「写得像人」的 27B 模型，能力靠自建榜单证明，还是 Qwen3.8 的一次精调？",
+      "titleEn": "Hemmingway-1: A 27B Model That 'Writes Like a Person' — Backed by Self-Run Benchmarks or Just a Qwen3.8 Fine-Tune?",
+      "path": "/blog/hemmingway-1-27b-writing-model-benchmark-claims-teardown/",
       "pv": 1000,
       "visits": 1000
     }
@@ -179,83 +362,47 @@
   "devices": [
     {
       "label": "desktop",
-      "count": 19410
+      "count": 18900
     },
     {
       "label": "mobile",
-      "count": 1010
-    },
-    {
-      "label": "tablet",
-      "count": 60
+      "count": 800
     }
   ],
   "os": [
     {
       "label": "Windows",
-      "count": 14370
+      "count": 14140
     },
     {
       "label": "MacOSX",
-      "count": 2640
+      "count": 2570
     },
     {
       "label": "Unknown",
-      "count": 1270
+      "count": 1400
     },
     {
       "label": "Linux",
-      "count": 910
+      "count": 1080
     },
     {
       "label": "Android",
-      "count": 350
+      "count": 340
     },
     {
       "label": "iOS",
-      "count": 280
+      "count": 300
+    },
+    {
+      "label": "ChromeOS",
+      "count": 10
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 15480
-    },
-    {
-      "label": "Edge",
-      "count": 2440
-    },
-    {
-      "label": "Unknown",
-      "count": 1370
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 290
-    },
-    {
-      "label": "Safari",
-      "count": 230
-    },
-    {
-      "label": "MobileSafari",
-      "count": 230
-    },
-    {
-      "label": "Firefox",
-      "count": 200
-    },
-    {
-      "label": "ChromeMobileWebview",
-      "count": 130
-    },
-    {
-      "label": "ChromeDerivative",
-      "count": 80
-    },
-    {
-      "label": "ChromeHeadless",
-      "count": 30
+      "count": 10000
     }
   ]
 }
