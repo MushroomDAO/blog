@@ -1,0 +1,38 @@
+[
+  {
+    "id": "5f3a7af83bc8a36bf5851a128046053073943da0ecbe2fc1",
+    "metadata": {
+      "article_id": "shadcn-improve-agent-audit-handoff-plans",
+      "content_hash": "b7f67158826d097b",
+      "excerpt": "shadcn /improve：强模型做审计，便宜模型按计划施工 shadcn/improve 是一套开源编码技能，将代码审计、优先级判断、实施计划和执行复核拆开，让强模型负责界定问题，让低成本模型按明确边界施工。本文核验安装与命令、隔离工作树及宿主要求，并在临时 Git 仓库验证差异检查的两个盲点，说明怎样写出可交接、可验收的计划，以及为何不能把多模型分工直接当成已证明的省费比例。 Agent Skills Code Review Multi-Model Git Developer Tools 它交付的是计划，为什么还有 execute？ 从安装到复核",
+      "language": "zh",
+      "tags": [
+        "Agent Skills",
+        "Code Review",
+        "Multi-Model",
+        "Git",
+        "Developer Tools"
+      ],
+      "title": "shadcn /improve：强模型做审计，便宜模型按计划施工",
+      "url": "/blog/shadcn-improve-agent-audit-handoff-plans/"
+    }
+  },
+  {
+    "id": "3413fb18ac64fbbe502f567d84c25fc6d9ae15080c62e0d8",
+    "metadata": {
+      "article_id": "shadcn-improve-agent-audit-handoff-plans",
+      "content_hash": "f0ad78d9788db863",
+      "excerpt": "shadcn Improve: Audit, Handoff Plans and Cheaper Execution Audit shadcn/improve's code review and handoff workflow, host requirements, plan verification and Git diff edge cases before delegating work to cheaper agents. Agent Skills Code Review Multi-Model Git Developer Tools Why ",
+      "language": "en",
+      "tags": [
+        "Agent Skills",
+        "Code Review",
+        "Multi-Model",
+        "Git",
+        "Developer Tools"
+      ],
+      "title": "shadcn Improve: Audit, Handoff Plans and Cheaper Execution",
+      "url": "/blog/shadcn-improve-agent-audit-handoff-plans/"
+    }
+  }
+]

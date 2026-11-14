@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-14T07:56:58.896Z",
+  "drafts": [
+    {
+      "slug": "shadcn-improve-agent-audit-handoff-plans",
+      "mediaId": "prCUE631thH1cmNLi42prEJzivYHtxwbw6zvTldtEz8HF5lMOG2lDO4VaktcrogF",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "cc333b828cb1dfe81333760a42ce3c99b3d57669dd20be23d1993922407399e3",
+      "remoteTextHash": "cc333b828cb1dfe81333760a42ce3c99b3d57669dd20be23d1993922407399e3",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/shadcn-improve-agent-audit-handoff-plans/",
+      "localContentHash": "f5c3da602d309f8d7f85f3a138bf8a8f33fa91efca92bb818443b7d1475d7c75",
+      "remoteContentHash": "40dbc0dd8500d27b444e229758d8d922d80315e681b8d9e2c7d135054dce6e7e"
+    }
+  ]
+}

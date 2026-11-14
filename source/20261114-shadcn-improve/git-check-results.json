@@ -1,0 +1,13 @@
+{
+  "checksPassed": 2,
+  "scope": "Only mechanical Git command behavior in a temporary repository, no LLM audit or executor run",
+  "case1": {
+    "commitRangeMissesUncommittedChange": true,
+    "workingTreeDiffSeesChange": true
+  },
+  "case2": {
+    "defaultDiffMissesCommittedOutOfScopeFile": true,
+    "baselineToHeadDiffSeesFile": true
+  },
+  "interpretation": "Template commands must be combined with clean-working-tree checks and explicit base comparisons; this is not a claim that every host reviewer misses these cases."
+}

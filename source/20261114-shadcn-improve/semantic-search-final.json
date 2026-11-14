@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "shadcn-improve-agent-audit-handoff-plans",
+      "title": "shadcn /improve：强模型做审计，便宜模型按计划施工",
+      "url": "/blog/shadcn-improve-agent-audit-handoff-plans/",
+      "language": "zh",
+      "excerpt": "shadcn /improve：强模型做审计，便宜模型按计划施工 shadcn/improve 是一套开源编码技能，将代码审计、优先级判断、实施计划和执行复核拆开，让强模型负责界定问题，让低成本模型按明确边界施工。本文核验安装与命令、隔离工作树及宿主要求，并在临时 Git 仓库验证差异检查的两个盲点，说明怎样写出可交接、可验收的计划，以及为何不能把多模型分工直接当成已证明的省费比例。 Agent Skills Code Review Multi-Model Git Developer Tools 它交付的是计划，为什么还有 execute？ 从安装到复核",
+      "score": 0.7006006
+    },
+    {
+      "article_id": "cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt",
+      "title": "cloudflare/security-audit-skill：20 个 Markdown 文件怎么成了 Cloudflare 内部漏洞扫描器",
+      "url": "/blog/cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt/",
+      "language": "zh",
+      "excerpt": "cloudflare/security-audit-skill：20 个 Markdown 文件怎么成了 Cloudflare 内部漏洞扫描器 Cloudflare 开源安全审计 Skill，MIT，22K 星。本质是 ~300KB 结构化提示词，六阶段对抗验证流程，发现者不验证自己的漏洞，覆盖 13 个攻击域含 AI/LLM 安全。内部 Project Glasswing：145 仓库，30K 行代码约 80 个 bug，14 小时完成。 安全 AI Agent Claude Code Cloudflare 漏洞扫描 开源拆解 项目背景 第一个反直觉结",
+      "score": 0.5398531
+    },
+    {
+      "article_id": "glimpse-visual-reasoning-game-bug-review",
+      "title": "Glimpse：让视频验收回到具体画面",
+      "url": "/blog/glimpse-visual-reasoning-game-bug-review/",
+      "language": "zh",
+      "excerpt": "Glimpse：让视频验收回到具体画面 Glimpse 是 Elorian 发布的视觉推理研究预览，可回看视频并定位疑点。本文核实官方入口、公开评测和开源状态，区分游戏验收案例与可复现基准，提供录像分段、规则输入、时间戳证据、人工复核及缺陷回归的工程方案。视觉定位不等于源码定位，模型信心也不是经过校准的正确率，所有流程建议与未验证范围均有明确说明。 Vision Language Model Video Understanding Game QA AI Agent Glimpse 开源了吗，应该去哪里找？ 公开结果能证明它最擅长找游戏 Bug 吗？ 怎样",
+      "score": 0.51511085
+    },
+    {
+      "article_id": "elephant-goldfish-spec-review-guide",
+      "title": "Elephant-Goldfish：让有上下文的Agent设计，让新视角审稿",
+      "url": "/blog/elephant-goldfish-spec-review-guide/",
+      "language": "zh",
+      "excerpt": "Elephant-Goldfish：让有上下文的Agent设计，让新视角审稿 Elephant-Goldfish：让有上下文的Agent设计，让新视角审稿。本文核对官方仓库和一手资料，区分项目宣称、实际实现与本文分析，说明部署条件、功能边界、评测证据和适用场景；没有把未执行的运行测试或作者自报成绩写成独立实测。读者可以沿文末来源复查，并在自己的数据、权限和预算条件下逐步验证。 elephant-goldfish-model 开源工具 工程实践 证据核查 它不是又一个模型权重 大象与金鱼分别负责什么？ 标准工作流怎样衔接？ 怎样理解安装与适配？ 怎样用在W",
+      "score": 0.5143399
+    },
+    {
+      "article_id": "alibaba-open-code-review-agent-deterministic-hybrid-llm",
+      "title": "阿里开源 OpenCodeReview：确定性流水线 + Agent 混合架构，精度比 Claude Code 高、Token 只用 1/9",
+      "url": "/blog/alibaba-open-code-review-agent-deterministic-hybrid-llm/",
+      "language": "zh",
+      "excerpt": "阿里开源 OpenCodeReview：确定性流水线 + Agent 混合架构，精度比 Claude Code 高、Token 只用 1/9 alibaba/open-code-review，⭐20,233，Apache-2.0，Go，2026-05-18。阿里巴巴集团内部 AI 代码审查工具开源，2 年内服务数万开发者、发现数百万代码缺陷。核心架构：确定性工程流水线（精确文件选取、智能文件捆绑、细粒度规则匹配、外部定位和反思模块）× LLM Agent（场景调优提示词 + 生产数据蒸馏工具集）。基准测试（50 个开源仓库、200 个真实 PR、10 种",
+      "score": 0.5133489
+    },
+    {
+      "article_id": "openrsi-index-research-agent-benchmark-guide",
+      "title": "OpenRSI Index：如何评测AI是否真的改进了科研方法",
+      "url": "/blog/openrsi-index-research-agent-benchmark-guide/",
+      "language": "zh",
+      "excerpt": "OpenRSI Index：如何评测AI是否真的改进了科研方法 OpenRSI Index 是面向科研智能体的开放评测项目，用固定任务、预算和裁判检查算法与工程改进。本文核对 RSI Harness 源码、公开日志及任务包，拆解持续工作区、快照提交和评分机制，解释 Qwen 数据包装器、Marin 集群依赖与 GPIC 筛选协议的复现边界，并给出安装、局部验证和选择实验的工程建议。 OpenRSI Index AI Agents Evaluation Recursive Self Improvement Open Source 它到底在测什么，为什么不只",
+      "score": 0.5120188
+    },
+    {
+      "article_id": "gh-copilot-code-review-cli",
+      "title": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review",
+      "url": "/blog/gh-copilot-code-review-cli/",
+      "language": "zh",
+      "excerpt": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review GitHub CLI v2.88.0 新功能实测：在终端直接邀请 Copilot 审查 PR，无需跳转浏览器，附隐私风险提示 github copilot cli code-review developer-tools 核心能力 如何使用 免费吗？ 隐私警告（必读） 能用其他 AI CLI 吗？ 额外优化：大型团队福音 总结",
+      "score": 0.50558734
+    },
+    {
+      "article_id": "hamel-domain-specific-agent-evals-guide",
+      "title": "系统读Hamel：把Agent评测变成产品改进的日常工作",
+      "url": "/blog/hamel-domain-specific-agent-evals-guide/",
+      "language": "zh",
+      "excerpt": "系统读Hamel：把Agent评测变成产品改进的日常工作 Hamel Husain的评测文章为什么值得Agent团队系统阅读？本文核对2024年原文及后续错误分析、模型裁判指南，区分代码断言、人工判断和线上实验，并以退款助手为自拟案例，给出轨迹字段、失败分类、裁判校准、工具副作用检查、数据隔离和两周起步方案，帮助中小团队把评测接入产品迭代，而非只追逐总分。 Hamel Husain Agent评测 LLM-as-a-Judge 错误分析 AI产品 怎样系统读Hamel，而不是只收藏这一篇？ 先定义业务结果，再写评分提示词 一条能用于评测的轨迹，至少要留下",
+      "score": 0.5044358
+    },
+    {
+      "article_id": "pentest-harness-deepseek-harness-rebrand-authorization-teardown",
+      "title": "Pentest Harness 拆穿：给 DeepSeek Harness 换皮，再把授权边界删掉",
+      "url": "/blog/pentest-harness-deepseek-harness-rebrand-authorization-teardown/",
+      "language": "zh",
+      "excerpt": "Pentest Harness 拆穿：给 DeepSeek Harness 换皮，再把授权边界删掉 S1N6H/pentest-harness（356 star，MIT）自称面向授权渗透的自托管 AI agent harness。逐 diff 核实：它是 deepseek-ai/deepseek-harness 的换皮——LICENSE 版权人仍是 DeepSeek、命令行仍叫 dsh、包名仍是 @deepseek-ai/dsh、中文 README 还写着『由 DeepSeek AI 开发』。改动主要是品牌替换加一个 pentest 预设；同时删掉了上游",
+      "score": 0.50367445
+    },
+    {
+      "article_id": "alibaba-skill-up-agent-skill-eval-evolution",
+      "title": "alibaba/skill-up：Agent Skill 的评估与自动进化闭环——Eval + 自修复一键跑通",
+      "url": "/blog/alibaba-skill-up-agent-skill-eval-evolution/",
+      "language": "zh",
+      "excerpt": "alibaba/skill-up：Agent Skill 的评估与自动进化闭环——Eval + 自修复一键跑通 alibaba/skill-up，1,031 stars，Apache-2.0，Go。阿里巴巴出品的 Agent Skill 评估与进化工具，4 个月 1000+ stars。声明式 YAML 测试用例 + rule/script/agent 三种 judge 策略 + skill-upper 自动读取失败报告修复 Skill，形成 Eval → 失败分析 → 自动修复 → 再 Eval 的闭环。支持 Claude Code、Codex、Qwe",
+      "score": 0.5033249
+    }
+  ]
+}
