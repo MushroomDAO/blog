@@ -1,401 +1,210 @@
 ---
-title: "Cloudflare 把浏览器也 Serverless 了：Kitesurf 调研"
-titleEn: "Cloudflare Made the Browser Serverless Too: A Look at Kitesurf"
-description: "Cloudflare 开源了 Kitesurf，一个专为 AI Agent 构建的浏览器，完全跑在 Cloudflare Workers 上。没有 Chrome 进程，Rust+WASM 做引擎，页面 JS 直接跑在 V8 isolate 里。CPU 消耗比 Chromium 低 3-4x，内存低 5-7x。本文深度分析架构、性能数据、工程接入方式，以及这件事对 AI Agent 基础设施的意义。"
-descriptionEn: "Cloudflare has released Kitesurf, an agent-first browser built entirely on Cloudflare Workers. No Chrome process — Rust+WebAssembly for the engine, page JavaScript running directly in V8 isolates. 3-4x less CPU and 5-7x less memory than Chromium. This article analyzes the architecture, performance data, engineering integration, and what this means for AI agent infrastructure."
+title: "Cloudflare Kitesurf现已开源：CDP与自部署边界"
+titleEn: "Cloudflare Kitesurf: Open Source, CDP and Self-Hosting"
+description: "Cloudflare 已按 Apache 2.0 开源 Kitesurf，开发者可查看、修改并在自己的 Workers 账户部署 Agent 浏览器。核验 Rust与WASM架构、CDP支持边界、Bazel构建和付费计划要求，说明公开端点的访问保护与托管服务区别，明确辅助脚本测试不等于浏览器兼容性或性能实测。"
+descriptionEn: "Inspect open-source Kitesurf's Workers browser, CDP limits, local build and paid hosting needs, distinguishing helper checks from engine and performance checks."
+wechatTitle: "Kitesurf现已开源：浏览器自部署边界"
+wechatDigest: "Cloudflare开放Agent浏览器源码，自部署仍需平台能力、访问保护和真实网页验收。"
 pubDate: "2026-08-07"
-updatedDate: "2026-08-07"
+updatedDate: "2026-11-14"
 category: "Tech-News"
-tags: ["Cloudflare", "浏览器引擎", "AI Agent", "WebAssembly", "Rust", "Serverless", "Mycelium"]
+tags: ["Cloudflare", "Browser Automation", "AI Agent", "WebAssembly", "Rust", "Open Source"]
 heroImage: "../../assets/images/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate-banner.jpg"
 ---
 
-*by Mycelium Protocol*
+Kitesurf 是面向 Agent 的实验性浏览器引擎，可以在 Cloudflare Workers 中处理网页、执行 JavaScript 和生成截图。2026 年 11 月 13 日，Cloudflare 宣布它已按 Apache 2.0 开源，开发者可以查看、修改并自部署源码。
 
----
+> 本文保留 8 月 7 日的原始文章地址，于 11 月 14 日根据开源公告修订。修正了旧文中的“即将开源”、无条件兼容现有客户端，以及由内存比例直接推算并发收益的表述。封面采用官方开源公告配图。
 
-浏览器是互联网的操作系统。过去几十年，这句话意味着：一个体量巨大的本地进程——Chromium、Firefox、Safari——把 HTML、CSS、JavaScript 解析成你看到的页面。
+官方仓库：https://github.com/cloudflare/kitesurf
+开源公告：https://blog.cloudflare.com/kitesurf-open-source/
+最初介绍：https://blog.cloudflare.com/kitesurf
 
-Cloudflare 刚刚发布了 **Kitesurf**，一个不跑本地进程的浏览器。
+## 这次开源，工程师真正多了什么？
 
-**它完全运行在 Cloudflare Workers 上**。没有 Chrome 进程，没有 Node.js，没有 Electron。Rust+WebAssembly 做引擎，页面 JavaScript 直接跑在 V8 isolate 里。
+以前主要通过 Cloudflare 的服务入口使用它；现在可以检查实现、在本地运行开发环境，并把自己的版本部署到自己的 Workers 账户。代码采用 Apache 2.0，字体、数据与依赖仍有各自许可证，仓库 `NOTICE` 记录了相关声明。
 
----
+这不等于独立于 Cloudflare 平台的通用 Chrome 二进制。当前项目使用 Worker Loader、Dynamic Workers 等平台能力。源码开放解决可检查与可修改的问题，部署依赖和运行费用仍要单独考虑。
 
-## 为什么要造这个
+本文源码快照为 `4a2903813a22b08d4f3cc64a4b35339d0293a5d1`，以下构建说明以这个版本为准。
 
-原因很直接：Chromium 是为人类设计的，不是为 AI Agent 设计的。
+![小M将可检查的源码与实际运行平台分开装配](../../assets/images/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate-fig-01.png)
 
-人类需要：标签页、主题、浏览器扩展、跨设备同步、流畅的 60fps 滚动、像素级的渲染精度。
+## 没有 Chrome 容器，网页怎样运行？
 
-**Agent 不需要这些**。Agent 关心的是：token 数量、context 窗口、可扩展性、成本。一个 HTML 解析略有偏差的页面对 Agent 来说完全可以接受，但它无法接受每个实例消耗 270 MiB 内存。
+官方把主要职责分成 Engine、PageScript 和 PageRenderer：Engine 管理会话与客户端连接；PageScript 承载页面及其 JavaScript；PageRenderer 绘制结果。页面执行与渲染因此能够拆开，而不是为每个任务启动一整套 Chrome 容器。
 
-Cloudflare 的 Browser Run 产品（原 Browser Rendering）随着 AI 的爆发看到了巨大增长，但用 Chromium 给每个 Agent 分配独立实例的成本是结构性问题。Kitesurf 是这个问题的答案。
+Rust 组件编译为 WebAssembly。Blitz 提供页面解析、DOM、布局与绘制相关能力，Stylo 参与 CSS 处理；页面脚本优先使用 Dynamic Workers，Boa 用于不能走该路径时的回退。Linebender 生态组件与 Krilla 分别参与图形、文字及 PDF 输出。
 
----
+对工程师来说，值得借鉴的是责任边界：会话控制、网页脚本和图形输出可以分别实现、度量和诊断。但隔离机制本身不能证明任意工作负载绝不会泄漏，也不意味着失败恢复没有成本；这些仍需针对实际应用验收。
 
-## 架构：四个 Worker，一个浏览器
+## 会说 CDP，是否意味着 Playwright/Puppeteer 全兼容？
 
-Kitesurf 由四个核心组件构成，每个都是独立的 Worker：
+不能这样推导。官方 README 明确说 Kitesurf 提供 CDP 端点，而不是完整 Chrome 实现，部分 DevTools 功能尚未支持。
 
-```
-[外部 CDP 客户端]
-       ↓
-   Engine Worker          ← 唯一对外暴露的组件，持有 session 状态
-       ↓        ↓
- PageScript     PageRenderer
-  (V8 isolate)  (光栅化渲染)
-       ↓
- SandboxOutbound          ← 唯一能访问网络的组件
-```
+CDP 是客户端与浏览器交互的一层协议。能连接、能创建页面，并不能自动证明每个命令、事件、页面 API、字体和渲染行为都与 Chromium 相同。更合适的接入方式，是先选现有自动化流程中的真实小任务，逐项确认导航、脚本、截图和错误行为。
 
-### Engine：唯一有状态的组件
-
-Engine 是整个系统里唯一持有状态的地方，用 **SQLite-based Durable Objects** 存储 session 状态。它暴露 Chrome DevTools Protocol (CDP) WebSocket 和 HTTP REST 接口，这意味着：**你的 Puppeteer、Playwright、chrome-remote-interface 代码不需要改动，直接指向 Kitesurf 就能用**。
-
-### PageScript：页面 JS 跑在 V8 isolate 里
-
-这是整个架构最有意思的部分。
-
-每次新页面加载或 out-of-process iframe（OOPIF），Kitesurf 用 **Dynamic Workers** 动态创建一个新的 PageScript isolate。这个 isolate 持有：
-- 一个干净的 `globalThis`
-- 完整的 DOM document 对象
-
-HTML 和 CSS 解析用的是 Rust 组件：
-- **Blitz**（DioxusLabs）——模块化渲染引擎
-- **Stylo**（来自 Firefox/Servo）——高性能 CSS 解析器
-
-每个 `<script>` 标签和 `.wasm` 文件，**都在同一个 isolate 里直接运行**。这不是模拟执行，是真实的 V8。
-
-**eval 的问题**：Workers 出于安全原因不支持 `eval()`。Kitesurf 的解法是引入 [Boa JS](https://boajs.dev/)——一个用 Rust 写的 ECMAScript 引擎，在 Workers 里跑来处理偶尔出现的 eval 调用。运行时套运行时，不优雅但能用，等 Workers 原生支持 eval 后会迁移掉。
-
-### PageRenderer：Rust 光栅化出像素
-
-PageRenderer 从 PageScript 拿到页面对象（场景树），用 **blitz-paint** 光栅化成像素缓冲区，再通过 **Parley** 做字体整形和文本布局，最后返回 JPEG/PNG/PDF。
-
-关键设计：**PageRenderer 不持有任何页面状态**。Engine 通过 Worker RPC 调用 `renderFrame()`，拿到结果。如果 PageRenderer 卡住了，Engine 直接杀掉重启一个新的，成本极低。
-
-### SandboxOutbound：唯一触网的组件
-
-所有网络请求——图片、字体、CSS、JS、`fetch()` 调用——必须经过 SandboxOutbound，其他组件被 Dynamic Workers 强制禁止直接访问网络。这里负责：
-
-- CORS 执行
-- 注入浏览器标准 Headers
-- 响应过滤
-- 每个页面独立的 cookie jar
-
-失败 policy 的请求返回 403，不泄露到其他 session。
-
----
-
-## 四个设计原则
-
-**1. 无状态优先**：能无状态的组件就无状态。失败时直接丢弃重建，不需要恢复任何中间态。唯一例外是 Engine，它必须存 session 状态。
-
-**2. Rust when possible**：所有 Rust 代码直接编译到 WebAssembly（用 wasm-bindgen，不用 Emscripten）。Emscripten 需要大量模拟层，产物臃肿；原生 Rust→WASM 更小、更快、更可靠。
-
-**3. 失败降级，不 crash**：任何失败都降级到空白帧或缺失元素，绝不让整个 session 死掉。这是给「野生网页」设计的，不是给可控环境。
-
-**4. 用 AI 构建 AI 的基础设施**：Kitesurf 的大量开发工作由 AI Agent 完成，以 [Web Platform Tests (WPT)](https://github.com/web-platform-tests/wpt) 作为明确的成功标准。人类专注架构决策和代码审查，Agent 负责实现——这本身就是一个 meta 层面有意思的案例。
-
----
-
-## 性能数据：CPU 和内存是 Chromium 的几分之一
-
-在 14 个 URL 的语料库上，Browser Run 快速操作的中位数对比（Kitesurf vs Chromium 热实例）：
-
-| 指标 | Kitesurf | Chromium（热池） | Kitesurf 相对 |
-|------|---------|--------------|-------------|
-| CPU：截图 | 380 ms | 1,173 ms | **少 3.1x CPU** |
-| CPU：HTML 提取 | 229 ms | 877 ms | **少 3.8x CPU** |
-| 内存：截图 | 57.8 MiB | 271.0 MiB | **少 4.7x 内存** |
-| 内存：HTML 提取 | 39.4 MiB | 273.7 MiB | **少 7.0x 内存** |
-| 挂钟时间：截图 | 1,148 ms | 637 ms | 慢 1.8x |
-| 挂钟时间：HTML 提取 | 820 ms | 472 ms | 慢 1.7x |
-
-Chromium 赢在速度——已经 JIT 热身过的引擎就是快。Kitesurf 赢在资源消耗——CPU 少用 3-4x，内存少用 5-7x。
-
-对 AI Agent 而言，这个取舍是合理的：**钱是按资源计费的，不是按毫秒计费的**。内存降低 7 倍意味着同等预算下可以跑 7 倍的并发实例。
-
----
-
-## WPT 覆盖率：215,000+ 测试通过，每周仍在增加
-
-Kitesurf 目前通过了 215,000+ 个 WPT 测试，且覆盖率每周增加数百个。
-
-关键覆盖方向：CSS、DOM、HTML、Selection、SVG、XHR——这些恰好是 Agent 最依赖的部分。
-
-已验证可以正确渲染的网站：TodoMVC（Vanilla/React/Vue/Angular/Preact）、Wikipedia、Hacker News、Cloudflare 博客、Cloudflare Dashboard。
-
-Doom 也跑通了。Cloudflare 官方认证的测试标准。
-
----
-
-## 工程接入：`browser=kitesurf` 参数
-
-接入极其简单。Browser Run 的所有接口已经支持，只需加参数。
-
-**截图 Quick Action**：
-
-```bash
-curl -X POST 'https://api.cloudflare.com/client/v4/accounts/<accountId>/browser-run/screenshot?browser=kitesurf' \
-  -H 'Authorization: Bearer <apiToken>' \
-  -H 'Content-Type: application/json' \
-  -d '{"url": "https://example.com"}' \
-  --output "screenshot.png"
-```
-
-**MCP 接入（给 AI Agent 用）**：
-
-```json
-{
-  "mcp": {
-    "kitesurf": {
-      "type": "local",
-      "command": [
-        "npx", "-y", "chrome-devtools-mcp@latest",
-        "--wsEndpoint=wss://api.cloudflare.com/client/v4/accounts/<ACCOUNT_ID>/browser-run/devtools/browser?browser=kitesurf",
-        "--wsHeaders={\"Authorization\":\"Bearer <API_TOKEN>\"}"
-      ],
-      "enabled": true
-    }
-  }
-}
-```
-
-**Puppeteer**（现有代码几乎不改）：
+本地连接示例来自官方 README：
 
 ```javascript
-import puppeteer from '@cloudflare/puppeteer';
+import puppeteer from "puppeteer-core";
 
-export default {
-  async fetch(request, env) {
-    const browser = await puppeteer.launch(env.MYBROWSER, {
-      browser: 'kitesurf'
-    });
-    const page = await browser.newPage();
-    await page.goto('https://example.com');
-    const screenshot = await page.screenshot();
-    await browser.close();
-    return new Response(screenshot, {
-      headers: { 'content-type': 'image/png' }
-    });
-  }
-};
+const browser = await puppeteer.connect({
+  browserWSEndpoint: "ws://127.0.0.1:8787/devtools/browser",
+});
+const page = await browser.newPage();
+await page.goto("https://example.com/");
+await page.screenshot({ path: "page.png" });
+await browser.disconnect();
 ```
 
-**当前不支持的场景**：视频播放、WebGL、需要真实 TLS 指纹的 bot-challenge、需要持久状态的长会话——这些继续用 Chromium。
+这段是使用入口，不是本文已跑通的浏览器会话。
+
+![小M用几块协议拼图接入客户端，旁边保留尚未匹配的功能块](../../assets/images/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate-fig-02.png)
+
+## 怎样本地运行？自部署是否免费？
+
+当前仓库要求 Node.js 22+、固定版本 pnpm 9.15.4，以及以 `bazel` 命令提供的 Bazelisk。macOS 还需要 GNU tar。Bazel 负责获取固定的 Bazel、Rust 工具链和 WASM 构建工具；第一次构建会编译核心与相关依赖。
+
+```bash
+git clone https://github.com/cloudflare/kitesurf.git
+cd kitesurf
+git checkout 4a2903813a22b08d4f3cc64a4b35339d0293a5d1
+pnpm install --frozen-lockfile
+pnpm run dev
+```
+
+官方本地健康检查入口是 `http://127.0.0.1:8787/health`。端口冲突时可以设置 `KITESURF_PORT`。本地开发由 `wrangler dev` 承载，不等于本机运行完整 Chrome。
+
+部署到 Cloudflare 使用 `pnpm run deploy`。由于页面隔离依赖 Dynamic Workers，官方要求 Workers Paid 计划。源码免费获得，不代表托管计算、平台能力或运维免费；本文没有执行 Kitesurf 的账户部署，也没有产生该浏览器服务的云端测试费用。
+
+## 为什么部署后还要处理访问入口？
+
+这是仓库当前明确提醒的实际配置问题：默认公开的 Worker URL 不应被视为已经具备业务鉴权。能访问浏览器控制端点的人可能驱动网页操作并消耗账户资源。官方建议部署时使用 Cloudflare Access 保护入口，包括版本 URL。
+
+CDP 客户端经 Access 连接时，需要匹配 Service Auth 策略，并携带 `CF-Access-Client-Id` 与 `CF-Access-Client-Secret` 等凭证头。浏览器登录会话和程序化客户端的接入条件不同，不能只复制本地 WebSocket 地址就结束部署。
+
+这也是“开源源码”“本地开发”“自托管服务”与“托管 Browser Run API”需要分开讨论的原因：它们的身份验证、运维责任和收费边界不同。
+
+![小M在公开浏览器控制入口前安装访问门禁，区分本地与部署环境](../../assets/images/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate-fig-03.png)
+
+## 本次验证了什么，没有验证什么？
+
+我们抓取了官方公告和仓库正文，核对固定快照中的 README、构建脚本及部署说明。使用 Node.js 26.10.0，直接运行两份无需完整浏览器构建的上游脚本测试，共 15 项通过：
+
+```bash
+node --test scripts/pptr-shared.test.mjs scripts/e2e-shard.test.mjs
+```
+
+它们验证 Puppeteer 测试结果整理、重试与门禁辅助逻辑，以及使用替身目录/工具的分片运行器；不是实际 Puppeteer 浏览器测试通过。我们没有构建引擎、运行 `wrangler dev`、执行 CDP 截图、跑完整 WPT、复测 CPU/内存或部署云端实例。
+
+旧文列出的早期资源数据不再作为本次更新的性能结论。即使某项任务内存更低，也不能据此直接计算同预算可增加几倍并发：CPU、持续时间、配额、网络和兼容性都可能成为限制因素。
+
+Mycelium Protocol 的建议是先用自己的真实任务集评价它：页面是否正确、需要的协议行为是否支持、失败是否可诊断、总资源与费用是否合适。开放源码让这些问题更容易调查，但不能代替调查本身。
+
+## 常见问题
+
+**Kitesurf 现在开源了吗？** 是，11 月 13 日公告确认源码采用 Apache 2.0，第三方内容另保留相应许可证。
+
+**能一键替换 Chromium 吗？** 不能承诺。CDP 接口相通不等于 Chrome 功能与网页行为完全一致，需要逐项测试现有流程。
+
+**部署到自己的账户不收费吗？** 官方要求 Workers Paid，因为它使用 Dynamic Workers。具体平台用量与成本应按官方文档和实际工作负载评估。
+
+README与部署说明：https://github.com/cloudflare/kitesurf/blob/main/README.md
+第三方声明：https://github.com/cloudflare/kitesurf/blob/main/NOTICE
+相关工程阅读：https://blog.mushroom.cv/blog/obscura-rust-headless-browser-ai-agent-web-scraping-mcp/
 
 ---
 
-## 调研结论：这件事为什么重要
-
-Kitesurf 不只是一个「更便宜的浏览器」。它是一种范式转移的证明：
-
-**浏览器不再必须是一个单体应用**。
-
-传统浏览器的每一个部分——网络、解析、JS 执行、渲染——都在一个进程里，资源共享，状态混杂。Kitesurf 把这些拆成独立的无状态函数，每个函数只能访问它严格需要的资源，失败了直接丢弃重建。
-
-这和 Serverless 把服务器应用拆成函数是同一件事。
-
-对 AI Agent 基础设施来说，这个方向意义深远：
-
-1. **成本结构变了**：不是「租一个 Chromium 实例等着」，而是「用多少付多少的计算」，适合 AI 工作负载突发式的特性
-2. **隔离是第一公民**：每个 session、每个页面都是全新的 isolate，Agent 扫描任意网站不会在 session 间泄露数据
-3. **Puppeteer/Playwright API 兼容**：不需要重写现有工具链，一个参数就能切换
-4. **开源即将发布**：Cloudflare 承诺开源，允许用户在自己的账户上部署 Kitesurf 实例
-
-Kitesurf 现在还是 12 周大的 Beta，不适合所有场景。但它证明了「Agent 的浏览器」可以和「人类的浏览器」是完全不同的东西——更轻、更便宜、更安全隔离——而这个方向，值得认真对待。
-
----
-
-原文：[blog.cloudflare.com/kitesurf](https://blog.cloudflare.com/kitesurf)  
-Playground：[kitesurf.cloudflare.app](https://kitesurf.cloudflare.app)
-
----
-
-*Mycelium Protocol — 追踪 AI 系统的底层演化*
-
----
-
-> **关于 Mycelium**
->
-> 菌丝协议。持续追踪 AI 工具、系统和实验的内容节点。
-
----
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
 
 <!--EN-->
 
-## Cloudflare Serverless'd the Browser: A Deep Dive into Kitesurf
+Kitesurf is an experimental browser engine for agents that processes pages, executes JavaScript and produces screenshots on Cloudflare Workers. On November 13, 2026, Cloudflare announced its source release under Apache 2.0.
 
-*by Mycelium Protocol*
+This revision retains the original August 7 route and publication date, with a November 14 update. It replaces the earlier promise of open source, unconditional client-compatibility language and direct concurrency claims based on memory ratios. The cover uses official announcement artwork.
 
----
+Repository: https://github.com/cloudflare/kitesurf
+Announcement: https://blog.cloudflare.com/kitesurf-open-source/
+Original introduction: https://blog.cloudflare.com/kitesurf
 
-The browser is the operating system of the internet. For decades, that meant one thing: a massive local process — Chromium, Firefox, Safari — parsing HTML, CSS, and JavaScript into the pages you see.
+## What does open source change?
 
-Cloudflare just released **Kitesurf**, a browser that runs no local process at all.
+Developers can inspect and modify the implementation, run a local development setup and deploy their version to their own Workers account. Fonts, data and dependencies retain their respective licenses; consult NOTICE.
 
-**It runs entirely on Cloudflare Workers.** No Chrome process. No Node.js. No Electron. Rust+WebAssembly for the engine, page JavaScript running directly in V8 isolates.
+This is not a platform-independent Chrome binary. The implementation uses Workers capabilities including Dynamic Workers. Source availability and platform independence are different questions. We inspected commit `4a2903813a22b08d4f3cc64a4b35339d0293a5d1`.
 
----
+![Little M separates inspectable source from the runtime platform](../../assets/images/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate-fig-01.png)
 
-### Why Build This
+## How does it work without a Chrome container?
 
-The reason is straightforward: Chromium was built for humans, not AI agents.
+Engine manages sessions and client connections, PageScript hosts page execution, and PageRenderer draws output. Rust components compile to WebAssembly. Blitz and Stylo contribute page and CSS processing; Dynamic Workers execute page scripts, with Boa as a fallback. Graphics and text components come from the Linebender ecosystem, and Krilla provides PDF generation.
 
-Humans need: tabs, themes, browser extensions, cross-device sync, smooth 60fps scrolling, pixel-perfect rendering.
+The useful architectural lesson is separating control, execution and rendering into independently inspectable responsibilities. Isolation alone does not establish that every application is leak-free or that recovery has no cost. Those remain workload-specific questions.
 
-**Agents need none of these.** Agents care about token count, context windows, scalability, cost. A page with slightly imperfect CSS parsing is completely fine for an agent. What isn't fine: 270 MiB of memory per instance.
+## Does CDP mean full client compatibility?
 
-Cloudflare's Browser Run product has seen explosive growth with the rise of AI, but the cost of giving every agent its own Chromium instance is a structural problem. Kitesurf is the answer.
+No. The README explicitly distinguishes a CDP endpoint from a complete Chrome implementation. Some DevTools features remain unsupported.
 
----
+Connecting and creating a page does not establish that every command, event or page behavior matches Chromium. Start with a small representative workflow and check navigation, scripts, screenshots and errors separately. The documented local connection looks like this:
 
-### Architecture: Four Workers, One Browser
-
-Kitesurf consists of four core components, each an independent Worker:
-
-```
-[External CDP client]
-         ↓
-   Engine Worker          ← Only public-facing component; holds session state
-       ↓        ↓
- PageScript     PageRenderer
-  (V8 isolate)  (rasterization)
-       ↓
- SandboxOutbound          ← Only component that can touch the network
+```javascript
+import puppeteer from "puppeteer-core";
+const browser = await puppeteer.connect({
+  browserWSEndpoint: "ws://127.0.0.1:8787/devtools/browser",
+});
+const page = await browser.newPage();
+await page.goto("https://example.com/");
+await page.screenshot({ path: "page.png" });
+await browser.disconnect();
 ```
 
-**Engine: The Only Stateful Component**
+This is a documented starting point, not a browser session we ran.
 
-Engine is the only place in the system that holds state, using **SQLite-based Durable Objects** for session storage. It exposes Chrome DevTools Protocol (CDP) via WebSocket and HTTP REST — meaning **your existing Puppeteer, Playwright, and chrome-remote-interface code works without modification**. Point it at Kitesurf and it just works.
+![Little M connects supported protocol pieces without assuming every feature fits](../../assets/images/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate-fig-02.png)
 
-**PageScript: Page JS in a V8 Isolate**
+## What does local development and hosting require?
 
-This is the architecturally interesting part.
+The pinned README requires Node.js 22+, pnpm 9.15.4, Bazelisk available as `bazel`, and GNU tar on macOS. Bazel obtains the pinned build toolchains. After cloning and pinning the repository, install dependencies with `pnpm install --frozen-lockfile` and start with `pnpm run dev`.
 
-For every new page load or out-of-process iframe (OOPIF), Kitesurf uses **Dynamic Workers** to spin up a fresh PageScript isolate. This isolate holds a clean `globalThis` and a full DOM document object.
+The local health endpoint is `http://127.0.0.1:8787/health`; use `KITESURF_PORT` if necessary. Local development uses `wrangler dev` rather than a full local Chrome process.
 
-HTML and CSS parsing use Rust components:
-- **Blitz** (DioxusLabs) — modular rendering engine
-- **Stylo** (from Firefox/Servo) — high-performance CSS parser
+Cloud deployment uses `pnpm run deploy` and requires Workers Paid because page isolation uses Dynamic Workers. Free access to source is not free hosted compute or operations. We did not deploy this browser to an account or run paid cloud-engine tests.
 
-Every `<script>` tag and `.wasm` file runs **directly in the same isolate**. Not simulated — real V8.
+## Why protect the control endpoint?
 
-**The eval problem:** Workers don't support `eval()` for security reasons. Kitesurf's solution: [Boa JS](https://boajs.dev/), an ECMAScript engine written in Rust, running inside Workers to handle eval calls. A runtime inside a runtime — not optimal, but it works. Will migrate away once Workers natively supports eval.
+The README warns that a public Worker URL is not automatically an authenticated business service. A reachable browser-control endpoint can permit page operations and consume account resources. The documented deployment path uses Cloudflare Access, including protection for version URLs.
 
-**PageRenderer: Rust Rasterizes the Pixels**
+A programmatic CDP client needs a matching Service Auth policy and service-token headers such as `CF-Access-Client-Id` and `CF-Access-Client-Secret`. Its access conditions differ from a signed-in browser session. Keep local development, self-hosted endpoints and managed Browser Run APIs distinct when designing identity and operations.
 
-PageRenderer takes the page object (scene) from PageScript, rasterizes it using **blitz-paint** + **Parley** (text shaping and layout), and returns JPEG/PNG/PDF to the Engine via Worker RPC.
+![Little M adds access control before exposing the browser endpoint](../../assets/images/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate-fig-03.png)
 
-Critical: **PageRenderer holds no page state.** Engine calls `renderFrame()` over RPC; if PageRenderer stalls, Engine kills it and relaunches a fresh one. Self-contained, retryable, throwaway.
+## What did we verify?
 
-**SandboxOutbound: The Only Network Component**
-
-All network access — images, fonts, CSS, JS, `fetch()` calls — must go through SandboxOutbound. Dynamic Workers enforces this: other components physically cannot touch the network. SandboxOutbound enforces CORS, injects browser-shaped headers, filters responses, and keeps each page's cookies in their own jar. Policy failures get a 403.
-
----
-
-### Four Design Principles
-
-**1. Stateless by default:** Every component except Engine is stateless. Failure means discard and restart — nothing to reconstruct, zero recovery cost.
-
-**2. Rust when possible:** All Rust compiled directly to WebAssembly via wasm-bindgen, not Emscripten. Native Rust→WASM avoids emulation layers: smaller, faster, more reliable.
-
-**3. Degrade, never crash:** Any failure produces a blank frame or missing element, never a dead session. Designed for the hostile open web, not a controlled environment.
-
-**4. AI building AI infrastructure:** Large portions of Kitesurf were developed by AI agents, using Web Platform Tests as clear success criteria. Humans focused on architecture and review; agents handled implementation. Meta-interesting on its own.
-
----
-
-### Performance: 3-7x Less CPU and Memory Than Chromium
-
-Median of five Browser Run quick-action runs across a 14-URL corpus (Kitesurf vs Chromium warm pool):
-
-| Metric | Kitesurf | Chromium (warm pool) | Relative |
-|--------|---------|---------------------|---------|
-| CPU: screenshot | 380 ms | 1,173 ms | **3.1× less CPU** |
-| CPU: HTML extraction | 229 ms | 877 ms | **3.8× less CPU** |
-| Memory: screenshot | 57.8 MiB | 271.0 MiB | **4.7× less memory** |
-| Memory: HTML extraction | 39.4 MiB | 273.7 MiB | **7.0× less memory** |
-| Wall time: screenshot | 1,148 ms | 637 ms | 1.8× slower |
-| Wall time: HTML extraction | 820 ms | 472 ms | 1.7× slower |
-
-Chromium wins on speed — a JIT-warmed engine beats a cold software renderer. Kitesurf wins on resources — 3-4× less CPU, 5-7× less memory.
-
-For AI agents, this trade-off is correct: **cloud billing runs on resource consumption, not wall-clock time.** 7× less memory means 7× more concurrent sessions on the same budget.
-
----
-
-### WPT Coverage: 215,000+ Tests Passing
-
-Kitesurf passes 215,000+ Web Platform Tests and adds hundreds more every week. Strong coverage in CSS, DOM, HTML, Selection, SVG, and XHR — exactly the parts agents rely on most.
-
-Verified compatible sites: TodoMVC (Vanilla/React/Vue/Angular/Preact), Wikipedia, Hacker News, Cloudflare Blog, Cloudflare Dashboard.
-
-Doom also runs. Official Cloudflare certification criteria, apparently.
-
----
-
-### Engineering Integration: Just Add `browser=kitesurf`
-
-**Screenshot Quick Action:**
+We retrieved the official text and inspected the pinned build and deployment documentation. On Node.js 26.10.0, two upstream helper-test files ran directly without a complete engine build, with 15 passing checks:
 
 ```bash
-curl -X POST 'https://api.cloudflare.com/client/v4/accounts/<accountId>/browser-run/screenshot?browser=kitesurf' \
-  -H 'Authorization: Bearer <apiToken>' \
-  -H 'Content-Type: application/json' \
-  -d '{"url": "https://example.com"}' \
-  --output "screenshot.png"
+node --test scripts/pptr-shared.test.mjs scripts/e2e-shard.test.mjs
 ```
 
-**MCP for AI agents:**
+They cover result aggregation, retry/gate helpers and a shard runner using stand-in fixtures. They are not passing browser-based Puppeteer tests. We did not build the engine, start Wrangler, capture a page through CDP, run full WPT, measure resource usage or deploy the cloud service.
 
-```json
-{
-  "mcp": {
-    "kitesurf": {
-      "type": "local",
-      "command": [
-        "npx", "-y", "chrome-devtools-mcp@latest",
-        "--wsEndpoint=wss://api.cloudflare.com/client/v4/accounts/<ACCOUNT_ID>/browser-run/devtools/browser?browser=kitesurf",
-        "--wsHeaders={\"Authorization\":\"Bearer <API_TOKEN>\"}"
-      ]
-    }
-  }
-}
-```
+This update does not reuse early resource figures as a fresh performance conclusion. Lower memory for one task cannot directly establish proportional concurrency gains: CPU, duration, limits, network and compatibility can become the constraint.
 
-**Not yet supported:** video, WebGL, bot-challenge TLS fingerprinting, long authenticated sessions requiring persistent state. Use Chromium for those.
+Mycelium Protocol recommends evaluating representative pages, required protocol behavior, diagnosable failures and total resources on your own workload. Open source makes that investigation easier; it does not perform it for you.
 
----
+## FAQ
 
-### What This Actually Means
+**Is it open source now?** Yes. The November 13 announcement releases it under Apache 2.0, while third-party material keeps its own licensing.
 
-Kitesurf isn't just a "cheaper browser." It's proof of a paradigm shift:
+**Is it a drop-in Chromium replacement?** That is not established. Protocol access does not imply complete feature or behavior compatibility.
 
-**The browser doesn't have to be a monolithic application.**
+**Is self-hosting on Cloudflare free?** The official requirements include Workers Paid for Dynamic Workers. Assess current platform usage and costs for your workload.
 
-Traditional browsers pack every subsystem — networking, parsing, JS execution, rendering — into one process. Kitesurf decomposes them into independent stateless functions, each with access only to exactly the resources it needs, each disposable on failure.
-
-This is the same move Serverless made with server applications.
-
-For AI agent infrastructure, this matters on three levels:
-
-1. **Cost structure changes:** Not "rent a warm Chromium instance and wait" but "pay for exactly the compute used," matching the bursty, unpredictable nature of AI workloads
-2. **Isolation is first-class:** Every session, every page gets a fresh isolate. An agent scanning arbitrary sites cannot leak data between sessions by construction
-3. **Puppeteer/Playwright compatible:** No toolchain rewrite needed — one parameter switches the underlying engine
-
-Kitesurf is 12 weeks old and not suitable for every use case. But it demonstrates that the "browser for agents" can be a fundamentally different thing from the "browser for humans" — lighter, cheaper, better isolated — and that direction is worth watching carefully.
+README: https://github.com/cloudflare/kitesurf/blob/main/README.md
+Notices: https://github.com/cloudflare/kitesurf/blob/main/NOTICE
+Related: https://blog.mushroom.cv/blog/obscura-rust-headless-browser-ai-agent-web-scraping-mcp/
 
 ---
 
-Source: [blog.cloudflare.com/kitesurf](https://blog.cloudflare.com/kitesurf)  
-Playground: [kitesurf.cloudflare.app](https://kitesurf.cloudflare.app)
-
----
-
-*Mycelium Protocol — tracking the deep evolution of AI systems*
-
-© 2026 Mycelium Protocol. All rights reserved.
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.

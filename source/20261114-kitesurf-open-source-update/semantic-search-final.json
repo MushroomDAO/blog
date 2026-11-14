@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate",
+      "title": "Cloudflare Kitesurf现已开源：CDP与自部署边界",
+      "url": "/blog/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate/",
+      "language": "zh",
+      "excerpt": "Cloudflare Kitesurf现已开源：CDP与自部署边界 Cloudflare 已按 Apache 2.0 开源 Kitesurf，开发者可查看、修改并在自己的 Workers 账户部署 Agent 浏览器。核验 Rust与WASM架构、CDP支持边界、Bazel构建和付费计划要求，说明公开端点的访问保护与托管服务区别，明确辅助脚本测试不等于浏览器兼容性或性能实测。 Cloudflare Browser Automation AI Agent WebAssembly Rust Open Source 这次开源，工程师真正多了什么？ 没有 Chr",
+      "score": 0.76333237
+    },
+    {
+      "article_id": "cloudflare-drop-instant-deploy-guide",
+      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+      "url": "/blog/cloudflare-drop-instant-deploy-guide/",
+      "language": "zh",
+      "excerpt": "Cloudflare Drop：拖一下文件夹，网站就上线了 Cloudflare 刚上线了 Drop（cloudflare.com/drop）——无需注册账号、无需任何配置，把 HTML/CSS/JS 文件夹或 ZIP 拖进去，网站立刻部署到 Cloudflare 全球网络。普通人用它上线网站的完整指南。 Cloudflare 部署 静态网站 免费工具 前端 零配置 CDN 它是什么 上手只需 30 秒 第一步：准备你的文件 第二步：打开 cloudflare.com/drop 第三步：拖进去，等几秒，就好了 它能做什么 / 不能做什么 ✅ 能做的 ❌ ",
+      "score": 0.5984766
+    },
+    {
+      "article_id": "pinme-ipfs-deploy-cli-mac-review",
+      "title": "PinMe 实测：一条命令部署到 IPFS，全栈模板却悄悄落到 Cloudflare Worker",
+      "url": "/blog/pinme-ipfs-deploy-cli-mac-review/",
+      "language": "zh",
+      "excerpt": "PinMe 实测：一条命令部署到 IPFS，全栈模板却悄悄落到 Cloudflare Worker PinMe 是 glitternetwork 的零配置部署 CLI，3742 星、MIT 协议，最近一次提交在 2026-09-12。本机用 npx 实测：`pinme --version` 输出 2.0.12、`pinme upload` 在未登录时正确拒绝。但自定义域名绑定要 USD 钱包余额，全栈 `pinme create/save` 实际部署的是 Cloudflare Worker + D1，并非纯去中心化基础设施；package.json 里还",
+      "score": 0.5922237
+    },
+    {
+      "article_id": "open-connector-mcp-agent-integration-guide",
+      "title": "用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南",
+      "url": "/blog/open-connector-mcp-agent-integration-guide/",
+      "language": "zh",
+      "excerpt": "用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南 open-connector 是一个开源的认证网关，把 1000+ SaaS 服务（GitHub、HackerNews、Twitter、知乎、Cloudflare 等）封装成统一的 MCP 接口，接入 Claude Code 或任何 MCP 兼容的 AI 助手之后，Agent 可以直接查询热门仓库、抓取热帖、操作账号资源——不用再一个个配置 API key 和 OAuth，一次部署解决所有集成。 MCP open-connector Claude Code ",
+      "score": 0.57779926
+    },
+    {
+      "article_id": "tinyfish-web-agent-api-search-fetch-mcp-skill-claude-code",
+      "title": "TinyFish: Web Infrastructure for AI Agents — Search + Fetch Free, One-Line Skill for Claude Code",
+      "url": "/blog/tinyfish-web-agent-api-search-fetch-mcp-skill-claude-code/",
+      "language": "en",
+      "excerpt": "TinyFish: Web Infrastructure for AI Agents — Search + Fetch Free, One-Line Skill for Claude Code TinyFish is web infrastructure for AI agents — Search, Fetch, Agent, and Browser endpoints. Search and Fetch are now free. Complete guide: one-line Skill install, MCP Server config, C",
+      "score": 0.55333674
+    },
+    {
+      "article_id": "cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune",
+      "title": "Cloudflare 开源 Clef 决策模型：兼容 Jev API、9B 版 Mac 可跑，榜首成绩是自报的",
+      "url": "/blog/cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune/",
+      "language": "zh",
+      "excerpt": "Cloudflare 开源 Clef 决策模型：兼容 Jev API、9B 版 Mac 可跑，榜首成绩是自报的 Cloudflare 2026-10-01 以 Apache-2.0 开源 Clef（Qwen3.8-27B 底座，273.6 亿参数）和 Clef-flash（Qwen3.5-9B，94.1 亿参数），一次前向给每个选项出概率、零输出 token，兼容 Jev /v1/systemone。Decision Index 上 Clef 61.21 高于 Jev 57.91，但这是 Cloudflare 自己跑的、上游榜单未复现，社区 MLX 抽样",
+      "score": 0.55293804
+    },
+    {
+      "article_id": "corespeed-tie-mac-studio-guide",
+      "title": "CoreSpeed TIE：把Mac Studio交给Agent，开源了哪些？",
+      "url": "/blog/corespeed-tie-mac-studio-guide/",
+      "language": "zh",
+      "excerpt": "CoreSpeed TIE：把Mac Studio交给Agent，开源了哪些？ CoreSpeed TIE让MCP智能体调用Mac上的终端、文件、已登录浏览器、桌面应用和本地工具。本文找到官方Apache许可插件仓库，区分插件、原生CLI与托管服务的公开范围，核查Mac安装条件、Node版本变化、目录与审批边界，并记录八项配置检查和原生CLI基础测试，给出分阶段试用与退出方法。 CoreSpeed TIE MCP Mac Studio Computer Use TIE把哪些本机能力提供给Agent？ 开源仓库里到底有什么？ Mac Studio需要什么条",
+      "score": 0.5509389
+    },
+    {
+      "article_id": "seeder-mcp-project-manager",
+      "title": "Seeder：自托管项目管理工具，原生支持 MCP，让 AI 直接读写你的任务",
+      "url": "/blog/seeder-mcp-project-manager/",
+      "language": "zh",
+      "excerpt": "Seeder：自托管项目管理工具，原生支持 MCP，让 AI 直接读写你的任务 Seeder 是一个开源自托管项目管理工具，运行在 Cloudflare Workers 上，原生内置 MCP 服务器，让 Claude、Cursor 等 AI 助手直接读写任务和客户请求，所有操作完整记录在活动流中。 项目管理 MCP Claude Code Cloudflare Workers 开源工具 AI Agent 项目管理工具为什么总让人不满意？ Seeder 能做什么？ 项目与看板 客户请求队列 公开客户看板 每日计划器 活动流（审计日志） 白标支持 最值得关注",
+      "score": 0.5470869
+    },
+    {
+      "article_id": "cloudflare-workers-ai-glm-kimi-deepseek-minimax",
+      "title": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token",
+      "url": "/blog/cloudflare-workers-ai-glm-kimi-deepseek-minimax/",
+      "language": "zh",
+      "excerpt": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token Cloudflare Workers AI 已上线 GLM-5.2、Kimi K2.7 Code、1M 上下文的 Kimi K3、DeepSeek V4 Pro、MiniMax M3，同一个 token、同一行代码即可调用，还理清了自托管与第三方托管的价格和数据边界。 Cloudflare Workers AI GLM-5.2 Kimi K3 DeepSeek V4 MiniMax 边缘推理 起因 结论：你想要的基本都有 但有一条分界",
+      "score": 0.5422965
+    },
+    {
+      "article_id": "doop-open-source-multiplayer-ai-design-canvas",
+      "title": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计",
+      "url": "/blog/doop-open-source-multiplayer-ai-design-canvas/",
+      "language": "zh",
+      "excerpt": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计 kgoedecke/doop 开源仅两周：多人实时设计画布，Canvas+Frame 用 sandboxed iframe 渲染真实 HTML，AI agent 通过内置 MCP server（15 个工具）流式把设计画进画布，人在旁边实时围观甚至接管。bun run dev 零配置自托管，内置 Postgres。AGPL-3.0，564 star。 AI Agent MCP 开源 设计工具 多人协作 TypeScript Claude Code 自托管 AGPL",
+      "score": 0.54228634
+    }
+  ]
+}

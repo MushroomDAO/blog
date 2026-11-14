@@ -1,0 +1,12 @@
+{
+  "gitRevision": "4a2903813a22b08d4f3cc64a4b35339d0293a5d1",
+  "node": "v26.10.0",
+  "license": "Apache-2.0 with third-party notices",
+  "tests": "node --test scripts/pptr-shared.test.mjs scripts/e2e-shard.test.mjs",
+  "passed": 15,
+  "skipped": 0,
+  "scope": "Puppeteer result/gate helpers and shard runner with stand-in fixtures; no engine/browser/CDP render run, no full build, no paid deployment or performance test",
+  "agentReachDoctor": "CLI unavailable; skill allows public-web/Jina fallback",
+  "preservedPubDate": "2026-08-07",
+  "updatedDate": "2026-11-14"
+}

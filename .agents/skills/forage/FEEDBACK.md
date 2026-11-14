@@ -1421,3 +1421,12 @@ Manning产品页直接链接designing-ai-systems/designing_ai_systems_repo，固
 - 实际AppleM4/Rust1.98.1/2Cargojobs构建成功；offline metadata35本地包/0外部registry。MBX自动包装器参与，未把构建耗时当比较基准。
 - 离线临时小包有效检查通过、2JIT单测通过、借用冲突E0502被拒绝。函数返回1改2后在counter7观察到新值，计数单调0..31、进程正常退出，验证小范围状态保留。未跑完整上游套件、UI、游戏、devhub或吞吐比较。
 - 官方11秒/1.15秒首帧和时间倍率均明确归因，nativeCPU基线不同，不能当加速倍数。代码量和借用检查实现不等于通用Rust兼容认证；发布继续用正式工具链。专属照片banner与三张小M图检查通过。
+
+
+## 2026-11-14 · Kitesurf开源公告更新旧文
+
+- 同主题Aug7Blog和M2创建凭证均存在，沿用cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate，保留pubDate、更新updatedDate，不另写重复文章。Nov13官方开源公告是新证据，修正旧文未开源/无条件CDP兼容/线性并发收益/绝对隔离保证。
+- 固定4a29038，Apache2含第三方NOTICE；Bazelisk/Node22+/pnpm9.15.4，本地Wrangler，云端DynamicWorkers需Paid，CDP非完整Chrome，公开控制端点按官方Access要求保护。未部署付费浏览器引擎。
+- Node26.10.0直接跑上游pptr-shared和e2e-shard辅助测试15通过0跳过，含替身fixture，不是实际浏览器/Puppeteer/WPT/性能实测。
+- AgentReachCLI缺失，按已读skill的公开后备路径抓Jina与官方仓库。下载官方主题图/架构图/Logo到media。旧banner虽机器过但人工拒绝小人物/伪字，采用官方主题图；三张小M图通过检查。
+- 旧M2draft/get40007且当前箱无，已发布列表48001无权限：保留旧凭证并标recorded/currentstateunverified，不能重建可能已发布内容。Blog更新、KB、语义索引独立推进。

@@ -1,0 +1,9 @@
+# Kitesurf open-source update of an existing article
+
+The canonical August route and publication date are retained. Official November13open-sourcerelease prompted a substantial November14revision. No duplicatearticleorWeChatdraftwascreated. OldM2creationreceipt is preserved;remoteget40007/absentdraft/published48001 means recorded/currentstateunverified.
+
+SourcebodyandmediawerefetchedusingpublicbackendsperrecoveredAgentReachskill;CLIisnotinstalled. Three sourceimagesaresavedinuser/media;officialannouncementheroisadoptedforcover. BodyillustrationsareperarticleLittleM. The15localupstreamhelperchecksare not browsercompatibility/performanceverification. NoCloudflarebrowserenginewasdeployed.
+
+See release-audit,helper-tests,media,reconciliation,SEO,frozeninputs,publicverification,semanticreadback,andKBreadback. Sourceexcerpttrailingwhitespacemaybenormalized.
+
+Official blog full fetches are retained privately; public evidence uses concise original research summaries rather than republishing the full posts.

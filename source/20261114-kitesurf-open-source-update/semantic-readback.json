@@ -1,0 +1,40 @@
+[
+  {
+    "id": "38b4b885b21c23b9574ba397597b48f1bdc627147e21b04d",
+    "metadata": {
+      "article_id": "cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate",
+      "content_hash": "5a4841c622ac34b1",
+      "excerpt": "Cloudflare Kitesurf现已开源：CDP与自部署边界 Cloudflare 已按 Apache 2.0 开源 Kitesurf，开发者可查看、修改并在自己的 Workers 账户部署 Agent 浏览器。核验 Rust与WASM架构、CDP支持边界、Bazel构建和付费计划要求，说明公开端点的访问保护与托管服务区别，明确辅助脚本测试不等于浏览器兼容性或性能实测。 Cloudflare Browser Automation AI Agent WebAssembly Rust Open Source 这次开源，工程师真正多了什么？ 没有 Chr",
+      "language": "zh",
+      "tags": [
+        "Cloudflare",
+        "Browser Automation",
+        "AI Agent",
+        "WebAssembly",
+        "Rust",
+        "Open Source"
+      ],
+      "title": "Cloudflare Kitesurf现已开源：CDP与自部署边界",
+      "url": "/blog/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate/"
+    }
+  },
+  {
+    "id": "7b36cc9aa4033080db2156ef1fa15e1e634049e61db66626",
+    "metadata": {
+      "article_id": "cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate",
+      "content_hash": "d699371646ac0ab0",
+      "excerpt": "Cloudflare Kitesurf: Open Source, CDP and Self-Hosting Inspect open-source Kitesurf's Workers browser, CDP limits, local build and paid hosting needs, distinguishing helper checks from engine and performance checks. Cloudflare Browser Automation AI Agent WebAssembly Rust Open Sou",
+      "language": "en",
+      "tags": [
+        "Cloudflare",
+        "Browser Automation",
+        "AI Agent",
+        "WebAssembly",
+        "Rust",
+        "Open Source"
+      ],
+      "title": "Cloudflare Kitesurf: Open Source, CDP and Self-Hosting",
+      "url": "/blog/cloudflare-kitesurf-agent-browser-rust-wasm-v8-isolate/"
+    }
+  }
+]

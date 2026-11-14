@@ -1,0 +1,23 @@
+✔ e2e shards resolve Vitest and tests from the external engine directory (83.1665ms)
+✔ results key on the spec name and the full describe path (0.827125ms)
+✔ same-titled tests in different suites stay apart; duplicates are reported (0.0935ms)
+✔ pending maps to SKIP and mocha timeouts to TIMEOUT (0.072834ms)
+✔ a failed hook gets its own ID (0.119459ms)
+✔ IDs split back into spec name and full title (0.095666ms)
+✔ skip config lists only SKIP pins, optionally for some files (0.131167ms)
+✔ exact grep matches whole titles only, with regex characters escaped (0.087333ms)
+✔ allow-list takes spec names and rejects paths or extensions (0.992208ms)
+✔ coverage finds empty spec files and vanished pins (0.178875ms)
+✔ error summaries keep the first lines without colour codes (0.092209ms)
+✔ rebaseline pins timeouts and slow failures as SKIP (5.130208ms)
+✔ a retry skips the tests that matched and keeps their first results (0.099041ms)
+✔ a hook failure or an empty run retries the whole file (0.05175ms)
+✔ JUnit names each test by spec and full title (0.180833ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 131.384084

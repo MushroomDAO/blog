@@ -1,0 +1,18 @@
+{
+  "revision": true,
+  "canonicalSlugReused": true,
+  "pubDatePreserved": "2026-08-07",
+  "updatedDate": "2026-11-14",
+  "BLUF": true,
+  "bilingual": true,
+  "FAQ": 3,
+  "corrections": [
+    "open-source promise now fulfilled",
+    "CDP not fullChrome compatibility",
+    "no linear memory-to-concurrency extrapolation",
+    "no blanket isolation/security guarantees",
+    "third-party notices and paidplan distinct"
+  ],
+  "verification": "15upstreamhelpertests,notbrowserengine/WPT/performance",
+  "copyrightBothLanguages": true
+}
