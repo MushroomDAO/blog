@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "exceptions": [
+    "NoFAQ or800wordpadding; userexplicit<=1000characterreflection."
+  ],
+  "checks": [
+    "Bilingualsourceequivalence",
+    "BookidentificationcatalogISBNverified",
+    "Scopehonesty:notfullbookread",
+    "Independentadviceattributedtoourselves",
+    "NoquotationofposterheadlineasCoser",
+    "622characterreflection+advice",
+    "Author/source/copyrightretained"
+  ]
+}

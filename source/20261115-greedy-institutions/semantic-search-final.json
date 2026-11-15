@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "greedy-institutions-coser-young-people-autonomy",
+      "title": "科塞《贪婪的制度》短评：认真投入，也保留自己",
+      "url": "/blog/greedy-institutions-coser-young-people-autonomy/",
+      "language": "zh",
+      "excerpt": "科塞《贪婪的制度》短评：认真投入，也保留自己 从两张读书图片核对刘易斯·科塞1974年的Greedy Institutions，辨认配文与原书观点的区别。这篇千字内短评依据可核实书目和学术研究，讨论组织为何可能要求独占人的忠诚、身份与情感，并给年轻人关于时间边界、外部关系、可迁移能力和选择权的独立建议，不把个人处境简单归咎于不够勇敢或不会拒绝。 Lewis Coser Greedy Institutions Sociology Autonomy Young People 怎样投入，又不交出整个人生？ 给年轻人的几条建议",
+      "score": 0.701993
+    },
+    {
+      "article_id": "pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring",
+      "title": "Pulse：一排光环贴着屏幕边缘，告诉你 Claude Code 还剩多少",
+      "url": "/blog/pulse-macos-ai-usage-monitor-claude-codex-antigravity-ring/",
+      "language": "zh",
+      "excerpt": "Pulse：一排光环贴着屏幕边缘，告诉你 Claude Code 还剩多少 qunqin24/Pulse 开源，macOS 浮动监控工具，三个彩环实时显示 Claude Code / Codex / Antigravity 用量，贴边停靠收缩为6pt细条，从提供商账户直读真实限额，自适应刷新，无后台零上传，Apache 2.0。 macOS Claude Code Codex AI tools open source Swift usage monitor productivity menu bar 那个永恒的问题 一排光环，贴着屏幕边缘 真实的限额，不",
+      "score": 0.48019955
+    },
+    {
+      "article_id": "aris--auto-research-in-sleep-with-claude-code",
+      "title": "ARIS: 让 AI 在你睡觉时做科研",
+      "url": "/blog/aris--auto-research-in-sleep-with-claude-code/",
+      "language": "zh",
+      "excerpt": "ARIS: 让 AI 在你睡觉时做科研 一个基于双模型协作的自主 ML 科研系统，让 Claude Code 执行，GPT 审稿，实现全自动研究流水线 claude-code ai-research multi-agent ml-pipeline automation 科研自动化的痛点 双模型协作机制 为什么不用单模型自我博弈？ 实际能做什么？ 1. 全自动研究流水线 2. 基于现有工作的改进 3. Rebuttal 辅助 轻量到离谱的架构 实际落地效果 一点思考",
+      "score": 0.45101637
+    },
+    {
+      "article_id": "last-ai-built-by-humans-recursive-self-improvement-hci",
+      "title": "The Last AI Built by Humans: Five RSI Autonomy Levels and the HCI Capability Trajectory Index",
+      "url": "/blog/last-ai-built-by-humans-recursive-self-improvement-hci/",
+      "language": "en",
+      "excerpt": "The Last AI Built by Humans: Five RSI Autonomy Levels and the HCI Capability Trajectory Index 33 authors propose HCI (Headroom-Closed Index) and a five-level RSI autonomy framework: math capability HCI 86.4, tool agents surged from 8.2 to 39.9, L5 AI autonomously revises the mech",
+      "score": 0.4461702
+    },
+    {
+      "article_id": "howtolive-better-evidence-based-chinese-life-guide-498-tips",
+      "title": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源",
+      "url": "/blog/howtolive-better-evidence-based-chinese-life-guide-498-tips/",
+      "language": "zh",
+      "excerpt": "高性价比人生指南：498 条循证建议，每条写明成本、收益和证据等级，优化四种资源 eternity4719/HowToLiveBetter，Unlicense，在线检索页已开，498 条按性价比排序的中文生活建议，涵盖长寿、急救、省钱、法律红线、恋爱婚育、程序员红线、创业、看病等 31 章。每条注明花什么（钱/时间/精力）、换什么（总死亡率/金钱/人身自由）、证据等级（A/B/C）和原始文献来源（891 条链接）。A 级 323 条，极高性价比 88 条，2366 stars。 open-source evidence-based life-guide ",
+      "score": 0.4398499
+    },
+    {
+      "article_id": "infinitediffusion-terrain-generation-guide",
+      "title": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文",
+      "url": "/blog/infinitediffusion-terrain-generation-guide/",
+      "language": "zh",
+      "excerpt": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文 Alexander Goslin 以独立研究者身份，用 RTX 3090 Ti 发表 SIGGRAPH 2026 论文 InfiniteDiffusion，将扩散模型改造为懒惰采样，实现无界、O(1) 随机访问、确定性的无限地形生成。本文整理复现路径与游戏/工程应用方向。 扩散模型 程序化生成 游戏开发 SIGGRAPH 地形生成 AI图形 独立研究 先说这件事本身有多不寻常 论文在解决什么问题？ 原始资源 30 分钟复现路径 Step 0：环境 St",
+      "score": 0.43901855
+    },
+    {
+      "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "title": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时",
+      "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+      "language": "zh",
+      "excerpt": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时 复旦+北大+奇迹智风，arXiv:2604.25850，MIT，Python。AHE 提出一个闭环：不动模型权重，只进化 harness——通过三层可观测性（组件/经验/决策），让 Evolve Agent 自动分析 trace、提出修改、预测效果，下一轮自动验证。10次迭代把 GPT-5.4 在 Terminal-Bench 2 上从 69.7% 提升到 77.0%，超过手写 Codex-CLI（71.9%）。冻结后的 harness ",
+      "score": 0.4386954
+    },
+    {
+      "article_id": "ego-lite-claude-code-browser-automation-spaces",
+      "title": "ego lite: The Browser Built for Claude Code — Parallel Spaces, Code-Based Automation",
+      "url": "/blog/ego-lite-claude-code-browser-automation-spaces/",
+      "language": "en",
+      "excerpt": "ego lite: The Browser Built for Claude Code — Parallel Spaces, Code-Based Automation ego lite isn't a browser automation framework — it's a full Chromium browser where humans and AI agents each work in isolated Spaces. The ego-browser skill lets Claude Code complete browser tasks",
+      "score": 0.43747178
+    },
+    {
+      "article_id": "cordiverse-cordis-spatiotemporal-composability-plugin-paradigm-paper",
+      "title": "读 cordiverse/paper：为什么「可逆副作用」是插件系统最难的问题，以及它对 AI Agent 自我净化意味着什么",
+      "url": "/blog/cordiverse-cordis-spatiotemporal-composability-plugin-paradigm-paper/",
+      "language": "zh",
+      "excerpt": "读 cordiverse/paper：为什么「可逆副作用」是插件系统最难的问题，以及它对 AI Agent 自我净化意味着什么 cordiverse/paper 是支撑 DeepSeek Harness 底层框架 Cordis 的学术论文草稿（2026-08-13）。论文提出「时空可组合性」编程范式：时间可组合性（Temporal Composability）保证插件卸载时能完全撤销副作用，空间可组合性（Spatial Composability）保证插件之间的依赖关系可以响应式管理。这两个特性合在一起，让 AI Agent 运行时真正实现「热替换」——",
+      "score": 0.4351421
+    },
+    {
+      "article_id": "argus-persistent-agentic-runtime-long-horizon-four-role-self-evolution",
+      "title": "Argus: A Persistent Four-Role Runtime That Gets Agents to Finish the Whole Job",
+      "url": "/blog/argus-persistent-agentic-runtime-long-horizon-four-role-self-evolution/",
+      "language": "en",
+      "excerpt": "Argus: A Persistent Four-Role Runtime That Gets Agents to Finish the Whole Job Argus is an open-source agentic runtime that separates execution from judgment via a four-role architecture — Manager, Planner, Engineer, Reviewer — persisting project state across sessions and runtime",
+      "score": 0.43095717
+    }
+  ]
+}

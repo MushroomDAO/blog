@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "greedy-institutions-coser-young-people-autonomy",
+    "checks": {
+      "fields": true,
+      "title": true,
+      "description": true,
+      "wechat": true,
+      "tags": true,
+      "bilingual": true,
+      "shortReflection": true,
+      "sources": true,
+      "copyright": true,
+      "images": true,
+      "banner": true
+    },
+    "passed": true
+  }
+]

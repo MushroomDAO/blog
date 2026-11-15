@@ -1,0 +1,70 @@
+✅ Access token obtained
+账本：blog 1003 篇 + 公众号草稿箱 2 条 + 本地发布记录 986 条 + MemPalace 4252 抽屉
+
+── 查：https://books.google.com/books?id=FxhBAAAAIAAJ
+   ✅ 四本账都没查到
+
+── 查：Greedy Institutions
+   ❌ [BLOG  ] 精准定阶：当前全域 Agent 生态 = 早期智人初创阶段
+      正文出现实体名「institutions」
+   ❌ [BLOG  ] arle 实战指南：普通笔记本一键跑本地大模型，再用蒸馏让 4B 模型追上 35B 的推理能力
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] BotPsy 0.8B：把工具调用放到端侧，工程上还差哪些环节？
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] Clipto 融资 1500 万美元：本地 AI 记忆成赛道，开源订阅能不能打？
+      正文出现实体名「institutions」
+   ❌ [BLOG  ] 比 Stripe 便宜 80%：稳定币正在系统性重写跨境支付的成本结构
+      正文出现实体名「institutions」
+   ❌ [BLOG  ] CUA-Lite：UC Berkeley + Microsoft 开源计算机操控 Agent 基础设施，无需 KVM，Docker 直跑 OSWorld，4.6× 并行
+      正文出现实体名「institutions」
+   ❌ [BLOG  ] DeepMind Science Skills：开源AI Agent工具包，整合30+科学数据库加速科研
+      正文出现实体名「institutions」
+   ❌ [BLOG  ] DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] 12美元买入，25000美元卖出——普通人如何系统性寻找域名套利机会
+      正文出现实体名「institutions」
+   ❌ [BLOG  ] GEPA：让 LLM 阅读自己的执行轨迹进化 Prompt，比 GRPO 少用 35x rollout 却赢 20%
+      正文出现实体名「institutions」
+   ❌ [BLOG  ] Humanizer 调研：把维基百科「AI 写作特征」清单变成一个能装进任何 Agent 的 Skill
+      正文出现实体名「institutions」
+   ❌ [BLOG  ] IU4 原生 4bit 通道：AMD Strix Halo 上让量化从「省显存」变成「算得快」
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] Krill 拆解：一个 Swift 二进制同时当本地推理引擎和编程 Agent，「比 Ollama 快 1.57 倍」要打几折？
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] Mellum2.1：把小模型训练成仓库里的执行者
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] 从零读懂 nano-vLLM：13 章源码教程 + 13 个浏览器实验，拆解推理引擎核心机制
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] OpenThai 2.0 OCR Markdown：从泰文文档到可追溯的结构化内容
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] 训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解
+      正文出现实体名「institutions」
+   ❌ [BLOG  ] Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] 消融不是越彻底越好：Qwen3.8-27B-OBLITERATED 三代手术的取舍曲线
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] scaling-agent-systems-science-google-deepmind-mit.md
+      正文出现实体名「institutions」
+   ❌ [BLOG  ] 每个人都是自己的 FDE：读完北上深杭 125 人调查之后
+      正文出现实体名「institutions」
+   ❌ [BLOG  ] Splash 1.4.0 更新：Mac 推理加速与六引擎对照
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] 395 不外接显卡，Prefill 接近 2000？拆解 Halogen 与 Gufo
+      正文出现实体名「greedy」
+   ❌ [BLOG  ] Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI
+      正文出现实体名「greedy」
+   ❌ [知识库] cannotprovebulkPP,3slotsnotactual3fullcontexts. Not ourownSt
+      正文出现实体名「greedy」
+
+── 查：贪婪的制度
+   ✅ 四本账都没查到
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
