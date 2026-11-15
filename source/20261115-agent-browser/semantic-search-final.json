@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "agent-browser-accessibility-snapshots-reliable-actions",
+      "title": "Vercel agent-browser：让网页操作可定位、可检查",
+      "url": "/blog/agent-browser-accessibility-snapshots-reliable-actions/",
+      "language": "zh",
+      "excerpt": "Vercel agent-browser：让网页操作可定位、可检查 agent-browser 把网页整理成带元素引用的无障碍树，让编码智能体从命令行打开页面、定位控件、填写表单，并在操作后读取状态。本文核对 Vercel Labs 官方代码与文档，解释 Rust CLI、后台守护进程和 CDP 的协作方式，通过本地合成表单检查操作反馈，分析会话隔离、动态页面、视觉补充与工程接入边界。 agent-browser Vercel Browser Automation Accessibility Rust 它解决的是什么问题？ Rust CLI、守护进程和浏",
+      "score": 0.6147398
+    },
+    {
+      "article_id": "browser-use-jev-ultrafast-dom-web-agent",
+      "title": "jev-ultrafast：browser-use × TypeSafe Jev，DOM 结构化状态代替截图，Google Flights 7.1 秒",
+      "url": "/blog/browser-use-jev-ultrafast-dom-web-agent/",
+      "language": "zh",
+      "excerpt": "jev-ultrafast：browser-use × TypeSafe Jev，DOM 结构化状态代替截图，Google Flights 7.1 秒 browser-use/jev-ultrafast，19K+ stars，Python，browser-use 官方出品。核心思路：把浏览器状态变成编号元素表格，用 TypeSafe Jev 一次请求同时决策「操作类型 + 目标元素」，只有需要输入文字时才调小 LLM。默认 Agent 循环零截图，browser protocol 调用从 1092 次降到 101 次，任务时间中位数从 9.45s 降到 ",
+      "score": 0.599299
+    },
+    {
+      "article_id": "ascii-portrait-browser-animation",
+      "title": "ASCII Portrait：照片变动态字符画，浏览器就能做",
+      "url": "/blog/ascii-portrait-browser-animation/",
+      "language": "zh",
+      "excerpt": "ASCII Portrait：照片变动态字符画，浏览器就能做 ASCII Portrait 在浏览器里把照片转换成动态字符画，支持 PNG 与六秒循环 WebM 导出。结合 README 与源码，介绍亮度映射、人物分割、WebGL 位移与逐帧编码，给出本地启动、浏览器兼容和参数选择指南，区分照片本地处理、首次模型下载与浏览器缓存，并说明上游回归测试的结果和限制，帮助判断使用场景。 开源工具 浏览器 ASCII WebGL 隐私 照片为什么能变成会动的字符画？ 六秒视频怎样保证循环时间？ 如何在自己电脑启动？ “照片不上传”是否等于完全离线？ 谁适合用，哪",
+      "score": 0.5463247
+    },
+    {
+      "article_id": "microsoft-trellis2-native-3d-generation-o-voxel-pbr",
+      "title": "TRELLIS.2：微软 4B 参数图像转 3D 生成模型，引入原生 O-Voxel 表示",
+      "url": "/blog/microsoft-trellis2-native-3d-generation-o-voxel-pbr/",
+      "language": "zh",
+      "excerpt": "TRELLIS.2：微软 4B 参数图像转 3D 生成模型，引入原生 O-Voxel 表示 微软开源的 4B 参数 3D 生成模型。引入 O-Voxel（无等值面约束的稀疏体素）解决复杂拓扑问题，支持开放曲面、非流形几何和内部封闭结构。H100 上 512³ 约 3 秒，1024³ 约 17 秒。支持完整 PBR 材质（颜色/粗糙度/金属度/透明度），MIT License，arXiv 2512.14692，当前 10.4k stars。 3D生成 微软 O-Voxel PBR材质 图像转3D 生成模型 Mycelium 核心创新：O-Voxel 表示 ",
+      "score": 0.5453237
+    },
+    {
+      "article_id": "agentjev-0-6b-system-one-decision-model-qwen3",
+      "title": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92%",
+      "url": "/blog/agentjev-0-6b-system-one-decision-model-qwen3/",
+      "language": "zh",
+      "excerpt": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92% AgentJev-0.6B，Qwen3-0.6B底座+置换等变决策头，System-1 AI Agent 决策模型。Typed Decisions 2000题 79.25%（1585/2000）超 Laya 77.00%（+2.25pt）。零输出 token 解码，约 50ms 一次前向。Shared Prefix KV Cache 在 64 候选时骨干 token 从 33,547 降至 2",
+      "score": 0.5409567
+    },
+    {
+      "article_id": "sentence-transformers-v6-colbert-multi-vector-late-interaction-rag",
+      "title": "Sentence Transformers v6.0：ColBERT 式多向量检索正式收编，第四种模型类型，一行代码接入 RAG",
+      "url": "/blog/sentence-transformers-v6-colbert-multi-vector-late-interaction-rag/",
+      "language": "zh",
+      "excerpt": "Sentence Transformers v6.0：ColBERT 式多向量检索正式收编，第四种模型类型，一行代码接入 RAG Sentence Transformers v6.0（2026-08-18）新增 MultiVectorEncoder 作为第四种模型类型，把 ColBERT 式「每 token 一个向量 + MaxSim 打分」的晚交互检索收编进统一 API。支持加载 PyLate / Stanford-NLP ColBERT / ColPali 所有历史检查点；同 backbone 相比稠密模型 NanoBEIR 平均高约 1 个 NDC",
+      "score": 0.53066945
+    },
+    {
+      "article_id": "knowhere-2-document-parsing-agentic-rag",
+      "title": "Knowhere 2.0：双通道文档解析 + 层级原生记忆，让 RAG 读懂文档结构",
+      "url": "/blog/knowhere-2-document-parsing-agentic-rag/",
+      "language": "zh",
+      "excerpt": "Knowhere 2.0：双通道文档解析 + 层级原生记忆，让 RAG 读懂文档结构 Knowhere，Ontos-AI出品，3.5k stars，2026-05-07开源。2026-09版本2.0上线双通道解析：Vision Page（视觉页面）+ Text Track（文本轨）融合为同一层级原生记忆模式，既保留文本结构精度，又让复杂PDF/PPT被视觉模型整页理解。支持超长PDF（数百页）和图纸集路由，输出结果绑定到文档、章节、源页、相关资产，天然适配Agentic RAG。 open-source rag document-parsing agen",
+      "score": 0.52871335
+    },
+    {
+      "article_id": "ovisocr3-unified-document-model",
+      "title": "OvisOCR3：0.8B 统一文档解析、字段抽取与跨页表格",
+      "url": "/blog/ovisocr3-unified-document-model/",
+      "language": "zh",
+      "excerpt": "OvisOCR3：0.8B 统一文档解析、字段抽取与跨页表格 OvisOCR3 是阿里巴巴 ATH-MaaS 开源的 0.8B 文档理解模型，统一解析、通用 OCR、关键信息抽取、图片描述与跨页表格重建。本文核对模型卡、在线体验源码和提示词，解释评测成绩、JSON 模板与严格 Schema 的区别、两阶段递归拼表、演示缓存、部署条件及 Mac 本地测试边界，并给出票据和金融文档的接入流程。 OvisOCR3 OCR Document AI KIE Local AI Open Source 五类能力分别解决什么问题？ 官方成绩该怎样读，哪些不是第一？ KI",
+      "score": 0.52597445
+    },
+    {
+      "article_id": "microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact",
+      "title": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率",
+      "url": "/blog/microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact/",
+      "language": "zh",
+      "excerpt": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率 microsoft/TRELLIS.2 是 TRELLIS（CVPR'25 Spotlight）的续作，10745 stars，MIT，Python。核心创新：O-Voxel「无场」稀疏体素结构取代等值面场，天然支持开放表面（衣物/叶片）、非流形几何、内部封闭结构；4B 参数模型 512³ 分辨率 H100 上约 3 秒，1024³ 约 17 秒；完整 PBR 材质（Base Color/Roughness/Metallic/Opacity）；网",
+      "score": 0.52486485
+    },
+    {
+      "article_id": "compai-crm-agentic-first-open-source-eve-vercel",
+      "title": "compai-crm-agentic-first-open-source-eve-vercel",
+      "url": "/blog/compai-crm-agentic-first-open-source-eve-vercel/",
+      "language": "en",
+      "excerpt": "compai-crm-agentic-first-open-source-eve-vercel Trycompai/crm, 7.9k stars, MIT, TypeScript. A CRM with its design inverted: not built for humans with AI bolted on, but built for an agent, with humans going in to see what it recorded. Built on Vercel's eve framework (durable agent",
+      "score": 0.52161735
+    }
+  ]
+}

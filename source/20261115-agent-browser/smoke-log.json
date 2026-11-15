@@ -1,0 +1,83 @@
+[
+  {
+    "args": [
+      "open",
+      "http://127.0.0.1:55337"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":true,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":false,\"saveStatus\":\"not_attempted\"},\"targetId\":\"B354B2272574DC1CD9256F6BB5D67AFA\",\"title\":\"Local Agent Browser Fixture\",\"url\":\"http://127.0.0.1:55337/\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "snapshot",
+      "-i"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:55337/\",\"refs\":{\"e1\":{\"name\":\"Demo registration\",\"role\":\"heading\"},\"e2\":{\"name\":\"Disabled action\",\"role\":\"button\"},\"e3\":{\"name\":\"Covered action\",\"role\":\"button\"},\"e4\":{\"name\":\"Save demo\",\"role\":\"button\"},\"e5\":{\"name\":\"Email\",\"role\":\"textbox\"}},\"removedRefs\":[],\"snapshot\":\"- heading \\\"Demo registration\\\" [level=1, ref=e1]\\n- textbox \\\"Email\\\" [required, ref=e5]\\n- button \\\"Save demo\\\" [ref=e4]\\n- button \\\"Disabled action\\\" [disabled, ref=e2]\\n- button \\\"Covered action\\\" [ref=e3]\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "fill",
+      "@e5",
+      "demo@example.test"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"filled\":\"@e5\",\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"}},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "click",
+      "@e4"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"clicked\":\"@e4\",\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"}},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "wait",
+      "--text",
+      "Saved: demo@example.test"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"text\":\"Saved: demo@example.test\",\"waited\":\"text\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "snapshot"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:55337/\",\"refs\":{\"e1\":{\"name\":\"Demo registration\",\"role\":\"heading\"},\"e2\":{\"name\":\"Disabled action\",\"role\":\"button\"},\"e3\":{\"name\":\"Covered action\",\"role\":\"button\"},\"e4\":{\"name\":\"Save demo\",\"role\":\"button\"},\"e5\":{\"name\":\"Email\",\"role\":\"textbox\"}},\"removedRefs\":[],\"snapshot\":\"- heading \\\"Demo registration\\\" [level=1, ref=e1]\\n- form\\n  - LabelText\\n    - StaticText \\\"Email\\\"\\n    - textbox \\\"Email\\\" [required, ref=e5]: demo@example.test\\n      - StaticText \\\"demo@example.test\\\"\\n  - button \\\"Save demo\\\" [ref=e4]\\n- status\\n  - StaticText \\\"Saved: demo@example.test\\\"\\n- button \\\"Disabled action\\\" [disabled, ref=e2]\\n- button \\\"Covered action\\\" [ref=e3]\\n- StaticText \\\"Consent overlay\\\"\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "click",
+      "@e2"
+    ],
+    "exit": 1,
+    "stdout": "{\"success\":false,\"data\":null,\"error\":\"Element '@e2' is disabled, so the click would not reach it\"}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "click",
+      "@e3"
+    ],
+    "exit": 1,
+    "stdout": "{\"success\":false,\"data\":null,\"error\":\"Element '@e3' is covered by <div#overlay> at its click point, so the input would land on that element instead. Dismiss or interact with the covering element first (it is often a dialog, banner, or sticky header).\"}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "close"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"closed\":true,\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":false,\"engine\":\"chrome\",\"launchHash\":null},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":false,\"saveStatus\":\"not_configured\"},\"restoreStatus\":\"not_configured\",\"saveStatus\":\"not_configured\"},\"error\":null}\n",
+    "stderr": ""
+  }
+]

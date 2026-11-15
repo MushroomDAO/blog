@@ -1430,3 +1430,9 @@ Manning产品页直接链接designing-ai-systems/designing_ai_systems_repo，固
 - Node26.10.0直接跑上游pptr-shared和e2e-shard辅助测试15通过0跳过，含替身fixture，不是实际浏览器/Puppeteer/WPT/性能实测。
 - AgentReachCLI缺失，按已读skill的公开后备路径抓Jina与官方仓库。下载官方主题图/架构图/Logo到media。旧banner虽机器过但人工拒绝小人物/伪字，采用官方主题图；三张小M图通过检查。
 - 旧M2draft/get40007且当前箱无，已发布列表48001无权限：保留旧凭证并标recorded/currentstateunverified，不能重建可能已发布内容。Blog更新、KB、语义索引独立推进。
+
+## 2026-11-15 — agent-browser
+- Published agent-browser-accessibility-snapshots-reliable-actions; Vercel Labs Apache2 npm0.43.0 pinned e0c121a96d3a5412e2078e0c8eba3f4d2db2b616. Exact repo URL absent from publication ledgers; other project mentions/raw KB do not duplicate a standalone article.
+- Actual local Chrome form: refs, fill/submit, status readback, disabled and covered rejection passed5checks. No live accounts, model benchmark, token/performance claim. Corrects screenshot-only history and distinguishes action/business success; security opt-in.
+- Topic FLUX photo+3LittleM, bilingual SEO, public URL/list1/carousel1/images, both semantic vectors/search, complete remote WeChat body+metadata verified. Creation media_id in source receipt; do not redraft on future retries without remote reconciliation.
+- Keep quoted frontmatter scalars and inline tags: current semantic parser rejects otherwise-valid unquoted YAML titles. Serialization fixed with metadata/body equivalence asserted; no repeated M2 creation.

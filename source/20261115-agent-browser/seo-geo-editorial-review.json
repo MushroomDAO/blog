@@ -1,0 +1,12 @@
+{
+  "scope": "Bilingual article plus local fixture evidence",
+  "passed": true,
+  "findings": [
+    "BLUF states tool purpose, entity/license in second paragraph",
+    "Corrects screenshot-only origin claim; prior DOM automation acknowledged",
+    "Snapshot refs lifecycle, interactive/full snapshot distinction, backend layers explained",
+    "Security controls explicitly opt-in with compatibility limits",
+    "Actual local fixture5checks separated from unmeasured performance/LLM/live-site success",
+    "Three FAQs each language, current primary sources and copyright present"
+  ]
+}

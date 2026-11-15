@@ -1,0 +1,38 @@
+[
+  {
+    "id": "441da1442eba05cc3fc9667d41afaad6e0f7ce0ca0f110ad",
+    "metadata": {
+      "article_id": "agent-browser-accessibility-snapshots-reliable-actions",
+      "content_hash": "1e76cc1894da3127",
+      "excerpt": "Vercel agent-browser：让网页操作可定位、可检查 agent-browser 把网页整理成带元素引用的无障碍树，让编码智能体从命令行打开页面、定位控件、填写表单，并在操作后读取状态。本文核对 Vercel Labs 官方代码与文档，解释 Rust CLI、后台守护进程和 CDP 的协作方式，通过本地合成表单检查操作反馈，分析会话隔离、动态页面、视觉补充与工程接入边界。 agent-browser Vercel Browser Automation Accessibility Rust 它解决的是什么问题？ Rust CLI、守护进程和浏",
+      "language": "zh",
+      "tags": [
+        "agent-browser",
+        "Vercel",
+        "Browser Automation",
+        "Accessibility",
+        "Rust"
+      ],
+      "title": "Vercel agent-browser：让网页操作可定位、可检查",
+      "url": "/blog/agent-browser-accessibility-snapshots-reliable-actions/"
+    }
+  },
+  {
+    "id": "9b136f09962c23b99d1588e59b0c5bb47c2707b72ff53b15",
+    "metadata": {
+      "article_id": "agent-browser-accessibility-snapshots-reliable-actions",
+      "content_hash": "833276f45e31201d",
+      "excerpt": "agent-browser: Snapshot, Act, Verify A practical guide to Vercel agent-browser: accessibility snapshots, element refs, verified form actions, isolated sessions, and opt-in security controls. agent-browser Vercel Browser Automation Accessibility Rust What does it change? How do th",
+      "language": "en",
+      "tags": [
+        "agent-browser",
+        "Vercel",
+        "Browser Automation",
+        "Accessibility",
+        "Rust"
+      ],
+      "title": "agent-browser: Snapshot, Act, Verify",
+      "url": "/blog/agent-browser-accessibility-snapshots-reliable-actions/"
+    }
+  }
+]

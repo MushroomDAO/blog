@@ -1,0 +1,6 @@
+{
+  "reason": "Index parser requires quoted scalar fields and inline tag array; initial upsert attempt matched no article and wrote no vectors.",
+  "metadataSemanticallyIdentical": true,
+  "bodyUnchanged": true,
+  "wechatDraftReused": true
+}

@@ -1,0 +1,11 @@
+{
+  "repo": "https://github.com/vercel-labs/agent-browser",
+  "commit": "e0c121a96d3a5412e2078e0c8eba3f4d2db2b616",
+  "packageVersion": "0.43.0",
+  "license": "Apache-2.0",
+  "chrome": "Google Chrome 157.0.8103.51",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "noFullUpstreamSuite": true,
+  "noPerformanceBenchmark": true,
+  "noLiveAccountActions": true
+}

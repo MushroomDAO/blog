@@ -1,0 +1,59 @@
+✅ Access token obtained
+账本：blog 1000 篇 + 公众号草稿箱 4 条 + 本地发布记录 983 条 + MemPalace 4232 抽屉
+
+── 查：https://github.com/vercel-labs/agent-browser
+   ✅ 四本账都没查到
+
+── 查：agent-browser
+   ⚠️  [BLOG  ] browser-harness：一个会自己写代码的浏览器 Agent 工具——每次运行都在让自己变聪明
+      标题相似度 33%
+   ❌ [BLOG  ] BrowserAct：给 AI Agent 装上真实浏览器，4500 stars，10M+ CAPTCHA 已解决
+      正文出现实体名「agent-browser」
+   ❌ [BLOG  ] Cloudflare Kitesurf现已开源：CDP与自部署边界
+      正文出现实体名「agent-browser」
+   ❌ [BLOG  ] ego lite：为 Claude Code 设计的并行浏览器，一次 JS 调用完成整个任务
+      正文出现实体名「agent-browser」
+   ❌ [BLOG  ] Fable5.2做浏览器FPS：程序化资产、73轮迭代与缓存账单
+      正文出现实体名「agent-browser」
+   ❌ [BLOG  ] 70 万人看过的 Agentic Engineering 心得：Matt Van Horn 22 条实战技巧全解析
+      正文出现实体名「agent-browser」
+   ❌ [BLOG  ] OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行
+      正文出现实体名「agent-browser」
+   ⚠️  [发过 2026-04-09] Agent：从效率替代到组织变革
+      标题相似度 33%
+   ⚠️  [发过 2026-11-05] Agent Workspace与Jumper入门
+      标题相似度 33%
+   ⚠️  [发过 2026-08-14] browser-harness：一个会自己写代码的浏览器 Agent 工具——每次运行都在让自己变聪明
+      标题相似度 33%
+   ❌ [发过 2026-07-03] BrowserAct：专为 AI Agent 设计的浏览器层，突破封锁、自动解 CAPTCHA
+      正文出现实体名「agent-browser」
+   ❌ [发过 2026-07-18] BrowserAct：给 AI Agent 装上真实浏览器，4500 stars，10M+ CAPTCHA 已解决
+      正文出现实体名「agent-browser」
+   ❌ [发过 2026-08-07] Cloudflare 把浏览器也 Serverless 了：Kitesurf 调研
+      正文出现实体名「agent-browser」
+   ❌ [发过 2026-09-24] OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行
+      正文出现实体名「agent-browser」
+   ❌ [知识库] .8x** - 内存截图：57.8 MiB vs 271 MiB → **少 4.7x** - 内存 HTML 提取：3
+      正文出现实体名「agent-browser」
+   ❌ [知识库] **ego lite：为人类和 AI Agent 并行工作设计的浏览器**  - GitHub: https://git
+      正文出现实体名「agent-browser」
+   ❌ [知识库] e, fetch, cdp) - 关键 API: taskSpaces.useOrCreate(), browser.o
+      正文出现实体名「agent-browser」
+   ❌ [知识库] 台任务**：SQL 租约多 worker 协调，Pause/Resume/Retry，**外部写操作强制审批** - *
+      正文出现实体名「agent-browser」
+   ❌ [知识库] --- name: Cloudflare Kitesurf open-source update description
+      正文出现实体名「agent-browser」
+   ❌ [知识库] # 以前 AI 想帮你上网查东西、填表单，只能靠截图猜，点错了也  **Summary**: 以前 AI 想帮你上网查东
+      正文出现实体名「agent-browser」
+   ❌ [知识库] **ego lite：为人类和 AI Agent 并行工作设计的浏览器**  - GitHub: https://git
+      正文出现实体名「agent-browser」
+   ❌ [知识库] ## Cloudflare Kitesurf — Agent 优先的 Serverless 浏览器（2026-08-06
+      正文出现实体名「agent-browser」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
