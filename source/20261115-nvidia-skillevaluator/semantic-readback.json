@@ -1,0 +1,38 @@
+[
+  {
+    "id": "91fad38ca001c30791147207ac2bd2177c87984556d395a5",
+    "metadata": {
+      "article_id": "nvidia-skillevaluator-agent-skill-quality-impact-evaluation",
+      "content_hash": "3870e985ac04407d",
+      "excerpt": "NVIDIA SkillEvaluator：Skill写得好，还要证明用得好 SkillEvaluator把Agent技能评估分成静态验证、语义去重和真实任务对照三层，支持CLI、GitHub与GitLab CI及技能调用。核对NVIDIA源码，说明Build API、SkillSpector与Harbor各自承担的工作，本地质量检查演示分数、门槛和证据完整度的区别，并梳理接入流程与评估盲区。 NVIDIA SkillEvaluator Agent Skills Evaluation CI 三层评估分别回答什么问题？ 我们本地跑出了什么？ NVIDIA ",
+      "language": "zh",
+      "tags": [
+        "NVIDIA",
+        "SkillEvaluator",
+        "Agent Skills",
+        "Evaluation",
+        "CI"
+      ],
+      "title": "NVIDIA SkillEvaluator：Skill写得好，还要证明用得好",
+      "url": "/blog/nvidia-skillevaluator-agent-skill-quality-impact-evaluation/"
+    }
+  },
+  {
+    "id": "a2e6ec704421359fd1facae64d6c4d54188f6e891d4f5679",
+    "metadata": {
+      "article_id": "nvidia-skillevaluator-agent-skill-quality-impact-evaluation",
+      "content_hash": "b4d420acf650ad34",
+      "excerpt": "NVIDIA SkillEvaluator: Quality Gates and Real Skill Lift A guide to NVIDIA SkillEvaluator: static checks, semantic deduplication, paired agent trials, CI gates, and a local test separating scores from evidence. NVIDIA SkillEvaluator Agent Skills Evaluation CI What do the three ti",
+      "language": "en",
+      "tags": [
+        "NVIDIA",
+        "SkillEvaluator",
+        "Agent Skills",
+        "Evaluation",
+        "CI"
+      ],
+      "title": "NVIDIA SkillEvaluator: Quality Gates and Real Skill Lift",
+      "url": "/blog/nvidia-skillevaluator-agent-skill-quality-impact-evaluation/"
+    }
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "nvidia-skillevaluator-agent-skill-quality-impact-evaluation",
+      "title": "NVIDIA SkillEvaluator：Skill写得好，还要证明用得好",
+      "url": "/blog/nvidia-skillevaluator-agent-skill-quality-impact-evaluation/",
+      "language": "zh",
+      "excerpt": "NVIDIA SkillEvaluator：Skill写得好，还要证明用得好 SkillEvaluator把Agent技能评估分成静态验证、语义去重和真实任务对照三层，支持CLI、GitHub与GitLab CI及技能调用。核对NVIDIA源码，说明Build API、SkillSpector与Harbor各自承担的工作，本地质量检查演示分数、门槛和证据完整度的区别，并梳理接入流程与评估盲区。 NVIDIA SkillEvaluator Agent Skills Evaluation CI 三层评估分别回答什么问题？ 我们本地跑出了什么？ NVIDIA ",
+      "score": 0.5988799
+    },
+    {
+      "article_id": "skill2env-agent-training-environment-blueprints",
+      "title": "Skill2Env：把技能说明书变成可执行、可验收的训练任务",
+      "url": "/blog/skill2env-agent-training-environment-blueprints/",
+      "language": "zh",
+      "excerpt": "Skill2Env：把技能说明书变成可执行、可验收的训练任务 Skill2Env 从可复用技能出发，用能力难度模式和任务蓝图共同生成工作区、工具与验收规则，再根据求解轨迹迭代加难。本文核对 AllSpark 论文、公开模型和20个示例任务，解释固定求解器与离线训练的区别，实查混合评估依赖，并澄清同名 NVIDIA 仓库，给出工程团队构建小规模训练场的方法与边界。 Skill2Env Agent训练 技能 环境生成 评估 为什么给一份 Skill 还不够？ 三个阶段怎样连起来？ “升级”的到底是什么？ 仓库现在实际公开了什么？ 我们实际跑了哪一个检查？ 小",
+      "score": 0.5742639
+    },
+    {
+      "article_id": "agent-recursive-self-learning-agentoptimizer-prorl",
+      "title": "How Agents Learn to Learn Recursively: AgentOptimizer + ProRL's Complete Stack",
+      "url": "/blog/agent-recursive-self-learning-agentoptimizer-prorl/",
+      "language": "en",
+      "excerpt": "How Agents Learn to Learn Recursively: AgentOptimizer + ProRL's Complete Stack NVIDIA Research's Shaokun Zhang presented at BAAI Conference: AgentOptimizer treats functions as learnable weights; ProRL Agent turns rollout into a decoupled API service. Together they form a complete",
+      "score": 0.54542285
+    },
+    {
+      "article_id": "alibaba-skill-up-agent-skill-eval-evolution",
+      "title": "alibaba/skill-up: Agent Skill Evaluation and Auto-Evolution Loop — Eval + Auto-Fix in One Command",
+      "url": "/blog/alibaba-skill-up-agent-skill-eval-evolution/",
+      "language": "en",
+      "excerpt": "alibaba/skill-up: Agent Skill Evaluation and Auto-Evolution Loop — Eval + Auto-Fix in One Command alibaba/skill-up — 1,031 stars, Apache-2.0, Go. Alibaba's agent skill evaluation and evolution tool, 1K+ stars in 4 months. Declarative YAML test cases + rule/script/agent judge stra",
+      "score": 0.53176874
+    },
+    {
+      "article_id": "h2o-llmstudio-hardware-thailand-5090",
+      "title": "H2O LLM Studio Hardware Guide: VRAM Selection for 7B to 34B Fine-Tuning",
+      "url": "/blog/h2o-llmstudio-hardware-thailand-5090/",
+      "language": "en",
+      "excerpt": "H2O LLM Studio Hardware Guide: VRAM Selection for 7B to 34B Fine-Tuning VRAM requirements and H2O LLM Studio configs for 7B, 13B, and 34B fine-tuning. 大模型微调 显存 GPU",
+      "score": 0.5233601
+    },
+    {
+      "article_id": "stanford-cs329a-self-improving-ai-agents-course-open-materials",
+      "title": "Stanford CS329A：《自我改进 AI Agent》，斯坦福研究生研讨课，9 集视频全公开",
+      "url": "/blog/stanford-cs329a-self-improving-ai-agents-course-open-materials/",
+      "language": "zh",
+      "excerpt": "Stanford CS329A：《自我改进 AI Agent》，斯坦福研究生研讨课，9 集视频全公开 斯坦福 2025 秋季研究生研讨课，Azalia Mirhoseini 和 Aakanksha Chowdhery 联合授课。核心论点：推理时算力制造下一个模型的训练数据。覆盖 Constitutional AI、STaR、DAPO、Search-o1、ReAct、MemGPT 等自我改进技术。9 集视频 2026 年 8 月全公开，GitHub 作业仓库开源。 Stanford AI-agents self-improvement course ope",
+      "score": 0.51775694
+    },
+    {
+      "article_id": "realtime-rl-agent-research-2026",
+      "title": "2026 年实时强化学习 Agent 全景：从 OpenClaw-RL 到 Cursor Composer 2.5，模型开始在使用中自我进化",
+      "url": "/blog/realtime-rl-agent-research-2026/",
+      "language": "zh",
+      "excerpt": "2026 年实时强化学习 Agent 全景：从 OpenClaw-RL 到 Cursor Composer 2.5，模型开始在使用中自我进化 实时递归学习（Real-time RL）正在把 AI Agent 从「静态模型」变成「用得越多越聪明的系统」。本文综合 OpenClaw-RL 技术报告、RLAnything、ScaleCUA、RLVP 等 2026 年最新研究，拆解这个范式的核心机制、当前 SOTA，以及开发者现在就能落地的实践方案。 强化学习 AI Agent RLVR 在线学习 OpenClaw-RL Cursor 研究综述 实时学习 一句话",
+      "score": 0.51372874
+    },
+    {
+      "article_id": "beyond-static-skill-libraries--alibaba",
+      "title": "Beyond Static Skill Libraries: Alibaba's SkillClaw Brings Collective Evolution to AI Agents",
+      "url": "/blog/beyond-static-skill-libraries--alibaba/",
+      "language": "en",
+      "excerpt": "Beyond Static Skill Libraries: Alibaba's SkillClaw Brings Collective Evolution to AI Agents Alibaba AMAP-ML released SkillClaw, a framework using Agentic Evolver to auto-aggregate user trajectories and update shared skill libraries — enabling collective skill evolution in AI agen",
+      "score": 0.5109547
+    },
+    {
+      "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+      "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+      "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+      "language": "zh",
+      "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+      "score": 0.5086123
+    },
+    {
+      "article_id": "lance-bytedance-3b-multimodal-unified",
+      "title": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜",
+      "url": "/blog/lance-bytedance-3b-multimodal-unified/",
+      "language": "zh",
+      "excerpt": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜 字节跳动智能创作实验室开源 Lance：3B 激活参数，统一支持图像理解/生成/编辑与视频理解/生成/编辑六项任务。GenEval 0.90 并列第一，VBench 85.11 登顶统一模型，Apache 2.0 开源。 多模态 字节跳动 Lance 图像生成 视频生成 开源 3B 统一模型 六项能力，一个模型 基准成绩 技术要点",
+      "score": 0.50747186
+    }
+  ]
+}

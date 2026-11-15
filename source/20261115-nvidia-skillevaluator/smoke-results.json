@@ -1,0 +1,48 @@
+{
+  "commit": "3a70bb2d00272364098ef04d4c41bbdc375e42f1",
+  "version": "0.9.0",
+  "python": "3.13.16",
+  "fixture": "upstream bundled text-analyzer",
+  "default": {
+    "score": 86.2,
+    "grade": "B",
+    "threshold": 70,
+    "exit": 0,
+    "warnings": 6,
+    "publicationStatus": "incomplete",
+    "eligible": false
+  },
+  "strict": {
+    "score": 86.2,
+    "threshold": 95,
+    "exit": 1,
+    "overallPassed": false
+  },
+  "scope": "Actual keyless quality-check only; not completeTier1/scanners, Tier2dedup, Tier3liveagent, hostedmodel, Harbor or CIexecution.",
+  "commands": [
+    [
+      "skillevaluator",
+      "quality-check",
+      "src/skillevaluator/tier3/reference_skills/text-analyzer",
+      "-r",
+      "cli",
+      "-r",
+      "json",
+      "-o",
+      "reports/default"
+    ],
+    [
+      "skillevaluator",
+      "quality-check",
+      "src/skillevaluator/tier3/reference_skills/text-analyzer",
+      "--min-score",
+      "95",
+      "-r",
+      "cli",
+      "-r",
+      "json",
+      "-o",
+      "reports/strict"
+    ]
+  ]
+}

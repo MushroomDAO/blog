@@ -1,0 +1,85 @@
+             SkillEvaluator Validation Results
+┏━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Validator ┃ Status ┃ Details                             ┃
+┡━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ QUALITY   │  PASS  │ 1 checks passed; quality B 86.2/100 │
+└───────────┴────────┴─────────────────────────────────────┘
+
+╭───────────────────────╮
+│ Non-blocking Findings │
+╰───────────────────────╯
+
+[QUALITY]
+Skill quality scoring across Correctness (35%), Discoverability (25%),
+Reliability (25%), and Efficiency (15%)
+
+  Overall: 86.2/100 (Grade: B)
+  Skill Type: script-based
+
+                            Quality Scores by Skill
+┏━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━┓
+┃ Skill      ┃ Grade ┃ Score ┃ Correctne… ┃ Discover… ┃ Reliabili… ┃ Efficien… ┃
+┡━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━┩
+│ text-anal… │   B   │  86.2 │         75 │        85 │         95 │       100 │
+└────────────┴───────┴───────┴────────────┴───────────┴────────────┴───────────┘
+
+[PASS] Validation passed
+
+Summary:
+  • Checks performed: 1
+
+Details:
+  [OK] quality_score: Score: 86.2/100 (Grade: B) (overall_score=86.2, grade=B,
+skill_type=script-based)
+Issues:
+  1. [QUALITY-MEDIUM] No documented scripts in table format
+     File:
+/private/tmp/skillevaluator-20261115/src/skillevaluator/tier3/reference_skills/t
+ext-analyzer/SKILL.md
+     Check:   quality_correctness
+     Fix:     Add '## Available Scripts' with table: | Script | Purpose |
+Arguments |
+
+  2. [QUALITY-MEDIUM] Instructions don't mention 'run_script'
+     File:
+/private/tmp/skillevaluator-20261115/src/skillevaluator/tier3/reference_skills/t
+ext-analyzer/SKILL.md
+     Check:   quality_correctness
+     Fix:     Add explicit run_script() call examples
+
+  3. [QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'metadata.tags'
+     File:
+/private/tmp/skillevaluator-20261115/src/skillevaluator/tier3/reference_skills/t
+ext-analyzer/SKILL.md
+     Check:   quality_correctness
+     Fix:     Add 'tags' under metadata: — Categorization tags (under metadata:,
+list of 1-5 items)
+
+  4. [QUALITY-LOW] Description very long (207 chars, recommend 50-150)
+     File:
+/private/tmp/skillevaluator-20261115/src/skillevaluator/tier3/reference_skills/t
+ext-analyzer/SKILL.md
+     Check:   quality_discoverability
+     Fix:     Keep descriptions concise for progressive disclosure
+
+  5. [QUALITY-LOW] Description doesn't mention WHEN to use this skill
+     File:
+/private/tmp/skillevaluator-20261115/src/skillevaluator/tier3/reference_skills/t
+ext-analyzer/SKILL.md
+     Check:   quality_discoverability
+     Fix:     Add trigger context: 'Use for...', 'When you need to...'
+
+  6. [QUALITY-LOW] No prerequisites/requirements documented
+     File:
+/private/tmp/skillevaluator-20261115/src/skillevaluator/tier3/reference_skills/t
+ext-analyzer/SKILL.md
+     Check:   quality_reliability
+     Fix:     Document dependencies, API keys, or setup needed
+
+
+[PASS] Passed required checks
+Tier 1: 1 of 1 checks passed; 0 failed, 0 incomplete, 0 skipped, 0 N/A
+Publication eligibility: Incomplete
+
+json report:
+/tmp/skillevaluator-reports-20261115/default/skillevaluator-quality.json

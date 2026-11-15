@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-15T08:55:25.394Z",
+  "drafts": [
+    {
+      "slug": "nvidia-skillevaluator-agent-skill-quality-impact-evaluation",
+      "mediaId": "prCUE631thH1cmNLi42prFTbHU_uJMGIxTY3PVZihEEvc0tyXTWL15XD9mzYKn4y",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "e9daff75f2d168d7c867151270d82ccfff5f9fee45aeb19b5e4e271c60796152",
+      "remoteTextHash": "e9daff75f2d168d7c867151270d82ccfff5f9fee45aeb19b5e4e271c60796152",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/nvidia-skillevaluator-agent-skill-quality-impact-evaluation/",
+      "localContentHash": "05addd0df85bf7685482dba51ccfcfa466b70a5e499282b92050cb4707ee6eca",
+      "remoteContentHash": "408de14b6bcfa2455e9fd6b4a9485fd37a8dd48be01589003fda061da6335f6f"
+    }
+  ]
+}

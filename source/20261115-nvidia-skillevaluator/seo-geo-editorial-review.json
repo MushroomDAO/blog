@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "BilingualBLUF/FAQ/primarysources/copyright",
+    "86.2staticnotagentaccuracyorfullsecurity",
+    "Pairedtrialactivationandcoverageboundaries",
+    "ManualCLIversusautomaticCIgatepoliciesdistinguished",
+    "OwnedCLIexperimentrecordedwithnativeJSON",
+    "No paidinference/sandbox/CIcreation claimed",
+    "ExperimentalSLAandexternalscannersnoted"
+  ]
+}
