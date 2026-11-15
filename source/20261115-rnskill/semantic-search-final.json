@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "echo-slides-skill-extract-slides-from-video-claude-code-skill",
+      "title": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片",
+      "url": "/blog/echo-slides-skill-extract-slides-from-video-claude-code-skill/",
+      "language": "zh",
+      "excerpt": "Echo Slides Skill：一行命令装进所有 Agent，从演讲视频自动提取去重幻灯片 xiangzhouEcho/Echo-Slides-Skill 开源 Claude Code Skill，npx skills add 一行装到全局，Claude Code/Codex/Cursor/OpenCode 通用，双签名去重（dHash+RGB网格），实测20分钟演讲39页零重复。 Claude Code skill video slides open source AI tools productivity agent 这个痛点存在了很久 核心洞察",
+      "score": 0.5523471
+    },
+    {
+      "article_id": "agent-skills-open-standard-progressive-disclosure-anthropic",
+      "title": "Agent Skills 标准调研：今天写的好几个项目背后，都是同一份规范",
+      "url": "/blog/agent-skills-open-standard-progressive-disclosure-anthropic/",
+      "language": "zh",
+      "excerpt": "Agent Skills 标准调研：今天写的好几个项目背后，都是同一份规范 调研 Agent Skills 开放标准：一个 SKILL.md 文件（含 name/description 元数据+指令）加可选的脚本/参考文档/模板，就是一个可移植、可跨产品复用的技能包。核心机制是三阶段渐进式披露——发现阶段只加载名字和描述、激活阶段任务匹配才读全文、执行阶段才按需跑脚本或加载引用文件，让 Agent 能同时挂载大量技能而不撑爆上下文。由 Anthropic 原创发布为开放标准，本文同一批写的 Hermes Agent、Nerve、Humanizer 都兼容",
+      "score": 0.53551203
+    },
+    {
+      "article_id": "rnskill-agent-content-workflow-license-guide",
+      "title": "rnskill：把内容创作经验写成Agent技能",
+      "url": "/blog/rnskill-agent-content-workflow-license-guide/",
+      "language": "zh",
+      "excerpt": "rnskill：把内容创作经验写成Agent技能 rnskill 将选题、中文改写、小说分镜、配音剪辑与交付检查整理为可读取的 Agent 技能。本文核对仓库结构、混合许可和安装方式，解释直接粘贴原文与完整安装的差别，并记录办公引用脚本的离线请求验证，帮助按任务选用，明确外部工具、账号和额度的边界，避免把作者涨粉案例当成效果保证，或把公开源码误当成可任意商用的授权。 rnskill Agent Skills 内容创作 工作流 开源许可 rnskill 收录了什么？ 没有 GitHub，直接给 AI 读文本行吗？ 工程上怎样按需接入？ 本次实际验证到哪一步",
+      "score": 0.53331673
+    },
+    {
+      "article_id": "skill2env-agent-training-environment-blueprints",
+      "title": "Skill2Env：把技能说明书变成可执行、可验收的训练任务",
+      "url": "/blog/skill2env-agent-training-environment-blueprints/",
+      "language": "zh",
+      "excerpt": "Skill2Env：把技能说明书变成可执行、可验收的训练任务 Skill2Env 从可复用技能出发，用能力难度模式和任务蓝图共同生成工作区、工具与验收规则，再根据求解轨迹迭代加难。本文核对 AllSpark 论文、公开模型和20个示例任务，解释固定求解器与离线训练的区别，实查混合评估依赖，并澄清同名 NVIDIA 仓库，给出工程团队构建小规模训练场的方法与边界。 Skill2Env Agent训练 技能 环境生成 评估 为什么给一份 Skill 还不够？ 三个阶段怎样连起来？ “升级”的到底是什么？ 仓库现在实际公开了什么？ 我们实际跑了哪一个检查？ 小",
+      "score": 0.5206078
+    },
+    {
+      "article_id": "jev-skill-agent-decision-9-skills-90-scenarios-openrouter",
+      "title": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios",
+      "url": "/blog/jev-skill-agent-decision-9-skills-90-scenarios-openrouter/",
+      "language": "en",
+      "excerpt": "jev-skill: Plug Jev Decision Intelligence into Your Agent — 9 Installable Skills, 90 Scenarios MIT, 34 stars, open-sourced today. SKILL.md format, 9 domain-specific skills covering 90 labeled scenarios: triage, document evidence, UI actions, tool routing, code review, and more. R",
+      "score": 0.51308686
+    },
+    {
+      "article_id": "blcaptain-meta-skill-agent-skill-creation-methodology",
+      "title": "BLCaptain Meta Skill: Package Your Repeated AI Explanations into a Once-Installed, Always-Reusable Agent Skill",
+      "url": "/blog/blcaptain-meta-skill-agent-skill-creation-methodology/",
+      "language": "en",
+      "excerpt": "BLCaptain Meta Skill: Package Your Repeated AI Explanations into a Once-Installed, Always-Reusable Agent Skill Ever found yourself re-explaining the same SOP, prompts, and expert knowledge to AI every new conversation? BLCaptain Meta Skill is an open-source methodology package th",
+      "score": 0.50577384
+    },
+    {
+      "article_id": "jakub-krehel-interface-skills",
+      "title": "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能",
+      "url": "/blog/jakub-krehel-interface-skills/",
+      "language": "zh",
+      "excerpt": "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能 jakubkrehel/skills 是一套 MIT 开源的界面设计工程技能，涵盖排版、颜色、布局、无障碍、文案、状态检查与技术插图。本文拆解 14 项技能如何协作、如何安装到 Codex 或 Claude Code，以及审阅、改代码和视觉验证的边界，并记录安装校验、随附脚本检查与 ESM 项目接入时遇到的兼容问题。 Agent Skills 界面设计 设计工程 无障碍 Codex Claude Code 这条命令究竟装了什么？ 14 项技能怎样分工？ 为什么它强调“证据",
+      "score": 0.5041467
+    },
+    {
+      "article_id": "anthropic-plugin-marketplaces-four-repos-eli5-minimal-skill",
+      "title": "一个 5 行的 skill，和 Anthropic 那四个容易搞混的插件仓库",
+      "url": "/blog/anthropic-plugin-marketplaces-four-repos-eli5-minimal-skill/",
+      "language": "zh",
+      "excerpt": "一个 5 行的 skill，和 Anthropic 那四个容易搞混的插件仓库 网上流传「Anthropic 公开了内部员工高频使用的 Claude Code Skill——ELI5」。回查一手源：它确实存在，但不在官方 skills 仓库，而在社区插件市场 anthropics/claude-plugins-community，署名作者 Thariq Shihipar，MIT。「内部员工高频使用」这个说法找不到一手依据。顺着这条线把 Anthropic 的四个插件/skill 仓库理清楚：skills（19 个 Agent Skills）、claude-",
+      "score": 0.50324464
+    },
+    {
+      "article_id": "gws-google-workspace-cli-discovery-dynamic-commands-agent-skills",
+      "title": "gws：命令面在运行时长出来的 CLI，以及它对本地优先意味着什么",
+      "url": "/blog/gws-google-workspace-cli-discovery-dynamic-commands-agent-skills/",
+      "language": "zh",
+      "excerpt": "gws：命令面在运行时长出来的 CLI，以及它对本地优先意味着什么 把整个 Google Workspace 收进一个命令行工具，Rust 写的，3 万 stars。工程上最值得看的是它不带静态命令列表：运行时读 Google 的 Discovery Service，用返回的文档动态构建 clap 命令树，Google 加了 API 方法它就自动支持。仓库还带 100 多个 SKILL.md，每个 API 一个，外加 50 个精选 recipe。需要澄清两件事：它挂在 googleworkspace 组织下，但 README 明写不是官方支持的 Goog",
+      "score": 0.5025614
+    },
+    {
+      "article_id": "appllama-skills-openmausbot-mobile-design-agent-workflow",
+      "title": "Appllama Skills与OpenMausBot：设计约束与Agent工作台",
+      "url": "/blog/appllama-skills-openmausbot-mobile-design-agent-workflow/",
+      "language": "zh",
+      "excerpt": "Appllama Skills与OpenMausBot：设计约束与Agent工作台 Appllama Skills把商业App研究、原生交互与模拟器录像验收写进移动端开发方法，OpenMausBot则提供聊天式Agent执行工作台。本文核对两个仓库，区分开源Skill、商业MCP、Apache核心与企业目录授权，分析界面质量、电脑权限和执行环境，并报告28项本地窄范围测试的真实边界及可复核的工程流程。 Appllama OpenMausBot AI Agent 移动开发 开源工具 Appllama 开源的究竟是什么？ 为什么它强调研究流程，而不只是参考截",
+      "score": 0.5018762
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "cheese-paper-creative-writing-editor",
+      "title": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布",
+      "url": "/blog/cheese-paper-creative-writing-editor/",
+      "language": "zh",
+      "excerpt": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布 Cheese Paper 是一款专为小说创作设计的离线开源编辑器，场景管理、角色卡、世界观数据库三合一，文件格式采用 Markdown+TOML，兼容任意文本编辑器和同步工具。GPLv3，无订阅，无遥测。v1.0.0 于 2026-05-30 发布，已上架 Flathub。 创意写作 文本编辑器 小说 开源 离线优先 Markdown 写作工具 GPLv3 Cheese Paper 核心设计：笔记和稿件并排可见 文件格式：Markdown + TOML，不绑",
+      "score": 0.5173863
+    },
+    {
+      "article_id": "xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills",
+      "title": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过",
+      "url": "/blog/xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills/",
+      "language": "zh",
+      "excerpt": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过 B1lli/xhs-favorites-distiller，Apache 2.0，Python 3.10+，把小红书（或微信）收藏里的方法蒸馏成可安装的 Agent skill。核心机制：价值筛选 + 消融测试 + 自然触发验证，未经证实的候选不进入宿主发现目录。消融实验显示去掉「自然触发」要求后，3/3 案例出现提前激活；全流程测试 24/24 正确通过。 open-source agent-skills xiaohongshu ",
+      "score": 0.5143215
+    },
+    {
+      "article_id": "storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard",
+      "title": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4",
+      "url": "/blog/storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard/",
+      "language": "zh",
+      "excerpt": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4 xiaozhang-art/storyflow-ai 开源，Multi-Agent 漫剧自动生成平台，7 步 Agent 流水线（剧本→角色→分镜→图片/配音并行→图生视频→合成），含 Director 决策引擎、断点续传、Montage 渲染引擎，Docker Compose 一键部署。 multi-agent video generation AI open source comic LLM FastAPI Docker 一段文字进去，一部漫剧出来 7 个 Age",
+      "score": 0.50991416
+    },
+    {
+      "article_id": "nature-skills-yuan1z0825-academic-paper-skill-collection",
+      "title": "nature-skills：学术论文全流程 18 个 AI Skill，两个月 3.4 万星",
+      "url": "/blog/nature-skills-yuan1z0825-academic-paper-skill-collection/",
+      "language": "zh",
+      "excerpt": "nature-skills：学术论文全流程 18 个 AI Skill，两个月 3.4 万星 袁一哲（Yuan1z0825）发起、开源社区共同维护的 Nature 级学术论文 AI Skill 合集，18 个技能覆盖图表、润色、写作、投稿、审稿回复、引用核验、数据管理、PPT、专利转化、文献检索全链路，Apache 2.0，发布两个月 GitHub 3.4 万星。npx skills add Yuan1z0825/nature-skills 一键安装，支持 Claude Code / Codex / OpenClaw / OpenCode / Herme",
+      "score": 0.4966566
+    },
+    {
+      "article_id": "juju-content-illustrations-skill-ai-visual-content-guide",
+      "title": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画",
+      "url": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
+      "language": "zh",
+      "excerpt": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画 卷卷整理研究所 × 内容插画 Skill。一句话触发，AI 自动把文章、教程、方法论转成白底轻线稿的手绘卡片——主角是白色比熊卷卷，最多生成 10 张，支持 6 种比例，颜色有语义，场景有隐喻。60 stars，MIT 开源，可装进 Claude Code 或 Codex 直接用。 AgentSkill AI生图 内容创作 ClaudeCode 插画 手绘风格 创作者工具 开源 Skill 卷卷是谁 它能做什么 支持的 6 种比例 视觉语",
+      "score": 0.49605975
+    },
+    {
+      "article_id": "pentest-harness-deepseek-harness-rebrand-authorization-teardown",
+      "title": "Pentest Harness, Taken Apart: A DeepSeek Harness Reskin That Deletes the Authorization Guardrails",
+      "url": "/blog/pentest-harness-deepseek-harness-rebrand-authorization-teardown/",
+      "language": "en",
+      "excerpt": "Pentest Harness, Taken Apart: A DeepSeek Harness Reskin That Deletes the Authorization Guardrails S1N6H/pentest-harness (356 stars, MIT) bills itself as a self-hosted AI agent harness for authorized pentests. A diff-level check shows it is a reskin of deepseek-ai/deepseek-harness",
+      "score": 0.49112454
+    },
+    {
+      "article_id": "dont-storytell-narrative-strategy-skill",
+      "title": "Don’t Storytell调研：把商业材料变成一页可验证的叙事策略",
+      "url": "/blog/dont-storytell-narrative-strategy-skill/",
+      "language": "zh",
+      "excerpt": "Don’t Storytell调研：把商业材料变成一页可验证的叙事策略 Don’t Storytell是一份公开的叙事咨询Skill，帮助创始人、产品负责人和创作者从材料中识别事实、提出取舍，形成愿景、因果行动和首次履约计划。本文核对案例库规模、检索与HTML导出脚本，分析证据边界、用户场景、输入隐私和许可缺口，并用一个假设场景说明怎样把策略建议接回真实行动，而非把漂亮文案当成经营结果。 Don’t Storytell 叙事策略 AI Skill 创作者 商业决策 它是一份怎样的Skill？ 从资料到一页纸，中间发生什么？ 案例库到底有多大，能证明什么？",
+      "score": 0.48541835
+    },
+    {
+      "article_id": "lance-bytedance-3b-multimodal-unified",
+      "title": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜",
+      "url": "/blog/lance-bytedance-3b-multimodal-unified/",
+      "language": "zh",
+      "excerpt": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜 字节跳动智能创作实验室开源 Lance：3B 激活参数，统一支持图像理解/生成/编辑与视频理解/生成/编辑六项任务。GenEval 0.90 并列第一，VBench 85.11 登顶统一模型，Apache 2.0 开源。 多模态 字节跳动 Lance 图像生成 视频生成 开源 3B 统一模型 六项能力，一个模型 基准成绩 技术要点",
+      "score": 0.48301193
+    },
+    {
+      "article_id": "drawnix-open-source-whiteboard-mind-map-flowchart-plugin-architecture",
+      "title": "Drawnix：开源一体化白板，思维导图＋流程图＋自由画，Plait 插件架构，14K stars",
+      "url": "/blog/drawnix-open-source-whiteboard-mind-map-flowchart-plugin-architecture/",
+      "language": "zh",
+      "excerpt": "Drawnix：开源一体化白板，思维导图＋流程图＋自由画，Plait 插件架构，14K stars plait-board/drawnix 是 PingCode 开源的一体化白板工具，14580 stars，MIT 协议，TypeScript，基于自研 Plait 画图框架和插件架构。功能覆盖思维导图、流程图、自由画（含橡皮擦）、无限画布；支持 Markdown 转思维导图、mermaid 转流程图；导出 PNG/SVG/JSON，复制到剪贴板；多语言（中/英/俄/阿拉伯/越南）；移动端适配；Docker 部署；自动保存。v0.4.0 新增 SVG 导出",
+      "score": 0.48283115
+    },
+    {
+      "article_id": "nvidia-openshell-agent-runtime",
+      "title": "NVIDIA OpenShell：给自主 Agent 配上可执行的权限边界",
+      "url": "/blog/nvidia-openshell-agent-runtime/",
+      "language": "zh",
+      "excerpt": "NVIDIA OpenShell：给自主 Agent 配上可执行的权限边界 NVIDIA OpenShell采用Apache-2.0开源，通过沙箱、独立Supervisor、网络策略和凭证代理约束Agent。本文介绍0.1.x架构、Mac与Linux部署条件、OpenCode接入流程，并实测v0.1.5策略验证器的通过、越界和无法验证三种结果，同时区分策略检查与真实运行安全的边界。 NVIDIA OpenShell AI Agent 沙箱 权限策略 开源工具 OpenShell解决的是哪一层问题？ Gateway、Sandbox与Supervisor怎样",
+      "score": 0.48178887
+    }
+  ]
+}

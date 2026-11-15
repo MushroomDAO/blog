@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-15T13:19:24.267Z",
+  "drafts": [
+    {
+      "slug": "rnskill-agent-content-workflow-license-guide",
+      "mediaId": "prCUE631thH1cmNLi42prAdPyvBFzYxPye15QJ26qEY1cIO6gfzjBnt39RGhBer4",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "b5b418e43c24ca727c30e97f7af5aae85fb790660257992acabc9b372b38cb04",
+      "remoteTextHash": "b5b418e43c24ca727c30e97f7af5aae85fb790660257992acabc9b372b38cb04",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/rnskill-agent-content-workflow-license-guide/",
+      "localContentHash": "fc786cdd1c20ca190e20ad2cb4761dd425948cba0a60e577d8419ceb069001d2",
+      "remoteContentHash": "d0f82665c996d19068a1178d96cbe5bbc24d069fd4b04d66e28ee93c12e6545b"
+    }
+  ]
+}

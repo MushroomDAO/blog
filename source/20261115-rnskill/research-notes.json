@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-15T13:16:30.291918+00:00",
+  "repository": "https://github.com/Pluviobyte/rnskill",
+  "commit": "83d1783b892bbaa29a137895ff8338264b6872fa",
+  "documentsRead": [
+    "README.md",
+    "LICENSE",
+    "skills/ra-人话/SKILL.md",
+    "skills/novel-distill/SKILL.md",
+    "skills/novel-distill/LICENSE",
+    "skills/jev-office-gate/SKILL.md",
+    "skills/jev-office-gate/references/input-schema.md",
+    "skills/jev-office-gate/scripts/jev_office_gate.py"
+  ],
+  "authorProductivityClaim": "README says under10hours/month,about2000followers,first sponsorship using skills plus other tools; not independently replicated",
+  "decision": "No prior article or M2 receipt; raw KB only. Write original source-backed guide with license and text/execution boundary.",
+  "localCheck": "4 CLI request/input assertions passed using synthetic example and --dry-run. No model call or production capability measurement.",
+  "installedInProduction": false,
+  "bannerManualReview": "Passed: creative tabletop with blank cards, craft threads and microphone; full photographic framing, no faces or writing."
+}

@@ -1,0 +1,48 @@
+{
+  "request": {
+    "state": [
+      {
+        "id": "claim_1",
+        "claim": "Synthetic example only: this report describes one page.",
+        "evidence": "One page was reviewed.",
+        "source_type": "synthetic_fixture",
+        "source_title": "",
+        "source_date": "",
+        "source_url": ""
+      }
+    ],
+    "model": "jev-latest",
+    "questions": {
+      "claim_1_support": {
+        "type": "choice",
+        "instructions": "For item claim_1, does the supplied evidence support the full claim?",
+        "criteria": {
+          "supports": "The excerpt directly supports every material part of the claim",
+          "insufficient": "The excerpt misses a material part or provides no usable support",
+          "contradicts": "The excerpt conflicts with the claim"
+        }
+      },
+      "claim_1_disposition": {
+        "type": "choice",
+        "instructions": "For item claim_1, choose the publication disposition using only the supplied state.",
+        "criteria": {
+          "formal_source": "Suitable as the formal citation for this claim",
+          "side_evidence": "Useful only as supporting context",
+          "cannot_use": "Do not cite for this claim",
+          "manual_review": "A person must inspect the original before deciding, including when source authority is unclear"
+        }
+      },
+      "claim_1_risk": {
+        "type": "noul",
+        "instructions": "For item claim_1, does the supplied claim and excerpt show an obvious semantic conflict or overclaim risk likely to mislead a reader?"
+      }
+    }
+  },
+  "thresholds": {
+    "support": 0.7,
+    "risk": 0.6,
+    "min_disposition_confidence": 0.5,
+    "reject_probability": 0.8,
+    "require_formal_source": true
+  }
+}

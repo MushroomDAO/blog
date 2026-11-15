@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "dryRunExitZero": true,
+    "threeReviewQuestions": true,
+    "inputStatePreserved": true,
+    "missingEvidenceRejected": true
+  },
+  "networkCalls": 0,
+  "realModelEvaluation": false,
+  "scope": "Standard-library CLI request construction and local input validation only; no API credentials, tool install or media production."
+}

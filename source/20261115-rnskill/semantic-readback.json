@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ad4d9a84cf13706a58eb3f87d95dc340f4424b1ef18dd2e2",
+    "metadata": {
+      "article_id": "rnskill-agent-content-workflow-license-guide",
+      "content_hash": "f895748533693797",
+      "excerpt": "rnskill：把内容创作经验写成Agent技能 rnskill 将选题、中文改写、小说分镜、配音剪辑与交付检查整理为可读取的 Agent 技能。本文核对仓库结构、混合许可和安装方式，解释直接粘贴原文与完整安装的差别，并记录办公引用脚本的离线请求验证，帮助按任务选用，明确外部工具、账号和额度的边界，避免把作者涨粉案例当成效果保证，或把公开源码误当成可任意商用的授权。 rnskill Agent Skills 内容创作 工作流 开源许可 rnskill 收录了什么？ 没有 GitHub，直接给 AI 读文本行吗？ 工程上怎样按需接入？ 本次实际验证到哪一步",
+      "language": "zh",
+      "tags": [
+        "rnskill",
+        "Agent Skills",
+        "内容创作",
+        "工作流",
+        "开源许可"
+      ],
+      "title": "rnskill：把内容创作经验写成Agent技能",
+      "url": "/blog/rnskill-agent-content-workflow-license-guide/"
+    }
+  },
+  {
+    "id": "bf1fdba4e501c63e53c58aaddf16100dc7228be9a9132740",
+    "metadata": {
+      "article_id": "rnskill-agent-content-workflow-license-guide",
+      "content_hash": "949e9d3625238e70",
+      "excerpt": "rnskill: Agent Skills for Content Workflows Explore rnskill agent workflows, text-only use, selective installation and mixed licenses, with an offline CLI check and clear limits on media production costs. rnskill Agent Skills 内容创作 工作流 开源许可 What does rnskill contain? Can you use t",
+      "language": "en",
+      "tags": [
+        "rnskill",
+        "Agent Skills",
+        "内容创作",
+        "工作流",
+        "开源许可"
+      ],
+      "title": "rnskill: Agent Skills for Content Workflows",
+      "url": "/blog/rnskill-agent-content-workflow-license-guide/"
+    }
+  }
+]

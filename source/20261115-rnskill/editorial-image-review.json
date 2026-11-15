@@ -1,0 +1,28 @@
+{
+  "workerExitCode": 0,
+  "manualReviewAfterWorkerExit": true,
+  "banner": "photographic creative tabletop, blank cards, microphone, no faces or rendered lettering, 1200x630,92491bytes",
+  "figures": [
+    {
+      "file": "rnskill-agent-content-workflow-license-guide-fig-01.png",
+      "passed": true,
+      "review": "Task selection from skill shelf; accurate red-white Little M; clean white background"
+    },
+    {
+      "file": "rnskill-agent-content-workflow-license-guide-fig-02.png",
+      "passed": true,
+      "review": "Instruction alone needs tool, source material and quota connections; legible and on-topic"
+    },
+    {
+      "file": "rnskill-agent-content-workflow-license-guide-fig-03.png",
+      "passed": true,
+      "review": "Separate permissions for instruction, assets and service; no text errors"
+    }
+  ],
+  "dimensions": "1280x720 each",
+  "bytes": [
+    22146,
+    25634,
+    26544
+  ]
+}
