@@ -1,0 +1,47 @@
+{
+  "assumptions": "1000sessions*6AIreplies;20% of replies triggered by media consume3credits, others1.8400credits. Hypothetical, not real usage. Discrete additive packs, no tax/WhatsApp/labor/integration cost, no rollover assumption.",
+  "plans": [
+    {
+      "plan": "Starter",
+      "price": 99,
+      "includedCredits": 2000,
+      "fullUseUsdPerCredit": "0.0495",
+      "sixReplyTextSessions": 333,
+      "sixReply20PercentMediaSessions": 238,
+      "scenario8400Credits": {
+        "additionalNeeded": 6400,
+        "packs5000": 1,
+        "packs1000": 2,
+        "totalUsdBeforeOtherFees": 466
+      }
+    },
+    {
+      "plan": "Growth",
+      "price": 249,
+      "includedCredits": 6000,
+      "fullUseUsdPerCredit": "0.0415",
+      "sixReplyTextSessions": 1000,
+      "sixReply20PercentMediaSessions": 714,
+      "scenario8400Credits": {
+        "additionalNeeded": 2400,
+        "packs5000": 0,
+        "packs1000": 3,
+        "totalUsdBeforeOtherFees": 426
+      }
+    },
+    {
+      "plan": "Scale",
+      "price": 499,
+      "includedCredits": 15000,
+      "fullUseUsdPerCredit": "0.03326666666666666666666666667",
+      "sixReplyTextSessions": 2500,
+      "sixReply20PercentMediaSessions": 1785,
+      "scenario8400Credits": {
+        "additionalNeeded": 0,
+        "packs5000": 0,
+        "packs1000": 0,
+        "totalUsdBeforeOtherFees": 499
+      }
+    }
+  ]
+}

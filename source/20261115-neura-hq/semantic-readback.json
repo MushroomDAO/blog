@@ -1,0 +1,38 @@
+[
+  {
+    "id": "6e0b23872ea2a9174f6b8e0253ea8cc6826f090c6834d972",
+    "metadata": {
+      "article_id": "neura-hq-conversational-commerce-product-architecture-cost",
+      "content_hash": "c9951c7db7299e34",
+      "excerpt": "Neura HQ深度拆解：会卖货的Agent，难在业务闭环 Neura HQ 试图把品牌网站与 WhatsApp 变成能推荐商品、查询库存、引导门店并处理售后的对话门店。本文核对 ZEPIC 官方产品页、定价和发布者答复，拆解知识、实时数据、流程、身份与人工接管的工程边界，计算多模态回复及额外点数带来的预算变化，并给出可执行的试点验收方案，区分公开承诺与尚未验证的能力。 Neura HQ Conversational Commerce WhatsApp AI Agents Product Analysis 它卖的是什么，为什么值得看？ 哪些能力已宣称可用",
+      "language": "zh",
+      "tags": [
+        "Neura HQ",
+        "Conversational Commerce",
+        "WhatsApp",
+        "AI Agents",
+        "Product Analysis"
+      ],
+      "title": "Neura HQ深度拆解：会卖货的Agent，难在业务闭环",
+      "url": "/blog/neura-hq-conversational-commerce-product-architecture-cost/"
+    }
+  },
+  {
+    "id": "c1aff62dbda921222ac5739d23ca46fa09fea8f3ae1621a3",
+    "metadata": {
+      "article_id": "neura-hq-conversational-commerce-product-architecture-cost",
+      "content_hash": "d2807ee029076fa4",
+      "excerpt": "Neura HQ: Commerce Agents, Architecture and Real Costs A deep look at Neura HQ commerce agents: verified pricing, credit budgets, live inventory, customer identity, safe returns, and a practical pilot checklist. Neura HQ Conversational Commerce WhatsApp AI Agents Product Analysis",
+      "language": "en",
+      "tags": [
+        "Neura HQ",
+        "Conversational Commerce",
+        "WhatsApp",
+        "AI Agents",
+        "Product Analysis"
+      ],
+      "title": "Neura HQ: Commerce Agents, Architecture and Real Costs",
+      "url": "/blog/neura-hq-conversational-commerce-product-architecture-cost/"
+    }
+  }
+]

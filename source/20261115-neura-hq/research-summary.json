@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-11-15",
+  "sources": [
+    "https://neurahq.ai/",
+    "https://neurahq.ai/pricing/",
+    "https://neurahq.ai/enterprise/",
+    "https://www.producthunt.com/products/neura-4?launch=neura-hq",
+    "https://zepic.com/privacy",
+    "https://zepic.com/terms",
+    "https://whatsappbusiness.com/products/platform-pricing/"
+  ],
+  "publicFacts": [
+    "ZEPIC commercial conversationalstorefront",
+    "Homepagecurrentwebchat+WhatsApp;otherchannelscomingsoon;SMSclaimedbymakerneedsconfirmation",
+    "Prices99/249/499USDmonthly,credits2000/6000/15000",
+    "OrdinaryAIreply1credit,mediareply3,human0,WhatsAppseparate",
+    "EnterpriseofferprivateVPC/modelchoice; not assumedincludedStarter"
+  ],
+  "unknown": [
+    "internalmodels/database/retrievalengine/workflowengine",
+    "productionlatency/taskcompletion/conversionlift",
+    "tenantmemoryretentionanddeletepropagation",
+    "connectoroperationcoverage/versioncompatibility",
+    "retrycreditchargingandquotaexhaustionbehavior"
+  ],
+  "researchOnly": true
+}

@@ -1,0 +1,115 @@
+✅ Access token obtained
+账本：blog 1001 篇 + 公众号草稿箱 5 条 + 本地发布记录 984 条 + MemPalace 4238 抽屉
+
+── 查：https://neurahq.ai/
+   ✅ 四本账都没查到
+
+── 查：Neura HQ
+   ❌ [BLOG  ] Audio8-ASR-0.1B：0.1B 参数，LibriSpeech 2.70 WER，iPhone 本地跑只占 200MB
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Audio8 TTS Preview 0.6B：0.6B 参数打赢 4.6B 的 TTS 模型——11 语言零样本声音克隆
+      正文出现实体名「neura」
+   ❌ [BLOG  ] awesome-rsi：AI 递归自我改进资源精选库——从哥德尔机到 2026 年自我修改 Agent 的完整图谱
+      正文出现实体名「neura」
+   ❌ [BLOG  ] compile-by-training-local-neural-functions.md
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Cuti Harness：开源长程视频世界生成器，多轮对话从 15 秒扩展到 3 分钟，本地不需要 GPU
+      正文出现实体名「neura」
+   ❌ [BLOG  ] 领域专用小模型：Manning 新书《Domain-Specific SLMs》完整阅读指南
+      正文出现实体名「neura」
+   ❌ [BLOG  ] ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Halcyon文生图研究：275倍训练算力差距，到底省在哪里？
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Laya（aayushch）拆解：把 Slack/Gmail/GitHub/Jira 通知变成「待批准卡片」的本地优先指挥中心，隐私边界在哪
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Laya ANE：把 421M 决策模型烧进 Apple 神经引擎
+      正文出现实体名「neura」
+   ❌ [BLOG  ] 手搓脚本产品化成 CLI：Karpathy 的 LLM Wiki 想法值 2100 万浏览，有人 40 小时把它变成了流水线
+      正文出现实体名「neura」
+   ❌ [BLOG  ] M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Macaron-V1-Venti：Mixture-of-LoRA + GLM-5.2，个人智能体 + Generative UI 的新范式
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Mage-VL 跑在 Mac 上：微软视觉大模型的本地化部署，图片视频实时流式注释
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Mage-VL：微软用视频编解码器的思路重写了多模态模型——4B 参数，视频理解超越 Qwen3-VL-4B
+      正文出现实体名「neura」
+   ❌ [BLOG  ] 果蝇大脑被网友塞进《我的世界》和驾校：16.6 万神经元的连接组，离「上传意识」还差多远？
+      正文出现实体名「neura」
+   ❌ [BLOG  ] 微软 AI For Beginners：63k Stars 的 12 周 24 课 AI 入门课程
+      正文出现实体名「neura」
+   ❌ [BLOG  ] OpenAI 实时语音一小时花 $18，这两个开源模型让你不花一分钱
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始
+      正文出现实体名「neura」
+   ❌ [BLOG  ] OpenMontage：33K Stars，把 AI 助手变成视频工作室，$1.33 出一条 60 秒动画
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Osaurus：在你的 Mac 上拥有 AI——密码学身份、沙盒 VM、隐私过滤，纯 Swift 原生
+      正文出现实体名「neura」
+   ❌ [BLOG  ] 浙大彭思达：14.7K star 的科研经验指南开源了
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Qwen3.8-27B QUASAR-NVFP4：最强 4-bit QAT 量化详解 + Mac M1 Max 64GB 完整安装指南
+      正文出现实体名「neura」
+   ❌ [BLOG  ] research-note-example.md
+      正文出现实体名「neura」
+   ❌ [BLOG  ] AI Agent 入口路由怎么选：5 类开源方案实测对比，为什么不是选大模型
+      正文出现实体名「neura」
+   ❌ [BLOG  ] SkillOpt：微软联合上交复旦同济，让 AI Agent 的 Skill 像神经网络一样被训练
+      正文出现实体名「neura」
+   ❌ [BLOG  ] 软件层的退场与重构：AI-Native 时代，你的产品下一个用户是另一个 Agent
+      正文出现实体名「neura」
+   ❌ [BLOG  ] SparkLabs：首个 AI 原生游戏引擎，NPC 终于拥有了真正的大脑
+      正文出现实体名「neura」
+   ❌ [BLOG  ] Video Expert Analyzer 完全指南：Walter Murch 六法则 + Mac MLX 本地模型全路径
+      正文出现实体名「neura」
+   ❌ [BLOG  ] 用开源 Voicebox 给 AI Agent 装上嗓子 — MCP 语音层工程实践
+      正文出现实体名「neura」
+   ❌ [BLOG  ] M5 Air 16GB 本地跑 33B 视频模型：vpipe 实测，15 分钟生成 3.75 秒有声视频
+      正文出现实体名「neura」
+   ❌ [BLOG  ] 从Weight-Space Programming到知识编辑：小补丁究竟能改变什么？
+      正文出现实体名「neura」
+   ❌ [BLOG  ] WWDC26 正式讲了：Mac 本地跑完整 Agent Loop，四层技术栈手把手搭建
+      正文出现实体名「neura」
+   ❌ [发过 2026-09-10] 用「编译」替代反复调大模型：Compile by Training 如何把 NLP 任务固化成本地神经函数
+      正文出现实体名「neura」
+   ❌ [发过 2026-10-06] Laya ANE：决策模型烧进Apple神经引擎
+      正文出现实体名「neura」
+   ❌ [发过 2026-09-18] Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始
+      正文出现实体名「neura」
+   ❌ [知识库] /chat/completions - Anthropic: http://127.0.0.1:1337/anthrop
+      正文出现实体名「neura」
+   ❌ [知识库] # pengsida/learning_research — 浙大彭思达科研经验指南  **Summary**: pen
+      正文出现实体名「neura」
+   ❌ [知识库] # pengsida/learning_research — 浙大彭思达科研经验指南  **Summary**: pen
+      正文出现实体名「neura」
+   ❌ [知识库] **： - ANE 78.35ms vs MLX 97.31ms（1.24× 快） - 能耗：2.068 J vs 4.
+      正文出现实体名「neura」
+   ❌ [知识库] --- name: project_pengsida_learning_research description: pe
+      正文出现实体名「neura」
+   ❌ [知识库] onsai 2-27B](project_ternary_bonsai_2_27b.md) — PrismML，Qwen
+      正文出现实体名「neura」
+   ❌ [知识库] esilience](project_cohesity_agent_resilience_backup_restore_
+      正文出现实体名「neura」
+   ❌ [知识库] --- name: project_neural_imprint description: Neural Imprint
+      正文出现实体名「neura」
+   ❌ [知识库] 影）：PCA 分析激活空间用户相关结构，更新用户状态表示 - DSR（双稀疏保留）：重要性分数 + 时间邻近度双维度管理
+      正文出现实体名「neura」
+   ❌ [知识库] "Intelligence moves toward data"|Neural;Imprint;AtomGradient
+      正文出现实体名「neura」
+   ❌ [知识库] # Neura HQ:把品牌官网和 WhatsApp 变成会卖货  **Summary**: Neura HQ:把品牌官
+      正文出现实体名「neura」
+   ❌ [知识库] ## Osaurus — macOS 原生 AI 哈尼斯（Swift）  **仓库**: osaurus-ai/osau
+      正文出现实体名「neura」
+   ❌ [知识库] # pengsida/learning_research — 浙大彭思达科研经验指南  **Summary**: pen
+      正文出现实体名「neura」
+   ❌ [知识库] # pengsida/learning_research — 浙大彭思达科研经验指南  **Summary**: pen
+      正文出现实体名「neura」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
