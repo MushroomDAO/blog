@@ -1,12 +1,12 @@
 ---
-title: "Lemo Opuscar：51种风格的代码制片Skill，怎么用、花什么钱？"
-titleEn: "Lemo Opuscar: A Code-Rendered Film Skill for Agents"
-description: "Lemo Opuscar把导演指南、51种风格和浏览器渲染工具组织成视频制作Skill，让编码Agent编写画面、配音和混音流程。本文定位Lemomo官方仓库，核对安装方式、Opus依赖、中文配音联网要求、成本与素材许可，并用两秒自制场景检查逐帧渲染链路，说明它适合哪些短片，以及从分镜到可重建工程应当怎样验收。"
-descriptionEn: "Lemo Opuscar guides agents to create films in code. Explore 51 styles, installation, voice and music, costs, licensing and our small renderer smoke test."
-wechatTitle: "Lemo Opuscar：用代码拍51种风格短片"
-wechatDigest: "它把导演指南、风格与渲染工具打包成Skill，中文配音、模型成本和成片验收仍需分清。"
+title: "Lemo Opuscar：99种风格的代码制片与2.0许可变化"
+titleEn: "Lemo Opuscar: 99 Film Styles and the 2.0 License"
+description: "Lemo Opuscar在线画廊已扩展至99种影片风格与15个分类，Agent可参考导演、风格和渲染工具用代码制作短片。本文更新2.0版本的模型适配、生图依赖、运行条件及混合许可，区分MIT代码、非商业文档授权与额外商业制片许可，保留此前最小渲染实测的范围，并说明配音联网、素材权利和可重建工程的验收边界。"
+descriptionEn: "Explore Lemo Opuscar’s 99 film styles, 2.0 code and docs licenses, commercial filmmaking permissions, image-tool dependencies and limits of our render test."
+wechatTitle: "Lemo Opuscar：99种风格与许可变化"
+wechatDigest: "画廊增至99种风格，代码仍为MIT，文档许可与商业制片授权需要分开理解。"
 pubDate: "2026-10-20"
-updatedDate: "2026-10-20"
+updatedDate: "2026-11-15"
 category: "Tech-News"
 tags: ["Lemo Opuscar", "AI视频", "Agent Skill", "创意编程", "Canvas", "WebGL"]
 heroImage: "../../assets/images/lemo-opuscar-code-video-skill-banner.jpg"
@@ -15,6 +15,22 @@ heroImage: "../../assets/images/lemo-opuscar-code-video-skill-banner.jpg"
 Lemo Opuscar 能让编码 Agent 把一个主题做成有画面、声音和剪辑的短片。它的核心是将导演方法、风格提示与渲染工具放进同一套工作流，让 Agent 写代码来制作影片。
 
 官方仓库是 `lemomo-ai/lemo-opuscar`，作者为 Lemomo（`@lemomo_ai`）。截至2026年10月20日，本次 GitHub API 快照为3,783星；我们核对了51种正式风格，另有一个不计入数量的模板目录。素材里的“2800+”是较早的热度描述，不影响项目的实际用法。
+
+## 2026年11月更新：99种风格，2.0的边界变了
+
+11月15日核对官网与仓库，当前版本为2.0.0，画廊展示99种风格，按15个分类组织，涵盖剪辑纪实、绘画插画、线稿图解、游戏、屏幕界面、仪器实证与数据地图等。每种风格有独立页面，可以先看样片、剧照和用途，再把对应STYLE.md交给Agent。官网11月12日公告称本轮新增33种；旧文的51种是10月20日快照，不能把99减51都归到一次发布。
+
+README现在说明，本次版本由Claude Fable 5.2审阅改进，Fable、Opus、Sonnet均可使用，建议高effort。这是作者的适配说明，我们没有逐个模型复测效果。其他Agent能读取技能，也不等于能做出同样质量的短片。
+
+三个风格额外依赖用户提供的生图工具：Manga Panels、Text Flash Cuts、Comic History Cartoon。它们仍将画面组织为代码渲染，但需要先取得生成的角色等图像资产；没有可用生图账号或工具时，不能把这三种宣传为纯代码、零外部生成依赖。当前README要求Node20+、FFmpeg7+和Python3.11+或uv；不能直接沿用Ubuntu24.04自带的FFmpeg6.1。
+
+2.0也更新了许可：代码仍为MIT，Markdown指南、技能说明和图像提示词改为CC BY-NC 4.0。作者另外明确允许创作者及参与同一影片的员工、承包方和客户，读取、复制、改编这些文档来制作自己的影片，包括商业影片，并随该片工程交付相关文档。把文档或改写版单独售卖，或放入另一个以商业获益为目的的产品、服务，则超出这项额外许可，需要另行授权。2.0以前发布的版本及其分支保留原有许可；新条款不能倒套到旧版上。
+
+工程上，我建议把风格页当成选型入口，先做15–30秒代表性镜头，记录所用提交、模型、声音来源及实际依赖，再扩成整片。99个样片能帮助判断视觉语言，不能证明任意新故事都已跑通。以下导演、渲染接口和两秒测试保留10月20日固定版本的研究范围；本次仅复核新官网、文档和许可，没有重跑99种风格或完整制片流程。
+
+在线画廊：https://lemomo-ai.github.io/lemo-opuscar/
+当前固定版本：https://github.com/lemomo-ai/lemo-opuscar/tree/3a7132b996be0241c1ea0ab180d519f06e6f10b6
+当前许可：https://github.com/lemomo-ai/lemo-opuscar/blob/3a7132b996be0241c1ea0ab180d519f06e6f10b6/LICENSE
 
 **这套工具的主要路线是 Canvas/WebGL 逐帧渲染，而非调用视频生成模型抽取镜头。** 它省掉了一部分视频模型依赖，但制作仍需要编码模型、浏览器、FFmpeg、声音工具和成片验收。
 
@@ -33,9 +49,9 @@ Lemo Opuscar 能让编码 Agent 把一个主题做成有画面、声音和剪辑
 
 ![小M将主题交给导演与风格指南，再组织代码画面、声音和成片输出](../../assets/images/lemo-opuscar-code-video-skill-fig-01.png)
 
-官方也要求先写 `TREATMENT.md`，再参考样片技术，避免把原片只换名字重新交付。这一点比“直接抄作业”更值得学：可复用的是制作方法，故事和表达仍应重新设计。
+10月20日固定版本要求先写 `TREATMENT.md`，再参考样片技术，避免把原片只换名字重新交付。这一点比“直接抄作业”更值得学：可复用的是制作方法，故事和表达仍应重新设计。
 
-## 51种风格，应该怎样选？
+## 从51种到99种风格，应该怎样选？
 
 风格库覆盖水彩、油画厚涂、浮世绘、像素游戏、纸艺、低多边形、玻璃产品渲染等路线。选择时先看内容适合什么视觉结构，而不是只选一个漂亮名字。
 
@@ -67,9 +83,9 @@ git checkout b5e8ef93930b6d828f352055a689320f138237b1
 claude
 ```
 
-这种方式的影片工程通常放在 `films/<name>/`。其他 Agent 可以读取该 Skill 的目录，但作者明确说明风格针对 Opus 5.5 调整，换模型不保证相同效果；“能读SKILL.md”与“能完成同样的影片”是两个验收项。
+这种方式的影片工程通常放在 `films/<name>/`。其他 Agent 可以读取该 Skill 的目录。10月固定版针对 Opus 5.5 调整，2.0的模型适配见前文更新，换模型不保证相同效果；“能读SKILL.md”与“能完成同样的影片”是两个验收项。
 
-系统需要 Node 20+、FFmpeg、Python 3.11+或 uv。官方主要在 Apple Silicon macOS 开发，Linux建议按文档配置，Windows使用WSL；3D和大量着色器的风格还要考虑GPU。插件之外还会下载浏览器、Python依赖，以及所需的语音模型或采样库。语音依赖文件特别注明Kokoro需要Python 3.11–3.13，建议用独立环境，别直接假设最新系统Python可用。
+当前系统要求 Node 20+、FFmpeg 7+、Python 3.11+或 uv。官方主要在 Apple Silicon macOS 开发，Linux建议按文档配置，Windows使用WSL；3D和大量着色器的风格还要考虑GPU。插件之外还会下载浏览器、Python依赖，以及所需的语音模型或采样库。语音依赖文件特别注明Kokoro需要Python 3.11–3.13，建议用独立环境，别直接假设最新系统Python可用。
 
 第一条需求可以写得具体一点：
 
@@ -109,7 +125,7 @@ node core/render/video.mjs films/tomato-story \
 
 | 成本或数据路径 | 当前默认路线 | 判断时要注意 |
 |---|---|---|
-| 编码Agent | 主要针对Opus 5.5设计 | 模型订阅或API成本另算 |
+| 编码Agent | 旧版主要针对Opus 5.5；2.0列出Fable/Opus/Sonnet | 模型订阅或API成本另算 |
 | 英文旁白 | Kokoro，本地推理 | 首次仍需下载模型和依赖 |
 | 中文旁白 | edge-tts，在线服务 | 文本需要发送到相应语音服务 |
 | 音乐 | 编写乐谱、采样与合成 | 采样库下载、许可证及混音需核对 |
@@ -117,11 +133,11 @@ node core/render/video.mjs films/tomato-story \
 
 仓库也允许使用用户自己的录音、音乐或指定声音。文档提到Kokoro有离线中文声音，但对自然度有自己的评价，不能把默认的在线中文方案宣传成离线无网络。
 
-它提供逐句ASR回查、字幕时间、声音压缩与混音规范。回查能帮助发现漏读和错读，却不能证明情感自然、表演合适。中文短句还可能出现识别误差；文档允许人工听确认后指定预期识别文本，因此“检查通过”仍需要结合实际听感解释。
+它提供逐句ASR回查、字幕时间、声音压缩与混音规范。回查能帮助发现漏读和错读，却不能证明情感自然、表演合适。当前TECHNIQUE仍把默认中文路径写为在线edge-tts，而README许可段建议自制影片使用Kokoro或有权使用的声音；两处表述应分别核对，不能据此承诺全程离线。中文短句还可能出现识别误差；文档允许人工听确认后指定预期识别文本，因此“检查通过”仍需要结合实际听感解释。
 
 ## 我们实际跑通了哪一小段？
 
-本次在隔离的临时目录中，使用固定提交的渲染工具和自制的简单Canvas场景：白底上一个蓝色圆形随时间移动。我们检查了两个时间点的静帧、同一时间点重新渲染的结果，以及两秒、640×360、24 FPS的无声H.264视频。
+10月20日在隔离的临时目录中，使用当时固定提交的渲染工具和自制的简单Canvas场景：白底上一个蓝色圆形随时间移动。我们检查了两个时间点的静帧、同一时间点重新渲染的结果，以及两秒、640×360、24 FPS的无声H.264视频。
 
 这段检查用于验证网页时间接口、浏览器捕获和FFmpeg编码链路。我们没有调用Opus、安装完整Skill、生成51种风格样片，也没有验证旁白、音乐或完整导演流程；不能把它写成“已实测一键做出专业短片”。
 
@@ -135,7 +151,7 @@ node core/render/video.mjs films/tomato-story \
 
 官方交付清单不止一个MP4，还包括海报、需要时的SRT、`TREATMENT.md`、第三方素材`CREDITS`、源码和`build.sh`。这些文件能让你以后改一句旁白、调整画幅或替换一个镜头，而不必从一个不可编辑的最终视频重新开始。
 
-许可也分层：代码和文档采用MIT；演示影片及剧照采用CC BY 4.0，复用时需署名LemoLab、链接仓库并说明修改；第三方素材保留自己的许可。README表示用库制作的新影片归创作者，但这不会自动清除录音、字体、采样或输入素材的第三方要求。
+许可需要按版本和资产分开：10月固定版的代码与文档为MIT；当前2.0的代码MIT、文档CC BY-NC及额外商业制片许可见前文。演示影片、剧照等通常按CC BY 4.0署名“Lemo-Opuscar by Lemomo (LemoLab)”、链接仓库和许可并注明修改，但第三方素材、Clawd角色、产品界面和商标不自动获得授权。LICENSE还排除了六段演示旁白：五段来自Edge TTS，一段来自Doubao TTS，不能单独提取复用；这些影片整体分享的允许范围以原许可说明为准。新制作影片归创作者，输入录音、字体、采样等仍需有相应权利。
 
 我们的判断是，它尤其适合程序化动画、信息解释、风格化短故事和有明确数据来源的视觉说明。要求真人细腻表演、复杂实拍质感或完全自由的摄影效果时，应先做测试镜头，再决定是否采用这条路线。“人人都能当导演”是愿景，能否把一个具体故事做好，仍取决于表达、素材与迭代。
 
@@ -150,7 +166,7 @@ https://blog.mushroom.cv/blog/hypit-ai-agent-video-workflow-svml-claude-code-cod
 
 ### 可以把Opus换成便宜的本地模型吗？
 
-可以研究适配，但作者明确说风格针对Opus 5.5调优，其他模型可能不能复现。先检验理解风格、完成代码、修复渲染和声音组织的能力，再讨论替换后的总成本。
+可以研究适配。当前2.0列出Fable、Opus、Sonnet并建议high effort，旧版针对Opus 5.5调优；其他模型可能不能复现。先检验理解风格、完成代码、修复渲染和声音组织的能力，再讨论替换后的总成本。
 
 ### 开源是不是意味着一部影片零成本？
 
@@ -179,6 +195,20 @@ Lemo Opuscar helps a coding agent turn a topic into a short film with picture, s
 The official repository is `lemomo-ai/lemo-opuscar`, by Lemomo, `@lemomo_ai`. Our October 20, 2026 API snapshot recorded 3,783 stars. We counted 51 actual style directories, excluding an additional template directory.
 
 Its principal picture pipeline uses Canvas/WebGL pages rendered frame by frame, rather than a video-generation model. Coding-model usage, browsers, FFmpeg, audio tools and editorial review remain part of production.
+
+## November update: 99 styles and the 2.0 boundaries
+
+Checked November 15, the current package is 2.0.0 and the gallery presents 99 styles across 15 categories, with individual pages for films, stills, uses and STYLE.md instructions. The November 12 notice reports 33 additions in that release. Our original 51-style count is an October 20 snapshot; the difference between 51 and 99 should not all be attributed to one release.
+
+The README now says this release was audited with Claude Fable 5.2 and supports Fable, Opus and Sonnet with high effort. These are author statements, not our comparative model tests. Three styles—Manga Panels, Text Flash Cuts and Comic History Cartoon—require an image-generation tool and suitable account supplied by the user. Their code-rendered films can incorporate generated image assets; they cannot start without that dependency. Current requirements include Node20+, FFmpeg7+, and Python3.11+ or uv, so Ubuntu24.04’s stock FFmpeg6.1 is insufficient.
+
+Licensing also changed. Code remains MIT, while Markdown guides, skill instructions and image prompts use CC BY-NC 4.0. An additional express permission lets you and those working on the same film, including staff, contractors and the client, read, copy and adapt the docs to make your own films, including commercial/client work, and deliver relevant docs with that film’s project. Selling the docs or incorporating them, including adapted parts, into another commercially operated product or service exceeds that extra permission and requires a separate license. Versions published before2.0.0 and forks from them retain their original terms.
+
+My engineering recommendation is to select a style using its page, then make a representative15–30second shot, recording the revision, model, voice source and dependencies before expanding the film. The gallery provides visual references; it does not establish reliable completion for every new story. The renderer interface and two-second test below retain their October20 pinned scope. This update checks the current public gallery, docs and license, without rerunning99styles or a full filmmaking workflow.
+
+Gallery: https://lemomo-ai.github.io/lemo-opuscar/
+Current pinned revision: https://github.com/lemomo-ai/lemo-opuscar/tree/3a7132b996be0241c1ea0ab180d519f06e6f10b6
+Current license: https://github.com/lemomo-ai/lemo-opuscar/blob/3a7132b996be0241c1ea0ab180d519f06e6f10b6/LICENSE
 
 ## What does the workflow organize?
 
@@ -214,9 +244,9 @@ git checkout b5e8ef93930b6d828f352055a689320f138237b1
 claude
 ```
 
-We did not install the plugin or invoke an agent filmmaking run in this research. Other agents can read the skill, but the author explicitly tunes the styles for Opus 5.5 and does not promise equivalent results from other models.
+We did not install the plugin or invoke an agent filmmaking run in this research. Other agents can read the skill. The October version targeted Opus5.5; current2.0 model guidance is described above. Equivalent output from other models is not promised.
 
-Requirements include Node 20+, FFmpeg and Python 3.11+ or uv. The project was developed on Apple Silicon macOS, with Linux guidance and WSL for Windows. Three-dimensional or shader-heavy styles need appropriate graphics resources. Browsers, Python packages, voices and instrument samples are additional downloads. The voice requirements specifically note Python 3.11–3.13 for Kokoro, so use a compatible isolated environment.
+Current requirements include Node20+, FFmpeg7+ and Python3.11+ or uv. The project was developed on Apple Silicon macOS, with Linux guidance and WSL for Windows. Three-dimensional or shader-heavy styles need appropriate graphics resources. Browsers, Python packages, voices and instrument samples are additional downloads. The voice requirements specifically note Python 3.11–3.13 for Kokoro, so use a compatible isolated environment.
 
 For a first request, specify a 30 second watercolor explanation of a balcony tomato plant, a beginner audience, four shots, Chinese narration and 16:9. Ask to approve the treatment and storyboard first, list audio/network requirements and preserve source, captions, credits and a rebuild script.
 
@@ -246,7 +276,7 @@ These commands require an existing `index.html` implementing the page contract. 
 
 The author estimates 30–60 minutes of agent work and substantial token use for a film. That is an author estimate, not our measurement or a price guarantee.
 
-The default English voice path uses local Kokoro inference after model download. Chinese narration normally uses online edge-tts. User recordings or specified audio can replace defaults; the documentation also mentions offline Chinese Kokoro voices, with quality qualifications. The default Chinese path should not be described as entirely offline.
+The default English voice path uses local Kokoro inference after model download. Chinese narration normally uses online edge-tts. User recordings or specified audio can replace defaults; the documentation also mentions offline Chinese Kokoro voices, with quality qualifications. The current TECHNIQUE still documents online edge-tts for Chinese, while the README license section recommends Kokoro or an authorized voice for your own films. Reconcile the selected voice path explicitly; do not promise an entirely offline workflow.
 
 Music uses written scores, sampled instruments and synthesis. Sample downloads and licensing still matter. Chrome/FFmpeg consume local compute and storage. Coding-model subscription or API costs remain separate from the repository's open-source license.
 
@@ -254,7 +284,7 @@ ASR checks help detect missed or misread speech. They do not establish emotional
 
 ## What did we actually check?
 
-In an isolated temporary directory, we used the pinned renderer files and an original minimal Canvas scene: a blue circle moves across a white background. We checked two still timestamps, a repeated render of the same timestamp, and a silent two-second 640×360 video at 24 FPS.
+On October20, in an isolated temporary directory, we used the pinned renderer files and an original minimal Canvas scene: a blue circle moves across a white background. We checked two still timestamps, a repeated render of the same timestamp, and a silent two-second 640×360 video at 24 FPS.
 
 This checks the page contract, browser capture and FFmpeg encoding. We did not call Opus, install the full skill, reproduce the style collection or test narration, music and the complete directing process. It is not a model or hardware performance benchmark.
 
@@ -268,7 +298,7 @@ Review the treatment, then stills and key actions, then the final film at normal
 
 The documented deliverables include MP4, poster, SRT where relevant, treatment, third-party `CREDITS`, source and a one-command `build.sh`. An editable project is more useful for future revisions than a lone flattened video.
 
-Code and documents are MIT-licensed. Demo films and stills use CC BY 4.0 with LemoLab credit, repository link and change disclosure. Third-party assets retain their licenses. The README says new films made with the library belong to their creators; that does not erase obligations attached to recordings, fonts, samples or other inputs.
+The October pinned code and docs were MIT-licensed. Current2.0 code is MIT; its docs use CC BY-NC plus the additional filmmaking permission described above. Demo films and stills generally use CC BY4.0 with “Lemo-Opuscar by Lemomo (LemoLab)” credit, repository and license links, and change disclosure. Third-party materials, Clawd, product interfaces and trademarks are excluded from blanket permission. Six demo narration tracks—five Edge TTS, one Doubao TTS—are excluded and must not be extracted or reused separately; whole-film sharing follows the specific LICENSE wording. Newly made films belong to their creators, while recordings, fonts, samples and other inputs retain their own terms.
 
 Our assessment is that the approach is particularly suitable for procedural animation, visual explanations, stylized stories and sourced-data films. Test a representative shot before choosing it for demanding live-action appearance or subtle human performance. The workflow reduces production friction; a clear story, suitable assets and iteration still determine the result.
 
@@ -283,7 +313,7 @@ Its principal route is a skill/toolkit that guides a coding agent to implement s
 
 ### Can a cheaper local model replace Opus?
 
-It can be investigated, but the author tunes the collection for Opus 5.5 and warns about other models. Check style interpretation, implementation, rendering repair and audio organization before comparing total costs.
+It can be investigated. Current2.0 docs list Fable, Opus and Sonnet at high effort, while warning about other models; the old pinned version targeted Opus5.5. Check style interpretation, implementation, rendering repair and audio organization before comparing total costs.
 
 ### Does open source make each film free?
 

@@ -1,0 +1,20 @@
+{
+  "commit": "3a7132b996be0241c1ea0ab180d519f06e6f10b6",
+  "gallery": "https://lemomo-ai.github.io/lemo-opuscar/",
+  "galleryAdvertisedStyles": 99,
+  "categories": 15,
+  "retrievalBackend": "public-web fallback allowed by recovered agent-reach skill; CLI doctor unavailable (command not found)",
+  "initialImageAttempt": "Previous docs/cover.jpg path404; actual current gallery image URLs downloaded successfully.",
+  "savedFiles": [
+    {
+      "path": "/Users/jason/.heinu1-bot/media/lemo-opuscar-20261115-gallery-hero.webp",
+      "source": "https://lemomo-ai.github.io/lemo-opuscar/media/still/hero-1920.webp",
+      "bytes": 49094
+    },
+    {
+      "path": "/Users/jason/.heinu1-bot/media/lemo-opuscar-20261115-gallery-painting.webp",
+      "source": "https://lemomo-ai.github.io/lemo-opuscar/media/still/s02-1920.webp",
+      "bytes": 92382
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "lemo-opuscar-code-video-skill",
+      "title": "Lemo Opuscar: 99 Film Styles and the 2.0 License",
+      "url": "/blog/lemo-opuscar-code-video-skill/",
+      "language": "en",
+      "excerpt": "Lemo Opuscar: 99 Film Styles and the 2.0 License Explore Lemo Opuscar’s 99 film styles, 2.0 code and docs licenses, commercial filmmaking permissions, image-tool dependencies and limits of our render test. Lemo Opuscar AI视频 Agent Skill 创意编程 Canvas WebGL November update: 99 styles",
+      "score": 0.6447192
+    },
+    {
+      "article_id": "cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice",
+      "title": "ClipTalk: Edit Video by Talking — VLM + 24 Skills Driving an Agentic Video Pipeline",
+      "url": "/blog/cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice/",
+      "language": "en",
+      "excerpt": "ClipTalk: Edit Video by Talking — VLM + 24 Skills Driving an Agentic Video Pipeline Custom non-commercial license, 126 stars. Three-tier: Python FastAPI + Node Pi Agent + browser. 24 SKILL.md skills, VLM for scene understanding, local SenseVoice/TalkNet/SFace/YOLOX for face/voice",
+      "score": 0.47326908
+    },
+    {
+      "article_id": "awesome-opus-videos-code-animation-guide",
+      "title": "Awesome Opus Videos: A Guide to Code Animation",
+      "url": "/blog/awesome-opus-videos-code-animation-guide/",
+      "language": "en",
+      "excerpt": "Awesome Opus Videos: A Guide to Code Animation Review 703 Opus video entries, partial prompts, and remake links, with a practical workflow for code animation, frame inspection, export, and asset rights. AI视频 Claude 代码动画 Canvas Three.js 开源项目 What does the repository actually provi",
+      "score": 0.46875378
+    },
+    {
+      "article_id": "mage-vl-microsoft-codec-native-streaming-video-understanding-model",
+      "title": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video",
+      "url": "/blog/mage-vl-microsoft-codec-native-streaming-video-understanding-model/",
+      "language": "en",
+      "excerpt": "Mage-VL: Microsoft Rebuilt Multimodal Models Around Video Codecs — 4B Params Beating Qwen3-VL-4B on Video Mage-VL: Microsoft Rebuilt Multimodal AI with Video Codec Logic — 4B Params, Beats Qwen3-VL-4B on Video The Problem: Uniform Frame Sampling Is Wasteful Mage-ViT: A From-Scrat",
+      "score": 0.46014905
+    },
+    {
+      "article_id": "lance-bytedance-3b-multimodal-unified",
+      "title": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜",
+      "url": "/blog/lance-bytedance-3b-multimodal-unified/",
+      "language": "zh",
+      "excerpt": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜 字节跳动智能创作实验室开源 Lance：3B 激活参数，统一支持图像理解/生成/编辑与视频理解/生成/编辑六项任务。GenEval 0.90 并列第一，VBench 85.11 登顶统一模型，Apache 2.0 开源。 多模态 字节跳动 Lance 图像生成 视频生成 开源 3B 统一模型 六项能力，一个模型 基准成绩 技术要点",
+      "score": 0.45731783
+    },
+    {
+      "article_id": "video-shotcraft-claude-code-remotion-cinematic-product-videos",
+      "title": "video-shotcraft: Let an AI Agent Produce Cinema-Grade Product Films",
+      "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/",
+      "language": "en",
+      "excerpt": "video-shotcraft: Let an AI Agent Produce Cinema-Grade Product Films Vincentwei1021's open-source Claude Code/Codex agent video production skill, 3832 stars. Includes 104 shot recipe cards, 161 motion style previews, complete Remotion template Ink Press (36.2s/1920×1080/30fps), 14",
+      "score": 0.45670784
+    },
+    {
+      "article_id": "awesome-short-drama-skills-guide",
+      "title": "Awesome Short Drama Skills: A Practical Selection Guide",
+      "url": "/blog/awesome-short-drama-skills-guide/",
+      "language": "en",
+      "excerpt": "Awesome Short Drama Skills: A Practical Selection Guide Explore a curated short-drama skills directory, its selector and public evaluations, with local verification, a practical workflow and clear licensing limits. Agent Skills AI Video Short Drama Open Source Creative Workflow W",
+      "score": 0.4554004
+    },
+    {
+      "article_id": "video-use-ai-video-editor-claude-code",
+      "title": "video-use: Edit Videos with Claude Code — browser-use Team's Open Source AI Video Editor",
+      "url": "/blog/video-use-ai-video-editor-claude-code/",
+      "language": "en",
+      "excerpt": "video-use: Edit Videos with Claude Code — browser-use Team's Open Source AI Video Editor video-use (14,408 ⭐, Python, open source) is the browser-use team's AI video editing skill for Claude Code, Codex, Hermes, and other agents. Drop raw footage, describe the edit in natural lan",
+      "score": 0.45401657
+    },
+    {
+      "article_id": "kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora",
+      "title": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题",
+      "url": "/blog/kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora/",
+      "language": "zh",
+      "excerpt": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题 Apache-2.0，LoRA + 块因果掩码，文档编码一次、多个问题并发出概率分布，不生成文字。4B 版 OOD 准确率 0.790，比 Jev 低 6~7 个点，上限 8192 token，本地 Mac 可跑。 decision-model local-ai qwen lora classification open-source 核心设计：一次编码，多路分支 三种问题类型 四个模型变体 训练细节 不足之处（文档已明写，不是挖出来的） 本地运行 横向对比 怎么看这件事",
+      "score": 0.45115405
+    },
+    {
+      "article_id": "sensenova-u15-unified-image-understand-generate-edit-mot",
+      "title": "sensenova-u15-unified-image-understand-generate-edit-mot",
+      "url": "/blog/sensenova-u15-unified-image-understand-generate-edit-mot/",
+      "language": "en",
+      "excerpt": "sensenova-u15-unified-image-understand-generate-edit-mot SenseNova-U1.5-8B-MoT from SenseTime unifies image understanding, generation, and editing in a single 8B-parameter model via NEO-unify architecture and MoT (Mixture of Tokens). Native 4K output, Apache 2.0, 5.4k GitHub star",
+      "score": 0.4474915
+    }
+  ]
+}

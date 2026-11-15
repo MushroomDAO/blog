@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "lemo-opuscar-code-video-skill",
+      "title": "Lemo Opuscar：51种风格的代码制片Skill，怎么用、花什么钱？",
+      "url": "/blog/lemo-opuscar-code-video-skill/",
+      "language": "zh",
+      "excerpt": "Lemo Opuscar：51种风格的代码制片Skill，怎么用、花什么钱？ Lemo Opuscar把导演指南、51种风格和浏览器渲染工具组织成视频制作Skill，让编码Agent编写画面、配音和混音流程。本文定位Lemomo官方仓库，核对安装方式、Opus依赖、中文配音联网要求、成本与素材许可，并用两秒自制场景检查逐帧渲染链路，说明它适合哪些短片，以及从分镜到可重建工程应当怎样验收。 Lemo Opuscar AI视频 Agent Skill 创意编程 Canvas WebGL 它把哪些制作工作交给Agent？ 51种风格，应该怎样选？ 如何安装并开",
+      "score": 0.58534235
+    },
+    {
+      "article_id": "microsoft-trellis2-native-3d-generation-o-voxel-pbr",
+      "title": "TRELLIS.2：微软 4B 参数图像转 3D 生成模型，引入原生 O-Voxel 表示",
+      "url": "/blog/microsoft-trellis2-native-3d-generation-o-voxel-pbr/",
+      "language": "zh",
+      "excerpt": "TRELLIS.2：微软 4B 参数图像转 3D 生成模型，引入原生 O-Voxel 表示 微软开源的 4B 参数 3D 生成模型。引入 O-Voxel（无等值面约束的稀疏体素）解决复杂拓扑问题，支持开放曲面、非流形几何和内部封闭结构。H100 上 512³ 约 3 秒，1024³ 约 17 秒。支持完整 PBR 材质（颜色/粗糙度/金属度/透明度），MIT License，arXiv 2512.14692，当前 10.4k stars。 3D生成 微软 O-Voxel PBR材质 图像转3D 生成模型 Mycelium 核心创新：O-Voxel 表示 ",
+      "score": 0.5053099
+    },
+    {
+      "article_id": "krea-2-turbo-open-weight-text-to-image-license-hardware",
+      "title": "Krea 2 Turbo 值不值得本地跑？12.8B 开放权重文生图：8 步出图、年收入百万美元以下可商用",
+      "url": "/blog/krea-2-turbo-open-weight-text-to-image-license-hardware/",
+      "language": "zh",
+      "excerpt": "Krea 2 Turbo 值不值得本地跑？12.8B 开放权重文生图：8 步出图、年收入百万美元以下可商用 Krea 2 Turbo 是 Krea 从零训练的 12.8B 参数文生图 DiT，用 TDM 蒸馏到 8 步、关闭 CFG，支持 1K–2K 分辨率。本文从个人开发者本地出图的角度拆它：官方全套 bf16 权重约 35.7GB，社区 Q4 GGUF 主干 7.49GB；许可证允许年收入低于 100 万美元的主体商用，但要求内容过滤、衍生模型名须以 Krea 开头，且 Krea 可提前 30 天通知终止授权。并和 FLUX.2 klein 4B/9",
+      "score": 0.5039119
+    },
+    {
+      "article_id": "cheese-paper-creative-writing-editor",
+      "title": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布",
+      "url": "/blog/cheese-paper-creative-writing-editor/",
+      "language": "zh",
+      "excerpt": "Cheese Paper：离线优先、无遥测、专为小说创作设计的开源文本编辑器，v1.0.0 发布 Cheese Paper 是一款专为小说创作设计的离线开源编辑器，场景管理、角色卡、世界观数据库三合一，文件格式采用 Markdown+TOML，兼容任意文本编辑器和同步工具。GPLv3，无订阅，无遥测。v1.0.0 于 2026-05-30 发布，已上架 Flathub。 创意写作 文本编辑器 小说 开源 离线优先 Markdown 写作工具 GPLv3 Cheese Paper 核心设计：笔记和稿件并排可见 文件格式：Markdown + TOML，不绑",
+      "score": 0.49828535
+    },
+    {
+      "article_id": "microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact",
+      "title": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率",
+      "url": "/blog/microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact/",
+      "language": "zh",
+      "excerpt": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率 microsoft/TRELLIS.2 是 TRELLIS（CVPR'25 Spotlight）的续作，10745 stars，MIT，Python。核心创新：O-Voxel「无场」稀疏体素结构取代等值面场，天然支持开放表面（衣物/叶片）、非流形几何、内部封闭结构；4B 参数模型 512³ 分辨率 H100 上约 3 秒，1024³ 约 17 秒；完整 PBR 材质（Base Color/Roughness/Metallic/Opacity）；网",
+      "score": 0.49453494
+    },
+    {
+      "article_id": "video-shotcraft-claude-code-remotion-cinematic-product-videos",
+      "title": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片",
+      "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/",
+      "language": "zh",
+      "excerpt": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片 Vincentwei1021 开源的 Claude Code / Codex Agent 视频制作技能包，3832 stars。内置 104 张镜头配方卡、161 种运动风格预览、完整 Remotion 视频模板 Ink Press（36.2秒/1920×1080/30fps）、149 个音效（16个场景类别）、5套背景音乐。Agent 拿到产品截图后自动分镜、动画、配音设计，直出可发布的产品宣传片。 AI视频制作 Claude Code Remotion Agent技能 产",
+      "score": 0.48481217
+    },
+    {
+      "article_id": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota",
+      "title": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军",
+      "url": "/blog/moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota/",
+      "language": "zh",
+      "excerpt": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军 OpenMOSS 开源的 MOSS-Transcribe-Diarize 0.9B（1.5K stars），SOTA 端到端音频理解模型，一个模型同时完成长音频多说话人转写、说话人分离（diarization）、精确时间戳和声学事件标注。架构：Qwen3-0.6B 解码器 + Whisper-Medium 编码器 + 4x 时序合并 MLP 桥接。支持 50+ 语言。输出格式 [时间戳][S01]文本[时间戳]。",
+      "score": 0.48401064
+    },
+    {
+      "article_id": "openscreen-free-screen-recorder",
+      "title": "OpenScreen：免费开源的 Screen Studio 替代品",
+      "url": "/blog/openscreen-free-screen-recorder/",
+      "language": "zh",
+      "excerpt": "OpenScreen：免费开源的 Screen Studio 替代品 无需39美元每月，立刻获得智能缩放、鼠标跟随等专业录屏功能！OpenScreen是一个完全免费、跨平台的屏幕演示视频制作工具，被视为商业软件 Screen Studio 的开源替代方案。 screen-recorder open-source Screen-Studio video-production 1. 项目定位与核心价值 2. 核心功能特性 智能缩放与跟随 丰富的视觉定制 运动模糊（Motion Blur） 后期标注与编辑 灵活导出 3. 技术栈与社区活跃度 4. 适用场景 总",
+      "score": 0.47716936
+    },
+    {
+      "article_id": "lance-bytedance-3b-multimodal-unified",
+      "title": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜",
+      "url": "/blog/lance-bytedance-3b-multimodal-unified/",
+      "language": "zh",
+      "excerpt": "字节开源 Lance：3B 参数搞定图像视频六合一，VBench 登顶统一模型榜 字节跳动智能创作实验室开源 Lance：3B 激活参数，统一支持图像理解/生成/编辑与视频理解/生成/编辑六项任务。GenEval 0.90 并列第一，VBench 85.11 登顶统一模型，Apache 2.0 开源。 多模态 字节跳动 Lance 图像生成 视频生成 开源 3B 统一模型 六项能力，一个模型 基准成绩 技术要点",
+      "score": 0.47598234
+    },
+    {
+      "article_id": "gh-copilot-code-review-cli",
+      "title": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review",
+      "url": "/blog/gh-copilot-code-review-cli/",
+      "language": "zh",
+      "excerpt": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review GitHub CLI v2.88.0 新功能实测：在终端直接邀请 Copilot 审查 PR，无需跳转浏览器，附隐私风险提示 github copilot cli code-review developer-tools 核心能力 如何使用 免费吗？ 隐私警告（必读） 能用其他 AI CLI 吗？ 额外优化：大型团队福音 总结",
+      "score": 0.47552085
+    }
+  ]
+}
