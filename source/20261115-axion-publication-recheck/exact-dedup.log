@@ -1,0 +1,51 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6af9cc5e-293d4b35-60b159ef）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 1005 篇 + 公众号草稿箱 4 条 + 本地发布记录 988 条 + MemPalace 4266 抽屉
+
+── 查：https://github.com/bytedance/axion1_0
+   ❌ [BLOG  ] Axion 1.0：数据构造、Agent训练与低成本叙事的边界
+      一手源相同: bytedance/axion1_0
+   ❌ [发过 2026-11-09] Axion 1.0：Agent训练贵在哪里
+      一手源相同: bytedance/axion1_0
+   ❌ [知识库] # Axion的Agent数据构造与训练成本分析  **Summary**: 已抓取论文、代码、数据卡和模型卡：Axio
+      一手源相同: bytedance/axion1_0
+   ❌ [知识库] --- name: Axion 1.0 agent training review description: Sourc
+      一手源相同: bytedance/axion1_0
+   ❌ [知识库] # Axion的Agent数据构造与训练成本分析  **Summary**: 已抓取论文、代码、数据卡和模型卡：Axio
+      一手源相同: bytedance/axion1_0
+   ❌ [知识库] # 三个核心发现：  **Summary**: 三个核心发现： 1️⃣ 高质量 Agent 数据可以被巧妙地「构造」出来
+      一手源相同: bytedance/axion1_0
+
+── 查：Axion 1.0
+   ❌ [BLOG  ] Axion 1.0：数据构造、Agent训练与低成本叙事的边界
+      正文出现实体名「axion」
+   ❌ [BLOG  ] Higgs Realtime Duplex：开源、收费与工程实现核查
+      正文出现实体名「axion」
+   ❌ [BLOG  ] OpenRSI Index：如何评测AI是否真的改进了科研方法
+      正文出现实体名「axion」
+   ❌ [发过 2026-11-09] Axion 1.0：Agent训练贵在哪里
+      正文出现实体名「axion」
+   ❌ [知识库] # Axion的Agent数据构造与训练成本分析  **Summary**: 已抓取论文、代码、数据卡和模型卡：Axio
+      正文出现实体名「axion」
+   ❌ [知识库] --- name: Axion 1.0 agent training review description: Sourc
+      正文出现实体名「axion」
+   ❌ [知识库] unityreproduction52.8 HLE vs paper35B52.2,not122B officialch
+      正文出现实体名「axion」
+   ❌ [知识库] axion 1.0|Axion;Blog;WeChat|2026-11-09:L1-L9|→drawer_blog_ge
+      正文出现实体名「axion」
+   ❌ [知识库] # Duke,字节完全开源的智能体基座模型训练  **Summary**: Duke,字节完全开源的智能体基座模型训练
+      正文出现实体名「axion」
+   ❌ [知识库] # Axion的Agent数据构造与训练成本分析  **Summary**: 已抓取论文、代码、数据卡和模型卡：Axio
+      正文出现实体名「axion」
+   ❌ [知识库] # 三个核心发现：  **Summary**: 三个核心发现： 1️⃣ 高质量 Agent 数据可以被巧妙地「构造」出来
+      正文出现实体名「axion」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

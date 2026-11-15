@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "axion-agent-training-data-cost-review",
+      "title": "Axion 1.0：数据构造、Agent训练与低成本叙事的边界",
+      "url": "/blog/axion-agent-training-data-cost-review/",
+      "language": "zh",
+      "excerpt": "Axion 1.0：数据构造、Agent训练与低成本叙事的边界 Axion 1.0用可验证任务构造、两阶段SFT和异步GRPO训练科学推理与工具型Agent。本文核对论文、开源代码、数据与35B社区复现模型，拆解约1K GPU-hours的成本边界、HLE完整集和130题子集的差别，以及多次取最好成绩的评测条件，并给出数据闭环实践建议，区分作者报告、代码检查与尚未复现的能力。 Axion Agent SFT GRPO 开源模型 数据构造 Axion 1.0 是什么，开源到哪一步了？ 高质量数据如何被“构造”出来？ 第一阶段：让题目针对底座的能力变难 第二",
+      "score": 0.73190826
+    },
+    {
+      "article_id": "grpo-small-model-engineering-guide",
+      "title": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径",
+      "url": "/blog/grpo-small-model-engineering-guide/",
+      "language": "zh",
+      "excerpt": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径 GRPO（Group Relative Policy Optimization）让小模型在垂直任务上碾压frontier大模型成为可能。本文整合 ART、ms-swift、OpenClaw-RL 等开源仓库，以及 ART·E（Qwen 2.5 14B超越o3，$80训练）、MCP·RL等6个真实工程案例，给出完整的工程路径：任务选择→数据构造→奖励函数设计→训练循环→监控与避坑。 GRPO 强化学习 小模型 Qwen 微调 LLM训练 AI工程 Mycelium 为什么 GRPO 适合小模型专",
+      "score": 0.6184789
+    },
+    {
+      "article_id": "openthoughts-agent-sft-data-recipe-agentic-models",
+      "title": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解",
+      "url": "/blog/openthoughts-agent-sft-data-recipe-agentic-models/",
+      "language": "zh",
+      "excerpt": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解 UC Berkeley、Stanford、Bespoke Labs 等多机构合作的 OpenThoughts-Agent 论文（arXiv:2606.24855）做了迄今最系统的 Agent SFT 数据配方研究：6 阶段流水线、100+ 消融实验、100K 数据集，微调 Qwen3-32B 达 7 基准均值 44.8%，超越 Nemotron 3.9pp。最有价值的不是模型权重，而是那套可复用的数据选取逻辑。 AI Agent SFT 数据配方 开源 这",
+      "score": 0.6101655
+    },
+    {
+      "article_id": "longstraw-million-token-rl-training-gpu",
+      "title": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token",
+      "url": "/blog/longstraw-million-token-rl-training-gpu/",
+      "language": "zh",
+      "excerpt": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token 推理已经支持百万 token，但 RL 后训练卡在 256K 以下。LongStraw 用驻留状态 + 响应回放 + 分布式原生执行三项技术，在 8 张 H20 上完成 2M token 的精确 GRPO 训练。arXiv 2607.14952，已开源。 RL训练 长上下文 GRPO 大模型 AI Agent GPU 分布式训练 后训练 LLM 一、一个越来越大的差距 二、三项核心技术 1. Resident State（驻留状态） 2. Response Repla",
+      "score": 0.57734954
+    },
+    {
+      "article_id": "neural-imprint-atomgradient-continual-learning-device-ai",
+      "title": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始",
+      "url": "/blog/neural-imprint-atomgradient-continual-learning-device-ai/",
+      "language": "zh",
+      "excerpt": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始 质子梯度（AtomGradient）发布 Neural Imprint 白皮书 v2（2026-09-17），提出让已部署 AI 在持续使用中积累经验、更新模型状态，无需重新训练。三个 Gen-1 组件：RPP（激活空间用户建模）、DSR（稀疏注意力缓存管理）、FrogJump（层跳过加速）。实测：90B 模型在手机上跑 200 轮对话峰值 5.5GB，语音合成中位延迟 32.28ms。CC BY-NC-ND 4.0。 continual-learning on-d",
+      "score": 0.5715571
+    },
+    {
+      "article_id": "aibuildai-llm-posttrain-agent-autonomous-meta-search-posttrainbench",
+      "title": "后训练自动化：AIBuildAI 用元搜索在 PostTrainBench 拿第一，46.6 分超过所有 Agent",
+      "url": "/blog/aibuildai-llm-posttrain-agent-autonomous-meta-search-posttrainbench/",
+      "language": "zh",
+      "excerpt": "后训练自动化：AIBuildAI 用元搜索在 PostTrainBench 拿第一，46.6 分超过所有 Agent AIBuildAI LLM-Post-Train Agent，Apache 2.0 开源，7 stars，Python。核心是「元搜索」：元 Agent 读取任务后自己写搜索程序，而不是走固定拓扑。四个知识库（104 种后训练方法、215 个数据集、108 个框架、34 张工作流卡）通过 MCP 接口查询。在 PostTrainBench 七个任务+四个基座模型上得分 46.6，超过 Locus(45.6)、Claude Code Fab",
+      "score": 0.56931585
+    },
+    {
+      "article_id": "castform-neon-small-model-rl-finetuning-domain-specialist",
+      "title": "4B 小模型 RL 微调追平 GPT-5.6，成本百分之一：Castform 的技术框架与领域迁移预测",
+      "url": "/blog/castform-neon-small-model-rl-finetuning-domain-specialist/",
+      "language": "zh",
+      "excerpt": "4B 小模型 RL 微调追平 GPT-5.6，成本百分之一：Castform 的技术框架与领域迁移预测 Castform + Neon 的博客证明了一件事：4B 开源模型经过 RL 后训练，在金融检索任务上跑赢了 GPT-5.2，成本降低 100 倍。这篇文章深度拆解这套框架的三个核心组件（任务/环境/奖励函数）和合成数据管道，并分析将同样机制迁移到营销文案、邮件写作、社媒回帖、舆情分析等领域的可行性与卡点。 强化学习 小模型 RL微调 领域专精 RAG AI工具 开源模型 Mycelium 为什么多轮检索是 AI 成本的死穴 核心框架：三个组件，一个循",
+      "score": 0.56541425
+    },
+    {
+      "article_id": "agentic-rl-lab-grpo-vision-post-training-low-cost-geometry",
+      "title": "agentic-rl-lab：从几何题入门Agent强化学习",
+      "url": "/blog/agentic-rl-lab-grpo-vision-post-training-low-cost-geometry/",
+      "language": "zh",
+      "excerpt": "agentic-rl-lab：从几何题入门Agent强化学习 agentic-rl-lab是Datawhale开源的Agent强化学习实验教程，使用PyTRIO远程训练服务拆解GRPO、蒸馏、搜索和工具调用。本篇核对源码，纠正约5元小规模会话与100步结果的混淆，解释固定100题测试、格式遵循和推理能力的区别，并给出奖励函数、采样到独立评测的学习路径，避免把作者记录当作独立复现。 AI GRPO 后训练 RL 开源 Python 视觉模型 Mycelium 2026年11月更新：应该怎样读这个仓库？ 71%到87%，具体改善了什么？ 从哪一章开始最有效？",
+      "score": 0.56485707
+    },
+    {
+      "article_id": "learning-from-failure-inference-time-gui-agent-improvement-stanford",
+      "title": "Don't Waste Failures! Stanford Boosts GUI Agents 15% at Inference Time by Mining Failed Trajectories (ECCV 2026)",
+      "url": "/blog/learning-from-failure-inference-time-gui-agent-improvement-stanford/",
+      "language": "en",
+      "excerpt": "Don't Waste Failures! Stanford Boosts GUI Agents 15% at Inference Time by Mining Failed Trajectories (ECCV 2026) Stanford ECCV 2026 paper: Feed failed agent trajectories to Claude 4.5 for diagnosis, auto-generate code patches injected at inference time. OSWorld: 42.3%→48.9% (+15.",
+      "score": 0.56101835
+    },
+    {
+      "article_id": "qwen38-27b-obliterated-v3-abliteration-blending-mmlu-tradeoff",
+      "title": "More Abliteration Isn't Better: The Trade-off Curve Across Three Generations of Qwen3.8-27B-OBLITERATED",
+      "url": "/blog/qwen38-27b-obliterated-v3-abliteration-blending-mmlu-tradeoff/",
+      "language": "en",
+      "excerpt": "More Abliteration Isn't Better: The Trade-off Curve Across Three Generations of Qwen3.8-27B-OBLITERATED A second abliteration lineage on the same Qwen3.8-27B base — 969k downloads, 1,093 likes, Apache-2.0. What makes it worth reading is that it publishes the method and the cost f",
+      "score": 0.55772746
+    }
+  ]
+}

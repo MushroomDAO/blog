@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-11-15T15:15:54.657556+00:00",
+  "decision": "Reuse Nov09 existing bilingual article; supplied three-stage training claims already covered. No new article, deployment, image generation, embeddings or draft creation.",
+  "articleSha256": "30521ab4e0f6f2d0dcd1bca01633f64ca5efb420b85eac6fe77b706665e6f0a6",
+  "primarySource": "https://github.com/bytedance/axion1_0",
+  "officialREADMERechecked": true,
+  "semanticSearchVerified": true,
+  "bannerAndThreeFigures": "Existing matching assets verified from public image responses.",
+  "historicalVerification": "Nov09 selected104CPUtests and18subchecks recorded; not rerun now, not GPU/model/benchmark reproduction."
+}
