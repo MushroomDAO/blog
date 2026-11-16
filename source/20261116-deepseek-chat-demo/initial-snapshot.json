@@ -1,0 +1,92 @@
+{
+  "success": true,
+  "data": {
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 13652769386817852056
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "origin": "http://127.0.0.1:50740/index.html",
+    "refs": {
+      "e1": {
+        "name": "Close sidebar",
+        "role": "button"
+      },
+      "e10": {
+        "name": "Delete",
+        "role": "button"
+      },
+      "e11": {
+        "name": "",
+        "role": "generic"
+      },
+      "e12": {
+        "name": "DeepThink",
+        "role": "button"
+      },
+      "e13": {
+        "name": "Search",
+        "role": "button"
+      },
+      "e14": {
+        "name": "Voice input",
+        "role": "button"
+      },
+      "e15": {
+        "name": "Upload files",
+        "role": "button"
+      },
+      "e16": {
+        "name": "Send",
+        "role": "button"
+      },
+      "e17": {
+        "name": "Enter a message",
+        "role": "textbox"
+      },
+      "e2": {
+        "name": "New chat",
+        "role": "button"
+      },
+      "e3": {
+        "name": "Settings",
+        "role": "button"
+      },
+      "e4": {
+        "name": "Close",
+        "role": "button"
+      },
+      "e5": {
+        "name": "General",
+        "role": "tab"
+      },
+      "e6": {
+        "name": "Data",
+        "role": "tab"
+      },
+      "e7": {
+        "name": "Enter API Key",
+        "role": "textbox"
+      },
+      "e8": {
+        "name": "Upload",
+        "role": "button"
+      },
+      "e9": {
+        "name": "Download",
+        "role": "button"
+      }
+    },
+    "removedRefs": [],
+    "snapshot": "- button \"Close sidebar\" [ref=e1]\n- button \"New chat\" [ref=e2]\n- button \"Settings\" [ref=e3]\n- generic \"DeepThinkSearch\" [ref=e11] clickable [onclick]\n  - textbox \"Enter a message\" [ref=e17]\n  - button \"DeepThink\" [ref=e12]\n  - button \"Search\" [ref=e13]\n  - button \"Voice input\" [ref=e14]\n  - button \"Upload files\" [ref=e15]\n  - button \"Send\" [disabled, ref=e16]\n- button \"Close\" [ref=e4]\n- tab \"General\" [ref=e5]\n- tab \"Data\" [selected, ref=e6]\n- textbox \"Enter API Key\" [ref=e7]\n- button \"Upload\" [ref=e8]\n- button \"Download\" [disabled, ref=e9]\n- button \"Delete\" [ref=e10]"
+  },
+  "error": null
+}

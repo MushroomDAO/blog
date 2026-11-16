@@ -1,0 +1,47 @@
+? Verifying lockfile against supply-chain policies (304 entries)...
+Packages are cloned from the content-addressable store to the virtual store.
+  Content-addressable store is at: /Users/jason/Library/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+Downloading cytoscape-fcose@2.2.0: 0.00 B/7.60 MB
+Downloading mermaid@11.10.1: 0.00 B/14.16 MB
+Downloading @rspack/binding-darwin-arm64@2.0.2: 0.00 B/16.81 MB
+Downloading @rspack/binding-darwin-arm64@2.0.2: 12.47 MB/16.81 MB
+✓ Lockfile passes supply-chain policies (304 entries in 3.2s)
+Lockfile is up to date, resolution step is skipped
+Packages: +235
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 235, reused 62, downloaded 173, added 235, done
+
+dependencies:
++ @types/katex 0.16.8
++ @types/mdast 4.0.4
++ @types/prismjs 1.26.6
++ @types/react 18.3.31
++ @types/react-dom 18.3.0
++ clsx 2.1.1
++ fflate 0.8.3
++ idb 8.0.3
++ katex 0.16.22
++ mdast-util-find-and-replace 3.0.2
++ mdast-util-from-markdown 2.0.3
++ mdast-util-gfm 3.1.0
++ mdast-util-math 3.0.0
++ mermaid 11.10.1
++ micromark-extension-gfm 3.0.0
++ micromark-extension-llm-math 3.1.0
++ prismjs 1.30.0
++ react 18.3.1
++ react-dom 18.3.1
++ zustand 4.4.7
+
+devDependencies:
++ @rspack/cli 2.0.2
++ @rspack/core 2.0.2
++ @rspack/dev-server 2.0.1
++ @swc/helpers 0.5.23
++ @types/node 20.9.2
++ oxfmt 0.48.0
++ oxlint 1.63.0
++ typescript 7.0.2
+
+Done in 3.5s using pnpm v12.3.4

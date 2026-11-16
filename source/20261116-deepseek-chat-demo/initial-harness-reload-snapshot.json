@@ -1,0 +1,68 @@
+{
+  "success": true,
+  "data": {
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 13652769386817852056
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "origin": "http://127.0.0.1:50677/index.html",
+    "refs": {
+      "e18": {
+        "name": "Close sidebar",
+        "role": "button"
+      },
+      "e19": {
+        "name": "New chat",
+        "role": "button"
+      },
+      "e20": {
+        "name": "Settings",
+        "role": "button"
+      },
+      "e21": {
+        "name": "",
+        "role": "generic"
+      },
+      "e22": {
+        "name": "",
+        "role": "generic"
+      },
+      "e23": {
+        "name": "DeepThink",
+        "role": "button"
+      },
+      "e24": {
+        "name": "Search",
+        "role": "button"
+      },
+      "e25": {
+        "name": "Voice input",
+        "role": "button"
+      },
+      "e26": {
+        "name": "Upload files",
+        "role": "button"
+      },
+      "e27": {
+        "name": "Send",
+        "role": "button"
+      },
+      "e28": {
+        "name": "Enter a message",
+        "role": "textbox"
+      }
+    },
+    "removedRefs": [],
+    "snapshot": "- button \"Close sidebar\" [ref=e18]\n- button \"New chat\" [ref=e19]\n- generic \"Local fixture\" [ref=e21] clickable [cursor:pointer, onclick]\n- button \"Settings\" [ref=e20]\n- generic \"DeepThinkSearch\" [ref=e22] clickable [onclick]\n  - textbox \"Enter a message\" [ref=e28]\n  - button \"DeepThink\" [ref=e23]\n  - button \"Search\" [ref=e24]\n  - button \"Voice input\" [ref=e25]\n  - button \"Upload files\" [ref=e26]\n  - button \"Send\" [disabled, ref=e27]"
+  },
+  "error": null
+}

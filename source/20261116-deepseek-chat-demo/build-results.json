@@ -1,0 +1,12 @@
+{
+  "commit": "5d5dd754ebc1948e977ddb880a9eb5aa25f37b4c",
+  "version": "0.1.1",
+  "node": "v26.10.0",
+  "pnpm": "12.3.4",
+  "install": "frozen-lockfile --ignore-scripts passed",
+  "type": "passed",
+  "build": "passed",
+  "distLicenseMatches": true,
+  "runtimeSourceModified": false,
+  "realApiCalls": 0
+}

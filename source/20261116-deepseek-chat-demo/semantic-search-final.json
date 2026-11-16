@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "deepseek-chat-demo-static-frontend-api-storage-guide",
+      "title": "DeepSeek chat-demo：纯静态聊天，API与数据边界要分清",
+      "url": "/blog/deepseek-chat-demo-static-frontend-api-storage-guide/",
+      "language": "zh",
+      "excerpt": "DeepSeek chat-demo：纯静态聊天，API与数据边界要分清 DeepSeek官方chat-demo可作为静态网站部署，也可下载发行包在浏览器中打开，无需自建应用服务器。本文核对前端实现、API协议、密钥和会话存储、附件上传以及ZIP导入导出的边界，记录本地构建、类型检查和模拟流式回复验证，说明个人使用与团队共享时该如何选择架构，避免把零应用后端误当成离线推理或免费API。 DeepSeek 静态网站 聊天应用 React 本地存储 “纯静态”具体省掉了什么？ 怎么运行，是否只有一个HTML？ 为什么换一个API地址不一定就能用？ 密钥和聊天",
+      "score": 0.7018847
+    },
+    {
+      "article_id": "dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem",
+      "title": "dsh-tui-pi：DeepSeek Harness 的社区 TUI 生态，把编码 Agent 终端做成了 pi 风格",
+      "url": "/blog/dsh-tui-pi-deepseek-harness-terminal-ui-plugin-ecosystem/",
+      "language": "zh",
+      "excerpt": "dsh-tui-pi：DeepSeek Harness 的社区 TUI 生态，把编码 Agent 终端做成了 pi 风格 DeepSeek Harness (dsh) 是 DeepSeek 的编码 Agent 运行时，类比 Claude Code。dsh-tui-pi 是社区构建的 pi 风格 TUI 插件套件，提供实时子 Agent 监控、历史回溯与分叉、飞书手机遥控、动态上下文裁剪、MCP 适配器等 15+ 功能，以及 8 个配套插件。 AI DeepSeek TUI Terminal Agent 编码Agent 插件 开源 dsh MCP 先说 d",
+      "score": 0.59327936
+    },
+    {
+      "article_id": "deepseek-v4-flash-vision-exp-multimodal-agent-dspark",
+      "title": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了",
+      "url": "/blog/deepseek-v4-flash-vision-exp-multimodal-agent-dspark/",
+      "language": "zh",
+      "excerpt": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了 DeepSeek-V4 家族第一个实验性多模态模型，8 月 31 日上线，五天 18.4 万下载、651 likes，MIT。在 DeepSeek-V4-Flash 架构上加视觉模块并继续训练：多模态 agent 能力大幅提升，而七项文本 agent 基准里六项不降反升。三项超过 Opus-4.8（DeepSWE 59.3、Agents' Last Exam 27.3、ZeroBench 35.0）。DSpark 推测解码的 draft 权重和 targ",
+      "score": 0.56499034
+    },
+    {
+      "article_id": "alibaba-zvec-in-process-vector-db-rag-agent-memory",
+      "title": "Zvec: Embedded Vector Database — RAG and Agent Memory Without a Separate Server",
+      "url": "/blog/alibaba-zvec-in-process-vector-db-rag-agent-memory/",
+      "language": "en",
+      "excerpt": "Zvec: Embedded Vector Database — RAG and Agent Memory Without a Separate Server Alibaba's alibaba/zvec is an in-process vector database — no server needed. pip install it and get dense+sparse vectors, full-text search, and hybrid search inside your app. v0.7.0 adds zvec-grep (zg)",
+      "score": 0.5552654
+    },
+    {
+      "article_id": "deepseek-reasonix-terminal-coding-agent-prefix-cache",
+      "title": "DeepSeek-Reasonix: A Terminal Coding Agent Designed Around Prefix Cache Stability",
+      "url": "/blog/deepseek-reasonix-terminal-coding-agent-prefix-cache/",
+      "language": "en",
+      "excerpt": "DeepSeek-Reasonix: A Terminal Coding Agent Designed Around Prefix Cache Stability esengine's open-source DeepSeek-native terminal coding agent, 33k stars, MIT License, Go rewrite. Architecture is built around prefix-cache stability — real user: 435M input tokens in one day, 99.82",
+      "score": 0.552289
+    },
+    {
+      "article_id": "dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile",
+      "title": "dsh-plugin-mobile-gateway：给 DeepSeek Harness 加上移动端，手机扫码就能用，Tailscale 一行命令搞定远程",
+      "url": "/blog/dsh-plugin-mobile-gateway-websocket-ios-deepseek-harness-mobile/",
+      "language": "zh",
+      "excerpt": "dsh-plugin-mobile-gateway：给 DeepSeek Harness 加上移动端，手机扫码就能用，Tailscale 一行命令搞定远程 Clarklevis1995/dsh-plugin-mobile-gateway，MIT 开源，JavaScript 插件，给 DeepSeek Harness (DSH) 增加 WebSocket 移动网关。支持局域网直连、Linux 公网一键 TLS、Tailscale 远程接入三种部署方式。配套 iOS 17+ SwiftUI 原生客户端，双向同步会话、实时流、Human-in-the-loop",
+      "score": 0.5521387
+    },
+    {
+      "article_id": "dsh-web-deepseek-harness-web-plugin-sidebar-all-in-one",
+      "title": "dsh-web：DeepSeek Harness 的插件生态包，任务看板 + SSH + 移动端 + 图像理解三步装齐",
+      "url": "/blog/dsh-web-deepseek-harness-web-plugin-sidebar-all-in-one/",
+      "language": "zh",
+      "excerpt": "dsh-web：DeepSeek Harness 的插件生态包，任务看板 + SSH + 移动端 + 图像理解三步装齐 dsh-web 是 DeepSeek Harness（DSH）Web GUI 的插件聚合生态包，一条命令装齐任务看板、移动端远程、SSH 运维、图像理解、皮肤、Git 图谱、梁神模式、救助模式等全部能力。一切皆插件，可插拔可替换，附创意工坊（dsh-market.com）社区分发体系。6,000+ Star，Apache 2.0。 开源 DeepSeek AI编程 插件生态 SSH运维 移动端 dsh-web 任务看板 三步装齐 是什么",
+      "score": 0.5457887
+    },
+    {
+      "article_id": "dsh-media-desk-creator-workbench-guide",
+      "title": "DSH Media Desk: A Creator Workbench Engineering Guide",
+      "url": "/blog/dsh-media-desk-creator-workbench-guide/",
+      "language": "en",
+      "excerpt": "DSH Media Desk: A Creator Workbench Engineering Guide Explore dsh-media-desk: a DeepSeek Harness creator workbench for ideas, drafts, images and review, with setup, cost boundaries, build and 87 offline tests. DeepSeek Harness dsh-media-desk Content Creation Open Source Workflow ",
+      "score": 0.53969884
+    },
+    {
+      "article_id": "lilbot-agent-local-coding-trial",
+      "title": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱",
+      "url": "/blog/lilbot-agent-local-coding-trial/",
+      "language": "zh",
+      "excerpt": "LilBot-agent 试用手记：用 Python 把本地 AI 塞进一个全屏驾驶舱 LilBot-agent 是纯 Python 开源本地编码 Agent，Windows 优先，原生适配 DeepSeek 等 OpenAI 兼容模型，内置全屏 TUI 驾驶舱、多子代理/Team 协作、五层权限沙箱、持久化记忆、MCP 外部工具对接，153 Stars，本文从开发者试用视角逐层拆解。 本地Agent AI编程 DeepSeek MCP Python 多智能体 Windows 开源工具 为什么会有 LilBot-agent？ 快速安装与第一次启动（Win",
+      "score": 0.53637654
+    },
+    {
+      "article_id": "hybrid-search-pagefind-vectorize-workers-ai-guide",
+      "title": "给静态博客装一套「关键词 + 语义」混合搜索：从 Pagefind 到 Cloudflare Vectorize 的完整实战记录（附复刻指南）",
+      "url": "/blog/hybrid-search-pagefind-vectorize-workers-ai-guide/",
+      "language": "zh",
+      "excerpt": "给静态博客装一套「关键词 + 语义」混合搜索：从 Pagefind 到 Cloudflare Vectorize 的完整实战记录（附复刻指南） 记录给 blog.mushroom.cv 加一套关键词+语义混合搜索的完整过程：先上零成本的 Pagefind 基线，用真实数据决定值不值得上向量检索，再用 Cloudflare Workers AI（bge-m3）+ Vectorize 上线。踩过的平台坑、真实修过的 bug、密码墙加了又拆的完整决策链，以及普通人如何克隆仓库复刻同一套技术栈。 Cloudflare Workers AI Vectorize P",
+      "score": 0.5324194
+    }
+  ]
+}

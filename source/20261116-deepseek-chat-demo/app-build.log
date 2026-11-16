@@ -1,0 +1,2 @@
+$ rm -rf dist && NODE_ENV=production rspack build -c rspack.config.ts
+Rspack compiled successfully in 326 ms

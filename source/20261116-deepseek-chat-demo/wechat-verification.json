@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-16T01:28:30.499Z",
+  "drafts": [
+    {
+      "slug": "deepseek-chat-demo-static-frontend-api-storage-guide",
+      "mediaId": "prCUE631thH1cmNLi42prOnfxSeg29x4ghTL_NJ9RpLGAXZr3LnePEzUe0p9A8Ue",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "f9d7ce87f722c7db9d65eb68b324c63edc6f4f04b0ddf202960d52a3c06f945a",
+      "remoteTextHash": "f9d7ce87f722c7db9d65eb68b324c63edc6f4f04b0ddf202960d52a3c06f945a",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/deepseek-chat-demo-static-frontend-api-storage-guide/",
+      "localContentHash": "d2a29ea1b0b9cd0d81c1ff298ef7feca10de6f0aa9408d076ae2a10a9e8f07c3",
+      "remoteContentHash": "cb3511125f286cb9ada450a3b26b6a3a3557edbf4fe559a2a61a8bd09af6d570"
+    }
+  ]
+}

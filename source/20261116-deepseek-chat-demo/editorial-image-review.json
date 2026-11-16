@@ -1,0 +1,29 @@
+{
+  "workerExitCode": 0,
+  "manualReviewAfterExit": true,
+  "banner": "Photographic closedlaptop/brasskey/glassstoragebox/networkcable, seed8681,72788bytes, nofaces/lettering, on-topic.",
+  "figures": [
+    {
+      "file": "deepseek-chat-demo-static-frontend-api-storage-guide-fig-01.png",
+      "passed": true,
+      "review": "Staticshelf->browser->API, legibleChineseandAPIlabel, correctLittleM"
+    },
+    {
+      "file": "deepseek-chat-demo-static-frontend-api-storage-guide-fig-02.png",
+      "passed": true,
+      "review": "localStoragekeysettings vsIndexedDBconversationdrawer, accurateclearlabels"
+    },
+    {
+      "file": "deepseek-chat-demo-static-frontend-api-storage-guide-fig-03.png",
+      "passed": true,
+      "review": "ZIPstagingvalidation beforewholecabinetreplacement, notmerge, legibleChinese"
+    }
+  ],
+  "dimensions": "1280x720 each",
+  "bytes": [
+    36523,
+    35672,
+    42837
+  ],
+  "localFixtureScreenshot": "Reviewed: LOCAL TEST PROMPT/RESPONSE only, syntheticlocaltest, notmodelserviceoutput andnotusedasbanner"
+}

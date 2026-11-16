@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-16T01:26:05.947864+00:00",
+  "articles": [
+    {
+      "slug": "deepseek-chat-demo-static-frontend-api-storage-guide",
+      "url": "https://blog.mushroom.cv/blog/deepseek-chat-demo-static-frontend-api-storage-guide/",
+      "title": "DeepSeek chat-demo：纯静态聊天，API与数据边界要分清",
+      "listRank": 2,
+      "carouselRank": 2,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepseek-chat-demo-static-frontend-api-storage-guide-banner.BwY4BOKX.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 72788
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepseek-chat-demo-static-frontend-api-storage-guide-banner.BwY4BOKX_175uaR.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 18764
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepseek-chat-demo-static-frontend-api-storage-guide-fig-01.BwUMGuhZ_2joS3Y.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 30022
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepseek-chat-demo-static-frontend-api-storage-guide-fig-02.BJBP1uJO_Z1MjQ78.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 29542
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deepseek-chat-demo-static-frontend-api-storage-guide-fig-03.BLjRGF0Y_28H9Ro.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 37122
+        }
+      ]
+    }
+  ]
+}

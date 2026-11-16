@@ -1,0 +1,176 @@
+[
+  {
+    "args": [
+      "network",
+      "route",
+      "https://**",
+      "--abort"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":true,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":false,\"saveStatus\":\"not_attempted\"},\"routed\":\"https://**\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "open",
+      "http://127.0.0.1:50740/index.html"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"targetId\":\"C1400518B74E9BC20480F0DA1D475790\",\"title\":\"API 使用 demo\",\"url\":\"http://127.0.0.1:50740/index.html\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "snapshot",
+      "-i"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:50740/index.html\",\"refs\":{\"e1\":{\"name\":\"Close sidebar\",\"role\":\"button\"},\"e10\":{\"name\":\"Delete\",\"role\":\"button\"},\"e11\":{\"name\":\"\",\"role\":\"generic\"},\"e12\":{\"name\":\"DeepThink\",\"role\":\"button\"},\"e13\":{\"name\":\"Search\",\"role\":\"button\"},\"e14\":{\"name\":\"Voice input\",\"role\":\"button\"},\"e15\":{\"name\":\"Upload files\",\"role\":\"button\"},\"e16\":{\"name\":\"Send\",\"role\":\"button\"},\"e17\":{\"name\":\"Enter a message\",\"role\":\"textbox\"},\"e2\":{\"name\":\"New chat\",\"role\":\"button\"},\"e3\":{\"name\":\"Settings\",\"role\":\"button\"},\"e4\":{\"name\":\"Close\",\"role\":\"button\"},\"e5\":{\"name\":\"General\",\"role\":\"tab\"},\"e6\":{\"name\":\"Data\",\"role\":\"tab\"},\"e7\":{\"name\":\"Enter API Key\",\"role\":\"textbox\"},\"e8\":{\"name\":\"Upload\",\"role\":\"button\"},\"e9\":{\"name\":\"Download\",\"role\":\"button\"}},\"removedRefs\":[],\"snapshot\":\"- button \\\"Close sidebar\\\" [ref=e1]\\n- button \\\"New chat\\\" [ref=e2]\\n- button \\\"Settings\\\" [ref=e3]\\n- generic \\\"DeepThinkSearch\\\" [ref=e11] clickable [onclick]\\n  - textbox \\\"Enter a message\\\" [ref=e17]\\n  - button \\\"DeepThink\\\" [ref=e12]\\n  - button \\\"Search\\\" [ref=e13]\\n  - button \\\"Voice input\\\" [ref=e14]\\n  - button \\\"Upload files\\\" [ref=e15]\\n  - button \\\"Send\\\" [disabled, ref=e16]\\n- button \\\"Close\\\" [ref=e4]\\n- tab \\\"General\\\" [ref=e5]\\n- tab \\\"Data\\\" [selected, ref=e6]\\n- textbox \\\"Enter API Key\\\" [ref=e7]\\n- button \\\"Upload\\\" [ref=e8]\\n- button \\\"Download\\\" [disabled, ref=e9]\\n- button \\\"Delete\\\" [ref=e10]\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "(()=>{const native=window.fetch.bind(window);window.fixtureRequests=[];const chunks=[\"event: message_start\\ndata: {\\\"type\\\": \\\"message_start\\\", \\\"message\\\": {\\\"id\\\": \\\"local-fixture\\\", \\\"type\\\": \\\"message\\\", \\\"role\\\": \\\"assistant\\\", \\\"model\\\": \\\"local-test-fixture\\\", \\\"content\\\": [], \\\"stop_reason\\\": null, \\\"stop_sequence\\\": null, \\\"usage\\\": {\\\"input_tokens\\\": 1, \\\"output_tokens\\\": 0}}}\\n\\n\", \"event: content_block_start\\ndata: {\\\"type\\\": \\\"content_block_start\\\", \\\"index\\\": 0, \\\"content_block\\\": {\\\"type\\\": \\\"text\\\", \\\"text\\\": \\\"\\\"}}\\n\\n\", \"event: content_block_delta\\ndata: {\\\"type\\\": \\\"content_block_delta\\\", \\\"index\\\": 0, \\\"delta\\\": {\\\"type\\\": \\\"text_delta\\\", \\\"text\\\": \\\"LOCAL TEST \\\"}}\\n\\n\", \"event: content_block_delta\\ndata: {\\\"type\\\": \\\"content_block_delta\\\", \\\"index\\\": 0, \\\"delta\\\": {\\\"type\\\": \\\"text_delta\\\", \\\"text\\\": \\\"RESPONSE\\\"}}\\n\\n\", \"event: content_block_stop\\ndata: {\\\"type\\\": \\\"content_block_stop\\\", \\\"index\\\": 0}\\n\\n\", \"event: message_delta\\ndata: {\\\"type\\\": \\\"message_delta\\\", \\\"delta\\\": {\\\"stop_reason\\\": \\\"end_turn\\\", \\\"title\\\": \\\"Local fixture\\\"}, \\\"usage\\\": {\\\"output_tokens\\\": 3}}\\n\\n\", \"event: message_stop\\ndata: {\\\"type\\\": \\\"message_stop\\\"}\\n\\n\"];window.fetch=async(input,init={})=>{const u=new URL(input instanceof Request?input.url:String(input),location.href);if(u.origin===location.origin)return native(input,init);if(u.hostname!=='api.deepseek.com')throw new Error('External request blocked by local test');window.fixtureRequests.push({path:u.pathname,method:init.method||'GET'});if(u.pathname==='/models')return new Response(JSON.stringify({data:[{id:'deepseek-flash'}]}),{headers:{'Content-Type':'application/json'}});if(u.pathname==='/anthropic/v1/messages'){const enc=new TextEncoder();return new Response(new ReadableStream({start(c){let i=0;const pump=()=>{if(i===chunks.length){c.close();return}c.enqueue(enc.encode(chunks[i++]));setTimeout(pump,30)};pump()}}),{headers:{'Content-Type':'text/event-stream'}})}throw new Error('Unimplemented local fixture endpoint '+u.pathname)};return 'Synthetic API fixture installed; no remote service calls'})()"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:50740/index.html\",\"result\":\"Synthetic API fixture installed; no remote service calls\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "!!document.querySelector('input[type=password]')"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:50740/index.html\",\"result\":true},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "fill",
+      "input[type=password]",
+      "local-fixture-key"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"filled\":\"input[type=password]\",\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"}},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Enter"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"pressed\":\"Enter\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "wait",
+      "500"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"ms\":500,\"waited\":\"timeout\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Escape"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"pressed\":\"Escape\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "snapshot",
+      "-i"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:50740/index.html\",\"refs\":{\"e1\":{\"name\":\"Close sidebar\",\"role\":\"button\"},\"e11\":{\"name\":\"\",\"role\":\"generic\"},\"e12\":{\"name\":\"DeepThink\",\"role\":\"button\"},\"e13\":{\"name\":\"Search\",\"role\":\"button\"},\"e14\":{\"name\":\"Voice input\",\"role\":\"button\"},\"e15\":{\"name\":\"Upload files\",\"role\":\"button\"},\"e16\":{\"name\":\"Send\",\"role\":\"button\"},\"e17\":{\"name\":\"Enter a message\",\"role\":\"textbox\"},\"e2\":{\"name\":\"New chat\",\"role\":\"button\"},\"e3\":{\"name\":\"Settings\",\"role\":\"button\"}},\"removedRefs\":[\"@e4\",\"@e5\",\"@e6\",\"@e7\",\"@e8\",\"@e9\",\"@e10\"],\"snapshot\":\"- button \\\"Close sidebar\\\" [ref=e1]\\n- button \\\"New chat\\\" [ref=e2]\\n- button \\\"Settings\\\" [ref=e3]\\n- generic \\\"DeepThinkSearch\\\" [ref=e11] clickable [onclick]\\n  - textbox \\\"Enter a message\\\" [ref=e17]\\n  - button \\\"DeepThink\\\" [ref=e12]\\n  - button \\\"Search\\\" [ref=e13]\\n  - button \\\"Voice input\\\" [ref=e14]\\n  - button \\\"Upload files\\\" [ref=e15]\\n  - button \\\"Send\\\" [disabled, ref=e16]\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "fill",
+      "textarea",
+      "LOCAL TEST PROMPT"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"filled\":\"textarea\",\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"}},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Enter"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"pressed\":\"Enter\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "wait",
+      "--text",
+      "LOCAL TEST RESPONSE"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"text\":\"LOCAL TEST RESPONSE\",\"waited\":\"text\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({keyStored:localStorage.getItem('chat-demo:api-key')==='local-fixture-key',fixtureRequests:window.fixtureRequests,bodyHasResponse:document.body.innerText.includes('LOCAL TEST RESPONSE')})"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:50740/index.html\",\"result\":\"{\\\"keyStored\\\":true,\\\"fixtureRequests\\\":[{\\\"path\\\":\\\"/models\\\",\\\"method\\\":\\\"GET\\\"},{\\\"path\\\":\\\"/anthropic/v1/messages\\\",\\\"method\\\":\\\"POST\\\"}],\\\"bodyHasResponse\\\":true}\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "screenshot",
+      "/Users/jason/Dev/mycelium/blog/source/20261116-deepseek-chat-demo/local-fixture-screenshot.png"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"path\":\"/Users/jason/Dev/mycelium/blog/source/20261116-deepseek-chat-demo/local-fixture-screenshot.png\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "reload"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"url\":\"http://127.0.0.1:50740/index.html\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "wait",
+      "500"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"ms\":500,\"waited\":\"timeout\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "(async()=>{const db=await new Promise((res,rej)=>{const r=indexedDB.open('chat-demo');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});const sessions=await new Promise((res,rej)=>{const r=db.transaction('sessions').objectStore('sessions').getAll();r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});const found=JSON.stringify(sessions).includes('LOCAL TEST RESPONSE');db.close();return JSON.stringify({keyStored:localStorage.getItem('chat-demo:api-key')==='local-fixture-key',sessionCount:sessions.length,responseInIndexedDB:found})})()"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:50740/index.html\",\"result\":\"{\\\"keyStored\\\":true,\\\"sessionCount\\\":1,\\\"responseInIndexedDB\\\":true}\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "close"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"closed\":true,\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":false,\"engine\":\"chrome\",\"launchHash\":null},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":false,\"saveStatus\":\"not_configured\"},\"restoreStatus\":\"not_configured\",\"saveStatus\":\"not_configured\"},\"error\":null}\n",
+    "stderr": ""
+  }
+]

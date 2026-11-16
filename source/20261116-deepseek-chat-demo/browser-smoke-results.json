@@ -1,0 +1,71 @@
+{
+  "scope": "Unmodified production build, isolated headless Chrome, local HTTP with synthetic fetch/SSE fixture and externalHTTPS blocked; no real API key/account/request, no actual DeepSeek response or CORS validation",
+  "result": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 13652769386817852056
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "http://127.0.0.1:50740/index.html",
+      "result": "{\"keyStored\":true,\"fixtureRequests\":[{\"path\":\"/models\",\"method\":\"GET\"},{\"path\":\"/anthropic/v1/messages\",\"method\":\"POST\"}],\"bodyHasResponse\":true}"
+    },
+    "error": null
+  },
+  "afterReload": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 13652769386817852056
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "http://127.0.0.1:50740/index.html",
+      "result": "{\"keyStored\":true,\"sessionCount\":1,\"responseInIndexedDB\":true}"
+    },
+    "error": null
+  },
+  "checks": {
+    "keySavedThroughUI": true,
+    "syntheticSSEDisplayed": true,
+    "reloadPreservesIndexedDBResponse": true
+  },
+  "assertedReadback": {
+    "beforeReload": {
+      "keyStored": true,
+      "fixtureRequests": [
+        {
+          "path": "/models",
+          "method": "GET"
+        },
+        {
+          "path": "/anthropic/v1/messages",
+          "method": "POST"
+        }
+      ],
+      "bodyHasResponse": true
+    },
+    "afterReload": {
+      "keyStored": true,
+      "sessionCount": 1,
+      "responseInIndexedDB": true
+    }
+  }
+}

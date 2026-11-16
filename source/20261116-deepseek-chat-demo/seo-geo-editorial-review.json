@@ -1,0 +1,12 @@
+{
+  "bilingualEquivalent": true,
+  "BLUF": true,
+  "FAQ": true,
+  "questionHeadings": true,
+  "plainExternalURLs": true,
+  "scope": "Build/type and synthetic UI/SSE/persistence only, no real API/CORS/model claim",
+  "originalAnalysis": "Personal BYOK versus team key custody, protocol extension compatibility, origin isolation, backup versus full restoration",
+  "dataBoundaries": "Import replaces after validation; export nonimageoriginals/key/settings excluded; localdelete notremote upload delete",
+  "sourceDate": "2026-11-16 v0.1.1 pinned",
+  "bold": "None in body"
+}

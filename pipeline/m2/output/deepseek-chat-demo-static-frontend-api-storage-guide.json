@@ -1,0 +1,14 @@
+{
+  "title": "DeepSeek聊天Demo：静态前端的边界",
+  "author": "Mycelium",
+  "digest": "无需自建应用服务器，模型和语音仍依赖API，密钥、会话与备份范围需要分清。",
+  "mediaId": "prCUE631thH1cmNLi42prOnfxSeg29x4ghTL_NJ9RpLGAXZr3LnePEzUe0p9A8Ue",
+  "blogUrl": "https://blog.mushroom.cv/blog/deepseek-chat-demo-static-frontend-api-storage-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/deepseek-chat-demo-static-frontend-api-storage-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/deepseek-ai/chat-demo",
+    "github.com/deepseek-ai/chat-demo.git"
+  ],
+  "publishedAt": "2026-11-16T01:27:09.191Z"
+}

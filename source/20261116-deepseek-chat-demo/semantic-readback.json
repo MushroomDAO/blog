@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ee4e0c6a3366acb6245224c42e503eae0195004e3671d50b",
+    "metadata": {
+      "article_id": "deepseek-chat-demo-static-frontend-api-storage-guide",
+      "content_hash": "946912a2688b1222",
+      "excerpt": "DeepSeek chat-demo：纯静态聊天，API与数据边界要分清 DeepSeek官方chat-demo可作为静态网站部署，也可下载发行包在浏览器中打开，无需自建应用服务器。本文核对前端实现、API协议、密钥和会话存储、附件上传以及ZIP导入导出的边界，记录本地构建、类型检查和模拟流式回复验证，说明个人使用与团队共享时该如何选择架构，避免把零应用后端误当成离线推理或免费API。 DeepSeek 静态网站 聊天应用 React 本地存储 “纯静态”具体省掉了什么？ 怎么运行，是否只有一个HTML？ 为什么换一个API地址不一定就能用？ 密钥和聊天",
+      "language": "zh",
+      "tags": [
+        "DeepSeek",
+        "静态网站",
+        "聊天应用",
+        "React",
+        "本地存储"
+      ],
+      "title": "DeepSeek chat-demo：纯静态聊天，API与数据边界要分清",
+      "url": "/blog/deepseek-chat-demo-static-frontend-api-storage-guide/"
+    }
+  },
+  {
+    "id": "86f4c87f9a5a5b51bf8d02e4a690a3dda189833d8f7c1cd9",
+    "metadata": {
+      "article_id": "deepseek-chat-demo-static-frontend-api-storage-guide",
+      "content_hash": "a719797c9a4c668b",
+      "excerpt": "DeepSeek chat-demo: Static UI, API and Storage Review DeepSeek chat-demo’s static deployment, browser keys and history, API requirements and ZIP limits, with a local build and synthetic streaming UI check. DeepSeek 静态网站 聊天应用 React 本地存储 What does static deployment remove? Is it ju",
+      "language": "en",
+      "tags": [
+        "DeepSeek",
+        "静态网站",
+        "聊天应用",
+        "React",
+        "本地存储"
+      ],
+      "title": "DeepSeek chat-demo: Static UI, API and Storage",
+      "url": "/blog/deepseek-chat-demo-static-frontend-api-storage-guide/"
+    }
+  }
+]
