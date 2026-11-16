@@ -1,0 +1,13 @@
+=== [adopt-banner] abyssal-garden-webgpu-procedural-underwater-world ← 1 source image(s) → src/assets/images/abyssal-garden-webgpu-procedural-underwater-world-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /tmp/abyssal-garden-20261116/.github/screenshots/whale-fluke.jpg
+=== [adopt-banner] done: src/assets/images/abyssal-garden-webgpu-procedural-underwater-world-banner.jpg (1200x630, 95456B) ===
+=== [verify-banner] src/assets/images/abyssal-garden-webgpu-procedural-underwater-world-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/tmp/abyssal-garden-20261116/.github/screenshots/whale-fluke.jpg
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 95456B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/abyssal-garden-webgpu-procedural-underwater-world-banner.jpg ===
+PATH: src/assets/images/abyssal-garden-webgpu-procedural-underwater-world-banner.jpg

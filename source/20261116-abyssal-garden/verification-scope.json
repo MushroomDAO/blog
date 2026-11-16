@@ -1,0 +1,22 @@
+{
+  "sourceCommit": "a596354eff400d458bc2aeb9bdf5e0a9734b2bcf",
+  "repositoryExactDuplicate": false,
+  "materialOnlyPriorKB": true,
+  "build": "byte-identical",
+  "fileBytes": 99514,
+  "gzipBytes": 39812,
+  "browser": "Chrome157 headless, isolatedsession Low, initializedmenu/Diveinstate; screenshotsmenuonly",
+  "gpuAdapterHardwareIdentity": "not measured; WebGPUavailable doesnotprove hardwaretype",
+  "notMeasured": [
+    "FPS",
+    "GPUtimings",
+    "power",
+    "VRAM",
+    "audioquality",
+    "allviewpoints/collisions",
+    "allbrowsers/devices",
+    "touch"
+  ],
+  "networkScope": "Page performance resource entries no externalassetrequests, localfavicon404 only; not fullbrowsernetworkcapture",
+  "articleFrozenAfterFinalAssetReview": true
+}

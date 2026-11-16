@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-16T01:01:45.932Z",
+  "drafts": [
+    {
+      "slug": "abyssal-garden-webgpu-procedural-underwater-world",
+      "mediaId": "prCUE631thH1cmNLi42prL5SbXgxWl8ci_YyNCDVNnDwtK2xC1tmd83PEnJEQFaQ",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "8e3ba2de414060b7c75ddddc1207912bdf09bd6684e448f407562e8caeb52351",
+      "remoteTextHash": "8e3ba2de414060b7c75ddddc1207912bdf09bd6684e448f407562e8caeb52351",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/abyssal-garden-webgpu-procedural-underwater-world/",
+      "localContentHash": "dd41079c5f1499cd7383a1419e10343f0b0c7383a5b9f7c8c554915ae330a08f",
+      "remoteContentHash": "fb35255388204af21de4a30dcf43ad755a9c4c8c4d61bc8eb9f6cbf0204897e8"
+    }
+  ]
+}

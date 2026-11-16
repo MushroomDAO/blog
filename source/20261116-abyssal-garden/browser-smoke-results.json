@@ -1,0 +1,153 @@
+{
+  "scope": "Isolated local HTTP page, headless installed Chrome, Low detail, no FPS benchmark or hardware comparison",
+  "startup": {
+    "body": "m",
+    "status": "Letting the light in…",
+    "webgpu": true,
+    "canvas": [
+      1182,
+      584
+    ],
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "resources": []
+  },
+  "logs": [
+    {
+      "args": [
+        "open",
+        "http://127.0.0.1:49437/index.html"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":true,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":false,\"saveStatus\":\"not_attempted\"},\"targetId\":\"3E567E4822DC5A3C69B9FBBDAE4B38E7\",\"title\":\"Abyssal Garden\",\"url\":\"http://127.0.0.1:49437/index.html\"},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "eval",
+        "localStorage.setItem('abyssal','2'); localStorage.removeItem('abyssalLoad'); 'Low selected in isolated profile'"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:49437/index.html\",\"result\":\"Low selected in isolated profile\"},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "reload"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"url\":\"http://127.0.0.1:49437/index.html\"},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "eval",
+        "JSON.stringify({body:document.body.className,status:document.getElementById('s').textContent,webgpu:!!navigator.gpu,canvas:[document.getElementById('c').width,document.getElementById('c').height],userAgent:navigator.userAgent,resources:performance.getEntriesByType('resource').map(x=>x.name)})"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:49437/index.html\",\"result\":\"{\\\"body\\\":\\\"l\\\",\\\"status\\\":\\\"Diving…\\\",\\\"webgpu\\\":true,\\\"canvas\\\":[300,150],\\\"userAgent\\\":\\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36\\\",\\\"resources\\\":[]}\"},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "eval",
+        "JSON.stringify({body:document.body.className,status:document.getElementById('s').textContent,webgpu:!!navigator.gpu,canvas:[document.getElementById('c').width,document.getElementById('c').height],userAgent:navigator.userAgent,resources:performance.getEntriesByType('resource').map(x=>x.name)})"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:49437/index.html\",\"result\":\"{\\\"body\\\":\\\"l\\\",\\\"status\\\":\\\"Sculpting the seabed…\\\",\\\"webgpu\\\":true,\\\"canvas\\\":[300,150],\\\"userAgent\\\":\\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36\\\",\\\"resources\\\":[]}\"},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "eval",
+        "JSON.stringify({body:document.body.className,status:document.getElementById('s').textContent,webgpu:!!navigator.gpu,canvas:[document.getElementById('c').width,document.getElementById('c').height],userAgent:navigator.userAgent,resources:performance.getEntriesByType('resource').map(x=>x.name)})"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:49437/index.html\",\"result\":\"{\\\"body\\\":\\\"l\\\",\\\"status\\\":\\\"Letting the light in…\\\",\\\"webgpu\\\":true,\\\"canvas\\\":[910,450],\\\"userAgent\\\":\\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36\\\",\\\"resources\\\":[]}\"},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "eval",
+        "JSON.stringify({body:document.body.className,status:document.getElementById('s').textContent,webgpu:!!navigator.gpu,canvas:[document.getElementById('c').width,document.getElementById('c').height],userAgent:navigator.userAgent,resources:performance.getEntriesByType('resource').map(x=>x.name)})"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:49437/index.html\",\"result\":\"{\\\"body\\\":\\\"m\\\",\\\"status\\\":\\\"Letting the light in…\\\",\\\"webgpu\\\":true,\\\"canvas\\\":[1182,584],\\\"userAgent\\\":\\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36\\\",\\\"resources\\\":[]}\"},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "click",
+        "#d"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"clicked\":\"#d\",\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"}},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "press",
+        "6"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"pressed\":\"6\"},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "press",
+        "m"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"pressed\":\"m\"},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "screenshot",
+        "/Users/jason/Dev/mycelium/blog/source/20261116-abyssal-garden/local-browser-smoke.png"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"path\":\"/Users/jason/Dev/mycelium/blog/source/20261116-abyssal-garden/local-browser-smoke.png\"},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "eval",
+        "JSON.stringify({body:document.body.className,selected:localStorage.abyssal,resources:performance.getEntriesByType('resource').map(x=>x.name)})"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:49437/index.html\",\"result\":\"{\\\"body\\\":\\\"g p\\\",\\\"selected\\\":\\\"2,691100,1\\\",\\\"resources\\\":[\\\"http://127.0.0.1:49437/favicon.ico\\\"]}\"},\"error\":null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "close"
+      ],
+      "exit": 0,
+      "stdout": "{\"success\":true,\"data\":{\"closed\":true,\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":false,\"engine\":\"chrome\",\"launchHash\":null},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":false,\"saveStatus\":\"not_configured\"},\"restoreStatus\":\"not_configured\",\"saveStatus\":\"not_configured\"},\"error\":null}\n",
+      "stderr": ""
+    }
+  ],
+  "afterControls": {
+    "success": true,
+    "data": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 13652769386817852056
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "not_configured",
+        "reused": true,
+        "saveStatus": "not_attempted"
+      },
+      "origin": "http://127.0.0.1:49437/index.html",
+      "result": "{\"body\":\"g p\",\"selected\":\"2,691100,1\",\"resources\":[\"http://127.0.0.1:49437/favicon.ico\"]}"
+    },
+    "error": null
+  },
+  "started": true
+}

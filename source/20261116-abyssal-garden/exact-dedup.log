@@ -1,0 +1,32 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6afa52f3-3877e3a9-7d4e5e95）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 1005 篇 + 公众号草稿箱 4 条 + 本地发布记录 988 条 + MemPalace 4283 抽屉
+
+── 查：https://github.com/Noniv/abyssal-garden
+   ✅ 四本账都没查到
+
+── 查：Abyssal Garden
+   ❌ [BLOG  ] Blender MCP：用自然语言控制 Blender 3D，接任意 LLM，26K stars 社区插件
+      正文出现实体名「garden」
+   ❌ [BLOG  ] GPT-6 Astra 究竟带来了什么：不是更聪明，是第一次能真正帮你干活
+      正文出现实体名「garden」
+   ❌ [BLOG  ] OpenSquilla：同样预算，更高智能密度——开源 AI Agent 的 Token 效率革命
+      正文出现实体名「garden」
+   ❌ [BLOG  ] 浙大开源 OpenStory（万象谱）：LLM 驱动多 Agent 让《红楼梦》和《西部世界》活起来
+      正文出现实体名「garden」
+   ❌ [BLOG  ] Viktor：10 周 $20M ARR，Slack 里的 AI 员工如何做到的
+      正文出现实体名「garden」
+   ❌ [知识库] --- name: scrape-closed-platforms-cdp-first description: "Fo
+      正文出现实体名「garden」
+   ❌ [知识库] # Github开源仓库，项目名称：Abyssal Garden  **Summary**: Github开源仓库，项目
+      正文出现实体名「garden」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

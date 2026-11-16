@@ -1,0 +1,38 @@
+[
+  {
+    "id": "8f37bd73b020d39c6d5b30c435ba2e4f3dc62cacc4a8f811",
+    "metadata": {
+      "article_id": "abyssal-garden-webgpu-procedural-underwater-world",
+      "content_hash": "76169bfd769ca42e",
+      "excerpt": "Abyssal Garden：97KiB代码里的可游览海底世界 Abyssal Garden是Noniv开源的WebGPU海底世界，用程序生成海带、礁石、鱼群和声音，无需下载贴图、模型或音频素材。本文核对MIT许可、单文件体积、GPU与CPU的生成分工、动态画质和碰撞边界，记录字节一致的本地重建与低画质浏览器启动检查，并说明作者帧率数据、实际运行资源和工程复用各自能证明什么。 WebGPU 程序化生成 创意编程 浏览器 开源项目 Abyssal Garden 怎么打开？ 为什么一个HTML能装下海底？ “97KB”究竟是哪一种体积？ 小文件为什么还需要动",
+      "language": "zh",
+      "tags": [
+        "WebGPU",
+        "程序化生成",
+        "创意编程",
+        "浏览器",
+        "开源项目"
+      ],
+      "title": "Abyssal Garden：97KiB代码里的可游览海底世界",
+      "url": "/blog/abyssal-garden-webgpu-procedural-underwater-world/"
+    }
+  },
+  {
+    "id": "6d776e459ce471fab79fb5153eb1d1a5bb9f0dbebdb00afe",
+    "metadata": {
+      "article_id": "abyssal-garden-webgpu-procedural-underwater-world",
+      "content_hash": "b5d47a998dadc2f2",
+      "excerpt": "Abyssal Garden: A WebGPU Ocean in One HTML File Explore Noniv’s Abyssal Garden: procedural WebGPU graphics, synthesized audio, a byte-identical rebuild, and a bounded browser smoke test with resource limits. WebGPU 程序化生成 创意编程 浏览器 开源项目 How do you enter Abyssal Garden? How does one",
+      "language": "en",
+      "tags": [
+        "WebGPU",
+        "程序化生成",
+        "创意编程",
+        "浏览器",
+        "开源项目"
+      ],
+      "title": "Abyssal Garden: A WebGPU Ocean in One HTML File",
+      "url": "/blog/abyssal-garden-webgpu-procedural-underwater-world/"
+    }
+  }
+]

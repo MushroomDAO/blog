@@ -1,0 +1,16 @@
+{
+  "commit": "a596354eff400d458bc2aeb9bdf5e0a9734b2bcf",
+  "bytes": 99514,
+  "KiB": 97.18,
+  "gzipBytes": 39812,
+  "shippedHash": "ac151ea4a84092e529b98ac21feedc7905c170a7959f6bd6d829ef1b85e56767",
+  "rebuiltHash": "ac151ea4a84092e529b98ac21feedc7905c170a7959f6bd6d829ef1b85e56767",
+  "byteIdenticalRebuild": true,
+  "node": "v26.10.0",
+  "esbuild": "0.28.2",
+  "commands": [
+    "npm install --ignore-scripts",
+    "npm run build"
+  ],
+  "initialAttempt": "npm ci rejected lock mismatch in local Node26 environment. Followed upstream npm install in temporary clone; no source JS edits."
+}

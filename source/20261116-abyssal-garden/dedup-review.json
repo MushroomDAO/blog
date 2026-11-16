@@ -1,0 +1,9 @@
+{
+  "repositoryExactHit": false,
+  "preciseTitleArticleHit": false,
+  "genericMatches": [
+    "github",
+    "garden"
+  ],
+  "decision": "Only incoming rawKB and generic substring hits; create original article, not duplicate."
+}

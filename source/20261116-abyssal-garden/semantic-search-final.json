@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "abyssal-garden-webgpu-procedural-underwater-world",
+      "title": "Abyssal Garden：97KiB代码里的可游览海底世界",
+      "url": "/blog/abyssal-garden-webgpu-procedural-underwater-world/",
+      "language": "zh",
+      "excerpt": "Abyssal Garden：97KiB代码里的可游览海底世界 Abyssal Garden是Noniv开源的WebGPU海底世界，用程序生成海带、礁石、鱼群和声音，无需下载贴图、模型或音频素材。本文核对MIT许可、单文件体积、GPU与CPU的生成分工、动态画质和碰撞边界，记录字节一致的本地重建与低画质浏览器启动检查，并说明作者帧率数据、实际运行资源和工程复用各自能证明什么。 WebGPU 程序化生成 创意编程 浏览器 开源项目 Abyssal Garden 怎么打开？ 为什么一个HTML能装下海底？ “97KB”究竟是哪一种体积？ 小文件为什么还需要动",
+      "score": 0.7888186
+    },
+    {
+      "article_id": "higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance",
+      "title": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺",
+      "url": "/blog/higgsfield-zephyr-special-kpop-mecha-ai-film-open-source-seedance/",
+      "language": "zh",
+      "excerpt": "Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺 Higgsfield 将旗下 K-pop 机甲 AI 短片系列《ZEPHYR: Special》的完整制作过程全部开源：所有提示词、角色资产、失败镜头、最终剪辑版本，共 197 个资产公开发布于平台上，任何人都可以直接进入 Cinema Studio 查看和复用。主创团队披露了两个「不可能镜头」的实现方法：倒置角色参考图技巧和锚点式最小提示词策略。底层模型是 Seedance 2.5，结合 Higgsfield Soul 2 进行角色和服装设计，再用",
+      "score": 0.5220255
+    },
+    {
+      "article_id": "infinitediffusion-terrain-generation-guide",
+      "title": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文",
+      "url": "/blog/infinitediffusion-terrain-generation-guide/",
+      "language": "zh",
+      "excerpt": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文 Alexander Goslin 以独立研究者身份，用 RTX 3090 Ti 发表 SIGGRAPH 2026 论文 InfiniteDiffusion，将扩散模型改造为懒惰采样，实现无界、O(1) 随机访问、确定性的无限地形生成。本文整理复现路径与游戏/工程应用方向。 扩散模型 程序化生成 游戏开发 SIGGRAPH 地形生成 AI图形 独立研究 先说这件事本身有多不寻常 论文在解决什么问题？ 原始资源 30 分钟复现路径 Step 0：环境 St",
+      "score": 0.5085029
+    },
+    {
+      "article_id": "godogen-ai-game-generator-claude-code-godot-bevy-babylon",
+      "title": "Godogen：用 Claude Code 一句话生成完整游戏，支持 Godot/Bevy/Babylon.js",
+      "url": "/blog/godogen-ai-game-generator-claude-code-godot-bevy-babylon/",
+      "language": "zh",
+      "excerpt": "Godogen：用 Claude Code 一句话生成完整游戏，支持 Godot/Bevy/Babylon.js htdt/godogen 是基于 Claude Code / Codex 打造的全链路 AI 游戏生成流水线。描述一个游戏，Agent 自动构建项目、生成资产、运行引擎、并用运行中的游戏证明结果。支持 Godot 4（C#）、Bevy（Rust）、Babylon.js（TypeScript），5.2K stars，MIT 协议。 AI游戏生成 Claude Code Godot Bevy Babylon.js Codex 开源 Myceliu",
+      "score": 0.49839687
+    },
+    {
+      "article_id": "axion-agent-training-data-cost-review",
+      "title": "Axion 1.0：数据构造、Agent训练与低成本叙事的边界",
+      "url": "/blog/axion-agent-training-data-cost-review/",
+      "language": "zh",
+      "excerpt": "Axion 1.0：数据构造、Agent训练与低成本叙事的边界 Axion 1.0用可验证任务构造、两阶段SFT和异步GRPO训练科学推理与工具型Agent。本文核对论文、开源代码、数据与35B社区复现模型，拆解约1K GPU-hours的成本边界、HLE完整集和130题子集的差别，以及多次取最好成绩的评测条件，并给出数据闭环实践建议，区分作者报告、代码检查与尚未复现的能力。 Axion Agent SFT GRPO 开源模型 数据构造 Axion 1.0 是什么，开源到哪一步了？ 高质量数据如何被“构造”出来？ 第一阶段：让题目针对底座的能力变难 第二",
+      "score": 0.49334687
+    },
+    {
+      "article_id": "obscura-rust-headless-browser-ai-agent-web-scraping-mcp",
+      "title": "Obscura: Headless Browser Rewritten in Rust — Memory Down From 200MB to 30MB, GitHub Trending #1",
+      "url": "/blog/obscura-rust-headless-browser-ai-agent-web-scraping-mcp/",
+      "language": "en",
+      "excerpt": "Obscura: Headless Browser Rewritten in Rust — Memory Down From 200MB to 30MB, GitHub Trending #1 Obscura is a lightweight Rust headless browser built for AI agents and web automation. No Node.js or Chrome needed — runs real JavaScript via V8, is Puppeteer/Playwright/MCP compatibl",
+      "score": 0.49259114
+    },
+    {
+      "article_id": "penguinharness-deepseek-self-evolving-agent-builder-002-usd",
+      "title": "PenguinHarness：一句话让 Agent 自动构建 Agent，$0.02 生成完整 RAG 应用",
+      "url": "/blog/penguinharness-deepseek-self-evolving-agent-builder-002-usd/",
+      "language": "zh",
+      "excerpt": "PenguinHarness：一句话让 Agent 自动构建 Agent，$0.02 生成完整 RAG 应用 Prism-Shadow/penguin-harness 是一个开源 Agent 自动交付平台，TypeScript 编写，Apache-2.0。一句话描述需求，Agent 自动生成完整 Agent 应用（scaffold + 代码 + 运行说明）。接入 DeepSeek V4，数据分析精度全场最高，成本仅 Claude Code 的 1/70。内置 Agent 自进化：跑基准、找失分点、发布 N+1 版本。 Agent DeepSeek 自进化",
+      "score": 0.48923004
+    },
+    {
+      "article_id": "cuti-harness-open-source-video-world-generator-deepseek-harness-long-video",
+      "title": "Cuti Harness：开源长程视频世界生成器，多轮对话从 15 秒扩展到 3 分钟，本地不需要 GPU",
+      "url": "/blog/cuti-harness-open-source-video-world-generator-deepseek-harness-long-video/",
+      "language": "zh",
+      "excerpt": "Cuti Harness：开源长程视频世界生成器，多轮对话从 15 秒扩展到 3 分钟，本地不需要 GPU VideoVerses/Cuti-Harness，MIT 开源，TypeScript + Python，基于 DeepSeek Harness 的插件化视频世界生成器。多轮对话累积扩展，从 15 秒到 3 分钟+；单次 brief 自动生成 5 分钟视频。本地运行不需要 GPU，只要 Node.js 22+ + Conda。视频生成依赖云端 API（WaveSpeed Seedance 或 Ark，约 $0.81/clip）。开发者预览阶段。 op",
+      "score": 0.48857224
+    },
+    {
+      "article_id": "magi-2-preview-sand-ai-114b-moe-video-generation-analysis",
+      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
+      "url": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
+      "language": "zh",
+      "excerpt": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南 Sand.ai 开源 MAGI-2 Preview：全球首个千亿级 MoE 视频生成模型，114B 总参数，单 token 激活仅 6B，统一音视频生成，Apache 2.0。文章深度拆解 MagiMoE 架构、数据管道哲学与成本逻辑，并给出完整自部署方案：硬件选型、权重下载、环境搭建、推理命令、成本估算全覆盖。 MAGI-2 Sand.ai 视频生成 MoE 开源模型 AI基础设施 自部署 Mycelium Sand.ai 是谁 架构：为什么 114B",
+      "score": 0.4884595
+    },
+    {
+      "article_id": "qwen-image-2-1-dit-rgba-local-deploy-guide",
+      "title": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南",
+      "url": "/blog/qwen-image-2-1-dit-rgba-local-deploy-guide/",
+      "language": "zh",
+      "excerpt": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南 阿里千问 2026-09-20 开源。7.1B 参数 32 层 Block-Causal DiT + Qwen3-VL-8B 文本编码器 + 64 通道 RGBA VAE，合计约 15B。原生支持透明图层、多参考图（最多 10 张）、中英文文字渲染、最高 2K 分辨率、局部编辑。Diffusers/ComfyUI/SGLang/vLLM 当日支持。关键限制：H100 BF16 需 56.5GB 显存，无量化版本，许可证从 v1 的 Apache 2",
+      "score": 0.48630345
+    }
+  ]
+}

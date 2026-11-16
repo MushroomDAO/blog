@@ -1,0 +1,28 @@
+{
+  "workerExitCode": 0,
+  "manualReviewAfterExit": true,
+  "banner": "Official scene, authorMIT, covercrop1200x63095456bytes, machinepassed/manualsceneon-topic,nohumanfacesorlettering. Distinctfromownmenucapture.",
+  "figures": [
+    {
+      "file": "abyssal-garden-webgpu-procedural-underwater-world-fig-01.png",
+      "passed": true,
+      "review": "Rulecardsunfoldintokelp/rocks/fish, correctLittleM, whitebackground"
+    },
+    {
+      "file": "abyssal-garden-webgpu-procedural-underwater-world-fig-02.png",
+      "passed": true,
+      "review": "Separatepixelanddistancecontrols, Chineselegible, littlesparseunderwaterroute"
+    },
+    {
+      "file": "abyssal-garden-webgpu-procedural-underwater-world-fig-03.png",
+      "passed": true,
+      "review": "ModularsourcefoldintoHTMLandseparatechecks, legibleChinese, conceptualworkflownotclaimallactualtests"
+    }
+  ],
+  "sizes": [
+    35959,
+    60229,
+    54141
+  ],
+  "dimensions": "1280x720 each"
+}

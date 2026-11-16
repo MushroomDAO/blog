@@ -1,0 +1,28 @@
+npm error code EUSAGE
+npm error
+npm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+npm error
+npm error Missing: source@ from lock file
+npm error
+npm error Clean install a project
+npm error
+npm error Usage:
+npm error npm ci
+npm error
+npm error Options:
+npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts]
+npm error [--allow-directory <all|none|root>] [--allow-file <all|none|root>]
+npm error [--allow-git <all|none|root>] [--allow-remote <all|none|root>]
+npm error [--allow-scripts <package-list> [--allow-scripts <package-list> ...]]
+npm error [--strict-allow-scripts] [--dangerously-allow-all-scripts] [--no-audit]
+npm error [--no-bin-links] [--no-fund] [--dry-run]
+npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+npm error [--workspaces] [--include-workspace-root] [--install-links]
+npm error
+npm error   --install-strategy
+npm error     Sets the strategy for installing packages in node_modules.
+npm error
+npm error   --legacy-bundling
