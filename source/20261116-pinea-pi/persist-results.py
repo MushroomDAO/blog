@@ -1,0 +1,12 @@
+from pathlib import Path
+import json,datetime
+s=Path(__file__).parent;root=s.resolve().parents[1];slug='pinea-pi-modelbest-edge-ai-hardware-agent';j=Path('/Users/jason/.heinu1-bot/jobs/e4bce062-0df3-45cd-8138-a9bc0886b710')
+rec=json.loads((root/'pipeline/m2/output'/f'{slug}.json').read_text());assert len(json.loads((s/'wechat-verification.json').read_text())['drafts'])==1
+assert json.loads((s/'semantic-status.json').read_text())['status']=='verified'
+assert json.loads((s/'public-verification.json').read_text())['articles'][0]['slug']==slug
+r={'slug':slug,'blogUrl':f'https://blog.mushroom.cv/blog/{slug}/','mediaId':rec['mediaId'],'archivedMediaId':'','wechatStatus':'draft','wechatError':''}
+for base in [s,j]:(base/'publication-result.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n')
+(j/'publication-progress.json').write_text(json.dumps({**r,'blogVerified':True,'wechatVerified':True,'semanticStatus':'verified','completed':False,'phase':'KB-and-git-finalization','checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat()},ensure_ascii=False,indent=2))
+p=Path('/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory/project_'+slug+'.md');t=p.read_text().replace('Status: researching; exact source/entity duplicate check clear.','Status: published; Blog/list/images and complete remote WeChat body/metadata verified.\nBlog: '+r['blogUrl']+'\nWeChat: draft\nMedia ID: '+rec['mediaId']+'\nSemantic: verified\nKB: persisted and indexed after publication.')
+t+='\nFinal research: old domestic product page does not override August official vendor announcement or September ModelBest/Intel Lite launch. Lite Intel180TOPS/$1999 and ProNVIDIA275TOPS/$2999 are historical earlybird quotes, not current deliveredprices or measured performance. Enumerated94publicOpenBMBrepos, no dedicated Pinea board repo found; MiniCPM-V/EdgeClaw adjacent model/software nothardwarelicense. Overseas site TLS/timeout, no inferenceofclosure. No board/model/latency/energy/offline/sales test. Own observable perception/inference/tool/feedback and acceptance recommendations explicitly separated. ConceptFLUX8691banner and3LittleMfigures, not productphotos. FinalbilingualSEO/publictitle/list/images/semantic2vectors/search/fullWeChatcanonicalbody3orderedimages/metadataverified.\n';p.write_text(t)
+(s/'.published').write_text(r['blogUrl']+'\n');print(json.dumps(r,ensure_ascii=False))

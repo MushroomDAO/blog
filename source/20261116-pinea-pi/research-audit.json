@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-16T01:41:36.681119+00:00",
+  "dedup": "raw bot KB input only; no previous article/receipt/current draft located; published API48001 unavailable",
+  "openbmbPublicRepos": 94,
+  "independentHardwareRepository": "not located; bounded search, not proof of nonexistence",
+  "vendorPressRelease": {
+    "url": "https://www.prnewswire.com/news-releases/pinea-pi-defining-the-edge-ai-device-for-the-ai-native-generation-302859474.html",
+    "date": "2026-08-25",
+    "source": "provided by Pinea Pi; read via web browser tool; direct urllib403",
+    "Lite": {
+      "platform": "Intel",
+      "advertisedTopsUpTo": 180,
+      "historicalEarlyBirdUsd": 1999
+    },
+    "Pro": {
+      "platform": "NVIDIA",
+      "advertisedTops": 275,
+      "historicalEarlyBirdUsd": 2999
+    }
+  },
+  "laterCompanyEvidence": "September22-23 Intel event, ModelBest homepage announces Lite jointly with Intel",
+  "overseasSite": "TLS handshake failure in urllib/curl; browser fetch timeout; no inference of closure",
+  "physicalTest": "none; no board, GPU model, voice, tool, latency, energy, privacy or delivery test",
+  "images": "concept illustrations, not product photography",
+  "publicationValidation": {
+    "blog": "verified200/list3/carousel3/5imagevariants",
+    "wechat": "createdonce; fullcanonicaltext and3orderedimages plusmetadata verified",
+    "semantic": "2 vectors accepted; exactIDreadback verified, publicsearch awaitingpropagation"
+  }
+}

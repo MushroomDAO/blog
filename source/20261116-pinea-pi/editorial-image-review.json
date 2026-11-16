@@ -1,0 +1,28 @@
+{
+  "reviewedAfterWorkerExit": 0,
+  "banner": {
+    "conceptOnly": true,
+    "notProductPhotograph": true,
+    "noFacesOrText": true,
+    "dimensions": "1200x630",
+    "bytes": 92634,
+    "provenance": "localFLUX8691"
+  },
+  "bodyFigures": [
+    {
+      "file": "pinea-pi-modelbest-edge-ai-hardware-agent-fig-01.png",
+      "bytes": 68096,
+      "review": "manual: correct LittleM, sparse labels, matches anchor, whitebackground"
+    },
+    {
+      "file": "pinea-pi-modelbest-edge-ai-hardware-agent-fig-02.png",
+      "bytes": 71276,
+      "review": "manual: correct LittleM, sparse labels, matches anchor, whitebackground"
+    },
+    {
+      "file": "pinea-pi-modelbest-edge-ai-hardware-agent-fig-03.png",
+      "bytes": 51661,
+      "review": "manual: correct LittleM, sparse labels, matches anchor, whitebackground"
+    }
+  ]
+}

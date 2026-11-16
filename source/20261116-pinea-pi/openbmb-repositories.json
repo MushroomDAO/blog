@@ -1,0 +1,472 @@
+[
+  {
+    "name": "BMInf",
+    "url": "https://github.com/OpenBMB/BMInf",
+    "description": "Efficient Inference for Big Models"
+  },
+  {
+    "name": "BMInf-demos",
+    "url": "https://github.com/OpenBMB/BMInf-demos",
+    "description": "BMInf demos."
+  },
+  {
+    "name": "BMTrain",
+    "url": "https://github.com/OpenBMB/BMTrain",
+    "description": "Efficient Training (including pre-training and fine-tuning) for Big Models"
+  },
+  {
+    "name": "cpm_kernels",
+    "url": "https://github.com/OpenBMB/cpm_kernels",
+    "description": null
+  },
+  {
+    "name": "General-Model-License",
+    "url": "https://github.com/OpenBMB/General-Model-License",
+    "description": null
+  },
+  {
+    "name": "ModelCenter",
+    "url": "https://github.com/OpenBMB/ModelCenter",
+    "description": "Efficient, Low-Resource, Distributed transformer implementation based on BMTrain"
+  },
+  {
+    "name": "BMCook",
+    "url": "https://github.com/OpenBMB/BMCook",
+    "description": "Model Compression for Big Models"
+  },
+  {
+    "name": "CPM-Live",
+    "url": "https://github.com/OpenBMB/CPM-Live",
+    "description": "Live Training for Open-source Big Models"
+  },
+  {
+    "name": "BMList",
+    "url": "https://github.com/OpenBMB/BMList",
+    "description": "A List of Big Models"
+  },
+  {
+    "name": "BMTools",
+    "url": "https://github.com/OpenBMB/BMTools",
+    "description": "Tool Learning for Big Models, Open-Source Solutions of ChatGPT-Plugins"
+  },
+  {
+    "name": "CPM-Bee",
+    "url": "https://github.com/OpenBMB/CPM-Bee",
+    "description": "百亿参数的中英文双语基座大模型"
+  },
+  {
+    "name": "DecT",
+    "url": "https://github.com/OpenBMB/DecT",
+    "description": "Source code for ACL 2023 paper Decoder Tuning: Efﬁcient Language Understanding as Decoding"
+  },
+  {
+    "name": "AgentVerse",
+    "url": "https://github.com/OpenBMB/AgentVerse",
+    "description": "🤖 AgentVerse 🪐 is designed to facilitate the deployment of multiple LLM-based agents in various applications, which primarily provides two frameworks: task-solving and simulation"
+  },
+  {
+    "name": "BMPrinciples",
+    "url": "https://github.com/OpenBMB/BMPrinciples",
+    "description": "A collection of phenomenons observed during the scaling of big foundation models, which may be developed into consensus, principles, or laws in the future"
+  },
+  {
+    "name": "ToolBench",
+    "url": "https://github.com/OpenBMB/ToolBench",
+    "description": "[ICLR'24 spotlight] An open platform for training, serving, and evaluating large language model for tool learning."
+  },
+  {
+    "name": "VisCPM",
+    "url": "https://github.com/OpenBMB/VisCPM",
+    "description": "[ICLR'24 spotlight] Chinese and English Multimodal Large Model Series (Chat and Paint) | 基于CPM基础模型的中英双语多模态大模型系列"
+  },
+  {
+    "name": "UltraFeedback",
+    "url": "https://github.com/OpenBMB/UltraFeedback",
+    "description": "A large-scale, fine-grained, diverse preference dataset (and models)."
+  },
+  {
+    "name": "ChatDev",
+    "url": "https://github.com/OpenBMB/ChatDev",
+    "description": "ChatDev 2.0: Dev All through LLM-powered Multi-Agent Collaboration"
+  },
+  {
+    "name": "XAgent",
+    "url": "https://github.com/OpenBMB/XAgent",
+    "description": "An Autonomous LLM Agent for Complex Task Solving"
+  },
+  {
+    "name": "XAgent-doc",
+    "url": "https://github.com/OpenBMB/XAgent-doc",
+    "description": "Document for XAgent."
+  },
+  {
+    "name": "ProAgent",
+    "url": "https://github.com/OpenBMB/ProAgent",
+    "description": "An LLM-based Agent for the New Automation Paradigm - Agentic Process Automation"
+  },
+  {
+    "name": "UltraEval",
+    "url": "https://github.com/OpenBMB/UltraEval",
+    "description": "[ACL 2024 Demo] Official GitHub repo for UltraEval: An open source framework for evaluating foundation models."
+  },
+  {
+    "name": "InfiniteBench",
+    "url": "https://github.com/OpenBMB/InfiniteBench",
+    "description": "Codes for the paper \"∞Bench: Extending Long Context Evaluation Beyond 100K Tokens\": https://arxiv.org/abs/2402.13718"
+  },
+  {
+    "name": "RepoAgent",
+    "url": "https://github.com/OpenBMB/RepoAgent",
+    "description": "An LLM-powered repository agent designed to assist developers and teams in generating documentation and understanding repositories quickly."
+  },
+  {
+    "name": "MiniCPM-V",
+    "url": "https://github.com/OpenBMB/MiniCPM-V",
+    "description": "See, hear, and interact on your local devices."
+  },
+  {
+    "name": "MiniCPM",
+    "url": "https://github.com/OpenBMB/MiniCPM",
+    "description": "MiniCPM5: SOTA on-device LLMs, small yet powerful."
+  },
+  {
+    "name": "Tell_Me_More",
+    "url": "https://github.com/OpenBMB/Tell_Me_More",
+    "description": "Repo for paper \"Tell Me More! Towards Implicit User Intention Understanding of Language Model Driven Agents\""
+  },
+  {
+    "name": "UltraLink",
+    "url": "https://github.com/OpenBMB/UltraLink",
+    "description": "An Open-Source Knowledge-Enhanced Multilingual Supervised Fine-tuning Dataset"
+  },
+  {
+    "name": "OpenAct",
+    "url": "https://github.com/OpenBMB/OpenAct",
+    "description": null
+  },
+  {
+    "name": "OlympiadBench",
+    "url": "https://github.com/OpenBMB/OlympiadBench",
+    "description": "[ACL 2024]Official GitHub repo for OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems."
+  },
+  {
+    "name": "CPO",
+    "url": "https://github.com/OpenBMB/CPO",
+    "description": null
+  },
+  {
+    "name": "Eurus",
+    "url": "https://github.com/OpenBMB/Eurus",
+    "description": null
+  },
+  {
+    "name": "MobileCPM",
+    "url": "https://github.com/OpenBMB/MobileCPM",
+    "description": "A Toolkit for Running On-device Large Language Models (LLMs) in APP"
+  },
+  {
+    "name": "IoA",
+    "url": "https://github.com/OpenBMB/IoA",
+    "description": "An open-source framework for collaborative AI agents, enabling diverse, distributed agents to team up and tackle complex tasks through internet-like connectivity."
+  },
+  {
+    "name": "HerculesBench",
+    "url": "https://github.com/OpenBMB/HerculesBench",
+    "description": null
+  },
+  {
+    "name": "RAGEval",
+    "url": "https://github.com/OpenBMB/RAGEval",
+    "description": null
+  },
+  {
+    "name": "VisRAG",
+    "url": "https://github.com/OpenBMB/VisRAG",
+    "description": "Parsing-free RAG supported by VLMs"
+  },
+  {
+    "name": "RAG-DDR",
+    "url": "https://github.com/OpenBMB/RAG-DDR",
+    "description": "This is the code repo for the paper \"RAG-DDR: Optimizing Retrieval-Augmented Generation Using Differentiable Data Rewards\"."
+  },
+  {
+    "name": "Locret",
+    "url": "https://github.com/OpenBMB/Locret",
+    "description": null
+  },
+  {
+    "name": "RaD-Agent",
+    "url": "https://github.com/OpenBMB/RaD-Agent",
+    "description": "The official implementation of the Rational Decision-Making Agent with Internalized Utility Judgment"
+  },
+  {
+    "name": "WorkflowLLM",
+    "url": "https://github.com/OpenBMB/WorkflowLLM",
+    "description": "An open platform for enhancing the capability of LLMs in workflow orchestration."
+  },
+  {
+    "name": "DecorateLM",
+    "url": "https://github.com/OpenBMB/DecorateLM",
+    "description": null
+  },
+  {
+    "name": "UltraEval-Audio",
+    "url": "https://github.com/OpenBMB/UltraEval-Audio",
+    "description": "Your faithful, impartial partner for audio evaluation — know yourself, know your rivals. 真实评测，知己知彼。A unified benchmark framework for ASR/TTS/Audio Codec/audio LLM evaluation"
+  },
+  {
+    "name": "UltraRAG",
+    "url": "https://github.com/OpenBMB/UltraRAG",
+    "description": "A Low-Code MCP Framework for Building Complex and Innovative RAG Pipelines"
+  },
+  {
+    "name": "ParamMute",
+    "url": "https://github.com/OpenBMB/ParamMute",
+    "description": "[NeurIPS 2025] ParamMute (a.k.a. PIP-KAG): suppressing knowledge-critical FFNs for faithful retrieval-augmented generation (RAG knowledge conflicts)"
+  },
+  {
+    "name": "DEBATER",
+    "url": "https://github.com/OpenBMB/DEBATER",
+    "description": "This is the code repo for our paper \"Learning More Effective Representations for Dense Retrieval through Deliberate Thinking Before Search\"."
+  },
+  {
+    "name": "ConsJudge",
+    "url": "https://github.com/OpenBMB/ConsJudge",
+    "description": null
+  },
+  {
+    "name": "AgentCPM-GUI",
+    "url": "https://github.com/OpenBMB/AgentCPM-GUI",
+    "description": "AgentCPM-GUI: An on-device GUI agent for operating Android apps, enhancing reasoning ability with reinforcement fine-tuning for efficient task execution."
+  },
+  {
+    "name": "MoRE",
+    "url": "https://github.com/OpenBMB/MoRE",
+    "description": "[SIGIR '26] Mixture-of-Retrieval Experts for Reasoning-Guided Multimodal Knowledge Exploitation"
+  },
+  {
+    "name": "infllmv2_cuda_impl",
+    "url": "https://github.com/OpenBMB/infllmv2_cuda_impl",
+    "description": null
+  },
+  {
+    "name": "sglang",
+    "url": "https://github.com/OpenBMB/sglang",
+    "description": "SGLang is a fast serving framework for large language models and vision language models."
+  },
+  {
+    "name": "CPM.cu",
+    "url": "https://github.com/OpenBMB/CPM.cu",
+    "description": "CPM.cu is a lightweight, high-performance CUDA implementation for LLMs, optimized for end-device inference and featuring cutting-edge techniques in sparse architecture, speculative sampling and quantization."
+  },
+  {
+    "name": "RLPR",
+    "url": "https://github.com/OpenBMB/RLPR",
+    "description": "Extrapolating RLVR to General Domains without Verifiers"
+  },
+  {
+    "name": "openbmb.github.io",
+    "url": "https://github.com/OpenBMB/openbmb.github.io",
+    "description": null
+  },
+  {
+    "name": "MiniCPM-V-Apps",
+    "url": "https://github.com/OpenBMB/MiniCPM-V-Apps",
+    "description": "MiniCPM-V apps — fully offline multimodal chat on iOS / Android / HarmonyOS"
+  },
+  {
+    "name": "AppCopilot",
+    "url": "https://github.com/OpenBMB/AppCopilot",
+    "description": "A General, Accurate, Long-Horizon, and Efficient Mobile Agent driven by Multimodal Foundation Models"
+  },
+  {
+    "name": "VoxCPM",
+    "url": "https://github.com/OpenBMB/VoxCPM",
+    "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning"
+  },
+  {
+    "name": "VoxCPM-demopage",
+    "url": "https://github.com/OpenBMB/VoxCPM-demopage",
+    "description": "Demo page for VoxCPM"
+  },
+  {
+    "name": "Scicore-Omics",
+    "url": "https://github.com/OpenBMB/Scicore-Omics",
+    "description": "SciCore-Omics the first tri-modal foundation model linking histology images, spatial transcriptomics, and biological language. "
+  },
+  {
+    "name": "DeepThinkVLA",
+    "url": "https://github.com/OpenBMB/DeepThinkVLA",
+    "description": "DeepThinkVLA: Enhancing Reasoning Capability of Vision-Language-Action Models"
+  },
+  {
+    "name": "SciCore-Mol",
+    "url": "https://github.com/OpenBMB/SciCore-Mol",
+    "description": "SciCore-Mol: Augmenting Large Language Models with Pluggable Molecular Cognition Modules"
+  },
+  {
+    "name": "AgentCPM",
+    "url": "https://github.com/OpenBMB/AgentCPM",
+    "description": "An End-to-End Infrastructure for Training and Evaluating Various LLM Agents"
+  },
+  {
+    "name": "MetaMem",
+    "url": "https://github.com/OpenBMB/MetaMem",
+    "description": "[ACL '26] This is the code repo for our ACL '26 Findings paper \"MetaMem: Evolving Meta-Memory for Knowledge Utilization through Self-Reflective Symbolic Optimization\""
+  },
+  {
+    "name": "PAGER",
+    "url": "https://github.com/OpenBMB/PAGER",
+    "description": null
+  },
+  {
+    "name": "sparse_kernel",
+    "url": "https://github.com/OpenBMB/sparse_kernel",
+    "description": null
+  },
+  {
+    "name": "EdgeClaw",
+    "url": "https://github.com/OpenBMB/EdgeClaw",
+    "description": "EdgeClaw: Edge-Cloud Collaborative Personal AI Assistant based on OpenClaw"
+  },
+  {
+    "name": "MiniCPM-o-Demo",
+    "url": "https://github.com/OpenBMB/MiniCPM-o-Demo",
+    "description": "Official PyTorch+CUDA Full-functional Web Demo for MiniCPM-o 4.5"
+  },
+  {
+    "name": "SOAR-Toolkit",
+    "url": "https://github.com/OpenBMB/SOAR-Toolkit",
+    "description": null
+  },
+  {
+    "name": "ArcLight",
+    "url": "https://github.com/OpenBMB/ArcLight",
+    "description": "ArcLight: A Lightweight LLM Inference Framework"
+  },
+  {
+    "name": "OmniEvalKit",
+    "url": "https://github.com/OpenBMB/OmniEvalKit",
+    "description": "OmniEvalKit is an evaluation framework designed for omni-modal large language models, with a focus on audio and audio-visual understanding. Based on OmniEvalKit, you can quickly reproduce benchmarks, implement your own models or datasets, and conduct fair comparisons with other open-source models. MiniCPM-o is evaluated using this framework."
+  },
+  {
+    "name": "ClawXRouter",
+    "url": "https://github.com/OpenBMB/ClawXRouter",
+    "description": null
+  },
+  {
+    "name": "ClawXMemory",
+    "url": "https://github.com/OpenBMB/ClawXMemory",
+    "description": "ClawXMemory: A Multi-Level Memory Plugin for OpenClaw with Long-Term Context"
+  },
+  {
+    "name": "voxcpm2-demopage",
+    "url": "https://github.com/OpenBMB/voxcpm2-demopage",
+    "description": null
+  },
+  {
+    "name": "ForgeTrain",
+    "url": "https://github.com/OpenBMB/ForgeTrain",
+    "description": null
+  },
+  {
+    "name": "Omni-DuplexEval",
+    "url": "https://github.com/OpenBMB/Omni-DuplexEval",
+    "description": null
+  },
+  {
+    "name": "MiniCPM-Desk-Pet",
+    "url": "https://github.com/OpenBMB/MiniCPM-Desk-Pet",
+    "description": "a local-first desktop pet powered by MiniCPM5"
+  },
+  {
+    "name": "PilotDeck",
+    "url": "https://github.com/OpenBMB/PilotDeck",
+    "description": "Task-oriented AI Agent productivity platform"
+  },
+  {
+    "name": "EC2-Bench",
+    "url": "https://github.com/OpenBMB/EC2-Bench",
+    "description": "EC2-Bench (EC²-Bench): benchmark for edge-cloud collaboration in long-horizon LLM agents — task performance, resource usage & privacy exposure. arXiv 2610.17816"
+  },
+  {
+    "name": "UltraX",
+    "url": "https://github.com/OpenBMB/UltraX",
+    "description": null
+  },
+  {
+    "name": "MA-ProofBench",
+    "url": "https://github.com/OpenBMB/MA-ProofBench",
+    "description": null
+  },
+  {
+    "name": "SPARK",
+    "url": "https://github.com/OpenBMB/SPARK",
+    "description": "Souce code for paper \"SPARK: Adaptive Parametric Knowledge Participation for Faithful Retrieval-Augmented Generation\""
+  },
+  {
+    "name": "StaffDeck",
+    "url": "https://github.com/OpenBMB/StaffDeck",
+    "description": "Enterprise Digital Employee Platform"
+  },
+  {
+    "name": "MiniCPM-Robot",
+    "url": "https://github.com/OpenBMB/MiniCPM-Robot",
+    "description": "A Smarter and Faster On-Device AI Brain for Robots"
+  },
+  {
+    "name": "ForgeStencil",
+    "url": "https://github.com/OpenBMB/ForgeStencil",
+    "description": null
+  },
+  {
+    "name": "MathForm",
+    "url": "https://github.com/OpenBMB/MathForm",
+    "description": null
+  },
+  {
+    "name": "SimpleNav",
+    "url": "https://github.com/OpenBMB/SimpleNav",
+    "description": "SimpleNav: A simple, unified, reproducible, and extensible framework for navigation VLA research."
+  },
+  {
+    "name": "SimpleMemVLA",
+    "url": "https://github.com/OpenBMB/SimpleMemVLA",
+    "description": "Native-video memory for vision-language-action models, using timestamped visual history and exact streaming inference for long-horizon robot manipulation."
+  },
+  {
+    "name": "Meshy",
+    "url": "https://github.com/OpenBMB/Meshy",
+    "description": null
+  },
+  {
+    "name": "T2Mem",
+    "url": "https://github.com/OpenBMB/T2Mem",
+    "description": "Experiment code for T2Mem: Test-Time Memory Construction."
+  },
+  {
+    "name": "Trident",
+    "url": "https://github.com/OpenBMB/Trident",
+    "description": null
+  },
+  {
+    "name": "llama.cpp-omni",
+    "url": "https://github.com/OpenBMB/llama.cpp-omni",
+    "description": "Omni inference in C/C++"
+  },
+  {
+    "name": "JustGoal",
+    "url": "https://github.com/OpenBMB/JustGoal",
+    "description": null
+  },
+  {
+    "name": "MiniCPM-OCR",
+    "url": "https://github.com/OpenBMB/MiniCPM-OCR",
+    "description": "Fast, accurate OCR with correctness assessment."
+  },
+  {
+    "name": "ForgeKernel",
+    "url": "https://github.com/OpenBMB/ForgeKernel",
+    "description": null
+  }
+]

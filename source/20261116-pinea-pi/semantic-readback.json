@@ -1,0 +1,38 @@
+[
+  {
+    "id": "e47698ed01c088ac2ebde025cc12f0c794e0f366e0666b3c",
+    "metadata": {
+      "article_id": "pinea-pi-modelbest-edge-ai-hardware-agent",
+      "content_hash": "bd7ae70e52b9c0b5",
+      "excerpt": "松果派 Pinea Pi：面壁智能硬件Agent的工程边界 面壁智能松果派 Pinea Pi 把本地模型与硬件智能体开发放在同一平台。本文核查官方产品页、公司说明与 OpenBMB 仓库，区分开发套件、开源模型、Agent 软件和硬件设计的不同交付边界，并提出从感知、推理、工具执行到结果回读的工程路线。价格、量产状态、整机源码及板端性能仍需确认，避免把旧计划和演示当成实测。 Pinea Pi 面壁智能 端侧AI 硬件Agent MiniCPM Pinea Pi 到底是什么？ 它开源了吗？应该看哪几个仓库？ 工程师怎样把“硬件 Agent”做成可靠功能？ ",
+      "language": "zh",
+      "tags": [
+        "Pinea Pi",
+        "面壁智能",
+        "端侧AI",
+        "硬件Agent",
+        "MiniCPM"
+      ],
+      "title": "松果派 Pinea Pi：面壁智能硬件Agent的工程边界",
+      "url": "/blog/pinea-pi-modelbest-edge-ai-hardware-agent/"
+    }
+  },
+  {
+    "id": "6b24616a797b452aa4928cd1c40a306c74fb0c8935c83b11",
+    "metadata": {
+      "article_id": "pinea-pi-modelbest-edge-ai-hardware-agent",
+      "content_hash": "b579bb8575af4914",
+      "excerpt": "Pinea Pi: ModelBest Hardware Agents and Open-Source Scope Review ModelBest Pinea Pi, its public software links, unverified hardware artifacts, and an engineering workflow for observable, testable edge AI agent actions. Pinea Pi 面壁智能 端侧AI 硬件Agent MiniCPM What is Pinea Pi? Is the c",
+      "language": "en",
+      "tags": [
+        "Pinea Pi",
+        "面壁智能",
+        "端侧AI",
+        "硬件Agent",
+        "MiniCPM"
+      ],
+      "title": "Pinea Pi: ModelBest Hardware Agents and Open-Source Scope",
+      "url": "/blog/pinea-pi-modelbest-edge-ai-hardware-agent/"
+    }
+  }
+]
