@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-17",
+  "primary": {
+    "url": "https://a16z.com/welcome-to-the-b2a-economy/",
+    "authors": [
+      "Olivia Moore",
+      "Justine Moore"
+    ],
+    "date": "2026-11-10",
+    "thesisParaphrase": "Businesses may gain an agent-mediated distribution channel as software acts for customers.",
+    "sourceGrowthStats": "Not independently reconstructed; not repeated as our measurements"
+  },
+  "dedup": "ExactsourceURLandB2Aclearacrosslocalarticle/M2/MemPalace/current2drafts; publishedAPI48001 unavailable; botwelcome/economyfalsepositives",
+  "protocol": {
+    "repo": "agentic-commerce-protocol/agentic-commerce-protocol",
+    "sha": "7fdd78df677a94dce04c770644b0fbbb1401272b",
+    "snapshot": "2026-04-17",
+    "readmeStatus": "beta",
+    "reviewScope": "README and checkout/delegatedpayment OpenAPI, not merchantintegration or actualpayments"
+  },
+  "ownAnalysis": [
+    "4gates discovery/evaluation/authorization/execution",
+    "trafficdenominator andretainedmargin",
+    "boundedaccessratherthanallbotwhitelist",
+    "platformdependence andportableproductdata"
+  ],
+  "hypotheticalExample": "1000reads/100quotes/20paid/2refund, noobserveddata",
+  "images": "OriginalOGtitlegraphic andcharts/portraits unsuitablebanner; localphotographicconceptplusLittleJbodyfigures"
+}

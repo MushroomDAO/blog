@@ -1,0 +1,31 @@
+{
+  "workerExitCode": 0,
+  "reviewedAfterWorkerExit": true,
+  "banner": {
+    "seed": 8702,
+    "bytes": 91519,
+    "dimensions": "1200x630",
+    "manualReview": "realistic parcel/robotic hardware/keys atcounter, noface/text, conceptualnotproductproof",
+    "retry": "8701 rejected byOCR, receipt/shelvesremoved fromprompt; 8702passedwithoutoverride"
+  },
+  "figures": [
+    {
+      "file": "a16z-b2a-economy-agent-customers-commerce-fig-01.png",
+      "bytes": 58775,
+      "dimensions": "1280x720",
+      "review": "LittleJfringe/goatee/redstraps, anchorrelevant, legibleminimalChinese, whitebackground"
+    },
+    {
+      "file": "a16z-b2a-economy-agent-customers-commerce-fig-02.png",
+      "bytes": 57922,
+      "dimensions": "1280x720",
+      "review": "LittleJfringe/goatee/redstraps, anchorrelevant, legibleminimalChinese, whitebackground"
+    },
+    {
+      "file": "a16z-b2a-economy-agent-customers-commerce-fig-03.png",
+      "bytes": 80722,
+      "dimensions": "1280x720",
+      "review": "LittleJfringe/goatee/redstraps, anchorrelevant, legibleminimalChinese, whitebackground"
+    }
+  ]
+}

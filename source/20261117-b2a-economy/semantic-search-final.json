@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "a16z-b2a-economy-agent-customers-commerce",
+      "title": "a16z B2A经济：当客户派Agent来做生意",
+      "url": "/blog/a16z-b2a-economy-agent-customers-commerce/",
+      "language": "zh",
+      "excerpt": "a16z B2A经济：当客户派Agent来做生意 a16z 的 Olivia Moore 与 Justine Moore 提出 B2A 经济，企业将争取 Agent 带来的业务。本文分析从被发现到授权成交的四道关口，结合公开交易协议，讨论商品信息、身份权限、订单回执与售后如何衔接，并用明确标注的假设案例说明转化率分母、退款及保留毛利，帮助小团队评估新渠道与平台依赖。 B2A a16z AI Agent 商业模式 智能体经济 Agent 成了客户，谁才是付款的人？ 被 AI 提到，为什么还不等于做成生意？ 有哪些基础设施已经可以参考？ 为什么不能把所有机器",
+      "score": 0.7913701
+    },
+    {
+      "article_id": "capafy-ai-skill-marketplace-agent-economy",
+      "title": "Capafy：你的 AI 技能可以作为产品出售，在你睡觉时帮你赚钱",
+      "url": "/blog/capafy-ai-skill-marketplace-agent-economy/",
+      "language": "zh",
+      "excerpt": "Capafy：你的 AI 技能可以作为产品出售，在你睡觉时帮你赚钱 Capafy 是一个刚上线的 AI 技能市场，开发者可以上传在 Claude Code、Codex 或 OpenClaw 中构建的 Agent 技能，设置按小时、订阅或一次性付费定价，每次有人使用就获得收益，代码和 Prompt 对用户完全不可见。 AI Agent 技能市场 Capafy Claude Code 意义经济 开发者变现 Agent技能 创作者经济 它在解决什么问题？ 运作方式 对创作者：上传技能，设定价格 对用户：一键调用专家级技能 它的市场定位 值得关注的细节 目前的边",
+      "score": 0.56237054
+    },
+    {
+      "article_id": "startup-ai-marketing-agent-system-no-team-needed",
+      "title": "把市场部外包给 Agent：没有市场团队的技术型创业公司增长指南",
+      "url": "/blog/startup-ai-marketing-agent-system-no-team-needed/",
+      "language": "zh",
+      "excerpt": "把市场部外包给 Agent：没有市场团队的技术型创业公司增长指南 两个工程师，没有市场部，用五类 AI Agent（X回复、LinkedIn回复、博客评论、内容生成、意图信号监控）把流量翻倍、MRR 涨 30%。这是一篇市场营销专家视角 + 工程落地方案的实战研究文档，附开源工具地图和可直接复用的 Harness 架构。 AI营销 创业增长 Marketing Agent LinkedIn自动化 Twitter Agent 内容生成 意图信号 开源工具 Harness工程 无市场团队 问题的本质 核心架构原则 一个 Agent = 一个渠道 + 一个指标",
+      "score": 0.5579501
+    },
+    {
+      "article_id": "ai-intermediary-model-ahacreator-industry-transfer-guide",
+      "title": "抽成从35%打到5%：AhaCreator 证明了什么，还能迁移到哪些行业",
+      "url": "/blog/ai-intermediary-model-ahacreator-industry-transfer-guide/",
+      "language": "zh",
+      "excerpt": "抽成从35%打到5%：AhaCreator 证明了什么，还能迁移到哪些行业 AhaCreator 把海外达人营销的平台抽成从行业普遍的 25-50% 打到 5%，背后的逻辑不是补贴，而是 AI Agent 接管了 80-90% 的执行流程，彻底改变了成本结构。这个「AI 中介」模式的本质——用 AI 替代执行层、网络效应构建护城河、以极低佣金击穿传统竞争者——可以迁移到猎头、房产中介、供应链采购、PR 代理等几乎所有高度依赖人工执行的中介行业。 AI中介 AhaCreator 商业模式 出海营销 达人营销 行业迁移 AI Agent 一个数字触发的问题 ",
+      "score": 0.5441763
+    },
+    {
+      "article_id": "anthropic-commerce-agents-shopping-merchant-business-blueprint",
+      "title": "Anthropic 开源商业 Agent 蓝图：用 Claude 为你的业务场景构建自己的 Agent",
+      "url": "/blog/anthropic-commerce-agents-shopping-merchant-business-blueprint/",
+      "language": "zh",
+      "excerpt": "Anthropic 开源商业 Agent 蓝图：用 Claude 为你的业务场景构建自己的 Agent anthropics/commerce-agents 是 Anthropic 发布的商业 Agent 参考架构，定义了购物 Agent 和商户 Agent 两个角色、三种运行路径（Messages API / Agent SDK / Managed Agents）、四个行业示例。本文拆解其核心设计，并提供从零开始构建自己业务场景 Agent 的实操指南。 AI Agent Claude Anthropic 商业Agent 电商 开源 Blueprint",
+      "score": 0.5340474
+    },
+    {
+      "article_id": "anthropic-agent-workshop-engineering-guide",
+      "title": "Anthropic 官方 Agent 工作坊：从免费教材到业务流程落地",
+      "url": "/blog/anthropic-agent-workshop-engineering-guide/",
+      "language": "zh",
+      "excerpt": "Anthropic 官方 Agent 工作坊：从免费教材到业务流程落地 Anthropic 的官方 Agent 工作坊提供工具、子代理协作、记忆与业务案例。本文给出公告、活动和源码入口，区分免费教材与付费模型调用，核对模拟数据和样例维护状态，并以客服流程说明环境准备、角色拆分、真实系统接入、权限审批、幂等执行、预算和评测的方法，帮助把教学练习转化为可检查的业务试点，而非承诺免费无人公司。 Anthropic Claude Agent SDK 多智能体 业务自动化 工程实践 官方出处在哪里？ 教材里的“协作”是怎么发生的？ 第一步：先跑固定版本的业务练习 ",
+      "score": 0.5323538
+    },
+    {
+      "article_id": "eigenflux-agent-social-network",
+      "title": "Agent 的社交网络：EigenFlux 把 AI Agent 连成了一张广播互联的信息网",
+      "url": "/blog/eigenflux-agent-social-network/",
+      "language": "zh",
+      "excerpt": "Agent 的社交网络：EigenFlux 把 AI Agent 连成了一张广播互联的信息网 EigenFlux 是一个为 AI Agent 设计的广播网络——Agent 可以广播自己知道的、需要的、能提供的，订阅自己关心的信号，和其他 Agent 直接 DM。开源，MIT，插件支持 OpenClaw/Claude Code/Codex，沪 ICP 备案，Research Preview 已上线。 AI Agent Agent通信 广播网络 开源 MCP Claude Code A2A 多智能体 一个类比帮你秒懂 它解决的根本问题 三个核心动作 1. B",
+      "score": 0.52786064
+    },
+    {
+      "article_id": "alchemy-agentpay-ai-agent-commerce-protocol-analysis",
+      "title": "Alchemy AgentPay Deep Dive: The Agent Commerce Infrastructure War Has Started",
+      "url": "/blog/alchemy-agentpay-ai-agent-commerce-protocol-analysis/",
+      "language": "en",
+      "excerpt": "Alchemy AgentPay Deep Dive: The Agent Commerce Infrastructure War Has Started Alchemy launches AgentPay open beta — a protocol-agnostic payment proxy for AI agents supporting x402, ACP, MPP, and A2P simultaneously. Morgan Stanley projects $385B in agentic commerce by 2030. A deep",
+      "score": 0.52245146
+    },
+    {
+      "article_id": "agent-recursive-self-learning-agentoptimizer-prorl",
+      "title": "How Agents Learn to Learn Recursively: AgentOptimizer + ProRL's Complete Stack",
+      "url": "/blog/agent-recursive-self-learning-agentoptimizer-prorl/",
+      "language": "en",
+      "excerpt": "How Agents Learn to Learn Recursively: AgentOptimizer + ProRL's Complete Stack NVIDIA Research's Shaokun Zhang presented at BAAI Conference: AgentOptimizer treats functions as learnable weights; ProRL Agent turns rollout into a decoupled API service. Together they form a complete",
+      "score": 0.520341
+    },
+    {
+      "article_id": "tradingagents-multi-agent-llm-financial-trading-framework",
+      "title": "TradingAgents：把交易公司搬进 AI——96k Stars 的多 Agent 金融交易框架",
+      "url": "/blog/tradingagents-multi-agent-llm-financial-trading-framework/",
+      "language": "zh",
+      "excerpt": "TradingAgents：把交易公司搬进 AI——96k Stars 的多 Agent 金融交易框架 TauricResearch 开源的多 Agent LLM 量化交易框架，96k+ stars，Apache 2.0。用 LangGraph 构建 7 种专职角色：基本面/情绪/新闻/技术分析师 + 多空研究员 + 交易员 + 风控/投资组合经理。支持 OpenAI/Claude/Gemini/DeepSeek/Kimi/Qwen/GLM/Ollama 等全系列 LLM，覆盖美股/港股/A股/加密货币，附 arXiv 论文 2412.20138。 多A",
+      "score": 0.51790076
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+=== [banner-creator] done: src/assets/images/a16z-b2a-economy-agent-customers-commerce-banner.jpg (1200x630, 92211B) ===
+=== [verify-banner] src/assets/images/a16z-b2a-economy-agent-customers-commerce-banner.jpg ===
+  ok   provenance: banner-creator/flux2-klein-4b seed=8701 steps=16
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 92211B (< 99000B)
+  FAIL text: 1 rendered string(s) — generated banners must carry no words
+       → detected: (ll
+       → rerun generate-banner.sh with a different seed
+  ok   faces: none detected
+--- result: 1 failure(s), 0 warning(s)
+=== [verify-banner] REJECTED: src/assets/images/a16z-b2a-economy-agent-customers-commerce-banner.jpg ===
+
+REJECTED: the generated banner failed verification (see above).
+Retry with a different seed, e.g.:
+  bash /Users/jason/Dev/mycelium/blog/.agents/skills/banner-creator/generate-banner.sh "a16z-b2a-economy-agent-customers-commerce" "An elegant empty boutique service counter, a compact metallic robotic gripper carefully placing a plain kraft parcel beside a brass key and a blank folded receipt, warm oak and brushed steel surfaces, softly blurred product shelves, natural window light, realistic editorial product photograph, no people, no faces, no lettering, no screens" 8702

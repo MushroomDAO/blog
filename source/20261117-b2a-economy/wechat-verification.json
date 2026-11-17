@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-17T07:36:22.946Z",
+  "drafts": [
+    {
+      "slug": "a16z-b2a-economy-agent-customers-commerce",
+      "mediaId": "prCUE631thH1cmNLi42prBFyDsqoskdwnJk1ifQtlnC86hQAPyy0v372Z5fX9tf0",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "f66d849806675f0ec4189ea22638067f584202ae8b3762f92f79e1140c87c676",
+      "remoteTextHash": "f66d849806675f0ec4189ea22638067f584202ae8b3762f92f79e1140c87c676",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/a16z-b2a-economy-agent-customers-commerce/",
+      "localContentHash": "075d5b55679a55041545fc5dff867e020cc15140fcbe8f49538f7647c113d06d",
+      "remoteContentHash": "0d73c80113cb8fa483d2d17ec12576eec3656cfcb2313b0a402fac2d8370cb9f"
+    }
+  ]
+}

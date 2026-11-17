@@ -1,0 +1,11 @@
+{
+  "notObservedData": true,
+  "purpose": "constructed arithmetic example; not benchmark or businessgrowthmeasurement",
+  "reads": 1000,
+  "quotes": 100,
+  "paid": 20,
+  "refunds": 2,
+  "retained": 18,
+  "quoteToPaid": 0.2,
+  "readToRetained": 0.018
+}
