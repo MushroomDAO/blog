@@ -1,0 +1,33 @@
+{
+  "gitPin": "91cbe76c062668d8655b1fdeacab845205a7bdae",
+  "version": "1.15.0",
+  "license": "GPLv3",
+  "install": "frozenlockignore-scripts;explicitwxtprepare",
+  "typecheck": "passed",
+  "node26Tests": {
+    "pass": 1406,
+    "fail": 18,
+    "unhandledErrors": 1
+  },
+  "node22Tests": {
+    "files": 143,
+    "pass": 1424,
+    "fail": 0
+  },
+  "scope": "UpstreamunitDOMandmocknetworktests, notliveprovidertranslationquality/realbrowserextension/EpubPdfendtoend; notrootcauseallNode26failures",
+  "chromeProductionBuild": "passed",
+  "costPrivacy": "noOnlyTranslateaccountorsubscription; onlineproviderkey/pricingseparate; localbook !=localtranslation; optionallayout !=OCR; manualfeedbackoptinnotzerooutbound",
+  "node22Version": "v22.23.3",
+  "node26Version": "v26.10.0",
+  "sourceUnchanged": true,
+  "manifestPermissions": [
+    "storage",
+    "contextMenus",
+    "offscreen",
+    "scripting",
+    "declarativeNetRequestWithHostAccess",
+    "alarms",
+    "unlimitedStorage",
+    "tts"
+  ]
+}

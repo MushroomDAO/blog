@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-11-17T08:21:43.279Z",
+  "drafts": [
+    {
+      "slug": "longcat-video-avatar-16-engineering-guide",
+      "mediaId": "prCUE631thH1cmNLi42prGrrU2ekKXjxP10p0wBsdHPoL6idPoRKiS-DVvo0RO5M",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "d9bc85a60af7fa118d5c739276bcea24dd028027df2017c96953b28121a5d383",
+      "remoteTextHash": "d9bc85a60af7fa118d5c739276bcea24dd028027df2017c96953b28121a5d383",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/longcat-video-avatar-16-engineering-guide/",
+      "localContentHash": "9ad1e9fad06097a88decf12021794b3a6fb4047b53908c73565958ef93c736d1",
+      "remoteContentHash": "70279834219207b4ff8d9be37c9a495e1004b5dc7862758f8e8d2f761408a941"
+    },
+    {
+      "slug": "onlytranslate-browser-translation-privacy-cost-guide",
+      "mediaId": "prCUE631thH1cmNLi42prKnAb-ACGk-EU4n5A07MA-rhppe2EJKIMCwz6uizHseB",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "19be96fb96c317054d66b938730b595e139b76e513a3c987e68970b8874d1efa",
+      "remoteTextHash": "19be96fb96c317054d66b938730b595e139b76e513a3c987e68970b8874d1efa",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/onlytranslate-browser-translation-privacy-cost-guide/",
+      "localContentHash": "020332370e30e0237ae9eb6a6828d28d3abd5af54ddca6317e9579fd139d9c15",
+      "remoteContentHash": "efeff3c1d5771a9e5986c745a07c74073c8535b3e65f2d6805b25b0e4c0afbbd"
+    }
+  ]
+}

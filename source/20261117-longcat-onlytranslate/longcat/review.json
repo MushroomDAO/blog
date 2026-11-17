@@ -1,0 +1,23 @@
+{
+  "gitPin": "58eb336edc5c8c63389838727e40b8c18434e54e",
+  "modelPin": "acfc628244201fc53fb6fe8a8903c5bac9bdf68f",
+  "sourceReview": [
+    "README",
+    "modelcard/license",
+    "15page technicalreport",
+    "singleinferenceCLI",
+    "exampleJSON"
+  ],
+  "inferenceRan": false,
+  "weightsDownloaded": false,
+  "scope": "NoCUDAweightsormodeltest, no10minuteidentity/LipSync/runtime/VRAMclaim",
+  "keySourceFacts": [
+    "Nov15release",
+    ">10minutesisofficialcapabilityclaim",
+    "audioplusportraitorprompt",
+    "CUDA/Torch/FlashAttention referencepath,2GPUexample notminrequirement",
+    "8stepsandDMD/OPSDmix",
+    "int8fp8exclusive",
+    "baseLongCatVideo siblingassetsrequired"
+  ]
+}

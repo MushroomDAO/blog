@@ -1,0 +1,10 @@
+# LongCat Avatar1.6 andOnlyTranslate batch
+Task7260db71-5deb-4a76-8e76-cd805cc50ba7. Twoindependentposts, batchbuild/deploy once, separatecanonicalslugs/covers/3bodyfigs/drafts/KBentries. ExactHF1.6+Avatarentity andOnlyTranslate repo/entity checksbeforewriting showedonlyrawKB. ExtraLongcatrepoauditafterwriting seesourownuntrackedarticle; gitgrepHEAD confirmsnopreexistingLongcatrepoorOnlyTranslate article. Current4draftschecked, publishedAPI48001unavailable. PrimaryrecordLongcat, articlesarrayretainbothfullresultsforbatchretry.
+
+Longcat: git58eb336edc5c8c63389838727e40b8c18434e54e, pinnedHFmodelcardandlicense,15pagereportprose,CLI/examples reviewed. NoGPUweights/inference/10minidentity/latency/VRAM test. Do not use genericHFautoDiffusers/MPSexampleasanofficialverifieddeploymentrecipe. OfficialCUDA/Pytorch/FlashAttention/2GPUexample notminimumrequirement. Longrollout vsreferenceidentity, DMD/OPSD8stepmix, int8/fp8exclusive documented. Nofakebenchmark.
+
+OnlyTranslate: git91cbe76c062668d8655b1fdeacab845205a7bdae,1.15.0GPLv3,manifestMV3. Noappchanges. Frozenlockinstallignore-scripts+explicitWXTprepare;typecheckpass,Chromeproductionbuildpass. Node26fullverify1406pass18fail1unhandlederror;Node22samecode143files1424pass0fail. Differenceobserved,notallrootcausesisolated. UpstreamtestsDOM/mocknetwork,notrealprovidertranslation/installedextension/ebookPdfendtoend. NoAPIkeys/purchases/accountlogin. Privacy: localfilesnotalllocaltranslation,onlineproviderkeys/costseparate,optionalPDFLayoutnotOCR,manualfeedback/Edgeonlinespeech exceptionsdocumented.
+
+Banners: sourceimagerylogo/textheavycharts/portraits unsuitable; localFLUXonly. Longcat8711machinepassedbutmanualbrandlikeglyphrejected;rerender8712nooverrides. OnlyTranslate8721passed. BodyLittleM6imagesviarequiredimageworker,waitformalexitthenmanualreviewbeforefreeze.
+
+Final image worker exit code 0; all six figures and final banners manually approved before freeze. Build/deploy exit 0, deployment dfdfe53e; both canonical URLs, list positions 3/4, carousel positions 3/4 and five image variants per article verified. Semantic writes accepted four bilingual vectors; propagation is checked separately.

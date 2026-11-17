@@ -1,0 +1,59 @@
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +734
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+   ╭───────────────────────────────────────────────────────────────────╮
+   │                                                                   │
+   │                Update available! 9.12.1 → 12.21.0.                │
+   │   Changelog: https://github.com/pnpm/pnpm/releases/tag/v12.21.0   │
+   │              Run "pnpm add -g @pnpm/exe" to update.               │
+   │                                                                   │
+   │         Follow @pnpmjs for updates: https://x.com/pnpmjs          │
+   │                                                                   │
+   ╰───────────────────────────────────────────────────────────────────╯
+
+Progress: resolved 734, reused 224, downloaded 30, added 254
+Progress: resolved 734, reused 224, downloaded 82, added 305
+Progress: resolved 734, reused 224, downloaded 124, added 347
+Progress: resolved 734, reused 224, downloaded 165, added 385
+Progress: resolved 734, reused 224, downloaded 279, added 501
+Progress: resolved 734, reused 224, downloaded 403, added 627
+Progress: resolved 734, reused 224, downloaded 506, added 730
+Progress: resolved 734, reused 224, downloaded 510, added 734, done
+
+dependencies:
++ @element-plus/icons-vue 2.3.2
++ @floating-ui/dom 1.7.4
++ @wxt-dev/storage 1.0.1
++ crypto-js 4.2.0
++ dompurify 3.4.13
++ element-plus 2.11.3
++ epubjs 0.3.93
++ franc-min 6.2.0
++ katex 0.18.5
++ onnxruntime-web 1.29.0
++ paddleocr 1.2.0
++ pdfjs-dist 5.4.624
++ vue-i18n 11.4.8
++ webextension-polyfill 0.12.0
+
+devDependencies:
++ @release-it/conventional-changelog 11.0.1
++ @types/crypto-js 4.2.2
++ @types/webextension-polyfill 0.12.1
++ @vitejs/plugin-vue 6.0.8
++ @vue/test-utils 2.4.6
++ @wxt-dev/webextension-polyfill 1.0.0
++ fake-indexeddb 6.2.5
++ happy-dom 20.11.2
++ release-it 20.0.0
++ typescript 5.7.3
++ vite 7.3.6
++ vitest 3.2.7
++ vue 3.5.41
++ vue-tsc 3.3.9
++ web-ext 10.6.0
++ wxt 0.21.4
+
+Done in 7.6s

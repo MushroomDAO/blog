@@ -1,0 +1,180 @@
+[
+  {
+    "slug": "longcat-video-avatar-16-engineering-guide",
+    "query": "LongCat Video Avatar 1.6 MIT 音频人物 续生成",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "longcat-video-avatar-16-engineering-guide",
+          "title": "LongCat-Video-Avatar 1.6：十分钟数字人的工程边界",
+          "url": "/blog/longcat-video-avatar-16-engineering-guide/",
+          "language": "zh",
+          "excerpt": "LongCat-Video-Avatar 1.6：十分钟数字人的工程边界 美团 LongCat-Video-Avatar 1.6 开放代码与权重，支持音频驱动的人物视频生成。本文核查模型卡、技术报告与推理入口，解释长片续生成的误差累积、DMD 与 OPSD 混合、基础模型依赖及量化配置，并给出短片到长片的验收建议。十分钟能力来自官方展示，本次没有运行 GPU 推理，不把成片时长当作生成速度。 LongCat 数字人 视频生成 美团 开源模型 输入到底是什么？ 为什么长视频会越生成越不像？ 工程接入要注意哪些文件和参数？ 怎样验收“十分钟数字人”？ 常见问",
+          "score": 0.6792183
+        },
+        {
+          "article_id": "persona-vrm-avatar-ai-voice-mcp",
+          "title": "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex",
+          "url": "/blog/persona-vrm-avatar-ai-voice-mcp/",
+          "language": "zh",
+          "excerpt": "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex xikhar 开源了 Persona，一个跨平台桌面 VRM 角色应用，监听 Codex/ChatGPT 的音频输出，实时驱动嘴型同步和肢体动画。通过 MCP 暴露动画控制接口，AI Agent 可以直接调用 play_animation 让角色表达情绪。3天 680 星，MIT，支持 Linux/Windows/macOS。 VRM AI语音 MCP 桌面应用 Electron Three.js Codex Mycelium 它做什么 隐私优先的音频捕获 MCP 接口：Agent",
+          "score": 0.5573272
+        },
+        {
+          "article_id": "lingchat-ai-galgame-emotion-desktop-pet-tauri",
+          "title": "LingChat: Immersive AI Galgame Companion — 18-Class Emotion Recognition, Screen Perception, Live2D, Built on Tauri 2 + Vue 3",
+          "url": "/blog/lingchat-ai-galgame-emotion-desktop-pet-tauri/",
+          "language": "en",
+          "excerpt": "LingChat: Immersive AI Galgame Companion — 18-Class Emotion Recognition, Screen Perception, Live2D, Built on Tauri 2 + Vue 3 SlimeBoyOwO/LingChat, AGPL-3.0, Rust, 2,255 stars. Immersive AI Galgame companion chat: self-trained 18-class emotion recognition, desktop screenshot perce",
+          "score": 0.52732956
+        },
+        {
+          "article_id": "sweety-handdraw-video-pipeline",
+          "title": "sweety-handdraw-video：把长文做成边画边讲的视频",
+          "url": "/blog/sweety-handdraw-video-pipeline/",
+          "language": "zh",
+          "excerpt": "sweety-handdraw-video：把长文做成边画边讲的视频 sweety-handdraw-video 是开源手绘讲解视频 Skill，由 Agent 设计脚本、分镜和插画，本地工具负责描线、填色、字幕及音频合成。本文核对官方仓库与固定版本，拆解完整旁白优先的时间线、三种配音路径和质量检查，提供安装及短主题起步方法，并报告59项回归与离线渲染验证，明确运行范围及完整制作依赖。 sweety-handdraw-video AI视频 Agent Skills 手绘动画 开源 内容创作 输入一篇文章之后，谁在做什么？ 为什么先锁定完整旁白，再安排画面",
+          "score": 0.5146756
+        },
+        {
+          "article_id": "cuti-harness-open-source-video-world-generator-deepseek-harness-long-video",
+          "title": "Cuti Harness：开源长程视频世界生成器，多轮对话从 15 秒扩展到 3 分钟，本地不需要 GPU",
+          "url": "/blog/cuti-harness-open-source-video-world-generator-deepseek-harness-long-video/",
+          "language": "zh",
+          "excerpt": "Cuti Harness：开源长程视频世界生成器，多轮对话从 15 秒扩展到 3 分钟，本地不需要 GPU VideoVerses/Cuti-Harness，MIT 开源，TypeScript + Python，基于 DeepSeek Harness 的插件化视频世界生成器。多轮对话累积扩展，从 15 秒到 3 分钟+；单次 brief 自动生成 5 分钟视频。本地运行不需要 GPU，只要 Node.js 22+ + Conda。视频生成依赖云端 API（WaveSpeed Seedance 或 Ark，约 $0.81/clip）。开发者预览阶段。 op",
+          "score": 0.5120563
+        },
+        {
+          "article_id": "duix-avatar-heygem-local-digital-human-video-clone-teardown",
+          "title": "Duix-Avatar（前 HeyGem）：本地离线数字人视频生成深度拆解",
+          "url": "/blog/duix-avatar-heygem-local-digital-human-video-clone-teardown/",
+          "language": "zh",
+          "excerpt": "Duix-Avatar（前 HeyGem）：本地离线数字人视频生成深度拆解 duixcom/Duix-Avatar，15.6K 星，三个 Docker 服务打包 FunASR+Fish-Speech+视频引擎，RTX 4070 必须，70GB 镜像，自定义许可证 1000 MAU 付费门槛，「10 秒克隆」官方文档无依据，本地效果自承比云端差一档。 数字人 视频生成 本地推理 Docker 开源拆解 项目背景 核心功能三件套 硬件门槛 「10 秒克隆」说法核查 「本地离线」的真实含义 许可证陷阱：自定义「DUIX.COM Community Licens",
+          "score": 0.50977814
+        },
+        {
+          "article_id": "whiteboard-animator-cpu-only-hand-drawn-reveal-render-engine",
+          "title": "把一张画变成「有人正在画」：whiteboard-animator 用纯 CPU 做手绘揭示动画",
+          "url": "/blog/whiteboard-animator-cpu-only-hand-drawn-reveal-render-engine/",
+          "language": "zh",
+          "excerpt": "把一张画变成「有人正在画」：whiteboard-animator 用纯 CPU 做手绘揭示动画 masihsultani/whiteboard-animator 是 Kinoslide 白板格式背后的渲染引擎，MIT 开源。给它一张画好的白板风格图，它按人手的顺序把图重画出来：文字逐词书写、轮廓单笔勾勒、填充按面积决定用扫掠还是刷毛笔触、带交叉的线条图拆成连续笔画，所以 X 不会从中间长出来。渲染时除了一个 83MB 的 CRAFT 文字检测器没有任何模型——无 GPU、无训练、无 API Key。90 stars，2026-09-08 建仓。 手绘动",
+          "score": 0.50559884
+        },
+        {
+          "article_id": "higgs-audio-v2-engineering-deployment-guide",
+          "title": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入",
+          "url": "/blog/higgs-audio-v2-engineering-deployment-guide/",
+          "language": "zh",
+          "excerpt": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入 Higgs Audio v2 是 Boson AI 可下载权重的语音生成模型，适合旁白、声音克隆和多人对白。本文核对推理代码、模型社区许可、24GB 显存建议、参考音频与转写配对、长文本分块及 vLLM 服务，给出安装命令与生产接入方案，并明确区分源码检查、官方性能报告和未经本地复现的音质指标，帮助团队先跑通小样。 Higgs Audio v2 Boson AI TTS Voice Cloning Self Hosting 先下载哪两个东西？ 是不是开源？商业使用需要检查什么？ 先解决一个",
+          "score": 0.5032972
+        },
+        {
+          "article_id": "train-character-lora-local-flux-mac",
+          "title": "在 Mac 上训练一个「专属角色」：用本地 FLUX + LoRA 让 AI 每次都画出同一个人",
+          "url": "/blog/train-character-lora-local-flux-mac/",
+          "language": "zh",
+          "excerpt": "在 Mac 上训练一个「专属角色」：用本地 FLUX + LoRA 让 AI 每次都画出同一个人 AI 画画有个老毛病：同一个卡通角色，画十张脸长得十个样。本文用大白话讲清「角色 LoRA」是怎么训练的——它到底在学什么、训练过程在干嘛、为什么不是「找到一句咒语」而是「悄悄改模型的脑子」。全程在一台 Mac 上跑，零云成本，附真实训练演变图。 LoRA FLUX 本地AI Apple Silicon AI绘画 角色一致性 mflux 一、先说痛点：AI 画画「记不住脸」 二、LoRA 是什么？用大白话讲 三、训练过程到底在干嘛？（重点：纠正一个常见误解）",
+          "score": 0.5032187
+        },
+        {
+          "article_id": "storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard",
+          "title": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4",
+          "url": "/blog/storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard/",
+          "language": "zh",
+          "excerpt": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4 xiaozhang-art/storyflow-ai 开源，Multi-Agent 漫剧自动生成平台，7 步 Agent 流水线（剧本→角色→分镜→图片/配音并行→图生视频→合成），含 Director 决策引擎、断点续传、Montage 渲染引擎，Docker Compose 一键部署。 multi-agent video generation AI open source comic LLM FastAPI Docker 一段文字进去，一部漫剧出来 7 个 Age",
+          "score": 0.4992634
+        }
+      ]
+    }
+  },
+  {
+    "slug": "onlytranslate-browser-translation-privacy-cost-guide",
+    "query": "OnlyTranslate 开源双语阅读 免账号与API收费 GPLv3",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "onlytranslate-browser-translation-privacy-cost-guide",
+          "title": "OnlyTranslate只译：不注册插件账号，翻译费用怎么算",
+          "url": "/blog/onlytranslate-browser-translation-privacy-cost-guide/",
+          "language": "zh",
+          "excerpt": "OnlyTranslate只译：不注册插件账号，翻译费用怎么算 OnlyTranslate 只译是支持网页、字幕、EPUB 与 PDF 的开源双语阅读扩展，无需注册插件账号，也不绑定订阅。本文核查 GPLv3 许可、服务商密钥与费用、本地图书和在线文字传输、PDF 版面模型限制，并记录类型检查、测试及 Chrome 构建结果，说明 Node 版本差异与真实翻译质量尚未验证的范围。 OnlyTranslate 浏览器扩展 翻译 隐私 开源 不用注册，为什么不等于所有翻译都免费？ 它解决的是哪些阅读问题？ 本地图书，文字会不会出设备？ 本次构建与测试结果怎样",
+          "score": 0.758062
+        },
+        {
+          "article_id": "vocalcode-community-cpu-local-dictation-meeting-notes",
+          "title": "VocalCode Community：CPU 优先的本地听写与会议记录，不上云不激活",
+          "url": "/blog/vocalcode-community-cpu-local-dictation-meeting-notes/",
+          "language": "zh",
+          "excerpt": "VocalCode Community：CPU 优先的本地听写与会议记录，不上云不激活 VocalCode Community，AGPL-3.0，Rust + sherpa-onnx。本地优先的听写与会议记录工具，2026-09-22 开源。Parakeet TDT v3 + Paraformer 双模型，CPU 跑，Apple Silicon 和 Windows x64 双平台。社区版无需账号、无需激活码，所有语音处理本机完成，录音和转录不上传。作者 Daming Wu 用自己的工具给 Claude Code、Cursor 口述提示词，顺便做成了产品开",
+          "score": 0.5905816
+        },
+        {
+          "article_id": "liteparse-llamaindex-local-document-parser",
+          "title": "LiteParse：LlamaIndex 团队开源本地文档解析引擎，Rust 核心+四端绑定+精确边界框，8.3k Star",
+          "url": "/blog/liteparse-llamaindex-local-document-parser/",
+          "language": "zh",
+          "excerpt": "LiteParse：LlamaIndex 团队开源本地文档解析引擎，Rust 核心+四端绑定+精确边界框，8.3k Star run-llama/liteparse 是 LlamaIndex 团队推出的开源本地文档解析引擎：Rust 核心，原生支持 Node.js、Python、Browser WASM。基于 PDFium 的空间文本提取 + bounding box，双轨解析（native PDF + selective OCR），为 AI Agent 提供截图和布局信息，无云依赖，无隐私顾虑。v2.0.4，8.3k Stars。 LlamaIndex",
+          "score": 0.5880215
+        },
+        {
+          "article_id": "cloudflare-workers-ai-glm-kimi-deepseek-minimax",
+          "title": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token",
+          "url": "/blog/cloudflare-workers-ai-glm-kimi-deepseek-minimax/",
+          "language": "zh",
+          "excerpt": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token Cloudflare Workers AI 已上线 GLM-5.2、Kimi K2.7 Code、1M 上下文的 Kimi K3、DeepSeek V4 Pro、MiniMax M3，同一个 token、同一行代码即可调用，还理清了自托管与第三方托管的价格和数据边界。 Cloudflare Workers AI GLM-5.2 Kimi K3 DeepSeek V4 MiniMax 边缘推理 起因 结论：你想要的基本都有 但有一条分界",
+          "score": 0.5832676
+        },
+        {
+          "article_id": "opendisplay-free-open-source-sidecar-iphone-ipad-second-monitor",
+          "title": "OpenDisplay：免费开源 Sidecar 替代，iPhone/iPad/旧 Mac 变真副屏",
+          "url": "/blog/opendisplay-free-open-source-sidecar-iphone-ipad-second-monitor/",
+          "language": "zh",
+          "excerpt": "OpenDisplay：免费开源 Sidecar 替代，iPhone/iPad/旧 Mac 变真副屏 Sidecar 要同一 Apple ID、不支持 iPhone；Duet 改了订阅；Luna 要加密狗。OpenDisplay 全都不要：免费、开源、无账号、无加密狗，USB 或 WiFi，H.264 硬件编码，Retina HiDPI，触控输入，旧 Mac 也能当副屏。GPL-3.0，macOS 私有 API CGVirtualDisplay。 open-source macOS iPhone iPad second-monitor H264 priv",
+          "score": 0.5823962
+        },
+        {
+          "article_id": "gemma-translator-google-offline-voice-raspberry-pi",
+          "title": "Gemma Translator：用树莓派 5 做一台完全离线的双向语音翻译机",
+          "url": "/blog/gemma-translator-google-offline-voice-raspberry-pi/",
+          "language": "zh",
+          "excerpt": "Gemma Translator：用树莓派 5 做一台完全离线的双向语音翻译机 Google Gemma 团队开源的全离线双向语音翻译项目，JavaScript/Python，Apache 2.0。以树莓派 5（8GB）为目标硬件，Gemma 4（gemma4-e2b）通过 LiteRT-LM 本地推理，Moonshine 负责语音识别和 TTS 合成。双通道设计：两个人面对面，各自说母语，实时互译。一键部署为永久 kiosk 服务。源码来自 Google Antigravity 实验。 Gemma 语音翻译 离线AI 树莓派 LiteRT 本地推理 M",
+          "score": 0.5821542
+        },
+        {
+          "article_id": "gh-copilot-code-review-cli",
+          "title": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review",
+          "url": "/blog/gh-copilot-code-review-cli/",
+          "language": "zh",
+          "excerpt": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review GitHub CLI v2.88.0 新功能实测：在终端直接邀请 Copilot 审查 PR，无需跳转浏览器，附隐私风险提示 github copilot cli code-review developer-tools 核心能力 如何使用 免费吗？ 隐私警告（必读） 能用其他 AI CLI 吗？ 额外优化：大型团队福音 总结",
+          "score": 0.5803818
+        },
+        {
+          "article_id": "aegra-self-hosted-langsmith-deployments-alternative",
+          "title": "Aegra：LangSmith Deployments 的自托管平替，SDK 不用换，代码不用改",
+          "url": "/blog/aegra-self-hosted-langsmith-deployments-alternative/",
+          "language": "zh",
+          "excerpt": "Aegra：LangSmith Deployments 的自托管平替，SDK 不用换，代码不用改 调研 Aegra：LangChain LangSmith Deployments（原 LangGraph Platform）的开源自托管平替。同一套 LangGraph SDK、同一套 API，换成自己的基础设施和 Postgres。核心是 Redis 任务队列的 Worker 架构（单实例 30 并发、租约式崩溃恢复、水平扩展）、Postgres 持久化 checkpoint、Agent Protocol v2 流式传输、pgvector 语义存储。Lan",
+          "score": 0.57422835
+        },
+        {
+          "article_id": "voicestudio-local-elevenlabs-alternative-tts",
+          "title": "VoiceStudio：24.8K Stars 的本地 ElevenLabs 替代方案，16 个 TTS 引擎跑在你的机器上",
+          "url": "/blog/voicestudio-local-elevenlabs-alternative-tts/",
+          "language": "zh",
+          "excerpt": "VoiceStudio：24.8K Stars 的本地 ElevenLabs 替代方案，16 个 TTS 引擎跑在你的机器上 AGPL-3.0 开源，无账号无订阅无计费，646 种语言，语音克隆 3 秒起步，视频配音、有声书、MCP Server 全齐——这是目前功能最完整的本地语音 AI 工具之一。但默认引擎权重是 CC-BY-NC，商用前必须核查。 TTS voice-cloning open-source local-AI ElevenLabs audio-AI VoiceStudio 一、能做什么：六个工作流 二、引擎生态：16 TTS + 11",
+          "score": 0.5729675
+        },
+        {
+          "article_id": "omni-open-source-company-ai-agent-permission-aware",
+          "title": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么",
+          "url": "/blog/omni-open-source-company-ai-agent-permission-aware/",
+          "language": "zh",
+          "excerpt": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么 调研自托管开源公司级 AI Agent Omni：接入 Google Drive、Gmail、Slack、Confluence、Jira、HubSpot 等企业常用工具，核心设计是「权限感知的公司上下文」——索引信息的可见范围严格继承自源系统的权限，不会因为被索引过就绕开原本的访问控制。混合检索（BM25全文+pgvector语义）全部收在一个 Postgres 里，不需要额外的 Elasticsearch 或专用向量库。沙箱代码执行走隔离 Docker 网络+只读根文件系统",
+          "score": 0.5692024
+        }
+      ]
+    }
+  }
+]

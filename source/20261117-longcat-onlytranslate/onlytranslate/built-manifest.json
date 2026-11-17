@@ -1,0 +1,140 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "version": "1.15.0",
+  "icons": {
+    "16": "icon/16.png",
+    "32": "icon/32.png",
+    "48": "icon/48.png",
+    "64": "icon/64.png",
+    "128": "icon/128.png",
+    "256": "icon/256.png",
+    "512": "icon/512.png"
+  },
+  "homepage_url": "https://onlytranslate.top/",
+  "default_locale": "zh_CN",
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "offscreen",
+    "scripting",
+    "declarativeNetRequestWithHostAccess",
+    "alarms",
+    "unlimitedStorage",
+    "tts"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "*://*.youtube.com/*",
+    "*://*.youtubekids.com/*",
+    "*://*.udemy.com/*",
+    "*://*.coursera.org/*",
+    "*://*.khanacademy.org/*",
+    "*://*.x.com/*",
+    "*://*.twitter.com/*",
+    "*://*.teapaw.org/*",
+    "*://*.teapawt.org/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "youtube-player.html"
+      ],
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*",
+        "https://threads.com/*",
+        "https://www.threads.com/*"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "action": {
+    "default_title": "__MSG_extName__",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.youtubekids.com/*",
+        "*://*.udemy.com/*",
+        "*://*.coursera.org/*",
+        "*://*.khanacademy.org/*"
+      ],
+      "js": [
+        "video-subtitle-inject.js"
+      ],
+      "exclude_matches": [
+        "https://www.youtube.com/embed/*"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/embed/*"
+      ],
+      "all_frames": true,
+      "js": [
+        "video-subtitle-inject.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_end",
+      "css": [
+        "content-scripts/content.css"
+      ],
+      "js": [
+        "content-scripts/content.js"
+      ]
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "content-scripts/input-box-inject.js"
+      ],
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://threads.com/*",
+        "https://twitter.com/*",
+        "https://www.threads.com/*",
+        "https://x.com/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "content-scripts/youtube-cards.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/embed/*"
+      ],
+      "all_frames": true,
+      "run_at": "document_end",
+      "js": [
+        "content-scripts/youtube-embed.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "open_in_tab": true,
+    "page": "options.html"
+  }
+}

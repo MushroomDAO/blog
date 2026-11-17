@@ -1,0 +1,74 @@
+[
+  {
+    "id": "43dc66bb9473580e7c5c41fef76fcbb6e442f3c921792c51",
+    "metadata": {
+      "article_id": "longcat-video-avatar-16-engineering-guide",
+      "content_hash": "22dd41873181a0e4",
+      "excerpt": "LongCat-Video-Avatar 1.6：十分钟数字人的工程边界 美团 LongCat-Video-Avatar 1.6 开放代码与权重，支持音频驱动的人物视频生成。本文核查模型卡、技术报告与推理入口，解释长片续生成的误差累积、DMD 与 OPSD 混合、基础模型依赖及量化配置，并给出短片到长片的验收建议。十分钟能力来自官方展示，本次没有运行 GPU 推理，不把成片时长当作生成速度。 LongCat 数字人 视频生成 美团 开源模型 输入到底是什么？ 为什么长视频会越生成越不像？ 工程接入要注意哪些文件和参数？ 怎样验收“十分钟数字人”？ 常见问",
+      "language": "zh",
+      "tags": [
+        "LongCat",
+        "数字人",
+        "视频生成",
+        "美团",
+        "开源模型"
+      ],
+      "title": "LongCat-Video-Avatar 1.6：十分钟数字人的工程边界",
+      "url": "/blog/longcat-video-avatar-16-engineering-guide/"
+    }
+  },
+  {
+    "id": "dbcc8495922b8e4340639001ec6861f43b547a6d93b8ca57",
+    "metadata": {
+      "article_id": "longcat-video-avatar-16-engineering-guide",
+      "content_hash": "c5a229c388ff8d85",
+      "excerpt": "LongCat Avatar 1.6: Long-Video Engineering Guide Review LongCat Avatar 1.6 inputs, long-video continuation, LoRA mixing and CUDA setup, with practical evaluation advice and explicit limits on untested claims. LongCat 数字人 视频生成 美团 开源模型 What does it take as input? Why does identity ",
+      "language": "en",
+      "tags": [
+        "LongCat",
+        "数字人",
+        "视频生成",
+        "美团",
+        "开源模型"
+      ],
+      "title": "LongCat Avatar 1.6: Long-Video Engineering Guide",
+      "url": "/blog/longcat-video-avatar-16-engineering-guide/"
+    }
+  },
+  {
+    "id": "5bb404e705378a65435c553f7660f0415299abdbb3c11254",
+    "metadata": {
+      "article_id": "onlytranslate-browser-translation-privacy-cost-guide",
+      "content_hash": "5d9106c3c77876f2",
+      "excerpt": "OnlyTranslate只译：不注册插件账号，翻译费用怎么算 OnlyTranslate 只译是支持网页、字幕、EPUB 与 PDF 的开源双语阅读扩展，无需注册插件账号，也不绑定订阅。本文核查 GPLv3 许可、服务商密钥与费用、本地图书和在线文字传输、PDF 版面模型限制，并记录类型检查、测试及 Chrome 构建结果，说明 Node 版本差异与真实翻译质量尚未验证的范围。 OnlyTranslate 浏览器扩展 翻译 隐私 开源 不用注册，为什么不等于所有翻译都免费？ 它解决的是哪些阅读问题？ 本地图书，文字会不会出设备？ 本次构建与测试结果怎样",
+      "language": "zh",
+      "tags": [
+        "OnlyTranslate",
+        "浏览器扩展",
+        "翻译",
+        "隐私",
+        "开源"
+      ],
+      "title": "OnlyTranslate只译：不注册插件账号，翻译费用怎么算",
+      "url": "/blog/onlytranslate-browser-translation-privacy-cost-guide/"
+    }
+  },
+  {
+    "id": "d599a5a7883a8c3f7f27b4971841cf722bc6055897b7641d",
+    "metadata": {
+      "article_id": "onlytranslate-browser-translation-privacy-cost-guide",
+      "content_hash": "1cbd2e536bf03c65",
+      "excerpt": "OnlyTranslate: Accounts, Privacy and Translation Costs Explore OnlyTranslate accounts, provider costs, local files and online text transfer, with GPLv3 licensing, verified build and tests, and validation limits. OnlyTranslate 浏览器扩展 翻译 隐私 开源 Why does no registration not mean every",
+      "language": "en",
+      "tags": [
+        "OnlyTranslate",
+        "浏览器扩展",
+        "翻译",
+        "隐私",
+        "开源"
+      ],
+      "title": "OnlyTranslate: Accounts, Privacy and Translation Costs",
+      "url": "/blog/onlytranslate-browser-translation-privacy-cost-guide/"
+    }
+  }
+]

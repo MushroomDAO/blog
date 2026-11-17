@@ -1,0 +1,193 @@
+
+> 只译@1.15.0 build /private/tmp/onlytranslate-20261117
+> wxt build
+
+
+WXT 0.21.4
+ℹ Building chrome-mv3 for production with Vite 7.3.6
+[?25l
+⠋ Preparing...[K
+⠋ [1/15] background[K
+⠙ [1/15] background[K
+⠹ [1/15] background[K
+⠸ [1/15] background[K
+⠼ [1/15] background[K
+⠴ [1/15] background[K
+⠦ [1/15] background[K
+⠧ [1/15] background[K
+⠇ [1/15] background[K
+⠇ [2/15] content[K
+⠏ [2/15] content[K
+⠏ [3/15] ebook, offscreen, options, pdf, popup[K
+⠋ [3/15] ebook, offscreen, options, pdf, popup[K
+⠙ [3/15] ebook, offscreen, options, pdf, popup[K
+⠹ [3/15] ebook, offscreen, options, pdf, popup[K
+⠸ [3/15] ebook, offscreen, options, pdf, popup[K
+⠼ [3/15] ebook, offscreen, options, pdf, popup[K
+⠴ [3/15] ebook, offscreen, options, pdf, popup[K
+⠦ [3/15] ebook, offscreen, options, pdf, popup[K
+⠧ [3/15] ebook, offscreen, options, pdf, popup[K
+⠇ [3/15] ebook, offscreen, options, pdf, popup[K
+⠏ [3/15] ebook, offscreen, options, pdf, popup[K
+⠋ [3/15] ebook, offscreen, options, pdf, popup[K
+⠙ [3/15] ebook, offscreen, options, pdf, popup[K
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+⠙ [4/15] floating-runtime[K
+⠹ [4/15] floating-runtime[K
+⠸ [4/15] floating-runtime[K
+⠸ [5/15] input-box-inject[K
+⠸ [6/15] input-runtime[K
+⠼ [6/15] input-runtime[K
+⠼ [7/15] onboarding-runtime[K
+⠼ [8/15] page-runtime[K
+⠴ [8/15] page-runtime[K
+⠦ [8/15] page-runtime[K
+⠧ [8/15] page-runtime[K
+⠇ [8/15] page-runtime[K
+⠏ [8/15] page-runtime[K
+⠋ [8/15] page-runtime[K
+⠋ [9/15] pdf-layout-model[K
+⠙ [9/15] pdf-layout-model[K
+⠙ [10/15] selection-runtime[K
+⠹ [10/15] selection-runtime[K
+⠸ [10/15] selection-runtime[K
+⠼ [10/15] selection-runtime[K
+⠼ [11/15] style[K
+⠼ [12/15] video-runtime[K
+⠴ [12/15] video-runtime[K
+⠴ [13/15] youtube-cards[K
+⠦ [13/15] youtube-cards[K
+⠦ [14/15] youtube-embed[K
+⠧ [14/15] youtube-embed[K
+⠧ [15/15] youtube-player[K
+[K[?25h
+[K[?25h✔ Built extension in 5.226 s
+  ├─ .output/chrome-mv3/manifest.json                                    2.11 kB
+  ├─ .output/chrome-mv3/ebook.html                                       1.15 kB
+  ├─ .output/chrome-mv3/offscreen.html                                   362 B
+  ├─ .output/chrome-mv3/options.html                                     1.02 kB
+  ├─ .output/chrome-mv3/pdf.html                                         957 B
+  ├─ .output/chrome-mv3/popup.html                                       921 B
+  ├─ .output/chrome-mv3/youtube-player.html                              372 B
+  ├─ .output/chrome-mv3/background.js                                    480.31 kB
+  ├─ .output/chrome-mv3/chunks/_commonjs-dynamic-modules-TDtrdbi3.js     239 B
+  ├─ .output/chrome-mv3/chunks/CustomHotkeyInput-BZDpfSU7.js             5.27 kB
+  ├─ .output/chrome-mv3/chunks/ebook-LZQdtJlb.js                         30.04 kB
+  ├─ .output/chrome-mv3/chunks/index-Bb75dY3s.js                         451.66 kB
+  ├─ .output/chrome-mv3/chunks/index-lLkOvQE1.js                         381.95 kB
+  ├─ .output/chrome-mv3/chunks/offscreen-AIrqMUva.js                     9.34 kB
+  ├─ .output/chrome-mv3/chunks/options-MK7-Q3ue.js                       239.41 kB
+  ├─ .output/chrome-mv3/chunks/pdf-CdyTYHBW.js                           754.34 kB
+  ├─ .output/chrome-mv3/chunks/popup-CMBE1Oin.js                         23.59 kB
+  ├─ .output/chrome-mv3/chunks/readerController-D5Nn9AcX.js              403.80 kB
+  ├─ .output/chrome-mv3/chunks/readerKeyboard-D_2S9pBd.js                658 B
+  ├─ .output/chrome-mv3/chunks/theme-WcsLfoyw.js                         55.45 kB
+  ├─ .output/chrome-mv3/chunks/translateApi-MVzFAfDP.js                  185.64 kB
+  ├─ .output/chrome-mv3/chunks/translationDiagnostics-frG5eCo6.js        1.89 kB
+  ├─ .output/chrome-mv3/chunks/url--OmfnyBd.js                           13.80 kB
+  ├─ .output/chrome-mv3/content-scripts/content.js                       46.39 kB
+  ├─ .output/chrome-mv3/content-scripts/floating-runtime.js              141.64 kB
+  ├─ .output/chrome-mv3/content-scripts/input-box-inject.js              2.26 kB
+  ├─ .output/chrome-mv3/content-scripts/input-runtime.js                 77.33 kB
+  ├─ .output/chrome-mv3/content-scripts/onboarding-runtime.js            35.69 kB
+  ├─ .output/chrome-mv3/content-scripts/page-runtime.js                  867.04 kB
+  ├─ .output/chrome-mv3/content-scripts/selection-runtime.js             701.26 kB
+  ├─ .output/chrome-mv3/content-scripts/video-runtime.js                 304.32 kB
+  ├─ .output/chrome-mv3/content-scripts/youtube-cards.js                 65.28 kB
+  ├─ .output/chrome-mv3/content-scripts/youtube-embed.js                 304.48 kB
+  ├─ .output/chrome-mv3/pdf-layout-model.js                              111.61 kB
+  ├─ .output/chrome-mv3/video-subtitle-inject.js                         14.64 kB
+  ├─ .output/chrome-mv3/youtube-player.js                                60.07 kB
+  ├─ .output/chrome-mv3/assets/CustomHotkeyInput-DhQKBTk2.css            3.55 kB
+  ├─ .output/chrome-mv3/assets/ebook-Dc-FcUoA.css                        13.23 kB
+  ├─ .output/chrome-mv3/assets/index-DHfpyZ2T.css                        345.74 kB
+  ├─ .output/chrome-mv3/assets/options-t_xI_39t.css                      46.96 kB
+  ├─ .output/chrome-mv3/assets/pdf-Dn5TIzFC.css                          55.88 kB
+  ├─ .output/chrome-mv3/assets/popup-B_JUDJQr.css                        16.50 kB
+  ├─ .output/chrome-mv3/assets/style.css                                 9.64 kB
+  ├─ .output/chrome-mv3/assets/theme-BkXe3HGH.css                        4.64 kB
+  ├─ .output/chrome-mv3/content-scripts/content.css                      9.64 kB
+  ├─ .output/chrome-mv3/content-scripts/floating-runtime.css             8.69 kB
+  ├─ .output/chrome-mv3/content-scripts/page-runtime.css                 13.26 kB
+  ├─ .output/chrome-mv3/_locales/en/messages.json                        240 B
+  ├─ .output/chrome-mv3/_locales/ja/messages.json                        249 B
+  ├─ .output/chrome-mv3/_locales/zh_CN/messages.json                     244 B
+  ├─ .output/chrome-mv3/_locales/zh_TW/messages.json                     244 B
+  ├─ .output/chrome-mv3/assets/KaTeX_AMS-Regular-BQhdFMY1.woff2          28.08 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_AMS-Regular-DMm9YOAa.woff           33.52 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_AMS-Regular-DRggAlZN.ttf            63.63 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf       12.37 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff      7.72 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2     6.91 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff   7.66 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2  6.91 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf    12.34 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Fraktur-Bold-BdnERNNW.ttf           19.58 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Fraktur-Bold-BsDP51OF.woff          13.30 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2         11.35 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Fraktur-Regular-CB_wures.ttf        19.57 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2      11.32 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff       13.21 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-Bold-Cx986IdX.woff2            25.32 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-Bold-Jm3AIy58.woff             29.91 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-Bold-waoOVXN0.ttf              51.34 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2      16.78 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf        32.97 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-BoldItalic-SpSLRI95.woff       19.41 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-Italic-3WenGoN9.ttf            33.58 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-Italic-BMLOBm91.woff           19.68 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-Italic-NWA7e6Wa.woff2          16.99 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-Regular-B22Nviop.woff2         26.27 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-Regular-Dr94JaBh.woff          30.77 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Main-Regular-ypZvNtVU.ttf           53.58 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf        31.20 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2      16.40 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff       18.67 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Math-Italic-DA0__PXp.woff           18.75 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Math-Italic-flOr_0UB.ttf            31.31 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Math-Italic-t53AETM-.woff2          16.44 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_SansSerif-Bold-CFMepnvq.ttf         24.50 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2       12.22 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_SansSerif-Bold-DbIhKOiC.woff        14.41 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2     12.03 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_SansSerif-Italic-DN2j7dab.woff      14.11 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf       22.36 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf      19.44 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff     12.32 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2    10.34 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Script-Regular-C5JkGWo-.ttf         16.65 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Script-Regular-D3wIWfF6.woff2       9.64 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Script-Regular-D5yQViql.woff        10.59 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Size1-Regular-C195tn64.woff         6.50 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Size1-Regular-Dbsnue_I.ttf          12.23 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Size1-Regular-mCD8mA8B.woff2        5.47 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Size2-Regular-B7gKUWhC.ttf          11.51 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Size2-Regular-Dy4dx90m.woff2        5.21 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Size2-Regular-oD1tc_U0.woff         6.19 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Size3-Regular-CTq5MqoE.woff         4.42 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Size3-Regular-DgpXs0kz.ttf          7.59 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Size4-Regular-BF-4gkZK.woff         5.98 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Size4-Regular-Dl5lxZxV.woff2        4.93 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Size4-Regular-DWFBv043.ttf          10.36 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Typewriter-Regular-C0xS9mPB.woff    16.03 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2   13.57 kB
+  ├─ .output/chrome-mv3/assets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf     27.56 kB
+  ├─ .output/chrome-mv3/assets/pdf.worker.min-wgc6bjNh.mjs               1.08 MB
+  ├─ .output/chrome-mv3/help/interaction-settings.png                    29.68 kB
+  ├─ .output/chrome-mv3/help/service-settings.png                        37.68 kB
+  ├─ .output/chrome-mv3/icon/128.png                                     20.86 kB
+  ├─ .output/chrome-mv3/icon/16.png                                      247 B
+  ├─ .output/chrome-mv3/icon/256.png                                     24.43 kB
+  ├─ .output/chrome-mv3/icon/32.png                                      761 B
+  ├─ .output/chrome-mv3/icon/48.png                                      4.09 kB
+  ├─ .output/chrome-mv3/icon/512.png                                     95.85 kB
+  ├─ .output/chrome-mv3/icon/64.png                                      6.53 kB
+  ├─ .output/chrome-mv3/pdf-layout/ort-wasm-simd-threaded.mjs            24.22 kB
+  ├─ .output/chrome-mv3/pdf-layout/ort-wasm-simd-threaded.wasm           13.96 MB
+  └─ .output/chrome-mv3/THIRD_PARTY_NOTICES.md                           2.72 kB
+Σ Total size: 22.67 MB
+✔ Finished in 5.372 s

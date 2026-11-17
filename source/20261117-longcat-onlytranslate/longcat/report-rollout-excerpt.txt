@@ -1,0 +1,49 @@
+2.3.2 Rollout for Long Video Generation
+Existing methods for long video generation follow two main paradigms. The first turns a video diffusion model into a
+causal generator, as in CausVid Yin et al. [2025] and Self Forcing Huang et al. [2026c]. A block-wise causal attention
+mask restricts each chunk to attend only to itself and earlier chunks, and the video is generated chunk by chunk with a
+KV cache. The second paradigm, adopted by InfiniteTalk Yang et al. [2025] and LongCat-Video Team et al. [2025a],
+keeps the model fully bidirectional within each clip and extends the video by repeatedly continuing from the last
+frames of the previously generated clip. We refer to this paradigm as autoregressive video continuation: generation is
+autoregressive across clips, while each clip is still denoised with full bidirectional attention. LongCat-Video-Avatar
+follows the second paradigm.
+Formally, let F and C denote the number of video frames in a clip and its overlap context, respectively, and let L and
+Lctx denote the corresponding numbers of latent frames after VAE encoding. The stride between clips is S = F − C.
+In a rollout of N clips, clip k ∈ {0, . . . , N − 1} covers frames [kS, kS + F ) and is driven by the audio window Ak
+over the same interval. Let E and D denote the VAE encoder and decoder, xref the reference frame, and ctext the text
+prompt. The first clip is generated in the image-audio-to-video (IA2V) setting, with the reference latent zref = E(xref )
+placed at the first temporal position. For k ≥ 1, we decode the generated latents ˆzk−1 of the previous clip to obtain the
+video ˆxk−1 = D(ˆzk−1). We jointly re-encode its last C frames to obtain the context latents of clip k.
+zctx,k = E(ˆxk−1[F − C : F ]) . (4)
+The context latents zctx,k occupy the first Lctx temporal positions of clip k and are concatenated with Gaussian noise
+along the temporal axis. The context latents are kept at timestep zero, and only the remaining L − Lctx positions are
+denoised. The reference latent zref is additionally provided as an identity condition for continuation clips, so that the
+appearance stays anchored to xref . When the clips are assembled, the first clip is kept in full, and for every subsequent
+clip only the S newly generated frames are appended.
+Each clip is sampled with the eight-step generator described above. Since the procedure has no fixed horizon, it can
+produce videos of arbitrary length. However, it also introduces a mismatch between training and inference. The few-step
+generator is distilled on individual clips, whose temporal contexts are derived from real videos, whereas during rollout
+every context after the first clip comes from the model’s own imperfect outputs. Small deviations in color, texture, or the
+lip region are re-encoded into the next context and amplified over successive clips, which appears as progressive color
+drift and loss of detail in long videos. The next section addresses this mismatch by training directly on such rollouts.
+7
+LongCat-Video-Avatar 1.6 Technical Report
+2.3.3 On-policy Self-Distillation
+We adapt OPSD-V Liu et al. [2026b] to audio-driven avatar continuation by applying context replacement to the
+overlapping frames between clips. The student follows the eight-step rollout in Sec. 2.3.2. At each denoising step, the
+EMA teacher receives the same noisy latents and audio, text, and reference conditions as the student, with a modified
+temporal context.
+For continuation clip k ≥ 1, the teacher context covers the same C frames as the student context in Eq. (4). We take the
+first C − 1 frames from the corresponding interval of the real video y and the final frame of the teacher-generated video
+ˆxt k−1 = D(ˆzt k−1) for the previous clip. We encode these frames jointly to obtain the teacher context latents.
+zt ctx,k = E (︁[︁ y[kS : kS + C − 1], ˆxt k−1[F − 1] ]︁)︁ . (5)
+For the first clip, the student’s temporal context is the reference latent zref , and the teacher uses zt ctx,0 = E([ y[0 :
+C − 1], xref ]).
+Following OPSD-V, we match the student and teacher velocity fields vs k,j and vt k,j at the same student-visited state. The
+loss is computed on the latent suffix [Lctx, L) and averaged over all clips k and denoising steps j.
+LOPSD = Ek,j
+[︂⃦⃦ vs k,j [Lctx : L] − sg (︁ vt k,j [Lctx : L] )︁⃦⃦2 2 ]︂ , (6)
+where sg denotes stop-gradient. At inference, we use the student OPSD adapter together with the GRPO adapter in the
+rollout of Sec. 2.3.2.
+3 Data
+LongCat-Video-Avatar 1.6 largely reuses the
