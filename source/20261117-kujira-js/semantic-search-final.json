@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "kujira-js-procedural-whale-animation",
+      "title": "Kujira JS：把五秒鲸鱼动画装进一张网页",
+      "url": "/blog/kujira-js-procedural-whale-animation/",
+      "language": "zh",
+      "excerpt": "Kujira JS：把五秒鲸鱼动画装进一张网页 Kujira JS 用 three.js、着色器与 Web Audio 在浏览器生成五秒鲸鱼短片。本文拆解时间轴、程序几何、水彩后处理与声音合成，记录本地构建和浏览器检查，说明单文件、无安装依赖与无外部素材的区别，以及逐帧复现、音频缓冲、视频导出和设备性能的验证边界，为工程师提供可控代码动画的学习入口与复用建议。 Kujira JS three.js WebGL Web Audio 程序动画 它播放的是视频，还是在现场画？ 五秒内容，为什么要按帧来组织？ 手绘质感来自哪些工程选择？ 怎样在本地运行？ 本次真",
+      "score": 0.72749895
+    },
+    {
+      "article_id": "threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl",
+      "title": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节",
+      "url": "/blog/threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl/",
+      "language": "zh",
+      "excerpt": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节 achrefelouafi 开源的 Elemental Sandbox 用 Three.js + Vite + 手写 GLSL，在浏览器里程序化生成 10 种 3A 游戏级技能特效——冰霜迸裂、枝状闪电、陨石撞击、能量光束、虚空刀刃、凤凰……全部无贴图、无精灵表、无预烘焙网格。938 个参数配有实时滑块，按 P 暂停后仍可继续调整，成为研究游戏 VFX 系统的最佳交互式沙盒。MIT 许可，npm run dev 即跑。 Three.js WebGL G",
+      "score": 0.5306466
+    },
+    {
+      "article_id": "tvtjs-threejs-vue3-digital-twin-visualization-framework",
+      "title": "TvT.js：把 Three.js + Vue 3 变成数字孪生快速交付框架",
+      "url": "/blog/tvtjs-threejs-vue3-digital-twin-visualization-framework/",
+      "language": "zh",
+      "excerpt": "TvT.js：把 Three.js + Vue 3 变成数字孪生快速交付框架 IceGL 出品的 TvT.js 把 ThreeJS、Vue 3、TresJS 融为一体，提供插件化架构 + 在线3D编辑器 + 动态组件服务，让数字孪生和工业可视化项目快速落地。2347 stars，永久开源免费商用，支持信创环境。 Three.js Vue3 数字孪生 3D可视化 开源 工业可视化 WebGL 信创 低代码 一、一句话定位 二、技术栈 三、两个核心产品 在线 3D 场景编辑器（zone3Deditor） 动态组件发布加载服务（dcser） 四、插件生态 五、",
+      "score": 0.526351
+    },
+    {
+      "article_id": "avatar-vrm-threejs-pixiv-three-vrm-mtoon-webgpu",
+      "title": "pixiv/three-vrm 调研：把「虚拟形象」这件事做成 Web 标准件",
+      "url": "/blog/avatar-vrm-threejs-pixiv-three-vrm-mtoon-webgpu/",
+      "language": "zh",
+      "excerpt": "pixiv/three-vrm 调研：把「虚拟形象」这件事做成 Web 标准件 深入调研 pixiv 开源的 three-vrm——一个把 VRM 人形化身格式带进 three.js 的库。MIT 授权、2103 star、npm 周下载 79,477、最新 v3.5.5。文章拆解它的 16 包 monorepo 架构、GLTFLoader 插件设计、归一化人形骨骼、MToon 卡通材质与 WebGPU 支持、弹簧骨骼物理、VRMA 动画格式，以及 VRM 0.0 → 1.0 迁移的六个真实坑位。附最小可用代码与性能优化清单。 three.js VRM ",
+      "score": 0.5111537
+    },
+    {
+      "article_id": "astral3d-vue3-threejs-3d-editor-bim-cad-webgpu",
+      "title": "Astral3D：Vue3 + Three.js 打造的免费开源 Web 3D 编辑器，支持 BIM/CAD/30+ 格式",
+      "url": "/blog/astral3d-vue3-threejs-3d-editor-bim-cad-webgpu/",
+      "language": "zh",
+      "excerpt": "Astral3D：Vue3 + Three.js 打造的免费开源 Web 3D 编辑器，支持 BIM/CAD/30+ 格式 mlt131220/Astral3D 是基于 Vue3 + Three.js 的现代 Web 3D 编辑器，支持 30+ 模型格式（GLTF/OBJ/FBX/RVT/IFC/DWG），内置 BIM 轻量化、CAD 解析、粒子系统、插件系统、动画编辑器。在线可用，2.4K stars，WebGPU 支持在路上。 3D编辑器 Three.js Vue3 BIM CAD WebGL 开源 Mycelium 它解决什么问题 核心能力 30+",
+      "score": 0.5075002
+    },
+    {
+      "article_id": "persona-vrm-avatar-ai-voice-mcp",
+      "title": "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex",
+      "url": "/blog/persona-vrm-avatar-ai-voice-mcp/",
+      "language": "zh",
+      "excerpt": "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex xikhar 开源了 Persona，一个跨平台桌面 VRM 角色应用，监听 Codex/ChatGPT 的音频输出，实时驱动嘴型同步和肢体动画。通过 MCP 暴露动画控制接口，AI Agent 可以直接调用 play_animation 让角色表达情绪。3天 680 星，MIT，支持 Linux/Windows/macOS。 VRM AI语音 MCP 桌面应用 Electron Three.js Codex Mycelium 它做什么 隐私优先的音频捕获 MCP 接口：Agent",
+      "score": 0.5049513
+    },
+    {
+      "article_id": "awesome-opus-videos-code-animation-guide",
+      "title": "Awesome Opus视频合集：从703个案例学代码动画",
+      "url": "/blog/awesome-opus-videos-code-animation-guide/",
+      "language": "zh",
+      "excerpt": "Awesome Opus视频合集：从703个案例学代码动画 awesome-opus5-5-videos收集用Claude Opus 5.5制作的代码动画案例。本文纠正仓库地址，核对703个条目、207条部分提示词与418个复刻标记，解释HTML、Canvas、SVG和Three.js出片方式，给出分镜、关键帧检查与导出流程，并区分源码、模型归因、更新时间和素材授权的边界。 AI视频 Claude 代码动画 Canvas Three.js 开源项目 这是视频生成模型，还是编程案例库？ 703、418、100，分别在数什么？ 为什么“用代码做视频”值得学？",
+      "score": 0.49474564
+    },
+    {
+      "article_id": "irodori-tts-anime-japanese-local-tts",
+      "title": "一个日语动漫风 TTS 微调模型，附带五种量化版本——以及一句很诚实的免责声明",
+      "url": "/blog/irodori-tts-anime-japanese-local-tts/",
+      "language": "zh",
+      "excerpt": "一个日语动漫风 TTS 微调模型，附带五种量化版本——以及一句很诚实的免责声明 Irodori-TTS-v4.1-Anime 是基于 Irodori-TTS-v4.1-Small 用动漫风语音数据微调的日语 TTS 模型，MIT 协议，同时提供 int8/int4/float8 共五种量化变体。作者主动写明：基座模型的标注流程未公开，微调数据是独立标注的，所以 caption 条件控制和 emoji 控制的行为可能和基座不一样。 TTS 语音合成 本地推理 日语 量化 开源 微调 local-first 先说清楚这是什么 值得写的两个点 一、量化矩阵给得",
+      "score": 0.49190798
+    },
+    {
+      "article_id": "flux3-black-forest-labs-multimodal-video-audio-action-local-deployment-guide",
+      "title": "FLUX.3 深度解析：图像+视频+音频+机器人动作，一个模型，本地部署完整指南与硬件成本评估",
+      "url": "/blog/flux3-black-forest-labs-multimodal-video-audio-action-local-deployment-guide/",
+      "language": "zh",
+      "excerpt": "FLUX.3 深度解析：图像+视频+音频+机器人动作，一个模型，本地部署完整指南与硬件成本评估 Black Forest Labs 于2026-07-23发布FLUX.3，单一多模态基础模型联合学习图像/视频/音频/动作，Early Access API已上线。本文深度解析FLUX.3架构、能力、评测数据，以及现有FLUX.1/2系列全套本地部署方案：mflux（Apple Silicon）、ComfyUI（NVIDIA）、硬件选配建议和成本对比。 FLUX 图像生成 视频生成 多模态 Black Forest Labs 本地部署 Apple Silic",
+      "score": 0.48350883
+    },
+    {
+      "article_id": "img2threejs-photo-to-threejs-code",
+      "title": "img2threejs: Give the AI One Image, Get Back Animated Three.js Code",
+      "url": "/blog/img2threejs-photo-to-threejs-code/",
+      "language": "en",
+      "excerpt": "img2threejs: Give the AI One Image, Get Back Animated Three.js Code 8591 stars in 16 days. img2threejs adds /img2threejs to Claude Code: input one reference image, get back not a mesh file but pure TypeScript code — rebuilding the object from primitives and procedural shaders, wi",
+      "score": 0.4798932
+    }
+  ]
+}

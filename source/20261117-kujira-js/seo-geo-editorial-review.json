@@ -1,0 +1,13 @@
+{
+  "bilingualEquivalent": true,
+  "BLUF": true,
+  "FAQ": true,
+  "questionHeadings": true,
+  "codeVsVendoredDependencyVsRuntimeAssetsDistinguished": true,
+  "logicalFPSNotActualPerformance": true,
+  "sameBrowserRepeatNotCrossGPUClaim": true,
+  "audioBufferNotListeningQuality": true,
+  "notVideoExporter": true,
+  "actualChecksVsSourceFactsSeparated": true,
+  "copyrightAndAttribution": true
+}

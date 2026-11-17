@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-17T07:54:34.241624+00:00",
+  "articles": [
+    {
+      "slug": "kujira-js-procedural-whale-animation",
+      "url": "https://blog.mushroom.cv/blog/kujira-js-procedural-whale-animation/",
+      "title": "Kujira JS：把五秒鲸鱼动画装进一张网页",
+      "listRank": 2,
+      "carouselRank": 2,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/kujira-js-procedural-whale-animation-banner.CGaQFMrG.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 91667
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/kujira-js-procedural-whale-animation-banner.CGaQFMrG_ZoRgaP.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 27408
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/kujira-js-procedural-whale-animation-fig-01.Dl8uY7T8_nDNSh.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 21820
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/kujira-js-procedural-whale-animation-fig-02.Di_0sE9b_ZwQjGC.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 23840
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/kujira-js-procedural-whale-animation-fig-03.Dx5wWfaU_9uyeb.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 45724
+        }
+      ]
+    }
+  ]
+}

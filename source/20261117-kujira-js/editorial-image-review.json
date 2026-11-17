@@ -1,0 +1,32 @@
+{
+  "workerExitCode": 0,
+  "reviewedAfterWorkerExit": true,
+  "banner": {
+    "source": "officialmedia/rise.jpg",
+    "sourceUrl": "https://raw.githubusercontent.com/henrymeihao/kujira-js/5821c4f2c6689c24a5a7786c917f36ca74a8023f/media/rise.jpg",
+    "bytes": 91667,
+    "dimensions": "1200x630",
+    "manual": "clearwhale/boat/seafillframe,notoursite,sourcestillartwork,nohumanface/legibletext",
+    "license": "MITcreditinarticle"
+  },
+  "figures": [
+    {
+      "file": "kujira-js-procedural-whale-animation-fig-01.png",
+      "bytes": 22421,
+      "dimensions": "1280x720",
+      "manual": "correctLittleM, sparseChineselegible, anchorrelevant"
+    },
+    {
+      "file": "kujira-js-procedural-whale-animation-fig-02.png",
+      "bytes": 24859,
+      "dimensions": "1280x720",
+      "manual": "correctLittleM, sparseChineselegible, anchorrelevant"
+    },
+    {
+      "file": "kujira-js-procedural-whale-animation-fig-03.png",
+      "bytes": 42905,
+      "dimensions": "1280x720",
+      "manual": "correctLittleM, sparseChineselegible, anchorrelevant"
+    }
+  ]
+}

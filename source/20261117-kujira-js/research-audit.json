@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-17",
+  "source": "https://github.com/henrymeihao/kujira-js",
+  "pin": "5821c4f2c6689c24a5a7786c917f36ca74a8023f",
+  "license": "MIT plus listedadaptedshader andthreeMITnotices",
+  "duplicateResolution": "rawKB only; LivLivKujiracharacter unrelated exactURLnotpublished; current3draftsnohit, published48001unavailable",
+  "actualEvidence": [
+    "byteidenticalNodebuild",
+    "samebrowserrealWebGLcanvas62->20->62",
+    "rightArrow63",
+    "playpausebodystate",
+    "nativeAudioBuffer5s48kHzstereofinite/nonzero",
+    "observedresourceentriesempty",
+    "manualscreenshot"
+  ],
+  "notTested": [
+    "actualFPS",
+    "power",
+    "mobile",
+    "audiohearingquality",
+    "videoencoding",
+    "crossGPUbitidentity"
+  ],
+  "banner": {
+    "sourceUrl": "https://raw.githubusercontent.com/henrymeihao/kujira-js/5821c4f2c6689c24a5a7786c917f36ca74a8023f/media/rise.jpg",
+    "license": "MIT",
+    "credit": "henrymeihao",
+    "adopted": true,
+    "bytes": 91667
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "scope": "Real local HTTP single HTML, isolated headless Chrome Low; no FPS/power/mobile/crossGPU/audio-listening benchmark",
+  "startup": {
+    "ready": true,
+    "fps": 24,
+    "frames": 120,
+    "label": "2.58 s",
+    "canvas": [
+      1280,
+      720
+    ],
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+  },
+  "sameBrowserFrameCheck": {
+    "frame62First": "1cfbbbaaa867acbd830bc735b680d38c766b8e56b7232a2c106107ff3bebbedf",
+    "frame20": "fa95b82a61a88c2615152d8e6d26603e3946a18c3229f9d7c4ec5c65a0859f2d",
+    "frame62Again": "1cfbbbaaa867acbd830bc735b680d38c766b8e56b7232a2c106107ff3bebbedf",
+    "same": true,
+    "different": true
+  },
+  "arrowControl": {
+    "label": "2.63 s",
+    "frame": 63
+  },
+  "audioBuffer": {
+    "duration": 5,
+    "sampleRate": 48000,
+    "channels": 2,
+    "samples": 240000,
+    "nonzero": true,
+    "finite": true,
+    "checkedSampleChannel": 0
+  },
+  "playControl": {
+    "playing": true
+  },
+  "pauseControl": {
+    "playing": false
+  },
+  "resourceEntries": [],
+  "passed": true
+}

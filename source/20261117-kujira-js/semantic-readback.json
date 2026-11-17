@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1c2538b07a87bc81b4d9169bdcd3db284f37e386c32bcdb1",
+    "metadata": {
+      "article_id": "kujira-js-procedural-whale-animation",
+      "content_hash": "2ea32633555201ff",
+      "excerpt": "Kujira JS：把五秒鲸鱼动画装进一张网页 Kujira JS 用 three.js、着色器与 Web Audio 在浏览器生成五秒鲸鱼短片。本文拆解时间轴、程序几何、水彩后处理与声音合成，记录本地构建和浏览器检查，说明单文件、无安装依赖与无外部素材的区别，以及逐帧复现、音频缓冲、视频导出和设备性能的验证边界，为工程师提供可控代码动画的学习入口与复用建议。 Kujira JS three.js WebGL Web Audio 程序动画 它播放的是视频，还是在现场画？ 五秒内容，为什么要按帧来组织？ 手绘质感来自哪些工程选择？ 怎样在本地运行？ 本次真",
+      "language": "zh",
+      "tags": [
+        "Kujira JS",
+        "three.js",
+        "WebGL",
+        "Web Audio",
+        "程序动画"
+      ],
+      "title": "Kujira JS：把五秒鲸鱼动画装进一张网页",
+      "url": "/blog/kujira-js-procedural-whale-animation/"
+    }
+  },
+  {
+    "id": "0e3fb4b0facd1207c26df714a4b8b7e16bcf41fe92be4dae",
+    "metadata": {
+      "article_id": "kujira-js-procedural-whale-animation",
+      "content_hash": "f9e5829f6975caad",
+      "excerpt": "Kujira JS: A Procedural Whale Short in One HTML File Explore Kujira JS, a single-file whale short built with three.js and Web Audio, with verified build, frame controls and audio synthesis, plus runtime limits. Kujira JS three.js WebGL Web Audio 程序动画 Is it playing a video or draw",
+      "language": "en",
+      "tags": [
+        "Kujira JS",
+        "three.js",
+        "WebGL",
+        "Web Audio",
+        "程序动画"
+      ],
+      "title": "Kujira JS: A Procedural Whale Short in One HTML File",
+      "url": "/blog/kujira-js-procedural-whale-animation/"
+    }
+  }
+]

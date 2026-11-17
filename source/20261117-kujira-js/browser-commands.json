@@ -1,0 +1,138 @@
+[
+  {
+    "args": [
+      "network",
+      "route",
+      "https://**",
+      "--abort"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":true,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":false,\"saveStatus\":\"not_attempted\"},\"routed\":\"https://**\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "open",
+      "http://127.0.0.1:60291/index.html?q=low&t=2.6"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"targetId\":\"619071399428E787F3127CDFC41E68C0\",\"title\":\"鯨 KUJIRA · 5 秒代码动画（手绘风）\",\"url\":\"http://127.0.0.1:60291/index.html?q=low&t=2.6\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({ready:!!window.FILM_READY})"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:60291/index.html?q=low&t=2.6\",\"result\":\"{\\\"ready\\\":true}\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({ready:FILM_READY,fps:FILM.FPS,frames:FILM.FRAMES,label:document.querySelector('#lbl').textContent,canvas:[document.querySelector('#c').width,document.querySelector('#c').height],userAgent:navigator.userAgent})"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:60291/index.html?q=low&t=2.6\",\"result\":\"{\\\"ready\\\":true,\\\"fps\\\":24,\\\"frames\\\":120,\\\"label\\\":\\\"2.58 s\\\",\\\"canvas\\\":[1280,720],\\\"userAgent\\\":\\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36\\\"}\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "screenshot",
+      "/Users/jason/Dev/mycelium/blog/source/20261117-kujira-js/local-frame-62.png"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"path\":\"/Users/jason/Dev/mycelium/blog/source/20261117-kujira-js/local-frame-62.png\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "(async()=>{const hash=async()=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(document.querySelector('#c').toDataURL())))).map(x=>x.toString(16).padStart(2,'0')).join('');FILM.renderFrame(62);let a=await hash();FILM.renderFrame(20);let b=await hash();FILM.renderFrame(62);let c=await hash();return JSON.stringify({frame62First:a,frame20:b,frame62Again:c,same:a===c,different:a!==b})})()"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:60291/index.html?q=low&t=2.6\",\"result\":\"{\\\"frame62First\\\":\\\"1cfbbbaaa867acbd830bc735b680d38c766b8e56b7232a2c106107ff3bebbedf\\\",\\\"frame20\\\":\\\"fa95b82a61a88c2615152d8e6d26603e3946a18c3229f9d7c4ec5c65a0859f2d\\\",\\\"frame62Again\\\":\\\"1cfbbbaaa867acbd830bc735b680d38c766b8e56b7232a2c106107ff3bebbedf\\\",\\\"same\\\":true,\\\"different\\\":true}\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "ArrowRight"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"pressed\":\"ArrowRight\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({label:document.querySelector('#lbl').textContent,frame:+document.querySelector('#scrub').value})"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:60291/index.html?q=low&t=2.6\",\"result\":\"{\\\"label\\\":\\\"2.63 s\\\",\\\"frame\\\":63}\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "(async()=>{const b=await FILM.soundReady;let d=b.getChannelData(0),sum=0,finite=true;for(let i=0;i<d.length;i++){sum+=d[i]*d[i];finite=finite&&Number.isFinite(d[i]);}return JSON.stringify({duration:b.duration,sampleRate:b.sampleRate,channels:b.numberOfChannels,samples:b.length,nonzero:sum>0,finite})})()"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:60291/index.html?q=low&t=2.6\",\"result\":\"{\\\"duration\\\":5,\\\"sampleRate\\\":48000,\\\"channels\\\":2,\\\"samples\\\":240000,\\\"nonzero\\\":true,\\\"finite\\\":true}\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "click",
+      "#play"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"clicked\":\"#play\",\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"}},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({playing:document.body.classList.contains('playing')})"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:60291/index.html?q=low&t=2.6\",\"result\":\"{\\\"playing\\\":true}\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      " "
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"pressed\":\" \"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({playing:document.body.classList.contains('playing')})"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:60291/index.html?q=low&t=2.6\",\"result\":\"{\\\"playing\\\":false}\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify(performance.getEntriesByType('resource').map(x=>x.name))"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":true,\"engine\":\"chrome\",\"launchHash\":13652769386817852056},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":true,\"saveStatus\":\"not_attempted\"},\"origin\":\"http://127.0.0.1:60291/index.html?q=low&t=2.6\",\"result\":\"[]\"},\"error\":null}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "close"
+    ],
+    "exit": 0,
+    "stdout": "{\"success\":true,\"data\":{\"closed\":true,\"lifecycle\":{\"effectiveLaunch\":{\"browserLaunched\":false,\"engine\":\"chrome\",\"launchHash\":null},\"launched\":false,\"relaunchedBrowser\":false,\"restartedBackground\":false,\"restoreStatus\":\"not_configured\",\"reused\":false,\"saveStatus\":\"not_configured\"},\"restoreStatus\":\"not_configured\",\"saveStatus\":\"not_configured\"},\"error\":null}\n",
+    "stderr": ""
+  }
+]
