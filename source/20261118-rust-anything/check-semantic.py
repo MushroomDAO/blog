@@ -8,7 +8,7 @@ base=f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CLOUDFLARE_ACC
 def req(u,data,headers=headers):
  return json.load(urllib.request.urlopen(urllib.request.Request(u,data=json.dumps(data).encode(),headers=headers),timeout=45))
 r=req(base+'/get_by_ids',{'ids':ids});assert r['success'];rows=[{'id':x['id'],'metadata':x.get('metadata',{})} for x in r['result']];(out/'semantic-readback.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2))
-queries=['rust-anything v1.4.0 录制回放 Rust重写 跨语言桥接']
+queries=['rust-anything Python CLI record replay Rust 迁移验收 1.4.0']
 reports=[]
 for slug,q in zip(slugs,queries):
  a=req('https://blog.mushroom.cv/api/search',{'query':q},{'Content-Type':'application/json','User-Agent':'Mycelium-Publish-Verification'});reports.append({'slug':slug,'query':q,'found':slug in json.dumps(a),'response':a})

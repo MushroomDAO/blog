@@ -9,3 +9,5 @@ README's all29functions/7925case anecdote is author reported, most leaf function
 Official assets logoSVG plus text-heavy terminal/raceGIF disqualified as photorealistic cover. FLUX8751 bridge metaphor generated locally, machine/manual approved. Required body-image worker supplies3LittleM figures. No claim of cloud/power/performance gains measured.
 
 Build must preserve the still-pending AmberPR257 article. New repository change goes through a feature PR; no protectedmain bypass.
+
+Final deployment572a7a5a verifiedHTTP200,list/carousel rank3,all5imagevariants. WeChatcurrentdraft fullcanonicaltext,3orderedimages,allmetadata/cover/source verified. Semantic2vectors readback/publicsearch verified. PR258 stacked on pendingPR257; mainnotmerged, no protectedbranchbypass.

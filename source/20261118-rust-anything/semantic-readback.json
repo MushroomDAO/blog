@@ -1,0 +1,38 @@
+[
+  {
+    "id": "886229e1e9b2ac003668c402e5b68a8a77380a014157c199",
+    "metadata": {
+      "article_id": "rust-anything-record-replay-rust-migration-guide",
+      "content_hash": "448d46a2311404b2",
+      "excerpt": "rust-anything：用录制回放给Rust重写划边界 rust-anything把原程序的行为录成可回放用例，给Rust迁移生成桥接、差异检查与验收流程。本文拆解它为何不是自动翻译器，为什么逐函数移植可能更慢，怎样处理UTF-16、异常和动态输出，并给出从小型CLI开始的工程路径、影子运行与回退边界，以及本地测试范围，帮助团队判断哪些代码值得迁移、哪些应保留。 Rust 代码迁移 MCP 差分测试 开发工具 它为什么不是“把项目一键翻译成 Rust”？ 工程链路：录制、桥接、回放，再决定是否切换 为什么已经迁移到 Rust，反而可能更慢？ 如何从一",
+      "language": "zh",
+      "tags": [
+        "Rust",
+        "代码迁移",
+        "MCP",
+        "差分测试",
+        "开发工具"
+      ],
+      "title": "rust-anything：用录制回放给Rust重写划边界",
+      "url": "/blog/rust-anything-record-replay-rust-migration-guide/"
+    }
+  },
+  {
+    "id": "e6d38081b9ca55ea4b67238aeba86a1a2d9f541ef04384c7",
+    "metadata": {
+      "article_id": "rust-anything-record-replay-rust-migration-guide",
+      "content_hash": "d1cc1caa7a263640",
+      "excerpt": "rust-anything: Record, Replay and Verify a Rust Rewrite An engineering guide to rust-anything: recorded behavior, Rust bridges, replay gates, batch costs, shadow execution, and the limits of a passing migration. Rust 代码迁移 MCP 差分测试 开发工具 What does the tool actually write? The engin",
+      "language": "en",
+      "tags": [
+        "Rust",
+        "代码迁移",
+        "MCP",
+        "差分测试",
+        "开发工具"
+      ],
+      "title": "rust-anything: Record, Replay and Verify a Rust Rewrite",
+      "url": "/blog/rust-anything-record-replay-rust-migration-guide/"
+    }
+  }
+]
