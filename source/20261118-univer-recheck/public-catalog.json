@@ -1,0 +1,15 @@
+{
+  "found": true,
+  "response": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"results\":[{\"id\":\"univer-ai-native-office-sdk-spreadsheet-agent-headless-teardown\",\"title\":\"Univer：面向 AI Agent 的嵌入式办公 SDK，2 万星，v1.0 本周发布\",\"description\":\"dream-num/univer，Apache 2.0，TypeScript，~2 万星，DreamNum 团队出品。嵌入式办公 SDK，表格/文档/演示六种编辑器，可在 Node.js 无头运行。AI Agent 可通过 Facade API 按程序读写工作区，通过 Worktree 隔离编辑后等人类审批。v1.0.2 三天前发布，npm 月下载 190 万。核心红旗：xlsx 导入/导出是 Pro 付费功能，Worktree 协作也需要 Pro。\",\"pubDate\":\"2026-09-27T00:00:00.000Z\",\"tags\":[\"办公套件\",\"AI Agent\",\"TypeScript\",\"开源拆解\",\"SDK\",\"表格\"],\"category\":\"Tech-Experiment\",\"url\":\"/blog/univer-ai-native-office-sdk-spreadsheet-agent-headless-teardown/\"}]}"
+        }
+      ]
+    }
+  }
+}

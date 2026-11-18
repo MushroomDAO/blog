@@ -1,1 +1,91 @@
-[]
+[
+  {
+    "slug": "univer-ai-native-office-sdk-spreadsheet-agent-headless-teardown",
+    "query": "Univer 嵌入式办公 SDK 表格 Facade 无头运行 商业插件",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "univer-ai-native-office-sdk-spreadsheet-agent-headless-teardown",
+          "title": "Univer：面向 AI Agent 的嵌入式办公 SDK，2 万星，v1.0 本周发布",
+          "url": "/blog/univer-ai-native-office-sdk-spreadsheet-agent-headless-teardown/",
+          "language": "zh",
+          "excerpt": "Univer：面向 AI Agent 的嵌入式办公 SDK，2 万星，v1.0 本周发布 dream-num/univer，Apache 2.0，TypeScript，~2 万星，DreamNum 团队出品。嵌入式办公 SDK，表格/文档/演示六种编辑器，可在 Node.js 无头运行。AI Agent 可通过 Facade API 按程序读写工作区，通过 Worktree 隔离编辑后等人类审批。v1.0.2 三天前发布，npm 月下载 190 万。核心红旗：xlsx 导入/导出是 Pro 付费功能，Worktree 协作也需要 Pro。 办公套件 AI",
+          "score": 0.6908129
+        },
+        {
+          "article_id": "andrew-ng-openworker-desktop-ai-coworker-local-aisuite",
+          "title": "OpenWorker：吴恩达开源的桌面 AI 协作者，本地运行 + 批准门 + 25+ 工具集成",
+          "url": "/blog/andrew-ng-openworker-desktop-ai-coworker-local-aisuite/",
+          "language": "zh",
+          "excerpt": "OpenWorker：吴恩达开源的桌面 AI 协作者，本地运行 + 批准门 + 25+ 工具集成 andrewyng/openworker，4天前刚开源。MIT，Python + TypeScript + Tauri + Rust，本地运行，BYOK（带自己的 key 或跑 Ollama），25+ 工具集成，批准门机制保留人类最终审批权。吴恩达 aisuite 的实战参考实现。 AI Agent 开源 桌面应用 本地优先 吴恩达 aisuite 工作流 自托管 一、它是什么 二、架构：三层 三、核心机制：批准门 四、支持什么 五、技术底层：aisuite",
+          "score": 0.56513745
+        },
+        {
+          "article_id": "yakhyo-uniface-python-face-analysis-unified-library",
+          "title": "UniFace：把人脸分析全套能力统一到一个 Python API",
+          "url": "/blog/yakhyo-uniface-python-face-analysis-unified-library/",
+          "language": "zh",
+          "excerpt": "UniFace：把人脸分析全套能力统一到一个 Python API yakhyo 开源的 Python 人脸分析统一库，944 stars。单一 API 覆盖：检测（RetinaFace/SCRFD/YOLOv8-Face）、识别（ArcFace/AdaFace）、追踪（BYTETracker）、106/468 点关键点、语义分割、人像抠图（MODNet）、注视估计、头部姿态、属性分析（年龄/性别/情绪）、活体检测、质量评估，支持 Apple Silicon / CUDA / CPU，模型自动下载。 人脸分析 Python 计算机视觉 ONNX Runt",
+          "score": 0.5615651
+        },
+        {
+          "article_id": "opengcua-generalist-computer-use-stack",
+          "title": "OpenGCUA: An Open Stack for Generalist Computer Use",
+          "url": "/blog/opengcua-generalist-computer-use-stack/",
+          "language": "en",
+          "excerpt": "OpenGCUA: An Open Stack for Generalist Computer Use OpenGCUA combines GUI, code and APIs for computer-use agents. Review its initial release, missing model weights, published results, Mac setup and test limits. OpenGCUA MAI-UI 电脑操作 Agent 开源 Why go beyond clicking a GUI? What is a",
+          "score": 0.56087697
+        },
+        {
+          "article_id": "llm-dock-docker-compose-local-llm-dashboard",
+          "title": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板",
+          "url": "/blog/llm-dock-docker-compose-local-llm-dashboard/",
+          "language": "zh",
+          "excerpt": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板 LLM-Dock 是一个管理本地 LLM 推理服务的 Web 面板：自动扫描 HuggingFace 缓存发现模型，llama.cpp 跑 GGUF、vLLM 跑 safetensors，3300-3400 端口段自动分配，一键起停，自动注册进 Open WebUI，还能在面板里直接跑 llama-bench 并把结果存库对比。前提是 Linux + NVIDIA。 本地推理 Docker llama.cpp vLLM 运维 开源 Open Web",
+          "score": 0.55989254
+        },
+        {
+          "article_id": "openworker-andrewyng-ai-coworker-25-integrations-local-first",
+          "title": "OpenWorker：吴恩达开源的 AI 协作者，交付成品而不是对话",
+          "url": "/blog/openworker-andrewyng-ai-coworker-25-integrations-local-first/",
+          "language": "zh",
+          "excerpt": "OpenWorker：吴恩达开源的 AI 协作者，交付成品而不是对话 andrewyng/openworker，13.8k stars，MIT，Python + Rust + React。吴恩达开源的桌面 AI 协作者，核心命题：给你交付完成品（文档、Slack 回复、更新后的日历），而不是下一步待办清单。25+ 应用集成，支持 OpenAI/Anthropic/Gemini/DeepSeek/Kimi/Ollama 等12个供应商，本地优先，写入/发送/运行命令前必须用户审批。基于 aisuite 构建。 AI助手 桌面应用 本地优先 吴恩达 aisu",
+          "score": 0.55759007
+        },
+        {
+          "article_id": "cua-computer-use-2-0-desktop-agent-benchmark-trajectory-cua-s1",
+          "title": "Cua：Computer-Use 2.0 开源基础设施，桌面操控降格为工具调用",
+          "url": "/blog/cua-computer-use-2-0-desktop-agent-benchmark-trajectory-cua-s1/",
+          "language": "zh",
+          "excerpt": "Cua：Computer-Use 2.0 开源基础设施，桌面操控降格为工具调用 MIT，24.7K stars，YC W25。五件套：跨平台桌面驱动、云桌面集群、本地 VM、确定性评测框架、CUA-S1 小模型。核心主张是把 GUI 操作降格为 Agent 的一个工具调用——不是独占前台的循环。CUA-S1-Forms 70 万参数 2.8MB，真实表单 100% 准确率。 computer-use desktop-agent benchmark trajectory local-ai open-source Computer-Use 2.0 是什么 五",
+          "score": 0.5544086
+        },
+        {
+          "article_id": "omni-open-source-company-ai-agent-permission-aware",
+          "title": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么",
+          "url": "/blog/omni-open-source-company-ai-agent-permission-aware/",
+          "language": "zh",
+          "excerpt": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么 调研自托管开源公司级 AI Agent Omni：接入 Google Drive、Gmail、Slack、Confluence、Jira、HubSpot 等企业常用工具，核心设计是「权限感知的公司上下文」——索引信息的可见范围严格继承自源系统的权限，不会因为被索引过就绕开原本的访问控制。混合检索（BM25全文+pgvector语义）全部收在一个 Postgres 里，不需要额外的 Elasticsearch 或专用向量库。沙箱代码执行走隔离 Docker 网络+只读根文件系统",
+          "score": 0.5511106
+        },
+        {
+          "article_id": "cua-lite-kvm-free-osworld-docker-computer-use-agent-berkeley-microsoft",
+          "title": "CUA-Lite：UC Berkeley + Microsoft 开源计算机操控 Agent 基础设施，无需 KVM，Docker 直跑 OSWorld，4.6× 并行",
+          "url": "/blog/cua-lite-kvm-free-osworld-docker-computer-use-agent-berkeley-microsoft/",
+          "language": "zh",
+          "excerpt": "CUA-Lite：UC Berkeley + Microsoft 开源计算机操控 Agent 基础设施，无需 KVM，Docker 直跑 OSWorld，4.6× 并行 CUA-Lite 是来自 UC Berkeley 和 Microsoft 的开源框架，将计算机操控 Agent（CUA）的训练和评测基础设施标准化。核心创新：用 Docker 容器替换 QEMU/KVM 虚拟机运行 OSWorld——内存从 4.1GB 降至 0.9GB，并行实例数提升 4.6 倍，冷启动从 29.9s 降至 23.8s，评测分数不变。统一 action/observat",
+          "score": 0.5483841
+        },
+        {
+          "article_id": "everything-open-source-app-suite",
+          "title": "Everything：开源应用合集能替代多少办公软件？",
+          "url": "/blog/everything-open-source-app-suite/",
+          "language": "zh",
+          "excerpt": "Everything：开源应用合集能替代多少办公软件？ Everything 是 HeyPuter 推出的浏览器应用单仓库，涵盖表格、文档、演示、创作、工程与协作工具。结合 README、应用目录与表格源码，介绍分应用启动方式、Puter 云服务和文件保存路径，核对根目录 MIT 与子项目 AGPL 声明的差异，给出格式兼容、离线和迁移验收建议，避免把列表当成成熟度证明。 开源工具 浏览器 办公软件 Puter 隐私 Everything 到底收录了什么？ 如何启动，是否是一条命令安装整个套件？ 本地前端与 Puter 云是什么关系？ 根目录 MIT，为",
+          "score": 0.54527843
+        }
+      ]
+    }
+  }
+]

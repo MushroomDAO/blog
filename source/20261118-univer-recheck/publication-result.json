@@ -6,5 +6,7 @@
   "wechatStatus": "recorded",
   "wechatError": "旧草稿不在远程草稿箱，draft/get返回40007；已发布列表接口返回48001无权限，当前状态未核验，保留旧创建凭证且不重复创建。",
   "reused": true,
-  "semanticStatus": "propagation-pending"
+  "semanticStatus": "verified",
+  "pullRequestUrl": "https://github.com/MushroomDAO/blog/pull/261",
+  "repositoryStatus": "pull-request-open"
 }
