@@ -1,0 +1,13 @@
+{
+  "title": "Cheetah：62MB空闲内存不等于模型体积",
+  "author": "Mycelium",
+  "digest": "对照作者内存报告与141例本机测试，解释低驻留加载的价值和边界。",
+  "mediaId": "prCUE631thH1cmNLi42prMc_TQZ1TNRqzcX2Go1wVd_iua9DxREiuDGSXSZIhUt9",
+  "blogUrl": "https://blog.mushroom.cv/blog/cheetah-rust-local-llm-memory-loading-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/cheetah-rust-local-llm-memory-loading-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/da3m0/cheetah"
+  ],
+  "publishedAt": "2026-11-18T15:25:08.105Z"
+}

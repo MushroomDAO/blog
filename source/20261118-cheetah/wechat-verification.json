@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-18T15:25:40.089Z",
+  "drafts": [
+    {
+      "slug": "cheetah-rust-local-llm-memory-loading-guide",
+      "mediaId": "prCUE631thH1cmNLi42prMc_TQZ1TNRqzcX2Go1wVd_iua9DxREiuDGSXSZIhUt9",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "b9657c4c8889b7de4685195888ff32adb3a5451a9748384d2746a1f3c77e40e3",
+      "remoteTextHash": "b9657c4c8889b7de4685195888ff32adb3a5451a9748384d2746a1f3c77e40e3",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/cheetah-rust-local-llm-memory-loading-guide/",
+      "localContentHash": "fb439b59f4ee9d40685b0e3216068425f59bd61effb60b2155b3b836a2f47ddb",
+      "remoteContentHash": "d0950e72fc5105480f871ed0363f25985b0192f1f96ea038e65fe10969a8a1a9"
+    }
+  ]
+}
