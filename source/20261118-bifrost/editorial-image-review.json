@@ -1,0 +1,8 @@
+{
+  "cover": "Generated FLUX8771; fiber cables merge through metal coupler, then split to servers. No source images adopted because available README media is text/UI. Automated passes with dark top-edge framing warning; manually inspect actual image before approval.",
+  "coverManualApproved": true,
+  "framingDecision": "Dark macro background fills frame naturally; no letterbox padding or empty half. Coupler and optical bundles remain clear.",
+  "bodyManualApproved": true,
+  "bodyNotes": "All3 final compressed images visually inspected: correctChinese labels, matching gateway/fallback/cache concepts, redcap white spots/beigestem, no garbledtext. Each1280x720/<90000B, originals retained.",
+  "workerRecovery": "Imageworker generated all3 originals but packaging commands stalled twice (exit130); primary compressed and copied existing images, then terminated stuck packaging worker. No regeneration or lost images."
+}

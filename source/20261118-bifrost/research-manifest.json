@@ -1,0 +1,62 @@
+[
+  {
+    "file": "LICENSE",
+    "sha256": "9108c6efb701f19614cf2ac8d644f1459b7d67bc570ffa15547e4dc2e734b4d1",
+    "bytes": 11308
+  },
+  {
+    "file": "README.md",
+    "sha256": "c3c7218b2659bfa4502009b500f28ec42a3940b7e5d512cfccebd137de046dd5",
+    "bytes": 13591
+  },
+  {
+    "file": "bifrost-auth.md",
+    "sha256": "2102f43b00bc88e11507cce62aa47923810062a53e98518840ee21c463c1c3e6",
+    "bytes": 9676
+  },
+  {
+    "file": "bifrost-benchmark.md",
+    "sha256": "d19daa92deb5f07f6237611f738bdb2a67f4ec5d924bb7f2952f763936c57e89",
+    "bytes": 3644
+  },
+  {
+    "file": "bifrost-cache.md",
+    "sha256": "ac4fb810c576732abf0c55626ec95f5c3db0d8d45f9c69c1d267d4bc84f73bdc",
+    "bytes": 35634
+  },
+  {
+    "file": "bifrost-keys.md",
+    "sha256": "2059a29823bb48faa68bc176292024e95f4daa4a4fa7beef1f8ccc37ed022179",
+    "bytes": 48171
+  },
+  {
+    "file": "bifrost-retries.md",
+    "sha256": "cb55b22ab1b6648912ba931a0958fe68ab3cad3b2be5c83af04118a9eb0136fe",
+    "bytes": 35578
+  },
+  {
+    "file": "bifrost-setup.md",
+    "sha256": "02731a6a6f4bd2280e8b0e670ca0462893740f6f3881373daf46acba504cd487",
+    "bytes": 13681
+  },
+  {
+    "file": "bifrost.go",
+    "sha256": "2fa838babe3114737e941ee5b6203d33ed399598e155c15ef595281be0544cd7",
+    "bytes": 490683
+  },
+  {
+    "file": "claims-review.md",
+    "sha256": "e2756d0b4fd6b549d15fb7b4a351b836b56d588726650323158676ef221cd96e",
+    "bytes": 1588
+  },
+  {
+    "file": "core-go.mod",
+    "sha256": "8bc4c0555236e04118eba8297a225756731339e316398f8f209194f6a982c5a9",
+    "bytes": 4184
+  },
+  {
+    "file": "editorial-check.json",
+    "sha256": "4d1972d94809ebc26d9369355a27f23ddca411a3a07fe715b5b05c3b4d25c586",
+    "bytes": 199
+  }
+]
