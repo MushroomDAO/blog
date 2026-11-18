@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-18",
+  "slug": "amber-heart-memory-ai-companion-gateway-guide",
+  "BLUF": "AI companion memory gateway, not a model or generic vector store",
+  "FAQ": 3,
+  "sources": "Pinned project README, code/config/license; author claims separated from selected checks",
+  "independentFindings": "78 selected no-DB unit tests; automatic admission differs from mandatory human approval; reported usage is not independent proof of correct memory use",
+  "scope": "No Docker/Postgres/pgvector/migrations/full gateway/MCP/browser/real-model recall quality or cost benchmark",
+  "bilingual": true,
+  "internalLink": "Existing verified Live2D avatar engineering article",
+  "metadata": "Titles/descriptions/tags/dates/alt checked; standard Astro heading anchors and metadata"
+}

@@ -1,0 +1,16 @@
+{
+  "python": "3.12",
+  "selectedUnitTests": 78,
+  "passed": 78,
+  "databaseTestsRun": false,
+  "DockerCLIAvailable": false,
+  "realAPIRequests": false,
+  "mockHTTPAndFixedResponses": true,
+  "upstreamTrackedChanges": false,
+  "scope": "Selected no-database code paths, not actual Postgres/pgvector/full gateway/MCP/browser/production deployment/real model recall quality",
+  "testEvidence": [
+    "unit-tests.log",
+    "policy-tests.log",
+    "run-selected-tests.sh"
+  ]
+}

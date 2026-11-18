@@ -1,0 +1,38 @@
+[
+  {
+    "id": "7cf4e9d5c4ebb31f068bdc80258f4fa216b3d0de75150663",
+    "metadata": {
+      "article_id": "amber-heart-memory-ai-companion-gateway-guide",
+      "content_hash": "da32f1933d9dde5a",
+      "excerpt": "Amber Heart琥珀之心：AI伴侣的记忆网关怎么用 Amber Heart 琥珀之心是面向 AI 伴侣的长期记忆网关，结合固定、短期与长期记忆，提供三路召回、两级精排和管理界面。本文核查自动收录、导入审核、可恢复归档与使用回执的实现边界，记录 78 项所选单元测试结果，并说明外部模型调用、聊天客户端接入、AGPL 许可和未完成的数据库集成与真实召回质量验收。 Amber Heart AI伴侣 长期记忆 MCP 开源 为什么把记忆放在聊天网关里？ 固定、短期、长期记忆分别装什么？ 三路召回和两级精排有什么作用？ 待审核是否意味着必须点确认才入库？ 工",
+      "language": "zh",
+      "tags": [
+        "Amber Heart",
+        "AI伴侣",
+        "长期记忆",
+        "MCP",
+        "开源"
+      ],
+      "title": "Amber Heart琥珀之心：AI伴侣的记忆网关怎么用",
+      "url": "/blog/amber-heart-memory-ai-companion-gateway-guide/"
+    }
+  },
+  {
+    "id": "1bd0efc825833ee9147f42ccca3c726727b5ade104308e5d",
+    "metadata": {
+      "article_id": "amber-heart-memory-ai-companion-gateway-guide",
+      "content_hash": "fa65c858c2404faa",
+      "excerpt": "Amber Heart: An AI Companion Memory Gateway Review Amber Heart companion memory: layered context, hybrid recall, approval and archive policies, provider costs and licensing, with 78 selected unit tests. Amber Heart AI伴侣 长期记忆 MCP 开源 Why put memory in a chat gateway? What belongs i",
+      "language": "en",
+      "tags": [
+        "Amber Heart",
+        "AI伴侣",
+        "长期记忆",
+        "MCP",
+        "开源"
+      ],
+      "title": "Amber Heart: An AI Companion Memory Gateway",
+      "url": "/blog/amber-heart-memory-ai-companion-gateway-guide/"
+    }
+  }
+]

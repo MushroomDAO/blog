@@ -1,0 +1,4 @@
+psycopg[binary]==3.3.6
+jieba==0.42.1
+httpx==0.28.1
+ijson==3.6.0

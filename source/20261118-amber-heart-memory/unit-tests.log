@@ -1,0 +1,89 @@
+/private/tmp/amber-heart-venv-20261118/lib/python3.12/site-packages/jieba/__init__.py:44: SyntaxWarning: invalid escape sequence '\.'
+  re_han_default = re.compile("([\u4E00-\u9FD5a-zA-Z0-9+#&\._%\-]+)", re.U)
+/private/tmp/amber-heart-venv-20261118/lib/python3.12/site-packages/jieba/__init__.py:46: SyntaxWarning: invalid escape sequence '\s'
+  re_skip_default = re.compile("(\r\n|\s)", re.U)
+/private/tmp/amber-heart-venv-20261118/lib/python3.12/site-packages/jieba/finalseg/__init__.py:78: SyntaxWarning: invalid escape sequence '\.'
+  re_skip = re.compile("([a-zA-Z0-9]+(?:\.\d+)?%?)")
+/private/tmp/amber-heart-venv-20261118/lib/python3.12/site-packages/jieba/posseg/__init__.py:16: SyntaxWarning: invalid escape sequence '\.'
+  re_skip_detail = re.compile("([\.0-9]+|[a-zA-Z0-9]+)")
+/private/tmp/amber-heart-venv-20261118/lib/python3.12/site-packages/jieba/posseg/__init__.py:17: SyntaxWarning: invalid escape sequence '\.'
+  re_han_internal = re.compile("([\u4E00-\u9FD5a-zA-Z0-9+#&\._]+)")
+/private/tmp/amber-heart-venv-20261118/lib/python3.12/site-packages/jieba/posseg/__init__.py:18: SyntaxWarning: invalid escape sequence '\s'
+  re_skip_internal = re.compile("(\r\n|\s)")
+/private/tmp/amber-heart-venv-20261118/lib/python3.12/site-packages/jieba/posseg/__init__.py:21: SyntaxWarning: invalid escape sequence '\.'
+  re_num = re.compile("[\.0-9]+")
+test_cli_rejects_large_dimensions_before_credentials_or_connection (memory_core.tests.test_config.ConfigTests.test_cli_rejects_large_dimensions_before_credentials_or_connection) ... ok
+test_default_boundary (memory_core.tests.test_config.ConfigTests.test_default_boundary) ... ok
+test_different_offsets_mean_same_instant (memory_core.tests.test_config.ConfigTests.test_different_offsets_mean_same_instant) ... ok
+test_dst_day_lengths_and_ambiguous_boundary (memory_core.tests.test_config.ConfigTests.test_dst_day_lengths_and_ambiguous_boundary) ... ok
+test_invalid_timezone_and_hour (memory_core.tests.test_config.ConfigTests.test_invalid_timezone_and_hour) ... ok
+test_other_timezone_and_boundary (memory_core.tests.test_config.ConfigTests.test_other_timezone_and_boundary) ... ok
+test_vector_dimensions_limits (memory_core.tests.test_config.ConfigTests.test_vector_dimensions_limits) ... ok
+test_all_roles_fixed_and_unknown_input_fails (memory_core.tests.test_fixed_models.FixedModelTests.test_all_roles_fixed_and_unknown_input_fails) ... ok
+test_fixed_failure_and_invalid_output_are_not_hidden (memory_core.tests.test_fixed_models.FixedModelTests.test_fixed_failure_and_invalid_output_are_not_hidden) ... ok
+test_invalid_empty_and_unlabelled_memory_are_rejected (memory_core.tests.test_import_formats.MemoryFileTests.test_invalid_empty_and_unlabelled_memory_are_rejected) ... ok
+test_memory_code_fence_does_not_create_a_phantom_date (memory_core.tests.test_import_formats.MemoryFileTests.test_memory_code_fence_does_not_create_a_phantom_date) ... ok
+test_memory_dates_are_content_dates_and_body_is_preserved (memory_core.tests.test_import_formats.MemoryFileTests.test_memory_dates_are_content_dates_and_body_is_preserved) ... ok
+test_memory_dedup_uses_both_date_and_content (memory_core.tests.test_import_formats.MemoryFileTests.test_memory_dedup_uses_both_date_and_content) ... ok
+test_broken_chatgpt_branch_is_rejected_without_echoing_contents (memory_core.tests.test_import_formats.OfficialFormatTests.test_broken_chatgpt_branch_is_rejected_without_echoing_contents) ... ok
+test_chatgpt_follows_only_chosen_branch_and_exact_business_boundary (memory_core.tests.test_import_formats.OfficialFormatTests.test_chatgpt_follows_only_chosen_branch_and_exact_business_boundary) ... ok
+test_chatgpt_ignores_hidden_thinking_tools_system_and_nontext (memory_core.tests.test_import_formats.OfficialFormatTests.test_chatgpt_ignores_hidden_thinking_tools_system_and_nontext) ... ok
+test_chatgpt_sharded_zip_ignores_attachments_and_deduplicates_repeated_shard (memory_core.tests.test_import_formats.OfficialFormatTests.test_chatgpt_sharded_zip_ignores_attachments_and_deduplicates_repeated_shard) ... ok
+test_claude_both_official_key_sets_and_text_only_blocks (memory_core.tests.test_import_formats.OfficialFormatTests.test_claude_both_official_key_sets_and_text_only_blocks) ... ok
+test_claude_empty_content_blocks_preserve_legacy_text_and_title (memory_core.tests.test_import_formats.OfficialFormatTests.test_claude_empty_content_blocks_preserve_legacy_text_and_title) ... ok
+test_claude_zip_and_bom_are_accepted (memory_core.tests.test_import_formats.OfficialFormatTests.test_claude_zip_and_bom_are_accepted) ... ok
+test_conflicting_uploads_cannot_silently_choose_one (memory_core.tests.test_import_formats.OfficialFormatTests.test_conflicting_uploads_cannot_silently_choose_one) ... ok
+test_gemini_attachment_and_gem_metadata_never_become_source_text (memory_core.tests.test_import_formats.OfficialFormatTests.test_gemini_attachment_and_gem_metadata_never_become_source_text) ... ok
+test_gemini_html_and_other_product_only_exports_are_rejected (memory_core.tests.test_import_formats.OfficialFormatTests.test_gemini_html_and_other_product_only_exports_are_rejected) ... ok
+test_gemini_is_daily_activity_not_invented_conversations (memory_core.tests.test_import_formats.OfficialFormatTests.test_gemini_is_daily_activity_not_invented_conversations) ... ok
+test_gemini_localized_title_with_answer_is_preserved (memory_core.tests.test_import_formats.OfficialFormatTests.test_gemini_localized_title_with_answer_is_preserved) ... ok
+test_gemini_takeout_zip_only_reads_gemini_activity (memory_core.tests.test_import_formats.OfficialFormatTests.test_gemini_takeout_zip_only_reads_gemini_activity) ... ok
+test_installation_timezone_and_dst_are_used (memory_core.tests.test_import_formats.OfficialFormatTests.test_installation_timezone_and_dst_are_used) ... ok
+test_invalid_zip_encoding_and_json_fail_with_safe_errors (memory_core.tests.test_import_formats.OfficialFormatTests.test_invalid_zip_encoding_and_json_fail_with_safe_errors) ... ok
+test_missing_or_naive_timestamps_and_ids_do_not_guess_upload_date (memory_core.tests.test_import_formats.OfficialFormatTests.test_missing_or_naive_timestamps_and_ids_do_not_guess_upload_date) ... ok
+test_parsed_material_uses_the_existing_draft_input_contract (memory_core.tests.test_import_formats.OfficialFormatTests.test_parsed_material_uses_the_existing_draft_input_contract) ... ok
+test_size_cap_also_applies_after_zip_expansion (memory_core.tests.test_import_formats.OfficialFormatTests.test_size_cap_also_applies_after_zip_expansion) ... ok
+test_zip_paths_are_not_extracted_or_accepted (memory_core.tests.test_import_formats.OfficialFormatTests.test_zip_paths_are_not_extracted_or_accepted) ... ok
+test_conversations_default_to_all_and_deselection_changes_workload (memory_core.tests.test_import_formats.PreviewTests.test_conversations_default_to_all_and_deselection_changes_workload) ... ok
+test_gemini_date_range_is_inclusive_and_not_a_conversation_selector (memory_core.tests.test_import_formats.PreviewTests.test_gemini_date_range_is_inclusive_and_not_a_conversation_selector) ... ok
+test_imported_days_are_skipped_from_counts_and_model_calls (memory_core.tests.test_import_formats.PreviewTests.test_imported_days_are_skipped_from_counts_and_model_calls) ... ok
+test_invalid_selection_is_not_silently_ignored (memory_core.tests.test_import_formats.PreviewTests.test_invalid_selection_is_not_silently_ignored) ... ok
+test_memory_skips_selection_and_does_not_use_chat_daily_quota (memory_core.tests.test_import_formats.PreviewTests.test_memory_skips_selection_and_does_not_use_chat_daily_quota) ... ok
+test_actual_byte_limit_catches_direct_json_and_malformed_tail (memory_core.tests.test_import_stream.ImportStreamTests.test_actual_byte_limit_catches_direct_json_and_malformed_tail) ... ok
+test_duplicate_streamed_sources_still_skip_or_reject_conflicts (memory_core.tests.test_import_stream.ImportStreamTests.test_duplicate_streamed_sources_still_skip_or_reject_conflicts) ... ok
+test_gemini_mixed_order_and_gems_group_by_day_without_metadata (memory_core.tests.test_import_stream.ImportStreamTests.test_gemini_mixed_order_and_gems_group_by_day_without_metadata) ... ok
+test_json_uses_bounded_reads_and_yields_before_reaching_end (memory_core.tests.test_import_stream.ImportStreamTests.test_json_uses_bounded_reads_and_yields_before_reaching_end) ... ok
+test_upload_and_json_limits_are_independent_and_total_across_shards (memory_core.tests.test_import_stream.ImportStreamTests.test_upload_and_json_limits_are_independent_and_total_across_shards) ... ok
+test_zip_opens_members_without_reading_them_whole (memory_core.tests.test_import_stream.ImportStreamTests.test_zip_opens_members_without_reading_them_whole) ... ok
+test_assistant_tail_nearest_only_cleaning_and_bounds (memory_core.tests.test_recall.RecallUnitTests.test_assistant_tail_nearest_only_cleaning_and_bounds) ... ok
+test_atomic_body_prefix_and_summary_full_text (memory_core.tests.test_recall.RecallUnitTests.test_atomic_body_prefix_and_summary_full_text) ... ok
+test_defaults_come_from_one_definition_and_env_absence_keeps_true (memory_core.tests.test_recall.RecallUnitTests.test_defaults_come_from_one_definition_and_env_absence_keeps_true) ... ok
+test_documented_defaults_match_program_and_example_has_no_overrides (memory_core.tests.test_recall.RecallUnitTests.test_documented_defaults_match_program_and_example_has_no_overrides) ... ok
+test_short_terms_require_whole_words_and_ascii_boundaries (memory_core.tests.test_recall.RecallUnitTests.test_short_terms_require_whole_words_and_ascii_boundaries) ... Building prefix dict from the default dictionary ...
+Dumping model to file cache /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/jieba.cache
+Loading model cost 0.205 seconds.
+Prefix dict has been built successfully.
+ok
+test_missing_database_credentials_fail_without_echoing_values (memory_web.tests.test_deploy_runtime.DeployRuntimeTests.test_missing_database_credentials_fail_without_echoing_values) ... ok
+test_passwords_are_quoted_and_destination_cannot_be_overridden (memory_web.tests.test_deploy_runtime.DeployRuntimeTests.test_passwords_are_quoted_and_destination_cannot_be_overridden) ... ok
+test_verify_models_checks_each_role_once_and_allows_skipping_rerank (memory_web.tests.test_deploy_runtime.DeployRuntimeTests.test_verify_models_checks_each_role_once_and_allows_skipping_rerank) ... ok
+test_verify_models_explains_the_failed_role_without_provider_details (memory_web.tests.test_deploy_runtime.DeployRuntimeTests.test_verify_models_explains_the_failed_role_without_provider_details) ... ok
+test_default_adapters_without_injected_transport_only_call_fake_http (memory_web.tests.test_role_timeouts.RoleTimeoutTests.test_default_adapters_without_injected_transport_only_call_fake_http) ... ok
+test_defaults_and_env_overrides_leave_recall_limits_unchanged (memory_web.tests.test_role_timeouts.RoleTimeoutTests.test_defaults_and_env_overrides_leave_recall_limits_unchanged) ... ok
+test_diary_and_topic_summary_timeouts_still_raise_safe_role_errors (memory_web.tests.test_role_timeouts.RoleTimeoutTests.test_diary_and_topic_summary_timeouts_still_raise_safe_role_errors) ... ok
+test_each_role_passes_its_default_and_custom_budget_to_http (memory_web.tests.test_role_timeouts.RoleTimeoutTests.test_each_role_passes_its_default_and_custom_budget_to_http) ... ok
+test_import_concurrency_defaults_to_three_and_requires_a_positive_integer (memory_web.tests.test_role_timeouts.RoleTimeoutTests.test_import_concurrency_defaults_to_three_and_requires_a_positive_integer) ... ok
+test_invalid_timeouts_fail_at_configuration_without_echoing_values (memory_web.tests.test_role_timeouts.RoleTimeoutTests.test_invalid_timeouts_fail_at_configuration_without_echoing_values) ... ok
+test_partial_http_chunks_do_not_reset_the_summary_budget (memory_web.tests.test_role_timeouts.RoleTimeoutTests.test_partial_http_chunks_do_not_reset_the_summary_budget) ... ok
+test_slow_fake_thinking_uses_budget_and_safe_failure_for_both_extraction_steps (memory_web.tests.test_role_timeouts.RoleTimeoutTests.test_slow_fake_thinking_uses_budget_and_safe_failure_for_both_extraction_steps) ... ok
+test_summary_backup_uses_the_same_configured_budget_after_timeout (memory_web.tests.test_role_timeouts.RoleTimeoutTests.test_summary_backup_uses_the_same_configured_budget_after_timeout) ... ok
+test_http_failure_and_malicious_usage_do_not_record_private_text (memory_web.tests.test_extraction_model.ExtractionModelTests.test_http_failure_and_malicious_usage_do_not_record_private_text) ... ok
+test_json_mode_only_for_hosts_that_document_it (memory_web.tests.test_extraction_model.ExtractionModelTests.test_json_mode_only_for_hosts_that_document_it) ... ok
+test_missing_model_skips_and_dedicated_settings_are_paired (memory_web.tests.test_extraction_model.ExtractionModelTests.test_missing_model_skips_and_dedicated_settings_are_paired) ... ok
+test_truncated_reply_keeps_known_usage_without_response_or_key (memory_web.tests.test_extraction_model.ExtractionModelTests.test_truncated_reply_keeps_known_usage_without_response_or_key) ... ok
+test_two_steps_preserve_existing_prompt_and_record_only_usage (memory_web.tests.test_extraction_model.ExtractionModelTests.test_two_steps_preserve_existing_prompt_and_record_only_usage) ... ok
+
+----------------------------------------------------------------------
+Ran 66 tests in 0.863s
+
+OK

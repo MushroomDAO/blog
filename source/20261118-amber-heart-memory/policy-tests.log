@@ -1,0 +1,17 @@
+test_bad_or_nonterminal_reports_are_stripped_but_not_counted (memory_web.tests.test_usage_receipt.UsageReceiptTests.test_bad_or_nonterminal_reports_are_stripped_but_not_counted) ... ok
+test_every_character_boundary_and_repeated_tags (memory_web.tests.test_usage_receipt.UsageReceiptTests.test_every_character_boundary_and_repeated_tags) ... ok
+test_none_conflicting_invalid_or_nonterminal_never_claims_unused (memory_web.tests.test_usage_receipt.UsageReceiptTests.test_none_conflicting_invalid_or_nonterminal_never_claims_unused) ... ok
+test_none_nonstream_and_stream_have_same_explicit_receipt (memory_web.tests.test_usage_receipt.UsageReceiptTests.test_none_nonstream_and_stream_have_same_explicit_receipt) ... ok
+test_none_report_split_repeat_and_truncation (memory_web.tests.test_usage_receipt.UsageReceiptTests.test_none_report_split_repeat_and_truncation) ... ok
+test_nonstream_and_stream_clean_content_identically_with_combined_finish (memory_web.tests.test_usage_receipt.UsageReceiptTests.test_nonstream_and_stream_clean_content_identically_with_combined_finish) ... ok
+test_one_character_chunks (memory_web.tests.test_usage_receipt.UsageReceiptTests.test_one_character_chunks) ... ok
+test_plain_text_whitespace_and_non_tag_markup_remain_identical (memory_web.tests.test_usage_receipt.UsageReceiptTests.test_plain_text_whitespace_and_non_tag_markup_remain_identical) ... ok
+test_truncation_never_leaks_control_text_or_counts (memory_web.tests.test_usage_receipt.UsageReceiptTests.test_truncation_never_leaks_control_text_or_counts) ... ok
+test_current_presence_and_latest_usage_or_restoration_control_clock (memory_core.tests.test_archives.ArchivePolicyTests.test_current_presence_and_latest_usage_or_restoration_control_clock) ... ok
+test_explicit_environment_configuration_is_validated (memory_core.tests.test_archives.ArchivePolicyTests.test_explicit_environment_configuration_is_validated) ... ok
+test_layer_boundaries_exemption_and_milestone_floor (memory_core.tests.test_archives.ArchivePolicyTests.test_layer_boundaries_exemption_and_milestone_floor) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.002s
+
+OK
