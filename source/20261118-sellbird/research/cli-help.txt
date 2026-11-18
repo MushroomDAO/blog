@@ -1,0 +1,42 @@
+usage: sellbird [-h]
+                {install,setup,run,train,dashboard,status,export,companies,gmail,microsoft,outbox,discover,profile,signals,retry-writes,sending,warmup,trulyinbox,precleared-key,usage,mcp,inboxes,autostart,tray,suppressions}
+                ...
+
+Sellbird — the open-source outreach platform. Make the first move.
+
+positional arguments:
+  {install,setup,run,train,dashboard,status,export,companies,gmail,microsoft,outbox,discover,profile,signals,retry-writes,sending,warmup,trulyinbox,precleared-key,usage,mcp,inboxes,autostart,tray,suppressions}
+    install             Install dependencies
+    setup               Run the interactive setup wizard
+    run                 Start Sellbird's heartbeat loop
+    train               Train Sellbird on a website
+    dashboard           Open the web dashboard
+    status              Show pipeline status
+    export              Export prospects as a sequencer-ready CSV
+    companies           Export the company register: every company, why it
+                        fits, and why it wasn't contacted
+    gmail               Gmail provider setup
+    microsoft           Microsoft 365 provider setup
+    outbox              Review/approve queued emails
+    discover            Find businesses matching your ICP
+    profile             Read discovered companies' websites (free, no Claude)
+    signals             Review/confirm which signals Sellbird prospects
+                        against
+    retry-writes        Retry prospects the Writer couldn't write an email for
+    sending             Kill switch: pause/resume sending
+    warmup              Check if your sending domain is set up and warmed up
+                        for cold email
+    trulyinbox          Warmup service: connect TrulyInbox so Sellbird can
+                        read the inbox rate
+    precleared-key      Get a free Precleared key for the cold-email check and
+                        save it to .env
+    usage               Show brain usage and quota (Claude or Codex)
+    mcp                 MCP server for your coding agent (launched by it, over
+                        stdio)
+    inboxes             Connect and run the inboxes you send from
+    autostart           Start the Sellbird tray when you log in
+    tray                Menu-bar icon: start, stop and open Sellbird
+    suppressions        Addresses and domains Sellbird never emails
+
+options:
+  -h, --help            show this help message and exit

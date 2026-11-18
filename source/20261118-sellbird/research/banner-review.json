@@ -1,0 +1,17 @@
+{
+  "sourceMediaConsidered": [
+    "docs/dashboard.gif",
+    "docs/screenshots/today-light.png",
+    "docs/brand/sellbird-wordmark.svg"
+  ],
+  "reasonNotAdopted": "text-heavy application UI and logo; unsuitable as a photorealistic scene",
+  "path": "FLUX2-klein local generation",
+  "seed": 8761,
+  "bytes": 93189,
+  "dimensions": [
+    1200,
+    630
+  ],
+  "machine": "passed",
+  "manual": "approved: blank envelopes on review board, bird, no faces or rendered text"
+}

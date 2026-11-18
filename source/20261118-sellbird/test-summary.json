@@ -1,0 +1,27 @@
+{
+  "python": "3.12",
+  "selectedFiles": [
+    "test_outbox_native.py",
+    "test_outbox_review.py",
+    "test_do_not_contact.py",
+    "test_send_window.py",
+    "test_outbox_claim.py",
+    "test_dashboard_auth.py"
+  ],
+  "passed": 483,
+  "failed": 0,
+  "mailProvider": "FakeProvider",
+  "database": "temporary SQLite",
+  "liveEmailsSent": 0,
+  "realModelCalls": 0,
+  "cliHelp": "passed",
+  "notTested": [
+    "full test suite",
+    "real website collection",
+    "model runtime with real accounts",
+    "mailbox OAuth",
+    "inbox placement",
+    "conversion uplift",
+    "full sales campaign"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "canonicalSource": "https://github.com/ethanplusai/sellbird",
+  "formerSource": "https://github.com/ethanplusai/harvey",
+  "entity": "Sellbird",
+  "rawIntakeOnly": true,
+  "existingArticleOrDraft": false,
+  "automaticFalsePositive": "Generic GitHub token matched most corpus; exact source/entity check has no published article or M2 receipt. Harvey legal AI article is a different entity.",
+  "decision": "continue original writing workflow"
+}
