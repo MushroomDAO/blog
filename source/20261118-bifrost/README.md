@@ -9,3 +9,5 @@ Official README screenshot/logo media mostly text/UI, original FLUX8771 opticalc
 Blog deployment8b457883 verified HTTP200/list+carouselrank2/all5imagevariants; previous4articleURLs preserved. WeChat draftfullcanonicalbody/3orderedimages/metadata/originalURL/cover/comments verified07:39:22UTC. Two semanticvectors accepted once; awaitingeventualprocessing.
 
 Imageworker generated all3 originals; packaging subprocesses stalled, finalcopies compressedbyprimary fromexistingoriginals with nearwhite250 cleanup andnodither; no extra imagegeneration. Workerterminated143afteroutputsrecovered; allfinals manualapproved/frozen.
+
+Finalsemantic2IDs and freshpublicsearch verified07:40:36UTC, no secondembedding. KBproject4rows verified. PR260 REVIEW_REQUIRED; normalmerge rejected by branchpolicy, no adminbypass. Blog/draft/KB/search complete; onlyrepositoryreview remains.

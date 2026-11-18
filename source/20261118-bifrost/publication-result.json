@@ -5,6 +5,7 @@
   "archivedMediaId": "",
   "wechatStatus": "draft",
   "wechatError": "",
-  "semanticStatus": "propagation-pending",
-  "repositoryStatus": "pending-push"
+  "semanticStatus": "verified",
+  "repositoryStatus": "review-required",
+  "pullRequestUrl": "https://github.com/MushroomDAO/blog/pull/260"
 }

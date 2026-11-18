@@ -1,89 +1,89 @@
 [
   {
     "slug": "bifrost-ai-gateway-engineering-guide",
-    "query": "Bifrost Maxim 开源 AI 网关 供应商 虚拟密钥 缓存",
-    "found": false,
+    "query": "Bifrost 多模型网关 容灾 权限预算 响应缓存 Maxim Apache",
+    "found": true,
     "response": {
       "results": [
+        {
+          "article_id": "bifrost-ai-gateway-engineering-guide",
+          "title": "Bifrost：把多模型接入、容灾与费用治理放进网关",
+          "url": "/blog/bifrost-ai-gateway-engineering-guide/",
+          "language": "zh",
+          "excerpt": "Bifrost：把多模型接入、容灾与费用治理放进网关 Bifrost 是 Maxim 开源的 Go AI 网关，用统一接口连接多个模型供应商。本文从工程角度解释协议适配、密钥治理、重试与故障切换、响应缓存和部署边界，给出本地评估示例，并区分 Apache 2.0 仓库代码与企业功能。重点审视官方微秒级开销基准的模拟请求条件，帮助团队制定兼容性、成本、隐私与容灾验收计划。 Bifrost AI Gateway Go LLM 开源 Bifrost 放在系统的哪一层？ 怎么在本机开始？ 故障切换能替你承担什么？ 缓存、预算和日志怎样真正省钱？ 11 微秒的宣传",
+          "score": 0.76062953
+        },
+        {
+          "article_id": "magpie-multi-agent-model-gateway",
+          "title": "Magpie：把多 Agent、多模型和配置资源收进一个本地网关",
+          "url": "/blog/magpie-multi-agent-model-gateway/",
+          "language": "zh",
+          "excerpt": "Magpie：把多 Agent、多模型和配置资源收进一个本地网关 Magpie 是 yetone 开源的 MIT 多模型网关与 Agent 配置管理工具。本文核对模型路由、订阅桥接、会话、MCP 与技能分发的实际边界，给出渐进接入和回退方案，解释隐私脱敏默认关闭、统计设置与代理链路风险。 Magpie AI Agent 模型网关 MCP 本地工具 为什么工具越多，配置反而成了负担？ 账号切换、路由组和会话，各解决什么？ Library 会不会覆盖自己的 AGENTS.md 和技能？ 本地网关就一定更安全吗？ 怎样接入，出问题怎样退回？ 常见问题 一个 A",
+          "score": 0.61744785
+        },
         {
           "article_id": "omniroute-free-ai-gateway-290-providers-never-stop-coding",
           "title": "OmniRoute：290 个 AI 提供商、一个端点、永不限流——免费 AI 网关的暴力美学",
           "url": "/blog/omniroute-free-ai-gateway-290-providers-never-stop-coding/",
           "language": "zh",
           "excerpt": "OmniRoute：290 个 AI 提供商、一个端点、永不限流——免费 AI 网关的暴力美学 diegosouzapw/OmniRoute，27824 stars，MIT，5个月 500+ 贡献者。一个端点路由到 290+ AI 提供商（90+ 免费），4层自动 fallback 级联，19种路由策略，RTK+Caveman 压缩节省 15-95% tokens，MCP 104工具，~1.53B 免费 tokens/月。 AI网关 开源 Claude Code 免费AI 路由 MCP token压缩 开发工具 一、它解决什么问题 二、规模 三、4 层自",
-          "score": 0.65331274
+          "score": 0.5866414
         },
         {
-          "article_id": "onecli-ai-agent-credential-gateway-secret-vault-rust",
-          "title": "OneCLI：让 AI Agent 永远看不到真实密钥的开源凭证网关",
-          "url": "/blog/onecli-ai-agent-credential-gateway-secret-vault-rust/",
+          "article_id": "kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora",
+          "title": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题",
+          "url": "/blog/kev-jaredpalmer-local-decision-model-jev-open-source-qwen-lora/",
           "language": "zh",
-          "excerpt": "OneCLI：让 AI Agent 永远看不到真实密钥的开源凭证网关 onecli/onecli，2746 stars，Apache-2.0，Rust + TypeScript。在 agent 和 API 之间插一个 MITM 网关，agent 只持有占位符，网关透明注入真实凭证。HN 两次上榜，NanoClaw 和 Bitwarden 均已集成。一行命令本地跑起来。 AI安全 AI Agent 开源 Rust 密钥管理 安全工具 网关 MCP 一、问题：每个 agent 都拿着真实密钥 二、解法：不交给 agent，替它注入 三、架构：Rust 网关 ",
-          "score": 0.63994163
+          "excerpt": "Kev：Jared Palmer 开源本地决策模型，一次前向传播回答多个问题 Apache-2.0，LoRA + 块因果掩码，文档编码一次、多个问题并发出概率分布，不生成文字。4B 版 OOD 准确率 0.790，比 Jev 低 6~7 个点，上限 8192 token，本地 Mac 可跑。 decision-model local-ai qwen lora classification open-source 核心设计：一次编码，多路分支 三种问题类型 四个模型变体 训练细节 不足之处（文档已明写，不是挖出来的） 本地运行 横向对比 怎么看这件事",
+          "score": 0.5820005
         },
         {
-          "article_id": "neo-chat-local-first-encrypted-sync-mcp-rag-workspace",
-          "title": "Neo Chat：本地优先的 AI 聊天工作台，把「加密跨设备同步」这个硬骨头啃下来了",
-          "url": "/blog/neo-chat-local-first-encrypted-sync-mcp-rag-workspace/",
+          "article_id": "rayline-arc-open-routing-model-cost-audit",
+          "title": "Rayline ARC 开源路由模型：成本数字、权重与部署边界",
+          "url": "/blog/rayline-arc-open-routing-model-cost-audit/",
           "language": "zh",
-          "excerpt": "Neo Chat：本地优先的 AI 聊天工作台，把「加密跨设备同步」这个硬骨头啃下来了 调研开源项目 Neo Chat：Next.js 16 + React 19 构建的本地优先 AI 聊天工作台，聊天记录/技能/插件配置/记忆/搜索索引/文件默认全部留在浏览器本地，服务端只做受控代理。v2.4.0 新增可选端到端加密的个人保险库，通过 WebDAV 或 S3/MinIO 做跨设备同步，恢复密钥、凭据、本地基线、搜索缓存、向量都不会进远程对象或 ZIP。同时支持多模型供应商、远程 MCP 服务器发现安装、本地 stdio 桥接、参数化 Skill、混合词",
-          "score": 0.6376462
+          "excerpt": "Rayline ARC 开源路由模型：成本数字、权重与部署边界 Rayline ARC 用小模型预测候选模型的任务成功率、Token 用量和思考深度，再结合价格与策略决定下一步路由。本文找到官方权重、vLLM 插件和 Raydock 仓库，核对混合部署的质量与成本口径，指出当前表格与标题数字的算术差异，并跑五项插件测试，解释权重开放、训练资料与完整自托管的边界与接入验证方法。 Rayline ARC 模型路由 开源模型 成本优化 原始权重和代码在哪里？ 为什么把预测和路由策略拆开？ “97.5% 性能、十分之一成本”究竟指什么？ 我们重算后发现了什么？ ",
+          "score": 0.58177143
         },
         {
-          "article_id": "agent-egress-firewall-pipelock-rate-limit-kill-switch",
-          "title": "AI Agent 需要出站防火墙：RubyGems 被攻击、订位 Agent 被 Resy 封号之后，我们实测了 Pipelock",
-          "url": "/blog/agent-egress-firewall-pipelock-rate-limit-kill-switch/",
+          "article_id": "nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit",
+          "title": "Nanbeige4.3-33B 拆解：Apache-2.0 的 33B 稠密「教师模型」，自报 Terminal-Bench 2.1 80.9，但 KV 缓存是 Qwen3.8-27B 的 3.25 倍",
+          "url": "/blog/nanbeige4-3-33b-agentic-teacher-kv-cache-mac-audit/",
           "language": "zh",
-          "excerpt": "AI Agent 需要出站防火墙：RubyGems 被攻击、订位 Agent 被 Resy 封号之后，我们实测了 Pipelock 研究者认为 OpenAI 测试中的 Agent 5 月往 RubyGems 上传了数百个恶意包（RubyGems 官方称无法确定是否出自 AI Agent），一个订位 Agent 按当事人贴出的日志每小时约 200 次请求，让用户被 Resy 封号。我们在 Mac mini 上实测开源出站防火墙 Pipelock v3.5.0：域名白名单、每域名每分钟限速（第 6 次请求起返回 429）和 kill switch 都有效；但",
-          "score": 0.63520086
+          "excerpt": "Nanbeige4.3-33B 拆解：Apache-2.0 的 33B 稠密「教师模型」，自报 Terminal-Bench 2.1 80.9，但 KV 缓存是 Qwen3.8-27B 的 3.25 倍 Nanbeige4.3-33B 是 Kanzhun（看准）旗下南北阁团队 2026-10-24 开源的 33.1B 稠密 Llama 架构模型，Apache-2.0，512K 上下文。README 自报 Terminal-Bench 2.1 为 80.9、DeepSWE 65.5，但没有技术报告、没有第三方复现；本机 Mac 的真正门槛不是权重（Q4_K",
+          "score": 0.5730424
         },
         {
-          "article_id": "archestra-enterprise-ai-platform-mcp-gateway-guardrails-llm-proxy-k8s",
-          "title": "Archestra：企业级一体化 AI 平台，MCP 网关 + LLM 代理 + 双 LLM 护栏 + K8s 编排，AGPL 开源",
-          "url": "/blog/archestra-enterprise-ai-platform-mcp-gateway-guardrails-llm-proxy-k8s/",
+          "article_id": "hiroute-local-model-routing",
+          "title": "HiRoute：让本地路由器按任务选择模型",
+          "url": "/blog/hiroute-local-model-routing/",
           "language": "zh",
-          "excerpt": "Archestra：企业级一体化 AI 平台，MCP 网关 + LLM 代理 + 双 LLM 护栏 + K8s 编排，AGPL 开源 archestra-ai/archestra 是一个企业级一体化 AI 平台，4201 stars，TypeScript，AGPL 3.0（30人以下团队免费）。一个 URL、一个 Token，涵盖：LLM 网关（Anthropic/OpenAI/Azure/Bedrock/DeepSeek，带费用限额和虚拟 API Key）、MCP 网关（OAuth + On-Behalf-Of，工具以用户身份运行）、A2A 网关、私有",
-          "score": 0.61422855
+          "excerpt": "HiRoute：让本地路由器按任务选择模型 HiRoute 是面向 AI 编程助手的本地模型路由器，支持普通与主力模型组、按难度判断、任务分支、有限故障转移和会话审计。本文核对它如何区分新用户任务与工具续接、决策服务与执行模型、缓存与成本，以及 macOS 和 Linux 安装条件，并披露本地 Hermes 适配测试的通过与失败范围。 HiRoute model-routing coding-agents Rust cost-optimization local-first 一次长任务里，哪些步骤值得换模型？ 难度、表现评分与执行模型怎样分工？ 故障转移",
+          "score": 0.57152724
         },
         {
-          "article_id": "open-connector-saas-auth-gateway-ai-agents",
-          "title": "OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth",
-          "url": "/blog/open-connector-saas-auth-gateway-ai-agents/",
+          "article_id": "mr-boxington-rust-cargo-shared-cache",
+          "title": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存",
+          "url": "/blog/mr-boxington-rust-cargo-shared-cache/",
           "language": "zh",
-          "excerpt": "OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth oomol-lab 开源了 OpenConnector，一个 AI Agent 专用的认证网关，Composio 的开源替代。接 1000+ SaaS 提供者、10000+ 预制 Action，凭据永远留在网关边界内，Agent 只能拿到执行结果。支持 SDK/CLI/MCP/HTTP 多接入方式，可部署到 Docker、Cloudflare Workers 或 Fly.io。 AI Agent OAuth SaaS集成 MCP Cloudflare 开源工具",
-          "score": 0.60091317
+          "excerpt": "mr boxington：让 Rust 工作区共享 Cargo 编译缓存 mr boxington 的 mbx 为 Rust 项目复用 Cargo 编译产物，管理 target 目录并协调并行构建。本文核对安装与缓存原理，在 Mac 验证不同路径源码副本的命中、修改后的正确输出和清理预览，区分共享缓存、Cargo 新鲜度与私有增量状态，说明工作树、CI、磁盘预算及调试信息路径的使用边界。 Rust Cargo mr boxington 构建缓存 开发工具 mbx 怎样复用编译工作？ 共享缓存、增量状态与 target 是一回事吗？ 在 Mac 上怎样先试",
+          "score": 0.5694956
         },
         {
-          "article_id": "microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork",
-          "title": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒",
-          "url": "/blog/microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork/",
+          "article_id": "lfm3-liquid-ai-local-multimodal-models",
+          "title": "Liquid AI LFM3：六款端侧模型怎么选，Mac 上能跑到哪一步？",
+          "url": "/blog/lfm3-liquid-ai-local-multimodal-models/",
           "language": "zh",
-          "excerpt": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒 microsoft/VibeVoice，54K stars，MIT，Python。7.5Hz 连续语音 tokenizer + LLM + 扩散头，单次推理 90 分钟 TTS、60 分钟 ASR，4 路说话人。2025-09 官方因深度伪造顾虑主动下架，社区 fork vibevoice-community/VibeVoice 接棒维护，已加 LoRA 微调和 HF Transformers 集成。工程指导：模型选型、API 服务化、BitN",
-          "score": 0.59406626
+          "excerpt": "Liquid AI LFM3：六款端侧模型怎么选，Mac 上能跑到哪一步？ Liquid AI 发布 LFM3 开放权重家族，六款约20亿参数模型共享一个底座，覆盖文本、视觉、音频、全模态与决策。本文逐项核对模型卡、上下文、语音范围和商业许可，解释三混合架构及 Mac 部署的版本要求，并保留本地文本测试中输出预算不足的失败记录，区分权重可下载、工具已支持与真实任务能力这三件不同的事。 Liquid AI LFM3 Local AI Multimodal Decision Models 六款 LFM3 分别解决什么问题？ 三混合架构为什么值得看？ 视频、1",
+          "score": 0.5666501
         },
         {
-          "article_id": "osaurus-native-macos-ai-harness-swift-cryptographic-identity",
-          "title": "Osaurus: Own Your AI on Mac — Cryptographic Identity, Sandbox VM, Privacy Filter, Pure Swift",
-          "url": "/blog/osaurus-native-macos-ai-harness-swift-cryptographic-identity/",
-          "language": "en",
-          "excerpt": "Osaurus: Own Your AI on Mac — Cryptographic Identity, Sandbox VM, Privacy Filter, Pure Swift osaurus-ai/osaurus, 7,295 stars, MIT. Pure Swift native macOS AI harness. secp256k1 cryptographic identity, Alpine Linux sandbox VM, three-layer memory, on-device PII privacy filter befor",
-          "score": 0.59033406
-        },
-        {
-          "article_id": "smolvm-ai-agent-sandbox-vm-firecracker-browser-claude-codex",
-          "title": "SmolVM：给 AI Agent 配一台一次性虚拟机，毫秒级启动、硬件级隔离",
-          "url": "/blog/smolvm-ai-agent-sandbox-vm-firecracker-browser-claude-codex/",
+          "article_id": "minicpm5-2b-on-device-sota-small-model",
+          "title": "2B 打赢 4B：面壁 MiniCPM5-2B 拿下同级开源 SOTA，还把训练数据全开源了",
+          "url": "/blog/minicpm5-2b-on-device-sota-small-model/",
           "language": "zh",
-          "excerpt": "SmolVM：给 AI Agent 配一台一次性虚拟机，毫秒级启动、硬件级隔离 SmolVM 是开源的 AI Agent 沙箱基础设施，统一封装 Firecracker、QEMU、libkrun 三种 VMM，让 Agent 在 ~500ms 内获得一台独立虚拟机。支持硬件级隔离、网络出口白名单、浏览器沙箱（CDP + VNC）、主机目录挂载、快照、以及一键启动预装 Claude Code / Codex / Pi 的编程 Agent 环境。785 Star，Apache 2.0。 开源 AI Agent 沙箱 虚拟机 Firecracker Claud",
-          "score": 0.5889098
-        },
-        {
-          "article_id": "cloudflare-workers-ai-glm-kimi-deepseek-minimax",
-          "title": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token",
-          "url": "/blog/cloudflare-workers-ai-glm-kimi-deepseek-minimax/",
-          "language": "zh",
-          "excerpt": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token Cloudflare Workers AI 已上线 GLM-5.2、Kimi K2.7 Code、1M 上下文的 Kimi K3、DeepSeek V4 Pro、MiniMax M3，同一个 token、同一行代码即可调用，还理清了自托管与第三方托管的价格和数据边界。 Cloudflare Workers AI GLM-5.2 Kimi K3 DeepSeek V4 MiniMax 边缘推理 起因 结论：你想要的基本都有 但有一条分界",
-          "score": 0.5886964
+          "excerpt": "2B 打赢 4B：面壁 MiniCPM5-2B 拿下同级开源 SOTA，还把训练数据全开源了 MiniCPM5-2B 是一个 25 亿参数的稠密模型，原生 131072 上下文，为端侧和资源受限场景设计。在官方对比集里平均分 53.9，不仅是 2B 级开源 SOTA，还超过了所有列入对比的 4B 级模型（最高 51.1）。优势集中在代码推理、数学推理、长上下文、工具调用和 Agent 任务。同时开源了背后的四套训练数据集。 MiniCPM 端侧模型 小模型 local-first 开源 长上下文 工具调用 OpenBMB 一句话结论 参数与结构 成绩：越",
+          "score": 0.5659113
         }
       ]
     }

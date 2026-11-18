@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "c950fc316e00a0d35322405e1b277f9450fc3169cfbd6195",
+    "metadata": {
+      "article_id": "bifrost-ai-gateway-engineering-guide",
+      "content_hash": "6f1878e8572736f5",
+      "excerpt": "Bifrost：把多模型接入、容灾与费用治理放进网关 Bifrost 是 Maxim 开源的 Go AI 网关，用统一接口连接多个模型供应商。本文从工程角度解释协议适配、密钥治理、重试与故障切换、响应缓存和部署边界，给出本地评估示例，并区分 Apache 2.0 仓库代码与企业功能。重点审视官方微秒级开销基准的模拟请求条件，帮助团队制定兼容性、成本、隐私与容灾验收计划。 Bifrost AI Gateway Go LLM 开源 Bifrost 放在系统的哪一层？ 怎么在本机开始？ 故障切换能替你承担什么？ 缓存、预算和日志怎样真正省钱？ 11 微秒的宣传",
+      "language": "zh",
+      "tags": [
+        "Bifrost",
+        "AI Gateway",
+        "Go",
+        "LLM",
+        "开源"
+      ],
+      "title": "Bifrost：把多模型接入、容灾与费用治理放进网关",
+      "url": "/blog/bifrost-ai-gateway-engineering-guide/"
+    }
+  },
+  {
+    "id": "b3861e1b4d4b747a13959d84e9f6162fae92ea9fb1819b39",
+    "metadata": {
+      "article_id": "bifrost-ai-gateway-engineering-guide",
+      "content_hash": "3b82469481e21c85",
+      "excerpt": "Bifrost: Engineering a Governed Multi-Model AI Gateway Explore Bifrost’s open-source AI gateway: provider routing, virtual keys, retries, caching and deployment, with a careful reading of its overhead benchmarks. Bifrost AI Gateway Go LLM 开源 Where does Bifrost belong? How can eng",
+      "language": "en",
+      "tags": [
+        "Bifrost",
+        "AI Gateway",
+        "Go",
+        "LLM",
+        "开源"
+      ],
+      "title": "Bifrost: Engineering a Governed Multi-Model AI Gateway",
+      "url": "/blog/bifrost-ai-gateway-engineering-guide/"
+    }
+  }
+]
