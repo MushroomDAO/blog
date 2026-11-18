@@ -1,0 +1,1 @@
+Initial semantic loader rejected unquoted scalar frontmatter (no embedding/write occurred). Normalized all scalar values to JSON-quoted YAML and inline tag array without changing parsed metadata or body. Rebuilt/deployed final article; existing WeChat draft semantic content unchanged, no duplicate draft. Then two vectors upserted once.

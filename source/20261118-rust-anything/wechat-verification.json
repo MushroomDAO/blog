@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-18T04:23:56.153Z",
+  "drafts": [
+    {
+      "slug": "rust-anything-record-replay-rust-migration-guide",
+      "mediaId": "prCUE631thH1cmNLi42prLxjsjYso4Ep7a6uZCT2MpSp2MmHXcZodhj7S06h8b_a",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "7ef4f6382b0f215a45adf3246e0572911f0ffb1d7d2e8a8876669a0d0c1caae4",
+      "remoteTextHash": "7ef4f6382b0f215a45adf3246e0572911f0ffb1d7d2e8a8876669a0d0c1caae4",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/rust-anything-record-replay-rust-migration-guide/",
+      "localContentHash": "c703e24df31880ac3072e173983b231cb8211b43d0f46c569ee3f8d70efd4c5b",
+      "remoteContentHash": "f9cab283cd016b3489b42bc3067aad9df41e76310fef39232dd7f0b471430193"
+    }
+  ]
+}
