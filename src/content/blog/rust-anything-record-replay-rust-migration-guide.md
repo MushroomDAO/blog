@@ -1,20 +1,15 @@
 ---
-title: rust-anything：用录制回放给Rust重写划边界
-titleEn: 'rust-anything: Record, Replay and Verify a Rust Rewrite'
-description: rust-anything把原程序的行为录成可回放用例，给Rust迁移生成桥接、差异检查与验收流程。本文拆解它为何不是自动翻译器，为什么逐函数移植可能更慢，怎样处理UTF-16、异常和动态输出，并给出从小型CLI开始的工程路径、影子运行与回退边界，以及本地测试范围，帮助团队判断哪些代码值得迁移、哪些应保留。
-descriptionEn: 'An engineering guide to rust-anything: recorded behavior, Rust bridges, replay gates, batch costs, shadow execution, and the limits of a passing migration.'
-wechatTitle: rust-anything：重写Rust先录下旧行为
-wechatDigest: 把原程序录成可回放的验收用例，先验证行为一致，再判断Rust迁移是否值得。
-pubDate: '2026-11-18'
-updatedDate: '2026-11-18'
-category: Tech-News
-tags:
-- Rust
-- 代码迁移
-- MCP
-- 差分测试
-- 开发工具
-heroImage: ../../assets/images/rust-anything-record-replay-rust-migration-guide-banner.jpg
+title: "rust-anything：用录制回放给Rust重写划边界"
+titleEn: "rust-anything: Record, Replay and Verify a Rust Rewrite"
+description: "rust-anything把原程序的行为录成可回放用例，给Rust迁移生成桥接、差异检查与验收流程。本文拆解它为何不是自动翻译器，为什么逐函数移植可能更慢，怎样处理UTF-16、异常和动态输出，并给出从小型CLI开始的工程路径、影子运行与回退边界，以及本地测试范围，帮助团队判断哪些代码值得迁移、哪些应保留。"
+descriptionEn: "An engineering guide to rust-anything: recorded behavior, Rust bridges, replay gates, batch costs, shadow execution, and the limits of a passing migration."
+wechatTitle: "rust-anything：重写Rust先录下旧行为"
+wechatDigest: "把原程序录成可回放的验收用例，先验证行为一致，再判断Rust迁移是否值得。"
+pubDate: "2026-11-18"
+updatedDate: "2026-11-18"
+category: "Tech-News"
+tags: ["Rust", "代码迁移", "MCP", "差分测试", "开发工具"]
+heroImage: "../../assets/images/rust-anything-record-replay-rust-migration-guide-banner.jpg"
 ---
 
 rust-anything 是一套渐进式 Rust 迁移工具：先录下旧程序的行为，再检查新实现是否复现这些行为。它解决的是“怎么验收重写”，而不是替你自动翻译整个代码库。

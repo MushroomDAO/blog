@@ -1,0 +1,13 @@
+{
+  "title": "rust-anything：重写Rust先录下旧行为",
+  "author": "Mycelium",
+  "digest": "把原程序录成可回放的验收用例，先验证行为一致，再判断Rust迁移是否值得。",
+  "mediaId": "prCUE631thH1cmNLi42prLxjsjYso4Ep7a6uZCT2MpSp2MmHXcZodhj7S06h8b_a",
+  "blogUrl": "https://blog.mushroom.cv/blog/rust-anything-record-replay-rust-migration-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/rust-anything-record-replay-rust-migration-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/erkamyaman/rust-anything"
+  ],
+  "publishedAt": "2026-11-18T04:23:37.885Z"
+}

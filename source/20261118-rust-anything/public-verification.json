@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-18T04:24:47.084933+00:00",
+  "articles": [
+    {
+      "slug": "rust-anything-record-replay-rust-migration-guide",
+      "url": "https://blog.mushroom.cv/blog/rust-anything-record-replay-rust-migration-guide/",
+      "title": "rust-anything：用录制回放给Rust重写划边界",
+      "listRank": 3,
+      "carouselRank": 3,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/rust-anything-record-replay-rust-migration-guide-banner.7T5ljqvZ.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 95229
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rust-anything-record-replay-rust-migration-guide-banner.7T5ljqvZ_mYGXv.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 35644
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rust-anything-record-replay-rust-migration-guide-fig-01.DRMFD1fV_ZLhJT8.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 52850
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rust-anything-record-replay-rust-migration-guide-fig-02.BqXGvrJg_24Q9IP.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 58790
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/rust-anything-record-replay-rust-migration-guide-fig-03.CG9YD-Z0_Z2i5ePv.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 54424
+        }
+      ]
+    }
+  ]
+}

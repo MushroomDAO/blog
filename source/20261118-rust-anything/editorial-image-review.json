@@ -1,0 +1,27 @@
+{
+  "banner": {
+    "seed": 8751,
+    "bytes": 95229,
+    "machine": "passed",
+    "manual": "approved: steel/copper modular bridge, no rendered labels or faces"
+  },
+  "bodyWorkerExit": 0,
+  "figures": [
+    {
+      "number": 1,
+      "bytes": 85422,
+      "manual": "approved: recording, implementation, replay comparison"
+    },
+    {
+      "number": 2,
+      "bytes": 81918,
+      "manual": "approved: per-item crossing versus retained batch"
+    },
+    {
+      "number": 3,
+      "bytes": 87680,
+      "manual": "approved: bounded coverage plus effects/platform/rollback"
+    }
+  ],
+  "allFinalFigures": "1280x720, PNG, no dithering, under90000B"
+}
