@@ -1,0 +1,12 @@
+{
+  "oldBannerRejected": true,
+  "reason": "missingprovenanceandgarbledtext",
+  "newBanner": "FLUX8781",
+  "machinePassed": true,
+  "manualPassed": true,
+  "scene": "clearconduitbridgebetweenmetalconnectors, no text/faces, topicmatchingagentUIcommunication",
+  "bytes": 93902,
+  "bodyManualPassed": true,
+  "bodyNotes": "All3compressedPNGs reviewed: Schemafieldsvsorder, threeoutcomebins, MCP/A2A/AGUIboundaries; legibleChinese,noincorrectlabels,properredcap/beigestemLittleM",
+  "workerExitCode": 0
+}

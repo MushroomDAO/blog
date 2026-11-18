@@ -1,0 +1,79 @@
+{
+  "cases": 14,
+  "passed": 14,
+  "schemaSha256": "4b5c93226838a0e72d88e6c5df20633c686c49fcb75d9be2815c6cbf9e48e71a",
+  "jsonschemaVersion": "4.26.0",
+  "results": [
+    {
+      "case": "valid-run-start",
+      "expectedValid": true,
+      "actualValid": true
+    },
+    {
+      "case": "missing-run-id",
+      "expectedValid": false,
+      "actualValid": false
+    },
+    {
+      "case": "valid-success",
+      "expectedValid": true,
+      "actualValid": true
+    },
+    {
+      "case": "legacy-implicit-success",
+      "expectedValid": true,
+      "actualValid": true
+    },
+    {
+      "case": "valid-cancelled",
+      "expectedValid": true,
+      "actualValid": true
+    },
+    {
+      "case": "wrong-outcome-shape",
+      "expectedValid": false,
+      "actualValid": false
+    },
+    {
+      "case": "valid-interrupt",
+      "expectedValid": true,
+      "actualValid": true
+    },
+    {
+      "case": "empty-interrupts",
+      "expectedValid": false,
+      "actualValid": false
+    },
+    {
+      "case": "valid-frontend-pending",
+      "expectedValid": true,
+      "actualValid": true
+    },
+    {
+      "case": "invalid-frontend-pending-id",
+      "expectedValid": false,
+      "actualValid": false
+    },
+    {
+      "case": "valid-text-start",
+      "expectedValid": true,
+      "actualValid": true
+    },
+    {
+      "case": "end-without-prior-start-structurally-valid",
+      "expectedValid": true,
+      "actualValid": true
+    },
+    {
+      "case": "resume-input",
+      "expectedValid": true,
+      "actualValid": true
+    },
+    {
+      "case": "invalid-resume-status",
+      "expectedValid": false,
+      "actualValid": false
+    }
+  ],
+  "scope": "Strict schema-shape checks only. Lone end event passes by design; no lifecycle or interoperability conformance claimed. No provider calls/network during validation."
+}

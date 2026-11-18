@@ -1,0 +1,9 @@
+# CopilotKit / AG-UI1.0 update
+
+SameAGUIentity coveredbyexistingJuly19guide, reuse route andoriginalpubDate. BilingualNov18updateprecedesdatedoriginalguide, oldcounts/code notclaimedcurrent. No duplicatearticle. OfficialfreezeSeptember18 nottoday; Trendsnapshot20223+1445 andlaterAPI20308differenttimes. CurrentMITprotocolseparateCopilotKitframework.
+
+PinnedJSONschema verifiedexactbytes at3416b86;14isolatedstructuralfixtures pass,includingnegativecontrols. LoneTEXT_MESSAGE_ENDpasses withoutpriorSTARTbydesign, no lifecycleSDK/vendor/browser/performanceconformanceclaimed.
+
+Oldcoverfailedmachinecheck(unsigned/garbledtext), regenerateFLUX8781samefilename, no unapprovedoverride. ThreeLittleMfigures viarequiredworker, primaryhandlescompression.
+
+OldWeChatdraftabsent/get40007,published48001; retainoldcreationcredentialrecorded anddoNOTredraftorclaimupdatedWeChatcontent. Blogcanupdateindependently.

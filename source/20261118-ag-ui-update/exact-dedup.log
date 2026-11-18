@@ -1,0 +1,40 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6afdb8ea-482e7a85-636d7d7f）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 1017 篇 + 公众号草稿箱 1 条 + 本地发布记录 1000 条 + MemPalace 4397 抽屉
+
+── 查：https://github.com/ag-ui-protocol/ag-ui
+   ✅ 四本账都没查到
+
+── 查：AG-UI
+   ❌ [BLOG  ] Aegra：LangSmith Deployments 的自托管平替，SDK 不用换，代码不用改
+      正文出现实体名「ag-ui」
+   ❌ [BLOG  ] CopilotKit：Agent 和用户之间那层你必须亲手搭的桥，36k stars，AG-UI 协议缔造者
+      正文出现实体名「ag-ui」
+   ❌ [BLOG  ] Grok Bot平替怎么选：五款开源候选的工程对比
+      正文出现实体名「ag-ui」
+   ❌ [BLOG  ] OpenMuse：CopilotKit 开源个人 AI 助理，带浏览器、终端、文件，任务后台保持运行
+      正文出现实体名「ag-ui」
+   ❌ [发过 2026-07-19] CopilotKit：Agent 和用户之间那层你必须亲手搭的桥，36k stars，AG-UI 协议缔造者
+      正文出现实体名「ag-ui」
+   ❌ [知识库] CopilotKit — Agent 应用前端基础设施栈  GitHub: CopilotKit/CopilotKit
+      正文出现实体名「ag-ui」
+   ❌ [知识库] e: 支持 - Slack/MS Teams: Beta (邀请内测) - Discord/Google Chat: C
+      正文出现实体名「ag-ui」
+   ❌ [知识库] --- name: project_openmuse description: OpenMuse — CopilotKi
+      正文出现实体名「ag-ui」
+   ❌ [知识库] 台任务**：SQL 租约多 worker 协调，Pause/Resume/Retry，**外部写操作强制审批** - *
+      正文出现实体名「ag-ui」
+   ❌ [知识库] # 2026-11-18 GitHub Trending 榜单上  **Summary**: 2026-11-18 Gi
+      正文出现实体名「ag-ui」
+   ❌ [知识库] CopilotKit — Agent 应用前端基础设施栈  GitHub: CopilotKit/CopilotKit
+      正文出现实体名「ag-ui」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
