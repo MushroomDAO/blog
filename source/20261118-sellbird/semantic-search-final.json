@@ -1,89 +1,89 @@
 [
   {
     "slug": "sellbird-ai-sales-agent-self-hosting-guide",
-    "query": "rust-anything v1.4.0 录制回放 Rust重写 跨语言桥接",
-    "found": false,
+    "query": "Sellbird 开源销售Agent AGPL 人工批准 发件队列 自托管",
+    "found": true,
     "response": {
       "results": [
         {
-          "article_id": "clypra-open-source-video-editor-tauri-rust-ffmpeg",
-          "title": "按头安利：Clypra —— 用 Tauri + Rust + FFmpeg 打造的开源视频编辑器，剪映 Pro 付费功能全免费",
-          "url": "/blog/clypra-open-source-video-editor-tauri-rust-ffmpeg/",
+          "article_id": "sellbird-ai-sales-agent-self-hosting-guide",
+          "title": "Sellbird：把销售外联做成可审批的Agent流水线",
+          "url": "/blog/sellbird-ai-sales-agent-self-hosting-guide/",
           "language": "zh",
-          "excerpt": "按头安利：Clypra —— 用 Tauri + Rust + FFmpeg 打造的开源视频编辑器，剪映 Pro 付费功能全免费 Clypra 是一款用 Tauri v2 + React + Rust 打造的跨平台开源视频编辑器（MIT 协议），专注把 CapCut／剪映 Pro 的付费专业功能全部本地免费化：多轨时间轴、硬件加速解码、H.264/H.265/ProRes 导出，无水印无订阅。本文覆盖硬件配置建议、完整本地编译部署流程、首个视频导出全过程。 开源工具 视频编辑 Tauri Rust 本地部署 它是什么 核心功能（完全免费） 硬件配置要求 ",
-          "score": 0.59342456
+          "excerpt": "Sellbird：把销售外联做成可审批的Agent流水线 Sellbird是原Harvey更名后的开源销售外联平台，串联企业发现、购买信号、联系人核验、邮件起草与回复处理。本文核对AGPL许可、Python与SQLite架构、Claude和Codex运行条件、人工审批与自动模式的差异，并用模拟邮箱测试发件控制，解释自托管不等于离线、订阅不等于零成本，以及工程师应借鉴的边界。 Sellbird AI Agent 销售自动化 自托管 Python 它适合解决什么问题？ 技术上，它怎样把任务串起来？ 为什么不能直接说“订阅内免费、随便跑”？ 默认审批与自动模式",
+          "score": 0.7621684
         },
         {
-          "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
-          "title": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时",
-          "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+          "article_id": "aegra-self-hosted-langsmith-deployments-alternative",
+          "title": "Aegra：LangSmith Deployments 的自托管平替，SDK 不用换，代码不用改",
+          "url": "/blog/aegra-self-hosted-langsmith-deployments-alternative/",
           "language": "zh",
-          "excerpt": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时 zavora-ai 社区维护的 ADK-Rust v2.2.0——不是 Google 官方项目，但把 Agent 运行时拆成 43 个可独立发布的 crate，按需引用。Type-safe、全异步、568 μs agent loop 开销，支持 Gemini/OpenAI/Anthropic/Ollama，含 graph 工作流、durable resume、realtime 语音、adk-skill 解析。本文做一次工程拆解。 rust agent-runtim",
-          "score": 0.5741499
+          "excerpt": "Aegra：LangSmith Deployments 的自托管平替，SDK 不用换，代码不用改 调研 Aegra：LangChain LangSmith Deployments（原 LangGraph Platform）的开源自托管平替。同一套 LangGraph SDK、同一套 API，换成自己的基础设施和 Postgres。核心是 Redis 任务队列的 Worker 架构（单实例 30 并发、租约式崩溃恢复、水平扩展）、Postgres 持久化 checkpoint、Agent Protocol v2 流式传输、pgvector 语义存储。Lan",
+          "score": 0.62970245
         },
         {
-          "article_id": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota",
-          "title": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军",
-          "url": "/blog/moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota/",
+          "article_id": "appflowy-self-host-services",
+          "title": "AppFlowy 自托管服务怎么卖：先分清开源客户端与商业服务端",
+          "url": "/blog/appflowy-self-host-services/",
           "language": "zh",
-          "excerpt": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军 OpenMOSS 开源的 MOSS-Transcribe-Diarize 0.9B（1.5K stars），SOTA 端到端音频理解模型，一个模型同时完成长音频多说话人转写、说话人分离（diarization）、精确时间戳和声学事件标注。架构：Qwen3-0.6B 解码器 + Whisper-Medium 编码器 + 4x 时序合并 MLP 桥接。支持 50+ 语言。输出格式 [时间戳][S01]文本[时间戳]。",
-          "score": 0.56972384
+          "excerpt": "AppFlowy 自托管服务怎么卖：先分清开源客户端与商业服务端 AppFlowy可做企业知识库，但当前自托管服务端与开源客户端的许可不同。本文核对官方仓库、旧Cloud归档状态、商业授权与免费席位，拆解迁移、权限、备份恢复、AI数据流和运维验收，并提供独立实施服务的报价方法，说明5,000至20,000缺乏可靠成交依据，不能把自托管直接等同于合规或保证利润，并明确收费边界。 AppFlowy 自托管 开源商业 企业知识库 数据安全 先找对仓库：开源和自托管不是同一个开关 收实施费，是否等于可以转卖软件？ “数据在自己服务器上”解决了哪些问题？ 我们实际",
+          "score": 0.624081
         },
         {
-          "article_id": "ra-jit-blaze-rust-live-builds",
-          "title": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界",
-          "url": "/blog/ra-jit-blaze-rust-live-builds/",
+          "article_id": "plausible-analytics-consulting-white-label",
+          "title": "Plausible Analytics 如何做成按月收费的分析服务？",
+          "url": "/blog/plausible-analytics-consulting-white-label/",
           "language": "zh",
-          "excerpt": "ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界 ra-jit 已更名为 blaze。本文核对官方暖构建基准、常驻编译架构、Apple Silicon 与 Linux 支持，以及 Rust 1.99.0、内存和借用检查限制，并在 M4 Mac 上验证函数修改与测试流程，解释为何局部补丁延迟不能等同于完整构建或画面更新速度，也不能承诺每个项目都快 92 倍。 Rust ra-jit blaze 编译器 热更新 开发工具 blaze 为什么能省掉修改后的大量等待？ “92 倍”和“10–24 倍”应该怎样看？ 毫秒构建与“不重启热更新",
-          "score": 0.5661118
+          "excerpt": "Plausible Analytics 如何做成按月收费的分析服务？ Plausible Analytics能成为网站分析顾问的服务底座，但自托管、白标和云端转售需要分别核对。本文结合仓库、Community Edition部署文件、白标指南与商标规则，比较客户自持云订阅、官方白标集成和CE代运维三条路线，拆解月度交付、成本核算、数据归属及退出机制，说明AGPL、MIT及企业功能的边界。 Plausible Analytics Web Analytics Open Source White Label Consulting Plausible适合解决哪些",
+          "score": 0.6166013
         },
         {
-          "article_id": "craft-anything-rust-software-rebuild-workbench",
-          "title": "Craft Anything：先研究软件，再让Agent重建",
-          "url": "/blog/craft-anything-rust-software-rebuild-workbench/",
+          "article_id": "postiz-agentic-social-media-scheduling-open-source",
+          "title": "Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？",
+          "url": "/blog/postiz-agentic-social-media-scheduling-open-source/",
           "language": "zh",
-          "excerpt": "Craft Anything：先研究软件，再让Agent重建 Craft Anything把软件研究、Agent构建、结果对比与迭代修正放进同一套Rust工作台，并提供桌面界面、CLI和MCP。本文核对源码、许可证、Clean room与Deep模式、编码代理适配及实际验证范围，介绍从自有网页建立可检查的重建流程，区分截图相似度、功能正确性和部署完成度，说明早期版本值得试什么。 Craft Anything Rust Agent MCP 软件工程 从研究到交付，中间多了哪些环节？ Rust引擎怎样服务桌面、CLI和MCP？ Clean room到底限制了",
-          "score": 0.55474365
+          "excerpt": "Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？ Postiz 官方 2024 年公告已公开源码地址。本文区分可核实的开源事实与未核实的解雇、营销策划传闻，介绍多平台排期、Agent 接入、自托管边界及可审计发布流程，并纠正旧文对 AGPL 和数据出网的过度概括。 Postiz 开源 社交媒体 AI Agent 自托管 “被炒后泄密”，哪些已经能核实？ 它的产品价值是什么？ Agent 应该如何进入发布流程？ 自托管真的意味着数据不出设备吗？ AGPL 能阻止别人做商业克隆吗？ 常见问题 能免费跑起来吗？ 有 3.9 万星就能证明成熟吗？",
+          "score": 0.6120462
         },
         {
-          "article_id": "fireredtts3-multilingual-dialect-voice-cloning-instruction-design",
-          "title": "fireredtts3-multilingual-dialect-voice-cloning-instruction-design",
-          "url": "/blog/fireredtts3-multilingual-dialect-voice-cloning-instruction-design/",
-          "language": "en",
-          "excerpt": "fireredtts3-multilingual-dialect-voice-cloning-instruction-design FireRedTTS3 (FireRedTeam, Apache 2.0, Python, 183 stars) is a unified speech generation and editing system built on semantically enriched continuous speech representations. Supports zero-shot voice cloning across 2",
-          "score": 0.55174565
+          "article_id": "doop-open-source-multiplayer-ai-design-canvas",
+          "title": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计",
+          "url": "/blog/doop-open-source-multiplayer-ai-design-canvas/",
+          "language": "zh",
+          "excerpt": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计 kgoedecke/doop 开源仅两周：多人实时设计画布，Canvas+Frame 用 sandboxed iframe 渲染真实 HTML，AI agent 通过内置 MCP server（15 个工具）流式把设计画进画布，人在旁边实时围观甚至接管。bun run dev 零配置自托管，内置 Postgres。AGPL-3.0，564 star。 AI Agent MCP 开源 设计工具 多人协作 TypeScript Claude Code 自托管 AGPL",
+          "score": 0.6101735
         },
         {
-          "article_id": "index-tts-25-production-tts-voice-clone-emotion-multilingual",
-          "title": "IndexTTS-2.5：生产级零样本 TTS，一段参考音频克隆音色 + 细粒度情感与语速控制",
-          "url": "/blog/index-tts-25-production-tts-voice-clone-emotion-multilingual/",
+          "article_id": "seeder-mcp-project-manager",
+          "title": "Seeder：自托管项目管理工具，原生支持 MCP，让 AI 直接读写你的任务",
+          "url": "/blog/seeder-mcp-project-manager/",
           "language": "zh",
-          "excerpt": "IndexTTS-2.5：生产级零样本 TTS，一段参考音频克隆音色 + 细粒度情感与语速控制 index-tts/index-tts，⭐22,615，Python，2026-08-10 发布 IndexTTS-2.5。零样本文本转语音系统，一段参考音频即可克隆音色。支持中文、英文、日语、西班牙语、阿拉伯语五种语言，跨语言音色保持。8维情感向量（愉快/愤怒/悲伤/恐惧/厌恶/忧郁/惊讶/平静），支持情感参考音频、文本情感自动转换、显式情感描述四种控制方式；duration_factor 语速控制（0.5×–2.0×）；拼音/CMU音素/日语假名发音精确控",
-          "score": 0.55095035
+          "excerpt": "Seeder：自托管项目管理工具，原生支持 MCP，让 AI 直接读写你的任务 Seeder 是一个开源自托管项目管理工具，运行在 Cloudflare Workers 上，原生内置 MCP 服务器，让 Claude、Cursor 等 AI 助手直接读写任务和客户请求，所有操作完整记录在活动流中。 项目管理 MCP Claude Code Cloudflare Workers 开源工具 AI Agent 项目管理工具为什么总让人不满意？ Seeder 能做什么？ 项目与看板 客户请求队列 公开客户看板 每日计划器 活动流（审计日志） 白标支持 最值得关注",
+          "score": 0.6089132
         },
         {
-          "article_id": "makepad-relax-rust-jit-live-compilation",
-          "title": "Makepad Relax：把 Rust 编译等待拆进运行过程",
-          "url": "/blog/makepad-relax-rust-jit-live-compilation/",
+          "article_id": "agent-relay-coding-agent-collaboration",
+          "title": "Agent Relay：让编程 Agent 直接协作，团队该怎样落地？",
+          "url": "/blog/agent-relay-coding-agent-collaboration/",
           "language": "zh",
-          "excerpt": "Makepad Relax：把 Rust 编译等待拆进运行过程 Makepad Relax 是实验性的 Rust 实时编译器和 JIT，将按需编译、后台优化与热更新放进同一运行过程。本文核验独立前端和机器码后端、首次自举与零外部依赖的含义，区分启动时间和稳态性能，并介绍借用检查时机、不能直接热换的结构变更、官方入门命令及本机小样例验证，帮助工程师判断它适合开发迭代还是发布构建。 Rust Makepad JIT Compiler Hot Reload “把 rustc 和 LLVM 换掉”指哪一层？ 为什么能边运行，边继续编译？ 运行更早，不等于所有检查",
-          "score": 0.5509318
+          "excerpt": "Agent Relay：让编程 Agent 直接协作，团队该怎样落地？ Agent Relay 为团队现有的编程 Agent 提供通信、共享历史、工具文件接口与代码化流程。本文核对开源组件，拆解 Relaycast、Relayfile、RelayHistory 和 Flows，介绍安装、消息验证与团队试点，并说明自托管、会话隐私、人工审批和权限声明的边界，区分官方能力与本地检查。 Agent Relay 多智能体 开发工具 开源 工作流 Agent Relay 的四类能力分别在哪里？ 怎样先跑通本机消息？ 本地检查实际验证了什么？ Relayfile 把",
+          "score": 0.60888934
         },
         {
-          "article_id": "ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust",
-          "title": "ai-memory：让 AI 编程助手真正记住「上次做到哪了」，跨工具无缝交接，Rust 实现，Wiki 存 Git",
-          "url": "/blog/ai-memory-long-term-memory-coding-agents-claude-codex-handoff-rust/",
+          "article_id": "immich-self-hosted-google-photos-alternative-114k-stars",
+          "title": "Immich：114K Stars 的自托管 Google Photos，为什么它是目前最成熟的开源替代方案",
+          "url": "/blog/immich-self-hosted-google-photos-alternative-114k-stars/",
           "language": "zh",
-          "excerpt": "ai-memory：让 AI 编程助手真正记住「上次做到哪了」，跨工具无缝交接，Rust 实现，Wiki 存 Git akitaonrails/ai-memory 是一个 Rust 实现的 AI 编程助手长期记忆方案，3953 stars，MIT 许可证。核心能力：用生命周期 Hook 自动捕获每次 Claude Code/Codex/Cursor 等会话的精华，会话结束时编译为结构化 Wiki 页面存入 Git 仓库（纯 Markdown，可 grep、可 Obsidian 同步）；下次无论用哪个工具打开同一目录，都能收到「上次做到哪里」的交接块。支持",
-          "score": 0.5497243
+          "excerpt": "Immich：114K Stars 的自托管 Google Photos，为什么它是目前最成熟的开源替代方案 AGPL-3.0 开源，NestJS + SvelteKit + Flutter，完整的人脸识别、CLIP 语义搜索、RAW 支持、OAuth 登录、Docker 部署。114K stars，2022 年创建，持续活跃更新。自托管不等于备份——3-2-1 原则是必须的。 self-hosted open-source photos Google-Photos privacy NestJS Flutter Docker AGPL 一、技术栈拆解 二",
+          "score": 0.5978727
         },
         {
-          "article_id": "pi-rust-agent-runtime",
-          "title": "pi-rust实测：可嵌入Rust程序的编程Agent运行时",
-          "url": "/blog/pi-rust-agent-runtime/",
+          "article_id": "omni-open-source-company-ai-agent-permission-aware",
+          "title": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么",
+          "url": "/blog/omni-open-source-company-ai-agent-permission-aware/",
           "language": "zh",
-          "excerpt": "pi-rust实测：可嵌入Rust程序的编程Agent运行时 pi-rust把编程Agent拆成可组合的Rust库，并提供rpi终端工具。本文核对v0.10.0的架构、MIT许可、Mac安装、原生插件、远程模式与会话恢复，在Apple Silicon上完成校验安装包和本机模拟接口驱动的真实写文件工具闭环，区分官方启动性能、离线测试、真实模型调用与操作系统隔离的不同边界。 pi-rust Rust AI Agent 开发工具 本地测试 为什么它不只是另一个终端聊天工具？ Mac怎样安装？需要多少内存？ 本次实际验证了什么？ 怎样接自己的模型？ 会话恢复能保",
-          "score": 0.54964906
+          "excerpt": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么 调研自托管开源公司级 AI Agent Omni：接入 Google Drive、Gmail、Slack、Confluence、Jira、HubSpot 等企业常用工具，核心设计是「权限感知的公司上下文」——索引信息的可见范围严格继承自源系统的权限，不会因为被索引过就绕开原本的访问控制。混合检索（BM25全文+pgvector语义）全部收在一个 Postgres 里，不需要额外的 Elasticsearch 或专用向量库。沙箱代码执行走隔离 Docker 网络+只读根文件系统",
+          "score": 0.5890595
         }
       ]
     }
