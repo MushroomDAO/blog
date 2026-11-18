@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-18T07:38:49.650002+00:00",
+  "articles": [
+    {
+      "slug": "sellbird-ai-sales-agent-self-hosting-guide",
+      "url": "https://blog.mushroom.cv/blog/sellbird-ai-sales-agent-self-hosting-guide/",
+      "status": 200,
+      "title": "Sellbird：把销售外联做成可审批的Agent流水线"
+    },
+    {
+      "slug": "amber-heart-memory-ai-companion-gateway-guide",
+      "url": "https://blog.mushroom.cv/blog/amber-heart-memory-ai-companion-gateway-guide/",
+      "status": 200,
+      "title": "Amber Heart琥珀之心：AI伴侣的记忆网关怎么用"
+    },
+    {
+      "slug": "mesh-avatar-studio-live2d-motion-engineering-guide",
+      "url": "https://blog.mushroom.cv/blog/mesh-avatar-studio-live2d-motion-engineering-guide/",
+      "status": 200,
+      "title": "Mesh Avatar Studio与Live2D：两条开源头像制作路线"
+    },
+    {
+      "slug": "rust-anything-record-replay-rust-migration-guide",
+      "url": "https://blog.mushroom.cv/blog/rust-anything-record-replay-rust-migration-guide/",
+      "status": 200,
+      "title": "rust-anything：用录制回放给Rust重写划边界"
+    }
+  ]
+}

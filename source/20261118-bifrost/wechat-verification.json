@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-18T07:39:22.255Z",
+  "drafts": [
+    {
+      "slug": "bifrost-ai-gateway-engineering-guide",
+      "mediaId": "prCUE631thH1cmNLi42prOg_MxjrmXo4IEMK0-vwsYqfCuM1NWDFld8XOa1WVGaD",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "93941c9aa9898e573576d5d8ec7cfd11c06533c9a501c2686618df80ce7d522c",
+      "remoteTextHash": "93941c9aa9898e573576d5d8ec7cfd11c06533c9a501c2686618df80ce7d522c",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/bifrost-ai-gateway-engineering-guide/",
+      "localContentHash": "f672eade781d5e748898fb84999099cc4253f469d647e1cd7051081af9a58780",
+      "remoteContentHash": "33e4cc6e8fd1df34beb9043a42bfd5f011eabf0d97f7cc7095f2f2ecba2937f7"
+    }
+  ]
+}

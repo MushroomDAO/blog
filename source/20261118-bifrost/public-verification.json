@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-18T07:38:40.005431+00:00",
+  "articles": [
+    {
+      "slug": "bifrost-ai-gateway-engineering-guide",
+      "url": "https://blog.mushroom.cv/blog/bifrost-ai-gateway-engineering-guide/",
+      "title": "Bifrost：把多模型接入、容灾与费用治理放进网关",
+      "listRank": 2,
+      "carouselRank": 2,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/bifrost-ai-gateway-engineering-guide-banner.EAVqADF4.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 93983
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/bifrost-ai-gateway-engineering-guide-banner.EAVqADF4_sKIOB.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 45006
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/bifrost-ai-gateway-engineering-guide-fig-01.DrajGivi_ZpNFDu.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 40812
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/bifrost-ai-gateway-engineering-guide-fig-02.DN3U60K5_OPUDN.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 41576
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/bifrost-ai-gateway-engineering-guide-fig-03.DGhY9OyF_2qFGH5.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 47962
+        }
+      ]
+    }
+  ]
+}
