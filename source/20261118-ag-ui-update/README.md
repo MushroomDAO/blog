@@ -7,3 +7,5 @@ PinnedJSONschema verifiedexactbytes at3416b86;14isolatedstructuralfixtures pass,
 Oldcoverfailedmachinecheck(unsigned/garbledtext), regenerateFLUX8781samefilename, no unapprovedoverride. ThreeLittleMfigures viarequiredworker, primaryhandlescompression.
 
 OldWeChatdraftabsent/get40007,published48001; retainoldcreationcredentialrecorded anddoNOTredraftorclaimupdatedWeChatcontent. Blogcanupdateindependently.
+
+Deploye19362d3 verifiednewtitle+updatedDateNov18/originalpubDateJuly19/publiccatalog/all5imagevariants. SixrecentBlogURLs preserved. BothsemanticIDs andfreshsearch verified14:54UTC; upsert2new/deleted2staleonce, no re-embedding. KBprojectupdated. PR262 REVIEW_REQUIRED; normalmerge rejectedbybasebranchpolicy, no bypass. OldWeChatget40007/listabsent/published48001remainrecorded; no neworupdateddraft.

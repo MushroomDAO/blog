@@ -1,1 +1,91 @@
-[]
+[
+  {
+    "slug": "copilotkit-frontend-stack-agents-guide",
+    "query": "AG-UI 1.0 CopilotKit 事件 状态 取消 中断 恢复 JSON Schema",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "copilotkit-frontend-stack-agents-guide",
+          "title": "CopilotKit与AG-UI 1.0：Agent前端的事件、状态与恢复",
+          "url": "/blog/copilotkit-frontend-stack-agents-guide/",
+          "language": "zh",
+          "excerpt": "CopilotKit与AG-UI 1.0：Agent前端的事件、状态与恢复 AG-UI 1.0 用稳定事件契约连接 Agent 与用户界面，CopilotKit 提供应用侧交互能力。本文核对冻结日期、GitHub 榜单和厂商集成，区分协议、SDK 与 UI 框架，并通过14例本地结构校验解释为什么格式正确不代表生命周期正确。沿用原文补充中断、取消、前端工具与恢复的工程边界，保留历史指南供对照。 AI Agent 前端框架 React HITL Generative UI AG-UI LangGraph 开源 2026-11-18 更新：榜单热度与规范发布",
+          "score": 0.663859
+        },
+        {
+          "article_id": "browser-use-jev-ultrafast-dom-web-agent",
+          "title": "jev-ultrafast：browser-use × TypeSafe Jev，DOM 结构化状态代替截图，Google Flights 7.1 秒",
+          "url": "/blog/browser-use-jev-ultrafast-dom-web-agent/",
+          "language": "zh",
+          "excerpt": "jev-ultrafast：browser-use × TypeSafe Jev，DOM 结构化状态代替截图，Google Flights 7.1 秒 browser-use/jev-ultrafast，19K+ stars，Python，browser-use 官方出品。核心思路：把浏览器状态变成编号元素表格，用 TypeSafe Jev 一次请求同时决策「操作类型 + 目标元素」，只有需要输入文字时才调小 LLM。默认 Agent 循环零截图，browser protocol 调用从 1092 次降到 101 次，任务时间中位数从 9.45s 降到 ",
+          "score": 0.5264355
+        },
+        {
+          "article_id": "neural-imprint-atomgradient-continual-learning-device-ai",
+          "title": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始",
+          "url": "/blog/neural-imprint-atomgradient-continual-learning-device-ai/",
+          "language": "zh",
+          "excerpt": "Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始 质子梯度（AtomGradient）发布 Neural Imprint 白皮书 v2（2026-09-17），提出让已部署 AI 在持续使用中积累经验、更新模型状态，无需重新训练。三个 Gen-1 组件：RPP（激活空间用户建模）、DSR（稀疏注意力缓存管理）、FrogJump（层跳过加速）。实测：90B 模型在手机上跑 200 轮对话峰值 5.5GB，语音合成中位延迟 32.28ms。CC BY-NC-ND 4.0。 continual-learning on-d",
+          "score": 0.51539576
+        },
+        {
+          "article_id": "abot-recon-streaming-3d-reconstruction",
+          "title": "ABot-Recon：普通摄像头流式建图，12帧窗口的能力与边界",
+          "url": "/blog/abot-recon-streaming-3d-reconstruction/",
+          "language": "zh",
+          "excerpt": "ABot-Recon：普通摄像头流式建图，12帧窗口的能力与边界 高德 AMAP CVLab 开源 ABot-Recon，以前11帧和当前帧组成固定窗口，持续预测点云与相机运动。本文核对代码、论文、权重许可和公开测试，解释6.71GiB显存的硬件条件、望京长视频的真实时长、闭环与漂移的区别，并提供可复核的安装、短序列推理及点云导出步骤，帮助判断普通单目摄像头建图适合哪些工程任务。 ABot-Recon 3D重建 流式推理 单目视觉 SLAM 开源模型 它究竟怎样边走边建图？ 望京8.6公里、6.71GiB，原始材料怎么写？ 为什么不能说“点云没漂移”？ ",
+          "score": 0.5018476
+        },
+        {
+          "article_id": "glimpse-visual-reasoning-game-bug-review",
+          "title": "Glimpse：让视频验收回到具体画面",
+          "url": "/blog/glimpse-visual-reasoning-game-bug-review/",
+          "language": "zh",
+          "excerpt": "Glimpse：让视频验收回到具体画面 Glimpse 是 Elorian 发布的视觉推理研究预览，可回看视频并定位疑点。本文核实官方入口、公开评测和开源状态，区分游戏验收案例与可复现基准，提供录像分段、规则输入、时间戳证据、人工复核及缺陷回归的工程方案。视觉定位不等于源码定位，模型信心也不是经过校准的正确率，所有流程建议与未验证范围均有明确说明。 Vision Language Model Video Understanding Game QA AI Agent Glimpse 开源了吗，应该去哪里找？ 公开结果能证明它最擅长找游戏 Bug 吗？ 怎样",
+          "score": 0.4946753
+        },
+        {
+          "article_id": "google-always-on-memory-agent-adk-open-source-replacement",
+          "title": "Google开源了一个无向量库的常驻内存Agent——以及如何把它从谷歌生态里完整解绑",
+          "url": "/blog/google-always-on-memory-agent-adk-open-source-replacement/",
+          "language": "zh",
+          "excerpt": "Google开源了一个无向量库的常驻内存Agent——以及如何把它从谷歌生态里完整解绑 GoogleCloudPlatform/generative-ai里有一个叫 always-on-memory-agent 的项目：基于 Google ADK + Gemini 3.1 Flash-Lite，用纯 SQLite 替代向量数据库，用后台睡眠整合循环模拟人脑记忆巩固机制。本文深入解析其架构、揭露实测缺陷，并给出把 google-adk/google-genai 完整替换为 LangGraph + Qwen2.5-VL + litellm 的迁移方案。 AI",
+          "score": 0.49222675
+        },
+        {
+          "article_id": "billion-context-agent-compression-proxy-review",
+          "title": "billion-context：让Agent长会话可持续的压缩代理",
+          "url": "/blog/billion-context-agent-compression-proxy-review/",
+          "language": "zh",
+          "excerpt": "billion-context：让Agent长会话可持续的压缩代理 billion-context 是编码智能体的上下文压缩代理，通过分层摘要、历史恢复和协议适配管理长期会话。核对官方源码、许可证附加署名要求与实验报告，解释十亿 token 的累计口径，分析缓存计费、精确召回和部署状态的边界，并给出安装、健康检查及小规模验收方法，帮助团队判断它是否适合自己的长期编码任务和模型供应商。 billion-context AI Agents Context Engineering Compression Open Source 它怎样接到Agent与模型之间？",
+          "score": 0.49211857
+        },
+        {
+          "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+          "title": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时",
+          "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+          "language": "zh",
+          "excerpt": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时 zavora-ai 社区维护的 ADK-Rust v2.2.0——不是 Google 官方项目，但把 Agent 运行时拆成 43 个可独立发布的 crate，按需引用。Type-safe、全异步、568 μs agent loop 开销，支持 Gemini/OpenAI/Anthropic/Ollama，含 graph 工作流、durable resume、realtime 语音、adk-skill 解析。本文做一次工程拆解。 rust agent-runtim",
+          "score": 0.49202996
+        },
+        {
+          "article_id": "learning-from-failure-inference-time-gui-agent-improvement-stanford",
+          "title": "别浪费失败！斯坦福用「失败轨迹」让 GUI Agent 无需训练提升 15%（ECCV 2026）",
+          "url": "/blog/learning-from-failure-inference-time-gui-agent-improvement-stanford/",
+          "language": "zh",
+          "excerpt": "别浪费失败！斯坦福用「失败轨迹」让 GUI Agent 无需训练提升 15%（ECCV 2026） 斯坦福 ECCV 2026 论文：把 AI Agent 执行失败的轨迹喂给 Claude 4.5 做诊断，自动生成「代码补丁」注入推理过程。OSWorld 基准 42.3%→48.9%（+15.6% 相对提升），零训练成本，仅增加 8% 推理开销，步数反降 15%。四大失败模式逐一击破：定位错误、能力缺口、知识不足、死循环。 GUI Agent 失败驱动学习 Computer Use OSWorld 推理时优化 斯坦福 自进化Agent ECCV2026 ",
+          "score": 0.49130836
+        },
+        {
+          "article_id": "gh-copilot-code-review-cli",
+          "title": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review",
+          "url": "/blog/gh-copilot-code-review-cli/",
+          "language": "zh",
+          "excerpt": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review GitHub CLI v2.88.0 新功能实测：在终端直接邀请 Copilot 审查 PR，无需跳转浏览器，附隐私风险提示 github copilot cli code-review developer-tools 核心能力 如何使用 免费吗？ 隐私警告（必读） 能用其他 AI CLI 吗？ 额外优化：大型团队福音 总结",
+          "score": 0.49005023
+        }
+      ]
+    }
+  }
+]

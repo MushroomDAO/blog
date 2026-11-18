@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "id": "93d03819f3d04a9d7eb126fc801f7246f887b73148019fc8",
+    "metadata": {
+      "article_id": "copilotkit-frontend-stack-agents-guide",
+      "content_hash": "437f4ad1d7449b21",
+      "excerpt": "CopilotKit与AG-UI 1.0：Agent前端的事件、状态与恢复 AG-UI 1.0 用稳定事件契约连接 Agent 与用户界面，CopilotKit 提供应用侧交互能力。本文核对冻结日期、GitHub 榜单和厂商集成，区分协议、SDK 与 UI 框架，并通过14例本地结构校验解释为什么格式正确不代表生命周期正确。沿用原文补充中断、取消、前端工具与恢复的工程边界，保留历史指南供对照。 AI Agent 前端框架 React HITL Generative UI AG-UI LangGraph 开源 2026-11-18 更新：榜单热度与规范发布",
+      "language": "zh",
+      "tags": [
+        "AI Agent",
+        "前端框架",
+        "React",
+        "HITL",
+        "Generative UI",
+        "AG-UI",
+        "LangGraph",
+        "开源"
+      ],
+      "title": "CopilotKit与AG-UI 1.0：Agent前端的事件、状态与恢复",
+      "url": "/blog/copilotkit-frontend-stack-agents-guide/"
+    }
+  },
+  {
+    "id": "bd07b9d1c4e3c0e6fbe6b132090ae14e247da19baa826da5",
+    "metadata": {
+      "article_id": "copilotkit-frontend-stack-agents-guide",
+      "content_hash": "32f749516cc6452b",
+      "excerpt": "CopilotKit and AG-UI 1.0: Events, State and Resume AG-UI 1.0 and CopilotKit: verify the freeze date, integrations and event contract, with 14 schema checks exposing the boundary between structure and behavior. AI Agent 前端框架 React HITL Generative UI AG-UI LangGraph 开源 November 18 ",
+      "language": "en",
+      "tags": [
+        "AI Agent",
+        "前端框架",
+        "React",
+        "HITL",
+        "Generative UI",
+        "AG-UI",
+        "LangGraph",
+        "开源"
+      ],
+      "title": "CopilotKit and AG-UI 1.0: Events, State and Resume",
+      "url": "/blog/copilotkit-frontend-stack-agents-guide/"
+    }
+  }
+]
