@@ -1,0 +1,11 @@
+# Claims review
+- Name selected: maximhq/bifrost AI gateway. Prior name-only ambiguity stated, no unrelated Bifrost projects conflated.
+- Pinned README/LICENSE/core go.mod/bifrost.go via API. Current dev e8e5672; go.mod go1.27.3, no toolchain installed or tests claimed.
+- README: core/framework/transports/plugins/ui, Apache2.0, HTTP and Go SDK, provider API, separate enterprise route. Screenshot/feature image text-heavy, unsuitable cover.
+- Docs: setup warns floating tags evaluation only, enableauth/TLS/durablepersistence, setup token for firstadmin. Article binds loopback and instructs auth, doesnot pretendsetupwasrun.
+- Virtualkey header x-bf-vk confirmed; application permissions and usage limits. Doesnot expose actualcredentials.
+- Retry/fallback docs: classification multipletypes, independent perprovider budget, 3providers*(1+3)=12author example; no fixed statusrules promised for all releases.
+- Cache docs: direct hash before semantic, cachekeyrequired/defaultelsebypass, identityscopeon bydefault, toolcallresponsescachingoffbydefault. Promptcache separatecost.
+- Bench docs explicitly mocked OpenAI calls. 11us overhead on t3.xlarge at5kRPS vs59us t3.medium authorreported, not measuredhere. No throughput/latency claims from our own environment.
+- Businessidempotency, datafreshness, loggingminimization, acceptancep95/p99 are editorial recommendations; not guarantees of gatewayimplementation.
+- No Docker/cloudmodel/safetycertification/performance acceptance done. Large repo clone stalled, codeloadtimeout, selected API files successful. No upstream code changes.

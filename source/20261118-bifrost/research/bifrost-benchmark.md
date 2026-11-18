@@ -1,0 +1,92 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.getbifrost.ai/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Getting Started
+
+> Introduction to Bifrost's performance capabilities and how to choose the right instance size for your workload.
+
+## Overview
+
+Bifrost has been rigorously tested under high load conditions to ensure optimal performance for production deployments. Our benchmark tests demonstrate exceptional performance characteristics at **5,000 requests per second (RPS)** across different AWS EC2 instance types.
+
+**Key Performance Highlights:**
+
+* **Perfect Success Rate**: 100% request success rate under high load
+* **Minimal Overhead**: Less than 15µs added latency per request on average
+* **Efficient Queue Management**: Sub-microsecond queue wait times on optimized instances
+* **Fast Key Selection**: Near-instantaneous weighted API key selection (\~10 ns)
+
+***
+
+## Test Environment Summary
+
+Bifrost was benchmarked on two primary AWS EC2 instance configurations:
+
+### **t3.medium (2 vCPUs, 4GB RAM)**
+
+* **Buffer Size**: 15,000
+* **Initial Pool Size**: 10,000
+* **Use Case**: Cost-effective option for moderate workloads
+
+### **t3.xlarge (4 vCPUs, 16GB RAM)**
+
+* **Buffer Size**: 20,000
+* **Initial Pool Size**: 15,000
+* **Use Case**: High-performance option for demanding workloads
+
+***
+
+## Performance Comparison at a Glance
+
+| Metric | t3.medium | t3.xlarge | Improvement |
+| - | - | - | - |
+| **Success Rate @ 5k RPS** | 100% | 100% | No failed requests |
+| **Bifrost Overhead** | 59 µs | 11 µs | **-81%** |
+| **Average Latency** | 2.12s | 1.61s | **-24%** |
+| **Queue Wait Time** | 47.13 µs | 1.67 µs | **-96%** |
+| **JSON Marshaling** | 63.47 µs | 26.80 µs | **-58%** |
+| **Response Parsing** | 11.30 ms | 2.11 ms | **-81%** |
+| **Peak Memory Usage** | 1,312.79 MB | 3,340.44 MB | +155% |
+
+> **Note**: t3.xlarge tests used significantly larger response payloads (\~10 KB vs \~1 KB), yet still achieved better performance metrics.
+
+> [!NOTE]
+>
+> All benchmarks are on mocked OpenAI calls, whose latency and payload size are mentioned in the respective analysis pages.
+
+***
+
+## Configuration Flexibility
+
+One of Bifrost's key strengths is its **configuration flexibility**. You can fine-tune the speed ↔ memory trade-off based on your specific requirements:
+
+| Configuration Parameter | Effect |
+| - | - |
+| `initial_pool_size` | Higher values = faster performance, more memory usage |
+| `buffer_size` & `concurrency` | Controls queue depth and max parallel workers (per provider) |
+| `retry` & `timeout` | Tune aggressiveness for each provider to meet your SLOs |
+
+**Configuration Philosophy:**
+
+* **Higher settings** (like t3.xlarge profile) prioritize raw speed
+* **Lower settings** (like t3.medium profile) optimize for memory efficiency
+* **Custom tuning** lets you find the sweet spot for your specific workload
+
+***
+
+## Next Steps
+
+### **Detailed Performance Analysis**
+
+* **[t3.medium Performance](https://docs.getbifrost.ai/benchmarking/t3.medium.md)** - Deep dive into cost-effective performance
+* **[t3.xlarge Performance](https://docs.getbifrost.ai/benchmarking/t3.xl.md)** - High-performance configuration analysis
+
+### **Run Your Own Tests**
+
+* **[Run Your Own Benchmarks](https://docs.getbifrost.ai/benchmarking/run-your-own-benchmarks.md)** - Step-by-step guide to benchmark Bifrost in your environment
+
+Ready to dive deeper? Choose your instance type above or learn how to run your own performance tests.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

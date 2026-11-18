@@ -8,3 +8,7 @@ Pin964a3a73ba51eef22a621715b0aabfea8d788db7,0.4.0 AGPL3only, oldHarvey0.3.xMITno
 No pertokenAPIbill is project's subscription-backedCLI design, not unlimited/free, not providertermsguarantee. Codex runtime pin0.159.3macOS/Linux/noexistingDocker path documented, notrecommendationtochangeoperator'senvironment. Defaultapproval differsAutopilot; Instantlyhasexternalcontrolboundary. LocalSQLite doesnotmean prompts/email/websiteoperationsoffline. AGPLlicensecurrent separatefromlegacyMIT.
 
 OfficiallogoSVG and dashboardGIF/screenshots mostlytext/UI unsuitableforphotorealisticcover. FLUX8761 blankenvelopes/bird/reviewboard, machineandmanualapproved. Requiredworkercreates3LittleMbodyfigures. ExistingdeployedAmber/Rust/Live2D must be preserved. FeaturePR only, no remoteprotectedmainbypass.
+
+Deployment e55cdfac, HTTP200/list+carouselrank4/all5images verified; prior3articles preserved. CurrentWeChatdraft fullcanonicaltext/3orderedimages/allmetadata/cover verified. Two semanticvectors accepted once; APIget_by_ids/search still awaitingprocessing, indexinfo recorded. No re-embed. PR259 requiresreview, normalmerge denied; no admin/directremotemain bypass.
+
+Final semanticcheck verified both IDs and freshpublicsearch at2026-11-18T07:14:49Z after eventualprocessing; no re-embedding or duplicateupsert. KBupdatedtoverified state.

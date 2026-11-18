@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "sellbird-ai-sales-agent-self-hosting-guide",
+    "query": "Sellbird 开源销售Agent AGPL 人工批准 发件队列 自托管",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "sellbird-ai-sales-agent-self-hosting-guide",
+          "title": "Sellbird：把销售外联做成可审批的Agent流水线",
+          "url": "/blog/sellbird-ai-sales-agent-self-hosting-guide/",
+          "language": "zh",
+          "excerpt": "Sellbird：把销售外联做成可审批的Agent流水线 Sellbird是原Harvey更名后的开源销售外联平台，串联企业发现、购买信号、联系人核验、邮件起草与回复处理。本文核对AGPL许可、Python与SQLite架构、Claude和Codex运行条件、人工审批与自动模式的差异，并用模拟邮箱测试发件控制，解释自托管不等于离线、订阅不等于零成本，以及工程师应借鉴的边界。 Sellbird AI Agent 销售自动化 自托管 Python 它适合解决什么问题？ 技术上，它怎样把任务串起来？ 为什么不能直接说“订阅内免费、随便跑”？ 默认审批与自动模式",
+          "score": 0.7621684
+        },
+        {
+          "article_id": "aegra-self-hosted-langsmith-deployments-alternative",
+          "title": "Aegra：LangSmith Deployments 的自托管平替，SDK 不用换，代码不用改",
+          "url": "/blog/aegra-self-hosted-langsmith-deployments-alternative/",
+          "language": "zh",
+          "excerpt": "Aegra：LangSmith Deployments 的自托管平替，SDK 不用换，代码不用改 调研 Aegra：LangChain LangSmith Deployments（原 LangGraph Platform）的开源自托管平替。同一套 LangGraph SDK、同一套 API，换成自己的基础设施和 Postgres。核心是 Redis 任务队列的 Worker 架构（单实例 30 并发、租约式崩溃恢复、水平扩展）、Postgres 持久化 checkpoint、Agent Protocol v2 流式传输、pgvector 语义存储。Lan",
+          "score": 0.62970245
+        },
+        {
+          "article_id": "appflowy-self-host-services",
+          "title": "AppFlowy 自托管服务怎么卖：先分清开源客户端与商业服务端",
+          "url": "/blog/appflowy-self-host-services/",
+          "language": "zh",
+          "excerpt": "AppFlowy 自托管服务怎么卖：先分清开源客户端与商业服务端 AppFlowy可做企业知识库，但当前自托管服务端与开源客户端的许可不同。本文核对官方仓库、旧Cloud归档状态、商业授权与免费席位，拆解迁移、权限、备份恢复、AI数据流和运维验收，并提供独立实施服务的报价方法，说明5,000至20,000缺乏可靠成交依据，不能把自托管直接等同于合规或保证利润，并明确收费边界。 AppFlowy 自托管 开源商业 企业知识库 数据安全 先找对仓库：开源和自托管不是同一个开关 收实施费，是否等于可以转卖软件？ “数据在自己服务器上”解决了哪些问题？ 我们实际",
+          "score": 0.624081
+        },
+        {
+          "article_id": "plausible-analytics-consulting-white-label",
+          "title": "Plausible Analytics 如何做成按月收费的分析服务？",
+          "url": "/blog/plausible-analytics-consulting-white-label/",
+          "language": "zh",
+          "excerpt": "Plausible Analytics 如何做成按月收费的分析服务？ Plausible Analytics能成为网站分析顾问的服务底座，但自托管、白标和云端转售需要分别核对。本文结合仓库、Community Edition部署文件、白标指南与商标规则，比较客户自持云订阅、官方白标集成和CE代运维三条路线，拆解月度交付、成本核算、数据归属及退出机制，说明AGPL、MIT及企业功能的边界。 Plausible Analytics Web Analytics Open Source White Label Consulting Plausible适合解决哪些",
+          "score": 0.6166013
+        },
+        {
+          "article_id": "postiz-agentic-social-media-scheduling-open-source",
+          "title": "Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？",
+          "url": "/blog/postiz-agentic-social-media-scheduling-open-source/",
+          "language": "zh",
+          "excerpt": "Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？ Postiz 官方 2024 年公告已公开源码地址。本文区分可核实的开源事实与未核实的解雇、营销策划传闻，介绍多平台排期、Agent 接入、自托管边界及可审计发布流程，并纠正旧文对 AGPL 和数据出网的过度概括。 Postiz 开源 社交媒体 AI Agent 自托管 “被炒后泄密”，哪些已经能核实？ 它的产品价值是什么？ Agent 应该如何进入发布流程？ 自托管真的意味着数据不出设备吗？ AGPL 能阻止别人做商业克隆吗？ 常见问题 能免费跑起来吗？ 有 3.9 万星就能证明成熟吗？",
+          "score": 0.6120462
+        },
+        {
+          "article_id": "doop-open-source-multiplayer-ai-design-canvas",
+          "title": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计",
+          "url": "/blog/doop-open-source-multiplayer-ai-design-canvas/",
+          "language": "zh",
+          "excerpt": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计 kgoedecke/doop 开源仅两周：多人实时设计画布，Canvas+Frame 用 sandboxed iframe 渲染真实 HTML，AI agent 通过内置 MCP server（15 个工具）流式把设计画进画布，人在旁边实时围观甚至接管。bun run dev 零配置自托管，内置 Postgres。AGPL-3.0，564 star。 AI Agent MCP 开源 设计工具 多人协作 TypeScript Claude Code 自托管 AGPL",
+          "score": 0.6101735
+        },
+        {
+          "article_id": "seeder-mcp-project-manager",
+          "title": "Seeder：自托管项目管理工具，原生支持 MCP，让 AI 直接读写你的任务",
+          "url": "/blog/seeder-mcp-project-manager/",
+          "language": "zh",
+          "excerpt": "Seeder：自托管项目管理工具，原生支持 MCP，让 AI 直接读写你的任务 Seeder 是一个开源自托管项目管理工具，运行在 Cloudflare Workers 上，原生内置 MCP 服务器，让 Claude、Cursor 等 AI 助手直接读写任务和客户请求，所有操作完整记录在活动流中。 项目管理 MCP Claude Code Cloudflare Workers 开源工具 AI Agent 项目管理工具为什么总让人不满意？ Seeder 能做什么？ 项目与看板 客户请求队列 公开客户看板 每日计划器 活动流（审计日志） 白标支持 最值得关注",
+          "score": 0.6089132
+        },
+        {
+          "article_id": "agent-relay-coding-agent-collaboration",
+          "title": "Agent Relay：让编程 Agent 直接协作，团队该怎样落地？",
+          "url": "/blog/agent-relay-coding-agent-collaboration/",
+          "language": "zh",
+          "excerpt": "Agent Relay：让编程 Agent 直接协作，团队该怎样落地？ Agent Relay 为团队现有的编程 Agent 提供通信、共享历史、工具文件接口与代码化流程。本文核对开源组件，拆解 Relaycast、Relayfile、RelayHistory 和 Flows，介绍安装、消息验证与团队试点，并说明自托管、会话隐私、人工审批和权限声明的边界，区分官方能力与本地检查。 Agent Relay 多智能体 开发工具 开源 工作流 Agent Relay 的四类能力分别在哪里？ 怎样先跑通本机消息？ 本地检查实际验证了什么？ Relayfile 把",
+          "score": 0.60888934
+        },
+        {
+          "article_id": "immich-self-hosted-google-photos-alternative-114k-stars",
+          "title": "Immich：114K Stars 的自托管 Google Photos，为什么它是目前最成熟的开源替代方案",
+          "url": "/blog/immich-self-hosted-google-photos-alternative-114k-stars/",
+          "language": "zh",
+          "excerpt": "Immich：114K Stars 的自托管 Google Photos，为什么它是目前最成熟的开源替代方案 AGPL-3.0 开源，NestJS + SvelteKit + Flutter，完整的人脸识别、CLIP 语义搜索、RAW 支持、OAuth 登录、Docker 部署。114K stars，2022 年创建，持续活跃更新。自托管不等于备份——3-2-1 原则是必须的。 self-hosted open-source photos Google-Photos privacy NestJS Flutter Docker AGPL 一、技术栈拆解 二",
+          "score": 0.5978727
+        },
+        {
+          "article_id": "omni-open-source-company-ai-agent-permission-aware",
+          "title": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么",
+          "url": "/blog/omni-open-source-company-ai-agent-permission-aware/",
+          "language": "zh",
+          "excerpt": "Omni 调研：企业级开源 Agent，权限跟着数据走，不是搜到什么就给看什么 调研自托管开源公司级 AI Agent Omni：接入 Google Drive、Gmail、Slack、Confluence、Jira、HubSpot 等企业常用工具，核心设计是「权限感知的公司上下文」——索引信息的可见范围严格继承自源系统的权限，不会因为被索引过就绕开原本的访问控制。混合检索（BM25全文+pgvector语义）全部收在一个 Postgres 里，不需要额外的 Elasticsearch 或专用向量库。沙箱代码执行走隔离 Docker 网络+只读根文件系统",
+          "score": 0.5890595
+        }
+      ]
+    }
+  }
+]

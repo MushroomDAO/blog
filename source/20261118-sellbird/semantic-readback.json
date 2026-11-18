@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2787d95706e9cf20aa6a31ed6afd5e31a56c715f980284e1",
+    "metadata": {
+      "article_id": "sellbird-ai-sales-agent-self-hosting-guide",
+      "content_hash": "1c1db9aaf5b33024",
+      "excerpt": "Sellbird：把销售外联做成可审批的Agent流水线 Sellbird是原Harvey更名后的开源销售外联平台，串联企业发现、购买信号、联系人核验、邮件起草与回复处理。本文核对AGPL许可、Python与SQLite架构、Claude和Codex运行条件、人工审批与自动模式的差异，并用模拟邮箱测试发件控制，解释自托管不等于离线、订阅不等于零成本，以及工程师应借鉴的边界。 Sellbird AI Agent 销售自动化 自托管 Python 它适合解决什么问题？ 技术上，它怎样把任务串起来？ 为什么不能直接说“订阅内免费、随便跑”？ 默认审批与自动模式",
+      "language": "zh",
+      "tags": [
+        "Sellbird",
+        "AI Agent",
+        "销售自动化",
+        "自托管",
+        "Python"
+      ],
+      "title": "Sellbird：把销售外联做成可审批的Agent流水线",
+      "url": "/blog/sellbird-ai-sales-agent-self-hosting-guide/"
+    }
+  },
+  {
+    "id": "53df7487634700c6abb8a8c2d15322519e348c6ea59d8bb8",
+    "metadata": {
+      "article_id": "sellbird-ai-sales-agent-self-hosting-guide",
+      "content_hash": "9f9612e31a86ae66",
+      "excerpt": "Sellbird: A Self-Hosted Sales Agent With Approval Gates Review Sellbird’s sales pipeline, AGPL license, local architecture, approval gates, subscription runtime limits, and tests using simulated mail and test data. Sellbird AI Agent 销售自动化 自托管 Python What problem does it address? ",
+      "language": "en",
+      "tags": [
+        "Sellbird",
+        "AI Agent",
+        "销售自动化",
+        "自托管",
+        "Python"
+      ],
+      "title": "Sellbird: A Self-Hosted Sales Agent With Approval Gates",
+      "url": "/blog/sellbird-ai-sales-agent-self-hosting-guide/"
+    }
+  }
+]

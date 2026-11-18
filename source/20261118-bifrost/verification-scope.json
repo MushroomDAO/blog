@@ -1,0 +1,15 @@
+{
+  "documentationReview": true,
+  "pinnedFiles": [
+    "README.md",
+    "LICENSE",
+    "core/go.mod",
+    "core/bifrost.go"
+  ],
+  "localBuildOrTests": false,
+  "realProviderCalls": false,
+  "dockerRun": false,
+  "performanceBenchmark": false,
+  "sourceFetchLimits": "shallow clone stalled and was stopped; codeload download timed out; selected pinned files fetched successfully through GitHub API",
+  "officialBenchmark": "mocked OpenAI requests; 11us reported overhead on t3.xlarge at5kRPS, not reproduced"
+}
