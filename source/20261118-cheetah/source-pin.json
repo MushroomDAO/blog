@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/DA3M0/Cheetah",
+  "commit": "6aa20a827cd9a82f2ca739e2d25bc639d54d315c",
+  "version": "1.0.0-rc4.0",
+  "license": "Apache-2.0",
+  "checkedDate": "2026-11-18",
+  "currentBackends": [
+    "native CPU",
+    "optional Vulkan"
+  ],
+  "historicalForumBackends": "CUDA/MetalviaCandleatposttime; removedfrompinnedcurrentCargo/README"
+}

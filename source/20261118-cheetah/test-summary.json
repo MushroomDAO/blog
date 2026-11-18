@@ -1,0 +1,20 @@
+{
+  "command": "cargo test --locked",
+  "rust": "1.98.1",
+  "host": "AppleSilicon arm64 macOS",
+  "passed": 141,
+  "failed": 0,
+  "sets": [
+    3,
+    138
+  ],
+  "cliHelp": "cargo run --locked -- --help passed",
+  "realWeightsLoaded": false,
+  "modelDownloads": false,
+  "memoryBenchmark": false,
+  "speedBenchmark": false,
+  "vulkanBuiltOrTested": false,
+  "upstreamTrackedUnchanged": true,
+  "hostPageSizeBytes": 16384,
+  "x86Avx2PathTested": false
+}
