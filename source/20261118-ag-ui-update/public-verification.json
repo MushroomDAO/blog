@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-11-18T14:52:00.753860+00:00",
+  "slug": "copilotkit-frontend-stack-agents-guide",
+  "blogUrl": "https://blog.mushroom.cv/blog/copilotkit-frontend-stack-agents-guide/",
+  "status": 200,
+  "title": "CopilotKit与AG-UI 1.0：Agent前端的事件、状态与恢复",
+  "catalogEntry": {
+    "id": "copilotkit-frontend-stack-agents-guide",
+    "title": "CopilotKit与AG-UI 1.0：Agent前端的事件、状态与恢复",
+    "titleEn": "CopilotKit and AG-UI 1.0: Events, State and Resume",
+    "description": "AG-UI 1.0 用稳定事件契约连接 Agent 与用户界面，CopilotKit 提供应用侧交互能力。本文核对冻结日期、GitHub 榜单和厂商集成，区分协议、SDK 与 UI 框架，并通过14例本地结构校验解释为什么格式正确不代表生命周期正确。沿用原文补充中断、取消、前端工具与恢复的工程边界，保留历史指南供对照。",
+    "descriptionEn": "AG-UI 1.0 and CopilotKit: verify the freeze date, integrations and event contract, with 14 schema checks exposing the boundary between structure and behavior.",
+    "pubDate": "2026-07-19T00:00:00.000Z",
+    "updatedDate": "2026-11-18T00:00:00.000Z",
+    "tags": [
+      "AI Agent",
+      "前端框架",
+      "React",
+      "HITL",
+      "Generative UI",
+      "AG-UI",
+      "LangGraph",
+      "开源"
+    ],
+    "category": "Tech-Experiment",
+    "url": "/blog/copilotkit-frontend-stack-agents-guide/"
+  },
+  "originalPubDatePreserved": true,
+  "notNewPost": true,
+  "images": [
+    {
+      "path": "/_astro/copilotkit-frontend-stack-agents-guide-banner.Dh7aUPUA.jpg",
+      "status": 200,
+      "bytes": 93902
+    },
+    {
+      "path": "/_astro/copilotkit-frontend-stack-agents-guide-banner.Dh7aUPUA_Z1nS85H.webp",
+      "status": 200,
+      "bytes": 49358
+    },
+    {
+      "path": "/_astro/copilotkit-frontend-stack-agents-guide-fig-01.modgM_hx_12RCqn.webp",
+      "status": 200,
+      "bytes": 34458
+    },
+    {
+      "path": "/_astro/copilotkit-frontend-stack-agents-guide-fig-02.BAkE8CHL_Z2ip3rm.webp",
+      "status": 200,
+      "bytes": 27138
+    },
+    {
+      "path": "/_astro/copilotkit-frontend-stack-agents-guide-fig-03.CckcuVwx_ZBcesv.webp",
+      "status": 200,
+      "bytes": 43258
+    }
+  ]
+}

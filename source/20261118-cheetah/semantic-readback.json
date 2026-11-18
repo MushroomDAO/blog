@@ -1,0 +1,38 @@
+[
+  {
+    "id": "d067699961fe3e42c252e9a02fca11b61b216539d5be407a",
+    "metadata": {
+      "article_id": "cheetah-rust-local-llm-memory-loading-guide",
+      "content_hash": "4716667dfaae956e",
+      "excerpt": "Cheetah：62MB低内存背后，mmap省掉了什么 Cheetah是Rust与C编写的本地LLM加载器，利用mmap权重和Ant分层减少进程驻留副本。本文对照论坛62MB空闲内存与当前文档123MB稳态RSS，解释页缓存、BF16物化、KV缓存和吞吐的取舍，给出141例本机测试与CLI检查的范围，指出平台页大小及Vulkan已知限制，帮助工程师设计可复核的低内存验证。 Rust 本地LLM mmap 内存优化 开源 62MB、123MB、13 tok/s，到底是哪组结果？ mmap 省掉了什么？ Ant 分层控制的是哪一层？ 本机实际检查了什么？ 工",
+      "language": "zh",
+      "tags": [
+        "Rust",
+        "本地LLM",
+        "mmap",
+        "内存优化",
+        "开源"
+      ],
+      "title": "Cheetah：62MB低内存背后，mmap省掉了什么",
+      "url": "/blog/cheetah-rust-local-llm-memory-loading-guide/"
+    }
+  },
+  {
+    "id": "1bba8391ad24f6fcd0f592c7ac5f23f95a91ebc15b543748",
+    "metadata": {
+      "article_id": "cheetah-rust-local-llm-memory-loading-guide",
+      "content_hash": "101d082a1da2c799",
+      "excerpt": "Cheetah: Low-RSS LLM Loading With Rust and mmap Cheetah’s Rust LLM loader examined: mmap weights, Ant residency, idle versus peak RSS, page-cache tradeoffs, 141 passing tests and the limits of local checks. Rust 本地LLM mmap 内存优化 开源 Which memory and speed numbers are being compared",
+      "language": "en",
+      "tags": [
+        "Rust",
+        "本地LLM",
+        "mmap",
+        "内存优化",
+        "开源"
+      ],
+      "title": "Cheetah: Low-RSS LLM Loading With Rust and mmap",
+      "url": "/blog/cheetah-rust-local-llm-memory-loading-guide/"
+    }
+  }
+]

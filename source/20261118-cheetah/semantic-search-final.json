@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "cheetah-rust-local-llm-memory-loading-guide",
+    "query": "Cheetah Rust mmap 本地模型 权重加载 62MB 空闲 RSS",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "cheetah-rust-local-llm-memory-loading-guide",
+          "title": "Cheetah：62MB低内存背后，mmap省掉了什么",
+          "url": "/blog/cheetah-rust-local-llm-memory-loading-guide/",
+          "language": "zh",
+          "excerpt": "Cheetah：62MB低内存背后，mmap省掉了什么 Cheetah是Rust与C编写的本地LLM加载器，利用mmap权重和Ant分层减少进程驻留副本。本文对照论坛62MB空闲内存与当前文档123MB稳态RSS，解释页缓存、BF16物化、KV缓存和吞吐的取舍，给出141例本机测试与CLI检查的范围，指出平台页大小及Vulkan已知限制，帮助工程师设计可复核的低内存验证。 Rust 本地LLM mmap 内存优化 开源 62MB、123MB、13 tok/s，到底是哪组结果？ mmap 省掉了什么？ Ant 分层控制的是哪一层？ 本机实际检查了什么？ 工",
+          "score": 0.7161054
+        },
+        {
+          "article_id": "krea-2-turbo-open-weight-text-to-image-license-hardware",
+          "title": "Krea 2 Turbo 值不值得本地跑？12.8B 开放权重文生图：8 步出图、年收入百万美元以下可商用",
+          "url": "/blog/krea-2-turbo-open-weight-text-to-image-license-hardware/",
+          "language": "zh",
+          "excerpt": "Krea 2 Turbo 值不值得本地跑？12.8B 开放权重文生图：8 步出图、年收入百万美元以下可商用 Krea 2 Turbo 是 Krea 从零训练的 12.8B 参数文生图 DiT，用 TDM 蒸馏到 8 步、关闭 CFG，支持 1K–2K 分辨率。本文从个人开发者本地出图的角度拆它：官方全套 bf16 权重约 35.7GB，社区 Q4 GGUF 主干 7.49GB；许可证允许年收入低于 100 万美元的主体商用，但要求内容过滤、衍生模型名须以 Krea 开头，且 Krea 可提前 30 天通知终止授权。并和 FLUX.2 klein 4B/9",
+          "score": 0.56833214
+        },
+        {
+          "article_id": "mdya-rust-local-markdown-search-chinese-test-871-docs",
+          "title": "mdya 实测：871 篇中文笔记索引 8 分钟，但语义检索在中文上是失效的",
+          "url": "/blog/mdya-rust-local-markdown-search-chinese-test-871-docs/",
+          "language": "zh",
+          "excerpt": "mdya 实测：871 篇中文笔记索引 8 分钟，但语义检索在中文上是失效的 Rust 写的本地 Markdown 检索原语 mdya，BM25 + 端侧向量 + MCP，单二进制。我拿自己 871 篇笔记（10MB）实测：索引 8 分 01 秒，占 176MB，BM25 查询 30ms、向量 530ms。但对照实验揭穿了一个问题——字面命中的中文查询两条路都准，换成同义改写就全崩，因为默认模型 ruri-v3-30m 是日语的、FTS 分词用的是日语 ipadic 词典。多语言的 EmbeddingGemma 是 gated 模型，直接 401 拉不下",
+          "score": 0.56181115
+        },
+        {
+          "article_id": "decision2-kai-06b-local-classification-gguf",
+          "title": "Decision 2.0 Kai：0.6B 小模型做本地判断，400MB GGUF 的部署边界",
+          "url": "/blog/decision2-kai-06b-local-classification-gguf/",
+          "language": "zh",
+          "excerpt": "Decision 2.0 Kai：0.6B 小模型做本地判断，400MB GGUF 的部署边界 Decision 2.0 Kai 用 0.6B 参数和一次前向计算完成分类、是非判断与评分，Q4 GGUF 文件为 400.9MB。本文核对 8192 token 输入预算、专用 llama.cpp 分支及 System One 接口，并从官方小样本验证解释量化后的概率漂移为何可能改变复核路径；本文未运行本机推理。 Decision 2.0 小模型 Hugging Face 本地 AI GGUF 语义路由 Qwen3 为什么本地工作流需要一个只做判断的小模型？",
+          "score": 0.5599248
+        },
+        {
+          "article_id": "ming-3-tts-small-model-evaluation",
+          "title": "Ming-3.0-TTS：0.5B 语音模型，哪些成绩值得信？",
+          "url": "/blog/ming-3-tts-small-model-evaluation/",
+          "language": "zh",
+          "excerpt": "Ming-3.0-TTS：0.5B 语音模型，哪些成绩值得信？ 核查蚂蚁Ming-3.0-TTS的MIT代码与0.5B权重，拆开发音正确率、声音克隆听感与原生音色排名，比较官方Seed-TTS成绩，并解释近3GB权重文件、CUDA参考环境、Mac兼容性缺口及任务控制限制，提供八项输入协议检查证据，帮助判断小模型能否接入配音、语音助手与本地创作流程，讲清部署取舍与验证范围。 Ming-3.0-TTS 蚂蚁集团 语音合成 开源模型 本地AI 原始仓库和模型权重在哪里？ “顶级”是哪张榜、什么口径？ 官方客观评测有没有短板？ 小模型能控制哪些声音？ Mac能直",
+          "score": 0.5549727
+        },
+        {
+          "article_id": "meta-muse-glimmer-30b-local-agent-dense-multimodal-apache",
+          "title": "meta-muse-glimmer-30b-local-agent-dense-multimodal-apache",
+          "url": "/blog/meta-muse-glimmer-30b-local-agent-dense-multimodal-apache/",
+          "language": "en",
+          "excerpt": "meta-muse-glimmer-30b-local-agent-dense-multimodal-apache Meta open-sources Muse Glimmer 30B: 29.6B parameters, Dense architecture, image+text input, 131K context, distilled from Muse Spark with focused training on Agent tasks, multi-step reasoning, Tool Use, Coding, and failure ",
+          "score": 0.54677075
+        },
+        {
+          "article_id": "gsq-rco-non-uniform-gguf-quantization",
+          "title": "27B 模型压到 11.8GB 还「任务无损」：奥地利 IST 用两篇论文的方法重做了 GGUF 量化",
+          "url": "/blog/gsq-rco-non-uniform-gguf-quantization/",
+          "language": "zh",
+          "excerpt": "27B 模型压到 11.8GB 还「任务无损」：奥地利 IST 用两篇论文的方法重做了 GGUF 量化 均匀量化对所有张量一视同仁，GSQ-RCO 不是——它用梯度搜索按每个张量的敏感度分配精度，在总大小预算内做非均匀分配。结果：Qwen3.8-27B 从 53.8GB 压到 11.8GB（4.6 倍），AIME25 和 LiveCodeBench 分数与 BF16 原模型完全一致。文件是标准 GGUF，llama.cpp、Ollama、LM Studio 直接跑。 量化 GGUF 本地推理 local-first Qwen 开源模型 llama.cpp",
+          "score": 0.54510415
+        },
+        {
+          "article_id": "k2-horizon-mova-36b-a4b-mac-local-memory-guide",
+          "title": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？",
+          "url": "/blog/k2-horizon-mova-36b-a4b-mac-local-memory-guide/",
+          "language": "zh",
+          "excerpt": "K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？ K2-Horizon-MoVA-36B-A4B 是 MBZUAI 基础模型研究院（IFM）9 月初开源的 Apache-2.0 纯文本 MoE，37.44B 总参、按权重头部推算每 token 约 4.66B 激活，把注意力的 V 投影换成 64 选 4 的专家。自报 Terminal-Bench 2.1 为 58.6。它的 KV 缓存每 token 192KB，是 Qwen3.5 同档的约 10 倍。Mac 上 32GB",
+          "score": 0.5433574
+        },
+        {
+          "article_id": "leann-rag-97-percent-storage-savings-graph-recompute",
+          "title": "LEANN：省掉 97% 向量存储，让 RAG 跑在本地设备上",
+          "url": "/blog/leann-rag-97-percent-storage-savings-graph-recompute/",
+          "language": "zh",
+          "excerpt": "LEANN：省掉 97% 向量存储，让 RAG 跑在本地设备上 Berkeley 出品的 MLsys2026 最佳论文，用图结构+按需重计算替代全量向量存储，6GB 索引 6000 万文本块（传统方案需 201GB），支持 PDF/邮件/微信/浏览器历史/Claude 对话等全个人数据，零遥测本地运行，Stars 12913。 RAG 向量数据库 本地AI 隐私 开源 MLsys 核心技术：图结构 + 按需重计算 两种索引后端 数据源覆盖范围 Benchmark 数据 安装与使用 为什么这件事重要",
+          "score": 0.5429769
+        },
+        {
+          "article_id": "needle2-cactus-compute-45m-tool-calling-tiny-device-foundation-model",
+          "title": "Needle 2：14MB、45M 参数、跑在手机里的工具调用基础模型——Simple Attention Network 架构解析",
+          "url": "/blog/needle2-cactus-compute-45m-tool-calling-tiny-device-foundation-model/",
+          "language": "zh",
+          "excerpt": "Needle 2：14MB、45M 参数、跑在手机里的工具调用基础模型——Simple Attention Network 架构解析 Needle 2（GitHub: cactus-compute/needle，⭐9,593，Apache-2.0）是 Cactus Compute 发布的 45M 参数端侧基础模型，14MB 单文件二进制，28MB RAM 内完整运行，专为工具调用、设备控制、结构化提取设计。基于 Simple Attention Network（arXiv:2607.18363）：Hadamard MLP + GQA 注意力 + engr",
+          "score": 0.54047906
+        }
+      ]
+    }
+  }
+]

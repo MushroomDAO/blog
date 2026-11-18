@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-18T15:24:26.702413+00:00",
+  "articles": [
+    {
+      "slug": "cheetah-rust-local-llm-memory-loading-guide",
+      "url": "https://blog.mushroom.cv/blog/cheetah-rust-local-llm-memory-loading-guide/",
+      "title": "Cheetah：62MB低内存背后，mmap省掉了什么",
+      "listRank": 3,
+      "carouselRank": 3,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/cheetah-rust-local-llm-memory-loading-guide-banner.B0caAS55.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94267
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/cheetah-rust-local-llm-memory-loading-guide-banner.B0caAS55_Z1Jo7JQ.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 59284
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/cheetah-rust-local-llm-memory-loading-guide-fig-01.aTnKGklr_pyOQ2.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 57338
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/cheetah-rust-local-llm-memory-loading-guide-fig-02.C8ODiatt_2ps0NU.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 64484
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/cheetah-rust-local-llm-memory-loading-guide-fig-03.fJVrv1as_Z28Stmz.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 53504
+        }
+      ]
+    }
+  ]
+}

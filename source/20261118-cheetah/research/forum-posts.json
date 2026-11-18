@@ -1,0 +1,20 @@
+[
+  {
+    "author": "zuohanwen1009",
+    "createdAt": "2026-11-15T13:45:48.725Z",
+    "text": " I've been building Cheetah, a local LLM loader/backend focused on extreme memory efficiency. \n After a full refactor, the numbers changed by an order of magnitude: \n \n 0.5B model: 2GB+ → 62MB (idle) \n 1.5B model: OOM → 67MB (idle) \n Incremental memory for a 1.5B model over 0.5B: only +5MB \n 0.5B on an i5-4200M (2013): 13 tok/s (self-developed CPU backend with SIMD) \n Tool-call overhead (e.g. weather query): +0.2MB \n \n The goal isn't raw speed first — it's fitting usable local models into embedded/low-VRAM environments. The memory numbers come from a lazy-loading architecture and a self-developed CPU/Vulkan backend (CUDA/Metal currently via Candle as a transition). \n Still early (V1 offload has ~0.5GB runtime overhead, being replaced in V2 by VRAM→RAM→DISK tiering for MoE). README has the full architecture, memory-loading internals, and contribution guide. \n Repo:  GitHub - DA3M0/Cheetah: A single-binary local LLM inference server in Rust + C. Supports Safetensors (F32/F16/BF16) CPU/CUDA/Metal/Vulkan. OpenAI-compatible gateway · GitHub  \n Happy to answer questions about the memory model or the CPU backend. ",
+    "images": []
+  },
+  {
+    "author": "MOCKBA",
+    "createdAt": "2026-11-15T20:56:05.097Z",
+    "text": " Yeah, generally refactoring is a never stop game. ",
+    "images": []
+  },
+  {
+    "author": "zuohanwen1009",
+    "createdAt": "2026-11-18T10:58:12.295Z",
+    "text": " Absolutely. Especially when chasing that 62MB idle memory footprint. The refactoring never ends, but the numbers are worth it. Thanks for checking it out! ",
+    "images": []
+  }
+]

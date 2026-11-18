@@ -1,0 +1,347 @@
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded unit-prefix v0.5.2
+  Downloaded daachorse v3.0.3
+  Downloaded safetensors v0.8.0
+  Downloaded errno v0.3.15
+  Downloaded monostate-impl v0.1.18
+  Downloaded rayon-cond v0.4.0
+  Downloaded macro_rules_attribute-proc_macro v0.2.3
+  Downloaded ctrlc v3.5.2
+  Downloaded derive_builder_macro v0.20.2
+  Downloaded macro_rules_attribute v0.2.3
+  Downloaded darling_macro v0.20.11
+  Downloaded monostate v0.1.18
+  Downloaded chunked_transfer v1.5.0
+  Downloaded derive_builder_core v0.20.2
+  Downloaded onig v6.5.3
+  Downloaded dary_heap v0.3.9
+  Downloaded derive_builder v0.20.2
+  Downloaded memmap2 v0.9.12
+  Downloaded console v0.16.6
+  Downloaded ascii v1.1.0
+  Downloaded base64 v0.13.1
+  Downloaded darling v0.20.11
+  Downloaded tiny_http v0.12.0
+  Downloaded indicatif v0.18.6
+  Downloaded unicode-normalization-alignments v0.1.12
+  Downloaded compact_str v0.9.1
+  Downloaded darling_core v0.20.11
+  Downloaded unicode_categories v0.1.1
+  Downloaded zerocopy-derive v0.8.63
+  Downloaded itertools v0.14.0
+  Downloaded hashbrown v0.16.1
+  Downloaded esaxx-rs v0.1.10
+  Downloaded tokenizers v0.23.2
+  Downloaded portable-atomic v1.15.0
+  Downloaded zerocopy v0.8.63
+  Downloaded rustix v1.1.6
+  Downloaded spm_precompiled v0.1.4
+  Downloaded onig_sys v69.9.3
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling libc v0.2.191
+   Compiling cfg-if v1.0.5
+   Compiling serde_core v1.0.229
+   Compiling shlex v2.0.1
+   Compiling find-msvc-tools v0.1.15
+   Compiling zerocopy v0.8.63
+   Compiling bitflags v2.13.2
+   Compiling crossbeam-utils v0.8.23
+   Compiling cc v1.11.2
+   Compiling memchr v2.8.3
+   Compiling serde v1.0.229
+   Compiling once_cell v1.21.4
+   Compiling getrandom v0.3.4
+   Compiling crossbeam-epoch v0.9.21
+   Compiling ident_case v1.0.1
+   Compiling strsim v0.11.1
+   Compiling fnv v1.0.7
+   Compiling crossbeam-deque v0.8.8
+   Compiling objc2 v0.6.5
+   Compiling pkg-config v0.3.34
+   Compiling rayon-core v1.13.0
+   Compiling rustversion v1.0.23
+   Compiling zmij v1.0.23
+   Compiling syn v2.0.119
+   Compiling syn v3.0.10
+   Compiling serde_derive v1.0.229
+   Compiling darling_core v0.20.11
+   Compiling onig_sys v69.9.3
+   Compiling portable-atomic v1.15.0
+   Compiling zerocopy-derive v0.8.63
+   Compiling either v1.19.0
+   Compiling getrandom v0.4.3
+   Compiling cfg_aliases v0.2.2
+   Compiling rustix v1.1.6
+   Compiling itoa v1.0.19
+   Compiling serde_json v1.0.154
+   Compiling objc2-encode v4.1.0
+   Compiling version_check v0.9.5
+   Compiling darling_macro v0.20.11
+   Compiling ahash v0.8.12
+   Compiling darling v0.20.11
+   Compiling nix v0.31.3
+   Compiling rand_core v0.9.5
+   Compiling errno v0.3.15
+   Compiling getrandom v0.2.17
+   Compiling esaxx-rs v0.1.10
+   Compiling aho-corasick v1.1.5
+   Compiling regex-syntax v0.8.11
+   Compiling thiserror v2.0.21
+   Compiling minimal-lexical v0.2.1
+   Compiling unicode-width v0.2.3
+   Compiling paste v1.0.15
+   Compiling console v0.16.6
+   Compiling nom v7.1.3
+   Compiling regex-automata v0.4.18
+   Compiling block2 v0.6.2
+   Compiling derive_builder_core v0.20.2
+   Compiling rand_core v0.6.4
+   Compiling derive_builder_macro v0.20.2
+   Compiling rayon v1.12.0
+   Compiling castaway v0.2.4
+   Compiling itertools v0.14.0
+   Compiling monostate-impl v0.1.18
+   Compiling thiserror-impl v2.0.21
+   Compiling unicode-segmentation v1.13.3
+   Compiling equivalent v1.0.3
+   Compiling fastrand v2.5.0
+   Compiling smallvec v1.16.5
+   Compiling macro_rules_attribute-proc_macro v0.2.3
+   Compiling ryu v1.0.23
+   Compiling base64 v0.13.1
+   Compiling log v0.4.35
+   Compiling static_assertions v1.1.0
+   Compiling pastey v0.2.3
+   Compiling foldhash v0.2.0
+   Compiling allocator-api2 v0.2.21
+   Compiling ppv-lite86 v0.2.21
+   Compiling unit-prefix v0.5.2
+   Compiling macro_rules_attribute v0.2.3
+   Compiling indicatif v0.18.6
+   Compiling rand_chacha v0.9.0
+   Compiling rand v0.9.5
+   Compiling rand_chacha v0.3.1
+   Compiling hashbrown v0.16.1
+   Compiling spm_precompiled v0.1.4
+   Compiling unicode-normalization-alignments v0.1.12
+   Compiling tempfile v3.27.0
+   Compiling monostate v0.1.18
+   Compiling rayon-cond v0.4.0
+   Compiling derive_builder v0.20.2
+   Compiling regex v1.13.1
+   Compiling dispatch2 v0.3.1
+   Compiling dary_heap v0.3.9
+   Compiling tracing-attributes v0.1.31
+   Compiling onig v6.5.3
+   Compiling cheetah v1.0.0-rc4.0 (/private/tmp/cheetah-20261118)
+   Compiling compact_str v0.9.1
+   Compiling tracing-core v0.1.36
+   Compiling httpdate v1.0.3
+   Compiling ascii v1.1.0
+   Compiling pin-project-lite v0.2.17
+   Compiling daachorse v3.0.3
+   Compiling unicode_categories v0.1.1
+   Compiling chunked_transfer v1.5.0
+   Compiling tracing v0.1.44
+   Compiling tiny_http v0.12.0
+   Compiling safetensors v0.8.0
+   Compiling ctrlc v3.5.2
+   Compiling rand v0.8.8
+   Compiling half v2.7.1
+   Compiling num_cpus v1.17.0
+   Compiling memmap2 v0.9.12
+   Compiling bytes v1.12.1
+   Compiling tokenizers v0.23.2
+warning: function `native_backends` is never used
+  --> src/chat/models/registry.rs:34:15
+   |
+34 | pub(super) fn native_backends() -> Vec<&'static str> {
+   |               ^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `vulkan_backends` is never used
+  --> src/chat/models/registry.rs:41:15
+   |
+41 | pub(super) fn vulkan_backends() -> Vec<&'static str> {
+   |               ^^^^^^^^^^^^^^^
+
+warning: function `architectures_serving` is never used
+  --> src/chat/models/registry.rs:46:4
+   |
+46 | fn architectures_serving(backend: &str) -> Vec<&'static str> {
+   |    ^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `architecture_has_backend` is never used
+  --> src/chat/models/registry.rs:75:4
+   |
+75 | fn architecture_has_backend(architecture: &str, backend: &str) -> bool {
+   |    ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `cheetah` (bin "cheetah" test) generated 4 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 28.34s
+     Running unittests src/lib.rs (target/debug/deps/cheetah-355c9a3dda3047bb)
+
+running 3 tests
+cheetah-init: cannot stat source '/cheetah-test-path-that-does-not-exist': No such file or directory
+test native::tests::initializer_ffi_reports_native_failure ... ok
+test native::tests::initializer_progress_callback_tracks_phase_and_position ... ok
+test native::tests::registry_metadata_updates_manifest_without_dropping_other_fields ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/cheetah-b6397a1104ba48be)
+
+running 138 tests
+test chat::engine::tests::generation_stats_report_decode_speed_and_handle_unavailable_speed ... ok
+test ant::tests::ant_swap_fit_decision_rules ... ok
+test ant::tests::plan_residency_respects_disabled_ant ... ok
+test ant::tests::plan_residency_assigns_vram_then_ram_then_disk ... ok
+test ant::tests::ant_filter_known_units_drops_unknown_and_duplicates ... ok
+test chat::engine::tests::renders_llama3_header_prompt ... ok
+test ant::tests::plan_residency_fills_layers_in_order_and_tracks_partial_layers ... ok
+test chat::engine::tests::ant_resident_weight_paths_keep_everything_when_ant_disabled ... ok
+test chat::engine::tests::ant_resident_weight_paths_keep_only_resident_units ... ok
+test chat::engine::tests::renders_qwen_chatml_prompt_with_system_message ... ok
+test chat::engine::tests::renders_mistral_instruction_prompt ... ok
+test chat::engine::tests::renders_llama_instruction_prompt ... ok
+test chat::engine::tests::sampling_is_deterministic_for_fixed_seed ... ok
+test chat::engine::tests::rejects_unsafe_manifest_shard_paths ... ok
+test chat::engine::tests::resolves_direct_weight_file_and_parent_manifest_metadata ... ok
+test ant::tests::settings_for_model_reads_user_managed_file ... ok
+test chat::engine::tests::resolves_safetensors_from_cheetah_manifest ... ok
+test chat::models::native::decoder::forward_tests::moe_block_mixes_selected_experts_by_router_weight ... ok
+test chat::models::native::decoder::forward_tests::gemma_forward_matches_reference_math ... ok
+test chat::models::native::kernels::dot_tests::dot_row_bf16_fused_full_width_matches_reference ... ok
+test chat::models::native::decoder::forward_tests::decoder_config_resolves_sparse_window_and_moe_expert_fields ... ok
+test chat::models::native::decoder::forward_tests::dense_forward_is_parity_clean_across_residency_transitions ... ok
+test chat::models::native::kernels::tests::bf16_widening_matches_bit_shift ... ok
+test chat::models::native::kernels::dot_tests::dot_row_bf16_fused_matches_dequant_dot ... ok
+test chat::models::native::kernels::tests::gemv_multiplies_rows_in_parallel ... ok
+test chat::models::native::kernels::tests::rmsnorm_matches_reference_computation ... ok
+test chat::models::native::kernels::tests::rope_preserves_magnitude_and_matches_reference ... ok
+test chat::models::native::kernels::tests::rope_matches_reference_rotate_half ... ok
+test chat::models::native::kernels::tests::silu_multiply_matches_reference ... ok
+test chat::models::native::decoder::forward_tests::moe_forward_is_parity_clean_across_residency_transitions ... ok
+test chat::models::native::kernels::tests::softmax_sums_to_one_and_is_shift_invariant ... ok
+test chat::models::registry::tests::backend_device_rejects_unknown_backend ... ok
+test chat::models::native::decoder::forward_tests::moe_router_drives_per_expert_residency_transitions ... ok
+test chat::models::registry::tests::every_native_registration_carries_a_family ... ok
+test chat::models::registry::tests::native_backend_serves_dense_delta_families ... ok
+test chat::models::registry::tests::native_backend_serves_llama_and_qwen_families ... ok
+test chat::models::registry::tests::native_backend_serves_mixtral_moe_family ... ok
+test chat::models::registry::tests::registers_cpu_and_vulkan_backends ... ok
+test chat::moe::tests::full_top_k_equals_softmax_of_the_router_logits ... ok
+test chat::models::registry::tests::registrations_cover_disjoint_architectures ... ok
+test chat::models::native::decoder::forward_tests::phi_forward_matches_reference_math ... ok
+test chat::models::registry::tests::registration_lookup_normalizes_architecture_names ... ok
+test chat::moe::tests::rejects_invalid_scores_and_expert_count ... ok
+test chat::moe::tests::selects_top_experts_and_renormalizes_weights ... ok
+test cli::tests::accepts_ephemeral_port_and_generate_key ... ok
+test cli::tests::ant_flag_with_boolean_value_overrides_preset ... ok
+test cli::tests::bare_ant_flag_enables_preset_ant ... ok
+test cli::tests::defaults_are_deterministic ... ok
+test chat::models::native::decoder::forward_tests::decoder_config_resolves_dense_family_features ... ok
+test cli::tests::inspect_rejects_missing_or_repeated_output_path ... ok
+test cli::tests::parses_ant_flags_into_chat_options ... ok
+test cli::tests::parses_ant_setup_interactive_flag ... ok
+test cli::tests::parses_chat_ant_flags ... ok
+test cli::tests::parses_chat_speed_options ... ok
+test cli::tests::parses_context_options_and_management_commands ... ok
+test cli::tests::parses_inspect_output_options ... ok
+test cli::tests::parses_positional_serve_model_and_options ... ok
+test cli::tests::parses_sampling_and_system_options ... ok
+test cli::tests::parses_serve_defaults ... ok
+test cli::tests::parses_serve_options_and_generation_overrides ... ok
+test chat::models::native::decoder::forward_tests::sparse_attention_masks_positions_outside_the_window ... ok
+test cli::tests::parses_setup_alias_and_bare_interactive_flags ... ok
+test cli::tests::rejects_missing_model_path ... ok
+test chat::tests::init_metadata_comes_from_qwen3_architecture ... ok
+test chat::tests::init_metadata_comes_from_generated_model_architectures ... ok
+test chat::tests::init_metadata_comes_from_mistral_and_mixtral_architectures ... ok
+test cli::tests::rejects_out_of_range_sampling_values ... ok
+test cli::tests::rejects_unknown_ant_flag ... ok
+test chat::tests::init_metadata_is_absent_for_unsupported_architecture ... ok
+test cli::tests::reports_usage_errors_with_usage_variant ... ok
+test cli::tests::rejects_zero_and_missing_numeric_options ... ok
+test cli::tests::serve_rejects_invalid_or_repeated_generation_limit ... ok
+test cli::tests::serve_rejects_missing_model_and_invalid_port ... ok
+test cli::tests::serve_rejects_multiple_model_arguments ... ok
+test color::tests::applies_color_only_when_terminal_color_is_enabled ... ok
+test cli::tests::serve_rejects_mutually_exclusive_keys ... ok
+test context::tests::empty_missing_directory_lists_no_contexts ... ok
+test context::tests::rejects_unsafe_context_names ... ok
+test context::tests::older_archives_default_context_size_to_8192 ... ok
+test chat::models::native::decoder::forward_tests::sparse_window_changes_the_logits_only_when_it_cuts_the_cache ... ok
+test serve::http::tests::channel_reader_batches_ready_chunks ... ok
+test serve::http::tests::channel_reader_eof_on_disconnect ... ok
+test serve::http::tests::channel_reader_pumps_chunks ... ok
+test context::tests::accepts_safetensors_paths_and_rejects_other_formats ... ok
+test ant::tests::ant_lifecycle_against_real_prepared_model ... ok
+test serve::http::tests::constant_time_compares_bearer_tokens ... ok
+test serve::http::tests::chat_stream_emits_each_generated_chunk_without_copying_text ... ok
+test inspect::tests::inspects_safetensors_header_and_tensor_shapes ... ok
+test inspect::tests::hides_internal_aligned_shard_padding_tensors ... ok
+test serve::http::tests::dropping_reader_unblocks_sse_sink ... ok
+test serve::http::tests::non_stream_chat_converts_tool_json_and_falls_back_to_text ... ok
+test inspect::tests::rejects_invalid_safetensors_files ... ok
+test serve::http::tests::prompt_context_overflow_maps_to_bad_request ... ok
+test serve::http::tests::routes_known_paths ... ok
+test serve::http::tests::routes_return_405_wrong_method_and_404_unknown ... ok
+test context::tests::reports_corrupt_and_unsupported_archives ... ok
+test serve::http::tests::sse_sink_ignores_empty_generated_chunks ... ok
+test context::tests::validates_model_identity_and_saved_options ... ok
+test serve::openai::tests::api_key_uses_cheetah_prefix_and_hex ... ok
+test serve::http::tests::sse_sink_stops_generation_after_reader_drop ... ok
+test serve::openai::tests::normalizes_stop_values ... ok
+test serve::http::tests::sse_tool_call_delta_uses_openai_fields ... ok
+test serve::openai::tests::model_matching_and_error_body ... ok
+test serve::openai::tests::parses_generated_tool_calls_from_fenced_json_and_surrounding_prose ... ok
+test serve::openai::tests::parses_generated_tool_calls_in_compact_and_openai_shapes ... ok
+test serve::openai::tests::maps_developer_role_to_system ... ok
+test serve::openai::tests::parses_chat_request_with_content_array ... ok
+test serve::openai::tests::builds_completion_prompt ... ok
+test serve::openai::tests::parses_tool_calls_and_tool_result_history ... ok
+test serve::openai::tests::parses_generated_tool_calls_in_flat_format ... ok
+test serve::openai::tests::rejects_invalid_generated_tool_calls_for_text_fallback ... ok
+test serve::openai::tests::parses_valid_tool_output_and_falls_back_for_invalid_output ... ok
+test serve::openai::tests::rejects_non_text_and_unknown_roles ... ok
+test serve::openai::tests::serializes_tool_calls_and_omits_them_from_text_responses ... ok
+test serve::openai::tests::resolves_options_and_rejects_conflicts ... ok
+test serve::openai::tests::sse_chunk_delta_omits_none_fields ... ok
+test serve::queue::tests::cancelled_request_does_not_block_following_requests ... ok
+test serve::queue::tests::rejects_a_zero_generation_limit ... ok
+test serve::openai::tests::validates_tool_choice_and_tool_definitions ... ok
+test serve::tests::display_url_defaults_to_localhost ... ok
+test serve::tests::loopback_checking ... ok
+test serve::queue::tests::serves_waiters_in_ticket_order ... ok
+test serve::tests::model_name_strips_safetensors ... ok
+test serve::tests::model_id_from_stem ... ok
+test inspect::tests::resolves_manifest_shards_for_inspection ... ok
+test tests::inspect_json_export_preserves_structured_schema ... ok
+test serve::tests::resolve_model_by_exact_file ... ok
+test tests::inspect_text_export_limits_tensors_by_default ... ok
+cheetah: warning: model '.' is not initialized for Ant memory optimization.
+cheetah: warning:   run `cheetah init` first.
+test tests::no_arguments_launches_chat_from_the_current_directory ... ok
+test serve::tests::resolve_model_by_name_in_dir ... ok
+test tests::inspect_report_export_overwrites_existing_file ... ok
+test serve::tests::resolve_model_ambiguous_errors ... ok
+test serve::tests::resolve_model_not_found_shows_listing ... ok
+test serve::tests::resolve_model_by_model_directory_name ... ok
+test serve::tests::resolve_model_directory_with_cheetah_manifest ... ok
+test context::tests::saves_lists_loads_and_replaces_contexts ... ok
+test serve::queue::tests::permits_only_the_configured_number_of_active_tickets ... ok
+test serve::http::tests::channel_reader_sends_heartbeat_when_idle ... ok
+
+test result: ok. 138 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+
+   Doc-tests cheetah
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

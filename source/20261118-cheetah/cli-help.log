@@ -1,0 +1,87 @@
+   Compiling cheetah v1.0.0-rc4.0 (/private/tmp/cheetah-20261118)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.85s
+     Running `target/debug/cheetah --help`
+cheetah - Local Safetensors inference and gateway
+
+Usage:
+cheetah                                  Load the model in the current directory and chat
+cheetah <model-path>                      Load a model directory or Safetensors file and chat
+cheetah chat <model-path>                 Same as above
+cheetah serve <name-or-path> [options]    Run an OpenAI-compatible API server
+cheetah inspect <model-path> [options]    Inspect Safetensors weights
+cheetah load <model-path> [options]       Compatibility alias for inspect
+cheetah init <source-dir> <destination-dir>  Prepare aligned static model shards
+cheetah prepare <source-dir> <destination-dir>  Alias for init
+cheetah context list [--context-dir <path>]  List saved contexts
+cheetah context delete <name> [--context-dir <path>]  Delete a context
+cheetah formats                           List supported formats
+cheetah version                           Show the version (--version / -V)
+cheetah help                              Show this help
+
+Chat options:
+--threads N          Number of inference threads (default: physical core count)
+--max-tokens N       Maximum tokens to generate per turn (default: 256)
+--ctx-size N         Context window size in tokens (default: 8192)
+--temperature F      Sampling temperature (default: 0, deterministic; around 0.8 for varied output)
+--top-p F            Nucleus sampling threshold (default: 0.9; only used when temperature > 0)
+--top-k N            Number of top-k sampling candidates (default: disabled)
+--repeat-penalty F   Repetition penalty (default: 1, disabled)
+--seed N             Random seed for reproducible generation
+--system "..."       System prompt, included only in the first turn
+--context <name>     Resume a saved chat context
+--context-dir <path> Context archive directory (also used by /save)
+
+Ant memory options (cheetah init <source-dir> <destination-dir> | cheetah chat <model-path> | cheetah serve <name-or-path>):
+--setup [bool]        Interactive Ant preset wizard (bare flag or true/false; alias of --ant-setup);
+after setup, init/chat/serve execute with the configured settings
+--ant-setup [bool]    Same as --setup
+--ant <bool>          Enable/disable Ant memory optimization (default: true; bare --ant enables the preset)
+--ant-vram <bytes>    VRAM pool size override in bytes (default: 8GiB)
+--ant-ram <bytes>     RAM budget override in bytes (default: 16GiB)
+--ant-disk-dir <path> Disk residency directory override
+--ant-resident <id>   Repeatable unit id to keep resident
+--ant-eviction-policy <policy> Eviction policy override
+--ant-prefetch-stages <n> Prefetch stages override
+--ant-allow-vram-swap <bool> Allow VRAM swap override
+User-managed defaults live in <model-dir>/cheetah_ant_settings.json.
+
+Server options (cheetah serve):
+--model <name>        Model name or Safetensors model path (legacy syntax)
+--model-dir <dir>     Directory to search for models by name (default: .)
+--host <address>      Address to listen on (default: 127.0.0.1)
+--port <port>         Port to listen on (default: 8080; 0 assigns a free port)
+--max-concurrent-generations <N> Maximum concurrent inference requests (default: 1)
+--generate-key        Generate and print an API key
+--api-key <KEY>       Set the API key
+These options can be combined with chat options to set server defaults.
+
+Inspection options (cheetah inspect):
+--all                 Show all tensors (default: at most 20)
+--json                Output JSON
+-o, --output <file>   Save the report to a file (overwrites; no terminal output)
+
+Server API endpoints:
+POST /v1/chat/completions    Supports streaming (SSE)
+POST /v1/completions         Non-streaming only; prompt is sent as one message
+GET  /v1/models              List loaded models
+GET  /v1/models/:id          Get a single model
+GET  /health                 Health check (no authentication required)
+
+Examples:
+cd /home/user/models/qwen-0.5b && cheetah
+cheetah /home/user/models/qwen-0.5b --threads 8 --max-tokens 128
+cheetah /home/user/models/qwen-0.5b --temperature 0.7 --top-k 50 --seed 42
+cheetah /home/user/models/qwen-0.5b --system "You are a concise assistant."
+cheetah /home/user/models/qwen-0.5b --temperature 0
+cheetah serve qwen-0.5b --model-dir ./models --port 8080 --generate-key
+cheetah serve /home/user/models/qwen-0.5b --port 8080 --api-key secret
+cheetah inspect /home/user/models/qwen-0.5b
+cheetah inspect ./model.safetensors --json
+cheetah init ./hf-model ./prepared-model
+cargo build --release --features cuda
+CHEETAH_DEVICE=cuda ./target/release/cheetah /home/user/models/qwen-0.5b
+cargo build --release --features metal
+CHEETAH_DEVICE=metal ./target/release/cheetah /home/user/models/qwen-0.5b
+
+Set CHEETAH_DEVICE to cpu (default), cuda, or metal; GPU choices require building with the matching --features option.
+Enter /exit to leave a chat. Press Ctrl-C to stop the server.
