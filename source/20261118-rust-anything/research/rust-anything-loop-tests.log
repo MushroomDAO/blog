@@ -1,0 +1,67 @@
+   Compiling rust-anything v1.4.0 (/private/tmp/rust-anything-20261118)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.36s
+     Running tests/loop.rs (target/debug/deps/loop-1ccfdca52899b11d)
+
+running 19 tests
+test bridge_writes_a_crate_and_never_overwrites_it ... ok
+test mcp_runs_analyze ... ok
+test async_functions_get_async_bindings ... ok
+test java_classes_bridge_record_and_diff ... ok
+test diff_rejects_an_empty_recording ... ok
+test batches_keep_items_in_rust ... ok
+test float_tolerance_preserves_object_key_order_unless_requested ... ok
+test diff_compares_own_proto_named_properties_in_arguments_and_results ... ok
+
+thread 'classes_are_bridged_recorded_and_replayed' (77274581) panicked at tests/loop.rs:378:6:
+called `Result::unwrap()` on an `Err` value: node --experimental-transform-types failed (exit status: 9):
+node: bad option: --experimental-transform-types
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test classes_are_bridged_recorded_and_replayed ... FAILED
+test record_resolves_workspace_packages_to_source ... ok
+test record_follows_bundler_style_imports ... ok
+test python_modules_bridge_record_and_diff ... ok
+test record_and_diff_catch_a_behavior_change ... ok
+test tsconfig_aliases_are_followed ... ok
+test shadow_returns_the_original_and_reports_mismatches ... ok
+test c_units_bridge_record_and_diff ... ok
+
+thread 'ruby_modules_bridge_record_and_diff' (77275388) panicked at tests/loop.rs:876:26:
+called `Result::unwrap()` on an `Err` value: cargo build failed (exit status: 101):
+  #include "ruby/thread_native.h"
+  #endif
+  #ifdef HAVE_RUBY_UTIL_H
+  #include "ruby/util.h"
+  #endif
+  #ifdef HAVE_RUBY_VERSION_H
+  #include "ruby/version.h"
+  #endif
+  #ifdef HAVE_RUBY_VM_H
+  #include "ruby/vm.h"
+  #endif
+  #ifdef HAVE_RUBY_WIN32_H
+  #include "ruby/win32.h"
+  #endif
+  #ifdef HAVE_RUBY_IO_BUFFER_H
+  #include "ruby/io/buffer.h"
+  #endif
+  #ifdef HAVE_RUBY_ATOMIC_H
+  #include "ruby/atomic.h"
+  #endif
+  struct rb_sys__Opaque__RString { struct RString dummy; };
+  struct rb_sys__Opaque__RArray { struct RArray dummy; };
+  struct rb_sys__Opaque__RData { struct RData dummy; };
+  struct rb_sys__Opaque__RTypedData { struct RTypedData dummy; };
+  Failed to setup stable API: Stable API is needed but could not find a candidate. Try enabling the `stable-api-compiled-fallback` feature in rb-sys.
+test ruby_modules_bridge_record_and_diff ... FAILED
+test python_required_optional_port_local_type_compiles ... ok
+test go_packages_bridge_record_and_diff ... ok
+
+failures:
+
+failures:
+    classes_are_bridged_recorded_and_replayed
+    ruby_modules_bridge_record_and_diff
+
+test result: FAILED. 17 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 22.61s
+
+error: test failed, to rerun pass `--test loop`

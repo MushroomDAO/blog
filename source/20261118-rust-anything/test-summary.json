@@ -1,0 +1,39 @@
+{
+  "upstreamCommit": "94a9f2d012c68cd1ad8067f21037357cdd6bcf5f",
+  "rust": "1.98.1",
+  "library": {
+    "passed": 116,
+    "failed": 0
+  },
+  "pythonCliReplay": {
+    "passed": 1,
+    "failed": 0,
+    "negativeControl": "changed division by zero error text is detected"
+  },
+  "loopInitial": {
+    "passed": 17,
+    "failed": 2,
+    "tests": 19,
+    "node": "26.10.0",
+    "ruby": "2.6.10"
+  },
+  "node22Recheck": {
+    "selectedTest": "classes_are_bridged_recorded_and_replayed",
+    "passed": 1,
+    "failed": 0,
+    "node": "22.23.3"
+  },
+  "remainingFailure": "Ruby rb-sys stable API build on system Ruby 2.6.10",
+  "cliBuild": "passed",
+  "cliAnalyze": "passed",
+  "upstreamTrackedSourceUnchanged": true,
+  "notTested": [
+    "real application migration",
+    "full application lift",
+    "HTTP production deployment",
+    "benchmark speedups",
+    "memory/throughput",
+    "agent setup",
+    "release/npm distribution"
+  ]
+}

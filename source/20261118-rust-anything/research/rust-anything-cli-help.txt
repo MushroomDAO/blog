@@ -1,0 +1,25 @@
+Rewrite TypeScript/JavaScript, Python, C, Go, Ruby or Java apps in Rust, one verified piece at a time
+
+Usage: rust-anything <COMMAND>
+
+Commands:
+  analyze  1. Map a repository and write a ranked, ordered migration plan
+  bridge   2. Scaffold a Rust crate with JS bindings for one unit
+  refresh  2b. Regenerate the bindings (`lib.rs`, `index.cjs`, `js.rs`) from the signatures in `port.rs`
+  record   3a. Record what the TS functions return on generated and given inputs
+  build    3b. Build the crate's JS module (napi-rs `.node` or wasm-bindgen output)
+  diff     3c. Replay recorded cases against the Rust module
+  bench    3d. Time the recorded cases on the TS original and on Rust, bridge included
+  profile  Run a real workload under the language's profiler and say what to port: hot functions, their callers, and loops to batch. `rust-anything profile <repo> -- node bench.mjs` (also `python3 x.py`, `go test -bench . ./pkg`, `java ...`, `ruby x.rb`)
+  shadow   4. Generate a drop-in module that runs TS and Rust side by side
+  gate     5. Check the definition of done for a port
+  app      Record the whole app's behavior and replay any build against it (CLIs)
+  mcp      Serve every step as MCP tools over stdio
+  setup    Register rust-anything with your coding agents (Claude Code, Codex, Cursor, Gemini CLI): the MCP server and, where the agent reads skills, the workflow skill. Keeps your other settings; run it again any time
+  help     Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+Loop per unit: analyze -> bridge -> record -> port src/port.rs -> build -> diff -> shadow -> gate

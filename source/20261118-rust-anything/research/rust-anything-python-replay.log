@@ -1,0 +1,9 @@
+   Compiling rust-anything v1.4.0 (/private/tmp/rust-anything-20261118)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.48s
+     Running tests/app.rs (target/debug/deps/app-c153df97ecdc999f)
+
+running 1 test
+test python_cli_records_and_replays ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 17 filtered out; finished in 6.71s
+
