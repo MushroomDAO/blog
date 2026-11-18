@@ -1,0 +1,12 @@
+{
+  "source": "https://github.com/dream-num/univer",
+  "checkedAt": "2026-11-18T13:54:54.333093+00:00",
+  "license": "Apache-2.0 for repositorycore",
+  "core": "WebSDK corearchitecture/contentmodels/snapshot/pluginandDI/commands/formula/render/facade/UI/Sheets/Docs",
+  "separateLicensing": [
+    "commercial WebSDKplugins",
+    "ServerSDK",
+    "commercial AISDKextensions"
+  ],
+  "noNewRuntimeTests": true
+}

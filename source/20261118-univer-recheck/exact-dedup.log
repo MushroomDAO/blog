@@ -1,0 +1,537 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6afdadba-2fb10b60-573716dc）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 1017 篇 + 公众号草稿箱 1 条 + 本地发布记录 1000 条 + MemPalace 4387 抽屉
+
+── 查：https://github.com/dream-num/univer
+   ❌ [BLOG  ] Univer：面向 AI Agent 的嵌入式办公 SDK，2 万星，v1.0 本周发布
+      一手源相同: dream-num/univer
+   ❌ [发过 2026-09-27] Univer：面向AI Agent的嵌入式办公SDK
+      一手源相同: dream-num/univer
+   ❌ [知识库] # Univer — The Office Harness for AI Agents  **Summary**: 嵌入
+      一手源相同: dream-num/univer
+   ❌ [知识库] # Univer — The Office Harness for AI Agents  **Summary**: 嵌入
+      一手源相同: dream-num/univer
+   ❌ [知识库] --- name: project_univer description: Univer — dream-num/uni
+      一手源相同: dream-num/univer
+   ⚠️  [知识库] # dream-num/univer  **Summary**: dream-num/univer GitHub 上搜索
+      标题相似度 60%
+   ❌ [知识库] # Univer — The Office Harness for AI Agents  **Summary**: 嵌入
+      一手源相同: dream-num/univer
+   ❌ [知识库] # Univer — The Office Harness for AI Agents  **Summary**: 嵌入
+      一手源相同: dream-num/univer
+
+── 查：Univer
+   ❌ [BLOG  ] a16z B2A经济：当客户派Agent来做生意
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Vercel agent-browser：让网页操作可定位、可检查
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 拆解一个「已落地」的智能客服 Agent 项目：概念体系、逻辑链路与工程落地判断
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Agent Relay：让编程 Agent 直接协作，团队该怎样落地？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时
+      正文出现实体名「univer」
+   ❌ [BLOG  ] ai-native-callcenter：一行安装语音客服，哪些工作还得自己做
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 语音 AI 六大方向：开源模型、工程方案与可复现课题地图
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Machine Skill：用 AI 生成机械仿真网页，物理数值该怎么信？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 动作数据集怎么选？从 Motion Viewer 到九项质量红旗
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Commerce Agents 技术深潜：购物车提升 30%、完成率提升 60% 背后的六个架构决策
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Anthropic Dreaming：让Agent在后台复盘并整理长期记忆
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Anthropic 两份报告：AI 如何改变招聘、工作与未来预期
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Anthropic MHS：AI 正式接管物理世界——开源硬件的下一个机会在哪里
+      正文出现实体名「univer」
+   ❌ [BLOG  ] anthropic-threat-intelligence-report-september-2026.md
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Apodex 1.1 Mini 调研：训「持续干活的能力」，不是训「聊得更像」，35B 本地可跑
+      正文出现实体名「univer」
+   ❌ [BLOG  ] macOS 27 的 fm：Mac 自带本地 AI，怎样从终端用起来？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] FDE 实战手册：大企业 vs 中小企业，前三个月该怎么干
+      正文出现实体名「univer」
+   ❌ [BLOG  ] ArchonOS：把本地编程助手、MCP与任务产物放进一个工作台
+      正文出现实体名「univer」
+   ❌ [BLOG  ] AstaBrief：Ai2 开源的 8B 科研报告模型，SFT+DPO 替代 RL
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 按头安利：AudarAI —— 阿拉伯语 ASR 排行榜第一，还顺手做了个打赢 GPT-4o 的 TTS
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Aura AI 宣言：让每一个人平等拥有 AI
+      正文出现实体名「univer」
+   ❌ [BLOG  ] AuraAI 阶段规划：Agent24 框架、小模型实验与 AgentSpeaker
+      正文出现实体名「univer」
+   ❌ [BLOG  ] AutoMem：让 Agent 自动学会管理记忆，32B 追平 Claude Opus 4.5
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 长视野 Agent 综述：人大团队用两大支柱重新定义 AI Agent 的演化路线图
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Awesome Opus视频合集：从703个案例学代码动画
+      正文出现实体名「univer」
+   ❌ [BLOG  ] AWS Infinity：让 Agent 等工具时休眠，7.5万并发意味着什么？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Axion 1.0：数据构造、Agent训练与低成本叙事的边界
+      正文出现实体名「univer」
+   ❌ [BLOG  ] billion-context：让Agent长会话可持续的压缩代理
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Block3D：浙大 ZIP Lab 开源文本生成 3D，分块扩散实现 5.15× 加速
+      正文出现实体名「univer」
+   ❌ [BLOG  ] browsentic：让 AI Agent 直接操控你已登录的真实浏览器——无 headless、免 API Key
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 4B 小模型 RL 微调追平 GPT-5.6，成本百分之一：Castform 的技术框架与领域迁移预测
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Claude for Financial Advisors 拆解：垂直 AI 正在变成「连接器+技能+审批+审计」的打包件
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 按头安利：Clypra —— 用 Tauri + Rust + FFmpeg 打造的开源视频编辑器，剪映 Pro 付费功能全免费
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 模型可以小，脚手架要聪明——CMU 论文拆解：用 Harness 适配让 SLM 以 4% 成本追平 LLM
+      正文出现实体名「univer」
+   ❌ [BLOG  ] M5Stack StopWatch 变成 Codex 物理控制器：BLE 麦克风 + 额度仪表盘 + 四向 Agent 触摸，vibe coding 专属硬件
+      正文出现实体名「univer」
+   ❌ [BLOG  ] community-ai-empowered-organization.md
+      正文出现实体名「univer」
+   ❌ [BLOG  ] ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线
+      正文出现实体名「univer」
+   ❌ [BLOG  ] CyberClip / 眼镜蛇：外挂式智能眼镜模块的 Idea 阶段
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Decision 3.0：让文字、图片和视频直接进入决策接口
+      正文出现实体名「univer」
+   ❌ [BLOG  ] DeepInfer：DeepSeek开源推理核心，部署前要看懂哪些边界？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] DeepSeek Super-agent工程实践：从事件接入到可靠交付
+      正文出现实体名「univer」
+   ❌ [BLOG  ] DeepTutor：终身个性化 AI 家教，真正记住你学到哪了，多 RAG 引擎+长期记忆+Skills 生态，Docker 自托管
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Deskflow DDC：两台电脑共用显示器和键鼠，怎样接线与配置？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] DGX Spark 上跑视频生成：FlashAttention 没用、torch.compile 没用、量化也没用
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Diction：iOS 语音键盘的自托管网关开源了
+      正文出现实体名「univer」
+   ❌ [BLOG  ] dots.tts：2B 全连续自回归 TTS——为什么不用离散 Token，以及这个科研底座能赋能哪些新应用
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Drama 3、Breeze TTS 2、Fish S2 Pro：本地语音模型怎么选？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] dsh-agy-link调研：把Antigravity接入DSH，先看配额、工具与执行边界
+      正文出现实体名「univer」
+   ❌ [BLOG  ] DSH Go调研：把Harness装进Android，离“最强AI手机”还有哪些条件？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] dsh-qa 全家桶开源：浏览器、macOS 桌面、iOS、Android 四驱动，让 AI Agent 做真正的跨平台 QA
+      正文出现实体名「univer」
+   ❌ [BLOG  ] tester-army/e2e：用大白话测 App，验证后再重放
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Easel：浙大团队开源的社媒运营 Agent 工作台——112 个 Skill，六平台发布
+      正文出现实体名「univer」
+   ❌ [BLOG  ] ECC：24万+ Star 的 Agent 工具箱，Claude Code / Codex 的工程操作系统
+      正文出现实体名「univer」
+   ❌ [BLOG  ] ECCV 2026 最佳论文拆解：热核纹理 HKTex 让 3D 模型不用再展 UV，李飞飞团队感知损失获时间检验奖
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Editable-Design：中山大学 12 人团队用 Codex 当设计师，输出可编辑 HTML 海报
+      正文出现实体名「univer」
+   ❌ [BLOG  ] ESPica32：把远方KiwiSDR装进ESP32旋钮收音机
+      正文出现实体名「univer」
+   ❌ [BLOG  ] EvoOntology：给 Data Agent 建一个会进化的语义层
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 仅27B参数，微软开源Fara 1.5超越OpenAI Operator：完整电脑操作Agent技术解析
+      正文出现实体名「univer」
+   ❌ [BLOG  ] FlashRSI解析：让Agent自改进实验可追踪、可比较、可复现
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 读后感：从飞猪帮帮看懂「模型+Harness+记忆」——附一套可落地的 AI 应用架构建议
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Flint 本地编程模型：40B MoE、rec 引擎与 125 token/s 的条件
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Frontis-MA1：清华 + Horizon Research 开源 AI 改进 AI 的全套配方，35B 单卡超 GPT-5.5
+      正文出现实体名「univer」
+   ❌ [BLOG  ] GameScaling：游戏数据能把小模型训练成通用玩家吗？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] GenOffice：让 AI 直接修改 Office 文件，而不只是给建议
+      正文出现实体名「univer」
+   ❌ [BLOG  ] GEPA：让 LLM 阅读自己的执行轨迹进化 Prompt，比 GRPO 少用 35x rollout 却赢 20%
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Godogen：一句话生成可玩游戏，Claude Code + Codex 的自动游戏开发流水线
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 科塞《贪婪的制度》短评：认真投入，也保留自己
+      正文出现实体名「univer」
+   ❌ [BLOG  ] GRPO微调小模型工程指南：80美元训练，超越o3的完整路径
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 五个27B击败旗舰？核对GVS5H与Memdoor的证据和成本
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Halcyon文生图研究：275倍训练算力差距，到底省在哪里？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 系统读Hamel：把Agent评测变成产品改进的日常工作
+      正文出现实体名「univer」
+   ❌ [BLOG  ] HarborRL：把Agent轨迹接入强化学习
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 硬件钱包安全吗？核查七大品牌的泄露、漏洞与后门争议
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 框架工程（Harness Engineering）：用确定性执行层替代提示词工程——arXiv:2608.26197 实验全解析
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Harvey AI 的 Moneyball 路线：中小AI公司如何训练垂直域模型——从评测基准、开源基座到异步RL的完整案例
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Hermes 为什么能收费？拆开开源 Agent 的企业生意
+      正文出现实体名「univer」
+   ❌ [BLOG  ] HexaShell开源调研：14个通用工具，如何让编程智能体控制机器人？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Hi3D v1.0：开源了什么，怎样接入3D资产生产？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Higgs Audio v2 工程指南：部署、声音克隆与服务接入
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Higgsfield Zephyr: Special 全开源：K-pop 机甲 AI 电影的完整制作工艺
+      正文出现实体名「univer」
+   ❌ [BLOG  ] HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Hy Memory：SDK、MemHub与专用记忆模型
+      正文出现实体名「univer」
+   ❌ [BLOG  ] HyperQwen拆解：24GB显卡跑Qwen3.8-27B，快在哪里、Mac能不能用？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] jarvis-py 拆解：标着「离线」的 Python 语音助手，联网时默认把录音明文发给 Google
+      正文出现实体名「univer」
+   ❌ [BLOG  ] K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Kujira JS：把五秒鲸鱼动画装进一张网页
+      正文出现实体名「univer」
+   ❌ [BLOG  ] LayerFS：共享工作区、worktree对比与1.1升级边界
+      正文出现实体名「univer」
+   ❌ [BLOG  ] LDtk：一人公司的七年，把工作方法装进免费工具
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Liquid AI LFM3：六款端侧模型怎么选，Mac 上能跑到哪一步？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] lil agents：住在 Mac Dock 上的 AI 桌面伴侣
+      正文出现实体名「univer」
+   ❌ [BLOG  ] LingBot开源模型地图：9个仓库、海外复用与上手路线
+      正文出现实体名「univer」
+   ❌ [BLOG  ] LivLiv Player：约30KB的网页虚拟角色，怎样真正用起来？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Loopera：让因子研究先过证据门，公开仓库尚无源码
+      正文出现实体名「univer」
+   ❌ [BLOG  ] MacNativeGames：把《王国之泪》打包成Mac应用的技术拆解
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Magnitude（YC S25）：在你的机器上编译内核，Metal decode 比 llama.cpp 快 92%
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 果蝇大脑被网友塞进《我的世界》和驾校：16.6 万神经元的连接组，离「上传意识」还差多远？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Map3d：把开放地图变成可导出的城市三维底图
+      正文出现实体名「univer」
+   ❌ [BLOG  ] mdya 实测：871 篇中文笔记索引 8 分钟，但语义检索在中文上是失效的
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 美团图灵 Agent 评测两年实践：当 Agent 评测从打分动作变成工程基础设施
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Mellum2.1：把小模型训练成仓库里的执行者
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Memory Harness：本地优先、可编排、可审计的 AI 长期记忆工作台
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Ming-3.0-TTS：0.5B 语音模型，哪些成绩值得信？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] MiniCPM-V 4.7：35B-A3B视觉模型与端侧部署解析
+      正文出现实体名「univer」
+   ❌ [BLOG  ] MOKI 白板：让 Agent 通过 MCP 直接读写本地画布
+      正文出现实体名「univer」
+   ❌ [BLOG  ] MOSS-Image：OpenMOSS的文字生图、布局控制与部署边界
+      正文出现实体名「univer」
+   ❌ [BLOG  ] MotoNav：Android 手机配 ESP32-S3 圆屏，自己做一个导航副屏
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 47 美元舌控牙套是真的吗？MouthPad 与开源代码核查
+      正文出现实体名「univer」
+   ❌ [BLOG  ] My Office：把 Claude Code 会话放进一间可观察的办公室
+      正文出现实体名「univer」
+   ❌ [BLOG  ] n8n Nod：开源个人Agent的架构、记忆与使用指南
+      正文出现实体名「univer」
+   ❌ [BLOG  ] nanoMuse：同一个 Agent 装在你的所有设备上
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Needle 3 实测：121M 小模型，79 毫秒拆出两个工具调用
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 英伟达 Nemotron 3.5：百万上下文 Super VL、24GB Bolt 与待发布 E4B
+      正文出现实体名「univer」
+   ❌ [BLOG  ] ClickHouse 官方出品 Nerve：基于 Claude Agent SDK 的自托管 Agent 运行时
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Neura HQ深度拆解：会卖货的Agent，难在业务闭环
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 长桥 NSH：用 Rust 与 TSX 写原生界面，和 React Native 有何不同？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] NVIDIA Auto Ontology拆解：让Agent共享业务语义，离自动理解企业还有多远？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] NVIDIA Flare 开源：Rust 推理运行时，怎样服务 DeepSeek 与本地 Agent？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] NVIDIA SimReady：2575个资产之外，物理数据怎样落地？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] NX2Apple：把 Switch 到苹果设备的构建流程做成启动器
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Occamy 1.0 与 Dressage：Agent 从任务经验中学习，离自进化还有多远？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] oh-my-mermaid：让 AI 把你的代码库画成可导航的架构图
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Ondine：Rust 重写 Mermaid，速度之外先看布局与体积口径
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 用一个 MCP Server 接入 1000+ 服务：open-connector 完整接入指南
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 开源TTS十强：10月英语榜与中文对照
+      正文出现实体名「univer」
+   ❌ [BLOG  ] OpenGCUA 首版开源：电脑 Agent 不只点鼠标，模型权重仍在路上
+      正文出现实体名「univer」
+   ❌ [BLOG  ] OpenRSI Index：如何评测AI是否真的改进了科研方法
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 浙大开源 OpenStory（万象谱）：LLM 驱动多 Agent 让《红楼梦》和《西部世界》活起来
+      正文出现实体名「univer」
+   ❌ [BLOG  ] OpenThai 2.0 OCR Markdown：从泰文文档到可追溯的结构化内容
+      正文出现实体名「univer」
+   ❌ [BLOG  ] OpenUI 1.0：让Agent调用你的组件，函数、动作与落地边界
+      正文出现实体名「univer」
+   ❌ [BLOG  ] paper2anything：丢一个 PDF，AI 帮你出五种学术宣传物料
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 浙大彭思达：14.7K star 的科研经验指南开源了
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 一张桌子，十个宇宙：Evan Jia 的 Blender 个人主页开源了
+      正文出现实体名「univer」
+   ❌ [BLOG  ] PersonalAgentEval：个人助手会执行，还要懂用户
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Polaris：浙大 REAL 实验室开源端到端 AI 科研智能体——从文献调研到论文投稿六阶段全自动
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Postiz“被炒后泄露源码”核查：开源早已存在，产品如何落地？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 该不该请公关公司？把 Lulu 的思路落成中小企业执行表
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Praxis-1 开放意味着什么：视频预训练、机器人数据与部署门槛
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Qwen3.8-27B QSA：24GB显卡跑262K视觉，要满足什么条件？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] ra-jit 已更名 blaze：Rust 毫秒重编译与热更新的真实边界
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Rapid-MLX：Mac 推理与编码 Agent 工具调用
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Raven 论文解读：让多个 Agent 协作，也让工作流程接受检验
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Realtime-Venus：双9B全双工模型、异步Agent与部署核查
+      正文出现实体名「univer」
+   ❌ [BLOG  ] rise-meaning-economy-capital-social-instinct.md
+      正文出现实体名「univer」
+   ❌ [BLOG  ] RLHF中文手册：读懂SFT、奖励模型与偏好优化
+      正文出现实体名「univer」
+   ❌ [BLOG  ] RSI-Anything：跨域自我改进，究竟改了什么？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] rust-anything：用录制回放给Rust重写划边界
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Sac小王子3D游戏教程：从AI资产到Unity可玩场景
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Saluki 27B：7.9GB 原版 GGUF，工具调用与 Bonsai 2 怎么选
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Sentence Transformers v6.0：ColBERT 式多向量检索正式收编，第四种模型类型，一行代码接入 RAG
+      正文出现实体名「univer」
+   ❌ [BLOG  ] shadcn /improve：强模型做审计，便宜模型按计划施工
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Sherlock：跨站用户名搜索怎么用，哪些结果不能直接信
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Skill2Env：把技能说明书变成可执行、可验收的训练任务
+      正文出现实体名「univer」
+   ❌ [BLOG  ] SkillFlow：用流匹配信号驱动 Agent 技能自主进化，14 个基准全面超越
+      正文出现实体名「univer」
+   ❌ [BLOG  ] SkillOpt：微软联合上交复旦同济，让 AI Agent 的 Skill 像神经网络一样被训练
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 软件层的退场与重构：AI-Native 时代，你的产品下一个用户是另一个 Agent
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Stable Audio 3.0：6分20秒完整歌曲，四模型开源，本地 MacBook 就能跑
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Startup 冷启动增长手册：按 MRR 阶段逐个打透渠道的完整框架
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Stirling-PDF：本地PDF工具箱怎么部署，隐私和许可怎么看？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Strategy Gene：AI 经验可以成为流通资产——前提是用对表示形式（论文解析 + 工程落地指南）
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 395 不外接显卡，Prefill 接近 2000？拆解 Halogen 与 Gufo
+      正文出现实体名「univer」
+   ❌ [BLOG  ] AI-Infra-Guard：腾讯朱雀实验室的 AI 红队平台——MCP 扫描、Skill 审计、2000+ CVE 规则一体化
+      正文出现实体名「univer」
+   ❌ [BLOG  ] TMEM：给 Agent 装上「可学习的参数记忆」——阿里通义论文工程解析
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Toonflow：两小时130元短剧案例背后
+      正文出现实体名「univer」
+   ❌ [BLOG  ] TurboQuant 在 iDoris 上的可行性分析：能用它压缩本地 AI 的内存消耗吗？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Ultramarine 1 Flash：30万美元后训练，知识工作能做到哪一步
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Univer：面向 AI Agent 的嵌入式办公 SDK，2 万星，v1.0 本周发布
+      正文出现实体名「univer」
+   ❌ [BLOG  ] UseChat：把微信窗口接入AI Agent
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Valtz：Mac本地AI创作的素材与时间线
+      正文出现实体名「univer」
+   ❌ [BLOG  ] VibeGame：用自然语言描述，8个 Agent 协作，直接生成可玩的完整 2D 游戏
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Video Expert Analyzer 完全指南：Walter Murch 六法则 + Mac MLX 本地模型全路径
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Virtual AI Infra Team 拆解：让本地 27B 自己挑加速方案，18→37 tok/s，但「团队」里只有一个 AI
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Vitalik 的 AI 偏执模式：zkAPI、Tor 与本地改写的隐私边界
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 用开源 Voicebox 给 AI Agent 装上嗓子 — MCP 语音层工程实践
+      正文出现实体名「univer」
+   ❌ [BLOG  ] voicemem-streaming-dual-brain-voice-agent-memory.md
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Vorssaint：把 Mac 日常工具收进一个菜单栏
+      正文出现实体名「univer」
+   ❌ [BLOG  ] AI 水印是怎么打进文字的，又是怎么被去掉的：watermarks-remover 三层解剖
+      正文出现实体名「univer」
+   ❌ [BLOG  ] WebMCP 实测：从猜按钮到调用工具，网页自动化怎么变了？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 从Weight-Space Programming到知识编辑：小补丁究竟能改变什么？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] WeVisOne-VL：七类视觉任务统一，48毫秒说法待核实
+      正文出现实体名「univer」
+   ❌ [BLOG  ] xkagent-code-over-tools-python-agent-runtime.md
+      正文出现实体名「univer」
+   ❌ [BLOG  ] YuE2-3B：先写谱再唱歌的开源音乐模型，和 ACE-Step 1.5 差在哪
+      正文出现实体名「univer」
+   ❌ [BLOG  ] 云舒 SkillsHub 对比 claude-skill-registry：38 个手作 Skill vs 16 万条爬来的 SKILL.md，该用哪个？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Yuxi 0.8 beta5：知识、协作与执行如何接成工作流？
+      正文出现实体名「univer」
+   ❌ [BLOG  ] Autodesk Zero-to-CAD：2B模型从八视图重建可编辑零件
+      正文出现实体名「univer」
+   ❌ [BLOG  ] zixi-51M 本机验证：M4 Mac 的 CPU 与 MPS 都能生成中文语音
+      正文出现实体名「univer」
+   ❌ [发过 2026-10-08] 一张桌子十个宇宙：Blender个人主页开源
+      正文出现实体名「univer」
+   ❌ [发过 2026-09-27] Univer：面向AI Agent的嵌入式办公SDK
+      正文出现实体名「univer」
+   ❌ [知识库] Anthropic Commerce Agents 技术深潜分析（2026-09-04）  来源：anthropics/
+      正文出现实体名「univer」
+   ❌ [知识库] ECC (affaan-m/ECC) — GitHub 全球增速最快 AI 编程工具，243,000+ Star  Gi
+      正文出现实体名「univer」
+   ❌ [知识库] # CMU Better Harnesses论文：SLM以4%成本恢复89.7%LLM性能  **Summary**:
+      正文出现实体名「univer」
+   ❌ [知识库] # AudarAI：阿拉伯语 ASR + TTS 双开源  **Summary**: AudarAI 同时开源 Auda
+      正文出现实体名「univer」
+   ❌ [知识库] # Univer — The Office Harness for AI Agents  **Summary**: 嵌入
+      正文出现实体名「univer」
+   ❌ [知识库] # QuantHarness：四专用Agent LLM量化技术分析框架  **Summary**: Y-Research
+      正文出现实体名「univer」
+   ❌ [知识库] # Univer — The Office Harness for AI Agents  **Summary**: 嵌入
+      正文出现实体名「univer」
+   ❌ [知识库] 0.14.0. Apache-2.0. Current stars 9590 snapshot; weekly +644
+      正文出现实体名「univer」
+   ❌ [知识库] --- name: RSI-Anything world-model retention description: Cr
+      正文出现实体名「univer」
+   ❌ [知识库] so this is a new publication. zh/enVectorize upserttrue; pub
+      正文出现实体名「univer」
+   ❌ [知识库] ead136e22c7d02683d90c48a8ff76d1292de43ff394. Model600B/27Bac
+      正文出现实体名「univer」
+   ❌ [知识库] mingsoon; no verifiedreleasedHFcheckpoint/license, do notcla
+      正文出现实体名「univer」
+   ❌ [知识库] e. Octoberupdate addsLFM2.5/Paradee/audio.cpp/A100, pausesH2
+      正文出现实体名「univer」
+   ❌ [知识库] --- name: Valtz local creative workspace description: Vpipe-
+      正文出现实体名「univer」
+   ❌ [知识库] # HarborRL agentic RL pipeline  2026-10-16. https://github.c
+      正文出现实体名「univer」
+   ❌ [知识库] aReader successfully pluspinnedgitclone. README/docs have no
+      正文出现实体名「univer」
+   ❌ [知识库] 12<3.14,docsLinux3.12. Renderextrasonlyforlocaldemo; actualm
+      正文出现实体名「univer」
+   ❌ [知识库] /OpenCode),LABPartial+11.8percentagepoints. MetaHarnessleads
+      正文出现实体名「univer」
+   ❌ [知识库] n3_5_moe_text,40layers256experts8selected/token;sharedexpert
+      正文出现实体名「univer」
+   ❌ [知识库] t(Qwen3.8ScreenSpot93.31). 16xnotuniversalnegligibleloss;nom
+      正文出现实体名「univer」
+   ❌ [知识库] mages,scope/sourcepresent. mediaId prCUE631thH1cmNLi42prJEzm
+      正文出现实体名「univer」
+   ❌ [知识库] ges/source/scopeverified. mediaId prCUE631thH1cmNLi42prGOxoE
+      正文出现实体名「univer」
+   ❌ [知识库] --- name: project_stanford_cs329a description: Stanford CS32
+      正文出现实体名「univer」
+   ❌ [知识库] t_codex_with_chatgpt.md) — MIT TypeScript 6757星；ChatGPT Plus
+      正文出现实体名「univer」
+   ❌ [知识库] his is a new publication. zh/enVectorize upserttrue; publicq
+      正文出现实体名「univer」
+   ❌ [知识库] --- name: project_univer description: Univer — dream-num/uni
+      正文出现实体名「univer」
+   ❌ [知识库] iver.ai  **架构**：60个npm包，等构（Isomorphic）设计，逻辑包（Node.js可跑）+ UI包
+      正文出现实体名「univer」
+   ❌ [知识库] blog/general/project_univer|Apache;TypeScript;Canvas;Facade|
+      正文出现实体名「univer」
+   ❌ [知识库] 一张桌子，十个宇宙" — 灵感来自抖音 @硕哥，梦想哭了；Claude + Blender 5.x 实现  **两代版本
+      正文出现实体名「univer」
+   ❌ [知识库] --- name: ra-jit blaze Rust live builds description: Renamed
+      正文出现实体名「univer」
+   ❌ [知识库] al. Semantic2vectorsupserted, stale2deleted; livequerymatche
+      正文出现实体名「univer」
+   ❌ [知识库] --- name: magpie-multi-agent-model-gateway description: Publ
+      正文出现实体名「univer」
+   ❌ [知识库] preserve archived media prCUE631thH1cmNLi42prN1rszDWcO6YSW9o
+      正文出现实体名「univer」
+   ❌ [知识库] ing stack. First author Keshigeyan Chandrasegaran; Stanford
+      正文出现实体名「univer」
+   ❌ [知识库] bletospecificqueryaftercommit;notproofalllogsdeleted. Infere
+      正文出现实体名「univer」
+   ❌ [知识库] ies;notRAGuniversalwinnotours. Agentexperiencefirstretrieved
+      正文出现实体名「univer」
+   ❌ [知识库] ,notlocalGPU. $35.79completed50runs,15.3Moutputtokens,$38.77
+      正文出现实体名「univer」
+   ❌ [知识库] se positive. Published-list API48001 gap recorded; current r
+      正文出现实体名「univer」
+   ❌ [知识库] # CMU AI Agents课程与公开作业  **Summary**: 卡耐基梅隆大学2026年秋季11-768 AI
+      正文出现实体名「univer」
+   ❌ [知识库] 1.15.0 Gradio6.30.0. No fullmodelweightdownload, inference/q
+      正文出现实体名「univer」
+   ❌ [知识库] : draft WeChat error: none; previous 40164 resolved after us
+      正文出现实体名「univer」
+   ❌ [知识库] universal success probability. HFmodelApache2 not blanket li
+      正文出现实体名「univer」
+   ❌ [知识库] : draft WeChat error: none; previous 40164 resolved after us
+      正文出现实体名「univer」
+   ❌ [知识库] end/tasks. Multi-DGX-Spark hybrid setup, not universal lapto
+      正文出现实体名「univer」
+   ❌ [知识库] DME differs stalewebsearch. Attempting localbuild and small
+      正文出现实体名「univer」
+   ❌ [知识库] 29x4ghTL_NJ9RpLGAXZr3LnePEzUe0p9A8Ue Semantic: verified KB:
+      正文出现实体名「univer」
+   ❌ [知识库] # dream-num/univer  **Summary**: dream-num/univer GitHub 上搜索
+      正文出现实体名「univer」
+   ❌ [知识库] # Univer — The Office Harness for AI Agents  **Summary**: 嵌入
+      正文出现实体名「univer」
+   ❌ [知识库] d WeChat error: 公众号 API 40164：出口 IP 223.204.85.239 不在白名单。已实际
+      正文出现实体名「univer」
+   ❌ [知识库] # Univer — The Office Harness for AI Agents  **Summary**: 嵌入
+      正文出现实体名「univer」
+   ❌ [知识库] s/ WeChat: failed WeChat error: 公众号 IP 白名单拒绝（40164）：223.204.
+      正文出现实体名「univer」
+   ❌ [知识库] # 11-768: Al Agents  **Summary**: 11-768: Al Agents Fall 202
+      正文出现实体名「univer」
+   ❌ [知识库] # CMU Better Harnesses论文：SLM以4%成本恢复89.7%LLM性能  **Summary**:
+      正文出现实体名「univer」
+   ❌ [知识库] --- name: Sac Little Prince AI 3D workflow description: Orig
+      正文出现实体名「univer」
+   ❌ [知识库] # Univer — The Office Harness for AI Agents  **Summary**: 嵌入
+      正文出现实体名「univer」
+   ❌ [知识库] # CMU AI Agents课程与公开作业  **Summary**: 卡耐基梅隆大学2026年秋季11-768 AI
+      正文出现实体名「univer」
+   ❌ [知识库] # QuantHarness：四专用Agent LLM量化技术分析框架  **Summary**: Y-Research
+      正文出现实体名「univer」
+   ❌ [知识库] t(Qwen3.8ScreenSpot93.31). 16xnotuniversalnegligibleloss;nom
+      正文出现实体名「univer」
+   ❌ [知识库] universal success probability. HFmodelApache2 not blanket li
+      正文出现实体名「univer」
+   ❌ [知识库] # QuantHarness：四专用Agent LLM量化技术分析框架  **Summary**: Y-Research
+      正文出现实体名「univer」
+   ❌ [知识库] ECC (affaan-m/ECC) — GitHub 全球增速最快 AI 编程工具，243,000+ Star  Gi
+      正文出现实体名「univer」
+   ❌ [知识库] # AudarAI：阿拉伯语 ASR + TTS 双开源  **Summary**: AudarAI 同时开源 Auda
+      正文出现实体名「univer」
+   ❌ [知识库] atchinggame; search/home no confirmed official game source.
+      正文出现实体名「univer」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
