@@ -1,0 +1,20 @@
+[WebServer] (node:90264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:90288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:90290) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ✓  1 e2e/avatar-archive.spec.ts:16:1 › stored archive renders the same stream as its folder, with local requests and project precedence (16.7s)
+  ✓  2 e2e/editor.spec.ts:8:1 › dragging a head handle synchronizes the inspector (2.4s)
+  ✓  3 e2e/editor.spec.ts:40:1 › opens a validated rig and rejects malformed files without replacing the project (1.4s)
+  ✓  4 e2e/editor.spec.ts:55:1 › rebuilds from cached assets, marks cut-outs stale, and sweeps angles (10.4s)
+  ✓  5 e2e/editor.spec.ts:93:1 › opens a local project folder without the installed sample (1.6s)
+  ✓  6 e2e/editor.spec.ts:109:1 › a newly opened project establishes its own cut-out baseline (1.7s)
+  ✓  7 e2e/engine.spec.ts:4:1 › renders the data-driven engine without browser errors (762ms)
+  ✓  8 e2e/engine.spec.ts:15:1 › sample views load without the local project server (1.8s)
+
+  8 passed (40.6s)

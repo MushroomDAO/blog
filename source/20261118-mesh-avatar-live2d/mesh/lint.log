@@ -1,0 +1,3 @@
+
+> mesh-avatar-studio@0.1.0 lint
+> eslint src tests e2e tools/*.mjs packages/create-mesh-avatar-studio/*.mjs packages/runtime/src packages/runtime/tests packages/runtime/vite.config.ts packages/runtime/*.mjs packages/element/src packages/element/tests packages/element/vite.config.ts site/src site/vite.config.ts packages/react/src packages/react/tests packages/react/vite.config.ts

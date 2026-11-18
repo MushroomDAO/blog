@@ -1,0 +1,16 @@
+
+> mesh-avatar-studio@0.1.0 doctor
+> node tools/doctor.mjs
+
+Mesh Avatar Studio environment check
+
+✓ Node.js 22.23.3
+✓ Packages installed
+✓ uv 0.12.23
+✓ Python 3.14.7 (found by uv)
+⚠ Playwright Chromium was not found. The editor and the Live page work as they are.
+  Creating avatars with an agent, or importing drawn eyes and mouths, needs it to render the motion review.
+  Install: npx playwright install chromium
+
+You can start the editor with: npm run dev
+Resolve the warnings above before creating avatars.

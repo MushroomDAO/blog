@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-18T01:12:29.666831+00:00",
+  "articles": [
+    {
+      "slug": "mesh-avatar-studio-live2d-motion-engineering-guide",
+      "url": "https://blog.mushroom.cv/blog/mesh-avatar-studio-live2d-motion-engineering-guide/",
+      "title": "Mesh Avatar Studio与Live2D：两条开源头像制作路线",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/mesh-avatar-studio-live2d-motion-engineering-guide-banner.D-OnmUOY.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 92825
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/mesh-avatar-studio-live2d-motion-engineering-guide-banner.D-OnmUOY_Zeg68c.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 37004
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/mesh-avatar-studio-live2d-motion-engineering-guide-fig-01.CrJ-54mI_Z1wXbTW.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 53590
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/mesh-avatar-studio-live2d-motion-engineering-guide-fig-02.DIdEbqrO_Z1XmuT1.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 45268
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/mesh-avatar-studio-live2d-motion-engineering-guide-fig-03.BAPZy5gy_1qudRp.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 54930
+        }
+      ]
+    }
+  ]
+}

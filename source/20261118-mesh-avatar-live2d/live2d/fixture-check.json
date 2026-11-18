@@ -1,0 +1,56 @@
+{
+  "scope": "Synthetic JSON fixture only; no moc3, Cubism runtime, licensed Hiyori model, camera or OBS test",
+  "idempotentBytes": true,
+  "unknownParameterRejected": true,
+  "rangeViolationRejected": true,
+  "runs": [
+    {
+      "command": "gen_motions.py",
+      "exitCode": 0,
+      "stdout": "definitions: /tmp/live2d-motion-20261118/motion-defs/research_fixture.py (1 motions)\nwrote /tmp/live2d-motion-20261118/models/research_fixture/motion/fixture_nod.motion3.json: dur=2.0 curves=1 segs=2 pts=7\nregistered 1 motions to /tmp/live2d-motion-20261118/models/research_fixture/research_fixture.model3.json [Action]\n",
+      "stderr": ""
+    },
+    {
+      "command": "validate_motions.py",
+      "exitCode": 0,
+      "stdout": "checked fixture_nod.motion3.json: curves=1 segs=2 pts=7\n---\nOK: all checks passed for 1 motions in the Action group and 0 expressions\n",
+      "stderr": ""
+    },
+    {
+      "command": "gen_motions.py",
+      "exitCode": 0,
+      "stdout": "definitions: /tmp/live2d-motion-20261118/motion-defs/research_fixture.py (1 motions)\nwrote /tmp/live2d-motion-20261118/models/research_fixture/motion/fixture_nod.motion3.json: dur=2.0 curves=1 segs=2 pts=7\nregistered 1 motions to /tmp/live2d-motion-20261118/models/research_fixture/research_fixture.model3.json [Action]\n",
+      "stderr": ""
+    },
+    {
+      "command": "gen_motions.py",
+      "exitCode": 1,
+      "stdout": "definitions: /tmp/live2d-motion-20261118/motion-defs/research_fixture.py (1 motions)\n",
+      "stderr": "ERROR: the following parameters do not exist in this model.\nRewrite /tmp/live2d-motion-20261118/motion-defs/research_fixture.py for this model (check the available parameters with tools/analyze_model.py):\n  NotInModel\n"
+    },
+    {
+      "command": "gen_motions.py",
+      "exitCode": 0,
+      "stdout": "definitions: /tmp/live2d-motion-20261118/motion-defs/research_fixture.py (1 motions)\nwrote /tmp/live2d-motion-20261118/models/research_fixture/motion/fixture_nod.motion3.json: dur=2.0 curves=1 segs=2 pts=7\nregistered 1 motions to /tmp/live2d-motion-20261118/models/research_fixture/research_fixture.model3.json [Action]\n",
+      "stderr": ""
+    },
+    {
+      "command": "validate_motions.py",
+      "exitCode": 1,
+      "stdout": "checked fixture_nod.motion3.json: curves=1 segs=2 pts=7\n---\nfixture_nod.motion3.json:ParamAngleY: value 80 (t=1.0) outside the safe range [-30,30]\nfixture_nod.motion3.json:ParamAngleY: the curve between keys reaches 80.000, outside the safe range [-30,30]\nNG: 2 violations\n",
+      "stderr": ""
+    },
+    {
+      "command": "gen_motions.py",
+      "exitCode": 0,
+      "stdout": "definitions: /tmp/live2d-motion-20261118/motion-defs/research_fixture.py (1 motions)\nwrote /tmp/live2d-motion-20261118/models/research_fixture/motion/fixture_nod.motion3.json: dur=2.0 curves=1 segs=2 pts=7\nregistered 1 motions to /tmp/live2d-motion-20261118/models/research_fixture/research_fixture.model3.json [Action]\n",
+      "stderr": ""
+    },
+    {
+      "command": "validate_motions.py",
+      "exitCode": 0,
+      "stdout": "checked fixture_nod.motion3.json: curves=1 segs=2 pts=7\n---\nOK: all checks passed for 1 motions in the Action group and 0 expressions\n",
+      "stderr": ""
+    }
+  ]
+}

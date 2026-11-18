@@ -1,0 +1,102 @@
+
+> mesh-avatar-studio@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /private/tmp/mesh-avatar-studio-20261118
+
+ ✓ tests/create-avatar.test.ts (16 tests) 11ms
+ ✓ tests/doctor.test.ts (23 tests) 66ms
+ ✓ tests/body-tracking.test.ts (15 tests) 91ms
+ ✓ tests/expression-overlay.test.ts (10 tests) 71ms
+ ✓ tests/project-jobs.test.ts (6 tests) 189ms
+stdout | tests/arms.test.ts > legacy avatars ignore all new parameters and zero arms preserve every original point exactly
+Arms neutral regression: max delta 0 px
+
+ ✓ packages/runtime/tests/open.test.ts (11 tests) 572ms
+ ✓ tests/live-media.test.ts (8 tests) 175ms
+ ✓ tests/arms.test.ts (6 tests) 544ms
+   ✓ legacy avatars ignore all new parameters and zero arms preserve every original point exactly  409ms
+ ✓ tests/legs.test.ts (11 tests) 1063ms
+ ✓ tests/live-relay.test.ts (7 tests) 5ms
+ ✓ tests/lighting.test.ts (10 tests) 12ms
+ ✓ tests/expression-remote.test.ts (5 tests) 77ms
+ ✓ packages/runtime/tests/format.test.ts (25 tests) 212ms
+ ✓ tests/expression-eyes.test.ts (8 tests) 15ms
+ ✓ tests/avatar-transfer.test.ts (6 tests) 1410ms
+   ✓ sample export matches the shared selection, imports without overwriting and reexports identical bytes  408ms
+ ✓ tests/live-tracking.test.ts (8 tests) 8ms
+ ✓ tests/editor.test.ts (6 tests) 89ms
+ ✓ tests/live-worker.test.ts (3 tests) 5ms
+ ✓ packages/runtime/tests/overlays.test.ts (7 tests) 348ms
+ ✓ tests/lip-motion-settings.test.ts (6 tests) 78ms
+ ✓ packages/runtime/tests/parameters.test.ts (3 tests) 123ms
+ ✓ packages/runtime/tests/manifest.test.ts (19 tests) 8ms
+ ✓ tests/stream-expression.test.ts (2 tests) 41ms
+ ✓ tests/create-cli.test.ts (5 tests) 203ms
+ ✓ packages/runtime/tests/zip.test.ts (12 tests) 255ms
+ ✓ tests/project-folder.test.ts (7 tests) 8ms
+ ✓ tests/local-projects.test.ts (24 tests) 2282ms
+   ✓ the live watcher skips temporary directories and still detects new variants and sprite updates  1821ms
+ ✓ tests/rename-resilient.test.ts (4 tests) 725ms
+   ✓ a persistent rm failure while moving the old directory out of the way restores it instead of losing files  428ms
+ ✓ tests/stream-settings.test.ts (6 tests) 9ms
+ ✓ tests/lip-sync.test.ts (3 tests) 9ms
+ ✓ tests/rig.test.ts (6 tests) 19ms
+ ✓ packages/element/tests/attributes.test.ts (8 tests) 17ms
+stdout | tests/sensitivity.test.ts > head turn center changes the expected region by more than 0.5px
+Sensitivity head turn center: 6.205269926245592 px
+
+stdout | tests/sensitivity.test.ts > strand node changes the expected region by more than 0.5px
+Sensitivity strand node: 3.74211737744389 px
+
+stdout | tests/sensitivity.test.ts > mouth Gaussian changes the expected region by more than 0.5px
+Sensitivity mouth Gaussian: 1.3804028266947626 px
+
+stdout | tests/sensitivity.test.ts > wrist bone changes the expected region by more than 0.5px
+Sensitivity wrist bone: 3.5341809173613683 px
+
+ ✓ tests/sensitivity.test.ts (5 tests) 79ms
+ ✓ tests/job-reason.test.ts (2 tests) 13ms
+ ✓ tests/viewport.test.ts (3 tests) 8ms
+ ✓ tests/history.test.ts (3 tests) 10ms
+ ✓ tests/recent-projects.test.ts (1 test) 3ms
+ ✓ tests/stale.test.ts (2 tests) 9ms
+stdout | tests/motion-trace.test.ts > default motion and physics retain the seeded legacy trace
+New motion trace keys (existing fixture keys still match): emotions.parameters.armSwingL, emotions.parameters.armSwingR, emotions.parameters.elbowBendL, emotions.parameters.elbowBendR, emotions.parameters.weightShift, idle.parameters.armSwingL, idle.parameters.armSwingR, idle.parameters.elbowBendL, idle.parameters.elbowBendR, idle.parameters.weightShift, motions.parameters.armSwingL, motions.parameters.armSwingR, motions.parameters.elbowBendL, motions.parameters.elbowBendR, motions.parameters.weightShift, speech.parameters.armSwingL, speech.parameters.armSwingR, speech.parameters.elbowBendL, speech.parameters.elbowBendR, speech.parameters.weightShift
+
+ ✓ tests/motion-trace.test.ts (1 test) 734ms
+   ✓ default motion and physics retain the seeded legacy trace  733ms
+ ✓ tests/engine.test.ts (2 tests) 15ms
+ ✓ tests/scaffold.test.ts (1 test) 1ms
+ ✓ packages/runtime/tests/assets.test.ts (1 test) 6ms
+ ✓ packages/react/tests/ssr.test.ts (1 test) 8ms
+ ✓ packages/runtime/tests/cli.test.ts (1 test) 1030ms
+   ✓ pack CLI selects playback files, honors --no-source and protects existing output  1030ms
+ ✓ tests/quality.test.ts (4 tests) 2808ms
+   ✓ headless CLI is reproducible without images and guards paths before writing  2801ms
+ ✓ tests/cloth.test.ts (28 tests) 4548ms
+   ✓ cloth columns of 0 px (partial=false) stay finite through long forced motion  901ms
+   ✓ cloth columns of 0 px (partial=true) stay finite through long forced motion  468ms
+   ✓ cloth columns of 0.3 px (partial=false) stay finite through long forced motion  1074ms
+   ✓ cloth columns of 0.3 px (partial=true) stay finite through long forced motion  603ms
+   ✓ cloth columns of 1 px (partial=false) stay finite through long forced motion  744ms
+stdout | tests/regression.test.ts > 14 poses: every 7px and every layer vertex match base, hand and eye deformation
+Regression: 14 poses, 73975 sample points, max delta 0 px
+
+stdout | tests/regression.test.ts > all drawn eye and mouth sprite meshes match reference placement
+Sprite regression: 10 layers, max delta 0 px
+
+stdout | tests/regression.test.ts > drawn expression eyes and mouths match the reference placement of the drawing they stand in for
+Expression sprite regression: 6 layers, max delta 0 px
+
+stdout | tests/regression.test.ts > physics offsets and tassel joint positions preserve the reference behavior
+Physics regression: 120 frames, max delta 5.684341886080802e-14 px
+
+ ✓ tests/regression.test.ts (4 tests) 6255ms
+   ✓ 14 poses: every 7px and every layer vertex match base, hand and eye deformation  5963ms
+
+ Test Files  47 passed (47)
+      Tests  355 passed (355)
+   Start at  08:02:01
+   Duration  7.46s (transform 1.33s, setup 0ms, collect 5.45s, tests 24.27s, environment 5ms, prepare 2.47s)

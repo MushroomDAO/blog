@@ -1,0 +1,35 @@
+
+> mesh-avatar-studio@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 114 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/clock-worker-WTNPi7Q7.js                 0.08 kB
+dist/stream.html                                     0.57 kB │ gzip:     0.33 kB
+dist/index.html                                      0.63 kB │ gzip:     0.33 kB
+dist/live.html                                       0.89 kB │ gzip:     0.45 kB
+dist/mediapipe/tracking-budget.js                    1.54 kB
+dist/mediapipe/README.md                             2.18 kB
+dist/mediapipe/tracking-worker.js                    5.88 kB
+dist/mediapipe/LICENSE                               9.14 kB
+dist/mediapipe/vision_bundle.js                    137.89 kB
+dist/mediapipe/vision_wasm_nosimd_internal.js      204.14 kB
+dist/mediapipe/vision_wasm_internal.js             204.28 kB
+dist/mediapipe/face_landmarker.task              3,758.60 kB
+dist/mediapipe/pose_landmarker_lite.task         5,777.75 kB
+dist/mediapipe/vision_wasm_nosimd_internal.wasm  9,448.64 kB │ gzip: 2,907.77 kB
+dist/mediapipe/vision_wasm_internal.wasm         9,574.03 kB │ gzip: 2,913.10 kB
+dist/assets/stream-oSPEA_rn.css                      0.13 kB │ gzip:     0.12 kB
+dist/assets/i18n-C9B5KJE5.css                        2.17 kB │ gzip:     0.81 kB
+dist/assets/live-BL0Ve8iY.css                        6.49 kB │ gzip:     1.89 kB
+dist/assets/editor-B5xeb8cN.css                     23.13 kB │ gzip:     5.13 kB
+dist/assets/stream-d3VXAg0d.js                       0.90 kB │ gzip:     0.52 kB
+dist/assets/relay-B9xR5Rfb.js                        7.34 kB │ gzip:     2.89 kB
+dist/assets/live-Ab8xVv2P.js                        21.55 kB │ gzip:     6.94 kB
+dist/assets/editor-CrjwQAv2.js                      79.85 kB │ gzip:    27.90 kB
+dist/assets/project-Do2JoPhK.js                    149.63 kB │ gzip:    56.82 kB
+dist/assets/i18n-CDdFPZv-.js                       300.56 kB │ gzip:    98.32 kB
+✓ built in 923ms

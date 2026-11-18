@@ -1,0 +1,15 @@
+
+> mesh-avatar-studio@0.1.0 build:react
+> npm run build -w mesh-avatar-react
+
+
+> mesh-avatar-react@0.3.0 build
+> vite build && tsc -p tsconfig.build.json
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 1 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.js  1.86 kB │ gzip: 0.83 kB
+✓ built in 25ms

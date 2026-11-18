@@ -1,0 +1,99 @@
+Installed 3 packages in 27ms
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 2.052s
+
+OK
+Skipping missing variant: eyes_closed
+Skipping missing variant: eyes_half
+Skipping missing variant: eyes_smile
+eyes_sad: outside-mask max 255.000/255, mean 27.196543/255, 6301 pixels over tolerance 8
+eyes_sad: mask-only check: shift +0.07, -0.15 px, opaque mean 9.34/255, edge band mean 9.42/255, 0.0% of edge band over 48
+eyes_sad: importing the mask area only (corrected shift +0, +0 px, tint -1, -1, +0)
+Skipping missing variant: eyes_surprise
+Skipping missing variant: mouth_a
+Skipping missing variant: mouth_a_half
+Skipping missing variant: mouth_i
+Skipping missing variant: mouth_o
+Skipping missing variant: mouth_angry
+Skipping missing variant: mouth_sad
+Built 2 sprites; build 88e979636f.
+Skipping missing variant: eyes_closed
+Skipping missing variant: eyes_half
+Skipping missing variant: eyes_smile
+eyes_sad: outside-mask max 255.000/255, mean 25.126743/255, 600 pixels over tolerance 8
+eyes_sad: mask-only check: shift +0.01, -0.11 px, opaque mean 8.00/255, edge band mean 8.00/255, 0.0% of edge band over 48
+eyes_sad: importing the mask area only (corrected shift +0, +0 px, tint -8, -8, -8)
+Skipping missing variant: eyes_surprise
+Skipping missing variant: mouth_a
+Skipping missing variant: mouth_a_half
+Skipping missing variant: mouth_i
+Skipping missing variant: mouth_o
+Skipping missing variant: mouth_angry
+Skipping missing variant: mouth_sad
+Built 2 sprites; build 7e81b7105c.
+Skipping missing variant: eyes_closed
+Skipping missing variant: eyes_half
+Skipping missing variant: eyes_smile
+eyes_sad: outside-mask max 253.000/255, mean 74.083870/255, 7797 pixels over tolerance 8
+eyes_sad: mask-only check: shift +1.02, -0.12 px, opaque mean 1.04/255, edge band mean 0.00/255, 0.0% of edge band over 48
+eyes_sad: importing the mask area only (corrected shift +1, +0 px, tint +0, +0, +0)
+Skipping missing variant: eyes_surprise
+Skipping missing variant: mouth_a
+Skipping missing variant: mouth_a_half
+Skipping missing variant: mouth_i
+Skipping missing variant: mouth_o
+Skipping missing variant: mouth_angry
+Skipping missing variant: mouth_sad
+Built 2 sprites; build 7e81b7105c.
+Skipping missing variant: eyes_closed
+Skipping missing variant: eyes_half
+Skipping missing variant: eyes_smile
+eyes_sad: resizing 200 x 200 to 100 x 100
+eyes_sad: outside-mask max 32.263/255, mean 11.648845/255, 6134 pixels over tolerance 8
+eyes_sad: mask-only check: shift -0.02, -0.15 px, opaque mean 12.39/255, edge band mean 12.46/255, 0.0% of edge band over 48
+eyes_sad: importing the mask area only (corrected shift +0, +0 px, tint -1, -1, -1)
+Skipping missing variant: eyes_surprise
+Skipping missing variant: mouth_a
+Skipping missing variant: mouth_a_half
+Skipping missing variant: mouth_i
+Skipping missing variant: mouth_o
+Skipping missing variant: mouth_angry
+Skipping missing variant: mouth_sad
+Built 2 sprites; build 676a89d7ee.
+Skipping missing variant: eyes_closed
+Skipping missing variant: eyes_half
+Skipping missing variant: eyes_smile
+eyes_sad: outside-mask max 253.000/255, mean 97.457642/255, 8308 pixels over tolerance 8
+Skipping missing variant: eyes_closed
+Skipping missing variant: eyes_half
+Skipping missing variant: eyes_smile
+eyes_sad: outside-mask max 141.878/255, mean 96.789566/255, 7715 pixels over tolerance 8
+eyes_sad: mask-only check: shift +0.02, -0.11 px, opaque mean 105.14/255, edge band mean 105.22/255, 95.4% of edge band over 48
+Skipping missing variant: eyes_closed
+Skipping missing variant: eyes_half
+Skipping missing variant: eyes_smile
+Skipping missing variant: eyes_closed
+Skipping missing variant: eyes_half
+Skipping missing variant: eyes_smile
+Skipping missing variant: eyes_sad
+Skipping missing variant: eyes_surprise
+mouth_a: outside-mask max 0.000/255, mean 0.000000/255, 0 pixels over tolerance 8
+Skipping missing variant: mouth_a_half
+Skipping missing variant: mouth_i
+Skipping missing variant: mouth_o
+Skipping missing variant: mouth_angry
+Skipping missing variant: mouth_sad
+Built 1 sprites; build 6805ad1a87.
+Skipping missing variant: eyes_closed
+Skipping missing variant: eyes_half
+Skipping missing variant: eyes_smile
+Skipping missing variant: eyes_sad
+Skipping missing variant: eyes_surprise
+mouth_a: outside-mask max 210.000/255, mean 3.977882/255, 173 pixels over tolerance 8
+mouth_a: mask-only check: shift +0.00, +0.00 px, opaque mean 3.98/255, edge band mean 20.83/255, 9.9% of edge band over 48
+Skipping missing variant: eyes_closed
+Skipping missing variant: eyes_half
+Skipping missing variant: eyes_smile
+Skipping missing variant: eyes_sad
+Skipping missing variant: eyes_surprise

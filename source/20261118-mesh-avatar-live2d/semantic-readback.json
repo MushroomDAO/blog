@@ -1,0 +1,38 @@
+[
+  {
+    "id": "991084da6c42738a8f058971967ab2685cfc9b0fde8b02e5",
+    "metadata": {
+      "article_id": "mesh-avatar-studio-live2d-motion-engineering-guide",
+      "content_hash": "65e052de811c455d",
+      "excerpt": "Mesh Avatar Studio与Live2D：两条开源头像制作路线 对比 shinshin86 的两个开源头像项目：Mesh Avatar Studio 从插画制作网格角色，Live2D 动作 WebUI 给已有模型补动作。本文解释输入素材、图层与参数曲线、生成校验和视觉验收、播放器与直播路径，并记录本机构建与所选测试结果，区分本地追踪、可选云端补图以及代码和角色素材的不同许可。 Mesh Avatar Studio Live2D 虚拟主播 WebGL 开源 手里只有一张图，还是已有 Live2D 模型？ Mesh Avatar Studio 怎样",
+      "language": "zh",
+      "tags": [
+        "Mesh Avatar Studio",
+        "Live2D",
+        "虚拟主播",
+        "WebGL",
+        "开源"
+      ],
+      "title": "Mesh Avatar Studio与Live2D：两条开源头像制作路线",
+      "url": "/blog/mesh-avatar-studio-live2d-motion-engineering-guide/"
+    }
+  },
+  {
+    "id": "b01000bb4f3e90a0cc1c31c7714fb74c6bc891c3adda5528",
+    "metadata": {
+      "article_id": "mesh-avatar-studio-live2d-motion-engineering-guide",
+      "content_hash": "f4552f5165ccf9b8",
+      "excerpt": "Mesh Avatar Studio vs Live2D: Two Avatar Workflows Compare Mesh Avatar Studio and the Live2D motion WebUI: asset inputs, rigging, validation, local playback, cloud drawing and licensing, with selected tests. Mesh Avatar Studio Live2D 虚拟主播 WebGL 开源 Which asset do you already have?",
+      "language": "en",
+      "tags": [
+        "Mesh Avatar Studio",
+        "Live2D",
+        "虚拟主播",
+        "WebGL",
+        "开源"
+      ],
+      "title": "Mesh Avatar Studio vs Live2D: Two Avatar Workflows",
+      "url": "/blog/mesh-avatar-studio-live2d-motion-engineering-guide/"
+    }
+  }
+]

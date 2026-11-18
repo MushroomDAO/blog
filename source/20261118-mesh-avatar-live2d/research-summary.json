@@ -1,0 +1,34 @@
+{
+  "mesh": {
+    "node": "22.23.3",
+    "unitFiles": 47,
+    "unitTests": 355,
+    "pythonLayerTests": 7,
+    "pythonAgentTests": 7,
+    "selectedE2E": 8,
+    "lint": "pass",
+    "builds": [
+      "studio",
+      "runtime",
+      "element",
+      "react"
+    ],
+    "realCameraMicrophoneOBS": "not tested",
+    "newIllustrationCreation": "not tested"
+  },
+  "live2d": {
+    "fixture": "synthetic parameter JSON, no moc3 or licensed Hiyori model",
+    "unknownParameterRejected": true,
+    "outOfRangeRejected": true,
+    "repeatBytesStable": true,
+    "realRender": "not tested"
+  },
+  "sourceCodeChanges": "none; isolated fixtures only",
+  "banner": "Official screenshots downloaded to media, text/character-heavy and not photorealistic; generated paper-puppet concept seed8731 passed machine and manual review",
+  "localEditorManualReview": {
+    "pageTitle": "Mesh Avatar Studio",
+    "canvasCount": 2,
+    "pageErrors": [],
+    "visual": "Sample character, rig handles and rendered preview visible; no real camera or original illustration creation."
+  }
+}

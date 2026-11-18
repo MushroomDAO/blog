@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-18",
+  "slug": "mesh-avatar-studio-live2d-motion-engineering-guide",
+  "BLUF": "Two starting assets, illustration versus existing Live2D rig",
+  "questionHeadings": true,
+  "FAQ": 3,
+  "sources": "Two pinned upstream READMEs, format/runtime docs, official Miko terms and Live2D SDK licensing",
+  "independentFindings": "Actual build/unit/Python/selected E2E and synthetic CLI evidence, not visual quality or performance claims",
+  "images": "Three distinct anchors; sample screenshots downloaded for KB, conceptual cover/figures; no sample assets offered as MIT",
+  "bilingual": true,
+  "internalLink": "PromptSoul upstream relation; different topic, not duplicate",
+  "scope": "No new character, real Live2D render, camera/microphone/OBS/full offline/performance test",
+  "schema": "Existing Astro metadata and automatic heading IDs; no invented citation-uplift or performance claims"
+}

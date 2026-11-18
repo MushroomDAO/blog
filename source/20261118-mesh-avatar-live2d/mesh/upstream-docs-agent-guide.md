@@ -1,0 +1,351 @@
+# Agent guide: turn one illustration into a mesh avatar
+
+[日本語](agent-guide.ja.md) · [简体中文](agent-guide.zh.md)
+
+This guide is for a coding agent (Claude Code, Codex, Cursor CLI or similar) working in this
+repository. A person gives you one illustration and asks for an avatar. You build a project
+that the editor can open and that animates cleanly; the person then fine-tunes it in the editor.
+
+Work through the steps in order. Each step ends with a check. Do not skip the checks: the
+quality of the result depends on looking at your own output and correcting it.
+
+## Before you start
+
+### Tools
+Node.js 22.17+, Python 3.10+ with [uv](https://docs.astral.sh/uv/), and Playwright Chromium
+(`npx playwright install chromium`). Run `npm install` once, then `npm run doctor`: it reports
+each missing tool. Treat its warnings as blockers for this guide, since every step below needs
+uv, Python or Chromium.
+
+### Model
+Reading pixel coordinates from images needs strong vision. These setups are known to work:
+
+| Agent | Model |
+|---|---|
+| Claude Code | Claude Opus 5.5 |
+| Codex | GPT-6.1 Sol |
+
+Tell the person which model you are running as. If it is not listed above, or you do not know,
+say that the result may fall short, name the recommended setups, and ask whether to continue.
+
+### Vision check
+Run the calibration test and report the score to the person:
+
+```sh
+uv run tools/vision-check.py make work/vision-check   # writes an image with numbered markers
+# read the image, write your answer as JSON (see the command output for the format), then:
+uv run tools/vision-check.py score work/vision-check answer.json
+```
+
+If the score fails, stop and tell the person: coordinates read by this model are likely to be
+off, and most of the work below would need manual correction.
+
+### The image
+- Ask for a PNG, ideally with a transparent background, roughly front-facing, head and
+  shoulders visible. Warn the person if the face is in strong three-quarter view, if hands
+  or objects cover the face, or if the hair heavily overlaps the face: these limit quality.
+- The image stays on this machine inside `projects/`, which is not committed. Never commit,
+  upload or copy it elsewhere. The only exception is Step 6, and only after the person agrees:
+  generating drawn variants sends the image and a mask to an image generator.
+
+## Step 1 — Create the project
+
+```sh
+uv run tools/new-project.py <path/to/image.png> <name>
+```
+
+This creates `projects/<name>/` with `source.png` and an empty `rig.draft.json` that has the
+image size filled in. Field meanings are in `docs/rig-fields.md`; `samples/miko-qipao/rig.json`
+is a complete example.
+
+## Step 2 — Survey the image
+
+```sh
+uv run tools/grid.py projects/<name> --step 50 --out projects/<name>/work/grid-full.png
+```
+
+Look at the full grid image and write down, in your notes to the person:
+- face centre, top of head (including hair and accessories), chin, neck, shoulders;
+- which optional parts exist: hand near the face, hair buns, hanging accessories
+  (tassels, earrings), long hair over the shoulders;
+- anything the rig cannot represent yet (hats, glasses, objects held in front of the face).
+  Tell the person these will move rigidly with the head or body.
+
+## Step 3 — Draft the rig
+
+Fill `rig.draft.json` part by part. For each part, make a zoomed grid of its region first and
+read coordinates from it — never estimate from the full image alone.
+
+```sh
+uv run tools/grid.py projects/<name> --region x0,y0,x1,y1 --step 10 --out projects/<name>/work/grid-eyes.png
+```
+
+| Part | How to place it |
+|---|---|
+| head | Ellipse covering the whole head including hair and head accessories; centre slightly above the eyes. Pivot at the neck. `weightBand` starts just below the chin and ends near the collarbone. |
+| face | Small ellipses on nose, mouth, each eye, each visible ear, brow, jaw. |
+| eyes | `opening`: polygon along the visible eye white + iris, inside the lashes, 14–20 points, starting at the outer corner. `roi`: polygon 10–20 px outside the lashes and lower lid line. Use a 5 px grid for these. |
+| mouth | Line through the closed mouth (centre, angle, half length, bow) and an ellipse `area` a little larger than the lips. |
+| cheeks | Centre of each blush area. |
+| strands | One polyline per visible hair lock that should sway, root to tip, 4 nodes. Bangs: 3–5 locks. Side hair: 2 per side. |
+| body | Chest ellipse, one ellipse per shoulder, breath band from the upper chest to the bottom. |
+| buns, accessories, hand | Only if present. |
+| mesh, view | Start from the values in `samples/miko-qipao/rig.json`; set `mesh.fine` to a rectangle around the face and hair. |
+
+Leave `eyes[*].x0/x1/top/bot` out of the draft; the layer builder computes them.
+
+Notes:
+- Eye 0 is the eye on the image's left. Angles are in radians.
+- The head ellipse is an area of influence, not a cut-out. When covering all hair and head
+  accessories forces it to touch the top of the shoulders or a collar, cover the hair and
+  accept the small overlap.
+- For eye `roi`, the whole lash and lower lid line must be inside. If widening it would pull
+  in bangs or side hair, keep it tight around the lashes and list that eye as a place to check.
+- Your first draft is unverified until Check 3 passes.
+
+### Check 3
+```sh
+npm run validate-rig -- projects/<name>/rig.draft.json
+uv run tools/overlay.py projects/<name> --rig rig.draft.json --out projects/<name>/work/overlay.png
+uv run tools/overlay.py projects/<name> --rig rig.draft.json --part eyes --zoom --out projects/<name>/work/overlay-eyes.png
+```
+Look at every overlay and fix what is off. Pass when:
+- the head ellipse contains all hair and head accessories, and no shoulder;
+- each eye `opening` follows the eye white edge within about 2 px all around;
+- each `roi` contains the whole lash and lower lid line;
+- the mouth line lies on the drawn mouth;
+- strands lie on hair, not on skin or background.
+
+## Step 4 — Build layers
+
+```sh
+uv run --with numpy --with pillow --with opencv-python-headless tools/build-layers.py projects/<name> --rig rig.draft.json
+```
+
+This writes `projects/<name>/built/` and the complete `projects/<name>/rig.json`.
+
+### Check 4
+Open `built/hairmask.png` and the eye layers: the hair mask covers all hair and no face or
+clothing; each eye ball layer contains the eye white and iris only.
+
+## Step 5 — Review motion
+
+```sh
+npm run render-poses -- projects/<name>
+```
+
+This renders the avatar in fixed poses (rest, half and closed eyes, mouth open, turn left and
+right, look up and down, tilt, body tilt, the angry, sad and surprised expressions, and a hair
+sway sequence) into `projects/<name>/review/`, with a contact sheet and zoomed eye and mouth
+crops.
+
+Look at every frame. Pass when:
+- closed eyes are fully closed, with one clean lash line and no leftover iris or white;
+- turning ±30° and tilting do not tear the mesh, cut the chin or ears, or bend accessories;
+- the mouth opens without stretching the chin;
+- hair sways while face and clothing stay still.
+
+Review frames use a wider margin than the editor so the whole image is visible; framing
+differences between the two are expected.
+
+If a frame fails, adjust the related part of the draft, rebuild (Step 4) and render again.
+Stop after three rounds and report what still fails.
+
+Without drawn variants, a closed eye can keep faint fragments of the original upper lash or
+crease above the closed line. If iris and white are gone and only such faint lines remain,
+the rig is good enough: continue to Step 6, which removes them.
+
+## Step 6 — Drawn variants (closed eyes, mouth shapes, expression eyes)
+
+Codex uses its built-in image generation (imagegen) for these variants.
+
+Blinking and talking look much better with drawn variants. Create the requests:
+
+```sh
+uv run tools/variant-requests.py projects/<name>
+```
+
+This writes `projects/<name>/variant-requests/` with, for each variant (closed / half /
+smiling eyes; mouths あ, half あ, い, お; sad / surprised expression eyes; angry / sad closed
+mouths): an edit mask, the prompt, and a README.
+
+The expression eyes (`eyes_sad`, `eyes_surprise`) and closed mouths (`mouth_angry`,
+`mouth_sad`) are optional; create them only when the person asks for them. The eyes use the
+eye mask, which leaves the eyebrows out: the rig already moves the brows for each expression,
+and a drawn brow would show twice. The mouths use the mouth mask and stay closed. The angry
+and half-lidded expressions use `eyes_half`, so they need no separate eye drawing.
+
+Ask the person before generating: image generation sends `source.png` and a mask to the
+generator. If they decline, stop here; the avatar still works without variants.
+
+- If you can generate images (for example Codex with image generation), generate each variant
+  from `source.png` and its mask following the prompt, and save it to
+  `projects/<name>/variants/<variant>.png`.
+- Otherwise stop here and tell the person exactly which files to give to an image generator
+  and where to put the results. Continue when they say the files are in place.
+
+In each mask, transparent pixels may change and opaque pixels must stay identical. Many
+generators recompress the whole image, fill in the transparent background or shift it by a
+pixel. `build-sprites` then imports the masked area only: it corrects a shift of up to 3 px,
+resizes a result with the source's aspect ratio, removes a uniform colour tint measured just
+inside the mask edge (on flat skin it would show as a patch), and logs `importing the mask
+area only`. It
+still rejects, with the reason, a result whose whole image is shifted further, whose picture
+outside the mask was redrawn, whose drawing spills over the mask edge, or whose aspect ratio
+differs. Generate a rejected variant again, asking for identical size and untouched pixels
+outside the masked area.
+
+Then:
+```sh
+uv run tools/build-sprites.py projects/<name>
+```
+It cuts accepted variants into `built/sprites/`. Render the poses again (Step 5); the
+`angry`, `sad` and `surprise` frames show the expression eyes and mouths.
+
+## Optional — Garments
+
+Experimental full-body feature; its fields and behaviour may change.
+
+For a skirt or hanging fabric, prepare a local `source_under.png` with exactly the
+same size, pose and pixel alignment as `source.png`. Remove the skirt and its tails,
+leaving modest inner shorts and complete legs. Ask before sending any image to an
+external generation service. Small redraw differences can create edge artifacts;
+compare the two images before building. If this input is absent, the builder uses
+inpainting, which may look blurry when the cloth swings away from the body.
+
+Add optional `rig.cloth` entries (see [Rig fields](rig-fields.md)). Trace each `outline`
+around the whole garment, place its `waist` along the attachment and its `hem` across
+the lower edge. Use the calibrated coordinates, zoomed grids and overlays from the
+earlier steps. Keep the grid wide enough for projecting ruffles; narrow or degenerate
+grids can distort extrapolated points. Put rear tails in separate entries with
+`behind: true`; use `parent: "skirt"` when their attachment should follow an earlier
+skirt entry. Depth controls drawing order; parent controls motion, independently.
+For planted feet, optionally set `body.hip: { "shift": 20, "band": [900, 1400] }`,
+adjusting these example coordinates to the illustration. `mesh.clothCell` defaults to 8.
+
+Optionally trace `seams` from waist to hem in left-to-right order and `tiers`
+across the columns, following the drawn folds and ruffle joins. Every tier must
+cross every column once, in waist-to-hem order, without crossing columns or
+inverting grid cells. Nonempty seams/tiers use coupled N-link pendulums; their
+absence retains the two-link solver. In Studio's **Cloth** inspector, add/delete
+lines and edit vertices (drag, double-click an edge to add, Alt-click a vertex to
+remove). Motion-grid edits do not require rebuilding layers. Start `tierGain` and
+`highModeDamping` at `1`; the former exaggerates relative bending only in the
+rendered grid, while the latter changes damping above the lowest mode. Review
+lag, overshoot and settling after each adjustment.
+
+Validate the draft before rebuilding:
+
+```sh
+npm run validate-rig -- projects/<name>/rig.draft.json
+uv run --with numpy --with pillow --with opencv-python-headless tools/build-layers.py projects/<name> --rig rig.draft.json
+npm run render-poses -- projects/<name>
+```
+
+Inspect `review/rest.png` at the waist, ruffles and tail edges. Inspect the ten
+`cloth-sway-0.png` through `cloth-sway-9.png` frames for lag, reversal and settling,
+not just the contact sheet. Set `wind: 0` when checking convergence to rest; default
+wind intentionally keeps a small motion. Compare a lower `swing` or higher `damping`
+to the defaults. In Studio, select Cloth, adjust its numeric fields, save and reopen
+to confirm persistence. Waist/hem handles affect motion immediately; changing an
+outline marks layers stale and requires a rebuild. Keep `base.png` intact for older
+players; verify `base_cloth.png` and all `cloth_<name>` layers are present when packing.
+
+## Optional — Legs
+
+Experimental full-body feature; its fields and behaviour may change.
+
+Add `rig.legs` only when the illustration has two visible legs and planted feet
+(see [Rig fields](rig-fields.md#optional-planted-legs)). Use the calibrated source
+coordinates, zoomed grids and an overlay from the earlier steps. Left and right
+mean image-left and image-right. Place `pelvis` at the pelvic rotation centre,
+each `hip` at the top of the thigh, each `knee` at the drawn knee joint and each
+`ankle` at the fixed foot attachment. Keep hip, knee and ankle y increasing.
+Trace `split` down the gap between the legs, starting inside the crotch gap and
+continuing below both ankles, with strictly increasing y. Avoid putting this
+boundary through a leg. Place `band` above the hips where the pelvis motion should
+blend into the torso; its start must be above both hips.
+
+Start with modest `shift` (pixels), `tilt` (radians) and `bend` (pixels). Validate
+the draft before using it, then run `render-poses` as in Step 5. Compare `rest`,
+`weight-left`, `weight-right` and every `weight-shift-0..9` frame. Inspect the
+crotch, knees, ankles and any garment attachments at full resolution: feet must
+stay planted, knees must bend smoothly without reversing and the split must not
+produce a tear or overlap. The solver preserves bone lengths in 3D, so their
+projected lengths can shorten. Also check body sway and head movement together.
+
+For optional pelvis yaw, start `twist` at 3–6 degrees (allowed range `0..15`).
+Check that the shoulders partly counterturn, the head remains frontal, and feet
+and garment attachments stay connected during transfer and holds. Omitted or
+zero twist preserves the existing output. Studio exposes this under **Legs**;
+it does not require rebuilding layers.
+
+In Studio, select **Legs**, align the pelvis and joint handles, and edit the split
+vertices (double-click an edge to add a point; Alt-click a vertex to remove
+it). Pause idle motion and test the **Weight shift** slider in both directions.
+Joint, split and tuning edits recalculate mesh weights; they do not require a
+layer rebuild. Save and reopen to confirm persistence. Omit `legs` to preserve an
+existing avatar's deformation. With `legs`, idle weight transfer targets `±0.7`
+over a five-second cycle: a 0.9-second smooth S transition and a 1.6-second hold
+in each half-cycle. Rigs without `legs` retain their previous output. The slider
+accepts the full `-1..1` parameter range.
+
+## Optional — Hanging arms
+
+Experimental full-body feature; its fields and behaviour may change.
+
+Add `rig.arms` only when both arms hang clear of the body with a transparent gap.
+Omit it when arms touch or lie in front of the body, with hands on hips or crossed
+arms, and for bust-up art. This feature permits small swings and elbow bends, not
+raised arms or reconstruction behind them. The native runtime currently ignores
+`arms` and its parameters; this feature uses the WebGL runtime.
+
+Use the coordinate calibration and zoomed grids from the earlier steps. Place each
+image-side `shoulder` inside the sleeve near the armpit, `elbow` on the joint and
+`wrist` at the hand attachment, with increasing y. Trace that arm's `split` down
+the transparent gap, starting just below the armpit and ending below the fingertips.
+The image-left split stays on the right of its elbow and wrist; mirror this for the
+image-right arm. Check `base_cloth.png` too when cloth is present: its bare arm
+silhouette and any cutout remnants determine where the mesh can move cleanly.
+Do not place a split through visible skin, sleeves or bracelets.
+
+Start with defaults `swing: 4`, `bend: 6` (degrees) and `inward: 0.4`. Validate, then
+inspect an arms overlay before rendering:
+
+```sh
+npm run validate-rig -- projects/<name>/rig.draft.json
+uv run tools/overlay.py projects/<name> --rig rig.draft.json --part arms --zoom --out projects/<name>/work/overlay-arms.png
+npm run render-poses -- projects/<name>
+```
+
+Use a built project with the same arms data in `rig.json` when rendering. In Studio,
+select **Arms** in **Body**, edit the joint handles and both split lines (double-click
+to add a vertex; Alt-click to remove one), and pause idle to test the four arm sliders.
+These edits do not require rebuilding layers. Save and reopen to verify persistence.
+The body section's **Full-body support** summary lists Legs / Arms / Cloth even when
+all are absent; unset parts keep the standard motion.
+
+Inspect `rest`, all seven fixed arm poses, every `arm-cycle-0..9` and every
+`arm-idle-0..10` frame. At rest the drawing must stay identical. Sleeves must stay
+attached, elbows must bend smoothly, and hands must not disappear into the skirt.
+Reduce limits if clothing occludes the wrist. Fix cutout remnants in the artwork
+when a swing reveals old bracelet or sleeve fragments. In Live, use **Track body
+movement** and calibrate relaxed arms; check both Mirror settings and hide one wrist
+or elbow to confirm that side returns smoothly to idle. See [Rig fields](rig-fields.md#optional-hanging-arms)
+for limits and tracking behaviour.
+
+## Step 7 — Hand over
+
+Tell the person:
+- how to open the project: `npm run dev`, then **Open project** and
+  choose `projects/<name>` from the list or browse for its folder;
+- which parts you are least sure about and should be checked first;
+- what the rig cannot represent in this image;
+- that after editing eye or hand outlines they should save the rig and ask you to rebuild.
+
+## Not acceptable
+- Coordinates estimated from the full image without zoomed grids.
+- Skipping the overlay or pose checks, or reporting success without looking at the images.
+- Eye openings that include lashes or skin; closed eyes that show iris.
+- Committing, uploading or copying the person's image or anything built from it.
+- Editing `samples/` or `reference/` to make a new image work.

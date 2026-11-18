@@ -1,0 +1,10 @@
+{
+  "beforeJitter": 0.1277764004918265,
+  "afterJitter": 0.027215713665305695,
+  "jitterReduction": 0.7870051624513668,
+  "beforeLag": 100,
+  "afterLag": 216.66666666666674,
+  "beforeGlideRatio": 0.21788028382311625,
+  "afterGlideRatio": 0.5730785037432695
+}
+PASS: 29 body smoothing and geometry checks
