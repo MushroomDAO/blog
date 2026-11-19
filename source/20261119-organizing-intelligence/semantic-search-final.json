@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "organizing-intelligence-ai-jobs-wages-coordination",
+    "query": "Organizing Intelligence Imas Koh Legg 工资 协调 组织重构",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "organizing-intelligence-ai-jobs-wages-coordination",
+          "title": "Organizing Intelligence：AI让谁涨薪，又让谁失业？",
+          "url": "/blog/organizing-intelligence-ai-jobs-wages-coordination/",
+          "language": "zh",
+          "excerpt": "Organizing Intelligence：AI让谁涨薪，又让谁失业？ 《Organizing Intelligence》研究AI如何通过能力提升与组织重构改变工资、就业和企业规模。本文核对Imas、Koh与Legg的论文及配套解读，解释团队互补、协调溢价和市场集中，指出就业不归零、管理者必然暴富都不是论文保证，并区分数学模型、数值情景和现实预测，为个人与团队提供可验证的行动建议。 Organizing Intelligence AI经济学 就业 组织协调 Google DeepMind 为什么AI赢过一个人，还可能输给一家公司？ AI越强，谁的工资",
+          "score": 0.6610886
+        },
+        {
+          "article_id": "replit-self-driving-company-agent-whole-company",
+          "title": "How Replit Turned AI Agent Into a Company-Wide Operating System: 5.8x Engineering Output, Self-Driving Across Every Function",
+          "url": "/blog/replit-self-driving-company-agent-whole-company/",
+          "language": "en",
+          "excerpt": "How Replit Turned AI Agent Into a Company-Wide Operating System: 5.8x Engineering Output, Self-Driving Across Every Function Replit CEO Amjad Masad's 'The Self-Driving Company' documents six months of wiring AI agents into every part of Replit: 5.8x engineering output, flat rever",
+          "score": 0.5467262
+        },
+        {
+          "article_id": "anthropic-employment-ai-expectations-reports",
+          "title": "Anthropic on Employment and AI Expectations: A Close Reading",
+          "url": "/blog/anthropic-employment-ai-expectations-reports/",
+          "language": "en",
+          "excerpt": "Anthropic on Employment and AI Expectations: A Close Reading Read Anthropic’s employment and AI expectations reports together: hiring shifts, agent hours, survey beliefs and what teams can responsibly learn from them. Anthropic Future of Work AI Agents Employment Research Which r",
+          "score": 0.5446377
+        },
+        {
+          "article_id": "llm-wiki-karpathy-knowledge-management",
+          "title": "LLM Wiki：Karpathy 提出的知识管理新范式",
+          "url": "/blog/llm-wiki-karpathy-knowledge-management/",
+          "language": "zh",
+          "excerpt": "LLM Wiki：Karpathy 提出的知识管理新范式 Andrej Karpathy 发布 LLM Wiki 构思文件，提出从传统 RAG 到「会进化的 Wiki」的新范式，让 LLM 成为知识的组织者而非单纯的检索器。 llm rag karpathy knowledge-management wiki 从 RAG 到\"会进化的 Wiki\" 运作机制：四个关键周期 1. 摄取（Ingest） 2. 查询（Query） 3. 维护（Lint） 4. 分发（Distribute） 社区反馈与观点 总结",
+          "score": 0.53442544
+        },
+        {
+          "article_id": "mit-mas-s60-6s985-multimodal-ai-spring-2026-open-lectures-paul-liang",
+          "title": "MIT MAS.S60 Multimodal AI: Paul Liang's 15-Week Course from Fusion-Alignment to Reasoning Agents — Full YouTube Playlist Open",
+          "url": "/blog/mit-mas-s60-6s985-multimodal-ai-spring-2026-open-lectures-paul-liang/",
+          "language": "en",
+          "excerpt": "MIT MAS.S60 Multimodal AI: Paul Liang's 15-Week Course from Fusion-Alignment to Reasoning Agents — Full YouTube Playlist Open MIT dual-listed course (MAS.S60 Media Arts / 6.S985 EECS) taught by Paul Liang, Spring 2026. 15 weeks covering multimodal fusion, alignment, large multimo",
+          "score": 0.53181136
+        },
+        {
+          "article_id": "cmu-better-harnesses-smaller-models-slm-agent-cost-reduction-engineering",
+          "title": "模型可以小，脚手架要聪明——CMU 论文拆解：用 Harness 适配让 SLM 以 4% 成本追平 LLM",
+          "url": "/blog/cmu-better-harnesses-smaller-models-slm-agent-cost-reduction-engineering/",
+          "language": "zh",
+          "excerpt": "模型可以小，脚手架要聪明——CMU 论文拆解：用 Harness 适配让 SLM 以 4% 成本追平 LLM 卡内基梅隆大学最新论文（arXiv:2607.08938）证明：对于重复性业务任务，小模型（3B~30B active params）配合针对性适配的 harness，可以用 4% 的成本恢复 89.7% 的 LLM 性能。本文深度分析论文框架，提炼 5 条工程上可直接落地的操作指南。 Agent SLM Harness 成本优化 工程实践 LLM CMU 核心洞察：任务难度可以从模型转移到 harness 失败模式分类：知道哪里出错才能对症下药",
+          "score": 0.5272362
+        },
+        {
+          "article_id": "anthropic-threat-intelligence-report-september-2026",
+          "title": "Anthropic 威胁情报报告（2026年9月）：AI 把攻防成本倒置了",
+          "url": "/blog/anthropic-threat-intelligence-report-september-2026/",
+          "language": "zh",
+          "excerpt": "Anthropic 威胁情报报告（2026年9月）：AI 把攻防成本倒置了 Anthropic 公开记录 2025.12-2026.8 间 Claude 被滥用的七大类真实案例：俄罗斯间谍、ShinyHunters 供应链攻击、中国高校漏洞研究、多大洲选举干预……关键结论：AI 正在压平国家级行为者与个人攻击者之间的能力鸿沟。 AI-security threat-intelligence Anthropic cyberattack influence-operations 2026 为什么这份报告值得认真读 网络行动：三个典型案例 GTG-20006（",
+          "score": 0.52423596
+        },
+        {
+          "article_id": "llmwiki-cli-karpathy-knowledge-pipeline",
+          "title": "From Script to CLI in 40 Hours: Karpathy's LLM Wiki Idea Hit 21M Views, Someone Built the Pipeline",
+          "url": "/blog/llmwiki-cli-karpathy-knowledge-pipeline/",
+          "language": "en",
+          "excerpt": "From Script to CLI in 40 Hours: Karpathy's LLM Wiki Idea Hit 21M Views, Someone Built the Pipeline Karpathy's LLM Wiki gist (5,000+ stars) described a new AI knowledge base paradigm: instead of RAG re-discovering on every query, let an LLM incrementally maintain a persistent wiki",
+          "score": 0.5211231
+        },
+        {
+          "article_id": "agent-from-efficiency-to-org-transformation",
+          "title": "Agent：从效率替代到组织变革",
+          "url": "/blog/agent-from-efficiency-to-org-transformation/",
+          "language": "zh",
+          "excerpt": "Agent：从效率替代到组织变革 Jack Dorsey 提出 AI 将替代传统层级管理，组织本质是 2000 年前的信息路由协议。本文结合中国古代伍长、保甲制度，分析 Agent 如何从根本上改变组织的信息聚合与决策链路。 AI Organization Jack Dorsey Agent Management Block 一、Jack Dorsey《从层级到智能》核心概述 二、千年回响：当Agent遇见伍长与保甲 伍长：五人为伍的信息原点 保甲：三层级金字塔的东方版本 里甲与文官体系：专业分工的演化 三、Agent的本质：不是替代人，而是替代\"路由\"",
+          "score": 0.51828474
+        },
+        {
+          "article_id": "skillpyramid-hierarchical-skill-consolidation-self-evolving-agents",
+          "title": "SkillPyramid: Hierarchical Skill Trees for Self-Evolving Agents — 38% More Reward, 28% Fewer Steps",
+          "url": "/blog/skillpyramid-hierarchical-skill-consolidation-self-evolving-agents/",
+          "language": "en",
+          "excerpt": "SkillPyramid: Hierarchical Skill Trees for Self-Evolving Agents — 38% More Reward, 28% Fewer Steps Chinese Academy of Sciences, UCAS, Shanghai AI Lab, and BAAI propose SkillPyramid: organizing agent task experience into a three-layer skill hierarchy (atomic → functional → abstrac",
+          "score": 0.5163452
+        }
+      ]
+    }
+  }
+]
