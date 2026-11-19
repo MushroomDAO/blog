@@ -1,0 +1,1 @@
+{"parameters": 63912192, "checks": {"tied_embeddings": true, "forward_shape": true, "finite_logits": true, "kv_cache_parity": true, "greedy_generation_shape": true, "finite_loss": true, "finite_gradients": true, "optimizer_changed_weight": true}, "kv_max_abs_error": 4.0531158447265625e-06, "loss": 8.741257667541504}

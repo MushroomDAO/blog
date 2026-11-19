@@ -1,0 +1,26 @@
+{
+  "revision": "cc9629e5f464ef46ef9411bfac916364e0a6dff1",
+  "sourceSha256": "333fd29bf3b25009542fad58a304b00a214fbadc0a379b669e1130e68d1cae53",
+  "torch": "2.14.0",
+  "transformers": "5.16.1",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "device": "CPU",
+  "randomWeights": true,
+  "pretrainedWeightsDownloaded": false,
+  "realLanguageQualityEvaluated": false,
+  "fullTrainingReplicated": false,
+  "parameters": 63912192,
+  "kv_max_abs_error": 4.0531158447265625e-06,
+  "loss": 8.741257667541504,
+  "checks": {
+    "tied_embeddings": true,
+    "forward_shape": true,
+    "finite_logits": true,
+    "kv_cache_parity": true,
+    "greedy_generation_shape": true,
+    "finite_loss": true,
+    "finite_gradients": true,
+    "optimizer_changed_weight": true
+  },
+  "passed": 8
+}

@@ -1,0 +1,11 @@
+{
+  "dedupDecision": "Only MiniMind-O multimodal113M and an AI-Agent book's reference to bojieli/minimind fork existed. Neither is a dedicated article on this exact jingyaogong/minimind64M text-training mainline. Incoming rawKB alone is not publication. No prior exact primary-entity draft receipt or current remote draft match; published API48001 unavailable.",
+  "oldTopicPolicy": "Preserve MiniMind-O article and old receipt; do not reuse its slug or media ID for a different model. Link to it to explain the distinction.",
+  "parameterClaim": "GPT3 largest175B / nominal64M approximately2734. Parameter ratio, not memory/capability ratio. Native unique default parameter count63912192.",
+  "costClaim": "README opening note scopes2h3yuan to3090 SFT1epoch; later table estimates pretrain1.21h+CNY1.57 plus SFT1.10h+CNY1.43 =2.31h/CNY3. Both scopes disclosed; no universal all-stage cost or timing reproduction claimed.",
+  "localChecks": "Eight real CPU random-weight checks using pinned original model code: tied weights, forward shape, finite logits, cached/full-last-token parity, greedy generation length, finite loss, finite gradients, SGD changed weight. No pretrained quality/fulltraining/3090 benchmark/RL/tool-use validation.",
+  "bannerDecision": "README imagery is badges, text/chart/model architecture focused; no qualifying photographic hero. Generate article-specific plain chip/notebook learning desk instead.",
+  "preservation": "Local main initially lacked previous Rumble article; fast-forward merged its already-pushed publication branch before next build to preserve existing deployed content.",
+  "preparationRecovery": "Helper bootstrapping initially referenced files on previous publication branch absent from main; preserved and merged that branch, then reran bootstrap. Model smoke itself passed on first execution. No remote mutation was retried.",
+  "bannerRecovery": "First seed8811 rejected by OCR for garbled pencil brand; removed pencil entirely and generated8812, without bypass flags."
+}

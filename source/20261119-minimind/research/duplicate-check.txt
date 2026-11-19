@@ -1,0 +1,31 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6afee3df-1dd27cae-26f055c1）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 1018 篇 + 公众号草稿箱 3 条 + 本地发布记录 1000 条 + MemPalace 4421 抽屉
+
+── 查：https://github.com/jingyaogong/minimind
+   ⚠️  [知识库] # 仓库：jingyaogong/minimind  **Summary**: 仓库：jingyaogong/minim
+      标题相似度 40%
+
+── 查：MiniMind
+   ❌ [BLOG  ] 19000 星开源书：《深入理解 AI Agent》，10 章 92 个实验，从上下文工程到多 Agent 协作全覆盖
+      正文出现实体名「minimind」
+   ❌ [BLOG  ] MiniMind-O：113M 参数的全模态模型，能做 Agent 的眼睛、耳朵和嘴巴吗？
+      正文出现实体名「minimind」
+   ❌ [发过 2026-05-12] MiniMind-O：113M 参数的全模态模型，能做 Agent 的眼睛、耳朵和嘴巴吗？
+      正文出现实体名「minimind」
+   ❌ [知识库] й / Tiếng Việt / தமிழ் / 日本語  ### 关键特点 - 全书正文、配图、92个配套实验全部开源
+      正文出现实体名「minimind」
+   ❌ [知识库] # 仓库：jingyaogong/minimind  **Summary**: 仓库：jingyaogong/minim
+      正文出现实体名「minimind」
+   ❌ [知识库] ## 深入理解 AI Agent：设计原理与工程实践（李博杰 著）  **仓库**：bojieli/ai-agent-b
+      正文出现实体名「minimind」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
