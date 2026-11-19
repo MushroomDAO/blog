@@ -1,0 +1,19 @@
+{
+  "passed": 26,
+  "selectedFiles": [
+    "test_data.py",
+    "test_loss.py",
+    "test_gdn_semantics.py",
+    "test_moe.py",
+    "test_model.py"
+  ],
+  "seconds": 3.65,
+  "scopeCheckPassed": true,
+  "device": "CPU",
+  "torch": "2.14.0",
+  "torchOutsideDocumentedGPUConstraint": true,
+  "transformers": "5.19.0",
+  "pretrainedWeightsDownloaded": false,
+  "fullTrainingOrBenchmarkReplicated": false,
+  "sourceSha256": "77e4b77d5718c287c00b4bfd29dc28730b74532d19a0e09b5e059dac9a318d97"
+}

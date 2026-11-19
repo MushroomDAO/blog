@@ -1,0 +1,138 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 5530
+  },
+  {
+    "path": "sft/.gitignore",
+    "bytes": 104
+  },
+  {
+    "path": "sft/ATTRIBUTIONS.md",
+    "bytes": 2493
+  },
+  {
+    "path": "sft/LICENSE",
+    "bytes": 11343
+  },
+  {
+    "path": "sft/MANIFEST.in",
+    "bytes": 188
+  },
+  {
+    "path": "sft/README.md",
+    "bytes": 7000
+  },
+  {
+    "path": "sft/UPSTREAM.json",
+    "bytes": 722
+  },
+  {
+    "path": "sft/clover_sft/__init__.py",
+    "bytes": 63
+  },
+  {
+    "path": "sft/clover_sft/attention.py",
+    "bytes": 4089
+  },
+  {
+    "path": "sft/clover_sft/configuration_clover_moe.py",
+    "bytes": 13937
+  },
+  {
+    "path": "sft/clover_sft/data.py",
+    "bytes": 4419
+  },
+  {
+    "path": "sft/clover_sft/gdn.py",
+    "bytes": 8178
+  },
+  {
+    "path": "sft/clover_sft/grouped_mm.py",
+    "bytes": 3503
+  },
+  {
+    "path": "sft/clover_sft/loss.py",
+    "bytes": 1363
+  },
+  {
+    "path": "sft/clover_sft/model.py",
+    "bytes": 8126
+  },
+  {
+    "path": "sft/clover_sft/modeling_clover_moe.py",
+    "bytes": 42424
+  },
+  {
+    "path": "sft/clover_sft/moe.py",
+    "bytes": 4456
+  },
+  {
+    "path": "sft/clover_sft/prepare_gsm8k.py",
+    "bytes": 1300
+  },
+  {
+    "path": "sft/clover_sft/sampling_clover_moe.py",
+    "bytes": 6329
+  },
+  {
+    "path": "sft/clover_sft/swift_plugin.py",
+    "bytes": 4767
+  },
+  {
+    "path": "sft/configs/fsdp.json",
+    "bytes": 368
+  },
+  {
+    "path": "sft/pyproject.toml",
+    "bytes": 1036
+  },
+  {
+    "path": "sft/scripts/check_scope.py",
+    "bytes": 1653
+  },
+  {
+    "path": "sft/scripts/train.sh",
+    "bytes": 2560
+  },
+  {
+    "path": "sft/tests/conftest.py",
+    "bytes": 987
+  },
+  {
+    "path": "sft/tests/test_cuda.py",
+    "bytes": 2562
+  },
+  {
+    "path": "sft/tests/test_data.py",
+    "bytes": 4807
+  },
+  {
+    "path": "sft/tests/test_fsdp2.py",
+    "bytes": 7457
+  },
+  {
+    "path": "sft/tests/test_gdn_semantics.py",
+    "bytes": 4619
+  },
+  {
+    "path": "sft/tests/test_grouped_mm.py",
+    "bytes": 6425
+  },
+  {
+    "path": "sft/tests/test_loss.py",
+    "bytes": 1198
+  },
+  {
+    "path": "sft/tests/test_model.py",
+    "bytes": 8909
+  },
+  {
+    "path": "sft/tests/test_moe.py",
+    "bytes": 2894
+  },
+  {
+    "path": "sft/tests/test_swift.py",
+    "bytes": 7516
+  }
+]

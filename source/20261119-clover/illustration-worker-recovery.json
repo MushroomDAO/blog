@@ -1,0 +1,17 @@
+{
+  "workerPids": [
+    77033
+  ],
+  "terminatedOwnedProcesses": [
+    77033,
+    77334,
+    81690,
+    81693,
+    87999,
+    88006,
+    91795
+  ],
+  "reason": "Three images generated/copied; worker repeated packaging despite primary compression instruction. Preserve originals and re-compress from preserved images after stopping writes.",
+  "generatedImages": 3,
+  "imageGenerationRepeated": false
+}

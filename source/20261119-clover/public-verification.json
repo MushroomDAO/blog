@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-19T12:59:20.785010+00:00",
+  "articles": [
+    {
+      "slug": "clover-diffusion-llm-sft-engineering-guide",
+      "url": "https://blog.mushroom.cv/blog/clover-diffusion-llm-sft-engineering-guide/",
+      "title": "Clover：扩散语言模型的SFT代码，能直接拿来训练吗？",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/clover-diffusion-llm-sft-engineering-guide-banner.CdlKMBx2.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 92225
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/clover-diffusion-llm-sft-engineering-guide-banner.CdlKMBx2_ZyjLEQ.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 41774
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/clover-diffusion-llm-sft-engineering-guide-fig-01.CNMYHN3H_XdFgr.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 47140
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/clover-diffusion-llm-sft-engineering-guide-fig-02.CBJLcGXR_Z1bi9D6.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 67608
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/clover-diffusion-llm-sft-engineering-guide-fig-03.BjedGac2_2hy9OI.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 48702
+        }
+      ]
+    }
+  ]
+}
