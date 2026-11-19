@@ -1,0 +1,38 @@
+[
+  {
+    "id": "e5e9ca647482eebb9497dfff440ea8cfaf540fe6bc864a86",
+    "metadata": {
+      "article_id": "jev-interaction-full-duplex-voice-decisions",
+      "content_hash": "4d19f941c1c9824f",
+      "excerpt": "Jev-Interaction：把全双工语音的接话与让话写成决策 Jev-Interaction 把语音助手何时接话、等待、应声和让话拆成可修改的自然语言决策，再以概率和策略驱动交互。本文核对 Apache-2.0 开源框架、外部 Jev 与语音服务依赖、任务配置和事件链路，实跑十项模拟测试，并解释作者基准、评测脚本调参与实际引擎之间的边界，给出从本地演示到产品验证的工程使用路线。 Jev-Interaction 语音智能体 全双工 开源框架 工程实践 Jev-Interaction 解决了什么问题？ 五类决策怎样变成对话动作？ 从麦克风到播放，实际依赖",
+      "language": "zh",
+      "tags": [
+        "Jev-Interaction",
+        "语音智能体",
+        "全双工",
+        "开源框架",
+        "工程实践"
+      ],
+      "title": "Jev-Interaction：把全双工语音的接话与让话写成决策",
+      "url": "/blog/jev-interaction-full-duplex-voice-decisions/"
+    }
+  },
+  {
+    "id": "526ef417757bbe441a7430034511dc5e09dc5a7cf9652de7",
+    "metadata": {
+      "article_id": "jev-interaction-full-duplex-voice-decisions",
+      "content_hash": "58c8e0068472fb58",
+      "excerpt": "Jev-Interaction: Explicit Decisions for Full-Duplex Voice Explore Jev-Interaction's explicit turn-taking decisions, external API dependencies, task profiles, replay workflow, and limits of ten local mock-based tests. Jev-Interaction 语音智能体 全双工 开源框架 工程实践 How does the decision archi",
+      "language": "en",
+      "tags": [
+        "Jev-Interaction",
+        "语音智能体",
+        "全双工",
+        "开源框架",
+        "工程实践"
+      ],
+      "title": "Jev-Interaction: Explicit Decisions for Full-Duplex Voice",
+      "url": "/blog/jev-interaction-full-duplex-voice-decisions/"
+    }
+  }
+]

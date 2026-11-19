@@ -1,0 +1,16 @@
+HTTP/2 200 
+date: Thu, 19 Nov 2026 12:17:22 GMT
+content-type: text/html; charset=utf-8
+content-length: 6749
+server: uvicorn
+cache-control: no-cache
+accept-ranges: bytes
+last-modified: Thu, 19 Nov 2026 10:01:47 GMT
+etag: "236a1f0e28aaf88871e558fe70c71b82"
+x-proxied-replica: 5ceyc6mi-wfthj
+x-proxied-path: /
+link: <https://huggingface.co/spaces/pupunpu/Jev-Interaction>;rel="canonical"
+x-request-id: dUHhzS
+vary: origin, access-control-request-method, access-control-request-headers
+access-control-expose-headers: *
+
