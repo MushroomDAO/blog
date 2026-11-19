@@ -1,0 +1,500 @@
+{
+  "revision": "a0c34287229103b706c670d70791683e34379732",
+  "templateCases": 49,
+  "passed": 49,
+  "jinjaGenerationTag": "Transparent generation-block parser for template-only evaluation; no Transformers model execution",
+  "cardLanguages": 45,
+  "configLanguages": 30,
+  "realAudioInference": false,
+  "weightsDownloaded": false,
+  "cases": [
+    {
+      "options": [
+        false,
+        false,
+        false
+      ],
+      "language": null,
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        false,
+        false
+      ],
+      "language": null,
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        false,
+        false
+      ],
+      "language": null,
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        false,
+        false
+      ],
+      "language": "English",
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        false,
+        false
+      ],
+      "language": "English",
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        false,
+        false
+      ],
+      "language": "English",
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        false,
+        true
+      ],
+      "language": null,
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        false,
+        true
+      ],
+      "language": null,
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        false,
+        true
+      ],
+      "language": null,
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        false,
+        true
+      ],
+      "language": "English",
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        false,
+        true
+      ],
+      "language": "English",
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        false,
+        true
+      ],
+      "language": "English",
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        false
+      ],
+      "language": null,
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        false
+      ],
+      "language": null,
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        false
+      ],
+      "language": null,
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        false
+      ],
+      "language": "English",
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        false
+      ],
+      "language": "English",
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        false
+      ],
+      "language": "English",
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        true
+      ],
+      "language": null,
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        true
+      ],
+      "language": null,
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        true
+      ],
+      "language": null,
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        true
+      ],
+      "language": "English",
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        true
+      ],
+      "language": "English",
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        false,
+        true,
+        true
+      ],
+      "language": "English",
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        false
+      ],
+      "language": null,
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        false
+      ],
+      "language": null,
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        false
+      ],
+      "language": null,
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        false
+      ],
+      "language": "English",
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        false
+      ],
+      "language": "English",
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        false
+      ],
+      "language": "English",
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        true
+      ],
+      "language": null,
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        true
+      ],
+      "language": null,
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        true
+      ],
+      "language": null,
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        true
+      ],
+      "language": "English",
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        true
+      ],
+      "language": "English",
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        false,
+        true
+      ],
+      "language": "English",
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        false
+      ],
+      "language": null,
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        false
+      ],
+      "language": null,
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        false
+      ],
+      "language": null,
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        false
+      ],
+      "language": "English",
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        false
+      ],
+      "language": "English",
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        false
+      ],
+      "language": "English",
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        true
+      ],
+      "language": null,
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        true
+      ],
+      "language": null,
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        true
+      ],
+      "language": null,
+      "audioType": "input_audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        true
+      ],
+      "language": "English",
+      "audioType": "audio",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        true
+      ],
+      "language": "English",
+      "audioType": "audio_url",
+      "passed": true
+    },
+    {
+      "options": [
+        true,
+        true,
+        true
+      ],
+      "language": "English",
+      "audioType": "input_audio",
+      "passed": true
+    }
+  ],
+  "sha256": {
+    "README.md": "1a9ed9aaa164665ef3d0e42a581ee2873fd99769e5cff67479164d385c036007",
+    "config.json": "d26bf65930f3a74b44a781ddb007cd206cacb080b618f9ec96ce05392cb7f166",
+    "processor_config.json": "bc0b230081b44e629dd5b9045b78495615c1831b4b9f4cffe97bd37e82a6156a",
+    "chat_template.jinja": "8b8a3e50fbe1e81172210fa822efe2b3c59f9fa3f10c847d906f45201b3c1133",
+    "tokenizer_config.json": "aff598d797fad6076b5cae243cdec760d3502f20aa5754f3c7f55ae4877fc5cb",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  }
+}

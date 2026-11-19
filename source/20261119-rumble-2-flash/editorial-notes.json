@@ -1,0 +1,9 @@
+{
+  "dedupDecision": "Only incoming raw KB material exists. No existing article, local draft receipt, public catalog result or current remote draft match. Published API returns48001; no archived draft receipt for this entity.",
+  "sourceDecision": "Official HF weights/config/license and author announcement verified. No dedicated official GitHub identified by exact repository search.",
+  "benchmarkBoundary": "Author-reported H200/vLLM RTFx is batched throughput, not personal-device performance or single call latency. AppTek numeric proximity is not proven statistical equivalence. Chinese uses CER, not WER.",
+  "sourceImages": "Announcement graphics are chart/text focused; badges/logo/avatar are unsuitable photographic banners. Original article-specific FLUX photograph generated instead.",
+  "bannerQA": "Seed8801 passed automatic OCR but manual inspection found garbled device labels. Replaced with8802 simple handset/bare chip scene; no verification override.",
+  "localTestBoundary": "49 Jinja template-only fixtures using a transparent generation-block extension; no Transformers execution, no model weights or real audio inference. Config language list30 versus model card45 recorded without assuming actual unsupported languages.",
+  "preparationErrors": "Convenience blog markdown endpoint returned404; canonical full HTML succeeded and is archived. Default Python lacks Transformers; no inference success claimed. Isolated Jinja2/PyYAML test environment used."
+}

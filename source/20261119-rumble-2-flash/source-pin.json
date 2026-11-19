@@ -1,0 +1,7 @@
+{
+  "model": "Reson8/Rumble-2-Flash",
+  "revision": "a0c34287229103b706c670d70791683e34379732",
+  "announcement": "https://huggingface.co/blog/rumble-2-flash",
+  "smoke": "49 template-only cases; no weights/audio inference",
+  "imageWorkerExitCode": 0
+}

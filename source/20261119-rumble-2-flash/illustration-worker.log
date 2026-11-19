@@ -1,0 +1,1432 @@
+Reading additional input from stdin...
+2026-11-19T06:44:16.027357Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/network-switch/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-19T06:44:16.027406Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-cdp/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-19T06:44:16.027417Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-mcp-docker/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-19T06:44:16.027423Z ERROR codex_core::session::session: failed to load skill /Users/jason/Dev/mycelium/blog/.agents/skills/xhs-publisher/SKILL.md: missing YAML frontmatter delimited by ---
+OpenAI Codex v0.165.0
+--------
+workdir: /Users/jason/Dev/mycelium/blog
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a1f28c-7df5-7fe2-b9b0-344edb9645d5
+--------
+user
+Use $mycelium-mushroom-illustrations. Read src/content/blog/rumble-2-flash-small-asr-phone-call-benchmarks.md. Generate exactly 3 separate 16:9 white handdrawn Little M red cap white spots beige stem black outline body illustrations: 1 same phone benchmark close scores 7.86% vs7.78% not universal equality; 2 batch audio throughput vs individual waiting time, no measured latency numbers; 3 real audio through quality latency cost acceptance. Very sparse Chinese labels. Generate one at a time via image_generation. Preserve originals under assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations. REQUIRED shell cp each to src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-01.png through03.png. NO Python or heredocs, primary handles compression. Do not edit article/banner/git or publish. Finish after 3 copied images.
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+codex
+我会按小M配图 skill 逐张生成这 3 张图，保留原图并用 shell `cp` 复制到指定位置，不修改文章、封面或发布状态。
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat src/content/blog/rumble-2-flash-small-asr-phone-call-benchmarks.md' in /Users/jason/Dev/mycelium/blog
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/.system/imagegen/SKILL.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+---
+title: "Rumble-2-Flash：0.5B语音识别接近30B，边界在哪？"
+titleEn: "Rumble-2-Flash: Small ASR, Phone Calls and Batch Speed"
+description: "Rumble-2-Flash 是 Reson8 开源的 0.5B 多语言语音识别模型。本文核对 Apache 2.0 权重、Qwen3-ASR 架构、同策略蒸馏与电话测试，解释两款模型错误率差异、H200 满批吞吐和实时延迟的区别，记录模型卡与配置的语言数量不一致，并给出输出控制、接入和业务验收建议。所有性能数字均为官方报告。"
+descriptionEn: "Review Rumble-2-Flash open ASR weights, phone-call accuracy, H200 batch throughput, distillation, output controls and practical deployment checks for engineers."
+wechatTitle: "Rumble-2-Flash：小模型识别电话"
+wechatDigest: "0.5B语音识别模型接近30B电话测试成绩，满批速度与实时延迟仍需分开看。"
+pubDate: "2026-11-19"
+updatedDate: "2026-11-19"
+category: "Tech-News"
+tags: ["ASR", "Reson8", "Rumble-2-Flash", "语音识别", "开源模型"]
+heroImage: "../../assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-banner.jpg"
+---
+
+Rumble-2-Flash 把音频转成文字，值得关注的是小模型能否降低转写成本，以及电话录音上的质量能否保住。Reson8 于 2026 年 11 月 18 日在 Hugging Face 发布这款 Apache 2.0、约 0.5B 参数的开放权重模型；它不是语音生成器，也不是完整的电话智能体。
+
+Mycelium Protocol 的判断：适合进入客服录音与多语言转写的候选名单，但“接近 30B”只成立于指定测试，“半秒一小时”描述批处理吞吐。本文核对了权重仓库、模型配置、提示模板和发布说明；没有复现真实音频识别或官方性能。
+
+## 开源仓库在哪里，开放到了哪一层？
+
+正式模型仓库：https://huggingface.co/Reson8/Rumble-2-Flash
+
+发布说明：https://huggingface.co/blog/rumble-2-flash
+
+仓库提供权重、处理器配置、分词器、聊天模板和 Apache 2.0 许可证。配置声明 `Qwen3ASRForConditionalGeneration`，意味着采用已有架构接入。我们的精确 GitHub 仓库搜索没有找到可确认归属的专用官方仓库，不把同名第三方项目当成官方入口。
+
+开放权重不等于训练全流程可重现：当前已核对的文件不足以证明完整训练数据、教师权重和训练流水线全部公开。Apache 2.0 提供宽松的复用许可，商用集成仍需按许可证履行通知等义务。
+
+## 电话识别真的追平 30B 了吗？
+
+官方发布说明引用 AppTek 的客服热线测试：302 小时音频、14 种英语口音，用 AppTek 自己的评分脚本。以下均为发布方报告，未由我们独立重跑。
+
+| 模型 | 报告的 WER |
+| --- | --- |
+| Rumble-2-Flash，约 0.5B | 7.86% |
+| NVIDIA Nemotron 3.5 Transcribe，发布文称 30B | 7.78% |
+| Qwen3-ASR 0.6B | 8.70% |
+| Qwen3-ASR 1.7B | 7.40% |
+
+前两者相差 0.08 个百分点，数值接近，但小模型仍略高；没有置信区间或配对显著性分析，不能把它写成统计等效，更不能推广成所有场景全面追平。与 Qwen3-ASR 0.6B 相比，7.86% 对 8.70% 的相对 WER 降幅约 9.7%，这是按报告值做的算术，不是新增实验。
+
+官方另报多语言平均错误率 6.96%、英文平均 WER 6.60%。需要纠正素材中的术语：模型卡明确中文用 CER，其他列是 WER，6.96% 不宜统称“平均字错误率”。它也不意味着 45 种语言全测过、每种都一样好。
+
+对业务而言，漏一个否定词、金额或姓名，可能比若干普通词错误更严重。因此还应单独统计实体准确率和关键字段错误率；总体 WER 只能决定是否值得进一步验证。
+
+![小M在相同电话测试台上比较两个模型，接近的分数仍有差别](../../assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-01.png)
+
+## 7000 倍实时率，能保证通话响应快吗？
+
+不能。模型卡记录的 Open ASR Leaderboard v1.16.1 测试采用 H200 和 vLLM，英文整体 RTFx 为 6338，SPGISpeech 分项为 7308。官方强调满批条件；不是每个数据集、每个请求都超过 7000。
+
+RTFx 是被处理的音频时长除以处理墙钟时间。3600 秒音频除以 7000，约为 0.514 秒，能解释“半秒处理一小时”的吞吐折算，但不能证明单个一小时文件端到端只需半秒，也不包含任意线上上传、排队与切片成本。
+
+离线转写可以攒批提高设备利用率；电话交互却要控制等人说完、音频分块、队列等待与解码的总延迟。大批次可能让总体处理量增加，同时让个别请求等待更久。这是部署取舍，不能只看模型大小或宣传速度。
+
+![小M分别测量满批音频处理量和单通电话的等待时间](../../assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-02.png)
+
+## 小模型怎样学到大模型的识别能力？
+
+发布方采用 Qwen3-ASR 架构，以生产模型 Rumble-2 做教师进行 on-policy 蒸馏。学生先生成自己的转写，再获得教师逐 token 的概率反馈；训练关注学生实际走到的输出路径，而不只是模仿预先写好的答案。
+
+教师和学生分词器不同，发布说明介绍用 GOLD 处理文本分段与词表对齐。可以借鉴的是训练问题的选择：把纠错信号放在学生会犯错的位置，并让学生架构沿用成熟生态。不过，本文没有核验完整训练代码，不能据此承诺照着配置即可复现这些成绩。
+
+## 我们实际核验了什么？
+
+本次将模型仓库固定到提交 `a0c34287229103b706c670d70791683e34379732`，保存配置与原始模板，做轻量、无权重的模板检查。模型卡列出 45 个语言代码，`config.json` 的 `support_languages` 只有 30 项。这只能证明元数据不一致，不能直接判断剩余语言不可用；上线前应逐个验证所需语种及自动检测路径。
+
+处理器配置记录 16kHz 采样、128 维音频特征及 30 秒 `chunk_length`。这些是配置事实，不应据此断言可无损处理任意时长输入。长录音仍需验证切片边界、上下文丢失、重复与遗漏。
+
+模板检查覆盖三组布尔输出选项的 8 种组合、自动/指定语言以及三类音频消息写法。它证明控制标记按模板生成，不证明模型一定服从。默认 `digits=true`、`filler=false`、`verbatim=true`，意味着数字形式、语气词与重复词策略并不等于完全保留原话。审计录音尤其要固定并记录这些设置。
+
+没有下载权重，没有真实音频推理，也没有在 Mac、CPU 或 GPU 上测量速度、识别率和峰值内存；不能把上述静态检查当成端侧运行成功。
+
+## 工程师怎样开始，怎样验收？
+
+官方 Transformers 示例使用以下入口；这是接入说明，本文未执行模型加载：
+
+```python
+from transformers import AutoProcessor, AutoModelForMultimodalLM
+model_id = "Reson8/Rumble-2-Flash"
+processor = AutoProcessor.from_pretrained(model_id)
+model = AutoModelForMultimodalLM.from_pretrained(model_id, device_map="auto")
+inputs = processor.apply_transcription_request(
+    audio="sample.wav", language="English"
+).to(model.device, dtype=model.dtype)
+out = model.generate(**inputs, max_new_tokens=512)
+tokens = out[:, inputs["input_ids"].shape[-1]:]
+print(processor.decode(tokens, return_format="transcription_only")[0])
+```
+
+模型配置标注 `transformers_version=5.21.0.dev0`；这是保存配置时的版本，不等于已证实的最低版本。先确认所用发行版具有相关 AutoModel 和处理器 API，再锁定依赖及模型 revision。vLLM 官方入口是 `vllm serve Reson8/Rumble-2-Flash --max-model-len 4096`，该长度是服务配置示例，不是音频秒数。
+
+建议先拿经过授权的真实业务录音，按语言、口音、噪声、采样率、多人重叠分组，人工建立参考文本。固定文本归一化与输出控制，再与当前方案跑同样的数据。中文用 CER，其他语种根据任务选 WER，同时保留原始转写检查金额、否定词、专名和重复。
+
+性能另开一张验收表：批次 1 与目标并发分别测端到端 p50/p95、峰值显存、失败重试和吞吐。离线任务再测试满批；在线任务优先看等待时间。只有业务质量和成本同时过线，才扩大流量。0.5B 让试用成本更有希望下降，无法替你省掉这一步。
+
+![小M让真实录音依次通过质量、延迟和成本三道验收门](../../assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-03.png)
+
+## FAQ
+
+### 它是完整的语音 Agent 吗？
+不是，当前讨论的是 ASR 音频转文字。说话人区分、话术决策、工具执行、语音合成与通话控制，需要按各自能力另行集成和验证。
+
+### 45 种语言是否都达到了电话测试的水平？
+没有这个证据。电话测试是英语口音集合，公开多语言表也只覆盖其中一部分语言，且配置语言清单存在差异。
+
+### 可以直接替换线上 Whisper 吗？
+可作为候选模型，用相同录音和评分规则对比后再决定。不能根据跨数据集宣传数字推断你的业务收益，也不能假设提示模板检查等于识别质量验证。
+
+来源：模型卡及文件 https://huggingface.co/Reson8/Rumble-2-Flash/tree/main ；发布说明 https://huggingface.co/blog/rumble-2-flash ；榜单 https://huggingface.co/spaces/hf-audio/open_asr_leaderboard?version=1.16.1 。接口参考 https://github.com/huggingface/transformers 。
+
+---
+
+> © 2026 Author: Mycelium Protocol. 本文采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 授权——欢迎转载和引用，须注明作者姓名及原文链接，不得去除署名后以原创发布。
+
+<!--EN-->
+
+Rumble-2-Flash transcribes speech into text. Its attraction is the possibility of retaining useful call-recording accuracy in a small, cheaper-to-serve model. Reson8 published the approximately 0.5B-parameter weights under Apache 2.0 on November 18, 2026. This is ASR, rather than a voice generator or a complete phone agent.
+
+Mycelium Protocol would shortlist it for call recordings and multilingual transcription. The 30B comparison applies to a particular benchmark; the “half a second per hour” claim concerns batched throughput. We audited repository metadata and templates without reproducing recognition accuracy or inference performance.
+
+## Where are the official artifacts?
+
+Weights: https://huggingface.co/Reson8/Rumble-2-Flash
+
+Announcement: https://huggingface.co/blog/rumble-2-flash
+
+The repository includes weights, processor and tokenizer configurations, a chat template and a license. Its architecture is `Qwen3ASRForConditionalGeneration`, allowing integration with an existing runtime ecosystem. An exact GitHub search did not identify an attributable, dedicated official project; third-party matches should not replace the primary Hub entry.
+
+Open weights do not establish full training reproducibility. The audited files do not establish that the complete training data, teacher weights and pipeline are public. Apache 2.0 permits broad reuse subject to its terms, including applicable notice obligations.
+
+## Does a 0.5B model really match 30B on calls?
+
+The announcement reports the following AppTek results on 302 hours of helpline audio, covering 14 English accents and scored with AppTek's script. These are reported results, not our measurements.
+
+| Model | Reported WER |
+| --- | --- |
+| Rumble-2-Flash, approximately 0.5B | 7.86% |
+| NVIDIA Nemotron 3.5 Transcribe, described as 30B | 7.78% |
+| Qwen3-ASR 0.6B | 8.70% |
+| Qwen3-ASR 1.7B | 7.40% |
+
+The first pair differs by 0.08 percentage points. That is numerically close, with the smaller model still slightly worse. Without confidence intervals or paired significance tests, statistical equivalence is unproven. Relative to Qwen3-ASR 0.6B, the reported WER reduction is approximately 9.7%, a calculation from supplied scores rather than another experiment.
+
+The announcement also reports a 6.96% multilingual average and 6.60% English WER. Chinese uses character error rate in the model card, while other languages use WER. Describing the multilingual figure as an average character error rate is inaccurate; it does not establish equal performance across every supported language.
+
+Business acceptance should additionally measure names, amounts and negations. A small number of critical errors can matter more than a larger number of harmless substitutions. Overall WER is a screening metric, not a complete business outcome.
+
+![Little M compares two models on the same phone benchmark without equating close scores](../../assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-01.png)
+
+## Is 7000 RTFx a low-latency call guarantee?
+
+No. The model card identifies H200 and vLLM for Open ASR Leaderboard v1.16.1. It lists English overall RTFx of 6338 and 7308 for SPGISpeech. The announcement explicitly ties higher throughput to full batches.
+
+RTFx divides processed audio duration by wall time. At 7000 RTFx, 3600 audio seconds correspond to roughly 0.514 processing seconds. That conversion does not establish end-to-end latency for a single hour-long file or account for arbitrary upload, queueing and segmentation overhead.
+
+Batching can help offline transcription use hardware efficiently. Interactive calls must budget speech segmentation, waiting, queueing and decoding. Larger batches can improve aggregate throughput while increasing an individual's wait. Measure both objectives separately.
+
+![Little M measures aggregate audio throughput separately from one caller's waiting time](../../assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-02.png)
+
+## What is the useful training idea?
+
+Reson8 describes on-policy distillation from its larger production model, Rumble-2, into a Qwen3-ASR architecture. The student produces its own transcription and receives teacher feedback at token level. This targets states the student actually visits, rather than only imitating prewritten teacher answers.
+
+The announcement describes GOLD as handling tokenizer differences through text alignment and vocabulary comparisons. The transferable idea is to correct the student's own errors while keeping deployment on a familiar architecture. We did not verify a complete training implementation and cannot promise reproducibility from configuration alone.
+
+## What did we actually check?
+
+We pinned the model repository to `a0c34287229103b706c670d70791683e34379732`, archived its configuration and template, and performed lightweight checks without weights. The card declares 45 language codes, whereas `config.json` contains 30 `support_languages` entries. This is a metadata inconsistency, rather than proof that the remaining languages fail. Validate every required language and automatic detection path.
+
+Processor configuration specifies a 16kHz sample rate, 128 audio features and a 30-second `chunk_length`. These values do not establish flawless arbitrary-duration handling. Long recordings need checks for boundary omissions, duplicated words and lost context.
+
+Template checks cover all eight combinations of the three Boolean output options, automatic and forced language, and three audio message shapes. These checks establish prompt-marker construction, not model obedience. Defaults are `digits=true`, `filler=false`, and `verbatim=true`; an audit transcript must deliberately choose and record normalization behavior.
+
+We downloaded no weights and ran no audio inference. We measured no Mac/CPU/GPU throughput, recognition quality or peak memory. Static checks must not be represented as successful on-device inference.
+
+## How should engineers integrate and accept it?
+
+The official Transformers path uses the following entry points. This example is guidance; we did not execute model loading.
+
+```python
+from transformers import AutoProcessor, AutoModelForMultimodalLM
+model_id = "Reson8/Rumble-2-Flash"
+processor = AutoProcessor.from_pretrained(model_id)
+model = AutoModelForMultimodalLM.from_pretrained(model_id, device_map="auto")
+inputs = processor.apply_transcription_request(
+    audio="sample.wav", language="English"
+).to(model.device, dtype=model.dtype)
+out = model.generate(**inputs, max_new_tokens=512)
+tokens = out[:, inputs["input_ids"].shape[-1]:]
+print(processor.decode(tokens, return_format="transcription_only")[0])
+```
+
+The saved config records `transformers_version=5.21.0.dev0`; this is not a verified minimum version. Check API availability before pinning dependencies and the model revision. The documented vLLM entry point is `vllm serve Reson8/Rumble-2-Flash --max-model-len 4096`. That context setting does not mean 4096 audio seconds.
+
+Start with authorized recordings representative of language, accent, noise, sampling rate and overlapping speech. Create human references and fix the same normalization and scoring policy for baseline and candidate. Use appropriate CER/WER metrics, retaining raw outputs to audit entities and negations.
+
+Keep performance acceptance separate: benchmark batch size one and target concurrency for end-to-end p50/p95 latency, peak memory, failures and throughput. Test saturated batches for offline work; prioritize waiting time for interaction. Expand traffic only after both quality and cost meet the actual business requirement.
+
+![Little M routes real recordings through independent quality, latency and cost checks](../../assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-03.png)
+
+## FAQ
+
+### Is this a complete speech agent?
+No. ASR supplies text. Speaker handling, decisions, tools, speech synthesis and telephony control require separate integrations and validation.
+
+### Do all 45 languages match the phone benchmark?
+There is no such evidence. The call benchmark covers English accents; the public multilingual table covers only a subset, and language metadata is inconsistent.
+
+### Can it replace production Whisper immediately?
+Evaluate both on the same representative audio and scoring rules first. Cross-dataset promotional scores cannot establish your business improvement, and template tests do not establish recognition accuracy.
+
+Sources: model files https://huggingface.co/Reson8/Rumble-2-Flash/tree/main ; announcement https://huggingface.co/blog/rumble-2-flash ; leaderboard https://huggingface.co/spaces/hf-audio/open_asr_leaderboard?version=1.16.1 ; interface project https://github.com/huggingface/transformers .
+
+---
+
+> © 2026 Author: Mycelium Protocol. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to share and adapt with attribution. You must credit the author and link to the original; removing attribution and republishing as original is not permitted.
+
+ succeeded in 0ms:
+---
+name: "imagegen"
+description: "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+---
+
+# Image Generation Skill
+
+Generates or edits images for the current project (for example website assets, game assets, UI mockups, product mockups, wireframes, logo design, photorealistic images, or infographics).
+
+## Top-level modes and rules
+
+This skill has exactly two top-level modes:
+
+- **Default built-in tool mode (preferred):** built-in `image_gen` tool for image generation, editing, and transparent-image requests. Does not require `OPENAI_API_KEY`.
+- **Fallback CLI mode:** `scripts/image_gen.py` CLI. Use when the user explicitly asks for or confirms the CLI/API/model path. Requires `OPENAI_API_KEY`.
+
+Within CLI fallback, the CLI exposes three subcommands:
+
+- `generate`
+- `edit`
+- `generate-batch`
+
+Rules:
+- Use the built-in `image_gen` tool by default for normal image generation and editing requests.
+- Do not switch to CLI fallback for ordinary quality, size, or file-path control.
+- For transparent images, ask built-in `image_gen` for a transparent background and preserve the generated alpha.
+- Never silently switch from built-in `image_gen` or CLI `gpt-image-2` to CLI `gpt-image-1.5`; ask the user first unless they explicitly requested `gpt-image-1.5`.
+- The word `batch` by itself does not mean CLI fallback. If the user asks for many assets or says to batch-generate assets without explicitly asking for CLI/API/model controls, stay on the built-in path and issue one built-in call per requested asset or variant.
+- If the built-in tool fails or is unavailable, tell the user the CLI fallback exists and that it requires `OPENAI_API_KEY`. Proceed only if the user explicitly asks for that fallback.
+- If the user explicitly asks for CLI mode, use the bundled `scripts/image_gen.py` workflow. Do not create one-off SDK runners.
+- Never modify `scripts/image_gen.py`. If something is missing, ask the user before doing anything else.
+
+Built-in save-path policy:
+- In built-in tool mode, Codex saves generated images under `$CODEX_HOME/*` by default.
+- Do not describe or rely on OS temp as the default built-in destination.
+- Do not describe or rely on a destination-path argument (if any) on the built-in `image_gen` tool. If a specific location is needed, generate first and then move or copy the selected output from `$CODEX_HOME/generated_images/...`.
+- Save-path precedence in built-in mode:
+  1. If the user names a destination, move or copy the selected output there.
+  2. If the image is meant for the current project, move or copy the final selected image into the workspace before finishing.
+  3. If the image is only for preview or brainstorming, render it inline; the underlying file can remain at the default `$CODEX_HOME/*` path.
+- Never leave a project-referenced asset only at the default `$CODEX_HOME/*` path.
+- Do not overwrite an existing asset unless the user explicitly asked for replacement; otherwise create a sibling versioned filename such as `hero-v2.png` or `item-icon-edited.png`.
+
+Shared prompt guidance for both modes lives in `references/prompting.md` and `references/sample-prompts.md`.
+
+Fallback-only docs/resources for CLI mode:
+- `references/cli.md`
+- `references/image-api.md`
+- `references/codex-network.md`
+- `scripts/image_gen.py`
+
+## When to use
+- Generate a new image (concept art, product shot, cover, website hero)
+- Generate a new image using one or more reference images for style, composition, or mood
+- Edit an existing image (inpainting, lighting or weather transformations, background replacement, object removal, compositing, transparent background)
+- Produce many assets or variants for one task
+
+## When not to use
+- Extending or matching an existing SVG/vector icon set, logo system, or illustration library inside the repo
+- Creating simple shapes, diagrams, wireframes, or icons that are better produced directly in SVG, HTML/CSS, or canvas
+- Making a small project-local asset edit when the source file already exists in an editable native format
+- Any task where the user clearly wants deterministic code-native output instead of a generated bitmap
+
+## Decision tree
+
+Think about two separate questions:
+
+1. **Intent:** is this a new image or an edit of an existing image?
+2. **Execution strategy:** is this one asset or many assets/variants?
+
+Intent:
+- If the user wants to modify an existing image while preserving parts of it, treat the request as **edit**.
+- If the user provides images only as references for style, composition, mood, or subject guidance, treat the request as **generate**.
+- If the user provides no images, treat the request as **generate**.
+
+Built-in edit semantics:
+- Built-in edit mode is for images already visible in the conversation context, such as attached images or images generated earlier in the thread.
+- If the user wants to edit a local image file with the built-in tool, first load it with built-in `view_image` tool so the image is visible in the conversation context, then proceed with the built-in edit flow.
+- Do not promise arbitrary filesystem-path editing through the built-in tool.
+- If a local file still needs direct file-path control, masks, or other explicit CLI-only parameters, use the explicit CLI fallback only when the user asks for it.
+- For edits, preserve invariants aggressively and save non-destructively by default.
+
+Execution strategy:
+- In the built-in default path, produce many assets or variants by issuing one `image_gen` call per requested asset or variant.
+- In the CLI fallback path, use the CLI `generate-batch` subcommand only when the user explicitly chose CLI mode and needs many prompts/assets.
+- For many distinct assets, do not use `n` as a substitute for separate prompts. `n` is for variants of one prompt; distinct assets need distinct built-in calls or distinct CLI `generate-batch` jobs.
+
+Assume the user wants a new image unless they clearly ask to change an existing one.
+
+## Workflow
+1. Decide the top-level mode: built-in by default, including transparent-output requests; fallback CLI only if explicitly requested or confirmed.
+2. Decide the intent: `generate` or `edit`.
+3. Decide whether the output is preview-only or meant to be consumed by the current project.
+4. Decide the execution strategy: single asset vs repeated built-in calls vs CLI `generate-batch`.
+5. Collect inputs up front: prompt(s), exact text (verbatim), constraints/avoid list, and any input images.
+6. For every input image, label its role explicitly:
+   - reference image
+   - edit target
+   - supporting insert/style/compositing input
+7. If the edit target is only on the local filesystem and you are staying on the built-in path, inspect it with `view_image` first so the image is available in conversation context.
+8. If the user asked for a photo, illustration, sprite, product image, banner, or other explicitly raster-style asset, use `image_gen` rather than substituting SVG/HTML/CSS placeholders. If the request is for an icon, logo, or UI graphic that should match existing repo-native SVG/vector/code assets, prefer editing those directly instead.
+9. Augment the prompt based on specificity:
+   - If the user's prompt is already specific and detailed, normalize it into a clear spec without adding creative requirements.
+   - If the user's prompt is generic, add tasteful augmentation only when it materially improves output quality.
+10. Use the built-in `image_gen` tool by default.
+11. For transparent-output requests, ask built-in `image_gen` for a transparent background and preserve the generated alpha channel.
+12. Inspect outputs and validate: subject, style, composition, text accuracy, and invariants/avoid items.
+13. Iterate with a single targeted change, then re-check.
+14. For preview-only work, render the image inline; the underlying file may remain at the default `$CODEX_HOME/generated_images/...` path.
+15. For project-bound work, move or copy the selected artifact into the workspace and update any consuming code or references. Never leave a project-referenced asset only at the default `$CODEX_HOME/generated_images/...` path.
+16. For batches or multi-asset requests, persist every requested deliverable final in the workspace unless the user explicitly asked to keep outputs preview-only. Discarded variants do not need to be kept unless requested.
+17. If the user explicitly chooses or confirms the CLI fallback, then use the fallback-only docs for model, quality, size, `input_fidelity`, masks, output format, output paths, and network setup.
+18. Always report the final saved path(s) for any workspace-bound asset(s), plus the final prompt or prompt set and whether the built-in tool or fallback CLI mode was used.
+
+## Transparent image requests
+
+Ask built-in `image_gen` for a genuinely transparent background and preserve its alpha.
+
+## Prompt augmentation
+
+Reformat user prompts into a structured, production-oriented spec. Make the user's goal clearer and more actionable, but do not blindly add detail.
+
+Treat this as prompt-shaping guidance, not a closed schema. Use only the lines that help, and add a short extra labeled line when it materially improves clarity.
+
+### Specificity policy
+
+Use the user's prompt specificity to decide how much augmentation is appropriate:
+
+- If the prompt is already specific and detailed, preserve that specificity and only normalize/structure it.
+- If the prompt is generic, you may add tasteful augmentation when it will materially improve the result.
+
+Allowed augmentations:
+- composition or framing hints
+- polish level or intended-use hints
+- practical layout guidance
+- reasonable scene concreteness that supports the stated request
+
+Not allowed augmentations:
+- extra characters or objects that are not implied by the request
+- brand names, slogans, palettes, or narrative beats that are not implied
+- arbitrary side-specific placement unless the surrounding layout supports it
+
+## Use-case taxonomy (exact slugs)
+
+Classify each request into one of these buckets and keep the slug consistent across prompts and references.
+
+Generate:
+- photorealistic-natural — candid/editorial lifestyle scenes with real texture and natural lighting.
+- product-mockup — product/packaging shots, catalog imagery, merch concepts.
+- ui-mockup — app/web interface mockups and wireframes; specify the desired fidelity.
+- infographic-diagram — diagrams/infographics with structured layout and text.
+- scientific-educational — classroom explainers, scientific diagrams, and learning visuals with required labels and accuracy constraints.
+- ads-marketing — campaign concepts and ad creatives with audience, brand position, scene, and exact tagline/copy.
+- productivity-visual — slide, chart, workflow, and data-heavy business visuals.
+- logo-brand — logo/mark exploration, vector-friendly.
+- illustration-story — comics, children’s book art, narrative scenes.
+- stylized-concept — style-driven concept art, 3D/stylized renders.
+- historical-scene — period-accurate/world-knowledge scenes.
+
+Edit:
+- text-localization — translate/replace in-image text, preserve layout.
+- identity-preserve — try-on, person-in-scene; lock face/body/pose.
+- precise-object-edit — remove/replace a specific element (including interior swaps).
+- lighting-weather — time-of-day/season/atmosphere changes only.
+- background-extraction — transparent background / clean cutout. Ask built-in `image_gen` for actual transparency.
+- style-transfer — apply reference style while changing subject/scene.
+- compositing — multi-image insert/merge with matched lighting/perspective.
+- sketch-to-render — drawing/line art to photoreal render.
+
+## Shared prompt schema
+
+Use the following labeled spec as shared prompt scaffolding for both top-level modes:
+
+```text
+Use case: <taxonomy slug>
+Asset type: <where the asset will be used>
+Primary request: <user's main prompt>
+Input images: <Image 1: role; Image 2: role> (optional)
+Scene/backdrop: <environment>
+Subject: <main subject>
+Style/medium: <photo/illustration/3D/etc>
+Composition/framing: <wide/close/top-down; placement>
+Lighting/mood: <lighting + mood>
+Color palette: <palette notes>
+Materials/textures: <surface details>
+Text (verbatim): "<exact text>"
+Constraints: <must keep/must avoid>
+Avoid: <negative constraints>
+```
+
+Notes:
+- `Asset type` and `Input images` are prompt scaffolding, not dedicated CLI flags.
+- `Scene/backdrop` refers to the visual setting. It is not the same as the fallback CLI `background` parameter, which controls output transparency behavior.
+- Fallback-only execution notes such as `Quality:`, `Input fidelity:`, masks, output format, and output paths belong in the CLI path only. Do not treat them as built-in `image_gen` tool arguments.
+
+Augmentation rules:
+- Keep it short.
+- Add only the details needed to improve the prompt materially.
+- For edits, explicitly list invariants (`change only X; keep Y unchanged`).
+- If any critical detail is missing and blocks success, ask a question; otherwise proceed.
+
+## Examples
+
+### Generation example (hero image)
+```text
+Use case: product-mockup
+Asset type: landing page hero
+Primary request: a minimal hero image of a ceramic coffee mug
+Style/medium: clean product photography
+Composition/framing: wide composition with usable negative space for page copy if needed
+Lighting/mood: soft studio lighting
+Constraints: no logos, no text, no watermark
+```
+
+### Edit example (invariants)
+```text
+Use case: precise-object-edit
+Asset type: product photo background replacement
+Primary request: replace only the background with a warm sunset gradient
+Constraints: change only the background; keep the product and its edges unchanged; no text; no watermark
+```
+
+## Prompting best practices
+- Structure prompt as scene/backdrop -> subject -> details -> constraints.
+- Include intended use (ad, UI mock, infographic) to set the mode and polish level.
+- Use camera/composition language for photorealism.
+- Only use SVG/vector stand-ins when the user explicitly asked for vector output or a non-image placeholder.
+- Quote exact text and specify typography + placement.
+- For tricky words, spell them letter-by-letter and require verbatim rendering.
+- For multi-image inputs, reference images by index and describe how they should be used.
+- For edits, repeat invariants every iteration to reduce drift.
+- Iterate with single-change follow-ups.
+- If the prompt is generic, add only the extra detail that will materially help.
+- If the prompt is already detailed, normalize it instead of expanding it.
+- For CLI fallback only, see `references/cli.md` and `references/image-api.md` for model, `quality`, `input_fidelity`, masks, output format, and output-path guidance.
+- For transparent images, ask built-in `image_gen` for actual transparency and preserve its alpha.
+
+More principles shared by both modes: `references/prompting.md`.
+Copy/paste specs shared by both modes: `references/sample-prompts.md`.
+
+## Guidance by asset type
+Asset-type templates (website assets, game assets, wireframes, logo) are consolidated in `references/sample-prompts.md`.
+
+## gpt-image-2 guidance for CLI fallback
+
+The fallback CLI defaults to `gpt-image-2`.
+
+- Use `gpt-image-2` for new CLI/API workflows unless the user confirms a different model.
+- CLI `gpt-image-2` does not support `background=transparent`; ask before using `gpt-image-1.5` unless the user explicitly requested that model.
+- `gpt-image-2` always uses high fidelity for image inputs; do not set `input_fidelity` with this model.
+- `gpt-image-2` supports `quality` values `low`, `medium`, `high`, and `auto`.
+- Use `quality low` for fast drafts, thumbnails, and quick iterations. Use `medium`, `high`, or `auto` for final assets, dense text, diagrams, identity-sensitive edits, or high-resolution outputs.
+- Square images are typically fastest to generate. Use `1024x1024` for fast square drafts.
+- If the user asks for 4K-style output, use `3840x2160` for landscape or `2160x3840` for portrait.
+- `gpt-image-2` size may be `auto` or `WIDTHxHEIGHT` if all constraints hold: max edge `<= 3840px`, both edges multiples of `16px`, long-to-short ratio `<= 3:1`, total pixels between `655,360` and `8,294,400`.
+
+Popular `gpt-image-2` sizes:
+- `1024x1024` square
+- `1536x1024` landscape
+- `1024x1536` portrait
+- `2048x2048` 2K square
+- `2048x1152` 2K landscape
+- `3840x2160` 4K landscape
+- `2160x3840` 4K portrait
+- `auto`
+
+## Fallback CLI mode only
+
+### Temp and output conventions
+These conventions apply only to the CLI fallback. They do not describe built-in `image_gen` output behavior.
+- Use `tmp/imagegen/` for intermediate files (for example JSONL batches); delete them when done.
+- Write final artifacts under `output/imagegen/`.
+- Use `--out` or `--out-dir` to control output paths; keep filenames stable and descriptive.
+
+### Dependencies
+Prefer `uv` for dependency management in this repo.
+
+Required Python package:
+```bash
+uv pip install openai
+```
+
+Optional for image inspection and downscaling:
+```bash
+uv pip install pillow
+```
+
+Portability note:
+- If you are using the installed skill outside this repo, install dependencies into that environment with its package manager.
+- In uv-managed environments, `uv pip install ...` remains the preferred path.
+
+### Environment
+- `OPENAI_API_KEY` must be set for live API calls.
+- Do not ask the user for `OPENAI_API_KEY` when using the built-in `image_gen` tool.
+- Never ask the user to paste the full key in chat. Ask them to set it locally and confirm when ready.
+
+If the key is missing, give the user these steps:
+1. Create an API key in the OpenAI platform UI: https://platform.openai.com/api-keys
+2. Set `OPENAI_API_KEY` as an environment variable in their system.
+3. Offer to guide them through setting the environment variable for their OS/shell if needed.
+
+If installation is not possible in this environment, tell the user which dependency is missing and how to install it into their active environment.
+
+### Script-mode notes
+- CLI commands + examples: `references/cli.md`
+- API parameter quick reference: `references/image-api.md`
+- Network approvals / sandbox settings for CLI mode: `references/codex-network.md`
+
+## Reference map
+- `references/prompting.md`: shared prompting principles for both modes.
+- `references/sample-prompts.md`: shared copy/paste prompt recipes for both modes.
+- `references/cli.md`: fallback-only CLI usage via `scripts/image_gen.py`.
+- `references/image-api.md`: fallback-only API/CLI parameter reference.
+- `references/codex-network.md`: fallback-only network/sandbox troubleshooting for CLI mode.
+- `scripts/image_gen.py`: fallback-only CLI implementation. Use only when the user explicitly chooses or confirms CLI mode.
+
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/mycelium-mushroom-illustrations/SKILL.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+---
+name: mycelium-mushroom-illustrations
+description: 生成 Mycelium「小M」蘑菇 IP 风格的中文正文配图。【科技类别】文章默认用此 skill。用于为中文文章、帖子、博客、Notion 文档、工作流、方法论、流程、结构、状态、隐喻或观点生成“怪诞”“蘑菇”“小M”“菌丝”“手绘”“正文配图”“文章插图”“配图建议”“shot list”“去标题/改图”等任务；视觉为纯白手绘、少量红橙蓝批注、简洁清爽但天马行空，主角是黑色小蘑菇「小M」。
+---
+
+# Mycelium 小M（蘑菇）怪诞正文配图
+
+> 用途分工：本 skill 用于**科技类别**文章。社会/创作思考类别用 `mycelium-avatar-illustrations`（卡通小人），科普类别用 `mycelium-baobao-cat-illustrations`（德文猫Baobao）。
+
+## 核心定位
+
+为中文文章设计和生成 16:9 横版正文配图。目标不是做商业插画、PPT 信息图或可爱卡通，而是把文章里的关键判断、流程、结构、状态或隐喻，变成一张清爽、怪诞、有创意、可读但不说明书的手绘解释图。
+
+默认视觉 IP 是“小M”：🍄 经典造型的小蘑菇怪物——**红色菌盖 + 白色圆点斑、米白菌柄 + 黑色手绘轮廓、黑点眼**、细腿、空表情，认真做一件荒诞但成立的事；脚下可伸出橙色菌丝线做连接/传输。不要画成黑色实心。小M必须参与画面的核心动作，不能只是站在旁边当装饰。完整形象见 `references/mushroom-ip.md`。
+
+## 先读这些参考
+
+按任务需要读取，不要一次塞满上下文：
+
+- `references/style-dna.md`：风格 DNA、颜色、文字、禁忌。
+- `references/mushroom-ip.md`：小M IP 的形象、性格、动作库和禁忌。
+- `references/composition-patterns.md`：结构类型、原创隐喻方法和反复刻规则。
+- `references/prompt-template.md`：单张生图提示词模板。
+- `references/qa-checklist.md`：生成后检查和迭代规则。
+- `assets/examples/`：只作低频视觉校准，不进入默认生成路径。不要照抄这些案例的构图、物件或标注。
+
+## 工作流
+
+### 1. 消化正文
+
+先读用户给的正文、链接、Notion 页面、Markdown 文件或截图内容。提炼：
+
+- 核心观点是什么
+- 哪些段落承担认知转折
+- 哪些内容适合用图解释
+- 哪些地方只适合文字，不需要图
+
+不要平均配图。优先选择“认知锚点”，例如：核心判断、两个断点、输入输出闭环、分流、前后对比、一鱼多吃、承接路径、常见坑、角色状态变化。
+
+### 2. 先出配图策略
+
+如果用户只是说“分析怎么配图 / 思考哪些地方需要配图”，先给 shot list。每张图写清楚：
+
+- 放在哪个段落后
+- 图的主题
+- 核心意思
+- 结构类型
+- 小M在图里做什么
+- 建议元素
+- 建议中文标注词
+
+默认 4-8 张。文章很短时 1-3 张；长文也不要轻易超过 9 张。够用就好，避免把正文做成画册。
+
+### 3. 单张生成
+
+如果用户明确要求“生成 / 输出 / 做图 / 帮我生成”，不要停下来等确认；用内置 `image_gen` 每张单独生成。不要把多张图拼在一张里。
+
+每张图只讲一个核心结构。提示词必须包含：
+
+- 16:9 横版中文正文配图
+- 纯白背景
+- 黑色手绘线稿
+- 少量红色/橙色/蓝色中文手写批注
+- 大量留白
+- 小M作为核心动作主体
+- 禁止 PPT、商业插画、幼稚可爱、复杂架构、左上角类型标题
+
+不要复刻过往案例。案例只提供风格密度和小M参与方式，不能直接复用“传送带断点 / 小M拉线 / 素材鱼 / 盖章工具箱 / 常见坑路径”等已有构图，除非用户明确要求复刻某张图。每次都要从当前文章重新发明一个奇怪但成立的隐喻。
+
+### 4. 检查与迭代
+
+生成后检查 `references/qa-checklist.md`。如果出现以下问题，优先重生成或局部编辑：
+
+- 小M只是装饰
+- 画面太满
+- 太像流程图/PPT
+- 中文太多或错字严重
+- 左上角出现“常见坑/流程图/系统架构图”等标题
+- 画风太可爱、幼稚、死板
+- 背景不是干净白底
+
+### 5. 保存交付
+
+如果用户在 workspace 内工作，把最终图复制到：
+
+```text
+assets/<article-slug>-illustrations/
+```
+
+按顺序命名：
+
+```text
+01-topic-name.png
+02-topic-name.png
+```
+
+保留原始生成文件，不要覆盖已有资产，除非用户明确要求替换。
+
+## 输出口径
+
+生成前的策略输出要短而准。生成后的交付要包含：
+
+- 生成了几张
+- 每张图的用途
+- 保存路径
+- 哪些图最稳，哪些图是可选
+
+不要长篇解释风格理论；让图自己说话。
+
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/style-dna.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/mushroom-ip.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/composition-patterns.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/prompt-template.md /Users/jason/.codex/skills/mycelium-mushroom-illustrations/references/qa-checklist.md' in /Users/jason/Dev/mycelium/blog
+hook: PostToolUse
+hook: PostToolUse
+ succeeded in 0ms:
+# 风格 DNA
+
+## 一句话
+
+纯白、极简、手绘、留白、克制、怪诞、产品草图感、中文手写感、结构清楚但不说明书。
+
+像一个长期做 AI、产品、设计、开发工具的人，在白纸上随手画出来的一张解释草图。
+
+## 必须
+
+- 16:9 横版正文配图。
+- 纯白背景：不要米色、暖灰、纸张纹理、渐变、阴影、噪点、复古纸感。
+- 黑色手绘线稿为主：细线、轻微抖动、不机械、不矢量、不厚重描边。
+- 大量留白：主体占画面约 40%-60%，至少 35% 空白，最好有一整块安静区域。
+- 少量中文手写批注：最多 5-8 处，每处尽量 2-8 个字。
+- 一张图只讲一个核心动作、结构、状态或隐喻。
+- 结构要自然表达，不要在图上写结构类型名称。
+
+## 颜色
+
+- 黑色：主体线稿、角色、框线、结构、主要文字、主体物件。
+- 红色：重点批注、问题、情绪点、关键提醒、结果。
+- 橙色：主流程、路径、箭头、自动化流向、从 A 到 B 的移动关系。
+- 蓝色：补充说明、脑内状态、系统状态、第二层解释、AI/assistant/自动化提示。
+
+蓝色不是每张都必须用。颜色要克制，宁可少不要多。
+
+## 绝对不要
+
+- 不要商业插画。
+- 不要 PPT 信息图。
+- 不要正式流程图。
+- 不要课程课件。
+- 不要可爱卡通海报。
+- 不要儿童插画。
+- 不要复杂架构图。
+- 不要精致扁平插画。
+- 不要科技感 UI。
+- 不要真实 App 截图。
+- 不要复杂背景、渐变、阴影、纹理。
+- 不要把每个节点都解释清楚。
+- 不要左上角写“Workflow 流程图 / 系统架构图 / 常见坑 / 路线图”等类型标题。
+
+## 审美方向
+
+要怪诞、创意、有意思、简洁清爽、天马行空。
+
+不要可爱、幼稚、很复杂、死板。
+# 小M IP
+
+## 角色定义
+
+小M是 Mycelium 中文正文配图的固定视觉 IP。
+
+默认每张图都要出现小M。小M不是吉祥物，不是贴纸，不是可爱装饰，而是正在认真参与系统运转的荒诞工作者——一只在白板草图里真的负责某项工作的小蘑菇。
+
+## 外形（🍄 经典蘑菇造型）
+
+- 手绘小蘑菇怪物，参照 🍄 emoji 的经典造型，不是黑色实心。
+- **菌盖：红色（正红 / 红橙）半圆顶，盖上点缀 3-5 颗白色圆点斑**（🍄 标志性白点）。菌盖边缘有手绘黑色轮廓线。
+- **菌柄/身体：米白色（奶白）填充 + 黑色手绘轮廓线**。
+- **黑色小圆点眼睛**，长在白色菌柄上（白柄上用黑点眼才清楚；不要用白点眼）。
+- 细腿，偶尔有细胳膊；表情空、呆、冷静、认真（deadpan，不卖萌）。
+- 身体（菌柄）可以变形：圆柱、漏斗、管道、洞口、奇怪工位等，但**红帽白点 + 白柄**这套识别特征要保留。
+- 轮廓略微不规则，有手绘感。不要画得太精致、太 3D、太写实。
+
+### 配色说明（重要）
+
+- 菌盖红是**角色自身的身份色**（填充块）；这与「红色批注」（细线/文字）在视觉上是分开的，不冲突。
+- 流动 / 传输 / 路径 / 菌丝仍用**橙色**；脑内状态 / 系统提示用蓝色。颜色整体仍要克制。
+
+## 菌丝特性（这是小M区别于普通角色的关键）
+
+- 小M脚下、身后或手里可以延伸出**细细的菌丝线**。
+- 菌丝用来：连接信息源、传输养分/内容、织成网络、把分散的节点接到一起。
+- 菌丝线用橙色表示「流动 / 传输 / 从 A 到 B」，和风格 DNA 的颜色语义一致。
+- 不要每张都堆满菌丝；只在「连接、传输、网络、汇聚」类主题里用 1-2 根，点到为止。
+
+## 性格
+
+- 很认真，但做的事有点荒诞。
+- 像一个低调的系统操作员 / 地下网络的运维工。
+- 冷幽默，不卖萌。
+- 有点笨拙，但不蠢。
+
+## 常见职责
+
+让小M承担核心动作：
+
+- 搬运素材、分解养分。
+- 用菌丝拉线、汇聚信息源、连接节点。
+- 卡在断点里。
+- 在机器里操作“判断”杆。
+- 变成筛选漏斗。
+- 切开“素材鱼”。
+- 盖章承接话术。
+- 牵着承接路径。
+- 举警告牌看坑。
+- 在地下网络里传输内容、把孢子撒出去（指数传播）。
+- 在旁边搬砖、搭桥、开门、分拣、记录。
+
+## 禁止
+
+- 不要把小M画成过度可爱的吉祥物、卡通蘑菇贴纸。
+- 不要画成儿童卡通角色。
+- 不要给小M复杂服装、表情包、闪亮眼睛、笑脸。
+- 不要画成写实蘑菇 / 3D 蘑菇 / 渐变质感（红帽白点是手绘平涂，不是写实）。
+- 不要把菌盖画成黑色实心（旧版已废弃）；也不要弄成多彩花哨。
+- 不要让小M只是站在角落里看。
+- 不要让小M或菌丝抢走结构表达，把画面塞满。
+
+## 判断标准
+
+如果去掉小M，图的核心隐喻还能完全成立，说明小M太装饰了；要重写提示词，让小M成为动作主体。菌丝同理：菌丝必须服务于「连接 / 传输」的核心意思，不是背景装饰。
+# 构图模式与原创规则
+
+## 基础结构类型
+
+选择一种结构即可，不要混太多。
+
+### Workflow 流程
+
+适合：输入 -> 处理 -> 输出，内容生产，AI 工作流，自动化链路。
+
+画法：左侧输入，中间小M或怪机器处理，右侧输出，橙色箭头表达主流向。
+
+### 系统局部
+
+适合：信息来源、过滤器、数据库、渲染器、agent 系统局部。
+
+画法：只画 3-5 个核心模块，小M参与其中一个关键动作。
+
+### 前后对比
+
+适合：混乱/有序，手动/自动，分散/收拢，焦虑/稳定。
+
+画法：左混乱，右稳定，中间橙色箭头。角色可以更夸张。
+
+### 角色状态
+
+适合：用户痛点、创作者状态、工具太多、信息焦虑、卡住到跑起来。
+
+画法：2-4 个小状态，每个状态一个短标注。
+
+### 概念隐喻
+
+适合：内容工厂、信息仓库、脑内黑盒、工作流机器、自动日报。
+
+画法：一个大的怪物件或机器，少量输入，一个输出。要有记忆点。
+
+### 方法分层
+
+适合：方法论框架、系统层级、能力栈、内容系统分层。
+
+画法：一层层盒子，不要正式金字塔；小M在旁边搬砖或搭建。
+
+### 地图路线
+
+适合：从想法到上线、用户路径、内容承接路径、学习路线。
+
+画法：一条弯曲路径，少量节点，小M牵线或走路。
+
+### 小漫画分镜
+
+适合：失败到成功、真实过程、吐槽、使用前后变化。
+
+画法：2-4 个小场景，每格只表达一个动作。
+
+## 原创隐喻生成法
+
+每次都从当前文章重新发明隐喻，不能照搬旧图。
+
+### 三步
+
+1. 把抽象概念换成一个物理动作：卡住、漏掉、变重、分拣、沉淀、发酵、开门、折叠、拆包、回流。
+2. 把系统结构换成一个低科技物件：坏掉的机器、纸箱、抽屉、水管、邮筒、怪表盘、秤、井、梯子、奇怪工位。
+3. 让小M承担动作：不是站旁边，而是卡在机器里、拉错线、守门、搬运、修补、称重、扶梯子、记录、把东西塞进某个怪装置。
+
+### 可用物件池
+
+- 纸箱、抽屉、旧机器、漏斗、秤、邮筒、门、井、梯子、水管、线团、闸门、转盘、黑盒、打孔器、压面机、晾衣绳、怪工位。
+- 用时只选 1-2 个，不要堆满。
+
+### 小M动作池
+
+- 拉、扛、塞、捞、压、称、缝、剪、拧、守、推、接、拆、标记、回收。
+- 动作要服务核心意思，不要为了怪而怪。
+
+## 反复刻规则
+
+不要默认打开或复刻 `assets/examples/`。这些图片只用于风格校准，例如线条密度、留白、颜色克制、小M气质。
+
+除非用户明确说“照这张 / 复刻这个构图 / 用这个案例改”，否则不要直接复用这些旧构图：
+
+- 传送带两个断点
+- 小M在内容机器里拉判断杆
+- 小M变漏斗分拣流量/信任/转化
+- 小M切素材鱼
+- 小M牵承接路径
+- 小M拉三层信息源
+- 三个小M分别拿喇叭/搭桥/开门
+- 小M盖章话术工具箱
+- 小M举牌看常见坑路径
+
+同类主题也要换新隐喻。例如“承接路径”不一定画路线，可以画小M把内容尾巴接到门把手；“一鱼多吃”不一定画鱼，可以画小M把一个纸团压成几种形状。
+# 生图提示词模板
+
+每张图单独生成。根据正文内容替换变量，不要把多张图拼在一起。
+
+```text
+Generate one standalone 16:9 horizontal Chinese article illustration.
+
+Visual DNA:
+Pure white background. Minimalist black hand-drawn line art. Slightly wobbly pen lines. Lots of empty white space. Sparse red/orange/blue handwritten Chinese annotations. Clean absurd product-sketch feeling. No gradients, no shadows, no paper texture, no complex background, no commercial vector style, no PPT infographic look, no cute mascot poster, no children's illustration, no realistic UI.
+
+Recurring IP character required:
+小M (Xiao-M), a small hand-drawn MUSHROOM creature styled like the classic 🍄 emoji (NOT solid black): a rounded RED dome cap with 3-5 white polka dots and a black outline, a CREAM/off-white stem body with black hand-drawn outline, small BLACK dot eyes on the pale stem, tiny thin legs, blank deadpan serious expression, slightly uneven hand-drawn shape. Thin ORANGE mycelium threads may extend from its feet or hands to connect / carry / weave things together when the topic is about connection or flow. The red cap with white dots is flat hand-drawn (not 3D, not realistic). 小M must perform the core conceptual action, not decorate the scene. Keep it serious and slightly bizarre, not overly cute. Keep the signature: red dotted cap + pale stem.
+
+Theme:
+{正文配图主题}
+
+Structure type:
+{结构类型：Workflow / 系统局部 / 前后对比 / 角色状态 / 概念隐喻 / 方法分层 / 地图路线 / 小漫画分镜}
+
+Core idea:
+{这张图要表达的核心意思}
+
+Composition:
+{具体画面：小M在哪里、正在做什么、主要物件是什么、信息如何流动}
+
+Suggested elements:
+{元素1} / {元素2} / {元素3} / {元素4}
+
+Chinese handwritten labels:
+{标注词1} / {标注词2} / {标注词3} / {标注词4} / {可选标注词5}
+
+Color use:
+Black for main line art and 小M. Orange for main flow/path/arrows. Red only for key warnings/problems/results. Blue only for secondary notes or feedback/system state.
+
+Constraints:
+One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. Preserve at least 35% blank white space. Use at most 5-8 short handwritten Chinese labels. Do not write a title in the top-left corner. Do not write the structure type on the image. Do not make it a formal diagram, course slide, or dense explainer. Do not copy prior examples or reuse known case compositions unless explicitly requested; invent a fresh visual metaphor for this specific article. It should be clear but not instructional, interesting but not childish, strange but clean.
+```
+
+## 图像编辑提示
+
+去掉左上角标题：
+
+```text
+Edit the provided image. Remove only the handwritten title "{要删除的文字}" and its underline from the top-left corner. Fill that area with the same clean white background, matching the surrounding blank paper. Preserve everything else exactly: characters, labels, paths, line style, composition, aspect ratio, and image quality. Do not add any new text or objects.
+```
+
+增强怪诞感：
+
+```text
+Regenerate this illustration with the same core meaning and simple layout, but make 小M more central to the conceptual action. 小M should be doing the strange work that explains the idea, not standing beside the diagram. Keep it clean, sparse, hand-drawn, and not cute.
+```
+# QA Checklist
+
+## 必过项
+
+- 是 16:9 横版。
+- 背景是干净白底。
+- 有小M。
+- 小M承担核心动作，不只是装饰。
+- 没有复刻旧案例构图，而是为当前文章生成了新隐喻。
+- 画面怪诞、有创意、有意思。
+- 简洁清爽，主体不超过画面约 60%。
+- 一张图只讲一个核心结构。
+- 中文标注少、短、能读。
+- 橙色只用于主路径或箭头。
+- 红色只用于重点、问题、提醒或结果。
+- 蓝色只用于补充说明、反馈或系统状态。
+
+## 失败信号
+
+出现以下情况，重生成或局部编辑：
+
+- 左上角有“常见坑 / Workflow / 系统架构图 / 路线图”等标题。
+- 小M像吉祥物、表情包或可爱卡通。
+- 画面像 PPT、课程课件、正式流程图。
+- 元素太多、箭头太多、节点太多。
+- 文字变成大段解释。
+- 背景有纸纹、阴影、渐变、米色、噪点。
+- 真实 UI 截图或科技感界面。
+- 中文错字严重或标注不可读。
+- 画面太死板，没有荒诞隐喻。
+- 和 `assets/examples/` 里的旧案例构图过于相似。
+
+## 迭代方法
+
+- 太普通：让小M成为动作主体，加入一个奇怪但成立的隐喻。
+- 太复杂：删节点，只保留一个动作和 3-5 个短标注。
+- 太可爱：强调 deadpan、blank serious expression、not cute、not mascot。
+- 太 PPT：去掉标题、边框、整齐网格和过多箭头，改成手绘场景。
+- 太像旧案例：保留核心意思，换掉主物件和小M动作。
+- 文字错：优先局部编辑；错得多就重生成并减少标注数量。
+
+## 交付判断
+
+高质量图应该让读者先觉得“有点怪”，然后 1 秒内看懂结构。
+
+如果第一眼像教程页，而不是白纸上的怪诞产品草图，就不合格。
+
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat /Users/jason/.codex/skills/.system/imagegen/SKILL.md' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+---
+name: "imagegen"
+description: "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+---
+
+# Image Generation Skill
+
+Generates or edits images for the current project (for example website assets, game assets, UI mockups, product mockups, wireframes, logo design, photorealistic images, or infographics).
+
+## Top-level modes and rules
+
+This skill has exactly two top-level modes:
+
+- **Default built-in tool mode (preferred):** built-in `image_gen` tool for image generation, editing, and transparent-image requests. Does not require `OPENAI_API_KEY`.
+- **Fallback CLI mode:** `scripts/image_gen.py` CLI. Use when the user explicitly asks for or confirms the CLI/API/model path. Requires `OPENAI_API_KEY`.
+
+Within CLI fallback, the CLI exposes three subcommands:
+
+- `generate`
+- `edit`
+- `generate-batch`
+
+Rules:
+- Use the built-in `image_gen` tool by default for normal image generation and editing requests.
+- Do not switch to CLI fallback for ordinary quality, size, or file-path control.
+- For transparent images, ask built-in `image_gen` for a transparent background and preserve the generated alpha.
+- Never silently switch from built-in `image_gen` or CLI `gpt-image-2` to CLI `gpt-image-1.5`; ask the user first unless they explicitly requested `gpt-image-1.5`.
+- The word `batch` by itself does not mean CLI fallback. If the user asks for many assets or says to batch-generate assets without explicitly asking for CLI/API/model controls, stay on the built-in path and issue one built-in call per requested asset or variant.
+- If the built-in tool fails or is unavailable, tell the user the CLI fallback exists and that it requires `OPENAI_API_KEY`. Proceed only if the user explicitly asks for that fallback.
+- If the user explicitly asks for CLI mode, use the bundled `scripts/image_gen.py` workflow. Do not create one-off SDK runners.
+- Never modify `scripts/image_gen.py`. If something is missing, ask the user before doing anything else.
+
+Built-in save-path policy:
+- In built-in tool mode, Codex saves generated images under `$CODEX_HOME/*` by default.
+- Do not describe or rely on OS temp as the default built-in destination.
+- Do not describe or rely on a destination-path argument (if any) on the built-in `image_gen` tool. If a specific location is needed, generate first and then move or copy the selected output from `$CODEX_HOME/generated_images/...`.
+- Save-path precedence in built-in mode:
+  1. If the user names a destination, move or copy the selected output there.
+  2. If the image is meant for the current project, move or copy the final selected image into the workspace before finishing.
+  3. If the image is only for preview or brainstorming, render it inline; the underlying file can remain at the default `$CODEX_HOME/*` path.
+- Never leave a project-referenced asset only at the default `$CODEX_HOME/*` path.
+- Do not overwrite an existing asset unless the user explicitly asked for replacement; otherwise create a sibling versioned filename such as `hero-v2.png` or `item-icon-edited.png`.
+
+Shared prompt guidance for both modes lives in `references/prompting.md` and `references/sample-prompts.md`.
+
+Fallback-only docs/resources for CLI mode:
+- `references/cli.md`
+- `references/image-api.md`
+- `references/codex-network.md`
+- `scripts/image_gen.py`
+
+## When to use
+- Generate a new image (concept art, product shot, cover, website hero)
+- Generate a new image using one or more reference images for style, composition, or mood
+- Edit an existing image (inpainting, lighting or weather transformations, background replacement, object removal, compositing, transparent background)
+- Produce many assets or variants for one task
+
+## When not to use
+- Extending or matching an existing SVG/vector icon set, logo system, or illustration library inside the repo
+- Creating simple shapes, diagrams, wireframes, or icons that are better produced directly in SVG, HTML/CSS, or canvas
+- Making a small project-local asset edit when the source file already exists in an editable native format
+- Any task where the user clearly wants deterministic code-native output instead of a generated bitmap
+
+## Decision tree
+
+Think about two separate questions:
+
+1. **Intent:** is this a new image or an edit of an existing image?
+2. **Execution strategy:** is this one asset or many assets/variants?
+
+Intent:
+- If the user wants to modify an existing image while preserving parts of it, treat the request as **edit**.
+- If the user provides images only as references for style, composition, mood, or subject guidance, treat the request as **generate**.
+- If the user provides no images, treat the request as **generate**.
+
+Built-in edit semantics:
+- Built-in edit mode is for images already visible in the conversation context, such as attached images or images generated earlier in the thread.
+- If the user wants to edit a local image file with the built-in tool, first load it with built-in `view_image` tool so the image is visible in the conversation context, then proceed with the built-in edit flow.
+- Do not promise arbitrary filesystem-path editing through the built-in tool.
+- If a local file still needs direct file-path control, masks, or other explicit CLI-only parameters, use the explicit CLI fallback only when the user asks for it.
+- For edits, preserve invariants aggressively and save non-destructively by default.
+
+Execution strategy:
+- In the built-in default path, produce many assets or variants by issuing one `image_gen` call per requested asset or variant.
+- In the CLI fallback path, use the CLI `generate-batch` subcommand only when the user explicitly chose CLI mode and needs many prompts/assets.
+- For many distinct assets, do not use `n` as a substitute for separate prompts. `n` is for variants of one prompt; distinct assets need distinct built-in calls or distinct CLI `generate-batch` jobs.
+
+Assume the user wants a new image unless they clearly ask to change an existing one.
+
+## Workflow
+1. Decide the top-level mode: built-in by default, including transparent-output requests; fallback CLI only if explicitly requested or confirmed.
+2. Decide the intent: `generate` or `edit`.
+3. Decide whether the output is preview-only or meant to be consumed by the current project.
+4. Decide the execution strategy: single asset vs repeated built-in calls vs CLI `generate-batch`.
+5. Collect inputs up front: prompt(s), exact text (verbatim), constraints/avoid list, and any input images.
+6. For every input image, label its role explicitly:
+   - reference image
+   - edit target
+   - supporting insert/style/compositing input
+7. If the edit target is only on the local filesystem and you are staying on the built-in path, inspect it with `view_image` first so the image is available in conversation context.
+8. If the user asked for a photo, illustration, sprite, product image, banner, or other explicitly raster-style asset, use `image_gen` rather than substituting SVG/HTML/CSS placeholders. If the request is for an icon, logo, or UI graphic that should match existing repo-native SVG/vector/code assets, prefer editing those directly instead.
+9. Augment the prompt based on specificity:
+   - If the user's prompt is already specific and detailed, normalize it into a clear spec without adding creative requirements.
+   - If the user's prompt is generic, add tasteful augmentation only when it materially improves output quality.
+10. Use the built-in `image_gen` tool by default.
+11. For transparent-output requests, ask built-in `image_gen` for a transparent background and preserve the generated alpha channel.
+12. Inspect outputs and validate: subject, style, composition, text accuracy, and invariants/avoid items.
+13. Iterate with a single targeted change, then re-check.
+14. For preview-only work, render the image inline; the underlying file may remain at the default `$CODEX_HOME/generated_images/...` path.
+15. For project-bound work, move or copy the selected artifact into the workspace and update any consuming code or references. Never leave a project-referenced asset only at the default `$CODEX_HOME/generated_images/...` path.
+16. For batches or multi-asset requests, persist every requested deliverable final in the workspace unless the user explicitly asked to keep outputs preview-only. Discarded variants do not need to be kept unless requested.
+17. If the user explicitly chooses or confirms the CLI fallback, then use the fallback-only docs for model, quality, size, `input_fidelity`, masks, output format, output paths, and network setup.
+18. Always report the final saved path(s) for any workspace-bound asset(s), plus the final prompt or prompt set and whether the built-in tool or fallback CLI mode was used.
+
+## Transparent image requests
+
+Ask built-in `image_gen` for a genuinely transparent background and preserve its alpha.
+
+## Prompt augmentation
+
+Reformat user prompts into a structured, production-oriented spec. Make the user's goal clearer and more actionable, but do not blindly add detail.
+
+Treat this as prompt-shaping guidance, not a closed schema. Use only the lines that help, and add a short extra labeled line when it materially improves clarity.
+
+### Specificity policy
+
+Use the user's prompt specificity to decide how much augmentation is appropriate:
+
+- If the prompt is already specific and detailed, preserve that specificity and only normalize/structure it.
+- If the prompt is generic, you may add tasteful augmentation when it will materially improve the result.
+
+Allowed augmentations:
+- composition or framing hints
+- polish level or intended-use hints
+- practical layout guidance
+- reasonable scene concreteness that supports the stated request
+
+Not allowed augmentations:
+- extra characters or objects that are not implied by the request
+- brand names, slogans, palettes, or narrative beats that are not implied
+- arbitrary side-specific placement unless the surrounding layout supports it
+
+## Use-case taxonomy (exact slugs)
+
+Classify each request into one of these buckets and keep the slug consistent across prompts and references.
+
+Generate:
+- photorealistic-natural — candid/editorial lifestyle scenes with real texture and natural lighting.
+- product-mockup — product/packaging shots, catalog imagery, merch concepts.
+- ui-mockup — app/web interface mockups and wireframes; specify the desired fidelity.
+- infographic-diagram — diagrams/infographics with structured layout and text.
+- scientific-educational — classroom explainers, scientific diagrams, and learning visuals with required labels and accuracy constraints.
+- ads-marketing — campaign concepts and ad creatives with audience, brand position, scene, and exact tagline/copy.
+- productivity-visual — slide, chart, workflow, and data-heavy business visuals.
+- logo-brand — logo/mark exploration, vector-friendly.
+- illustration-story — comics, children’s book art, narrative scenes.
+- stylized-concept — style-driven concept art, 3D/stylized renders.
+- historical-scene — period-accurate/world-knowledge scenes.
+
+Edit:
+- text-localization — translate/replace in-image text, preserve layout.
+- identity-preserve — try-on, person-in-scene; lock face/body/pose.
+- precise-object-edit — remove/replace a specific element (including interior swaps).
+- lighting-weather — time-of-day/season/atmosphere changes only.
+- background-extraction — transparent background / clean cutout. Ask built-in `image_gen` for actual transparency.
+- style-transfer — apply reference style while changing subject/scene.
+- compositing — multi-image insert/merge with matched lighting/perspective.
+- sketch-to-render — drawing/line art to photoreal render.
+
+## Shared prompt schema
+
+Use the following labeled spec as shared prompt scaffolding for both top-level modes:
+
+```text
+Use case: <taxonomy slug>
+Asset type: <where the asset will be used>
+Primary request: <user's main prompt>
+Input images: <Image 1: role; Image 2: role> (optional)
+Scene/backdrop: <environment>
+Subject: <main subject>
+Style/medium: <photo/illustration/3D/etc>
+Composition/framing: <wide/close/top-down; placement>
+Lighting/mood: <lighting + mood>
+Color palette: <palette notes>
+Materials/textures: <surface details>
+Text (verbatim): "<exact text>"
+Constraints: <must keep/must avoid>
+Avoid: <negative constraints>
+```
+
+Notes:
+- `Asset type` and `Input images` are prompt scaffolding, not dedicated CLI flags.
+- `Scene/backdrop` refers to the visual setting. It is not the same as the fallback CLI `background` parameter, which controls output transparency behavior.
+- Fallback-only execution notes such as `Quality:`, `Input fidelity:`, masks, output format, and output paths belong in the CLI path only. Do not treat them as built-in `image_gen` tool arguments.
+
+Augmentation rules:
+- Keep it short.
+- Add only the details needed to improve the prompt materially.
+- For edits, explicitly list invariants (`change only X; keep Y unchanged`).
+- If any critical detail is missing and blocks success, ask a question; otherwise proceed.
+
+## Examples
+
+### Generation example (hero image)
+```text
+Use case: product-mockup
+Asset type: landing page hero
+Primary request: a minimal hero image of a ceramic coffee mug
+Style/medium: clean product photography
+Composition/framing: wide composition with usable negative space for page copy if needed
+Lighting/mood: soft studio lighting
+Constraints: no logos, no text, no watermark
+```
+
+### Edit example (invariants)
+```text
+Use case: precise-object-edit
+Asset type: product photo background replacement
+Primary request: replace only the background with a warm sunset gradient
+Constraints: change only the background; keep the product and its edges unchanged; no text; no watermark
+```
+
+## Prompting best practices
+- Structure prompt as scene/backdrop -> subject -> details -> constraints.
+- Include intended use (ad, UI mock, infographic) to set the mode and polish level.
+- Use camera/composition language for photorealism.
+- Only use SVG/vector stand-ins when the user explicitly asked for vector output or a non-image placeholder.
+- Quote exact text and specify typography + placement.
+- For tricky words, spell them letter-by-letter and require verbatim rendering.
+- For multi-image inputs, reference images by index and describe how they should be used.
+- For edits, repeat invariants every iteration to reduce drift.
+- Iterate with single-change follow-ups.
+- If the prompt is generic, add only the extra detail that will materially help.
+- If the prompt is already detailed, normalize it instead of expanding it.
+- For CLI fallback only, see `references/cli.md` and `references/image-api.md` for model, `quality`, `input_fidelity`, masks, output format, and output-path guidance.
+- For transparent images, ask built-in `image_gen` for actual transparency and preserve its alpha.
+
+More principles shared by both modes: `references/prompting.md`.
+Copy/paste specs shared by both modes: `references/sample-prompts.md`.
+
+## Guidance by asset type
+Asset-type templates (website assets, game assets, wireframes, logo) are consolidated in `references/sample-prompts.md`.
+
+## gpt-image-2 guidance for CLI fallback
+
+The fallback CLI defaults to `gpt-image-2`.
+
+- Use `gpt-image-2` for new CLI/API workflows unless the user confirms a different model.
+- CLI `gpt-image-2` does not support `background=transparent`; ask before using `gpt-image-1.5` unless the user explicitly requested that model.
+- `gpt-image-2` always uses high fidelity for image inputs; do not set `input_fidelity` with this model.
+- `gpt-image-2` supports `quality` values `low`, `medium`, `high`, and `auto`.
+- Use `quality low` for fast drafts, thumbnails, and quick iterations. Use `medium`, `high`, or `auto` for final assets, dense text, diagrams, identity-sensitive edits, or high-resolution outputs.
+- Square images are typically fastest to generate. Use `1024x1024` for fast square drafts.
+- If the user asks for 4K-style output, use `3840x2160` for landscape or `2160x3840` for portrait.
+- `gpt-image-2` size may be `auto` or `WIDTHxHEIGHT` if all constraints hold: max edge `<= 3840px`, both edges multiples of `16px`, long-to-short ratio `<= 3:1`, total pixels between `655,360` and `8,294,400`.
+
+Popular `gpt-image-2` sizes:
+- `1024x1024` square
+- `1536x1024` landscape
+- `1024x1536` portrait
+- `2048x2048` 2K square
+- `2048x1152` 2K landscape
+- `3840x2160` 4K landscape
+- `2160x3840` 4K portrait
+- `auto`
+
+## Fallback CLI mode only
+
+### Temp and output conventions
+These conventions apply only to the CLI fallback. They do not describe built-in `image_gen` output behavior.
+- Use `tmp/imagegen/` for intermediate files (for example JSONL batches); delete them when done.
+- Write final artifacts under `output/imagegen/`.
+- Use `--out` or `--out-dir` to control output paths; keep filenames stable and descriptive.
+
+### Dependencies
+Prefer `uv` for dependency management in this repo.
+
+Required Python package:
+```bash
+uv pip install openai
+```
+
+Optional for image inspection and downscaling:
+```bash
+uv pip install pillow
+```
+
+Portability note:
+- If you are using the installed skill outside this repo, install dependencies into that environment with its package manager.
+- In uv-managed environments, `uv pip install ...` remains the preferred path.
+
+### Environment
+- `OPENAI_API_KEY` must be set for live API calls.
+- Do not ask the user for `OPENAI_API_KEY` when using the built-in `image_gen` tool.
+- Never ask the user to paste the full key in chat. Ask them to set it locally and confirm when ready.
+
+If the key is missing, give the user these steps:
+1. Create an API key in the OpenAI platform UI: https://platform.openai.com/api-keys
+2. Set `OPENAI_API_KEY` as an environment variable in their system.
+3. Offer to guide them through setting the environment variable for their OS/shell if needed.
+
+If installation is not possible in this environment, tell the user which dependency is missing and how to install it into their active environment.
+
+### Script-mode notes
+- CLI commands + examples: `references/cli.md`
+- API parameter quick reference: `references/image-api.md`
+- Network approvals / sandbox settings for CLI mode: `references/codex-network.md`
+
+## Reference map
+- `references/prompting.md`: shared prompting principles for both modes.
+- `references/sample-prompts.md`: shared copy/paste prompt recipes for both modes.
+- `references/cli.md`: fallback-only CLI usage via `scripts/image_gen.py`.
+- `references/image-api.md`: fallback-only API/CLI parameter reference.
+- `references/codex-network.md`: fallback-only network/sandbox troubleshooting for CLI mode.
+- `scripts/image_gen.py`: fallback-only CLI implementation. Use only when the user explicitly chooses or confirms CLI mode.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'ls -ld assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-01.png src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-02.png src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-03.png' in /Users/jason/Dev/mycelium/blog
+ exited 1 in 0ms:
+ls: assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations: No such file or directory
+ls: src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-01.png: No such file or directory
+ls: src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-02.png: No such file or directory
+ls: src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-03.png: No such file or directory
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'mkdir -p assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cp /Users/jason/.codex/generated_images/01a1f28c-7df5-7fe2-b9b0-344edb9645d5/exec-d90f9147-7d91-45f3-9f16-31233d6827e5.png assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations/01-same-phone-benchmark.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cp assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations/01-same-phone-benchmark.png src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-01.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+前两张已生成：第一张保留了 7.86% 与 7.78% 的差别，第二张区分批量吞吐和单次等待，未添加延迟数字。接着生成真实录音通过质量、延迟、成本验收的第三张。
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cp /Users/jason/.codex/generated_images/01a1f28c-7df5-7fe2-b9b0-344edb9645d5/exec-54dd2e42-0374-4de5-aa70-2334d1070dae.png assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations/02-throughput-versus-wait.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cp assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations/02-throughput-versus-wait.png src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-02.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cp /Users/jason/.codex/generated_images/01a1f28c-7df5-7fe2-b9b0-344edb9645d5/exec-d1b0ceb7-7a82-44d3-8748-712e6b02e303.png assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations/03-real-audio-acceptance.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cp assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations/03-real-audio-acceptance.png src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-03.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 0ms:
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'sips -g pixelWidth -g pixelHeight src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-01.png src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-02.png src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-03.png' in /Users/jason/Dev/mycelium/blog
+ succeeded in 1ms:
+/Users/jason/Dev/mycelium/blog/src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-01.png
+  pixelWidth: 1672
+  pixelHeight: 941
+/Users/jason/Dev/mycelium/blog/src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-02.png
+  pixelWidth: 1672
+  pixelHeight: 941
+/Users/jason/Dev/mycelium/blog/src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-03.png
+  pixelWidth: 1672
+  pixelHeight: 941
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+已逐张生成并用 shell `cp` 复制全部 3 张：
+
+- `src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-01.png`
+- `src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-02.png`
+- `src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-03.png`
+
+原图保存在 `assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations/`。未压缩、未修改文章或封面、未执行 Git 或发布操作。
+hook: Stop
+hook: Stop Completed
+tokens used
+39,301
+已逐张生成并用 shell `cp` 复制全部 3 张：
+
+- `src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-01.png`
+- `src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-02.png`
+- `src/assets/images/rumble-2-flash-small-asr-phone-call-benchmarks-fig-03.png`
+
+原图保存在 `assets/rumble-2-flash-small-asr-phone-call-benchmarks-illustrations/`。未压缩、未修改文章或封面、未执行 Git 或发布操作。
