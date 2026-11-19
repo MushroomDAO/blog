@@ -1,0 +1,10 @@
+PASS  video codec h264
+PASS  pixel format yuv420p
+FAIL  frame size 320x180, want 640x360
+FAIL  frame rate 24/1, want 30
+PASS  duration 1.000000s
+FAIL  no audio stream (add one, even silent: finish.sh does this)
+PASS  no black stretch over 0.5 s
+PASS  nothing frozen over 1.5 s
+----
+RESULT: FAIL, 3 check(s) (/tmp/brief2mp4-smoke-20261119/rough.mp4)

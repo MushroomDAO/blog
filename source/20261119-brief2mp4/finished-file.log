@@ -1,0 +1,13 @@
+PASS  video codec h264
+PASS  pixel format yuv420p
+PASS  frame size 640x360
+PASS  frame rate 30/1
+PASS  duration 2.000000s
+PASS  audio codec aac
+PASS  audio 48 kHz
+PASS  audio stereo
+PASS  soundtrack silent (brief allows it)
+PASS  no black stretch over 0.5 s
+PASS  nothing frozen over 1.5 s
+----
+RESULT: PASS (/tmp/brief2mp4-smoke-20261119/final.mp4)
