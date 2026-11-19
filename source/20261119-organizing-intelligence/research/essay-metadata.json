@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "": "ie=edge",
+    "viewport": "width=device-width,initial-scale=1.0",
+    "description": "How coordination thresholds, not just AI skills, trigger true economic transformation.",
+    "author": "Alex Imas, Andrew Koh and Shane Legg",
+    "og:title": "How and when does AGI transform the economy?",
+    "og:description": "Discover why solo AI benchmarks miss the big picture and how agent coordination thresholds reshape markets, wages, and organizations.",
+    "og:image": "https://lh3.googleusercontent.com/9HN-UTLrBXO4f1mW60wydtE8GjI94mPGC8NYkUGEeXMB9E8zBG4D64GEOUQomBrzwRuM1b05xhWKk0BEf090jj5SmjvmXWcnm3V6hxg55H46cVif3Q=w1200-h630-n-nu-rw",
+    "og:site_name": "DeepMind Institute",
+    "og:url": "https://institute.deepmind.com/essays/the-economics-of-intelligence/",
+    "og:type": "article",
+    "article:author": "Alex Imas, Andrew Koh and Shane Legg",
+    "article:published_time": "2026-10-29T15:00:00+00:00",
+    "article:modified_time": "2026-11-19T10:46:33.824891+00:00",
+    "article:section": "Economics",
+    "twitter:card": "summary_large_image",
+    "twitter:title": "How and when does AGI transform the economy?",
+    "twitter:image": "https://lh3.googleusercontent.com/9HN-UTLrBXO4f1mW60wydtE8GjI94mPGC8NYkUGEeXMB9E8zBG4D64GEOUQomBrzwRuM1b05xhWKk0BEf090jj5SmjvmXWcnm3V6hxg55H46cVif3Q=w1200-h630-n-nu-rw",
+    "twitter:description": "Discover why solo AI benchmarks miss the big picture and how agent coordination thresholds reshape markets, wages, and organizations."
+  },
+  "images": [
+    {
+      "alt": null,
+      "class": "logo",
+      "height": "40",
+      "role": "presentation",
+      "src": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/images/J3Gk01kQkucYHyvl/DMI_logo.height-40.svg",
+      "width": "345"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/zZd1-SWMApGlar5uc7AQfV6nFufTKBSP-M_p3itqzsckQ2V9G3Yr-_dcM1CkvkliGTxWhl_jQpqZSGJsujrgw4e-ww75RuNu-z7EzHKGEUThMNwu=w100-h100-n-nu",
+      "alt": "dmi_authors_alex-imas_260910",
+      "height": "100",
+      "width": "100"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/CEzsaSomTkTBctA_m81GoZfrpFhdjM-mk2ou71R7whW0ts4wsBlJwhvcmnsRYeuBrGtgzGY77XxvM13lwt1Zd8UK9HTzp-ngI_-tXMdIDb6PwWtzFg=w100-h100-n-nu",
+      "alt": "Andrew-Koh",
+      "height": "100",
+      "width": "100"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/HB2k0u2aXWV_PN41agVBs8X9ObDhfhEjSVDGwvo2QUjaQWLHrH1hWMIoD8x9s0WRMnM6xeG1Q0aWzCKyf8ilCTHJDZo-pek1gTbL6WjhtzjVw3rLZjI=w100-h100-n-nu",
+      "alt": "dmi_authors_shane-legg_260910",
+      "height": "100",
+      "width": "100"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/zZd1-SWMApGlar5uc7AQfV6nFufTKBSP-M_p3itqzsckQ2V9G3Yr-_dcM1CkvkliGTxWhl_jQpqZSGJsujrgw4e-ww75RuNu-z7EzHKGEUThMNwu=w100-h100-n-nu",
+      "alt": "dmi_authors_alex-imas_260910",
+      "height": "100",
+      "width": "100"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/CEzsaSomTkTBctA_m81GoZfrpFhdjM-mk2ou71R7whW0ts4wsBlJwhvcmnsRYeuBrGtgzGY77XxvM13lwt1Zd8UK9HTzp-ngI_-tXMdIDb6PwWtzFg=w100-h100-n-nu",
+      "alt": "Andrew-Koh",
+      "height": "100",
+      "width": "100"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/HB2k0u2aXWV_PN41agVBs8X9ObDhfhEjSVDGwvo2QUjaQWLHrH1hWMIoD8x9s0WRMnM6xeG1Q0aWzCKyf8ilCTHJDZo-pek1gTbL6WjhtzjVw3rLZjI=w100-h100-n-nu",
+      "alt": "dmi_authors_shane-legg_260910",
+      "height": "100",
+      "width": "100"
+    },
+    {
+      "alt": "Jagged human capabilities across six domains and organizational mosaic intelligence.",
+      "src": "https://lh3.googleusercontent.com/fnzPAvjLWzXDCcHXs4nKt4mzPM7rgE2CvmTOJaCklkeLTNAkHTuxQPZvZz5fnQO-4Aru2oL1aNTVBTr-YxkAJu4P288rOsdJe-30kqEFMobOQV1Ctw=w1440-rw-lo",
+      "srcset": "https://lh3.googleusercontent.com/fnzPAvjLWzXDCcHXs4nKt4mzPM7rgE2CvmTOJaCklkeLTNAkHTuxQPZvZz5fnQO-4Aru2oL1aNTVBTr-YxkAJu4P288rOsdJe-30kqEFMobOQV1Ctw=w393-rw-lo 393w, https://lh3.googleusercontent.com/fnzPAvjLWzXDCcHXs4nKt4mzPM7rgE2CvmTOJaCklkeLTNAkHTuxQPZvZz5fnQO-4Aru2oL1aNTVBTr-YxkAJu4P288rOsdJe-30kqEFMobOQV1Ctw=w480-rw-lo 480w, https://lh3.googleusercontent.com/fnzPAvjLWzXDCcHXs4nKt4mzPM7rgE2CvmTOJaCklkeLTNAkHTuxQPZvZz5fnQO-4Aru2oL1aNTVBTr-YxkAJu4P288rOsdJe-30kqEFMobOQV1Ctw=w640-rw-lo 640w, https://lh3.googleusercontent.com/fnzPAvjLWzXDCcHXs4nKt4mzPM7rgE2CvmTOJaCklkeLTNAkHTuxQPZvZz5fnQO-4Aru2oL1aNTVBTr-YxkAJu4P288rOsdJe-30kqEFMobOQV1Ctw=w768-rw-lo 768w, https://lh3.googleusercontent.com/fnzPAvjLWzXDCcHXs4nKt4mzPM7rgE2CvmTOJaCklkeLTNAkHTuxQPZvZz5fnQO-4Aru2oL1aNTVBTr-YxkAJu4P288rOsdJe-30kqEFMobOQV1Ctw=w1024-rw-lo 1024w, https://lh3.googleusercontent.com/fnzPAvjLWzXDCcHXs4nKt4mzPM7rgE2CvmTOJaCklkeLTNAkHTuxQPZvZz5fnQO-4Aru2oL1aNTVBTr-YxkAJu4P288rOsdJe-30kqEFMobOQV1Ctw=w1440-rw-lo 1440w, https://lh3.googleusercontent.com/fnzPAvjLWzXDCcHXs4nKt4mzPM7rgE2CvmTOJaCklkeLTNAkHTuxQPZvZz5fnQO-4Aru2oL1aNTVBTr-YxkAJu4P288rOsdJe-30kqEFMobOQV1Ctw=w1728-rw-lo 1728w, https://lh3.googleusercontent.com/fnzPAvjLWzXDCcHXs4nKt4mzPM7rgE2CvmTOJaCklkeLTNAkHTuxQPZvZz5fnQO-4Aru2oL1aNTVBTr-YxkAJu4P288rOsdJe-30kqEFMobOQV1Ctw=w2880-rw-lo 2528w",
+      "decoding": "async",
+      "fetchpriority": "auto",
+      "height": "3288",
+      "loading": "lazy",
+      "sizes": "auto",
+      "width": "2528"
+    },
+    {
+      "alt": "Mosaic intelligence across skills and organizational scale curves across firm sizes.",
+      "src": "https://lh3.googleusercontent.com/71wigK3zFzeMoGuQV-UqfHbRct4o3BZMcRdfPkdbOZE1KPFpMfC-GP7a0ZRBevfFKneLMshlo01j9mw8T7jjOrzxbnmnk5HzDiLk7bPWi9PLjLZnRJ4=w1440-rw-lo",
+      "srcset": "https://lh3.googleusercontent.com/71wigK3zFzeMoGuQV-UqfHbRct4o3BZMcRdfPkdbOZE1KPFpMfC-GP7a0ZRBevfFKneLMshlo01j9mw8T7jjOrzxbnmnk5HzDiLk7bPWi9PLjLZnRJ4=w393-rw-lo 393w, https://lh3.googleusercontent.com/71wigK3zFzeMoGuQV-UqfHbRct4o3BZMcRdfPkdbOZE1KPFpMfC-GP7a0ZRBevfFKneLMshlo01j9mw8T7jjOrzxbnmnk5HzDiLk7bPWi9PLjLZnRJ4=w480-rw-lo 480w, https://lh3.googleusercontent.com/71wigK3zFzeMoGuQV-UqfHbRct4o3BZMcRdfPkdbOZE1KPFpMfC-GP7a0ZRBevfFKneLMshlo01j9mw8T7jjOrzxbnmnk5HzDiLk7bPWi9PLjLZnRJ4=w640-rw-lo 640w, https://lh3.googleusercontent.com/71wigK3zFzeMoGuQV-UqfHbRct4o3BZMcRdfPkdbOZE1KPFpMfC-GP7a0ZRBevfFKneLMshlo01j9mw8T7jjOrzxbnmnk5HzDiLk7bPWi9PLjLZnRJ4=w768-rw-lo 768w, https://lh3.googleusercontent.com/71wigK3zFzeMoGuQV-UqfHbRct4o3BZMcRdfPkdbOZE1KPFpMfC-GP7a0ZRBevfFKneLMshlo01j9mw8T7jjOrzxbnmnk5HzDiLk7bPWi9PLjLZnRJ4=w1024-rw-lo 1024w, https://lh3.googleusercontent.com/71wigK3zFzeMoGuQV-UqfHbRct4o3BZMcRdfPkdbOZE1KPFpMfC-GP7a0ZRBevfFKneLMshlo01j9mw8T7jjOrzxbnmnk5HzDiLk7bPWi9PLjLZnRJ4=w1440-rw-lo 1440w, https://lh3.googleusercontent.com/71wigK3zFzeMoGuQV-UqfHbRct4o3BZMcRdfPkdbOZE1KPFpMfC-GP7a0ZRBevfFKneLMshlo01j9mw8T7jjOrzxbnmnk5HzDiLk7bPWi9PLjLZnRJ4=w1728-rw-lo 1728w, https://lh3.googleusercontent.com/71wigK3zFzeMoGuQV-UqfHbRct4o3BZMcRdfPkdbOZE1KPFpMfC-GP7a0ZRBevfFKneLMshlo01j9mw8T7jjOrzxbnmnk5HzDiLk7bPWi9PLjLZnRJ4=w2880-rw-lo 2528w",
+      "decoding": "async",
+      "fetchpriority": "auto",
+      "height": "1644",
+      "loading": "lazy",
+      "sizes": "auto",
+      "width": "2528"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/ldwoYPA3quecXc5bgQuu3xmL84i4XmNCMYpArSwuID7Ghm1m8YqTY0qeKWSnvKPauNLQKUnvtDFFql9CvbHfZnzH-irjWLXUOI5u2RTQyMVaRCpzdg=w1440-rw-lo",
+      "srcset": "https://lh3.googleusercontent.com/ldwoYPA3quecXc5bgQuu3xmL84i4XmNCMYpArSwuID7Ghm1m8YqTY0qeKWSnvKPauNLQKUnvtDFFql9CvbHfZnzH-irjWLXUOI5u2RTQyMVaRCpzdg=w393-rw-lo 393w, https://lh3.googleusercontent.com/ldwoYPA3quecXc5bgQuu3xmL84i4XmNCMYpArSwuID7Ghm1m8YqTY0qeKWSnvKPauNLQKUnvtDFFql9CvbHfZnzH-irjWLXUOI5u2RTQyMVaRCpzdg=w480-rw-lo 480w, https://lh3.googleusercontent.com/ldwoYPA3quecXc5bgQuu3xmL84i4XmNCMYpArSwuID7Ghm1m8YqTY0qeKWSnvKPauNLQKUnvtDFFql9CvbHfZnzH-irjWLXUOI5u2RTQyMVaRCpzdg=w640-rw-lo 640w, https://lh3.googleusercontent.com/ldwoYPA3quecXc5bgQuu3xmL84i4XmNCMYpArSwuID7Ghm1m8YqTY0qeKWSnvKPauNLQKUnvtDFFql9CvbHfZnzH-irjWLXUOI5u2RTQyMVaRCpzdg=w768-rw-lo 768w, https://lh3.googleusercontent.com/ldwoYPA3quecXc5bgQuu3xmL84i4XmNCMYpArSwuID7Ghm1m8YqTY0qeKWSnvKPauNLQKUnvtDFFql9CvbHfZnzH-irjWLXUOI5u2RTQyMVaRCpzdg=w1024-rw-lo 1024w, https://lh3.googleusercontent.com/ldwoYPA3quecXc5bgQuu3xmL84i4XmNCMYpArSwuID7Ghm1m8YqTY0qeKWSnvKPauNLQKUnvtDFFql9CvbHfZnzH-irjWLXUOI5u2RTQyMVaRCpzdg=w1440-rw-lo 1440w, https://lh3.googleusercontent.com/ldwoYPA3quecXc5bgQuu3xmL84i4XmNCMYpArSwuID7Ghm1m8YqTY0qeKWSnvKPauNLQKUnvtDFFql9CvbHfZnzH-irjWLXUOI5u2RTQyMVaRCpzdg=w1728-rw-lo 1728w, https://lh3.googleusercontent.com/ldwoYPA3quecXc5bgQuu3xmL84i4XmNCMYpArSwuID7Ghm1m8YqTY0qeKWSnvKPauNLQKUnvtDFFql9CvbHfZnzH-irjWLXUOI5u2RTQyMVaRCpzdg=w2880-rw-lo 1728w",
+      "alt": null,
+      "decoding": "async",
+      "fetchpriority": "auto",
+      "height": "972",
+      "loading": "lazy",
+      "role": "presentation",
+      "sizes": "auto",
+      "width": "1728"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/zZd1-SWMApGlar5uc7AQfV6nFufTKBSP-M_p3itqzsckQ2V9G3Yr-_dcM1CkvkliGTxWhl_jQpqZSGJsujrgw4e-ww75RuNu-z7EzHKGEUThMNwu=w100-h100-n-nu",
+      "alt": "dmi_authors_alex-imas_260910",
+      "height": "100",
+      "width": "100"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/CEzsaSomTkTBctA_m81GoZfrpFhdjM-mk2ou71R7whW0ts4wsBlJwhvcmnsRYeuBrGtgzGY77XxvM13lwt1Zd8UK9HTzp-ngI_-tXMdIDb6PwWtzFg=w100-h100-n-nu",
+      "alt": "Andrew-Koh",
+      "height": "100",
+      "width": "100"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/HB2k0u2aXWV_PN41agVBs8X9ObDhfhEjSVDGwvo2QUjaQWLHrH1hWMIoD8x9s0WRMnM6xeG1Q0aWzCKyf8ilCTHJDZo-pek1gTbL6WjhtzjVw3rLZjI=w100-h100-n-nu",
+      "alt": "dmi_authors_shane-legg_260910",
+      "height": "100",
+      "width": "100"
+    }
+  ]
+}

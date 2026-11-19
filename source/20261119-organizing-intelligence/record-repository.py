@@ -1,0 +1,9 @@
+from pathlib import Path
+import json
+p=Path(__file__).parent;slug=json.loads((p/'slugs.json').read_text())[0];job=Path('/Users/jason/.heinu1-bot/jobs/4124913f-d640-4580-9065-ef75c531f32e');repo=json.loads((p/'repository-status.json').read_text());merged=repo['state']=='MERGED'
+for file in [p/'publication-result.json',job/'publication-result.json']:
+ r=json.loads(file.read_text());r.update(repositoryStatus='merged'if merged else'review-required',pullRequest=repo['url'],mainMerged=merged);file.write_text(json.dumps(r,ensure_ascii=False,indent=2))
+f=job/'publication-progress.json';r=json.loads(f.read_text());r.update(phase='complete'if merged else'awaiting-repository-review',completed=merged,channelsCompleted=True,kbVerified=True,gitPushed=True,mainMerged=merged,pullRequest=repo['url']);f.write_text(json.dumps(r,indent=2))
+memory=Path('/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory')/f'project_{slug}.md';s=memory.read_text().replace('Repository: feature PR pending.',f"Repository: {repo['url']} {repo['state']}/{repo.get('reviewDecision','')}; normal merge {'succeeded'if merged else'blocked by base branch policy'}, no admin bypass.");memory.write_text(s)
+feedback=Path('.agents/skills/forage/FEEDBACK.md');s=feedback.read_text();line=f'\n- 2026-11-19 Organizing Intelligence: new {slug}; Imas/Koh/Legg paper2611.05417v1Oct31 andDMIessayOct29; correctedtoday-releaseandguaranteed-jobs/riches claims. Relevantprimarytext/Fig8/Fig25/D.7checked, illustrativearithmeticonly; nofullequilibriumorlaborforecastreplication. Employment/wagepressure, temporarycoordinationpremium, paper/essayASInicheandrelationaldistinctions, finite-menu limitations disclosed. FLUX8841+3LittleJfigs, verifiedBlog/currentdraft/semanticIDs/publicquery/KBreadback;13priorarticlespreserved. {repo["url"]} {repo["state"]}; noadminbypass.\n'
+if '2026-11-19 Organizing Intelligence:'not in s:feedback.write_text(s+line)

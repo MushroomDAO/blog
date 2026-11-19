@@ -1,0 +1,340 @@
+✅ Access token obtained
+ℹ️  已群发列表读不到（freepublish: 48001 api unauthorized rid: 6aff12a0-562d3a84-6acf5cba）
+   草稿箱只反映「还没发的」：发布后草稿会被手工删掉，所以
+   「草稿箱里没有」不等于「没发过」。已发的靠本地发布记录 + MemPalace 兜底。
+账本：blog 1021 篇 + 公众号草稿箱 6 条 + 本地发布记录 1003 条 + MemPalace 4458 抽屉
+
+── 查：https://arxiv.org/abs/2611.05417
+   ✅ 四本账都没查到
+
+── 查：Organizing Intelligence
+   ❌ [BLOG  ] 2028-global-intelligence-crisis-report.md
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Vercel agent-browser：让网页操作可定位、可检查
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] 精准定阶：当前全域 Agent 生态 = 早期智人初创阶段
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] AI Agent 需要出站防火墙：RubyGems 被攻击、订位 Agent 被 Resy 封号之后，我们实测了 Pipelock
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] agent-from-efficiency-to-org-transformation.md
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Agent Speaker 进度汇报：用 Nostr 构建个体+AI 的自组织协作网络
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] 我用 AI Agent 给自己搭了个每日情报看板，现在开源了
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] AI Knowledge Graph：把任意文本扔进去，LLM 自动生成可交互知识图谱
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] ai-marketing-claude：给 Claude Code 装 15 个营销技能，一条命令审计任意网站
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] AI Must Embrace Specialization: Why AGI Is the Wrong Goal
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 读「$200/月 AI 干掉后勤部」：模式可行，但有三个洞他没填
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] AnimaWorks 深度指南：开源 Python 智能体框架，五层记忆体系让 AI 真正「记住」你
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] anthropic-threat-intelligence-report-september-2026.md
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] AnySearch：专为 AI Agent 设计的搜索基础设施，打通金融、法律、学术认证数据源
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Apex-35B：科研编程模型的能力、部署与 Mac 内存账
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] macOS 27 的 fm：Mac 自带本地 AI，怎样从终端用起来？
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] FDE 实战手册：大企业 vs 中小企业，前三个月该怎么干
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] arle 实战指南：普通笔记本一键跑本地大模型，再用蒸馏让 4B 模型追上 35B 的推理能力
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Awesome Opus视频合集：从703个案例学代码动画
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] 构建实时数据流项目的最佳起点：Awesome Public Real-Time Datasets 完整导读
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] awesome-rsi：AI 递归自我改进资源精选库——从哥德尔机到 2026 年自我修改 Agent 的完整图谱
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Belief Context Graph：把 Agent 记忆从「检索」升级为「置信度感知的信念图」
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 告别静态技能库！阿里发布 SkillClaw，开启 AI Agent「集体进化」时代
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] bitchat：蓝牙 Mesh + Nostr 双轨制去中心化通信协议深度拆解
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] block-hierarchy-to-intelligence-report.md
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] BrowserAct：给 AI Agent 装上真实浏览器，4500 stars，10M+ CAPTCHA 已解决
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Call.md：把会议变成实时 Agent 循环的 AI 会议助手
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Chift 融资 1050 万欧元：中小企业金融 AI 的瓶颈可能是连接器，不是再造一个财务 Agent
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Claude for Financial Advisors 拆解：垂直 AI 正在变成「连接器+技能+审批+审计」的打包件
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Clipto 融资 1500 万美元：本地 AI 记忆成赛道，开源订阅能不能打？
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Cloudflare 开源 Clef 决策模型：兼容 Jev API、9B 版 Mac 可跑，榜首成绩是自报的
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 模型可以小，脚手架要聪明——CMU 论文拆解：用 Harness 适配让 SLM 以 4% 成本追平 LLM
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] code-review-graph：给 AI 编程助手建一张本地代码关系图，中位数减少 65 倍 token 用量
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] CodeGraph：给 Claude Code 装一个代码知识图谱，省钱 35%、工具调用减少 70%
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] community-ai-empowered-organization.md
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Cortex Hub 拆解：93 星的自托管 MCP 记忆与代码智能中枢，96.0% R@5 的基准有哪些水分
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Crawl4AI：把网页变成 AI 能读懂的文本——完整实践指南
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Cua：Computer-Use 2.0 开源基础设施，桌面操控降格为工具调用
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Baseten、H2O 与 Jev 决策模型横评：先对齐榜单，再谈选型
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Edge0-35B-A3B 拆解：35B MoE「3GB 内存跑 15 tok/s」，靠的是砍掉一半专家和预测路由
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] FanBox 深度拆解：AI 时代的 Coding 驾驶舱，786 Stars 背后的设计哲学
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] Bloomberg终端免费平替——FinceptTerminal
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] FlashRSI解析：让Agent自改进实验可追踪、可比较、可复现
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 读后感：从飞猪帮帮看懂「模型+Harness+记忆」——附一套可落地的 AI 应用架构建议
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] God's Eye View：浏览器里的卫星侦察视角，数据全是真实的，MIT 开源，35K Stars
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Google Maps 变成 Agent：点餐、订酒店、购票全打通，附工程接入指南
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] GraphMind：把代码库变成知识图谱，让 AI 永久记住你的架构
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Grok Bot平替怎么选：五款开源候选的工程对比
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Harvey AI 的 Moneyball 路线：中小AI公司如何训练垂直域模型——从评测基准、开源基座到异步RL的完整案例
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 软件公司转型：如何开发 Agent？一线团队的 8 步流程与 6 条避坑建议
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] HyperQwen拆解：24GB显卡跑Qwen3.8-27B，快在哪里、Mac能不能用？
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] hypit-ai-agent-video-workflow-svml-claude-code-codex.md
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] iDoris 立项思考：一个普通研究者如何构建可持续进化的本地 AI 模型
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] TypeSafe AI 的 Jev 生态刷屏：所谓「一天冒出 800+」，我们扒开一个索引仓库和 74 份「awesome」清单核实了一遍
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] jev-skill：给 Agent 装上 Jev 决策感知，9 个可安装 Skill 覆盖分诊/路由/代码审查
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] K2 Horizon MoVA 36B-A4B：MBZUAI 把 MoE 塞进注意力的 Value 层，Mac 要多大内存才跑得动？
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Kujira JS：把五秒鲸鱼动画装进一张网页
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] Ling-3.0-Tiny：7.9B 总参数激活仅 1.3B，蚂蚁百灵把混合推理 MoE 推进了端侧
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 《Agent AI》：多模态交互与 AGI 路径综述
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 继续等Mac Studio还是投入AMD怀抱Or云GPU？
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Macaron-V1-Venti：Mixture-of-LoRA + GLM-5.2，个人智能体 + Generative UI 的新范式
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Meta Muse Voice Transcribe：MSL 首款实时音频感知模型，单模型做 ASR + 说话人分离 + 端点检测
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 微软开源 38 亿参数文生图模型 Lens，训练成本只要竞品的两成
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 14天、5人，他们真的把AI编程助手整出来了
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] mit-mas-s60-6s985-multimodal-ai-spring-2026-open-lectures-paul-liang.md
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Monaco：8500 万融资，40 人团队，AI + 人类销售专家帮初创公司三个月签单 1800 万
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 红杉的终局判断：AI 应用公司的终点是每家都变成 Neo-Lab
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Neural Imprint：让部署中的 AI 模型真正从经验中学习，而不是每次从零开始
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] 一人公司的AI员工：OPC创业者的Agent工具全景
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] OpenFlowKit 拆解：一个真在维护的开源画图 SPA，能被 Claude 直接调用
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] OpenKnowledge：普通人用 AI 搭建私人本地知识库的完整指南
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] OpenMinis 实测 + 隐私架构完全指南：本地大模型 + Tailscale，个人数据永不出家门
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] OpenSquilla：同样预算，更高智能密度——开源 AI Agent 的 Token 效率革命
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] OpenWorker：吴恩达开源的 AI 协作者，交付成品而不是对话
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Proma：把 Chat、Agent、Skills、MCP 和微信桥接做进一个本地优先桌面应用
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] Raskar 的创意六边形：六条路径，系统性产生新想法
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Raven 论文解读：让多个 Agent 协作，也让工作流程接受检验
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] RepoCourier：7个频道、24个信息源，一条命令跑出你的每日技术情报
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] rise-meaning-economy-capital-social-instinct.md
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] RSI-Anything：跨域自我改进，究竟改了什么？
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 别追AGI了！LeCun团队：人类本来就不通用
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] scaling-agent-systems-science-google-deepmind-mit.md
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 每个人都是自己的 FDE：读完北上深杭 125 人调查之后
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Semantica：AI 界的开源 Palantir，用知识图谱解决企业 AI 最难的问题——决策溯源
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 我们给发布流程加了一个 SEO/GEO 优化步骤——让 AI 引擎也能找到你的文章
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Shisei开源姿势图库：给AI绘图一张参考，比反复描述动作更直接
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] SkillPyramid：给 Agent 搭技能树，比 ReAct 多 38% 奖励少 28% 步骤
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 软件层的退场与重构：AI-Native 时代，你的产品下一个用户是另一个 Agent
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] ThinkTerm：把多机编码 Agent 放进一个终端工作台
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] TinyFish：AI Agent 的 Web 基础设施，Search + Fetch 免费，一行装进 Claude Code
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] TokenEconomizer：编码Agent省费两成，安装前要看哪些边界？
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] TurboQuant 在 iDoris 上的可行性分析：能用它压缩本地 AI 的内存消耗吗？
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Jev：TypeSafe AI 的 RLCD 决策模型，输出 Token 免费、最高快 200 倍
+      正文出现实体名「organizing」
+   ❌ [BLOG  ] 57k Star 的代码解析神器：Understand Anything 完整实用指南
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Utopia：开源企业世界模型，用双时态知识图谱让「知识如何演变」成为一等公民
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 织影 Video Production Buddy：AI 视频制作，每个阶段都要人工审批
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Vitalik's AI Survival Guide: Local Models Are a Trap, Three-Layer Defense Is the Way Out
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] Agent 是什么？从意图到自主：封装了决策、规划和执行的智能体
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] 从 Agent 课程谈起：Agent 是啥？
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] World Monitor：一个人几天做出 Palantir 战情室的开源平替，78K stars
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] YC 内部 AI 系统的真相:数据集中 → 工具注册表 → 技能自我进化
+      正文出现实体名「intelligence」
+   ❌ [BLOG  ] YC Summer 2026 全批次分析：236 家公司，AI Agent 与 Physical AI 双线爆发
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-04-10] 《2028年全球智能危机》：Citrini Research 的 AI 情景推演报告
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-09-11] Anthropic 威胁情报报告（2026年9月）：AI 把攻防成本倒置了
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-10-29] Apex-35B：Mac部署先算清内存账
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-04-07] apfel: 在 Apple Silicon Mac 上零成本调用本地 Appl
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-04-07] apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-04-07] apfel: 在 Apple Silicon Mac 上零成本调用本地 Apple Intelligence
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-08-23] FDE 实战手册：大企业 vs 中小企业，前三个月该怎么干
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-04-10] Block Inc. 裁员召回事件与《从层级到智能》深度研究
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-10-23] Cortex Hub拆解：96% R@5基准有水分
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-09-16] God's Eye View：浏览器里的卫星侦察视角，数据全是真实的，MIT 开源，35K Stars
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-05-05] M1 Max 64GB 本地AI完整方案：Qwen3选型、内存管理与多模型调度
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-09-03] Meta Muse Voice Transcribe：MSL 首款实时音频感知模型，单模型做 ASR + 说话人分离 + 端点检测
+      正文出现实体名「intelligence」
+   ❌ [发过 2026-07-17] RepoCourier：7个频道、24个信息源，一条命令跑出你的每日技术情报
+      正文出现实体名「intelligence」
+   ❌ [知识库] 【Ling-3.0-Tiny】蚂蚁百灵开源轻量混合推理 MoE 模型  slug: ling-3-0-tiny-ant-
+      正文出现实体名「intelligence」
+   ❌ [知识库] ## Applied Compute — Specific Intelligence（具体智能）  **公司**: Ap
+      正文出现实体名「intelligence」
+   ❌ [知识库] published/general/973ec0c2|Applied;Compute;Intelligence|2026
+      正文出现实体名「intelligence」
+   ❌ [知识库] 【FDE 实战手册：大企业 vs 中小企业前三个月打法】基于22篇一手资料。  大企业打法：第1月深度审计（2-4周，找
+      正文出现实体名「intelligence」
+   ❌ [知识库] Meta Muse Voice Transcribe — Meta Superintelligence Labs (MS
+      正文出现实体名「intelligence」
+   ❌ [知识库] # Google Maps Ask Maps 新增 Agent 功能：点餐/订酒店/购票  **Summary**: G
+      正文出现实体名「intelligence」
+   ❌ [知识库] aps-personal-intelligence.gif  ---  原文链接：https://techcrunch.
+      正文出现实体名「intelligence」
+   ❌ [知识库] YC Summer 2026 全批次分析：236 家公司，AI Agent 与 Physical AI 双线爆发  数据
+      正文出现实体名「intelligence」
+   ❌ [知识库] .6 (消融实验最优) 结果 vs base Kimi K3: - LAB任务完成数 ~2×, +9 pp all-pa
+      正文出现实体名「intelligence」
+   ❌ [知识库] _picks: 3  关键特性： - 没有 AI Key 也能运行（回退到关键词规则） - 有 AI Key 用 Ope
+      正文出现实体名「intelligence」
+   ❌ [知识库] ## Google Maps Ask Maps — Agentic Features (2026-08-06)  **来
+      正文出现实体名「intelligence」
+   ❌ [知识库] ats API → Maps 显示 Order online 按钮 - 酒店：提交 Google Hotel Cente
+      正文出现实体名「intelligence」
+   ❌ [知识库] published/general/9204c6a5|Maps;Google;Intelligence;Square;T
+      正文出现实体名「intelligence」
+   ❌ [知识库] # 隐私优先部署方案 本地大模型 + Tailscale 组网： 1. 电脑安装 Ollama，拉模型（qwen3:14
+      正文出现实体名「intelligence」
+   ❌ [知识库] # Anthropic 2026年9月威胁情报报告  **Summary**: Anthropic 公开记录 2025.
+      正文出现实体名「intelligence」
+   ❌ [知识库] --- name: project_hypit description: Hypit — 给 Claude Code/C
+      正文出现实体名「intelligence」
+   ❌ [知识库] um 并发渲染 - WhisperX 逐词对齐 - Google Video Intelligence + YOLOv8
+      正文出现实体名「intelligence」
+   ❌ [知识库] --- name: project_anthropic_threat_report_2026 description:
+      正文出现实体名「intelligence」
+   ❌ [知识库] go） - GTG-54002（LKM Company，20 语言 70 个虚假新闻网站，8900+ 篇文章） - GT
+      正文出现实体名「intelligence」
+   ❌ [知识库] TFS-Realtime、AISStream、OpenSky、CelesTrak  **运行**：Pinokio GUI
+      正文出现实体名「intelligence」
+   ❌ [知识库] --- name: project_neural_imprint description: Neural Imprint
+      正文出现实体名「intelligence」
+   ❌ [知识库] "Intelligence moves toward data"|Neural;Imprint;AtomGradient
+      正文出现实体名「intelligence」
+   ❌ [知识库] --- name: cortex-hub-self-hosted-mcp-agent-memory-code-int d
+      正文出现实体名「intelligence」
+   ❌ [知识库] # Flint模型评估与Mac硬件门槛  **Summary**: 已找到Flint官方Hugging Face权重页与
+      正文出现实体名「intelligence」
+   ❌ [知识库] # Mac内置fm命令行AI使用指南  **Summary**: 苹果从macOS 27开始预装fm，可从终端调用Fou
+      正文出现实体名「intelligence」
+   ❌ [知识库] # 个人助手评测、路由与Apex模型调研  **Summary**: PersonalAgentEval 的公开任务池包
+      正文出现实体名「intelligence」
+   ❌ [知识库] --- name: apex-35b-v1-local-research-model description: Sour
+      正文出现实体名「intelligence」
+   ❌ [知识库] --- name: Grok Bot alternative engineering comparison descri
+      正文出现实体名「intelligence」
+   ❌ [知识库] delbenchmark planned. Existingstandalonearticlesreusedbackgr
+      正文出现实体名「intelligence」
+   ❌ [知识库] # 结果今天谷歌 DeepMind 首席 AGI 科学家 Sha  **Summary**: 结果今天谷歌 DeepMi
+      正文出现实体名「intelligence」
+   ❌ [知识库] # MatrAlx 正式发布  **Summary**: MatrAlx 正式发布 PersonalAgentEval!
+      正文出现实体名「intelligence」
+   ❌ [知识库] # Google Maps Ask Maps 新增 Agent 功能：点餐/订酒店/购票  **Summary**: G
+      正文出现实体名「intelligence」
+   ❌ [知识库] Harvey AI "Moneyball" 垂直域模型训练路线 (2026-08-28)  来源: harvey.ai/
+      正文出现实体名「intelligence」
+   ❌ [知识库] RepoCourier (jjyaoao/repo-courier) — 每日技术情报聚合工具，从7个频道收集内容，用关
+      正文出现实体名「intelligence」
+   ❌ [知识库] YC Summer 2026 全批次分析：236 家公司，AI Agent 与 Physical AI 双线爆发  数据
+      正文出现实体名「intelligence」
+   ❌ [知识库] # Flint模型评估与Mac硬件门槛  **Summary**: 已找到Flint官方Hugging Face权重页与
+      正文出现实体名「intelligence」
+   ❌ [知识库] # Anthropic 2026年9月威胁情报报告  **Summary**: Anthropic 公开记录 2025.
+      正文出现实体名「intelligence」
+   ❌ [知识库] # 个人助手评测、路由与Apex模型调研  **Summary**: PersonalAgentEval 的公开任务池包
+      正文出现实体名「intelligence」
+   ❌ [知识库] # Mac内置fm命令行AI使用指南  **Summary**: 苹果从macOS 27开始预装fm，可从终端调用Fou
+      正文出现实体名「intelligence」
+   ❌ [知识库] OpenMinis — 开源移动端 AI Agent（iOS/Android/macOS）  GitHub: https
+      正文出现实体名「intelligence」
+   ❌ [知识库] ## Google Maps Ask Maps — Agentic Features (2026-08-06)  **来
+      正文出现实体名「intelligence」
+   ❌ [知识库] # 40B 模型跑进笔记本，而它是 AI 自己造的  **Summary**: 40B 模型跑进笔记本，而它是 AI 自
+      正文出现实体名「intelligence」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。
