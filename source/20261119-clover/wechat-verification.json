@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-19T13:01:00.003Z",
+  "drafts": [
+    {
+      "slug": "clover-diffusion-llm-sft-engineering-guide",
+      "mediaId": "prCUE631thH1cmNLi42prG2JmINJD1V4eUhDnu8Qmo-UVOv9ejyDsDIXoWBaCA9j",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "e3916b1087dbf4b5e0b721796548c8ed9babcbaf737c12671f9feab494c21d55",
+      "remoteTextHash": "e3916b1087dbf4b5e0b721796548c8ed9babcbaf737c12671f9feab494c21d55",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/clover-diffusion-llm-sft-engineering-guide/",
+      "localContentHash": "0107933d3cea4e49e75342916a0f5c321f9bebcded88d9da6772421e29c825d3",
+      "remoteContentHash": "0071ec6423ffa6812384db908d750310cd03d4b53025d1be835cc40f66a736a0"
+    }
+  ]
+}

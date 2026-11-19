@@ -1,1 +1,91 @@
-[]
+[
+  {
+    "slug": "clover-diffusion-llm-sft-engineering-guide",
+    "query": "Clover DiffuSpace 扩散语言模型 双流 SFT 掩码 并行验证",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "clover-diffusion-llm-sft-engineering-guide",
+          "title": "Clover：扩散语言模型的SFT代码，能直接拿来训练吗？",
+          "url": "/blog/clover-diffusion-llm-sft-engineering-guide/",
+          "language": "zh",
+          "excerpt": "Clover：扩散语言模型的SFT代码，能直接拿来训练吗？ Clover 是总参数约 35B、激活约 3B 的扩散语言模型。本文结合技术报告与开放 SFT 代码，解释分块去噪、历史记忆和草稿验证，核对单轮文本、4096 token 与硬件限制，并记录本机26项CPU测试结果，区分GB300回放速度、消费卡部署成绩和真实训练复现，给出数据、检查点与工程验收的建议。 Clover 扩散语言模型 MoE SFT DiffuSpace 开源 分块扩散怎样利用历史，又避免偷看答案？ 开放的SFT包具体支持什么？ 本机26项测试证明了什么？ 680 tokens/s",
+          "score": 0.66163975
+        },
+        {
+          "article_id": "bitchat-bluetooth-mesh-nostr-decentralized-messaging-permissionless",
+          "title": "bitchat: A Deep Dive into Dual-Track Decentralized Messaging over Bluetooth Mesh and Nostr",
+          "url": "/blog/bitchat-bluetooth-mesh-nostr-decentralized-messaging-permissionless/",
+          "language": "en",
+          "excerpt": "bitchat: A Deep Dive into Dual-Track Decentralized Messaging over Bluetooth Mesh and Nostr bitchat: Deep Dive into a Dual-Transport Decentralized Messaging Protocol The Dual-Transport Architecture BLE Mesh Layer: Controlled Flooding Topology Model Flood Control Encryption Fragmen",
+          "score": 0.56536853
+        },
+        {
+          "article_id": "microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork",
+          "title": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒",
+          "url": "/blog/microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork/",
+          "language": "zh",
+          "excerpt": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒 microsoft/VibeVoice，54K stars，MIT，Python。7.5Hz 连续语音 tokenizer + LLM + 扩散头，单次推理 90 分钟 TTS、60 分钟 ASR，4 路说话人。2025-09 官方因深度伪造顾虑主动下架，社区 fork vibevoice-community/VibeVoice 接棒维护，已加 LoRA 微调和 HF Transformers 集成。工程指导：模型选型、API 服务化、BitN",
+          "score": 0.5428464
+        },
+        {
+          "article_id": "skillflow-flow-driven-skill-evolution-agent",
+          "title": "SkillFlow：用流匹配信号驱动 Agent 技能自主进化，14 个基准全面超越",
+          "url": "/blog/skillflow-flow-driven-skill-evolution-agent/",
+          "language": "zh",
+          "excerpt": "SkillFlow：用流匹配信号驱动 Agent 技能自主进化，14 个基准全面超越 来自港中深、南大、南洋理工的研究：SkillFlow 用流匹配训练信号替代启发式 LLM 判断，让 Agent 自主管理技能库，平均提升 41.2% EM，计算成本降低 32-35%。 AI Agent 强化学习 技能进化 流匹配 LLM SkillFlow arXiv 现有方法的三个根本问题 核心方法：三个流匹配信号 回火轨迹平衡（Tempered Trajectory Balance，TTB） 步骤重要性 I(t) 技能边际流 F̂(s) 实验结果：14 个基准，全",
+          "score": 0.53292704
+        },
+        {
+          "article_id": "higgs-realtime-duplex-open-weights-pricing-engineering",
+          "title": "Higgs Realtime Duplex：开源、收费与工程实现核查",
+          "url": "/blog/higgs-realtime-duplex-open-weights-pricing-engineering/",
+          "language": "zh",
+          "excerpt": "Higgs Realtime Duplex：开源、收费与工程实现核查 Higgs Realtime Duplex是李沐所在Boson AI团队的45B全双工模型。本文核对官方权重与候补API状态，区分现售Realtime费率、TTS和STT组件，解析160毫秒分块、后台工具、数字人和自托管路线，并介绍Mika、WorldForge的独立定位，给出经过本地检查的编排示例与工程接入边界。 Higgs 全双工 语音Agent Boson AI Mika WorldForge 这是不是李沐开发的模型？ 到底哪些开源，哪些只是可以调用？ 如果不开源，现在如何收费？",
+          "score": 0.53048074
+        },
+        {
+          "article_id": "hybrid-search-pagefind-vectorize-workers-ai-guide",
+          "title": "给静态博客装一套「关键词 + 语义」混合搜索：从 Pagefind 到 Cloudflare Vectorize 的完整实战记录（附复刻指南）",
+          "url": "/blog/hybrid-search-pagefind-vectorize-workers-ai-guide/",
+          "language": "zh",
+          "excerpt": "给静态博客装一套「关键词 + 语义」混合搜索：从 Pagefind 到 Cloudflare Vectorize 的完整实战记录（附复刻指南） 记录给 blog.mushroom.cv 加一套关键词+语义混合搜索的完整过程：先上零成本的 Pagefind 基线，用真实数据决定值不值得上向量检索，再用 Cloudflare Workers AI（bge-m3）+ Vectorize 上线。踩过的平台坑、真实修过的 bug、密码墙加了又拆的完整决策链，以及普通人如何克隆仓库复刻同一套技术栈。 Cloudflare Workers AI Vectorize P",
+          "score": 0.5259682
+        },
+        {
+          "article_id": "ququ-wispr-flow-alternative-chinese-voice-input-local-asr",
+          "title": "蛐蛐 QuQu：本地中文语音输入法深度拆解，Wispr Flow 开源替代",
+          "url": "/blog/ququ-wispr-flow-alternative-chinese-voice-input-local-asr/",
+          "language": "en",
+          "excerpt": "语音输入 ASR 本地推理 FunASR 开源拆解 桌面工具 QuQu (蛐蛐): Local Chinese Voice Input Method — Deep Teardown Project Background Two-Stage Pipeline Architecture Two Critical Issues QuQu vs. Wispr Flow Verdict",
+          "score": 0.5235404
+        },
+        {
+          "article_id": "cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt",
+          "title": "cloudflare/security-audit-skill：20 个 Markdown 文件怎么成了 Cloudflare 内部漏洞扫描器",
+          "url": "/blog/cloudflare-security-audit-skill-claude-code-six-phase-vulnerability-hunt/",
+          "language": "zh",
+          "excerpt": "cloudflare/security-audit-skill：20 个 Markdown 文件怎么成了 Cloudflare 内部漏洞扫描器 Cloudflare 开源安全审计 Skill，MIT，22K 星。本质是 ~300KB 结构化提示词，六阶段对抗验证流程，发现者不验证自己的漏洞，覆盖 13 个攻击域含 AI/LLM 安全。内部 Project Glasswing：145 仓库，30K 行代码约 80 个 bug，14 小时完成。 安全 AI Agent Claude Code Cloudflare 漏洞扫描 开源拆解 项目背景 第一个反直觉结",
+          "score": 0.52180725
+        },
+        {
+          "article_id": "deepseek-v4-flash-vision-exp-multimodal-agent-dspark",
+          "title": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了",
+          "url": "/blog/deepseek-v4-flash-vision-exp-multimodal-agent-dspark/",
+          "language": "zh",
+          "excerpt": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了 DeepSeek-V4 家族第一个实验性多模态模型，8 月 31 日上线，五天 18.4 万下载、651 likes，MIT。在 DeepSeek-V4-Flash 架构上加视觉模块并继续训练：多模态 agent 能力大幅提升，而七项文本 agent 基准里六项不降反升。三项超过 Opus-4.8（DeepSWE 59.3、Agents' Last Exam 27.3、ZeroBench 35.0）。DSpark 推测解码的 draft 权重和 targ",
+          "score": 0.5205297
+        },
+        {
+          "article_id": "openthoughts-agent-sft-data-recipe-agentic-models",
+          "title": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解",
+          "url": "/blog/openthoughts-agent-sft-data-recipe-agentic-models/",
+          "language": "zh",
+          "excerpt": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解 UC Berkeley、Stanford、Bespoke Labs 等多机构合作的 OpenThoughts-Agent 论文（arXiv:2606.24855）做了迄今最系统的 Agent SFT 数据配方研究：6 阶段流水线、100+ 消融实验、100K 数据集，微调 Qwen3-32B 达 7 基准均值 44.8%，超越 Nemotron 3.9pp。最有价值的不是模型权重，而是那套可复用的数据选取逻辑。 AI Agent SFT 数据配方 开源 这",
+          "score": 0.51996595
+        }
+      ]
+    }
+  }
+]

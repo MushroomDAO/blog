@@ -1,6 +1,8 @@
 from pathlib import Path
 import json,urllib.request,concurrent.futures,re
 p=Path(__file__).parent;r=p/'research';sha=(r/'revision.txt').read_text().strip();tree=json.loads((r/'tree.json').read_text());vendor=Path('/tmp/clover-20261119');vendor.mkdir(exist_ok=True)
+for name,url in [('report.html','https://arxiv.org/html/2611.24636v1'),('report.pdf','https://arxiv.org/pdf/2611.24636')]:
+ if not (r/name).exists():(r/name).write_bytes(urllib.request.urlopen(url,timeout=45).read())
 paths=[x['path']for x in tree['tree']if x['type']=='blob'and(x['path'].startswith('sft/')or x['path']=='README.md')]
 def one(src):
  data=urllib.request.urlopen(f'https://raw.githubusercontent.com/DiffuSpace/Clover-35B-A3B-Preview/{sha}/{src}',timeout=45).read();dest=vendor/src;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(data);return {'path':src,'bytes':len(data)}

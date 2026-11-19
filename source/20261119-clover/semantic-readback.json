@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "id": "ab1d05ebd8dbfce859bbd8a5effbc6591b51cf801ce9cc9c",
+    "metadata": {
+      "article_id": "clover-diffusion-llm-sft-engineering-guide",
+      "content_hash": "6a95f530f769d3a8",
+      "excerpt": "Clover：扩散语言模型的SFT代码，能直接拿来训练吗？ Clover 是总参数约 35B、激活约 3B 的扩散语言模型。本文结合技术报告与开放 SFT 代码，解释分块去噪、历史记忆和草稿验证，核对单轮文本、4096 token 与硬件限制，并记录本机26项CPU测试结果，区分GB300回放速度、消费卡部署成绩和真实训练复现，给出数据、检查点与工程验收的建议。 Clover 扩散语言模型 MoE SFT DiffuSpace 开源 分块扩散怎样利用历史，又避免偷看答案？ 开放的SFT包具体支持什么？ 本机26项测试证明了什么？ 680 tokens/s",
+      "language": "zh",
+      "tags": [
+        "Clover",
+        "扩散语言模型",
+        "MoE",
+        "SFT",
+        "DiffuSpace",
+        "开源"
+      ],
+      "title": "Clover：扩散语言模型的SFT代码，能直接拿来训练吗？",
+      "url": "/blog/clover-diffusion-llm-sft-engineering-guide/"
+    }
+  },
+  {
+    "id": "5da63ea720251a814ab142b0650a52b162057fae24ea031c",
+    "metadata": {
+      "article_id": "clover-diffusion-llm-sft-engineering-guide",
+      "content_hash": "c4b3fa4e9a1f7ea7",
+      "excerpt": "Clover Diffusion LLM: What Its Open SFT Code Supports Review Clover's block-diffusion SFT code, masks, memory boundaries, hardware requirements and 26 CPU tests, separating reported speed from reproduction. Clover 扩散语言模型 MoE SFT DiffuSpace 开源 How does block diffusion use history ",
+      "language": "en",
+      "tags": [
+        "Clover",
+        "扩散语言模型",
+        "MoE",
+        "SFT",
+        "DiffuSpace",
+        "开源"
+      ],
+      "title": "Clover Diffusion LLM: What Its Open SFT Code Supports",
+      "url": "/blog/clover-diffusion-llm-sft-engineering-guide/"
+    }
+  }
+]

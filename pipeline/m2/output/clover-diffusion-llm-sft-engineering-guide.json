@@ -1,0 +1,15 @@
+{
+  "title": "Clover：扩散模型SFT开放到哪一步",
+  "author": "Mycelium",
+  "digest": "核对训练代码、26项CPU测试与硬件边界，分清论文能力和当前可复现范围。",
+  "mediaId": "prCUE631thH1cmNLi42prG2JmINJD1V4eUhDnu8Qmo-UVOv9ejyDsDIXoWBaCA9j",
+  "blogUrl": "https://blog.mushroom.cv/blog/clover-diffusion-llm-sft-engineering-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/clover-diffusion-llm-sft-engineering-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/diffuspace/clover-35b-a3b-preview",
+    "huggingface.co/diffuspace/clover-35b-a3b-preview",
+    "github.com/diffuspace/clover-35b-a3b-preview.git"
+  ],
+  "publishedAt": "2026-11-19T13:00:11.307Z"
+}
