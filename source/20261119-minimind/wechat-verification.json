@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-19T12:07:29.354Z",
+  "drafts": [
+    {
+      "slug": "minimind-64m-llm-training-from-scratch-guide",
+      "mediaId": "prCUE631thH1cmNLi42prBVyPDN68kKjWIqwr2Y-q94u5knlGkIkyZbVutfPqH4v",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "3af1a10bcc9e7f0cf01c7d43bb2d3413340521008fa78c649b5dc1bcbd1842ce",
+      "remoteTextHash": "3af1a10bcc9e7f0cf01c7d43bb2d3413340521008fa78c649b5dc1bcbd1842ce",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/minimind-64m-llm-training-from-scratch-guide/",
+      "localContentHash": "ca332079165cf8ab1de0c26919925e2ef10fa518f0ac8f87bf8fb6b9c4da9060",
+      "remoteContentHash": "a311d1d29f242341130eff5d2ba666eda1af7c4c0b69db7db1f8697011dedd66"
+    }
+  ]
+}

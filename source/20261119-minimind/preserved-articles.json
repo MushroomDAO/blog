@@ -1,6 +1,12 @@
 {
-  "checkedAt": "2026-11-19T12:05:54.862030+00:00",
+  "checkedAt": "2026-11-19T12:06:55.620423+00:00",
   "articles": [
+    {
+      "slug": "minimind-o-multimodal-agent-eyes-ears-voice",
+      "url": "https://blog.mushroom.cv/blog/minimind-o-multimodal-agent-eyes-ears-voice/",
+      "status": 200,
+      "title": "MiniMind-O：113M 参数的全模态模型，能做 Agent 的眼睛、耳朵和嘴巴吗？"
+    },
     {
       "slug": "rumble-2-flash-small-asr-phone-call-benchmarks",
       "url": "https://blog.mushroom.cv/blog/rumble-2-flash-small-asr-phone-call-benchmarks/",
