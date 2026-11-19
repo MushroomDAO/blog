@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "92f448b3e607dd434aa050f4f28c6f7e7c3be9ef4190b964",
+    "metadata": {
+      "article_id": "rumble-2-flash-small-asr-phone-call-benchmarks",
+      "content_hash": "8544ec5f0920066a",
+      "excerpt": "Rumble-2-Flash：0.5B语音识别接近30B，边界在哪？ Rumble-2-Flash 是 Reson8 开源的 0.5B 多语言语音识别模型。本文核对 Apache 2.0 权重、Qwen3-ASR 架构、同策略蒸馏与电话测试，解释两款模型错误率差异、H200 满批吞吐和实时延迟的区别，记录模型卡与配置的语言数量不一致，并给出输出控制、接入和业务验收建议。性能均为官方报告。 ASR Reson8 Rumble-2-Flash 语音识别 开源模型 开源仓库在哪里，开放到了哪一层？ 电话识别真的追平 30B 了吗？ 7000 倍实时率，能保证通",
+      "language": "zh",
+      "tags": [
+        "ASR",
+        "Reson8",
+        "Rumble-2-Flash",
+        "语音识别",
+        "开源模型"
+      ],
+      "title": "Rumble-2-Flash：0.5B语音识别接近30B，边界在哪？",
+      "url": "/blog/rumble-2-flash-small-asr-phone-call-benchmarks/"
+    }
+  },
+  {
+    "id": "e2409963b6ce19806cc58cc8306920e07effc0b466d1f81a",
+    "metadata": {
+      "article_id": "rumble-2-flash-small-asr-phone-call-benchmarks",
+      "content_hash": "8ce41856740baf90",
+      "excerpt": "Rumble-2-Flash: Small ASR, Phone Calls and Batch Speed Review Rumble-2-Flash open ASR weights, phone-call accuracy, H200 batch throughput, distillation, output controls and practical deployment checks for engineers. ASR Reson8 Rumble-2-Flash 语音识别 开源模型 Where are the official artif",
+      "language": "en",
+      "tags": [
+        "ASR",
+        "Reson8",
+        "Rumble-2-Flash",
+        "语音识别",
+        "开源模型"
+      ],
+      "title": "Rumble-2-Flash: Small ASR, Phone Calls and Batch Speed",
+      "url": "/blog/rumble-2-flash-small-asr-phone-call-benchmarks/"
+    }
+  }
+]

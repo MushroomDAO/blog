@@ -1,0 +1,16 @@
+{
+  "title": "Rumble-2-Flash：小模型识别电话",
+  "author": "Mycelium",
+  "digest": "0.5B语音识别模型接近30B电话测试成绩，满批速度与实时延迟仍需分开看。",
+  "mediaId": "prCUE631thH1cmNLi42prAs8LPuA2AXAh0vJxxVGxcbG8isd5Tsb4qt3W1n1-j4M",
+  "blogUrl": "https://blog.mushroom.cv/blog/rumble-2-flash-small-asr-phone-call-benchmarks/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/rumble-2-flash-small-asr-phone-call-benchmarks/",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/reson8/rumble-2-flash",
+    "huggingface.co/blog/rumble-2-flash",
+    "huggingface.co/spaces/hf-audio",
+    "github.com/huggingface/transformers"
+  ],
+  "publishedAt": "2026-11-19T06:50:25.562Z"
+}

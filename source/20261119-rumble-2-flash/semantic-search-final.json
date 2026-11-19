@@ -1,1 +1,91 @@
-[]
+[
+  {
+    "slug": "rumble-2-flash-small-asr-phone-call-benchmarks",
+    "query": "Rumble-2-Flash Reson8 小模型 电话语音识别 H200 批处理",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "rumble-2-flash-small-asr-phone-call-benchmarks",
+          "title": "Rumble-2-Flash：0.5B语音识别接近30B，边界在哪？",
+          "url": "/blog/rumble-2-flash-small-asr-phone-call-benchmarks/",
+          "language": "zh",
+          "excerpt": "Rumble-2-Flash：0.5B语音识别接近30B，边界在哪？ Rumble-2-Flash 是 Reson8 开源的 0.5B 多语言语音识别模型。本文核对 Apache 2.0 权重、Qwen3-ASR 架构、同策略蒸馏与电话测试，解释两款模型错误率差异、H200 满批吞吐和实时延迟的区别，记录模型卡与配置的语言数量不一致，并给出输出控制、接入和业务验收建议。性能均为官方报告。 ASR Reson8 Rumble-2-Flash 语音识别 开源模型 开源仓库在哪里，开放到了哪一层？ 电话识别真的追平 30B 了吗？ 7000 倍实时率，能保证通",
+          "score": 0.7235919
+        },
+        {
+          "article_id": "higgs-audio-v2-engineering-deployment-guide",
+          "title": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入",
+          "url": "/blog/higgs-audio-v2-engineering-deployment-guide/",
+          "language": "zh",
+          "excerpt": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入 Higgs Audio v2 是 Boson AI 可下载权重的语音生成模型，适合旁白、声音克隆和多人对白。本文核对推理代码、模型社区许可、24GB 显存建议、参考音频与转写配对、长文本分块及 vLLM 服务，给出安装命令与生产接入方案，并明确区分源码检查、官方性能报告和未经本地复现的音质指标，帮助团队先跑通小样。 Higgs Audio v2 Boson AI TTS Voice Cloning Self Hosting 先下载哪两个东西？ 是不是开源？商业使用需要检查什么？ 先解决一个",
+          "score": 0.5796522
+        },
+        {
+          "article_id": "decision2-kai-06b-local-classification-gguf",
+          "title": "Decision 2.0 Kai：0.6B 小模型做本地判断，400MB GGUF 的部署边界",
+          "url": "/blog/decision2-kai-06b-local-classification-gguf/",
+          "language": "zh",
+          "excerpt": "Decision 2.0 Kai：0.6B 小模型做本地判断，400MB GGUF 的部署边界 Decision 2.0 Kai 用 0.6B 参数和一次前向计算完成分类、是非判断与评分，Q4 GGUF 文件为 400.9MB。本文核对 8192 token 输入预算、专用 llama.cpp 分支及 System One 接口，并从官方小样本验证解释量化后的概率漂移为何可能改变复核路径；本文未运行本机推理。 Decision 2.0 小模型 Hugging Face 本地 AI GGUF 语义路由 Qwen3 为什么本地工作流需要一个只做判断的小模型？",
+          "score": 0.5586482
+        },
+        {
+          "article_id": "huggingface-speech-to-speech-voice-agent-vad-stt-llm-tts-local",
+          "title": "huggingface/speech-to-speech：一行命令跑起本地语音 Agent 完整管道",
+          "url": "/blog/huggingface-speech-to-speech-voice-agent-vad-stt-llm-tts-local/",
+          "language": "zh",
+          "excerpt": "huggingface/speech-to-speech：一行命令跑起本地语音 Agent 完整管道 huggingface/speech-to-speech，12,080 stars，Apache-2.0，Python。低延迟、完全模块化的语音 Agent 管道：VAD → STT → LLM → TTS，通过 OpenAI Realtime 兼容的 WebSocket API 暴露。每个组件可独立替换，LLM 槽位支持 OpenAI 兼容协议——可以指向云端提供商、HF Inference Providers，或者本地 vLLM/llama.cpp，",
+          "score": 0.55429715
+        },
+        {
+          "article_id": "audio8-tts-preview-0.6b-multilingual-zero-shot-voice-cloning-dualAR",
+          "title": "Audio8 TTS Preview 0.6B：0.6B 参数打赢 4.6B 的 TTS 模型——11 语言零样本声音克隆",
+          "url": "/blog/audio8-tts-preview-0.6b-multilingual-zero-shot-voice-cloning-dualAR/",
+          "language": "zh",
+          "excerpt": "Audio8 TTS Preview 0.6B：0.6B 参数打赢 4.6B 的 TTS 模型——11 语言零样本声音克隆 Audio8 TTS Preview 是一个 0.6B 参数的多语言文本转语音模型，采用 DualAR 架构（慢 AR 预测语义 token + 快 AR 预测声学码本），支持 11 种语言（含粤语）零样本声音克隆。Seed-TTS 英语 WER 1.506，以 0.6B 参数规模超越 Fish S2 Pro（4.6B）、Higgs Audio v2（4.7B）。Apache 2.0，HuggingFace 开放权重。 一、基本信息",
+          "score": 0.55024093
+        },
+        {
+          "article_id": "huggingface-speech-to-speech-local-voice-agent-robot-pipeline",
+          "title": "HuggingFace Speech-to-Speech：一行安装本地语音助手，延迟低到像真人，驱动数千台机器人",
+          "url": "/blog/huggingface-speech-to-speech-local-voice-agent-robot-pipeline/",
+          "language": "zh",
+          "excerpt": "HuggingFace Speech-to-Speech：一行安装本地语音助手，延迟低到像真人，驱动数千台机器人 huggingface/speech-to-speech 是一个低延迟、全模块化的本地语音 Agent 流水线（VAD → STT → LLM → TTS），兼容 OpenAI Realtime API。10.6K stars，Apache 2.0，`pip install speech-to-speech` 一行启动。已在数千台 Reachy Mini 机器人的对话后端中跑生产。每个组件均可替换，Apple Silicon 原生支持。 语音",
+          "score": 0.54720414
+        },
+        {
+          "article_id": "whistle-17mb-local-speech-to-tool-calls",
+          "title": "Whistle 实测：16.9MB 语音模型，怎样把一句话变成本地工具调用？",
+          "url": "/blog/whistle-17mb-local-speech-to-tool-calls/",
+          "language": "zh",
+          "excerpt": "Whistle 实测：16.9MB 语音模型，怎样把一句话变成本地工具调用？ Whistle 是 16.9MB 的端侧语音识别模型，支持七种欧洲语言，不含中文。本文在 M4 Mac mini 验证静音与合成英语输入，并用 Needle 3 在 96 毫秒内生成灯光调用；两份权重共 52.3MB。文章核对文件体积、引擎自报内存、词级时间戳、厂商跑分及遥测说明，解释它适合英文短口令的原因。 Whistle Hugging Face 小模型 语音识别 端侧 AI Needle 工具调用 Apple Silicon 为什么关注一个 16.9MB 的语音模型？ 1",
+          "score": 0.5458576
+        },
+        {
+          "article_id": "audio8-asr-01b-on-device-speech-recognition",
+          "title": "Audio8-ASR-0.1B：0.1B 参数，LibriSpeech 2.70 WER，iPhone 本地跑只占 200MB",
+          "url": "/blog/audio8-asr-01b-on-device-speech-recognition/",
+          "language": "zh",
+          "excerpt": "Audio8-ASR-0.1B：0.1B 参数，LibriSpeech 2.70 WER，iPhone 本地跑只占 200MB Audio8-ASR-0.1B 是一个端到端参数量 0.324B、语言模型核心仅 0.1B 的自回归 ASR 模型，LibriSpeech test-clean WER 2.70%，Open ASR Leaderboard 七集平均 WER 7.03%。三条部署路径：Transformers（Python 服务端）、ONNX Runtime（跨平台 HTTP API）、iOS ANE（iPhone 本地，峰值内存约 200MB）",
+          "score": 0.54457194
+        },
+        {
+          "article_id": "pipecat-phonellm-alpha-1-voice-agent-model",
+          "title": "PhoneLLM Alpha 1：Pipecat 罕见自研模型，专攻电话语音 Agent 的工具调用",
+          "url": "/blog/pipecat-phonellm-alpha-1-voice-agent-model/",
+          "language": "zh",
+          "excerpt": "PhoneLLM Alpha 1：Pipecat 罕见自研模型，专攻电话语音 Agent 的工具调用 开源语音 AI 框架 Pipecat（15k⭐，本来接 50+ 家 LLM 服务不做自有模型）罕见发布首个自研模型 PhoneLLM Alpha 1：基于 NVIDIA Nemotron 3 Nano 30B-A3B 全参数微调，PhoneBench v1 上性能对齐 GPT-4 Turbo，成本低 94%，P95 首字延迟快 1300ms。 Pipecat PhoneLLM 语音Agent Nemotron 工具调用 开源 一个中立框架为什么要自己做模",
+          "score": 0.5392823
+        },
+        {
+          "article_id": "index-tts-25-production-tts-voice-clone-emotion-multilingual",
+          "title": "IndexTTS-2.5：生产级零样本 TTS，一段参考音频克隆音色 + 细粒度情感与语速控制",
+          "url": "/blog/index-tts-25-production-tts-voice-clone-emotion-multilingual/",
+          "language": "zh",
+          "excerpt": "IndexTTS-2.5：生产级零样本 TTS，一段参考音频克隆音色 + 细粒度情感与语速控制 index-tts/index-tts，⭐22,615，Python，2026-08-10 发布 IndexTTS-2.5。零样本文本转语音系统，一段参考音频即可克隆音色。支持中文、英文、日语、西班牙语、阿拉伯语五种语言，跨语言音色保持。8维情感向量（愉快/愤怒/悲伤/恐惧/厌恶/忧郁/惊讶/平静），支持情感参考音频、文本情感自动转换、显式情感描述四种控制方式；duration_factor 语速控制（0.5×–2.0×）；拼音/CMU音素/日语假名发音精确控",
+          "score": 0.53753597
+        }
+      ]
+    }
+  }
+]
