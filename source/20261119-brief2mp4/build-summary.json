@@ -1,0 +1,8 @@
+{
+  "branch": "main",
+  "remoteSync": "git pull --rebase origin main passed; locally fast-forwarded to already-pushed Clover branch to preserve its production article",
+  "build": "pnpm build passed once",
+  "deployment": "https://df569bf7.blog-mushroom.pages.dev",
+  "manualVerification": "canonical exacttitle/listRank1/carouselRank1/5assets200;12priorarticles preserved",
+  "checkedAt": "2026-11-19T14:41:18.506396+00:00"
+}

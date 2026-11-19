@@ -1,6 +1,18 @@
 {
-  "checkedAt": "2026-11-19T14:37:39.474231+00:00",
+  "checkedAt": "2026-11-19T14:40:45.950945+00:00",
   "articles": [
+    {
+      "slug": "clover-diffusion-llm-sft-engineering-guide",
+      "url": "https://blog.mushroom.cv/blog/clover-diffusion-llm-sft-engineering-guide/",
+      "status": 200,
+      "title": "Clover：扩散语言模型的SFT代码，能直接拿来训练吗？"
+    },
+    {
+      "slug": "minimind-64m-llm-training-from-scratch-guide",
+      "url": "https://blog.mushroom.cv/blog/minimind-64m-llm-training-from-scratch-guide/",
+      "status": 200,
+      "title": "MiniMind 64M：从零训练语言模型，真正该学什么？"
+    },
     {
       "slug": "minimind-o-multimodal-agent-eyes-ears-voice",
       "url": "https://blog.mushroom.cv/blog/minimind-o-multimodal-agent-eyes-ears-voice/",

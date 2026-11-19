@@ -1,0 +1,38 @@
+[
+  {
+    "id": "fbc3d54491a0beb7004ccba95788c0fa465dbe917e3298a3",
+    "metadata": {
+      "article_id": "brief2mp4-agent-motion-graphics-verification-guide",
+      "content_hash": "c2edcb835ec10744",
+      "excerpt": "brief2mp4：让AI做动画，也交出验收证据 brief2mp4把动画制作拆成需求规格、工具路由、渲染、检查与修正，最终交付MP4及证据报告。本文核对MIT许可和0.4.0代码，运行60项原仓库测试及5个真实视频检查用例，解释HyperFrames、Three.js和ffmpeg的分工，以及为什么格式通过仍不代表字幕、构图、故事和客户需求已经通过验收。 brief2mp4 Agent Skills Motion Graphics HyperFrames FFmpeg brief2mp4究竟开放了什么？ 一段动画为什么要调用多种工具？ “检查通过”具体",
+      "language": "zh",
+      "tags": [
+        "brief2mp4",
+        "Agent Skills",
+        "Motion Graphics",
+        "HyperFrames",
+        "FFmpeg"
+      ],
+      "title": "brief2mp4：让AI做动画，也交出验收证据",
+      "url": "/blog/brief2mp4-agent-motion-graphics-verification-guide/"
+    }
+  },
+  {
+    "id": "fde080c27158cadcd633154aef996234f25412f172740cf8",
+    "metadata": {
+      "article_id": "brief2mp4-agent-motion-graphics-verification-guide",
+      "content_hash": "b647ecbe8a04f0e9",
+      "excerpt": "brief2mp4: Agent Motion Graphics With Delivery Checks Explore brief2mp4's MIT agent skill, deterministic rendering and delivery checks, with 60 upstream tests and five video checks separating format from meaning. brief2mp4 Agent Skills Motion Graphics HyperFrames FFmpeg What does",
+      "language": "en",
+      "tags": [
+        "brief2mp4",
+        "Agent Skills",
+        "Motion Graphics",
+        "HyperFrames",
+        "FFmpeg"
+      ],
+      "title": "brief2mp4: Agent Motion Graphics With Delivery Checks",
+      "url": "/blog/brief2mp4-agent-motion-graphics-verification-guide/"
+    }
+  }
+]

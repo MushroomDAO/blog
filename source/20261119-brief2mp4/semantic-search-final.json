@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "brief2mp4-agent-motion-graphics-verification-guide",
+    "query": "brief2mp4 MIT animation brief SPEC REPORT delivery checks",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "brief2mp4-agent-motion-graphics-verification-guide",
+          "title": "brief2mp4: Agent Motion Graphics With Delivery Checks",
+          "url": "/blog/brief2mp4-agent-motion-graphics-verification-guide/",
+          "language": "en",
+          "excerpt": "brief2mp4: Agent Motion Graphics With Delivery Checks Explore brief2mp4's MIT agent skill, deterministic rendering and delivery checks, with 60 upstream tests and five video checks separating format from meaning. brief2mp4 Agent Skills Motion Graphics HyperFrames FFmpeg What does",
+          "score": 0.71105325
+        },
+        {
+          "article_id": "comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy",
+          "title": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案",
+          "url": "/blog/comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy/",
+          "language": "zh",
+          "excerpt": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案 sepiablue-ai 开源，GPL-3.0，46 stars。两个 ComfyUI 节点把 MiniMax H3 视频生成塞进 12GB 消费级 GPU：W4A4 量化（FC1 层 ConvRot 预转换缓存）+ 流式 VSA 稀疏注意力（FastH3 官方 gate 文件）。RTX 4070 12GB 实测：832×1408×124帧约 3m29s，峰值 11.5GB 显存，比 INT8 基线快约 11%。需 Amp",
+          "score": 0.52844185
+        },
+        {
+          "article_id": "pixel2motion-ai-logo-animation-pipeline",
+          "title": "From Pixels to Motion: How Pixel2SVG-HTML + Pixel2Motion Turn a Logo Screenshot Into Reviewable Brand Animation",
+          "url": "/blog/pixel2motion-ai-logo-animation-pipeline/",
+          "language": "en",
+          "excerpt": "From Pixels to Motion: How Pixel2SVG-HTML + Pixel2Motion Turn a Logo Screenshot Into Reviewable Brand Animation Two open-source Codex/Claude skills by nolangz form one pipeline: Pixel2SVG-HTML fits a raster logo into the lowest-complexity semantic SVG, and Pixel2Motion choreograp",
+          "score": 0.52614164
+        },
+        {
+          "article_id": "confucius4-r2t2-true-streaming-asr-lsp-netease-youdao",
+          "title": "Confucius4-R2T2: NetEase Youdao's True-Streaming ASR — LSP Eliminates Text Flicker Completely",
+          "url": "/blog/confucius4-r2t2-true-streaming-asr-lsp-netease-youdao/",
+          "language": "en",
+          "excerpt": "Confucius4-R2T2: NetEase Youdao's True-Streaming ASR — LSP Eliminates Text Flicker Completely netease-youdao/Confucius4-R2T2 — 306 stars, Apache 2.0 code / separate NetEase model weight license. A 2B-parameter true-streaming ASR model based on Qwen3-ASR-1.7B. Core innovation: Lon",
+          "score": 0.5153235
+        },
+        {
+          "article_id": "minimax-h3-accelerated-fasth3-sol-h3-vdn-pdd-lightx2v-five-open-source-speedups",
+          "title": "MiniMax H3 加速五件套：稀疏注意力、混合注意力、并行解码，15 秒视频压进 6.6 秒",
+          "url": "/blog/minimax-h3-accelerated-fasth3-sol-h3-vdn-pdd-lightx2v-five-open-source-speedups/",
+          "language": "zh",
+          "excerpt": "MiniMax H3 加速五件套：稀疏注意力、混合注意力、并行解码，15 秒视频压进 6.6 秒 MiniMax 官方 Spotlight 点名五个开源加速方案：FastH3（VSA 4步蒸馏）、Sol-H3（免训练动态稀疏+fused kernel）、VDN（混合线性+softmax注意力）、PDD（并行解码头蒸馏）、LightX2V Turbo（DMD LoRA）。8×B300 将 15 秒视频压进 6.6 秒；DGX Spark 两阶段 Pipeline 在桌面级硬件上完成 1344×768 多模态生成。 MiniMax-H3 video-gene",
+          "score": 0.514065
+        },
+        {
+          "article_id": "rumble-2-flash-small-asr-phone-call-benchmarks",
+          "title": "Rumble-2-Flash: Small ASR, Phone Calls and Batch Speed",
+          "url": "/blog/rumble-2-flash-small-asr-phone-call-benchmarks/",
+          "language": "en",
+          "excerpt": "Rumble-2-Flash: Small ASR, Phone Calls and Batch Speed Review Rumble-2-Flash open ASR weights, phone-call accuracy, H200 batch throughput, distillation, output controls and practical deployment checks for engineers. ASR Reson8 Rumble-2-Flash 语音识别 开源模型 Where are the official artif",
+          "score": 0.51220953
+        },
+        {
+          "article_id": "flux3-black-forest-labs-multimodal-video-audio-action-local-deployment-guide",
+          "title": "FLUX.3 深度解析：图像+视频+音频+机器人动作，一个模型，本地部署完整指南与硬件成本评估",
+          "url": "/blog/flux3-black-forest-labs-multimodal-video-audio-action-local-deployment-guide/",
+          "language": "zh",
+          "excerpt": "FLUX.3 深度解析：图像+视频+音频+机器人动作，一个模型，本地部署完整指南与硬件成本评估 Black Forest Labs 于2026-07-23发布FLUX.3，单一多模态基础模型联合学习图像/视频/音频/动作，Early Access API已上线。本文深度解析FLUX.3架构、能力、评测数据，以及现有FLUX.1/2系列全套本地部署方案：mflux（Apple Silicon）、ComfyUI（NVIDIA）、硬件选配建议和成本对比。 FLUX 图像生成 视频生成 多模态 Black Forest Labs 本地部署 Apple Silic",
+          "score": 0.5092922
+        },
+        {
+          "article_id": "toonflow-short-drama-workflow",
+          "title": "Toonflow：两小时130元短剧案例背后",
+          "url": "/blog/toonflow-short-drama-workflow/",
+          "language": "zh",
+          "excerpt": "Toonflow：两小时130元短剧案例背后 Toonflow将剧本、分镜、角色资产与图片视频生成整合到无限画布。本文核对官方两小时、约130元制作两分钟短片的案例条件，拆解模型费用、镜头返工、部署与备份路径，以及Agent和MCP的边界，区分当前MIT主线与旧版许可，并说明为何本地部署不等于免费模型推理，也不代表任意小说能够无人值守生成可交付作品。 Toonflow AI短剧 视频生成 开源工具 工作流 两小时、130元，到底买到了什么？ 一站式，指的是怎样的工作流？ 免费开源，为什么还要花模型费？ 怎样部署，先验证什么？ Agent、MCP与插件能替",
+          "score": 0.5079029
+        },
+        {
+          "article_id": "pixelle-video-ai-short-video-generator",
+          "title": "One Prompt, Full Short Video: Getting Started with Pixelle-Video Open-Source Engine",
+          "url": "/blog/pixelle-video-ai-short-video-generator/",
+          "language": "en",
+          "excerpt": "One Prompt, Full Short Video: Getting Started with Pixelle-Video Open-Source Engine Pixelle-Video is a fully automated AI short video engine (25k+ GitHub stars). Give it a topic, and it writes the script, generates AI images, synthesizes voice (with voice cloning), adds backgroun",
+          "score": 0.5074471
+        },
+        {
+          "article_id": "mellum21-thinking-coding-agent",
+          "title": "Mellum2.1：把小模型训练成仓库里的执行者",
+          "url": "/blog/mellum21-thinking-coding-agent/",
+          "language": "zh",
+          "excerpt": "Mellum2.1：把小模型训练成仓库里的执行者 JetBrains Mellum2.1 Thinking 是总参数 12B、激活参数 2.5B 的代码模型。复核 ModelScope、官方模型卡和 GGUF 文件，分析仓库强化学习、工具调用成绩及部署路线，区分 H200 速度与本地运行条件，说明激活参数与内存需求的区别，以及先验证工具协议再尝试仓库修复的方法。 JetBrains Mellum Coding-Agent MoE GGUF Local-AI Mellum2.1 改变了什么？ 官方成绩说明了什么，也留下了什么？ 2.5B 激活参数，为什么文",
+          "score": 0.50724494
+        }
+      ]
+    }
+  }
+]

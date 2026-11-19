@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-19T14:41:27.542Z",
+  "drafts": [
+    {
+      "slug": "brief2mp4-agent-motion-graphics-verification-guide",
+      "mediaId": "prCUE631thH1cmNLi42prOsHkSd26VmzdJdxC2E6v5NqI8dSbbUwyhbWBHATf9g9",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "6192452481f7fd7148dbbe3a1bef0a186c87cef2b9f456400e8f4022e573eacc",
+      "remoteTextHash": "6192452481f7fd7148dbbe3a1bef0a186c87cef2b9f456400e8f4022e573eacc",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/brief2mp4-agent-motion-graphics-verification-guide/",
+      "localContentHash": "0d9764c5ddc972907afbc0c7e48b51230063cadebcf916f1ae3a1495be511af6",
+      "remoteContentHash": "031e4cd352dd848035f59abaf995338adb2960ebed6f92e336ff740f21e39ff9"
+    }
+  ]
+}
