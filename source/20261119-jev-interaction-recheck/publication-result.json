@@ -10,5 +10,8 @@
   "newArticles": 0,
   "newDrafts": 0,
   "deployedThisRun": false,
-  "checkedAt": "2026-11-19T12:20:45.139434+00:00"
+  "checkedAt": "2026-11-19T12:20:45.139434+00:00",
+  "repositoryStatus": "review-required",
+  "pullRequest": "https://github.com/MushroomDAO/blog/pull/266",
+  "mainMerged": false
 }
