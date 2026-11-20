@@ -1,0 +1,196 @@
+[strata] 400 invalid request: gone cannot be loaded: the model file is missing (/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/tmpcdad6ow_/gone.gguf)
+[strata] switching the model: alpha -> beta
+[strata] beta did not start (no VRAM); starting alpha again ...
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 23 tokens in 0 s (244845.2 tok/s) (stop, cancel=False)
+[strata] switching the model: alpha -> beta
+[strata] beta did not start (no VRAM); starting alpha again ...
+[strata] thinking: 8 of max 200 tokens, 8.7 tok/s, 1 s
+[strata] answering: 16 of max 200 tokens, 8.0 tok/s, 2 s
+[strata] answering: 23 of max 200 tokens, 7.6 tok/s, 3 s
+[strata] answering: 30 of max 200 tokens, 7.3 tok/s, 4 s
+[strata] answering: 37 of max 200 tokens, 7.1 tok/s, 5 s
+[strata] answering: 44 of max 200 tokens, 7.0 tok/s, 6 s
+[strata] answering: 53 of max 200 tokens, 7.3 tok/s, 7 s
+[strata] answering: 61 of max 200 tokens, 7.3 tok/s, 8 s
+[strata] done: 62 tokens in 9 s (7.3 tok/s) (stop, cancel=False)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 22 tokens in 0 s (300569.0 tok/s) (stop, cancel=False)
+[strata] thinking: 8 of max 200 tokens, 7.3 tok/s, 1 s
+[strata] answering: 15 of max 200 tokens, 7.1 tok/s, 2 s
+[strata] answering: 23 of max 200 tokens, 7.0 tok/s, 3 s
+[strata] answering: 31 of max 200 tokens, 7.1 tok/s, 4 s
+[strata] answering: 38 of max 200 tokens, 7.0 tok/s, 5 s
+[strata] answering: 47 of max 200 tokens, 7.2 tok/s, 7 s
+[strata] answering: 54 of max 200 tokens, 7.1 tok/s, 8 s
+[strata] answering: 61 of max 200 tokens, 7.0 tok/s, 9 s
+[strata] done: 62 tokens in 9 s (7.0 tok/s) (stop, cancel=False)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] done: 22 tokens in 0 s (297660.3 tok/s) (stop, cancel=False)
+[strata] switching the model: beta -> alpha
+[strata] the model is now alpha (context 4096 tokens)
+[strata] done: 23 tokens in 0 s (333802.7 tok/s) (stop, cancel=False)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 22 tokens in 0 s (301551.3 tok/s) (stop, cancel=False)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 22 tokens in 0 s (327215.2 tok/s) (stop, cancel=False)
+[strata] switching the model: beta -> alpha
+[strata] the model is now alpha (context 4096 tokens)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 23 tokens in 0 s (324811.4 tok/s) (stop, cancel=False)
+[strata] thinking: 8 of max 200 tokens, 8.9 tok/s, 1 s
+[strata] answering: 18 of max 200 tokens, 9.2 tok/s, 2 s
+[strata] answering: 26 of max 200 tokens, 8.7 tok/s, 3 s
+[strata] answering: 35 of max 200 tokens, 8.7 tok/s, 4 s
+[strata] answering: 45 of max 200 tokens, 8.7 tok/s, 5 s
+[strata] answering: 56 of max 200 tokens, 9.0 tok/s, 6 s
+[strata] done: 62 tokens in 7 s (9.1 tok/s) (stop, cancel=False)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 22 tokens in 0 s (301551.3 tok/s) (stop, cancel=False)
+[strata] switching the model: beta -> alpha
+[strata] the model is now alpha (context 4096 tokens)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 23 tokens in 0 s (327013.5 tok/s) (stop, cancel=False)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 23 tokens in 0 s (333802.7 tok/s) (stop, cancel=False)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 23 tokens in 0 s (359958.9 tok/s) (stop, cancel=False)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 23 tokens in 0 s (371034.6 tok/s) (stop, cancel=False)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 23 tokens in 0 s (365412.8 tok/s) (stop, cancel=False)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 22 tokens in 0 s (292935.5 tok/s) (stop, cancel=False)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] done: 22 tokens in 0 s (286567.4 tok/s) (stop, cancel=False)
+[strata] switching the model: beta -> alpha
+[strata] the model is now alpha (context 4096 tokens)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 23 tokens in 0 s (220752.8 tok/s) (stop, cancel=False)
+[strata] thinking limited to 2882 of max_tokens 3842 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 23 tokens in 0 s (253199.5 tok/s) (stop, cancel=False)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+/private/tmp/polystrata-20261120/serve/test_models.py:612: ResourceWarning: unclosed <socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 63353)>
+  self.assertEqual(S.main(), 0)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/polystrata-20261120/serve/test_models.py:612: ResourceWarning: unclosed <socket.socket fd=8, family=2, type=1, proto=0, laddr=('127.0.0.1', 63355)>
+  self.assertEqual(S.main(), 0)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/polystrata-20261120/serve/test_models.py:612: ResourceWarning: unclosed <socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 63357)>
+  self.assertEqual(S.main(), 0)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/polystrata-20261120/serve/test_models.py:612: ResourceWarning: unclosed <socket.socket fd=8, family=2, type=1, proto=0, laddr=('127.0.0.1', 63359)>
+  self.assertEqual(S.main(), 0)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/polystrata-20261120/serve/test_models.py:612: ResourceWarning: unclosed <socket.socket fd=3, family=2, type=1, proto=0, laddr=('127.0.0.1', 63362)>
+  self.assertEqual(S.main(), 0)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/polystrata-20261120/serve/test_models.py:612: ResourceWarning: unclosed <socket.socket fd=8, family=2, type=1, proto=0, laddr=('127.0.0.1', 63364)>
+  self.assertEqual(S.main(), 0)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+[strata] switching the model: alpha -> beta
+[strata] beta did not start (no VRAM); starting alpha again ...
+[strata] switching the model: alpha -> beta
+[strata] beta did not start (no VRAM); starting alpha again ...
+[strata] the config's args hold '--max-context 8192', '--reasoning-effort=low' as one element each: split into the flag and its value (write them as two elements, e.g. "--ple-io", "mmap")
+[strata] '--reasoning-effort' in the config's args is not an engine option: taken out of them. The thinking level is the config's 'reasoning_effort' key (outside 'args'); it is used as 'low'
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] the model unloads after 600.0 s without requests
+[strata] switching the model: beta -> alpha
+[strata] the model is now alpha (context 4096 tokens)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] switching the model: beta -> alpha
+[strata] the model is now alpha (context 4096 tokens)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] model unloaded; the next request loads it again
+/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/case.py:669: ResourceWarning: unclosed <socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 63365)>
+  function, args, kwargs = self._cleanups.pop()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+[strata] switching the model: alpha -> beta
+[strata] other apps use the Chat settings: top_k=9
+[strata] the model is now beta (context 4096 tokens)
+[strata] switching the model: beta -> alpha
+[strata] the model is now alpha (context 4096 tokens)
+[strata] switching the model: alpha -> beta
+[strata] other apps use the Chat settings: top_k=3
+[strata] the model is now beta (context 4096 tokens)
+[strata] switching the model: alpha -> beta
+[strata] the model is now beta (context 4096 tokens)
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) leaves no room to answer in the context (131072); requests are never truncated
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) leaves no room to answer in the context (131072); requests are never truncated
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) + max tokens (16) exceeds the context (131072); requests are never truncated. Send a smaller max_tokens (at most 0 here), or add "fit_max_tokens": true to the model's strata-<model>.json to shorten it to the room left (#545)
+[strata] 400 invalid request: request exceeds the context window: prompt (1024 tokens) + max tokens (131072) exceeds the context (131072); requests are never truncated. Send a smaller max_tokens (at most 130040 here), or add "fit_max_tokens": true to the model's strata-<model>.json to shorten it to the room left (#545)
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) leaves no room to answer in the context (131072); requests are never truncated
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) leaves no room to answer in the context (131072); requests are never truncated
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) + max tokens (16) exceeds the context (131072); requests are never truncated. Send a smaller max_tokens (at most 0 here), or add "fit_max_tokens": true to the model's strata-<model>.json to shorten it to the room left (#545)
+[strata] 400 invalid request: request exceeds the context window: prompt (1024 tokens) + max tokens (131072) exceeds the context (131072); requests are never truncated. Send a smaller max_tokens (at most 130040 here), or add "fit_max_tokens": true to the model's strata-<model>.json to shorten it to the room left (#545)
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) leaves no room to answer in the context (131072); requests are never truncated
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) leaves no room to answer in the context (131072); requests are never truncated
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) + max tokens (16) exceeds the context (131072); requests are never truncated. Send a smaller max_tokens (at most 0 here), or add "fit_max_tokens": true to the model's strata-<model>.json to shorten it to the room left (#545)
+[strata] 400 invalid request: request exceeds the context window: prompt (1024 tokens) + max tokens (131072) exceeds the context (131072); requests are never truncated. Send a smaller max_tokens (at most 130040 here), or add "fit_max_tokens": true to the model's strata-<model>.json to shorten it to the room left (#545)
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) leaves no room to answer in the context (131072); requests are never truncated
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) leaves no room to answer in the context (131072); requests are never truncated
+[strata] 400 invalid request: request exceeds the context window: prompt (150722 tokens) + max tokens (16) exceeds the context (131072); requests are never truncated. Send a smaller max_tokens (at most 0 here), or add "fit_max_tokens": true to the model's strata-<model>.json to shorten it to the room left (#545)
+[strata] 400 invalid request: request exceeds the context window: prompt (1024 tokens) + max tokens (131072) exceeds the context (131072); requests are never truncated. Send a smaller max_tokens (at most 130040 here), or add "fit_max_tokens": true to the model's strata-<model>.json to shorten it to the room left (#545)
+[strata] thinking limited to 1 of max_tokens 1 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 1 tokens in 0 s (19599.6 tok/s) (length, cancel=False)
+[strata] the reply reached the end of the context while still thinking, so it has no answer: only 1 tokens were left of the 131072. A larger --max-context in strata-<model>.json, or "drop_oldest": true there, leaves room for the conversation to go on
+[strata] 400 invalid request: request exceeds the context window: prompt (131064 tokens) + max tokens (1) exceeds the context (131072); requests are never truncated. Send a smaller max_tokens (at most 0 here), or add "fit_max_tokens": true to the model's strata-<model>.json to shorten it to the room left (#545)
+[strata] thinking limited to 1 of max_tokens 1 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 1 tokens in 0 s (24385.5 tok/s) (length, cancel=False)
+[strata] the reply reached the end of the context while still thinking, so it has no answer: only 1 tokens were left of the 131072. A larger --max-context in strata-<model>.json, or "drop_oldest": true there, leaves room for the conversation to go on
+[strata] 400 invalid request: request exceeds the context window: prompt (131064 tokens) leaves no room to answer in the context (131072); requests are never truncated
+[strata] thinking limited to 1 of max_tokens 1 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 1 tokens in 0 s (24385.5 tok/s) (length, cancel=False)
+[strata] the reply reached the end of the context while still thinking, so it has no answer: only 1 tokens were left of the 131072. A larger --max-context in strata-<model>.json, or "drop_oldest": true there, leaves room for the conversation to go on
+[strata] 400 invalid request: request exceeds the context window: prompt (131064 tokens) + max tokens (1) exceeds the context (131072); requests are never truncated. Send a smaller max_tokens (at most 0 here), or add "fit_max_tokens": true to the model's strata-<model>.json to shorten it to the room left (#545)
+[strata] thinking limited to 1 of max_tokens 1 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 1 tokens in 0 s (21845.3 tok/s) (length, cancel=False)
+[strata] the reply reached the end of the context while still thinking, so it has no answer: only 1 tokens were left of the 131072. A larger --max-context in strata-<model>.json, or "drop_oldest": true there, leaves room for the conversation to go on
+[strata] 400 invalid request: request exceeds the context window: prompt (131064 tokens) leaves no room to answer in the context (131072); requests are never truncated
+[strata] thinking limited to 1 of max_tokens 1 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 1 tokens in 0 s (18477.1 tok/s) (length, cancel=False)
+[strata] the reply reached the end of the context while still thinking, so it has no answer: only 1 tokens were left of the 131072. A larger --max-context in strata-<model>.json, or "drop_oldest": true there, leaves room for the conversation to go on
+[strata] thinking limited to 1 of max_tokens 1 so the answer has room ("answer_room": false in the config turns this off)
+[strata] done: 1 tokens in 0 s (21399.5 tok/s) (length, cancel=False)
+[strata] the reply reached the end of the context while still thinking, so it has no answer: only 1 tokens were left of the 131072. A larger --max-context in strata-<model>.json, or "drop_oldest": true there, leaves room for the conversation to go on
+[strata] the prompt did not fit the context (131072 tokens): its 85 middle tokens were left out (truncate_middle)
+[strata] the prompt did not fit the context (131072 tokens): its 16341 middle tokens were left out (truncate_middle)
+[strata] 400 invalid request: VRAM needs an engine started with --vram-elastic (one NVIDIA GPU, --serve)
+[strata] 400 invalid request: reserve_mib: a whole number of MiB (0 or more), or null for the start's
+[strata] 400 invalid request: reserve_mib: a whole number of MiB (0 or more), or null for the start's
+[strata] 400 invalid request: reserve_mib: a whole number of MiB (0 or more), or null for the start's
+[strata] 400 invalid request: reserve_mib: a whole number of MiB (0 or more), or null for the start's
+[strata] refused an API request from the web page 'https://other.example' (no API key; add its host to "allowed_hosts" or its origin to "cors_origins" in the config)
+[strata] VRAM: 4000 MiB free, expert cache 2000 of 6000 MiB (100 experts)
+[strata] VRAM: 700 MiB free, expert cache 5300 of 6000 MiB (3300 experts)
+[strata] loading the model again (it was unloaded) ...
+[strata] the engine is running again
+----------------------------------------------------------------------
+Ran 50 tests in 38.269s
+
+OK

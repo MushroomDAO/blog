@@ -1,0 +1,17 @@
+{
+  "passed": 50,
+  "seconds": 38.269,
+  "modules": [
+    "serve.test_models",
+    "serve.test_context_overflow",
+    "serve.test_vram"
+  ],
+  "scope": "OriginalPythonservertests, syntheticGGUFmetadata andMockEngine/localHTTP; no realweights/CUDA/HIP/Metal/inferencespeed/LoCoMo/Lingerfullstack verification",
+  "command": "python -m unittest serve.test_models serve.test_context_overflow serve.test_vram -q",
+  "sourceRevision": "3e1642161198c50ff1abed4046f4e4f476099dbb",
+  "testFileHashes": {
+    "test_models": "101dab94d206a60c5a32f980b0daf01351155ea5c5f58cad1822d57cb2e67650",
+    "test_context_overflow": "8e2494a3deb5c63f561323e6350679040c9e2b10c94b82bb7cb0765a531b79d9",
+    "test_vram": "cb8b4663e63445f9b948c99b4765bc4b2b0bb2b9b28341c4533d62b99cf7859c"
+  }
+}
