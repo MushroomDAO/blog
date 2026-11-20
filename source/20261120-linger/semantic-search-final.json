@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "linger-polystrata-local-moe-agent-engineering-guide",
+    "query": "Linger PolyStrata local MoE GPU RAM SSD inference license",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "linger-polystrata-local-moe-agent-engineering-guide",
+          "title": "Linger and PolyStrata: Running 125B Beyond GPU Memory",
+          "url": "/blog/linger-polystrata-local-moe-agent-engineering-guide/",
+          "language": "en",
+          "excerpt": "Linger and PolyStrata: Running 125B Beyond GPU Memory Examine Linger and PolyStrata's local MoE stack, CPU/GPU expert placement, benchmark conditions, license and 50 server tests, without claiming GPU replication. Linger PolyStrata MoE 本地AI Personal Agent Which repository does wh",
+          "score": 0.6465069
+        },
+        {
+          "article_id": "ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda",
+          "title": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA",
+          "url": "/blog/ferrum-infer-rs-rust-single-binary-local-llm-metal-cuda/",
+          "language": "en",
+          "excerpt": "Ferrum: One Rust Binary for Local LLM Inference, Sharing One Runtime Across Metal and CUDA sizzlecar/ferrum-infer-rs is a pure-Rust local inference engine: one binary, no Python runtime, with Apple Silicon Metal and NVIDIA CUDA served by the same runtime behind OpenAI-compatible ",
+          "score": 0.5685108
+        },
+        {
+          "article_id": "deepseek-mac-studio-dwarfstar-ds4-local-inference-guide",
+          "title": "DwarfStar：Mac Studio 跑 DeepSeek V4 Flash/PRO，从安装到 SSD 流式推理",
+          "url": "/blog/deepseek-mac-studio-dwarfstar-ds4-local-inference-guide/",
+          "language": "zh",
+          "excerpt": "DwarfStar：Mac Studio 跑 DeepSeek V4 Flash/PRO，从安装到 SSD 流式推理 antirez 用纯 C 写了一个专为 Apple Silicon 优化的 DeepSeek V4 本地推理引擎 DwarfStar（ds4）。本文详解硬件选型、模型下载、SSD 流式推理、KV cache 磁盘化和双机 Thunderbolt 分布式推理，帮你把这头大模型跑在自己的机器上。 DeepSeek 本地推理 Mac Studio DwarfStar Metal SSD流式 开源 这是什么 硬件要求：按 RAM 选模型 编译与基",
+          "score": 0.5571389
+        },
+        {
+          "article_id": "deepseek-v4-flash-local-inference-guide",
+          "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+          "url": "/blog/deepseek-v4-flash-local-inference-guide/",
+          "language": "zh",
+          "excerpt": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册 DeepSeek V4-Flash 284B MoE 模型本地推理完全指南：为什么「13B 激活参数」不等于 13B 内存需求，四档硬件方案对比，以及 Mac M4 Ultra、多卡 GPU、vLLM 的实操步骤。 DeepSeek V4 本地推理 MoE vLLM Mac M4 Ultra GPU推理 量化 llama.cpp AI部署 一、先搞清楚：MoE 的内存陷阱 \"激活参数\" ≠ \"推理内存\" V4-Flash 的实际内存占用 额外内存开销 二、四档硬件方案 方案 A：Mac A",
+          "score": 0.53800786
+        },
+        {
+          "article_id": "freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference",
+          "title": "freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference",
+          "url": "/blog/freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference/",
+          "language": "en",
+          "excerpt": "freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference FlashML-org/FreeToken is an edge-native MoE inference engine — Apache 2.0, Python, 2,105 stars. Core: run 290B+ MoE models (DeepSeek-V4-Flash, Qwen3.6-35B, GLM-5.2) locally on consumer GPUs (RTX 30/40/50) at inter",
+          "score": 0.53287077
+        },
+        {
+          "article_id": "goinfer-pure-go-single-binary-local-llm",
+          "title": "An Entire LLM in One File: goinfer Runs Inference in Pure Go — No Python, No llama.cpp, No CUDA Toolkit",
+          "url": "/blog/goinfer-pure-go-single-binary-local-llm/",
+          "language": "en",
+          "excerpt": "An Entire LLM in One File: goinfer Runs Inference in Pure Go — No Python, No llama.cpp, No CUDA Toolkit goinfer is a pure-Go, cgo-free local inference engine that compiles to a single static binary. It covers 27 model families and all four sequence-mixing architectures, and can b",
+          "score": 0.5265941
+        },
+        {
+          "article_id": "longstraw-million-token-rl-training-gpu",
+          "title": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token",
+          "url": "/blog/longstraw-million-token-rl-training-gpu/",
+          "language": "zh",
+          "excerpt": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token 推理已经支持百万 token，但 RL 后训练卡在 256K 以下。LongStraw 用驻留状态 + 响应回放 + 分布式原生执行三项技术，在 8 张 H20 上完成 2M token 的精确 GRPO 训练。arXiv 2607.14952，已开源。 RL训练 长上下文 GRPO 大模型 AI Agent GPU 分布式训练 后训练 LLM 一、一个越来越大的差距 二、三项核心技术 1. Resident State（驻留状态） 2. Response Repla",
+          "score": 0.5254848
+        },
+        {
+          "article_id": "ling-3-0-flash-inclusionai-moe-coding-model-mac-openrouter-guide",
+          "title": "Ling 3.0 Flash 初测：让人意外的编程模型——124B MoE，每 token 只激活 5B 参数",
+          "url": "/blog/ling-3-0-flash-inclusionai-moe-coding-model-mac-openrouter-guide/",
+          "language": "zh",
+          "excerpt": "Ling 3.0 Flash 初测：让人意外的编程模型——124B MoE，每 token 只激活 5B 参数 蚂蚁集团 inclusionAI 于 7 月 23 日发布 Ling 3.0 Flash：124B MoE 架构，每 token 激活 5.1B 参数，256K 上下文，在 OpenRouter 永久免费。编程性能超预期，可通过 MLX 在 Mac 统一内存上本地运行。本文整理模型规格、技术架构、Mac 本地部署和 API 接入方式。 一、模型规格 二、背后的公司：蚂蚁集团 inclusionAI 三、为什么编程能力超预期 四、在 Mac 上运",
+          "score": 0.521862
+        },
+        {
+          "article_id": "infinitediffusion-terrain-generation-guide",
+          "title": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文",
+          "url": "/blog/infinitediffusion-terrain-generation-guide/",
+          "language": "zh",
+          "excerpt": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文 Alexander Goslin 以独立研究者身份，用 RTX 3090 Ti 发表 SIGGRAPH 2026 论文 InfiniteDiffusion，将扩散模型改造为懒惰采样，实现无界、O(1) 随机访问、确定性的无限地形生成。本文整理复现路径与游戏/工程应用方向。 扩散模型 程序化生成 游戏开发 SIGGRAPH 地形生成 AI图形 独立研究 先说这件事本身有多不寻常 论文在解决什么问题？ 原始资源 30 分钟复现路径 Step 0：环境 St",
+          "score": 0.52077127
+        },
+        {
+          "article_id": "memory-harness-local-first-programmable-auditable-long-term-memory",
+          "title": "Memory Harness: Local-First, Programmable & Auditable Long-Term Memory for AI Agents",
+          "url": "/blog/memory-harness-local-first-programmable-auditable-long-term-memory/",
+          "language": "en",
+          "excerpt": "Memory Harness: Local-First, Programmable & Auditable Long-Term Memory for AI Agents luoyif/memory-harness open-sources a six-layer auditable memory workspace (Evidence → Agent Asset), local hybrid RAG, 24 MCP tools, multi-AI collaboration with isolated drafts — all fully local, ",
+          "score": 0.5191259
+        }
+      ]
+    }
+  }
+]

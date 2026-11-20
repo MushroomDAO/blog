@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-20T06:11:08.611Z",
+  "drafts": [
+    {
+      "slug": "linger-polystrata-local-moe-agent-engineering-guide",
+      "mediaId": "prCUE631thH1cmNLi42prNPNNvCoRNyXFu0pd8LKQNqCet4Wk2ZzMDDJsgNqmxhp",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "4abce7e7d864f9b37a684ee9cd283ad1410175bea953fc096261a7afc8dc69b8",
+      "remoteTextHash": "4abce7e7d864f9b37a684ee9cd283ad1410175bea953fc096261a7afc8dc69b8",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/linger-polystrata-local-moe-agent-engineering-guide/",
+      "localContentHash": "6a44ecba2e305f856a84940dfee0119b970cda98dd4046b1135467870a551057",
+      "remoteContentHash": "828b920455d047d68e6f32e1eda8055fff414f1dd39d86efd0cd20acde8bfac5"
+    }
+  ]
+}

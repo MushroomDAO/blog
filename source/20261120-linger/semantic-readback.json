@@ -1,0 +1,38 @@
+[
+  {
+    "id": "08fc88c8d2babe9f43e364ff1ccc84af9ec169fa29f7529f",
+    "metadata": {
+      "article_id": "linger-polystrata-local-moe-agent-engineering-guide",
+      "content_hash": "ab6e464a8526fe12",
+      "excerpt": "Linger与PolyStrata：12GB显卡跑125B，代价转移到了哪里？ Linger把个人Agent、记忆和桌面操作放到本机，PolyStrata让MoE模型跨显存、内存与磁盘运行。本文核对两个官方仓库及许可，拆解CPU与GPU专家分工，追查RTX3060的45.5tokens每秒、长上下文首字延迟和模拟硬件条件，并报告50项服务层测试，说明本地部署、量化质量和完整任务体验的边界。 Linger PolyStrata MoE 本地AI Personal Agent 先把两个仓库分清楚 125B为什么不需要125B参数都放显存？ 45.5和179 ",
+      "language": "zh",
+      "tags": [
+        "Linger",
+        "PolyStrata",
+        "MoE",
+        "本地AI",
+        "Personal Agent"
+      ],
+      "title": "Linger与PolyStrata：12GB显卡跑125B，代价转移到了哪里？",
+      "url": "/blog/linger-polystrata-local-moe-agent-engineering-guide/"
+    }
+  },
+  {
+    "id": "f3edeaefe38e6cdc9d8ce0edf12ef75a683fcce2b04b10e8",
+    "metadata": {
+      "article_id": "linger-polystrata-local-moe-agent-engineering-guide",
+      "content_hash": "15d7a7bc6c543621",
+      "excerpt": "Linger and PolyStrata: Running 125B Beyond GPU Memory Examine Linger and PolyStrata's local MoE stack, CPU/GPU expert placement, benchmark conditions, license and 50 server tests, without claiming GPU replication. Linger PolyStrata MoE 本地AI Personal Agent Which repository does wh",
+      "language": "en",
+      "tags": [
+        "Linger",
+        "PolyStrata",
+        "MoE",
+        "本地AI",
+        "Personal Agent"
+      ],
+      "title": "Linger and PolyStrata: Running 125B Beyond GPU Memory",
+      "url": "/blog/linger-polystrata-local-moe-agent-engineering-guide/"
+    }
+  }
+]
