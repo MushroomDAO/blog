@@ -1,1 +1,91 @@
-[]
+[
+  {
+    "slug": "awesome-3d-coding-research-map-evaluation-guide",
+    "query": "Awesome-3D-Coding jweihe 3DCodeVerse CADTestBench StateProbe",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "awesome-3d-coding-research-map-evaluation-guide",
+          "title": "Awesome-3D-Coding：从生成漂亮模型到验证可编辑程序",
+          "url": "/blog/awesome-3d-coding-research-map-evaluation-guide/",
+          "language": "zh",
+          "excerpt": "Awesome-3D-Coding：从生成漂亮模型到验证可编辑程序 Awesome-3D-Coding 按基准、数据集、表示方法和建模系统整理用代码生成三维内容的研究，覆盖 Blender、参数化 CAD 与交互式世界。本文核对清单及四份一手资料，解释脚本执行、几何约束、渲染相似与交互状态的评估差异，区分数据行数和独立模型数量，并给出按交付物选路线、建立验收闭环和贡献条目的阅读方法。 3D Coding Blender CAD 智能体 评测 它整理的“3D Coding”是什么？ 清单怎样读，才不会变成收藏夹？ “能跑”“像”和“正确”为什么要分开？ 两",
+          "score": 0.60517955
+        },
+        {
+          "article_id": "awesome-opus-videos-code-animation-guide",
+          "title": "Awesome Opus视频合集：从703个案例学代码动画",
+          "url": "/blog/awesome-opus-videos-code-animation-guide/",
+          "language": "zh",
+          "excerpt": "Awesome Opus视频合集：从703个案例学代码动画 awesome-opus5-5-videos收集用Claude Opus 5.5制作的代码动画案例。本文纠正仓库地址，核对703个条目、207条部分提示词与418个复刻标记，解释HTML、Canvas、SVG和Three.js出片方式，给出分镜、关键帧检查与导出流程，并区分源码、模型归因、更新时间和素材授权的边界。 AI视频 Claude 代码动画 Canvas Three.js 开源项目 这是视频生成模型，还是编程案例库？ 703、418、100，分别在数什么？ 为什么“用代码做视频”值得学？",
+          "score": 0.55392593
+        },
+        {
+          "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+          "title": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时",
+          "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+          "language": "zh",
+          "excerpt": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时 复旦+北大+奇迹智风，arXiv:2604.25850，MIT，Python。AHE 提出一个闭环：不动模型权重，只进化 harness——通过三层可观测性（组件/经验/决策），让 Evolve Agent 自动分析 trace、提出修改、预测效果，下一轮自动验证。10次迭代把 GPT-5.4 在 Terminal-Bench 2 上从 69.7% 提升到 77.0%，超过手写 Codex-CLI（71.9%）。冻结后的 harness ",
+          "score": 0.51510876
+        },
+        {
+          "article_id": "img2threejs-photo-to-threejs-code",
+          "title": "img2threejs：给AI一张图，拿回一个可动的Three.js 3D代码",
+          "url": "/blog/img2threejs-photo-to-threejs-code/",
+          "language": "zh",
+          "excerpt": "img2threejs：给AI一张图，拿回一个可动的Three.js 3D代码 16天 8591 星。img2threejs 给 Claude Code 加了一个 /img2threejs 技能：输入一张参考图，输出的不是 mesh 文件，而是纯 TypeScript 代码，从几何基元和程序化着色器重新建造这个物体，带运行时层级、可以直接动画。 Three.js 3D生成 WebGL Claude Code AI工具 程序化生成 generative Mycelium 核心区别：代码，不是网格 8 阶段流水线：细节驱动的雕刻 CS2 武器：极端质量测试 ",
+          "score": 0.5128718
+        },
+        {
+          "article_id": "zero-to-cad-multiview-reconstruction",
+          "title": "Autodesk Zero-to-CAD：2B模型从八视图重建可编辑零件",
+          "url": "/blog/zero-to-cad-multiview-reconstruction/",
+          "language": "zh",
+          "excerpt": "Autodesk Zero-to-CAD：2B模型从八视图重建可编辑零件 Autodesk 的 Zero-to-CAD 把八张规范渲染图转成可执行 CadQuery 代码。拆解 2B 模型、自合成数据和 GPT-5.2 对照，说明成功率与 IoU 的统计边界，并给出从输入准备、隔离执行到 STEP/STL 验收的路径，区分可编辑几何、真实尺寸恢复和可制造性，避免把研究演示当作工业反求承诺。 Autodesk Zero-to-CAD Qwen3-VL CadQuery 3D重建 它到底接收什么，生成什么？ 为什么只有2B，却能在自家测试集领先？ “跑赢GP",
+          "score": 0.50494087
+        },
+        {
+          "article_id": "lance-bytedance-3b-multimodal-unified",
+          "title": "ByteDance Open-Sources Lance: 3B Parameters, Six Tasks, VBench Top Among Unified Models",
+          "url": "/blog/lance-bytedance-3b-multimodal-unified/",
+          "language": "en",
+          "excerpt": "ByteDance Open-Sources Lance: 3B Parameters, Six Tasks, VBench Top Among Unified Models ByteDance Intelligent Creation Lab open-sources Lance: 3B active parameters unifying image understanding/generation/editing and video understanding/generation/editing. GenEval 0.90 tied first,",
+          "score": 0.5046226
+        },
+        {
+          "article_id": "airsup-machine-skill",
+          "title": "Machine Skill：用 AI 生成机械仿真网页，物理数值该怎么信？",
+          "url": "/blog/airsup-machine-skill/",
+          "language": "zh",
+          "excerpt": "Machine Skill：用 AI 生成机械仿真网页，物理数值该怎么信？ 找到 AirsupHQ/machine-skill 官方仓库，解析 Claude Code 如何生成带剖面、爆炸图和参数控制的 Three.js 机械演示，核查公式、外部依赖和录制流程。 Machine Skill Three.js Claude Code 机械仿真 开源 它到底是模型、CAD，还是一个 skill？ 官方示例展示了什么？ 算出 16.9 kW，就证明模型准确吗？ 怎么开始使用？ 一个 HTML，是否意味着离线零依赖？ 我们实际核验到了哪一步？ 常见问题 能直接导",
+          "score": 0.5029234
+        },
+        {
+          "article_id": "video-shotcraft-claude-code-remotion-cinematic-product-videos",
+          "title": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片",
+          "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/",
+          "language": "zh",
+          "excerpt": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片 Vincentwei1021 开源的 Claude Code / Codex Agent 视频制作技能包，3832 stars。内置 104 张镜头配方卡、161 种运动风格预览、完整 Remotion 视频模板 Ink Press（36.2秒/1920×1080/30fps）、149 个音效（16个场景类别）、5套背景音乐。Agent 拿到产品截图后自动分镜、动画、配音设计，直出可发布的产品宣传片。 AI视频制作 Claude Code Remotion Agent技能 产",
+          "score": 0.4992472
+        },
+        {
+          "article_id": "vibe-coding-prompt-template-khazp-agents-md-prd-mvp-workflow-guide",
+          "title": "Vibe Coding 的正确打开方式：KhazP 的 5 步结构化工作流——从想法到 MVP 不迷路",
+          "url": "/blog/vibe-coding-prompt-template-khazp-agents-md-prd-mvp-workflow-guide/",
+          "language": "zh",
+          "excerpt": "Vibe Coding 的正确打开方式：KhazP 的 5 步结构化工作流——从想法到 MVP 不迷路 GitHub 2700+ Star 的 vibe-coding-prompt-template 不是一套 prompt，而是一套完整的 AI 编程方法论：先在 Chat 里完成市场调研、PRD、技术设计，再进 IDE 生成 AGENTS.md 让 Agent 拥有完整上下文，最后 Plan→Execute→Verify 循环推进到 MVP。支持 Claude Code、Cursor、Codex、Gemini CLI。 一、为什么 vibe coding",
+          "score": 0.49854076
+        },
+        {
+          "article_id": "jakub-krehel-interface-skills",
+          "title": "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能",
+          "url": "/blog/jakub-krehel-interface-skills/",
+          "language": "zh",
+          "excerpt": "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能 jakubkrehel/skills 是一套 MIT 开源的界面设计工程技能，涵盖排版、颜色、布局、无障碍、文案、状态检查与技术插图。本文拆解 14 项技能如何协作、如何安装到 Codex 或 Claude Code，以及审阅、改代码和视觉验证的边界，并记录安装校验、随附脚本检查与 ESM 项目接入时遇到的兼容问题。 Agent Skills 界面设计 设计工程 无障碍 Codex Claude Code 这条命令究竟装了什么？ 14 项技能怎样分工？ 为什么它强调“证据",
+          "score": 0.4984286
+        }
+      ]
+    }
+  }
+]

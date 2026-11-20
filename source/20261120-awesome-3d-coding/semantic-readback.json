@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "f2c2ef4f865f83032148c5e812d431936473ce3e07791a40",
+    "metadata": {
+      "article_id": "awesome-3d-coding-research-map-evaluation-guide",
+      "content_hash": "6b1b41784b085d11",
+      "excerpt": "Awesome-3D-Coding：从生成漂亮模型到验证可编辑程序 Awesome-3D-Coding 按基准、数据集、表示方法和建模系统整理用代码生成三维内容的研究，覆盖 Blender、参数化 CAD 与交互式世界。本文核对清单及四份一手资料，解释脚本执行、几何约束、渲染相似与交互状态的评估差异，区分数据行数和独立模型数量，并给出按交付物选路线、建立验收闭环和贡献条目的阅读方法。 3D Coding Blender CAD 智能体 评测 它整理的“3D Coding”是什么？ 清单怎样读，才不会变成收藏夹？ “能跑”“像”和“正确”为什么要分开？ 两",
+      "language": "zh",
+      "tags": [
+        "3D Coding",
+        "Blender",
+        "CAD",
+        "智能体",
+        "评测"
+      ],
+      "title": "Awesome-3D-Coding：从生成漂亮模型到验证可编辑程序",
+      "url": "/blog/awesome-3d-coding-research-map-evaluation-guide/"
+    }
+  },
+  {
+    "id": "4ee978667e3533a9b810fa88b46ecb7d7628b8f523d66ab9",
+    "metadata": {
+      "article_id": "awesome-3d-coding-research-map-evaluation-guide",
+      "content_hash": "a6c9a351cfabf5fe",
+      "excerpt": "Awesome-3D-Coding: A Map for Editable 3D Programs Explore Awesome-3D-Coding through Blender, CAD and interactive worlds, with source checks, dataset counting rules and a practical guide to task evaluation. 3D Coding Blender CAD 智能体 评测 What does 3D coding mean here? How should eng",
+      "language": "en",
+      "tags": [
+        "3D Coding",
+        "Blender",
+        "CAD",
+        "智能体",
+        "评测"
+      ],
+      "title": "Awesome-3D-Coding: A Map for Editable 3D Programs",
+      "url": "/blog/awesome-3d-coding-research-map-evaluation-guide/"
+    }
+  }
+]
