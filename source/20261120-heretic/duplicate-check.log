@@ -1,0 +1,19 @@
+✅ Access token obtained
+账本：blog 1023 篇 + 公众号草稿箱 3 条 + 本地发布记录 1005 条 + MemPalace 4485 抽屉
+
+── 查：https://github.com/p-e-w/heretic
+   ✅ 四本账都没查到
+
+── 查：Heretic
+   ❌ [BLOG  ] DeepSeek-V4.1-Flash 去审查版拆解：HarmBench 100% 顺从的代价是 MMLU 掉 3.86pp，510GB 的 Mac 门槛
+      正文出现实体名「heretic」
+   ❌ [知识库] # GitHub 杀出一个逆天级的开源核武器：p-e-w/her  **Summary**: GitHub 杀出一个逆天
+      正文出现实体名「heretic」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

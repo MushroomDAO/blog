@@ -1,0 +1,38 @@
+[
+  {
+    "id": "26a30788a4dc08b2862bec96f102ff88dba99bc91459ab3e",
+    "metadata": {
+      "article_id": "heretic-model-behavior-editing-evaluation-guide",
+      "content_hash": "354f5ca0bdee07a8",
+      "excerpt": "Heretic：不做完整微调，怎样修改模型行为？ Heretic 是面向开放权重语言模型的行为修改工具，利用对照提示、可插拔修改器和评分器搜索行为变化。本文核对当前开发版的 ARA、传统方向消融、Optuna 搜索与复现清单，区分减少拒答、减少迎合和真正提升能力，并用四项本地张量测试说明低秩计算的验证范围，给出从回答简洁度实验入手的工程评估路线和模型许可边界。 Heretic 开放权重 模型评估 行为修改 本地AI Heretic 改的是提示词，还是模型本身？ “无需训练”为什么仍然要计算和优化？ 评分器为什么比“解锁”更值得工程师研究？ 本次在本机验证",
+      "language": "zh",
+      "tags": [
+        "Heretic",
+        "开放权重",
+        "模型评估",
+        "行为修改",
+        "本地AI"
+      ],
+      "title": "Heretic：不做完整微调，怎样修改模型行为？",
+      "url": "/blog/heretic-model-behavior-editing-evaluation-guide/"
+    }
+  },
+  {
+    "id": "4437dc57348d8d25ccbbe4dbafc2a5d9f7e47aa5000a7686",
+    "metadata": {
+      "article_id": "heretic-model-behavior-editing-evaluation-guide",
+      "content_hash": "13bb24927e3be968",
+      "excerpt": "Heretic: Model Behavior Editing Without Full Fine-Tuning Explore Heretic's model editing, ARA, scorer plugins and reproducibility, with four CPU tensor checks and clear limits on quality and hardware claims today. Heretic 开放权重 模型评估 行为修改 本地AI What does Heretic actually change? Why",
+      "language": "en",
+      "tags": [
+        "Heretic",
+        "开放权重",
+        "模型评估",
+        "行为修改",
+        "本地AI"
+      ],
+      "title": "Heretic: Model Behavior Editing Without Full Fine-Tuning",
+      "url": "/blog/heretic-model-behavior-editing-evaluation-guide/"
+    }
+  }
+]

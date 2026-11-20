@@ -1,0 +1,9 @@
+test_equivalent_with_bias (test_ara_lowrank_equivalence.LowRankEquivalenceTests.test_equivalent_with_bias) ... ok
+test_equivalent_with_bias_and_row_normalization (test_ara_lowrank_equivalence.LowRankEquivalenceTests.test_equivalent_with_bias_and_row_normalization) ... ok
+test_equivalent_with_row_normalization (test_ara_lowrank_equivalence.LowRankEquivalenceTests.test_equivalent_with_row_normalization) ... ok
+test_equivalent_without_row_normalization (test_ara_lowrank_equivalence.LowRankEquivalenceTests.test_equivalent_without_row_normalization) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.026s
+
+OK

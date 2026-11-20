@@ -1,0 +1,1 @@
+PYTHONPATH=/tmp/heretic-20261120/src /tmp/clover-venv-20261119/bin/python -m unittest discover -s /tmp/heretic-20261120/tests -p test_ara_lowrank_equivalence.py -v

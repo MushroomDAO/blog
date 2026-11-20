@@ -1,0 +1,13 @@
+{
+  "title": "Heretic：模型行为修改与能力代价",
+  "author": "Mycelium",
+  "digest": "核对Heretic的行为修改机制、评分器和复现清单，解释无需完整微调为何仍需优化与独立评测。",
+  "mediaId": "prCUE631thH1cmNLi42prMszM0-BBAIyaJWPwuUrVgr-l9jfVXSst2m5twHwy4mz",
+  "blogUrl": "https://blog.mushroom.cv/blog/heretic-model-behavior-editing-evaluation-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/heretic-model-behavior-editing-evaluation-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/p-e-w/heretic"
+  ],
+  "publishedAt": "2026-11-20T09:36:25.680Z"
+}

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/jason/Dev/mycelium/blog/source/20261120-heretic/verify-public.py", line 10, in <module>
+    route='/blog/'+slug+'/';r,b=get(BASE+route);s=b.decode();expected=yaml.safe_load((root/'src/content/blog'/f'{slug}.md').read_text().split('---')[1])['title'];actual=html.unescape(re.search(r'<title>(.*?)</title>',s,re.S)[1]);assert r.status==200 and actual==expected, {"status":r.status,"actualTitle":actual,"expectedTitle":expected}
+                                                                                                                                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'status': 200, 'actualTitle': 'Mycelium Protocol Blog — AI · Web3 · Digital Commons', 'expectedTitle': 'Heretic：不做完整微调，怎样修改模型行为？'}
