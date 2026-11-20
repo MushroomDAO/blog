@@ -4,7 +4,7 @@ p=Path(__file__).parent;slug=json.loads((p/'slugs.json').read_text())[0];job=Pat
 a=json.loads((p/'public-verification.json').read_text());w=json.loads((p/'wechat-verification.json').read_text());s=json.loads((p/'semantic-status.json').read_text());assert a['articles'][0]['slug']==slug and w['drafts'][0]['slug']==slug
 r={'slug':slug,'blogUrl':f'https://blog.mushroom.cv/blog/{slug}/','mediaId':w['drafts'][0]['mediaId'],'archivedMediaId':'','wechatStatus':'draft','wechatError':'','semanticStatus':s['status'],'checkedAt':now,'repositoryStatus':'pending-push-and-review'}
 for f in [p/'publication-result.json',job/'publication-result.json']:f.write_text(json.dumps(r,ensure_ascii=False,indent=2))
-memory=Path('/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory')/f'project_{slug}.md';text=memory.read_text();text=text.replace('Blog pending. WeChat pending. Semantic pending.',f'''Blog: verified {r['blogUrl']}
+memory=Path('/Users/jason/.claude/projects/-Users-jason-Dev-mycelium-blog/memory')/f'project_{slug}.md';text=memory.read_text();text=text.replace('Blog/WeChat/semantic pending.',f'''Blog: verified {r['blogUrl']}
 WeChat: draft {r['mediaId']}; currentfulltext/ordered3images/cover/metadata/source/comments verified at {w['checkedAt']}.
 Semantic: {s['status']}
 Four originalCPUfloat64referenceformula tests passed0.026s; no fullARA/pretrainedweights/GPU/search/behavior/performance replication. Configurationtest importfailed missingpydantic_settings, explicitlynotpassed.
