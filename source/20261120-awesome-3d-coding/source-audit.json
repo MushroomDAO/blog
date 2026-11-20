@@ -1,0 +1,50 @@
+{
+  "revision": "69b232ad5697032f860157a8125ee7e5ba1cdc51",
+  "countUnit": "Markdown data rows beginning | **, grouped by H2, not unique papers or runnable projects",
+  "counts": {
+    "## 📏 Benchmarks": 22,
+    "## 🗂️ Datasets": 18,
+    "## 🧊 Methods and Representations": 20,
+    "## 🤖 Modeling Systems": 19,
+    "## 📐 Evaluation Metrics": 5,
+    "## 🛠️ Tools": 3,
+    "## 📚 Related Collections": 3
+  },
+  "totalRows": 90,
+  "sourceChecks": [
+    {
+      "source": "https://raw.githubusercontent.com/gaoypeng/3dcodebench/main/README.md",
+      "status": 200,
+      "bytes": 17056,
+      "sha256": "f7b5381c113688daaa007f74197cdb0d035fa63ce9e5d46c9aee8fe0c724ecbd"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/dimitrismallis/CADTestBench/main/README.md",
+      "status": 200,
+      "bytes": 6852,
+      "sha256": "9f4c2071080faa3ff60976a88b334ee74a39ae5b02a6257adac2bcbc996af1c4"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/shuolucs/WorldCoder-Bench/main/README.md",
+      "status": 200,
+      "bytes": 6914,
+      "sha256": "f0d3efe7f4e5d85e19b239a521568da66fea374ed5802f05d658e1110e190a9e"
+    },
+    {
+      "source": "https://huggingface.co/datasets/3dcodeverse/3dcodeverse-2m/raw/main/README.md",
+      "status": 200,
+      "bytes": 8423,
+      "sha256": "c9f5525583334d6bd3bf527d6cb79a9650a5f3eb9d950de829771e5fd6ea23e1"
+    }
+  ],
+  "benchmarkExecuted": false,
+  "allLinksChecked": false,
+  "checkedAt": "2026-11-20T09:50:43.581439+00:00",
+  "dateCrosscheck": {
+    "resource": "3DCodeBench",
+    "indexReleaseMonth": "2026-05",
+    "arxivV1": "2026-05-31T06:59:49Z",
+    "officialRepoNews": "2026-06-01",
+    "finding": "Different milestone labels, indexmonthmatchesfirstarxivsubmission; no falseerrorclaim"
+  }
+}

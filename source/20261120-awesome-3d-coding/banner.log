@@ -1,0 +1,14 @@
+=== [adopt-banner] awesome-3d-coding-research-map-evaluation-guide ← 1 source image(s) → src/assets/images/awesome-3d-coding-research-map-evaluation-guide-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /tmp/awesome3d-banner-crop.png
+=== [adopt-banner] done: src/assets/images/awesome-3d-coding-research-map-evaluation-guide-banner.jpg (1200x630, 80893B) ===
+=== [verify-banner] src/assets/images/awesome-3d-coding-research-map-evaluation-guide-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/tmp/awesome3d-banner-crop.png
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 80893B (< 99000B)
+  WARN text: 2 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: WIREFRAME | SHADED
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/awesome-3d-coding-research-map-evaluation-guide-banner.jpg ===
+PATH: src/assets/images/awesome-3d-coding-research-map-evaluation-guide-banner.jpg

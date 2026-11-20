@@ -1,0 +1,30 @@
+{
+  "privateArchive": "/Users/jason/.heinu1-bot/jobs/2a394977-41d1-4814-b4d4-59dfdc13ec50/research",
+  "sources": [
+    {
+      "source": "https://raw.githubusercontent.com/gaoypeng/3dcodebench/main/README.md",
+      "status": 200,
+      "bytes": 17056,
+      "sha256": "f7b5381c113688daaa007f74197cdb0d035fa63ce9e5d46c9aee8fe0c724ecbd"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/dimitrismallis/CADTestBench/main/README.md",
+      "status": 200,
+      "bytes": 6852,
+      "sha256": "9f4c2071080faa3ff60976a88b334ee74a39ae5b02a6257adac2bcbc996af1c4"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/shuolucs/WorldCoder-Bench/main/README.md",
+      "status": 200,
+      "bytes": 6914,
+      "sha256": "f0d3efe7f4e5d85e19b239a521568da66fea374ed5802f05d658e1110e190a9e"
+    },
+    {
+      "source": "https://huggingface.co/datasets/3dcodeverse/3dcodeverse-2m/raw/main/README.md",
+      "status": 200,
+      "bytes": 8423,
+      "sha256": "c9f5525583334d6bd3bf527d6cb79a9650a5f3eb9d950de829771e5fd6ea23e1"
+    }
+  ],
+  "reason": "Full third-party READMEs retained privately; public records contain source URLs, checks and hashes."
+}
