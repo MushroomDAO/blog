@@ -1,0 +1,9 @@
+{
+  "change": "Removed router automatic non-publication boundary suffix, preserving user prompt and routing intent.",
+  "tests": 28,
+  "testsFailed": 0,
+  "typecheck": "passed",
+  "runtime": "restart scheduled after active agent exits",
+  "sourceFile": "/Users/jason/Dev/tools/Heinu1/bot/src/router.ts",
+  "existingUnrelatedChangesPreserved": true
+}

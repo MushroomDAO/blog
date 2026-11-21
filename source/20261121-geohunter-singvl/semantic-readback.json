@@ -1,0 +1,74 @@
+[
+  {
+    "id": "9b56428bbf844d078d5aaa67d2266cb164feef82f0ca69a1",
+    "metadata": {
+      "article_id": "geohunter-generative-search-source-independence",
+      "content_hash": "bea99306e54b7829",
+      "excerpt": "GEOHunter：AI引用了十篇文章，就有十份独立证据吗？ GEOHunter追踪付费推广网络如何进入AI搜索答案，揭示引用数量与证据独立性的差别。本文核对三层归因、账号与投放统计、品牌提及率和研究局限，分析检索系统的来源聚类、重复内容处理与可追溯设计，并明确区分观察关联与营销因果效果，帮助工程师理解多来源共识为何可能只是同一套稿件的反复出现，以及哪些结论尚未经过独立复现实验。 GEOHunter GEO AI Search RAG Source Provenance GEOHunter如何找到一个推广网络？ 三组账号数字，为什么不能混着用？ “4.5",
+      "language": "zh",
+      "tags": [
+        "GEOHunter",
+        "GEO",
+        "AI Search",
+        "RAG",
+        "Source Provenance"
+      ],
+      "title": "GEOHunter：AI引用了十篇文章，就有十份独立证据吗？",
+      "url": "/blog/geohunter-generative-search-source-independence/"
+    }
+  },
+  {
+    "id": "d625480d3803160426047056688a5a575f368f4457a36644",
+    "metadata": {
+      "article_id": "geohunter-generative-search-source-independence",
+      "content_hash": "f490404dffa23a7f",
+      "excerpt": "GEOHunter: Ten Citations May Still Be One Source GEOHunter traces paid promotion into AI search. We examine attribution limits, source independence, and practical system safeguards for retrieval systems. GEOHunter GEO AI Search RAG Source Provenance How does GEOHunter identify th",
+      "language": "en",
+      "tags": [
+        "GEOHunter",
+        "GEO",
+        "AI Search",
+        "RAG",
+        "Source Provenance"
+      ],
+      "title": "GEOHunter: Ten Citations May Still Be One Source",
+      "url": "/blog/geohunter-generative-search-source-independence/"
+    }
+  },
+  {
+    "id": "c8f2b0c5ca6e5e03a6d88c7897f44c41a52f3c0eef505d33",
+    "metadata": {
+      "article_id": "singvl-s1-4b-multimodal-decision-model-guide",
+      "content_hash": "aa30373c85aea56b",
+      "excerpt": "SingVL S1 4B：让多模态模型做选择，而不是继续聊天 SingVL S1 4B把文本、JSON和图像转成结构化选择、是非概率与等级评分。本文核对固定版本的官方推理代码、公开指数和本地服务方式，检查候选约束与图像预处理，并分析概率校准、批处理预算、许可缺口及业务执行边界，区分维护者成绩与本文有限的CPU接口检查，帮助工程师判断何时适合把聊天步骤改造成可验证的决策接口。 SingVL Decision Model Multimodal Local AI Agent 为什么Agent需要一个“会选择”的模型？ 它如何从Qwen3.5变成决策接口？ 69",
+      "language": "zh",
+      "tags": [
+        "SingVL",
+        "Decision Model",
+        "Multimodal",
+        "Local AI",
+        "Agent"
+      ],
+      "title": "SingVL S1 4B：让多模态模型做选择，而不是继续聊天",
+      "url": "/blog/singvl-s1-4b-multimodal-decision-model-guide/"
+    }
+  },
+  {
+    "id": "175fe468c3d8b90e9548a7628e6845dec255acd114a8fdb4",
+    "metadata": {
+      "article_id": "singvl-s1-4b-multimodal-decision-model-guide",
+      "content_hash": "aadb289fafc800d8",
+      "excerpt": "SingVL S1 4B: A Multimodal Model for Typed Decisions SingVL S1 4B turns text and images into typed decisions. We examine its inference code, benchmark scope, local serving, and probability calibration limits. SingVL Decision Model Multimodal Local AI Agent What decisions does it ",
+      "language": "en",
+      "tags": [
+        "SingVL",
+        "Decision Model",
+        "Multimodal",
+        "Local AI",
+        "Agent"
+      ],
+      "title": "SingVL S1 4B: A Multimodal Model for Typed Decisions",
+      "url": "/blog/singvl-s1-4b-multimodal-decision-model-guide/"
+    }
+  }
+]
