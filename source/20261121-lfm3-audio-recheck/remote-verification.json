@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-21T15:43:56.804Z",
+  "draftCount": 5,
+  "archivedMediaId": "prCUE631thH1cmNLi42prELQoIIzWdt6L3rnCRnMMnyO7y321MGLaMssVxprJyjn",
+  "oldIdInDraftBox": false,
+  "matchingDrafts": [],
+  "draftGetError": {
+    "errcode": 40007,
+    "errmsg": "invalid media_id hint: [eXrTla083641-2] rid: 6b01bc3c-5e9d490b-040af989"
+  },
+  "publishedError": {
+    "errcode": 48001,
+    "errmsg": "api unauthorized rid: 6b01bc3c-25c6af64-538560d0"
+  },
+  "currentDraftVerified": false
+}
