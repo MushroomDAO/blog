@@ -1,0 +1,20 @@
+✅ Access token obtained
+账本：blog 1025 篇 + 公众号草稿箱 5 条 + 本地发布记录 1007 条 + MemPalace 4505 抽屉
+
+── 查：https://huggingface.co/LiquidAI/LFM3-1.7B
+   ❌ [BLOG  ] Liquid AI LFM3：六款端侧模型怎么选，Mac 上能跑到哪一步？
+      一手源相同: liquidai/lfm3-1.7b
+   ❌ [发过 2026-10-29] LFM3：六款端侧模型怎么选
+      一手源相同: liquidai/lfm3-1.7b
+
+── 查：LFM3
+   ⚠️  [发过 2026-10-29] LFM3：六款端侧模型怎么选
+      标题相似度 50%
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

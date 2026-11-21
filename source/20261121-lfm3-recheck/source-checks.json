@@ -1,0 +1,21 @@
+{
+  "scoredRows": 29,
+  "averageLFM3": "49.37",
+  "averageQwen35_9B": "47.24",
+  "definition": "Official unweighted mean of every score in current table. BF16/vLLM not4bit phone test. No independentlyverified aggregatequality.",
+  "kvEstimate": {
+    "layers": 6,
+    "kvHeads": 4,
+    "headDim": 128,
+    "kv": 2,
+    "bytesPerElement": 2,
+    "tokens": 262144,
+    "globalKVBytes": 3221225472,
+    "globalKVGiB": 3,
+    "measured": false
+  },
+  "newInferenceTests": false,
+  "reuseExistingArticle": true,
+  "recomputedMeanLFM3": 49.36931034482759,
+  "recomputedMeanQwen35_9B": 47.24172413793104
+}
