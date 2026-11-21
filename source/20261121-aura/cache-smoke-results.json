@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "iterations": 100,
+  "properties": [
+    "anchor retained",
+    "oldest nonanchor evicted/latest predecessor retained",
+    "current slot writable",
+    "K/V both correct",
+    "storage pointers and shapes fixed",
+    "bounded RoPE indices"
+  ],
+  "torch": "2.14.0",
+  "device": "CPU float32 synthetic tensors",
+  "scope": "Direct import of unmodified upstream KVCache only. No diffusion/VAE/audio/modelweights/GPU/speed/memorypeak or end-to-end audio streaming test. Torch2.14 outside project declared2.6to2.8; not fullruntimecompatibilityproof.",
+  "sourceRevision": "c06aa7dc8b850405273345089da521454ffd607e",
+  "sourceSHA256": "e4e34a109326b0fbf0f0d5850213ad0efcd9c15247c1f94d4c4538c3ae2498c4"
+}

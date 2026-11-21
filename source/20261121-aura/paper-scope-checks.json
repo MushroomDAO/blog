@@ -1,0 +1,43 @@
+{
+  "paper": "arxiv2611.26540v1",
+  "pages": 32,
+  "reviewedScope": [
+    "method3.1to3.5",
+    "results4.1to4.3",
+    "60slongstreamanalysis",
+    "supplementconfig/resolutionnotes"
+  ],
+  "paperSpeed": {
+    "hardware": "H100",
+    "text": "fixed10sEnglishaudio",
+    "excludes": [
+      "load",
+      "warmup"
+    ],
+    "1.3B": 20.7,
+    "5B": 9.7
+  },
+  "publicREADMECodeSpeed": {
+    "compile": true,
+    "1.3B": 16,
+    "5B": 8
+  },
+  "playbackFPS": {
+    "1.3B": 16,
+    "5B": 25
+  },
+  "1.3BBucketsHW": [
+    [
+      576,
+      576
+    ],
+    [
+      512,
+      768
+    ]
+  ],
+  "cacheWindowMeaning": "2includescurrent,slotsanchor+previous+current",
+  "datasetRelease": "partial1.3BteacherODE30000train200val;5B30Kvideocorpuscomingsoon,referenceimagespromptsexternal",
+  "license": "CodeSnapNonCommercial;1.3BweightsCCBYNC4;5BweightsSnapNC;dataCCBYNC4",
+  "noFullRuntimeOrGPUPerfReproduction": true
+}

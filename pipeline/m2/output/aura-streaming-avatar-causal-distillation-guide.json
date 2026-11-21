@@ -1,0 +1,16 @@
+{
+  "title": "AURA流式数字人：实时的条件",
+  "author": "Mycelium",
+  "digest": "核对数字人生成的分块机制、H100速度、公开代码差异与非商业许可，并验证滚动缓存逻辑。",
+  "mediaId": "prCUE631thH1cmNLi42prBX4Qy77zRn9YkUscZWQtMkn0-MPoJ0AinRCFFZaZYBL",
+  "blogUrl": "https://blog.mushroom.cv/blog/aura-streaming-avatar-causal-distillation-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/aura-streaming-avatar-causal-distillation-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/kyutai-labs/aura",
+    "huggingface.co/datasets/kyutai",
+    "huggingface.co/kyutai/aura-1.3b",
+    "huggingface.co/kyutai/aura-5b"
+  ],
+  "publishedAt": "2026-11-21T02:13:13.901Z"
+}

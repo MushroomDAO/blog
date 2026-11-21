@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "aura-streaming-avatar-causal-distillation-guide",
+    "query": "AURA Kyutai 流式数字人 rolling KV cache H100 distillation",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "aura-streaming-avatar-causal-distillation-guide",
+          "title": "AURA Streaming Avatars: Speed, Causality and Release Limits",
+          "url": "/blog/aura-streaming-avatar-causal-distillation-guide/",
+          "language": "en",
+          "excerpt": "AURA Streaming Avatars: Speed, Causality and Release Limits Explore Kyutai AURA's streaming avatars, causal cache and distillation, with H100 timing limits, partial data release and 100 synthetic cache checks on CPU. AURA Kyutai 数字人 流式生成 模型蒸馏 What waiting does causal streaming re",
+          "score": 0.6583593
+        },
+        {
+          "article_id": "confucius4-r2t2-true-streaming-asr-lsp-netease-youdao",
+          "title": "Confucius4-R2T2：网易有道的真流式 ASR——用 LSP 彻底消除文字抖动",
+          "url": "/blog/confucius4-r2t2-true-streaming-asr-lsp-netease-youdao/",
+          "language": "zh",
+          "excerpt": "Confucius4-R2T2：网易有道的真流式 ASR——用 LSP 彻底消除文字抖动 netease-youdao/Confucius4-R2T2，306 stars，代码 Apache 2.0 / 模型权重单独 NetEase 许可证。2B 参数真流式 ASR，基于 Qwen3-ASR-1.7B，核心创新是最长稳定前缀（LSP）训练范式——输出只追加、绝不修改，从根本上解决假流式 ASR 的文字抖动问题。LibriSpeech-clean WER 2.13% vs Qwen3-ASR 流式模式 22.30%，160ms 默认分块，需 CUDA GP",
+          "score": 0.48078102
+        },
+        {
+          "article_id": "arle-local-llm-distillation-guide",
+          "title": "arle Practical Guide: Run Local LLMs on Any Laptop, Then Distill a 4B Model to Match a 35B",
+          "url": "/blog/arle-local-llm-distillation-guide/",
+          "language": "en",
+          "excerpt": "arle Practical Guide: Run Local LLMs on Any Laptop, Then Distill a 4B Model to Match a 35B arle is a pure-Rust local LLM runtime — one binary for OpenAI-compatible serving, local agents, and on-policy distillation training. A 35B MoE hits 85 tok/s on an M4 Pro MacBook. OPD distil",
+          "score": 0.4718031
+        },
+        {
+          "article_id": "fastvideo-hao-ai-lab-video-generation-distillation-sparse-attention-apple-silicon",
+          "title": "fastvideo-hao-ai-lab-video-generation-distillation-sparse-attention-apple-silicon",
+          "url": "/blog/fastvideo-hao-ai-lab-video-generation-distillation-sparse-attention-apple-silicon/",
+          "language": "en",
+          "excerpt": "fastvideo-hao-ai-lab-video-generation-distillation-sparse-attention-apple-silicon FastVideo is hao-ai-lab's open-source (Apache 2.0) unified post-training and real-time inference framework for accelerated video generation (4K stars). Core tech: Video Sparse Attention (VSA) + Spar",
+          "score": 0.46955374
+        },
+        {
+          "article_id": "qwen-image-2-1-dit-rgba-local-deploy-guide",
+          "title": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南",
+          "url": "/blog/qwen-image-2-1-dit-rgba-local-deploy-guide/",
+          "language": "zh",
+          "excerpt": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南 阿里千问 2026-09-20 开源。7.1B 参数 32 层 Block-Causal DiT + Qwen3-VL-8B 文本编码器 + 64 通道 RGBA VAE，合计约 15B。原生支持透明图层、多参考图（最多 10 张）、中英文文字渲染、最高 2K 分辨率、局部编辑。Diffusers/ComfyUI/SGLang/vLLM 当日支持。关键限制：H100 BF16 需 56.5GB 显存，无量化版本，许可证从 v1 的 Apache 2",
+          "score": 0.46841457
+        },
+        {
+          "article_id": "paperpi-ai-stable-diffusion-raspberry-pi-zero-e-ink-art-frame-local",
+          "title": "树莓派 Zero 2 跑本地 Stable Diffusion，30 分钟出一张 AI 画——PaperPiAI 拆解",
+          "url": "/blog/paperpi-ai-stable-diffusion-raspberry-pi-zero-e-ink-art-frame-local/",
+          "language": "zh",
+          "excerpt": "树莓派 Zero 2 跑本地 Stable Diffusion，30 分钟出一张 AI 画——PaperPiAI 拆解 dylski/PaperPiAI，340 stars，MIT，Python。树莓派 Zero 2（¥100）+ 7色电子墨水屏，跑 OnnxStream Stable Diffusion，30 分钟自动出一张 AI 画，全程离线，装进相框就是一台自主 AI 艺术机器。核心工程细节：512MB 限制、Bullseye 强依赖、70°C 散热、salient 裁剪算法。 Raspberry-Pi e-ink Stable-Diffusion",
+          "score": 0.4672222
+        },
+        {
+          "article_id": "specialized-inference-engines-rise-hardware-specific-llm-optimization",
+          "title": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照",
+          "url": "/blog/specialized-inference-engines-rise-hardware-specific-llm-optimization/",
+          "language": "zh",
+          "excerpt": "Splash 1.4.0 更新：Mac 推理加速与六引擎对照 Splash 1.4.0 为 Apple Silicon 增加 Qwen3.8-Flash-Next、专家与 PLE 的 SSD 流式加载及长上下文支持。本文复核官方同机 Q2_0 对照，区分解码、预填充、缓存首字延迟和并发总吞吐，核对120tok/s的来源，并说明量化精度、内存预算、磁盘读写及可重复性的代价。 推理引擎 LLM WASM 性能优化 Apple Silicon NVIDIA AMD 开源工具 Splash 1.4.0 的速度数字，到底测了什么？ 为什么要把专家、PLE 和 KV",
+          "score": 0.46205986
+        },
+        {
+          "article_id": "microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork",
+          "title": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒",
+          "url": "/blog/microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork/",
+          "language": "zh",
+          "excerpt": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒 microsoft/VibeVoice，54K stars，MIT，Python。7.5Hz 连续语音 tokenizer + LLM + 扩散头，单次推理 90 分钟 TTS、60 分钟 ASR，4 路说话人。2025-09 官方因深度伪造顾虑主动下架，社区 fork vibevoice-community/VibeVoice 接棒维护，已加 LoRA 微调和 HF Transformers 集成。工程指导：模型选型、API 服务化、BitN",
+          "score": 0.45469522
+        },
+        {
+          "article_id": "stoa-pluralis-research-mac-rl-fleet-distributed-training",
+          "title": "14 Macs Across Four Countries Do RL Post-Training: Pluralis Research's stoa Experiment",
+          "url": "/blog/stoa-pluralis-research-mac-rl-fleet-distributed-training/",
+          "language": "en",
+          "excerpt": "14 Macs Across Four Countries Do RL Post-Training: Pluralis Research's stoa Experiment Pluralis Research open-sources stoa: fully decoupled RL post-training with rollout generation and gradient updates separated — 14 Macs across Paris, Zürich, Dublin, and Toronto generate rollout",
+          "score": 0.45099717
+        },
+        {
+          "article_id": "duix-avatar-heygem-local-digital-human-video-clone-teardown",
+          "title": "Duix-Avatar（前 HeyGem）：本地离线数字人视频生成深度拆解",
+          "url": "/blog/duix-avatar-heygem-local-digital-human-video-clone-teardown/",
+          "language": "zh",
+          "excerpt": "Duix-Avatar（前 HeyGem）：本地离线数字人视频生成深度拆解 duixcom/Duix-Avatar，15.6K 星，三个 Docker 服务打包 FunASR+Fish-Speech+视频引擎，RTX 4070 必须，70GB 镜像，自定义许可证 1000 MAU 付费门槛，「10 秒克隆」官方文档无依据，本地效果自承比云端差一档。 数字人 视频生成 本地推理 Docker 开源拆解 项目背景 核心功能三件套 硬件门槛 「10 秒克隆」说法核查 「本地离线」的真实含义 许可证陷阱：自定义「DUIX.COM Community Licens",
+          "score": 0.45013493
+        }
+      ]
+    }
+  }
+]
