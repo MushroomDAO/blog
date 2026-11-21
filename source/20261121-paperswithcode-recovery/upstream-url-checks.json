@@ -1,0 +1,47 @@
+{
+  "checks": 8,
+  "passed": true,
+  "scope": "Direct upstream normalize_github_url function; no full deployment, database, search benchmark or model test",
+  "cases": [
+    {
+      "input": "https://github.com/HuggingFace/PapersWithCode",
+      "expected": "https://github.com/huggingface/paperswithcode",
+      "actual": "https://github.com/huggingface/paperswithcode"
+    },
+    {
+      "input": "github.com/huggingface/paperswithcode",
+      "expected": "https://github.com/huggingface/paperswithcode",
+      "actual": "https://github.com/huggingface/paperswithcode"
+    },
+    {
+      "input": "https://github.com/huggingface/paperswithcode.git",
+      "expected": "https://github.com/huggingface/paperswithcode",
+      "actual": "https://github.com/huggingface/paperswithcode"
+    },
+    {
+      "input": "https://github.com/huggingface/paperswithcode/tree/main/backend",
+      "expected": "https://github.com/huggingface/paperswithcode",
+      "actual": "https://github.com/huggingface/paperswithcode"
+    },
+    {
+      "input": "https://github.com/huggingface/paperswithcode?tab=readme",
+      "expected": "https://github.com/huggingface/paperswithcode",
+      "actual": "https://github.com/huggingface/paperswithcode"
+    },
+    {
+      "input": "https://example.org/huggingface/paperswithcode",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "input": "",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "input": "https://github.com/huggingface",
+      "expected": null,
+      "actual": null
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+const fs=require('fs'),path=require('path'),cp=require('child_process'),assert=require('assert');
+const root=path.resolve(__dirname,'../..'),slug='paperswithcode-open-research-catalog-engineering';
+const privateDir=path.join(require('os').homedir(),'.heinu1-bot/maintenance/20261121-failed');
+const req=require('module').createRequire(path.join(root,'pipeline/m2/index.js')),yaml=req('js-yaml');
+const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
+const env=Object.fromEntries(fs.readFileSync(path.join(root,'.env'),'utf8').split('\n').flatMap(l=>{const m=l.match(/^(\w+)=(.*)$/);return m?[[m[1],m[2].trim().replace(/^["']|["']$/g,'')]]:[];}));
+(async()=>{
+ const url=`https://blog.mushroom.cv/blog/${slug}/`,rec=read(path.join(root,'pipeline/m2/output',slug+'.json'));
+ const article=fs.readFileSync(path.join(root,'src/content/blog',slug+'.md'),'utf8'),fm=yaml.load(article.split('---')[1]);
+ const response=await fetch(url);assert(response.ok);const html=await response.text();assert(html.includes(fm.title));assert(html.includes(slug+'-banner'));
+ const token=await(await fetch(`https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${encodeURIComponent(env.WECHAT_APP_ID)}&secret=${encodeURIComponent(env.WECHAT_APP_SECRET)}`)).json();assert(token.access_token,'WeChat token error '+token.errcode);
+ const remote=await(await fetch(`https://api.weixin.qq.com/cgi-bin/draft/get?access_token=${token.access_token}`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({media_id:rec.mediaId})})).json();assert(!remote.errcode,'WeChat error '+remote.errcode);const a=remote.news_item[0];
+ const compare=JSON.parse(cp.execFileSync('python3',[path.join(root,'source/20261112-rayline-arc/wechat-content-canonical.py')],{input:JSON.stringify({local:fs.readFileSync(path.join(root,'pipeline/m2/output',slug+'.html'),'utf8'),remote:a.content}),encoding:'utf8'}));
+ const log=fs.readFileSync(path.join(privateDir,'pwc-m2.log'),'utf8'),cover=log.match(/Cover uploaded: media_id=(\S+)/)?.[1];
+ const checks={...compare,title:a.title===rec.title,digest:a.digest===rec.digest,author:a.author===rec.author,source:a.content_source_url===url,cover:!!cover&&a.thumb_media_id===cover,comments:a.need_open_comment===1&&a.only_fans_can_comment===0};
+ assert(checks.fullTextMatches&&checks.imageIdentitiesMatch&&checks.imageCount===1&&checks.title&&checks.digest&&checks.author&&checks.source&&checks.cover&&checks.comments,JSON.stringify(checks));
+ const listResponse=await fetch('https://blog.mushroom.cv/blog/');assert(listResponse.ok);const list=await listResponse.text(),routes=[...list.matchAll(/href=["'](\/blog\/[a-z0-9-]+\/)["']/g)].map(m=>m[1]);
+ const before=read(path.join(privateDir,'blog-routes-before.json'));assert(before.every(r=>routes.includes(r)),'A previously live route disappeared from the catalog');assert(routes.includes(`/blog/${slug}/`));
+ const top=[...new Set(routes)],rank=top.indexOf(`/blog/${slug}/`)+1;assert(rank<=3,'New article not near catalog top: '+rank);
+ const report={checkedAt:new Date().toISOString(),slug,blogUrl:url,blogStatus:response.status,listRank:rank,previousRoutesPreserved:before.length,uniqueRoutes:top.length,...checks,mediaId:rec.mediaId,wechatStatus:'draft'};
+ fs.writeFileSync(path.join(__dirname,'publication-verification.json'),JSON.stringify(report,null,2));
+ fs.writeFileSync(path.join(__dirname,'publication-result.json'),JSON.stringify({slug,blogUrl:url,mediaId:rec.mediaId,wechatStatus:'draft',wechatError:''},null,2));
+ console.log(JSON.stringify(report));
+})().catch(e=>{console.error(String(e.message).replace(/access_token=[^&\s]+/g,'access_token=[redacted]'));process.exitCode=1;});
