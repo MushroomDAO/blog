@@ -7,7 +7,9 @@
     "wechatStatus": "draft",
     "wechatError": "",
     "semanticStatus": "verified",
-    "checkedAt": "2026-11-21T14:01:08.541Z"
+    "checkedAt": "2026-11-21T14:01:08.541Z",
+    "repositoryStatus": "review-required",
+    "pullRequest": "https://github.com/MushroomDAO/blog/pull/276"
   },
   {
     "slug": "singvl-s1-4b-multimodal-decision-model-guide",
@@ -17,6 +19,8 @@
     "wechatStatus": "draft",
     "wechatError": "",
     "semanticStatus": "verified",
-    "checkedAt": "2026-11-21T14:01:08.541Z"
+    "checkedAt": "2026-11-21T14:01:08.541Z",
+    "repositoryStatus": "review-required",
+    "pullRequest": "https://github.com/MushroomDAO/blog/pull/276"
   }
 ]
