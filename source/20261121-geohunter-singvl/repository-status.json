@@ -1,0 +1,8 @@
+{
+  "pullRequest": "https://github.com/MushroomDAO/blog/pull/276",
+  "state": "OPEN",
+  "mergeStateStatus": "BLOCKED",
+  "reason": "normal merge rejected by base branch policy",
+  "channelsCompleted": true,
+  "retryScope": "repository approval only; no redeploy or duplicate drafts/embeddings"
+}

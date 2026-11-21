@@ -1,0 +1,180 @@
+[
+  {
+    "slug": "geohunter-generative-search-source-independence",
+    "query": "GEOHunter 3755 1985 source independence",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "geohunter-generative-search-source-independence",
+          "title": "GEOHunter：AI引用了十篇文章，就有十份独立证据吗？",
+          "url": "/blog/geohunter-generative-search-source-independence/",
+          "language": "zh",
+          "excerpt": "GEOHunter：AI引用了十篇文章，就有十份独立证据吗？ GEOHunter追踪付费推广网络如何进入AI搜索答案，揭示引用数量与证据独立性的差别。本文核对三层归因、账号与投放统计、品牌提及率和研究局限，分析检索系统的来源聚类、重复内容处理与可追溯设计，并明确区分观察关联与营销因果效果，帮助工程师理解多来源共识为何可能只是同一套稿件的反复出现，以及哪些结论尚未经过独立复现实验。 GEOHunter GEO AI Search RAG Source Provenance GEOHunter如何找到一个推广网络？ 三组账号数字，为什么不能混着用？ “4.5",
+          "score": 0.47213373
+        },
+        {
+          "article_id": "gods-eye-view-browser-geospatial-intelligence-real-data-3d-globe",
+          "title": "God's Eye View：浏览器里的卫星侦察视角，数据全是真实的，MIT 开源，35K Stars",
+          "url": "/blog/gods-eye-view-browser-geospatial-intelligence-real-data-3d-globe/",
+          "language": "zh",
+          "excerpt": "God's Eye View：浏览器里的卫星侦察视角，数据全是真实的，MIT 开源，35K Stars bilawalsidhu/gods-eye-view，35K stars，MIT 开源，JavaScript + CesiumJS + WebGL + Google 3D Tiles。浏览器里的地理空间情报平台：15 个实时数据层，包括 11,000+ 架飞机、全球船只、838 颗卫星轨道、地震、CCTV、NASA 火灾探测。支持语音控制、座舱视角、热成像传感器模拟。无需 API Key 即可启动。 open-source geospatial OSI",
+          "score": 0.47192872
+        },
+        {
+          "article_id": "infinitediffusion-terrain-generation-guide",
+          "title": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文",
+          "url": "/blog/infinitediffusion-terrain-generation-guide/",
+          "language": "zh",
+          "excerpt": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文 Alexander Goslin 以独立研究者身份，用 RTX 3090 Ti 发表 SIGGRAPH 2026 论文 InfiniteDiffusion，将扩散模型改造为懒惰采样，实现无界、O(1) 随机访问、确定性的无限地形生成。本文整理复现路径与游戏/工程应用方向。 扩散模型 程序化生成 游戏开发 SIGGRAPH 地形生成 AI图形 独立研究 先说这件事本身有多不寻常 论文在解决什么问题？ 原始资源 30 分钟复现路径 Step 0：环境 St",
+          "score": 0.45856673
+        },
+        {
+          "article_id": "xllama-xbox-series-s-local-llm-inference-dev-mode",
+          "title": "xllama 拆解：把 Xbox Series S 变成局域网 LLM 端点，350M 模型约 101 tok/s，但只能开发者模式、无鉴权",
+          "url": "/blog/xllama-xbox-series-s-local-llm-inference-dev-mode/",
+          "language": "zh",
+          "excerpt": "xllama 拆解：把 Xbox Series S 变成局域网 LLM 端点，350M 模型约 101 tok/s，但只能开发者模式、无鉴权 gianlucamazza/xllama（MIT，73 star，2026-05 创建）在开发者模式的 Xbox Series S 上跑 llama.cpp 与 ONNX Runtime GenAI，并提供 OpenAI 兼容局域网接口。自报 350M 约 101.6 tok/s、2.6B 约 17.9 tok/s；Series X 未测、接口默认关闭且无鉴权。对 Mac 用户它是好奇心项目，不是替代品。 Xbox",
+          "score": 0.4400609
+        },
+        {
+          "article_id": "osaurus-native-macos-ai-harness-swift-cryptographic-identity",
+          "title": "Osaurus: Own Your AI on Mac — Cryptographic Identity, Sandbox VM, Privacy Filter, Pure Swift",
+          "url": "/blog/osaurus-native-macos-ai-harness-swift-cryptographic-identity/",
+          "language": "en",
+          "excerpt": "Osaurus: Own Your AI on Mac — Cryptographic Identity, Sandbox VM, Privacy Filter, Pure Swift osaurus-ai/osaurus, 7,295 stars, MIT. Pure Swift native macOS AI harness. secp256k1 cryptographic identity, Alpine Linux sandbox VM, three-layer memory, on-device PII privacy filter befor",
+          "score": 0.4336012
+        },
+        {
+          "article_id": "frontis-ma1-openrsi-ai4ai-recursive-self-improvement-mle",
+          "title": "Frontis-MA1：清华 + Horizon Research 开源 AI 改进 AI 的全套配方，35B 单卡超 GPT-5.5",
+          "url": "/blog/frontis-ma1-openrsi-ai4ai-recursive-self-improvement-mle/",
+          "language": "zh",
+          "excerpt": "Frontis-MA1：清华 + Horizon Research 开源 AI 改进 AI 的全套配方，35B 单卡超 GPT-5.5 FrontisAI/OpenRSI 是 Frontis.AI + 清华大学的 AI4AI 开源框架。核心是 Frontis-MA1（35B/30B），通过四个可训练原子算子（Draft/Improve/Debug/Crossover）+ OpenMLE 全栈，在 MLE-Bench Lite 单卡 12h 达到 71.21% Medal Average，超越 GPT-5.5 + Codex。CC BY-NC 4.0，模型",
+          "score": 0.42324322
+        },
+        {
+          "article_id": "goinfer-pure-go-single-binary-local-llm",
+          "title": "整个大模型装进一个文件：goinfer 用纯 Go 跑推理，没有 Python、没有 llama.cpp、没有 CUDA 工具链",
+          "url": "/blog/goinfer-pure-go-single-binary-local-llm/",
+          "language": "zh",
+          "excerpt": "整个大模型装进一个文件：goinfer 用纯 Go 跑推理，没有 Python、没有 llama.cpp、没有 CUDA 工具链 goinfer 是一个纯 Go、无 cgo 的本地推理引擎，编译出单个静态二进制，支持 27 个模型家族、四种序列混合架构，还能把权重烤进可执行文件做成「一个文件就是一个模型」。更难得的是它的基准测试极度诚实：Mac 上比 Ollama 慢 13-18%，Linux CUDA 上快 5%，深上下文会落后——数字和机器、量化、日期一起公开。 Go 本地推理 local-first 开源 LLM 单文件部署 结构化输出 GGUF ",
+          "score": 0.42224297
+        },
+        {
+          "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+          "title": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具",
+          "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+          "language": "zh",
+          "excerpt": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具 hikarioyama/ParallelHue（MIT，35 star，零运行时依赖）把本地大模型的多路并发流式输出画进终端，只有调度器和反分词器的遥测跟 SSE 逐字节对得上，才按验证步上色。真正的 exact 模式只支持 vLLM 0.26.x，靠 7 个内部方法挂钩实现，官方的有效证据只有一次 16 路 GLM 运行（16,384 个 token）。我们在 Mac mini 上跑通了 72 个测试，用模拟服务器确认了它在证据不足时会失败或降级，另外发现：只要模型名里带 qw",
+          "score": 0.42204946
+        },
+        {
+          "article_id": "worldmonitor-elie-habib-palantir-gotham-open-source-alternative-3d-globe",
+          "title": "World Monitor：一个人几天做出 Palantir 战情室的开源平替，78K stars",
+          "url": "/blog/worldmonitor-elie-habib-palantir-gotham-open-source-alternative-3d-globe/",
+          "language": "zh",
+          "excerpt": "World Monitor：一个人几天做出 Palantir 战情室的开源平替，78K stars Elie Habib 独自开源了 World Monitor（koala73/worldmonitor），一个对标 Palantir Gotham 政府级战情室的实时全球情报仪表盘。3D 地球仪、500+ 新闻源、15 类 AI 摘要、本地 Ollama 无 API Key，AGPL-3.0。78K stars，Tauri 桌面应用，6 个主题变体。 情报仪表盘 开源 Palantir平替 3D地球 AI摘要 Ollama Tauri Mycelium 核",
+          "score": 0.42014733
+        },
+        {
+          "article_id": "hindsight-agent-memory-retain-recall-reflect",
+          "title": "Hindsight: 30K Stars Agent Memory Framework — 5-Level Bio-Inspired Architecture + Self-Built AMB Benchmark",
+          "url": "/blog/hindsight-agent-memory-retain-recall-reflect/",
+          "language": "en",
+          "excerpt": "Hindsight: 30K Stars Agent Memory Framework — 5-Level Bio-Inspired Architecture + Self-Built AMB Benchmark vectorize-io/hindsight, MIT, Python/Rust/TypeScript, 30,050 stars. Open-source agent memory system: 5-level bio-inspired memory hierarchy (world facts → experience facts → o",
+          "score": 0.4198702
+        }
+      ]
+    }
+  },
+  {
+    "slug": "singvl-s1-4b-multimodal-decision-model-guide",
+    "query": "SingVL S1 4B typed decision model Choice Noul Score",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "singvl-s1-4b-multimodal-decision-model-guide",
+          "title": "SingVL S1 4B: A Multimodal Model for Typed Decisions",
+          "url": "/blog/singvl-s1-4b-multimodal-decision-model-guide/",
+          "language": "en",
+          "excerpt": "SingVL S1 4B: A Multimodal Model for Typed Decisions SingVL S1 4B turns text and images into typed decisions. We examine its inference code, benchmark scope, local serving, and probability calibration limits. SingVL Decision Model Multimodal Local AI Agent What decisions does it ",
+          "score": 0.64396477
+        },
+        {
+          "article_id": "decision-models-comparison",
+          "title": "Baseten、H2O 与 Jev 决策模型横评：先对齐榜单，再谈选型",
+          "url": "/blog/decision-models-comparison/",
+          "language": "zh",
+          "excerpt": "Baseten、H2O 与 Jev 决策模型横评：先对齐榜单，再谈选型 Baseten mammoth-1、elephant-1，H2O Lightning 与 TypeSafe Jev 都能输出结构化概率决策，但榜单版本、视觉路径、许可证与部署成本不同。本文核对 Jev Decision Index 0.4 与 0.4.1，解释 H2O 31B 的非商业限制、Jev 实验性图片支持，以及企业应怎样设计拒答、复核和上线验收。 Decision Models Baseten H2O TypeSafe Jev Decision Index 71.24 分为什",
+          "score": 0.5103605
+        },
+        {
+          "article_id": "agentjev-0-6b-system-one-decision-model-qwen3",
+          "title": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92%",
+          "url": "/blog/agentjev-0-6b-system-one-decision-model-qwen3/",
+          "language": "zh",
+          "excerpt": "AgentJev-0.6B：Qwen3 底座的 System-1 决策核，Typed Decisions 79.25% 超 Laya，KV Cache 砍 92% AgentJev-0.6B，Qwen3-0.6B底座+置换等变决策头，System-1 AI Agent 决策模型。Typed Decisions 2000题 79.25%（1585/2000）超 Laya 77.00%（+2.25pt）。零输出 token 解码，约 50ms 一次前向。Shared Prefix KV Cache 在 64 候选时骨干 token 从 33,547 降至 2",
+          "score": 0.508439
+        },
+        {
+          "article_id": "jevembed-embedding-decision-framework-choice-score-noul",
+          "title": "JevEmbed: Embedding-Based Decisions — Choice, Score, and Noul in One Framework with LoRA Fine-tuning",
+          "url": "/blog/jevembed-embedding-decision-framework-choice-score-noul/",
+          "language": "en",
+          "excerpt": "JevEmbed: Embedding-Based Decisions — Choice, Score, and Noul in One Framework with LoRA Fine-tuning JevEmbed by HITsz-TMG — Python framework for embedding-based Choice, Score, and Noul decisions. Single framework compatible with KaLM, Qwen3-Embedding, E5 models. Supports >255 ca",
+          "score": 0.50797987
+        },
+        {
+          "article_id": "decision2-kai-06b-local-classification-gguf",
+          "title": "Decision 2.0 Kai: 0.6B Decisions in a 400MB GGUF",
+          "url": "/blog/decision2-kai-06b-local-classification-gguf/",
+          "language": "en",
+          "excerpt": "Decision 2.0 Kai: 0.6B Decisions in a 400MB GGUF Decision 2.0 Kai makes typed decisions with 0.6B parameters. We audit its 400.9MB GGUF, required runtime and quantization drift; local inference is untested. Decision 2.0 小模型 Hugging Face 本地 AI GGUF 语义路由 Qwen3 Why would a local wor",
+          "score": 0.5004952
+        },
+        {
+          "article_id": "bespoke-nimble-9b-open-decision-model-logprob-jev-rival",
+          "title": "Bespoke Nimble: A 9B Decision Model Built in One Day That Reads Probabilities",
+          "url": "/blog/bespoke-nimble-9b-open-decision-model-logprob-jev-rival/",
+          "language": "en",
+          "excerpt": "Bespoke Nimble: A 9B Decision Model Built in One Day That Reads Probabilities Bespoke Labs open-sourced Nimble, a Qwen3.5-9B LoRA decision model that never generates text — it picks from your options by reading logprobs directly. Data, recipe, and weights are all public. This art",
+          "score": 0.4923496
+        },
+        {
+          "article_id": "llm2jev-local-jev-api-prefill-only-binary-inference",
+          "title": "LLM2Jev：用任意本地 LLM 克隆 Jev 的 /v1/systemone——Prefill-Only 二值推理拆解",
+          "url": "/blog/llm2jev-local-jev-api-prefill-only-binary-inference/",
+          "language": "zh",
+          "excerpt": "LLM2Jev：用任意本地 LLM 克隆 Jev 的 /v1/systemone——Prefill-Only 二值推理拆解 Yinsongxu/LLM2Jev，125 stars，Apache 2.0。3 天新项目，把任意 HuggingFace 因果语言模型变成兼容 Jev /v1/systemone API 的本地决策引擎。核心手法：Prefill-Only 二值推理——只读 yes/no 的下一 token logit，不解码、不 JSON 解析。支持 Choice/Score/Noul 三类结构化答案，staged 模式对长上下文 KV Cach",
+          "score": 0.49190167
+        },
+        {
+          "article_id": "typesafe-ai-jev-system-one-model-rlcd-decision-ai-enterprise",
+          "title": "Jev: TypeSafe AI's RLCD Decision Model — Free Output Tokens, Up to 200x Faster",
+          "url": "/blog/typesafe-ai-jev-system-one-model-rlcd-decision-ai-enterprise/",
+          "language": "en",
+          "excerpt": "Jev: TypeSafe AI's RLCD Decision Model — Free Output Tokens, Up to 200x Faster Former OpenAI researcher Diogo Almeida launches TypeSafe AI and its System One Model 'Jev' (2026-09-15): RLCD-trained, parallel-sampling, $0.042/M input tokens with free output. Cannot generate text. B",
+          "score": 0.4885768
+        },
+        {
+          "article_id": "sensenova-u15-unified-image-understand-generate-edit-mot",
+          "title": "SenseNova U1.5：看图、生图、改图，一个模型全搞定",
+          "url": "/blog/sensenova-u15-unified-image-understand-generate-edit-mot/",
+          "language": "zh",
+          "excerpt": "SenseNova U1.5：看图、生图、改图，一个模型全搞定 商汤 SenseNova-U1.5-8B-MoT 把图像理解、图像生成、图像编辑三项能力统一进同一个 8B 参数模型，基于自研 NEO-unify 架构与 MoT（Mixture of Tokens）范式，在不增加推理开销的前提下原生支持 4K 输出，Apache 2.0 开源，GitHub 5.4k Star。 开源 多模态 图像生成 图像编辑 MoT NEO-unify SenseNova 商汤 一句话理解 这件事为什么难 U1.5 比 U1 改了什么 MoT：混合 Token 如何工作",
+          "score": 0.4855141
+        },
+        {
+          "article_id": "decision30-multimodal-system-one",
+          "title": "Decision 3.0：让文字、图片和视频直接进入决策接口",
+          "url": "/blog/decision30-multimodal-system-one/",
+          "language": "zh",
+          "excerpt": "Decision 3.0：让文字、图片和视频直接进入决策接口 Decision 3.0 将文本、JSON、图片和视频接入 System One 决策接口，返回选项概率而不生成长回答。本文核对六个规格的官方模型卡与推理代码，区分请求与前向计算，更新 Jev 0.3.2 评测与 MI325X 延迟，并分析小模型的泛化边界、视频采样限制、服务吞吐和内存代价，给出业务验证的接入路径。 Decision 3.0 vLLM Semantic Router System One 多模态 决策模型 开源 不生成回答，具体怎样得到决策？ 六个规格怎样比较？ 文字、图片、视",
+          "score": 0.48332107
+        }
+      ]
+    }
+  }
+]

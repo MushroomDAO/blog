@@ -1,0 +1,14 @@
+{
+  "title": "SingVL S1：4B多模态决策模型",
+  "author": "Mycelium",
+  "digest": "它把文本和图像转成结构化决策，但候选概率仍需业务校准。",
+  "mediaId": "prCUE631thH1cmNLi42prLMgWMfiuYoSYkopn6HQcjW8ha--TSMIzqIOzGBsmBBC",
+  "blogUrl": "https://blog.mushroom.cv/blog/singvl-s1-4b-multimodal-decision-model-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/singvl-s1-4b-multimodal-decision-model-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/inclusionai/singvl_s1_4b",
+    "huggingface.co/datasets/echoxvf"
+  ],
+  "publishedAt": "2026-11-21T14:00:36.762Z"
+}

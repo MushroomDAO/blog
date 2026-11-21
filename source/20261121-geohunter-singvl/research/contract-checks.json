@@ -1,0 +1,23 @@
+{
+  "sourceRevision": "c7a7f32ab027735b7dd2742e5b6cfcacaa43f97a",
+  "sourceSha256": "b08a6287081282065b8b909a4f7baffe37a5d268d57f513f219220dd43c951b2",
+  "passed": 15,
+  "cases": [
+    "choice order preserved",
+    "implicit image markers",
+    "noul default labels",
+    "score zero-based levels",
+    "reject empty questions",
+    "reject single option",
+    "reject too many options",
+    "reject one score level",
+    "reject eleven score levels",
+    "reject wrong image count",
+    "reject reserved state",
+    "reject reserved instruction",
+    "reject unknown question type",
+    "large image respects pixel cap",
+    "rgba converted to rgb"
+  ],
+  "scope": "AST-extracted unmodified upstream pure input/render/image preprocessing functions; no model class, checkpoint, logits, GPU or benchmark execution"
+}

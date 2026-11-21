@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "geohunter-generative-search-source-independence",
+    "rows": 3,
+    "checks": {
+      "blogUrl": true,
+      "mediaId": true,
+      "semantic": true
+    }
+  },
+  {
+    "slug": "singvl-s1-4b-multimodal-decision-model-guide",
+    "rows": 3,
+    "checks": {
+      "blogUrl": true,
+      "mediaId": true,
+      "semantic": true
+    }
+  }
+]

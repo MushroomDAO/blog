@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "geohunter-generative-search-source-independence",
+    "checks": {
+      "bilingual": true,
+      "descriptions": true,
+      "titleEn": true,
+      "tags": true,
+      "copyright": true,
+      "figures": true,
+      "FAQ": true,
+      "sources": true,
+      "BLUF": true,
+      "questionHeadings": true,
+      "claimScope": true
+    },
+    "passed": true
+  },
+  {
+    "slug": "singvl-s1-4b-multimodal-decision-model-guide",
+    "checks": {
+      "bilingual": true,
+      "descriptions": true,
+      "titleEn": true,
+      "tags": true,
+      "copyright": true,
+      "figures": true,
+      "FAQ": true,
+      "sources": true,
+      "BLUF": true,
+      "questionHeadings": true,
+      "claimScope": true
+    },
+    "passed": true
+  }
+]
