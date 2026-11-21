@@ -1,0 +1,19 @@
+{
+  "title": "Harness Adapters：在真实Agent里训练",
+  "author": "Mycelium",
+  "digest": "真实运行时里的RL能减少无效调用，但验收器、评测口径和工具治理同样重要。",
+  "mediaId": "prCUE631thH1cmNLi42prJlF4v304zmDqjJcl4SwqHL0SKMaUB-vEmcSG9a0XKwd",
+  "blogUrl": "https://blog.mushroom.cv/blog/harness-adapters-in-loop-rl-tool-governance/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/harness-adapters-in-loop-rl-tool-governance/",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/blog/harness-adapters-at-scale",
+    "huggingface.co/collections/harness-hub",
+    "huggingface.co/harness-hub/qwen3.8-27b-super-adapter",
+    "huggingface.co/harness-hub/qwen-safeagents-plugin",
+    "huggingface.co/docs/trl",
+    "github.com/huggingface/repo2rlenv",
+    "github.com/huggingface/safeagents"
+  ],
+  "publishedAt": "2026-11-21T14:53:10.888Z"
+}

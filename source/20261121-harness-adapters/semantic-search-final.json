@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "harness-adapters-in-loop-rl-tool-governance",
+    "query": "Harness adapters Qwen3.8 Pi OpenCode Hermes in harness RL tool governance",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "harness-adapters-in-loop-rl-tool-governance",
+          "title": "Harness Adapters：让模型在真实Agent里学会少走弯路",
+          "url": "/blog/harness-adapters-in-loop-rl-tool-governance/",
+          "language": "zh",
+          "excerpt": "Harness Adapters：让模型在真实Agent里学会少走弯路 Hugging Face在Pi、OpenCode和Hermes真实运行时里训练Qwen3.8-27B的LoRA。本文核对成功率、工具调用降幅、合并适配器和任务验证方法，分析代理记录真实token为何重要，以及分布外迁移、推理泄漏与工具治理的边界，区分官方实验与本地有限检查，给工程师提供从验收器到部署评估的实践路线。 Harness Adapters Reinforcement Learning LoRA OpenEnv Tool Governance 为什么要在真实harness里训",
+          "score": 0.6590658
+        },
+        {
+          "article_id": "pi-muselinn-harness-kimi-code-subagents-goal-plan-tui",
+          "title": "Whatever the Pi Coding Agent Lacks, pi-muselinn-harness Supplies",
+          "url": "/blog/pi-muselinn-harness-kimi-code-subagents-goal-plan-tui/",
+          "language": "en",
+          "excerpt": "Whatever the Pi Coding Agent Lacks, pi-muselinn-harness Supplies pi-muselinn-harness is a TypeScript extension package that ports Kimi Code's core subsystems — Swarm parallel subagents, Goal lifecycle, Plan mode, 18-level permission chain, Hooks engine, 7-scope Skills — into the ",
+          "score": 0.61176306
+        },
+        {
+          "article_id": "openrsi-index-research-agent-benchmark-guide",
+          "title": "OpenRSI Index：如何评测AI是否真的改进了科研方法",
+          "url": "/blog/openrsi-index-research-agent-benchmark-guide/",
+          "language": "zh",
+          "excerpt": "OpenRSI Index：如何评测AI是否真的改进了科研方法 OpenRSI Index 是面向科研智能体的开放评测项目，用固定任务、预算和裁判检查算法与工程改进。本文核对 RSI Harness 源码、公开日志及任务包，拆解持续工作区、快照提交和评分机制，解释 Qwen 数据包装器、Marin 集群依赖与 GPIC 筛选协议的复现边界，并给出安装、局部验证和选择实验的工程建议。 OpenRSI Index AI Agents Evaluation Recursive Self Improvement Open Source 它到底在测什么，为什么不只",
+          "score": 0.5892658
+        },
+        {
+          "article_id": "harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code",
+          "title": "harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code",
+          "url": "/blog/harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code/",
+          "language": "en",
+          "excerpt": "harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code HarnessRouter Community Edition is an open-source (Apache 2.0) self-hosted agent scheduling platform. Single Docker container, three built-in agent harnesses (Claude Code, Codex, Hermes), unified via UHP (Unif",
+          "score": 0.58924633
+        },
+        {
+          "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+          "title": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+          "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+          "language": "en",
+          "excerpt": "agentic-harness-engineering-observability-self-evolution-coding-agent Fudan+PKU+Qiji Zhifeng, arXiv:2604.25850, MIT, Python. AHE proposes a closed loop that evolves the harness — not the model weights — using three observability pillars (component / experience / decision) to let ",
+          "score": 0.58883417
+        },
+        {
+          "article_id": "hermit-harness-adapter-evolution",
+          "title": "Hermit: Train Agent Adapters Without Changing Model Weights",
+          "url": "/blog/hermit-harness-adapter-evolution/",
+          "language": "en",
+          "excerpt": "Hermit: Train Agent Adapters Without Changing Model Weights Explore Hermit harness adapter evolution, five supported methods, a reproducible offline training check, Mac setup and limits of evaluation, sandboxing and RSI. Hermit AI Agent 持续学习 RSI 开源 What does Hermit learn? Which m",
+          "score": 0.5795939
+        },
+        {
+          "article_id": "browser-use-macos-harness-mac-desktop-agent-six-primitives",
+          "title": "macOS Harness：Browser Use 出品，六个原始 API 给 LLM 完整 Mac 控制权，无框架、无模板、无工具预置",
+          "url": "/blog/browser-use-macos-harness-mac-desktop-agent-six-primitives/",
+          "language": "zh",
+          "excerpt": "macOS Harness：Browser Use 出品，六个原始 API 给 LLM 完整 Mac 控制权，无框架、无模板、无工具预置 macOS Harness 是 Browser Use 团队（主仓库 110k Star）开源的最薄 Mac 桌面 Agent 框架。核心设计：不预置任何应用专属工具，给 LLM 六个原始 API（see/key/type/click/ax/script），让 Agent 在任务执行过程中自行编写缺失的逻辑。一个 Python 进程直接连接 macOS 原生层（CGWindow/CGEvent/AX/AppleEven",
+          "score": 0.57853216
+        },
+        {
+          "article_id": "pentest-harness-deepseek-harness-rebrand-authorization-teardown",
+          "title": "Pentest Harness 拆穿：给 DeepSeek Harness 换皮，再把授权边界删掉",
+          "url": "/blog/pentest-harness-deepseek-harness-rebrand-authorization-teardown/",
+          "language": "zh",
+          "excerpt": "Pentest Harness 拆穿：给 DeepSeek Harness 换皮，再把授权边界删掉 S1N6H/pentest-harness（356 star，MIT）自称面向授权渗透的自托管 AI agent harness。逐 diff 核实：它是 deepseek-ai/deepseek-harness 的换皮——LICENSE 版权人仍是 DeepSeek、命令行仍叫 dsh、包名仍是 @deepseek-ai/dsh、中文 README 还写着『由 DeepSeek AI 开发』。改动主要是品牌替换加一个 pentest 预设；同时删掉了上游",
+          "score": 0.5760839
+        },
+        {
+          "article_id": "neohorse-1-recursive-self-improvement-agentic-post-training",
+          "title": "NeoHorse-1：第一个认真搭递归自我改进原型的开源小模型",
+          "url": "/blog/neohorse-1-recursive-self-improvement-agentic-post-training/",
+          "language": "zh",
+          "excerpt": "NeoHorse-1：第一个认真搭递归自我改进原型的开源小模型 TokenRhythm 用 Routing Harness 让 4B/9B 模型自己观察执行轨迹、估算能力缺口、把反馈注回训练混合——十项基准平均 +5.93 vs Qwen3.5-4B。这不只是一次后训练，是一个闭环的雏形。 LLM post-training recursive-self-improvement agent open-source Qwen3.5 递归自我改进：为什么这个方向重要 Routing Harness：核心机制 训练方法：两个核心组件 测评结果 4B 档（对比 ",
+          "score": 0.57271403
+        },
+        {
+          "article_id": "orion-core-rust-agent-harness-local-llm-teardown",
+          "title": "orion-core Tested: A 3-Star Rust Agent Harness for Local LLMs, Text-Based Tool Calls, and a Chinese Token Undercount",
+          "url": "/blog/orion-core-rust-agent-harness-local-llm-teardown/",
+          "language": "en",
+          "excerpt": "orion-core Tested: A 3-Star Rust Agent Harness for Local LLMs, Text-Based Tool Calls, and a Chinese Token Undercount orion-core is a Rust agent harness extracted from the OrionPod desktop app (MIT, 3 stars, 74 crates.io downloads). It provides a tool-call loop, whole-turn context",
+          "score": 0.57257044
+        }
+      ]
+    }
+  }
+]

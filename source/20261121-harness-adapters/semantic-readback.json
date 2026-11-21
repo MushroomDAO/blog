@@ -1,0 +1,38 @@
+[
+  {
+    "id": "b5cbc92887b826aabda95fdfbee6ae078f54ffddbba6029a",
+    "metadata": {
+      "article_id": "harness-adapters-in-loop-rl-tool-governance",
+      "content_hash": "fd99b64dcb8472be",
+      "excerpt": "Harness Adapters：让模型在真实Agent里学会少走弯路 Hugging Face在Pi、OpenCode和Hermes真实运行时里训练Qwen3.8-27B的LoRA。本文核对成功率、工具调用降幅、合并适配器和任务验证方法，分析代理记录真实token为何重要，以及分布外迁移、推理泄漏与工具治理的边界，区分官方实验与本地有限检查，给工程师提供从验收器到部署评估的实践路线。 Harness Adapters Reinforcement Learning LoRA OpenEnv Tool Governance 为什么要在真实harness里训",
+      "language": "zh",
+      "tags": [
+        "Harness Adapters",
+        "Reinforcement Learning",
+        "LoRA",
+        "OpenEnv",
+        "Tool Governance"
+      ],
+      "title": "Harness Adapters：让模型在真实Agent里学会少走弯路",
+      "url": "/blog/harness-adapters-in-loop-rl-tool-governance/"
+    }
+  },
+  {
+    "id": "a82dd2610bb9e5e1ea378b4871f873b404b4e2badebe5ba3",
+    "metadata": {
+      "article_id": "harness-adapters-in-loop-rl-tool-governance",
+      "content_hash": "34c3abdd3f09132c",
+      "excerpt": "Harness Adapters: Train Inside the Agent You Deploy Harness adapters train LoRA inside real agents. We examine token fidelity, benchmark denominators, adapter merging, task validation, and tool governance limits. Harness Adapters Reinforcement Learning LoRA OpenEnv Tool Governanc",
+      "language": "en",
+      "tags": [
+        "Harness Adapters",
+        "Reinforcement Learning",
+        "LoRA",
+        "OpenEnv",
+        "Tool Governance"
+      ],
+      "title": "Harness Adapters: Train Inside the Agent You Deploy",
+      "url": "/blog/harness-adapters-in-loop-rl-tool-governance/"
+    }
+  }
+]

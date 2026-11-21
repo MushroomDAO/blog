@@ -1,0 +1,8 @@
+{
+  "rows": 3,
+  "checks": {
+    "blogUrl": true,
+    "mediaId": true,
+    "semantic": true
+  }
+}

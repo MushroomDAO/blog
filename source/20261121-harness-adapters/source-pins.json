@@ -1,0 +1,16 @@
+{
+  "blog": "https://huggingface.co/blog/harness-adapters-at-scale",
+  "superAdapter": "3358a71529ce56aba0095addd6a60a66d7c4228b",
+  "plugin": "d39145c491b854d104272bd4bac501be7f01deea",
+  "privateArchiveSha256": {
+    "research/blog.html": "5f4e7a27e598376dd9f72d1c3fa87e494a999935ef0b709b245b639ab06d34b3",
+    "research/blog.md": "ea46ed005d477d4c1418209cba471a7ff4d39c8bc2a2c37c7446cb7319ab7281",
+    "research/qwen-safeagents-plugin-README.md": "03ab087a374c236664644ab98e0eef6671b01459622f0b3e3daceedb2397553b",
+    "research/saved-files.json": "43fcfadc64d831fd9b25d1032d70cbf3fdefb3118e288b7a6ff712a0527f07e6",
+    "research/Qwen3.8-27B-super-adapter-README.md": "c8cdc3754bca0bf6b00634f2b59de57715d9b9a7c1123c06340e185d56725556",
+    "research/Qwen3.8-27B-super-adapter-meta.json": "d8b871f6c97ab80b14adc6556429c4279f5d0dfbc1642a7d1750bade4c245660",
+    "research/Qwen3.8-27B-super-adapter-adapter_config.json": "ac16b38218d38bee16d9b73caa7f7b8af4c7b2f02b8dd8ae70b183a5099b9475",
+    "research/atif_harbor.py": "33cd9c2a87d53d882a0881aaae620acb758c98f31127e2a4e8dedb24b9dcf108",
+    "research/qwen-safeagents-plugin-meta.json": "1a3aca9c7f014a5978623c15c651724f324e1fcee7fc1513662438b2d7d21c2c"
+  }
+}

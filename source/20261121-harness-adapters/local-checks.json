@@ -1,0 +1,15 @@
+{
+  "regexChecksPassed": 8,
+  "regexSourceSha256": "33cd9c2a87d53d882a0881aaae620acb758c98f31127e2a4e8dedb24b9dcf108",
+  "scope": "Unmodified AST-extracted regex constants only; no safeagents service, detector composition, Allowance logic, real tool calls or RL execution.",
+  "piCounts": {
+    "base": 20,
+    "adapted": 33,
+    "tasks": 51,
+    "netGain": 13,
+    "newlySolved": 15,
+    "lost": 2
+  },
+  "blockedFractionApprox": 0.0004976923076923077,
+  "pairedBinomialTwoSided": 0.002349853515625
+}
