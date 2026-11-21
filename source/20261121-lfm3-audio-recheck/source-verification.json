@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-21T15:44:29.718655+00:00",
+  "sources": [
+    {
+      "url": "https://www.liquid.ai/blog/lfm3",
+      "file": "official-blog.html",
+      "sha256": "34f55a861e29c5a86a28dd6cf4199966b70cc218008291c605aafb8f5818f310"
+    },
+    {
+      "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B/raw/main/README.md",
+      "file": "audio-card.md",
+      "sha256": "3c6033b2a806815120d44a0920ef960acdd2aaca4b50c97ef158bddc13c011d9"
+    }
+  ],
+  "officialReleaseDate": "2026-10-27",
+  "sameExistingArticle": true,
+  "firstTokenMs": 50,
+  "codecSpeedRealtime": 87,
+  "codecHardware": "single CPU thread Apple M4 Max",
+  "codecChunkMs": 80,
+  "codecTokensPerChunk": 12,
+  "newInferenceTests": 0
+}
