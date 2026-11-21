@@ -1,0 +1,49 @@
+{
+  "publicRoutes": 1026,
+  "localArticleFiles": 1027,
+  "missingPublicArticleRoutes": [],
+  "missingRouteInspection": [
+    {
+      "route": "/blog/audio8-tts-preview-06b-multilingual-zero-shot-voice-cloning-dualar/",
+      "finalURL": "https://blog.mushroom.cv/blog/audio8-tts-preview-06b-multilingual-zero-shot-voice-cloning-dualar/",
+      "title": "Audio8 TTS Preview 0.6B：0.6B 参数打赢 4.6B 的 TTS 模型——11 语言零样本声音克隆",
+      "canonical": [
+        "<link rel=\"canonical\" href=\"https://blog.mushroom.cv/blog/audio8-tts-preview-06b-multilingual-zero-shot-voice-cloning-dualar/\">"
+      ]
+    },
+    {
+      "route": "/blog/codexbar-macos-menu-bar-tool/",
+      "finalURL": "https://blog.mushroom.cv/blog/codexbar-macos-menu-bar-tool/",
+      "title": "Codexbar: Stop Losing Context When Switching Accounts",
+      "canonical": [
+        "<link rel=\"canonical\" href=\"https://blog.mushroom.cv/blog/codexbar-macos-menu-bar-tool/\">"
+      ]
+    },
+    {
+      "route": "/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
+      "finalURL": "https://blog.mushroom.cv/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
+      "title": "HugAgentOS：浙大出品的企业级 AgentOS，用领域本体做 Agent 推理的控制平面",
+      "canonical": [
+        "<link rel=\"canonical\" href=\"https://blog.mushroom.cv/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/\">"
+      ]
+    }
+  ],
+  "resolvedNormalizedSlugs": [
+    {
+      "route": "/blog/audio8-tts-preview-06b-multilingual-zero-shot-voice-cloning-dualar/",
+      "file": "src/content/blog/audio8-tts-preview-0.6b-multilingual-zero-shot-voice-cloning-dualAR.md",
+      "reason": "Astro lowercase and punctuation-normalized slug"
+    },
+    {
+      "route": "/blog/codexbar-macos-menu-bar-tool/",
+      "file": "src/content/blog/codexbar-macOS-menu-bar-tool.md",
+      "reason": "Astro lowercase and punctuation-normalized slug"
+    },
+    {
+      "route": "/blog/hugagentos-zju-enterprise-agentos-ontology-trustworthy/",
+      "file": "src/content/blog/hugagentos-zju-enterprise-agentOS-ontology-trustworthy.md",
+      "reason": "Astro lowercase and punctuation-normalized slug"
+    }
+  ],
+  "allPublicRoutesHaveLocalSource": true
+}

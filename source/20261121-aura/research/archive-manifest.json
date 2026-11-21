@@ -1,0 +1,96 @@
+{
+  "privateDirectory": "/Users/jason/.heinu1-bot/jobs/f1eb66fd-32b5-4940-b57a-958cb418aa42/research",
+  "artifacts": [
+    {
+      "name": "repo-LICENSE.txt",
+      "bytes": 1928,
+      "sha256": "9a99812253bed3dc3d0efe61db4a87235c8bcd96b67ab91ef9927d13c55a307e"
+    },
+    {
+      "name": "project-full.html",
+      "bytes": 10109,
+      "sha256": "e7dfae40f169f318004944ab1e1140c09163349a48c5d93ba26d032198c3359a"
+    },
+    {
+      "name": "paper.pdf",
+      "bytes": 21366918,
+      "sha256": "9462f5c0745b0830e34b77cd3c074022e835e5fbc0aee31e45fb4f14cc59f822"
+    },
+    {
+      "name": "AURA-1.3B-README.md",
+      "bytes": 8004,
+      "sha256": "14d6df9494b29e5a46370c497ffe6186eb43a8ba8daebca845aa933b8231e2dd"
+    },
+    {
+      "name": "repo-README.md",
+      "bytes": 7441,
+      "sha256": "9751c0e93a9787cadaebcfdf9a4458ef02f0293833e77532547f277064518280"
+    },
+    {
+      "name": "AURA-5B-README.md",
+      "bytes": 8935,
+      "sha256": "5cf725cd6de13e164b2bc9601e152b36cb2e385f981c12ab4f2bddc69a7412f0"
+    },
+    {
+      "name": "AURA-5B-meta.json",
+      "bytes": 108,
+      "sha256": "c8c6e7fa63fd1a91ff41a9832694fa90ab1f090270b66bf90f62e8c4fa4c2918"
+    },
+    {
+      "name": "paper.txt",
+      "bytes": 89942,
+      "sha256": "a8142ebac152a84c4b9e7bf7487830d9b3200270796407da6f9e87d90bdf8f5a"
+    },
+    {
+      "name": "AURA-1.3B-meta.json",
+      "bytes": 117,
+      "sha256": "05a68ccf3f8c9cf22211454a681283fdc3a7d6e360f98970ffa73c97624f84cf"
+    },
+    {
+      "name": "AURA-5B-LICENSE",
+      "bytes": 1928,
+      "sha256": "9a99812253bed3dc3d0efe61db4a87235c8bcd96b67ab91ef9927d13c55a307e"
+    },
+    {
+      "name": "paper.html",
+      "bytes": 518551,
+      "sha256": "d42a14ce790204226b027c21b87f3c4917f9f8035aa3dbe7b91d70de585e7dfc"
+    },
+    {
+      "name": "AURA-Dataset-README.md",
+      "bytes": 6652,
+      "sha256": "e14b073a4408a1daf929825d055a0e0626847d1a9995b32c9bc2068118434334"
+    },
+    {
+      "name": "repo-pyproject.toml",
+      "bytes": 867,
+      "sha256": "3d98f3d9d8b5ed0ed0a87e0f54f71b9318ec5ca183947e5f18d0a49eb86b61e2"
+    },
+    {
+      "name": "project.html",
+      "bytes": 1730,
+      "sha256": "691d99d868cee6c553be6d08916ad2ad69219b7d8577b144bad9ac1e9f5e101c"
+    },
+    {
+      "name": "repo-aura--pipeline.py",
+      "bytes": 7965,
+      "sha256": "d2029ef0921f7a58895fbb96e2e7d07493d8e70372c875cb049a5fd17150a022"
+    },
+    {
+      "name": "repo-aura--configs.py",
+      "bytes": 3147,
+      "sha256": "0c285233e0a1a6f3f47993cc7a4337cc6d7e4752758a314271f6ebc53eea7eb1"
+    },
+    {
+      "name": "AURA-Dataset-meta.json",
+      "bytes": 120,
+      "sha256": "6bfd8c244b6dc18fa9b177df6500bfadc79adb674c22e20270f5692752e2db46"
+    },
+    {
+      "name": "repo-aura--kv_cache.py",
+      "bytes": 3407,
+      "sha256": "e4e34a109326b0fbf0f0d5850213ad0efcd9c15247c1f94d4c4538c3ae2498c4"
+    }
+  ],
+  "reason": "Fullpaper/cards/noncommercial upstreamsources kept private, public records contain pins/derivedchecks."
+}

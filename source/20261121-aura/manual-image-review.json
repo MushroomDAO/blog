@@ -1,0 +1,19 @@
+{
+  "bannerSeed": 8872,
+  "bannerPassed": true,
+  "scene": "Unmarkedsilvermicrophone/glassvideoframes/copperrail/cyanfiber",
+  "rejectedSeed": 8871,
+  "reason": "MachineOCRmissedgibberishlensmarkings, manualreject",
+  "sourceCandidates": "Officialsamplesportraitvideosnotadopted;methoddiagramtextdominant; nofacesframegrabsused",
+  "bodyCount": 3,
+  "bodyReviewed": true,
+  "topics": [
+    "rollingchunkanchor",
+    "two-stagelearning",
+    "playbackcancelclock"
+  ],
+  "bodyNoText": true,
+  "workerExited": 0,
+  "workerSession": "01a1fbdc-209c-74b2-afe1-fb396cfa8d3d",
+  "compressedAfterWorkerExit": true
+}

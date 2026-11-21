@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2b4fca28b2885d497be53fd942463acc8730b7616256b8ba",
+    "metadata": {
+      "article_id": "aura-streaming-avatar-causal-distillation-guide",
+      "content_hash": "397f68e7bee25468",
+      "excerpt": "AURA流式数字人：实时生成的前提与开放边界 AURA 把肖像与语音变成分块输出的数字人视频，通过因果注意力、滚动缓存和两阶段蒸馏减少生成等待。本文核对 Kyutai 论文、推理源码与模型卡，区分 H100 上的论文吞吐、公开代码速度和首帧延迟，检查部分数据发布及非商业许可，并运行百轮缓存张量验证，解释从研究模型接入实时对话产品还需要补齐哪些工程环节。 AURA Kyutai 数字人 流式生成 模型蒸馏 流式数字人到底省掉了什么等待？ 20.7 fps 与 9.7 fps，哪个才算实时？ 为什么缓存不必随视频一直增长？ 两阶段蒸馏为什么要一起做？ 公开了",
+      "language": "zh",
+      "tags": [
+        "AURA",
+        "Kyutai",
+        "数字人",
+        "流式生成",
+        "模型蒸馏"
+      ],
+      "title": "AURA流式数字人：实时生成的前提与开放边界",
+      "url": "/blog/aura-streaming-avatar-causal-distillation-guide/"
+    }
+  },
+  {
+    "id": "73292ad88f70e94679966a42065270130b4ba4aca61b3628",
+    "metadata": {
+      "article_id": "aura-streaming-avatar-causal-distillation-guide",
+      "content_hash": "783090d3afa61813",
+      "excerpt": "AURA Streaming Avatars: Speed, Causality and Release Limits Explore Kyutai AURA's streaming avatars, causal cache and distillation, with H100 timing limits, partial data release and 100 synthetic cache checks on CPU. AURA Kyutai 数字人 流式生成 模型蒸馏 What waiting does causal streaming re",
+      "language": "en",
+      "tags": [
+        "AURA",
+        "Kyutai",
+        "数字人",
+        "流式生成",
+        "模型蒸馏"
+      ],
+      "title": "AURA Streaming Avatars: Speed, Causality and Release Limits",
+      "url": "/blog/aura-streaming-avatar-causal-distillation-guide/"
+    }
+  }
+]
