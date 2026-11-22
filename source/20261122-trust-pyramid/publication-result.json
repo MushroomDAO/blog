@@ -5,5 +5,11 @@
   "archivedMediaId": "",
   "wechatStatus": "draft",
   "wechatError": "",
-  "deployment": "cf39f4f1"
+  "deployment": "cf39f4f1",
+  "checkedAt": "2026-11-22T09:48:09.522857+00:00",
+  "kbStatus": "verified",
+  "semanticStatus": "verified",
+  "repositoryPr": "https://github.com/MushroomDAO/blog/pull/284",
+  "repositoryStatus": "review-pending",
+  "repositoryError": "Normal squash merge rejected by base branch policy; Blog and current WeChat draft are verified complete."
 }
