@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-22T04:50:19.989558+00:00",
+  "articles": [
+    {
+      "slug": "simulab-claude-interactive-lab-model-validation-guide",
+      "url": "https://blog.mushroom.cv/blog/simulab-claude-interactive-lab-model-validation-guide/",
+      "title": "SimuLab：把问题做成能动手验证的3D实验室",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/simulab-claude-interactive-lab-model-validation-guide-banner.XiQiiKMl.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 79652
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/simulab-claude-interactive-lab-model-validation-guide-banner.XiQiiKMl_ozG5v.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 41762
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/simulab-claude-interactive-lab-model-validation-guide-fig-01.OElW3atW_1Suq3Q.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 25634
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/simulab-claude-interactive-lab-model-validation-guide-fig-02.DigrCFuC_1lJVQE.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 23824
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/simulab-claude-interactive-lab-model-validation-guide-fig-03.dmCX4e59_Z2lxJaS.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 23534
+        }
+      ]
+    }
+  ]
+}

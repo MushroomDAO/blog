@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/ecapri-dev/simulab-skill",
+  "commit": "a0561f868d9c642d92c667294d98b98c367a45ab",
+  "files": {
+    "README.md": "6f1661c837c51f1c5bac7b325dc1621e170d6101e9a63e4e2ef26cc93f1c09b7",
+    "SKILL.md": "1ef903ae4f1f2dbae7ba5c4d376b883e37c5fc38590e01325cbc2e53ebc6d140",
+    "PROMPTS.md": "751a50077bc1b8e10076eee4415942fbde37d92991852e4fcc1507fb6f2535e8",
+    "LICENSE": "d3c6cb21f7743f36297c13f96c6962660c2938ae6d87481208dacc68339537b6",
+    "tools/build.mjs": "17e953ce0a8b4e5fcbb23f3d99116ae1c1599cfb959194067ef4c7a8b5c622f7",
+    "demos/labE1-espresso/model.js": "2d73d630b6dc03453259f28a439943c58e41a875acf08191eb539b11ac6e45a6",
+    "docs/labE1-espresso.jpg": "24d00cc4f62c92ef15ac458bcec4f6f0ea64b4efc5dfe30859ce71714bc24c79"
+  },
+  "bannerAdopted": "docs/labE1-espresso.jpg",
+  "manualBannerReview": "pass; own project espresso screenshot, no person, on topic; text is project UI"
+}

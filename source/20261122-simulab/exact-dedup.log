@@ -1,0 +1,17 @@
+✅ Access token obtained
+账本：blog 1030 篇 + 公众号草稿箱 5 条 + 本地发布记录 1012 条 + MemPalace 4553 抽屉
+
+── 查：https://github.com/ecapri-dev/simulab-skill
+   ✅ 四本账都没查到
+
+── 查：SimuLab
+   ❌ [知识库] # 如果你想将任何想法、疑问或项目转化为一个与Claude协作的  **Summary**: 如果你想将任何想法、疑问或
+      正文出现实体名「simulab」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

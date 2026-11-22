@@ -1,0 +1,99 @@
+{
+  "browser": [
+    {
+      "name": "labE1-espresso",
+      "bytes": 467709,
+      "duration": 51.25510204081633,
+      "frameChanges": true,
+      "knobs": 2,
+      "canvas2D": true,
+      "interaction": {
+        "value": "8",
+        "modelValue": 8,
+        "live": true,
+        "events": 2
+      },
+      "errors": [],
+      "externalRequests": 0
+    },
+    {
+      "name": "lab01-sonar",
+      "bytes": 485051,
+      "duration": 26.075356999999855,
+      "frameChanges": true,
+      "knobs": 2,
+      "canvas2D": true,
+      "interaction": null,
+      "errors": [],
+      "externalRequests": 0
+    },
+    {
+      "name": "lab02-multimetro",
+      "bytes": 478168,
+      "duration": 75.45,
+      "frameChanges": true,
+      "knobs": 2,
+      "canvas2D": true,
+      "interaction": null,
+      "errors": [],
+      "externalRequests": 0
+    },
+    {
+      "name": "lab03-cautin",
+      "bytes": 485788,
+      "duration": 42,
+      "frameChanges": true,
+      "knobs": 2,
+      "canvas2D": true,
+      "interaction": null,
+      "errors": [],
+      "externalRequests": 0
+    },
+    {
+      "name": "blink",
+      "bytes": 457435,
+      "duration": 14.65,
+      "frameChanges": true,
+      "knobs": 2,
+      "canvas2D": true,
+      "interaction": null,
+      "errors": [],
+      "externalRequests": 0
+    }
+  ],
+  "modelChecks": [
+    [
+      "calibration",
+      true
+    ],
+    [
+      "fine-slower",
+      true
+    ],
+    [
+      "coarse-faster",
+      true
+    ],
+    [
+      "balanced",
+      true
+    ],
+    [
+      "target",
+      true
+    ],
+    [
+      "before-pump",
+      true
+    ],
+    [
+      "preinfusion",
+      true
+    ],
+    [
+      "flow-square",
+      true
+    ]
+  ],
+  "scope": "Unmodified upstream five builds/browser pages, original espresso functions in VM. No new lab generation, video render, mobile FPS or physical calibration."
+}
