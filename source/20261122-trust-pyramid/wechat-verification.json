@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-22T09:45:44.143Z",
+  "drafts": [
+    {
+      "slug": "trust-pyramid-agent-quality-gates-evidence-guide",
+      "mediaId": "prCUE631thH1cmNLi42prIi7_xckLLk_AMWNtsc82C3gGErKq_j3B1TskKb9-Aii",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "84ea493b4546148dad39fe9aee519aa730cc83b7070e22f164529cb44cf934d0",
+      "remoteTextHash": "84ea493b4546148dad39fe9aee519aa730cc83b7070e22f164529cb44cf934d0",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/trust-pyramid-agent-quality-gates-evidence-guide/",
+      "localContentHash": "108cc5184c48ff58663ee6db0684dde4d731e7f8ab06fd398654e2e911de5dde",
+      "remoteContentHash": "726560bc7ece79f4b23c2f763372c3fd9f165304003ea0400fb65ff0026bd810"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-22T09:41:24.842533+00:00",
+  "lengths": {
+    "titleEn": 53,
+    "description": 158,
+    "descriptionEn": 155,
+    "wechatTitle": 26,
+    "wechatDigest": 31
+  },
+  "checks": [
+    "BLUF both languages",
+    "FAQ 3 each",
+    "primary repository, guide, benchmark sources",
+    "internal related article",
+    "copyright both languages",
+    "test failure and corrected environment disclosed",
+    "author benchmarks attributed with small-sample limits",
+    "3 aligned figure anchors"
+  ],
+  "bannerChoice": "README hero is text-heavy terminal GIF; generated topical glass-layer pyramid instead.",
+  "dedupDecision": "Exact primary repo absent; local exact regex clear. Entity split query generates generic trust/pyramid false hits; only exact raw KB receipt exists."
+}

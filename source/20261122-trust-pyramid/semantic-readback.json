@@ -1,0 +1,38 @@
+[
+  {
+    "id": "bb571e31f97301dcc873724c2ee2bb09c4699325ea791573",
+    "metadata": {
+      "article_id": "trust-pyramid-agent-quality-gates-evidence-guide",
+      "content_hash": "6cf458a48ffa5a82",
+      "excerpt": "Trust Pyramid：让编程Agent交证据，别只交一句完成了 Trust Pyramid把编程Agent常犯的错误变成项目专用检查，用静态规则、运行验证、AI审阅和CI门禁形成证据链。本文拆解可信基线、红绿测试、默认轻量配置与升级流程，复跑测试并记录Python兼容问题，说明哪些防绕过机制确有局部证据，哪些仍依赖分支保护、人工批准与真实项目验收，避免把工具包装误读为质量保证。 Trust Pyramid Agent Quality Gates Code Review CI “信任金字塔”到底把信任放在哪里？ 为什么CI不能用这次PR自己带来的规则",
+      "language": "zh",
+      "tags": [
+        "Trust Pyramid",
+        "Agent",
+        "Quality Gates",
+        "Code Review",
+        "CI"
+      ],
+      "title": "Trust Pyramid：让编程Agent交证据，别只交一句完成了",
+      "url": "/blog/trust-pyramid-agent-quality-gates-evidence-guide/"
+    }
+  },
+  {
+    "id": "4867cb96efbc624fa0ecaa00acb1938e87b3d5b068f4c3a0",
+    "metadata": {
+      "article_id": "trust-pyramid-agent-quality-gates-evidence-guide",
+      "content_hash": "6a44d453f2c715bd",
+      "excerpt": "Trust Pyramid: Evidence-Based Gates for Coding Agents Trust Pyramid turns repeated agent mistakes into executable checks. We examine trusted CI, review evidence, local test results, costs, and adoption limits. Trust Pyramid Agent Quality Gates Code Review CI Where does the trust ",
+      "language": "en",
+      "tags": [
+        "Trust Pyramid",
+        "Agent",
+        "Quality Gates",
+        "Code Review",
+        "CI"
+      ],
+      "title": "Trust Pyramid: Evidence-Based Gates for Coding Agents",
+      "url": "/blog/trust-pyramid-agent-quality-gates-evidence-guide/"
+    }
+  }
+]

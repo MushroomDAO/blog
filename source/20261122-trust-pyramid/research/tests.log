@@ -1,0 +1,155 @@
+
+> test
+> node --test --test-reporter=spec tests/*.test.mjs skills/trust-pyramid/templates/lint/project-plugin.test.mjs
+
+✔ violating fixture: every rule reports at the expected line (488.016083ms)
+✔ compliant fixture: no false positives (89.257542ms)
+✔ chat completion echoes the last user message deterministically (21.691416ms)
+✔ streaming returns SSE chunks that reassemble the reply and end with [DONE] (29.453958ms)
+✔ responses API and transcription endpoints answer (4.309459ms)
+✔ fault injection: 429, 500, bad-json and timeout (209.572625ms)
+✔ check.sh skips untouched packages and reports only the failure summary (913.626125ms)
+✔ check.sh supports several path prefixes per check and summarizes TAP output (1802.428958ms)
+✔ stop-gate prints JSON on success and blocks with a JSON decision on failure, then hands over visibly (1054.44925ms)
+✔ a check that never exits is stopped at its time limit, with the children that hold the output (13392.870792ms)
+✔ pre-commit blocks a commit whose staged files fail the checks (650.860375ms)
+✔ hook-status reports a Stop hook that is staged but not enabled (80.103125ms)
+✔ install-agent-hooks merges into existing configs, keeps what is there, and is idempotent (462.520875ms)
+✔ install-agent-hooks does not register the Stop hook in both Claude settings files (304.357209ms)
+✔ install-agent-hooks changes nothing without a yes, and an existing stop-gate entry is kept (429.5495ms)
+✔ hook-status flags disableAllHooks and shows when the Stop hook last ran (502.312083ms)
+✔ a user who never ran the installer is still reminded: AGENTS.md and the npm prepare script (339.615334ms)
+✔ pre-commit reminds on every commit while the Stop hook is off, without blocking (612.192ms)
+✔ the Stop hook runs only fast checks; pre-commit and CI run everything (794.815417ms)
+✔ STOP_GATE_MAX_ATTEMPTS changes the cap (429.597459ms)
+✔ gates still run when the scripts were committed without the executable bit (setup from Windows) (346.252291ms)
+✔ the Stop hook finds the repository from its own location, and hands over visibly when it cannot (180.012417ms)
+✔ the Codex Stop hook command works from a subdirectory and hands over visibly outside a repository (172.964667ms)
+✔ the Stop hook checks the worktrees this session works in, not other sessions' worktrees (939.515667ms)
+✔ manual stop-gate runs do not use up attempts; attempts are counted per session (390.738666ms)
+✔ interceptions in a linked worktree are logged in the main checkout, with the worktree (141.356125ms)
+✔ hook-status in a linked worktree reads the main checkout's hook settings and says what covers it (380.706333ms)
+✔ gate interceptions are logged per gate with rule IDs, and gate-report summarizes them (276.725958ms)
+✔ gate-report flags rules that keep coming back across weeks (5.762625ms)
+✔ the first failed Stop of a session blocks, whatever the checks print (#38) (123.125583ms)
+✔ session worktrees are matched however the path is spelled, and only as a whole path (#39) (522.852084ms)
+✔ missing dependencies stop the checks with "setup needed", and do not use up fix attempts (#40) (319.745791ms)
+✔ check.sh names the test suites it does not run, except in the fast Stop hook run (#41) (88.962375ms)
+✔ the setup limit counts setup stops in a row: a real failure in between resets it (#43) (293.126334ms)
+✔ pre-commit: missing dependencies only hold up commits that need them, with a setup message (#44) (504.966709ms)
+✔ a sibling directory such as <worktree>.bak does not select the worktree; a sentence ending in it does (#45) (415.957875ms)
+✔ only host runs are logged as Stop-hook interceptions; TRUST_GATE_LOG=0 logs nothing (#49) (340.258291ms)
+✔ rule candidates seen twice are listed by hook-status (not in --quiet) and gate-report (#50) (424.679416ms)
+✔ a check that fails while a dependency outside the change is missing is reported as setup, not as a failure (149.240125ms)
+✔ no-ai-markers: attribution lines and tool names are reported with their line (0.9955ms)
+✔ no-ai-markers: normal text, file names in backticks and code blocks pass (CRLF too) (0.13425ms)
+✔ language: other writing systems and full-width punctuation are reported per line (1.554333ms)
+✔ language: English, accented Latin, quoted strings in backticks and git comments pass (0.136375ms)
+✔ configurable: allowed scripts, switched-off rules, marker scope and marker list (1.26375ms)
+✔ CLI: --pr, --message and --commits report problems with exit code 1 (343.284042ms)
+✔ commit-msg hook blocks a message in another language (1963.355667ms)
+✔ github-text workflow runs the base copy, re-runs on edits and keeps PR text out of the script (0.274209ms)
+✖ python project rules: violations fixture reports TP001-TP004 with fix-it messages (51.724375ms)
+✖ python project rules: compliant fixture is clean (37.198125ms)
+✔ extractFindings accepts plain arrays, {findings}, and fenced model replies (1.042125ms)
+✔ finding IDs are stable across whitespace and case changes (0.310291ms)
+✔ dispositions: missing, short reasons and incomplete confirmations are rejected (0.309042ms)
+✔ deferred findings must be tracked in rule-candidates.md (0.257333ms)
+✔ a red base run caused by an import error does not count as evidence (424.279959ms)
+✔ without a remote, the base defaults to main (357.37075ms)
+✔ confirmed finding passes when the test is red on base and green on head (353.791083ms)
+✔ confirmed finding fails when the test already passes on base (proves nothing) (338.687167ms)
+✔ confirmed finding fails when the fix does not make the test pass (335.099459ms)
+✔ gate fails closed when the review output is missing (75.594166ms)
+✔ a bug introduced by the PR itself is proven against the reviewed commit, not main (345.773458ms)
+✔ the reviewed commit must be a real ancestor of HEAD, not HEAD itself (235.894292ms)
+✔ SKILL.md frontmatter works for Claude Code and Codex (0.456542ms)
+✔ every reference and template path mentioned in SKILL.md exists (0.336042ms)
+✔ every template path mentioned in the references exists (0.530125ms)
+✔ Codex metadata and Claude plugin manifests are present and consistent (0.56725ms)
+✔ shell templates are executable in the git index (6.801833ms)
+✔ CI never executes gate files from the PR checkout (1.03575ms)
+✔ line endings: this repo and installed projects keep gate files LF on Windows (core.autocrlf=true) (78.009792ms)
+✔ tests and templates never spawn npx or python3 by name (both break on Windows) (9.963167ms)
+✔ CI is split per layer: the always-installed workflow needs neither verify/ nor an API key (0.745083ms)
+✔ the deny list is per machine, so a rule-writing worktree is not locked out of lint/ (0.213291ms)
+✔ setup cost figures are the same in SKILL.md, README and the benchmark (0.172208ms)
+✔ the installed project carries the rule workflow, and nothing tells agents to wait for a maintainer (#50) (0.496542ms)
+✔ control: the violation alone is blocked either way (1783.01325ms)
+✔ turning the rule off in its config fools naive CI but not trusted CI (1378.70875ms)
+✔ deleting the check from scripts/check.sh fools naive CI but not trusted CI (738.861542ms)
+✔ shrinking the protected list in the PR has no effect (the list is read from base) (671.086ms)
+✔ a newly added suppression comment is rejected; allowed ones need the protected allowlist (496.359792ms)
+✔ a newly skipped or focused test is rejected, in test files only (1378.023208ms)
+✔ a clean PR passes, and a PR that changes gate files is flagged but not failed (214.359209ms)
+✔ the change that adds the full set of gate files passes no-suppressions.sh (it does not flag itself) (324.374125ms)
+✔ bootstrap: the PR that introduces the gates gets a labelled result, not "exit code 128" (285.876917ms)
+✔ after the gates merge, the same workflow step uses the base copy (no bootstrap) (233.830833ms)
+✔ loosening an npm script that check.sh calls fools naive CI but not trusted CI; dependency changes still apply (519.055708ms)
+✔ upgrade keeps project changes, applies template changes, and stops at real conflicts (292.7305ms)
+✔ upgrade --dry-run reports without writing anything (120.518208ms)
+✔ record adopts an existing installation once, and refuses to overwrite the lock by accident (258.563542ms)
+✔ the install manifest covers every template exactly once, and versions agree (1.418416ms)
+✔ record --from takes the base from the skill's git tag of that release (436.315625ms)
+✔ record --from downloads the release when the skill is not a git checkout (148.255875ms)
+ℹ tests 90
+ℹ suites 0
+ℹ pass 88
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28015.080708
+
+✖ failing tests:
+
+test at tests/python-rules.test.mjs:20:1
+✖ python project rules: violations fixture reports TP001-TP004 with fix-it messages (51.724375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + []
+  - [
+  -   'TP002@3',
+  -   'TP001@7',
+  -   'TP003@8',
+  -   'TP004@8'
+  - ]
+
+      at TestContext.<anonymous> (file:///private/tmp/trust-pyramid-research-20261122/tests/python-rules.test.mjs:24:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'TP002@3', 'TP001@7', 'TP003@8', 'TP004@8' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/python-rules.test.mjs:28:1
+✖ python project rules: compliant fixture is clean (37.198125ms)
+  AssertionError [ERR_ASSERTION]: Traceback (most recent call last):
+    File "/private/tmp/trust-pyramid-research-20261122/skills/trust-pyramid/templates/lint/python/project_rules.py", line 96, in <module>
+      def check_paths(paths: list[Path], root: Path, as_rel: dict[Path, str] | None = None) -> list[Violation]:
+  TypeError: unsupported operand type(s) for |: 'types.GenericAlias' and 'NoneType'
+
+
+  1 !== 0
+
+      at TestContext.<anonymous> (file:///private/tmp/trust-pyramid-research-20261122/tests/python-rules.test.mjs:30:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

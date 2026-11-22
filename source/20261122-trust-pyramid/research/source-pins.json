@@ -1,0 +1,38 @@
+{
+  "repository": "https://github.com/Tim-rppl/trust-pyramid",
+  "commit": "d3401ada02803a2974b44fbf9e53cd84160423b9",
+  "files": {
+    "README.md": "5d07e054c39160ef053e9e63886ff22b8596edd198056f17f4e7e49294f51538",
+    "LICENSE": "995f0123aa76b6b27a49a12ce20b01f2194742befc78b80823e5882622be3984",
+    "docs/GUIDE.md": "ef73afdfb82ab63015aac0011b26f60931008ec82dfd176095fc76ab87deb649",
+    "docs/BENCHMARK.md": "1a8f6e18257c196fa07c43046f900b9c7ec767b8699bc40e02db4d63ed9ebc72",
+    "skills/trust-pyramid/VERSION": "a0ad50640139a524f86591157145bf1d4674ea9c065bfea21558f0f7b04430c8",
+    "skills/trust-pyramid/templates/scripts/trusted-check.sh": "0a3db601a4f12d5b80f72f2d21ac3b4da01d56ead9ee9a9e3e671cfed23fe9ad",
+    "skills/trust-pyramid/templates/scripts/stop-gate.sh": "d05d644a829b0170db66f7e7a6727a35fecdf76d1885561e7f4e5199a50e6648",
+    "skills/trust-pyramid/templates/scripts/review-gate.mjs": "a2301a9e2775d23c292d272bcda38043ad8e847dad50bc5f9817f92b9c7a0b3f"
+  },
+  "nodeVersion": "v26.10.0",
+  "python3Successful": "3.12.15",
+  "initialRun": {
+    "pass": 88,
+    "fail": 2,
+    "reason": "selected old Python3 cannot execute PEP604 union annotation"
+  },
+  "python312Run": {
+    "pass": 90,
+    "fail": 0,
+    "skipped": 0
+  },
+  "upstreamUnmodified": true,
+  "scope": "template and fixture tests, including real temporary Git and shell; no live model API, installed host hooks or actual GitHub protection E2E",
+  "testHashes": {
+    "tests/gates.test.mjs": "3c3fda6d6ebde0d41d8afb63edea9d1e32939f5a78199c98fed853d36673dcab",
+    "tests/review-gate.test.mjs": "be5492020b46b964f1836b242983dc7a8c53af36e9c1d0e97d053f0fca330982",
+    "tests/trusted-gates.test.mjs": "01f4aa87d8c63644a351ac34b3faad0e9ff1fa7afbc1cff5ca1bd087e4e7c068",
+    "tests/skill.test.mjs": "9515e36993674aa22ae41631f7d90fec495277d5d6167bcb68443465afe0f862",
+    "tests/github-text.test.mjs": "1cb445852a52027cc843dedcb96fea9f82fc7371d13a83ad661c1aef3064950a",
+    "tests/fake-openai.test.mjs": "a1db0abcbdf6b5b3a80bf419ac2b5733639d853976fde03e663709e409c18548",
+    "tests/upgrade.test.mjs": "ca65677a7d5e3de5b692e57ed8c1899e6a87deea7b6bc0bca9602417aca8677d",
+    "tests/python-rules.test.mjs": "70fe496967edc16ad1c2933f86d0897736298ace8c28d5c75a7b68a83f03dec5"
+  }
+}

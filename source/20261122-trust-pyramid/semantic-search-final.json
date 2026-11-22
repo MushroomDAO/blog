@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "trust-pyramid-agent-quality-gates-evidence-guide",
+    "query": "Trust Pyramid Agent 质量门禁 证据",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "trust-pyramid-agent-quality-gates-evidence-guide",
+          "title": "Trust Pyramid：让编程Agent交证据，别只交一句完成了",
+          "url": "/blog/trust-pyramid-agent-quality-gates-evidence-guide/",
+          "language": "zh",
+          "excerpt": "Trust Pyramid：让编程Agent交证据，别只交一句完成了 Trust Pyramid把编程Agent常犯的错误变成项目专用检查，用静态规则、运行验证、AI审阅和CI门禁形成证据链。本文拆解可信基线、红绿测试、默认轻量配置与升级流程，复跑测试并记录Python兼容问题，说明哪些防绕过机制确有局部证据，哪些仍依赖分支保护、人工批准与真实项目验收，避免把工具包装误读为质量保证。 Trust Pyramid Agent Quality Gates Code Review CI “信任金字塔”到底把信任放在哪里？ 为什么CI不能用这次PR自己带来的规则",
+          "score": 0.66112477
+        },
+        {
+          "article_id": "unlazy-depth-tree-anti-laziness-gate-contract-claude-code",
+          "title": "Unlazy：用 Depth Tree + 可运行验证门，卡住 AI 代理「谎报完成」",
+          "url": "/blog/unlazy-depth-tree-anti-laziness-gate-contract-claude-code/",
+          "language": "zh",
+          "excerpt": "Unlazy：用 Depth Tree + 可运行验证门，卡住 AI 代理「谎报完成」 Unlazy 是一个 Claude Code / Codex 技能包，用 Depth Tree 方法将任务拆成 N 层，每个叶节点都获得整个任务的完整时间预算——努力程度随深度倍增。核心是可运行验证门（GATES.md），只有所有 CHECK 通过、EVIDENCE 记录在案，才允许报告完成。2,300+ Star，创建于 2026-08-09。 开源 Claude Code Agent技能 防偷懒 Depth Tree 验证门 Unlazy AI代理 问题是什么 D",
+          "score": 0.56073445
+        },
+        {
+          "article_id": "agent-egress-firewall-pipelock-rate-limit-kill-switch",
+          "title": "AI Agent 需要出站防火墙：RubyGems 被攻击、订位 Agent 被 Resy 封号之后，我们实测了 Pipelock",
+          "url": "/blog/agent-egress-firewall-pipelock-rate-limit-kill-switch/",
+          "language": "zh",
+          "excerpt": "AI Agent 需要出站防火墙：RubyGems 被攻击、订位 Agent 被 Resy 封号之后，我们实测了 Pipelock 研究者认为 OpenAI 测试中的 Agent 5 月往 RubyGems 上传了数百个恶意包（RubyGems 官方称无法确定是否出自 AI Agent），一个订位 Agent 按当事人贴出的日志每小时约 200 次请求，让用户被 Resy 封号。我们在 Mac mini 上实测开源出站防火墙 Pipelock v3.5.0：域名白名单、每域名每分钟限速（第 6 次请求起返回 429）和 kill switch 都有效；但",
+          "score": 0.55216604
+        },
+        {
+          "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+          "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+          "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+          "language": "zh",
+          "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+          "score": 0.5472805
+        },
+        {
+          "article_id": "hardware-wallet-security-2026-claim-audit",
+          "title": "Hardware Wallet Security: Seven Brands, Evidence Reviewed",
+          "url": "/blog/hardware-wallet-security-2026-claim-audit/",
+          "language": "en",
+          "excerpt": "Hardware Wallet Security: Seven Brands, Evidence Reviewed Reviewing seven hardware wallet brands: data breaches, weak seeds, physical attacks and supply-chain implants, with evidence limits and response guidance. Hardware Wallet Security Ledger Trezor Self-Custody What does the s",
+          "score": 0.5322883
+        },
+        {
+          "article_id": "tnk-zero-trust-sandbox-local-llm-agent",
+          "title": "tnk：给本地 LLM 和 AI Coding Agent 配一个零信任沙箱，而不是又一个推理引擎",
+          "url": "/blog/tnk-zero-trust-sandbox-local-llm-agent/",
+          "language": "zh",
+          "excerpt": "tnk：给本地 LLM 和 AI Coding Agent 配一个零信任沙箱，而不是又一个推理引擎 调研开源项目 tnk（tappunk/tnk）：Rust 写的每项目零信任沙箱 VM，用 Lima 给本地 LLM 和 AI coding agent 提供隔离，只挂载项目工作区、屏蔽宿主密钥。MIT 协议，目前 3 star，标注为 experimental。它自己不管推理引擎（不是 Ollama/llama.cpp 的替代品），只解决\"agent 跑 shell 命令、装包、连网络时，宿主机能不能不被牵连\"这一个问题——这正是本站之前写本地 agent",
+          "score": 0.5297888
+        },
+        {
+          "article_id": "loopera-factor-research-evidence-gates",
+          "title": "Loopera: Evidence Gates for AI Factor Research",
+          "url": "/blog/loopera-factor-research-evidence-gates/",
+          "language": "en",
+          "excerpt": "Loopera: Evidence Gates for AI Factor Research Loopera links financial hypotheses, factor candidates, evidence gates and research memory. We inspect its public documentation, licensing and validation limits. Loopera AI Agent 基本面 因子研究 量化研究 研究记忆 What is public, and can you deploy L",
+          "score": 0.5272646
+        },
+        {
+          "article_id": "hindsight-agent-memory-retain-recall-reflect",
+          "title": "Hindsight：30K stars Agent 记忆框架，五层仿生结构 + 自建 AMB 基准",
+          "url": "/blog/hindsight-agent-memory-retain-recall-reflect/",
+          "language": "zh",
+          "excerpt": "Hindsight：30K stars Agent 记忆框架，五层仿生结构 + 自建 AMB 基准 vectorize-io/hindsight，MIT，Python/Rust/TypeScript，30,050 stars。开源 Agent 记忆系统：五层仿生记忆架构（世界事实→经历事实→观测→心智模型→知识页），Retain/Recall/Reflect 三路操作，四路并行检索（语义+BM25+图关系+时序），内置 pg0 嵌入式 PostgreSQL+pgvector，60+ 集成覆盖 Claude Code/LangGraph/CrewAI，自建",
+          "score": 0.51701546
+        },
+        {
+          "article_id": "simon-willison-lethal-trifecta-ai-agent-security",
+          "title": "Lethal Trifecta：Simon Willison 的 AI Agent 安全三角，《经济学人》都引用了这个术语",
+          "url": "/blog/simon-willison-lethal-trifecta-ai-agent-security/",
+          "language": "zh",
+          "excerpt": "Lethal Trifecta：Simon Willison 的 AI Agent 安全三角，《经济学人》都引用了这个术语 Django 联合创始人 Simon Willison 在 2025 年 6 月提出「致命三要素」思维模型：AI Agent 同时满足接触不可信内容、能访问私有数据、可以对外通信，安全风险进入高危区间。本文深度分析原始文章、真实攻击案例（GitHub MCP、Supabase MCP、微软 365 Copilot）和有效防御路径。 AI Security Prompt Injection Lethal Trifecta Simon ",
+          "score": 0.51641923
+        },
+        {
+          "article_id": "trinity-abilityai-sovereign-agent-platform-per-agent-docker-audit",
+          "title": "Trinity：每个 Agent 一个 Docker 容器，把「Claude Code 写的 Agent」搬进有审计的生产环境",
+          "url": "/blog/trinity-abilityai-sovereign-agent-platform-per-agent-docker-audit/",
+          "language": "zh",
+          "excerpt": "Trinity：每个 Agent 一个 Docker 容器，把「Claude Code 写的 Agent」搬进有审计的生产环境 Abilityai/trinity 是一个 Apache-2.0 的自托管 Agent 平台，口号是「Claude Code 写 Agent，Trinity 跑它」。每个 Agent 独占一个 Docker 容器，配 cron 调度 + Redis 分布式锁、四层 RBAC、只追加的平台审计日志、人在环的 Operator Queue、OpenTelemetry 成本与 token 追踪。每个 Agent 可分别选 Claude",
+          "score": 0.51596624
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "file": "trust-pyramid-agent-quality-gates-evidence-guide-fig-01.png",
+    "bytes": 82620,
+    "manualReview": "pass"
+  },
+  {
+    "file": "trust-pyramid-agent-quality-gates-evidence-guide-fig-02.png",
+    "bytes": 61068,
+    "manualReview": "pass"
+  },
+  {
+    "file": "trust-pyramid-agent-quality-gates-evidence-guide-fig-03.png",
+    "bytes": 68492,
+    "manualReview": "pass"
+  },
+  {
+    "file": "trust-pyramid-agent-quality-gates-evidence-guide-banner.jpg",
+    "bytes": 93950,
+    "manualReview": "pass",
+    "machineReview": "0 failures 0 warnings"
+  }
+]
