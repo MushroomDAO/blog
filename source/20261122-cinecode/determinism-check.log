@@ -1,0 +1,4 @@
+[capture] renderer: regression-test
+[capture] page: 32x32, 4 frames @ 24 fps
+[capture] frame 2 rendered twice (with frame 0 in between): IDENTICAL
+[capture] deterministic: yes

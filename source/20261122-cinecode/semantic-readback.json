@@ -1,0 +1,38 @@
+[
+  {
+    "id": "72569df6a536ea1c49b2b0d63609053efa25a41b65c23bd1",
+    "metadata": {
+      "article_id": "cinecode-code-rendered-video-production-guide",
+      "content_hash": "4d44f4674c0c44de",
+      "excerpt": "cinecode：让Agent写代码拍视频，流水线真正解决什么？ cinecode把AI编程Agent、浏览器渲染和ffmpeg组织成可复核的视频制作流程，从创意、脚本、风格确认走向画面、声音和质检。本文核对MIT许可与本地运行边界，检查确定性取帧、依赖变化后的续渲及MP4导出，说明为什么代码可复现不等于创意自动正确，并给出工程师可直接借鉴的阶段契约和完整验收方法。 cinecode 视频制作 Coding Agent 浏览器渲染 开源工具 它是视频模型，还是制作工具？ 从想法到成片，中间有哪些关口？ 确定性取帧，为什么比普通录屏重要？ 本地检查通过了什",
+      "language": "zh",
+      "tags": [
+        "cinecode",
+        "视频制作",
+        "Coding Agent",
+        "浏览器渲染",
+        "开源工具"
+      ],
+      "title": "cinecode：让Agent写代码拍视频，流水线真正解决什么？",
+      "url": "/blog/cinecode-code-rendered-video-production-guide/"
+    }
+  },
+  {
+    "id": "0ba6a4796b613febbe1cddf1a3cd0557d51f483e9b56c71f",
+    "metadata": {
+      "article_id": "cinecode-code-rendered-video-production-guide",
+      "content_hash": "8d33fd96523a96b6",
+      "excerpt": "cinecode: Video Production with Code and Agent Workflows Explore cinecode's agent-driven video workflow, frame capture and revision boundaries, with scoped local checks and lessons for reproducible rendering. cinecode 视频制作 Coding Agent 浏览器渲染 开源工具 Is this a video model or a produc",
+      "language": "en",
+      "tags": [
+        "cinecode",
+        "视频制作",
+        "Coding Agent",
+        "浏览器渲染",
+        "开源工具"
+      ],
+      "title": "cinecode: Video Production with Code and Agent Workflows",
+      "url": "/blog/cinecode-code-rendered-video-production-guide/"
+    }
+  }
+]

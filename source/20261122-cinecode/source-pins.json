@@ -1,0 +1,21 @@
+{
+  "repo": "https://github.com/sarpstar/cinecode",
+  "commit": "c8a3e7552699360a2b0142c9620882af2069eedb",
+  "files": {
+    "README.en.md": "238453b06778b7af6940c3cb9ca9600b0c24702fc3f831c49dd06987c867f3bb",
+    "README.zh-CN.md": "9fe89a84ff42160a909e30d07c05e8cddb0e203be7c6ab4af2156d90fa92a3fa",
+    "LICENSE": "a27dda60518acb8211ccc3181914539556117cd00930d1adbae504ef63b793c9",
+    "SKILL.md": "55d3e01fcce0fc5943cea850c1680cbe99bfc5eb45876b511a7d695fd89b6cae",
+    "scripts/capture.mjs": "fb3afa093db8a855e8f79deabe7bf5011994a235dd39084b019f4d8b2e6540dc",
+    "scripts/make.py": "3efb416dac2513a08f774e3629c44a842052686570c463fdf4b3d8bd6080bfe7",
+    "scripts/qc.py": "7bd6dd2fc9f28e149f723e93fbd5848a970d1c412ff247622c6029d46493bfde",
+    "scripts/guard.py": "579a67ac7727546e848ac97d7e1e9145121bff0d1d3984abad01431f4526bb78",
+    "tests/test_capture.py": "a8cca86c0b5c6e9fc9788f9cca2a2a3626305ba850935d20e6d47868748f3978",
+    "tests/test_context.py": "e2c45dd851d442a603d3cd1f252c7db3d61f4951c58c9f0a7f8e9f4a314e73fb",
+    "tests/test_tools.py": "3df9cc69d7a13b0c64ec6d14bc24f272551d2c7e0c9973c9b414a424980edc7d",
+    "templates/quick/film.html": "7e358932ae86a90255ebb92b6ea075428893c75788d47494c1879fe9d1f8b8d1",
+    "docs/media/stills/koltuk.jpg": "e881c599b288bed67f972d7b9a78452c7c5f7221484b5fe74538eeddf54053fb",
+    "references/quick-mode.md": "1c80d9a78533b769ab7ec4e396b96d80f7008357d91fb806a17bb20a87db9ace"
+  },
+  "banner": "Adopt official unpeopled film still docs/media/stills/koltuk.jpg, manual visual check passed"
+}

@@ -1,0 +1,13 @@
+=== [adopt-banner] cinecode-code-rendered-video-production-guide ← 1 source image(s) → src/assets/images/cinecode-code-rendered-video-production-guide-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← /tmp/cinecode-research-20261122/docs/media/stills/koltuk.jpg
+=== [adopt-banner] done: src/assets/images/cinecode-code-rendered-video-production-guide-banner.jpg (1200x630, 81327B) ===
+=== [verify-banner] src/assets/images/cinecode-code-rendered-video-production-guide-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=/tmp/cinecode-research-20261122/docs/media/stills/koltuk.jpg
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 81327B (< 99000B)
+  ok   text: none detected
+  ok   faces: none detected
+--- result: 0 failure(s), 0 warning(s)
+=== [verify-banner] PASSED: src/assets/images/cinecode-code-rendered-video-production-guide-banner.jpg ===
+PATH: src/assets/images/cinecode-code-rendered-video-production-guide-banner.jpg

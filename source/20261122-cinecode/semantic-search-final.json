@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "cinecode-code-rendered-video-production-guide",
+    "query": "cinecode 代码渲染 视频 Agent 流水线",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "cinecode-code-rendered-video-production-guide",
+          "title": "cinecode：让Agent写代码拍视频，流水线真正解决什么？",
+          "url": "/blog/cinecode-code-rendered-video-production-guide/",
+          "language": "zh",
+          "excerpt": "cinecode：让Agent写代码拍视频，流水线真正解决什么？ cinecode把AI编程Agent、浏览器渲染和ffmpeg组织成可复核的视频制作流程，从创意、脚本、风格确认走向画面、声音和质检。本文核对MIT许可与本地运行边界，检查确定性取帧、依赖变化后的续渲及MP4导出，说明为什么代码可复现不等于创意自动正确，并给出工程师可直接借鉴的阶段契约和完整验收方法。 cinecode 视频制作 Coding Agent 浏览器渲染 开源工具 它是视频模型，还是制作工具？ 从想法到成片，中间有哪些关口？ 确定性取帧，为什么比普通录屏重要？ 本地检查通过了什",
+          "score": 0.7604945
+        },
+        {
+          "article_id": "video-shotcraft-claude-code-remotion-cinematic-product-videos",
+          "title": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片",
+          "url": "/blog/video-shotcraft-claude-code-remotion-cinematic-product-videos/",
+          "language": "zh",
+          "excerpt": "video-shotcraft：让 AI Agent 直接制作院线级产品宣传片 Vincentwei1021 开源的 Claude Code / Codex Agent 视频制作技能包，3832 stars。内置 104 张镜头配方卡、161 种运动风格预览、完整 Remotion 视频模板 Ink Press（36.2秒/1920×1080/30fps）、149 个音效（16个场景类别）、5套背景音乐。Agent 拿到产品截图后自动分镜、动画、配音设计，直出可发布的产品宣传片。 AI视频制作 Claude Code Remotion Agent技能 产",
+          "score": 0.6748314
+        },
+        {
+          "article_id": "avatar-forge-cine-sleuth-video-digital-human-agent-skill",
+          "title": "CineSleuth + Avatar Forge: From Film Analysis to Digital Human Video — Agent Skills for the Full Creator Pipeline",
+          "url": "/blog/avatar-forge-cine-sleuth-video-digital-human-agent-skill/",
+          "language": "en",
+          "excerpt": "CineSleuth + Avatar Forge: From Film Analysis to Digital Human Video — Agent Skills for the Full Creator Pipeline Two open-source Agent Skills from LycheeAILab: CineSleuth breaks down any video frame-by-frame, extracting transcripts, scenes, shots, and creative intent; Avatar For",
+          "score": 0.65173614
+        },
+        {
+          "article_id": "storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard",
+          "title": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4",
+          "url": "/blog/storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard/",
+          "language": "zh",
+          "excerpt": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4 xiaozhang-art/storyflow-ai 开源，Multi-Agent 漫剧自动生成平台，7 步 Agent 流水线（剧本→角色→分镜→图片/配音并行→图生视频→合成），含 Director 决策引擎、断点续传、Montage 渲染引擎，Docker Compose 一键部署。 multi-agent video generation AI open source comic LLM FastAPI Docker 一段文字进去，一部漫剧出来 7 个 Age",
+          "score": 0.6348454
+        },
+        {
+          "article_id": "firered-openstoryline-ai-video-editing-agent-claude-code",
+          "title": "FireRed-OpenStoryline: Conversational AI Video Editing Agent with Reusable Style Skills",
+          "url": "/blog/firered-openstoryline-ai-video-editing-agent-claude-code/",
+          "language": "en",
+          "excerpt": "FireRed-OpenStoryline: Conversational AI Video Editing Agent with Reusable Style Skills FireRedTeam's open-source AI video editing agent drives the entire pipeline — from media sourcing to final cut — through natural language. Standout feature: editing workflows save as reusable ",
+          "score": 0.63397545
+        },
+        {
+          "article_id": "video-use-ai-video-editor-claude-code",
+          "title": "video-use：用 Claude Code 剪视频，browser-use 团队开源 AI 视频编辑器",
+          "url": "/blog/video-use-ai-video-editor-claude-code/",
+          "language": "zh",
+          "excerpt": "video-use：用 Claude Code 剪视频，browser-use 团队开源 AI 视频编辑器 video-use 是 browser-use 团队开源的 AI 视频编辑 skill，14,000+ Stars，支持 Claude Code/Codex/Hermes 等 Agent，自然语言描述剪辑任务，AI 自动剪掉填充词、自动调色、生成字幕、添加动画 overlay，通过 ElevenLabs 配音，输出 final.mp4。Python 开发，完全开源。 视频编辑 AI Agent Claude Code 开源 browser-use ",
+          "score": 0.6110991
+        },
+        {
+          "article_id": "cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice",
+          "title": "ClipTalk：用自然语言剪视频，VLM + 24 个 Skill 驱动的 Agentic 视频编辑系统",
+          "url": "/blog/cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice/",
+          "language": "zh",
+          "excerpt": "ClipTalk：用自然语言剪视频，VLM + 24 个 Skill 驱动的 Agentic 视频编辑系统 非商业自定义许可，126 stars。三层架构：Python FastAPI + Node Pi Agent + 浏览器。24 个 SKILL.md 技能，VLM 理解画面，本地 SenseVoice/TalkNet/SFace/YOLOX 识别人脸/声纹/活跃发言人，FFmpeg 执行剪辑。6 步审批门禁，V2 算法比基线慢 14s。仅支持 Linux x86-64/WSL2，不支持 macOS/ARM。 video-editing agent ",
+          "score": 0.6078547
+        },
+        {
+          "article_id": "hypit-ai-agent-video-workflow-svml-claude-code-codex",
+          "title": "Hypit：给 Claude Code 和 Codex 一套视频制作语言，一条命令复刻爆款",
+          "url": "/blog/hypit-ai-agent-video-workflow-svml-claude-code-codex/",
+          "language": "zh",
+          "excerpt": "Hypit：给 Claude Code 和 Codex 一套视频制作语言，一条命令复刻爆款 Hypit 为 Claude Code、Codex 等 Coding Agent 提供 SVML 视频工作流语言和渲染系统。词语锚定而非秒数锚定，一条视频进去输出完整 workflow：画面、字幕、B-roll、特效，可批量生成 100 个变体。Apache-2.0 附条件，3860 stars，TypeScript。 open-source AI-agent video Claude-Code Codex SVML coding-agent TypeScript",
+          "score": 0.60747844
+        },
+        {
+          "article_id": "html-video-nexu-usage-guide",
+          "title": "html-video: Paste a Link, Get an MP4 — No Video Editor Needed",
+          "url": "/blog/html-video-nexu-usage-guide/",
+          "language": "en",
+          "excerpt": "html-video: Paste a Link, Get an MP4 — No Video Editor Needed nexu-io/html-video (3.7k★, Apache-2.0) turns a URL or GitHub repo into a real MP4 — locally, no cloud fees, no video editor. AI agent fetches the content, builds a multi-scene storyboard, applies one of 21 license-clea",
+          "score": 0.60636693
+        },
+        {
+          "article_id": "vibe-coding-prompt-template-khazp-agents-md-prd-mvp-workflow-guide",
+          "title": "Vibe Coding 的正确打开方式：KhazP 的 5 步结构化工作流——从想法到 MVP 不迷路",
+          "url": "/blog/vibe-coding-prompt-template-khazp-agents-md-prd-mvp-workflow-guide/",
+          "language": "zh",
+          "excerpt": "Vibe Coding 的正确打开方式：KhazP 的 5 步结构化工作流——从想法到 MVP 不迷路 GitHub 2700+ Star 的 vibe-coding-prompt-template 不是一套 prompt，而是一套完整的 AI 编程方法论：先在 Chat 里完成市场调研、PRD、技术设计，再进 IDE 生成 AGENTS.md 让 Agent 拥有完整上下文，最后 Plan→Execute→Verify 循环推进到 MVP。支持 Claude Code、Cursor、Codex、Gemini CLI。 一、为什么 vibe coding",
+          "score": 0.602951
+        }
+      ]
+    }
+  }
+]

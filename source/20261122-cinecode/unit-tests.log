@@ -1,0 +1,262 @@
+test_help (test_capture.Arguments) ... ok
+test_invalid_values_fail_before_browser_or_output (test_capture.Arguments) ... ok
+test_a_failed_render_leaves_no_chrome_profile_behind (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_a_frame_that_never_finishes_fails_instead_of_hanging (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_a_page_that_throws_while_loading_fails_fast_with_its_error (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_caught_optional_missing_resource_does_not_break_capture (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_changed_image_with_preserved_date_and_size (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_imported_module_outside_named_asset_folders (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_invalid_range_keeps_existing_frames_and_reports_failure (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_invalid_ready_fails (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_legacy_frames_without_stamp_are_not_trusted (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_multi_worker_video_contains_every_frame (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_params_change_invalidates_capture (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_remote_page_is_rendered_fresh (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_repeated_frames_keep_their_places_in_multi_worker_video (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_resume_and_fresh (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_status_file_does_not_invalidate_inputs (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_status_parent_is_created (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_still_via_params_and_url_query (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_the_quick_template_draws_a_cast_model_sheet (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_the_text_check_finds_touching_lines_and_lost_type_and_passes_clean_type (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_unrelated_file_does_not_restart_capture (test_capture.Browser) ... skipped 'set CINECODE_BROWSER_TESTS=1 for Chrome tests'
+test_a_bare_camera_line_on_the_second_shot_is_read (test_context.Context) ... ok
+test_a_bare_refusal_picked_from_the_options_is_a_refusal (test_context.Context) ... ok
+test_a_board_of_one_tone_is_named (test_context.Context) ... ok
+test_a_broken_file_is_never_shown_anyway (test_context.Context) ... ok
+test_a_budgeted_probe_does_not_sleep_on_429 (test_context.Context) ... ok
+test_a_card_that_routes_3d_through_flat_polygons_is_named (test_context.Context) ... ok
+test_a_cold_read_fingerprint_counts_once_its_report_is_written (test_context.Context) ... ok
+test_a_delivered_draft_turn_never_ends_without_its_question (test_context.Context) ... ok
+test_a_delivered_draft_waits_for_the_users_notes (test_context.Context) ... ok
+test_a_done_history_is_not_a_stop_line (test_context.Context) ... ok
+test_a_downloaded_effect_with_silence_first_is_named_late (test_context.Context) ... ok
+test_a_failed_send_leaves_the_stills_unshown (test_context.Context) ... ok
+test_a_film_already_here_is_not_an_ideas_offer (test_context.Context) ... ok
+test_a_film_at_the_root_is_shelved_and_never_nested (test_context.Context) ... ok
+test_a_film_folder_in_use_is_never_entered_again (test_context.Context) ... ok
+test_a_film_mode_cut_is_checked_before_it_is_shown_and_the_check_holds_a_dark_silent_cut (test_context.Context) ... ok
+test_a_film_mode_delivery_and_a_failed_question_keep_the_question_owed (test_context.Context) ... ok
+test_a_film_mode_helper_needs_its_brief (test_context.Context) ... ok
+test_a_film_whose_every_effect_is_code_is_held (test_context.Context) ... ok
+test_a_film_whose_picture_acts_in_silence_is_sound_thin (test_context.Context) ... ok
+test_a_film_with_folders_on_another_disk (test_context.Context) ... ok
+test_a_film_with_no_bright_stretch_is_too_dark (test_context.Context) ... ok
+test_a_films_own_brief_finds_its_kit_on_any_path (test_context.Context) ... ok
+test_a_final_reads_the_independent_viewer_and_waits_only_briefly (test_context.Context) ... ok
+test_a_format_brings_the_language_and_never_the_old_film (test_context.Context) ... ok
+test_a_helper_without_a_model_is_noted_not_stopped (test_context.Context) ... ok
+test_a_helper_works_on_the_film_its_prompt_names (test_context.Context) ... ok
+test_a_helper_writes_only_its_own_files_and_the_viewer_only_looks (test_context.Context) ... ok
+test_a_human_readable_cc_by_label_keeps_its_licence_link (test_context.Context) ... ok
+test_a_kept_signature_sound_is_not_a_format_copy (test_context.Context) ... ok
+test_a_large_sample_download_asks_the_user_first (test_context.Context) ... ok
+test_a_licence_row_certifies_its_own_file_only (test_context.Context) ... ok
+test_a_locked_script_is_reopened_only_by_name (test_context.Context) ... ok
+test_a_long_film_mode_draft_is_shown_after_the_comprehension_test (test_context.Context) ... ok
+test_a_long_film_needs_its_curiosity_map (test_context.Context) ... ok
+test_a_long_film_whose_narration_starts_late_is_named (test_context.Context) ... ok
+test_a_long_narrated_film_reports_a_thin_voice (test_context.Context) ... ok
+test_a_long_reference_is_read_by_section (test_context.Context) ... ok
+test_a_music_video_keeps_its_sound_effects_sparse (test_context.Context) ... ok
+test_a_named_print_medium_brings_its_recipe (test_context.Context) ... ok
+test_a_new_chat_continues_the_film_without_a_task_scope (test_context.Context) ... ok
+test_a_new_film_carries_the_decks_in_both_modes (test_context.Context) ... ok
+test_a_notes_round_starts_with_what_the_user_praised (test_context.Context) ... ok
+test_a_one_shot_films_text_track_is_checked_and_reaches_the_animatic (test_context.Context) ... ok
+test_a_per_minute_limit_waits_and_a_daily_quota_stops (test_context.Context) ... ok
+test_a_plan_brings_in_a_habit_image_only_when_the_user_asked (test_context.Context) ... ok
+test_a_question_box_in_another_language_is_stopped (test_context.Context) ... ok
+test_a_quick_film_moves_to_film_mode_keeping_its_files (test_context.Context) ... ok
+test_a_recording_is_never_dropped_and_a_named_file_needs_one (test_context.Context) ... ok
+test_a_render_that_would_fill_the_disk_stops_first (test_context.Context) ... ok
+test_a_resumed_chat_carries_the_round_of_ideas_on (test_context.Context) ... ok
+test_a_resumed_quick_draft_and_an_empty_question_keep_the_jury (test_context.Context) ... ok
+test_a_script_written_any_way_is_read_before_its_gate (test_context.Context) ... ok
+test_a_seed_comes_from_another_pool_when_one_does_not_answer (test_context.Context) ... ok
+test_a_session_on_the_films_folder_keeps_the_film_gates (test_context.Context) ... ok
+test_a_session_whose_guard_never_ran_is_told (test_context.Context) ... ok
+test_a_silent_soundtrack_is_named_and_the_picture_is_kept (test_context.Context) ... ok
+test_a_source_that_did_not_answer_is_never_counted_as_empty (test_context.Context) ... ok
+test_a_still_or_repetitive_film_is_flagged (test_context.Context) ... ok
+test_a_tall_board_brings_a_small_copy_to_read (test_context.Context) ... ok
+test_a_throwaway_chat_folder_sends_films_home (test_context.Context) ... ok
+test_a_tool_named_in_text_is_not_a_render_the_user_must_see (test_context.Context) ... ok
+test_a_turn_that_shows_a_draft_ends_on_its_question (test_context.Context) ... ok
+test_a_user_who_stops_is_never_pushed_and_steps_are_not_the_script (test_context.Context) ... ok
+test_a_viewer_report_counts_when_it_is_finished (test_context.Context) ... ok
+test_a_wrap_up_question_waits_for_the_unshown_board (test_context.Context) ... ok
+test_agents_md_keeps_the_users_own_lines (test_context.Context) ... ok
+test_all_caps_turkish_cliches_are_caught_and_plain_words_are_not (test_context.Context) ... ok
+test_an_ad_end_card_over_four_seconds_is_held_back (test_context.Context) ... ok
+test_an_animatic_is_the_file_animatic_py_made (test_context.Context) ... ok
+test_an_animatic_voice_mix_needs_no_event_audit (test_context.Context) ... ok
+test_an_approved_gate_moves_on_in_the_same_turn (test_context.Context) ... ok
+test_an_empty_motion_line_never_takes_the_heading_after_it (test_context.Context) ... ok
+test_an_even_rhythm_and_a_broken_tempo_promise_are_named (test_context.Context) ... ok
+test_approval_answers_are_read_one_by_one (test_context.Context) ... ok
+test_art_of_the_title_puts_the_exact_title_first_and_explains_a_genre_miss (test_context.Context) ... ok
+test_blank_frames_and_a_violet_ground_hold_a_draft (test_context.Context) ... ok
+test_broken_project_files_stop_with_their_name (test_context.Context) ... ok
+test_check_needs_ffmpeg_and_never_bash (test_context.Context) ... ok
+test_claims_are_checked_against_the_film (test_context.Context) ... ok
+test_cmap_reader_finds_turkish_letters (test_context.Context) ... ok
+test_docs_agree_on_finishing_helpers_and_looks (test_context.Context) ... ok
+test_docs_agree_on_notes_recipes_and_named_looks (test_context.Context) ... ok
+test_each_film_on_a_shelf_is_judged_as_itself (test_context.Context) ... ok
+test_effects_the_music_covers_are_named_buried (test_context.Context) ... ok
+test_end_card_is_the_ending (test_context.Context) ... ok
+test_every_brief_kind_quotes_rules_that_still_exist (test_context.Context) ... ok
+test_every_written_step_is_wired_to_its_moment (test_context.Context) ... ok
+test_film_check_stops_on_broken_files_and_names_late_narration (test_context.Context) ... ok
+test_film_effects_are_recorded_by_their_licence (test_context.Context) ... ok
+test_film_mode_mix_waits_for_the_picture_event_audit (test_context.Context) ... ok
+test_film_mode_script_waits_for_its_cold_read (test_context.Context) ... ok
+test_font_search_follows_tone_and_leaves_out_house_defaults (test_context.Context) ... ok
+test_footage_cut_finds_the_failed_take_and_keeps_reduplications (test_context.Context) ... ok
+test_frozen_spans_read_across_lines_and_aspect_words_set_the_size (test_context.Context) ... ok
+test_guard_holds_that_were_still_open (test_context.Context) ... ok
+test_guard_never_blocks_on_its_own_error (test_context.Context) ... ok
+test_handoff_opens_the_right_kind_of_new_chat (test_context.Context) ... ok
+test_helper_stops_after_its_budget_but_may_write_its_report (test_context.Context) ... ok
+test_helpers_at_work_and_picked_lines_are_not_idle_or_refusals (test_context.Context) ... ok
+test_helpers_carry_the_rules_they_act_on (test_context.Context) ... ok
+test_image_outside_a_film_is_left_alone (test_context.Context) ... ok
+test_key_file_opens_with_an_empty_line_and_stays_private (test_context.Context) ... ok
+test_known_style_name_lists_its_recipes_first (test_context.Context) ... ok
+test_large_image_is_refused_small_one_passes (test_context.Context) ... ok
+test_load_weighs_each_model_and_names_what_it_cannot_price (test_context.Context) ... ok
+test_loop_then_trim_is_one_trimmed_stretch (test_context.Context) ... ok
+test_lyrics_keep_the_users_words_on_whispers_clock (test_context.Context) ... /private/tmp/cinecode-research-20261122/tests/test_context.py:2777: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/tmpsy05p09c/l.txt' mode='w' encoding='utf-8'>
+  open(P("l.txt"), "w", encoding="utf-8").write("[Verse]\nGece bitmez sen gelmezsen\nMavi ışıklar yanar şehir\n")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/cinecode-research-20261122/tests/test_context.py:2780: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/tmpsy05p09c/s.json' mode='w' encoding='UTF-8'>
+  json.dump({"segments": [{"words": [{"word": w, "start": a, "end": b} for w, a, b in heard]}]},
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/cinecode-research-20261122/tests/test_context.py:2785: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/tmpsy05p09c/o.lrc' mode='r' encoding='utf-8'>
+  lrc = open(P("o.lrc"), encoding="utf-8").read().splitlines()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/cinecode-research-20261122/tests/test_context.py:2787: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/tmpsy05p09c/o.json' mode='r' encoding='UTF-8'>
+  words = json.load(open(P("o.json")))["lines"][1]["words"]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_make_summary_reads_flags_and_black_spans (test_context.Context) ... ok
+test_make_wait_waits_for_the_running_step_only (test_context.Context) ... ok
+test_missing_format_leaves_no_folder (test_context.Context) ... ok
+test_mix_plan_never_writes_into_the_users_music (test_context.Context) ... ok
+test_music_candidates_are_previews_until_one_is_picked (test_context.Context) ... ok
+test_music_choice_holds_every_delivery_and_the_picked_file (test_context.Context) ... ok
+test_music_made_in_code_is_the_users_choice_never_a_default (test_context.Context) ... ok
+test_music_without_a_beat_under_a_lively_card_and_the_same_players_again (test_context.Context) ... ok
+test_no_tool_call_names_the_key_file (test_context.Context) ... ok
+test_null_music_in_any_spacing_and_a_music_only_card_are_read_right (test_context.Context) ... ok
+test_on_a_shelf_the_film_worked_in_last_and_never_one_refused (test_context.Context) ... ok
+test_other_aspect_becomes_a_named_variant (test_context.Context) ... ok
+test_own_songs_and_picked_files_keep_their_whole_names (test_context.Context) ... ok
+test_picture_code_waits_for_the_build_rules (test_context.Context) ... ok
+test_picture_code_written_from_the_shell_counts (test_context.Context) ... ok
+test_picture_writes_and_build_markers (test_context.Context) ... ok
+test_pop_and_loop_checks (test_context.Context) ... ok
+test_preparation_is_the_target_films (test_context.Context) ... ok
+test_printed_commands_survive_spaces_and_apostrophes (test_context.Context) ... ok
+test_prompt_reminds_once_per_level (test_context.Context) ... ok
+test_question_language_ignores_names_in_any_language (test_context.Context) ... ok
+test_ready_sounds_come_from_the_shared_cache_and_last_films_go_after_the_rest (test_context.Context) ... ok
+test_refusals_are_not_a_go (test_context.Context) ... ok
+test_refusals_end_the_obligation_whatever_was_turned_down (test_context.Context) ... ok
+test_render_reads_the_masters_last_attempt (test_context.Context) ... ok
+test_revision_helpers_carry_the_build_rules_and_nested_engine_files_count (test_context.Context) ... ok
+test_runs_and_animatics_by_their_own_record (test_context.Context) ... ok
+test_sample_labels_an_octave_off_are_measured_and_corrected (test_context.Context) ... ok
+test_sample_takes_are_read_from_file_names_and_spread_over_the_range (test_context.Context) ... ok
+test_script_gate_holes_are_closed (test_context.Context) ... ok
+test_script_rows_are_the_words_not_the_notes (test_context.Context) ... ok
+test_shots_json_in_another_shape_fails_by_name (test_context.Context) ... ok
+test_sound_and_picture_start_together (test_context.Context) ... ok
+test_spans_follow_trim_and_any_row_name (test_context.Context) ... ok
+test_sparks_dealt_before_the_film_folder_exists (test_context.Context) ... ok
+test_sparks_differ_from_film_to_film (test_context.Context) ... ok
+test_style_recipes_deal_type_through_their_family (test_context.Context) ... ok
+test_style_search_ranks_words_and_falls_back_to_the_family (test_context.Context) ... ok
+test_suggest_gives_six_different_candidates_or_leaves_a_named_look_to_the_model (test_context.Context) ... ok
+test_supply_keeps_each_source_to_its_time (test_context.Context) ... ok
+test_taste_line_flags_defaults_and_stays_quiet_on_an_own_palette (test_context.Context) ... ok
+test_template_cliches_in_the_film_code_are_named_unless_the_card_gives_a_reason (test_context.Context) ... /private/tmp/cinecode-research-20261122/tests/test_context.py:2795: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/tmp7qk04li8/film.html' mode='w' encoding='UTF-8'>
+  open(p, "w").write("// ============================== FILM ===\nburst(particles, 300); g.shadowBlur = 40;\n"
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_the_camera_path_flows_through_its_keys (test_context.Context) ... ok
+test_the_card_names_finishing_and_motion_before_the_first_picture (test_context.Context) ... ok
+test_the_card_view_is_drawn_in_the_code (test_context.Context) ... ok
+test_the_cold_read_is_bound_to_the_words (test_context.Context) ... ok
+test_the_cold_read_is_this_scripts_and_comes_before_it_is_shown (test_context.Context) ... ok
+test_the_credits_go_beside_the_film_for_the_description (test_context.Context) ... ok
+test_the_delivery_question_keeps_its_jury_check (test_context.Context) ... ok
+test_the_ending_keeps_its_time_after_the_last_line (test_context.Context) ... ok
+test_the_form_reads_a_continuous_journey_and_a_list (test_context.Context) ... ok
+test_the_free_turkish_voice_asks_before_its_install (test_context.Context) ... ok
+test_the_guard_is_silent_outside_films_and_watches_the_films_folder_below (test_context.Context) ... ok
+test_the_guard_never_crashes_on_common_events (test_context.Context) ... cinecode: a notes round starts with the keep list: what the user praised, in their words ("## Keep", or "## Keep" with "none" when they praised nothing). Fixes and re-plans may not change those parts.
+cinecode: a helper starts cold and reads nothing on its own, so the kit's rules travel in its brief. Build it with python3 tools/brief.py <kind> --task "…" --writes "<its own files>" --reads "…" --done "…" (kinds: python3 tools/brief.py list), pass the whole output as the prompt and the model it prints.
+ok
+test_the_guard_never_lets_a_picture_open_in_a_window (test_context.Context) ... ok
+test_the_guard_wants_pictures_shown_before_a_question_or_the_end_of_a_turn (test_context.Context) ... ok
+test_the_hooks_run_without_a_shell_and_find_a_python_or_stay_out_of_the_way (test_context.Context) ... ok
+test_the_idea_reaches_state_only_after_the_predictions_and_the_sparks (test_context.Context) ... ok
+test_the_key_file_stays_out_of_reach_in_any_spelling_and_through_its_folder (test_context.Context) ... ok
+test_the_move_deck_varies_neighbours_and_pushes_back_the_last_films (test_context.Context) ... ok
+test_the_named_film_and_a_resumed_hand (test_context.Context) ... ok
+test_the_narrator_or_a_draft_is_not_the_script_question (test_context.Context) ... ok
+test_the_perspective_view_projects_like_a_camera (test_context.Context) ... ok
+test_the_picked_music_is_in_the_film_by_its_own_path (test_context.Context) ... ok
+test_the_picked_music_is_matched_by_its_path (test_context.Context) ... ok
+test_the_same_chord_loop_in_any_key_is_named (test_context.Context) ... ok
+test_the_script_is_read_before_its_gate (test_context.Context) ... ok
+test_the_sound_choice_is_read_from_the_card_line_only (test_context.Context) ... ok
+test_the_users_films_are_remembered_and_listed_for_the_check (test_context.Context) ... ok
+test_the_users_language_comes_from_the_user_not_from_hooks_or_helpers (test_context.Context) ... ok
+test_the_whole_narration_waits_for_an_audition (test_context.Context) ... ok
+test_too_many_designed_sounds_are_sound_slop (test_context.Context) ... ok
+test_tts_never_prints_the_key_and_never_follows_a_redirect (test_context.Context) ... ok
+test_type_cards_use_the_films_words_and_a_new_look_deals_again (test_context.Context) ... ok
+test_type_contrast_fails_yellow_on_orange_and_passes_cream_on_black (test_context.Context) ... ok
+test_voice_time_follows_the_mix (test_context.Context) ... ok
+test_wait_follows_its_own_run (test_context.Context) ... ok
+test_warm_is_a_font_tone_and_kana_faces_are_not_offered (test_context.Context) ... ok
+test_windows_console_code_page_never_crashes_a_tool (test_context.Context) ... ok
+test_windows_paths_browsers_and_frames (test_context.Context) ... ok
+test_windows_powershell_commands_are_read_like_bash (test_context.Context) ... ok
+test_windows_tools_restart_in_utf8_mode (test_context.Context) ... skipped 'Windows only'
+test_words_check_stops_on_a_dash_and_flags_generated_lines (test_context.Context) ... ok
+test_words_on_screen_count_as_telling (test_context.Context) ... ok
+test_a_fetched_stock_clip_is_logged_and_credited (test_tools.Tools) ... /private/tmp/cinecode-research-20261122/scripts/asset_search.py:880: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/cinecode-tools-0akslxvl/results.json' mode='r' encoding='utf-8'>
+  data = json.load(open(a.results, encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_a_search_asks_its_sources_side_by_side_and_rests_one_that_did_not_answer (test_tools.Tools) ... /private/tmp/cinecode-research-20261122/scripts/asset_search.py:713: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/cinecode-tools-q04vigl6/m/results.json' mode='w' encoding='UTF-8'>
+  json.dump({"query": a.q, "type": a.type, "results": results}, open(os.path.join(a.out, "results.json"), "w"), indent=1)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/cinecode-research-20261122/scripts/asset_search.py:713: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/cinecode-tools-q04vigl6/i/results.json' mode='w' encoding='UTF-8'>
+  json.dump({"query": a.q, "type": a.type, "results": results}, open(os.path.join(a.out, "results.json"), "w"), indent=1)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_a_short_wait_skips_a_stalled_source_cleanly (test_tools.Tools) ... ok
+test_a_wildcard_reaches_python_as_it_is_and_still_finds_the_pictures (test_tools.Tools) ... ok
+test_failed_thumbnail_download_keeps_previous_bytes (test_tools.Tools) ... ok
+test_key_file_comments_are_not_keys (test_tools.Tools) ... ok
+test_local_thumbnail_is_read_without_download (test_tools.Tools) ... ok
+test_museum_sources_give_film_sized_open_files (test_tools.Tools) ... ok
+test_music_searches_audio_and_the_archive_keeps_only_open_licences (test_tools.Tools) ... ok
+test_pixabay_brings_real_stock_video_and_photos_with_their_licence (test_tools.Tools) ... ok
+test_snapshot_removes_unicode_media_and_preserves_text (test_tools.Tools) ... ok
+test_snapshot_skips_parent_repository (test_tools.Tools) ... ok
+test_text_outside_shot_is_rejected (test_tools.Tools) ... ok
+test_tts_failure_preserves_previous_take_and_success_replaces_it (test_tools.Tools) ... ok
+test_turkish_case_matching (test_tools.Tools) ... ok
+test_wikimedia_and_the_archive_search_films_too (test_tools.Tools) ... ok
+test_wikimedia_license_version (test_tools.Tools) ... ok
+
+----------------------------------------------------------------------
+Ran 231 tests in 47.926s
+
+OK (skipped=21)
