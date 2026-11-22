@@ -1,0 +1,14 @@
+{
+  "title": "GLM-ASR-Nano：轻声转写的边界",
+  "author": "Mycelium",
+  "digest": "核对轻声与粤语识别、权重体积和评测口径，再判断是否适合本地转写。",
+  "mediaId": "prCUE631thH1cmNLi42prAIMRCKFfDyzM--qmdKPNbR2K619l1QHhgkX9TPpwo7b",
+  "blogUrl": "https://blog.mushroom.cv/blog/glm-asr-nano-2512-whisper-dialect-local-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/glm-asr-nano-2512-whisper-dialect-local-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "huggingface.co/zai-org/glm-asr-nano-2512",
+    "github.com/zai-org/glm-asr"
+  ],
+  "publishedAt": "2026-11-22T14:14:31.407Z"
+}
