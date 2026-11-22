@@ -1,0 +1,265 @@
+snapshot at 1 s -> /tmp/raea-runtime-20261122/work/play-input.png
+PLAYED  {
+  "seconds": 2.0,
+  "composition_fps": 30.0,
+  "display_hz": 60.0,
+  "page": [
+    640,
+    480
+  ],
+  "stepped": 49,
+  "presented": 49,
+  "presented_fps": 24.0,
+  "work_ms": {
+    "p50": 16.270958,
+    "p99": 142.611916,
+    "p999": 142.611916,
+    "max": 142.611916
+  },
+  "first_frame_unix_ms": 1795357387268.377,
+  "gpu_mb": null,
+  "hitches_over_2ms": {
+    "count": 19,
+    "max": 142.611916,
+    "first": [
+      {
+        "frame": 30,
+        "at_s": 1.0,
+        "work": 65.904292,
+        "step": 0.34675,
+        "present": 65.557
+      },
+      {
+        "frame": 31,
+        "at_s": 1.03,
+        "work": 15.781542,
+        "step": 0.5713750000000001,
+        "present": 15.209916999999999
+      },
+      {
+        "frame": 32,
+        "at_s": 1.07,
+        "work": 127.289042,
+        "step": 3.628292,
+        "present": 123.660417
+      },
+      {
+        "frame": 33,
+        "at_s": 1.1,
+        "work": 7.0534159999999995,
+        "step": 0.947375,
+        "present": 6.105625
+      },
+      {
+        "frame": 34,
+        "at_s": 1.13,
+        "work": 17.60475,
+        "step": 2.128916,
+        "present": 15.475542
+      },
+      {
+        "frame": 35,
+        "at_s": 1.17,
+        "work": 18.629042,
+        "step": 0.49212500000000003,
+        "present": 18.136167
+      },
+      {
+        "frame": 36,
+        "at_s": 1.2,
+        "work": 14.328667,
+        "step": 0.800875,
+        "present": 13.5275
+      },
+      {
+        "frame": 37,
+        "at_s": 1.23,
+        "work": 50.368792,
+        "step": 0.290875,
+        "present": 50.077667
+      },
+      {
+        "frame": 38,
+        "at_s": 1.27,
+        "work": 142.565291,
+        "step": 0.365875,
+        "present": 142.199083
+      },
+      {
+        "frame": 39,
+        "at_s": 1.3,
+        "work": 6.5781659999999995,
+        "step": 0.587666,
+        "present": 5.990334
+      },
+      {
+        "frame": 40,
+        "at_s": 1.33,
+        "work": 16.270958,
+        "step": 0.84225,
+        "present": 15.428417
+      },
+      {
+        "frame": 41,
+        "at_s": 1.37,
+        "work": 19.952125000000002,
+        "step": 0.32008299999999995,
+        "present": 19.631667
+      },
+      {
+        "frame": 42,
+        "at_s": 1.4,
+        "work": 64.14341599999999,
+        "step": 0.519416,
+        "present": 63.623625000000004
+      },
+      {
+        "frame": 43,
+        "at_s": 1.43,
+        "work": 142.611916,
+        "step": 0.38925,
+        "present": 142.22233300000002
+      },
+      {
+        "frame": 44,
+        "at_s": 1.47,
+        "work": 6.682167,
+        "step": 0.6677500000000001,
+        "present": 6.013584
+      },
+      {
+        "frame": 45,
+        "at_s": 1.5,
+        "work": 37.258708,
+        "step": 0.923833,
+        "present": 36.334625
+      }
+    ]
+  },
+  "step_ms": {
+    "p50": 0.397,
+    "p99": 3.628292
+  },
+  "present_ms": {
+    "p50": 15.475542,
+    "p99": 142.22233300000002
+  },
+  "js_ms": {
+    "p50": 0.332334,
+    "p99": 3.48
+  },
+  "apply_ms": {
+    "p50": 0.013917,
+    "p99": 0.216458
+  },
+  "commit_kb": {
+    "p50": 0.1513671875,
+    "p99": 0.1513671875
+  },
+  "rust_allocs": {
+    "apply_per_frame": 0.0,
+    "apply_bytes_per_frame": 0.0,
+    "flush_per_frame": 0.0,
+    "all_threads_per_frame": 0.0,
+    "all_threads_bytes_per_frame": 0.0,
+    "sites": [],
+    "threads": []
+  },
+  "gap_ms": {
+    "p50": 18.632958000000002,
+    "p99": 142.6935,
+    "max": 142.6935
+  },
+  "missed_vs_display": 12,
+  "slowest": [
+    {
+      "frame": 43,
+      "at_s": 1.43,
+      "work": 142.611916,
+      "step": 0.38925,
+      "present": 142.22233300000002
+    },
+    {
+      "frame": 38,
+      "at_s": 1.27,
+      "work": 142.565291,
+      "step": 0.365875,
+      "present": 142.199083
+    },
+    {
+      "frame": 48,
+      "at_s": 1.6,
+      "work": 139.806125,
+      "step": 0.257709,
+      "present": 139.547666
+    },
+    {
+      "frame": 32,
+      "at_s": 1.07,
+      "work": 127.289042,
+      "step": 3.628292,
+      "present": 123.660417
+    },
+    {
+      "frame": 0,
+      "at_s": 0.0,
+      "work": 75.899417,
+      "step": 0.14575,
+      "present": 75.753292
+    },
+    {
+      "frame": 30,
+      "at_s": 1.0,
+      "work": 65.904292,
+      "step": 0.34675,
+      "present": 65.557
+    },
+    {
+      "frame": 42,
+      "at_s": 1.4,
+      "work": 64.14341599999999,
+      "step": 0.519416,
+      "present": 63.623625000000004
+    },
+    {
+      "frame": 46,
+      "at_s": 1.53,
+      "work": 62.136041000000006,
+      "step": 0.362166,
+      "present": 61.7735
+    }
+  ],
+  "rss_mb": {
+    "first": 275,
+    "last": 279,
+    "max": 279,
+    "each_second": [
+      275,
+      279
+    ]
+  },
+  "reusable_mb": {
+    "each_second": [
+      0.7,
+      1.8
+    ]
+  },
+  "footprint_mb": {
+    "each_second": [
+      359.9,
+      362.9
+    ]
+  },
+  "error": null,
+  "window": null,
+  "audio_drift_ms": {
+    "p50": 0.0,
+    "p99": 0.020833333333333332,
+    "max": 0.020833333333333332,
+    "samples": 48
+  },
+  "offscreen": true,
+  "open_ms": 3887.128125,
+  "release_ms_total": 0.0,
+  "eden_ms_total": 0.0
+}

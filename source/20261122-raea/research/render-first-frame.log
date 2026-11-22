@@ -1,0 +1,6 @@
+2026-11-22T14:19:45.658401Z  WARN bevy_egui::render: Bindless textures are not yet supported on metal. Disabling bindless mode. See https://github.com/bevyengine/bevy/issues/18149 for more information
+/var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/raea-cli-r94145-ThreadId(1)/png (1 frames) in 0.29s
+APPLIED  1 frames rendered to /tmp/raea-runtime-20261122/work/frame45.png (78 ms a frame in React and bevy_ui)
+EXPOSURE  mean luma 0.14, p01 0.13, p99 0.66, 1.0% clip white, 0.0% crush black, -2.9 stops from mid grey
+  warn  exposure: the frame: -2.9 stops under mid grey: the frame reads dark unless it is meant low-key (`raea scene light` meters the subject)
+raea render: 0 errors, 1 warn, 0 notes

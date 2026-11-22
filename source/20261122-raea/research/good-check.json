@@ -1,0 +1,42 @@
+{
+  "file": "/tmp/raea-runtime-20261122/work/hello.tsx",
+  "fps": 30.0,
+  "findings": [
+    {
+      "check": "exposure",
+      "level": "warn",
+      "about": [],
+      "frames": null,
+      "says": "frame-00000.png: -2.9 stops under mid grey: the frame reads dark unless it is meant low-key (`raea scene light` meters the subject)",
+      "measure": null,
+      "fix": null,
+      "by": "raea render"
+    },
+    {
+      "check": "exposure",
+      "level": "warn",
+      "about": [],
+      "frames": null,
+      "says": "frame-00001.png: -2.9 stops under mid grey: the frame reads dark unless it is meant low-key (`raea scene light` meters the subject)",
+      "measure": null,
+      "fix": null,
+      "by": "raea render"
+    },
+    {
+      "check": "exposure",
+      "level": "warn",
+      "about": [],
+      "frames": null,
+      "says": "frame-00002.png: -2.9 stops under mid grey: the frame reads dark unless it is meant low-key (`raea scene light` meters the subject)",
+      "measure": null,
+      "fix": null,
+      "by": "raea render"
+    }
+  ],
+  "passed": [
+    "looked at frames 22, 45 and 89 of 90",
+    "clipped: all 1 texts fit the frame",
+    "safe areas: no text in the UI zones",
+    "reading: every text holds long enough"
+  ]
+}

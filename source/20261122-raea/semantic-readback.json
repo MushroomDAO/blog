@@ -1,0 +1,38 @@
+[
+  {
+    "id": "f901b0f5f1de5a9be30d68dd252558b9740c2d41520564c6",
+    "metadata": {
+      "article_id": "raea-native-gpu-react-video-game-engine-guide",
+      "content_hash": "b6ba5b71ce9c37a6",
+      "excerpt": "raea：用React写视频和游戏，原生GPU渲染改变了什么？ raea 把 React 与 TSX 场景交给 Rust、Bevy 和 GPU 渲染，提供视频导出、单帧检查与交互播放。本文核对官方代码和发行版，解释它与浏览器截图方案的差异、90 帧一秒示例的适用范围、小游戏导出的条件，以及 FSL 竞品限制、本地与云端能力边界，再用 Mac 本地运行检查实际输出。 raea React GPU渲染 视频制作 游戏开发 原生渲染，究竟省掉了哪一层？ “90帧1080p约一秒”能推广到所有视频吗？ 同一份代码，为什么能导出视频也能玩？ Agent“抽帧查错”",
+      "language": "zh",
+      "tags": [
+        "raea",
+        "React",
+        "GPU渲染",
+        "视频制作",
+        "游戏开发"
+      ],
+      "title": "raea：用React写视频和游戏，原生GPU渲染改变了什么？",
+      "url": "/blog/raea-native-gpu-react-video-game-engine-guide/"
+    }
+  },
+  {
+    "id": "049c69901c18afc40735ab4e381c22ca4d5bb0d149c0be95",
+    "metadata": {
+      "article_id": "raea-native-gpu-react-video-game-engine-guide",
+      "content_hash": "0bc58e3df0e20fb3",
+      "excerpt": "raea: React Video and Games on a Native GPU Engine Explore raea's native GPU rendering for React video and games, with local checks, benchmark limits, agent review workflows and its FSL license restrictions. raea React GPU渲染 视频制作 游戏开发 Which layer does native rendering remove? Wha",
+      "language": "en",
+      "tags": [
+        "raea",
+        "React",
+        "GPU渲染",
+        "视频制作",
+        "游戏开发"
+      ],
+      "title": "raea: React Video and Games on a Native GPU Engine",
+      "url": "/blog/raea-native-gpu-react-video-game-engine-guide/"
+    }
+  }
+]

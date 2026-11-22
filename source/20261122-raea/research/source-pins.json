@@ -1,0 +1,16 @@
+{
+  "repo": "https://github.com/shinyobjectz/raea",
+  "mainPin": "2fd0c7f14a0cd0db1ee73a9481b90b940d6c5980",
+  "releaseTag": "v0.1.8",
+  "releasePin": "a9ecc06820a22f8175ff837a1dde244389b9b3e6",
+  "files": {
+    "README.md": "1442a0c1f82ac9ffa59c9d08b2851345abd4459dbeb7bf7afef3df52aa7f9f32",
+    "LICENSE": "fe3ce8198545420f93b83a2fd02e6fff4a4414ffcb2309df50878adf39d1c392",
+    "docs/settings.md": "eca62d6fc88c21c928773aa717584a5aa9b329a5763da6b4d5aca2b4f6d68175",
+    "docs/manual/reference/cli/render.md": "0d8d74a0f7f87e5c9432dadf01f55eaebd170755f454719fee61e3a2cb879fd2",
+    "docs/manual/reference/cli/check.md": "8058855fd0de4cbddd92272aa77829fcd89122530fa0cab6e882004ba3e5e026",
+    "docs/manual/reference/cli/export-game.md": "56af7968c6fe91644864aacd9636a7e93e01a5cb8c8e26411757e3c2ca327820",
+    "docs/manual/concepts/compositions.md": "9c924b5aa649c7fa327277f73886a4d0aefee8d75e4d7c189ef9073938734f7b"
+  },
+  "banner": "official screenshot has dark UI borders and video play overlay; generated explanatory stage instead"
+}

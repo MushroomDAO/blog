@@ -1,0 +1,35 @@
+2026-11-22T14:23:33.881510Z ERROR raea_runtime_react::thread: [js] [js] react error: inputAt@bundle.js:12939:32
+stateAt@bundle.js:13061:53
+useGameState@bundle.js:13113:17
+Scene@bundle.js:15448:25
+renderWithHooks@bundle.js:4750:32
+updateFunctionComponent@bundle.js:5816:32
+beginWork@bundle.js:6192:44
+performUnitOfWork@bundle.js:8173:25
+workLoopSync@bundle.js:8077:55
+renderRootSync@bundle.js:8061:19
+performWorkOnRoot@bundle.js:7851:51
+performSyncWorkOnRoot@bundle.js:4041:22
+flushSyncWorkAcrossRoots_impl@bundle.js:3964:399
+@bundle.js:9245:193
+flushSync@bundle.js:9685:37
+timedWrap@bundle.js:2484:8
+runEventLoop@bundle.js:2525:16
+REFUSED  the composition threw at frame 30: TypeError: Spread syntax requires ...iterable[Symbol.iterator] to be a function
+inputAt@bundle.js:12939:32
+stateAt@bundle.js:13061:53
+useGameState@bundle.js:13113:17
+Scene@bundle.js:15448:25
+renderWithHooks@bundle.js:4750:32
+updateFunctionComponent@bundle.js:5816:32
+beginWork@bundle.js:6192:44
+performUnitOfWork@bundle.js:8173:25
+workLoopSync@bundle.js:8077:55
+renderRootSync@bundle.js:8061:19
+performWorkOnRoot@bundle.js:7851:51
+performSyncWorkOnRoot@bundle.js:4041:22
+flushSyncWorkAcrossRoots_impl@bundle.js:3964:399
+@bundle.js:9245:193
+flushSync@bundle.js:9685:37
+timedWrap@bundle.js:2484:8
+runEventLoop@bundle.js:2525:16; no frame was written

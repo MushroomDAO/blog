@@ -1,0 +1,5 @@
+APPLIED  frame 30 rendered to /tmp/raea-runtime-20261122/work/input30.png (bevy_ui, the page over its 3D)
+EXPOSURE  mean luma 0.93, p01 0.66, p99 0.93, 2.1% clip white, 0.0% crush black, +2.2 stops from mid grey
+  warn  exposure: the frame: 2.1% of the pixels clip to white (lower the exposure or the brightest light, or tone map)
+  warn  exposure: the frame: +2.2 stops over mid grey: the frame reads washed out unless it is meant high-key
+raea render: 0 errors, 2 warns, 0 notes

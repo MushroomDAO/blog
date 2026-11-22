@@ -1,0 +1,9 @@
+raea check /tmp/raea-runtime-20261122/work/hello.tsx
+warn  exposure: frame-00000.png: -2.9 stops under mid grey: the frame reads dark unless it is meant low-key (`raea scene light` meters the subject)
+warn  exposure: frame-00001.png: -2.9 stops under mid grey: the frame reads dark unless it is meant low-key (`raea scene light` meters the subject)
+warn  exposure: frame-00002.png: -2.9 stops under mid grey: the frame reads dark unless it is meant low-key (`raea scene light` meters the subject)
+ok looked at frames 22, 45 and 89 of 90
+ok clipped: all 1 texts fit the frame
+ok safe areas: no text in the UI zones
+ok reading: every text holds long enough
+raea check: 0 errors, 3 warns, 0 notes

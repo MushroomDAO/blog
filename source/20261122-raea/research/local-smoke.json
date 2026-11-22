@@ -1,0 +1,51 @@
+{
+  "platform": "Apple M4 /16GB/macOS26.6.2",
+  "release": "v0.1.8",
+  "archiveSha256": "64dc7085ddc54306a068d2a6ba8160dababd6081f35d18de439dbb8e9e5de68b",
+  "officialChecksumMatches": true,
+  "renderVideoExit": 0,
+  "decodedVideo": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_read_frames": "90"
+      }
+    ],
+    "format": {
+      "duration": "3.000000"
+    }
+  },
+  "quickPositiveExit": 0,
+  "quickPositiveWarnings": 3,
+  "quickNegativeExit": 1,
+  "quickNegative": "clipped text; frames22,45,89 sampled",
+  "headlessInputExit": 0,
+  "pixelBounds": {
+    "play-input.png": {
+      "x0": 175,
+      "x1": 254,
+      "y0": 300,
+      "y1": 379,
+      "sha256": "09aa7bcb57a92384d9bbc241a1935e2db79f017f2ddae796cbb31e7858af3e3f"
+    },
+    "input30.png": {
+      "x0": 175,
+      "x1": 254,
+      "y0": 300,
+      "y1": 379,
+      "sha256": "09aa7bcb57a92384d9bbc241a1935e2db79f017f2ddae796cbb31e7858af3e3f"
+    }
+  },
+  "renderInputInitialExit": 1,
+  "renderInputInitialError": "play sparse array timeline is not accepted by render; Array.keys treated as iterable",
+  "renderInputCorrectedExit": 0,
+  "renderInputCorrection": "dense per-frame objects {keys:[...]} from source schema; original engine unchanged",
+  "exportGameExit": 1,
+  "exportGameError": "REFUSED no player at isolatedrelease/bin/raea-game; build raea-app-game player first",
+  "scope": "functional smoke only; no performance claim or Remotion benchmark, no3D/fullAIrepair/standalonegamepass"
+}

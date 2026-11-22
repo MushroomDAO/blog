@@ -1,0 +1,32 @@
+{
+  "banner": "seed9081 machinepassed but manualrejected monitor fauxlettering; seed9082 finalmanualandmachinepass geometric scene nofaces/text",
+  "body": [
+    {
+      "file": "src/assets/images/raea-native-gpu-react-video-game-engine-guide-fig-01.png",
+      "bytes": 70186,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass, correct sparse Chinese, on-topic Little M, originals preserved"
+    },
+    {
+      "file": "src/assets/images/raea-native-gpu-react-video-game-engine-guide-fig-02.png",
+      "bytes": 57079,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass, correct sparse Chinese, on-topic Little M, originals preserved"
+    },
+    {
+      "file": "src/assets/images/raea-native-gpu-react-video-game-engine-guide-fig-03.png",
+      "bytes": 81419,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass, correct sparse Chinese, on-topic Little M, originals preserved"
+    }
+  ]
+}

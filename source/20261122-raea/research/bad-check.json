@@ -1,0 +1,54 @@
+{
+  "file": "/tmp/raea-runtime-20261122/work/bad.tsx",
+  "fps": 30.0,
+  "findings": [
+    {
+      "check": "clipped",
+      "level": "error",
+      "about": [],
+      "frames": [
+        22,
+        23
+      ],
+      "says": "“Hello raea” runs off the frame (box 1850,500 900x120 in 1920x1080); fit it or break the line",
+      "measure": null,
+      "fix": null,
+      "by": "raea check"
+    },
+    {
+      "check": "exposure",
+      "level": "warn",
+      "about": [],
+      "frames": null,
+      "says": "frame-00000.png: -3.3 stops under mid grey: the frame reads dark unless it is meant low-key (`raea scene light` meters the subject)",
+      "measure": null,
+      "fix": null,
+      "by": "raea render"
+    },
+    {
+      "check": "exposure",
+      "level": "warn",
+      "about": [],
+      "frames": null,
+      "says": "frame-00001.png: -3.3 stops under mid grey: the frame reads dark unless it is meant low-key (`raea scene light` meters the subject)",
+      "measure": null,
+      "fix": null,
+      "by": "raea render"
+    },
+    {
+      "check": "exposure",
+      "level": "warn",
+      "about": [],
+      "frames": null,
+      "says": "frame-00002.png: -3.3 stops under mid grey: the frame reads dark unless it is meant low-key (`raea scene light` meters the subject)",
+      "measure": null,
+      "fix": null,
+      "by": "raea render"
+    }
+  ],
+  "passed": [
+    "looked at frames 22, 45 and 89 of 90",
+    "safe areas: no text in the UI zones",
+    "reading: every text holds long enough"
+  ]
+}

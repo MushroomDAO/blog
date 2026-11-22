@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "raea-native-gpu-react-video-game-engine-guide",
+    "query": "raea 原生GPU React 视频 游戏 渲染",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "raea-native-gpu-react-video-game-engine-guide",
+          "title": "raea：用React写视频和游戏，原生GPU渲染改变了什么？",
+          "url": "/blog/raea-native-gpu-react-video-game-engine-guide/",
+          "language": "zh",
+          "excerpt": "raea：用React写视频和游戏，原生GPU渲染改变了什么？ raea 把 React 与 TSX 场景交给 Rust、Bevy 和 GPU 渲染，提供视频导出、单帧检查与交互播放。本文核对官方代码和发行版，解释它与浏览器截图方案的差异、90 帧一秒示例的适用范围、小游戏导出的条件，以及 FSL 竞品限制、本地与云端能力边界，再用 Mac 本地运行检查实际输出。 raea React GPU渲染 视频制作 游戏开发 原生渲染，究竟省掉了哪一层？ “90帧1080p约一秒”能推广到所有视频吗？ 同一份代码，为什么能导出视频也能玩？ Agent“抽帧查错”",
+          "score": 0.818898
+        },
+        {
+          "article_id": "comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy",
+          "title": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案",
+          "url": "/blog/comfyui-minimax-h3-w4a4-vsa-rtx-4070-deploy/",
+          "language": "zh",
+          "excerpt": "ComfyUI-MiniMax-H3-W4A4-VSA：RTX 4070 12GB 跑 MiniMax H3 视频生成的量化部署方案 sepiablue-ai 开源，GPL-3.0，46 stars。两个 ComfyUI 节点把 MiniMax H3 视频生成塞进 12GB 消费级 GPU：W4A4 量化（FC1 层 ConvRot 预转换缓存）+ 流式 VSA 稀疏注意力（FastH3 官方 gate 文件）。RTX 4070 12GB 实测：832×1408×124帧约 3m29s，峰值 11.5GB 显存，比 INT8 基线快约 11%。需 Amp",
+          "score": 0.60444915
+        },
+        {
+          "article_id": "gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity",
+          "title": "GameFactory-3A：让编程 Agent 直接生成 3A 游戏资产，UE5/Blender/Unity/three.js 全支持，Apache 2.0 开源",
+          "url": "/blog/gamefactory-3a-open-source-coding-agent-game-generation-ue5-blender-unity/",
+          "language": "zh",
+          "excerpt": "GameFactory-3A：让编程 Agent 直接生成 3A 游戏资产，UE5/Blender/Unity/three.js 全支持，Apache 2.0 开源 OpenDCAI/GameFactory-3A 是一个开源的 3A 游戏生成 Skill 和资产框架，Apache 2.0，Python，256 stars。核心思路：把 Claude Code、Codex、Gemini CLI 等编程 Agent 接入一套结构化的 Skill 体系，Agent 读 agent_skills/setting_overview.md 后，自动调用图像生成、3D",
+          "score": 0.5988357
+        },
+        {
+          "article_id": "qwen-image-2-1-dit-rgba-local-deploy-guide",
+          "title": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南",
+          "url": "/blog/qwen-image-2-1-dit-rgba-local-deploy-guide/",
+          "language": "zh",
+          "excerpt": "Qwen-Image-2.1 工程实践：7B DiT + 原生 RGBA，阿里开源图像生成模型本地部署指南 阿里千问 2026-09-20 开源。7.1B 参数 32 层 Block-Causal DiT + Qwen3-VL-8B 文本编码器 + 64 通道 RGBA VAE，合计约 15B。原生支持透明图层、多参考图（最多 10 张）、中英文文字渲染、最高 2K 分辨率、局部编辑。Diffusers/ComfyUI/SGLang/vLLM 当日支持。关键限制：H100 BF16 需 56.5GB 显存，无量化版本，许可证从 v1 的 Apache 2",
+          "score": 0.58044374
+        },
+        {
+          "article_id": "freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference",
+          "title": "FreeToken：游戏 PC 本地跑 290B+ MoE 大模型，q* 自适应执行引擎，开源 Apache 2.0",
+          "url": "/blog/freetoken-flashml-edge-moe-290b-gaming-pc-deepseek-local-inference/",
+          "language": "zh",
+          "excerpt": "FreeToken：游戏 PC 本地跑 290B+ MoE 大模型，q* 自适应执行引擎，开源 Apache 2.0 FlashML-org/FreeToken 是一个边缘原生 MoE 推理引擎，Apache 2.0，Python，2105 stars。核心：在消费级 GPU（RTX 30/40/50）上本地运行 290B+ MoE 模型（DeepSeek-V4-Flash、Qwen3.6-35B、GLM-5.2），通过 q* 带宽自适应 CPU-GPU 协同执行、双缓冲预填充流、全局 LRU Expert 缓存、语义感知 KV 缓存实现交互级速度。兼容",
+          "score": 0.57793105
+        },
+        {
+          "article_id": "threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl",
+          "title": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节",
+          "url": "/blog/threejs-elemental-sandbox-vfx-browser-real-time-procedural-glsl/",
+          "language": "zh",
+          "excerpt": "浏览器里的 3A 特效工厂：纯 Three.js 打造 10 种游戏技能，938 个参数全部可实时调节 achrefelouafi 开源的 Elemental Sandbox 用 Three.js + Vite + 手写 GLSL，在浏览器里程序化生成 10 种 3A 游戏级技能特效——冰霜迸裂、枝状闪电、陨石撞击、能量光束、虚空刀刃、凤凰……全部无贴图、无精灵表、无预烘焙网格。938 个参数配有实时滑块，按 P 暂停后仍可继续调整，成为研究游戏 VFX 系统的最佳交互式沙盒。MIT 许可，npm run dev 即跑。 Three.js WebGL G",
+          "score": 0.5776899
+        },
+        {
+          "article_id": "sparklabs-ai-native-game-engine-intro",
+          "title": "SparkLabs：首个 AI 原生游戏引擎，NPC 终于拥有了真正的大脑",
+          "url": "/blog/sparklabs-ai-native-game-engine-intro/",
+          "language": "zh",
+          "excerpt": "SparkLabs：首个 AI 原生游戏引擎，NPC 终于拥有了真正的大脑 SparkLabs 是首个 AI 原生游戏引擎，将 AI 深度集成进引擎核心架构：智能 NPC 有 10 维人格系统和情感状态机，神经渲染管线支持实时超分辨率，AI 叙事引擎自动生成分支剧情，多 LLM 支持包括 OpenAI、Anthropic、DeepSeek 和本地模型，并带有基于 React+TypeScript 的可视化编辑器。 游戏引擎 AI原生 NPC 游戏开发 开源 C++ 多智能体 LLM 这不只是\"游戏加了 AI\" 核心架构：AI Agent 基础层 NPC ",
+          "score": 0.57411754
+        },
+        {
+          "article_id": "longstraw-million-token-rl-training-gpu",
+          "title": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token",
+          "url": "/blog/longstraw-million-token-rl-training-gpu/",
+          "language": "zh",
+          "excerpt": "LongStraw：在固定 GPU 预算下，把 RL 训练推到 200 万 token 推理已经支持百万 token，但 RL 后训练卡在 256K 以下。LongStraw 用驻留状态 + 响应回放 + 分布式原生执行三项技术，在 8 张 H20 上完成 2M token 的精确 GRPO 训练。arXiv 2607.14952，已开源。 RL训练 长上下文 GRPO 大模型 AI Agent GPU 分布式训练 后训练 LLM 一、一个越来越大的差距 二、三项核心技术 1. Resident State（驻留状态） 2. Response Repla",
+          "score": 0.5738592
+        },
+        {
+          "article_id": "persona-vrm-avatar-ai-voice-mcp",
+          "title": "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex",
+          "url": "/blog/persona-vrm-avatar-ai-voice-mcp/",
+          "language": "zh",
+          "excerpt": "Persona：给AI语音助手装上一张会动的脸，通过MCP连接Codex xikhar 开源了 Persona，一个跨平台桌面 VRM 角色应用，监听 Codex/ChatGPT 的音频输出，实时驱动嘴型同步和肢体动画。通过 MCP 暴露动画控制接口，AI Agent 可以直接调用 play_animation 让角色表达情绪。3天 680 星，MIT，支持 Linux/Windows/macOS。 VRM AI语音 MCP 桌面应用 Electron Three.js Codex Mycelium 它做什么 隐私优先的音频捕获 MCP 接口：Agent",
+          "score": 0.5698483
+        },
+        {
+          "article_id": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+          "title": "Sprite Studio：本地优先 AI 2D 游戏美术工作台，Rust 骨骼引擎确定性渲染 + Codex 驱动逐帧动画",
+          "url": "/blog/sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation/",
+          "language": "zh",
+          "excerpt": "Sprite Studio：本地优先 AI 2D 游戏美术工作台，Rust 骨骼引擎确定性渲染 + Codex 驱动逐帧动画 Sprite Studio 是一个开源（MIT）的本地优先 AI 2D 游戏美术桌面工作台，基于 Tauri 2 + Svelte + Rust + SQLite + Codex CLI。支持聊天生成精灵、AI 逐帧动画（身份参考 + 邻帧参考保证风格连贯）、原生 Rust 骨骼绑定引擎（关节点 + 胶囊骨骼 + IK + 确定性像素渲染，无需图像生成）、以及 PNG 精灵表导出。覆盖 macOS、Windows、Linux，内置",
+          "score": 0.5693461
+        }
+      ]
+    }
+  }
+]
