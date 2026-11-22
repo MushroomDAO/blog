@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-11-22T12:32:00.977139+00:00",
+  "pages": {
+    "legacy": {
+      "url": "https://fab.cba.mit.edu/classes/MAS.863/",
+      "finalHttpUrl": "https://fab.cba.mit.edu/classes/MAS.863/",
+      "status": 200,
+      "bytes": 241,
+      "sha256": "574bdda81d37ae6e8720dc3364edcd5773db9f50f63710a0d2caba85622df166",
+      "linkCount": 0
+    },
+    "course": {
+      "url": "https://pub.cba.mit.edu/863.26/site/",
+      "finalHttpUrl": "https://pub.cba.mit.edu/863.26/site/",
+      "status": 200,
+      "bytes": 5672,
+      "sha256": "c3d5f9ec1264e0a00e0b4631e0c43be485ebf5edc7f1b753dd7799da91942444",
+      "linkCount": 37
+    },
+    "application": {
+      "url": "https://pub.cba.mit.edu/863.26/site/file/app.html",
+      "finalHttpUrl": "https://pub.cba.mit.edu/863.26/site/file/app.html",
+      "status": 200,
+      "bytes": 2229,
+      "sha256": "eef1fb2cb2b22a90a0990528ce3a60b3eb375909669f3f827a59cf818f7b5421",
+      "linkCount": 1
+    },
+    "people": {
+      "url": "https://pub.cba.mit.edu/863.26/site/people.html",
+      "finalHttpUrl": "https://pub.cba.mit.edu/863.26/site/people.html",
+      "status": 200,
+      "bytes": 4095,
+      "sha256": "eb6bb1171c6ae04c778e2a0bcd3df888b66e2acdbbec9d601147f82da8262911",
+      "linkCount": 49
+    },
+    "principles": {
+      "url": "https://academy.cba.mit.edu/classes/principles_practices/index.html",
+      "finalHttpUrl": "https://academy.cba.mit.edu/classes/principles_practices/index.html",
+      "status": 200,
+      "bytes": 895,
+      "sha256": "0eea532e8df3baa8e8f961db211fa4979d29c977a3cfe615c86e7e3252bd94d3",
+      "linkCount": 5
+    },
+    "presentation": {
+      "url": "https://academy.cba.mit.edu/classes/project_presentation/index.html",
+      "finalHttpUrl": "https://academy.cba.mit.edu/classes/project_presentation/index.html",
+      "status": 200,
+      "bytes": 1927,
+      "sha256": "48baed69887af16f60a416fca1c4fbee93750e21a2597565bf123ba70985cc50",
+      "linkCount": 3
+    },
+    "development": {
+      "url": "https://academy.cba.mit.edu/classes/project_development/index.html",
+      "finalHttpUrl": "https://academy.cba.mit.edu/classes/project_development/index.html",
+      "status": 200,
+      "bytes": 11495,
+      "sha256": "d4050c8dba061e07d87711322f94d0fc3857a6b0a77351b267bb148ee194000c",
+      "linkCount": 96
+    },
+    "integration": {
+      "url": "https://fabacademy.org/2026/classes/system_integration/index.html",
+      "finalHttpUrl": "https://fabacademy.org/2026/classes/system_integration/index.html",
+      "status": 200,
+      "bytes": 6095,
+      "sha256": "3f26b8a9e5659cd3e30c380edbef608dd050d7b75b40a2e9d21c848d51be72e5",
+      "linkCount": 42
+    },
+    "ai-recitation": {
+      "url": "https://pub.cba.mit.edu/863.26/site/recitations/AI/index.html",
+      "finalHttpUrl": "https://pub.cba.mit.edu/863.26/site/recitations/AI/index.html",
+      "status": 200,
+      "bytes": 535,
+      "sha256": "28d734950a314a6a0f07225e8afd6068eddc0704c086d91ed61e0e535c670b09",
+      "linkCount": 3
+    }
+  },
+  "legacyUsesMetaRefreshNotHttpRedirect": true,
+  "verificationScope": "nine public HTML pages, source-link and key-field checks only; not hardware fabrication, lab access, full course completion or media playback"
+}

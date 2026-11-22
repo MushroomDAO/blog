@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "mit-mas863-digital-fabrication-project-learning-guide",
+    "query": "MIT MAS.863 数字制造 项目学习",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "mit-mas863-digital-fabrication-project-learning-guide",
+          "title": "MIT MAS.863：把想法做成实物，也把过程变成证据",
+          "url": "/blog/mit-mas863-digital-fabrication-project-learning-guide/",
+          "language": "zh",
+          "excerpt": "MIT MAS.863：把想法做成实物，也把过程变成证据 MIT的MAS.863课程把设计、数字制造、电子电路、嵌入式编程与系统集成连接起来。本文核对2026课程入口、作业评价和项目资料，解释它为何强调可复现文档，以及自学者如何借鉴小步迭代、接口验证和失败记录。公开网页不等于正式选课或实验室资格，AI能协助设计与记录，也不能代替真实测量；本次仅核验资料，未做实体制造。 MIT MAS.863 Digital Fabrication Project Learning AI 这门课怎样把不同技术串起来？ 为什么文档不是做完以后补一篇感想？ 最容易被低估的环节",
+          "score": 0.6806251
+        },
+        {
+          "article_id": "mit-mas-s60-6s985-multimodal-ai-spring-2026-open-lectures-paul-liang",
+          "title": "MIT MAS.S60 多模态 AI：Paul Liang 主讲，15 周从融合对齐到推理智能体，YouTube 全集公开",
+          "url": "/blog/mit-mas-s60-6s985-multimodal-ai-spring-2026-open-lectures-paul-liang/",
+          "language": "zh",
+          "excerpt": "MIT MAS.S60 多模态 AI：Paul Liang 主讲，15 周从融合对齐到推理智能体，YouTube 全集公开 MIT Media Lab + EECS 双授课号（MAS.S60 / 6.S985），Paul Liang 主讲，Spring 2026。15 周系统覆盖多模态融合、对齐、大模型、生成、推理、交互、智能体到自进化 AI。各讲 YouTube 视频逐一公开，官方课程页提供日程和材料，GitHub 组织 MIT-MI 托管代码与前序课程资料。 MIT multimodal course open-source AI-agents VL",
+          "score": 0.5100351
+        },
+        {
+          "article_id": "longcat-video-avatar-16-engineering-guide",
+          "title": "LongCat-Video-Avatar 1.6：十分钟数字人的工程边界",
+          "url": "/blog/longcat-video-avatar-16-engineering-guide/",
+          "language": "zh",
+          "excerpt": "LongCat-Video-Avatar 1.6：十分钟数字人的工程边界 美团 LongCat-Video-Avatar 1.6 开放代码与权重，支持音频驱动的人物视频生成。本文核查模型卡、技术报告与推理入口，解释长片续生成的误差累积、DMD 与 OPSD 混合、基础模型依赖及量化配置，并给出短片到长片的验收建议。十分钟能力来自官方展示，本次没有运行 GPU 推理，不把成片时长当作生成速度。 LongCat 数字人 视频生成 美团 开源模型 输入到底是什么？ 为什么长视频会越生成越不像？ 工程接入要注意哪些文件和参数？ 怎样验收“十分钟数字人”？ 常见问",
+          "score": 0.49579442
+        },
+        {
+          "article_id": "grpo-small-model-engineering-guide",
+          "title": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径",
+          "url": "/blog/grpo-small-model-engineering-guide/",
+          "language": "zh",
+          "excerpt": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径 GRPO（Group Relative Policy Optimization）让小模型在垂直任务上碾压frontier大模型成为可能。本文整合 ART、ms-swift、OpenClaw-RL 等开源仓库，以及 ART·E（Qwen 2.5 14B超越o3，$80训练）、MCP·RL等6个真实工程案例，给出完整的工程路径：任务选择→数据构造→奖励函数设计→训练循环→监控与避坑。 GRPO 强化学习 小模型 Qwen 微调 LLM训练 AI工程 Mycelium 为什么 GRPO 适合小模型专",
+          "score": 0.4650347
+        },
+        {
+          "article_id": "qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision",
+          "title": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行",
+          "url": "/blog/qwen3-8-27b-uncensored-mlx-abliterated-gated-deltanet-vision/",
+          "language": "zh",
+          "excerpt": "Qwen3.8-27B-Uncensored-MLX：消融对齐的混合线性注意力视觉语言模型，2/4/6/8-bit Apple Silicon 本地运行 OrcaRouter 发布的 Qwen3.8-27B 消融对齐（abliterated）MLX 量化版本，672 likes，trending。基于 Qwen3.8-27B —— 一个 64 层混合架构模型（48 层 Gated DeltaNet 线性注意力 + 每 4 层一个全注意力层），原生视觉语言塔，262K 上下文，MTP 头。提供 2/4/6/8-bit 四个精度（affine 量化，grou",
+          "score": 0.46192428
+        },
+        {
+          "article_id": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota",
+          "title": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota",
+          "url": "/blog/moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota/",
+          "language": "en",
+          "excerpt": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota OpenMOSS open-source MOSS-Transcribe-Diarize 0.9B (1.5K stars) — SOTA end-to-end audio understanding model that jointly handles long-form multi-speaker transcription, speaker diarization, precise timestamps, an",
+          "score": 0.46093714
+        },
+        {
+          "article_id": "duix-avatar-heygem-local-digital-human-video-clone-teardown",
+          "title": "Duix-Avatar（前 HeyGem）：本地离线数字人视频生成深度拆解",
+          "url": "/blog/duix-avatar-heygem-local-digital-human-video-clone-teardown/",
+          "language": "en",
+          "excerpt": "数字人 视频生成 本地推理 Docker 开源拆解 Duix-Avatar (formerly HeyGem): Local Offline Digital Human Video Cloning — Deep Teardown Project Background Core Three-Component Architecture Hardware Requirements \"10-Second Clone\" Claim Check What \"Local Offline\" Actually Means License Trap: Custom \"DU",
+          "score": 0.4596058
+        },
+        {
+          "article_id": "openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle",
+          "title": "OpenRSI：让「AI 改进 AI」变成可执行、可测量的工程问题",
+          "url": "/blog/openrsi-frontis-ma1-recursive-self-improvement-ai4ai-mle/",
+          "language": "zh",
+          "excerpt": "OpenRSI：让「AI 改进 AI」变成可执行、可测量的工程问题 FrontisAI/OpenRSI，arXiv:2607.28568，CC BY-NC 4.0，Python。把递归自改进（RSI）从哲学概念变成工程实验的开源全栈系统。核心：以机器学习工程（MLE）为首个可执行领域，训练 Frontis-MA1（35B）作为元演化 Agent，用四个原子算子（Draft/Improve/Debug/Crossover）统一后训练和推理。MLE-Bench Lite 上，单张 RTX 4090，Medal Average 从 39.39% 升到 71.2",
+          "score": 0.45832333
+        },
+        {
+          "article_id": "simulab-claude-interactive-lab-model-validation-guide",
+          "title": "SimuLab：把问题做成能动手验证的3D实验室",
+          "url": "/blog/simulab-claude-interactive-lab-model-validation-guide/",
+          "language": "zh",
+          "excerpt": "SimuLab：把问题做成能动手验证的3D实验室 SimuLab是Kapri开源的Claude Code技能，提供9步方法、7组提示、等距绘图引擎和完整示例，把抽象问题做成可操作的单文件实验室。本文拆解模型、画面与视频共用状态的设计，实测五个示例的离线构建及浏览器运行，核对咖啡模型公式，并说明免费许可、交互教学、物理可信度和工程复用的实际适用边界。 SimuLab Claude Code 交互模拟 开源技能 可视化 为什么先问一个问题，再开始画？ 这里的3D，具体由什么实现？ 本地实际验证了什么？ 有来源的数字，为什么还需要检查假设？ 如何开始，怎样复用",
+          "score": 0.45794493
+        },
+        {
+          "article_id": "stanford-cs146s-modern-software-developer-ai-coding-agent-mcp-course",
+          "title": "斯坦福 CS146S 2026：从最小编程代理到中文学习笔记",
+          "url": "/blog/stanford-cs146s-modern-software-developer-ai-coding-agent-mcp-course/",
+          "language": "zh",
+          "excerpt": "斯坦福 CS146S 2026：从最小编程代理到中文学习笔记 斯坦福 CS146S 2026 秋季课程从约200行的编程代理入手，进一步讲上下文工程、MCP、Skills、代码审查与软件工厂。本文核对官方课程与 FL-Bin/stanford-ai-course 非官方中英双语笔记的来源、前五章内容、PDF下载、更新进度和许可，并给科研及开发入门者提供循序渐进的学习路线。 Stanford CS146S AI-agents software-engineering MCP learning CS146S 是怎样一门课，零基础能直接学吗？ 2026 年究竟",
+          "score": 0.45485482
+        }
+      ]
+    }
+  }
+]
