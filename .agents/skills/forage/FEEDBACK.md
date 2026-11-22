@@ -1578,3 +1578,5 @@ Published harness-adapters-in-loop-rl-tool-governance from exact official URL; i
 - 2026-11-22 | LoopForge | Published bilingual SOPdelivery audit with matchedcover/3figures. Pinnedofficialrepo MIT, originalGoengine57top/77inclpass+1MySQLskip and13VMdesignertestspass. Explains artifactcontracts/approval/retry versus quality/idempotency, sharedworkspace, trustedteam/DockerSocket, executorcredentials and costprojection. Publictitle/list/images/all1039priorroutes verified; currentWeChatfullremoteverified;2semanticIDs/queryverified. source/20261122-loopforge/.
 
 - 2026-11-22 Sophon-Realtime: https://blog.mushroom.cv/blog/sophon-realtime-full-duplex-local-voice-guide/；20原始无权重音频控制测试通过；作者H100/M4Max性能、限内存测试与实际设备不同；Mac无克隆/工具，网络默认收音门控。Blog/远程草稿/双语索引/KB回读均已验证；仓库 PR290 待审核。
+
+- 2026-11-22 sprite-stacking: https://blog.mushroom.cv/blog/agent-sprite-stacking-four-view-voxel-guide/；原始八组自检、18层真实CLI通过；前后掩码OR验证12体素；Chrome可见截图但退出清理超时code2，非全功能/性能验收。Blog/远程草稿/双语索引/KB回读均已验证；仓库 PR291 待审核。

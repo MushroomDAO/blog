@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-22T16:00:49.934201+00:00",
+  "browser": "installed Google Chrome headless",
+  "page": "local generated standalone HTML, external hostnames blocked by resolver",
+  "viewport": [
+    1280,
+    900
+  ],
+  "fixtureLoaded": "18 slices,23x33px",
+  "manualScreenshotReview": "pass; blue/orange box visible in turntable at48deg",
+  "scope": "single viewer rendering smoke; not all controls/exports, engine integrations or FPS",
+  "diagnostics": "Headless display CVDisplayLink and allocator diagnostics retained; not claimed error-free",
+  "domSha256": "48d3074313093475aa93e9e9467364d0ca9af2730f2e95f31874bdb6613208cd",
+  "screenshotSha256": "fbe4339b6613b0a17f9e1ea1ece9b64bbeb57dcd8f9542791cf015875418eda9",
+  "processExitCode": 2,
+  "teardown": "watchdog expired after DOM and screenshot were written",
+  "status": "visible-render-observed; browser process did not exit cleanly"
+}

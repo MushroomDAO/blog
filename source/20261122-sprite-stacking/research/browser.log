@@ -1,0 +1,12 @@
+[13632:102483151:1122/225817.542915:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[13632:102483169:1122/225817.550750:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[13632:102483151:1122/225817.556475:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[13632:102483169:1122/225817.557054:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[13632:102483151:1122/225817.557315:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[13632:102483169:1122/225817.557388:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[13632:102483151:1122/225817.602069:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[13632:102483169:1122/225817.602172:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+Trying to load the allocator multiple times. This is *not* supported.
+36612 bytes written to file /Users/jason/Dev/mycelium/blog/source/20261122-sprite-stacking/research/browser-view.png
+Teardown watchdog expired; recording dump and terminating.
+[1122/225829.337633:WARNING:third_party/crashpad/crashpad/util/process/process_memory_mac.cc:94] mach_vm_read(0x16b424000, 0x8000): (os/kern) invalid address (1)

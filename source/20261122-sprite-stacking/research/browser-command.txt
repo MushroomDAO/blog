@@ -1,0 +1,2 @@
+Google Chrome --headless --no-first-run --user-data-dir=/tmp/sprite-stacking-chrome-20261122 --hide-scrollbars --window-size=1280,900 --virtual-time-budget=1500 --timeout=15000 --host-resolver-rules="MAP * ~NOTFOUND" --screenshot=<research/browser-view.png> --dump-dom file://<research/fixture-viewer.html>
+Result: DOM and screenshot written, then teardown watchdog expired; exit2.

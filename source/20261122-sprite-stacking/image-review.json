@@ -1,0 +1,32 @@
+{
+  "banner": "machine/manualpass; layered blue-orange wooden toy vehicle and flat layers; seed9501 manually viewed; explanatorygeneratedscene",
+  "body": [
+    {
+      "file": "src/assets/images/agent-sprite-stacking-four-view-voxel-guide-fig-01.png",
+      "bytes": 68547,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass;correct sparseChinese; on-topic LittleM; originals preserved"
+    },
+    {
+      "file": "src/assets/images/agent-sprite-stacking-four-view-voxel-guide-fig-02.png",
+      "bytes": 40055,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass;correct sparseChinese; on-topic LittleM; originals preserved"
+    },
+    {
+      "file": "src/assets/images/agent-sprite-stacking-four-view-voxel-guide-fig-03.png",
+      "bytes": 61154,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass;correct sparseChinese; on-topic LittleM; originals preserved"
+    }
+  ]
+}

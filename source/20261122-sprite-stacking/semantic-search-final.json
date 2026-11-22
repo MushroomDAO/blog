@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "agent-sprite-stacking-four-view-voxel-guide",
+    "query": "sprite stacking 四视图 体素 切片",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "agent-sprite-stacking-four-view-voxel-guide",
+          "title": "sprite-stacking：四张像素图变可转道具，先看清雕刻规则",
+          "url": "/blog/agent-sprite-stacking-four-view-voxel-guide/",
+          "language": "zh",
+          "excerpt": "sprite-stacking：四张像素图变可转道具，先看清雕刻规则 Daniel White 的 sprite-stacking 将四张正交像素视图转成体素切片，再用二维分层渲染呈现可旋转的假三维效果。本文核对 MIT 许可、输入图纸约束、隐藏空腔与引擎集成边界，运行原始自检、十八层切片和浏览器预览，并用不一致前后视图验证真实掩码规则，说明 Agent 技能的价值与不能替代的美术验收。 sprite-stacking 像素艺术 Agent技能 游戏开发 四张图，怎么变成能转的对象？ 真的是四个剪影全求交吗？ 哪些细节能保留，哪些会被填平？ Agent ",
+          "score": 0.6856573
+        },
+        {
+          "article_id": "4danyone-monocular-video-4d-gaussian-splatting-multi-view",
+          "title": "4DAnyone：用一段普通竖屏视频，重建任何人的 4D 模型",
+          "url": "/blog/4danyone-monocular-video-4d-gaussian-splatting-multi-view/",
+          "language": "zh",
+          "excerpt": "4DAnyone：用一段普通竖屏视频，重建任何人的 4D 模型 ant-research/4DAnyone ⭐1051，蚂蚁研究院 SIGGRAPH Asia 2026 成果，从单目竖屏视频生成多视角视频，实现 4D Gaussian Splatting 重建，支持 6/24/48 视角全轨道相机，峰值显存 25.4 GiB，Apache 2.0。 4D Gaussian Splatting 4DGS video generation multi-view SIGGRAPH 3D reconstruction human avatar generativ",
+          "score": 0.5552406
+        },
+        {
+          "article_id": "sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation",
+          "title": "Sprite Studio：本地优先 AI 2D 游戏美术工作台，Rust 骨骼引擎确定性渲染 + Codex 驱动逐帧动画",
+          "url": "/blog/sprite-maker-sprite-studio-ai-2d-game-art-tauri-rig-animation/",
+          "language": "zh",
+          "excerpt": "Sprite Studio：本地优先 AI 2D 游戏美术工作台，Rust 骨骼引擎确定性渲染 + Codex 驱动逐帧动画 Sprite Studio 是一个开源（MIT）的本地优先 AI 2D 游戏美术桌面工作台，基于 Tauri 2 + Svelte + Rust + SQLite + Codex CLI。支持聊天生成精灵、AI 逐帧动画（身份参考 + 邻帧参考保证风格连贯）、原生 Rust 骨骼绑定引擎（关节点 + 胶囊骨骼 + IK + 确定性像素渲染，无需图像生成）、以及 PNG 精灵表导出。覆盖 macOS、Windows、Linux，内置",
+          "score": 0.5469256
+        },
+        {
+          "article_id": "deepseek-v4-flash-vision-exp-multimodal-agent-dspark",
+          "title": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了",
+          "url": "/blog/deepseek-v4-flash-vision-exp-multimodal-agent-dspark/",
+          "language": "zh",
+          "excerpt": "DeepSeek-V4-Flash-Vision-Exp：加了视觉塔，文本 agent 能力反而涨了 DeepSeek-V4 家族第一个实验性多模态模型，8 月 31 日上线，五天 18.4 万下载、651 likes，MIT。在 DeepSeek-V4-Flash 架构上加视觉模块并继续训练：多模态 agent 能力大幅提升，而七项文本 agent 基准里六项不降反升。三项超过 Opus-4.8（DeepSWE 59.3、Agents' Last Exam 27.3、ZeroBench 35.0）。DSpark 推测解码的 draft 权重和 targ",
+          "score": 0.5442834
+        },
+        {
+          "article_id": "m3e-canvas-material3-sketch-to-structured-prompt-ai-coding",
+          "title": "M3E Canvas: Sketch the UI First, Then Let AI Write the Code — Design Exported as a Six-Section Spec",
+          "url": "/blog/m3e-canvas-material3-sketch-to-structured-prompt-ai-coding/",
+          "language": "en",
+          "excerpt": "M3E Canvas: Sketch the UI First, Then Let AI Write the Code — Design Exported as a Six-Section Spec lnkiai/m3e-canvas hit 4,169 stars in four days: drag Material 3 Expressive components in the browser, wire up screen transitions and swipe gestures, then export a prompt with six f",
+          "score": 0.509795
+        },
+        {
+          "article_id": "cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice",
+          "title": "ClipTalk：用自然语言剪视频，VLM + 24 个 Skill 驱动的 Agentic 视频编辑系统",
+          "url": "/blog/cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice/",
+          "language": "zh",
+          "excerpt": "ClipTalk：用自然语言剪视频，VLM + 24 个 Skill 驱动的 Agentic 视频编辑系统 非商业自定义许可，126 stars。三层架构：Python FastAPI + Node Pi Agent + 浏览器。24 个 SKILL.md 技能，VLM 理解画面，本地 SenseVoice/TalkNet/SFace/YOLOX 识别人脸/声纹/活跃发言人，FFmpeg 执行剪辑。6 步审批门禁，V2 算法比基线慢 14s。仅支持 Linux x86-64/WSL2，不支持 macOS/ARM。 video-editing agent ",
+          "score": 0.50878495
+        },
+        {
+          "article_id": "ruview-wifi-densepose-esp32-through-wall-sensing-pose-breathing-heart-rate",
+          "title": "RuView：9.4 万星的 WiFi DensePose，不开摄像头隔墙感知呼吸和心率，姿态追踪数字请打折",
+          "url": "/blog/ruview-wifi-densepose-esp32-through-wall-sensing-pose-breathing-heart-rate/",
+          "language": "zh",
+          "excerpt": "RuView：9.4 万星的 WiFi DensePose，不开摄像头隔墙感知呼吸和心率，姿态追踪数字请打折 ruvnet/RuView，MIT，Rust，94K stars。ESP32-S3 读取 CSI 信号，实现隔墙人体感知：存在检测 82.3%、呼吸 6-30 BPM、心跳 40-120 BPM 均经验证；但宣传中的 17 关键点姿态追踪 PCK@20 实测仅 3%（目标 35%），92.9% 准确率数字已撤回。完整拆解学术源头、技术管道、硬件需求和隐私风险。 WiFi-sensing CSI ESP32 pose-estimation priv",
+          "score": 0.50618607
+        },
+        {
+          "article_id": "juju-content-illustrations-skill-ai-visual-content-guide",
+          "title": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画",
+          "url": "/blog/juju-content-illustrations-skill-ai-visual-content-guide/",
+          "language": "zh",
+          "excerpt": "juju-content-illustrations：一个 Agent Skill，把你的长文章变成卷卷风格手绘插画 卷卷整理研究所 × 内容插画 Skill。一句话触发，AI 自动把文章、教程、方法论转成白底轻线稿的手绘卡片——主角是白色比熊卷卷，最多生成 10 张，支持 6 种比例，颜色有语义，场景有隐喻。60 stars，MIT 开源，可装进 Claude Code 或 Codex 直接用。 AgentSkill AI生图 内容创作 ClaudeCode 插画 手绘风格 创作者工具 开源 Skill 卷卷是谁 它能做什么 支持的 6 种比例 视觉语",
+          "score": 0.5020623
+        },
+        {
+          "article_id": "nikola-hand-drawn-explainer-video-codex-skill",
+          "title": "Nikola：把话题变成手绘讲解视频的 Codex Skill",
+          "url": "/blog/nikola-hand-drawn-explainer-video-codex-skill/",
+          "language": "zh",
+          "excerpt": "Nikola：把话题变成手绘讲解视频的 Codex Skill 中文手绘知识讲解视频 Codex Skill，逐笔故事动画与程序动画双路径，VolcanoEngine TTS 配音，输出真实 MP4+字幕+时间轴，无需本地模型，Apache 2.0 开源。 手绘动画 Codex Skill AI视频 知识讲解 开源 TTS 两条生产路径 路径一：逐笔故事动画 路径二：程序动画 技术架构 触发词示例 已有示例 为什么值得关注",
+          "score": 0.500969
+        },
+        {
+          "article_id": "pixel2motion-ai-logo-animation-pipeline",
+          "title": "从像素到动效:Pixel2SVG-HTML + Pixel2Motion 如何把一张 Logo 截图变成可审查的品牌动画",
+          "url": "/blog/pixel2motion-ai-logo-animation-pipeline/",
+          "language": "zh",
+          "excerpt": "从像素到动效:Pixel2SVG-HTML + Pixel2Motion 如何把一张 Logo 截图变成可审查的品牌动画 nolangz 的两个开源 Codex/Claude skill 组成一条完整流水线:Pixel2SVG-HTML 把位图 logo 拟合成最低复杂度的语义 SVG,Pixel2Motion 在这份'终帧契约'上编排动画。本文深度分析它的核心理念——以矢量工艺取代盲目描摹、IoU 只做诊断不做闸门、每一步都留 QA 证据。 AI Logo Animation SVG Pixel2Motion Codex Skill Motion De",
+          "score": 0.49699926
+        }
+      ]
+    }
+  }
+]

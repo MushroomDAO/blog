@@ -1,0 +1,36 @@
+[
+  {
+    "id": "15b3c8d5b183cf8aa21890676dbacebfc18c005472ca3e63",
+    "metadata": {
+      "article_id": "agent-sprite-stacking-four-view-voxel-guide",
+      "content_hash": "cd0578b97ea2e189",
+      "excerpt": "sprite-stacking：四张像素图变可转道具，先看清雕刻规则 Daniel White 的 sprite-stacking 将四张正交像素视图转成体素切片，再用二维分层渲染呈现可旋转的假三维效果。本文核对 MIT 许可、输入图纸约束、隐藏空腔与引擎集成边界，运行原始自检、十八层切片和浏览器预览，并用不一致前后视图验证真实掩码规则，说明 Agent 技能的价值与不能替代的美术验收。 sprite-stacking 像素艺术 Agent技能 游戏开发 四张图，怎么变成能转的对象？ 真的是四个剪影全求交吗？ 哪些细节能保留，哪些会被填平？ Agent ",
+      "language": "zh",
+      "tags": [
+        "sprite-stacking",
+        "像素艺术",
+        "Agent技能",
+        "游戏开发"
+      ],
+      "title": "sprite-stacking：四张像素图变可转道具，先看清雕刻规则",
+      "url": "/blog/agent-sprite-stacking-four-view-voxel-guide/"
+    }
+  },
+  {
+    "id": "7c5b681fa6fcac9b4dbd727855444b1af7ff668631ce2589",
+    "metadata": {
+      "article_id": "agent-sprite-stacking-four-view-voxel-guide",
+      "content_hash": "8d786e5c8e37d52a",
+      "excerpt": "Sprite Stacking: Four Views, Voxel Slices and Limits Review the sprite-stacking agent skill, four-view voxel carving and layered rendering, with real CLI and Chrome checks plus a tested front/back mask caveat. sprite-stacking 像素艺术 Agent技能 游戏开发 How do four views become a rotating ",
+      "language": "en",
+      "tags": [
+        "sprite-stacking",
+        "像素艺术",
+        "Agent技能",
+        "游戏开发"
+      ],
+      "title": "Sprite Stacking: Four Views, Voxel Slices and Limits",
+      "url": "/blog/agent-sprite-stacking-four-view-voxel-guide/"
+    }
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "python": "3.12.15",
+  "host": "macOS-26.6.2-arm64-arm-64bit",
+  "upstreamSelfCheck": "original tests/check.py passed; eight numbered groups, not a model or performance benchmark",
+  "cliExit": 0,
+  "layers": 18,
+  "stripDimensions": [
+    414,
+    33
+  ],
+  "normalEmissiveDimensionsMatch": true,
+  "htmlSelfContainedImages": true,
+  "frontBackDisjointOccupancy": 12,
+  "strictFourWayIntersectionWouldBe": 0,
+  "verifiedRule": "top AND side AND (front OR back)",
+  "emptyTopSideAndBothEndMasksClearVolume": true,
+  "scope": "synthetic numeric silhouette tests and actual CLI; not generative model, game-engine integration or frame-time benchmark",
+  "files": {
+    "fixture-viewer.html": "10e3572e271d34f9f1d41eaa597a35226d288ea5609f964a2774405d7a0c017f",
+    "fixture-four-views.png": "69afb967c995792e71a313f137a4c03308ca027a403cdff16f063a9dc50230e3",
+    "fixture-emissive.png": "8cc23a660f36649704bfbaf7e82d7b0588d2d6858e5f078444196d4242fcb58b",
+    "fixture-slices.png": "84f62feebe317e5769ce469e7cbcb3cba8a7974bb1c8fac2a3cf5b2f50703f40",
+    "fixture-normals.png": "3c9bf368a668f9221651337b0600d48a88f7639838143f11006a06c5fe3a561a",
+    "fixture-preview.png": "07441d40f08cf8d501a0fdd79138eac88c8bcdf16c5fca77fd62a3a5bf884c59"
+  },
+  "Pillow": "12.3.0",
+  "numpy": "2.5.3",
+  "browserExit": 2,
+  "browserScope": "screenshot and DOM observed; teardown watchdog failed"
+}

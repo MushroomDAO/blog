@@ -1,0 +1,45 @@
+{
+  "orderingNote": "List uses same-day date sorting; actual lastPublishedAt records publication time for carousel ordering.",
+  "checkedAt": "2026-11-22T16:05:16.956720+00:00",
+  "articles": [
+    {
+      "slug": "agent-sprite-stacking-four-view-voxel-guide",
+      "url": "https://blog.mushroom.cv/blog/agent-sprite-stacking-four-view-voxel-guide/",
+      "title": "sprite-stacking：四张像素图变可转道具，先看清雕刻规则",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/agent-sprite-stacking-four-view-voxel-guide-banner.CJRyaABO.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94638
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/agent-sprite-stacking-four-view-voxel-guide-banner.CJRyaABO_VIoXr.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 40374
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/agent-sprite-stacking-four-view-voxel-guide-fig-01.Cv7Oscm5_Z11FNsc.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 46412
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/agent-sprite-stacking-four-view-voxel-guide-fig-02.C4F3Tura_aWDkH.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 36374
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/agent-sprite-stacking-four-view-voxel-guide-fig-03.NsuQ5MIi_Z1agAhU.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 45584
+        }
+      ]
+    }
+  ]
+}
