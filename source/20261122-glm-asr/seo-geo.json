@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-22T14:12:51.976893+00:00",
+  "lengths": {
+    "description": 151,
+    "descriptionEn": 160,
+    "titleEn": 56,
+    "wechatTitle": 20,
+    "wechatDigest": 32
+  },
+  "checks": [
+    "BLUF and FAQ3 both languages",
+    "two official primary sources pinned",
+    "four real local inference cases and scoped failures",
+    "mixed CER/WER macro average distinguished from leaderboard mean",
+    "stored versus tied runtime weights distinguished from file/RAM",
+    "release date and separate licenses",
+    "matched banner and 3 bilingual figures",
+    "internal related reading and both copyrights"
+  ]
+}

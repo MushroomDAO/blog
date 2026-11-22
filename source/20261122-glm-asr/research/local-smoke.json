@@ -1,0 +1,47 @@
+{
+  "torch": "2.14.0",
+  "transformers": "5.16.1",
+  "device": "mps",
+  "dtype": "float16",
+  "revision": "61ba4e0b3309b6656edea3e93e419f7bd5c61957",
+  "samples": [
+    {
+      "name": "official_zh",
+      "sourceSha256": "52fa1436a239cbf30ddaf8d551e0e10801d5e504e327e50080d1f388be157877",
+      "seconds": 6.0,
+      "gain": 1,
+      "inputRms": 0.001179210375994444,
+      "text": "我还能再搞一个，就算是非常小的声音，也能识别准确。",
+      "generatedTokens": 16
+    },
+    {
+      "name": "official_en",
+      "sourceSha256": "32036519e36302b24f2dca135728940016ac2e1f4530d0fc226b608f5b0a3e45",
+      "seconds": 10.6,
+      "gain": 1,
+      "inputRms": 0.035290852189064026,
+      "text": "Be careful not to allow fabric to become too hot, which can cause shrinkage or in extreme cases, scorch.",
+      "generatedTokens": 25
+    },
+    {
+      "name": "zh_minus30db",
+      "sourceSha256": "52fa1436a239cbf30ddaf8d551e0e10801d5e504e327e50080d1f388be157877",
+      "seconds": 6.0,
+      "gain": 0.03162277660168379,
+      "inputRms": 3.728990486706607e-05,
+      "text": "我还能再搞一个，就算是非常小的声音，也能识别正确。",
+      "generatedTokens": 16
+    },
+    {
+      "name": "silence",
+      "sourceSha256": "52fa1436a239cbf30ddaf8d551e0e10801d5e504e327e50080d1f388be157877",
+      "seconds": 3.0,
+      "gain": 0,
+      "inputRms": 0.0,
+      "text": "",
+      "generatedTokens": 1
+    }
+  ],
+  "scope": "2 official clips, one amplitude variant, silence; not actual-whisper/Cantonese benchmark",
+  "actualParameters": 2136470528
+}

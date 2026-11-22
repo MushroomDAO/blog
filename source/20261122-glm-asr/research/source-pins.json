@@ -1,0 +1,15 @@
+{
+  "repo": "https://github.com/zai-org/GLM-ASR",
+  "revision": "a324aa59a30952c54e8097c85efea592b7fafd81",
+  "files": {
+    "README.md": "fbbe0dc17db1b66cbfd84b5a0ce93f030e4c7900b6fcc1fce40b836d9f071aef",
+    "README_zh.md": "9a4f3d555040fbaa83857cb45b27efafe7b8f0ccb1dffce889a974ca47327f5c",
+    "inference.py": "71b785ce9080c709b4faa2b14b20fa3d247003168a0770bdadea03a4fce2bdf5",
+    "requirements.txt": "00e72e04ee3d7acaecaa99030e2f28b54e53fd79302de44827febd2416a88efe",
+    "LICENSE": "7090a09a59cf55701feb04b2d4f99ce31fc4f31bbe1aaf33dd0dafd8e7546313",
+    "resources/bench.png": "028c3c7aa8f47a1e73f468ba81f25a4a7cc1f9efdaca69593336ebdab893cfd0",
+    "examples/example_zh.wav": "52fa1436a239cbf30ddaf8d551e0e10801d5e504e327e50080d1f388be157877",
+    "examples/example_en.wav": "32036519e36302b24f2dca135728940016ac2e1f4530d0fc226b608f5b0a3e45"
+  },
+  "bannerDecision": "Official imagery consists of benchmark/language text tables, logo and QR code; none qualifies. Generate microphone photograph."
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1679b2178a02a9c55d7cc889e4b7427bb3b5b4b0aa7b7096",
+    "metadata": {
+      "article_id": "glm-asr-nano-2512-whisper-dialect-local-guide",
+      "content_hash": "ae539cbe3d08bdd1",
+      "excerpt": "GLM-ASR-Nano-2512：识别轻声与粤语，先看清评测和部署边界 GLM-ASR-Nano-2512 面向普通话、英语与粤语转写，官方强调低音量鲁棒性。本文核对智谱模型卡、代码、权重元数据和五项基准，解释 1.5B 与 HF 2B 标签、约 4.52GB 权重及 4.10 平均错误率的口径，并用本地样本检查推理链路，区分耳语、降低增益、离线文件与实时字幕的实际需求。 GLM-ASR 语音识别 本地AI 粤语 模型评测 1.5B、2B 和文件体积，究竟分别是什么？ 4.10 的成绩，能说明它全面超过 Whisper 吗？ 低音量、耳语和方言，是同一",
+      "language": "zh",
+      "tags": [
+        "GLM-ASR",
+        "语音识别",
+        "本地AI",
+        "粤语",
+        "模型评测"
+      ],
+      "title": "GLM-ASR-Nano-2512：识别轻声与粤语，先看清评测和部署边界",
+      "url": "/blog/glm-asr-nano-2512-whisper-dialect-local-guide/"
+    }
+  },
+  {
+    "id": "783805859b1531e1d92c877a1864d818ef4a146930e18acf",
+    "metadata": {
+      "article_id": "glm-asr-nano-2512-whisper-dialect-local-guide",
+      "content_hash": "e5495c0d39704ce3",
+      "excerpt": "GLM-ASR-Nano: Quiet Speech, Dialects and Local Inference Audit GLM-ASR-Nano's quiet-speech claims, dialect support, parameter counts, benchmark averages and local inference limits before choosing it for transcription. GLM-ASR 语音识别 本地AI 粤语 模型评测 What do 1.5B, 2B and the download si",
+      "language": "en",
+      "tags": [
+        "GLM-ASR",
+        "语音识别",
+        "本地AI",
+        "粤语",
+        "模型评测"
+      ],
+      "title": "GLM-ASR-Nano: Quiet Speech, Dialects and Local Inference",
+      "url": "/blog/glm-asr-nano-2512-whisper-dialect-local-guide/"
+    }
+  }
+]

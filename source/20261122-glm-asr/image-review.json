@@ -1,0 +1,32 @@
+{
+  "banner": "manual pass, microphone with cable; generated illustration; no text/faces",
+  "body": [
+    {
+      "file": "src/assets/images/glm-asr-nano-2512-whisper-dialect-local-guide-fig-01.png",
+      "bytes": 64009,
+      "manualReview": "pass; on-topic Little M, correct sparse Chinese, preserved original",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/glm-asr-nano-2512-whisper-dialect-local-guide-fig-02.png",
+      "bytes": 48851,
+      "manualReview": "pass; on-topic Little M, correct sparse Chinese, preserved original",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/glm-asr-nano-2512-whisper-dialect-local-guide-fig-03.png",
+      "bytes": 63357,
+      "manualReview": "pass; on-topic Little M, correct sparse Chinese, preserved original",
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "bytes": 4515776712,
+  "totalElements": 2257843200,
+  "byPrefix": {
+    "audio_tower.conv1": 492800,
+    "audio_tower.conv2": 4916480,
+    "audio_tower.layers": 629637120,
+    "audio_tower.norm": 2560,
+    "language_model.lm_head": 121372672,
+    "language_model.model": 1472055296,
+    "multi_modal_projector.linear_1": 20975616,
+    "multi_modal_projector.linear_2": 8390656
+  },
+  "sha256": "b8af83ccf6b34dfc7921cedcc46d4a6dc6aaffa661b8f71b44e3a2ff60a90a91"
+}

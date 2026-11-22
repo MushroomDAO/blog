@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-22T14:14:39.556Z",
+  "drafts": [
+    {
+      "slug": "glm-asr-nano-2512-whisper-dialect-local-guide",
+      "mediaId": "prCUE631thH1cmNLi42prAIMRCKFfDyzM--qmdKPNbR2K619l1QHhgkX9TPpwo7b",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "cd2c170a6886acf4b6e7f0c588a77b2107081e55c5577e924ab14e860efbf6bf",
+      "remoteTextHash": "cd2c170a6886acf4b6e7f0c588a77b2107081e55c5577e924ab14e860efbf6bf",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/glm-asr-nano-2512-whisper-dialect-local-guide/",
+      "localContentHash": "022e7e1ff4d8510149d3688ca6d8e05128f087142eaaceb3b2874a77947c90e4",
+      "remoteContentHash": "a1e9717757b3f009ef845db7eeb916beae347c3729f3c4d64e38af5a0bcbf723"
+    }
+  ]
+}

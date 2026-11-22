@@ -1,0 +1,16 @@
+{
+  "configTieWordEmbeddings": true,
+  "textConfigTieWordEmbeddings": false,
+  "storedMatrices": [
+    "language_model.lm_head.weight",
+    "language_model.model.embed_tokens.weight"
+  ],
+  "shapes": [
+    59264,
+    2048
+  ],
+  "torchEqual": true,
+  "sharedElementCount": 121372672,
+  "loadedUniqueParameters": 2136470528,
+  "storedTensorElements": 2257843200
+}

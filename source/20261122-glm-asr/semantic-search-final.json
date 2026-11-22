@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "glm-asr-nano-2512-whisper-dialect-local-guide",
+    "query": "GLM-ASR-Nano-2512 低音量 粤语 语音识别",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "glm-asr-nano-2512-whisper-dialect-local-guide",
+          "title": "GLM-ASR-Nano-2512：识别轻声与粤语，先看清评测和部署边界",
+          "url": "/blog/glm-asr-nano-2512-whisper-dialect-local-guide/",
+          "language": "zh",
+          "excerpt": "GLM-ASR-Nano-2512：识别轻声与粤语，先看清评测和部署边界 GLM-ASR-Nano-2512 面向普通话、英语与粤语转写，官方强调低音量鲁棒性。本文核对智谱模型卡、代码、权重元数据和五项基准，解释 1.5B 与 HF 2B 标签、约 4.52GB 权重及 4.10 平均错误率的口径，并用本地样本检查推理链路，区分耳语、降低增益、离线文件与实时字幕的实际需求。 GLM-ASR 语音识别 本地AI 粤语 模型评测 1.5B、2B 和文件体积，究竟分别是什么？ 4.10 的成绩，能说明它全面超过 Whisper 吗？ 低音量、耳语和方言，是同一",
+          "score": 0.78403944
+        },
+        {
+          "article_id": "moss-tts-nano-ultralight-multilingual-tts-open-source",
+          "title": "0.1B 参数跑满 20 种语言：MOSS-TTS-Nano 超轻量 TTS 开源",
+          "url": "/blog/moss-tts-nano-ultralight-multilingual-tts-open-source/",
+          "language": "zh",
+          "excerpt": "0.1B 参数跑满 20 种语言：MOSS-TTS-Nano 超轻量 TTS 开源 OpenMOSS 开源 MOSS-TTS-Nano，0.1B 参数，纯 CPU 运行，48kHz 双声道输出，支持 20 种语言零样本声音克隆。单核 CPU（M4 MacBook Air）流畅推理，ONNX 运行无需 PyTorch，可嵌入浏览器扩展与边缘设备。 TTS 语音合成 开源 MOSS ONNX 声音克隆 轻量模型 本地部署 项目背景 核心技术架构 核心功能 极致轻量化 + 低延迟 零样本声音克隆 多语言支持 部署方式 实际意义 快速开始 常见问题",
+          "score": 0.5702723
+        },
+        {
+          "article_id": "qwen3-asr-small-business-bilingual-voice-ai-local-deploy",
+          "title": "Qwen3-ASR：小企业搭建本地双语语音 AI 客服的完整指南",
+          "url": "/blog/qwen3-asr-small-business-bilingual-voice-ai-local-deploy/",
+          "language": "zh",
+          "excerpt": "Qwen3-ASR：小企业搭建本地双语语音 AI 客服的完整指南 Qwen3-ASR 是阿里云开源的多语言语音识别模型（0.6B/1.7B），支持52种语言和22种中国方言。本文评估它是否能帮助小企业搭建本地双语语音 AI 系统，详解硬件要求、成本和完整部署路径。 AI ASR 语音识别 Qwen3 双语 本地部署 AI客服 open-source Qwen3-ASR 是什么 硬件要求：最低能跑起来 成本对比：本地 vs 云 API 本地部署（一次性投入） 云 API（按需付费） 双语语音 AI 的完整架构 快速部署：15分钟跑起来 第一步：安装 第二步",
+          "score": 0.55049473
+        },
+        {
+          "article_id": "audio8-asr-01b-on-device-speech-recognition",
+          "title": "Audio8-ASR-0.1B：0.1B 参数，LibriSpeech 2.70 WER，iPhone 本地跑只占 200MB",
+          "url": "/blog/audio8-asr-01b-on-device-speech-recognition/",
+          "language": "zh",
+          "excerpt": "Audio8-ASR-0.1B：0.1B 参数，LibriSpeech 2.70 WER，iPhone 本地跑只占 200MB Audio8-ASR-0.1B 是一个端到端参数量 0.324B、语言模型核心仅 0.1B 的自回归 ASR 模型，LibriSpeech test-clean WER 2.70%，Open ASR Leaderboard 七集平均 WER 7.03%。三条部署路径：Transformers（Python 服务端）、ONNX Runtime（跨平台 HTTP API）、iOS ANE（iPhone 本地，峰值内存约 200MB）",
+          "score": 0.5491632
+        },
+        {
+          "article_id": "index-tts-25-production-tts-voice-clone-emotion-multilingual",
+          "title": "IndexTTS-2.5：生产级零样本 TTS，一段参考音频克隆音色 + 细粒度情感与语速控制",
+          "url": "/blog/index-tts-25-production-tts-voice-clone-emotion-multilingual/",
+          "language": "zh",
+          "excerpt": "IndexTTS-2.5：生产级零样本 TTS，一段参考音频克隆音色 + 细粒度情感与语速控制 index-tts/index-tts，⭐22,615，Python，2026-08-10 发布 IndexTTS-2.5。零样本文本转语音系统，一段参考音频即可克隆音色。支持中文、英文、日语、西班牙语、阿拉伯语五种语言，跨语言音色保持。8维情感向量（愉快/愤怒/悲伤/恐惧/厌恶/忧郁/惊讶/平静），支持情感参考音频、文本情感自动转换、显式情感描述四种控制方式；duration_factor 语速控制（0.5×–2.0×）；拼音/CMU音素/日语假名发音精确控",
+          "score": 0.5488495
+        },
+        {
+          "article_id": "audio8-tts-preview-0.6b-multilingual-zero-shot-voice-cloning-dualAR",
+          "title": "Audio8 TTS Preview 0.6B：0.6B 参数打赢 4.6B 的 TTS 模型——11 语言零样本声音克隆",
+          "url": "/blog/audio8-tts-preview-0.6b-multilingual-zero-shot-voice-cloning-dualAR/",
+          "language": "zh",
+          "excerpt": "Audio8 TTS Preview 0.6B：0.6B 参数打赢 4.6B 的 TTS 模型——11 语言零样本声音克隆 Audio8 TTS Preview 是一个 0.6B 参数的多语言文本转语音模型，采用 DualAR 架构（慢 AR 预测语义 token + 快 AR 预测声学码本），支持 11 种语言（含粤语）零样本声音克隆。Seed-TTS 英语 WER 1.506，以 0.6B 参数规模超越 Fish S2 Pro（4.6B）、Higgs Audio v2（4.7B）。Apache 2.0，HuggingFace 开放权重。 一、基本信息",
+          "score": 0.54811746
+        },
+        {
+          "article_id": "rumble-2-flash-small-asr-phone-call-benchmarks",
+          "title": "Rumble-2-Flash：0.5B语音识别接近30B，边界在哪？",
+          "url": "/blog/rumble-2-flash-small-asr-phone-call-benchmarks/",
+          "language": "zh",
+          "excerpt": "Rumble-2-Flash：0.5B语音识别接近30B，边界在哪？ Rumble-2-Flash 是 Reson8 开源的 0.5B 多语言语音识别模型。本文核对 Apache 2.0 权重、Qwen3-ASR 架构、同策略蒸馏与电话测试，解释两款模型错误率差异、H200 满批吞吐和实时延迟的区别，记录模型卡与配置的语言数量不一致，并给出输出控制、接入和业务验收建议。性能均为官方报告。 ASR Reson8 Rumble-2-Flash 语音识别 开源模型 开源仓库在哪里，开放到了哪一层？ 电话识别真的追平 30B 了吗？ 7000 倍实时率，能保证通",
+          "score": 0.5442228
+        },
+        {
+          "article_id": "phonon-2-parakeet-2bit-qat-mac-asr-test",
+          "title": "Phonon-2 Tested: A 164 MB 2.1-Bit Parakeet That Handles English Dictation and Fails at Chinese",
+          "url": "/blog/phonon-2-parakeet-2bit-qat-mac-asr-test/",
+          "language": "en",
+          "excerpt": "Phonon-2 Tested: A 164 MB 2.1-Bit Parakeet That Handles English Dictation and Fails at Chinese Phonon-2 is Fermion Research's English ASR model: NVIDIA Parakeet TDT 0.6B v3 retrained with quantization-aware training to about 2.1 bits (five values per weight). It is a 164 MB downl",
+          "score": 0.5414351
+        },
+        {
+          "article_id": "kittentts-spark-tts-edge-ai-chinese-tts-complete-guide",
+          "title": "25MB 跑 SOTA：KittenTTS 极致轻量 + Spark TTS 中文零样本克隆，两条路径完全指南",
+          "url": "/blog/kittentts-spark-tts-edge-ai-chinese-tts-complete-guide/",
+          "language": "zh",
+          "excerpt": "25MB 跑 SOTA：KittenTTS 极致轻量 + Spark TTS 中文零样本克隆，两条路径完全指南 KittenTTS 14.1k star，15M 参数 int8 量化 25MB，纯 CPU ONNX 推理，树莓派和浏览器可跑——但不支持中文。Spark TTS 0.5B 参数，Qwen2.5 LLM 骨干，中文 CER 仅 1.20，零样本声音克隆，本文给出两个项目的完整使用路径和场景选型指南。 TTS 语音合成 Edge AI KittenTTS Spark TTS ONNX 开源 中文AI KittenTTS：25MB 能跑出什么 数",
+          "score": 0.5330861
+        },
+        {
+          "article_id": "audar-asr-tts-arabic-first-speech-ai",
+          "title": "按头安利：AudarAI —— 阿拉伯语 ASR 排行榜第一，还顺手做了个打赢 GPT-4o 的 TTS",
+          "url": "/blog/audar-asr-tts-arabic-first-speech-ai/",
+          "language": "zh",
+          "excerpt": "按头安利：AudarAI —— 阿拉伯语 ASR 排行榜第一，还顺手做了个打赢 GPT-4o 的 TTS AudarAI 同时开源了两个阿拉伯语语音 AI：Audar-ASR-V1（Whisper 编码器 + Qwen3 解码器，登顶 36 系统的开放阿拉伯语 ASR 排行榜）和 Audar-TTS-V1（零样本声音克隆 + 17 种情感标签，MSA 评测击败 GPT-4o-mini-TTS，海湾方言 WER 低于 ElevenLabs v3）。 语音AI 开源模型 阿拉伯语 ASR TTS 为什么值得关注 Audar-ASR-V1：ASR 排行榜第一 ",
+          "score": 0.5186867
+        }
+      ]
+    }
+  }
+]
