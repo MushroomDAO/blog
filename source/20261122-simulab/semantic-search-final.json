@@ -1,1 +1,91 @@
-[]
+[
+  {
+    "slug": "simulab-claude-interactive-lab-model-validation-guide",
+    "query": "SimuLab Claude 交互实验室 模型验证",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "simulab-claude-interactive-lab-model-validation-guide",
+          "title": "SimuLab：把问题做成能动手验证的3D实验室",
+          "url": "/blog/simulab-claude-interactive-lab-model-validation-guide/",
+          "language": "zh",
+          "excerpt": "SimuLab：把问题做成能动手验证的3D实验室 SimuLab是Kapri开源的Claude Code技能，提供9步方法、7组提示、等距绘图引擎和完整示例，把抽象问题做成可操作的单文件实验室。本文拆解模型、画面与视频共用状态的设计，实测五个示例的离线构建及浏览器运行，核对咖啡模型公式，并说明免费许可、交互教学、物理可信度和工程复用的实际适用边界。 SimuLab Claude Code 交互模拟 开源技能 可视化 为什么先问一个问题，再开始画？ 这里的3D，具体由什么实现？ 本地实际验证了什么？ 有来源的数字，为什么还需要检查假设？ 如何开始，怎样复用",
+          "score": 0.68243665
+        },
+        {
+          "article_id": "llm-dock-docker-compose-local-llm-dashboard",
+          "title": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板",
+          "url": "/blog/llm-dock-docker-compose-local-llm-dashboard/",
+          "language": "zh",
+          "excerpt": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板 LLM-Dock 是一个管理本地 LLM 推理服务的 Web 面板：自动扫描 HuggingFace 缓存发现模型，llama.cpp 跑 GGUF、vLLM 跑 safetensors，3300-3400 端口段自动分配，一键起停，自动注册进 Open WebUI，还能在面板里直接跑 llama-bench 并把结果存库对比。前提是 Linux + NVIDIA。 本地推理 Docker llama.cpp vLLM 运维 开源 Open Web",
+          "score": 0.57500833
+        },
+        {
+          "article_id": "qwen-rlcd-huggingface-model-name-mismatch",
+          "title": "HuggingFace 上的 Qwen-2.5-1B-RLCD：不是 1B、没有 RLCD、也没有模型权重",
+          "url": "/blog/qwen-rlcd-huggingface-model-name-mismatch/",
+          "language": "zh",
+          "excerpt": "HuggingFace 上的 Qwen-2.5-1B-RLCD：不是 1B、没有 RLCD、也没有模型权重 harshatheg/Qwen-2.5-1B-RLCD 挂在 HuggingFace 模型区、创建仅一天就有 221 赞、0 下载。我们通读了它的 README 和 MODEL_CARD：仓库里没有 RLCD（强化学习对比蒸馏），没有 1B 参数模型，也没有任何权重文件——它是一套调用现成 mlx-community/Qwen2.5-1.5B-Instruct-4bit 的并行约束解码推理代码，跟 RLCD 毫无关系。 HuggingFace 模型",
+          "score": 0.566099
+        },
+        {
+          "article_id": "gh-copilot-code-review-cli",
+          "title": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review",
+          "url": "/blog/gh-copilot-code-review-cli/",
+          "language": "zh",
+          "excerpt": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review GitHub CLI v2.88.0 新功能实测：在终端直接邀请 Copilot 审查 PR，无需跳转浏览器，附隐私风险提示 github copilot cli code-review developer-tools 核心能力 如何使用 免费吗？ 隐私警告（必读） 能用其他 AI CLI 吗？ 额外优化：大型团队福音 总结",
+          "score": 0.564963
+        },
+        {
+          "article_id": "airsup-machine-skill",
+          "title": "Machine Skill：用 AI 生成机械仿真网页，物理数值该怎么信？",
+          "url": "/blog/airsup-machine-skill/",
+          "language": "zh",
+          "excerpt": "Machine Skill：用 AI 生成机械仿真网页，物理数值该怎么信？ 找到 AirsupHQ/machine-skill 官方仓库，解析 Claude Code 如何生成带剖面、爆炸图和参数控制的 Three.js 机械演示，核查公式、外部依赖和录制流程。 Machine Skill Three.js Claude Code 机械仿真 开源 它到底是模型、CAD，还是一个 skill？ 官方示例展示了什么？ 算出 16.9 kW，就证明模型准确吗？ 怎么开始使用？ 一个 HTML，是否意味着离线零依赖？ 我们实际核验到了哪一步？ 常见问题 能直接导",
+          "score": 0.5633773
+        },
+        {
+          "article_id": "alibaba-skill-up-agent-skill-eval-evolution",
+          "title": "alibaba/skill-up：Agent Skill 的评估与自动进化闭环——Eval + 自修复一键跑通",
+          "url": "/blog/alibaba-skill-up-agent-skill-eval-evolution/",
+          "language": "zh",
+          "excerpt": "alibaba/skill-up：Agent Skill 的评估与自动进化闭环——Eval + 自修复一键跑通 alibaba/skill-up，1,031 stars，Apache-2.0，Go。阿里巴巴出品的 Agent Skill 评估与进化工具，4 个月 1000+ stars。声明式 YAML 测试用例 + rule/script/agent 三种 judge 策略 + skill-upper 自动读取失败报告修复 Skill，形成 Eval → 失败分析 → 自动修复 → 再 Eval 的闭环。支持 Claude Code、Codex、Qwe",
+          "score": 0.5609207
+        },
+        {
+          "article_id": "parallelhue-speculative-decoding-token-provenance-visualizer",
+          "title": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具",
+          "url": "/blog/parallelhue-speculative-decoding-token-provenance-visualizer/",
+          "language": "zh",
+          "excerpt": "ParallelHue 拆解：一个证据对不上就拒绝上色的投机解码可视化工具 hikarioyama/ParallelHue（MIT，35 star，零运行时依赖）把本地大模型的多路并发流式输出画进终端，只有调度器和反分词器的遥测跟 SSE 逐字节对得上，才按验证步上色。真正的 exact 模式只支持 vLLM 0.26.x，靠 7 个内部方法挂钩实现，官方的有效证据只有一次 16 路 GLM 运行（16,384 个 token）。我们在 Mac mini 上跑通了 72 个测试，用模拟服务器确认了它在证据不足时会失败或降级，另外发现：只要模型名里带 qw",
+          "score": 0.55536574
+        },
+        {
+          "article_id": "huabu-microsoft-research-canvas-ai-collaboration-thinking-space",
+          "title": "Huabu：微软研究院造的画布 AI——把你和 Agent 的思考放在同一张无限画板上",
+          "url": "/blog/huabu-microsoft-research-canvas-ai-collaboration-thinking-space/",
+          "language": "zh",
+          "excerpt": "Huabu：微软研究院造的画布 AI——把你和 Agent 的思考放在同一张无限画板上 Huabu 是微软研究院开源的画布式人机协作框架，核心思路是把思维外化到可见的二维节点网络上，让 AI Agent 看到结构而不是只听最后一条指令，从而更好地理解意图。v0.9.1 新增外部 Agent 可直接读写 Space 节点、逐对话模型设置、桌面自动更新。MIT 授权，macOS Apple Silicon + Windows x64，TypeScript，66 stars。 一、为什么需要画布 二、Space、节点与连接 三、两种 AI 交互模式 四、v0.",
+          "score": 0.5523828
+        },
+        {
+          "article_id": "openswarm-autonomous-ai-dev-team-claude-code-linear",
+          "title": "OpenSwarm：把 Claude Code + Codex 组成自主开发团队，从 Linear issue 到 PR 全自动",
+          "url": "/blog/openswarm-autonomous-ai-dev-team-claude-code-linear/",
+          "language": "zh",
+          "excerpt": "OpenSwarm：把 Claude Code + Codex 组成自主开发团队，从 Linear issue 到 PR 全自动 MIT 开源的 AI 开发团队编排器：从 Linear 拾取任务，Worker/Reviewer 对儿流水线，LanceDB 每仓库认知记忆，PR 自动驾驶，CI merge gate，SWE-bench Lite Hybrid 模式 3/3 解决。856 stars，TypeScript。 AI-agent open-source Claude-Code multi-agent developer-tools Linear ",
+          "score": 0.55231166
+        },
+        {
+          "article_id": "glimpse-visual-reasoning-game-bug-review",
+          "title": "Glimpse：让视频验收回到具体画面",
+          "url": "/blog/glimpse-visual-reasoning-game-bug-review/",
+          "language": "zh",
+          "excerpt": "Glimpse：让视频验收回到具体画面 Glimpse 是 Elorian 发布的视觉推理研究预览，可回看视频并定位疑点。本文核实官方入口、公开评测和开源状态，区分游戏验收案例与可复现基准，提供录像分段、规则输入、时间戳证据、人工复核及缺陷回归的工程方案。视觉定位不等于源码定位，模型信心也不是经过校准的正确率，所有流程建议与未验证范围均有明确说明。 Vision Language Model Video Understanding Game QA AI Agent Glimpse 开源了吗，应该去哪里找？ 公开结果能证明它最擅长找游戏 Bug 吗？ 怎样",
+          "score": 0.55223846
+        }
+      ]
+    }
+  }
+]

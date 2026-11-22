@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "8ab7b6c88b89a09f8ca6c6fe2fe0d87965ece2c13a359d65",
+    "metadata": {
+      "article_id": "simulab-claude-interactive-lab-model-validation-guide",
+      "content_hash": "028d1a5e9e205307",
+      "excerpt": "SimuLab：把问题做成能动手验证的3D实验室 SimuLab是Kapri开源的Claude Code技能，提供9步方法、7组提示、等距绘图引擎和完整示例，把抽象问题做成可操作的单文件实验室。本文拆解模型、画面与视频共用状态的设计，实测五个示例的离线构建及浏览器运行，核对咖啡模型公式，并说明免费许可、交互教学、物理可信度和工程复用的实际适用边界。 SimuLab Claude Code 交互模拟 开源技能 可视化 为什么先问一个问题，再开始画？ 这里的3D，具体由什么实现？ 本地实际验证了什么？ 有来源的数字，为什么还需要检查假设？ 如何开始，怎样复用",
+      "language": "zh",
+      "tags": [
+        "SimuLab",
+        "Claude Code",
+        "交互模拟",
+        "开源技能",
+        "可视化"
+      ],
+      "title": "SimuLab：把问题做成能动手验证的3D实验室",
+      "url": "/blog/simulab-claude-interactive-lab-model-validation-guide/"
+    }
+  },
+  {
+    "id": "bbd686babaa1f80b9eb2c7312f35fabf5a640d6a4c0cc12a",
+    "metadata": {
+      "article_id": "simulab-claude-interactive-lab-model-validation-guide",
+      "content_hash": "52d2f8fb7fea78e5",
+      "excerpt": "SimuLab: Build Interactive Labs with Checkable Models Explore SimuLab's model-first workflow, offline lab builds and browser checks, with clear limits for simulation accuracy, video output and Claude usage costs. SimuLab Claude Code 交互模拟 开源技能 可视化 Why begin with a question? What d",
+      "language": "en",
+      "tags": [
+        "SimuLab",
+        "Claude Code",
+        "交互模拟",
+        "开源技能",
+        "可视化"
+      ],
+      "title": "SimuLab: Build Interactive Labs with Checkable Models",
+      "url": "/blog/simulab-claude-interactive-lab-model-validation-guide/"
+    }
+  }
+]

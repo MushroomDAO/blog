@@ -6,5 +6,9 @@
   "wechatStatus": "draft",
   "wechatError": "",
   "deployment": "e0c034aa",
-  "checkedAt": "2026-11-22T04:51:22.603208+00:00"
+  "checkedAt": "2026-11-22T04:52:23.016058+00:00",
+  "semanticStatus": "verified",
+  "kbStatus": "verified",
+  "repositoryStatus": "review-required",
+  "pullRequest": "https://github.com/MushroomDAO/blog/pull/280"
 }
