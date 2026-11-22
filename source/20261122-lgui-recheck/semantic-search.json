@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "lgui-browser-game-ui-guide",
+      "title": "LGUI：让Agent在浏览器做游戏UI，离开引擎的边界在哪？",
+      "url": "/blog/lgui-browser-game-ui-guide/",
+      "language": "zh",
+      "excerpt": "LGUI：让Agent在浏览器做游戏UI，离开引擎的边界在哪？ LumioGames的LGUI把FairyGUI界面、TypeScript业务逻辑、Node测试和浏览器预览组织成一套Agent可执行的游戏UI流程。本文核查官方仓库、背包示例和Unity导出边界，实际运行环境检查、18项交互测试与8张适配截图，说明Mac使用条件、当前开发版本及限制竞品的源码许可。 LGUI LumioGames Game UI Agent Skills FairyGUI 什么工作真正离开了游戏引擎？ 为什么它强调Agent，而不只是一个UI编辑器？ 本地到底跑通了哪些步骤",
+      "score": 0.6796484
+    },
+    {
+      "article_id": "lingchat-ai-galgame-emotion-desktop-pet-tauri",
+      "title": "LingChat：沉浸式 AI 恋爱游戏伴侣，18 类情绪识别 + 截屏感知 + Live2D，Tauri 2 + Vue 3",
+      "url": "/blog/lingchat-ai-galgame-emotion-desktop-pet-tauri/",
+      "language": "zh",
+      "excerpt": "LingChat：沉浸式 AI 恋爱游戏伴侣，18 类情绪识别 + 截屏感知 + Live2D，Tauri 2 + Vue 3 SlimeBoyOwO/LingChat，AGPL-3.0，Rust，2,255 stars。沉浸式 AI 恋爱游戏（Galgame）聊天软件：自训练 18 类情绪识别模型、截屏感知主动评论、Live2D 角色服装切换、VITS 语音合成（GPU 约 1 秒）、多角色剧情脚本 + 好感系统、番茄计时 / 日程管理。架构：Tauri 2 Rust 后端 + Vue 3 前端 + PixiJS Live2D 渲染。API 驱动，默认",
+      "score": 0.57642674
+    },
+    {
+      "article_id": "llmconfig-local-inference-yaml-llama-cpp-whisper-cpp",
+      "title": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp",
+      "url": "/blog/llmconfig-local-inference-yaml-llama-cpp-whisper-cpp/",
+      "language": "zh",
+      "excerpt": "llmconfig：一份 YAML 统一管好 llama.cpp / stable-diffusion.cpp / whisper.cpp 调研本地推理配置工具 llmconfig：一份 YAML + 一个 CLI，统一管理文本(llama.cpp)、图像(stable-diffusion.cpp)、语音(whisper.cpp)三套本地推理后端的下载/启动/停止/重启/监控。硬件感知，NVIDIA/Apple Silicon/AMD/Intel GPU/CPU 运行时自动选配置。跑起来的模型是 OpenAI API 的直接替代品，可选 gateway ",
+      "score": 0.557279
+    },
+    {
+      "article_id": "crawl4ai-open-source-llm-web-crawler-scraper-guide",
+      "title": "Crawl4AI：把网页变成 AI 能读懂的文本——完整实践指南",
+      "url": "/blog/crawl4ai-open-source-llm-web-crawler-scraper-guide/",
+      "language": "zh",
+      "excerpt": "Crawl4AI：把网页变成 AI 能读懂的文本——完整实践指南 unclecode/crawl4ai，77.6k stars，Apache 2.0，Python，GitHub #1 开源爬虫。专为 LLM 和 AI Agent 设计：直接输出干净 Markdown，支持 JS 动态页面、深度爬取（BFS/DFS）、会话保持、代理、CSS/XPath/LLM 结构化提取、Docker API。适用场景：品牌研究、竞品分析、用户评价聚合、论坛舆情、产品情报。本文是真实使用视角的完整指南：原理、安装、核心用法、三个具体案例、适用边界。 爬虫 AI Agent",
+      "score": 0.54582906
+    },
+    {
+      "article_id": "llm-dock-docker-compose-local-llm-dashboard",
+      "title": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板",
+      "url": "/blog/llm-dock-docker-compose-local-llm-dashboard/",
+      "language": "zh",
+      "excerpt": "本地跑了七八个模型服务，端口和参数全靠记？LLM-Dock 用 Docker Compose 给你一块面板 LLM-Dock 是一个管理本地 LLM 推理服务的 Web 面板：自动扫描 HuggingFace 缓存发现模型，llama.cpp 跑 GGUF、vLLM 跑 safetensors，3300-3400 端口段自动分配，一键起停，自动注册进 Open WebUI，还能在面板里直接跑 llama-bench 并把结果存库对比。前提是 Linux + NVIDIA。 本地推理 Docker llama.cpp vLLM 运维 开源 Open Web",
+      "score": 0.5433492
+    },
+    {
+      "article_id": "little-city-taipei-browser-3d-globe",
+      "title": "little-city：把每座城市做成浏览器里的小星球",
+      "url": "/blog/little-city-taipei-browser-3d-globe/",
+      "language": "zh",
+      "excerpt": "little-city：把每座城市做成浏览器里的小星球 craftmygame/little-city 把台北做成了浏览器里可探索的卡通小星球：夜市、庙宇、台北 101，按真实方位角和距离放置。目标是为世界上每座城市都做一个版本，已有台北和巴黎。three.js + Antics 多人，AI 可直接贡献地标。 three.js 浏览器游戏 开源 城市建设 3D 多人游戏 AI贡献 地图 JavaScript 一、一个很大的野心，从台北开始 二、怎么玩 三、三层架构 地标数据格式 地面自动平整 四、路网和公园 五、AI 可以直接贡献地标 六、已经有两座城市",
+      "score": 0.5423062
+    },
+    {
+      "article_id": "lfm2-5-230m-small-model-developer",
+      "title": "LFM2.5-230M 开发者探索指南：213 tok/s 的小模型，普通人能做什么？",
+      "url": "/blog/lfm2-5-230m-small-model-developer/",
+      "language": "zh",
+      "excerpt": "LFM2.5-230M 开发者探索指南：213 tok/s 的小模型，普通人能做什么？ Liquid AI 开源的 LFM2.5-230M 在手机 CPU 上跑出 213 tok/s，Raspberry Pi 上 42 tok/s，支持 32K 上下文和 Tool Use。本文从 6 个方向拆解普通开发者可以用它做什么：端侧 Agent、浏览器推理、Android App、低成本微调、IoT 部署和多 Agent 协作。 小模型 边缘AI LFM2.5 Liquid AI 端侧推理 开发者指南 一、先搞清楚：这个小模型为什么值得关注？ 为什么 Liqui",
+      "score": 0.52868736
+    },
+    {
+      "article_id": "wake-gpui-coding-agent-session-browser-claude-codex-macos-native",
+      "title": "wake-gpui-coding-agent-session-browser-claude-codex-macos-native",
+      "url": "/blog/wake-gpui-coding-agent-session-browser-claude-codex-macos-native/",
+      "language": "en",
+      "excerpt": "wake-gpui-coding-agent-session-browser-claude-codex-macos-native iAmCorey/Wake is a native macOS coding-agent session browser — 387 stars, MIT, Rust + GPUI (gpui 0.2 + gpui-component 0.5), released 2026-08-18. Reads local session data from 13 agents (Claude Code, Codex CLI, OpenC",
+      "score": 0.5266098
+    },
+    {
+      "article_id": "vibegame-prompt-to-game-ai-native-engine-adversarial-agent-team",
+      "title": "VibeGame：用自然语言描述，8个 Agent 协作，直接生成可玩的完整 2D 游戏",
+      "url": "/blog/vibegame-prompt-to-game-ai-native-engine-adversarial-agent-team/",
+      "language": "zh",
+      "excerpt": "VibeGame：用自然语言描述，8个 Agent 协作，直接生成可玩的完整 2D 游戏 南京大学 + 南洋理工大学联合发布 VibeGame，一个 AI-native 游戏引擎 + 对抗性 Agent 团队框架，能从自然语言 prompt 和参考图片直接生成并持续编辑完整的 2D 网页游戏，支持 IP 迁移、类型迁移和规则重构。 AI 游戏开发 多智能体 vibe-coding Claude 开源 game-development 核心挑战：游戏为什么比普通软件难生成 三层架构 第一层：AI-Native 游戏引擎 第二层：对抗性 Agent 团队（A",
+      "score": 0.52135247
+    },
+    {
+      "article_id": "opengcua-generalist-computer-use-stack",
+      "title": "OpenGCUA 首版开源：电脑 Agent 不只点鼠标，模型权重仍在路上",
+      "url": "/blog/opengcua-generalist-computer-use-stack/",
+      "language": "zh",
+      "excerpt": "OpenGCUA 首版开源：电脑 Agent 不只点鼠标，模型权重仍在路上 OpenGCUA 是阿里巴巴 MAI-UI 团队开放的通用电脑操作技术栈，组合视觉、代码、系统接口和跨设备工具。本文核对首版源码、Hugging Face 搜索结果、论文评测及 Mac 接入流程，解释为何当前没有自训模型权重，区分得分、步数、耗时与真实任务成功，并给出受控研究、权限配置和产物验收的工程建议。 OpenGCUA MAI-UI 电脑操作 Agent 开源 为什么电脑 Agent 要超出点鼠标？ 首版具体开放了什么？ 19.6 分提升和 53% 步数下降说明什么？ 想在",
+      "score": 0.5212032
+    }
+  ]
+}
