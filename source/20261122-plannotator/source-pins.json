@@ -1,0 +1,23 @@
+{
+  "repo": "https://github.com/backnotprop/plannotator",
+  "commit": "7eece56c28d1f03da7c8c6a875d78af0592f6ed0",
+  "files": {
+    "README.md": "b75d444ef88b3d1bf8cb0067e3abb36c5dfbf7863ff895cedea2f85ab26e10d3",
+    "LICENSE-MIT": "4307b84eae31b7ee1436003da418390ba69a4d016195cbfc451a1e8ef9e923c0",
+    "LICENSE-APACHE": "b96752709405e4b4eefda5514d01941a25d78230bddd891523279fed63eed5e0",
+    "packages/core/annotation-threads.ts": "a22c32d94a497f3be01ff1f243c11e11de8807ae83cb1ee6a0a3481fa2cb212b",
+    "packages/core/feedback-templates.ts": "a665a217dc3abe9f0acce9b8e290ffee98239e51b21428997a8b23c3a468fde2",
+    "packages/shared/request-origin.ts": "dd4b5ea3748e46931900fbdc76319b96878548dfdade9ac4a62e3a60495264fc",
+    "apps/marketing/src/content/docs/guides/sharing-and-collaboration.md": "73c1dcdeb5ba5dbeea27962f432f91e733cc8599ed6a6a479032656affd56353",
+    "apps/marketing/src/pages/privacy.astro": "08b7ddae5216334196ba72b79f8b869b614db3324d197b4dc51f245258626998",
+    "apps/codex/README.md": "4d932edb5fc4a638c00cc744fc943cb8c36e94cadd35cfe2421012cf360ce947",
+    "apps/droid-plugin/README.md": "b851859c6e1bf940c81ac1d03e138b42c131e3fea994fb4f6f3594fb87e59373",
+    "apps/pi-extension/README.md": "6f790f6c504640f49a4e61056c49d760476ea6363790d85b73b4c5c2f51ef661",
+    "packages/core/annotation-threads.test.ts": "b69b624d92873ad80a4368a59854f219cbd2539929fac859e88fbcf58d09b05c",
+    "packages/core/feedback-templates.test.ts": "67dabe000fdaded02f73ca1882e4e24cb9618cd648f2a5699f86273f5f12be2f",
+    "packages/shared/request-origin.test.ts": "c295a0918c34e451f300386d88ca1ab8ca82a3e0ee5456941acc4aa795fabc9d"
+  },
+  "pureSliceFilesUnmodified": true,
+  "bannerDecision": "Official banner text-dominant and dark; Inbox screenshot text-heavy. Generated original physical review desk instead; seed9021, machine passed and manual image review passed.",
+  "allSixSliceFilesUnmodified": true
+}

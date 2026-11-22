@@ -1,0 +1,51 @@
+bun test v1.4.2 (744846f84)
+
+packages/core/annotation-threads.test.ts:
+(pass) resolveReplyParents > valid replies keep their parent; roots, orphans and self-references are roots [0.21ms]
+(pass) resolveReplyParents > every member of a cycle is a root, and a reply to a cycle member still threads under it [0.03ms]
+(pass) resolveReplyParents > a reply whose parent is an orphan is still a reply (the orphan renders as a root) [0.01ms]
+(pass) resolveReplyParents > a chain that runs into a cycle: the run-in stays replies, the cycle is roots, in any input order [0.03ms]
+(pass) resolveReplyParents > a 5,000-deep chain resolves parents and root timestamps in linear time [4.31ms]
+(pass) resolveThreadRootTimestamps > replies take their root's timestamp; roots, orphans and cycle members keep their own [0.08ms]
+(pass) validateReplyTarget > accepts an existing different target and clearing [0.10ms]
+(pass) validateReplyTarget > rejects self, missing, non-string and cycle-closing targets [0.04ms]
+(pass) validateReplyTarget > a pre-existing cycle elsewhere does not block an unrelated reply
+
+packages/core/feedback-templates.test.ts:
+(pass) feedback-templates > plan deny is identical across integrations (modulo tool name) [0.17ms]
+(pass) feedback-templates > plan deny preserves feedback content verbatim [0.01ms]
+(pass) feedback-templates > plan deny handles empty feedback gracefully
+(pass) feedback-templates > plan deny instructs agent to preserve plan title [0.01ms]
+(pass) feedback-templates > plan deny can include a plan file hint for file-based integrations [0.01ms]
+(pass) feedback-templates > annotate file feedback mirrors the runtime file prompt shape [0.02ms]
+(pass) feedback-templates > annotate message feedback mirrors the runtime message prompt shape [0.01ms]
+(pass) applyFeedbackTemplate > substitutes known placeholders [0.12ms]
+(pass) applyFeedbackTemplate > leaves unknown placeholders untouched (resolveTemplate parity) [0.01ms]
+(pass) wrapFeedbackForClipboard > plan-review mode keeps the plan-deny wrap (unchanged behavior) [0.03ms]
+(pass) wrapFeedbackForClipboard > annotate-file without a server template uses the default annotate wrap [0.03ms]
+(pass) wrapFeedbackForClipboard > annotate-file applies the server-resolved template with substitution [0.01ms]
+(pass) wrapFeedbackForClipboard > annotate-file defaults fileHeader to File when the template needs it [0.02ms]
+(pass) wrapFeedbackForClipboard > annotate-message without a server template uses the default message wrap
+(pass) wrapFeedbackForClipboard > annotate-message applies the server-resolved template with substitution
+
+packages/shared/request-origin.test.ts:
+(pass) isSameOriginOrNoOrigin > no Origin (a non-browser client) [0.06ms]
+(pass) isSameOriginOrNoOrigin > Origin names the request host [0.07ms]
+(pass) isSameOriginOrNoOrigin > the VS Code proxy: Origin is the proxy, the browser says same-origin
+(pass) isSameOriginOrNoOrigin > another site
+(pass) isSameOriginOrNoOrigin > another site, browser says cross-site
+(pass) isSameOriginOrNoOrigin > another local port, browser says same-site
+(pass) isSameOriginOrNoOrigin > Origin null (sandboxed frame), even if marked same-origin
+(pass) isSameOriginOrNoOrigin > a malformed Origin [0.05ms]
+(pass) isSameOriginOrNoOrigin > no Origin, but the browser says cross-site
+(pass) isSameOriginOrNoOrigin > no Origin, but the browser says same-site
+(pass) isSameOriginOrNoOrigin > Origin names the host, but the browser says cross-site
+(pass) isSameOriginOrNoOrigin > no Origin, browser says same-origin
+(pass) isSameOriginOrNoOrigin > no Origin, browser says none (a request the person started)
+(pass) isSameOriginOrNoOrigin > Sec-Fetch-Site given twice: the first value decides
+(pass) isStateChangingMethod > POST, PUT, PATCH and DELETE change state; GET, HEAD and OPTIONS do not [0.12ms]
+
+ 39 pass
+ 0 fail
+ 85 expect() calls
+Ran 39 tests across 3 files. [13.00ms]

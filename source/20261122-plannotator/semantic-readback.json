@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2807c65e6cba947a59a318569954bbcf1a5e72f6a3d4f85f",
+    "metadata": {
+      "article_id": "plannotator-agent-review-feedback-workspace-guide",
+      "content_hash": "c508cef5d4172a2a",
+      "excerpt": "Plannotator：把Agent的计划和改动变成可批注的工作台 Plannotator为多个编码Agent提供本地浏览器审阅界面，把计划、文档、网页和代码差异变成可定位的反馈。本文核对插件与命令的集成差别、双许可、安装及分享边界，运行39项原始纯模块测试和4个HTTP检查，分析批注如何回到正确会话，并给出团队验收、版本关联、人工批准与反馈闭环的具体工程实践建议。 Plannotator Coding Agent 代码审阅 开源工具 人工反馈 多代理支持，等于所有功能都一样吗？ 从计划批注到代码审阅，价值在哪里？ 本地具体检查了哪些代码？ 本地运行，为",
+      "language": "zh",
+      "tags": [
+        "Plannotator",
+        "Coding Agent",
+        "代码审阅",
+        "开源工具",
+        "人工反馈"
+      ],
+      "title": "Plannotator：把Agent的计划和改动变成可批注的工作台",
+      "url": "/blog/plannotator-agent-review-feedback-workspace-guide/"
+    }
+  },
+  {
+    "id": "7df9a2a4d4a1b273dd56cd66acefe0e7075d3b25f52276e4",
+    "metadata": {
+      "article_id": "plannotator-agent-review-feedback-workspace-guide",
+      "content_hash": "f485cc47fa7f4494",
+      "excerpt": "Plannotator: A Review Workspace for Coding Agents Explore Plannotator's agent review workflow, integration differences and sharing boundaries, with scoped local checks and practical feedback delivery criteria. Plannotator Coding Agent 代码审阅 开源工具 人工反馈 Does multi-agent support mean ",
+      "language": "en",
+      "tags": [
+        "Plannotator",
+        "Coding Agent",
+        "代码审阅",
+        "开源工具",
+        "人工反馈"
+      ],
+      "title": "Plannotator: A Review Workspace for Coding Agents",
+      "url": "/blog/plannotator-agent-review-feedback-workspace-guide/"
+    }
+  }
+]

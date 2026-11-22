@@ -1,0 +1,17 @@
+✅ Access token obtained
+账本：blog 1031 篇 + 公众号草稿箱 6 条 + 本地发布记录 1013 条 + MemPalace 4560 抽屉
+
+── 查：https://github.com/backnotprop/plannotator
+   ✅ 四本账都没查到
+
+── 查：Plannotator
+   ❌ [知识库] # 覆盖 10+ 代理（Claude Code、Codex、Co  **Summary**: 覆盖 10+ 代理（Cla
+      正文出现实体名「plannotator」
+
+```dedup-result
+{"duplicate":true,"localLedgersRead":true,"wechatError":""}
+```
+查到重复或疑似重复 —— 先人工确认再决定写不写。
+注意：
+  · 公众号/发过记录有、blog 没有 ＝ 上次 blog 那步失败了，应该补发 blog 而不是重写。
+  · 几本账不一致本身就是信号，说明上次的发布流程中途断了，先把断的那段补上。

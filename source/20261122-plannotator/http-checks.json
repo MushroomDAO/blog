@@ -1,0 +1,1 @@
+{"scope":"Original pure request-origin guard wired into a temporary Bun HTTP harness, not the full Plannotator server.","cases":[{"name":"same-origin","status":200},{"name":"cross-site","status":403},{"name":"null-origin","status":403},{"name":"non-browser","status":200}]}

@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "plannotator-agent-review-feedback-workspace-guide",
+    "query": "Plannotator 多代理 计划 代码审阅 批注反馈",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "plannotator-agent-review-feedback-workspace-guide",
+          "title": "Plannotator：把Agent的计划和改动变成可批注的工作台",
+          "url": "/blog/plannotator-agent-review-feedback-workspace-guide/",
+          "language": "zh",
+          "excerpt": "Plannotator：把Agent的计划和改动变成可批注的工作台 Plannotator为多个编码Agent提供本地浏览器审阅界面，把计划、文档、网页和代码差异变成可定位的反馈。本文核对插件与命令的集成差别、双许可、安装及分享边界，运行39项原始纯模块测试和4个HTTP检查，分析批注如何回到正确会话，并给出团队验收、版本关联、人工批准与反馈闭环的具体工程实践建议。 Plannotator Coding Agent 代码审阅 开源工具 人工反馈 多代理支持，等于所有功能都一样吗？ 从计划批注到代码审阅，价值在哪里？ 本地具体检查了哪些代码？ 本地运行，为",
+          "score": 0.81642413
+        },
+        {
+          "article_id": "pilot-protocol-mcp-agent-p2p-overlay-network",
+          "title": "Pilot Protocol 拆解：MCP 给 Agent 工具，它想给 Agent 同伴——但 435 个「专家」都跑在同一台机器上",
+          "url": "/blog/pilot-protocol-mcp-agent-p2p-overlay-network/",
+          "language": "zh",
+          "excerpt": "Pilot Protocol 拆解：MCP 给 Agent 工具，它想给 Agent 同伴——但 435 个「专家」都跑在同一台机器上 读完 pilot-mcp 和 Pilot Protocol 主仓库的代码后的独立核实：P2P 加密隧道和 NAT 穿透是真的，但注册中心、中继和 435 个专家 agent 都由 Vulture Labs 在 GCP 上集中运营；节点 ID→公钥映射默认走明文 TCP；四项数据相关功能默认开启。 Pilot Protocol MCP A2A P2P Agent 网络 NAT 穿透 x402 开源审计 Pilot 想解决什",
+          "score": 0.57521385
+        },
+        {
+          "article_id": "shadcn-improve-agent-audit-handoff-plans",
+          "title": "shadcn /improve：强模型做审计，便宜模型按计划施工",
+          "url": "/blog/shadcn-improve-agent-audit-handoff-plans/",
+          "language": "zh",
+          "excerpt": "shadcn /improve：强模型做审计，便宜模型按计划施工 shadcn/improve 是一套开源编码技能，将代码审计、优先级判断、实施计划和执行复核拆开，让强模型负责界定问题，让低成本模型按明确边界施工。本文核验安装与命令、隔离工作树及宿主要求，并在临时 Git 仓库验证差异检查的两个盲点，说明怎样写出可交接、可验收的计划，以及为何不能把多模型分工直接当成已证明的省费比例。 Agent Skills Code Review Multi-Model Git Developer Tools 它交付的是计划，为什么还有 execute？ 从安装到复核",
+          "score": 0.5731809
+        },
+        {
+          "article_id": "gh-copilot-code-review-cli",
+          "title": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review",
+          "url": "/blog/gh-copilot-code-review-cli/",
+          "language": "zh",
+          "excerpt": "亲测可用！用 GitHub CLI 一键呼叫 Copilot Code Review GitHub CLI v2.88.0 新功能实测：在终端直接邀请 Copilot 审查 PR，无需跳转浏览器，附隐私风险提示 github copilot cli code-review developer-tools 核心能力 如何使用 免费吗？ 隐私警告（必读） 能用其他 AI CLI 吗？ 额外优化：大型团队福音 总结",
+          "score": 0.57005954
+        },
+        {
+          "article_id": "pr-agent-qodo-ai-code-review-complete-guide",
+          "title": "PR-Agent：把代码审查交给 AI，11.4k star 的开源 PR 评审工具完全指南",
+          "url": "/blog/pr-agent-qodo-ai-code-review-complete-guide/",
+          "language": "zh",
+          "excerpt": "PR-Agent：把代码审查交给 AI，11.4k star 的开源 PR 评审工具完全指南 qodo-ai/pr-agent 深度调研：/review、/describe、/improve 七条斜杠命令全拆解，三条部署路径（GitHub Actions / Docker 自托管 / Qodo Cloud），支持 OpenAI、Claude、Gemini、DeepSeek 等全系列大模型，以及如何用 .pr_agent.toml 精确控制评审行为。 Code Review AI Agent GitHub Actions PR-Agent Open Sou",
+          "score": 0.56695765
+        },
+        {
+          "article_id": "alibaba-open-code-review-agent-deterministic-hybrid-llm",
+          "title": "alibaba-open-code-review-agent-deterministic-hybrid-llm",
+          "url": "/blog/alibaba-open-code-review-agent-deterministic-hybrid-llm/",
+          "language": "en",
+          "excerpt": "alibaba-open-code-review-agent-deterministic-hybrid-llm alibaba/open-code-review, ⭐20,233, Apache-2.0, Go, released 2026-05-18. Alibaba Group's internal AI code review assistant, open-sourced after 2 years serving tens of thousands of developers and finding millions of defects. C",
+          "score": 0.5481971
+        },
+        {
+          "article_id": "singvl-s1-4b-multimodal-decision-model-guide",
+          "title": "SingVL S1 4B：让多模态模型做选择，而不是继续聊天",
+          "url": "/blog/singvl-s1-4b-multimodal-decision-model-guide/",
+          "language": "zh",
+          "excerpt": "SingVL S1 4B：让多模态模型做选择，而不是继续聊天 SingVL S1 4B把文本、JSON和图像转成结构化选择、是非概率与等级评分。本文核对固定版本的官方推理代码、公开指数和本地服务方式，检查候选约束与图像预处理，并分析概率校准、批处理预算、许可缺口及业务执行边界，区分维护者成绩与本文有限的CPU接口检查，帮助工程师判断何时适合把聊天步骤改造成可验证的决策接口。 SingVL Decision Model Multimodal Local AI Agent 为什么Agent需要一个“会选择”的模型？ 它如何从Qwen3.5变成决策接口？ 69",
+          "score": 0.54818803
+        },
+        {
+          "article_id": "awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt",
+          "title": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引",
+          "url": "/blog/awesome-copilot-agents-instructions-skills-plugins-taxonomy-llms-txt/",
+          "language": "zh",
+          "excerpt": "931 个资源分成四类：awesome-copilot 的分类学，和那个 308KB 给 agent 读的索引 Agents 222 个、Instructions 193 个、Skills 416 个、Plugins 100 个——这套分类本身比清单更值得看：agent 是接 MCP 的专门角色，instruction 是按文件模式自动生效的编码规范，skill 是自包含带资源的文件夹，plugin 是打包好的组合。另一个值得抄的做法是 llms.txt：一份 941 行、308KB 的机器可读索引，专门给 AI agent 读，让它自己找该用哪个资源。",
+          "score": 0.54411083
+        },
+        {
+          "article_id": "platypus-self-hosted-multi-tenant-ai-agent-platform",
+          "title": "Platypus：自托管多租户 Agent 构建平台，看板只是它给 Agent 用的一个工具",
+          "url": "/blog/platypus-self-hosted-multi-tenant-ai-agent-platform/",
+          "language": "zh",
+          "excerpt": "Platypus：自托管多租户 Agent 构建平台，看板只是它给 Agent 用的一个工具 调研开源项目 Platypus：一个从零构建自定义 AI Agent 的自托管全栈平台——MIT 协议，Next.js + Hono + Docker，69 star。跟本站写过的 Multica（在看板上编排已有 Agent CLI）不是同一类东西：Platypus 的看板只是 Agent 可以调用的一个工具，核心是 Agent/Skill/子 Agent 构建、MCP 接入、可插拔沙箱、自动记忆提取、组织级 Blueprints 模板、多租户隔离，以及不锁定",
+          "score": 0.5396301
+        },
+        {
+          "article_id": "loopera-factor-research-evidence-gates",
+          "title": "Loopera：让因子研究先过证据门，公开仓库尚无源码",
+          "url": "/blog/loopera-factor-research-evidence-gates/",
+          "language": "zh",
+          "excerpt": "Loopera：让因子研究先过证据门，公开仓库尚无源码 Loopera 面向基本面量化团队，把经营现象、经济假设、候选因子、确定性验证与研究记忆连接起来。本文核对公开仓库与 BSL 1.1 许可，拆解官方 147 次尝试、5 个入库候选的证据边界，解释信息时点、会计口径、逻辑盲审和增量评估为何重要，以及团队应要求哪些可复核材料。没有可运行源码或公开 API。 Loopera AI Agent 基本面 因子研究 量化研究 研究记忆 Loopera 公开了什么，可以本地部署吗？ 一个经营现象如何变成可检验因子？ 证据门具体检查什么？ 147 次尝试、5 个入",
+          "score": 0.53839165
+        }
+      ]
+    }
+  }
+]

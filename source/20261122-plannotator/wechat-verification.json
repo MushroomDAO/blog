@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-22T05:31:42.053Z",
+  "drafts": [
+    {
+      "slug": "plannotator-agent-review-feedback-workspace-guide",
+      "mediaId": "prCUE631thH1cmNLi42prJoS8MHa2deeuISxcPNZ5vx1l1UVsImUqFKUtX0RZQVN",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "737fb8ce7297aded1f50db56e58134675f5019579ca61d793c70538ec9b1732a",
+      "remoteTextHash": "737fb8ce7297aded1f50db56e58134675f5019579ca61d793c70538ec9b1732a",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/plannotator-agent-review-feedback-workspace-guide/",
+      "localContentHash": "332bc54689c5f7eab60d7edd5aef42a63aba03188ab2528a4ec25a1e2defbe77",
+      "remoteContentHash": "253b262bfbcf628ea34feed9049baf3afcd37ed0b53fe7297f4f8ea582ae56fe"
+    }
+  ]
+}
