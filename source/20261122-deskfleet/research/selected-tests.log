@@ -1,0 +1,25 @@
+✔ screen and control share one Portal request and refresh never requests consent (1.616458ms)
+✔ requesting either linked permission refreshes both from the same Portal response (0.181291ms)
+✔ only an explicit Wayland screen request replaces the shared monitor selection (0.407917ms)
+✔ closing cancels a pending Portal dialog and prevents another request (0.288625ms)
+✔ access changes refresh permissions until the portal closes (0.205375ms)
+✔ closing during a queued access refresh cancels consent without checking or requesting again (0.216541ms)
+✔ closing before the request microtask runs cannot reopen the Portal (0.089583ms)
+✔ X11 silently probes capture and input without Portal requests or watches (0.143125ms)
+✔ missing X11 access is reported as an error and unavailable Linux never opens a Portal (0.1695ms)
+✔ registrations share capacity, closing releases once, and replay protection lasts until expiry (2.792625ms)
+✔ replay capacity rejects new grants instead of evicting valid tombstones (493.887875ms)
+✔ semantic naming gives the provider the first task and detached roots (90.010375ms)
+✔ session naming creates a stable registration-qualified branch (105.888875ms)
+✔ user branches are preserved for both naming modes (122.419291ms)
+✔ directory contexts and resumed or forked conversations do not rename branches (47.217458ms)
+✔ duplicate nested directories create one branch and retain files (119.949459ms)
+✔ distinct checkouts of one repository receive separate session branches (144.630792ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 723.002916

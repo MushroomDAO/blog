@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/yet-another-ai/deskfleet",
+  "commit": "9bd4a762ebb59934117823958577441b6f298c72",
+  "files": {
+    "README.md": "5e3d62f8bef7d315fe9e09935c6cacbe34aded3c6500af99c7c499fa701bb528",
+    "LICENSE": "dc1810de68504c499ce46ac842fbe4e3e324e5b76c8564c1013ade5dc997dd5e",
+    "package.json": "25bcfe905dbaa2c319e754ddf3ce1ea76625f7b2b2538de9c13bc10200d72529",
+    "agents/docs/architecture.md": "234ce4df5b0c39bd6bbfc18079130de6c13255a55356144ddbd01a6a80bfe4f1",
+    "agents/docs/self-hosted.md": "0c91f0c0128a0fdfbb49c2a2ff8f4c8d9ae92b6a9c09071c2e498b17ef21d7a5",
+    "apps/daemon/src/peer-admission.ts": "9b763225956e1f790c3adadcbdbce7fa0dad6a47486c266e5302902d44487c46",
+    "apps/daemon/src/peer-admission.test.ts": "418ba45b85f6be6d8f5dac0a4a3f3bd08bc043056786410cf81155ce442720bd",
+    "apps/daemon/src/worktree-branch-naming.ts": "8eac8670eee39662f59f440a56f9017af3e9508adb4d482a98efca65fd0c0dd7",
+    "apps/daemon/src/worktree-branch-naming.test.ts": "a84d4f30791d6ce0ddc18500385103cddc1131da266b4cca0bd8c447fbc708db",
+    "apps/daemon/src/linux-desktop-permissions.ts": "36cfb3b9935b2b42b412617338e172fcb0438b7fb2f059e2fca78f4b4cec296a",
+    "apps/daemon/src/linux-desktop-permissions.test.ts": "91170a8194565ae45c411873bfc6cb586b2d394dd78078f04e77294b608e2a85"
+  },
+  "runtime": "v26.10.0",
+  "scope": {
+    "passed": 17,
+    "failed": 0,
+    "skipped": 0,
+    "originalTestsUnchanged": true,
+    "realGitFixtures": true,
+    "desktopBackend": "mocked callbacks",
+    "fullIntegration": false
+  }
+}

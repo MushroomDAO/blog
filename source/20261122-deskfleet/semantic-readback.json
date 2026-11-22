@@ -1,0 +1,38 @@
+[
+  {
+    "id": "e55900fff143240fc27e92204ad15037e940e5dd37710960",
+    "metadata": {
+      "article_id": "deskfleet-multi-machine-agent-collaboration-guide",
+      "content_hash": "fbde94cdf1b549b7",
+      "excerpt": "DeskFleet：把多台电脑上的编程Agent接进同一个工作间 DeskFleet把分散在工作站和服务器上的编程Agent、Git差异、终端与远程桌面接到统一工作间。本文基于官方仓库拆解ACP适配、WebRTC传输、本地执行日志和中央历史副本，核查自托管与权限边界，并用原始测试验证分支命名、连接准入和桌面授权状态，说明团队接入前应验证什么，以及它不能替代的代码审核和环境隔离。 DeskFleet Agent ACP WebRTC Self-Hosting 它把哪些分散的工作接到了一起？ 本地执行，为什么还需要中央服务器？ 能自托管吗？离线和安全边界在哪",
+      "language": "zh",
+      "tags": [
+        "DeskFleet",
+        "Agent",
+        "ACP",
+        "WebRTC",
+        "Self-Hosting"
+      ],
+      "title": "DeskFleet：把多台电脑上的编程Agent接进同一个工作间",
+      "url": "/blog/deskfleet-multi-machine-agent-collaboration-guide/"
+    }
+  },
+  {
+    "id": "661583881df91cc12630e7b518245054ff89b737bf4db419",
+    "metadata": {
+      "article_id": "deskfleet-multi-machine-agent-collaboration-guide",
+      "content_hash": "ddd2d69e82c0c6e9",
+      "excerpt": "DeskFleet: A Shared Workspace for Agents Across Machines DeskFleet brings coding agents across machines into one workspace. We examine ACP, WebRTC, self-hosting, history replicas, and narrowly scoped local tests. DeskFleet Agent ACP WebRTC Self-Hosting What does the shared worksp",
+      "language": "en",
+      "tags": [
+        "DeskFleet",
+        "Agent",
+        "ACP",
+        "WebRTC",
+        "Self-Hosting"
+      ],
+      "title": "DeskFleet: A Shared Workspace for Agents Across Machines",
+      "url": "/blog/deskfleet-multi-machine-agent-collaboration-guide/"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-22T08:28:30.917051+00:00",
+  "decision": "new article: exact URL clear across ledgers; entity only matches this incoming raw KB material",
+  "cnDescription": 157,
+  "enDescription": 155,
+  "englishTitle": 56,
+  "wechatTitle": 24,
+  "checks": [
+    "BLUF both languages",
+    "3 FAQ each",
+    "sources and internal related reading",
+    "copyright both languages",
+    "3 aligned illustrations planned",
+    "selected tests honestly scoped",
+    "no unsupported prices or stars"
+  ],
+  "bannerChoice": "Primary README imagery is a text-heavy workspace screenshot; generated a topical empty multi-computer desk instead.",
+  "testScope": "17 unchanged upstream Node tests; real temporary Git operations and mocked Linux desktop callbacks, no full service or remote integration"
+}

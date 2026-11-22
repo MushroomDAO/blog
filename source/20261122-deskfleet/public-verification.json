@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-22T08:32:08.983597+00:00",
+  "articles": [
+    {
+      "slug": "deskfleet-multi-machine-agent-collaboration-guide",
+      "url": "https://blog.mushroom.cv/blog/deskfleet-multi-machine-agent-collaboration-guide/",
+      "title": "DeskFleet：把多台电脑上的编程Agent接进同一个工作间",
+      "listRank": 2,
+      "carouselRank": 2,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/deskfleet-multi-machine-agent-collaboration-guide-banner.BQcbIWjd.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 92553
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deskfleet-multi-machine-agent-collaboration-guide-banner.BQcbIWjd_214MAM.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 37942
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deskfleet-multi-machine-agent-collaboration-guide-fig-01.NyVZXYBC_Z1Goz32.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 37534
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deskfleet-multi-machine-agent-collaboration-guide-fig-02.CJ4pXsv8_ZLNeAH.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 52536
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/deskfleet-multi-machine-agent-collaboration-guide-fig-03.DBj5cYCO_Z1XmvHv.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 46056
+        }
+      ]
+    }
+  ]
+}

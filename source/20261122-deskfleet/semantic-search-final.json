@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "deskfleet-multi-machine-agent-collaboration-guide",
+    "query": "DeskFleet 多电脑 ACP Agent 协作",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "deskfleet-multi-machine-agent-collaboration-guide",
+          "title": "DeskFleet：把多台电脑上的编程Agent接进同一个工作间",
+          "url": "/blog/deskfleet-multi-machine-agent-collaboration-guide/",
+          "language": "zh",
+          "excerpt": "DeskFleet：把多台电脑上的编程Agent接进同一个工作间 DeskFleet把分散在工作站和服务器上的编程Agent、Git差异、终端与远程桌面接到统一工作间。本文基于官方仓库拆解ACP适配、WebRTC传输、本地执行日志和中央历史副本，核查自托管与权限边界，并用原始测试验证分支命名、连接准入和桌面授权状态，说明团队接入前应验证什么，以及它不能替代的代码审核和环境隔离。 DeskFleet Agent ACP WebRTC Self-Hosting 它把哪些分散的工作接到了一起？ 本地执行，为什么还需要中央服务器？ 能自托管吗？离线和安全边界在哪",
+          "score": 0.7324594
+        },
+        {
+          "article_id": "cloudflare-computer-agent-runtime-isolate-container",
+          "title": "@cloudflare/computer: Give Every Agent a Computer of Its Own",
+          "url": "/blog/cloudflare-computer-agent-runtime-isolate-container/",
+          "language": "en",
+          "excerpt": "@cloudflare/computer: Give Every Agent a Computer of Its Own @cloudflare/computer gives every AI agent its own virtual filesystem backed by SQLite and dynamically routes execution between cheap Isolates (Workers) and full Linux Containers — solving the fundamental scale problem o",
+          "score": 0.6275851
+        },
+        {
+          "article_id": "vicoa-ai-agent-orchestrator-desktop-mobile-worktree-claude-codex",
+          "title": "Vicoa：手机上发任务，电脑同时跑八个 Agent——ADE 全平台开源",
+          "url": "/blog/vicoa-ai-agent-orchestrator-desktop-mobile-worktree-claude-codex/",
+          "language": "zh",
+          "excerpt": "Vicoa：手机上发任务，电脑同时跑八个 Agent——ADE 全平台开源 vicoa-ai/vicoa 全平台开源 ADE（Agent 开发环境），支持 Claude Code/Codex/OpenCode/Gemini/Cursor/Copilot/Kimi/Hermes 八种 Agent，每个 Agent 独立 Worktree 并行，iOS/Android 原生 App，任务面板+定时任务，Docker 一键自部署。 agent ADE Claude Code Codex open source mobile worktree self-host",
+          "score": 0.6209955
+        },
+        {
+          "article_id": "agent-network-anet-multi-runtime-agent-hub-fake-success-trap",
+          "title": "Agent Network 调研：不做又一个 Agent 平台，只做跨厂商 Agent 的通信层",
+          "url": "/blog/agent-network-anet-multi-runtime-agent-hub-fake-success-trap/",
+          "language": "zh",
+          "excerpt": "Agent Network 调研：不做又一个 Agent 平台，只做跨厂商 Agent 的通信层 调研 sleep2agi/agent-network：把 Claude Code、Claude Agent SDK、Codex、Grok Build 接进同一张网络，靠 MCP 互相发现、靠 SSE 实时派活。跟本站已写过的 Multica（看板+技能复利）、Omni（企业知识权限）、Nerve（Claude Agent SDK 运行时）不是同类——它不提供看板、不提供知识库，只做薄薄一层跨厂商通信协议。文章重点拆了一个真实的生产陷阱：`anet node ",
+          "score": 0.61639494
+        },
+        {
+          "article_id": "agency-agents-opensource-multi-model",
+          "title": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构",
+          "url": "/blog/agency-agents-opensource-multi-model/",
+          "language": "zh",
+          "excerpt": "支持多种模型的开源 Agency Agents：50+ 专业 AI 角色，触手可及的完整 AI 代理机构 深度解析 msitarzewski/agency-agents：9个部门、50+专业AI角色，从前端巫师到安全审计员，直接集成 Claude Code、Cursor、Copilot，将AI从「通用助理」升级为「专业协作网」。 Agency Agents AI Agent 开源 Claude Code Cursor Copilot 提示词工程 多角色协作 GitHub 1. 核心理念：从「提示词」到「智能体」 2. 组织架构与规模 3. 深度集成与应用",
+          "score": 0.61127716
+        },
+        {
+          "article_id": "doop-open-source-multiplayer-ai-design-canvas",
+          "title": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计",
+          "url": "/blog/doop-open-source-multiplayer-ai-design-canvas/",
+          "language": "zh",
+          "excerpt": "Doop：Paper.design 的开源替代——人和 AI Agent 实时同画布做设计 kgoedecke/doop 开源仅两周：多人实时设计画布，Canvas+Frame 用 sandboxed iframe 渲染真实 HTML，AI agent 通过内置 MCP server（15 个工具）流式把设计画进画布，人在旁边实时围观甚至接管。bun run dev 零配置自托管，内置 Postgres。AGPL-3.0，564 star。 AI Agent MCP 开源 设计工具 多人协作 TypeScript Claude Code 自托管 AGPL",
+          "score": 0.6086911
+        },
+        {
+          "article_id": "ccteam-multi-agent-cross-vendor-orchestration",
+          "title": "ccteam：用 8 个 MCP 工具把 Claude、Codex、Grok、Kimi 编成一支真正的编程团队",
+          "url": "/blog/ccteam-multi-agent-cross-vendor-orchestration/",
+          "language": "zh",
+          "excerpt": "ccteam：用 8 个 MCP 工具把 Claude、Codex、Grok、Kimi 编成一支真正的编程团队 ccteam 是一个 Rust 写的守护进程，让你现有的编程 Agent 跨厂商协作——Claude 规划，Codex 苦干，Grok 快速回答，Kimi 批量便宜处理，Telegram/飞书/浏览器统一指挥，本地优先无云依赖。 Multi-Agent Claude Code Codex Grok Kimi MCP Agent编排 开源工具 Rust 团队协作 问题：你有五个优秀的编程 Agent，但它们互不认识 架构：一个守护进程，8 个 M",
+          "score": 0.5993854
+        },
+        {
+          "article_id": "harnesskit-agent-skill-manager",
+          "title": "HarnessKit：管理你所有 AI Agent 的 Skill/MCP/Plugin/Hook",
+          "url": "/blog/harnesskit-agent-skill-manager/",
+          "language": "zh",
+          "excerpt": "HarnessKit：管理你所有 AI Agent 的 Skill/MCP/Plugin/Hook Agent 多、Skill/MCP/Plugin/Hook 分散难管理？HarnessKit 帮你一键搞定！集中式桌面工具，统一管理所有 AI Agent 的扩展、配置、记忆与规则。 HarnessKit AI Agent MCP Skill Plugin Hook Claude Code Cursor Copilot 工具管理 HarnessKit 核心功能",
+          "score": 0.59771216
+        },
+        {
+          "article_id": "agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management",
+          "title": "Agent Orchestrator（AO）：26 个编程 Agent 统一管理，榨干 Claude Code/Codex/Cursor 的实战指南",
+          "url": "/blog/agent-orchestrator-ao-26-agents-kanban-orchestrator-fleet-management/",
+          "language": "zh",
+          "excerpt": "Agent Orchestrator（AO）：26 个编程 Agent 统一管理，榨干 Claude Code/Codex/Cursor 的实战指南 Agent Orchestrator（GitHub: Untrivial-ai/agent-orchestrator，⭐10,439，Apache-2.0）是一个本地桌面 IDE，把 Claude Code、Codex、Cursor 等 26 个编程 Agent 统一放进一个 Kanban 看板管理。每个任务有独立 Worker（独立 branch + worktree）、项目级 Orchestrator ",
+          "score": 0.59452266
+        },
+        {
+          "article_id": "munder-difflin-multi-agent-harness-claude-codex-local-first",
+          "title": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工",
+          "url": "/blog/munder-difflin-multi-agent-harness-claude-codex-local-first/",
+          "language": "zh",
+          "excerpt": "Munder Difflin：本地优先多 Agent Harness，把 Claude Code / Codex / Grok 包成一群克隆员工 Munder Difflin（MIT，3888 stars，Electron+React+TypeScript）是一个本地多 Agent Harness 桌面应用，把 Claude Code、OpenAI Codex、xAI Grok、Kimi Code、Qwen、GitHub Copilot CLI 等 12 种 CLI 包成真实 PTY 进程，用像素风 The Office 场景可视化——每个 Agent ",
+          "score": 0.59345466
+        }
+      ]
+    }
+  }
+]
