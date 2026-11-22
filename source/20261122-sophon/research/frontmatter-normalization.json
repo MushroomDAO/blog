@@ -1,0 +1,7 @@
+{
+  "oldFileHash": "a1d53606575857931cd390c71e10b25098f78fd3be11e0fb2c777e9487cf885d",
+  "newFileHash": "e6545273621480f8143ad2d88b5117165de4897aea64d0266feed3f9c04de162",
+  "metadataObjectEqual": true,
+  "bodyByteEqual": true,
+  "reason": "Semantic parser requires quoted scalar fields and inline tags; normalize article to documented frontmatter format. No embedding calls occurred in prior no-matching failures. No change to rendered data or draft body."
+}

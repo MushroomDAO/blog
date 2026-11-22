@@ -1,0 +1,13 @@
+{
+  "snapshot": "6b1713518eb75f8495415662870f682357372d09",
+  "macNetworkMicrophoneGate": "not a.talk_over and replying/pending/echo-tail: serve.py:180",
+  "networkAuth": "none documented; specific bind required",
+  "macLimitations": [
+    "no zero-shot clone",
+    "no tools",
+    "no camera"
+  ],
+  "smallHardwareEvidence": "H100 capped 24GB and M4 Max capped MLX, not actual target machines",
+  "test20scope": "synthetic numeric adaptive playback/input gain values; no neural inference",
+  "banner9401and9402": "machine OCR missed fake lettering on microphone and embossed cone; manually rejected; regenerate with plain cones/capsules"
+}

@@ -1,0 +1,18 @@
+{
+  "repo": "https://github.com/adventists-ai/sophon-realtime",
+  "commit": "6b1713518eb75f8495415662870f682357372d09",
+  "files": {
+    "README.md": "83d3c9d44baee5700ae190830041cf50d017fc26d36479d59a4690439f374e39",
+    "mac/README.md": "d3d43fb7025b1df0f051f74805cf619607dfa459338f9c504bcae9a6d0684cf6",
+    "NOTICE": "84b2d60fe662277f13d2f8fe93747dc5e89642b6ad724d8a25af9f13eff60b5c",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "tag/NOTICE": "7152b305fd4d9faf1670fd0ea66a3b45a469278e13b7d46199f3640503fc9ab9",
+    "flash/NOTICE": "84fd433429d22b5d7010628267cdbc730b158617c66d76606245b8b29a7fdd7a",
+    "mac/adapt.py": "28f48a289678548c758189cf2cc4e51b7b84cf4d1903468c5e9af944b659bb2b",
+    "mac/tests/test_adapt.py": "50195f26457604c0f2e65ea613cf7a49f2a809c982b0267b4432d0c999159732",
+    "mac/serve.py": "c74b994e5fd9817d1bf7fa8fce354f7b70498420822653cb97e22f3c0a2ac35c",
+    "e2e/README.md": "2c7d710d50784de59df8d6f639fe6dfac83f9b75f19ec6c0a2d1f7de9fa00142",
+    "docs/deploy.md": "e2a563e4d3931473439e759d46621e282e940ecaab41d2c58e7cec5e45d204af",
+    "CHANGELOG.md": "671ea3c69fb6f35aba64ce99456c2da8af80f1fa7cd25ac0f38f99540168865a"
+  }
+}

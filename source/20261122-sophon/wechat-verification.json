@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-22T15:47:06.611Z",
+  "drafts": [
+    {
+      "slug": "sophon-realtime-full-duplex-local-voice-guide",
+      "mediaId": "prCUE631thH1cmNLi42prDFzEdYzcOb_69_DhLyBcHBRgOHcNLWuU4CtL_ZDabmJ",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "c2421eae37f38de95256a575c582ad8bc3dcc13cd868337b47888184d9529730",
+      "remoteTextHash": "c2421eae37f38de95256a575c582ad8bc3dcc13cd868337b47888184d9529730",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/sophon-realtime-full-duplex-local-voice-guide/",
+      "localContentHash": "12134c77afe7c93c16c173121840c9a5894be6b7a5ac053c4522412bf447a263",
+      "remoteContentHash": "39f45c0a4cd0533a6e7b10272e9ca4f27fd989fcae772ecb9b8b9fa45ca8c0df"
+    }
+  ]
+}

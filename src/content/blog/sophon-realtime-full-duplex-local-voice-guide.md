@@ -1,23 +1,16 @@
 ---
-title: Sophon-Realtime：边听边说之外，先看清三条语音路线
-titleEn: 'Sophon-Realtime: Duplex Voice Builds and Local Limits'
-description: Sophon-Realtime 将持续听音、轮次判断和表达型语音输出组合起来，提供 Tag、Flash、E2E 三条路线及 4B、Mac
-  变体。本文核对官方代码、模型卡与许可证，解释首音延迟、音色克隆和小内存测试的条件，并运行二十项音频控制测试，区分真实本地能力、作者性能报告与尚未验证的设备限制，给出部署前的验收建议。
-descriptionEn: Review Sophon-Realtime voice builds, cloning and Mac limits, with 20
-  audio-control tests and a clear distinction between author benchmarks and local
-  evidence.
-wechatTitle: Sophon：边听边说的部署边界
-wechatDigest: 核对三条语音路线与Mac限制，用二十项测试看清本地部署条件。
-pubDate: '2026-11-22'
-updatedDate: '2026-11-22'
-lastPublishedAt: '2026-11-22T15:45:41.301326+00:00'
-category: Tech-News
-tags:
-- Sophon-Realtime
-- 全双工语音
-- 本地AI
-- 语音克隆
-heroImage: ../../assets/images/sophon-realtime-full-duplex-local-voice-guide-banner.jpg
+title: "Sophon-Realtime：边听边说之外，先看清三条语音路线"
+titleEn: "Sophon-Realtime: Duplex Voice Builds and Local Limits"
+description: "Sophon-Realtime 将持续听音、轮次判断和表达型语音输出组合起来，提供 Tag、Flash、E2E 三条路线及 4B、Mac 变体。本文核对官方代码、模型卡与许可证，解释首音延迟、音色克隆和小内存测试的条件，并运行二十项音频控制测试，区分真实本地能力、作者性能报告与尚未验证的设备限制，给出部署前的验收建议。"
+descriptionEn: "Review Sophon-Realtime voice builds, cloning and Mac limits, with 20 audio-control tests and a clear distinction between author benchmarks and local evidence."
+wechatTitle: "Sophon：边听边说的部署边界"
+wechatDigest: "核对三条语音路线与Mac限制，用二十项测试看清本地部署条件。"
+pubDate: "2026-11-22"
+updatedDate: "2026-11-22"
+lastPublishedAt: "2026-11-22T15:45:41.301326+00:00"
+category: "Tech-News"
+tags: ["Sophon-Realtime", "全双工语音", "本地AI", "语音克隆"]
+heroImage: "../../assets/images/sophon-realtime-full-duplex-local-voice-guide-banner.jpg"
 ---
 
 Sophon-Realtime 是一套能边听边说、处理插话和语气的开放语音模型。它值得关注的地方，是把“什么时候开口”和“怎么说出来”一起做进对话系统；但三个版本、32B 与 4B、服务器与 Mac，能力和硬件条件不能混着看。

@@ -1,0 +1,9 @@
+{
+  "firstDeployment": "d8bf8d1d",
+  "articleTitleVerified": true,
+  "sameDayListRank": 9,
+  "carouselCapacity": 8,
+  "firstCarouselCheck": false,
+  "fix": "Use existing schema lastPublishedAt with actual publication timestamp; keep slug/pubDate/updatedDate unchanged",
+  "reasonForSecondBuild": "verified missing carousel entry; not cache or blind redeploy"
+}

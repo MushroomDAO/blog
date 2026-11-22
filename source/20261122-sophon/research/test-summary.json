@@ -1,0 +1,10 @@
+{
+  "command": "python3 -m unittest discover -s mac/tests -v",
+  "passed": 20,
+  "failed": 0,
+  "skipped": 0,
+  "scope": "unchanged upstream pure Python Playout/InputGain tests; synthetic RTT, audio duration, stalls and RMS values; no model or microphone",
+  "python": "3.12.14",
+  "host": "macOS-26.6.2-arm64-arm-64bit",
+  "commit": "6b1713518eb75f8495415662870f682357372d09"
+}

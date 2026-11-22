@@ -1,0 +1,36 @@
+[
+  {
+    "id": "f945a98b9b1d76180b69803ca300064ed6a5ab76e99282f9",
+    "metadata": {
+      "article_id": "sophon-realtime-full-duplex-local-voice-guide",
+      "content_hash": "bf6a457fcc1f19e0",
+      "excerpt": "Sophon-Realtime：边听边说之外，先看清三条语音路线 Sophon-Realtime 将持续听音、轮次判断和表达型语音输出组合起来，提供 Tag、Flash、E2E 三条路线及 4B、Mac 变体。本文核对官方代码、模型卡与许可证，解释首音延迟、音色克隆和小内存测试的条件，并运行二十项音频控制测试，区分真实本地能力、作者性能报告与尚未验证的设备限制，给出部署前的验收建议。 Sophon-Realtime 全双工语音 本地AI 语音克隆 Sophon 的全双工，和普通语音助手差在哪？ Tag、Flash、E2E，究竟该选哪个？ 4B 和 Mac",
+      "language": "zh",
+      "tags": [
+        "Sophon-Realtime",
+        "全双工语音",
+        "本地AI",
+        "语音克隆"
+      ],
+      "title": "Sophon-Realtime：边听边说之外，先看清三条语音路线",
+      "url": "/blog/sophon-realtime-full-duplex-local-voice-guide/"
+    }
+  },
+  {
+    "id": "9c7d0591dbe00d3e68c45cc8b6532a6f37c233d0448756c6",
+    "metadata": {
+      "article_id": "sophon-realtime-full-duplex-local-voice-guide",
+      "content_hash": "2be1f844683ddfcc",
+      "excerpt": "Sophon-Realtime: Duplex Voice Builds and Local Limits Review Sophon-Realtime voice builds, cloning and Mac limits, with 20 audio-control tests and a clear distinction between author benchmarks and local evidence. Sophon-Realtime 全双工语音 本地AI 语音克隆 What does full duplex change? Which",
+      "language": "en",
+      "tags": [
+        "Sophon-Realtime",
+        "全双工语音",
+        "本地AI",
+        "语音克隆"
+      ],
+      "title": "Sophon-Realtime: Duplex Voice Builds and Local Limits",
+      "url": "/blog/sophon-realtime-full-duplex-local-voice-guide/"
+    }
+  }
+]

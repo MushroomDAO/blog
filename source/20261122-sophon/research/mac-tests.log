@@ -1,0 +1,25 @@
+test_a_room_with_no_speech_leaves_the_gain_alone (test_adapt.Gain.test_a_room_with_no_speech_leaves_the_gain_alone) ... ok
+test_it_moves_gradually (test_adapt.Gain.test_it_moves_gradually) ... ok
+test_loud_speech_is_left_alone (test_adapt.Gain.test_loud_speech_is_left_alone) ... ok
+test_quiet_speech_is_raised_toward_the_reference_level (test_adapt.Gain.test_quiet_speech_is_raised_toward_the_reference_level) ... ok
+test_the_gain_has_a_ceiling (test_adapt.Gain.test_the_gain_has_a_ceiling) ... ok
+test_a_cancelled_reply_teaches_nothing_but_clears_the_stall (test_adapt.Hold.test_a_cancelled_reply_teaches_nothing_but_clears_the_stall) ... ok
+test_a_model_faster_than_speech_needs_almost_no_hold (test_adapt.Hold.test_a_model_faster_than_speech_needs_almost_no_hold) ... ok
+test_a_new_link_forgets_the_old_rtts (test_adapt.Hold.test_a_new_link_forgets_the_old_rtts) ... ok
+test_a_recent_stall_raises_it_even_for_a_fast_model (test_adapt.Hold.test_a_recent_stall_raises_it_even_for_a_fast_model) ... ok
+test_a_slower_model_needs_the_deficit_over_a_usual_reply (test_adapt.Hold.test_a_slower_model_needs_the_deficit_over_a_usual_reply) ... ok
+test_a_stall_in_the_reply_in_progress_counts_at_once (test_adapt.Hold.test_a_stall_in_the_reply_in_progress_counts_at_once) ... ok
+test_before_any_reply_is_timed_it_uses_the_prior (test_adapt.Hold.test_before_any_reply_is_timed_it_uses_the_prior) ... ok
+test_it_is_capped_by_the_longest_acceptable_wait (test_adapt.Hold.test_it_is_capped_by_the_longest_acceptable_wait) ... ok
+test_link_jitter_is_added (test_adapt.Hold.test_link_jitter_is_added) ... ok
+test_old_stalls_age_out (test_adapt.Hold.test_old_stalls_age_out) ... ok
+test_a_steady_link_needs_only_a_few_frames (test_adapt.Lead.test_a_steady_link_needs_only_a_few_frames) ... ok
+test_before_any_measurement_it_is_half_the_capacity (test_adapt.Lead.test_before_any_measurement_it_is_half_the_capacity) ... ok
+test_it_grows_with_the_link_jitter (test_adapt.Lead.test_it_grows_with_the_link_jitter) ... ok
+test_it_never_passes_what_the_client_can_hold (test_adapt.Lead.test_it_never_passes_what_the_client_can_hold) ... ok
+test_one_slow_round_trip_widens_it (test_adapt.Lead.test_one_slow_round_trip_widens_it) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.010s
+
+OK

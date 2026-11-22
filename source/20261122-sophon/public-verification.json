@@ -1,0 +1,45 @@
+{
+  "orderingNote": "List uses same-day date sorting; actual lastPublishedAt records publication time for carousel ordering.",
+  "checkedAt": "2026-11-22T15:46:28.590018+00:00",
+  "articles": [
+    {
+      "slug": "sophon-realtime-full-duplex-local-voice-guide",
+      "url": "https://blog.mushroom.cv/blog/sophon-realtime-full-duplex-local-voice-guide/",
+      "title": "Sophon-Realtime：边听边说之外，先看清三条语音路线",
+      "listRank": 9,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/sophon-realtime-full-duplex-local-voice-guide-banner.CPfYVx-L.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94946
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/sophon-realtime-full-duplex-local-voice-guide-banner.CPfYVx-L_epFNN.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 35518
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/sophon-realtime-full-duplex-local-voice-guide-fig-01.Mv3tHbqt_ZRwKso.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 52052
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/sophon-realtime-full-duplex-local-voice-guide-fig-02.BbT-EcGD_ZixNEr.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 39208
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/sophon-realtime-full-duplex-local-voice-guide-fig-03.CAOFayCr_Z1KtBw1.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 53728
+        }
+      ]
+    }
+  ]
+}

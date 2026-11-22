@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-22T15:43:26.417476+00:00",
+  "lengths": {
+    "description": 160,
+    "descriptionEn": 158,
+    "titleEn": 53,
+    "wechatTitle": 16,
+    "wechatDigest": 30
+  },
+  "checks": [
+    "BLUF+questionheadings+FAQ3+copyright bothlanguages",
+    "officialrepo/NOTICE/pinnedHFlicenses",
+    "20unchangedpurePythonadaptiveaudio tests; no modelweights or microphone",
+    "threeoutputroutes; 4B knowledgequalitydrop",
+    "M4Max/H100cappedmemory notphysical16GB/24GB target",
+    "Mac nocloning/tools and networkdefault micgating, noauth",
+    "matchedcover3figuresandrelatedreading"
+  ]
+}

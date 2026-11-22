@@ -1,0 +1,32 @@
+{
+  "banner": "machine/manualpass; plain silver audio plugs/blue-orange cables on felt; seeds9401and9402 rejected manually for fake lettering; seed9403 reviewed; explanatorygeneratedscene",
+  "body": [
+    {
+      "file": "src/assets/images/sophon-realtime-full-duplex-local-voice-guide-fig-01.png",
+      "bytes": 80174,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass;correct sparseChinese; on-topic LittleM; originals preserved"
+    },
+    {
+      "file": "src/assets/images/sophon-realtime-full-duplex-local-voice-guide-fig-02.png",
+      "bytes": 47183,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass;correct sparseChinese; on-topic LittleM; originals preserved"
+    },
+    {
+      "file": "src/assets/images/sophon-realtime-full-duplex-local-voice-guide-fig-03.png",
+      "bytes": 75387,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass;correct sparseChinese; on-topic LittleM; originals preserved"
+    }
+  ]
+}

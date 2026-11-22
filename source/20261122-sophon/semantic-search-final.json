@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "sophon-realtime-full-duplex-local-voice-guide",
+    "query": "Sophon 全双工语音 Mac 克隆",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "sophon-realtime-full-duplex-local-voice-guide",
+          "title": "Sophon-Realtime：边听边说之外，先看清三条语音路线",
+          "url": "/blog/sophon-realtime-full-duplex-local-voice-guide/",
+          "language": "zh",
+          "excerpt": "Sophon-Realtime：边听边说之外，先看清三条语音路线 Sophon-Realtime 将持续听音、轮次判断和表达型语音输出组合起来，提供 Tag、Flash、E2E 三条路线及 4B、Mac 变体。本文核对官方代码、模型卡与许可证，解释首音延迟、音色克隆和小内存测试的条件，并运行二十项音频控制测试，区分真实本地能力、作者性能报告与尚未验证的设备限制，给出部署前的验收建议。 Sophon-Realtime 全双工语音 本地AI 语音克隆 Sophon 的全双工，和普通语音助手差在哪？ Tag、Flash、E2E，究竟该选哪个？ 4B 和 Mac",
+          "score": 0.7051291
+        },
+        {
+          "article_id": "nemotron-3-diarization-8-speaker-streaming-mac-test",
+          "title": "Nemotron 3 Diarization 实测：NVIDIA 1 亿参数说话人分离模型，最多 8 人、可商用，Mac 上要自己编译",
+          "url": "/blog/nemotron-3-diarization-8-speaker-streaming-mac-test/",
+          "language": "zh",
+          "excerpt": "Nemotron 3 Diarization 实测：NVIDIA 1 亿参数说话人分离模型，最多 8 人、可商用，Mac 上要自己编译 Nemotron 3 Diarization 是 NVIDIA 2026-09-23 发布的 1 亿参数说话人分离模型，最多 8 人、流式延迟可低至 0.32 秒、OpenMDW-1.1 许可可商用。模型卡自报 DIHARD III DER 从 19.09% 降到 12.73%。我们在 16GB M4 Mac mini 上实测：官方安装脚本装的 v0.1.0 运行时加载失败，需从源码编译；编译后 10 分钟音频 CPU ",
+          "score": 0.5629768
+        },
+        {
+          "article_id": "higgs-audio-v2-engineering-deployment-guide",
+          "title": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入",
+          "url": "/blog/higgs-audio-v2-engineering-deployment-guide/",
+          "language": "zh",
+          "excerpt": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入 Higgs Audio v2 是 Boson AI 可下载权重的语音生成模型，适合旁白、声音克隆和多人对白。本文核对推理代码、模型社区许可、24GB 显存建议、参考音频与转写配对、长文本分块及 vLLM 服务，给出安装命令与生产接入方案，并明确区分源码检查、官方性能报告和未经本地复现的音质指标，帮助团队先跑通小样。 Higgs Audio v2 Boson AI TTS Voice Cloning Self Hosting 先下载哪两个东西？ 是不是开源？商业使用需要检查什么？ 先解决一个",
+          "score": 0.5556737
+        },
+        {
+          "article_id": "phonon-2-parakeet-2bit-qat-mac-asr-test",
+          "title": "Phonon-2 实测：164MB 的 2.1 比特 Parakeet，英文听写够用，中文完全用不了",
+          "url": "/blog/phonon-2-parakeet-2bit-qat-mac-asr-test/",
+          "language": "zh",
+          "excerpt": "Phonon-2 实测：164MB 的 2.1 比特 Parakeet，英文听写够用，中文完全用不了 Phonon-2 是 Fermion Research 把 NVIDIA Parakeet TDT 0.6B v3 量化感知训练到约 2.1 比特（五值）的英文 ASR，下载 164MB，官方自跑 Open ASR 七集平均 WER 5.21%（原版 4.96%）。我们在 16GB M4 Mac mini 上实测：解码约 100 倍实时，53 秒英文朗读归一化后 163 词错 1 个，但峰值内存 3.8GB 起步，中文输出成乱码拼音。 Phonon-2 ",
+          "score": 0.5552873
+        },
+        {
+          "article_id": "moss-tts-nano-ultralight-multilingual-tts-open-source",
+          "title": "0.1B 参数跑满 20 种语言：MOSS-TTS-Nano 超轻量 TTS 开源",
+          "url": "/blog/moss-tts-nano-ultralight-multilingual-tts-open-source/",
+          "language": "zh",
+          "excerpt": "0.1B 参数跑满 20 种语言：MOSS-TTS-Nano 超轻量 TTS 开源 OpenMOSS 开源 MOSS-TTS-Nano，0.1B 参数，纯 CPU 运行，48kHz 双声道输出，支持 20 种语言零样本声音克隆。单核 CPU（M4 MacBook Air）流畅推理，ONNX 运行无需 PyTorch，可嵌入浏览器扩展与边缘设备。 TTS 语音合成 开源 MOSS ONNX 声音克隆 轻量模型 本地部署 项目背景 核心技术架构 核心功能 极致轻量化 + 低延迟 零样本声音克隆 多语言支持 部署方式 实际意义 快速开始 常见问题",
+          "score": 0.55113983
+        },
+        {
+          "article_id": "opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx",
+          "title": "opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx",
+          "url": "/blog/opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx/",
+          "language": "en",
+          "excerpt": "opentoys-esp32-mac-local-ai-voice-toy-whisper-qwen3-tts-mlx akdeb/OpenToys is the local-first version of ElatoAI: ESP32-S3 as the hardware terminal, Apple Silicon Mac handles all inference (Whisper Turbo ASR + Qwen3-TTS/Chatterbox + MLX LLMs) over WebSocket via the toy's own WiFi",
+          "score": 0.5507303
+        },
+        {
+          "article_id": "conversationalvoice-averalabs-full-duplex-training-data-pipeline",
+          "title": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线",
+          "url": "/blog/conversationalvoice-averalabs-full-duplex-training-data-pipeline/",
+          "language": "zh",
+          "excerpt": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线 avera-labs/ConversationalVoice，51 stars，BSL 1.1 许可证（非生产免费，生产环境商用需授权，4年后转 MIT）。AveraLabs 出品，配套 arXiv 2609.08147 论文。一条 9 阶段 Celery 流水线，将真实双人录音自动转成全双工语音模型训练数据，每段对话产出三类数据：分离 / 重建 / 扩写。内部使用 DialogueSidon（说话人分离）、Qwen3-ASR（转写）、Qwen3-TTS（语音合成）。",
+          "score": 0.55024654
+        },
+        {
+          "article_id": "nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent",
+          "title": "NVIDIA VoiceChat 11B：第一个支持工具调用的开源全双工语音 Agent",
+          "url": "/blog/nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent/",
+          "language": "zh",
+          "excerpt": "NVIDIA VoiceChat 11B：第一个支持工具调用的开源全双工语音 Agent NVIDIA NemotronLabs 开源的 11B 端到端全双工语音模型，2026-08-03 发布，OpenMDW 1.1 研究许可。统一架构同时完成流式语音理解和语音生成，转轮延迟约 450ms，VoiceBench #2（开源全双工），史上第一个支持工具调用的开源全双工模型——边说话边触发工具，工具执行期间模型自动播放占位语音保持对话流畅。 语音AI 全双工 工具调用 NVIDIA VoiceAgent 实时语音 Mycelium 核心指标 架构：四个模块",
+          "score": 0.5500478
+        },
+        {
+          "article_id": "haru-4b-full-duplex-voice-engineering",
+          "title": "Haru 4B：全双工语音开源了，怎样接进真实对话？",
+          "url": "/blog/haru-4b-full-duplex-voice-engineering/",
+          "language": "zh",
+          "excerpt": "Haru 4B：全双工语音开源了，怎样接进真实对话？ Haru 4B 是 higurashi 开源的全双工语音基座模型，支持边听边说。本文核验 Apache 2.0 代码与权重、四千万小时训练数据声明及七点五赫兹连续音频架构，拆解官方六十五毫秒延迟的测量边界，给出 Mac 与 NVIDIA 部署入口、参考音色和音频队列的接入要点，并区分本地测试与尚未复现的真实通话表现。 Haru Full-Duplex Speech AI MLX Open Source 全双工到底改变了什么？ 65 毫秒，为什么不能直接当用户等待时间？ Mac 与 NVIDIA 各从哪",
+          "score": 0.54917556
+        },
+        {
+          "article_id": "nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling",
+          "title": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出",
+          "url": "/blog/nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling/",
+          "language": "zh",
+          "excerpt": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出 NVIDIA NemotronLabs VoiceChat 11B（HF: nvidia/NVIDIA-NemotronLabs-VoiceChat-11B，442 likes，OpenMDW-1.1）是首个开源、全双工、支持工具调用的端到端语音对话模型。不是 ASR→LLM→TTS 的串联流水线，而是单一模型以 12.5 Hz（80ms/帧）同时输出文本、工具调用标记、声学编码三个通道。基于 Nemotron-",
+          "score": 0.54450375
+        }
+      ]
+    }
+  }
+]
