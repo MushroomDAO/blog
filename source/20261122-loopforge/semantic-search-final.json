@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "loopforge-coding-agent-delivery-sop-workbench-guide",
+    "query": "LoopForge 团队交付 SOP 人工审批",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "loopforge-coding-agent-delivery-sop-workbench-guide",
+          "title": "LoopForge：把Agent交付变成SOP，关键是验收和续跑",
+          "url": "/blog/loopforge-coding-agent-delivery-sop-workbench-guide/",
+          "language": "zh",
+          "excerpt": "LoopForge：把Agent交付变成SOP，关键是验收和续跑 LoopForge 是腾讯开源的自托管编程 Agent 交付工作台，把角色、脚本测试、人工审批、返工和产物记录编排成 SOP。本文核对官方仓库及部署文档，分析 Main Bot 与固定流程的分工、执行器和凭据的边界、失败续跑与共享工作区的限制，并运行原有引擎和设计器测试，说明可信团队部署及成本统计的真实口径。 LoopForge Coding Agent SOP 自托管 软件交付 Main Bot 与 SOP，分别解决什么问题？ 一个流程怎样从“执行完”变成“可以验收”？ 失败续跑为什么比",
+          "score": 0.7260947
+        },
+        {
+          "article_id": "sellbird-ai-sales-agent-self-hosting-guide",
+          "title": "Sellbird：把销售外联做成可审批的Agent流水线",
+          "url": "/blog/sellbird-ai-sales-agent-self-hosting-guide/",
+          "language": "zh",
+          "excerpt": "Sellbird：把销售外联做成可审批的Agent流水线 Sellbird是原Harvey更名后的开源销售外联平台，串联企业发现、购买信号、联系人核验、邮件起草与回复处理。本文核对AGPL许可、Python与SQLite架构、Claude和Codex运行条件、人工审批与自动模式的差异，并用模拟邮箱测试发件控制，解释自托管不等于离线、订阅不等于零成本，以及工程师应借鉴的边界。 Sellbird AI Agent 销售自动化 自托管 Python 它适合解决什么问题？ 技术上，它怎样把任务串起来？ 为什么不能直接说“订阅内免费、随便跑”？ 默认审批与自动模式",
+          "score": 0.58196324
+        },
+        {
+          "article_id": "higgs-realtime-duplex-open-weights-pricing-engineering",
+          "title": "Higgs Realtime Duplex：开源、收费与工程实现核查",
+          "url": "/blog/higgs-realtime-duplex-open-weights-pricing-engineering/",
+          "language": "zh",
+          "excerpt": "Higgs Realtime Duplex：开源、收费与工程实现核查 Higgs Realtime Duplex是李沐所在Boson AI团队的45B全双工模型。本文核对官方权重与候补API状态，区分现售Realtime费率、TTS和STT组件，解析160毫秒分块、后台工具、数字人和自托管路线，并介绍Mika、WorldForge的独立定位，给出经过本地检查的编排示例与工程接入边界。 Higgs 全双工 语音Agent Boson AI Mika WorldForge 这是不是李沐开发的模型？ 到底哪些开源，哪些只是可以调用？ 如果不开源，现在如何收费？",
+          "score": 0.5239898
+        },
+        {
+          "article_id": "andrew-ng-openworker-desktop-ai-coworker-local-aisuite",
+          "title": "OpenWorker: Andrew Ng's Open-Source Desktop AI Coworker — Local, Approval-Gated, 25+ Integrations",
+          "url": "/blog/andrew-ng-openworker-desktop-ai-coworker-local-aisuite/",
+          "language": "en",
+          "excerpt": "OpenWorker: Andrew Ng's Open-Source Desktop AI Coworker — Local, Approval-Gated, 25+ Integrations andrewyng/openworker, open-sourced 4 days ago. MIT, Python + TypeScript + Tauri + Rust, runs locally, BYOK (bring your own key or run Ollama), 25+ integrations, approval-gate keeps h",
+          "score": 0.5077422
+        },
+        {
+          "article_id": "reef-self-evolving-agent-open-source-infrastructure-human-agent-society",
+          "title": "Reef: Open-Source Infrastructure for Self-Evolving Agents That Turn User Interactions Into Training Data",
+          "url": "/blog/reef-self-evolving-agent-open-source-infrastructure-human-agent-society/",
+          "language": "en",
+          "excerpt": "Reef: Open-Source Infrastructure for Self-Evolving Agents That Turn User Interactions Into Training Data Human-Agent-Society team (MIT, NUS) open-sources Reef. Core insight: real user interactions can become training data for the next learning cycle. Reef provides a four-stage lo",
+          "score": 0.50308913
+        },
+        {
+          "article_id": "open-connector-saas-auth-gateway-ai-agents",
+          "title": "OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth",
+          "url": "/blog/open-connector-saas-auth-gateway-ai-agents/",
+          "language": "zh",
+          "excerpt": "OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth oomol-lab 开源了 OpenConnector，一个 AI Agent 专用的认证网关，Composio 的开源替代。接 1000+ SaaS 提供者、10000+ 预制 Action，凭据永远留在网关边界内，Agent 只能拿到执行结果。支持 SDK/CLI/MCP/HTTP 多接入方式，可部署到 Docker、Cloudflare Workers 或 Fly.io。 AI Agent OAuth SaaS集成 MCP Cloudflare 开源工具",
+          "score": 0.50045764
+        },
+        {
+          "article_id": "openarch-enterprise-ai-data-permissions-guide",
+          "title": "OpenArch：给企业AI接上数据，也把权限带过去",
+          "url": "/blog/openarch-enterprise-ai-data-permissions-guide/",
+          "language": "zh",
+          "excerpt": "OpenArch：给企业AI接上数据，也把权限带过去 OpenArch是Hyland开源的企业AI数据访问层，采用Apache2.0，将文档元数据、分块、向量与权限连接到API。本文从源码拆解Java、MongoDB和OpenSearch架构，介绍Docker Compose启动方法，并核对默认账号、tmpfs存储、数据库端口和权限同步边界，帮助团队规划企业RAG试点。 OpenArch Hyland RAG OpenSearch 企业AI OpenArch 到底解决哪一层问题？ 技术栈如何把文档和向量接起来？ 权限控制为什么比多接一个模型更难？ 怎样用",
+          "score": 0.5004053
+        },
+        {
+          "article_id": "replit-self-driving-company-agent-whole-company",
+          "title": "Replit 如何让 Agent 进入整家公司：自动驾驶公司实践，工程效率 5.8x，代码输出翻三倍",
+          "url": "/blog/replit-self-driving-company-agent-whole-company/",
+          "language": "zh",
+          "excerpt": "Replit 如何让 Agent 进入整家公司：自动驾驶公司实践，工程效率 5.8x，代码输出翻三倍 Replit CEO Amjad Masad 的《The Self-Driving Company》记录了 Replit 过去六个月用 AI Agent 重构整个公司运转方式的真实过程：工程效率 5.8x、PR reversion 率持平、支持工单处理快 60%、放弃七位数 SaaS 产品转用内部 Agent……最重要的发现：人没有被自动化掉，而是被晋升了。 AI Agent Replit 自动化公司 Loop Engineering 工程效率 AI转型",
+          "score": 0.500333
+        },
+        {
+          "article_id": "microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork",
+          "title": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒",
+          "url": "/blog/microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork/",
+          "language": "zh",
+          "excerpt": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒 microsoft/VibeVoice，54K stars，MIT，Python。7.5Hz 连续语音 tokenizer + LLM + 扩散头，单次推理 90 分钟 TTS、60 分钟 ASR，4 路说话人。2025-09 官方因深度伪造顾虑主动下架，社区 fork vibevoice-community/VibeVoice 接棒维护，已加 LoRA 微调和 HF Transformers 集成。工程指导：模型选型、API 服务化、BitN",
+          "score": 0.49926907
+        },
+        {
+          "article_id": "corespeed-tie-mac-studio-guide",
+          "title": "CoreSpeed TIE：把Mac Studio交给Agent，开源了哪些？",
+          "url": "/blog/corespeed-tie-mac-studio-guide/",
+          "language": "zh",
+          "excerpt": "CoreSpeed TIE：把Mac Studio交给Agent，开源了哪些？ CoreSpeed TIE让MCP智能体调用Mac上的终端、文件、已登录浏览器、桌面应用和本地工具。本文找到官方Apache许可插件仓库，区分插件、原生CLI与托管服务的公开范围，核查Mac安装条件、Node版本变化、目录与审批边界，并记录八项配置检查和原生CLI基础测试，给出分阶段试用与退出方法。 CoreSpeed TIE MCP Mac Studio Computer Use TIE把哪些本机能力提供给Agent？ 开源仓库里到底有什么？ Mac Studio需要什么条",
+          "score": 0.49824092
+        }
+      ]
+    }
+  }
+]

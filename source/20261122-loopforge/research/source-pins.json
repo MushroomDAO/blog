@@ -1,0 +1,17 @@
+{
+  "repo": "https://github.com/Tencent/LoopForge",
+  "revision": "eb2e368f14d004e6a22ee25940f5a03c0b5d9f38",
+  "files": {
+    "README.zh-CN.md": "c4a941078663a14184f4e6422669de8be16162e179ebb8e3f28cfb3cb292d59f",
+    "LICENSE": "0ef2788f38c5da571d5493eaa944745929d3814d9c56a22389ac418e310ba89f",
+    "docs/architecture.md": "4b79e0b69925de9597647654930a2d3bbd0f431be463cde996ff9609ebe45d01",
+    "docs/deployment.md": "9b0b723e8d1cd0d7cf8b7e5af15f955d5802b9027020c0efa4337355711ad4d9",
+    "docs/token-pricing.md": "bd79ec16d655341efc23edb2eae2594f02208699ed8b44963c1a21c76cca821e",
+    "docs/validation.md": "c5df82aa9697d561e97847f73492c91bacaae7384e49f64ec4bbb8372c5d6827",
+    "docs/open-source-scope.md": "394b7a237cbf88ec8fb445639acb8c4c5f6c23853039dc4defff921fc8fa430c",
+    "internal/engine/engine_test.go": "95ba5d380d2067b6ea30d03daa4e6737217a79d1b336d7f74be146a480ad9472",
+    "internal/engine/gate_test.go": "f788c8c75a3c24c09e64d062cffadfe187efc143bff242a780ebdc49fd71a116",
+    "e2e/unit/flow-designer.test.mjs": "e271ea3066e36411fa95e7ab7a2714d4220f40e8b320cf84396144ea8ed5e106"
+  },
+  "banner": "READMEhero/textdiagrams and UI screen mockups not suitable as photographiccover;generatedworkflowtable"
+}

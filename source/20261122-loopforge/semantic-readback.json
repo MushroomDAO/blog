@@ -1,0 +1,38 @@
+[
+  {
+    "id": "af505cb6861c8c112be41ea1d22b9c805628b1634863d8d2",
+    "metadata": {
+      "article_id": "loopforge-coding-agent-delivery-sop-workbench-guide",
+      "content_hash": "3ade20b902c76c6e",
+      "excerpt": "LoopForge：把Agent交付变成SOP，关键是验收和续跑 LoopForge 是腾讯开源的自托管编程 Agent 交付工作台，把角色、脚本测试、人工审批、返工和产物记录编排成 SOP。本文核对官方仓库及部署文档，分析 Main Bot 与固定流程的分工、执行器和凭据的边界、失败续跑与共享工作区的限制，并运行原有引擎和设计器测试，说明可信团队部署及成本统计的真实口径。 LoopForge Coding Agent SOP 自托管 软件交付 Main Bot 与 SOP，分别解决什么问题？ 一个流程怎样从“执行完”变成“可以验收”？ 失败续跑为什么比",
+      "language": "zh",
+      "tags": [
+        "LoopForge",
+        "Coding Agent",
+        "SOP",
+        "自托管",
+        "软件交付"
+      ],
+      "title": "LoopForge：把Agent交付变成SOP，关键是验收和续跑",
+      "url": "/blog/loopforge-coding-agent-delivery-sop-workbench-guide/"
+    }
+  },
+  {
+    "id": "28bd69f5f3f0c2520460fbe5e8efd7b6ff096361a0cd9e7e",
+    "metadata": {
+      "article_id": "loopforge-coding-agent-delivery-sop-workbench-guide",
+      "content_hash": "ddcf0ff13fb4f5a8",
+      "excerpt": "LoopForge: Repeatable Delivery with Agents and SOPs Review Tencent LoopForge's delivery SOPs, approval gates, executor boundaries and retry evidence, with original tests and self-hosting limits for teams. LoopForge Coding Agent SOP 自托管 软件交付 When should a team use Main Bot or an S",
+      "language": "en",
+      "tags": [
+        "LoopForge",
+        "Coding Agent",
+        "SOP",
+        "自托管",
+        "软件交付"
+      ],
+      "title": "LoopForge: Repeatable Delivery with Agents and SOPs",
+      "url": "/blog/loopforge-coding-agent-delivery-sop-workbench-guide/"
+    }
+  }
+]
