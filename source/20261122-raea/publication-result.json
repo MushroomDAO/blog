@@ -9,5 +9,7 @@
   "checkedAt": "2026-11-22T14:28:20.151616+00:00",
   "kbStatus": "verified",
   "semanticStatus": "verified",
-  "repositoryStatus": "review-pending"
+  "repositoryStatus": "review-pending",
+  "repositoryPr": "https://github.com/MushroomDAO/blog/pull/288",
+  "repositoryError": "Normal squash merge rejected by base branch policy; Blog,current remote draft,KB and semantic query verified complete."
 }
