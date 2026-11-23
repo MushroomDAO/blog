@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>graph</title>
+<style>
+:root{
+  --bg:#f4f5f7; --ink:#1f2329; --ink2:#5b6370; --ink3:#8a919c; --line:#d5d9e0; --acc:#1e6fd9;
+  --obs:#22a06b; --inf:#e8a33d; --unk:#a3aab5;
+  --mono:ui-monospace,SFMono-Regular,"Cascadia Mono",Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:13px}
+#app{display:flex;flex-direction:column;height:100%}
+/* ---------- top bar ---------- */
+#bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding:8px 14px;background:#fff;border-bottom:1px solid var(--line);z-index:5}
+#bar .ttl b{font-size:14px;font-weight:700}
+#bar .ttl span{display:block;font-size:11px;color:var(--ink3)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.seg button{border:0;background:#fff;padding:5px 12px;font:inherit;cursor:pointer;color:var(--ink2)}
+.seg button.on{background:var(--ink);color:#fff}
+.tg{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:var(--ink2);cursor:pointer;user-select:none}
+.zoom{display:inline-flex;gap:4px;margin-left:auto}
+.zoom button{border:1px solid var(--line);background:#fff;border-radius:6px;min-width:30px;padding:4px 9px;font:inherit;cursor:pointer}
+/* ---------- main ---------- */
+#main{flex:1;display:flex;min-height:0}
+#stage{position:relative;flex:1;overflow:hidden;touch-action:none;cursor:grab;
+  background-color:#fafbfc;background-image:radial-gradient(#dde1e7 1px,transparent 1px);background-size:22px 22px}
+#stage.drag{cursor:grabbing}
+#world{position:absolute;left:0;top:0;transform-origin:0 0}
+svg.layer{position:absolute;left:0;top:0;width:10px;height:10px;overflow:visible;pointer-events:none}
+#nodes{position:absolute;left:0;top:0}
+/* ---------- nodes ---------- */
+.node{position:absolute;background:#fff;border:1px solid #c3c9d2;border-radius:6px;
+  box-shadow:0 1px 3px rgba(16,24,40,.10);font-size:11.5px;cursor:pointer;overflow:hidden;transition:box-shadow .12s}
+.node:hover{box-shadow:0 3px 10px rgba(16,24,40,.16)}
+.node.sel{outline:2.5px solid var(--acc);outline-offset:1px}
+.node.gone{opacity:.42;border-style:dashed}
+.node.gone .nm{text-decoration:line-through}
+.nh{display:flex;align-items:flex-start;gap:6px;padding:5px 8px 5px;color:#fff}
+.nh .st{width:9px;height:9px;border-radius:50%;border:1.5px solid rgba(255,255,255,.9);flex:none;margin-top:4px}
+.st.obs{background:var(--obs)} .st.inf{background:var(--inf)} .st.unk{background:var(--unk)}
+.nh .tt{flex:1;min-width:0;line-height:1.25}
+.nh .ty{display:block;font-size:9.5px;letter-spacing:.6px;opacity:.78;font-weight:500;text-transform:uppercase}
+.nh .nm{display:block;font-size:12.5px;font-weight:650;word-break:break-word}
+.nh .dvs{display:flex;flex-wrap:wrap;gap:2px;justify-content:flex-end;max-width:76px;margin-top:1px}
+.dv{background:#fff;color:#c62828;font-size:10px;font-weight:700;border-radius:4px;padding:0 4px;line-height:15px}
+.dv.fixed{color:#1b7f3b;text-decoration:line-through}
+.gc{background:rgba(255,255,255,.9);color:#5b6370;font-size:10px;border-radius:4px;padding:0 4px;line-height:15px;margin-top:1px}
+.nb{padding:4px 8px 6px}
+.r{display:flex;gap:4px;line-height:1.45;padding:1px 0}
+.r .k{color:#7a8290;flex:none;max-width:46%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.r .eq{color:#b4bac4;flex:none}
+.r .v{color:#1f2329;font-family:var(--mono);font-size:11px;word-break:break-word;min-width:0}
+#world.issues .r.w .v{color:#c62828}
+#world.issues .r.w .k{color:#c62828}
+.r.n .v{color:#1b7f3b}
+.r.n .k{color:#1b7f3b}
+.sh{font-size:10.5px;padding:2px 8px;border-top:1px solid #eceef1}
+.sh-both{background:#e9f6ef;color:#1b7f3b}
+.sh-reval{background:#fdf3e3;color:#a15c07}
+.sh-no{background:#fdecea;color:#b42318}
+/* ---------- edges ---------- */
+.e{fill:none;stroke-width:1.4}
+.e.data{stroke:#7d8590}
+.e.leak{stroke:#d32f2f;stroke-dasharray:5 4;opacity:.85}
+.e.dep{stroke:#2563eb;stroke-dasharray:6 4}
+.e.alt{stroke:#9aa1ab;stroke-dasharray:2 4}
+.e.next{stroke:#1b7f3b;stroke-width:1.8}
+.e.test{stroke:#7c3aed;stroke-dasharray:5 4}
+.e.uc{stroke-dasharray:1.5 3.5;opacity:.5}
+.e.hl{stroke-width:2.8;opacity:1}
+.lb{font-size:10.5px;fill:#5b6370;paint-order:stroke;stroke:#fafbfc;stroke-width:4px;stroke-linejoin:round;font-family:var(--sans)}
+.lb.leak{fill:#c62828}.lb.dep{fill:#1d4ed8}.lb.next{fill:#1b7f3b}.lb.test{fill:#6d28d9}.lb.alt{fill:#8a919c}
+.lb.uc{font-style:italic;opacity:.8}
+.lb.hl{font-weight:700;fill:#1f2329;opacity:1}
+.lane{fill:rgba(255,255,255,.6);stroke:#d5d9e0;stroke-width:1}
+.lanet{font-size:14px;font-weight:700;fill:#1f2329;font-family:var(--sans)}
+.lanes{font-size:11.5px;fill:#5b6370;font-family:var(--sans)}
+.grp{fill:rgba(31,98,98,.05);stroke:#1f6262;stroke-dasharray:6 4;stroke-width:1.2}
+.grpl{fill:#1f6262;font-size:11.5px;font-weight:650;font-family:var(--sans)}
+/* ---------- legend ---------- */
+#legend{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.94);border:1px solid var(--line);
+  border-radius:8px;padding:7px 10px;font-size:11.5px;color:var(--ink2);display:flex;flex-direction:column;gap:3px;pointer-events:none}
+.ln{display:inline-block;width:24px;border-top:2px solid #7d8590;vertical-align:middle;margin-right:6px}
+.ln.leak{border-top:2px dashed #d32f2f}.ln.dep{border-top:2px dashed #2563eb}.ln.next{border-top:2px solid #1b7f3b}
+.ln.alt{border-top:2px dotted #9aa1ab}.ln.test{border-top:2px dashed #7c3aed}
+.ln.uc{border-top:2px dotted #b4bac4}
+.ck{font-size:11px;font-weight:600;border-radius:999px;padding:2px 9px;white-space:nowrap}
+.ck.all{background:#e6f6ee;color:#1b7f3b}.ck.some{background:#fdf3e3;color:#a15c07}.ck.none{background:#eef0f3;color:#5b6472}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;vertical-align:middle;margin:0 4px 0 2px}
+/* ---------- panel ---------- */
+#panel{width:350px;flex:none;background:#fff;border-left:1px solid var(--line);overflow:auto;padding:14px 16px 28px}
+#panel h2{font-size:15.5px;margin:8px 0 8px;line-height:1.35;word-break:break-word}
+.chip{display:inline-block;font-size:10.5px;padding:1px 8px;border-radius:999px;font-weight:600;margin-right:4px}
+.chip.obs{background:#e6f6ee;color:#1b7f3b}.chip.inf{background:#fdf3e3;color:#a15c07}.chip.unk{background:#eef0f3;color:#5b6472}
+.chip.gone{background:#eef0f3;color:#5b6472}
+.back{font-size:12px;color:var(--acc);cursor:pointer;user-select:none}
+.verdict{background:#f3f6fb;border-left:3px solid var(--acc);padding:7px 10px;border-radius:4px;font-size:12.5px;line-height:1.5}
+.fix{margin-top:6px;background:#eef8f1;border-left:3px solid #1b7f3b;padding:7px 10px;border-radius:4px;font-size:12.5px;line-height:1.5}
+.sec{margin-top:15px}
+.sec h4{margin:0 0 6px;font-size:10.5px;letter-spacing:.9px;color:var(--ink3);text-transform:uppercase;font-weight:700}
+.sec ul{margin:0;padding-left:17px}
+.sec li{margin:3px 0;font-size:12.5px;line-height:1.5;color:#3b4250}
+.prow{display:flex;gap:6px;font-size:12px;padding:2px 0;line-height:1.45}
+.prow .k{color:#7a8290;flex:none;max-width:45%;word-break:break-all}
+.prow .v{font-family:var(--mono);font-size:11.5px;word-break:break-word}
+.prow.w .v,.prow.w .k{color:#c62828}
+.prow.n .v,.prow.n .k{color:#1b7f3b}
+.io{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px;font-size:12.5px;padding:2px 0}
+.io .el{font-family:var(--mono);font-size:11px;color:#5b6370;background:#f4f6f9;border-radius:4px;padding:0 5px}
+.io .el.leak{color:#c62828;background:#fdecea}.io .el.dep{color:#1d4ed8;background:#e8eefc}.io .el.next{color:#1b7f3b;background:#e9f6ef}.io .el.test{color:#6d28d9;background:#f3e8ff}
+.io .er{flex-basis:100%;font-family:var(--mono);font-size:10.5px;color:#8a919c;padding-left:10px;word-break:break-all}
+.io .er.ok{color:#1b7f3b}.io .er.uc{color:#a15c07}
+.lnk{color:var(--acc);cursor:pointer}
+.lnk:hover{text-decoration:underline}
+.dvrow{display:flex;gap:7px;align-items:baseline;font-size:12.5px;padding:3px 0;line-height:1.45}
+.dvrow b{flex:none;font-size:11px;padding:0 5px;border-radius:4px;color:#fff}
+.dvrow b.s1{background:#c62828}.dvrow b.s2{background:#d97706}.dvrow b.s3{background:#7a8290}
+.dvrow.fixed span{color:#1b7f3b}
+.refs code{display:block;font-family:var(--mono);font-size:11px;color:#3b4250;background:#f4f6f9;border-radius:4px;padding:2px 6px;margin:2px 0;word-break:break-all}
+.cc{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:6px 0;cursor:pointer}
+.cc:hover{border-color:var(--acc);background:#f6f9ff}
+.cc b{display:block;font-size:13px}
+.cc span{font-size:12px;color:var(--ink2)}
+.how li{font-size:12.5px}
+@media (max-width:760px){
+  #main{flex-direction:column}
+  #panel{width:auto;height:42vh;border-left:0;border-top:1px solid var(--line)}
+  #legend{display:none}
+  #bar .ttl span{display:none}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="bar">
+    <div class="ttl"><b id="ttl"></b><span id="hint"></span></div>
+    <span class="ck" id="ck" hidden></span>
+    <div class="seg" id="view" hidden><button data-v="now" class="on"></button><button data-v="next"></button></div>
+    <label class="tg" id="tg-issue" hidden><input type="checkbox" id="t-issue" checked><span></span></label>
+    <label class="tg" id="tg-branch" hidden><input type="checkbox" id="t-branch"><span></span></label>
+    <div class="zoom"><button id="z-out">−</button><button id="z-fit"></button><button id="z-in">+</button></div>
+  </header>
+  <div id="main">
+    <div id="stage">
+      <div id="world" class="issues">
+        <svg class="layer" id="under"></svg>
+        <div id="nodes"></div>
+        <svg class="layer" id="over"></svg>
+      </div>
+      <div id="legend"></div>
+    </div>
+    <aside id="panel"></aside>
+  </div>
+</div>
+<script>
+/* Generic Netron-style graph viewer. All content comes from G (injected by scripts/build.py). */
+const G = {"title":"Example · read-through cache (synthetic)","lang":"en","lanes":[{"id":"web","title":"Browser","sub":"one page view"},{"id":"api","title":"API server · per request","sub":"GET /api/items"},{"id":"job","title":"Worker · every 60 s","sub":"background refresh"}],"groups":[{"label":"read-through cache","members":["A2","A3"]}],"overview":{"how":["The request enters on the **left** and the answer comes back to the browser; the worker on the **right** writes the same cache"],"cards":[{"title":"Two writers, one cache","sub":"worker writes without the handler's lock","go":"A2"}]},"issues":{"I1":{"sev":2,"go":"A2","t":"worker writes the cache without the lock the handler takes"}},"nodes":[{"id":"W1","lane":"web","c":0,"r":0,"k":"io","ty":"Input","t":"fetch('/api/items')","st":"obs","rows":[["method","GET"],["timeout","5 s"]],"refs":["web/src/items.ts:12"],"verdict":"Single entry point for the list page"},{"id":"W2","lane":"web","c":0,"r":1,"k":"ui","ty":"Render","t":"<ItemList>","st":"obs","rows":[["props","items: Item[]"]],"refs":["web/src/ItemList.tsx:4"]},{"id":"A1","lane":"api","c":0,"r":0,"k":"app","ty":"Handler","t":"list_items()","st":"inf","rows":[["auth","session cookie"],["lock","cache_lock (read)"]],"refs":["api/items.py:6-11"],"iface":["Returns at most 100 items","Raises 401 without a session"]},{"id":"A2","lane":"api","c":1,"r":1,"k":"store","ty":"Cache","t":"ItemCache.get","st":"inf","rows":[["ttl","60 s"],["concurrency","lock taken by readers only","w"]],"issues":["I1"],"refs":["api/cache.py:15-21"],"verdict":"Read-through cache; correctness depends on every writer taking the lock","fix":"Move the lock inside ItemCache so set() takes it too"},{"id":"A3","lane":"api","c":1,"r":2,"k":"store","ty":"DB","t":"db.query(items)","st":"unk","rows":[["index","items_updated_at"]],"refs":["api/db.py:4"]},{"id":"A4","lane":"api","c":0,"r":2,"k":"resp","ty":"Response","t":"serialize()","st":"inf","rows":[["format","JSON"],["etag","hash(items)"]],"refs":["api/items.py:14"]},{"id":"K1","lane":"job","c":0,"r":0,"k":"exec","ty":"Job","t":"refresh_cache()","st":"inf","rows":[["schedule","every 60 s"]],"refs":["worker/jobs.py:7-8"]},{"id":"K2","lane":"job","c":0,"r":1,"k":"store","ty":"Cache","t":"ItemCache.set","st":"inf","rows":[["lock","none","w"]],"issues":["I1"],"refs":["api/cache.py:23"],"scan":{"re":"\\.set\\(","in":["api","worker"],"glob":"*.py","skip":[{"at":"api/test_cache.py","why":"unit test, not a runtime writer"}]}}],"edges":[["W1","A1","HTTP GET","data","both",{"ref":["web/src/items.ts:12"],"chk":"ok"}],["A1","A2","user_id","data","both",{"ref":["api/items.py:10"],"chk":"ok"}],["A2","A3","miss → SELECT","data","both",{"ref":["api/cache.py:19"],"chk":"ok"}],["A2","A4","items: list[Item]","data","both",{"ref":["api/items.py:11"],"chk":"ok"}],["A4","W2","200 · JSON","data","both",{"ref":["web/src/items.ts:14"],"chk":"ok"}],["K1","K2","fresh rows","data","both",{"ref":["worker/jobs.py:11"],"chk":"ok"}],["K2","K1","next tick","dep","both",{"ref":["worker/jobs.py:7"],"chk":"ok","has":"@every"}],["K2","A2","I1 unlocked write","leak","both",{"ref":["worker/jobs.py:11"],"chk":"ok"}]],"checked":true};
+if (!G) { document.body.textContent = "No graph data: build this file with scripts/build.py GRAPH.json OUT.html"; throw new Error("no graph data"); }
+
+/* ======================= config ======================= */
+const UI_ZH = {
+  hint:"点节点看详情 · 拖动平移 · 滚轮 / 双指缩放 · F 适应 · Esc 回总览",
+  now:"现状", next:"建议后", issues:"问题叠加", branch:"相邻分支", branchTitle:"",
+  fit:"适应", zin:"放大", zout:"缩小", fitTitle:"适应窗口",
+  back:"← 总览", attrs:"属性", inputs:"输入", outputs:"输出", iface:"调用方须知（Interface）",
+  issueSec:"偏差", refs:"代码 / 证据位置", fixLabel:"建议", removed:"删除", removedChip:"建议删除",
+  fixedSuffix:"（建议后解决）", howTitle:"怎么看这张图", cardsTitle:"结论（点开跳到节点）", issuesAll:"全部偏差",
+  howLanes:"每条泳道是一个生命周期 / 执行上下文；跨泳道的边就是它们之间的耦合",
+  howNode:"方块 = Module；头部颜色 = 类别；边上的字 = 这一跳传递的东西",
+  howEv:"左上圆点 = 证据（绿 {obs} · 黄 {inf} · 灰 {unk}）",
+  howIssue:"红色徽标 = 问题；红虚线 = 绕过接口的读取或隐性约定；节点里的红字 = 问题所在",
+  howNext:"顶部切到「{next}」看改完的样子：绿字是新增或变化，划线灰块是建议删除",
+  howBranch:"「{branch}」开关显示其它分支，节点底部标出能否共用",
+  howChk:"边：{ok}/{all} 条在 build 时对过源码（ref 指向的那行还在做这一跳）；淡色点线、标签带 ? 的没有核对过",
+  howNoChk:"这张图 build 时没有给源码目录，边都没有核对过，只代表作者的判断",
+  ev:{obs:"已观察", inf:"源码推定", unk:"待厘清"},
+  share:{both:"可共用", reval:"需重验", no:"不可共用"},
+  ck:{all:"边已全部核对 {ok}/{all}", some:"边已核对 {ok}/{all}", none:"边未对源码核对"},
+  lg:{data:"数据流", leak:"绕过接口的读取 / 隐性约定", dep:"跨生命周期依赖", next:"建议后新增", test:"测试替身", alt:"相邻分支", uc:"? 未对源码核对"}
+};
+const UI_EN = {
+  hint:"Click a node for details · drag to pan · wheel / pinch to zoom · F fit · Esc overview",
+  now:"Current", next:"Proposed", issues:"Issues", branch:"Sibling branches", branchTitle:"",
+  fit:"Fit", zin:"Zoom in", zout:"Zoom out", fitTitle:"Fit to window",
+  back:"← Overview", attrs:"Attributes", inputs:"Inputs", outputs:"Outputs", iface:"What callers must know (Interface)",
+  issueSec:"Issues", refs:"Code / evidence", fixLabel:"Fix", removed:"removed", removedChip:"proposed removal",
+  fixedSuffix:" (fixed in proposal)", howTitle:"How to read this graph", cardsTitle:"Findings (click to jump)", issuesAll:"All issues",
+  howLanes:"Each lane is one lifecycle / execution context; edges between lanes are the coupling",
+  howNode:"Box = Module; header colour = category; edge text = what flows across that hop",
+  howEv:"Dot at top-left = evidence (green {obs} · amber {inf} · grey {unk})",
+  howIssue:"Red badge = issue; red dashed edge = read that bypasses the interface or hidden contract; red text = where it bites",
+  howNext:"Switch to “{next}” to see the proposal: green = new or changed, struck-out grey = proposed removal",
+  howBranch:"“{branch}” shows sibling branches; each node's footer says whether it is shared",
+  howChk:"Edges: {ok}/{all} were checked against the source at build time (the line each cites still makes that hop); faint dotted edges with a ? label were not",
+  howNoChk:"This graph was built without a source tree, so no edge was checked; each is the author's judgement",
+  ev:{obs:"observed", inf:"read from source", unk:"unknown"},
+  share:{both:"shared", reval:"re-verify", no:"not shared"},
+  ck:{all:"all edges checked {ok}/{all}", some:"edges checked {ok}/{all}", none:"edges not checked against source"},
+  lg:{data:"data flow", leak:"bypassing read / hidden contract", dep:"cross-lifecycle dependency", next:"added in proposal", test:"test double", alt:"sibling branch", uc:"? not checked against source"}
+};
+const KC_DEFAULT = {
+  io:"#45464d", app:"#3c4f63", model:"#2f4a6b", cfg:"#6c4f47", resolve:"#7a5a20", seam:"#1f6262",
+  build:"#335c33", alt:"#6b7d6b", test:"#6a4c93", exec:"#335c7d", req:"#4b3b6e", adapter:"#5d4b80",
+  resp:"#702828", side:"#6b6f76", dead:"#8a8f96", store:"#4d5a2c", net:"#2c5a5a", ui:"#5a3c5a"
+};
+const MARK = {data:"#7d8590", leak:"#d32f2f", dep:"#2563eb", alt:"#9aa1ab", next:"#1b7f3b", test:"#7c3aed"};
+const EDGE_ORDER = ["data","leak","dep","next","test","alt"];
+
+function merge(a, b){
+  const o = {...a};
+  for (const k in (b || {})) {
+    const v = b[k];
+    o[k] = (v && typeof v === "object" && !Array.isArray(v) && a[k] && typeof a[k] === "object") ? {...a[k], ...v} : v;
+  }
+  return o;
+}
+const UI = merge(G.lang === "en" ? UI_EN : UI_ZH, G.ui);
+const KC = {...KC_DEFAULT, ...(G.kinds || {})};
+const L = Object.assign({nodeW:250, gapX:80, gapY:58, laneGap:200}, G.layout || {});
+const W = L.nodeW;
+
+/* ======================= data ======================= */
+const LANES = (G.lanes && G.lanes.length ? G.lanes : [{id:"main"}]).map((l, i) => ({...l, i}));
+const laneIdx = {}; LANES.forEach(l => laneIdx[l.id] = l.i);
+const NODES = G.nodes;
+NODES.forEach(n => { n.li = (n.lane in laneIdx) ? laneIdx[n.lane] : 0; });
+let acc = 0;
+LANES.forEach(l => {
+  l.cols = l.cols || Math.max(1, ...NODES.filter(n => n.li === l.i).map(n => n.c + 1));
+  l.x = acc; l.w = l.cols * W + (l.cols - 1) * L.gapX; acc += l.w + L.laneGap;
+});
+// edge: [from, to, label?, kind?, in?, {ref, chk}?]; in = both | now | next; chk is set by build.py --src
+const CHECKED = !!G.checked;
+const EDGES = G.edges.map(a => {
+  const info = (a[5] && typeof a[5] === "object") ? a[5] : {};
+  const e = {from:a[0], to:a[1], label:a[2] || "", kind:a[3] || "data", in:a[4] || (a[3] === "next" ? "next" : "both"),
+    refs:[].concat(info.ref || []), chk:info.chk || null};
+  e.uc = CHECKED && e.chk !== "ok";
+  return e;
+});
+const N_OK = EDGES.filter(e => e.chk === "ok").length;
+const ISSUES = G.issues || {};
+const FIXED = new Set(G.fixedNext || []);
+const GROUPS = G.groups || [];
+const OV = G.overview || {};
+const byId = {}; NODES.forEach(n => byId[n.id] = n);
+const anyRow = (n, f) => [...(n.rows || []), ...(n.rowsNext || [])].some(r => r[2] === f);
+const HAS = {
+  next: NODES.some(n => n.rowsNext || n.removedNext || n.nextOnly || n.dxNext || anyRow(n, "n")) || EDGES.some(e => e.in !== "both") || FIXED.size > 0,
+  issue: Object.keys(ISSUES).length > 0 || EDGES.some(e => e.kind === "leak") || NODES.some(n => anyRow(n, "w")),
+  branch: NODES.some(n => n.branch || n.share) || EDGES.some(e => e.kind === "alt"),
+  ev: NODES.some(n => n.st)
+};
+
+/* ======================= state ======================= */
+let view = "now", showIssue = HAS.issue, showBranch = false, sel = null;
+let tx = 0, ty = 0, sc = 1, ES = [], RECTS = [], BOUNDS = {x0:0, y0:0, x1:1, y1:1};
+
+const $ = s => document.querySelector(s);
+const stage = $("#stage"), world = $("#world"), nodesEl = $("#nodes"), under = $("#under"), over = $("#over"), panel = $("#panel");
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const rich = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+const fill = (s, o) => s.replace(/\{(\w+)\}/g, (m, k) => (k in o ? o[k] : m));
+
+const isVisible = n => !(n.branch && !showBranch) && !(n.nextOnly && view !== "next");
+const isGone = n => view === "next" && !!n.removedNext;
+const rowsOf = n => ((view === "next" && n.rowsNext) ? n.rowsNext : n.rows) || [];
+const isFixed = d => view === "next" && FIXED.has(d);
+function edgeOn(e){
+  if (e.in === "now" && view !== "now") return false;
+  if (e.in === "next" && view !== "next") return false;
+  if (e.kind === "leak" && !showIssue) return false;
+  if (e.kind === "alt" && !showBranch) return false;
+  return true;
+}
+
+/* ======================= header / legend ======================= */
+document.title = G.title || "graph";
+$("#ttl").textContent = G.title || "";
+$("#hint").textContent = UI.hint;
+$("#view").hidden = !HAS.next;
+document.querySelectorAll("#view button").forEach(b => b.textContent = UI[b.dataset.v]);
+$("#tg-issue").hidden = !HAS.issue; $("#tg-issue span").textContent = UI.issues; $("#t-issue").checked = showIssue;
+$("#tg-branch").hidden = !HAS.branch; $("#tg-branch span").textContent = UI.branch;
+$("#z-fit").textContent = UI.fit; $("#z-fit").title = UI.fitTitle; $("#z-in").title = UI.zin; $("#z-out").title = UI.zout;
+(function checkBadge(){
+  const b = $("#ck"), state = !CHECKED ? "none" : N_OK === EDGES.length ? "all" : "some";
+  b.textContent = fill(UI.ck[state] || "", {ok:N_OK, all:EDGES.length});
+  b.className = "ck " + state;
+  b.hidden = !EDGES.length || !b.textContent;
+})();
+(function legend(){
+  const used = new Set(EDGES.map(e => e.kind));
+  let s = EDGE_ORDER.filter(k => used.has(k)).map(k => `<div><i class="ln ${k === "data" ? "" : k}"></i>${esc(UI.lg[k])}</div>`).join("");
+  if (EDGES.some(e => e.uc)) s += `<div><i class="ln uc"></i>${esc(UI.lg.uc)}</div>`;
+  if (HAS.ev) s += `<div>${["obs","inf","unk"].map(k => `<i class="dot" style="background:var(--${k})"></i>${esc(UI.ev[k])}`).join("")}</div>`;
+  $("#legend").innerHTML = s;
+  $("#legend").hidden = !s;
+})();
+
+/* ======================= render ======================= */
+NODES.forEach(n => {
+  const el = document.createElement("div");
+  el.className = "node"; el.dataset.id = n.id; el.style.width = W + "px"; n.el = el; nodesEl.appendChild(el);
+});
+
+function nodeHTML(n){
+  const dvs = showIssue ? (n.issues || []).map(d =>
+    `<b class="dv ${isFixed(d) ? "fixed" : ""}" title="${esc((ISSUES[d] || {}).t || d)}">${esc(d)}</b>`).join("") : "";
+  const rows = rowsOf(n).map(r =>
+    `<div class="r ${r[2] || ""}"><span class="k" title="${esc(r[0])}">${esc(r[0])}</span><span class="eq">=</span><span class="v">${esc(r[1])}</span></div>`).join("");
+  const sh = (showBranch && n.share) ? `<div class="sh sh-${n.share}">${esc(UI.branch)} · ${esc(UI.share[n.share])}${n.shareNote ? " *" : ""}</div>` : "";
+  return `<div class="nh" style="background:${KC[n.k] || "#55595f"}">${n.st ? `<i class="st ${n.st}"></i>` : ""}
+    <div class="tt">${n.ty ? `<span class="ty">${esc(n.ty)}</span>` : ""}<span class="nm">${esc(n.t)}</span></div>
+    ${isGone(n) ? `<span class="gc">${esc(UI.removed)}</span>` : ""}${dvs ? `<span class="dvs">${dvs}</span>` : ""}</div>
+    ${rows ? `<div class="nb">${rows}</div>` : ""}${sh}`;
+}
+
+function laneRect(l){
+  const ns = NODES.filter(n => n.li === l.i && isVisible(n));
+  if (!ns.length) return null;
+  return {
+    x0: Math.min(l.x, ...ns.map(n => n.x)) - 26,
+    x1: Math.max(l.x + l.w, ...ns.map(n => n.x + n.w)) + 26,
+    y0: l.title ? -84 : -26,
+    y1: Math.max(...ns.map(n => n.y + n.h)) + 26
+  };
+}
+
+function layout(){
+  world.classList.toggle("issues", showIssue);
+  const vis = [];
+  NODES.forEach(n => {
+    const v = isVisible(n);
+    n.el.style.display = v ? "" : "none";
+    if (!v) return;
+    n.el.innerHTML = nodeHTML(n);
+    n.el.classList.toggle("gone", isGone(n));
+    n.el.classList.toggle("sel", sel === n.id);
+    vis.push(n);
+  });
+  // rows are per lane: each lane is its own lifecycle, so its rows pack independently
+  const rowH = LANES.map(() => []);
+  vis.forEach(n => { n.w = W; n.h = n.el.offsetHeight; const rh = rowH[n.li]; rh[n.r] = Math.max(rh[n.r] || 0, n.h); });
+  LANES.forEach(l => {
+    const rh = rowH[l.i], ry = []; let y = 0;
+    for (let r = 0; r < rh.length; r++){ ry[r] = y; if (rh[r]) y += rh[r] + L.gapY; }
+    l.rowY = ry;
+  });
+  vis.forEach(n => {
+    const l = LANES[n.li];
+    n.x = l.x + n.c * (W + L.gapX) + (view === "next" && n.dxNext ? n.dxNext : 0);
+    n.y = l.rowY[n.r];
+    n.el.style.left = n.x + "px"; n.el.style.top = n.y + "px";
+  });
+  RECTS = LANES.map(laneRect);
+  const rs = RECTS.filter(Boolean);
+  BOUNDS = rs.length
+    ? {x0: Math.min(...rs.map(r => r.x0)) - 16, x1: Math.max(...rs.map(r => r.x1)) + 60, y0: Math.min(...rs.map(r => r.y0)) - 16, y1: Math.max(...rs.map(r => r.y1)) + 16}
+    : {x0:0, y0:0, x1:1, y1:1};
+  drawEdges();
+}
+
+function anchor(n, side, off){
+  if (side === "b") return [n.x + n.w/2 + off, n.y + n.h];
+  if (side === "t") return [n.x + n.w/2 + off, n.y];
+  if (side === "r") return [n.x + n.w, n.y + n.h/2 + off];
+  return [n.x, n.y + n.h/2 + off];
+}
+function bez(p0, p1, p2, p3, t){
+  const u = 1 - t;
+  return [0,1].map(i => u*u*u*p0[i] + 3*u*u*t*p1[i] + 3*u*t*t*p2[i] + t*t*t*p3[i]);
+}
+const DEFS = "<defs>" + Object.entries(MARK).map(([k,c]) =>
+  `<marker id="m-${k}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="${c}"/></marker>`).join("") + "</defs>";
+
+function decorSVG(){
+  let s = "";
+  LANES.forEach(l => {
+    const R = RECTS[l.i];
+    if (!R || LANES.length === 1 && !l.title) return;
+    s += `<rect class="lane" x="${R.x0}" y="${R.y0}" width="${R.x1-R.x0}" height="${R.y1-R.y0}" rx="12"/>`;
+    if (l.title) s += `<text class="lanet" x="${R.x0+16}" y="${R.y0+26}">${esc(l.title)}</text>`;
+    if (l.sub) s += `<text class="lanes" x="${R.x0+16}" y="${R.y0+45}">${esc(l.sub)}</text>`;
+  });
+  GROUPS.forEach(g => {
+    const ms = (g.members || []).map(id => byId[id]).filter(n => n && isVisible(n));
+    if (!ms.length) return;
+    const x0 = Math.min(...ms.map(n => n.x)) - 16, x1 = Math.max(...ms.map(n => n.x + n.w)) + 16;
+    const y0 = Math.min(...ms.map(n => n.y)) - 30, y1 = Math.max(...ms.map(n => n.y + n.h)) + 16;
+    s += `<rect class="grp" x="${x0}" y="${y0}" width="${x1-x0}" height="${y1-y0}" rx="10"/>`;
+    if (g.label) s += `<text class="grpl" x="${x0+12}" y="${y0+19}">${esc(g.label)}</text>`;
+  });
+  return s;
+}
+
+function drawEdges(){
+  const es = EDGES.filter(e => byId[e.from] && byId[e.to] && isVisible(byId[e.from]) && isVisible(byId[e.to]) && edgeOn(e))
+    .map(e => ({s:byId[e.from], t:byId[e.to], label:e.label, kind:e.kind, refs:e.refs, chk:e.chk, uc:e.uc}));
+  es.forEach(e => {
+    const {s, t} = e;
+    if (s.li !== t.li) { e.mode = "x"; [e.ss, e.ts] = t.li > s.li ? ["r","l"] : ["l","r"]; }
+    else if (t.y >= s.y + s.h + 8) { e.mode = "v"; e.ss = "b"; e.ts = "t"; }
+    else if (Math.abs(t.x - s.x) < W && t.y + t.h + 8 <= s.y) { e.mode = "h"; e.ss = "l"; e.ts = "l"; }  // back edge up the same column
+    else if (t.x > s.x) { e.mode = "h"; e.ss = "r"; e.ts = "l"; }
+    else { e.mode = "h"; e.ss = "l"; e.ts = "r"; }
+  });
+  // spread ports: several edges on one side of a node are sorted by the far end and fanned out
+  const groups = new Map();
+  const push = (n, side, e, end) => { const k = n.id + ":" + side; if (!groups.has(k)) groups.set(k, []); groups.get(k).push({e, end, side}); };
+  es.forEach(e => { push(e.s, e.ss, e, "s"); push(e.t, e.ts, e, "t"); });
+  groups.forEach(list => {
+    const vert = list[0].side === "b" || list[0].side === "t";
+    const other = it => it.end === "s" ? it.e.t : it.e.s;
+    const key = n => vert ? n.x + n.w/2 : n.y + n.h/2;
+    list.sort((a, b) => key(other(a)) - key(other(b)));
+    const step = vert ? 18 : 14;
+    list.forEach((it, i) => { it.e[it.end === "s" ? "so" : "to"] = (i - (list.length - 1)/2) * step; });
+  });
+  // cross-lane edges run in a vertical channel inside the gap next to the target lane
+  const gaps = new Map();
+  es.filter(e => e.mode === "x").forEach(e => {
+    const g = e.t.li > e.s.li ? e.t.li - 1 : e.t.li;
+    if (!gaps.has(g)) gaps.set(g, []);
+    gaps.get(g).push(e);
+  });
+  gaps.forEach((list, g) => {
+    const left = RECTS[g] ? RECTS[g].x1 : LANES[g].x + LANES[g].w + 26;
+    const right = RECTS[g + 1] ? RECTS[g + 1].x0 : LANES[g + 1].x - 26;
+    const gs = left + 10, ge = right - 10;
+    const step = list.length > 1 ? Math.min(24, (ge - gs) / (list.length - 1)) : 0;
+    list.sort((a, b) => Math.abs(b.t.y - b.s.y) - Math.abs(a.t.y - a.s.y))
+      .forEach((e, i) => { e.ch = gs + i * step; e.lf = i % 2 ? 0.62 : 0.38; });
+  });
+
+  let u = DEFS + decorSVG(), o = "";
+  es.forEach(e => {
+    const [sx, sy] = anchor(e.s, e.ss, e.so || 0), [tx2, ty2] = anchor(e.t, e.ts, e.to || 0);
+    let d, lx, ly;
+    if (e.mode === "v"){
+      const dy = Math.max(26, (ty2 - sy)/2);
+      d = `M${sx},${sy} C${sx},${sy+dy} ${tx2},${ty2-dy} ${tx2},${ty2}`;
+      [lx, ly] = bez([sx,sy],[sx,sy+dy],[tx2,ty2-dy],[tx2,ty2],0.5);
+    } else if (e.mode === "h"){
+      const ds = e.ss === "r" ? 1 : -1, dt = e.ts === "r" ? 1 : -1;
+      const dx = e.ss === e.ts ? Math.max(50, Math.min(120, Math.abs(ty2 - sy)/4)) : Math.max(40, Math.abs(tx2 - sx)/2);
+      const c1 = [sx + ds*dx, sy], c2 = [tx2 + dt*dx, ty2];
+      d = `M${sx},${sy} C${c1[0]},${c1[1]} ${c2[0]},${c2[1]} ${tx2},${ty2}`;
+      [lx, ly] = bez([sx,sy], c1, c2, [tx2,ty2], 0.5); ly -= 7;
+    } else {
+      const c = e.ch, r = 10, sY = ty2 > sy ? 1 : -1, dIn = c > sx ? 1 : -1, dOut = tx2 > c ? 1 : -1;
+      d = Math.abs(ty2 - sy) < 2*r
+        ? `M${sx},${sy} H${c} V${ty2} H${tx2}`
+        : `M${sx},${sy} H${c - dIn*r} Q${c},${sy} ${c},${sy+sY*r} V${ty2-sY*r} Q${c},${ty2} ${c + dOut*r},${ty2} H${tx2}`;
+      lx = sx + (c - sx) * e.lf; ly = sy - 7;
+    }
+    const hl = sel && (e.s.id === sel || e.t.id === sel) ? " hl" : "";
+    const uc = e.uc ? " uc" : "";
+    u += `<path class="e ${e.kind}${uc}${hl}" d="${d}" marker-end="url(#m-${e.kind})"/>`;
+    if (e.label || e.uc) o += `<text class="lb ${e.kind}${uc}${hl}" x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle">${esc((e.uc ? "? " : "") + e.label)}</text>`;
+  });
+  under.innerHTML = u; over.innerHTML = o;
+  ES = es;
+}
+
+/* ======================= panel ======================= */
+function issueRows(list){
+  return list.filter(d => ISSUES[d]).map(d => {
+    const I = ISSUES[d];
+    return `<div class="dvrow ${isFixed(d) ? "fixed" : ""}"><b class="s${I.sev || 3}">${esc(d)}</b><span class="${I.go ? "lnk" : ""}" ${I.go ? `data-go="${esc(I.go)}"` : ""}>${esc(I.t)}${isFixed(d) ? esc(UI.fixedSuffix) : ""}</span></div>`;
+  }).join("");
+}
+function overviewHTML(){
+  const how = [...(OV.how || []).map(rich)];
+  if (LANES.length > 1 && UI.howLanes) how.push(esc(UI.howLanes));
+  if (UI.howNode) how.push(esc(UI.howNode));
+  if (HAS.ev && UI.howEv) how.push(esc(fill(UI.howEv, UI.ev)));
+  if (HAS.issue && UI.howIssue) how.push(esc(UI.howIssue));
+  if (HAS.next && UI.howNext) how.push(esc(fill(UI.howNext, {next:UI.next})));
+  if (HAS.branch && UI.howBranch) how.push(esc(fill(UI.howBranch, {branch:UI.branch})));
+  if (EDGES.length && CHECKED && UI.howChk) how.push(esc(fill(UI.howChk, {ok:N_OK, all:EDGES.length})));
+  if (EDGES.length && !CHECKED && UI.howNoChk) how.push(esc(UI.howNoChk));
+  const cards = (OV.cards || []).map(c =>
+    `<div class="cc" data-go="${esc(c.go)}" ${c.view ? `data-view="${esc(c.view)}"` : ""}><b>${esc(c.title)}</b>${c.sub ? `<span>${esc(c.sub)}</span>` : ""}</div>`).join("");
+  const ids = Object.keys(ISSUES);
+  return `<h2>${esc(OV.title || UI.howTitle)}</h2>
+  <ul class="how">${how.map(x => `<li>${x}</li>`).join("")}</ul>
+  ${cards ? `<div class="sec"><h4>${esc(OV.cardsTitle || UI.cardsTitle)}</h4>${cards}</div>` : ""}
+  ${ids.length ? `<div class="sec"><h4>${esc(OV.issuesTitle || UI.issuesAll)}</h4>${issueRows(ids)}</div>` : ""}`;
+}
+function nodePanelHTML(n){
+  const ins = ES.filter(e => e.t === n), outs = ES.filter(e => e.s === n);
+  const refsOf = e => {
+    const cls = !CHECKED ? "" : e.uc ? "uc" : "ok", mark = !CHECKED ? "" : e.uc ? "? " : "✓ ";
+    return e.refs.length ? e.refs.map(r => `<span class="er ${cls}">${mark}${esc(r)}</span>`).join("")
+      : (CHECKED ? `<span class="er uc">? ${esc(UI.lg.uc.replace(/^\?\s*/, ""))}</span>` : "");
+  };
+  const io = (list, pick) => list.length ? list.map(e => `<div class="io"><span class="lnk" data-go="${esc(pick(e).id)}">${esc(pick(e).t)}</span>${e.label ? `<span class="el ${e.kind}">${esc(e.label)}</span>` : ""}${refsOf(e)}</div>`).join("") : '<div class="io" style="color:#8a919c">—</div>';
+  const rows = rowsOf(n).map(r => `<div class="prow ${r[2] || ""}"><span class="k">${esc(r[0])}</span><span class="v">${esc(r[1])}</span></div>`).join("");
+  return `<span class="back" data-back="1">${esc(UI.back)}</span>
+  <div style="margin-top:8px">${n.ty ? `<span class="chip" style="background:${KC[n.k] || "#55595f"};color:#fff">${esc(n.ty)}</span>` : ""}${n.st ? `<span class="chip ${n.st}">${esc(UI.ev[n.st])}</span>` : ""}${isGone(n) ? `<span class="chip gone">${esc(UI.removedChip)}</span>` : ""}</div>
+  <h2>${esc(n.t)}</h2>
+  ${n.verdict ? `<div class="verdict">${esc(n.verdict)}</div>` : ""}
+  ${n.fix ? `<div class="fix"><b>${esc(UI.fixLabel)}</b>　${esc(n.fix)}</div>` : ""}
+  ${rows ? `<div class="sec"><h4>${esc(UI.attrs)}${HAS.next ? `（${esc(view === "next" ? UI.next : UI.now)}）` : ""}</h4>${rows}</div>` : ""}
+  <div class="sec"><h4>${esc(UI.inputs)}</h4>${io(ins, e => e.s)}</div>
+  <div class="sec"><h4>${esc(UI.outputs)}</h4>${io(outs, e => e.t)}</div>
+  ${n.iface && n.iface.length ? `<div class="sec"><h4>${esc(UI.iface)}</h4><ul>${n.iface.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+  ${n.issues && n.issues.length ? `<div class="sec"><h4>${esc(UI.issueSec)}</h4>${issueRows(n.issues)}</div>` : ""}
+  ${n.share ? `<div class="sec"><h4>${esc(UI.branchTitle || UI.branch)}</h4><div class="sh sh-${n.share}" style="border:0;border-radius:4px">${esc(UI.share[n.share])}</div>${n.shareNote ? `<div style="font-size:12px;color:#5b6370;margin-top:5px">* ${esc(n.shareNote)}</div>` : ""}</div>` : ""}
+  ${n.refs && n.refs.length ? `<div class="sec refs"><h4>${esc(UI.refs)}</h4>${n.refs.map(r => `<code>${esc(r)}</code>`).join("")}</div>` : ""}`;
+}
+function renderPanel(){
+  panel.innerHTML = sel ? nodePanelHTML(byId[sel]) : overviewHTML();
+  panel.scrollTop = 0;
+}
+panel.addEventListener("click", e => {
+  if (e.target.closest("[data-back]")) { select(null); return; }
+  const g = e.target.closest("[data-go]");
+  if (!g) return;
+  const n = byId[g.dataset.go];
+  if (!n) return;
+  if (g.dataset.view && g.dataset.view !== view) setView(g.dataset.view);
+  if (n.nextOnly && view !== "next") setView("next");
+  if (n.branch && !showBranch) setBranch(true);
+  select(n.id); focusNode(n.id);
+});
+
+/* ======================= interactions ======================= */
+function apply(){ world.style.transform = `translate(${tx}px,${ty}px) scale(${sc})`; }
+const clampS = s => Math.min(2.5, Math.max(0.12, s));
+function zoomAt(px, py, k){
+  const ns = clampS(sc * k); k = ns / sc;
+  tx = px - (px - tx) * k; ty = py - (py - ty) * k; sc = ns; apply();
+}
+function fit(){
+  const r = stage.getBoundingClientRect(), B = BOUNDS;
+  sc = clampS(Math.min(r.width / (B.x1 - B.x0), r.height / (B.y1 - B.y0), 1.1));
+  tx = (r.width - (B.x1 - B.x0) * sc) / 2 - B.x0 * sc;
+  ty = Math.max(8, (r.height - (B.y1 - B.y0) * sc) / 2) - B.y0 * sc;
+  apply();
+}
+function focusNode(id){
+  const n = byId[id]; if (!n || !isVisible(n)) return;
+  const r = stage.getBoundingClientRect();
+  sc = Math.max(sc, 0.75); tx = r.width/2 - (n.x + n.w/2) * sc; ty = r.height/2 - (n.y + n.h/2) * sc; apply();
+}
+function select(id){
+  sel = id;
+  NODES.forEach(n => n.el.classList.toggle("sel", sel === n.id));
+  drawEdges(); renderPanel();
+}
+function setView(v){
+  view = v;
+  document.querySelectorAll("#view button").forEach(b => b.classList.toggle("on", b.dataset.v === v));
+  if (sel && !isVisible(byId[sel])) sel = null;
+  layout(); renderPanel();
+}
+function setBranch(on){ showBranch = on; $("#t-branch").checked = on; if (sel && !isVisible(byId[sel])) sel = null; layout(); renderPanel(); }
+
+document.querySelectorAll("#view button").forEach(b => b.addEventListener("click", () => setView(b.dataset.v)));
+$("#t-issue").addEventListener("change", e => { showIssue = e.target.checked; layout(); renderPanel(); });
+$("#t-branch").addEventListener("change", e => setBranch(e.target.checked));
+$("#z-in").addEventListener("click", () => { const r = stage.getBoundingClientRect(); zoomAt(r.width/2, r.height/2, 1.25); });
+$("#z-out").addEventListener("click", () => { const r = stage.getBoundingClientRect(); zoomAt(r.width/2, r.height/2, 0.8); });
+$("#z-fit").addEventListener("click", fit);
+
+stage.addEventListener("wheel", e => {
+  e.preventDefault();
+  const r = stage.getBoundingClientRect();
+  zoomAt(e.clientX - r.left, e.clientY - r.top, Math.exp(-e.deltaY * 0.0015));
+}, {passive:false});
+
+const pts = new Map();
+let pan = null, pinch = null, moved = false, downTarget = null;
+const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
+stage.addEventListener("pointerdown", e => {
+  if (e.target.closest("#legend")) return;
+  try { stage.setPointerCapture(e.pointerId); } catch (_) { /* synthetic events have no active pointer */ }
+  pts.set(e.pointerId, {x:e.clientX, y:e.clientY});
+  if (pts.size === 1){ pan = {x:e.clientX, y:e.clientY, tx, ty}; moved = false; downTarget = e.target; stage.classList.add("drag"); }
+  else if (pts.size === 2){
+    const [a, b] = [...pts.values()];
+    pinch = {d:dist(a, b), sc, tx, ty, mx:(a.x + b.x)/2, my:(a.y + b.y)/2}; pan = null; moved = true;
+  }
+});
+stage.addEventListener("pointermove", e => {
+  if (!pts.has(e.pointerId)) return;
+  pts.set(e.pointerId, {x:e.clientX, y:e.clientY});
+  if (pts.size === 2 && pinch){
+    const [a, b] = [...pts.values()], r = stage.getBoundingClientRect();
+    const ns = clampS(pinch.sc * dist(a, b) / pinch.d), k = ns / pinch.sc;
+    const px = pinch.mx - r.left, py = pinch.my - r.top;
+    tx = px - (px - pinch.tx) * k; ty = py - (py - pinch.ty) * k; sc = ns; apply();
+  } else if (pan){
+    const dx = e.clientX - pan.x, dy = e.clientY - pan.y;
+    if (Math.abs(dx) + Math.abs(dy) > 4) moved = true;
+    tx = pan.tx + dx; ty = pan.ty + dy; apply();
+  }
+});
+function endPtr(e){
+  if (!pts.has(e.pointerId)) return;
+  pts.delete(e.pointerId);
+  if (pts.size === 0){
+    if (!moved && downTarget){ const nd = downTarget.closest(".node"); select(nd ? nd.dataset.id : null); }
+    pan = null; pinch = null; downTarget = null; stage.classList.remove("drag");
+  } else if (pts.size === 1){
+    const [p] = [...pts.values()]; pan = {x:p.x, y:p.y, tx, ty}; pinch = null;
+  }
+}
+stage.addEventListener("pointerup", endPtr);
+stage.addEventListener("pointercancel", endPtr);
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") select(null);
+  if (e.key === "f" || e.key === "F") fit();
+});
+
+layout(); renderPanel(); fit();
+window.addEventListener("resize", () => { if (!pts.size) fit(); });
+</script>
+</body>
+</html>

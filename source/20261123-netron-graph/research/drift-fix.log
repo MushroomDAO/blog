@@ -1,0 +1,7 @@
+fixed 2 drifted ref(s) in /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/netron-check-g3l1ms2p/drift-fix/g.json; check each lands on the same call:
+    api/items.py:10 -> api/items.py:12   items = cache.get(user_id)
+    api/items.py:11 -> api/items.py:12   items = cache.get(user_id)
+warn: node A4: ref api/items.py:14 no longer mentions serialize; the nearest mention (api/items.py:13) is a use, not its definition, so the node may be gone
+ok: 8 nodes (8 main, 0 branch, 0 next-only), 8 edges, 3 lanes, 1 issues
+source: 8/8 edges checked against /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/netron-check-g3l1ms2p/drift-fix/src
+wrote /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/netron-check-g3l1ms2p/drift-fix/out.html (39832 bytes)

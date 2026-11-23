@@ -1,0 +1,4 @@
+warn: edges have refs or nodes have scans, but nothing checked them: pass --src REPO_ROOT
+ok: 8 nodes (8 main, 0 branch, 0 next-only), 8 edges, 3 lanes, 1 issues
+source: not checked (no --src); the viewer shows a 'not checked' badge
+wrote /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/netron-check-g3l1ms2p/no-source/out.html (39806 bytes)

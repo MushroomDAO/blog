@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-23T01:51:27.389948+00:00",
+  "lengths": {
+    "description": 159,
+    "descriptionEn": 154,
+    "titleEn": 56,
+    "wechatTitle": 22,
+    "wechatDigest": 29
+  },
+  "checks": [
+    "BLUF+questionheadings+FAQ3+copyright bothlanguages",
+    "MIT official README/schema/build sources",
+    "9 controlled CLI scenarios, including expected hard failures",
+    "baseline8of8,missingref7of8,drift6of8->fix8of8",
+    "comment-only marker8of8 proves lexical notsemantic check",
+    "scan scope limited; authored observed/proposed labels; no runtime/agent/vLLM/browser proof",
+    "matchedcover3figuresandrelatedreading"
+  ]
+}

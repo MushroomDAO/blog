@@ -1,0 +1,45 @@
+{
+  "orderingNote": "List uses same-day date sorting; actual lastPublishedAt records publication time for carousel ordering.",
+  "checkedAt": "2026-11-23T01:52:41.217913+00:00",
+  "articles": [
+    {
+      "slug": "netron-graph-source-checked-code-flow-guide",
+      "url": "https://blog.mushroom.cv/blog/netron-graph-source-checked-code-flow-guide/",
+      "title": "netron-graph：让代码链路有据可查，但别把箭头当证明",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/netron-graph-source-checked-code-flow-guide-banner.BDW8l-V_.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 90590
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/netron-graph-source-checked-code-flow-guide-banner.BDW8l-V__Z1BFWrv.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 26048
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/netron-graph-source-checked-code-flow-guide-fig-01.CDGKSLEA_Z28hU5f.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 30984
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/netron-graph-source-checked-code-flow-guide-fig-02.DEVGndc__Kz8dG.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 42874
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/netron-graph-source-checked-code-flow-guide-fig-03.D8_gZL8r_Z2ctFh6.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 43730
+        }
+      ]
+    }
+  ]
+}

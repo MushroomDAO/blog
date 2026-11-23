@@ -1,0 +1,32 @@
+{
+  "banner": "machine/manualpass; unmarked wooden network blocks with blue-orange cord; seed9601 manually viewed; explanatorygeneratedscene",
+  "body": [
+    {
+      "file": "src/assets/images/netron-graph-source-checked-code-flow-guide-fig-01.png",
+      "bytes": 49041,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass;correct sparseChinese; on-topic LittleM; originals preserved"
+    },
+    {
+      "file": "src/assets/images/netron-graph-source-checked-code-flow-guide-fig-02.png",
+      "bytes": 62557,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass;correct sparseChinese; on-topic LittleM; originals preserved"
+    },
+    {
+      "file": "src/assets/images/netron-graph-source-checked-code-flow-guide-fig-03.png",
+      "bytes": 76640,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "manualReview": "pass;correct sparseChinese; on-topic LittleM; originals preserved"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+warn: edge A1->A2: ref api/items.py:10 drifted; nearest mention of cache.get(user_id) is api/items.py:12 (--fix-refs will rewrite it)
+warn: edge A2->A4: ref api/items.py:11 drifted; nearest mention of get / serialize is api/items.py:12 (--fix-refs will rewrite it)
+warn: node A4: ref api/items.py:14 no longer mentions serialize; the nearest mention (api/items.py:13) is a use, not its definition, so the node may be gone
+ok: 8 nodes (8 main, 0 branch, 0 next-only), 8 edges, 3 lanes, 1 issues
+source: 6/8 edges checked against /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/netron-check-g3l1ms2p/drift-warning/src; unchecked: A1->A2 (drift), A2->A4 (drift)
+wrote /var/folders/4d/yrsdwdm10h784v_m6fwm12540000gn/T/netron-check-g3l1ms2p/drift-warning/out.html (39838 bytes)

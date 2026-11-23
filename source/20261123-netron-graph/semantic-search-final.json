@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "netron-graph-source-checked-code-flow-guide",
+    "query": "netron-graph 源码 调用链 引用 核对",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "netron-graph-source-checked-code-flow-guide",
+          "title": "netron-graph：让代码链路有据可查，但别把箭头当证明",
+          "url": "/blog/netron-graph-source-checked-code-flow-guide/",
+          "language": "zh",
+          "excerpt": "netron-graph：让代码链路有据可查，但别把箭头当证明 netron-graph 为源码调用链、配置传播和重构讨论生成可交互图，把连接绑定到具体文件行。本文核对 Oliver0719 的 MIT 项目，运行九个真实 CLI 场景，验证缺失引用、行号漂移、扫描漏项和自动修复，同时用注释反例说明文本锚点并不证明运行行为，帮助区分漂亮架构图、可维护证据与实际代码验收的不同层级。 netron-graph 代码可视化 Agent技能 软件架构 它把哪种代码阅读问题变得具体？ “源码核对”到底检查了什么？ 我们用九个 CLI 场景验证了什么？ scan 能",
+          "score": 0.746549
+        },
+        {
+          "article_id": "code-review-graph-tirth8205-blast-radius-token-reduction",
+          "title": "code-review-graph：给 AI 编程助手建一张本地代码关系图，中位数减少 65 倍 token 用量",
+          "url": "/blog/code-review-graph-tirth8205-blast-radius-token-reduction/",
+          "language": "zh",
+          "excerpt": "code-review-graph：给 AI 编程助手建一张本地代码关系图，中位数减少 65 倍 token 用量 tirth8205 开源的本地代码智能图工具，29.5k stars，Python，MIT License。用 Tree-sitter 把代码库解析成函数/类/调用/测试的关系图，存储在 SQLite；代码审查时只把受影响的文件和调用链（Blast Radius）交给 AI，而不是整个代码库。六个真实仓库测试：中位数减少 65 倍 token 用量，最大 376 倍（fastapi）。支持 15+ AI 编程平台，30+ 编程语言，增量更新",
+          "score": 0.55687684
+        },
+        {
+          "article_id": "graphmind-code-knowledge-graph-agent-guide",
+          "title": "GraphMind：把代码库变成知识图谱，让 AI 永久记住你的架构",
+          "url": "/blog/graphmind-code-knowledge-graph-agent-guide/",
+          "language": "zh",
+          "excerpt": "GraphMind：把代码库变成知识图谱，让 AI 永久记住你的架构 GraphMind（aouicher/graphmind，191★，MIT，Rust）是一个本地优先的代码知识图谱工具，通过 25 个 MCP 工具让 Claude Code、Cursor、Windsurf、Cline 等 AI 编程助手直接查询项目结构、调用链、死代码和跨项目依赖——无需重复索引，单次查询比 grep 少用 5700 倍 token。支持 30+ 语言，四层架构（结构图谱 + 语义向量 + 持久化记忆 + 跨项目关联），本地运行，无需上传代码。 GraphMind 代",
+          "score": 0.5188381
+        },
+        {
+          "article_id": "shannon-keygraph-ai-pentester-web-api-autonomous-exploit",
+          "title": "shannon-keygraph-ai-pentester-web-api-autonomous-exploit",
+          "url": "/blog/shannon-keygraph-ai-pentester-web-api-autonomous-exploit/",
+          "language": "en",
+          "excerpt": "shannon-keygraph-ai-pentester-web-api-autonomous-exploit KeygraphHQ/shannon, 46,621 stars, AGPL-3.0, TypeScript, open-sourced 2025-09-27. Keygraph's autonomous AI penetration testing agent for white-box web and API security testing. Core claim: proof-by-exploitation reports — onl",
+          "score": 0.51852626
+        },
+        {
+          "article_id": "semantica-graph-native-ai-provenance-enterprise-knowledge-graph",
+          "title": "semantica-graph-native-ai-provenance-enterprise-knowledge-graph",
+          "url": "/blog/semantica-graph-native-ai-provenance-enterprise-knowledge-graph/",
+          "language": "en",
+          "excerpt": "semantica-graph-native-ai-provenance-enterprise-knowledge-graph Semantica (GitHub: semantica-agi/semantica, ⭐11,136, MIT, v0.6.7) is a graph-native AI infrastructure layer: auto-builds enterprise knowledge graphs from multi-source data, records every AI decision as a graph node w",
+          "score": 0.5108418
+        },
+        {
+          "article_id": "gbrain-personal-ai-knowledge-brain-guide",
+          "title": "GBrain：Y Combinator CEO 开源的个人 AI 大脑——25000 星知识图谱系统完整介绍",
+          "url": "/blog/gbrain-personal-ai-knowledge-brain-guide/",
+          "language": "zh",
+          "excerpt": "GBrain：Y Combinator CEO 开源的个人 AI 大脑——25000 星知识图谱系统完整介绍 GBrain 是 Y Combinator 总裁 Garry Tan 开源的个人 AI 知识大脑系统，25417★，当前 GitHub Trending 榜单。不同于普通知识库，它有两个核心能力：合成层（给你答案而非返回页面列表）和自动接线知识图谱（无需 LLM 提取实体和关系）。支持本地 PGLite（2秒初始化）或 Postgres+pgvector，通过 MCP 接入 Claude Code / Codex / Cursor，43个内置 S",
+          "score": 0.5086845
+        },
+        {
+          "article_id": "orion-core-rust-agent-harness-local-llm-teardown",
+          "title": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多",
+          "url": "/blog/orion-core-rust-agent-harness-local-llm-teardown/",
+          "language": "zh",
+          "excerpt": "orion-core 实测：3 星 Rust 库给本地小模型补上 Agent 循环，工具调用靠文本约定，中文 token 少估一半多 orion-core 是从桌面应用 OrionPod 拆出的 Rust Agent harness（MIT，3 star，crates.io 下载 74 次）：提供工具调用循环、按整轮裁剪的上下文预算、10 种聊天模板和 15 种流式事件，但不带工具、沙箱、记忆和 MCP，现成后端只有一个 OpenAI 兼容 HTTP 客户端。我们在 M4 Mac mini 上接 mlx_lm.server + Qwen2.5-1.5B ",
+          "score": 0.5083244
+        },
+        {
+          "article_id": "codegraph-claude-code-mcp-semantic-search",
+          "title": "CodeGraph：给 Claude Code 装一个代码知识图谱，省钱 35%、工具调用减少 70%",
+          "url": "/blog/codegraph-claude-code-mcp-semantic-search/",
+          "language": "zh",
+          "excerpt": "CodeGraph：给 Claude Code 装一个代码知识图谱，省钱 35%、工具调用减少 70% CodeGraph 通过 MCP 协议为 Claude Code、Cursor 等 AI 编程助手提供本地代码知识图谱，跨 7 个真实项目基准测试显示平均节省 35% API 成本，减少 70% 工具调用次数，全程 100% 本地运行。 Claude-Code MCP CodeGraph AI-Coding Developer-Tools Knowledge-Graph AI 编程助手为什么会\"扫文件扫到破产\"？ CodeGraph 是什么？ 基准测试",
+          "score": 0.5072885
+        },
+        {
+          "article_id": "nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling",
+          "title": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出",
+          "url": "/blog/nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling/",
+          "language": "zh",
+          "excerpt": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出 NVIDIA NemotronLabs VoiceChat 11B（HF: nvidia/NVIDIA-NemotronLabs-VoiceChat-11B，442 likes，OpenMDW-1.1）是首个开源、全双工、支持工具调用的端到端语音对话模型。不是 ASR→LLM→TTS 的串联流水线，而是单一模型以 12.5 Hz（80ms/帧）同时输出文本、工具调用标记、声学编码三个通道。基于 Nemotron-",
+          "score": 0.507045
+        },
+        {
+          "article_id": "adk-rust-zavora-ai-rust-agent-framework-43-crates-modular",
+          "title": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时",
+          "url": "/blog/adk-rust-zavora-ai-rust-agent-framework-43-crates-modular/",
+          "language": "zh",
+          "excerpt": "ADK-Rust：43 个 crate 拆开来用，社区复刻的 Rust Agent 运行时 zavora-ai 社区维护的 ADK-Rust v2.2.0——不是 Google 官方项目，但把 Agent 运行时拆成 43 个可独立发布的 crate，按需引用。Type-safe、全异步、568 μs agent loop 开销，支持 Gemini/OpenAI/Anthropic/Ollama，含 graph 工作流、durable resume、realtime 语音、adk-skill 解析。本文做一次工程拆解。 rust agent-runtim",
+          "score": 0.5062865
+        }
+      ]
+    }
+  }
+]

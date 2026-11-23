@@ -1,0 +1,36 @@
+[
+  {
+    "id": "ed56f0fce9e192be15147ecb45d9699d0c4d33897c4d6808",
+    "metadata": {
+      "article_id": "netron-graph-source-checked-code-flow-guide",
+      "content_hash": "cf18e53917a28bd0",
+      "excerpt": "netron-graph：让代码链路有据可查，但别把箭头当证明 netron-graph 为源码调用链、配置传播和重构讨论生成可交互图，把连接绑定到具体文件行。本文核对 Oliver0719 的 MIT 项目，运行九个真实 CLI 场景，验证缺失引用、行号漂移、扫描漏项和自动修复，同时用注释反例说明文本锚点并不证明运行行为，帮助区分漂亮架构图、可维护证据与实际代码验收的不同层级。 netron-graph 代码可视化 Agent技能 软件架构 它把哪种代码阅读问题变得具体？ “源码核对”到底检查了什么？ 我们用九个 CLI 场景验证了什么？ scan 能",
+      "language": "zh",
+      "tags": [
+        "netron-graph",
+        "代码可视化",
+        "Agent技能",
+        "软件架构"
+      ],
+      "title": "netron-graph：让代码链路有据可查，但别把箭头当证明",
+      "url": "/blog/netron-graph-source-checked-code-flow-guide/"
+    }
+  },
+  {
+    "id": "4ae8271de3ec5e911dac59dbea189bb05a7f52500e1fba60",
+    "metadata": {
+      "article_id": "netron-graph-source-checked-code-flow-guide",
+      "content_hash": "0dcf2c26d5b492ed",
+      "excerpt": "Netron-graph: Source-Checked Code Flows and Their Limits Review netron-graph code diagrams with nine real CLI scenarios, source-reference drift, scan coverage and a comment-only counterexample to semantic proof. netron-graph 代码可视化 Agent技能 软件架构 What does it add to an architecture ",
+      "language": "en",
+      "tags": [
+        "netron-graph",
+        "代码可视化",
+        "Agent技能",
+        "软件架构"
+      ],
+      "title": "Netron-graph: Source-Checked Code Flows and Their Limits",
+      "url": "/blog/netron-graph-source-checked-code-flow-guide/"
+    }
+  }
+]

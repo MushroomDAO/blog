@@ -1,0 +1,73 @@
+{
+  "commit": "7a60f26aaabcc8f723de4ad3e5e6134eb92fa5f9",
+  "python": "3.12.14",
+  "host": "macOS-26.6.2-arm64-arm-64bit",
+  "cases": [
+    {
+      "name": "baseline",
+      "exit": 0,
+      "htmlWritten": true,
+      "checkedEdges": 8,
+      "totalEdges": 8
+    },
+    {
+      "name": "no-source",
+      "exit": 0,
+      "htmlWritten": true,
+      "checkedEdges": null,
+      "totalEdges": null
+    },
+    {
+      "name": "missing-ref",
+      "exit": 0,
+      "htmlWritten": true,
+      "checkedEdges": 7,
+      "totalEdges": 8
+    },
+    {
+      "name": "removed-call",
+      "exit": 1,
+      "htmlWritten": false,
+      "checkedEdges": null,
+      "totalEdges": null
+    },
+    {
+      "name": "drift-warning",
+      "exit": 0,
+      "htmlWritten": true,
+      "checkedEdges": 6,
+      "totalEdges": 8
+    },
+    {
+      "name": "drift-fix",
+      "exit": 0,
+      "htmlWritten": true,
+      "checkedEdges": 8,
+      "totalEdges": 8
+    },
+    {
+      "name": "scan-missing-writer",
+      "exit": 1,
+      "htmlWritten": false,
+      "checkedEdges": null,
+      "totalEdges": null
+    },
+    {
+      "name": "duplicate-node",
+      "exit": 1,
+      "htmlWritten": false,
+      "checkedEdges": null,
+      "totalEdges": null
+    },
+    {
+      "name": "comment-retains-text",
+      "exit": 0,
+      "htmlWritten": true,
+      "checkedEdges": 8,
+      "totalEdges": 8
+    }
+  ],
+  "scope": "9 controlled CLI scenarios, expected failures count as contract checks; no real app runtime/AI code tracing/vLLM checkout/browser interaction test",
+  "finding": "lexical markers may pass in comments after an actual call is removed; checked is not semantic proof",
+  "htmlSha256": "168220eaeb16f183704e942bb2057e10045f4f95ad1da4ce5e865f0686be5b92"
+}

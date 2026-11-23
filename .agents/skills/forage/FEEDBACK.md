@@ -1580,3 +1580,5 @@ Published harness-adapters-in-loop-rl-tool-governance from exact official URL; i
 - 2026-11-22 Sophon-Realtime: https://blog.mushroom.cv/blog/sophon-realtime-full-duplex-local-voice-guide/；20原始无权重音频控制测试通过；作者H100/M4Max性能、限内存测试与实际设备不同；Mac无克隆/工具，网络默认收音门控。Blog/远程草稿/双语索引/KB回读均已验证；仓库 PR290 待审核。
 
 - 2026-11-22 sprite-stacking: https://blog.mushroom.cv/blog/agent-sprite-stacking-four-view-voxel-guide/；原始八组自检、18层真实CLI通过；前后掩码OR验证12体素；Chrome可见截图但退出清理超时code2，非全功能/性能验收。Blog/远程草稿/双语索引/KB回读均已验证；仓库 PR291 待审核。
+
+- 2026-11-23 netron-graph: https://blog.mushroom.cv/blog/netron-graph-source-checked-code-flow-guide/；九个CLI场景；缺引用/漂移可构建，scan漏项拒绝，注释仍可8/8说明文本核对非语义证明；未测Agent追踪/真实vLLM/浏览器。Blog/远程草稿/双语索引/KB回读均已验证；仓库 PR292 待审核。
