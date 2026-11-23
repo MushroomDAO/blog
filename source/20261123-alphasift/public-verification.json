@@ -1,0 +1,45 @@
+{
+  "orderingNote": "List uses same-day date sorting; actual lastPublishedAt records publication time for carousel ordering.",
+  "checkedAt": "2026-11-23T06:13:12.755555+00:00",
+  "articles": [
+    {
+      "slug": "alphasift-auditable-stock-screening-agent-guide",
+      "url": "https://blog.mushroom.cv/blog/alphasift-auditable-stock-screening-agent-guide/",
+      "title": "AlphaSift：让选股研究有账可查，先分清评分与收益",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/alphasift-auditable-stock-screening-agent-guide-banner.D5DIe1t1.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94662
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/alphasift-auditable-stock-screening-agent-guide-banner.D5DIe1t1_2lkiMc.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 66394
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/alphasift-auditable-stock-screening-agent-guide-fig-01.pz3kxS-B_Z11SNF3.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 47832
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/alphasift-auditable-stock-screening-agent-guide-fig-02.Ca9781bI_2n2gh2.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 36576
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/alphasift-auditable-stock-screening-agent-guide-fig-03._Bw_etoY_1rMLLx.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 57820
+        }
+      ]
+    }
+  ]
+}

@@ -1582,3 +1582,5 @@ Published harness-adapters-in-loop-rl-tool-governance from exact official URL; i
 - 2026-11-22 sprite-stacking: https://blog.mushroom.cv/blog/agent-sprite-stacking-four-view-voxel-guide/；原始八组自检、18层真实CLI通过；前后掩码OR验证12体素；Chrome可见截图但退出清理超时code2，非全功能/性能验收。Blog/远程草稿/双语索引/KB回读均已验证；仓库 PR291 待审核。
 
 - 2026-11-23 netron-graph: https://blog.mushroom.cv/blog/netron-graph-source-checked-code-flow-guide/；九个CLI场景；缺引用/漂移可构建，scan漏项拒绝，注释仍可8/8说明文本核对非语义证明；未测Agent追踪/真实vLLM/浏览器。Blog/远程草稿/双语索引/KB回读均已验证；仓库 PR292 待审核。
+
+- 2026-11-23 AlphaSift: https://blog.mushroom.cv/blog/alphasift-auditable-stock-screening-agent-guide/；75项原始测试通过；合成行情与模拟模型；35为模型评分封顶非最终分，区分收盘与次日开盘入场；无实盘筛选/完整历史复算/投资收益证明。Blog/远程草稿/双语索引/KB回读已验证；PR293待审。

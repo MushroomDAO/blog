@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-23T06:07:35.495682+00:00",
+  "lengths": {
+    "description": 160,
+    "descriptionEn": 155,
+    "titleEn": 50,
+    "wechatTitle": 18,
+    "wechatDigest": 28
+  },
+  "checks": [
+    "BLUF+questionheadings+FAQ3+copyright+sources in bothlanguages",
+    "official pinned README/source plus DSA GitHub API",
+    "75 originaltests synthetic/mock; no liveinvestment performance claim",
+    "35modelscore cap differs finalblend; close/nextopen and transition2026-11-21",
+    "7markets unequalcoverage; offline/data and modelkey distinction",
+    "matchedcover+3figures+relatedreading"
+  ]
+}

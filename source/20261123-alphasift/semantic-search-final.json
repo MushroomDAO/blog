@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "alphasift-auditable-stock-screening-agent-guide",
+    "query": "AlphaSift 股票 筛选 次日开盘",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "alphasift-auditable-stock-screening-agent-guide",
+          "title": "AlphaSift：让选股研究有账可查，先分清评分与收益",
+          "url": "/blog/alphasift-auditable-stock-screening-agent-guide/",
+          "language": "zh",
+          "excerpt": "AlphaSift：让选股研究有账可查，先分清评分与收益 AlphaSift 是 ZhuLinsen 开源的股票研究筛选工具，以 YAML 硬条件、可选模型复核、行业分散和 T+N 纸面跟踪连接候选发现与 DSA 单股分析。核查 Apache-2.0 许可、模型分数上限、次日开盘与收盘入场差异，运行原仓库离线测试，说明七市场覆盖、数据依赖与研究结果不能替代真实组合验证的边界。 AlphaSift AI Agent Open Source Quantitative Research MCP AlphaSift 与那个七万星项目如何分工？ “设计克制”体现在",
+          "score": 0.64103293
+        },
+        {
+          "article_id": "jev-awesome-list-gold-rush-fact-check",
+          "title": "TypeSafe AI 的 Jev 生态刷屏：所谓「一天冒出 800+」，我们扒开一个索引仓库和 74 份「awesome」清单核实了一遍",
+          "url": "/blog/jev-awesome-list-gold-rush-fact-check/",
+          "language": "zh",
+          "excerpt": "TypeSafe AI 的 Jev 生态刷屏：所谓「一天冒出 800+」，我们扒开一个索引仓库和 74 份「awesome」清单核实了一遍 TypeSafe AI 的决策模型 Jev 9 月 15 日拿 4000 万美元种子轮早期发布，一周内 GitHub 上至少冒出 74 个「awesome-jev」索引仓库，其中一个今天创建的仓库 12 小时内把收录数从 148 冲到 805。我们通读它的 commit 历史、抽样核对 evidence 字段，发现这不是 805 个项目一天内被写出来，而是一个人聚合并核验了 32 份「兄弟名单」——最受欢迎的同类清单",
+          "score": 0.51069915
+        },
+        {
+          "article_id": "ai-berkshire-value-investing-guide",
+          "title": "How Ordinary Investors Can Do Professional-Grade Research with AI Berkshire — Analyzing Tencent as a Case Study",
+          "url": "/blog/ai-berkshire-value-investing-guide/",
+          "language": "en",
+          "excerpt": "How Ordinary Investors Can Do Professional-Grade Research with AI Berkshire — Analyzing Tencent as a Case Study AI Berkshire (11,772★) is a Claude Code / Codex skill collection that systematizes the methodologies of Buffett, Munger, Duan Yongping, and Li Lu, producing professiona",
+          "score": 0.5011004
+        },
+        {
+          "article_id": "cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune",
+          "title": "Cloudflare 开源 Clef 决策模型：兼容 Jev API、9B 版 Mac 可跑，榜首成绩是自报的",
+          "url": "/blog/cloudflare-clef-flash-open-decision-model-jev-api-rl-finetune/",
+          "language": "zh",
+          "excerpt": "Cloudflare 开源 Clef 决策模型：兼容 Jev API、9B 版 Mac 可跑，榜首成绩是自报的 Cloudflare 2026-10-01 以 Apache-2.0 开源 Clef（Qwen3.8-27B 底座，273.6 亿参数）和 Clef-flash（Qwen3.5-9B，94.1 亿参数），一次前向给每个选项出概率、零输出 token，兼容 Jev /v1/systemone。Decision Index 上 Clef 61.21 高于 Jev 57.91，但这是 Cloudflare 自己跑的、上游榜单未复现，社区 MLX 抽样",
+          "score": 0.5000404
+        },
+        {
+          "article_id": "bespoke-nimble-9b-open-decision-model-logprob-jev-rival",
+          "title": "Bespoke Nimble：一天之内做一个会读概率的 9B 决策模型",
+          "url": "/blog/bespoke-nimble-9b-open-decision-model-logprob-jev-rival/",
+          "language": "zh",
+          "excerpt": "Bespoke Nimble：一天之内做一个会读概率的 9B 决策模型 Bespoke Labs 开源了 Nimble，一个基于 Qwen3.5-9B LoRA 的决策模型——它不写字，只在你给的选项里选一个，直接读 logprobs。数据、配方、权重全部公开，本文做一次工程层面的完整拆解。 open-source decision-model logprob LoRA inference Qwen 它解决的问题 工作方式 底层机制 数据和训练 基准测试 本地运行（Mac Apple Silicon） 适用场景 关键限制 工程价值",
+          "score": 0.49185738
+        },
+        {
+          "article_id": "pagesift-rust-crawler",
+          "title": "PageSift: A Rust Crawler for AI, Beyond the Headlines",
+          "url": "/blog/pagesift-rust-crawler/",
+          "language": "en",
+          "excerpt": "PageSift: A Rust Crawler for AI, Beyond the Headlines PageSift offers Rust crawling and content extraction for AI. We audit benchmark denominators, SDK versions and deployment, with a Python smoke test on a Mac. PageSift Rust 爬虫 数据提取 RAG 开源工具 Where does PageSift fit? Why bounded ",
+          "score": 0.49047148
+        },
+        {
+          "article_id": "grok-bot-open-source-alternatives-comparison",
+          "title": "Grok Bot平替怎么选：五款开源候选的工程对比",
+          "url": "/blog/grok-bot-open-source-alternatives-comparison/",
+          "language": "zh",
+          "excerpt": "Grok Bot平替怎么选：五款开源候选的工程对比 对比 OpenMausBot、Rakazo、CopilotKit OpenBot、Suparagent 和 OpenTeam 五款开源候选，并仔细辨析同名项目的许可。结合固定源码、局部审批测试与公开问题，分析技术栈、持久记忆、电脑隔离、后台任务及实际部署成本，帮助个人与团队选择可自托管的 AI 队友。 AI Agents Grok Bot Open Source Self Hosting Computer Use 先辨清：你说的 OpenBot 是哪一个？ 对标 Grok Bot，究竟在对标什么？ 五个",
+          "score": 0.48817876
+        },
+        {
+          "article_id": "cloudflare-workers-ai-glm-kimi-deepseek-minimax",
+          "title": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token",
+          "url": "/blog/cloudflare-workers-ai-glm-kimi-deepseek-minimax/",
+          "language": "zh",
+          "excerpt": "Cloudflare 悄悄把 GLM-5.2、Kimi K3、DeepSeek V4 都接上了，而且只要一个 token Cloudflare Workers AI 已上线 GLM-5.2、Kimi K2.7 Code、1M 上下文的 Kimi K3、DeepSeek V4 Pro、MiniMax M3，同一个 token、同一行代码即可调用，还理清了自托管与第三方托管的价格和数据边界。 Cloudflare Workers AI GLM-5.2 Kimi K3 DeepSeek V4 MiniMax 边缘推理 起因 结论：你想要的基本都有 但有一条分界",
+          "score": 0.48739856
+        },
+        {
+          "article_id": "aibuildai-llm-posttrain-agent-autonomous-meta-search-posttrainbench",
+          "title": "后训练自动化：AIBuildAI 用元搜索在 PostTrainBench 拿第一，46.6 分超过所有 Agent",
+          "url": "/blog/aibuildai-llm-posttrain-agent-autonomous-meta-search-posttrainbench/",
+          "language": "zh",
+          "excerpt": "后训练自动化：AIBuildAI 用元搜索在 PostTrainBench 拿第一，46.6 分超过所有 Agent AIBuildAI LLM-Post-Train Agent，Apache 2.0 开源，7 stars，Python。核心是「元搜索」：元 Agent 读取任务后自己写搜索程序，而不是走固定拓扑。四个知识库（104 种后训练方法、215 个数据集、108 个框架、34 张工作流卡）通过 MCP 接口查询。在 PostTrainBench 七个任务+四个基座模型上得分 46.6，超过 Locus(45.6)、Claude Code Fab",
+          "score": 0.4857112
+        },
+        {
+          "article_id": "stock-sdk-personal-stock-feed-guide",
+          "title": "用 Stock SDK 建立自己的股票信息源：从命令行到 AI 看盘",
+          "url": "/blog/stock-sdk-personal-stock-feed-guide/",
+          "language": "zh",
+          "excerpt": "用 Stock SDK 建立自己的股票信息源：从命令行到 AI 看盘 Stock SDK（1649★，ISC）是一个零依赖的 JavaScript/TypeScript 股票行情库，无需 Python、无需后端，直接在浏览器或 Node.js 里拉 A 股/港股/美股/公募基金数据。本文带你从一条命令行开始，一步步建立属于自己的股票信息源，并接入 Claude/Cursor 等 AI 工具。 股票 JavaScript TypeScript MCP AI工具 数据可视化 量化 信息源 它解决的核心问题 第一步：零代码上手——命令行取行情 第二步：建立自己",
+          "score": 0.48442784
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "71bbc1b8286de38012fc626758dd887e1cd9785ddf9bca7f",
+    "metadata": {
+      "article_id": "alphasift-auditable-stock-screening-agent-guide",
+      "content_hash": "1462f463fc169f64",
+      "excerpt": "AlphaSift：让选股研究有账可查，先分清评分与收益 AlphaSift 是 ZhuLinsen 开源的股票研究筛选工具，以 YAML 硬条件、可选模型复核、行业分散和 T+N 纸面跟踪连接候选发现与 DSA 单股分析。核查 Apache-2.0 许可、模型分数上限、次日开盘与收盘入场差异，运行原仓库离线测试，说明七市场覆盖、数据依赖与研究结果不能替代真实组合验证的边界。 AlphaSift AI Agent Open Source Quantitative Research MCP AlphaSift 与那个七万星项目如何分工？ “设计克制”体现在",
+      "language": "zh",
+      "tags": [
+        "AlphaSift",
+        "AI Agent",
+        "Open Source",
+        "Quantitative Research",
+        "MCP"
+      ],
+      "title": "AlphaSift：让选股研究有账可查，先分清评分与收益",
+      "url": "/blog/alphasift-auditable-stock-screening-agent-guide/"
+    }
+  },
+  {
+    "id": "f20ac24991c7a095fc131de0b3216b728435ccfaf1111b04",
+    "metadata": {
+      "article_id": "alphasift-auditable-stock-screening-agent-guide",
+      "content_hash": "9d59b02c78b5c97b",
+      "excerpt": "AlphaSift: Auditable Stock Screening for AI Agents Review AlphaSift’s YAML screening, optional AI ranking and T+N ledger, with local tests of scoring caps, next-open entries and limits of paper performance. AlphaSift AI Agent Open Source Quantitative Research MCP How does AlphaSi",
+      "language": "en",
+      "tags": [
+        "AlphaSift",
+        "AI Agent",
+        "Open Source",
+        "Quantitative Research",
+        "MCP"
+      ],
+      "title": "AlphaSift: Auditable Stock Screening for AI Agents",
+      "url": "/blog/alphasift-auditable-stock-screening-agent-guide/"
+    }
+  }
+]

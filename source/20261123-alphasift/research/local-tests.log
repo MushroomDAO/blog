@@ -1,0 +1,20 @@
+Using CPython 3.12.15 interpreter at: /opt/homebrew/opt/python@3.12/bin/python3.12
+Creating virtual environment at: .venv
+   Building alphasift @ file:///private/tmp/alphasift-research-20261123
+   Building jsonpath==0.82.2
+      Built jsonpath==0.82.2
+Downloading curl-cffi (2.8MiB)
+Downloading pandas (10.7MiB)
+Downloading lxml (8.2MiB)
+Downloading akshare (1.1MiB)
+      Built alphasift @ file:///private/tmp/alphasift-research-20261123
+Downloading mini-racer (17.7MiB)
+ Downloaded akshare
+ Downloaded curl-cffi
+ Downloaded lxml
+ Downloaded pandas
+ Downloaded mini-racer
+Installed 48 packages in 213ms
+Installed 15 packages in 83ms
+...................................................                      [100%]
+51 passed in 13.27s

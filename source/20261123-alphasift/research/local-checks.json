@@ -1,0 +1,23 @@
+{
+  "testedCommit": "d38bf412532a085aa48862255e9538249a536061",
+  "sourceUnmodified": true,
+  "firstGroupPassed": 51,
+  "rankingPassed": 24,
+  "totalPassed": 75,
+  "fixtureScope": [
+    "synthetic price bars",
+    "mock model responses",
+    "temporary run records",
+    "real MCP subprocess STDIO"
+  ],
+  "notTested": [
+    "live market data",
+    "model provider quality",
+    "real selection/notification",
+    "full historical replay",
+    "profitable trading",
+    "full security audit"
+  ],
+  "initialEnvironmentFailure": "existing ml Python had no pytest; use isolated uv",
+  "additionalObservation": "35 caps model component; final blended score may exceed35; CLI close default, public script auto switch2026-11-21"
+}

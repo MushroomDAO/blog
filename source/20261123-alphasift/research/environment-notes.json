@@ -1,0 +1,1 @@
+{"initialAttempt":"existing ml Python failed: No module named pytest","resolution":"isolated uv Python3.12.15 environment; upstream test/source untouched","secondAttempt":"direct .venv Python also lacked supplemental pytest; uv run retained same test environment","results":"51+24 passed"}
