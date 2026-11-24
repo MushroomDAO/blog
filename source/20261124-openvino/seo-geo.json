@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-24T02:12:23.583791+00:00",
+  "lengths": {
+    "description": 159,
+    "descriptionEn": 156,
+    "titleEn": 52,
+    "wechatTitle": 19,
+    "wechatDigest": 29
+  },
+  "checks": [
+    "BLUF+questionheadings+FAQ3+copyright+sources in bothlanguages",
+    "Apache2 official README, systemrequirements,releasewheel",
+    "7actual synthetic ONNX CPU checks, no pretrained modelquality or performanceclaim",
+    "CPUonly locally; sourceHEAD distinctreleasedwheel; AUTOCPU notheterogeneous",
+    "Runtime/NNCF/GenAI/ModelServer distinct; quantizationnotdone; +183notverified",
+    "matchedcover+3figures+relatedreading"
+  ]
+}

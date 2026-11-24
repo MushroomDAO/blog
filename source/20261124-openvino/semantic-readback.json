@@ -1,0 +1,40 @@
+[
+  {
+    "id": "07f52183c942ac02e87c82d4d01bb717690c211feed1407d",
+    "metadata": {
+      "article_id": "openvino-inference-deployment-device-boundaries-guide",
+      "content_hash": "a871d5c0d54fc40f",
+      "excerpt": "OpenVINO：把模型交付给应用，先核对设备边界 OpenVINO 是面向模型推理优化与部署的工具包。本文区分模型转换、设备编译、量化、生成式组件与服务化，核对 CPU、Intel GPU/NPU 及 ARM64 macOS 的支持边界，并以发布版 2026.4.1 跑通七项合成模型检查，说明文件大小、数值正确性、吞吐和延迟应验收，避免把端云部署理解成任意硬件通吃。 OpenVINO Inference Deployment Intel ONNX Open Source OpenVINO 在部署链路里做哪一段？ “跑遍端云”有哪些硬件边界？ 转换、量化",
+      "language": "zh",
+      "tags": [
+        "OpenVINO",
+        "Inference",
+        "Deployment",
+        "Intel",
+        "ONNX",
+        "Open Source"
+      ],
+      "title": "OpenVINO：把模型交付给应用，先核对设备边界",
+      "url": "/blog/openvino-inference-deployment-device-boundaries-guide/"
+    }
+  },
+  {
+    "id": "7e4b1883513146fd8b0e227468dd3a0a3deaee5e46005f47",
+    "metadata": {
+      "article_id": "openvino-inference-deployment-device-boundaries-guide",
+      "content_hash": "01e307db972aa84d",
+      "excerpt": "OpenVINO: Inference Deployment and Device Boundaries Explore OpenVINO conversion, runtime and device boundaries, with seven real synthetic ONNX/CPU checks on ARM64 macOS and clear limits on performance claims. OpenVINO Inference Deployment Intel ONNX Open Source Which part of dep",
+      "language": "en",
+      "tags": [
+        "OpenVINO",
+        "Inference",
+        "Deployment",
+        "Intel",
+        "ONNX",
+        "Open Source"
+      ],
+      "title": "OpenVINO: Inference Deployment and Device Boundaries",
+      "url": "/blog/openvino-inference-deployment-device-boundaries-guide/"
+    }
+  }
+]

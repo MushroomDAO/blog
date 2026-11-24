@@ -1,0 +1,45 @@
+{
+  "orderingNote": "List uses same-day date sorting; actual lastPublishedAt records publication time for carousel ordering.",
+  "checkedAt": "2026-11-24T02:13:25.061059+00:00",
+  "articles": [
+    {
+      "slug": "openvino-inference-deployment-device-boundaries-guide",
+      "url": "https://blog.mushroom.cv/blog/openvino-inference-deployment-device-boundaries-guide/",
+      "title": "OpenVINO：把模型交付给应用，先核对设备边界",
+      "listRank": 2,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/openvino-inference-deployment-device-boundaries-guide-banner.DVhfay7J.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94207
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/openvino-inference-deployment-device-boundaries-guide-banner.DVhfay7J_BuAUo.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 57822
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/openvino-inference-deployment-device-boundaries-guide-fig-01.Dy_D7QKP_ZjLjNQ.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 44582
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/openvino-inference-deployment-device-boundaries-guide-fig-02.BveEWK0f_CnuXI.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 45678
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/openvino-inference-deployment-device-boundaries-guide-fig-03.CdLZ-2ma_1WyVKh.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 42604
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-24T02:11:25.851674+00:00",
+  "sources": [
+    "https://docs.openvino.ai/2026/about-openvino/release-notes-openvino/system-requirements.html",
+    "https://docs.openvino.ai/2026/documentation/compatibility-and-support/supported-devices.html"
+  ],
+  "observations": [
+    "systemrequirements lists Apple silicon, ARM64macOS",
+    "README describes GPU as Intel integrated/discrete and NPU as IntelNPU",
+    "supporteddevices page retains explicitly dated2024.5/2024.6tables; nottreated aslatest2026capabilities",
+    "localreleasewheel devicequeryonlyCPU, AUTO:CPU deliberatelyrestricted"
+  ],
+  "notIndependentlyVerified": [
+    "dailyTrending+183",
+    "otherplatformdrivers/devices",
+    "performanceclaims"
+  ]
+}
