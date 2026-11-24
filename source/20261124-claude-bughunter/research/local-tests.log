@@ -1,0 +1,73 @@
+test_ambiguous_entries_go_to_review_never_to_rules (test_scope_import.ClassifyTests) ... ok
+test_exact_host_is_an_anchored_rule_not_a_domain_rule (test_scope_import.ClassifyTests) ... ok
+test_idn_hosts_become_punycode (test_scope_import.ClassifyTests) ... ok
+test_lists_braces_and_notes (test_scope_import.ClassifyTests) ... ok
+test_non_host_assets_are_never_rules (test_scope_import.ClassifyTests) ... ok
+test_out_of_scope_side_fails_closed (test_scope_import.ClassifyTests) ... ok
+test_path_limited_in_scope_asset_is_review_with_a_suggestion (test_scope_import.ClassifyTests) ... ok
+test_wildcards_ips_and_networks (test_scope_import.ClassifyTests) ... ok
+test_import_from_local_dump_into_engagement (test_scope_import.CliTests) ... ok
+test_source_errors (test_scope_import.CliTests) ... ok
+test_text_from_stdin (test_scope_import.CliTests) ... ok
+test_download_then_cache (test_scope_import.FetchTests) ... ok
+test_failed_refresh_falls_back_to_cache_and_never_caches_junk (test_scope_import.FetchTests) ... ok
+test_merge_into_a_file_without_scope_sections (test_scope_import.MergeTests) ... ok
+test_merge_is_idempotent_and_refreshes (test_scope_import.MergeTests) ... ok
+test_merge_matches_standalone_rules_and_keeps_hand_edits (test_scope_import.MergeTests) ... ok
+test_merge_never_drops_hand_written_content (test_scope_import.MergeTests) ... ok
+test_bugcrowd_record (test_scope_import.OtherPlatformTests) ... ok
+test_hackerone_mcp_output_and_policy_rules (test_scope_import.OtherPlatformTests) ... ok
+test_intigriti_tiers_and_ranges (test_scope_import.OtherPlatformTests) ... ok
+test_json_that_is_not_a_scope_is_rejected (test_scope_import.OtherPlatformTests) ... ok
+test_yeswehack_record (test_scope_import.OtherPlatformTests) ... ok
+test_declared_assets_are_admitted_and_nothing_more (test_scope_import.RecordAndRenderTests) ... ok
+test_generated_headings_never_mention_scope (test_scope_import.RecordAndRenderTests) ... ok
+test_metadata_is_carried_on_each_rule (test_scope_import.RecordAndRenderTests) ... ok
+test_out_of_scope_metadata_is_not_noise (test_scope_import.RecordAndRenderTests) ... ok
+test_path_limited_entries_group_per_host_and_redacted_entries_are_named (test_scope_import.RecordAndRenderTests) ... ok
+test_review_other_and_covered_sections (test_scope_import.RecordAndRenderTests) ... ok
+test_rules_round_trip_through_engine_scope (test_scope_import.RecordAndRenderTests) ... ok
+test_wildcard_path_entry_covered_by_a_wildcard (test_scope_import.RecordAndRenderTests) ... ok
+test_find_program_with_suggestions (test_scope_import.RefAndLookupTests) ... ok
+test_intigriti_company_with_two_programs (test_scope_import.RefAndLookupTests) ... ok
+test_parse_ref (test_scope_import.RefAndLookupTests) ... ok
+test_lists_tables_and_conduct (test_scope_import.TextModeTests) ... ok
+test_markdown_heading_ends_a_list (test_scope_import.TextModeTests) ... ok
+test_affirmative_scope_passes_q3 (test_triage.TriageGateTests) ... ok
+test_clickjacking_variants_hit_never_submit (test_triage.TriageGateTests) ... ok
+test_downgrade_verdict_when_only_severity_fails (test_triage.TriageGateTests) ... ok
+test_http_request_and_curl_findings_pass (test_triage.TriageGateTests) ... ok
+test_hyphenated_out_of_scope_fails_q3 (test_triage.TriageGateTests)
+'out-of-scope' (the common hyphenated spelling) must disavow scope too. ... ok
+test_lowercase_request_line_satisfies_q1 (test_triage.TriageGateTests) ... ok
+test_markdown_wrapped_request_satisfies_q1 (test_triage.TriageGateTests)
+A PoC written in markdown — backtick-wrapped or bold method — is a real request. ... ok
+test_missing_finding_file_returns_error (test_triage.TriageGateTests) ... ok
+test_missing_request_evidence_fails_q1 (test_triage.TriageGateTests) ... ok
+test_never_submit_signal_kills_finding (test_triage.TriageGateTests) ... ok
+test_prose_method_name_is_not_q1_evidence (test_triage.TriageGateTests) ... ok
+test_scope_word_in_non_scope_line_does_not_fail_q3 (test_triage.TriageGateTests)
+A negation word beside 'scope' on a non-scope line must not kill Q3. ... ok
+test_unrelated_negation_words_do_not_fail_q3 (test_triage.TriageGateTests) ... ok
+test_unverified_out_of_scope_fails_q3 (test_triage.TriageGateTests) ... ok
+test_cmd_report_creates_parent_dirs_and_writes_utf8 (test_report_sections.ReportSectionTests) ... ok
+test_headings_inside_fences_remain_evidence (test_report_sections.ReportSectionTests) ... ok
+test_inline_heading_like_text_is_not_a_section (test_report_sections.ReportSectionTests) ... ok
+test_platform_hackerone_alias_accepted (test_report_sections.ReportSectionTests) ... ok
+test_proof_of_concept_heading_is_parsed (test_report_sections.ReportSectionTests) ... ok
+test_reporter_from_argument_overrides_env (test_report_sections.ReportSectionTests) ... ok
+test_reporter_from_cbh_reporter_env (test_report_sections.ReportSectionTests) ... ok
+test_reporter_line_does_not_leak_os_login (test_report_sections.ReportSectionTests) ... ok
+test_steps_keyword_not_matched_midword (test_report_sections.ReportSectionTests) ... ok
+test_steps_to_reproduce_heading_is_parsed (test_report_sections.ReportSectionTests) ... ok
+test_subheadings_and_steps_survive_drafting (test_report_sections.ReportSectionTests) ... ok
+test_only_valid_names_under_the_target_reach_dns_and_http (test_recon_domain_boundary.ReconDomainBoundaryTests) ... ok
+test_url_and_path_targets_stop_before_passive_lookup (test_recon_domain_boundary.ReconDomainBoundaryTests) ... ok
+test_dotgithub_root_is_scanned (test_secret_scan_skip_dirs.SecretScanSkipDirTests) ... ok
+test_root_named_like_a_skip_dir_is_still_scanned (test_secret_scan_skip_dirs.SecretScanSkipDirTests) ... ok
+test_skip_dirs_below_root_still_pruned (test_secret_scan_skip_dirs.SecretScanSkipDirTests) ... ok
+
+----------------------------------------------------------------------
+Ran 65 tests in 0.044s
+
+OK

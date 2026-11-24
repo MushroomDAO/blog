@@ -1,0 +1,31 @@
+{
+  "banner": "machine0fail0warn, manualpass; lock and magnifier photo seed9801 not actualUI",
+  "body": [
+    {
+      "file": "src/assets/images/claude-bughunter-skills-evidence-scope-review-fig-01.png",
+      "bytes": 74308,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/claude-bughunter-skills-evidence-scope-review-fig-02.png",
+      "bytes": 45008,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/claude-bughunter-skills-evidence-scope-review-fig-03.png",
+      "bytes": 70738,
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "originals": "assets/claude-bughunter-skills-evidence-scope-review-illustrations",
+  "manualReview": "all3 originals viewed: correct sparse Chinese, LittleM active; skill/runtime/human distinctions; checklist versus originalrecords; separatelyverifiedscope/tools/report; no attack instructions"
+}

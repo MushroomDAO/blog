@@ -1,0 +1,45 @@
+{
+  "orderingNote": "List uses same-day date sorting; actual lastPublishedAt records publication time for carousel ordering.",
+  "checkedAt": "2026-11-24T01:52:12.773152+00:00",
+  "articles": [
+    {
+      "slug": "claude-bughunter-skills-evidence-scope-review",
+      "url": "https://blog.mushroom.cv/blog/claude-bughunter-skills-evidence-scope-review/",
+      "title": "Claude-BugHunter：把安全研究写成技能，别把门禁当证明",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/claude-bughunter-skills-evidence-scope-review-banner.CO-8S4yv.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 90363
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/claude-bughunter-skills-evidence-scope-review-banner.CO-8S4yv_Z175x2S.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 26070
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/claude-bughunter-skills-evidence-scope-review-fig-01.DgG3gbYK_ZCAtJw.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 46302
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/claude-bughunter-skills-evidence-scope-review-fig-02.DNHU1MWT_KVr1q.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 32542
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/claude-bughunter-skills-evidence-scope-review-fig-03.C7sqpTmG_1J8OAK.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 55884
+        }
+      ]
+    }
+  ]
+}

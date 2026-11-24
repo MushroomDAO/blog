@@ -1584,3 +1584,5 @@ Published harness-adapters-in-loop-rl-tool-governance from exact official URL; i
 - 2026-11-23 netron-graph: https://blog.mushroom.cv/blog/netron-graph-source-checked-code-flow-guide/；九个CLI场景；缺引用/漂移可构建，scan漏项拒绝，注释仍可8/8说明文本核对非语义证明；未测Agent追踪/真实vLLM/浏览器。Blog/远程草稿/双语索引/KB回读均已验证；仓库 PR292 待审核。
 
 - 2026-11-23 AlphaSift: https://blog.mushroom.cv/blog/alphasift-auditable-stock-screening-agent-guide/；75项原始测试通过；合成行情与模拟模型；35为模型评分封顶非最终分，区分收盘与次日开盘入场；无实盘筛选/完整历史复算/投资收益证明。Blog/远程草稿/双语索引/KB回读已验证；PR293待审。
+
+- 2026-11-24 Claude-BugHunter: https://blog.mushroom.cv/blog/claude-bughunter-skills-evidence-scope-review/；84技能/15命令，65项原始本地测试；文本门禁非漏洞复现，代码MIT/内容CCBY4；无外部扫描/利用/模型研究，无发现率测量。Blog/草稿/双语索引/KB回读已验证；PR294待审。

@@ -1,0 +1,26 @@
+{
+  "passed": 65,
+  "files": [
+    "test_scope_import.py",
+    "test_triage.py",
+    "test_report_sections.py",
+    "test_recon_domain_boundary.py",
+    "test_secret_scan_skip_dirs.py"
+  ],
+  "fixtures": "synthetic exampledomains/reservedIPs/tempfiles/mockedlookup",
+  "sourceUnmodified": true,
+  "notTested": [
+    "external scanning",
+    "exploit execution",
+    "live model/harness use",
+    "full suite",
+    "discovery/falsepositive rates"
+  ],
+  "testHashes": {
+    "test_scope_import.py": "0e97232488243dcd17997a2cc3d4bde58ee9774b102caa11957283ef0fc67b7b",
+    "test_triage.py": "6685c907bf748faa6fd1d4457b648e8537226efdd8fd7362a9f17ef02e57e6f7",
+    "test_report_sections.py": "28833a793838cb00bbdd5599700ea81291af2bcd89f8c1fff296d084f9b6ddca",
+    "test_recon_domain_boundary.py": "fec5c83ba7d9f1b5c015413eacce93170b224a807a1283ca884fff3207a48598",
+    "test_secret_scan_skip_dirs.py": "2e921e94685edcebbbaeb3f12bdc3150fcadb2cca16c8c802656957fda444e3d"
+  }
+}
