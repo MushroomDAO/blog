@@ -1,0 +1,38 @@
+[
+  {
+    "id": "81e54eab163b17931926da1fa5d1e8787a3039bff47d81dd",
+    "metadata": {
+      "article_id": "claude-bughunter-skills-evidence-scope-review",
+      "content_hash": "34f12b8479ef20b7",
+      "excerpt": "Claude-BugHunter：把安全研究写成技能，别把门禁当证明 Claude-BugHunter 将授权安全研究的方法、检查项和报告流程整理为代理技能包。本文固定源码核对 84 个技能、15 个命令与代码和内容的许可差异，运行 65 项本地测试，分析七问门禁的文本信号检查、授权范围导入及报告证据边界，区分作者整理的案例模式、示范对话与真实漏洞发现率，帮助团队判断如何开展内部验证。 Claude-BugHunter AI Agent Security Research Open Source Evidence Claude-BugHunter 实际交",
+      "language": "zh",
+      "tags": [
+        "Claude-BugHunter",
+        "AI Agent",
+        "Security Research",
+        "Open Source",
+        "Evidence"
+      ],
+      "title": "Claude-BugHunter：把安全研究写成技能，别把门禁当证明",
+      "url": "/blog/claude-bughunter-skills-evidence-scope-review/"
+    }
+  },
+  {
+    "id": "7fc1cd181e78b5150d890915e85cb446594017cf3ebc0617",
+    "metadata": {
+      "article_id": "claude-bughunter-skills-evidence-scope-review",
+      "content_hash": "36ce8acb7c24280f",
+      "excerpt": "Claude-BugHunter: Skills, Scope and Evidence Boundaries Review Claude-BugHunter’s skills, licensing and scope controls, with 65 local tests explaining why a textual triage gate is not proof of a vulnerability. Claude-BugHunter AI Agent Security Research Open Source Evidence What ",
+      "language": "en",
+      "tags": [
+        "Claude-BugHunter",
+        "AI Agent",
+        "Security Research",
+        "Open Source",
+        "Evidence"
+      ],
+      "title": "Claude-BugHunter: Skills, Scope and Evidence Boundaries",
+      "url": "/blog/claude-bughunter-skills-evidence-scope-review/"
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-24T01:51:07.431004+00:00",
+  "lengths": {
+    "description": 159,
+    "descriptionEn": 153,
+    "titleEn": 55,
+    "wechatTitle": 24,
+    "wechatDigest": 28
+  },
+  "checks": [
+    "BLUF+questionheadings+FAQ3+copyright+sources in bothlanguages",
+    "official pinned README/source/NOTICE duallicense",
+    "65 original tests synthetic/mock; no live scans/exploits/agent or vulnerabilityrate claims",
+    "triage textual signals notruntimeproof; scoped entrycontrols notglobal enforcement",
+    "84skills15commands; no verified2037dailygrowth; illustrative transcriptnotrealmeasurement",
+    "matchedcover+3figures+relatedreading"
+  ]
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "id": "4f623628ede29a8b60566e85de1fc30fa8c0756671b5872e",
+    "metadata": {
+      "article_id": "minimind-64m-llm-training-from-scratch-guide",
+      "content_hash": "9d8d3e6c36a28769",
+      "excerpt": "MiniMind 64M：从零训练语言模型，真正该学什么？ MiniMind 是面向学习者的开源语言模型训练项目，当前主线约 64M 参数。本文核对 jingyaogong/minimind 的 Apache 2.0 许可、模型结构、预训练与 SFT 链路，解释 GPT-3 参数比例及两小时三元成本的适用条件，并记录本机随机权重前向、反向和缓存一致性检查，给出学习与验收路线。 MiniMind 小语言模型 预训练 SFT PyTorch 开源 “GPT-3 的 1/2700”到底在比什么？ 64M 模型里能看见哪些真实工程结构？ 从零训练、SFT、LoR",
+      "language": "zh",
+      "tags": [
+        "MiniMind",
+        "小语言模型",
+        "预训练",
+        "SFT",
+        "PyTorch",
+        "开源"
+      ],
+      "title": "MiniMind 64M：从零训练语言模型，真正该学什么？",
+      "url": "/blog/minimind-64m-llm-training-from-scratch-guide/"
+    }
+  },
+  {
+    "id": "063ca35ca7701e8635ce6ff9247893da5cfd24bf4648efce",
+    "metadata": {
+      "article_id": "minimind-64m-llm-training-from-scratch-guide",
+      "content_hash": "e7b36c2d9ae4093e",
+      "excerpt": "MiniMind 64M: Learn LLM Training From Scratch Explore MiniMind's 64M training pipeline, model architecture, cost caveats and local random-weight checks, with a practical learning and validation workflow. MiniMind 小语言模型 预训练 SFT PyTorch 开源 What does “1/2700 of GPT-3” compare? Which",
+      "language": "en",
+      "tags": [
+        "MiniMind",
+        "小语言模型",
+        "预训练",
+        "SFT",
+        "PyTorch",
+        "开源"
+      ],
+      "title": "MiniMind 64M: Learn LLM Training From Scratch",
+      "url": "/blog/minimind-64m-llm-training-from-scratch-guide/"
+    }
+  }
+]

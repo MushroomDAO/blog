@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "minimind-64m-llm-training-from-scratch-guide",
+    "query": "MiniMind64M jingyaogong 从零预训练 SFT 教学 参数量",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "minimind-64m-llm-training-from-scratch-guide",
+          "title": "MiniMind 64M：从零训练语言模型，真正该学什么？",
+          "url": "/blog/minimind-64m-llm-training-from-scratch-guide/",
+          "language": "zh",
+          "excerpt": "MiniMind 64M：从零训练语言模型，真正该学什么？ MiniMind 是面向学习者的开源语言模型训练项目，当前主线约 64M 参数。本文核对 jingyaogong/minimind 的 Apache 2.0 许可、模型结构、预训练与 SFT 链路，解释 GPT-3 参数比例及两小时三元成本的适用条件，并记录本机随机权重前向、反向和缓存一致性检查，给出学习与验收路线。 MiniMind 小语言模型 预训练 SFT PyTorch 开源 “GPT-3 的 1/2700”到底在比什么？ 64M 模型里能看见哪些真实工程结构？ 从零训练、SFT、LoR",
+          "score": 0.6779688
+        },
+        {
+          "article_id": "minicpm5-2b-on-device-sota-small-model",
+          "title": "2B 打赢 4B：面壁 MiniCPM5-2B 拿下同级开源 SOTA，还把训练数据全开源了",
+          "url": "/blog/minicpm5-2b-on-device-sota-small-model/",
+          "language": "zh",
+          "excerpt": "2B 打赢 4B：面壁 MiniCPM5-2B 拿下同级开源 SOTA，还把训练数据全开源了 MiniCPM5-2B 是一个 25 亿参数的稠密模型，原生 131072 上下文，为端侧和资源受限场景设计。在官方对比集里平均分 53.9，不仅是 2B 级开源 SOTA，还超过了所有列入对比的 4B 级模型（最高 51.1）。优势集中在代码推理、数学推理、长上下文、工具调用和 Agent 任务。同时开源了背后的四套训练数据集。 MiniCPM 端侧模型 小模型 local-first 开源 长上下文 工具调用 OpenBMB 一句话结论 参数与结构 成绩：越",
+          "score": 0.5636236
+        },
+        {
+          "article_id": "vibethinker-small-model-training-guide",
+          "title": "VibeThinker-3B 拆解：微博团队如何用 7800 美元训出打赢 DeepSeek R1 的小模型，以及你能复刻什么",
+          "url": "/blog/vibethinker-small-model-training-guide/",
+          "language": "zh",
+          "excerpt": "VibeThinker-3B 拆解：微博团队如何用 7800 美元训出打赢 DeepSeek R1 的小模型，以及你能复刻什么 微博AI团队开源的VibeThinker系列用「频谱到信号」训练范式，让1.5B小模型在数学竞赛上超越400倍大的DeepSeek R1，训练成本仅7800美元。本文拆解其完整训练管线SSP，分析如何模仿这套方法训练你自己的专项小模型。 小模型 模型训练 强化学习 蒸馏 推理模型 开源 VibeThinker 微博AI 原始资源 一、VibeThinker 做到了什么？ VibeThinker-1.5B（2025 年 11 月）",
+          "score": 0.5511764
+        },
+        {
+          "article_id": "clover-diffusion-llm-sft-engineering-guide",
+          "title": "Clover：扩散语言模型的SFT代码，能直接拿来训练吗？",
+          "url": "/blog/clover-diffusion-llm-sft-engineering-guide/",
+          "language": "zh",
+          "excerpt": "Clover：扩散语言模型的SFT代码，能直接拿来训练吗？ Clover 是总参数约 35B、激活约 3B 的扩散语言模型。本文结合技术报告与开放 SFT 代码，解释分块去噪、历史记忆和草稿验证，核对单轮文本、4096 token 与硬件限制，并记录本机26项CPU测试结果，区分GB300回放速度、消费卡部署成绩和真实训练复现，给出数据、检查点与工程验收的建议。 Clover 扩散语言模型 MoE SFT DiffuSpace 开源 分块扩散怎样利用历史，又避免偷看答案？ 开放的SFT包具体支持什么？ 本机26项测试证明了什么？ 680 tokens/s",
+          "score": 0.55100936
+        },
+        {
+          "article_id": "miles-v0-1-production-rl-post-training-sglang",
+          "title": "Miles v0.1：SGLang 团队填平学术 RL 和生产系统之间的鸿沟",
+          "url": "/blog/miles-v0-1-production-rl-post-training-sglang/",
+          "language": "zh",
+          "excerpt": "Miles v0.1：SGLang 团队填平学术 RL 和生产系统之间的鸿沟 SGLang 团队发布 Miles v0.1，生产级 LLM/VLM RL 后训练框架。全异步 RL、P2P RDMA 权重同步（万亿参数秒级更新）、TITO 消除 token 往返损耗、R3 修复 MoE 路由不一致、自动容错恢复——每块都是工业级设计。 RL post-training SGLang LLM open-source LMSYS 学术 RL 代码进生产，会在哪里翻车 架构：三层解耦 五个关键技术点 1. 全异步 RL 2. P2P RDMA 权重更新 3. T",
+          "score": 0.5460604
+        },
+        {
+          "article_id": "openthoughts-agent-sft-data-recipe-agentic-models",
+          "title": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解",
+          "url": "/blog/openthoughts-agent-sft-data-recipe-agentic-models/",
+          "language": "zh",
+          "excerpt": "训练 AI Agent 的数据配方：OpenThoughts-Agent 100+ 消融实验全拆解 UC Berkeley、Stanford、Bespoke Labs 等多机构合作的 OpenThoughts-Agent 论文（arXiv:2606.24855）做了迄今最系统的 Agent SFT 数据配方研究：6 阶段流水线、100+ 消融实验、100K 数据集，微调 Qwen3-32B 达 7 基准均值 44.8%，超越 Nemotron 3.9pp。最有价值的不是模型权重，而是那套可复用的数据选取逻辑。 AI Agent SFT 数据配方 开源 这",
+          "score": 0.5441029
+        },
+        {
+          "article_id": "flint-local-coding-rec-engine",
+          "title": "Flint 本地编程模型：40B MoE、rec 引擎与 125 token/s 的条件",
+          "url": "/blog/flint-local-coding-rec-engine/",
+          "language": "zh",
+          "excerpt": "Flint 本地编程模型：40B MoE、rec 引擎与 125 token/s 的条件 Recursive Flint 是总参数约40B、每token激活2.5B的开源编程模型。本文核对模型卡与rec源码说明，拆解M4 Pro速度测试、48GB内存门槛、上下文配置差异和本地Agent部署方法。 Flint Recursive MoE 本地编程 Apple Silicon 40B 模型为什么每次只激活 2.5B？ 125 token/s、5倍与2.6倍分别在比什么？ 编程成绩说明了什么？ 512K 上下文可以直接开满吗？ 哪些 Mac 符合官方安装与使用",
+          "score": 0.53874314
+        },
+        {
+          "article_id": "mellum21-thinking-coding-agent",
+          "title": "Mellum2.1：把小模型训练成仓库里的执行者",
+          "url": "/blog/mellum21-thinking-coding-agent/",
+          "language": "zh",
+          "excerpt": "Mellum2.1：把小模型训练成仓库里的执行者 JetBrains Mellum2.1 Thinking 是总参数 12B、激活参数 2.5B 的代码模型。复核 ModelScope、官方模型卡和 GGUF 文件，分析仓库强化学习、工具调用成绩及部署路线，区分 H200 速度与本地运行条件，说明激活参数与内存需求的区别，以及先验证工具协议再尝试仓库修复的方法。 JetBrains Mellum Coding-Agent MoE GGUF Local-AI Mellum2.1 改变了什么？ 官方成绩说明了什么，也留下了什么？ 2.5B 激活参数，为什么文",
+          "score": 0.5356058
+        },
+        {
+          "article_id": "ming-3-tts-small-model-evaluation",
+          "title": "Ming-3.0-TTS: Small Model, Strong Speech, Real Limits",
+          "url": "/blog/ming-3-tts-small-model-evaluation/",
+          "language": "en",
+          "excerpt": "Ming-3.0-TTS: Small Model, Strong Speech, Real Limits Review Ming-3.0-TTS: live English leaderboards, MIT weights, multilingual controls, checkpoint size, CUDA deployment and the limits of unverified Mac support. Ming-3.0-TTS 蚂蚁集团 语音合成 开源模型 本地AI Where are the original releases? W",
+          "score": 0.53415203
+        },
+        {
+          "article_id": "grpo-small-model-engineering-guide",
+          "title": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径",
+          "url": "/blog/grpo-small-model-engineering-guide/",
+          "language": "zh",
+          "excerpt": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径 GRPO（Group Relative Policy Optimization）让小模型在垂直任务上碾压frontier大模型成为可能。本文整合 ART、ms-swift、OpenClaw-RL 等开源仓库，以及 ART·E（Qwen 2.5 14B超越o3，$80训练）、MCP·RL等6个真实工程案例，给出完整的工程路径：任务选择→数据构造→奖励函数设计→训练循环→监控与避坑。 GRPO 强化学习 小模型 Qwen 微调 LLM训练 AI工程 Mycelium 为什么 GRPO 适合小模型专",
+          "score": 0.5308414
+        }
+      ]
+    }
+  }
+]

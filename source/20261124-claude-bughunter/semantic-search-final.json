@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "claude-bughunter-skills-evidence-scope-review",
+    "query": "Claude-BugHunter 技能 证据 授权",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "claude-bughunter-skills-evidence-scope-review",
+          "title": "Claude-BugHunter：把安全研究写成技能，别把门禁当证明",
+          "url": "/blog/claude-bughunter-skills-evidence-scope-review/",
+          "language": "zh",
+          "excerpt": "Claude-BugHunter：把安全研究写成技能，别把门禁当证明 Claude-BugHunter 将授权安全研究的方法、检查项和报告流程整理为代理技能包。本文固定源码核对 84 个技能、15 个命令与代码和内容的许可差异，运行 65 项本地测试，分析七问门禁的文本信号检查、授权范围导入及报告证据边界，区分作者整理的案例模式、示范对话与真实漏洞发现率，帮助团队判断如何开展内部验证。 Claude-BugHunter AI Agent Security Research Open Source Evidence Claude-BugHunter 实际交",
+          "score": 0.6475841
+        },
+        {
+          "article_id": "belief-context-graph-bcg-agent-memory-confidence-provenance-deterministic-reasoning",
+          "title": "Belief Context Graph：把 Agent 记忆从「检索」升级为「置信度感知的信念图」",
+          "url": "/blog/belief-context-graph-bcg-agent-memory-confidence-provenance-deterministic-reasoning/",
+          "language": "zh",
+          "excerpt": "Belief Context Graph：把 Agent 记忆从「检索」升级为「置信度感知的信念图」 bigai-nlco/belief-context-graph 开源，BCG 用可审计的置信度、证据溯源、冲突检测把 Agent 记忆升级为信念图，解决长程推理中「该不该相信这个事实」的核心问题，MIT 许可，⭐59。 agent memory knowledge graph LLM reasoning open source confidence provenance BIGAI 现有 Agent 记忆的盲区 BCG 的核心：四个能力 1. 信念提取（",
+          "score": 0.5054359
+        },
+        {
+          "article_id": "awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop",
+          "title": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据",
+          "url": "/blog/awesome-agent-skills-cross-vendor-paths-quality-criteria-anti-slop/",
+          "language": "zh",
+          "excerpt": "「别提交你三小时前刚做的 skill」：一份跨 8 家 agent 的策展清单，和它的四条质量判据 1497 个 agent skill 的人工策展清单，33.8k stars，MIT，明确写着 hand-picked not AI-slop generated。真正有用的是两样东西：一张覆盖 Claude Code、Codex、Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Antigravity 八家的 skill 目录路径对照表；以及四条具体到能照着改的质量判据——描述要用 agent 能匹配的具体关键词、顶",
+          "score": 0.49182048
+        },
+        {
+          "article_id": "jakub-krehel-interface-skills",
+          "title": "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能",
+          "url": "/blog/jakub-krehel-interface-skills/",
+          "language": "zh",
+          "excerpt": "Jakub Krehel 的 teardown：技术拆解图实测与 14 项界面技能 jakubkrehel/skills 是一套 MIT 开源的界面设计工程技能，涵盖排版、颜色、布局、无障碍、文案、状态检查与技术插图。本文拆解 14 项技能如何协作、如何安装到 Codex 或 Claude Code，以及审阅、改代码和视觉验证的边界，并记录安装校验、随附脚本检查与 ESM 项目接入时遇到的兼容问题。 Agent Skills 界面设计 设计工程 无障碍 Codex Claude Code 这条命令究竟装了什么？ 14 项技能怎样分工？ 为什么它强调“证据",
+          "score": 0.48981994
+        },
+        {
+          "article_id": "ai-marketing-claude-code-skill-suite",
+          "title": "ai-marketing-claude：给 Claude Code 装 15 个营销技能，一条命令审计任意网站",
+          "url": "/blog/ai-marketing-claude-code-skill-suite/",
+          "language": "zh",
+          "excerpt": "ai-marketing-claude：给 Claude Code 装 15 个营销技能，一条命令审计任意网站 ai-marketing-claude 是一套 Claude Code Skill 系统，提供 15 个 /market 命令，用 5 个并行 Subagent 对任意网站做六维营销审计并打分，生成文案/邮件序列/30天内容日历/竞品情报/客户 PDF 报告，一条命令安装，MIT 开源。 Claude Code AI营销 Skill Subagent 开源 营销自动化 Agent 一句话说清楚它是什么 15 个 `/market` 命令 核心能",
+          "score": 0.4894955
+        },
+        {
+          "article_id": "cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course",
+          "title": "CMU 11-768 AI Agents：OpenHands 作者亲授，从零搭 Harness、建评测、用 RL 训 Agent，视频讲义全开放",
+          "url": "/blog/cmu-11-768-ai-agents-fall-2026-neubig-openhands-harness-rl-course/",
+          "language": "zh",
+          "excerpt": "CMU 11-768 AI Agents：OpenHands 作者亲授，从零搭 Harness、建评测、用 RL 训 Agent，视频讲义全开放 CMU 语言技术研究所秋季新课，Graham Neubig（OpenHands 核心创始人）+ Daniel Fried 主讲。28 节课三阶段：搭 ReAct Harness→建 LLM-as-judge 评测→SFT+RL 训练 Agent。YouTube 播放列表已上传前 4 讲，3 次作业 starter code 已开放，GitHub 组织 cmu-agents。官网 cmu-agents.com。 ",
+          "score": 0.48517665
+        },
+        {
+          "article_id": "xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills",
+          "title": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过",
+          "url": "/blog/xhs-favorites-distiller-agent-skill-xiaohongshu-favorites-to-skills/",
+          "language": "zh",
+          "excerpt": "xhs-favorites-distiller：把小红书收藏变成 Agent Skill，不是每篇都变，只有真有用的才通过 B1lli/xhs-favorites-distiller，Apache 2.0，Python 3.10+，把小红书（或微信）收藏里的方法蒸馏成可安装的 Agent skill。核心机制：价值筛选 + 消融测试 + 自然触发验证，未经证实的候选不进入宿主发现目录。消融实验显示去掉「自然触发」要求后，3/3 案例出现提前激活；全流程测试 24/24 正确通过。 open-source agent-skills xiaohongshu ",
+          "score": 0.48320797
+        },
+        {
+          "article_id": "unlazy-depth-tree-anti-laziness-gate-contract-claude-code",
+          "title": "Unlazy：用 Depth Tree + 可运行验证门，卡住 AI 代理「谎报完成」",
+          "url": "/blog/unlazy-depth-tree-anti-laziness-gate-contract-claude-code/",
+          "language": "zh",
+          "excerpt": "Unlazy：用 Depth Tree + 可运行验证门，卡住 AI 代理「谎报完成」 Unlazy 是一个 Claude Code / Codex 技能包，用 Depth Tree 方法将任务拆成 N 层，每个叶节点都获得整个任务的完整时间预算——努力程度随深度倍增。核心是可运行验证门（GATES.md），只有所有 CHECK 通过、EVIDENCE 记录在案，才允许报告完成。2,300+ Star，创建于 2026-08-09。 开源 Claude Code Agent技能 防偷懒 Depth Tree 验证门 Unlazy AI代理 问题是什么 D",
+          "score": 0.48147395
+        },
+        {
+          "article_id": "grill-with-docs-domain-modeling-grilling-skills-requirement-workflow",
+          "title": "The Requirements Triage Triple: grilling + domain-modeling + grill-with-docs — Turn Fuzzy Requirements into Executable Documentation",
+          "url": "/blog/grill-with-docs-domain-modeling-grilling-skills-requirement-workflow/",
+          "language": "en",
+          "excerpt": "The Requirements Triage Triple: grilling + domain-modeling + grill-with-docs — Turn Fuzzy Requirements into Executable Documentation Three Claude Code skills by Matt Pocock on skills.sh: grilling for relentless interrogation, domain-modeling for unified project language, and gril",
+          "score": 0.47613803
+        },
+        {
+          "article_id": "claude-trading-skills-tradermonty-stock-workflow-toolkit",
+          "title": "2833 星的 Claude 交易技能包：74 个 Skill 覆盖选股到复盘，但它明确说自己不下单",
+          "url": "/blog/claude-trading-skills-tradermonty-stock-workflow-toolkit/",
+          "language": "zh",
+          "excerpt": "2833 星的 Claude 交易技能包：74 个 Skill 覆盖选股到复盘，但它明确说自己不下单 tradermonty/claude-trading-skills 是一套 MIT 协议的 Claude Code 交易工作流技能包，2833 星、647 fork，74 个 Skill 分 6 大领域，覆盖选股筛选、仓位计算、复盘记账，但作者反复强调不是信号服务、不自动下单、不构成投资建议。 Claude Code Claude Skills 量化交易 开源工具 Alpaca 股票投资 风险提示 为什么关注这个项目？ 这套东西到底是什么：74 个 Sk",
+          "score": 0.47593284
+        }
+      ]
+    }
+  }
+]
