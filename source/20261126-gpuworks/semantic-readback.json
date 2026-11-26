@@ -1,0 +1,40 @@
+[
+  {
+    "id": "ac6b0520042a1a57ff9de7306303aad54dbbd3658a38200b",
+    "metadata": {
+      "article_id": "gpuworks-gpu-pooling-sharing-network-boundaries-guide",
+      "content_hash": "958aaeb129f91831",
+      "excerpt": "GPUWorks：统一算力池之前，先看清共享与网络边界 GPUWorks 是不以 Kubernetes 为前置条件的 GPU 管理与模型服务平台。本文核查约40MB控制面、作者千台GPU服务器演练、dGPU显存配额、休眠唤醒、NAT连接与Mac原生引擎路线，运行96个顶层Go测试，区分统一管理和分布式计算、软件配额与硬件隔离，并说明模型环境成本及默认体验报告的部署选择。 GPUWorks GPU Inference Resource Management Open Source Infrastructure 40MB 和“千台”分别在说什么？ 一张卡怎样",
+      "language": "zh",
+      "tags": [
+        "GPUWorks",
+        "GPU",
+        "Inference",
+        "Resource Management",
+        "Open Source",
+        "Infrastructure"
+      ],
+      "title": "GPUWorks：统一算力池之前，先看清共享与网络边界",
+      "url": "/blog/gpuworks-gpu-pooling-sharing-network-boundaries-guide/"
+    }
+  },
+  {
+    "id": "89ba1d389faf19c61e1e0720f92afbba97e0fc3c95a15cf0",
+    "metadata": {
+      "article_id": "gpuworks-gpu-pooling-sharing-network-boundaries-guide",
+      "content_hash": "2d3dc39905a8af84",
+      "excerpt": "GPUWorks: GPU Pooling, Sharing and Network Boundaries Review GPUWorks GPU pooling, memory quotas, NAT and Mac limits, with 96 local Go tests separating protocol correctness from real hardware and scale claims. GPUWorks GPU Inference Resource Management Open Source Infrastructure ",
+      "language": "en",
+      "tags": [
+        "GPUWorks",
+        "GPU",
+        "Inference",
+        "Resource Management",
+        "Open Source",
+        "Infrastructure"
+      ],
+      "title": "GPUWorks: GPU Pooling, Sharing and Network Boundaries",
+      "url": "/blog/gpuworks-gpu-pooling-sharing-network-boundaries-guide/"
+    }
+  }
+]

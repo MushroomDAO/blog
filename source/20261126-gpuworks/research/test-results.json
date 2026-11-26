@@ -1,0 +1,21 @@
+{
+  "passedTopLevelTests": 96,
+  "packages": {
+    "gpuworks.ai/gpuworks/pkg/estimate": 2,
+    "gpuworks.ai/gpuworks/internal/proto": 83,
+    "gpuworks.ai/gpuworks/internal/agent/dgpucache": 11
+  },
+  "failed": 0,
+  "subtestsNotDoubleCounted": true,
+  "go": "1.27.1 darwin/arm64",
+  "fixtures": "modelconfig values, wire/serialization/synthetic protocol states, temporary files and prebuilt cache ledger fixtures",
+  "notTested": [
+    "real GPU quota enforcement",
+    "NAT connectivity",
+    "1003node scale",
+    "performance",
+    "Mac engine deployment",
+    "actual model weights",
+    "full integration suite"
+  ]
+}

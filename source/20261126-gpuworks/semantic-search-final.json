@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "gpuworks-gpu-pooling-sharing-network-boundaries-guide",
+    "query": "GPUWorks dGPU 显存配额 NAT Mac 算力池",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "gpuworks-gpu-pooling-sharing-network-boundaries-guide",
+          "title": "GPUWorks：统一算力池之前，先看清共享与网络边界",
+          "url": "/blog/gpuworks-gpu-pooling-sharing-network-boundaries-guide/",
+          "language": "zh",
+          "excerpt": "GPUWorks：统一算力池之前，先看清共享与网络边界 GPUWorks 是不以 Kubernetes 为前置条件的 GPU 管理与模型服务平台。本文核查约40MB控制面、作者千台GPU服务器演练、dGPU显存配额、休眠唤醒、NAT连接与Mac原生引擎路线，运行96个顶层Go测试，区分统一管理和分布式计算、软件配额与硬件隔离，并说明模型环境成本及默认体验报告的部署选择。 GPUWorks GPU Inference Resource Management Open Source Infrastructure 40MB 和“千台”分别在说什么？ 一张卡怎样",
+          "score": 0.71801776
+        },
+        {
+          "article_id": "nex-n2-5-mini-agentic-moe-mac-local-memory-guide",
+          "title": "Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？",
+          "url": "/blog/nex-n2-5-mini-agentic-moe-mac-local-memory-guide/",
+          "language": "zh",
+          "excerpt": "Nex-N2.5-mini：35B 总参、约 3B 激活的开源 Agent 模型，Mac 要多大内存才跑得动？ Nex-N2.5-mini 是 Nex-AGI 9 月 8 日开源的 Agent 模型，Apache-2.0，35.1B 总参 MoE、按权重头部推算每 token 约 2.95B 激活，底座是 Qwen3.5-35B-A3B-Base。本文按社区量化体积推算 Mac 内存门槛：32GB 起步能跑 4-bit，48GB 才宽裕；并对照同底座 Qwen、云端价格和 Claude Code/OpenCode 接入方式。 Nex-N2.5 AI Ag",
+          "score": 0.5861044
+        },
+        {
+          "article_id": "dgx-spark-gb10-video-generation-what-actually-helps",
+          "title": "DGX Spark 上跑视频生成：FlashAttention 没用、torch.compile 没用、量化也没用",
+          "url": "/blog/dgx-spark-gb10-video-generation-what-actually-helps/",
+          "language": "zh",
+          "excerpt": "DGX Spark 上跑视频生成：FlashAttention 没用、torch.compile 没用、量化也没用 FastVideo 给 NVIDIA DGX Spark（GB10）写的调优文档罕见地列了「什么没用」：编译 FlashAttention 零加速、torch.compile VAE 触发重编译风暴只剩 1.1x、长序列模型上的 fp8/nvfp4 线性层量化约等于噪声。真正有用的只有一条——换蒸馏少步模型，3 步 40 秒 vs 全步 12 分钟，约 18 倍。根因是 GB10 的 128GB 统一内存只有约 270 GB/s 带宽，比数",
+          "score": 0.5594835
+        },
+        {
+          "article_id": "airllm-70b-inference-4gb-gpu-layer-streaming",
+          "title": "AirLLM：4GB 显存跑 70B 大模型，无需量化",
+          "url": "/blog/airllm-70b-inference-4gb-gpu-layer-streaming/",
+          "language": "zh",
+          "excerpt": "AirLLM：4GB 显存跑 70B 大模型，无需量化 lyogavin 开源的大模型极限推理工具，30k stars，Apache 2.0。通过逐层流式加载，在单张 4GB 显卡上运行 70B 模型，无需量化/蒸馏/剪枝。Kimi K3（2.8T）3.72GB、DeepSeek-V3（671B）约 12GB、Qwen3-235B 约 3GB。v3.0 新增 FP8 支持。支持 CUDA、Apple Silicon（macOS），同一 AutoModel 接口覆盖所有主流模型。 本地推理 大模型 显存优化 AppleSilicon DeepSeek Qw",
+          "score": 0.558266
+        },
+        {
+          "article_id": "nemotron-3-diarization-8-speaker-streaming-mac-test",
+          "title": "Nemotron 3 Diarization 实测：NVIDIA 1 亿参数说话人分离模型，最多 8 人、可商用，Mac 上要自己编译",
+          "url": "/blog/nemotron-3-diarization-8-speaker-streaming-mac-test/",
+          "language": "zh",
+          "excerpt": "Nemotron 3 Diarization 实测：NVIDIA 1 亿参数说话人分离模型，最多 8 人、可商用，Mac 上要自己编译 Nemotron 3 Diarization 是 NVIDIA 2026-09-23 发布的 1 亿参数说话人分离模型，最多 8 人、流式延迟可低至 0.32 秒、OpenMDW-1.1 许可可商用。模型卡自报 DIHARD III DER 从 19.09% 降到 12.73%。我们在 16GB M4 Mac mini 上实测：官方安装脚本装的 v0.1.0 运行时加载失败，需从源码编译；编译后 10 分钟音频 CPU ",
+          "score": 0.5570568
+        },
+        {
+          "article_id": "deepseek-v4-flash-local-inference-guide",
+          "title": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册",
+          "url": "/blog/deepseek-v4-flash-local-inference-guide/",
+          "language": "zh",
+          "excerpt": "在本地跑 DeepSeek V4-Flash：硬件选型与部署手册 DeepSeek V4-Flash 284B MoE 模型本地推理完全指南：为什么「13B 激活参数」不等于 13B 内存需求，四档硬件方案对比，以及 Mac M4 Ultra、多卡 GPU、vLLM 的实操步骤。 DeepSeek V4 本地推理 MoE vLLM Mac M4 Ultra GPU推理 量化 llama.cpp AI部署 一、先搞清楚：MoE 的内存陷阱 \"激活参数\" ≠ \"推理内存\" V4-Flash 的实际内存占用 额外内存开销 二、四档硬件方案 方案 A：Mac A",
+          "score": 0.5540517
+        },
+        {
+          "article_id": "hyperqwen-qwen-27b-24gb-vllm-guide",
+          "title": "HyperQwen: Qwen 27B on 24GB GPUs, with Clear Limits",
+          "url": "/blog/hyperqwen-qwen-27b-24gb-vllm-guide/",
+          "language": "en",
+          "excerpt": "HyperQwen: Qwen 27B on 24GB GPUs, with Clear Limits HyperQwen optimizes Qwen 27B serving on 24GB NVIDIA GPUs. Learn its speed metrics, memory tradeoffs, quality evidence, setup paths, and limits for Mac users. HyperQwen Qwen3.8 vLLM 本地大模型 推理优化 What does the system optimize? Which",
+          "score": 0.5516252
+        },
+        {
+          "article_id": "qwen-image-2-1-unsloth-fp8-gguf-local-deploy",
+          "title": "Qwen-Image-2.1 Local Deploy: Unsloth FP8/GGUF, Runs on 6GB VRAM, Mac 16GB Unified Memory Too",
+          "url": "/blog/qwen-image-2-1-unsloth-fp8-gguf-local-deploy/",
+          "language": "en",
+          "excerpt": "Qwen-Image-2.1 Local Deploy: Unsloth FP8/GGUF, Runs on 6GB VRAM, Mac 16GB Unified Memory Too Unsloth has lowered the entry barrier for Qwen-Image-2.1 local deployment. FP8 + pinned RAM offloading: 6-8GB VRAM is sufficient, inference overhead <2x. GGUF quantization: works on Mac 1",
+          "score": 0.5504284
+        },
+        {
+          "article_id": "h2o-llmstudio-hardware-thailand-5090",
+          "title": "H2O LLM Studio 硬件选配：32GB 显存 GPU，从 7B 调到 34B 的完整方案",
+          "url": "/blog/h2o-llmstudio-hardware-thailand-5090/",
+          "language": "zh",
+          "excerpt": "H2O LLM Studio 硬件选配：32GB 显存 GPU，从 7B 调到 34B 的完整方案 大模型微调显存选配：从 7B 到 34B 的完整方案。 大模型微调 显存 GPU 先说结论 一、显存占用分析 7B 模型 13B 模型 34B 模型 配置方案 入门（微调 7B） 稳定版（微调 13B） 旗舰版（微调 34B） H2O LLM Studio 配置 7B 配置（1×32GB） 13B 配置（2×32GB） 34B 配置（4×32GB）",
+          "score": 0.54595286
+        },
+        {
+          "article_id": "qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide",
+          "title": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上",
+          "url": "/blog/qwen3-8-flash-next-gguf-mac-unified-memory-quant-guide/",
+          "language": "zh",
+          "excerpt": "Qwen3.8-Flash-Next 要多大内存的 Mac？拆开 Unsloth GGUF：最小的「1-bit」档也有 72.5GB，其中 28.8GB 可以放在 SSD 上 unsloth/Qwen3.8-Flash-Next-GGUF 是 Qwen4 架构预览版（125B 总参、6B 激活，外加 51B n-gram 嵌入）的 GGUF 量化，110 万次下载。我们逐个读了 10 个量化档的 GGUF 张量头：所谓 1-bit 只压了专家的 gate/up 投影，28.8GB 的 n-gram 表至少是 4-bit，所以最小档仍有 72.5GB。好在",
+          "score": 0.5424467
+        }
+      ]
+    }
+  }
+]

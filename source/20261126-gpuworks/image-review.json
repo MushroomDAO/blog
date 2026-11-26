@@ -1,0 +1,31 @@
+{
+  "banner": "machine0fail0warn, manualpass; shared hardware tray photo seed10002 not actualUI",
+  "body": [
+    {
+      "file": "src/assets/images/gpuworks-gpu-pooling-sharing-network-boundaries-guide-fig-01.png",
+      "bytes": 38812,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/gpuworks-gpu-pooling-sharing-network-boundaries-guide-fig-02.png",
+      "bytes": 58927,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/gpuworks-gpu-pooling-sharing-network-boundaries-guide-fig-03.png",
+      "bytes": 54021,
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "originals": "assets/gpuworks-gpu-pooling-sharing-network-boundaries-guide-illustrations",
+  "manualReview": "all3body originals viewed: correct sparseChinese activeLittleM; controlplane/environment, concurrent/alternating, distinctnetworkplanes; cover10002manualpass,10001manualrejected tinylettering"
+}

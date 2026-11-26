@@ -1,0 +1,13 @@
+{
+  "title": "GPUWorks：算力池的共享与网络边界",
+  "author": "Mycelium",
+  "digest": "核查40MB控制面与96项本地测试，分清显存共享、节点接入和多机计算。",
+  "mediaId": "prCUE631thH1cmNLi42prLnIDeT6AyP3KTWnkCAhqQwlcx-n_npTiuGrO4e4CwUF",
+  "blogUrl": "https://blog.mushroom.cv/blog/gpuworks-gpu-pooling-sharing-network-boundaries-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/gpuworks-gpu-pooling-sharing-network-boundaries-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/flitai-io/gpuworks"
+  ],
+  "publishedAt": "2026-11-26T02:18:26.478Z"
+}
