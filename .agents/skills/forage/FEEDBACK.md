@@ -1586,3 +1586,5 @@ Published harness-adapters-in-loop-rl-tool-governance from exact official URL; i
 - 2026-11-23 AlphaSift: https://blog.mushroom.cv/blog/alphasift-auditable-stock-screening-agent-guide/；75项原始测试通过；合成行情与模拟模型；35为模型评分封顶非最终分，区分收盘与次日开盘入场；无实盘筛选/完整历史复算/投资收益证明。Blog/远程草稿/双语索引/KB回读已验证；PR293待审。
 
 - 2026-11-24 Claude-BugHunter: https://blog.mushroom.cv/blog/claude-bughunter-skills-evidence-scope-review/；84技能/15命令，65项原始本地测试；文本门禁非漏洞复现，代码MIT/内容CCBY4；无外部扫描/利用/模型研究，无发现率测量。Blog/草稿/双语索引/KB回读已验证；PR294待审。
+
+- 2026-11-24 OpenVINO: https://blog.mushroom.cv/blog/openvino-inference-deployment-device-boundaries-guide/；7项真实ONNX/CPU合成检查；发布包2026.4.1仅CPU可用，未测GPU/NPU/量化/性能/云端；源码说明与安装wheel分别固定。Blog/草稿/双语索引/KB回读已验证；PR296待审。

@@ -1,0 +1,31 @@
+{
+  "banner": "machine0fail0warn, manualpass; edgebox heatsinks and cable photo seed9902 not actualUI",
+  "body": [
+    {
+      "file": "src/assets/images/openvino-inference-deployment-device-boundaries-guide-fig-01.png",
+      "bytes": 73280,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/openvino-inference-deployment-device-boundaries-guide-fig-02.png",
+      "bytes": 84779,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/openvino-inference-deployment-device-boundaries-guide-fig-03.png",
+      "bytes": 64161,
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "originals": "assets/openvino-inference-deployment-device-boundaries-guide-illustrations",
+  "manualReview": "all3 originals viewed: correct sparseChinese, LittleM active; conversion/compilation/inference distinct; actualCPUinventory; accuracy/latency/throughput differentacceptance. Cover9901manualrejected textureletters/hardwaredetails;9902manualpass plainfinnedblocks noletters/faces"
+}

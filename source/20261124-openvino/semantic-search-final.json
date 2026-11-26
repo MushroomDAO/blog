@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "openvino-inference-deployment-device-boundaries-guide",
+    "query": "OpenVINO 2026.4.1 ONNX CPU 设备边界 模型转换",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "openvino-inference-deployment-device-boundaries-guide",
+          "title": "OpenVINO：把模型交付给应用，先核对设备边界",
+          "url": "/blog/openvino-inference-deployment-device-boundaries-guide/",
+          "language": "zh",
+          "excerpt": "OpenVINO：把模型交付给应用，先核对设备边界 OpenVINO 是面向模型推理优化与部署的工具包。本文区分模型转换、设备编译、量化、生成式组件与服务化，核对 CPU、Intel GPU/NPU 及 ARM64 macOS 的支持边界，并以发布版 2026.4.1 跑通七项合成模型检查，说明文件大小、数值正确性、吞吐和延迟应验收，避免把端云部署理解成任意硬件通吃。 OpenVINO Inference Deployment Intel ONNX Open Source OpenVINO 在部署链路里做哪一段？ “跑遍端云”有哪些硬件边界？ 转换、量化",
+          "score": 0.7161763
+        },
+        {
+          "article_id": "infinitediffusion-terrain-generation-guide",
+          "title": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文",
+          "url": "/blog/infinitediffusion-terrain-generation-guide/",
+          "language": "zh",
+          "excerpt": "InfiniteDiffusion：一个人、一张消费级显卡、一篇 SIGGRAPH 2026 顶会论文 Alexander Goslin 以独立研究者身份，用 RTX 3090 Ti 发表 SIGGRAPH 2026 论文 InfiniteDiffusion，将扩散模型改造为懒惰采样，实现无界、O(1) 随机访问、确定性的无限地形生成。本文整理复现路径与游戏/工程应用方向。 扩散模型 程序化生成 游戏开发 SIGGRAPH 地形生成 AI图形 独立研究 先说这件事本身有多不寻常 论文在解决什么问题？ 原始资源 30 分钟复现路径 Step 0：环境 St",
+          "score": 0.54125935
+        },
+        {
+          "article_id": "ktransformers-v071-moe-lora-finetune-qwen-vlm-kimi-rawint4",
+          "title": "KTransformers v0.7.1：用 CPU+GPU 异构执行微调 Qwen VLM 和 Kimi 这类超大 MoE",
+          "url": "/blog/ktransformers-v071-moe-lora-finetune-qwen-vlm-kimi-rawint4/",
+          "language": "zh",
+          "excerpt": "KTransformers v0.7.1：用 CPU+GPU 异构执行微调 Qwen VLM 和 Kimi 这类超大 MoE kvcache-ai/ktransformers v0.7.1（Apache-2.0，19.5K stars）新增两项微调能力：Qwen3-VL-30B 图文 BF16 LoRA（覆盖视觉/语言/路由专家），以及 Kimi K2.5/K2.6 RAWINT4 原权重 LoRA（不需要先反量化成 BF16）。异构执行：CPU 承载路由专家权重，GPU 跑注意力和共享专家，通过 LLaMA-Factory 统一训练接口。 fine-t",
+          "score": 0.5408032
+        },
+        {
+          "article_id": "moss-tts-nano-ultralight-multilingual-tts-open-source",
+          "title": "0.1B 参数跑满 20 种语言：MOSS-TTS-Nano 超轻量 TTS 开源",
+          "url": "/blog/moss-tts-nano-ultralight-multilingual-tts-open-source/",
+          "language": "zh",
+          "excerpt": "0.1B 参数跑满 20 种语言：MOSS-TTS-Nano 超轻量 TTS 开源 OpenMOSS 开源 MOSS-TTS-Nano，0.1B 参数，纯 CPU 运行，48kHz 双声道输出，支持 20 种语言零样本声音克隆。单核 CPU（M4 MacBook Air）流畅推理，ONNX 运行无需 PyTorch，可嵌入浏览器扩展与边缘设备。 TTS 语音合成 开源 MOSS ONNX 声音克隆 轻量模型 本地部署 项目背景 核心技术架构 核心功能 极致轻量化 + 低延迟 零样本声音克隆 多语言支持 部署方式 实际意义 快速开始 常见问题",
+          "score": 0.5394081
+        },
+        {
+          "article_id": "oriera-engine-v03-generative-assets",
+          "title": "OriEra Engine v0.3.0：把AI生成资产接进世界运行时",
+          "url": "/blog/oriera-engine-v03-generative-assets/",
+          "language": "zh",
+          "excerpt": "OriEra Engine v0.3.0：把AI生成资产接进世界运行时 OriEra Engine v0.3.0 为开放世界引擎加入生成式 AI 接口、资产校验与热替换通路。结合发布记录与源码，解释十一项 workspace 成员与分层架构的区别，核对默认测试和 providers 测试合计152次通过的口径，实跑离线 Mock 示例，并说明真实模型接入、浏览器演示及移动、AR平台的边界。 OriEra Rust 游戏引擎 生成式AI 开源项目 它想解决什么问题？ 11个crate与十一层架构有什么区别？ L8 怎样把生成结果换进世界？ “152个测试全",
+          "score": 0.53623915
+        },
+        {
+          "article_id": "opensquilla-multi-model-routing-guide",
+          "title": "OpenSquilla：用多模型路由挑战顶级大模型，花 1/9 的钱达到同等效果",
+          "url": "/blog/opensquilla-multi-model-routing-guide/",
+          "language": "zh",
+          "excerpt": "OpenSquilla：用多模型路由挑战顶级大模型，花 1/9 的钱达到同等效果 OpenSquilla（5600+ Star，Apache 2.0）是一个 token 高效的微内核 AI Agent，其核心 SquillaRouter 在本地设备上把每轮对话路由到最便宜且能胜任的模型。基准测试显示：多模型路由（$0.69）vs 单独使用 Claude Opus 4.7（$6.23），评分几乎相同，成本降低 9 倍。 OpenSquilla 多模型路由 SquillaRouter AI Agent Token效率 开源 LLM 成本优化 微内核 一个颠覆",
+          "score": 0.5354573
+        },
+        {
+          "article_id": "grpo-small-model-engineering-guide",
+          "title": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径",
+          "url": "/blog/grpo-small-model-engineering-guide/",
+          "language": "zh",
+          "excerpt": "GRPO微调小模型工程指南：80美元训练，超越o3的完整路径 GRPO（Group Relative Policy Optimization）让小模型在垂直任务上碾压frontier大模型成为可能。本文整合 ART、ms-swift、OpenClaw-RL 等开源仓库，以及 ART·E（Qwen 2.5 14B超越o3，$80训练）、MCP·RL等6个真实工程案例，给出完整的工程路径：任务选择→数据构造→奖励函数设计→训练循环→监控与避坑。 GRPO 强化学习 小模型 Qwen 微调 LLM训练 AI工程 Mycelium 为什么 GRPO 适合小模型专",
+          "score": 0.53480715
+        },
+        {
+          "article_id": "ornith-1-coding-agent-model-mac-mini-local-inference",
+          "title": "Ornith-1.0：自改进 Coding Agent 模型，9B 打 35B，Mac mini 本地跑 60 t/s",
+          "url": "/blog/ornith-1-coding-agent-model-mac-mini-local-inference/",
+          "language": "zh",
+          "excerpt": "Ornith-1.0：自改进 Coding Agent 模型，9B 打 35B，Mac mini 本地跑 60 t/s deepreinforce-ai 开源 Ornith-1.0：RL 同时优化脚手架和解答，9B 在 Terminal-Bench 和 NL2Repo 上碾压 Qwen3.5-35B，35B MoE 超过 Qwen3.5-397B。APEX-I-Compact MTP GGUF + 16GB Mac mini 实测 60 t/s，总结/排版远超原版模型，无无限重复问题。 本地模型 Coding Agent Apple Silicon Ma",
+          "score": 0.53401905
+        },
+        {
+          "article_id": "moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota",
+          "title": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军",
+          "url": "/blog/moss-transcribe-diarize-end-to-end-multi-speaker-asr-diarization-sota/",
+          "language": "zh",
+          "excerpt": "MOSS-Transcribe-Diarize 0.9B：端到端多说话人转写+说话人分离，一个模型搞定，INTERSPEECH 2026 冠军 OpenMOSS 开源的 MOSS-Transcribe-Diarize 0.9B（1.5K stars），SOTA 端到端音频理解模型，一个模型同时完成长音频多说话人转写、说话人分离（diarization）、精确时间戳和声学事件标注。架构：Qwen3-0.6B 解码器 + Whisper-Medium 编码器 + 4x 时序合并 MLP 桥接。支持 50+ 语言。输出格式 [时间戳][S01]文本[时间戳]。",
+          "score": 0.53144526
+        },
+        {
+          "article_id": "microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact",
+          "title": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率",
+          "url": "/blog/microsoft-trellis2-image-to-3d-o-voxel-pbr-native-compact/",
+          "language": "zh",
+          "excerpt": "TRELLIS.2：微软图生 3D 续作，O-Voxel 打破拓扑限制，4B 参数，3 秒 512³ 分辨率 microsoft/TRELLIS.2 是 TRELLIS（CVPR'25 Spotlight）的续作，10745 stars，MIT，Python。核心创新：O-Voxel「无场」稀疏体素结构取代等值面场，天然支持开放表面（衣物/叶片）、非流形几何、内部封闭结构；4B 参数模型 512³ 分辨率 H100 上约 3 秒，1024³ 约 17 秒；完整 PBR 材质（Base Color/Roughness/Metallic/Opacity）；网",
+          "score": 0.52962714
+        }
+      ]
+    }
+  }
+]

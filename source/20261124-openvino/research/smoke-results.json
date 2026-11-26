@@ -1,0 +1,41 @@
+{
+  "version": "2026.4.1-22982-e213a147257-releases/2026/4",
+  "build": "2026.4.1-22982-e213a147257-releases/2026/4",
+  "python": "3.12.14",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "devices": [
+    "CPU"
+  ],
+  "autoExecutionDevices": [
+    "CPU"
+  ],
+  "passed": 7,
+  "checks": [
+    "CPU device discovered",
+    "ONNX conversion retains dynamic batch",
+    "CPU outputs match NumPy for batch1 and3",
+    "FP32 IR save/reload matches reference",
+    "two async requests match their independent inputs",
+    "AUTO:CPU executes on reported CPU",
+    "wrong feature dimension rejected"
+  ],
+  "maxAbsErrors": [
+    0.0,
+    0.0
+  ],
+  "shapeError": "Exception from src/inference/src/cpp/infer_request.cpp:113:",
+  "notTested": [
+    "real pretrained model quality",
+    "IntelGPU/NPU",
+    "quantization",
+    "multi-device scheduling",
+    "remote/cloud modelserver",
+    "performance/speedup/peakmemory"
+  ],
+  "artifacts": {
+    "synthetic.xml": "401f5419a4b52f44a3a5b960a6d301f1335526ab5c4045120cc32a93a02e564d",
+    "synthetic.bin": "3b3545a6c0c04b3cb0c612a66be4b12a45fd5c3517f753f7c91186e140fdb6ed",
+    "synthetic.onnx": "50f506968dba9ee0fadda9809653d01f645343431064278f9631bc15989a2a06"
+  }
+}

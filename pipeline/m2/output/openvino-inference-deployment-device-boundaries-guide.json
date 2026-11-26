@@ -1,0 +1,14 @@
+{
+  "title": "OpenVINO：推理部署先看设备边界",
+  "author": "Mycelium",
+  "digest": "七项本地验证跑通转换与CPU推理，分清端云部署和硬件兼容。",
+  "mediaId": "prCUE631thH1cmNLi42prKcH120Z-T11BetmOjWzux_mA-nHvRKhEYSpAdUepBJD",
+  "blogUrl": "https://blog.mushroom.cv/blog/openvino-inference-deployment-device-boundaries-guide/",
+  "contentSourceUrl": "https://blog.mushroom.cv/blog/openvino-inference-deployment-device-boundaries-guide/",
+  "theme": "blue",
+  "sourceUrls": [
+    "github.com/openvinotoolkit/openvino",
+    "github.com/openvinotoolkit/openvino.genai"
+  ],
+  "publishedAt": "2026-11-24T02:13:59.010Z"
+}
