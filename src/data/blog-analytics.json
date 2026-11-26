@@ -1,418 +1,91 @@
 {
-  "generatedAt": "2026-11-24T14:00:00Z",
+  "generatedAt": "2026-11-26T14:00:00Z",
   "period": {
-    "start": "2026-10-25",
-    "end": "2026-11-24"
+    "start": "2026-10-27",
+    "end": "2026-11-26"
   },
   "totals": {
-    "pageviews": 18410,
-    "visits": 17540,
-    "bots": 30
+    "pageviews": 9000,
+    "visits": 9000,
+    "bots": 0
   },
   "last7": {
-    "pv": 3470,
-    "visits": 3170
+    "pv": 9000,
+    "visits": 9000
   },
   "prior7": {
-    "pv": 4050,
-    "visits": 3800
+    "pv": 0,
+    "visits": 0
   },
   "daily": [
     {
-      "date": "10-25",
-      "pv": 120,
-      "visits": 120
-    },
-    {
-      "date": "10-26",
-      "pv": 550,
-      "visits": 550
-    },
-    {
       "date": "10-27",
-      "pv": 440,
-      "visits": 440
-    },
-    {
-      "date": "10-28",
-      "pv": 550,
-      "visits": 550
-    },
-    {
-      "date": "10-29",
-      "pv": 610,
-      "visits": 610
-    },
-    {
-      "date": "10-30",
-      "pv": 530,
-      "visits": 520
-    },
-    {
-      "date": "10-31",
-      "pv": 410,
-      "visits": 400
-    },
-    {
-      "date": "11-01",
-      "pv": 630,
-      "visits": 620
-    },
-    {
-      "date": "11-02",
-      "pv": 770,
-      "visits": 700
-    },
-    {
-      "date": "11-03",
-      "pv": 800,
-      "visits": 760
-    },
-    {
-      "date": "11-04",
-      "pv": 870,
-      "visits": 850
-    },
-    {
-      "date": "11-05",
-      "pv": 790,
-      "visits": 780
-    },
-    {
-      "date": "11-06",
-      "pv": 880,
-      "visits": 860
-    },
-    {
-      "date": "11-07",
-      "pv": 630,
-      "visits": 600
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "11-08",
-      "pv": 630,
-      "visits": 610
-    },
-    {
-      "date": "11-09",
-      "pv": 1010,
-      "visits": 970
-    },
-    {
-      "date": "11-10",
-      "pv": 670,
-      "visits": 630
-    },
-    {
-      "date": "11-11",
-      "pv": 680,
-      "visits": 680
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "11-12",
-      "pv": 680,
-      "visits": 640
-    },
-    {
-      "date": "11-13",
-      "pv": 580,
-      "visits": 490
+      "pv": 1000,
+      "visits": 1000
     },
     {
       "date": "11-14",
-      "pv": 510,
-      "visits": 490
-    },
-    {
-      "date": "11-15",
-      "pv": 360,
-      "visits": 350
-    },
-    {
-      "date": "11-16",
-      "pv": 760,
-      "visits": 710
-    },
-    {
-      "date": "11-17",
-      "pv": 480,
-      "visits": 440
-    },
-    {
-      "date": "11-18",
-      "pv": 460,
-      "visits": 400
-    },
-    {
-      "date": "11-19",
-      "pv": 840,
-      "visits": 760
-    },
-    {
-      "date": "11-20",
-      "pv": 690,
-      "visits": 640
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "date": "11-21",
-      "pv": 380,
-      "visits": 330
-    },
-    {
-      "date": "11-22",
-      "pv": 380,
-      "visits": 350
-    },
-    {
-      "date": "11-23",
-      "pv": 480,
-      "visits": 460
+      "pv": 2000,
+      "visits": 2000
     },
     {
       "date": "11-24",
-      "pv": 240,
-      "visits": 230
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "date": "11-25",
+      "pv": 1000,
+      "visits": 1000
     }
   ],
-  "countries": [
-    {
-      "code": "SG",
-      "flag": "🇸🇬",
-      "name": "新加坡",
-      "nameEn": "Singapore",
-      "pv": 7520,
-      "visits": 7460
-    },
-    {
-      "code": "CN",
-      "flag": "🇨🇳",
-      "name": "中国",
-      "nameEn": "China",
-      "pv": 3730,
-      "visits": 3550
-    },
-    {
-      "code": "US",
-      "flag": "🇺🇸",
-      "name": "美国",
-      "nameEn": "United States",
-      "pv": 3130,
-      "visits": 2830
-    },
-    {
-      "code": "JP",
-      "flag": "🇯🇵",
-      "name": "日本",
-      "nameEn": "Japan",
-      "pv": 930,
-      "visits": 830
-    },
-    {
-      "code": "HK",
-      "flag": "🇭🇰",
-      "name": "香港",
-      "nameEn": "Hong Kong",
-      "pv": 800,
-      "visits": 720
-    },
-    {
-      "code": "TW",
-      "flag": "🇹🇼",
-      "name": "台湾",
-      "nameEn": "Taiwan",
-      "pv": 390,
-      "visits": 380
-    },
-    {
-      "code": "TH",
-      "flag": "🇹🇭",
-      "name": "泰国",
-      "nameEn": "Thailand",
-      "pv": 350,
-      "visits": 240
-    },
-    {
-      "code": "ID",
-      "flag": "🇮🇩",
-      "name": "印度尼西亚",
-      "nameEn": "Indonesia",
-      "pv": 150,
-      "visits": 150
-    },
-    {
-      "code": "DE",
-      "flag": "🇩🇪",
-      "name": "德国",
-      "nameEn": "Germany",
-      "pv": 130,
-      "visits": 120
-    },
-    {
-      "code": "CO",
-      "flag": "🇨🇴",
-      "name": "CO",
-      "nameEn": "CO",
-      "pv": 100,
-      "visits": 100
-    },
-    {
-      "code": "NL",
-      "flag": "🇳🇱",
-      "name": "荷兰",
-      "nameEn": "Netherlands",
-      "pv": 90,
-      "visits": 90
-    },
-    {
-      "code": "GB",
-      "flag": "🇬🇧",
-      "name": "英国",
-      "nameEn": "United Kingdom",
-      "pv": 80,
-      "visits": 80
-    }
-  ],
-  "countryTotal": 18020,
+  "countries": [],
+  "countryTotal": 0,
   "referers": {
-    "direct": 12760,
-    "search": 4680,
-    "ecosystem": 870,
+    "direct": 12920,
+    "search": 4790,
+    "ecosystem": 1190,
     "ai": 0,
     "other": 100
   },
-  "pages": [
-    {
-      "title": "首页",
-      "titleEn": "Home",
-      "path": "/",
-      "pv": 560,
-      "visits": 440
-    },
-    {
-      "title": "pixelfx：232款像素特效，用代码改、看着改、导出用",
-      "titleEn": "pixelfx: 232 Code-Drawn Pixel Effects and an Authoring Skill",
-      "path": "/blog/pixelfx-pixel-effects-guide/",
-      "pv": 450,
-      "visits": 450
-    },
-    {
-      "title": "jidan/days/2026-11-19",
-      "titleEn": "jidan/days/2026-11-19",
-      "path": "/jidan/days/2026-11-19/",
-      "pv": 280,
-      "visits": 280
-    },
-    {
-      "title": "MotoNav：Android 手机配 ESP32-S3 圆屏，自己做一个导航副屏",
-      "titleEn": "MotoNav: Android Navigation on an ESP32-S3 Round Display",
-      "path": "/blog/motonav-round-screen-navigation/",
-      "pv": 260,
-      "visits": 260
-    },
-    {
-      "title": "NX2Apple：把 Switch 到苹果设备的构建流程做成启动器",
-      "titleEn": "NX2Apple: A GUI Builder for Switch Games on Apple",
-      "path": "/blog/nx2apple-switch-apple-builder/",
-      "pv": 250,
-      "visits": 250
-    },
-    {
-      "title": "MacNativeGames：把《王国之泪》打包成Mac应用的技术拆解",
-      "titleEn": "MacNativeGames: Tears of the Kingdom on Apple Silicon",
-      "path": "/blog/macnativegames-totk-native-mac/",
-      "pv": 190,
-      "visits": 190
-    },
-    {
-      "title": "JR-Strata：把 Strata MoE 推理引擎移植到 Intel Arc 和 Vulkan 的社区分叉",
-      "titleEn": "JR-Strata: Community Fork Porting the Strata MoE Inference Engine to Intel Arc and Vulkan",
-      "path": "/blog/jr-strata-vulkan-sycl-intel-arc-strata-fork-non-nvidia-llm-inference/",
-      "pv": 180,
-      "visits": 180
-    },
-    {
-      "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
-      "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
-      "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
-      "pv": 160,
-      "visits": 160
-    },
-    {
-      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
-      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
-      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
-      "pv": 160,
-      "visits": 160
-    },
-    {
-      "title": "jidan",
-      "titleEn": "jidan",
-      "path": "/jidan/",
-      "pv": 140,
-      "visits": 50
-    },
-    {
-      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
-      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
-      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
-      "pv": 140,
-      "visits": 140
-    },
-    {
-      "title": "pstack 实践指南：Lauren Tan 如何让 AI 先调查、再构建和验证",
-      "titleEn": "pstack: Investigate, Build, Verify, Keep Context",
-      "path": "/blog/pstack-engineering-workflow/",
-      "pv": 130,
-      "visits": 120
-    },
-    {
-      "title": "jidan/days/2026-11-20",
-      "titleEn": "jidan/days/2026-11-20",
-      "path": "/jidan/days/2026-11-20/",
-      "pv": 130,
-      "visits": 130
-    },
-    {
-      "title": "jidan/en/days/2026-11-19",
-      "titleEn": "jidan/en/days/2026-11-19",
-      "path": "/jidan/en/days/2026-11-19/",
-      "pv": 120,
-      "visits": 120
-    },
-    {
-      "title": "jidan/days/2026-11-18",
-      "titleEn": "jidan/days/2026-11-18",
-      "path": "/jidan/days/2026-11-18/",
-      "pv": 110,
-      "visits": 80
-    }
-  ],
+  "pages": [],
   "devices": [
     {
       "label": "desktop",
-      "count": 17200
+      "count": 15000
     },
     {
       "label": "mobile",
-      "count": 1160
-    },
-    {
-      "label": "tablet",
-      "count": 50
+      "count": 1000
     }
   ],
   "os": [
     {
       "label": "Windows",
-      "count": 12570
+      "count": 12520
     },
     {
       "label": "MacOSX",
-      "count": 2290
+      "count": 2620
     },
     {
       "label": "Unknown",
-      "count": 1710
+      "count": 1890
     },
     {
       "label": "Linux",
@@ -420,11 +93,11 @@
     },
     {
       "label": "Android",
-      "count": 350
+      "count": 390
     },
     {
       "label": "iOS",
-      "count": 280
+      "count": 370
     },
     {
       "label": "ChromeOS",
@@ -434,27 +107,27 @@
   "browsers": [
     {
       "label": "Chrome",
-      "count": 13260
+      "count": 13480
     },
     {
       "label": "Edge",
-      "count": 2210
+      "count": 2250
     },
     {
       "label": "Unknown",
-      "count": 1710
+      "count": 1890
     },
     {
       "label": "Safari",
-      "count": 320
-    },
-    {
-      "label": "ChromeMobile",
-      "count": 280
+      "count": 340
     },
     {
       "label": "MobileSafari",
-      "count": 210
+      "count": 300
+    },
+    {
+      "label": "ChromeMobile",
+      "count": 290
     },
     {
       "label": "Firefox",
@@ -462,7 +135,7 @@
     },
     {
       "label": "ChromeMobileWebview",
-      "count": 140
+      "count": 160
     },
     {
       "label": "ChromeDerivative",
