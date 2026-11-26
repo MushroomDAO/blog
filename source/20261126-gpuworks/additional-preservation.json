@@ -1,0 +1,13 @@
+{
+  "knownPublishedRoute": "/blog/openvino-inference-deployment-device-boundaries-guide/",
+  "inPriorLiveCatalog": false,
+  "retainedFromPushedPublicationBranch": true,
+  "articleUnchanged": true,
+  "noNewWeChatDraftOrIndexingForOldRoute": true,
+  "checkedAt": "2026-11-26T02:17:51.877107+00:00",
+  "exactPublicTitleVerified": true,
+  "originMainHead": "37116a589fce57e5e538cadfa4cb127c142555ee",
+  "originMainContainsArticle": true,
+  "observation": "Prior livecatalog lacked route; preserved pushedarticle unchanged and public exacttitle verified. Future builds from a main tree without the article will omit it; no CI event causal audit performed.",
+  "kbRestorationNoteReadbackVerified": true
+}

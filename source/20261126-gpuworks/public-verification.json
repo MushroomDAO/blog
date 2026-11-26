@@ -1,0 +1,45 @@
+{
+  "orderingNote": "List uses same-day date sorting; actual lastPublishedAt records publication time for carousel ordering.",
+  "checkedAt": "2026-11-26T02:17:52.789770+00:00",
+  "articles": [
+    {
+      "slug": "gpuworks-gpu-pooling-sharing-network-boundaries-guide",
+      "url": "https://blog.mushroom.cv/blog/gpuworks-gpu-pooling-sharing-network-boundaries-guide/",
+      "title": "GPUWorks：统一算力池之前，先看清共享与网络边界",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/gpuworks-gpu-pooling-sharing-network-boundaries-guide-banner.DfHtC2k1.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 93325
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gpuworks-gpu-pooling-sharing-network-boundaries-guide-banner.DfHtC2k1_Z1REgNL.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 34148
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gpuworks-gpu-pooling-sharing-network-boundaries-guide-fig-01.ByUY_tmk_Z1VfjM.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 29452
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gpuworks-gpu-pooling-sharing-network-boundaries-guide-fig-02.C1gF56LV_23YXS1.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 37512
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/gpuworks-gpu-pooling-sharing-network-boundaries-guide-fig-03.CsrHWrdw_1Xf1Oq.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 42302
+        }
+      ]
+    }
+  ]
+}

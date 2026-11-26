@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-26T02:16:22.851287+00:00",
+  "lengths": {
+    "description": 158,
+    "descriptionEn": 155,
+    "titleEn": 53,
+    "wechatTitle": 20,
+    "wechatDigest": 35
+  },
+  "checks": [
+    "BLUF+questionheadings+FAQ3+copyright+sources in bothlanguages",
+    "Apache2 official pinned README/dGPU/topology/Mac docs",
+    "96 originaltop-leveltests3packages; no realGPU/NAT/scale/performance",
+    "40MBcontrolplanedownload notmodelenvironment;1003nodesauthorreport",
+    "dGPUbudgetnotisolation; sleepdifferentconcurrency; Macfeaturelimits; outboundWSnotRDMA; usageoptout",
+    "matchedcover+3figures+relatedreading"
+  ]
+}

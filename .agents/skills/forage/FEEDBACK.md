@@ -1588,3 +1588,5 @@ Published harness-adapters-in-loop-rl-tool-governance from exact official URL; i
 - 2026-11-24 Claude-BugHunter: https://blog.mushroom.cv/blog/claude-bughunter-skills-evidence-scope-review/；84技能/15命令，65项原始本地测试；文本门禁非漏洞复现，代码MIT/内容CCBY4；无外部扫描/利用/模型研究，无发现率测量。Blog/草稿/双语索引/KB回读已验证；PR294待审。
 
 - 2026-11-24 OpenVINO: https://blog.mushroom.cv/blog/openvino-inference-deployment-device-boundaries-guide/；7项真实ONNX/CPU合成检查；发布包2026.4.1仅CPU可用，未测GPU/NPU/量化/性能/云端；源码说明与安装wheel分别固定。Blog/草稿/双语索引/KB回读已验证；PR296待审。
+
+- 2026-11-26 GPUWorks: https://blog.mushroom.cv/blog/gpuworks-gpu-pooling-sharing-network-boundaries-guide/；96项顶层Go测试通过；无真实GPU配额/NAT/千节点/性能实测；40MB控制面与模型环境分开，1003服务器为作者演练；共享/轮用/网络/Mac边界与默认体验报告已说明。Blog/草稿/双语索引/KB回读已验证；PR297待审。
