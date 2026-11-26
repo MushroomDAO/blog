@@ -1,0 +1,38 @@
+[
+  {
+    "id": "c156c986f9e3553db47e933a0cff708e25bff22b5127031f",
+    "metadata": {
+      "article_id": "sage-interaction-duplex-delegation-deployment-guide",
+      "content_hash": "07ba2aa4ab03f0e4",
+      "excerpt": "Sage-Interaction：边交流边委派，先看清演示边界 Sage-Interaction 是上海人工智能实验室发布的 9B 全模态交互模型，支持持续语音交流与异步任务委派。本文核对官方权重、许可、评测和演示源码，区分前台模型与后台接口，检查摄像头预览、定时提醒、本地部署条件及工具执行边界，并给出二十项 CPU 协议验证结果，帮助团队判断它距离可靠交互产品还需补齐哪些环节。 Sage-Interaction 全双工语音 多模态 AI Agent 本地部署 Sage-Interaction 如何边聊天，边委派任务？ 这些评测数字分别说明什么？ 能本地",
+      "language": "zh",
+      "tags": [
+        "Sage-Interaction",
+        "全双工语音",
+        "多模态",
+        "AI Agent",
+        "本地部署"
+      ],
+      "title": "Sage-Interaction：边交流边委派，先看清演示边界",
+      "url": "/blog/sage-interaction-duplex-delegation-deployment-guide/"
+    }
+  },
+  {
+    "id": "3409eb765f5d11ac07bc4f180e75a6835615f9fdd3f2bcf6",
+    "metadata": {
+      "article_id": "sage-interaction-duplex-delegation-deployment-guide",
+      "content_hash": "4448f3600170f87c",
+      "excerpt": "Sage-Interaction: Duplex Voice and Delegation Boundaries Sage-Interaction pairs duplex voice with delegated tasks. We audit demo, local backend contract, camera path, timers and 20 CPU checks beyond benchmark claims. Sage-Interaction 全双工语音 多模态 AI Agent 本地部署 How does Sage keep tal",
+      "language": "en",
+      "tags": [
+        "Sage-Interaction",
+        "全双工语音",
+        "多模态",
+        "AI Agent",
+        "本地部署"
+      ],
+      "title": "Sage-Interaction: Duplex Voice and Delegation Boundaries",
+      "url": "/blog/sage-interaction-duplex-delegation-deployment-guide/"
+    }
+  }
+]

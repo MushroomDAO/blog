@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "sage-interaction-duplex-delegation-deployment-guide",
+    "query": "Sage-Interaction 全双工 委派 摄像头 定时提醒",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "sage-interaction-duplex-delegation-deployment-guide",
+          "title": "Sage-Interaction：边交流边委派，先看清演示边界",
+          "url": "/blog/sage-interaction-duplex-delegation-deployment-guide/",
+          "language": "zh",
+          "excerpt": "Sage-Interaction：边交流边委派，先看清演示边界 Sage-Interaction 是上海人工智能实验室发布的 9B 全模态交互模型，支持持续语音交流与异步任务委派。本文核对官方权重、许可、评测和演示源码，区分前台模型与后台接口，检查摄像头预览、定时提醒、本地部署条件及工具执行边界，并给出二十项 CPU 协议验证结果，帮助团队判断它距离可靠交互产品还需补齐哪些环节。 Sage-Interaction 全双工语音 多模态 AI Agent 本地部署 Sage-Interaction 如何边聊天，边委派任务？ 这些评测数字分别说明什么？ 能本地",
+          "score": 0.69106823
+        },
+        {
+          "article_id": "conversationalvoice-averalabs-full-duplex-training-data-pipeline",
+          "title": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线",
+          "url": "/blog/conversationalvoice-averalabs-full-duplex-training-data-pipeline/",
+          "language": "zh",
+          "excerpt": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线 avera-labs/ConversationalVoice，51 stars，BSL 1.1 许可证（非生产免费，生产环境商用需授权，4年后转 MIT）。AveraLabs 出品，配套 arXiv 2609.08147 论文。一条 9 阶段 Celery 流水线，将真实双人录音自动转成全双工语音模型训练数据，每段对话产出三类数据：分离 / 重建 / 扩写。内部使用 DialogueSidon（说话人分离）、Qwen3-ASR（转写）、Qwen3-TTS（语音合成）。",
+          "score": 0.5473805
+        },
+        {
+          "article_id": "jev-interaction-full-duplex-voice-decisions",
+          "title": "Jev-Interaction：把全双工语音的接话与让话写成决策",
+          "url": "/blog/jev-interaction-full-duplex-voice-decisions/",
+          "language": "zh",
+          "excerpt": "Jev-Interaction：把全双工语音的接话与让话写成决策 Jev-Interaction 把语音助手何时接话、等待、应声和让话拆成可修改的自然语言决策，再以概率和策略驱动交互。本文核对 Apache-2.0 开源框架、外部 Jev 与语音服务依赖、任务配置和事件链路，实跑十项模拟测试，并解释作者基准、评测脚本调参与实际引擎之间的边界，给出从本地演示到产品验证的工程使用路线。 Jev-Interaction 语音智能体 全双工 开源框架 工程实践 Jev-Interaction 解决了什么问题？ 五类决策怎样变成对话动作？ 从麦克风到播放，实际依赖",
+          "score": 0.54315704
+        },
+        {
+          "article_id": "syll-tsinghua-self-hosted-ai-companion-runtime",
+          "title": "清华开源 Syll：不是聊天机器人，是住在你桌面角落的 AI 伙伴",
+          "url": "/blog/syll-tsinghua-self-hosted-ai-companion-runtime/",
+          "language": "zh",
+          "excerpt": "清华开源 Syll：不是聊天机器人，是住在你桌面角落的 AI 伙伴 清华 SAGE 实验室开源 Syll，一个自托管 AI companion runtime。它不主动打扰你，却悄悄记住你未完成的事：定时早报、Markdown 技能包、GUI 工作流录制、桌面幽灵图标、多端收发消息。Python + FastAPI，pip 一行安装，本地 Ollama 或云端模型均可驱动。 Syll 清华 AI伴侣 自托管 desktop agent 开源 companion runtime THU-SAGE 本地AI workflow automation Syll ",
+          "score": 0.5378979
+        },
+        {
+          "article_id": "higgs-realtime-duplex-open-weights-pricing-engineering",
+          "title": "Higgs Realtime Duplex：开源、收费与工程实现核查",
+          "url": "/blog/higgs-realtime-duplex-open-weights-pricing-engineering/",
+          "language": "zh",
+          "excerpt": "Higgs Realtime Duplex：开源、收费与工程实现核查 Higgs Realtime Duplex是李沐所在Boson AI团队的45B全双工模型。本文核对官方权重与候补API状态，区分现售Realtime费率、TTS和STT组件，解析160毫秒分块、后台工具、数字人和自托管路线，并介绍Mika、WorldForge的独立定位，给出经过本地检查的编排示例与工程接入边界。 Higgs 全双工 语音Agent Boson AI Mika WorldForge 这是不是李沐开发的模型？ 到底哪些开源，哪些只是可以调用？ 如果不开源，现在如何收费？",
+          "score": 0.5339506
+        },
+        {
+          "article_id": "livekit-agents-full-duplex-ai-voice-video-call",
+          "title": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS",
+          "url": "/blog/livekit-agents-full-duplex-ai-voice-video-call/",
+          "language": "zh",
+          "excerpt": "自己动手搭全双工 AI 语音通话：LiveKit Agents + 阿里云 STT + Cartesia TTS 用 LiveKit Agents 搭一路全双工 AI 语音/视频通话：用户说话 → 流式 STT（阿里云） → 大模型推理 → 流式 TTS（Cartesia）→ 播放。支持打断、抢先生成、摄像头/屏幕共享；两端都有免费额度，本文给出完整代码路径和架构讲解。 LiveKit 语音AI 全双工 STT TTS Python 实时通话 全双工和半双工有什么区别 整体架构 环境准备 1. 安装依赖 2. 申请免费额度 核心代码：全双工语音 Agen",
+          "score": 0.52567583
+        },
+        {
+          "article_id": "good-gym-ai-fitness-rtmpose-exercise-counter",
+          "title": "Good-GYM：用摄像头当教练，开源 AI 实时计数你的每一个动作",
+          "url": "/blog/good-gym-ai-fitness-rtmpose-exercise-counter/",
+          "language": "zh",
+          "excerpt": "Good-GYM：用摄像头当教练，开源 AI 实时计数你的每一个动作 基于 RTMPose 的开源健身助手，标准摄像头实时识别人体姿态、自动计数、姿势反馈，支持深蹲/俯卧撑/引体向上等 11 种动作，配置文件就能添加新动作，附 iOS App。 AI 健身 RTMPose 姿态识别 开源 计算机视觉 PyQt5 仓库地址和基本情况 支持的 11 种动作 核心原理：角度阈值 + COCO 17 关键点 数据驱动：改 JSON 就能加新动作 本地跑起来 训练计划和历史记录 iOS App 和商业产品相比 已知限制和 Roadmap 一句话总结",
+          "score": 0.5237463
+        },
+        {
+          "article_id": "agent-island-claude-code-codex-status-companion-mac-windows",
+          "title": "按头安利：Agent Island —— 发完一轮去生活，该你了它会叫你",
+          "url": "/blog/agent-island-claude-code-codex-status-companion-mac-windows/",
+          "language": "zh",
+          "excerpt": "按头安利：Agent Island —— 发完一轮去生活，该你了它会叫你 Agent Island 是一个住在 MacBook 刘海里（或 Windows 顶栏）的 AI Agent 状态伴侣：实时监控 Claude Code 和 Codex 两个工具的配额、费用、重置倒计时，转完一轮就叫你，配额重置后自动续命——Mac + Windows 双平台，纯原生无 Electron，MIT 开源。 Claude Code 开发工具 macOS 效率工具 它解决的那个真实问题 它住在哪 四件核心事 1. 实时状态，一眼知道 Agent 在不在干活 2. 「该你了",
+          "score": 0.52290916
+        },
+        {
+          "article_id": "nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent",
+          "title": "NVIDIA VoiceChat 11B：第一个支持工具调用的开源全双工语音 Agent",
+          "url": "/blog/nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent/",
+          "language": "zh",
+          "excerpt": "NVIDIA VoiceChat 11B：第一个支持工具调用的开源全双工语音 Agent NVIDIA NemotronLabs 开源的 11B 端到端全双工语音模型，2026-08-03 发布，OpenMDW 1.1 研究许可。统一架构同时完成流式语音理解和语音生成，转轮延迟约 450ms，VoiceBench #2（开源全双工），史上第一个支持工具调用的开源全双工模型——边说话边触发工具，工具执行期间模型自动播放占位语音保持对话流畅。 语音AI 全双工 工具调用 NVIDIA VoiceAgent 实时语音 Mycelium 核心指标 架构：四个模块",
+          "score": 0.52050155
+        },
+        {
+          "article_id": "clearcam-home-security-ai-semantic-search-guide",
+          "title": "普通家庭也能用：ClearCam 让旧摄像头变成能听懂你说话的 AI 监控",
+          "url": "/blog/clearcam-home-security-ai-semantic-search-guide/",
+          "language": "zh",
+          "excerpt": "普通家庭也能用：ClearCam 让旧摄像头变成能听懂你说话的 AI 监控 开源项目 ClearCam（892⭐）让任何 RTSP 摄像头支持 AI 目标检测、Qwen3 VL 智能通知摘要、CLIP 语义搜索，以及手机实时查看——全部本地运行，不上传任何数据。 家庭安防 开源 AI监控 先说它能做什么 你需要准备什么 必须有的 摄像头 手机 App（可选） 安装步骤：10 分钟搞定 第一步：拿到代码 第二步：安装依赖 第三步：启动 第四步：打开浏览器 第五步：添加摄像头 三个你会最常用的功能 1. 区域警报：只在特定地方触发通知 2. AI 通知摘要：",
+          "score": 0.5203385
+        }
+      ]
+    }
+  }
+]

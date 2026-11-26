@@ -1590,3 +1590,5 @@ Published harness-adapters-in-loop-rl-tool-governance from exact official URL; i
 - 2026-11-24 OpenVINO: https://blog.mushroom.cv/blog/openvino-inference-deployment-device-boundaries-guide/；7项真实ONNX/CPU合成检查；发布包2026.4.1仅CPU可用，未测GPU/NPU/量化/性能/云端；源码说明与安装wheel分别固定。Blog/草稿/双语索引/KB回读已验证；PR296待审。
 
 - 2026-11-26 GPUWorks: https://blog.mushroom.cv/blog/gpuworks-gpu-pooling-sharing-network-boundaries-guide/；96项顶层Go测试通过；无真实GPU配额/NAT/千节点/性能实测；40MB控制面与模型环境分开，1003服务器为作者演练；共享/轮用/网络/Mac边界与默认体验报告已说明。Blog/草稿/双语索引/KB回读已验证；PR297待审。
+
+- 2026-11-26 Sage-Interaction: https://blog.mushroom.cv/blog/sage-interaction-duplex-delegation-deployment-guide/；20项自编CPU协议检查通过，无模型/语音/视频/性能实测。明确前台权重与可配置后台、JSON接口要求、摄像头预览断路和会话定时器边界；官方分数不作为独立复现。Blog/草稿/双语索引已核验，KB回读随后完成。

@@ -1,0 +1,25 @@
+test_length_exhaustion (__main__.Backend.test_length_exhaustion) ... ok
+test_local_endpoint_contract (__main__.Backend.test_local_endpoint_contract) ... ok
+test_long_answer (__main__.Backend.test_long_answer) ... ok
+test_timer_no_http (__main__.Backend.test_timer_no_http) ... ok
+test_timer_too_far (__main__.Backend.test_timer_too_far) ... ok
+test_wrong_answer_schema (__main__.Backend.test_wrong_answer_schema) ... ok
+test_delegate_empty (__main__.Protocol.test_delegate_empty) ... ok
+test_delegate_extra (__main__.Protocol.test_delegate_extra) ... ok
+test_delegate_missing (__main__.Protocol.test_delegate_missing) ... ok
+test_delegate_oversize (__main__.Protocol.test_delegate_oversize) ... ok
+test_delegate_trim (__main__.Protocol.test_delegate_trim) ... ok
+test_delegate_type (__main__.Protocol.test_delegate_type) ... ok
+test_event_roundtrip (__main__.Protocol.test_event_roundtrip) ... ok
+test_headers_control (__main__.Protocol.test_headers_control) ... ok
+test_headers_key (__main__.Protocol.test_headers_key) ... ok
+test_headers_missing (__main__.Protocol.test_headers_missing) ... ok
+test_timer_chinese (__main__.Protocol.test_timer_chinese) ... ok
+test_timer_english (__main__.Protocol.test_timer_english) ... ok
+test_timer_half (__main__.Protocol.test_timer_half) ... ok
+test_timer_ordinary (__main__.Protocol.test_timer_ordinary) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.012s
+
+OK
