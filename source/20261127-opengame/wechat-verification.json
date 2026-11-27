@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-27T06:24:14.966Z",
+  "drafts": [
+    {
+      "slug": "opengame-agent-game-studio-remix-verification-guide",
+      "mediaId": "prCUE631thH1cmNLi42prET8MuypPyu6WqFRtV0uVgKZR1tSZaOfEklIp7O5KUlN",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "d909c4f3915c2ab3b4224eff752719388c705521a4c1895a8dd61566eb31fb1f",
+      "remoteTextHash": "d909c4f3915c2ab3b4224eff752719388c705521a4c1895a8dd61566eb31fb1f",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/opengame-agent-game-studio-remix-verification-guide/",
+      "localContentHash": "0f65de6871e321842d04533f4bdbac22439eb06184fba208ec58f07f30fbaf5d",
+      "remoteContentHash": "654bdfddf2bbff7d608608b4e83b40e5da4092e199e5192dbe821c62c02a0943"
+    }
+  ]
+}

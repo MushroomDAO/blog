@@ -1,0 +1,22 @@
+{
+  "repo": "https://github.com/nexu-io/opengame",
+  "commit": "03e314e4fd1c6a48353c99f644e7850d9a05a932",
+  "shallowPartialClone": true,
+  "codeManifestFiles": 277,
+  "READMEFeaturedTemplates": 25,
+  "noCatalogWideRuntimeVerification": true,
+  "bannerSource": "https://raw.githubusercontent.com/nexu-io/opengame/03e314e4fd1c6a48353c99f644e7850d9a05a932/templates/games/tidebreaker/cover.webp",
+  "snapshotHashes": {
+    "source-setup.md": "ae0ca88c60bc3c3cc63fd22fc65f1846de83efb19b6aa16c9ff552b4d9b108e1",
+    "source-wechat-minigame.ts.txt": "bef6367e9c91820e34260a33a31a60e0e2977fa0c4fbd7aa203ca76bd60ea6b6",
+    "source-tidebreaker-design.md": "e7d63146ca2280ef289337741b40b9ead201845e762435ea0bf2531729b6c40e",
+    "source-tidebreaker.html": "9d6ae04248e52f399e2f6e334819aedb6f61acce10ea99b92140daefe479ac09",
+    "source-game-projects.ts.txt": "f290aebde2ce69f7148803465df56864a76f8ea91908a045ac036e9c77a115cd",
+    "source-readme.md": "e64b7a4e6285dd38865f5cc1af0eb05b1e8961bb631d7f36d54efd6ee8b7bf54",
+    "source-architecture.md": "e3e0ee59210701dac2453934da5eecab6e4f9a05b53593de6548dd8b6ab9f6b2",
+    "source-license.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "source-game-tools.ts.txt": "4c6ceadd119212a9758a8efa31b43f4f10fc854bf69be37be6434e25ac32e230",
+    "source-package.json": "e21f35dc6bc9ddbb1baf77f593d6a3c58da75438f1a6b58d3885c84dfcab4108",
+    "source-tidebreaker-game.json": "77cf92441b6944fcaeff2e36660b2fd2ba0c6754d974e8816476b1aa2abfb70b"
+  }
+}

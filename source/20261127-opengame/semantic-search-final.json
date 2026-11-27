@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "opengame-agent-game-studio-remix-verification-guide",
+    "query": "OpenGame 模板改编 Agent 工作台 游戏验证",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "opengame-agent-game-studio-remix-verification-guide",
+          "title": "OpenGame：Agent游戏工作台，一键复刻要看哪些证据",
+          "url": "/blog/opengame-agent-game-studio-remix-verification-guide/",
+          "language": "zh",
+          "excerpt": "OpenGame：Agent游戏工作台，一键复刻要看哪些证据 OpenGame 把游戏模板、编程Agent、素材生成与试玩检查整合为本地工作台。本文核对官方仓库、架构、成本和发布边界，并在真实浏览器中验证Tidebreaker的开始、转向、跳跃、暂停与重开，揭示3D标签、状态标记和平台上线之间的差别，帮助创作者从可验证的游戏原型起步，审慎判断免费、一键复刻与商业变现宣传。 OpenGame AI游戏 编程Agent 游戏开发 开源工具 OpenGame 到底替你做哪一段？ 免费的是工作台，哪些环节仍有成本？ 25 个模板和上百款游戏，应该怎么理解？ 一个",
+          "score": 0.73585135
+        },
+        {
+          "article_id": "nvidia-openshell-agent-runtime",
+          "title": "NVIDIA OpenShell：给自主 Agent 配上可执行的权限边界",
+          "url": "/blog/nvidia-openshell-agent-runtime/",
+          "language": "zh",
+          "excerpt": "NVIDIA OpenShell：给自主 Agent 配上可执行的权限边界 NVIDIA OpenShell采用Apache-2.0开源，通过沙箱、独立Supervisor、网络策略和凭证代理约束Agent。本文介绍0.1.x架构、Mac与Linux部署条件、OpenCode接入流程，并实测v0.1.5策略验证器的通过、越界和无法验证三种结果，同时区分策略检查与真实运行安全的边界。 NVIDIA OpenShell AI Agent 沙箱 权限策略 开源工具 OpenShell解决的是哪一层问题？ Gateway、Sandbox与Supervisor怎样",
+          "score": 0.6269092
+        },
+        {
+          "article_id": "open-connector-saas-auth-gateway-ai-agents",
+          "title": "OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth",
+          "url": "/blog/open-connector-saas-auth-gateway-ai-agents/",
+          "language": "zh",
+          "excerpt": "OpenConnector：让AI Agent一次接入1000+个SaaS，不再操心OAuth oomol-lab 开源了 OpenConnector，一个 AI Agent 专用的认证网关，Composio 的开源替代。接 1000+ SaaS 提供者、10000+ 预制 Action，凭据永远留在网关边界内，Agent 只能拿到执行结果。支持 SDK/CLI/MCP/HTTP 多接入方式，可部署到 Docker、Cloudflare Workers 或 Fly.io。 AI Agent OAuth SaaS集成 MCP Cloudflare 开源工具",
+          "score": 0.6172678
+        },
+        {
+          "article_id": "orca-ade-parallel-ai-agent-orchestration",
+          "title": "Orca：67K stars 的并行 Agent 编排台，把 40+ CLI Agent 变成一支舰队",
+          "url": "/blog/orca-ade-parallel-ai-agent-orchestration/",
+          "language": "zh",
+          "excerpt": "Orca：67K stars 的并行 Agent 编排台，把 40+ CLI Agent 变成一支舰队 Stably AI(YC W22) 出品的开源 ADE，MIT 协议。一个 prompt 扇出给多个 Agent，各跑独立 worktree，Design Mode 点 UI 元素直喂 Agent，SSH 远端机器、手机 App 随时调度——这是目前把「Agent 当舰队管」想得最透的工具。 AI-agent open-source developer-tools Claude-Code parallel-agents Orca 问题是什么 核心设计：",
+          "score": 0.61329657
+        },
+        {
+          "article_id": "shipmygame-unity-publishing-agent-skills-review",
+          "title": "ShipMyGame：让Agent接手Unity游戏上架的繁琐步骤",
+          "url": "/blog/shipmygame-unity-publishing-agent-skills-review/",
+          "language": "zh",
+          "excerpt": "ShipMyGame：让Agent接手Unity游戏上架的繁琐步骤 ShipMyGame把Unity游戏发布到Google Play、微信小游戏与TapTap的经验整理成Agent技能、参考文档和脚本。本文核对三个渠道的实际推进阶段、进度档案和人工提审边界，并用本地夹具检查上传辅助服务、隐私页面生成与扫描器，解释它能减少哪些重复工作，以及为何不能把自动准备材料等同于正式上线。 ShipMyGame Unity Agent Skills 游戏开发 开源 它到底是一种什么工具？ 能替开发者做哪些工作？ 三个渠道，作者实际推进到哪一步？ 为什么进度文件比一段长",
+          "score": 0.60814005
+        },
+        {
+          "article_id": "openmaple-local-managed-agent-platform-guide",
+          "title": "本地就能跑的 Agent 平台：OpenMaple 自托管 managed-agent 控制面入门",
+          "url": "/blog/openmaple-local-managed-agent-platform-guide/",
+          "language": "zh",
+          "excerpt": "本地就能跑的 Agent 平台：OpenMaple 自托管 managed-agent 控制面入门 OpenMaple（Apache-2.0 开源）是一个能在本地一键跑起来的 managed-agent 控制面：它把内部 Agent 平台常见的能力拆成一套资源模型——Agent、Environment、Session、Vault、Runtime Pool、Sandbox Pool、Event Log，外加 SDK / CLI / REST API。一条 setup-local-docker.sh 起 Web(8080)、API(27951)、MySQL、",
+          "score": 0.6038359
+        },
+        {
+          "article_id": "agent-game-forge-ai-2d-game-ide",
+          "title": "【开源】Agent Game Forge：用 AI Agent 驱动 2D 游戏开发的本地 IDE",
+          "url": "/blog/agent-game-forge-ai-2d-game-ide/",
+          "language": "zh",
+          "excerpt": "【开源】Agent Game Forge：用 AI Agent 驱动 2D 游戏开发的本地 IDE 123 Star 开源项目 Agent Game Forge（AGF）——本地优先的 2D 游戏 IDE，让 Codex 或 Claude Code 帮你从一句描述生成完整游戏。精灵图、parallax 背景、物理、场景编辑器全部内置，Apache 2.0 协议。 Agent Game Forge AI游戏开发 Claude Code Codex 本地优先 开源 2D游戏 TypeScript Tech-News 是什么？ 核心能力 Bring Your ",
+          "score": 0.6020423
+        },
+        {
+          "article_id": "agent-lightning-microsoft-research-rl-framework-train-agents-real-harness",
+          "title": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习",
+          "url": "/blog/agent-lightning-microsoft-research-rl-framework-train-agents-real-harness/",
+          "language": "zh",
+          "excerpt": "Agent Lightning：微软研究院 3500 行代码，让任何 AI Agent 都能用真实环境做强化学习 microsoft/agent-lightning，MIT 开源，Python，18K stars。三个组件（Trainer/API Gateway/Rollout Controller），Agent 代码零改动，用真实工具链训练。Qwen3.5-9B 只用 6K 样本，SWE-bench Verified 从 41.8% 涨到 56.4%（+14.6pp）。支持 AutoGen、LangChain、OpenAI Agents SDK 及任意",
+          "score": 0.5977865
+        },
+        {
+          "article_id": "openpanels-local-ai-agent-visual-workspace",
+          "title": "OpenPanels：给AI Agent装上本地可视化工作台，5个面板从写作到发布",
+          "url": "/blog/openpanels-local-ai-agent-visual-workspace/",
+          "language": "zh",
+          "excerpt": "OpenPanels：给AI Agent装上本地可视化工作台，5个面板从写作到发布 mooqii 开源了 OpenPanels，一个本地优先的 AI Agent 可视化工作台，用 Rust 写成，MIT 授权。5个面板覆盖从知识管理、文档写作到排版发布的全流程，内置微信公众号草稿集成，以 agent skill URL 的方式接入任何 AI Agent。 AI Agent Rust 本地优先 MCP 知识库 微信公众号 开源工具 Mycelium 五个面板，覆盖从输入到输出 作为 Skill 接入 Agent 本地优先，凭据自己掌管 支持平台 为什么关注",
+          "score": 0.59574085
+        },
+        {
+          "article_id": "appllama-skills-openmausbot-mobile-design-agent-workflow",
+          "title": "Appllama Skills与OpenMausBot：设计约束与Agent工作台",
+          "url": "/blog/appllama-skills-openmausbot-mobile-design-agent-workflow/",
+          "language": "zh",
+          "excerpt": "Appllama Skills与OpenMausBot：设计约束与Agent工作台 Appllama Skills把商业App研究、原生交互与模拟器录像验收写进移动端开发方法，OpenMausBot则提供聊天式Agent执行工作台。本文核对两个仓库，区分开源Skill、商业MCP、Apache核心与企业目录授权，分析界面质量、电脑权限和执行环境，并报告28项本地窄范围测试的真实边界及可复核的工程流程。 Appllama OpenMausBot AI Agent 移动开发 开源工具 Appllama 开源的究竟是什么？ 为什么它强调研究流程，而不只是参考截",
+          "score": 0.59487003
+        }
+      ]
+    }
+  }
+]

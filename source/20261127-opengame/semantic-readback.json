@@ -1,0 +1,38 @@
+[
+  {
+    "id": "32d02195cd20b2ed0d139df6825335a45e94a53906560e70",
+    "metadata": {
+      "article_id": "opengame-agent-game-studio-remix-verification-guide",
+      "content_hash": "9101f24b41d676dc",
+      "excerpt": "OpenGame：Agent游戏工作台，一键复刻要看哪些证据 OpenGame 把游戏模板、编程Agent、素材生成与试玩检查整合为本地工作台。本文核对官方仓库、架构、成本和发布边界，并在真实浏览器中验证Tidebreaker的开始、转向、跳跃、暂停与重开，揭示3D标签、状态标记和平台上线之间的差别，帮助创作者从可验证的游戏原型起步，审慎判断免费、一键复刻与商业变现宣传。 OpenGame AI游戏 编程Agent 游戏开发 开源工具 OpenGame 到底替你做哪一段？ 免费的是工作台，哪些环节仍有成本？ 25 个模板和上百款游戏，应该怎么理解？ 一个",
+      "language": "zh",
+      "tags": [
+        "OpenGame",
+        "AI游戏",
+        "编程Agent",
+        "游戏开发",
+        "开源工具"
+      ],
+      "title": "OpenGame：Agent游戏工作台，一键复刻要看哪些证据",
+      "url": "/blog/opengame-agent-game-studio-remix-verification-guide/"
+    }
+  },
+  {
+    "id": "09ceef8159a81554f20947c6d9991e5367455cab30d21303",
+    "metadata": {
+      "article_id": "opengame-agent-game-studio-remix-verification-guide",
+      "content_hash": "cee63f6a9ee8d4e4",
+      "excerpt": "OpenGame: Agent Game Studio, Remix and Verification We audit OpenGame remix, model costs, QA and publishing, with nine browser checks on Tidebreaker. Learn what template play proves and what AAA claims do not. OpenGame AI游戏 编程Agent 游戏开发 开源工具 What work does OpenGame coordinate? Wh",
+      "language": "en",
+      "tags": [
+        "OpenGame",
+        "AI游戏",
+        "编程Agent",
+        "游戏开发",
+        "开源工具"
+      ],
+      "title": "OpenGame: Agent Game Studio, Remix and Verification",
+      "url": "/blog/opengame-agent-game-studio-remix-verification-guide/"
+    }
+  }
+]

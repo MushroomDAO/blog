@@ -1,0 +1,31 @@
+{
+  "banner": "adopted official Tidebreaker cover key art pinned upstream source; machine0fail1warn for legitimate TIDEBREAKER title; manualpass no visible face; no own-page or runtime screenshot",
+  "body": [
+    {
+      "file": "src/assets/images/opengame-agent-game-studio-remix-verification-guide-fig-01.png",
+      "bytes": 54392,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/opengame-agent-game-studio-remix-verification-guide-fig-02.png",
+      "bytes": 82619,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/opengame-agent-game-studio-remix-verification-guide-fig-03.png",
+      "bytes": 80454,
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "originals": "assets/opengame-agent-game-studio-remix-verification-guide-illustrations",
+  "manualReview": "All3 original LittleM figures inspected: same-source template/agent loop, independent QA evidence not statusstamp, separate localcatalog websnapshot platformreview deliveries. Chinese labels correct. Adopted official Tidebreaker cover viewed, no recognizable faces; legitimate game title OCR warning acknowledged. Upstream marketing hero rejected."
+}
