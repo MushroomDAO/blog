@@ -1,0 +1,10 @@
+{
+  "upstreamPassed": 68,
+  "upstreamSkipped": 1,
+  "skipReason": "data preparation roundtrip requires librosa and pyarrow extras",
+  "subtestsPassed": 8,
+  "releasedWeightSmoke": "3 PyTorch and 3 ONNX voices actual CPU synthesis",
+  "frontendCases": 5,
+  "performanceMeasured": false,
+  "subjectiveListeningOrASRScoring": false
+}

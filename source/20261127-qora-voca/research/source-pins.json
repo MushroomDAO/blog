@@ -1,0 +1,17 @@
+{
+  "repo": "https://github.com/ValueMoonLab/qora-voca-zh",
+  "commit": "63390ae6cd376c2f725f164191ad902b12db163f",
+  "captureBackend": "agent-reach missing (doctor127); corrected URL Jina Reader fetched successfully; GitHub official plugin confirmed exact project; local git code and released weights inspected",
+  "sourceImages": [],
+  "snapshotHashes": {
+    "source-dataset-card.md": "57552d054de07940a1e8d02412761530698626164b531a10af0514b8d273c13e",
+    "source-readme.md": "37d25d70c69cc2ad511bcb34f8c9df6b5e50e9889daf6987765b5303146df5cb",
+    "source-zh_text.py.txt": "c4ae2a54888d661bd13ce7ac6beb4c7f18274e93693142a2171fd1c7e44d4feb",
+    "source-license.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "source-model-card.md": "00187b1e7b57590061e16cb70e681ebfb206b6c52648121e13ebb8e18e50be10",
+    "source-training.md.txt": "b5214f43026ca6f237b0bd0553b62f0e45374e60470f54abe3bed4b72cc3dc6d",
+    "source-pyproject.toml.txt": "10be64c4717c38d4c0bba7b18ce3d44d8946f262dbe91f5dff74b0e9b57ffdf5",
+    "source-notice.txt": "ab2929850abdc2eebbe9b1894c7768b16109d21157e4f445ea4eb3539b6a9c8f",
+    "source-infer.py.txt": "ab93f2368a9f0ac7eb201a5af75dece8e2509ac2f2baa050396f023b213d0b63"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "orderingNote": "List uses same-day date sorting; actual lastPublishedAt records publication time for carousel ordering.",
+  "checkedAt": "2026-11-27T00:34:29.128120+00:00",
+  "articles": [
+    {
+      "slug": "qora-voca-zh-small-offline-mandarin-tts-guide",
+      "url": "https://blog.mushroom.cv/blog/qora-voca-zh-small-offline-mandarin-tts-guide/",
+      "title": "qora-voca-zh：450万参数普通话TTS，先检查有没有少读",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/qora-voca-zh-small-offline-mandarin-tts-guide-banner.BbGV0TPg.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94847
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/qora-voca-zh-small-offline-mandarin-tts-guide-banner.BbGV0TPg_2eCxg.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 34364
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/qora-voca-zh-small-offline-mandarin-tts-guide-fig-01.D4L0Px5N_ZGHfpu.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 33830
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/qora-voca-zh-small-offline-mandarin-tts-guide-fig-02.DdXyBWzF_2dy94P.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 38354
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/qora-voca-zh-small-offline-mandarin-tts-guide-fig-03.D7d61RwO_Z6ra2x.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 44766
+        }
+      ]
+    }
+  ]
+}

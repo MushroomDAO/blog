@@ -1,0 +1,46 @@
+........s....................................................... [ 92%]
+.....                                                                    [100%]
+=============================== warnings summary ===============================
+tests/test_data.py::DataTests::test_spectral_loss_masks_padding_and_survives_silence
+  /tmp/qora-voca-research-20261127/tests/test_data.py:166: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+  Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:821.)
+    self.assertTrue(math.isfinite(float(stft)) and float(stft) < 100)
+
+tests/test_export.py::ExportTest::test_onnx_runs_at_other_lengths
+  /tmp/qora-voca-research-20261127/src/tiny_voca/export.py:220: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+    torch.onnx.export(wrapper, inputs, str(path), input_names=names, output_names=list(OUTPUTS), dynamic_axes=axes,
+
+tests/test_export.py::ExportTest::test_onnx_runs_at_other_lengths
+  /tmp/qora-voca-audit-env/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/utils.py:218: DeprecationWarning: The feature will be removed. Please remove usage of this function
+    setup_onnx_logging(verbose) as log_ctx,
+
+tests/test_export.py::ExportTest::test_onnx_runs_at_other_lengths
+  /tmp/qora-voca-research-20261127/src/tiny_voca/model.py:60: TracerWarning: Iterating over a tensor might cause the trace to be incorrect. Passing a tensor of different shape won't change the number of iterations executed (and might lead to errors or silently give incorrect results).
+    q, k, v = self.qkv(x).view(b, t, 3, self.heads, c // self.heads).permute(2, 0, 3, 1, 4)
+
+tests/test_export.py::ExportTest::test_onnx_runs_at_other_lengths
+  /tmp/qora-voca-audit-env/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/jit_utils.py:308: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:180.)
+    _C._jit_pass_onnx_node_shape_type_inference(node, params_dict, opset_version)
+
+tests/test_export.py::ExportTest::test_onnx_runs_at_other_lengths
+  /tmp/qora-voca-audit-env/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/utils.py:712: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:180.)
+    _C._jit_pass_onnx_graph_shape_type_inference(
+
+tests/test_export.py::ExportTest::test_onnx_runs_at_other_lengths
+  /tmp/qora-voca-audit-env/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/utils.py:1185: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:180.)
+    _C._jit_pass_onnx_graph_shape_type_inference(
+
+tests/test_frontend.py::PhonemizeTests::test_hello_world
+  /tmp/qora-voca-audit-env/lib/python3.12/site-packages/jieba/__init__.py:44: SyntaxWarning: invalid escape sequence '\.'
+    re_han_default = re.compile("([\u4E00-\u9FD5a-zA-Z0-9+#&\._%\-]+)", re.U)
+
+tests/test_frontend.py::PhonemizeTests::test_hello_world
+  /tmp/qora-voca-audit-env/lib/python3.12/site-packages/jieba/__init__.py:46: SyntaxWarning: invalid escape sequence '\s'
+    re_skip_default = re.compile("(\r\n|\s)", re.U)
+
+tests/test_frontend.py::PhonemizeTests::test_hello_world
+  /tmp/qora-voca-audit-env/lib/python3.12/site-packages/jieba/finalseg/__init__.py:78: SyntaxWarning: invalid escape sequence '\.'
+    re_skip = re.compile("([a-zA-Z0-9]+(?:\.\d+)?%?)")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+68 passed, 1 skipped, 10 warnings, 8 subtests passed in 40.85s

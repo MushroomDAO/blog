@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "qora-voca-zh-small-offline-mandarin-tts-guide",
+    "query": "qora-voca-zh 普通话 450万 CPU 语音合成",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "qora-voca-zh-small-offline-mandarin-tts-guide",
+          "title": "qora-voca-zh：450万参数普通话TTS，先检查有没有少读",
+          "url": "/blog/qora-voca-zh-small-offline-mandarin-tts-guide/",
+          "language": "zh",
+          "excerpt": "qora-voca-zh：450万参数普通话TTS，先检查有没有少读 qora-voca-zh 是只有450万参数、三种固定音色的本地普通话语音合成模型。本文核对代码、模型卡、训练数据和许可，并在Mac CPU上实际运行发布版PyTorch与ONNX权重，检查语音输出、文件大小和中文前端。重点揭示混合英文与数字被省略、训练耗时口径和部署依赖差异，帮助团队判断离线朗读场景是否适合采用。 qora-voca-zh 语音合成 本地AI ONNX 普通话 450 万参数，为什么能直接输出语音？ 不加载预训练权重，是否等于不依赖大模型？ 发布权重在 Mac CPU",
+          "score": 0.78396535
+        },
+        {
+          "article_id": "microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork",
+          "title": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒",
+          "url": "/blog/microsoft-vibevoice-tts-asr-longform-speech-ai-community-fork/",
+          "language": "zh",
+          "excerpt": "微软 VibeVoice：54K stars 前沿语音 AI，官方仓库因深度伪造顾虑下架，社区 fork 接棒 microsoft/VibeVoice，54K stars，MIT，Python。7.5Hz 连续语音 tokenizer + LLM + 扩散头，单次推理 90 分钟 TTS、60 分钟 ASR，4 路说话人。2025-09 官方因深度伪造顾虑主动下架，社区 fork vibevoice-community/VibeVoice 接棒维护，已加 LoRA 微调和 HF Transformers 集成。工程指导：模型选型、API 服务化、BitN",
+          "score": 0.60216725
+        },
+        {
+          "article_id": "conversationalvoice-averalabs-full-duplex-training-data-pipeline",
+          "title": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线",
+          "url": "/blog/conversationalvoice-averalabs-full-duplex-training-data-pipeline/",
+          "language": "zh",
+          "excerpt": "ConversationalVoice：把真实双人录音变成全双工训练数据的端到端流水线 avera-labs/ConversationalVoice，51 stars，BSL 1.1 许可证（非生产免费，生产环境商用需授权，4年后转 MIT）。AveraLabs 出品，配套 arXiv 2609.08147 论文。一条 9 阶段 Celery 流水线，将真实双人录音自动转成全双工语音模型训练数据，每段对话产出三类数据：分离 / 重建 / 扩写。内部使用 DialogueSidon（说话人分离）、Qwen3-ASR（转写）、Qwen3-TTS（语音合成）。",
+          "score": 0.5996809
+        },
+        {
+          "article_id": "zixi-51m-mac-local-tts",
+          "title": "zixi-51M 本机验证：M4 Mac 的 CPU 与 MPS 都能生成中文语音",
+          "url": "/blog/zixi-51m-mac-local-tts/",
+          "language": "zh",
+          "excerpt": "zixi-51M 本机验证：M4 Mac 的 CPU 与 MPS 都能生成中文语音 zixi-51M 是基于 VITS2 与 MeloTTS 的中文单说话人语音模型，约5143万参数，无需BERT。本文在16GB内存的M4 Mac上验证CPU与MPS推理，提供可播放的合成样本、权重版本和安装代码，并核对44.1kHz单声道训练数据、预处理入口、依赖缺口及微调要求，区分本地生成成功、音质评价和训练验证。 zixi-51M TTS Apple Silicon 本地AI 语音合成 模型微调 先看结果：在什么环境里跑通？ 它为什么适合先做本地试用？ 怎样复现 C",
+          "score": 0.5961364
+        },
+        {
+          "article_id": "haru-4b-full-duplex-voice-engineering",
+          "title": "Haru 4B：全双工语音开源了，怎样接进真实对话？",
+          "url": "/blog/haru-4b-full-duplex-voice-engineering/",
+          "language": "zh",
+          "excerpt": "Haru 4B：全双工语音开源了，怎样接进真实对话？ Haru 4B 是 higurashi 开源的全双工语音基座模型，支持边听边说。本文核验 Apache 2.0 代码与权重、四千万小时训练数据声明及七点五赫兹连续音频架构，拆解官方六十五毫秒延迟的测量边界，给出 Mac 与 NVIDIA 部署入口、参考音色和音频队列的接入要点，并区分本地测试与尚未复现的真实通话表现。 Haru Full-Duplex Speech AI MLX Open Source 全双工到底改变了什么？ 65 毫秒，为什么不能直接当用户等待时间？ Mac 与 NVIDIA 各从哪",
+          "score": 0.5778145
+        },
+        {
+          "article_id": "nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling",
+          "title": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出",
+          "url": "/blog/nvidia-nemotron-voicechat-11b-full-duplex-speech-tool-calling/",
+          "language": "zh",
+          "excerpt": "NVIDIA NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型，12.5 Hz 帧率，三通道并行输出 NVIDIA NemotronLabs VoiceChat 11B（HF: nvidia/NVIDIA-NemotronLabs-VoiceChat-11B，442 likes，OpenMDW-1.1）是首个开源、全双工、支持工具调用的端到端语音对话模型。不是 ASR→LLM→TTS 的串联流水线，而是单一模型以 12.5 Hz（80ms/帧）同时输出文本、工具调用标记、声学编码三个通道。基于 Nemotron-",
+          "score": 0.5610566
+        },
+        {
+          "article_id": "jarvis-py-local-voice-assistant-privacy-teardown",
+          "title": "jarvis-py Teardown: An \"Offline\" Python Voice Assistant That Sends Your Voice to Google Over Plain HTTP When Online",
+          "url": "/blog/jarvis-py-local-voice-assistant-privacy-teardown/",
+          "language": "en",
+          "excerpt": "jarvis-py Teardown: An \"Offline\" Python Voice Assistant That Sends Your Voice to Google Over Plain HTTP When Online Shaan-alpha/jarvis-py is a 6-star, MIT-licensed Python desktop voice assistant: openWakeWord, Ollama phi3, fastembed memory, three-tier routing. We read the code an",
+          "score": 0.5609527
+        },
+        {
+          "article_id": "moss-tts-nano-ultralight-multilingual-tts-open-source",
+          "title": "0.1B 参数跑满 20 种语言：MOSS-TTS-Nano 超轻量 TTS 开源",
+          "url": "/blog/moss-tts-nano-ultralight-multilingual-tts-open-source/",
+          "language": "zh",
+          "excerpt": "0.1B 参数跑满 20 种语言：MOSS-TTS-Nano 超轻量 TTS 开源 OpenMOSS 开源 MOSS-TTS-Nano，0.1B 参数，纯 CPU 运行，48kHz 双声道输出，支持 20 种语言零样本声音克隆。单核 CPU（M4 MacBook Air）流畅推理，ONNX 运行无需 PyTorch，可嵌入浏览器扩展与边缘设备。 TTS 语音合成 开源 MOSS ONNX 声音克隆 轻量模型 本地部署 项目背景 核心技术架构 核心功能 极致轻量化 + 低延迟 零样本声音克隆 多语言支持 部署方式 实际意义 快速开始 常见问题",
+          "score": 0.56023407
+        },
+        {
+          "article_id": "higgs-audio-v2-engineering-deployment-guide",
+          "title": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入",
+          "url": "/blog/higgs-audio-v2-engineering-deployment-guide/",
+          "language": "zh",
+          "excerpt": "Higgs Audio v2 工程指南：部署、声音克隆与服务接入 Higgs Audio v2 是 Boson AI 可下载权重的语音生成模型，适合旁白、声音克隆和多人对白。本文核对推理代码、模型社区许可、24GB 显存建议、参考音频与转写配对、长文本分块及 vLLM 服务，给出安装命令与生产接入方案，并明确区分源码检查、官方性能报告和未经本地复现的音质指标，帮助团队先跑通小样。 Higgs Audio v2 Boson AI TTS Voice Cloning Self Hosting 先下载哪两个东西？ 是不是开源？商业使用需要检查什么？ 先解决一个",
+          "score": 0.5602059
+        },
+        {
+          "article_id": "kittentts-spark-tts-edge-ai-chinese-tts-complete-guide",
+          "title": "25MB 跑 SOTA：KittenTTS 极致轻量 + Spark TTS 中文零样本克隆，两条路径完全指南",
+          "url": "/blog/kittentts-spark-tts-edge-ai-chinese-tts-complete-guide/",
+          "language": "zh",
+          "excerpt": "25MB 跑 SOTA：KittenTTS 极致轻量 + Spark TTS 中文零样本克隆，两条路径完全指南 KittenTTS 14.1k star，15M 参数 int8 量化 25MB，纯 CPU ONNX 推理，树莓派和浏览器可跑——但不支持中文。Spark TTS 0.5B 参数，Qwen2.5 LLM 骨干，中文 CER 仅 1.20，零样本声音克隆，本文给出两个项目的完整使用路径和场景选型指南。 TTS 语音合成 Edge AI KittenTTS Spark TTS ONNX 开源 中文AI KittenTTS：25MB 能跑出什么 数",
+          "score": 0.5575479
+        }
+      ]
+    }
+  }
+]
