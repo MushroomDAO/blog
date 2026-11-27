@@ -1,0 +1,10 @@
+页面没跑起来，先改这里：
+NetworkError: A network error occurred.
+另外页面还报了：
+- 404 http://127.0.0.1:53684/fonts/MiSans-Medium.ttf
+- Failed to load resource: the server responded with a status of 404 (Not Found)
+- 请求失败 http://127.0.0.1:53684/fonts/MiSans-Medium.ttf
+- 404 http://127.0.0.1:53684/fonts/MiSans-Semibold.ttf
+- 请求失败 http://127.0.0.1:53684/fonts/MiSans-Semibold.ttf
+- 404 http://127.0.0.1:53684/fonts/AlimamaShuHeiTi-Bold.ttf
+- 请求失败 http://127.0.0.1:53684/fonts/AlimamaShuHeiTi-Bold.ttf
