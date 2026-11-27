@@ -1,0 +1,45 @@
+{
+  "orderingNote": "List uses same-day date sorting; actual lastPublishedAt records publication time for carousel ordering.",
+  "checkedAt": "2026-11-26T02:34:58.507205+00:00",
+  "articles": [
+    {
+      "slug": "sage-interaction-duplex-delegation-deployment-guide",
+      "url": "https://blog.mushroom.cv/blog/sage-interaction-duplex-delegation-deployment-guide/",
+      "title": "Sage-Interaction：边交流边委派，先看清演示边界",
+      "listRank": 2,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/sage-interaction-duplex-delegation-deployment-guide-banner.CvvOV_72.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 89603
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/sage-interaction-duplex-delegation-deployment-guide-banner.CvvOV_72_RBcFY.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 31088
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/sage-interaction-duplex-delegation-deployment-guide-fig-01.BIaeFBUl_1Qq8kP.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 36580
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/sage-interaction-duplex-delegation-deployment-guide-fig-02.C6JaH_cC_Z2hIb9x.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 56988
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/sage-interaction-duplex-delegation-deployment-guide-fig-03.Cviqy9qd_Z1Xudk5.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 53282
+        }
+      ]
+    }
+  ]
+}

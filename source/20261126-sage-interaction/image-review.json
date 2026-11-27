@@ -1,0 +1,31 @@
+{
+  "banner": "machine0fail0warn, manualpass; two speakers and backend box photograph seed10101, no upstream UI",
+  "body": [
+    {
+      "file": "src/assets/images/sage-interaction-duplex-delegation-deployment-guide-fig-01.png",
+      "bytes": 60050,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/sage-interaction-duplex-delegation-deployment-guide-fig-02.png",
+      "bytes": 84354,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/sage-interaction-duplex-delegation-deployment-guide-fig-03.png",
+      "bytes": 84830,
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "originals": "assets/sage-interaction-duplex-delegation-deployment-guide-illustrations",
+  "manualReview": "All three original PNGs viewed: LittleM active; correct short Chinese labels; separate metric scales; explicit unconnected camera path and session timer versus durable queue. Cover viewed: unmarked speakers, cables and metal backend box, no lettering or people."
+}

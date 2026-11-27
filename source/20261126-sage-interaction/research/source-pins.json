@@ -1,0 +1,32 @@
+{
+  "repo": "https://github.com/InternLM/Sage-Interaction",
+  "commit": "d3bc2703e0e7f4ec357fc3c73153dd9e9332f9d3",
+  "host": "macOS Apple Silicon; protocol checks only; no CUDA weights",
+  "hf": {
+    "id": "internlm/Sage-Interaction",
+    "sha": "d1a9ca4b0a478203ebce882db61279fa9aecd878",
+    "lastModified": "2026-11-24T06:59:00.000Z",
+    "safetensors": {
+      "parameters": {
+        "BF16": 9371795858
+      },
+      "total": 9371795858
+    },
+    "readmeUrl": "https://huggingface.co/internlm/Sage-Interaction/raw/d1a9ca4b0a478203ebce882db61279fa9aecd878/README.md"
+  },
+  "snapshotHashes": {
+    "source-config.json": "d2b1a3aab40dfe413c8925f6b2d6f00a895e00712622754f5a913db636c1e077",
+    "source-hf-readme.md": "71e332fc94615878a13b5240c50897dca29c653574a4b5e1997c9ce20f9bec3d",
+    "source-backend-prompt.txt": "37dbb46b70a8b7e9a75efca1441cda1b2a46851b9f7b34cb5b4b6c3c0c7d4c5d",
+    "source-protocol.py.txt": "9769db87635a35db4ecc55aeb46b384afbc15cd14368e0c6c0d95894726c4e44",
+    "source-readme.md": "317cc634147aa14dc5340e81c60510b8b86a0bf5903de38837bcaf7266116832",
+    "source-query_routing.py.txt": "a8350cd8cd084bbea0879ad8a2a696813ad927460ac39a31497f17fc094ce989",
+    "source-inference.py.txt": "07acc7b649b5e8c9c2a1abcf53d6a1abddeeefb476f602467ced92add95e471d",
+    "source-gateway.py.txt": "cf1aa58108b512c8c7838ba952f05456bf6222e925a365c373294d1024dfb004",
+    "source-demo-readme.md": "d5f3fa806a58fef9218b61ed181924ee83c19f3e8ff1fdc01e69e56091891f7c",
+    "source-license.txt": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c",
+    "source-app.js.txt": "3fd2ac52af576345ddd9dfcf03ea4eee6afa25e64daf0fd7a3157aabf481df35",
+    "source-model.py.txt": "29c6a367d890c8668b15a808b7ccf888e80dfd50c73bbc22ce370631cd8600ec",
+    "source-camera-preview.js.txt": "b9e7395521bf335dc63335719683eebfc3a6554d0ce7a402c0e0bc781201fe55"
+  }
+}

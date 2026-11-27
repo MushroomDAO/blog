@@ -1,0 +1,12 @@
+{
+  "id": "internlm/Sage-Interaction",
+  "sha": "d1a9ca4b0a478203ebce882db61279fa9aecd878",
+  "lastModified": "2026-11-24T06:59:00.000Z",
+  "safetensors": {
+    "parameters": {
+      "BF16": 9371795858
+    },
+    "total": 9371795858
+  },
+  "readmeUrl": "https://huggingface.co/internlm/Sage-Interaction/raw/d1a9ca4b0a478203ebce882db61279fa9aecd878/README.md"
+}

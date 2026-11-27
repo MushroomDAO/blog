@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-26T02:34:00.260644+00:00",
+  "lengths": {
+    "description": 159,
+    "descriptionEn": 159,
+    "titleEn": 56,
+    "wechatTitle": 24,
+    "wechatDigest": 36
+  },
+  "checks": [
+    "BLUF and question headings, FAQ3, copyright, sources in both languages",
+    "159 character Chinese and English descriptions, short WeChat title and digest",
+    "Official benchmark versions, metrics, comparison limits and non-leading component scores separated",
+    "20 audit-authored CPU protocol checks; fake client and mocked sleep limitations explicit",
+    "Configurable compatible backend is not verified offline deployment; CUDA documented path",
+    "Camera preview lacks model transport; session timer not durable scheduler; no tool executor",
+    "Matched photographic cover and three topical LittleM figures; related reading"
+  ]
+}
