@@ -1,0 +1,38 @@
+[
+  {
+    "id": "91730f5c31b5f43cec52b513ff3b67ef5f6333faf673a45e",
+    "metadata": {
+      "article_id": "wallstreet-explainer-agent-video-production-guide",
+      "content_hash": "df0c93cb082eb3b1",
+      "excerpt": "wallstreet-explainer：把证据与审片写进AI视频流程 wallstreet-explainer 是面向 Claude Code 与 Codex 的财经科技解说视频技能，连接文案、新闻证据、配音时间线、浏览器渲染与 FFmpeg。本文核对 MIT 授权、八站审片流程及联网依赖，并检查自带起始工程，说明本地出片验证与完整自动生产之间的边界，给创作者从短片开始的可复核试用路线。 AI视频 Agent Skills 视频制作 开源工具 事实核查 给一个题目，它实际调动了什么？ “自动做完”和官方流程，有什么区别？ 新闻截图，为什么不等于事实核查",
+      "language": "zh",
+      "tags": [
+        "AI视频",
+        "Agent Skills",
+        "视频制作",
+        "开源工具",
+        "事实核查"
+      ],
+      "title": "wallstreet-explainer：把证据与审片写进AI视频流程",
+      "url": "/blog/wallstreet-explainer-agent-video-production-guide/"
+    }
+  },
+  {
+    "id": "f9f1ab6605795b342871e8a011fcb7b9e025a02c46a0c7af",
+    "metadata": {
+      "article_id": "wallstreet-explainer-agent-video-production-guide",
+      "content_hash": "451b437990660d48",
+      "excerpt": "wallstreet-explainer: An Agent Video Production Guide Explore wallstreet-explainer: agent skills for scripts, news evidence, narration and browser video rendering, with local checks and clear production boundaries. AI视频 Agent Skills 视频制作 开源工具 事实核查 What does the agent actually ope",
+      "language": "en",
+      "tags": [
+        "AI视频",
+        "Agent Skills",
+        "视频制作",
+        "开源工具",
+        "事实核查"
+      ],
+      "title": "wallstreet-explainer: An Agent Video Production Guide",
+      "url": "/blog/wallstreet-explainer-agent-video-production-guide/"
+    }
+  }
+]

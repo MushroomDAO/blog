@@ -1,0 +1,10 @@
+没找到字体目录 /private/tmp/wallstreet-research-20261127/fonts：会退到系统字体（Noto Sans SC / 微软雅黑），样子不对。在 scripts/local.json 里写 fonts_dir，字体清单见 README
+建好了：/tmp/wallstreet-smoke-20261127（估出来的时间线 14.78 秒，还没有配音）
+下一步：
+  1. 写 script.json（文案，一句一个 id，写法见 kit/README.md「文案 script.json」）
+  2. node "/private/tmp/wallstreet-research-20261127/scripts/timeline_stub.mjs" "/tmp/wallstreet-smoke-20261127/script.json"    重算时间线（每改一次 script.json 就重跑一次）
+  3. 写 film.js（每镜先想 says，再从 kit/README.md 的表里选场景）
+  4. node "/private/tmp/wallstreet-research-20261127/scripts/render.mjs" --dir "/tmp/wallstreet-smoke-20261127" --check            查镜头表（几秒钟，不渲染），改到零错误
+  5. node "/private/tmp/wallstreet-research-20261127/scripts/render.mjs" --dir "/tmp/wallstreet-smoke-20261127" --sheet            每镜三帧拼一张图（out/sheet.png），自己先看一遍
+  6. node "/private/tmp/wallstreet-research-20261127/scripts/render.mjs" --dir "/tmp/wallstreet-smoke-20261127" --video --h 720    渲 720p 预览（没声音）
+注意：fonts\ 是指向字体目录的联接。删这个片子目录前先拆联接（只删联接，不删字体）：node -e "require('fs').rmdirSync(process.argv[1])" "/tmp/wallstreet-smoke-20261127/fonts"，再删目录。

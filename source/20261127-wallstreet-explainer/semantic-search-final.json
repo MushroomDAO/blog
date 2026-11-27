@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "wallstreet-explainer-agent-video-production-guide",
+    "query": "wallstreet-explainer 文案 新闻证据 配音 视频制作",
+    "found": true,
+    "response": {
+      "results": [
+        {
+          "article_id": "wallstreet-explainer-agent-video-production-guide",
+          "title": "wallstreet-explainer：把证据与审片写进AI视频流程",
+          "url": "/blog/wallstreet-explainer-agent-video-production-guide/",
+          "language": "zh",
+          "excerpt": "wallstreet-explainer：把证据与审片写进AI视频流程 wallstreet-explainer 是面向 Claude Code 与 Codex 的财经科技解说视频技能，连接文案、新闻证据、配音时间线、浏览器渲染与 FFmpeg。本文核对 MIT 授权、八站审片流程及联网依赖，并检查自带起始工程，说明本地出片验证与完整自动生产之间的边界，给创作者从短片开始的可复核试用路线。 AI视频 Agent Skills 视频制作 开源工具 事实核查 给一个题目，它实际调动了什么？ “自动做完”和官方流程，有什么区别？ 新闻截图，为什么不等于事实核查",
+          "score": 0.75735456
+        },
+        {
+          "article_id": "nikola-hand-drawn-explainer-video-codex-skill",
+          "title": "Nikola: A Codex Skill That Turns Any Topic Into Hand-drawn Explainer Videos",
+          "url": "/blog/nikola-hand-drawn-explainer-video-codex-skill/",
+          "language": "en",
+          "excerpt": "Nikola: A Codex Skill That Turns Any Topic Into Hand-drawn Explainer Videos A Codex skill for Chinese-language hand-drawn explainer videos — stroke-by-stroke narrative and procedural animation paths, VolcanoEngine TTS voiceover, outputs real MP4s with subtitles and editable timel",
+          "score": 0.5983397
+        },
+        {
+          "article_id": "storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard",
+          "title": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4",
+          "url": "/blog/storyflow-ai-multi-agent-comic-video-generation-script-character-storyboard/",
+          "language": "zh",
+          "excerpt": "StoryFlow AI：7 个 Agent 流水线，一段文字变成一部完整漫剧 MP4 xiaozhang-art/storyflow-ai 开源，Multi-Agent 漫剧自动生成平台，7 步 Agent 流水线（剧本→角色→分镜→图片/配音并行→图生视频→合成），含 Director 决策引擎、断点续传、Montage 渲染引擎，Docker Compose 一键部署。 multi-agent video generation AI open source comic LLM FastAPI Docker 一段文字进去，一部漫剧出来 7 个 Age",
+          "score": 0.5573299
+        },
+        {
+          "article_id": "pixelle-video-ai-short-video-generator",
+          "title": "一句话生成完整短视频：Pixelle-Video 开源引擎上手指南",
+          "url": "/blog/pixelle-video-ai-short-video-generator/",
+          "language": "zh",
+          "excerpt": "一句话生成完整短视频：Pixelle-Video 开源引擎上手指南 Pixelle-Video 是一款 AI 全自动短视频引擎（25k+ GitHub ⭐），输入一个主题，自动完成文案撰写、AI 配图生成、语音合成（支持声音克隆）、背景音乐、视频合成全流程。本文从环境搭建到第一条视频导出，完整走一遍。 AI工具 短视频 内容创作 开源 本地部署 它做什么 生成的视频长什么样 架构和模型支持 安装 Windows 整合包（推荐 Windows 用户） macOS / Linux 源码安装 第一条视频：从主题到 MP4 全流程 第一步：配置 LLM 第二步：",
+          "score": 0.55698353
+        },
+        {
+          "article_id": "dont-storytell-narrative-strategy-skill",
+          "title": "Don’t Storytell: An Evidence-Based Strategy Skill",
+          "url": "/blog/dont-storytell-narrative-strategy-skill/",
+          "language": "en",
+          "excerpt": "Don’t Storytell: An Evidence-Based Strategy Skill Review Don’t Storytell: a narrative strategy skill with case retrieval and HTML export, evidence limits, licensing gaps and practical decision workflows. Don’t Storytell 叙事策略 AI Skill 创作者 商业决策 What kind of package is it? How does ",
+          "score": 0.55045164
+        },
+        {
+          "article_id": "newsjack-ai-pr-skill-pack-agent-newsjacking",
+          "title": "Newsjack：把 AI Agent 变成 PR 团队的开源技能包，30+ 技能覆盖新闻蹭热、危机公关、AI 搜索可见度",
+          "url": "/blog/newsjack-ai-pr-skill-pack-agent-newsjacking/",
+          "language": "zh",
+          "excerpt": "Newsjack：把 AI Agent 变成 PR 团队的开源技能包，30+ 技能覆盖新闻蹭热、危机公关、AI 搜索可见度 elvisun/newsjack，1,257 stars，MIT。Go CLI + Markdown skill 文件格式，安装后 Claude Code/Codex 等 Agent 获得 30+ PR 专业技能：新闻监控与蹭热点检测、pitch 邮件撰写、记者匹配、危机公关保持声明、AEO/GEO AI 搜索引擎可见度优化。Elvis Sun + PR 专家 Carly Martinetti 共同开发，配套 Medialyst 商",
+          "score": 0.54783434
+        },
+        {
+          "article_id": "firered-openstoryline-ai-video-editing-agent-claude-code",
+          "title": "FireRed-OpenStoryline：用对话剪视频，把剪辑工作流存成可复用的 Skill",
+          "url": "/blog/firered-openstoryline-ai-video-editing-agent-claude-code/",
+          "language": "zh",
+          "excerpt": "FireRed-OpenStoryline：用对话剪视频，把剪辑工作流存成可复用的 Skill FireRedTeam 开源的 AI 视频剪辑 Agent，自然语言驱动从素材搜集到成片全流程。核心亮点：编辑工作流可存为 Skill 复用，支持 Claude Code /openstoryline-use 直接调用。3141 stars，Apache 2.0。 AI视频 视频剪辑 Agent Claude Code LangChain MCP 开源 内容创作 一、做什么 二、五个核心能力 1. 智能媒体搜索与组织 2. 脚本生成 + Few-shot 风格",
+          "score": 0.54689896
+        },
+        {
+          "article_id": "video-use-ai-video-editor-claude-code",
+          "title": "video-use：用 Claude Code 剪视频，browser-use 团队开源 AI 视频编辑器",
+          "url": "/blog/video-use-ai-video-editor-claude-code/",
+          "language": "zh",
+          "excerpt": "video-use：用 Claude Code 剪视频，browser-use 团队开源 AI 视频编辑器 video-use 是 browser-use 团队开源的 AI 视频编辑 skill，14,000+ Stars，支持 Claude Code/Codex/Hermes 等 Agent，自然语言描述剪辑任务，AI 自动剪掉填充词、自动调色、生成字幕、添加动画 overlay，通过 ElevenLabs 配音，输出 final.mp4。Python 开发，完全开源。 视频编辑 AI Agent Claude Code 开源 browser-use ",
+          "score": 0.5450024
+        },
+        {
+          "article_id": "cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice",
+          "title": "ClipTalk：用自然语言剪视频，VLM + 24 个 Skill 驱动的 Agentic 视频编辑系统",
+          "url": "/blog/cliptalk-agentic-video-editing-vlm-ffmpeg-24-skills-face-voice/",
+          "language": "zh",
+          "excerpt": "ClipTalk：用自然语言剪视频，VLM + 24 个 Skill 驱动的 Agentic 视频编辑系统 非商业自定义许可，126 stars。三层架构：Python FastAPI + Node Pi Agent + 浏览器。24 个 SKILL.md 技能，VLM 理解画面，本地 SenseVoice/TalkNet/SFace/YOLOX 识别人脸/声纹/活跃发言人，FFmpeg 执行剪辑。6 步审批门禁，V2 算法比基线慢 14s。仅支持 Linux x86-64/WSL2，不支持 macOS/ARM。 video-editing agent ",
+          "score": 0.5448953
+        },
+        {
+          "article_id": "longcat-video-avatar-16-engineering-guide",
+          "title": "LongCat-Video-Avatar 1.6：十分钟数字人的工程边界",
+          "url": "/blog/longcat-video-avatar-16-engineering-guide/",
+          "language": "zh",
+          "excerpt": "LongCat-Video-Avatar 1.6：十分钟数字人的工程边界 美团 LongCat-Video-Avatar 1.6 开放代码与权重，支持音频驱动的人物视频生成。本文核查模型卡、技术报告与推理入口，解释长片续生成的误差累积、DMD 与 OPSD 混合、基础模型依赖及量化配置，并给出短片到长片的验收建议。十分钟能力来自官方展示，本次没有运行 GPU 推理，不把成片时长当作生成速度。 LongCat 数字人 视频生成 美团 开源模型 输入到底是什么？ 为什么长视频会越生成越不像？ 工程接入要注意哪些文件和参数？ 怎样验收“十分钟数字人”？ 常见问",
+          "score": 0.5429736
+        }
+      ]
+    }
+  }
+]

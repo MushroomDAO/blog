@@ -1,0 +1,31 @@
+{
+  "banner": "FLUX10302 manualpass, no text/faces;10301 rejected manually for tiny generated monitor marking despite machinepass; finalmachine0fail0warn",
+  "body": [
+    {
+      "file": "src/assets/images/wallstreet-explainer-agent-video-production-guide-fig-01.png",
+      "bytes": 50770,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/wallstreet-explainer-agent-video-production-guide-fig-02.png",
+      "bytes": 58930,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/wallstreet-explainer-agent-video-production-guide-fig-03.png",
+      "bytes": 81101,
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "originals": "assets/wallstreet-explainer-agent-video-production-guide-illustrations",
+  "bodyManual": "all3 viewed, correctshortChinese, matchinganchors"
+}
