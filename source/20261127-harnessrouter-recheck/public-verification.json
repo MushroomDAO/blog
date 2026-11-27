@@ -1,0 +1,27 @@
+{
+  "orderingNote": "List uses same-day date sorting; actual lastPublishedAt records publication time for carousel ordering.",
+  "checkedAt": "2026-11-27T07:42:44.184899+00:00",
+  "articles": [
+    {
+      "slug": "harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code",
+      "url": "https://blog.mushroom.cv/blog/harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code/",
+      "title": "HarnessRouter：单容器自托管多 AI 编码 Agent，UHP 统一协议让 Claude Code / Codex / Hermes 共用一套 API",
+      "listRank": 596,
+      "carouselRank": null,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code-banner.CZ6YAZuW.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94433
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code-banner.CZ6YAZuW_a78Ky.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 31834
+        }
+      ]
+    }
+  ]
+}

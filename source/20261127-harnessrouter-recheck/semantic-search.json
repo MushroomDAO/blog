@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "article_id": "harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code",
+      "title": "HarnessRouter：单容器自托管多 AI 编码 Agent，UHP 统一协议让 Claude Code / Codex / Hermes 共用一套 API",
+      "url": "/blog/harnessrouter-uhp-unified-agent-protocol-self-hosted-codex-claude-code/",
+      "language": "zh",
+      "excerpt": "HarnessRouter：单容器自托管多 AI 编码 Agent，UHP 统一协议让 Claude Code / Codex / Hermes 共用一套 API HarnessRouter 社区版是一个开源（Apache 2.0）的自托管 Agent 调度平台，单 Docker 容器运行，内置 Claude Code、Codex、Hermes 三套 Agent harness，通过 UHP（统一 Harness 协议）统一 API，所有数据本地留存，无遥测，无账号，适合私有化部署、产品内嵌 AI 编码能力和多 Agent 对比评测。Starter Ki",
+      "score": 0.78946024
+    },
+    {
+      "article_id": "browser-harness-self-healing-cdp-agent-skill-chrome-automation",
+      "title": "browser-harness：一个会自己写代码的浏览器 Agent 工具——每次运行都在让自己变聪明",
+      "url": "/blog/browser-harness-self-healing-cdp-agent-skill-chrome-automation/",
+      "language": "zh",
+      "excerpt": "browser-harness：一个会自己写代码的浏览器 Agent 工具——每次运行都在让自己变聪明 browser-use/browser-harness 是一个通过 Chrome DevTools Protocol（CDP）直接控制真实浏览器的 Agent 工具——没有 Selenium、没有 Playwright 包装层，一条 WebSocket 到底。Agent 遇到不会的操作，就地写 helper 函数，下次复用；遇到特定网站的操作，自动生成 domain skill 文件并归档。核心代码约 1000 行，4 个核心文件。是 Claude C",
+      "score": 0.6232935
+    },
+    {
+      "article_id": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+      "title": "penguin-harness-self-evolving-agent-builder-skills-benchmark",
+      "url": "/blog/penguin-harness-self-evolving-agent-builder-skills-benchmark/",
+      "language": "en",
+      "excerpt": "penguin-harness-self-evolving-agent-builder-skills-benchmark Prism-Shadow/penguin-harness, 1140 stars, Apache-2.0, TypeScript. A new project by LlamaFactory author Yaowei Zheng, open-sourced 2026-07-19. Automated agent builder platform: one sentence builds a complete agent app ($",
+      "score": 0.5898803
+    },
+    {
+      "article_id": "harness-adapters-in-loop-rl-tool-governance",
+      "title": "Harness Adapters：让模型在真实Agent里学会少走弯路",
+      "url": "/blog/harness-adapters-in-loop-rl-tool-governance/",
+      "language": "zh",
+      "excerpt": "Harness Adapters：让模型在真实Agent里学会少走弯路 Hugging Face在Pi、OpenCode和Hermes真实运行时里训练Qwen3.8-27B的LoRA。本文核对成功率、工具调用降幅、合并适配器和任务验证方法，分析代理记录真实token为何重要，以及分布外迁移、推理泄漏与工具治理的边界，区分官方实验与本地有限检查，给工程师提供从验收器到部署评估的实践路线。 Harness Adapters Reinforcement Learning LoRA OpenEnv Tool Governance 为什么要在真实harness里训",
+      "score": 0.5824899
+    },
+    {
+      "article_id": "agentic-harness-engineering-observability-self-evolution-coding-agent",
+      "title": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时",
+      "url": "/blog/agentic-harness-engineering-observability-self-evolution-coding-agent/",
+      "language": "zh",
+      "excerpt": "Agentic Harness Engineering：用可观测性让 Coding Agent 自动进化自己的运行时 复旦+北大+奇迹智风，arXiv:2604.25850，MIT，Python。AHE 提出一个闭环：不动模型权重，只进化 harness——通过三层可观测性（组件/经验/决策），让 Evolve Agent 自动分析 trace、提出修改、预测效果，下一轮自动验证。10次迭代把 GPT-5.4 在 Terminal-Bench 2 上从 69.7% 提升到 77.0%，超过手写 Codex-CLI（71.9%）。冻结后的 harness ",
+      "score": 0.5801181
+    },
+    {
+      "article_id": "pentest-harness-deepseek-harness-rebrand-authorization-teardown",
+      "title": "Pentest Harness 拆穿：给 DeepSeek Harness 换皮，再把授权边界删掉",
+      "url": "/blog/pentest-harness-deepseek-harness-rebrand-authorization-teardown/",
+      "language": "zh",
+      "excerpt": "Pentest Harness 拆穿：给 DeepSeek Harness 换皮，再把授权边界删掉 S1N6H/pentest-harness（356 star，MIT）自称面向授权渗透的自托管 AI agent harness。逐 diff 核实：它是 deepseek-ai/deepseek-harness 的换皮——LICENSE 版权人仍是 DeepSeek、命令行仍叫 dsh、包名仍是 @deepseek-ai/dsh、中文 README 还写着『由 DeepSeek AI 开发』。改动主要是品牌替换加一个 pentest 预设；同时删掉了上游",
+      "score": 0.57684016
+    },
+    {
+      "article_id": "longhorizon-harness-amap-ml-ai-agent-long-task",
+      "title": "LongHorizon-Harness：让 AI Agent 真正干完长任务的执行框架",
+      "url": "/blog/longhorizon-harness-amap-ml-ai-agent-long-task/",
+      "language": "zh",
+      "excerpt": "LongHorizon-Harness：让 AI Agent 真正干完长任务的执行框架 AMAP-ML 开源的 LongHorizon-Harness 用三角色分工（Manager/Executor/Auditor）解决 AI Agent 的长任务失效问题：每轮 Executor 用全新上下文执行，Auditor 独立验证环境，只有通过验证的进展才写入持久状态。WeaveBench 提升 +28.9pp，OSWorld 2.0 提升 3×，支持 Claude Code/Codex/OpenClaw，MIT 许可。 AI Agent 长任务 计算机使用 状",
+      "score": 0.57167345
+    },
+    {
+      "article_id": "treg-openrouter-agent-tools-unified-api-credential-proxy",
+      "title": "treg：Agent 工具的 OpenRouter，一个入口调用 2850+ 个真实世界 API",
+      "url": "/blog/treg-openrouter-agent-tools-unified-api-credential-proxy/",
+      "language": "zh",
+      "excerpt": "treg：Agent 工具的 OpenRouter，一个入口调用 2850+ 个真实世界 API Superdesign 团队开源 treg——「OpenRouter for Agent Tools」。一个 token、一个入口，访问约 57 家数据服务商的 2850+ 个接口，覆盖 SEO 外链、社交趋势、人员/公司信息、广告、抓取等。按次计费（最低几分钱），无需注册供应商账号。同时支持团队自有 API Key 共享，让所有人的 Agent 都能使用同一套已有能力，而无需把密钥交出去。Apache 2.0，可自托管。 开源 Agent工具 API代理 ",
+      "score": 0.5705534
+    },
+    {
+      "article_id": "penguinharness-deepseek-self-evolving-agent-builder-002-usd",
+      "title": "PenguinHarness：一句话让 Agent 自动构建 Agent，$0.02 生成完整 RAG 应用",
+      "url": "/blog/penguinharness-deepseek-self-evolving-agent-builder-002-usd/",
+      "language": "zh",
+      "excerpt": "PenguinHarness：一句话让 Agent 自动构建 Agent，$0.02 生成完整 RAG 应用 Prism-Shadow/penguin-harness 是一个开源 Agent 自动交付平台，TypeScript 编写，Apache-2.0。一句话描述需求，Agent 自动生成完整 Agent 应用（scaffold + 代码 + 运行说明）。接入 DeepSeek V4，数据分析精度全场最高，成本仅 Claude Code 的 1/70。内置 Agent 自进化：跑基准、找失分点、发布 N+1 版本。 Agent DeepSeek 自进化",
+      "score": 0.5674647
+    },
+    {
+      "article_id": "block-buzz-nostr-human-agent-workspace",
+      "title": "Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上",
+      "url": "/blog/block-buzz-nostr-human-agent-workspace/",
+      "language": "zh",
+      "excerpt": "Buzz：Block 开源的人机协作工作台，建在你自己的 Nostr relay 上 Block（Jack Dorsey 旗下公司）2026年3月开源的 Buzz：人类和 AI Agent 在同一个 Nostr relay 上协作，每个操作都是加密签名的事件。7374 stars，Rust + Tauri + React，支持 Claude Code / Codex / Goose 直接接入。自托管，数据主权在你手里。 Nostr AI Agent 开源 自托管 协作工具 Rust Claude Code Block 一、它是什么 二、为什么是 Nost",
+      "score": 0.56625396
+    }
+  ]
+}
