@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-27T00:35:38.315Z",
+  "drafts": [
+    {
+      "slug": "qora-voca-zh-small-offline-mandarin-tts-guide",
+      "mediaId": "prCUE631thH1cmNLi42prHR7Y6nm7JXy90c2T_bxFWPSCukLI1bjrr6g0RH_9ZiW",
+      "titleMatches": true,
+      "authorMatches": true,
+      "digestMatches": true,
+      "htmlExact": false,
+      "fullTextMatches": true,
+      "imageIdentitiesMatch": true,
+      "imageCount": 3,
+      "localTextHash": "08b9355b705427b41425691b992614e55915478f5dfe5b8e019ec2a814a65e85",
+      "remoteTextHash": "08b9355b705427b41425691b992614e55915478f5dfe5b8e019ec2a814a65e85",
+      "platformRewrites": [
+        "external anchor wrappers removed",
+        "numeric entity escaping",
+        "img src converted to data-src and CDN resolution 0 to640"
+      ],
+      "canonicalInBody": false,
+      "copyrightPresent": true,
+      "coverMatches": true,
+      "needOpenComment": 1,
+      "onlyFansComment": 0,
+      "contentSourceUrl": "https://blog.mushroom.cv/blog/qora-voca-zh-small-offline-mandarin-tts-guide/",
+      "localContentHash": "acbd0227c462bbcfc040c15741cac97b25a2d565a8a91d1a731d913213efe635",
+      "remoteContentHash": "89b1061388a0928d1d7bc8dab1d75a47b3a4d7f35ff91d7cf8bf2f1f98ea811d"
+    }
+  ]
+}

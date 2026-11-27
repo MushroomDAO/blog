@@ -1,0 +1,38 @@
+[
+  {
+    "id": "8a0cdfb48317825308e0b62c923d345705140c2284b48879",
+    "metadata": {
+      "article_id": "qora-voca-zh-small-offline-mandarin-tts-guide",
+      "content_hash": "0841415a29d34e6b",
+      "excerpt": "qora-voca-zh：450万参数普通话TTS，先检查有没有少读 qora-voca-zh 是只有450万参数、三种固定音色的本地普通话语音合成模型。本文核对代码、模型卡、训练数据和许可，并在Mac CPU上实际运行发布版PyTorch与ONNX权重，检查语音输出、文件大小和中文前端。重点揭示混合英文与数字被省略、训练耗时口径和部署依赖差异，帮助团队判断离线朗读场景是否适合采用。 qora-voca-zh 语音合成 本地AI ONNX 普通话 450 万参数，为什么能直接输出语音？ 不加载预训练权重，是否等于不依赖大模型？ 发布权重在 Mac CPU",
+      "language": "zh",
+      "tags": [
+        "qora-voca-zh",
+        "语音合成",
+        "本地AI",
+        "ONNX",
+        "普通话"
+      ],
+      "title": "qora-voca-zh：450万参数普通话TTS，先检查有没有少读",
+      "url": "/blog/qora-voca-zh-small-offline-mandarin-tts-guide/"
+    }
+  },
+  {
+    "id": "309de7e60f87c2a9c8b49c027ec55b6d91d5fa52b8f2f38a",
+    "metadata": {
+      "article_id": "qora-voca-zh-small-offline-mandarin-tts-guide",
+      "content_hash": "e681e63ab2a8de2b",
+      "excerpt": "qora-voca-zh: Small Offline Mandarin TTS, Tested on CPU We run qora-voca-zh released weights on CPU, audit its three Mandarin voices, text omissions, training claims and ONNX packaging limits for local speech output. qora-voca-zh 语音合成 本地AI ONNX 普通话 How does a 4.5M model produce s",
+      "language": "en",
+      "tags": [
+        "qora-voca-zh",
+        "语音合成",
+        "本地AI",
+        "ONNX",
+        "普通话"
+      ],
+      "title": "qora-voca-zh: Small Offline Mandarin TTS, Tested on CPU",
+      "url": "/blog/qora-voca-zh-small-offline-mandarin-tts-guide/"
+    }
+  }
+]

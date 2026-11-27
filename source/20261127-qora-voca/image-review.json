@@ -1,0 +1,31 @@
+{
+  "banner": "machine0fail0warn, manualpass; three speaker outlets and blank book photograph seed10201, no upstream UI",
+  "body": [
+    {
+      "file": "src/assets/images/qora-voca-zh-small-offline-mandarin-tts-guide-fig-01.png",
+      "bytes": 53381,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/qora-voca-zh-small-offline-mandarin-tts-guide-fig-02.png",
+      "bytes": 58753,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "src/assets/images/qora-voca-zh-small-offline-mandarin-tts-guide-fig-03.png",
+      "bytes": 60617,
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "originals": "assets/qora-voca-zh-small-offline-mandarin-tts-guide-illustrations",
+  "manualReview": "Cover photo inspected: three speaker outlets, blank cream book and cables, no text or faces. All three original LittleM figures viewed: source-filter and voices, released-weight/waveform evidence versus unmeasured speed, mixed Latin/digits drop and coverage barrier; labels correct and sparse."
+}

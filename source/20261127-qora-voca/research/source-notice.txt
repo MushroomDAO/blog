@@ -1,0 +1,18 @@
+qora-voca-zh
+Copyright 2026 ValueMoonLab
+
+This product includes software developed as a fork of tiny-voca
+(https://github.com/n4ze3m/tiny-voca), Copyright 2026 Muhammed Nazeem,
+licensed under the Apache License, Version 2.0.
+
+The Chinese front end (src/tiny_voca/zh_text.py), the Mandarin forced
+aligner integration (src/tiny_voca/align.py), incremental speaker
+expansion in training (src/tiny_voca/train.py), and all training data
+and model weights in this repository are original work of ValueMoonLab,
+also licensed under the Apache License, Version 2.0.
+
+The Mandarin phoneme recogniser used only by the annotation step
+(lyonlu13/wav2vec2-large-zh-singing-phoneme-ctc) and the Qwen3-TTS models
+used only to generate synthetic training audio are third-party works
+distributed under their own licenses; they are not included in this
+repository and are not required for inference.

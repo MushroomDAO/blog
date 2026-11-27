@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-27T00:33:12.166131+00:00",
+  "lengths": {
+    "description": 158,
+    "descriptionEn": 160,
+    "titleEn": 55,
+    "wechatTitle": 21,
+    "wechatDigest": 32
+  },
+  "checks": [
+    "Bilingual descriptions150-160; ENtitle55; WeChat21 and digest32",
+    "BLUF question headings FAQ3 copyrights sources and related reading in both languages",
+    "Released weights actually ran 3 voices PyTorch plus ONNX on CPU; no performance or listening claims",
+    "Original upstream tests68 pass1 skipped, subtests8 not doublecounted",
+    "Mixed latin digits silently omitted in observed frontend fixtures; strict rejection claim narrowed",
+    "21h continuation not total training; artifact byte units not RAM; ONNX graph not torch-free package",
+    "Official repo has no article images; matched generated cover and 3 LittleM figures"
+  ]
+}

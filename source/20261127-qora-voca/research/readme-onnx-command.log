@@ -1,0 +1,3 @@
+usage: check_onnx_zh.py [-h] [--checkpoint CHECKPOINT] [--onnx ONNX]
+                        [--output OUTPUT]
+check_onnx_zh.py: error: unrecognized arguments: --text 今天天气真不错。 --voice M2
