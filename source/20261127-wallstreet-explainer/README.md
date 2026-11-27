@@ -12,3 +12,5 @@ Local checks use the unchanged project scripts with an ephemeral starter created
 The source README contains third-party presenter/news sample images; we do not adopt them as the article cover. Cover uses local FLUX and body figures use the required Little M workflow. Originals are preserved outside tracked source assets, final compressed figures are manually reviewed.
 
 See logs, source-version.json, render proof, image-review.json, seo-geo.json, frozen-inputs.json and actual channel verification receipts. No test duration is reported as performance or end-to-end production speed.
+
+Repository: https://github.com/MushroomDAO/blog/pull/301. Normal squash merge rejected by protected base branch policy. Article and channel receipts pushed to feature branch; no bypass used. Main does not yet contain this article, so a rebuild of main before merge can drop it. All publication channels are verified independently.
