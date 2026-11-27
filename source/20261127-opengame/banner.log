@@ -1,0 +1,14 @@
+=== [adopt-banner] opengame-agent-game-studio-remix-verification-guide ← 1 source image(s) → src/assets/images/opengame-agent-game-studio-remix-verification-guide-banner.jpg (1200x630) ===
+  tile 1: 1200x630  ← https://raw.githubusercontent.com/nexu-io/opengame/03e314e4fd1c6a48353c99f644e7850d9a05a932/templates/games/tidebreaker/cover.webp
+=== [adopt-banner] done: src/assets/images/opengame-agent-game-studio-remix-verification-guide-banner.jpg (1200x630, 94009B) ===
+=== [verify-banner] src/assets/images/opengame-agent-game-studio-remix-verification-guide-banner.jpg ===
+  ok   provenance: banner-creator/adopted src=https://raw.githubusercontent.com/nexu-io/opengame/03e314e4fd1c6a48353c99f644e7850d9a05a932/templates/games/tidebreaker/cover.webp
+  ok   framing: no letterboxed/black edges
+  ok   dimensions: 1200x630
+  ok   size: 94009B (< 99000B)
+  WARN text: 1 string(s) in adopted imagery — acceptable if it is the project's own
+       → detected: TIDEBREAKER
+  ok   faces: none detected
+--- result: 0 failure(s), 1 warning(s)
+=== [verify-banner] PASSED: src/assets/images/opengame-agent-game-studio-remix-verification-guide-banner.jpg ===
+PATH: src/assets/images/opengame-agent-game-studio-remix-verification-guide-banner.jpg

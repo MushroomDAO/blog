@@ -1,0 +1,172 @@
+{
+  "checkedAt": "2026-11-27T06:03:00.250Z",
+  "checks": [
+    "real page and two image assets ready",
+    "actual renderer is Canvas2D",
+    "real mouse starts progressing gameplay",
+    "real keyboard steering changes lane",
+    "real jump key sets cooldown",
+    "pause freezes gameplay distance",
+    "resume advances gameplay again",
+    "restart resets course progress",
+    "no observed page exceptions console errors failed loads or external game requests"
+  ],
+  "passed": 9,
+  "initial": {
+    "state": "title",
+    "ready": true,
+    "lane": 0,
+    "distance": 0,
+    "jumpCooldown": 0,
+    "frameCount": 2,
+    "canvasType": "CanvasRenderingContext2D",
+    "images": [
+      {
+        "complete": true,
+        "width": 800
+      },
+      {
+        "complete": true,
+        "width": 248
+      }
+    ],
+    "bodyState": "title"
+  },
+  "playing": {
+    "state": "playing",
+    "ready": true,
+    "lane": -0.0029012162842365773,
+    "distance": 3.915487756278954,
+    "jumpCooldown": 0,
+    "frameCount": 7,
+    "canvasType": "CanvasRenderingContext2D",
+    "images": [
+      {
+        "complete": true,
+        "width": 800
+      },
+      {
+        "complete": true,
+        "width": 248
+      }
+    ],
+    "bodyState": "playing"
+  },
+  "steered": {
+    "state": "playing",
+    "ready": true,
+    "lane": 0.16022993751537984,
+    "distance": 8.652681958681658,
+    "jumpCooldown": 0,
+    "frameCount": 13,
+    "canvasType": "CanvasRenderingContext2D",
+    "images": [
+      {
+        "complete": true,
+        "width": 800
+      },
+      {
+        "complete": true,
+        "width": 248
+      }
+    ],
+    "bodyState": "playing"
+  },
+  "jumped": {
+    "state": "playing",
+    "ready": true,
+    "lane": 0.16022993751537984,
+    "distance": 8.652681958681658,
+    "jumpCooldown": 1.5,
+    "frameCount": 13,
+    "canvasType": "CanvasRenderingContext2D",
+    "images": [
+      {
+        "complete": true,
+        "width": 800
+      },
+      {
+        "complete": true,
+        "width": 248
+      }
+    ],
+    "bodyState": "playing"
+  },
+  "paused": {
+    "state": "paused",
+    "ready": true,
+    "lane": 0.15183174841475855,
+    "distance": 19.942561839747434,
+    "jumpCooldown": 1.1915000000000007,
+    "frameCount": 26,
+    "canvasType": "CanvasRenderingContext2D",
+    "images": [
+      {
+        "complete": true,
+        "width": 800
+      },
+      {
+        "complete": true,
+        "width": 248
+      }
+    ],
+    "bodyState": "paused"
+  },
+  "restarted": {
+    "state": "playing",
+    "ready": true,
+    "lane": 0,
+    "distance": 0,
+    "jumpCooldown": 0,
+    "frameCount": 33,
+    "canvasType": "CanvasRenderingContext2D",
+    "images": [
+      {
+        "complete": true,
+        "width": 800
+      },
+      {
+        "complete": true,
+        "width": 248
+      }
+    ],
+    "bodyState": "playing"
+  },
+  "requests": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 21968
+    },
+    {
+      "path": "/cover.webp",
+      "status": 200,
+      "bytes": 37380
+    },
+    {
+      "path": "/assets/archipelago.webp",
+      "status": 200,
+      "bytes": 25938
+    },
+    {
+      "path": "/assets/speedboat.webp",
+      "status": 200,
+      "bytes": 17312
+    }
+  ],
+  "network": [
+    "http://127.0.0.1:49848/",
+    "http://127.0.0.1:49848/cover.webp",
+    "http://127.0.0.1:49848/assets/archipelago.webp",
+    "http://127.0.0.1:49848/assets/speedboat.webp"
+  ],
+  "errors": [],
+  "failed": [],
+  "limits": [
+    "unmodified bundled Tidebreaker only; not full Studio/MCP",
+    "real headless Chrome desktop mouse and keyboard",
+    "no provider API, AI generation/remix, mobile, multiplayer or platform upload",
+    "not performance benchmark or complete game quality evaluation",
+    "short interaction slice does not prove a full win/lose route"
+  ]
+}

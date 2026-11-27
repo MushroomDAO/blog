@@ -1594,3 +1594,5 @@ Published harness-adapters-in-loop-rl-tool-governance from exact official URL; i
 - 2026-11-26 Sage-Interaction: https://blog.mushroom.cv/blog/sage-interaction-duplex-delegation-deployment-guide/；20项自编CPU协议检查通过，无模型/语音/视频/性能实测。明确前台权重与可配置后台、JSON接口要求、摄像头预览断路和会话定时器边界；官方分数不作为独立复现。Blog/草稿/双语索引已核验，KB回读随后完成。
 
 - 2026-11-27 qora-voca-zh: https://blog.mushroom.cv/blog/qora-voca-zh-small-offline-mandarin-tts-guide/；发布权重CPU三音色PyTorch/ONNX合成通过；原测试68通过1跳过、8子测试不重复计数。实测前端混合英文数字省略；训练21小时为续训，文件大小非RAM，ONNX脚本示例参数不符；无性能/主观听感/CER实测。Blog/公众号/双语索引已核验，KB回读继续完成。
+
+- 2026-11-27 OpenGame: https://blog.mushroom.cv/blog/opengame-agent-game-studio-remix-verification-guide/；定位nexu-io/opengame，区别同名框架。原样Tidebreaker真实无头Chrome九项交互通过，实际Canvas2D；未做AI生成、整套Studio、其他模板、通关、移动端、多人、平台上传或性能测试。说明免费软件/BYOK、277元数据文件/25精选、状态和证据、本地目录与平台发布边界；不背书一键复刻AAA。Blog/公众号/双语索引核验完成，KB回读继续。

@@ -1,0 +1,15 @@
+{
+  "node": "v26.10.0",
+  "platform": "Darwin arm64",
+  "fixtureHashes": {
+    "cover.webp": "569e82be3d54851976e1c5e7c9b35f4e306c5c886425091f23daae72abde690a",
+    "index.html": "9d6ae04248e52f399e2f6e334819aedb6f61acce10ea99b92140daefe479ac09",
+    "game.json": "77cf92441b6944fcaeff2e36660b2fd2ba0c6754d974e8816476b1aa2abfb70b",
+    "DESIGN.md": "e7d63146ca2280ef289337741b40b9ead201845e762435ea0bf2531729b6c40e",
+    "assets/archipelago.webp": "3de1302ee84be43745b2eff9a474fc595f8f0f6e810ff74c7210ce072020d5c5",
+    "assets/speedboat.webp": "003f8425be5885cbbb6cc9615d85679c76b44ba8aefd41205c096adc6a049bda"
+  },
+  "fixtureUnmodified": true,
+  "browserSmokePassed": 9,
+  "noWholeRepositoryTestSuite": true
+}

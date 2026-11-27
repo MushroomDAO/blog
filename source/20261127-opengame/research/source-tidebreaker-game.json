@@ -1,0 +1,27 @@
+{
+  "id": "tidebreaker",
+  "title": "Tidebreaker",
+  "description": "Race a speedboat through a storm-lashed archipelago. Jump wave crests, dodge reefs and reach at least six of eight checkpoints before the tide runs out.",
+  "genre": "racing",
+  "style": "3d",
+  "setting": "modern",
+  "multiplayer": false,
+  "maxPlayers": 1,
+  "status": "published",
+  "cover": "cover.webp",
+  "entry": "index.html",
+  "controls": "A / D or arrows steer · W accelerates · S brakes · Space jumps · Mouse: hold and steer · Touch: drag to steer or use buttons · P / Esc pause · R restart",
+  "plays": 0,
+  "likes": 0,
+  "dislikes": 0,
+  "createdAt": "2026-11-20T00:00:00.000Z",
+  "updatedAt": "2026-11-20T00:00:00.000Z",
+  "i18n": {
+    "zh-CN": {
+      "title": "破潮者",
+      "description": "驾驶快艇穿越风暴群岛。跃过浪尖、避开暗礁，在倒计时结束前通过八个检查点中的至少六个。",
+      "controls": "A / D 或左右方向键转向 · W 加速 · S 减速 · 空格跳浪 · 鼠标按住移动转向 · 触屏拖动或使用按钮 · P / Esc 暂停 · R 重开"
+    }
+  },
+  "orientation": "landscape"
+}

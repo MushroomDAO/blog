@@ -1,0 +1,45 @@
+{
+  "orderingNote": "List uses same-day date sorting; actual lastPublishedAt records publication time for carousel ordering.",
+  "checkedAt": "2026-11-27T06:23:04.825151+00:00",
+  "articles": [
+    {
+      "slug": "opengame-agent-game-studio-remix-verification-guide",
+      "url": "https://blog.mushroom.cv/blog/opengame-agent-game-studio-remix-verification-guide/",
+      "title": "OpenGame：Agent游戏工作台，一键复刻要看哪些证据",
+      "listRank": 1,
+      "carouselRank": 1,
+      "images": [
+        {
+          "url": "https://blog.mushroom.cv/_astro/opengame-agent-game-studio-remix-verification-guide-banner.BKsarryi.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "bytes": 94009
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/opengame-agent-game-studio-remix-verification-guide-banner.BKsarryi_2gp9y7.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 37740
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/opengame-agent-game-studio-remix-verification-guide-fig-01.BVAtzLL6_1I9bIt.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 41016
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/opengame-agent-game-studio-remix-verification-guide-fig-02.DjSoTgfp_Dietf.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 60346
+        },
+        {
+          "url": "https://blog.mushroom.cv/_astro/opengame-agent-game-studio-remix-verification-guide-fig-03.91ETNf9h_K5ymy.webp",
+          "status": 200,
+          "contentType": "image/webp",
+          "bytes": 57214
+        }
+      ]
+    }
+  ]
+}
