@@ -1596,3 +1596,5 @@ Published harness-adapters-in-loop-rl-tool-governance from exact official URL; i
 - 2026-11-27 qora-voca-zh: https://blog.mushroom.cv/blog/qora-voca-zh-small-offline-mandarin-tts-guide/；发布权重CPU三音色PyTorch/ONNX合成通过；原测试68通过1跳过、8子测试不重复计数。实测前端混合英文数字省略；训练21小时为续训，文件大小非RAM，ONNX脚本示例参数不符；无性能/主观听感/CER实测。Blog/公众号/双语索引已核验，KB回读继续完成。
 
 - 2026-11-27 OpenGame: https://blog.mushroom.cv/blog/opengame-agent-game-studio-remix-verification-guide/；定位nexu-io/opengame，区别同名框架。原样Tidebreaker真实无头Chrome九项交互通过，实际Canvas2D；未做AI生成、整套Studio、其他模板、通关、移动端、多人、平台上传或性能测试。说明免费软件/BYOK、277元数据文件/25精选、状态和证据、本地目录与平台发布边界；不背书一键复刻AAA。Blog/公众号/双语索引核验完成，KB回读继续。
+
+- 2026-11-27 HarnessRouter：复用2026-08-20旧文章，精确标题、封面两变体、目录和既有双语索引核验通过；旧公众号草稿箱无匹配，draft/get40007、已发布48001，标记recorded保留旧凭证，不重复创建。不重写、不部署、不重嵌入；旧文部署信息不代表当前版本，官方初始密码流程已变化。KB审计已写并回读。

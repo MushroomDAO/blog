@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-27T07:42:43.444Z",
+  "draft": {
+    "total": 15,
+    "hits": []
+  },
+  "freepublish": {
+    "errcode": 48001,
+    "errmsg": "api unauthorized rid: 6b093475-5deb9a2a-37b15562"
+  },
+  "oldDraftGet": {
+    "errcode": 40007,
+    "errmsg": "invalid media_id hint: [RWb_4036578-3] rid: 6b093475-7abf86fb-363dd9ed",
+    "title": ""
+  }
+}
