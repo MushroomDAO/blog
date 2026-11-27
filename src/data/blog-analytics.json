@@ -1,83 +1,338 @@
 {
-  "generatedAt": "2026-11-26T14:00:00Z",
+  "generatedAt": "2026-11-27T14:00:00Z",
   "period": {
-    "start": "2026-10-27",
-    "end": "2026-11-26"
+    "start": "2026-10-28",
+    "end": "2026-11-27"
   },
   "totals": {
-    "pageviews": 9000,
-    "visits": 9000,
-    "bots": 0
+    "pageviews": 19200,
+    "visits": 18300,
+    "bots": 30
   },
   "last7": {
-    "pv": 9000,
-    "visits": 9000
+    "pv": 2700,
+    "visits": 2400
   },
   "prior7": {
-    "pv": 0,
-    "visits": 0
+    "pv": 4000,
+    "visits": 3900
   },
   "daily": [
     {
-      "date": "10-27",
+      "date": "10-28",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "date": "10-29",
+      "pv": 400,
+      "visits": 400
+    },
+    {
+      "date": "10-30",
+      "pv": 500,
+      "visits": 500
+    },
+    {
+      "date": "10-31",
+      "pv": 600,
+      "visits": 600
+    },
+    {
+      "date": "11-01",
       "pv": 1000,
       "visits": 1000
     },
     {
-      "date": "11-08",
+      "date": "11-02",
+      "pv": 200,
+      "visits": 100
+    },
+    {
+      "date": "11-03",
+      "pv": 600,
+      "visits": 600
+    },
+    {
+      "date": "11-04",
       "pv": 1000,
       "visits": 1000
+    },
+    {
+      "date": "11-05",
+      "pv": 1000,
+      "visits": 1000
+    },
+    {
+      "date": "11-06",
+      "pv": 1000,
+      "visits": 900
+    },
+    {
+      "date": "11-07",
+      "pv": 1100,
+      "visits": 1100
+    },
+    {
+      "date": "11-08",
+      "pv": 700,
+      "visits": 700
+    },
+    {
+      "date": "11-09",
+      "pv": 600,
+      "visits": 600
+    },
+    {
+      "date": "11-10",
+      "pv": 800,
+      "visits": 700
+    },
+    {
+      "date": "11-11",
+      "pv": 1300,
+      "visits": 1300
     },
     {
       "date": "11-12",
       "pv": 1000,
-      "visits": 1000
+      "visits": 900
+    },
+    {
+      "date": "11-13",
+      "pv": 500,
+      "visits": 400
     },
     {
       "date": "11-14",
-      "pv": 2000,
-      "visits": 2000
+      "pv": 1200,
+      "visits": 1100
+    },
+    {
+      "date": "11-15",
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "date": "11-16",
+      "pv": 900,
+      "visits": 900
+    },
+    {
+      "date": "11-17",
+      "pv": 400,
+      "visits": 400
+    },
+    {
+      "date": "11-18",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "date": "11-19",
+      "pv": 500,
+      "visits": 500
+    },
+    {
+      "date": "11-20",
+      "pv": 500,
+      "visits": 500
     },
     {
       "date": "11-21",
+      "pv": 600,
+      "visits": 600
+    },
+    {
+      "date": "11-22",
+      "pv": 100,
+      "visits": 100
+    },
+    {
+      "date": "11-23",
+      "pv": 400,
+      "visits": 400
+    },
+    {
+      "date": "11-24",
+      "pv": 600,
+      "visits": 300
+    },
+    {
+      "date": "11-25",
+      "pv": 600,
+      "visits": 600
+    },
+    {
+      "date": "11-26",
+      "pv": 300,
+      "visits": 300
+    },
+    {
+      "date": "11-27",
+      "pv": 100,
+      "visits": 100
+    }
+  ],
+  "countries": [
+    {
+      "code": "SG",
+      "flag": "🇸🇬",
+      "name": "新加坡",
+      "nameEn": "Singapore",
+      "pv": 3000,
+      "visits": 3000
+    },
+    {
+      "code": "JP",
+      "flag": "🇯🇵",
+      "name": "日本",
+      "nameEn": "Japan",
       "pv": 2000,
       "visits": 2000
     },
     {
-      "date": "11-24",
-      "pv": 1000,
-      "visits": 1000
+      "code": "CN",
+      "flag": "🇨🇳",
+      "name": "中国",
+      "nameEn": "China",
+      "pv": 2000,
+      "visits": 2000
     },
     {
-      "date": "11-25",
+      "code": "US",
+      "flag": "🇺🇸",
+      "name": "美国",
+      "nameEn": "United States",
       "pv": 1000,
       "visits": 1000
     }
   ],
-  "countries": [],
-  "countryTotal": 0,
+  "countryTotal": 8000,
   "referers": {
-    "direct": 12920,
-    "search": 4790,
-    "ecosystem": 1190,
+    "direct": 0,
+    "search": 0,
+    "ecosystem": 0,
     "ai": 0,
-    "other": 100
+    "other": 0
   },
-  "pages": [],
+  "pages": [
+    {
+      "title": "首页",
+      "titleEn": "Home",
+      "path": "/",
+      "pv": 700,
+      "visits": 540
+    },
+    {
+      "title": "pixelfx：232款像素特效，用代码改、看着改、导出用",
+      "titleEn": "pixelfx: 232 Code-Drawn Pixel Effects and an Authoring Skill",
+      "path": "/blog/pixelfx-pixel-effects-guide/",
+      "pv": 480,
+      "visits": 480
+    },
+    {
+      "title": "jidan/days/2026-11-19",
+      "titleEn": "jidan/days/2026-11-19",
+      "path": "/jidan/days/2026-11-19/",
+      "pv": 280,
+      "visits": 280
+    },
+    {
+      "title": "NX2Apple：把 Switch 到苹果设备的构建流程做成启动器",
+      "titleEn": "NX2Apple: A GUI Builder for Switch Games on Apple",
+      "path": "/blog/nx2apple-switch-apple-builder/",
+      "pv": 270,
+      "visits": 270
+    },
+    {
+      "title": "MotoNav：Android 手机配 ESP32-S3 圆屏，自己做一个导航副屏",
+      "titleEn": "MotoNav: Android Navigation on an ESP32-S3 Round Display",
+      "path": "/blog/motonav-round-screen-navigation/",
+      "pv": 270,
+      "visits": 270
+    },
+    {
+      "title": "MAGI-2 Preview 深度解析：114B MoE 视频生成，激活参数仅 6B，完整自部署指南",
+      "titleEn": "MAGI-2 Preview Deep Dive: 114B MoE Video Generation on Only 6B Active Params, with a Full Self-Hosting Guide",
+      "path": "/blog/magi-2-preview-sand-ai-114b-moe-video-generation-analysis/",
+      "pv": 200,
+      "visits": 200
+    },
+    {
+      "title": "斯坦福 CS329Z：AI Agent 工程正式进入大学课程，拆解全部 22 讲内容",
+      "titleEn": "Stanford CS329Z: AI Agent Engineering Enters the University Curriculum — Breaking Down All 22 Lectures",
+      "path": "/blog/stanford-cs329z-ai-agent-engineering-course-curriculum-analysis/",
+      "pv": 180,
+      "visits": 180
+    },
+    {
+      "title": "MacNativeGames：把《王国之泪》打包成Mac应用的技术拆解",
+      "titleEn": "MacNativeGames: Tears of the Kingdom on Apple Silicon",
+      "path": "/blog/macnativegames-totk-native-mac/",
+      "pv": 170,
+      "visits": 170
+    },
+    {
+      "title": "jidan",
+      "titleEn": "jidan",
+      "path": "/jidan/",
+      "pv": 160,
+      "visits": 60
+    },
+    {
+      "title": "JR-Strata：把 Strata MoE 推理引擎移植到 Intel Arc 和 Vulkan 的社区分叉",
+      "titleEn": "JR-Strata: Community Fork Porting the Strata MoE Inference Engine to Intel Arc and Vulkan",
+      "path": "/blog/jr-strata-vulkan-sycl-intel-arc-strata-fork-non-nvidia-llm-inference/",
+      "pv": 160,
+      "visits": 160
+    },
+    {
+      "title": "Cloudflare Drop：拖一下文件夹，网站就上线了",
+      "titleEn": "Cloudflare Drop: Drag a Folder. Your Site Is Live.",
+      "path": "/blog/cloudflare-drop-instant-deploy-guide/",
+      "pv": 160,
+      "visits": 160
+    },
+    {
+      "title": "jidan/days/2026-11-20",
+      "titleEn": "jidan/days/2026-11-20",
+      "path": "/jidan/days/2026-11-20/",
+      "pv": 130,
+      "visits": 130
+    },
+    {
+      "title": "pstack 实践指南：Lauren Tan 如何让 AI 先调查、再构建和验证",
+      "titleEn": "pstack: Investigate, Build, Verify, Keep Context",
+      "path": "/blog/pstack-engineering-workflow/",
+      "pv": 120,
+      "visits": 110
+    },
+    {
+      "title": "H3-Context-IR：MiniMax H3 系统里那个不开源的「意图翻译层」，为什么说它才是真正的创作入口",
+      "titleEn": "minimax-h3-context-ir-prompt-orchestration-multimodal-video",
+      "path": "/blog/minimax-h3-context-ir-prompt-orchestration-multimodal-video/",
+      "pv": 120,
+      "visits": 120
+    },
+    {
+      "title": "explore",
+      "titleEn": "explore",
+      "path": "/explore",
+      "pv": 120,
+      "visits": 120
+    }
+  ],
   "devices": [
     {
       "label": "desktop",
-      "count": 15000
-    },
-    {
-      "label": "mobile",
-      "count": 1000
+      "count": 8000
     }
   ],
   "os": [
     {
       "label": "Windows",
-      "count": 12520
+      "count": 12220
     },
     {
       "label": "MacOSX",
@@ -85,7 +340,7 @@
     },
     {
       "label": "Unknown",
-      "count": 1890
+      "count": 1910
     },
     {
       "label": "Linux",
@@ -98,28 +353,24 @@
     {
       "label": "iOS",
       "count": 370
-    },
-    {
-      "label": "ChromeOS",
-      "count": 10
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "count": 13480
+      "count": 13190
     },
     {
       "label": "Edge",
-      "count": 2250
+      "count": 2220
     },
     {
       "label": "Unknown",
-      "count": 1890
+      "count": 1910
     },
     {
       "label": "Safari",
-      "count": 340
+      "count": 350
     },
     {
       "label": "MobileSafari",
